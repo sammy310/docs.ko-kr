@@ -4,12 +4,12 @@ description: 관리 코드가 CLR(공용 언어 런타임) 런타임에서 해�
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d89fd48e4c05dc7ec7c27846a3580ee36b1886f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61910119"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290086"
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
@@ -38,5 +38,5 @@ ms.locfileid: "61910119"
 ## <a name="more-resources"></a>추가 리소스
 
 * [.NET Framework의 개요](../framework/get-started/overview.md)
-* [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [안전하지 않은 코드 및 포인터](../csharp/programming-guide/unsafe-code-pointers/index.md)
 * [기본 상호 운용성](./native-interop/index.md)

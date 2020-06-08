@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 31b719fb7e43cdd6ac44424b359999410dd608a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005049"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403046"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 컴파일러에서 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하거나 특정 런타임 라이브러리를 참조하여 컴파일하도록 지정합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "72005049"
 ## <a name="referencing-a-specified-library"></a>지정된 라이브러리 참조  
  `path` 인수를 사용하여 기본 Visual Basic 런타임 라이브러리 대신 사용자 지정 런타임 라이브러리에 대한 참조로 컴파일할 수 있습니다.  
   
- `path` 인수의 값이 DLL에 대해 정규화된 경로인 경우 컴파일러는 해당 파일을 런타임 라이브러리로 사용합니다. `path` 인수의 값이 DLL에 대해 정규화된 경로가 아닌 경우 Visual Basic 컴파일러는 먼저 현재 폴더에서 식별된 DLL을 검색합니다. 그런 다음, [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) 컴파일러 옵션을 사용하여 지정한 경로를 검색합니다. `-sdkpath` 컴파일러 옵션을 사용하지 않으면 컴파일러는 .NET Framework 폴더(`%systemroot%\Microsoft.NET\Framework\versionNumber`)에서 식별된 DLL을 검색합니다.  
+ `path` 인수의 값이 DLL에 대해 정규화된 경로인 경우 컴파일러는 해당 파일을 런타임 라이브러리로 사용합니다. `path` 인수의 값이 DLL에 대해 정규화된 경로가 아닌 경우 Visual Basic 컴파일러는 먼저 현재 폴더에서 식별된 DLL을 검색합니다. 그런 다음, [-sdkpath](sdkpath.md) 컴파일러 옵션을 사용하여 지정한 경로를 검색합니다. `-sdkpath` 컴파일러 옵션을 사용하지 않으면 컴파일러는 .NET Framework 폴더(`%systemroot%\Microsoft.NET\Framework\versionNumber`)에서 식별된 DLL을 검색합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `-vbruntime` 옵션을 사용하여 사용자 지정 라이브러리에 대한 참조로 컴파일하는 방법을 보여줍니다.  
@@ -97,6 +97,6 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 ## <a name="see-also"></a>참조
 
 - [Visual Basic Core – Visual Studio 2010 SP1의 새로운 컴파일 모드](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
+- [-sdkpath](sdkpath.md)

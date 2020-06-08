@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159288"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290242"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 스키마 컴파일
 **XmlSchemaCollection**은 XDR(XML 데이터 축소) 및 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성 검사를 수행할 수 있는 캐시 또는 라이브러리입니다. **XmlSchemaCollection**에서는 파일이나 URL에서 스키마에 액세스하는 대신 메모리에 있는 스키마를 캐시하여 성능을 향상시킵니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "78159288"
 > **XmlSchemaCollection** 클래스에서 XDR 스키마와 XML 스키마를 모두 저장하더라도 **XmlSchema** 개체를 사용하거나 반환하는 메서드 및 속성에서는 XML 스키마만 지원합니다.  
   
 > [!IMPORTANT]
-> 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.  
+> 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.  
   
 ## <a name="add-schemas-to-the-collection"></a>컬렉션에 스키마 추가  
  스키마가 네임스페이스 URI에 연결될 때 **XmlSchemaCollection**의 **Add** 메서드를 사용하여 스키마가 컬렉션에 로드됩니다. XML 스키마의 경우 네임스페이스 URI는 일반적으로 스키마의 대상 네임스페이스입니다. XDR 스키마의 경우 네임스페이스 URI는 스키마를 컬렉션에 추가할 때 지정한 네임스페이스입니다.  
@@ -57,5 +57,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>참조
 
-- [XmlSchemaCollection을 사용하여 XDR 유효성 검사](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
-- [XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+- [XmlSchemaCollection을 사용하여 XDR 유효성 검사](xdr-validation-with-xmlschemacollection.md)
+- [XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사](xml-schema-xsd-validation-with-xmlschemacollection.md)

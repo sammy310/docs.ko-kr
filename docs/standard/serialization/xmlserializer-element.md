@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380027"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288929"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer> 요소
 <xref:System.Xml.Serialization.XmlSerializer>의 진행에 대한 추가 검사가 수행되었는지 여부를 지정합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "83380027"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)|<xref:System.Xml.Serialization.XmlSerializer> 및 <xref:System.Xml.Serialization.XmlSchemaImporter> 클래스에 대한 구성 설정을 포함합니다.|  
+|[\<system.xml.serialization> 요소](system-xml-serialization-element.md)|<xref:System.Xml.Serialization.XmlSerializer> 및 <xref:System.Xml.Serialization.XmlSchemaImporter> 클래스에 대한 구성 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로 <xref:System.Xml.Serialization.XmlSerializer>는 신뢰할 수 없는 데이터를 역직렬화할 때 잠재적 서비스 거부 공격에 대한 추가 보안 계층을 제공합니다. deserialization 도중 무한 루프의 탐지를 시도하여 이러한 보안을 제공합니다. 이러한 조건이 검색되면 다음과 같은 메시지와 함께 예외가 throw됩니다. "내부 오류: 기본 스트림에 대한 deserialization을 계속할 수 없습니다."  
@@ -64,5 +64,5 @@ ms.locfileid: "83380027"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<system.xml.serialization> 요소](system-xml-serialization-element.md)
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c2031e2d038f32f6392a2eb734e4f8851d7b936
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132860"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291632"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework에서 콘솔 애플리케이션 만들기
 .NET Framework의 애플리케이션에서는 <xref:System.Console?displayProperty=nameWithType> 클래스를 사용하여 콘솔로부터 문자를 읽거나 콘솔에 문자를 쓸 수 있습니다. 콘솔의 데이터는 표준 입력 스트림에서 읽혀지고 표준 출력 스트림으로 쓰여지며, 콘솔의 오류 데이터는 표준 오류 출력 스트림으로 쓰여집니다. 이러한 스트림은 애플리케이션이 시작될 때 콘솔과 자동으로 연결되며 <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> 및 <xref:System.Console.Error%2A> 속성으로 나타납니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "73132860"
   
  콘솔 애플리케이션에는 기본적으로 시작되는 메시지 펌프가 없습니다. 따라서 Microsoft Win32 타이머에 대한 콘솔 호출이 실패할 수도 있습니다.  
   
- **System.Console** 클래스에는 콘솔에서 개별 문자나 전체 줄을 읽을 수 있는 메서드가 있습니다. 다른 메서드는 데이터 및 형식 문자열을 변환한 다음 형식 지정된 문자열을 콘솔에 씁니다. 문자열 형식 지정에 대한 자세한 내용은 [형식 서식 지정](../../docs/standard/base-types/formatting-types.md)을 참조하세요.  
+ **System.Console** 클래스에는 콘솔에서 개별 문자나 전체 줄을 읽을 수 있는 메서드가 있습니다. 다른 메서드는 데이터 및 형식 문자열을 변환한 다음 형식 지정된 문자열을 콘솔에 씁니다. 문자열 형식 지정에 대한 자세한 내용은 [형식 서식 지정](base-types/formatting-types.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Console?displayProperty=nameWithType>
-- [형식 서식 지정](../../docs/standard/base-types/formatting-types.md)
+- [형식 서식 지정](base-types/formatting-types.md)

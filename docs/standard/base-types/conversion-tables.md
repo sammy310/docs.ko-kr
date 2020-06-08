@@ -12,12 +12,12 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb696c65078a5dae0b81a48bffc786d2257496c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103884"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290567"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET의 형식 변환표
 확대 변환은 한 형식의 값을 크기가 같거나 더 큰 다른 형식으로 변환할 때 발생합니다. 축소 변환은 한 형식의 값을 크기가 더 작은 다른 형식의 값으로 변환할 때 발생합니다. 이 항목의 표에서는 두 가지 유형의 변환에서 모두 나타나는 동작을 설명합니다.  
@@ -72,4 +72,4 @@ ms.locfileid: "73103884"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Convert?displayProperty=nameWithType>
-- [.NET에서 형식 변환](../../../docs/standard/base-types/type-conversion.md)
+- [.NET에서 형식 변환](type-conversion.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 496627d3b77b0382ae7d15c8225a6fbd41f1db73
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350849"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403124"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄(Visual Basic)
 
@@ -38,5 +38,5 @@ Visual Basic 명령줄 컴파일러는 입력 및 출력 파일, 어셈블리, �
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [조건부 컴파일](../../programming-guide/program-structure/conditional-compilation.md)

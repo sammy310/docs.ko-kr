@@ -18,12 +18,12 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 360ed985575358dd9603a55fc2d5d6c297621ec8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73197588"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290424"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 전자 메일 형식인지 확인
 
@@ -93,4 +93,4 @@ ms.locfileid: "73197588"
 
 ## <a name="see-also"></a>참조
 
-- [.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Framework 정규식](regular-expressions.md)

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021504"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290047"
 ---
 # <a name="exception-handling-task-parallel-library"></a>예외 처리(작업 병렬 라이브러리)
 
@@ -63,7 +63,7 @@ ms.locfileid: "82021504"
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>협조적 취소를 나타내는 예외
 
-작업의 사용자 코드가 취소 요청에 응답하는 경우, 올바른 절차는 요청을 통신한 취소 토큰을 전달하는 <xref:System.OperationCanceledException> 을 throw하는 것입니다. 예외를 전파하려고 시도하기 전에 작업 인스턴스가 요청이 만들어졌을 때 요청에 전달된 토큰과 예외의 토큰을 비교합니다. 두 토큰이 동일한 경우 작업은 <xref:System.Threading.Tasks.TaskCanceledException> 에서 래핑된 <xref:System.AggregateException>을 전파하며 이는 내부 예외를 검사할 때 확인할 수 있습니다. 그러나 호출 스레드가 작업을 기다리지 않는 경우 이 특정 예외는 전파되지 않습니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.
+작업의 사용자 코드가 취소 요청에 응답하는 경우, 올바른 절차는 요청을 통신한 취소 토큰을 전달하는 <xref:System.OperationCanceledException> 을 throw하는 것입니다. 예외를 전파하려고 시도하기 전에 작업 인스턴스가 요청이 만들어졌을 때 요청에 전달된 토큰과 예외의 토큰을 비교합니다. 두 토큰이 동일한 경우 작업은 <xref:System.Threading.Tasks.TaskCanceledException> 에서 래핑된 <xref:System.AggregateException>을 전파하며 이는 내부 예외를 검사할 때 확인할 수 있습니다. 그러나 호출 스레드가 작업을 기다리지 않는 경우 이 특정 예외는 전파되지 않습니다. 자세한 내용은 [작업 취소](task-cancellation.md)를 참조하세요.
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -104,4 +104,4 @@ ms.locfileid: "82021504"
 
 ## <a name="see-also"></a>참조
 
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [TPL(작업 병렬 라이브러리)](task-parallel-library-tpl.md)

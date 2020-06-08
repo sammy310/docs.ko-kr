@@ -7,16 +7,16 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 847724450ee2bc8bc591371f71171e8ba4ed9337
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330214"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411742"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 및 My.WebServices에서 제공하는 기본 개체 인스턴스(Visual Basic)
 
-[My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) 및 [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) 개체는 애플리케이션에서 사용되는 폼, 데이터 원본 및 XML Web services에 대한 액세스를 제공합니다. 이를 위해 이들 각 개체의 *기본 인스턴스* 컬렉션을 제공합니다.  
+[My.Forms](../../language-reference/objects/my-forms-object.md) 및 [My.WebServices](../../language-reference/objects/my-webservices-object.md) 개체는 애플리케이션에서 사용되는 폼, 데이터 원본 및 XML Web services에 대한 액세스를 제공합니다. 이를 위해 이들 각 개체의 *기본 인스턴스* 컬렉션을 제공합니다.  
   
 ## <a name="default-instances"></a>기본 인스턴스  
 
@@ -30,6 +30,6 @@ ms.locfileid: "74330214"
   
 ## <a name="see-also"></a>참조
 
-- [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [My가 프로젝트 형식에 의존하는 방식](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [My.Forms 개체](../../language-reference/objects/my-forms-object.md)
+- [My.WebServices 개체](../../language-reference/objects/my-webservices-object.md)
+- [My가 프로젝트 형식에 의존하는 방식](how-my-depends-on-project-type.md)

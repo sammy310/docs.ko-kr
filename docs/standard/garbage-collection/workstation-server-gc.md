@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 6b8e5f6802e5d44669b95d43d4e897fa4a418512
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103492"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306697"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>워크스테이션 및 서버 가비지 수집
 
@@ -30,7 +30,7 @@ ms.locfileid: "82103492"
 
 다음 그림에서는 서버에서 가비지 수집을 수행하는 전용 스레드를 보여 줍니다.
 
-![서버 가비지 수집 스레드](./media/gc-server.png)
+![서버 가비지 수집 스레드](media/gc-server.png)
 
 ## <a name="performance-considerations"></a>성능 고려 사항
 

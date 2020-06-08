@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711144"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291593"
 ---
 # <a name="building-xml-schemas"></a>XML 스키마 빌드
 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항에 정의된 구조에 매핑되며 이 클래스를 사용하여 메모리 내 XML 스키마를 빌드할 수 있습니다.  
@@ -88,10 +88,10 @@ ms.locfileid: "75711144"
   
 ## <a name="see-also"></a>참조
 
-- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [XML 스키마 포함하기 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML 스키마 개체 모델 개요](xml-schema-object-model-overview.md)
+- [XML 스키마 읽기 및 쓰기](reading-and-writing-xml-schemas.md)
+- [XML 스키마 통과](traversing-xml-schemas.md)
+- [XML 스키마 편집](editing-xml-schemas.md)
+- [XML 스키마 포함하기 또는 가져오기](including-or-importing-xml-schemas.md)
+- [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema Compilation Infoset](post-schema-compilation-infoset.md)

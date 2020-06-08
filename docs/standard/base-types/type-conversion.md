@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976487"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291658"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "73976487"
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- <xref:System.Convert> 클래스에서 지원하는 확대 및 축소 변환의 목록이 포함된 표는 [형식 변환표](../../../docs/standard/base-types/conversion-tables.md)를 참조하세요.  
+ <xref:System.Convert> 클래스에서 지원하는 확대 및 축소 변환의 목록이 포함된 표는 [형식 변환표](conversion-tables.md)를 참조하세요.  
 
 ### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType 메서드를 사용한 사용자 지정 변환  
  각 기본 형식에 대한 변환을 지원하는 것 외에도 <xref:System.Convert> 클래스를 사용하여 사용자 지정 형식을 하나 이상의 미리 정의된 형식으로 변환할 수 있습니다. 이 변환은 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드로 수행됩니다. 이 메서드는 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 매개 변수의 `value` 메서드에 대한 호출을 래핑합니다. 즉, `value` 매개 변수가 나타내는 개체가 <xref:System.IConvertible> 인터페이스의 구현을 제공해야 합니다.  
@@ -194,4 +194,4 @@ ms.locfileid: "73976487"
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>
-- [형식 변환표](../../../docs/standard/base-types/conversion-tables.md)
+- [형식 변환표](conversion-tables.md)

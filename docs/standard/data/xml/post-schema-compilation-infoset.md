@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710481"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291515"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset
 [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema)(W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항)에서는 사전 스키마 유효성 검사 및 사후 스키마 컴파일을 위해 노출해야 하는 infoset(정보 집합)에 대해 설명합니다. XML SOM(스키마 개체 모델)은 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출하기 전과 후에 이렇게 노출된 내용을 표시합니다.  
@@ -40,4 +40,4 @@ ms.locfileid: "75710481"
   
 ## <a name="see-also"></a>참조
 
-- [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML SOM(스키마 개체 모델)](xml-schema-object-model-som.md)

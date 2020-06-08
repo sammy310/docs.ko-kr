@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: dcd5fa2777d2f1e351179570806a95eb835ad843
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376005"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289657"
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
 사용자 지정 serialization은 형식의 serialization 및 deserialization을 제어하는 프로세스입니다. serialization을 제어하면 형식의 핵심 기능에 영향을 주지 않고 다양한 형식 사이에 직렬화 및 역직렬화할 수 있는 기능인 직렬화 호환성을 유지할 수 있습니다. 예를 들어 첫 번째 버전의 형식에는 두 개의 필드만 있을 수 있습니다. 다음 버전의 형식에는 몇 개의 필드가 더 추가될 수 있습니다. 하지만 애플리케이션의 두 번째 버전에서는 여전히 두 형식을 모두 직렬화 및 역직렬화할 수 있어야 합니다. 다음 단원에서는 serialization을 제어하는 방법에 대해 설명합니다.
@@ -184,4 +184,4 @@ End Class
 
 - [이진 serialization](binary-serialization.md)
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
-- [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)
+- [보안 및 Serialization](../../framework/misc/security-and-serialization.md)

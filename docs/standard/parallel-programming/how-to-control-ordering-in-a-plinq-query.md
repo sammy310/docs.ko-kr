@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 86011cff71fabed5e47e085f91b1759238638c9a
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 80e199d75471eba219f1f3da12d307b6cd1d90cf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588496"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285458"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>방법: PLINQ 쿼리의 순서 제어
 다음 예제는 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 확장 메서드를 사용하여 PLINQ 쿼리에서 순서를 제어하는 방법을 보여줍니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "80588496"
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- 이 메서드를 실행하려면 [PLINQ 데이터 샘플](../../../docs/standard/parallel-programming/plinq-data-sample.md) 프로젝트의 PLINQDataSample 클래스에 붙여넣고 F5 키를 누릅니다.  
+ 이 메서드를 실행하려면 [PLINQ 데이터 샘플](plinq-data-sample.md) 프로젝트의 PLINQDataSample 클래스에 붙여넣고 F5 키를 누릅니다.  
   
 ## <a name="example"></a>예제  
  다음 예제는 쿼리의 첫 번째 부분에 대한 순서를 유지하고, 순서를 제거하여 조인 절의 성능을 향상한 다음, 마지막 결과 시퀀스에 순서를 다시 적용하는 방법을 보여줍니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "80588496"
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- 이 메서드를 실행하려면 [PLINQ 데이터 샘플](../../../docs/standard/parallel-programming/plinq-data-sample.md) 프로젝트의 PLINQDataSample 클래스에 붙여넣고 F5 키를 누릅니다.  
+ 이 메서드를 실행하려면 [PLINQ 데이터 샘플](plinq-data-sample.md) 프로젝트의 PLINQDataSample 클래스에 붙여넣고 F5 키를 누릅니다.  
   
 ## <a name="see-also"></a>참조
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)

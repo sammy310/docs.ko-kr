@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139715"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290761"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성
 이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 로컬 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
@@ -40,11 +40,11 @@ Function() new MyClass()
   
  다섯 번째 매개 변수는 특정 스레드에 대한 모든 반복이 완료된 후 한 번 호출되는 메서드를 정의합니다. 입력 인수의 형식은 다시 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드의 형식 인수 및 본문 람다 식에 의해 반환되는 형식에 해당합니다. 이 예제에서 값은 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 메서드를 호출하여 스레드로부터 안전한 방법으로 클래스 범위에서 변수에 더해집니다. 스레드 지역 변수를 사용하여, 루프가 반복될 때마다 이 클래스 변수에 쓰는 것을 방지했습니다.  
   
- 람다 식을 사용하는 방법은 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.  
+ 람다 식을 사용하는 방법은 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
+- [병렬 프로그래밍](index.md)
+- [TPL(작업 병렬 라이브러리)](task-parallel-library-tpl.md)
+- [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)

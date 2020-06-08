@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: 52770187568d0ba0f54ec36ee2c3d754a9b4d9a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f906b2f2d747a7950c70a24549bbf5423e5b87b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348887"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401747"
 ---
 # <a name="file-encodings-visual-basic"></a>파일 인코딩(Visual Basic)
 
@@ -40,5 +40,5 @@ ms.locfileid: "74348887"
 
 ## <a name="see-also"></a>참고 항목
 
-- [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [파일 읽기](reading-from-files.md)
+- [파일에 쓰기](writing-to-files.md)

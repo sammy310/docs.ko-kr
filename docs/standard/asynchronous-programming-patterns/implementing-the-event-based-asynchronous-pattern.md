@@ -17,22 +17,22 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 9865fa169e0776765f9a97ec0a7b4555bf253886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663713"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289384"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 
-상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.
+상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.
 
 이벤트 기반 비동기 패턴은 비동기 기능을 포함하는 클래스를 패키지하는 표준화된 방법을 제공합니다. <xref:System.ComponentModel.AsyncOperationManager>와 같은 도우미 클래스를 구현한 경우 클래스는 ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 비롯한 모든 애플리케이션 모델에서 올바르게 작동합니다.
 
-이벤트 기반 비동기 패턴을 구현하는 예제는 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.
+이벤트 기반 비동기 패턴을 구현하는 예제는 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.
 
-간단한 비동기 작업의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 적합하다는 것을 알 수 있습니다. <xref:System.ComponentModel.BackgroundWorker>에 대한 자세한 내용은 [방법: 백그라운드에서 작업 실행](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)을 참조하세요.
+간단한 비동기 작업의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 적합하다는 것을 알 수 있습니다. <xref:System.ComponentModel.BackgroundWorker>에 대한 자세한 내용은 [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)을 참조하세요.
 
 다음 목록에서는 이 항목에서 설명하는 이벤트 기반 비동기 패턴의 기능에 대해 설명합니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "67663713"
 
 모든 작업은 비동기 구현의 후보가 될 수 있지만 긴 대기 시간을 발생시키는 작업을 비동기 방식으로 구현해야 합니다. 클라이언트가 메서드를 호출하며 추가 개입 없이도 완료 시 알림이 제공되는 작업이 특히 적합할 것입니다. 또한 연속적으로 실행되고, 클라이언트에 주기적으로 진행 상황, 증분 결과 또는 상태 변경을 알리는 작업이 적합할 것입니다.
 
-이벤트 기반 비동기 패턴을 지원해야 하는 경우를 결정하는 방법에 대한 자세한 내용은 [이벤트 기반 비동기 패턴 구현 시기 결정](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)을 참조하세요.
+이벤트 기반 비동기 패턴을 지원해야 하는 경우를 결정하는 방법에 대한 자세한 내용은 [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)을 참조하세요.
 
 ## <a name="naming-asynchronous-methods"></a>비동기 메서드 명명
 
@@ -150,13 +150,13 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
 이러한 메서드는 일반적으로 즉시 반환되며 작업이 실제로 취소될 수도 있고 그렇지 않을 수도 있습니다. _MethodName_**Completed** 이벤트에 대한 이벤트 처리기에서 _MethodName_**CompletedEventArgs** 개체는 클라이언트가 취소 발생 여부를 확인하는 데 사용할 수 있는 `Cancelled` 필드를 포함합니다.
 
-[최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 취소 의미 체계를 준수하세요.
+[최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 취소 의미 체계를 준수하세요.
 
 ## <a name="optionally-support-the-isbusy-property"></a>선택적으로 IsBusy 속성 지원
 
 클래스가 여러 동시 호출을 지원하지 않으면 `IsBusy` 속성 노출을 고려합니다. 이 방법을 사용하면 개발자들은 _MethodName_**Async** 메서드에서 예외를 catch하지 않고도 _MethodName_**Async** 메서드가 실행 중인지 여부를 확인할 수 있습니다.
 
-[최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 `IsBusy` 의미 체계를 준수하세요.
+[최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 `IsBusy` 의미 체계를 준수하세요.
 
 ## <a name="optionally-provide-support-for-progress-reporting"></a>선택적으로 진행률 보고 지원 제공
 
@@ -178,7 +178,7 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
 여러 작업이 진행률을 지원하고 각각이 다른 진행률 표시기를 반환하는 경우가 있을 수 있습니다. 이 경우 단일 `ProgressChanged` 이벤트로는 적절하지 않으며 여러 `ProgressChanged` 이벤트를 지원하는 것을 고려하세요. 이 경우 각 _MethodName_**Async** 메서드에 대해 _MethodName_**ProgressChanged** 명명 패턴을 사용하세요.
 
-[최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 진행률 보고 의미 체계를 준수하세요.
+[최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 진행률 보고 의미 체계를 준수하세요.
 
 ## <a name="optionally-provide-support-for-returning-incremental-results"></a>선택적으로 증분 결과를 반환하기 위한 지원 제공
 
@@ -208,7 +208,7 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
 - 각 비동기 메서드가 해당 메서드의 증분 결과 데이터를 처리할 수 있도록 적절한 <xref:System.EventArgs>를 사용하여 별도의 _MethodName_**ProgressChanged** 이벤트를 정의합니다.
 
-[최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 대로 적절한 스레드에서 해당 이벤트 처리기를 호출합니다.
+[최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 대로 적절한 스레드에서 해당 이벤트 처리기를 호출합니다.
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>메서드의 Out 및 Ref 매개 변수 처리
 
@@ -261,9 +261,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [방법: 백그라운드에서 작업 실행](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [방법: 백그라운드 작업을 사용하는 양식 구현](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [이벤트 기반 비동기 패턴 구현 시기 결정](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [방법: 백그라운드 작업을 사용하는 양식 구현](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)

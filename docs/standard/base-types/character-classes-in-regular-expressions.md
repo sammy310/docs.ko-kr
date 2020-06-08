@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159340"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292100"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 
@@ -58,7 +58,7 @@ ms.locfileid: "78159340"
 
 `[*character_group*]`
 
- 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 있는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
+ 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 있는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "78159340"
 
 `[*^character_group*]`
 
- 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 없는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
+ 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 없는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
 
@@ -158,7 +158,7 @@ ms.locfileid: "78159340"
 ## <a name="any-character-"></a>임의의 문자: .  
  마침표 문자(.)는 `\n`(줄바꿈 문자, \u000A)를 제외하고 다음 두 한정자가 있는 모든 문자를 찾습니다.  
   
-- 정규식 패턴이 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션에 의해 수정되거나 `.` 문자 클래스를 포함하는 패턴의 일부가 `s` 옵션에 의해 수정되는 경우 `.`가 문자를 일치시킵니다. 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)을 참조하세요.  
+- 정규식 패턴이 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션에 의해 수정되거나 `.` 문자 클래스를 포함하는 패턴의 일부가 `s` 옵션에 의해 수정되는 경우 `.`가 문자를 일치시킵니다. 자세한 내용은 [정규식 옵션](regular-expression-options.md)을 참조하세요.  
   
      다음 예제에서는 기본 및 `.` 옵션으로 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 문자 클래스의 다른 동작을 보여줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "78159340"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> 모든 문자와 일치하기 때문에 `.` 언어 요소는 정규식 패턴이 여러 번 임의의 문자와 일치하도록 시도할 경우 종종 lazy 수량자와 함께 사용됩니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 문자와 일치하기 때문에 `.` 언어 요소는 정규식 패턴이 여러 번 임의의 문자와 일치하도록 시도할 경우 종종 lazy 수량자와 함께 사용됩니다. 자세한 내용은 [수량자](quantifiers-in-regular-expressions.md)를 참조하세요.  
   
 <a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>유니코드 범주 또는 유니코드 블록: \p{}  
@@ -237,10 +237,10 @@ ms.locfileid: "78159340"
 |Nd|숫자, 10진수|  
 |Pc|문장 부호, 연결자. 이 범주는 가장 일반적으로 사용되는 LOWLINE 문자 (_), U + 005F인 10개의 문자를 포함합니다.|  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\w`는 `[a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\w`는 `[a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
 > [!NOTE]
-> 모든 단어 문자와 일치하기 때문에 `\w` 언어 요소는 정규식 패턴이 특정 단어 문자가 따라오는 임의의 단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 단어 문자와 일치하기 때문에 `\w` 언어 요소는 정규식 패턴이 특정 단어 문자가 따라오는 임의의 단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](quantifiers-in-regular-expressions.md)를 참조하세요.  
   
  다음 예제에서는 `\w` 언어 요소를 사용하여 단어의 중복 문자를 찾습니다. 예제는 다음과 같이 해석될 수 있는 정규식 패턴 `(\w)\1`을 정의합니다.  
   
@@ -271,10 +271,10 @@ ms.locfileid: "78159340"
 |Nd|숫자, 10진수|  
 |Pc|문장 부호, 연결자. 이 범주는 가장 일반적으로 사용되는 LOWLINE 문자 (_), U + 005F인 10개의 문자를 포함합니다.|  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\W`는 `[^a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\W`는 `[^a-zA-Z_0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
 > [!NOTE]
-> 모든 비단어 문자와 일치하기 때문에 `\W` 언어 요소는 정규식 패턴이 특정 비단어 문자가 따라오는 임의의 비단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)를 참조하세요.  
+> 모든 비단어 문자와 일치하기 때문에 `\W` 언어 요소는 정규식 패턴이 특정 비단어 문자가 따라오는 임의의 비단어 문자를 여러 번 찾으려 하는 경우 lazy 수량자와 함께 사용되는 경우가 많습니다. 자세한 내용은 [수량자](quantifiers-in-regular-expressions.md)를 참조하세요.  
   
  다음 예제에서는 `\W` 문자 클래스를 보여 줍니다.  공백 또는 문장 부호와 같은 한두 개의 비단어 문자가 따라오는 단어와 일치하는 정규식 패턴 `\b(\w+)(\W){1,2}`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "78159340"
 |`\x85`|줄임표 또는 NEXT LINE (NEL) 문자 (…), \u0085.|  
 |`\p{Z}`|임의의 구분 기호 문자와 일치합니다.|  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\s`는 `[ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\s`는 `[ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
  다음 예제에서는 `\s` 문자 클래스를 보여 줍니다. "s" 또는 "es"로 끝나고 그 뒤에 공백 문자나 입력 문자열의 끝이 있는 단어와 일치하는 정규식 패턴 `\b\w+(e)?s(\s|$)`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
@@ -322,7 +322,7 @@ ms.locfileid: "78159340"
 ## <a name="non-whitespace-character-s"></a>공백이 아닌 문자: \S  
  `\S`는 공백 문자가 아닌 문자를 찾습니다. `[^\f\n\r\t\v\x85\p{Z}]` 정규식 패턴과 동일하거나, 공백 문자와 일치하는 `\s`과 동일한 정규식 패턴의 반대입니다. 자세한 내용은 [공백 문자: \s](#WhitespaceCharacter)를 참조하세요.  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\S`는 `[^ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\S`는 `[^ \f\n\r\t\v]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
  다음 예제에서는 `\S` 언어 요소를 보여 줍니다. 정규식 패턴 `\b(\S+)\s?`는 공백 문자로 구분된 문자열을 찾습니다. 일치 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 두 번째 요소는 일치하는 문자열을 포함합니다. 정규식은 다음 표에 나와 있는 것처럼 해석할 수 있습니다.  
   
@@ -339,7 +339,7 @@ ms.locfileid: "78159340"
 ## <a name="decimal-digit-character-d"></a>10진수 문자: \d  
  `\d`는 10진수를 찾습니다. 많은 다른 문자 집합의 10진수뿐만 아니라 표준 10진수 0-9를 포함하는 `\p{Nd}` 정규식 패턴과 동일합니다.  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\d`는 `[0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\d`는 `[0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
  다음 예제에서는 `\d` 언어 요소를 보여 줍니다. 입력 문자열이 미국 및 캐나다의 올바른 전화 번호를 나타내는지 여부를 테스트합니다. 정규식 패턴 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 는 다음 테이블과 같이 정의됩니다.  
   
@@ -361,7 +361,7 @@ ms.locfileid: "78159340"
 ## <a name="non-digit-character-d"></a>숫자가 아닌 문자: \D  
  `\D`는 숫자가 아닌 문자를 찾습니다. `\P{Nd}` 정규식 패턴과 동일합니다.  
   
- ECMAScript와 호환되는 동작을 지정한 경우 `\D`는 `[^0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
+ ECMAScript와 호환되는 동작을 지정한 경우 `\D`는 `[^0-9]`와 같습니다. ECMAScript 정규식에 대한 자세한 내용은 [정규식 옵션](regular-expression-options.md)에서 "ECMAScript 일치 동작" 섹션을 참조하세요.  
   
  다음 예제에서는 \D 언어 요소를 보여 줍니다. 부품 번호 같은 문자열이 10진수 문자 및 10진수가 아닌 문자의 적절한 조합으로 구성되어 있는지 여부를 테스트합니다. 정규식 패턴 `^\D\d{1,5}\D*$` 는 다음 테이블과 같이 정의됩니다.  
   
@@ -570,5 +570,5 @@ ms.locfileid: "78159340"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Char.GetUnicodeCategory%2A>
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)
+- [정규식 옵션](regular-expression-options.md)

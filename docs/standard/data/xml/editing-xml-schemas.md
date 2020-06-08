@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794587"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292061"
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 
@@ -22,7 +22,7 @@ SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통
 
 ## <a name="editing-an-xml-schema"></a>XML 스키마 편집
 
-이 단원에서는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 편집하는 두 코드 예제가 제공됩니다. 첫 번째 코드 예제는 새 `PhoneNumber` 요소를 `Customer` 요소에 추가하며 두 번째 코드 예제는 새 `Title` 특성을 `FirstName` 요소에 추가합니다. 또한 첫 번째 샘플에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 고객 스키마를 통과하며 두 번째 코드 예제에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용합니다.
+이 단원에서는 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 편집하는 두 코드 예제가 제공됩니다. 첫 번째 코드 예제는 새 `PhoneNumber` 요소를 `Customer` 요소에 추가하며 두 번째 코드 예제는 새 `Title` 특성을 `FirstName` 요소에 추가합니다. 또한 첫 번째 샘플에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 고객 스키마를 통과하며 두 번째 코드 예제에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용합니다.
 
 ### <a name="phonenumber-element-example"></a>PhoneNumber 요소 예제
 
@@ -48,7 +48,7 @@ SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통
 [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
 [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]
 
-다음은 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.
+다음은 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,7 +112,7 @@ SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통
 [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
 [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]
 
-다음은 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.
+다음은 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 수정한 예제입니다.
 
 ```xml
 <?xml version="1.0" encoding=" utf-8"?>
@@ -137,10 +137,10 @@ SOM에 로드된 스키마를 편집하는 첫 번째 단계는 스키마를 통
 
 ## <a name="see-also"></a>참조
 
-- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML 스키마 포함하기 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML 스키마 개체 모델 개요](xml-schema-object-model-overview.md)
+- [XML 스키마 읽기 및 쓰기](reading-and-writing-xml-schemas.md)
+- [XML 스키마 빌드](building-xml-schemas.md)
+- [XML 스키마 통과](traversing-xml-schemas.md)
+- [XML 스키마 포함하기 또는 가져오기](including-or-importing-xml-schemas.md)
+- [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema Compilation Infoset](post-schema-compilation-infoset.md)

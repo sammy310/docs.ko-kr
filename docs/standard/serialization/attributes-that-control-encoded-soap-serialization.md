@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378469"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289670"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>인코딩된 SOAP Serialization을 제어하는 특성
 
@@ -22,7 +22,7 @@ World Wide Web 컨소시엄(W3C) 문서 [SOAP(Simple Object Access Protocol) 1.1
 
 다음 표에서는 특성, 해당 특성을 적용할 수 있는 위치 및 해당 특성이 수행하는 작업을 보여 줍니다. 이러한 특성을 사용하여 XML serialization을 제어하는 방법에 대한 자세한 내용은 [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) 및 [방법: 인코딩된 SOAP XML Serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)를 참조하세요.
 
-특성에 대한 자세한 내용은 [특성](../../../docs/standard/attributes/index.md)을 참조하세요.
+특성에 대한 자세한 내용은 [특성](../attributes/index.md)을 참조하세요.
 
 |특성|적용 대상|설명|
 |---------------|----------------|---------------|
@@ -38,7 +38,7 @@ World Wide Web 컨소시엄(W3C) 문서 [SOAP(Simple Object Access Protocol) 1.1
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 - [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [방법: 인코딩된 SOAP XML Serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)
-- [특성](../../../docs/standard/attributes/index.md)
+- [특성](../attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 8af088ad269cc77bc5c83aedb86bde9af2e37a15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334581"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411618"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일에서 읽기
 
@@ -64,10 +64,10 @@ ms.locfileid: "74334581"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [방법: 쉼표로 구분된 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [방법: 고정 너비 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [방법: 여러 형식의 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [연습: Visual Basic에서 파일과 디렉터리 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [파일 인코딩](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [파일 읽기](reading-from-files.md)
+- [방법: 쉼표로 구분된 텍스트 파일에서 읽기](how-to-read-from-comma-delimited-text-files.md)
+- [방법: 고정 너비 텍스트 파일에서 읽기](how-to-read-from-fixed-width-text-files.md)
+- [방법: 여러 형식의 텍스트 파일에서 읽기](how-to-read-from-text-files-with-multiple-formats.md)
+- [문제 해결: 텍스트 파일 읽기 및 쓰기](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [연습: Visual Basic에서 파일과 디렉터리 조작](walkthrough-manipulating-files-and-directories.md)
+- [파일 인코딩](file-encodings.md)

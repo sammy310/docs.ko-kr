@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160081"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288006"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다. 정규식 패턴을 사용하여 입력 문자열에서 일치하는 텍스트를 바꿀 텍스트의 전부 또는 일부를 정의합니다. 바꾸기 패턴은 리터럴 문자와 하나 이상의 대체로 구성될 수 있습니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 매개 변수가 포함된 `replacement` 메서드의 오버로드와 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 대해 바꾸기 패턴이 제공됩니다. 해당 메서드는 일치하는 패턴을 `replacement` 매개 변수에 정의된 패턴으로 바꿉니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "78160081"
  컨텍스트마다 다른 의미를 가지지만 정규식 패턴이나 대체에 나타나는 유일한 문자는 `$` 문자입니다. 정규식 패턴에서 `$` 는 문자열의 끝 부분을 찾는 앵커입니다. 바꾸기 패턴에서 `$` 는 대체 시작을 나타냅니다.  
   
 > [!NOTE]
-> 정규식의 바꾸기 패턴과 유사한 기능으로, 역참조를 사용합니다. 역참조에 대한 자세한 내용은 [역참조 구문](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하십시오.  
+> 정규식의 바꾸기 패턴과 유사한 기능으로, 역참조를 사용합니다. 역참조에 대한 자세한 내용은 [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하십시오.  
 
 ## <a name="substituting-a-numbered-group"></a>번호 매겨진 그룹 대체  
- `$`*number* 언어 요소는 바꾸기 문자열에서 *number* 캡처 그룹과 일치하는 마지막 부분 문자열을 포함합니다. 여기서 *number* 는 캡처 그룹의 인덱스입니다. 예를 들어 바꾸기 패턴 `$1` 은 일치하는 부분 문자열이 처음 캡처한 그룹으로 대체됨을 나타냅니다. 번호가 매겨진 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+ `$`*number* 언어 요소는 바꾸기 문자열에서 *number* 캡처 그룹과 일치하는 마지막 부분 문자열을 포함합니다. 여기서 *number* 는 캡처 그룹의 인덱스입니다. 예를 들어 바꾸기 패턴 `$1` 은 일치하는 부분 문자열이 처음 캡처한 그룹으로 대체됨을 나타냅니다. 번호가 매겨진 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
  `$` 다음에 나오는 모든 숫자는 *number* 그룹에 속한 것으로 해석됩니다. 이런 것을 의도한 것이 아니라면, 그 대신 명명된 그룹을 대체할 수 있습니다. 예를 들어, `${1}1` 대신 `$11` 대체 문자열을 사용하여 대체 문자열을 숫자 "1"과 함께 처음으로 캡처된 그룹의 값으로 정의할 수 있습니다. 자세한 내용은 [명명된 그룹 대체](#substituting-a-named-group)를 참조하십시오.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "78160081"
 |`(\s?\d+[.,]?\d*)`|공백, 하나 이상의 10진수 숫자, 0-1개의 마침표나 쉼표, 0-1개의 10진수 숫자가 차례로 표시된 문자열을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다. 바꾸기 패턴이 `$1`이기 때문에 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 호출하면 일치하는 전체 부분 문자열이 이 캡처된 그룹으로 바뀝니다.|  
 
 ## <a name="substituting-a-named-group"></a>명명된 그룹 대체  
- `${`*name*`}` 언어 요소는 *name* 캡처 그룹과 일치하는 마지막 부분 문자열을 대체합니다. 여기서 *name* 은 `(?<`*name*`>)` 언어 요소가 정의한 캡처 그룹의 이름입니다. 명명된 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+ `${`*name*`}` 언어 요소는 *name* 캡처 그룹과 일치하는 마지막 부분 문자열을 대체합니다. 여기서 *name* 은 `(?<`*name*`>)` 언어 요소가 정의한 캡처 그룹의 이름입니다. 명명된 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
  *name* 이 정규식 패턴에 정의된 명명된 유효한 캡처 그룹을 지정하지 않지만 숫자로 구성된 경우, `${`*name*`}` 은 번호가 매겨진 그룹으로 해석됩니다.  
   
@@ -199,4 +199,4 @@ ms.locfileid: "78160081"
   
 ## <a name="see-also"></a>참조
 
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)

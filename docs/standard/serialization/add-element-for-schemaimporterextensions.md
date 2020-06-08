@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378474"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288331"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<\<schemaImporterExtensions>에 대한 add> 요소
-<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
+# <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions>에 대한 \<add> 요소
+<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../framework/configure-apps/file-schema/index.md)를 참조하세요.  
   
  \<configuration>  
 \<system.xml.serialization>  
@@ -64,5 +64,5 @@ ms.locfileid: "83378474"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<schemaImporterExtensions> 요소](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<system.xml.serialization> 요소](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)

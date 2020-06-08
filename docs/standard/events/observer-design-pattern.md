@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131572"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291268"
 ---
 # <a name="observer-design-pattern"></a>관찰자 디자인 패턴
 
@@ -93,6 +93,6 @@ ms.locfileid: "73131572"
 
 |제목|설명|
 |-----------|-----------------|
-|[관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)|관찰자 디자인 패턴을 구현하는 애플리케이션을 개발할 때 채택할 모범 사례를 설명합니다.|
-|[방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)|온도 모니터링 애플리케이션에 대한 공급자의 단계별 구현을 제공합니다.|
-|[방법: 관찰자 구현](../../../docs/standard/events/how-to-implement-an-observer.md)|온도 모니터링 애플리케이션에 대한 관찰자의 단계별 구현을 제공합니다.|
+|[관찰자 디자인 패턴 유용한 정보](observer-design-pattern-best-practices.md)|관찰자 디자인 패턴을 구현하는 애플리케이션을 개발할 때 채택할 모범 사례를 설명합니다.|
+|[방법: 공급자 구현](how-to-implement-a-provider.md)|온도 모니터링 애플리케이션에 대한 공급자의 단계별 구현을 제공합니다.|
+|[방법: 관찰자 구현](how-to-implement-an-observer.md)|온도 모니터링 애플리케이션에 대한 관찰자의 단계별 구현을 제공합니다.|

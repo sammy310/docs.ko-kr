@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441008"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289367"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 
@@ -309,7 +309,7 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 숫자와 날짜 및 시간과 같은 문자열이 아닌 데이터를 사용자에게 표시할 때 사용자의 문화권 설정을 사용하여 형식을 지정합니다. 기본적으로 다음 항목은 모두 서식 지정 작업에서 현재 스레드 문화권을 사용합니다.
 
 - [C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 컴파일러에서 지원하는 보간된 문자열입니다.
-- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 또는 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) 연결 연산자를 사용하거나 직접 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 호출하는 문자열 연결 연산자입니다.
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 또는 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) 연결 연산자를 사용하거나 직접 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 호출하는 문자열 연결 연산자입니다.
 - <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드
 - 숫자 형식과 날짜 및 시간 형식의 `ToString` 메서드.
 

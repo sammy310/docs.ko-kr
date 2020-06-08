@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242779"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289293"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 
@@ -49,14 +49,14 @@ ms.locfileid: "81242779"
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- `(?imnsx-imnsx)` 구문을 사용하여 정규식 패턴에 인라인 옵션을 적용합니다. 이 옵션은 옵션이 정의된 지점에서 패턴의 끝 부분까지 또는 다른 인라인 옵션에 의해 옵션이 정의되지 않은 지점까지 패턴에 적용됩니다. <xref:System.Text.RegularExpressions.Regex> 인스턴스의 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 이러한 인라인 옵션을 반영하지 않습니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) 항목을 참조하세요.
+- `(?imnsx-imnsx)` 구문을 사용하여 정규식 패턴에 인라인 옵션을 적용합니다. 이 옵션은 옵션이 정의된 지점에서 패턴의 끝 부분까지 또는 다른 인라인 옵션에 의해 옵션이 정의되지 않은 지점까지 패턴에 적용됩니다. <xref:System.Text.RegularExpressions.Regex> 인스턴스의 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 이러한 인라인 옵션을 반영하지 않습니다. 자세한 내용은 [기타 구문](miscellaneous-constructs-in-regular-expressions.md) 항목을 참조하세요.
 
   다음 예제에서 이에 대해 설명합니다. 이 예제에서는 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- `(?imnsx-imnsx:`*subexpression*`)` 구문을 사용하여 정규식 패턴의 특정 그룹화 구문에 인라인 옵션을 적용합니다. 옵션 집합 앞에 기호가 없으면 집합이 설정되고, 옵션 집합 앞에 빼기 기호가 있으면 집합이 해제됩니다. `?`는 옵션의 사용 여부에 따라 필요한 언어 구문의 고정 부분입니다. 이 옵션은 해당 그룹에만 적용됩니다. 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
+- `(?imnsx-imnsx:`*subexpression*`)` 구문을 사용하여 정규식 패턴의 특정 그룹화 구문에 인라인 옵션을 적용합니다. 옵션 집합 앞에 기호가 없으면 집합이 설정되고, 옵션 집합 앞에 빼기 기호가 있으면 집합이 해제됩니다. `?`는 옵션의 사용 여부에 따라 필요한 언어 구문의 고정 부분입니다. 이 옵션은 해당 그룹에만 적용됩니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
   다음 예제에서 이에 대해 설명합니다. 이 예제에서는 그룹화 구문에 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
@@ -298,7 +298,7 @@ ms.locfileid: "81242779"
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설션(`(?<=`*subexpression*`)` 언어 요소)은 방향을 변경하지 않습니다. lookahead 어설션은 오른쪽을 확인하고, lookbehind 어설션은 왼쪽을 확인합니다. 예를 들어, 정규식 `(?<=\d{1,2}\s)\w+,?\s\d{4}`에서는 lookbehind 어설션을 사용하여 월 이름 앞에 있는 날짜에 대해 테스트합니다. 그런 다음 정규식은 월 및 연도를 일치시킵니다. lookahead 및 lookbehind 어설션에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
+lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설션(`(?<=`*subexpression*`)` 언어 요소)은 방향을 변경하지 않습니다. lookahead 어설션은 오른쪽을 확인하고, lookbehind 어설션은 왼쪽을 확인합니다. 예를 들어, 정규식 `(?<=\d{1,2}\s)\w+,?\s\d{4}`에서는 lookbehind 어설션을 사용하여 월 이름 앞에 있는 날짜에 대해 테스트합니다. 그런 다음 정규식은 월 및 연도를 일치시킵니다. lookahead 및 lookbehind 어설션에 대한 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -324,7 +324,7 @@ lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설
 
 ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, 자신을 참조하는 캡처링 그룹 및 8진수 대 역참조 해석의 세 가지 영역에서 다릅니다.
 
-- 문자 클래스 구문. 정식 정규식은 유니코드를 지원하는 반면 ECMAScript는 지원하지 않으므로, ECMAScript의 문자 클래스의 구문이 더 제한되어 있으며 일부 문자 클래스 언어 요소는 다른 의미를 지닙니다. 예를 들어, ECMAScript는 유니코드 범주 또는 블록 요소 `\p` 및 `\P`와 같은 언어 요소를 지원하지 않습니다. 마찬가지로, 단어 문자와 일치하는 `\w` 요소는 ECMAScript를 사용할 경우 `[a-zA-Z_0-9]` 문자 클래스와 동일하고 정식 동작을 사용할 경우 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`와 동일합니다. 자세한 내용은 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요.
+- 문자 클래스 구문. 정식 정규식은 유니코드를 지원하는 반면 ECMAScript는 지원하지 않으므로, ECMAScript의 문자 클래스의 구문이 더 제한되어 있으며 일부 문자 클래스 언어 요소는 다른 의미를 지닙니다. 예를 들어, ECMAScript는 유니코드 범주 또는 블록 요소 `\p` 및 `\P`와 같은 언어 요소를 지원하지 않습니다. 마찬가지로, 단어 문자와 일치하는 `\w` 요소는 ECMAScript를 사용할 경우 `[a-zA-Z_0-9]` 문자 클래스와 동일하고 정식 동작을 사용할 경우 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`와 동일합니다. 자세한 내용은 [문자 클래스](character-classes-in-regular-expressions.md)를 참조하세요.
 
   다음 예제에서는 정식 패턴 일치와 ECMAScript 패턴 일치 간의 차이점을 보여 줍니다. 이 예제에서는 뒤에 공백 문자가 있는 단어와 일치하는 정규식 `\b(\w+\s*)+`를 정의합니다. 입력은 두 개의 문자열로 구성되어 있는데, 한 문자열은 라틴 문자 집합을 사용하고 다른 문자열은 키릴 자모 문자 집합을 사용합니다. 출력에 표시된 것처럼, ECMAScript 일치를 사용하는 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 키릴 자모 단어와 일치하지 않는 반면 정식 일치를 사용하는 메서드 호출은 이러한 단어와 일치합니다.
 
@@ -363,7 +363,7 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]
 
 > [!NOTE]
-> 대/소문자를 구분하고 고정 문화권을 사용하는 문자열 비교에 대한 자세한 내용은 [문자열 사용에 대한 유용한 정보](../../../docs/standard/base-types/best-practices-strings.md)를 참조하세요.
+> 대/소문자를 구분하고 고정 문화권을 사용하는 문자열 비교에 대한 자세한 내용은 [문자열 사용에 대한 유용한 정보](best-practices-strings.md)를 참조하세요.
 
 현재 문화권의 대/소문자를 구분하지 않는 비교를 사용하는 대신 <xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant?displayProperty=nameWithType> 옵션을 지정하여 언어의 문화적 차이를 무시하고 고정 문화권의 규칙을 사용할 수 있습니다.
 
@@ -377,4 +377,4 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 
 ## <a name="see-also"></a>참조
 
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)

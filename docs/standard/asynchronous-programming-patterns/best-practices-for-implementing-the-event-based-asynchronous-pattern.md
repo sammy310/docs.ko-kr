@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156051"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289943"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
   
- 개요를 보려면 [이벤트 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+ 개요를 보려면 [이벤트 기반 비동기 패턴 구현](implementing-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ## <a name="required-behavioral-guarantees"></a>필요한 동작 보장  
  이벤트 기반 비동기 패턴을 구현하는 경우 클래스가 올바르게 동작하고 클래스의 클라이언트가 해당 동작을 사용할 수 있도록 보장하는 다양한 보장을 제공해야 합니다.  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 클래스가 여러 동시 호출을 지원하는 경우 개발자가 개체 반환 상태 매개 변수 또는 `userSuppliedState`라는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 별도로 정의하여 각 호출을 추적할 수 있도록 합니다. 이 매개 변수는 항상 <em>MethodName</em>**Async** 메서드 시그니처의 마지막 매개 변수여야 합니다.  
   
-- 클래스가 개체 반환 상태 매개 변수 또는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 정의하는 경우 해당 작업 ID로 작업의 수명을 추적해야 하며, 해당 작업 ID를 완료 처리기에 다시 제공해야 합니다. 도움이 되는 도우미 클래스가 있습니다. 동시성 관리에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+- 클래스가 개체 반환 상태 매개 변수 또는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 정의하는 경우 해당 작업 ID로 작업의 수명을 추적해야 하며, 해당 작업 ID를 완료 처리기에 다시 제공해야 합니다. 도움이 되는 도우미 클래스가 있습니다. 동시성 관리에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 - 클래스가 상태 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 정의하고 클래스가 여러 동시 호출을 지원하지 않는 경우 이전 <em>MethodName</em>**Async** 호출이 완료되기 전에 <em>MethodName</em>**Async**를 호출하려는 시도에서 <xref:System.InvalidOperationException>이 발생하도록 합니다.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 > 명시적으로 애플리케이션 모델의 정책에 반대하되 이벤트 기반 비동기 패턴 사용의 다른 이점을 이용하려는 경우 이러한 규칙을 피해 갈 수 있습니다. 예를 들어, Windows Forms에서 작동하는 클래스가 자유 스레드가 되도록 할 수 있습니다. 개발자가 암시된 제한 사항을 이해하는 한 자유 스레드 클래스를 만들 수 있습니다. 콘솔 애플리케이션은 <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출 실행을 동기화하지 않습니다. 이로 인해 `ProgressChanged` 이벤트가 잘못 발생할 수 있습니다. <xref:System.ComponentModel.AsyncOperation.Post%2A> 호출이 serialize되어 실행되도록 하려면 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 클래스를 구현하여 설치합니다.  
   
- 비동기 작업이 가능하도록 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>를 사용하는 방법에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+ 비동기 작업이 가능하도록 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>를 사용하는 방법에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ## <a name="guidelines"></a>지침  
   
@@ -141,7 +141,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - <xref:System.ComponentModel.Component>에서 파생되는 클래스를 작성하는 경우 고유한 <xref:System.Threading.SynchronizationContext> 클래스를 구현하여 설치하지 마세요. 구성 요소가 아니라 애플리케이션 모델이 사용되는 <xref:System.Threading.SynchronizationContext>를 제어합니다.  
   
-- 모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../docs/standard/threading/managed-threading-best-practices.md)을 참조하세요.  
+- 모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../threading/managed-threading-best-practices.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
@@ -150,9 +150,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [이벤트 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [이벤트 기반 비동기 패턴 구현 시기 결정](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [이벤트 기반 비동기 패턴 구현](implementing-the-event-based-asynchronous-pattern.md)
+- [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)
+- [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)

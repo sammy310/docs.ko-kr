@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 337cb794ef9a405a178f1998cbe27b5da7709382
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005375"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397443"
 ---
 # <a name="-optimize"></a>-optimize
 컴파일러 최적화를 사용하거나 사용하지 않도록 설정합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "72005375"
 ## <a name="remarks"></a>설명  
  컴파일러 최적화를 통해 더 작지만 빠르고 효율적인 출력 파일을 만듭니다. 그러나 최적화로 인해 출력 파일에서 코드가 재배열되기 때문에 `-optimize+`는 디버깅을 어렵게 만들 수 있습니다.  
   
- 어셈블리에 대해 `-target:module`을 사용하여 생성된 모든 모듈은 어셈블리와 동일한 `-optimize` 설정을 사용해야 합니다. 자세한 내용은 [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요.  
+ 어셈블리에 대해 `-target:module`을 사용하여 생성된 모든 모듈은 어셈블리와 동일한 `-optimize` 설정을 사용해야 합니다. 자세한 내용은 [-target(Visual Basic)](target.md)을 참조하세요.  
   
  `-optimize` 및 `-debug` 옵션을 결합할 수 있습니다.  
   
@@ -49,7 +49,7 @@ vbc t2.vb -optimize
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug(Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-debug(Visual Basic)](debug.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
+- [-target(Visual Basic)](target.md)

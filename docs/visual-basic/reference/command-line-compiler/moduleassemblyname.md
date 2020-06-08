@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: a612a68cffd927f3e360406cca6d9daae4f66c86
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775631"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403150"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 이 모듈이 속할 어셈블리의 이름을 지정합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "72775631"
   
 - 참조된 어셈블리는 모듈을 빌드할 어셈블리에 대한 friend 어셈블리 액세스 권한을 부여했습니다.  
   
- 모듈 만들기에 대한 자세한 내용은 [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요. friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조하세요.  
+ 모듈 만들기에 대한 자세한 내용은 [-target(Visual Basic)](target.md)을 참조하세요. friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조하세요.  
   
 > [!NOTE]
 > Visual Studio 개발 환경 내에서는 `-moduleassemblyname` 옵션을 사용할 수 없습니다. 명령 프롬프트에서 컴파일하는 경우에만 사용할 수 있습니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "72775631"
 ## <a name="see-also"></a>참조
 
 - [방법: 다중 파일 어셈블리 빌드](../../../framework/app-domains/build-multifile-assembly.md)
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-reference(Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-target(Visual Basic)](target.md)
+- [-main](main.md)
+- [-reference(Visual Basic)](reference.md)
+- [-addmodule](addmodule.md)
 - [.NET 어셈블리](../../../standard/assembly/index.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
 - [Friend 어셈블리](../../../standard/assembly/friend.md)

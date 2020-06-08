@@ -3,12 +3,12 @@ title: DOM의 요소 노드에서 특성 제거
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-ms.openlocfilehash: bb18e712d5ed2cd06c7ae0e867b19ca8a9ad2513
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0ac8528d52ef09aab99c76aea9378c0188fa66d4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710351"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292022"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM의 요소 노드에서 특성 제거
 여러 가지 방법으로 특성을 제거할 수 있습니다. 그 중 한 가지 방법은 특성 컬렉션에서 특성을 제거하는 것입니다. 이 방법을 사용하려면 다음 단계를 수행합니다.  
@@ -39,4 +39,4 @@ ms.locfileid: "75710351"
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

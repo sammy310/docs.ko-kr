@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345892"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387597"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 애플리케이션 로그 작업
 
@@ -45,11 +45,11 @@ C:\Documents and Settings\\`username`\Application Data
 
 `CompanyName`, `ProductName`및 `ProductVersion` 값은 애플리케이션의 어셈블리 정보에서 가져옵니다. 로그 파일 이름의 형식은 *AssemblyName*.log이며 여기서 *AssemblyName* 은 확장명을 제외한 어셈블리의 파일 이름입니다. 애플리케이션에서 로그에 쓰려고 할 때 원본 로그를 사용할 수 없는 경우와 같이 둘 이상의 로그 파일이 필요한 경우 로그 파일 이름의 형식은 *AssemblyName*-*iteration*.log이며 여기서 `iteration` 은 양의 `Integer`을 클릭합니다.
 
-컴퓨터 및 애플리케이션의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)을 참조하세요.
+컴퓨터 및 애플리케이션의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)을 참조하세요.
 
 ## <a name="configuring-log-settings"></a>로그 설정 구성
 
-`Log` 개체에는 애플리케이션 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [연습: My.Application.Log 출력 필터링](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)을 참조하세요.
+`Log` 개체에는 애플리케이션 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [연습: My.Application.Log 출력 필터링](walkthrough-filtering-my-application-log-output.md)을 참조하세요.
 
 로그 구성 섹션은 app.config 파일의 주 `<system.diagnostics>` 노드에 있는 `<configuration>` 노드에 있습니다. 로그 정보는 다음과 같은 여러 노드에 정의되어 있습니다.
 
@@ -109,4 +109,4 @@ C:\Documents and Settings\\`username`\Application Data
 ## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [애플리케이션의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [애플리케이션의 정보 기록](index.md)

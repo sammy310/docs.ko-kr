@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139689"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290748"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성
 
 다음 예제에서는 파티션 지역 변수를 사용하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드를 작성하는 방법을 보여줍니다. <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프가 실행되면 해당 소스 컬렉션이 여러 파티션으로 나뉩니다. 각 파티션에는 고유한 파티션 지역 변수의 복사본이 있습니다. 파티션 지역 변수는 여러 파티션이 단일 스레드에서 실행될 수 있다는 점을 제외하고 [스레드 지역 변수](xref:System.Threading.ThreadLocal%601)와 유사합니다.
 
-이 예제의 코드와 매개 변수는 해당 <xref:System.Threading.Tasks.Parallel.For%2A> 메서드와 매우 흡사합니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)을 참조하세요.
+이 예제의 코드와 매개 변수는 해당 <xref:System.Threading.Tasks.Parallel.For%2A> 메서드와 매우 흡사합니다. 자세한 내용은 [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)을 참조하세요.
 
 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프에서 파티션 지역 변수를 사용하려면 두 가지 형식의 매개 변수를 사용하는 메서드 오버로드 중 하나를 호출해야 합니다. 첫 번째 형식 매개 변수인 `TSource`는 원본 요소의 형식을 지정하고, 두 번째 형식 매개 변수인 `TLocal`은 파티션 로컬 변수의 형식을 지정합니다.
 
@@ -50,6 +50,6 @@ ms.locfileid: "73139689"
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-- [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
+- [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)

@@ -3,12 +3,12 @@ title: 메모리 내 XML 데이터 처리
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 06863d162a9f9fbf67f41cb12ea4fbb1935b424d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710429"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291281"
 ---
 # <a name="processing-xml-data-in-memory"></a>메모리 내 XML 데이터 처리
 Microsoft .NET Framework에는 <xref:System.Xml.XmlDocument> 클래스, <xref:System.Xml.XPath.XPathDocument> 클래스 및 [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)과 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)이라는 XML 데이터를 처리할 수 있는 세 가지 모델이 포함되어 있습니다.  
@@ -20,14 +20,14 @@ Microsoft .NET Framework에는 <xref:System.Xml.XmlDocument> 클래스, <xref:Sy
  [LINQ to XML](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)은 XML 데이터를 처리하기 위해 .NET Framework 버전 3.5에 제공된 모델입니다. [LINQ(Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)를 활용하는 메모리 내 모델입니다. LINQ는 C# 및 Visual Basic의 언어 구문을 확장하여 새 쿼리 기능을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [DOM 모델을 사용하여 XML 데이터 처리](process-xml-data-using-the-dom-model.md)  
  <xref:System.Xml.XmlDocument> 및 관련 클래스를 사용하여 XML 데이터를 처리하는 방법을 설명합니다.  
   
- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPath 데이터 모델을 사용하여 XML 데이터 처리](process-xml-data-using-the-xpath-data-model.md)  
  <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument> 및 <xref:System.Xml.XPath.XPathNavigator> 클래스를 사용하여 XML 데이터를 처리하는 방법을 설명합니다.  
   
- [LINQ to XML을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
+ [LINQ to XML을 사용하여 XML 데이터 처리](process-xml-data-using-linq-to-xml.md)  
  LINQ to XML의 간단한 개요 및 LINQ to XML 문서에 대한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)
+ [XML 문서 및 데이터](index.md)

@@ -3,12 +3,12 @@ title: XML과 관계형 데이터 및 ADO.NET의 통합
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f54c7a890ada01f2cffdd54c024cfbc98777200d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155622"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289020"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML과 관계형 데이터 및 ADO.NET의 통합
 **XmlDataDocument** 클래스는 **XmlDocument**의 파생 클래스이며 XML 데이터를 포함합니다. **XmlDataDocument**의 이점은 관계형 데이터와 계층형 데이터 간을 연결해 준다는 것입니다. **XmlDocument**는 **DataSet**에 바인딩할 수 있는 클래스입니다. 이러한 두 클래스는 모두 클래스에 포함된 데이터의 변경 내용을 동기화할 수 있습니다. **DataSet**에 바인딩된 **XmlDocument**를 통해 XML을 관계형 데이터와 통합할 수 있으므로 데이터를 XML 또는 관계형 형식으로 나타낼 필요가 없습니다. 데이터를 두 가지 형식으로 나타낼 수 있으며 한 가지 형식으로만 제약되지 않습니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "78155622"
 |소스 XML에서 요소 순서를 유지하지 않아도 됩니다.|소스 XML에서 요소 순서를 유지해야 합니다.|  
 |소스 XML에서 요소 간의 공백과 서식을 유지할 필요가 없습니다.|소스 XML에서 공백과 서식을 유지해야 합니다.|  
   
- 필요한 **DataSet** 주소에서 직접 XML을 로드하거나 해당 주소에 직접 XML을 쓰는 경우 [XML로부터 DataSet 로드](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 및 [DataSet을 XML 데이터로 작성](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)을 참조하세요.  
+ 필요한 **DataSet** 주소에서 직접 XML을 로드하거나 해당 주소에 직접 XML을 쓰는 경우 [XML로부터 DataSet 로드](../../../framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 및 [DataSet을 XML 데이터로 작성](../../../framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)을 참조하세요.  
   
- 필요한 **XmlDataDocument** 주소에서 **DataSet**을 로드하는 경우 [데이터 세트를 XML 문서와 동기화](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)를 참조하세요.  
+ 필요한 **XmlDataDocument** 주소에서 **DataSet**을 로드하는 경우 [데이터 세트를 XML 문서와 동기화](../../../framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
-- [데이터 세트에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [데이터 세트에서 XML 사용](../../../framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

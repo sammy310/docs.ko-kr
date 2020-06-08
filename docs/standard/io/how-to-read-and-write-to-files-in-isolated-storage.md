@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c95f418ff85654dceed296b7a891c025ab2e62
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706688"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291801"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>방법: 격리된 스토리지의 파일 읽기 및 쓰기
 격리된 저장소에서 파일을 읽고 쓰기 위해, 스트림 판독기(<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 개체)를 가진 <xref:System.IO.StreamReader> 개체 또는 스트림 작성기(<xref:System.IO.StreamWriter> 개체)를 사용합니다.  
@@ -40,5 +40,5 @@ ms.locfileid: "75706688"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [파일 및 스트림 I/O](../../../docs/standard/io/index.md)
-- [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)
+- [파일 및 스트림 I/O](index.md)
+- [격리된 스토리지](isolated-storage.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b94a92567c62efca37b1f0ec34f79fb3ceca54bc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333817"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406640"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 
@@ -21,22 +21,22 @@ ms.locfileid: "74333817"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ [방법: 텍스트 파일에서 읽기](how-to-read-from-text-files.md)  
  텍스트 파일에서 읽는 방법을 보여 줍니다.  
   
- [방법: 쉼표로 구분된 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [방법: 쉼표로 구분된 텍스트 파일에서 읽기](how-to-read-from-comma-delimited-text-files.md)  
  구분된 텍스트 파일에서 읽는 방법을 보여 줍니다.  
   
- [방법: 고정 너비 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [방법: 고정 너비 텍스트 파일에서 읽기](how-to-read-from-fixed-width-text-files.md)  
  고정 너비 텍스트 파일에서 읽는 방법을 보여 줍니다.  
   
- [방법: 여러 형식의 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [방법: 여러 형식의 텍스트 파일에서 읽기](how-to-read-from-text-files-with-multiple-formats.md)  
  여러 형식의 텍스트 파일에서 읽는 방법을 보여 줍니다.  
   
- [방법: 이진 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [방법: 이진 파일에서 읽기](how-to-read-from-binary-files.md)  
  이진 파일에서 읽는 방법을 보여 줍니다.  
   
- [방법: StreamReader를 사용하여 파일에서 텍스트 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [방법: StreamReader를 사용하여 파일에서 텍스트 읽기](how-to-read-text-from-files-with-a-streamreader.md)  
  <xref:System.IO.StreamReader>를 사용하여 파일에서 읽는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
@@ -58,14 +58,14 @@ ms.locfileid: "74333817"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [데이터를 클립보드에 저장하고 클립보드에서 읽기](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [데이터를 클립보드에 저장하고 클립보드에서 읽기](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  클립보드에서 데이터를 읽거나 쓰는 것과 같이 `My.Computer.Clipboard`와 관련된 작업을 수행하는 방법을 설명합니다.  
   
- [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](parsing-text-files-with-the-textfieldparser-object.md)  
  `TextFieldParser` 개체를 사용하여 텍스트 파일 읽기의 개요를 제공합니다.  
   
- [연습: Visual Basic에서 파일과 디렉터리 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [연습: Visual Basic에서 파일과 디렉터리 조작](walkthrough-manipulating-files-and-directories.md)  
  파일과 디렉터리에서 `My` 기능을 사용하는 방법을 보여 줍니다.  
   
- [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [연습: .NET Framework 메서드를 사용하여 파일 조작](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  파일과 디렉터리에서 .NET Framework 메서드를 사용하는 방법을 보여 줍니다.

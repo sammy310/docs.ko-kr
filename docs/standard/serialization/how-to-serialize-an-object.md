@@ -9,18 +9,18 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 63446df3fa2c931c839eda91c648cee961715f93
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: e9c7ba250995db1c7a701de346b18661892e7e23
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377550"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84291554"
 ---
 # <a name="how-to-serialize-an-object"></a>방법: 개체 직렬화
 개체를 serialize하려면 먼저 serialize될 개체를 만들고 해당 public 속성과 필드를 설정합니다. 이렇게 하려면 XML 스트림이 저장될 전송 형식을 스트림 또는 파일 중에서 결정합니다. 예를 들어 XML 스트림을 영구적 형태로 저장해야 하는 경우에는 <xref:System.IO.FileStream> 개체를 만듭니다.  
   
 > [!NOTE]
-> XML serialization에 대한 다른 예제를 보려면 [XML Serialization 예제](../../../docs/standard/serialization/examples-of-xml-serialization.md)를 참조하세요.  
+> XML serialization에 대한 다른 예제를 보려면 [XML Serialization 예제](examples-of-xml-serialization.md)를 참조하세요.  
   
 ### <a name="to-serialize-an-object"></a>개체를 serialize하려면  
   
@@ -53,5 +53,5 @@ ms.locfileid: "83377550"
   
 ## <a name="see-also"></a>참조
 
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)
