@@ -1,13 +1,13 @@
 ---
 title: C#의 비동기 프로그래밍
 description: async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007964"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446447"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async 및 await를 사용한 비동기 프로그래밍
 
@@ -32,6 +32,10 @@ ms.locfileid: "84007964"
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="동기 아침 식사":::
+
+동기적으로 준비된 아침 식사에는 대략 30분이 걸렸는데, 총계는 개별 작업의 합계이기 때문입니다.
+
 > [!NOTE]
 > `Coffee`, `Egg`, `Bacon`, `Toast` 및 `Juice` 클래스는 비어 있습니다. 해당 클래스는 데모 목적의 마커 클래스일 뿐이며 속성을 포함하지 않고 다른 용도로 사용할 수 없습니다.
 
@@ -50,6 +54,9 @@ ms.locfileid: "84007964"
 먼저 이 코드를 업데이트하여 작업이 실행되는 동안 스레드가 차단되지 않도록 하겠습니다. `await` 키워드는 작업을 차단하지 않는 방식으로 시작한 다음, 해당 작업이 완료되면 실행을 계속합니다. 간단한 비동기 버전의 아침 식사 준비 코드는 다음과 같습니다.
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> 총 경과된 시간은 초기 동기 버전과 거의 같습니다. 이 코드에서는 아직 비동기 프로그래밍의 몇 가지 주요 기능을 활용하지 않았습니다.
 
 > [!TIP]
 > `FryEggsAsync`, `FryBaconAsync` 및 `ToastBreadAsync`의 메서드 본문은 각각 `Task<Egg>`, `Task<Bacon>` 및 `Task<Toast>`를 반환하도록 모두 업데이트되었습니다. 이 메서드들은 원래 버전에서 “Async” 접미사를 포함하도록 이름이 바뀌었습니다. 해당 구현은 이 문서의 뒷부분에 나오는 [최종 버전](#final-version)의 일부로 표시됩니다.
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="비동기 아침 식사":::
+
+비동기적으로 준비된 아침 식사에는 대략 20분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었기 때문입니다.
+
 앞의 코드가 더 잘 작동합니다. 모든 비동기 작업을 한 번에 시작합니다. 결과가 필요할 때만 각 작업을 기다립니다. 앞의 코드는 다른 마이크로서비스를 요청한 다음, 결과를 단일 페이지로 결합하는 웹 애플리케이션의 코드와 비슷할 수 있습니다. 모든 요청을 즉시 수행한 다음, 이러한 모든 작업을 기다리고(`await`) 웹 페이지를 구성합니다.
 
 ## <a name="composition-with-tasks"></a>작업 구성
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 변경 내용을 모두 적용한 후 코드의 최종 버전은 다음과 같습니다. <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="모든 비동기 아침 식사의 경우":::
+
+비동기적으로 준비된 아침 식사의 최종 버전에는 대략 15분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었고 코드가 여러 작업을 한 번에 모니터링하고 필요한 경우에만 작업을 수행할 수 있었기 때문입니다.
 
 이 최종 코드는 비동기입니다. 이 코드는 아침 식사를 요리하는 방법을 더 정확하게 반영하고 있습니다. 앞의 코드를 이 문서의 첫 번째 코드 샘플과 비교해 보세요. 핵심 작업은 코드를 읽어 파악할 수 있습니다. 이 코드는 이 문서의 시작 부분에 나와 있는 아침 식사 준비 지침을 읽는 것과 동일한 방식으로 읽을 수 있습니다. `async` 및 `await` 언어 기능을 사용하면 모든 사용자가 작성된 이러한 지침을 따를 수 있습니다. 가능한 한 작업을 시작하지만 작업이 완료될 때까지 기다리는 것을 차단하지 않도록 합니다.
 

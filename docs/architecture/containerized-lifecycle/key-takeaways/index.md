@@ -1,27 +1,26 @@
 ---
 title: 핵심 내용
 description: 이 가이드의 핵심 내용을 검토하세요.
-ms.date: 02/15/2019
-ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295038"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447019"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 
 - 컨테이너 기반 솔루션은 프로덕션 환경의 종속성 오류로 인한 배포 문제를 해결하여 DevOps 및 프로덕션 운영을 획기적으로 개선하기 때문에 중요한 비용 절감 효과를 제공합니다.
 
-- Docker는 컨테이너 업계의 사실 표준이 되고 있으며 Microsoft를 포함한 Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원합니다. 향후에는 아마도 클라우드 또는 온-프레미스의 어떤 데이터 센터에서나 Docker를 아주 흔히 보게 될 것입니다.
+- Docker는 컨테이너 업계의 실질적인 표준이 되었으며 Microsoft를 포함한 Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원합니다. 향후에는 아마도 클라우드 또는 온-프레미스의 어떤 데이터 센터에서나 Docker를 아주 흔히 보게 될 것입니다.
 
 - Docker 컨테이너는 서버 기반 애플리케이션 또는 서비스 배포의 표준 단위가 되고 있습니다.
 
 - AKS(Azure Kubernetes Service) 및 Azure Service Fabric에 제공되는 것과 같은 Docker 오케스트레이터는 복잡성과 확장성 요구가 까다로운 마이크로서비스 기반 또는 다중 컨테이너 애플리케이션에 핵심적이고 필수적입니다.
 
-- 지속적인 통합/지속적인 배포하고 프로덕션 Docker 환경에 연결하는 엔드투엔드 DevOps 환경은 민첩성을 제공하며, 궁극적으로 애플리케이션의 시장 출시 시기를 앞당길 수 있습니다.
+- CI/CD(연속 통합/지속적인 배포)를 지원하고 프로덕션 Docker 환경에 연결되는 엔드투엔드 DevOps 환경은 민첩성을 제공하며 궁극적으로 애플리케이션의 출시 시간을 단축할 수 있습니다.
 
 - Azure DevOps Services는 CI/CD 파이프라인에서 Docker 환경에 배포하여 DevOps 환경을 크게 간소화합니다. 이 명령문은 간단한 Docker 환경뿐만 아니라 Azure에 기반한 고급 마이크로서비스 및 컨테이너 오케스트레이터에도 적용됩니다.
 
->[!div class="step-by-step"]
->[이전](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"][previous](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
