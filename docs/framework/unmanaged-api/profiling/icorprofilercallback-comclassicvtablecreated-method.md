@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866548"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500340"
 ---
-# <a name="icorprofilercallbackcomclassicvtablecreated-method"></a><span data-ttu-id="913c2-102">ICorProfilerCallback::COMClassicVTableCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="913c2-102">ICorProfilerCallback::COMClassicVTableCreated Method</span></span>
-<span data-ttu-id="913c2-103">지정 된 IID 및 클래스에 대 한 COM interop vtable이 생성 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-103">Notifies the profiler that a COM interop vtable for the specified IID and class has been created.</span></span>  
+# <a name="icorprofilercallbackcomclassicvtablecreated-method"></a><span data-ttu-id="0f5e8-102">ICorProfilerCallback::COMClassicVTableCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="0f5e8-102">ICorProfilerCallback::COMClassicVTableCreated Method</span></span>
+<span data-ttu-id="0f5e8-103">지정 된 IID 및 클래스에 대 한 COM interop vtable이 생성 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-103">Notifies the profiler that a COM interop vtable for the specified IID and class has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="913c2-104">구문</span><span class="sxs-lookup"><span data-stu-id="913c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f5e8-104">구문</span><span class="sxs-lookup"><span data-stu-id="0f5e8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT COMClassicVTableCreated(  
@@ -35,39 +35,39 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="913c2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="913c2-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0f5e8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0f5e8-105">Parameters</span></span>
 
 - `wrappedClasId`
 
-  <span data-ttu-id="913c2-106">\[in] vtable이 생성 된 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-106">\[in] The ID of the class for which the vtable has been created.</span></span>
+  <span data-ttu-id="0f5e8-106">\[in] vtable이 생성 된 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-106">\[in] The ID of the class for which the vtable has been created.</span></span>
 
 - `implementedIID`
 
-  <span data-ttu-id="913c2-107">\[in] 클래스에서 구현 하는 인터페이스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-107">\[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="913c2-108">인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-108">This value may be NULL if the interface is internal only.</span></span>
+  <span data-ttu-id="0f5e8-107">\[in] 클래스에서 구현 하는 인터페이스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-107">\[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="0f5e8-108">인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-108">This value may be NULL if the interface is internal only.</span></span>
 
 - `pVTable`
 
-  <span data-ttu-id="913c2-109">\[에서 vtable의 시작에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-109">\[in] A pointer to the start of the vtable.</span></span>
+  <span data-ttu-id="0f5e8-109">\[in] vtable의 시작에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-109">\[in] A pointer to the start of the vtable.</span></span>
 
 - `cSlots`
 
-  <span data-ttu-id="913c2-110">\[in] vtable에 있는 슬롯의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-110">\[in] The number of slots that are in the vtable.</span></span>
+  <span data-ttu-id="0f5e8-110">\[in] vtable에 있는 슬롯의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-110">\[in] The number of slots that are in the vtable.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="913c2-111">주의</span><span class="sxs-lookup"><span data-stu-id="913c2-111">Remarks</span></span>  
- <span data-ttu-id="913c2-112">스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="913c2-113">프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f5e8-111">설명</span><span class="sxs-lookup"><span data-stu-id="0f5e8-111">Remarks</span></span>  
+ <span data-ttu-id="0f5e8-112">스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="0f5e8-113">프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="913c2-114">이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="913c2-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="0f5e8-114">이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="913c2-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="913c2-115">Requirements</span></span>  
- <span data-ttu-id="913c2-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="913c2-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f5e8-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0f5e8-115">Requirements</span></span>  
+ <span data-ttu-id="0f5e8-116">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f5e8-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="913c2-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="913c2-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0f5e8-117">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0f5e8-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="913c2-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="913c2-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f5e8-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f5e8-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="913c2-119">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="913c2-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0f5e8-119">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f5e8-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="913c2-120">참조</span><span class="sxs-lookup"><span data-stu-id="913c2-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f5e8-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0f5e8-120">See also</span></span>
 
-- [<span data-ttu-id="913c2-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="913c2-121">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="913c2-122">COMClassicVTableDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="913c2-122">COMClassicVTableDestroyed Method</span></span>](icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [<span data-ttu-id="0f5e8-121">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0f5e8-121">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="0f5e8-122">COMClassicVTableDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="0f5e8-122">COMClassicVTableDestroyed Method</span></span>](icorprofilercallback-comclassicvtabledestroyed-method.md)
