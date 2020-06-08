@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841986"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501419"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask 메서드
 호스트에서 새 작업을 만들도록 요청 합니다.  
@@ -47,11 +47,11 @@ HRESULT CreateTask (
  진행 함수에 전달 될 사용자 데이터에 대 한 포인터 이거나, 함수에서 매개 변수를 사용 하지 않는 경우 null입니다.  
   
  `ppTask`  
- 제한이 호스트에서 만든 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스의 주소에 대 한 포인터 이거나, 태스크를 만들 수 없는 경우 null입니다. 작업은 [IHostTask:: Start](ihosttask-start-method.md)를 호출 하 여 명시적으로 시작 될 때까지 일시 중단 된 상태로 유지 됩니다.  
+ 제한이 호스트에서 만든 [IHostTask](ihosttask-interface.md) 인스턴스의 주소에 대 한 포인터 이거나, 태스크를 만들 수 없는 경우 null입니다. 작업은 [IHostTask:: Start](ihosttask-start-method.md)를 호출 하 여 명시적으로 시작 될 때까지 일시 중단 된 상태로 유지 됩니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`CreateTask`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  

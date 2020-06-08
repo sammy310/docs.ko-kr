@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866574"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500379"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 메서드
 클래스의 언로드가 완료 되었음을 프로파일러에 알립니다.  
@@ -37,25 +37,25 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  \[in]은 언로드된 클래스를 식별 합니다.
+  \[in] 언로드된 클래스를 식별 합니다.
 
 - `hrStatus`
 
-  \[] 클래스가 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.
+  \[in] 클래스가 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.
   
-## <a name="remarks"></a>주의  
- 클래스를 언로드하는 일부 부분은 `ClassUnloadFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 클래스를 언로드하는 첫 번째 부분이 성공 했다는 것만 나타냅니다.  
+## <a name="remarks"></a>설명  
+ 클래스를 언로드하는 일부 부분은 콜백 후에도 계속 될 수 있습니다 `ClassUnloadFinished` . 의 오류 HRESULT는 `hrStatus` 오류를 나타냅니다. 그러나의 성공 HRESULT는 `hrStatus` 클래스를 언로드하는 첫 번째 부분만 성공 했다는 것을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ClassUnloadStarted 메서드](icorprofilercallback-classunloadstarted-method.md)

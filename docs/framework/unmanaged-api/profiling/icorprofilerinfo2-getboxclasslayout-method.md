@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 500cf74c320438fc1b78f0aac737b418716e1a11
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 630b67a64716f26577bbc376970e4f76216f4da5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862830"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497357"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 메서드
 Boxing 될 때 지정 된 값 형식이 있는 위치에 대 한 정보를 가져옵니다.  
@@ -40,19 +40,19 @@ HRESULT GetBoxClassLayout(
  `pBufferOffset`  
  제한이 Boxed 개체 ID 포인터에 상대적인 값 형식의 오프셋 인 정수입니다.  
   
-## <a name="remarks"></a>주의  
- `pBufferOffset` 값은 상자 내 값 형식의 위치입니다. Boxed 개체에 `pBufferOffset` 적용 된 후에는 값 형식의 클래스 레이아웃을 사용 하 여 개체의 값을 해석할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `pBufferOffset`값은 상자 내 값 형식의 위치입니다. `pBufferOffset`가 boxed 개체에 적용 된 후에는 값 형식의 클래스 레이아웃을 사용 하 여 개체의 값을 해석할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 880c9bd186d6cb2acb277e9cc55d3063fb8d51d8
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 80d72aefc736054afcee152c55e941c0f8f3c6a8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867039"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500769"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 열거형
 필드가 정적인지 여부와 정적인 경우 필드에 적용될 정적 품질을 나타냅니다. 비트 OR 연산을 사용 하 여 이러한 값을 결합 하 여 필드에 여러 다른 정적 품질이 있음을 나타낼 수 있습니다.  
@@ -36,9 +36,9 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|필드가 static이 아닙니다.|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|응용 프로그램 도메인-정적 필드입니다.|  
@@ -47,14 +47,14 @@ typedef enum {
 |`COR_PRF_FIELD_RVA_STATIC`|RVA (상대 가상 주소)-정적 필드입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](profiling-enumerations.md)

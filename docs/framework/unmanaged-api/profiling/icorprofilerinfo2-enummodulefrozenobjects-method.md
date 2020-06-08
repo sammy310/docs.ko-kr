@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-ms.openlocfilehash: 27b3037459ac4f995e37515f6e96c28449c80a4f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1fe44f8f84c079e920c8c82fb9d52d1980d3b852
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862947"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497207"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects 메서드
 지정 된 모듈의 고정 된 개체를 반복할 수 있는 열거자를 가져옵니다. 이 메서드는 사용 되지 않습니다.  
@@ -41,7 +41,7 @@ HRESULT EnumModuleFrozenObjects(
  제한이 고정 된 개체를 열거 하는 [ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md) 인터페이스의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -49,7 +49,7 @@ HRESULT EnumModuleFrozenObjects(
   
  **.NET Framework 버전:** 3.5, 3.0 sp1, 3.0, 2.0 sp1, 2.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

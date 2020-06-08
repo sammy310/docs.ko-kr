@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501302"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 메서드
 지정 된 서명을 사용 하 여 메서드 또는 전역 함수에 대 한 정의를 만들고 해당 메서드 정의에 대 한 토큰을 반환 합니다.  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  중복 메서드를 정의 하면 안 됩니다. 즉,, `DefineMethod` `td` `wzName` 및 매개 변수에서 중복 값 집합을 사용 하 여를 호출 하면 안 됩니다 `pvSig` . 이 세 매개 변수는 메서드를 고유 하 게 정의 합니다. 그러나 메서드 정의 중 하나에 대해 `mdPrivateScope` 매개 변수에서 비트를 설정 하는 경우 중복 된 삼중을 사용할 수 있습니다 `dwMethodFlags` . 비트는 `mdPrivateScope` 컴파일러에서이 메서드 정의에 대 한 참조를 내보내지 않는다는 것을 의미 합니다.  
   
 ## <a name="method-implementation-information"></a>메서드 구현 정보  
- 메서드 구현에 대 한 정보는 메서드가 선언 될 때 알려지지 않는 경우가 많습니다. 따라서를 `ulCodeRVA` `dwImplFlags` 호출할 때 및 매개 변수에 값을 전달할 필요가 없습니다 `DefineMethod` . 이러한 값은 나중에 [IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) 또는 [IMetaDataEmit:: setrva](imetadataemit-setrva-method.md)를 통해 적절 하 게 제공할 수 있습니다.  
+ 메서드 구현에 대 한 정보는 메서드가 선언 될 때 알려지지 않는 경우가 많습니다. 따라서를 `ulCodeRVA` `dwImplFlags` 호출할 때 및 매개 변수에 값을 전달할 필요가 없습니다 `DefineMethod` . 이러한 값은 나중에 [IMetaDataEmit:: SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md) 또는 [IMetaDataEmit:: setrva](imetadataemit-setrva-method.md)를 통해 적절 하 게 제공할 수 있습니다.  
   
  플랫폼 호출 (PInvoke) 또는 COM interop 시나리오와 같은 경우에는 메서드 본문이 제공 되지 않으므로 `ulCodeRVA` 0으로 설정 해야 합니다. 이러한 경우 런타임이 구현을 찾기 때문에 메서드는 abstract로 태그를 지정 하면 안 됩니다.  
   

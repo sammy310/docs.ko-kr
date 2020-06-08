@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: b9fb308f19ff09218c97b030296b9a3d4f0f2512
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d28991254fba73de7a55135844d16417580d8792
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494386"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum 인터페이스
 공용 언어 런타임에서 스레드 컬렉션을 순차적으로 반복하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[Clone 메서드](icorprofilerthreadenum-clone-method.md)|이 `ICorProfilerThreadEnum` 인터페이스의 복사본에 대한 인터페이스 포인터를 가져옵니다.|  
 |[GetCount 메서드](icorprofilerthreadenum-getcount-method.md)|애플리케이션에서 사용하는 스레드 수를 가져옵니다.|  
@@ -34,19 +34,19 @@ ms.locfileid: "76868189"
 |[Reset 메서드](icorprofilerthreadenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
 |[Skip 메서드](icorprofilerthreadenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `ICorProfilerThreadEnum` 인터페이스는 열거자입니다. 배열의 수신기가 수신기에 적합한 속도로 송신기에서 요소를 끌어올 수 있게 합니다. 즉, 수신기가 배열 요소의 흐름을 명시적으로 제어하여 대형 배열을 메서드 매개 변수로 전달하는 기능과 관련된 문제를 방지할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494035"
 ---
 # <a name="profiling-interfaces"></a>프로파일링 인터페이스
 이 섹션에서는 CLR(공용 언어 런타임)에서 실행되는 프로그램을 프로파일링하는 데 사용할 수 있는 관리되지 않는 인터페이스에 대해 설명합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "76868150"
  .NET Framework 2.0 이상 버전에서 지원되는 메서드로 `ICorProfilerInfo` 인터페이스를 확장합니다.  
   
  [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)  
- .NET Framework 4 이상 버전에서 지원 되는 메서드로 `ICorProfilerInfo2` 인터페이스를 확장 합니다.  
+ `ICorProfilerInfo2`.NET Framework 4 이상 버전에서 지원 되는 메서드로 인터페이스를 확장 합니다.  
   
  [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)  
  코드 프로파일러가 CLR과 통신하여 이벤트 모니터링을 제어하고 정보를 요청하는 데 사용하는 메서드를 제공합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "76868150"
  애플리케이션이나 프로파일러가 로드한 모듈 컬렉션을 순서대로 반복하는 메서드를 제공합니다.  
   
  [ICorProfilerObjectEnum 인터페이스](icorprofilerobjectenum-interface.md)  
- [Ngen.exe (네이티브 이미지 생성기)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)에 의해 생성 되는 고정 된 개체의 컬렉션을 순차적으로 반복 하는 메서드를 제공 합니다.  
+ [Ngen.exe (네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)에 의해 생성 되는 고정 된 개체의 컬렉션을 순차적으로 반복 하는 메서드를 제공 합니다.  
   
  [ICorProfilerThreadEnum 인터페이스](icorprofilerthreadenum-interface.md)  
  CLR에서 스레드 컬렉션을 순서대로 반복하는 메서드를 제공합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "76868150"
  [IMethodMalloc 인터페이스](imethodmalloc-interface.md)  
  새 MSIL (Microsoft 중간 언어) 함수 본문에 메모리를 할당 하는 [Alloc](imethodmalloc-alloc-method.md) 메서드를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [프로파일링 개요](profiling-overview.md)  
   
  [프로파일링 전역 정적 함수](profiling-global-static-functions.md)  

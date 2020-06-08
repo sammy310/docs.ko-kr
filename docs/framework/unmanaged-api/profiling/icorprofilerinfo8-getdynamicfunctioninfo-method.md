@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495322"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo 메서드
 
@@ -38,7 +38,7 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `functionId`
 
-  \[] 정보를 검색할 함수의 ID입니다.
+  \[in] 정보를 검색할 함수의 ID입니다.
 
 - `moduleId`
 
@@ -54,17 +54,17 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[in] `wszName` 배열의 최대 크기입니다.
+  \[in] 배열의 최대 크기 `wszName` 입니다.
 
 - `pcchName`
 
-  \[out] `wszName` 배열의 문자 수입니다.
+  \[out] 배열의 문자 수 `wszName` 입니다.
 
 - `wszName`
 
-  \[out] 함수의 이름인 `WCHAR`의 배열입니다 (있는 경우).
+  \[out] 함수 이름 (있는 경우)의 배열입니다 `WCHAR` .
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 IL 스텁 또는 LCG와 같은 특정 메서드에는 [IMetaDataImport](../metadata/imetadataimport-interface.md) 및 [IMetaDataImport2](../metadata/imetadataimport2-interface.md) api를 사용 하 여 검색할 수 있는 연결 된 메타 데이터가 없습니다. 이러한 메서드는 프로파일러에서 명령 포인터를 통하거나 [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)를 수신 하 여 발견할 수 있습니다.
 
@@ -72,14 +72,14 @@ IL 스텁 또는 LCG와 같은 특정 메서드에는 [IMetaDataImport](../metad
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo8 인터페이스](icorprofilerinfo8-interface.md)

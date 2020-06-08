@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868631"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496947"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 메서드
 지정 된 RVA (상대 가상 주소) 정적 필드의 주소를 가져옵니다.  
@@ -44,25 +44,25 @@ HRESULT GetRVAStaticAddress(
  `ppAddress`  
  제한이 RVA 정적 필드의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `GetRVAStaticAddress` 메서드는 다음 중 하나를 반환할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `GetRVAStaticAddress`메서드는 다음 중 하나를 반환할 수 있습니다.  
   
 - 지정 된 컨텍스트에서 지정 된 정적 필드에 주소가 할당 되지 않은 경우 HRESULT CORPROF_E_DATAINCOMPLETE입니다.  
   
 - 가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 이러한 주소는 가비지 수집 후에 무효화 될 수 있으므로 가비지 수집 후 프로파일러는 이러한 주소를 유효한 것으로 가정 하지 않아야 합니다.  
   
- 클래스의 클래스 생성자가 완료 되기 전에는 정적 필드 중 일부가 이미 초기화 되 고 가비지 컬렉션 개체를 루 팅 하 고 있을 수 있지만 `GetRVAStaticAddress`은 모든 정적 필드에 대 한 CORPROF_E_DATAINCOMPLETE를 반환 합니다.  
+ 클래스의 클래스 생성자가 완료 되기 전에는 `GetRVAStaticAddress` 모든 정적 필드에 대 한 CORPROF_E_DATAINCOMPLETE를 반환 하지만, 일부 정적 필드는 이미 초기화 되어 가비지 수집 개체를 루 팅 하 고 있을 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 0bcfe42a70d64c091851a1eec81d03e49dbde52b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 52594c36c54c74941371f9950fbc6fb543b86de0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493554"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 함수
 관리 되지 않는 호스트에서 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다.  
@@ -55,7 +55,7 @@ HRESULT CorBindToRuntime (
  `pwszBuildFlavor`가 null로 설정 된 경우 워크스테이션 빌드가 로드 됩니다. 단일 프로세서 컴퓨터에서 실행 되 `pwszBuildFlavor` 는 경우가로 설정 된 경우에도 워크스테이션 빌드가 항상 로드 됩니다 `svr` . 그러나 `pwszBuildFlavor` 가로 설정 되 `svr` 고 동시 가비지 수집이 지정 된 경우 (매개 변수에 대 한 설명 참조 `flags` ) 서버 빌드가 로드 됩니다.  
   
  `rclsid`  
- 진행 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
+ 진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
  진행 `IID`에서 요청 된 인터페이스의입니다 `rclsid` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
@@ -75,7 +75,7 @@ HRESULT CorBindToRuntime (
   
 2. 프로세스 기본 모드를 버전 1 호환성 모드로 변경 하 여 <xref:System.Security.Principal.WindowsIdentity> 현재 스레드의 설정에 관계 없이 개체가 비동기 지점에서 이동 하지 않습니다 <xref:System.Threading.ExecutionContext> . 기본 모드를 변경 하는 방법은 관리 되는 실행 파일 또는 관리 되지 않는 호스팅 인터페이스를 사용 하 여 CLR을 로드 하는지 여부에 따라 달라 집니다.  
   
-    1. 관리 되는 실행 파일의 경우 `enabled` [ \< legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) 요소의 특성을로 설정 해야 합니다 `true` .  
+    1. 관리 되는 실행 파일의 경우 요소의 특성을로 설정 해야 합니다 `enabled` [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true` .  
   
     2. 관리 되지 않는 호스팅 인터페이스의 경우 `STARTUP_LEGACY_IMPERSONATION` `flags` 함수를 호출할 때 매개 변수에서 플래그를 설정 합니다 `CorBindToRuntimeEx` .  
   

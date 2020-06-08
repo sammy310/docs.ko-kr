@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-ms.openlocfilehash: 537840ac03b4136682b78cb964950ab5670a7d7e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 257cf24fa476c75d6ec949e17a5b83fc015b8d43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496791"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 메서드
 문자열 개체의 레이아웃 정보를 가져옵니다. 이 메서드는 .NET Framework 4에서 더 이상 사용 되지 않으며 [ICorProfilerInfo3:: GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md) 메서드로 대체 됩니다.  
@@ -36,19 +36,19 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>매개 변수  
  `pBufferLengthOffset`  
- 제한이 문자열의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는 `DWORD`로 저장 됩니다.  
+ 제한이 `ObjectID`문자열의 길이를 저장 하는 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 저장 됩니다 `DWORD` .  
   
 > [!NOTE]
 > 이 매개 변수는 버퍼의 길이가 아니라 문자열 자체의 길이를 반환 합니다. 버퍼의 길이는 더 이상 사용할 수 없습니다.  
   
  `PStringLengthOffset`  
- 제한이 문자열 자체의 길이를 저장 하는 `ObjectID` 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는 `DWORD`로 저장 됩니다.  
+ 제한이 `ObjectID`문자열 자체의 길이를 저장 하는 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 저장 됩니다 `DWORD` .  
   
  `pBufferOffset`  
- 제한이 와이드 문자 문자열을 저장 하는 `ObjectID` 포인터를 기준으로 하는 버퍼의 오프셋에 대 한 포인터입니다.  
+ 제한이 `ObjectID`와이드 문자 문자열을 저장 하는 포인터를 기준으로 하는 버퍼의 오프셋에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `GetStringLayout` 메서드는 `ObjectID` 포인터를 기준으로 다음이 저장 된 위치의 오프셋을 가져옵니다.  
+## <a name="remarks"></a>설명  
+ `GetStringLayout`메서드는 다음이 저장 된 위치에 대 한 포인터에 상대적인 오프셋을 가져옵니다 `ObjectID` .  
   
 - 문자열 버퍼의 길이입니다.  
   
@@ -59,15 +59,15 @@ HRESULT GetStringLayout(
  문자열이 null로 종료 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)
