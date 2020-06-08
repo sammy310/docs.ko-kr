@@ -8,30 +8,30 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588603"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291710"
 ---
-# <a name="plinq-data-sample"></a><span data-ttu-id="25d52-102">PLINQ 데이터 샘플</span><span class="sxs-lookup"><span data-stu-id="25d52-102">PLINQ Data Sample</span></span>
-<span data-ttu-id="25d52-103">이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="25d52-104">PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="25d52-105">또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-105">You can also use this data with your own PLINQ queries.</span></span>  
+# <a name="plinq-data-sample"></a><span data-ttu-id="b43f0-102">PLINQ 데이터 샘플</span><span class="sxs-lookup"><span data-stu-id="b43f0-102">PLINQ Data Sample</span></span>
+<span data-ttu-id="b43f0-103">이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="b43f0-104">PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="b43f0-105">또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-105">You can also use this data with your own PLINQ queries.</span></span>  
   
- <span data-ttu-id="25d52-106">데이터는 Northwind 데이터베이스의 하위 집합을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="25d52-107">50개의 고객 레코드가 포함되지만 모든 필드가 포함되는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="25d52-108">모든 고객에 대한 주문 행의 하위 집합 및 해당하는 Order_Detail 데이터가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="25d52-109">모든 제품이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-109">All Products are included.</span></span>  
+ <span data-ttu-id="b43f0-106">데이터는 Northwind 데이터베이스의 하위 집합을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="b43f0-107">50개의 고객 레코드가 포함되지만 모든 필드가 포함되는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="b43f0-108">모든 고객에 대한 주문 행의 하위 집합 및 해당하는 Order_Detail 데이터가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="b43f0-109">모든 제품이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-109">All Products are included.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="25d52-110">데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="25d52-111">이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="25d52-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
+> <span data-ttu-id="b43f0-110">데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="b43f0-111">이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="b43f0-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
   
-### <a name="to-set-up-this-sample"></a><span data-ttu-id="25d52-112">이 샘플을 설치하려면</span><span class="sxs-lookup"><span data-stu-id="25d52-112">To set up this sample</span></span>  
+### <a name="to-set-up-this-sample"></a><span data-ttu-id="b43f0-112">이 샘플을 설치하려면</span><span class="sxs-lookup"><span data-stu-id="b43f0-112">To set up this sample</span></span>  
   
-1. <span data-ttu-id="25d52-113">Visual Basic 또는 Visual C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-113">Create a Visual Basic or Visual C# console application project.</span></span>  
+1. <span data-ttu-id="b43f0-113">Visual Basic 또는 Visual C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-113">Create a Visual Basic or Visual C# console application project.</span></span>  
   
-2. <span data-ttu-id="25d52-114">다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
+2. <span data-ttu-id="b43f0-114">다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
   
-3. <span data-ttu-id="25d52-115">**프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="25d52-116">**텍스트 파일**을 선택한 다음, **확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="25d52-117">이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="25d52-118">**파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
+3. <span data-ttu-id="b43f0-115">**프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="b43f0-116">**텍스트 파일**을 선택한 다음, **확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="b43f0-117">이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="b43f0-118">**파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
   
-4. <span data-ttu-id="25d52-119">F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="25d52-120">콘솔 창에 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="25d52-120">The following output should be displayed in the console window.</span></span>  
+4. <span data-ttu-id="b43f0-119">F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="b43f0-120">콘솔 창에 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="b43f0-120">The following output should be displayed in the console window.</span></span>  
   
     ```console  
     Customer count: 50  
@@ -44,7 +44,7 @@ ms.locfileid: "80588603"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a><span data-ttu-id="25d52-121">data</span><span class="sxs-lookup"><span data-stu-id="25d52-121">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="b43f0-121">data</span><span class="sxs-lookup"><span data-stu-id="b43f0-121">Data</span></span>  
   
 ```console  
 CUSTOMERS  
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="25d52-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25d52-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b43f0-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b43f0-122">See also</span></span>
 
-- [<span data-ttu-id="25d52-123">PLINQ(병렬 LINQ)</span><span class="sxs-lookup"><span data-stu-id="25d52-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [<span data-ttu-id="b43f0-123">PLINQ(병렬 LINQ)</span><span class="sxs-lookup"><span data-stu-id="b43f0-123">Parallel LINQ (PLINQ)</span></span>](introduction-to-plinq.md)
