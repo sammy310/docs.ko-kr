@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160198"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281702"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
 > [!NOTE]
-> .NET Framework 2.0에서는 <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스가 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
+> .NET Framework 2.0에서는 <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스가 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.  
   
  <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
@@ -364,4 +364,4 @@ public class Sample
   
 ## <a name="see-also"></a>참조
 
-- [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform 클래스의 XSLT 프로세서 구현](xsltransform-class-implements-the-xslt-processor.md)

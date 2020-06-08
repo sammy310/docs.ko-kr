@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: a781d543dd32ffb3d0ac0b11c544dbfd8cd5d806
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf9fe8dae0d35df694891633a6e3cf950bfb7376
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348563"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363619"
 ---
 # <a name="-resource-visual-basic"></a>-resource(Visual Basic)
 관리되는 리소스를 어셈블리에 포함합니다.  
@@ -56,8 +56,8 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
-- [-linkresource(Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-win32resource](win32resource.md)
+- [-linkresource(Visual Basic)](linkresource.md)
+- [-target(Visual Basic)](target.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

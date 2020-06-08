@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: b2051451142a7818a3b7d1bc564c5ae36b2579fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f78df9cf1bd75432ea645c4dcc06498915ceee49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345582"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360295"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트로 문자열 보내기
 
@@ -36,13 +36,13 @@ ms.locfileid: "74345582"
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 
- 이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다. 유연성 향상을 위해 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 해야 합니다. 자세한 내용은 [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)를 참조하세요.  
+ 이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다. 유연성 향상을 위해 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 해야 합니다. 자세한 내용은 [방법: 사용할 수 있는 직렬 포트 표시](how-to-show-available-serial-ports.md)를 참조하세요.  
   
- 이 예제에서는 `Using` 블록을 사용하여 예외가 throw되는 경우에도 애플리케이션이 포트를 닫도록 합니다. 자세한 내용은 [using 문](../../../../visual-basic/language-reference/statements/using-statement.md)을 참조하세요.  
+ 이 예제에서는 `Using` 블록을 사용하여 예외가 throw되는 경우에도 애플리케이션이 포트를 닫도록 합니다. 자세한 내용은 [using 문](../../../language-reference/statements/using-statement.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [방법: 직렬 포트에 연결된 모뎀 전화 접속](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [방법: 직렬 포트에 연결된 모뎀 전화 접속](how-to-dial-modems-attached-to-serial-ports.md)
+- [방법: 사용할 수 있는 직렬 포트 표시](how-to-show-available-serial-ports.md)

@@ -3,12 +3,12 @@ title: Basic Serialization 기술 샘플
 description: 이 샘플에서는 메모리의 개체 그래프를 스트림으로 직렬화하는 CLR 기능을 보여 줍니다. 이 샘플에서는 SoapFormatter 또는 BinaryFormatter를 사용할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378435"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276571"
 ---
 # <a name="basic-serialization-technology-sample"></a>Basic Serialization 기술 샘플
 
@@ -100,9 +100,9 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [기본 serialization](../../../docs/standard/serialization/basic-serialization.md)
-- [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [serialization](../../../docs/standard/serialization/index.md)
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [기본 serialization](basic-serialization.md)
+- [이진 serialization](binary-serialization.md)
+- [특성을 사용하여 XML serialization 제어](controlling-xml-serialization-using-attributes.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [serialization](index.md)
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)

@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: dcb1d348e679e07646273b8fbc4ea29b44ee4974
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103498"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307074"
 ---
 # <a name="background-garbage-collection"></a>백그라운드 가비지 수집
 
 백그라운드 GC(가비지 수집)에서 임시 세대(0세대 및 1세대)는 2세대 수집이 진행되는 동안 필요에 따라 수집됩니다. 백그라운드 가비지 수집은 백그라운드 또는 서버 GC인지 여부에 따라 하나 이상의 전용 스레드에서 수행되며 2세대 수집에만 적용됩니다.
 
-백그라운드 가비지 수집은 기본적으로 사용하도록 설정되어 있습니다. .NET Framework 앱의 [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 설정 또는 .NET Core 앱의 [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) 설정에서 사용하거나 사용하지 않도록 설정할 수 있습니다.
+백그라운드 가비지 수집은 기본적으로 사용하도록 설정되어 있습니다. .NET Framework 앱의 [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 설정 또는 .NET Core 앱의 [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) 설정에서 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
 > [!NOTE]
 > 백그라운드 가비지 수집은 .NET Framework 4 이상 버전에서 사용할 수 있으며 [동시 가비지 수집](#concurrent-garbage-collection)을 대체합니다. .NET Framework 4에서는 *워크스테이션* 가비지 수집의 경우에만 지원됩니다. .NET Framework 4.5부터 백그라운드 가비지 수집이 *워크스테이션* 및 *서버* 가비지 수집 모두에서 가능합니다.
@@ -39,11 +39,11 @@ ms.locfileid: "82103498"
 
 다음 그림에서는 개별 전용 스레드에서 수행되는 백그라운드 *워크스테이션* 가비지 수집을 보여 줍니다.
 
-![백그라운드 워크스테이션 가비지 수집](./media/fundamentals/background-workstation-garbage-collection.png)
+![백그라운드 워크스테이션 가비지 수집](media/fundamentals/background-workstation-garbage-collection.png)
 
 다음 그림에서는 개별 전용 스레드에서 수행되는 백그라운드 *서버* 가비지 수집을 보여 줍니다.
 
-![백그라운드 서버 가비지 수집](./media/fundamentals/background-server-garbage-collection.png)
+![백그라운드 서버 가비지 수집](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>동시 가비지 수집
 
@@ -55,7 +55,7 @@ ms.locfileid: "82103498"
 >
 > 동시 가비지는 이후 버전에서 백그라운드 가비지 수집으로 대체됩니다.
 
-워크스테이션 또는 서버 가비지 수집에서 [동시 가비지 수집을 활성화](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)할 수 있습니다. 동시 가비지 수집을 사용하면 대부분의 수집 기간 동안 가비지 수집을 수행하는 전용 스레드와 다른 스레드가 동시에 실행될 수 있습니다. 이 옵션은 2세대 가비지 수집에만 영향을 미칩니다. 0세대 및 1세대는 빠르게 완료되므로 항상 비동시 수집입니다.
+워크스테이션 또는 서버 가비지 수집에서 [동시 가비지 수집을 활성화](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)할 수 있습니다. 동시 가비지 수집을 사용하면 대부분의 수집 기간 동안 가비지 수집을 수행하는 전용 스레드와 다른 스레드가 동시에 실행될 수 있습니다. 이 옵션은 2세대 가비지 수집에만 영향을 미칩니다. 0세대 및 1세대는 빠르게 완료되므로 항상 비동시 수집입니다.
 
 동시 가비지 수집을 사용하면 수집을 위한 일시 중지가 최소화되어 대화형 애플리케이션의 응답성이 향상됩니다. 동시 가비지 수집 스레드가 실행되는 대부분의 시간 동안 관리되는 스레드가 계속 실행될 수 있습니다. 이로써 가비지 수집이 발생하는 동안 일시 중지 시간이 더 짧아지게 됩니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "82103498"
 
 다음 그림에서는 개별 전용 스레드에서 수행되는 동시 가비지 수집을 보여 줍니다.
 
-![동시 가비지 수집 스레드](./media/gc-concurrent.png)
+![동시 가비지 수집 스레드](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>참조
 

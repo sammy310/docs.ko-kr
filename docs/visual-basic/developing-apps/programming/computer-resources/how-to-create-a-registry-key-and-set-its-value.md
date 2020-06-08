@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b51a14e5e9c69078330f5b2161f74cff8e4da332
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349194"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363450"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정
 
@@ -79,5 +79,5 @@ ms.locfileid: "74349194"
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
-- [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [레지스트리 읽기 및 쓰기](reading-from-and-writing-to-the-registry.md)
 - [코드 액세스 보안 기본 사항](../../../../framework/misc/code-access-security-basics.md)

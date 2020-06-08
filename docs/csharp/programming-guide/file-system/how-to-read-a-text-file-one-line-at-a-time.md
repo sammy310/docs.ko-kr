@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: e4a9ba2da2548991f442c2f5ab09d39243137875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167519"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241775"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>텍스트 파일을 한 번에 한 줄씩 읽는 방법(C# 프로그래밍 가이드)
 이 예제에서는 `StreamReader` 클래스의 `ReadLine` 메서드를 사용하여 텍스트 파일 내용을 한 번에 한 줄씩 문자열로 읽어옵니다. 각 텍스트 줄은 `line` 문자열에 저장되고 화면에 표시됩니다.  
@@ -47,10 +47,10 @@ System.Console.ReadLine();
   
 - 파일이 없을 수 있는 경우  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
+## <a name="net-security"></a>.NET 보안  
  파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

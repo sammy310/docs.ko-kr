@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421269"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84277962"
 ---
 # <a name="xml-serialization"></a>XML serialization
 
@@ -33,7 +33,7 @@ serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세
 
  개체 내의 데이터는 클래스, 필드, 속성, 기본 형식, 배열 및 **XmlElement** 또는 **XmlAttribute** 개체 형태로 포함된 XML과 같은 프로그래밍 언어 구조를 통하여 설명됩니다. 특성으로 주석이 첨부된 클래스를 직접 만들거나, XML 스키마 정의 도구를 사용하여 기존 XML 스키마를 기반으로 클래스를 생성할 수도 있습니다.
 
- XML 스키마가 있는 경우, XML 스키마 정의 도구를 실행하여 스키마로 강력하게 형식화되고 주석이 첨부된 클래스 집합을 생성할 수 있습니다. 이러한 클래스의 인스턴스가 serialize될 때 생성된 XML은 XML 스키마를 준수합니다. 이러한 클래스를 사용하면 생성된 XML이 XML 스키마를 준수하도록 하면서 손쉽게 조작할 수 있는 개체 모델을 사용하여 프로그래밍할 수 있습니다. 이 방법은 **XmlReader** 및 **XmlWriter** 클래스와 같은 .NET Framework의 다른 클래스를 사용하여 XML 스트림을 구문 분석하고 쓰는 대신 사용할 수 있습니다. 자세한 내용은 [XML 문서 및 데이터](../../../docs/standard/data/xml/index.md)를 참조하세요. 이러한 클래스를 사용하면 모든 XML 스트림을 구문 분석할 수 있습니다. 반면 XML 스트림이 알려진 XML 스키마를 준수해야 하는 경우에는 **XmlSerializer**를 사용합니다.
+ XML 스키마가 있는 경우, XML 스키마 정의 도구를 실행하여 스키마로 강력하게 형식화되고 주석이 첨부된 클래스 집합을 생성할 수 있습니다. 이러한 클래스의 인스턴스가 serialize될 때 생성된 XML은 XML 스키마를 준수합니다. 이러한 클래스를 사용하면 생성된 XML이 XML 스키마를 준수하도록 하면서 손쉽게 조작할 수 있는 개체 모델을 사용하여 프로그래밍할 수 있습니다. 이 방법은 **XmlReader** 및 **XmlWriter** 클래스와 같은 .NET Framework의 다른 클래스를 사용하여 XML 스트림을 구문 분석하고 쓰는 대신 사용할 수 있습니다. 자세한 내용은 [XML 문서 및 데이터](../data/xml/index.md)를 참조하세요. 이러한 클래스를 사용하면 모든 XML 스트림을 구문 분석할 수 있습니다. 반면 XML 스트림이 알려진 XML 스키마를 준수해야 하는 경우에는 **XmlSerializer**를 사용합니다.
 
  특성은 **XmlSerializer** 클래스로 생성된 XML 스트림을 제어하기 때문에 XML 스트림의 XML 네임스페이스, 요소 이름, 특성 이름 등을 설정할 수 있습니다. 이러한 특성에 대한 자세한 내용 및 이러한 특성이 XML serialization을 제어하는 방법에 대해서는 [특성을 사용하여 XML Serialization 제어](controlling-xml-serialization-using-attributes.md)를 참조하세요. 생성된 XML의 제어에 사용되는 특성의 표를 보려면 [XML Serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)을 참조하세요.
 

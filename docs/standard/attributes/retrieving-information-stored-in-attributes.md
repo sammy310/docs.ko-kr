@@ -11,18 +11,18 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158079"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276137"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>특성에 저장된 정보 검색
 사용자 지정 특성 검색은 간단한 프로세스입니다. 먼저, 검색하려는 특성의 인스턴스를 선언합니다. 그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다. 새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.  
   
 > [!IMPORTANT]
-> 이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드된 코드의 특성을 검색하려면 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)와 같이 <xref:System.Reflection.CustomAttributeData> 클래스를 사용해야 합니다.  
+> 이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드된 코드의 특성을 검색하려면 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)와 같이 <xref:System.Reflection.CustomAttributeData> 클래스를 사용해야 합니다.  
   
  이 섹션에서는 특성을 검색하는 다음 방법에 대해 설명합니다.  
   
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [특성](../../../docs/standard/attributes/index.md)
+- [특성](index.md)

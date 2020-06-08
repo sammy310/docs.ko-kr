@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420580"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286030"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -203,7 +203,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>디버거
 
-메모리 덤프만 있고 실제로 LOH에 있는 개체를 확인해야 하는 경우 .NET에서 제공하는 [SoS 디버거 확장](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)을 사용할 수 있습니다.
+메모리 덤프만 있고 실제로 LOH에 있는 개체를 확인해야 하는 경우 .NET에서 제공하는 [SoS 디버거 확장](../../framework/tools/sos-dll-sos-debugging-extension.md)을 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 섹션에서 설명하는 디버깅 명령은 [Windows 디버거](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)에 적용할 수 있습니다.

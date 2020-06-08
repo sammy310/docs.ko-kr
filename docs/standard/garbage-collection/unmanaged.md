@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396982"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287612"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>관리되지 않는 리소스 정리
 
@@ -44,7 +44,7 @@ ms.locfileid: "83396982"
 
 [Dispose 메서드 구현](implementing-dispose.md)에서는 관리되지 않는 리소스를 해제하기 위해 Dispose 패턴을 구현하는 방법을 설명합니다.
 
-[`IDisposable`을 구현하는 개체 사용](../../../docs/standard/garbage-collection/using-objects.md)에서는 형식의 소비자가 해당 <xref:System.IDisposable.Dispose%2A> 구현이 호출되도록 확인하는 방법을 설명합니다. 이를 수행하려면 C# `using`(또는 Visual Basic `Using`) 문을 사용하는 것이 좋습니다.
+[`IDisposable`을 구현하는 개체 사용](using-objects.md)에서는 형식의 소비자가 해당 <xref:System.IDisposable.Dispose%2A> 구현이 호출되도록 확인하는 방법을 설명합니다. 이를 수행하려면 C# `using`(또는 Visual Basic `Using`) 문을 사용하는 것이 좋습니다.
 
 ## <a name="reference"></a>참고
 

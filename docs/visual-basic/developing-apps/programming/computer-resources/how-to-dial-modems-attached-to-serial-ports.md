@@ -6,12 +6,12 @@ helpviewer_keywords:
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: febec0a8579d34f8ff59066da5b5aa59c1cce6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e55ce6399dae435fbd5b2f730d4d0848c98d8955
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345634"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363269"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속
 
@@ -49,16 +49,16 @@ ms.locfileid: "74345634"
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 
- 이 예제에서는 모뎀이 COM1에 연결되어 있다고 가정합니다. 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 하는 것이 좋습니다. 자세한 내용은 [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)를 참조하세요.  
+ 이 예제에서는 모뎀이 COM1에 연결되어 있다고 가정합니다. 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 하는 것이 좋습니다. 자세한 내용은 [방법: 사용할 수 있는 직렬 포트 표시](how-to-show-available-serial-ports.md)를 참조하세요.  
   
- 이 예제에서는 `Using` 블록을 사용하여 예외가 throw되는 경우에도 애플리케이션이 포트를 닫도록 합니다. 자세한 내용은 [using 문](../../../../visual-basic/language-reference/statements/using-statement.md)을 참조하세요.  
+ 이 예제에서는 `Using` 블록을 사용하여 예외가 throw되는 경우에도 애플리케이션이 포트를 닫도록 합니다. 자세한 내용은 [using 문](../../../language-reference/statements/using-statement.md)을 참조하세요.  
   
- 이 예제에서 애플리케이션은 모뎀으로 전화를 건 후 직렬 포트의 연결을 끊습니다. 현실적으로 모뎀과 데이터를 주고받으려 합니다. 자세한 내용은 [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)를 참조하세요.  
+ 이 예제에서 애플리케이션은 모뎀으로 전화를 건 후 직렬 포트의 연결을 끊습니다. 현실적으로 모뎀과 데이터를 주고받으려 합니다. 자세한 내용은 [방법: 직렬 포트에서 문자열 받기](how-to-receive-strings-from-serial-ports.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [방법: 직렬 포트로 문자열 보내기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-- [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [방법: 직렬 포트로 문자열 보내기](how-to-send-strings-to-serial-ports.md)
+- [방법: 직렬 포트에서 문자열 받기](how-to-receive-strings-from-serial-ports.md)
+- [방법: 사용할 수 있는 직렬 포트 표시](how-to-show-available-serial-ports.md)

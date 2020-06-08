@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705017"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241749"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>텍스트 파일에서 읽는 방법(C# 프로그래밍 가이드)
 이 예제에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllText%2A> 및 <xref:System.IO.File.ReadAllLines%2A>를 사용하여 텍스트 파일의 내용을 읽습니다.  
@@ -37,10 +37,10 @@ ms.locfileid: "75705017"
   
 - 파일이 없거나 지정된 위치에 없는 경우. 경로와 파일 이름의 철자를 확인합니다.  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
+## <a name="net-security"></a>.NET 보안  
  파일 이름을 사용하여 파일 내용을 확인하지 마세요. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

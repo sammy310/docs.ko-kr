@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 03b0aa63eda3e7a9d8745baaa33479fd5e85b01b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 66a096e8831f72a2216e8ba5dd9866046504624f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389051"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368623"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -38,7 +38,7 @@ ms.locfileid: "81389051"
 
 이 예제에서 `year` 필드의 값은 클래스 생성자에서 할당되었지만 `ChangeYear` 메서드에서 변경할 수 없습니다.
 
-[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
+[!code-csharp[Readonly Field example](snippets/ReadonlyKeywordExamples.cs#ReadonlyField)]
 
 다음 컨텍스트에서만 `readonly` 필드에 값을 할당할 수 있습니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "81389051"
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 > ```
 
-[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
+[!code-csharp[Initialize readonly Field example](snippets/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 
 위 예제에서 다음 예제와 같은 명령문을 사용하는 경우
 
@@ -76,7 +76,7 @@ p2.y = 66;        // Error
 
 `ref return`의 `readonly` 한정자는 반환된 참조를 수정할 수 없음을 나타냅니다. 다음 예제는 원점에 대한 참조를 반환합니다. 예제에서는 `readonly` 한정자를 사용하여 호출자가 원본을 수정할 수 없음을 나타냅니다.
 
-[!code-csharp[readonly return example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+[!code-csharp[readonly return example](snippets/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 
 반환된 유형은 `readonly struct`일 필요는 없습니다. `ref readonly`를 통해 `ref`에서 반환될 수 있는 모든 형식을 반환할 수 있습니다.
 

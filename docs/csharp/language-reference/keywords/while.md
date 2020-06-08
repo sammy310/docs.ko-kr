@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 481d3f7b87dbe874de010825c3c7f052e4bc33c0
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: af616c2381b993f86296cbfa43a01ba2f9e000c2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738749"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401864"
 ---
 # <a name="while-c-reference"></a>while(C# 참조)
 
@@ -28,7 +28,7 @@ ms.locfileid: "81738749"
 
 다음 예제에서는 `while` 문의 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
-[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+[!code-csharp-interactive[while loop example](snippets/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

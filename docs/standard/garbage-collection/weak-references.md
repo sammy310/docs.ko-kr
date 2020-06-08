@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b7e7a62b92b2c685ff39baa75f4bc33602b5da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141337"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287586"
 ---
 # <a name="weak-references"></a>약한 참조
 애플리케이션의 코드가 해당 개체에 연결될 수 있는 반면 가비지 수집기는 애플리케이션에서 사용 중인 개체를 수집할 수 없습니다. 애플리케이션은 개체에 대한 강력한 참조를 가진다고 합니다.  
@@ -52,4 +52,4 @@ ms.locfileid: "73141337"
   
 ## <a name="see-also"></a>참고 항목
 
-- [가비지 수집](../../../docs/standard/garbage-collection/index.md)
+- [가비지 수집](index.md)

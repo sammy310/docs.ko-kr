@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 7e2092a37c1f042a087e03f4a272139b585156c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705602"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241827"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>사용자 지정 확장명 메서드 구현 및 호출 방법(C# 프로그래밍 가이드)
 이 항목에서는 모든 .NET 형식에 대한 사용자 고유의 확장 메서드를 구현하는 방법을 보여 줍니다. 클라이언트 코드는 확장 메서드를 포함하는 DLL에 대한 참조를 추가하고 확장 메서드가 정의된 네임스페이스를 지정하는 [using](../../language-reference/keywords/using-directive.md) 지시문을 추가하여 확장 메서드를 사용할 수 있습니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "75705602"
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
+## <a name="net-security"></a>.NET 보안  
  확장 메서드는 특정 보안 취약성은 없습니다. 형식 자체에서 정의된 인스턴스 또는 정적 메서드를 기준으로 모든 이름 충돌이 해결되기 때문에 확장 메서드를 사용하여 형식의 기존 메서드를 가장할 수는 없습니다. 확장 메서드는 확장된 클래스의 개인 데이터에 액세스할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [확장명 메서드](./extension-methods.md)

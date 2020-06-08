@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 2afe11ad75fc36a67efed48d56dbafb11bceaf2a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005269"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283626"
 ---
 # <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>자습서: Visual Studio에서 .NET Standard 라이브러리 만들기
 
@@ -66,8 +66,8 @@ ms.locfileid: "84005269"
 
 1. *Class1.cs* 또는 *Class1.vb* 코드 창에서 코드를 다음 코드로 바꾸고 파일을 저장합니다. 사용하려는 언어가 표시되지 않으면 페이지 맨 위에 있는 언어 선택기를 변경합니다.
 
-   [!code-csharp[](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
-   [!code-vb[](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
+   :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
    클래스 라이브러리 `UtilityLibraries.StringLibrary`에는 `StartsWithUpper`라는 메서드가 포함되어 있습니다. 이 메서드는 현재 문자열 인스턴스가 대문자로 시작하는지 여부를 나타내는 <xref:System.Boolean> 값을 반환합니다. 유니코드 표준은 대문자와 소문자를 구분합니다. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 메서드는 문자가 대문자인 경우 `true`를 반환합니다.
 
@@ -101,8 +101,8 @@ ms.locfileid: "84005269"
 
 1. *Program.cs* 또는 *Program.vb* 파일의 코드 창에서 모든 코드를 다음 코드로 바꿉니다.
 
-   [!code-csharp[UsingClassLib#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
-   [!code-vb[UsingClassLib#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+   :::code language="vb" source="./snippets/library-with-visual-studio/vb/ShowCase/Program.vb":::
 
    코드는 `row` 변수를 사용하여 콘솔 창에 기록된 데이터 행 수를 유지합니다. 25보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
 

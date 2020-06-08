@@ -10,12 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5557da1531eb55c13d1c7540a50b044d1a7b8a1d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130911"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276337"
 ---
 # <a name="applying-attributes"></a>특성 적용
 다음 프로세스를 사용하여 코드 요소에 특성을 적용합니다.  
@@ -48,12 +48,12 @@ ms.locfileid: "73130911"
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- 이 특성을 적용하면 `"My Assembly"` 문자열이 해당 파일의 메타데이터 부분에 있는 어셈블리 매니페스트에 배치됩니다. [Ildasm.exe(MSIL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하거나 특성을 검색하는 사용자 지정 프로그램을 만들어 이 특성을 볼 수 있습니다.  
+ 이 특성을 적용하면 `"My Assembly"` 문자열이 해당 파일의 메타데이터 부분에 있는 어셈블리 매니페스트에 배치됩니다. [Ildasm.exe(MSIL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하거나 특성을 검색하는 사용자 지정 프로그램을 만들어 이 특성을 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [특성](../../../docs/standard/attributes/index.md)
-- [특성에 저장된 정보 검색](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [특성](index.md)
+- [특성에 저장된 정보 검색](retrieving-information-stored-in-attributes.md)
 - [개념](/cpp/windows/attributed-programming-concepts)
 - [특성(C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [특성 개요(Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

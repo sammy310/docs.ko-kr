@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123181"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285692"
 ---
 # <a name="attached-and-detached-child-tasks"></a>연결된 자식 작업 및 분리된 자식 작업
 ‘자식 작업’(또는 ‘중첩 작업’)은 ‘부모 작업’이라는 다른 작업의 사용자 대리자에 만들어진 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 인스턴스입니다. 자식 작업을 분리하거나 연결할 수 있습니다. ‘분리된 자식 작업’은 부모와 독립적으로 실행되는 작업입니다.  ‘연결된 자식 작업’은 부모가 명시적으로나 기본적으로 연결을 금지하지 않는 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션으로 만들어진 중첩 작업입니다. 연결된 자식 작업 및 분리된 자식 작업은 작업에서 개수와 관계없이 만들 수 있고 시스템 자원에 의해서만 제한됩니다.  
@@ -53,13 +53,13 @@ ms.locfileid: "73123181"
  [!code-vb[TPL_ChildTasks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/child1a.vb#3)]  
   
 ## <a name="exceptions-in-child-tasks"></a>자식 작업의 예외  
- 분리된 자식 작업에서 예외가 throw되면 중첩되지 않은 작업처럼 부모 작업에서 직접 해당 예외를 관찰하거나 처리해야 합니다. 연결된 자식 작업에서 예외가 throw되면 해당 예외는 자동으로 부모 작업에 전파되고 다시 작업의 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 속성을 기다리거나 속성에 액세스하는 스레드에 전파됩니다. 따라서 연결된 자식 작업을 사용하면 호출 스레드에서 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>에 대한 호출의 한 지점에서만 모든 예외를 처리할 수 있습니다. 자세한 내용은 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
+ 분리된 자식 작업에서 예외가 throw되면 중첩되지 않은 작업처럼 부모 작업에서 직접 해당 예외를 관찰하거나 처리해야 합니다. 연결된 자식 작업에서 예외가 throw되면 해당 예외는 자동으로 부모 작업에 전파되고 다시 작업의 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 속성을 기다리거나 속성에 액세스하는 스레드에 전파됩니다. 따라서 연결된 자식 작업을 사용하면 호출 스레드에서 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>에 대한 호출의 한 지점에서만 모든 예외를 처리할 수 있습니다. 자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md)를 참조하세요.  
   
 ## <a name="cancellation-and-child-tasks"></a>취소 및 자식 작업  
- 작업 취소는 협조적입니다. 즉, 취소할 수 있으려면 모든 연결된 자식 작업과 분리된 자식 작업이 취소 토큰의 상태를 모니터링해야 합니다. 하나의 취소 요청을 사용하여 부모 및 모든 자식을 취소하려면 인수와 같은 토큰을 모든 작업에 전달하고 각 작업에서 논리를 제공하여 각 작업의 요청에 응답합니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md) 및 [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
+ 작업 취소는 협조적입니다. 즉, 취소할 수 있으려면 모든 연결된 자식 작업과 분리된 자식 작업이 취소 토큰의 상태를 모니터링해야 합니다. 하나의 취소 요청을 사용하여 부모 및 모든 자식을 취소하려면 인수와 같은 토큰을 모든 작업에 전달하고 각 작업에서 논리를 제공하여 각 작업의 요청에 응답합니다. 자세한 내용은 [작업 취소](task-cancellation.md) 및 [방법: 작업 및 해당 자식 취소](how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
   
 ### <a name="when-the-parent-cancels"></a>부모가 취소되는 경우  
- 자식 작업이 시작되기 전에 부모가 자신을 취소하면 자식이 시작되지 않습니다. 자식 작업이 시작되고 나서 부모가 자신을 취소하면 자체 취소 논리가 없을 경우 자식이 완료까지 실행됩니다. 자세한 내용은 [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md)을 참조하세요.  
+ 자식 작업이 시작되기 전에 부모가 자신을 취소하면 자식이 시작되지 않습니다. 자식 작업이 시작되고 나서 부모가 자신을 취소하면 자체 취소 논리가 없을 경우 자식이 완료까지 실행됩니다. 자세한 내용은 [Task Cancellation](task-cancellation.md)을 참조하세요.  
   
 ### <a name="when-a-detached-child-task-cancels"></a>분리된 자식 작업이 취소되는 경우  
  분리된 자식 작업이 부모에 전달된 것과 같은 토큰을 사용하여 자신을 취소하고 부모가 하위 작업을 기다리지 않으면, 예외는 심각하지 않은 협력 취소로 처리되므로 전파되지 않습니다. 이 동작은 모든 최상위 작업의 동작과 같습니다.  
@@ -67,16 +67,16 @@ ms.locfileid: "73123181"
 ### <a name="when-an-attached-child-task-cancels"></a>연결된 자식 작업이 취소되는 경우  
  연결된 자식 작업이 부모 작업에 전달된 것과 같은 토큰을 사용하여 자신을 취소하면 <xref:System.Threading.Tasks.TaskCanceledException>은 <xref:System.AggregateException> 내부의 조인 스레드에 전파됩니다. 연결된 자식 작업의 그래프를 통해 전파되는 오류가 있는 모든 예외 이외에 심각하지 않은 예외를 모두 처리할 수 있습니다.  
   
- 자세한 내용은 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
+ 자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md)를 참조하세요.  
   
 ## <a name="preventing-a-child-task-from-attaching-to-its-parent"></a>자식 작업을 해당 부모에 연결하는 것 방지  
  자식 작업에서 throw된 처리되지 않은 예외는 부모 작업에 전파됩니다. 이 동작을 사용하면 작업 트리에서 이동하는 대신 하나의 루트 작업에서 자식 작업 예외를 모두 관찰할 수 있습니다. 그러나 부모 작업에 다른 코드의 첨부 파일이 필요하지 않으면 예외 전파가 문제가 될 수 있습니다. 예를 들어 <xref:System.Threading.Tasks.Task> 개체에서 타사 라이브러리 구성 요소를 호출하는 앱을 고려해 보세요. 타사 라이브러리 구성 요소가 <xref:System.Threading.Tasks.Task> 개체를 만들고 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>를 지정하여 부모 작업에 연결하면, 자식 작업에서 발생한 처리되지 않은 예외가 부모에 전파됩니다. 이로 인해 기본 앱에서 예기치 않은 동작이 발생할 수 있습니다.  
   
  자식 작업이 부모 작업에 연결되지 않도록 방지하려면 부모 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체를 만들 때 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 옵션을 지정합니다. 작업이 부모에 연결되려고 하고 부모가 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 옵션을 지정하면 자식 작업이 부모에 연결될 수 있고 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션을 지정하지 않은 것처럼 실행됩니다.  
   
- 자식 작업이 시기적절하게 완료되지 않으면 자식 작업이 부모에 연결되지 않도록 방지할 수도 있습니다. 부모 작업은 자식 작업이 모두 완료될 때까지 완료되지 않기 때문에 오래 실행되는 자식 작업은 전체적인 앱의 성능을 저하할 수 있습니다. 작업이 부모 작업에 연결되지 않도록 방지하여 앱 성능을 향상하는 방법을 보여주는 예제는 [방법: 자식 작업이 부모 작업에 연결되지 않도록 방지](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)를 참조하세요.  
+ 자식 작업이 시기적절하게 완료되지 않으면 자식 작업이 부모에 연결되지 않도록 방지할 수도 있습니다. 부모 작업은 자식 작업이 모두 완료될 때까지 완료되지 않기 때문에 오래 실행되는 자식 작업은 전체적인 앱의 성능을 저하할 수 있습니다. 작업이 부모 작업에 연결되지 않도록 방지하여 앱 성능을 향상하는 방법을 보여주는 예제는 [방법: 자식 작업이 부모 작업에 연결되지 않도록 방지](how-to-prevent-a-child-task-from-attaching-to-its-parent.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
-- [데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [병렬 프로그래밍](index.md)
+- [데이터 병렬 처리](data-parallelism-task-parallel-library.md)

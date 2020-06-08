@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507037"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396261"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -53,7 +53,7 @@ int* myVariable;
 
 [fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](./pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
 
-[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+[!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 
 `void*` 형식의 포인터에는 간접 참조 연산자를 적용할 수 없습니다. 그러나 캐스트를 사용하여 void 포인터를 다른 포인터 형식으로 변환하거나 반대로 변환할 수 있습니다.
 

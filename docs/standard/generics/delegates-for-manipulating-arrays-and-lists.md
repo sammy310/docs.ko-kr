@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lists [.NET Framework], generic delegates
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b0ecd8661b7c58645e49ca884ed0499e8c828af9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287534"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자
 이 항목에서는 배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 간략하게 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "75708386"
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [제네릭](../../../docs/standard/generics/index.md)
-- [.NET Framework의 제네릭 컬렉션](../../../docs/standard/generics/collections.md)
-- [제네릭 인터페이스](../../../docs/standard/generics/interfaces.md)
-- [공 분산 및 반공 분산](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [제네릭](index.md)
+- [.NET Framework의 제네릭 컬렉션](collections.md)
+- [제네릭 인터페이스](interfaces.md)
+- [공 분산 및 반공 분산](covariance-and-contravariance.md)

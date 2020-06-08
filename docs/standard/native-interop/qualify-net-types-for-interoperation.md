@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420502"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285965"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM 상호 운용성을 위한 .NET 형식의 정규화
 어셈블리에서 형식을 COM 애플리케이션으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "83420502"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [.NET Framework 구성 요소를 COM에 노출](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)
-- [Interop 특성 적용](../../../docs/standard/native-interop/apply-interop-attributes.md)
-- [COM용 .NET Framework 어셈블리 패키징](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Interop 특성 적용](apply-interop-attributes.md)
+- [COM용 .NET Framework 어셈블리 패키징](../../framework/interop/packaging-an-assembly-for-com.md)

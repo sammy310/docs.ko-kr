@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141559"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276727"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 및 TPL에 대한 사용자 지정 파티셔너
 
@@ -23,7 +23,7 @@ ms.locfileid: "73141559"
 
 데이터 소스를 분할하는 여러 가지 방법이 있습니다. 가장 효율적인 방법에서는 소스를 여러 하위 시퀀스로 물리적으로 나누는 대신 여러 스레드가 공동 작업으로 원래 소스 시퀀스를 처리합니다. 미리 길이가 알려진 <xref:System.Collections.IList> 컬렉션과 같은 배열 및 기타 인덱싱된 소스의 경우 ‘범위 분할’은 가장 간단한 분할 유형입니다.  모든 스레드는 고유한 시작 및 끝 인덱스를 수신하므로 다른 스레드가 덮어쓰거나 다른 스레드를 덮어쓰지 않고 소스의 해당 범위를 처리할 수 있습니다. 범위 분할에 관련된 유일한 오버헤드는 범위를 만드는 초기 작업입니다. 그 이후에는 추가적인 동기화가 필요하지 않습니다. 따라서 워크로드가 균등하게 나누어지면 좋은 성능을 제공할 수 있습니다. 범위 분할의 단점은 한 스레드가 조기에 완료되는 경우 다른 스레드가 작업을 완료하도록 도울 수 없다는 것입니다.
 
-연결된 목록 또는 길이가 알려지지 않은 기타 컬렉션의 경우 ‘청크 분할’을 사용할 수 있습니다.  청크 분할에서 병렬 루프 또는 쿼리의 모든 스레드 또는 작업은 소스 요소 중 일부를 하나의 청크로 사용하여 처리한 다음, 돌아와서 추가 요소를 검색합니다. 파티셔너는 모든 요소가 분배되고 중복이 없는지 확인합니다. 청크는 크기에 제한이 없습니다. 예를 들어 [방법: 동적 파티션 구현](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)에 설명된 파티셔너는 하나의 요소만 포함된 청크를 만듭니다. 청크가 너무 크지 않다면 스레드에 대한 요소 할당이 미리 결정되지 않으므로 이 분할 유형은 기본적으로 부하 분산됩니다. 그러나 파티셔너는 스레드가 다른 청크를 가져와야 할 때마다 동기화 오버헤드를 발생시킵니다. 이러한 경우에 발생하는 동기화 양은 청크 크기에 반비례합니다.
+연결된 목록 또는 길이가 알려지지 않은 기타 컬렉션의 경우 ‘청크 분할’을 사용할 수 있습니다.  청크 분할에서 병렬 루프 또는 쿼리의 모든 스레드 또는 작업은 소스 요소 중 일부를 하나의 청크로 사용하여 처리한 다음, 돌아와서 추가 요소를 검색합니다. 파티셔너는 모든 요소가 분배되고 중복이 없는지 확인합니다. 청크는 크기에 제한이 없습니다. 예를 들어 [방법: 동적 파티션 구현](how-to-implement-dynamic-partitions.md)에 설명된 파티셔너는 하나의 요소만 포함된 청크를 만듭니다. 청크가 너무 크지 않다면 스레드에 대한 요소 할당이 미리 결정되지 않으므로 이 분할 유형은 기본적으로 부하 분산됩니다. 그러나 파티셔너는 스레드가 다른 청크를 가져와야 할 때마다 동기화 오버헤드를 발생시킵니다. 이러한 경우에 발생하는 동기화 양은 청크 크기에 반비례합니다.
 
 일반적으로 범위 분할은 대리자의 실행 시간이 짧거나 중간 정도이고 소스에 많은 요소가 포함된 경우에만 더 빠르고 각 파티션의 전체 작업은 거의 동일합니다. 따라서 청크 분할은 일반적으로 대부분의 경우 더 빠릅니다. 대리자에 대한 실행 시간이 더 길거나 요소 수가 적은 소스에서는 청크 및 범위 분할 성능이 거의 같습니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "73141559"
 
 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드에서 파티셔너를 사용하도록 하려면 동적 개수의 파티션을 반환할 수 있어야 합니다. 즉, 파티셔너는 루프 실행 중에 언제든지 요청 시 새 파티션에 대한 열거자를 제공할 수 있습니다. 기본적으로 루프는 새 병렬 작업을 추가할 때마다 해당 작업에 대한 새 파티션을 요청합니다. 데이터의 순서가 지정 가능해야 하는 경우 각 파티션의 각 항목에 고유한 인덱스가 할당되도록 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>에서 파생시킵니다.
 
-자세한 내용은 [방법: 동적 파티션 구현](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)을 참조하세요.
+자세한 내용은 [방법: 동적 파티션 구현](how-to-implement-dynamic-partitions.md)을 참조하세요.
 
 ### <a name="contract-for-partitioners"></a>파티셔너에 대한 계약
 
@@ -127,6 +127,6 @@ ms.locfileid: "73141559"
 
 ## <a name="see-also"></a>참고 항목
 
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
-- [방법: 동적 파티션 구현](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [방법: 정적 분할을 위한 파티셔너 구현](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [병렬 프로그래밍](index.md)
+- [방법: 동적 파티션 구현](how-to-implement-dynamic-partitions.md)
+- [방법: 정적 분할을 위한 파티셔너 구현](how-to-implement-a-partitioner-for-static-partitioning.md)

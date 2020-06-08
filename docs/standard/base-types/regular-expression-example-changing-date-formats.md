@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4290bf0d6ee9deec8129c5f4f6092eedb08345f0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084187"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276181"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>정규식 예제: 날짜 형식 변경
 다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 사용하여 *mm*/*dd*/*yy* 형식의 날짜를 *dd*-*mm*-*yy* 형식의 날짜로 바꿉니다.  
@@ -57,4 +57,4 @@ ms.locfileid: "73084187"
   
 ## <a name="see-also"></a>참고 항목
 
-- [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 정규식](regular-expressions.md)

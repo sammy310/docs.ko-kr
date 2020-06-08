@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe5d8321a62b67a54dc09507e8fd86ee8d5cf74d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159756"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276558"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>다른 비동기 패턴 및 형식과의 Interop
-.NET Framework 1.0에서는 <xref:System.IAsyncResult> 또는 [Begin/End](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)패턴이라고도 하는 `Begin/End` 패턴이 도입되었습니다.  .NET Framework 2.0에서는 [이벤트 기반 비동기 패턴(EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)이 추가되었습니다.  .NET Framework 4부터 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 이 APM과 EAP를 둘 다 대체하지만 이전 패턴에서 마이그레이션 루틴을 쉽게 빌드할 수 있는 기능을 제공합니다.  
+.NET Framework 1.0에서는 <xref:System.IAsyncResult> 또는 [Begin/End](asynchronous-programming-model-apm.md)패턴이라고도 하는 `Begin/End` 패턴이 도입되었습니다.  .NET Framework 2.0에서는 [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)이 추가되었습니다.  .NET Framework 4부터 [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md) 이 APM과 EAP를 둘 다 대체하지만 이전 패턴에서 마이그레이션 루틴을 쉽게 빌드할 수 있는 기능을 제공합니다.  
   
  이 항목의 내용  
   
@@ -35,7 +35,7 @@ ms.locfileid: "78159756"
   
 <a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>APM에서 TAP로  
- [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 패턴은 매우 구조적이므로 APM 구현을 TAP 구현으로 노출하는 래퍼를 쉽게 빌드할 수 있습니다. 사실상, .NET Framework 4부터 .NET Framework에 이 변환을 제공하는 도우미 루틴이 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드 오버로드의 형태로 포함되었습니다.  
+ [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md) 패턴은 매우 구조적이므로 APM 구현을 TAP 구현으로 노출하는 래퍼를 쉽게 빌드할 수 있습니다. 사실상, .NET Framework 4부터 .NET Framework에 이 변환을 제공하는 도우미 루틴이 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드 오버로드의 형태로 포함되었습니다.  
   
  동기 <xref:System.IO.Stream> 메서드에 해당하는 APM 항목을 나타내는 <xref:System.IO.Stream.BeginRead%2A> 클래스와 해당 <xref:System.IO.Stream.EndRead%2A> 및 <xref:System.IO.Stream.Read%2A> 메서드를 고려합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "78159756"
   
 <a name="EAP"></a>
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>작업 및 EAP(이벤트 기반 비동기 패턴)  
- EAP 패턴에는 APM 패턴보다 더 많은 변형과 더 적은 구조가 있기 때문에 [이벤트 기반 비동기 패턴(EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) 구현 래핑이 APM 패턴 래핑보다 훨씬 복잡합니다.  이를 보여 주기 위해 다음 코드에서는 `DownloadStringAsync` 메서드를 래핑합니다.  `DownloadStringAsync` 는 URI를 수락하고 진행 중인 여러 통계를 보고하기 위해 다운로드하는 동안 `DownloadProgressChanged` 이벤트를 발생시키며 완료되면 `DownloadStringCompleted` 이벤트를 발생시킵니다.  최종 결과는 지정된 URI에 있는 페이지의 내용이 포함된 문자열입니다.  
+ EAP 패턴에는 APM 패턴보다 더 많은 변형과 더 적은 구조가 있기 때문에 [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md) 구현 래핑이 APM 패턴 래핑보다 훨씬 복잡합니다.  이를 보여 주기 위해 다음 코드에서는 `DownloadStringAsync` 메서드를 래핑합니다.  `DownloadStringAsync` 는 URI를 수락하고 진행 중인 여러 통계를 보고하기 위해 다운로드하는 동안 `DownloadProgressChanged` 이벤트를 발생시키며 완료되면 `DownloadStringCompleted` 이벤트를 발생시킵니다.  최종 결과는 지정된 URI에 있는 페이지의 내용이 포함된 문자열입니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
@@ -102,7 +102,7 @@ ms.locfileid: "78159756"
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
   
- 대기 핸들에 의존하지 않고 완전히 작업으로 작동하는 비동기 세마포를 빌드할 수도 있습니다. 이렇게 하려면 [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 에 설명된 <xref:System.Threading.Tasks.Task>이 추가되었습니다.  
+ 대기 핸들에 의존하지 않고 완전히 작업으로 작동하는 비동기 세마포를 빌드할 수도 있습니다. 이렇게 하려면 [Consuming the Task-based Asynchronous Pattern](consuming-the-task-based-asynchronous-pattern.md) 에 설명된 <xref:System.Threading.Tasks.Task>이 추가되었습니다.  
   
 <a name="TapToWH"></a>
 ### <a name="from-tap-to-wait-handles"></a>TAP에서 대기 핸들로  
@@ -113,6 +113,6 @@ ms.locfileid: "78159756"
   
 ## <a name="see-also"></a>참고 항목
 
-- [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [TAP(작업 기반 비동기 패턴)](task-based-asynchronous-pattern-tap.md)
+- [작업 기반 비동기 패턴 구현](implementing-the-task-based-asynchronous-pattern.md)
+- [작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md)

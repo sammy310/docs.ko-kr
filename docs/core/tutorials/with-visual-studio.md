@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9c3456cd8c940e53e8a70c1d3a7c3b09de77c21d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 144d7bb087034839ad2cde2fa28a4961cff4321f
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201591"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306996"
 ---
 # <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 .NET Core 콘솔 애플리케이션 만들기
 
@@ -97,9 +97,8 @@ ms.locfileid: "84201591"
 
 1. 현재 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
-
-   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="Snippet1":::
+   [!code-csharp[GettingStarted#1](./snippets/with-visual-studio/csharp/Program.cs#1)]
+   [!code-vb[GettingStarted#1](./snippets/with-visual-studio/vb/Program.vb#1)]
 
    이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수(Visual Basic에서는 `currentDate`)에 할당합니다. 마지막으로 콘솔 창에 이러한 값을 표시합니다.
 

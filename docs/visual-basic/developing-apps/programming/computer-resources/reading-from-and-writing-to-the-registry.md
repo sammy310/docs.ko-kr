@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349757"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360061"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>레지스트리 읽기 및 쓰기(Visual Basic)
 
@@ -21,19 +21,19 @@ ms.locfileid: "74349757"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 레지스트리 키 만들기 및 값 설정](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ [방법: 레지스트리 키 만들기 및 값 설정](how-to-create-a-registry-key-and-set-its-value.md)  
  `My.Computer.Registry` 개체의 `CreateSubKey` 및 `SetValue` 메서드를 사용하여 레지스트리 키를 만들고 값을 설정하는 방법을 설명합니다.  
   
- [방법: 레지스트리 키 값 읽기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ [방법: 레지스트리 키 값 읽기](how-to-read-a-value-from-a-registry-key.md)  
  `My.Computer.Registry` 개체의 `GetValue` 메서드를 사용하여 레지스트리 키에서 값을 읽는 방법을 설명합니다.  
   
- [방법: 레지스트리 키 삭제](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [방법: 레지스트리 키 삭제](how-to-delete-a-registry-key.md)  
  `My.Computer.Registry.CurrentUser` 속성의 `DeleteSubKey` 메서드를 사용하여 레지스트리 키를 삭제하는 방법을 설명합니다.  
   
- [Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ [Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
  .NET Framework의 `Registry` 및 `RegistryKey` 클래스를 사용하여 레지스트리에 액세스하는 방법을 설명합니다.  
   
- [보안 및 레지스트리](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ [보안 및 레지스트리](security-and-the-registry.md)  
  레지스트리 관련 보안 문제를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

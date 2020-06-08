@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140549"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397430"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>고정 크기 버퍼(C# 프로그래밍 가이드)
 
@@ -26,11 +26,11 @@ private fixed char name[30];
 
 `pathName`이 참조이므로 다음 `struct`의 크기는 배열에 있는 요소의 수에 따라 달라지지 않습니다.
 
-[!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
+[!code-csharp[Struct with embedded array](snippets/FixedKeywordExamples.cs#6)]
 
 `struct`은 안전하지 않은 코드에 포함된 배열을 포함할 수 있습니다. 다음 예제에서 `fixedBuffer` 배열은 고정 크기입니다. `fixed` 명령문을 사용하여 첫 번째 요소에 대한 포인터를 설정합니다. 이 포인터를 통해 배열의 요소에 액세스합니다. `fixed` 명령문은 `fixedBuffer`의 인스턴스 필드를 메모리의 특정 위치에 고정합니다.
 
-[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
+[!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#7)]
 
 128개 요소 `char` 배열의 크기는 256바이트입니다. 고정 크기 [char](../../language-reference/builtin-types/char.md) 버퍼는 인코딩에 관계없이 항상 문자당 2바이트를 사용합니다. 이는 char 버퍼가 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하는 API 메서드 또는 구조체로 마샬링되는 경우에도 마찬가지입니다. 자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>를 참조하세요.
 

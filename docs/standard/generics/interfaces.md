@@ -8,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708326"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287521"
 ---
 # <a name="generic-interfaces"></a>제네릭 인터페이스
 이 항목에서는 여러 제네릭 형식 패밀리에 대해 공통 기능을 제공하는 제네릭 인터페이스에 대해 간략하게 설명합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "75708326"
  제네릭 인터페이스는 순서 및 같음 비교와 제네릭 컬렉션 형식에서 공유되는 기능을 위해 제네릭이 아닌 인터페이스에 형식이 안전한 대응 항목을 제공합니다.  
   
 > [!NOTE]
-> .NET Framework 4부터 여러 제네릭 인터페이스의 형식 매개 변수는 공 분산 또는 반공 분산으로 표시되어 이러한 인터페이스를 구현하는 형식을 유연하게 할당 및 사용할 수 있게 해줍니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+> .NET Framework 4부터 여러 제네릭 인터페이스의 형식 매개 변수는 공 분산 또는 반공 분산으로 표시되어 이러한 인터페이스를 구현하는 형식을 유연하게 할당 및 사용할 수 있게 해줍니다. [공변성(Covariance) 및 반공변성(Contravariance)](covariance-and-contravariance.md)을 참조하세요.  
   
 ### <a name="equality-and-ordering-comparisons"></a>같음 및 순서 비교  
  <xref:System> 네임스페이스에서 <xref:System.IComparable%601?displayProperty=nameWithType> 및 <xref:System.IEquatable%601?displayProperty=nameWithType> 제네릭 인터페이스는 제네릭이 아닌 대응 항목과 마찬가지로 각각 순서 비교와 같음 비교를 위한 메서드를 정의합니다. 형식은 이러한 인터페이스를 구현하여 비교 수행 능력을 제공합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "75708326"
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [제네릭](../../../docs/standard/generics/index.md)
-- [.NET Framework의 제네릭 컬렉션](../../../docs/standard/generics/collections.md)
-- [배열과 목록을 조작하기 위한 제네릭 대리자](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [공 분산 및 반공 분산](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [제네릭](index.md)
+- [.NET Framework의 제네릭 컬렉션](collections.md)
+- [배열과 목록을 조작하기 위한 제네릭 대리자](delegates-for-manipulating-arrays-and-lists.md)
+- [공 분산 및 반공 분산](covariance-and-contravariance.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47364aef49bb0f43b79b805e2adf305c549d7340
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084220"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276163"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  
@@ -56,4 +56,4 @@ ms.locfileid: "73084220"
   
 ## <a name="see-also"></a>참조
 
-- [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 정규식](regular-expressions.md)

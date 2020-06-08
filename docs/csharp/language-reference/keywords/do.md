@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738902"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401929"
 ---
 # <a name="do-c-reference"></a>do(C# 참조)
 
@@ -28,7 +28,7 @@ ms.locfileid: "81738902"
 
 다음 예제에서는 `do` 문의 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
-[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+[!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

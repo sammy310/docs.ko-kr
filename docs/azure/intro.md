@@ -2,12 +2,12 @@
 title: Azure 및 .NET 시작
 description: Azure 및.NET에 대해 알아야 할 기본 사항을 알아봅니다.
 ms.date: 03/15/2020
-ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d57d1d50852c9d7fff099554bd64c48c15129bb4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607884"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446394"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 및 .NET 소개
 
@@ -77,5 +77,5 @@ Visual Studio를 사용한다면 프로젝트에 특정 Azure 서비스에 대�
 
 * [Azure에 ASP.NET Core 첫 웹앱 배포](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
 * [.NET용 Azure SDK의 인증에 대한 자세한 정보](./sdk/authentication.md)
-* [클라우드 앱에서 오류를 진단합니다.](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
+* [클라우드 앱에서 오류를 진단합니다.](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
 * [.NET 개발자용 Azure 빠른 시작 가이드](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook) 무료 eBook 다운로드

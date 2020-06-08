@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138135"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277884"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 .NET Framework 4부터 .NET Framework에서는 비동기 또는 장기 실행 비동기 작업의 협조적 취소를 위한 통합 모델을 사용합니다. 이 모델은 취소 토큰이라는 경량 개체에 기반을 둡니다. 취소할 수 있는 작업 하나 이상을 호출하는 개체가 새 스레드나 작업 등을 만드는 방식으로 토큰을 각 작업에 전달합니다. 개별 작업이 토큰 복사본을 다시 다른 작업에 전달할 수 있습니다. 나중에 토큰을 만든 개체가 해당 토큰을 사용하여 관련 작업이 수행 중인 작업을 중지하도록 요청할 수 있습니다. 요청 개체만 취소 요청을 실행할 수 있고 각 수신기는 적절한 시간에 적절한 방식으로 요청을 알리고 요청에 응답해야 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "73138135"
   
  다음 그림에서는 토큰 소스와 모든 토큰 복사본의 관계를 보여 줍니다.  
   
- ![CancellationTokenSource 및 cancellation 토큰](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancellationTokenSource 및 cancellation 토큰](media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  새 취소 모델을 통해 취소 인식 애플리케이션 및 라이브러리를 더 쉽게 만들 수 있고 이 모델은 다음 기능을 지원합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73138135"
  다음 예제에서는 요청 개체가 <xref:System.Threading.CancellationTokenSource> 개체를 만들고 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성을 취소 가능한 작업에 전달합니다. 요청을 수신하는 작업에서는 폴링을 통해 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 모니터링합니다. 값이 `true`가 되면 수신기가 적절한 방식이더라도 종료될 수 있습니다. 이 예제에서는 대부분 경우에 모두 필요한 메서드가 종료됩니다.  
   
 > [!NOTE]
-> 예제에서는 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 메서드를 사용하여 새 취소 프레임워크가 기존 API와 호환된다는 것을 보여 줍니다. 새로운 권장 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 형식을 사용하는 예에 대해서는 [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
+> 예제에서는 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 메서드를 사용하여 새 취소 프레임워크가 기존 API와 호환된다는 것을 보여 줍니다. 새로운 권장 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 형식을 사용하는 예에 대해서는 [방법: 작업 및 해당 자식 취소](../parallel-programming/how-to-cancel-a-task-and-its-children.md)를 참조하세요.  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -84,7 +84,7 @@ ms.locfileid: "73138135"
   
  그러나 더 복잡한 경우에 사용자 대리자가 취소가 발생했다는 정보를 라이브러리 코드에 알려야 할 수 있습니다. 이 경우 작업을 종료하는 올바른 방법은 <xref:System.OperationCanceledException>을 throw하는 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 메서드를 대리자가 호출하는 것입니다. 라이브러리 코드는 사용자 대리자 스레드에서 이 예외를 catch하고 예외의 토큰을 검사하여 예외가 협조적 취소를 나타내는지, 아니면 다른 예외적인 상황인지를 결정합니다.  
   
- <xref:System.Threading.Tasks.Task> 클래스는 이 방식으로 <xref:System.OperationCanceledException>을 처리합니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md)를 참조하세요.  
+ <xref:System.Threading.Tasks.Task> 클래스는 이 방식으로 <xref:System.OperationCanceledException>을 처리합니다. 자세한 내용은 [작업 취소](../parallel-programming/task-cancellation.md)를 참조하세요.  
   
 ### <a name="listening-by-polling"></a>폴링으로 수신 대기  
  루핑되거나 재귀적으로 사용되는 장기 실행 계산의 경우 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 속성 값을 주기적으로 폴링하여 취소 요청을 수신 대기할 수 있습니다. 값이 `true`이면 메서드가 가능한 한 빠르게 정리 및 종료되어야 합니다. 최적 폴링 빈도는 애플리케이션 형식에 따라 다릅니다. 특정 프로그램에 대한 최적 폴링 빈도는 개발자가 결정할 수 있습니다. 폴링 자체는 성능에 큰 영향을 미치지 않습니다. 다음 예제에서는 한 가지 가능한 폴링 방법을 보여 줍니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "73138135"
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  
   
- 자세한 예제는 [방법: 폴링을 통해 취소 요청 수신 대기](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md)를 참조하세요.  
+ 자세한 예제는 [방법: 폴링을 통해 취소 요청 수신 대기](how-to-listen-for-cancellation-requests-by-polling.md)를 참조하세요.  
   
 ### <a name="listening-by-registering-a-callback"></a>콜백을 등록하여 수신 대기  
  일부 작업은 적절한 시기에 취소 토큰의 값을 확인할 수 없는 방식으로 차단될 수 있습니다. 이러한 경우에는 취소 요청이 수신될 때 메서드를 차단 해제하는 콜백 메서드를 등록할 수 있습니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "73138135"
   
 - 콜백은 한 콜백에서 수동 스레드 또는 <xref:System.Threading.SynchronizationContext> 사용을 수행하면 안 됩니다. 콜백이 특정 스레드에서 실행되어야 하면 대상 syncContext가 활성 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>가 되도록 지정할 수 있는 <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> 생성자를 사용합니다. 콜백에서 수동 스레딩을 수행하면 교착 상태가 발생할 수 있습니다.  
   
- 자세한 예제는 [방법: 취소 요청에 대한 콜백 등록](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md)을 참조하세요.  
+ 자세한 예제는 [방법: 취소 요청에 대한 콜백 등록](how-to-register-callbacks-for-cancellation-requests.md)을 참조하세요.  
   
 ### <a name="listening-by-using-a-wait-handle"></a>대기 핸들을 사용하여 수신 대기  
  취소할 수 있는 작업이 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 또는 <xref:System.Threading.Semaphore?displayProperty=nameWithType>와 같은 동기화 기본 형식에서 대기하는 동안 차단되면 <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> 속성을 사용하여 작업이 이벤트 및 취소 요청에서 대기하도록 할 수 있습니다. 취소 토큰의 대기 핸들은 취소 요청에 대한 응답으로 신호가 전송되고 메서드는 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드의 반환 값을 사용하여 신호를 전송한 취소 토큰이었는지를 판별할 수 있습니다. 그리고 나서 작업은 적절하게 종료되거나 <xref:System.OperationCanceledException>을 throw합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "73138135"
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- 자세한 예제는 [방법: 대기 핸들이 있는 취소 요청 수신 대기](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md)를 참조하세요.  
+ 자세한 예제는 [방법: 대기 핸들이 있는 취소 요청 수신 대기](how-to-listen-for-cancellation-requests-that-have-wait-handles.md)를 참조하세요.  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>동시에 여러 토큰 수신 대기  
  경우에 따라 수신기는 여러 취소 토큰을 동시에 수신 대기해야 할 수 있습니다. 예를 들어 취소 가능한 작업은 외부에서 메서드 매개 변수에 인수로 전달되는 토큰 이외에 내부 취소 토큰을 모니터링해야 할 수 있습니다. 이 작업을 하려면 다음 예제와 같이 토큰 두 개 이상을 토큰 하나로 결합할 수 있는 연결된 토큰 소스를 만듭니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "73138135"
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
  [!code-vb[Cancellation#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#7)]  
   
- 작업을 완료했을 때 연결된 토큰 소스에서 `Dispose`를 호출해야 합니다. 자세한 예제는 [방법: 여러 개의 취소 요청 수신 대기](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md)를 참조하세요.  
+ 작업을 완료했을 때 연결된 토큰 소스에서 `Dispose`를 호출해야 합니다. 자세한 예제는 [방법: 여러 개의 취소 요청 수신 대기](how-to-listen-for-multiple-cancellation-requests.md)를 참조하세요.  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>라이브러리 코드와 사용자 코드 간 협력  
  통합 취소 프레임워크를 사용하면 라이브러리 코드에서 사용자 코드를 취소하고 사용자 코드에서 협조적 방식으로 라이브러리 코드를 취소할 수 있습니다. 원활한 협력은 다음 지침에 따라 양측에 의존합니다.  
@@ -144,8 +144,8 @@ ms.locfileid: "73138135"
   
 - 사용자 대리자는 적절한 시간에 라이브러리 코드의 취소 요청에 응답해야 합니다.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>은 이들 지침을 따르는 클래스의 예입니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md) 및 [방법: PLINQ 쿼리 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)를 참조하세요.  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>은 이들 지침을 따르는 클래스의 예입니다. 자세한 내용은 [작업 취소](../parallel-programming/task-cancellation.md) 및 [방법: PLINQ 쿼리 취소](../parallel-programming/how-to-cancel-a-plinq-query.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
-- [관리되는 스레딩 기본 사항](../../../docs/standard/threading/managed-threading-basics.md)
+- [관리되는 스레딩 기본 사항](managed-threading-basics.md)

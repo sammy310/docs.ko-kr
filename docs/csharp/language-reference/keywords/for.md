@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738801"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401903"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
@@ -33,7 +33,7 @@ for (initializer; condition; iterator)
 
 다음 예제에서는 모든 섹션이 정의된 `for` 문을 보여 줍니다.
 
-[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+[!code-csharp-interactive[for loop example](snippets/IterationKeywordsExamples.cs#5)]
 
 ### <a name="the-initializer-section"></a>*initializer* 섹션
 
@@ -97,11 +97,11 @@ i++
 
 다음 예제에서는 *initializer* 섹션에서 외부 루프 변수에 값 할당, *initializer* 및 *iterator* 섹션에서 메서드 호출, *iterator* 섹션에서 두 변수의 값 변경과 같이 `for` 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
-[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
+[!code-csharp-interactive[not typical for loop example](snippets/IterationKeywordsExamples.cs#6)]
 
 다음 예제에서는 무한 `for` 루프를 정의합니다.
 
-[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
+[!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

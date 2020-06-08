@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276150"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>정규식의 수량자
 수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.  다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "78160016"
  수량 `n` 및 `m`은 정수 상수입니다. 일반적으로 수량자는 탐욕적입니다. 그러면 최대한의 정규식 엔진이 특정 패턴과 일치하게 됩니다. `?` 문자를 수량자에 추가하면 게으른 수량자로 만들 수 있습니다. 그러면 최소한의 정규식 엔진이 일치하게 됩니다. 탐욕적 수량자와 게으른 수량자 간의 차이에 대한 설명은 이 항목의 뒷부분에 나오는 [탐욕적 및 게으른 수량자](#Greedy) 섹션을 참조하세요.  
   
 > [!IMPORTANT]
-> 예를 들어, 정규식 패턴 `(a*)*`과 같이 수량자가 중첩되면 정규식 엔진이 입력 문자열에 있는 문자 수의 지 수 함수로 수행해야 하는 비교의 수를 증가시킬 수 있습니다. 이 동작 및 해결 방법에 대한 자세한 내용은 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요.  
+> 예를 들어, 정규식 패턴 `(a*)*`과 같이 수량자가 중첩되면 정규식 엔진이 입력 문자열에 있는 문자 수의 지 수 함수로 수행해야 하는 비교의 수를 증가시킬 수 있습니다. 이 동작 및 해결 방법에 대한 자세한 내용은 [역추적](backtracking-in-regular-expressions.md)을 참조하세요.  
   
 ## <a name="regular-expression-quantifiers"></a>정규식 수량자  
  다음 섹션에는 .NET의 정규식에서 지원하는 수량자를 보여 줍니다.  
   
 > [!NOTE]
-> *, +, ?, { 및 } 문자가 정규식 패턴에 나타난 경우 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함된 경우가 아니면 정규식 엔진은 이러한 문자를 수량자 또는 수량자 구문의 일부로 해석합니다. 이를 문자 클래스 외부의 리터럴 문자로 해석하려면 앞에 백슬래시를 추가하여 이스케이프해야 합니다. 예를 들어 정규식 패턴의 `\*` 문자열은 리터럴 별표(“\*”) 문자로 해석됩니다.  
+> *, +, ?, { 및 } 문자가 정규식 패턴에 나타난 경우 [문자 클래스](character-classes-in-regular-expressions.md)에 포함된 경우가 아니면 정규식 엔진은 이러한 문자를 수량자 또는 수량자 구문의 일부로 해석합니다. 이를 문자 클래스 외부의 리터럴 문자로 해석하려면 앞에 백슬래시를 추가하여 이스케이프해야 합니다. 예를 들어 정규식 패턴의 `\*` 문자열은 리터럴 별표(“\*”) 문자로 해석됩니다.  
   
 ### <a name="match-zero-or-more-times-"></a>0번 이상 일치: *  
  `*` 수량자는 이전 요소를 0번 이상 일치시킵니다. 이는 `{0,}` 수량자와 같습니다. `*`는 게으른 수량자가 `*?`인 탐욕적 수량자입니다.  
@@ -271,5 +271,5 @@ ms.locfileid: "78160016"
   
 ## <a name="see-also"></a>참조
 
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)
+- [역추적](backtracking-in-regular-expressions.md)

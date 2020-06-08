@@ -17,15 +17,15 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243234"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277806"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
-역추적은 정규식 패턴에 선택적인 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 또는 [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장한 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
+역추적은 정규식 패턴에 선택적인 [수량자](quantifiers-in-regular-expressions.md) 또는 [교체 구문](alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장한 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
   
 > [!NOTE]
 > 일반적으로 .NET 정규식 엔진과 같은 NFA(Nondeterministic Finite Automaton) 엔진에서는 개발자가 효율적이고 속도가 빠른 정규식을 작성하도록 노력해야 합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "81243234"
  입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2<sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n*은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다.
 
 ## <a name="controlling-backtracking"></a>역추적 제어  
- 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [원자성 그룹](#atomic-groups), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [정규식의 그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+ 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [원자성 그룹](#atomic-groups), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [정규식의 그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
 
 ### <a name="defining-a-time-out-interval"></a>시간 제한 간격 정의  
  .NET Framework 4.5부터는 정규식 엔진이 시도를 포기하고 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 예외를 throw하기 전에 단일 일치 항목을 검색할 가장 긴 간격을 나타내는 시간 제한 값을 설정할 수 있습니다. <xref:System.TimeSpan> 값을 인스턴스 정규식을 위한 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 생성자에 제공하여 시간 제한 간격을 지정합니다. 또한, 각각의 정적 패턴 일치 메서드에 시간 제한 값을 지정할 수 있게 해주는 <xref:System.TimeSpan> 매개 변수의 오버로드가 있습니다. 기본적으로, 시간 제한 간격은 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 으로 설정되고, 정규식 엔진의 시간이 초과되지 않습니다.  
@@ -190,8 +190,8 @@ ms.locfileid: "81243234"
   
 ## <a name="see-also"></a>참조
 
-- [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [교체 구문](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [정규식의 그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [.NET 정규식](regular-expressions.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)
+- [수량자](quantifiers-in-regular-expressions.md)
+- [교체 구문](alternation-constructs-in-regular-expressions.md)
+- [정규식의 그룹화 구문](grouping-constructs-in-regular-expressions.md)

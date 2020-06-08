@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140579"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276168"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
@@ -150,4 +150,4 @@ ms.locfileid: "73140579"
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
-- [특성](../../../docs/standard/attributes/index.md)
+- [특성](index.md)

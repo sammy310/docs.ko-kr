@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283588"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286017"
 ---
 # <a name="latency-modes"></a>대기 시간 모드
 
@@ -58,12 +58,12 @@ ms.locfileid: "74283588"
 
 - 할당할 수 있는 스레드를 확인합니다. <xref:System.Runtime.GCSettings.LatencyMode%2A> 속성 설정은 프로세스 전체에 적용되므로, 할당되는 모든 스레드에서 <xref:System.OutOfMemoryException> 예외가 생성될 수 있습니다.
 
-- 제약이 있는 실행 영역에서 짧은 대기 시간 코드를 래핑합니다. 자세한 내용은 [제약이 있는 실행 영역](../../../docs/framework/performance/constrained-execution-regions.md)을 참조하세요.
+- 제약이 있는 실행 영역에서 짧은 대기 시간 코드를 래핑합니다. 자세한 내용은 [제약이 있는 실행 영역](../../framework/performance/constrained-execution-regions.md)을 참조하세요.
 
 - <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 메서드를 호출하여 짧은 대기 시간 기간 중 2세대 수집을 강제할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.GC?displayProperty=nameWithType>
-- [인덱싱된 컬렉션](../../../docs/standard/garbage-collection/induced.md)
-- [가비지 수집](../../../docs/standard/garbage-collection/index.md)
+- [인덱싱된 컬렉션](induced.md)
+- [가비지 수집](index.md)
