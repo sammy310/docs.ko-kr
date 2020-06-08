@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 9ad70ffd-6963-4ab2-8c84-3d86c3fb8deb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d6c9d22f4e50c21e2f41b7efd402907ff5843db
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6b6f2dbaa49c29f6614e9c39a3f408d4d1453983
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805222"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501627"
 ---
 # <a name="igchost-interface"></a>IGCHost 인터페이스
 가비지 컬렉션 시스템에 대 한 정보를 가져오고 가비지 수집의 일부 측면을 제어 하기 위한 메서드를 제공 합니다.  
   
 > [!NOTE]
-> 4.5 .NET Framework부터 [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) 메서드를 사용 하 여 가비지 수집 세그먼트의 크기와 가비지 수집 시스템의 최대 크기를 `DWORD` [SetGCStartupLimits](igchost-setgcstartuplimits-method.md) 메서드에서 적용 되는 제한 보다 큰 값으로 설정할 수 있습니다.  
+> 4.5 .NET Framework부터 [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) 메서드를 사용 하 여 가비지 수집 세그먼트의 크기와 가비지 수집 시스템의 최대 크기를 `DWORD` [SetGCStartupLimits](igchost-setgcstartuplimits-method.md) 메서드에서 적용 되는 제한 보다 큰 값으로 설정할 수 있습니다.  
   
 > [!NOTE]
 > 이 인터페이스는 전문 용도로만 사용 됩니다. 응용 프로그램의 성능에 영향을 줄 수 있습니다 (잘못 사용 되는 경우).  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
 |[Collect 메서드](igchost-collect-method.md)|현재 가비지 컬렉션의 상태에 관계 없이 지정 된 세대에 대해 컬렉션을 강제로 실행 합니다.|  
 |[GetStats 메서드](igchost-getstats-method.md)|가비지 수집 시스템의 현재 상태에 대 한 통계를 가져옵니다.|  

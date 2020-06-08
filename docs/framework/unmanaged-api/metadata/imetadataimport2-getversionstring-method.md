@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490409"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString 메서드
 어셈블리를 빌드하는 데 사용 된 런타임의 버전 번호를 가져옵니다.  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  제한이 버전을 지정 하는 문자열을 저장할 배열입니다.  
   
  `ccBufSize`  
- 진행 `pwzBuf` 배열의 크기 (와이드 문자)입니다.  
+ 진행 배열의 크기 (와이드 문자) `pwzBuf` 입니다.  
   
  `pccBufSize`  
- 제한이 `pwzBuf` 배열에 반환 된 null 종결자를 포함 하는 와이드 문자 수입니다.  
+ 제한이 배열에 반환 된 null 종결자를 포함 하는 와이드 문자 수입니다 `pwzBuf` .  
   
-## <a name="remarks"></a>주의  
- `GetVersionString` 메서드는 현재 메타 데이터 범위의 기본 제공 버전을 가져옵니다. 범위를 저장 하지 않은 경우에는 기본 제공 버전이 없으며 빈 문자열이 반환 됩니다.  
+## <a name="remarks"></a>설명  
+ `GetVersionString`메서드는 현재 메타 데이터 범위의 기본 제공 버전을 가져옵니다. 범위를 저장 하지 않은 경우에는 기본 제공 버전이 없으며 빈 문자열이 반환 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)

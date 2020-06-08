@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-ms.openlocfilehash: 75414ec3d2b30fe8afc5db1e97c81f34b29a3115
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a3d5527fc34ad7292974c005179e9d9cad210c94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864676"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503122"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags 메서드
 JIT (just in time) 컴파일 함수의 코드 생성을 제어 하기 위해 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 열거형에서 하나 이상의 플래그를 설정 합니다.  
@@ -36,20 +36,20 @@ HRESULT SetCodegenFlags(
  `flags`  
  진행 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 열거형의 하나 이상의 플래그입니다.  
   
-## <a name="remarks"></a>주의  
- 프로파일러는 [ICorProfilerCallback4:: GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md) 콜백을 통해이 인터페이스의 인스턴스를 가져옵니다. `SetCodegenFlags`를 사용 하면 프로파일러가 다시 컴파일된 함수에 대 한 코드 생성을 제어할 수 있습니다. 다른 모든 JIT 재컴파일 매개 변수와 마찬가지로 코드 생성 플래그는 함수의 모든 인스턴스에 적용 됩니다.  
+## <a name="remarks"></a>설명  
+ 프로파일러는 [ICorProfilerCallback4:: GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md) 콜백을 통해이 인터페이스의 인스턴스를 가져옵니다. `SetCodegenFlags`프로파일러가 다시 컴파일된 함수에 대 한 코드 생성을 제어할 수 있습니다. 다른 모든 JIT 재컴파일 매개 변수와 마찬가지로 코드 생성 플래그는 함수의 모든 인스턴스에 적용 됩니다.  
   
- JIT 컴파일러는 함수를 컴파일할 때 다른 원본에서 지정 된 다른 플래그와 함께 이러한 컴파일 플래그를 고려 합니다.  다른 소스에는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드 (값 `COR_PRF_DISABLE_INLINING` 및 `COR_PRF_DISABLE_OPTIMIZATIONS`) 및 프로파일러의 [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) callback을 사용 하 여 시작 시 프로파일러에서 설정 하는 디버거, 전역 플래그가 포함 됩니다.  JIT 컴파일러는 최소한의 최적화를 요청 하는 소스에 우선 순위를 부여 합니다.  예를 들어 프로파일러가 시작 시 `COR_PRF_DISABLE_INLINING` 지정 하지만 [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 콜백에서 `COR_PRF_CODEGEN_DISABLE_INLINING`를 지정 하지 않는 경우에도 인라이닝을 사용할 수 없습니다.  마찬가지로 프로파일러가 `SetCodegenFlags`에서 `COR_PRF_CODEGEN_DISABLE_INLINING` 지정 하지 않지만 [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) 콜백을 사용 하 여 인라이닝을 사용 하지 않도록 설정 하면 인라이닝을 사용 하지 않도록 설정 됩니다.  
+ JIT 컴파일러는 함수를 컴파일할 때 다른 원본에서 지정 된 다른 플래그와 함께 이러한 컴파일 플래그를 고려 합니다.  다른 원본에는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드 (값 `COR_PRF_DISABLE_INLINING` 및 `COR_PRF_DISABLE_OPTIMIZATIONS` )와 프로파일러의 [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) callback을 사용 하 여 시작 시 프로파일러에서 설정한 디버거, 전역 플래그가 포함 됩니다.  JIT 컴파일러는 최소한의 최적화를 요청 하는 소스에 우선 순위를 부여 합니다.  예를 들어 프로파일러가 `COR_PRF_DISABLE_INLINING` 시작 시를 지정 하지만 `COR_PRF_CODEGEN_DISABLE_INLINING` [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 콜백에서를 지정 하지 않는 경우에도 인라이닝을 사용할 수 없습니다.  마찬가지로 프로파일러가에서을 지정 하지 않고 `COR_PRF_CODEGEN_DISABLE_INLINING` `SetCodegenFlags` [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) 콜백을 사용 하 여 인라이닝을 사용 하지 않도록 설정 하면 인라이닝을 사용 하지 않도록 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerFunctionControl 인터페이스](icorprofilerfunctioncontrol-interface.md)

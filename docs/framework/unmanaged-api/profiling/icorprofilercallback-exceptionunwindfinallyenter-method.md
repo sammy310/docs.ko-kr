@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: ab7c8cbc41967af04c4c9a8813f32b9b1f01c6a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f5e4939c814239c297fc0aa88644dc0472b0c419
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866353"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500158"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter 메서드
-예외 처리의 해제 단계가 지정 된 함수에 포함 된 `finally` 절을 입력 함을 프로파일러에 알립니다.  
+예외 처리의 해제 단계가 `finally` 지정 된 함수에 포함 된 절을 입력 하 고 있음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,23 +36,23 @@ HRESULT ExceptionUnwindFinallyEnter(
 
 - `functionId`
 
-  \[in] `finally` 절을 포함 하는 함수의 ID입니다.
+  \[in] 절을 포함 하는 함수의 ID입니다 `finally` .
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다. 프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.  
   
  이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [GetNotifiedExceptionClauseInfo 메서드](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)

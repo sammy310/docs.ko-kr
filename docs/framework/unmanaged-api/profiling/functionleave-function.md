@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 836e4843ead940bc9f76ff6bdd0433e21e400afd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866886"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500639"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
 함수가 호출자에 게 반환 될 것 이라고 프로파일러에 알립니다.  
   
 > [!NOTE]
-> `FunctionLeave` 함수는 2.0 .NET Framework에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionLeave2](functionleave2-function.md) 함수를 사용 해야 합니다.  
+> `FunctionLeave`함수는 .NET Framework 2.0에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionLeave2](functionleave2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,8 +41,8 @@ void __stdcall FunctionLeave (
 
   \[in] 반환 되는 함수의 식별자입니다.
 
-## <a name="remarks"></a>주의  
- `FunctionLeave` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
+## <a name="remarks"></a>설명  
+ `FunctionLeave`함수는 콜백입니다. 함수를 구현 해야 합니다. 구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.  
   
  실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
   
@@ -50,12 +50,12 @@ void __stdcall FunctionLeave (
   
 - 종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.  
   
- `FunctionLeave` 구현은 가비지 수집을 지연 시킬 수 있으므로 차단 하면 안 됩니다. 스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다. 가비지 수집을 시도 하면 `FunctionLeave` 반환 될 때까지 런타임이 차단 됩니다.  
+ 의 구현은 `FunctionLeave` 가비지 수집을 지연 하므로 차단 하면 안 됩니다. 스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다. 가비지 수집을 시도 하면 런타임이 반환 될 때까지 차단 됩니다 `FunctionLeave` .  
   
- 또한 `FunctionLeave` 함수는 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
+ 또한 함수는 관리 `FunctionLeave` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
   
@@ -63,7 +63,7 @@ void __stdcall FunctionLeave (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

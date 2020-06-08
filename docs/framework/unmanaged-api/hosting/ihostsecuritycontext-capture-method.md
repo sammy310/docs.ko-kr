@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-ms.openlocfilehash: 40857620e47befce361ff8cb04af527915051df3
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e1df31ed8b652837a33b360b1378f99e6800cbea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501523"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture 메서드
-[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)에 대 한 호출에서 반환 된 [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) 인스턴스의 복제본을 가져옵니다.  
+[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)에 대 한 호출에서 반환 된 [IHostSecurityContext](ihostsecuritycontext-interface.md) 인스턴스의 복제본을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ HRESULT Capture (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`Capture`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  

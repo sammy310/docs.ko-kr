@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-ms.openlocfilehash: 048fe687e4d979576896f5310bddc855b40bb695
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9d7eb6f5760b43fe805443bbe1ea4a95c72069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501068"
 ---
 # <a name="osinfo-structure"></a>OSINFO 구조체
-어셈블리 또는 모듈의 운영 체제에 대한 세부 정보를 포함합니다.  
+어셈블리 또는 모듈의 운영 체제에 대 한 세부 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,27 +34,27 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`dwOSPlatformId`|Microsoft Windows 플랫폼 함수에 `GetVersionEx`의해 정의된 식별자 값 중 하나 . 다음 값이 지원 됩니다.<br /><br /> - VER_PLATFORM_WIN32s, 또는 0x0000, 마이크로 소프트 윈도우 3.1을 지정합니다.<br />- VER_PLATFORM_WIN32_WINDOWS, 또는 0x0001, 윈도우 95, 윈도우 98, 또는 운영 체제를 지정합니다.<br />- VER_PLATFORM_WIN32_NT, 또는 0x0002, 윈도우 NT 또는 운영 체제에서 후손 지정합니다.|  
-|`dwOSMajorVersion`|운영 체제 주 버전 또는 NULL 값을 사용하여 모든 버전을 나타냅니다.|  
-|`dwOSMinorVersion`|운영 체제 부 버전 또는 NULL 값으로 모든 버전을 나타냅니다.|  
+|`dwOSPlatformId`|Microsoft Windows 플랫폼 함수에 의해 정의 된 식별자 값 중 하나입니다 `GetVersionEx` . 지원되는 값은 다음과 같습니다.<br /><br /> -VER_PLATFORM_WIN32s 또는 경우 Microsoft Windows 3.1을 지정 합니다.<br />-VER_PLATFORM_WIN32_WINDOWS 또는 0x0001에서 Windows 95, Windows 98 또는 운영 체제를 지정 합니다.<br />-VER_PLATFORM_WIN32_NT 또는 0x0002, Windows NT 또는 운영 체제를 지정 합니다.|  
+|`dwOSMajorVersion`|운영 체제 주 버전 또는 모든 버전을 나타내는 NULL 값입니다.|  
+|`dwOSMinorVersion`|운영 체제 부 버전 또는 모든 버전을 나타내는 NULL 값입니다.|  
   
 ## <a name="remarks"></a>설명  
- `OSINFO`Microsoft Windows `OSVERSIONINFOEX` 플랫폼 함수에 `GetVersionEx`대한 호출에 사용되는 구조를 기반으로 합니다. 이 구조는 ASSEMBLYMETADATA 구조에서 운영 체제 지원을 나타내는 데 사용됩니다.  
+ `OSINFO`는 `OSVERSIONINFOEX` Microsoft Windows 플랫폼 함수 호출에 사용 되는 구조를 기반으로 `GetVersionEx` 합니다. 이 구조는 ASSEMBLYMETADATA 구조에서 해당 운영 체제 지원을 나타내는 데 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [메타데이터 구조체](metadata-structures.md)
+- [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

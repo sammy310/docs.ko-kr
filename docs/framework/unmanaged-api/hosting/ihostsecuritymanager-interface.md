@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803890"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501471"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 인터페이스
 현재 실행 중인 스레드의 보안 컨텍스트에 대 한 액세스 및 제어를 허용 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
-|[GetSecurityContext 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|호스트에서 요청 된 [IHostSecurityContext](ihostsecuritycontext-interface.md) 를 가져옵니다.|  
+|[GetSecurityContext 메서드](ihostsecuritymanager-getsecuritycontext-method.md)|호스트에서 요청 된 [IHostSecurityContext](ihostsecuritycontext-interface.md) 를 가져옵니다.|  
 |[ImpersonateLoggedOnUser 메서드](ihostsecuritymanager-impersonateloggedonuser-method.md)|현재 사용자 id의 자격 증명을 사용 하 여 코드를 실행 하도록 요청 합니다.|  
 |[OpenThreadToken 메서드](ihostsecuritymanager-openthreadtoken-method.md)|현재 스레드와 연결 된 임의 액세스 토큰을 엽니다.|  
 |[RevertToSelf 메서드](ihostsecuritymanager-reverttoself-method.md)|현재 사용자 id의 가장을 종료 하 고 원래 스레드 토큰을 반환 합니다.|  

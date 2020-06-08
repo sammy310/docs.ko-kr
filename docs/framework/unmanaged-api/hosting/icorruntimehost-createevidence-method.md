@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-ms.openlocfilehash: 4a91f57126c0cf2074bd086ddb2fb4cd9e0716d4
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 264f16fc9e767584229376e67f5aee6db1069025
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762320"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501614"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence 메서드
-<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>호스트가 [createdomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) 또는 [createdomainex](icorruntimehost-createdomainex-method.md) 메서드에 전달할 보안 증명 정보를 만들 수 있도록 하는 형식의 인터페이스 포인터를 가져옵니다.  
+<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>호스트가 [createdomain](icorruntimehost-createdomain-method.md) 또는 [createdomainex](icorruntimehost-createdomainex-method.md) 메서드에 전달할 보안 증명 정보를 만들 수 있도록 하는 형식의 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,9 +37,9 @@ HRESULT CreateEvidence (
  `pEvidence`  
  제한이 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>보안 증명 정보를 만드는 데 사용 된 인스턴스에 대 한 인터페이스 포인터입니다. 이 포인터는 형식화 되어 `IUnknown` 있으므로 호출자는 일반적으로 `QueryInterface` 이 인터페이스에서를 호출 하 여에 대 한 포인터를 가져와야 합니다 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
@@ -58,7 +58,7 @@ HRESULT CreateEvidence (
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

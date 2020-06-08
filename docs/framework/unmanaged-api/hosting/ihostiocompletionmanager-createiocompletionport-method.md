@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 240712296254e02f4d268a00e1c15ef34f4519f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804786"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501551"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort 메서드
 호스트가 새 i/o 완료 포트를 만들도록 요청 합니다.  
@@ -39,7 +39,7 @@ HRESULT CreateIoCompletionPort (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`CreateIoCompletionPort`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
@@ -50,7 +50,7 @@ HRESULT CreateIoCompletionPort (
 |E_OUTOFMEMORY|요청한 리소스를 할당 하는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
- CLR은 메서드를 호출 `CreateIoCompletionPort` 하 여 호스트가 새 i/o 완료 포트를 만들도록 요청 합니다. [IHostIoCompletionManager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) 메서드를 호출 하 여 i/o 작업을이 포트에 바인딩합니다. 호스트는 [IclrioOnComplete manager::](iclriocompletionmanager-oncomplete-method.md)를 호출 하 여 CLR에 상태를 다시 보고 합니다.  
+ CLR은 메서드를 호출 `CreateIoCompletionPort` 하 여 호스트가 새 i/o 완료 포트를 만들도록 요청 합니다. [IHostIoCompletionManager:: Bind](ihostiocompletionmanager-bind-method.md) 메서드를 호출 하 여 i/o 작업을이 포트에 바인딩합니다. 호스트는 [IclrioOnComplete manager::](iclriocompletionmanager-oncomplete-method.md)를 호출 하 여 CLR에 상태를 다시 보고 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

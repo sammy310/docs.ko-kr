@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503507"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 메서드
 지정한 토큰이 나타내는 형식 사양의 이진 메타데이터 서명을 가져옵니다.  
@@ -37,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>매개 변수  
  `typespec`  
- 【인】 요청된 메타데이터 서명과 연결된 TypeSpec 토큰입니다.  
+ 진행 요청 된 메타 데이터 시그니처와 연결 된 TypeSpec 토큰입니다.  
   
  `ppvSig`  
- 【아웃】 이진 메타데이터 시그니처에 대한 포인터입니다.  
+ 제한이 이진 메타 데이터 서명에 대 한 포인터입니다.  
   
  `pcbSig`  
- 【아웃】 메타데이터 시그니처의 크기(바이트)입니다.  
+ 제한이 메타 데이터 시그니처의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>Return Value  
- 성공 또는 실패를 나타내는 HRESULT입니다. FAILED 매크로로 오류를 테스트할 수 있습니다.  
+## <a name="return-value"></a>반환 값  
+ 성공 또는 실패를 나타내는 HRESULT입니다. 실패 한 매크로를 사용 하 여 오류를 테스트할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4fbb40ec2426d000628fbd6d5f0241d3152c18
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f6155eb777b5071ff522af4f27d5fb2d73aa25ef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501835"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 인터페이스
 비관리 코드에 대 한 기호 바인더를 나타내고 [ISymUnmanagedBinder](isymunmanagedbinder-interface.md) 인터페이스를 확장 합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "83441671"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
-|[GetReaderForFile2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|메타 데이터 인터페이스와 파일 이름이 지정 된 경우 모듈에 연결 된 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 반환 합니다. 에서는 [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) 메서드 보다 더 광범위 한 검색을 제공 합니다.|  
+|[GetReaderForFile2 메서드](isymunmanagedbinder2-getreaderforfile2-method.md)|메타 데이터 인터페이스와 파일 이름이 지정 된 경우 모듈에 연결 된 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 반환 합니다. 에서는 [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) 메서드 보다 더 광범위 한 검색을 제공 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym, CorSym  

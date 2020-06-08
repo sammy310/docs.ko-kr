@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 8446960d0746a864c44febbbe4a4d0313d6dcd4d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616725"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501666"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 구조체
 CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공 합니다.  
@@ -59,7 +59,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|1 세대에서 2 세대로 수준이 올려진 개체의 크기 (kb)입니다.|  
   
 ## <a name="remarks"></a>설명  
- [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `Flags` 구조체의 필드를 `COR_GC_STATS` [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 열거형 값 중 하나 이상으로 설정 하 여 설정할 통계를 지정 해야 합니다.  
+ [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) 메서드를 사용 하려면 `Flags` 구조체의 필드를 `COR_GC_STATS` [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 열거형 값 중 하나 이상으로 설정 하 여 설정할 통계를 지정 해야 합니다.  
   
  다음 표에서는이 구조체에 의해 제공 되는 통계를 두 [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 열거형 값에 `COR_GC_COUNTS` 매핑합니다 `COR_GC_MEMORYUSAGE` .  
   

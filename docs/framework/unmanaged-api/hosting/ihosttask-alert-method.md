@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803015"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501432"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 메서드
 호스트가 현재 [IHostTask](ihosttask-interface.md) 인스턴스로 표시 되는 작업의 절전 모드를 해제 하도록 요청 하므로 작업이 중단 될 수 있습니다.  
@@ -33,7 +33,7 @@ HRESULT Alert ();
   
 ## <a name="return-value"></a>Return Value  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 성공적으로 반환했습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
@@ -46,7 +46,7 @@ HRESULT Alert ();
  CLR은 `Alert` <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 사용자 코드에서가 호출 될 때 또는 현재와 연결 된가 종료 될 때 메서드를 호출 합니다 <xref:System.AppDomain> <xref:System.Threading.Thread> . 호출이 비동기적으로 수행 되므로 호스트는를 즉시 반환 해야 합니다. 호스트가 작업을 즉시 경고할 수 없는 경우 다음에 경고가 표시 될 수 있는 상태로 전환 될 때 절전 모드를 해제 해야 합니다.  
   
 > [!NOTE]
-> `Alert`런타임이 WAIT_ALERTABLE의 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) 값을 [Join](ihosttask-join-method.md)과 같은 메서드에 전달 하는 작업에만 영향을 줍니다.  
+> `Alert`런타임이 WAIT_ALERTABLE의 [WAIT_OPTION](wait-option-enumeration.md) 값을 [Join](ihosttask-join-method.md)과 같은 메서드에 전달 하는 작업에만 영향을 줍니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 1e881b4a55a99bac3f9ca0e8db1556807b888f13
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616972"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504227"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats 메서드
 공용 언어 런타임의 가비지 컬렉션 시스템에 대 한 현재 통계 집합을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetStats (
  `pStats`  
  [in, out] 요청한 통계를 포함 하는 [COR_GC_STATS](cor-gc-stats-structure.md) 인스턴스입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -51,7 +51,7 @@ HRESULT GetStats (
 ## <a name="remarks"></a>설명  
  CLR은의 필드에 지정 된 통계만 계산 하 고 반환 `Flags` `pStats` 합니다.  
   
- 필드를 `Flags` [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) 열거형의 하나 이상의 값으로 설정 하 여 [COR_GC_STATS](cor-gc-stats-structure.md) 구조에서 설정할 통계를 지정 합니다.  
+ 필드를 `Flags` [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) 열거형의 하나 이상의 값으로 설정 하 여 [COR_GC_STATS](cor-gc-stats-structure.md) 구조에서 설정할 통계를 지정 합니다.  
   
  사용 예는 다음과 같습니다.  
   

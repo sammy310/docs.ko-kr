@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804495"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501510"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 인터페이스
 표준 Win32 가상 메모리 함수를 사용 하는 대신 CLR (공용 언어 런타임)에서 호스트를 통해 가상 메모리 요청을 수행할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace 메서드](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|CLR (공용 언어 런타임)이 운영 체제에서 지정 된 메모리를 획득 했음을 호스트에 알립니다.|  
-|[CreateMAlloc 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|호스트에서 만든 힙에서 메모리 할당을 요청 하는 데 사용 되는 [IHostMAlloc](ihostmalloc-interface.md) 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[CreateMAlloc 메서드](ihostmemorymanager-createmalloc-method.md)|호스트에서 만든 힙에서 메모리 할당을 요청 하는 데 사용 되는 [IHostMAlloc](ihostmalloc-interface.md) 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.|  
 |[GetMemoryLoad 메서드](ihostmemorymanager-getmemoryload-method.md)|호스트에서 보고 하는 현재 사용 중인 실제 메모리의 양을 가져옵니다.|  
 |[NeedsVirtualAddressSpace 메서드](ihostmemorymanager-needsvirtualaddressspace-method.md)|CLR에서 지정 된 메모리를 사용 하려고 함을 호스트에 알립니다.|  
 |[RegisterMemoryNotificationCallback 메서드](ihostmemorymanager-registermemorynotificationcallback-method.md)|호스트에서 컴퓨터의 현재 메모리 로드를 알리기 위해 호출 하는 콜백 함수에 대 한 포인터를 등록 합니다.|  

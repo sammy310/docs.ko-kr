@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500561"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 메서드
 지정한 프로파일러를 지정된 프로세스에 연결합니다.  
@@ -45,7 +45,7 @@ HRESULT AttachProfiler(
 
 - `dwMillisecondsMax`
 
-  \[in] `AttachProfiler` 완료할 시간 (밀리초)입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.
+  \[in]를 완료 하기 위한 시간 기간 (밀리초) `AttachProfiler` 입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.
   
 - `pClsidProfiler`
 
@@ -57,11 +57,11 @@ HRESULT AttachProfiler(
 
 - `pvClientData`
 
-  \[] [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.
+  \[in] [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.
 
 - `cbClientData`
 
-  \[in] `pvClientData` 가리키는 데이터의 크기 (바이트)입니다.
+  \[in]를 가리키는 데이터의 크기 (바이트) `pvClientData` 입니다.
 
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 HRESULT를 반환합니다.  
@@ -79,23 +79,23 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|프로파일러 로드를 시작하지 않고 시간 제한이 만료되었습니다. 연결 작업을 다시 시도할 수 있습니다. 시간 초과는 대상 프로세스의 종료자가 시간 제한 값보다 오래 실행되는 경우에 발생합니다.|  
 |E_INVALIDARG|하나 이상의 매개 변수에 잘못된 값이 있습니다.|  
 |E_FAIL|지정되지 않은 다른 일부 오류가 발생했습니다.|  
-|기타 오류 코드|프로파일러의 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드가 실패를 나타내는 hresult를 반환 하는 경우 `AttachProfiler`는 동일한 hresult를 반환 합니다. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
+|기타 오류 코드|프로파일러의 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드가 실패를 나타내는 hresult를 반환 하는 경우 `AttachProfiler` 는 동일한 hresult를 반환 합니다. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 ## <a name="memory-management"></a>메모리 관리  
  COM 규칙에 따라 `AttachProfiler` 호출자(예: 프로파일러 개발자가 작성한 트리거 코드)는 `pvClientData` 매개 변수가 가리키는 데이터에 대한 메모리를 할당 및 할당 취소해야 합니다. CLR은 `AttachProfiler` 호출을 실행할 때 `pvClientData`가 가리키는 메모리의 복사본을 만들고 대상 프로세스에 전송합니다. 대상 프로세스 내의 CLR이 고유한 `pvClientData` 블록 복사본을 받으면 `InitializeForAttach` 메서드를 통해 블록을 프로파일러에 전달한 다음 대상 프로세스에서 `pvClientData` 블록 복사본의 할당을 취소합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)

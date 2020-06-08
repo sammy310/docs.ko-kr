@@ -9,12 +9,12 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 044ed5e08a85442c5a73c123cf51529d2fd3f1fc
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442178"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504474"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>진단 기호 저장소 인터페이스
 이 항목에서는 컴파일러가 디버거에서 사용할 기호 정보를 생성할 수 있도록 하는 관리 되지 않는 인터페이스에 대해 설명 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "83442178"
  이 인터페이스는 [ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스](isymunmanagedasyncmethodpropertieswriter-interface.md)에 대 한 읽기 보수입니다.  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스](isymunmanagedasyncmethodpropertieswriter-interface.md)  
- 메서드 기호 당 선택적 비동기 메서드 정보를 정의할 수 있습니다. 는 열린 메서드와 함께 사용 해야 합니다. 즉, [Openmethod 메서드와](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) [closemethod 메서드](isymunmanagedwriter-closemethod-method.md)호출 사이에는를 사용 해야 합니다.  
+ 메서드 기호 당 선택적 비동기 메서드 정보를 정의할 수 있습니다. 는 열린 메서드와 함께 사용 해야 합니다. 즉, [Openmethod 메서드와](isymunmanagedwriter-openmethod-method.md) [closemethod 메서드](isymunmanagedwriter-closemethod-method.md)호출 사이에는를 사용 해야 합니다.  
   
  [ISymUnmanagedBinder 인터페이스](isymunmanagedbinder-interface.md)  
  비관리 코드에 대 한 기호 바인더를 나타냅니다.  

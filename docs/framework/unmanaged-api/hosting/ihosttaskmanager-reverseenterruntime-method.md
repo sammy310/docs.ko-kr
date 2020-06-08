@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 41955bd2f64d53e3620dede6b6da4cef2aab45f4
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842298"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501398"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime 메서드
 비관리 코드에서 CLR (공용 언어 런타임)에 대 한 호출이 수행 되 고 있음을 호스트에 알립니다.  
@@ -33,7 +33,7 @@ HRESULT ReverseEnterRuntime ();
   
 ## <a name="return-value"></a>Return Value  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`ReverseEnterRuntime`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
@@ -47,7 +47,7 @@ HRESULT ReverseEnterRuntime ();
  관리 코드에서 시작 된 시퀀스에서 CLR 호출을 수행 하는 경우에 대 한 각 호출은 `ReverseEnterRuntime` [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)에 대 한 호출에 해당 합니다.  
   
 > [!NOTE]
-> 호출은 비관리 코드에서 중첩 되지 않고 발생할 수 있습니다. 이 경우 [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)또는에 대 한 호출이 없고,에 대 한 `ReverseLeaveRuntime` 호출 수가에 대 한 호출 수와 `ReverseEnterRuntime` 같지 않습니다 `ReverseLeaveRuntime` .  
+> 호출은 비관리 코드에서 중첩 되지 않고 발생할 수 있습니다. 이 경우 [EnterRuntime](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)또는에 대 한 호출이 없고,에 대 한 `ReverseLeaveRuntime` 호출 수가에 대 한 호출 수와 `ReverseEnterRuntime` 같지 않습니다 `ReverseLeaveRuntime` .  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

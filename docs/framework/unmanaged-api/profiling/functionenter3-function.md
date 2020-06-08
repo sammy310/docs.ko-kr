@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 3ba014cbae4a71713f29968f0137ac053033c661
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866959"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500704"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -34,12 +34,12 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 
 - `functionOrRemappedID`
 
-  \[] 컨트롤을 전달할 함수의 식별자입니다.
+  \[in] 컨트롤이 전달 되는 함수의 식별자입니다.
 
-## <a name="remarks"></a>주의  
- `FunctionEnter3` 콜백 함수는 함수가 호출 될 때 프로파일러에 알립니다. 하지만 인수 검사는 지원 하지 않습니다. [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 메서드](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) 를 사용 하 여이 함수의 구현을 등록 합니다.  
+## <a name="remarks"></a>설명  
+ `FunctionEnter3`콜백 함수는 함수가 호출 될 때 프로파일러에 알립니다. 하지만 인수 검사는 지원 하지 않습니다. [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 메서드](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) 를 사용 하 여이 함수의 구현을 등록 합니다.  
   
- `FunctionEnter3` 함수는 콜백입니다. 구현 해야 합니다. 구현에서 `__declspec(naked)` 저장소 클래스 특성을 사용 해야 합니다.  
+ `FunctionEnter3`함수는 콜백입니다. 함수를 구현 해야 합니다. 구현에서는 저장소 클래스 특성을 사용 해야 합니다 `__declspec(naked)` .  
   
  실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
   
@@ -48,15 +48,15 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - 종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionLeave3](functionleave3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 51d34e68851bc6a60d25f643f63d112396abdc4e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209073"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501926"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 메서드
 새 연결이 생성 되었음을 디버거에 알립니다.  
@@ -50,7 +50,7 @@ HRESULT CreateConnection (
   
 - 디버거가 연결을 포함 하는 프로세스에 연결 하는 경우 이 경우 런타임은 `CreateConnection` 프로세스의 각 연결에 대해 이벤트 및 [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) 이벤트를 생성 하 고 디스패치합니다.  
   
-- 호스트가 [호스팅 API](../hosting/index.md)에서 [ICLRDebugManager:: beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 을 호출 하는 경우  
+- 호스트가 [호스팅 API](../hosting/index.md)에서 [ICLRDebugManager:: beginconnection](../hosting/iclrdebugmanager-beginconnection-method.md) 을 호출 하는 경우  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

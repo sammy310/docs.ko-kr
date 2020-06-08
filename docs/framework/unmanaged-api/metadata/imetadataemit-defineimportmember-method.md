@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501315"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 메서드
 현재 범위 외부에 정의 된 형식 또는 모듈의 지정 된 멤버에 대 한 참조를 만들고 해당 참조에 대 한 토큰을 정의 합니다.  
@@ -70,7 +70,7 @@ HRESULT DefineImportMember (
   
  일반적으로 메서드를 사용 하기 전에 `DefineImportMember` 현재 범위에서 대상 멤버의 부모 클래스, 인터페이스 또는 모듈에 대 한 형식 참조 또는 모듈 참조를 만들어야 합니다. 그런 다음이 참조에 대 한 메타 데이터 토큰이 인수에 전달 됩니다 `tkParent` . 나중에 컴파일러나 링커를 통해 해결 될 경우 대상 멤버의 부모에 대 한 참조를 만들 필요가 없습니다. 요약:  
   
-- 대상 멤버가 필드 또는 메서드인 경우 [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 또는 [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md) 메서드를 사용 하 여 현재 범위에서 멤버의 부모 클래스 또는 부모 인터페이스에 대 한 형식 참조를 만듭니다.  
+- 대상 멤버가 필드 또는 메서드인 경우 [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md) 또는 [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md) 메서드를 사용 하 여 현재 범위에서 멤버의 부모 클래스 또는 부모 인터페이스에 대 한 형식 참조를 만듭니다.  
   
 - 대상 멤버가 전역 변수나 전역 함수 (즉, 클래스 또는 인터페이스의 멤버가 아님) 인 경우 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md) 메서드를 사용 하 여 현재 범위에서 멤버의 부모 모듈에 대 한 모듈 참조를 만듭니다.  
   

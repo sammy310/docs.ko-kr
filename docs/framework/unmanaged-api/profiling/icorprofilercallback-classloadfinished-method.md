@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4be2a50664b001e865b5ecdd9aabe8ba727b8c26
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500392"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 메서드
 클래스의 로드가 완료 되었음을 프로파일러에 알립니다.  
@@ -41,23 +41,23 @@ HRESULT ClassLoadFinished(
 
 - `hrStatus`
 
-  \[] 클래스가 성공적으로 로드 되었는지 여부를 나타내는 HRESULT입니다.
+  \[in] 클래스가 성공적으로 로드 되었는지 여부를 나타내는 HRESULT입니다.
 
-## <a name="remarks"></a>주의  
- `classId` 값은 `ClassLoadFinished` 메서드를 호출할 때까지 정보 요청에 사용할 수 없습니다.  
+## <a name="remarks"></a>설명  
+ `classId`메서드를 호출할 때까지 정보 요청에 대 한 값이 유효 하지 않습니다 `ClassLoadFinished` .  
   
- 클래스 로드의 일부 부분은 `ClassLoadFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 클래스를 로드 하는 첫 번째 부분이 성공 했다는 것만 나타냅니다.  
+ 클래스 로드의 일부 부분은 콜백 후에도 계속 될 수 있습니다 `ClassLoadFinished` . 의 오류 HRESULT는 `hrStatus` 오류를 나타냅니다. 그러나의 성공 HRESULT는 클래스를 로드 하는 `hrStatus` 첫 번째 부분이 성공 했다는 것을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ClassLoadStarted 메서드](icorprofilercallback-classloadstarted-method.md)

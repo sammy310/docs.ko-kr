@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504409"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 함수
 호스트에서 지정 된 버전의 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다.  
@@ -69,7 +69,7 @@ HRESULT CorBindToRuntimeHost (
  진행 동시 가비지 컬렉션, 도메인 중립 코드 및 매개 변수의 동작을 제어 하는 플래그 집합입니다 `pwszVersion` . 플래그가 설정 되지 않은 경우 기본값은 단일 도메인입니다. 지원 되는 값 목록은 [STARTUP_FLAGS 열거](startup-flags-enumeration.md)를 참조 하세요.  
   
  `rclsid`  
- 진행 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
+ 진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
  진행 `IID`요청 하는 인터페이스의입니다. 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  

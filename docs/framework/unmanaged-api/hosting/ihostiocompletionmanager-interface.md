@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804684"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501540"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 인터페이스
 CLR (공용 언어 런타임)이 호스트에서 제공 하는 i/o 완료 포트와 상호 작용할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
 |[Bind 메서드](ihostiocompletionmanager-bind-method.md)|I/o 완료 포트에 핸들을 바인딩합니다.|  
 |[CloseIoCompletionPort 메서드](ihostiocompletionmanager-closeiocompletionport-method.md)|에 대 한 이전 호출을 통해 만든 포트를 닫습니다 `CreateIoCompletionPort` .|  
@@ -36,7 +36,7 @@ CLR (공용 언어 런타임)이 호스트에서 제공 하는 i/o 완료 포트
 |[GetMaxThreads 메서드](ihostiocompletionmanager-getmaxthreads-method.md)|호스트가 i/o 요청을 처리 하기 위해 할당할 수 있는 최대 스레드 수를 가져옵니다.|  
 |[GetMinThreads 메서드](ihostiocompletionmanager-getminthreads-method.md)|호스트가 서비스 i/o 요청에 제공 하는 최소 스레드 수를 가져옵니다.|  
 |[InitializeHostOverlapped 메서드](ihostiocompletionmanager-initializehostoverlapped-method.md)|호스트에 i/o 요청에 대 한 사용자 지정 데이터를 초기화할 수 있는 기회를 제공 합니다.|  
-|[SetCLRIoCompletionManager 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|호스트에 CLR에서 구현 하는 [Iclriocompletionmanager](iclriocompletionmanager-interface.md) 인스턴스에 대 한 인터페이스 포인터를 제공 합니다.|  
+|[SetCLRIoCompletionManager 메서드](ihostiocompletionmanager-setclriocompletionmanager-method.md)|호스트에 CLR에서 구현 하는 [Iclriocompletionmanager](iclriocompletionmanager-interface.md) 인스턴스에 대 한 인터페이스 포인터를 제공 합니다.|  
 |[SetMaxThreads 메서드](ihostiocompletionmanager-setmaxthreads-method.md)|호스트에서 i/o 요청을 처리 하는 데 많은 스레드의 최대 수를 설정 합니다.|  
 |[SetMinThreads 메서드](ihostiocompletionmanager-setminthreads-method.md)|호스트에서 i/o 완료에 대해 할당할 최소 스레드 수를 설정 합니다.|  
   
