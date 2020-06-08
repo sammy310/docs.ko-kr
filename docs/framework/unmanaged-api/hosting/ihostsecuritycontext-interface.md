@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: bf8e725908177d9a15407b096f68cbcb947c7a01
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f6e25bfe11880730f6f447ccc0406d716d185624
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501497"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext 인터페이스
 CLR (공용 언어 런타임)이 호스트에서 구현 하는 보안 컨텍스트 정보를 유지 관리할 수 있도록 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
-|[Capture 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|`IHostSecurityContext` [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)에 대 한 호출에서 반환 된 인스턴스의 복제본을 가져옵니다.|  
+|[Capture 메서드](ihostsecuritycontext-capture-method.md)|`IHostSecurityContext` [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)에 대 한 호출에서 반환 된 인스턴스의 복제본을 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
  호스트는 CLR 및 사용자 코드를 모두 사용 하 여 스레드 토큰에 대 한 모든 코드 액세스를 제어할 수 있습니다. 또한 코드 액세스가 제한 된 비동기 작업 또는 코드 포인트로 전체 보안 컨텍스트 정보를 전달 하도록 할 수 있습니다. `IHostSecurityContext`런타임에 불투명 한이 보안 컨텍스트 정보를 캡슐화 합니다. 런타임은를 사용 하 여이 정보 `Capture` 를 캡처하여 스레드 풀 작업자 항목 디스패치, 종료자 실행 및 모듈 및 클래스 생성자 간에 이동 합니다.  

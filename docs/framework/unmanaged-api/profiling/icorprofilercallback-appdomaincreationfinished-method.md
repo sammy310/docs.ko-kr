@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177074"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500496"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 메서드
-프로파일러에 응용 프로그램 도메인이 생성되었음을 지정합니다.  
+응용 프로그램 도메인이 생성 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,25 +37,25 @@ HRESULT AppDomainCreationFinished(
 
 - `appDomainId`
 
-  \[in] 생성된 도메인을 식별합니다.
+  \[in] 생성 된 도메인을 식별 합니다.
 
 - `hrStatus`
 
-  \[in] 응용 프로그램 도메인 만들기가 성공적으로 완료되었는지 여부를 나타내는 HRESULT입니다.
+  \[in] 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.
 
 ## <a name="remarks"></a>설명  
- `AppDomainCreationFinished` 응용 프로그램 ID는 메서드가 호출될 때까지 정보 요청에 대해 유효하지 않습니다.  
+ 메서드를 호출할 때까지 모든 정보 요청에 대해 응용 프로그램 ID가 유효 하지 않습니다 `AppDomainCreationFinished` .  
   
- `AppDomainCreationFinished` 콜백 이후에 응용 프로그램 도메인로드의 일부가 계속될 수 있습니다. 오류 HRESULT `hrStatus` in은 오류를 나타냅니다. 그러나 HRESULT의 `hrStatus` 성공은 응용 프로그램 도메인을 만드는 첫 번째 부분이 성공했음을 나타냅니다.  
+ 응용 프로그램 도메인 로드의 일부 부분은 콜백 후에도 계속 `AppDomainCreationFinished` 됩니다. 의 오류 HRESULT는 `hrStatus` 오류를 나타냅니다. 그러나의 성공 HRESULT는 `hrStatus` 응용 프로그램 도메인을 만드는 첫 번째 부분이 성공 했다는 것을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 

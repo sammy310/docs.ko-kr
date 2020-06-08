@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616504"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493476"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 함수
 관리 되는 모듈 이미지의 유효성을 검사 하 고, 운영 체제 로더가 로드 된 후이를 알립니다.  
@@ -40,7 +40,7 @@ STDAPI _CorValidateImage (
  `FileName`  
  진행 이미지의 파일 이름입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 함수는 `E_INVALIDARG` `E_OUTOFMEMORY` `E_UNEXPECTED` 다음 값 뿐만 아니라 표준 값,, 및를 반환 합니다 `E_FAIL` .  
   
 |반환 값|설명|  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - 관리 되는 모듈 이미지가 로드 될 때 로더에 반환 됩니다.  
   
- 실행 가능 이미지의 경우 운영 체제 로더에서 실행 파일에 지정 된 진입점에 관계 없이 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) 함수를 호출 합니다. DLL 어셈블리 이미지의 경우 로더는 [_CorDllMain](cordllmain-function.md) 함수를 호출 합니다.  
+ 실행 가능 이미지의 경우 운영 체제 로더에서 실행 파일에 지정 된 진입점에 관계 없이 [_CorExeMain](corexemain-function.md) 함수를 호출 합니다. DLL 어셈블리 이미지의 경우 로더는 [_CorDllMain](cordllmain-function.md) 함수를 호출 합니다.  
   
  `_CorExeMain`또는 `_CorDllMain` 에서는 다음 작업을 수행 합니다.  
   

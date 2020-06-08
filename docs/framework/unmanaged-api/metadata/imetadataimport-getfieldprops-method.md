@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177243"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491249"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 메서드
 지정한 FieldDef 토큰이 참조하는 필드와 연결된 메타데이터를 가져옵니다.  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mb`  
- 【인】 관련 메타데이터를 가져오는 필드를 나타내는 FieldDef 토큰입니다.  
+ 진행 연결 된 메타 데이터를 가져올 필드를 나타내는 FieldDef 토큰입니다.  
   
  `pClass`  
- 【아웃】 필드에 속한 클래스의 형식을 나타내는 TypeDef 토큰에 대한 포인터입니다.  
+ 제한이 필드가 속한 클래스의 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.  
   
  `szField`  
- 【아웃】 필드의 이름입니다.  
+ 제한이 필드의 이름입니다.  
   
  `cchField`  
- 【인】 *szField에*대 한 버퍼의 넓은 문자의 크기입니다.  
+ 진행 *Szfield*에 대 한 버퍼의 와이드 문자 크기입니다.  
   
  `pchField`  
- 【아웃】 반환된 버퍼의 실제 크기입니다.  
+ 제한이 반환 된 버퍼의 실제 크기입니다.  
   
  `pdwAttr`  
- 【아웃】 필드의 메타데이터와 연결된 플래그입니다.  
+ 제한이 필드의 메타 데이터와 연결 된 플래그입니다.  
   
  `ppvSigBlob`  
- 【인】 필드를 설명하는 이진 메타데이터 값에 대한 포인터입니다.  
+ 진행 필드를 설명 하는 이진 메타 데이터 값에 대 한 포인터입니다.  
   
  `pcbSigBlob`  
- 【아웃】 의 바이트 크기입니다. `ppvSigBlob`  
+ 제한이 의 크기 (바이트) `ppvSigBlob` 입니다.  
   
  `pdwCPlusTypeFlag`  
- 【아웃】 필드의 값 형식을 지정하는 플래그입니다.  
+ 제한이 필드의 값 형식을 지정 하는 플래그입니다.  
   
  `ppValue`  
- 【아웃】 필드에 대한 상수 값입니다.  
+ 제한이 필드에 대 한 상수 값입니다.  
   
  `pcchValue`  
- 【아웃】 문자열이 없는 경우 `ppValue`의 chars 또는 0의 크기입니다.  
+ 제한이 의 문자 크기 `ppValue` 이거나, 문자열이 없는 경우 0입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

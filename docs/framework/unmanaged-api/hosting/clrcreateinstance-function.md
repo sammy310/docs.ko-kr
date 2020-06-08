@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616829"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504459"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 함수
-[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
+[ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,9 +43,9 @@ HRESULT CLRCreateInstance(
  진행 Iid (인터페이스 식별자): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy 또는 IID_ICLRDebugging 중 하나입니다.  
   
  `ppInterface`  
- 제한이 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.  
+ 제한이 [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  

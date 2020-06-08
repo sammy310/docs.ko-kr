@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cac8e9570dab55af6b6e1fcf6f53b6a697727972
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868999"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502914"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 
 지정 된 MSIL (Microsoft 중간 언어) 맵 항목을 사용 하 여 지정 된 함수에 대 한 코드 맵을 설정 합니다.
 
 > [!NOTE]
-> .NET Framework 버전 2.0에서는 특정 응용 프로그램 도메인의 제네릭 함수를 나타내는 `FunctionID`에서 `SetILInstrumentedCodeMap`를 호출 하면 응용 프로그램 도메인에 있는 해당 함수의 모든 인스턴스에 영향을 줍니다.
+> .NET Framework 버전 2.0에서 `SetILInstrumentedCodeMap` `FunctionID` 특정 응용 프로그램 도메인의 제네릭 함수를 나타내는에 대해를 호출 하면 응용 프로그램 도메인에 있는 해당 함수의 모든 인스턴스에 영향을 줍니다.
 
 ## <a name="syntax"></a>구문
 
@@ -45,17 +45,17 @@ HRESULT SetILInstrumentedCodeMap(
 진행 코드 맵을 설정할 함수의 ID입니다.
 
 `fStartJit`\
-진행 `SetILInstrumentedCodeMap` 메서드에 대 한 호출이 특정 `FunctionID`에 대해 첫 번째 인지 여부를 나타내는 부울 값입니다. 지정 된 `FunctionID`에 대 한 `SetILInstrumentedCodeMap`에 대 한 첫 번째 호출에서 `true`로 `fStartJit`를 설정 하 고 그 이후에 `false` 합니다.
+진행 `SetILInstrumentedCodeMap`메서드에 대 한 호출이 특정에 대해 첫 번째 인지 여부를 나타내는 부울 값입니다 `FunctionID` . 지정 된에 `fStartJit` `true` 대 한 첫 번째 호출에서을로 설정 하 `SetILInstrumentedCodeMap` `FunctionID` 고, 그 이후에를로 설정 `false` 합니다.
 
 `cILMapEntries`\
-진행 `cILMapEntries` 배열의 요소 수입니다.
+진행 배열의 요소 수 `cILMapEntries` 입니다.
 
 `rgILMapEntries`\
 진행 각각 MSIL 오프셋을 지정 하는 COR_IL_MAP 구조체의 배열입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-프로파일러는 메서드를 계측 하기 위해 메서드 소스 코드 내에 문을 삽입 하는 경우가 있습니다. 예를 들어 지정 된 소스 줄에 도달할 때 알림을 받을 수 있습니다. `SetILInstrumentedCodeMap`를 사용 하면 프로파일러가 원래 MSIL 명령을 새 위치에 매핑할 수 있습니다. 프로파일러는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드를 사용 하 여 지정 된 네이티브 오프셋의 원래 MSIL 오프셋을 가져올 수 있습니다.
+프로파일러는 메서드를 계측 하기 위해 메서드 소스 코드 내에 문을 삽입 하는 경우가 있습니다. 예를 들어 지정 된 소스 줄에 도달할 때 알림을 받을 수 있습니다. `SetILInstrumentedCodeMap`프로파일러가 원래 MSIL 명령을 새 위치에 매핑할 수 있도록 합니다. 프로파일러는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드를 사용 하 여 지정 된 네이티브 오프셋의 원래 MSIL 오프셋을 가져올 수 있습니다.
 
 디버거는 각각의 이전 오프셋이 원래 수정 되지 않은 MSIL 코드 내에서 MSIL 오프셋을 참조 하 고 각각의 새 오프셋이 새로운 계측 된 코드 내에서 MSIL 오프셋을 참조 한다고 가정 합니다. 맵은 오름차순으로 정렬 되어야 합니다. 단계별 실행이 제대로 작동 하려면 다음 지침을 따르세요.
 
@@ -83,18 +83,18 @@ HRESULT SetILInstrumentedCodeMap(
 
   - 새 오프셋 20 이상은 이전 오프셋 9에 매핑됩니다.
 
-.NET Framework 3.5 및 이전 버전에서는 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 메서드를 호출 하 여 `rgILMapEntries` 배열을 할당 합니다. 런타임에서는이 메모리의 소유권을 가지 므로 프로파일러를 해제 하려고 해서는 안 됩니다.
+.NET Framework 3.5 및 이전 버전에서는 `rgILMapEntries` [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 메서드를 호출 하 여 배열을 할당 합니다. 런타임에서는이 메모리의 소유권을 가지 므로 프로파일러를 해제 하려고 해서는 안 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
