@@ -8,27 +8,27 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to create a dynamic partitioner
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
-ms.openlocfilehash: 3970566b4e3f51ce538c328d4e69b20ec22ec09b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 197e71cf4f00c98891e58e5f72974c0ec407e6ce
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091413"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288448"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="1e03b-102">방법: 동적 파티션 구현</span><span class="sxs-lookup"><span data-stu-id="1e03b-102">How to: Implement Dynamic Partitions</span></span>
+# <a name="how-to-implement-dynamic-partitions"></a><span data-ttu-id="940b3-102">방법: 동적 파티션 구현</span><span class="sxs-lookup"><span data-stu-id="940b3-102">How to: Implement Dynamic Partitions</span></span>
 
-<span data-ttu-id="1e03b-103">다음 예제는 동적 파티셔닝을 구현하고 특정 오버로드 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 및 PLINQ에서 사용할 수 있는 사용자 지정 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>를 구현하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
+<span data-ttu-id="940b3-103">다음 예제는 동적 파티셔닝을 구현하고 특정 오버로드 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 및 PLINQ에서 사용할 수 있는 사용자 지정 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>를 구현하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-103">The following example shows how to implement a custom <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> that implements dynamic partitioning and can be used from certain overloads <xref:System.Threading.Tasks.Parallel.ForEach%2A> and from PLINQ.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1e03b-104">예제</span><span class="sxs-lookup"><span data-stu-id="1e03b-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="940b3-104">예제</span><span class="sxs-lookup"><span data-stu-id="940b3-104">Example</span></span>
 
-<span data-ttu-id="1e03b-105">파티션이 열거자에 대해 <xref:System.Collections.IEnumerator.MoveNext%2A>를 호출할 때마다 열거자는 하나의 목록 요소가 있는 파티션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="1e03b-106">PLINQ 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>의 경우 파티션은 <xref:System.Threading.Tasks.Task> 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="1e03b-107">요청이 여러 스레드에서 동시에 발생하므로 현재 인덱스에 대한 액세스가 동기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
+<span data-ttu-id="940b3-105">파티션이 열거자에 대해 <xref:System.Collections.IEnumerator.MoveNext%2A>를 호출할 때마다 열거자는 하나의 목록 요소가 있는 파티션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-105">Each time a partition calls <xref:System.Collections.IEnumerator.MoveNext%2A> on the enumerator, the enumerator provides the partition with one list element.</span></span> <span data-ttu-id="940b3-106">PLINQ 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>의 경우 파티션은 <xref:System.Threading.Tasks.Task> 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-106">In the case of PLINQ and <xref:System.Threading.Tasks.Parallel.ForEach%2A>, the partition is a <xref:System.Threading.Tasks.Task> instance.</span></span> <span data-ttu-id="940b3-107">요청이 여러 스레드에서 동시에 발생하므로 현재 인덱스에 대한 액세스가 동기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-107">Because requests are happening concurrently on multiple threads, access to the current index is synchronized.</span></span>  
 
 [!code-csharp[TPL_Partitioners#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner02.cs#OrderableListPartitioner)]
 [!code-vb[TPL_Partitioners#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/dynamicpartitioner.vb#04)]  
 
-<span data-ttu-id="1e03b-108">이는 청크 파티셔닝에 대한 예제이며, 각 청크는 하나의 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="1e03b-109">많은 요소를 한 번에 제공하여 잠금에 대한 경합을 줄이고 이론적으로 성능을 빠르게 달성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="1e03b-110">그러나 특정 지점에서는, 보다 큰 청크의 경우 모든 작업이 수행될 때까지 모든 스레드를 사용하려면 추가 로드 밸런싱 논리가 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e03b-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
+<span data-ttu-id="940b3-108">이는 청크 파티셔닝에 대한 예제이며, 각 청크는 하나의 요소로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-108">This is an example of chunk partitioning, with each chunk consisting of one element.</span></span> <span data-ttu-id="940b3-109">많은 요소를 한 번에 제공하여 잠금에 대한 경합을 줄이고 이론적으로 성능을 빠르게 달성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-109">By providing more elements at a time, you could reduce the contention over the lock and theoretically achieve faster performance.</span></span> <span data-ttu-id="940b3-110">그러나 특정 지점에서는, 보다 큰 청크의 경우 모든 작업이 수행될 때까지 모든 스레드를 사용하려면 추가 로드 밸런싱 논리가 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="940b3-110">However, at some point, larger chunks might require additional load-balancing logic in order to keep all threads busy until all the work is done.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e03b-111">참조</span><span class="sxs-lookup"><span data-stu-id="1e03b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="940b3-111">참조</span><span class="sxs-lookup"><span data-stu-id="940b3-111">See also</span></span>
 
-* [<span data-ttu-id="1e03b-112">PLINQ 및 TPL에 대한 사용자 지정 파티셔너</span><span class="sxs-lookup"><span data-stu-id="1e03b-112">Custom Partitioners for PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
-* [<span data-ttu-id="1e03b-113">방법: 정적 분할을 위한 파티셔너 구현</span><span class="sxs-lookup"><span data-stu-id="1e03b-113">How to: Implement a Partitioner for Static Partitioning</span></span>](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+* [<span data-ttu-id="940b3-112">PLINQ 및 TPL에 대한 사용자 지정 파티셔너</span><span class="sxs-lookup"><span data-stu-id="940b3-112">Custom Partitioners for PLINQ and TPL</span></span>](custom-partitioners-for-plinq-and-tpl.md)
+* [<span data-ttu-id="940b3-113">방법: 정적 분할을 위한 파티셔너 구현</span><span class="sxs-lookup"><span data-stu-id="940b3-113">How to: Implement a Partitioner for Static Partitioning</span></span>](how-to-implement-a-partitioner-for-static-partitioning.md)
