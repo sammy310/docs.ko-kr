@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159392"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291099"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 
@@ -22,11 +22,11 @@ ms.locfileid: "78159392"
   
 - 동기화된 코드 영역. <xref:System.Threading.Monitor> 클래스 또는 이 클래스에 대한 컴파일러 지원을 사용하여 성능을 향상시키는 필요한 코드 블록만을 동기화할 수 있습니다.  
   
-- 수동 동기화. .NET 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+- 수동 동기화. .NET 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
   
 - 동기화된 컨텍스트. .NET Framework 및 Xamarin 애플리케이션의 경우 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 <xref:System.ContextBoundObject> 개체에 대한 간단한 자동 동기화를 사용하도록 설정할 수 있습니다.  
   
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../collections/thread-safe/index.md)을 참조하세요.  
   
  공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여 줍니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "78159392"
  이것은 개체의 기본값입니다. 모든 스레드는 언제든지 모든 메서드 또는 필드에 액세스할 수 있습니다. 한 번에 하나의 스레드만 이러한 개체에 액세스해야 합니다.  
   
 ## <a name="manual-synchronization"></a>수동 동기화  
- .NET 클래스 라이브러리는 스레드 동기화에 대한 다양한 클래스를 제공합니다. [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+ .NET 클래스 라이브러리는 스레드 동기화에 대한 다양한 클래스를 제공합니다. [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
   
 ## <a name="synchronized-code-regions"></a>동기화된 코드 영역  
  <xref:System.Threading.Monitor> 클래스 또는 컴파일러 키워드를 사용하여 코드 블록, 인스턴스 메서드 및 정적 메서드를 동기화할 수 있습니다. 동기화된 정적 필드에 대한 지원은 없습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "78159392"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)
-- [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [스레드 및 스레딩](threads-and-threading.md)
+- [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)
 - [SyncLock 문](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock 문](../../csharp/language-reference/keywords/lock-statement.md)

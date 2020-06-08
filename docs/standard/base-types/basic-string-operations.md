@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8c19f6bcbdf5e4829c91aee1e2fd631537ed2e0a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523985"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277754"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET의 기본적인 문자열 작업
 
@@ -23,8 +23,8 @@ ms.locfileid: "80523985"
 
 ## <a name="related-sections"></a>관련 단원
 
-[.NET에서 형식 변환](../../../docs/standard/base-types/type-conversion.md)\
+[.NET에서 형식 변환](type-conversion.md)\
 형식 간에 변환하는 방법을 설명합니다.  
 
-[형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)\
+[형식 서식 지정](formatting-types.md)\
 형식 지정자를 사용하여 문자열 서식을 지정하는 방법을 설명합니다.

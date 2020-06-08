@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 652a88e25f59cd905e47ef71351e47e67f375286
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375821"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289644"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 요소
 <xref:System.DateTime> 개체의 serialization 모드를 결정합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "83375821"
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<schemaImporterExtensions> 요소](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<schemaImporterExtensions>에 대한 \<add> 요소](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [구성 파일 스키마](../../framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)
+- [\<add>에 대한 \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md) 요소
+- [\<system.xml.serialization> 요소](system-xml-serialization-element.md)

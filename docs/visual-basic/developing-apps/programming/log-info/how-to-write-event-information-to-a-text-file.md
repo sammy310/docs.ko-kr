@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e83f8450ca7be8a2dcd5ff43eab3dd2ec0d2f1b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352067"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410064"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>방법: 텍스트 파일에 이벤트 정보 쓰기(Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74352067"
 
 2. 애플리케이션 구성 파일에서 `<listeners>` 섹션을 찾습니다.
 
-     최상위 \<configuration> 섹션 아래에 중첩된 \<system.diagnostics> 섹션 아래에서 이름 특성이 "DefaultSource"인 \<source> 섹션에 \<listeners> 섹션이 있습니다.
+     최상위 \<listeners> 섹션 아래의 \<source> 섹션 아래에서 이름 특성이 "DefaultSource"인 \<system.diagnostics> 섹션에 \<configuration> 섹션이 있습니다.
 
 3. 다음 요소를 `<listeners>` 섹션에 추가합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "74352067"
 
 ### <a name="to-write-event-information-to-the-file-log"></a>이벤트 정보를 파일 로그에 쓰려면
 
-`My.Application.Log.WriteEntry` 또는 `My.Application.Log.WriteException` 메서드를 사용하여 파일 로그에 정보를 씁니다. 자세한 내용은 [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) 및 [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)을 참조하세요.
+`My.Application.Log.WriteEntry` 또는 `My.Application.Log.WriteException` 메서드를 사용하여 파일 로그에 정보를 씁니다. 자세한 내용은 [방법: 로그 메시지 쓰기](how-to-write-log-messages.md) 및 [방법: 예외 기록](how-to-log-exceptions.md)을 참조하세요.
 
 어셈블리에 대한 파일 로그 수신기를 구성하면 수신기는 `My.Application.Log`가 해당 어셈블리에서 쓰는 모든 메시지를 수신합니다.
 
@@ -71,5 +71,5 @@ ms.locfileid: "74352067"
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [애플리케이션 로그 작업](working-with-application-logs.md)
+- [방법: 예외 기록](how-to-log-exceptions.md)
