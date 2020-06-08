@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: b742f717f4caa0ba23d5a4c1438ed3ce4dcc60d7
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501403"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 인터페이스
 표준 운영 체제 스레딩 또는 파이버 함수를 사용 하는 대신 CLR (공용 언어 런타임)이 호스트를 통해 작업을 수행할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|Description|  
+|방법|설명|  
 |------------|-----------------|  
 |[BeginDelayAbort 메서드](ihosttaskmanager-begindelayabort-method.md)|관리 코드가 현재 작업을 중단 하지 않아야 하는 기간을 입력 했음을 호스트에 알립니다.|  
 |[BeginThreadAffinity 메서드](ihosttaskmanager-beginthreadaffinity-method.md)|관리 코드에서 현재 작업을 다른 운영 체제 스레드로 이동 하지 않아야 하는 기간이 입력 되었음을 호스트에 알립니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "83842259"
 |[LeaveRuntime 메서드](ihosttaskmanager-leaveruntime-method.md)|관리 코드에서 관리 되지 않는 함수에 대 한 호출을 수행 하려고 했음을 호스트에 알립니다.|  
 |[ReverseEnterRuntime 메서드](ihosttaskmanager-reverseenterruntime-method.md)|비관리 코드에서 CLR (공용 언어 런타임)에 대 한 호출이 수행 되 고 있음을 호스트에 알립니다.|  
 |[ReverseLeaveRuntime 메서드](ihosttaskmanager-reverseleaveruntime-method.md)|관리 코드에서 호출 된 관리 되지 않는 함수를 제어 하 고 있음을 호스트에 알립니다.|  
-|[SetCLRTaskManager 메서드](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|호스트에 CLR에서 구현 하는 [ICLRTaskManager](iclrtaskmanager-interface.md) 인스턴스에 대 한 인터페이스 포인터를 제공 합니다.|  
+|[SetCLRTaskManager 메서드](ihosttaskmanager-setclrtaskmanager-method.md)|호스트에 CLR에서 구현 하는 [ICLRTaskManager](iclrtaskmanager-interface.md) 인스턴스에 대 한 인터페이스 포인터를 제공 합니다.|  
 |[SetLocale 메서드](ihosttaskmanager-setlocale-method.md)|CLR이 현재 작업에 대 한 로캘을 변경 했음을 호스트에 알립니다.|  
 |[SetStackGuarantee 메서드](ihosttaskmanager-setstackguarantee-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
 |[SetUILocale 메서드](ihosttaskmanager-setuilocale-method.md)|현재 작업에서 사용자 인터페이스 로캘이 변경 되었음을 호스트에 알립니다.|  

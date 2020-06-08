@@ -1,5 +1,6 @@
 ---
 title: <smtp> 요소(네트워크 설정)
+description: <smtp>네트워크 설정 요소는 .NET Framework에서 전자 메일을 보내기 위한 배달 형식, 배달 방법 및 보낸 사람 주소를 구성 합니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089096"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504513"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp> 요소(네트워크 설정)
 전자 메일을 보내기 위한 배달 형식, 배달 방법 및 보낸 사람 주소를 구성 합니다.  
@@ -40,7 +41,7 @@ ms.locfileid: "74089096"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`deliveryFormat`|보내는 전자 메일의 배달 형식을 지정 합니다. 허용 가능한 값은 SevenBit와 International입니다.|  
 |`deliveryMethod`|전자 메일에 대 한 배달 방법을 지정 합니다. 허용 되는 값은 Network, PickupDirectoryFromIis 및 SpecifiedPickupDirectory입니다.|  
@@ -48,7 +49,7 @@ ms.locfileid: "74089096"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 구성 합니다.|  
 |`network`|외부 SMTP 서버에 대 한 네트워크 옵션을 구성 합니다.|  

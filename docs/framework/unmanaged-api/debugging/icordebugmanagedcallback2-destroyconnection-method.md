@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: c5527f3bd0b04857a1ebc520016b81ddbe3c23f8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a3093f33f2220b22b7b4b373f6d79a341abf8c9c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208904"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501939"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection 메서드
 지정 된 연결이 종료 되었음을 디버거에 알립니다.  
@@ -42,7 +42,7 @@ HRESULT DestroyConnection (
  진행 제거 된 연결의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- `DestroyConnection`호스트에서 [호스팅 API](../hosting/index.md)의 [ICLRDebugManager:: endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) 을 호출 하면 콜백이 발생 합니다.  
+ `DestroyConnection`호스트에서 [호스팅 API](../hosting/index.md)의 [ICLRDebugManager:: endconnection](../hosting/iclrdebugmanager-endconnection-method.md) 을 호출 하면 콜백이 발생 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

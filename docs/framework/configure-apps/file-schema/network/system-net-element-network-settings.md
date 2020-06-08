@@ -1,5 +1,6 @@
 ---
 title: <system.Net> 요소(네트워크 설정)
+description: <system.Net> 네트워크 설정 요소에는 .NET Framework .NET Framework의 네트워크 옵션에 연결 하는 방법을 지정 하는 설정이 포함 되어 있습니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154558"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504487"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 요소(네트워크 설정)
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  

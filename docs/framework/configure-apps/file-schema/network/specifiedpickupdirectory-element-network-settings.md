@@ -1,5 +1,6 @@
 ---
 title: <specifiedPickupDirectory> 요소(네트워크 설정)
+description: <specifiedPickupDirectory>네트워크 설정 요소는 .NET Framework의 SMTP 서버 옵션에 대 한 로컬 디렉터리를 구성 합니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0c4c1845e9542d0f3b836ff03f16bdf2979ebd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154610"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504500"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory> 요소(네트워크 설정)
 SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 구성 합니다.  
@@ -37,7 +38,7 @@ SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 �
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`pickupDirectoryLocation`|응용 프로그램이 나중에 SMTP 서버에서 처리할 전자 메일을 저장 하는 디렉터리입니다.|  
   
@@ -46,7 +47,7 @@ SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 �
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<smtp>요소 (네트워크 설정)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) 메일 전송 옵션을 구성 합니다.|  
   

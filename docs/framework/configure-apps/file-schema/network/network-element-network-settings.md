@@ -1,5 +1,6 @@
 ---
 title: <network> 요소(네트워크 설정)
+description: <network>네트워크 설정 요소는 .NET Framework에서 외부 SMTP 서버 옵션의 네트워크 옵션을 구성 합니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: f7cfcc3b9d5a717c23175cd15aa48ae97c828e57
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154818"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504552"
 ---
 # <a name="network-element-network-settings"></a>\<network> 요소(네트워크 설정)
 외부 SMTP (Simple Mail Transport Protocol) 서버에 대 한 네트워크 옵션을 구성 합니다.  
@@ -44,7 +45,7 @@ ms.locfileid: "79154818"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |`clientDomain`|SMTP 메일 서버에 연결 하기 위해 초기 SMTP 프로토콜 요청에 사용할 클라이언트 도메인 이름을 지정 합니다. 기본값은 요청을 보내는 로컬 컴퓨터의 localhost 이름입니다.|  
 |`defaultCredentials`|Smtp 트랜잭션을 위해 SMTP 메일 서버에 액세스 하는 데 기본 사용자 자격 증명을 사용할지 여부를 지정 합니다. 기본값은 `false`입니다.|  
@@ -60,7 +61,7 @@ ms.locfileid: "79154818"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<smtp>요소 (네트워크 설정)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) 메일 전송 옵션을 구성 합니다.|  
   

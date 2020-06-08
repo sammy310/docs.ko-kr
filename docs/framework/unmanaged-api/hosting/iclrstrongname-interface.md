@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762078"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501653"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 강력한 이름을 사용 하 여 어셈블리에 서명 하는 데 사용할 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드는 표준 COM hresult를 반환 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|방법|설명|  
 |------------|-----------------|  
 |[GetHashFromAssemblyFile 메서드](iclrstrongname-gethashfromassemblyfile-method.md)|지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.|  
 |[GetHashFromAssemblyFileW 메서드](iclrstrongname-gethashfromassemblyfilew-method.md)|지정된 해시 알고리즘을 사용하여 유니코드 문자열로 지정된 어셈블리 파일의 해시를 가져옵니다.|  
@@ -35,7 +35,7 @@ ms.locfileid: "83762078"
 |[GetHashFromFileW 메서드](iclrstrongname-gethashfromfilew-method.md)|유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.|  
 |[GetHashFromHandle 메서드](iclrstrongname-gethashfromhandle-method.md)|지정된 해시 알고리즘을 사용하여 지정된 파일 핸들로 파일 내용에 대해 해시를 생성합니다.|  
 |[StrongNameCompareAssemblies 메서드](iclrstrongname-strongnamecompareassemblies-method.md)|두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.|  
-|[StrongNameFreeBuffer 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)또는 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)와 같은 강력한 이름 메서드에 대 한 이전 호출로 할당 된 메모리를 해제 합니다.|  
+|[StrongNameFreeBuffer 메서드](iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)또는 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)와 같은 강력한 이름 메서드에 대 한 이전 호출로 할당 된 메모리를 해제 합니다.|  
 |[StrongNameGetBlob 메서드](iclrstrongname-strongnamegetblob-method.md)|지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.|  
 |[StrongNameGetBlobFromImage 메서드](iclrstrongname-strongnamegetblobfromimage-method.md)|지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.|  
 |[StrongNameGetPublicKey 메서드](iclrstrongname-strongnamegetpublickey-method.md)|퍼블릭/퍼블릭 키 쌍에서 퍼블릭 키를 가져옵니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "83762078"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [호스팅](index.md)
