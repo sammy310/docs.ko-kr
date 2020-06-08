@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503863"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 구조체
 `Event_MDAFired`MDA (관리 디버깅 도우미) 만들기를 트리거하는 이벤트에 대 한 세부 정보를 제공 합니다.  
@@ -45,7 +45,7 @@ typedef struct _MDAInfo {
   
  MDA 생성을 트리거하는 이벤트가 발생 하면 런타임에서 다음 단계를 수행 합니다.  
   
-- 호스트에서 이벤트에 대 한 알림이 발생 하도록 [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 를 호출 하 여 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) 인스턴스를 등록 하지 않은 경우 `Event_MDAFired` 런타임은 호스트 되지 않은 기본 동작을 사용 하 여 진행 합니다.  
+- 호스트에서 이벤트에 대 한 알림이 발생 하도록 [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 를 호출 하 여 [IActionOnCLREvent](iactiononclrevent-interface.md) 인스턴스를 등록 하지 않은 경우 `Event_MDAFired` 런타임은 호스트 되지 않은 기본 동작을 사용 하 여 진행 합니다.  
   
 - 호스트에서이 이벤트에 대 한 처리기를 등록 한 경우 런타임은 디버거가 프로세스에 연결 되어 있는지 여부를 확인 합니다. 인 경우 런타임이 디버거로 중단 됩니다. 디버거가 계속 되 면 호스트를 호출 합니다. 디버거가 연결 되지 않은 경우 런타임에서는를 호출 `IActionOnCLREvent::OnEvent` 하 고 인스턴스에 대 한 포인터를 `MDAInfo` `data` 매개 변수로 전달 합니다.  
   

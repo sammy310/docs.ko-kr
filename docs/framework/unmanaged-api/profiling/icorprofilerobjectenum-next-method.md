@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850f05520e4146b5016bb574f02aa800dfcaaf32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177009"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494581"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 메서드
-시퀀스에서 열거자의 현재 위치에서 시작하여 개체의 순차적 컬렉션에서 지정된 수의 연속 개체를 가져옵니다.  
+시퀀스에서 열거자의 현재 위치부터 시작 하 여 순차적 개체 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,19 +41,19 @@ HRESULT Next (
  [in] 검색할 개체 수입니다.  
   
  `objects`  
- 【아웃】 각각검색된 `ObjectID` 개체를 나타내는 값의 배열입니다.  
+ 제한이 `ObjectID`각각 검색 된 개체를 나타내는 값의 배열입니다.  
   
  `pceltFetched`  
  [out] `objects` 배열에 실제로 반환된 모듈 수에 대한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 

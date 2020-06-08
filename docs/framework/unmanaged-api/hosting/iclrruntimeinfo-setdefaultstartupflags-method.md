@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: aa02d42511a863434fef236f90afae2c5417a78d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762164"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504019"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags 메서드
-런타임을 시작 하는 데 사용 되는 시작 플래그와 호스트 구성 파일을 설정 합니다. 이 메서드는 `startupFlags` [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 및 [CorBindToRuntimeHost](corbindtoruntimehost-function.md) 함수에서 매개 변수의 사용을 대체 합니다.  
+런타임을 시작 하는 데 사용 되는 시작 플래그와 호스트 구성 파일을 설정 합니다. 이 메서드는 `startupFlags` [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 및 [CorBindToRuntimeHost](corbindtoruntimehost-function.md) 함수에서 매개 변수의 사용을 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,15 +35,15 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>매개 변수  
  `dwStartupFlags`  
- 진행 설정할 호스트 시작 플래그입니다. [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 및 [CorBindToRuntimeHost](corbindtoruntimehost-function.md) 함수와 동일한 플래그를 사용 합니다.  
+ 진행 설정할 호스트 시작 플래그입니다. [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 및 [CorBindToRuntimeHost](corbindtoruntimehost-function.md) 함수와 동일한 플래그를 사용 합니다.  
   
  `pwzHostConfigFile`  
  진행 설정할 호스트 구성 파일의 디렉터리 경로입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT 및 메서드 오류를 나타내는 HRESULT 오류를 반환 합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
   
@@ -59,7 +59,7 @@ HRESULT SetDefaultStartupFlags(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)
