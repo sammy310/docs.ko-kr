@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48f2bf5c0d9af0a3fc286561ba978f86d1f11ac8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138731"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290489"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>방법: URL에서 프로토콜 및 포트 번호 추출
 다음 예제에서는 URL에서 프로토콜 및 포트 번호를 추출합니다.  
@@ -49,4 +49,4 @@ ms.locfileid: "73138731"
   
 ## <a name="see-also"></a>참고 항목
 
-- [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 정규식](regular-expressions.md)

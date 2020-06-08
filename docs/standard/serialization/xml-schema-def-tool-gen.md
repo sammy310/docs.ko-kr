@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0e4e84ea7e11b2e7a00c852d4a2075747c71267e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379529"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288968"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성
 XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 XML 스키마를 생성하거나 XML 스키마로 정의된 클래스를 생성할 수 있습니다. 다음 절차에서는 이러한 작업을 수행하는 방법을 보여 줍니다.
@@ -38,7 +38,7 @@ _C:\\Program Files(x86)\\Microsoft SDKs\\Windows\\{version}\\bin\\NETFX {version
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
-3. 필요에 따라 메서드, 속성 또는 필드로 클래스를 수정합니다. 특성을 사용하여 클래스를 수정하는 방법에 대한 자세한 내용은 [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) 및 [인코딩된 SOAP Serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)을 참조하세요.  
+3. 필요에 따라 메서드, 속성 또는 필드로 클래스를 수정합니다. 특성을 사용하여 클래스를 수정하는 방법에 대한 자세한 내용은 [특성을 사용하여 XML Serialization 제어](controlling-xml-serialization-using-attributes.md) 및 [인코딩된 SOAP Serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)을 참조하세요.  
   
  클래스의 인스턴스가 serialize될 때 생성되는 XML 스트림의 스키마를 검사하는 것이 유용할 때가 있습니다. 예를 들어 스키마를 다른 사람이 사용할 수 있도록 게시하거나 준수를 위해 다른 스키마와 비교할 수 있습니다.  
   
@@ -59,9 +59,9 @@ _C:\\Program Files(x86)\\Microsoft SDKs\\Windows\\{version}\\bin\\NETFX {version
 ## <a name="see-also"></a>참조
 
 - <xref:System.Data.DataSet>
-- [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 스키마 정의 도구(Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 스키마 정의 도구 및 XML serialization](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [XML 스키마 정의 도구(Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [방법: 개체 직렬화](how-to-serialize-an-object.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

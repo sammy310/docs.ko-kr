@@ -7,16 +7,16 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380123"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289488"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 요소
 
-XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.
+XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../framework/configure-apps/file-schema/index.md)를 참조하세요.
 
 \<configuration>\
 \<system.xml.serialization>
@@ -40,14 +40,14 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 
 |요소|설명|
 |-------------|-----------------|
-|[\<dateTimeSerialization> 요소](../../../docs/standard/serialization/datetimeserialization-element.md)|<xref:System.DateTime> 개체의 serialization 모드를 결정합니다.|
-|[\<schemaImporterExtensions> 요소](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용되는 형식을 포함합니다.|
+|[\<dateTimeSerialization> 요소](datetimeserialization-element.md)|<xref:System.DateTime> 개체의 serialization 모드를 결정합니다.|
+|[\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용되는 형식을 포함합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
 |요소|설명|
 |-------------|-----------------|
-|[\<configuration> 요소](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
+|[\<configuration> 요소](../../framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 
 ## <a name="example"></a>예제
 
@@ -71,7 +71,7 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization> 요소](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<schemaImporterExtensions> 요소](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<schemaImporterExtensions>에 대한 \<add> 요소](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [구성 파일 스키마](../../framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization> 요소](datetimeserialization-element.md)
+- [\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)
+- [\<add>에 대한 \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md) 요소

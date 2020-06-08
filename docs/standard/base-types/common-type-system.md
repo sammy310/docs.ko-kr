@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635904"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289345"
 ---
 # <a name="common-type-system"></a>CTS(공용 형식 시스템)
 
@@ -267,7 +267,7 @@ ms.locfileid: "80635904"
 
 ### <a name="events"></a>이벤트
 
- 이벤트는 응답할 수 있는 인시던트를 정의하고 이벤트를 구독, 구독 취소 및 발생시키기 위한 메서드를 정의합니다. 이벤트는 주로 다른 형식에 상태 변경 내용을 알려주는 데 사용합니다. 자세한 내용은 [이벤트](../../../docs/standard/events/index.md)를 참조하세요.  
+ 이벤트는 응답할 수 있는 인시던트를 정의하고 이벤트를 구독, 구독 취소 및 발생시키기 위한 메서드를 정의합니다. 이벤트는 주로 다른 형식에 상태 변경 내용을 알려주는 데 사용합니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.  
 
 ### <a name="nested-types"></a>중첩 형식
 
@@ -307,5 +307,5 @@ ms.locfileid: "80635904"
 ## <a name="see-also"></a>참조
 
 - [.NET API 브라우저](/dotnet/api)
-- [공용 언어 런타임](../../../docs/standard/clr.md)
-- [.NET에서 형식 변환](../../../docs/standard/base-types/type-conversion.md)
+- [공용 언어 런타임](../clr.md)
+- [.NET에서 형식 변환](type-conversion.md)

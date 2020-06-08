@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160003"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290904"
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
 <a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
@@ -284,7 +284,7 @@ ms.locfileid: "78160003"
   
  <xref:System.Text.RegularExpressions.Group> 클래스의 속성은 캡처된 그룹에 대한 정보를 제공합니다. `Group.Value` 속성은 캡처된 부분 문자열을 포함하고, `Group.Index` 속성은 입력 텍스트에서 캡처된 그룹의 시작 위치를 나타내며, `Group.Length` 속성은 캡처된 텍스트의 길이를 포함하고, `Group.Success` 속성은 부분 문자열이 캡처링 그룹에 의해 정의된 패턴과 일치하는지를 나타냅니다.  
   
- 그룹에 수량자를 적용하면(자세한 내용은 [수량자](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 참조) 캡처링 그룹별로 한 캡처의 관계가 다음과 같은 두 가지 방법으로 수정됩니다.  
+ 그룹에 수량자를 적용하면(자세한 내용은 [수량자](quantifiers-in-regular-expressions.md) 참조) 캡처링 그룹별로 한 캡처의 관계가 다음과 같은 두 가지 방법으로 수정됩니다.  
   
 - 그룹에 `*` 또는 `*?` 수량자(0개 이상의 일치 항목을 지정함)가 적용된 경우 캡처링 그룹은 입력 문자열에 일치 항목이 없을 수도 있습니다. 캡처된 텍스트가 없는 경우 <xref:System.Text.RegularExpressions.Group> 개체의 속성은 다음 테이블과 같이 설정됩니다.  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78160003"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Text.RegularExpressions>
-- [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [.NET 정규식](regular-expressions.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)

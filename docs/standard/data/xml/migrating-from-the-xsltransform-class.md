@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937984"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282391"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform 클래스에서 마이그레이션
 
@@ -35,7 +35,7 @@ XSLT 아키텍처는 Visual Studio 2005 릴리스에서 다시 디자인되었�
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-자세한 내용은 [XSLT 보안 고려 사항](../../../../docs/standard/data/xml/xslt-security-considerations.md)을 참조하세요.
+자세한 내용은 [XSLT 보안 고려 사항](xslt-security-considerations.md)을 참조하세요.
 
 ## <a name="new-features"></a>새 기능
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>임의 동작
 
-W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. <xref:System.Xml.Xsl.XslCompiledTransform>이 <xref:System.Xml.Xsl.XslTransform> 클래스와 다르게 동작하는 여러 상황이 있습니다. 자세한 내용은 [복구 가능한 XSLT 오류](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)를 참조하세요.
+W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. <xref:System.Xml.Xsl.XslCompiledTransform>이 <xref:System.Xml.Xsl.XslTransform> 클래스와 다르게 동작하는 여러 상황이 있습니다. 자세한 내용은 [복구 가능한 XSLT 오류](recoverable-xslt-errors.md)를 참조하세요.
 
 ### <a name="extension-objects-and-script-functions"></a>확장 개체 및 스크립트 함수
 
@@ -109,7 +109,7 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 
 <xref:System.Xml.Xsl.XslCompiledTransform>에서 함수를 스크립팅하는 바인딩(메서드 이름 lookup)은 컴파일 시간에 발생하므로 XslTransform에서 작동하는 스타일시트가 <xref:System.Xml.Xsl.XslCompiledTransform>에서 로드될 때 예외가 발생할 수 있습니다.
 
-<xref:System.Xml.Xsl.XslCompiledTransform>에서는 `msxsl:using` 요소 내에 `msxsl:assembly` 및 `msxsl:script` 자식 요소를 가질 수 있습니다. `msxsl:using` 및 `msxsl:assembly` 요소를 사용하여 스크립트 블록에서 사용할 추가 네임스페이스 및 어셈블리를 선언합니다. 자세한 내용은 [msxsl:script를 사용하는 스크립트 블록](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)을 참조하세요.
+<xref:System.Xml.Xsl.XslCompiledTransform>에서는 `msxsl:using` 요소 내에 `msxsl:assembly` 및 `msxsl:script` 자식 요소를 가질 수 있습니다. `msxsl:using` 및 `msxsl:assembly` 요소를 사용하여 스크립트 블록에서 사용할 추가 네임스페이스 및 어셈블리를 선언합니다. 자세한 내용은 [msxsl:script를 사용하는 스크립트 블록](script-blocks-using-msxsl-script.md)을 참조하세요.
 
 <xref:System.Xml.Xsl.XslCompiledTransform>에서는 확장 개체가 동일한 수의 인수를 가지는 여러 개의 오버로드를 포함하지 못하도록 합니다.
 
@@ -127,5 +127,5 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 
 ## <a name="see-also"></a>참조
 
-- [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [XSLT 변환](xslt-transformations.md)
+- [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md)

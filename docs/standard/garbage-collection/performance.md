@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75900576"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287625"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -23,7 +23,7 @@ ms.locfileid: "75900576"
 
 ### <a name="memory-performance-counters"></a>메모리 성능 카운터
 
-성능 카운터를 사용하여 성능 데이터를 수집할 수 있습니다. 자세한 내용은 [런타임 프로파일링](../../../docs/framework/debug-trace-profile/runtime-profiling.md)을 참조하세요. [.NET Framework의 성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)에 설명된 대로 성능 카운터의 .NET CLR 메모리 범주는 가비지 수집기에 대한 정보를 제공합니다.
+성능 카운터를 사용하여 성능 데이터를 수집할 수 있습니다. 자세한 내용은 [런타임 프로파일링](../../framework/debug-trace-profile/runtime-profiling.md)을 참조하세요. [.NET Framework의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)에 설명된 대로 성능 카운터의 .NET CLR 메모리 범주는 가비지 수집기에 대한 정보를 제공합니다.
 
 ### <a name="debugging-with-sos"></a>SOS를 사용한 디버깅
 
@@ -33,7 +33,7 @@ WinDbg를 설치하려면 [Debugging Tools for Windows 다운로드](/windows-ha
 
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 
-ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. .NET Framework 4부터 [가비지 수집 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.
+ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. .NET Framework 4부터 [가비지 수집 ETW 이벤트](../../framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.
 
 - 수집되는 개체 세대
 
@@ -45,13 +45,13 @@ ETW 이벤트 로깅은 효율적이며 가비지 수집과 관련된 성능 문
 
 ### <a name="the-profiling-api"></a>프로파일링 API
 
-CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집 중에 영향을 받은 개체에 대한 자세한 정보를 제공합니다. 가비지 수집이 시작되고 끝날 때 프로파일러에 알릴 수 있습니다. 각 세대의 개체 ID를 포함하여 관리되는 힙의 개체에 대한 보고서를 제공할 수 있습니다. 자세한 내용은 [프로파일링 개요](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)를 참조하세요.
+CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집 중에 영향을 받은 개체에 대한 자세한 정보를 제공합니다. 가비지 수집이 시작되고 끝날 때 프로파일러에 알릴 수 있습니다. 각 세대의 개체 ID를 포함하여 관리되는 힙의 개체에 대한 보고서를 제공할 수 있습니다. 자세한 내용은 [프로파일링 개요](../../framework/unmanaged-api/profiling/profiling-overview.md)를 참조하세요.
 
 프로파일러는 포괄적인 정보를 제공할 수 있습니다. 그러나 복잡한 프로파일러는 애플리케이션의 동작을 수정할 가능성이 있습니다.
 
 ### <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링
 
-.NET Framework 4부터 ARM(애플리케이션 도메인 리소스 모니터링)을 통해 호스트가 애플리케이션 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 리소스 모니터링](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)을 참조하세요.
+.NET Framework 4부터 ARM(애플리케이션 도메인 리소스 모니터링)을 통해 호스트가 애플리케이션 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 리소스 모니터링](app-domain-resource-monitoring.md)을 참조하세요.
 
 ## <a name="troubleshooting-performance-issues"></a>성능 문제 해결
 
@@ -143,7 +143,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 - 대형 임시 개체를 만들어 대형 개체 힙이 힙 세그먼트를 자주 할당 및 해제
 
-  CLR을 호스트하는 경우 애플리케이션에서 가비지 수집기가 해당 세그먼트를 유지하도록 요청할 수 있습니다. 이 경우 세그먼트 할당 빈도가 감소합니다. 이 작업을 수행하려면 [STARTUP_FLAGS 열거형](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)의 STARTUP_HOARD_GC_VM 플래그를 사용합니다.
+  CLR을 호스트하는 경우 애플리케이션에서 가비지 수집기가 해당 세그먼트를 유지하도록 요청할 수 있습니다. 이 경우 세그먼트 할당 빈도가 감소합니다. 이 작업을 수행하려면 [STARTUP_FLAGS 열거형](../../framework/unmanaged-api/hosting/startup-flags-enumeration.md)의 STARTUP_HOARD_GC_VM 플래그를 사용합니다.
 
 |성능 검사|
 |------------------------|
@@ -161,9 +161,9 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 단기 가비지 수집(0세대 및 1세대)은 몇 밀리초 동안만 지속되므로 일시 중지를 줄이는 것이 일반적으로 불가능합니다. 그러나 애플리케이션에 의한 할당 요청 패턴을 변경하면 2세대 컬렉션의 일시 중지를 줄일 수 있습니다.
 
-보다 정확한 다른 방법은 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)를 사용하는 것입니다. 이벤트 시퀀스에 대한 타임스탬프 차이를 추가하여 컬렉션 타이밍을 찾을 수 있습니다. 전체 컬렉션 시퀀스에는 실행 엔진 일시 중단, 가비지 컬렉션 자체 및 실행 엔진 다시 시작이 포함됩니다.
+보다 정확한 다른 방법은 [가비지 컬렉션 ETW 이벤트](../../framework/performance/garbage-collection-etw-events.md)를 사용하는 것입니다. 이벤트 시퀀스에 대한 타임스탬프 차이를 추가하여 컬렉션 타이밍을 찾을 수 있습니다. 전체 컬렉션 시퀀스에는 실행 엔진 일시 중단, 가비지 컬렉션 자체 및 실행 엔진 다시 시작이 포함됩니다.
 
-[가비지 컬렉션 알림](../../../docs/standard/garbage-collection/notifications.md)을 사용하여 서버가 2세대 컬렉션을 수행할지 여부 및 요청을 다른 서버로 다시 라우팅할 경우 일시 중지 문제를 줄일 수 있는지 여부를 확인할 수 있습니다.
+[가비지 컬렉션 알림](notifications.md)을 사용하여 서버가 2세대 컬렉션을 수행할지 여부 및 요청을 다른 서버로 다시 라우팅할 경우 일시 중지 문제를 줄일 수 있는지 여부를 확인할 수 있습니다.
 
 |성능 검사|
 |------------------------|
@@ -181,7 +181,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 가비지 수집 중 CPU 사용량이 너무 많습니다. 상당한 양의 처리 시간이 가비지 수집에 소요되는 경우 수집 횟수가 너무 빈번하거나 수집이 너무 오래 지속되는 것입니다. 관리되는 힙에서 개체의 할당 비율이 증가하면 가비지 수집이 더 자주 발생합니다. 할당 비율을 낮추면 가비지 수집 빈도가 감소합니다.
 
-`Allocated Bytes/second` 성능 카운터를 사용하여 할당 비율을 모니터링할 수 있습니다. 자세한 내용은 [.NET Framework의 성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)를 참조하세요.
+`Allocated Bytes/second` 성능 카운터를 사용하여 할당 비율을 모니터링할 수 있습니다. 자세한 내용은 [.NET Framework의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)를 참조하세요.
 
 컬렉션 기간은 주로 할당 후 남아 있는 개체 수의 비율입니다. 수집할 많은 개체가 남아 있으면 가비지 수집기가 많은 양의 메모리를 처리해야 합니다. 남은 개체를 압축하는 작업은 오랜 시간이 소요됩니다. 수집 중 처리된 개체 수를 확인하려면 디버거에서 지정된 세대에 대한 가비지 수집의 끝에 중단점을 설정합니다.
 
@@ -654,7 +654,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   2번째 2세대 가비지 수집은 3번째 간격 중에 시작되고 5번째 간격에 완료되었습니다. 최악의 경우를 가정하여 0세대에 대한 마지막 수집은 2번째 간격이 시작될 때 완료된 수집이었으며 5번째 간격이 끝날 때 2세대 가비지 수집이 완료되었습니다. 따라서 0세대 가비지 수집의 끝과 2세대 가비지 수집의 끝 사이의 시간은 4초입니다. `% Time in GC` 카운터는 20%이므로 2세대 가비지 수집에 소요되었을 수 있는 최대 시간은 (4초 * 20% = 800ms)입니다.
 
-- 또는 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)를 사용하여 가비지 컬렉션 길이를 결정하고 정보를 분석하여 가비지 컬렉션 기간을 확인할 수 있습니다.
+- 또는 [가비지 컬렉션 ETW 이벤트](../../framework/performance/garbage-collection-etw-events.md)를 사용하여 가비지 컬렉션 길이를 결정하고 정보를 분석하여 가비지 컬렉션 기간을 확인할 수 있습니다.
 
   예를 들어 다음 데이터는 비 동시 가비지 컬렉션 중에 발생한 이벤트 시퀀스를 보여 줍니다.
 
@@ -796,4 +796,4 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 ## <a name="see-also"></a>참조
 
-- [가비지 수집](../../../docs/standard/garbage-collection/index.md)
+- [가비지 수집](index.md)

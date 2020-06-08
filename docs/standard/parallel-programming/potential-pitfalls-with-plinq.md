@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 44f40d6caad9187376a790f9a0ed09e22c861e37
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: b4d58734fba4b834d5f5819a6bf19da0b7b7e8db
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588590"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285315"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ에서 발생할 수 있는 문제
 
@@ -44,7 +44,7 @@ ms.locfileid: "80588590"
 
 - 대상 시스템은 `cust.Orders`에서 쿼리를 병렬화하여 생성될 스레드의 수를 처리할 충분한 프로세서를 가진 것으로 알려져 있습니다.
 
-모든 경우에서 최적의 쿼리 형태를 결정하는 가장 좋은 방법은 테스트하고 측정하는 것입니다. 자세한 내용은 [방법: PLINQ 쿼리 성능 측정](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)을 참조하세요.
+모든 경우에서 최적의 쿼리 형태를 결정하는 가장 좋은 방법은 테스트하고 측정하는 것입니다. 자세한 내용은 [방법: PLINQ 쿼리 성능 측정](how-to-measure-plinq-query-performance.md)을 참조하세요.
 
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>스레드로부터 안전하지 않은 메서드에 대한 호출 방지
 

@@ -7,18 +7,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6c2829d45db147c81592c00710f04168b40679e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287703"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML 스키마 포함하기 또는 가져오기
 XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소를 포함시킬 수 있습니다. 이 스키마 요소는 이를 포함하거나 가져오는 스키마의 구조를 보완하는 데 사용할 수 있는 다른 XML 스키마를 참조할 수 있습니다. SOM(스키마 개체 모델) API에서 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스는 이러한 요소에 매핑됩니다.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>XML 스키마 포함하기 또는 가져오기  
- 다음 코드 예제는 주소 스키마를 사용하여 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 보완합니다. 주소 스키마로 고객 스키마를 보완하면 고객 스키마에서 주소 형식을 사용할 수 있습니다.  
+ 다음 코드 예제는 주소 스키마를 사용하여 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 보완합니다. 주소 스키마로 고객 스키마를 보완하면 고객 스키마에서 주소 형식을 사용할 수 있습니다.  
   
  `<xs:include />` 또는 `<xs:import />` 요소를 사용하여 주소 스키마의 구성 요소를 그대로 사용하거나 `<xs:redefine />` 요소를 사용하여 고객 스키마의 필요에 맞게 구성 요소를 수정함으로써 주소 스키마를 통합할 수 있습니다. 주소 스키마에는 고객 스키마에 포함된 것과는 다른 `targetNamespace`가 있기 때문에 `<xs:import />` 요소 및 가져오기 의미 체계가 사용됩니다.  
   
@@ -99,9 +99,9 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
   
 ## <a name="see-also"></a>참조
 
-- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [XML 스키마 개체 모델 개요](xml-schema-object-model-overview.md)
+- [XML 스키마 읽기 및 쓰기](reading-and-writing-xml-schemas.md)
+- [XML 스키마 빌드](building-xml-schemas.md)
+- [XML 스키마 통과](traversing-xml-schemas.md)
+- [XML 스키마 편집](editing-xml-schemas.md)
+- [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)

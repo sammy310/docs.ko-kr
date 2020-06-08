@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710117"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289839"
 ---
 # <a name="traversing-xml-schemas"></a>XML 스키마 통과
 
@@ -39,7 +39,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 >
 > <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 속성은 스키마 네임스페이스에 속하지 않은 모든 특성에 대한 액세스를 제공합니다. 이러한 특성은 스키마 프로세서로 처리되지 않습니다.
 
-다음 코드 예제에서는 [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목에서 만든 고객 스키마를 트래버스하는 예를 보여줍니다. 이 코드 예제에서는 위에서 설명한 컬렉션을 사용하여 스키마를 통과하는 것을 보여 주고 스키마의 모든 요소와 특성을 콘솔에 작성합니다.
+다음 코드 예제에서는 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 트래버스하는 예를 보여줍니다. 이 코드 예제에서는 위에서 설명한 컬렉션을 사용하여 스키마를 통과하는 것을 보여 주고 스키마의 모든 요소와 특성을 콘솔에 작성합니다.
 
 이 샘플은 다음과 같은 단계로 고객 스키마를 통과합니다.
 
@@ -65,14 +65,14 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 
 <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> 속성이 사용자 정의 단순 형식 또는 복합 형식인 경우 이 속성은 <xref:System.Xml.Schema.XmlSchemaSimpleType> 또는 <xref:System.Xml.Schema.XmlSchemaComplexType>일 수 있습니다. 또한 W3C XML 스키마 권장 사항에 정의된 기본 제공 데이터 형식 중 하나인 경우 <xref:System.Xml.Schema.XmlSchemaDatatype>일 수도 있습니다. 고객 스키마에서 <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> 요소의 `Customer`은 <xref:System.Xml.Schema.XmlSchemaComplexType>이고 `FirstName` 및 `LastName` 요소는 <xref:System.Xml.Schema.XmlSchemaSimpleType>입니다.
 
-[XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md) 항목의 코드 예제에서는 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 컬렉션을 사용하여 `Customer` 요소에 `CustomerId` 특성을 추가했습니다. 이 속성은 pre-schema-compilation 속성입니다. 해당 Post-Schema-Compilation-Infoset 속성은 형식 파생을 통해 상속된 특성을 비롯하여 복합 형식의 모든 특성을 보유하는 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 컬렉션입니다.
+[XML 스키마 빌드](building-xml-schemas.md) 항목의 코드 예제에서는 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 컬렉션을 사용하여 `Customer` 요소에 `CustomerId` 특성을 추가했습니다. 이 속성은 pre-schema-compilation 속성입니다. 해당 Post-Schema-Compilation-Infoset 속성은 형식 파생을 통해 상속된 특성을 비롯하여 복합 형식의 모든 특성을 보유하는 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 컬렉션입니다.
 
 ## <a name="see-also"></a>참조
 
-- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [XML 스키마 포함하기 또는 가져오기](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML 스키마 개체 모델 개요](xml-schema-object-model-overview.md)
+- [XML 스키마 읽기 및 쓰기](reading-and-writing-xml-schemas.md)
+- [XML 스키마 빌드](building-xml-schemas.md)
+- [XML 스키마 편집](editing-xml-schemas.md)
+- [XML 스키마 포함하기 또는 가져오기](including-or-importing-xml-schemas.md)
+- [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [Post-Schema Compilation Infoset](post-schema-compilation-infoset.md)

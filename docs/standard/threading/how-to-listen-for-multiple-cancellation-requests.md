@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f92d1d9e8fec91475886e8bd7bffbc97bb632a0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279397"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>방법: 여러 개의 취소 요청 수신 대기
 이 예제에서는 두 개의 취소 토큰 중 하나가 작업을 요청할 경우 작업을 취소할 수 있도록 두 개의 취소 토큰을 동시에 수신 대기하는 방법을 보여줍니다.  
@@ -34,4 +34,4 @@ ms.locfileid: "73138006"
   
 ## <a name="see-also"></a>참조
 
-- [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [관리되는 스레드의 취소](cancellation-in-managed-threads.md)

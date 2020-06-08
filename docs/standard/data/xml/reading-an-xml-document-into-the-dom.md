@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 2e61a9ed1a1ccaa2f9f1543efa1d33c3fcf00061
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02338d72f51d3a7507c0dfa030383399b9e213f6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130839"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282404"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>DOM에 XML 문서 읽어오기
 다양한 형식으로 XML 정보를 메모리에 읽어옵니다. 문자열, 스트림, URL, 텍스트 판독기 또는 <xref:System.Xml.XmlReader>에서 파생된 클래스에서 XML 정보를 읽어올 수 있습니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "73130839"
   
 |제목|항목|  
 |-------------|-----------|  
-|공백 노드 만들기|DOM을 로드하는 데 사용된 개체는 DOM에 생성된 공백 및 유효 공백 노드에 영향을 줍니다. 자세한 내용은 [DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)를 참조하세요.|  
-|특정 노드부터 XML 로드 또는 전체 XML 문서 로드|<xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> 메서드를 사용하면 특정 노드에서 DOM으로 데이터를 로드할 수 있습니다. 자세한 내용은. [판독기에서 데이터 로드](../../../../docs/standard/data/xml/load-data-from-a-reader.md)를 참조하세요.|  
-|XML을 로드할 때 유효성 검사|DOM으로 XML 데이터를 로드할 때 유효성을 검사할 수 있습니다. <xref:System.Xml.XmlReader> 유효성 검사를 사용하면 됩니다. XML을 로드할 때 유효성 검사에 대한 자세한 내용은 [DOM에서의 XML 문서 유효성 검사](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)를 참조하세요.|  
+|공백 노드 만들기|DOM을 로드하는 데 사용된 개체는 DOM에 생성된 공백 및 유효 공백 노드에 영향을 줍니다. 자세한 내용은 [DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리](white-space-and-significant-white-space-handling-when-loading-the-dom.md)를 참조하세요.|  
+|특정 노드부터 XML 로드 또는 전체 XML 문서 로드|<xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> 메서드를 사용하면 특정 노드에서 DOM으로 데이터를 로드할 수 있습니다. 자세한 내용은. [판독기에서 데이터 로드](load-data-from-a-reader.md)를 참조하세요.|  
+|XML을 로드할 때 유효성 검사|DOM으로 XML 데이터를 로드할 때 유효성을 검사할 수 있습니다. <xref:System.Xml.XmlReader> 유효성 검사를 사용하면 됩니다. XML을 로드할 때 유효성 검사에 대한 자세한 내용은 [DOM에서의 XML 문서 유효성 검사](validating-an-xml-document-in-the-dom.md)를 참조하세요.|  
   
  다음 예제에서는 <xref:System.Xml.XmlDocument.LoadXml%2A> 메서드를 사용하여 XML을 로드하고 `data.xml`이라는 텍스트 파일에 데이터를 저장하는 방법을 보여 줍니다.  
   
@@ -70,4 +70,4 @@ public class Sample
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421230"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289358"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 구현
 TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있습니다. 즉 Visual Studio에서 C# 또는 Visual Basic 컴파일러를 사용하여 구현하거나, 수동으로 구현하거나, 컴파일러와 수동 방식을 함께 사용하여 구현할 수 있습니다. 다음 섹션에서는 각 방법에 대해 자세히 설명합니다. TAP 패턴을 사용하면 컴퓨팅 바운드 및 I/O 바운드 비동기 작업을 모두 구현할 수 있습니다. 각 작업 유형에 대해서는 [워크로드](#workloads) 섹션에서 설명합니다.
@@ -98,10 +98,10 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-또한 이 예제에서는 여러 비동기 작업을 통해 단일 취소 토큰 스레드를 만드는 방법도 보여 줍니다. 자세한 내용은 [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)의 취소 사용 섹션을 참조하세요.
+또한 이 예제에서는 여러 비동기 작업을 통해 단일 취소 토큰 스레드를 만드는 방법도 보여 줍니다. 자세한 내용은 [작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md)의 취소 사용 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참조
 
-- [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
-- [다른 비동기 패턴 및 형식과의 Interop](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [TAP(작업 기반 비동기 패턴)](task-based-asynchronous-pattern-tap.md)
+- [작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md)
+- [다른 비동기 패턴 및 형식과의 Interop](interop-with-other-asynchronous-patterns-and-types.md)

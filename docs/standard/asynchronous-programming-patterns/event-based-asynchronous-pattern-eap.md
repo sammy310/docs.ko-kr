@@ -7,12 +7,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130938"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289436"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>이벤트 기반 비동기 패턴(EAP)
 
@@ -60,7 +60,7 @@ ms.locfileid: "73130938"
  [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md)  
  비동기 및 병렬 작업용 프로그래밍 모델에 대해 설명합니다.  
   
- [스레딩](../../../docs/standard/threading/index.md)  
+ [스레딩](../threading/index.md)  
  .NET의 다중 스레딩 기능에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목

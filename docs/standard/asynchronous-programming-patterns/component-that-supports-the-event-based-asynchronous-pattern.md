@@ -18,15 +18,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 44a1019ac8169138aa95b03e2027d9539cbf8391
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83a60e0e793f33b8b0a1cec8342942fd05c82f55
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71957365"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289891"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
-상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
+상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
   
  이 연습에서는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 보여줍니다. ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 포함한 모든 애플리케이션 모델에서 구성 요소가 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다. 이 구성 요소도 <xref:System.Windows.Forms.PropertyGrid> 컨트롤과 고유한 사용자 지정 디자이너를 사용하여 디자인할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71957365"
   
 - 시작 및 취소 메서드 구현  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [How to: Implement a Client of the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)(방법: 이벤트 기반 비동기 패턴의 클라이언트 구현)을 참조하세요.  
+ 이 항목의 코드를 단일 목록으로 복사하려면 [How to: Implement a Client of the Event-based Asynchronous Pattern](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)(방법: 이벤트 기반 비동기 패턴의 클라이언트 구현)을 참조하세요.  
   
 ## <a name="creating-the-component"></a>구성 요소 만들기  
  첫 번째 단계는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 것입니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "71957365"
  `CalculateWorker` 메서드는 대리자로 래핑되고 `BeginInvoke` 호출을 통해 비동기적으로 호출됩니다.  
   
 > [!NOTE]
-> 진행률 보고는 `BuildPrimeNumberList` 메서드에서 구현됩니다. 빠른 컴퓨터에서는 `ProgressChanged` 이벤트가 연속적으로 발생할 수 있습니다. 이러한 이벤트가 발생하는 클라이언트 스레드에서 이 상황을 처리할 수 있어야 합니다. 사용자 인터페이스 코드가 메시지로 넘쳐 유지할 수 없어서 응답하지 않을 수 있습니다. 이 상황을 처리하는 예제 사용자 인터페이스는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+> 진행률 보고는 `BuildPrimeNumberList` 메서드에서 구현됩니다. 빠른 컴퓨터에서는 `ProgressChanged` 이벤트가 연속적으로 발생할 수 있습니다. 이러한 이벤트가 발생하는 클라이언트 스레드에서 이 상황을 처리할 수 있어야 합니다. 사용자 인터페이스 코드가 메시지로 넘쳐 유지할 수 없어서 응답하지 않을 수 있습니다. 이 상황을 처리하는 예제 사용자 인터페이스는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>소수 계산을 비동기적으로 실행하려면:  
   
@@ -242,7 +242,7 @@ ms.locfileid: "71957365"
   
  이제 `PrimeNumberCalculator` 구성 요소가 완료되고 사용할 준비가 되었습니다.  
   
- `PrimeNumberCalculator` 구성 요소를 사용하는 예제 클라이언트는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
+ `PrimeNumberCalculator` 구성 요소를 사용하는 예제 클라이언트는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
  `CalculatePrimeAsync` 메서드의 동기 메서드인 `CalculatePrime`을 작성하여 이 예제를 채울 수 있습니다. 이렇게 하면 `PrimeNumberCalculator` 구성 요소가 이벤트 기반 비동기 패턴을 완전히 준수하게 됩니다.  
@@ -253,6 +253,6 @@ ms.locfileid: "71957365"
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 백그라운드에서 작업 실행](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [이벤트 기반 비동기 패턴(EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)
+- [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)

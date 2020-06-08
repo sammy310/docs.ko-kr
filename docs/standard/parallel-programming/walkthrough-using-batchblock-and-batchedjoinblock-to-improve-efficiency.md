@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091355"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284587"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상
 
@@ -24,7 +24,7 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-1. 이 연습을 시작하기 전에 [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) 문서의 조인 블록 섹션을 읽어 보세요.
+1. 이 연습을 시작하기 전에 [데이터 흐름](dataflow-task-parallel-library.md) 문서의 조인 블록 섹션을 읽어 보세요.
 
 2. 컴퓨터에서 Northwind 데이터베이스 복사본인 Northwind.sdf를 사용할 수 있는지 확인하세요. 이 파일은 일반적으로 %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\ 폴더에 있습니다.
 
@@ -131,4 +131,4 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [데이터 흐름](dataflow-task-parallel-library.md)

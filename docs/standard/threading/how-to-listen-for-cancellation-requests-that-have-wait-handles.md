@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e44b10b88bef61edcf3f547f56b4020740530e26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137983"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279545"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>방법: 대기 핸들이 있는 취소 요청 수신 대기
 이벤트의 신호를 받을 때까지 대기하는 동안 메서드가 차단된 경우 취소 토큰의 값을 확인하고 적시에 응답할 수 없습니다. 첫 번째 예제는 기본적으로 통합 취소 프레임워크를 지원하지 않는 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>와 같은 이벤트에 대해 작업할 때 이 문제점을 해결하는 방법을 보여줍니다. 두 번째 예제는 통합 취소를 지원하는 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>을 사용하는 보다 간소화된 접근 방식을 보여줍니다.  
@@ -35,4 +35,4 @@ ms.locfileid: "73137983"
   
 ## <a name="see-also"></a>참고 항목
 
-- [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [관리되는 스레드의 취소](cancellation-in-managed-threads.md)

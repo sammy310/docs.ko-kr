@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 7db031c655980dd800de77cbbd6a07a0ba94b33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507548"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284886"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 및 일반적인 .NET Framework 비동기 프로그래밍
 .NET Framework에서는 I/O에 바인딩된 비동기 작업과 컴퓨팅에 바인딩된 비동기 작업을 수행하도록 다음 표준 패턴 두 개를 제공합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "82507548"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 추가적인 예외 처리가 포함되고 클라이언트 코드에서 메서드를 호출하는 방법을 보여주는 더 자세한 예제는 [방법: 작업에서 EAP 패턴 래핑](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)을 참조하세요.  
+ 추가적인 예외 처리가 포함되고 클라이언트 코드에서 메서드를 호출하는 방법을 보여주는 더 자세한 예제는 [방법: 작업에서 EAP 패턴 래핑](how-to-wrap-eap-patterns-in-a-task.md)을 참조하세요.  
   
  <xref:System.Threading.Tasks.TaskCompletionSource%601>에서 만들어진 작업은 TaskCompletionSource에 의해 시작되므로 사용자 코드는 해당 작업에서 Start 메서드를 호출하지 않아야 합니다.  
   
@@ -119,4 +119,4 @@ ms.locfileid: "82507548"
   
 ## <a name="see-also"></a>참조
 
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [TPL(작업 병렬 라이브러리)](task-parallel-library-tpl.md)

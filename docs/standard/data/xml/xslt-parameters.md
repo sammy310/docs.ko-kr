@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7651360b375071c48ba0d23b64881ac794e51e86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709701"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282534"
 ---
 # <a name="xslt-parameters"></a>XSLT 매개 변수
 <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 이 때 정규화된 이름 및 네임스페이스 URI가 매개 변수 개체와 연결됩니다.  
@@ -68,4 +68,4 @@ ms.locfileid: "75709701"
   
 ## <a name="see-also"></a>참조
 
-- [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT 변환](xslt-transformations.md)

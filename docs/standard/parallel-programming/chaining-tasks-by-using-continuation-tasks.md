@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159366"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285614"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하고 해당 작업에 데이터를 전달하는 것이 일반적입니다. 일반적으로 연속 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 *연속 작업*이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이 완료될 때 다른 작업( *선행*이라고 함)이 호출하는 비동기 작업입니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "78159366"
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- 선행 작업이 성공적으로 완료될 때까지 실행되지 않은 경우에도 연속 작업을 실행하려면 예외로부터 보호해야 합니다. 한 가지 방법은 선행 작업의 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 속성을 테스트하고 상태가 <xref:System.Threading.Tasks.Task%601.Result%2A> 또는 <xref:System.Threading.Tasks.TaskStatus.Faulted> 가 아닌 경우에만 <xref:System.Threading.Tasks.TaskStatus.Canceled>속성에 액세스하는 것입니다. 선행 작업의 <xref:System.Threading.Tasks.Task.Exception%2A> 속성을 검사할 수도 있습니다. 자세한 내용은 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요. 다음 예제에서는 상태가 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 인 경우에만 선행 작업의 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>속성에 액세스하도록 이전 예제를 수정합니다.  
+ 선행 작업이 성공적으로 완료될 때까지 실행되지 않은 경우에도 연속 작업을 실행하려면 예외로부터 보호해야 합니다. 한 가지 방법은 선행 작업의 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 속성을 테스트하고 상태가 <xref:System.Threading.Tasks.Task%601.Result%2A> 또는 <xref:System.Threading.Tasks.TaskStatus.Faulted> 가 아닌 경우에만 <xref:System.Threading.Tasks.TaskStatus.Canceled>속성에 액세스하는 것입니다. 선행 작업의 <xref:System.Threading.Tasks.Task.Exception%2A> 속성을 검사할 수도 있습니다. 자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md)를 참조하세요. 다음 예제에서는 상태가 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 인 경우에만 선행 작업의 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>속성에 액세스하도록 이전 예제를 수정합니다.  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
@@ -114,12 +114,12 @@ ms.locfileid: "78159366"
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- 선행 작업의 최종 상태는 연결된 자식 작업의 최종 상태에 따라 달라집니다. 분리된 자식 작업의 상태는 부모에 영향을 주지 않습니다. 자세한 내용은 [연결된 자식 작업과 분리된 자식 작업](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)을 참조하세요.  
+ 선행 작업의 최종 상태는 연결된 자식 작업의 최종 상태에 따라 달라집니다. 분리된 자식 작업의 상태는 부모에 영향을 주지 않습니다. 자세한 내용은 [연결된 자식 작업과 분리된 자식 작업](attached-and-detached-child-tasks.md)을 참조하세요.  
   
 ## <a name="associating-state-with-continuations"></a>연속 작업에 상태 연결  
  연속 작업에 임의 상태를 연결할 수 있습니다. <xref:System.Threading.Tasks.Task.ContinueWith%2A> 메서드는 각각 연속 상태를 나타내는 <xref:System.Object> 값을 받는 오버로드된 버전을 제공합니다. 나중에 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 속성을 사용하여 이 상태 개체에 액세스할 수 있습니다. 값을 제공하지 않을 경우 이 상태 개체는 `null`입니다.  
   
- 연속 상태는 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 사용하는 기존 코드를 TPL을 사용하도록 변환하는 경우에 유용합니다. APM에서는 일반적으로 **Begin**_Method_ 메서드에 개체 상태를 제공하고 나중에 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 속성을 통해 해당 상태에 액세스합니다. <xref:System.Threading.Tasks.Task.ContinueWith%2A> 메서드를 사용하면 APM을 사용하는 코드를 TPL을 사용하도록 변환할 때 이 상태를 보존할 수 있습니다.  
+ 연속 상태는 [APM(비동기 프로그래밍 모델)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 사용하는 기존 코드를 TPL을 사용하도록 변환하는 경우에 유용합니다. APM에서는 일반적으로 **Begin**_Method_ 메서드에 개체 상태를 제공하고 나중에 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 속성을 통해 해당 상태에 액세스합니다. <xref:System.Threading.Tasks.Task.ContinueWith%2A> 메서드를 사용하면 APM을 사용하는 코드를 TPL을 사용하도록 변환할 때 이 상태를 보존할 수 있습니다.  
   
  Visual Studio 디버거에서 <xref:System.Threading.Tasks.Task> 개체로 작업하는 경우에도 연속 상태가 유용할 수 있습니다. 예를 들어 **병렬 작업** 창의 **작업** 열에는 각 작업에 대한 상태 개체의 문자열 표현이 표시됩니다. **병렬 작업** 창에 대한 자세한 내용은 [작업 창 사용](/visualstudio/debugger/using-the-tasks-window)을 참조하세요.  
   
@@ -146,10 +146,10 @@ ms.locfileid: "78159366"
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     자세한 내용은 [예외 처리](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)를 참조하세요.  
+     자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md)를 참조하세요.  
   
-- 연속 작업이 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 옵션으로 만든 연결된 자식 작업인 경우 다른 연결된 자식과 마찬가지로 부모가 해당 예외를 호출 스레드로 다시 전파합니다. 자세한 내용은 [연결된 자식 작업과 분리된 자식 작업](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)을 참조하세요.  
+- 연속 작업이 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 옵션으로 만든 연결된 자식 작업인 경우 다른 연결된 자식과 마찬가지로 부모가 해당 예외를 호출 스레드로 다시 전파합니다. 자세한 내용은 [연결된 자식 작업과 분리된 자식 작업](attached-and-detached-child-tasks.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [TPL(작업 병렬 라이브러리)](task-parallel-library-tpl.md)

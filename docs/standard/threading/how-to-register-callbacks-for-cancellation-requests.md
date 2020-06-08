@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0482d43925f4f547114119a95909501cbf09eedb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137994"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279364"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>방법: 취소 요청에 대한 콜백 등록
 다음 예제에서는 토큰을 만든 개체에 대한 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 호출로 인해 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true가 될 때 호출되는 대리자를 등록하는 방법을 보여줍니다. 이 기술은 통합된 취소 프레임워크를 기본적으로 지원하지 않는 비동기 작업을 취소하고 비동기 작업이 완료되기를 기다릴 수 있는 메서드의 차단을 해제하는 데 사용합니다.  
@@ -31,4 +31,4 @@ ms.locfileid: "73137994"
   
 ## <a name="see-also"></a>참고 항목
 
-- [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [관리되는 스레드의 취소](cancellation-in-managed-threads.md)

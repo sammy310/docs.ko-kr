@@ -8,12 +8,12 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e7ec9e2c2a5ba3de1b4518cea15eb5f512640d3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138044"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279687"
 ---
 # <a name="foreground-and-background-threads"></a>포그라운드 및 백그라운드 스레드
 관리되는 스레드는 백그라운드 스레드 또는 포그라운드 스레드입니다. 백그라운드 스레드는 하나의 예외가 있는 포그라운드 스레드와 동일합니다. 백그라운드 스레드는 관리되는 실행 환경을 계속 실행하지 않습니다. 모든 포그라운드 스레드가 관리되는 프로세스(.exe 파일이 관리되는 어셈블리인 프로세스)에서 중지되면 시스템이 모든 백그라운드 스레드를 중지하고 종료됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "73138044"
  <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> 속성을 사용하여 스레드가 백그라운드 또는 포그라운드 스레드인지 확인하거나 해당 상태를 변경합니다. 언제든지 <xref:System.Threading.Thread.IsBackground%2A> 속성을 `true`로 설정하여 스레드를 백그라운드 스레드로 변경할 수 있습니다.  
   
 > [!IMPORTANT]
-> 스레드의 포그라운드 또는 백그라운드 상태는 스레드에서 처리되지 않은 예외의 결과에 영향을 주지 않습니다. .NET Framework 버전 2.0에서는 포그라운드 또는 백그라운드 스레드에서 처리되지 않은 예외로 인해 애플리케이션이 종료됩니다. [관리되는 스레드의 예외](../../../docs/standard/threading/exceptions-in-managed-threads.md)를 참조하세요.  
+> 스레드의 포그라운드 또는 백그라운드 상태는 스레드에서 처리되지 않은 예외의 결과에 영향을 주지 않습니다. .NET Framework 버전 2.0에서는 포그라운드 또는 백그라운드 스레드에서 처리되지 않은 예외로 인해 애플리케이션이 종료됩니다. [관리되는 스레드의 예외](exceptions-in-managed-threads.md)를 참조하세요.  
   
  관리되는 스레드 풀(<xref:System.Threading.Thread.IsThreadPoolThread%2A> 속성이 `true`인 스레드)에 속하는 스레드는 백그라운드 스레드입니다. 비관리 코드에서 관리되는 실행 환경에 들어가는 모든 스레드는 백그라운드 스레드로 표시됩니다. 새 <xref:System.Threading.Thread> 개체를 만들고 시작하여 생성된 모든 스레드는 기본적으로 포그라운드 스레드입니다.  
   

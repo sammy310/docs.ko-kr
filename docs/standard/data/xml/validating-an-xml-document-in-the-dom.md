@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
-ms.openlocfilehash: 93686ddf1afff76926e77acdbf5aa58e93d6cb77
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 949dc52c332b17784b0e1851d178465fe4881b6f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710039"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287638"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 
@@ -92,5 +92,5 @@ DOM에 로드된 XML 데이터의 유효성을 검사하면 XML 스키마 유효
 - <xref:System.Xml.XmlReader>
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
-- [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [XML 스키마 사용](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [DOM 모델을 사용하여 XML 데이터 처리](process-xml-data-using-the-dom-model.md)
+- [XML 스키마 사용](working-with-xml-schemas.md)

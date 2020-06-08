@@ -10,19 +10,19 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378455"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276701"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serialization을 제어하는 특성
-다음 표의 특성을 클래스 및 클래스 멤버에 적용하여 <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어할 수 있습니다. 이러한 특성이 XML serialization을 제어하는 방법을 이해하려면 [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)를 참조하세요.  
+다음 표의 특성을 클래스 및 클래스 멤버에 적용하여 <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어할 수 있습니다. 이러한 특성이 XML serialization을 제어하는 방법을 이해하려면 [특성을 사용하여 XML Serialization 제어](controlling-xml-serialization-using-attributes.md)를 참조하세요.  
   
- 이러한 특성을 사용하면 XML Web services를 통해 생성된 리터럴 스타일 SOAP 메시지를 제어할 수도 있습니다. 이러한 특성을 XML Web services 메서드에 적용하는 방법에 대한 자세한 내용은 [XML Web Services의 XML serialization](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)을 참조하세요.  
+ 이러한 특성을 사용하면 XML Web services를 통해 생성된 리터럴 스타일 SOAP 메시지를 제어할 수도 있습니다. 이러한 특성을 XML Web services 메서드에 적용하는 방법에 대한 자세한 내용은 [XML Web Services의 XML serialization](xml-serialization-with-xml-web-services.md)을 참조하세요.  
   
- 특성에 대한 자세한 내용은 [특성](../../../docs/standard/attributes/index.md)을 참조하세요.  
+ 특성에 대한 자세한 내용은 [특성](../attributes/index.md)을 참조하세요.  
   
 |특성|적용 대상|설명|  
 |---------------|----------------|---------------|  
@@ -42,13 +42,13 @@ ms.locfileid: "83378455"
   
  모두 <xref:System.Xml.Serialization> 네임스페이스에서 찾을 수 있는 이러한 특성 이외에 <xref:System.ComponentModel.DefaultValueAttribute> 특성도 필드에 적용할 수 있습니다. **DefaultValueAttribute**는 지정된 값이 없는 경우 멤버에 자동으로 할당될 값을 설정합니다.  
   
- 인코드된 SOAP XML serialization을 제어하려면 [인코드된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)을 참조하세요.  
+ 인코드된 SOAP XML serialization을 제어하려면 [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [특성을 사용하여 XML serialization 제어](controlling-xml-serialization-using-attributes.md)
+- [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [방법: 개체 직렬화](how-to-serialize-an-object.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

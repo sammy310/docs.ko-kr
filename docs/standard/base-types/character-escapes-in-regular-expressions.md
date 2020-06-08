@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711430"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277676"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -37,16 +37,16 @@ ms.locfileid: "75711430"
   
 |문자 또는 시퀀스|설명|  
 |---------------------------|-----------------|  
-|다음을 제외한 모든 문자입니다.<br /><br /> 을 선택합니다. $ ^ { [ ( &#124; ) * + ? \ |**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
+|다음을 제외한 모든 문자입니다.<br /><br /> 을 선택합니다. $ ^ { [ ( &#124; ) * + ? \ |**문자 또는 시퀀스** 열에 나열된 문자 이외의 문자는 정규식에서 특별한 의미를 가지지 않습니다. 문자 그대로 해석됩니다.<br /><br /> **문자 또는 시퀀스** 열에 포함된 문자는 특수 정규식 언어 요소입니다. 정규식에서 이들 문자를 찾으려면 문자를 이스케이프하거나 [긍정 문자 그룹](character-classes-in-regular-expressions.md)에 포함해야 합니다. 예를 들어 정규식 `\$\d+` 또는 `[$]\d+`는 "$1200"을 찾습니다.|  
 |`\a`|벨 문자인 `\u0007`을 찾습니다.|  
-|`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](../../../docs/standard/base-types/anchors-in-regular-expressions.md)를 참조하세요.|  
+|`\b`|`[`*character_group*`]` 문자 클래스에서 백스페이스 문자인 `\u0008`을 찾습니다.  [문자 클래스](character-classes-in-regular-expressions.md)를 참조하세요. 문자 클래스 이외에 `\b`는 단어 경계와 일치하는 앵커입니다. [앵커](anchors-in-regular-expressions.md)를 참조하세요.|  
 |`\t`|탭 문자인 `\u0009`를 찾습니다.|  
 |`\r`|캐리지 리턴 문자인 `\u000D`를 찾습니다. `\r`은 줄 바꿈 문자인 `\n`과 다릅니다.|  
 |`\v`|세로 탭 문자인 `\u000B`를 찾습니다.|  
 |`\f`|용지 공급 문자인 `\u000C`를 찾습니다.|  
 |`\n`|줄 바꿈 문자인 `\u000A`를 찾습니다.|  
 |`\e`|이스케이프 문자인 `\u001B`를 찾습니다.|  
-|`\` *nnn*|ASCII 문자를 찾습니다. 여기서 *nnn*은 8진수 문자 코드를 나타내는 두 자리 또는 세 자리 숫자로 구성됩니다. 예를 들어 `\040`은 공백 문자를 나타냅니다. 이 생성자가 한 개의 숫자만 포함하거나(예: `\2`) 캡처링 그룹의 수와 일치하는 경우에는 역참조로 해석됩니다. [역참조 구문](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)을 참조하세요.|  
+|`\` *nnn*|ASCII 문자를 찾습니다. 여기서 *nnn*은 8진수 문자 코드를 나타내는 두 자리 또는 세 자리 숫자로 구성됩니다. 예를 들어 `\040`은 공백 문자를 나타냅니다. 이 생성자가 한 개의 숫자만 포함하거나(예: `\2`) 캡처링 그룹의 수와 일치하는 경우에는 역참조로 해석됩니다. [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하세요.|  
 |`\x` *nn*|ASCII 문자를 찾습니다. 여기서 *nn*은 두 자리 16진수 문자 코드입니다.|  
 |`\c` *X*|ASCII 제어 문자를 찾습니다. 여기서 X는 제어 문자를 나타내는 문자입니다. 예를 들어, `\cC`는 CTRL-C입니다.|  
 |`\u` *nnnn*|단위 값이 *nnnn* 16진수인 UTF-16 코드 단위를 찾습니다. **참고:**  유니코드를 지정하는 데 사용되는 Perl 5 문자 이스케이프는 .NET에서 지원되지 않습니다. Perl 5 문자 이스케이프는 `\x{` *####* `…}` 형식입니다. 여기서 *####* `…`는 일련의 16진수입니다. 대신에 `\u`*nnnn*을 사용합니다.|  
@@ -70,4 +70,4 @@ ms.locfileid: "75711430"
   
 ## <a name="see-also"></a>참조
 
-- [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)

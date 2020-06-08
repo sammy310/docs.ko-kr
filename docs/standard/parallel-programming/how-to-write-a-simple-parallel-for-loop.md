@@ -10,19 +10,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139660"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290735"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>방법: 간단한 Parallel.For 루프 작성
 
 이 항목에는 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드를 설명하는 두 가지 예제가 포함되어 있습니다. 첫 번째 예제에서는 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고, 두 번째 예제에서는 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> 오버로드를 사용합니다. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드의 가장 간단한 오버로드 중 두 개입니다. 루프를 취소하거나, 루프 반복을 중단하거나, 스레드 로컬 상태를 유지할 필요가 없는 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 메서드의 이러한 두 오버로드를 사용할 수 있습니다.
 
 > [!NOTE]
-> 이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
+> 이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
 첫 번째 예제에서는 단일 디렉터리에 있는 파일의 크기를 계산합니다. 두 번째 예제에서는 두 행렬의 곱을 계산합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "73139660"
 
 ## <a name="the-delegate"></a>대리자
 
-이 <xref:System.Threading.Tasks.Parallel.For%2A> 오버로드의 세 번째 매개 변수는 `Action<int>`(C#) 또는 `Action(Of Integer)`(Visual Basic) 형식의 대리자입니다. `Action` 대리자는 0개, 1개 또는 16개의 형식 매개 변수가 있는지에 관계없이 항상 void를 반환합니다. Visual Basic에서 `Action`의 동작은 `Sub`를 사용하여 정의됩니다. 예제에서는 람다 식을 사용하여 대리자를 만들지만 다른 방법으로도 대리자를 만들 수 있습니다. 자세한 내용은 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
+이 <xref:System.Threading.Tasks.Parallel.For%2A> 오버로드의 세 번째 매개 변수는 `Action<int>`(C#) 또는 `Action(Of Integer)`(Visual Basic) 형식의 대리자입니다. `Action` 대리자는 0개, 1개 또는 16개의 형식 매개 변수가 있는지에 관계없이 항상 void를 반환합니다. Visual Basic에서 `Action`의 동작은 `Sub`를 사용하여 정의됩니다. 예제에서는 람다 식을 사용하여 대리자를 만들지만 다른 방법으로도 대리자를 만들 수 있습니다. 자세한 내용은 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
 ## <a name="the-iteration-value"></a>반복 값
 
@@ -72,5 +72,5 @@ ms.locfileid: "73139660"
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
+- [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
+- [병렬 프로그래밍](index.md)

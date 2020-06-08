@@ -11,17 +11,17 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131593"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279960"
 ---
 # <a name="how-to-raise-and-consume-events"></a>방법: 이벤트 발생 및 사용
 이 항목의 예제에서는 이벤트로 작업하는 방법을 보여 줍니다. 여기서 <xref:System.EventHandler> 대리자, <xref:System.EventHandler%601> 대리자 및 사용자 지정 대리자의 예제를 통해 데이터를 사용하거나 사용하지 않는 이벤트를 설명합니다.  
   
- 이 예제에서는 [이벤트](../../../docs/standard/events/index.md) 문서에 설명된 개념을 사용합니다.  
+ 이 예제에서는 [이벤트](index.md) 문서에 설명된 개념을 사용합니다.  
   
 ## <a name="example"></a>예제  
  첫 번째 예제에서는 데이터가 없는 이벤트를 발생시키고 사용하는 방법을 보여 줍니다. 이벤트의 이름이 `Counter`인 `ThresholdReached`라는 클래스를 포함합니다. 이 이벤트는 카운터 값이 같거나 임계값을 초과할 때 발생합니다. 이벤트 데이터가 제공되지 않았으므로 <xref:System.EventHandler> 대리자는 이벤트와 연결됩니다.  
@@ -44,4 +44,4 @@ ms.locfileid: "73131593"
   
 ## <a name="see-also"></a>참조
 
-- [이벤트](../../../docs/standard/events/index.md)
+- [이벤트](index.md)

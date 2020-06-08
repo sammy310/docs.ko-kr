@@ -3,12 +3,12 @@ title: DOM에서 새 노드 만들기
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d99a3c68c7554ab266d71a4cbf2e676bc6db8cbc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711001"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289579"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM에서 새 노드 만들기
 <xref:System.Xml.XmlDocument>에는 모든 노드 형식에 대한 create 메서드가 있습니다. 필요에 따라 메서드에 이름을 제공하고, 텍스트 노드처럼 내용이 있는 노드에 대한 내용이나 기타 매개 변수를 지정하면 노드가 생성됩니다. 다음은 적합한 노드를 만들기 위해 이름 및 몇 개의 매개 변수를 제공해야 하는 메서드입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "75711001"
   
  다른 노드 형식에는 매개 변수에 데이터를 제공하는 것 이상의 요구 사항이 있습니다.  
   
- 특성에 대한 자세한 내용은 [DOM에서 요소의 새 특성 만들기](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)를 참조하세요. 요소 및 특성 이름 유효성 검사에 대한 자세한 내용은 [새 노드를 만들 때 XML 요소 및 특성 이름 확인](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md)을 참조하세요. 엔터티 참조를 만드는 방법은 [새 엔터티 참조 만들기](../../../../docs/standard/data/xml/creating-new-entity-references.md)를 참조하세요. 네임스페이스가 엔터티 참조의 확장에 미치는 영향에 대한 자세한 내용은 [요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md)을 참조하세요.  
+ 특성에 대한 자세한 내용은 [DOM에서 요소의 새 특성 만들기](creating-new-attributes-for-elements-in-the-dom.md)를 참조하세요. 요소 및 특성 이름 유효성 검사에 대한 자세한 내용은 [새 노드를 만들 때 XML 요소 및 특성 이름 확인](xml-element-and-attribute-name-verification-when-creating-new-nodes.md)을 참조하세요. 엔터티 참조를 만드는 방법은 [새 엔터티 참조 만들기](creating-new-entity-references.md)를 참조하세요. 네임스페이스가 엔터티 참조의 확장에 미치는 영향에 대한 자세한 내용은 [요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향](namespace-affect-on-entity-ref-expansion-for-new-nodes.md)을 참조하세요.  
   
  새 노드를 만든 후에 트리에 해당 노드를 삽입하는 데 사용할 수 있는 몇 가지 메서드가 있습니다. 다음 표에는 XML DOM(문서 개체 모델)에서 새 노드가 나타나는 위치에 대한 설명과 함께 해당 메서드가 나열되어 있습니다.  
   
@@ -51,4 +51,4 @@ ms.locfileid: "75711001"
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

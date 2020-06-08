@@ -37,12 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398768"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289254"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -76,7 +76,7 @@ ms.locfileid: "79398768"
   
  명명 패턴을 사용하여 관련 형식을 네임스페이스로 그룹화하면 효과적으로 클래스 라이브러리를 빌드하고 문서화할 수 있습니다. 하지만 이 명명 스키마는 표시 여부, 멤버 액세스, 상속성, 보안 또는 바인딩에는 영향을 주지 않습니다. 하나의 네임스페이스가 여러 어셈블리에 분할될 수 있으며 하나의 어셈블리에 여러 네임스페이스의 형식이 포함될 수 있습니다. 어셈블리는 공용 언어 런타임에서 버전 관리, 배포, 보안, 로딩 및 표시 여부에 대한 형식적 구조를 제공합니다.  
   
- 네임스페이스 및 형식 이름에 대한 자세한 내용은 [공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)을 참조하세요.  
+ 네임스페이스 및 형식 이름에 대한 자세한 내용은 [공용 형식 시스템](base-types/common-type-system.md)을 참조하세요.  
   
 ## <a name="system-namespace"></a>System 네임스페이스
 
@@ -110,6 +110,6 @@ ms.locfileid: "79398768"
   
 ## <a name="see-also"></a>참조
 
-- [공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)
+- [공용 형식 시스템](base-types/common-type-system.md)
 - [.NET API 브라우저](../../api/index.md)
-- [개요](../../docs/framework/get-started/overview.md)
+- [개요](../framework/get-started/overview.md)

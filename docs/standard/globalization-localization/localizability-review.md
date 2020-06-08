@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120857"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288279"
 ---
 # <a name="localizability-review"></a>지역화 가능성 검토
 
@@ -38,7 +38,7 @@ ms.locfileid: "73120857"
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>세계화 권장 사항 구현
 
-지역화를 염두에 두고 애플리케이션을 설계 및 개발했고 [세계화](../../../docs/standard/globalization-localization/globalization.md) 문서에 설명된 권장 사항을 따른 경우 지역화 가능성 검토는 대개 품질 보증 단계에서 통과하게 됩니다. 그러지 않으면 이 단계에서 [세계화](../../../docs/standard/globalization-localization/globalization.md)를 위한 권장 사항을 검토 및 구현하고 지역화를 방해하는 소스 코드의 오류를 수정해야 합니다.
+지역화를 염두에 두고 애플리케이션을 설계 및 개발했고 [세계화](globalization.md) 문서에 설명된 권장 사항을 따른 경우 지역화 가능성 검토는 대개 품질 보증 단계에서 통과하게 됩니다. 그러지 않으면 이 단계에서 [세계화](globalization.md)를 위한 권장 사항을 검토 및 구현하고 지역화를 방해하는 소스 코드의 오류를 수정해야 합니다.
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>문화권 구분 기능 처리
@@ -75,11 +75,11 @@ ms.locfileid: "73120857"
 
 - 예기치 않은 결과를 반환하는 같음 비교 또는 문자열 비교.
 
-애플리케이션을 개발할 때 세계화 권장 사항을 따르고 문화권 구분 기능을 올바르게 처리하고 테스트 중 발생한 지역화 문제를 해결했다면 다음 단계인 [지역화](../../../docs/standard/globalization-localization/localization.md)로 진행할 수 있습니다.
+애플리케이션을 개발할 때 세계화 권장 사항을 따르고 문화권 구분 기능을 올바르게 처리하고 테스트 중 발생한 지역화 문제를 해결했다면 다음 단계인 [지역화](localization.md)로 진행할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-- [지역화](../../../docs/standard/globalization-localization/localization.md)
-- [전역화](../../../docs/standard/globalization-localization/globalization.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [전역화 및 지역화](index.md)
+- [지역화](localization.md)
+- [전역화](globalization.md)
+- [데스크톱 앱의 리소스](../../framework/resources/index.md)

@@ -3,12 +3,12 @@ title: 단순 형식 유추 규칙
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710234"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289072"
 ---
 # <a name="rules-for-inferring-simple-types"></a>단순 형식 유추 규칙
 <xref:System.Xml.Schema.XmlSchemaInference> 클래스가 특성 및 요소에 대한 데이터 형식을 유추하는 방법을 설명합니다.  
@@ -76,6 +76,6 @@ ms.locfileid: "75710234"
   
 ## <a name="see-also"></a>참조
 
-- [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [스키마 노드 형식 및 구조 유추 규칙](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [XML SOM(스키마 개체 모델)](xml-schema-object-model-som.md)
+- [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)
+- [스키마 노드 형식 및 구조 유추 규칙](rules-for-inferring-schema-node-types-and-structure.md)

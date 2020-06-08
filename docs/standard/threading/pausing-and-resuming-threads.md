@@ -10,16 +10,16 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129001"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291164"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
 
-스레드 작업을 동기화하는 가장 일반적인 방법은 스레드를 차단 및 해제하거나 개체 또는 코드 영역을 잠그는 것입니다. 이러한 잠금 및 차단 메커니즘에 대한 자세한 내용은 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+스레드 작업을 동기화하는 가장 일반적인 방법은 스레드를 차단 및 해제하거나 개체 또는 코드 영역을 잠그는 것입니다. 이러한 잠금 및 차단 메커니즘에 대한 자세한 내용은 [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
   
  스레드가 자동으로 중지되도록 할 수도 있습니다. 스레드가 차단 또는 중지된 경우 <xref:System.Threading.ThreadInterruptedException>을 사용하여 대기 상태에서 분리할 수 있습니다.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "73129001"
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 대상 스레드에서 <xref:System.Threading.ThreadInterruptedException>이 발생하게 합니다.  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](../../../docs/standard/threading/destroying-threads.md)를 참조하세요.  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](destroying-threads.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
-- [스레딩](../../../docs/standard/threading/index.md)
-- [스레드 및 스레딩 사용](../../../docs/standard/threading/using-threads-and-threading.md)
-- [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [스레딩](index.md)
+- [스레드 및 스레딩 사용](using-threads-and-threading.md)
+- [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159678"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287794"
 ---
 # <a name="extending-the-dom"></a>DOM 확장
 
@@ -244,7 +244,7 @@ Number of elements in book.xml: 3
 
 원래의 DOM 클래스와 파생 클래스에서의 이벤트 처리 과정은 완전히 동일합니다.
 
-노드 이벤트 처리에 대한 자세한 내용은 [이벤트](../../../../docs/standard/events/index.md) 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.
+노드 이벤트 처리에 대한 자세한 내용은 [이벤트](../../events/index.md) 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.
 
 ## <a name="default-attributes-and-the-createelement-method"></a>기본 특성 및 CreateElement 메서드
 

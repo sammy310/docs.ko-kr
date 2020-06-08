@@ -3,12 +3,12 @@ title: 판독기에서 데이터 로드
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 90a66e04bda4fb2ee4216e8aabd631afb2f28dd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1c048b08380bebce3a627670d88ff6ae48084535
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710715"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289163"
 ---
 # <a name="load-data-from-a-reader"></a>판독기에서 데이터 로드
 <xref:System.Xml.XmlDocument.Load%2A> 메서드와 <xref:System.Xml.XmlReader>의 매개 변수를 사용하여 XML 문서를 로드할 경우 발생하는 동작은 다른 형식의 데이터를 로드할 때의 동작과 차이가 있습니다. 판독기가 초기 상태에 있을 경우 <xref:System.Xml.XmlDocument.Load%2A>는 판독기의 전체 내용을 사용하며 판독기의 모든 데이터를 사용하여 XML DOM(문서 개체 모델)을 만듭니다.  
@@ -29,4 +29,4 @@ ms.locfileid: "75710715"
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

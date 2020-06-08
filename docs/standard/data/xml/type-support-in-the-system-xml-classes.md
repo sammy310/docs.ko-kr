@@ -3,12 +3,12 @@ title: System.Xml 클래스의 형식 지원
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ceda15cb8463db3e81260529ebb1e3a67a0c1af
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710104"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283301"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml 클래스의 형식 지원
 .NET Framework 버전 2.0에서는 형식 지원 기능을 포함하도록 핵심 XML 클래스가 향상되었습니다. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> 및 <xref:System.Xml.XPath.XPathNavigator> 클래스에는 XML 스키마 형식과 CLR(공용 언어 런타임) 형식 간의 변환 기능을 비롯한 형식 지원 기능이 들어 있습니다.  
@@ -27,14 +27,14 @@ ms.locfileid: "75710104"
 > .NET Framework 버전 1.0에서는 XML 스키마와 CLR 형식 간에 변환하려면 <xref:System.Xml.XmlConvert> 클래스가 필요했습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [CLR 형식에 XML 데이터 형식 매핑](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
+ [CLR 형식에 XML 데이터 형식 매핑](mapping-xml-data-types-to-clr-types.md)  
  기본적으로 XML 데이터 형식을 CLR 형식에 매핑하는 방법을 설명합니다.  
   
- [XML 형식 지원 구현 참고 사항](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
+ [XML 형식 지원 구현 참고 사항](xml-type-support-implementation-notes.md)  
  형식 지원 구현에 대해 상세히 설명합니다.  
   
- [XML 데이터 형식 변환](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [XML 데이터 형식 변환](conversion-of-xml-data-types.md)  
  <xref:System.Xml.XmlConvert> 클래스를 사용하여 XML 스키마와 CLR 형식 간에 변환하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

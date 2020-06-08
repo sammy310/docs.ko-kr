@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d985a003fe613699c89e38583f84be9e21b383d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77453002"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290670"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 및 TPL의 람다 식
 
@@ -41,4 +41,4 @@ TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?disp
 
 ## <a name="see-also"></a>참고 항목
 
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
+- [병렬 프로그래밍](index.md)

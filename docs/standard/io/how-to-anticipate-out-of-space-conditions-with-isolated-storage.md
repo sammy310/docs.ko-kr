@@ -22,16 +22,16 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708117"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288591"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>방법: 격리된 스토리지의 공간 부족 상태 예상
 
-격리된 스토리지를 사용하는 코드는 격리된 스토리지 파일 및 디렉터리가 있는 데이터 구획의 최대 크기를 지정하는 [할당량](../../../docs/standard/io/isolated-storage.md#quotas)에 의해 제한됩니다. 이 할당 한도는 보안 정책에서 정의하고 관리자가 구성할 수 있습니다. 데이터를 쓸 때 최대 허용 크기를 초과하면 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 예외가 throw되고 작업이 실패합니다. 이를 통해 데이터 스토리지가 가득 차서 애플리케이션이 요청을 거부하는 문제를 발생시킬 수 있는 악성 서비스 거부 공격을 방지할 수 있습니다.
+격리된 스토리지를 사용하는 코드는 격리된 스토리지 파일 및 디렉터리가 있는 데이터 구획의 최대 크기를 지정하는 [할당량](isolated-storage.md#quotas)에 의해 제한됩니다. 이 할당 한도는 보안 정책에서 정의하고 관리자가 구성할 수 있습니다. 데이터를 쓸 때 최대 허용 크기를 초과하면 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 예외가 throw되고 작업이 실패합니다. 이를 통해 데이터 스토리지가 가득 차서 애플리케이션이 요청을 거부하는 문제를 발생시킬 수 있는 악성 서비스 거부 공격을 방지할 수 있습니다.
 
 지정된 쓰기 시도가 이러한 이유로 실패할 가능성이 있는지 확인할 수 있도록 <xref:System.IO.IsolatedStorage.IsolatedStorage> 클래스는 세 가지 읽기 전용 속성 즉, <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> 및 <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>를 제공합니다. 이러한 속성을 사용하여 저장소에 쓰는 작업으로 인해 저장소의 최대 허용 크기가 초과되는지 여부를 판단할 수 있습니다. 격리된 스토리지에 동시에 액세스할 수 있음을 명심하십시오. 따라서 남은 스토리지 크기를 컴퓨팅하는 경우 스토리지에 쓰는 시간에 따라 스토리지 공간이 사용될 수 있습니다. 그러나 사용 가능한 스토리지의 상한값에 도달하는지 여부를 판단하기 위해 스토리지의 최대 크기를 사용할 수는 있습니다.
 
@@ -48,5 +48,5 @@ ms.locfileid: "75708117"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)
-- [방법: 격리된 스토리지의 저장소 가져오기](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [격리된 스토리지](isolated-storage.md)
+- [방법: 격리된 스토리지의 저장소 가져오기](how-to-obtain-stores-for-isolated-storage.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421282"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289696"
 ---
 # <a name="binary-serialization"></a>이진 Serialization
 
@@ -344,10 +344,10 @@ serialization은 개체의 상태를 스토리지 매체에 스토리지하는 �
 - <xref:System.Runtime.Serialization>\
 개체를 직렬화하거나 역직렬화하는 데 사용할 수 있는 클래스를 포함합니다.
 
-- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML 및 SOAP Serialization](xml-and-soap-serialization.md)\
 공용 언어 런타임에 포함된 XML serialization 메커니즘을 설명합니다.
 
-- [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)\
+- [보안 및 Serialization](../../framework/misc/security-and-serialization.md)\
 serialization을 수행하는 코드를 쓸 때 따를 보안 코딩 지침을 설명합니다.
 
 - [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\

@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588630"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290657"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
   
- 기본 동작을 재정의하려면 소스 시퀀스에서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자를 사용하여 순서 유지 기능을 켤 수 있습니다. 그런 다음, <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 메서드를 사용하여 쿼리에서 나중에 순서 유지 기능을 끌 수 있습니다. 두 메서드를 모두 사용하면 쿼리를 병렬로 실행할지 또는 순차적으로 실행할지 여부를 결정하는 추론을 기반으로 쿼리가 처리됩니다. 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.  
+ 기본 동작을 재정의하려면 소스 시퀀스에서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자를 사용하여 순서 유지 기능을 켤 수 있습니다. 그런 다음, <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 메서드를 사용하여 쿼리에서 나중에 순서 유지 기능을 끌 수 있습니다. 두 메서드를 모두 사용하면 쿼리를 병렬로 실행할지 또는 순차적으로 실행할지 여부를 결정하는 추론을 기반으로 쿼리가 처리됩니다. 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.  
   
  다음 예제는 어떤 방식으로든 결과의 순서를 지정하지 않고 조건과 일치하는 모든 요소에 대해 필터링되는 순서가 지정되지 않은 병렬 쿼리를 보여줍니다.  
   
@@ -122,5 +122,5 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
   
 ## <a name="see-also"></a>참고 항목
 
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)
+- [병렬 프로그래밍](index.md)
