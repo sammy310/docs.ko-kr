@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616634"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493502"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 함수
 관리 되지 않는 호스트에서 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다. [CorBindToRuntime](corbindtoruntime-function.md) 및 `CorBindToRuntimeEx` 함수는 동일한 작업을 수행 하지만 함수를 `CorBindToRuntimeEx` 사용 하 여 CLR의 동작을 지정 하는 플래그를 설정할 수 있습니다.  
@@ -71,7 +71,7 @@ HRESULT CorBindToRuntimeEx (
  `pwszBuildFlavor`가 null로 설정 된 경우 워크스테이션 빌드가 로드 됩니다. 단일 프로세서 컴퓨터에서 실행 되 `pwszBuildFlavor` 는 경우가로 설정 된 경우에도 워크스테이션 빌드가 항상 로드 됩니다 `svr` . 그러나 `pwszBuildFlavor` 가로 설정 되 `svr` 고 동시 가비지 수집이 지정 된 경우 (매개 변수에 대 한 설명 참조 `startupFlags` ) 서버 빌드가 로드 됩니다.  
   
  `startupFlags`  
- 진행 [STARTUP_FLAGS](startup-flags-enumeration.md) 열거형 값의 조합입니다. 이러한 플래그는 동시 가비지 컬렉션, 도메인 중립 코드 및 매개 변수의 동작을 제어 `pwszVersion` 합니다. 플래그가 설정 되지 않은 경우 기본값은 단일 도메인입니다. 유효한 값은  
+ 진행 [STARTUP_FLAGS](startup-flags-enumeration.md) 열거형 값의 조합입니다. 이러한 플래그는 동시 가비지 컬렉션, 도메인 중립 코드 및 매개 변수의 동작을 제어 `pwszVersion` 합니다. 플래그가 설정 되지 않은 경우 기본값은 단일 도메인입니다. 유효한 값은 다음과 같습니다.  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -102,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  이러한 플래그에 대 한 설명은 [STARTUP_FLAGS](startup-flags-enumeration.md) 열거를 참조 하세요.  
   
  `rclsid`  
- 진행 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
+ 진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
  진행 `IID`에서 요청 된 인터페이스의입니다 `rclsid` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
@@ -122,7 +122,7 @@ HRESULT CorBindToRuntimeEx (
   
 2. 프로세스 기본 모드를 버전 1 호환성 모드로 변경 하 여 <xref:System.Security.Principal.WindowsIdentity> 현재 스레드의 설정에 관계 없이 개체가 비동기 지점에서 이동 하지 않습니다 <xref:System.Threading.ExecutionContext> . 기본 모드를 변경 하는 방법은 관리 되는 실행 파일 또는 관리 되지 않는 호스팅 인터페이스를 사용 하 여 CLR을 로드 하는지 여부에 따라 달라 집니다.  
   
-    1. 관리 되는 실행 파일의 경우 `enabled` [ \< legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) 요소의 특성을로 설정 해야 합니다 `true` .  
+    1. 관리 되는 실행 파일의 경우 요소의 특성을로 설정 해야 합니다 `enabled` [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) `true` .  
   
     2. 관리 되지 않는 호스팅 인터페이스의 경우 `STARTUP_LEGACY_IMPERSONATION` `startupFlags` 함수를 호출할 때 매개 변수에서 플래그를 설정 합니다 `CorBindToRuntimeEx` .  
   

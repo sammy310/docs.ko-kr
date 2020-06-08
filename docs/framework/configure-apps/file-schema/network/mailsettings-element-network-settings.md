@@ -1,5 +1,6 @@
 ---
 title: <mailSettings> 요소(네트워크 설정)
+description: <mailSettings>네트워크 설정 요소는 .NET Framework의 메일 전송 옵션을 구성 합니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504565"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings> 요소(네트워크 설정)
 메일 전송 옵션을 구성 합니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "74089228"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|attribute|Description|  
+|특성|설명|  
 |---------------|-----------------|  
 |[\<smtp>요소 (네트워크 설정)](smtp-element-network-settings.md)|간단한 메일 전송 프로토콜 옵션을 구성 합니다.|  
   

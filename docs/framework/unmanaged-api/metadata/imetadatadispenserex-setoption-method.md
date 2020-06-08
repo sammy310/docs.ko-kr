@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 0cb0dee7db7faa4c1324d705218934489ec6a4b6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005858"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501328"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 지정 된 옵션을 현재 메타 데이터 범위의 지정 된 값으로 설정 합니다. 옵션은 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 합니다.  
@@ -46,11 +46,11 @@ HRESULT SetOption (
   
 |GUID|설명|`pValue`변수에|  
 |----------|-----------------|------------------------|  
-|MetaDataCheckDuplicatesFor|중복 항목을 검사할 항목을 제어 합니다. 새 항목을 만드는 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 메서드를 호출할 때마다 해당 항목이 현재 범위에 이미 있는지 여부를 메서드에 요청할 수 있습니다. 예를 들어 항목이 있는지 확인할 수 있습니다 `mdMethodDef` .이 경우 [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)를 호출 하면 메서드가 현재 범위에 아직 없는지 확인 합니다. 이 검사에서는 지정 된 메서드를 고유 하 게 식별 하는 키 인 부모 유형, 이름 및 시그니처를 사용 합니다.|은 UI4 형식의 variant 여야 하며 [CorCheckDuplicatesFor](corcheckduplicatesfor-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
+|MetaDataCheckDuplicatesFor|중복 항목을 검사할 항목을 제어 합니다. 새 항목을 만드는 [IMetaDataEmit](imetadataemit-interface.md) 메서드를 호출할 때마다 해당 항목이 현재 범위에 이미 있는지 여부를 메서드에 요청할 수 있습니다. 예를 들어 항목이 있는지 확인할 수 있습니다 `mdMethodDef` .이 경우 [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md)를 호출 하면 메서드가 현재 범위에 아직 없는지 확인 합니다. 이 검사에서는 지정 된 메서드를 고유 하 게 식별 하는 키 인 부모 유형, 이름 및 시그니처를 사용 합니다.|은 UI4 형식의 variant 여야 하며 [CorCheckDuplicatesFor](corcheckduplicatesfor-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
 |MetaDataRefToDefCheck|정의로 변환 되는 참조 된 항목을 제어 합니다. 기본적으로 메타 데이터 엔진은 참조 된 항목이 현재 범위에서 실제로 정의 된 경우 참조 된 항목을 해당 정의로 변환 하 여 코드를 최적화 합니다.|은 UI4 형식의 variant 여야 하며 [Correftodefcheck](correftodefcheck-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
-|MetaDataNotificationForTokenMovement|메타 데이터 병합 중에 발생 하는 토큰 다시 매핑에 대 한 제어 콜백을 생성 합니다. [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) 메서드를 사용 하 여 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) 인터페이스를 설정 합니다.|은 UI4 형식의 variant 여야 하며 [Cornotificationfortokenmovement](cornotificationfortokenmovement-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
+|MetaDataNotificationForTokenMovement|메타 데이터 병합 중에 발생 하는 토큰 다시 매핑에 대 한 제어 콜백을 생성 합니다. [IMetaDataEmit:: SetHandler](imetadataemit-sethandler-method.md) 메서드를 사용 하 여 [IMapToken](imaptoken-interface.md) 인터페이스를 설정 합니다.|은 UI4 형식의 variant 여야 하며 [Cornotificationfortokenmovement](cornotificationfortokenmovement-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
 |MetaDataSetENC|편집 하며 계속 하기 (ENC)의 동작을 제어 합니다. 한 번에 하나의 동작 모드만 설정할 수 있습니다.|은 UI4 형식의 variant 여야 하며 [Corsetenc](corsetenc-enumeration.md) 열거형의 값을 포함 해야 합니다. 값이 비트 마스크가 아닙니다.|  
-|MetaDataErrorIfEmitOutOfOrder|잘못 된 순서로 내보낸 오류를 제어 합니다. 메타 데이터 내보내기 순서가 잘못 되었습니다. 그러나 메타 데이터 엔진에서 선호 하는 순서로 메타 데이터를 내보내는 경우 메타 데이터는 더 간결 하므로 더 효율적으로 검색할 수 있습니다. 메서드를 사용 `IMetaDataEmit::SetHandler` 하 여 [IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) 인터페이스를 설정 합니다.|은 UI4 형식의 variant 여야 하며 [CorErrorIfEmitOutOfOrder](corerrorifemitoutoforder-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
+|MetaDataErrorIfEmitOutOfOrder|잘못 된 순서로 내보낸 오류를 제어 합니다. 메타 데이터 내보내기 순서가 잘못 되었습니다. 그러나 메타 데이터 엔진에서 선호 하는 순서로 메타 데이터를 내보내는 경우 메타 데이터는 더 간결 하므로 더 효율적으로 검색할 수 있습니다. 메서드를 사용 `IMetaDataEmit::SetHandler` 하 여 [IMetaDataError](imetadataerror-interface.md) 인터페이스를 설정 합니다.|은 UI4 형식의 variant 여야 하며 [CorErrorIfEmitOutOfOrder](corerrorifemitoutoforder-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
 |MetaDataImportOption|열거자에서 검색 된 ENC 중에 삭제 된 항목의 종류를 제어 합니다.|은 UI4 형식의 variant 여야 하며 [CorImportOptions 열거형](corimportoptions-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
 |Metadatathread Etyoptions|메타 데이터 엔진이 판독기/작성기 잠금을 획득 하 여 스레드 안전을 보장 하는지 여부를 제어 합니다. 기본적으로 엔진은 호출자가 액세스를 단일 스레드로 간주 하므로 잠금을 획득할 수 없습니다. 클라이언트는 메타 데이터 API를 사용할 때 적절 한 스레드 동기화를 유지 관리 하는 일을 담당 합니다.|은 UI4 형식의 variant 여야 하며 [Corthread Etyoptions](corthreadsafetyoptions-enumeration.md) 열거형의 값을 포함 해야 합니다. 값이 비트 마스크가 아닙니다.|  
 |MetaDataGenerateTCEAdapters|형식 라이브러리 가져오기에서 COM 연결 지점 컨테이너에 대해 긴밀 하 게 결합 된 이벤트 (TCE) 어댑터를 생성할지 여부를 제어 합니다.|BOOL 형식의 variant 여야 합니다. `pValue`가로 설정 된 경우 `true` 형식 라이브러리 가져오기에서 TCE 어댑터를 생성 합니다.|  

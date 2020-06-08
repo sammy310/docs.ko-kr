@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492332"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 메서드
-지정된 형식 또는 멤버와 연결된 사용자 지정 특성 정의 토큰을 연수합니다.  
+지정 된 형식 또는 멤버와 연결 된 사용자 지정 특성 정의 토큰을 열거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- 【인, 아웃】 반환된 열거형에 대한 포인터입니다.  
+ [in, out] 반환 된 열거자에 대 한 포인터입니다.  
   
  `tk`  
- 【인】 열거형 범위에 대한 토큰 또는 모든 사용자 지정 특성에 대한 0입니다.  
+ 진행 열거형의 범위에 대 한 토큰 이거나 모든 사용자 지정 특성의 경우 0입니다.  
   
  `tkType`  
- 【인】 등록할 특성 형식의 생성자 또는 `null` 모든 형식에 대한 토큰입니다.  
+ 진행 열거할 특성 형식의 생성자 또는 모든 형식에 대 한 토큰입니다 `null` .  
   
  `rCustomAttributes`  
- 【아웃】 사용자 지정 특성 토큰의 배열입니다.  
+ 제한이 사용자 지정 특성 토큰의 배열입니다.  
   
  `cMax`  
  [in] `rCustomAttributes` 배열의 최대 크기입니다.  
   
  `pcCustomAttributes`  
- [아웃, 선택 사항] 에서 반환되는 실제 토큰 `rCustomAttributes`값 수입니다.  
+ [out, 선택 사항] 에서 반환 된 실제 토큰 값 수입니다 `rCustomAttributes` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`성공적으로 반환됩니다.|  
-|`S_FALSE`|등록할 사용자 지정 특성이 없습니다. 이 경우 `pcCustomAttributes` 0입니다.|  
+|`S_OK`|`EnumCustomAttributes`성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 사용자 지정 특성이 없습니다. 이 경우는 `pcCustomAttributes` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

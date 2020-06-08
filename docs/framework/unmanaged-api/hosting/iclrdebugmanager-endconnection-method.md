@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: f524cadf77caec0823411784c68f339207433601
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d3d081e389e29833f24063ba75289f3db8c5504a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615792"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504279"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection 메서드
 작업 목록과 식별자 및 이름 간의 연결을 제거 합니다.  
@@ -37,7 +37,7 @@ HRESULT EndConnection (
  `dwConnectionId`  
  진행 연결에 대 한 호스트 관련 식별자와 관련 된 CLR (공용 언어 런타임) 작업 목록입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -50,7 +50,7 @@ HRESULT EndConnection (
 |E_INVALIDARG|[Beginconnection](iclrdebugmanager-beginconnection-method.md) 이를 사용 하 여 호출 되지 `dwConnectionId` 않았거나 `dwConnectionId` 가 0입니다.|  
   
 ## <a name="remarks"></a>설명  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드인, `BeginConnection` [setconnectiontasks](iclrdebugmanager-setconnectiontasks-method.md)및 `EndConnection` 를 제공 합니다.  
+ [ICLRDebugManager](iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드인, `BeginConnection` [setconnectiontasks](iclrdebugmanager-setconnectiontasks-method.md)및 `EndConnection` 를 제공 합니다.  
   
 > [!IMPORTANT]
 > 이러한 세 메서드는 각 작업 집합에 대해 특정 순서로 호출 되어야 합니다. `BeginConnection`새 연결을 설정 하기 위해가 먼저 호출 됩니다. `SetConnectionTasks`는 해당 연결과 관련 된 태스크 집합을 제공 하기 위해 다음에 호출 됩니다. `EndConnection`작업 목록과 식별자와 이름 간의 연결을 제거 하기 위해 마지막으로 호출 됩니다. 그러나 다른 연결에 대 한 호출은 중첩할 수 있습니다.  

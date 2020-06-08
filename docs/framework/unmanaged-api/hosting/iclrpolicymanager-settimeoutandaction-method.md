@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703430"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504097"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 메서드
 지정 된 작업에 대 한 시간 제한 값을 설정 하 고, 작업이 발생할 때 CLR (공용 언어 런타임)이 수행 해야 하는 정책 동작을 지정 합니다.  
@@ -37,7 +37,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="parameters"></a>매개 변수  
  `operation`  
- 진행 제한 시간 및 `action` 정책을 설정할 작업을 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다. 다음 값이 지원 됩니다.  
+ 진행 제한 시간 및 `action` 정책을 설정할 작업을 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다. 지원되는 값은 다음과 같습니다.  
   
 - OPR_AppDomainUnload  
   
@@ -53,7 +53,7 @@ HRESULT SetTimeoutAndAction (
  `action`  
  진행 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나로, CLR이 발생할 때 수행 해야 하는 정책 작업을 나타냅니다 `operation` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -66,7 +66,7 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|지정 된에 대 한 제한 시간을 설정할 수 `operation` 없거나에 잘못 된 값이 제공 `action` 된 경우|  
   
 ## <a name="remarks"></a>설명  
- `SetTimeoutAndAction`는 [ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) 및 [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 메서드의 기능을 캡슐화 하며 이러한 두 메서드에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
+ `SetTimeoutAndAction`는 [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) 및 [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 메서드의 기능을 캡슐화 하며 이러한 두 메서드에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
   
 > [!IMPORTANT]
 > 모든 정책 동작 값을 CLR 작업의 시간 제한 동작으로 지정할 수 있는 것은 아닙니다. 유효한 값은 이러한 두 메서드에 대 한 항목의 설명 섹션을 참조 하세요.  

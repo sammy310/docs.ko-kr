@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0b2facd-5991-4f4c-932d-c4937f45cef9
 topic_type:
 - apiref
-ms.openlocfilehash: 8153dbd27e168e3a5bd8e5aeada955a0382aaf75
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a54c32c0713b4b69d8f2a0272687cbe9420610
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868254"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494776"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>ICorProfilerObjectEnum::Clone 메서드
 이 [ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md) 인터페이스의 복사본에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -34,17 +34,17 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
- 제한이 이 `ICorProfilerObjectEnum` 인터페이스의 복사본을 가리키는 인터페이스 포인터에 대 한 포인터입니다. 복사본은이 항목에서 별도로 자체 열거 상태를 유지 관리 합니다. 그러나 복사본의 초기 커서 위치는이 열거자의 현재 커서 위치와 동일 합니다.  
+ 제한이 이 인터페이스의 복사본을 가리키는 인터페이스 포인터에 대 한 포인터입니다 `ICorProfilerObjectEnum` . 복사본은이 항목에서 별도로 자체 열거 상태를 유지 관리 합니다. 그러나 복사본의 초기 커서 위치는이 열거자의 현재 커서 위치와 동일 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerObjectEnum 인터페이스](icorprofilerobjectenum-interface.md)
