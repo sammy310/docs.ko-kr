@@ -6,56 +6,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160198"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281702"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="a34d2-102">스타일시트 매개 변수 및 확장 개체의 XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="a34d2-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
-<span data-ttu-id="a34d2-103"><xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="a34d2-104">이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="80473-102">스타일시트 매개 변수 및 확장 개체의 XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="80473-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
+<span data-ttu-id="80473-103"><xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="80473-104">이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a34d2-105">.NET Framework 2.0에서는 <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스가 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="a34d2-106"><xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="a34d2-107">자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a34d2-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="80473-105">.NET Framework 2.0에서는 <xref:System.Xml.Xsl.XslTransform> 및 <xref:System.Xml.Xsl.XsltArgumentList> 클래스가 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="80473-106"><xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT 변환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="80473-107">자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="80473-107">See [Using the XslCompiledTransform Class](using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="a34d2-108"><xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="a34d2-109">이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+ <span data-ttu-id="80473-108"><xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT 매개 변수와 XSLT 확장 개체가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="80473-109">이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
- <span data-ttu-id="a34d2-110">포함 스크립트를 사용하는 대신 개체를 전달하면 다음과 같은 이점을 활용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
+ <span data-ttu-id="80473-110">포함 스크립트를 사용하는 대신 개체를 전달하면 다음과 같은 이점을 활용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
   
-- <span data-ttu-id="a34d2-111">클래스의 캡슐화 및 재사용에 효과적입니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-111">Provides better encapsulation and reuse of classes.</span></span>  
+- <span data-ttu-id="80473-111">클래스의 캡슐화 및 재사용에 효과적입니다.</span><span class="sxs-lookup"><span data-stu-id="80473-111">Provides better encapsulation and reuse of classes.</span></span>  
   
-- <span data-ttu-id="a34d2-112">스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-112">Allows style sheets to be smaller and more maintainable.</span></span>  
+- <span data-ttu-id="80473-112">스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-112">Allows style sheets to be smaller and more maintainable.</span></span>  
   
-- <span data-ttu-id="a34d2-113">지원되는 <xref:System> 네임스페이스의 집합 내에 정의된 네임스페이스 이외의 다른 네임스페이스에 속하는 클래스에서 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
+- <span data-ttu-id="80473-113">지원되는 <xref:System> 네임스페이스의 집합 내에 정의된 네임스페이스 이외의 다른 네임스페이스에 속하는 클래스에서 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
   
-- <span data-ttu-id="a34d2-114"><xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+- <span data-ttu-id="80473-114"><xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
-## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="a34d2-115">XSLT 스타일시트 매개 변수</span><span class="sxs-lookup"><span data-stu-id="a34d2-115">XSLT Style Sheet Parameters</span></span>  
- <span data-ttu-id="a34d2-116"><xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="a34d2-117">그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
+## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="80473-115">XSLT 스타일시트 매개 변수</span><span class="sxs-lookup"><span data-stu-id="80473-115">XSLT Style Sheet Parameters</span></span>  
+ <span data-ttu-id="80473-116"><xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="80473-117">그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
   
- <span data-ttu-id="a34d2-118">매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="a34d2-119">다음 표에서는 해당하는 W3C 형식과 해당 .NET Framework 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
+ <span data-ttu-id="80473-118">매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="80473-119">다음 표에서는 해당하는 W3C 형식과 해당 .NET Framework 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80473-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
   
-|<span data-ttu-id="a34d2-120">W3C 형식</span><span class="sxs-lookup"><span data-stu-id="a34d2-120">W3C Type</span></span>|<span data-ttu-id="a34d2-121">해당 .NET Framework 클래스(형식)</span><span class="sxs-lookup"><span data-stu-id="a34d2-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="a34d2-122">XPath 형식 또는 XSLT 형식</span><span class="sxs-lookup"><span data-stu-id="a34d2-122">XPath type or XSLT type</span></span>|  
+|<span data-ttu-id="80473-120">W3C 형식</span><span class="sxs-lookup"><span data-stu-id="80473-120">W3C Type</span></span>|<span data-ttu-id="80473-121">해당 .NET Framework 클래스(형식)</span><span class="sxs-lookup"><span data-stu-id="80473-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="80473-122">XPath 형식 또는 XSLT 형식</span><span class="sxs-lookup"><span data-stu-id="80473-122">XPath type or XSLT type</span></span>|  
 |--------------|----------------------------------------------|-----------------------------|  
-|<span data-ttu-id="a34d2-123">String</span><span class="sxs-lookup"><span data-stu-id="a34d2-123">String</span></span>|<span data-ttu-id="a34d2-124">System.String</span><span class="sxs-lookup"><span data-stu-id="a34d2-124">System.String</span></span>|<span data-ttu-id="a34d2-125">XPath</span><span class="sxs-lookup"><span data-stu-id="a34d2-125">XPath</span></span>|  
-|<span data-ttu-id="a34d2-126">부울</span><span class="sxs-lookup"><span data-stu-id="a34d2-126">Boolean</span></span>|<span data-ttu-id="a34d2-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="a34d2-127">System.Boolean</span></span>|<span data-ttu-id="a34d2-128">XPath</span><span class="sxs-lookup"><span data-stu-id="a34d2-128">XPath</span></span>|  
-|<span data-ttu-id="a34d2-129">수</span><span class="sxs-lookup"><span data-stu-id="a34d2-129">Number</span></span>|<span data-ttu-id="a34d2-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="a34d2-130">System.Double</span></span>|<span data-ttu-id="a34d2-131">XPath</span><span class="sxs-lookup"><span data-stu-id="a34d2-131">XPath</span></span>|  
-|<span data-ttu-id="a34d2-132">결과 트리 조각</span><span class="sxs-lookup"><span data-stu-id="a34d2-132">Result Tree Fragment</span></span>|<span data-ttu-id="a34d2-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="a34d2-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="a34d2-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="a34d2-134">XSLT</span></span>|  
-|<span data-ttu-id="a34d2-135">노드 집합</span><span class="sxs-lookup"><span data-stu-id="a34d2-135">Node Set</span></span>|<span data-ttu-id="a34d2-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="a34d2-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="a34d2-137">XPath</span><span class="sxs-lookup"><span data-stu-id="a34d2-137">XPath</span></span>|  
+|<span data-ttu-id="80473-123">String</span><span class="sxs-lookup"><span data-stu-id="80473-123">String</span></span>|<span data-ttu-id="80473-124">System.String</span><span class="sxs-lookup"><span data-stu-id="80473-124">System.String</span></span>|<span data-ttu-id="80473-125">XPath</span><span class="sxs-lookup"><span data-stu-id="80473-125">XPath</span></span>|  
+|<span data-ttu-id="80473-126">부울</span><span class="sxs-lookup"><span data-stu-id="80473-126">Boolean</span></span>|<span data-ttu-id="80473-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="80473-127">System.Boolean</span></span>|<span data-ttu-id="80473-128">XPath</span><span class="sxs-lookup"><span data-stu-id="80473-128">XPath</span></span>|  
+|<span data-ttu-id="80473-129">수</span><span class="sxs-lookup"><span data-stu-id="80473-129">Number</span></span>|<span data-ttu-id="80473-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="80473-130">System.Double</span></span>|<span data-ttu-id="80473-131">XPath</span><span class="sxs-lookup"><span data-stu-id="80473-131">XPath</span></span>|  
+|<span data-ttu-id="80473-132">결과 트리 조각</span><span class="sxs-lookup"><span data-stu-id="80473-132">Result Tree Fragment</span></span>|<span data-ttu-id="80473-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="80473-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="80473-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="80473-134">XSLT</span></span>|  
+|<span data-ttu-id="80473-135">노드 집합</span><span class="sxs-lookup"><span data-stu-id="80473-135">Node Set</span></span>|<span data-ttu-id="80473-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="80473-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="80473-137">XPath</span><span class="sxs-lookup"><span data-stu-id="80473-137">XPath</span></span>|  
   
- <span data-ttu-id="a34d2-138">매개 변수 개체가 위 클래스에 해당하지 않으면 Double 또는 String 형식이 적절히 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="a34d2-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 및 Decimal 형식은 Double 형식이 되며</span><span class="sxs-lookup"><span data-stu-id="a34d2-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="a34d2-140">기타 모든 형식은 `ToString` 메서드를 사용하여 String 형식이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-140">All other types are forced to a String using the `ToString` method.</span></span>  
+ <span data-ttu-id="80473-138">매개 변수 개체가 위 클래스에 해당하지 않으면 Double 또는 String 형식이 적절히 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="80473-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 및 Decimal 형식은 Double 형식이 되며</span><span class="sxs-lookup"><span data-stu-id="80473-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="80473-140">기타 모든 형식은 `ToString` 메서드를 사용하여 String 형식이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-140">All other types are forced to a String using the `ToString` method.</span></span>  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="a34d2-141">XSLT 매개 변수를 사용하려면 다음 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="80473-141">XSLT 매개 변수를 사용하려면 다음 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="a34d2-142"><xref:System.Xml.Xsl.XsltArgumentList>을 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>를 만들고 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
+1. <span data-ttu-id="80473-142"><xref:System.Xml.Xsl.XsltArgumentList>을 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>를 만들고 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
   
-2. <span data-ttu-id="a34d2-143">스타일시트에서 매개 변수를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-143">Call the parameters from the style sheet.</span></span>  
+2. <span data-ttu-id="80473-143">스타일시트에서 매개 변수를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-143">Call the parameters from the style sheet.</span></span>  
   
-3. <span data-ttu-id="a34d2-144"><xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="80473-144"><xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="a34d2-145">예제</span><span class="sxs-lookup"><span data-stu-id="a34d2-145">Example</span></span>  
- <span data-ttu-id="a34d2-146">다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="a34d2-147">할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-147">The discount date is calculated to be 20 days from the order date.</span></span>  
+### <a name="example"></a><span data-ttu-id="80473-145">예제</span><span class="sxs-lookup"><span data-stu-id="80473-145">Example</span></span>  
+ <span data-ttu-id="80473-146">다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="80473-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="80473-147">할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-147">The discount date is calculated to be 20 days from the order date.</span></span>  
   
 ```vb  
 Imports System  
@@ -137,8 +137,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="a34d2-148">입력</span><span class="sxs-lookup"><span data-stu-id="a34d2-148">Input</span></span>  
- <span data-ttu-id="a34d2-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="a34d2-149">order.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="80473-148">입력</span><span class="sxs-lookup"><span data-stu-id="80473-148">Input</span></span>  
+ <span data-ttu-id="80473-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="80473-149">order.xml</span></span>  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -154,7 +154,7 @@ public class Sample
 </order>  
 ```  
   
- <span data-ttu-id="a34d2-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="a34d2-150">discount.xsl</span></span>  
+ <span data-ttu-id="80473-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="80473-150">discount.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -169,7 +169,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="a34d2-151">출력</span><span class="sxs-lookup"><span data-stu-id="a34d2-151">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="80473-151">출력</span><span class="sxs-lookup"><span data-stu-id="80473-151">Output</span></span>  
   
 ```xml  
 <order>  
@@ -178,25 +178,25 @@ public class Sample
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a><span data-ttu-id="a34d2-152">XSLT 확장명 개체</span><span class="sxs-lookup"><span data-stu-id="a34d2-152">XSLT Extension Objects</span></span>  
- <span data-ttu-id="a34d2-153"><xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>에 XSLT 확장명 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="a34d2-154">이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+## <a name="xslt-extension-objects"></a><span data-ttu-id="80473-152">XSLT 확장명 개체</span><span class="sxs-lookup"><span data-stu-id="80473-152">XSLT Extension Objects</span></span>  
+ <span data-ttu-id="80473-153"><xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>에 XSLT 확장명 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="80473-154">이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
- <span data-ttu-id="a34d2-155">개체가 추가될 때 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>의 호출자는 보안 정책에서 완전히 신뢰되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="a34d2-156">호출자가 일부 신뢰되는 경우에는 추가 작업이 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-156">If the caller is semi-trusted, the addition will fail.</span></span>  
+ <span data-ttu-id="80473-155">개체가 추가될 때 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>의 호출자는 보안 정책에서 완전히 신뢰되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="80473-156">호출자가 일부 신뢰되는 경우에는 추가 작업이 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-156">If the caller is semi-trusted, the addition will fail.</span></span>  
   
- <span data-ttu-id="a34d2-157">개체가 추가되더라도 성공적으로 실행된다고 보장할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="a34d2-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변환 프로세스에 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="a34d2-159">확장명 개체가 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
+ <span data-ttu-id="80473-157">개체가 추가되더라도 성공적으로 실행된다고 보장할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="80473-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="80473-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변환 프로세스에 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="80473-159">확장명 개체가 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="80473-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
- <span data-ttu-id="a34d2-160">확장명 개체에서 반환된 데이터 형식은 네 가지 기본 XPath 데이터 형식인 숫자, 문자열, 부울 및 노드 집합 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
+ <span data-ttu-id="80473-160">확장명 개체에서 반환된 데이터 형식은 네 가지 기본 XPath 데이터 형식인 숫자, 문자열, 부울 및 노드 집합 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="80473-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="a34d2-161">XSLT 확장 개체를 사용하려면 다음 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="80473-161">XSLT 확장 개체를 사용하려면 다음 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="a34d2-162"><xref:System.Xml.Xsl.XsltArgumentList>를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>를 만들고 확장명 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
+1. <span data-ttu-id="80473-162"><xref:System.Xml.Xsl.XsltArgumentList>를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>를 만들고 확장명 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
   
-2. <span data-ttu-id="a34d2-163">스타일시트에서 확장 개체를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-163">Invoke the extension object from the style sheet.</span></span>  
+2. <span data-ttu-id="80473-163">스타일시트에서 확장 개체를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-163">Invoke the extension object from the style sheet.</span></span>  
   
-3. <span data-ttu-id="a34d2-164"><xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="80473-164"><xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="a34d2-165">예제</span><span class="sxs-lookup"><span data-stu-id="a34d2-165">Example</span></span>  
- <span data-ttu-id="a34d2-166">다음 예제에서는 반지름이 주어진 원의 원주를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="a34d2-166">The following example calculates the circumference of a circle given its radius.</span></span>  
+### <a name="example"></a><span data-ttu-id="80473-165">예제</span><span class="sxs-lookup"><span data-stu-id="80473-165">Example</span></span>  
+ <span data-ttu-id="80473-166">다음 예제에서는 반지름이 주어진 원의 원주를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="80473-166">The following example calculates the circumference of a circle given its radius.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +305,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="a34d2-167">입력</span><span class="sxs-lookup"><span data-stu-id="a34d2-167">Input</span></span>  
- <span data-ttu-id="a34d2-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="a34d2-168">number.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="80473-167">입력</span><span class="sxs-lookup"><span data-stu-id="80473-167">Input</span></span>  
+ <span data-ttu-id="80473-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="80473-168">number.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -320,7 +320,7 @@ public class Sample
 </data>
 ```  
   
- <span data-ttu-id="a34d2-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="a34d2-169">circle.xsl</span></span>  
+ <span data-ttu-id="80473-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="80473-169">circle.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="a34d2-170">출력</span><span class="sxs-lookup"><span data-stu-id="a34d2-170">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="80473-170">출력</span><span class="sxs-lookup"><span data-stu-id="80473-170">Output</span></span>  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a><span data-ttu-id="a34d2-171">참조</span><span class="sxs-lookup"><span data-stu-id="a34d2-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80473-171">참조</span><span class="sxs-lookup"><span data-stu-id="80473-171">See also</span></span>
 
-- [<span data-ttu-id="a34d2-172">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="a34d2-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="80473-172">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="80473-172">XslTransform Class Implements the XSLT Processor</span></span>](xsltransform-class-implements-the-xslt-processor.md)
