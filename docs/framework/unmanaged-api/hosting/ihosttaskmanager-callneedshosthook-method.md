@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 5bc5752d4d2b772b1d18f438c4daaa1b8938da9e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 8cbac3b4ad25ba7dc01413f0c1b44541c43b3999
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842350"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503876"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook 메서드
 호스트에서 CLR (공용 언어 런타임)이 관리 되지 않는 함수에 대 한 지정 된 호출을 인라인 할 수 있는지 여부를 지정할 수 있도록 합니다.  
@@ -43,7 +43,7 @@ HRESULT CallNeedsHostHook (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`CallNeedsHostHook`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
@@ -55,7 +55,7 @@ HRESULT CallNeedsHostHook (
 ## <a name="remarks"></a>설명  
  CLR은 코드 실행을 최적화 하는 데 도움이 되도록 컴파일하는 동안 각 플랫폼 호출에 대 한 분석을 수행 하 여 호출이 인라인 될 수 있는지 여부를 확인 합니다. `CallNeedsHostHook`관리 되지 않는 함수에 대 한 호출이 후크 되도록 요구 하 여 호스트가 해당 결정을 재정의할 수 있도록 합니다. 호스트에 후크가 필요 하면 런타임에서 호출을 인라인 하지 않습니다.  
   
- 호스트에는 일반적으로 부동 소수점 상태를 조정 해야 하는 후크가 필요 합니다. 또는 호출이 호스트에서 메모리 또는 사용 된 모든 잠금에 대 한 런타임 요청을 추적할 수 없는 상태를 호출 한다는 알림이 필요 합니다. 호스트에서 호출이 후크 되어야 하는 경우 런타임은 [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)및 [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)에 대 한 호출을 사용 하 여 관리 코드와의 전환을 호스트에 알립니다.  
+ 호스트에는 일반적으로 부동 소수점 상태를 조정 해야 하는 후크가 필요 합니다. 또는 호출이 호스트에서 메모리 또는 사용 된 모든 잠금에 대 한 런타임 요청을 추적할 수 없는 상태를 호출 한다는 알림이 필요 합니다. 호스트에서 호출이 후크 되어야 하는 경우 런타임은 [EnterRuntime](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md), [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)및 [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)에 대 한 호출을 사용 하 여 관리 코드와의 전환을 호스트에 알립니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

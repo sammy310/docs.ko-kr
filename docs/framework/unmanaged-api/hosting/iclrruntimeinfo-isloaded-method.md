@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 3275a69683a312340f35841815685066def10b23
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762528"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504032"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 메서드
 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스와 연결 된 CLR (공용 언어 런타임)이 프로세스에 로드 되는지 여부를 나타냅니다. 런타임을 시작 하지 않고도 로드할 수 있습니다.  
@@ -40,10 +40,10 @@ HRESULT IsLoaded(
  `pbLoaded`  
  [out] `true` CLR이 프로세스에 로드 되 면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_POINTER|`pbLoaded`가 null인 경우|  
@@ -57,7 +57,7 @@ HRESULT IsLoaded(
   
 - 사용 되지 않는 `CorBindTo*` 함수 (.NET Framework 2.0 호스팅 API에서 [사용 되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md) 참조)  
   
- 호스트는 CorBindToRuntime 함수와 같은 사용 되지 않는 함수 중 하나를 호출 `CorBindTo*` 하 여 특정 버전의 CLR을 인스턴스화할 수 있습니다. [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) 그러면 호스트에서 [ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 메서드를 호출 하 고 동일한 버전 번호를 지정 하 여 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스를 가져올 수 있습니다.  
+ 호스트는 CorBindToRuntime 함수와 같은 사용 되지 않는 함수 중 하나를 호출 `CorBindTo*` 하 여 특정 버전의 CLR을 인스턴스화할 수 있습니다. [CorBindToRuntime](corbindtoruntime-function.md) 그러면 호스트에서 [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) 메서드를 호출 하 고 동일한 버전 번호를 지정 하 여 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스를 가져올 수 있습니다.  
   
  그런 다음 호스트에서 반환 된 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스에 대해 메서드를 호출 하면 `pbLoaded` 이 반환 되 고, `true` 그렇지 않으면를 반환 `false` 합니다.  
   
@@ -70,7 +70,7 @@ HRESULT IsLoaded(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

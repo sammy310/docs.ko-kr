@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-ms.openlocfilehash: f06c8228d5eb850c0d5ff94d12be03d7fb75023b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3611de471001d31c40984e71d49ce376bb3e4607
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615919"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504292"
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager 인터페이스
 호스트와 어셈블리에 대 한 CLR (공용 언어 런타임) 간의 통신을 지 원하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[GetBindingIdentityFromFile 메서드](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|지정 된 파일 경로에서 어셈블리의 어셈블리 id 바인딩 데이터를 가져옵니다.|  
 |[GetBindingIdentityFromStream 메서드](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|지정 된 스트림의 어셈블리에 대 한 정식 어셈블리 id 데이터를 가져옵니다.|  
-|[GetCLRAssemblyReferenceList 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|제공 된 부분 어셈블리 id 목록에서 [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) 인스턴스를 가져옵니다.|  
-|[GetProbingAssembliesFromReference 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|지정 된 id를 사용 하 여 어셈블리에서 참조 하는 어셈블리 id의 [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) 열거자를 가져옵니다.|  
-|[GetReferencedAssembliesFromFile 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|지정 된 파일 경로에서 어셈블리가 참조 하는 어셈블리의 목록을 포함 하는 [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) 인스턴스를 가져옵니다.|  
+|[GetCLRAssemblyReferenceList 메서드](iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|제공 된 부분 어셈블리 id 목록에서 [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) 인스턴스를 가져옵니다.|  
+|[GetProbingAssembliesFromReference 메서드](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|지정 된 id를 사용 하 여 어셈블리에서 참조 하는 어셈블리 id의 [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) 열거자를 가져옵니다.|  
+|[GetReferencedAssembliesFromFile 메서드](iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|지정 된 파일 경로에서 어셈블리가 참조 하는 어셈블리의 목록을 포함 하는 [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) 인스턴스를 가져옵니다.|  
 |[GetReferencedAssembliesFromStream 메서드](iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|지정 된 스트림의 어셈블리에서 참조 하는 어셈블리 `ICLRReferenceAssemblyEnum` 에 대 한 어셈블리 id 데이터를 포함 하는 개체에 대 한 포인터를 가져옵니다.|  
 |[IsStronglyNamed 메서드](iclrassemblyidentitymanager-isstronglynamed-method.md)|지정 된 어셈블리에 강력한 이름이 지정 되었는지 여부를 나타내는 값을 가져옵니다.|  
   

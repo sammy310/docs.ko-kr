@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea4b283b-1210-4f41-a7a2-c398b1adde4e
 topic_type:
 - apiref
-ms.openlocfilehash: 90ddb30c3d27d5f431c355abd3a6f792564e616d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f5786db1f17e8a463dc78f9c93464145be3a8f32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866048"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499989"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a>ICorProfilerCallback::RemotingClientInvocationFinished 메서드
 클라이언트에서 원격 호출이 완료 될 때까지 실행 되었음을 프로파일러에 알립니다.  
@@ -31,12 +31,12 @@ ms.locfileid: "76866048"
 HRESULT RemotingClientInvocationFinished();  
 ```  
   
-## <a name="remarks"></a>주의  
- 원격 호출이 동기화 된 경우 서버에서 완료 될 때까지 실행 됩니다. 원격 호출이 비동기 이면 호출이 처리 될 때 응답이 여전히 예상 될 수 있습니다. 회신이 필요한 경우 [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 에 대 한 호출로 발생 하 고 비동기 호출의 필수 보조 처리를 나타내는 `RemotingClientInvocationFinished`에 대 한 추가 호출로 발생 합니다.  
+## <a name="remarks"></a>설명  
+ 원격 호출이 동기화 된 경우 서버에서 완료 될 때까지 실행 됩니다. 원격 호출이 비동기 이면 호출이 처리 될 때 응답이 여전히 예상 될 수 있습니다. 회신이 필요한 경우 [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 를 호출 하 고에 대 한 추가 호출을 수행 하 여 `RemotingClientInvocationFinished` 비동기 호출의 필수 보조 처리를 표시 합니다.  
   
  다음 콜백 쌍은 모두 동일한 스레드에서 발생 합니다.  
   
-- `RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted`및 [ICorProfilerCallback:: Remo Clientsendingmessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 - [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 및 [ICorProfilerCallback:: RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -49,14 +49,14 @@ HRESULT RemotingClientInvocationFinished();
 - 프로파일러는 비동기 원격 이벤트에 대 한 정확한 알림을 수신 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

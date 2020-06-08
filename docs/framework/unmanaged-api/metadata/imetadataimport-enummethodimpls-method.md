@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175475"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492017"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 메서드
 지정한 형식의 메서드를 나타내는 MethodBody 및 MethodDeclaration 토큰을 열거합니다.  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- 【인, 아웃】 열거형에 대한 포인터입니다. 이 메서드의 첫 번째 호출에 대 한 NULL 이어야합니다.  
+ [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
  `td`  
- 【인】 메서드를 개명하는 형식을 위한 TypeDef 토큰입니다.  
+ 진행 해당 메서드 구현이 열거 되는 형식에 대 한 TypeDef 토큰입니다.  
   
  `rMethodBody`  
- 【아웃】 MethodBody 토큰을 저장할 배열입니다.  
+ 제한이 MethodBody 토큰을 저장할 배열입니다.  
   
  `rMethodDecl`  
- 【아웃】 MethodDeclaration 토큰을 저장할 배열입니다.  
+ 제한이 MethodDeclaration 토큰을 저장할 배열입니다.  
   
  `cMax`  
- 【인】 `rMethodBody` 및 `rMethodDecl` 배열의 최대 크기입니다.  
+ 진행 `rMethodBody`및 배열의 최대 크기 `rMethodDecl` 입니다.  
   
  `pcTokens`  
- 【인】 반환된 메서드의 실제 `rMethodBody` `rMethodDecl`수및 .  
+ 진행 및에서 반환 된 실제 메서드 수 `rMethodBody` 입니다 `rMethodDecl` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`성공적으로 반환됩니다.|  
-|`S_FALSE`|등록할 메서드 토큰이 없습니다. 이 경우 `pcTokens` 0입니다.|  
+|`S_OK`|`EnumMethodImpls`성공적으로 반환 되었습니다.|  
+|`S_FALSE`|열거할 메서드 토큰이 없습니다. 이 경우는 `pcTokens` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

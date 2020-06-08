@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: 76a50be6da790ed7bd193c489d36e2823cdbe587
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f878e2f1f86bc42c0ff5abada8d7df4feb9ed228
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616965"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504197"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager 인터페이스
 호스트가 공용 언어 런타임의 가비지 수집 시스템과 상호 작용할 수 있도록 하는 메서드를 제공 합니다.  
   
 > [!NOTE]
-> 4.5 .NET Framework부터 [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) 메서드를 사용 하 여 가비지 수집 세그먼트의 크기와 가비지 수집 시스템의 최대 크기를 `DWORD` [SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md) 메서드에서 적용 되는 제한 보다 큰 값으로 설정할 수 있습니다.  
+> 4.5 .NET Framework부터 [ICLRGCManager2:: SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md) 메서드를 사용 하 여 가비지 수집 세그먼트의 크기와 가비지 수집 시스템의 최대 크기를 `DWORD` [SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md) 메서드에서 적용 되는 제한 보다 큰 값으로 설정할 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[Collect 메서드](iclrgcmanager-collect-method.md)|지정 된 세대에 대 한 가비지 수집을 강제로 수행 합니다.|  
 |[GetStats 메서드](iclrgcmanager-getstats-method.md)|가비지 컬렉션 시스템에 대 한 현재 통계 집합을 가져옵니다.|  

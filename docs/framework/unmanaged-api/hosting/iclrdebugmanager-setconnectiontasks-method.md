@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 81b6f009ea61294f398a21c4def927ef2609f32b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504240"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks 메서드
 [ICLRTask](iclrtask-interface.md) 인스턴스 목록을 식별자 및 이름과 연결 합니다.  
@@ -45,7 +45,7 @@ HRESULT SetConnectionTasks (
  `ppCLRTask`  
  진행 `ICLRTask`로 식별 되는 연결과 연결할 포인터의 배열입니다 `id` . 이 배열은 멤버를 하나 이상 포함 해야 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -58,7 +58,7 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|[Beginconnection](iclrdebugmanager-beginconnection-method.md) 이이 값을 사용 하 여 호출 되지 않았거나 `id` `dwCount` 또는 `id` 가 0 이거나의 요소 중 하나가 `ppCLRTask` null입니다.|  
   
 ## <a name="remarks"></a>설명  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드,, `BeginConnection` `SetConnectionTasks` 및 [endconnection](iclrdebugmanager-endconnection-method.md)을 제공 합니다.  
+ [ICLRDebugManager](iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드,, `BeginConnection` `SetConnectionTasks` 및 [endconnection](iclrdebugmanager-endconnection-method.md)을 제공 합니다.  
   
 > [!IMPORTANT]
 > 이러한 세 메서드는 각 작업 집합에 대해 특정 순서로 호출 되어야 합니다. `BeginConnection`새 연결을 설정 하기 위해가 먼저 호출 됩니다. `SetConnectionTasks`는 해당 연결과 관련 된 태스크 집합을 제공 하기 위해 다음에 호출 됩니다. `EndConnection`작업 목록과 식별자와 이름 간의 연결을 제거 하기 위해 마지막으로 호출 됩니다. 그러나 다른 연결에 대 한 호출은 중첩할 수 있습니다.  

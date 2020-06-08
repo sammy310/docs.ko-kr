@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: b8cba2b1a1f206392a59f8bc9b968e725e0ce6ee
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869313"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497753"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 인터페이스
 코드 프로파일러가 CLR (공용 언어 런타임)과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 하는 데 사용할 수 있는 메서드를 제공 합니다.  
   
 > [!NOTE]
-> `ICorProfilerInfo` 인터페이스의 각 메서드는 성공 또는 실패를 나타내는 HRESULT를 반환 합니다. 가능한 반환 코드 목록은 CorError .h를 참조 하세요.  
+> 인터페이스의 각 메서드 `ICorProfilerInfo` 는 성공 또는 실패를 나타내는 HRESULT를 반환 합니다. 가능한 반환 코드 목록은 CorError .h를 참조 하세요.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[BeginInprocDebugging 메서드](icorprofilerinfo-begininprocdebugging-method.md)|In-process 디버깅 지원 기능을 초기화 합니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.|  
 |[EndInprocDebugging 메서드](icorprofilerinfo-endinprocdebugging-method.md)|In-process 디버깅 세션을 종료 합니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.|  
 |[ForceGC 메서드](icorprofilerinfo-forcegc-method.md)|런타임 내에서 가비지 수집을 강제로 수행 합니다.|  
 |[GetAppDomainInfo 메서드](icorprofilerinfo-getappdomaininfo-method.md)|지정 된 응용 프로그램 도메인에 대 한 정보를 가져옵니다.|  
 |[GetAssemblyInfo 메서드](icorprofilerinfo-getassemblyinfo-method.md)|지정 된 어셈블리에 대 한 정보를 가져옵니다.|  
-|[GetClassFromObject 메서드](icorprofilerinfo-getclassfromobject-method.md)|의 `ClassID`을 가져옵니다.<br /><br /> 개체 `ObjectID`제공 됩니다.|  
+|[GetClassFromObject 메서드](icorprofilerinfo-getclassfromobject-method.md)|의를 가져옵니다. `ClassID`<br /><br /> 지정 된 개체 `ObjectID` 입니다.|  
 |[GetClassFromToken 메서드](icorprofilerinfo-getclassfromtoken-method.md)|메타 데이터 토큰이 지정 된 경우 클래스의 ID를 가져옵니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 메서드를 사용 합니다.|  
 |[GetClassIDInfo 메서드](icorprofilerinfo-getclassidinfo-method.md)|지정 된 클래스에 대 한 부모 모듈과 메타 데이터 토큰을 가져옵니다.|  
 |[GetCodeInfo 메서드](icorprofilerinfo-getcodeinfo-method.md)|지정된 함수 ID와 연결된 네이티브 코드의 범위를 가져옵니다. 이 메서드는 사용되지 않습니다. 대신 [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) 메서드를 사용 합니다.|  
 |[GetCurrentThreadID 메서드](icorprofilerinfo-getcurrentthreadid-method.md)|관리 되는 스레드인 경우 현재 스레드의 ID를 가져옵니다.|  
 |[GetEventMask 메서드](icorprofilerinfo-geteventmask-method.md)|프로파일러가 CLR에서 이벤트 알림을 받으려는 현재 이벤트 범주를 가져옵니다.|  
-|[GetFunctionFromIP 메서드](icorprofilerinfo-getfunctionfromip-method.md)|관리 코드 명령 포인터를 `FunctionID`에 매핑합니다.|  
+|[GetFunctionFromIP 메서드](icorprofilerinfo-getfunctionfromip-method.md)|관리 되는 코드 명령 포인터를에 매핑합니다 `FunctionID` .|  
 |[GetFunctionFromToken 메서드](icorprofilerinfo-getfunctionfromtoken-method.md)|함수의 ID를 가져옵니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) 메서드를 사용 합니다.|  
 |[GetFunctionInfo 메서드](icorprofilerinfo-getfunctioninfo-method.md)|지정 된 함수에 대 한 부모 클래스 및 메타 데이터 토큰을 가져옵니다.|  
 |[GetHandleFromThread 메서드](icorprofilerinfo-gethandlefromthread-method.md)|스레드의 ID를 Win32 스레드 핸들에 매핑합니다.|  
@@ -61,27 +61,27 @@ ms.locfileid: "76869313"
 |[SetEnterLeaveFunctionHooks 메서드](icorprofilerinfo-setenterleavefunctionhooks-method.md)|관리 되는 함수의 "enter", "leave" 및 "tailcall" 후크에 대해 호출 될 프로파일러 구현 함수를 지정 합니다.|  
 |[SetEventMask 메서드](icorprofilerinfo-seteventmask-method.md)|프로파일러가 CLR에서 알림을 받으려는 이벤트 형식을 지정 하는 값을 설정 합니다.|  
 |[SetFunctionIDMapper 메서드](icorprofilerinfo-setfunctionidmapper-method.md)|`FunctionID` 값을 대체 값에 매핑하기 위해 호출되는 프로파일러 구현 함수를 지정합니다. 대체 값은 프로파일러의 함수 진입점/종료점 후크에 전달됩니다.|  
-|[SetFunctionReJIT 메서드](icorprofilerinfo-setfunctionrejit-method.md)|구현되지 않았습니다. 사용 안 함.|  
+|[SetFunctionReJIT 메서드](icorprofilerinfo-setfunctionrejit-method.md)|구현되지 않았습니다. 사용하지 마십시오.|  
 |[SetILFunctionBody 메서드](icorprofilerinfo-setilfunctionbody-method.md)|지정 된 모듈에 있는 지정 된 함수의 본문을 바꿉니다.|  
 |[SetILInstrumentedCodeMap 메서드](icorprofilerinfo-setilinstrumentedcodemap-method.md)|지정 된 함수의 원래 MSIL 오프셋이 함수의 프로파일러 수정 MSIL의 새 오프셋에 매핑되는 방법을 지정 합니다.|  
   
-## <a name="remarks"></a>주의  
- 프로파일러에서는 `ICorProfilerInfo` 인터페이스의 메서드를 호출 하 여 CLR과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 합니다.  
+## <a name="remarks"></a>설명  
+ 프로파일러에서는 인터페이스의 메서드를 호출 `ICorProfilerInfo` 하 여 CLR과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 합니다.  
   
- `ICorProfilerInfo` 인터페이스의 메서드는 자유 스레드된 모델을 사용 하 여 CLR에서 구현 됩니다. 각 메서드가 HRESULT를 반환하여 성공 또는 실패를 나타냅니다. 가능한 반환 코드 목록은 CorError .h를 참조 하세요.  
+ 인터페이스의 메서드는 `ICorProfilerInfo` 자유 스레드된 모델을 사용 하 여 CLR에 의해 구현 됩니다. 각 메서드가 HRESULT를 반환하여 성공 또는 실패를 나타냅니다. 가능한 반환 코드 목록은 CorError .h를 참조 하세요.  
   
- CLR은 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)의 프로파일러 구현을 통해 초기화 하는 동안 각 코드 프로파일러에 대 한 `ICorProfilerInfo` 인터페이스를 전달 합니다. 그런 다음 코드 프로파일러는 `ICorProfilerInfo` 인터페이스의 메서드를 호출 하 여 CLR의 컨트롤에서 실행 되는 관리 코드에 대 한 정보를 가져올 수 있습니다.  
+ CLR은 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)의 프로파일러 구현을 통해 `ICorProfilerInfo` 초기화 하는 동안 각 코드 프로파일러에 대 한 인터페이스를 전달 합니다. 그런 다음 코드 프로파일러는 인터페이스의 메서드를 호출 `ICorProfilerInfo` 하 여 CLR의 컨트롤에서 실행 되는 관리 코드에 대 한 정보를 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

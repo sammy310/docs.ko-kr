@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: a216a2925382016adeb100554bdceefdf3ee902b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbf5e299285071ba6d43fd2c40fc724d19bc7b2a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616062"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504357"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent 메서드
 [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) 메서드를 호출 하 여 등록 된 이벤트에 대해 콜백을 수행 합니다.  
@@ -41,7 +41,7 @@ HRESULT OnEvent (
  `data`  
  진행 에 대 한 세부 정보를 포함 하는 개체에 대 한 포인터 `event` 입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -55,7 +55,7 @@ HRESULT OnEvent (
 ## <a name="remarks"></a>설명  
  `data`매개 변수는 지정 되지 않은 형식의 개체에 대 한 포인터입니다. `event`매개 변수가 이면는 `Event_DomainUnload` `data` 언로드된의 숫자 식별자입니다 <xref:System.AppDomain> . 호스트는이 식별자를 키로 사용 하 여 적절 한 작업을 수행할 수 있습니다.  
   
- `event`가 인 `Event_MDAFired` 경우 `data` 는 MDA (관리 디버깅 도우미)의 메시지 출력을 포함 하는 [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) 인스턴스에 대 한 포인터입니다. Mda는 이벤트에 대 한 XML 메시지를 생성 하 여 개발자가 디버깅 하는 데 도움이 되는 CLR의 기능입니다. 이러한 메시지는 관리 코드와 비관리 코드 간의 전환을 디버깅 하는 데 특히 유용할 수 있습니다. 자세한 내용은 [관리 디버깅 도우미를 사용 하 여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)을 참조 하세요.  
+ `event`가 인 `Event_MDAFired` 경우 `data` 는 MDA (관리 디버깅 도우미)의 메시지 출력을 포함 하는 [MDAInfo](mdainfo-structure.md) 인스턴스에 대 한 포인터입니다. Mda는 이벤트에 대 한 XML 메시지를 생성 하 여 개발자가 디버깅 하는 데 도움이 되는 CLR의 기능입니다. 이러한 메시지는 관리 코드와 비관리 코드 간의 전환을 디버깅 하는 데 특히 유용할 수 있습니다. 자세한 내용은 [관리 디버깅 도우미를 사용 하 여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  

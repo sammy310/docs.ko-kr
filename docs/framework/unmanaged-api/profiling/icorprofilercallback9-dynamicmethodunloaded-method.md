@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback9::DynamicMethod언로드 방법
+title: ICorProfilerCallback9::D ynamicMethodUnloaded 메서드
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback9.DynamicMethodUnloaded
@@ -8,17 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 0eb38c83e9ab706c96bdef971f0bf17cc096822b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2391ad854b17ec117940a3d3568c40d6cf7f4725
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177035"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498975"
 ---
-# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethod언로드 방법
-[.NET 프레임워크 4.7.2 이상 버전에서 지원]  
+# <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D ynamicMethodUnloaded 메서드
+[.NET Framework 4.7.2 이상 버전에서 지원 됨]  
   
-동적 메서드가 가비지 수집되고 이후에 언로드될 때마다 프로파일러에 대해 인지합니다.  
+동적 메서드가 가비지 수집 되 고 이후에 언로드될 때마다 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,17 +33,17 @@ HRESULT DynamicMethodUnloaded(
 가비지 수집 및 언로드된 메모리 내 함수의 식별자입니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [ICorProfilerCallback8.DynamicMethodJIT 컴파일 시작 방법](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [ICorProfilerCallback8.DynamicMethodJIT 컴파일 완성 방법](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8 DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8 DynamicMethodJITCompilationFinished 메서드](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [ICorProfilerCallback9 인터페이스](icorprofilercallback9-interface.md)
 - [COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS](cor-prf-high-monitor-enumeration.md)

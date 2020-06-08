@@ -1,5 +1,6 @@
 ---
 title: authenticationModules의 <add> 요소(네트워크 설정)
+description: <add>ConnectionManagement의 네트워크 설정 요소는 .NET Framework의 연결 관리 목록에 IP 주소 또는 DNS 이름을 추가 합니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155117"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504643"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules의 \<add> 요소(네트워크 설정)
 응용 프로그램에 인증 모듈을 추가 합니다.  

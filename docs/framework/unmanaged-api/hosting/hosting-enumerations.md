@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616114"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504305"
 ---
 # <a name="hosting-enumerations"></a>호스팅 열거형
 이 섹션에서는 호스팅 API가 사용 하는 관리 되지 않는 열거형에 대해 설명 합니다.  
@@ -72,13 +72,13 @@ ms.locfileid: "83616114"
  특정 메모리 할당이 요청 되었지만 충족 될 수 없는 경우 실패의 영향을 나타내는 값을 포함 합니다.  
   
  [EPolicyAction 열거형](epolicyaction-enumeration.md)  
- [EClrFailure 열거](eclrfailure-enumeration.md)에 설명 된 [EClrOperation 열거](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 및 오류에 설명 된 작업에 대해 호스트가 설정할 수 있는 정책 작업에 대해 설명 합니다.  
+ [EClrFailure 열거](eclrfailure-enumeration.md)에 설명 된 [EClrOperation 열거](eclroperation-enumeration.md) 및 오류에 설명 된 작업에 대해 호스트가 설정할 수 있는 정책 작업에 대해 설명 합니다.  
   
  [ESymbolReadingPolicy 열거형](esymbolreadingpolicy-enumeration.md)  
  PDB (프로그램 데이터베이스) 파일을 읽기 위한 정책을 설정 하는 값을 포함 합니다.  
   
  [ETaskType 열거형](etasktype-enumeration.md)  
- [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 또는 [IHostTask 인터페이스](ihosttask-interface.md) 인터페이스로 표시 되는 작업의 종류를 나타내는 값을 포함 합니다.  
+ [ICLRTask 인터페이스](iclrtask-interface.md) 또는 [IHostTask 인터페이스](ihosttask-interface.md) 인터페이스로 표시 되는 작업의 종류를 나타내는 값을 포함 합니다.  
   
  [HOST_TYPE 열거형](host-type-enumeration.md)  
  응용 프로그램을 시작 하는 호스트의 유형을 지정 하는 값을 포함 합니다.  

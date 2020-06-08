@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: d0219751987b1f2d78ee37a1553b323014c1ccfe
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499716"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 메서드
 프로파일러가 연결 작업 후 상태를 초기화할 수 있도록 CLR(공용 언어 런타임)에 의해 호출됩니다.  
@@ -39,24 +39,24 @@ HRESULT InitializeForAttach(
  [in] `ICorProfilerInfo*` 인터페이스에 대한 인터페이스 포인터입니다.  
   
  `pvClientData`  
- 진행 `pvClientData` 매개 변수에서 [IClrProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) 메서드에 전달 된 데이터에 대 한 포인터입니다. 이 매개 변수가 null일 경우 `cbClientData`는 0이 됩니다. CLR은 `InitializeForAttach`에서 반환될 때 이 메모리를 해제합니다.  
+ 진행 매개 변수에서 [IClrProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) 메서드에 전달 된 데이터에 대 한 포인터 `pvClientData` 입니다. 이 매개 변수가 null일 경우 `cbClientData`는 0이 됩니다. CLR은 `InitializeForAttach`에서 반환될 때 이 메모리를 해제합니다.  
   
  `cbClientData`  
  [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  CLR은 프로파일러가 콜백을 요청할 수 있도록 `InitializeForAttach`를 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)

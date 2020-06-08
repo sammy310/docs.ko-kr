@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615780"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504266"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 인터페이스
 호스트에서 작업 집합을 식별자와 이름에 연결할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[BeginConnection 메서드](iclrdebugmanager-beginconnection-method.md)|작업을 식별자와 연결 하기 위해 호스트와 디버거 간에 새 연결을 설정 합니다.|  
 |[EndConnection 메서드](iclrdebugmanager-endconnection-method.md)|작업 목록과 식별자 및 이름 간의 연결을 제거 합니다.|  
 |[GetDacl 메서드](iclrdebugmanager-getdacl-method.md)|이 메서드가 구현되지 않았습니다.|  
 |[IsDebuggerAttached 메서드](iclrdebugmanager-isdebuggerattached-method.md)|디버거가 프로세스에 연결되어 있는지 여부를 나타내는 값을 가져옵니다.|  
-|[SetConnectionTasks 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|[ICLRTask](iclrtask-interface.md) 인스턴스 목록을 식별자 및 이름과 연결 합니다.|  
+|[SetConnectionTasks 메서드](iclrdebugmanager-setconnectiontasks-method.md)|[ICLRTask](iclrtask-interface.md) 인스턴스 목록을 식별자 및 이름과 연결 합니다.|  
 |[SetDacl 메서드](iclrdebugmanager-setdacl-method.md)|이 메서드가 구현되지 않았습니다.|  
 |[SetSymbolReadingPolicy 메서드](iclrdebugmanager-setsymbolreadingpolicy-method.md)|PDB (프로그램 데이터베이스) 파일을 읽기 위한 정책을 설정 합니다. 이 정책은 줄 번호와 파일에 대 한 정보가 호출 스택에 포함 되는지 여부를 결정 합니다.|  
   

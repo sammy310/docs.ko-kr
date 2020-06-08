@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: 798815c1122129395e57ff1274c23292696504f0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3681106bca94f1fefb2f24a1aa4254eb2b1b0531
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865716"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499742"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 메서드
 비압축 가비지 수집의 결과로 힙에 있는 개체의 레이아웃을 보고합니다.  
@@ -50,7 +50,7 @@ HRESULT SurvivingReferences(
   
  크기는 `objectIDRangeStart` 배열에서 참조된 각 블록에 대해 지정됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]
 > 이 메서드는 64비트 플랫폼에서 4GB보다 큰 개체의 크기를 `MAX_ULONG`으로 보고합니다. 4gb 보다 큰 개체의 경우 [ICorProfilerCallback4:: SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) 메서드를 대신 사용 합니다.  
@@ -61,7 +61,7 @@ HRESULT SurvivingReferences(
   
  `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
   
- 0 <= `i` < `cSurvivingObjectIDRanges`  
+ 0 <=`i` < `cSurvivingObjectIDRanges`  
   
  비압축 가비지 컬렉션은 "데드" 개체가 사용한 메모리를 회수하지만 확보된 공간을 압축하지는 않습니다. 따라서 메모리가 힙에 반환되지만 "라이브" 개체는 이동되지 않습니다.  
   
@@ -70,15 +70,15 @@ HRESULT SurvivingReferences(
  제한된 내부 버퍼링, 서버 가비지 컬렉션 시 여러 스레드 보고 및 기타 이유로 인해 특정 가비지 컬렉션 중 `SurvivingReferences` 콜백을 여러 개 받을 수도 있습니다. 가비지 컬렉션 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences` 콜백에 보고된 모든 참조가 가비지 컬렉션 후에 유지됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)
