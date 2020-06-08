@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e93c62ad138be260422319e28a3ed85dd1871a1b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329608"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410168"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>방법: Visual Basic에서 사용자 설정의 속성 표 만들기
 
@@ -21,7 +21,7 @@ ms.locfileid: "74329608"
 > [!NOTE]
 > 이 예제가 작동하려면 애플리케이션에 해당 사용자 설정이 구성되어 있어야 합니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
- `My.Settings` 개체는 각 설정을 속성으로 표시합니다. 속성 이름은 설정 이름과 같고 속성 형식은 설정 형식과 같습니다. 설정의 **범위**는 속성이 읽기 전용인지 여부를 결정합니다. **애플리케이션** 범위 설정의 속성은 읽기 전용이지만 **사용자** 범위 설정의 속성은 읽기-쓰기입니다. 자세한 내용은 [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)를 참조하세요.  
+ `My.Settings` 개체는 각 설정을 속성으로 표시합니다. 속성 이름은 설정 이름과 같고 속성 형식은 설정 형식과 같습니다. 설정의 **범위**는 속성이 읽기 전용인지 여부를 결정합니다. **애플리케이션** 범위 설정의 속성은 읽기 전용이지만 **사용자** 범위 설정의 속성은 읽기-쓰기입니다. 자세한 내용은 [My.Settings 개체](../../../language-reference/objects/my-settings-object.md)를 참조하세요.  
   
 > [!NOTE]
 > 런타임에 애플리케이션 범위 설정의 값을 변경하거나 저장할 수 없습니다. **프로젝트 디자이너**를 통해 또는 애플리케이션의 구성 파일을 편집하여 애플리케이션을 만들 때만 애플리케이션 범위 설정을 변경할 수 있습니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
@@ -49,12 +49,12 @@ ms.locfileid: "74329608"
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 
- 애플리케이션이 종료될 때 사용자 설정이 저장됩니다. 설정을 즉시 저장하려면 `My.Settings.Save` 메서드를 호출합니다. 자세한 내용은 [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)를 참조하세요.  
+ 애플리케이션이 종료될 때 사용자 설정이 저장됩니다. 설정을 즉시 저장하려면 `My.Settings.Save` 메서드를 호출합니다. 자세한 내용은 [방법: Visual Basic에서 사용자 설정 유지](how-to-persist-user-settings.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
-- [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [방법: Visual Basic에서 애플리케이션 설정 읽기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [My.Settings 개체](../../../language-reference/objects/my-settings-object.md)
+- [방법: Visual Basic에서 애플리케이션 설정 읽기](how-to-read-application-settings.md)
+- [방법: Visual Basic에서 사용자 설정 변경](how-to-change-user-settings.md)
+- [방법: Visual Basic에서 사용자 설정 유지](how-to-persist-user-settings.md)
 - [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)

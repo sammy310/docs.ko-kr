@@ -11,16 +11,16 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: dce0e38b0198396ec0dbc3ced7f2f59c2b112b56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708412"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287573"
 ---
 # <a name="generic-collections-in-net"></a>.NET의 제네릭 컬렉션
 
- .NET 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대한 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)을 참조하세요.  
+ .NET 클래스 라이브러리는 <xref:System.Collections.Generic> 및 <xref:System.Collections.ObjectModel> 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다. 이러한 클래스에 대한 자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../collections/commonly-used-collection-types.md)을 참조하세요.  
   
 ## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
 
@@ -51,10 +51,10 @@ ms.locfileid: "75708412"
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
  [!code-vb[Conceptual.Generics.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source2.vb#7)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [제네릭](../../../docs/standard/generics/index.md)
-- [배열과 목록을 조작하기 위한 제네릭 대리자](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [제네릭 인터페이스](../../../docs/standard/generics/interfaces.md)
+- [제네릭](index.md)
+- [배열과 목록을 조작하기 위한 제네릭 대리자](delegates-for-manipulating-arrays-and-lists.md)
+- [제네릭 인터페이스](interfaces.md)

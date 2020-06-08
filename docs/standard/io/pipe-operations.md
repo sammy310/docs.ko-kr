@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 693dd1eb0b0b9bb87973eead26a344ed67641e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a634cb87a5f25b520e5fe6fd5b39eae861120a28
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706558"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278690"
 ---
 # <a name="pipe-operations-in-net"></a>.NET의 파이프 작업
 파이프는 프로세스 간 통신을 위한 수단을 제공합니다. 파이프에는 다음과 같이 두 가지 유형이 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "75706558"
   
      .NET에서는 <xref:System.IO.Pipes.AnonymousPipeServerStream> 및 <xref:System.IO.Pipes.AnonymousPipeClientStream> 클래스를 사용하여 익명 파이프를 구현합니다.  
   
-     [방법: 로컬 프로세스 간 통신에 익명 파이프 사용](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)을 참조하세요.  
+     [방법: 로컬 프로세스 간 통신에 익명 파이프 사용](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)을 참조하세요.  
   
 - 명명된 파이프  
   
@@ -32,10 +32,10 @@ ms.locfileid: "75706558"
   
      .NET에서는 <xref:System.IO.Pipes.NamedPipeServerStream> 및 <xref:System.IO.Pipes.NamedPipeClientStream> 클래스를 사용하여 명명된 파이프를 구현합니다.  
   
-     [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)을 참조하세요.  
+     [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](how-to-use-named-pipes-for-network-interprocess-communication.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [파일 및 스트림 I/O](../../../docs/standard/io/index.md)
-- [방법: 로컬 프로세스 간 통신에 익명 파이프 사용](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
-- [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [파일 및 스트림 I/O](index.md)
+- [방법: 로컬 프로세스 간 통신에 익명 파이프 사용](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](how-to-use-named-pipes-for-network-interprocess-communication.md)

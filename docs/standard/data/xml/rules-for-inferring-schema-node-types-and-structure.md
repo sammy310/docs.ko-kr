@@ -3,12 +3,12 @@ title: 스키마 노드 형식 및 구조 유추 규칙
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710247"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289085"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>스키마 노드 형식 및 구조 유추 규칙
 이 항목에서는 스키마 유추 과정에서 XML 문서의 노드 형식을 XSD(XML 스키마 정의 언어) 구조로 변환하는 방법을 설명합니다.  
@@ -35,12 +35,12 @@ ms.locfileid: "75710247"
 > [!NOTE]
 > 모든 `complexType` 선언은 익명 형식으로 유추됩니다. 유추되는 요소 중 루트 요소만이 전역 요소이며, 기타 모든 요소는 로컬 요소입니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 ### <a name="simple-typed-element"></a>단순 형식 요소  
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 단순 형식 요소에 대해 유추된 스키마를 나타냅니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "75710247"
 ### <a name="empty-element"></a>빈 요소  
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 빈 요소에 대해 유추된 스키마를 나타냅니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "75710247"
 ### <a name="empty-element-with-attributes"></a>특성을 가진 빈 요소  
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 특성을 가진 빈 요소에 대해 유추된 스키마를 나타냅니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "75710247"
 ### <a name="element-with-attributes-and-simple-content"></a>특성 및 단순 내용을 가진 요소  
  다음 표에서는 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 메서드에 대한 XML 입력 및 생성된 XML 스키마를 보여 줍니다. 굵게 표시된 요소는 특성 및 단순 내용을 가진 요소에 대해 유추된 스키마를 나타냅니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "75710247"
 > [!NOTE]
 > 요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "75710247"
 > [!NOTE]
 > 요소에 자식 요소가 한 개만 있더라도 여전히 시퀀스로 간주됩니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "75710247"
 > [!NOTE]
 > `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "75710247"
 > [!NOTE]
 > `maxOccurs` 요소의 `xs:choice` 특성은 유추된 스키마에서 `"unbounded"`로 설정됩니다.  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 |XML|스키마|  
 |---------|------------|  
@@ -142,12 +142,12 @@ ms.locfileid: "75710247"
 |문서 형식|무시됩니다.|  
 |네임스페이스|무시됩니다.|  
   
- 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)를 참조하세요.  
+ 스키마 유추 과정에 대한 자세한 내용은 [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [XML 스키마 유추](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [XML 문서에서 스키마 유추](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [단순 형식 유추 규칙](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [XML SOM(스키마 개체 모델)](xml-schema-object-model-som.md)
+- [XML 스키마 유추](inferring-an-xml-schema.md)
+- [XML 문서에서 스키마 유추](inferring-schemas-from-xml-documents.md)
+- [단순 형식 유추 규칙](rules-for-inferring-simple-types.md)

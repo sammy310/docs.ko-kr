@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 633b457106203e213f5d30003e576b7e8132f4d2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716699"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400489"
 ---
 # <a name="-reference-visual-basic"></a>-reference(Visual Basic)
 컴파일러에서 지정된 어셈블리의 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "75716699"
 |`fileList`|필수 요소. 쉼표로 구분된 어셈블리 파일 이름 목록입니다. 파일 이름에 공백이 있으면 이름을 따옴표로 묶습니다.|  
   
 ## <a name="remarks"></a>설명  
- 가져오는 파일에는 어셈블리 메타데이터가 포함되어야 합니다. 어셈블리 외부에는 public 형식만 표시됩니다. [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) 옵션은 모듈에서 메타데이터를 가져옵니다.  
+ 가져오는 파일에는 어셈블리 메타데이터가 포함되어야 합니다. 어셈블리 외부에는 public 형식만 표시됩니다. [-addmodule](addmodule.md) 옵션은 모듈에서 메타데이터를 가져옵니다.  
   
  다른 어셈블리(어셈블리 B) 자체를 참조하는 어셈블리(어셈블리 A)를 참조하면 다음과 같은 경우 어셈블리 B를 참조해야 합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75716699"
   
 - 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)를 사용하여 하나 이상의 어셈블리 참조가 있는 디렉터리를 지정합니다.  
+ [-libpath](libpath.md)를 사용하여 하나 이상의 어셈블리 참조가 있는 디렉터리를 지정합니다.  
   
  컴파일러가 모듈이 아닌 어셈블리의 형식을 인식하도록 하려면 강제로 형식을 확인해야 합니다. 이 작업을 수행하는 방법의 한 예는 형식의 인스턴스를 정의하는 것입니다. 컴파일러에 대한 어셈블리의 형식 이름을 확인하는 데 사용할 수 있는 다른 방법이 있습니다. 예를 들어, 어셈블리의 형식에서 상속되는 경우 형식 이름이 컴파일러에 알려지게 됩니다.  
   
@@ -63,8 +63,8 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [공용](../../../visual-basic/language-reference/modifiers/public.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-noconfig](noconfig.md)
+- [-target(Visual Basic)](target.md)
+- [공용](../../language-reference/modifiers/public.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

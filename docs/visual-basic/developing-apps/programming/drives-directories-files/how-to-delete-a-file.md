@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c8213786b8073d784f1f3ea51417741d5ad4cba
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401656"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 삭제
 
@@ -66,4 +66,4 @@ ms.locfileid: "74348788"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>
 - <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
-- [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [방법: 디렉터리의 파일 컬렉션 가져오기](how-to-get-the-collection-of-files-in-a-directory.md)

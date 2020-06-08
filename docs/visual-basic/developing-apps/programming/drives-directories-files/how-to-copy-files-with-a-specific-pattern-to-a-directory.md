@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: ee3951e967436a1b8aec09b8e42dc6d1b547bc02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e263e2c9035db54dbb58c6c78c0647d5442504e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348847"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401708"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사
 
@@ -64,6 +64,6 @@ ms.locfileid: "74348847"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [방법: 특정 패턴의 하위 디렉터리 찾기](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [문제 해결: 텍스트 파일 읽기 및 쓰기](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [방법: 디렉터리의 파일 컬렉션 가져오기](how-to-get-the-collection-of-files-in-a-directory.md)

@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 8168c89a6edecd5f7e33a710c9a89c92a6f82005
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 644d6b6f929e040a0fe688c18c774de6f434c4b3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588237"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290774"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>방법: 사용자 지정 PLINQ 집계 함수 작성
 이 예제는 <xref:System.Linq.ParallelEnumerable.Aggregate%2A> 메서드를 사용하여 소스 시퀀스에 사용자 지정 집계 함수를 적용하는 방법을 보여줍니다.  
   
 > [!WARNING]
-> 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.  
+> 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제는 정수 시퀀스의 표준 편차를 계산합니다.  
@@ -34,4 +34,4 @@ ms.locfileid: "80588237"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)

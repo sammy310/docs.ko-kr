@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709818"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290229"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>스키마 컴파일을 위한 XmlSchemaSet
 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사할 수 있는 캐시인 <xref:System.Xml.Schema.XmlSchemaSet>에 대해 설명합니다.  
@@ -247,7 +247,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>XML 문서 유효성 검사  
  <xref:System.Xml.Schema.XmlSchemaSet>의 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다. <xref:System.Xml.XmlReaderSettings> 개체의 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 속성에 스키마를 추가하거나 <xref:System.Xml.XmlReaderSettings> 개체의 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 속성에 <xref:System.Xml.Schema.XmlSchemaSet>을 추가하여 XML 문서의 유효성을 검사할 수 있습니다. 그런 다음 <xref:System.Xml.XmlReaderSettings> 클래스의 <xref:System.Xml.XmlReader.Create%2A> 메서드에서 <xref:System.Xml.XmlReader> 개체를 사용하여 <xref:System.Xml.XmlReader> 개체를 만들고 XML 문서의 유효성을 검사할 수 있습니다.  
   
- <xref:System.Xml.Schema.XmlSchemaSet>을 사용하여 XML 문서의 유효성을 검사하는 방법에 대한 자세한 내용은 [XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)를 참조하세요.  
+ <xref:System.Xml.Schema.XmlSchemaSet>을 사용하여 XML 문서의 유효성을 검사하는 방법에 대한 자세한 내용은 [XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사](xml-schema-xsd-validation-with-xmlschemaset.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
@@ -258,5 +258,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
-- [스키마 캐시로서 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [스키마 캐시로서 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사](xml-schema-xsd-validation-with-xmlschemaset.md)

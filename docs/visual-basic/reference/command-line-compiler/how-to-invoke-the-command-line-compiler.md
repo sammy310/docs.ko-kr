@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344255"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408610"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>방법: 명령줄 컴파일러 호출(Visual Basic)
 
@@ -60,5 +60,5 @@ ms.locfileid: "74344255"
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [조건부 컴파일](../../programming-guide/program-structure/conditional-compilation.md)

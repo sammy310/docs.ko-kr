@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353596"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398255"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 
@@ -43,7 +43,7 @@ ms.locfileid: "74353596"
 
 6. 애플리케이션을 닫습니다.
 
-     애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요. 애플리케이션 로그 파일의 위치에 대한 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.
+     애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요. 애플리케이션 로그 파일의 위치에 대한 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.
 
     > [!NOTE]
     > 기본적으로 애플리케이션을 닫으면 애플리케이션이 로그 파일 출력을 플러시합니다.
@@ -249,13 +249,13 @@ ms.locfileid: "74353596"
 
 10. 애플리케이션을 닫습니다.
 
-배포 후 로그 설정을 변경하는 방법에 대한 자세한 내용은 [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)을 참조하세요.
+배포 후 로그 설정을 변경하는 방법에 대한 자세한 내용은 [애플리케이션 로그 작업](working-with-application-logs.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [연습: 사용자 지정 로그 수신기 만들기](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [연습: My.Application.Log가 정보를 기록하는 위치 확인](walkthrough-determining-where-my-application-log-writes-information.md)
+- [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)
+- [연습: 사용자 지정 로그 수신기 만들기](walkthrough-creating-custom-log-listeners.md)
+- [방법: 로그 메시지 쓰기](how-to-write-log-messages.md)
 - [추적 스위치](../../../../framework/debug-trace-profile/trace-switches.md)
-- [애플리케이션의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [애플리케이션의 정보 기록](index.md)

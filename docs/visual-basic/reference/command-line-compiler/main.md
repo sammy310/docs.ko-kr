@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403163"
 ---
 # <a name="-main"></a>-main
 `Sub Main` 프로시저가 포함된 클래스 또는 모듈을 지정합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "72005499"
 ## <a name="remarks"></a>설명  
  실행 파일 또는 Windows 실행 프로그램을 만들 때 이 옵션을 사용합니다. **-main** 옵션을 생략하면 컴파일러가 모든 공용 클래스 및 모듈에서 유효한 공유 `Sub Main`을 검색합니다.  
   
- `Main` 프로시저의 다양한 형태에 대한 설명은 [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)를 참조하세요.  
+ `Main` 프로시저의 다양한 형태에 대한 설명은 [Visual Basic의 Main 프로시저](../../programming-guide/program-structure/main-procedure.md)를 참조하세요.  
   
  `location`이 <xref:System.Windows.Forms.Form>으로부터 상속하는 클래스인 경우 컴파일러는 클래스에 `Main` 프로시저가 없는 경우 애플리케이션을 시작하는 기본 `Main` 프로시저를 제공합니다. 이를 통해 개발 환경에서 만든 코드를 명령줄에서 컴파일할 수 있습니다.  
   
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-target(Visual Basic)](target.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
+- [Visual Basic의 Main 프로시저](../../programming-guide/program-structure/main-procedure.md)

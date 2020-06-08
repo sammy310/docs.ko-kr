@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716633"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408551"
 ---
 # <a name="-libpath"></a>-libpath
 참조된 어셈블리의 위치를 지정합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75716633"
 |`dirList`|필수 요소. 참조된 어셈블리를 현재 작업 디렉터리(컴파일러를 호출하는 디렉터리) 또는 공용 언어 런타임의 시스템 디렉터리에서 찾을 수 없는 경우 컴파일러에서 확인할 세미콜론으로 구분된 디렉터리 목록입니다. 디렉터리 이름에 공백이 있으면 이름을 따옴표(" ")로 묶습니다.|  
   
 ## <a name="remarks"></a>설명  
- `-libpath` 옵션은 [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션에서 참조하는 어셈블리의 위치를 지정합니다.  
+ `-libpath` 옵션은 [-reference](reference.md) 옵션에서 참조하는 어셈블리의 위치를 지정합니다.  
   
  컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>참조
 
 - [.NET 어셈블리](../../../standard/assembly/index.md)
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

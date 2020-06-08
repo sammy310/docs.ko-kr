@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507522"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291073"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
@@ -113,7 +113,7 @@ End Function
 
 이 작업을 수행하기 위해 수동으로 XML 문서를 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.
 
-XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.
+XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.
 
 ## <a name="why-use-the-query-syntax"></a>왜 쿼리 구문을 사용하나요?
 

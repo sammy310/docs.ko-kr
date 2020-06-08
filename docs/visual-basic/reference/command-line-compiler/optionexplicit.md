@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 37ccd14dae0ebba2535185f2646e312d9bb70390
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b004acb0c1c7d145c59a1e3a88ef7f1d405a91c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266731"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400563"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 변수를 사용하기 전에 선언되지 않은 경우 컴파일러에서 오류를 보고합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "78266731"
  선택 사항입니다. 명시적 변수 선언이 필요하면 `-optionexplicit+`를 지정합니다. `-optionexplicit+` 옵션이 기본값이며 `-optionexplicit`와 동일합니다. `-optionexplicit-` 옵션을 사용하면 변수를 암시적으로 선언할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 소스 코드 파일에 [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)이 포함되어 있으면 해당 명령문이 `-optionexplicit` 명령줄 컴파일러 설정을 재정의합니다.  
+ 소스 코드 파일에 [Option Explicit 문](../../language-reference/statements/option-explicit-statement.md)이 포함되어 있으면 해당 명령문이 `-optionexplicit` 명령줄 컴파일러 설정을 재정의합니다.  
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE에서 -optionexplicit를 설정하려면 다음을 수행합니다.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "78266731"
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
+- [Option Explicit 문](../../language-reference/statements/option-explicit-statement.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

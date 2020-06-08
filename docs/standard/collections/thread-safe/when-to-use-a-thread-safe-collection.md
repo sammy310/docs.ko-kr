@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288877"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
 .NET Framework 4에서는 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 디자인된 5가지 새 컬렉션 형식을 도입했습니다. 이러한 새 형식은 스레드로부터의 안전성을 달성하기 위해 다양한 종류의 효율적인 잠금 및 잠금 해제 동기화 메커니즘을 사용합니다. 동기화로 인해 작업에 오버헤드가 더해집니다. 사용되는 동기화의 종류, 수행되는 작업의 종류 및 컬렉션에 동시에 액세스하려는 스레드의 수와 같은 기타 요인에 따라 오버헤드의 양이 달라집니다.  
@@ -63,5 +63,5 @@ ms.locfileid: "75711222"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)
-- [병렬 프로그래밍](../../../../docs/standard/parallel-programming/index.md)
+- [스레드로부터 안전한 컬렉션](index.md)
+- [병렬 프로그래밍](../../parallel-programming/index.md)

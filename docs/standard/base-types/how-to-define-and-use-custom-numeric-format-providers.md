@@ -15,19 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523929"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290515"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
 .NET Framework에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
   
-- 숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.  
+- 숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](standard-numeric-format-strings.md)을 참조하세요.  
   
-- 함께 결합되어 사용자 지정 숫자 형식 지정자를 정의할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열입니다. 또한 `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수도 있습니다. 자세한 내용은 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
+- 함께 결합되어 사용자 지정 숫자 형식 지정자를 정의할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열입니다. 또한 `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수도 있습니다. 자세한 내용은 [사용자 지정 숫자 형식 문자열](custom-numeric-format-strings.md)을 참조하세요.  
   
 - 숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체입니다. `provider` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Int32.ToString%2A>)와 함께 사용할 수 있습니다. 일반적으로 `provider` 매개 변수는 문화권별 서식 지정에 사용됩니다.  
   

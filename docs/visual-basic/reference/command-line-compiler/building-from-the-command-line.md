@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344787"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414300"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 
@@ -35,18 +35,18 @@ MSBuild를 사용하여 명령 프롬프트에서 프로젝트(.vbproj) 파일�
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[방법: 명령줄 컴파일러 호출](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[방법: 명령줄 컴파일러 호출](how-to-invoke-the-command-line-compiler.md) \
 MS-DOS 프롬프트 또는 특정 하위 디렉터리에서 명령줄 컴파일러를 호출하는 방법을 설명합니다.
 
-[샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[샘플 컴파일 명령줄](sample-compilation-command-lines.md) \
 사용자 고유의 용도에 맞게 수정할 수 있는 샘플 명령줄 목록을 제공합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
-[Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic 명령줄 컴파일러](index.md) \
 사전순 또는 용도별로 구성된 컴파일러 옵션 목록을 제공합니다.
 
-[조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[조건부 컴파일](../../programming-guide/program-structure/conditional-compilation.md) \
 코드의 특정 섹션을 컴파일하는 방법을 설명합니다.
 
 [Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

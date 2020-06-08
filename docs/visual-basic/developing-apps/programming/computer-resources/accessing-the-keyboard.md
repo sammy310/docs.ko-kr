@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f837c01d297f8fc7375b02497c87db7798187115
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329547"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410090"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>키보드에 액세스(Visual Basic)
 
@@ -30,7 +30,7 @@ ms.locfileid: "74329547"
 |Ctrl 키가 눌러져 있는지 여부를 확인합니다.|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
 |NUM LOCK이 켜져 있는지 여부를 확인합니다.|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
 |SCROLL LOCK이 켜져 있는지 여부를 확인합니다.|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|애플리케이션 시작 및 키 입력 보내기|[방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|애플리케이션 시작 및 키 입력 보내기|[방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)](how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>참고 항목
 

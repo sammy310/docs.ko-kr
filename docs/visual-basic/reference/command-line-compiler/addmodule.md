@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: dd98b45d75ff421dc81666ed47695132a49bfa3a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9e8146497d63d949f138d6cd08c9ea8c7b03c651
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524473"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414313"
 ---
 # <a name="-addmodule"></a>-addmodule
 컴파일러에서 지정된 파일의 모든 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "72524473"
   
  `-addmodule`을 사용하여 추가된 모든 모듈은 런타임에 출력 파일과 동일한 디렉터리에 있어야 합니다. 즉, 컴파일 시간에 임의 디렉터리에 있는 모듈을 지정할 수 있지만 런타임에 모듈이 애플리케이션 디렉터리에 있어야 합니다. 그렇지 않으면 <xref:System.TypeLoadException> 오류가 발생합니다.  
   
- `-addmodule`과 함께 `-target:module`이 아닌 [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) 옵션을 암시적 또는 명시적으로 지정하는 경우 `-addmodule`에 전달하는 파일이 프로젝트 어셈블리의 일부가 됩니다. `-addmodule`을 사용하여 추가된 파일이 하나 이상 있는 출력 파일을 실행하려면 어셈블리가 필요합니다.  
+ `-addmodule`과 함께 `-target:module`이 아닌 [-target(Visual Basic)](target.md) 옵션을 암시적 또는 명시적으로 지정하는 경우 `-addmodule`에 전달하는 파일이 프로젝트 어셈블리의 일부가 됩니다. `-addmodule`을 사용하여 추가된 파일이 하나 이상 있는 출력 파일을 실행하려면 어셈블리가 필요합니다.  
   
- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)를 사용하여 어셈블리를 포함하는 파일에서 메타데이터를 가져옵니다.  
+ [-reference (Visual Basic)](reference.md)를 사용하여 어셈블리를 포함하는 파일에서 메타데이터를 가져옵니다.  
   
 > [!NOTE]
 > Visual Studio 개발 환경 내에서는 `-addmodule` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "72524473"
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-reference(Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-target(Visual Basic)](target.md)
+- [-reference(Visual Basic)](reference.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 0f17df93fc4ef22ef45f7ceff89bfb5f1ab1c18d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c9094e1550ad837444b7670cf54226322583be79
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523958"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387610"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic 애플리케이션에서 데이터에 액세스
 
@@ -24,7 +24,7 @@ Visual Basic에는 데이터에 액세스하는 애플리케이션 개발을 지
 [.NET용 Visual Studio 데이터 도구](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
 Visual Studio를 통해 데이터를 사용하는 애플리케이션을 만드는 방법에 대한 페이지의 링크를 제공합니다.
 
-[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
+[LINQ](../programming-guide/language-features/linq/index.md)  
 Visual Basic에서 LINQ를 사용하는 방법을 설명하는 항목의 링크를 제공합니다.
 
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 19795cbed27ca979af813b6060163e76fc5b3780
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e838d6df778802d7eaab3f12205698cc6ca5f72b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187222"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290593"
 ---
 # <a name="change-case-in-net"></a>.NET에서 대/소문자 바꾸기
 
@@ -41,7 +41,7 @@ ms.locfileid: "79187222"
   
  대/소문자가 혼합된 문자열을 비교하여 같은지 확인하려면 <xref:System.String.Equals%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 제공합니다.  
   
- 자세한 내용은 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)를 참조하세요.  
+ 자세한 내용은 [문자열 사용에 대한 모범 사례](best-practices-strings.md)를 참조하세요.  
   
 ## <a name="toupper"></a>ToUpper  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 메서드는 문자열의 모든 문자를 대문자로 변경합니다. 다음 예제에서는 "Hello World!" 문자열을 대/소문자 혼합에서 대문자로 변환합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "79187222"
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다. 문화권을 구분하지 않는 대/소문자 변경을 수행하거나 특정 문화권의 대/소문자 규칙을 적용하려면 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 개체를 *culture* 매개 변수에 제공합니다. <xref:System.String.ToUpper%2A> 메서드를 사용하여 문화권을 구분하지 않는 대/소문자 변경을 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 대/소문자 변경 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
+ 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다. 문화권을 구분하지 않는 대/소문자 변경을 수행하거나 특정 문화권의 대/소문자 규칙을 적용하려면 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 개체를 *culture* 매개 변수에 제공합니다. <xref:System.String.ToUpper%2A> 메서드를 사용하여 문화권을 구분하지 않는 대/소문자 변경을 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 대/소문자 변경 수행](../globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
   
 ## <a name="tolower"></a>ToLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드는 이전 메서드와 비슷하지만 대신 문자열의 모든 문자를 소문자로 변환합니다. 다음 예제에서는 "Hello World!" 문자열을 소문자로 변환합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "79187222"
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다. 문화권을 구분하지 않는 대/소문자 변경을 수행하거나 특정 문화권의 대/소문자 규칙을 적용하려면 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 개체를 *culture* 매개 변수에 제공합니다. <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 메서드를 사용하여 문화권을 구분하지 않는 대/소문자 변경을 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 대/소문자 변경 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
+ 앞의 예제는 기본적으로 문화권을 구분합니다. 기본적으로 현재 문화권의 대/소문자 규칙을 적용합니다. 문화권을 구분하지 않는 대/소문자 변경을 수행하거나 특정 문화권의 대/소문자 규칙을 적용하려면 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 메서드 오버로드를 사용하고 지정된 문화권을 나타내는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 값 또는 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 개체를 *culture* 매개 변수에 제공합니다. <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 메서드를 사용하여 문화권을 구분하지 않는 대/소문자 변경을 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 대/소문자 변경 수행](../globalization-localization/performing-culture-insensitive-case-changes.md)을 참조하세요.  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>는 각 문자의 첫 문자를 대문자로 변환하고 나머지 문자를 소문자로 변환합니다. 그러나 전체적으로 대문자인 단어는 머리글자어로 간주되며 변환되지 않습니다.  
@@ -73,5 +73,5 @@ ms.locfileid: "79187222"
   
 ## <a name="see-also"></a>참조
 
-- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
-- [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [기본적인 문자열 작업](basic-string-operations.md)
+- [Culture의 영향을 받지 않는 문자열 작업 수행](../globalization-localization/performing-culture-insensitive-string-operations.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242688"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291918"
 ---
 # <a name="globalization"></a>전역화
 
@@ -57,7 +57,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 리소스 파일을 사용하면 특히 현지화된 앱을 만드는 경우에 장점이 있습니다. 위성 어셈블리로 리소스를 배포하는 경우, 공용 언어 런타임은 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성에 의해 정의된 사용자의 현재 UI 문화권을 기반으로 적절한 문화권의 리소스를 자동으로 선택합니다. 문화권별로 적절한 리소스를 제공하고 <xref:System.Resources.ResourceManager> 개체를 제대로 인스턴스화하거나 강력한 형식 리소스 클래스를 사용하기만 한다면, 런타임에서 적절한 리소스를 가져오는 세부 정보를 처리합니다.
 
-리소스 파일을 만드는 방법에 대한 자세한 내용은 [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요. 위성 어셈블리를 만들고 배포하는 방법에 대한 자세한 내용은 [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) 및 [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.
+리소스 파일을 만드는 방법에 대한 자세한 내용은 [리소스 파일 만들기](../../framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요. 위성 어셈블리를 만들고 배포하는 방법에 대한 자세한 내용은 [위성 어셈블리 만들기](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) 및 [리소스 패키징 및 배포](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.
 
 ### <a name="search-and-compare-strings"></a>문자열 검색 및 비교
 
@@ -143,7 +143,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 - 서식 문자열을 포함하는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>
 
-- 날짜에 사용되는 경우, [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능
+- 날짜에 사용되는 경우, [복합 서식 지정](../base-types/composite-formatting.md) 기능
 
 다음 예제는 2012년 10월 11일에 대한 일출 및 일몰 데이터를 두 번 표시합니다. 처음에는 현재 문화권을 크로아티아어(크로아티아)로 설정하고 다음에는 영어(영국)로 설정합니다. 각각의 경우, 날짜 및 시간이 해당 문화권에 적절한 서식으로 표시됩니다.
 
@@ -174,7 +174,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 날짜 및 시간 값은 일반 시간("매장은 2013년 1월 2일 오전 9:00에 개장합니다.")에서 특정한 순간("생년월일: 2013년 1월 2일 오전 6:32:00")에 이르기까지 다수의 해석이 있을 수 있습니다. 시간 값이 특정한 순간을 나타내는 경우 serialize된 값으로부터 복원하며, 사용자의 지리적 위치 또는 표준 시간대와 상관없이 동일한 순간을 나타내도록 해야 합니다.
 
-다음 예제에서는 이 문제를 보여 줍니다. 단일 지역 날짜 및 시간 값을 세 가지 [표준 서식](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)(“G”는 일반 날짜 자세한 시간, “s”는 정렬 가능한 날짜/시간, “o”는 날짜/시간 값 라운드트립)은 물론 이진 형식의 문자열로 저장합니다.
+다음 예제에서는 이 문제를 보여 줍니다. 단일 지역 날짜 및 시간 값을 세 가지 [표준 서식](../base-types/standard-date-and-time-format-strings.md)(“G”는 일반 날짜 자세한 시간, “s”는 정렬 가능한 날짜/시간, “o”는 날짜/시간 값 라운드트립)은 물론 이진 형식의 문자열로 저장합니다.
 
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
@@ -224,7 +224,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 3/31/2013 3:00:00 AM Local
 ```
 
-자세한 내용은 [표준 시간대 간에 시간 변환](../../../docs/standard/datetime/converting-between-time-zones.md)을 참조하세요.
+자세한 내용은 [표준 시간대 간에 시간 변환](../datetime/converting-between-time-zones.md)을 참조하세요.
 
 ### <a name="perform-date-and-time-arithmetic"></a>날짜 및 시간 연산 수행
 
@@ -248,7 +248,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
 [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]
 
-자세한 내용은 [날짜 및 시간에 대한 산술 연산 수행](../../../docs/standard/datetime/performing-arithmetic-operations.md)을 참조하세요.
+자세한 내용은 [날짜 및 시간에 대한 산술 연산 수행](../datetime/performing-arithmetic-operations.md)을 참조하세요.
 
 ### <a name="use-culture-sensitive-names-for-date-elements"></a>날짜 요소에서 문화권 구분 이름 사용
 
@@ -259,7 +259,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 하지만 이 코드는 요일의 이름을 항상 영어로 반환합니다. 월 이름을 추출하는 코드는 훨씬 더 유연한 경우가 많습니다. 특정 언어에 월 이름과 12개월 달력이 있을 것으로 가정하는 경우가 많습니다.
 
-다음 예제에서 볼 수 있듯이, [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) 또는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 사용하면 사용자 문화권의 월 또는 요일 이름을 반영하는 문자열을 쉽게 추출할 수 있습니다. 현재 문화권을 프랑스어(프랑스)로 변경하고 2013년 7월 1일에 대한 월 이름과 요일 이름을 나타냅니다.
+다음 예제에서 볼 수 있듯이, [사용자 지정 날짜 및 시간 형식 문자열](../base-types/custom-date-and-time-format-strings.md) 또는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 사용하면 사용자 문화권의 월 또는 요일 이름을 반영하는 문자열을 쉽게 추출할 수 있습니다. 현재 문화권을 프랑스어(프랑스)로 변경하고 2013년 7월 1일에 대한 월 이름과 요일 이름을 나타냅니다.
 
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
@@ -279,7 +279,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 - 서식 문자열을 인수로 포함하는, 숫자 형식의 `ToString(String)` 메서드
 
-- 숫자 값에 사용되는 경우, [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능
+- 숫자 값에 사용되는 경우, [복합 서식 지정](../base-types/composite-formatting.md) 기능
 
 다음 예제는 프랑스 파일의 월별 평균 온도를 나타냅니다. 우선 데이터를 표시하기 전에 현재 문화권을 프랑스어(프랑스)로 설정하고 그 다음 영어(미국)로 설정합니다. 각각의 경우, 월 이름 및 온도가 해당 문화권에 적합한 서식으로 표시됩니다. 두 문화권을 온도 값에 다른 소수 구분 기호를 사용합니다. 또한, 월 이름 전체를 표시하기 위해 "MMMM" 사용자 지정 날짜 및 시간 서식 문자열이 예제에 사용되었고, 이를 통해 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 배열에서 가장 긴 월 이름의 길이를 판단하여 결과 문자열에 월 이름을 나타내기에 적합한 공간이 할당됩니다.
 
@@ -340,5 +340,5 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 ## <a name="see-also"></a>참조
 
-- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-- [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)
+- [전역화 및 지역화](index.md)
+- [문자열 사용에 대한 모범 사례](../base-types/best-practices-strings.md)

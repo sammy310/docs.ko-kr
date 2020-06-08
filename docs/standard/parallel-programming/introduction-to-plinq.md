@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588177"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290683"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 
@@ -26,10 +26,10 @@ PLINQ(병렬 LINQ)는 [LINQ(Language-Integrated Query)](../../csharp/programming
 
 PLINQ 쿼리는 비병렬 LINQ to Objects 쿼리와 여러 가지 방법에서 유사합니다. 순차적 LINQ 쿼리와 마찬가지로 PLINQ 쿼리는 모든 메모리 내 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 데이터 소스에서 작동하며 지연된 실행을 가집니다. 즉, 쿼리가 열거될 때까지 실행을 시작하지 않습니다. 주요 차이점은 PLINQ가 시스템에서 모든 프로세서를 충분히 활용하도록 시도한다는 것입니다. 데이터 소스를 세그먼트로 분할한 다음 다중 프로세서에서 병렬로 별도 작업자 스레드의 각 세그먼트에서 쿼리를 실행하여 수행합니다. 대부분의 경우 병렬 실행은 쿼리가 훨씬 더 빠르게 실행되는 것을 의미합니다.
 
-병렬 실행을 통해 PLINQ는 종종 데이터 소스에 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 쿼리 작업을 추가하여 특정한 쿼리 종류의 레거시 코드에 대한 큰 성능 개선을 얻을 수 있습니다. 그러나 병렬 처리는 자체 복잡성을 도입할 수 있으며 모든 쿼리 작업은 PLINQ에서 더 빠르게 실행될 수 없습니다. 사실, 병렬화는 실제로 특정 쿼리의 속도를 낮춥니다. 따라서 순서 지정과 같은 문제가 병렬 쿼리에 미치는 영향을 이해해야 합니다. 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.
+병렬 실행을 통해 PLINQ는 종종 데이터 소스에 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 쿼리 작업을 추가하여 특정한 쿼리 종류의 레거시 코드에 대한 큰 성능 개선을 얻을 수 있습니다. 그러나 병렬 처리는 자체 복잡성을 도입할 수 있으며 모든 쿼리 작업은 PLINQ에서 더 빠르게 실행될 수 없습니다. 사실, 병렬화는 실제로 특정 쿼리의 속도를 낮춥니다. 따라서 순서 지정과 같은 문제가 병렬 쿼리에 미치는 영향을 이해해야 합니다. 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.
 
 > [!NOTE]
-> 이 문서에서는 람다 식을 사용하여 PLINQ에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
+> 이 문서에서는 람다 식을 사용하여 PLINQ에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
 이 문서의 나머지 부분에서는 주요 PLINQ 클래스의 개요 및 PLINQ 쿼리를 만드는 방법을 설명합니다. 각 섹션은 보다 자세한 정보 및 코드 예제에 대한 링크를 포함합니다.
 
@@ -65,7 +65,7 @@ PLINQ 쿼리는 비병렬 LINQ to Objects 쿼리와 여러 가지 방법에서 �
 
 ## <a name="execution-modes"></a>실행 모드
 
-기본적으로 PLINQ는 보수적입니다. 런타임 시 PLINQ 인프라는 쿼리의 전체 구조를 분석합니다. 쿼리가 병렬화로 속도가 향상될 가능성이 있는 경우 PLINQ는 동시에 실행될 수 있는 작업으로 소스 시퀀스를 분할합니다. 쿼리를 병렬화하는 것이 안전하지 않는 경우 PLINQ는 쿼리를 순차적으로 실행합니다. PLINQ가 잠재적으로 비용이 많이 드는 병렬 알고리즘 또는 저렴한 순차적 알고리즘 중 하나를 선택할 수 있는 경우 기본적으로 순차적 알고리즘을 선택합니다. <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 메서드 및 <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 열거형을 사용하여 PLINQ가 병렬 알고리즘을 선택하도록 지시할 수 있습니다. 특정 쿼리가 테스트와 측정으로 병렬로 더 빨리 실행되는 것을 알고 있는 경우에 유용합니다. 자세한 내용은 [방법: PLINQ에 실행 모드 지정](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)을 참조하세요.
+기본적으로 PLINQ는 보수적입니다. 런타임 시 PLINQ 인프라는 쿼리의 전체 구조를 분석합니다. 쿼리가 병렬화로 속도가 향상될 가능성이 있는 경우 PLINQ는 동시에 실행될 수 있는 작업으로 소스 시퀀스를 분할합니다. 쿼리를 병렬화하는 것이 안전하지 않는 경우 PLINQ는 쿼리를 순차적으로 실행합니다. PLINQ가 잠재적으로 비용이 많이 드는 병렬 알고리즘 또는 저렴한 순차적 알고리즘 중 하나를 선택할 수 있는 경우 기본적으로 순차적 알고리즘을 선택합니다. <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 메서드 및 <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 열거형을 사용하여 PLINQ가 병렬 알고리즘을 선택하도록 지시할 수 있습니다. 특정 쿼리가 테스트와 측정으로 병렬로 더 빨리 실행되는 것을 알고 있는 경우에 유용합니다. 자세한 내용은 [방법: PLINQ에 실행 모드 지정](how-to-specify-the-execution-mode-in-plinq.md)을 참조하세요.
 
 ## <a name="degree-of-parallelism"></a>병렬 처리 수준
 
@@ -85,15 +85,15 @@ PLINQ 쿼리는 비병렬 LINQ to Objects 쿼리와 여러 가지 방법에서 �
 [!code-csharp[PLINQ#3](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#3)]
 [!code-vb[PLINQ#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#3)]
 
-자세한 내용은 [PLINQ에서 순서 유지](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)를 참조하세요.
+자세한 내용은 [PLINQ에서 순서 유지](order-preservation-in-plinq.md)를 참조하세요.
 
 ## <a name="parallel-vs-sequential-queries"></a>병렬 쿼리와 순차적 쿼리
 
-일부 작업에서는 원본 데이터가 순차적으로 전달되어야 합니다. <xref:System.Linq.ParallelEnumerable> 쿼리 연산자는 필요할 때 자동으로 순차 모드로 되돌립니다. 순차적 실행이 필요한 사용자 정의 쿼리 연산자 및 사용자 대리자의 경우 PLINQ는 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 메서드를 제공합니다. <xref:System.Linq.ParallelEnumerable.AsSequential%2A>을 사용하는 경우 쿼리에서 모든 후속 연산자는 <xref:System.Linq.ParallelEnumerable.AsParallel%2A>이 다시 호출될 때까지 순차적으로 실행됩니다. 자세한 내용은 [방법: 병렬 및 순차적 LINQ 쿼리 결합](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)을 참조하세요.
+일부 작업에서는 원본 데이터가 순차적으로 전달되어야 합니다. <xref:System.Linq.ParallelEnumerable> 쿼리 연산자는 필요할 때 자동으로 순차 모드로 되돌립니다. 순차적 실행이 필요한 사용자 정의 쿼리 연산자 및 사용자 대리자의 경우 PLINQ는 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 메서드를 제공합니다. <xref:System.Linq.ParallelEnumerable.AsSequential%2A>을 사용하는 경우 쿼리에서 모든 후속 연산자는 <xref:System.Linq.ParallelEnumerable.AsParallel%2A>이 다시 호출될 때까지 순차적으로 실행됩니다. 자세한 내용은 [방법: 병렬 및 순차적 LINQ 쿼리 결합](how-to-combine-parallel-and-sequential-linq-queries.md)을 참조하세요.
 
 ## <a name="options-for-merging-query-results"></a>쿼리 결과 병합에 대한 옵션
 
-PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 결과는 `foreach` 반복(Visual Basic에서 `For Each`) 또는 목록 또는 배열로 삽입으로 소비에 대한 주 스레드로 다시 병합되어야 합니다. 일부 경우에서 특정 종류의 병합 작업을 지정하는 것이 도움이 될 수도 있습니다(예: 보다 신속하게 결과 생성을 시작하도록). 이를 위해 PLINQ는 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 메서드 및 <xref:System.Linq.ParallelMergeOptions> 열거형을 지원합니다. 자세한 내용은 [PLINQ의 병합 옵션](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)을 참조하세요.
+PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 결과는 `foreach` 반복(Visual Basic에서 `For Each`) 또는 목록 또는 배열로 삽입으로 소비에 대한 주 스레드로 다시 병합되어야 합니다. 일부 경우에서 특정 종류의 병합 작업을 지정하는 것이 도움이 될 수도 있습니다(예: 보다 신속하게 결과 생성을 시작하도록). 이를 위해 PLINQ는 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 메서드 및 <xref:System.Linq.ParallelMergeOptions> 열거형을 지원합니다. 자세한 내용은 [PLINQ의 병합 옵션](merge-options-in-plinq.md)을 참조하세요.
 
 ## <a name="the-forall-operator"></a>ForAll 연산자
 
@@ -104,15 +104,15 @@ PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 
 
 다음 그림은 쿼리 실행과 관련하여 `foreach` 및 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 간의 차이를 보여줍니다.
 
-![ForAll 및 ForEach](../../../docs/standard/parallel-programming/media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
+![ForAll 및 ForEach](media/vs-isvnt-allvseach.png "VS_ISVNT_ALLvsEACH")
 
 ## <a name="cancellation"></a>취소
 
-PLINQ는 .NET Framework 4에서 취소 유형과 통합됩니다. (자세한 내용은 [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)를 참조하세요.) 따라서 순차적 LINQ to Objects 쿼리와 달리 PLINQ 쿼리는 취소할 수 있습니다. 취소 가능한 PLINQ 쿼리를 만들려면 쿼리에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 연산자를 사용하고 인수로 <xref:System.Threading.CancellationToken> 인스턴스를 제공합니다. 토큰에서 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true로 설정된 경우 PLINQ는 이를 감지하고 모든 스레드에서 처리를 중지하고 <xref:System.OperationCanceledException>을 throw합니다.
+PLINQ는 .NET Framework 4에서 취소 유형과 통합됩니다. (자세한 내용은 [관리되는 스레드의 취소](../threading/cancellation-in-managed-threads.md)를 참조하세요.) 따라서 순차적 LINQ to Objects 쿼리와 달리 PLINQ 쿼리는 취소할 수 있습니다. 취소 가능한 PLINQ 쿼리를 만들려면 쿼리에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 연산자를 사용하고 인수로 <xref:System.Threading.CancellationToken> 인스턴스를 제공합니다. 토큰에서 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true로 설정된 경우 PLINQ는 이를 감지하고 모든 스레드에서 처리를 중지하고 <xref:System.OperationCanceledException>을 throw합니다.
 
 PLINQ 쿼리는 취소 토큰이 설정된 후 몇 가지 요소를 계속해서 처리할 수 있습니다.
 
-응답성을 높이기 위해 장기 실행 사용자 대리자에서 취소 요청에 응답할 수도 있습니다. 자세한 내용은 [방법: PLINQ 쿼리 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)를 참조하세요.
+응답성을 높이기 위해 장기 실행 사용자 대리자에서 취소 요청에 응답할 수도 있습니다. 자세한 내용은 [방법: PLINQ 쿼리 취소](how-to-cancel-a-plinq-query.md)를 참조하세요.
 
 ## <a name="exceptions"></a>예외
 
@@ -120,7 +120,7 @@ PLINQ 쿼리를 실행하는 경우 여러 예외가 서로 다른 여러 스레
 
 예외가 가입된 스레드로 다시 버블 업될 수 있는 경우 예외가 발생한 후에도 쿼리에서 일부 항목을 계속 처리할 수 있습니다.
 
-자세한 내용은 [방법: PLINQ 쿼리의 예외 처리](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.
+자세한 내용은 [방법: PLINQ 쿼리의 예외 처리](how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.
 
 ## <a name="custom-partitioners"></a>사용자 지정 파티셔너
 
@@ -129,13 +129,13 @@ PLINQ 쿼리를 실행하는 경우 여러 예외가 서로 다른 여러 스레
 [!code-csharp[PLINQ#2](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#2)]
 [!code-vb[PLINQ#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq3.vb#2)]
 
-PLINQ는 고정된 파티션 수를 지원합니다(데이터는 부하 분산을 위해 런타임 동안 해당 파티션에 동적으로 다시 할당될 수도 있음). <xref:System.Threading.Tasks.Parallel.For%2A> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>는 동적 분할만을 지원합니다. 즉, 파티션 수가 런타임 시 변경됨을 의미합니다. 자세한 내용은 [PLINQ 및 TPL에 대한 사용자 지정 파티셔너](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)를 참조하세요.
+PLINQ는 고정된 파티션 수를 지원합니다(데이터는 부하 분산을 위해 런타임 동안 해당 파티션에 동적으로 다시 할당될 수도 있음). <xref:System.Threading.Tasks.Parallel.For%2A> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>는 동적 분할만을 지원합니다. 즉, 파티션 수가 런타임 시 변경됨을 의미합니다. 자세한 내용은 [PLINQ 및 TPL에 대한 사용자 지정 파티셔너](custom-partitioners-for-plinq-and-tpl.md)를 참조하세요.
 
 ## <a name="measuring-plinq-performance"></a>PLINQ 성능 측정
 
-대부분의 경우에서 쿼리는 병렬화될 수 있지만 병렬 쿼리 설정의 오버헤드는 얻게 되는 성능 이점을 능가합니다. 쿼리가 많은 계산을 수행하지 않거나 데이터 소스가 작은 경우 PLINQ 쿼리는 순차 LINQ to Objects 쿼리보다 느려질 수 있습니다. Visual Studio Team Server에서 병렬 성능 분석기를 사용하여 처리 병목 지점을 찾고 쿼리가 병렬로 실행 중인지 순차적으로 실행 중인지 여부를 확인하도록 다양한 쿼리의 성능을 비교할 수 있습니다. 자세한 내용은 [동시성 시각화](/visualstudio/profiling/concurrency-visualizer) 및 [방법: PLINQ 쿼리 성능 측정](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)을 참조하세요.
+대부분의 경우에서 쿼리는 병렬화될 수 있지만 병렬 쿼리 설정의 오버헤드는 얻게 되는 성능 이점을 능가합니다. 쿼리가 많은 계산을 수행하지 않거나 데이터 소스가 작은 경우 PLINQ 쿼리는 순차 LINQ to Objects 쿼리보다 느려질 수 있습니다. Visual Studio Team Server에서 병렬 성능 분석기를 사용하여 처리 병목 지점을 찾고 쿼리가 병렬로 실행 중인지 순차적으로 실행 중인지 여부를 확인하도록 다양한 쿼리의 성능을 비교할 수 있습니다. 자세한 내용은 [동시성 시각화](/visualstudio/profiling/concurrency-visualizer) 및 [방법: PLINQ 쿼리 성능 측정](how-to-measure-plinq-query-performance.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)
+- [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)

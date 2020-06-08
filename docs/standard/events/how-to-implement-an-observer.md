@@ -9,15 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139306"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289722"
 ---
 # <a name="how-to-implement-an-observer"></a>방법: 관찰자 구현
-관찰자 디자인 패턴은 알림에 등록하는 관찰자와 데이터를 모니터링하고 하나 이상의 관찰자에게 알림을 보내는 공급자 간에 구분이 필요합니다. 이 항목에서는 관찰자를 만드는 방법을 설명합니다. 관련 항목인 [방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)에서는 공급자를 만드는 방법을 설명합니다.  
+관찰자 디자인 패턴은 알림에 등록하는 관찰자와 데이터를 모니터링하고 하나 이상의 관찰자에게 알림을 보내는 공급자 간에 구분이 필요합니다. 이 항목에서는 관찰자를 만드는 방법을 설명합니다. 관련 항목인 [방법: 공급자 구현](how-to-implement-a-provider.md)에서는 공급자를 만드는 방법을 설명합니다.  
   
 ### <a name="to-create-an-observer"></a>관찰자를 만들려면  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73139306"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.IObserver%601>
-- [관찰자 디자인 패턴](../../../docs/standard/events/observer-design-pattern.md)
-- [방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [관찰자 디자인 패턴](observer-design-pattern.md)
+- [방법: 공급자 구현](how-to-implement-a-provider.md)
+- [관찰자 디자인 패턴 유용한 정보](observer-design-pattern-best-practices.md)

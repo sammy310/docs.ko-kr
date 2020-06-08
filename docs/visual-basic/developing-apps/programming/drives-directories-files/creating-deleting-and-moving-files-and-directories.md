@@ -22,12 +22,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348917"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401760"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동
 
@@ -35,46 +35,46 @@ ms.locfileid: "74348917"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 특정 패턴의 파일을 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [방법: 특정 패턴의 파일을 디렉터리에 복사](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  .txt 파일만 등 특정 파일 이름 패턴을 사용하는 파일을 디렉터리에 복사하는 방법을 보여 줍니다.  
   
- [방법: 동일한 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [방법: 동일한 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  동일한 디렉터리에 파일의 복사본을 만드는 방법을 보여 줍니다.  
   
- [방법: 다른 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [방법: 다른 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  다른 디렉터리에 파일을 복사하는 방법을 보여 줍니다.  
   
- [방법: 파일 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [방법: 파일 만들기](how-to-create-a-file.md)  
  파일을 만드는 방법을 보여 줍니다.  
   
- [방법: 파일 삭제](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [방법: 파일 삭제](how-to-delete-a-file.md)  
  파일을 삭제하는 방법을 보여 줍니다.  
   
- [방법: 특정 패턴의 파일 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [방법: 특정 패턴의 파일 찾기](how-to-find-files-with-a-specific-pattern.md)  
  디렉터리에서 특정 파일 이름 패턴을 가진 파일만 나열하는 방법을 보여 줍니다.  
   
- [방법: 파일 이동](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [방법: 파일 이동](how-to-move-a-file.md)  
  파일을 다른 디렉터리로 이동하는 방법을 보여 줍니다.  
   
- [방법: 파일 이름 바꾸기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [방법: 파일 이름 바꾸기](how-to-rename-a-file.md)  
  파일 이름을 바꾸는 방법을 보여 줍니다.  
   
- [방법: 디렉터리를 다른 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [방법: 디렉터리를 다른 디렉터리에 복사](how-to-copy-a-directory-to-another-directory.md)  
  디렉터리를 다른 위치에 복사하는 방법을 보여 줍니다.  
   
- [방법: 디렉터리 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [방법: 디렉터리 만들기](how-to-create-a-directory.md)  
  디렉터리를 만드는 방법을 보여 줍니다.  
   
- [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [방법: 특정 패턴의 하위 디렉터리 찾기](how-to-find-subdirectories-with-a-specific-pattern.md)  
  이름에 특정 패턴이 있는 디렉터리를 나열하는 방법을 보여 줍니다.  
   
- [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [방법: 디렉터리의 파일 컬렉션 가져오기](how-to-get-the-collection-of-files-in-a-directory.md)  
  디렉터리에 있는 파일을 나열하는 방법을 보여 줍니다.  
   
- [방법: 내 문서 디렉터리의 내용 검색](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [방법: 내 문서 디렉터리의 내용 검색](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  특수 디렉터리에서 읽는 방법을 보여 줍니다.  
   
- [방법: 파일 경로의 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [방법: 파일 경로의 구문 분석](how-to-parse-file-paths.md)  
  `My` 메서드를 사용하여 파일 경로를 결합하는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
@@ -120,8 +120,8 @@ ms.locfileid: "74348917"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [파일 읽기](reading-from-files.md)  
  파일 읽기와 관련된 작업을 나열합니다.  
   
- [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [파일에 쓰기](writing-to-files.md)  
  파일에 쓰기와 관련된 작업을 나열합니다.

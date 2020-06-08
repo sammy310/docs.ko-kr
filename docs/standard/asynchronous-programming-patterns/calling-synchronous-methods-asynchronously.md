@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105121"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289904"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 
@@ -39,7 +39,7 @@ ms.locfileid: "73105121"
 `EndInvoke` 메서드는 비동기 호출의 결과를 검색합니다. 이 메서드는 `BeginInvoke`를 호출한 후 언제든지 호출할 수 있습니다. 비동기 호출이 완료되지 않은 경우 `EndInvoke` 는 호출이 완료될 때까지 호출하는 스레드를 차단합니다. `EndInvoke`의 매개 변수에는 비동기 방식으로 실행하려는 메서드의 `out` 및 `ref` 매개 변수(Visual Basic의 경우 `<Out>` `ByRef` 및 `ByRef`)와 `BeginInvoke`에서 반환하는 <xref:System.IAsyncResult>가 포함됩니다.
 
 > [!NOTE]
-> Visual Studio의 IntelliSense 기능은 `BeginInvoke` 및 `EndInvoke`의 매개 변수를 표시합니다. Visual Studio 또는 이와 유사한 도구를 사용하지 않거나 Visual Studio와 C#을 함께 사용하는 경우 이러한 메서드에 대해 정의된 매개 변수 설명을 보려면 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.
+> Visual Studio의 IntelliSense 기능은 `BeginInvoke` 및 `EndInvoke`의 매개 변수를 표시합니다. Visual Studio 또는 이와 유사한 도구를 사용하지 않거나 Visual Studio와 C#을 함께 사용하는 경우 이러한 메서드에 대해 정의된 매개 변수 설명을 보려면 [APM(비동기 프로그래밍 모델)](asynchronous-programming-model-apm.md)을 참조하세요.
 
 이 항목의 코드 예제에서는 `BeginInvoke` 및 `EndInvoke` 를 사용하여 비동기 호출을 수행하는 네 가지 일반적인 방법을 보여 줍니다. `BeginInvoke` 를 호출한 후 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -112,4 +112,4 @@ ms.locfileid: "73105121"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Delegate>
-- [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)

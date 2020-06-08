@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: cee06adec89aac4b3e3f170df3bf932e466f3070
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: bcbc690690993a094bc5360d0c13bddebf8cd615
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004967"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414248"
 ---
 # <a name="-win32resource"></a>-win32resource
 Win32 리소스 파일을 출력 파일에 삽입합니다.  
@@ -34,7 +34,7 @@ Win32 리소스 파일을 출력 파일에 삽입합니다.
   
  Win32 리소스는 **파일 탐색기**에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵(아이콘) 정보를 포함할 수 있습니다. `-win32resource`를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 버전 정보를 생성합니다. `-win32resource` 및 `-win32icon` 옵션은 함께 사용할 수 없습니다.  
   
- .NET Framework 리소스 파일 또는 [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)를 참조하여 .NET Framework 리소스 파일을 연결하려면 [-linkresource(Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)를 참조하세요.  
+ .NET Framework 리소스 파일 또는 [-resource (Visual Basic)](resource.md)를 참조하여 .NET Framework 리소스 파일을 연결하려면 [-linkresource(Visual Basic)](linkresource.md)를 참조하세요.  
   
 > [!NOTE]
 > Visual Studio 개발 환경 내에서는 `-win32resource` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
@@ -48,5 +48,5 @@ vbc -win32resource:rf.res in.vb
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348547"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403098"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@(지시 파일 지정)(Visual Basic)
 
@@ -40,7 +40,7 @@ ms.locfileid: "74348547"
 
 명령줄에 지정된 옵션을 하나 이상의 지시 파일에 지정된 옵션과 결합할 수 있습니다. 명령 옵션이 발견되면 컴파일러에서 처리합니다. 따라서, 명령줄 인수는 지시 파일에서 이전에 나열된 옵션을 재정의할 수 있습니다. 반대로 지시 파일의 옵션은 명령줄 또는 다른 지시 파일에서 이전에 나열된 옵션을 재정의합니다.
 
-Visual Basic에서는 Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.rsp 파일을 제공합니다. Vbc.rsp 파일은 `-noconfig` 옵션을 사용하지 않는 한 기본적으로 포함되어 있습니다. 자세한 내용은 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)를 참조하세요.
+Visual Basic에서는 Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.rsp 파일을 제공합니다. Vbc.rsp 파일은 `-noconfig` 옵션을 사용하지 않는 한 기본적으로 포함되어 있습니다. 자세한 내용은 [-noconfig](noconfig.md)를 참조하세요.
 
 > [!NOTE]
 > Visual Studio 개발 환경 내에서는 `@` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.
@@ -67,6 +67,6 @@ vbc @file1.rsp
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-noconfig](noconfig.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

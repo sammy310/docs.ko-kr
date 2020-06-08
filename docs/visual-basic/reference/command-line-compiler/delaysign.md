@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 3ee94df096b756be544964cfbbd405355e3f728f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581267"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408701"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -30,7 +30,7 @@ ms.locfileid: "72581267"
 
 ## <a name="remarks"></a>설명
 
-`-delaysign` 옵션은 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 또는 [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)와 함께 사용하지 않으면 효과가 없습니다.
+`-delaysign` 옵션은 [-keyfile](keyfile.md) 또는 [-keycontainer](keycontainer.md)와 함께 사용하지 않으면 효과가 없습니다.
 
 완전히 서명된 어셈블리를 요청할 경우 컴파일러는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 프라이빗 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 컴파일러는 서명을 컴퓨팅하거나 저장하지 않고 나중에 서명을 추가할 수 있도록 파일에 공간을 예약합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "72581267"
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-keyfile](keyfile.md)
+- [-keycontainer](keycontainer.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

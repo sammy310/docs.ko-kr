@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334546"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411592"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이름 바꾸기
 
@@ -51,7 +51,7 @@ ms.locfileid: "74334546"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [방법: 파일 이동](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
-- [파일/디렉터리 만들기, 삭제 및 이동](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [방법: 동일한 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [방법: 다른 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [방법: 파일 이동](how-to-move-a-file.md)
+- [파일/디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)
+- [방법: 동일한 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [방법: 다른 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

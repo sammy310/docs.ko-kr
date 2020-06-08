@@ -13,12 +13,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155752"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291814"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>방법: 새로 만든 데이터 파일 읽기 및 쓰기
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType>와 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 클래스는 문자열이 아닌 데이터를 쓰고 읽는 데 사용됩니다. 다음 예제에서는 빈 파일 스트림을 만들어서 여기에 데이터를 쓰고 데이터를 읽는 방법을 보여줍니다.
@@ -39,10 +39,10 @@ ms.locfileid: "78155752"
 - <xref:System.IO.FileStream>  
 - <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
 - <xref:System.IO.SeekOrigin>  
-- [방법: 디렉터리 및 파일 열거](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [방법: 로그 파일 열기 및 추가](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [방법: 파일에서 텍스트 읽기](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [방법: 파일에 텍스트 쓰기](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [방법: 문자열에서 문자 읽기](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [방법: 문자열에 문자 쓰기](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [파일 및 스트림 I/O](../../../docs/standard/io/index.md)
+- [방법: 디렉터리 및 파일 열거](how-to-enumerate-directories-and-files.md)  
+- [방법: 로그 파일 열기 및 추가](how-to-open-and-append-to-a-log-file.md)  
+- [방법: 파일에서 텍스트 읽기](how-to-read-text-from-a-file.md)  
+- [방법: 파일에 텍스트 쓰기](how-to-write-text-to-a-file.md)  
+- [방법: 문자열에서 문자 읽기](how-to-read-characters-from-a-string.md)  
+- [방법: 문자열에 문자 쓰기](how-to-write-characters-to-a-string.md)  
+- [파일 및 스트림 I/O](index.md)

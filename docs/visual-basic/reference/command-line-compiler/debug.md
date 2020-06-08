@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716782"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408727"
 ---
 # <a name="-debug-visual-basic"></a>-debug(Visual Basic)
 
@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-bugreport](bugreport.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

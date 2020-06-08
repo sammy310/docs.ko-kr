@@ -3,12 +3,12 @@ title: 외부 리소스 확인
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82e9231be8a3619f59313460f0d5e0b246eb9436
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710273"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291489"
 ---
 # <a name="resolving-external-resources"></a>외부 리소스 확인
 **XmlDocument** 클래스는 **XmlDocument**의 **XmlResolver** 속성을 사용하여 외부 DTD(문서 종류 정의), 엔터티 및 스키마와 같이 XML 데이터에 인라인으로 들어 있지 않은 리소스를 찾습니다. 이러한 항목은 네트워크나 로컬 드라이브에 있을 수 있으며 URI(Uniform Resource Identifier)로 식별할 수 있습니다. 따라서 **XmlDocument**로 문서에 있는 **EntityReference** 노드를 확인하고 외부 DTD나 스키마에 따라 문서의 유효성을 검사할 수 있습니다.  
@@ -52,4 +52,4 @@ ms.locfileid: "75710273"
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

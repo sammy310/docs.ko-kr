@@ -13,19 +13,19 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 16b5a297c13cd9096548ed489e4994b72a48da67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6184e52c3f6e39e452331af27b83520e498062aa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121435"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289930"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>AsyncWaitHandle을 사용하는 애플리케이션 실행 블로킹
 비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 애플리케이션은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 애플리케이션의 기본 스레드를 차단합니다.  
   
 - 비동기 작업의 **Begin**_OperationName_ 메서드에 의해 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 속성을 사용합니다. 이 항목에서 이 방법을 설명합니다.  
   
-- 비동기 작업의 **End**_OperationName_ 메서드를 호출합니다. 이 방법을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
+- 비동기 작업의 **End**_OperationName_ 메서드를 호출합니다. 이 방법을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 블로킹](blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
   
  비동기 작업이 완료될 때까지 하나 이상의 <xref:System.Threading.WaitHandle> 개체를 사용하여 차단하는 애플리케이션은 일반적으로 **Begin**_OperationName_ 메서드를 호출하고 작업의 결과 없이 완료할 수 있는 작업을 수행한 다음, 비동기 작업이 완료될 때까지 차단합니다. 애플리케이션은 <xref:System.IAsyncResult.AsyncWaitHandle%2A>를 사용하는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드 중 하나를 호출하여 단일 작업을 차단할 수 있습니다. 비동기 작업 집합이 완료될 때까지 대기하는 동안 차단하려면 연관된 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 개체를 배열에 저장하고 <xref:System.Threading.WaitHandle.WaitAll%2A> 메서드 중 하나를 호출합니다. 일련의 비동기 작업 중 하나가 완료될 때까지 대기하는 동안 차단하려면 연관된 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 개체를 배열에 저장하고 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드 중 하나를 호출합니다.  
   
@@ -37,5 +37,5 @@ ms.locfileid: "73121435"
   
 ## <a name="see-also"></a>참고 항목
 
-- [이벤트 기반 비동기 패턴(EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)
+- [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)

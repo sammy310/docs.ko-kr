@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6082806591d398aa8b16b44e769a3f8078ce62d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716748"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387740"
 ---
 # <a name="-link-visual-basic"></a>-link(Visual Basic)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -97,4 +97,4 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
-- [COM Interop 소개](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [COM Interop 소개](../../programming-guide/com-interop/introduction-to-com-interop.md)

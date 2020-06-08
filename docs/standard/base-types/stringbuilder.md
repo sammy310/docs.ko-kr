@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121672"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289267"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "73121672"
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드는 <xref:System.Text.StringBuilder> 개체의 끝에 텍스트를 추가합니다. 또한 서식 지정할 개체의 <xref:System.IFormattable> 구현을 호출하여 복합 서식 지정 기능을 지원합니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 따라서 숫자, 날짜 및 시간, 열거형 값에 대한 표준 서식 문자열, 숫자, 날짜 및 시간 값에 대한 사용자 지정 서식 문자열, 사용자 지정 형식에 대해 정의된 서식 문자열을 허용합니다. 서식 지정에 대한 자세한 내용은 [서식 지정 형식](../../../docs/standard/base-types/formatting-types.md)을 참조하세요. 이 메서드를 사용하여 변수의 서식을 사용자 지정하고 해당 값을 <xref:System.Text.StringBuilder>에 추가할 수 있습니다. 다음 예에서는 <xref:System.Text.StringBuilder.AppendFormat%2A> 메서드를 사용하여 통화 값으로 서식 지정된 정수 값을 <xref:System.Text.StringBuilder> 개체의 끝에 배치합니다.  
+ <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드는 <xref:System.Text.StringBuilder> 개체의 끝에 텍스트를 추가합니다. 또한 서식 지정할 개체의 <xref:System.IFormattable> 구현을 호출하여 복합 서식 지정 기능을 지원합니다. 자세한 내용은 [복합 서식 지정](composite-formatting.md)을 참조하세요. 따라서 숫자, 날짜 및 시간, 열거형 값에 대한 표준 서식 문자열, 숫자, 날짜 및 시간 값에 대한 사용자 지정 서식 문자열, 사용자 지정 형식에 대해 정의된 서식 문자열을 허용합니다. 서식 지정에 대한 자세한 내용은 [서식 지정 형식](formatting-types.md)을 참조하세요. 이 메서드를 사용하여 변수의 서식을 사용자 지정하고 해당 값을 <xref:System.Text.StringBuilder>에 추가할 수 있습니다. 다음 예에서는 <xref:System.Text.StringBuilder.AppendFormat%2A> 메서드를 사용하여 통화 값으로 서식 지정된 정수 값을 <xref:System.Text.StringBuilder> 개체의 끝에 배치합니다.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
@@ -112,5 +112,5 @@ ms.locfileid: "73121672"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
+- [기본적인 문자열 작업](basic-string-operations.md)
+- [형식 서식 지정](formatting-types.md)

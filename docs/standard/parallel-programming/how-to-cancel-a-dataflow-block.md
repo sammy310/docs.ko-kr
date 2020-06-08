@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140084"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285549"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>방법: 데이터 흐름 블록 취소
 이 문서에서는 애플리케이션에서 취소를 사용하도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Windows Forms를 사용하여 데이터 흐름 파이프라인에서 작업 항목이 활성 상태인 위치뿐만 아니라 취소의 효과도 보여 줍니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "73140084"
   
  `incrementProgress` 및 `decrementProgress` 데이터 흐름 블록이 사용자 인터페이스에서 작동하기 때문에 이러한 작업은 사용자 인터페이스 스레드에서 발생해야 합니다. 이를 위해 생성 중에 이러한 개체는 각각 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 속성이 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>로 설정된 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> 개체를 제공합니다. <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드는 현재 동기화 컨텍스트에서 작업을 수행하는 <xref:System.Threading.Tasks.TaskScheduler> 개체를 만듭니다. `Form1` 생성자가 사용자 인터페이스 스레드에서 호출되기 때문에 `incrementProgress` 및 `decrementProgress` 데이터 흐름 블록에 대한 작업도 사용자 인터페이스 스레드에서 실행됩니다.  
   
- 이 예제에서는 파이프라인의 멤버를 생성할 때 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성을 설정합니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성은 데이터 흐름 블록 실행을 영구적으로 취소하므로 사용자가 작업을 취소한 다음, 파이프라인에 더 많은 작업 항목을 추가하기를 원하면 전체 파이프라인을 다시 만들어야 합니다. 작업이 취소된 후 다른 작업을 수행할 수 있도록 데이터 흐름 블록을 취소하는 대체 방법을 보여 주는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
+ 이 예제에서는 파이프라인의 멤버를 생성할 때 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성을 설정합니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성은 데이터 흐름 블록 실행을 영구적으로 취소하므로 사용자가 작업을 취소한 다음, 파이프라인에 더 많은 작업 항목을 추가하기를 원하면 전체 파이프라인을 다시 만들어야 합니다. 작업이 취소된 후 다른 작업을 수행할 수 있도록 데이터 흐름 블록을 취소하는 대체 방법을 보여 주는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 파이프라인 연결  
  이 섹션에서는 사용자 인터페이스에 데이터 흐름 파이프라인을 연결하는 방법에 대해 설명합니다. 파이프라인을 만들고 파이프라인에 작업 항목을 추가하는 작업은 모두 **작업 항목 추가** 단추의 이벤트 처리기에서 제어됩니다. 취소는 **취소** 단추를 클릭하면 시작됩니다. 사용자가 이러한 단추 중 하나를 클릭하면 적절한 작업이 비동기식으로 시작됩니다.  
@@ -92,8 +92,8 @@ ms.locfileid: "73140084"
   
  다음 그림에서는 실행 중인 애플리케이션을 보여 줍니다.  
   
- ![Windows Forms 애플리케이션](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Windows Forms 애플리케이션](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [데이터 흐름](dataflow-task-parallel-library.md)

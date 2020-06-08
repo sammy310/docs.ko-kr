@@ -9,18 +9,18 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353602"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398281"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)
 
 `My.Application.Log` 개체는 여러 로그 수신기에 정보를 쓸 수 있습니다. 로그 수신기는 컴퓨터의 구성 파일로 구성되며 애플리케이션의 구성 파일로 재정의할 수 있습니다. 이 항목에서는 기본 설정과 애플리케이션의 설정을 확인하는 방법을 설명합니다.
 
-기본 출력 위치에 대한 자세한 내용은 [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)을 참조하세요.
+기본 출력 위치에 대한 자세한 내용은 [애플리케이션 로그 작업](working-with-application-logs.md)을 참조하세요.
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log의 수신기를 확인하려면
 
@@ -72,9 +72,9 @@ ms.locfileid: "74353602"
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [애플리케이션 로그 작업](working-with-application-logs.md)
+- [방법: 예외 기록](how-to-log-exceptions.md)
+- [방법: 로그 메시지 쓰기](how-to-write-log-messages.md)
+- [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)
 - [.NET Framework의 ETW 이벤트](../../../../framework/performance/etw-events.md)
-- [문제 해결: 로그 수신기](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [문제 해결: 로그 수신기](troubleshooting-log-listeners.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333801"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406666"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
 
@@ -167,4 +167,4 @@ ms.locfileid: "74333801"
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [연습: .NET Framework 메서드를 사용하여 파일 조작](walkthrough-manipulating-files-by-using-net-framework-methods.md)

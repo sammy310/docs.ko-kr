@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: bfcbf7306e896af54808c49e25f95d0631f5bcc0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6e56616543bf7d2ad2e6be4d7bf7cbc50ba3a23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710208"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292009"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator를 사용하여 스키마 유효성 검사
 <xref:System.Xml.XmlDocument> 클래스를 사용하면 두 가지 방법으로 <xref:System.Xml.XmlDocument> 개체에 포함된 XML 내용의 유효성을 검사할 수 있습니다. 첫 번째 방법은 유효성 검사 <xref:System.Xml.XmlReader> 개체를 사용하여 XML 내용의 유효성을 검사하는 것이고 두 번째 방법은 <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드를 사용하는 것입니다. <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 내용의 읽기 전용 유효성 검사를 수행할 수도 있습니다.  
@@ -348,22 +348,22 @@ class ValidatingReaderExample
   
  노드의 스키마 형식에 따르면 새 값이 유효하지 않기 때문에 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하여 수정한 사항으로 인해 <xref:System.InvalidCastException>이 발생했습니다.  
   
- <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 메서드를 사용하여 값을 수정하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) 항목을 참조하세요.  
+ <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 메서드를 사용하여 값을 수정하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 수정](modify-xml-data-using-xpathnavigator.md) 항목을 참조하세요.  
   
 ### <a name="read-only-validation"></a>읽기 전용 유효성 검사  
  <xref:System.Xml.XPath.XPathDocument> 클래스는 읽기 전용 메모리 내 XML 문서 표현입니다. <xref:System.Xml.XPath.XPathDocument> 클래스와 <xref:System.Xml.XmlDocument> 클래스는 <xref:System.Xml.XPath.XPathNavigator> 개체를 만들어 XML 문서를 탐색하고 편집합니다. <xref:System.Xml.XPath.XPathDocument> 클래스는 읽기 전용 클래스이므로 <xref:System.Xml.XPath.XPathNavigator> 개체에서 반환된 <xref:System.Xml.XPath.XPathDocument> 개체는 <xref:System.Xml.XPath.XPathDocument> 개체에 포함된 XML 문서를 편집할 수 없습니다.  
   
  유효성 검사의 경우 이 항목의 앞부분에서 설명한 대로 유효성을 검사하는 <xref:System.Xml.XPath.XPathDocument> 개체를 사용하여 <xref:System.Xml.XmlDocument> 개체를 만든 것과 같이 <xref:System.Xml.XmlReader> 개체를 만들 수 있습니다. <xref:System.Xml.XPath.XPathDocument> 개체는 XML 문서를 로드할 때 이 문서의 유효성을 검사하지만 <xref:System.Xml.XPath.XPathDocument> 개체에서 XML 데이터를 편집할 수 없으므로 XML 문서의 유효성을 다시 검사할 수 없습니다.  
   
- 읽기 전용 및 편집 가능한 <xref:System.Xml.XPath.XPathNavigator> 개체에 대한 자세한 내용은 [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md) 항목을 참조하세요.  
+ 읽기 전용 및 편집 가능한 <xref:System.Xml.XPath.XPathNavigator> 개체에 대한 자세한 내용은 [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](reading-xml-data-using-xpathdocument-and-xmldocument.md) 항목을 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)
-- [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
-- [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [XPathNavigator를 사용하여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](process-xml-data-using-the-xpath-data-model.md)
+- [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](reading-xml-data-using-xpathdocument-and-xmldocument.md)
+- [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XML 데이터 액세스](accessing-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XML 데이터 편집](editing-xml-data-using-xpathnavigator.md)

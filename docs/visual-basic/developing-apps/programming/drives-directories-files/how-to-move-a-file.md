@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dafeb3b5f8b8c3a8976b25c1a57f405aebb32b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401604"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이동
 
@@ -54,6 +54,6 @@ ms.locfileid: "74335366"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [방법: 파일 이름 바꾸기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-- [방법: 다른 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [방법: 파일 경로의 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [방법: 파일 이름 바꾸기](how-to-rename-a-file.md)
+- [방법: 다른 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [방법: 파일 경로의 구문 분석](how-to-parse-file-paths.md)

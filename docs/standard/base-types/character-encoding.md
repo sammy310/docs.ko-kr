@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624945"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290580"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET에서 문자 인코딩 클래스를 사용하는 방법
 
@@ -33,11 +33,11 @@ ms.locfileid: "82624945"
 
 .NET의 모든 문자 인코딩 클래스는 모든 문자 인코딩에 공통된 기능을 정의하는 추상 클래스인 <xref:System.Text.Encoding?displayProperty=nameWithType> 클래스에서 상속됩니다. .NET에서 구현된 개별 인코딩 개체에 액세스하려면 다음을 수행합니다.
 
-- .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [교체 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Replacement)를 참조하세요.
+- .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [교체 대체(fallback)](character-encoding.md#Replacement)를 참조하세요.
 
-- 인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [교체 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Replacement) 및 [예외 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Exception)를 참조하세요.
+- 인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [교체 대체(fallback)](character-encoding.md#Replacement) 및 [예외 대체(fallback)](character-encoding.md#Exception)를 참조하세요.
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [자동 맞춤 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#BestFit)를 참조하세요.
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [자동 맞춤 대체(fallback)](character-encoding.md#BestFit)를 참조하세요.
 
 - .NET에서 사용할 수 있는 표준, 코드 페이지 또는 DBCS 인코딩을 반환하는 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 메서드를 호출합니다. 오버로드를 통해 인코더와 디코더 둘 다에 대체(fallback) 개체를 지정할 수 있습니다.
 
@@ -145,7 +145,7 @@ ASCII 인코딩(<xref:System.Text.ASCIIEncoding>)을 사용하려는 경우 <xre
 최적 매핑은 유니코드 데이터를 코드 페이지 데이터로 인코딩하는 <xref:System.Text.Encoding> 개체에 대한 기본 동작이며, 이 동작에 의존하는 레거시 애플리케이션이 있습니다. 그러나 대부분의 새 애플리케이션은 보안상의 이유로 최적 동작을 피해야 합니다. 예를 들어 애플리케이션에서 최적 인코딩을 통해 도메인 이름을 넣으면 안 됩니다.
 
 > [!NOTE]
-> 인코딩에 대한 사용자 지정 최적 대체(fallback) 매핑을 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 섹션을 참조하세요.
+> 인코딩에 대한 사용자 지정 최적 대체(fallback) 매핑을 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 섹션을 참조하세요.
 
 최적 대체(fallback)가 인코딩 개체에 대한 기본값인 경우 <xref:System.Text.Encoding> 또는 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 오버로드를 호출하여 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 개체를 검색할 때 다른 대체(fallback) 전략을 선택할 수 있습니다. 다음 섹션에는 코드 페이지 1252로 매핑할 수 없는 각 문자를 별표(*)로 대체하는 예제가 포함되어 있습니다.
 
@@ -167,7 +167,7 @@ ASCII 인코딩(<xref:System.Text.ASCIIEncoding>)을 사용하려는 경우 <xre
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> 인코딩에 대한 대체 클래스를 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 섹션을 참조하세요.
+> 인코딩에 대한 대체 클래스를 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 섹션을 참조하세요.
 
 QUESTION MARK(U+003F) 외에도 일반적으로 유니코드 REPLACEMENT CHARACTER(U+FFFD)가 대체 문자열로 사용됩니다. 특히 유니코드 문자로 변환할 수 없는 바이트 시퀀스를 디코딩하는 경우에 해당합니다. 그러나 자유롭게 대체 문자열을 선택할 수 있으며 여러 문자를 포함할 수 있습니다.
 
@@ -181,7 +181,7 @@ QUESTION MARK(U+003F) 외에도 일반적으로 유니코드 REPLACEMENT CHARACT
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> 인코딩 작업에 대한 사용자 지정 예외 처리기를 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 섹션을 참조하세요.
+> 인코딩 작업에 대한 사용자 지정 예외 처리기를 구현할 수도 있습니다. 자세한 내용은 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 섹션을 참조하세요.
 
 <xref:System.Text.EncoderFallbackException> 및 <xref:System.Text.DecoderFallbackException> 개체는 예외를 발생시킨 조건에 대한 다음 정보를 제공합니다.
 
@@ -268,4 +268,4 @@ QUESTION MARK(U+003F) 외에도 일반적으로 유니코드 REPLACEMENT CHARACT
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
+- [전역화 및 지역화](../globalization-localization/index.md)

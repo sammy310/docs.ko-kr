@@ -6,18 +6,18 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 04726381f8d285ae61045d1624b3b41b7f47e491
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b326341c54d652479776e3ab93a2b140f4531e0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329564"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410142"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>방법: Visual Basic에서 애플리케이션 설정 읽기
 
 `My.Settings` 개체에서 설정의 속성에 액세스하여 사용자 설정을 읽을 수 있습니다.  
   
- `My.Settings` 개체는 각 설정을 속성으로 표시합니다. 속성 이름은 설정 이름과 같고 속성 형식은 설정 형식과 같습니다. 설정의 **범위**는 속성이 읽기 전용인지 여부를 나타냅니다. **애플리케이션** 범위 설정의 속성은 읽기 전용이지만 **사용자** 범위 설정의 속성은 읽기-쓰기입니다. 자세한 내용은 [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)를 참조하세요.  
+ `My.Settings` 개체는 각 설정을 속성으로 표시합니다. 속성 이름은 설정 이름과 같고 속성 형식은 설정 형식과 같습니다. 설정의 **범위**는 속성이 읽기 전용인지 여부를 나타냅니다. **애플리케이션** 범위 설정의 속성은 읽기 전용이지만 **사용자** 범위 설정의 속성은 읽기-쓰기입니다. 자세한 내용은 [My.Settings 개체](../../../language-reference/objects/my-settings-object.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -29,8 +29,8 @@ ms.locfileid: "74329564"
   
 ## <a name="see-also"></a>참조
 
-- [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [My.Settings 개체](../../../language-reference/objects/my-settings-object.md)
+- [방법: Visual Basic에서 사용자 설정 변경](how-to-change-user-settings.md)
+- [방법: Visual Basic에서 사용자 설정 유지](how-to-persist-user-settings.md)
+- [방법: Visual Basic에서 사용자 설정의 속성 표 만들기](how-to-create-property-grids-for-user-settings.md)
 - [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)

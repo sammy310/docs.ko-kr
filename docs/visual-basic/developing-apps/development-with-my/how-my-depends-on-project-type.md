@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 740185d8030c09e8813bc7680b451f6326588593
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330275"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411716"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
 
@@ -64,10 +64,10 @@ ms.locfileid: "74330275"
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [My에 사용할 수 있는 개체 사용자 지정](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
-- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [-define(Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)
-- [My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)
-- [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My에 사용할 수 있는 개체 사용자 지정](../customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [조건부 컴파일](../../programming-guide/program-structure/conditional-compilation.md)
+- [-define(Visual Basic)](../../reference/command-line-compiler/define.md)
+- [My.Forms 개체](../../language-reference/objects/my-forms-object.md)
+- [My.Request 개체](../../language-reference/objects/my-request-object.md)
+- [My.Response 개체](../../language-reference/objects/my-response-object.md)
+- [My.WebServices 개체](../../language-reference/objects/my-webservices-object.md)

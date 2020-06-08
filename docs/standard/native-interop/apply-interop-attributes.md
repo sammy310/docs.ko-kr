@@ -14,17 +14,17 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420541"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291333"
 ---
 # <a name="applying-interop-attributes"></a>Interop 특성 적용
 <xref:System.Runtime.InteropServices> 네임스페이스는 디자인 타임에 사용자가 적용한 특성, 변환 과정에서 COM interop 도구 및 API가 적용한 특성, 사용자 또는 COM interop가 적용한 특성 등 세 가지 범주의 interop 관련 특성을 제공합니다.  
   
- 관리 코드에 특성을 적용하는 작업을 잘 모르겠으면 [특성을 사용하여 메타데이터 확장](../../../docs/standard/attributes/index.md)을 참조하세요. 다른 사용자 지정 특성과 마찬가지로, 형식, 메서드, 속성, 매개 변수, 필드 및 다른 멤버에 interop 관련 특성을 적용할 수 있습니다.  
+ 관리 코드에 특성을 적용하는 작업을 잘 모르겠으면 [특성을 사용하여 메타데이터 확장](../attributes/index.md)을 참조하세요. 다른 사용자 지정 특성과 마찬가지로, 형식, 메서드, 속성, 매개 변수, 필드 및 다른 멤버에 interop 관련 특성을 적용할 수 있습니다.  
   
 ## <a name="design-time-attributes"></a>디자인 타임 특성  
  디자인 타임 특성을 사용하여 COM interop 도구와 API가 수행하는 변환 프로세스의 결과를 조정할 수 있습니다. 다음 표에서는 관리되는 소스 코드에 적용할 수 있는 특성을 설명합니다. 경우에 따라 COM interop 도구가 이 표에 설명된 특성을 적용할 수도 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "83420541"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices>
-- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [특성](../../../docs/standard/attributes/index.md)
-- [상호 운용할 .NET 형식의 정규화](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [COM용 .NET Framework 어셈블리 패키징](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [.NET Framework 구성 요소를 COM에 노출](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [특성](../attributes/index.md)
+- [상호 운용할 .NET 형식의 정규화](qualify-net-types-for-interoperation.md)
+- [COM용 .NET Framework 어셈블리 패키징](../../framework/interop/packaging-an-assembly-for-com.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: cef1e6c19e7fdd6fc9f42c8fc36008314ea80a80
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349140"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414261"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest(Visual Basic)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "74349140"
  기본적으로 Visual Basic 컴파일러는 asInvoker의 요청된 실행 수준을 지정하는 애플리케이션 매니페스트를 포함합니다. Visual Studio를 사용할 때 일반적으로 bin\Debug 또는 bin\Release 폴더와 같이 실행 파일이 빌드되는 동일한 폴더에 매니페스트가 생성됩니다. 예를 들어 highestAvailable 또는 requireAdministrator의 요청된 실행 수준을 지정하기 위해 사용자 지정 매니페스트를 제공하려면 이 옵션을 사용하여 파일 이름을 지정합니다.  
   
 > [!NOTE]
-> 이 옵션과 [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) 옵션은 함께 사용할 수 없습니다. 같은 명령줄에서 두 옵션을 모두 사용하려고 하면 빌드 오류가 발생합니다.  
+> 이 옵션과 [-win32resource](win32resource.md) 옵션은 함께 사용할 수 없습니다. 같은 명령줄에서 두 옵션을 모두 사용하려고 하면 빌드 오류가 발생합니다.  
   
  요청된 실행 수준을 지정하는 애플리케이션 매니페스트가 없는 애플리케이션은 Windows Vista의 사용자 계정 컨트롤 기능 아래에서 파일/레지스트리 가상화의 적용을 받습니다. 가상화에 대한 자세한 내용은 [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista)(Windows Vista의 ClickOnce 배포)를 참조하세요.  
   
@@ -68,5 +68,5 @@ ms.locfileid: "74349140"
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-nowin32manifest(Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-nowin32manifest(Visual Basic)](nowin32manifest.md)

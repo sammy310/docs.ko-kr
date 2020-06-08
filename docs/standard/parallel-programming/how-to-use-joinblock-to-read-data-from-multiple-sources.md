@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-ms.openlocfilehash: 66fd7ed7a98b8be8f88f65ecb52710a1e40af778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2f5c65f45d83ef23643dcc747a748bb8ba89d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139734"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290826"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기
 이 문서에서는 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 클래스를 사용하여 여러 소스에서 데이터를 사용할 수 있는 경우 작업을 수행하는 방법을 설명합니다. 또한 non-greedy 모드를 사용하여 여러 조인 블록이 데이터 소스를 보다 효율적으로 공유할 수 있도록 하는 방법을 보여 줍니다.
@@ -35,4 +35,4 @@ ms.locfileid: "73139734"
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [데이터 흐름](dataflow-task-parallel-library.md)

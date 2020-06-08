@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 09ddc4bb735b645e09d34198c66dff78183592bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802155"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403085"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion(Visual Basic)
 
@@ -54,11 +54,11 @@ ms.locfileid: "74802155"
 
 - 다음 목록의 컴파일러 옵션이 설정된 경우 기본값은 6.02입니다.
 
-  - [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:appcontainerexe](target.md)
 
-  - [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [/target:winmdobj](target.md)
 
-  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
+  - [-platform:arm](platform.md)
 
 - MSBuild를 사용하고 .NET Framework 4.5를 대상으로 하며, 이 목록의 앞에서 지정된 컴파일러 옵션 중 하나를 설정하지 않은 경우 기본값은 6.00입니다.
 
@@ -70,6 +70,6 @@ Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
 
 - [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)

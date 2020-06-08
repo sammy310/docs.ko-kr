@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e707f034f05aababdc70d5d6e1f9e1da0ed558bc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976858"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410233"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 확장
 
@@ -102,5 +102,5 @@ ms.locfileid: "73976858"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
-- [Visual Basic 애플리케이션 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Visual Basic 애플리케이션 모델 개요](../development-with-my/overview-of-the-visual-basic-application-model.md)
 - [프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

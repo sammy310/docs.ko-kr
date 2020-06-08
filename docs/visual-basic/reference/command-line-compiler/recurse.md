@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 71613af0f1c319801296180d49dbacfedf0ceca4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fc8dfe41ea56531ff34cd5e551ef24d636227e47
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005256"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400502"
 ---
 # <a name="-recurse"></a>-recurse
 지정된 디렉터리 또는 프로젝트 디렉터리의 모든 자식 디렉터리에 있는 소스 코드 파일을 컴파일합니다.  
@@ -50,6 +50,6 @@ vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb
   
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-out(Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 명령줄 컴파일러](index.md)
+- [-out(Visual Basic)](out.md)
+- [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

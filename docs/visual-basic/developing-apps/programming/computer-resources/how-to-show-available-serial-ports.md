@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: c7e5f797c1d098a3b2d01745b949ed50375ea7e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7a9166f1879ed0850ca893bed307a0318298bbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345570"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401825"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시
 
@@ -36,7 +36,7 @@ ms.locfileid: "74345570"
   
 - System.Windows.Forms.dll에 대한 프로젝트 참조  
   
-- <xref:System.Windows.Forms> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
+- <xref:System.Windows.Forms> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
 - `ListBox1`이라는 <xref:System.Windows.Forms.ListBox> 컨트롤이 폼에 있어야 함  
   
@@ -50,6 +50,6 @@ ms.locfileid: "74345570"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [방법: 직렬 포트에 연결된 모뎀 전화 접속](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [방법: 직렬 포트로 문자열 보내기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [방법: 직렬 포트에 연결된 모뎀 전화 접속](how-to-dial-modems-attached-to-serial-ports.md)
+- [방법: 직렬 포트로 문자열 보내기](how-to-send-strings-to-serial-ports.md)
+- [방법: 직렬 포트에서 문자열 받기](how-to-receive-strings-from-serial-ports.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: f61bbf10bbeef736f66710f50e621c3619355a1d
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290800"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: Parallel.Invoke를 사용하여 병렬 작업 실행
 
 이 예제에서는 작업 병렬 라이브러리의 <xref:System.Threading.Tasks.Parallel.Invoke%2A>을 사용하여 작업을 병렬 처리하는 방법을 보여 줍니다. 세 가지 작업이 공유 데이터 소스에 대해 수행됩니다. 소스를 수정하는 작업이 없기 때문에 작업을 간단하게 병렬로 실행할 수 있습니다.
 
 > [!NOTE]
-> 이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
+> 이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -38,6 +38,6 @@ ms.locfileid: "80635796"
 
 ## <a name="see-also"></a>참조
 
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
-- [방법: 작업 및 해당 자식 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [병렬 프로그래밍](index.md)
+- [방법: 작업 및 해당 자식 취소](how-to-cancel-a-task-and-its-children.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)

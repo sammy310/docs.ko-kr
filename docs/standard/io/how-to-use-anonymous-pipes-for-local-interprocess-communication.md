@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627996"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291788"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>방법: 로컬 프로세스 간 통신에 익명 파이프 사용
 익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다. 명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다. 익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다. 네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.  
@@ -47,5 +47,5 @@ ms.locfileid: "77627996"
   
 ## <a name="see-also"></a>참고 항목
 
-- [파이프](../../../docs/standard/io/pipe-operations.md)
-- [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [파이프](pipe-operations.md)
+- [방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용](how-to-use-named-pipes-for-network-interprocess-communication.md)

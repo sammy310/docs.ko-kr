@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: 9b93893e2221b156b65ce8e945089269ea28c989
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba62a0226a1a83326cbc7ab393d135763a7c7cb2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335070"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411644"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>방법: Visual Basic에서 쉼표로 구분된 텍스트 파일 읽기
 
@@ -59,8 +59,8 @@ ms.locfileid: "74335070"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [방법: 고정 너비 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [방법: 여러 형식의 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-- [연습: Visual Basic에서 파일과 디렉터리 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [방법: 고정 너비 텍스트 파일에서 읽기](how-to-read-from-fixed-width-text-files.md)
+- [방법: 여러 형식의 텍스트 파일에서 읽기](how-to-read-from-text-files-with-multiple-formats.md)
+- [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](parsing-text-files-with-the-textfieldparser-object.md)
+- [연습: Visual Basic에서 파일과 디렉터리 조작](walkthrough-manipulating-files-and-directories.md)
+- [문제 해결: 텍스트 파일 읽기 및 쓰기](troubleshooting-reading-from-and-writing-to-text-files.md)

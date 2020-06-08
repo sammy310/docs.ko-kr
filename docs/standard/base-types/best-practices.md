@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243156"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291060"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -37,10 +37,10 @@ ms.locfileid: "81243156"
 
 - 정규식 패턴과 거의 일치하는 텍스트
 
-마지막 텍스트 형식은 특히 제한된 입력을 처리하도록 작성된 정규식에서 문제가 될 수 있습니다. 또한 이러한 정규식에 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)이 광범위하게 사용되는 경우에는 정규식 엔진이 겉보기에는 문제가 없는 텍스트를 처리하느라 비정상적으로 많은 시간(몇 시간 또는 며칠이 걸리는 경우도 있음)을 소비할 수 있습니다.
+마지막 텍스트 형식은 특히 제한된 입력을 처리하도록 작성된 정규식에서 문제가 될 수 있습니다. 또한 이러한 정규식에 [역추적](backtracking-in-regular-expressions.md)이 광범위하게 사용되는 경우에는 정규식 엔진이 겉보기에는 문제가 없는 텍스트를 처리하느라 비정상적으로 많은 시간(몇 시간 또는 며칠이 걸리는 경우도 있음)을 소비할 수 있습니다.
 
 > [!WARNING]
-> 다음 예제에서는 과도한 역추적을 발생시키고 유효한 전자 메일 주소를 거부할 가능성이 있는 정규식을 사용합니다. 전자 메일 유효성 검사 루틴에서 해당 정규식을 사용해서는 안 됩니다. 이메일 주소의 유효성을 검사하는 정규식은 [방법: 문자열이 올바른 이메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.
+> 다음 예제에서는 과도한 역추적을 발생시키고 유효한 전자 메일 주소를 거부할 가능성이 있는 정규식을 사용합니다. 전자 메일 유효성 검사 루틴에서 해당 정규식을 사용해서는 안 됩니다. 이메일 주소의 유효성을 검사하는 정규식은 [방법: 문자열이 올바른 이메일 형식인지 확인](how-to-verify-that-strings-are-in-valid-email-format.md)을 참조하세요.
 
 예를 들어 전자 메일 주소 별칭의 유효성을 검증하기 위해 매우 자주 사용되지만 심각한 문제를 일으킬 수 있는 정규식을 하나 보여드리겠습니다. 정규식 `^[0-9A-Z]([-.\w]*[0-9A-Z])*$`는 한 개의 영숫자로 시작하고 이어지는 영숫자, 마침표 또는 하이픈이 0개 이상으로 구성된 텍스트를 유효한 메일 주소로 처리하도록 작성되었습니다. 정규식은 영숫자로 끝나야 합니다. 하지만 다음 예제에서와 같이 이 정규식은 유효한 입력을 쉽게 처리할 수 있지만 거의 유효한 입력을 처리할 때는 성능이 매우 비효율적입니다.
 
@@ -161,7 +161,7 @@ ms.locfileid: "81243156"
 일반적으로 정규식 엔진은 선형 진행을 통해 입력 문자열 내를 이동하면서 입력 문자열을 정규식 패턴과 비교합니다. 하지만 정규식 패턴에 `*`, `+` 및 `?`와 같은 정해지지 않은 수량자가 사용될 경우 정규식 엔진은 일부 성공한 부분 일치를 포기하고 이전에 저장된 상태로 돌아와서 전체 패턴에 대해 일치하는 항목을 찾을 수 있습니다. 이 프로세스를 역추적이라고 합니다.
 
 > [!NOTE]
-> 역추적에 대한 자세한 내용은 [정규식 동작 정보](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) 및 [역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
+> 역추적에 대한 자세한 내용은 [정규식 동작 정보](details-of-regular-expression-behavior.md) 및 [역추적](backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
 
 역추적을 지원할 경우 정규식에 성능과 유연성이 제공됩니다. 또한 정규식 개발자에게 정규식 엔진의 작동에 대한 제어 책임을 맡길 수 있습니다. 개발자가 이러한 책임을 인식하지 못하는 경우가 많기 때문에 역추적을 오용하거나 과도하게 사용하여 정규식 성능이 저하되는 경우가 자주 발생합니다. 최악의 시나리오에서는 실행 시간이 입력 문자열에 있는 추가 문자마다 두 배씩 늘어날 수 있습니다. 실제로 역추적을 과도하게 사용할 경우에는 입력이 정규식 패턴과 거의 일치할 경우 프로그래밍 면에서 무한 루프를 만드는 것과 동일한 결과를 가져올 수 있으며 정규식 엔진이 비교적 간단한 입력 문자열이라도 처리하는 데 몇 시간 또는 심지어 며칠이 걸릴 수도 있습니다.
 
@@ -204,7 +204,7 @@ ms.locfileid: "81243156"
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-.NET의 정규식 언어에는 중첩된 수량자를 제거하는 데 사용할 수 있는 다음과 같은 언어 요소가 포함되어 있습니다. 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
+.NET의 정규식 언어에는 중첩된 수량자를 제거하는 데 사용할 수 있는 다음과 같은 언어 요소가 포함되어 있습니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
 |언어 요소|설명|
 |----------------------|-----------------|
@@ -265,7 +265,7 @@ ms.locfileid: "81243156"
 
 - <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 이 옵션을 사용하면 `(?<name>subexpression)` 언어 요소로 정의된 명명된 그룹과 일치하는 부분 문자열만 캡처할 수 있습니다. <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 플래그는 `options` 클래스 생성자의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달하거나 `options` 정적 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 전달할 수 있습니다.
 
-- `n` 언어 요소에서 `(?imnsx)` 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 요소가 나타나는 지점으로부터 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 캡처는 패턴의 끝에 도달하거나 `(-n)` 옵션으로 명명되지 않은 캡처 또는 암시적인 캡처가 활성화될 때가지 비활성화됩니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)을 참조하세요.
+- `n` 언어 요소에서 `(?imnsx)` 옵션을 사용합니다. 이 옵션은 정규식 패턴에서 요소가 나타나는 지점으로부터 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 캡처는 패턴의 끝에 도달하거나 `(-n)` 옵션으로 명명되지 않은 캡처 또는 암시적인 캡처가 활성화될 때가지 비활성화됩니다. 자세한 내용은 [기타 구문](miscellaneous-constructs-in-regular-expressions.md)을 참조하세요.
 
 - `n` 언어 요소에서 `(?imnsx:subexpression)` 옵션을 사용합니다. 이 옵션은 `subexpression`에서 모든 명명되지 않은 캡처 또는 암시적인 캡처를 비활성화합니다. 명명되지 않은 또는 암시적인 중첩된 캡처링 그룹에 의한 캡처도 함께 비활성화됩니다.
 
@@ -273,6 +273,6 @@ ms.locfileid: "81243156"
 
 |제목|설명|
 |-----------|-----------------|
-|[정규식 동작 정보](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET의 정규식 엔진 구현에 대해 자세히 다룹니다. 이 항목에서는 정규식의 유연성에 중점을 두고 정규식 엔진의 효율성과 성능에 대한 개발자의 책임에 대해 설명합니다.|
-|[역추적](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|역추적의 정의 및 역추적이 정규식 성능에 미치는 영향에 대해 설명하고 역추적 대신 사용할 수 있는 언어 요소에 대해 설명합니다.|
-|[정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|.NET의 정규식 언어 요소에 대해 설명하고 각 언어 요소에 대한 자세한 설명서 링크를 제공합니다.|
+|[정규식 동작 정보](details-of-regular-expression-behavior.md)|.NET의 정규식 엔진 구현에 대해 자세히 다룹니다. 이 항목에서는 정규식의 유연성에 중점을 두고 정규식 엔진의 효율성과 성능에 대한 개발자의 책임에 대해 설명합니다.|
+|[역추적](backtracking-in-regular-expressions.md)|역추적의 정의 및 역추적이 정규식 성능에 미치는 영향에 대해 설명하고 역추적 대신 사용할 수 있는 언어 요소에 대해 설명합니다.|
+|[정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)|.NET의 정규식 언어 요소에 대해 설명하고 각 언어 요소에 대한 자세한 설명서 링크를 제공합니다.|

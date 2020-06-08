@@ -8,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352133"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406614"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Visual Basic에서 파일에 쓰기
 
@@ -21,19 +21,19 @@ ms.locfileid: "74352133"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 파일에 텍스트 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [방법: 파일에 텍스트 쓰기](how-to-write-text-to-files.md)  
  텍스트 파일에 쓰는 방법을 보여 줍니다.  
   
- [방법: 텍스트 파일에 추가](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [방법: 텍스트 파일에 추가](how-to-append-to-text-files.md)  
  텍스트 파일에 텍스트를 추가하는 방법을 보여 줍니다.  
   
- [방법: 이진 파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [방법: 이진 파일에 쓰기](how-to-write-to-binary-files.md)  
  이진 파일에 쓰는 방법을 보여 줍니다.  
   
- [방법: 내 문서 디렉터리의 파일에 텍스트 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [방법: 내 문서 디렉터리의 파일에 텍스트 쓰기](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  **내 문서** 디렉터리에 새 텍스트 파일을 만들고 파일에 쓰는 방법을 보여 줍니다.  
   
- [방법: StreamWriter를 사용하여 파일에 텍스트 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [방법: StreamWriter를 사용하여 파일에 텍스트 쓰기](how-to-write-text-to-files-with-a-streamwriter.md)  
  <xref:System.IO.StreamWriter?displayProperty=nameWithType> 개체를 사용하여 파일에 쓰는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
@@ -52,14 +52,14 @@ ms.locfileid: "74352133"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [파일 읽기](reading-from-files.md)  
  파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
- [파일/디렉터리 만들기, 삭제 및 이동](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [파일/디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)  
  파일 및 디렉터리 만들기, 삭제, 이동, 이름 바꾸기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
- [데이터를 클립보드에 저장하고 클립보드에서 읽기](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [데이터를 클립보드에 저장하고 클립보드에서 읽기](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  클립보드에서 데이터를 읽거나 쓰는 것과 같이 `My.Computer.Clipboard`와 관련된 작업을 수행하는 방법을 설명합니다.  
   
- [파일 인코딩](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [파일 인코딩](file-encodings.md)  
  파일 인코딩을 간략하게 설명합니다.
