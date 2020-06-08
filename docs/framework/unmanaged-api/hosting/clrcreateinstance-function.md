@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616829"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504459"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="02d80-102">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="02d80-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="02d80-103">[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="1d256-102">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="1d256-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="1d256-103">[ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-103">Provides one of three interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md), or [ICLRDebugging](../debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02d80-104">구문</span><span class="sxs-lookup"><span data-stu-id="02d80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d256-104">구문</span><span class="sxs-lookup"><span data-stu-id="1d256-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CLRCreateInstance(  
@@ -35,34 +35,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02d80-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="02d80-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d256-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1d256-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="02d80-106">진행 CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy 또는 CLSID_CLRDebugging의 세 가지 클래스 식별자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="1d256-106">진행 CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy 또는 CLSID_CLRDebugging의 세 가지 클래스 식별자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="02d80-107">진행 Iid (인터페이스 식별자): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy 또는 IID_ICLRDebugging 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="1d256-107">진행 Iid (인터페이스 식별자): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy 또는 IID_ICLRDebugging 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="02d80-108">제한이 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="1d256-108">제한이 [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-108">[out] One of three interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md), or [ICLRDebugging](../debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="02d80-109">Return Value</span><span class="sxs-lookup"><span data-stu-id="02d80-109">Return Value</span></span>  
- <span data-ttu-id="02d80-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1d256-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="1d256-109">Return Value</span></span>  
+ <span data-ttu-id="1d256-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="02d80-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="02d80-111">HRESULT</span></span>|<span data-ttu-id="02d80-112">설명</span><span class="sxs-lookup"><span data-stu-id="02d80-112">Description</span></span>|  
+|<span data-ttu-id="1d256-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1d256-111">HRESULT</span></span>|<span data-ttu-id="1d256-112">설명</span><span class="sxs-lookup"><span data-stu-id="1d256-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="02d80-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="02d80-113">S_OK</span></span>|<span data-ttu-id="02d80-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="02d80-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="02d80-115">E_POINTER</span></span>|<span data-ttu-id="02d80-116">`ppInterface`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="02d80-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="1d256-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="1d256-113">S_OK</span></span>|<span data-ttu-id="1d256-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="1d256-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1d256-115">E_POINTER</span></span>|<span data-ttu-id="1d256-116">`ppInterface`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="1d256-116">`ppInterface` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="02d80-117">설명</span><span class="sxs-lookup"><span data-stu-id="02d80-117">Remarks</span></span>  
- <span data-ttu-id="02d80-118">다음 표에서는 및에 대해 지원 되는 조합을 보여 줍니다 `clsid` `riid` .</span><span class="sxs-lookup"><span data-stu-id="02d80-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1d256-117">설명</span><span class="sxs-lookup"><span data-stu-id="1d256-117">Remarks</span></span>  
+ <span data-ttu-id="1d256-118">다음 표에서는 및에 대해 지원 되는 조합을 보여 줍니다 `clsid` `riid` .</span><span class="sxs-lookup"><span data-stu-id="1d256-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="02d80-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="02d80-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="02d80-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="02d80-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="02d80-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="02d80-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="02d80-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="02d80-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="02d80-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="02d80-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="02d80-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="02d80-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="1d256-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="1d256-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="1d256-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="1d256-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="1d256-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="1d256-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="1d256-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="1d256-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="1d256-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="1d256-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="1d256-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="1d256-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="02d80-125">다음 코드에서는를 사용 하 여 `CLRCreateInstance` 세 가지 인터페이스를 모두 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="1d256-125">다음 코드에서는를 사용 하 여 `CLRCreateInstance` 세 가지 인터페이스를 모두 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```cpp  
 #include <metahost.h>  
@@ -80,15 +80,15 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="02d80-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="02d80-126">Requirements</span></span>  
- <span data-ttu-id="02d80-127">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02d80-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d256-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1d256-126">Requirements</span></span>  
+ <span data-ttu-id="1d256-127">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1d256-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02d80-128">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="02d80-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1d256-128">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="1d256-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="02d80-129">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="02d80-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1d256-129">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d256-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="02d80-130">**.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02d80-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1d256-130">**.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d256-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02d80-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="02d80-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d256-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1d256-131">See also</span></span>
 
-- [<span data-ttu-id="02d80-132">호스팅</span><span class="sxs-lookup"><span data-stu-id="02d80-132">Hosting</span></span>](index.md)
+- [<span data-ttu-id="1d256-132">호스팅</span><span class="sxs-lookup"><span data-stu-id="1d256-132">Hosting</span></span>](index.md)
