@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 55709e79cd8bdb36fe1e32ee8a699fccb1b1bbc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 093e3edf0a3c06222ebc56a4876fca08d1b7578f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490731"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 메서드
-지정된 TypeDef 또는 MethodDef 토큰과 연결된 일반 매개 변수 토큰 배열에 대한 열거기를 가져옵니다.  
+지정 된 TypeDef 또는 MethodDef 토큰과 연결 된 제네릭 매개 변수 토큰의 배열에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- 【인, 아웃】 열거형에 대한 포인터입니다.  
+ [in, out] 열거자에 대 한 포인터입니다.  
   
  `tk`  
- 【인】 제네릭 매개 변수를 개명할 TypeDef 또는 MethodDef 토큰입니다.  
+ 진행 제네릭 매개 변수를 열거할 TypeDef 또는 MethodDef 토큰입니다.  
   
  `rGenericParams`  
- 【아웃】 열거할 제네릭 매개 변수의 배열입니다.  
+ 제한이 열거할 제네릭 매개 변수의 배열입니다.  
   
  `cMax`  
- 【인】 에 배치할 요청된 최대 `rGenericParams`토큰 수입니다.  
+ 진행 에 저장할 요청 된 최대 토큰 수 `rGenericParams` 입니다.  
   
  `pcGenericParams`  
- 【아웃】 에 `rGenericParams`배치된 토큰의 반환 된 수입니다.  
+ 제한이 에 배치 된 반환 된 토큰 수 `rGenericParams` 입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams`성공적으로 반환됩니다.|  
-|`S_FALSE`|`phEnum`멤버 요소가 없습니다. 이 경우 `pcGenericParams` 0(0)으로 설정됩니다.|  
+|`S_OK`|`EnumGenericParams`성공적으로 반환 되었습니다.|  
+|`S_FALSE`|`phEnum`에는 멤버 요소가 없습니다. 이 경우 `pcGenericParams` 은 0 (영)으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)

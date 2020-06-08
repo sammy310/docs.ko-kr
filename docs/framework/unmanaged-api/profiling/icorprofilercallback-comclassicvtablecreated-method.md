@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866548"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500340"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 메서드
 지정 된 IID 및 클래스에 대 한 COM interop vtable이 생성 되었음을 프로파일러에 알립니다.  
@@ -47,27 +47,27 @@ HRESULT COMClassicVTableCreated(
 
 - `pVTable`
 
-  \[에서 vtable의 시작에 대 한 포인터입니다.
+  \[in] vtable의 시작에 대 한 포인터입니다.
 
 - `cSlots`
 
   \[in] vtable에 있는 슬롯의 수입니다.
 
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다. 프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.  
   
  이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [COMClassicVTableDestroyed 메서드](icorprofilercallback-comclassicvtabledestroyed-method.md)

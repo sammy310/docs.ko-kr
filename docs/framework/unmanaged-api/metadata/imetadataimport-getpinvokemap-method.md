@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8409e56b5ec4dbe47035a0555b6b7ce175b517ee
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437105"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490980"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap 메서드
 PInvoke 호출의 대상 어셈블리를 나타내는 ModuleRef 토큰을 가져옵니다.  
@@ -43,30 +43,30 @@ HRESULT GetPinvokeMap (
  진행 PInvoke 매핑 메타 데이터를 가져올 FieldDef 또는 MethodDef 토큰입니다.  
   
  `pdwMappingFlags`  
- 제한이 매핑에 사용 되는 플래그에 대 한 포인터입니다. 이 값은 [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) 열거형의 비트 마스크입니다.  
+ 제한이 매핑에 사용 되는 플래그에 대 한 포인터입니다. 이 값은 [CorPinvokeMap](corpinvokemap-enumeration.md) 열거형의 비트 마스크입니다.  
   
  `szImportName`  
  제한이 관리 되지 않는 대상 DLL의 이름입니다.  
   
  `cchImportName`  
- 진행 `szImportName`의 와이드 문자 크기입니다.  
+ 진행 의 와이드 문자 크기입니다 `szImportName` .  
   
  `pchImportName`  
- 제한이 `szImportName`에서 반환 되는 와이드 문자 수입니다.  
+ 제한이 에서 반환 되는 와이드 문자 수입니다 `szImportName` .  
   
  `pmrImportDLL`  
  제한이 관리 되지 않는 대상 개체 라이브러리를 나타내는 ModuleRef 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

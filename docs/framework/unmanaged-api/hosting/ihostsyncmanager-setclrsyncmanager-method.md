@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b8bbe76-a45d-4989-bacb-11df42f8798c
 topic_type:
 - apiref
-ms.openlocfilehash: bbeae2561d2d340c1a7dfed38e740dcc6838e4da
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7f1832b22a1b80855f48eba6d39bff64da6fa5f9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803102"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501445"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>IHostSyncManager::SetCLRSyncManager 메서드
-현재 [IHostSyncManager](ihostsyncmanager-interface.md) 인스턴스와 연결할 [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) 인스턴스를 설정 합니다.  
+현재 [IHostSyncManager](ihostsyncmanager-interface.md) 인스턴스와 연결할 [ICLRSyncManager](iclrsyncmanager-interface.md) 인스턴스를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ HRESULT SetCLRSyncManager (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`SetCLRSyncManager`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  

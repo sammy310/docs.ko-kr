@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491058"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 메서드
 지정한 ParamDef 토큰이 참조하는 매개 변수에 대한 메타데이터 값을 가져옵니다.  
@@ -56,37 +56,37 @@ HRESULT GetParamProps (
  제한이 매개 변수의 이름을 저장할 버퍼입니다.  
   
  `cchName`  
- 진행 `szName`의 와이드 문자에서 요청 된 크기입니다.  
+ 진행 에서 요청 된 크기 (와이드 문자) `szName` 입니다.  
   
  `pchName`  
- 제한이 `szName`의 와이드 문자에서 반환 되는 크기입니다.  
+ 제한이 의 와이드 문자에서 반환 되는 크기입니다 `szName` .  
   
  `pdwAttr`  
- 제한이 매개 변수와 연결 된 특성 플래그에 대 한 포인터입니다. `CorParamAttr` 값의 비트 마스크입니다.  
+ 제한이 매개 변수와 연결 된 특성 플래그에 대 한 포인터입니다. 값의 비트 마스크입니다 `CorParamAttr` .  
   
  `pdwCPlusTypeFlag`  
- 제한이 매개 변수가 <xref:System.ValueType>임을 지정 하는 플래그에 대 한 포인터입니다.  
+ 제한이 매개 변수가 임을 지정 하는 플래그에 대 한 포인터입니다 <xref:System.ValueType> .  
   
  `ppValue`  
  제한이 매개 변수에서 반환 하는 상수 문자열에 대 한 포인터입니다.  
   
  `pcchValue`  
- 제한이 와이드 문자 `ppValue` 크기 이거나 `ppValue`에 문자열이 없는 경우 0입니다.  
+ 제한이 `ppValue`와이드 문자 단위의 크기 이거나, `ppValue` 가 문자열을 포함 하지 않는 경우 0입니다.  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-매개 변수에 대 한 `pulSequence`의 시퀀스 값은 1로 시작 합니다. 반환 값의 시퀀스 번호는 0입니다.
+매개 변수의 시퀀스 값은 `pulSequence` 1로 시작 합니다. 반환 값의 시퀀스 번호는 0입니다.
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

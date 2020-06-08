@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: c09d896e59a6c336fbe4923dbe85f30b039d8c36
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 244227aadb50720514f7511be563089d520b4bf5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866405"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500197"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 메서드
 예외 처리의 검색 단계가 함수를 검색 하 여 현재 예외에 대 한 처리기를 시작 했음을 프로파일러에 알립니다.  
@@ -36,18 +36,18 @@ HRESULT ExceptionSearchFunctionEnter(
 
 - `functionId`
 
-  \[in] 입력 된 함수의 ID입니다.
+  \[in] 입력 한 함수의 ID입니다.
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ExceptionSearchFunctionLeave 메서드](icorprofilercallback-exceptionsearchfunctionleave-method.md)

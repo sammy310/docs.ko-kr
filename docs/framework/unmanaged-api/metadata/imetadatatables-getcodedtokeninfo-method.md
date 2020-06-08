@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-ms.openlocfilehash: 64c70fe0b657047ae35dccb763fa57120403deef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ab16ad5b2b2838125e07511ef47be737f40671c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177146"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501211"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo 메서드
-지정된 행 인덱스와 연결된 토큰 배열에 대한 포인터를 가져옵니다.  
+지정 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,27 +38,27 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>매개 변수  
  `ixCdTkn`  
- 【인】 반환할 코딩된 토큰의 종류입니다.  
+ 진행 반환할 코딩 된 토큰의 종류입니다.  
   
  `pcTokens`  
- 【아웃】 `ppTokens`의 길이에 대한 포인터입니다.  
+ 제한이 의 길이에 대 한 포인터입니다 `ppTokens` .  
   
  `ppTokens`  
- 【아웃】 반환된 토큰 목록을 포함하는 배열에 대한 포인터입니다.  
+ 제한이 반환 된 토큰의 목록이 포함 된 배열에 대 한 포인터에 대 한 포인터입니다.  
   
  `ppName`  
- 【아웃】 에서 `ixCdTkn`토큰 이름에 대한 포인터에 대한 포인터입니다.  
+ 제한이 에서 토큰의 이름에 대 한 포인터에 대 한 포인터입니다 `ixCdTkn` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables 인터페이스](imetadatatables-interface.md)
+- [IMetaDataTables2 인터페이스](imetadatatables2-interface.md)

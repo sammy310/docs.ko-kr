@@ -2,17 +2,17 @@
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan 메서드
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: f5898cab08f332314fb33684399dcb4f2ff71cc7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0f00dd34ffbdd58a46260132d8d7ace74ec2f294
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609458"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501679"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan 메서드
 지정 된 소스 파일의 지정 된 소스 줄 범위에 지정 된 메타 데이터 토큰을 매핑합니다.  
   
- [OpenMapTokensToSourceSpans method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) 및 [CloseMapTokensToSourceSpans 메서드에](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)대 한 호출 사이에 호출 해야 합니다.  
+ [OpenMapTokensToSourceSpans method](isymunmanagedwriter5-openmaptokenstosourcespans-method.md) 및 [CloseMapTokensToSourceSpans 메서드에](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)대 한 호출 사이에 호출 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 |`endLine`||  
 |`endColumn`||  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  `HRESULT`를 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  

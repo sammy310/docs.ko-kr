@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: cda629b7a6560ca5d731cd88cffc2cffd3486d8a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 2715a5b6b03a5ad33a6f18fb736fce3911bfbef0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866221"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500028"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched 메서드
 JIT (just-in-time) 컴파일 된 함수가 메모리에서 제거 되었음을 프로파일러에 알립니다.  
@@ -36,20 +36,20 @@ HRESULT JITFunctionPitched(
  `functionId`  
  진행 제거 된 함수의 ID입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  제거 된 함수가 호출 되 면 프로파일러는 함수가 다시 컴파일될 때 새 JIT 컴파일 이벤트를 수신 합니다. 현재 CLR (공용 언어 런타임) JIT 컴파일러는 메모리에서 함수를 제거 하지 않으므로이 콜백은 현재 사용 되지 않으며 프로파일러에서 수신 되지 않습니다.  
   
- 함수를 다시 컴파일할 때까지 `functionId` 값이 유효 하지 않습니다. 함수가 다시 컴파일되면 동일한 `functionId` 값이 사용 됩니다.  
+ 함수를 다시 `functionId` 컴파일할 때까지 값이 유효 하지 않습니다. 함수가 다시 컴파일되면 동일한 `functionId` 값이 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

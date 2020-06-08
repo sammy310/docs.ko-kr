@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 891cca8ac47a3f8391bd7ab7b27b35d6318bbe0a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866291"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500093"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 인터페이스
 프로파일러가 구독할 이벤트를 발생 시킬 때 CLR (공용 언어 런타임)에서 코드 프로파일러에 알리는 데 사용 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[AppDomainCreationFinished 메서드](icorprofilercallback-appdomaincreationfinished-method.md)|응용 프로그램 도메인이 생성 되었음을 프로파일러에 알립니다.|  
 |[AppDomainCreationStarted 메서드](icorprofilercallback-appdomaincreationstarted-method.md)|응용 프로그램 도메인이 생성 중임을 프로파일러에 알립니다.|  
@@ -42,8 +42,8 @@ ms.locfileid: "76866291"
 |[ClassUnloadStarted 메서드](icorprofilercallback-classunloadstarted-method.md)|클래스가 언로드되고 있음을 프로파일러에 알립니다.|  
 |[COMClassicVTableCreated 메서드](icorprofilercallback-comclassicvtablecreated-method.md)|지정 된 IID 및 클래스에 대 한 RCW (런타임 호출 가능 래퍼)가 생성 되었음을 프로파일러에 알립니다.|  
 |[COMClassicVTableDestroyed 메서드](icorprofilercallback-comclassicvtabledestroyed-method.md)|RCW가 소멸 중임을 프로파일러에 알립니다.|  
-|[ExceptionCatcherEnter 메서드](icorprofilercallback-exceptioncatcherenter-method.md)|컨트롤이 적절 한 `catch` 블록에 전달 되 고 있음을 프로파일러에 알립니다.|  
-|[ExceptionCatcherLeave 메서드](icorprofilercallback-exceptioncatcherleave-method.md)|제어를 적절 한 `catch` 블록 외부로 전달할지 프로파일러에 알립니다.|  
+|[ExceptionCatcherEnter 메서드](icorprofilercallback-exceptioncatcherenter-method.md)|컨트롤이 적절 한 블록에 전달 되 고 있음을 프로파일러에 알립니다 `catch` .|  
+|[ExceptionCatcherLeave 메서드](icorprofilercallback-exceptioncatcherleave-method.md)|컨트롤이 적절 한 블록에서 전달 되 고 있음을 프로파일러에 알립니다 `catch` .|  
 |[ExceptionCLRCatcherExecute 메서드](icorprofilercallback-exceptionclrcatcherexecute-method.md)|.NET Framework 버전 2.0에서 사용 되지 않습니다.|  
 |[ExceptionCLRCatcherFound 메서드](icorprofilercallback-exceptionclrcatcherfound-method.md)|.NET Framework 2.0에서 사용 되지 않습니다.|  
 |[ExceptionOSHandlerEnter 메서드](icorprofilercallback-exceptionoshandlerenter-method.md)|구현되지 않았습니다. 관리 되지 않는 예외 정보가 필요한 프로파일러는 다른 방법으로이 정보를 얻어야 합니다.|  
@@ -54,8 +54,8 @@ ms.locfileid: "76866291"
 |[ExceptionSearchFunctionEnter 메서드](icorprofilercallback-exceptionsearchfunctionenter-method.md)|예외 처리의 검색 단계에서 함수를 입력 했음을 프로파일러에 알립니다.|  
 |[ExceptionSearchFunctionLeave 메서드](icorprofilercallback-exceptionsearchfunctionleave-method.md)|예외 처리의 검색 단계에서 함수 검색을 완료 했음을 프로파일러에 알립니다.|  
 |[ExceptionThrown 메서드](icorprofilercallback-exceptionthrown-method.md)|예외가 throw 되었음을 프로파일러에 알립니다.|  
-|[ExceptionUnwindFinallyEnter 메서드](icorprofilercallback-exceptionunwindfinallyenter-method.md)|예외 처리의 해제 단계가 지정 된 함수에 포함 된 `finally` 절을 입력 함을 프로파일러에 알립니다.|  
-|[ExceptionUnwindFinallyLeave 메서드](icorprofilercallback-exceptionunwindfinallyleave-method.md)|예외 처리의 해제 단계가 `finally` 절을 떠난 프로파일러에 알립니다.|  
+|[ExceptionUnwindFinallyEnter 메서드](icorprofilercallback-exceptionunwindfinallyenter-method.md)|예외 처리의 해제 단계가 `finally` 지정 된 함수에 포함 된 절을 입력 하 고 있음을 프로파일러에 알립니다.|  
+|[ExceptionUnwindFinallyLeave 메서드](icorprofilercallback-exceptionunwindfinallyleave-method.md)|예외 처리의 해제 단계에 절이 남아 있음을 프로파일러에 알립니다 `finally` .|  
 |[ExceptionUnwindFunctionEnter 메서드](icorprofilercallback-exceptionunwindfunctionenter-method.md)|예외 처리의 해제 단계에서 함수를 입력 했음을 프로파일러에 알립니다.|  
 |[ExceptionUnwindFunctionLeave 메서드](icorprofilercallback-exceptionunwindfunctionleave-method.md)|예외 처리의 해제 단계에서 함수 해제가 완료 되었음을 프로파일러에 알립니다.|  
 |[FunctionUnloadStarted 메서드](icorprofilercallback-functionunloadstarted-method.md)|런타임이 함수 언로드를 시작 했음을 프로파일러에 알립니다.|  
@@ -98,26 +98,26 @@ ms.locfileid: "76866291"
 |[ThreadDestroyed 메서드](icorprofilercallback-threaddestroyed-method.md)|스레드가 소멸 되었음을 프로파일러에 알립니다.|  
 |[UnmanagedToManagedTransition 메서드](icorprofilercallback-unmanagedtomanagedtransition-method.md)|비관리 코드에서 관리 코드로의 전환이 발생 했음을 프로파일러에 알립니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  CLR은 `ICorProfilerCallback` (또는 [ICorProfilerCallback2](icorprofilercallback2-interface.md)) 인터페이스의 메서드를 호출 하 여 프로파일러가 구독 한 이벤트가 발생할 때 프로파일러에 알립니다. 이 인터페이스는 CLR이 코드 프로파일러와 통신 하는 데 사용 하는 기본 콜백 인터페이스입니다.  
   
- 코드 프로파일러는 `ICorProfilerCallback` 인터페이스의 메서드를 구현 해야 합니다. .NET Framework 버전 2.0 이상에서는 프로파일러가 `ICorProfilerCallback2` 메서드도 구현 해야 합니다. 각 메서드 구현은 성공 시 S_OK 값이 있거나 실패할 경우 E_FAIL HRESULT를 반환 해야 합니다. 현재 CLR은 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)를 제외 하 고 각 콜백에서 반환 되는 HRESULT를 무시 합니다.  
+ 코드 프로파일러는 인터페이스의 메서드를 구현 해야 합니다 `ICorProfilerCallback` . .NET Framework 버전 2.0 이상에서는 프로파일러가 메서드도 구현 해야 합니다 `ICorProfilerCallback2` . 각 메서드 구현은 성공 시 S_OK 값이 있거나 실패할 경우 E_FAIL HRESULT를 반환 해야 합니다. 현재 CLR은 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)를 제외 하 고 각 콜백에서 반환 되는 HRESULT를 무시 합니다.  
   
- Microsoft Windows 레지스트리에서 코드 프로파일러는 `ICorProfilerCallback` 및 `ICorProfilerCallback2` 인터페이스를 구현 하는 COM (구성 요소 개체 모델) 개체를 등록 해야 합니다. 코드 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)를 호출 하 여 알림을 수신 하려는 이벤트를 구독 합니다. 이는 일반적으로 프로파일러의 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)구현에서 수행 됩니다. 그러면 프로파일러가 실행 중인 런타임 프로세스에서 발생 하거나 이벤트를 발생 시킬 때 런타임에서 알림을 받을 수 있습니다.  
+ Microsoft Windows 레지스트리에서 코드 프로파일러는 및 인터페이스를 구현 하는 COM (구성 요소 개체 모델) 개체를 등록 해야 합니다 `ICorProfilerCallback` `ICorProfilerCallback2` . 코드 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)를 호출 하 여 알림을 수신 하려는 이벤트를 구독 합니다. 이는 일반적으로 프로파일러의 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)구현에서 수행 됩니다. 그러면 프로파일러가 실행 중인 런타임 프로세스에서 발생 하거나 이벤트를 발생 시킬 때 런타임에서 알림을 받을 수 있습니다.  
   
 > [!NOTE]
-> 프로파일러는 단일 COM 개체를 등록 합니다. 프로파일러가 .NET Framework 버전 1.0 또는 1.1를 대상으로 하는 경우 해당 COM 개체는 `ICorProfilerCallback`메서드만 구현 해야 합니다. .NET Framework 버전 2.0 이상을 대상으로 하는 경우 COM 개체는 `ICorProfilerCallback2`메서드도 구현 해야 합니다.  
+> 프로파일러는 단일 COM 개체를 등록 합니다. 프로파일러가 .NET Framework 버전 1.0 또는 1.1를 대상으로 하는 경우 해당 COM 개체는의 메서드만 구현 해야 `ICorProfilerCallback` 합니다. .NET Framework 버전 2.0 이상을 대상으로 하는 경우에는 COM 개체도의 메서드를 구현 해야 합니다 `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

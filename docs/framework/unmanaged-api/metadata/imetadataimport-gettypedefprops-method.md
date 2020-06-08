@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490798"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 메서드
-지정 된 TypeDef 토큰이 나타내는 <xref:System.Type>에 대 한 메타 데이터 정보를 반환 합니다.  
+지정 된 TypeDef 토큰이 나타내는에 대 한 메타 데이터 정보를 반환 합니다 <xref:System.Type> .  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,27 +46,27 @@ HRESULT GetTypeDefProps (
  제한이 형식 이름을 포함 하는 버퍼입니다.  
   
  `cchTypeDef`  
- 진행 `szTypeDef`의 와이드 문자 크기입니다.  
+ 진행 의 와이드 문자 크기입니다 `szTypeDef` .  
   
  `pchTypeDef`  
- 제한이 `szTypeDef`에서 반환 되는 와이드 문자 수입니다.  
+ 제한이 에서 반환 되는 와이드 문자 수입니다 `szTypeDef` .  
   
  `pdwTypeDefFlags`  
- 제한이 형식 정의를 수정 하는 플래그에 대 한 포인터입니다. 이 값은 [Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 열거형의 비트 마스크입니다.  
+ 제한이 형식 정의를 수정 하는 플래그에 대 한 포인터입니다. 이 값은 [Cortypeattr](cortypeattr-enumeration.md) 열거형의 비트 마스크입니다.  
   
  `ptkExtends`  
  제한이 요청 된 형식의 기본 형식을 나타내는 TypeDef 또는 TypeRef 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

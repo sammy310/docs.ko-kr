@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: f97490e89e835716911072dbad5f70d8e55e76e6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 162def0d703ea81efc3df3ea5ee08b58e34822e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501575"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 메서드
-[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)에서 반환 된 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 에서 참조 하지 않는 어셈블리에 대 한 참조를 가져옵니다. CLR (공용 언어 런타임)은 `ProvideAssembly` 목록에 표시 되지 않는 각 어셈블리에 대해를 호출 합니다.  
+[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)에서 반환 된 [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) 에서 참조 하지 않는 어셈블리에 대 한 참조를 가져옵니다. CLR (공용 언어 런타임)은 `ProvideAssembly` 목록에 표시 되지 않는 각 어셈블리에 대해를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ HRESULT ProvideAssembly (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`ProvideAssembly`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  

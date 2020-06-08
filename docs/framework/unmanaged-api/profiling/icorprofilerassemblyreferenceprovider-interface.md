@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 17205116-66e1-4acc-8f01-532fb3867028
 topic_type:
 - apiref
-ms.openlocfilehash: 13a298451c3e8e1c5809cc1cb222acb5ab85714b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 17fb3de830d1aed2214631bbe8254a7f58030025
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500522"
 ---
 # <a name="icorprofilerassemblyreferenceprovider-interface"></a>ICorProfilerAssemblyReferenceProvider 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -24,22 +24,22 @@ ms.locfileid: "76866691"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|설명|  
 |------------|-----------------|  
 |[AddAssemblyReference 메서드](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)|프로파일러가 [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md) 콜백에서 추가 하려고 하는 어셈블리 참조의 CLR에 알립니다.|  
   
-## <a name="remarks"></a>주의  
- CLR은 [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) 콜백의 `ICorProfilerAssemblyReferenceProvider` 인터페이스 개체를 프로파일러에 전달 합니다. 이를 통해 프로파일러에서 [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)에서 나중에 추가 하려는 어셈블리 참조의 CLR에 알릴 수 있습니다. 있습니다. 그러면 CLR 어셈블리 참조 closure 워커의 정확도 및 어셈블리 공유 가능 여부를 확인하는 알고리즘의 정확도가 높아집니다.  
+## <a name="remarks"></a>설명  
+ CLR은 `ICorProfilerAssemblyReferenceProvider` [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) 콜백에서 인터페이스 개체를 프로파일러에 전달 합니다. 이를 통해 프로파일러에서 [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)에서 나중에 추가 하려는 어셈블리 참조의 CLR에 알릴 수 있습니다. 있습니다. 그러면 CLR 어셈블리 참조 closure 워커의 정확도 및 어셈블리 공유 가능 여부를 확인하는 알고리즘의 정확도가 높아집니다.  
   
  이 인터페이스는이 인터페이스 개체를 프로파일러에 전달 하는 [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) 콜백에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
