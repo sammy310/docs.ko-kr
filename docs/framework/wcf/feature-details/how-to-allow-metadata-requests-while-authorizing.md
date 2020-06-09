@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d172f9b659804179d23fb382376f83f4898edc5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601311"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>방법: 권한을 부여하는 동안 메타데이터 요청 허용
 사용자 지정 인증을 수행하는 동안 메타데이터를 처리하도록 요청을 허용해야 할 수 있습니다. 다음 항목에서는 이러한 요청의 유효성을 검사하는 단계에 대해 설명합니다.  
   
- Windows Communication Foundation (WCF) 권한 부여에 대 한 자세한 내용은 참조 하세요. [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
+ WCF (Windows Communication Foundation) 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>권한을 부여하는 동안 메타데이터 요청을 허용하려면  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62047804"
   
 3. 재정의하는 동안 다음 예제에서처럼 계약 이름, 네임스페이스 및 작업을 확인합니다. 조건이 올바른 경우 `true.`가 반환됩니다.  
   
-4. 확장성 지점을 사용하여 클래스를 채택합니다. 자세한 내용은 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)합니다.  
+4. 확장성 지점을 사용하여 클래스를 채택합니다. 자세한 내용은 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드의 재정의를 보여 줍니다.  
@@ -35,8 +35,8 @@ ms.locfileid: "62047804"
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [권한 부여](authorization-in-wcf.md)
+- [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)

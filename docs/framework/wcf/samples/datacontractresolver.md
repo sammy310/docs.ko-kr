@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 716bcb2bb43656051beffb15da9c7a988942ecd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600025"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 이 샘플에서는 DataContractResolver를 사용하여 serialization 및 deserialization 중에 xsi:type 표현에 대한 CLR 형식의 매핑 방법을 보여 줍니다.
@@ -152,7 +152,7 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2012를 사용하여 DCRSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2012을 사용 하 여 DCRSample .sln 솔루션 파일을 엽니다.
 
 2. F5 키를 눌러 솔루션을 실행합니다.
 
@@ -161,10 +161,10 @@ class MyDataContractResolver : DataContractResolver
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 계약 확인자 사용](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+- [데이터 계약 확인자 사용](../feature-details/using-a-data-contract-resolver.md)

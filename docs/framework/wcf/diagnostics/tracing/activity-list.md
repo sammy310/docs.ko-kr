@@ -2,26 +2,26 @@
 title: 동작 목록
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: d048dc9851a3b07b6c7457de95f2c752b0ffa964
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602169"
 ---
 # <a name="activity-list"></a>동작 목록
 이 항목에서는 Windows Communication Foundation (WCF)에 의해 정의 된 모든 작업을 나열 합니다.  
   
 > [!NOTE]
-> 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)를 참조 하세요.  
+> 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 [사용자 코드 추적 내보내기](emitting-user-code-traces.md)를 참조 하세요.  
   
 ## <a name="servicemodel-activities"></a>ServiceModel 동작  
  다음 표에서는 주요 사용 시나리오의 모든 동작을 보여 줍니다.  
   
 |레이블|작업 이름|작업 유형|Description|  
 |-----------|-------------------|-------------------|-----------------|  
-|A, M|앰비언트 동작|해당 없음(ServiceModel에 의해 제어되지 않음)|ServiceModel 코드를 호출하기 이전에 TLS에 해당 ID가 설정되어 있는 동작입니다(클라이언트측 또는 서버측).<br /><br /> 예제: WCF 클라이언트에서 open이 호출 되는 작업 또는 serviceHost. open이 호출 됩니다.|  
-|B|구문<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|구문||  
+|A, M|앰비언트 동작|해당 없음(ServiceModel에 의해 제어되지 않음)|ServiceModel 코드를 호출하기 이전에 TLS에 해당 ID가 설정되어 있는 동작입니다(클라이언트측 또는 서버측).<br /><br /> 예: WCF 클라이언트에서 open이 호출 된 작업 또는 serviceHost. open이 호출 됩니다.|  
+|b|구문<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|구문||  
 |C|열기<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : ‘[Type]’.|열기||  
 |I|[ClientBase&#124;ChannelFactory]를 닫습니다. ContractType : ‘[Type]’.|닫기||  
 |M|ServiceHost를 구성합니다. ServiceType: ‘[Type]’.|구문||  
@@ -38,15 +38,15 @@ ms.locfileid: "69933589"
   
 |작업 이름|작업 유형|Description|  
 |-------------------|-------------------|-----------------|  
-|보안 세션 설정|SetupSecurity|클라이언트측에만 있습니다. 인증 및 보안 컨텍스트 설정을 위한 모든 RST*/SCT 교환을 포함합니다. 인 `propagateActivity`경우 =이 활동은 서비스의 해당 Process Action RST\*/sct 활동에 병합 됩니다. `true`|  
-|보안 세션 닫기|SetupSecurity|클라이언트측에 있습니다. 보안 세션을 닫기 위한 취소 메시지 교환을 포함합니다. 인 `propagateActivity`경우 = 이작업은서비스에서프로세스동작"취소"`true`와 병합 됩니다.|  
+|보안 세션 설정|SetupSecurity|클라이언트측에만 있습니다. 인증 및 보안 컨텍스트 설정을 위한 모든 RST*/SCT 교환을 포함합니다. 인 경우 `propagateActivity` = `true` 이 활동은 서비스의 해당 Process Action RST \* /sct 활동에 병합 됩니다.|  
+|보안 세션 닫기|SetupSecurity|클라이언트측에 있습니다. 보안 세션을 닫기 위한 취소 메시지 교환을 포함합니다. 인 경우 `propagateActivity` = `true` 이 작업은 서비스에서 프로세스 동작 "취소"와 병합 됩니다.|  
   
  다음 표에서는 COM+와 관련된 모든 동작을 보여 줍니다.  
   
 |작업 이름|작업 유형|Description|  
 |-------------------|-------------------|-----------------|  
 |COM+ 인스턴스 만들기|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
-|Com + \<작업 실행 >|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
+|COM + 실행\<operation>|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
   
 ## <a name="wmi-activities"></a>WMI 동작  
  다음 표에서는 WMI와 관련된 모든 동작을 보여 줍니다.  

@@ -2,12 +2,12 @@
 title: WSDL 및 정책
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144684"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600103"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 이 항목에서는 wcf (Windows Communication Foundation) WSDL 1.1, WS-POLICY 및 WS Ws-policyattachment 구현 세부 정보 뿐만 아니라 WCF에서 도입 된 추가 WS-POLICY 어설션 및 WSDL 1.1 확장에 대해 설명 합니다.  
@@ -74,6 +74,6 @@ ms.locfileid: "84144684"
   
 ## <a name="see-also"></a>참고 항목
 
-- [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [사용자 지정 WSDL 게시](../samples/custom-wsdl-publication.md)
+- [방법: 사용자 지정 WSDL 내보내기](../extending/how-to-export-custom-wsdl.md)
+- [방법: 사용자 지정 WSDL 가져오기](../extending/how-to-import-custom-wsdl.md)

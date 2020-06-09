@@ -2,12 +2,12 @@
 title: DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600908"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 
@@ -18,35 +18,35 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 
 이 형식은 ASP.NET과 결합하지 않고 AJAX 서비스를 만드는 경우에도 사용할 수 있습니다. 이 경우 XML이 기본값이지만 JSON을 선택할 수 있습니다.
 
-마지막으로 JSON 지원이 필요하지만 AJAX 서비스는 만들지 않을 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하면 .NET 개체를 JSON 데이터로 직렬화하고 다시 .NET 형식의 인스턴스로 직접 해당 데이터를 역직렬화할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: JSON 데이터 Serialize 및 Deserialize](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)를 참조 하세요.
+마지막으로 JSON 지원이 필요하지만 AJAX 서비스는 만들지 않을 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하면 .NET 개체를 JSON 데이터로 직렬화하고 다시 .NET 형식의 인스턴스로 직접 해당 데이터를 역직렬화할 수 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: JSON 데이터 Serialize 및 Deserialize](how-to-serialize-and-deserialize-json-data.md)를 참조 하세요.
 
-JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Runtime.Serialization.DataContractSerializer>에서 지원하는 것과 같은 .NET 형식이 지원됩니다. 지원 되는 형식 목록은 [데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조 하세요. 여기에는 대부분의 기본 형식, 대부분의 배열 및 컬렉션 형식뿐만 아니라 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute>를 사용하는 복합 형식도 포함됩니다.
+JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Runtime.Serialization.DataContractSerializer>에서 지원하는 것과 같은 .NET 형식이 지원됩니다. 지원 되는 형식 목록은 [데이터 계약 Serializer에서 지 원하는 형식](types-supported-by-the-data-contract-serializer.md)을 참조 하세요. 여기에는 대부분의 기본 형식, 대부분의 배열 및 컬렉션 형식뿐만 아니라 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute>를 사용하는 복합 형식도 포함됩니다.
 
 ## <a name="mapping-net-types-to-json-types"></a>JSON 형식에 .NET 형식 매핑
 
 다음 표에서는 serialization 및 deserialization 절차를 통해 매핑될 때 .NET 형식과 JSON/JavaScript 형식 간의 대응 관계를 보여 줍니다.
 
-|.NET 형식|JSON/JavaScript|참고|
+|.NET 형식|JSON/JavaScript|메모|
 |----------------|----------------------|-----------|
 |모든 숫자 형식. 예: <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>|숫자|`Double.NaN`, `Double.PositiveInfinity` 및 `Double.NegativeInfinity`와 같은 특수한 값은 지원되지 않으므로 잘못된 JSON이 됩니다.|
 |<xref:System.Enum>|숫자|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|
-|<xref:System.Boolean>|Boolean|--|
+|<xref:System.Boolean>|부울|--|
 |<xref:System.String>, <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON에서 이러한 형식의 형식은 XML에서와 동일 합니다. 즉, 기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-1234567890AB" 형식의 GUID, ""와 같은 자연 문자열 형식의 URI입니다 http://www.example.com . 자세한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조 하세요.|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON에서 이러한 형식의 형식은 XML에서와 동일 합니다. 즉, 기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-1234567890AB" 형식의 GUID, ""와 같은 자연 문자열 형식의 URI입니다 http://www.example.com . 자세한 내용은 [데이터 계약 스키마 참조](data-contract-schema-reference.md)를 참조 하세요.|
 |<xref:System.Xml.XmlQualifiedName>|String|형식은 "name:namespace"이며 첫 번째 콜론 앞에 오는 것이 이름입니다. 이름 또는 네임스페이스가 없는 경우도 있습니다. 네임스페이스가 없는 경우 콜론도 생략할 수 있습니다.|
 |<xref:System.Array>(<xref:System.Byte> 형식)|숫자 배열|각 숫자는 1바이트 값을 나타냅니다.|
 |<xref:System.DateTime>|날짜/시간 또는 문자열|이 항목의 뒷부분에 있는 날짜/시간 및 JSON을 참조하십시오.|
 |<xref:System.DateTimeOffset>|복합 형식|이 항목의 뒷부분에 있는 날짜/시간 및 JSON을 참조하십시오.|
 |XML 및 ADO.NET 형식(<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode>의 배열,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|이 항목의 XML 형식 및 JSON 단원을 참조하십시오.|
 |<xref:System.DBNull>|빈 복합 형식|--|
-|컬렉션, 사전 및 배열|배열|이 항목의 컬렉션, 사전 및 배열 단원을 참조하십시오.|
+|컬렉션, 사전 및 배열|Array|이 항목의 컬렉션, 사전 및 배열 단원을 참조하십시오.|
 |복합 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 또는 <xref:System.SerializableAttribute> 적용)|복합 형식|데이터 멤버는 JavaScript 복합 형식의 멤버가 됩니다.|
 |<xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 복합 형식)|복합 형식|다른 복합 형식과 같지만 일부 <xref:System.Runtime.Serialization.ISerializable> 형식이 지원되지 않습니다. 이 항목의 고급 정보 단원에 있는 ISerializable 지원 부분을 참조하십시오.|
 |모든 형식에 대해 `Null` 값|Null|Nullable 값 형식도 지원 되며 nullable이 아닌 값 형식과 동일한 방식으로 JSON에 매핑됩니다.|
 
 ### <a name="enumerations-and-json"></a>열거 및 JSON
 
-열거형 멤버 값은 JSON에서 숫자로 처리되며 이는 열거형 멤버 값이 멤버 이름으로 포함되는 데이터 계약에서의 처리 방식과 다릅니다. 데이터 계약 처리에 대 한 자세한 내용은 [데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)을 참조 하세요.
+열거형 멤버 값은 JSON에서 숫자로 처리되며 이는 열거형 멤버 값이 멤버 이름으로 포함되는 데이터 계약에서의 처리 방식과 다릅니다. 데이터 계약 처리에 대 한 자세한 내용은 [데이터 계약의 열거형 형식](enumeration-types-in-data-contracts.md)을 참조 하세요.
 
 - 예를 들어, `public enum Color {red, green, blue, yellow, pink}`가 있을 경우 `yellow`를 serialize하면 문자열 "yellow"가 아닌 숫자 3이 생성됩니다.
 
@@ -87,11 +87,11 @@ XML 형식은 JSON 문자열이 됩니다.
 
 - JSON으로 직접 작업하려는 경우(엄격한 계약을 미리 정의하지 않고 키 및 값에 동적으로 액세스하는 경우) 다음과 같은 몇 가지 옵션이 있습니다.
 
-  - [약한 형식의 JSON Serialization (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) 샘플을 사용 하는 것이 좋습니다.
+  - [약한 형식의 JSON Serialization (AJAX)](../samples/weakly-typed-json-serialization-sample.md) 샘플을 사용 하는 것이 좋습니다.
 
   - <xref:System.Runtime.Serialization.ISerializable> 인터페이스와 deserialization 생성자를 사용합니다. 이 두 메커니즘을 사용하면 serialization과 deserialization 시 각각 JSON 키/값 쌍에 액세스할 수 있지만 부분 신뢰 시나리오에서 작업할 수 없습니다.
 
-  - Serializer를 사용 하는 대신 [JSON과 XML 간의 매핑으로](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) 작업 하는 것이 좋습니다.
+  - Serializer를 사용 하는 대신 [JSON과 XML 간의 매핑으로](mapping-between-json-and-xml.md) 작업 하는 것이 좋습니다.
 
   - Serialization 컨텍스트의 *다형성* 은 기본 형식이 필요한 경우 파생 형식을 serialize 하는 기능을 의미 합니다. 예를 들어 컬렉션을 <xref:System.Object>에 할당할 때처럼 컬렉션을 다형적으로 사용하는 경우 특수한 JSON 관련 규칙이 있습니다. 이러한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원에 자세히 설명되어 있습니다.
 
@@ -113,13 +113,13 @@ deserialization 시 JSON 형식은 위의 표와 일치하지 않아도 됩니�
 
 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 인터페이스 형식으로 역직렬화될 때 선언된 형식이 개체인 것처럼 역직렬화됩니다.
 
-사용자 고유의 기본 형식 및 파생 형식으로 작업하는 경우에는 일반적으로 <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> 또는 이와 동등한 메커니즘을 사용해야 합니다. 예를 들어 반환 값을 포함 하는 작업이 있고 `Animal` 에서 파생 된의 인스턴스를 반환 하는 경우 `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> 작업에를 형식 또는에 적용 하 `Animal` <xref:System.ServiceModel.ServiceKnownTypeAttribute> 고 `Cat` 이러한 특성에서 형식을 지정 해야 합니다. 자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.
+사용자 고유의 기본 형식 및 파생 형식으로 작업하는 경우에는 일반적으로 <xref:System.Runtime.Serialization.KnownTypeAttribute>, <xref:System.ServiceModel.ServiceKnownTypeAttribute> 또는 이와 동등한 메커니즘을 사용해야 합니다. 예를 들어 반환 값을 포함 하는 작업이 있고 `Animal` 에서 파생 된의 인스턴스를 반환 하는 경우 `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> 작업에를 형식 또는에 적용 하 `Animal` <xref:System.ServiceModel.ServiceKnownTypeAttribute> 고 `Cat` 이러한 특성에서 형식을 지정 해야 합니다. 자세한 내용은 [데이터 계약 알려진 형식을](data-contract-known-types.md)합니다.
 
 다형 serialization 작동 방식에 대한 자세한 내용 및 다형 serialization 사용 시 고려해야 할 제한 사항에 대한 설명은 이 항목의 뒷부분에 있는 고급 정보 단원을 참조하십시오.
 
 ### <a name="versioning"></a>버전 관리
 
-JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 역직렬화한 다음 다른 형식(예: JSON)으로 직렬화할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.
+JSON에서는 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 포함한 데이터 계약 버전 관리 기능이 완벽하게 지원됩니다. 또한 대부분의 경우에 형식을 한 가지 형식(예: XML)으로 역직렬화한 다음 다른 형식(예: JSON)으로 직렬화할 수 있으며 이 경우 데이터를 <xref:System.Runtime.Serialization.IExtensibleDataObject>에 유지할 수 있습니다. 자세한 내용은 [호환 가능한 데이터 계약](forward-compatible-data-contracts.md)을 참조하세요. JSON은 순서가 지정되지 않으므로 순서 정보가 손실됩니다. 또한 JSON은 키 이름이 같은 여러 키/값 쌍을 지원하지 않습니다. 마지막으로, <xref:System.Runtime.Serialization.IExtensibleDataObject>의 모든 작업은 원래 다형적입니다. 즉, 모든 형식의 기본 형식인 <xref:System.Object>에 파생 형식이 할당됩니다.
 
 ## <a name="json-in-urls"></a>URL의 JSON
 
@@ -179,7 +179,7 @@ ASP.NET AJAX 클라이언트 JavaScript 코드는 이러한 문자열을 JavaScr
 
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>XElement 및 DataSet을 포함한 IXmlSerializable 형식
 
-<xref:System.Runtime.Serialization.ISerializable> 형식은 "콘텐츠 형식", "DataSet 형식" 및 "요소 형식"으로 나누어집니다. 이러한 형식에 대 한 정의는 [데이터 계약의 XML 및 ADO.NET 형식](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)을 참조 하세요.
+<xref:System.Runtime.Serialization.ISerializable> 형식은 "콘텐츠 형식", "DataSet 형식" 및 "요소 형식"으로 나누어집니다. 이러한 형식에 대 한 정의는 [데이터 계약의 XML 및 ADO.NET 형식](xml-and-ado-net-types-in-data-contracts.md)을 참조 하세요.
 
 "콘텐츠" 및 "DataSet" 형식은 이전 단원에서 설명한 <xref:System.Array>의 <xref:System.Xml.XmlNode> 개체와 비슷하게 serialize됩니다. "콘텐츠" 및 "DataSet" 형식은 이름과 네임스페이스가 해당 형식의 데이터 계약 이름과 네임스페이스에 해당하는 요소에 래핑됩니다.
 
@@ -261,7 +261,7 @@ JSON 메시지의 크기를 줄이기 위해 기본 데이터 계약 네임 스�
 
 #### <a name="known-types-and-configuration"></a>알려진 형식 및 구성
 
-<xref:System.Runtime.Serialization.DataContractSerializer>에서 사용되는 알려진 형식 메커니즘은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서도 동일한 방식으로 모두 지원됩니다. 두 serializer는 모두에서 동일한 구성 요소를 읽어 [\<dataContractSerializer>](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md) 구성 파일을 통해 추가 된 알려진 형식을 검색 합니다.
+<xref:System.Runtime.Serialization.DataContractSerializer>에서 사용되는 알려진 형식 메커니즘은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에서도 동일한 방식으로 모두 지원됩니다. 두 serializer는 모두에서 동일한 구성 요소를 읽어 [\<dataContractSerializer>](../../configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../configure-apps/file-schema/wcf/system-runtime-serialization.md) 구성 파일을 통해 추가 된 알려진 형식을 검색 합니다.
 
 #### <a name="collections-assigned-to-object"></a>개체에 할당된 컬렉션
 
@@ -291,8 +291,8 @@ JSON 메시지의 크기를 줄이기 위해 기본 데이터 계약 네임 스�
 
 ### <a name="valid-json-key-names"></a>유효한 JSON 키 이름
 
-serializer는 유효한 XML 이름이 아닌 키 이름을 XML 인코딩합니다. 예를 들어 이름이 "123" 인 데이터 멤버의 경우 " \_ \_ \_ \_ \_ \_ 123"는 잘못 된 XML 요소 이름 (숫자로 시작) 이므로 "x0031 x0032 x0033"와 같은 인코딩된 이름이 포함 됩니다. XML 이름에 유효하지 않은 일부 국제 문자 집합이 포함되는 경우에도 비슷한 상황이 발생할 수 있습니다. JSON 처리의 이러한 XML 효과에 대 한 설명은 [json과 Xml 간의 매핑](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)을 참조 하세요.
+serializer는 유효한 XML 이름이 아닌 키 이름을 XML 인코딩합니다. 예를 들어 이름이 "123" 인 데이터 멤버의 경우 " \_ \_ \_ \_ \_ \_ 123"는 잘못 된 XML 요소 이름 (숫자로 시작) 이므로 "x0031 x0032 x0033"와 같은 인코딩된 이름이 포함 됩니다. XML 이름에 유효하지 않은 일부 국제 문자 집합이 포함되는 경우에도 비슷한 상황이 발생할 수 있습니다. JSON 처리의 이러한 XML 효과에 대 한 설명은 [json과 Xml 간의 매핑](mapping-between-json-and-xml.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [JSON 및 기타 데이터 전송 형식에 대한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+- [JSON 및 기타 데이터 전송 형식에 대한 지원](support-for-json-and-other-data-transfer-formats.md)

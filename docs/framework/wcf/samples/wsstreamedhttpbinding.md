@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 663b7921e4e8a66d9b905404bad00f613e2f04cc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 619c7e793ff94efffcb72774cf3e367df377a3a3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600895"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -93,13 +93,13 @@ ms.locfileid: "84144658"
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)에 나열 된 단계를 수행 했는지 확인 합니다.
+2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)에 나열 된 단계를 수행 했는지 확인 합니다.
 
-3. [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)을 수행 했는지 확인 합니다.
+3. [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](iis-server-certificate-installation-instructions.md)을 수행 했는지 확인 합니다.
 
-4. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
+4. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.
 
-5. 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+5. 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
 6. 클라이언트 창이 표시되면 "Sample.txt"를 입력합니다. 디렉터리에서 "Copy of Sample.txt"를 볼 수 있습니다.
 

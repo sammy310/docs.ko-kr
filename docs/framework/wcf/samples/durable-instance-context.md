@@ -2,12 +2,12 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 567ca62d48e80993328548b11f8b59c4fcd355fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600596"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-이러한 두 메서드는 `IContextManager` 구현을 사용하여 메시지에서 컨텍스트 ID를 쓰고 읽습니다. `IContextManager` 는 모든 컨텍스트 관리자에 대 한 계약을 정의 하는 데 사용 되는 사용자 지정 인터페이스입니다. 채널은 사용자 지정 SOAP 헤더에 컨텍스트 ID를 포함 하거나 HTTP 쿠키 헤더에 포함할 수 있습니다. 각 컨텍스트 관리자 구현은 모든 컨텍스트 관리자의 공통 기능이 포함된 `ContextManagerBase` 클래스에서 상속됩니다. 이 클래스의 `GetContextId` 메서드는 클라이언트에서 컨텍스트 ID를 가져오는 데 사용됩니다. 컨텍스트 ID를 처음으로 가져오면 이 메서드는 원격 엔드포인트 주소로 이름이 생성되는 텍스트 파일에 컨텍스트 ID를 저장합니다. 일반적인 URI에서 잘못된 파일 이름 문자는 @ 문자로 바뀝니다.
+이러한 두 메서드는 `IContextManager` 구현을 사용하여 메시지에서 컨텍스트 ID를 쓰고 읽습니다. `IContextManager`는 모든 컨텍스트 관리자에 대 한 계약을 정의 하는 데 사용 되는 사용자 지정 인터페이스입니다. 채널은 사용자 지정 SOAP 헤더에 컨텍스트 ID를 포함 하거나 HTTP 쿠키 헤더에 포함할 수 있습니다. 각 컨텍스트 관리자 구현은 모든 컨텍스트 관리자의 공통 기능이 포함된 `ContextManagerBase` 클래스에서 상속됩니다. 이 클래스의 `GetContextId` 메서드는 클라이언트에서 컨텍스트 ID를 가져오는 데 사용됩니다. 컨텍스트 ID를 처음으로 가져오면 이 메서드는 원격 엔드포인트 주소로 이름이 생성되는 텍스트 파일에 컨텍스트 ID를 저장합니다. 일반적인 URI에서 잘못된 파일 이름 문자는 @ 문자로 바뀝니다.
 
 나중에 동일한 원격 엔드포인트에 컨텍스트 ID가 필요하면 적합한 파일이 있는지 확인합니다. 파일이 있으면 컨텍스트 ID를 읽어 반환하고, 그렇지 않으면 새로 생성한 컨텍스트 ID를 반환하여 파일에 저장합니다. 기본 구성을 사용 하 여 이러한 파일은 현재 사용자의 임시 디렉터리에 있는 ContextStore 라는 디렉터리에 배치 됩니다. 그러나 이 위치는 바인딩 요소를 사용하여 구성할 수 있습니다.
 
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-반면, `DurableInstanceContextInputChannel` `IInputChannel` 인터페이스를 구현 하는는 각 메서드에서 `ReadContextId` 메서드를 호출 하 여 메시지를 수신 합니다.
+반면, `DurableInstanceContextInputChannel` 인터페이스를 구현 하는는 `IInputChannel` 각 메서드에서 메서드를 호출 하 여 메시지를 `ReadContextId` 수신 합니다.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-이러한 채널 구현은 클래스 및 `DurableInstanceContextBindingElement` `DurableInstanceContextBindingElementSection` 클래스에 의해 WCF 채널 런타임에 적절히 추가 됩니다. 바인딩 요소 및 바인딩 요소에 대 한 자세한 내용은 [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel 샘플 설명서를 참조 하세요.
+이러한 채널 구현은 클래스 및 클래스에 의해 WCF 채널 런타임에 적절히 추가 됩니다 `DurableInstanceContextBindingElement` `DurableInstanceContextBindingElementSection` . 바인딩 요소 및 바인딩 요소에 대 한 자세한 내용은 [HttpCookieSession](httpcookiesession.md) channel 샘플 설명서를 참조 하세요.
 
 ## <a name="service-model-layer-extensions"></a>서비스 모델 계층 확장명
 
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-`GetInstance` 메서드에서는 지정 된 컨텍스트 ID에 대해 serialize 된 데이터를 읽고이를 통해 생성 된 개체를 호출자에 게 반환 합니다.
+메서드에서는 `GetInstance` 지정 된 컨텍스트 ID에 대해 serialize 된 데이터를 읽고이를 통해 생성 된 개체를 호출자에 게 반환 합니다.
 
 ```csharp
 object data;
@@ -234,13 +234,13 @@ else
 
 이 프로세스의 첫 번째 단계로 채널 계층을 통해 현재 InstanceContext에 도달한 컨텍스트 ID를 저장해야 합니다. InstanceContext는 WCF 디스패처와 서비스 인스턴스 간의 링크 역할을 하는 런타임 구성 요소입니다. 이 구성 요소를 사용하면 서비스 인스턴스에 추가 상태 및 동작을 제공할 수 있습니다. 세션 통신에서는 첫 번째 메시지에 대해서만 컨텍스트 ID를 전송하기 때문에 이 구성 요소가 매우 중요합니다.
 
-WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태 및 동작을 추가 하 여 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 개체에 새 상태 기능을 추가 하기 위해 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 Iextensibleobject<t>\<t>, iextension\<t> 및 iextensioncollection\<t>의 세 가지 인터페이스가 있습니다.
+WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태 및 동작을 추가 하 여 InstanceContext 런타임 구성 요소를 확장할 수 있습니다. 확장 가능한 개체 패턴은 새 기능으로 기존 런타임 클래스를 확장 하거나 개체에 새 상태 기능을 추가 하기 위해 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 Iextensibleobject<t> \<T> , iextension \<T> 및 IExtensionCollection의 세 가지 인터페이스가 있습니다 \<T> .
 
-- Iextensibleobject<t>\<T> 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.
+- Iextensibleobject<t> \<T> 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.
 
-- IExtension\<t> 인터페이스는 t 형식의 클래스를 확장 하는 개체에 의해 구현 됩니다.
+- IExtension \<T> 인터페이스는 T 형식의 클래스를 확장 하는 개체에 의해 구현 됩니다.
 
-- IExtensionCollection\<T> 인터페이스는 형식으로 iextension을 검색할 수 있도록 하는 iextensions의 컬렉션입니다.
+- IExtensionCollection \<T> 인터페이스는 형식으로 Iextension을 검색할 수 있도록 하는 iextensions의 컬렉션입니다.
 
 따라서 IExtension 인터페이스를 구현하고 필요한 상태를 정의하는 InstanceContextExtension 클래스를 만들어 컨텍스트 ID를 저장해야 합니다. 이 클래스는 사용할 스토리지 관리자를 보유하는 상태도 제공합니다. 새 상태가 저장된 다음에는 수정할 수 없습니다. 따라서 상태가 생성되어 인스턴스에 제공되고 저장된 다음에는 읽기 전용 속성으로만 액세스할 수 있습니다.
 
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 앞에서 설명한 대로 `Properties` 클래스의 `Message` 컬렉션에서 컨텍스트 ID를 읽고 확장 클래스의 생성자에게 전달합니다. 이 샘플에서는 계층 간에 일관된 방식으로 정보를 교환할 수 있는 방법을 보여 줍니다.
 
-다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF를 사용 하면 사용자 지정 인스턴스화 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 인스턴스 공급자에서 예상한 서비스 형식이 생성자에서 허용 됩니다. 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서 지속형 인스턴스를 찾기 위해 저장소 관리자의 인스턴스를 만듭니다. 가 반환 `null`되는 경우 서비스 형식의 새 인스턴스가 인스턴스화되고 호출자에 게 반환 됩니다.
+다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF를 사용 하면 사용자 지정 인스턴스화 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 인스턴스 공급자에서 예상한 서비스 형식이 생성자에서 허용 됩니다. 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. 구현에서 `GetInstance` 지속형 인스턴스를 찾기 위해 저장소 관리자의 인스턴스를 만듭니다. 가 반환 되는 경우 `null` 서비스 형식의 새 인스턴스가 인스턴스화되고 호출자에 게 반환 됩니다.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-그 다음으로 중요 한 단계는 서비스 `InstanceContextExtension`모델 `InstanceContextInitializer`런타임에, `InstanceProvider` 및 클래스를 설치 하는 것입니다. 사용자 지정 특성을 사용하면 서비스 구현 클래스를 표시하여 동작을 설치할 수 있습니다. `DurableInstanceContextAttribute`에는 이 특성의 구현이 포함되어 있으며 `IServiceBehavior` 인터페이스를 구현하여 전체 서비스 런타임을 확장합니다.
+그 다음으로 중요 한 단계는 `InstanceContextExtension` `InstanceContextInitializer` 서비스 모델 런타임에, 및 클래스를 설치 하는 것입니다 `InstanceProvider` . 사용자 지정 특성을 사용하면 서비스 구현 클래스를 표시하여 동작을 설치할 수 있습니다. `DurableInstanceContextAttribute`에는 이 특성의 구현이 포함되어 있으며 `IServiceBehavior` 인터페이스를 구현하여 전체 서비스 런타임을 확장합니다.
 
 이 클래스에는 사용할 스토리지 관리자의 형식을 허용하는 속성이 있습니다. 이러한 방식으로 구현을 통해 사용자는 고유한 `IStorageManager` 구현을이 특성의 매개 변수로 지정할 수 있습니다.
 
-`ApplyDispatchBehavior` 구현에서 현재 `InstanceContextMode` `ServiceBehavior` 특성의를 확인 하는 중입니다. 이 속성을 Singleton으로 설정하면 영속 인스턴스를 사용할 수 없으며 `InvalidOperationException`이 throw되어 호스트에 알립니다.
+구현에서 `ApplyDispatchBehavior` `InstanceContextMode` 현재 특성의를 `ServiceBehavior` 확인 하는 중입니다. 이 속성을 Singleton으로 설정하면 영속 인스턴스를 사용할 수 없으며 `InvalidOperationException`이 throw되어 호스트에 알립니다.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 이제 서비스 인스턴스를 영구 스토리지에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제이를 WCF 런타임과 통합 해야 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.
 
-`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 각 작업 `IOperationBehavior` 에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 적절 한 `ApplyBehavior` `DispatchOperation` 가 생성 되는 동안 메서드를 호출 합니다. 이 메서드 구현에는 한 줄의 코드가 있습니다.
+`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 `IOperationBehavior` 각 작업에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 `ApplyBehavior` 적절 한가 생성 되는 동안 메서드를 호출 합니다 `DispatchOperation` . 이 메서드 구현에는 한 줄의 코드가 있습니다.
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-이 명령은 `OperationInvoker` 형식의 인스턴스를 만들어 생성할 `Invoker`의 `DispatchOperation` 속성에 할당합니다. `OperationInvoker` 클래스는 `DispatchOperation`에 대해 생성된 기본 작업 호출자의 래퍼입니다. 이 클래스는 `IOperationInvoker` 인터페이스를 구현합니다. `Invoke` 메서드 구현에서 실제 메서드 호출은 내부 작업 호출자에 게 위임 됩니다. 그러나 결과를 반환하기 전에 `InstanceContext`의 스토리지 관리자를 사용하여 서비스 인스턴스를 저장합니다.
+이 명령은 `OperationInvoker` 형식의 인스턴스를 만들어 생성할 `Invoker`의 `DispatchOperation` 속성에 할당합니다. `OperationInvoker` 클래스는 `DispatchOperation`에 대해 생성된 기본 작업 호출자의 래퍼입니다. 이 클래스는 `IOperationInvoker` 인터페이스를 구현합니다. `Invoke`메서드 구현에서 실제 메서드 호출은 내부 작업 호출자에 게 위임 됩니다. 그러나 결과를 반환하기 전에 `InstanceContext`의 스토리지 관리자를 사용하여 서비스 인스턴스를 저장합니다.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -444,11 +444,11 @@ Press ENTER to shut down client
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.
 
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
 > [!NOTE]
 > 이 샘플을 실행하려면 SQL Server 2005 또는 SQL Express 2005를 실행하고 있어야 합니다. SQL Server 2005를 실행하고 있는 경우 서비스의 연결 문자열 구성을 수정해야 합니다. 다중 컴퓨터 구성에서 실행하는 경우 SQL Server는 서버 컴퓨터에만 필요합니다.
@@ -458,6 +458,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

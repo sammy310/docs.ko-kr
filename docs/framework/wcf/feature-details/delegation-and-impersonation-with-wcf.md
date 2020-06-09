@@ -8,15 +8,15 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599258"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
-*가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 애플리케이션을 보려면 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
+*가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 애플리케이션을 보려면 [Impersonating the Client](../samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
   
 > [!IMPORTANT]
 > 서비스를 통해 클라이언트를 가장하는 경우 서버 프로세스보다 높은 권한의 클라이언트 자격 증명을 사용하여 서비스가 실행됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "76920208"
 ## <a name="impersonation-basics"></a>가장 기본 사항  
  WCF (Windows Communication Foundation)는 다양 한 클라이언트 자격 증명에 대 한 가장을 지원 합니다. 이 항목에서는 서비스 메서드를 구현하는 동안 호출자를 가장하기 위한 서비스 모델 지원에 대해 설명합니다. 이러한 시나리오에서 가장 및 SOAP 보안과 WCF 옵션을 포함 하는 일반적인 배포 시나리오에 대해서도 설명 합니다.  
   
- 이 항목에서는 SOAP 보안을 사용 하는 경우 WCF의 가장 및 위임에 대해 중점적으로 설명 합니다. 전송 보안을 사용 하 여 가장을 사용 [하는 방법](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)에 설명 된 대로 전송 보안을 사용 하는 경우 WCF에서 가장 및 위임을 사용할 수도 있습니다.  
+ 이 항목에서는 SOAP 보안을 사용 하는 경우 WCF의 가장 및 위임에 대해 중점적으로 설명 합니다. 전송 보안을 사용 하 여 가장을 사용 [하는 방법](using-impersonation-with-transport-security.md)에 설명 된 대로 전송 보안을 사용 하는 경우 WCF에서 가장 및 위임을 사용할 수도 있습니다.  
   
 ## <a name="two-methods"></a>두 가지 방법  
  WCF SOAP 보안에는 가장을 수행 하는 두 가지 방법이 있습니다. 사용되는 방법은 바인딩에 따라 결정됩니다. 첫 번째 방법은 SSPI(보안 지원 공급자 인터페이스) 또는 Kerberos 인증에서 가져온 후 서비스에 캐시되는 Windows 토큰을 통한 가장이며, 두 번째 방법은 통칭 *S4U* (Service-for-User)라고 알려진 Kerberos 확장에서 가져온 Windows 토큰을 통한 가장입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "76920208"
   
 - <xref:System.ServiceModel.BasicHttpBinding> 가 <xref:System.ServiceModel.BasicHttpSecurityMode> 자격 증명으로 설정된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 또는 서비스를 통해 올바른 Windows 계정으로 매핑할 수 있는 사용자 이름 자격 증명을 클라이언트에서 제공하는 기타 표준 바인딩  
   
-- <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 모든 `true`. 속성은 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>및 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>클래스에서 사용할 수 있습니다. 바인딩에 보안 대화가 사용 되는 경우에도 `requireCancellation` 속성이 `true`로 설정 되어야 합니다.  
+- <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 모든 `true`. 속성은, 및 클래스에서 사용할 수 있습니다 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> . 바인딩에 보안 대화가 사용 되는 경우 `requireCancellation` 에도 속성이로 설정 되어야 합니다 `true` .  
   
 - 클라이언트에서 사용자 이름 자격 증명을 제공하는 <xref:System.ServiceModel.Channels.CustomBinding> . 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "76920208"
  서비스를 통해 클라이언트를 가장할 수 있는 범위는 서비스를 통해 가장을 시도할 때의 서비스 계정 권한, 사용되는 가장 형식 및 클라이언트에서 허용하는 가장 범위에 따라 다릅니다.  
   
 > [!NOTE]
-> 클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 애플리케이션은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 클라이언트가 ASP.NET 페이지이 고 해당 페이지가 IIS 6.0 또는 IIS 7.0에서 호스트 되는 경우 클라이언트는 기본적으로 `Network Service` 계정에서 실행 됩니다. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트가 ASP.NET 페이지이 고 상태 저장 Sct을 사용 하는 보안 세션을 사용 하는 경우 클라이언트를 가장할 수 없습니다. 보안 세션에서 상태 저장 Sct를 사용 하는 방법에 대 한 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요.  
+> 클라이언트 및 서비스가 동일한 컴퓨터에서 실행 중이고 클라이언트가 시스템 계정(예: `Local System` 또는 `Network Service`)으로 실행 중인 경우, 상태 저장 보안 컨텍스트 토큰을 사용하여 보안 세션을 설정할 때 클라이언트를 가장할 수 없습니다. 일반적으로 Windows Form 또는 콘솔 애플리케이션은 현재 계정에 로그인된 상태에서 실행되기 때문에 기본적으로 계정을 가장할 수 있습니다. 그러나 클라이언트가 ASP.NET 페이지이 고 해당 페이지가 IIS 6.0 또는 IIS 7.0에서 호스트 되는 경우 클라이언트는 `Network Service` 기본적으로 계정으로 실행 됩니다. 보안 세션을 지원하는 모든 시스템 제공 바인딩은 기본적으로 상태 비저장 SCT(보안 컨텍스트 토큰)를 사용합니다. 그러나 클라이언트가 ASP.NET 페이지이 고 상태 저장 Sct을 사용 하는 보안 세션을 사용 하는 경우 클라이언트를 가장할 수 없습니다. 보안 세션에서 상태 저장 Sct를 사용 하는 방법에 대 한 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요.  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>서비스 메서드에서의 가장: 선언적 모델  
- 대부분의 가장 시나리오의 경우 호출자 컨텍스트에서 서비스 메서드를 실행하게 됩니다. WCF는 사용자가 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성에 가장 요구 사항을 지정할 수 있도록 하 여이 작업을 쉽게 수행할 수 있게 해 주는 가장 기능을 제공 합니다. 예를 들어 다음 코드에서 WCF 인프라는 `Hello` 메서드를 실행 하기 전에 호출자를 가장 합니다. `Hello` 메서드 내의 네이티브 리소스에 대한 액세스 시도는 이 리소스의 ACL(액세스 제어 목록)에서 호출자 액세스 권한을 허용하는 경우에만 가능합니다. 가장을 가능하게 하려면, 다음 예제에서와 같이 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption> 열거형 값인 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>중 하나로 설정합니다.  
+ 대부분의 가장 시나리오의 경우 호출자 컨텍스트에서 서비스 메서드를 실행하게 됩니다. WCF는 사용자가 특성에 가장 요구 사항을 지정할 수 있도록 하 여이 작업을 쉽게 수행할 수 있게 해 주는 가장 기능을 제공 합니다 <xref:System.ServiceModel.OperationBehaviorAttribute> . 예를 들어 다음 코드에서 WCF 인프라는 메서드를 실행 하기 전에 호출자를 가장 합니다 `Hello` . `Hello` 메서드 내의 네이티브 리소스에 대한 액세스 시도는 이 리소스의 ACL(액세스 제어 목록)에서 호출자 액세스 권한을 허용하는 경우에만 가능합니다. 가장을 가능하게 하려면, 다음 예제에서와 같이 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption> 열거형 값인 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>중 하나로 설정합니다.  
   
 > [!NOTE]
 > 서비스의 자격 증명 권한이 원격 클라이언트의 자격 증명보다 더 높을 때 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성이 <xref:System.ServiceModel.ImpersonationOption.Allowed>로 설정되어 있으면 서비스의 자격 증명이 사용됩니다. 즉, 권한이 낮은 사용자가 자격 증명을 제공하면 권한이 더 높은 서비스에서 서비스의 자격 증명으로 메서드를 실행하여, 권한이 낮은 사용자가 일반적으로 사용할 수 없는 리소스를 사용할 수 있습니다.  
@@ -71,13 +71,13 @@ ms.locfileid: "76920208"
  WCF 인프라는 호출자가 Windows 사용자 계정에 매핑될 수 있는 자격 증명으로 인증 된 경우에만 호출자를 가장할 수 있습니다. Windows 계정에 매핑될 수 없는 자격 증명을 통해 인증하도록 서비스를 구성한 경우에는 서비스 메서드가 실행되지 않습니다.  
   
 > [!NOTE]
-> Windows XP의 경우 상태 저장 SCT가 만들어지면 가장이 실패 하 여 <xref:System.InvalidOperationException>됩니다. 자세한 내용은 [지원 되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)합니다.  
+> Windows XP의 경우 상태 저장 SCT가 만들어지면 가장이 실패 하 여이 발생 <xref:System.InvalidOperationException> 합니다. 자세한 내용은 [지원 되지 않는 시나리오](unsupported-scenarios.md)합니다.  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>서비스 메서드에서의 가장: 명령적 모델  
  작동하는 전체 서비스 메서드가 아닌 그 중 일부만 호출자가 가장해야 하는 경우가 있습니다. 이 경우에는 서비스 메서드 내의 호출자 Windows ID를 가져와 명령적 방식으로 가장을 수행합니다. 이 작업은 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 클래스의 인스턴스를 반환하도록 <xref:System.ServiceModel.ServiceSecurityContext> 의 <xref:System.Security.Principal.WindowsIdentity> 속성을 사용하고 해당 인스턴스를 사용하기 전에 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 메서드를 호출하여 수행합니다.  
   
 > [!NOTE]
-> 가장 동작을 자동으로 되돌리려면 Visual Basic`Using` 문이나 C# `using` 문을 사용 해야 합니다. 문을 사용 하지 않거나 Visual Basic 또는 C#이외의 프로그래밍 언어를 사용 하는 경우 가장 수준을 되돌려야 합니다. 이 작업에 실패하면 서비스 거부 및 권한 상승 공격이 발생할 수 있습니다.  
+> `Using`가장 동작을 자동으로 되돌리려면 Visual Basic 문이나 c # `using` 문을 사용 해야 합니다. 문을 사용 하지 않거나 Visual Basic 또는 c # 이외의 프로그래밍 언어를 사용 하는 경우 가장 수준을 되돌려야 합니다. 이 작업에 실패하면 서비스 거부 및 권한 상승 공격이 발생할 수 있습니다.  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -88,13 +88,13 @@ ms.locfileid: "76920208"
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- 다음 표에서는 `ImpersonationOption` 및 `ImpersonateCallerForAllServiceOperations`의 모든 가능한 조합에 대 한 WCF 동작을 설명 합니다.  
+ 다음 표에서는 및의 모든 가능한 조합에 대 한 WCF 동작을 설명 합니다 `ImpersonationOption` `ImpersonateCallerForAllServiceOperations` .  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|동작|  
 |---------------------------|------------------------------------------------|--------------|  
-|필수|N/A|WCF는 호출자를 가장 합니다.|  
-|Allowed|false|WCF는 호출자를 가장 하지 않습니다.|  
-|Allowed|true|WCF는 호출자를 가장 합니다.|  
+|필수|해당 없음|WCF는 호출자를 가장 합니다.|  
+|허용됨|false|WCF는 호출자를 가장 하지 않습니다.|  
+|허용됨|true|WCF는 호출자를 가장 합니다.|  
 |NotAllowed|false|WCF는 호출자를 가장 하지 않습니다.|  
 |NotAllowed|true|허용되지 않습니다. <xref:System.InvalidOperationException> 이 throw됩니다.|  
   
@@ -113,31 +113,31 @@ ms.locfileid: "76920208"
   
 |`AllowedImpersonationLevel` 값|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonymous (익명)|예|N/A|가장|  
-|Anonymous (익명)|아니요|N/A|Identification|  
-|Identification|N/A|N/A|Identification|  
-|가장|예|N/A|가장|  
-|가장|아니요|N/A|Identification|  
+|익명|예|해당 없음|가장|  
+|익명|예|해당 없음|Identification(식별)|  
+|Identification(식별)|해당 없음|해당 없음|Identification(식별)|  
+|가장|예|해당 없음|가장|  
+|가장|예|해당 없음|Identification(식별)|  
 |위임|예|예|위임|  
-|위임|예|아니요|가장|  
-|위임|아니요|N/A|Identification|  
+|위임|예|예|가장|  
+|위임|예|해당 없음|Identification(식별)|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>사용자 이름 자격 증명 및 캐시된 토큰 가장에서 가져온 가장 수준  
- 클라이언트는 서비스의 사용자 이름 및 암호를 전달 하 여 WCF가 해당 사용자로 로그온 할 수 있게 합니다 .이는 `AllowedImpersonationLevel` 속성을 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>로 설정 하는 것과 같습니다. `AllowedImpersonationLevel`은 <xref:System.ServiceModel.Security.WindowsClientCredential> 및 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 클래스에서 사용할 수 있습니다. 다음 표에는 서비스에서 사용자 이름 자격 증명을 받을 때 획득 한 가장 수준이 나와 있습니다.  
+ 클라이언트는 서비스의 사용자 이름 및 암호를 전달 하 여 WCF에서 해당 사용자로 로그온 할 수 있게 합니다. 즉, 속성을로 설정 하는 것과 같습니다 `AllowedImpersonationLevel` <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> . 는 `AllowedImpersonationLevel` 및 클래스에서 사용할 수 <xref:System.ServiceModel.Security.WindowsClientCredential> <xref:System.ServiceModel.Security.HttpDigestClientCredential> 있습니다. 다음 표에는 서비스에서 사용자 이름 자격 증명을 받을 때 획득 한 가장 수준이 나와 있습니다.  
   
 |`AllowedImpersonationLevel`|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|N/A|예|예|위임|  
-|N/A|예|아니요|가장|  
-|N/A|아니요|N/A|Identification|  
+|해당 없음|예|예|위임|  
+|해당 없음|예|예|가장|  
+|해당 없음|예|해당 없음|Identification(식별)|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U 기반 가장에서 가져온 가장 수준  
   
 |서비스의 `SeTcbPrivilege`포함 여부|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|예|예|N/A|가장|  
-|예|아니요|N/A|Identification|  
-|아니요|N/A|N/A|Identification|  
+|예|예|해당 없음|가장|  
+|예|예|해당 없음|Identification(식별)|  
+|예|해당 없음|해당 없음|Identification(식별)|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Windows 계정에 클라이언트 인증서 매핑  
  클라이언트가 인증서를 사용하여 자신을 서비스에 인증하고 서비스에서 Active Directory를 통해 클라이언트를 기존 계정에 매핑하도록 할 수 있습니다. 다음 XML에서는 인증서를 매핑하도록 서비스를 구성하는 방법을 보여 줍니다.  
@@ -179,8 +179,8 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |가장 수준|서비스에서 프로세스 간 위임을 수행할 수 있음|서비스에서 시스템 간 위임을 수행할 수 있음|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|아니요|아니요|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|아니요|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|아니요|예|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|예|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|예|예|  
   
  다음 코드 예제에서는 위임을 사용하는 방법을 보여 줍니다.  
@@ -201,7 +201,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  제한 된 위임 구성에 대 한 자세한 지침은 [Kerberos 프로토콜 전환 및 제한 위임](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))을 참조 하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
@@ -216,7 +216,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [전송 보안을 통해 가장 사용](using-impersonation-with-transport-security.md)
+- [Impersonating the Client](../samples/impersonating-the-client.md)
+- [방법: 서비스에서 클라이언트 가장](../how-to-impersonate-a-client-on-a-service.md)
+- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -2,19 +2,19 @@
 title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601337"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
-서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 데이터 형식에서 지원 되지 않습니다. byWCF 서비스 작업을 반환 해야 합니다. 이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 것을 설명 합니다.  
+서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이는 서비스 작업이 byWCF에서 지원 되지 않는 형식으로 데이터를 반환 해야 하는 경우에 해당 합니다. 이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 방법에 대해 설명 합니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
   
-1. 서비스 계약을 정의합니다. 임의의 데이터를 받는 작업에는 <xref:System.IO.Stream> 형식의 매개 변수가 있어야 합니다. 또한 이 매개 변수는 요청 본문에서 전달된 유일한 매개 변수여야 합니다. 다음 예제에서 설명하는 작업은 파일 이름 매개 변수도 사용합니다. 이 매개 변수는 요청 URL 내에서 전달됩니다. <xref:System.UriTemplate>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute>을 지정하여 URI 내에서 매개 변수가 전달되도록 지정할 수 있습니다. URI를 호출 하는 데이 경우이 메서드는 "UploadFile/Some-filename"에서 종료 합니다. URI 템플릿의 "{filename}" 부분은 작업을 호출 하는 데 사용 하는 URI 내에서 작업의 파일 이름 매개 변수가 전달 되도록 지정 합니다.  
+1. 서비스 계약을 정의합니다. 임의의 데이터를 받는 작업에는 <xref:System.IO.Stream> 형식의 매개 변수가 있어야 합니다. 또한 이 매개 변수는 요청 본문에서 전달된 유일한 매개 변수여야 합니다. 다음 예제에서 설명하는 작업은 파일 이름 매개 변수도 사용합니다. 이 매개 변수는 요청 URL 내에서 전달됩니다. <xref:System.UriTemplate>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute>을 지정하여 URI 내에서 매개 변수가 전달되도록 지정할 수 있습니다. 이 경우이 메서드를 호출 하는 데 사용 되는 URI는 "UploadFile/Some-Filename"으로 끝납니다. URI 템플릿의 "{filename}" 부분은 작업을 호출 하는 데 사용 되는 URI 내에서 작업에 대 한 filename 매개 변수를 전달 하도록 지정 합니다.  
   
     ```csharp  
      [ServiceContract]  
@@ -193,8 +193,8 @@ namespace ReceiveRawData
   
 - 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [UriTemplate 및 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [UriTemplate 및 UriTemplateTable](uritemplate-and-uritemplatetable.md)
+- [WCF 웹 HTTP 프로그래밍 모델](wcf-web-http-programming-model.md)
+- [WCF 웹 HTTP 프로그래밍 모델 개요](wcf-web-http-programming-model-overview.md)

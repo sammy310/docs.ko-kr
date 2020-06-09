@@ -2,22 +2,22 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 08c6837f45ba1c422cdc3df2c884aa81b50a7f2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600568"
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
   
 ## <a name="discussion"></a>토론  
- WCF(Windows 통신 재단)의 토큰 공급자는 보안 인프라에 자격 증명을 제공하는 데 사용됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 카드 스페이스 토큰 공급자와 함께 제공됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
+ WCF (Windows Communication Foundation)의 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 CardSpace 토큰 공급자와 함께 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 - 기본 제공 토큰 공급자가 작동하지 않는 자격 증명 저장소가 있는 경우  
   
-- 사용자가 WCF 클라이언트가 자격 증명을 사용하는 시점까지 세부 정보를 제공하는 시점부터 자격 증명을 변환하기 위한 사용자 지정 메커니즘을 제공하려는 경우  
+- WCF 클라이언트가 자격 증명을 사용 하는 경우 사용자가 세부 정보를 제공 하는 시점에서 자격 증명을 변환 하는 사용자 지정 메커니즘을 제공 하려는 경우  
   
 - 사용자 지정 토큰을 빌드하고 있는 경우  
   
@@ -27,7 +27,7 @@ ms.locfileid: "79144749"
   
 - 사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법  
   
-- 발급된 토큰을 캐시하고 WCF 클라이언트에 제공하는 방법.  
+- 발급 된 토큰을 캐시 하 여 WCF 클라이언트에 제공 하는 방법을 설명 합니다.  
   
 - 서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법  
   
@@ -36,7 +36,7 @@ ms.locfileid: "79144749"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플은 [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)사용하여 ICalculator 계약을 노출합니다. 다음 코드에서는 클라이언트에서의 바인딩 구성을 보여 줍니다.  
+ 이 샘플에서는를 사용 하 여 ICalculator 계약을 노출 합니다 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . 다음 코드에서는 클라이언트에서의 바인딩 구성을 보여 줍니다.  
   
 ```xml  
 <bindings>
@@ -110,7 +110,7 @@ ms.locfileid: "79144749"
  보안 토큰 서비스는 표준 wsHttpBinding을 사용하여 단일 엔드포인트를 노출합니다. 보안 토큰 서비스는 클라이언트의 토큰 요청에 응답하며, 클라이언트가 Windows 계정을 사용하여 인증하는 경우 클라이언트의 사용자 이름을 발급된 토큰의 클레임으로 포함하는 토큰을 발급합니다. 토큰을 만드는 동안 보안 토큰 서비스는 CN=STS 인증서에 연결된 프라이빗 키를 사용하여 토큰에 서명합니다. 또한 대칭 키를 만들고 CN=localhost 인증서와 연관된 공개 키를 사용하여 이를 암호화합니다. 보안 토큰 서비스는 토큰을 클라이언트에 반환하면서 대칭 키도 반환합니다. 클라이언트는 발급된 토큰을 계산기 서비스에 제공하고 대칭 키로 메시지에 서명하여 해당 키를 알고 있음을 증명합니다.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>사용자 지정 클라이언트 자격 증명 및 토큰 공급자  
- 다음 단계에서는 발급된 토큰을 캐시하고 WCF: 보안과 통합하는 사용자 지정 토큰 공급자를 개발하는 방법을 보여 주습니다.  
+ 다음 단계에서는 발급 된 토큰을 캐시 하 고 WCF: security와 통합 하는 사용자 지정 토큰 공급자를 개발 하는 방법을 보여 줍니다.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>사용자 지정 토큰 공급자를 개발하려면  
   
@@ -235,7 +235,7 @@ ms.locfileid: "79144749"
   
 1. Setup.cmd 파일을 실행하여 필요한 인증서를 만듭니다.  
   
-2. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md) 솔루션의 모든 프로젝트가 빌드되는지 확인합니다(Shared, RSTRSTR, Service, SecurityTokenService 및 Client).  
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요. 솔루션의 모든 프로젝트가 빌드되는지 확인합니다(Shared, RSTRSTR, Service, SecurityTokenService 및 Client).  
   
 3. Service.exe 및 SecurityTokenService.exe가 모두 관리자 권한으로 실행되는지 확인합니다.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "79144749"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

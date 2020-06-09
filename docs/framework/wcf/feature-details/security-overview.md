@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600440"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 보안 개요
 WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼 이며, 클라이언트와 서비스 간의 메시지 보안은 데이터를 보호 하는 데 필요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대해 인식 되는 보안 표준을 기반으로 보안 메시지를 교환 하기 위한 다양 하 고 상호 운용할 수 있는 플랫폼을 제공 합니다.  
@@ -18,7 +18,7 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 > [!NOTE]
 > WCF 보안에 대 한 포괄적인 가이드는 [Wcf 보안 지침](https://archive.codeplex.com/?p=WCFSecurity)을 참조 하세요.  
   
- WCF는 HTTPS, Windows 통합 보안, 사용자 이름 및 암호와 같은 기존 기술을 사용 하 여 보안 분산 응용 프로그램을 구축 하 여 사용자를 인증 하는 경우 익숙한 개념을 사용 합니다. WCF는 기존 보안 인프라와 통합 될 뿐 아니라 보안 SOAP 메시지를 사용 하 여 Windows 전용 도메인 이상의 분산 보안도 확장 합니다. 기존 프로토콜을 비롯 하 여 SOAP를 프로토콜로 사용 하는 주요 이점을 활용 하 여 기존 보안 메커니즘을 구현 하는 것이 좋습니다. 예를 들어, 사용자 이름과 암호 또는 X.509 인증서와 같이 클라이언트 또는 서비스를 식별하는 자격 증명에는 상호 운용성 있는 XML 기반 SOAP 프로필이 있습니다. 이러한 프로필을 사용하면 XML 디지털 서명 및 XML 암호화와 같은 개방형 규격을 활용하여 메시지가 안전하게 교환됩니다. 사양 목록은 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요.  
+ WCF는 HTTPS, Windows 통합 보안, 사용자 이름 및 암호와 같은 기존 기술을 사용 하 여 보안 분산 응용 프로그램을 구축 하 여 사용자를 인증 하는 경우 익숙한 개념을 사용 합니다. WCF는 기존 보안 인프라와 통합 될 뿐 아니라 보안 SOAP 메시지를 사용 하 여 Windows 전용 도메인 이상의 분산 보안도 확장 합니다. 기존 프로토콜을 비롯 하 여 SOAP를 프로토콜로 사용 하는 주요 이점을 활용 하 여 기존 보안 메커니즘을 구현 하는 것이 좋습니다. 예를 들어, 사용자 이름과 암호 또는 X.509 인증서와 같이 클라이언트 또는 서비스를 식별하는 자격 증명에는 상호 운용성 있는 XML 기반 SOAP 프로필이 있습니다. 이러한 프로필을 사용하면 XML 디지털 서명 및 XML 암호화와 같은 개방형 규격을 활용하여 메시지가 안전하게 교환됩니다. 사양 목록은 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요.  
   
  또 다른 예로 보안 분산 애플리케이션을 가능하게 하는 Windows 플랫폼의 COM(구성 요소 개체 모델)을 들 수 있습니다. COM에는 구성 요소 간에 보안 컨텍스트를 이동할 수 있는 포괄적인 보안 메커니즘이 있습니다. 이 메커니즘은 무결성, 기밀성 및 인증을 적용합니다. 그러나 COM은 WCF와 같은 플랫폼 간 보안 메시징을 사용 하도록 설정 하지 않습니다. WCF를 사용 하면 인터넷을 통해 Windows 도메인에서 확장 되는 서비스 및 클라이언트를 빌드할 수 있습니다. WCF의 상호 운용 가능한 메시지는 사용자의 정보 보안을 확실히 파악 하는 데 도움이 되는 동적인 비즈니스 중심 서비스를 구축 하는 데 필수적입니다.  
   
@@ -85,32 +85,32 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
   
 - 반면에 *메시지 보안 모드*는 ws-security (및 기타 사양)를 사용 하 여 전송 보안을 구현 합니다. 메시지 보안은 SOAP 메시지에 직접 적용되고 SOAP 봉투에 애플리케이션 데이터와 함께 포함되기 때문에 전송 프로토콜에 독립적이고, 확장성이 뛰어나며, 엔드투엔드 보안(지점 간과 비교)을 보장한다는 이점이 있습니다. 반면 SOAP 메시지의 XML 특성을 처리해야 하기 때문에 전송 보안 모드보다 몇 배 더 느리다는 단점이 있습니다.  
   
- 이러한 차이점에 대 한 자세한 내용은 [서비스 및 클라이언트 보안](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)설정을 참조 하세요.  
+ 이러한 차이점에 대 한 자세한 내용은 [서비스 및 클라이언트 보안](securing-services-and-clients.md)설정을 참조 하세요.  
   
  세 번째 보안 모드는 위 두 가지 모드를 모두 사용하며 두 모드의 이점을 모두 갖추고 있습니다. 이 모드를 `TransportWithMessageCredential`이라고 합니다. 이 모드에서는 클라이언트를 인증하는 데 메시지 보안을 사용하고 서버를 인증하고 메시지 기밀성과 무결성을 제공하는 데 전송 보안을 사용합니다. 이로 인해 `TransportWithMessageCredential` 보안 모드는 전송 보안 모드만큼 빠른 속도를 제공하면서 메시지 보안과 같은 방식으로 클라이언트 인증 확장성을 지원합니다. 반면 메시지 보안 모드와는 달리 완벽한 엔드투엔드 보안은 제공하지 않습니다.  
   
 ### <a name="access-control"></a>Access Control  
  *액세스 제어* 를 권한 부여 라고도 합니다. *권한 부여* 를 통해 서로 다른 사용자가 데이터를 볼 수 있는 권한을 가질 수 있습니다. 예를 들어, 회사의 인사 관리 파일에는 중요한 직원 데이터가 들어 있기 때문에 관리자만 직원 데이터를 볼 수 있습니다. 또한 관리자는 자신이 관리하는 부하 직원에 대한 데이터만 볼 수 있습니다. 이 경우 액세스 제어는 역할("관리자")뿐 아니라 관리자의 특정 ID에 기반하므로 관리자는 다른 관리자의 직원 레코드를 볼 수 없습니다.  
   
- WCF에서 액세스 제어 기능은 CLR (공용 언어 런타임 <xref:System.Security.Permissions.PrincipalPermissionAttribute>)과의 통합 및 *id 모델*이라는 api 집합을 통해 제공 됩니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)을 참조 하세요.  
+ WCF에서 액세스 제어 기능은 CLR (공용 언어 런타임)과의 통합 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 및 *id 모델*이라는 api 집합을 통해 제공 됩니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 [보안 확장](../extending/extending-security.md)을 참조 하세요.  
   
 ### <a name="auditing"></a>감사  
- *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 내용은 [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)를 참조 하세요.  
+ *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 내용은 [방법: 보안 이벤트 감사](how-to-audit-wcf-security-events.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
-- [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
-- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [보안 지침 및 최선의 방법](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [구성 파일을 사용하여 서비스 구성](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [서비스에 보안 설정](../securing-services.md)
+- [일반적인 보안 시나리오](common-security-scenarios.md)
+- [바인딩 및 보안](bindings-and-security.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)
+- [인증](authentication-in-wcf.md)
+- [권한 부여](authorization-in-wcf.md)
+- [페더레이션 및 발급된 토큰](federation-and-issued-tokens.md)
+- [감사](auditing-security-events.md)
+- [보안 지침 및 최선의 방법](security-guidance-and-best-practices.md)
+- [구성 파일을 사용하여 서비스 구성](../configuring-services-using-configuration-files.md)
+- [시스템 제공 바인딩](../system-provided-bindings.md)
+- [엔드포인트 만들기 개요](../endpoint-creation-overview.md)
+- [보안 확장](../extending/extending-security.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 433b14433a7e2dd6edad551a2732e9049a9861ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b9a517d0f8ada3680d49cd5ab0b13fa9e4d85402
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600064"
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "79145088"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 이 샘플에서는 채널 프레임워크를 사용하고 WCF 모범 사례를 따라 WCF(Windows Communication Foundation)에서 사용자 지정 계층화된 채널을 만드는 데 권장되는 절차를 설명합니다. 사용자 지정 계층화된 채널을 만드는 단계는 다음과 같습니다.  
+ 이 샘플에서는 채널 프레임 워크 및 WCF 모범 사례를 사용 하 여 WCF (Windows Communication Foundation)에서 사용자 지정 계층화 된 채널을 만드는 권장 절차에 대해 설명 합니다. 사용자 지정 계층화된 채널을 만드는 단계는 다음과 같습니다.  
   
 1. 채널 팩터리 및 채널 수신기에서 지원할 채널 셰이프를 결정합니다.  
   
@@ -57,7 +57,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
- 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement`에서는 `ChannelMessageInterceptor` a를 입력으로 사용하고 `ChannelMessageInterceptor` 이를 사용하여 이를 통과하는 메시지를 조작합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널 모두 public 런타임 인터페이스의 내부 구현이 될 수 있습니다.  
+ 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement`는를 `ChannelMessageInterceptor` 입력으로 사용 하 고이를 `ChannelMessageInterceptor` 통해 전달 되는 메시지를 조작 합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널 모두 public 런타임 인터페이스의 내부 구현이 될 수 있습니다.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -157,16 +157,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 다음 명령을 사용하여 ASP.NET 4.0을 설치합니다.  
+1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
+2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-3. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+3. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
-4. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
 5. 먼저 Service.exe를 실행한 다음 Client.exe를 실행하고 두 콘솔 창의 출력을 확인합니다.  

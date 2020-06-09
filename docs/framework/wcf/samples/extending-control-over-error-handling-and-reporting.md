@@ -2,15 +2,15 @@
 title: 오류 처리 및 오류 보고에 대한 확장 제어
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 68f3381e8db9d7c0222720dda335b47e30f57ac7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600544"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>오류 처리 및 오류 보고에 대한 확장 제어
-이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 WCF(Windows 통신 Foundation) 서비스에서 오류 처리 및 오류 보고에 대한 제어를 확장하는 방법을 보여 줍니다. 샘플은 오류를 처리하기 위해 서비스에 추가된 몇 가지 추가 코드로 [시작하기를](../../../../docs/framework/wcf/samples/getting-started-sample.md) 기반으로 합니다. 클라이언트에서는 몇 가지 오류 조건을 발생시키고 서비스에서는 해당 오류를 가로채서 파일에 기록합니다.  
+이 샘플에서는 인터페이스를 사용 하 여 WCF (Windows Communication Foundation) 서비스에서 오류 처리 및 오류 보고에 대 한 제어를 확장 하는 방법을 보여 줍니다 <xref:System.ServiceModel.Dispatcher.IErrorHandler> . 이 샘플은 오류를 처리 하기 위해 서비스에 추가 된 몇 가지 추가 코드를 사용 하 여 [시작](getting-started-sample.md) 을 기반으로 합니다. 클라이언트에서는 몇 가지 오류 조건을 발생시키고 서비스에서는 해당 오류를 가로채서 파일에 기록합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -132,7 +132,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- c:\logs\errors.txt 파일에는 서비스에서 오류에 대해 기록한 정보가 포함되어 있습니다. 서비스가 디렉터리에 쓸 수 있도록 하려면 서비스가 실행 중인 프로세스(일반적으로 ASP.NET 또는 네트워크 서비스)에 디렉터리에 쓸 수 있는 권한이 있는지 확인해야 합니다.  
+ c:\logs\errors.txt 파일에는 서비스에서 오류에 대해 기록한 정보가 포함되어 있습니다. 서비스에서 디렉터리에 쓰려면 서비스를 실행 하는 프로세스 (일반적으로 ASP.NET 또는 Network Service)에 디렉터리에 대 한 쓰기 권한이 있는지 확인 해야 합니다.  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -141,19 +141,19 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
 3. error.txt 파일을 보관할 c:\logs 디렉터리를 만들었는지 확인합니다. 또는 `CalculatorErrorHandler.HandleError`에 사용된 파일 이름을 수정합니다.  
   
-4. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
