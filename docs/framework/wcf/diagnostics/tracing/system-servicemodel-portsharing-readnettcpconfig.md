@@ -2,21 +2,21 @@
 title: System.ServiceModel.PortSharing.ReadNetTcpConfig
 ms.date: 03/30/2017
 ms.assetid: c0d3350f-9d70-4529-a958-eb56a277e401
-ms.openlocfilehash: b0a9a1a98a2a8359b24f6d11cb2794e4e8f94d85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54d9be4b61254f1f60d805ef2a227baf5fd338ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598049"
 ---
-# <a name="systemservicemodelportsharingreadnettcpconfig"></a><span data-ttu-id="8e33e-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="8e33e-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>
-<span data-ttu-id="8e33e-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="8e33e-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>  
+# <a name="systemservicemodelportsharingreadnettcpconfig"></a><span data-ttu-id="0cce2-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="0cce2-102">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>
+<span data-ttu-id="0cce2-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span><span class="sxs-lookup"><span data-stu-id="0cce2-103">System.ServiceModel.PortSharing.ReadNetTcpConfig</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8e33e-104">설명</span><span class="sxs-lookup"><span data-stu-id="8e33e-104">Description</span></span>  
- <span data-ttu-id="8e33e-105">NetTcpSection에 대한 구성 데이터를 지정된 데이터(listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout 및 teredoEnabled)와 함께 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="8e33e-105">Configuration data for the NetTcpSection has been read with the specified data:  listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout, and teredoEnabled.</span></span>  
+## <a name="description"></a><span data-ttu-id="0cce2-104">Description</span><span class="sxs-lookup"><span data-stu-id="0cce2-104">Description</span></span>  
+ <span data-ttu-id="0cce2-105">NetTcpSection에 대한 구성 데이터를 지정된 데이터(listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout 및 teredoEnabled)와 함께 읽었습니다.</span><span class="sxs-lookup"><span data-stu-id="0cce2-105">Configuration data for the NetTcpSection has been read with the specified data:  listenBacklog, maxConnectionsPendingDispatch, maxPendingAccepts, receiveTimeout, and teredoEnabled.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e33e-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="8e33e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cce2-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0cce2-106">See also</span></span>
 
-- [<span data-ttu-id="8e33e-107">추적</span><span class="sxs-lookup"><span data-stu-id="8e33e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="8e33e-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="8e33e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="8e33e-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="8e33e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="0cce2-107">추적</span><span class="sxs-lookup"><span data-stu-id="0cce2-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="0cce2-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="0cce2-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="0cce2-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="0cce2-109">Administration and Diagnostics</span></span>](../index.md)
