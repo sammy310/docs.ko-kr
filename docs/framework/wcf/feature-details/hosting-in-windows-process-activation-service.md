@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597308"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 WAS (Windows Process Activation Service)는 Windows Communication Foundation (WCF) 서비스를 호스팅하는 응용 프로그램을 포함 하는 작업자 프로세스의 활성화 및 수명을 관리 합니다. WAS 프로세스 모델은 http에 대 한 종속성을 제거 하 여 HTTP 서버에 대 한 IIS 6.0 프로세스 모델을 일반화 합니다. 이렇게 하면 WCF 서비스에서 메시지 기반 활성화를 지원 하 고 지정 된 컴퓨터에서 다 수의 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 Net.tcp와 같은 HTTP 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
   
- WAS 호스팅 환경에서 실행 되는 WCF 서비스를 빌드하는 방법에 대 한 자세한 내용은 [방법: was에서 Wcf 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)을 참조 하세요.  
+ WAS 호스팅 환경에서 실행 되는 WCF 서비스를 빌드하는 방법에 대 한 자세한 내용은 [방법: was에서 Wcf 서비스 호스팅](how-to-host-a-wcf-service-in-was.md)을 참조 하세요.  
   
  WAS 프로세스 모델에서는 보다 강력하고, 보다 집중적으로 관리할 수 있으며, 리소스를 효율적으로 사용하는 방식으로 애플리케이션을 호스트할 수 있도록 여러 기능을 제공합니다.  
   
@@ -50,8 +50,8 @@ WAS (Windows Process Activation Service)는 Windows Communication Foundation (WC
   
 ## <a name="see-also"></a>참고 항목
 
-- [WAS Activation 아키텍처](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [WCF에서 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [방법: WCF 활성화 구성 요소 설치 및 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [WAS Activation 아키텍처](was-activation-architecture.md)
+- [WCF에서 사용하도록 WAS 구성](configuring-the-wpa--service-for-use-with-wcf.md)
+- [방법: WCF 활성화 구성 요소 설치 및 구성](how-to-install-and-configure-wcf-activation-components.md)
+- [방법: WAS에서 WCF 서비스 호스팅](how-to-host-a-wcf-service-in-was.md)
 - [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

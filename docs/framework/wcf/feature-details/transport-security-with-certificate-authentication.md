@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: ad2f0922afbd94e1699b383cf2fc9762771b637d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576020"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
 
-이 문서에서는 전송 보안을 사용할 때 서버 및 클라이언트 인증에 X.509 인증서를 사용하는 것에 대해 설명합니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. 인증서는 인증서의 제3자 발급자인 인증 기관에서 발급해야 합니다. Windows Server 도메인의 경우 Active Directory 인증서 서비스를 사용하여 도메인에서 클라이언트 컴퓨터에 인증서를 발급할 수 있습니다. 이 시나리오에서는 SSL(Secure Sockets Layer)을 사용하여 구성된 IIS(인터넷 정보 서비스)에서 서비스가 호스팅됩니다. 서비스는 클라이언트에서 서버의 ID를 확인할 수 있도록 SSL(X.509) 인증서를 사용하여 구성됩니다. 클라이언트도 서비스에서 클라이언트의 ID를 확인할 수 있는 X.509 인증서를 사용하여 구성됩니다. 서버 인증서는 클라이언트에 의해 신뢰되어야 하며 클라이언트 인증서는 서버에 의해 신뢰되어야 합니다. 서비스와 클라이언트가 서로의 ID를 확인하는 방법의 실제 메커니즘은 이 문서의 범위를 벗어납니다. 자세한 내용은 위키백과에서 [디지털 서명을](https://en.wikipedia.org/wiki/Digital_signature) 참조하십시오.
+이 문서에서는 전송 보안을 사용 하는 경우 서버 및 클라이언트 인증에 x.509 인증서를 사용 하는 방법을 설명 합니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. 인증서는 타사 인증서 발급자 인 인증 기관에서 발급 해야 합니다. Windows Server 도메인의 경우 Active Directory 인증서 서비스를 사용하여 도메인에서 클라이언트 컴퓨터에 인증서를 발급할 수 있습니다. 이 시나리오에서는 SSL(Secure Sockets Layer)을 사용하여 구성된 IIS(인터넷 정보 서비스)에서 서비스가 호스팅됩니다. 서비스는 클라이언트에서 서버의 ID를 확인할 수 있도록 SSL(X.509) 인증서를 사용하여 구성됩니다. 클라이언트도 서비스에서 클라이언트의 ID를 확인할 수 있는 X.509 인증서를 사용하여 구성됩니다. 서버 인증서는 클라이언트에 의해 신뢰되어야 하며 클라이언트 인증서는 서버에 의해 신뢰되어야 합니다. 서비스와 클라이언트가 서로의 id를 확인 하는 실제 메커니즘은이 문서의 범위를 벗어나는 것입니다. 자세한 내용은 위키백과의 [디지털 서명](https://en.wikipedia.org/wiki/Digital_signature) 을 참조 하세요.
   
  이 시나리오에서는 다음 다이어그램에서 보여 주는 것처럼 요청/회신 메시지 패턴을 구현합니다.  
   
- ![인증서를 사용한 안전한 전송](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
+ ![인증서를 사용 하 여 보안 전송](media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- 서비스에서 인증서를 사용하는 방법에 대한 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) 및 [방법: SSL 인증서를 사용하여 포트 구성을](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)참조하십시오. 다음 표에서는 시나리오의 다양한 특성에 대해 설명합니다.  
+ 서비스에서 인증서를 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md) 및 [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요. 다음 표에서는 시나리오의 다양한 특성에 대해 설명합니다.  
   
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스에 사용됩니다.|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(SSL 인증서 사용)<br /><br /> 예(X.509 인증서 사용)|  
-|데이터 무결성|yes|  
-|데이터 기밀성|yes|  
+|데이터 무결성|예|  
+|데이터 기밀성|예|  
 |전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -140,5 +140,5 @@ cc.Close();
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

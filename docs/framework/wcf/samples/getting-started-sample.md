@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575188"
 ---
 # <a name="getting-started-sample"></a>Getting Started 샘플
 
@@ -26,18 +26,18 @@ ms.locfileid: "76921313"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
 서비스는 메타데이터로 공개적으로 노출하는 서비스 계약에서 수행하는 작업을 설명합니다. 또한 서비스에는 작업을 구현하기 위한 코드가 포함되어 있습니다.
 
-클라이언트에는 서비스에 액세스하기 위한 프록시 클래스와 서비스 계약에 대한 정의가 포함되어 있습니다. 프록시 코드는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 서비스 메타 데이터에서 생성 됩니다.
+클라이언트에는 서비스에 액세스하기 위한 프록시 클래스와 서비스 계약에 대한 정의가 포함되어 있습니다. 프록시 코드는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 서비스 메타 데이터에서 생성 됩니다.
 
 Windows Vista에서 서비스는 WAS (Windows Activation Service)에서 호스팅됩니다. Windows XP 및 Windows Server 2003에서는 인터넷 정보 서비스 (IIS) 및 ASP.NET에서 호스트 됩니다. IIS 또는 WAS에서 서비스를 호스팅하면 서비스에 처음 액세스할 때 서비스를 자동으로 활성화할 수 있습니다.
 
 > [!NOTE]
-> IIS 대신 콘솔 응용 프로그램에서 서비스를 호스팅하는 샘플을 사용 하려는 경우 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플을 참조 하세요.
+> IIS 대신 콘솔 응용 프로그램에서 서비스를 호스팅하는 샘플을 사용 하려는 경우 [자체 호스트](self-host.md) 샘플을 참조 하세요.
 
 서비스와 클라이언트는 구성 파일 설정에서 액세스 세부 정보를 지정하므로 배포 시에 유연성을 갖게 됩니다. 주소, 바인딩 및 계약을 지정하는 엔드포인트 정의가 여기에 포함됩니다. 바인딩은 서비스를 액세스하는 방법에 대한 전송 및 보안 세부 정보를 지정합니다.
 
@@ -142,9 +142,9 @@ public class CalculatorService : ICalculator
 
 서비스는 IIS 또는 WAS 호스트에서 제공되는 기본 주소에서 엔드포인트를 노출합니다. 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 구성되어 주소 지정 및 보안을 위한 HTTP 통신 및 표준 웹 서비스 프로토콜을 제공합니다. 계약은 서비스에 의해 구현되는 `ICalculator`입니다.
 
-구성 된 대로 동일한 컴퓨터의 클라이언트에서 `http://localhost/servicemodelsamples/service.svc` 하 여 서비스에 액세스할 수 있습니다. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.
+구성 된 대로 `http://localhost/servicemodelsamples/service.svc` 동일한 컴퓨터의 클라이언트에서 서비스에 액세스할 수 있습니다. 원격 컴퓨터의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.
 
-기본적으로 프레임워크에서는 메타데이터를 노출하지 않습니다. 따라서 서비스는 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 켜고 `http://localhost/servicemodelsamples/service.svc/mex`에서 MEX (metadata exchange) 끝점을 노출 합니다. 다음 구성에서는 이를 보여 줍니다.
+기본적으로 프레임워크에서는 메타데이터를 노출하지 않습니다. 이와 같이 서비스는를 켜고에서 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> MEX (metadata exchange) 끝점을 노출 `http://localhost/servicemodelsamples/service.svc/mex` 합니다. 다음 구성에서는 이를 보여 줍니다.
 
 ```xaml
 <system.serviceModel>
@@ -174,7 +174,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-클라이언트는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 된 클라이언트 클래스를 사용 하 여 지정 된 계약 형식을 사용 하 여 통신 합니다. 생성된 이 클라이언트는 generatedClient.cs 또는 generatedClient.vb 파일에 포함됩니다. 이 유틸리티는 지정된 서비스에 대한 메타데이터를 검색하고 지정된 계약 형식으로 통신하기 위해 클라이언트 애플리케이션에 사용되는 클라이언트를 생성합니다. 업데이트된 메타데이터를 검색하는 데 호스트된 서비스가 사용되므로 클라이언트 코드를 생성하기 위해 해당 서비스를 사용할 수 있어야 합니다.
+클라이언트는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 된 클라이언트 클래스를 사용 하 여 지정 된 계약 형식을 사용 하 여 통신 합니다. 생성된 이 클라이언트는 generatedClient.cs 또는 generatedClient.vb 파일에 포함됩니다. 이 유틸리티는 지정된 서비스에 대한 메타데이터를 검색하고 지정된 계약 형식으로 통신하기 위해 클라이언트 애플리케이션에 사용되는 클라이언트를 생성합니다. 업데이트된 메타데이터를 검색하는 데 호스트된 서비스가 사용되므로 클라이언트 코드를 생성하기 위해 해당 서비스를 사용할 수 있어야 합니다.
 
  클라이언트 디렉터리의 SDK 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.
 
@@ -273,17 +273,17 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-Getting Started 샘플은 서비스와 클라이언트를 만드는 표준 방법을 보여 줍니다. 이 샘플의 다른 [기본](../../../../docs/framework/wcf/samples/basic-sample.md) 빌드는 특정 제품 기능을 보여 줍니다.
+Getting Started 샘플은 서비스와 클라이언트를 만드는 표준 방법을 보여 줍니다. 이 샘플의 다른 [기본](basic-sample.md) 빌드는 특정 제품 기능을 보여 줍니다.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [How to: Host a WCF Service in a Managed Application](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [방법: IIS에서 WCF 서비스 호스트](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: 관리형 애플리케이션에서 WCF 서비스 호스트](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [방법: IIS에서 WCF 서비스 호스팅](../feature-details/how-to-host-a-wcf-service-in-iis.md)
