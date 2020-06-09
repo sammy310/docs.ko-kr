@@ -2,18 +2,18 @@
 title: 채널 팩터리 및 캐싱
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 98b77071204e2c2f98609e6c5bb1ca84a896dd58
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587367"
 ---
 # <a name="channel-factory-and-caching"></a>채널 팩터리 및 캐싱
 
 WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
 
-- 생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리
+- <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
 
 - 필요한 모든 CLR 형식 반영
 
@@ -26,7 +26,7 @@ WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.Channe
 > [!TIP]
 > <xref:System.ServiceModel.ChannelFactory%601> 클래스를 직접 사용하면 채널 팩터리 생성을 직접 제어할 수 있습니다.
 
-[ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 생성 된 WCF 클라이언트 프록시는 <xref:System.ServiceModel.ClientBase%601>에서 파생 됩니다. <xref:System.ServiceModel.ClientBase%601>는 채널 팩터리 캐싱 동작을 정의하는 정적 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 정의합니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어 아래 `ClientBase<ITest>.CacheSettings` 에 정의 된 값 중 하나로 설정 하면 형식의 `ITest`프록시/ClientBase에만 영향을 줍니다. 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.
+[ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 생성 된 WCF 클라이언트 프록시는에서 파생 됩니다 <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601>는 채널 팩터리 캐싱 동작을 정의하는 정적 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 정의합니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어 아래에 정의 된 값 중 하나로 설정 하면 `ClientBase<ITest>.CacheSettings` 형식의 프록시/ClientBase에만 영향을 줍니다 `ITest` . 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.
 
 ## <a name="specifying-caching-behavior"></a>캐싱 동작 지정
 
@@ -34,8 +34,8 @@ WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.Channe
 
 |캐시 설정 값|Description|
 |-------------------------|-----------------|
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|응용 프로그램 도메인 안의 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스가 캐싱에 참여할 수 있습니다. 개발자는 캐싱에 대해 보안 상의 문제가 없는 것으로 판단했습니다. 에서 "보안에 민감한" 속성에 액세스 하는 경우에 <xref:System.ServiceModel.ClientBase%601> 도 캐싱이 해제 되지 않습니다. 의 <xref:System.ServiceModel.ClientBase%601> <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> "보안<xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>에 민감한" 속성은 ,및입니다.<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>|
-|<xref:System.ServiceModel.CacheSetting.Default>|구성 파일에 정의된 엔드포인트에서 만든 <xref:System.ServiceModel.ClientBase%601> 인스턴스만 응용 프로그램 도메인 안의 캐싱에 참여할 수 있습니다. 해당 응용 프로그램 도메인에서 프로그래밍 방식으로 생성된 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스는 캐싱에 참여하지 않습니다. 또한 "보안이 중요 한" 속성에 액세스 한 <xref:System.ServiceModel.ClientBase%601> 후에는 인스턴스에 대해 캐싱이 사용 되지 않습니다.|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|응용 프로그램 도메인 안의 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스가 캐싱에 참여할 수 있습니다. 개발자는 캐싱에 대해 보안 상의 문제가 없는 것으로 판단했습니다. 에서 "보안에 민감한" 속성에 액세스 하는 경우에도 캐싱이 해제 되지 않습니다 <xref:System.ServiceModel.ClientBase%601> . 의 "보안에 민감한" 속성은 <xref:System.ServiceModel.ClientBase%601> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> , <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> 및 <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A> 입니다.|
+|<xref:System.ServiceModel.CacheSetting.Default>|구성 파일에 정의된 엔드포인트에서 만든 <xref:System.ServiceModel.ClientBase%601> 인스턴스만 응용 프로그램 도메인 안의 캐싱에 참여할 수 있습니다. 해당 응용 프로그램 도메인에서 프로그래밍 방식으로 생성된 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스는 캐싱에 참여하지 않습니다. 또한 <xref:System.ServiceModel.ClientBase%601> "보안이 중요 한" 속성에 액세스 한 후에는 인스턴스에 대해 캐싱이 사용 되지 않습니다.|
 |<xref:System.ServiceModel.CacheSetting.AlwaysOff>|해당 응용 프로그램 도메인 안에서 특정 형식의 <xref:System.ServiceModel.ClientBase%601>의 모든 인스턴스에 대한 캐싱이 해제됩니다.|
 
 다음 코드 조각에서는 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 사용하는 방법을 보여 줍니다.
@@ -113,10 +113,10 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 
 위 예제에서 `TestClient`의 모든 인스턴스는 다른 채널 팩터리를 사용합니다. 이는 각 엔드포인트가 다른 보안 요구사항을 가지고 있고 캐시하는 의미가 없을 때 유용합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ClientBase%601>
-- [클라이언트 빌드](../../../../docs/framework/wcf/building-clients.md)
-- [클라이언트](../../../../docs/framework/wcf/feature-details/clients.md)
-- [WCF 클라이언트를 사용하여 서비스 액세스](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [방법: ChannelFactory 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [클라이언트 빌드](../building-clients.md)
+- [클라이언트](clients.md)
+- [WCF 클라이언트를 사용하여 서비스 액세스](../accessing-services-using-a-wcf-client.md)
+- [방법: ChannelFactory 사용](how-to-use-the-channelfactory.md)

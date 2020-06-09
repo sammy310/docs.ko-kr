@@ -2,18 +2,18 @@
 title: 라우팅 서비스
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 3119f32d57cff01b81e4a8f4a3f3a571013300ea
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 833c824e17d70a982a2f7bb13fe388b9b2b0dec1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662781"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590451"
 ---
 # <a name="routing-service"></a>라우팅 서비스
 
 라우팅 서비스는 메시지 라우터 역할을 하는 제네릭 SOAP 매개자입니다. 라우팅 서비스의 핵심 기능은 메시지 내용을 기반으로 메시지를 라우트할 수 있는, 즉 메시지 헤더나 메시지 본문 같은 메시지 자체에 포함된 값을 기반으로 메시지를 클라이언트 엔드포인트에 전달할 수 있는 기능입니다.
 
-<xref:System.ServiceModel.Routing.RoutingService> 에서 Windows Communication Foundation (WCF) 서비스로 구현 되는 <xref:System.ServiceModel.Routing> 네임 스페이스입니다. 라우팅 서비스는 메시지를 받은 다음 메시지 내용을 기반으로 각 메시지를 하나 이상의 클라이언트 엔드포인트에 라우트하는 하나 이상의 서비스 엔드포인트를 노출합니다. 라우팅 서비스는 다음과 같은 기능을 제공합니다.
+는 <xref:System.ServiceModel.Routing.RoutingService> 네임 스페이스에서 WCF (Windows Communication Foundation) 서비스로 구현 됩니다 <xref:System.ServiceModel.Routing> . 라우팅 서비스는 메시지를 받은 다음 메시지 내용을 기반으로 각 메시지를 하나 이상의 클라이언트 엔드포인트에 라우트하는 하나 이상의 서비스 엔드포인트를 노출합니다. 라우팅 서비스는 다음과 같은 기능을 제공합니다.
 
 - 내용 기반 라우팅
 
@@ -35,16 +35,16 @@ ms.locfileid: "67662781"
 
 위에 나열된 이점을 제공하는 매개자 서비스를 만들 수는 있지만 종종 이러한 구현이 특정 시나리오나 솔루션으로 제한되어 새 애플리케이션에 적용되지 않을 수 있습니다.
 
-라우팅 서비스는 WCF 서비스 및 채널 모델과 호환 되 고 SOAP 기반 메시지의 콘텐츠 기반 라우팅을 수행할 수 있도록 하는 제네릭, 동적으로 구성 가능한 플러그형 SOAP 매개자를 제공 합니다.
+라우팅 서비스는 WCF 서비스 및 채널 모델과 호환 되 고 SOAP 기반 메시지의 내용 기반 라우팅을 수행 하는 데 사용할 수 있는, 동적으로 구성 가능한 제네릭 SOAP 매개 자를 제공 합니다.
 
 > [!NOTE]
-> 라우팅 서비스는 현재 WCF REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우트하려면 사용해 보십시오 <xref:System.Web.Routing> 나 [응용 프로그램 요청 라우팅](https://go.microsoft.com/fwlink/?LinkId=164589)합니다.
+> 라우팅 서비스는 현재 WCF REST 서비스의 라우팅을 지원하지 않습니다.  REST 호출을 라우팅하려면 <xref:System.Web.Routing> 또는 [응용 프로그램 요청 라우팅을](https://go.microsoft.com/fwlink/?LinkId=164589)사용 하는 것이 좋습니다.
 
 ## <a name="content-based-routing"></a>내용 기반 라우팅
 
 내용 기반 라우팅은 메시지에 들어 있는 하나 이상의 값을 기반으로 메시지를 라우트할 수 있는 기능입니다. 라우팅 서비스는 각 메시지를 검사하고 메시지 내용과 사용자 제공 라우팅 논리를 기반으로 메시지를 대상 엔드포인트에 라우트합니다. 내용 기반 라우팅은 서비스 집계, 서비스 버전 관리 및 우선 순위 라우팅에 대한 기초를 제공합니다.
 
-내용 기반 라우팅을 구현하기 위해 라우팅 서비스는 라우트할 메시지 내의 특정 값과 일치시키는 데 사용되는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. 경우는 **MessageFilter** 메시지를 메시지와 연결 된 대상 끝점으로 라우팅되는 일치 하는 **MessageFilter**합니다.  메시지 필터는 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>)로 그룹화되어 복잡한 라우팅 논리를 생성합니다. 예를 들어 필터 테이블에 다섯 개의 대상 엔드포인트 중 하나로만 메시지를 라우트할 수 있도록 하는 상호 배타적인 다섯 개의 메시지 필터가 있을 수 있습니다.
+내용 기반 라우팅을 구현하기 위해 라우팅 서비스는 라우트할 메시지 내의 특정 값과 일치시키는 데 사용되는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. **Messagefilter** 가 메시지와 일치 하는 경우 메시지는 **messagefilter**와 연결 된 대상 끝점으로 라우팅됩니다.  메시지 필터는 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>)로 그룹화되어 복잡한 라우팅 논리를 생성합니다. 예를 들어 필터 테이블에 다섯 개의 대상 엔드포인트 중 하나로만 메시지를 라우트할 수 있도록 하는 상호 배타적인 다섯 개의 메시지 필터가 있을 수 있습니다.
 
 라우팅 서비스를 사용하면 내용 기반 라우팅을 수행하는 데 사용되는 논리를 구성할 수 있을 뿐 아니라 런타임에 라우팅 논리를 동적으로 업데이트할 수 있습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "67662781"
 
 - 동적 구성
 
-메시지 필터 및 필터 테이블에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md) 하 고 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.
+메시지 필터 및 필터 테이블에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md) 및 [메시지 필터](message-filters.md)를 참조 하세요.
 
 ### <a name="service-aggregation"></a>서비스 집계
 
@@ -66,7 +66,7 @@ ms.locfileid: "67662781"
 
 ### <a name="service-versioning"></a>서비스 버전 관리
 
-새 버전의 솔루션으로 마이그레이션하는 경우 기존 고객을 지원하기 위해 이전 버전도 함께 유지 관리해야 할 수 있습니다. 이를 위해 새 버전에 연결하는 클라이언트가 솔루션과 통신할 때 다른 주소를 사용해야 하는 경우가 종종 있습니다. 라우팅 서비스를 사용하면 메시지에 들어 있는 버전 관련 정보를 기반으로 메시지를 적절한 솔루션으로 라우트하여 두 버전의 솔루션을 모두 지원하는 하나의 서비스 엔드포인트를 노출할 수 있습니다. 이러한 구현의 예제를 참조 하세요. [방법: 서비스 버전 관리](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)합니다.
+새 버전의 솔루션으로 마이그레이션하는 경우 기존 고객을 지원하기 위해 이전 버전도 함께 유지 관리해야 할 수 있습니다. 이를 위해 새 버전에 연결하는 클라이언트가 솔루션과 통신할 때 다른 주소를 사용해야 하는 경우가 종종 있습니다. 라우팅 서비스를 사용하면 메시지에 들어 있는 버전 관련 정보를 기반으로 메시지를 적절한 솔루션으로 라우트하여 두 버전의 솔루션을 모두 지원하는 하나의 서비스 엔드포인트를 노출할 수 있습니다. 이러한 구현에 대 한 예제 [는 방법: 서비스 버전 관리](how-to-service-versioning.md)를 참조 하세요.
 
 ### <a name="priority-routing"></a>우선 순위 라우팅
 
@@ -76,7 +76,7 @@ ms.locfileid: "67662781"
 
 서비스 중단 없이 메시지를 처리해야 하는 업무용 시스템을 지원하려면 런타임에 시스템 구성 요소의 구성을 수정할 수 있어야 합니다. 이러한 요구를 지원하기 위해 라우팅 서비스는 런타임에 라우팅 서비스 구성을 동적으로 업데이트할 수 있는 <xref:System.ServiceModel.IExtension%601> 구현인 <xref:System.ServiceModel.Routing.RoutingExtension>을 제공합니다.
 
-동적 라우팅 서비스 구성에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)합니다.
+라우팅 서비스의 동적 구성에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md)를 참조 하세요.
 
 ## <a name="protocol-bridging"></a>프로토콜 브리징
 
@@ -86,23 +86,23 @@ ms.locfileid: "67662781"
 
 ## <a name="soap-processing"></a>SOAP 처리
 
-라우팅에 공통적으로 요구되는 기능은 SOAP 요구 사항이 서로 다른 엔드포인트 간에 메시지를 라우트할 수 있는 기능입니다. 라우팅 서비스는이 요구 사항을 지원 하려면 다음을 제공 합니다.는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> 자동으로 만들어지는 새 **MessageVersion** 메시지에 라우팅되기 전에 대상 끝점의 요구 사항을 충족 합니다. 이 동작은 또한 새로 만들고 **MessageVersion** 되도록 요청 클라이언트 응용 프로그램에 반환 하기 전에 응답 메시지를 **MessageVersion** 응답에 있는 구성과 일치 원래 요청입니다.
+라우팅에 공통적으로 요구되는 기능은 SOAP 요구 사항이 서로 다른 엔드포인트 간에 메시지를 라우트할 수 있는 기능입니다. 이러한 요구 사항을 지원 하기 위해 라우팅 서비스는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> 메시지를 라우팅하도록 대상 끝점의 요구 사항을 충족 하는 새 **MessageVersion** 을 자동으로 만드는를 제공 합니다. 이 동작은 응답 메시지를 요청 하는 클라이언트 응용 프로그램으로 반환 하기 전에 응답 메시지에 대 한 새 **MessageVersion** 를 만들어 응답의 MessageVersion 원래 요청의 **MessageVersion** 일치 하는지 확인 합니다.
 
-SOAP 처리에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)합니다.
+SOAP 처리에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md)를 참조 하세요.
 
 ## <a name="error-handling"></a>오류 처리
 
 네트워크 통신을 사용하는 분산 서비스로 구성된 시스템에서는 시스템 내의 통신이 일시적인 네트워크 오류를 처리할 수 있는지 확인해야 합니다.  라우팅 서비스는 서비스 중지를 초래하는 다양한 통신 오류 시나리오를 처리할 수 있는 오류 처리를 구현합니다.
 
-라우팅 서비스에서 메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하면 오류 처리가 수행됩니다.  일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>).  오류 처리 코드는 또한 catch 하 고 때 보내기를 재시도 **TimeoutException** 발생에서 파생 되지 않은 또 다른 일반적인 예외인 **CommunicationException**합니다.
+라우팅 서비스에서 메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하면 오류 처리가 수행됩니다.  일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>).  또한 오류 처리 코드는 **CommunicationException**에서 파생 되지 않는 또 다른 일반적인 예외인 **timeoutexception** 이 발생 하는 경우에도이를 catch 하 고 보내기를 시도 합니다.
 
-오류 처리에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)합니다.
+오류 처리에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md)를 참조 하세요.
 
 ## <a name="backup-endpoints"></a>백업 엔드포인트
 
 필터 테이블의 각 필터 정의와 연결된 대상 클라이언트 엔드포인트 외에도 전송 실패 시 메시지를 라우트할 백업 엔드포인트의 목록을 만들 수도 있습니다. 오류가 발생할 경우 필터 항목에 대해 정의된 백업 목록이 있으면 라우팅 서비스는 이 목록에 정의되어 있는 첫 번째 엔드포인트에 메시지를 보내려고 시도합니다. 이 전송 시도가 실패하면 라우팅 서비스는 다음 엔드포인트에 메시지를 보내려고 시도하고 전송 시도가 성공하거나 전송과 관련 없는 오류가 반환되거나 백업 목록에 있는 모든 엔드포인트에서 전송 오류가 반환될 때까지 이 작업을 계속 수행합니다.
 
-백업 끝점에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md) 하 고 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.
+백업 끝점에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md) 및 [메시지 필터](message-filters.md)를 참조 하세요.
 
 ## <a name="streaming"></a>스트리밍
 
@@ -116,8 +116,8 @@ SOAP 처리에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](
 
 - 동적 구성
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
-- [라우팅 계약](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
-- [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [라우팅 소개](routing-introduction.md)
+- [라우팅 계약](routing-contracts.md)
+- [메시지 필터](message-filters.md)

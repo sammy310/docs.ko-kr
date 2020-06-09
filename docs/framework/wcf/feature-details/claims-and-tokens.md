@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 6d148bca56cfa4e28c2d3e6c0d9fcb564861a7cd
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663456"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587029"
 ---
 # <a name="claims-and-tokens"></a>클레임 및 토큰
 
-이 항목에서는 Windows Communication Foundation (WCF) 지원 되는 기본 토큰 으로부터 만드는 다양 한 클레임 형식을 설명 합니다.
+이 항목에서는에서 지 원하는 기본 토큰에서 WCF (Windows Communication Foundation)를 만드는 다양 한 클레임 유형에 대해 설명 합니다.
 
 <xref:System.IdentityModel.Claims.ClaimSet> 및 <xref:System.IdentityModel.Claims.Claim> 클래스를 사용하여 클라이언트 자격 증명 클레임을 검사할 수 있습니다. `ClaimSet`에는 `Claim` 개체의 컬렉션이 포함됩니다. 각 `Claim`의 중요한 멤버는 다음과 같습니다.
 
-- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성은 생성하는 클레임의 형식을 지정하는 URI(Uniform Resource Identifier)를 반환합니다. 예를 들어, 클레임 유형을 있는 경우 URI는 인증서의 지문의 않을 `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`합니다.
+- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성은 생성하는 클레임의 형식을 지정하는 URI(Uniform Resource Identifier)를 반환합니다. 예를 들어 클레임 유형은 인증서의 지문이 될 수 있으며,이 경우 URI는 `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint` 입니다.
 
 - <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성은 클레임의 권한을 지정하는 URI를 반환합니다. 미리 정의된 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스(<xref:System.IdentityModel.Claims.Rights.Identity%2A>,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>)에 있습니다.
 
@@ -53,15 +53,15 @@ ms.locfileid: "67663456"
 
   - `Claim`이 지문이고, `ClaimType`가 PossessProperty이고, `Right`가 인증서의 지문을 포함하는 바이트 배열인 `Resource`
 
-  - X500DistinguishedName, Dns, Name, Upn 및 Rsa를 포함하여 다양한 형식의 추가 PossessProperty 클레임이 인증서의 다양한 속성을 나타냅니다. Rsa 클레임에 대 한 리소스에는 인증서에 연결 된 공용 키입니다. **참고** 클라이언트 자격 증명 형식이 인증서 서비스는 Windows에 매핑되는 계정에 두 개의 `ClaimSet` 개체가 생성 됩니다. 첫 번째 개체는 Windows 계정과 관련된 모든 클레임을 포함하고 두 번째 개체는 인증서와 관련된 모든 클레임을 포함합니다.
+  - X500DistinguishedName, Dns, Name, Upn 및 Rsa를 포함하여 다양한 형식의 추가 PossessProperty 클레임이 인증서의 다양한 속성을 나타냅니다. Rsa 클레임에 대 한 리소스는 인증서와 연결 된 공개 키입니다. **참고** 클라이언트 자격 증명 형식이 서비스에서 Windows 계정에 매핑되는 인증서 인 경우 두 개의 `ClaimSet` 개체가 생성 됩니다. 첫 번째 개체는 Windows 계정과 관련된 모든 클레임을 포함하고 두 번째 개체는 인증서와 관련된 모든 클레임을 포함합니다.
 
 ## <a name="user-namepassword"></a>사용자 이름/암호
 
-클라이언트 자격 증명이 Windows 계정에 매핑되지 않는 사용자 이름/암호(또는 동등한 형식)인 경우 결과 `ClaimSet`는 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 클래스의 static `ClaimSet` 속성에 의해 발급됩니다. `ClaimSet` 포함는 `Identity` 형식의 클레임 <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> 해당 리소스는 사용자 이름 클라이언트를 제공 합니다. 해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.
+클라이언트 자격 증명이 Windows 계정에 매핑되지 않는 사용자 이름/암호(또는 동등한 형식)인 경우 결과 `ClaimSet`는 <xref:System.IdentityModel.Claims.ClaimSet.System%2A> 클래스의 static `ClaimSet` 속성에 의해 발급됩니다. 는 `ClaimSet` `Identity` <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> 클라이언트가 제공 하는 사용자 이름인 리소스를 가진 형식의 클레임을 포함 합니다. 해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.
 
 ## <a name="rsa-keys"></a>RSA 키
 
-인증서를 사용 하 여 연결 되지 않은 RSA 키를 사용 하는 결과 `ClaimSet` 는 자체 발급 되며 포함을 `Identity` 형식의 클레임 <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> 해당 리소스가 RSA 키인 합니다. 해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.
+인증서와 연결 되지 않은 RSA 키가 사용 되는 경우 결과는 `ClaimSet` 자체 발급 되며 해당 `Identity` 리소스가 RSA 키인 형식의 클레임을 포함 합니다 <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> . 해당 클레임에는 `Right`의 `PossessProperty`이 있습니다.
 
 ## <a name="saml"></a>SAML
 
@@ -69,12 +69,12 @@ ms.locfileid: "67663456"
 
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>ID 클레임 및 ServiceSecurityContext.IsAnonymous
 
-없으면 합니다 `ClaimSet` 클라이언트 자격 증명에서 생성 하는 개체에 클레임을 포함을 `Right` 의 `Identity,` 그런 다음 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성에서 반환 `true`합니다. 그런 클레임이 하나 이상 있는 경우 `IsAnonymous` 속성은 `false`를 반환합니다.
+클라이언트 자격 증명으로 인해 발생 하는 모든 `ClaimSet` 개체에가 인 클레임이 포함 되지 않은 경우 `Right` `Identity,` 속성은를 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 반환 합니다 `true` . 그런 클레임이 하나 이상 있는 경우 `IsAnonymous` 속성은 `false`를 반환합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)

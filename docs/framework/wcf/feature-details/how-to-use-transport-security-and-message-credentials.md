@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047180"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579386"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>방법: 전송 보안 및 메시지 자격 증명 사용
-최선의 방법으로 전송 및 메시지 보안 모드의 Windows Communication Foundation (WCF)에서 사용 전송 및 메시지 자격 증명을 사용 하 여 서비스를 보호 합니다. 요컨대, 전송 계층 보안은 무결성과 기밀성을 제공하고, 메시지 계층 보안은 엄격한 전송 보안 메커니즘에서는 제공되지 않는 다양한 자격 증명을 제공합니다. 이 항목에서는 <xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하여 메시지 자격 증명을 통해 전송을 구현하는 기본 단계를 보여 줍니다. 보안 모드를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 보안 모드 설정](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)합니다.  
+전송 및 메시지 자격 증명을 모두 사용 하 여 서비스를 보호 하는 것은 Windows Communication Foundation (WCF)에서 전송 및 메시지 보안 모드를 모두 사용 하는 것입니다. 요컨대, 전송 계층 보안은 무결성과 기밀성을 제공하고, 메시지 계층 보안은 엄격한 전송 보안 메커니즘에서는 제공되지 않는 다양한 자격 증명을 제공합니다. 이 항목에서는 <xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하여 메시지 자격 증명을 통해 전송을 구현하는 기본 단계를 보여 줍니다. 보안 모드를 설정 하는 방법에 대 한 자세한 내용은 [방법: 보안 모드 설정](../how-to-set-the-security-mode.md)을 참조 하세요.  
   
  보안 모드를 `TransportWithMessageCredential`로 설정하면 전송에서 전송 수준 보안을 제공하는 실제 메커니즘을 결정합니다. HTTP의 경우 메커니즘이 HTTPS(HTTP를 통한 SSL(Secure Sockets Layer))이고, TCP의 경우 TCP 또는 Windows를 통한 SSL입니다.  
   
@@ -25,15 +25,15 @@ ms.locfileid: "62047180"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>전송 보안에 대해 인증서와 함께 WSHttpBinding을 사용하려면(코드)  
   
-1. HttpCfg.exe 도구를 사용하여 시스템의 포트에 SSL 인증서를 바인딩합니다. 자세한 내용은 [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
+1. HttpCfg.exe 도구를 사용하여 시스템의 포트에 SSL 인증서를 바인딩합니다. 자세한 내용은 [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.  
   
 2. <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 속성을 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>로 설정합니다.  
   
-3. <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 속성을 적절한 값으로 설정합니다. (자세한 내용은 [자격 증명 유형을 선택 하면](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) 다음 코드에서는 <xref:System.ServiceModel.MessageCredentialType.Certificate> 값을 사용합니다.  
+3. <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 속성을 적절한 값으로 설정합니다. (자세한 내용은 [자격 증명 유형 선택](selecting-a-credential-type.md)을 참조 하세요.) 다음 코드에서는 값을 사용 합니다 <xref:System.ServiceModel.MessageCredentialType.Certificate> .  
   
 4. 적절한 기본 주소를 사용하여 <xref:System.Uri> 클래스의 인스턴스를 만듭니다. 주소에서는 "HTTPS" 스키마를 사용하고 시스템의 실제 이름과 SSL 인증서가 바인딩되는 포트 번호를 포함해야 합니다. 또는 구성에서 기본 주소를 설정할 수 있습니다.  
   
-5. <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> 메서드를 사용하여 서비스 끝점을 추가합니다.  
+5. ph x="1" /&gt; 메서드를 사용하여 서비스 엔드포인트를 추가합니다.  
   
 6. 다음 코드에 표시된 것처럼 <xref:System.ServiceModel.ServiceHost> 인스턴스를 만들고 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 메서드를 호출합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62047180"
   
 5. <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> 메서드를 사용하여 서비스에 대한 X.509 인증서를 명시적으로 설정합니다.  
   
-6. <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> 메서드를 사용하여 서비스 끝점을 추가합니다.  
+6. ph x="1" /&gt; 메서드를 사용하여 서비스 엔드포인트를 추가합니다.  
   
 7. 다음 코드와 같이 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 메서드를 호출합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62047180"
   
 6. <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> 메서드를 사용하여 서비스에 대한 X.509 인증서를 명시적으로 설정합니다.  
   
-7. <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> 메서드를 사용하여 서비스 끝점을 추가합니다.  
+7. ph x="1" /&gt; 메서드를 사용하여 서비스 엔드포인트를 추가합니다.  
   
 8. 다음 코드와 같이 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 메서드를 호출합니다.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "62047180"
   
 #### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding을 사용하려면  
   
-1. 포트에 바인딩된 SSL 인증서를 사용하여 컴퓨터를 구성합니다. (자세한 내용은 참조 하세요. [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). 설정할 필요가 없습니다를 <`transport`> 요소 값이 구성을 사용 합니다.  
+1. 포트에 바인딩된 SSL 인증서를 사용하여 컴퓨터를 구성합니다. 자세한 내용은 [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요. `transport`이 구성을 사용 하 여 <> 요소 값을 설정할 필요가 없습니다.  
   
-2. 메시지 수준 보안에 대한 클라이언트 자격 증명 형식을 지정합니다. 다음 예제에서는 합니다 `clientCredentialType` 특성을 <`message`> 요소를 `UserName`입니다.  
+2. 메시지 수준 보안에 대한 클라이언트 자격 증명 형식을 지정합니다. 다음 예에서는 `clientCredentialType` <`message`> 요소의 특성을로 설정 합니다 `UserName` .  
   
     ```xml  
     <wsHttpBinding>  
@@ -115,13 +115,13 @@ ms.locfileid: "62047180"
     </behaviors>  
     ```  
   
-2. 추가 된 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 를 바인딩 섹션  
+2. [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)바인딩 섹션에를 추가 합니다.  
   
 3. 바인딩 요소를 추가하고 `name` 특성을 적절한 값으로 설정합니다.  
   
-4. 추가 된 <`security`> 요소를 설정 하 고는 `mode` 특성을 `TransportWithMessageCredential`.  
+4. <> 요소를 추가 하 `security` 고 특성을 `mode` 로 설정 `TransportWithMessageCredential` 합니다.  
   
-5. 추가 <`message>` 요소를 설정 하 고는 `clientCredentialType` 특성을 적절 한 값으로.  
+5. <요소를 추가 하 `message>` 고 특성을 `clientCredentialType` 적절 한 값으로 설정 합니다.  
   
     ```xml  
     <bindings>  
@@ -137,15 +137,15 @@ ms.locfileid: "62047180"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>전송 보안에 대해 Windows와 함께 NetTcpBinding을 사용하려면  
   
-1. 추가 된 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) 를 바인딩 섹션  
+1. 를 [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) 바인딩 섹션에 추가 합니다.  
   
-2. 추가 <`binding`> 요소는 `name` 특성을 적절 한 값으로.  
+2. <`binding`> 요소를 추가 하 고 `name` 특성을 적절 한 값으로 설정 합니다.  
   
-3. 추가 된 <`security`> 요소를 설정 하 고는 `mode` 특성을 `TransportWithMessageCredential`.  
+3. <> 요소를 추가 하 `security` 고 특성을 `mode` 로 설정 `TransportWithMessageCredential` 합니다.  
   
-4. 추가 된 <`transport`> 요소를 `clientCredentialType` 특성을 `Windows`.  
+4. <> 요소를 추가 하 `transport` 고 `clientCredentialType` 특성을로 설정 `Windows` 합니다.  
   
-5. 추가 <`message`> 요소는 `clientCredentialType` 특성을 적절 한 값으로. 다음 코드에서는 값을 인증서로 설정합니다.  
+5. <`message`> 요소를 추가 하 고 `clientCredentialType` 특성을 적절 한 값으로 설정 합니다. 다음 코드에서는 값을 인증서로 설정합니다.  
   
     ```xml  
     <bindings>  
@@ -160,8 +160,8 @@ ms.locfileid: "62047180"
     </bindings>  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [방법: 보안 모드 설정](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [방법: 보안 모드 설정](../how-to-set-the-security-mode.md)
+- [서비스에 보안 설정](../securing-services.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)

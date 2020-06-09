@@ -2,12 +2,12 @@
 title: User Name Password Validator
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: e66188cfe1874c4d4097f3f842fd19cfdd4c79f1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 5fbca30ef2dff0aebc13bda12c06adfd1989ea20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596515"
 ---
 # <a name="user-name-password-validator"></a>User Name Password Validator
 이 샘플에서는 사용자 지정 UserNamePassword 유효성 검사기를 구현하는 방법을 보여 줍니다. 사용자 이름/암호 쌍이 데이터베이스 같은 외부 스토리지에 저장되어 있는 경우처럼 기본 제공되는 UserNamePassword 유효성 검사 모드가 애플리케이션 요구 사항에 맞지 않는 경우 유용합니다. 이 샘플에서는 두 개의 특정 사용자 이름/암호 쌍을 확인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 클라이언트에서는 이러한 사용자 이름/암호 쌍을 사용하여 서비스의 인증을 얻습니다.
@@ -17,7 +17,7 @@ ms.locfileid: "82141280"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ ms.locfileid: "82141280"
 
 - 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
- 서비스는 구성 파일 (App.config)을 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 기본적으로 WS-SECURITY 및 사용자 이름 `wsHttpBinding` 인증을 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 사용자 이름/암호 쌍의 유효성 검사를 위해 `Custom` 모드와 유효성 검사기 클래스 형식을 지정합니다. 동작에서는 `serviceCertificate` 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는 `SubjectName` [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)의와 `findValue` 동일한 값이 포함 되어야 합니다.
+ 서비스는 구성 파일 (App.config)을 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 `wsHttpBinding` 기본적으로 ws-security 및 사용자 이름 인증을 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 사용자 이름/암호 쌍의 유효성 검사를 위해 `Custom` 모드와 유효성 검사기 클래스 형식을 지정합니다. 동작에서는 `serviceCertificate` 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는의와 동일한 값이 포함 되어야 합니다 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -279,7 +279,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
+1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.
 
 2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.
 

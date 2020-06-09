@@ -2,24 +2,24 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746438"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589983"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
-이 섹션에서는 <xref:System.ServiceModel.NetMsmqBinding>를 사용할 때 WCF 메시지 보안에 대해 설명 합니다.  
+이 섹션에서는를 사용할 때 WCF 메시지 보안에 대해 설명 <xref:System.ServiceModel.NetMsmqBinding> 합니다.  
   
 > [!NOTE]
-> 이 항목을 읽기 전에 [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)을 확인 하는 것이 좋습니다.  
+> 이 항목을 읽기 전에 [보안 개념](security-concepts.md)을 확인 하는 것이 좋습니다.  
   
  다음 그림은 WCF를 사용 하는 대기 중인 통신의 개념적 모델을 제공 합니다. 이 그림과 용어는 전송 보안 개념을  
   
  설명하는 데 사용됩니다.  
   
- ![대기 중인 응용 프로그램 다이어그램](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐 그림")  
+ ![대기 중인 응용 프로그램 다이어그램](media/distributed-queue-figure.jpg "분산 큐 그림")  
   
  WCF를 사용 하 여 대기 중인 메시지를 보내는 경우 WCF 메시지는 MSMQ (메시지 큐) 메시지의 본문으로 연결 됩니다. 전송 보안은 MSMQ 메시지 전체를 보호하지만, 메시지(또는 SOAP) 보안은 MSMQ 메시지의 본문만 보호합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76746438"
   
 ## <a name="see-also"></a>참고 항목
 
-- [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [전송 보안을 사용하여 메시지에 보안 설정](securing-messages-using-transport-security.md)
+- [메시지 큐에 대한 메시지 보안](../samples/message-security-over-message-queuing.md)
+- [보안 개념](security-concepts.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)
