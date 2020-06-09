@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579114"
 ---
 # <a name="shared-visual-basic"></a>Shared(Visual Basic)
 
@@ -26,13 +26,13 @@ ms.locfileid: "84307087"
 
 클래스 또는 구조체의 멤버를 공유 하면 *비공유*가 아닌 모든 인스턴스에서 사용할 수 있습니다. 여기서 각 인스턴스는 자체 복사본을 유지 합니다. 이는 예를 들어 변수 값이 전체 응용 프로그램에 적용 되는 경우에 유용 합니다. 해당 변수를로 선언 하는 경우 `Shared` 모든 인스턴스가 동일한 저장소 위치에 액세스 하 고 한 인스턴스가 변수의 값을 변경 하는 경우 모든 인스턴스에서 업데이트 된 값에 액세스 합니다.
 
-공유는 멤버의 액세스 수준을 변경 하지 않습니다. 예를 들어 클래스 멤버는 shared 및 private (클래스 내 에서만 액세스할 수 있음) 또는 비공유 및 public 일 수 있습니다. 자세한 내용은 [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
+공유는 멤버의 액세스 수준을 변경 하지 않습니다. 예를 들어 클래스 멤버는 shared 및 private (클래스 내 에서만 액세스할 수 있음) 또는 비공유 및 public 일 수 있습니다. 자세한 내용은 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
 ## <a name="rules"></a>규칙
 
 - **선언 컨텍스트.** `Shared`는 모듈 수준에서만 사용할 수 있습니다. 즉, 요소에 대 한 선언 컨텍스트는 `Shared` 클래스 또는 구조체 여야 하며 소스 파일, 네임 스페이스 또는 프로시저일 수 없습니다.
 
-- **결합된 한정자.** `Shared`동일한 선언에서 [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)또는 [Static](../../../visual-basic/language-reference/modifiers/static.md) 을 함께 지정할 수 없습니다.
+- **결합된 한정자.** `Shared`동일한 선언에서 [Overrides](overrides.md), [Overridable](overridable.md), [NotOverridable](notoverridable.md), [MustOverride](mustoverride.md)또는 [Static](static.md) 을 함께 지정할 수 없습니다.
 
 - **하.** 해당 클래스 또는 구조체의 특정 인스턴스의 변수 이름이 아니라 클래스 또는 구조체 이름으로 정규화 하 여 공유 요소에 액세스 합니다. 클래스 또는 구조체의 인스턴스를 만들어 해당 공유 멤버에 액세스할 필요는 없습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "84307087"
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **암시적 공유.** `Shared` [Const 문에](../../../visual-basic/language-reference/statements/const-statement.md)는 한정자를 사용할 수 없지만 상수는 암시적으로 공유 됩니다. 마찬가지로, 모듈 또는 인터페이스의 멤버를로 선언할 수 `Shared` 없지만 암시적으로 공유 됩니다.
+- **암시적 공유.** `Shared` [Const 문에](../statements/const-statement.md)는 한정자를 사용할 수 없지만 상수는 암시적으로 공유 됩니다. 마찬가지로, 모듈 또는 인터페이스의 멤버를로 선언할 수 `Shared` 없지만 암시적으로 공유 됩니다.
 
 ## <a name="behavior"></a>동작
 
@@ -93,10 +93,10 @@ ms.locfileid: "84307087"
 - [Property Statement](../statements/property-statement.md)
 - [Sub 문](../statements/sub-statement.md)
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Overloads](shadows.md)
-- [정적인](static.md)
+- [정적](static.md)
 - [Visual Basic의 수명](../../programming-guide/language-features/declared-elements/lifetime.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)
 - [구조체](../../programming-guide/language-features/data-types/structures.md)

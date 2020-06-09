@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 810238ee631808dac472456f910eb52f8bbf550c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579751"
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 
-*컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. .NET Framework에서 이러한 목록은 배열이 나 다양 한 형식 (제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용 하 여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.
+*컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. .NET Framework에서 이러한 목록은 배열이 나 다양 한 형식 (제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601> , 또는)을 사용 하 여 나타낼 수 있습니다 <xref:System.Collections.Specialized.StringCollection> <xref:System.Collections.ArrayList> . 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.
 
-하나의 항목("키")과 다른 항목("값") 간의 연결을 나타내는 특별한 형태의 컬렉션이 있습니다. .NET Framework에서는 <xref:System.Collections.Hashtable> 및 제네릭 사전과 같은 형식으로 표시 됩니다. 예를 들어, 연결 컬렉션은 도시("키")를 해당 도시의 인구("값")에 매핑할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *사전 컬렉션*이라고 합니다.
+하나의 항목("키")과 다른 항목("값") 간의 연결을 나타내는 특별한 형태의 컬렉션이 있습니다. .NET Framework에서는 및 제네릭 사전과 같은 형식으로 표시 됩니다 <xref:System.Collections.Hashtable> . 예를 들어, 연결 컬렉션은 도시("키")를 해당 도시의 인구("값")에 매핑할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *사전 컬렉션*이라고 합니다.
 
 데이터 계약 모델에서 컬렉션은 별도로 처리됩니다.
 
 배열 및 제네릭 컬렉션을 비롯하여 <xref:System.Collections.IEnumerable> 인터페이스를 구현하는 형식은 컬렉션으로 인식됩니다. 이 중에서 <xref:System.Collections.IDictionary> 또는 제네릭 <xref:System.Collections.Generic.IDictionary%602> 인터페이스를 구현하는 형식은 사전 컬렉션이며, 다른 모든 형식은 목록 컬렉션입니다.
 
-메서드를 호출 `Add` 하 고 매개 변수 없는 생성자를 포함 하는 등 컬렉션 형식에 대 한 추가 요구 사항은 다음 단원에서 자세히 설명 합니다. 이렇게 하면 컬렉션 형식이 serialize되고 deserialize될 수 있습니다. 즉, 매개 변수가 없는 생성자가 없기 때문에 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 과 같은 일부 컬렉션은 직접 지원 되지 않습니다. 이러한 제한을 해결하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 "컬렉션 인터페이스 형식 및 읽기 전용 컬렉션 사용" 단원을 참조하십시오.
+메서드를 호출 하 고 매개 변수 없는 생성자를 포함 하는 등 컬렉션 형식에 대 한 추가 요구 사항은 `Add` 다음 단원에서 자세히 설명 합니다. 이렇게 하면 컬렉션 형식이 직렬화되고 역직렬화될 수 있습니다. 즉, <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 매개 변수가 없는 생성자가 없기 때문에 제네릭과 같은 일부 컬렉션은 직접 지원 되지 않습니다. 이러한 제한을 해결하는 방법에 대한 자세한 내용은 이 항목의 뒷부분에 있는 "컬렉션 인터페이스 형식 및 읽기 전용 컬렉션 사용" 단원을 참조하십시오.
 
-컬렉션에 포함된 형식은 데이터 계약 형식이거나 serialize할 수 있어야 합니다. 자세한 내용은 [데이터 계약 Serializer에서 지 원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조 하세요.
+컬렉션에 포함된 형식은 데이터 계약 형식이거나 serialize할 수 있어야 합니다. 자세한 내용은 [데이터 계약 Serializer에서 지 원하는 형식](types-supported-by-the-data-contract-serializer.md)을 참조 하세요.
 
 유효한 컬렉션 및 컬렉션을 serialize 하는 방법에 대 한 자세한 내용은이 항목의 "고급 컬렉션 규칙" 섹션에서 컬렉션을 serialize 하는 방법에 대 한 정보를 참조 하세요.
 
@@ -74,9 +74,9 @@ ms.locfileid: "68363821"
 [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
 [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]
 
-serialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 사용된 실제 인스턴스 형식은 해당 인터페이스를 구현하는 모든 형식이 될 수 있습니다. 앞에서 설명한 제한 사항 (매개 변수가 없는 생성자 `Add` 와 메서드 포함)은 적용 되지 않습니다. 예를 들어, 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 형식의 데이터 멤버를 직접 선언할 수 없는 경우에도 Customer2의 주소를 제네릭 주소 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>의 인스턴스로 설정할 수 있습니다
+serialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 사용된 실제 인스턴스 형식은 해당 인터페이스를 구현하는 모든 형식이 될 수 있습니다. 앞에서 설명한 제한 사항 (매개 변수가 없는 생성자와 `Add` 메서드 포함)은 적용 되지 않습니다. 예를 들어, 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 형식의 데이터 멤버를 직접 선언할 수 없는 경우에도 Customer2의 주소를 제네릭 주소 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>의 인스턴스로 설정할 수 있습니다
 
-deserialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 serialization 엔진은 선언된 인터페이스를 구현하는 형식을 선택하고, 해당 형식은 인스턴스화됩니다. 알려진 형식 메커니즘 ( [데이터 계약 알려진 형식](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)에 설명 됨)은 여기에 영향을 주지 않습니다. 선택할 수 있는 형식은 WCF에 기본 제공 됩니다.
+deserialization을 수행하는 동안 선언된 형식이 인터페이스인 경우 serialization 엔진은 선언된 인터페이스를 구현하는 형식을 선택하고, 해당 형식은 인스턴스화됩니다. 알려진 형식 메커니즘 ( [데이터 계약 알려진 형식](data-contract-known-types.md)에 설명 됨)은 여기에 영향을 주지 않습니다. 선택할 수 있는 형식은 WCF에 기본 제공 됩니다.
 
 ## <a name="customizing-collection-types"></a>컬렉션 형식 사용자 지정
 
@@ -86,11 +86,11 @@ deserialization을 수행하는 동안 선언된 형식이 인터페이스인 �
 
 ### <a name="collection-data-contract-naming"></a>컬렉션 데이터 계약 명명
 
-컬렉션 형식의 명명 규칙은 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)에서 설명한 대로 일반 데이터 계약 형식의 명명 규칙과 유사하지만, 다음과 같은 중요한 차이점이 몇 개 있습니다.
+컬렉션 형식의 명명 규칙은 [Data Contract Names](data-contract-names.md)에서 설명한 대로 일반 데이터 계약 형식의 명명 규칙과 유사하지만, 다음과 같은 중요한 차이점이 몇 개 있습니다.
 
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성은 <xref:System.Runtime.Serialization.DataContractAttribute> 특성 대신 이름을 사용자 지정하는 데 사용됩니다. 또한 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성에는 `Name` 및 `Namespace` 속성이 있습니다.
 
-- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성이 적용되지 않는 경우 컬렉션 형식의 기본 이름 및 네임스페이스는 컬렉션에 포함된 형식의 이름 및 네임스페이스에 따라 다릅니다. 컬렉션 형식의 이름 및 네임스페이스 자체는 컬렉션에 포함된 형식의 이름 및 네임스페이스에 영향을 주지 않습니다. @FSHO1@예를 보려면 다음 형식을 참조하십시오.
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성이 적용되지 않는 경우 컬렉션 형식의 기본 이름 및 네임스페이스는 컬렉션에 포함된 형식의 이름 및 네임스페이스에 따라 다릅니다. 컬렉션 형식의 이름 및 네임스페이스 자체는 컬렉션에 포함된 형식의 이름 및 네임스페이스에 영향을 주지 않습니다. 예제를 보려면 다음 형식을 참조 하십시오.
 
   ```csharp
   public CustomerList1 : Collection<string> {}
@@ -150,7 +150,7 @@ serialize된 결과 XML은 다음과 유사합니다.
 
 목록 컬렉션에는 반복되는 항목이 있습니다. 일반적으로 반복되는 각 항목은 컬렉션에 포함된 형식의 데이터 계약 이름에 따라 명명된 요소로 표시됩니다.
 
-`CustomerList` 예제에서 컬렉션에는 문자열이 있습니다. 문자열 기본 형식에 대 한 데이터 계약 이름은 "string" 이므로 반복 되는 요소는 "\<string >"입니다.
+`CustomerList` 예제에서 컬렉션에는 문자열이 있습니다. 문자열 기본 형식에 대 한 데이터 계약 이름은 "string" 이므로 반복 되는 요소는 " \<string> "입니다.
 
 그러나 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> 특성의 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 속성을 사용하여 이 반복되는 요소 이름을 사용자 지정할 수 있습니다. 예를 보려면 다음 형식을 참조하십시오.
 
@@ -216,7 +216,7 @@ serialization을 수행하는 동안 지정된 데이터 계약의 지정된 범
 [!code-csharp[c_collection_types_in_data_contracts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#6)]
 [!code-vb[c_collection_types_in_data_contracts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#6)]
 
-deserialization에서 선언된 형식이 컬렉션 형식이면 실제로 보낸 형식과 관계없이 선언된 형식이 인스턴스화됩니다. 선언된 형식이 컬렉션 인터페이스이면 deserializer에서는 알려진 형식과 관계없이 인스턴스화할 형식을 선택합니다.
+deserialization에서 선언된 형식이 컬렉션 형식이면 실제로 보낸 형식과 관계없이 선언된 형식이 인스턴스화됩니다. 선언된 형식이 컬렉션 인터페이스이면 역직렬 변환기에서는 알려진 형식과 관계없이 인스턴스화할 형식을 선택합니다.
 
 또한 deserialization에서 선언된 형식이 컬렉션 형식은 아니지만 컬렉션 형식을 보내는 경우 일치하는 컬렉션 형식이 알려진 형식 목록에서 선택됩니다. deserialization에서 컬렉션 인터페이스 형식을 알려진 형식 목록에 추가할 수 있습니다. 이 경우 deserialization 엔진은 인스턴스화할 형식을 다시 선택합니다.
 
@@ -232,11 +232,11 @@ deserialization에서 선언된 형식이 컬렉션 형식이면 실제로 보�
 
 모든 동일한 컬렉션에는 동일한 표현의 XSD(XML 스키마 정의 언어) 스키마가 있습니다. 이 때문에 일반적으로 서버의 컬렉션 형식과 동일한 컬렉션 형식을 생성된 클라이언트 코드에서 얻을 수 없습니다. 예를 들어, 서버에서 정수 데이터 멤버의 제네릭 <xref:System.Collections.Generic.List%601> 와 함께 데이터 계약을 사용할 수 있지만, 생성된 클라이언트 코드에서 동일한 데이터 멤버가 정수 배열이 될 수 있습니다.
 
-사전 컬렉션은 사전 임을 나타내는 WCF 관련 스키마 주석으로 표시 됩니다. 그렇지 않은 경우에는 키와 값이 포함 된 항목을 포함 하는 단순 목록에서 구별할 수 없습니다. 데이터 계약 스키마에서 컬렉션이 표시되는 방법에 대한 정확한 설명은 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)를 참조하십시오.
+사전 컬렉션은 사전 임을 나타내는 WCF 관련 스키마 주석으로 표시 됩니다. 그렇지 않은 경우에는 키와 값이 포함 된 항목을 포함 하는 단순 목록에서 구별할 수 없습니다. 데이터 계약 스키마에서 컬렉션이 표시되는 방법에 대한 정확한 설명은 [Data Contract Schema Reference](data-contract-schema-reference.md)를 참조하십시오.
 
 기본적으로 가져온 코드의 사용자 지정되지 않은 컬렉션에 대해서는 형식이 생성되지 않습니다. 목록 컬렉션 형식의 데이터 멤버는 배열로 가져오며, 사전 컬렉션 형식의 데이터 멤버는 제네릭 사전으로 가져옵니다.
 
-그러나 사용자 지정된 컬렉션의 경우 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성으로 표시되는 별도의 형식이 생성됩니다. 스키마에서 사용자 지정된 컬렉션 형식은 기본 네임스페이스, 이름, 반복되는 요소 이름 또는 키/값 요소 이름을 사용하지 않습니다. 이러한 형식은 목록 형식의 경우 제네릭 <xref:System.Collections.Generic.List%601>에서 파생되고, 사전 형식의 경우 제네릭 사전에서 파생되는 빈 형식입니다.
+그러나 사용자 지정된 컬렉션의 경우 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성으로 표시되는 별도의 형식이 생성됩니다. 스키마의 사용자 지정 된 컬렉션 형식은 기본 네임 스페이스, 이름, 반복 요소 이름 또는 키/값 요소 이름을 사용 하지 않는 형식입니다. 이러한 형식은 <xref:System.Collections.Generic.List%601> 목록 형식 및 사전 형식에 대 한 제네릭 사전에 대해 제네릭에서 파생 되는 빈 형식입니다.
 
 예를 들어, 서버에 다음 형식이 있을 수 있습니다.
 
@@ -255,7 +255,7 @@ deserialization에서 선언된 형식이 컬렉션 형식이면 실제로 보�
 제네릭 형식을 참조할 때 해당 제네릭 형식은 완전 개방형 제네릭 형식 또는 완전 폐쇄형 제네릭 형식이어야 합니다.
 
 > [!NOTE]
-> Svcutil.exe 도구를 사용하는 경우 **/collectionType** 명령줄 스위치(약식: **/ct**)를 사용하여 이 참조를 수행할 수 있습니다. 또한 **/reference** 스위치(약식: **/r**)를 사용하여 참조된 컬렉션 형식에 대한 어셈블리를 지정해야 합니다. 형식이 제네릭이면 뒤에는 역따옴표 및 제네릭 매개 변수의 수가 와야 합니다. 큰따옴표 (\`)는 작은따옴표 (') 문자와 혼동 하지 않아야 합니다. **/collectionType** 스위치를 두 번 이상 사용하여 여러 개의 참조된 컬렉션 형식을 지정할 수 있습니다.
+> Svcutil.exe 도구를 사용하는 경우 **/collectionType** 명령줄 스위치(약식: **/ct**)를 사용하여 이 참조를 수행할 수 있습니다. 또한 **/reference** 스위치(약식: **/r**)를 사용하여 참조된 컬렉션 형식에 대한 어셈블리를 지정해야 합니다. 형식이 제네릭이면 뒤에는 역따옴표 및 제네릭 매개 변수의 수가 와야 합니다. 큰따옴표 ()는 작은따옴표 \` (') 문자와 혼동 하지 않아야 합니다. **/collectionType** 스위치를 두 번 이상 사용하여 여러 개의 참조된 컬렉션 형식을 지정할 수 있습니다.
 
 예를 들어, 모든 목록을 제네릭 <xref:System.Collections.Generic.List%601>로 가져오려면 다음을 사용합니다.
 
@@ -316,7 +316,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 - 컬렉션의 컬렉션이 있는 컬렉션 형식의 결합이 허용됩니다. 가변 배열은 컬렉션의 컬렉션으로 처리됩니다. 다차원 배열은 지원되지 않습니다.
 
-- 바이트의 배열 및 <xref:System.Xml.XmlNode> 의 배열은 컬렉션이 아닌 기본 형식으로 처리되는 특수 배열 형식입니다. 바이트의 배열을 serialize하면 각 바이트에 대한 별도의 요소 대신 Base64 인코딩된 데이터의 청크가 포함된 하나의 XML 요소가 됩니다. 의 <xref:System.Xml.XmlNode> 배열을 처리 하는 방법에 대 한 자세한 내용은 [데이터 계약의 XML 및 ADO.NET 형식](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)을 참조 하세요. 물론 이러한 특수 형식은 컬렉션에 참여할 수 있습니다. 바이트 배열의 배열은 여러 XML 요소가 되며 각 요소는 Base64 인코딩된 데이터의 청크를 포함합니다.
+- 바이트의 배열 및 <xref:System.Xml.XmlNode> 의 배열은 컬렉션이 아닌 기본 형식으로 처리되는 특수 배열 형식입니다. 바이트의 배열을 serialize하면 각 바이트에 대한 별도의 요소 대신 Base64 인코딩된 데이터의 청크가 포함된 하나의 XML 요소가 됩니다. 의 배열을 처리 하는 방법에 대 한 자세한 내용은 <xref:System.Xml.XmlNode> [데이터 계약의 XML 및 ADO.NET 형식](xml-and-ado-net-types-in-data-contracts.md)을 참조 하세요. 물론 이러한 특수 형식은 컬렉션에 참여할 수 있습니다. 바이트 배열의 배열은 여러 XML 요소가 되며 각 요소는 Base64 인코딩된 데이터의 청크를 포함합니다.
 
 - <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 컬렉션 형식에 적용되는 경우 해당 형식은 컬렉션이 아닌 일반 데이터 계약 형식으로 처리됩니다.
 
@@ -328,43 +328,43 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
   - 선언된 형식이 `IXmlSerializable`인 경우 `IXmlSerializable`로 serialize되지만 `myType` 을 알려진 형식 목록에 추가하는 경우에만 적용됩니다.
 
-- 컬렉션은 다음 표에 나와 있는 메서드를 사용하여 serialize되고 deserialize됩니다.
+- 컬렉션은 다음 표에 나와 있는 메서드를 사용하여 직렬화되고 역직렬화됩니다.
 
 |컬렉션 형식에서 구현하는 인터페이스|serialization에서 호출된 메서드|deserialization에서 호출된 메서드|
 |--------------------------------|-----------------------------------------|-------------------------------------------|
 |제네릭 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|제네릭 Add|
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|
 |제네릭 <xref:System.Collections.Generic.IList%601>|제네릭 <xref:System.Collections.Generic.IList%601> 인덱서|제네릭 Add|
-|제네릭 <xref:System.Collections.Generic.ICollection%601>|열거자|제네릭 Add|
+|제네릭 <xref:System.Collections.Generic.ICollection%601>|Enumerator|제네릭 Add|
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> 인덱서|`Add`|
-|제네릭 <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|적절한 형식(제네릭 매개 변수의 형식 또는 기본 형식 중 하나)의 매개 변수 하나를 사용하는 `Add`라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|
+|제네릭 <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|적절한 형식(제네릭 매개 변수의 형식 또는 기본 형식 중 하나)의 매개 변수 하나를 사용하는 `Add` 라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|
 |<xref:System.Collections.IEnumerable> 및 여기서 파생된 <xref:System.Collections.ICollection>|`GetEnumerator`|`Add` 형식의 매개 변수 하나를 사용하는 `Object`라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|
 
-위 표에는 컬렉션 인터페이스의 우선 순위가 내림차순으로 나열되어 있습니다. 예를 들어, 형식에서 <xref:System.Collections.IList> 및 제네릭 <xref:System.Collections.Generic.IEnumerable%601>을 모두 구현하는 경우 컬렉션은 다음과 같은 <xref:System.Collections.IList> 규칙에 따라 serialize되고 deserialize됩니다.
+위 표에는 컬렉션 인터페이스의 우선 순위가 내림차순으로 나열되어 있습니다. 예를 들어, 형식에서 <xref:System.Collections.IList> 및 제네릭 <xref:System.Collections.Generic.IEnumerable%601>을 모두 구현하는 경우 컬렉션은 다음과 같은 <xref:System.Collections.IList> 규칙에 따라 직렬화되고 역직렬화됩니다.
 
-- Deserialization을 수행 하는 경우 모든 컬렉션은 먼저 매개 변수가 없는 생성자를 호출 하 여 형식의 인스턴스를 만듭니다 .이 생성자는 직렬화를 수행 하는 동안 열거자가 컬렉션 형식을 컬렉션으로 처리 하는 데 존재 해야 합니다. 역직렬화.
+- Deserialization에서 모든 컬렉션은 먼저 매개 변수가 없는 생성자를 호출 하 여 형식의 인스턴스를 만듭니다 .이 생성자는 serialization 및 deserialization을 수행 하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리 하는 데 존재 해야 합니다.
 
 - 동일한 제네릭 컬렉션 인터페이스가 두 번 이상 구현되고(예를 들어, 형식이 <xref:System.Collections.Generic.ICollection%601> 의 제네릭 `Integer` 및 <xref:System.Collections.Generic.ICollection%601> 의 제네릭 <xref:System.String>을 모두 구현하는 경우), 우선 순위가 더 높은 인터페이스가 없는 경우 컬렉션은 유효한 컬렉션으로 처리되지 않습니다.
 
 - 컬렉션 형식은 이 컬렉션 형식에 적용된 <xref:System.SerializableAttribute> 특성을 가질 수 있으며, <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현할 수 있습니다. 이 특성 및 인터페이스가 모두 무시됩니다. 그러나 `Add` 메서드가 없는 경우와 같이 형식에서 컬렉션 형식 요구 사항을 충분히 충족하지 않는 경우 형식은 컬렉션 형식으로 간주되지 않으므로 <xref:System.SerializableAttribute> 특성 및 <xref:System.Runtime.Serialization.ISerializable> 인터페이스에 의해 형식이 serialize될 수 있는지 여부가 결정됩니다.
 
-- 컬렉션을 사용자 지정하기 위해 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 컬렉션에 적용하면 위의 <xref:System.SerializableAttribute> 대체 메커니즘이 제거됩니다. 대신 사용자 지정된 컬렉션에서 컬렉션 형식 요구 사항을 충족하지 않는 경우 <xref:System.Runtime.Serialization.InvalidDataContractException> 예외가 throw됩니다. 예외 문자열에는 지정 된 형식이 유효한 컬렉션으로 간주 되지 않는 이유를 설명 하는 정보 ( `Add` 메서드 없음, 매개 변수가 없는 생성자 등)가 포함 되어 있으므로 디버깅을 위해 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 적용 하는 것이 유용한 경우가 많습니다. 것.
+- 컬렉션을 사용자 지정하기 위해 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 특성을 컬렉션에 적용하면 위의 <xref:System.SerializableAttribute> 대체 메커니즘이 제거됩니다. 대신 사용자 지정된 컬렉션에서 컬렉션 형식 요구 사항을 충족하지 않는 경우 <xref:System.Runtime.Serialization.InvalidDataContractException> 예외가 throw됩니다. 예외 문자열에는 지정 된 형식이 유효한 컬렉션으로 간주 되지 않는 이유를 설명 하는 정보가 포함 되어 있습니다 ( `Add` 메서드 없음, 매개 변수가 없는 생성자 등). 따라서 디버깅 목적으로 특성을 적용 하는 것이 유용한 경우가 많습니다 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> .
 
 ### <a name="collection-naming"></a>컬렉션 명명
 
 컬렉션 명명 규칙 목록은 다음과 같습니다.
 
-- 모든 사전 컬렉션 데이터 계약의 기본 네임 스페이스와 기본 형식이 포함 된 목록 컬렉션 데이터 계약의 기본 네임 스페이스는 네임 `http://schemas.microsoft.com/2003/10/Serialization/Arrays` 스페이스를 사용 하 여 재정의 되지 않는 한입니다. `char`, `Timespan`및 `Guid` 형식과 함께 기본 제공 XSD 형식에 매핑되는 형식은 이러한 목적으로 기본 형식으로 간주됩니다.
+- 모든 사전 컬렉션 데이터 계약의 기본 네임 스페이스와 기본 형식이 포함 된 목록 컬렉션 데이터 계약의 기본 네임 스페이스는 `http://schemas.microsoft.com/2003/10/Serialization/Arrays` 네임 스페이스를 사용 하 여 재정의 되지 않는 한입니다. `char`, `Timespan`및 `Guid` 형식과 함께 기본 제공 XSD 형식에 매핑되는 형식은 이러한 목적으로 기본 형식으로 간주됩니다.
 
 - 기본 형식이 아닌 형식이 포함된 컬렉션 형식의 기본 네임스페이스는 Namespace를 사용하여 재정의되지 않는 한 컬렉션에 포함된 형식의 데이터 계약 네임스페이스와 동일합니다.
 
 - 목록 컬렉션 데이터 계약의 기본 이름은 Name을 사용하여 재정의되지 않는 한 컬렉션에 포함된 형식의 데이터 계약 이름과 결합된 문자열인 "ArrayOf"입니다. 예를 들어, 정수의 제네릭 목록에 대한 데이터 계약 이름은 "ArrayOfint"입니다. `Object` 의 데이터 계약 이름은 "anyType"이므로 <xref:System.Collections.ArrayList> 와 같은 제네릭이 아닌 목록의 데이터 계약 이름은 "ArrayOfanyType"입니다.
 
-사전 컬렉션 데이터 계약의 기본 이름은 `Name`을 사용하여 재정의되지 않는 한 값 형식의 데이터 계약 이름 앞에 나오는 키 형식의 데이터 계약 이름과 결합된 문자열 "ArrayOfKeyValueOf"입니다. 예를 들어, 문자열 및 정수의 제네릭 사전에 대한 데이터 계약 이름은 "ArrayOfKeyValueOfstringint"입니다. 또한 키 또는 값 형식 중 하나가 기본 형식이 아닌 경우 키 및 값 형식의 데이터 계약 네임스페이스의 네임스페이스 해시가 이름에 추가됩니다. 네임 스페이스 해시에 대 한 자세한 내용은 [데이터 계약 이름](../../../../docs/framework/wcf/feature-details/data-contract-names.md)을 참조 하세요.
+사전 컬렉션 데이터 계약의 기본 이름은 `Name`을 사용하여 재정의되지 않는 한 값 형식의 데이터 계약 이름 앞에 나오는 키 형식의 데이터 계약 이름과 결합된 문자열 "ArrayOfKeyValueOf"입니다. 예를 들어, 문자열 및 정수의 제네릭 사전에 대한 데이터 계약 이름은 "ArrayOfKeyValueOfstringint"입니다. 또한 키 또는 값 형식 중 하나가 기본 형식이 아닌 경우 키 및 값 형식의 데이터 계약 네임스페이스의 네임스페이스 해시가 이름에 추가됩니다. 네임 스페이스 해시에 대 한 자세한 내용은 [데이터 계약 이름](data-contract-names.md)을 참조 하세요.
 
 각 사전 컬렉션 데이터 계약에는 사전에 있는 하나의 항목을 나타내는 도우미 데이터 계약이 있습니다. 이 계약의 이름은 "ArrayOf" 접두사를 제외하고 사전 데이터 계약과 동일하며 네임스페이스는 사전 데이터 계약과 동일합니다. 예를 들어, "ArrayOfKeyValueOfstringint" 사전 데이터 계약의 경우 "KeyValueofstringint" 데이터 계약은 사전에 있는 하나의 항목을 나타냅니다. 다음 단원에서 설명한 대로 `ItemName` 속성을 사용하여 이 데이터 계약의 이름을 사용자 지정할 수 있습니다.
 
-제네릭 형식 명명 규칙은 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)에서 설명한 대로 컬렉션 형식에 완전히 적용됩니다. 즉, 이름 내에 중괄호를 사용하여 제네릭 형식 매개 변수를 나타낼 수 있습니다. 그러나 괄호 내의 수는 컬렉션 내에 포함된 형식이 아닌 제네릭 매개 변수를 가리킵니다.
+제네릭 형식 명명 규칙은 [Data Contract Names](data-contract-names.md)에서 설명한 대로 컬렉션 형식에 완전히 적용됩니다. 즉, 이름 내에 중괄호를 사용하여 제네릭 형식 매개 변수를 나타낼 수 있습니다. 그러나 괄호 내의 수는 컬렉션 내에 포함된 형식이 아닌 제네릭 매개 변수를 가리킵니다.
 
 ## <a name="collection-customization"></a>컬렉션 사용자 지정
 
@@ -387,7 +387,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 [!code-csharp[c_collection_types_in_data_contracts#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#11)]
 [!code-vb[c_collection_types_in_data_contracts#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#11)]
 
-이 경우 `Marks1` 의 인스턴스는 `testMarks`에 할당될 수 있습니다. 그러나 데이터 계약이 `Marks2` 데이터 계약과 동일하지 않으므로 `IList<int>` 를 사용해서는 안 됩니다. 데이터 계약 이름은 "arrayofint"가 아니라 "Marks2"이 고, 반복 되는 요소 이름은 "\<\<int >"이 아닌 "mark >"입니다.
+이 경우 `Marks1` 의 인스턴스는 `testMarks`에 할당될 수 있습니다. 그러나 데이터 계약이 `Marks2` 데이터 계약과 동일하지 않으므로 `IList<int>` 를 사용해서는 안 됩니다. 데이터 계약 이름은 "ArrayOfint"가 아니라 "Marks2"이 고 반복 되는 요소 이름은 ""이 아니라 ""입니다 \<mark> \<int> .
 
 다음 표의 규칙은 컬렉션의 다형적 할당에 적용됩니다.
 
@@ -398,7 +398,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |사용자 지정되지 않은 컬렉션|계약 이름이 serialize되어 있지 않습니다.|계약 이름이 serialize되어 있습니다.<br /><br /> 사용자 지정이 사용됩니다.**|
 |사용자 지정된 컬렉션|계약 이름이 serialize되어 있습니다. 사용자 지정은 사용 되지 않습니다.\*\*|계약 이름이 serialize되어 있습니다.<br /><br /> 할당 된 형식의 사용자 지정이 사용 됩니다.\*\*|
 
-\*이 경우 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스를 사용 하 여 사용자 지정을 사용 합니다. 또한 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스는 이 경우의 실제 형식 이름을 serialize하므로 deserialization이 예상대로 작동합니다.
+\*이 경우 클래스를 사용 하 여 <xref:System.Runtime.Serialization.NetDataContractSerializer> 사용자 지정을 사용 합니다. 또한 <xref:System.Runtime.Serialization.NetDataContractSerializer> 클래스는 이 경우의 실제 형식 이름을 serialize하므로 deserialization이 예상대로 작동합니다.
 
 \*\*이러한 경우 스키마에 맞지 않는 인스턴스가 발생 하므로이를 피해 야 합니다.
 
@@ -410,6 +410,6 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 serializer가 개체 참조를 유지하는 모드에서 작동하는 경우 개체 참조 유지도 컬렉션에 적용됩니다. 특히 개체 ID는 전체 컬렉션 및 컬렉션에 포함된 개별 항목 모두에 대해 유지됩니다. 사전의 경우 개체 ID는 키/값 쌍 개체, 개별 키 개체 및 값 개체 모두에 대해 유지됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

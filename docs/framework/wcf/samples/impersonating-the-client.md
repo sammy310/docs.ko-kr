@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183607"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594636"
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
 Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 애플리케이션을 가장하는 방법을 보여 줍니다.  
   
- 이 샘플은 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플을 기반으로 합니다. 서비스 및 클라이언트 구성 파일은 셀프 [호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플의 파일과 동일합니다.  
+ 이 샘플은 [자체 호스트](self-host.md) 샘플을 기반으로 합니다. 서비스 및 클라이언트 구성 파일은 [자체 호스트](self-host.md) 샘플과 동일 합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  샘플을 실행하면 작업 요청 및 응답이 서비스와 클라이언트 콘솔 창 모두에 표시됩니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.  
   
 > [!NOTE]
-> 서비스는 관리 계정에서 실행되거나 HTTP 계층에 `http://localhost:8000/ServiceModelSamples` URI를 등록할 수 있는 권한이 부여되어야 합니다. 이러한 권한은 [Httpcfg.exe 도구를](/windows/win32/http/httpcfg-exe)사용하여 [네임스페이스 예약을](/windows/win32/http/namespace-reservations-registrations-and-routing) 설정하여 부여할 수 있습니다.  
+> 서비스는 관리 계정에서 실행 하거나, 실행 하는 계정에는 HTTP 계층에 URI를 등록할 수 있는 권한을 부여 해야 합니다 `http://localhost:8000/ServiceModelSamples` . [Httpcfg.exe 도구](/windows/win32/http/httpcfg-exe)를 사용 하 여 [네임 스페이스 예약](/windows/win32/http/namespace-reservations-registrations-and-routing) 을 설정 하 여 이러한 권한을 부여할 수 있습니다.  
   
 > [!NOTE]
-> Windows Server 2003을 실행하는 컴퓨터에서는 Host.exe 응용 프로그램에 가장 권한이 있는 경우에만 가장이 지원됩니다. (기본적으로 관리자만 이 권한이 있습니다.) 서비스가 실행 중인 계정에 이 권한을 추가하려면 **관리 도구,** **로컬 보안 정책**열기, 로컬 **정책**열기, 사용자 **권한 할당**을 클릭하고 인증 후 클라이언트 를 **가장하고** **속성을** 두 번 클릭하여 사용자 또는 그룹을 추가합니다.  
+> Windows Server 2003를 실행 하는 컴퓨터에서 가장은 호스트나 응용 프로그램에 가장 권한이 있는 경우에만 지원 됩니다. 기본적으로 관리자 에게만이 권한이 있습니다. 서비스를 실행 하는 계정에이 권한을 추가 하려면 **관리 도구**로 이동 하 여 **로컬 보안 정책**, **로컬 정책**을 차례로 열고 **사용자 권한 할당**을 클릭 한 다음 **인증 후 클라이언트 가장** 을 선택 하 고 **속성** 을 두 번 클릭 하 여 사용자 또는 그룹을 추가 합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.  
   
-3. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
 4. 서비스가 호출자를 가장하는 것을 보기 위해 서비스가 실행 중인 계정이 아닌 다른 계정으로 클라이언트를 실행합니다. 이렇게 하려면 명령 프롬프트에서 다음을 입력합니다.  
   

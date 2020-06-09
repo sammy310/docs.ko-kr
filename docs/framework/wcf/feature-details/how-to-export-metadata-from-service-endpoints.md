@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579412"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 엔드포인트에서 메타데이터 내보내기
 이 항목에서는 서비스 엔드포인트로부터 메타데이터를 내보내는 방법에 대해 설명합니다.  
@@ -55,8 +55,8 @@ ms.locfileid: "61778302"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  Program.cs를 컴파일할 때에는 System.ServiceModel.dll을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [메타데이터 아키텍처 개요](metadata-architecture-overview.md)
+- [메타데이터 사용](using-metadata.md)
+- [엔드포인트: 주소, 바인딩 및 계약](endpoints-addresses-bindings-and-contracts.md)

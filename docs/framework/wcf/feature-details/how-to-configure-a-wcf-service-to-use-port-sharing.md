@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579529"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성
-Net.tcp를 사용하는 가장 쉬운 방법은 WCF(Windows 통신 재단) 응용 프로그램에서 net.tcp:// 포트 공유를 사용하는 가장 쉬운 방법은 <xref:System.ServiceModel.NetTcpBinding>을 사용하여 서비스를 노출하는 것입니다.  
+WCF (Windows Communication Foundation) 응용 프로그램에서 net.tcp://포트 공유를 사용 하는 가장 쉬운 방법은를 사용 하 여 서비스를 노출 하는 것입니다 <xref:System.ServiceModel.NetTcpBinding> .  
   
  이 바인딩에서는 이 바인딩을 사용하여 구성하는 서비스에 대해 net.tcp:// 포트 공유를 사용할지 여부를 제어하는 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 속성을 제공합니다.  
   
@@ -21,7 +21,7 @@ Net.tcp를 사용하는 가장 쉬운 방법은 WCF(Windows 통신 재단) 응�
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>코드로 NetTcpBinding에서 net.tcp:// 포트 공유를 사용하도록 설정하려면  
   
-1. 라는 계약을 구현 `IMyService` 하 고 호출 `MyService`하는 서비스를 만듭니다 .  
+1. 라는 계약을 구현 하 고를 호출 하는 서비스를 만듭니다 `IMyService` `MyService` .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -62,5 +62,5 @@ Net.tcp를 사용하는 가장 쉬운 방법은 WCF(Windows 통신 재단) 응�
   
 ## <a name="see-also"></a>참고 항목
 
-- [Net.TCP 포트 공유](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [방법: Net.TCP Port Sharing Service 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP 포트 공유](net-tcp-port-sharing.md)
+- [방법: Net.TCP Port Sharing Service 사용](how-to-enable-the-net-tcp-port-sharing-service.md)
