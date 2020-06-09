@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595117"
 ---
 # <a name="trusted-subsystem"></a>신뢰할 수 있는 하위 시스템
 클라이언트는 네트워크에 분산되어 있는 하나 이상의 웹 서비스에 액세스합니다. 웹 서비스는 데이터베이스 또는 기타 웹 서비스와 같은 추가 리소스에 대한 액세스가 해당 웹 서비스의 비즈니스 논리에 캡슐화되도록 디자인되어 있습니다. 이러한 리소스는 권한이 없는 액세스로부터 보호되어야 합니다. 다음 그림은 신뢰할 수 있는 하위 시스템 프로세스를 보여 줍니다.  
   
- ![신뢰할 수 있는 하위 시스템](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![신뢰할 수 있는 하위 시스템](media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  그림에서처럼 다음 단계에서는 신뢰할 수 있는 하위 시스템 프로세스에 대해 설명합니다.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "79184302"
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|윈도우 커뮤니케이션 재단 (WCF) 만.|  
+|상호 운용성|Windows Communication Foundation (WCF)만 해당 합니다.|  
 |인증(서비스)|보안 토큰 서비스는 클라이언트를 인증하고 클라이언트에게 권한을 부여합니다.|  
 |인증(클라이언트)|신뢰할 수 있는 하위 시스템은 클라이언트를 인증하고, 리소스는 신뢰할 수 있는 하위 시스템 서비스를 인증합니다.|  
-|무결성|yes|  
-|기밀성|yes|  
+|무결성|예|  
+|기밀성|예|  
 |전송|클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.<br /><br /> 신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.|  
-|바인딩|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding> [및 \<wsFederationhttpbinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|바인딩|<xref:System.ServiceModel.WSHttpBinding>하거나<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>리소스(백 엔드 서비스)  
   
@@ -163,7 +163,7 @@ ms.locfileid: "79184302"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>클라이언트  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하여 신뢰할 수 있는 하위 시스템과 통신하는 클라이언트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.  
@@ -212,5 +212,5 @@ ms.locfileid: "79184302"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

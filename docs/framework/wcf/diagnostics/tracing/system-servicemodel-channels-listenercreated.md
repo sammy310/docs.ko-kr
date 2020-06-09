@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.ListenerCreated
 ms.date: 03/30/2017
 ms.assetid: d4a3401c-f7f8-4761-95c2-ca92b70a503d
-ms.openlocfilehash: f184ddf66fd7218b5676e2bd9f656435b6414a27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9dd4d942072ae1c3d183e3a46222c84810ff52
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596131"
 ---
 # <a name="systemservicemodelchannelslistenercreated"></a>System.ServiceModel.Channels.ListenerCreated
 System.ServiceModel.Channels.ListenerCreated  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  수신기를 만들었습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [추적](index.md)
+- [추적을 사용하여 애플리케이션 문제 해결](using-tracing-to-troubleshoot-your-application.md)
+- [관리 및 진단](../index.md)

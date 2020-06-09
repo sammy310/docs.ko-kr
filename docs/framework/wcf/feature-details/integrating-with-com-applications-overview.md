@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 99e3c2f4445673f3b74048a2b466203af7bc2795
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596827"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 애플리케이션과 통합 개요
 
@@ -18,7 +18,7 @@ WCF (Windows Communication Foundation)는 관리 코드 개발자에 게 연결 
 > [!NOTE]
 > 서비스 모니커는 모든 통신에 대해 WCF 통신 채널을 사용 합니다. 이 채널의 보안 및 ID 메커니즘은 표준 COM 및 DCOM 프록시에 사용되는 메커니즘과 다릅니다. 또한 서비스 모니커가 WCF 통신 채널을 사용 하기 때문에 모든 호출에 대해 기본 제한 시간은 1 분입니다.
 
-서비스 모니커는 `GetObject` 함수와 함께 사용 되어 관리 되지 않는 개발자에 게 WCF 웹 서비스를 호출 하기 위한 강력한 형식의 COM 관련 접근 방법을 제공 합니다. 이렇게 하려면 WCF 웹 서비스 계약의 로컬 및 COM에 표시 되는 정의와 사용할 바인딩을 사용 해야 합니다. 다른 WCF 클라이언트와 마찬가지로,이 채널 생성은 첫 번째 메서드 호출에서 COM 프로그래머에 게 투명 하 게 발생 하지만 서비스 모니커는 서비스에 형식화 된 채널을 생성 해야 합니다.
+서비스 모니커는 함수와 함께 사용 되어 `GetObject` 관리 되지 않는 개발자에 게 WCF 웹 서비스를 호출 하기 위한 강력한 형식의 COM 관련 접근 방법을 제공 합니다. 이렇게 하려면 WCF 웹 서비스 계약의 로컬 및 COM에 표시 되는 정의와 사용할 바인딩을 사용 해야 합니다. 다른 WCF 클라이언트와 마찬가지로,이 채널 생성은 첫 번째 메서드 호출에서 COM 프로그래머에 게 투명 하 게 발생 하지만 서비스 모니커는 서비스에 형식화 된 채널을 생성 해야 합니다.
 
 다른 WCF 클라이언트와 일반적으로 모니커를 사용 하는 경우 응용 프로그램은 서비스와 통신 하는 주소, 바인딩 및 계약을 지정 합니다. 계약은 다음 방법 중 하나로 지정할 수 있습니다.
 
@@ -32,7 +32,7 @@ WCF (Windows Communication Foundation)는 관리 코드 개발자에 게 연결 
 
 다음 표에서는 서비스 모니커에서 지원하는 매개 변수를 보여 줍니다.
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |`address`|서비스의 URL 위치입니다.|
 |`binding`|애플리케이션 구성의 바인딩 섹션 이름입니다.|
@@ -67,6 +67,6 @@ WCF (Windows Communication Foundation)는 관리 코드 개발자에 게 연결 
 >
 > `</configuration>`
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [방법: 서비스 모니커 등록 및 구성](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [방법: 서비스 모니커 등록 및 구성](how-to-register-and-configure-a-service-moniker.md)

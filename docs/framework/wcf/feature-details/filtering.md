@@ -2,17 +2,17 @@
 title: 필터링
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: d04141e4720320784bc92c332a3f0b96a7b1ac92
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595468"
 ---
 # <a name="filtering"></a>필터링
 WCF (Windows Communication Foundation) 필터링 시스템은 선언적 필터를 사용 하 여 메시지를 일치 시키고 운영 결정을 내릴 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
   
- 필터링 시스템은 특정 WCF 메시지에 대해 `true` 되는 필터 집합을 효율적으로 결정할 수 있는 클래스 집합으로 구성 됩니다.  
+ 필터링 시스템은 `true` 특정 WCF 메시지에 대 한 필터 집합을 효율적으로 결정할 수 있는 클래스 집합으로 구성 됩니다.  
   
  필터링 시스템은 WCF 메시징의 핵심 구성 요소입니다. 매우 빠르게 설계 되었습니다. 각 필터 구현은 WCF 메시지에 대 한 특정 종류의 일치에 대해 최적화 되었습니다.  
   
@@ -21,7 +21,7 @@ WCF (Windows Communication Foundation) 필터링 시스템은 선언적 필터�
 ## <a name="where-filtering-fits"></a>필터링이 적용되는 위치  
  메시지를 수신하고 메시지를 적절한 애플리케이션 구성 요소에 발송하는 프로세스의 일부인 경우 필터링이 수행됩니다. 필터링 시스템의 디자인은 메시징, 라우팅, 보안, 이벤트 처리 및 시스템 관리를 비롯 한 여러 WCF 하위 시스템의 요구 사항을 해결 합니다.  
   
-## <a name="filters"></a>필터.  
+## <a name="filters"></a>필터  
  필터 엔진에는 두 가지 기본 구성 요소 즉, 필터와 필터 테이블이 있습니다. 필터는 사용자 지정 논리 조건에 기반한 메시지에 대해 부울을 결정합니다. 필터는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 구현합니다.  
   
  <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> 메서드는 메시지가 필터를 충족하는지 확인하는 데 사용됩니다. 메서드 중 하나가 메시지의 헤더를 테스트하지만 메시지 본문은 검사할 수 없습니다. 다른 메서드는 *메시지 버퍼* 를 입력 매개 변수로 사용 하 여 메시지 본문을 검사할 수 있습니다.  
@@ -42,10 +42,10 @@ WCF (Windows Communication Foundation) 필터링 시스템은 선언적 필터�
   
 ### <a name="prefix-endpoint-address-filters"></a>접두사 엔드포인트 주소 필터  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어 주소 `http://www.adatum.com` 지정 하는 필터는 `http://www.adatum.com/userA`으로 주소가 지정 된 메시지와 일치 합니다.  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어 주소를 지정 하는 필터는 `http://www.adatum.com` 로 주소가 지정 된 메시지와 일치 `http://www.adatum.com/userA` 합니다.  
   
 ### <a name="xpath-message-filters"></a>XPath 메시지 필터  
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>는 XPath 식을 사용하여 XML 문서에 특정 요소, 특성, 텍스트 또는 기타 XML 구문을 포함할지 여부를 결정합니다. 필터는 엄격한 XPath의 하위 집합에 대해 매우 효율적으로 최적화됩니다. XML 경로 언어는 [W3C Xml Path language 1.0 사양](https://www.w3.org/TR/xpath/all/)에 설명 되어 있습니다.  
+ 는 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> XPath 식을 사용 하 여 xml 문서에 특정 요소, 특성, 텍스트 또는 기타 xml 구문 구문이 포함 되어 있는지 여부를 확인 합니다. 필터는 엄격한 XPath의 하위 집합에 대해 매우 효율적으로 최적화됩니다. XML 경로 언어는 [W3C Xml Path language 1.0 사양](https://www.w3.org/TR/xpath/all/)에 설명 되어 있습니다.  
   
  일반적으로 애플리케이션은 엔드포인트에서 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>를 사용하여 SOAP 메시지의 내용을 퀴리한 다음 해당 쿼리의 결과를 기준으로 적절한 작업을 수행합니다. 예를 들어, 큐 프로세스에서는 XPath 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐 앞으로 이동할지 여부를 결정할 수 있습니다.  
   
@@ -68,7 +68,7 @@ WCF (Windows Communication Foundation) 필터링 시스템은 선언적 필터�
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> 클래스는 메시징 시나리오 대부분을 포함하는 XPath의 하위 집합에 대한 일치를 최적화하고, 전체 XPath 1.0 문법도 지원합니다. 효율적인 병렬 일치를 위한 알고리즘을 최적화합니다.  
   
- 이 테이블에는 `Match` 및 <xref:System.Xml.XPath.XPathNavigator>를 통해 수행되는 여러 특수화된 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메서드가 있습니다. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 <xref:System.Xml.XPath.XPathNavigator> 속성을 추가하여 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 클래스를 확장합니다. 이 속성을 사용하면 XML 문서 내의 위치를 저장해 놓은 후 탐색기를 복제하지 않고 신속하게 로드할 수 있습니다. 이 작업을 <xref:System.Xml.XPath.XPathNavigator>에서 수행하려면 비용이 많이 드는 메모리 할당이 필요합니다. WCF XPath 엔진은 XML 문서에 대 한 쿼리를 실행 하는 과정에서 커서의 위치를 자주 기록해 야 하므로 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 메시지 처리에 대 한 중요 한 최적화를 제공 합니다.  
+ 이 테이블에는 `Match` 및 <xref:System.Xml.XPath.XPathNavigator>를 통해 수행되는 여러 특수화된 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메서드가 있습니다. <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>는 <xref:System.Xml.XPath.XPathNavigator> 속성을 추가하여 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 클래스를 확장합니다. 이 속성을 사용 하면이 작업을 수행 하는 데 필요한 부담이 큰 메모리 할당 인 탐색기를 복제 하지 않고도 XML 문서 내의 위치를 신속 하 게 저장 하 고 로드할 수 있습니다 <xref:System.Xml.XPath.XPathNavigator> . WCF XPath 엔진은 XML 문서에 대 한 쿼리를 실행 하는 과정에서 커서의 위치를 자주 기록해 야 하므로에서 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 메시지 처리에 대 한 중요 한 최적화를 제공 합니다.  
   
 ## <a name="customer-scenarios"></a>고객 시나리오  
  메시지에 포함된 데이터에 따라 메시지를 다른 프로세싱 모듈에 전송하려는 경우 언제든지 필터링을 사용할 수 있습니다. 두 가지 일반적인 시나리오는 동작 코드에 기반한 메시지 라우팅과 메시지 엔드포인트 주소에 기반한 메시지 스트림의 역 멀티플렉싱입니다.  
@@ -83,6 +83,6 @@ WCF (Windows Communication Foundation) 필터링 시스템은 선언적 필터�
   
 - `EndpointAddress`에 지정된 대로 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>의 나머지 엔드포인트 매개 변수.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [데이터 전송 및 Serialization](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [데이터 전송 및 Serialization](data-transfer-and-serialization.md)

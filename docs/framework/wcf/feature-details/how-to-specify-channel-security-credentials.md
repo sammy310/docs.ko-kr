@@ -2,12 +2,12 @@
 title: '방법: 채널 보안 자격 증명 지정'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596944"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에서는 클라이언트에서 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출 하는 경우 관리 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출 하는 경우 인터페이스를 사용 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 하 여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
@@ -15,7 +15,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials>는 IDispatch 기반 인터페이스이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 않습니다.  
   
- 이 문서에서는 [메시지 보안 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)에 정의 된 WCF 서비스를 사용 합니다.  
+ 이 문서에서는 [메시지 보안 샘플](../samples/message-security-sample.md)에 정의 된 WCF 서비스를 사용 합니다.  
   
 ### <a name="to-specify-a-client-certificate"></a>클라이언트 인증서 지정  
   
@@ -115,7 +115,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
 ### <a name="to-specify-an-issue-token"></a>발급 토큰 지정  
   
-1. 발급 토큰은 페더레이션 보안을 사용하는 애플리케이션에서만 사용됩니다. 페더레이션된 보안에 대 한 자세한 내용은 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) 및 [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)을 참조 하세요.  
+1. 발급 토큰은 페더레이션 보안을 사용하는 애플리케이션에서만 사용됩니다. 페더레이션된 보안에 대 한 자세한 내용은 [페더레이션 및 발급 된 토큰](federation-and-issued-tokens.md) 및 [페더레이션 샘플](../samples/federation-sample.md)을 참조 하세요.  
   
      다음 Visual Basic 코드 예제에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
@@ -133,8 +133,8 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
 ## <a name="see-also"></a>참고 항목
 
-- [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
-- [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [페더레이션](federation.md)
+- [방법: 페더레이션 서비스에서 자격 증명 구성](how-to-configure-credentials-on-a-federation-service.md)
+- [방법: 페더레이션 클라이언트 만들기](how-to-create-a-federated-client.md)
+- [메시지 보안](message-security-in-wcf.md)
+- [바인딩 및 보안](bindings-and-security.md)

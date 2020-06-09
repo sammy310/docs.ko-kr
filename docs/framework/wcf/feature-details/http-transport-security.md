@@ -2,12 +2,12 @@
 title: HTTP 전송 보안
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212140"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592725"
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
 HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL이 작동 하는 방법 및이를 WCF (Windows Communication Foundation)에서 구현 하는 방법에 대해 설명 합니다.  
@@ -51,9 +51,9 @@ IIS 7.0에서 사용할 인증서를 구성 하려면 [iis 7.0에서 서버 인�
 
  자체 호스팅 WCF 응용 프로그램을 만드는 경우 [httpcfg.exe](/windows/win32/http/httpcfg-exe) 도구를 사용 합니다.
   
- Httpcfg.exe 도구를 사용 하 여 x.509 인증서로 포트를 설정 하는 방법에 대 한 자세한 내용은 [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.  
+ Httpcfg.exe 도구를 사용 하 여 x.509 인증서로 포트를 설정 하는 방법에 대 한 자세한 내용은 [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [전송 보안](transport-security.md)
+- [메시지 보안](message-security-in-wcf.md)

@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: d6831452370b672a6c02ace31dc05ef07ca48154
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 163645c16097b5371369618f2bd5f333feb75747
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141647"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595155"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 인증 모드
 WCF (Windows Communication Foundation)는 클라이언트와 서비스가 서로 인증 하는 여러 모드를 제공 합니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 정적 메서드를 사용하거나 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다. 이 항목에서는 18가지의 인증 모드에 대해 간단히 설명합니다.  
   
- 인증 모드 중 하나에 요소를 사용 하는 예제는 [방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)를 참조 하세요.  
+ 인증 모드 중 하나에 요소를 사용 하는 예제는 [방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)를 참조 하세요.  
   
 ## <a name="basic-configuration-programming"></a>기본 구성 프로그래밍  
  다음 절차에서는 구성 파일에 인증 모드를 설정하는 방법을 설명합니다.  
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>구성 파일에 인증 모드를 설정하려면  
   
-1. [\<bindings >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소에 [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)를 추가 합니다.  
+1. 요소에를 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) 추가 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) 합니다.  
   
-2. 자식 요소로 [\<binding >](../../configure-apps/file-schema/wcf/bindings.md) 요소를 `<customBinding>` 요소에 추가 합니다.  
+2. 요소를 자식 요소로 추가 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) `<customBinding>` 합니다.  
   
 3. `<security>` 요소를 `<binding>` 요소에 추가합니다.  
   
@@ -49,12 +49,12 @@ WCF (Windows Communication Foundation)는 클라이언트와 서비스가 서로
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3. 바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. 자세한 내용은 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)을 참조 하세요.  
+3. 바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. 자세한 내용은 [사용자 지정 바인딩](../extending/custom-bindings.md)을 참조 하세요.  
   
 ## <a name="mode-descriptions"></a>모드 설명  
   
 ### <a name="anonymousforcertificate"></a>AnonymousForCertificate  
- 이 인증 모드에서 클라이언트는 비대칭이고 서비스는 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>입니다. 또는 <`security`> 요소의 `authenticationMode` 특성을 `AnonymousForCertificate`로 설정 합니다.  
+ 이 인증 모드에서 클라이언트는 비대칭이고 서비스는 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>입니다. 또는 `authenticationMode` <`security`> 요소의 특성을로 설정 `AnonymousForCertificate` 합니다.  
   
 ### <a name="anonymousforsslnegotiated"></a>AnonymousForSslNegotiated  
  이 인증 모드에서 클라이언트는 비대칭이고 서비스는 런타임에 협상되는 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 첫 번째 매개 변수에 대해 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 값이 전달될 때 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> 메서드에 의해 반환된 `false`입니다. 또는 `authenticationMode` 특성을 `AnonymousForSslNegotiated`로 설정합니다.  
@@ -78,7 +78,7 @@ WCF (Windows Communication Foundation)는 클라이언트와 서비스가 서로
  이 인증 모드에서는 클라이언트가 Kerberos 티켓을 사용하여 서비스를 인증합니다. 동일한 티켓에서 서버 인증을 제공합니다. 보안 바인딩 요소는 `SymmetricSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `Kerberos`로 설정합니다.  
   
 > [!NOTE]
-> 이 인증 모드를 사용하려면 서비스 계정이 SPN(서비스 사용자 이름)과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn 도구를 사용 하 여 서비스 계정에 대 한 SPN을 만듭니다. 두 경우 모두 클라이언트는 [\<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소에서 올바른 SPN을 사용 하거나 <xref:System.ServiceModel.EndpointAddress> 생성자를 사용 해야 합니다. 자세한 내용은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+> 이 인증 모드를 사용하려면 서비스 계정이 SPN(서비스 사용자 이름)과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트는 요소에 올바른 SPN을 사용 [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) 하거나 생성자를 사용 하 여 사용 해야 합니다 <xref:System.ServiceModel.EndpointAddress> . 자세한 내용은 [서비스 Id 및 인증](service-identity-and-authentication.md)합니다.  
   
 > [!NOTE]
 > `Kerberos` 인증 모드를 사용하면 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 및 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 가장 수준이 지원되지 않습니다.  
@@ -87,7 +87,7 @@ WCF (Windows Communication Foundation)는 클라이언트와 서비스가 서로
  이 인증 모드에서는 클라이언트가 Kerberos 티켓을 사용하여 서비스를 인증합니다. Kerberos 토큰은 메시지 서명에 서명한 토큰인 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `TransportSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `KerberosOverTransport`로 설정합니다.  
   
 > [!NOTE]
-> 이 인증 모드를 사용하려면 서비스 계정이 SPN과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn 도구를 사용 하 여 서비스 계정에 대 한 SPN을 만듭니다. 두 경우 모두 클라이언트는 [\<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소에서 올바른 SPN을 사용 하거나 <xref:System.ServiceModel.EndpointAddress> 생성자를 사용 해야 합니다. 자세한 내용은 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
+> 이 인증 모드를 사용하려면 서비스 계정이 SPN과 연결되어야 합니다. 이 작업을 수행하려면 NETWORK SERVICE 계정이나 LOCAL SYSTEM 계정에서 서비스를 실행합니다. 또는 SetSpn.exe 도구를 사용하여 서비스 계정의 SPN을 만듭니다. 두 경우 모두 클라이언트는 요소에 올바른 SPN을 사용 [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) 하거나 생성자를 사용 하 여 사용 해야 합니다 <xref:System.ServiceModel.EndpointAddress> . 자세한 내용은 [서비스 Id 및 인증](service-identity-and-authentication.md)합니다.  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  이 인증 모드에서 클라이언트는 메시지 서명에 서명한 토큰인 보증 지원 토큰으로 SOAP 계층에 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `SymmetricSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `MutualCertificate`로 설정합니다.  
@@ -120,7 +120,7 @@ WCF (Windows Communication Foundation)는 클라이언트와 서비스가 서로
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  이 인증 모드에서 클라이언트는 메시지 서명에 의해 서명된 토큰인 서명된 지원 토큰으로 SOAP 계층에 표시되는 사용자 이름 토큰을 사용하여 인증합니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `TransportSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `UserNameOverTransport`로 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

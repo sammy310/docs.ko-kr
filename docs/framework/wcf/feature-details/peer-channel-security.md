@@ -2,12 +2,12 @@
 title: 피어 채널 보안
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8015f41254d17f908f3665db65af3d82eaa2b6a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576085"
 ---
 # <a name="peer-channel-security"></a>피어 채널 보안
 피어 채널에서는 다양한 메시징에 따라 여러 배포 애플리케이션 형식을 사용할 수 있습니다. 일부 예제에는 인터넷 범위의 콘텐츠 배포가 포함되며, 이를 통해 신뢰할 수 있는 소스는 미디어 또는 소프트웨어 업데이트와 같은 콘텐츠를 배포하고, 친구 그룹은 음악과 사진을 교환하며, 동료 팀은 하나의 문서를 공동으로 편집할 수 있습니다. 이러한 각각의 시나리오에는 고유 보안 모델이 필요합니다. 피어 채널 보안 모델은 이러한 시나리오를 설명하고, 여러 ID, 인증 및 권한 부여 모델 각각의 요구에 대해 안전한 보안 모델을 제공하기 위해 디자인되었습니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "61769397"
   
  애플리케이션에서 지원되는 토큰 형식 중 하나를 선택하는 경우에는 피어 채널에 특정 ID 모델이 필요하지 않습니다. 애플리케이션은 이러한 ID의 수명 주기 및 인증 결정에 대한 권한을 전적으로 가집니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [피어 채널 애플리케이션 보안](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [피어 채널 개념](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
-- [피어 채널 응용 프로그램 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [피어 채널 애플리케이션 보안](securing-peer-channel-applications.md)
+- [피어 채널 개념](peer-channel-concepts.md)
+- [피어 채널 애플리케이션 빌드](building-a-peer-channel-application.md)

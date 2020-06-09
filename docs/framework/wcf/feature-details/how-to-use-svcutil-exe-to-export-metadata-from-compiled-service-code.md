@@ -2,17 +2,17 @@
 title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595364"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기
 Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보낼 수 있습니다.  
   
-- Svcutil.exe를 사용하는 어셈블리 집합의 컴파일된 모든 서비스 계약에 대한 메타데이터를 내보내려면 어셈블리를 입력 매개 변수로 지정합니다. 이는 기본 동작입니다.  
+- Svcutil.exe를 사용하는 어셈블리 집합의 컴파일된 모든 서비스 계약에 대한 메타데이터를 내보내려면 어셈블리를 입력 매개 변수로 지정합니다. 이것은 기본적인 동작입니다.  
   
 - Svcutil.exe를 사용하는 컴파일된 서비스에 대한 메타데이터를 내보내려면 서비스 어셈블리 또는 어셈블리를 입력 매개 변수로 지정합니다. 내보낼 서비스의 구성 이름을 나타내려면 `/serviceName` 옵션을 사용해야 합니다. Svcutil.exe에서는 지정된 실행 가능한 어셈블리에 대한 구성 파일을 자동으로 로드합니다.  
   
@@ -166,7 +166,7 @@ public class MyService : IPersonFinder
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [메타데이터 내보내기 및 가져오기](exporting-and-importing-metadata.md)

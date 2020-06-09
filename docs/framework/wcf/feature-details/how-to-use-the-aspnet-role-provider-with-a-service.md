@@ -2,30 +2,30 @@
 title: '방법: 서비스에서 ASP.NET 역할 공급자 사용'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595299"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>방법: 서비스에서 ASP.NET 역할 공급자 사용
 
-ASP.NET 역할 공급자(ASP.NET 멤버 자격 공급자와 함께)는 ASP.NET 개발자가 사용자가 사이트로 계정을 만들고 권한 부여를 위해 역할을 할당할 수 있는 웹 사이트를 만들 수 있도록 하는 기능입니다. 이 기능을 사용하여 사용자는 사이트에 계정을 설정하고 사이트 및 해당 서비스에 로그인하여 단독으로 액세스할 수 있습니다. 반면, Windows 보안의 경우 사용자에게는 Windows 도메인의 계정이 있어야 합니다. 대신 자격 증명(사용자 이름/암호 조합)을 제공하는 모든 사용자는 사이트와 해당 서비스를 사용할 수 있습니다.  
+ASP.NET 역할 공급자 (ASP.NET 멤버 자격 공급자와 함께 사용)는 ASP.NET 개발자가 사이트를 사용 하 여 계정을 만들고 권한 부여를 위해 역할을 할당할 수 있도록 하는 웹 사이트를 만들 수 있도록 하는 기능입니다. 이 기능을 사용하여 사용자는 사이트에 계정을 설정하고 사이트 및 해당 서비스에 로그인하여 단독으로 액세스할 수 있습니다. 반면, Windows 보안의 경우 사용자에게는 Windows 도메인의 계정이 있어야 합니다. 대신 자격 증명 (사용자 이름/암호 조합)을 제공 하는 모든 사용자가 사이트 및 해당 서비스를 사용할 수 있습니다.  
   
-샘플 응용 프로그램에 대 한 [멤버 자격 및 역할 공급자를](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)참조 합니다. ASP.NET 멤버십 공급자 기능에 대한 자세한 내용은 ASP.NET [멤버십 공급자 를 사용하는 방법](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)참조.  
+응용 프로그램 예제는 [멤버 자격 및 역할 공급자](../samples/membership-and-role-provider.md)를 참조 하세요. ASP.NET membership provider 기능에 대 한 자세한 내용은 [방법: ASP.NET 멤버 자격 공급자 사용](how-to-use-the-aspnet-membership-provider.md)을 참조 하세요.  
   
-역할 공급자 기능은 SQL Server 데이터베이스를 사용하여 사용자 정보를 저장합니다. WCF(Windows 통신 재단) 개발자는 보안을 위해 이러한 기능을 활용할 수 있습니다. WCF 응용 프로그램에 통합된 경우 사용자는 WCF 클라이언트 응용 프로그램에 사용자 이름/암호 조합을 제공해야 합니다. WCF가 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 데이터베이스를 사용하도록 설정하려면 클래스의 인스턴스를 만들고, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 해당 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>속성을 로 설정하고, 인스턴스를 서비스를 호스팅하는 동작 컬렉션에 <xref:System.ServiceModel.ServiceHost> 추가해야 합니다.  
+역할 공급자 기능은 SQL Server 데이터베이스를 사용하여 사용자 정보를 저장합니다. WCF (Windows Communication Foundation) 개발자는 보안을 위해 이러한 기능을 활용할 수 있습니다. WCF 응용 프로그램에 통합 된 경우 사용자는 WCF 클라이언트 응용 프로그램에 대 한 사용자 이름/암호 조합을 제공 해야 합니다. WCF가 데이터베이스를 사용할 수 있도록 하려면 클래스의 인스턴스를 만들고, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 해당 속성을로 설정 하 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> 고, 서비스를 호스팅하는에 대 한 동작 컬렉션에 인스턴스를 추가 <xref:System.ServiceModel.ServiceHost> 해야 합니다.  
   
 ## <a name="configure-the-role-provider"></a>역할 공급자 구성  
   
-1. `system.web` Web.config 파일에서 <> 요소 아래에 <`roleManager`> 요소를 `enabled` 추가하고 `true`해당 특성을 에 설정합니다.  
+1. Web.config 파일의 < `system.web` > 요소 아래에서 < > 요소를 추가 하 `roleManager` 고 `enabled` 특성을로 설정 `true` 합니다.  
   
 2. `defaultProvider` 특성을 `SqlRoleProvider`으로 설정합니다.  
   
-3. <`roleManager`> 요소에 자식으로 <`providers`> 요소를 추가합니다.  
+3. <> 요소에 대 한 자식으로 `roleManager` <`providers`> 요소를 추가 합니다.  
   
-4. `providers` <> 요소에 자식으로 다음 `add` 예제와 같이 다음 `name`값으로 `type` `connectionStringName` `applicationName`설정된 다음 특성이 있는 <> 요소를 추가합니다.  
+4. <> 요소에 대 한 자식으로, `providers` `add` `name` `type` `connectionStringName` 다음 예제와 같이 적절 한 값으로 설정 된,, 및 특성을 사용 하 여 <> 요소를 추가 `applicationName` 합니다.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -40,17 +40,17 @@ ASP.NET 역할 공급자(ASP.NET 멤버 자격 공급자와 함께)는 ASP.NET �
     </roleManager>  
     ```  
   
-## <a name="configure-the-service-to-use-the-role-provider"></a>역할 공급자를 사용하도록 서비스 구성  
+## <a name="configure-the-service-to-use-the-role-provider"></a>역할 공급자를 사용 하도록 서비스 구성  
   
-1. Web.config 파일에서 [ \<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소를 추가합니다.  
+1. Web.config 파일에서 요소를 추가 [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) 합니다.  
   
-2. <`system.ServiceModel`> 요소에 [ \<비헤이비어>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소를 추가합니다.  
+2. 요소를 [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) <`system.ServiceModel`> 요소에 추가 합니다.  
   
-3. <> 요소에 서비스 동작>추가합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) `behaviors`  
+3. [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md)<> 요소에를 추가 `behaviors` 합니다.  
   
-4. 동작>요소를 추가하고 `name` 특성을 적절한 값으로 설정합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
+4. 요소를 추가 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 하 고 `name` 특성을 적절 한 값으로 설정 합니다.  
   
-5. <> 요소에 서비스권한 부여>추가합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) `behavior`  
+5. [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)<> 요소에를 추가 `behavior` 합니다.  
   
 6. `principalPermissionMode` 특성을 `UseAspNetRoles`으로 설정합니다.  
   
@@ -69,5 +69,5 @@ ASP.NET 역할 공급자(ASP.NET 멤버 자격 공급자와 함께)는 ASP.NET �
   
 ## <a name="see-also"></a>참고 항목
 
-- [멤버 자격 및 역할 공급자](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [방법: ASP.NET 멤버 자격 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Membership and Role Provider](../samples/membership-and-role-provider.md)
+- [방법: ASP.NET 멤버 자격 공급자 사용](how-to-use-the-aspnet-membership-provider.md)

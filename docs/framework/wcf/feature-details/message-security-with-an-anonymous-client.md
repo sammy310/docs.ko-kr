@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212001"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595221"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
 
-다음 시나리오에서는 WCF (Windows Communication Foundation) 메시지 보안을 통해 보호 되는 클라이언트 및 서비스를 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. 권한 부여에 대 한 다양 한 클레임 사용에 대 한 자세한 내용은 [Id 모델을 사용 하 여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)를 참조 하세요.
+다음 시나리오에서는 WCF (Windows Communication Foundation) 메시지 보안을 통해 보호 되는 클라이언트 및 서비스를 보여 줍니다. 이 디자인은 전송 보안 대신 메시지 보안을 사용하여 나중에 보다 다양한 클레임 기반 모델을 지원할 수 있도록 하는 것을 목적으로 합니다. 권한 부여에 대 한 다양 한 클레임 사용에 대 한 자세한 내용은 [Id 모델을 사용 하 여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조 하세요.
 
-응용 프로그램 예제는 [메시지 보안 익명](../../../../docs/framework/wcf/samples/message-security-anonymous.md)을 참조 하세요.
+응용 프로그램 예제는 [메시지 보안 익명](../samples/message-security-anonymous.md)을 참조 하세요.
 
-![익명 클라이언트를 사용 하는 메시지 보안](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![익명 클라이언트를 사용 하는 메시지 보안](media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
-|특징|설명|
+|특성|Description|
 |--------------------|-----------------|
 |보안 모드|메시지|
 |상호 운용성|WCF만|
@@ -28,11 +28,11 @@ ms.locfileid: "76212001"
 |인증(클라이언트)|None|
 |무결성|예, 공유 보안 컨텍스트 사용|
 |기밀성|예, 공유 보안 컨텍스트 사용|
-|Transport|HTTP|
+|전송|HTTP|
 
 ## <a name="service"></a>서비스
 
-다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.
+다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.
 
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.
 
@@ -88,13 +88,13 @@ ms.locfileid: "76212001"
 </configuration>
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>클라이언트
 
-다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.
+다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -138,10 +138,10 @@ ms.locfileid: "76212001"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [분산 애플리케이션 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
-- [메시지 보안 익명](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
-- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [보안 개요](security-overview.md)
+- [분산 애플리케이션 보안](distributed-application-security.md)
+- [Message Security Anonymous](../samples/message-security-anonymous.md)
+- [서비스 ID 및 인증](service-identity-and-authentication.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

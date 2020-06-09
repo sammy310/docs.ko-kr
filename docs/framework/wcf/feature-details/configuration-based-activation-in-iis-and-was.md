@@ -2,12 +2,12 @@
 title: IIS 및 WAS에서 구성 기반 활성화
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 6515d6621798a9dab67aa7b73a39b9481c1779fc
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593583"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
 
@@ -15,7 +15,7 @@ ms.locfileid: "75963495"
 
 ## <a name="configuration-based-activation"></a>구성 기반 활성화
 
-구성 기반 활성화는 이전에 .svc 파일에 있던 메타데이터를 가져와서 Web.config 파일에 저장합니다. `serviceHostingEnvironment`> 요소에는 <`serviceActivations`> 요소가 있습니다. `serviceActivations`> 요소 내에는 호스팅된 각 서비스에 대 한 하나 이상의 <`add`> 요소가 있습니다. <`add`> 요소에는 서비스의 상대 주소와 서비스 유형 또는 서비스 호스트 팩터리를 설정 하는 데 사용할 수 있는 특성이 포함 되어 있습니다. 다음 구성 예제 코드에서는 이 섹션을 사용하는 방법을 보여 줍니다.
+구성 기반 활성화는 이전에 .svc 파일에 있던 메타데이터를 가져와서 Web.config 파일에 저장합니다. <`serviceHostingEnvironment`> 요소 내에는 <`serviceActivations`> 요소가 있습니다. <`serviceActivations`> 요소 내에는 `add` 호스팅된 각 서비스에 대 한 하나 이상의 <> 요소가 있습니다. <> 요소에는 서비스 `add` 의 상대 주소와 서비스 유형 또는 서비스 호스트 팩터리를 설정 하는 데 사용할 수 있는 특성이 포함 되어 있습니다. 다음 구성 예제 코드에서는 이 섹션을 사용하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 각 <`add`> 요소는 서비스 또는 팩터리 특성을 지정 해야 합니다. 서비스 특성과 팩터리 특성을 모두 지정할 수 있습니다.
@@ -33,17 +33,17 @@ ms.locfileid: "75963495"
 > [!NOTE]
 >
 > - 구성 기반 활성화를 사용하는 경우 .svc 파일의 인라인 코드는 지원되지 않습니다.
-> - `relativeAddress` 특성은 "\<하위 디렉터리 >/service.svc" 또는 "~/\<sub-directory/service .svc"와 같은 상대 주소로 설정 해야 합니다.
+> - 특성은 "/cistststs `relativeAddress` \<sub-directory> " 또는 "~/ \< sub-directory/service .svc"와 같은 상대 주소로 설정 해야 합니다.
 > - WCF와 연결된 알려진 확장명이 없는 상대 주소를 등록하면 구성 예외가 throw됩니다.
 > - 지정된 상대 주소는 가상 애플리케이션의 루트를 기준으로 합니다.
 > - 구성의 계층적 모델로 인해 가상 애플리케이션은 컴퓨터 또는 사이트 수준에서 등록된 상대 주소를 상속합니다.
 > - 구성 파일의 등록이 .svc, .xamlx, .xoml 또는 기타 파일의 설정보다 우선합니다.
 > - IIS/WAS에 보내진 URI의 ‘\’(백슬래시)는 자동으로 ‘/’(슬래시)로 변환됩니다. ‘\’가 포함된 상대 주소가 추가된 경우 IIS에 이 상대 주소를 사용하는 URI를 보내면 백슬래시가 슬래시로 변환되기 때문에 IIS가 이 URI를 상대 주소와 일치시킬 수 없습니다. 따라서 IIS가 일치하는 항목을 찾을 수 없음을 나타내는 추적 정보를 보냅니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
-- [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)
-- [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
+- [서비스 호스팅](../hosting-services.md)
+- [워크플로 서비스 호스팅 개요](hosting-workflow-services-overview.md)
+- [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
 - [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
