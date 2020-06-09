@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: da67d923b36d673c87c90ba79b72ad4e1fc64a0c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 15fdd50b05bd2217cb9819373cd1c015da52b15b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599011"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
-WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 지 원하는 모든 보안 옵션을 구성할 때 완벽 한 유연성을 제공 하지는 않는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)을 참조 하세요.  
+WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 지 원하는 모든 보안 옵션을 구성할 때 완벽 한 유연성을 제공 하지는 않는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 [바인딩 확장](../extending/extending-bindings.md)을 참조 하세요.  
   
 > [!WARNING]
 > <xref:System.ServiceModel.Channels.SecurityBindingElement>는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>가 <xref:System.ServiceModel.TransferMode>로 설정된 경우 TCP 전송에서 사용하는 기본 채널 셰이프인 <xref:System.ServiceModel.TransferMode.Buffered> 채널 셰이프를 지원하지 않습니다. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
@@ -25,7 +25,7 @@ WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 �
   
  이와 달리 사용자 지정 바인딩을 만들려면 바인딩 요소를 만들어 구성하고 바인딩 요소에서 <xref:System.ServiceModel.Channels.CustomBinding>을 만들어야 합니다.  
   
- 이렇게 하려면 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스 인스턴스로 표시되는 컬렉션에 개별 바인딩 요소를 추가한 다음 `Elements`의 `CustomBinding` 속성을 해당 개체와 같게 만듭니다. 다음 순서로 바인딩 요소를 추가 해야 합니다. 트랜잭션 흐름, 신뢰할 수 있는 세션, 보안, 복합 이중, 단방향, 스트림 보안, 메시지 인코딩 및 전송입니다. 나열된 모든 바인딩 요소가 모든 바인딩에서 필요한 것은 아닙니다.  
+ 이렇게 하려면 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스 인스턴스로 표시되는 컬렉션에 개별 바인딩 요소를 추가한 다음 `Elements`의 `CustomBinding` 속성을 해당 개체와 같게 만듭니다. 바인딩 요소는 Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, Transport 순으로 추가해야 합니다. 나열된 모든 바인딩 요소가 모든 바인딩에서 필요한 것은 아닙니다.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  세 가지 바인딩 요소가 메시지 수준 보안과 관련이 있으며 이러한 요소는 모두 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에서 파생됩니다. 이 세 가지는 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 및 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>입니다. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>는 혼합 모드 보안을 제공하는 데 사용됩니다. 다른 두 가지 요소는 메시지 계층이 보안을 제공할 때 사용합니다.  
@@ -75,9 +75,9 @@ WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 �
 |||SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- SecurityBindingElement에 대해 구성 가능한 설정이 많이 있습니다. 자세한 내용은 [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)를 참조 하세요.  
+ SecurityBindingElement에 대해 구성 가능한 설정이 많이 있습니다. 자세한 내용은 [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md)를 참조 하세요.  
   
- 자세한 내용은 [보안 대화 및 보안 세션](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)을 참조 하세요.  
+ 자세한 내용은 [보안 대화 및 보안 세션](secure-conversations-and-secure-sessions.md)을 참조 하세요.  
   
 ## <a name="procedures"></a>절차  
   
@@ -99,18 +99,18 @@ WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 �
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 사용자 지정 바인딩을 만들기 위한 완전한 함수를 제공합니다.  
   
 ### <a name="code"></a>코드  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [바인딩 확장명](../extending/extending-bindings.md)
+- [시스템 제공 바인딩](../system-provided-bindings.md)

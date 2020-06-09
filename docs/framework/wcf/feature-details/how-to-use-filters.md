@@ -2,12 +2,12 @@
 title: '방법: 필터 사용'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464109"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598894"
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 애플리케이션은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "81464109"
     </services>  
     ```  
   
-     이 구성을 통해 라우팅 서비스는 세 개의 개별 엔드포인트를 노출합니다. 런타임에서의 선택에 따라 클라이언트 애플리케이션은 이러한 주소 중 하나에 메시지를 보냅니다. "가상" 서비스 끝점("반올림/계산기" 또는 "일반/계산기") 중 하나에 도착하는 메시지는 해당 계산기 구현으로 전달됩니다. 클라이언트 애플리케이션이 특정 엔드포인트로 요청을 보내지 않는 경우 메시지는 일반 엔드포인트로 전달됩니다. 엔드포인트 선택에 관계없이 클라이언트 애플리케이션은 사용자 지정 헤더를 포함하여 메시지가 반올림 계산기 구현으로 전달되어야 함을 나타내도록 선택할 수 있습니다.  
+     이 구성을 통해 라우팅 서비스는 세 개의 개별 엔드포인트를 노출합니다. 런타임에서의 선택에 따라 클라이언트 애플리케이션은 이러한 주소 중 하나에 메시지를 보냅니다. "가상" 서비스 끝점 ("반올림/계산기" 또는 "일반/계산기") 중 하나에 도착 하는 메시지는 해당 계산기 구현으로 전달 됩니다. 클라이언트 애플리케이션이 특정 엔드포인트로 요청을 보내지 않는 경우 메시지는 일반 엔드포인트로 전달됩니다. 엔드포인트 선택에 관계없이 클라이언트 애플리케이션은 사용자 지정 헤더를 포함하여 메시지가 반올림 계산기 구현으로 전달되어야 함을 나타내도록 선택할 수 있습니다.  
   
 2. 다음 예제에서는 라우팅 서비스가 메시지를 라우트하는 클라이언트(대상) 엔드포인트를 정의합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81464109"
   
 ### <a name="define-filters"></a>필터 정의  
   
-1. 클라이언트 응용 프로그램이 메시지에 추가하는 "RoundingCalculator" 사용자 지정 헤더를 기반으로 메시지를 라우팅하려면 XPath 쿼리를 사용하여 이 헤더의 존재를 확인하는 필터를 정의합니다. 이 헤더는 사용자 정의 네임스페이스를 사용하여 정의되므로 XPath 쿼리에 사용되는 "사용자 지정"의 사용자 정의 네임스페이스 접두사를 정의하는 네임스페이스 항목도 추가합니다. 다음 예제에서는 필요한 라우팅 섹션, 네임스페이스 테이블 및 XPath 필터를 정의합니다.  
+1. 클라이언트 응용 프로그램이 메시지에 추가 하는 "RoundingCalculator" 사용자 지정 헤더를 기반으로 메시지를 라우팅하려면 XPath 쿼리를 사용 하 여이 헤더의 존재 여부를 확인 하는 필터를 정의 합니다. 이 헤더는 사용자 지정 네임 스페이스를 사용 하 여 정의 되므로 XPath 쿼리에 사용 되는 사용자 지정 네임 스페이스 접두사 "custom"을 정의 하는 네임 스페이스 항목도 추가 합니다. 다음 예제에서는 필요한 라우팅 섹션, 네임스페이스 테이블 및 XPath 필터를 정의합니다.  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ ms.locfileid: "81464109"
     </routing>  
     ```  
   
-     이 **MessageFilter는** "반올림" 값을 포함하는 메시지에서 반올림계산기 헤더를 찾습니다. 이 헤더는 클라이언트에 의해 설정되어 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타냅니다.  
+     이 **Messagefilter** 는 "반올림" 값을 포함 하는 메시지에서 RoundingCalculator 헤더를 찾습니다. 이 헤더는 클라이언트에 의해 설정되어 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타냅니다.  
   
     > [!NOTE]
-    > s12 네임스페이스 접두사는 네임스페이스 테이블에서 기본적으로 정의되며 `http://www.w3.org/2003/05/soap-envelope`네임스페이스를 나타냅니다.
+    > S 12 네임 스페이스 접두사는 네임 스페이스 테이블에서 기본적으로 정의 되며 네임 스페이스를 나타냅니다 `http://www.w3.org/2003/05/soap-envelope` .
   
-2. 또한 두 가상 엔드포인트에 수신된 메시지를 찾는 필터도 정의해야 합니다. 첫 번째 가상 끝점은 "일반/계산기" 끝점입니다. 클라이언트는 이 엔드포인트에 요청을 보내 메시지가 regularCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>를 사용하여 메시지가 filterData에 지정된 이름을 가진 엔드포인트를 통해 도착했는지 확인하는 필터를 정의합니다.  
+2. 또한 두 가상 엔드포인트에 수신된 메시지를 찾는 필터도 정의해야 합니다. 첫 번째 가상 끝점은 "regular/계산기" 끝점입니다. 클라이언트는 이 엔드포인트에 요청을 보내 메시지가 regularCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>를 사용하여 메시지가 filterData에 지정된 이름을 가진 엔드포인트를 통해 도착했는지 확인하는 필터를 정의합니다.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     "계산기Endpoint"라는 서비스 끝점에서 메시지를 받은 경우 이 필터는 을 `true`평가합니다.  
+     "CalculatorEndpoint" 라는 서비스 끝점에서 메시지를 수신 하는 경우이 필터는로 평가 `true` 됩니다.  
   
-3. 다음으로 roundingEndpoint의 주소로 전송된 메시지를 찾는 필터를 정의합니다. 클라이언트는 이 엔드포인트에 요청을 보내 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는 메시지가 "반올림/계산기" 끝점에 도착했는지 확인하는 데 를 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 사용하는 필터를 정의합니다.  
+3. 다음으로 roundingEndpoint의 주소로 전송된 메시지를 찾는 필터를 정의합니다. 클라이언트는 이 엔드포인트에 요청을 보내 메시지가 roundingCalc 서비스로 라우트되어야 함을 나타낼 수 있습니다. 다음 구성에서는를 사용 하 여 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 메시지가 "반올림/계산기" 끝점에 도착 했는지 확인 하는 필터를 정의 합니다.  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,7 +132,7 @@ ms.locfileid: "81464109"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     로 시작하는 `http://localhost/routingservice/router/rounding/` 주소에서 메시지가 수신되면 이 필터는 **true로**평가합니다. 이 구성에서 사용되는 기본 `http://localhost/routingservice/router` 주소가 반올림Endpoint에 지정된 주소가 "반올림/계산기"이기 때문에 이 끝점과 통신하는 `http://localhost/routingservice/router/rounding/calculator`데 사용되는 전체 주소는 이 필터와 일치합니다.  
+     로 시작 하는 주소에서 메시지를 수신 하는 경우 `http://localhost/routingservice/router/rounding/` 이 필터는 **true**로 평가 됩니다. 이 구성에서 사용 하는 기본 주소는이 `http://localhost/routingservice/router` 고 roundingEndpoint에 지정 된 주소는 "반올림/계산기" 이므로이 끝점과 통신 하는 데 사용 되는 전체 주소는 `http://localhost/routingservice/router/rounding/calculator` 이 필터와 일치 합니다.  
   
     > [!NOTE]
     > PrefixEndpointAddress 필터는 일치를 수행할 때 호스트 이름을 평가하지 않습니다. 하나의 호스트가 다양한 호스트 이름을 사용하여 참조될 수 있고, 이러한 다양한 이름은 모두 클라이언트 애플리케이션에서 호스트를 참조하는 유효한 방법일 수 있기 때문입니다. 예를 들어 다음 항목은 모두 같은 호스트를 참조할 수 있습니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "81464109"
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. 마지막 필터는 사용자 지정 헤더 없이 일반 엔드포인트에 도착하는 메시지의 라우팅을 지원해야 합니다. 이 시나리오의 경우 메시지는 regularCalc 서비스와 roundingCalc 서비스 사이를 번갈아 전환해야 합니다. 이러한 메시지의 "라운드 로빈" 라우팅을 지원하려면 하나의 필터 인스턴스가 처리된 각 메시지에 일치하도록 허용하는 사용자 지정 필터를 사용합니다.  다음 예제에서는 RoundRobinMessageFilter의 두 인스턴스를 정의하며, 이 두 인스턴스는 하나로 그룹화되어 서로 번갈아 전환되어야 함을 나타냅니다.  
+4. 마지막 필터는 사용자 지정 헤더 없이 일반 엔드포인트에 도착하는 메시지의 라우팅을 지원해야 합니다. 이 시나리오의 경우 메시지는 regularCalc 서비스와 roundingCalc 서비스 사이를 번갈아 전환해야 합니다. 이러한 메시지의 "라운드 로빈" 라우팅을 지원 하려면 처리 된 각 메시지에 대해 하나의 필터 인스턴스가 일치 하도록 허용 하는 사용자 지정 필터를 사용 합니다.  다음 예제에서는 RoundRobinMessageFilter의 두 인스턴스를 정의하며, 이 두 인스턴스는 하나로 그룹화되어 서로 번갈아 전환되어야 함을 나타냅니다.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,7 +156,7 @@ ms.locfileid: "81464109"
                     filterData="group1"/>  
     ```  
   
-     런타임 중에 이 필터 형식은 동일한 그룹으로 하나의 컬렉션에 구성된, 이 형식의 정의된 모든 필터 인스턴스 사이를 번갈아 전환합니다. 이렇게 하면 이 사용자 지정 필터에서 `true` 처리하는 메시지가 에 대한 `RoundRobinFilter1` 반환 과 `RoundRobinFilter2`에 대한 반환 간에 번갈아 가며 발생합니다.  
+     런타임 중에 이 필터 형식은 동일한 그룹으로 하나의 컬렉션에 구성된, 이 형식의 정의된 모든 필터 인스턴스 사이를 번갈아 전환합니다. 이로 인해이 사용자 지정 필터에 의해 처리 된 메시지가 및에 대해 반환 되는 간을 대체 `true` `RoundRobinFilter1` `RoundRobinFilter2` 합니다.  
   
 ### <a name="define-filter-tables"></a>필터 테이블 정의  
   
@@ -165,7 +165,7 @@ ms.locfileid: "81464109"
     > [!NOTE]
     > 필터 우선 순위를 지정하면 필터가 처리되는 순서를 제어할 수 있지만 라우팅 서비스의 성능에는 부정적인 영향을 미치게 됩니다. 가능한 경우 필터 우선 순위를 사용할 필요가 없도록 필터 논리를 생성하세요.  
   
-     다음은 필터 테이블을 정의하고 우선 순위 2를 사용하여 테이블에 앞에서 정의된 "XPathFilter"를 추가합니다. 이 항목은 또한 메시지가 `XPathFilter` 일치하는 경우 메시지가 로 라우팅되도록 지정합니다. `roundingCalcEndpoint`  
+     다음은 필터 테이블을 정의 하 고 우선 순위가 2 인 이전에 정의 된 "XPathFilter"를 테이블에 추가 합니다. 또한이 항목은가 `XPathFilter` 메시지와 일치 하는 경우 메시지가로 라우팅되도록 지정 합니다 `roundingCalcEndpoint` .  
   
     ```xml  
     <routing>  
@@ -325,6 +325,6 @@ ms.locfileid: "81464109"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)
+- [라우팅 서비스](../samples/routing-services.md)

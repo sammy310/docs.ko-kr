@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d396ccdaca81eab74de5e20d7ba7a9a00acbf7a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597477"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS 원자성 트랜잭션 지원 구성
 
@@ -23,11 +23,11 @@ WS-AT 구성 유틸리티(wsatConfig.exe)는 WS-AT 설정을 구성하는 데 �
 
 명령줄 창은 Windows SDK 설치 위치 "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation"에서 액세스할 수 있습니다.
 
-명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatconfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)를 참조 하세요.
+명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatconfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)를 참조 하세요.
 
-Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로**이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로**이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 `dcomcnfg.exe` **검색** 상자에를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
-스냅인에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)을 참조 하세요.
+스냅인에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md)을 참조 하세요.
 
 도구의 사용자 인터페이스를 사용하려면 먼저 다음 경로에 있는 WsatUI.dll 파일을 등록해야 합니다.
 
@@ -81,7 +81,7 @@ WS-AT 프로토콜 서비스를 사용하려면 관리자가 분산 트랜잭션
 
 WS-AT 프로토콜 서비스는 클라이언트와 서버로 모두 작동하므로 들어오는 연결을 수신 대기하고 보내는 연결을 시작해야 합니다. 따라서 외부 당사자와 통신할 때 사용할 인증서와 들어오는 통신을 수락할 때 권한을 부여할 인증서를 알 수 있도록 MSDTC를 구성해야 합니다.
 
-MMC WS-AT 스냅인을 사용하여 이 작업을 구성할 수 있습니다. 이 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) 항목을 참조 하세요. 다음 단계에서는 MSDTC를 실행하는 두 컴퓨터 간에 트러스트를 설정하는 방법에 대해 설명합니다.
+MMC WS-AT 스냅인을 사용하여 이 작업을 구성할 수 있습니다. 이 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md) 항목을 참조 하세요. 다음 단계에서는 MSDTC를 실행하는 두 컴퓨터 간에 트러스트를 설정하는 방법에 대해 설명합니다.
 
 1. 컴퓨터 A의 설정을 구성합니다. "끝점 인증서"에 대해 인증서를 선택 합니다. "권한 있는 인증서"의 경우 인증서를 선택 합니다.
 
@@ -102,7 +102,7 @@ MSDTC를 배포하는 경우 관리자는 MSDTC 데이터 교환의 보안을 �
 
 ## <a name="tracing"></a>추적
 
-WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) 도구를 사용 하 여 사용 하도록 설정 하 고 관리할 수 있는 통합 된 트랜잭션 관련 추적을 지원 합니다. 추적에는 특정 트랜잭션에 대해 인리스트먼트가 수행된 시간, 트랜잭션이 터미널 상태에 도달한 시간, 각 트랜잭션 인리스트먼트가 받은 결과 등을 나타내는 데이터가 포함될 수 있습니다. 모든 추적은 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 도구를 사용 하 여 볼 수 있습니다.
+WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md) 도구를 사용 하 여 사용 하도록 설정 하 고 관리할 수 있는 통합 된 트랜잭션 관련 추적을 지원 합니다. 추적에는 특정 트랜잭션에 대해 인리스트먼트가 수행된 시간, 트랜잭션이 터미널 상태에 도달한 시간, 각 트랜잭션 인리스트먼트가 받은 결과 등을 나타내는 데이터가 포함될 수 있습니다. 모든 추적은 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 도구를 사용 하 여 볼 수 있습니다.
 
 또한 WS-AT 프로토콜 서비스는 ETW 추적 세션을 통해 통합된 ServiceModel 추적을 지원합니다. 이 추적 기능은 기존의 트랜잭션 추적 외에 보다 자세한 통신 관련 추적을 제공합니다.  이러한 추가 추적을 사용하려면 다음 단계를 수행합니다.
 
@@ -110,7 +110,7 @@ WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../.
 
 2. **레지스트리 편집기**의 왼쪽 창에서 다음 폴더로 이동 하 여 \software\microsoft\wsat\3.0\를 Hkey_Local_Machine 합니다.
 
-3. 오른쪽 창에서 `ServiceModelDiagnosticTracing` 값을 마우스 오른쪽 단추로 클릭 하 고 **수정**을 선택 합니다.
+3. 오른쪽 창에서 값을 마우스 오른쪽 단추로 클릭 `ServiceModelDiagnosticTracing` 하 고 **수정**을 선택 합니다.
 
 4. **값 데이터** 입력 상자에 다음 유효한 값 중 하나를 입력 하 여 사용할 추적 수준을 지정 합니다.
 
@@ -118,7 +118,7 @@ WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../.
 
 - 1: 위험
 
-- 3: 오류. 이 값이 기본값입니다.
+- 3: 오류. 기본값입니다.
 
 - 7: 경고
 
@@ -126,7 +126,7 @@ WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../.
 
 - 31: 자세한 정보
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [WS-AtomicTransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+- [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md)

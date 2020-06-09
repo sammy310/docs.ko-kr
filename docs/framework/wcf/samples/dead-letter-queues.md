@@ -2,21 +2,21 @@
 title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: eab1c52f4d0b3d0f82cf561a9478ea8233598e1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575292"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
-이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. [트랜잭션 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
+이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. [트랜잭션 된 MSMQ 바인딩](transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
 > [!NOTE]
-> 이 샘플에서는 Windows Vista에서만 사용할 수 있는 각 응용 프로그램 데드 레터 큐를 보여 줍니다. 샘플은 Windows Server 2003 및 Windows XP에서 MSMQ 3.0의 기본 시스템 전체 큐를 사용하도록 수정할 수 있습니다.
+> 이 샘플은 Windows Vista 에서만 사용할 수 있는 각 응용 프로그램 배달 못 한 편지 큐를 보여 줍니다. 이 샘플은 Windows Server 2003 및 Windows XP에서 MSMQ 3.0에 대 한 기본 시스템 전체 큐를 사용 하도록 수정할 수 있습니다.
 
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 좀더 정확하게 말하면 클라이언트는 큐에 메시지를 보내고, 서비스는 큐에서 보낸 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.
 
@@ -30,9 +30,9 @@ ms.locfileid: "79144950"
 
 - `System`: 배달 못 한 시스템 큐를 사용하여 배달 못 한 메시지를 저장합니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 애플리케이션에서 공유합니다.
 
-- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용하여 지정한 사용자 지정 배달 못 한 편지 큐를 사용하여 배달 못 한 메시지를 저장합니다. 이 기능은 Windows Vista에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
+- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성을 사용하여 지정한 사용자 지정 배달 못 한 편지 큐를 사용하여 배달 못 한 메시지를 저장합니다. 이 기능은 Windows Vista 에서만 사용할 수 있습니다. 이 기능은 애플리케이션이 동일한 컴퓨터에서 실행되는 다른 애플리케이션과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 방법은 Windows Vista에서만 사용할 수 있습니다.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. Windows Vista 에서만 사용할 수 있습니다.
 
  이 샘플에서 클라이언트는 트랜잭션 범위 내에서 서비스로 일괄 처리 메시지를 보내고 이러한 메시지의 "TTL(Time-To-Live)" 값을 임의로 낮게 지정합니다(약 2초). 또한 클라이언트는 사용자 지정 배달 못 한 편지 큐를 지정하여 만료된 메시지를 큐에 삽입하는 데 사용합니다.
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- 샘플의 서비스 코드는 트랜잭션 [MSMQ 바인딩의](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)코드입니다.
+ 샘플의 서비스 코드는 [트랜잭션 된 MSMQ 바인딩의](transacted-msmq-binding.md)입니다.
 
  서비스와의 통신은 트랜잭션 범위 내에서 수행됩니다. 서비스는 큐에서 메시지를 읽고 작업을 수행한 후 작업 결과를 표시합니다. 애플리케이션도 배달 못 한 메시지에 대해 배달 못 한 편지 큐를 만듭니다.
 
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 배달 못 한 편지 큐의 메시지는 메시지를 처리하고 있는 서비스로 주소가 지정되는 메시지입니다. 따라서 배달 못한 편지 메시지 서비스가 큐에서 메시지를 읽을 때 Windows 통신 재단(WCF) 채널 계층은 끝점에서 불일치를 발견하고 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 배달 못 한 메시지 서비스에서 해당 메시지를 받습니다. 다른 엔드포인트로 주소가 지정된 메시지를 받으려면 모든 주소와 일치하는 주소 필터를 `ServiceBehavior`에 지정합니다. 이 구성은 배달 못 한 편지 큐에서 읽은 메시지를 성공적으로 처리하기 위해 필요합니다.
+ 배달 못 한 편지 큐의 메시지는 메시지를 처리하고 있는 서비스로 주소가 지정되는 메시지입니다. 따라서 배달 못 한 편지 메시지 서비스가 큐에서 메시지를 읽으면 WCF (Windows Communication Foundation) 채널 계층이 끝점에서 불일치를 찾아 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 배달 못 한 메시지 서비스에서 해당 메시지를 받습니다. 다른 엔드포인트로 주소가 지정된 메시지를 받으려면 모든 주소와 일치하는 주소 필터를 `ServiceBehavior`에 지정합니다. 이 구성은 배달 못 한 편지 큐에서 읽은 메시지를 성공적으로 처리하기 위해 필요합니다.
 
- 이 샘플에서 오류 없는 편지 메시지 서비스는 메시지 시간이 시간 때문에 메시지를 다시 보냅니다. 다른 모든 이유로 다음 샘플 코드와 같이 배달 실패가 표시됩니다.
+ 이 샘플에서 배달 못 한 메시지 서비스는 오류가 발생 한 경우 메시지 시간이 초과 된 경우 메시지를 다시 보냅니다. 다른 모든 이유로 다음 샘플 코드에 표시 된 것 처럼 배달 실패를 표시 합니다.
 
 ```csharp
 // Service class that implements the service contract.
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1. 비주얼 스튜디오 2012에서 서버 관리자를 엽니다.
+    1. Visual Studio 2012에서 서버 관리자를 엽니다.
 
-    2. **피처** 탭을 확장합니다.
+    2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐를**마우스 오른쪽 단추로 클릭하고 **새**' **비공개 큐를**선택합니다.
+    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
 
-    4. 트랜잭션 상자를 **선택합니다.**
+    4. **트랜잭션** 상자를 확인 합니다.
 
-    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로 입력합니다.
+    5. `ServiceModelSamplesTransacted`새 큐의 이름으로을 입력 합니다.
 
-3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-4. 단일 또는 컴퓨터 간 구성 변경 큐 이름에서 샘플을 실행하려면 localhost를 컴퓨터의 전체 이름으로 바꾸고 Windows 통신 기초 샘플 실행의 지침을 [따릅니다.](../../../../docs/framework/wcf/samples/running-the-samples.md)
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 큐 이름을 적절 하 게 변경 하 여 localhost를 컴퓨터의 전체 이름으로 바꾸고 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따릅니다.
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>작업 그룹에 가입된 컴퓨터에서 샘플을 실행하려면
 
@@ -357,6 +357,6 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

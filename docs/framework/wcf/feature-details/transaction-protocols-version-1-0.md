@@ -2,15 +2,15 @@
 title: 트랜잭션 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598712"
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
-WCF (Windows Communication Foundation) 버전 1은 WS 원자성 트랜잭션과 WS-조정 프로토콜의 1.0 버전을 구현 합니다. 버전 1.1에 대 한 자세한 내용은 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)을 참조 하세요.  
+WCF (Windows Communication Foundation) 버전 1은 WS 원자성 트랜잭션과 WS-조정 프로토콜의 1.0 버전을 구현 합니다. 버전 1.1에 대 한 자세한 내용은 [트랜잭션 프로토콜](transaction-protocols.md)을 참조 하세요.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ WCF (Windows Communication Foundation) 버전 1은 WS 원자성 트랜잭션과 
 #### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
  활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
- B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)에서 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에서 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
@@ -110,11 +110,11 @@ WCF (Windows Communication Foundation) 버전 1은 WS 원자성 트랜잭션과 
  `t:IssuedTokens`보내는 메시지에 연결 하기 위해 새 헤더를 생성 해야 합니다 `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>등록 메시지 바인딩 구성  
- B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)에 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
   
- R1232: 나가는 `wscoor:Register` 메시지는 `IssuedTokenOverTransport` [보안 프로토콜](../../../../docs/framework/wcf/feature-details/security-protocols.md)에 설명 된 인증 모드를 사용 해야 합니다.  
+ R1232: 나가는 `wscoor:Register` 메시지는 `IssuedTokenOverTransport` [보안 프로토콜](security-protocols.md)에 설명 된 인증 모드를 사용 해야 합니다.  
   
  `wsse:Timestamp`요소가 발급 된를 사용 하 여 서명 되어야 합니다 `SecurityContextToken STx` . 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
   

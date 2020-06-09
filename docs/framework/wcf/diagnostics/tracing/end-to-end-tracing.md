@@ -2,32 +2,32 @@
 title: 엔드투엔드 추적
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc8fc448bdcf94ab25349f6b34961a34e5ed2a5a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912537"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598582"
 ---
 # <a name="end-to-end-tracing"></a>엔드투엔드 추적
-종단 간 (e2e) 추적을 통해 개발자가 코드 경로가 실패 한 이유를 조사 하거나 용량 계획 및 성능 분석에 대 한 추적 정보를 제공 하는 Windows Communication Foundation (WCF) 인프라에서 코드 실행 합니다. Windows Communication Foundation (WCF) 오류의 원인을 진단 하기 위해 세 가지 상관 관계 메커니즘을 제공 합니다: 동작, 전송 및 전파 합니다.  
+E2e (종단 간) 추적을 사용 하면 개발자는 WCF (Windows Communication Foundation) 인프라에서 코드 실행을 따라 코드 경로가 실패 한 이유를 조사 하거나 용량 계획 및 성능 분석에 대 한 자세한 추적을 제공할 수 있습니다. WCF (Windows Communication Foundation)는 오류 원인을 진단 하는 데 도움이 되는 세 가지 상관 관계 메커니즘 (작업, 전송 및 전파)을 제공 합니다.  
   
- 참조 [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) 종단 간 추적 시나리오 및 해당 동작과 추적 디자인의 목록은 합니다.  
+ 종단 간 추적 시나리오 목록 및 해당 작업 및 추적 디자인은 [종단 간 추적 시나리오](end-to-end-tracing-scenarios.md) 를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [활동](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md):  Windows Communication Foundation (WCF) 추적 모델의 동작 추적을 설명합니다.  
+ [활동](activity.md): WCF (Windows Communication Foundation) 추적 모델의 동작 추적에 대해 설명 합니다.  
   
- [전송](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md):  Windows Communication Foundation (WCF) 추적 모델에서 전송을 설명 하 고 전송을 사용 하 여 끝점 내의 동작을 상호 연결 합니다.  
+ [전송](transfer.md): WINDOWS COMMUNICATION FOUNDATION (WCF) 추적 모델의 전송에 대해 설명 하 고, 전송을 사용 하 여 끝점 내의 작업 상관 관계를 설명 합니다.  
   
- [전파](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md):  동작 전파를에 Windows 통신 Foundation (WCF) 모델, 추적 및 전파를 사용 하 여 동작을 상호 연결 끝점을 통해 설명 합니다.  
+ [전파](propagation.md): WINDOWS COMMUNICATION FOUNDATION (WCF) 추적 모델의 작업 전파를 설명 하 고, 전파를 사용 하 여 끝점 간의 작업 상관 관계를 설명 합니다.  
   
- [추적 형식 요약](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
+ [추적 형식 요약](trace-type-summary.md)  
   
  모든 동작 추적 형식에 대한 요약 제공  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [추적 구성](configuring-tracing.md)
+- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [엔드투엔드 추적 시나리오](end-to-end-tracing-scenarios.md)
+- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -2,12 +2,12 @@
 title: ASP.NET 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 52e0e499b5338e20377c14b598c045a5173df7d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa707a4246d5bc9940417072c098b2973140f878
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965348"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598803"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
 ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. WCF (Windows Communication Foundation)는 웹 서비스에서 사용 하는 프로토콜을 포함 하 여 소프트웨어 엔터티가 프로토콜을 사용 하 여 통신할 수 있도록 하는 .NET Framework 클래스 라이브러리, 도구 및 호스팅 기능을 제공 합니다.  ASP.NET 웹 서비스를 WCF로 마이그레이션하면 응용 프로그램에서 WCF에 고유한 새로운 기능 및 향상 된 기능을 활용할 수 있습니다.  
@@ -18,7 +18,7 @@ ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 
   
  WCF는 ASP.NET 웹 서비스 보다 더 많은 메시지 전송 프로토콜을 지원 합니다. ASP.NET 웹 서비스는 HTTP(Hypertext Transfer Protocol)를 사용하여 메시지 보내기만 지원합니다. WCF는 HTTP를 사용 하 여 메시지를 보낼 뿐만 아니라 TCP (전송 제어 프로토콜), 명명 된 파이프 및 MSMQ (Microsoft Message Queuing)를 지원 합니다. 더 중요 한 것은 추가 전송 프로토콜을 지원 하도록 WCF를 확장 하는 것입니다. 따라서 WCF를 사용 하 여 개발 된 소프트웨어는 다양 한 다른 소프트웨어와 함께 작동 하도록 조정 될 수 있으므로 투자 수익을 높일 수 있습니다.  
   
- WCF는 ASP.NET 웹 서비스에서 제공 하는 것 보다 훨씬 다양 한 응용 프로그램 배포 및 관리 기능을 제공 합니다. ASP.NET도 포함 하는 구성 시스템 외에도 WCF는 구성 편집기, 보낸 사람에서 받는 사람으로의 활동 추적, 모든 수의 중개자, 추적 뷰어, 메시지 로깅, 방대한 수의 성능 카운터를 제공 합니다. WMI(Windows Management Instrumentation)에 대 한 지원.  
+ WCF는 ASP.NET 웹 서비스에서 제공 하는 것 보다 훨씬 다양 한 응용 프로그램 배포 및 관리 기능을 제공 합니다. ASP.NET도 포함 하는 구성 시스템 외에도 WCF는 구성 편집기, 보낸 사람에서 받는 사람으로의 활동 추적, 추적 뷰어, 메시지 로깅, 방대한 수의 성능 카운터 및 WMI(Windows Management Instrumentation)에 대 한 지원을 제공 합니다.  
   
  ASP.NET 웹 서비스를 기준으로 WCF의 이러한 잠재적 이점을 고려 하 여를 사용 하거나 ASP.NET 웹 서비스를 사용 하려는 경우 다음과 같은 몇 가지 옵션을 사용할 수 있습니다.  
   
@@ -35,10 +35,10 @@ ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 
   
  이 섹션에서는 이러한 옵션에 대해 자세히 설명 하 고, ASP.NET 웹 서비스를 WCF와 비교 하 고, ASP.NET 웹 서비스 코드를 WCF로 마이그레이션하는 방법에 대 한 지침을 제공 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Windows Communication Foundation 채택 예상: 향후 마이그레이션 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Windows Communication Foundation 채택 예상: 향후 통합 감속](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
-- [Windows Communication Foundation 채택](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
-- [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
-- [개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+- [Windows Communication Foundation 채택에 대한 기대: 향후 마이그레이션 간소화](anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation 채택에 대한 기대: 향후 통합 간소화](anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Windows Communication Foundation 채택](adopting-wcf.md)
+- [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교](comparing-aspnet-web-services-to-wcf-based-on-development.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600414"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 
@@ -30,7 +30,7 @@ Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스�
 
 ### <a name="create-an-object-from-a-class"></a>클래스에서 개체 만들기
 
-1. 개체를 만들 클래스를 결정 하거나 고유한 클래스를 정의 합니다. 예:
+1. 개체를 만들 클래스를 결정 하거나 고유한 클래스를 정의 합니다. 예를 들면 다음과 같습니다.
 
    ```vb
    Public Class Customer
@@ -110,7 +110,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 - 속성이 `String` 데이터 형식이고 문자열 크기 또는 값에 제약이 없습니다.
 
-- 자세한 내용은 [Property 프로시저](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)를 참조하세요.
+- 자세한 내용은 [Property 프로시저](../procedures/property-procedures.md)를 참조하세요.
 
 > [!TIP]
 > 상수가 아닌 필드는 항상 private으로 유지 합니다. 이를 공용으로 설정 하려면 대신 속성을 사용 합니다.
