@@ -2,29 +2,29 @@
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: c28815d1d208d3e91785a13d95e03c09c0f02ed9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596996"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="f4abf-102">방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가</span><span class="sxs-lookup"><span data-stu-id="f4abf-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
-<span data-ttu-id="f4abf-103">이 항목에서는 WCF(Windows 통신 재단) 서비스를 검색 가능한 으로 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="f4abf-104">[셀프 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-104">It is based on the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample.</span></span>  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="55f96-102">방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가</span><span class="sxs-lookup"><span data-stu-id="55f96-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
+<span data-ttu-id="55f96-103">이 항목에서는 WCF (Windows Communication Foundation) 서비스를 검색할 수 있도록 하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="55f96-104">[자체 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-104">It is based on the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample.</span></span>  
   
-### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a><span data-ttu-id="f4abf-105">기존 자체 호스팅 서비스 샘플을 검색용으로 구성하려면</span><span class="sxs-lookup"><span data-stu-id="f4abf-105">To configure the existing Self-Host service sample for Discovery</span></span>  
+### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a><span data-ttu-id="55f96-105">기존 자체 호스팅 서비스 샘플을 검색용으로 구성하려면</span><span class="sxs-lookup"><span data-stu-id="55f96-105">To configure the existing Self-Host service sample for Discovery</span></span>  
   
-1. <span data-ttu-id="f4abf-106">Visual Studio 2012에서 셀프 호스트 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-106">Open the Self-Host solution in Visual Studio 2012.</span></span> <span data-ttu-id="f4abf-107">샘플은 TechnologySamples\Basic\Service\Hosting\SelfHost 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-107">The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.</span></span>  
+1. <span data-ttu-id="55f96-106">Visual Studio 2012에서 자체 호스트 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-106">Open the Self-Host solution in Visual Studio 2012.</span></span> <span data-ttu-id="55f96-107">샘플은 TechnologySamples\Basic\Service\Hosting\SelfHost 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-107">The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.</span></span>  
   
-2. <span data-ttu-id="f4abf-108">서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-108">Add a reference to `System.ServiceModel.Discovery.dll` to the service project.</span></span> <span data-ttu-id="f4abf-109">"시스템"이라는 오류 메시지가 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-109">You may see an error message saying "System.</span></span> <span data-ttu-id="f4abf-110">ServiceModel.Discovery.dll 또는 해당 종속성 중 하나는 프로젝트에 지정된 버전보다 .NET 프레임 워크의 최신 버전이 필요합니다..." 이 메시지가 표시되면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성을**선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-110">ServiceModel.Discovery.dll or one of its dependencies requires a later version of the .NET Framework than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**.</span></span> <span data-ttu-id="f4abf-111">프로젝트 **속성** 창에서 **대상 프레임워크가** [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].로 되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-111">In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
+2. <span data-ttu-id="55f96-108">서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-108">Add a reference to `System.ServiceModel.Discovery.dll` to the service project.</span></span> <span data-ttu-id="55f96-109">"System" 이라는 오류 메시지가 표시 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-109">You may see an error message saying "System.</span></span> <span data-ttu-id="55f96-110">ServiceModel 또는 해당 종속성 중 하나에는 프로젝트에 지정 된 것 보다 최신 버전의 .NET Framework 필요 합니다. " 이 메시지가 표시 되 면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-110">ServiceModel.Discovery.dll or one of its dependencies requires a later version of the .NET Framework than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**.</span></span> <span data-ttu-id="55f96-111">**프로젝트 속성** 창에서 **대상 프레임 워크가** 인지 확인 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-111">In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
   
-3. <span data-ttu-id="f4abf-112">Service.cs 파일을 열고 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-112">Open the Service.cs file and add the following `using` statement.</span></span>  
+3. <span data-ttu-id="55f96-112">Service.cs 파일을 열고 다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-112">Open the Service.cs file and add the following `using` statement.</span></span>  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4. <span data-ttu-id="f4abf-113">`Main()` 메서드의 `using` 문 안에서 서비스 호스트에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 인스턴스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-113">In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.</span></span>  
+4. <span data-ttu-id="55f96-113">`Main()` 메서드의 `using` 문 안에서 서비스 호스트에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 인스턴스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-113">In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.</span></span>  
   
     ```csharp  
     public static void Main()  
@@ -40,9 +40,9 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-     <span data-ttu-id="f4abf-114"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>는 자신이 적용되는 서비스가 검색 가능하게 되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-114">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.</span></span>  
+     <span data-ttu-id="55f96-114"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>는 자신이 적용되는 서비스가 검색 가능하게 되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-114">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.</span></span>  
   
-5. <span data-ttu-id="f4abf-115"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 추가하는 코드 바로 뒤에 있는 서비스 호스트에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-115">Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span></span>  
+5. <span data-ttu-id="55f96-115"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 추가하는 코드 바로 뒤에 있는 서비스 호스트에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-115">Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span></span>  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -52,19 +52,19 @@ ms.locfileid: "80344974"
     serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
     ```  
   
-     <span data-ttu-id="f4abf-116">이 코드는 검색 메시지를 표준 UDP 검색 엔드포인트에 보내도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-116">This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.</span></span>  
+     <span data-ttu-id="55f96-116">이 코드는 검색 메시지를 표준 UDP 검색 엔드포인트에 보내도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-116">This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.</span></span>  
   
-### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a><span data-ttu-id="f4abf-117">검색을 사용하는 클라이언트 애플리케이션을 만들어 서비스를 호출하려면</span><span class="sxs-lookup"><span data-stu-id="f4abf-117">To create a client application that uses discovery to call the service</span></span>  
+### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a><span data-ttu-id="55f96-117">검색을 사용하는 클라이언트 애플리케이션을 만들어 서비스를 호출하려면</span><span class="sxs-lookup"><span data-stu-id="55f96-117">To create a client application that uses discovery to call the service</span></span>  
   
-1. <span data-ttu-id="f4abf-118">`DiscoveryClientApp`라는 솔루션에 새 콘솔 애플리케이션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-118">Add a new console application to the solution called `DiscoveryClientApp`.</span></span>  
+1. <span data-ttu-id="55f96-118">`DiscoveryClientApp`라는 솔루션에 새 콘솔 애플리케이션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-118">Add a new console application to the solution called `DiscoveryClientApp`.</span></span>  
   
-2. <span data-ttu-id="f4abf-119">`System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-119">Add a reference to `System.ServiceModel.dll` and `System.ServiceModel.Discovery.dll`</span></span>  
+2. <span data-ttu-id="55f96-119">`System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-119">Add a reference to `System.ServiceModel.dll` and `System.ServiceModel.Discovery.dll`</span></span>  
   
-3. <span data-ttu-id="f4abf-120">GeneratedClient.cs 및 App.config 파일을 기본 클라이언트 프로젝트에서 새 DiscoveryClientApp 프로젝트로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-120">Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project.</span></span> <span data-ttu-id="f4abf-121">이렇게 하려면 **솔루션 탐색기에서**파일을 마우스 오른쪽 단추로 클릭하고 **복사를**선택한 다음 **DiscoveryClientApp** 프로젝트를 선택하고 마우스 오른쪽 단추를 클릭하고 **붙여넣기를**선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-121">To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.</span></span>  
+3. <span data-ttu-id="55f96-120">GeneratedClient.cs 및 App.config 파일을 기본 클라이언트 프로젝트에서 새 DiscoveryClientApp 프로젝트로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-120">Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project.</span></span> <span data-ttu-id="55f96-121">이렇게 하려면 **솔루션 탐색기**파일을 마우스 오른쪽 단추로 클릭 하 고 **복사**를 선택한 다음 **discoveryclientapp.exe** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **붙여넣기**를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-121">To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.</span></span>  
   
-4. <span data-ttu-id="f4abf-122">Program.cs를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-122">Open Program.cs.</span></span>  
+4. <span data-ttu-id="55f96-122">Program.cs를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-122">Open Program.cs.</span></span>  
   
-5. <span data-ttu-id="f4abf-123">다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-123">Add the following `using` statements.</span></span>  
+5. <span data-ttu-id="55f96-123">다음 `using` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-123">Add the following `using` statements.</span></span>  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "80344974"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6. <span data-ttu-id="f4abf-124">`FindCalculatorServiceAddress()`라는 정적 메서드를 `Program` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-124">Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.</span></span>  
+6. <span data-ttu-id="55f96-124">`FindCalculatorServiceAddress()`라는 정적 메서드를 `Program` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-124">Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.</span></span>  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -80,9 +80,9 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-     <span data-ttu-id="f4abf-125">이 메서드는 검색을 사용하여 `CalculatorService` 서비스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-125">This method uses discovery to search for the `CalculatorService` service.</span></span>  
+     <span data-ttu-id="55f96-125">이 메서드는 검색을 사용하여 `CalculatorService` 서비스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-125">This method uses discovery to search for the `CalculatorService` service.</span></span>  
   
-7. <span data-ttu-id="f4abf-126">`FindCalculatorServiceAddress` 메서드 안에서 생성자에 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 전달하여 새 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-126">Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.</span></span>  
+7. <span data-ttu-id="55f96-126">`FindCalculatorServiceAddress` 메서드 안에서 생성자에 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 전달하여 새 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-126">Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.</span></span>  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -92,16 +92,16 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-     <span data-ttu-id="f4abf-127">이렇게 하면 클래스가 <xref:System.ServiceModel.Discovery.DiscoveryClient> 표준 UDP 검색 끝점을 사용하여 검색 메시지를 보내고 받을 수 있음을 WCF에 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-127">This tells WCF that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.</span></span>  
+     <span data-ttu-id="55f96-127">이는 <xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스가 표준 UDP 검색 끝점을 사용 하 여 검색 메시지를 보내고 받도록 WCF에 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-127">This tells WCF that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.</span></span>  
   
-8. <span data-ttu-id="f4abf-128">다음 줄에서 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드를 호출하고 검색하려는 서비스 계약이 포함된 <xref:System.ServiceModel.Discovery.FindCriteria> 인스턴스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-128">On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for.</span></span> <span data-ttu-id="f4abf-129">이 경우 `ICalculator`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-129">In this case, specify `ICalculator`.</span></span>  
+8. <span data-ttu-id="55f96-128">다음 줄에서 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드를 호출하고 검색하려는 서비스 계약이 포함된 <xref:System.ServiceModel.Discovery.FindCriteria> 인스턴스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-128">On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for.</span></span> <span data-ttu-id="55f96-129">이 경우 `ICalculator`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-129">In this case, specify `ICalculator`.</span></span>  
   
     ```csharp  
     // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. <span data-ttu-id="f4abf-130"><xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>를 호출한 후 일치하는 서비스가 하나 이상 있는지 확인하고 첫 번째 일치하는 서비스의 <xref:System.ServiceModel.EndpointAddress>를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-130">After the call to <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, check to see if there is at least one matching service and return the <xref:System.ServiceModel.EndpointAddress> of the first matching service.</span></span> <span data-ttu-id="f4abf-131">그렇지 않으면 `null`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-131">Otherwise return `null`.</span></span>  
+9. <span data-ttu-id="55f96-130"><xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>를 호출한 후 일치하는 서비스가 하나 이상 있는지 확인하고 첫 번째 일치하는 서비스의 <xref:System.ServiceModel.EndpointAddress>를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-130">After the call to <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, check to see if there is at least one matching service and return the <xref:System.ServiceModel.EndpointAddress> of the first matching service.</span></span> <span data-ttu-id="55f96-131">그렇지 않으면 `null`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-131">Otherwise return `null`.</span></span>  
   
     ```csharp  
     if (findResponse.Endpoints.Count > 0)  
@@ -114,7 +114,7 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-10. <span data-ttu-id="f4abf-132">`InvokeCalculatorService`라는 정적 메서드를 `Program` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-132">Add a static method named `InvokeCalculatorService` to the `Program` class.</span></span>  
+10. <span data-ttu-id="55f96-132">`InvokeCalculatorService`라는 정적 메서드를 `Program` 클래스에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-132">Add a static method named `InvokeCalculatorService` to the `Program` class.</span></span>  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -122,23 +122,23 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-     <span data-ttu-id="f4abf-133">이 메서드는 `FindCalculatorServiceAddress`에서 반환되는 엔드포인트 주소를 사용하여 계산기 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-133">This method uses the endpoint address returned from `FindCalculatorServiceAddress` to call the calculator service.</span></span>  
+     <span data-ttu-id="55f96-133">이 메서드는 `FindCalculatorServiceAddress`에서 반환되는 엔드포인트 주소를 사용하여 계산기 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-133">This method uses the endpoint address returned from `FindCalculatorServiceAddress` to call the calculator service.</span></span>  
   
-11. <span data-ttu-id="f4abf-134">`InvokeCalculatorService` 메서드 안에서 `CalculatorServiceClient` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-134">Inside the `InvokeCalculatorService` method, create an instance of the `CalculatorServiceClient` class.</span></span> <span data-ttu-id="f4abf-135">이 클래스는 [자체 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-135">This class is defined by the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample.</span></span> <span data-ttu-id="f4abf-136">이 클래스는 Svcutil.exe를 사용하여 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-136">It was generated using Svcutil.exe.</span></span>  
+11. <span data-ttu-id="55f96-134">`InvokeCalculatorService` 메서드 안에서 `CalculatorServiceClient` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-134">Inside the `InvokeCalculatorService` method, create an instance of the `CalculatorServiceClient` class.</span></span> <span data-ttu-id="55f96-135">이 클래스는 [자체 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-135">This class is defined by the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample.</span></span> <span data-ttu-id="55f96-136">이 클래스는 Svcutil.exe를 사용하여 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-136">It was generated using Svcutil.exe.</span></span>  
   
     ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
-12. <span data-ttu-id="f4abf-137">다음 줄에서 클라이언트의 엔드포인트 주소를 `FindCalculatorServiceAddress()`에서 반환되는 엔드포인트 주소로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-137">On the next line, set the endpoint address of the client to the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
+12. <span data-ttu-id="55f96-137">다음 줄에서 클라이언트의 엔드포인트 주소를 `FindCalculatorServiceAddress()`에서 반환되는 엔드포인트 주소로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-137">On the next line, set the endpoint address of the client to the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
   
     ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
-13. <span data-ttu-id="f4abf-138">이전 단계의 코드 바로 뒤에서 계산기 서비스에 의해 노출되는 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-138">Immediately after the code for the previous step, call the methods exposed by the calculator service.</span></span>  
+13. <span data-ttu-id="55f96-138">이전 단계의 코드 바로 뒤에서 계산기 서비스에 의해 노출되는 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-138">Immediately after the code for the previous step, call the methods exposed by the calculator service.</span></span>  
   
     ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
@@ -167,7 +167,7 @@ ms.locfileid: "80344974"
     client.Close();  
     ```  
   
-14. <span data-ttu-id="f4abf-139">`Main()` 클래스의 `Program` 메서드에 `FindCalculatorServiceAddress`를 호출하는 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-139">Add code to the `Main()` method in the `Program` class to call `FindCalculatorServiceAddress`.</span></span>  
+14. <span data-ttu-id="55f96-139">`Main()` 클래스의 `Program` 메서드에 `FindCalculatorServiceAddress`를 호출하는 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-139">Add code to the `Main()` method in the `Program` class to call `FindCalculatorServiceAddress`.</span></span>  
   
     ```csharp  
     public static void Main()  
@@ -176,7 +176,7 @@ ms.locfileid: "80344974"
     }  
     ```  
   
-15. <span data-ttu-id="f4abf-140">다음 줄에서 `InvokeCalculatorService()`를 호출하고 `FindCalculatorServiceAddress()`에서 반환되는 엔드포인트 주소를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-140">On the next line, call the `InvokeCalculatorService()` and pass in the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
+15. <span data-ttu-id="55f96-140">다음 줄에서 `InvokeCalculatorService()`를 호출하고 `FindCalculatorServiceAddress()`에서 반환되는 엔드포인트 주소를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-140">On the next line, call the `InvokeCalculatorService()` and pass in the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
   
     ```csharp  
     if (endpointAddress != null)  
@@ -188,13 +188,13 @@ ms.locfileid: "80344974"
     Console.ReadLine();  
     ```  
   
-### <a name="to-test-the-application"></a><span data-ttu-id="f4abf-141">애플리케이션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="f4abf-141">To test the application</span></span>  
+### <a name="to-test-the-application"></a><span data-ttu-id="55f96-141">애플리케이션을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="55f96-141">To test the application</span></span>  
   
-1. <span data-ttu-id="f4abf-142">권한이 높은 명령 프롬프트를 열고 Service.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-142">Open an elevated command prompt and run Service.exe.</span></span>  
+1. <span data-ttu-id="55f96-142">권한이 높은 명령 프롬프트를 열고 Service.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-142">Open an elevated command prompt and run Service.exe.</span></span>  
   
-2. <span data-ttu-id="f4abf-143">명령 프롬프트를 열고 Discoveryclientapp.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-143">Open a command prompt and run Discoveryclientapp.exe.</span></span>  
+2. <span data-ttu-id="55f96-143">명령 프롬프트를 열고 Discoveryclientapp.exe를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-143">Open a command prompt and run Discoveryclientapp.exe.</span></span>  
   
-3. <span data-ttu-id="f4abf-144">service.exe의 출력이 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-144">The output from service.exe should look like the following output.</span></span>  
+3. <span data-ttu-id="55f96-144">service.exe의 출력이 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-144">The output from service.exe should look like the following output.</span></span>  
   
     ```output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "80344974"
     Return: 6.25390869293308  
     ```  
   
-4. <span data-ttu-id="f4abf-145">Discoveryclientapp.exe의 출력이 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-145">The output from Discoveryclientapp.exe should look like the following output.</span></span>  
+4. <span data-ttu-id="55f96-145">Discoveryclientapp.exe의 출력이 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-145">The output from Discoveryclientapp.exe should look like the following output.</span></span>  
   
     ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -219,8 +219,8 @@ ms.locfileid: "80344974"
     Press <ENTER> to exit.  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f4abf-146">예제</span><span class="sxs-lookup"><span data-stu-id="f4abf-146">Example</span></span>  
- <span data-ttu-id="f4abf-147">다음은 이 샘플의 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-147">The following is a listing of the code for this sample.</span></span> <span data-ttu-id="f4abf-148">이 코드는 [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 하므로 변경된 파일만 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4abf-148">Because this code is based on the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample, only those files that are changed are listed.</span></span> <span data-ttu-id="f4abf-149">셀프 호스트 샘플에 대한 자세한 내용은 [설정 지침을](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f4abf-149">For more information about the Self-Host sample, see [Setup Instructions](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).</span></span>  
+## <a name="example"></a><span data-ttu-id="55f96-146">예제</span><span class="sxs-lookup"><span data-stu-id="55f96-146">Example</span></span>  
+ <span data-ttu-id="55f96-147">다음은 이 샘플의 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-147">The following is a listing of the code for this sample.</span></span> <span data-ttu-id="55f96-148">이 코드는 [자체 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 하기 때문에 변경 된 파일만 나열 됩니다.</span><span class="sxs-lookup"><span data-stu-id="55f96-148">Because this code is based on the [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) sample, only those files that are changed are listed.</span></span> <span data-ttu-id="55f96-149">자체 호스트 샘플에 대 한 자세한 내용은 [설치 지침](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="55f96-149">For more information about the Self-Host sample, see [Setup Instructions](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="f4abf-150">참조</span><span class="sxs-lookup"><span data-stu-id="f4abf-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55f96-150">참고 항목</span><span class="sxs-lookup"><span data-stu-id="55f96-150">See also</span></span>
 
-- [<span data-ttu-id="f4abf-151">WCF Discovery 개요</span><span class="sxs-lookup"><span data-stu-id="f4abf-151">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="f4abf-152">WCF Discovery 개체 모델</span><span class="sxs-lookup"><span data-stu-id="f4abf-152">WCF Discovery Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [<span data-ttu-id="55f96-151">WCF Discovery 개요</span><span class="sxs-lookup"><span data-stu-id="55f96-151">WCF Discovery Overview</span></span>](wcf-discovery-overview.md)
+- [<span data-ttu-id="55f96-152">WCF Discovery 개체 모델</span><span class="sxs-lookup"><span data-stu-id="55f96-152">WCF Discovery Object Model</span></span>](wcf-discovery-object-model.md)

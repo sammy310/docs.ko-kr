@@ -2,21 +2,21 @@
 title: System.Runtime.Serialization.WriteObjectBegin
 ms.date: 03/30/2017
 ms.assetid: 1f4cb7f1-8bf2-4b6d-b693-43a83c74260a
-ms.openlocfilehash: bd9067bd56375876137c8c01ce666e6ea6e4b01f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cf25c2d4eea531a60567b81382f45d7a88a0081
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594259"
 ---
-# <a name="systemruntimeserializationwriteobjectbegin"></a><span data-ttu-id="9c7b0-102">System.Runtime.Serialization.WriteObjectBegin</span><span class="sxs-lookup"><span data-stu-id="9c7b0-102">System.Runtime.Serialization.WriteObjectBegin</span></span>
-<span data-ttu-id="9c7b0-103">System.Runtime.Serialization.WriteObjectBegin</span><span class="sxs-lookup"><span data-stu-id="9c7b0-103">System.Runtime.Serialization.WriteObjectBegin</span></span>  
+# <a name="systemruntimeserializationwriteobjectbegin"></a><span data-ttu-id="f284b-102">System.Runtime.Serialization.WriteObjectBegin</span><span class="sxs-lookup"><span data-stu-id="f284b-102">System.Runtime.Serialization.WriteObjectBegin</span></span>
+<span data-ttu-id="f284b-103">System.Runtime.Serialization.WriteObjectBegin</span><span class="sxs-lookup"><span data-stu-id="f284b-103">System.Runtime.Serialization.WriteObjectBegin</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9c7b0-104">설명</span><span class="sxs-lookup"><span data-stu-id="9c7b0-104">Description</span></span>  
- <span data-ttu-id="9c7b0-105">WriteObject를 시작하는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="9c7b0-105">Starting WriteObject.</span></span>  
+## <a name="description"></a><span data-ttu-id="f284b-104">Description</span><span class="sxs-lookup"><span data-stu-id="f284b-104">Description</span></span>  
+ <span data-ttu-id="f284b-105">WriteObject를 시작하는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="f284b-105">Starting WriteObject.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c7b0-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c7b0-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f284b-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f284b-106">See also</span></span>
 
-- [<span data-ttu-id="9c7b0-107">추적</span><span class="sxs-lookup"><span data-stu-id="9c7b0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="9c7b0-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="9c7b0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="9c7b0-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="9c7b0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="f284b-107">추적</span><span class="sxs-lookup"><span data-stu-id="f284b-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="f284b-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="f284b-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f284b-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="f284b-109">Administration and Diagnostics</span></span>](../index.md)
