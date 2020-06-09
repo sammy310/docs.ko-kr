@@ -2,12 +2,12 @@
 title: 메시지 분포 제한
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211900"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586314"
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
 
@@ -41,7 +41,7 @@ ms.locfileid: "76211900"
 
 메시지 배포를 제한해야 하는 시나리오가 발생할 경우 다음 사항을 고려해 보십시오.
 
-- **메시지를** 수신 해야 하는 경우? 하나의 노드, 메시의 기타 위치에 있는 노드, 메시 절반)
+- **누가** 메시지를 받아야 하나요? 하나의 노드, 메시의 기타 위치에 있는 노드, 메시 절반)
 
 - 이 메시지는 **얼마나 자주** 전송 되나요?
 
@@ -49,7 +49,7 @@ ms.locfileid: "76211900"
 
 이러한 사항에 대해 생각해 보면 홉 수, 메시지 전파 필터, 로컬 필터, 직접 연결 중 어느 것을 사용할지 결정하는 데 도움이 됩니다. 다음과 같은 일반적인 지침을 고려해 보십시오.
 
-- **Who**
+- **대상을**
 
   - *개별 노드*: 로컬 필터 또는 직접 연결
 
@@ -69,6 +69,6 @@ ms.locfileid: "76211900"
 
   - *낮음*: 직접 연결 하는 것은 필요 하지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [피어 채널 애플리케이션 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [피어 채널 애플리케이션 빌드](building-a-peer-channel-application.md)

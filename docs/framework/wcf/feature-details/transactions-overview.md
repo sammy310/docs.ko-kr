@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585833"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 트랜잭션 개요
 트랜잭션은 동작 또는 작업 집합을 하나의 개별 실행 단위로 그룹화하는 방법을 제공합니다. 트랜잭션은 다음 속성을 가진 작업 컬렉션입니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "64585792"
   
 - 지속성. 커밋되고 나면 데이터베이스 레코드 같은 관리되는 리소스에 대한 업데이트가 실패한 경우에도 지속되도록 합니다.  
   
- Windows Communication Foundation (WCF) 다양 한 웹 서비스 응용 프로그램에서 분산된 트랜잭션을 만들 수 있도록 하는 기능을 제공 합니다.  
+ WCF (Windows Communication Foundation)는 웹 서비스 응용 프로그램에서 분산 트랜잭션을 만들 수 있는 다양 한 기능 집합을 제공 합니다.  
   
- WCF에는 WCF 응용 프로그램이 타사 기술을 사용 하 여 작성 하는 상호 운용 가능한 웹 서비스 같은 상호 운용 가능한 응용 프로그램으로 트랜잭션 이동할 수 있도록 (WS-AT) WS-AtomicTransaction 프로토콜에 대 한 지원을 구현 합니다. WCF에는 또한 트랜잭션 흐름을 사용 하도록 설정 하는 interop 기능이 필요 하지 시나리오에 사용 될 수 있는 OLE 트랜잭션 프로토콜 지원을 구현 합니다.  
+ WCF는 WCF 응용 프로그램에서 타사 기술을 사용 하 여 작성 된 상호 운용 가능한 웹 서비스와 같은 상호 운용 가능한 응용 프로그램으로 트랜잭션을 이동할 수 있도록 하는 ws-atomictransaction (WS-AT) 프로토콜에 대 한 지원을 구현 합니다. 또한 WCF는 트랜잭션 흐름을 사용 하도록 설정 하는 interop 기능이 필요 하지 않은 시나리오에서 사용할 수 있는 OLE 트랜잭션 프로토콜에 대 한 지원을 구현 합니다.  
   
- 애플리케이션 구성 파일에서 바인딩을 구성하여 트랜잭션 흐름을 가능하거나 불가능하게 하고 바인딩에 원하는 트랜잭션 프로토콜을 설정할 수 있습니다. 또한 구성 파일을 사용하여 서비스 수준에서 트랜잭션 시간 초과를 설정할 수 있습니다. 자세한 내용은 [트랜잭션 흐름 사용](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)합니다.  
+ 애플리케이션 구성 파일에서 바인딩을 구성하여 트랜잭션 흐름을 가능하거나 불가능하게 하고 바인딩에 원하는 트랜잭션 프로토콜을 설정할 수 있습니다. 또한 구성 파일을 사용하여 서비스 수준에서 트랜잭션 시간 초과를 설정할 수 있습니다. 자세한 내용은 [트랜잭션 흐름 사용](enabling-transaction-flow.md)을 참조 하세요.  
   
  <xref:System.ServiceModel> 네임스페이스의 트랜잭션 특성을 사용하여 다음을 수행할 수 있습니다.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "64585792"
   
 - 계약 메서드의 <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 특성을 사용하여 트랜잭션 흐름을 필요로 하거나 허용 또는 거부합니다.  
   
- 자세한 내용은 [ServiceModel 트랜잭션 특성](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)합니다.  
+ 자세한 내용은 [ServiceModel 트랜잭션 특성](servicemodel-transaction-attributes.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ServiceModel 트랜잭션 특성](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [트랜잭션 흐름 사용](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [ServiceModel 트랜잭션 특성](servicemodel-transaction-attributes.md)
+- [트랜잭션 흐름 사용](enabling-transaction-flow.md)

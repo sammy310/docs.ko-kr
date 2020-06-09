@@ -1,17 +1,18 @@
 ---
 title: 매개 변수 이름 지정
+description: 매개 변수의 이름을 지정 하는 방법에 대 한 지침을 알아봅니다. 예를 들어 카멜식 대/소문자 & 설명 매개 변수 이름을 사용 하 & 형식 대신 의미에 따라 이름을 지정 하는 것이 좋습니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 0d5c5cd144fbae88439ee981fbdb6e30ff487005
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583520"
 ---
 # <a name="naming-parameters"></a>매개 변수 이름 지정
 시각적 디자인 도구에서 Intellisense 및 클래스 검색 기능을 제공 하는 경우 매개 변수가 설명서 및 디자이너에 표시 되기 때문에 가독성을 명확 하 게 이해 하는 것은 매개 변수 이름에 대 한 지침을 따르는 것이 중요 합니다.

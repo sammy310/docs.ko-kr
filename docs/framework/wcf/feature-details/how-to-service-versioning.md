@@ -2,12 +2,12 @@
 title: '방법: 서비스 버전 관리'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586938"
 ---
 # <a name="how-to-service-versioning"></a>방법: 서비스 버전 관리
 이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 애플리케이션에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.  이 예제에서는 XPath 필터를 사용하여 "CalcVer" 사용자 지정 헤더의 값을 검색하여 메시지를 라우팅할 버전을 결정합니다. XPath 필터는 "CalcVer" 헤더를 포함하지 않는 메시지를 검색하는 데도 사용됩니다. 다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
+2. 대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.  이 예에서는 XPath 필터를 사용 하 여 "CalcVer" 사용자 지정 헤더의 값을 검색 하 여 메시지를 라우팅해야 하는 버전을 결정 합니다. XPath 필터는 "CalcVer" 헤더를 포함 하지 않는 메시지를 검색 하는 데도 사용 됩니다. 다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > s12 네임스페이스 접두사는 네임스페이스 테이블에서 기본적으로 정의되며 `http://www.w3.org/2003/05/soap-envelope`네임스페이스를 나타냅니다.
+    > S 12 네임 스페이스 접두사는 네임 스페이스 테이블에서 기본적으로 정의 되며 네임 스페이스를 나타냅니다 `http://www.w3.org/2003/05/soap-envelope` .
   
-3. 각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다. 메시지에 값이 1인 "CalcVer" 헤더가 포함된 경우 일반Calc 서비스로 전송됩니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
+3. 각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다. 메시지에 값이 1 인 "CalcVer" 헤더가 포함 되어 있으면 regularCalc 서비스로 전송 됩니다. 값이 2이면 메시지가 roundingCalc 서비스에 보내집니다. 헤더가 없으면 메시지가 regularCalc에 라우트됩니다.  
   
      다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 서비스 끝점과 연결하는 것을 `filterTable1` 보여 줍니다.  
+4. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 서비스 끝점과 연결 하는 방법을 보여 줍니다 `filterTable1` .  
   
     ```xml  
     <behaviors>  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)
+- [라우팅 서비스](../samples/routing-services.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95101b8ec4f5a7fc60d0233ab6685b5c6851b44e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584988"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
-Message Security Anonymous 샘플에서는 클라이언트 인증 없이 메시지 수준 보안을 사용 하지만 서버의 x.509을 사용 하 여 서버를 인증 해야 하는 WCF (Windows Communication Foundation) 응용 프로그램을 구현 하는 방법을 보여 줍니다. 인증서. 클라이언트와 서버 간의 모든 애플리케이션 메시지는 서명 및 암호화됩니다. 이 샘플은 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플을 기반으로 합니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
+Message Security Anonymous 샘플에서는 클라이언트 인증 없이 메시지 수준 보안을 사용 하지만 서버의 x.509 인증서를 사용 하 여 서버를 인증 해야 하는 WCF (Windows Communication Foundation) 응용 프로그램을 구현 하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 애플리케이션 메시지는 서명 및 암호화됩니다. 이 샘플은 [WSHttpBinding](wshttpbinding.md) 샘플을 기반으로 합니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
@@ -31,7 +31,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
- 서비스는 구성 파일(Web.config)을 사용하여 서비스와 통신하기 위한 단일 엔드포인트를 노출합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `wsHttpBinding` 바인딩을 사용하여 구성됩니다. `wsHttpBinding` 바인딩의 기본 보안 모드는 `Message`입니다. `clientCredentialType` 특성은 `None`로 설정 됩니다.
+ 서비스는 구성 파일(Web.config)을 사용하여 서비스와 통신하기 위한 단일 엔드포인트를 노출합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `wsHttpBinding` 바인딩을 사용하여 구성됩니다. `wsHttpBinding` 바인딩의 기본 보안 모드는 `Message`입니다. `clientCredentialType` 특성은 `None`으로 설정됩니다.
 
 ```xml
 <system.serviceModel>
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- 서비스 인증에 사용할 자격 증명은 [\<동작](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)에서 지정 됩니다. 다음 샘플 코드와 같이 서버 인증서는 `SubjectName` 특성에 지정된 값과 동일한 `findValue` 값을 포함해야 합니다.
+ 서비스 인증에 사용할 자격 증명은에 지정 되어 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 있습니다. 다음 샘플 코드와 같이 서버 인증서는 `SubjectName` 특성에 지정된 값과 동일한 `findValue` 값을 포함해야 합니다.
 
 ```xml
 <behaviors>
@@ -78,7 +78,7 @@ public class CalculatorService : ICalculator
 </behaviors>
 ```
 
- 클라이언트 엔드포인트 구성은 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다. `wsHttpBinding` 바인딩의 클라이언트 보안 모드는 `Message`입니다. `clientCredentialType` 특성은 `None`로 설정 됩니다.
+ 클라이언트 엔드포인트 구성은 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다. `wsHttpBinding` 바인딩의 클라이언트 보안 모드는 `Message`입니다. `clientCredentialType` 특성은 `None`으로 설정됩니다.
 
 ```xml
 <system.serviceModel>
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 
  서비스의 인증서를 인증하기 위해 샘플에서는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>가 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust>로 설정됩니다. 클라이언트의 App.config 파일에 있는 `behaviors` 섹션에서 이 작업을 수행합니다. 이는 인증서가 사용자의 신뢰할 수 있는 사용자 저장소에 있는 경우 인증서의 발급자 체인에 대한 유효성 검사를 수행하지 않고 인증서가 신뢰된다는 것을 의미합니다. 여기서 이 설정은 편의상 사용된 것이므로 CA(인증 기관)에서 발급된 인증서를 요구하지 않고 샘플을 실행할 수 있습니다. 이 설정은 기본 ChainTrust보다 덜 안전합니다. 프로덕션 코드에서 `PeerOrChainTrust`를 사용하기 전에 이 설정의 보안 문제를 신중하게 고려해야 합니다.
 
- 클라이언트 구현은 `IsCallerAnonymous` 메서드에 대 한 호출을 추가 하 고, 그렇지 않은 경우 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플과는 다릅니다.
+ 클라이언트 구현은 메서드에 대 한 호출을 추가 `IsCallerAnonymous` 하 고, 그렇지 않은 경우 [WSHttpBinding](wshttpbinding.md) 샘플과는 다릅니다.
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -187,13 +187,13 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
-> 영어가 아닌 버전의 Windows를 사용 하는 경우에는 Setup.exe 파일을 편집 하 고 `NT AUTHORITY\NETWORK SERVICE` 계정 이름을 해당 지역으로 바꾸어야 합니다.
+> 영어가 아닌 버전의 Windows를 사용 하는 경우에는 Setup.exe 파일을 편집 하 여 `NT AUTHORITY\NETWORK SERVICE` 계정 이름을 해당 지역으로 바꾸어야 합니다.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     > 설치 배치 파일은 Visual Studio 용 개발자 명령 프롬프트에서 실행 되도록 설계 되었습니다. PATH 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Visual Studio에 대 한 개발자 명령 프롬프트 내에서 자동으로 설정 됩니다.  
   
-3. `http://localhost/servicemodelsamples/service.svc`주소를 입력 하 여 브라우저를 사용 하 여 서비스에 대 한 액세스를 확인 합니다.  
+3. 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 대 한 액세스를 확인 `http://localhost/servicemodelsamples/service.svc` 합니다.  
   
 4. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
@@ -220,9 +220,9 @@ Press <ENTER> to terminate client.
   
 4. 클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다. Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.  
   
-5. 서버에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 `setup.bat service`를 실행 합니다. `service` 인수를 사용 하 여 `setup.bat`를 실행 하면 컴퓨터의 정규화 된 도메인 이름으로 서비스 인증서가 생성 되 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.  
+5. 서버에서 `setup.bat service` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트를 실행 합니다. `setup.bat`인수를 사용 하 여를 실행 하면 컴퓨터의 정규화 된 `service` 도메인 이름으로 서비스 인증서가 생성 되 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.  
   
-6. 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 ( [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)의 `findValue` 특성)을 반영 하도록 web.config를 편집 합니다.  
+6. `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 (의 특성)이 반영 되도록 web.config를 편집 합니다.  
   
 7. 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
   

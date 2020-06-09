@@ -2,12 +2,12 @@
 title: 주소 헤더
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 3bc8512fb2492a7249c81fc33a3c7b83904f1ccd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 133826bbbea62b660bdcdd884ce657528ad30873
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576007"
 ---
 # <a name="address-headers"></a>주소 헤더
 
@@ -16,13 +16,13 @@ ms.locfileid: "74715225"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
-WS-Addressing 사양은 특성 웹 서비스 엔드포인트의 주소를 지정하는 방법으로 엔드포인트 참조의 개념을 정의합니다. WCF에서 끝점 참조는 `EndpointAddress` 클래스를 사용 하 여 모델링 됩니다. `EndpointAddress`는 `ServiceEndpoint` 클래스의 주소 필드 형식입니다.
+WS-Addressing 사양은 특성 웹 서비스 엔드포인트의 주소를 지정하는 방법으로 엔드포인트 참조의 개념을 정의합니다. WCF에서 끝점 참조는 클래스를 사용 하 여 모델링 됩니다. 클래스는 `EndpointAddress` `EndpointAddress` 클래스의 주소 필드 형식입니다 `ServiceEndpoint` .
 
-엔드포인트 참조 모델의 일부에서 각 참조는 추가 식별 정보를 추가하는 일부 참조 매개 변수를 전달할 수 있습니다. WCF에서 이러한 참조 매개 변수는 `AddressHeader` 클래스의 인스턴스로 모델링 됩니다.
+엔드포인트 참조 모델의 일부에서 각 참조는 추가 식별 정보를 추가하는 일부 참조 매개 변수를 전달할 수 있습니다. WCF에서 이러한 참조 매개 변수는 클래스의 인스턴스로 모델링 됩니다 `AddressHeader` .
 
 이 샘플에서 클라이언트는 클라이언트 엔드포인트의 `EndpointAddress`에 참조 매개 변수를 추가합니다. 서비스는 이 참조 매개 변수를 찾아서 "Hello" 서비스 작업의 논리에 해당 값을 사용합니다.
 
-## <a name="client"></a>Client
+## <a name="client"></a>클라이언트
 
 클라이언트는 참조 매개 변수를 보내려면 `AddressHeader`의 `EndpointAddress`에 `ServiceEndpoint`를 추가해야 합니다. ph x="1" /&gt; 클래스를 변경할 수 없으므로 엔드포인트 주소 수정은 `EndpointAddressBuilder` 클래스를 사용하여 수행해야 합니다. 다음 코드에서는 해당 메시지의 일부로 참조 매개 변수를 보내도록 클라이언트를 초기화합니다.
 
@@ -36,7 +36,7 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();
 ```
 
-이 코드는 원래 `EndpointAddressBuilder`를 초기 값으로 사용하여 `EndpointAddress`를 만듭니다. 그런 다음 새로 만든 주소 헤더를 추가 합니다. `CreateAddressHeader`에 대 한 호출은 특정 이름, 네임 스페이스 및 값을 사용 하 여 헤더를 만듭니다. 여기서 값은 "John"입니다. 헤더가 작성기에 추가되고 나면 `ToEndpointAddress()` 메서드는 변경할 수 있는 작성기를 변경할 수 없는 엔드포인트 주소로 다시 변환하고 이 주소는 클라이언트 엔드포인트의 주소 필드에 할당됩니다.
+이 코드는 원래 `EndpointAddressBuilder`를 초기 값으로 사용하여 `EndpointAddress`를 만듭니다. 그런 다음 새로 만든 주소 헤더를 추가 합니다. 를 호출 하면 `CreateAddressHeader` 특정 이름, 네임 스페이스 및 값을 가진 헤더가 만들어집니다. 여기서 값은 "John"입니다. 헤더가 작성기에 추가되고 나면 `ToEndpointAddress()` 메서드는 변경할 수 있는 작성기를 변경할 수 없는 엔드포인트 주소로 다시 변환하고 이 주소는 클라이언트 엔드포인트의 주소 필드에 할당됩니다.
 
 이제 클라이언트가 `Console.WriteLine(client.Hello());`를 호출하면 클라이언트의 결과 출력에 나온 것처럼 서비스는 이 주소 매개 변수의 값을 가져올 수 있습니다.
 
@@ -71,17 +71,17 @@ return "Hello, " + id;
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`

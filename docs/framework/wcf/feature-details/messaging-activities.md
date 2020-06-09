@@ -2,12 +2,12 @@
 title: 메시징 활동
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 1e65a3ead9df4103fb270911e3bbb2cc03fcfcba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 69a0e9a415b10d9c58d04eac27e48b1ed6a78064
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347570"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576397"
 ---
 # <a name="messaging-activities"></a>메시징 활동
 
@@ -41,7 +41,7 @@ ms.locfileid: "75347570"
 
 데이터그램 MEP는 메시지를 보내는 클라이언트와 메시지를 받는 서비스로 구성됩니다. 클라이언트가 워크플로이면 <xref:System.ServiceModel.Activities.Send> 작업을 사용하여 메시지를 보냅니다. 워크플로에서 이 메시지를 받으려면 <xref:System.ServiceModel.Activities.Receive> 작업을 사용합니다. <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 작업에는 `Content`라는 속성이 있습니다. 이 속성에는 보내거나 받는 데이터가 포함됩니다. 요청-응답 MEP를 구현하는 경우 클라이언트와 서비스 둘 다 활동 쌍을 사용합니다. 클라이언트는 <xref:System.ServiceModel.Activities.Send> 활동을 사용하여 메시지를 보내고 <xref:System.ServiceModel.Activities.ReceiveReply> 활동을 사용하여 서비스의 응답을 받습니다. 이러한 두 활동은 <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> 속성을 통해 서로 연결됩니다. 이 속성은 원본 메시지를 보낸 <xref:System.ServiceModel.Activities.Send> 활동으로 설정됩니다. 서비스도 마찬가지로 연결된 활동 쌍인 <xref:System.ServiceModel.Activities.Receive>와 <xref:System.ServiceModel.Activities.SendReply>를 사용합니다. 이러한 두 활동은 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 속성을 통해 연결됩니다. 이 속성은 원본 메시지를 받은 <xref:System.ServiceModel.Activities.Receive> 활동으로 설정됩니다. <xref:System.ServiceModel.Activities.ReceiveReply> 및 <xref:System.ServiceModel.Activities.SendReply>와 마찬가지로 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용하면 <xref:System.ServiceModel.Channels.Message> 인스턴스나 메시지 계약 형식을 보낼 수 있습니다.
 
-워크플로의 장기 실행 특성 때문에 이중 패턴의 통신도 장기 실행 대화를 지원해야 합니다. 장기 실행 대화를 지원하려면 대화를 시작하는 클라이언트가 나중에 데이터가 사용 가능하게 될 때 해당 대화를 다시 호출할 수 있는 기회를 서비스에 제공해야 합니다. 예를 들어 구매 주문 요청이 관리자의 승인을 얻기 위해 전송되었지만 하루, 일주일, 심지어 일 년 동안 처리되지 않을 수 있습니다. 따라서 구매 주문 승인을 관리하는 워크플로는 승인을 얻은 후 다시 시작되어야 합니다. 이 패턴의 이중 통신은 상관 관계를 사용하는 워크플로에서 지원됩니다. 이중 패턴을 구현하려면 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용합니다. <xref:System.ServiceModel.Activities.Receive> 활동에서 <xref:System.ServiceModel.Activities.CorrelationHandle>를 사용 하 여 상관 관계를 초기화 합니다. <xref:System.ServiceModel.Activities.Send> 작업에서는 이 상관 관계의 핸들을 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 속성 값으로 설정합니다. 자세한 내용은 [내구성이 있는 이중](durable-duplex-correlation.md)을 참조 하세요.
+워크플로의 장기 실행 특성 때문에 이중 패턴의 통신도 장기 실행 대화를 지원해야 합니다. 장기 실행 대화를 지원하려면 대화를 시작하는 클라이언트가 나중에 데이터가 사용 가능하게 될 때 해당 대화를 다시 호출할 수 있는 기회를 서비스에 제공해야 합니다. 예를 들어 구매 주문 요청이 관리자의 승인을 얻기 위해 전송되었지만 하루, 일주일, 심지어 일 년 동안 처리되지 않을 수 있습니다. 따라서 구매 주문 승인을 관리하는 워크플로는 승인을 얻은 후 다시 시작되어야 합니다. 이 패턴의 이중 통신은 상관 관계를 사용하는 워크플로에서 지원됩니다. 이중 패턴을 구현하려면 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 활동을 사용합니다. 활동에서 <xref:System.ServiceModel.Activities.Receive> 를 사용 하 여 상관 관계를 초기화 <xref:System.ServiceModel.Activities.CorrelationHandle> 합니다. <xref:System.ServiceModel.Activities.Send> 작업에서는 이 상관 관계의 핸들을 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 속성 값으로 설정합니다. 자세한 내용은 [내구성이 있는 이중](durable-duplex-correlation.md)을 참조 하세요.
 
 > [!NOTE]
 > 워크플로는 콜백 상관 관계 ("영 속 이중")를 사용 하는 이중의 이중 구현은 장기 실행 대화를 위한 것입니다. 대화가 단기 실행(채널의 수명)이고 콜백 계약이 있는 WCF 이중과 다릅니다.
@@ -55,7 +55,7 @@ ms.locfileid: "75347570"
 
 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.SendReply> 작업에도 `Content`라는 속성이 있습니다. 이 속성은 <xref:System.ServiceModel.Activities.SendContent> 형식이며 <xref:System.ServiceModel.Activities.Send> 또는 <xref:System.ServiceModel.Activities.SendReply> 작업이 보내는 데이터를 나타냅니다. .NET Framework에서는 <xref:System.ServiceModel.Activities.SendMessageContent>에서 파생되는 <xref:System.ServiceModel.Activities.SendParametersContent> 및 <xref:System.ServiceModel.Activities.SendContent>라는 두 개의 관련 형식을 정의합니다. <xref:System.ServiceModel.Activities.Send> 또는 <xref:System.ServiceModel.Activities.SendReply> 작업의 `Content` 속성을 이러한 형식 중 하나의 인스턴스로 설정하면 워크플로 서비스에서 데이터를 보낼 수 있습니다. 사용할 형식은 작업이 보내는 데이터의 형식에 따라 다릅니다. 작업이 `Message` 개체나 메시지 계약 형식을 보내면 <xref:System.ServiceModel.Activities.SendMessageContent>를 사용하고, 작업이 데이터 계약 형식을 보내면 <xref:System.ServiceModel.Activities.SendParametersContent>를 사용합니다. <xref:System.ServiceModel.Activities.SendParametersContent>를 사용하면 여러 매개 변수를 보낼 수 있는 반면 <xref:System.ServiceModel.Activities.SendMessageContent>를 사용하면 하나의 개체, 즉 메시지(또는 메시지 계약 형식)만 보낼 수 있습니다.
 
-메시징 작업을 사용하여 명령적으로 프로그래밍하는 경우 제네릭 <xref:System.Activities.InArgument%601> 및 <xref:System.Activities.OutArgument%601>를 사용하여 <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 작업의 메시지 또는 매개 변수 속성에 할당되는 개체를 래핑합니다. <xref:System.ServiceModel.Activities.Send>에 대해 <xref:System.Activities.InArgument%601>를 사용 하 고 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 활동에 대 한 활동 및 <xref:System.Activities.OutArgument%601>를 <xref:System.ServiceModel.Activities.SendReply> 합니다. 데이터가 작업에 전달되는 중이므로 전송 작업에 `In` 인수가 사용됩니다. 다음 예제와 같이 데이터가 작업으로부터 전달되는 중이므로 수신 작업에 `Out` 인수가 사용됩니다.
+메시징 작업을 사용하여 명령적으로 프로그래밍하는 경우 제네릭 <xref:System.Activities.InArgument%601> 및 <xref:System.Activities.OutArgument%601>를 사용하여 <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 작업의 메시지 또는 매개 변수 속성에 할당되는 개체를 래핑합니다. 및 활동에는 및 활동에 사용 <xref:System.Activities.InArgument%601> <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> <xref:System.Activities.OutArgument%601> <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.ReceiveReply> 합니다. 데이터가 작업에 전달되는 중이므로 전송 작업에 `In` 인수가 사용됩니다. 다음 예제와 같이 데이터가 작업으로부터 전달되는 중이므로 수신 작업에 `Out` 인수가 사용됩니다.
 
 ```csharp
 Receive reserveSeat = new Receive
@@ -101,7 +101,7 @@ Request = rcv
 
 ## <a name="add-service-reference"></a>서비스 참조 추가
 
-워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 경우 Visual Studio 2012은 요청/회신 MEP에 사용 되는 일반 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 작업을 캡슐화 하는 사용자 지정 메시징 작업을 생성 합니다. 이 기능을 사용 하려면 Visual Studio에서 클라이언트 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 > **서비스 참조** **추가** 를 선택 합니다. 주소 상자에 서비스의 기본 주소를 입력하고 이동을 클릭합니다. 사용 가능한 서비스가 **서비스:** 상자에 표시 됩니다. 서비스 노드를 확장하여 지원되는 계약을 표시합니다. 호출 하려는 계약을 선택 하면 **작업** 상자에 사용 가능한 작업 목록이 표시 됩니다. 그런 다음 생성 된 활동에 대 한 네임 스페이스를 지정 하 고 **확인**을 클릭 합니다. 그러면 프로젝트가 다시 빌드된 후 작업이 성공적으로 완료되었음을 알리고 사용자 지정 작업이 도구 상자에 표시된 대화 상자가 나타냅니다. 이 대화 상자에는 서비스 계약에 대해 정의된 작업마다 하나씩 작업이 있습니다. 프로젝트를 다시 빌드한 후에는 사용자 지정 작업을 워크플로에 끌어서 놓고 속성 창에서 필수 속성을 설정할 수 있습니다.
+워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 경우 Visual Studio 2012은 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 요청/회신 mep에 사용 되는 일반적인 및 작업을 캡슐화 하는 사용자 지정 메시징 작업을 생성 합니다. 이 기능을 사용 하려면 Visual Studio에서 클라이언트 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **서비스 참조**추가를 선택 합니다. 주소 상자에 서비스의 기본 주소를 입력하고 이동을 클릭합니다. 사용 가능한 서비스가 **서비스:** 상자에 표시 됩니다. 서비스 노드를 확장하여 지원되는 계약을 표시합니다. 호출 하려는 계약을 선택 하면 **작업** 상자에 사용 가능한 작업 목록이 표시 됩니다. 그런 다음 생성 된 활동에 대 한 네임 스페이스를 지정 하 고 **확인**을 클릭 합니다. 그러면 프로젝트가 다시 빌드된 후 작업이 성공적으로 완료되었음을 알리고 사용자 지정 작업이 도구 상자에 표시된 대화 상자가 나타냅니다. 이 대화 상자에는 서비스 계약에 대해 정의된 작업마다 하나씩 작업이 있습니다. 프로젝트를 다시 빌드한 후에는 사용자 지정 작업을 워크플로에 끌어서 놓고 속성 창에서 필수 속성을 설정할 수 있습니다.
 
 ## <a name="messaging-activity-templates"></a>메시징 활동 템플릿
 
@@ -109,9 +109,9 @@ Request = rcv
 
 ## <a name="messaging-activities-and-transactions"></a>메시징 활동 및 트랜잭션
 
-워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. 워크플로 및 트랜잭션에 대 한 자세한 내용은 [워크플로 트랜잭션](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)을 참조 하십시오.
+워크플로 서비스가 호출되면 트랜잭션을 서비스 작업에 전달할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.Activities.Receive> 작업 안에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업을 배치합니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업은 `Receive` 작업과 본문을 포함합니다. 서비스에 전달된 트랜잭션은 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문이 실행되는 동안 앰비언트 상태로 유지됩니다. 본문이 실행을 마치면 트랜잭션이 완료됩니다. 워크플로 및 트랜잭션에 대 한 자세한 내용은 [워크플로 트랜잭션](../../windows-workflow-foundation/workflow-transactions.md)을 참조 하십시오.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [워크플로 서비스에서 오류를 보내고 받는 방법](https://go.microsoft.com/fwlink/?LinkId=189151)
 - [장기 실행 워크플로 서비스 만들기](creating-a-long-running-workflow-service.md)
