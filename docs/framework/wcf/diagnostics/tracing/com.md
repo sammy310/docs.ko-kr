@@ -2,14 +2,14 @@
 title: COM+
 ms.date: 03/30/2017
 ms.assetid: 6665a2d3-7e11-4cce-8968-3fcf3426d362
-ms.openlocfilehash: 5248aa8792b2cfd360a6ed39531818ca8c65e912
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7fd2ed43218e4b52926947702160cb7d48494cd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602156"
 ---
-# <a name="com"></a><span data-ttu-id="a4670-102">COM+</span><span class="sxs-lookup"><span data-stu-id="a4670-102">COM+</span></span>
-<span data-ttu-id="a4670-103">다음 그림에서는 COM+ 애플리케이션에서 동작 추적을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4670-103">The following figure shows how you can use activity tracing in a COM+ application.</span></span> <span data-ttu-id="a4670-104">서버에서 사용자 코드를 실행하는 대신 COM+ 개체 모델에 대한 각 메서드 호출에 대해 하나의 COM+ 동작을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4670-104">Instead of executing user code on the server, we can define a COM+ activity for each method call to the COM+ object model.</span></span>  
+# <a name="com"></a><span data-ttu-id="ac966-102">COM+</span><span class="sxs-lookup"><span data-stu-id="ac966-102">COM+</span></span>
+<span data-ttu-id="ac966-103">다음 그림에서는 COM+ 애플리케이션에서 동작 추적을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ac966-103">The following figure shows how you can use activity tracing in a COM+ application.</span></span> <span data-ttu-id="ac966-104">서버에서 사용자 코드를 실행하는 대신 COM+ 개체 모델에 대한 각 메서드 호출에 대해 하나의 COM+ 동작을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ac966-104">Instead of executing user code on the server, we can define a COM+ activity for each method call to the COM+ object model.</span></span>  
   
- <span data-ttu-id="a4670-105">![COM 사용 하 여 동기 호출&#43; 응용 프로그램](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com + 추적")</span><span class="sxs-lookup"><span data-stu-id="a4670-105">![Synchronous calls with a COM&#43; application](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com+Tracing")</span></span>
+ <span data-ttu-id="ac966-105">![COM&#43; 응용 프로그램을 사용 하는 동기 호출](media/com-tracing.gif "Com + 추적")</span><span class="sxs-lookup"><span data-stu-id="ac966-105">![Synchronous calls with a COM&#43; application](media/com-tracing.gif "Com+Tracing")</span></span>

@@ -2,26 +2,26 @@
 title: '방법: 서비스 데이터 분할'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601194"
 ---
-# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="f9c18-102">방법: 서비스 데이터 분할</span><span class="sxs-lookup"><span data-stu-id="f9c18-102">How To: Service Data Partitioning</span></span>
-<span data-ttu-id="f9c18-103">이 항목에서는 동일한 대상 서비스의 여러 인스턴스에서 메시지를 분할하는 데 필요한 기본 단계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="f9c18-104">일반적으로 서비스 데이터 분할은 더 좋은 품질의 서비스를 제공하기 위해 서비스의 크기를 조정해야 하는 경우나 다양한 고객의 요청을 특정 방식으로 처리해야 하는 경우에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="f9c18-105">예를 들어 높은 값 또는 "골드" 고객의 메시지는 표준 고객의 메시지 보다 높은 우선 순위로 처리 되어야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
+# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="2bb71-102">방법: 서비스 데이터 분할</span><span class="sxs-lookup"><span data-stu-id="2bb71-102">How To: Service Data Partitioning</span></span>
+<span data-ttu-id="2bb71-103">이 항목에서는 동일한 대상 서비스의 여러 인스턴스에서 메시지를 분할하는 데 필요한 기본 단계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="2bb71-104">일반적으로 서비스 데이터 분할은 더 좋은 품질의 서비스를 제공하기 위해 서비스의 크기를 조정해야 하는 경우나 다양한 고객의 요청을 특정 방식으로 처리해야 하는 경우에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="2bb71-105">예를 들어 높은 값 또는 "골드" 고객의 메시지는 표준 고객의 메시지 보다 높은 우선 순위로 처리 되어야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
   
- <span data-ttu-id="f9c18-106">이 예제에서는 메시지가 regularCalc 서비스의 두 인스턴스 중 하나로 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="f9c18-107">이 서비스의 두 인스턴스는 동일합니다. 단, calculator1 엔드포인트로 표시된 서비스는 우수 고객으로부터 받은 메시지를 처리하고 calculator2 엔드포인트로 표시된 서비스는 기타 고객으로부터 받은 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
+ <span data-ttu-id="2bb71-106">이 예제에서는 메시지가 regularCalc 서비스의 두 인스턴스 중 하나로 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="2bb71-107">이 서비스의 두 인스턴스는 동일합니다. 단, calculator1 엔드포인트로 표시된 서비스는 우수 고객으로부터 받은 메시지를 처리하고 calculator2 엔드포인트로 표시된 서비스는 기타 고객으로부터 받은 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
   
- <span data-ttu-id="f9c18-108">클라이언트가 보낸 메시지에는 메시지를 라우트해야 하는 대상 서비스를 식별하는 데 사용할 수 있는 고유한 데이터가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="f9c18-109">각 클라이언트가 데이터를 특정 대상 서비스로 라우트할 수 있도록 하려면 메시지를 받는 데 사용할 두 개의 서비스 엔드포인트를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
+ <span data-ttu-id="2bb71-108">클라이언트가 보낸 메시지에는 메시지를 라우트해야 하는 대상 서비스를 식별하는 데 사용할 수 있는 고유한 데이터가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="2bb71-109">각 클라이언트가 데이터를 특정 대상 서비스로 라우트할 수 있도록 하려면 메시지를 받는 데 사용할 두 개의 서비스 엔드포인트를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f9c18-110">이 예제에서는 특정 엔드포인트를 사용하여 데이터를 분할하지만 헤더나 본문 데이터 같은 메시지 자체 내에 포함된 정보를 사용하여 데이터를 분할할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
+> <span data-ttu-id="2bb71-110">이 예제에서는 특정 엔드포인트를 사용하여 데이터를 분할하지만 헤더나 본문 데이터 같은 메시지 자체 내에 포함된 정보를 사용하여 데이터를 분할할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
   
-### <a name="implement-service-data-partitioning"></a><span data-ttu-id="f9c18-111">서비스 데이터 분할 구현</span><span class="sxs-lookup"><span data-stu-id="f9c18-111">Implement Service Data Partitioning</span></span>  
+### <a name="implement-service-data-partitioning"></a><span data-ttu-id="2bb71-111">서비스 데이터 분할 구현</span><span class="sxs-lookup"><span data-stu-id="2bb71-111">Implement Service Data Partitioning</span></span>  
   
-1. <span data-ttu-id="f9c18-112">서비스에서 노출하는 서비스 엔드포인트를 지정하여 기본 라우팅 서비스 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="f9c18-113">다음 예제에서는 메시지를 받는 데 사용되는 두 개의 엔드포인트와</span><span class="sxs-lookup"><span data-stu-id="f9c18-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="f9c18-114">regularCalc 서비스 인스턴스에 메시지를 보내는 데 사용되는 클라이언트 엔드포인트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
+1. <span data-ttu-id="2bb71-112">서비스에서 노출하는 서비스 엔드포인트를 지정하여 기본 라우팅 서비스 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="2bb71-113">다음 예제에서는 메시지를 받는 데 사용되는 두 개의 엔드포인트와</span><span class="sxs-lookup"><span data-stu-id="2bb71-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="2bb71-114">regularCalc 서비스 인스턴스에 메시지를 보내는 데 사용되는 클라이언트 엔드포인트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ ms.locfileid: "69947868"
      </client>  
     ```  
   
-2. <span data-ttu-id="f9c18-115">대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="f9c18-116">이 예제에서는 EndpointName 필터를 사용하여 메시지를 받은 서비스 엔드포인트를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="f9c18-117">다음 예제에서는 필요한 라우팅 섹션과 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-117">The following example defines the necessary routing section and filters.</span></span>  
+2. <span data-ttu-id="2bb71-115">대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="2bb71-116">이 예제에서는 EndpointName 필터를 사용하여 메시지를 받은 서비스 엔드포인트를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="2bb71-117">다음 예제에서는 필요한 라우팅 섹션과 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-117">The following example defines the necessary routing section and filters.</span></span>  
   
     ```xml  
     <filters>  
@@ -71,9 +71,9 @@ ms.locfileid: "69947868"
     </filters>  
     ```  
   
-3. <span data-ttu-id="f9c18-118">각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="f9c18-119">이 예제에서는 메시지를 받는 데 사용된 특정 엔드포인트를 기반으로 메시지가 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="f9c18-120">메시지가 두 개의 가능한 필터 중 하나와만 일치할 수 있으므로 필터 우선 순위를 사용하여 필터가 평가되는 순서를 제어하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
+3. <span data-ttu-id="2bb71-118">각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="2bb71-119">이 예제에서는 메시지를 받는 데 사용된 특정 엔드포인트를 기반으로 메시지가 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="2bb71-120">메시지가 두 개의 가능한 필터 중 하나와만 일치할 수 있으므로 필터 우선 순위를 사용하여 필터가 평가되는 순서를 제어하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
   
-     <span data-ttu-id="f9c18-121">다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
+     <span data-ttu-id="2bb71-121">다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -85,7 +85,7 @@ ms.locfileid: "69947868"
     </filterTables>  
     ```  
   
-4. <span data-ttu-id="f9c18-122">테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="f9c18-123">다음 예제에서는 "filterTable1"을 서비스 끝점과 연결 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
+4. <span data-ttu-id="2bb71-122">테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="2bb71-123">다음 예제에서는 "filterTable1"을 서비스 끝점과 연결 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -98,8 +98,8 @@ ms.locfileid: "69947868"
     </behaviors>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f9c18-124">예제</span><span class="sxs-lookup"><span data-stu-id="f9c18-124">Example</span></span>  
- <span data-ttu-id="f9c18-125">다음은 구성 파일의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="f9c18-125">The following is a complete listing of the configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="2bb71-124">예제</span><span class="sxs-lookup"><span data-stu-id="2bb71-124">Example</span></span>  
+ <span data-ttu-id="2bb71-125">다음은 구성 파일의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="2bb71-125">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -173,6 +173,6 @@ ms.locfileid: "69947868"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f9c18-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="f9c18-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bb71-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2bb71-126">See also</span></span>
 
-- [<span data-ttu-id="f9c18-127">라우팅 서비스</span><span class="sxs-lookup"><span data-stu-id="f9c18-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+- [<span data-ttu-id="2bb71-127">라우팅 서비스</span><span class="sxs-lookup"><span data-stu-id="2bb71-127">Routing Services</span></span>](../samples/routing-services.md)

@@ -2,27 +2,27 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-ms.openlocfilehash: 315122914ebcb3e8e4d72c8d976026a126306168
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb7019f1e4b47bde7c98b0109afa7b0125b7ef63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949892"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577307"
 ---
-# <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a><span data-ttu-id="a33a8-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="a33a8-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span></span>
-<span data-ttu-id="a33a8-103">잠재적인 환경이 있는 보안 핸드셰이크가 성공하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-103">The security handshake with a potential neighbor was not successful.</span></span>  
+# <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a><span data-ttu-id="dd0d8-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="dd0d8-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span></span>
+<span data-ttu-id="dd0d8-103">잠재적인 환경이 있는 보안 핸드셰이크가 성공하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-103">The security handshake with a potential neighbor was not successful.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a33a8-104">설명</span><span class="sxs-lookup"><span data-stu-id="a33a8-104">Description</span></span>  
- <span data-ttu-id="a33a8-105">이 추적은 보안 환경 연결을 설정하는 동안 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span> <span data-ttu-id="a33a8-106">이는 자격 증명이 충분하지 않거나 올바르지 않기 때문일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-106">This can happen due to insufficient or incorrect credentials.</span></span>  
+## <a name="description"></a><span data-ttu-id="dd0d8-104">Description</span><span class="sxs-lookup"><span data-stu-id="dd0d8-104">Description</span></span>  
+ <span data-ttu-id="dd0d8-105">이 추적은 보안 환경 연결을 설정하는 동안 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span> <span data-ttu-id="dd0d8-106">이는 자격 증명이 충분하지 않거나 올바르지 않기 때문일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-106">This can happen due to insufficient or incorrect credentials.</span></span>  
   
- <span data-ttu-id="a33a8-107">PeerChannel은 강력한 ID인 X.509 인증서에 대한 단일 토큰 형식을 인식합니다. 이는 구현 가능한 인증 및 권한 부여의 형식을 기반으로 강력한 ID 모델을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-107">PeerChannel recognizes a single token type for strong identification, X.509 certificates, which provide a strong identity model based on the type of authentication and authorization that can be implemented.</span></span> <span data-ttu-id="a33a8-108">PeerChannel은 암호를 사용하여 간단한 애플리케이션에 대한 지원도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-108">PeerChannel also provides support for simple applications through the use of passwords.</span></span> <span data-ttu-id="a33a8-109">암호는 세션 입장을 허용하는 용도로만 사용할 수 있으며, 메시지 인증에는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-109">Passwords can be used only to allow entry to the session; they cannot be used to perform message authentication.</span></span> <span data-ttu-id="a33a8-110">이는 피어 그룹이 공유하는 대칭 토큰을 소스 인증에 사용하기에는 어렵고 적절하지 않기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="a33a8-110">This is because a symmetric token that a group of peers share is difficult and inappropriate to use for source authentication.</span></span>  
+ <span data-ttu-id="dd0d8-107">PeerChannel은 강력한 ID인 X.509 인증서에 대한 단일 토큰 형식을 인식합니다. 이는 구현 가능한 인증 및 권한 부여의 형식을 기반으로 강력한 ID 모델을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-107">PeerChannel recognizes a single token type for strong identification, X.509 certificates, which provide a strong identity model based on the type of authentication and authorization that can be implemented.</span></span> <span data-ttu-id="dd0d8-108">PeerChannel은 암호를 사용하여 간단한 애플리케이션에 대한 지원도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-108">PeerChannel also provides support for simple applications through the use of passwords.</span></span> <span data-ttu-id="dd0d8-109">암호는 세션 입장을 허용하는 용도로만 사용할 수 있으며, 메시지 인증에는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-109">Passwords can be used only to allow entry to the session; they cannot be used to perform message authentication.</span></span> <span data-ttu-id="dd0d8-110">이는 피어 그룹이 공유하는 대칭 토큰을 소스 인증에 사용하기에는 어렵고 적절하지 않기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-110">This is because a symmetric token that a group of peers share is difficult and inappropriate to use for source authentication.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="a33a8-111">문제 해결</span><span class="sxs-lookup"><span data-stu-id="a33a8-111">Troubleshooting</span></span>  
- <span data-ttu-id="a33a8-112">모든 환경에 적합한 보안 자격 증명이 있는지 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="a33a8-112">Ensure that all neighbors have the appropriate security credentials.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="dd0d8-111">문제 해결</span><span class="sxs-lookup"><span data-stu-id="dd0d8-111">Troubleshooting</span></span>  
+ <span data-ttu-id="dd0d8-112">모든 환경에 적합한 보안 자격 증명이 있는지 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="dd0d8-112">Ensure that all neighbors have the appropriate security credentials.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a33a8-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="a33a8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd0d8-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd0d8-113">See also</span></span>
 
-- [<span data-ttu-id="a33a8-114">피어 채널 보안</span><span class="sxs-lookup"><span data-stu-id="a33a8-114">Peer Channel Security</span></span>](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [<span data-ttu-id="a33a8-115">추적</span><span class="sxs-lookup"><span data-stu-id="a33a8-115">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="a33a8-116">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="a33a8-116">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="a33a8-117">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="a33a8-117">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="dd0d8-114">피어 채널 보안</span><span class="sxs-lookup"><span data-stu-id="dd0d8-114">Peer Channel Security</span></span>](../../feature-details/peer-channel-security.md)
+- [<span data-ttu-id="dd0d8-115">추적</span><span class="sxs-lookup"><span data-stu-id="dd0d8-115">Tracing</span></span>](index.md)
+- [<span data-ttu-id="dd0d8-116">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="dd0d8-116">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="dd0d8-117">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="dd0d8-117">Administration and Diagnostics</span></span>](../index.md)
