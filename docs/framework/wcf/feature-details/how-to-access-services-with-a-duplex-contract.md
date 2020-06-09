@@ -1,5 +1,5 @@
 ---
-title: '방법: 이중 계약을와 함께 access services'
+title: '방법: 이중 계약을 사용 하 여 서비스 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,28 +7,28 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597217"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을와 함께 access services
+# <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을 사용 하 여 서비스 액세스
 
-Windows Communication Foundation (WCF)의 기능 중 하나는 이중 메시징 패턴을 사용 하는 서비스를 만들 수 있습니다. 이 패턴을 사용하면 서비스에서 콜백을 통해 클라이언트와 통신할 수 있습니다. 이 항목에서는 콜백 인터페이스를 구현 하는 클라이언트 클래스에서 WCF 클라이언트 만들기 단계를 보여 줍니다.
+WCF (Windows Communication Foundation)의 한 가지 기능은 이중 메시징 패턴을 사용 하는 서비스를 만드는 기능입니다. 이 패턴을 사용하면 서비스에서 콜백을 통해 클라이언트와 통신할 수 있습니다. 이 항목에서는 콜백 인터페이스를 구현 하는 클라이언트 클래스에서 WCF 클라이언트를 만드는 단계를 보여 줍니다.
 
 이중 바인딩은 클라이언트의 IP 주소를 서비스에 노출합니다. 클라이언트는 보안을 사용하여 신뢰하는 서비스에만 연결해야 합니다.
 
-기본 WCF 서비스 및 클라이언트를 만드는 방법에 대 한 자습서를 참조 하세요 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다.
+기본 WCF 서비스 및 클라이언트를 만드는 방법에 대 한 자습서는 [시작 자습서](../getting-started-tutorial.md)를 참조 하세요.
 
 ## <a name="to-access-a-duplex-service"></a>이중 서비스에 액세스하려면
 
-1. 두 인터페이스를 포함하는 서비스를 만듭니다. 첫 번째 인터페이스는 서비스에 대한 것이고 두 번째 인터페이스는 콜백에 대한 것입니다. 이중 서비스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 이중 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)합니다.
+1. 두 인터페이스를 포함하는 서비스를 만듭니다. 첫 번째 인터페이스는 서비스에 대한 것이고 두 번째 인터페이스는 콜백에 대한 것입니다. 이중 서비스를 만드는 방법에 대 한 자세한 내용은 [방법: 이중 계약 만들기](how-to-create-a-duplex-contract.md)를 참조 하세요.
 
 2. 서비스를 실행합니다.
 
-3. 사용 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 클라이언트에 대 한 계약 (인터페이스)를 생성 합니다. 이 작업을 수행 하는 방법에 대 한 정보를 참조 하세요. [방법: 클라이언트를 만드는](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.
+3. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트에 대 한 계약 (인터페이스)을 생성 합니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: 클라이언트 만들기](../how-to-create-a-wcf-client.md)를 참조 하세요.
 
 4. 다음 예제에 표시된 것처럼 클라이언트 클래스에서 콜백 인터페이스를 구현합니다.
 
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF)의 기능 중 하나는 이중 메시징 
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. 필요한 생성자를 사용 하는 WCF 클라이언트의 인스턴스를 만듭니다는 <xref:System.ServiceModel.InstanceContext> 개체입니다. 생성자의 두 번째 매개 변수는 구성 파일에 있는 엔드포인트의 이름입니다.
+6. 개체가 필요한 생성자를 사용 하 여 WCF 클라이언트의 인스턴스를 만듭니다 <xref:System.ServiceModel.InstanceContext> . 생성자의 두 번째 매개 변수는 구성 파일에 있는 엔드포인트의 이름입니다.
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -87,10 +87,10 @@ Windows Communication Foundation (WCF)의 기능 중 하나는 이중 메시징 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [방법: 이중 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [방법: ChannelFactory 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [초보자를 위한 자습서](../getting-started-tutorial.md)
+- [방법: 이중 계약 만들기](how-to-create-a-duplex-contract.md)
+- [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [방법: 클라이언트 만들기](../how-to-create-a-wcf-client.md)
+- [방법: ChannelFactory 사용](how-to-use-the-channelfactory.md)

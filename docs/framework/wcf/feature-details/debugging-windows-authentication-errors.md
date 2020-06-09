@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599284"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 
@@ -46,7 +46,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
  특히 네 가지 계정 형식에는 다음이 포함됩니다.  
   
-- 로컬 사용자: 시스템 전용 사용자 프로필. 예를 들면 `MachineName\Administrator` 또는 `MachineName\ProfileName` 등입니다.  
+- 로컬 사용자: 시스템 전용 사용자 프로필. 예를 들어 `MachineName\Administrator` 또는 `MachineName\ProfileName`입니다.  
   
 - 로컬 시스템: 도메인에 연결되지 않은 컴퓨터의 기본 제공 계정인 SYSTEM.  
   
@@ -63,7 +63,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ### <a name="kerberos-protocol"></a>Kerberos 프로토콜  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 프로토콜에 대한 SPN/UPN 문제  
- Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 엔드포인트에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 경우 서비스를 실행 하는 계정에는 컴퓨터를 Active Directory 도메인에 추가할 때 생성 되는 컴퓨터 (기본) SPN (서비스 사용자 이름) 키에 대 한 액세스 권한이 있다고 가정 합니다 .이는 아래에서 서비스를 실행 하 여 가장 일반적으로 수행 됩니다. 네트워크 서비스 계정. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 엔드포인트 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. WCF가 SPN 및 UPN과 작동 하는 방법에 대 한 자세한 내용은 [서비스 id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)을 참조 하세요.  
+ Windows 인증을 사용할 때 Kerberos 프로토콜을 사용하거나 SSPI 협상을 수행하는 경우, 클라이언트 엔드포인트에 사용되는 URL은 서비스 URL 내에 있는 서비스 호스트의 정규화된 도메인 이름을 포함해야 합니다. 이 경우 서비스가 실행되고 있는 계정에는 시스템을 Active Directory 도메인에 추가할 때 만들어진 기본 시스템 SPN(서비스 사용자 이름) 키에 대한 액세스 권한이 있다고 가정합니다. 이 작업은 일반적으로 Network Service 계정으로 서비스를 실행하여 수행합니다. 서비스에 시스템 SPN 키에 대한 액세스 권한이 없는 경우 클라이언트의 엔드포인트 ID로 서비스가 실행 중인 계정의 올바른 SPN 또는 UPN(User Principal Name)을 제공해야 합니다. WCF가 SPN 및 UPN과 작동 하는 방법에 대 한 자세한 내용은 [서비스 id 및 인증](service-identity-and-authentication.md)을 참조 하세요.  
   
  웹 팜 또는 웹 가든과 같은 부하 분산 시나리오에서는 각 애플리케이션에 대해 고유한 계정을 정의하고, 해당 계정에 SPN을 할당하고, 애플리케이션의 모든 서비스가 해당 계정으로 실행되도록 하는 것이 일반적입니다.  
   
@@ -94,12 +94,12 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
     1. `ChannelFactory.Credentials.Windows.AllowNtlm = false` 문과 함께 코드에서 이 작업을 수행합니다.  
   
-    2. `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성은 [\<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)에 포함 되어 있습니다.  
+    2. `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성은에 포함 되어 [\<windows>](../../configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md) 있습니다.  
   
 ### <a name="ntlm-protocol"></a>NTLM 프로토콜  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>협상 SSP가 NTLM으로 대체되어도 NTLM을 사용하지 않도록 설정  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성이 `false`로 설정 되어 있으므로 NTLM이 사용 되는 경우 Windows Communication Foundation (WCF)에서 예외를 throw 하는 데 가장 적합 합니다. 이 속성을 `false`로 설정 하면 네트워크를 통해 NTLM 자격 증명이 전송 되는 것을 방지 하지 못할 수 있습니다.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>속성이로 설정 되어 `false` 있어 NTLM이 사용 되는 경우 WCF (Windows Communication Foundation)에서 예외를 throw 하는 데 가장 적합 합니다. 이 속성을로 설정 `false` 하면 네트워크를 통해 NTLM 자격 증명이 전송 되는 것을 방지 하지 못할 수 있습니다.  
   
  다음은 NTLM으로 대체되지 않도록 설정하는 방법을 보여 줍니다.  
   
@@ -122,7 +122,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 가장에 대 한 자세한 내용은 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)을 참조 하세요.  
+ 가장에 대 한 자세한 내용은 [위임 및 가장](delegation-and-impersonation-with-wcf.md)을 참조 하세요.  
   
  또는 기본 제공 계정인 SYSTEM을 사용하여 클라이언트를 Windows 서비스로 실행합니다.  
   
@@ -151,5 +151,5 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
-- [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [위임 및 가장](delegation-and-impersonation-with-wcf.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)

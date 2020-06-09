@@ -2,12 +2,12 @@
 title: 개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c6e83bb234751dc477776f0fa540ffa8688dc667
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597594"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교
 
@@ -201,7 +201,7 @@ public class LineItem
 }
 ```
 
-Windows SDK (소프트웨어 개발 키트)에는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)라고 하는 명령줄 도구가 포함 되어 있습니다. ASP.NET 웹 서비스에서 사용 되는 xsd.exe 도구와 마찬가지로 Svcutil.exe는 XML 스키마에서 .NET 데이터 형식의 정의를 생성할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe는 스위치를 사용 하 여 데이터 계약에서 XML 스키마를 생성할 수도 있습니다. `dataContractOnly`
+Windows SDK (소프트웨어 개발 키트)에는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)라고 하는 명령줄 도구가 포함 되어 있습니다. ASP.NET 웹 서비스에서 사용 되는 xsd.exe 도구와 마찬가지로 Svcutil.exe는 XML 스키마에서 .NET 데이터 형식의 정의를 생성할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe는 스위치를 사용 하 여 데이터 계약에서 XML 스키마를 생성할 수도 있습니다. `dataContractOnly`
 
 > [!NOTE]
 > ASP.NET 웹 서비스에서를 사용 하 <xref:System.Xml.Serialization.XmlSerializer> 고 wcf ASP.NET 호환성 모드를 사용 하면 wcf 서비스는 ASP.NET 웹 서비스의 동작을 모방 하지만 ASP.NET compatibility 옵션은를 사용 하는 것으로 제한 하지 않습니다 <xref:System.Xml.Serialization.XmlSerializer> . ASP.NET 호환 모드에서 실행되는 서비스에서 <xref:System.Runtime.Serialization.DataContractSerializer>를 계속 사용할 수 있습니다.
@@ -418,9 +418,9 @@ IIS 또는 WAS에서 호스트 되 고 전송 프로토콜로 HTTP로 구성 된
 
 ## <a name="client-development"></a>클라이언트 개발
 
-ASP.NET 웹 서비스용 클라이언트는 .asmx 파일의 URL을 입력으로 제공하는 WSDL.exe 명령줄 도구를 사용하여 생성됩니다. WCF에서 제공 하는 해당 도구는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)입니다. 서비스 계약 정의 및 WCF 클라이언트 클래스의 정의를 사용 하 여 코드 모듈을 생성 합니다. 또한 서비스의 주소와 바인딩을 포함한 구성 파일도 생성합니다.
+ASP.NET 웹 서비스용 클라이언트는 .asmx 파일의 URL을 입력으로 제공하는 WSDL.exe 명령줄 도구를 사용하여 생성됩니다. WCF에서 제공 하는 해당 도구는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)입니다. 서비스 계약 정의 및 WCF 클라이언트 클래스의 정의를 사용 하 여 코드 모듈을 생성 합니다. 또한 서비스의 주소와 바인딩을 포함한 구성 파일도 생성합니다.
 
-원격 서비스의 클라이언트를 프로그래밍할 때 일반적으로 비동기 패턴에 따라 프로그래밍하는 것이 좋습니다. WSDL.exe 도구로 생성되는 코드는 기본적으로 항상 동기 패턴과 비동기 패턴을 모두 제공합니다. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드는 두 패턴에 대해 모두를 제공할 수 있습니다. 이 도구는 기본적으로 동기 패턴을 제공합니다. 이 도구를 `/async` 스위치와 함께 실행하면 생성된 코드에서 비동기 패턴을 제공합니다.
+원격 서비스의 클라이언트를 프로그래밍할 때 일반적으로 비동기 패턴에 따라 프로그래밍하는 것이 좋습니다. WSDL.exe 도구로 생성되는 코드는 기본적으로 항상 동기 패턴과 비동기 패턴을 모두 제공합니다. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드는 두 패턴에 대해 모두를 제공할 수 있습니다. 이 도구는 기본적으로 동기 패턴을 제공합니다. 이 도구를 `/async` 스위치와 함께 실행하면 생성된 코드에서 비동기 패턴을 제공합니다.
 
 ASP에 의해 생성 된 WCF 클라이언트 클래스의 이름을 보장할 수 없습니다. NET의 WSDL.EXE 도구는 기본적으로 Svcutil.exe 도구에 의해 생성 된 WCF 클라이언트 클래스의 이름과 일치 합니다. 특히 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize되어야 하는 클래스의 속성 이름에는 Svcutil.exe 도구로 생성되는 코드의 경우 기본적으로 Property 접미사가 지정되지만 WSDL.exe 도구로 생성되는 코드의 경우에는 Property 접미사가 지정되지 않습니다.
 
@@ -765,4 +765,4 @@ ASP.NET 구성 언어를 사용하여 개별 서비스의 문화권을 지정할
 
 ## <a name="see-also"></a>참고 항목
 
-- [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

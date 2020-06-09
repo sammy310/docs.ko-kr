@@ -2,18 +2,18 @@
 title: 트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: fe03047dd931d25ec94bbc5e00c479d1b42397bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185274"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597464"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>트랜잭션을 워크플로 서비스 내부 및 외부로 이동
 워크플로 서비스 및 클라이언트는 트랜잭션에 참여할 수 있습니다.  서비스 작업이 앰비언트 트랜잭션의 일부가 되도록 하려면 <xref:System.ServiceModel.Activities.Receive> 활동 내에 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동을 배치합니다. <xref:System.ServiceModel.Activities.Send> 내의 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동에서 실행하는 모든 호출은 앰비언트 트랜잭션 내에서도 실행됩니다. 워크플로 클라이언트 애플리케이션에서는 <xref:System.Activities.Statements.TransactionScope> 활동을 사용하여 앰비언트 트랜잭션을 만들고 앰비언트 트랜잭션을 사용하여 서비스 작업을 호출할 수 있습니다. 이 항목에서는 트랜잭션에 참여하는 워크플로 서비스와 워크플로 클라이언트를 만드는 과정을 보여 줍니다.  
   
 > [!WARNING]
-> 워크플로 서비스 인스턴스가 트랜잭션 내에 로드되고 <xref:System.Activities.Statements.Persist> 워크플로에 활동이 포함된 경우 트랜잭션이 시간 초과될 때까지 워크플로 인스턴스가 차단됩니다.  
+> 워크플로 서비스 인스턴스가 트랜잭션 내에서 로드 되 고 워크플로에 작업이 포함 된 경우 <xref:System.Activities.Statements.Persist> 워크플로 인스턴스는 해당 트랜잭션이 시간 초과 될 때까지 차단 됩니다.  
   
 > [!IMPORTANT]
 > <xref:System.ServiceModel.Activities.TransactedReceiveScope>를 사용할 때마다 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동 내에 워크플로의 모든 Receive를 두는 것이 좋습니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "79185274"
     }  
     ```  
   
-     이는 앰비언트 트랜잭션에 대한 정보를 표시하는 기본 활동으로서, 이 항목에 사용되는 서비스 및 클라이언트 워크플로 모두에 사용됩니다. 이 작업을 **도구 상자의** **공용** 섹션에서 사용할 수 있도록 솔루션을 빌드합니다.  
+     이는 앰비언트 트랜잭션에 대한 정보를 표시하는 기본 활동으로서, 이 항목에 사용되는 서비스 및 클라이언트 워크플로 모두에 사용됩니다. **도구 상자**의 **일반** 섹션에서이 작업을 사용할 수 있도록 솔루션을 빌드합니다.  
   
 ### <a name="implement-the-workflow-service"></a>워크플로 서비스 구현  
   
-1. 프로젝트에 호출된 `WorkflowService` 새 WCF 워크플로 서비스를 추가합니다. `Common` `Common` 이렇게 하려면 프로젝트를 마우스 오른쪽 **Add**단추로 클릭하고 **설치한 템플릿에서** **워크플로를** 선택하고 **WCF 워크플로 서비스를**선택합니다. **New Item ...**  
+1. 프로젝트에 라는 새 WCF 워크플로 서비스를 추가 `WorkflowService` `Common` 합니다. 이렇게 하려면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 `Common` **추가**, **새 항목 ...** 을 차례로 선택 하 고 **설치 된 템플릿** 에서 **워크플로** 를 선택한 다음 **WCF 워크플로 서비스**를 선택 합니다.  
   
      ![워크플로 서비스 추가](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -84,20 +84,20 @@ ms.locfileid: "79185274"
   
 3. <xref:System.Activities.Statements.WriteLine> 활동을 `Sequential Service` 활동으로 끌어 놓습니다. 다음 예제와 같이 텍스트 속성을 `"Workflow Service starting ..."`으로 설정합니다.  
   
-     ! [순차 적 서비스 활동에 WriteLine 활동 추가(./미디어/트랜잭션-워크플로 서비스/추가-쓰기-순차 서비스.jpg)  
+     ! [순차 서비스 활동에 WriteLine 활동 추가 (./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
   
-4. <xref:System.ServiceModel.Activities.TransactedReceiveScope>을 <xref:System.Activities.Statements.WriteLine> 활동 뒤로 끌어 놓습니다. 활동은 <xref:System.ServiceModel.Activities.TransactedReceiveScope> **도구 상자의** **메시징** 섹션에서 찾을 수 있습니다. 활동은 <xref:System.ServiceModel.Activities.TransactedReceiveScope> **요청** 및 **Body**두 섹션으로 구성됩니다. **요청** 섹션에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함되어 있습니다. **Body** 섹션에는 메시지를 받은 후 트랜잭션 내에서 실행할 활동이 포함되어 있습니다.  
+4. <xref:System.ServiceModel.Activities.TransactedReceiveScope>을 <xref:System.Activities.Statements.WriteLine> 활동 뒤로 끌어 놓습니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope>활동은 **도구 상자**의 **메시징** 섹션에서 찾을 수 있습니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope>활동은 **요청** 및 **본문**의 두 섹션으로 구성 됩니다. **요청** 섹션에는 <xref:System.ServiceModel.Activities.Receive> 활동이 포함 됩니다. **본문** 섹션에는 메시지를 받은 후 트랜잭션 내에서 실행할 활동이 포함 되어 있습니다.  
   
      ![TransactedReceiveScope 활동 추가](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동을 선택하고 변수 버튼을 **클릭합니다.** 다음 변수를 추가합니다.  
+5. 활동을 선택 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 하 고 **변수** 단추를 클릭 합니다. 다음 변수를 추가합니다.  
   
-     ![트랜잭션 수신 범위에 변수 추가](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
+     ![TransactedReceiveScope에 변수 추가](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     > 기본적으로 여기에 포함된 데이터 변수를 삭제할 수 있습니다. 기존 핸들 변수를 사용할 수도 있습니다.  
   
-6. 활동의 **요청** 섹션 내에서 활동을 끌어놓습니다. <xref:System.ServiceModel.Activities.TransactedReceiveScope> <xref:System.ServiceModel.Activities.Receive> 다음 속성을 설정합니다.  
+6. 활동 <xref:System.ServiceModel.Activities.Receive> 의 **요청** 섹션 내에서 활동을 끌어 놓습니다 <xref:System.ServiceModel.Activities.TransactedReceiveScope> . 다음 속성을 설정합니다.  
   
     |속성|값|  
     |--------------|-----------|  
@@ -109,30 +109,30 @@ ms.locfileid: "79185274"
   
      ![Receive 활동 추가](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. <xref:System.ServiceModel.Activities.Receive> 액티비티에서 **정의...** 링크를 클릭하고 다음 설정을 만듭니다.  
+7. 활동에서 **정의 ...** 링크를 클릭 <xref:System.ServiceModel.Activities.Receive> 하 고 다음과 같이 설정 합니다.  
   
-     ![수신 활동에 대한 메시지 설정 설정](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
+     ![Receive 활동에 대 한 메시지 설정 설정](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
 8. <xref:System.Activities.Statements.Sequence> 활동을 <xref:System.ServiceModel.Activities.TransactedReceiveScope>의 본문 섹션으로 끌어 놓습니다. <xref:System.Activities.Statements.Sequence> 활동 내에 두 개의 <xref:System.Activities.Statements.WriteLine> 활동을 끌어 놓고 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 다음 표와 같이 설정합니다.  
   
     |작업|값|  
     |--------------|-----------|  
-    |1st WriteLine|"서비스: 완료된 수신"|  
+    |1st WriteLine|"서비스: 수신 완료"|  
     |2nd WriteLine|"Service: Received = " + requestMessage|  
   
      이제 워크플로가 다음과 같이 나타납니다.  
   
-     ![WriteLine 활동을 추가한 후 시퀀스](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
+     ![WriteLine 활동을 추가한 후의 시퀀스](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. 활동의 Body에서 `PrintTransactionInfo` 두 번째 <xref:System.Activities.Statements.WriteLine> 활동 후에 활동을 끌어놓습니다. **Body** <xref:System.ServiceModel.Activities.TransactedReceiveScope>  
+9. 활동을 `PrintTransactionInfo` <xref:System.Activities.Statements.WriteLine> 활동의 **본문** 에서 두 번째 활동 뒤로 끌어 놓습니다 <xref:System.ServiceModel.Activities.TransactedReceiveScope> .  
   
-     ![PrintTransactionInfo를 추가한 후의 시퀀스](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
+     ![PrintTransactionInfo 추가 후 시퀀스](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
 10. <xref:System.Activities.Statements.Assign> 활동을 `PrintTransactionInfo` 활동 뒤로 끌어 놓고 해당 속성을 다음 표와 같이 설정합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |수행할 작업|replyMessage|  
+    |대상|replyMessage|  
     |값|"Service: Sending reply"|  
   
 11. <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Assign> 활동 뒤로 끌어 놓고 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "Service: Begin reply"로 설정합니다.  
@@ -141,11 +141,11 @@ ms.locfileid: "79185274"
   
      ![Assign 및 WriteLine 추가 후](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. 활동을 마우스 <xref:System.ServiceModel.Activities.Receive> 오른쪽 단추로 클릭하고 **SendReply 만들기를** 선택하고 마지막 <xref:System.Activities.Statements.WriteLine> 활동 후에 붙여넣습니다. 활동에서 정의... 링크를 클릭하고 다음 설정을 합니다. **Define...** `SendReplyToReceive`  
+12. 활동을 마우스 오른쪽 단추로 클릭 <xref:System.ServiceModel.Activities.Receive> 하 고 **SendReply 만들기** 를 선택 하 고 마지막 활동 뒤에 붙여넣습니다 <xref:System.Activities.Statements.WriteLine> . 활동에서 **정의 ...** 링크를 클릭 `SendReplyToReceive` 하 고 다음과 같이 설정 합니다.  
   
      ![Reply 메시지 설정](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. 활동 이후에 <xref:System.Activities.Statements.WriteLine> 활동을 끌어서 삭제하고 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 '서비스: 답장 전송'으로 설정합니다. `SendReplyToReceive`  
+13. 활동을 <xref:System.Activities.Statements.WriteLine> 활동 뒤로 끌어 놓고 `SendReplyToReceive` 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "Service: Reply sent"로 설정 합니다.  
   
 14. <xref:System.Activities.Statements.WriteLine> 활동을 워크플로의 맨 아래로 끌어 놓고 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "Service: Workflow ends, press ENTER to exit"로 설정합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "79185274"
   
 ### <a name="implement-the-workflow-client"></a>워크플로 클라이언트 구현  
   
-1. `WorkflowClient` 프로젝트에 `Common`라는 새 WCF 워크플로 애플리케이션을 추가합니다. 이렇게 하려면 `Common` 프로젝트를 마우스 오른쪽 **Add**단추로 클릭하고 **설치한 템플릿에서** **워크플로를** 선택하고 **활동**을 선택합니다. **New Item ...**  
+1. `WorkflowClient` 프로젝트에 `Common`라는 새 WCF 워크플로 애플리케이션을 추가합니다. 이렇게 하려면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 `Common` **추가**, **새 항목 ...** 을 차례로 선택 하 고 **설치 된 템플릿** 에서 **워크플로** 를 선택한 다음 **활동**을 선택 합니다.  
   
      ![활동 프로젝트 추가](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
@@ -173,9 +173,9 @@ ms.locfileid: "79185274"
   
 6. `PrintTransactionInfo` 활동을 <xref:System.Activities.Statements.Sequence> 안으로 끌어 놓습니다.  
   
-7. 활동 후 <xref:System.Activities.Statements.WriteLine> 활동을 끌어서 삭제하고 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "클라이언트: 보내기 시작"으로 설정합니다. `PrintTransactionInfo` 이제 워크플로가 다음과 같이 나타납니다.  
+7. 활동을 <xref:System.Activities.Statements.WriteLine> 활동 뒤로 끌어 놓고 `PrintTransactionInfo` 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "클라이언트: 시작 보내기"로 설정 합니다. 이제 워크플로가 다음과 같이 나타납니다.  
   
-     ![클라이언트 추가: 활동 보내기 시작](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![클라이언트 추가: 시작 보내기 작업](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
 8. <xref:System.ServiceModel.Activities.Send> 활동을 <xref:System.Activities.Statements.Assign> 활동 뒤로 끌어 놓고 다음 속성을 설정합니다.  
   
@@ -189,11 +189,11 @@ ms.locfileid: "79185274"
   
      ![Send 활동 속성 설정](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. **정의** 링크를 클릭하고 다음 설정을 만듭니다.  
+9. **정의 ...** 링크를 클릭 하 고 다음과 같이 설정 합니다.  
   
      ![Send 활동 메시지 설정](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. 활동을 마우스 <xref:System.ServiceModel.Activities.Send> 오른쪽 단추로 클릭하고 **수신 회신 만들기를**선택합니다. <xref:System.ServiceModel.Activities.ReceiveReply> 활동이 자동으로 <xref:System.ServiceModel.Activities.Send> 활동 뒤에 배치됩니다.  
+10. 활동을 마우스 오른쪽 단추로 클릭 <xref:System.ServiceModel.Activities.Send> 하 고 **ReceiveReply 만들기**를 선택 합니다. <xref:System.ServiceModel.Activities.ReceiveReply> 활동이 자동으로 <xref:System.ServiceModel.Activities.Send> 활동 뒤에 배치됩니다.  
   
 11. ReceiveReplyForSend 활동의 정의... 링크를 클릭하고 다음과 같이 설정합니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "79185274"
   
 15. <xref:System.Activities.Statements.WriteLine> 활동을 워크플로 끝으로 끌어 놓고 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 속성을 "Client workflow ends"로 설정합니다. 완료된 클라이언트 워크플로는 다음 다이어그램과 같습니다.  
   
-     ![완료된 클라이언트 워크플로](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
+     ![완료 된 클라이언트 워크플로](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. 솔루션을 빌드합니다.  
   
@@ -313,5 +313,5 @@ ms.locfileid: "79185274"
   
 ## <a name="see-also"></a>참고 항목
 
-- [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Windows Communication Foundation 트랜잭션 개요](../../../../docs/framework/wcf/feature-details/transactions-overview.md)
+- [워크플로 서비스](workflow-services.md)
+- [Windows Communication Foundation 트랜잭션 개요](transactions-overview.md)

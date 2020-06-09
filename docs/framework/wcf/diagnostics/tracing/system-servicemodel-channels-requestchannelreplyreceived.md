@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.RequestChannelReplyReceived
 ms.date: 03/30/2017
 ms.assetid: 61d428d1-903e-4c34-9c4f-22704043d9d6
-ms.openlocfilehash: 9dc0611e2dcb0a7814f58a71ffbfa681613c6bee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d35f7bd4cf2ab51cdb4ccc6271ab6dbdb0179390
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593960"
 ---
 # <a name="systemservicemodelchannelsrequestchannelreplyreceived"></a>System.ServiceModel.Channels.RequestChannelReplyReceived
 System.ServiceModel.Channels.RequestChannelReplyReceived  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  요청 채널을 통해 회신을 받았습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [추적](index.md)
+- [추적을 사용하여 애플리케이션 문제 해결](using-tracing-to-troubleshoot-your-application.md)
+- [관리 및 진단](../index.md)

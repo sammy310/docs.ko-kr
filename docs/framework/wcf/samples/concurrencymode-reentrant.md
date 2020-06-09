@@ -2,15 +2,15 @@
 title: ConcurrencyMode 재진입
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 613a1ed827173b3915892dda54dd20ebabdf6dcf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67e719afd40b52f37c777cf9791291a16878592f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600090"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 재진입
-이 샘플에서는 서비스 구현에서 ConcurrencyMode.Reentrant 사용의 필요성과 의미를 보여 줍니다. ConcurrencyMode.Reentrant는 서비스나 콜백이 특정 시점에 하나의 메시지만 처리한다는 것을 의미합니다(`ConcurencyMode.Single`과 유사함). 스레드 안전을 보장하기 위해 WCF(Windows 통신 `InstanceContext` 재단)는 다른 메시지를 처리할 수 없도록 메시지 처리를 잠그고 있습니다. 재진입 모드의 경우 서비스가 나가는 호출을 수행하기 직전에 `InstanceContext`의 잠금이 해제되므로 이 샘플에 나온 것처럼 재진입할 수 있는 후속 호출은 다음에 서비스에 들어갈 때 잠길 수 있습니다. 이 동작을 설명하기 위해 이 샘플에서는 클라이언트와 서비스가 이중 계약을 사용하여 서로 메시지를 보낼 수 있는 방법을 보여 줍니다.  
+이 샘플에서는 서비스 구현에서 ConcurrencyMode.Reentrant 사용의 필요성과 의미를 보여 줍니다. ConcurrencyMode.Reentrant는 서비스나 콜백이 특정 시점에 하나의 메시지만 처리한다는 것을 의미합니다(`ConcurencyMode.Single`과 유사함). 스레드 안전을 보장 하기 위해 WCF (Windows Communication Foundation)는 `InstanceContext` 다른 메시지를 처리할 수 없도록 메시지 처리를 잠급니다. 재진입 모드의 경우 서비스가 나가는 호출을 수행하기 직전에 `InstanceContext`의 잠금이 해제되므로 이 샘플에 나온 것처럼 재진입할 수 있는 후속 호출은 다음에 서비스에 들어갈 때 잠길 수 있습니다. 이 동작을 설명하기 위해 이 샘플에서는 클라이언트와 서비스가 이중 계약을 사용하여 서로 메시지를 보낼 수 있는 방법을 보여 줍니다.  
   
  정의된 계약은 서비스에 의해 구현되는 `Ping` 메서드와 클라이언트에 의해 구현되는 콜백 메서드 `Pong`을 가지는 이중 계약입니다. 클라이언트는 서버의 `Ping` 메서드를 틱 수와 함께 호출하여 호출을 시작합니다. 서비스는 틱 수가 0이 아닌지 확인한 다음 틱 수를 줄이는 동안 콜백의 `Pong` 메서드를 호출합니다. 샘플의 다음 코드에서 이 작업을 수행합니다.  
   
@@ -46,14 +46,14 @@ public void Pong(int ticks)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.  
   
-3. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
 ## <a name="demonstrates"></a>데모  
- 샘플을 실행하려면 클라이언트 및 서버 프로젝트를 빌드합니다. 그런 다음 두 개의 명령 창을 \<열고 디렉토리를 샘플>\CS\Service\bin\디버그로 \<변경하고>\CS\Client\bin\디버그 디버그 디버그 디버그를 샘플링합니다. 그런 다음 입력 인수로 전달된 틱의 초기 값으로 Client.exe를 호출하여 `service.exe` 서비스를 시작합니다. 그러면 10개 틱에 대한 샘플 출력이 표시됩니다.  
+ 샘플을 실행하려면 클라이언트 및 서버 프로젝트를 빌드합니다. 그런 다음 두 개의 명령 창을 열고 디렉터리를 \<sample> \CS\Service\bin\debug 및 \<sample> \CS\Client\bin\debug 디렉터리로 변경 합니다. 그런 다음를 입력 하 여 서비스를 시작한 `service.exe` 다음 입력 인수로 전달 된 틱의 초기 값을 사용 하 여 setup.exe를 호출 합니다. 그러면 10개 틱에 대한 샘플 출력이 표시됩니다.  
   
 ```console  
 Prompt>Service.exe  
@@ -78,6 +78,6 @@ Pong: Ticks = 1
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
