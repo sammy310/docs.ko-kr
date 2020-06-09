@@ -2,12 +2,12 @@
 title: 핵심 내용
 description: 이 가이드의 핵심 내용을 검토하세요.
 ms.date: 04/20/2020
-ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 51662c52ce0917aa89b86151cf7cab5f13f846e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447019"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502784"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 
@@ -23,4 +23,5 @@ ms.locfileid: "84447019"
 
 - Azure DevOps Services는 CI/CD 파이프라인에서 Docker 환경에 배포하여 DevOps 환경을 크게 간소화합니다. 이 명령문은 간단한 Docker 환경뿐만 아니라 Azure에 기반한 고급 마이크로서비스 및 컨테이너 오케스트레이터에도 적용됩니다.
 
-> [!div class="step-by-step"][previous](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"]
+> [previous](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
