@@ -2,15 +2,15 @@
 title: '방법: 서비스 엔드포인트로 메타데이터 가져오기'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: dce65c31134c211c134cbae2b9bd8296f74b1627
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1de316b8e91739d5e3e24ff960e2cdfb33cc7fab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930722"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597061"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 엔드포인트로 메타데이터 가져오기
-이 항목에서는 서비스 끝점 컬렉션에 메타 데이터를 가져오고 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)에 정의 된 서비스를 사용 하는 방법에 대해 설명 합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 애플리케이션을 만든 방법을 보여 줍니다.  
+이 항목에서는 서비스 끝점 컬렉션에 메타 데이터를 가져오고 [시작](../samples/getting-started-sample.md)에 정의 된 서비스를 사용 하는 방법에 대해 설명 합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 애플리케이션을 만든 방법을 보여 줍니다.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>서비스 엔드포인트로 메타데이터를 가져오려면  
   
@@ -27,7 +27,7 @@ ms.locfileid: "69930722"
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    > 메타데이터를 가져온 후에는 클라이언트 채널을 만들거나 메타데이터를 내보낼 수 없습니다. 이 시점에는 형식 정보를 사용할 수 없기 때문입니다. 실제로 서비스와 상호 작용하거나 메타데이터를 내보내려면 형식 정보가 필요합니다. 형식 정보를 생성하려면 4단계와 5단계에 표시된 코드를 생성해야 합니다. 또는 <xref:System.ServiceModel.Description.MetadataResolver> 도우미 클래스를 사용할 수도 있습니다. 자세한 내용은 [방법: MetadataResolver를 사용 하 여 동적으로](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)바인딩 메타 데이터를 가져옵니다.  
+    > 메타데이터를 가져온 후에는 클라이언트 채널을 만들거나 메타데이터를 내보낼 수 없습니다. 이 시점에는 형식 정보를 사용할 수 없기 때문입니다. 실제로 서비스와 상호 작용하거나 메타데이터를 내보내려면 형식 정보가 필요합니다. 형식 정보를 생성하려면 4단계와 5단계에 표시된 코드를 생성해야 합니다. 또는 <xref:System.ServiceModel.Description.MetadataResolver> 도우미 클래스를 사용할 수도 있습니다. 자세한 내용은 [방법: MetadataResolver를 사용 하 여 동적으로 바인딩 메타 데이터 가져오기](how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)를 참조 하세요.  
   
 4. 각 계약에 대해 형식 정보를 생성합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69930722"
   
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [메타데이터](metadata.md)
+- [시작](../samples/getting-started-sample.md)

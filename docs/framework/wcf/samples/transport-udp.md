@@ -2,12 +2,12 @@
 title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 3eb7116199cfb23d965918247b74af04d671e79b
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141152"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591438"
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임 워크 및 WCF 모범 사례를 사용 하 여 WCF에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
@@ -18,7 +18,7 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
   
 3. 네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
   
-4. 사용자 지정 전송을 채널 스택에 추가 하는 [ \<바인딩>](../../configure-apps/file-schema/wcf/bindings.md) 요소를 추가 합니다. 자세한 내용은 [바인딩 요소 추가](#AddingABindingElement)를 참조 하세요.  
+4. [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)사용자 지정 전송을 채널 스택에 추가 하는 요소를 추가 합니다. 자세한 내용은 [바인딩 요소 추가](#AddingABindingElement)를 참조 하세요.  
   
 5. 새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
   
@@ -50,7 +50,7 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
 > UDP 전송의 경우 UDP는 본래 "fire and forget" 프로토콜이므로 데이터그램 MEP만 지원됩니다.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 및 WCF 개체 수명 주기  
- WCF에는 통신에 사용 되는, <xref:System.ServiceModel.Channels.IChannel> <xref:System.ServiceModel.Channels.IChannelFactory>및 <xref:System.ServiceModel.Channels.IChannelListener> 와 같은 개체의 수명 주기를 관리 하는 데 사용 되는 공용 상태 시스템이 있습니다. 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
+ WCF에는 <xref:System.ServiceModel.Channels.IChannel> <xref:System.ServiceModel.Channels.IChannelFactory> 통신에 사용 되는, 및와 같은 개체의 수명 주기를 관리 하는 데 사용 되는 공용 상태 시스템이 있습니다 <xref:System.ServiceModel.Channels.IChannelListener> . 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
   
 - Created: <xref:System.ServiceModel.ICommunicationObject>가 처음 인스턴스화되었을 때의 상태입니다. 이 상태에서는 I/O(입/출력)이 발생하지 않습니다.  
   
@@ -74,7 +74,7 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
 
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.CommunicationObject>를 구현하고 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 및 <xref:System.ServiceModel.Channels.ChannelListenerBase>에 대한 통합 기본 클래스를 제공합니다. <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.ChannelBase>을 구현하는 기본 클래스인 <xref:System.ServiceModel.Channels.IChannel>와 함께 사용됩니다.  
   
-- 클래스 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 는 및 <xref:System.ServiceModel.Channels.ChannelManagerBase> <xref:System.ServiceModel.Channels.IChannelFactory> 를 구현 하 고 `CreateChannel` 오버 로드를 `OnCreateChannel` 하나의 추상 메서드에 통합 합니다.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>클래스는 및를 구현 <xref:System.ServiceModel.Channels.ChannelManagerBase> <xref:System.ServiceModel.Channels.IChannelFactory> 하 고 `CreateChannel` 오버 로드를 하나의 `OnCreateChannel` 추상 메서드에 통합 합니다.  
   
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스는 <xref:System.ServiceModel.Channels.IChannelListener>을 구현합니다. 이 클래스는 기본 상태 관리를 담당합니다.  
   
@@ -96,7 +96,7 @@ this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, Pr
 this.socket.Close(0);  
 ```  
   
- 그런 다음 및 `Send()` 를 `BeginSend()` / `EndSend()`구현 합니다. 그러면 두 개의 기본 섹션으로 분할됩니다. 먼저 메시지를 바이트 배열로 serialize합니다.  
+ 그런 다음 `Send()` 및를 구현 `BeginSend()` / `EndSend()` 합니다. 그러면 두 개의 기본 섹션으로 분할됩니다. 먼저 메시지를 바이트 배열로 serialize합니다.  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -109,7 +109,7 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
- 샘플 `UdpChannelListener` 에서 구현 하는는 <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스에서 파생 됩니다. 단일 UDP 소켓을 사용하여 데이터그램을 받습니다. `OnOpen` 메서드는 비동기 루프에서 UDP 소켓을 사용하여 데이터를 받습니다. 그런 다음 데이터는 메시지 인코딩 프레임워크를 통해 메시지로 변환됩니다.  
+ `UdpChannelListener`샘플에서 구현 하는는 클래스에서 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> 됩니다. 단일 UDP 소켓을 사용하여 데이터그램을 받습니다. `OnOpen` 메서드는 비동기 루프에서 UDP 소켓을 사용하여 데이터를 받습니다. 그런 다음 데이터는 메시지 인코딩 프레임워크를 통해 메시지로 변환됩니다.  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
@@ -122,7 +122,7 @@ message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffe
   
 <a name="AddingABindingElement"></a>
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
- 이제 팩터리와 채널이 빌드되었으므로 바인딩을 통해 ServiceModel 런타임에 팩터리와 채널을 노출해야 합니다. 바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다. 스택의 각 요소는 [ \<binding>](../../configure-apps/file-schema/wcf/bindings.md) 요소로 표시 됩니다.  
+ 이제 팩터리와 채널이 빌드되었으므로 바인딩을 통해 ServiceModel 런타임에 팩터리와 채널을 노출해야 합니다. 바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다. 스택의 각 요소는 요소로 표시 됩니다 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) .  
   
  이 샘플에서 바인딩 요소는 `UdpTransportBindingElement`에서 파생된 <xref:System.ServiceModel.Channels.TransportBindingElement>로, 바인딩에 연결되는 팩터리를 빌드하기 위해 다음 메서드를 재정의합니다.  
   
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  이 바인딩 요소에는 `BindingElement`를 복제하고 soap.udp 체계를 반환하는 멤버도 포함됩니다.  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>전송 바인딩 요소에 대해 메타데이터 지원 추가  
- 전송을 메타데이터 시스템에 통합하려면 정책 가져오기 및 내보내기를 모두 지원해야 합니다. 이를 통해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 통해 바인딩의 클라이언트를 생성할 수 있습니다.  
+ 전송을 메타데이터 시스템에 통합하려면 정책 가져오기 및 내보내기를 모두 지원해야 합니다. 이를 통해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 통해 바인딩의 클라이언트를 생성할 수 있습니다.  
   
 ### <a name="adding-wsdl-support"></a>WSDL 지원 추가  
  바인딩의 전송 바인딩 요소는 메타데이터에서 주소 지정 정보를 내보내고 가져옵니다. 또한 전송 바인딩 요소는 SOAP 바인딩을 사용할 때 메타데이터에서 올바른 전송 URI을 내보낼 수 있어야 합니다.  
@@ -185,7 +185,7 @@ if (soapBinding != null)
   
  Svcutil.exe를 실행하는 경우 Svcutil.exe에서 WSDL 가져오기 확장을 로드하는 방법은 두 가지가 있습니다.  
   
-1. /SvcutilConfig:\<file>를 사용 하 여 svcutil.exe를 구성 파일에 지정 합니다.  
+1. /SvcutilConfig:를 사용 하 여 구성 파일에 Svcutil.exe를 가리킵니다 \<file> .  
   
 2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  사용자 지정 바인딩 요소는 서비스 엔드포인트가 해당 바인딩 요소의 기능을 표현하도록 WSDL 바인딩에서 정책 어설션을 내보낼 수 있습니다.  
   
 #### <a name="policy-export"></a>정책 내보내기  
- `UdpTransportBindingElement` 형식은 정책 내보내기 `IPolicyExportExtension` 에 대 한 지원을 추가 하기 위해을 구현 합니다. 그 결과, `System.ServiceModel.MetadataExporter`는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
+ `UdpTransportBindingElement`형식은 `IPolicyExportExtension` 정책 내보내기에 대 한 지원을 추가 하기 위해을 구현 합니다. 그 결과, `System.ServiceModel.MetadataExporter`는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
   
  `IPolicyExportExtension.ExportPolicy`에서는 멀티캐스트 모드인 경우 UDP용 어설션 및 다른 어설션을 추가합니다. 이는 멀티캐스트 모드가 통신 스택의 구성 방법에 영향을 주므로 양쪽 모두에서 조정되어야 하기 때문입니다.  
   
@@ -247,7 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  그런 다음 등록된 클래스(`IPolicyImporterExtension`)로부터 `UdpBindingElementImporter`을 구현합니다. `ImportPolicy()`에서는 네임스페이스의 어설션을 검토하면서 전송 생성을 위한 어설션을 처리하고 멀티캐스트인지 여부를 확인합니다. 또한 처리하는 어설션을 바인딩 어설션 목록에서 제거해야 합니다. 다시 한 번 말하지만 Svcutil.exe를 실행할 때 통합하는 방법은 두 가지가 있습니다.  
   
-1. /SvcutilConfig:\<file>를 사용 하 여 svcutil.exe를 구성 파일에 지정 합니다.  
+1. /SvcutilConfig:를 사용 하 여 구성 파일에 Svcutil.exe를 가리킵니다 \<file> .  
   
 2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
@@ -257,7 +257,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 - 사용자 지정 바인딩을 통해 사용: 사용자 지정 바인딩에서는 사용자가 임의의 바인딩 요소 집합을 기반으로 직접 바인딩을 만들 수 있습니다.  
   
-- 해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 WCF는 `BasicHttpBinding`, `NetTcpBinding`, 등의 다양 한 시스템 정의 바인딩을 제공 `WsHttpBinding`합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
+- 해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 WCF는,, 등의 다양 한 시스템 정의 바인딩을 제공 `BasicHttpBinding` `NetTcpBinding` `WsHttpBinding` 합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
   
  샘플에서는 `SampleProfileUdpBinding`에서 파생된 <xref:System.ServiceModel.Channels.Binding>의 프로필 바인딩을 구현합니다. `SampleProfileUdpBinding`은 최대 네 개의 바인딩 요소, 즉 `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` 및 `ReliableSessionBindingElement`를 포함합니다.  
   
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>바인딩 섹션  
- `SampleProfileUdpBindingCollectionElement` 섹션은 구성 시스템에 `StandardBindingCollectionElement`을 노출하는 `SampleProfileUdpBinding`입니다. 대량의 구현은 `SampleProfileUdpBindingConfigurationElement`로부터 파생되는 `StandardBindingElement`에 위임됩니다. 에 `SampleProfileUdpBindingConfigurationElement` 는의 `SampleProfileUdpBinding`속성과 `ConfigurationElement` 바인딩에서 매핑할 함수에 해당 하는 속성이 있습니다. 마지막으로 다음 샘플 코드와 같이 `OnApplyConfiguration`에서 `SampleProfileUdpBinding` 메서드를 재정의합니다.  
+ `SampleProfileUdpBindingCollectionElement` 섹션은 구성 시스템에 `StandardBindingCollectionElement`을 노출하는 `SampleProfileUdpBinding`입니다. 대량의 구현은 `SampleProfileUdpBindingConfigurationElement`로부터 파생되는 `StandardBindingElement`에 위임됩니다. 에는 `SampleProfileUdpBindingConfigurationElement` 의 속성과 `SampleProfileUdpBinding` 바인딩에서 매핑할 함수에 해당 하는 속성이 있습니다 `ConfigurationElement` . 마지막으로 다음 샘플 코드와 같이 `OnApplyConfiguration`에서 `SampleProfileUdpBinding` 메서드를 재정의합니다.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 테스트 서비스 및 클라이언트  
- 이 샘플 전송을 사용하기 위한 테스트 코드는 UdpTestService 및 UdpTestClient 디렉터리에 있습니다. 서비스 코드는 두 가지 테스트로 구성됩니다. 하나는 코드에서 바인딩 및 엔드포인트를 설정하고, 다른 하나는 구성을 통해 바인딩 및 엔드포인트를 설정합니다. 두 테스트 모두 두 개의 엔드포인트를 사용합니다. 하나의 끝점은 `SampleUdpProfileBinding` [ \<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) 가로 `true`설정 된를 사용 합니다. 다른 엔드포인트는 `UdpTransportBindingElement`가 포함된 사용자 지정 바인딩을 사용합니다. 이는 [ \<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) 을 `SampleUdpProfileBinding` 로 `false`설정 하 여를 사용 하는 것과 같습니다. 두 테스트 모두 서비스를 만들고 각 바인딩에 엔드포인트를 추가하며 서비스를 연 다음 서비스를 닫기 전에 사용자가 Enter 키를 누를 때까지 기다립니다.  
+ 이 샘플 전송을 사용하기 위한 테스트 코드는 UdpTestService 및 UdpTestClient 디렉터리에 있습니다. 서비스 코드는 두 가지 테스트로 구성됩니다. 하나는 코드에서 바인딩 및 엔드포인트를 설정하고, 다른 하나는 구성을 통해 바인딩 및 엔드포인트를 설정합니다. 두 테스트 모두 두 개의 엔드포인트를 사용합니다. 하나의 끝점은가 `SampleUdpProfileBinding` 로 설정 된를 사용 합니다 [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `true` . 다른 엔드포인트는 `UdpTransportBindingElement`가 포함된 사용자 지정 바인딩을 사용합니다. 이는 `SampleUdpProfileBinding` [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) 를로 설정 하 여를 사용 하는 것과 같습니다 `false` . 두 테스트 모두 서비스를 만들고 각 바인딩에 엔드포인트를 추가하며 서비스를 연 다음 서비스를 닫기 전에 사용자가 Enter 키를 누를 때까지 기다립니다.  
   
  서비스 테스트 애플리케이션을 시작하면 다음과 같이 출력되어야 합니다.  
   
@@ -466,9 +466,9 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
+1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
-2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
 3. 앞의 "UDP 테스트 서비스 및 클라이언트" 단원을 참조하십시오.  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`
