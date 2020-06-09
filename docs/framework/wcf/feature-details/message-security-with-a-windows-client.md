@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595234"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 클라이언트를 사용하는 메시지 보안
-이 시나리오에서는 WCF(Windows 통신 재단) 클라이언트와 메시지 보안 모드로 보호되는 서버를 보여 주며, 이 시나리오에서는 클라이언트와 서비스는 Windows 자격 증명을 사용하여 인증됩니다.  
+이 시나리오에서는 메시지 보안 모드에서 보호 되는 WCF (Windows Communication Foundation) 클라이언트 및 서버를 보여 줍니다. 클라이언트와 서비스는 Windows 자격 증명을 사용하여 인증됩니다.  
   
- ![Windows 클라이언트를 가진 메시지 보안](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 클라이언트를 사용 하는 메시지 보안](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|WCF 전용|  
+|상호 운용성|WCF만|  
 |인증(서버)|서버와 클라이언트의 상호 인증|  
 |인증(클라이언트)|서버와 클라이언트의 상호 인증|  
 |무결성|예, 공유 보안 컨텍스트 사용|  
@@ -72,12 +72,12 @@ ms.locfileid: "79184623"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>클라이언트  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -118,5 +118,5 @@ ms.locfileid: "79184623"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

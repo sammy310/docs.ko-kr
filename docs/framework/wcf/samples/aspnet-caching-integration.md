@@ -2,12 +2,12 @@
 title: ASP.NET 캐싱 통합
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594753"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 캐싱 통합
 
@@ -22,17 +22,17 @@ ASP.NET 출력 캐시와 통합
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
 ## <a name="discussion"></a>토론
 
-이 샘플에서는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>를 사용 하 여 WCF (Windows Communication Foundation) 서비스와 함께 ASP.NET 출력 캐싱을 활용 합니다. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>는 서비스 작업에 적용되며, 구성 파일에서 지정된 작업의 응답에 적용해야 하는 캐시 프로필의 이름을 제공합니다.
+이 샘플에서는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Windows Communication Foundation (WCF) 서비스에서를 사용 하 여 ASP.NET 출력 캐싱을 활용 합니다. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>는 서비스 작업에 적용되며, 구성 파일에서 지정된 작업의 응답에 적용해야 하는 캐시 프로필의 이름을 제공합니다.
 
-샘플 서비스 프로젝트의 Service.cs 파일에서 `GetCustomer` 및 `GetCustomers` 작업은 모두 캐시 프로필 이름 "CacheFor60Seconds"을 제공 하는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>표시 됩니다. Service 프로젝트의 Web.config 파일에서 캐시 프로필 "CacheFor60Seconds"는 <`system.web`>의 <`caching`> 요소 아래에 제공 됩니다. 이 캐시 프로필의 `duration` 특성 값은 "60" 이므로이 프로필과 연결 된 응답은 60 초 동안 ASP.NET 출력 캐시에 캐시 됩니다. 또한이 캐시 프로필의 경우에는 `varmByParam` 특성이 "format"으로 설정 되므로 `format` 쿼리 문자열 매개 변수에 대 한 값이 서로 다른 요청에서 응답이 별도로 캐시 됩니다. 마지막으로, 캐시 프로필의 `varyByHeader` 특성이 "Accept"로 설정 되어 있기 때문에 Accept 헤더 값이 다른 요청에서는 응답이 별도로 캐시 됩니다.
+샘플 서비스 프로젝트의 Service.cs 파일에서 `GetCustomer` 및 작업은 모두 `GetCustomers` <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 캐시 프로필 이름 "CacheFor60Seconds"을 제공 하는로 표시 됩니다. Service 프로젝트의 Web.config 파일에서 캐시 프로필 "CacheFor60Seconds"은 `caching` < >의 < > 요소 아래에 제공 됩니다 `system.web` . 이 캐시 프로필의 경우 특성의 값은 `duration` "60" 이므로이 프로필과 연결 된 응답은 60 초 동안 ASP.NET 출력 캐시에 캐시 됩니다. 또한이 캐시 프로필의 경우 특성은 `varmByParam` "format"으로 설정 되므로 쿼리 문자열 매개 변수에 대 한 값이 서로 다른 요청에서는 `format` 응답이 별도로 캐시 됩니다. 마지막으로, 캐시 프로필의 `varyByHeader` 특성이 "accept"로 설정 되어 있으므로 accept 헤더 값이 서로 다른 요청에서 응답이 별도로 캐시 됩니다.
 
-Client 프로젝트의 Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. WCF 채널 팩터리 및 <xref:System.Net.WebClient>와 같은 다른 .NET Framework 클래스를 사용 하 여 서비스에 액세스할 수도 있습니다. SDK의 다른 샘플 (예: [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 예제)에서는 이러한 클래스를 사용 하 여 WCF 서비스와 통신 하는 방법을 보여 줍니다.
+Client 프로젝트의 Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. 또한 WCF 채널 팩터리 및와 같은 다른 .NET Framework 클래스를 사용 하 여 서비스에 액세스할 수 있습니다 <xref:System.Net.WebClient> . SDK의 다른 샘플 (예: [기본 HTTP 서비스](basic-http-service.md) 예제)에서는 이러한 클래스를 사용 하 여 WCF 서비스와 통신 하는 방법을 보여 줍니다.
 
 ## <a name="to-run-the-sample"></a>이 샘플을 실행하려면
 

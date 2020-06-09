@@ -2,12 +2,12 @@
 title: 워크플로 서비스 개요
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347858"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594870"
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
 
@@ -46,7 +46,7 @@ WCF에서는 두 개의 MSMQ 기반 바인딩, <xref:System.ServiceModel.NetMsmq
 
 ## <a name="hosting-a-workflow-service"></a>워크플로 서비스 호스팅
 
-WCF 서비스와 마찬가지로 워크플로 서비스는 호스팅해야 합니다. WCF 서비스는 <xref:System.ServiceModel.ServiceHost> 클래스를 사용 하 여 서비스를 호스트 하 고 워크플로 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스를 사용 하 여 서비스를 호스팅합니다. WCF 서비스와 마찬가지로 워크플로 서비스는 다양 한 방법으로 호스팅될 수 있습니다. 예를 들면 다음과 같습니다.
+WCF 서비스와 마찬가지로 워크플로 서비스는 호스팅해야 합니다. WCF 서비스는 클래스를 사용 하 여 서비스를 호스팅하고 <xref:System.ServiceModel.ServiceHost> 워크플로 서비스를 사용 하 여 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스를 호스팅합니다. WCF 서비스와 마찬가지로 워크플로 서비스는 다양 한 방법으로 호스팅될 수 있습니다. 예를 들면 다음과 같습니다.
 
 - 관리 되는 .NET Framework 응용 프로그램
 
@@ -56,9 +56,9 @@ WCF 서비스와 마찬가지로 워크플로 서비스는 호스팅해야 합�
 
 - 관리되는 Windows 서비스에서 호스팅
 
-관리 되는 .NET Framework 응용 프로그램 또는 관리 되는 Windows 서비스에서 호스트 되는 워크플로 서비스는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 속성 내에 워크플로 정의를 포함 하는 <xref:System.ServiceModel.Activities.WorkflowService> 인스턴스를 전달 합니다. 메시징 작업을 포함하는 워크플로 정의는 워크플로 서비스로 노출됩니다.
+관리 되는 .NET Framework 응용 프로그램 또는 관리 되는 Windows 서비스에서 호스트 되는 워크플로 서비스는 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.Activities.WorkflowServiceHost> <xref:System.ServiceModel.Activities.WorkflowService> 속성 내에서 워크플로 정의를 포함 하는의 인스턴스를 전달 합니다 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> . 메시징 작업을 포함하는 워크플로 정의는 워크플로 서비스로 노출됩니다.
 
-IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (<xref:System.ServiceModel.BasicHttpBinding>사용)이 자동으로 생성 됩니다. 자세한 내용은 [간소화 된 구성](../../../../docs/framework/wcf/simplified-configuration.md)을 참조 하세요. 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 엔드포인트를 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.
+IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (사용 <xref:System.ServiceModel.BasicHttpBinding> )이 자동으로 생성 됩니다. 자세한 내용은 [간소화 된 구성](../simplified-configuration.md)을 참조 하세요. 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 엔드포인트를 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

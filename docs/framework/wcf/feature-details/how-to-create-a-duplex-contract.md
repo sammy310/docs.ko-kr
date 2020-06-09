@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: c603694bca82cfc5852c875946f18f9782209e48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5b6c7eecce08a23490b6ab1991e4561d9462469
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598985"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>방법: 이중 계약 만들기
-이 항목에서는 이중(양방향) 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이중 계약을 사용하면 클라이언트와 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 이중 계약에는 Windows Communication Foundation (WCF) 서비스를 사용할 수 있는 세 가지 메시지 패턴 중 하나입니다. 다른 두 가지 메시지 패턴은 단방향과 요청-회신입니다. 이중 계약은 클라이언트와 서버 간 두 개의 단방향 계약으로 구성되며, 메서드 호출을 상호 관련시키지 않아도 됩니다. 서비스가 클라이언트에 세부 정보를 쿼리하거나 클라이언트에서 이벤트를 명시적으로 발생시킬 때 이러한 종류의 계약을 사용합니다. 이중 계약에 대 한 클라이언트 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 이중 계약을 사용 하 여 서비스에 액세스할](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)합니다. 작업 예제를 참조 하세요. 합니다 [이중](../../../../docs/framework/wcf/samples/duplex.md) 샘플입니다.  
+이 항목에서는 이중(양방향) 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이중 계약을 사용하면 클라이언트와 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 이중 계약은 WCF (Windows Communication Foundation) 서비스에서 사용할 수 있는 세 가지 메시지 패턴 중 하나입니다. 다른 두 메시지 패턴은 단방향 및 요청-회신입니다. 이중 계약은 클라이언트와 서버 간 두 개의 단방향 계약으로 구성되며, 메서드 호출을 상호 관련시키지 않아도 됩니다. 서비스가 클라이언트에 세부 정보를 쿼리하거나 클라이언트에서 이벤트를 명시적으로 발생시킬 때 이러한 종류의 계약을 사용합니다. 이중 계약에 대 한 클라이언트 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 [방법: 이중 계약을 사용 하 여 서비스 액세스](how-to-access-services-with-a-duplex-contract.md)를 참조 하세요. 작업 샘플은 [이중](../samples/duplex.md) 샘플을 참조 하세요.  
   
 ### <a name="to-create-a-duplex-contract"></a>이중 계약을 만들려면  
   
@@ -63,16 +63,16 @@ ms.locfileid: "64638774"
   
 - <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 특성을 적용하면 WSDL(웹 서비스 기술 언어)에서 서비스 계약 정의를 자동으로 생성할 수 있습니다.  
   
-- 사용 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSDL 문서 및 (선택 사항) 코드 및 클라이언트에 대 한 구성을 검색할 수 있습니다.  
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 WSDL 문서를 검색 하 고 (선택 사항) 클라이언트에 대 한 코드 및 구성을 검색 합니다.  
   
 - 이중 서비스를 노출하는 엔드포인트를 보호해야 합니다. 서비스가 이중 메시지를 받으면 들어오는 해당 메시지에서 ReplyTo를 확인하여 회신을 보낼 위치를 결정합니다. 채널이 보안되지 않으면 신뢰할 수 없는 클라이언트가 대상 컴퓨터의 ReplyTo를 사용하여 악의적인 메시지를 보낼 수 있으므로 해당 대상 컴퓨터의 서비스 거부가 발생할 수 있습니다. 정규 요청-회신 메시지를 사용하는 경우에는 ReplyTo가 무시되고 원래 메시지가 들어온 채널에서 응답이 보내지므로 이러한 문제가 생기지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [방법: 이중 계약을와 함께 access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [이중](../../../../docs/framework/wcf/samples/duplex.md)
-- [서비스 디자인 및 구현](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [방법: 서비스 계약 정의](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [세션](../../../../docs/framework/wcf/samples/session.md)
+- [방법: 이중 계약을 사용하여 서비스 액세스](how-to-access-services-with-a-duplex-contract.md)
+- [이중](../samples/duplex.md)
+- [서비스 디자인 및 구현](../designing-and-implementing-services.md)
+- [방법: 서비스 계약 정의](../how-to-define-a-wcf-service-contract.md)
+- [세션](../samples/session.md)

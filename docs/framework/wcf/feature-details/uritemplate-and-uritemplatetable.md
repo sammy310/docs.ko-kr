@@ -2,12 +2,12 @@
 title: UriTemplate 및 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 106ba21b58dabab96afbc8fb6db5cb305386f2fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144697"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595078"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. WCF (Windows Communication Foundation)에는 개발자가 Uri를 제어할 수 있도록 두 개의 새로운 클래스가 추가 되었습니다. <xref:System.UriTemplate>및 <xref:System.UriTemplateTable> 는 WCF에서 URI 기반 디스패치 엔진의 기본을 형성 합니다. 이러한 클래스를 자체적으로 사용할 수도 있으므로 개발자는 WCF 서비스를 구현 하지 않고도 템플릿 및 URI 매핑 메커니즘을 활용할 수 있습니다.  
@@ -326,8 +326,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 ## <a name="see-also"></a>참고 항목
 
-- [WCF 웹 HTTP 프로그래밍 모델 개요](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
-- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
-- [UriTemplate 테이블](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [UriTemplate 테이블 디스패처](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [WCF 웹 HTTP 프로그래밍 모델 개요](wcf-web-http-programming-model-overview.md)
+- [WCF 웹 HTTP 프로그래밍 개체 모델](wcf-web-http-programming-object-model.md)
+- [UriTemplate](../samples/uritemplate-sample.md)
+- [UriTemplate 테이블](../samples/uritemplate-table-sample.md)
+- [UriTemplate 테이블 디스패처](../samples/uritemplate-table-dispatcher-sample.md)

@@ -2,15 +2,15 @@
 title: '전송: UDP 샘플에 의한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ba9fb91623606d3aaba5ba56784b20bb92d343a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596541"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에 의한 사용자 지정 트랜잭션
-이 샘플은 [WCF(Windows](../../../../docs/framework/wcf/samples/transport-udp.md) 통신 재단)[전송 확장성의](../../../../docs/framework/wcf/samples/transport-extensibility.md)전송: UDP 샘플을 기반으로 합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
+이 샘플은 Windows Communication Foundation (WCF)[전송 확장성](transport-extensibility.md)의 [전송: UDP](transport-udp.md) 샘플을 기반으로 합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 전송 샘플의 코드 변경  
  트랜잭션 흐름을 보여 주기 위해 이 샘플에서는 `ICalculatorContract`의 트랜잭션 범위가 필요하도록 `CalculatorService.Add()`의 서비스 계약을 변경합니다. 또한 `System.Guid` 작업의 계약에 `Add` 매개 변수를 추가합니다. 이 매개 변수는 클라이언트 트랜잭션의 식별자를 서비스에 전달하는 데 사용됩니다.  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플은 UDP 패킷을 사용하여 클라이언트와 서비스 간에 메시지를 전달합니다. [전송: 사용자 지정 전송 샘플은](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) 동일한 메커니즘을 사용하여 메시지를 전송하지만 트랜잭션이 흐르면 인코딩된 메시지와 함께 UDP 패킷에 삽입됩니다.  
+ [전송: udp](transport-udp.md) 샘플에서는 udp 패킷을 사용 하 여 클라이언트와 서비스 간에 메시지를 전달 합니다. [전송: 사용자 지정 전송 예제](transport-custom-transactions-over-udp-sample.md) 는 동일한 메커니즘을 사용 하 여 메시지를 전송 하지만 트랜잭션이 이동 하면 인코딩된 메시지와 함께 UDP 패킷에 삽입 됩니다.  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -48,7 +48,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer`는 현재 트랜잭션의 전파 토큰을 메시지 엔터티와 병합하고 이를 버퍼에 배치하는 새로운 기능이 포함된 도우미 메서드입니다.  
   
- 사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현은 트랜잭션 흐름이 필요한 서비스 작업을 알고 이 정보를 WCF에 전달해야 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플에서는 "WCF 메시지 검사기"를 사용하여 이 정보를 가져옵니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
+ 사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현에서 트랜잭션 흐름이 필요한 서비스 작업을 알고이 정보를 WCF에 전달 해야 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플에서는 "WCF 메시지 검사기"를 사용 하 여이 정보를 가져옵니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
   
 - 지정된 메시지 작업에 대해 트랜잭션을 이동해야 하는지 여부를 결정합니다. 이 작업은 `IsTxFlowRequiredForThisOperation()`에서 수행됩니다.  
   
@@ -176,9 +176,9 @@ if (transaction != null)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
-2. 현재 샘플은 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플과 유사하게 실행되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. Windows Vista를 실행하는 경우 높은 권한으로 서비스를 시작해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService.exe를 마우스 오른쪽 단추로 클릭하고 **관리자로 실행을**클릭합니다.  
+2. 현재 샘플은 [전송: UDP](transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. Windows Vista를 실행 하는 경우에는 상승 된 권한으로 서비스를 시작 해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
   
 3. 다음과 같은 출력이 표시됩니다.  
   
@@ -258,10 +258,10 @@ if (transaction != null)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>참고 항목
 
-- [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [전송: UDP](transport-udp.md)

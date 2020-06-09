@@ -2,12 +2,12 @@
 title: WCF에서 사용되는 보안 개념
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595182"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF에서 사용되는 보안 개념
 WCF (Windows Communication Foundation) 보안은 이미 사용 되 고 다양 한 보안 인프라에서 배포 된 개념을 기반으로 빌드됩니다.  
@@ -31,7 +31,7 @@ PKI (공개 키 인프라)는 공개 키 암호화를 사용 하 여 전자적 �
  X.509 인증서는 보안 애플리케이션에 사용되는 기본 자격 증명 양식입니다. X.509 인증서에 대 한 자세한 내용은 [X.509 공개 키 인증서](/windows/win32/seccertenroll/about-x-509-public-key-certificates)를 참조 하세요. X.509 인증서는 인증서 저장소 내에 저장됩니다. Windows를 실행하는 컴퓨터에는 여러 종류의 인증서 저장소가 있으며 저장소마다 용도가 다릅니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))를 참조 하세요.  
   
 ## <a name="web-services-security-specifications"></a>웹 서비스 보안 사양  
- 시스템 정의 바인딩에서는 일반적으로 많이 사용되는 웹 서비스 보안 사양을 지원합니다. 시스템에서 제공 하는 바인딩 및 지원 되는 웹 서비스 사양의 전체 목록은 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md) 을 참조 하세요.  
+ 시스템 정의 바인딩에서는 일반적으로 많이 사용되는 웹 서비스 보안 사양을 지원합니다. 시스템에서 제공 하는 바인딩 및 지원 되는 웹 서비스 사양의 전체 목록은 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](web-services-protocols-supported-by-system-provided-interoperability-bindings.md) 을 참조 하세요.  
   
 ## <a name="access-control-mechanisms"></a>Access Control 메커니즘  
  WCF에서는 서비스 또는 작업에 대한 액세스를 제어하는 여러 방법을 제공합니다. 다음과 같은 방법이 포함됩니다.  
@@ -46,9 +46,9 @@ PKI (공개 키 인프라)는 공개 키 암호화를 사용 하 여 전자적 �
   
 5. ID 모델  
   
- 이러한 항목에 대 한 자세한 내용은 [Access Control 메커니즘](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md) (영문)을 참조 하세요.  
+ 이러한 항목에 대 한 자세한 내용은 [Access Control 메커니즘](access-control-mechanisms.md) (영문)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [보안 개요](security-overview.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

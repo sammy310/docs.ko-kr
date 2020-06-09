@@ -2,12 +2,12 @@
 title: 피어 채널 시나리오
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4c24a0bafa4f73760d02de6242a9ed438d7d60e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046386"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596879"
 ---
 # <a name="peer-channel-scenarios"></a>피어 채널 시나리오
 피어 채널 API는 다음과 같은 개발 시나리오를 지원합니다.  
@@ -24,6 +24,6 @@ ms.locfileid: "62046386"
 ## <a name="gaming"></a>게임  
  애플리케이션 개발자는 피어 채널을 사용하여 중앙 서버 대신 피어 투 피어 메커니즘에 의해 게임이 다른 플레이어에게 전송되고 동기화되는 서버가 없는 게임 버전을 만들 수 있습니다. 소규모 ISV의 경우 이 기능은 중앙 서버의 배포, 유지 관리 및 공급과 관련된 운영비를 제거하는 데 도움이 됩니다. 피어 투 피어 아키텍처를 사용하여 작성된 게임은 인터넷을 통해 또는 유무선 로컬 네트워크에서 재생할 수 있습니다. 피어 투 피어 네트워크를 사용하여 로비, 게임 내 채팅 등의 보조 게임 활동을 개발할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [피어 채널 개념](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [피어 채널 개념](peer-channel-concepts.md)

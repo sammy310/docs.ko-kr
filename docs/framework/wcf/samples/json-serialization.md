@@ -1,20 +1,20 @@
 ---
-title: 데이터계약Json 직렬화기 샘플
+title: DataContractJsonSerializer 샘플
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: d3456582d73640f1802c17d7f29f4931a6f920b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4aa0ee679ae424251000b14abfbacf0590a6ccd3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144632"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592035"
 ---
-# <a name="datacontractjsonserializer-sample"></a>데이터계약Json 직렬화기 샘플
+# <a name="datacontractjsonserializer-sample"></a>DataContractJsonSerializer 샘플
 
 > [!NOTE]
-> 이 샘플은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 대한 것입니다. JSON을 직렬화하고 역직해제하는 대부분의 시나리오의 경우 [System.Text.Json 네임스페이스의](../../../standard/serialization/system-text-json-overview.md)API를 사용하는 것이 좋습니다.
+> 이 샘플은에 대 한 것입니다 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 api를 권장 합니다.
 
-<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 <xref:System.Runtime.Serialization.DataContractSerializer>와 동일한 형식을 지원합니다. JSON 데이터 형식은 AJAX(Asynchronous JavaScript and XML) 스타일 웹 애플리케이션을 작성하는 경우에 특히 유용합니다. WCF(Windows 통신 재단)의 AJAX 지원은 스크립트 관리자 컨트롤을 통해 ASP.NET AJAX와 함께 사용하도록 최적화되어 있습니다. ASP.NET AJAX와 Windows 통신 재단(WCF)을 사용하는 방법의 예는 [AJAX 샘플을](ajax.md)참조하십시오.  
+<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 <xref:System.Runtime.Serialization.DataContractSerializer>와 동일한 형식을 지원합니다. JSON 데이터 형식은 AJAX(Asynchronous JavaScript and XML) 스타일 웹 애플리케이션을 작성하는 경우에 특히 유용합니다. WCF (Windows Communication Foundation)의 AJAX 지원은 ScriptManager 컨트롤을 통해 ASP.NET AJAX와 함께 사용 하도록 최적화 되어 있습니다. ASP.NET AJAX에서 WCF (Windows Communication Foundation)를 사용 하는 방법에 대 한 예제는 [Ajax 샘플](ajax.md)을 참조 하세요.  
   
 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
@@ -61,12 +61,12 @@ Person p2 = (Person)ser.ReadObject(stream1);
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. Windows 통신 기초 샘플 빌드에 설명된 대로 솔루션 JsonSerialization.sln을 [빌드합니다.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. [Windows Communication Foundation 샘플 빌드](building-the-samples.md)에 설명 된 대로 JsonSerialization 솔루션을 빌드합니다.  
   
 2. 결과 콘솔 애플리케이션을 실행합니다.  

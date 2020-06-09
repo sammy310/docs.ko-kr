@@ -1,5 +1,5 @@
 ---
-title: '방법: 메시지 재생을 검색하도록 설정'
+title: '방법: 메시지 재생 검색 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597087"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>방법: 메시지 재생을 검색하도록 설정
+# <a name="how-to-enable-message-replay-detection"></a>방법: 메시지 재생 검색 사용
 공격자가 두 당사자 간에 메시지 스트림을 복사하고 하나 이상의 당사자에게 스트림을 재생하는 경우 재생 공격이 발생합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
   
- 메시지 재생 검색에 대한 자세한 내용은 [메시지 재생 검색](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))을 참조하십시오.  
+ 메시지 재생 검색에 대 한 자세한 내용은 [메시지 재생 검색](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))을 참조 하세요.  
   
- 다음 절차에서는 WCF(Windows 통신 재단)를 사용하여 재생 검색을 제어하는 데 사용할 수 있는 다양한 속성을 보여 줍니다.  
+ 다음 절차에서는 Windows Communication Foundation (WCF)를 사용 하 여 재생 검색을 제어 하는 데 사용할 수 있는 다양 한 속성을 보여 줍니다.  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>코드를 사용하여 클라이언트에서 재생 검색을 제어하려면  
   
-1. <xref:System.ServiceModel.Channels.SecurityBindingElement>에서 사용할 <xref:System.ServiceModel.Channels.CustomBinding>를 만듭니다. 자세한 내용은 [보안 바인딩요소를 사용하여 사용자 지정 바인딩 을 만드는 방법을 참조하세요.](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md) 다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>를 사용하여 만든 <xref:System.ServiceModel.Channels.SecurityBindingElement>를 사용합니다.  
+1. <xref:System.ServiceModel.Channels.SecurityBindingElement>에서 사용할 <xref:System.ServiceModel.Channels.CustomBinding>를 만듭니다. 자세한 내용은 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조 하세요. 다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>를 사용하여 만든 <xref:System.ServiceModel.Channels.SecurityBindingElement>를 사용합니다.  
   
 2. <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 속성을 사용하여 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 클래스에 대한 참조를 반환하고 다음 속성을 적절히 설정합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "79184948"
   
     3. `ReplayWindow`. `TimeSpan` 값입니다. 이 값은 매개자를 통해 서버에서 메시지를 보낸 후 클라이언트에 도달하기까지 메시지가 네트워크에 있을 수 있는 시간을 제어합니다. 클라이언트는 재생 검색을 위해 최신 `ReplayWindow` 내에서 보낸 메시지 서명을 추적합니다.  
   
-    4. `ReplayCacheSize`. 정수 값입니다. 클라이언트는 캐시에 메시지 서명을 저장합니다. 이 설정은 캐시에서 저장할 수 있는 서명 수를 지정합니다. 최신 재생 창 내에서 보낸 메시지 수가 캐시 한계에 도달하면 가장 오래 전에 캐시된 서명이 시간 제한에 도달할 때까지 새 메시지가 거부됩니다. 기본값은 500000입니다.  
+    4. `ReplayCacheSize`. 정수 값입니다. 클라이언트는 캐시에 메시지 서명을 저장합니다. 이 설정은 캐시에서 저장할 수 있는 서명 수를 지정합니다. 최신 재생 창 내에서 보낸 메시지 수가 캐시 한계에 도달하면 가장 오래 전에 캐시된 서명이 시간 제한에 도달할 때까지 새 메시지가 거부됩니다. 기본값은 50만입니다.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>코드를 사용하여 서비스에서 재생 검색을 제어하려면  
   
@@ -46,11 +46,11 @@ ms.locfileid: "79184948"
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>클라이언트나 서비스에 대한 구성에서 재생 검색을 제어하려면  
   
-1. 사용자 바인딩>만듭니다. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+1. 을 만듭니다 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) .  
   
 2. `<security>` 요소를 만듭니다.  
   
-3. localClientSettings>또는 [ \<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)만듭니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
+3. 또는를 [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md) 만듭니다 [\<localServiceSettings>](../../configure-apps/file-schema/wcf/localservicesettings-element.md) .  
   
 4. `detectReplays`, `maxClockSkew`, `replayWindow` 및 `replayCacheSize` 특성 값을 적절히 설정합니다. 다음 예제에서는 `<localServiceSettings>` 요소 모두의 특성을 설정합니다.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "79184948"
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [보안 대화 및 보안 세션](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [보안 대화 및 보안 세션](secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

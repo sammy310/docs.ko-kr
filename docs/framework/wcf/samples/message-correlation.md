@@ -2,12 +2,12 @@
 title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 9ded0886920f9f0b3d2f9b441061253b42a1c567
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591646"
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 
@@ -17,7 +17,7 @@ ms.locfileid: "76747176"
 
  `IOrderProcessor` 서비스 계약은 큐에 사용하기 적합한 단방향 서비스 작업을 정의합니다. MSMQ 메시지에는 동작 헤더가 없기 때문에 여러 MSMQ 메시지를 작업 계약에 자동으로 매핑할 수 없습니다. 따라서 이 경우에는 한 작업 계약만 있을 수 있습니다. 서비스에 좀더 많은 작업 계약을 정의하려는 경우 애플리케이션은 발송할 작업 계약을 결정하는 데 사용할 수 있는 MSMQ 메시지의 헤더에 대한 정보(예: 레이블 또는 correlationID)를 제공해야 합니다.
 
- MSMQ 메시지에는 작업 계약의 다른 매개 변수에 매핑되는 헤더에 대한 정보도 포함되지 않습니다. 따라서 작업 계약에는 한 매개 변수만 있을 수 있습니다. 매개 변수는 기본 MSMQ 메시지를 포함 하는 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>유형입니다. `MsmqMessage<T>` 클래스의 "T" 형식은 MSMQ 메시지 본문에 serialize되는 데이터를 나타냅니다. 이 샘플에서는 `PurchaseOrder` 형식이 MSMQ 메시지 본문으로 serialize됩니다.
+ MSMQ 메시지에는 작업 계약의 다른 매개 변수에 매핑되는 헤더에 대한 정보도 포함되지 않습니다. 따라서 작업 계약에는 한 매개 변수만 있을 수 있습니다. 매개 변수는 내부 MSMQ 메시지를 포함 하는 형식입니다 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> . `MsmqMessage<T>` 클래스의 "T" 형식은 MSMQ 메시지 본문에 serialize되는 데이터를 나타냅니다. 이 샘플에서는 `PurchaseOrder` 형식이 MSMQ 메시지 본문으로 serialize됩니다.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -68,7 +68,7 @@ public class OrderProcessorService : IOrderProcessor
 
  서비스는 사용자 지정 클라이언트 `OrderResponseClient`를 사용하여 MSMQ 메시지를 큐에 보냅니다. 메시지를 수신 하 고 처리 하는 응용 프로그램은 WCF 응용 프로그램이 아니라 MSMQ 응용 프로그램 이므로 두 응용 프로그램 간에 암시적 서비스 계약이 없습니다. 따라서 이 시나리오에서는 Svcutil.exe 도구를 사용하여 프록시를 만들 수 없습니다.
 
- 사용자 지정 프록시는 `msmqIntegrationBinding` 바인딩을 사용 하 여 메시지를 보내는 모든 WCF 응용 프로그램에 대해 기본적으로 동일 합니다. 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.
+ 사용자 지정 프록시는 바인딩을 사용 하 여 메시지를 보내는 모든 WCF 응용 프로그램에 대해 기본적으로 동일 합니다 `msmqIntegrationBinding` . 하지만 다른 프록시와 달리 사용자 지정 프록시에는 일정 범위의 서비스 작업이 포함되지 않습니다. 메시지 제출 작업으로만 한정됩니다.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -272,7 +272,7 @@ static void DisplayOrderStatus()
 
 ## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
@@ -284,11 +284,11 @@ static void DisplayOrderStatus()
 
     4. **트랜잭션** 상자를 확인 합니다.
 
-    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.
+    5. `ServiceModelSamplesTransacted`새 큐의 이름으로을 입력 합니다.
 
-3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
+3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
-4. 단일 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+4. 단일 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
 ## <a name="run-the-sample-across-computers"></a>컴퓨터에서 샘플 실행
 
@@ -309,11 +309,11 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
 ## <a name="see-also"></a>참고 항목
 
-- [WCF의 큐](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [WCF의 큐](../feature-details/queuing-in-wcf.md)
 - [메시지 큐](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

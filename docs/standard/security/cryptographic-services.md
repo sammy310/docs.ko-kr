@@ -1,5 +1,6 @@
 ---
 title: 암호화 서비스
+description: ClickOnce 매니페스트, Suite B, & CNG (Cryptography Next Generation) 지원 등 .NET에서 지원 되는 암호화 방법 및 방법에 대 한 개요를 확인 하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: e67b1feb27b6eae7062e7b3e02ac79c8929f1df1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288409"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596334"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -268,7 +269,7 @@ CNG(Cryptography Next Generation) 클래스는 네이티브 CNG 함수 관련 �
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[암호화 모델](cryptography-model.md)|기본 클래스 라이브러리에서 암호화가 구현되는 방식에 대해 설명합니다.|
 |[연습: 암호화 애플리케이션 만들기](walkthrough-creating-a-cryptographic-application.md)|기본 암호화 및 해독 작업을 보여 줍니다.|
