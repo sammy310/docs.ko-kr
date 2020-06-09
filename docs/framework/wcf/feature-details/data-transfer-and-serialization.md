@@ -5,48 +5,48 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593491"
 ---
-# <a name="data-transfer-and-serialization"></a><span data-ttu-id="38959-102">데이터 전송 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="38959-102">Data Transfer and Serialization</span></span>
-<span data-ttu-id="38959-103">연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-103">In a connected system, services and clients depend on the exchange of data to accomplish any task.</span></span> <span data-ttu-id="38959-104">서비스나 클라이언트의 개발자는 또한 Windows Communication Foundation (WCF) 효율적이 고 쉽게 유지 관리할 수 있는 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 하는 방법을 이해 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-104">As a developer of a service or client, you must also understand how Windows Communication Foundation (WCF) handles data and data serialization in order to create applications that are efficient and easy to maintain.</span></span>  
+# <a name="data-transfer-and-serialization"></a><span data-ttu-id="33d6f-102">데이터 전송 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="33d6f-102">Data Transfer and Serialization</span></span>
+<span data-ttu-id="33d6f-103">연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-103">In a connected system, services and clients depend on the exchange of data to accomplish any task.</span></span> <span data-ttu-id="33d6f-104">서비스 또는 클라이언트 개발자는 효율적이 고 쉽게 관리할 수 있는 응용 프로그램을 만들기 위해 WCF (Windows Communication Foundation)에서 데이터 및 데이터 serialization을 처리 하는 방법을 이해 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-104">As a developer of a service or client, you must also understand how Windows Communication Foundation (WCF) handles data and data serialization in order to create applications that are efficient and easy to maintain.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="38959-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="38959-105">In This Section</span></span>  
- [<span data-ttu-id="38959-106">서비스 계약에서 데이터 전송 지정</span><span class="sxs-lookup"><span data-stu-id="38959-106">Specifying Data Transfer in Service Contracts</span></span>](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- <span data-ttu-id="38959-107">서비스에서 데이터 전송의 기본 개념에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-107">Describes the basic concepts of data transfer in services.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="33d6f-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="33d6f-105">In This Section</span></span>  
+ [<span data-ttu-id="33d6f-106">서비스 계약에서 데이터 전송 지정</span><span class="sxs-lookup"><span data-stu-id="33d6f-106">Specifying Data Transfer in Service Contracts</span></span>](specifying-data-transfer-in-service-contracts.md)  
+ <span data-ttu-id="33d6f-107">서비스에서 데이터 전송의 기본 개념에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-107">Describes the basic concepts of data transfer in services.</span></span>  
   
- [<span data-ttu-id="38959-108">데이터 계약 사용</span><span class="sxs-lookup"><span data-stu-id="38959-108">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- <span data-ttu-id="38959-109">데이터 계약의 정의와 데이터 계약을 만들고 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-109">Describes what data contracts are and how to create and use them.</span></span>  
+ [<span data-ttu-id="33d6f-108">데이터 계약 사용</span><span class="sxs-lookup"><span data-stu-id="33d6f-108">Using Data Contracts</span></span>](using-data-contracts.md)  
+ <span data-ttu-id="33d6f-109">데이터 계약의 정의와 데이터 계약을 만들고 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-109">Describes what data contracts are and how to create and use them.</span></span>  
   
- [<span data-ttu-id="38959-110">데이터 계약 직렬 변환기</span><span class="sxs-lookup"><span data-stu-id="38959-110">Data Contract Serializer</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- <span data-ttu-id="38959-111"><xref:System.Runtime.Serialization.DataContractSerializer> 클래스 또는 <xref:System.Runtime.Serialization.XmlObjectSerializer> 클래스의 확장을 사용하여 데이터의 serialization을 수행하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-111">Describes how to accomplish serialization of data with the <xref:System.Runtime.Serialization.DataContractSerializer> class or any extension of the <xref:System.Runtime.Serialization.XmlObjectSerializer> class.</span></span>  
+ [<span data-ttu-id="33d6f-110">데이터 계약 직렬 변환기</span><span class="sxs-lookup"><span data-stu-id="33d6f-110">Data Contract Serializer</span></span>](data-contract-serializer.md)  
+ <span data-ttu-id="33d6f-111"><xref:System.Runtime.Serialization.DataContractSerializer> 클래스 또는 <xref:System.Runtime.Serialization.XmlObjectSerializer> 클래스의 확장을 사용하여 데이터의 serialization을 수행하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-111">Describes how to accomplish serialization of data with the <xref:System.Runtime.Serialization.DataContractSerializer> class or any extension of the <xref:System.Runtime.Serialization.XmlObjectSerializer> class.</span></span>  
   
- [<span data-ttu-id="38959-112">XmlSerializer 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="38959-112">Using the XmlSerializer Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- <span data-ttu-id="38959-113"><xref:System.Xml.Serialization.XmlSerializer> 클래스 대신 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하는 방법 및 이유에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-113">Describes how and why to use the <xref:System.Xml.Serialization.XmlSerializer> class, an alternative to the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span>  
+ [<span data-ttu-id="33d6f-112">XmlSerializer 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="33d6f-112">Using the XmlSerializer Class</span></span>](using-the-xmlserializer-class.md)  
+ <span data-ttu-id="33d6f-113"><xref:System.Xml.Serialization.XmlSerializer> 클래스 대신 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하는 방법 및 이유에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-113">Describes how and why to use the <xref:System.Xml.Serialization.XmlSerializer> class, an alternative to the <xref:System.Runtime.Serialization.DataContractSerializer> class.</span></span>  
   
- [<span data-ttu-id="38959-114">메시지 계약 사용</span><span class="sxs-lookup"><span data-stu-id="38959-114">Using Message Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
- <span data-ttu-id="38959-115">메시지 계약에서 SOAP 메시지를 정밀하게 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-115">Describes how message contracts allow fine control over SOAP messages.</span></span>  
+ [<span data-ttu-id="33d6f-114">메시지 계약 사용</span><span class="sxs-lookup"><span data-stu-id="33d6f-114">Using Message Contracts</span></span>](using-message-contracts.md)  
+ <span data-ttu-id="33d6f-115">메시지 계약에서 SOAP 메시지를 정밀하게 제어하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-115">Describes how message contracts allow fine control over SOAP messages.</span></span>  
   
- [<span data-ttu-id="38959-116">Message 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="38959-116">Using the Message Class</span></span>](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
- <span data-ttu-id="38959-117">Message 클래스 기능을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-117">Describes how to use Message class features.</span></span>  
+ [<span data-ttu-id="33d6f-116">Message 클래스 사용</span><span class="sxs-lookup"><span data-stu-id="33d6f-116">Using the Message Class</span></span>](using-the-message-class.md)  
+ <span data-ttu-id="33d6f-117">Message 클래스 기능을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-117">Describes how to use Message class features.</span></span>  
   
- [<span data-ttu-id="38959-118">필터링</span><span class="sxs-lookup"><span data-stu-id="38959-118">Filtering</span></span>](../../../../docs/framework/wcf/feature-details/filtering.md)  
- <span data-ttu-id="38959-119">여러 조건을 기반으로 메시지 전처리를 사용하는 필터링에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-119">Describes filtering, which enables pre-processing of a message based on various criteria.</span></span>  
+ [<span data-ttu-id="33d6f-118">필터링</span><span class="sxs-lookup"><span data-stu-id="33d6f-118">Filtering</span></span>](filtering.md)  
+ <span data-ttu-id="33d6f-119">여러 조건을 기반으로 메시지 전처리를 사용하는 필터링에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-119">Describes filtering, which enables pre-processing of a message based on various criteria.</span></span>  
   
- [<span data-ttu-id="38959-120">큰 데이터 및 스트리밍</span><span class="sxs-lookup"><span data-stu-id="38959-120">Large Data and Streaming</span></span>](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- <span data-ttu-id="38959-121">이진 파일과 같은 큰 데이터 블록을 보내는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-121">Describes how to send a large block of data, such as a binary file.</span></span>  
+ [<span data-ttu-id="33d6f-120">큰 데이터 및 스트리밍</span><span class="sxs-lookup"><span data-stu-id="33d6f-120">Large Data and Streaming</span></span>](large-data-and-streaming.md)  
+ <span data-ttu-id="33d6f-121">이진 파일과 같은 큰 데이터 블록을 보내는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-121">Describes how to send a large block of data, such as a binary file.</span></span>  
   
- [<span data-ttu-id="38959-122">데이터에 대한 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="38959-122">Security Considerations for Data</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- <span data-ttu-id="38959-123">데이터 전송 및 serialization을 프로그래밍할 때 알고 있어야 하는 항목에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-123">Describes items to be aware of when programming data transfer and serialization.</span></span>  
+ [<span data-ttu-id="33d6f-122">데이터에 대한 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="33d6f-122">Security Considerations for Data</span></span>](security-considerations-for-data.md)  
+ <span data-ttu-id="33d6f-123">데이터 전송 및 serialization을 프로그래밍할 때 알고 있어야 하는 항목에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-123">Describes items to be aware of when programming data transfer and serialization.</span></span>  
   
- [<span data-ttu-id="38959-124">데이터 전송 아키텍처 개요</span><span class="sxs-lookup"><span data-stu-id="38959-124">Data Transfer Architectural Overview</span></span>](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- <span data-ttu-id="38959-125">WCF에서 데이터 전송의 전반적인 디자인의 뷰를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="38959-125">Describes a view of the overall design of data transfer in WCF.</span></span>  
+ [<span data-ttu-id="33d6f-124">데이터 전송 아키텍처 개요</span><span class="sxs-lookup"><span data-stu-id="33d6f-124">Data Transfer Architectural Overview</span></span>](data-transfer-architectural-overview.md)  
+ <span data-ttu-id="33d6f-125">WCF의 전체 데이터 전송 디자인에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="33d6f-125">Describes a view of the overall design of data transfer in WCF.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="38959-126">참조</span><span class="sxs-lookup"><span data-stu-id="38959-126">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="33d6f-126">참고</span><span class="sxs-lookup"><span data-stu-id="33d6f-126">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -57,10 +57,10 @@ ms.locfileid: "61856559"
   
  <xref:System.Xml.Serialization>  
   
-## <a name="related-sections"></a><span data-ttu-id="38959-127">관련 단원</span><span class="sxs-lookup"><span data-stu-id="38959-127">Related Sections</span></span>  
- [<span data-ttu-id="38959-128">인코더 및 직렬 변환기 확장</span><span class="sxs-lookup"><span data-stu-id="38959-128">Extending Encoders and Serializers</span></span>](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+## <a name="related-sections"></a><span data-ttu-id="33d6f-127">관련 단원</span><span class="sxs-lookup"><span data-stu-id="33d6f-127">Related Sections</span></span>  
+ [<span data-ttu-id="33d6f-128">인코더 및 Serializer 확장</span><span class="sxs-lookup"><span data-stu-id="33d6f-128">Extending Encoders and Serializers</span></span>](../extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a><span data-ttu-id="38959-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="38959-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33d6f-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="33d6f-129">See also</span></span>
 
-- [<span data-ttu-id="38959-130">모범 사례: 데이터 계약 버전 관리</span><span class="sxs-lookup"><span data-stu-id="38959-130">Best Practices: Data Contract Versioning</span></span>](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [<span data-ttu-id="38959-131">서비스 버전 관리</span><span class="sxs-lookup"><span data-stu-id="38959-131">Service Versioning</span></span>](../../../../docs/framework/wcf/service-versioning.md)
+- [<span data-ttu-id="33d6f-130">모범 사례: 데이터 계약 버전 관리</span><span class="sxs-lookup"><span data-stu-id="33d6f-130">Best Practices: Data Contract Versioning</span></span>](../best-practices-data-contract-versioning.md)
+- [<span data-ttu-id="33d6f-131">서비스 버전 관리</span><span class="sxs-lookup"><span data-stu-id="33d6f-131">Service Versioning</span></span>](../service-versioning.md)
