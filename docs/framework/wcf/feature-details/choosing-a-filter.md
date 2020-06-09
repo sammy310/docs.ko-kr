@@ -2,12 +2,12 @@
 title: 필터 선택
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 282f6e9e2bc986feee0d1825ee9d87217d453e50
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587497"
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.
@@ -16,9 +16,9 @@ ms.locfileid: "75964809"
 
 라우팅 서비스에 사용되는 필터를 선택할 때는 각 필터가 작동하는 방식뿐 아니라 들어오는 메시지의 일부로 제공되는 정보도 알고 있어야 합니다. 예를 들어 모든 메시지를 동일한 엔드포인트를 통해 받는 경우 Address 및 EndpointName 필터는 유용하지 않습니다. 이는 모든 메시지가 이러한 필터와 일치하기 때문입니다.
 
-### <a name="action"></a>동작
+### <a name="action"></a>작업
 
-Action 필터는 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 속성을 검사합니다. 메시지에 있는 Action 헤더의 내용이 필터 구성에 지정된 필터 데이터 값과 일치하면 이 필터는 `true`를 반환합니다. 다음 예에서는 동작 필터를 사용 하 여 `http://namespace/contract/operation/`값을 포함 하는 action 헤더와 메시지를 일치 시키는 `FilterElement`를 정의 합니다.
+Action 필터는 <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> 속성을 검사합니다. 메시지에 있는 Action 헤더의 내용이 필터 구성에 지정된 필터 데이터 값과 일치하면 이 필터는 `true`를 반환합니다. 다음 예제에서는 `FilterElement` 작업 필터를 사용 하 여 값을 포함 하는 동작 헤더와 메시지를 일치 시키는를 정의 합니다 `http://namespace/contract/operation/` .
 
 ```xml
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />
@@ -32,7 +32,7 @@ ActionMessageFilter action1 = new ActionMessageFilter(new string[] { "http://nam
 
 ### <a name="endpointaddress"></a>EndpointAddress
 
-EndpointAddress 필터는 메시지를 수신하는 EndpointAddress를 검사합니다. 메시지를 수신하는 주소가 필터 구성에 지정된 필터 주소와 정확히 일치하면 이 필터는 `true`를 반환합니다. 다음 예에서는 주소 필터를 사용 하 여 "http://\<hostname >/vdir/s.svc/b"로 주소가 지정 된 모든 메시지를 일치 시키는 `FilterElement`를 정의 합니다.
+EndpointAddress 필터는 메시지를 수신하는 EndpointAddress를 검사합니다. 메시지를 수신하는 주소가 필터 구성에 지정된 필터 주소와 정확히 일치하면 이 필터는 `true`를 반환합니다. 다음 예제에서는 `FilterElement` 주소 필터를 사용 하 여 "http:///vdir/s.svc/b"로 주소가 지정 된 모든 메시지를 일치 시키는를 정의 합니다 \<hostname> .
 
 ```xml
 <filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />
@@ -51,7 +51,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
 
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix
 
-EndpointAddressPrefix 필터는 EndpointAddress 필터와 마찬가지로 메시지를 수신하는 EndpointAddress를 검사합니다. 그러나 EndpointAddressPrefix 필터는 필터 구성에 지정된 값으로 시작하는 주소를 일치시켜 와일드카드 역할을 합니다. 다음 예에서는 EndpointAddressPrefix 필터를 사용 하 여 `http://<hostname>/vdir*`으로 주소가 지정 된 모든 메시지와 일치 하는 `FilterElement`을 정의 합니다.
+EndpointAddressPrefix 필터는 EndpointAddress 필터와 마찬가지로 메시지를 수신하는 EndpointAddress를 검사합니다. 그러나 EndpointAddressPrefix 필터는 필터 구성에 지정된 값으로 시작하는 주소를 일치시켜 와일드카드 역할을 합니다. 다음 예제에서는 EndpointAddressPrefix 필터를 사용 하 여 주소가 지정 된 `FilterElement` 모든 메시지를 일치 시키는를 정의 합니다 `http://<hostname>/vdir*` .
 
 ```xml
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />
@@ -96,11 +96,11 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 제공 하는 필터가 적용 되지 않는 메시지에 대해 사용자 지정 일치 논리를 수행 해야 하는 경우 **messagefilter** 클래스의 구현인 사용자 지정 필터를 만들어야 합니다. 예를 들어 들어오는 메시지의 필드를 필터에 구성으로 제공된 알려진 값의 목록과 비교하거나 특정 메시지 요소를 해시한 다음 해당 값을 검사하여 필터가 `true`를 반환해야 하는지 아니면 `false`를 반환해야 하는지 여부를 확인하는 사용자 지정 필터를 만들 수 있습니다.
+에서 제공 하는 필터가 적용 되지 않는 메시지에 대해 사용자 지정 일치 논리를 수행 해야 하는 경우 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] **messagefilter** 클래스의 구현인 사용자 지정 필터를 만들어야 합니다. 예를 들어 들어오는 메시지의 필드를 필터에 구성으로 제공된 알려진 값의 목록과 비교하거나 특정 메시지 요소를 해시한 다음 해당 값을 검사하여 필터가 `true`를 반환해야 하는지 아니면 `false`를 반환해야 하는지 여부를 확인하는 사용자 지정 필터를 만들 수 있습니다.
 
 ### <a name="endpointname"></a>EndpointName
 
-EndpointName 필터는 메시지를 수신한 엔드포인트의 이름을 검사합니다. 다음 예제에서는 EndpointName 필터를 사용 하 여 "SvcEndpoint"에서 받은 메시지를 라우팅하는 `FilterElement`을 정의 합니다.
+EndpointName 필터는 메시지를 수신한 엔드포인트의 이름을 검사합니다. 다음 예제에서는 `FilterElement` EndpointName 필터를 사용 하 여 "SvcEndpoint"에서 받은 메시지를 라우팅하는을 정의 합니다.
 
 ```xml
 <filter name="name1" filterType="Endpoint" filterData="SvcEndpoint" />
@@ -128,7 +128,7 @@ MatchAllMessageFilter matchAll1 = new MatchAllMessageFilter();
 
 ### <a name="xpath"></a>XPath
 
-XPath 필터를 사용하면 메시지 내의 특정 요소를 검사하는 데 사용되는 XPath 쿼리를 지정할 수 있습니다. XPath 필터링은 메시지 내의 XML 주소 지정 가능 항목을 직접 검사하는 데 사용할 수 있는 강력한 필터링 옵션이지만 수신하는 메시지의 구조를 잘 알고 있어야 사용할 수 있습니다. 다음 예제에서는 XPath 필터를 사용 하 여 "ns" 네임 스페이스 접두사에서 참조 하는 네임 스페이스 내에서 "element" 라는 요소의 메시지를 검사 하는 `FilterElement`을 정의 합니다.
+XPath 필터를 사용하면 메시지 내의 특정 요소를 검사하는 데 사용되는 XPath 쿼리를 지정할 수 있습니다. XPath 필터링은 메시지 내의 XML 주소 지정 가능 항목을 직접 검사하는 데 사용할 수 있는 강력한 필터링 옵션이지만 수신하는 메시지의 구조를 잘 알고 있어야 사용할 수 있습니다. 다음 예제에서는 `FilterElement` XPath 필터를 사용 하 여 "ns" 네임 스페이스 접두사에서 참조 하는 네임 스페이스 내에서 "element" 라는 요소의 메시지를 검사 하는를 정의 합니다.
 
 ```xml
 <filter name="xpath1" filterType="XPath" filterData="//ns:element" />
@@ -140,11 +140,11 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 이 필터는 수신하는 메시지에 특정 값이 포함되어 있다는 것을 알고 있는 경우에 유용합니다. 예를 들어 동일한 서비스의 두 버전을 호스팅하는 경우 더 새 버전의 서비스로 주소가 지정된 메시지에 고유한 사용자 지정 헤더 값이 포함되어 있다는 것을 알고 있으면 XPath를 사용하여 이 헤더를 찾아서 이 헤더에 있는 값을 파일 구성에 제공된 다른 값과 비교하여 필터가 일치하는지 확인할 수 있습니다.
 
-XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임스페이스가 포함되어 있기 때문에 XPath 필터를 사용하면 네임스페이스 테이블을 통해 네임스페이스에 대한 고유한 접두사를 정의할 수 있습니다. 네임 스페이스 테이블에 대 한 자세한 내용은 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)를 참조 하세요.
+XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임스페이스가 포함되어 있기 때문에 XPath 필터를 사용하면 네임스페이스 테이블을 통해 네임스페이스에 대한 고유한 접두사를 정의할 수 있습니다. 네임 스페이스 테이블에 대 한 자세한 내용은 [메시지 필터](message-filters.md)를 참조 하세요.
 
 XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 [Xpath 구문](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [방법: 필터 사용](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [메시지 필터](message-filters.md)
+- [방법: 필터 사용](how-to-use-filters.md)
