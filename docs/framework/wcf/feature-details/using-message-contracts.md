@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959877"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600272"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
-일반적으로 WCF (Windows Communication Foundation) 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하며 데이터가 전달 되는 메시지의 구조를 고려 하지 않아도 됩니다. 이러한 애플리케이션의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. 자세한 내용은 [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조 하세요.  
+일반적으로 WCF (Windows Communication Foundation) 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하며 데이터가 전달 되는 메시지의 구조를 고려 하지 않아도 됩니다. 이러한 애플리케이션의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. 자세한 내용은 [서비스 계약에서 데이터 전송 지정](specifying-data-transfer-in-service-contracts.md)을 참조 하세요.  
   
  그러나 SOAP 메시지의 구조를 완벽하게 제어하는 것이 SOAP 메시지의 내용을 제어하는 것만큼이나 중요한 경우도 있습니다. 특히 상호 운용성이 중요한 경우 또는 메시지나 메시지 부분의 수준에서 보안 문제를 특별히 제어해야 하는 경우에는 더욱 그렇습니다. 이러한 경우 필요한 정확한 SOAP 메시지의 구조를 지정할 수 있도록 하는 *메시지 계약* 을 만들 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "69959877"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 애플리케이션에서 스키마를 정의할 수 있습니다. 데이터 계약에 대 한 자세한 내용은 참조 하세요. [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
+ 일반적으로 데이터 계약만으로도 메시지에 대한 스키마를 정의할 수 있습니다. 예를 들어 앞의 예제에서 `BankingTransaction` 및 `BankingTransactionResponse`가 기본 SOAP 메시지의 내용을 정의하기 위한 데이터 계약을 가지고 있는 경우, 대부분의 애플리케이션에서 스키마를 정의할 수 있습니다. 데이터 계약에 대 한 자세한 내용은 [데이터 계약 사용](using-data-contracts.md)을 참조 하세요.  
   
  그러나 연결을 통해 SOAP 메시지 구조가 전송되는 방식을 정확하게 제어해야 하는 경우도 있습니다. 이를 위한 가장 일반적인 시나리오는 사용자 지정 SOAP 헤더를 삽입하는 것입니다. 또 다른 일반적인 시나리오는 메시지의 헤더 및 본문에 대한 보안 속성을 정의하는 것, 즉 이러한 요소를 디지털 서명 및 암호화할지 여부를 결정하는 것입니다. 마지막으로, 일부 타사 SOAP 스택에서는 메시지가 특정 형식이어야 합니다. 메시징 스타일 작업에서는 이 컨트롤을 제공합니다.  
   
@@ -154,7 +154,7 @@ public class BankingTransaction
 > 래핑되지 않은 메시지에 메시지 본문 부분이 두 개 이상이면 WS-I Basic Profile 1.1과 호환되지 않으므로, 새 메시지 계약을 디자인할 때는 이러한 경우를 피해야 합니다. 그러나 특정 상호 운용성 시나리오에서는 래핑되지 않은 메시지 본문 부분이 두 개 이상이어야 할 경우도 있습니다. 메시지 본문에서 두 개 이상의 데이터를 전송하려는 경우 기본(래핑된) 모드를 사용하는 것이 좋습니다. 래핑되지 않은 메시지에 메시지 헤더가 두 개 이상 있는 것도 전적으로 허용됩니다.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>메시지 계약에 사용자 지정 형식 사용  
- 개별 메시지 헤더 및 메시지 본문 부분은 메시지를 사용하는 서비스 계약에 대해 선택한 serialization 엔진을 사용하여 serialize됩니다(XML로 변경됨). 기본 serialization 엔진인 `XmlFormatter`는 데이터 계약을 가지고 있는 모든 형식을 명시적으로(<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>를 가짐으로써) 또는 암시적으로(<xref:System.SerializableAttribute?displayProperty=nameWithType> 등을 사용하는 기본 형식이 됨으로써) 처리할 수 있습니다. 자세한 내용은 [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)을 참조 하세요.  
+ 개별 메시지 헤더 및 메시지 본문 부분은 메시지를 사용하는 서비스 계약에 대해 선택한 serialization 엔진을 사용하여 serialize됩니다(XML로 변경됨). 기본 serialization 엔진인 `XmlFormatter`는 데이터 계약을 가지고 있는 모든 형식을 명시적으로(<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>를 가짐으로써) 또는 암시적으로(<xref:System.SerializableAttribute?displayProperty=nameWithType> 등을 사용하는 기본 형식이 됨으로써) 처리할 수 있습니다. 자세한 내용은 [데이터 계약 사용](using-data-contracts.md)을 참조 하세요.  
   
  앞의 예제에서는 `Operation`이 기본 형식이고 따라서 암시적 데이터 계약을 가지므로 `BankingTransactionData` 및 `transactionDate` 형식은 데이터 계약을 가져야 하며 <xref:System.DateTime>는 serialize할 수 있어야 합니다.  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 - `Relay`  
   
- `Actor` 또는 `Role` 특성은 지정된 헤더를 사용할 노드의 URI(Uniform Resource Identifier)를 지정합니다. `MustUnderstand` 특성은 헤더에서 노드 처리를 인식해야 하는지 여부를 지정합니다. `Relay` 특성은 헤더를 다운스트림 노드로 릴레이할지 여부를 지정합니다. WCF는이 항목의 뒷부분에 나오는 "메시지 계약 버전 관리" 단원에 `MustUnderstand` 지정 된 대로 특성을 제외 하 고 들어오는 메시지에 대해 이러한 특성의 처리를 수행 하지 않습니다. 그러나 다음 설명에서와 같이 필요에 따라 이러한 특성을 읽고 쓸 수 있습니다.  
+ `Actor` 또는 `Role` 특성은 지정된 헤더를 사용할 노드의 URI(Uniform Resource Identifier)를 지정합니다. `MustUnderstand` 특성은 헤더에서 노드 처리를 인식해야 하는지 여부를 지정합니다. `Relay`특성은 헤더를 다운스트림 노드로 릴레이할 지 여부를 지정 합니다. WCF는 `MustUnderstand` 이 항목의 뒷부분에 나오는 "메시지 계약 버전 관리" 단원에 지정 된 대로 특성을 제외 하 고 들어오는 메시지에 대해 이러한 특성의 처리를 수행 하지 않습니다. 그러나 다음 설명에서와 같이 필요에 따라 이러한 특성을 읽고 쓸 수 있습니다.  
   
  메시지를 보낼 때 이러한 특성은 기본적으로 내보내지 않습니다. 다음 두 가지 방법으로 이를 변경할 수 있습니다. 첫 번째 방법은 다음 코드 예제에서처럼 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType>, 및 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 속성을 변경함으로써 원하는 값으로 정적으로 특성을 설정할 수 있습니다. (`Role` 속성은 없으며, <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 속성을 설정하면 SOAP 1.2를 사용할 경우 `Role` 특성을 내보냅니다.)  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  메시지를 받은 다음 다시 보내면 SOAP 특성 설정은 <xref:System.ServiceModel.MessageHeader%601> 형식의 헤더에 대해서 라운드트립만 수행합니다.  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 본문 부분의 순서  
- 본문 부분의 순서를 제어해야 하는 경우가 있습니다. 기본적으로 본문 요소의 순서는 사전순이지만 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성을 사용하여 제어할 수 있습니다. 이 속성은 상속 시나리오에서의 동작을 제외하고는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 속성과 동일한 의미 체계를 가집니다. 메시지 계약에서는 파생 형식 본문 멤버 앞에 기본 형식 본문 멤버가 정렬되지 않습니다. 자세한 내용은 [데이터 멤버 순서](../../../../docs/framework/wcf/feature-details/data-member-order.md)합니다.  
+ 본문 부분의 순서를 제어해야 하는 경우가 있습니다. 기본적으로 본문 요소의 순서는 사전순이지만 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성을 사용하여 제어할 수 있습니다. 이 속성은 상속 시나리오에서의 동작을 제외하고는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 속성과 동일한 의미 체계를 가집니다. 메시지 계약에서는 파생 형식 본문 멤버 앞에 기본 형식 본문 멤버가 정렬되지 않습니다. 자세한 내용은 [데이터 멤버 순서](data-member-order.md)를 참조 하세요.  
   
  다음 예제에서 `amount`는 사전순으로 처음이기 때문에 일반적인 경우에는 처음에 나와야 합니다. 그러나 이 경우에는 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 속성 때문에 세 번째 위치에 옵니다.  
   
@@ -359,7 +359,7 @@ public class PatientRecord : PersonRecord
  `PatientRecord` 클래스는 `ID`라는 하나의 헤더로 메시지를 설명합니다. 기본-최상 멤버를 선택했으므로 헤더는 `personID` 멤버가 아닌 `patientID`에 해당합니다. 따라서 이 경우에는 `patientID` 필드가 필요하지 않습니다. 사전순이므로 메시지 본문에는 `diagnosis` 요소가 `patientName` 요소보다 먼저 포함됩니다. 예제에서는 사용해서는 안 되는 패턴을 보여 줍니다. 기본 메시지 계약 및 파생 메시지 계약에는 모두 메시지 본문 부분이 있습니다.  
   
 ## <a name="wsdl-considerations"></a>WSDL 고려 사항  
- 메시지 계약을 사용하는 서비스로부터 WSDL(웹 서비스 기술 언어) 계약을 생성할 때는 메시지 계약 기능 중 일부가 결과 WSDL에서 반영되지 않을 수 있다는 점을 기억해야 합니다. 다음 사항을 고려하십시오.  
+ 메시지 계약을 사용하는 서비스로부터 WSDL(웹 서비스 기술 언어) 계약을 생성할 때는 메시지 계약 기능 중 일부가 결과 WSDL에서 반영되지 않을 수 있다는 점을 기억해야 합니다. 다음 사항을 고려합니다.  
   
 - WSDL은 헤더 배열의 개념을 표현할 수 없습니다. <xref:System.ServiceModel.MessageHeaderArrayAttribute>를 사용하여 헤더 배열과 함께 메시지를 만들 때 결과 WSDL은 배열 대신 하나의 헤더만 반영합니다.  
   
@@ -447,7 +447,7 @@ public class OperationDetails
   
  메시지 개체를 `Result` 속성으로 수신하고 반환된 값을 해당 개체의 속성으로 포함하려면 `/messageContract` 명령 옵션을 사용합니다. 이렇게 하면 응답 메시지를 `Result` 개체의 <xref:System.EventArgs> 속성으로 반환하는 서명이 생성됩니다. 모든 내부 반환 값은 응답 메시지 개체의 속성이 됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [서비스 디자인 및 구현](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [데이터 계약 사용](using-data-contracts.md)
+- [서비스 디자인 및 구현](../designing-and-implementing-services.md)

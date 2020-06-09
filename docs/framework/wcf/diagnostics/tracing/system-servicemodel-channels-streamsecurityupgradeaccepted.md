@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.StreamSecurityUpgradeAccepted
 ms.date: 03/30/2017
 ms.assetid: da6c1a6a-1862-4d82-8b44-4b99463a95b8
-ms.openlocfilehash: f5bb4e2783b2d490e26c701026f853df3ff24bbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 731581f7074f87b3f1817f2ed609dcc721ee5780
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755729"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593856"
 ---
 # <a name="systemservicemodelchannelsstreamsecurityupgradeaccepted"></a>System.ServiceModel.Channels.StreamSecurityUpgradeAccepted
 System.ServiceModel.Channels.StreamSecurityUpgradeAccepted  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  스트림 보안 업그레이드가 수락되었습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [추적](index.md)
+- [추적을 사용하여 애플리케이션 문제 해결](using-tracing-to-troubleshoot-your-application.md)
+- [관리 및 진단](../index.md)

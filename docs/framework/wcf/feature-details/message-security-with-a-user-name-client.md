@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602624"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
-다음 그림에서는 메시지 수준 보안을 사용하여 보안되는 WCF(Windows 통신 재단) 서비스 및 클라이언트를 보여 주습니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
+다음 그림에서는 메시지 수준 보안을 사용 하 여 보호 되는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
   
- 샘플 응용 프로그램에 대 한 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)참조  
+ 응용 프로그램 예제는 [메시지 보안 사용자 이름](../samples/message-security-user-name.md)을 참조 하세요.  
   
- ![사용자 이름 인증을 사용하는 메시지 보안](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![사용자 이름 인증을 사용하는 메시지 보안](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|윈도우 커뮤니케이션 재단(WCF) 전용|  
+|상호 운용성|Windows Communication Foundation (WCF)만|  
 |인증(서버)|최초 협상에는 서버 인증이 필요합니다.|  
 |인증(클라이언트)|사용자 이름/암호|  
 |무결성|예, 공유 보안 컨텍스트 사용|  
@@ -86,7 +86,7 @@ ms.locfileid: "79184633"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>클라이언트  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 클라이언트를 만듭니다. 바인딩은 메시지 모드 보안으로 설정되며 클라이언트 자격 증명 형식은 `UserName`로 설정됩니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다. 사용자 이름 및 암호를 반환할 코드는 애플리케이션 수준에서 수행되는 작업이기 때문에 여기에 표시되지 않습니다. 예를 들어 데이터에 대한 사용자를 쿼리하려면 Windows Forms 대화 상자를 사용합니다.  
@@ -127,8 +127,8 @@ ms.locfileid: "79184633"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)
-- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<ID>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [보안 개요](security-overview.md)
+- [Message Security User Name](../samples/message-security-user-name.md)
+- [서비스 ID 및 인증](service-identity-and-authentication.md)
+- [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
 - [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

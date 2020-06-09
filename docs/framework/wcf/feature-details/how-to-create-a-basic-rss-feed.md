@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 9a07754e8fdad700bd5488f392f80b5c5f907f6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599024"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>방법: 기본 RSS 피드 만들기
 WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 RSS 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  
@@ -23,7 +23,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > <xref:System.ServiceModel.Web.WebGetAttribute> 특성을 적용하는 모든 서비스 작업은 HTTP GET 요청에 매핑됩니다. 작업을 다른 HTTP 메서드에 매핑하려면 <xref:System.ServiceModel.Web.WebInvokeAttribute>를 대신 사용합니다. 자세한 내용은 [방법: 기본 WCF 웹 HTTP 서비스](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)를 만듭니다.  
+    > <xref:System.ServiceModel.Web.WebGetAttribute> 특성을 적용하는 모든 서비스 작업은 HTTP GET 요청에 매핑됩니다. 작업을 다른 HTTP 메서드에 매핑하려면 <xref:System.ServiceModel.Web.WebInvokeAttribute>를 대신 사용합니다. 자세한 내용은 [방법: 기본 WCF 웹 HTTP 서비스 만들기](how-to-create-a-basic-wcf-web-http-service.md)를 참조 하세요.  
   
 2. 서비스 계약을 구현합니다.  
   
@@ -64,7 +64,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
   
 ### <a name="to-call-getblog-with-an-http-get"></a>HTTP GET을 사용하여 GetBlog()를 호출하려면  
   
-1. Internet Explorer를 열고 다음 URL을 입력 하 고 ENTER `http://localhost:8000/BlogService/GetBlog`키를 누릅니다. URL에는 서비스의 기준 주소 (`http://localhost:8000/BlogService`), 끝점의 상대 주소 및 호출할 서비스 작업이 포함 됩니다.  
+1. Internet Explorer를 열고 다음 URL을 입력 하 고 ENTER 키를 `http://localhost:8000/BlogService/GetBlog` 누릅니다. URL에는 서비스의 기준 주소 ( `http://localhost:8000/BlogService` ), 끝점의 상대 주소 및 호출할 서비스 작업이 포함 됩니다.  
   
 ### <a name="to-call-getblog-from-code"></a>코드에서 GetBlog()를 호출하려면  
   
@@ -94,7 +94,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

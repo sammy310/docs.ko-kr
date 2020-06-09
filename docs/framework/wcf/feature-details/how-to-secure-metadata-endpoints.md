@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: 2746c608fb47b94446c5d7e10748ba185d555e7f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202323"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592959"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안
 
@@ -22,7 +22,7 @@ ms.locfileid: "84202323"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>코드에 보안 HTTPS GET 메타데이터 엔드포인트를 만들려면
 
-1. 적절한 X.509 인증서를 사용하여 포트를 구성합니다. 인증서는 신뢰할 수 있는 기관에서 가져와야 하며 "서비스 인증"의 용도로 사용해야 합니다. HttpCfg.exe 도구를 사용하여 인증서를 포트에 첨부해야 합니다. [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.
+1. 적절한 X.509 인증서를 사용하여 포트를 구성합니다. 인증서는 신뢰할 수 있는 기관에서 가져와야 하며 "서비스 인증"의 용도로 사용해야 합니다. HttpCfg.exe 도구를 사용하여 인증서를 포트에 첨부해야 합니다. [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.
 
     > [!IMPORTANT]
     > 인증서의 주체 또는 인증서의 DNS(Domain Name System)는 컴퓨터의 이름과 일치해야 합니다. 이는 HTTPS 메커니즘에서 수행하는 첫 번째 단계 중 하나로서 인증서가 호출된 주소와 동일한 URI(Uniform Resource Identifier)에 발급되었는지 확인하는 단계이므로 중요합니다.
@@ -40,21 +40,21 @@ ms.locfileid: "84202323"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>구성에 보안 HTTPS GET 메타데이터 엔드포인트를 만들려면
 
-1. [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 서비스에 대 한 구성 파일의 요소에 요소를 추가 합니다.
+1. [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) 서비스에 대 한 구성 파일의 요소에 요소를 추가 합니다.
 
-2. 요소 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 를 요소에 추가 [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 합니다.
+2. 요소 [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) 를 요소에 추가 [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 합니다.
 
-3. 요소 [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 를 요소에 추가 `<serviceBehaviors>` 합니다.
+3. 요소 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 를 요소에 추가 `<serviceBehaviors>` 합니다.
 
 4. `name` 요소의 `<behavior>` 특성을 적절한 값으로 설정합니다. `name` 특성은 필수입니다. 아래 예제에서는 `mySvcBehavior` 값을 사용합니다.
 
-5. [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)요소에를 추가 `<behavior>` 합니다.
+5. [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md)요소에를 추가 `<behavior>` 합니다.
 
 6. `httpsGetEnabled` 요소의 `<serviceMetadata>` 특성을 `true`로 설정합니다.
 
 7. `httpsGetUrl` 요소의 `<serviceMetadata>` 특성을 적절한 값으로 설정합니다. 절대 주소를 지정 하는 경우 URL은 스키마로 시작 해야 합니다 `https://` . 상대 주소를 지정하는 경우 서비스 호스트의 HTTPS 기본 주소를 입력해야 합니다. 이 속성을 설정하지 않으면 기본 주소는 ""이거나 바로 서비스의 HTTPS 기본 주소로 설정됩니다.
 
-8. 서비스에서 동작을 사용 하려면 `behaviorConfiguration` 요소의 특성을 [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) behavior 요소의 name 특성 값으로 설정 합니다. 다음 구성 코드에서는 자세한 예제를 보여 줍니다.
+8. 서비스에서 동작을 사용 하려면 `behaviorConfiguration` 요소의 특성을 [\<service>](../../configure-apps/file-schema/wcf/service.md) behavior 요소의 name 특성 값으로 설정 합니다. 다음 구성 코드에서는 자세한 예제를 보여 줍니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +100,7 @@ ms.locfileid: "84202323"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [인증서 사용](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [방법: SSL 인증서를 사용하여 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [인증서 사용](working-with-certificates.md)
+- [메타데이터 관련 보안 고려 사항](security-considerations-with-metadata.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)

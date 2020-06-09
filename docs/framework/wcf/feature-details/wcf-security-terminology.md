@@ -6,22 +6,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743351"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600973"
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
   
- WCF (Windows Communication Foundation) 설명서에 사용 되는 용어에 대 한 자세한 내용은 [기본 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)을 참조 하세요.  
+ WCF (Windows Communication Foundation) 설명서에 사용 되는 용어에 대 한 자세한 내용은 [기본 Windows Communication Foundation 개념](../fundamental-concepts.md)을 참조 하세요.  
   
  ACL(액세스 제어 목록 - Access Control List)  
  개체에 적용되는 보안 보호 목록입니다. 개체는 파일, 프로세스, 이벤트 또는 보안 설명자가 있는 다른 모든 것이 될 수 있습니다. ACL의 항목은 ACE (액세스 제어 항목)입니다. 임의 ACL과 시스템 ACL의 두 가지 종류가 있습니다.  
   
- 인증(authentication)  
+ 인증  
  사용자, 컴퓨터, 서비스 또는 프로세스가 요청된 대상이 맞는지 확인하는 프로세스입니다.  
   
  권한 부여  
@@ -33,7 +33,7 @@ ms.locfileid: "76743351"
  CA 계층 구조  
  CA 계층 구조에는 여러 CA가 포함되어 있습니다. 각 CA는 계층 구조의 맨 위에 ( *루트 인증 기관*이 라고도 함)에 도달할 때까지 상위 수준에 있는 다른 ca에 의해 인증 되도록 구성 됩니다.  
   
- 인증서  
+ 인증서(certificate)  
  엔터티 및 엔터티의 공개 키에 대한 정보를 포함하여 두 정보 부분을 함께 바인딩하는 디지털 서명된 문입니다. 인증서는 인증 기관이라는 신뢰할 수 있는 조직(또는 엔터티)에서 엔터티가 정확한지 확인한 이후에 발급됩니다.  
   
  인증서는 다양한 형식의 데이터를 포함할 수 있습니다. 예를 들어, X.509 인증서는 인증서 형식, 인증서 일련 번호, 인증서 서명에 사용된 알고리즘, 인증서를 발급한 CA 이름, 인증서를 요청하는 엔터티의 이름 및 공개 키, CA의 서명 등을 포함합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "76743351"
  디지털 서명  
  발신자의 ID를 전송 중인 정보에 바인딩하는 데이터입니다. 디지털 서명은 메시지, 파일 또는 기타 디지털로 인코딩된 정보와 함께 제공되거나 개별적으로 전송될 수 있습니다. 디지털 서명은 공개 키 환경에서 사용되며 인증 및 무결성 서비스를 제공합니다.  
   
- 인코딩  
+ encoding  
  데이터를 비트 스트림으로 변경하는 프로세스입니다. 인코딩은 데이터를 1과 0의 스트림으로 변환하는 serialization 프로세스의 일부입니다.  
   
  교환 키 쌍  
@@ -104,7 +104,7 @@ ms.locfileid: "76743351"
  퍼블릭/프라이빗 키 쌍  
  공개 키 암호화에 사용되는 암호화 키 세트입니다. CSP(암호화 서비스 공급자)는 일반적으로 사용자별로 두 퍼블릭/프라이빗 키 쌍(교환 키 쌍 및 디지털 서명 키 쌍)을 유지 관리합니다. 두 키 쌍은 모두 세션별로 유지 관리됩니다.  
   
- 공개 키  
+ 공개 키(public key)  
  암호화 키는 일반적으로 세션 키 또는 디지털 서명을 해독하는 데 사용됩니다. 퍼블릭 키를 사용하여 메시지를 암호화하여 해당 프라이빗 키를 가진 사용자만 메시지를 해독하도록 보장할 수 있습니다.  
   
  공개 키 암호화  
@@ -183,6 +183,6 @@ ms.locfileid: "76743351"
   
 ## <a name="see-also"></a>참고 항목
 
-- [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [기본적인 Windows Communication Foundation 개념](../fundamental-concepts.md)
+- [보안 개념](security-concepts.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

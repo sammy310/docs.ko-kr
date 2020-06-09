@@ -2,12 +2,12 @@
 title: 찾기 및 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964841"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599180"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 
@@ -31,7 +31,7 @@ ms.locfileid: "75964841"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.
 
-  - "/"로 구분 된 세그먼트로 일치 하는 항목을 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 합니다. `http://contoso/building1` 검색은 범위 `http://contoso/building/floor1`서비스와 일치 합니다. 마지막 두 세그먼트가 일치 하지 않기 때문에 `http://contoso/building100`와 일치 하지 않습니다.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>"/"로 구분 된 세그먼트로 일치 합니다. 검색은 `http://contoso/building1` 범위가 있는 서비스와 일치 `http://contoso/building/floor1` 합니다. `http://contoso/building100`마지막 두 세그먼트가 일치 하지 않기 때문에 일치 하지 않습니다.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.
 
@@ -68,9 +68,9 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [검색 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
-- [범위를 사용한 검색](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [기본](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [WCF Discovery 개요](wcf-discovery-overview.md)
+- [Discovery 클라이언트 채널 사용](using-the-discovery-client-channel.md)
+- [범위를 사용한 검색](../samples/discovery-with-scopes-sample.md)
+- [기본](../samples/basic-sample.md)

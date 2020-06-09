@@ -2,17 +2,17 @@
 title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202420"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600389"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 엔드포인트가 큐에 매핑되는 방법을 설명합니다. 다음 그림에서는 미리 알림을 통해 기존 WCF (Windows Communication Foundation) 대기 중인 응용 프로그램 배포를 보여 줍니다.  
   
- ![대기 중인 응용 프로그램 다이어그램](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐 그림")  
+ ![대기 중인 응용 프로그램 다이어그램](media/distributed-queue-figure.jpg "분산 큐 그림")  
   
  클라이언트가 서비스에 메시지를 보낼 수 있도록 하려면 대상 큐에 메시지 주소를 지정합니다. 서비스가 큐에서 메시지를 읽을 수 있도록 하려면 해당 수신 주소를 대상 큐로 설정합니다. WCF의 주소 지정은 uri (Uniform Resource Identifier) 기반 이지만 메시지 큐 (MSMQ) 큐 이름은 URI 기반이 아닙니다. 따라서 WCF를 사용 하 여 MSMQ에서 만든 큐를 처리 하는 방법을 이해 하는 것이 중요 합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84202420"
   
  큐 주소는 메시지를 읽을 수신기에 의해 수신 대기 URI로 사용됩니다. 즉, 큐 주소는 TCP 소켓의 수신 대기 포트에 해당합니다.  
   
- 큐에서 읽는 엔드포인트에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제는 [NET MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md)을 참조 하세요.  
+ 큐에서 읽는 엔드포인트에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제는 [NET MSMQ 바인딩](../samples/net-msmq-binding.md)을 참조 하세요.  
   
 ### <a name="multiple-contracts-in-a-queue"></a>큐의 여러 계약  
  큐의 메시지는 서로 다른 계약을 구현할 수 있습니다. 이 경우 다음 중 하나가 충족되어야 모든 메시지를 읽고 처리할 수 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "84202420"
   
  net.pipe:/localhost/[private/] \<*custom-dead-letter-queue-name*> .  
   
- WCF 서비스는 수신 하는 모든 메시지가 수신 대기 중인 특정 큐로 주소가 지정 되었는지 확인 합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 [배달 못한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)를 참조 하십시오.  
+ WCF 서비스는 수신 하는 모든 메시지가 수신 대기 중인 특정 큐로 주소가 지정 되었는지 확인 합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 [배달 못한 편지 큐](../samples/dead-letter-queues.md)를 참조 하십시오.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 및 서비스 주소 지정  
  `MsmqIntegrationBinding`은 기존 MSMQ 애플리케이션과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과의 상호 작용을 용이 하 게 하기 위해 WCF는 형식 이름 주소 지정만 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
@@ -106,4 +106,4 @@ ms.locfileid: "84202420"
   
 ## <a name="see-also"></a>참고 항목
 
-- [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [대기 중인 애플리케이션 웹 호스팅](web-hosting-a-queued-application.md)

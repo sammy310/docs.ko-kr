@@ -2,15 +2,15 @@
 title: 변조
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e618ab369a46d403aa8db26c4b472e2be3634785
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600713"
 ---
 # <a name="tampering"></a>변조
-*변조* 의도 된 것 이외의 목적을 위해 변경된 된 메시지를 사용 하 여 메시지 또는 메시지 배달 변경 하는 동작입니다.  
+*변조* 는 메시지를 변경 하거나 메시지를 배달 하는 작업과 변경 된 메시지를 사용 하는 것 외의 목적으로 변경 된 메시지를 사용 하는 행위입니다.  
   
 ## <a name="do-not-disable-ws-addressing"></a>WS-Addressing 활성화  
  WS-Addressing 사양은 각 메시지에 대한 주소 헤더를 제공하여 메시지 받는 사람이 메시지를 보낸 사람을 확인할 수 있습니다. <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 속성을 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>으로 설정하여 이 기능을 비활성화할 수 있습니다.  
@@ -19,11 +19,11 @@ ms.locfileid: "61703389"
   
  이러한 문제를 줄이려면 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 속성을 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>으로 설정하지 않고 <xref:System.ServiceModel.Channels.MessageVersion> 속성을 <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A>로 설정하는 정적 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 속성과 같이 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>을 사용하지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Security Considerations](security-considerations-in-wcf.md)
+- [정보 공개](information-disclosure.md)
+- [권한 상승](elevation-of-privilege.md)
+- [서비스 거부](denial-of-service.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)
+- [재생 공격](replay-attacks.md)

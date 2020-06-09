@@ -2,19 +2,19 @@
 title: 대기 중인 애플리케이션 웹 호스팅
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600142"
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 애플리케이션 웹 호스팅
 WAS (Windows Process Activation Service)는 Windows Communication Foundation (WCF) 서비스를 호스팅하는 응용 프로그램을 포함 하는 작업자 프로세스의 활성화 및 수명을 관리 합니다. WAS 프로세스 모델은 http에 대 한 종속성을 제거 하 여 HTTP 서버에 대 한 IIS 6.0 프로세스 모델을 일반화 합니다. 이를 통해 WCF 서비스는 메시지 기반 활성화를 지원 하 고 지정 된 컴퓨터에서 다 수의 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 msmq.formatname 등의 HTTP 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
   
  WAS에는 대기 중인 애플리케이션에 사용된 큐 중 하나에 하나 이상의 메시지가 있을 경우 해당 애플리케이션을 활성화하는 MSMQ(메시지 큐) 활성화 서비스가 포함됩니다. MSMQ 활성화 서비스는 기본적으로 자동 시작되는 NT 서비스입니다.  
   
- WAS 및 그 이점에 대 한 자세한 내용은 [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)을 참조 하세요. MSMQ에 대 한 자세한 내용은 [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)를 참조 하세요.
+ WAS 및 그 이점에 대 한 자세한 내용은 [Windows Process Activation Service에서 호스팅](hosting-in-windows-process-activation-service.md)을 참조 하세요. MSMQ에 대 한 자세한 내용은 [큐 개요](queues-overview.md)를 참조 하세요.
   
 ## <a name="queue-addressing-in-was"></a>WAS의 큐 주소 지정  
  WAS 애플리케이션에는 URI(Uniform Resource Identifier) 주소가 있습니다. 애플리케이션 주소는 기본 URI 접두사와 애플리케이션별 상대 주소(경로)로 이루어집니다. 이 두 부분은 함께 결합될 경우 애플리케이션의 외부 주소를 제공합니다. 기본 URI 접두사는 사이트 바인딩에서 생성 되며 사이트의 모든 응용 프로그램에 사용 됩니다 (예: "net.pipe:/localhost", "msmq.formatname:/localhost" 또는 "net.tcp:/localhost"). 응용 프로그램 주소는 응용 프로그램 관련 경로 조각 (예: "/Dcone")을 가져와서 기본 URI 접두사에 추가 하 여 전체 응용 프로그램 URI (예: "net.tcp:/Localhost/wchostone")에 도착 하는 방법으로 생성 됩니다.  
@@ -41,7 +41,7 @@ WAS (Windows Process Activation Service)는 Windows Communication Foundation (WC
 ### <a name="subqueue-and-system-queue-caveat"></a>하위 큐 및 시스템 큐 경고  
  시스템 차원의 배달 못 한 큐 등의 시스템 큐나 포이즌 하위 큐 등의 하위 큐에 있는 메시지를 기반으로 WAS에 호스트된 애플리케이션을 활성화할 수 없습니다. 이 제품 버전의 제한 사항입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [서비스 엔드포인트 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [포이즌 메시지 처리](poison-message-handling.md)
+- [서비스 엔드포인트 및 큐 주소 지정](service-endpoints-and-queue-addressing.md)

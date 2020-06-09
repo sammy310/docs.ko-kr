@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599336"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP를 통한 SSL 및 SOAP 보안의 인증서 유효성 검사 차이점
-HTTP(HTTPS) 또는 TCP를 통해 전송 계층 보안(TLS) 외에 SOAP(메시지 계층) 보안이 있는 WCF(Windows 통신 재단)의 인증서를 사용할 수 있습니다. 이 항목에서는 이러한 인증서의 유효성을 검사하는 방법의 차이점에 대해 설명합니다.  
+HTTP (HTTPS) 또는 TCP를 통한 TLS (전송 계층 보안) 외에도 SOAP (메시지 계층) 보안을 사용 하 여 WCF (Windows Communication Foundation)에서 인증서를 사용할 수 있습니다. 이 항목에서는 이러한 인증서의 유효성을 검사하는 방법의 차이점에 대해 설명합니다.  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS 클라이언트 인증서 유효성 검사  
- HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 클라이언트에서 서비스를 인증하는 데 사용하는 인증서는 신뢰 체인을 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 연결되지 않은 경우 HTTP 계층에서 "원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 메시지와 함께 <xref:System.Net.WebException>이 발생합니다. WCF는 이 예외를 <xref:System.ServiceModel.Security.MessageSecurityException>로 표시합니다.  
+ HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 클라이언트에서 서비스를 인증하는 데 사용하는 인증서는 신뢰 체인을 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 연결되지 않은 경우 HTTP 계층에서 "원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."라는 메시지와 함께 <xref:System.Net.WebException>이 발생합니다. WCF는이 예외를로 표시 <xref:System.ServiceModel.Security.MessageSecurityException> 합니다.  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTPS 서비스 인증서 유효성 검사  
  HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 서버에서 인증하는 데 사용하는 인증서는 신뢰 체인을 기본적으로 지원해야 합니다. 즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다. 인증서가 해지되었는지 여부를 확인하기 위해 온라인 확인을 수행하지는 않습니다. 다음 코드에서처럼 <xref:System.Net.Security.RemoteCertificateValidationCallback> 콜백을 등록하여 이 동작을 재정의할 수 있습니다.  
@@ -50,4 +50,4 @@ HTTP(HTTPS) 또는 TCP를 통해 전송 계층 보안(TLS) 외에 SOAP(메시지
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [인증서 사용](working-with-certificates.md)

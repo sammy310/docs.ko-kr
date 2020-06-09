@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600116"
 ---
 # <a name="working-with-certificates"></a>인증서 사용
 
@@ -81,17 +81,17 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 
 구성을 사용하여 속성을 설정할 수도 있습니다. 유효성 검사 모드를 지정하는 데 사용되는 요소는 다음과 같습니다.
 
-- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)
+- [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)
 
-- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)
+- [\<peerAuthentication>](../../configure-apps/file-schema/wcf/peerauthentication-element.md)
 
-- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
+- [\<messageSenderAuthentication>](../../configure-apps/file-schema/wcf/messagesenderauthentication-element.md)
 
 ## <a name="custom-authentication"></a>사용자 지정 인증
 
 `CertificateValidationMode` 속성을 사용하여 인증서가 인증되는 방법을 사용자 지정할 수도 있습니다. 기본적으로 수준은 `ChainTrust`로 설정됩니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 값을 사용하려면 `CustomCertificateValidatorType` 특성을 인증서의 유효성을 검사하는 데 사용된 어셈블리 및 형식으로 설정해야 합니다. 사용자 지정 유효성 검사기를 만들려면 추상 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스에서 상속해야 합니다.
 
-사용자 지정 인증자를 만들 때 재정의할 가장 중요한 메서드는 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 메서드입니다. 사용자 지정 인증에 대한 예제는 [X.509 인증서 유효성 검사기](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) 샘플을 참조하세요. 자세한 내용은 [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)를 참조하세요.
+사용자 지정 인증자를 만들 때 재정의할 가장 중요한 메서드는 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 메서드입니다. 사용자 지정 인증에 대한 예제는 [X.509 인증서 유효성 검사기](../samples/x-509-certificate-validator.md) 샘플을 참조하세요. 자세한 내용은 [사용자 지정 자격 증명 및 자격 증명 유효성 검사](../extending/custom-credential-and-credential-validation.md)를 참조하세요.
 
 ## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>PowerShell New-selfsignedcertificate Cmdlet을 사용 하 여 인증서 체인 빌드
 
@@ -113,15 +113,15 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 ### <a name="service-certificates"></a>서비스 인증서
 
-서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 `http://www.contoso.com/endpoint/` 되는 경우에는 **제목** 필드에도 `www.contoso.com`값이 포함 되어야 합니다.
+서비스 인증서의 주요 작업은 클라이언트에 서버를 인증하는 것입니다. 클라이언트에서 서버를 인증할 때 초기 검사 중 하나는 **주체** 필드의 값을 서비스를 연결하는 데 사용된 URI(Uniform Resource Identifier)와 비교하는 것입니다. 두 항목의 DNS가 일치해야 합니다. 예를 들어 서비스의 URI가 이면 `http://www.contoso.com/endpoint/` **제목** 필드에도 값이 포함 되어야 합니다 `www.contoso.com` .
 
-필드는 값을 나타내는 이니셜 접두사가 붙은 여러 값을 포함할 수 있습니다. 가장 일반적으로 초기화는 일반적인 이름에 대 한 "CN"입니다 (예: `CN = www.contoso.com`). **주체** 필드를 비워둘 수도 있습니다. 이 경우 **주체 대체 이름** 필드는 **DNS 이름** 값을 포함할 수 있습니다.
+필드는 값을 나타내는 이니셜 접두사가 붙은 여러 값을 포함할 수 있습니다. 가장 일반적으로 초기화는 일반적인 이름에 대 한 "CN"입니다 (예:) `CN = www.contoso.com` . **주체** 필드를 비워둘 수도 있습니다. 이 경우 **주체 대체 이름** 필드는 **DNS 이름** 값을 포함할 수 있습니다.
 
 또한 인증서의 **용도** 필드 값은 “서버 인증” 또는 “클라이언트 인증”과 같은 적절한 값을 포함해야 합니다.
 
 ### <a name="client-certificates"></a>클라이언트 인증서
 
-클라이언트 인증서는 일반적으로 타사 인증 기관에 의해 발급되지 않습니다. 대신 일반적으로 현재 사용자 위치의 개인 저장소에서 용도가 "클라이언트 인증"이고 루트 기관에서 넣은 인증서를 포함합니다. 클라이언트는 상호 인증이 필요할 때 이러한 인증서를 사용할 수 있습니다.
+클라이언트 인증서는 일반적으로 타사 인증 기관에 의해 발급되지 않습니다. 대신 일반적으로 현재 사용자 위치의 개인 저장소에서 용도가 "클라이언트 인증"이고 루트 기관에서 넣은 인증서를 포함합니다. 상호 인증이 필요한 경우 클라이언트에서 이러한 인증서를 사용할 수 있습니다.
 
 ## <a name="online-revocation-and-offline-revocation"></a>온라인 해지 및 오프라인 해지
 
@@ -135,7 +135,7 @@ PowerShell New-selfsignedcertificate cmdlet은 x.509 인증서와 개인 키/공
 
 인증서를 해지하면 해지된 인증서 아래의 모든 체인도 유효하지 않으므로 인증 절차 중에 신뢰되지 않습니다. 해지되는 인증서를 확인하기 위해 각 발급자는 타임스탬프 및 날짜 스탬프가 기록된 CRL(*인증서 해지 목록*)을 게시합니다. 이 목록은 `RevocationMode`, `DefaultRevocationMode`, <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 및 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 클래스의 <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> 또는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 속성을 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 열거형 값 중 하나로 설정하여 온라인 해지 또는 오프라인 해지를 통해 확인할 수 있습니다. 모든 속성의 기본값은 `Online`입니다.
 
-`revocationMode`[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<의) 및 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\<(](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<의)의 ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 특성을 사용하여 구성에서 모드를 설정할 수도 있습니다.
+의 `revocationMode` [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) ( [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) )와의 [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) () 특성을 사용 하 여 구성에서 모드를 설정할 수도 있습니다 [\<endpointBehaviors>](../../configure-apps/file-schema/wcf/endpointbehaviors.md) .
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 메서드
 
@@ -160,7 +160,7 @@ WCF에서는 서비스 또는 클라이언트에서 메시지를 인증, 암호�
 
 ## <a name="certificates-in-configuration"></a>구성의 인증서
 
-구성을 사용하여 인증서를 설정할 수도 있습니다. 서비스를 만들 경우 인증서를 포함한 자격 증명이 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)에서 지정됩니다. 클라이언트를 프로그래밍할 경우 인증서가 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)에서 지정됩니다.
+구성을 사용하여 인증서를 설정할 수도 있습니다. 서비스를 만드는 경우 인증서를 포함 한 자격 증명이에서 지정 됩니다 [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) . 클라이언트를 프로그래밍 하는 경우 인증서가에서 지정 됩니다 [\<endpointBehaviors>](../../configure-apps/file-schema/wcf/endpointbehaviors.md) .
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>사용자 계정에 인증서 매핑
 
@@ -168,7 +168,7 @@ IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑�
 
 Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서비스 매핑을 사용하여 클라이언트 인증서 매핑](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))을 참조하세요.
 
-이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 `mapClientCertificateToWindowsAccount`[authentication>\< 요소의 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 특성을 `true`로 설정할 수 있습니다.
+이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 구성에서 `mapClientCertificateToWindowsAccount` [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) `true` 다음 코드에 표시 된 것 처럼 요소의 특성을로 설정할 수 있습니다.
 
 ```xml
 <serviceBehaviors>
@@ -194,4 +194,4 @@ WCF의 첫 번째 릴리스에서는 도메인 정책을 참조하지 않고 매
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)
