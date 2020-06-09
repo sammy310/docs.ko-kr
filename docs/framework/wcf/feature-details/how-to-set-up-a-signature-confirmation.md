@@ -8,30 +8,30 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 6f44ae5e3615df7f529a25f4097ef042feba544d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586925"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>방법: 서명 확인 설정
 
-*서명 확인* 받은 회신이 발신자의 원본 메시지에 대 한 응답에서 생성 된는 되도록 메시지 개시자에 대 한 메커니즘입니다. 서명 확인은 WS-Security 1.1 사양에서 정의됩니다. 엔드포인트가 WS-Security 1.0을 지원할 경우, 서명 확인을 사용할 수 없습니다.
+*서명 확인* 은 보낸 사람의 원본 메시지에 대 한 응답으로 수신 된 회신이 생성 되었는지 확인 하기 위해 메시지 개시자를 위한 메커니즘입니다. 서명 확인은 WS-Security 1.1 사양에서 정의됩니다. 엔드포인트가 WS-Security 1.0을 지원할 경우, 서명 확인을 사용할 수 없습니다.
 
-다음 절차에서는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>를 사용하여 서명 확인을 사용하도록 설정하는 방법을 지정합니다. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 경우에도 동일한 절차를 사용할 수 있습니다. 에 있는 기본 단계를 기반으로 프로시저 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)합니다.
+다음 절차에서는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>를 사용하여 서명 확인을 사용하도록 설정하는 방법을 지정합니다. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 경우에도 동일한 절차를 사용할 수 있습니다. 이 절차는 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)에서 찾은 기본 단계를 기반으로 합니다.
 
 ### <a name="to-enable-signature-confirmation-in-code"></a>코드에서 서명 확인을 사용하도록 설정하려면
 
 1. <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스의 인스턴스를 만듭니다.
 
-2. 인스턴스를 만듭니다를 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스입니다.
+2. 클래스의 인스턴스를 만듭니다 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
 
-3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>를 `true`으로 설정합니다.
+3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>을 `true`으로 설정합니다.
 
 4. 보안 요소를 바인딩 컬렉션에 추가합니다.
 
-5. 에 지정 된 대로 사용자 지정 바인딩을 만들려면 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)합니다.
+5. [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)에 지정 된 대로 사용자 지정 바인딩을 만듭니다.
 
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>구성에서 서명 확인을 사용하도록 설정하려면
 
@@ -43,9 +43,9 @@ ms.locfileid: "67425433"
 
 4. `<security>` 자식 요소를 추가하고 `requireSignatureConfirmation` 특성을 `true`로 설정합니다.
 
-5. 선택 사항입니다. 부트스트랩 중 서명 확인을 사용 하도록 설정 하려면 추가 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 자식 요소는 `requireSignatureConfirmation` 특성을 `true`입니다.
+5. 선택 사항입니다. 부트스트랩 하는 동안 서명 확인을 사용 하도록 설정 하려면 자식 요소를 추가 하 [\<secureConversationBootstrap>](../../configure-apps/file-schema/wcf/secureconversationbootstrap.md) 고 `requireSignatureConfirmation` 특성을로 설정 `true` 합니다.
 
-6. 적절한 전송 요소를 추가합니다. 다음 예제에서는 추가 된 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):
+6. 적절한 전송 요소를 추가합니다. 다음 예제에서는를 추가 합니다 [\<httpTransport>](../../configure-apps/file-schema/wcf/httptransport.md) .
 
     ```xml
     <bindings>
@@ -68,10 +68,10 @@ ms.locfileid: "67425433"
 [!code-csharp[c_SignatureConfirmation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_signatureconfirmation/cs/source.cs#1)]
 [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

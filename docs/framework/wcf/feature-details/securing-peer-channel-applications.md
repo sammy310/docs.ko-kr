@@ -2,22 +2,22 @@
 title: 피어 채널 애플리케이션 보안
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a77449710e9093bc8ea2d5446e6359c26a3d1c1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589879"
 ---
 # <a name="securing-peer-channel-applications"></a>피어 채널 애플리케이션 보안
-WinFX, 다른 바인딩과 마찬가지로 `NetPeerTcpBinding` 보안이 기본적으로 활성화 되어 있고 모두 전송 및 메시지 기반 보안 (또는 둘 다)를 제공 합니다. 이 항목에서는 이러한 두 가지 보안 형식에 대해 설명합니다. 보안 형식은 바인딩 사양의 보안 모드 태그(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)로 지정됩니다.  
+WinFX의 다른 바인딩과 마찬가지로 `NetPeerTcpBinding` 은 기본적으로 보안을 사용 하도록 설정 하 고 전송 및 메시지 기반 보안 (또는 둘 다)을 제공 합니다. 이 항목에서는 이러한 두 가지 보안 형식에 대해 설명합니다. 보안 형식은 바인딩 사양의 보안 모드 태그(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)로 지정됩니다.  
   
 ## <a name="transport-based-security"></a>전송 기반 보안  
  피어 채널은 전송 보안을 위한 두 가지 형식의 인증 자격 증명을 지원하며, 두 형식에서 모두 연결된 `ClientCredentialSettings.Peer`의 `ChannelFactory` 속성을 설정해야 합니다.  
   
-- 암호입니다. 클라이언트는 암호를 사용하여 연결을 인증합니다. 이 자격 증명 형식을 사용하는 경우 `ClientCredentialSettings.Peer.MeshPassword`에 올바른 암호와 선택적으로 `X509Certificate2` 인스턴스가 있어야 합니다.  
+- Password. 클라이언트는 암호를 사용하여 연결을 인증합니다. 이 자격 증명 형식을 사용하는 경우 `ClientCredentialSettings.Peer.MeshPassword`에 올바른 암호와 선택적으로 `X509Certificate2` 인스턴스가 있어야 합니다.  
   
-- 인증서. 특정 애플리케이션 인증이 사용됩니다. 이 자격 증명 형식을 사용하는 경우 <xref:System.IdentityModel.Selectors.X509CertificateValidator>에서 `ClientCredentialSettings.Peer.PeerAuthentication`의 구체적 구현을 사용해야 합니다.  
+- 인증서 특정 애플리케이션 인증이 사용됩니다. 이 자격 증명 형식을 사용하는 경우 <xref:System.IdentityModel.Selectors.X509CertificateValidator>에서 `ClientCredentialSettings.Peer.PeerAuthentication`의 구체적 구현을 사용해야 합니다.  
   
 ## <a name="message-based-security"></a>메시지 기반 보안  
  애플리케이션은 메시지 보안을 사용하여 보내는 메시지에 서명할 수 있습니다. 이 경우 모든 수신 당사자는 메시지가 신뢰할 수 있는 당사자에 의해 전송되었으며 메시지가 변조되지 않았음을 확인할 수 있습니다. 현재 피어 채널은 X.509 자격 증명 메시지 서명만 지원합니다.  
@@ -39,9 +39,9 @@ WinFX, 다른 바인딩과 마찬가지로 `NetPeerTcpBinding` 보안이 기본�
  메시지 인증을 사용하여 신뢰할 수 있는 소스에서 메시지가 시작되었으며 전송 중에 메시지를 변조한 사람이 없음을 확인할 수 있습니다. 메시지 인증을 사용하지 않으면 악성 클라이언트가 메시의 메시지를 쉽게 스푸핑하거나 변조할 수 있습니다.  
   
 ## <a name="peer-channel-code-examples"></a>피어 채널 코드 예제  
- [피어 채널 시나리오](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
+ [피어 채널 시나리오](peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [피어 채널 보안](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
-- [피어 채널 응용 프로그램 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [피어 채널 보안](peer-channel-security.md)
+- [피어 채널 애플리케이션 빌드](building-a-peer-channel-application.md)

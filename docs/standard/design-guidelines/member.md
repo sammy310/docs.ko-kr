@@ -1,5 +1,6 @@
 ---
 title: 멤버 디자인 지침
+description: .NET의 멤버 디자인 지침에 대해 알아봅니다. 멤버에는 메서드, 속성, 이벤트, 생성자 및 필드가 포함 됩니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: c323e7edd752a1f003bd3f5d81689aca0eaefd20
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a1f0c1d74e8bffa7cfef975c7dafb9fd01479470
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288994"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594493"
 ---
 # <a name="member-design-guidelines"></a>멤버 디자인 지침
 메서드, 속성, 이벤트, 생성자 및 필드는 집합적으로 멤버 라고 합니다. 멤버는 궁극적으로 프레임 워크의 최종 사용자에 게 노출 되는 프레임 워크 기능을 의미 합니다.  

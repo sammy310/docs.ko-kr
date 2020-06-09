@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643567"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596970"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용하여 서비스 보안
-X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩은 Windows Communication Foundation (WCF)에서 사용 하는 기본 기술입니다. 이 항목에서는 X.509 인증서와 함께 자체 호스팅된 서비스를 구성하는 단계에 대해 설명합니다.  
+X.509 인증서를 사용 하 여 서비스를 보호 하는 것은 WCF (Windows Communication Foundation)에서 대부분의 바인딩에서 사용 하는 기본 기술입니다. 이 항목에서는 X.509 인증서와 함께 자체 호스팅된 서비스를 구성하는 단계에 대해 설명합니다.  
   
- 필수 구성 요소는 서버를 인증하는 데 사용할 수 있는 유효한 인증서입니다. 인증서는 신뢰할 수 있는 인증 기관에 의해 서버에 발급되어야 합니다. 인증서가 유효하지 않은 경우, 서비스를 사용하려고 시도하는 클라이언트에서 해당 서비스를 신뢰할 수 없으며, 결과적으로 연결이 되지 않습니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
+ 필수 구성 요소는 서버를 인증하는 데 사용할 수 있는 유효한 인증서입니다. 인증서는 신뢰할 수 있는 인증 기관에 의해 서버에 발급되어야 합니다. 인증서가 유효하지 않은 경우, 서비스를 사용하려고 시도하는 클라이언트에서 해당 서비스를 신뢰할 수 없으며, 결과적으로 연결이 되지 않습니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요.  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>코드를 사용하여 인증서와 함께 서비스를 구성하려면  
   
-1. 서비스 계약과 구현된 서비스를 만듭니다. 자세한 내용은 [서비스 디자인 및 구현](../../../../docs/framework/wcf/designing-and-implementing-services.md)합니다.  
+1. 서비스 계약과 구현된 서비스를 만듭니다. 자세한 내용은 [서비스 디자인 및 구현](../designing-and-implementing-services.md)을 참조 하세요.  
   
 2. 다음 코드에서처럼 <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만들고, 보안 모드를 <xref:System.ServiceModel.SecurityMode.Message>로 설정합니다.  
   
@@ -31,7 +31,7 @@ X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩�
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. 서비스의 기본 주소에 대해 <xref:System.Uri> 클래스의 인스턴스를 만듭니다. 때문에 `WSHttpBinding` 사용 하 여 해당 스키마와 함께 HTTP 전송에는 리소스 URI (Uniform Identifier)를 시작 해야 합니다 또는 Windows Communication Foundation (WCF) 서비스를 열 때 예외가 throw 됩니다.  
+4. 서비스의 기본 주소에 대해 <xref:System.Uri> 클래스의 인스턴스를 만듭니다. 는 `WSHttpBinding` HTTP 전송을 사용 하기 때문에 URI (Uniform Resource Identifier)는 해당 스키마로 시작 해야 합니다. 그렇지 않으면 서비스를 열 때 WCF (Windows Communication Foundation)가 예외를 throw 합니다.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -82,6 +82,6 @@ X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩�
   
 - <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [인증서 사용](working-with-certificates.md)
