@@ -2,21 +2,21 @@
 title: System.Runtime.Serialization.ReadObjectBegin
 ms.date: 03/30/2017
 ms.assetid: 1b08ba6d-f201-4ace-9dce-aaf539e323b3
-ms.openlocfilehash: 63f8f6b5ee1dda02ed07bcc454939ce7dce2a64f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7b2b1cb3f34d7e891bd879de16f0dacf0d12fac
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582831"
 ---
-# <a name="systemruntimeserializationreadobjectbegin"></a><span data-ttu-id="b8191-102">System.Runtime.Serialization.ReadObjectBegin</span><span class="sxs-lookup"><span data-stu-id="b8191-102">System.Runtime.Serialization.ReadObjectBegin</span></span>
-<span data-ttu-id="b8191-103">System.Runtime.Serialization.ReadObjectBegin</span><span class="sxs-lookup"><span data-stu-id="b8191-103">System.Runtime.Serialization.ReadObjectBegin</span></span>  
+# <a name="systemruntimeserializationreadobjectbegin"></a><span data-ttu-id="83e67-102">System.Runtime.Serialization.ReadObjectBegin</span><span class="sxs-lookup"><span data-stu-id="83e67-102">System.Runtime.Serialization.ReadObjectBegin</span></span>
+<span data-ttu-id="83e67-103">System.Runtime.Serialization.ReadObjectBegin</span><span class="sxs-lookup"><span data-stu-id="83e67-103">System.Runtime.Serialization.ReadObjectBegin</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b8191-104">설명</span><span class="sxs-lookup"><span data-stu-id="b8191-104">Description</span></span>  
- <span data-ttu-id="b8191-105">ReadObject를 시작 중입니다.</span><span class="sxs-lookup"><span data-stu-id="b8191-105">Starting ReadObject.</span></span>  
+## <a name="description"></a><span data-ttu-id="83e67-104">Description</span><span class="sxs-lookup"><span data-stu-id="83e67-104">Description</span></span>  
+ <span data-ttu-id="83e67-105">ReadObject를 시작 중입니다.</span><span class="sxs-lookup"><span data-stu-id="83e67-105">Starting ReadObject.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8191-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="b8191-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83e67-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="83e67-106">See also</span></span>
 
-- [<span data-ttu-id="b8191-107">추적</span><span class="sxs-lookup"><span data-stu-id="b8191-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="b8191-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="b8191-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="b8191-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="b8191-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="83e67-107">추적</span><span class="sxs-lookup"><span data-stu-id="83e67-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="83e67-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="83e67-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="83e67-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="83e67-109">Administration and Diagnostics</span></span>](../index.md)

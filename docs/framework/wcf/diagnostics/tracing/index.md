@@ -2,43 +2,43 @@
 title: 추적
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 3520d2aca07f988c45d65d5d8113d05292a37638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578983"
 ---
-# <a name="tracing"></a><span data-ttu-id="9c462-102">추적</span><span class="sxs-lookup"><span data-stu-id="9c462-102">Tracing</span></span>
-<span data-ttu-id="9c462-103">Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="9c462-104">애플리케이션의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="9c462-105">엔드투엔드 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
+# <a name="tracing"></a><span data-ttu-id="d8b17-102">추적</span><span class="sxs-lookup"><span data-stu-id="d8b17-102">Tracing</span></span>
+<span data-ttu-id="d8b17-103">WCF (Windows Communication Foundation)는 오류 모니터링과 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="d8b17-104">애플리케이션의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="d8b17-105">엔드투엔드 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
   
- <span data-ttu-id="9c462-106">WCF 진단 추적에 대 한 다음 데이터를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-106">WCF outputs the following data for diagnostic tracing:</span></span>  
+ <span data-ttu-id="d8b17-106">WCF는 진단 추적에 대해 다음 데이터를 출력 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-106">WCF outputs the following data for diagnostic tracing:</span></span>  
   
-- <span data-ttu-id="9c462-107">작업 호출, 코드 예외, 경고 및 기타 중요 처리 이벤트 등과 같이 응용 프로그램의 모든 구성 요소에서 프로세스 중요 시점에 대한 추적</span><span class="sxs-lookup"><span data-stu-id="9c462-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
+- <span data-ttu-id="d8b17-107">작업 호출, 코드 예외, 경고 및 기타 중요 처리 이벤트 등과 같이 애플리케이션의 모든 구성 요소에서 프로세스 중요 시점에 대한 추적</span><span class="sxs-lookup"><span data-stu-id="d8b17-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
   
-- <span data-ttu-id="9c462-108">추적 기능 오작동 시 Windows 오류 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c462-108">Windows error events when the tracing feature malfunctions.</span></span>  
+- <span data-ttu-id="d8b17-108">추적 기능 오작동 시 Windows 오류 이벤트.</span><span class="sxs-lookup"><span data-stu-id="d8b17-108">Windows error events when the tracing feature malfunctions.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c462-109">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9c462-109">In This Section</span></span>  
- [<span data-ttu-id="9c462-110">추적 구성</span><span class="sxs-lookup"><span data-stu-id="9c462-110">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d8b17-109">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="d8b17-109">In This Section</span></span>  
+ [<span data-ttu-id="d8b17-110">추적 구성</span><span class="sxs-lookup"><span data-stu-id="d8b17-110">Configuring Tracing</span></span>](configuring-tracing.md)  
   
- <span data-ttu-id="9c462-111">이 항목에서는 특정 요구를 충족하기 위해 여러 수준에서 추적을 구성할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
+ <span data-ttu-id="d8b17-111">이 항목에서는 특정 요구를 충족하기 위해 여러 수준에서 추적을 구성할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
   
- [<span data-ttu-id="9c462-112">엔드투엔드 추적</span><span class="sxs-lookup"><span data-stu-id="9c462-112">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [<span data-ttu-id="d8b17-112">엔드투엔드 추적</span><span class="sxs-lookup"><span data-stu-id="d8b17-112">End-to-End Tracing</span></span>](end-to-end-tracing.md)  
   
- <span data-ttu-id="9c462-113">이 단원에서는 디버깅을 지원하기 위해 엔드투엔드 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
+ <span data-ttu-id="d8b17-113">이 단원에서는 디버깅을 지원하기 위해 엔드투엔드 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
   
- [<span data-ttu-id="9c462-114">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="9c462-114">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d8b17-114">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="d8b17-114">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)  
   
- <span data-ttu-id="9c462-115">이 단원에서는 애플리케이션을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-115">This section describes how you can use tracing to debug your application.</span></span>  
+ <span data-ttu-id="d8b17-115">이 단원에서는 애플리케이션을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-115">This section describes how you can use tracing to debug your application.</span></span>  
   
- [<span data-ttu-id="9c462-116">보안 고려 사항 및 추적에 대한 유용한 정보</span><span class="sxs-lookup"><span data-stu-id="9c462-116">Security Concerns and Useful Tips for Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [<span data-ttu-id="d8b17-116">보안 고려 사항 및 추적에 대한 유용한 정보</span><span class="sxs-lookup"><span data-stu-id="d8b17-116">Security Concerns and Useful Tips for Tracing</span></span>](security-concerns-and-useful-tips-for-tracing.md)  
   
- <span data-ttu-id="9c462-117">이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
+ <span data-ttu-id="d8b17-117">이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
   
- [<span data-ttu-id="9c462-118">추적 참조</span><span class="sxs-lookup"><span data-stu-id="9c462-118">Traces Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [<span data-ttu-id="d8b17-118">추적 참조</span><span class="sxs-lookup"><span data-stu-id="d8b17-118">Traces Reference</span></span>](traces-reference.md)  
   
- <span data-ttu-id="9c462-119">이 항목에서는 WCF에 의해 생성 된 모든 추적을 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c462-119">This topic lists all the traces generated by WCF.</span></span>  
+ <span data-ttu-id="d8b17-119">이 항목에서는 WCF에 의해 생성 된 모든 추적을 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8b17-119">This topic lists all the traces generated by WCF.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c462-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c462-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8b17-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8b17-120">See also</span></span>
 
-- [<span data-ttu-id="9c462-121">Service Trace Viewer 도구(SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="9c462-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [<span data-ttu-id="d8b17-121">Service Trace Viewer 도구(SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="d8b17-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../service-trace-viewer-tool-svctraceviewer-exe.md)
