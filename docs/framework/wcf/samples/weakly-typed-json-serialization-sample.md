@@ -2,17 +2,17 @@
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: bdeaffe31ba9bced28eebcfe294fc9944e5d05d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a503878f1cbb60090b648da8dfec741edbf02d1b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143592"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602325"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
-사용자 정의 형식을 지정된 통신 형식으로 직렬화하거나 통신 형식을 사용자 정의 형식으로 다시 역직렬화할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘은 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)(방법: JSON 데이터 직렬화 및 역직렬화) 항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
+사용자 정의 형식을 지정된 통신 형식으로 직렬화하거나 통신 형식을 사용자 정의 형식으로 다시 역직렬화할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘은 [How to: Serialize and Deserialize JSON Data](../feature-details/how-to-serialize-and-deserialize-json-data.md)(방법: JSON 데이터 직렬화 및 역직렬화) 항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
   
- 일부 시나리오에서 WCF(Windows 통신 재단) 서비스 또는 클라이언트는 개발자의 제어 를 벗어난 서비스 또는 클라이언트에서 생성된 JSON 개체에 액세스해야 합니다. 더 많은 웹 서비스가 JSON API를 공개적으로 노출함에 따라 WCF 개발자가 임의의 JSON 개체를 역직렬화할 로컬 사용자 정의 형식을 생성하는 것은 비실용적일 수 있습니다. 이 샘플은 WCF 개발자가 사용자 정의 형식을 만들지 않고도 역직렬화된 임의JSON 개체로 작업할 수 있도록 하는 메커니즘을 제공합니다. 컴파일할 때에는 JSON 개체가 역직렬화되는 형식을 알 수 없기 때문에 JSON 개체의 *약한 형식의 serialization* 이라고 합니다.  
+ 일부 시나리오에서는 Windows Communication Foundation (WCF) 서비스 또는 클라이언트가 개발자의 제어를 벗어난 서비스 또는 클라이언트에 의해 생성 된 JSON 개체에 액세스 해야 합니다. 웹 서비스는 JSON Api를 공개적으로 노출 하므로 WCF 개발자가 임의의 JSON 개체를 deserialize 하는 로컬 사용자 정의 형식을 생성 하는 것은 실용적이 지 않을 수 있습니다. 이 샘플에서는 WCF 개발자가 사용자 정의 형식을 만들지 않고 deserialize 된 임의의 JSON 개체로 작업할 수 있도록 하는 메커니즘을 제공 합니다. 컴파일할 때에는 JSON 개체가 역직렬화되는 형식을 알 수 없기 때문에 JSON 개체의 *약한 형식의 serialization* 이라고 합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "79143592"
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- 이 개체를 역직렬화하려면 WCF 클라이언트가 다음 사용자 정의 형식을 구현해야 합니다.  
+ 이 개체를 deserialize 하려면 WCF 클라이언트에서 다음 사용자 정의 형식을 구현 해야 합니다.  
   
 ```csharp  
 [DataContract]  
@@ -58,7 +58,7 @@ ms.locfileid: "79143592"
   
  이 과정이 부담이 될 수 있으며, 클라이언트에서 두 개 이상의 JSON 개체를 처리해야 하는 경우 특히 그렇습니다.  
   
- 이 샘플에서 제공하는 `JsonObject` 형식은 역직렬화된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject`에서는 JSON 개체와 .NET Framework 사전 간의 자연스러운 매핑과 JSON 배열과 .NET Framework 배열 간의 매핑에 의존합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
+ 이 샘플에서 제공하는 `JsonObject` 형식은 역직렬화된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject`는 JSON 개체와 .NET Framework 사전 간의 자연 매핑 및 JSON 배열과 .NET Framework 배열 간의 매핑에 의존 합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  
@@ -78,7 +78,7 @@ string[] favoriteBands = {
                                     };  
 ```  
   
- 컴파일할 때 해당 형식을 선언하지 않고 JSON 개체와 배열을 '찾아볼' 수 있습니다. 최상위 `["root"]` 개체의 요구 사항에 대한 설명은 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
+ 컴파일할 때 해당 형식을 선언하지 않고 JSON 개체와 배열을 '찾아볼' 수 있습니다. 최상위 `["root"]` 개체의 요구 사항에 대한 설명은 [Mapping Between JSON and XML](../feature-details/mapping-between-json-and-xml.md)항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
   
 > [!NOTE]
 > `JsonObject` 클래스는 예로서만 제공됩니다. 이 클래스는 아직 테스트를 제대로 거치지 않았으며 프로덕션 환경에서는 사용하지 말아야 합니다. 약한 형식의 JSON serialization에서 확실히 암시되는 의미는 `JsonObject`로 작업할 때 형식 안전성이 부족하다는 것입니다.  
@@ -110,7 +110,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` 생성자는 <xref:System.Xml.XmlDictionaryReader>메서드를 통해 얻을 수 있는 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 를 받습니다. 판독기에는 클라이언트에서 받는 JSON 메시지의 XML 표현이 포함되어 있습니다. 자세한 내용은 [JSON과 XML 간의 매핑](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)항목을 참조하십시오.  
+ `JsonObject` 생성자는 <xref:System.Xml.XmlDictionaryReader>메서드를 통해 얻을 수 있는 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 를 받습니다. 판독기에는 클라이언트에서 받는 JSON 메시지의 XML 표현이 포함되어 있습니다. 자세한 내용은 [JSON과 XML 간의 매핑](../feature-details/mapping-between-json-and-xml.md)항목을 참조 하세요.  
   
  프로그램에서는 다음이 출력됩니다.  
   
@@ -125,9 +125,9 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2. [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)에 설명된 대로 WeaklyTypedJson.sln 솔루션을 빌드합니다.  
+2. [Building the Windows Communication Foundation Samples](building-the-samples.md)에 설명된 대로 WeaklyTypedJson.sln 솔루션을 빌드합니다.  
   
 3. 솔루션을 실행합니다.  
   
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

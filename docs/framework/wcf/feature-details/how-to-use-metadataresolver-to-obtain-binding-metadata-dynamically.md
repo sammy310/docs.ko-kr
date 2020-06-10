@@ -2,12 +2,12 @@
 title: '방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: dfa36c81bbeb70c1dd981ff91b4efb6d7c423a5c
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 98fe4977f270b008c51039af19261ca86b8d6642
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601129"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기
 이 항목에서는 <xref:System.ServiceModel.Description.MetadataResolver> 클래스를 사용하여 바인딩 메타데이터를 동적으로 가져오는 방법을 보여 줍니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "70991628"
     }  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [메타데이터](metadata.md)

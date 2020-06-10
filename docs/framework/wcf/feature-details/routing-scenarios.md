@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 334e9fe7ca6931f87c75023f3322638b36001b6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 455a6e42aea064d48846994b4e729b90667bc8e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590503"
 ---
 # <a name="routing-scenarios"></a>라우팅 시나리오
 라우팅 서비스는 폭넓은 사용자 지정이 가능하지만 새 구성을 처음부터 만드는 경우 효율적인 라우팅 논리를 디자인하기란 어려운 일입니다.  다만 대부분의 라우팅 서비스 구성에 해당되는 몇 가지 일반적인 시나리오는 있습니다. 이러한 시나리오가 사용자의 특정 구성에 바로 적용되지는 않겠지만 이러한 시나리오를 처리하도록 라우팅 서비스를 구성하는 방법을 이해하면 라우팅 서비스를 더 잘 이해할 수 있습니다.  
@@ -34,17 +34,17 @@ ms.locfileid: "69923062"
   
  라우팅 서비스를 사용하면 클라이언트 애플리케이션에서 메시지를 받도록 하나의 엔드포인트를 노출한 다음 메시지 내용에 따라 각 메시지를 올바른 서비스 버전으로 라우트할 수 있습니다. 가장 기본적인 구현은 메시지를 처리할 서비스의 버전을 나타내는 사용자 지정 헤더를 메시지에 추가하는 것입니다. 라우팅 서비스는 XPathMessageFilter를 사용하여 각 메시지에 사용자 지정 헤더가 있는지 여부를 검사하고 적절한 대상 엔드포인트로 메시지를 라우트합니다.  
   
- 서비스 버전 관리 구성을 [만드는 데 사용 되는 단계는 방법: 서비스 버전](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)관리.
+ 서비스 버전 관리 구성을 만드는 데 사용 되는 단계는 [방법: 서비스 버전 관리](how-to-service-versioning.md)를 참조 하세요.
   
 ### <a name="service-data-partitioning"></a>서비스 데이터 분할  
  분산 환경을 디자인하는 경우 고가용성을 제공하고 개별 컴퓨터의 처리 로드를 줄이거나 특정 메시지 하위 집합에 전용 리소스를 제공하려면 처리 로드를 여러 컴퓨터로 분산하는 것이 바람직합니다. 라우팅 서비스는 전용 부하 분산 솔루션을 대신할 수는 없지만 내용 기반 라우팅 기능을 사용하면 내용 외에는 서로 비슷한 메시지를 특정 대상으로 라우트할 수 있습니다. 예를 들어 요구 사항에 따라 특정 클라이언트로부터 받은 메시지를 다른 클라이언트로부터 받은 메시지와 별개로 처리해야 하는 경우가 있습니다.  
   
- 서비스 데이터 분할 구성을 [만드는 데 사용 되는 단계는 방법: 서비스 데이터 분할](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ 서비스 데이터 분할 구성을 만드는 데 사용 되는 단계는 [방법: 서비스 데이터 분할](how-to-service-data-partitioning.md)을 참조 하세요.  
   
 ### <a name="dynamic-routing"></a>동적 라우팅  
  변화하는 비즈니스 요구를 충족하기 위해 더 새 버전의 서비스에 대한 경로를 추가하거나 라우팅 조건을 변경하거나 필터가 특정 메시지를 라우트하는 대상 엔드포인트를 변경하는 등 라우팅 구성을 수정해야 하는 경우가 많습니다. 라우팅 서비스를 사용하면 런타임 중에 새 RoutingConfiguration을 제공할 수 있도록 하는 <xref:System.ServiceModel.Routing.RoutingExtension>을 통해 이를 수행할 수 있습니다. 새 구성은 즉시 적용되지만 라우팅 서비스에서 처리하는 새 세션에만 영향을 미칩니다.  
   
- 동적 라우팅을 [구현 하는 데 사용 되는 단계는 방법: 동적 업데이트](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ 동적 라우팅을 구현 하는 데 사용 되는 단계는 [방법: 동적 업데이트](how-to-dynamic-update.md)를 참조 하세요.
   
 ### <a name="multicast"></a>멀티캐스트  
  메시지를 라우트할 때는 일반적으로 각 메시지를 하나의 특정 대상 엔드포인트로 라우트합니다.  그러나 하나의 메시지 복사본을 여러 대상 엔드포인트로 라우트해야 하는 경우도 있습니다. 멀티캐스트 라우팅을 수행하려면 다음 조건이 충족되어야 합니다.  
@@ -63,17 +63,17 @@ ms.locfileid: "69923062"
   
  라우팅 서비스는 네트워크 또는 통신 관련 오류에 직면한 메시지를 위한 견고한 오류 처리 기능을 제공하여 이 시나리오의 해결을 시도합니다. 가능한 대상 엔드포인트 목록을 만들고 이 목록을 각 메시지 필터와 연결하면 가능한 대상이 하나밖에 없는 경우 발생하는 단일 장애 지점을 제거할 수 있습니다. 오류가 발생하는 경우 라우팅 서비스는 메시지가 배달되거나 통신 이외의 오류가 발생하거나 모든 엔드포인트가 소진될 때까지 목록의 다음 엔드포인트로 메시지 배달을 시도합니다.  
   
- 오류 처리 [를 구성 하는 데 사용 되는 단계는 방법: 오류 처리](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ 오류 처리를 구성 하는 데 사용 되는 단계는 [방법: 오류 처리](how-to-error-handling.md)를 참조 하세요.
   
 ### <a name="in-this-section"></a>섹션 내용  
- [방법: 서비스 버전 관리](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [방법: 서비스 버전 관리](how-to-service-versioning.md)  
   
- [방법: 서비스 데이터 분할](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [방법: 서비스 데이터 분할](how-to-service-data-partitioning.md)  
   
- [방법: 동적 업데이트](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [방법: 동적 업데이트](how-to-dynamic-update.md)  
   
- [방법: 오류 처리](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [방법: 오류 처리](how-to-error-handling.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [라우팅 소개](routing-introduction.md)

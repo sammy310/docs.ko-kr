@@ -2,16 +2,16 @@
 title: 엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596853"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 
-WCF(Windows 통신 재단)는 엔터프라이즈 서비스와 통합하기 위한 자동 [메커니즘을 제공합니다(COM+ 응용 프로그램과의 통합](integrating-with-com-plus-applications.md)참조). 하지만 엔터프라이즈 서비스에 호스팅된 트랜잭션 구성 요소를 내부적으로 사용하는 서비스를 개발하기 위한 유연성이 필요할 수 있습니다. WCF 트랜잭션 기능은 <xref:System.Transactions> 인프라를 기반으로 구축되므로 엔터프라이즈 서비스 및 [COM+ 트랜잭션과의 상호 운용성에](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))설명된 대로 <xref:System.Transactions> 엔터프라이즈 서비스와 엔터프라이즈 서비스 간의 상호 운용성을 지정하는 프로세스와 동일합니다.  
+WCF (Windows Communication Foundation)는 엔터프라이즈 서비스와 통합 하기 위한 자동 메커니즘을 제공 합니다 ( [COM + 응용 프로그램과 통합](integrating-with-com-plus-applications.md)참조). 하지만 엔터프라이즈 서비스에 호스팅된 트랜잭션 구성 요소를 내부적으로 사용하는 서비스를 개발하기 위한 유연성이 필요할 수 있습니다. WCF 트랜잭션 기능은 인프라를 기반으로 하기 때문에, 엔터프라이즈 서비스를 <xref:System.Transactions> WCF와 통합 하는 프로세스는 <xref:System.Transactions> 엔터프라이즈 서비스 [및 com + 트랜잭션과의 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))에 설명 된 대로 및 엔터프라이즈 서비스 간의 상호 운용성을 지정 하는 프로세스와 동일 합니다.  
   
  들어오는 흐름의 트랜잭션과 COM+ 컨텍스트 트랜잭션 간에 필요한 수준의 상호 운용성을 제공하려면 서비스 구현에서 <xref:System.Transactions.TransactionScope> 인스턴스를 만들고 적절한 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거형 값을 사용해야 합니다.  
   
@@ -95,5 +95,5 @@ static void Main()
   
 ## <a name="see-also"></a>참고 항목
 
-- [COM+ 애플리케이션과의 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [COM 애플리케이션과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [COM + 응용 프로그램과 통합](integrating-with-com-plus-applications.md)
+- [COM 애플리케이션과 통합](integrating-with-com-applications.md)

@@ -2,12 +2,12 @@
 title: 메시지 큐(MSMQ) 설치
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592296"
 ---
 # <a name="installing-message-queuing-msmq"></a>메시지 큐(MSMQ) 설치
 다음 절차에서는 메시지 큐 4.0 및 메시지 큐 3.0을 설치하는 방법을 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "76921097"
   
 2. **프로그램** 을 클릭 하 고 **프로그램 및 기능**에서 **Windows 기능 사용/사용 안 함**을 클릭 합니다.  
   
-3. Microsoft Message Queue(MSMQ) Server, Microsoft Message Queue(MSMQ) Server Core를 차례로 확장하고 다음 메시지 큐 기능의 확인란을 선택하여 설치합니다.  
+3. MSMQ(Microsoft Message Queue) Server, MSMQ(Microsoft Message Queue) Server Core를 차례로 확장한 후 설치할 다음과 같은 메시지 큐 기능 확인란을 선택합니다.  
   
     - MSMQ Active Directory 도메인 서비스 통합(도메인에 연결된 컴퓨터의 경우)  
   
@@ -62,6 +62,6 @@ ms.locfileid: "76921097"
   
 6. 컴퓨터를 다시 시작할지 묻는 메시지가 표시 되 면 **확인** 을 클릭 하 여 설치를 완료 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [설치 지침](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [설치 지침](set-up-instructions.md)
