@@ -1,5 +1,6 @@
 ---
 title: 표준 예외 형식 사용
+description: .NET의 표준 예외 형식에 대해 읽어 보십시오. SystemException, ApplicationException, ArgumentException, ComException 등에 대해 알아보세요.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291359"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663059"
 ---
 # <a name="using-standard-exception-types"></a>표준 예외 형식 사용
 이 섹션에서는 프레임 워크에서 제공 하는 표준 예외 및 사용에 대 한 세부 정보를 설명 합니다. 이 목록은 완전 한 방법이 아닙니다. 다른 프레임 워크 예외 형식의 사용에 대 한 .NET Framework 참조 설명서를 참조 하세요.

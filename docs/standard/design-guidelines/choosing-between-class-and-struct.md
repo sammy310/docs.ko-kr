@@ -1,5 +1,6 @@
 ---
 title: 클래스와 구조체 간의 선택
+description: 형식을 클래스로 디자인 하거나 형식을 구조체로 디자인 하는지 여부를 결정 하는 방법에 대해 알아봅니다. .NET에서 참조 형식 및 값 형식이 어떻게 다른 지 이해 합니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280363"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662604"
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
 모든 프레임 워크 디자이너에 대 한 기본 설계 결정 사항 중 하나는 형식을 클래스 (참조 형식)로 디자인할 것인지 아니면 구조체 (값 형식)로 디자인할 것인지를 결정 하는 것입니다. 참조 형식 및 값 형식의 동작의 차이점을 이해 하는 것은이를 선택 하는 데 매우 중요 합니다.

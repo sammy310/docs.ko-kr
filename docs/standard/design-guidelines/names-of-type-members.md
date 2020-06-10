@@ -1,5 +1,6 @@
 ---
 title: 형식 멤버의 이름
+description: 메서드, 속성, 이벤트 및 필드와 같은 .NET의 형식 멤버를 명명 하는 방법에 대 한 지침을 알아봅니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290190"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662500"
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.

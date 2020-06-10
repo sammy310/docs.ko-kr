@@ -1,5 +1,6 @@
 ---
 title: 데이터 암호화
+description: .NET에서 데이터를 암호화 하는 방법을 알아봅니다. 스트림에서 대칭 암호화를 사용 하거나 작은 바이트의 비대칭 암호화를 사용할 수 있습니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cebdecd461f28f8228ebb8440dbff218dc211db
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288357"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662526"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다. 대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다. 비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.  
