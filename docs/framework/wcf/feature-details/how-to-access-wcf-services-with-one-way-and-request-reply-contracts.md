@@ -2,19 +2,19 @@
 title: '방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597191"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="5a66a-102">방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스</span><span class="sxs-lookup"><span data-stu-id="5a66a-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
-<span data-ttu-id="5a66a-103">다음 절차에서는 단방향 계약 및 요청 회신 계약을 정의하고 이중 통신 패턴을 사용하지 않는 WCF(Windows 통신 재단) 서비스에 액세스하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="adddd-102">방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스</span><span class="sxs-lookup"><span data-stu-id="adddd-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
+<span data-ttu-id="adddd-103">다음 절차에서는 단방향 계약과 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 WCF (Windows Communication Foundation) 서비스에 액세스 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
   
-### <a name="to-define-the-service"></a><span data-ttu-id="5a66a-104">서비스를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="5a66a-104">To define the service</span></span>  
+### <a name="to-define-the-service"></a><span data-ttu-id="adddd-104">서비스를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="adddd-104">To define the service</span></span>  
   
-1. <span data-ttu-id="5a66a-105">서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-105">Declare the service contract.</span></span> <span data-ttu-id="5a66a-106">단방향이어야 할 작업의 경우 내에서 가 로 설정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="5a66a-107">다음 코드에서는 , , 및 에 대한 단방향 작업을 포함하는 계약을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="5a66a-108">또한 `SayHello`라고 하는 요청 응답 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-108">It also defines a request response operation called `SayHello`.</span></span>  
+1. <span data-ttu-id="adddd-105">서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-105">Declare the service contract.</span></span> <span data-ttu-id="adddd-106">단방향이어야 할 작업의 경우 내에서 가 로 설정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="adddd-107">다음 코드에서는 , , 및 에 대한 단방향 작업을 포함하는 계약을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="adddd-108">또한 `SayHello`라고 하는 요청 응답 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-108">It also defines a request response operation called `SayHello`.</span></span>  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "79185150"
     }  
     ```  
   
-2. <span data-ttu-id="5a66a-109">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-109">Implement the service contract.</span></span> <span data-ttu-id="5a66a-110">다음 코드에서는 `IOnewayCalculator` 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
+2. <span data-ttu-id="adddd-109">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-109">Implement the service contract.</span></span> <span data-ttu-id="adddd-110">다음 코드에서는 `IOnewayCalculator` 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "79185150"
     }  
     ```  
   
-3. <span data-ttu-id="5a66a-111">콘솔 애플리케이션에서 서비스를 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-111">Host the service in a console application.</span></span> <span data-ttu-id="5a66a-112">다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-112">The following code shows how to host the service.</span></span>  
+3. <span data-ttu-id="adddd-111">콘솔 애플리케이션에서 서비스를 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-111">Host the service in a console application.</span></span> <span data-ttu-id="adddd-112">다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-112">The following code shows how to host the service.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -107,9 +107,9 @@ ms.locfileid: "79185150"
     }  
     ```  
   
-### <a name="to-access-the-service"></a><span data-ttu-id="5a66a-113">서비스에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="5a66a-113">To access the service</span></span>  
+### <a name="to-access-the-service"></a><span data-ttu-id="adddd-113">서비스에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="adddd-113">To access the service</span></span>  
   
-1. <span data-ttu-id="5a66a-114">다음 샘플 코드와 같이 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)는](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 다음 명령줄을 `Svcutil http://localhost:8000/Service` 사용하여 서비스에 대한 클라이언트 클래스를 만들기 위해 메타데이터 교환 끝점 주소를 사용하여 ServiceModel 메타데이터 유틸리티 [도구(Svcutil.exe)를](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
+1. <span data-ttu-id="adddd-114">메타 데이터 교환 끝점 주소를 사용 하 여 [Servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만듭니다. `Svcutil http://localhost:8000/Service` [servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 다음 샘플 코드에 표시 된 것 처럼 인터페이스 및 클래스 집합을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -194,9 +194,9 @@ ms.locfileid: "79185150"
     }  
     ```  
   
-     <span data-ttu-id="5a66a-115">`IOneWayCalculator` 인터페이스에서 단방향 서비스 작업의 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 `true`로 설정되고 요청-회신 서비스 작업의 특성이 기본값인 `false`로 설정되어 있음을 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="5a66a-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="5a66a-116">`OneWayCalculatorClient` 클래스도 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="5a66a-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="5a66a-117">이는 서비스를 호출하는 데 사용하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-117">This is the class that you will use to call the service.</span></span>  
+     <span data-ttu-id="adddd-115">`IOneWayCalculator` 인터페이스에서 단방향 서비스 작업의 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 `true`로 설정되고 요청-회신 서비스 작업의 특성이 기본값인 `false`로 설정되어 있음을 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="adddd-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="adddd-116">`OneWayCalculatorClient` 클래스도 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="adddd-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="adddd-117">이는 서비스를 호출하는 데 사용하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-117">This is the class that you will use to call the service.</span></span>  
   
-2. <span data-ttu-id="5a66a-118">클라이언트 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-118">Create the client object.</span></span>  
+2. <span data-ttu-id="adddd-118">클라이언트 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-118">Create the client object.</span></span>  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "79185150"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3. <span data-ttu-id="5a66a-119">서비스 작업을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-119">Call service operations.</span></span>  
+3. <span data-ttu-id="adddd-119">서비스 작업을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-119">Call service operations.</span></span>  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,15 +239,15 @@ ms.locfileid: "79185150"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4. <span data-ttu-id="5a66a-120">연결을 닫고 리소스를 정리하려면 클라이언트를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-120">Close the client to close connections and clean up resources.</span></span>  
+4. <span data-ttu-id="adddd-120">연결을 닫고 리소스를 정리하려면 클라이언트를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-120">Close the client to close connections and clean up resources.</span></span>  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="5a66a-121">예제</span><span class="sxs-lookup"><span data-stu-id="5a66a-121">Example</span></span>  
- <span data-ttu-id="5a66a-122">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="5a66a-122">The following is a complete listing of the code used  in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="adddd-121">예제</span><span class="sxs-lookup"><span data-stu-id="adddd-121">Example</span></span>  
+ <span data-ttu-id="adddd-122">다음은 이 항목에서 사용되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="adddd-122">The following is a complete listing of the code used  in this topic.</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -400,6 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5a66a-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5a66a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="adddd-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="adddd-123">See also</span></span>
 
-- [<span data-ttu-id="5a66a-124">단방향 서비스</span><span class="sxs-lookup"><span data-stu-id="5a66a-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [<span data-ttu-id="adddd-124">단방향 서비스</span><span class="sxs-lookup"><span data-stu-id="adddd-124">One-Way Services</span></span>](one-way-services.md)
