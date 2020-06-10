@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964419"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599271"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "75964419"
 ## <a name="excess-memory-consumption"></a>과도한 메모리 사용  
  고유 로컬 이름, 네임스페이스 또는 접두사를 많이 포함하는 XML 문서를 읽을 때 문제가 발생할 수 있습니다. <xref:System.Xml.XmlReader>에서 파생되는 클래스를 사용할 경우 각 항목에 대해 <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> 또는 <xref:System.Xml.XmlReader.NamespaceURI%2A> 속성을 호출하면 반환된 문자열이 <xref:System.Xml.NameTable>에 추가됩니다. <xref:System.Xml.NameTable>에 포함된 컬렉션은 크기가 줄지 않아 문자열 핸들의 가상 "메모리 누수"를 일으킵니다.  
   
- 이 문제를 완화할 수 있는 방법은 다음과 같습니다.  
+ 완화 방안은 다음과 같습니다.  
   
 - <xref:System.Xml.NameTable> 클래스에서 파생되고 최대 크기 할당량을 적용합니다. 가득 찼을 때 <xref:System.Xml.NameTable> 사용을 금지하거나 <xref:System.Xml.NameTable>을 전환할 수 없습니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75964419"
   
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: `SecurityContextToken` 또는 `SPNego` 협상 후에 서버에서 캐시하는 시간이 제한된 `SSL`의 최대 개수를 제어합니다.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 `SecurityContextToken` 이 기간 동안를 캐시 합니다.  
   
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 애플리케이션 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "75964419"
 ## <a name="auditing-event-log-can-be-filled"></a>감사 이벤트 로그가 채워질 수 있음  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목이 기록되게 할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다.  
   
- 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))을 참조 하십시오. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
+ 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))을 참조 하십시오. 자세한 내용은 [감사](auditing-security-events.md)합니다.  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>IAuthorizationPolicy의 구현이 잘못 된 경우 서비스가 응답 하지 않을 수 있습니다.  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인터페이스의 잘못 된 구현에서 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 메서드를 호출 하면 서비스가 응답 하지 않을 수 있습니다.  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>인터페이스의 잘못 된 구현에서 메서드를 호출 하면 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 서비스가 응답 하지 않을 수 있습니다.  
   
  완화 방법: 신뢰할 수 있는 코드만 사용하세요. 즉, 직접 작성하고 테스트한 코드나 신뢰할 수 있는 공급자가 제공한 코드만 사용합니다. 신뢰할 수 없는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 확장이 적절한 고려 없이 코드에 연결할 수 없도록 합니다. 이 내용은 서비스 구현에 사용되는 모든 확장에 적용됩니다. WCF는 확장성 위치를 사용 하 여 연결 된 응용 프로그램 코드와 외부 코드를 구분 하지 않습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75964419"
   
  이 경우 WCF 서비스는 자동 등록을 사용 하 여 도메인에서 열지 못할 수 있습니다. 이 문제는 컴퓨터의 정규화된 DNS(Domain Name System) 이름을 포함하는 여러 인증서가 있어서 기본 서비스 X.509 자격 증명 검색 조건이 모호할 수 있기 때문에 발생합니다. 한 인증서는 자동 등록에서 시작되고 다른 인증서는 자체 서명된 인증서일 수 있습니다.  
   
- 이를 완화 하려면 [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)에서 보다 정확한 검색 조건을 사용 하 여 사용할 정확한 인증서를 참조 합니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 옵션을 사용하고 고유한 지문(해시)으로 인증서를 지정합니다.  
+ 이를 완화 하려면에서 보다 정확한 검색 기준을 사용 하 여 사용할 정확한 인증서를 참조 합니다 [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 옵션을 사용하고 고유한 지문(해시)으로 인증서를 지정합니다.  
   
  자동 등록 기능에 대 한 자세한 내용은 [Windows Server 2003의 인증서 자동 등록](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))을 참조 하세요.  
   
@@ -75,16 +75,16 @@ ms.locfileid: "75964419"
  서비스에서 성공적으로 클라이언트를 인증하고 서비스와의 보안 세션이 설정된 경우 서비스는 클라이언트가 세션을 취소하거나 세션이 만료될 때까지 세션을 추적합니다. 설정된 각 세션은 서비스에 대해 허용되는 동시 활성 세션의 최대 개수 제한에 계산됩니다. 이 제한에 도달하면 하나 이상의 활성 세션이 만료되거나 클라이언트에 의해 취소될 때까지 해당 서비스와 새 세션을 만들려고 시도하는 클라이언트가 거부됩니다. 클라이언트는 서비스와 여러 세션을 만들 수 있으며, 이러한 세션의 각각이 제한에 계산됩니다.  
   
 > [!NOTE]
-> 상태 저장 세션을 사용하는 경우 이전 단락의 내용이 적용되지 않습니다. 상태 저장 세션에 대 한 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요.  
+> 상태 저장 세션을 사용하는 경우 이전 단락의 내용이 적용되지 않습니다. 상태 저장 세션에 대 한 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요.  
   
  이 문제를 완화하려면 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 설정하여 활성 세션의 최대 개수와 세션의 최대 수명에 대해 제한을 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Security Considerations](security-considerations-in-wcf.md)
+- [정보 공개](information-disclosure.md)
+- [권한 상승](elevation-of-privilege.md)
+- [서비스 거부](denial-of-service.md)
+- [재생 공격](replay-attacks.md)
+- [변조](tampering.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)

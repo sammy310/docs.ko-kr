@@ -2,24 +2,24 @@
 title: 전송 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d160f6f0d1d29e34ca3365501b86d1a736de67b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589944"
 ---
 # <a name="securing-messages-using-transport-security"></a>전송 보안을 사용하여 메시지에 보안 설정
 이 단원에서는 큐에 보내는 메시지를 보안 설정하는 데 사용할 수 있는 메시지 큐(MSMQ) 전송 보안에 대해 설명합니다.  
   
 > [!NOTE]
-> 이 항목을 읽기 전에 [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)을 확인 하는 것이 좋습니다.  
+> 이 항목을 읽기 전에 [보안 개념](security-concepts.md)을 확인 하는 것이 좋습니다.  
   
  다음 그림에서는 Windows Communication Foundation (WCF)를 사용 하는 대기 중인 통신의 개념적 모델을 제공 합니다. 이 그림과 용어는 전송 보안 개념을 설명하는 데 사용됩니다.  
   
- ![대기 중인 응용 프로그램 다이어그램](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "분산 큐-그림")  
+ ![대기 중인 응용 프로그램 다이어그램](media/distributed-queue-figure.jpg "분산 큐 그림")  
   
- 를 사용 하 여 wcf <xref:System.ServiceModel.NetMsmqBinding>를 사용 하 여 대기 중인 메시지를 보내는 경우 wcf 메시지는 MSMQ 메시지의 본문으로 연결 됩니다. 전송 보안은 MSMQ 메시지 전체(MSMQ 메시지 헤더 또는 속성 및 메시지 본문)에 대한 보안을 설정합니다. MSMQ 메시지의 본문 이기 때문에 전송 보안을 사용 하면 WCF 메시지도 보호 됩니다.  
+ 를 사용 하 여 WCF를 사용 하 여 대기 중인 메시지를 보내는 경우 <xref:System.ServiceModel.NetMsmqBinding> wcf 메시지는 MSMQ 메시지의 본문으로 연결 됩니다. 전송 보안은 MSMQ 메시지 전체(MSMQ 메시지 헤더 또는 속성 및 메시지 본문)에 대한 보안을 설정합니다. MSMQ 메시지의 본문 이기 때문에 전송 보안을 사용 하면 WCF 메시지도 보호 됩니다.  
   
  전송 보안의 주요 개념은 클라이언트가 대상 큐로 메시지를 가져오는 데 필요한 보안 요구 사항을 만족해야 한다는 것입니다. 이 개념은 메시지를 받는 애플리케이션에서 메시지가 보안되는 메시지 보안과는 다릅니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "69911714"
  이를 바탕으로 다음 단원에서는 <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>과 함께 제공되는 전송 보안 속성에 대해 설명합니다.  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 인증 모드  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>는 메시지 보안을 위해 Windows 도메인 보안을 사용할지 또는 외부 인증서 기반 보안을 사용할지 명시적으로 지정합니다. 두 인증 모드에서 모두 WCF 대기 중인 전송 채널은 서비스 `CertificateValidationMode` 구성에 지정 된를 사용 합니다. 인증서 유효성 검사 모드에서는 인증서의 유효성을 확인하는 데 사용하는 메커니즘을 지정합니다.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>는 메시지 보안을 위해 Windows 도메인 보안을 사용할지 또는 외부 인증서 기반 보안을 사용할지 명시적으로 지정합니다. 두 인증 모드에서 모두 WCF 대기 중인 전송 채널은 `CertificateValidationMode` 서비스 구성에 지정 된를 사용 합니다. 인증서 유효성 검사 모드에서는 인증서의 유효성을 확인하는 데 사용하는 메커니즘을 지정합니다.  
   
  전송 보안이 켜져 있는 경우 기본 설정은 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>입니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "69911714"
 #### <a name="certificate-authentication-mode"></a>인증서 인증 모드  
  인증서 인증 모드를 사용하려면 Active Directory 통합이 필요하지 않습니다. 실제로 Active Directory 통합을 사용하지 않고 MSMQ를 작업 그룹 모드에 설치한 경우 또는 SRMP(SOAP Reliable Messaging Protocol) 전송 프로토콜을 사용하여 큐에 메시지를 전송하는 경우 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>만 작동합니다.  
   
- 를 사용 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>하 여 wcf 메시지를 보낼 때 wcf 채널은 Windows SID를 MSMQ 메시지에 연결 하지 않습니다. 이런 경우 대상 큐 ACL에서는 큐에 메시지를 보낼 수 있도록 `Anonymous` 사용자 액세스 권한을 허용해야 합니다. 수신 큐 관리자는 인증서를 사용하여 MSMQ 메시지가 서명되었는지 여부를 확인하지만 인증을 수행하지는 않습니다.  
+ 를 사용 하 여 WCF 메시지를 보낼 때 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> wcf 채널은 WINDOWS SID를 MSMQ 메시지에 연결 하지 않습니다. 이런 경우 대상 큐 ACL에서는 큐에 메시지를 보낼 수 있도록 `Anonymous` 사용자 액세스 권한을 허용해야 합니다. 수신 큐 관리자는 인증서를 사용하여 MSMQ 메시지가 서명되었는지 여부를 확인하지만 인증을 수행하지는 않습니다.  
   
  클레임 및 id 정보를 포함 하는 인증서는 WCF의 <xref:System.ServiceModel.ServiceSecurityContext> 대기 중인 전송 채널을 통해에 채워집니다. 서비스는 이 정보를 사용하여 보낸 사람에 대한 고유한 인증을 수행합니다.  
   
@@ -98,8 +98,8 @@ ms.locfileid: "69911714"
 
  MD5/SHA1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [큐 개요](queues-overview.md)
-- [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [보안 개념](security-concepts.md)
+- [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)

@@ -2,15 +2,15 @@
 title: '방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597191"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스
-다음 절차에서는 단방향 계약 및 요청 회신 계약을 정의하고 이중 통신 패턴을 사용하지 않는 WCF(Windows 통신 재단) 서비스에 액세스하는 방법을 설명합니다.  
+다음 절차에서는 단방향 계약과 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 WCF (Windows Communication Foundation) 서비스에 액세스 하는 방법을 설명 합니다.  
   
 ### <a name="to-define-the-service"></a>서비스를 정의하려면  
   
@@ -109,7 +109,7 @@ ms.locfileid: "79185150"
   
 ### <a name="to-access-the-service"></a>서비스에 액세스하려면  
   
-1. 다음 샘플 코드와 같이 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)는](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 다음 명령줄을 `Svcutil http://localhost:8000/Service` 사용하여 서비스에 대한 클라이언트 클래스를 만들기 위해 메타데이터 교환 끝점 주소를 사용하여 ServiceModel 메타데이터 유틸리티 [도구(Svcutil.exe)를](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 실행합니다.  
+1. 메타 데이터 교환 끝점 주소를 사용 하 여 [Servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만듭니다. `Svcutil http://localhost:8000/Service` [servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 다음 샘플 코드에 표시 된 것 처럼 인터페이스 및 클래스 집합을 생성 합니다.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -402,4 +402,4 @@ namespace Microsoft.ServiceModel.Samples
   
 ## <a name="see-also"></a>참고 항목
 
-- [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [단방향 서비스](one-way-services.md)

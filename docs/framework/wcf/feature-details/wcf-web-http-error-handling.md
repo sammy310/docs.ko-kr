@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1d41bebafa2795d390b120ad84475417389479b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598647"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 WCF (Windows Communication Foundation) 웹 HTTP 오류 처리를 사용 하면 HTTP 상태 코드를 지정 하 고 작업과 동일한 형식 (예: XML 또는 JSON)을 사용 하 여 오류 정보를 반환 하는 WCF 웹 HTTP 서비스에서 오류를 반환할 수 있습니다.  
@@ -48,14 +48,14 @@ public string Operation2()
   
 - <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>에 액세스하는 <xref:System.ServiceModel.Web.OutgoingWebResponseContext> 속성의 값  
   
- 이러한 값이 작업 서식 지정에 미치는 영향에 대 한 자세한 내용은 [WCF 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)을 참조 하세요.  
+ 이러한 값이 작업 서식 지정에 미치는 영향에 대 한 자세한 내용은 [WCF 웹 HTTP 형식 지정](wcf-web-http-formatting.md)을 참조 하세요.  
   
  <xref:System.ServiceModel.Web.WebFaultException>은 <xref:System.ServiceModel.FaultException>이므로 SOAP 엔드포인트와 웹 HTTP 엔드포인트를 둘 다 노출하는 서비스의 오류 예외 프로그래밍 모델로 사용될 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [WCF 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
-- [오류 정의 및 지정](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
-- [예외 및 오류 처리](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
-- [오류 보내기 및 받기](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [WCF 웹 HTTP 프로그래밍 모델](wcf-web-http-programming-model.md)
+- [WCF 웹 HTTP 형식 지정](wcf-web-http-formatting.md)
+- [오류 정의 및 지정](../defining-and-specifying-faults.md)
+- [예외 및 오류 처리](../extending/handling-exceptions-and-faults.md)
+- [오류 보내기 및 받기](../sending-and-receiving-faults.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595286"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
 적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 애플리케이션 인터페이스를 구성합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "70991579"
   
  Windows 7 컴퓨터에서 ComSvcConfig.exe를 사용하여 웹 서비스가 최신 서비스 모델 버전(현재 v4.5)을 사용하도록 구성하려면 다음 단계를 따르십시오.  
   
-1. 레지스트리 키 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` 를 DWORD 값 0x00000001로 설정 합니다.  
+1. 레지스트리 키를 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` DWORD 값 0x00000001로 설정 합니다.  
   
 2. Comsvcconfig.exe를 실행합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70991579"
   
      이 명령은 OnlineStore COM+ 애플리케이션에 있는 `IFinances` 구성 요소의 `ItemOrders.IFinancial` 인터페이스를 웹 서비스로 노출될 인터페이스 집합에 추가합니다. 이 서비스는 COM+ 호스팅 모드를 사용하므로 명시적으로 애플리케이션을 활성화해야 합니다.  
   
-     와일드 카드 별표 (\*) 문자는 구성 요소와 인터페이스에 사용할 수 있지만 선택한 기능만 웹 서비스로 노출 하려는 경우에는 사용 하지 마십시오. 이 구성 요소의 다음 버전으로 실행하는 경우 와일드카드를 사용하면 구성 구문을 확인했을 때 표시되지 않은 인터페이스를 실수로 노출할 수도 있습니다.  
+     와일드 카드 별표 ( \* ) 문자는 구성 요소와 인터페이스에 사용할 수 있지만 선택한 기능만 웹 서비스로 노출 하려는 경우에는 사용 하지 마십시오. 이 구성 요소의 다음 버전으로 실행하는 경우 와일드카드를 사용하면 구성 구문을 확인했을 때 표시되지 않은 인터페이스를 실수로 노출할 수도 있습니다.  
   
      /verbose 옵션은 도구에 경고와 오류를 표시하도록 지시합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70991579"
   
      웹 호스팅 in-process 구성을 사용하려면 구성 요소 서비스 관리 콘솔을 사용하여 서버 애플리케이션이 아닌 라이브러리 애플리케이션으로 실행되도록 COM+ 애플리케이션을 구성해야 합니다. 서버 애플리케이션으로 구성된 애플리케이션은 표준 웹 호스팅 모드를 사용하고 프로세스 홉을 수행하여 각 요청을 처리합니다.  
   
-     `/mex` 옵션은 같은 전송을 응용 프로그램의 서비스 끝점으로 사용하는 MEX(메타데이터 교환) 서비스 끝점을 추가하여 서비스에서 계약 정의를 검색하려는 클라이언트를 지원합니다.  
+     ph x=&quot;1&quot; /&amp;gt; 옵션은 같은 전송을 애플리케이션의 서비스 엔드포인트로 사용하는 MEX(메타데이터 교환) 서비스 엔드포인트를 추가하여 서비스에서 계약 정의를 검색하려는 클라이언트를 지원합니다.  
   
 ## <a name="to-remove-a-web-service-for-a-specified-interface"></a>지정된 인터페이스에 대한 웹 서비스를 제거하려면  
   
@@ -109,6 +109,6 @@ ms.locfileid: "70991579"
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [COM+ 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [COM + 응용 프로그램과 통합 개요](integrating-with-com-plus-applications-overview.md)

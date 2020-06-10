@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 7037daf299d7c750ab398c21c1d7ccb541620701
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590373"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML (Security 어설션이 Markup Language) *토큰* 은 클레임의 XML 표현입니다. 기본적으로 페더레이션 보안 시나리오에서 WCF (Windows Communication Foundation)가 사용 하는 SAML 토큰은 *발급 된 토큰*입니다.  
@@ -31,26 +31,26 @@ SAML (Security 어설션이 Markup Language) *토큰* 은 클레임의 XML 표�
 4. SAML 토큰을 통한 서명은 신뢰하는 상대에게 보안 토큰 서비스에서 토큰을 발행했음을 나타냅니다. 증명 키를 사용하여 만든 메시지 서명은 신뢰하는 상대에게 토큰이 클라이언트에게 발행되었음을 나타냅니다.  
   
 ## <a name="from-claims-to-samlattributes"></a>클레임에서 SamlAttribute로  
- WCF에서 SAML 토큰의 문은 개체로 모델링 <xref:System.IdentityModel.Tokens.SamlAttribute> 됩니다. 개체의 <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성이 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 이 고 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성이 인 경우 <xref:System.IdentityModel.Claims.Claim> 개체에서 <xref:System.IdentityModel.Claims.Claim> 직접 채워질 수 있습니다. 을 <xref:System.String>입력 합니다. 예를 들어:  
+ WCF에서 SAML 토큰의 문은 개체 <xref:System.IdentityModel.Tokens.SamlAttribute> 에서 직접 채워질 수 있는 개체로 모델링 됩니다. 개체의 <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성이이 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 고 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 형식입니다 <xref:System.String> . 예를 들면 다음과 같습니다.  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
-> SAML 토큰이 메시지에 serialize될 때 보안 토큰 서비스에서 해당 토큰을 발행하거나 클라이언트에서 인증의 일부로 해당 토큰을 서비스에 제공하는 경우, 최대 메시지 크기 할당량은 SAML 토큰 및 다른 메시지 부분을 수용할 수 있도록 충분히 커야 합니다. 일반적으로 기본 메시지 크기 할당량이면 충분합니다. 그러나 SAML 토큰에 수백 개의 클레임이 포함되어 있어 SAML 토큰이 큰 경우에는 serialize된 토큰을 수용할 수 있도록 할당량을 늘려야 할 수 있습니다. 자세한 내용은 [데이터에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)합니다.  
+> SAML 토큰이 메시지에 serialize될 때 보안 토큰 서비스에서 해당 토큰을 발행하거나 클라이언트에서 인증의 일부로 해당 토큰을 서비스에 제공하는 경우, 최대 메시지 크기 할당량은 SAML 토큰 및 다른 메시지 부분을 수용할 수 있도록 충분히 커야 합니다. 일반적으로 기본 메시지 크기 할당량이면 충분합니다. 그러나 SAML 토큰에 수백 개의 클레임이 포함되어 있어 SAML 토큰이 큰 경우에는 serialize된 토큰을 수용할 수 있도록 할당량을 늘려야 할 수 있습니다. 자세한 내용은 [데이터의 보안 고려 사항](security-considerations-for-data.md)을 참조 하세요.  
   
 ## <a name="from-samlattributes-to-claims"></a>SamlAttribute에서 클레임으로  
  메시지에서 SAML 토큰을 받으면 SAML 토큰의 여러 문이 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>에 배치되는 <xref:System.IdentityModel.Policy.AuthorizationContext> 개체로 변경됩니다. 각 SAML 문의 클레임은 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>의 <xref:System.IdentityModel.Policy.AuthorizationContext> 속성에서 반환하며, 사용자 인증 및 권한 부여 여부를 결정하기 위해 검사할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [방법: 페더레이션 서비스에 대 한 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [페더레이션](federation.md)
+- [방법: 페더레이션 클라이언트 만들기](how-to-create-a-federated-client.md)
+- [방법: 페더레이션 서비스에서 자격 증명 구성](how-to-configure-credentials-on-a-federation-service.md)
+- [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)
+- [클레임 및 토큰](claims-and-tokens.md)
+- [클레임 만들기 및 리소스 값](claim-creation-and-resource-values.md)
+- [방법: 사용자 지정 클레임 만들기](../extending/how-to-create-a-custom-claim.md)
