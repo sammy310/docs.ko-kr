@@ -1,5 +1,6 @@
 ---
 title: .NET Framework의 네트워크 프로그래밍
+description: 이 리소스를 사용하여 .NET Framework에서 제공하는 확장성 있고 계층화된 관리되는 인터넷 서비스 구현을 애플리케이션에 통합할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204689"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502407"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework의 네트워크 프로그래밍
 Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. 네트워크 애플리케이션은 플러그 가능한 프로토콜을 바탕으로 빌드하여 새 인터넷 프로토콜을 자동으로 이용하거나, Windows 소켓 인터페이스의 관리되는 구현을 사용하여 소켓 수준에서 네트워크 작업을 수행할 수 있습니다.  
@@ -85,7 +86,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  [네트워크 프로그래밍 샘플](network-programming-samples.md)  
  <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> 네임스페이스의 클래스를 사용하는 다운로드 가능한 네트워크 프로그래밍 샘플에 대한 링크입니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Net?displayProperty=nameWithType>  
  오늘날 네트워크에 사용되는 여러 프로토콜을 위한 간단한 프로그래밍 인터페이스를 제공합니다. 이 네임스페이스의 <xref:System.Net.WebRequest?displayProperty=nameWithType> 및 <xref:System.Net.WebResponse?displayProperty=nameWithType> 클래스는 플러그 가능한 프로토콜을 위한 기초입니다.  
   
@@ -134,7 +135,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  애플리케이션의 확장된 보호를 사용하여 인증 구성을 지원합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](tls.md)
 - [네트워크 프로그래밍 방법 항목](network-programming-how-to-topics.md)

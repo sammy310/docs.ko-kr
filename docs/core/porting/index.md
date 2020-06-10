@@ -3,12 +3,12 @@ title: .NET Framework에서 .NET Core로 이식
 description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158289"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502771"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 개요
 
@@ -29,7 +29,7 @@ ms.locfileid: "82158289"
 
 - Visual Studio 2019
 - [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md) 다운로드
-- (선택 사항) [dotnet try-convert](https://github.com/dotnet/try-convert) 설치 
+- (선택 사항) [dotnet try-convert](https://github.com/dotnet/try-convert) 설치
 
 ## <a name="porting-a-solution"></a>솔루션 이식
 
@@ -39,6 +39,9 @@ ms.locfileid: "82158289"
 
 - [Visual Studio의 종속성 다이어그램](/visualstudio/modeling/create-layer-diagrams-from-your-code)을 사용하여 솔루션에 포함된 코드의 방향성 그래프를 만들 수 있습니다.
 - `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json`을 실행하여 프로젝트 참조 목록을 포함하는 json 문서를 생성합니다.
+- `-r DGML` 스위치를 사용해 [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)를 실행하여 어셈블리의 종속성 다이어그램을 검색합니다. 자세한 내용은 [여기](../../standard/analyzers/portability-analyzer.md#solution-wide-view)를 참조하세요.
+
+종속성 정보를 확보한 후 해당 정보를 사용하여 리프 노드에서 시작하고 종속성 트리 작업을 차근차근 진행하여 다음 섹션의 단계를 적용하는 작업까지 계속 진행할 수 있습니다.
 
 ## <a name="per-project-steps"></a>프로젝트 단계별
 
