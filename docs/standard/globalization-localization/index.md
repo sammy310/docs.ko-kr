@@ -1,5 +1,6 @@
 ---
 title: .NET 애플리케이션 전역화 및 지역화
+description: 전 세계에서 사용할 수 있는 애플리케이션을 개발하는 방법을 알아보세요. .NET의 세계화, 지역화 가능성 검토 및 지역화에 대해 읽어보세요.
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600791"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET 애플리케이션 전역화 및 지역화
 

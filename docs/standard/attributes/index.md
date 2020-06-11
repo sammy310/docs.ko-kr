@@ -1,5 +1,6 @@
 ---
 title: 특성을 사용하여 메타데이터 확장
+description: .NET에서 특성을 사용하여 메타데이터를 확장하는 방법을 알아보세요. 특성은 형식, 필드 등의 프로그래밍 요소에 주석을 추가하기 위한, 키워드 방식의 설명적 선언입니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: d27dc3d77a8f72123f23d9f5a893d144bacee662
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c77de970c5550bd896e83854414592d70eb9dc48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598634"
 ---
 # <a name="extending-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장
 공용 언어 런타임에서는 형식, 필드, 메서드 및 속성과 같은 프로그래밍 요소에 주석을 달기 위해 특성이라는 키워드 방식의 설명적 선언을 추가할 수 있습니다. 런타임용으로 코드를 컴파일하는 경우 MSIL(Microsoft Intermediate Language)로 변환되고 컴파일러에서 생성된 메타데이터와 함께 PE(이식 가능한 실행) 파일 내에 배치됩니다. 특성을 사용하여 런타임 리플렉션 서비스를 통해 추출할 수 있는 메타데이터에 추가 설명 정보를 배치할 수 있습니다. <xref:System.Attribute?displayProperty=nameWithType>에서 파생되는 특수 클래스 인스턴스를 선언하면 컴파일러에서 특성을 만듭니다.  

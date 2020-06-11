@@ -1,13 +1,13 @@
 ---
 title: 함수
-description: 의 함수 및에서 F# 일반적인 함수형 F# 프로그래밍 구문을 지 원하는 방법에 대해 알아봅니다.
+description: F#의 함수 및 F#에서 일반적인 함수 프로그래밍 구문을 지원하는 방법에 대해 알아보세요.
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596476"
 ---
 # <a name="functions"></a>함수
 
@@ -24,7 +24,7 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 *function-name*은 함수를 나타내는 식별자입니다. *parameter-list*는 공백으로 구분되는 연속 매개 변수로 구성됩니다. 매개 변수 섹션에 설명된 대로 각 매개 변수에 대해 명시적 형식을 지정할 수 있습니다. 특정 인수 형식을 지정하지 않으면 컴파일러가 함수 본문에서 형식을 유추하려고 합니다. *함수 본문*은 식으로 구성됩니다. 함수 본문을 구성하는 식은 일반적으로 여러 식으로 구성된 복합 식이며, 복합 식은 반환 값이 되는 최종 식으로 수렴됩니다. *반환 형식*은 그 뒤에 콜론이 나오며 선택 사항입니다. 반환 값의 형식을 명시적으로 지정하지 않으면 컴파일러가 최종 식에서 반환 형식을 결정합니다.
 
@@ -36,7 +36,7 @@ let f x = x + 1
 
 앞의 예제에서 함수 이름은 `f`이고, 인수는 `x`이고 그 형식은 `int`이며, 함수 본문은 `x + 1`이고, 반환 값의 형식은 `int`입니다.
 
-함수를 `inline`으로 표시할 수 있습니다. `inline`에 대한 내용은 [인라인 함수](../functions/inline-functions.md)를 참조하세요.
+함수를 `inline`으로 표시할 수 있습니다. `inline`에 대한 내용은 [인라인 함수](inline-functions.md)를 참조하세요.
 
 ## <a name="scope"></a>Scope
 
@@ -112,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="recursive-functions"></a>재귀 함수
 
-*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수는 *n*<sup>번째</sup> 피보나치 수를 계산 합니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
+*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수는 *n*<sup>번째</sup> 피보나치 수를 계산합니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -142,7 +142,7 @@ F#에서 모든 함수는 값으로 간주됩니다. 사실 이들을 *함수 �
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 [람다 식: `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)를 참조하세요.
+`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 [람다 식: `fun` 키워드](lambda-expressions-the-fun-keyword.md)를 참조하세요.
 
 ## <a name="function-composition-and-pipelining"></a>함수 컴퍼지션 및 파이프라인
 

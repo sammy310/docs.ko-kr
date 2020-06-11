@@ -1,40 +1,41 @@
 ---
-title: 관리되는 스레딩
+title: 관리형 스레딩
+description: 기본 사항, 모범 사례, 스레딩 개체 및 기능, 참조 페이지 등을 다루는 .NET의 관리형 스레딩에 대한 문서 링크를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: e4c19b664e8fc040fdc4a284b30f6104d676088d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 570db45138c85c4252967404da4404d434660d69
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279156"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599752"
 ---
-# <a name="managed-threading"></a>관리되는 스레딩
-개발 대상 컴퓨터에 프로세서가 1개 있든, 여러 개 있든, 애플리케이션이 현재 다른 작업을 수행하면서도 사용자에게 가장 먼저 반응하는 방식으로 상호 작용을 제공하는 것을 원할 것입니다. 다중 스레드 방식의 실행을 사용하는 것이 사용자에 대한 애플리케이션 응답성을 유지하면서 사용자 이벤트 중간에 프로세서를 최대한 활용할 수 있는 가장 강력한 방법 중 하나입니다. 이 섹션에서는 스레딩의 기본 개념을 소개하지만 관리되는 스레딩 개념 및 관리되는 스레딩 사용을 집중적으로 다룹니다.  
+# <a name="managed-threading"></a>관리형 스레딩
+개발 대상 컴퓨터에 프로세서가 1개 있든, 여러 개 있든, 애플리케이션이 현재 다른 작업을 수행하면서도 사용자에게 가장 먼저 반응하는 방식으로 상호 작용을 제공하는 것을 원할 것입니다. 다중 스레드 방식의 실행을 사용하는 것이 사용자에 대한 애플리케이션 응답성을 유지하면서 사용자 이벤트 중간에 프로세서를 최대한 활용할 수 있는 가장 강력한 방법 중 하나입니다. 이 섹션에서는 스레딩의 기본 개념을 소개하지만 관리형 스레딩 개념 및 관리되는 스레딩 사용을 집중적으로 다룹니다.  
   
 > [!NOTE]
 > .NET Framework 4부터는 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스, [PLINQ(병렬 LINQ)](../parallel-programming/introduction-to-plinq.md), <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 새로운 동시 컬렉션 클래스, 그리고 스레드가 아닌 작업 개념을 기반으로 하는 새로운 프로그래밍 모델로 인해 다중 스레드 프로그래밍이 매우 간소화되었습니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [관리되는 스레딩 기본 사항](managed-threading-basics.md)  
- 관리되는 스레딩의 개요를 제공하고 다중 스레드를 사용해야 하는 경우를 설명합니다.  
+ [관리형 스레딩 기본 사항](managed-threading-basics.md)  
+ 관리형 스레딩의 개요를 제공하고 다중 스레드를 사용해야 하는 경우를 설명합니다.  
   
  [스레드 및 스레딩 사용](using-threads-and-threading.md)  
  스레드를 만들고, 시작하고, 일시 중지하고, 재개하고, 중단하는 방법을 설명합니다.  
   
- [관리되는 스레딩을 구현하는 최선의 방법](managed-threading-best-practices.md)  
+ [관리형 스레딩을 구현하는 최선의 방법](managed-threading-best-practices.md)  
  동기화 수준, 교착 상태 및 경합 상태를 방지하는 방법, 기타 스레딩 문제에 대해 설명합니다.  
   
  [스레딩 개체 및 기능](threading-objects-and-features.md)  
- 스레드 작업과 다른 스레드에서 액세스되는 개체 데이터를 동기화하는 데 사용할 수 있는 관리되는 클래스에 대해 설명하고 스레드 풀 스레드에 대해 대략적으로 설명합니다.  
+ 스레드 작업과 다른 스레드에서 액세스되는 개체 데이터를 동기화하는 데 사용할 수 있는 관리형 클래스에 대해 설명하고 스레드 풀 스레드에 대해 대략적으로 설명합니다.  
   
 ## <a name="reference"></a>참고  
  <xref:System.Threading>  
- 관리되는 스레드를 사용하고 동기화하기 위한 클래스를 포함합니다.  
+ 관리형 스레드를 사용하고 동기화하기 위한 클래스를 포함합니다.  
   
  <xref:System.Collections.Concurrent>  
  여러 스레드에서 사용해도 안전한 컬렉션 클래스를 포함합니다.  

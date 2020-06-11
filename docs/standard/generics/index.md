@@ -1,5 +1,6 @@
 ---
 title: .NET의 제네릭
+description: .NET의 제네릭에 대해 알아보세요. 제네릭을 정의하고 사용하며, 제네릭의 이점과 단점을 알아보고, 클래스 라이브러리 및 언어 지원 등을 파악하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84275960"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599817"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 

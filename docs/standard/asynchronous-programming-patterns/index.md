@@ -1,17 +1,18 @@
 ---
 title: 비동기 프로그래밍 패턴
+description: .NET의 TAP(작업 기반 비동기 패턴), EAP(이벤트 기반 비동기 패턴) 및 APM(비동기 프로그래밍 모델)에 대해 알아보세요.
 ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583507"
 ---
 # <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
 
@@ -65,7 +66,7 @@ public class MyClass
 }  
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비동기에 대한 자세한 설명](../async-in-depth.md)
 - [C#의 비동기 프로그래밍](../../csharp/async.md)
