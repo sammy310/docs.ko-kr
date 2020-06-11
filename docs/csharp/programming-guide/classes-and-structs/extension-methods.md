@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506820"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241411"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 
@@ -97,7 +97,7 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>미리 정의된 형식 확장
 
-재사용 가능한 기능을 만들어야 할 때 새 개체를 만드는 대신 기존 형식(예: .NET Framework 또는 CLR 형식)을 확장하는 경우가 많습니다. 예를 들어 확장 메서드를 사용하지 않는 경우 SQL Server에 대해 쿼리를 실행하는 작업을 수행하기 위해 코드의 여러 위치에서 호출될 수 있는 `Engine` 또는 `Query` 클래스를 만들 수 있습니다. 그러나 대신 확장 메서드를 사용하여 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 클래스를 확장하면 SQL Server에 연결된 모든 위치에서 해당 쿼리를 수행할 수 있습니다. 다른 예로는 <xref:System.String?displayProperty=nameWithType> 클래스에 공통 기능 추가, <xref:System.IO.File?displayProperty=nameWithType> 및 <xref:System.IO.Stream?displayProperty=nameWithType> 개체의 데이터 처리 기능 확장, 특정 오류 처리 기능을 위한 <xref:System.Exception?displayProperty=nameWithType> 개체를 들 수 있습니다. 이러한 사용 사례 유형은 상상력과 판단력에 의해서만 제한됩니다.
+재사용 가능한 기능을 만들어야 할 때 새 개체를 만드는 대신 기존 형식(예: .NET 또는 CLR 형식)을 확장하는 경우가 많습니다. 예를 들어 확장 메서드를 사용하지 않는 경우 SQL Server에 대해 쿼리를 실행하는 작업을 수행하기 위해 코드의 여러 위치에서 호출될 수 있는 `Engine` 또는 `Query` 클래스를 만들 수 있습니다. 그러나 대신 확장 메서드를 사용하여 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 클래스를 확장하면 SQL Server에 연결된 모든 위치에서 해당 쿼리를 수행할 수 있습니다. 다른 예로는 <xref:System.String?displayProperty=nameWithType> 클래스에 공통 기능 추가, <xref:System.IO.File?displayProperty=nameWithType> 및 <xref:System.IO.Stream?displayProperty=nameWithType> 개체의 데이터 처리 기능 확장, 특정 오류 처리 기능을 위한 <xref:System.Exception?displayProperty=nameWithType> 개체를 들 수 있습니다. 이러한 사용 사례 유형은 상상력과 판단력에 의해서만 제한됩니다.
 
 미리 정의된 형식의 확장은 메서드에 값으로 전달되는 `struct` 형식에는 사용하기 어려울 수 있습니다. 구조체의 모든 변경 내용이 구조체의 복사본에 적용되기 때문입니다. 이러한 변경 내용은 확장 메서드가 만들어진 이후에는 표시되지 않습니다. C# 7.2부터 확장 메서드의 첫 번째 인수에 `ref` 한정자를 추가할 수 있습니다. `ref` 한정자를 추가하면 첫 번째 인수가 참조로 전달됩니다. 이렇게 하면 확장되는 구조체의 상태를 변경하는 확장 메서드를 작성할 수 있습니다.
 
@@ -114,9 +114,9 @@ static class DomainEntityExtensions
 - 시그니처가 형식에 정의된 메서드와 동일한 확장 메서드는 호출되지 않습니다.
 - 확장 메서드는 네임스페이스 수준에서 범위로 가져옵니다. 예를 들어 `Extensions`라는 단일 네임스페이스에 확장 메서드를 포함하는 여러 개의 정적 클래스가 있는 경우 `using Extensions;` 지시문을 통해 모두 범위로 가져옵니다.
 
-구현된 클래스 라이브러리의 경우 어셈블리의 버전 번호가 증가되는 것을 방지하기 위해 확장 메서드를 사용해서는 안 됩니다. 소스 코드를 소유하고 있는 라이브러리에 중요 기능을 추가하려는 경우 어셈블리 버전 관리를 위한 표준 .NET Framework 지침을 따라야 합니다. 자세한 내용은 [어셈블리 버전 관리](../../../standard/assembly/versioning.md)를 참조하세요.
+구현된 클래스 라이브러리의 경우 어셈블리의 버전 번호가 증가되는 것을 방지하기 위해 확장 메서드를 사용해서는 안 됩니다. 소스 코드를 소유하고 있는 라이브러리에 중요 기능을 추가하려는 경우 어셈블리 버전 관리를 위한 .NET 지침을 따르세요. 자세한 내용은 [어셈블리 버전 관리](../../../standard/assembly/versioning.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [병렬 프로그래밍 샘플(많은 예제 확장 메서드 포함)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

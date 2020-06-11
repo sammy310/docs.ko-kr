@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: f4834f88c646b44269f8290c2ad08698c34e714a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627674"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287248"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(C# 프로그래밍 가이드)
 
@@ -33,11 +33,11 @@ ms.locfileid: "77627674"
 
 ## <a name="remarks"></a>설명
 
-\<see> 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 참고 항목 부분에 배치할 텍스트를 지정하려면 [\<seealso>](./seealso.md)를 사용합니다. 코드 요소의 문서 페이지에 대한 내부 하이퍼링크를 만들려면 [cref 특성](./cref-attribute.md)을 사용합니다.
+`<see>` 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 참조 섹션에 텍스트를 배치해야 한다고 지정하려면 [\<seealso>](./seealso.md)를 사용합니다. 코드 요소의 문서 페이지에 대한 내부 하이퍼링크를 만들려면 [cref 특성](./cref-attribute.md)을 사용합니다.
 
 [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
-다음 예제에서는 요약 섹션의 \<see> 태그를 보여 줍니다.
+다음 예제에서는 요약 섹션의 `<see>` 태그를 보여 줍니다.
 
 [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]
 

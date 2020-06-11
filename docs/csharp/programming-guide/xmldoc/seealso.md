@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093463"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287222"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>(C# 프로그래밍 가이드)
 
@@ -37,15 +37,15 @@ ms.locfileid: "77093463"
 
 ## <a name="remarks"></a>설명
 
-\<seealso> 태그를 사용하면 참고 항목 섹션에 표시할 텍스트를 지정할 수 있습니다. 텍스트 내에서 링크를 지정하려면 [\<see>](./see.md)를 사용합니다.
+`<seealso>` 태그를 사용하면 참고 항목 섹션에 표시할 텍스트를 지정할 수 있습니다. 텍스트 내에서 링크를 지정하려면 [\<see>](./see.md)를 사용합니다.
 
 [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 
-\<seealso>를 사용한 예제는 [\<summary>](./summary.md)를 참조하세요.
+\<seealso> 사용 예제는 [\<summary>](./summary.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

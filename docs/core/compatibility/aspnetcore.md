@@ -5,12 +5,12 @@ description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다
 ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728332"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446975"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -55,6 +55,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [Kestrel: 요청 후행부 헤더가 새 컬렉션으로 이동됨](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: 전송 추상화 계층 변경](#kestrel-transport-abstractions-removed-and-made-public)
 - [지역화: 사용되지 않음으로 표시된 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [지역화: “Pubternal” API가 제거됨](#localization-pubternal-apis-removed)
 - [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -94,6 +95,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e62c75fd393c4009c987830cca41e512cdb6250
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789826"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287399"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>문서 태그에 대한 구분 기호(C# 프로그래밍 가이드)
 
@@ -19,10 +19,10 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
 
 - `///`
 
-  한 줄 구분 기호입니다. 문서 예제에 표시되고 Visual C# 프로젝트 템플릿에 사용되는 형식입니다. 구분 기호 뒤에 공백 문자가 있으면 해당 문자는 XML 출력에 포함되지 않습니다.
+  한 줄 구분 기호입니다. 문서 예제에 표시되고 C# 프로젝트 템플릿에 사용되는 형식입니다. 구분 기호 뒤에 공백 문자가 있으면 해당 문자는 XML 출력에 포함되지 않습니다.
 
   > [!NOTE]
-  > Visual Studio IDE에는 코드 편집기에서 `///` 구분 기호를 입력한 후 \<summary> 및 \</summary> 태그를 자동으로 삽입하고 이러한 태그 내에서 커서를 이동하는 스마트 주석 편집이라는 기능이 있습니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.
+  > 코드 편집기에서 `///` 구분 기호를 입력한 후에는 Visual Studio IDE(통합 개발 환경)에서 자동으로 `<summary>` 및 `</summary>` 태그가 삽입되고 이 태그 내에서 커서가 이동합니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.
   
 - `/** */`
 
@@ -32,7 +32,7 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
   
   - `/**` 구분 기호가 포함된 줄에서 줄의 나머지 부분이 공백인 경우 해당 줄은 주석에 대해 처리되지 않습니다. `/**` 구분 기호 다음의 첫 번째 문자가 공백인 경우 해당 공백 문자는 무시되고 줄의 나머지 부분이 처리됩니다. 그러지 않으면 `/**` 구분 기호 다음 줄의 전체 텍스트가 주석의 일부로 처리됩니다.
 
-  - `*/` 구분 기호가 포함된 줄에서 `*/` 구분 기호까지 공백만 있으면 해당 줄은 무시됩니다. 그러지 않으면 줄의 텍스트가 `*/` 구분 기호까지 주석의 일부로 처리되며, 다음 글머리 기호에서 설명하는 패턴 일치 규칙을 따릅니다.
+  - `*/` 구분 기호가 포함된 줄에서 `*/` 구분 기호까지 공백만 있으면 해당 줄은 무시됩니다. 그렇지 않으면 `*/` 구분 기호 이전 줄의 텍스트가 주석의 일부로 처리됩니다.
   
   - `/**` 구분 기호로 시작하는 줄 다음 줄에 대해 컴파일러는 각 줄의 시작 부분에서 일반적인 패턴을 찾습니다. 패턴은 선택적 공백과 별표(`*`)로 구성되고 그다음에 더 많은 선택적 공백이 올 수 있습니다. 컴파일러가 `/**` 구분 기호나 `*/` 구분 기호로 시작되지 않는 각 줄의 시작 부분에서 일반적인 패턴을 찾으면 각 줄에 대해 해당 패턴을 무시합니다.
 
@@ -82,7 +82,7 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [XML 문서 주석](./index.md)

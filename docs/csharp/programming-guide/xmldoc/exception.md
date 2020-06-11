@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789798"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287393"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception>(C# 프로그래밍 가이드)
 
@@ -37,7 +37,7 @@ ms.locfileid: "76789798"
 
 ## <a name="remarks"></a>설명
 
-\<exception> 태그를 사용하면 throw할 수 있는 예외를 지정할 수 있습니다. 이 태그는 메서드, 속성, 이벤트 및 인덱서에 대한 정의에 적용할 수 있습니다.
+`<exception>` 태그를 사용하면 throw할 수 있는 예외를 지정할 수 있습니다. 이 태그는 메서드, 속성, 이벤트 및 인덱서에 대한 정의에 적용할 수 있습니다.
 
 [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "76789798"
 
 [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](recommended-tags-for-documentation-comments.md)

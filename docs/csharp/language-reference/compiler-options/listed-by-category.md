@@ -1,23 +1,23 @@
 ---
 title: C# 컴파일러 옵션 범주별 목록
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972710"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447045"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 
 여기에서는 컴파일러 옵션을 범주별로 정렬합니다. 사전순 목록은 [C# 컴파일러 옵션 사전순 목록](listed-alphabetically.md)을 참조하세요.
 
-## <a name="optimization"></a>Optimization
+## <a name="optimization"></a>최적화
 
 |옵션|용도|
 |------------|-------------|
@@ -56,6 +56,7 @@ ms.locfileid: "73972710"
 |-additionalfile|코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.|
 |-embed|PDB에 모든 소스 파일을 포함합니다.|
 |-embed:\<file list>|PDB에 특정 파일을 포함합니다.|
+
 ## <a name="debuggingerror-checking"></a>디버깅/오류 검사
 
 |옵션|용도|
@@ -66,6 +67,7 @@ ms.locfileid: "73972710"
 |[-errorreport](errorreport-compiler-option.md)|오류 보고 동작을 설정합니다.|
 |[/fullpaths](fullpaths-compiler-option.md)|컴파일러 출력에서 파일의 절대 경로를 지정합니다.|
 |[-nowarn](nowarn-compiler-option.md)|지정한 경고가 컴파일러에서 생성되지 않도록 합니다.|
+|[-nullable](nullable-compiler-option.md)|null 허용 컨텍스트 옵션을 지정합니다.|
 |[/warn](warn-compiler-option.md)|경고 수준을 설정합니다.|
 |[-warnaserror](warnaserror-compiler-option.md)|경고를 오류로 승격합니다.|
 |-ruleset:\<file>|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|
@@ -96,7 +98,7 @@ ms.locfileid: "73972710"
 |[-codepage](codepage-compiler-option.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|
 |[-help](help-compiler-option.md)|stdout에 컴파일러 옵션을 나열합니다.|
 |[-highentropyva](highentropyva-compiler-option.md)|실행 파일이 ASLR(주소 공간 레이아웃 불규칙화)을 지원하도록 지정합니다.|
-|[-langversion](langversion-compiler-option.md)|언어 버전(기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신)을 지정합니다. |
+|[-langversion](langversion-compiler-option.md)|언어 버전 지정: 기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신 |
 |[-main](main-compiler-option.md)|**Main** 메서드의 위치를 지정합니다.|
 |[-noconfig](noconfig-compiler-option.md)|csc.rsp를 사용하여 컴파일하지 않도록 컴파일러에 지시합니다.|
 |[-nologo](nologo-compiler-option.md)|컴파일러 배너 정보를 표시하지 않습니다.|
@@ -105,7 +107,7 @@ ms.locfileid: "73972710"
 |[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있도록 설정합니다.|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.|
 |-parallel[+&#124;-]|동시 빌드(+)를 사용할지 여부를 지정합니다.|
-|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|
+|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|
 
 ## <a name="obsolete-options"></a>사용되지 않는 옵션
 
@@ -113,7 +115,7 @@ ms.locfileid: "73972710"
 |---|---|
 |-incremental|증분 컴파일을 사용하도록 설정합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](index.md)
 - [사전순 C# 컴파일러 옵션 목록](listed-alphabetically.md)

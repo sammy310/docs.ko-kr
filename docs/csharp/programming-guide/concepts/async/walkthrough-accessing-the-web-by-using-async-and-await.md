@@ -2,12 +2,12 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74281787"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240647"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
@@ -74,7 +74,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 
 3. 대화 상자 맨 위에서 프로젝트가 .NET Framework 4.5 이상을 대상으로 하는지 확인합니다.
 
-4. **어셈블리** 범주에서 **프레임워크**가 선택되지 않은 경우 선택합니다.
+4. **어셈블리** 범주에서 **프레임워크**를 선택합니다(아직 선택되지 않은 경우).
 
 5. 이름 목록에서 **System.Net.Http** 확인란을 선택합니다.
 
@@ -395,9 +395,9 @@ Control returned to startButton_Click.
 
     - 가장 중요한 점은 다운로드하는 동안 UI 스레드가 차단되지 않는다는 것입니다. 웹 리소스를 다운로드하고, 개수를 계산하고, 표시하는 동안 창을 이동하거나 크기를 조정할 수 있습니다. 웹 사이트 중 하나가 속도가 느리거나 응답하지 않는 경우 **닫기** 단추(오른쪽 위 모서리에 있는 빨간색 필드의 x)를 선택하여 작업을 취소할 수 있습니다.
 
-## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸기
+## <a name="replace-method-geturlcontentsasync-with-a-net-method"></a>GetURLContentsAsync 메서드를 .NET 메서드로 바꾸기
 
-1. .NET Framework 4.5는 사용할 수 있는 다양한 비동기 메서드를 제공합니다. 그 중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>가 바로 이 연습에 필요한 기능을 수행합니다. 이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.
+1. .NET Framework 4.5 이상 버전에서는 사용할 수 있는 여러 비동기 메서드를 제공합니다. 그 중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>가 바로 이 연습에 필요한 기능을 수행합니다. 이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.
 
      첫 번째 단계로 `SumPageSizesAsync` 메서드에서 `HttpClient` 개체를 만듭니다. 메서드의 시작 부분에 다음 선언을 추가합니다.
 

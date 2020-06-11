@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249320"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446765"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -37,7 +37,7 @@ ms.locfileid: "80249320"
 
 ## <a name="the-match-expression"></a>일치 식
 
-일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 구문은 다음과 같습니다.
+일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
    switch (expr)
@@ -61,7 +61,7 @@ C# 7.0부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이로 인해 다음 코드는 다음과 같은 컴파일러 오류를 생성합니다. CS0163: "한 case 레이블(\<case label>)에서 다른 case 레이블로 제어를 이동할 수 없습니다."
+switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이로 인해 다음 코드는 다음과 같은 컴파일러 오류를 생성합니다. CS0163: "한 case 레이블에서 다른 case 레이블(\<case label>)로 제어를 이동할 수 없습니다."
 
 ```csharp
 switch (caseSwitch)
@@ -108,13 +108,13 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 `default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다. 소스 코드에서 해당 순서와 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.
 
-## <a name="pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> `switch` 문을 사용한 패턴 일치
 
 각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7.0부터 지원됩니다.
 
 ### <a name="constant-pattern"></a>상수 패턴
 
-상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 구문은 다음과 같습니다.
+상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
    case constant:
@@ -145,7 +145,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 ### <a name="type-pattern"></a>형식 패턴
 
-형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 구문은 다음과 같습니다.
+형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
    case type varname
@@ -199,7 +199,7 @@ C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절�
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [switch 문](~/_csharplang/spec/statements.md#the-switch-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,15 +1,15 @@
 ---
 title: using 문 - C# 참조
-ms.date: 04/07/2020
+ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199679"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307048"
 ---
 # <a name="using-statement-c-reference"></a>using 문(C# 참조)
 
@@ -29,7 +29,7 @@ C# 8.0부터는 중괄호가 필요하지 않은 `using` 문에 다음 대체 �
 
 <xref:System.IO.File> 및 <xref:System.Drawing.Font>는 관리되지 않는 리소스에 액세스하는 관리되는 형식의 예입니다(이 경우 파일 핸들 및 디바이스 컨텍스트). 다른 많은 종류의 관리되지 않는 리소스 및 이를 캡슐화하는 클래스 라이브러리 형식이 있습니다. 해당 형식은 모두 <xref:System.IDisposable> 인터페이스 또는 <xref:System.IAsyncDisposable> 인터페이스를 구현해야 합니다.
 
-`IDisposable` 개체의 수명이 단일 메서드로 제한된 경우 `using` 문에서 선언하고 인스턴스화해야 합니다. `using` 문은 올바른 방법으로 개체에서 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하며, (앞서 설명한 대로 사용하는 경우) <xref:System.IDisposable.Dispose%2A>가 호출되자마자 개체 자체가 범위를 벗어나도록 만듭니다. `using` 블록 내에서 개체는 읽기 전용이며 수정하거나 다시 할당할 수 없습니다. 개체가 `IDisposable` 대신 `IAsyncDisposable`을 구현하는 경우 `using` 문은 <xref:System.IAsyncDisposable.DisposeAsync%2A>를 호출하고 반환된 <xref:System.Threading.Tasks.Task>를 `awaits`합니다.
+`IDisposable` 개체의 수명이 단일 메서드로 제한된 경우 `using` 문에서 선언하고 인스턴스화해야 합니다. `using` 문은 올바른 방법으로 개체에서 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하며, (앞서 설명한 대로 사용하는 경우) <xref:System.IDisposable.Dispose%2A>가 호출되자마자 개체 자체가 범위를 벗어나도록 만듭니다. `using` 블록 내에서 개체는 읽기 전용이며 수정하거나 다시 할당할 수 없습니다. 개체가 `IDisposable` 대신 `IAsyncDisposable`을 구현하는 경우 `using` 문은 <xref:System.IAsyncDisposable.DisposeAsync%2A>를 호출하고 반환된 <xref:System.Threading.Tasks.ValueTask>를 `awaits`합니다. <xref:System.IAsyncDisposable>에 대한 자세한 내용은 [DisposeAsync 메서드 구현](../../../standard/garbage-collection/implementing-disposeasync.md)을 참조하세요.
 
 `using` 문은 `using` 블록 내에서 예외가 발생하더라도 <xref:System.IDisposable.Dispose%2A>(또는 <xref:System.IAsyncDisposable.DisposeAsync%2A>)가 호출되도록 합니다. `try` 블록 내부에 개체를 배치한 다음, `finally` 블록에서 <xref:System.IDisposable.Dispose%2A>(또는 <xref:System.IAsyncDisposable.DisposeAsync%2A>)를 호출해도 동일한 결과를 얻을 수 있습니다. 실제로 컴파일러는 이 방법으로 `using` 문을 변환합니다. 이전의 코드 예제는 컴파일 시 다음 코드로 확장됩니다(개체의 제한된 범위를 만드는 여분의 중괄호 참고).
 

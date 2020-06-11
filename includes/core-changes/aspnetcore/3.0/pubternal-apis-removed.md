@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396348"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466833"
 ---
 ### <a name="pubternal-apis-removed"></a>"Pubternal" API가 제거됨
 
@@ -22,7 +22,7 @@ ASP.NET Core의 공용 API 노출 영역을 보다 효율적으로 유지 관리
 
 #### <a name="new-behavior"></a>새 동작
 
-영향을 받는 API가 [internal(~/docs/csharp/language-reference/keywords/internal.md) 액세스 한정자로 표시되고 해당 어셈블리 외부의 코드에서 더 이상 사용할 수 없습니다.
+영향을 받는 API가 [internal](/dotnet/csharp/language-reference/keywords/internal) 액세스 한정자로 표시되며, 해당 어셈블리 외부의 코드에서 이 API를 더 이상 사용할 수 없습니다.
 
 #### <a name="reason-for-change"></a>변경 이유
 

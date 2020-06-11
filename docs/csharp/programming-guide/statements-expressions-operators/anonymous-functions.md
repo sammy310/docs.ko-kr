@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99aaf4f35d2d294a9f07de54129bb3b4fbfbfde
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712002"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241905"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "75712002"
 
 ## <a name="the-evolution-of-delegates-in-c"></a>C\#에서 대리자의 발전
 
- C# 1.0에서는 코드의 다른 위치에 정의된 메서드를 사용하여 명시적으로 초기화하는 방식으로 대리자의 인스턴스를 만들었습니다. C# 2.0에서는 대리자 호출에서 실행될 수 있는 이름 없는 인라인 문 블록을 작성하는 방법으로 무명 메서드의 개념을 소개했습니다. C# 3.0에서는 개념적으로 무명 메서드와 비슷하지만 더 간결하고 표현이 다양한 람다 식을 소개했습니다. 이러한 두 기능을 함께 *익명 함수*라고 합니다. 일반적으로 .NET Framework의 버전 3.5 이상을 대상으로 하는 애플리케이션은 람다 식을 사용해야 합니다.  
+ C# 1.0에서는 코드의 다른 위치에 정의된 메서드를 사용하여 명시적으로 초기화하는 방식으로 대리자의 인스턴스를 만들었습니다. C# 2.0에서는 대리자 호출에서 실행될 수 있는 이름 없는 인라인 문 블록을 작성하는 방법으로 무명 메서드의 개념을 소개했습니다. C# 3.0에서는 개념적으로 무명 메서드와 비슷하지만 더 간결하고 표현이 다양한 람다 식을 소개했습니다. 이러한 두 기능을 함께 *익명 함수*라고 합니다. 일반적으로 .NET Framework 3.5 이상을 대상으로 하는 애플리케이션은 람다 식을 사용해야 합니다.  
   
  다음 예제에서는 C# 1.0에서 C# 3.0까지 대리자 만들기의 발전을 보여 줍니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75712002"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [문, 식, 연산자](./index.md)
 - [람다 식](./lambda-expressions.md)

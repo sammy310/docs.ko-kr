@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005111"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241498"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -59,25 +59,25 @@ ms.locfileid: "84005111"
 
    그림에 표시된 것과 같이 게시된 출력에는 다음 파일이 포함되어 있습니다.
 
-      * *HelloWorld.deps.json*
+   * *HelloWorld.deps.json*
 
-         애플리케이션의 런타임 종속성 파일입니다. 애플리케이션을 실행하는 데 필요한 .NET Core 구성 요소 및 라이브러리(애플리케이션을 포함하는 동적 연결 라이브러리 포함)를 정의합니다. 자세한 내용은 [런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+      애플리케이션의 런타임 종속성 파일입니다. 애플리케이션을 실행하는 데 필요한 .NET Core 구성 요소 및 라이브러리(애플리케이션을 포함하는 동적 연결 라이브러리 포함)를 정의합니다. 자세한 내용은 [런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
-      * *HelloWorld.dll*
+   * *HelloWorld.dll*
 
-         애플리케이션의 [프레임워크 종속 배포](../deploying/deploy-with-cli.md#framework-dependent-deployment)입니다. 이 동적 연결 라이브러리를 실행하려면 명령 프롬프트에 `dotnet HelloWorld.dll`을 입력합니다.
+      애플리케이션의 [프레임워크 종속 배포](../deploying/deploy-with-cli.md#framework-dependent-deployment)입니다. 이 동적 연결 라이브러리를 실행하려면 명령 프롬프트에 `dotnet HelloWorld.dll`을 입력합니다. 앱을 실행하는 이 메서드는 .NET Core 런타임이 설치된 모든 플랫폼에서 작동합니다.
 
-      * *HelloWorld.exe*
+   * *HelloWorld.exe*
 
-         애플리케이션의 [프레임워크 종속 실행 파일](../deploying/deploy-with-cli.md#framework-dependent-executable)입니다. 이를 실행하려면 명령 프롬프트에서 `HelloWorld.exe`를 입력합니다.
+      애플리케이션의 [프레임워크 종속 실행 파일](../deploying/deploy-with-cli.md#framework-dependent-executable)입니다. 이를 실행하려면 명령 프롬프트에서 `HelloWorld.exe`를 입력합니다. 이 파일은 운영 체제마다 다릅니다.
 
-      * *HelloWorld.pdb*(배포에 대한 선택 사항)
+   * *HelloWorld.pdb*(배포에 대한 선택 사항)
 
-         디버그 기호 파일입니다. 게시된 애플리케이션 버전을 디버그해야 하는 경우에는 이 파일을 저장해야 하지만 그렇지 않으면 애플리케이션과 함께 배포할 필요가 없습니다.
+      디버그 기호 파일입니다. 게시된 애플리케이션 버전을 디버그해야 하는 경우에는 이 파일을 저장해야 하지만 그렇지 않으면 애플리케이션과 함께 배포할 필요가 없습니다.
 
-      * *HelloWorld.runtimeconfig.json*
+   * *HelloWorld.runtimeconfig.json*
 
-         애플리케이션의 런타임 구성 파일입니다. 애플리케이션이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 구성 옵션을 추가할 수도 있습니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
+      애플리케이션의 런타임 구성 파일입니다. 애플리케이션이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 구성 옵션을 추가할 수도 있습니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 ## <a name="run-the-published-app"></a>게시된 앱 실행
 
@@ -91,13 +91,13 @@ ms.locfileid: "84005111"
 
 1. 실행 파일을 사용하여 앱을 실행합니다.
 
-   1. `HelloWorld.exe`를 입력하고 Enter 키를 누릅니다.
+   1. `HelloWorld.exe`를 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
    1. 프롬프트에 대한 응답으로 이름을 입력하고 아무 키나 눌러 종료합니다.
 
 1. `dotnet` 명령을 사용하여 앱을 실행합니다.
 
-   1. `dotnet HelloWorld.dll`을 입력하고 Enter 키를 누릅니다.
+   1. `dotnet HelloWorld.dll`을 입력하고 <kbd>Enter</kbd> 키를 누릅니다.
 
    1. 프롬프트에 대한 응답으로 이름을 입력하고 아무 키나 눌러 종료합니다.
 

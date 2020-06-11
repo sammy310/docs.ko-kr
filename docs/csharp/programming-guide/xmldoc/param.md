@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d16070a82531519dd276b2ea999623017769d716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 396ed716c246091a674268020261069f36dd2be8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789767"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287326"
 ---
 # <a name="param-c-programming-guide"></a>\<param>(C# 프로그래밍 가이드)
 
@@ -35,9 +35,9 @@ ms.locfileid: "76789767"
 
 ## <a name="remarks"></a>설명
 
-\<param> 태그는 메서드의 매개 변수 중 하나를 설명하기 위해 메서드 선언에 대한 주석에 사용해야 합니다. 여러 매개 변수를 문서화하려면 여러 개의 \<param> 태그를 사용합니다.
+`<param>` 태그는 메서드의 매개 변수 중 하나를 설명하기 위해 메서드 선언에 대한 주석에서 사용해야 합니다. 여러 매개 변수를 문서화하려면 여러 개의 `<param>` 태그를 사용합니다.
 
-\<param> 태그에 대한 텍스트는 IntelliSense, 개체 브라우저 및 코드 주석 웹 보고서에 표시됩니다.
+`<param>` 태그에 대한 텍스트는 IntelliSense, 개체 브라우저, 코드 주석 웹 보고서에 표시됩니다.
 
 [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "76789767"
 
 [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

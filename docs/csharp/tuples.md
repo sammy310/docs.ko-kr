@@ -4,12 +4,12 @@ description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식�
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156911"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374618"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -43,7 +43,7 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 이 
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-이전 예제의 튜플은 리터럴 상수를 사용하여 초기화되었고 C# 7.1의 ‘튜플 필드 이름 프로젝션’을 사용하여 만들어진 요소 이름이 없습니다. 
+이전 예제의 튜플은 리터럴 상수를 사용하여 초기화되었고 C# 7.1의 ‘튜플 필드 이름 프로젝션’을 사용하여 만들어진 요소 이름이 없습니다.
 
 그러나 튜플을 초기화할 때 각 필드에 더 나은 이름을 지정하는 새로운 언어 기능을 사용할 수 있습니다. 이렇게 하면 *명명된 튜플*이 생성됩니다.
 명명된 튜플에도 `Item1`, `Item2`, `Item3` 등으로 이름이 지정된 요소가 있습니다.
@@ -252,7 +252,7 @@ public class Point
 
 위와 같이 모든 튜플 형식을 분해할 수 있습니다. 또한 사용자 정의 형식(클래스, 구조체 또는 인터페이스)에서 쉽게 분해를 사용할 수 있습니다.
 
-형식 작성자는 형식을 구성하는 데이터 요소를 나타내는 임의 개수의 `out` 변수에 값을 할당하는 `Deconstruct` 메서드를 하나 이상 정의할 수 있습니다. 예를 들어 다음 `Person` 형식은 이름과 성을 나타내는 요소로 사용자 개체를 분해하는 `Deconstruct` 메서드를 정의합니다.
+형식 작성자는 형식을 구성하는 데이터 요소를 나타내는 임의 개수의 [`out` 변수](language-reference/keywords/out-parameter-modifier.md)에 값을 할당하는 `Deconstruct` 메서드를 하나 이상 정의할 수 있습니다. 예를 들어 다음 `Person` 형식은 이름과 성을 나타내는 요소로 사용자 개체를 분해하는 `Deconstruct` 메서드를 정의합니다.
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -286,7 +286,7 @@ if (("Althea", "Goodwin") == p)
 
 ## <a name="tuples-as-out-parameters"></a>출력 매개 변수 튜플
 
-튜플을 출력 매개 변수 *자체*로 사용할 수 있습니다. 앞서 [분해](#deconstruction) 섹션에서 언급한 모호성과 혼동하지 마세요. 메서드 호출에서 튜플의 도형만 설명해야 합니다.
+튜플을 [`out` 매개 변수](language-reference/keywords/out-parameter-modifier.md) *자체*로 사용할 수 있습니다. 앞서 [분해](#deconstruction) 섹션에서 언급한 모호성과 혼동하지 마세요. 메서드 호출에서 튜플의 도형만 설명해야 합니다.
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 

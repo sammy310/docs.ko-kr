@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738313"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241814"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -31,7 +31,7 @@ ms.locfileid: "81738313"
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
 > [!NOTE]
-> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, 다음 문서에서 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)를 참조하세요.
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우 다음 문서에서 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)를 참조하세요.
 
 ## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -138,7 +138,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 버튼이 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.
+변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 단추가 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.
 
 ### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> 작업 취소 및 다시 시작
 

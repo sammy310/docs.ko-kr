@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700733"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241736"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "75700733"
 > CLR([공용 언어 런타임](../../../standard/clr.md))은 시스템 리소스에 대한 액세스를 관리합니다. CLR 외부에 있는 비관리 코드를 호출하면 이 보안 메커니즘을 우회하므로 보안 위험이 제기됩니다. 예를 들어 비관리 코드는 CLR 보안 메커니즘을 우회하여 비관리 코드의 리소스를 직접 호출할 수 있습니다. 자세한 내용은 [.NET의 보안](../../../standard/security/index.md)을 참조하세요.  
   
 ## <a name="c-interop"></a>C++ Interop  
- C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 Visual C++에는 관리 코드와 비관리 코드가 동일한 애플리케이션 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
+ C# 또는 다른 .NET 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET 언어와 달리 Visual C++에는 관리 코드와 비관리 코드가 동일한 애플리케이션 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
   
 ## <a name="exposing-com-components-to-c"></a>C\#에 COM 구성 요소 노출
  C# 프로젝트에서 COM 구성 요소를 사용할 수 있습니다. 일반적인 단계는 다음과 같습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "75700733"
   
 2. COM 구성 요소 또는 형식 라이브러리에 대한 참조를 프로젝트에 추가합니다.  
   
-     참조를 추가하면 Visual Studio에서는 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md)를 통해 .NET Framework interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. Visual Studio에서는 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
+     참조를 추가하면 Visual Studio에서는 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md)를 통해 .NET interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. Visual Studio에서는 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
   
 3. RCW에서 정의된 클래스의 인스턴스를 만듭니다. 그러면 COM 개체의 인스턴스가 생성됩니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "75700733"
   
  자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](../../../framework/interop/exposing-dotnet-components-to-com.md) 및 [예제 COM 클래스](./example-com-class.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Interop 성능 향상](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Introduction to Interoperability between COM and .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)(COM과 .NET 간 상호 운용성 소개)

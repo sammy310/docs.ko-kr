@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 description: Visual Studio Code를 사용하여 .NET Core 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202492"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241515"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 
@@ -19,7 +19,7 @@ ms.locfileid: "84202492"
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
-디버그 및 릴리스는 .NET Core의 빌드 구성 중 두 가지입니다. 디버그 빌드 구성은 디버깅에 사용하고, 릴리스 구성은 최종 릴리스 배포에 사용합니다.
+‘디버그’ 및 ‘릴리스’는 .NET Core의 빌드 구성 중 두 가지입니다.  디버그 빌드 구성은 디버깅에 사용하고, 릴리스 구성은 최종 릴리스 배포에 사용합니다.
 
 디버그 구성에서 프로그램은 완전히 기호화된 디버그 정보를 사용하여 컴파일되며 최적화되지 않습니다. 최적화하면 소스 코드와 생성된 명령 간의 관계가 복잡해지므로 디버깅이 복잡해집니다. 프로그램의 릴리스 구성은 완전히 최적화되고, 기호화된 디버그 정보를 포함하지 않습니다.
 
@@ -29,7 +29,13 @@ ms.locfileid: "84202492"
 
 중단점은 중단점이 설정된 줄이 실행되기 *전에* 애플리케이션 실행을 일시적으로 중단합니다.
 
-1. *Program.cs*에서 코드 창 왼쪽 여백을 클릭하여 이름, 날짜, 시간을 표시하는 줄에 중단점을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. 중단점을 설정하는 또 다른 방법은 코드 줄에 커서를 배치한 다음 <kbd>F9</kbd> 키를 누르는 것입니다.
+1. Visual Studio Code를 엽니다.
+
+1. [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 *HelloWorld* 프로젝트 폴더를 엽니다.
+
+1. *Program.cs* 파일을 엽니다.
+
+1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 ‘중단점’을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. 중단점을 설정하는 또 다른 방법은 코드 줄에 커서를 배치한 다음 <kbd>F9</kbd> 키를 누르는 것입니다.
 
    다음 이미지에서 볼 수 있듯이 Visual Studio Code에서는 왼쪽 여백에 빨간 점을 표시하여 중단점이 설정된 줄을 표시합니다.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Visual Studio Code 디버깅 도구를 사용했습니다. 앱의 배포 가능 버전을 게시하는 방법을 알아보려면 [앱 게시](cli-create-console-app.md#publish-your-app)를 참조하세요.
-
-<!--In the next tutorial, you publish a deployable version of the app.
+이 자습서에서는 Visual Studio Code 디버깅 도구를 사용했습니다. 다음 자습서에서는 앱의 배포 가능 버전을 게시합니다.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-code.md)

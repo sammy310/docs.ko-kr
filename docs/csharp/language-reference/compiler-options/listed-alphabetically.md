@@ -1,18 +1,18 @@
 ---
 title: C# 컴파일러 옵션 사전순 목록
-ms.date: 05/15/2018
+ms.date: 06/04/2020
 helpviewer_keywords:
 - compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972737"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446941"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 
@@ -60,6 +60,7 @@ ms.locfileid: "73972737"
 |[-nostdlib](nostdlib-compiler-option.md)|컴파일러에서 표준 라이브러리(mscorlib.dll)를 참조하지 않도록 합니다.|
 |[-nowarn](nowarn-compiler-option.md)|특정 경고 메시지를 사용하지 않도록 설정합니다.|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|애플리케이션 매니페스트를 실행 파일에 포함하지 않도록 컴파일러에 지시합니다.|
+|[-nullable](nullable-compiler-option.md)|null 허용 컨텍스트 옵션을 지정합니다.|
 |[-optimize](optimize-compiler-option.md)|최적화를 사용하거나 사용하지 않도록 설정합니다.|
 |[-out](out-compiler-option.md)|출력 파일 이름을 지정합니다(기본값: 주 클래스가 있는 파일의 기본 이름 또는 첫째 파일).|
 |-parallel[+&#124;-]|동시 빌드(+)를 사용할지 여부를 지정합니다.|

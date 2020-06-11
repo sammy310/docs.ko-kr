@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448441"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241593"
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
 
@@ -17,13 +17,13 @@ ms.locfileid: "77448441"
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 
-대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [익명 함수](../statements-expressions-operators/anonymous-functions.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예들 들어 다음과 같습니다.
+대리자 개체는 일반적으로 대리자가 래핑할 메서드의 이름을 제공하거나 [익명 함수](../statements-expressions-operators/anonymous-functions.md)를 사용하여 생성합니다. 대리자를 인스턴스화하고 나면 대리자에 대한 메서드 호출이 대리자에 의해 해당 메서드로 전달됩니다. 호출자가 대리자에게 전달한 매개 변수가 메서드로 전달되며 메서드의 반환 값(있는 경우)이 대리자에 의해 호출자로 반환됩니다. 이 과정을 대리자 호출이라고 합니다. 인스턴스화된 대리자는 래핑된 메서드 자체인 것처럼 호출할 수 있습니다. 예를 들어:
 
 [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
 
 [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]
 
-대리자 형식은 .NET Framework의 <xref:System.Delegate> 클래스에서 파생되며, [봉인](../../language-reference/keywords/sealed.md)되어 있으므로 <xref:System.Delegate>에서는 파생될 수 없으며 해당 클래스에서 사용자 지정 클래스를 파생할 수도 없습니다. 인스턴스화된 대리자는 개체이므로 매개 변수로 전달하거나 속성에 할당할 수 있습니다. 따라서 메서드가 대리자를 매개 변수로 허용하고 나중에 대리자를 호출할 수 있습니다. 비동기 콜백이라는 이러한 방식은 긴 프로세스 완료 시 호출자에게 알림을 제공하는 일반적인 방법입니다. 이러한 방식으로 대리자를 사용하면 대리자를 사용하는 코드가 사용 중인 메서드의 구현을 확인하지 않아도 됩니다. 이 기능은 캡슐화 인터페이스에서 제공하는 기능과 비슷합니다.
+대리자 형식은 .NET의 <xref:System.Delegate> 클래스에서 파생되며, [봉인](../../language-reference/keywords/sealed.md)되어 있으므로 <xref:System.Delegate>에서는 파생될 수 없으며 해당 클래스에서 사용자 지정 클래스를 파생할 수도 없습니다. 인스턴스화된 대리자는 개체이므로 매개 변수로 전달하거나 속성에 할당할 수 있습니다. 따라서 메서드가 대리자를 매개 변수로 허용하고 나중에 대리자를 호출할 수 있습니다. 비동기 콜백이라는 이러한 방식은 긴 프로세스 완료 시 호출자에게 알림을 제공하는 일반적인 방법입니다. 이러한 방식으로 대리자를 사용하면 대리자를 사용하는 코드가 사용 중인 메서드의 구현을 확인하지 않아도 됩니다. 이 기능은 캡슐화 인터페이스에서 제공하는 기능과 비슷합니다.
 
 콜백은 사용자 지정 비교 메서드를 정의하고 해당 대리자를 정렬 메서드로 전달할 때도 일반적으로 사용됩니다. 이 경우 호출자의 코드를 정렬 알고리즘의 일부분으로 포함할 수 있습니다. 다음 예제 메서드는 `Del` 형식을 매개 변수로 사용합니다.
 
@@ -47,11 +47,11 @@ The number is: 3
 
 이제는 위에 나와 있는 정적 `DelegateMethod`와 함께 3개 메서드를 `Del` 인스턴스로 래핑할 수 있습니다.
 
-대리자는 호출 시 둘 이상의 메서드를 호출할 수 있습니다. 이러한 호출을 멀티캐스트라고 합니다. 대리자의 메서드 목록(호출 목록)에 메서드를 더 추가하려는 경우 더하기 또는 더하기 대입 연산자('+' 또는 '+=')를 사용하여 대리자만 두 개 더 추가하면 됩니다. 예들 들어 다음과 같습니다.
+대리자는 호출 시 둘 이상의 메서드를 호출할 수 있습니다. 이러한 호출을 멀티캐스트라고 합니다. 대리자의 메서드 목록(호출 목록)에 메서드를 더 추가하려는 경우 더하기 또는 더하기 대입 연산자('+' 또는 '+=')를 사용하여 대리자만 두 개 더 추가하면 됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]
 
-이 시점에서 `allMethodsDelegate`의 호출 목록에는 `Method1`, `Method2`, `DelegateMethod`의 3개 메서드가 포함되어 있습니다. 원래 대리자 3개(`d1`, `d2`, `d3`)는 그대로 유지됩니다. `allMethodsDelegate`를 호출하면 3개 메서드가 모두 순서대로 호출됩니다. 대리자가 참조 매개 변수를 사용하는 경우 참조는 각 3개 메서드에 순서대로 전달되며 메서드 하나의 변경 내용은 다음 메서드에도 표시됩니다. 메서드 중 하나라도 메서드 내에서 catch되지 않은 예외를 throw하면 해당 예외가 대리자의 호출자에게 해당 예외가 전달되며 호출 목록의 후속 메서드는 호출되지 않습니다. 반환 값 및/또는 out 매개 변수를 포함하는 대리자는 마지막으로 호출한 메서드의 반환 값과 매개 변수를 반환합니다. 호출 목록에서 메서드를 제거하려면 [빼기 또는 빼기 대입 연산자](../../language-reference/operators/subtraction-operator.md)(`-` 또는 `-=`)를 사용합니다. 예들 들어 다음과 같습니다.
+이 시점에서 `allMethodsDelegate`의 호출 목록에는 `Method1`, `Method2`, `DelegateMethod`의 3개 메서드가 포함되어 있습니다. 원래 대리자 3개(`d1`, `d2`, `d3`)는 그대로 유지됩니다. `allMethodsDelegate`를 호출하면 3개 메서드가 모두 순서대로 호출됩니다. 대리자가 참조 매개 변수를 사용하는 경우 참조는 각 3개 메서드에 순서대로 전달되며 메서드 하나의 변경 내용은 다음 메서드에도 표시됩니다. 메서드 중 하나라도 메서드 내에서 catch되지 않은 예외를 throw하면 해당 예외가 대리자의 호출자에게 해당 예외가 전달되며 호출 목록의 후속 메서드는 호출되지 않습니다. 반환 값 및/또는 out 매개 변수를 포함하는 대리자는 마지막으로 호출한 메서드의 반환 값과 매개 변수를 반환합니다. 호출 목록에서 메서드를 제거하려면 [빼기 또는 빼기 대입 연산자](../../language-reference/operators/subtraction-operator.md)(`-` 또는 `-=`)를 사용합니다. 예를 들어:
 
 [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]
 
@@ -63,11 +63,11 @@ The number is: 3
 
 멀티캐스트 대리자는 이벤트 처리에서 광범위하게 사용됩니다. 이벤트 소스 개체는 해당 이벤트를 받도록 등록된 받는 사람 개체에 이벤트 알림을 보냅니다. 이벤트를 등록하기 위해 받는 사람은 이벤트를 처리하도록 설계된 메서드를 만든 다음 해당 메서드의 대리자를 만들어 이벤트 소스로 전달합니다. 소스는 이벤트 발생 시 대리자를 호출합니다. 그러면 대리자가 받는 사람에 대해 이벤트 처리 메서드를 호출하여 이벤트 데이터를 전달합니다. 지정된 이벤트의 대리자 형식은 이벤트 소스에 의해 정의됩니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
 
-컴파일 시간에 할당된 서로 다른 형식의 두 대리자를 비교하면 컴파일 오류가 발생합니다. 대리자 인스턴스가 정적 `System.Delegate` 형식이면 비교는 허용되지만 런타임에서 false가 반환됩니다. 예들 들어 다음과 같습니다.
+컴파일 시간에 할당된 서로 다른 형식의 두 대리자를 비교하면 컴파일 오류가 발생합니다. 대리자 인스턴스가 정적 `System.Delegate` 형식이면 비교는 허용되지만 런타임에서 false가 반환됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [대리자](./index.md)

@@ -4,22 +4,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700421"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241944"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>My 네임스페이스를 사용하는 방법(C# 프로그래밍 가이드)
-<xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 .NET Framework 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 애플리케이션, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다. 원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 애플리케이션에서 사용할 수 있습니다.  
+
+<xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 여러 .NET 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 애플리케이션, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다. 원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 애플리케이션에서 사용할 수 있습니다.  
   
  Visual Basic에서 `MyServices` 네임스페이스를 사용하는 방법에 대한 자세한 내용은 [My를 사용한 개발](../../../visual-basic/developing-apps/development-with-my/index.md)을 참조하세요.  
   
-## <a name="adding-a-reference"></a>참조 추가  
+## <a name="add-a-reference"></a>참조 추가
+
  솔루션에서 `MyServices` 클래스를 사용하려면 먼저 Visual Basic 라이브러리에 대한 참조를 추가해야 합니다.  
   
-#### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Visual Basic 라이브러리에 대한 참조를 추가하려면  
+### <a name="add-a-reference-to-the-visual-basic-library"></a>Visual Basic 라이브러리에 대한 참조 추가  
   
 1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
   
@@ -38,7 +40,7 @@ ms.locfileid: "75700421"
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [네임스페이스](./index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d78ec83fec72b30f5cee398af1816d0cac35886
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712145"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241866"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World -- 프로그램 처음 만들기
 
@@ -84,7 +84,7 @@ Press any key to close this window . . .
 
 [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-텍스트 블록을 `/*` 및 `*/` 문자 사이에 포함하여 주석으로 처리할 수도 있습니다. 이는 다음 예에서 확인할 수 있습니다.
+텍스트 블록을 `/*` 및 `*/` 문자 사이에 포함하여 주석으로 처리할 수도 있습니다. 다음 예제에서 이를 확인할 수 있습니다.
 
 [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
@@ -114,7 +114,7 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 
 ## <a name="input-and-output"></a>입력 및 출력
 
-일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다. `System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다. 이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다. 이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다. 기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다. 프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다. 예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.
+일반적으로 C# 프로그램에서는 .NET의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다. `System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다. 이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다. 이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다. 기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다. 프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다. 예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
@@ -122,7 +122,7 @@ C# 콘솔 애플리케이션에는 시작 및 끝을 제어하는 `Main` 메서�
 
 입출력 메서드에 대한 자세한 내용은 <xref:System.IO>를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [샘플 및 자습서](../../../samples-and-tutorials/index.md)

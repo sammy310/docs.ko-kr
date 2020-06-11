@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644378"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283444"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -65,7 +65,7 @@ ms.locfileid: "81644378"
 
 ### <a name="global-tools"></a>전역 도구
 
-.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다.  이전 버전 .NET Core의 확장성 모델은 `DotnetCliToolReference`를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
+.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다. 이전 버전 .NET Core의 확장성 모델은 `DotnetCliToolReference`를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
 
 전역 도구를 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다. 예를 들어:
 
@@ -91,7 +91,7 @@ dotnet tool install -g dotnetsay
 
 .NET Core 2.0부터 모든 .NET Core 애플리케이션은 시스템에 설치된 최신 *부 버전*으로 자동으로 롤포워드됩니다.
 
-.NET Core 2.0부터 애플리케이션 빌드에 사용된 .NET Core 버전이 런타임에 없는 경우에는 애플리케이션이 .NET Core의 설치된 최신 *부 버전*에 대해 자동으로 실행됩니다. 즉, 애플리케이션이 .NET Core 2.0을 사용하여 빌드되고 .NET Core 2.0이 호스트 시스템에 없지만 .NET Core 2.1이 있는 경우 애플리케이션은 .NET Core 2.1을 사용하여 실행됩니다.
+.NET Core 2.0부터 애플리케이션 빌드에 사용된 .NET Core 버전이 런타임에 없는 경우에는 애플리케이션이 .NET Core의 설치된 최신 ‘부 버전’에 대해 자동으로 실행됩니다. 즉, 애플리케이션이 .NET Core 2.0을 사용하여 빌드되고 .NET Core 2.0이 호스트 시스템에 없지만 .NET Core 2.1이 있는 경우 애플리케이션은 .NET Core 2.1을 사용하여 실행됩니다.
 
 > [!IMPORTANT]
 > 이 롤포워드 동작은 미리 보기 릴리스에는 적용되지 않습니다. 기본적으로 주요 릴리스에도 적용되지 않지만 아래 설정으로 변경할 수 있습니다.
@@ -137,7 +137,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 컴파일러 개선
 
-.NET Core는 성능을 상당히 개선할 수 있는 ‘계층화된 컴파일’(‘적응형 최적화’라고도 함)이라는 새로운 JIT 컴파일러 기술을 통합합니다.   계층화된 컴파일은 옵트인 설정입니다.
+.NET Core는 성능을 상당히 개선할 수 있는 ‘계층화된 컴파일’(‘적응형 최적화’라고도 함)이라는 새로운 JIT 컴파일러 기술을 통합합니다.  계층화된 컴파일은 옵트인 설정입니다.
 
 JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을 최적화하는 것입니다. 그러나 자주 사용되지 않는 코드 경로의 경우 컴파일러가 코드 최적화에 사용하는 시간이 런타임이 최적화되지 않은 코드 실행에 사용하는 시간보다 길 수 있습니다. 계층화된 컴파일은 JIT 컴파일에 다음과 같은 두 단계를 도입합니다.
 

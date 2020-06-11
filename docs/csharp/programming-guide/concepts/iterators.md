@@ -2,12 +2,12 @@
 title: C#의 컬렉션 반복
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626272"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240696"
 ---
 # <a name="iterators-c"></a>반복기(C#)
 
@@ -350,7 +350,7 @@ C#에서 `yield`는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 - 첫 번째 `foreach` 루프 반복 후 목록 시퀀스를 수정합니다.
 
-- 첫 번째 `foreach` 루프 반복 전에 큰 목록이 완전히 로드되지 않도록 합니다. 한 가지 예로 테이블 행을 일괄 로드하는 페이징 페치가 있으며, 또 다른 예로 .NET Framework 내에서 반복기를 구현하는 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 메서드가 있습니다.
+- 첫 번째 `foreach` 루프 반복 전에 큰 목록이 완전히 로드되지 않도록 합니다. 한 가지 예로 테이블 행을 일괄 로드하는 페이징 페치가 있으며, 또 다른 예로 .NET에서 반복기를 구현하는 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 메서드가 있습니다.
 
 - 반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.
 

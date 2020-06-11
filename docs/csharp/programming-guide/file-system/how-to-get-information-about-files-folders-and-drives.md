@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705212"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241619"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법(C# 프로그래밍 가이드)
-.NET Framework에서 다음 클래스를 사용하여 파일 시스템 정보에 액세스할 수 있습니다.  
+.NET에서 다음 클래스를 사용하여 파일 시스템 정보에 액세스할 수 있습니다.  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
@@ -52,7 +52,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  애플리케이션에 지정된 파일을 읽을 수 있는 권한이 없는 경우 `Exists` 메서드는 경로가 있는지 여부에 관계없이 `false`를 반환합니다. 이 메서드는 예외를 throw하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

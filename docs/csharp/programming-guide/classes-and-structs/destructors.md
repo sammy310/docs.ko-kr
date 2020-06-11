@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170301"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241424"
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
 종료자(**소멸자**라고도 함)는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 최종 정리를 수행하는 데 사용됩니다.  
@@ -64,7 +64,7 @@ protected override void Finalize()
  <xref:System.GC.Collect%2A>를 호출하여 강제로 가비지 수집할 수 있지만 대부분의 경우 성능 문제가 발생할 수 있으므로 방지해야 합니다.  
   
 ## <a name="using-finalizers-to-release-resources"></a>종료자를 사용하여 리소스 해제  
- 일반적으로 C#에서는 가비지 수집을 사용하는 런타임을 대상으로 하지 않는 언어로 개발할 때 필요한 만큼 많은 메모리 관리가 필요하지 않습니다. 이는 .NET Framework 가비지 수집기에서 개체에 대한 메모리 할당 및 해제를 암시적으로 관리하기 때문입니다. 그러나 애플리케이션에서 창, 파일 및 네트워크 연결 등의 관리되지 않는 리소스를 캡슐화하는 경우 종료자를 사용하여 해당 리소스를 해제해야 합니다. 개체를 종료할 수 있으면 가비지 수집기에서 개체의 `Finalize` 메서드를 실행합니다.  
+ 일반적으로 C#에서는 가비지 수집을 사용하는 런타임을 대상으로 하지 않는 언어로 개발할 때 필요한 만큼 많은 메모리 관리가 필요하지 않습니다. 이는 .NET 가비지 수집기에서 개체에 대한 메모리 할당 및 해제를 암시적으로 관리하기 때문입니다. 그러나 애플리케이션에서 창, 파일 및 네트워크 연결 등의 관리되지 않는 리소스를 캡슐화하는 경우 종료자를 사용하여 해당 리소스를 해제해야 합니다. 개체를 종료할 수 있으면 가비지 수집기에서 개체의 `Finalize` 메서드를 실행합니다.
   
 ## <a name="explicit-release-of-resources"></a>리소스의 명시적 해제  
  애플리케이션에서 비용이 많이 드는 외부 리소스를 사용하는 경우 가비지 수집기에서 개체를 해제하기 전에 리소스를 명시적으로 해제하는 방법을 제공하는 것이 좋습니다. 이렇게 하려면 <xref:System.IDisposable> 인터페이스에서 개체에 필요한 정리를 수행하는 `Dispose` 메서드를 구현합니다. 이렇게 하면 애플리케이션의 성능을 상당히 향상시킬 수 있습니다. 이렇게 리소스를 명시적으로 제어하는 경우에도 종료자는 `Dispose` 메서드 호출에 실패할 경우 리소스를 정리하는 안전한 방법이 됩니다.  
@@ -86,7 +86,7 @@ protected override void Finalize()
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [소멸자](~/_csharplang/spec/classes.md#destructors) 섹션을 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IDisposable>
 - [C# 프로그래밍 가이드](../index.md)

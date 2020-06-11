@@ -3,12 +3,12 @@ title: 제거 도구
 description: .NET Core SDK 및 런타임의 제어된 정리를 사용 설정하는 단계별 도구인 .NET Core 제거 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144515"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446908"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 제거 도구
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   모든 .NET Core SDK 및 런타임을 제거합니다.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   지정된 버전보다 이전 버전의 .NET Core SDK 및 런타임만을 제거합니다. 지정된 버전은 설치된 상태로 유지됩니다.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   지정된 버전을 제외한 모든 .NET Core SDK 및 런타임을 제거합니다.
 
@@ -227,11 +227,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   모든 .NET Core SDK 및 런타임을 제거합니다.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   지정된 버전보다 낮은 .NET Core SDK 및 런타임을 제거합니다. 지정된 버전은 그대로 유지됩니다.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   지정된 버전을 제외한 .NET Core SDK 및 런타임을 제거합니다.
 
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   모든 .NET Core SDK 및 런타임을 제거합니다.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   지정된 버전보다 이전 버전의 .NET Core SDK 및 런타임만을 제거합니다. 지정된 버전은 설치된 상태로 유지됩니다.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   지정된 버전을 제외한 모든 .NET Core SDK 및 런타임을 제거합니다.
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  .NET Core 런타임 및 호스팅 번들만 제거합니다.
+  .NET Core 호스팅 번들만 제거합니다.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   모든 .NET Core SDK 및 런타임을 제거합니다.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   지정된 버전보다 낮은 .NET Core SDK 및 런타임을 제거합니다. 지정된 버전은 그대로 유지됩니다.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   지정된 버전을 제외한 .NET Core SDK 및 런타임을 제거합니다.
 

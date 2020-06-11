@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157106"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241918"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>같음 비교(C# 프로그래밍 가이드)
 
@@ -54,9 +54,9 @@ if (b == a)
 |-----------|-----------------|  
 |[참조 같음(ID)을 테스트하는 방법](./how-to-test-for-reference-equality-identity.md)|두 변수에 참조 같음이 있는지를 확인하는 방법을 설명 합니다.|  
 |[형식의 값 같음을 정의하는 방법](./how-to-define-value-equality-for-a-type.md)|형식에 대한 값 같음의 사용자 지정 정의를 제공하는 방법을 설명합니다.|  
-|[C# 프로그래밍 가이드](../index.md)|.NET Framework를 통해 C#에 제공되는 기능 및 중요한 C# 언어 기능에 대한 자세한 정보 링크를 제공합니다.|  
+|[C# 프로그래밍 가이드](../index.md)|.NET을 통해 C#에 제공되는 기능 및 중요한 C# 언어 기능에 대한 자세한 정보 링크를 제공합니다.|  
 |[유형](../types/index.md)|C# 형식 시스템에 대한 정보 및 추가 정보 링크를 제공합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)

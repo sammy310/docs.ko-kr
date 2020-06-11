@@ -3,18 +3,18 @@ title: dotnet-svcutil.xmlserializer 사용
 description: '`dotnet-svcutil.xmlserializer` NuGet 패키지를 사용하여 .NET Core 프로젝트용 serialization 어셈블리를 미리 생성하는 방법을 알아봅니다.'
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14bb2e8a85ec35f08b0a83b9734a64d751074f1b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344896"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284327"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core에서 dotnet-svcutil.xmlserializer 사용
 
 `dotnet-svcutil.xmlserializer` NuGet 패키지는 .NET Core 프로젝트용 serialization 어셈블리를 미리 생성할 수 있습니다. WCF 서비스 계약에서 사용되고 XmlSerializer를 통해 직렬화할 수 있는 클라이언트 애플리케이션의 형식에 대해 C# serialization 코드를 미리 생성합니다. 이렇게 하면 해당 형식의 개체를 직렬화 또는 역직렬화할 때 XML serialization의 시작 성능이 향상됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상
 * 선호하는 코드 편집기

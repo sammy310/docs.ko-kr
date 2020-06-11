@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396681"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241892"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -146,9 +146,9 @@ public class SampleClass
 
 #### <a name="finalizers"></a>종료자
 
-종료자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET Framework에서는 애플리케이션의 관리되는 개체에 대해 가비지 수집기가 자동으로 메모리를 할당하고 해제하지만 애플리케이션이 만드는 관리되지 않는 리소스를 정리하려면 여전히 종료자가 필요할 수 있습니다. 각 클래스에는 종료자가 하나씩만 있을 수 있습니다.
+종료자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET에서는 가비지 수집기가 애플리케이션의 관리형 개체에 대해 메모리 할당 및 해제를 자동으로 관리하지만 애플리케이션이 만드는 관리되지 않는 리소스를 정리하려면 여전히 종료자가 필요할 수 있습니다. 각 클래스에는 종료자가 하나씩만 있을 수 있습니다.
 
-.NET Framework의 종료자 및 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.
+.NET의 종료자 및 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.
 
 #### <a name="events"></a>이벤트
 
@@ -342,7 +342,7 @@ class SampleClass : ISampleInterface
 
 ## <a name="generics"></a>제네릭
 
-.NET Framework의 클래스, 구조체, 인터페이스 및 메서드는 저장하거나 사용할 수 있는 개체의 형식을 정의하는 *형식 매개 변수*를 포함할 수 있습니다. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
+.NET의 클래스, 구조체, 인터페이스 및 메서드는 저장하거나 사용할 수 있는 개체의 형식을 정의하는 ‘형식 매개 변수’를 포함할 수 있습니다. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
 
 제네릭 클래스를 정의하려면
 

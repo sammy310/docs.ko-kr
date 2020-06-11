@@ -1,19 +1,19 @@
 ---
-title: .NET Framework 지침을 따르는 이벤트를 게시하는 방법 - C# 프로그래밍 가이드
+title: .NET 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144801"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240748"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>.NET Framework 지침을 따르는 이벤트를 게시하는 방법(C# 프로그래밍 가이드)
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>.NET 지침을 따르는 이벤트를 게시하는 방법(C# 프로그래밍 가이드)
 
-다음 절차에서는 표준 .NET Framework 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.
+다음 절차에서는 표준 .NET 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
@@ -22,11 +22,11 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 > .NET Framework 2.0에서는 이 대리자의 제네릭 버전인 <xref:System.EventHandler%601>가 도입되었습니다. 다음 예제에서는 두 버전을 사용하는 방법을 모두 보여 줍니다.
 
-정의하는 클래스의 이벤트는 값을 반환하는 대리자를 포함하여 유효한 모든 대리자 형식을 기반으로 할 수 있지만 다음 예제와 같이 <xref:System.EventHandler>를 사용하여 .NET Framework 패턴에 따라 이벤트를 만드는 것이 좋습니다.
+정의하는 클래스의 이벤트는 값을 반환하는 대리자를 포함하여 유효한 모든 대리자 형식을 기반으로 할 수 있지만, 다음 예제와 같이 <xref:System.EventHandler>를 사용하여 .NET 패턴에 따라 이벤트를 만드는 것이 좋습니다.
 
 이름 `EventHandler`는 이벤트를 실제로 처리하지는 않으므로 약간의 혼동을 일으킬 수 있습니다. <xref:System.EventHandler> 및 제네릭 <xref:System.EventHandler%601>는 대리자 형식입니다. 시그니처가 대리자 정의와 일치하는 메서드 또는 람다 식은 이벤트 처리기이며, 이벤트가 발생할 때 호출됩니다.
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>EventHandler 패턴에 따라 이벤트를 게시하려면
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>EventHandler 패턴에 따라 이벤트 게시
 
 1. 이벤트와 함께 사용자 지정 데이터를 보낼 필요가 없는 경우 이 단계를 건너뛰고 3a 단계로 이동합니다. 게시자 및 구독자 클래스 둘 다에 표시되는 범위에서 사용자 지정 데이터에 대한 클래스를 선언합니다. 그런 다음 사용자 지정 이벤트 데이터를 저장하는 데 필요한 멤버를 추가합니다. 이 예제에서는 간단한 문자열이 반환됩니다.
 

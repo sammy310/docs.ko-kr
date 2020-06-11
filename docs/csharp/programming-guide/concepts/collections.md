@@ -2,12 +2,12 @@
 title: 컬렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201129"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241398"
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>컬렉션 종류
 
-.NET Framework는 많은 일반적인 컬렉션을 제공합니다. 컬렉션의 각 형식은 특정 목적에 맞게 설계되었습니다.
+.NET은 다양한 일반적인 컬렉션을 제공합니다. 컬렉션의 각 형식은 특정 목적에 맞게 설계되었습니다.
 
 이 섹션에서는 다음 몇 가지 일반적인 컬렉션 클래스에 대해 설명합니다.
 
@@ -214,7 +214,7 @@ public class Galaxy
 
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 클래스
 
-.NET Framework 4 이상에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.
+.NET Framework 4 이상 버전에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.
 
 여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=nameWithType> 및 <xref:System.Collections?displayProperty=nameWithType>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다.
 
-사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 항목의 앞부분에 있는 [컬렉션 종류](#BKMK_KindsOfCollections)에서 설명한 .NET Framework에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.
+사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 문서의 앞부분에 있는 [컬렉션 종류](#BKMK_KindsOfCollections)에서 설명한 .NET에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.
 
 다음 예제에서는 `AllColors`라는 사용자 지정 컬렉션 클래스를 정의합니다. 이 클래스는 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 구현되어야 하는 <xref:System.Collections.IEnumerable> 인터페이스를 구현합니다.
 

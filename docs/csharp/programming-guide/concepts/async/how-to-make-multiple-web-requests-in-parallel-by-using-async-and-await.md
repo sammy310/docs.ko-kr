@@ -2,12 +2,12 @@
 title: async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169951"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241801"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. 작업이 완료될 때까지 처리를 계속할 수 없는 메서드 지점의 작업에 [await](../../../language-reference/operators/await.md) 연산자가 적용됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  
@@ -32,7 +32,7 @@ var result = await myTask;
   
  작업 시작과 작업 대기 사이에 다른 작업을 시작할 수 있습니다. 추가 작업은 암시적으로 병렬로 실행되지만 추가 스레드는 생성되지 않습니다.  
   
- 다음 프로그램은 세 개의 비동기 웹 다운로드를 시작한 다음 호출된 순서대로 대기합니다. 프로그램을 실행할 때 작업이 항상 생성 및 대기된 순서로 완료되지는 않습니다. 작업은 생성 시 실행을 시작하고, 메서드가 await 식에 도달하기 전에 작업 중 하나 이상이 완료될 수도 있습니다.  
+ 다음 프로그램은 세 개의 비동기 웹 다운로드를 시작한 다음, 호출된 순서대로 대기합니다. 프로그램을 실행할 때 작업이 항상 생성 및 대기된 순서로 완료되지는 않습니다. 작업은 생성 시 실행을 시작하고, 메서드가 await 식에 도달하기 전에 작업 중 하나 이상이 완료될 수도 있습니다.  
   
 > [!NOTE]
 > 이 프로젝트를 완료하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면  
   
-1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 확인할 수 있습니다.  
+1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 찾을 수 있습니다.  
   
     - 텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다. 단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.  
   
@@ -224,7 +224,7 @@ namespace AsyncExample_MultipleTasks
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)

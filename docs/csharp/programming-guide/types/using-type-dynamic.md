@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711859"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241970"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
 
@@ -59,7 +59,7 @@ C# 4에서는 새로운 `dynamic` 형식이 도입되었습니다. 이 형식은
 
 ## <a name="dynamic-language-runtime"></a>동적 언어 런타임
 
-DLR(동적 언어 런타임)은 .NET Framework 4의 새로운 API입니다. DLR은 C#에서 `dynamic` 형식을 지원하는 인프라를 제공하며, IronPython 및 IronRuby와 같은 동적 프로그래밍 언어를 구현합니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.
+DLR(동적 언어 런타임)은 .NET Framework 4에 도입된 API입니다. DLR은 C#에서 `dynamic` 형식을 지원하는 인프라를 제공하며, IronPython 및 IronRuby와 같은 동적 프로그래밍 언어를 구현합니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.
 
 ## <a name="com-interop"></a>COM interop
 
