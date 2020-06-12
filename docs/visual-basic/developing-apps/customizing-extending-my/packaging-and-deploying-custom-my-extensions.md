@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: a2e2a6705fb3d8d4424d46d96bbf49b41e1414af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330254"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411755"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>사용자 지정 My 확장 패키징 및 배포(Visual Basic)
 
@@ -29,7 +29,7 @@ Visual Basic은 Visual Studio 템플릿을 사용하여 사용자 지정 `My` �
 
 ## <a name="create-a-my-namespace-extension"></a>My 네임스페이스 확장 만들기
 
-사용자 지정 `My` 확장에 대한 배포 패키지를 만드는 첫 번째 단계는 확장을 단일 코드 파일로 만드는 것입니다. 사용자 지정 `My` 확장을 만드는 방법에 대한 자세한 내용과 지침은 [Visual Basic에서 My 네임스페이스 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)을 참조하세요.
+사용자 지정 `My` 확장에 대한 배포 패키지를 만드는 첫 번째 단계는 확장을 단일 코드 파일로 만드는 것입니다. 사용자 지정 `My` 확장을 만드는 방법에 대한 자세한 내용과 지침은 [Visual Basic에서 My 네임스페이스 확장](extending-the-my-namespace.md)을 참조하세요.
 
 ## <a name="export-a-my-namespace-extension-as-an-item-template"></a>My 네임스페이스 확장을 항목 템플릿으로 내보내기
 
@@ -64,7 +64,7 @@ CustomData 파일에는 다음 표에 나열된 특성을 포함하는 <`VBMyExt
 |`Version`|필수 요소. 항목 템플릿에 대한 버전 번호입니다.|
 |`AssemblyFullName`|선택 사항입니다. 어셈블리 이름입니다. 이 어셈블리에 대한 참조가 프로젝트에 추가되면 사용자에게 이 항목 템플릿에서 `My` 확장을 추가할지 묻는 메시지가 표시됩니다.|
 
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>.vstemplate 파일에 \<CustomDataSignature> 요소를 추가합니다.
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>.vstemplate 파일에 \<CustomDataSignature> 요소 추가
 
 Visual Studio 항목 템플릿을 `My` 네임스페이스 확장으로 식별하려면 항목 템플릿에 대한 .vstemplate 파일도 수정해야 합니다. `<CustomDataSignature>` 요소를 `<TemplateData>` 요소에 추가해야 합니다. `<CustomDataSignature>` 요소는 다음 예제와 같이 `Microsoft.VisualBasic.MyExtension` 텍스트를 포함해야 합니다.
 
@@ -103,7 +103,7 @@ Visual Studio 항목 템플릿을 `My` 네임스페이스 확장으로 식별하
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic의 내 네임스페이스 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
-- [Visual Basic 애플리케이션 모델 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
-- [My에 사용할 수 있는 개체 사용자 지정](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [Visual Basic의 내 네임스페이스 확장](extending-the-my-namespace.md)
+- [Visual Basic 애플리케이션 모델 확장](extending-the-visual-basic-application-model.md)
+- [My에 사용할 수 있는 개체 사용자 지정](customizing-which-objects-are-available-in-my.md)
 - [내 확장명 페이지, 프로젝트 디자이너](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

@@ -1,5 +1,6 @@
 ---
 title: .NET에서 문자열의 문자 트리밍 및 제거
+description: .NET에서 문자열의 시작 또는 끝부분에서 공백을 자르거나 문자열의 지정된 위치에서 공백 또는 문자를 제거하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159990"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446895"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET에서 문자열의 문자 트리밍 및 제거
 문장을 개별 단어로 구문 분석할 경우 단어의 끝에 빈 공간(공백이라고도 함)이 있는 단어가 생길 수 있습니다. 이 경우에 **System.String** 클래스에서 trim 메서드 중 하나를 사용하여 문자열에 지정된 위치에서 공백의 수나 다른 문자를 제거할 수 있습니다. 다음 테이블에서는 사용할 수 있는 trim 메서드에 대해 설명합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|문자열의 시작과 끝에서 문자 배열에 지정된 문자 또는 공백을 제거합니다.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|문자열의 끝에서 문자 배열에 지정된 문자를 제거합니다.|  
@@ -94,6 +95,6 @@ ms.locfileid: "78159990"
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
+- [기본적인 문자열 작업](basic-string-operations.md)

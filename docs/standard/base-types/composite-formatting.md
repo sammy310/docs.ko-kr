@@ -1,5 +1,6 @@
 ---
 title: 복합 형식 지정
+description: 입력으로 개체 목록을 사용하는 .NET 복합 서식 지정과 인덱싱된 자리 표시자를 사용하는 고정 텍스트가 포함된 복합 서식 문자열에 대해 알아봅니다.
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398480"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447266"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -81,17 +82,17 @@ ms.locfileid: "79398480"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String 구성 요소  
- 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)을 지정합니다. *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString*을 지정하는 경우 콜론이 필요합니다.  
+ 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](enumeration-format-strings.md)을 지정합니다. *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString*을 지정하는 경우 콜론이 필요합니다.  
   
  다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 애플리케이션 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
   
 |형식 또는 형식 범주|참조 항목|  
 |---------------------------|---------|  
-|날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)|  
+|열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[열거형 형식 문자열](enumeration-format-strings.md)|  
+|숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[표준 숫자 형식 문자열](standard-numeric-format-strings.md)<br /><br /> [사용자 지정 숫자 형식 문자열](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)<br /><br /> [사용자 지정 TimeSpan 서식 문자열](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>이스케이프 중괄호  
  여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다. 따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다. 고정 텍스트에서 여는 중괄호 2개("{{")를 사용하면 여는 중괄호 1개("{")가, 닫는 중괄호 2개("}}")를 사용하면 닫는 중괄호 1개("}")가 표시됩니다. 서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다. 중첩 중괄호 해석은 지원되지 않습니다.  
@@ -163,11 +164,11 @@ ms.locfileid: "79398480"
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [문자열 보간(C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [문자열 보간(Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
-- [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)
-- [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [형식 서식 지정](formatting-types.md)
+- [표준 숫자 형식 문자열](standard-numeric-format-strings.md)
+- [사용자 지정 숫자 형식 문자열](custom-numeric-format-strings.md)
+- [표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md)
+- [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)
+- [표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)
+- [사용자 지정 TimeSpan 서식 문자열](custom-timespan-format-strings.md)
+- [열거형 형식 문자열](enumeration-format-strings.md)

@@ -3,12 +3,12 @@ title: XML Serializer 생성기 도구(Sgen.exe)
 description: XML Serializer Generator는 특정 어셈블리의 형식에 대한 XML serialization 어셈블리를 만들어 XmlSerializer의 시작 성능을 향상시킵니다.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380037"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288942"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer 생성기 도구(Sgen.exe)
 
@@ -64,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>참조
 
-- [도구](../../../docs/framework/tools/index.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [도구](../../framework/tools/index.md)
+- [명령 프롬프트](../../framework/tools/developer-command-prompt-for-vs.md)

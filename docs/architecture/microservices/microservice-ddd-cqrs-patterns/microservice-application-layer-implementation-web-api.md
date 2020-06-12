@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144606"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306931"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -18,14 +18,14 @@ ms.locfileid: "84144606"
 예를 들어 Ordering(주문) 마이크로 서비스의 애플리케이션 계층 코드는 그림 7-23과 같이 **Ordering.API** 프로젝트(ASP.NET Core Web API 프로젝트)의 일부로 직접 구현됩니다.
 
 :::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="솔루션 탐색기에서 마이크로 서비스를 주문하는 스크린샷":::
-Application 폴더의 하위 폴더를 보여주는 Ordering.API 마이크로 서비스의 솔루션 탐색기 보기: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries 및 Validations.
+Application 폴더의 하위 폴더를 보여 주는 Ordering.API 마이크로 서비스의 솔루션 탐색기 보기: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries 및 Validations.
 :::image-end:::
 
 **그림 7-23**. Ordering.API ASP.NET Core Web API 프로젝트의 애플리케이션 계층
 
 ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내장 IoC 컨테이너](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)(IServiceProvider 인터페이스로 표시됨)가 포함되며, ASP.NET은 DI를 통해 특정 서비스를 사용할 수 있도록 합니다. ASP.NET Core는 DI를 통해 주입될 사용자가 등록하는 모든 형식에 *서비스*라는 용어를 사용합니다. 내장 컨테이너의 서비스는 애플리케이션의 Startup 클래스에 있는 ConfigureServices 메서드에 구성합니다. 종속성은 형식에 필요하며 IoC 컨테이너에 등록하는 서비스에 구현됩니다.
 
-일반적으로 인프라 개체를 구현하는 종속성을 주입하려고 합니다. 매우 일반적으로 주입하는 종속성은 리포지토리입니다. 하지만 다른 인프라 종속성을 주입할 수도 있습니다. 간단한 구현을 위해 작업 단위 패턴 개체(EF DbContext 개체)를 직접 주입할 수 있는데, DBContext 역시 인프라 지속성 개체의 구현이기 때문입니다.
+일반적으로 인프라 개체를 구현하는 종속성을 주입하려고 합니다. 일반적으로 주입하는 종속성은 리포지토리입니다. 하지만 다른 인프라 종속성을 주입할 수도 있습니다. 간단한 구현을 위해 작업 단위 패턴 개체(EF DbContext 개체)를 직접 주입할 수 있는데, DBContext 역시 인프라 지속성 개체의 구현이기 때문입니다.
 
 다음 예제에서는 .NET Core가 생성자를 통해 필요한 리포지토리 개체를 어떻게 주입하는지 볼 수 있습니다. 클래스는 명령 처리기이며, 다음 섹션에 설명되어 있습니다.
 
@@ -433,7 +433,7 @@ public class CreateOrderCommandHandler
 
 중재자(Mediator) 패턴을 사용하는 것이 타당한 이유는 엔터프라이즈 애플리케이션에서 처리 요청이 복잡해질 수 있기 때문입니다. 로깅, 유효성 검사, 감사 및 보안과 같은 여러 가지 교차 편집 문제를 추가하는 것이 필요할 수 있습니다. 이런 경우 중재자(mediator) 파이프라인([중재자(Mediator) 패턴](https://en.wikipedia.org/wiki/Mediator_pattern) 참조)에 의존하여 이러한 추가 동작이나 교차 편집 문제를 위한 수단을 제공할 수 있습니다.
 
-중재자(mediator)는 프로세스의 “방식(how)”을 캡슐화하는 개체입니다. 상태, 명령 처리기가 호출되는 방식 또는 처리기에 제공하는 페이로드를 기반으로 실행을 조정합니다. 중재자(mediator) 구성 요소를 사용하면 데코레이터(또는 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 이후의 [파이프라인 동작](https://github.com/jbogard/MediatR/wiki/Behaviors))를 적용하여 중앙 집중식으로 투명하게 교차 편집 문제를 적용할 수 있습니다. 자세한 내용은 [데코레이터(decorator) 패턴](https://en.wikipedia.org/wiki/Decorator_pattern)을 참조하세요.
+중재자(mediator)는 프로세스의 “방식(how)”을 캡슐화하는 개체입니다. 상태, 명령 처리기가 호출되는 방식 또는 처리기에 제공하는 페이로드를 기반으로 실행을 조정합니다. 중재자 구성 요소를 사용하면 데코레이터(또는 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 이후의 [파이프라인 동작](https://github.com/jbogard/MediatR/wiki/Behaviors))를 적용하여 중앙 집중식으로 투명하게 교차 편집 문제를 적용할 수 있습니다. 자세한 내용은 [데코레이터(decorator) 패턴](https://en.wikipedia.org/wiki/Decorator_pattern)을 참조하세요.
 
 데코레이터(decorator)와 동작은 AOP([Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming))와 유사하며 중재자(mediator) 구성 요소가 관리하는 특정 프로세스 파이프라인에만 적용됩니다. 교차 편집 문제를 구현하는 AOP의 측면은 컴파일 시간에 주입된 *관점 생성기(aspect weaver)* 또는 개체 호출 인터셉션을 기반으로 적용됩니다. 일반적인 APO 방식은 AOP가 해당 작업을 어떻게 수행하는지 보기가 쉽지 않기 때문에 "마술처럼" 작동한다고 말하기도 합니다. 심각한 문제나 버그를 처리할 때 AOP는 디버그가 어려울 수 있습니다. 이러한 데코레이터/동작은 명시적이며 중재자(mediator)의 맥락에서만 적용되기 때문에 디버깅을 훨씬 더 쉽게 예측할 수 있습니다.
 
@@ -477,7 +477,7 @@ Mediator 패턴을 사용하는 또 다른 좋은 이유는 이 가이드를 검
 
 > 시스템 동작에 일관된 창을 제공하기 때문에 테스트를 언급하는 것이 유용하다고 생각합니다. 요청이 들어가고(Request-in), 응답이 나오는(response-out) 이 측면은 일관되게 동작하는 테스트를 구축하는 데 매우 유용했습니다.
 
-먼저, 중재자(mediator) 개체를 실제로 사용할 샘플 WebAPI 컨트롤러를 살펴보겠습니다. 중재자(mediator) 개체를 사용하지 않는 경우에는 해당 컨트롤러에 대한 모든 종속성(예: 로거 개체 등)을 주입해야 합니다. 따라서 생성자가 매우 복잡합니다. 반면에 중재자(mediator) 개체를 사용하면, 교차 편집 작업당 종속성이 하나일 경우 다수의 종속성이 있지만 다음 예제와 같이 적은 수의 종속성만 있기 때문에 컨트롤러의 생성자는 훨씬 더 간단해 질 수 있습니다.
+먼저, 중재자(mediator) 개체를 실제로 사용할 샘플 WebAPI 컨트롤러를 살펴보겠습니다. 중재자(mediator) 개체를 사용하지 않는 경우에는 해당 컨트롤러에 대한 모든 종속성(예: 로거 개체 등)을 주입해야 합니다. 따라서 생성자가 복잡합니다. 반면에 중재자(mediator) 개체를 사용하면, 교차 편집 작업당 종속성이 하나일 경우 다수의 종속성이 있지만 다음 예제와 같이 적은 수의 종속성만 있기 때문에 컨트롤러의 생성자는 훨씬 더 간단해 질 수 있습니다.
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-IdentifiedCommand는 비즈니스 명령의 봉투(Envelope)처럼 작동하기 때문에 반복된 ID가 아니라서 비즈니스 명령을 처리해야 하는 경우에는, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)에서 `_mediator.Send(message.Command)`를 실행할 때 위에 표시된 코드의 마지막 부분처럼 내부 비즈니스 명령을 가져와 중재자(Mediator)에 다시 제출합니다.
+IdentifiedCommand는 비즈니스 명령의 봉투(Envelope)처럼 작동하기 때문에 반복된 ID가 아니라서 비즈니스 명령을 처리해야 하는 경우에는, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)에서 `_mediator.Send(message.Command)`를 실행할 때 위에 표시된 코드의 마지막 부분처럼 내부 비즈니스 명령을 가져와 중재자에 다시 제출합니다.
 
 그렇게 하면 이 경우 다음 코드와 같이 Ordering 데이터베이스에 대해 트랜잭션을 실행하는 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 비즈니스 명령 처리기를 연결하고 실행합니다.
 

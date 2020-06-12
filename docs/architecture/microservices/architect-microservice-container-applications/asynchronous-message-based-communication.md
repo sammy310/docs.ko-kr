@@ -2,12 +2,12 @@
 title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144346"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306970"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -35,7 +35,7 @@ ms.locfileid: "84144346"
 
 **그림 4-18**. 비동기 메시지를 수신하는 단일 마이크로 서비스
 
-명령이 클라이언트 애플리케이션에서 오는 경우 HTTP 동기 명령처럼 구현될 수 있는지 유의하십시오. 보다 큰 확장성이 필요하거나 메시지 기반 비즈니스 프로세스가 이미 실행 중인 경우 메시지 기반 명령을 사용해야 합니다.
+명령이 클라이언트 애플리케이션에서 오는 경우 HTTP 동기 명령처럼 구현될 수 있습니다. 좀 더 큰 확장성이 필요하거나 메시지 기반 비즈니스 프로세스가 이미 실행 중인 경우 메시지 기반 명령을 사용합니다.
 
 ## <a name="multiple-receivers-message-based-communication"></a>다중 수신자 메시지 기반 통신
 

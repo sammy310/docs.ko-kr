@@ -1,5 +1,6 @@
 ---
 title: .NET에서 서식 지정 형식
+description: .NET에서 형식의 서식을 지정하는 방법을 알아봅니다. ToString 메서드를 사용하거나 재정의하는 방법을 알아봅니다. 문화권 구분, 복합 및 사용자 지정 서식 지정에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523952"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447084"
 ---
 # <a name="format-types-in-net"></a>.NET의 형식 유형
 
@@ -45,7 +46,7 @@ ms.locfileid: "80523952"
 - 애플리케이션에서 같은 값을 여러 가지 방법으로 표시해야 하는 경우도 있을 수 있습니다. 예를 들어, 애플리케이션에서 해당 이름의 문자열 표현을 표시하거나 해당 내부 값을 표시하여 열거형 멤버를 나타낼 수 있습니다. 다양한 방식으로 <xref:System.DayOfWeek> 열거형 멤버의 형식을 지정하는 예제는 [표준 형식 문자열](#standard-format-strings) 단원을 참조하세요.
 
 > [!NOTE]
-> 형식 지정은 형식의 값을 문자열 표현으로 변환합니다. 구문 분석은 형식 지정과 반대 과정으로 진행됩니다. 구문 분석 작업은 해당 문자열 표현에서 데이터 형식의 인스턴스를 만듭니다. 문자열을 다른 데이터 형식으로 변환하는 방법에 대한 자세한 내용은 [.NET에서 문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)을 참조하세요.
+> 형식 지정은 형식의 값을 문자열 표현으로 변환합니다. 구문 분석은 형식 지정과 반대 과정으로 진행됩니다. 구문 분석 작업은 해당 문자열 표현에서 데이터 형식의 인스턴스를 만듭니다. 문자열을 다른 데이터 형식으로 변환하는 방법에 대한 자세한 내용은 [.NET에서 문자열 구문 분석](parsing-strings.md)을 참조하세요.
 
 .NET에서는 개발자가 이러한 요구 사항을 처리할 수 있는 다양한 형식 지정을 지원합니다.
 
@@ -137,7 +138,7 @@ ms.locfileid: "80523952"
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
-열거형 형식 문자열에 대한 자세한 내용은 [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)을 참조하세요.
+열거형 형식 문자열에 대한 자세한 내용은 [Enumeration Format Strings](enumeration-format-strings.md)을 참조하세요.
 
 일반적으로 숫자 형식의 표준 형식 문자열은 정확한 모양이 하나 이상의 속성 값에 의해 제어되는 결과 문자열을 정의합니다. 예를 들어, "C" 형식 지정자는 숫자의 형식을 통화 값으로 지정합니다. “C” 형식 지정자를 유일한 매개 변수로 사용하여 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.NumberFormatInfo> 개체에 있는 다음 속성 값이 숫자 값의 문자열 표현을 정의하는 데 사용됩니다.
 
@@ -166,14 +167,14 @@ ms.locfileid: "80523952"
 [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
 [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]
 
-표준 숫자 서식 지정 문자열에 대한 자세한 내용은 [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.
+표준 숫자 서식 지정 문자열에 대한 자세한 내용은 [표준 날짜 및 시간 형식 문자열](standard-numeric-format-strings.md)을 참조하세요.
 
 날짜 및 시간 값의 표준 형식 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 속성에 저장된 사용자 지정 형식 문자열의 별칭입니다. 예를 들어 “D” 형식 지정자를 사용하여 날짜 및 시간 값의 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 저장된 사용자 지정 형식 문자열을 사용하여 날짜 및 시간이 표시됩니다. (사용자 지정 서식 문자열에 대한 자세한 내용은 [다음 섹션](#custom-format-strings)을 참조하세요.) 다음 예제에서는 이러한 관계를 보여 줍니다.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
 
-표준 날짜 및 시간 형식 문자열에 대한 자세한 내용은 [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)을 참조하세요.
+표준 날짜 및 시간 형식 문자열에 대한 자세한 내용은 [Standard Date and Time Format Strings](standard-date-and-time-format-strings.md)을 참조하세요.
 
 표준 형식 문자열을 사용하여 개체의 `ToString(String)` 메서드에 의해 생성되는 애플리케이션 정의 개체의 문자열 표현도 정의할 수 있습니다. 개체가 지원하는 특정 표준 형식 지정자를 정의하고 이러한 지정자가 대/소문자를 구분하는지 여부를 결정할 수 있습니다. `ToString(String)` 메서드의 구현에서는 다음을 지원해야 합니다.
 
@@ -188,7 +189,7 @@ ms.locfileid: "80523952"
 
 ### <a name="custom-format-strings"></a>사용자 지정 서식 문자열
 
-표준 형식 문자열 외에도 .NET에서는 숫자 값과 날짜 및 시간 값에 대한 사용자 지정 형식 문자열을 정의합니다. 사용자 지정 형식 문자열은 값의 문자열 표현을 정의하는 하나 이상의 사용자 지정 형식 지정자로 구성됩니다. 예를 들어, en-US 문화권의 경우 사용자 지정 날짜 및 시간 형식 문자열 "yyyy/mm/dd hh:mm:ss t zzz"는 날짜를 "2008/11/15 07:45:00.0000 P -08:00" 형태의 문자열 표현으로 변환합니다. 마찬가지로 사용자 지정 형식 문자열 "0000"은 정수 값 12를 "0012"로 변환합니다. 사용자 지정 서식 문자열의 전체 목록은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) 및 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.
+표준 형식 문자열 외에도 .NET에서는 숫자 값과 날짜 및 시간 값에 대한 사용자 지정 형식 문자열을 정의합니다. 사용자 지정 형식 문자열은 값의 문자열 표현을 정의하는 하나 이상의 사용자 지정 형식 지정자로 구성됩니다. 예를 들어, en-US 문화권의 경우 사용자 지정 날짜 및 시간 형식 문자열 "yyyy/mm/dd hh:mm:ss t zzz"는 날짜를 "2008/11/15 07:45:00.0000 P -08:00" 형태의 문자열 표현으로 변환합니다. 마찬가지로 사용자 지정 형식 문자열 "0000"은 정수 값 12를 "0012"로 변환합니다. 사용자 지정 서식 문자열의 전체 목록은 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md) 및 [사용자 지정 숫자 형식 문자열](custom-numeric-format-strings.md)을 참조하세요.
 
 형식 문자열이 단일 사용자 지정 형식 지정자로 구성된 경우에는 표준 형식 지정자와 혼동되지 않도록 형식 지정자 앞에 백분율 기호(%)가 와야 합니다. 다음 예제에서는 "M" 사용자 지정 형식 지정자를 사용하여 특정 날짜의 월에 해당하는 한 자리 또는 두 자리 숫자를 표시합니다.
 
@@ -213,13 +214,13 @@ ms.locfileid: "80523952"
 
 |제목|정의|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|숫자 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
-|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 서식 문자열에 대해 설명합니다.|
-|[사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 애플리케이션별 서식을 만드는 사용자 지정 서식 문자열에 대해 설명합니다.|
-|[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
-|[사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|시간 간격의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|숫자 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
+|[표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 서식 문자열에 대해 설명합니다.|
+|[사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)|<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 애플리케이션별 서식을 만드는 사용자 지정 서식 문자열에 대해 설명합니다.|
+|[표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
+|[사용자 지정 TimeSpan 서식 문자열](custom-timespan-format-strings.md)|시간 간격의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|<xref:System.Guid> 값에 대한 표준 형식 문자열에 대해 설명합니다.|
 
 ## <a name="culture-sensitive-formatting-with-format-providers"></a>형식 공급자를 사용한 문화권 구분 형식 지정
@@ -329,7 +330,7 @@ ms.locfileid: "80523952"
 
      맞춤 문자열 구성 요소와 형식 문자열 구성 요소가 둘 다 있는 경우 맞춤 문자열 구성 요소가 우선합니다(예: `{0,-20:g}`).
 
-복합 서식 지정에 대한 자세한 내용은 [복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.
+복합 서식 지정에 대한 자세한 내용은 [복합 형식 지정](composite-formatting.md)을 참조하세요.
 
 ## <a name="custom-formatting-with-icustomformatter"></a>ICustomFormatter를 사용한 사용자 지정 서식 지정
 
@@ -351,15 +352,15 @@ ms.locfileid: "80523952"
 
 |제목|정의|
 |-----------|----------------|
-|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
-|[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|숫자 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
-|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
-|[사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
-|[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
-|[사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|시간 간격의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
-|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|
-|[복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)|문자열에 형식이 지정된 하나 이상의 값을 포함시키는 방법에 대해 설명합니다. 그런 후 해당 문자열을 콘솔에 표시하거나 스트림에 쓸 수 있습니다.|
-|[.NET에서 문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)|개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.|
+|[Standard Numeric Format Strings](standard-numeric-format-strings.md)|숫자 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
+|[Custom Numeric Format Strings](custom-numeric-format-strings.md)|숫자 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
+|[표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
+|[사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)|<xref:System.DateTime> 값의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
+|[표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)|시간 간격의 일반적으로 사용되는 문자열 표현을 만드는 표준 형식 문자열에 대해 설명합니다.|
+|[사용자 지정 TimeSpan 서식 문자열](custom-timespan-format-strings.md)|시간 간격의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
+|[Enumeration Format Strings](enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|
+|[복합 형식 지정](composite-formatting.md)|문자열에 형식이 지정된 하나 이상의 값을 포함시키는 방법에 대해 설명합니다. 그런 후 해당 문자열을 콘솔에 표시하거나 스트림에 쓸 수 있습니다.|
+|[.NET에서 문자열 구문 분석](parsing-strings.md)|개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.|
 
 ## <a name="reference"></a>참고
 

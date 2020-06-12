@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187137"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374514"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -210,7 +210,7 @@ C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 �
 
 문자열을 하드 코드하지 않고 오류 메시지에서 사용하기 위해 형식이나 멤버의 정규화되지 않은 문자열 이름을 가져올 수 있습니다.  이 기능을 사용하면 리팩터링할 때 코드를 올바르게 유지할 수 있습니다.  이 기능은 MVC(Model-View-Controller) 링크를 연결하고 속성 변경 이벤트를 발생시키는 데도 유용합니다.
 
-[문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[문자열 보간](../programming-guide/language-features/strings/interpolated-strings.md)
 
 문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [복합 형식 지정](../../standard/base-types/composite-formatting.md)보다 이해하기 쉽습니다.
 
@@ -218,7 +218,7 @@ C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 �
 
 멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 매우 간단한 구문을 사용하여 null 테스트를 수행할 수 있습니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  왼쪽 피연산자 또는 개체 참조가 null이면 연산에서 null이 반환됩니다.
 
-[다중 선 문자열 리터럴](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[다중 선 문자열 리터럴](../programming-guide/language-features/strings/string-basics.md)
 
 문자열 리터럴에 줄 바꿈 시퀀스가 포함될 수 있습니다.  `<xml><![CDATA[...text with newlines...]]></xml>.Value` 사용과 관련된 이전 작업은 더 이상 필요하지 않습니다.
 
@@ -238,11 +238,11 @@ yyyy-mm-dd 형식(`#2015-03-17 16:10 PM#`)의 날짜 리터럴을 사용할 수 
 
 읽기/쓰기 속성을 사용하여 읽기 전용 인터페이스 속성을 구현할 수 있습니다. 이러한 인터페이스는 최소 기능을 보장하며 구현 클래스에서 속성이 설정되도록 허용하는 것을 차단하지 않습니다.
 
-[TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 코드를 더 읽기 쉽게 만들기 위해 `IsNot`과 함께 `TypeOf`를 사용할 수 있습니다.
 
-[#Disable Warning \<ID> 및 #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)
+[#Disable Warning \<ID> 및 #Enable Warning \<ID>](../language-reference/directives/index.md)
 
 소스 파일 내의 영역에 대한 특정 경고를 사용하지 않거나 사용하도록 설정할 수 있습니다.
 
@@ -250,15 +250,15 @@ yyyy-mm-dd 형식(`#2015-03-17 16:10 PM#`)의 날짜 리터럴을 사용할 수 
 
 문서 주석을 작성하면 편집기의 효율성을 높이고 매개 변수 이름의 유효성 검사, `crefs`(제네릭, 연산자 등)의 적절한 처리, 색 지정 및 리팩터링에 대한 지원을 제공할 수 있습니다.
 
-[부분 모듈 및 인터페이스 정의](../../visual-basic/language-reference/modifiers/partial.md)
+[부분 모듈 및 인터페이스 정의](../language-reference/modifiers/partial.md)
 
 클래스 및 구조체 외에도 부분 모듈과 인터페이스를 선언할 수 있습니다.
 
-[메서드 본문 내의 #Region 지시문](../../visual-basic/language-reference/directives/region-directive.md)
+[메서드 본문 내의 #Region 지시문](../language-reference/directives/region-directive.md)
 
 #Region…#End Region 구분 기호를 파일의 원하는 위치, 함수 내부 및 여러 함수 본문을 포괄하여 입력할 수 있습니다.
 
-[Overrides 정의는 암시적으로 overloads임](../../visual-basic/language-reference/modifiers/overrides.md)
+[Overrides 정의는 암시적으로 overloads임](../language-reference/modifiers/overrides.md)
 
 `Overrides` 한정자를 정의에 추가하면 일반적인 경우에 더 적은 코드를 입력할 수 있도록 컴파일러에서 암시적으로 `Overloads`를 추가합니다.
 

@@ -2,12 +2,12 @@
 title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 주문 마이크로 서비스에서 CQRS가 구현되는 방식을 이해합니다.
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144281"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306944"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -27,9 +27,9 @@ EShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스 설
 
 “쿼리 측” 구현을 위해 EF Core, AutoMapper 프로젝션 같은 종합 ORM, 저장 프로시저, 뷰, 구체화된 뷰나 마이크로 ORM 등, 여러 방식 중에서 선택할 수 있습니다.
 
-이 가이드와 eShopOnContainers(특히 주문 마이크로 서비스)에서는 [Dapper](https://github.com/StackExchange/dapper-dot-net) 같은 마이크로 ORM을 사용하여 간편한 쿼리를 구현했습니다. 이렇게 하면 부담이 거의 없는 가벼운 프레임워크 덕분에 SQL 문 기반의 모든 쿼리를 구현하여 최고 성능을 낼 수 있습니다.
+이 가이드와 eShopOnContainers(특히 주문 마이크로 서비스)에서는 [Dapper](https://github.com/StackExchange/dapper-dot-net) 같은 마이크로 ORM을 사용하여 간편한 쿼리를 구현했습니다. 이렇게 하면 오버헤드가 적은 간단한 프레임워크 덕분에 SQL 문 기반의 모든 쿼리를 구현하여 최고의 성능을 낼 수 있습니다.
 
-이 방법을 사용할 때는 엔터티가 SQL 데이터베이스에 지속되는 방식에 영향을 미치는 모든 모델 업데이트에서 Dapper 나 기타 다른 개별(비 EF) 쿼리 방식에서 사용되는 SQL 쿼리에 대한 개별 업데이트도 필요합니다.
+이 방법을 사용할 때는 엔터티가 SQL 데이터베이스에 지속되는 방식에 영향을 미치는 모든 모델 업데이트에서 Dapper나 다른 개별(비 EF) 쿼리 방식에서 사용되는 SQL 쿼리에 대한 개별 업데이트도 필요합니다.
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS 및 DDD 패턴은 최상위 아키텍처가 아닙니다.
 

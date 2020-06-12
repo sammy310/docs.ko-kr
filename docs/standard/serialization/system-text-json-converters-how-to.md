@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: JSON serialization용 사용자 지정 변환기를 작성하는 방법 - .NET
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703615"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84279765"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization(마샬링)용 사용자 지정 변환기를 작성하는 방법
 
@@ -23,10 +28,10 @@ ms.locfileid: "83703615"
 
 현재 릴리스에 포함되지 않은 기능을 사용하여 `System.Text.Json`를 사용자 지정하거나 확장하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 다음과 같은 시나리오에 대해 설명합니다.
 
-* [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties).
-* [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key).
-* [다형 deserialization 지원](#support-polymorphic-deserialization).
-* [Stack\<T>에 대한 라운드트립 지원](#support-round-trip-for-stackt).
+* [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
+* [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)
+* [다형 deserialization 지원](#support-polymorphic-deserialization)
+* [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
 
 ## <a name="custom-converter-patterns"></a>사용자 지정 변환기 패턴
 
@@ -175,7 +180,7 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 * [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
 * [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)
 * [다형 deserialization 지원](#support-polymorphic-deserialization)
-* [Stack\<T>에 대한 라운드트립 지원](#support-round-trip-for-stackt).
+* [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>유추된 형식을 개체 속성으로 역직렬화
 
@@ -252,7 +257,7 @@ Serialization의 JSON 출력은 다음 예제와 같습니다.
 
 기본 제공 기능을 통해 제한적으로 [다형 serialization](system-text-json-how-to.md#serialize-properties-of-derived-classes)을 제공할 수 있지만 deserialization은 전혀 지원되지 않습니다. deserialization을 수행하려면 사용자 지정 변환기가 필요합니다.
 
-예를 들어 `Employee` 및 `Customer` 파생 클래스를 사용하는 `Person` 추상 기본 클래스가 있다고 가정합니다. 다형 deserialization은 디자인 타임에 `Person`을 deserialization 대상으로 지정할 수 있고 런타임에 JSON의 `Customer` 및 `Employee` 개체가 올바르게 역직렬화됨을 의미합니다. deserialization 동안 JSON에서 필요한 형식을 식별하는 단서를 찾아야 합니다. 사용 가능한 단서의 종류는 각 시나리오마다 다릅니다. 예를 들어 판별자 속성을 사용할 수 있거나 특정 속성이 존재하는지 여부에 의존해야 할 수도 있습니다. 현재 릴리스의 `System.Text.Json`에서는 다형 deserialization 시나리오를 처리하는 방법을 지정하는 특성을 제공하지 않으므로 사용자 지정 변환기가 필요합니다.
+예를 들어 `Employee` 및 `Customer` 파생 클래스를 사용하는 `Person` 추상 기본 클래스가 있다고 가정합니다. 다형성 deserialization은 디자인 타임에 `Person`을 deserialization 대상으로 지정할 수 있고 런타임에 JSON의 `Customer` 및 `Employee` 개체가 올바르게 역직렬화됨을 의미합니다. deserialization 동안 JSON에서 필요한 형식을 식별하는 단서를 찾아야 합니다. 사용 가능한 단서의 종류는 각 시나리오마다 다릅니다. 예를 들어 판별자 속성을 사용할 수 있거나 특정 속성이 존재하는지 여부에 의존해야 할 수도 있습니다. 현재 릴리스의 `System.Text.Json`에서는 다형 deserialization 시나리오를 처리하는 방법을 지정하는 특성을 제공하지 않으므로 사용자 지정 변환기가 필요합니다.
 
 다음 코드에서는 기본 클래스, 두 개의 파생 클래스 및 해당 클래스에 대한 사용자 지정 변환기를 보여 줍니다. 이 변환기는 판별자 속성을 사용하여 다형 deserialization을 수행합니다. 형식 판별자는 클래스 정의에 없지만 serialization 동안 만들어지고 deserialization 동안 읽힙니다.
 
@@ -283,7 +288,7 @@ Serialization의 JSON 출력은 다음 예제와 같습니다.
 
 이전 예제의 변환기 코드는 각 속성을 수동으로 읽고 씁니다. 대신 `Deserialize` 또는 `Serialize`를 호출하여 일부 작업을 수행할 수 있습니다. 예제는 [이 StackOverflow 게시물](https://stackoverflow.com/a/59744873/12509023)을 참조하세요.
 
-### <a name="support-round-trip-for-stackt"></a>Stack\<T>에 대한 라운드트립 지원
+### <a name="support-round-trip-for-stackt"></a>Stack\<T>에 대한 왕복 지원
 
 JSON 문자열을 <xref:System.Collections.Generic.Stack%601> 개체로 역직렬화한 다음 해당 개체를 직렬화하는 경우 스택의 내용이 역순으로 표시됩니다. 이 동작은 다음 형식 및 인터페이스, 그리고 이러한 형식에서 파생되는 사용자 정의 형식에 적용됩니다.
 

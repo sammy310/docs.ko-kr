@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794392"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289137"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML 데이터에 개체 계층 구조 매핑
 메모리에 있는 XML 문서를 개념적으로 표현한 것이 트리입니다. 프로그래밍의 경우에는 트리 노드에 액세스하는 개체 계층 구조가 있습니다. 다음 예제에서는 XML 내용이 노드가 되는 방법을 보여 줍니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "82794392"
   
  이러한 입력은 지정된 노드 형식 속성이 있는 다음 노드 트리로 메모리에 표현됩니다.  
   
- ![예제 노드 트리](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![예제 노드 트리](media/simple-xml.gif "Simple_XML")  
 book 및 title 노드 트리 표현  
   
  `book` 요소는 **XmlElement** 개체가 되고, 다음 요소인 `title`도 **XmlElement** 개체가 되지만 요소 내용은 **XmlText** 개체가 됩니다. **XmlElement**의 메서드 및 속성은 **XmlText** 개체에서 사용할 수 있는 메서드 및 속성과 다릅니다. 노드 형식에 따라 수행할 수 있는 작업이 결정되기 때문에 XML 태그에서 어떤 노드 형식이 만들어지는지를 반드시 알아야 합니다.  
@@ -214,10 +214,10 @@ public class Sample
   
  노드 형식이 유효한 작업 종류와 설정하고 검색할 수 있는 속성 종류를 제어하기 때문에 지정되는 노드 형식을 알아야 합니다.  
   
- 공백에 대한 노드 생성은 **PreserveWhitespace** 플래그에 의해 DOM으로 데이터가 로드될 때 제어됩니다. 자세한 내용은 [DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)를 참조하세요.  
+ 공백에 대한 노드 생성은 **PreserveWhitespace** 플래그에 의해 DOM으로 데이터가 로드될 때 제어됩니다. 자세한 내용은 [DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리](white-space-and-significant-white-space-handling-when-loading-the-dom.md)를 참조하세요.  
   
- DOM에 새 노드를 추가하려면 [XML 문서에 노드 삽입](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)을 참조하세요. DOM에서 노드를 제거하려면 [XML 문서에서 노드, 내용 및 값 제거](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)를 참조하세요. DOM에서 노드 내용을 수정하려면 [XML 문서에서 노드, 내용 및 값 수정](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)을 참조하세요.  
+ DOM에 새 노드를 추가하려면 [XML 문서에 노드 삽입](inserting-nodes-into-an-xml-document.md)을 참조하세요. DOM에서 노드를 제거하려면 [XML 문서에서 노드, 내용 및 값 제거](removing-nodes-content-and-values-from-an-xml-document.md)를 참조하세요. DOM에서 노드 내용을 수정하려면 [XML 문서에서 노드, 내용 및 값 수정](modifying-nodes-content-and-values-in-an-xml-document.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참조
 
-- [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

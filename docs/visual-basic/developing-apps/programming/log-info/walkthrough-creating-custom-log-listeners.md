@@ -5,18 +5,18 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353618"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398268"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>연습: 사용자 지정 로그 수신기 만들기(Visual Basic)
 
 이 연습에서는 사용자 지정 로그 수신기를 만들고 `My.Application.Log` 개체의 출력을 수신 대기하도록 구성하는 방법을 보여 줍니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 로그 수신기는 <xref:System.Diagnostics.TraceListener> 클래스에서 상속해야 합니다.
 
@@ -43,9 +43,9 @@ ms.locfileid: "74353618"
 
 2. **시그니처** 탭을 클릭합니다.
 
-3. **어셈블리 시그니처** 상자를 선택합니다.
+3. **어셈블리 서명** 상자를 선택합니다.
 
-4. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **\<새로 만들기>** 를 선택합니다.
+4. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **\<New>** 를 선택합니다.
 
      **강력한 이름 키 만들기** 대화 상자가 열립니다.
 
@@ -107,10 +107,10 @@ ms.locfileid: "74353618"
 
      수신기의 강력한 이름이 되도록 `SimpleLogStrongName`의 값을 변경합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [애플리케이션 로그 작업](working-with-application-logs.md)
+- [방법: 로그 예외](how-to-log-exceptions.md)
+- [방법: 로그 메시지 쓰기](how-to-write-log-messages.md)
+- [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141286"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279882"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
 
@@ -49,7 +49,7 @@ ms.locfileid: "73141286"
 
 9. 국제 데이터를 사용하여 국제 운영 체제 버전에서 애플리케이션의 기능을 테스트합니다.
 
-10. 문자열 비교 또는 대/소문자 변경 작업의 결과에 따라 보안을 결정하는 경우 문화권을 구분하지 않는 문자열 작업을 사용합니다. 이러한 구현 방법을 사용하면 결과가 `CultureInfo.CurrentCulture` 값의 영향을 받지 않습니다. 문화권을 구분하지 않는 문자열 비교로 인해 어떻게 일관되지 않은 결과가 나타날 수 있는지를 보여주는 예제는 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)의 ["현재 문화권을 사용하는 문자열 비교"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) 섹션을 참조하세요.
+10. 문자열 비교 또는 대/소문자 변경 작업의 결과에 따라 보안을 결정하는 경우 문화권을 구분하지 않는 문자열 작업을 사용합니다. 이러한 구현 방법을 사용하면 결과가 `CultureInfo.CurrentCulture` 값의 영향을 받지 않습니다. 문화권을 구분하지 않는 문자열 비교로 인해 어떻게 일관되지 않은 결과가 나타날 수 있는지를 보여주는 예제는 [문자열 사용에 대한 모범 사례](../base-types/best-practices-strings.md)의 ["현재 문화권을 사용하는 문자열 비교"](../base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) 섹션을 참조하세요.
 
 ## <a name="localization-best-practices"></a>지역화 모범 사례
 
@@ -69,11 +69,11 @@ ms.locfileid: "73141286"
 
 8. <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 문화권에 따라 리소스를 검색합니다.
 
-9. [Windows Forms 리소스 편집기(Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.
+9. [Windows Forms 리소스 편집기(Winres.exe)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.
 
 10. 전문적인 지역화(번역) 작업을 준비합니다.
 
-11. 리소스 만들기 및 지역화에 대한 자세한 설명을 보려면 [애플리케이션의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.
+11. 리소스 만들기 및 지역화에 대한 자세한 설명을 보려면 [애플리케이션의 리소스](../../framework/resources/index.md)를 참조하세요.
 
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET 애플리케이션에 대한 세계화 모범 사례
 
@@ -99,7 +99,7 @@ ms.locfileid: "73141286"
 
 5. uiCulture 값은 브라우저 허용 언어로 설정될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [전역화 및 지역화](index.md)
+- [데스크톱 앱의 리소스](../../framework/resources/index.md)

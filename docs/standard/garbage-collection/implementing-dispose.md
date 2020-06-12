@@ -1,6 +1,7 @@
 ---
 title: Dispose 메서드 구현
-ms.date: 05/13/2020
+description: 이 문서에서는 .NET에서 코드에 사용되는 비관리형 리소스를 해제하는 Dispose 메서드를 구현하는 방법을 알아봅니다.
+ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a002e0d27dfe28795b28e6813c4f5d5b3e13cdaf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396902"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447175"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose 메서드 구현
 
@@ -156,5 +157,4 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [방법: 클래스 및 구조체 정의 및 사용(C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [삭제 패턴](implementing-dispose.md)
+- [클래스 및 구조체 정의 및 사용(C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)

@@ -1,5 +1,6 @@
 ---
 title: 예외에 대한 모범 사례 - .NET
+description: Try/catch/finally 사용, 예외 없이 일반적인 조건 처리 및 미리 정의된 .NET 예외 형식 사용과 같은 예외에 대한 모범 사례를 알아봅니다.
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160172"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447097"
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
 
@@ -64,7 +65,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-the-predefined-net-exception-types"></a>미리 정의된 .NET 예외 형식 사용
 
-새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예들 들어 다음과 같습니다.
+새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예를 들어:
 
 - 개체의 현재 상태에서 속성 집합이나 메서드 호출이 적절하지 않을 경우 <xref:System.InvalidOperationException> 예외를 throw합니다.
 
@@ -72,7 +73,7 @@ ms.locfileid: "78160172"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>예외 클래스 이름 뒤에 단어 `Exception` 추가
 
-사용자 지정 예외가 필요한 경우 적절한 이름을 지정하고 <xref:System.Exception> 클래스에서 파생합니다. 예들 들어 다음과 같습니다.
+사용자 지정 예외가 필요한 경우 적절한 이름을 지정하고 <xref:System.Exception> 클래스에서 파생합니다. 예를 들어:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -88,7 +89,7 @@ ms.locfileid: "78160172"
 
 - 문자열 메시지와 내부 예외를 허용하는 <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>.
 
-예를 들어 [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)를 참조하세요.
+예는 [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)를 참조하세요.
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>코드를 원격으로 실행하는 경우 예외 데이터를 사용할 수 있는지 확인
 
@@ -126,7 +127,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-exception-builder-methods"></a>예외 작성기 메서드 사용
 
-클래스는 구현된 여러 위치에서 동일한 예외를 throw하는 것이 일반적입니다. 코드를 많이 사용하지 않으려면 예외를 만들어 반환하는 도우미 메서드를 사용합니다. 예들 들어 다음과 같습니다.
+클래스는 구현된 여러 위치에서 동일한 예외를 throw하는 것이 일반적입니다. 코드를 많이 사용하지 않으려면 예외를 만들어 반환하는 도우미 메서드를 사용합니다. 예를 들어:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -214,6 +215,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [예외](index.md)

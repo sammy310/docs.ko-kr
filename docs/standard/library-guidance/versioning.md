@@ -2,16 +2,16 @@
 title: 버전 관리 및 .NET 라이브러리
 description: .NET 라이브러리의 버전을 관리하는 모범 사례 권장 사항입니다.
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398498"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290125"
 ---
 # <a name="versioning"></a>버전 관리
 
-소프트웨어 라이브러리가 버전 1.0에서 완성되는 경우는 거의 없습니다. 훌륭한 라이브러리는 시간이 지남에 따라 발전하며, 기능을 추가하고, 버그를 수정하고, 성능을 개선합니다. 기존 사용자를 중단하지 않고 각 버전에서 추가 가치를 제공하여 .NET 라이브러리의 새 버전을 릴리스하는 것이 중요합니다.
+소프트웨어 라이브러리가 버전 1.0에서 완성되는 경우는 거의 없습니다. 유용한 라이브러리는 시간이 지남에 따라 발전하며 기능을 추가하고, 버그를 수정하며, 성능을 개선합니다. 기존 사용자를 중단하지 않고 각 버전에서 추가 가치를 제공하여 .NET 라이브러리의 새 버전을 릴리스하는 것이 중요합니다.
 
 ## <a name="breaking-changes"></a>호환성이 손상되는 변경
 
@@ -49,9 +49,9 @@ NuGet 패키지 버전은 개발자가 가장 보기 쉬운 버전이므로 [Sem
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-Windows .NET Framework CLR에서는 정확히 일치해야 강력한 이름의 어셈블리를 로드할 수 있습니다. 예를 들어 `Libary1, Version=1.0.0.0`은 `Newtonsoft.Json, Version=11.0.0.0`을 참조하여 컴파일되었습니다. .NET Framework는 정확한 버전인 `11.0.0.0`만 로드합니다. 런타임 시 다른 버전을 로드하려면 .NET 애플리케이션의 구성 파일에 바인딩 리디렉션을 추가해야 합니다.
+.NET Framework CLR에서는 정확히 일치해야 강력한 이름의 어셈블리를 로드할 수 있습니다. 예를 들어 `Libary1, Version=1.0.0.0`은 `Newtonsoft.Json, Version=11.0.0.0`을 참조하여 컴파일되었습니다. .NET Framework는 정확한 버전인 `11.0.0.0`만 로드합니다. 런타임 시 다른 버전을 로드하려면 .NET 애플리케이션의 구성 파일에 바인딩 리디렉션을 추가해야 합니다.
 
-강력한 이름 지정과 어셈블리 버전을 결합하면 [엄격한 어셈블리 버전 로드](../assembly/versioning.md)를 사용할 수 있습니다. 라이브러리에 강력한 이름을 지정하면 여러 가지 혜택이 있지만, 어셈블리를 찾을 수 없는 런타임 예외가 자주 발생하며 `app.config`/`web.config`의 [바인딩 리디렉션](../../framework/configure-apps/redirect-assembly-versions.md)을 수정해야 합니다. .NET Core 어셈블리 로드가 완화되었으며, .NET Core CLR이 런타임에 상위 버전의 어셈블리를 자동으로 로드합니다.
+강력한 이름 지정과 어셈블리 버전을 결합하면 [엄격한 어셈블리 버전 로드](../assembly/versioning.md)를 사용할 수 있습니다. 라이브러리에 강력한 이름을 지정하면 여러 가지 혜택이 있지만, 어셈블리를 찾을 수 없는 런타임 예외가 자주 발생하며 `app.config` 또는 `web.config`의 [바인딩 리디렉션](../../framework/configure-apps/redirect-assembly-versions.md)을 수정해야 합니다. .NET Core에서는 어셈블리 로드가 더 완화됩니다. .NET Core 런타임에서는 런타임에 더 높은 버전의 어셈블리를 자동으로 로드합니다.
 
 ✔️ AssemblyVersion에 주 버전만 포함하는 것을 고려하세요.
 

@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709610"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281611"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 클래스의 XSLT 프로세서 구현
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.
+> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
 <xref:System.Xml.Xsl.XslTransform> 클래스는 XSLT(XSL Transformations) 버전 1.0 권장 사항을 구현한 XSLT 프로세서입니다. <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드는 스타일시트를 찾아서 읽으며 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드는 지정된 소스 문서를 변환합니다. <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하는 저장소를 <xref:System.Xml.Xsl.XslTransform>에 대한 소스 문서로 사용할 수 있습니다. .NET Framework는 현재 <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> 및 <xref:System.Xml.XPath.XPathDocument>에 대해 <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하므로 이 모든 개체를 변환에 사용할 입력 소스 문서로 사용할 수 있습니다.
 
@@ -76,9 +76,9 @@ URL 매개 변수를 포함하지만 증명 매개 변수는 포함하지 않는
 
 URI나 증명 정보가 모두 제공되지 않으면 스타일시트의 증명 정보 집합은 완전하게 신뢰됩니다. 신뢰되지 않는 소스에서 스타일시트를 로드하거나 신뢰되지 않는 확장명 개체를 <xref:System.Xml.Xsl.XsltArgumentList>에 추가하지 마세요.
 
-보안 수준 및 증명 정보와 증명 정보가 스크립트에 미치는 영향에 대한 자세한 내용은 [\<msxsl:script>를 사용한 XSLT 스타일시트 스크립트](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)를 참조하세요. 보안 수준 및 증명 정보와 증명 정보가 확장 개체에 미치는 영향에 대한 자세한 내용은 [스타일시트 매개 변수 및 확장 개체의 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)를 참조하세요.
+보안 수준 및 증거와 증거가 스크립팅에 미치는 영향에 대한 자세한 내용은 [\<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅](xslt-stylesheet-scripting-using-msxsl-script.md)을 참조하세요. 보안 수준 및 증명 정보와 증명 정보가 확장 개체에 미치는 영향에 대한 자세한 내용은 [스타일시트 매개 변수 및 확장 개체의 XsltArgumentList](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)를 참조하세요.
 
-보안 수준 및 증명 정보와 증명 정보가 `document()` 함수에 미치는 영향에 대한 자세한 내용은 [외부 XSLT 스타일시트 및 문서 확인](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)을 참조하세요.
+보안 수준 및 증명 정보와 증명 정보가 `document()` 함수에 미치는 영향에 대한 자세한 내용은 [외부 XSLT 스타일시트 및 문서 확인](resolving-external-xslt-style-sheets-and-documents.md)을 참조하세요.
 
 스타일시트에 많은 입력 매개 변수가 제공될 수 있습니다. 또한 스타일시트는 확장 개체에 대해 함수를 호출할 수도 있습니다. 이러한 매개 변수와 확장명 개체는 모두 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 스타일시트에 제공됩니다. <xref:System.Xml.Xsl.XsltArgumentList>에 대한 자세한 내용은 <xref:System.Xml.Xsl.XsltArgumentList>를 참조하십시오.
 
@@ -238,9 +238,9 @@ print_root.xsl
 ## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [XslTransform 클래스를 사용하여 XSLT 변형](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [변형 과정에서 XPathNavigator의 역할](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [변형 과정에서 XPathNodeIterator의 역할](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XslTransform에 대한 XPathDocument 입력](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XslTransform에 대한 XmlDataDocument 입력](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [XslTransform에 대한 XmlDocument 입력](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [XslTransform 클래스를 사용하여 XSLT 변형](xslt-transformations-with-the-xsltransform-class.md)
+- [변형 과정에서 XPathNavigator의 역할](xpathnavigator-in-transformations.md)
+- [변형 과정에서 XPathNodeIterator의 역할](xpathnodeiterator-in-transformations.md)
+- [XslTransform에 대한 XPathDocument 입력](xpathdocument-input-to-xsltransform.md)
+- [XslTransform에 대한 XmlDataDocument 입력](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform에 대한 XmlDocument 입력](xmldocument-input-to-xsltransform.md)

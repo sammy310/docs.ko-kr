@@ -2,12 +2,12 @@
 title: 종속성 및 .NET 라이브러리
 description: .NET 라이브러리에서 NuGet 종속성을 관리하는 모범 사례 권장 사항입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895703"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291372"
 ---
 # <a name="dependencies"></a>종속성
 

@@ -2,16 +2,16 @@
 title: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경의 통합 이벤트에 대해 이벤트 버스 메시징 구현
 ms.date: 10/02/2018
-ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144294"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306892"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 
-컨테이너에서 실행 중인 RabbitMQ에 기반하는 사용자 지정 이벤트 버스를 만들면 eShopOnContainers 애플리케이션이 수행한 대로 개발 및 테스트 환경에 대해서만 사용해야 합니다. 프로덕션에 사용 가능한 서비스 버스의 일부로 빌드하지 않으면 프로덕션 환경에 사용하지 않아야 합니다. 간단한 사용자 지정 이벤트 버스에는 상용 서비스 버스에 있는 프로덕션에 사용 가능한 중요한 여러 기능이 없을 수 있습니다.
+컨테이너에서 실행 중인 RabbitMQ에 기반하는 사용자 지정 이벤트 버스를 만들면 eShopOnContainers 애플리케이션이 수행한 대로 개발 및 테스트 환경에 대해서만 사용해야 합니다. 프로덕션 준비가 완료된 서비스 버스의 일부로 빌드하지 않는 경우 프로덕션 환경에 사용하지 않아야 합니다. 간단한 사용자 지정 이벤트 버스에는 상용 서비스 버스에 있는 프로덕션에 사용 가능한 중요한 여러 기능이 없을 수 있습니다.
 
 eShopOnContainers에서 이벤트 버스 사용자 지정 구현 중 하나는 기본적으로 RabbitMQ API를 사용하는 라이브러리입니다. Azure Service Bus에 기반한 다른 구현이 있습니다.
 
@@ -114,7 +114,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="additional-resources"></a>추가 자료
 
-RabbitMQ에 대한 지원이 포함된, 프로덕션 환경에서 사용할 수 있는 솔루션입니다.
+RabbitMQ에 대한 지원을 제공하는 프로덕션 준비가 완료된 솔루션입니다.
 
 - **EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트\
   <https://easynetq.com/>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158170"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276441"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
 TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
@@ -30,9 +30,9 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
   
  TAP 메서드의 매개 변수는 해당 동기 메서드의 매개 변수와 일치해야 하며 동일한 순서로 제공되어야 합니다.  그러나, `out` 및 `ref` 매개 변수는 이 규칙에서 제외되므로 사용하지 말아야 합니다. `out` 또는 `ref` 매개 변수를 통해 반환된 데이터는 `TResult`에 의해 반환되는 <xref:System.Threading.Tasks.Task%601>의 일부로 대신 반환되어야 하며, 여러 값을 수용하기 위해 튜플 또는 사용자 지정 데이터 구조를 사용해야 합니다. TAP 메서드의 동기 메서드가 매개 변수를 제공하지 않는 경우에도 <xref:System.Threading.CancellationToken> 매개 변수 추가를 고려해야 합니다.
 
- 작업의 생성, 조작 또는 조합에만 사용되는 메서드(메서드의 비동기 의도는 메서드 이름 또는 메서드가 속해 있는 형식의 이름에 분명하게 나타나 있음)는 이 명명 패턴을 따를 필요가 없습니다. 이런 메서드를 흔히 조합기라고 합니다.  조합기의 예로는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A>가 있으며, [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 문서의 [기본 제공 작업 기반 조합기 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) 섹션에서 해당 설명을 확인할 수 있습니다.  
+ 작업의 생성, 조작 또는 조합에만 사용되는 메서드(메서드의 비동기 의도는 메서드 이름 또는 메서드가 속해 있는 형식의 이름에 분명하게 나타나 있음)는 이 명명 패턴을 따를 필요가 없습니다. 이런 메서드를 흔히 조합기라고 합니다. 조합기의 예로는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A>가 있으며, [작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md) 문서의 [기본 제공 작업 기반 조합기 사용](consuming-the-task-based-asynchronous-pattern.md#combinators) 섹션에서 해당 설명을 확인할 수 있습니다.  
   
- TAP 구문이 APM(비동기 프로그래밍 모델) 및 EAP(이벤트 기반 비동기 패턴)와 같은 레거시 비동기 프로그래밍 패턴에 사용된 구문과 어떻게 다른지에 대한 예를 보려면 [비동기 프로그래밍 패턴](../../../docs/standard/asynchronous-programming-patterns/index.md)을 참조하세요.  
+ TAP 구문이 APM(비동기 프로그래밍 모델) 및 EAP(이벤트 기반 비동기 패턴)와 같은 레거시 비동기 프로그래밍 패턴에 사용된 구문과 어떻게 다른지에 대한 예를 보려면 [비동기 프로그래밍 패턴](index.md)을 참조하세요.  
   
 ## <a name="initiating-an-asynchronous-operation"></a>비동기 작업 시작  
  TAP을 기반으로 하는 비동기 메서드는 인수 유효성 검사 및 결과 작업을 반환하기 전에 비동기 작업 시작 등 적은 양의 작업을 동기적으로 수행할 수 있습니다. 동기 작업은 비동기 메서드가 신속하게 반환할 수 있도록 최소한으로 유지해야 합니다. 빠르게 반환되는 이유는 다음과 같습니다.  
@@ -191,7 +191,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 |제목|설명|  
 |-----------|-----------------|  
-|[비동기 프로그래밍 패턴](../../../docs/standard/asynchronous-programming-patterns/index.md)|작업 기반 비동기 패턴(TAP), 비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)과 같이 비동기 작업을 수행하는 세 가지 패턴이 도입됩니다.|  
-|[작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Visual Studio의 C#와 Visual Basic 컴파일러를 수동으로 사용하거나 컴파일러 및 수동적인 방법의 조합을 사용하는 이 세 가지 방법으로 작업 기반 비동기 패턴(TAP)을 구현하는 방법에 대해 설명합니다.|  
-|[작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|작업과 콜백을 사용하여 차단되지 않고 대기하는 방법에 대해 설명합니다.|  
-|[다른 비동기 패턴 및 형식과의 Interop](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)을 구현하기 위해 작업 기반 비동기 패턴(TAP)을 사용하는 방법에 대해 설명합니다.|
+|[비동기 프로그래밍 패턴](index.md)|작업 기반 비동기 패턴(TAP), 비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)과 같이 비동기 작업을 수행하는 세 가지 패턴이 도입됩니다.|  
+|[작업 기반 비동기 패턴 구현](implementing-the-task-based-asynchronous-pattern.md)|Visual Studio의 C#와 Visual Basic 컴파일러를 수동으로 사용하거나 컴파일러 및 수동적인 방법의 조합을 사용하는 이 세 가지 방법으로 작업 기반 비동기 패턴(TAP)을 구현하는 방법에 대해 설명합니다.|  
+|[작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md)|작업과 콜백을 사용하여 차단되지 않고 대기하는 방법에 대해 설명합니다.|  
+|[다른 비동기 패턴 및 형식과의 Interop](interop-with-other-asynchronous-patterns-and-types.md)|비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)을 구현하기 위해 작업 기반 비동기 패턴(TAP)을 사용하는 방법에 대해 설명합니다.|

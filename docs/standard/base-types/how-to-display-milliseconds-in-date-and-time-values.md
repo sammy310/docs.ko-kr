@@ -1,5 +1,6 @@
 ---
 title: '방법: 날짜 및 시간 값의 밀리초 표시'
+description: 이 문서에서는 .NET에서 서식이 지정된 날짜 및 시간 문자열에 날짜 및 시간의 밀리초 구성 요소를 포함하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960401"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447071"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>방법: 날짜 및 시간 값의 밀리초 표시
 <xref:System.DateTime.ToString?displayProperty=nameWithType>과 같은 기본 날짜 및 시간 서식 지정 메서드에는 시간 값의 시, 분, 초가 포함되지만 밀리초 구성 요소는 제외됩니다. 이 항목에서는 형식이 지정된 날짜 및 시간 문자열에 날짜 및 시간의 밀리초 구성 요소를 포함하는 방법을 보여 줍니다.  
@@ -49,7 +50,7 @@ ms.locfileid: "74960401"
 > [!NOTE]
 > 1/10000초, 1/100000초 등 1초의 매우 작은 소수 단위를 표시할 수 있습니다. 그러나 이러한 값은 의미가 없을 수 있습니다. 날짜 및 시간 값의 자릿수는 시스템 시계의 정밀도에 따라 달라집니다. Windows NT 3.5 이상 버전 및 Windows Vista 운영 체제의 경우 시계의 정밀도는 약 10~15밀리초입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)

@@ -1,17 +1,21 @@
 ---
-title: ''
+title: C#을 사용하여 JSON을 직렬화 및 역직렬화하는 방법 - .NET
 description: 이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702230"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289514"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 직렬화 및 역직렬화(마샬링 및 역 마샬링)하는 방법
 
@@ -380,46 +384,10 @@ public setter가 아닌 public getter를 포함하는 속성은 읽기 전용입
 다음은 직렬화 개체 및 JSON 출력의 예입니다.
 
 |속성 |값  |
-|---
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00| | TemperatureCelsius| 25 | | Summary| null|
+|---------|---------|
+| 날짜    | 8/1/2019 12:00:00 AM -07:00|
+| TemperatureCelsius| 25 |
+| 요약| null|
 
 ```json
 {
@@ -672,65 +640,13 @@ ms.date: no-loc:
 앞에서 보여드린 JSON을 이 샘플 형식으로 역직렬화하면 추가 데이터는 다음과 같이 `ExtensionData` 속성의 키-값 쌍이 됩니다.
 
 |속성 |값  |참고  |
-|---
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description: '이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.'
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00|| | TemperatureCelsius| 0 | 대/소문자를 구분하는 불일치(JSON의 `temperatureCelsius`), 따라서 속성은 설정되지 않습니다. | | Summary | Hot || | ExtensionData | temperatureCelsius: 25 |대/소문자가 일치하지 않으므로 이 JSON 속성은 추가 속성이며 사전에서 키-값 쌍이 됩니다.| || DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |JSON의 추가 속성은 키-값 쌍이 되고, 배열은 값 개체로 사용됩니다.| | |SummaryWords:<br>표<br>Windy<br>Humid |JSON의 추가 속성은 키-값 쌍이 되고, 배열은 값 개체로 사용됩니다.|
+|---------|---------|---------|
+| 날짜    | 8/1/2019 12:00:00 AM -07:00||
+| TemperatureCelsius| 0 | 대/소문자를 구분하는 불일치(JSON의 `temperatureCelsius`). 따라서 속성이 설정되지 않습니다. |
+| 요약 | 핫 ||
+| ExtensionData | temperatureCelsius: 25 |대/소문자가 일치하지 않으므로 이 JSON 속성은 추가 속성이며 사전에서 키-값 쌍이 됩니다.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |JSON의 추가 속성은 키-값 쌍이 되고, 배열은 값 개체로 사용됩니다.|
+| |SummaryWords:<br>표<br>Windy<br>Humid |JSON의 추가 속성은 키-값 쌍이 되고, 배열은 값 개체로 사용됩니다.|
 
 대상 개체가 직렬화되면 확장 데이터 키 값 쌍은 마치 수신 JSON에 있는 것처럼 JSON 속성이 됩니다.
 

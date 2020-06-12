@@ -2,12 +2,12 @@
 title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144580"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306913"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
@@ -18,7 +18,7 @@ ms.locfileid: "84144580"
 eShopOnContainers 참조 애플리케이션에 사용되는 폴더 조직에서는 애플리케이션에 대한 DDD 모델을 보여 줍니다. 다른 폴더 구조가 애플리케이션에 대해 선택한 설계와 더 분명하게 커뮤니케이션할 수도 있습니다. 그림 7-10에서 보듯 주문 도메인 모델에는 주문 집계와 구매자 집계 등의 두 가지 집계가 있습니다. 단일 도메인 개체로 구성된 집계를 가질 수도 있지만(집계 루트 또는 루트 엔터티) 각 집계는 도메인 엔터티 및 값 개체의 그룹입니다.
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="솔루션 탐색기의 Ordering.Domain 프로젝트를 보여 주는 스크린샷":::
-각 폴더에는 엔터티 클래스, 값 개체 파일 등을 포함하는 BuyerAggregate 및 OrderAggregate 폴더가 포함된 AggregatesModel 폴더를 보여주는 Ordering.Domain 프로젝트의 솔루션 탐색기 보기입니다.
+각 폴더에 엔터티 클래스, 값 개체 파일 등을 포함하는 BuyerAggregate 및 OrderAggregate 폴더가 포함된 AggregatesModel 폴더를 보여 주는 Ordering.Domain 프로젝트의 솔루션 탐색기 보기입니다.
 :::image-end:::
 
 **그림 7-10**. eShopOnContainers에서 주문 마이크로 서비스의 도메인 모델
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-이것은 POCO 클래스로 구현되는 도메인 엔터티라는 점에 유의합니다. Entity Framework Core나 기타 인프라 프레임워크에 대한 직접적인 종속성은 없습니다. 이 구현은 도메인 모델을 구현하는 C\#처럼 DDD여야 합니다.
+이것은 POCO 클래스로 구현되는 도메인 엔터티라는 점에 유의합니다. Entity Framework Core나 기타 인프라 프레임워크에 대한 직접적인 종속성은 없습니다. 이 구현은 도메인 모델을 구현하는 C# 코드처럼 DDD여야 합니다.
 
 또한 클래스에는 이름이 IAggregateRoot인 인터페이스가 있어야 합니다. 이 인터페이스는 빈 인터페이스로, *마커 인터페이스*라고도 불립니다. 즉 해당 엔터티 클래스도 집계 루트임을 표시하는 데만 사용됩니다.
 

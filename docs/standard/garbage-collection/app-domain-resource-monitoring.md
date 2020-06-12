@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286095"
 ---
 # <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링
 
@@ -29,9 +29,9 @@ ARM은 CLR(공용 언어 런타임)이 시작될 때 구성 파일을 제공하�
 
 ARM이 사용되도록 설정되는 즉시 프로세스의 모든 애플리케이션 도메인에 대한 데이터 수집이 시작됩니다. ARM을 사용하도록 설정하기 전에 애플리케이션 도메인을 만든 경우 애플리케이션 도메인을 만든 때가 아니라 ARM을 사용하도록 설정한 때부터 데이터 누적이 시작됩니다. 사용하도록 설정한 ARM은 사용 중지할 수 없습니다.
 
-- 구성 파일에 [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 요소를 추가하고 `enabled` 특성을 `true`로 설정하여 CLR 시작 시 ARM을 사용하도록 설정할 수 있습니다. `false` 값(기본값)은 단지 시작할 때 ARM이 사용하도록 설정되지 않았다는 것을 의미합니다. 다른 활성화 메커니즘 중 하나를 사용하여 나중에 활성화할 수 있습니다.
+- 구성 파일에 [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 요소를 추가하고 `enabled` 특성을 `true`로 설정하여 CLR 시작 시 ARM을 사용하도록 설정할 수 있습니다. `false` 값(기본값)은 단지 시작할 때 ARM이 사용하도록 설정되지 않았다는 것을 의미합니다. 다른 활성화 메커니즘 중 하나를 사용하여 나중에 활성화할 수 있습니다.
 
-- 호스트가 [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 호스팅 인터페이스를 요청하여 ARM을 사용하도록 설정할 수 있습니다. 이 인터페이스를 성공적으로 가져오면 ARM이 사용하도록 설정됩니다.
+- 호스트가 [ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 호스팅 인터페이스를 요청하여 ARM을 사용하도록 설정할 수 있습니다. 이 인터페이스를 성공적으로 가져오면 ARM이 사용하도록 설정됩니다.
 
 - 관리 코드에서 static(Visual Basic의 경우 `Shared`) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 속성을 `true`로 설정하여 ARM을 사용하도록 설정할 수 있습니다. 속성을 설정하는 즉시 ARM이 사용하도록 설정됩니다.
 
@@ -45,15 +45,15 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 속성입니다.
 
-  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) 메서드.
+  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) 메서드.
 
-  - ETW 이벤트: `ThreadCreated`, `ThreadAppDomainEnter` 및 `ThreadTerminated` 이벤트입니다. 공급자 및 키워드에 대한 자세한 내용은 [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)의 “AppDomain 리소스 모니터링 이벤트”를 참조하세요.
+  - ETW 이벤트: `ThreadCreated`, `ThreadAppDomainEnter` 및 `ThreadTerminated` 이벤트입니다. 공급자 및 키워드에 대한 자세한 내용은 [CLR ETW 이벤트](../../framework/performance/clr-etw-events.md)의 “AppDomain 리소스 모니터링 이벤트”를 참조하세요.
 
 - **수명 기간 동안 애플리케이션 도메인이 수행한 총 관리 할당(바이트)** : 할당된 개체의 수명이 짧을 수 있기 때문에 총 할당이 애플리케이션 도메인의 메모리 사용을 항상 반영하는 것은 아닙니다. 그러나 애플리케이션이 엄청난 수의 개체를 할당하고 해제하는 경우 할당 비용이 상당할 수 있습니다.
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 
-  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) 메서드.
+  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) 메서드.
 
   - ETW 이벤트: `AppDomainMemAllocated` 이벤트, `Allocated` 필드입니다.
 
@@ -61,7 +61,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 
-  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 메서드, `pAppDomainBytesSurvived` 매개 변수.
+  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 메서드, `pAppDomainBytesSurvived` 매개 변수.
 
   - ETW 이벤트: `AppDomainMemSurvived` 이벤트, `Survived` 필드입니다.
 
@@ -69,7 +69,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
   - 관리되는 API: <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 속성입니다.
 
-  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 메서드, `pTotalBytesSurvived` 매개 변수.
+  - 호스팅 API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 메서드, `pTotalBytesSurvived` 매개 변수.
 
   - ETW 이벤트: `AppDomainMemSurvived` 이벤트, `ProcessSurvived` 필드입니다.
 
@@ -85,11 +85,11 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
 #### <a name="hosting-api"></a>호스팅 API
 
-관리되지 않는 호스팅 API를 사용하는 경우 호스트는 [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 인터페이스의 구현을 CLR에 전달해야 합니다. CLR은 컬렉션이 발생하는 동안 일시 중단된 스레드의 실행을 다시 시작할 때 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 호출합니다. CLR이 완료된 컬렉션의 생성을 메서드의 매개 변수로 전달하므로 호스트는 컬렉션이 전체인지 또는 부분인지 확인할 수 있습니다. [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 구현하면 유지된 메모리를 쿼리하여 수가 업데이트되는 즉시 수를 검색하도록 할 수 있습니다.
+관리되지 않는 호스팅 API를 사용하는 경우 호스트는 [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 인터페이스의 구현을 CLR에 전달해야 합니다. CLR은 컬렉션이 발생하는 동안 일시 중단된 스레드의 실행을 다시 시작할 때 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 호출합니다. CLR이 완료된 컬렉션의 생성을 메서드의 매개 변수로 전달하므로 호스트는 컬렉션이 전체인지 또는 부분인지 확인할 수 있습니다. [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 구현하면 유지된 메모리를 쿼리하여 수가 업데이트되는 즉시 수를 검색하도록 할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [ICLRAppDomainResourceMonitor 인터페이스](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+- [ICLRAppDomainResourceMonitor 인터페이스](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [CLR ETW 이벤트](../../framework/performance/clr-etw-events.md)

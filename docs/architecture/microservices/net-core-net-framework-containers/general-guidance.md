@@ -2,18 +2,18 @@
 title: 일반 지침
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144567"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306879"
 ---
 # <a name="general-guidance"></a>일반 지침
 
 이 섹션에서는 .NET Framework 또는.NET Core를 선택하는 경우에 대해 요약합니다. 이 선택에 대한 더 자세한 내용은 다음 섹션에서 설명합니다.
 
-다음과 같은 상황에서는 컨테이너화된 Docker 서버 애플리케이션에 대해 .NET Core를 Linux 또는 Windows Containers에 사용해야 합니다.
+다음과 같은 상황에서는 컨테이너화된 Docker 서버 애플리케이션에 대해 .NET Core를 Linux 또는 Windows 컨테이너에 사용합니다.
 
 - 플랫폼 간 요구 사항이 있습니다. 예를 들어 Linux와 Windows 컨테이너를 모두 사용하려 합니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "84144567"
 
 .NET Core를 사용하면 같은 머신 안에서 애플리케이션에 대해 .NET 버전을 함께 실행한다는 또 다른 장점이 있습니다. 이러한 장점은 컨테이너가 앱이 필요한 .NET 버전을 격리하기 때문에 컨테이너를 사용하지 않는 서버나 VM에서 특히 중요합니다 (기본 OS와 호환되는 한).
 
-다음과 같은 경우에는 컨테이너화된 Docker 서버 애플리케이션에 대해 .NET Framework를 사용해야 합니다.
+다음과 같은 경우에는 컨테이너화된 Docker 서버 애플리케이션에 대해 .NET Framework를 사용합니다.
 
 - 애플리케이션에서 현재 .NET Framework를 사용하며 Windows에 대한 의존도가 높습니다.
 

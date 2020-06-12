@@ -1,5 +1,6 @@
 ---
 title: 표준 날짜 및 시간 서식 문자열
+description: 이 문서에서는 .NET에서 표준 날짜 및 시간 서식 문자열을 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: d6bde74441334a4454865c1fdb890a4e859bc072
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440904"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447227"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 서식 문자열
 
-표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.
+표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.
 
 - 서식 지정 작업의 결과로 생성되는 문자열을 정의합니다.
 
@@ -450,7 +451,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
-- [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [형식 서식 지정](formatting-types.md)
+- [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)
 - [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

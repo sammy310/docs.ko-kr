@@ -1,5 +1,6 @@
 ---
 title: 표준 숫자 서식 문자열
+description: 이 문서에서는 .NET에서 표준 숫자 서식 문자열을 사용하여 일반적인 숫자 형식을 텍스트 표현으로 서식 지정하는 방법을 알아봅니다.
 ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398462"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447123"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 서식 문자열
 
 표준 숫자 서식 문자열은 일반 숫자 형식의 서식을 지정하는 데 사용됩니다. 표준 숫자 서식 문자열은 `Axx` 형식을 취합니다. 여기서
 
-- `A`는 *서식 지정자*라는 단일 영문자입니다. 공백을 포함하여 영문자가 두 개 이상 포함된 숫자 서식 문자열은 사용자 지정 숫자 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.
+- `A`는 *서식 지정자*라는 단일 영문자입니다. 공백을 포함하여 영문자가 두 개 이상 포함된 숫자 서식 문자열은 사용자 지정 숫자 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 숫자 서식 문자열](custom-numeric-format-strings.md)을 참조하세요.
 
 - `xx`는 *전체 자릿수 지정자*라는 선택적 정수입니다. 전체 자릿수 지정자는 0에서 99 사이의 정수이며 결과의 자릿수에 영향을 줍니다. 전체 자릿수 지정자는 숫자의 문자열 표현에서 자릿수를 제어합니다. 숫자 자체는 반올림하지 않습니다. 반올림 연산을 수행하려면 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> 또는 <xref:System.Math.Round%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
@@ -36,33 +37,33 @@ ms.locfileid: "79398462"
   - **.NET Core 2.1 이상에서** 런타임도 최소 유효 숫자(즉, <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> 사용)를 사용하여 결과를 선택합니다.
 
   > [!NOTE]
-  > 전체 자릿수 지정자는 결과 문자열의 자릿수를 결정합니다. 선행 또는 후행 공백을 포함한 결과 문자열을 채우려면 서식 항목에서 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md) 기능을 사용하고 *맞춤 구성 요소*를 정의합니다.
+  > 전체 자릿수 지정자는 결과 문자열의 자릿수를 결정합니다. 선행 또는 후행 공백을 포함한 결과 문자열을 채우려면 서식 항목에서 [복합 서식 지정](composite-formatting.md) 기능을 사용하고 *맞춤 구성 요소*를 정의합니다.
 
 표준 숫자 형식 문자열은 다음에 의해 지원됩니다.
 
 - 모든 숫자 형식의 `ToString` 메서드 중 일부 오버로드. 예를 들어 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 및 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드에 숫자 형식 문자열을 제공할 수 있습니다.
 
-- <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md). 합성 서식 기능을 사용하여 단일 문자열에 여러 데이터 항목의 문자열 표현을 포함하고, 필드 너비를 지정하며, 필드에서 숫자를 맞출 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.
+- <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](composite-formatting.md). 합성 서식 기능을 사용하여 단일 문자열에 여러 데이터 항목의 문자열 표현을 포함하고, 필드 너비를 지정하며, 필드에서 숫자를 맞출 수 있습니다. 자세한 내용은 [복합 서식 지정](composite-formatting.md)을 참조하세요.
 
 - 복합 형식 문자열과 비교했을 때 간소화된 구문을 제공하는 C# 및 Visual Basic의 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md).
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 및 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 <a name="table"></a> 다음 표에서는 표준 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 표준 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesStandardFormatting) 섹션을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 섹션을 참조하세요.
 
-|형식 지정자|name|설명|예|
+|형식 지정자|이름|설명|예|
 |----------------------|----------|-----------------|--------------|
-|"C" 또는 "c"|통화|결과: 통화 값<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [통화("C") 서식 지정자](#CFormatString)|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
-|"D" 또는 "d"|Decimal|결과: 정수(선택적 음수 기호 포함)<br /><br /> 지원되는 형식: 정수 계열 형식만 지원됨<br /><br /> 전체 자릿수 지정자: 최소 자릿수<br /><br /> 기본 전체 자릿수 지정자: 필요한 최소 자릿수<br /><br /> 추가 정보: [10진수("D") 서식 지정자](#DFormatString)|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
-|"E" 또는 "e"|지수(과학적 표기법)|결과: 지수 표기법<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: 6<br /><br /> 추가 정보: ["E"(지수) 서식 지정자](#EFormatString)|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
-|"F" 또는 "f"|고정 소수점|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [고정 소수점("F") 서식 지정자](#FFormatString)|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
-|"G" 또는 "g"|일반|결과: 더 간단한 형태의 고정 소수점 또는 과학적 표기법<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 유효 자릿수<br /><br /> 기본 전체 자릿수 지정자: 숫자 형식에 따라 다름<br /><br /> 추가 정보: [일반("G") 서식 지정자](#GFormatString)|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" 또는 "n"|Number|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분, 그룹 구분 기호 및 소수 구분 기호<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 필요한 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [숫자("N") 서식 지정자](#NFormatString)|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
-|"P" 또는 "p"|백분율|결과: 100으로 곱하고 백분율 기호와 함께 표시되는 숫자<br /><br /> 지원되는 형식: 모든 숫자 형식<br /><br /> 전체 자릿수 지정자: 필요한 소수 자릿수<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됨<br /><br /> 추가 정보: [백분율("P") 서식 지정자](#PFormatString)|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
-|"R" 또는 "r"|라운드트립|결과: 해당 숫자로 라운드트립할 수 있는 문자열<br /><br /> 지원되는 형식: <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger><br /><br /> 참고: <xref:System.Numerics.BigInteger> 형식에만 권장됩니다. <xref:System.Double> 형식에는 “G17”을 사용하고 <xref:System.Single> 형식에는 “G9”을 사용합니다. <br> 전체 자릿수 지정자: 무시됨<br /><br /> 추가 정보: [라운드트립("R") 서식 지정자](#RFormatString)|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
-|"X" 또는 "x"|16진수|결과: 16진수 문자열<br /><br /> 지원되는 형식: 정수 계열 형식만 지원됨<br /><br /> 전체 자릿수 지정자: 결과 문자열의 자릿수<br /><br /> 추가 정보: [16진수("X") 서식 지정자](#XFormatString)|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
-|기타 모든 단일 문자|알 수 없는 지정자|결과: 런타임에 <xref:System.FormatException>이 throw됨||
+|"C" 또는 "c"|통화|결과: 통화 값.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [통화("C") 서식 지정자](#CFormatString).|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"D" 또는 "d"|Decimal|결과: 정수(선택적 음수 기호 포함).<br /><br /> 지원 대상: 정수 형식만.<br /><br /> 전체 자릿수 지정자: 최소 자릿수.<br /><br /> 기본 전체 자릿수 지정자: 필요한 최소 자릿수.<br /><br /> 추가 정보: [10진수("D") 서식 지정자](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
+|"E" 또는 "e"|지수(과학적 표기법)|결과: 지수 표기법.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: 6.<br /><br /> 추가 정보: [지수("E") 서식 지정자](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
+|"F" 또는 "f"|고정 소수점|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [고정 소수점("F") 서식 지정자](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
+|"G" 또는 "g"|일반|결과: 더 간단한 형태의 고정 소수점 또는 과학적 표기법.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 유효 자릿수.<br /><br /> 기본 전체 자릿수 지정자: 숫자 형식에 따라 달라집니다.<br /><br /> 추가 정보: [일반("G") 서식 지정자](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
+|"N" 또는 "n"|번호|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분, 그룹 구분 기호 및 소수 구분 기호.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 원하는 소수 자릿수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [숫자("N") 서식 지정자](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
+|"P" 또는 "p"|백분율|결과: 100으로 곱하고 백분율 기호와 함께 표시되는 숫자.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 원하는 소수 자릿수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [백분율("P") 서식 지정자](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
+|"R" 또는 "r"|라운드트립|결과: 해당 숫자로 라운드트립할 수 있는 문자열.<br /><br /> 지원되는 형식: <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger><br /><br /> 참고: <xref:System.Numerics.BigInteger> 형식에만 권장됩니다. <xref:System.Double> 형식에는 “G17”을 사용하고 <xref:System.Single> 형식에는 “G9”을 사용합니다. <br> 전체 자릿수 지정자: 무시됩니다.<br /><br /> 추가 정보: [라운드트립("R") 서식 지정자](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
+|"X" 또는 "x"|16진수|결과: 16진수 문자열.<br /><br /> 지원 대상: 정수 형식만.<br /><br /> 전체 자릿수 지정자: 결과 문자열의 자릿수.<br /><br /> 추가 정보: [16진수("X") 서식 지정자](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
+|기타 모든 단일 문자|알 수 없는 지정자|결과: 런타임에 <xref:System.FormatException>을 throw합니다.||
 
 <a name="Using"></a>
 
@@ -78,7 +79,7 @@ ms.locfileid: "79398462"
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- 이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.
+- 이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -349,13 +350,13 @@ ms.locfileid: "79398462"
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>참고 사항
+## <a name="notes"></a>참고
 
 ### <a name="control-panel-settings"></a>제어판 설정
 
 제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 서식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.
 
-또한 현재 시스템 문화권과 같은 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 데 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자가 사용된 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.
+또한 현재 시스템 문화권과 같은 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 데 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 생성자가 사용된 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.
 
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo 속성
 
@@ -381,12 +382,12 @@ ms.locfileid: "79398462"
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
-- [방법: 숫자 앞에 0으로 채우기](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)
-- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
-- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)
+- [사용자 지정 숫자 형식 문자열](custom-numeric-format-strings.md)
+- [형식 서식 지정](formatting-types.md)
+- [방법: 숫자 앞에 0으로 채우기](how-to-pad-a-number-with-leading-zeros.md)
+- [복합 형식 지정](composite-formatting.md)
+- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

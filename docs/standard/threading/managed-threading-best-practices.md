@@ -10,18 +10,18 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160263"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291190"
 ---
 # <a name="managed-threading-best-practices"></a>관리 스레딩을 구현하는 최선의 방법
 다중 스레딩에는 신중한 프로그래밍이 필요합니다. 대부분의 작업의 경우 스레드 풀 스레드로 실행에 대한 요청을 큐에 대기시켜 복잡성을 줄일 수 있습니다. 이 항목에서는 다중 스레드의 작업 조정 또는 차단되는 스레드 처리 등의 더욱 어려운 상황을 다룹니다.  
   
 > [!NOTE]
-> .NET Framework 4부터 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그래밍의 일부 복잡성 및 위험을 줄여주는 API를 제공합니다. 자세한 내용은 [.NET의 병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)을 참조하세요.  
+> .NET Framework 4부터 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그래밍의 일부 복잡성 및 위험을 줄여주는 API를 제공합니다. 자세한 내용은 [.NET의 병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="deadlocks-and-race-conditions"></a>교착 상태 및 경합 상태  
  다중 스레딩은 처리량 및 응답성을 사용하여 문제를 해결하지만 이 과정에서 교착 상태 및 경합 상태의 새로운 문제를 유발합니다.  
@@ -64,7 +64,7 @@ else {
   
  다중 스레드 애플리케이션에서 값을 로드하고 증가시킨 스레드는 세 단계 모두를 수행하는 다른 스레드에 의해 선점될 수 있습니다. 첫 번째 스레드가 실행을 다시 시작하고 해당 값을 저장할 때 그 사이에 값이 변경된 사실을 고려하지 않고 `objCt`를 덮어씁니다.  
   
- 이 특정 경합 상태는 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>와 같은 <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하여 쉽게 피할 수 있습니다. 다중 스레딩 간에 데이터를 동기화하는 다른 기술에 대해 알아보려면 [다중 스레딩을 위한 데이터 동기화](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)를 참조하세요.  
+ 이 특정 경합 상태는 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>와 같은 <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하여 쉽게 피할 수 있습니다. 다중 스레딩 간에 데이터를 동기화하는 다른 기술에 대해 알아보려면 [다중 스레딩을 위한 데이터 동기화](synchronizing-data-for-multithreading.md)를 참조하세요.  
   
  경합 상태는 다중 스레드의 작업을 동기화할 때에도 발생할 수 있습니다. 코드 줄을 작성할 때마다 줄을 실행하기 전에(또는 줄을 구성하는 개별 컴퓨터 명령 전에) 스레드가 선점되었고 다른 스레드가 먼저 사용한 경우 발생할 수 있는 상황을 고려해야 합니다.  
   
@@ -90,7 +90,7 @@ else {
   
 - 기본 프로그램(예: 이벤트 사용)에서 작업자 스레드의 실행을 제어하지 마세요. 대신 작업자 스레드가 작업을 확보할 때까지 대기하고, 실행하고, 완료되면 프로그램의 다른 부분에 알릴 수 있도록 프로그램을 디자인합니다. 작업자 스레드가 차단되지 않는 경우 스레드 풀 스레드를 사용하는 것이 좋습니다. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>은 작업자 스레드가 차단되는 경우에 유용합니다.  
   
-- 잠금 개체로 형식을 사용하지 마세요. 즉, C#에서 `lock(typeof(X))` 또는 Visual Basic에서 `SyncLock(GetType(X))`과 같은 코드를 피하거나 <xref:System.Type> 개체와 함께 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>을 사용하지 마세요. 제공된 형식의 경우 애플리케이션 도메인당 <xref:System.Type?displayProperty=nameWithType> 인스턴스가 하나만 있습니다. 잠금을 사용하는 형식이 공용인 경우 개인 외의 코드는 잠금을 사용할 수 있으며 교착 상태가 발생합니다. 추가 문제는 [최선의 안정성 구현 방법](../../../docs/framework/performance/reliability-best-practices.md)을 참조하세요.  
+- 잠금 개체로 형식을 사용하지 마세요. 즉, C#에서 `lock(typeof(X))` 또는 Visual Basic에서 `SyncLock(GetType(X))`과 같은 코드를 피하거나 <xref:System.Type> 개체와 함께 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>을 사용하지 마세요. 제공된 형식의 경우 애플리케이션 도메인당 <xref:System.Type?displayProperty=nameWithType> 인스턴스가 하나만 있습니다. 잠금을 사용하는 형식이 공용인 경우 개인 외의 코드는 잠금을 사용할 수 있으며 교착 상태가 발생합니다. 추가 문제는 [최선의 안정성 구현 방법](../../framework/performance/reliability-best-practices.md)을 참조하세요.  
   
 - 인스턴스를 잠글 때 주의합니다(예: C#에서 `lock(this)` 또는 Visual Basic에서 `SyncLock(Me)`). 형식 외부의 애플리케이션에 있는 다른 코드가 개체에서 잠금을 사용하는 경우 교착 상태가 발생할 수 있습니다.  
   
@@ -172,7 +172,7 @@ else {
   
 - 정적 상태를 변경하는 정적 메서드를 제공 하지 마세요. 일반적인 서버 시나리오에서 정적 상태는 요청 간 공유되며 여러 스레드가 동시에 해당 코드를 실행할 수 있음을 의미합니다. 스레드 버그가 발생할 가능성을 엽니다. 요청 간에 공유되지 않는 인스턴스로 데이터를 캡슐화하는 디자인 패턴을 사용하는 것이 좋습니다. 또한 정적 데이터가 동기화되는 경우 상태를 변경하는 정적 메서드 간 호출은 성능에 부정적인 영향을 주어 교착 상태 또는 중복된 동기화를 발생시킬 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [스레딩](../../../docs/standard/threading/index.md)
-- [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)
+- [스레딩](index.md)
+- [스레드 및 스레딩](threads-and-threading.md)

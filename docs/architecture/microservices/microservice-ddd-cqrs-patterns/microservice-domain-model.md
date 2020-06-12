@@ -2,12 +2,12 @@
 title: 마이크로 서비스 도메인 모델 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델을 디자인할 때 주요 개념을 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144593"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306914"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -19,7 +19,7 @@ ms.locfileid: "84144593"
 
 엔터티는 도메인 개체를 대표하며, 주로 ID, 연속성, 시간의 흐름에 따른 지속성 및 이들을 포괄하는 특성에 의해 정의됩니다. Eric Evans의 말처럼 “기본적으로 해당 ID로 정의되는 개체를 엔터티라고 합니다.” 엔터티는 모델의 기본이기 때문에 도메인 모델에서 아주 중요합니다. 따라서 엔터티를 신중하게 식별하고 디자인해야 합니다.
 
-‘엔터티 ID는 다중 마이크로 서비스나 바인딩된 컨텍스트를 교차할 수 있습니다.’ 
+‘엔터티 ID는 다중 마이크로 서비스나 바인딩된 컨텍스트를 교차할 수 있습니다.’
 
 동일한 ID(즉, 동일한 도메인 엔터티는 아닐 수 있지만 동일한 `Id` 값)는 여러 바인딩된 컨텍스트 또는 마이크로 서비스 전체에 걸쳐 모델링될 수 있습니다. 그러나 동일한 특성 및 논리를 가진 동일한 엔터티가 다중 바인딩된 컨텍스트에서 구현된다는 의미는 아닙니다. 대신, 각 바운딩된 컨텍스트의 엔터티는 그 속성과 행동을 해당 바운딩된 컨텍스트의 도메인에서 요구하는 속성과 동작에 맞게 제한합니다.
 
@@ -35,7 +35,7 @@ DDD에서 도메인 엔터티는 엔터티 데이터(메모리에 액세스된 �
 
 **그림 7-8**. 데이터와 동작을 구현하는 도메인 엔터티 디자인의 예
 
-도메인 모델 엔터티는 메서드를 통해 동작을 구현합니다. 즉, 이는 "빈약한" 모델이 아닙니다. 물론, 경우에 따라 엔터티 클래스의 일부로 모든 논리를 구현하지는 않는 엔터티를 포함할 수 있습니다. 이런 경우는 대부분의 논리가 집계 루트에서 정의되기 때문에 자식 엔터티가 특별한 논리를 갖지 않은 경우 집계하지 않는 자식 엔터티에서 발생할 수 있습니다. 도메인 엔터티 대신 서비스 클래스에서 구현된 많은 로직을 갖는 복잡한 마이크로 서비스가 포함된 경우 다음 섹션에서 설명될 빈약한 도메인 모델이 될 수 있습니다.
+도메인 모델 엔터티는 메서드를 통해 동작을 구현합니다. 즉, 이는 "빈약한" 모델이 아닙니다. 물론, 경우에 따라 엔터티 클래스의 일부로 모든 논리를 구현하지는 않는 엔터티를 포함할 수 있습니다. 이런 경우는 대부분의 논리가 집계 루트에서 정의되기 때문에 자식 엔터티가 특별한 논리를 갖지 않은 경우 집계하지 않는 자식 엔터티에서 발생할 수 있습니다. 도메인 엔터티 대신 서비스 클래스에서 구현된 논리를 갖는 복잡한 마이크로 서비스가 포함된 경우 다음 섹션에서 설명될 빈약한 도메인 모델이 될 수 있습니다.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>풍성한(rich) 도메인 모델 대 빈약한(anemic) 도메인 모델
 
@@ -45,7 +45,7 @@ DDD에서 도메인 엔터티는 엔터티 데이터(메모리에 액세스된 �
 
 물론, 빈약한 도메인 모델을 사용하는 경우 이러한 데이터 모델은 모든 도메인 또는 비즈니스 논리를 캡처하는 서비스 개체 집합(보통 *비즈니스 계층*으로 명명)에서 사용되게 됩니다. 비즈니스 계층은 데이터 모델 위에 배치되고 데이터와 마찬가지로 데이터 모델을 사용합니다.
 
-빈약한 도메인 모델은 절차적 스타일 디자인일 뿐입니다. 빈약한 엔터티 개체는 동작(메서드)이 부족하기 때문에 실제 개체가 아닙니다. 이 개체는 데이터 속성을 보유하므로 개체 지향 디자인이 아닙니다. 모든 동작을 서비스 개체(비즈니스 계층)에 입력함으로써 기본적으로 [스파케티 코드](https://en.wikipedia.org/wiki/Spaghetti_code) 또는 [트랜잭션 스크립트](https://martinfowler.com/eaaCatalog/transactionScript.html)로 종료하기에 도메인 모델이 제공하는 이점을 상실합니다.
+빈약한 도메인 모델은 절차적 스타일 디자인일 뿐입니다. 빈약한 엔터티 개체는 동작(메서드)이 부족하기 때문에 실제 개체가 아닙니다. 이 개체는 데이터 속성을 보유하므로 개체 지향 디자인이 아닙니다. 모든 동작을 서비스 개체(비즈니스 계층)에 입력함으로써 기본적으로 [스파게티 코드](https://en.wikipedia.org/wiki/Spaghetti_code) 또는 [트랜잭션 스크립트](https://martinfowler.com/eaaCatalog/transactionScript.html)로 종료하므로 도메인 모델이 제공하는 이점을 상실합니다.
 
 마이크로 서비스 또는 바인딩된 컨텍스트가 매우 간단한지에 상관 없이(CRUD 서비스) 데이터 속성을 지닌 엔터티 개체의 형태로 된 빈약한 도메인 모델로도 충분할 수 있으며 더 복잡한 DDD 패턴을 구현할 만한 가치가 없을 수 있습니다. 이 경우, 의도적으로 데이터만 지닌 엔터티를 CRUD 목적으로 만들었기 때문에 단순히 지속성 모델이 되게 됩니다.
 
@@ -72,7 +72,7 @@ Eric Evans의 지적처럼 “많은 개체는 개념적 ID를 갖고 있지 않
 
 마이크로 서비스의 엔터티인 어떤 것이 또 다른 마이크로 서비스의 엔터티가 될 수는 없습니다. 두 번째 경우에 바운딩된 컨텍스트가 다른 의미를 가질 수 있기 때문입니다. 예를 들어, 전자 상거래 애플리케이션의 주소는 개인 또는 회사에 대해 고객 프로필의 특성 그룹을 나타낼 수 있기에 ID를 전혀 가질 수 없습니다. 이 경우, 해당 주소는 가치 개체로 분류돼야 합니다. 그러나 전원 유틸리티 회사의 애플리케이션에서 고객 주소는 비즈니스 도메인에 대해 중요할 수 있습니다. 따라서 해당 주소는 청구 시스템이 직접 해당 주소에 연결될 수 있도록 반드시 ID를 가져야 합니다. 이 경우, 주소는 도메인 엔터티로 분류돼야 합니다.
 
-성과 이름이 있는 사람은 이런 이름이 다른 사람을 지칭하는 경우처럼 비록 성과 이름이 또 다른 가치 집합과 일치한다 해도 사람은 ID를 갖기 때문에 대개 엔터티입니다.
+사람은 ID를 가지므로 성과 이름이 있는 사람은 대개 엔터티입니다. 이는 하나의 성과 이름이 서로 다른 두 사람을 지칭하는 경우와 같이 다른 값 집합과 성과 이름이 일치할 때도 마찬가지입니다.
 
 가치 개체는 EF(Entity Framework) 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨씬 쉽습니다.
 
@@ -114,14 +114,14 @@ EF Core 2.0 이상 버전에는 값 개체를 더 쉽게 처리할 수 있는 [�
 
 DDD 도메인 모델은 집계로 구성되며, 집계는 하나 이상의 엔터티만 가질 수 있으며 값 개체도 포함할 수 있습니다. 구매자 집계는 eShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스에서 그러는 것처럼 해당 도메인에 따라 추가적인 자식 엔터티를 가질 수 있음에 유의하십시오. 그림 7-9는 구매자가 집계 루트만 포함된 집계의 예로서 단일 엔터티를 갖고 있음을 보여줍니다.
 
-집계 분리를 유지하고 집계 간에 명확한 경계를 유지하기 위해서는 eShopOnContainers에서 [마이크로 서비스 도메인 모델 주문하기](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)에서 구현된 것처럼 외래 키(FK) 필드만 갖고 집계 간 직접 탐색을 허용하지 않는 것이 DDD 도메인 모델의 좋은 관행입니다. 주문 엔터티는 다음 코드에서 보여지는 것처럼 EF Core 탐색 속성이 아닌 구매자를 위한 FK 필드만 갖습니다.
+집계 분리를 유지하고 집계 간에 명확한 경계를 유지하기 위해서는 eShopOnContainers에서 [마이크로 서비스 도메인 모델 주문하기](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)에서 구현된 것처럼 외래 키(FK) 필드만 갖고 집계 간 직접 탐색을 허용하지 않는 것이 DDD 도메인 모델의 좋은 관행입니다. 주문 엔터티는 다음 코드에 나와 있는 것처럼 EF Core 탐색 속성이 아닌 구매자를 위한 외래 키 필드만 갖습니다.
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

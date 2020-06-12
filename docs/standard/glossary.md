@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102478"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287456"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -210,7 +210,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레
 
 ## <a name="package"></a>패키지
 
-NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가 메타데이터와 함께 동일한 이름의 어셈블리가 하나 이상 있는 .zip 파일입니다. 
+NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가 메타데이터와 함께 동일한 이름의 어셈블리가 하나 이상 있는 .zip 파일입니다.
 
 *.zip* 파일은 *.nupkg* 확장명을 사용하며 *.dll* 파일 및 *.xml* 파일과 같이 여러 대상 프레임워크 및 버전에서 사용할 자산을 포함합니다. 앱 또는 라이브러리에 설치된 경우 앱 또는 라이브러리에서 지정한 대상 프레임워크에 따라 적절한 자산이 선택됩니다. 인터페이스를 정의하는 자산은 *ref* 폴더에 있으며 구현을 정의하는 자산은 *lib* 폴더에 있습니다.
 

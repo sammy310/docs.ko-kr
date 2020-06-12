@@ -2,15 +2,15 @@
 title: 모델 작성기 Azure 학습 리소스
 description: Azure Machine Learning에 대한 리소스 가이드
 ms.topic: reference
-ms.date: 02/27/2020
+ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185817"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289475"
 ---
 # <a name="model-builder-azure-training-resources"></a>모델 작성기 Azure 학습 리소스
 
@@ -49,6 +49,10 @@ Azure Machine Learning 작업 영역을 만들려면 다음이 필요합니다.
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
     GPU 최적화 컴퓨팅 형식에 대한 자세한 내용은 [NC 시리즈 Linux VM 설명서](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json)를 참조하세요.
+- 컴퓨팅 우선 순위
+
+  - 낮은 우선 순위: 실행 시간이 짧은 작업에 적합합니다. 중단 및 가용성 부족의 영향을 받을 수 있습니다. Azure에서 여분의 용량을 활용하므로 일반적으로 비용이 절감됩니다.
+  - 전용: 모든 기간의 작업에 적합하지만 장기 실행 작업에 특히 적합합니다. 중단 또는 가용성 부족의 영향을 받지 않습니다. 작업에 대해 Azure의 전용 컴퓨팅 리소스 세트를 예약하므로 일반적으로 비용이 더 많이 듭니다.
 
 ## <a name="training"></a>교육
 

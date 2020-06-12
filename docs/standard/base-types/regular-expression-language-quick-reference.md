@@ -1,5 +1,6 @@
 ---
 title: 정규식 언어 - 빠른 참조
+description: 이 빠른 참조에서는 정규식 패턴을 사용하여 입력 텍스트와 일치시키는 방법을 알아봅니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문을 포함합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523906"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446368"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 

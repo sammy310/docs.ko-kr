@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706584"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278884"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
 <a name="top"></a> 데스크톱 앱에서 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 스토리지 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 스토리지를 조작하는 도구를 사용할 수 있습니다. 격리된 스토리지를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 스토리지에만 액세스할 수 있는 다른 애플리케이션으로부터 데이터가 보호됩니다. 애플리케이션의 스토리지 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.
@@ -31,7 +31,7 @@ ms.locfileid: "75706584"
 > [!IMPORTANT]
 > Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.
 
-이 항목의 섹션:
+이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 
 - [데이터 구획 및 저장소](#data_compartments_and_stores)
 
@@ -164,20 +164,20 @@ ms.locfileid: "75706584"
 
 |제목|설명|
 |-----------|-----------------|
-|[격리 유형](../../../docs/standard/io/types-of-isolation.md)|다양한 유형의 격리에 대해 설명합니다.|
-|[방법: 격리된 스토리지의 저장소 가져오기](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스를 사용하여 사용자 및 어셈블리별로 격리된 저장소를 가져오는 예제를 제공합니다.|
-|[방법: 격리된 스토리지의 저장소 열거](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자에 대한 모든 격리된 스토리지 크기를 계산하는 방법을 보여 줍니다.|
-|[방법: 격리된 스토리지에서 저장소 삭제](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 메서드를 두 가지 방법으로 사용하여 격리된 저장소를 삭제하는 방법을 보여 줍니다.|
-|[방법: 격리된 스토리지의 공간 부족 상태 예상](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|격리된 저장소에서 남은 공간을 측정하는 방법을 보여 줍니다.|
-|[방법: 격리된 스토리지에 파일 및 디렉터리 만들기](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|격리된 저장소에서 파일 및 디렉터리를 만드는 몇 가지 예제를 제공합니다.|
-|[방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|격리된 스토리지에서 디렉터리 구조 및 파일을 읽는 방법을 보여 줍니다.|
-|[방법: 격리된 스토리지의 파일 읽기 및 쓰기](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|격리된 스토리지 파일에 문자열을 쓰고 다시 문자열을 읽는 예제를 제공합니다.|
-|[방법: 격리된 스토리지의 파일 및 디렉터리 삭제](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|격리된 스토리지 파일 및 디렉터리를 삭제하는 방법을 보여 줍니다.|
-|[파일 및 스트림 I/O](../../../docs/standard/io/index.md)|동기 및 비동기 파일과 데이터 스트림 액세스를 수행할 수 있는 방법에 대해 설명합니다.|
+|[격리 유형](types-of-isolation.md)|다양한 유형의 격리에 대해 설명합니다.|
+|[방법: 격리된 스토리지의 저장소 가져오기](how-to-obtain-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스를 사용하여 사용자 및 어셈블리별로 격리된 저장소를 가져오는 예제를 제공합니다.|
+|[방법: 격리된 스토리지의 저장소 열거](how-to-enumerate-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자에 대한 모든 격리된 스토리지 크기를 계산하는 방법을 보여 줍니다.|
+|[방법: 격리된 스토리지에서 저장소 삭제](how-to-delete-stores-in-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 메서드를 두 가지 방법으로 사용하여 격리된 저장소를 삭제하는 방법을 보여 줍니다.|
+|[방법: 격리된 스토리지의 공간 부족 상태 예상](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|격리된 저장소에서 남은 공간을 측정하는 방법을 보여 줍니다.|
+|[방법: 격리된 스토리지의 파일 및 디렉터리 만들기](how-to-create-files-and-directories-in-isolated-storage.md)|격리된 저장소에서 파일 및 디렉터리를 만드는 몇 가지 예제를 제공합니다.|
+|[방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기](how-to-find-existing-files-and-directories-in-isolated-storage.md)|격리된 스토리지에서 디렉터리 구조 및 파일을 읽는 방법을 보여 줍니다.|
+|[방법: 격리된 스토리지의 파일 읽기 및 쓰기](how-to-read-and-write-to-files-in-isolated-storage.md)|격리된 스토리지 파일에 문자열을 쓰고 다시 문자열을 읽는 예제를 제공합니다.|
+|[방법: 격리된 스토리지의 파일 및 디렉터리 삭제](how-to-delete-files-and-directories-in-isolated-storage.md)|격리된 스토리지 파일 및 디렉터리를 삭제하는 방법을 보여 줍니다.|
+|[파일 및 스트림 I/O](index.md)|동기 및 비동기 파일과 데이터 스트림 액세스를 수행할 수 있는 방법에 대해 설명합니다.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

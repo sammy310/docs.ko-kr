@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML Serializer Generator는 지정된 어셈블리의 형식에 대한 XML serialization 어셈블리를 만들어 XmlSerializer의 시작 성능을 향상시킵니다.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380048"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84288981"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -63,7 +63,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e\[lement\]:** _element_|코드를 생성할 대상 스키마 요소를 지정합니다. 기본적으로 모든 요소가 입력되며, 이 인수는 한 번 이상 지정될 수 있습니다.|
 |**/enableDataBinding**|생성된 모든 형식에 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하여 데이터 바인딩을 사용할 수 있습니다. 약식 표현은 `/edb`입니다.|
-|**/enableLinqDataSet**|(약식: `/eld`.) 생성된 DataSet을 LINQ to DataSet을 사용하여 쿼리할 수 있도록 지정합니다. 이 옵션은 /dataset 옵션이 지정된 경우 사용됩니다. 자세한 내용은 [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) 및 [형식화된 데이터 세트 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)를 참조하세요. LINQ 사용에 대한 일반적인 정보는 [LINQ(Language-Integrated Query) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 또는 [LINQ(Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)을 참조하세요.|
+|**/enableLinqDataSet**|(약식: `/eld`.) 생성된 DataSet을 LINQ to DataSet을 사용하여 쿼리할 수 있도록 지정합니다. 이 옵션은 /dataset 옵션이 지정된 경우 사용됩니다. 자세한 내용은 [LINQ to DataSet 개요](../../framework/data/adonet/linq-to-dataset-overview.md) 및 [형식화된 데이터 세트 쿼리](../../framework/data/adonet/querying-typed-datasets.md)를 참조하세요. LINQ 사용에 대한 일반적인 정보는 [LINQ(Language-Integrated Query) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 또는 [LINQ(Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)을 참조하세요.|
 |**/f\[ields\]**|속성 대신 필드를 생성합니다. 기본적으로 속성이 생성됩니다.|
 |**/l\[anguage\]:** _language_|사용할 프로그래밍 언어를 지정합니다. `CS`(C#, 기본값), `VB`(Visual Basic), `JS`(JScript) 또는 `VJS`(Visual J#) 중에서 선택합니다. <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>를 구현하는 클래스의 정규화된 이름을 지정할 수도 있습니다.|
 |**/n\[amespace\]:** _namespace_|생성된 형식에 대한 런타임 네임스페이스를 지정합니다. 기본 네임스페이스는 `Schemas`입니다.|
@@ -233,9 +233,9 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [도구](../../../docs/framework/tools/index.md)
-- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [LINQ to DataSet 개요](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
-- [형식화된 데이터 세트 쿼리](../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [도구](../../framework/tools/index.md)
+- [명령 프롬프트](../../framework/tools/developer-command-prompt-for-vs.md)
+- [LINQ to DataSet 개요](../../framework/data/adonet/linq-to-dataset-overview.md)
+- [형식화된 데이터 세트 쿼리](../../framework/data/adonet/querying-typed-datasets.md)
 - [LINQ(Language-Integrated Query)(C#)](../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

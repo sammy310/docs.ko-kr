@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131543"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286004"
 ---
 # <a name="garbage-collection-notifications"></a>가비지 컬렉션 알림
 공용 언어 런타임에서 전체 가비지 컬렉션(즉, 2세대 컬렉션)을 실행하면 성능이 저하될 수 있는 경우가 있습니다. 이는 대량의 요청을 처리하는 서버에서 특히 문제가 될 수 있습니다. 이 경우 장기적인 가비지 수집으로 인해 요청 시간이 초과될 수 있습니다. 중요 기간에 전체 수집이 발생하지 않도록 하기 위해 전체 가비지 수집에 근접하고 있다는 알림을 받을 수 있습니다. 그러면 워크로드를 다른 서버 인스턴스로 리디렉션하는 조치를 취할 수 있습니다. 또한 현재 서버 인스턴스가 요청을 처리하지 않아도 되는 경우 직접 수집을 유도할 수도 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "73131543"
  <xref:System.GC.RegisterForFullGCNotification%2A> 메서드는 런타임에서 전체 가비지 수집에 근접하고 있음을 감지할 때 발생되는 알림에 등록합니다. 이 알림에는 두 부분이 있습니다. 즉, 알림은 전체 가비지 수집에 근접하고 있을 때와 전체 가비지 수집이 완료되었을 때 발생할 수 있습니다.  
   
 > [!WARNING]
-> 차단 가비지 컬렉션만 알림을 발생시킵니다. [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 요소를 사용하면 백그라운드 가비지 수집은 알림을 발생시키지 않습니다.  
+> 차단 가비지 컬렉션만 알림을 발생시킵니다. [\<gcConcurrent>](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 구성 요소를 사용하면 백그라운드 가비지 수집은 알림을 발생시키지 않습니다.  
   
  알림이 발생한 시기를 확인하려면 <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드를 사용합니다. 일반적으로 `while` 루프에 이러한 메서드를 사용하면 알림 상태를 표시하는 <xref:System.GCNotificationStatus> 열거형을 계속해서 가져올 수 있습니다. 해당 값이 <xref:System.GCNotificationStatus.Succeeded>인 경우 다음을 수행할 수 있습니다.  
   
@@ -122,4 +122,4 @@ ms.locfileid: "73131543"
   
 ## <a name="see-also"></a>참조
 
-- [가비지 수집](../../../docs/standard/garbage-collection/index.md)
+- [가비지 수집](index.md)

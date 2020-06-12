@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378383"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84287495"
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 이 문서에서는 serialize될 API를 디자인할 때 고려해야 할 지침을 보여 줍니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "83378383"
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     자세한 내용은 [호환 가능한 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
+     자세한 내용은 [호환 가능한 데이터 계약](../../framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
   
 #### <a name="supporting-xml-serialization"></a>XML Serialization 지원  
  데이터 계약 serialization은 .NET Framework의 기본 serialization 기술이지만 데이터 계약 serialization에서 지원하지 않는 serialization 시나리오가 있습니다. 예를 들어 serializer에서 생성하거나 사용하는 XML의 모양을 완전히 제어할 수 있는 권한이 없습니다. 이러한 충분한 제어 권한이 필요한 경우 *XML serialization*을 사용해야 하며 이 serialization 기술을 지원하기 위한 형식을 디자인해야 합니다.  
@@ -140,10 +140,10 @@ ms.locfileid: "83378383"
   
 ## <a name="see-also"></a>참조
 
-- [데이터 계약 사용](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [데이터 계약 직렬 변환기](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [데이터 계약 사용](../../framework/wcf/feature-details/using-data-contracts.md)
+- [데이터 계약 직렬 변환기](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [데이터 계약 직렬 변환기에서 지원하는 형식](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [이진 serialization](binary-serialization.md)
 - [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
-- [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)
+- [보안 및 Serialization](../../framework/misc/security-and-serialization.md)

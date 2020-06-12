@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: d79f1ca0d264a5a17306bb66f285b6fbe6b4e7ca
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728482"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287928"
 ---
 # <a name="selecting-a-collection-class"></a>Collection 클래스 선택
 
@@ -34,9 +34,9 @@ ms.locfileid: "82728482"
 
 - FIFO, LIFO, 무작위와 같은 특정 순서대로 요소에 액세스해야 하나요?
 
-  - <xref:System.Collections.Queue> 클래스는 물론 <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Immutable.ImmutableQueue%601> 제네릭 클래스는 모두 FIFO 액세스를 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
+  - <xref:System.Collections.Queue> 클래스는 물론 <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Immutable.ImmutableQueue%601> 제네릭 클래스는 모두 FIFO 액세스를 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
 
-  - <xref:System.Collections.Stack> 클래스는 물론 <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> 및 <xref:System.Collections.Immutable.ImmutableStack%601> 제네릭 클래스는 모두 LIFO 액세스를 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
+  - <xref:System.Collections.Stack> 클래스는 물론 <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> 및 <xref:System.Collections.Immutable.ImmutableStack%601> 제네릭 클래스는 모두 LIFO 액세스를 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
 
   - <xref:System.Collections.Generic.LinkedList%601> 제네릭 클래스는 헤드에서 테일로 또는 테일에서 헤드로 순차적 액세스를 허용합니다.
 
@@ -68,23 +68,23 @@ ms.locfileid: "82728482"
 
 - 빠른 검색 및 정보 검색이 필요한가요?
 
-  - 작은 컬렉션(10개 항목 이하)의 경우 <xref:System.Collections.Specialized.ListDictionary>가 <xref:System.Collections.Hashtable>보다 빠릅니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 클래스보다 빠른 조회 기능을 제공합니다. 다중 스레드 구현은 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>입니다. <xref:System.Collections.Concurrent.ConcurrentBag%601>은 순서가 지정되지 않은 데이터에 대한 신속한 다중 스레드 삽입 기능을 제공합니다. 두 가지 다중 스레드 형식에 대한 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
+  - 작은 컬렉션(10개 항목 이하)의 경우 <xref:System.Collections.Specialized.ListDictionary>가 <xref:System.Collections.Hashtable>보다 빠릅니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 클래스보다 빠른 조회 기능을 제공합니다. 다중 스레드 구현은 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>입니다. <xref:System.Collections.Concurrent.ConcurrentBag%601>은 순서가 지정되지 않은 데이터에 대한 신속한 다중 스레드 삽입 기능을 제공합니다. 두 가지 다중 스레드 형식에 대한 자세한 내용은 [스레드로부터 안전한 컬렉션 사용 시기](thread-safe/when-to-use-a-thread-safe-collection.md)를 참조하세요.
 
 - 문자열만 수락하는 컬렉션이 필요한가요?
 
   - <xref:System.Collections.Specialized.StringCollection>(<xref:System.Collections.IList> 기반) 및 <xref:System.Collections.Specialized.StringDictionary>(<xref:System.Collections.IDictionary> 기반)는 <xref:System.Collections.Specialized> 네임스페이스에 있습니다.
 
-  - 또한 제네릭 형식 인수에 대해 <xref:System.String> 클래스를 지정하여 <xref:System.Collections.Generic> 네임스페이스의 제네릭 컬렉션 클래스 중 하나를 강력한 형식의 문자열 컬렉션으로 사용할 수 있습니다. 예를 들어, [List\<String>](xref:System.Collections.Generic.List%601) 또는 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 형식의 변수를 선언할 수 있습니다.
+  - 또한 제네릭 형식 인수에 대해 <xref:System.String> 클래스를 지정하여 <xref:System.Collections.Generic> 네임스페이스의 제네릭 컬렉션 클래스 중 하나를 강력한 형식의 문자열 컬렉션으로 사용할 수 있습니다. 예를 들어 [List\<String>](xref:System.Collections.Generic.List%601) 또는 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 형식의 변수를 선언할 수 있습니다.
 
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 및 PLINQ
 
 LINQ to Objects를 사용하면 개체 형식이 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 경우 개발자가 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 및 [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)를 참조하세요.
 
-PLINQ는 다중 코어 컴퓨터의 보다 효율적인 사용을 통해 많은 시나리오에서 더 빠른 쿼리 실행을 제공할 수 있는 LINQ to Objects의 병렬 구현을 제공합니다. 자세한 내용은 [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)를 참조하세요.
+PLINQ는 다중 코어 컴퓨터의 보다 효율적인 사용을 통해 많은 시나리오에서 더 빠른 쿼리 실행을 제공할 수 있는 LINQ to Objects의 병렬 구현을 제공합니다. 자세한 내용은 [PLINQ(병렬 LINQ)](../parallel-programming/introduction-to-plinq.md)를 참조하세요.
 
 ## <a name="see-also"></a>참조
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)
+- [스레드로부터 안전한 컬렉션](thread-safe/index.md)
