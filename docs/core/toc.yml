@@ -95,13 +95,13 @@ items:
             displayName: 'tutorials, visual studio code, vs code'
           - name: 앱 게시
             href: tutorials/publishing-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 라이브러리 만들기
             href: tutorials/library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 라이브러리 단위 테스트
             href: tutorials/testing-library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 패키지 설치 및 사용
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
@@ -111,13 +111,25 @@ items:
       - name: Mac용 Visual Studio 사용
         items:
           - name: 콘솔 앱 만들기
-            href: tutorials/using-on-mac-vs.md
-            displayName: tutorials
-          - name: 라이브러리 만들기 및 단위 테스트
-            href: tutorials/using-on-mac-vs-full-solution.md
-            displayName: tutorials
+            href: tutorials/with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+          - name: 앱 디버그
+            href: tutorials/debugging-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 앱 게시
+            href: tutorials/publishing-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 라이브러리 만들기
+            href: tutorials/library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 라이브러리 단위 테스트
+            href: tutorials/testing-library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
           - name: 패키지 설치 및 사용
             href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 패키지 만들기 및 게시
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: 고급 항목
         items:
@@ -443,11 +455,11 @@ items:
         items:
           - name: 기본 종속성 프로브
             href: dependency-loading/default-probing.md
-          - name: 관리형 어셈블리 로드
+          - name: 관리되는 어셈블리 로드
             href: dependency-loading/loading-managed.md
           - name: 위성 어셈블리 로드
             href: dependency-loading/loading-resources.md
-          - name: 비관리형 라이브러리 로드
+          - name: 관리되지 않는 라이브러리 로드
             href: dependency-loading/loading-unmanaged.md
       - name: 자습서
         items:
