@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141301"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288045"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
@@ -23,7 +23,7 @@ ms.locfileid: "82141301"
 
 여기서는 *문자*라는 용어를 *판독기가 단일 표시 요소로 인식*한다는 일반적인 의미로 사용합니다. 일반적인 예는 문자 "a", 기호 "@" 및 이모지 "🐂"입니다. [문자소 클러스터](#grapheme-clusters)에 대한 섹션에서 설명된 것처럼 한 문자가 실제로는 여러 독립적인 표시 요소로 구성되는 경우도 있습니다.
 
-## <a name="the-string-and-char-types"></a>문자열 및 문자 형식
+## <a name="the-string-and-char-types"></a>string 및 char 형식
 
 [string](xref:System.String) 클래스의 인스턴스는 일부 텍스트를 나타냅니다. `string`은 논리적으로 16비트 값의 시퀀스이며, 각각은 [char](xref:System.Char) 구조체의 인스턴스입니다. [string.Length](xref:System.String.Length) 속성은 `string` 인스턴스의 `char` 인스턴스 수를 반환합니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "82141301"
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
 
-이 함수에 문자열 "Hello"를 전달하면 다음과 같은 출력이 표시됩니다.
+이 함수에 string “Hello”를 전달하면 다음과 같은 출력이 표시됩니다.
 
 ```csharp
 PrintChars("Hello");
@@ -186,7 +186,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="스칼라 값":::
 
-### <a name="the-opno-locrune-type-as-a-scalar-value"></a>스칼라 값의 Rune 형식
+### <a name="the-rune-type-as-a-scalar-value"></a>스칼라 값의 Rune 형식
 
 .NET Core 3.0부터 <xref:System.Text.Rune?displayProperty=fullName> 형식은 유니코드 스칼라 값을 나타냅니다. **`Rune`는 .NET Core 2.x 또는 .NET Framework 4.x에서 사용할 수 없습니다.**
 
@@ -202,7 +202,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="opno-locrune-usage-example-changing-letter-case"></a>Rune 사용 예제: 문자 대/소문자 변경
+### <a name="rune-usage-example-changing-letter-case"></a>Rune 사용 예제: 문자 대/소문자 변경
 
 `char`를 사용하고 스칼라 값 코드 포인트에서 작동하는 것으로 가정하는 API는 `char`가 서로게이트 쌍의 일부인 경우 올바르게 작동하지 않습니다. 예를 들어 string의 각 char에서 <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType>를 호출하는 다음 메서드를 살펴보겠습니다.
 
@@ -217,7 +217,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-opno-locrune-apis"></a>기타 Rune API
+### <a name="other-rune-apis"></a>기타 Rune API
 
 `Rune` 형식은 다수의 `char` API의 아날로그를 제공합니다. 예를 들어 다음 메서드는 `char` 형식에 대한 정적 API를 미러링합니다.
 
@@ -264,7 +264,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 `string`의 문자소 클러스터를 열거하려면 다음 예제와 같이 <xref:System.Globalization.StringInfo> 클래스를 사용합니다. Swift에 대해 잘 알고 있는 경우 .NET `StringInfo` 형식은 개념적으로 [Swift의 `character` 형식](https://developer.apple.com/documentation/swift/character)과 비슷합니다.
 
-### <a name="example-count-opno-locchar-opno-locrune-and-text-element-instances"></a>예: count char, Rune 및 텍스트 요소 인스턴스
+### <a name="example-count-char-rune-and-text-element-instances"></a>예: count char, Rune 및 텍스트 요소 인스턴스
 
 .NET API에서는 문자소 클러스터를 *텍스트 요소*라고 합니다. 다음 메서드는 `string`에서 `char`, `Rune` 및 텍스트 요소 인스턴스 간의 차이점을 보여 줍니다.
 
@@ -274,7 +274,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 .NET Framework 또는 .NET Core 3.1 이전 버전에서 이 코드를 실행하는 경우 이모지의 텍스트 요소 수에 `4`가 표시됩니다. 이는 .NET 5에서 수정된 `StringInfo` 클래스의 버그로 인한 것입니다.
 
-### <a name="example-splitting-opno-locstring-instances"></a>예: string 인스턴스 분할
+### <a name="example-splitting-string-instances"></a>예: string 인스턴스 분할
 
 `string` 인스턴스를 분할하는 경우 서로게이트 쌍 및 문자소 클러스터를 분할하지 마세요. 다음의 잘못된 코드 예제를 살펴보겠습니다. 이 코드는 string에서 10자마다 줄 바꿈을 삽입하려고 한 것입니다.
 
@@ -389,4 +389,4 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 - <xref:System.String>
 - <xref:System.Char>
 - <xref:System.Text.Rune>
-- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
+- [전역화 및 지역화](../globalization-localization/index.md)
