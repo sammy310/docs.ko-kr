@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389530"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663020"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>여러 문자열 연결 방법(C# 가이드)
 
@@ -20,38 +20,36 @@ ms.locfileid: "81389530"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-다음 예제에서는 소스 코드의 가독성을 향상하기 위해 긴 문자열 리터럴을 작은 문자열로 분할하기 위해 연결을 사용합니다. 분할된 문자열은 컴파일 시간에 단일 문자열로 연결됩니다. 이 경우 처리되는 문자열 수가 런타임 성능에 미치는 영향은 없습니다.  
-  
- [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
+다음 예제에서는 소스 코드의 가독성을 향상하기 위해 긴 문자열 리터럴을 작은 문자열로 분할하기 위해 연결을 사용합니다. 분할된 문자열은 컴파일 시간에 단일 문자열로 연결됩니다. 이 경우 처리되는 문자열 수가 런타임 성능에 미치는 영향은 없습니다.
+
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet1":::
 
 문자열 변수를 연결하려면 `+` 또는 `+=` 연산자, [문자열 보간](../language-reference/tokens/interpolated.md) 또는 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. `+` 연산자는 사용하기 쉽고 직관적인 코드를 만듭니다. 하나의 문에서 여러 `+` 연산자를 사용해도 문자열 콘텐츠는 한 번만 복사됩니다. 다음 코드는 `+` 및 `+=` 연산자를 사용하여 문자열을 연결하는 예제를 보여줍니다.
 
-[!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet2":::
 
 일부 식에서는 다음 코드와 같이 문자열 보간을 사용하여 문자열을 연결하는 것이 더 쉽습니다.
-  
-[!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
-  
+
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet3":::
+
 > [!NOTE]
 > 문자열 연결 연산에서 C # 컴파일러는 null 문자열을 빈 문자열과 동일하게 처리합니다.
 
 문자열을 연결하는 다른 메서드는 <xref:System.String.Format%2A?displayProperty=nameWithType>입니다. 이 메서드는 작은 수의 구성 요소 문자열에서 문자열을 빌드할 때 잘 작동합니다.
 
-다른 경우는 결합하는 소스 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며 소스 문자열의 실제 개수는 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder> 클래스의 <xref:System.Text.StringBuilder.Append%2A> 메서드를 사용하여 문자열을 연결합니다.  
-  
-[!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
+다른 경우는 결합하는 소스 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며 소스 문자열의 실제 개수는 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder> 클래스의 <xref:System.Text.StringBuilder.Append%2A> 메서드를 사용하여 문자열을 연결합니다.
 
-[문자열 연결 또는 `StringBuilder` 클래스를 선택하는 이유](xref:System.Text.StringBuilder#StringAndSB)에 대해 자세히 읽을 수 있습니다.
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
+
+[문자열 연결 또는 `StringBuilder` 클래스를 선택하는 이유](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types)에 대해 자세히 읽을 수 있습니다.
 
 컬렉션의 문자열을 조인하는 또 다른 옵션은 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 사용하는 것입니다. 소스 문자열을 구분 기호로 구분해야 하는 경우 <xref:System.String.Join%2A?displayProperty=nameWithType> 메서드를 사용합니다. 다음 코드는 두 메서드 모두를 사용하여 단어 배열을 결합합니다.
 
-[!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet5":::
 
 마지막으로 [LINQ](../programming-guide/concepts/linq/index.md)와 <xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType> 메서드를 사용하여 컬렉션의 문자열을 조인할 수 있습니다. 이 메서드는 람다 식을 사용하여 소스 문자열을 결합합니다. 람다 식은 각 문자열을 기존의 누적 문자열에 추가하는 작업을 수행합니다. 다음 예에서는 배열의 각 단어 사이에 공백을 추가하여 단어 배열을 결합합니다.
 
-[!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
-
-[샘플 코드](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)를 확인하여 관련 샘플을 사용해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet6":::
 
 ## <a name="see-also"></a>참조
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 9f5690e6840098f94360dba89f09fb23b258b782
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f10ce837057cc61b84130f237a13af708849dfc5
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739043"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662968"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법
 
@@ -19,13 +19,13 @@ ms.locfileid: "81739043"
 
 다음 예제에서는 패턴 일치 `is` 문을 사용하는 방법을 보여 줍니다.
 
-[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs" id="PatternMatchingIs":::
 
 위의 샘플은 패턴 일치 구문의 몇 가지 기능을 보여 줍니다. `if (a is Mammal m)` 문은 테스트를 초기화 할당과 결합합니다. 할당은 테스트가 성공한 경우에만 발생합니다. 변수 `m`은 할당된 `if` 문의 포함되어 있는 범위에만 있습니다. 나중에 같은 방법으로 `m`에 액세스할 수 없습니다. 앞의 예제에서는 [`as` 연산자](../language-reference/operators/type-testing-and-cast.md#as-operator)를 사용하여 개체를 지정된 형식으로 변환하는 방법도 보여 줍니다.
 
 다음 예제에 표시된 대로 [null 허용 값 형식](../language-reference/builtin-types/nullable-value-types.md)에 값이 있는 경우 테스트할 때도 동일한 구문을 사용할 수 있습니다.
 
-[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs" id="PatternMatchingNullable":::
 
 위의 샘플은 변환에 사용하기 위한 패턴 일치의 다른 기능을 보여 줍니다. 구체적으로 `null` 값을 확인하여 null 패턴에 대한 변수를 테스트할 수 있습니다. 변수의 런타임 값이 `null`일 때 형식을 확인하는 `is` 문은 항상 `false`를 반환합니다. 패턴 일치 `is` 문은 `int?` 또는 `Nullable<int>`과 같은 nullable 값 형식을 허용하지 않지만 다른 값 형식을 테스트할 수 있습니다. 앞의 예제에서 `is` 패턴은 nullable 값 형식으로 제한되지 않습니다. 이러한 패턴을 사용하여 참조 형식의 변수에 값이 있는지 또는 값이 `null`인지 테스트할 수도 있습니다.
 
@@ -33,8 +33,6 @@ ms.locfileid: "81739043"
 
 변수가 지정된 형식인지 테스트하지만 새 변수에 할당하지 않으려는 경우, 참조 형식 및 null 허용 값 형식에 대해 `is` 및 `as` 연산자를 사용할 수 있습니다. 다음 코드는 변수가 지정된 형식인지 테스트하기 위해 패턴 일치가 도입되기 전에 C# 언어의 일부인 `is` 및 `as` 문을 사용하는 방법을 보여 줍니다.
 
-[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs" id="IsAndAs":::
 
 이 코드를 패턴 일치 코드와 비교하여 볼 수 있듯이, 패턴 일치 구문은 테스트와 할당을 단일 명령문으로 결합함으로써 더욱 강력한 기능을 제공합니다. 가능할 때마다 패턴 일치 구문을 사용합니다.
-
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/safelycast.zip) 다운로드할 수 있습니다.
