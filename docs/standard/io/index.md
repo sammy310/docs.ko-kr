@@ -1,5 +1,6 @@
 ---
 title: 파일 및 스트림 I/O - .NET
+description: .NET에서 스토리지 매체로 데이터를 전송하거나 스토리지 매체로부터 데이터를 전송받는 파일 및 스트림 I/O의 기본 사항에 대해 알아보세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706597"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662721"
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 
