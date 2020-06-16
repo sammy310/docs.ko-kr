@@ -1,28 +1,29 @@
 ---
 title: 일반 디자인 패턴
+description: .NET의 몇 가지 일반적인 디자인 패턴에 대해 설명 하는 링크를 참조 하십시오. 종속성 속성 및 삭제 패턴.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: 9b9525a7597f7df6c9a554b51160a99f0e06232c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d44a01152d0bddc8aaad9423f97c2a5b95458258
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290969"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767756"
 ---
-# <a name="common-design-patterns"></a><span data-ttu-id="20c37-102">일반 디자인 패턴</span><span class="sxs-lookup"><span data-stu-id="20c37-102">Common Design Patterns</span></span>
-<span data-ttu-id="20c37-103">수많은 패턴의 패턴을 해결 하는 소프트웨어 패턴, 패턴 언어 및 방지 패턴에 대 한 여러 책이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20c37-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="20c37-104">따라서이 장에서는 .NET Framework Api 디자인에서 자주 사용 되는 매우 제한 된 패턴 집합과 관련 된 지침 및 설명을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="20c37-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
+# <a name="common-design-patterns"></a><span data-ttu-id="24d88-103">일반 디자인 패턴</span><span class="sxs-lookup"><span data-stu-id="24d88-103">Common Design Patterns</span></span>
+<span data-ttu-id="24d88-104">수많은 패턴의 패턴을 해결 하는 소프트웨어 패턴, 패턴 언어 및 방지 패턴에 대 한 여러 책이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="24d88-104">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="24d88-105">따라서이 장에서는 .NET Framework Api 디자인에서 자주 사용 되는 매우 제한 된 패턴 집합과 관련 된 지침 및 설명을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="24d88-105">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="20c37-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="20c37-105">In This Section</span></span>  
- [<span data-ttu-id="20c37-106">종속성 속성</span><span class="sxs-lookup"><span data-stu-id="20c37-106">Dependency Properties</span></span>](dependency-properties.md)  
- [<span data-ttu-id="20c37-107">삭제 패턴</span><span class="sxs-lookup"><span data-stu-id="20c37-107">Dispose Pattern</span></span>](../garbage-collection/implementing-dispose.md)  
- <span data-ttu-id="20c37-108">*2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="20c37-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="24d88-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="24d88-106">In This Section</span></span>  
+ [<span data-ttu-id="24d88-107">종속성 속성</span><span class="sxs-lookup"><span data-stu-id="24d88-107">Dependency Properties</span></span>](dependency-properties.md)  
+ [<span data-ttu-id="24d88-108">삭제 패턴</span><span class="sxs-lookup"><span data-stu-id="24d88-108">Dispose Pattern</span></span>](../garbage-collection/implementing-dispose.md)  
+ <span data-ttu-id="24d88-109">*2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*</span><span class="sxs-lookup"><span data-stu-id="24d88-109">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="20c37-109">*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span><span class="sxs-lookup"><span data-stu-id="20c37-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="24d88-110">*Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span><span class="sxs-lookup"><span data-stu-id="24d88-110">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20c37-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20c37-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24d88-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24d88-111">See also</span></span>
 
-- [<span data-ttu-id="20c37-111">프레임 워크 디자인 지침</span><span class="sxs-lookup"><span data-stu-id="20c37-111">Framework Design Guidelines</span></span>](index.md)
+- [<span data-ttu-id="24d88-112">프레임 워크 디자인 지침</span><span class="sxs-lookup"><span data-stu-id="24d88-112">Framework Design Guidelines</span></span>](index.md)
