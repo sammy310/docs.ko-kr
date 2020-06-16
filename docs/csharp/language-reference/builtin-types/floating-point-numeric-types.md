@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121476"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662669"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -33,7 +33,7 @@ ms.locfileid: "81121476"
 
 C#은 다음과 같은 미리 정의된 부동 소수점 형식을 지원합니다.
   
-|C# 형식/키워드|근사 범위|자릿수|Size|.NET 형식|
+|C# 형식/키워드|근사 범위|전체 자릿수|Size|.NET 형식|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|4바이트|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|8바이트|<xref:System.Double?displayProperty=nameWithType>|
@@ -90,13 +90,13 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-앞의 예제에서는 C# 7.0부터 지원되는 `_`숫자 구분 기호*인* 를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
+앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호*인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
 
 또한 다음 예제와 같이 과학적 표기법을 사용하여 real 리터럴의 지수 부분을 지정할 수도 있습니다.
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -117,11 +117,11 @@ Console.WriteLine(m);  // output: 1500000
 - [10진 형식](~/_csharplang/spec/types.md#the-decimal-type)
 - [real 리터럴](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)
 - [정수 형식](integral-numeric-types.md)
-- [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
