@@ -1,5 +1,6 @@
 ---
 title: 일반 명명 규칙
+description: 단어 선택, 약어 및 머리글자어 사용에 대 한 지침, 언어별 이름을 사용 하지 않는 방법에 대 한 지침과 관련 된 일반적인 명명 규칙을 사용 합니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290956"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769082"
 ---
 # <a name="general-naming-conventions"></a>일반 명명 규칙
 
@@ -64,7 +65,7 @@ ms.locfileid: "84290956"
 |**바이트**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**간략히**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**값**|**int**|**Int32**|
+|**int**|**정수**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|

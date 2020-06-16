@@ -1,5 +1,6 @@
 ---
 title: 열거형 디자인
+description: 특수 한 종류의 값 형식인 열거형을 디자인 합니다. 단순 열거형은 작고 폐쇄형 선택 항목 집합을 보유 합니다. 플래그 열거형은 열거형 값에 대 한 비트 연산을 지원 합니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280142"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768539"
 ---
 # <a name="enum-design"></a>열거형 디자인
 

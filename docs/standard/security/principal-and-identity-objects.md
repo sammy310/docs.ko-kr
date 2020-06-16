@@ -1,5 +1,6 @@
 ---
 title: Principal 개체 및 Identity 개체
+description: .NET의 사용자를 나타내는 id 개체에 대해 읽어 보세요. 또한 역할 & id 개체를 모두 캡슐화 하는 보안 주체 개체에 대해 읽어 보십시오.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291229"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768848"
 ---
 # <a name="principal-and-identity-objects"></a>Principal 개체 및 Identity 개체
 관리 코드는 개체 <xref:System.Security.Principal.IPrincipal> 에 대 한 참조를 포함 하는 개체를 통해 보안 주체의 id 또는 역할을 검색할 수 있습니다 <xref:System.Security.Principal.IIdentity> . Identity 개체와 Principal 개체를 사용자 및 그룹 계정과 같이 익숙한 개념과 비교해 보면 쉽게 이해할 수 있습니다. 대부분의 네트워크 환경에서 사용자 계정은 사람 또는 프로그램을 나타내고, 그룹 계정은 특정 사용자 범주 및 해당 사용자들이 소유하는 권한을 나타냅니다. 마찬가지로, .NET Framework의 Identity 개체는 사용자를 나타내고, 역할은 멤버 및 보안 컨텍스트를 나타냅니다. .NET Framework에서 Principal 개체는 Identity 개체와 역할을 모두 캡슐화합니다. .NET Framework 애플리케이션에서는 보안 주체의 ID 또는 더 일반적인 경우에는 역할 멤버에 따라 보안 주체에 권한을 부여합니다.  

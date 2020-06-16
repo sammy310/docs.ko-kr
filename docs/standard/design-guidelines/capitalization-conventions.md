@@ -1,5 +1,6 @@
 ---
 title: 대/소문자 표기법
+description: 식별자, 복합 단어 및 일반적인 용어에 대 한 대/소문자 규칙을 적용 합니다. .NET에서 대/소문자 구분이 작동 하는 방식을 이해 합니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280402"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767795"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 이 장의 지침은 일관 되 게 적용 될 때 형식, 멤버 및 매개 변수에 대 한 식별자를 쉽게 읽을 수 있도록 하는 사례를 사용 하는 간단한 방법을 설명 합니다.
@@ -50,7 +51,7 @@ ms.locfileid: "84280402"
 |ID|대/소문자 구분|예제|
 |----------------|------------|-------------|
 |네임스페이스|파스칼식|`namespace System.Security { ... }`|
-|유형|파스칼식|`public class StreamReader { ... }`|
+|Type|파스칼식|`public class StreamReader { ... }`|
 |인터페이스|파스칼식|`public interface IEnumerable { ... }`|
 |방법|파스칼식|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |속성|파스칼식|`public class String {` <br />  `public int Length { get; }` <br /> `}`|

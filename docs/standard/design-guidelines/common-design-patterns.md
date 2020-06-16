@@ -1,17 +1,18 @@
 ---
 title: 일반 디자인 패턴
+description: .NET의 몇 가지 일반적인 디자인 패턴에 대해 설명 하는 링크를 참조 하십시오. 종속성 속성 및 삭제 패턴.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: 9b9525a7597f7df6c9a554b51160a99f0e06232c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d44a01152d0bddc8aaad9423f97c2a5b95458258
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290969"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767756"
 ---
 # <a name="common-design-patterns"></a>일반 디자인 패턴
 수많은 패턴의 패턴을 해결 하는 소프트웨어 패턴, 패턴 언어 및 방지 패턴에 대 한 여러 책이 있습니다. 따라서이 장에서는 .NET Framework Api 디자인에서 자주 사용 되는 매우 제한 된 패턴 집합과 관련 된 지침 및 설명을 제공 합니다.  

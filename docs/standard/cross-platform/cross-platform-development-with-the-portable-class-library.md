@@ -1,5 +1,6 @@
 ---
 title: 이식 가능한 클래스 라이브러리로 크로스 플랫폼 개발
+description: .NET에서 이식 가능한 클래스 라이브러리 프로젝트 형식을 사용 하 여 Microsoft 플랫폼용 플랫폼 간 앱 및 라이브러리를 빠르고 쉽게 빌드합니다.
 ms.date: 09/17/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-ms.openlocfilehash: 033c9bc6e506d0ae2b9f20fedb72d1b7f29e434b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: be1a49f7da7ce98f9e5e3ff8d927ce5230bfa8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288916"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769147"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>이식 가능한 클래스 라이브러리를 사용 하 여 플랫폼 간 개발
 
