@@ -1,5 +1,6 @@
 ---
 title: '방법: 그리는 데 필요한 그래픽 개체 만들기'
+description: 이제는 선 및 모양을 그리거나, 텍스트를 렌더링 하거나, GDI +를 사용 하 여 이미지를 표시 및 조작 하는 데 필요한 그래픽 개체를 만드는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,51 +11,51 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: d591d65904484e33285e5db7aa99760f3e1909d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a0884c1e9956dc6f4608e32372deeea24ef4670
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903209"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
-GDI+로 선과 모양을 그리거나 텍스트를 렌더링하거나 이미지를 표시및 조작하려면 오브젝트를 <xref:System.Drawing.Graphics> 만들어야 합니다. 오브젝트는 <xref:System.Drawing.Graphics> GDI+ 드로잉 표면을 나타내며 그래픽 이미지를 만드는 데 사용되는 오브젝트입니다.  
+선 및 도형을 그리거나, 텍스트를 렌더링 하거나, GDI +를 사용 하 여 이미지를 표시 하 고 조작 하려면 먼저 <xref:System.Drawing.Graphics> 개체를 만들어야 합니다. <xref:System.Drawing.Graphics>개체는 GDI + 그리기 화면을 나타내며 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  
   
- 그래픽 작업에는 두 단계가 있습니다.  
+ 그래픽 작업에는 두 가지 단계가 있습니다.  
   
-1. <xref:System.Drawing.Graphics> 개체 만들기  
+1. 개체 만들기 <xref:System.Drawing.Graphics>  
   
-2. 오브젝트를 <xref:System.Drawing.Graphics> 사용하여 선과 모양을 그리거나, 텍스트를 렌더링하거나, 이미지를 표시하고 조작합니다.  
+2. 개체를 사용 하 여 <xref:System.Drawing.Graphics> 선과 도형을 그리거나, 텍스트를 렌더링 하거나, 이미지를 표시 하 고 조작 합니다.  
   
 ## <a name="creating-a-graphics-object"></a>그래픽 개체 만들기  
- 그래픽 개체는 다양한 방법으로 만들 수 있습니다.  
+ 그래픽 개체는 다양 한 방법으로 만들 수 있습니다.  
   
 #### <a name="to-create-a-graphics-object"></a>그래픽 개체를 만들려면  
   
-- 폼 또는 컨트롤의 경우 그래픽 <xref:System.Windows.Forms.PaintEventArgs> 개체에 <xref:System.Windows.Forms.Control.Paint> 대한 참조를 받습니다. 일반적으로 컨트롤에 대한 페인팅 코드를 만들 때 그래픽 개체에 대한 참조를 얻는 방법입니다. 마찬가지로 <xref:System.Drawing.Printing.PrintPageEventArgs> <xref:System.Drawing.Printing.PrintDocument>에 대한 이벤트를 처리할 때의 속성으로 그래픽 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 개체를 가져올 수도 있습니다.  
+- <xref:System.Windows.Forms.PaintEventArgs>폼 또는 컨트롤의 경우의 일부로 그래픽 개체에 대 한 참조를 받습니다 <xref:System.Windows.Forms.Control.Paint> . 일반적으로 컨트롤의 그리기 코드를 만들 때 그래픽 개체에 대 한 참조를 가져오는 방법입니다. 마찬가지로, <xref:System.Drawing.Printing.PrintPageEventArgs> <xref:System.Drawing.Printing.PrintDocument.PrintPage> 에 대 한 이벤트를 처리할 때 그래픽 개체를의 속성으로 가져올 수도 있습니다 <xref:System.Drawing.Printing.PrintDocument> .  
   
      또는  
   
-- 컨트롤 <xref:System.Windows.Forms.Control.CreateGraphics%2A> 또는 폼의 메서드를 호출하여 해당 <xref:System.Drawing.Graphics> 컨트롤 또는 폼의 드로잉 표면을 나타내는 개체에 대한 참조를 얻습니다. 이미 존재하는 폼이나 컨트롤을 그리려면 이 메서드를 사용합니다.  
+- 컨트롤이 나 폼의 메서드를 호출 하 여 <xref:System.Windows.Forms.Control.CreateGraphics%2A> <xref:System.Drawing.Graphics> 해당 컨트롤이 나 폼의 그리기 화면을 나타내는 개체에 대 한 참조를 가져옵니다. 이미 존재 하는 폼 이나 컨트롤에 그리려는 경우이 메서드를 사용 합니다.  
   
      또는  
   
-- 에서 <xref:System.Drawing.Graphics> 상속하는 모든 개체에서 <xref:System.Drawing.Image>개체를 만듭니다. 이 방법은 기존 이미지를 변경하려는 경우에 유용합니다.  
+- <xref:System.Drawing.Graphics>에서 상속 되는 개체에서 개체를 만듭니다 <xref:System.Drawing.Image> . 이 방법은 이미 존재 하는 이미지를 변경 하려는 경우에 유용 합니다.  
   
-     다음 섹션에서는 이러한 각 프로세스에 대해 자세히 설명합니다.  
+     다음 섹션에서는 이러한 각 프로세스에 대 한 세부 정보를 제공 합니다.  
   
-## <a name="painteventargs-in-the-paint-event-handler"></a>페인트 이벤트 처리기의 페인트EventArgs  
- <xref:System.Windows.Forms.PaintEventHandler> 에 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 대한 컨트롤 또는 <xref:System.Drawing.Printing.PrintDocument>에 대한 프로그래밍 할 때 그래픽 개체는 <xref:System.Windows.Forms.PaintEventArgs> 또는 의 <xref:System.Drawing.Printing.PrintPageEventArgs>속성 중 하나로 제공됩니다.  
+## <a name="painteventargs-in-the-paint-event-handler"></a>Paint 이벤트 처리기의 PaintEventArgs  
+ 컨트롤 또는의에 대 한를 프로그래밍할 때 <xref:System.Windows.Forms.PaintEventHandler> <xref:System.Drawing.Printing.PrintDocument.PrintPage> <xref:System.Drawing.Printing.PrintDocument> 그래픽 개체는 또는의 속성 중 하나로 제공 됩니다 <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Drawing.Printing.PrintPageEventArgs> .  
   
-#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>페인트 이벤트의 PaintEventArgs에서 그래픽 개체에 대한 참조를 얻으려면  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Paint 이벤트의 PaintEventArgs에서 그래픽 개체에 대 한 참조를 가져오려면  
   
-1. 개체를 <xref:System.Drawing.Graphics> 선언합니다.  
+1. 개체를 선언 <xref:System.Drawing.Graphics> 합니다.  
   
-2. 의 일부로 전달된 <xref:System.Drawing.Graphics> 객체를 참조할 변수를 할당합니다. <xref:System.Windows.Forms.PaintEventArgs>  
+2. 의 일부로 전달 된 개체를 참조 하는 변수를 할당 합니다 <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs> .  
   
-3. 코드를 삽입하여 폼 또는 컨트롤을 페인칠합니다.  
+3. 폼 이나 컨트롤을 그리는 코드를 삽입 합니다.  
   
-     다음 예제에서는 <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs> 이벤트에서 개체를 참조하는 <xref:System.Windows.Forms.Control.Paint> 방법을 보여 주며 있습니다.  
+     다음 예제에서는 이벤트의에서 개체를 참조 하는 방법을 보여 줍니다 <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> .  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -89,12 +90,12 @@ GDI+로 선과 모양을 그리거나 텍스트를 렌더링하거나 이미지�
        }  
     ```  
   
-## <a name="creategraphics-method"></a>그래픽 만들기 방법  
- 컨트롤 또는 양식의 메서드를 <xref:System.Windows.Forms.Control.CreateGraphics%2A> 사용하여 해당 컨트롤 또는 <xref:System.Drawing.Graphics> 양식의 드로잉 서피스를 나타내는 객체에 대한 참조를 얻을 수도 있습니다.  
+## <a name="creategraphics-method"></a>CreateGraphics 메서드  
+ <xref:System.Windows.Forms.Control.CreateGraphics%2A>컨트롤이 나 폼의 메서드를 사용 하 여 <xref:System.Drawing.Graphics> 해당 컨트롤이 나 폼의 그리기 화면을 나타내는 개체에 대 한 참조를 가져올 수도 있습니다.  
   
-#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics 메서드를 사용하여 그래픽 개체를 만들려면  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics 메서드를 사용 하 여 그래픽 개체를 만들려면  
   
-- 그래픽을 <xref:System.Windows.Forms.Control.CreateGraphics%2A> 렌더링할 폼 또는 컨트롤의 메서드를 호출합니다.  
+- <xref:System.Windows.Forms.Control.CreateGraphics%2A>그래픽을 렌더링 하려는 폼 이나 컨트롤의 메서드를 호출 합니다.  
   
     ```vb  
     Dim g as Graphics  
@@ -118,13 +119,13 @@ GDI+로 선과 모양을 그리거나 텍스트를 렌더링하거나 이미지�
     ```  
   
 ## <a name="create-from-an-image-object"></a>이미지 개체에서 만들기  
- 또한 클래스에서 파생 된 모든 개체에서 그래픽 <xref:System.Drawing.Image> 개체를 만들 수 있습니다.  
+ 또한 클래스에서 파생 되는 모든 개체에서 그래픽 개체를 만들 수 있습니다 <xref:System.Drawing.Image> .  
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>이미지에서 그래픽 개체를 만들려면  
   
-- <xref:System.Drawing.Graphics> 메서드를 <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> 호출하여 개체를 만들 려는 Image 변수의 이름을 제공 합니다.  
+- 개체를 <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> 만들려는 이미지 변수의 이름을 제공 하 여 메서드를 호출 합니다 <xref:System.Drawing.Graphics> .  
   
-     다음 예제에서는 개체를 <xref:System.Drawing.Bitmap> 사용하는 방법을 보여 주며 다음과 같은 방법을 보여 주며 다음과 같은 방법을 보여 주며 다음과 같은 방법을 보여 주실 수 있습니다.  
+     다음 예제에서는 개체를 사용 하는 방법을 보여 줍니다 <xref:System.Drawing.Bitmap> .  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
@@ -144,30 +145,30 @@ GDI+로 선과 모양을 그리거나 텍스트를 렌더링하거나 이미지�
     ```  
   
 > [!NOTE]
-> 16비트, <xref:System.Drawing.Graphics> 24비트 및 32비트 .bmp 파일과 같이 인덱싱되지 않은 .bmp 파일에서만 개체를 만들 수 있습니다. 인덱싱되지 않은 .bmp 파일의 각 픽셀에는 색이 있는 .bmp 파일의 픽셀과 달리 색테이블에 인덱스가 있는 .bmp 파일이 있습니다.  
+> <xref:System.Drawing.Graphics>16 비트, 24 비트 및 32 비트 .bmp 파일과 같은 인덱싱되지 않은 .bmp 파일의 개체만 만들 수 있습니다. 비인덱스 .bmp 파일의 각 픽셀은 색 테이블에 대 한 인덱스를 포함 하는 인덱싱된 .bmp 파일의 픽셀과 달리 색을 포함 합니다.  
   
-## <a name="drawing-and-manipulating-shapes-and-images"></a>셰이프 및 이미지 그리기 및 조작  
- 생성된 후에는 오브젝트를 <xref:System.Drawing.Graphics> 사용하여 선과 모양을 그리거나 텍스트를 렌더링하거나 이미지를 표시하고 조작할 수 있습니다. <xref:System.Drawing.Graphics> 개체와 함께 사용되는 주 개체는 다음과 같습니다.  
+## <a name="drawing-and-manipulating-shapes-and-images"></a>모양 및 이미지 그리기 및 조작  
+ 개체를 만든 후에 <xref:System.Drawing.Graphics> 는 개체를 사용 하 여 선과 셰이프를 그리거나, 텍스트를 렌더링 하거나, 이미지를 표시 하 고 조작할 수 있습니다. 개체와 함께 사용 되는 보안 주체 개체는 <xref:System.Drawing.Graphics> 다음과 같습니다.  
   
-- <xref:System.Drawing.Pen> 클래스-선을 그리거나, 셰이프를 윤곽을 그리거나, 다른 기하학적 표현을 렌더링하는 데 사용됩니다.  
+- <xref:System.Drawing.Pen>클래스-선 그리기, 모양 개요 또는 다른 기하학적 표현 렌더링에 사용 됩니다.  
   
-- <xref:System.Drawing.Brush> 클래스- 채워진 셰이프, 이미지 또는 텍스트와 같은 그래픽 영역을 채우는 데 사용됩니다.  
+- <xref:System.Drawing.Brush>클래스-채워진 도형, 이미지 또는 텍스트와 같은 그래픽 영역을 채우는 데 사용 됩니다.  
   
-- <xref:System.Drawing.Font> 클래스-텍스트를 렌더링할 때 사용할 셰이프에 대한 설명을 제공합니다.  
+- <xref:System.Drawing.Font>클래스-텍스트를 렌더링할 때 사용할 도형에 대 한 설명을 제공 합니다.  
   
-- <xref:System.Drawing.Color> 구조-표시할 다른 색상을 나타냅니다.  
+- <xref:System.Drawing.Color>구조는 표시할 여러 색을 나타냅니다.  
   
-#### <a name="to-use-the-graphics-object-you-have-created"></a>만든 그래픽 개체를 사용하려면  
+#### <a name="to-use-the-graphics-object-you-have-created"></a>만든 그래픽 개체를 사용 하려면  
   
-- 위에 나열된 적절한 개체로 작업하여 필요한 것을 그립니다.  
+- 위에 나열 된 적절 한 개체를 사용 하 여 필요한 항목을 그립니다.  
   
-     자세한 내용은 아래 항목을 참조하세요.  
+     자세한 내용은 다음 항목을 참조하세요.  
   
-    |렌더링하려면|참조 항목|  
+    |렌더링 하려면|참조 항목|  
     |---------------|---------|  
-    |선|[방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
-    |셰이프|[방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)|  
-    |텍스트|[방법: Windows Form에 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
+    |선|[방법: Windows Form에서 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
+    |도형|[방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)|  
+    |텍스트|[방법: Windows Form에서 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
     |이미지|[방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>참고 항목

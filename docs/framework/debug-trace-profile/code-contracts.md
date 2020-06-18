@@ -1,5 +1,6 @@
 ---
 title: 코드 계약
+description: .NET 코드에서 사전 조건, 사후 조건 및 개체 고정을 지정 하는 방법을 제공 하는 코드 계약을 탐색 합니다.
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904145"
 ---
 # <a name="code-contracts"></a>코드 계약
 
-코드 계약을 통해 코드에서 사전 조건, 사후 조건 및 개체 고정을 지정할 수 있습니다. 사전 조건은 메서드 또는 속성을 입력할 때 충족해야 하는 요구 사항입니다. 사후 조건은 메서드 또는 속성 코드가 종료될 때의 예상을 설명합니다. 개체 고정은 양호한 상태인 클래스의 예상 상태를 설명합니다.
+코드 계약을 통해 코드에서 사전 조건, 사후 조건 및 개체 고정을 지정할 수 있습니다. 사전 조건은 메서드 또는 속성을 입력할 때 충족 해야 하는 요구 사항입니다. 사후 조건은 메서드 또는 속성 코드가 종료 될 때의 예상을 설명 합니다. 개체 고정은 양호한 상태인 클래스의 예상 상태를 설명합니다.
 
 코드 계약에는 코드 표시를 위한 클래스, 컴파일 타임 분석을 위한 정적 분석기 및 런타임 분석기가 포함됩니다. 코드 계약에 대한 클래스는 <xref:System.Diagnostics.Contracts> 네임스페이스에서 확인할 수 있습니다.
 
@@ -58,7 +59,7 @@ Contract.Requires<ArgumentNullException>(x != null, "x");
 
 - 문이 메서드에서 다른 문 앞에 표시됩니다.
 
-- 이러한 문의 전체 집합 뒤에는 <xref:System.Diagnostics.Contracts.Contract>, <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> 또는 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> 메서드 호출과 같은 명시적 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> 메서드 호출이 나옵니다.
+- 이러한 문의 전체 집합 뒤에는 <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> 또는 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> 메서드 호출과 같은 명시적 <xref:System.Diagnostics.Contracts.Contract> 메서드 호출이 나옵니다.
 
 `if`-`then`-`throw` 문이 이 형태로 나타나는 경우 도구에서 레거시 `requires` 문으로 인식합니다. `if`-`then`-`throw` 시퀀스 뒤에 나오는 다른 계약이 없는 경우 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> 메서드를 사용하여 코드를 끝냅니다.
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-앞의 테스트에 있는 조건은 부정된 사전 조건입니다. 실제 사전 조건은 `x != null`됩니다. 부정 된 사전 조건은 매우 제한적입니다. 앞의 예제와 같이 작성 해야 합니다. 즉, `else` 절을 포함 하지 않아야 하 고 `then` 절의 본문은 단일 `throw` 문 이어야 합니다. `if` 테스트에는 순수성 및 표시 유형 규칙이 둘 다 적용되지만([사용 지침](#usage_guidelines) 참조) `throw` 식에는 순수성 규칙만 적용됩니다. 그러나 발생한 예외 형식은 계약이 발생하는 메서드와 동일한 표시 유형이어야 합니다.
+앞의 테스트에 있는 조건은 부정된 사전 조건입니다. 실제 사전 조건은 `x != null` 입니다. 부정 된 사전 조건은 매우 제한적입니다. 앞의 예제와 같이 작성 해야 합니다. 즉, 절을 포함 하지 않아야 `else` 하며 절의 본문은 `then` 단일 문 이어야 합니다 `throw` . `if` 테스트에는 순수성 및 표시 유형 규칙이 둘 다 적용되지만([사용 지침](#usage_guidelines) 참조) `throw` 식에는 순수성 규칙만 적용됩니다. 그러나 발생한 예외 형식은 계약이 발생하는 메서드와 동일한 표시 유형이어야 합니다.
 
 ## <a name="postconditions"></a>사후 조건
 
@@ -91,17 +92,17 @@ Contract.Ensures(this.F > 0);
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-인수는 `true`의 하위 형식인 예외가 발생할 때마다 `T`여야 하는 조건입니다.
+인수는 `T`의 하위 형식인 예외가 발생할 때마다 `true`여야 하는 조건입니다.
 
-예외 사후 조건에서 사용하기 어려운 일부 예외 형식이 있습니다. 예를 들어 <xref:System.Exception>에 대해 `T` 형식을 사용하면 스택 오버플로 또는 제어하기 어려운 다른 예외인 경우에도 발생한 예외 형식에 관계없이 메서드가 조건을 보장해야 합니다. 예외 사후 조건은 멤버 호출 시 발생할 수 있는 특정 예외(예: <xref:System.InvalidTimeZoneException> 메서드 호출에 대해 <xref:System.TimeZoneInfo>이 발생하는 경우)에 대해서만 사용해야 합니다.
+예외 사후 조건에서 사용하기 어려운 일부 예외 형식이 있습니다. 예를 들어 `T`에 대해 <xref:System.Exception> 형식을 사용하면 스택 오버플로 또는 제어하기 어려운 다른 예외인 경우에도 발생한 예외 형식에 관계없이 메서드가 조건을 보장해야 합니다. 예외 사후 조건은 멤버 호출 시 발생할 수 있는 특정 예외(예: <xref:System.TimeZoneInfo> 메서드 호출에 대해 <xref:System.InvalidTimeZoneException>이 발생하는 경우)에 대해서만 사용해야 합니다.
 
 ### <a name="special-postconditions"></a>특수 사후 조건
 
 다음 메서드는 사후 조건 내에서만 사용할 수 있습니다.
 
-- `Contract.Result<T>()`가 메서드의 반환 형식으로 대체되는 `T` 식을 사용하여 사후 조건에서 메서드 반환 값을 참조할 수 있습니다. 컴파일러가 형식을 유추할 수 없는 경우 명시적으로 제공해야 합니다. 예를 들어 C# 컴파일러는 인수를 사용하지 않는 메서드에 대한 형식을 유추할 수 없으므로 다음과 같은 사후 조건이 필요합니다. `Contract.Ensures(0 <Contract.Result<int>())` 반환 형식이 `void`인 메서드는 사후 조건에서 `Contract.Result<T>()`를 참조할 수 없습니다.
+- `T`가 메서드의 반환 형식으로 대체되는 `Contract.Result<T>()` 식을 사용하여 사후 조건에서 메서드 반환 값을 참조할 수 있습니다. 컴파일러가 형식을 유추할 수 없는 경우 명시적으로 제공해야 합니다. 예를 들어 C# 컴파일러는 인수를 사용하지 않는 메서드에 대한 형식을 유추할 수 없으므로 다음과 같은 사후 조건이 필요합니다. `Contract.Ensures(0 <Contract.Result<int>())` 반환 형식이 `void`인 메서드는 사후 조건에서 `Contract.Result<T>()`를 참조할 수 없습니다.
 
-- 사후 조건의 사전 상태 값은 메서드 또는 속성의 시작 부분에 있는 식의 값을 참조합니다. `Contract.OldValue<T>(e)` 식을 사용합니다. 여기서 `T`는 `e`의 형식입니다. 컴파일러가 형식을 유추할 수 있는 경우 언제든지 제네릭 형식 인수를 생략할 수 있습니다. 예를 들어 컴파일러는 C# 인수를 사용 하기 때문에 항상 형식을 유추 합니다. `e`에서 발생할 수 있는 작업과 이전 식이 표시 될 수 있는 컨텍스트에 대 한 몇 가지 제한 사항이 있습니다. 이전 식은 다른 이전 식을 포함할 수 없습니다. 무엇보다도 이전 식은 메서드의 사전 조건 상태에 있던 값을 참조해야 합니다. 즉, 메서드의 사전 조건이 `true`이기만 하면 평가할 수 있는 식이어야 합니다. 다음은 해당 규칙의 여러 인스턴스입니다.
+- 사후 조건의 사전 상태 값은 메서드 또는 속성의 시작 부분에 있는 식의 값을 참조합니다. `Contract.OldValue<T>(e)` 식을 사용합니다. 여기서 `T`는 `e`의 형식입니다. 컴파일러가 형식을 유추할 수 있는 경우 언제든지 제네릭 형식 인수를 생략할 수 있습니다. 예를 들어 c # 컴파일러는 인수를 사용 하기 때문에 항상 형식을 유추 합니다. 에서 발생 하는 사항에 대 한 몇 가지 제한 사항과 `e` 이전 식이 표시 될 수 있는 컨텍스트가 있습니다. 이전 식은 다른 이전 식을 포함할 수 없습니다. 무엇보다도 이전 식은 메서드의 사전 조건 상태에 있던 값을 참조해야 합니다. 즉, 메서드의 사전 조건이 `true`이기만 하면 평가할 수 있는 식이어야 합니다. 다음은 해당 규칙의 여러 인스턴스입니다.
 
   - 값은 메서드의 사전 조건 상태에 있어야 합니다. 개체의 필드를 참조 하기 위해 사전 조건은 개체가 항상 null이 아닌 것으로 보장 해야 합니다.
 
@@ -132,7 +133,7 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
       Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
       ```
 
-  - 계약이 메서드 본문 앞에 나타나고 대부분의 컴파일러가 사후 조건에서 `Out` 매개 변수를 허용하지 않으므로 `out` 매개 변수는 문제를 일으킵니다. 이 문제를 해결하기 위해 <xref:System.Diagnostics.Contracts.Contract> 클래스는 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 매개 변수를 기준으로 사후 조건을 허용하는 `out` 메서드를 제공합니다.
+  - 계약이 메서드 본문 앞에 나타나고 대부분의 컴파일러가 사후 조건에서 `out` 매개 변수를 허용하지 않으므로 `Out` 매개 변수는 문제를 일으킵니다. 이 문제를 해결하기 위해 <xref:System.Diagnostics.Contracts.Contract> 클래스는 `out` 매개 변수를 기준으로 사후 조건을 허용하는 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 메서드를 제공합니다.
 
       ```csharp
       public void OutParam(out int x)
@@ -142,7 +143,7 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
       }
       ```
 
-      <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> 메서드와 마찬가지로 컴파일러가 형식을 유추할 수 있는 경우 언제 든 지 제네릭 형식 매개 변수를 생략할 수 있습니다. 계약 재작성 기는 메서드 호출을 `out` 매개 변수의 값으로 바꿉니다. <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 메서드는 사후 조건에만 나타날 수 있습니다. 메서드에 대 한 인수는 매개 변수 `out` 구조체의 필드 또는 `out` 매개 변수 여야 합니다. 후자는 구조체 생성자의 사후 조건에서 필드를 참조할 때에도 유용합니다.
+      <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>메서드와 마찬가지로 컴파일러가 형식을 유추할 수 있는 경우 언제 든 지 제네릭 형식 매개 변수를 생략할 수 있습니다. 계약 재작성 기는 메서드 호출을 매개 변수의 값으로 바꿉니다 `out` . <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>메서드는 사후 조건에만 나타날 수 있습니다. 메서드에 대 한 인수는 `out` 매개 변수 또는 구조체 매개 변수의 필드 여야 합니다 `out` . 후자는 구조체 생성자의 사후 조건에서 필드를 참조 하는 경우에도 유용 합니다.
 
       > [!NOTE]
       > 코드 계약 분석 도구는 현재 `out` 매개 변수가 올바르게 초기화되었는지 여부를 확인하지 않으며 사후 조건에서 해당 내용을 무시합니다. 따라서 앞의 예제에서 계약 뒤의 줄이 정수를 할당하는 대신 `x`의 값을 사용한 경우 컴파일러가 올바른 오류를 실행하지 않습니다. 그러나 CONTRACTS_FULL 전처리기 기호가 정의되지 않은 빌드(예: 릴리스 빌드)에서는 컴파일러가 오류를 실행합니다.
@@ -163,7 +164,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-고정은 CONTRACTS_FULL 전처리기 기호에 의해 조건부로 정의됩니다. 런타임 검사 중에 고정은 각 public 메서드의 끝에서 검사됩니다. 고정이 동일한 클래스의 public 메서드를 언급하는 경우 일반적으로 해당 public 메서드의 끝에서 발생하는 고정 검사를 사용할 수 없습니다. 대신, 해당 클래스에 대한 가장 바깥쪽 메서드 호출의 끝에서만 검사가 발생합니다. 이 검사는 다른 클래스의 메서드 호출로 인해 클래스에 재진입하는 경우에도 발생합니다. 개체 종료자 및 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현에 대해 고정이 확인 되지 않습니다.
+고정은 CONTRACTS_FULL 전처리기 기호에 의해 조건부로 정의됩니다. 런타임 검사 중에는 각 public 메서드의 끝에서 고정이 확인 됩니다. 고정이 동일한 클래스의 public 메서드를 언급하는 경우 일반적으로 해당 public 메서드의 끝에서 발생하는 고정 검사를 사용할 수 없습니다. 대신, 해당 클래스에 대한 가장 바깥쪽 메서드 호출의 끝에서만 검사가 발생합니다. 다른 클래스의 메서드를 호출 하 여 클래스를 다시 입력 하는 경우에도이 오류가 발생 합니다. 개체 종료자 및 구현에 대해 고정이 확인 되지 않습니다 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> .
 
 <a name="usage_guidelines"></a>
 

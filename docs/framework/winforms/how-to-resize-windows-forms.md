@@ -1,5 +1,6 @@
 ---
 title: 폼 크기 조정
+description: Size 속성의 새 값을 설정 하 여 폼의 높이와 너비를 모두 조정 하거나 높이 또는 너비 속성을 개별적으로 조정 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903274"
 ---
 # <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
 
@@ -58,7 +59,7 @@ Form1->Width = 300;
 
 또는
 
-<xref:System.Drawing.Size.Width%2A> 속성을 설정하여 <xref:System.Drawing.Size.Height%2A> 또는 <xref:System.Windows.Forms.Form.Size%2A>를 변경합니다.
+<xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 <xref:System.Drawing.Size.Width%2A> 또는 <xref:System.Drawing.Size.Height%2A>를 변경합니다.
 
 그러나 다음 코드 예제와 같이 이 접근 방식은 단순히 <xref:System.Windows.Forms.Control.Width%2A> 또는 <xref:System.Windows.Forms.Control.Height%2A> 속성을 설정하는 것보다 성가십니다.
 
@@ -93,7 +94,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> <xref:System.Drawing.Size.Height%2A> 속성을 새로운 <xref:System.Drawing.Size.Width%2A> 구조체로 설정하여 동시에 높이 및 너비 크기를 설정하지 않는 한 항상 <xref:System.Windows.Forms.Form.Size%2A> 또는 <xref:System.Drawing.Size> 속성을 사용하여 폼의 크기를 변경합니다. <xref:System.Windows.Forms.Form.Size%2A> 속성은 값 형식인 <xref:System.Drawing.Size> 구조체를 반환합니다. 값 형식의 속성에 새 값을 할당할 수 없습니다. 따라서 다음 코드 예제는 컴파일되지 않습니다.
+> <xref:System.Windows.Forms.Form.Size%2A> 속성을 새로운 <xref:System.Drawing.Size> 구조체로 설정하여 동시에 높이 및 너비 크기를 설정하지 않는 한 항상 <xref:System.Drawing.Size.Height%2A> 또는 <xref:System.Drawing.Size.Width%2A> 속성을 사용하여 폼의 크기를 변경합니다. <xref:System.Windows.Forms.Form.Size%2A> 속성은 값 형식인 <xref:System.Drawing.Size> 구조체를 반환합니다. 값 형식의 속성에 새 값을 할당할 수 없습니다. 따라서 다음 코드 예제는 컴파일되지 않습니다.
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE

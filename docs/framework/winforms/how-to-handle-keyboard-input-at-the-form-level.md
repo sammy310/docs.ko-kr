@@ -1,5 +1,6 @@
 ---
 title: '방법: 양식 수준에서 키보드 입력 처리'
+description: 메시지가 컨트롤에 도달 하기 전에 폼 수준에서 Windows Forms에 대 한 키보드 입력을 처리 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: c10852273eeb3caea01f448e4cbef571f20769bd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6f0695b6f665a613e0e4e001a4f9bbfc09dd45ed
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904158"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>방법: 양식 수준에서 키보드 입력 처리
 Windows Forms에서는 메시지가 컨트롤에 도달하기 전에 폼 수준에서 키보드 메시지를 처리하는 기능을 제공합니다. 이 항목에서는 다음 작업을 수행하는 방법에 대해 설명합니다.  
@@ -40,6 +41,6 @@ Windows Forms에서는 메시지가 컨트롤에 도달하기 전에 폼 수준�
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Windows Forms 응용 프로그램의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)
+- [Windows Forms 애플리케이션의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)

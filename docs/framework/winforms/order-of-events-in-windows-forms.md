@@ -1,5 +1,6 @@
 ---
 title: 이벤트 순서
+description: 응용 프로그램 및 컨트롤의 수명에서 몇 가지 중요 한 단계를 수행 하는 동안 Windows Forms 이벤트의 순서에 대 한 자세한 정보를 알아보세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b16d544d11500b2c684e87a915fc4b8eec071faa
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734865"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904340"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms에서의 이벤트 순서
 Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반대로 이러한 각 이벤트의 처리와 관련된 개발자에게 특히 관심 사항입니다. 폼 부분을 다시 그려야 하는 경우와 같이 이벤트를 세심하게 처리해야 하는 상황에서는 런타임에 이벤트가 발생한 정확한 순서를 알아야 합니다. 이 항목에서는 애플리케이션 및 컨트롤 수명에서 여러 중요한 단계 중에 발생하는 이벤트 순서에 대한 세부 정보를 제공합니다. 마우스 입력 이벤트의 순서에 대 한 자세한 내용은 [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)를 참조 하세요. Windows Forms 이벤트에 대 한 개요는 [이벤트 개요](events-overview-windows-forms.md)를 참조 하세요. 이벤트 처리기의 구성을에 대 한 자세한 내용은 [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)를 참조 하세요.  
@@ -46,7 +47,7 @@ Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반�
   
 - <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application.ApplicationExit> 클래스의 <xref:System.Windows.Forms.Application> 이벤트는 주 폼의 종료 이벤트 뒤에 발생합니다.  
+ <xref:System.Windows.Forms.Application> 클래스의 <xref:System.Windows.Forms.Application.ApplicationExit> 이벤트는 주 폼의 종료 이벤트 뒤에 발생합니다.  
   
 > [!NOTE]
 > Visual Basic 2005에는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> 및 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>과 같은 추가 애플리케이션 이벤트가 포함됩니다.  

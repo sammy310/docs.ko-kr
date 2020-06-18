@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-ms.openlocfilehash: 0a5a87c71bea603073c35dd851e443ca8c497523
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: acf490895db35af1c5d0d1e7fe7e3de5ae2a16b6
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904288"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum 인터페이스
 관리되는 힙 메모리 영역에 대한 열거자를 제공합니다. 이 인터페이스는 ICorDebugEnum 인터페이스의 서브클래스입니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|방법|Description|  
 |------------|-----------------|  
-|[Next 메서드](icordebugheapsegmentenum-next-method.md)|관리 되는 힙의 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_HEAPOBJECT](cor-heapobject-structure.md) 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugheapsegmentenum-next-method.md)|관리 되는 힙의 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_SEGMENT](cor-segment-structure.md) 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
  `ICorDebugHeapSegmentEnum`인터페이스는 ICorDebugEnum 인터페이스를 구현 합니다.  
   
- `ICorDebugHeapSegmentEnum` [ICorDebugProcess5:: EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md) 메서드를 호출 하 여 인스턴스가 [COR_HEAPOBJECT](cor-heapobject-structure.md) 인스턴스로 채워집니다. [ICorDebugHeapSegmentEnum:: Next](icordebugheapsegmentenum-next-method.md) 메서드를 호출 하 여 컬렉션의 [COR_HEAPOBJECT](cor-heapobject-structure.md) 개체를 열거할 수 있습니다.  
+ `ICorDebugHeapSegmentEnum` [ICorDebugProcess5:: EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md) 메서드를 호출 하 여 인스턴스가 [COR_SEGMENT](cor-segment-structure.md) 인스턴스로 채워집니다. [ICorDebugHeapSegmentEnum:: Next](icordebugheapsegmentenum-next-method.md) 메서드를 호출 하 여 컬렉션의 [COR_SEGMENT](cor-segment-structure.md) 개체를 열거할 수 있습니다.  
   
  `ICorDebugHeapSegmentEnum`컬렉션 개체는 관리 되는 개체를 포함할 수 있는 모든 메모리 영역을 열거 하지만 관리 되는 개체를 실제로 해당 지역에 배치 하는 것을 보장 하지는 않습니다. 여기에는 비어 있거나 예약 된 메모리 영역에 대 한 정보가 포함 될 수 있습니다.  
   

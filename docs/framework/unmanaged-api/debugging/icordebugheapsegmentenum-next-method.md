@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210178"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904275"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next 메서드
-관리 되는 힙의 메모리 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_HEAPOBJECT](cor-heapobject-structure.md) 인스턴스를 가져옵니다.  
+관리 되는 힙의 메모리 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_SEGMENT](cor-segment-structure.md) 인스턴스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  진행 검색할 세그먼트 수입니다.  
   
  세그먼트  
- 제한이 각각 관리 되는 힙에서 메모리 영역에 대 한 정보를 제공 하는 [COR_HEAPOBJECT](cor-heapobject-structure.md) 개체를 가리키는 포인터의 배열입니다.  
+ 제한이 각각 관리 되는 힙에서 메모리 영역에 대 한 정보를 제공 하는 [COR_SEGMENT](cor-segment-structure.md) 개체를 가리키는 포인터의 배열입니다.  
   
  pceltFetched  
- 제한이 에 실제로 반환 된 [COR_HEAPOBJECT](cor-heapobject-structure.md) 개체 수에 대 한 포인터 `segments` 입니다. `celt`가 1이면 이 값은 `null`일 수 있습니다.  
+ 제한이 에 실제로 반환 된 [COR_SEGMENT](cor-segment-structure.md) 개체 수에 대 한 포인터 `segments` 입니다. `celt`가 1이면 이 값은 `null`일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
   
