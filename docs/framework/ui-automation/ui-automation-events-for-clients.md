@@ -1,16 +1,17 @@
 ---
 title: 클라이언트에 대한 UI 자동화 이벤트
+description: .NET의 UI 자동화 클라이언트에서 Microsoft UI 자동화 이벤트를 사용 하는 방법에 대해 알아봅니다. UI 자동화를 통해 클라이언트는 관심 있는 이벤트를 구독할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903742"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
 > [!NOTE]
@@ -23,9 +24,9 @@ ms.locfileid: "79179912"
  정의된 기능 내에서만 이벤트를 수신 대기하는 기능을 통해 효율성도 향상되었습니다. 예를 들어, 클라이언트는 트리의 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에서 포커스 변경 이벤트를 수신 대기하거나, 하나의 요소와 해당 하위 항목만 수신 대기할 수 있습니다.  
   
 > [!NOTE]
-> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 모든 속성 변경으로 인해 Windows Forms 및 Win32 컨트롤에 대 한 표준 프록시 공급자에 의해 이벤트가 발생 합니다.  
+> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 일부 속성 변경으로 인해 Windows Forms 및 Win32 컨트롤에 대 한 표준 프록시 공급자가 이벤트를 발생 시 키 지 않습니다.  
   
- 이벤트에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자세한 내용은 [UI 자동화 이벤트 개요를](ui-automation-events-overview.md)참조하십시오.  
+ 광범위 한 이벤트 보기는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 이벤트 개요](ui-automation-events-overview.md)를 참조 하세요.  
   
 <a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>이벤트 구독  
@@ -55,7 +56,7 @@ ms.locfileid: "79179912"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|등록된 모든 이벤트 처리기를 등록 취소합니다.|  
   
- 예를 들어 코드는 [UI 자동화 이벤트 구독을](subscribe-to-ui-automation-events.md)참조하십시오.  
+ 예제 코드는 [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

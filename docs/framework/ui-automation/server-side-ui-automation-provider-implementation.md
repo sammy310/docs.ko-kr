@@ -1,17 +1,18 @@
 ---
 title: 서버 쪽 UI 자동화 공급자 구현
+description: .NET에서 사용자 지정 컨트롤에 대 한 서버 쪽 UI 자동화 공급자를 구현 하는 방법에 대해 알아봅니다. WPF 및 비 WPF 요소에 대 한 구현이 다릅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789617"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903898"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 
@@ -20,11 +21,11 @@ ms.locfileid: "76789617"
 
 이 섹션에서는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다.
 
-WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: Windows Forms에 대해 디자인 된 요소)에 대 한 구현은 근본적으로 다릅니다. WPF 요소는 <xref:System.Windows.Automation.Peers.AutomationPeer>에서 파생 된 클래스를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 비 WPF 요소는 공급자 인터페이스의 구현을 통해 지원을 제공 합니다.
+WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: Windows Forms에 대해 디자인 된 요소)에 대 한 구현은 근본적으로 다릅니다. WPF 요소 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 는에서 파생 된 클래스를 통해에 대 한 지원을 제공 <xref:System.Windows.Automation.Peers.AutomationPeer> 합니다. 비 WPF 요소는 공급자 인터페이스의 구현을 통해 지원을 제공 합니다.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>보안 고려 사항
+## <a name="security-considerations"></a>보안 고려사항
 
 부분적 신뢰 환경에서 작동할 수 있도록 공급자를 작성해야 합니다. UIAutomationClient.dll은 부분적 신뢰 환경에서 실행되도록 구성되지 않았으므로, 공급자 코드가 해당 어셈블리를 참조해서는 안 됩니다. 참조하는 경우에는 이 코드를 완전 신뢰 환경에서 실행할 수 있지만 부분적 신뢰 환경에서 실패합니다.
 
@@ -40,7 +41,7 @@ WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: Windows Fo
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>비 WPF 요소를 사용한 공급자 구현
 
-WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사용자 지정 컨트롤 (대부분의 경우 Windows Forms 컨트롤)은 인터페이스를 구현 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
+WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사용자 지정 컨트롤 (대부분의 경우 Windows Forms 컨트롤)은 인터페이스를 구현 하 여에 대 한 지원을 제공 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자 프로젝트는 다음 어셈블리를 참조해야 합니다.
 
@@ -56,7 +57,7 @@ WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사�
 
 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 다음 인터페이스 중 하나를 구현해야 합니다.
 
-|인터페이스|설명|
+|인터페이스|Description|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|컨트롤 패턴 및 속성에 대한 지원을 포함하여 창에서 호스트되는 간단한 제어용 기능을 제공합니다.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>에서 상속됩니다. 조각 내의 탐색, 포커스 설정, 요소의 경계 사각형 반환 등을 포함하여 복잡한 제어에 있는 요소에 대한 기능을 추가합니다.|
@@ -64,7 +65,7 @@ WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사�
 
 다음 인터페이스는 추가된 기능을 제공하지만 반드시 구현할 필요는 없습니다.
 
-|인터페이스|설명|
+|인터페이스|Description|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|공급자가 이벤트에 대한 요청을 추적할 수 있게 합니다.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|조각의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에서 창 기반 요소의 위치 변경을 가능하게 합니다.|
@@ -115,9 +116,9 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>를 참조하세요.
+> 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A> 을 참조하세요.
 >
-> Windows Forms 컨트롤에서 호스트 되는 공급자에 대해 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>를 반환 해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>Windows Forms 컨트롤에서 호스트 되는 공급자에 대해를 반환 해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 는 일반적으로 호스트 공급자가 제공합니다. 예를 들어 사용자 지정 컨트롤이 <xref:System.Windows.Forms.Control>에서 파생된 경우 이름은 컨트롤의 `Text` 속성에서 파생됩니다.
 
@@ -129,7 +130,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 UI 상태 변경 시 이를 클라이언트 애플리케이션에 알리는 이벤트를 발생시켜야 합니다. 다음 메서드는 이벤트를 발생시키는 데 사용됩니다.
 
-|메서드|설명|
+|방법|설명|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|컨트롤 패턴에 의해 트리거되는 이벤트를 포함하여 다양한 이벤트를 발생시킵니다.|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성이 변경되면 이벤트를 발생시킵니다.|
@@ -139,7 +140,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 
 성능을 최적화하기 위해 공급자는 선택적으로 이벤트를 발생시키거나 이벤트 수신을 등록한 클라이언트 애플리케이션이 없는 경우에는 이벤트를 전혀 발생시키지 않을 수 있습니다. 최적화를 위해 다음 메서드가 사용됩니다.
 
-|메서드|설명|
+|방법|설명|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|이 정적 속성은 클라이언트 애플리케이션이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 수신하도록 가입했는지 여부를 지정합니다.|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|공급자가 조각 루트에 대해 이 인터페이스를 구현하면 클라이언트가 조각의 이벤트에 대해 이벤트 처리기를 등록하거나 등록 취소할 때 이에 대해 알림을 받을 수 있습니다.|
@@ -189,7 +190,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 
 이를 위해 rebar에 대한 조각 루트 공급자는 밴드는 나타내는 일련의 자식 항목을 노출합니다. 각 밴드에는 속성 및 패턴을 노출할 수 있는 단일 공급자가 있습니다. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>구현에서 밴드 공급자는 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>호출 후 컨트롤의 창 핸들에 전달하여 가져온 컨트롤 HWND에 대한 기본 창 공급자를 반환합니다. 마지막으로, rebar에 대한 조각 루트 공급자는 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 인터페이스를 구현하고 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 구현에서 지정된 HWND에 포함된 컨트롤에 적절한 밴드 공급자를 반환합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 공급자 개요](ui-automation-providers-overview.md)
 - [서버 쪽 UI 자동화 공급자 노출](expose-a-server-side-ui-automation-provider.md)

@@ -1,5 +1,6 @@
 ---
 title: '방법: 문자열에 인용 부호 넣기'
+description: 텍스트 문자열에 따옴표를 추가 하는 방법에 대해 알아봅니다. 또한 따옴표 필드를 상수로 사용 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: c14747291d6c41144eef97b258f852bbe14ef07d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 08a3e2ab5662cbbf7825890ab430fddcd7b4a9ce
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903625"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: 문자열에 인용 부호 넣기(Windows Forms)
-경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예들 들어 다음과 같습니다.  
+경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예를 들면 다음과 같습니다.  
   
  그녀는 "당신은 그럴 자격이 있어!"라고 말했습니다.  
   
- 또는 <xref:Microsoft.VisualBasic.ControlChars.Quote> 필드를 상수로 사용할 수도 있습니다.  
+ 또는 필드를 상수로 사용할 수도 있습니다 <xref:Microsoft.VisualBasic.ControlChars.Quote> .  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>코드의 문자열에 따옴표를 배치하려면  
   
-1. Visual Basic에서 행에 두 개의 따옴표를 포함 된 따옴표로 삽입 합니다. Visual C# 및 시각적 C++개체에서 이스케이프 시퀀스 \\"를 포함 된 따옴표로 삽입 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
+1. Visual Basic에서 행에 두 개의 따옴표를 포함 된 따옴표로 삽입 합니다. Visual c # 및 Visual C++에서 이스케이프 시퀀스 "를 \\ 포함 된 따옴표로 삽입 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +51,7 @@ ms.locfileid: "76735902"
   
      또는  
   
-2. 따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual Basic에서 ASCII 문자 (34)를 사용 합니다. 시각적 개체 C#에서 유니코드 문자 (\u0022)를 사용 합니다.  
+2. 따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual Basic에서 ASCII 문자 (34)를 사용 합니다. Visual c #에서 유니코드 문자 (\u0022)를 사용 합니다.  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -97,5 +98,5 @@ ms.locfileid: "76735902"
 - [방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [방법: 읽기 전용 텍스트 상자 만들기](how-to-create-a-read-only-text-box-windows-forms.md)
 - [방법: Windows Forms TextBox 컨트롤에서 텍스트 선택](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤에 여러 줄 표시](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 표시](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 컨트롤](textbox-control-windows-forms.md)
