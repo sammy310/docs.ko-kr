@@ -1,5 +1,6 @@
 ---
-title: httpWebRequest._HttpResponse 필드
+title: HttpWebRequest. _HttpResponse 필드
+description: .NET의 HttpWebRequest. _HttpResponse 필드를 이해 합니다. 이 필드는 HTTP 요청의 HTTP 응답 세부 정보를 포함 하는 HttpWebResponse 형식입니다.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70058e1183abf5b6bfd172497f65a3ceb2344060
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989955"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a><span data-ttu-id="00cee-102">HttpWebRequest. \_HttpResponse 필드</span><span class="sxs-lookup"><span data-stu-id="00cee-102">HttpWebRequest.\_HttpResponse Field</span></span>
+# <a name="httpwebrequest_httpresponse-field"></a><span data-ttu-id="e33e4-104">HttpWebRequest. \_ Httpresponse.cache 필드</span><span class="sxs-lookup"><span data-stu-id="e33e4-104">HttpWebRequest.\_HttpResponse Field</span></span>
 
-<span data-ttu-id="00cee-103">`HttpWebRequest._HttpResponse`는 <xref:System.Net.HttpWebResponse> HTTP 요청의 HTTP 응답 세부 정보가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00cee-103">`HttpWebRequest._HttpResponse` is an <xref:System.Net.HttpWebResponse> containing HTTP response details from an HTTP request.</span></span> <span data-ttu-id="00cee-104">HTTP 응답이 수신될 때까지 가능합니다. `null`</span><span class="sxs-lookup"><span data-stu-id="00cee-104">It can be `null` until an HTTP response is received.</span></span>
+<span data-ttu-id="e33e4-105">`HttpWebRequest._HttpResponse`는 <xref:System.Net.HttpWebResponse> http 요청의 http 응답 정보를 포함 하는입니다.</span><span class="sxs-lookup"><span data-stu-id="e33e4-105">`HttpWebRequest._HttpResponse` is an <xref:System.Net.HttpWebResponse> containing HTTP response details from an HTTP request.</span></span> <span data-ttu-id="e33e4-106">`null`HTTP 응답을 받을 때까지 가능 합니다.</span><span class="sxs-lookup"><span data-stu-id="e33e4-106">It can be `null` until an HTTP response is received.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="00cee-105">구문</span><span class="sxs-lookup"><span data-stu-id="00cee-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e33e4-107">구문</span><span class="sxs-lookup"><span data-stu-id="e33e4-107">Syntax</span></span>
   
 ```csharp  
 internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> <span data-ttu-id="00cee-106">필드는 `HttpWebRequest._HttpResponse` 내부이며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="00cee-106">The `HttpWebRequest._HttpResponse` field is internal and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="e33e4-108">`HttpWebRequest._HttpResponse`필드는 내부 필드 이며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e33e4-108">The `HttpWebRequest._HttpResponse` field is internal and not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="00cee-107">Microsoft는 어떠한 상황에서도 프로덕션 응용 프로그램에서 이 필드의 사용을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="00cee-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="e33e4-109">Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 필드를 사용 하는 것을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e33e4-109">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="00cee-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="00cee-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e33e4-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e33e4-110">Requirements</span></span>
 
-<span data-ttu-id="00cee-109">**네임스페이스:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="00cee-109">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="e33e4-111">**네임스페이스:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="e33e4-111">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="00cee-110">**어셈블리:** 시스템(시스템.dll)</span><span class="sxs-lookup"><span data-stu-id="00cee-110">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="e33e4-112">**어셈블리:** 시스템 (System.dll)</span><span class="sxs-lookup"><span data-stu-id="e33e4-112">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="00cee-111">**.NET 프레임워크 버전:** 2.0 부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00cee-111">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="e33e4-113">**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e33e4-113">**.NET Framework versions:** Available since 2.0.</span></span>

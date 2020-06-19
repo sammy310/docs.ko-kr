@@ -1,5 +1,6 @@
 ---
-title: 연결 인터페이스(adodb)
+title: 연결 인터페이스 (adodb)
+description: .NET의 연결 인터페이스에 대 한 참조 정보를 참조 하세요. 이 인터페이스는 adodb 네임 스페이스와 adodb 어셈블리 (adodb.dll 라이브러리)에 있습니다.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,14 +10,14 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: cb80fb7071398e07e1d86aa920fae1895ea34081
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1889715b6cd11746056558b76e21f6226d4161f
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989945"
 ---
-# <a name="connection-interface"></a><span data-ttu-id="45bd6-102">연결 인터페이스</span><span class="sxs-lookup"><span data-stu-id="45bd6-102">Connection Interface</span></span>
+# <a name="connection-interface"></a><span data-ttu-id="4c432-104">연결 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4c432-104">Connection Interface</span></span>
 
 ```csharp
 [GuidAttribute("00000550-0000-0010-8000-00AA006D2EA4")]
@@ -24,8 +25,8 @@ public interface Connection : _Connection,
   ConnectionEvents_Event
 ```
 
-## <a name="requirements"></a><span data-ttu-id="45bd6-103">요구 사항</span><span class="sxs-lookup"><span data-stu-id="45bd6-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="4c432-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c432-105">Requirements</span></span>
 
-<span data-ttu-id="45bd6-104">**네임스페이스:**`adodb`</span><span class="sxs-lookup"><span data-stu-id="45bd6-104">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="4c432-106">**네임스페이스:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="4c432-106">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="45bd6-105">**어셈블리:** adodb(adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="45bd6-105">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="4c432-107">**어셈블리:** adodb (adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="4c432-107">**Assembly:** adodb (in adodb.dll)</span></span>

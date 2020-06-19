@@ -1,5 +1,6 @@
 ---
 title: EventReason 열거형 (adodb)
+description: .NET의 EventReason 열거에 대 한 정보를 가져옵니다. 이 열거형은 adodb.dll 라이브러리의 adodb 네임 스페이스와 adodb 어셈블리에 있습니다.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,41 +10,41 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 0d02fb683335cf0db7d73d9d3ea545e65ca384a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbb616625777e0193af4da10770502da904f401a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989897"
 ---
-# <a name="eventreason-enumeration"></a><span data-ttu-id="92b3f-102">EventReason 열거형</span><span class="sxs-lookup"><span data-stu-id="92b3f-102">EventReason Enumeration</span></span>
+# <a name="eventreason-enumeration"></a><span data-ttu-id="e15d2-104">EventReason 열거형</span><span class="sxs-lookup"><span data-stu-id="e15d2-104">EventReason Enumeration</span></span>
 
 ```csharp
 [GuidAttribute("00000531-0000-0010-8000-00AA006D2EA4")]
 public enum EventReasonEnum
 ```
 
-## <a name="members"></a><span data-ttu-id="92b3f-103">멤버</span><span class="sxs-lookup"><span data-stu-id="92b3f-103">Members</span></span>
+## <a name="members"></a><span data-ttu-id="e15d2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e15d2-105">Members</span></span>
 
-| <span data-ttu-id="92b3f-104">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="92b3f-104">Member name</span></span>  | <span data-ttu-id="92b3f-105">설명</span><span class="sxs-lookup"><span data-stu-id="92b3f-105">Description</span></span>  |
+| <span data-ttu-id="e15d2-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="e15d2-106">Member name</span></span>  | <span data-ttu-id="e15d2-107">Description</span><span class="sxs-lookup"><span data-stu-id="e15d2-107">Description</span></span>  |
 |---|---|
-|<span data-ttu-id="92b3f-106">adRsnAddNew</span><span class="sxs-lookup"><span data-stu-id="92b3f-106">adRsnAddNew</span></span>  |   |
-|<span data-ttu-id="92b3f-107">adRsnDelete</span><span class="sxs-lookup"><span data-stu-id="92b3f-107">adRsnDelete</span></span>  |   |
-|<span data-ttu-id="92b3f-108">adRsnUpdate</span><span class="sxs-lookup"><span data-stu-id="92b3f-108">adRsnUpdate</span></span>  |   |
-|<span data-ttu-id="92b3f-109">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="92b3f-109">adRsnUndoUpdate</span></span>  |   |
-|<span data-ttu-id="92b3f-110">adRsnUndoAddNew</span><span class="sxs-lookup"><span data-stu-id="92b3f-110">adRsnUndoAddNew</span></span>  |   |
-|<span data-ttu-id="92b3f-111">adRsnUndoDelete</span><span class="sxs-lookup"><span data-stu-id="92b3f-111">adRsnUndoDelete</span></span>  |   |
-|<span data-ttu-id="92b3f-112">adRsnRequery</span><span class="sxs-lookup"><span data-stu-id="92b3f-112">adRsnRequery</span></span>  |   |
-|<span data-ttu-id="92b3f-113">adRsnResynch</span><span class="sxs-lookup"><span data-stu-id="92b3f-113">adRsnResynch</span></span>  |   |
-| <span data-ttu-id="92b3f-114">adRsnClose</span><span class="sxs-lookup"><span data-stu-id="92b3f-114">adRsnClose</span></span>  |   |
-| <span data-ttu-id="92b3f-115">adRsnMove</span><span class="sxs-lookup"><span data-stu-id="92b3f-115">adRsnMove</span></span>  |   |
-| <span data-ttu-id="92b3f-116">adRsnFirstChange</span><span class="sxs-lookup"><span data-stu-id="92b3f-116">adRsnFirstChange</span></span>  |   |
-| <span data-ttu-id="92b3f-117">adRsnMoveFirst</span><span class="sxs-lookup"><span data-stu-id="92b3f-117">adRsnMoveFirst</span></span>  |   |
-| <span data-ttu-id="92b3f-118">adRsnMovePrevious</span><span class="sxs-lookup"><span data-stu-id="92b3f-118">adRsnMovePrevious</span></span>  |   |
-| <span data-ttu-id="92b3f-119">adRsnMoveLast</span><span class="sxs-lookup"><span data-stu-id="92b3f-119">adRsnMoveLast</span></span>  |   |
+|<span data-ttu-id="e15d2-108">adRsnAddNew</span><span class="sxs-lookup"><span data-stu-id="e15d2-108">adRsnAddNew</span></span>  |   |
+|<span data-ttu-id="e15d2-109">adRsnDelete</span><span class="sxs-lookup"><span data-stu-id="e15d2-109">adRsnDelete</span></span>  |   |
+|<span data-ttu-id="e15d2-110">adRsnUpdate</span><span class="sxs-lookup"><span data-stu-id="e15d2-110">adRsnUpdate</span></span>  |   |
+|<span data-ttu-id="e15d2-111">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="e15d2-111">adRsnUndoUpdate</span></span>  |   |
+|<span data-ttu-id="e15d2-112">Adrsn를 위한 Addnew</span><span class="sxs-lookup"><span data-stu-id="e15d2-112">adRsnUndoAddNew</span></span>  |   |
+|<span data-ttu-id="e15d2-113">Adrsn제거</span><span class="sxs-lookup"><span data-stu-id="e15d2-113">adRsnUndoDelete</span></span>  |   |
+|<span data-ttu-id="e15d2-114">adRsnRequery</span><span class="sxs-lookup"><span data-stu-id="e15d2-114">adRsnRequery</span></span>  |   |
+|<span data-ttu-id="e15d2-115">adRsnResynch</span><span class="sxs-lookup"><span data-stu-id="e15d2-115">adRsnResynch</span></span>  |   |
+| <span data-ttu-id="e15d2-116">adRsnClose</span><span class="sxs-lookup"><span data-stu-id="e15d2-116">adRsnClose</span></span>  |   |
+| <span data-ttu-id="e15d2-117">adRsnMove</span><span class="sxs-lookup"><span data-stu-id="e15d2-117">adRsnMove</span></span>  |   |
+| <span data-ttu-id="e15d2-118">adRsnFirstChange</span><span class="sxs-lookup"><span data-stu-id="e15d2-118">adRsnFirstChange</span></span>  |   |
+| <span data-ttu-id="e15d2-119">adRsnMoveFirst</span><span class="sxs-lookup"><span data-stu-id="e15d2-119">adRsnMoveFirst</span></span>  |   |
+| <span data-ttu-id="e15d2-120">adRsnMovePrevious</span><span class="sxs-lookup"><span data-stu-id="e15d2-120">adRsnMovePrevious</span></span>  |   |
+| <span data-ttu-id="e15d2-121">adRsnMoveLast</span><span class="sxs-lookup"><span data-stu-id="e15d2-121">adRsnMoveLast</span></span>  |   |
 
-## <a name="requirements"></a><span data-ttu-id="92b3f-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="92b3f-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e15d2-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e15d2-122">Requirements</span></span>
 
-<span data-ttu-id="92b3f-121">**네임스페이스:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="92b3f-121">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="e15d2-123">**네임스페이스:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="e15d2-123">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="92b3f-122">**어셈블리:** adodb (에서 adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="92b3f-122">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="e15d2-124">**어셈블리:** adodb (adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="e15d2-124">**Assembly:** adodb (in adodb.dll)</span></span>
