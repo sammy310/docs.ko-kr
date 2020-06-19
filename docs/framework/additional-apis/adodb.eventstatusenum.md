@@ -1,5 +1,6 @@
 ---
 title: EventStatus 열거형 (adodb)
+description: .NET의 EventStatus 열거형에 대 한 정보를 가져옵니다. 이 열거형은 adodb.dll 라이브러리의 adodb 네임 스페이스와 adodb 어셈블리에 있습니다.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989848"
 ---
 # <a name="eventstatus-enumeration"></a>EventStatus 열거형
 
@@ -25,7 +26,7 @@ public enum EventStatusEnum
 
 ## <a name="members"></a>멤버
 
-| 멤버 이름  | 설명  |
+| 멤버 이름  | Description  |
 |---|---|
 |adStatusOK  |   |
 |adStatusErrorsOccurred  |   |
@@ -38,4 +39,4 @@ public enum EventStatusEnum
 
 **네임스페이스:** `adodb`
 
-**어셈블리:** adodb (에서 adodb.dll)
+**어셈블리:** adodb (adodb.dll)

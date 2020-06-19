@@ -1,5 +1,6 @@
 ---
 title: CoreResponseData 클래스
+description: HTTP 헤더 및 응답 본문의 구문 분석을 나타내는 CoreResponseData 클래스를 이해 합니다. .NET의 System.Net 네임 스페이스에 있습니다.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8248cc20f6528a1c3bc64c9b9339a3a3000d03a0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989803"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 클래스
 
-클래스는 `CoreResponseData` HTTP 헤더와 응답 본문의 구문 분석입니다.
+`CoreResponseData`클래스는 HTTP 헤더 및 응답 본문의 구문 분석을 나타냅니다.
 
 ## <a name="syntax"></a>구문
   
@@ -28,14 +29,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> 이 API는 내부이며 코드에서 직접 사용할 수 없습니다. 대신 에 를 <xref:System.Diagnostics.DiagnosticSource> 사용하여 네트워킹 코드를 연결해야 합니다. [진단 소스 사용자 가이드를](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)참조하십시오.
+> 이 API는 내부용 이며 코드에서 직접 사용할 수 없습니다. 대신를 사용 <xref:System.Diagnostics.DiagnosticSource> 하 여 네트워킹 코드를 후크 해야 합니다. [DiagnosticSource 사용자 가이드](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)를 참조 하세요.
 >
-> Microsoft는 어떠한 상황에서도 프로덕션 응용 프로그램에서 이 클래스의 사용을 지원하지 않습니다.
+> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 클래스를 사용 하는 것을 지원 하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:**<xref:System.Net>
+**네임스페이스:** <xref:System.Net>
 
-**어셈블리:** 시스템(시스템.dll)
+**어셈블리:** 시스템 (System.dll)
 
-**.NET 프레임워크 버전:** 2.0 부터 사용할 수 있습니다.
+**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.

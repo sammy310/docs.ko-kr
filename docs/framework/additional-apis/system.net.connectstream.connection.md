@@ -11,12 +11,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6200530ec9761438c8932803bf12c63c1445a37e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 374d53346c964c5f8135c7e121bd3a2db8a8fd7b
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989520"
 ---
 # <a name="connectstreamconnection-property"></a>ConnectStream 연결 속성
 
@@ -30,13 +30,14 @@ internal Connection Connection { get; }
 
 ## <a name="property-value"></a>속성 값
 
-`System.Net.Connection`  
-Connection 개체입니다.
+`System.Net.Connection`
 
-## <a name="remarks"></a>주의
+연결 개체입니다.
+
+## <a name="remarks"></a>설명
 
 > [!WARNING]
-> `ConnectStream.Connection` 속성은 내부 속성 이며 코드에서 직접 사용할 수 없습니다.
+> `ConnectStream.Connection`속성은 내부 속성 이며 코드에서 직접 사용할 수 없습니다.
 >
 > Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 속성을 사용 하는 것을 지원 하지 않습니다.
 
@@ -44,6 +45,6 @@ Connection 개체입니다.
 
 **네임스페이스:** <xref:System.Net>
 
-**어셈블리:** 시스템 (system.string)
+**어셈블리:** 시스템 (System.dll)
 
 **.NET Framework 버전:** 1.0부터 사용할 수 있습니다.
