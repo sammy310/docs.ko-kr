@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingProgressChanged 방법 (시스템.Windows.Xps)
+title: System.windows.xps.xpsdocumentwriter.writeasync 메서드 (raise__WritingProgressChanged)
+description: Raise__WritingProgressChanged System.windows.xps.xpsdocumentwriter.writeasync 메서드를 이해 합니다 .이 메서드는 .NET에서 XPS 문서에 대 한 WritingProgressChanged 이벤트를 발생 시킵니다.
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,36 +10,36 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: cceabb2b4b1fad68fdda44fea8172cb21319b4bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e012c0900a83e1adbf0ceaddeb91792598b4377
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155637"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105207"
 ---
-# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a><span data-ttu-id="be053-102">XpsDocumentWriter.raise\_\_쓰기진행 변경 된 방법</span><span class="sxs-lookup"><span data-stu-id="be053-102">XpsDocumentWriter.raise\_\_WritingProgressChanged Method</span></span>
+# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a><span data-ttu-id="ff60f-103">System.windows.xps.xpsdocumentwriter.writeasync \_ \_ WritingProgressChanged 메서드</span><span class="sxs-lookup"><span data-stu-id="ff60f-103">XpsDocumentWriter.raise\_\_WritingProgressChanged Method</span></span>
 
-<span data-ttu-id="be053-103"><xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="be053-103">Raises the <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> event.</span></span>
+<span data-ttu-id="ff60f-104"><xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="ff60f-104">Raises the <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> event.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="be053-104">구문</span><span class="sxs-lookup"><span data-stu-id="be053-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ff60f-105">구문</span><span class="sxs-lookup"><span data-stu-id="ff60f-105">Syntax</span></span>
 
 ```csharp
 public void raise__WritingProgressChanged (object value0,
   System.Windows.Documents.Serialization.WritingProgressChangedEventArgs value1);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="be053-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="be053-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ff60f-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ff60f-106">Parameters</span></span>
 
-- <span data-ttu-id="be053-106">`value0` <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="be053-106">`value0` <xref:System.Object></span></span>  
-  <span data-ttu-id="be053-107">이벤트의 원본입니다.</span><span class="sxs-lookup"><span data-stu-id="be053-107">The source of the event.</span></span>
+- <span data-ttu-id="ff60f-107">`value0` <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="ff60f-107">`value0` <xref:System.Object></span></span>  
+  <span data-ttu-id="ff60f-108">이벤트의 원본입니다.</span><span class="sxs-lookup"><span data-stu-id="ff60f-108">The source of the event.</span></span>
 
-- <span data-ttu-id="be053-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs></span><span class="sxs-lookup"><span data-stu-id="be053-108">`value1`  <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs></span></span>  
-  <span data-ttu-id="be053-109">이벤트 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="be053-109">The event data.</span></span>
+- <span data-ttu-id="ff60f-109">`value1`  <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs></span><span class="sxs-lookup"><span data-stu-id="ff60f-109">`value1`  <xref:System.Windows.Documents.Serialization.WritingProgressChangedEventArgs></span></span>  
+  <span data-ttu-id="ff60f-110">이벤트 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="ff60f-110">The event data.</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="be053-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="be053-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ff60f-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ff60f-111">Requirements</span></span>
 
-<span data-ttu-id="be053-111">**네임스페이스:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="be053-111">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="ff60f-112">**네임스페이스:** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="ff60f-112">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="be053-112">**어셈블리:** System.인쇄(system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="be053-112">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="ff60f-113">**어셈블리:** 시스템 인쇄 (system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="ff60f-113">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="be053-113">**.NET 프레임워크 버전:** 3.0</span><span class="sxs-lookup"><span data-stu-id="be053-113">**.NET Framework versions:** 3.0</span></span>
+<span data-ttu-id="ff60f-114">**.NET Framework 버전:** 3.0</span><span class="sxs-lookup"><span data-stu-id="ff60f-114">**.NET Framework versions:** 3.0</span></span>
