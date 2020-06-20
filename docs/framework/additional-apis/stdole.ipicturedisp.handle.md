@@ -1,5 +1,6 @@
 ---
-title: IPictureDisp.Handle 속성 (stdole)
+title: IPictureDisp 속성 (stdole)
+description: .NET의 IPictureDisp 속성에 대해 읽어 보십시오. 이 속성은 stdole 네임 스페이스 및 stdole 어셈블리 (stdole.dll 라이브러리)에 있습니다.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,12 +11,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634415"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105312"
 ---
 # <a name="ipicturedisphandle-property"></a>IPictureDisp.Handle 속성
 
@@ -31,4 +32,4 @@ int Handle { get; }
 
 **네임스페이스:** `stdole`
 
-**어셈블리:** stdole (에서 stdole.dll)
+**어셈블리:** stdole (stdole.dll)

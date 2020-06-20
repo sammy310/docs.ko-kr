@@ -1,5 +1,6 @@
 ---
 title: IFontDisp 인터페이스 (stdole)
+description: .NET의 IFontDisp 인터페이스에 대 한 참조 정보를 참조 하세요. 이 인터페이스는 stdole 네임 스페이스 및 stdole 어셈블리 (stdole.dll 라이브러리)에 있습니다.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,14 +10,14 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 82d487b599401188f42d6a4dc6856030d5a2eef6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2e955997c66dc4db0de804ee6eded02735a3276
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675262"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105329"
 ---
-# <a name="ipicturefont-interface"></a>IPictureFont 인터페이스
+# <a name="ifontdisp-interface"></a>IFontDisp 인터페이스
 
 ```csharp
 [GuidAttribute("BEF6E003-A874-101A-8BBA-00AA00300CAB")]
@@ -28,4 +29,4 @@ public interface IFontDisp
 
 **네임스페이스:** `stdole`
 
-**어셈블리:** stdole (에서 stdole.dll)
+**어셈블리:** stdole (stdole.dll)

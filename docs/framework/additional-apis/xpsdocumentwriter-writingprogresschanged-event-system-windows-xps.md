@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter._WritingProgressChanged 이벤트 (시스템.Windows.Xps)
+title: System.windows.xps.xpsdocumentwriter.writeasync 이벤트 (_WritingProgressChanged)
+description: System.windows.xps.xpsdocumentwriter.writeasync 이벤트를 검토 합니다 .이 이벤트는 XPS (XML Paper Specification) 문서 작성자가 .NET에서 진행률을 업데이트할 때 발생 합니다 _WritingProgressChanged.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,14 +12,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a54f1fbc04d7f1ada6bf893f2e8bfb9d98d372df
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155585"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105036"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>XpsDocumentWriter. \_쓰기진행 변경된 이벤트
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>System.windows.xps.xpsdocumentwriter.writeasync. \_ WritingProgressChanged 이벤트
 
 <xref:System.Windows.Xps.XpsDocumentWriter>가 진행률을 업데이트할 때 발생합니다.
 
@@ -30,8 +31,8 @@ internal event WritingProgressChangedEventHandler _WritingProgressChanged
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:**<xref:System.Windows.Xps>
+**네임스페이스:** <xref:System.Windows.Xps>
 
-**어셈블리:** System.인쇄(system.printing.dll)
+**어셈블리:** 시스템 인쇄 (system.printing.dll)
 
-**.NET 프레임워크 버전:** 3.0 이후 사용 가능
+**.NET Framework 버전:** 3.0부터 사용할 수 있음

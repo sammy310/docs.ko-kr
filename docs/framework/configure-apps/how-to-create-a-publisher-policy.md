@@ -1,5 +1,6 @@
 ---
 title: '방법: 게시자 정책 만들기'
+description: 어셈블리 공급 업체가 .NET에서 업그레이드 된 어셈블리를 사용 하 여 게시자 정책 파일을 만드는 방법에 대해 알아봅니다. 그러면 응용 프로그램에서 최신 버전을 사용 해야 규정.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 23e9d8144ec5742e0371d566b7af59dc9dd30c9b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646050"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105399"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 
@@ -49,7 +50,7 @@ ms.locfileid: "81646050"
 
 ## <a name="creating-the-publisher-policy-assembly"></a>게시자 정책 어셈블리 만들기
 
-[어셈블리 링커 (al.exe)](../tools/al-exe-assembly-linker.md) 를 사용 하 여 게시자 정책 어셈블리를 만듭니다.
+[어셈블리 링커 (Al.exe)](../tools/al-exe-assembly-linker.md) 를 사용 하 여 게시자 정책 어셈블리를 만듭니다.
 
 #### <a name="to-create-a-publisher-policy-assembly"></a>게시자 정책 어셈블리를 만들려면
 
@@ -65,7 +66,7 @@ al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFi
 
 - `publisherPolicyAssemblyFile`인수는이 명령에서 생성 되는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름은 다음 형식을 따라야 합니다.
 
-  ' majorNumber. minorNumber '
+  'policy.majorNumber.minorNumber.mainAssemblyName.dll '
 
 - `keyPairFile`인수는 키 쌍을 포함 하는 파일의 이름입니다. 동일한 키 쌍을 사용 하 여 어셈블리 및 게시자 정책 어셈블리에 서명 해야 합니다.
 
@@ -88,7 +89,7 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 
 ## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>전역 어셈블리 캐시에 게시자 정책 어셈블리 추가
 
-전역 [어셈블리 캐시 도구 (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 를 사용 하 여 전역 어셈블리 캐시에 게시자 정책 어셈블리를 추가 합니다.
+전역 어셈블리 캐시 [도구 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 를 사용 하 여 전역 어셈블리 캐시에 게시자 정책 어셈블리를 추가 합니다.
 
 ### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>전역 어셈블리 캐시에 게시자 정책 어셈블리를 추가 하려면
 

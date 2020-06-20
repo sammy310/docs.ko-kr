@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingCompleted 방법 (시스템.Windows.Xps)
+title: System.windows.xps.xpsdocumentwriter.writeasync 메서드 (raise__WritingCompleted)
+description: .NET의 XPS (XML Paper Specification) 문서에 대 한 WritingCompleted 이벤트를 발생 시키는 raise__WritingCompleted System.windows.xps.xpsdocumentwriter.writeasync 메서드를 이해 합니다.
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,14 +11,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287fa2286c7acd5061672453c5be11c3ff34ca80
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155676"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105237"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_쓰기 완료 된 방법
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>System.windows.xps.xpsdocumentwriter.writeasync \_ \_ writingcompleted 메서드
 
 <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> 이벤트를 발생시킵니다.
 
@@ -38,8 +39,8 @@ public void raise__WritingCompleted (object value0,
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:**<xref:System.Windows.Xps>
+**네임스페이스:** <xref:System.Windows.Xps>
 
-**어셈블리:** System.인쇄(system.printing.dll)
+**어셈블리:** 시스템 인쇄 (system.printing.dll)
 
-**.NET 프레임워크 버전:** 3.0
+**.NET Framework 버전:** 3.0
