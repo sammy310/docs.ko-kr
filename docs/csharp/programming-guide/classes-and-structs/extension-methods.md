@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241411"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803183"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 
@@ -80,7 +80,7 @@ System.Core.dll에 대한 참조를 추가해야 할 수도 있습니다. 이제
 
 양파형 아키텍처 또는 다른 계층화된 애플리케이션 디자인을 사용하는 경우 애플리케이션 경계에서 통신하는 데 사용할 수 있는 도메인 엔터티 또는 데이터 전송 개체의 집합을 사용하는 것이 일반적입니다. 이러한 개체는 일반적으로 아무 기능이 없거나 애플리케이션의 모든 레이어에 적용되는 기능만 포함합니다. 확장 메서드를 사용하여 다른 레이어에서 필요하지 않은 메서드를 사용하여 개체를 로드하지 않고 각 애플리케이션 레이어와 관련된 기능을 추가할 수 있습니다.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

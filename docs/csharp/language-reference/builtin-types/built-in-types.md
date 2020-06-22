@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3366f718cd83a28f475fae9b4e65ce37fe7d8c7b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389488"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803196"
 ---
 # <a name="built-in-types-c-reference"></a>기본 제공 형식(C# 참조)
 
@@ -39,6 +39,7 @@ ms.locfileid: "81389488"
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
+|[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
 이전 표에서 왼쪽 열의 각 C# 형식 키워드는 해당하는 .NET 형식의 별칭입니다. 서로 교환하여 사용할 수 있습니다. 예를 들어 다음 선언은 동일한 형식의 변수를 선언합니다.
 
@@ -53,4 +54,3 @@ System.Int32 b = 123;
 
 - [C# 참조](../index.md)
 - [C# 형식의 기본값](default-values.md)
-- [`dynamic` 키워드](reference-types.md#the-dynamic-type)
