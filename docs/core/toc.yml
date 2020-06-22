@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,25 +405,25 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'C# 단위 테스트'
+          - name: C# 단위 테스트
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'F# 단위 테스트'
+          - name: F# 단위 테스트
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: VB 단위 테스트
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'C# 단위 테스트'
+          - name: C# 단위 테스트
             href: testing/unit-testing-with-nunit.md
-          - name: 'F# 단위 테스트'
+          - name: F# 단위 테스트
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: VB 단위 테스트
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'C# 단위 테스트'
+          - name: C# 단위 테스트
             href: testing/unit-testing-with-mstest.md
-          - name: 'F# 단위 테스트'
+          - name: F# 단위 테스트
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: VB 단위 테스트
             href: testing/unit-testing-visual-basic-with-mstest.md
@@ -429,6 +431,8 @@ items:
         href: testing/selective-unit-tests.md
       - name: 단위 테스트 순서 지정
         href: testing/order-unit-tests.md
+      - name: 단위 테스트 코드 검사
+        href: testing/unit-testing-code-coverage.md
       - name: 게시된 출력 단위 테스트
         href: testing/unit-testing-published-output.md
       - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
