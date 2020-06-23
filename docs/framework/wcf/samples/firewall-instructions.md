@@ -1,13 +1,14 @@
 ---
 title: 방화벽 지침
+description: WCF 샘플에 대 한 방화벽에서 포트 또는 프로그램을 사용 하도록 설정 하는 방법을 알아봅니다. 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 사용 합니다.
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 343fa695039f6767f6ab33daa4e3cc51e8db5e47
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: de55d067960b8f2096c129f6feaf037219e06a96
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899650"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246144"
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
 
@@ -28,14 +29,14 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
 
 1. 샘플을 빌드합니다.
 
-2. **시작** > **실행**을 선택 하 고 `firewall.cpl`을 입력 합니다. 그러면 **Windows 방화벽 제어판** 애플릿이 열립니다.
+2. **시작**  >  **실행**을 선택 하 고을 입력 `firewall.cpl` 합니다. 그러면 **Windows 방화벽 제어판** 애플릿이 열립니다.
 
     > [!NOTE]
     > Windows 방화벽을 통해 통신할 수 있어야 하는 샘플을 실행하려면 방화벽 설정을 변경할 수 있는 권한이 있어야 합니다. 일부 방화벽 설정을 사용할 수 없고 컴퓨터가 도메인에 연결되어 있는 경우 시스템 관리자가 그룹 정책을 통해 이러한 설정을 제어할 수 있습니다.
 
 3. Windows 방화벽을 통해 프로그램을 허용 하는 다음과 같은 운영 관련 단계 중 하나를 완료 합니다.
 
-    - Windows 7 또는 Windows Server 2008 r 2에서 **Windows 방화벽을 통해 프로그램 또는 기능 허용**을 클릭 합니다. **다른 프로그램 허용** > **설정 변경** 을 클릭 합니다.
+    - Windows 7 또는 Windows Server 2008 r 2에서 **Windows 방화벽을 통해 프로그램 또는 기능 허용**을 클릭 합니다. **설정 변경**  >  **다른 프로그램 허용**을 클릭 합니다.
 
     - Windows Vista 또는 Windows Server 2008에서 **Windows 방화벽을 통해 프로그램 허용**을 클릭 합니다.
 
@@ -49,7 +50,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
 
 ## <a name="enable-a-port-range-in-advance"></a>포트 범위를 미리 사용 하도록 설정
 
-1. **시작** > **실행**을 선택 하 고 `firewall.cpl`을 입력 합니다. 그러면 **Windows 방화벽 제어판** 애플릿이 열립니다.
+1. **시작**  >  **실행**을 선택 하 고을 입력 `firewall.cpl` 합니다. 그러면 **Windows 방화벽 제어판** 애플릿이 열립니다.
 
 2. Windows 7 또는 Windows Server 2008 R2의 경우 다음 단계를 따릅니다.
 
@@ -61,7 +62,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
 
     4. **포트** 를 선택 하 고 **다음**을 클릭 합니다.
 
-    5. **TCP** 를 선택 하 고 **특정 로컬 포트** 필드에 `8000, 8001, 8002, 8003, 9000, 80, 443`을 입력 합니다.
+    5. **TCP** 를 선택 하 고 `8000, 8001, 8002, 8003, 9000, 80, 443` **특정 로컬 포트** 필드에를 입력 합니다.
 
     6. **다음**을 클릭합니다.
 
@@ -69,7 +70,7 @@ WCF (Windows Communication Foundation) 샘플이 작동할 수 있도록 방화�
 
     8. **도메인** 및 **개인**을 선택 하 고 **다음**을 클릭 합니다.
 
-    9. 이 규칙의 이름을 `WCF-WF 4.0 Samples`하 고 **마침**을 클릭 합니다.
+    9. 이 규칙 `WCF-WF 4.0 Samples` 의 이름을로, **마침**을 클릭 합니다.
 
     10. **아웃 바운드 규칙** 을 클릭 하 고 c ~ h 단계를 반복 합니다.
 

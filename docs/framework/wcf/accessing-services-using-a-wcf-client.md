@@ -1,5 +1,6 @@
 ---
 title: WCF 클라이언트를 사용하여 서비스 액세스
+description: WCF 서비스에 대 한 WCF 클라이언트 프록시를 만드는 방법에 대해 알아봅니다. 클라이언트 응용 프로그램은 클라이언트 프록시를 사용 하 여 서비스와 통신 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72316539"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245546"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 
@@ -26,10 +27,10 @@ ms.locfileid: "72316539"
 
 3. WCF 클라이언트 프록시를 인스턴스화합니다.
 
-WCF 클라이언트 프록시는 서비스 모델 메타 데이터 유틸리티 도구 (Svcutil.exe)를 사용 하 여 수동으로 생성할 수 있습니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)를 참조 하세요. WCF 클라이언트 프록시는 **서비스 참조 추가** 기능을 사용 하 여 Visual Studio 내에서 생성할 수도 있습니다. 어떤 방법으로 WCF 클라이언트 프록시를 생성하더라도 서비스가 실행되고 있어야 합니다. 자체 호스팅 서비스의 경우 호스트를 실행해야 합니다. 서비스가 IIS/WAS에서 호스트되는 경우에는 별도의 작업이 필요하지 않습니다.
+WCF 클라이언트 프록시는 서비스 모델 메타 데이터 유틸리티 도구 (SvcUtil.exe)를 사용 하 여 수동으로 생성할 수 있습니다. 자세한 내용은 [ServiceModel Metadata Utility tool (Svcutil.exe) (영문)](servicemodel-metadata-utility-tool-svcutil-exe.md)을 참조 하십시오. WCF 클라이언트 프록시는 **서비스 참조 추가** 기능을 사용 하 여 Visual Studio 내에서 생성할 수도 있습니다. 어떤 방법으로 WCF 클라이언트 프록시를 생성하더라도 서비스가 실행되고 있어야 합니다. 자체 호스팅 서비스의 경우 호스트를 실행해야 합니다. 서비스가 IIS/WAS에서 호스트되는 경우에는 별도의 작업이 필요하지 않습니다.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata 유틸리티 도구
- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 는 메타 데이터에서 코드를 생성 하는 명령줄 도구입니다. 다음 사용은 기본 Svcutil.exe 명령 예제입니다.
+ [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 는 메타 데이터에서 코드를 생성 하는 명령줄 도구입니다. 다음 사용은 기본 Svcutil.exe 명령 예제입니다.
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -56,7 +57,7 @@ Svcutil.exe <file1 [,file2]>
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio의 서비스 참조 추가
 
- 서비스를 실행 하는 동안 WCF 클라이언트 프록시를 포함할 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  > **서비스 참조** **추가** 를 선택 합니다. **서비스 참조 추가 대화 상자**에서 호출 하려는 서비스에 대 한 URL을 입력 하 고 **이동** 단추를 클릭 합니다. 대화 상자에 지정한 주소에서 사용할 수 있는 서비스 목록이 표시됩니다. 서비스를 두 번 클릭 하 여 사용할 수 있는 계약 및 작업을 확인 하 고 생성 된 코드의 네임 스페이스를 지정한 다음 **확인** 단추를 클릭 합니다.
+ 서비스를 실행 하는 동안 WCF 클라이언트 프록시를 포함할 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **서비스 참조**추가를 선택 합니다. **서비스 참조 추가 대화 상자**에서 호출 하려는 서비스에 대 한 URL을 입력 하 고 **이동** 단추를 클릭 합니다. 대화 상자에 지정한 주소에서 사용할 수 있는 서비스 목록이 표시됩니다. 서비스를 두 번 클릭 하 여 사용할 수 있는 계약 및 작업을 확인 하 고 생성 된 코드의 네임 스페이스를 지정한 다음 **확인** 단추를 클릭 합니다.
 
 ## <a name="example"></a>예제
  다음 코드 예제에서는 서비스에 대해 만들어진 서비스 계약을 보여 줍니다.
@@ -176,7 +177,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>클라이언트에서 Throw된 예외 디버깅
 
-WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인해 발생 합니다. 다음은 이를 보여 주는 몇 가지 예입니다.
+WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인해 발생 합니다. 몇 가지 예는 다음과 같습니다.
 
 - <xref:System.Net.Sockets.SocketException>: 기존 연결이 원격 호스트에 의해 강제로 닫혔습니다.
 
@@ -186,7 +187,7 @@ WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인�
 
 이러한 형식의 예외가 발생할 때 가장 좋은 문제 해결 방법은 서비스측에 추적 기능을 설정하고 발생한 예외를 확인하는 것입니다. 추적에 대 한 자세한 내용은 추적 및 [사용 하 여 응용 프로그램 문제 해결](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)을 [참조 하세요.](./diagnostics/tracing/index.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 클라이언트 만들기](how-to-create-a-wcf-client.md)
 - [방법: 이중 계약을 사용하여 서비스 액세스](./feature-details/how-to-access-services-with-a-duplex-contract.md)
@@ -194,6 +195,6 @@ WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인�
 - [방법: 단방향 및 요청-회신 계약을 사용하여 서비스 액세스](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
 - [방법: WSE 3.0 서비스 액세스](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [생성된 클라이언트 코드 이해](./feature-details/understanding-generated-client-code.md)
-- [방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 개선](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [클라이언트 런타임 동작 지정](specifying-client-run-time-behavior.md)
 - [클라이언트 동작 구성](configuring-client-behaviors.md)

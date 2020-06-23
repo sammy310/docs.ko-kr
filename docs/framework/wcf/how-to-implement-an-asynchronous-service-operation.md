@@ -1,16 +1,17 @@
 ---
 title: '방법: 비동기 서비스 작업 구현'
+description: WFC에서 비동기 서비스 작업의 구조에 대해 알아봅니다. 서비스 작업은 비동기식으로 또는 동기식으로 구현할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: fd7a1399dd575ad1a4b6c95e0e0510670eb13b51
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5f890bd5124e2353cecee37d163b7f2c65b87fde
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802301"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244623"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>방법: 비동기 서비스 작업 구현
 WCF (Windows Communication Foundation) 응용 프로그램에서 클라이언트를 호출 하는 방법을 받아쓰기 하지 않고도 서비스 작업을 비동기적으로 또는 동기적으로 구현할 수 있습니다. 예를 들어 비동기 서비스 작업을 동기적으로 호출할 수 있으며 동기 서비스 작업을 비동기적으로 호출할 수 있습니다. 클라이언트 응용 프로그램에서 작업을 비동기적으로 호출 하는 방법을 보여 주는 예제는 [방법: 비동기적으로 서비스 작업 호출](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)을 참조 하세요. 동기 및 비동기 작업에 대 한 자세한 내용은 [서비스 계약 디자인](designing-service-contracts.md) 및 [동기 및 비동기 작업](synchronous-and-asynchronous-operations.md)을 참조 하세요. 이 항목에서는 비동기 서비스 작업의 기본 구조에 대해 설명하지만 코드가 완성되지 않았습니다. 서비스 및 클라이언트 쪽의 전체 예제는 [비동기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))를 참조 하세요.  
@@ -38,14 +39,14 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 클라이언트
   
     2. 비동기 `BeginSampleMethod` 작업.  
   
-    3. 작업 쌍 `EndServiceAsyncMethod` 비동기 `BeginServiceAsyncMethod`/입니다.  
+    3. 비동기 `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` 작업 쌍입니다.  
   
 2. <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 서비스 구현.  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [서비스 계약 디자인](designing-service-contracts.md)
 - [동기 및 비동기 작업](synchronous-and-asynchronous-operations.md)

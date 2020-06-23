@@ -1,13 +1,14 @@
 ---
 title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
+description: IIS에서 호스트 되는 WCF 서비스를 개발 하 고 배포 하는 데 필요한 작업에 대해 알아봅니다. 구성 요소 설치를 확인 하는 것부터 시작 합니다.
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 826a8798ada8f04173b047dc27829c384f79e2b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599245"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245095"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -35,7 +36,7 @@ IIS에서 호스팅되는 WCF 서비스가 올바르게 작동 하려면 WCF, II
 
 IIS가 컴퓨터에 이미 있는 경우 .NET Framework 설치 프로세스에서 자동으로 WCF를 IIS에 등록 합니다. .NET Framework 후 IIS가 설치 된 경우에는 IIS 및 ASP.NET를 사용 하 여 WCF를 등록 하려면 추가 단계가 필요 합니다. 이러한 작업을 수행하려면 운영 체제에 따라 다음과 같이 하십시오.
 
-- Windows 7 및 Windows Server 2003: [ServiceModel 등록 도구 (servicemodelreg.exe)](../servicemodelreg-exe.md) 도구를 사용 하 여 WCF를 IIS에 등록 합니다. 이 도구를 사용 하려면 [Visual Studio 용 개발자 명령 프롬프트](../../tools/developer-command-prompt-for-vs.md)에 **servicemodelreg.exe/i/x** 를 입력 합니다.
+- Windows 7 및 Windows Server 2003: [ServiceModel 등록 도구 (ServiceModelReg.exe)](../servicemodelreg-exe.md) 도구를 사용 하 여 WCF를 IIS에 등록 합니다. 이 도구를 사용 하려면 [Visual Studio 용 개발자 명령 프롬프트](../../tools/developer-command-prompt-for-vs.md)에서 **ServiceModelReg.exe/i/x** 를 입력 합니다.
 
 - Windows 7: 마지막으로 ASP.NET가 .NET Framework 버전 4 이상을 사용 하도록 구성 되어 있는지 확인 해야 합니다. 옵션으로 ASPNET_Regiis 도구를 실행 하 여이 작업을 수행할 수 있습니다 `–i` . 자세한 내용은 [ASP.NET IIS 등록 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 참조 하세요.
 
@@ -75,7 +76,7 @@ ASP.NET 2.0 컴파일 모델에 대 한 자세한 내용은 [ASP.NET 컴파일 �
 
 ## <a name="configure-the-wcf-service"></a>WCF 서비스 구성
 
-IIS에서 호스팅되는 WCF 서비스는 해당 구성을 응용 프로그램 Web.config 파일에 저장 합니다. IIS에서 호스팅되는 서비스는 IIS 외부에서 호스팅되는 WCF 서비스와 동일한 구성 요소 및 구문을 사용 합니다. 그러나 다음 제약 조건은 IIS 호스팅 환경에만 적용됩니다.
+IIS에서 호스팅되는 WCF 서비스는 응용 프로그램 Web.config 파일에 구성을 저장 합니다. IIS에서 호스팅되는 서비스는 IIS 외부에서 호스팅되는 WCF 서비스와 동일한 구성 요소 및 구문을 사용 합니다. 그러나 다음 제약 조건은 IIS 호스팅 환경에만 적용됩니다.
 
 - IIS에서 호스팅되는 서비스의 기본 주소
 

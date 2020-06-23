@@ -1,16 +1,17 @@
 ---
 title: Serialization 및 Deserialization
+description: .NET Framework 개체와 XML을 양방향으로 변환 하는 WCF serialization 엔진에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 8d62fe1cb646bfa00f3fd2e694f08d9fed297bc2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600427"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244909"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인가 포함 되어 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  

@@ -1,16 +1,17 @@
 ---
-title: '방법: 관리되는 애플리케이션에서 WCF 서비스 호스팅'
+title: '방법: 관리형 애플리케이션에서 WCF 서비스 호스트'
+description: 자체 호스팅 서비스를 만들고 테스트 하 여 관리 되는 응용 프로그램 내에서 WCF 서비스를 호스트 하는 방법에 대해 알아봅니다.
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320973"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246170"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅
 
@@ -28,11 +29,11 @@ ms.locfileid: "72320973"
 
 1. 새 콘솔 응용 프로그램을 만듭니다.
 
-   1. Visual Studio를 열고 **파일** 메뉴에서 **새로 만들기**  > **프로젝트** 를 선택 합니다.
+   1. Visual Studio를 열고 **New**  >  **파일** 메뉴에서 새**프로젝트** 를 선택 합니다.
 
-   2. **설치 된 템플릿** 목록에서  **C# 시각적 개체** 또는 **Visual Basic**을 선택한 다음 **Windows 데스크톱**을 선택 합니다.
+   2. **설치 된 템플릿** 목록에서 **Visual c #** 또는 **Visual Basic**을 선택한 다음 **Windows 데스크톱**을 선택 합니다.
 
-   3. **콘솔 앱** 템플릿을 선택 합니다. **이름** 상자에 `SelfHost`를 입력 한 다음 **확인을**선택 합니다.
+   3. **콘솔 앱** 템플릿을 선택 합니다. `SelfHost` **이름** 상자에를 입력 한 다음 **확인을**선택 합니다.
 
 2. **솔루션 탐색기** 에서 **SelfHost** 을 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **.Net** 탭에서 **system.servicemodel** 을 선택 하 고 **확인**을 선택 합니다.
 
@@ -65,20 +66,20 @@ ms.locfileid: "72320973"
     > [!NOTE]
     > 이 예제에서는 기본 엔드포인트를 사용하며, 이 서비스에는 구성 파일이 필요하지 않습니다. 엔드포인트를 구성하지 않으면 런타임이 서비스에서 구현되는 각 서비스 계약의 각 기본 주소에 대해 엔드포인트를 하나씩 만듭니다. 기본 끝점에 대 한 자세한 내용은 [WCF 서비스에 대 한](./samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.
 
-7. **Ctrl** +**shift** +**B** 를 눌러 솔루션을 빌드합니다.
+7. **Ctrl** + **Shift** + **B** 를 눌러 솔루션을 빌드합니다.
 
 ## <a name="test-the-service"></a>서비스 테스트
 
-1. **Ctrl** +**f5** 키를 눌러 서비스를 실행 합니다.
+1. **Ctrl** + **F5** 를 눌러 서비스를 실행 합니다.
 
 2. **WCF 테스트 클라이언트**를 엽니다.
 
     > [!TIP]
-    > **WCF 테스트 클라이언트**를 열려면 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 **wcftestclient.exe**를 실행 합니다.
+    > **WCF 테스트 클라이언트**를 열려면 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 **WcfTestClient.exe**를 실행 합니다.
 
 3. **파일** 메뉴에서 **서비스 추가** 를 선택 합니다.
 
-4. 주소 상자에 `http://localhost:8080/hello`을 입력 하 고 **확인을**클릭 합니다.
+4. `http://localhost:8080/hello`주소 상자에를 입력 하 고 **확인을**클릭 합니다.
 
     > [!TIP]
     > 서비스가 실행 중인지 확인하십시오. 그렇지 않으면 이 단계는 실패합니다. 코드에서 기본 주소를 변경한 경우에는 이 단계에서 수정된 기본 주소를 사용하십시오.
@@ -94,12 +95,12 @@ ms.locfileid: "72320973"
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [방법: IIS에서 WCF 서비스 호스트](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: IIS에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [자체 호스팅](./samples/self-host.md)
 - [서비스 호스팅](hosting-services.md)
 - [방법: 서비스 계약 정의](how-to-define-a-wcf-service-contract.md)

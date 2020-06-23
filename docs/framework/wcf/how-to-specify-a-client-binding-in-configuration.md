@@ -1,26 +1,27 @@
 ---
 title: '방법: 구성에서 클라이언트 바인딩 지정'
+description: 구성 파일에서 WCF 클라이언트에 대 한 바인딩을 선언적으로 지정 하는 방법에 대해 알아봅니다. 클라이언트는이 예제에서 서비스에 액세스 합니다.
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 574f56173c2acfcf41a5e9a9e99abe45281e3636
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28778b6ae853199c5d7943f329bb087760f4bb11
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184045"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244493"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>방법: 구성에서 클라이언트 바인딩 지정
 이 예제에서는 계산기 서비스를 사용할 클라이언트 콘솔 애플리케이션을 만들고 해당 클라이언트에 대한 바인딩을 구성에 선언적으로 지정합니다. 클라이언트는 `CalculatorService` 인터페이스를 구현하는 `ICalculator`에 액세스하고, 서비스 및 클라이언트 모두 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용합니다.  
   
- 설명된 프로시저에서는 계산기 서비스를 실행 중인 것으로 간주합니다. 서비스를 빌드하는 방법에 대한 자세한 내용은 [구성에서 서비스 바인딩 지정 방법을](how-to-specify-a-service-binding-in-configuration.md)참조하십시오. 또한 WCF(Windows 통신 [재단)가 제공하는 ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)를](servicemodel-metadata-utility-tool-svcutil-exe.md) 사용하여 클라이언트 구성 요소를 자동으로 생성합니다. 도구는 서비스 액세스를 위해 클라이언트 코드 및 구성을 생성합니다.  
+ 설명된 프로시저에서는 계산기 서비스를 실행 중인 것으로 간주합니다. 서비스를 빌드하는 방법에 대 한 자세한 내용은 [방법: 구성에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-configuration.md)을 참조 하세요. 또한 WCF (Windows Communication Foundation)에서 제공 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트 구성 요소를 자동으로 생성 합니다. 도구는 서비스 액세스를 위해 클라이언트 코드 및 구성을 생성합니다.  
   
  클라이언트는 두 가지 부분에 빌드됩니다. Svcutil.exe는 `ClientCalculator` 인터페이스를 구현하는 `ICalculator`를 생성합니다. 그런 다음 `ClientCalculator`의 인스턴스를 생성하여 이 클라이언트 애플리케이션을 구성합니다.  
   
- 일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 배포된 서비스에 대한 바인딩 및 주소는 일반적으로 서비스가 개발되는 동안 사용되는 바인딩 및 주소와 다르기 때문에 코드에서 끝점을 정의하는 것은 실용적이지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
+ 일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 일반적으로 배포 된 서비스에 대 한 바인딩 및 주소가 서비스를 개발 하는 동안 사용 된 것과 다르기 때문에 일반적으로 코드에서 끝점을 정의 하는 것은 실용적이 지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
   
- [구성 편집기 도구(SvcConfigEditor.exe)를](configuration-editor-tool-svcconfigeditor-exe.md)사용하여 다음 구성 단계를 모두 수행할 수 있습니다.  
+ [구성 편집기 도구 (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여 다음 구성 단계를 모두 수행할 수 있습니다.  
   
- 이 예제의 소스 복사본은 [BasicBinding](./samples/basicbinding.md) 샘플을 참조하십시오.  
+ 이 예제의 소스 복사에 대해서는 [Basicbinding](./samples/basicbinding.md) 샘플을 참조 하세요.  
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>구성에서 클라이언트 바인딩 지정  
   
@@ -40,7 +41,7 @@ ms.locfileid: "79184045"
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4. 또한 Svcutil.exe는 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하는 클라이언트의 구성도 생성합니다. Visual Studio를 사용하는 경우 이 파일 App.config의 이름을 지정합니다. 주소 및 바인딩 정보는 서비스 구현 내에서 지정되지 않습니다. 또한 구성 파일에서 해당 정보를 검색하기 위해 코드를 쓰지 않아도 됩니다.  
+4. 또한 Svcutil.exe는 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하는 클라이언트의 구성도 생성합니다. Visual Studio를 사용 하는 경우이 파일의 이름을 App.config로 합니다. 주소 및 바인딩 정보는 서비스 구현 내에서 지정 되지 않습니다. 또한 구성 파일에서 해당 정보를 검색하기 위해 코드를 쓰지 않아도 됩니다.  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]
 

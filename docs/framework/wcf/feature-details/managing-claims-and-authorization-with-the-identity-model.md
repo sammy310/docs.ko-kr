@@ -1,5 +1,6 @@
 ---
 title: ID 모델을 사용하여 클레임 및 권한 부여 관리
+description: 권한 부여를 수행 하기 위한 클레임 기반 모델인 WCF Id 모델에 대 한 주요 프로그래밍 개념에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586353"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245130"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
 권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. WCF (Windows Communication Foundation)는 권한 부여 처리를 수행 하는 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 *Id 모델*이라고 하는 클레임 기반 모델입니다. WCF는 Id 모델을 사용 하 여 들어오는 메시지에서 클레임을 만듭니다. Id 모델 클래스는 사용자 지정 권한 부여 체계의 새 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
@@ -75,7 +76,7 @@ ms.locfileid: "84586353"
 ## <a name="claims"></a>클레임  
  ID 모델은 클레임을 기반으로 하는 시스템입니다. 클레임은 시스템의 일부 엔터티와 연결 된 기능을 설명 하며,이는 해당 시스템의 사용자 일 수도 있습니다. 지정 된 엔터티와 연결 된 클레임 집합을 키로 간주할 수 있습니다. 특정 클레임은 이와 같은 열쇠의 모양을 정의합니다. 클레임은 리소스에 대한 액세스 권한을 얻는 데 사용됩니다. 보호된 리소스에 대한 액세스 권한은 해당 리소스에 액세스하는 데 필요한 클레임과 액세스를 시도하는 엔터티와 관련된 클레임을 비교하여 확인됩니다.  
   
- 클레임은 특정 값을 기준으로 하는 오른쪽의 식입니다. "Read", "Write" 또는 "Execute" 등이 권한에 해당하며 값은 데이터베이스, 파일, 사서함 또는 속성이 될 수 있습니다. 클레임 유형도 클레임 유형입니다. 클레임 형식과 권한을 조합하면 값에 대한 자격을 지정하는 메커니즘이 제공됩니다. 예를 들어 "파일" 형식의 클레임은 "문서" 값에 대해 "Read"를 사용 하는 클레임으로, 이러한 클레임이 연결 된 엔터티에는 파일에 대 한 읽기 액세스 권한이 있음을 나타냅니다. "Martin" 값에 대해 "PossessProperty"를 사용 하는 "Name" 유형의 클레임은 이러한 클레임이 연결 된 엔터티가 "Martin" 값을 가진 Name 속성을 소유 함을 나타냅니다.  
+ 클레임은 특정 값을 기준으로 하는 오른쪽의 식입니다. "Read", "Write" 또는 "Execute" 등이 권한에 해당하며 값은 데이터베이스, 파일, 사서함 또는 속성이 될 수 있습니다. 클레임 유형도 클레임 유형입니다. 클레임 형식과 권한을 조합하면 값에 대한 자격을 지정하는 메커니즘이 제공됩니다. 예를 들어 "Biography.doc" 값에 대해 "Read" 권한을 가진 "File" 형식의 클레임은 이러한 클레임이 연결 된 엔터티에 파일 Biography.doc에 대 한 읽기 권한이 있음을 나타냅니다. "Martin" 값에 대해 "PossessProperty"를 사용 하는 "Name" 유형의 클레임은 이러한 클레임이 연결 된 엔터티가 "Martin" 값을 가진 Name 속성을 소유 함을 나타냅니다.  
   
  여러 가지 클레임 형식과 권한이 ID 모델의 일부로 정의되어 있어도, 시스템은 확장 가능하기 때문에 ID 모델 인프라의 맨 위에 빌드되는 다양한 시스템에서 필요에 따라 추가 클레임 형식과 권한을 정의할 수 있습니다.  
   

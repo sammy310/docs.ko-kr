@@ -1,15 +1,16 @@
 ---
 title: 기본 프로그래밍 수명 주기
+description: WCF 응용 프로그램을 빌드하는 작업에 대해 알아봅니다. WCF를 사용 하면 앱이 동일한 컴퓨터, 네트워크 또는 다른 응용 프로그램 플랫폼에서 통신할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320820"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245533"
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
 WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램이 동일한 컴퓨터, 인터넷 또는 다른 응용 프로그램 플랫폼에 있든 간에 통신할 수 있습니다. 이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업에 대해 간략하게 설명 합니다. 작동 하는 샘플 응용 프로그램은 [시작 자습서](getting-started-tutorial.md)를 참조 하세요.  
@@ -31,6 +32,6 @@ WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램이 �
   
  서비스 계약 개발에 대해 잘 알고 있으면 [확장성 소개를](introduction-to-extensibility.md)읽을 수도 있습니다. 서비스에 문제가 있는 경우 [WCF 문제 해결 퀵 스타트](wcf-troubleshooting-quickstart.md) 를 확인 하 여 다른 사용자가 동일 하거나 유사한 문제를 발생 하는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [서비스 계약 구현](implementing-service-contracts.md)

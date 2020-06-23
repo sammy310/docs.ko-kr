@@ -1,5 +1,6 @@
 ---
 title: SAML 토큰 및 클레임
+description: WFC가 SAML 토큰을 사용 하 여 한 엔터티에서 다른 엔터티에 대해 만들어진 클레임 집합을 전달 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590373"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244948"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML (Security 어설션이 Markup Language) *토큰* 은 클레임의 XML 표현입니다. 기본적으로 페더레이션 보안 시나리오에서 WCF (Windows Communication Foundation)가 사용 하는 SAML 토큰은 *발급 된 토큰*입니다.  
@@ -31,7 +32,7 @@ SAML (Security 어설션이 Markup Language) *토큰* 은 클레임의 XML 표�
 4. SAML 토큰을 통한 서명은 신뢰하는 상대에게 보안 토큰 서비스에서 토큰을 발행했음을 나타냅니다. 증명 키를 사용하여 만든 메시지 서명은 신뢰하는 상대에게 토큰이 클라이언트에게 발행되었음을 나타냅니다.  
   
 ## <a name="from-claims-to-samlattributes"></a>클레임에서 SamlAttribute로  
- WCF에서 SAML 토큰의 문은 개체 <xref:System.IdentityModel.Tokens.SamlAttribute> 에서 직접 채워질 수 있는 개체로 모델링 됩니다. 개체의 <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성이이 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 고 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 형식입니다 <xref:System.String> . 예를 들면 다음과 같습니다.  
+ WCF에서 SAML 토큰의 문은 개체 <xref:System.IdentityModel.Tokens.SamlAttribute> 에서 직접 채워질 수 있는 개체로 모델링 됩니다. 개체의 <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성이이 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 고 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성은 형식입니다 <xref:System.String> . 예를 들어:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

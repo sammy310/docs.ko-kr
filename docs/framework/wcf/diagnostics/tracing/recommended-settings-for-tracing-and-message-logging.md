@@ -1,19 +1,20 @@
 ---
 title: 추적 및 메시지 로깅에 권장되는 설정
+description: WCF의 다른 운영 환경에 대 한 권장 추적 및 메시지 로깅 설정에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578918"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245329"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>추적 및 메시지 로깅에 권장되는 설정
 이 항목에서는 다른 운영 환경에 권장되는 추적 및 메시지 로깅 설정에 대해 설명합니다.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>프로덕션 환경에 대한 권장 설정  
- WCF 추적 소스를 사용하는 경우 프로덕션 환경에 대해 `switchValue`를 Warning으로 설정합니다. WCF `System.ServiceModel` 추적 소스를 사용하는 경우 `switchValue` 특성을 `Warning`, `propagateActivity` 특성을 `true`로 설정합니다. 사용자 정의 추적 소스를 사용하는 경우 `switchValue` 특성을 `Warning, ActivityTracing`으로 설정합니다. [구성 편집기 도구 (SvcConfigEditor)](../../configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여 수동으로 수행할 수 있습니다. 성능 향상을 기대하지 않는 경우 앞에서 설명한 모든 경우에서 `switchValue` 특성을 `Information`으로 설정할 수 있습니다. 이렇게 하면 상당히 많은 추적 데이터가 생성됩니다. 다음 예제에서는 이러한 권장 설정을 보여 줍니다.  
+ WCF 추적 소스를 사용하는 경우 프로덕션 환경에 대해 `switchValue`를 Warning으로 설정합니다. WCF `System.ServiceModel` 추적 소스를 사용하는 경우 `switchValue` 특성을 `Warning`, `propagateActivity` 특성을 `true`로 설정합니다. 사용자 정의 추적 소스를 사용하는 경우 `switchValue` 특성을 `Warning, ActivityTracing`으로 설정합니다. [구성 편집기 도구 (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여 수동으로 수행할 수 있습니다. 성능 향상을 기대하지 않는 경우 앞에서 설명한 모든 경우에서 `switchValue` 특성을 `Information`으로 설정할 수 있습니다. 이렇게 하면 상당히 많은 추적 데이터가 생성됩니다. 다음 예제에서는 이러한 권장 설정을 보여 줍니다.  
   
 ```xml  
 <configuration>  

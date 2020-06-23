@@ -1,5 +1,6 @@
 ---
 title: 바인딩 및 보안
+description: 보안 요구 사항에 적합 한 바인딩을 선택 하는 방법을 알아보세요. WCF에 포함 된 시스템 제공 바인딩은 WCF 응용 프로그램을 신속 하 게 프로그래밍 하는 방법을 제공 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587510"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245337"
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 
@@ -202,14 +203,14 @@ WCF의 모든 바인딩에는 API와 구성 파일에 사용 되는 XML 요소�
 
 |바인딩|Transport 모드 지원|Message 모드 지원|TransportWithMessageCredential 지원|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|예|예|예|
-|`WSHttpBinding`|예|예|예|
+|`BasicHttpBinding`|Yes|Yes|Yes|
+|`WSHttpBinding`|Yes|Yes|예|
 |`WSDualHttpBinding`|예|예|예|
-|`NetTcpBinding`|예|예|예|
+|`NetTcpBinding`|예|Yes|Yes|
 |`NetNamedPipeBinding`|예|아니요|예|
 |`NetMsmqBinding`|예|예|예|
 |`MsmqIntegrationBinding`|예|아니요|아니요|
-|`wsFederationHttpBinding`|예|예|예|
+|`wsFederationHttpBinding`|예|예|Yes|
 
 ## <a name="transport-credentials-in-bindings"></a>바인딩의 전송 자격 증명
 

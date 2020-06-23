@@ -1,5 +1,6 @@
 ---
 title: <system.serviceModel>
+description: Wcf ServiceModel 구성 요소에 대해 알아보고 WCF 서비스 및 클라이언트 응용 프로그램을 구성할 수 있습니다.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399450"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243960"
 ---
 # \<system.serviceModel>
 이 구성 섹션에는 WCF (Windows Communication Foundation) ServiceModel 구성 요소가 모두 포함 되어 있습니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "70399450"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- None  
+ 없음  
   
 ### <a name="child-elements"></a>자식 요소  
   

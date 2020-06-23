@@ -1,15 +1,16 @@
 ---
 title: DataContractSerializer 샘플
+description: 이 샘플에서는 데이터 계약 클래스에 대 한 일반 serialization 및 deserialization 서비스를 수행 하는 WCF의 DataContractSerializer를 보여 줍니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 07c6d3b10f2a0478f8fb3835f0b040668c5013ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600012"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244405"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 샘플
 DataContractSerializer 샘플은 데이터 계약 클래스에 대한 일반 serialization 및 deserialization 서비스를 수행하는 <xref:System.Runtime.Serialization.DataContractSerializer>를 보여 줍니다. 이 샘플에서는 개체를 만들고 `Record` 메모리 스트림으로 serialize 한 다음 메모리 스트림을 다시 다른 개체로 deserialize 하 여를 `Record` 사용 하는 방법을 보여 줍니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 그런 다음 이진 작성기로 `Record` 개체를 deserialize하여 이진 작성기가 serialization에 미치는 영향을 보여 줍니다.  

@@ -1,13 +1,14 @@
 ---
 title: ETW 추적
+description: 이 샘플에서는 ETW(Windows용 이벤트 추적) (ETW) 및 ETWTraceListener를 사용 하 여 E2E (종단 간) 추적을 구현 하는 방법을 보여 줍니다.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600565"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244428"
 ---
 # <a name="etw-tracing"></a>ETW 추적
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(엔드투엔드) 추적을 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md) 을 기반으로 하며 ETW 추적을 포함 합니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "84600565"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다. 이러한 도구에 대 한 자세한 내용은 다음을 참조 하세요.<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- ETWTraceListener를 사용할 경우 추적은 이진 .etl 파일에 기록됩니다. ServiceModel 추적이 설정된 상태에서 생성된 모든 추적은 동일한 파일에 표시됩니다. [Service Trace Viewer 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 를 사용 하 여 .etl 및. .svclog 로그 파일을 봅니다. 이 뷰어는 해당 소스에서 해당 대상 및 소비 지점까지 메시지를 추적하는 데 사용할 수 있는 시스템의 엔드투엔드 보기를 만듭니다.  
+ ETWTraceListener를 사용할 경우 추적은 이진 .etl 파일에 기록됩니다. ServiceModel 추적이 설정된 상태에서 생성된 모든 추적은 동일한 파일에 표시됩니다. .Svclog 로그 파일을 보려면 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 를 사용 합니다. 이 뷰어는 해당 소스에서 해당 대상 및 소비 지점까지 메시지를 추적하는 데 사용할 수 있는 시스템의 엔드투엔드 보기를 만듭니다.  
   
  ETW 추적 수신기는 순환 로깅을 지원합니다. 이 기능을 사용 하도록 설정 하려면 **시작**, **실행** 으로 이동 하 고 `cmd` 를 입력 하 여 명령 콘솔을 시작 합니다. 다음 명령에서 `<logfilename>` 매개 변수를 로그 파일의 이름으로 바꿉니다.  
   
@@ -74,7 +75,7 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- 이 프로세스는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 또는 Tracerpt를 비롯 하 여 선택한 도구를 사용 하 여 처리할 수 있는 이진 순환 로그를 생성 합니다.  
+ 이 프로세스는 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 또는 Tracerpt를 포함 하 여 선택한 도구를 사용 하 여 처리할 수 있는 이진 순환 로그를 생성 합니다.  
   
  순환 로깅을 수행 하는 대체 수신기에 대 한 자세한 내용은 [순환 추적](circular-tracing.md) 샘플을 검토할 수도 있습니다.  
   

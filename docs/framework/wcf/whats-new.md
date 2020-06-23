@@ -1,16 +1,17 @@
 ---
 title: Windows Communication Foundation 4.5의 새로운 기능
+description: 이 문서에서는 Windows Communication Foundation (WCF) 버전 4.5에 새로 추가 된 기능에 대해 설명 하 고 추가 리소스에 대 한 링크를 제공 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449506"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245624"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -32,7 +33,7 @@ Visual Studio에 서비스 참조를 추가하거나 SvcUtil.exe 도구를 사�
 
 ### <a name="contract-first-development"></a>계약 중심 개발
 
-WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe에는 WSDL 문서에서 서비스 및 데이터 계약을 생성할 수 있는/serviceContract 스위치가 있습니다.
+WCF는 이제 계약 중심 개발을 지원합니다. svcutil.exe에는 WSDL 문서에서 서비스 및 데이터 계약을 생성할 수 있는/serviceContract 스위치가 있습니다.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가
 
@@ -40,7 +41,7 @@ WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe에는 WSDL �
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경
 
-WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 web.config의 [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) 섹션에서 `aspNetCompatibilityEnabled` 특성을 true로 설정 해야 합니다. 또한이 appDomain의 모든 서비스에는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>로 설정 된 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>에 대 한 `RequirementsMode` 속성이 있어야 합니다. 기본적으로 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>로 설정 됩니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](./feature-details/wcf-services-and-aspnet.md)를 참조 하세요.
+WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 기능에 완전하게 액세스할 수 있게 해 주는 ASP.NET 호환 모드를 제공합니다. 이 모드를 사용 하려면 `aspNetCompatibilityEnabled` web.config의 섹션에서 특성을 true로 설정 해야 합니다 [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) . 또한이 appDomain의 모든 서비스에는 `RequirementsMode` 속성이 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 또는로 설정 되어 있어야 합니다 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> . <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>이제는 기본적으로로 설정 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 됩니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](./feature-details/wcf-services-and-aspnet.md)를 참조 하세요.
 
 ### <a name="new-transport-default-values"></a>새 전송 기본값
 
@@ -78,11 +79,11 @@ WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정
 
 다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
 
-|속성|설정|새 기본값|자세한 내용은|
+|속성|켜기|새 기본값|자세한 내용은|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* Smsvchost.exe에 대 한 프로세서 수|[Net.tcp 포트 공유 서비스를 구성](./feature-details/configuring-the-net-tcp-port-sharing-service.md) <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* SMSvcHost.exe 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP Port Sharing Service 구성](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 프로세서 수|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30초|[Net.TCP Port Sharing Service 구성](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,7 +93,7 @@ WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 �
 
 ## <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 
-WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 <xref:System.ServiceModel.ServiceHost> 클래스를 통해 ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](configuring-wcf-services-in-code.md)을 참조 하세요.
+WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 클래스를 통해 <xref:System.ServiceModel.ServiceHost> ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](configuring-wcf-services-in-code.md)을 참조 하세요.
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱
 

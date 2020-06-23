@@ -1,5 +1,6 @@
 ---
-title: '자습서: Windows 통신 파운데이션 클라이언트 사용'
+title: '자습서: Windows Communication Foundation 클라이언트 사용'
+description: 클라이언트 인스턴스를 만들고, 응용 프로그램을 컴파일하고, WCF 응용 프로그램을 만드는 방법에 대 한 일련의 문서에서 서비스와 통신 하는 방법에 대해 알아봅니다.
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,34 +8,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: d2357c134aef8da204dcdb19d6c1fc93cfdc068c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c94d5f8af679580c4194aaaadeda759098953d2
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184020"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244337"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>자습서: Windows 통신 파운데이션 클라이언트 사용
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>자습서: Windows Communication Foundation 클라이언트 사용
 
-이 자습서에서는 기본 WCF(Windows 통신 Foundation) 응용 프로그램을 만드는 데 필요한 다섯 가지 작업 중 마지막 에 대해 설명합니다. 자습서의 개요는 [자습서: Windows 통신 파운데이션 응용 프로그램을 시작](getting-started-tutorial.md)하십시오.
+이 자습서에서는 WCF (기본 Windows Communication Foundation) 응용 프로그램을 만드는 데 필요한 5 가지 작업 중 마지막 작업을 설명 합니다. 자습서에 대 한 개요는 [자습서: Windows Communication Foundation 응용 프로그램 시작](getting-started-tutorial.md)을 참조 하세요.
 
-WCF(Windows 통신 재단) 프록시를 만들고 구성한 후 클라이언트 인스턴스를 만들고 클라이언트 응용 프로그램을 컴파일합니다. 그런 다음 WCF 서비스와 통신하는 데 사용합니다.
+WCF (Windows Communication Foundation) 프록시를 만들고 구성한 후 클라이언트 인스턴스를 만들고 클라이언트 응용 프로그램을 컴파일합니다. 그런 다음이를 사용 하 여 WCF 서비스와 통신 합니다.
 
-이 자습서에서는 다음 작업 방법을 알아봅니다.
+이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
 >
-> - WCF 클라이언트를 사용할 코드를 추가합니다.
-> - WCF 클라이언트를 테스트합니다.
+> - WCF 클라이언트를 사용 하는 코드를 추가 합니다.
+> - WCF 클라이언트를 테스트 합니다.
 
-## <a name="add-code-to-use-the-wcf-client"></a>WCF 클라이언트를 사용할 코드 추가
+## <a name="add-code-to-use-the-wcf-client"></a>WCF 클라이언트를 사용 하는 코드 추가
 
-클라이언트 코드는 다음 단계를 수행합니다.
+클라이언트 코드는 다음 단계를 수행 합니다.
 
 - WCF 클라이언트를 인스턴스화합니다.
 - 생성된 프록시에서 서비스 작업 호출
-- 작업 호출이 완료된 후 클라이언트를 닫습니다.
+- 작업 호출이 완료 된 후 클라이언트를 닫습니다.
 
-**GettingStartedClient** 프로젝트에서 **Program.cs** 또는 **Module1.vb** 파일을 열고 코드를 다음 코드로 바꿉니다.
+**GettingStartedClient** 프로젝트에서 **Program.cs** 또는 module1.vb 파일을 열고 해당 코드를 다음 코드로 **바꿉니다.**
 
 ```csharp
 using System;
@@ -134,27 +135,27 @@ Module Module1
 End Module
 ```
 
-`using` (Visual C#) 또는 `Imports` (Visual Basic) 문을 가져오는 지 확인합니다. `GettingStartedClient.ServiceReference1` 이 문은 Visual Studio에서 서비스 참조 추가 기능을 통해 생성한 코드를 가져오고 **있습니다.** 코드는 WCF 프록시를 인스턴스화하고 계산기 서비스가 노출하는 각 서비스 작업을 호출합니다. 그런 다음 프록시를 닫고 프로그램을 종료합니다.
+`using`(Visual c #의 경우) 또는을 `Imports` 가져오는 (Visual Basic) 문에 유의 `GettingStartedClient.ServiceReference1` 하세요. 이 문은 **서비스 참조 추가** 함수를 사용 하 여 Visual Studio에서 생성 한 코드를 가져옵니다. 이 코드는 WCF 프록시를 인스턴스화하고 계산기 서비스가 노출 하는 각 서비스 작업을 호출 합니다. 그런 다음 프록시를 닫고 프로그램을 종료 합니다.
 
 ## <a name="test-the-wcf-client"></a>WCF 클라이언트 테스트
 
-### <a name="test-the-application-from-visual-studio"></a>비주얼 스튜디오에서 응용 프로그램 테스트
+### <a name="test-the-application-from-visual-studio"></a>Visual Studio에서 응용 프로그램 테스트
 
 1. 솔루션을 저장하고 빌드합니다.
 
-2. **GettingStartedLib** 폴더를 선택한 다음 바로 가기 메뉴에서 **시작 프로젝트로 설정을** 선택합니다.
+2. **GettingStartedLib** 폴더를 선택 하 고 바로 가기 메뉴에서 **시작 프로젝트로 설정** 을 선택 합니다.
 
-3. **시작 프로젝트에서**드롭다운 목록에서 **GettingStartedLib을** 선택한 다음 **실행** 또는 **F5를**누릅니다.
+3. **시작 프로젝트**의 드롭다운 목록 **에서 GettingStartedLib** 를 선택 하 고 **실행** 을 선택 하거나 **f5**키를 누릅니다.
 
 ### <a name="test-the-application-from-a-command-prompt"></a>명령 프롬프트에서 응용 프로그램 테스트
 
-1. 관리자로 명령 프롬프트를 열고 Visual Studio 솔루션 디렉터리로 이동합니다.
+1. 관리자 권한으로 명령 프롬프트를 연 다음 Visual Studio 솔루션 디렉터리로 이동 합니다.
 
-2. 서비스를 시작하려면: *GettingStartedHost\bin\디버그\GettingStartedHost.exe*를 입력합니다.
+2. 서비스를 시작 하려면: *GettingStartedHost\bin\Debug\GettingStartedHost.exe*을 입력 합니다.
 
-3. 클라이언트를 시작하려면: 다른 명령 프롬프트를 열고 Visual Studio 솔루션 디렉터리로 이동한 다음 *GettingStartedClient\bin\Debug\GettingStartedClient.exe를*입력합니다.
+3. 클라이언트를 시작 하려면: 다른 명령 프롬프트를 열고 Visual Studio 솔루션 디렉터리로 이동한 다음 *GettingStartedClient\bin\Debug\GettingStartedClient.exe*을 입력 합니다.
 
-   *GettingStartedHost.exe는* 다음과 같은 출력을 생성합니다.
+   *GettingStartedHost.exe* 는 다음과 같은 출력을 생성 합니다.
 
    ```text
    The service is ready.
@@ -170,7 +171,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   *GettingStartedClient.exe는* 다음 출력을 생성합니다.
+   *GettingStartedClient.exe* 는 다음과 같은 출력을 생성 합니다.
 
    ```text
    Add(100,15.99) = 115.99
@@ -183,15 +184,15 @@ End Module
 
 ## <a name="next-steps"></a>다음 단계
 
-이제 WCF의 모든 작업을 완료했습니다 시작 자습서. 이 자습서에서는 다음 작업 방법을 알아보았습니다.
+이제 WCF 시작 자습서의 모든 작업을 완료 했습니다. 이 자습서에서는 다음 작업 방법을 알아보았습니다.
 
-이 자습서에서는 다음 작업 방법을 알아봅니다.
+이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
 >
-> - WCF 클라이언트를 사용할 코드를 추가합니다.
-> - WCF 클라이언트를 테스트합니다.
+> - WCF 클라이언트를 사용 하는 코드를 추가 합니다.
+> - WCF 클라이언트를 테스트 합니다.
 
-단계에 문제가 있거나 오류가 있는 경우 문제 해결 문서의 단계를 수행하여 문제를 해결합니다.
+모든 단계에서 문제나 오류가 발생 한 경우 문제 해결 문서의 단계를 수행 하 여 문제를 해결 합니다.
 
 > [!div class="nextstepaction"]
-> [WCF 자습서 시작 문제 해결](troubleshooting-the-getting-started-tutorial.md)
+> [WCF 시작 자습서 문제 해결](troubleshooting-the-getting-started-tutorial.md)
