@@ -1,13 +1,14 @@
 ---
 title: 큰 데이터 및 스트리밍
+description: 이진 데이터 전송을 포함 하 여 WCF XML 기반 통신, 인코더 및 스트리밍 데이터에 대 한 고려 사항에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586327"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246586"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 
@@ -127,7 +128,7 @@ class MyData
   
  앞에서 언급한 것과 같이, 데이터를 세그먼트로 나눌 수 없거나, 메시지를 시기 적절하게 배달해야 하거나, 전송을 시작했을 때 데이터 전체를 사용할 수 없는 경우에 텍스트 또는 이진 콘텐츠가 있는 큰 메시지에 대해서만 스트리밍 활성화를 고려해야 합니다.  
   
-### <a name="restrictions"></a>제한 사항  
+### <a name="restrictions"></a>제한  
  스트리밍을 사용 하는 경우 많은 수의 WCF 기능을 사용할 수 없습니다.  
   
 - 메시지 본문의 디지털 서명은 메시지 콘텐츠 전체의 해시 계산을 필요로 하기 때문에 수행할 수 없습니다. 스트리밍을 사용하면 메시지 헤더를 생성하여 보낼 때 콘텐츠를 전부 사용할 수 없기 때문에 디지털 서명을 계산할 수 없습니다.  

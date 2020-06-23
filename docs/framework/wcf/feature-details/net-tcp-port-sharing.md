@@ -1,16 +1,17 @@
 ---
 title: Net.TCP 포트 공유
+description: WCF의 여러 사용자 프로세스에서 포트를 공유할 수 있도록 하는 고성능 통신 및 서비스에 대 한 TCP 기반 프로토콜에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598764"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245247"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 WCF (Windows Communication Foundation)는 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)을 제공 합니다. 또한 WCF는 여러 사용자 프로세스 간에 net.tcp 포트를 공유할 수 있게 해 주는 새로운 시스템 구성 요소인 Net.tcp Port Sharing Service를 도입 했습니다.  
@@ -22,7 +23,7 @@ WCF (Windows Communication Foundation)는 고성능 통신을 위한 새로운 T
   
  여러 HTTP 애플리케이션의 트래픽이 단일 TCP 포트에 멀티플렉싱되는 HTTP.SYS 모델이 Windows 플랫폼의 표준이 되었습니다. 따라서 애플리케이션 개발자가 네트워크를 사용할 수 있는 새 애플리케이션을 빌드하는 데 필요한 배포 비용을 최소화할 수 있도록 하는 동시에 방화벽 관리자를 위한 공통 제어 지점을 제공합니다.  
   
- 여러 HTTP 애플리케이션 간의 포트를 공유할 수 있는 기능은 IIS(인터넷 정보 서비스)의 오래된 기능 중 하나입니다. 그러나 HTTP를 소개 하기만 하면 됩니다. 이 인프라가 완전히 일반화 된 IIS 6.0를 사용 하는 SYS (커널 모드 HTTP 프로토콜 수신기) 실제로 HTTP.SYS를 사용하면 임의의 사용자 프로세스에서 HTTP 트래픽 전용 TCP 포트를 공유할 수 있습니다. 이 기능을 사용하면 동일한 실제 컴퓨터에서 여러 HTTP 애플리케이션을 별도의 격리 프로세스로 함께 사용할 수 있고, TCP 포트 80을 통해 트래픽을 보내고 받는 데 필요한 네트워크 인프라를 공유할 수 있습니다. Net.TCP Port Sharing Service를 통해 net.tcp 애플리케이션에서 동일한 형식의 포트를 공유할 수 있습니다.  
+ 여러 HTTP 애플리케이션 간의 포트를 공유할 수 있는 기능은 IIS(인터넷 정보 서비스)의 오래된 기능 중 하나입니다. 그러나이 인프라는 IIS 6.0를 사용 하는 HTTP.SYS (커널 모드 HTTP 프로토콜 수신기)를 도입 하는 경우에만 사용 되며이 인프라는 완전히 일반화 되어 있습니다. 실제로 HTTP.SYS를 사용하면 임의의 사용자 프로세스에서 HTTP 트래픽 전용 TCP 포트를 공유할 수 있습니다. 이 기능을 사용하면 동일한 실제 컴퓨터에서 여러 HTTP 애플리케이션을 별도의 격리 프로세스로 함께 사용할 수 있고, TCP 포트 80을 통해 트래픽을 보내고 받는 데 필요한 네트워크 인프라를 공유할 수 있습니다. Net.TCP Port Sharing Service를 통해 net.tcp 애플리케이션에서 동일한 형식의 포트를 공유할 수 있습니다.  
   
 ## <a name="port-sharing-architecture"></a>포트 공유 아키텍처  
  WCF의 포트 공유 아키텍처에는 다음과 같은 세 가지 주요 구성 요소가 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: 서비스 ID 및 인증
+description: WCF에서 서비스를 인증 하는 데 사용 하는 WSDL 서비스에서 생성 된 값인 서비스의 끝점 id에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600376"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246573"
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *끝점 id* 는 서비스 WSDL (웹 서비스 기술 언어)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 엔드포인트에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 엔드포인트 ID 값과 엔드포인트 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 엔드포인트에 연결됩니다. 이는 클라이언트가 악의적인 서비스에서 호스트 되는 끝점으로 리디렉션되는 것을 방지 하 여 *피싱* 으로부터 보호 하는 역할을 합니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "84600376"
   
  클라이언트에서의 ID 처리 작업은 서비스에 대한 클라이언트 인증과 유사합니다. 보안 서비스는 클라이언트의 자격 증명이 인증될 때까지 코드를 실행하지 않습니다. 마찬가지로 서비스 메타데이터에서 미리 알려진 정보에 따라 서비스의 자격 증명이 인증될 때까지 클라이언트에서 메시지를 서비스로 보내지 않습니다.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 클래스의 <xref:System.ServiceModel.EndpointAddress> 속성은 클라이언트에서 호출한 서비스의 ID를 나타냅니다. 서비스는 메타데이터에 <xref:System.ServiceModel.EndpointAddress.Identity%2A>를 게시합니다. 클라이언트 개발자가 서비스 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하는 경우 생성 된 구성에는 서비스의 속성 값이 포함 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 됩니다. WCF 인프라 (보안을 사용 하 여 구성 된 경우)는 서비스가 지정 된 id를 소유 하 고 있는지 확인 합니다.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 클래스의 <xref:System.ServiceModel.EndpointAddress> 속성은 클라이언트에서 호출한 서비스의 ID를 나타냅니다. 서비스는 메타데이터에 <xref:System.ServiceModel.EndpointAddress.Identity%2A>를 게시합니다. 클라이언트 개발자가 서비스 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하는 경우 생성 된 구성에는 서비스의 속성 값이 포함 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 됩니다. WCF 인프라 (보안을 사용 하 여 구성 된 경우)는 서비스가 지정 된 id를 소유 하 고 있는지 확인 합니다.  
   
 > [!IMPORTANT]
 > 메타데이터에는 서비스의 예상 ID가 포함되어 있기 때문에 서비스에 대한 HTTPS 엔드포인트를 만드는 것과 같이 보안을 설정하여 서비스 메타데이터를 노출하는 것이 좋습니다. 자세한 내용은 [방법: 메타 데이터 끝점 보안](how-to-secure-metadata-endpoints.md)을 참조 하세요.  
@@ -64,7 +65,7 @@ ms.locfileid: "84600376"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>클라이언트에서 ID 지정  
- 디자인 타임에 클라이언트 개발자는 일반적으로 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트 구성을 생성 합니다. 생성된 구성 파일(클라이언트에서 사용)에는 서버 ID가 포함되어 있습니다. 예를 들어, 다음 코드는 앞의 예제에서처럼 DNS ID를 지정하는 서비스에서 생성됩니다. 클라이언트 엔드포인트 ID 값은 서비스 값과 일치합니다. 이 경우 클라이언트가 서비스에 대한 Windows(Kerberos) 자격 증명을 받을 때 값은 `contoso.com`이 됩니다.  
+ 디자인 타임에 클라이언트 개발자는 일반적으로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트 구성을 생성 합니다. 생성된 구성 파일(클라이언트에서 사용)에는 서버 ID가 포함되어 있습니다. 예를 들어, 다음 코드는 앞의 예제에서처럼 DNS ID를 지정하는 서비스에서 생성됩니다. 클라이언트 엔드포인트 ID 값은 서비스 값과 일치합니다. 이 경우 클라이언트가 서비스에 대한 Windows(Kerberos) 자격 증명을 받을 때 값은 `contoso.com`이 됩니다.  
 
  Windows 대신 서비스가 Certificate를 클라이언트 자격 증명 형식으로 지정하는 경우 인증서의 DNS 속성 값은 `contoso.com`이 됩니다. 또는 DNS 속성이 `null`인 경우 인증서의 주체 이름은 `contoso.com`이어야 합니다.  
   

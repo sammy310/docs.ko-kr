@@ -1,13 +1,14 @@
 ---
 title: 바인딩에 시간 제한 값 구성
+description: WCF 바인딩에 대 한 시간 제한 설정을 관리 하 여 서비스의 성능, 유용성 및 보안을 개선 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 968e80bbd4b50d72d089a325f8e3fe498de2eac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185293"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245117"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>바인딩에 시간 제한 값 구성
 WCF 바인딩에서 사용할 수 있는 시간 제한 설정은 여러 가지가 있습니다. 이러한 시간 제한 설정을 정확하게 설정하면 서비스 성능이 향상될 뿐만 아니라 서비스의 유용성과 보안에도 도움이 됩니다. WCF 바인딩에서 사용할 수 있는 시간 제한은 다음과 같습니다.  
@@ -79,15 +80,15 @@ public static void Main()
   
 1. SendTimeout - 요청/회신 서비스 작업의 회신 메시지 수신을 포함하여 메시지 보내기의 전체 과정을 제어하는 OperationTimeout을 초기화하는 데 사용합니다. 이 시간 제한은 콜백 계약 메서드에서 회신 메시지를 보낼 때도 적용됩니다.  
   
-2. OpenTimeout - 명시적 시간 시간 지정 값이 지정되지 않은 채널을 열 때 사용됩니다.  
+2. OpenTimeout – 명시적 시간 제한 값이 지정 되지 않은 경우 채널을 열 때 사용 됩니다.  
   
-3. CloseTimeout - 명시적 시간 시간 값을 지정하지 않은 채널을 닫을 때 사용됩니다.  
+3. CloseTimeout – 명시적 시간 제한 값이 지정 되지 않은 경우 채널을 닫을 때 사용 됩니다.  
   
-4. 수신 시간 아웃 - 사용되지 않습니다.  
+4. ReceiveTimeout – 사용 되지 않습니다.  
   
-### <a name="service-side-timeouts"></a>서비스 측 시간 시간  
+### <a name="service-side-timeouts"></a>서비스 측 시간 제한  
  서비스 측:  
   
-1. 송신 시간, 오픈 타임아웃, 닫기 시간 아웃은 클라이언트와 동일합니다.  
+1. SendTimeout, OpenTimeout, CloseTimeout은 클라이언트에서와 동일 합니다.  
   
 2. ReceiveTimeout – 서비스 프레임워크 레이어에서 제한 시간 만료 전에 세션이 유휴 상태일 수 있는 시간을 제어하는 세션 유휴 시간 제한을 초기화하는 데 사용합니다.

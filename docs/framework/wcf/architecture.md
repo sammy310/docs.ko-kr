@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation 아키텍처
+description: 계약, 서비스 런타임, 메시징 및 활성화 & 호스팅을 포함 하 여 Windows Communication Foundation 아키텍처의 주요 계층에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320829"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245572"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 아키텍처
 다음 그림은 WCF (Windows Communication Foundation) 아키텍처의 주요 계층을 보여 줍니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "72320829"
   
  서비스는 IIS 또는 WAS (Windows Activation Service)와 같은 외부 에이전트에서 관리 되는 실행 파일에서 *호스팅될*수도 있습니다. WAS를 사용 하면 WCF 응용 프로그램이 WAS를 실행 하는 컴퓨터에 배포 될 때 자동으로 활성화 될 수 있습니다. 실행 파일(.exe 파일)을 통해 서비스를 수동으로 실행할 수도 있습니다. 서비스를 Windows 서비스로 자동 실행할 수도 있습니다. COM + 구성 요소는 WCF 서비스로도 호스팅될 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation 정의](whats-wcf.md)
 - [기본적인 Windows Communication Foundation 개념](fundamental-concepts.md)

@@ -1,15 +1,16 @@
 ---
 title: 바인딩을 사용하여 서비스 및 클라이언트 구성
+description: 바인딩에는 WFC 클라이언트 또는 서비스에서 사용 하는 구성 정보가 포함 됩니다. 바인딩을 정의 하는 방법 및 서비스 끝점에 대 한 바인딩을 지정 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 60db37d4381191314e9d5588dd61015a7078e84d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321505"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245936"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
 바인딩은 엔드포인트에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 엔드포인트가나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. WCF (기능 Windows Communication Foundation) 서비스를 만들려면 서비스의 각 끝점에 바인딩이 필요 합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 엔드포인트에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
@@ -23,7 +24,7 @@ ms.locfileid: "72321505"
  전송  
  사용할 내부 전송 프로토콜(예: TCP 또는 HTTP)을 결정합니다.  
   
- 인코딩  
+ Encoding  
  텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등 메시지가 통신 중 바이트 스트림으로 표현되는 방법을 결정하는 메시지 인코딩을 결정합니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
@@ -35,12 +36,12 @@ ms.locfileid: "72321505"
   
 - <xref:System.ServiceModel.NetNamedPipeBinding>: Windows 명명 된 파이프 전송과 함께 .NET 이진 인코딩 및 프레이밍 기술을 사용 하 여 동일한 컴퓨터의 다른 WCF 끝점에 연결 합니다.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: MSMQ 라고도 하는 메시지 큐와 함께 .NET 이진 인코딩 및 프레이밍 기술을 사용 하 여 다른 WCF 끝점과의 대기 중인 메시지 연결을 만듭니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>: 메시지 큐 (MSMQ 라고도 함)와 함께 .NET 이진 인코딩 및 프레이밍 기술을 사용 하 여 다른 WCF 끝점과의 대기 중인 메시지 연결을 만듭니다.  
   
  시스템 제공 바인딩의 전체 목록에 대 한 설명은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.  
   
 ## <a name="custom-bindings"></a>사용자 지정 바인딩  
- 시스템 제공 바인딩 컬렉션에 서비스 애플리케이션에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. @No__t_0 바인딩의 요소에 대 한 자세한 내용은 [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) 및 [사용자 지정 바인딩](./extending/custom-bindings.md)을 참조 하세요.  
+ 시스템 제공 바인딩 컬렉션에 서비스 애플리케이션에서 필요로 하는 기능의 올바른 조합이 포함되지 않은 경우 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 만들 수 있습니다. 바인딩의 요소에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.CustomBinding> [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 및 [사용자 지정 바인딩](./extending/custom-bindings.md)을 참조 하십시오.  
   
 ## <a name="using-bindings"></a>바인딩 사용  
  바인딩 사용은 다음 두 가지 기본 단계로 이루어집니다.  
@@ -56,7 +57,7 @@ ms.locfileid: "72321505"
   
 - [자습서: Windows Communication Foundation 클라이언트 만들기](how-to-create-a-wcf-client.md) 구성을 사용 하 여 클라이언트를 만드는 예제를 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔드포인트 만들기 개요](endpoint-creation-overview.md)
 - [방법: 구성에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-configuration.md)

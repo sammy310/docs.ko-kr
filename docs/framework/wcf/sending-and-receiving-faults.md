@@ -1,5 +1,6 @@
 ---
 title: 오류 보내기 및 받기
+description: 오류 조건이 발생할 때 서비스 또는 이중 클라이언트에서 SOAP 오류를 보내는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: dc9dcb5d8e36984d1e5a2e5c5124e74509de7f3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 23f63fde2755a29cd545d3aefe699cad8dbecb3b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320222"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244324"
 ---
 # <a name="sending-and-receiving-faults"></a>오류 보내기 및 받기
 
@@ -24,12 +25,12 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
 
 ### <a name="sending-declared-faults"></a>선언된 오류 보내기
 
-선언된 SOAP 오류를 보내려면 SOAP 오류가 적합한 오류 조건을 검색하고 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>을 throw합니다. 여기서, 형식 매개 변수는 해당 작업의 <xref:System.ServiceModel.FaultContractAttribute>에 지정된 형식의 새 개체입니다. 다음 코드 예제에서는 <xref:System.ServiceModel.FaultContractAttribute>를 사용 하 여 `SampleMethod` 작업이 `GreetingFault`의 세부 형식으로 SOAP 오류를 반환할 수 있도록 지정 하는 방법을 보여 줍니다.
+선언된 SOAP 오류를 보내려면 SOAP 오류가 적합한 오류 조건을 검색하고 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>을 throw합니다. 여기서, 형식 매개 변수는 해당 작업의 <xref:System.ServiceModel.FaultContractAttribute>에 지정된 형식의 새 개체입니다. 다음 코드 예제에서는를 사용 하 여 <xref:System.ServiceModel.FaultContractAttribute> `SampleMethod` 작업에서의 세부 형식으로 SOAP 오류를 반환할 수 있도록 지정 하는 방법을 보여 줍니다 `GreetingFault` .
 
 [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
 [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]
 
-`GreetingFault` 오류 정보를 클라이언트에게 전달하려면 적합한 오류 조건을 catch하고 다음 코드 예제처럼 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 개체가 인수인 `GreetingFault` 유형의 새 `GreetingFault`을 throw합니다. 클라이언트가 WCF 클라이언트 응용 프로그램 인 경우 형식이 `GreetingFault` 형식 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 된 관리 되는 예외입니다.
+`GreetingFault` 오류 정보를 클라이언트에게 전달하려면 적합한 오류 조건을 catch하고 다음 코드 예제처럼 새 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 개체가 인수인 `GreetingFault` 유형의 새 `GreetingFault`을 throw합니다. 클라이언트가 WCF 클라이언트 응용 프로그램 인 경우 형식이 형식의 인 관리 되는 예외입니다 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> `GreetingFault` .
 
 [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
 [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]
@@ -41,9 +42,9 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
 > [!IMPORTANT]
 > 관리 되는 예외는 내부 애플리케이션 정보를 노출할 수, 있으므로 설정 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 나 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 에 `true` WCF 클라이언트에서는 개인적으로 포함 하 여 내부 서비스 작업 예외에 대 한 정보를 허용 하려면 식별할 수 있는 정보나 기타 중요 한 정보입니다.
 >
-> 그러므로 임시로 서비스 애플리케이션을 디버깅하려는 경우 권장되는 유일한 방법은 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하는 것입니다. 또한이 방법으로 처리 되지 않은 관리 되는 예외를 반환 하는 메서드의 WSDL에는 <xref:System.ServiceModel.ExceptionDetail> 형식의 <xref:System.ServiceModel.FaultException%601>에 대 한 계약이 포함 되지 않습니다. 클라이언트는 디버깅 정보를 올바르게 얻기 위해 알 수 없는 SOAP 오류의 가능성 (WCF 클라이언트에 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체로 반환 됨)을 고려해 야 합니다.
+> 그러므로 임시로 서비스 애플리케이션을 디버깅하려는 경우 권장되는 유일한 방법은 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하는 것입니다. 또한 이 방법으로 처리되지 않은 관리되는 예외를 반환하는 메서드의 WSDL에는 <xref:System.ServiceModel.FaultException%601> 형식의 <xref:System.ServiceModel.ExceptionDetail>에 대한 계약이 포함되지 않습니다. 클라이언트에서는 알 수 없는 SOAP 오류 (WCF 클라이언트에 개체로 반환 됨)가 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 디버깅 정보를 제대로 가져올 가능성을 고려해 야 합니다.
 
-선언되지 않은 SOAP 오류를 보내려면 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체(즉, 제네릭 형식 <xref:System.ServiceModel.FaultException%601>이 아님)를 throw하고 문자열을 생성자에게 전달합니다. 이는 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 메서드를 호출 하 여 문자열을 사용할 수 있는 throw 된 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 예외로 WCF 클라이언트 응용 프로그램에 노출 됩니다.
+선언되지 않은 SOAP 오류를 보내려면 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체(즉, 제네릭 형식 <xref:System.ServiceModel.FaultException%601>이 아님)를 throw하고 문자열을 생성자에게 전달합니다. 이는 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 메서드를 호출 하 여 문자열을 사용할 수 있는 throw 된 예외로 WCF 클라이언트 응용 프로그램에 노출 됩니다 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> .
 
 > [!NOTE]
 > 문자열 형식의 SOAP 오류를 선언한 다음 서비스에서 형식 매개 변수가 <xref:System.ServiceModel.FaultException%601>인 <xref:System.String?displayProperty=nameWithType>로 throw하면 문자열 값이 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> 속성에 지정되며 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>에서 사용할 수 없습니다.
@@ -67,7 +68,7 @@ WCF 클라이언트에서 클라이언트 응용 프로그램에 관심이 있�
 양방향 작업(즉, <xref:System.ServiceModel.FaultException%601>가 <xref:System.ServiceModel.OperationContractAttribute>로 설정된 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 있는 메서드)에 대한 응답으로 작업 계약에 지정된 오류를 받은 경우 클라이언트에서 `false` 예외가 throw됩니다.
 
 > [!NOTE]
-> WCF 서비스에 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성이 `true`로 설정 되어 있으면 클라이언트는 <xref:System.ServiceModel.ExceptionDetail> 형식의 선언 되지 않은 <xref:System.ServiceModel.FaultException%601>로이를 경험 합니다. 클라이언트는 이러한 특정 오류를 catch하거나 <xref:System.ServiceModel.FaultException>에 대한 catch 블록의 오류를 처리할 수 있습니다.
+> WCF 서비스에 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 속성이로 설정 된 경우 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> `true` 클라이언트는이를 형식의 선언 되지 않은로 설정 <xref:System.ServiceModel.FaultException%601> <xref:System.ServiceModel.ExceptionDetail> 합니다. 클라이언트는 이러한 특정 오류를 catch하거나 <xref:System.ServiceModel.FaultException>에 대한 catch 블록의 오류를 처리할 수 있습니다.
 
 일반적으로 <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException> 및 <xref:System.ServiceModel.CommunicationException> 예외만 클라이언트와 서비스에 관련된 것입니다.
 
@@ -112,10 +113,10 @@ WCF 클라이언트에서 클라이언트 응용 프로그램에 관심이 있�
 [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
 [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [예상되는 예외](./samples/expected-exceptions.md)
-- [Close 및 Abort를 사용 하 여 WCF 클라이언트 리소스 해제](./samples/use-close-abort-release-wcf-client-resources.md)
+- [닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제](./samples/use-close-abort-release-wcf-client-resources.md)

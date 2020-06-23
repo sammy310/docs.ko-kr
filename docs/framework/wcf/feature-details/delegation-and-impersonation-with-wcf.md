@@ -1,5 +1,6 @@
 ---
 title: WCF를 통한 위임 및 가장
+description: WCF에서 서비스 도메인의 리소스에 대 한 클라이언트 액세스를 제한 하는 데 사용 하는 가장 및 위임 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599258"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245078"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 애플리케이션을 보려면 [Impersonating the Client](../samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
@@ -118,8 +119,8 @@ ms.locfileid: "84599258"
 |Identification(식별)|해당 없음|해당 없음|Identification(식별)|  
 |가장|예|해당 없음|가장|  
 |가장|예|해당 없음|Identification(식별)|  
-|위임|예|예|위임|  
-|위임|예|예|가장|  
+|위임|Yes|Yes|위임|  
+|위임|Yes|No|가장|  
 |위임|예|해당 없음|Identification(식별)|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>사용자 이름 자격 증명 및 캐시된 토큰 가장에서 가져온 가장 수준  
@@ -127,16 +128,16 @@ ms.locfileid: "84599258"
   
 |`AllowedImpersonationLevel`|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|해당 없음|예|예|위임|  
-|해당 없음|예|예|가장|  
+|해당 없음|Yes|Yes|위임|  
+|해당 없음|Yes|No|가장|  
 |해당 없음|예|해당 없음|Identification(식별)|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U 기반 가장에서 가져온 가장 수준  
   
 |서비스의 `SeTcbPrivilege`포함 여부|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|예|예|해당 없음|가장|  
-|예|예|해당 없음|Identification(식별)|  
+|Yes|예|해당 없음|가장|  
+|Yes|예|해당 없음|Identification(식별)|  
 |예|해당 없음|해당 없음|Identification(식별)|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Windows 계정에 클라이언트 인증서 매핑  
@@ -180,8 +181,8 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |가장 수준|서비스에서 프로세스 간 위임을 수행할 수 있음|서비스에서 시스템 간 위임을 수행할 수 있음|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|아니요|예|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|예|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|예|예|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|No|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|예|Yes|  
   
  다음 코드 예제에서는 위임을 사용하는 방법을 보여 줍니다.  
   

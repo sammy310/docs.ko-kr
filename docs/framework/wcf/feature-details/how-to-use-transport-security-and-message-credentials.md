@@ -1,5 +1,6 @@
 ---
 title: '방법: 전송 보안 및 메시지 자격 증명 사용'
+description: WCF에서 전송 및 메시지 보안 모드를 제공 하는 메시지 자격 증명을 사용 하 여 전송 보안을 구현 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579386"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246651"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>방법: 전송 보안 및 메시지 자격 증명 사용
 전송 및 메시지 자격 증명을 모두 사용 하 여 서비스를 보호 하는 것은 Windows Communication Foundation (WCF)에서 전송 및 메시지 보안 모드를 모두 사용 하는 것입니다. 요컨대, 전송 계층 보안은 무결성과 기밀성을 제공하고, 메시지 계층 보안은 엄격한 전송 보안 메커니즘에서는 제공되지 않는 다양한 자격 증명을 제공합니다. 이 항목에서는 <xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하여 메시지 자격 증명을 통해 전송을 구현하는 기본 단계를 보여 줍니다. 보안 모드를 설정 하는 방법에 대 한 자세한 내용은 [방법: 보안 모드 설정](../how-to-set-the-security-mode.md)을 참조 하세요.  

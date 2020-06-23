@@ -1,13 +1,14 @@
 ---
 title: 세션, 인스턴스 및 동시성
+description: 세션, 인스턴스 및 동시성, 사용 방법, WFC에서 두 항목 간의 상호 작용에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600324"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246547"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>세션, 인스턴스 및 동시성
 *세션* 은 두 개의 엔드포인트 사이에 전송된 모든 메시지의 상관 관계입니다. *인스턴스 만들기* 는 사용자 정의 서비스 개체와 관련 <xref:System.ServiceModel.InstanceContext> 개체의 수명 제어를 의미합니다. *동시성* 은 <xref:System.ServiceModel.InstanceContext> 에서 동시에 실행되는 스레드 수의 제어를 의미하는 용어입니다.  
@@ -37,7 +38,7 @@ ms.locfileid: "84600324"
   
  클라이언트 애플리케이션과 서비스 애플리케이션은 서로 다른 방법으로 세션과 상호 작용합니다. 클라이언트 애플리케이션은 세션을 시작한 다음 세션 내에서 전송된 메시지를 수신하여 처리합니다. 서비스 애플리케이션은 세션을 확장성 지점으로 사용하여 추가 동작을 추가합니다. <xref:System.ServiceModel.InstanceContext> 와 직접 작업하거나 사용자 지정 인스턴스 컨텍스트 공급자를 구현하여 수행합니다.  
   
-## <a name="instancing"></a>인스턴스 만들기  
+## <a name="instancing"></a>인스턴싱  
  인스턴스 만들기 동작( <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성을 사용하여 설정)은 들어오는 메시지에 대한 응답으로 <xref:System.ServiceModel.InstanceContext> 를 만드는 방법을 제어합니다. 기본적으로 각 <xref:System.ServiceModel.InstanceContext> 는 하나의 사용자 정의 서비스 개체와 연결되기 때문에 기본적인 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성을 설정하면 사용자 정의 서비스 개체의 인스턴스 만들기도 제어합니다. <xref:System.ServiceModel.InstanceContextMode> 열거형은 인스턴스 만들기 모드를 정의합니다.  
   
  사용할 수 있는 인스턴스 만들기 모드는 다음과 같습니다.  
@@ -82,7 +83,7 @@ public class CalculatorService : ICalculatorInstance
 - <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 각 서비스 인스턴스가 한 번에 하나의 메시지를 처리하지만 재진입 작업 호출을 허용합니다. 서비스는 WCF 클라이언트 개체를 통해 호출 하는 경우에만 이러한 호출을 허용 합니다.  
   
 > [!NOTE]
-> 둘 이상의 스레드를 안전하게 사용하는 코드를 이해하고 개발하기는 쉽지 않습니다. <xref:System.ServiceModel.ConcurrencyMode.Multiple> 또는 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 값을 사용하기 전에 이러한 모드에 대해 해당 서비스가 적절하게 디자인되었는지 확인합니다. 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>을 참조하세요.  
+> 둘 이상의 스레드를 안전하게 사용하는 코드를 이해하고 개발하기는 쉽지 않습니다. <xref:System.ServiceModel.ConcurrencyMode.Multiple> 또는 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 값을 사용하기 전에 이러한 모드에 대해 해당 서비스가 적절하게 디자인되었는지 확인합니다. 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>를 참조하세요.  
   
  동시성 사용은 인스턴스 만들기 모드와 관련됩니다. <xref:System.ServiceModel.InstanceContextMode.PerCall>인스턴스 만들기에서 각 메시지가 새에 의해 처리 되 <xref:System.ServiceModel.InstanceContext> 고 따라서 둘 이상의 스레드가에서 활성화 되지 않기 때문에 동시성이 관련 되지 않습니다 <xref:System.ServiceModel.InstanceContext> .  
   
@@ -113,5 +114,5 @@ public class CalculatorService : ICalculatorConcurrency
 - [방법: 세션이 필요한 서비스 만들기](how-to-create-a-service-that-requires-sessions.md)
 - [방법: 서비스 인스턴스 만들기 제어](how-to-control-service-instancing.md)
 - [동시성](../samples/concurrency.md)
-- [인스턴스 만들기](../samples/instancing.md)
+- [인스턴싱](../samples/instancing.md)
 - [세션](../samples/session.md)

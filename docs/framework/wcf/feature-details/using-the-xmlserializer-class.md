@@ -1,5 +1,6 @@
 ---
 title: XmlSerializer 클래스 사용
+description: WCF에서 클라이언트와 서비스 간에 전송 되는 XML로 응용 프로그램의 데이터를 serialize 하는 데 사용 하는 XmlSerializer에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600207"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246386"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 
@@ -173,7 +174,7 @@ WCF는 <xref:System.Xml.Serialization.SoapIncludeAttribute> <xref:System.Xml.Ser
 
 - 생성 된 스키마는 [데이터 계약 스키마 참조](data-contract-schema-reference.md)에 설명 된 대로 유효한 데이터 계약 스키마 일 수 있습니다. 이 경우 스키마를 일반적인 방법으로 가져올 수 있으며 일반 데이터 계약 형식이 생성됩니다.
 
-- 생성된 스키마가 올바른 데이터 계약 스키마가 아닐 수 있습니다. 예를 들어 스키마 공급자 메서드가 데이터 계약 모델에서 지원되지 않는 XML 특성과 관련된 스키마를 생성할 수 있습니다. 이 경우 스키마를 `IXmlSerializable` 형식으로 가져올 수 있습니다. 이 가져오기 모드는 기본적으로 설정 되지 않지만 예를 들어 `/importXmlTypes` [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)로 명령줄 스위치를 사용 하 여 쉽게 사용할 수 있습니다. 이에 대해서는 [클래스를 생성 하기 위해 스키마 가져오기](importing-schema-to-generate-classes.md)에 자세히 설명 되어 있습니다. 형식 인스턴스에 대한 XML로 직접 작업해야 합니다. 보다 넓은 범위의 스키마를 지원하는 다른 serialization 기술을 사용할 수도 있습니다. `XmlSerializer` 사용에 대한 항목을 참조하세요.
+- 생성된 스키마가 올바른 데이터 계약 스키마가 아닐 수 있습니다. 예를 들어 스키마 공급자 메서드가 데이터 계약 모델에서 지원되지 않는 XML 특성과 관련된 스키마를 생성할 수 있습니다. 이 경우 스키마를 `IXmlSerializable` 형식으로 가져올 수 있습니다. 이 가져오기 모드는 기본적으로 설정 되어 있지 않지만, 예를 들어 `/importXmlTypes` [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에 대 한 명령줄 스위치를 사용 하 여 쉽게 사용할 수 있습니다. 이에 대해서는 [클래스를 생성 하기 위해 스키마 가져오기](importing-schema-to-generate-classes.md)에 자세히 설명 되어 있습니다. 형식 인스턴스에 대한 XML로 직접 작업해야 합니다. 보다 넓은 범위의 스키마를 지원하는 다른 serialization 기술을 사용할 수도 있습니다. `XmlSerializer` 사용에 대한 항목을 참조하세요.
 
 - 새 형식을 생성하는 대신 프록시의 기존 `IXmlSerializable` 형식을 다시 사용할 수 있습니다. 이 경우 스키마를 가져와서 형식 생성 항목에서 설명하는 참조된 형식 기능을 사용하여 다시 사용할 형식을 나타낼 수 있습니다. 이는 다시 사용할 형식이 포함된 어셈블리를 지정하는 svcutil.exe에 `/reference` 스위치를 사용하는 것에 같습니다.
 

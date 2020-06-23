@@ -1,13 +1,14 @@
 ---
 title: 클라이언트 구성
+description: WCF 클라이언트 구성을 사용 하 여 서비스에 연결 하는 데 사용 되는 끝점에 대 한 주소, 바인딩, 동작 및 계약을 지정 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593661"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245377"
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 WCF (Windows Communication Foundation) 클라이언트 구성을 사용 하 여 클라이언트가 서비스 끝점에 연결 하는 데 사용 하는 클라이언트 끝점의 "ABC" 속성인 주소, 바인딩, 동작 및 계약을 지정할 수 있습니다. 요소에는 [\<client>](../../configure-apps/file-schema/wcf/client.md) [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 끝점 abcs를 구성 하는 데 사용 되는 특성이 포함 된 요소가 있습니다. 이러한 특성에 대해서는 [끝점 구성](#configuring-endpoints) 섹션에서 설명 합니다.  
@@ -15,7 +16,7 @@ WCF (Windows Communication Foundation) 클라이언트 구성을 사용 하 여 
  요소에는 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) 메타 데이터 가져오기 및 내보내기에 대 한 설정을 지정 하는 데 사용 되는 요소, [\<headers>](../../configure-apps/file-schema/wcf/headers.md) 사용자 지정 주소 헤더의 컬렉션을 포함 하는 요소 및 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 다른 끝점에서 끝점을 인증할 수 있도록 하는 요소가 포함 되어 있습니다. [\<headers>](../../configure-apps/file-schema/wcf/headers.md)및 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 요소는의 일부 이며 <xref:System.ServiceModel.EndpointAddress> [주소](endpoint-addresses.md) 문서에 설명 되어 있습니다. 메타 데이터 확장 사용에 대해 설명 하는 항목에 대 한 링크는 [메타 데이터 구성](#configuring-metadata) 섹션에 제공 됩니다.  
   
 ## <a name="configuring-endpoints"></a>엔드포인트 구성  
- 클라이언트 구성은 클라이언트에서 끝점을 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 구성 하는 데 사용할 클라이언트 구성의 및 요소를 참조 하는 각각 고유한 이름, 주소 및 계약을 사용 하 여 하나 이상의 끝점을 지정할 수 있도록 디자인 되었습니다. 클라이언트 구성 파일의 이름은 WCF 런타임에서 예상 하는 이름 이므로 "App.config"로 지정 해야 합니다. 다음 예제에서는 클라이언트 구성 파일을 보여 줍니다.  
+ 클라이언트 구성은 클라이언트에서 끝점을 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 구성 하는 데 사용할 클라이언트 구성의 및 요소를 참조 하는 각각 고유한 이름, 주소 및 계약을 사용 하 여 하나 이상의 끝점을 지정할 수 있도록 디자인 되었습니다. 클라이언트 구성 파일은 WCF 런타임에서 예상 하는 이름이 기 때문에 "App.config"로 이름이 지정 되어야 합니다. 다음 예제에서는 클라이언트 구성 파일을 보여 줍니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

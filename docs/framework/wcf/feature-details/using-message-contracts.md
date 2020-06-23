@@ -1,5 +1,6 @@
 ---
 title: 메시지 계약 사용
+description: 메시지 계약 특성을 사용 하 여 WFC에서 SOAP 메시지의 구조를 지정 하는 메시지 계약을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600272"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244714"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 WCF (Windows Communication Foundation) 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하며 데이터가 전달 되는 메시지의 구조를 고려 하지 않아도 됩니다. 이러한 애플리케이션의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. 자세한 내용은 [서비스 계약에서 데이터 전송 지정](specifying-data-transfer-in-service-contracts.md)을 참조 하세요.  

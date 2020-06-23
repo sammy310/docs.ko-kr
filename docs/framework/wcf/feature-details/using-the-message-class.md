@@ -1,16 +1,17 @@
 ---
 title: Message 클래스 사용
+description: WCF의 기본 인 메시지 클래스에 대해 알아봅니다. 일부 고급 시나리오 에서만 메시지 클래스를 직접 사용 하 여 프로그래밍 해야 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 142578ef76a70fed27dc0137378b59e228cd25c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f806e257cfd3ccc5118a5783e2eda48eef4ba0bf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585651"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246495"
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
 <xref:System.ServiceModel.Channels.Message>클래스는 WCF (Windows Communication Foundation)의 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
@@ -94,7 +95,7 @@ ms.locfileid: "84585651"
  [!code-csharp[C_UsingTheMessageClass#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#5)]
  [!code-vb[C_UsingTheMessageClass#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#5)]  
   
- 두 개의 추가 도우미 메서드는 특정 SOAP 시작 요소 태그를 씁니다. 이 메서드는 메시지 본문에 액세스하지 않으므로 메시지 상태를 변경하지 않습니다. 여기에는 다음이 포함됩니다.  
+ 두 개의 추가 도우미 메서드는 특정 SOAP 시작 요소 태그를 씁니다. 이 메서드는 메시지 본문에 액세스하지 않으므로 메시지 상태를 변경하지 않습니다. 이러한 개체는 다음과 같습니다.  
   
 - <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>는 시작 본문 요소(예: `<soap:Body>`)를 씁니다.  
   

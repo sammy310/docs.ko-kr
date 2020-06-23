@@ -1,5 +1,6 @@
 ---
 title: WCF 보안 프로그래밍
+description: 인증, 기밀성 및 무결성을 포함 하 여 보안 WCF 응용 프로그램을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596775"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244987"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 WCF (보안 Windows Communication Foundation) 응용 프로그램을 만드는 데 사용 되는 기본 프로그래밍 작업에 대해 설명 합니다. 이 항목에서는 *전송 보안*이라는 인증, 기밀성 및 무결성만 다룹니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어)에 대해 다루지 않습니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  

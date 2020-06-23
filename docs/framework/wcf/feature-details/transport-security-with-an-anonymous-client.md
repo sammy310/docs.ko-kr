@@ -1,16 +1,17 @@
 ---
 title: 익명 클라이언트를 사용 하는 전송 보안
+description: 전송 보안을 사용 하 여 클라이언트에서 신뢰 하는 인증서를 사용 하 여 서버를 인증 하는이 WCF 시나리오를 검토 합니다. 클라이언트가 인증 되지 않았습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344752"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245013"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>익명 클라이언트를 사용 하는 전송 보안
 
@@ -20,21 +21,21 @@ ms.locfileid: "75344752"
 
 서비스에서 인증서를 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md) 및 [방법: SSL 인증서로 포트 구성](how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.
 
-![익명 클라이언트를 사용하는 전송 보안 사용](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![익명 클라이언트에서 전송 보안 사용](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
-|특징|설명|
+|특성|Description|
 |--------------------|-----------------|
-|보안 모드|Transport|
+|보안 모드|전송|
 |상호 운용성|기존 웹 서비스 및 클라이언트와의 상호 운용성|
-|인증(서버)<br /><br /> 인증(클라이언트)|예<br /><br /> 응용 프로그램 수준 (WCF 지원 안 함)|
-|무결성|예|
-|기밀성|예|
-|Transport|HTTPS|
+|인증(서버)<br /><br /> 인증(클라이언트)|Yes<br /><br /> 응용 프로그램 수준 (WCF 지원 안 함)|
+|무결성|Yes|
+|기밀성|Yes|
+|전송|HTTPS|
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>서비스
 
-다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.
+다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.
 
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.
 
@@ -47,7 +48,7 @@ ms.locfileid: "75344752"
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
 다음 코드에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다. 클라이언트는 어떤 메커니즘으로도 인증되지 않는 익명 클라이언트입니다.
 
@@ -80,11 +81,11 @@ ms.locfileid: "75344752"
 
 ## <a name="client"></a>Client
 
-다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.
+다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -94,7 +95,7 @@ ms.locfileid: "75344752"
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
 다음 구성은 서비스 설정하는 데 코드 대신 사용할 수 있습니다.
 
@@ -121,9 +122,9 @@ ms.locfileid: "75344752"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [WS 전송 보안](../samples/ws-transport-security.md)
 - [전송 보안 개요](transport-security-overview.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

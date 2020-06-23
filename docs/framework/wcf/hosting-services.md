@@ -1,15 +1,16 @@
 ---
-title: 서비스 호스트
+title: 서비스 호스팅
+description: WCF 서비스에 대 한 호스팅 옵션에 대해 알아봅니다. 서비스는이를 만들고 해당 컨텍스트 및 수명을 제어 하는 런타임 환경에서 호스팅해야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921047"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246387"
 ---
 # <a name="hosting-services"></a>호스팅 서비스
 
@@ -28,24 +29,24 @@ WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 통합 프로
 
 ### <a name="managed-windows-services"></a>관리되는 Windows 서비스
 
-이 호스팅 옵션은 서비스의 프로세스 수명이 SCM (서비스 제어 관리자)에 의해 제어 되도록 WCF 서비스를 관리 되는 Windows 서비스 (이전의 NT 서비스)로 호스팅하는 응용 프로그램 도메인 (AppDomain)을 등록 하는 것으로 구성 됩니다. Windows 서비스. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 애플리케이션의 일부로 작성해야 합니다. 서비스는 WCF 서비스 계약 인터페이스 뿐만 아니라 <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속 하도록 하 여 Windows 서비스와 WCF 서비스로 구현 됩니다. 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. 자세한 내용은 [방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)을 참조 하세요. 관리 되는 Windows 서비스 호스팅 옵션을 통해 사용 하도록 설정 된 시나리오는 메시지가 활성화 되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 WCF 서비스의 시나리오입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.
+이 호스팅 옵션은 WCF 서비스를 관리 되는 Windows 서비스 (이전의 NT 서비스)로 호스트 하는 응용 프로그램 도메인 (AppDomain)을 등록 하 여 서비스의 프로세스 수명이 Windows 서비스의 SCM (서비스 제어 관리자)에 의해 제어 되도록 합니다. 자체 호스팅 옵션과 같이 이러한 유형의 호스팅 환경에서는 일부 호스팅 코드를 애플리케이션의 일부로 작성해야 합니다. 서비스는 WCF 서비스 계약 인터페이스 뿐만 아니라 클래스에서 상속 되도록 하 여 Windows 서비스와 WCF 서비스로 구현 됩니다 <xref:System.ServiceProcess.ServiceBase> . 그러면 <xref:System.ServiceModel.ServiceHost> 가 만들어지고, 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 메서드 내에서 열리고 재정의된 <xref:System.ServiceProcess.ServiceBase.OnStop> 메서드 내에서 닫힙니다. Installutil.exe 도구를 사용하여 프로그램을 Windows 서비스로 설치하려면 <xref:System.Configuration.Install.Installer> 에서 상속되는 설치 관리자 클래스를 구현해야 합니다. 자세한 내용은 [방법: 관리 되는 Windows 서비스에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)을 참조 하세요. 관리 되는 Windows 서비스 호스팅 옵션을 통해 사용 하도록 설정 된 시나리오는 메시지가 활성화 되지 않은 보안 환경의 IIS 외부에서 호스팅되는 장기 실행 WCF 서비스의 시나리오입니다. 서비스 수명은 대신 운영 체제에 의해 제어됩니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.
 
 ### <a name="internet-information-services-iis"></a>IIS(인터넷 정보 서비스)
 
 IIS 호스팅 옵션은 ASP.NET와 통합 되며 이러한 기술이 제공 하는 프로세스 재활용, 유휴 상태 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 기능을 사용 합니다. Windows XP 및 Windows Server 2003 운영 체제에서이 솔루션은 항상 사용 가능 하 고 확장성이 뛰어난 웹 서비스 응용 프로그램을 호스팅하기 위한 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WCF 서비스에 대 한 IIS 호스팅을 구성 하는 방법에 대 한 자세한 내용은 [방법: iis에서 Wcf 서비스](./feature-details/how-to-host-a-wcf-service-in-iis.md)호스팅을 참조 하세요.
 
- IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1의 구현에는 Windows XP에 몇 가지 제한 사항이 도입 되었습니다. Windows XP에서 IIS 5.1에 의해 WCF 서비스에 제공 되는 메시지 기반 활성화는 동일한 컴퓨터에서 자체 호스팅되는 다른 WCF 서비스에서 포트 80을 사용 하 여 통신 하는 것을 차단 합니다. WCF 서비스는 Windows Server 2003에서 IIS 6.0에 의해 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다. 그러나 WCF 및 IIS 6.0 모두 커널 모드 HTTP 스택 (http.sys)을 사용 하므로 iis 6.0은 IIS 5.1와 달리 포트 80을 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅 WCF 서비스와 공유할 수 있습니다.
+ IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1의 구현에는 Windows XP에 몇 가지 제한 사항이 도입 되었습니다. Windows XP에서 IIS 5.1에 의해 WCF 서비스에 제공 되는 메시지 기반 활성화는 동일한 컴퓨터에서 자체 호스팅되는 다른 WCF 서비스에서 포트 80을 사용 하 여 통신 하는 것을 차단 합니다. WCF 서비스는 Windows Server 2003에서 IIS 6.0에 의해 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다. 그러나 WCF 및 IIS 6.0 모두 커널 모드 HTTP 스택 (HTTP.sys)을 사용 하기 때문에 iis 6.0는 IIS 5.1와는 달리 포트 80을 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅 WCF 서비스와 공유할 수 있습니다.
 
 ### <a name="windows-process-activation-service-was"></a>WAS(Windows Process Activation Service)
 
-WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되는 Windows Server 2008에 대 한 새로운 프로세스 활성화 메커니즘입니다. 친숙 한 IIS 6.0 프로세스 모델 (응용 프로그램 풀 및 메시지 기반 프로세스 활성화)과 호스팅 기능 (예: 오류 급증 시 보호, 상태 모니터링 및 재활용)을 유지 하지만 활성화에서 HTTP에 대 한 종속성을 제거 합니다. 마이크로아키텍처. IIS 7.0는 WAS를 사용 하 여 HTTP를 통한 메시지 기반 활성화를 수행 합니다. 또한 wcf에서 지 원하는 다른 프로토콜 (예: TCP, MSMQ 및 명명 된 파이프)을 통해 메시지 기반 활성화를 제공 하기 위해 추가 WCF 구성 요소가 WAS에 연결 됩니다. 이렇게 하면 통신 프로토콜을 사용하는 애플리케이션에서 프로세스 재활용, 오류로부터 신속한 보호 및 일반적인 구성 시스템과 같은 HTTP 기반 애플리케이션에서만 사용할 수 있었던 IIS 기능을 사용할 수 있습니다.
+WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되는 Windows Server 2008에 대 한 새로운 프로세스 활성화 메커니즘입니다. 친숙 한 IIS 6.0 프로세스 모델 (응용 프로그램 풀 및 메시지 기반 프로세스 활성화)과 호스팅 기능 (예: 오류 급증 시 보호, 상태 모니터링 및 재활용)은 유지 되지만, 활성화 아키텍처에서 HTTP에 대 한 종속성이 제거 됩니다. IIS 7.0는 WAS를 사용 하 여 HTTP를 통한 메시지 기반 활성화를 수행 합니다. 또한 wcf에서 지 원하는 다른 프로토콜 (예: TCP, MSMQ 및 명명 된 파이프)을 통해 메시지 기반 활성화를 제공 하기 위해 추가 WCF 구성 요소가 WAS에 연결 됩니다. 이렇게 하면 통신 프로토콜을 사용하는 애플리케이션에서 프로세스 재활용, 오류로부터 신속한 보호 및 일반적인 구성 시스템과 같은 HTTP 기반 애플리케이션에서만 사용할 수 있었던 IIS 기능을 사용할 수 있습니다.
 
  이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WAS 호스팅을 구성 하는 방법에 대 한 자세한 내용은 [방법: was에서 WCF 서비스](./feature-details/how-to-host-a-wcf-service-in-was.md)호스팅을 참조 하세요.
 
 ## <a name="choose-a-hosting-environment"></a>호스팅 환경 선택
  다음 표에서는 각 호스팅 옵션과 관련된 몇 가지 주요 이점 및 시나리오를 요약하여 설명합니다.
 
-|호스팅 환경|일반 시나리오|주요 이점 및 제한|
+|호스팅 환경|일반적인 시나리오|주요 이점 및 제한|
 |-------------------------|----------------------|----------------------------------|
 |관리되는 애플리케이션("자체 호스팅")|-개발 중에 사용 되는 콘솔 응용 프로그램입니다.<br />-서비스에 액세스 하는 다양 한 WinForm 및 WPF 클라이언트 응용 프로그램입니다.|플.<br />-쉽게 배포할 수 있습니다.<br />-서비스에 대 한 엔터프라이즈 솔루션이 아닙니다.|
 |Windows 서비스(이전의 NT 서비스)|-IIS 외부에서 호스팅되는 장기 실행 WCF 서비스입니다.|-메시지가 활성화 되지 않고 운영 체제에서 제어 하는 서비스 프로세스 수명입니다.<br />-모든 버전의 Windows에서 지원 됩니다.<br />-보안 환경|
@@ -57,19 +58,19 @@ WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되�
 
 |호스팅 환경|사용 가능한 플랫폼|지원되는 전송|프로세스 및 AppDomain 재활용|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|관리되는 애플리케이션("자체 호스팅")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
-|Windows 서비스(이전의 NT 서비스)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
-|IIS 5.1|Windows XP|HTTP|예|
-|IIS 6.0|Windows Server 2003|HTTP|예|
-|WAS(Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|예|
+|관리되는 애플리케이션("자체 호스팅")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|Windows 서비스(이전의 NT 서비스)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|IIS 5.1|Windows XP|HTTP|Yes|
+|IIS 6.0|Windows Server 2003|HTTP|Yes|
+|WAS(Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Yes|
 
- 신뢰할 수 없는 호스트에서 서비스나 확장을 실행하면 보안이 손상된다는 점에 주의해야 합니다. 또한 가장을 사용 하 여 <xref:System.ServiceModel.ServiceHost>를 열 때 응용 프로그램은 사용자의 <xref:System.Security.Principal.WindowsIdentity>를 캐싱하여 사용자가 로그 오프 되지 않았는지 확인 해야 합니다.
+ 신뢰할 수 없는 호스트에서 서비스나 확장을 실행하면 보안이 손상된다는 점에 주의해야 합니다. 또한 가장을 사용 하 여를 열 때 <xref:System.ServiceModel.ServiceHost> 응용 프로그램에서 사용자의를 캐싱하여 사용자가 로그 오프 되지 않았는지 확인 해야 합니다 <xref:System.Security.Principal.WindowsIdentity> .
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [기본 프로그래밍 수명 주기](basic-programming-lifecycle.md)
 - [서비스 계약 구현](implementing-service-contracts.md)
-- [방법: IIS에서 WCF 서비스 호스트](./feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [방법: WAS에서 WCF 서비스 호스트](./feature-details/how-to-host-a-wcf-service-in-was.md)
-- [방법: 관리되는 Windows 서비스에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [How to: Host a WCF Service in a Managed Application](how-to-host-a-wcf-service-in-a-managed-application.md)
+- [방법: IIS에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: WAS에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-was.md)
+- [방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [방법: 관리형 애플리케이션에서 WCF 서비스 호스트](how-to-host-a-wcf-service-in-a-managed-application.md)

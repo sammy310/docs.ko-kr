@@ -1,15 +1,16 @@
 ---
 title: <wsHttpBinding>
+description: WS-TRUST 메시징과 WS-SECURITY를 구현 하는 비 이중 서비스 계약에 적합 한 안전 하 고 신뢰할 수 있으며 상호 운용할 수 있는 HTTP 바인딩을 정의 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: a71ad2a2279eabbcf917df58d7bedec0e728f9e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d603f699145622cb1b70ecf99ea542572e841eac
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140399"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243986"
 ---
 # \<wsHttpBinding>
 비이중 서비스 계약에 적합한 안전하고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다. 이 바인딩은 안정성을 위해 WS-Reliable Messaging 사양을 구현하고, 메시지 보안 및 인증을 위해 WS-Security 사양을 구현합니다. 전송은 HTTP이며 메시지 인코딩은 Text/XML 인코딩입니다.  

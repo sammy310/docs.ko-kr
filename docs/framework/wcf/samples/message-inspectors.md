@@ -1,13 +1,14 @@
 ---
 title: 메시지 검사자
+description: 메시지 유효성 검사 메커니즘을 제공 하는 WCF 클라이언트 및 서비스 메시지 검사기를 구현 하 고 구성 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 1a5519e815a6714e087a77c69e943a3a8c65db68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 20abb655a58f9dce4a967ade9b51db90eed2375b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585080"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246210"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
