@@ -1,5 +1,6 @@
 ---
 title: '방법: SSL 인증서를 사용하여 포트 구성'
+description: 전송 보안을 사용 하는 WSHttpBinding 클래스를 사용 하 여 자체 호스팅 WCF 서비스에 필요한 x.509 인증서로 포트를 구성 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 30b24c4ff06cc7249d3ddb6d95549a574e313f52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579620"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247184"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 
@@ -22,22 +23,22 @@ ms.locfileid: "84579620"
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- Windows Server 2003를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003에서는이 도구가 설치 되어 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
+ Windows Server 2003를 실행 하는 경우 HttpCfg.exe 도구를 사용 합니다. Windows Server 2003에서는이 도구가 설치 되어 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 Httpcfg.exe 도구의 구문을 설명 합니다.  
   
- Windows Vista를 실행 하는 경우 이미 설치 된 Netsh.exe 도구를 사용 합니다.
+ Windows Vista를 실행 하는 경우 이미 설치 되어 있는 Netsh.exe 도구를 사용 합니다.
   
 > [!NOTE]
 > 컴퓨터에 저장 된 인증서를 수정 하려면 관리자 권한이 필요 합니다.  
   
 ## <a name="determine-how-ports-are-configured"></a>포트 구성 방법 결정  
   
-1. Windows Server 2003 또는 Windows XP에서 다음 예제와 같이 Httpcfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
+1. Windows Server 2003 또는 Windows XP에서 다음 예제와 같이 HttpCfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. Windows Vista에서 다음 예제와 같이 Netsh.exe 도구를 사용 하 여 현재 포트 구성을 확인 합니다.  
+2. Windows Vista에서 다음 예제와 같이 Netsh.exe 도구를 사용 하 여 현재 포트 구성을 봅니다.  
   
     ```console  
     netsh http show sslcert  
@@ -55,7 +56,7 @@ ms.locfileid: "84579620"
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number"></a>포트 번호에 SSL 인증서 바인딩  
   
-1. Windows Server 2003 또는 Windows XP에서는 SSL(Secure Sockets Layer) (SSL) 저장소에서 "설정" 모드로 Httpcfg.exe 도구를 사용 하 여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
+1. Windows Server 2003 또는 Windows XP에서 SSL(Secure Sockets Layer) (SSL) 저장소에 있는 "설정" 모드의 HttpCfg.exe 도구를 사용 하 여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -73,13 +74,13 @@ ms.locfileid: "84579620"
   
     - **Certhash** 매개 변수는 인증서의 지문을 지정 합니다.  
   
-    - **Ipport** 매개 변수는 IP 주소 및 포트를 지정 하 고 설명 된 httpcfg.exe 도구의 **-i** 스위치와 마찬가지로 작동 합니다.  
+    - **Ipport** 매개 변수는 IP 주소 및 포트를 지정 하 고, 설명 된 Httpcfg.exe 도구의 **-i** 스위치와 동일 하 게 작동 합니다.  
   
     - **Appid** 매개 변수는 소유 응용 프로그램을 식별 하는 데 사용할 수 있는 GUID입니다.  
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>포트 번호에 SSL 인증서를 바인딩하고 클라이언트 인증서를 지원 합니다.  
   
-1. Windows Server 2003 또는 Windows XP에서 전송 계층의 x.509 인증서를 사용 하 여 인증 하는 클라이언트를 지원 하려면 위의 절차를 수행 하 되 다음 예제와 같이 Httpcfg.exe에 추가 명령줄 매개 변수를 전달 합니다.  
+1. Windows Server 2003 또는 Windows XP에서 전송 계층의 x.509 인증서를 사용 하 여 인증 하는 클라이언트를 지원 하려면 위의 절차를 수행 하 되 다음 예제와 같이 HttpCfg.exe에 추가 명령줄 매개 변수를 전달 합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -101,7 +102,7 @@ ms.locfileid: "84579620"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 또는 Windows XP에서는 **delete** 및 **ssl** 키워드와 함께 httpcfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP` : `port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
+2. Windows Server 2003 또는 Windows XP에서는 **delete** 및 **ssl** 키워드를 사용 하 여 HttpCfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP` : `port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

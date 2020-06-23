@@ -1,15 +1,16 @@
 ---
 title: Windows Process Activation Service에서의 호스팅
+description: 에서 WCF 서비스를 호스팅하는 응용 프로그램을 포함 하는 작업자 프로세스의 활성화 및 수명을 관리 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597308"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247262"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 WAS (Windows Process Activation Service)는 Windows Communication Foundation (WCF) 서비스를 호스팅하는 응용 프로그램을 포함 하는 작업자 프로세스의 활성화 및 수명을 관리 합니다. WAS 프로세스 모델은 http에 대 한 종속성을 제거 하 여 HTTP 서버에 대 한 IIS 6.0 프로세스 모델을 일반화 합니다. 이렇게 하면 WCF 서비스에서 메시지 기반 활성화를 지원 하 고 지정 된 컴퓨터에서 다 수의 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 Net.tcp와 같은 HTTP 및 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  

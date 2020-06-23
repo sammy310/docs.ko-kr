@@ -1,16 +1,17 @@
 ---
 title: 전송 보안 개요
+description: WCF 시스템 제공 바인딩의 주요 전송 보안 메커니즘에 대해 알아봅니다. 이러한 보안 메커니즘은 사용 되는 바인딩 및 전송에 따라 달라 집니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585690"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244831"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 되는 바인딩 및 전송에 따라 달라 집니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템에서 제공 하는 바인딩에 사용 되는 주요 전송 보안 메커니즘에 대해 설명 합니다.  
@@ -82,7 +83,7 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>클라이언트  
+#### <a name="client"></a>Client  
  클라이언트에서는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 메서드를 사용하여 인증서를 지정해야 합니다.  
   
 > [!NOTE]

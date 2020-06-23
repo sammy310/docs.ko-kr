@@ -1,22 +1,23 @@
 ---
 title: 여러 IIS 사이트 바인딩 지원
+description: IIS에서 WCF 서비스를 호스팅할 때 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743435"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244870"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>여러 IIS 사이트 바인딩 지원
-인터넷 정보 서비스 (IIS) 7.0에서 WCF (Windows Communication Foundation) 서비스를 호스팅하는 경우 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공할 수 있습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. `http://www.contoso.com` 및 `http://contoso.com`수신 대기 하는 서비스를 호스트 하려는 경우에 유용 합니다. 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 예: `http://internal.contoso.com` 및 `http://www.contoso.com`  
+인터넷 정보 서비스 (IIS) 7.0에서 WCF (Windows Communication Foundation) 서비스를 호스팅하는 경우 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공할 수 있습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. 이는 및에서 수신 대기 하는 서비스를 호스트 하려는 경우에 유용 합니다 `http://www.contoso.com` `http://contoso.com` . 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 예: `http://internal.contoso.com` 및 `http://www.contoso.com`  
   
 > [!NOTE]
 > 이 기능은 HTTP 프로토콜을 통해서만 사용할 수 있습니다.  
   
 ## <a name="multiple-base-addresses"></a>여러 기본 주소  
- 이 기능은 IIS에서 호스팅되는 WCF 서비스에만 사용할 수 있습니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 이 기능을 사용 하려면 다음 예제와 같이 Web.config 파일의 <`serviceHostingEnvironment`> 요소에 `multipleSiteBindingsEnabled` 특성을 추가 하 고이를 `true`으로 설정 해야 합니다.  
+ 이 기능은 IIS에서 호스팅되는 WCF 서비스에만 사용할 수 있습니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 이 기능을 사용 하려면 `multipleSiteBindingsEnabled` `serviceHostingEnvironment` `true` 다음 예제와 같이 Web.config 파일의 <> 요소에 특성을 추가 하 고로 설정 해야 합니다.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

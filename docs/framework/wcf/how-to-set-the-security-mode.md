@@ -1,5 +1,6 @@
 ---
 title: '방법: 보안 모드 설정'
+description: 대부분의 미리 정의 된 바인딩에서 전송, 메시지 및 TransportWithMessageCredential의 세 가지 일반적인 WCF 보안 모드를 설정 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9b9e25cbafb6387b4584a21fd642d80bc41cd8dc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2f834e1930b7676592f6cbc29a577424d75ebc01
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320904"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244545"
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 
@@ -76,9 +77,9 @@ WCF (Windows Communication Foundation) 보안에는 대부분의 미리 정의 �
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>구성에서 모드 및 ClientCredentialType 속성을 설정하려면
 
-1. 구성 파일의 [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) 요소에 적절 한 바인딩 요소를 추가 합니다. 다음 예에서는 [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) 요소를 추가 합니다.
+1. 구성 파일의 요소에 적절 한 바인딩 요소를 추가 [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) 합니다. 다음 예제에서는 요소를 추가 합니다 [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) .
 
-2. @No__t_0 요소를 추가 하 고 해당 `name` 특성을 적절 한 값으로 설정 합니다.
+2. 요소를 추가 하 `<binding>` 고 해당 `name` 특성을 적절 한 값으로 설정 합니다.
 
 3. `<security>` 요소를 추가하고 `mode` 특성을 `Message`, `Transport` 또는 `TransportWithMessageCredential`로 설정합니다.
 
@@ -116,14 +117,14 @@ WCF (Windows Communication Foundation) 보안에는 대부분의 미리 정의 �
 
 자세한 내용은 [방법: 전송 보안 및 메시지 자격 증명 사용](./feature-details/how-to-use-transport-security-and-message-credentials.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [방법: SSL 인증서로 포트 구성](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: SSL 인증서를 사용하여 포트 구성](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [방법: 전송 보안 및 메시지 자격 증명 사용](./feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [전송 보안](./feature-details/transport-security.md)
 - [메시지 보안](./feature-details/message-security-in-wcf.md)
 - [보안 개요](./feature-details/security-overview.md)
 - [시스템 제공 바인딩](system-provided-bindings.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

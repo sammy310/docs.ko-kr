@@ -1,16 +1,17 @@
 ---
 title: '방법: 기본 WCF 웹 HTTP 서비스 만들기'
+description: WCF에서 웹 끝점을 노출 하는 서비스를 만드는 방법에 대해 알아봅니다. 웹 끝점은 XML 또는 JSON을 사용 하 여 데이터를 보냅니다. SOAP 봉투가 없습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895185"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247106"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>방법: 기본 WCF 웹 HTTP 서비스 만들기
 
@@ -77,7 +78,7 @@ WCF (Windows Communication Foundation)를 사용 하면 웹 끝점을 노출 하
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer에서 GET에 매핑된 서비스 작업을 호출하려면
 
-1. Internet Explorer를 열고 "`http://localhost:8000/EchoWithGet?s=Hello, world!`"를 입력 한 다음 enter 키를 누릅니다. URL에는 서비스의 기준 주소 (`http://localhost:8000/`), 끝점의 상대 주소 (""), 호출할 서비스 작업 ("EchoWithGet") 및 앰퍼샌드 (&)로 구분 된 명명 된 매개 변수 목록이 표시 된 다음 물음표가 포함 됩니다.
+1. Internet Explorer를 열고 ""를 입력 `http://localhost:8000/EchoWithGet?s=Hello, world!` 한 다음 enter 키를 누릅니다. URL에는 서비스의 기준 주소 ( `http://localhost:8000/` ), 끝점의 상대 주소 (""), 호출할 서비스 작업 ("EchoWithGet") 및 앰퍼샌드 (&)로 구분 된 명명 된 매개 변수 목록이 표시 된 다음 물음표가 포함 됩니다.
 
 ## <a name="to-call-service-operations-in-code"></a>코드에서 서비스 작업을 호출하려면
 
@@ -112,7 +113,7 @@ WCF (Windows Communication Foundation)를 사용 하면 웹 끝점을 노출 하
 
 Service.cs를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

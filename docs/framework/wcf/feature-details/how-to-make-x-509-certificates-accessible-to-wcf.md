@@ -1,5 +1,6 @@
 ---
 title: '방법: WCF에 액세스할 수 있는 X.509 인증서 만들기'
+description: WCF에서 x.509 인증서에 액세스할 수 있도록 하는 방법에 대해 알아봅니다. 응용 프로그램 코드는 인증서 저장소 이름 및 위치를 지정 해야 합니다. 다른 요구 사항이 있을 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: e4f1aae021c4be49847b3b6dcd14b5a0a237c899
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597048"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246872"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: WCF에 액세스할 수 있는 X.509 인증서 만들기
 Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수 있도록 하려면 응용 프로그램 코드에서 인증서 저장소 이름 및 위치를 지정 해야 합니다. 상황에 따라, X.509 인증서와 연결된 프라이빗 키를 포함하는 파일에 대한 액세스가 프로세스 ID에 필요할 수 있습니다. 인증서 저장소에 있는 x.509 인증서와 연결 된 개인 키를 가져오려면 WCF에서이 작업을 수행할 수 있는 권한이 있어야 합니다. 기본적으로 소유자와 시스템 계정에서만 인증서의 프라이빗 키에 액세스할 수 있습니다.  
@@ -29,10 +30,10 @@ Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수
   
         |X.509 인증서 사용|프라이빗 키|  
         |---------------------------|-----------------|  
-        |아웃바운드 SOAP 메시지 디지털 서명.|예|  
-        |인바운드 SOAP 메시지 서명 확인.|예|  
-        |아웃바운드 SOAP 메시지 암호화.|예|  
-        |인바운드 SOAP 메시지 암호 해독.|예|  
+        |아웃바운드 SOAP 메시지 디지털 서명.|Yes|  
+        |인바운드 SOAP 메시지 서명 확인.|No|  
+        |아웃바운드 SOAP 메시지 암호화.|No|  
+        |인바운드 SOAP 메시지 암호 해독.|Yes|  
   
     2. 인증서가 저장되는 인증서 저장소 위치와 이름을 확인합니다.  
   
@@ -62,7 +63,7 @@ Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수
         |IIS 6.0 (Windows Server 2003) 또는 IIS 7.0 (Windows Vista)에서 호스트 되는 서비스입니다.|NETWORK SERVICE|  
         |IIS 5.x (Windows XP)에서 호스트 되는 서비스입니다.|Machine.config 파일의 `<processModel>` 요소로 제어됩니다. 기본 계정은 ASPNET입니다.|  
   
-    5. Icacls와 같은 도구를 사용 하 여 개인 키가 포함 된 파일에 대 한 읽기 권한을 WCF가 실행 중인 계정에 부여 합니다.  
+    5. icacls.exe와 같은 도구를 사용 하 여 개인 키가 포함 된 파일에 대 한 읽기 권한을 WCF가 실행 되는 계정에 부여 합니다.  
   
          다음 코드 예제에서는 지정 된 파일에 대 한 DACL (임의 액세스 제어 목록)을 편집 하 여 네트워크 서비스 계정에 파일에 대 한 읽기 (: R) 액세스 권한을 부여 합니다.  
   

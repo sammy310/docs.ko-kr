@@ -1,5 +1,6 @@
 ---
 title: '방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기'
+description: 다음 예제에 따라 DataContractAttribute 특성을 사용 하 여 WCF의 클래스 또는 구조체를 사용 하 여 데이터 계약을 만드는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 0fd7bbea4d6e8d315566aa798ed89a0fd2657f58
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a45fde58795947c3e46fa45750ae1a3faddd8849
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599037"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247171"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기
 이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다. 데이터 계약 및 사용 방법에 대 한 자세한 내용은 [데이터 계약 사용](using-data-contracts.md)을 참조 하세요.  

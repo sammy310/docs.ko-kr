@@ -1,15 +1,16 @@
 ---
 title: 인증서 인증을 사용하는 전송 보안
+description: 전송 보안을 사용할 때 WFC에서 서버 및 클라이언트 인증에 인증서를 사용 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576020"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244780"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
 
@@ -26,8 +27,8 @@ ms.locfileid: "84576020"
 |보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스에 사용됩니다.|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(SSL 인증서 사용)<br /><br /> 예(X.509 인증서 사용)|  
-|데이터 무결성|예|  
-|데이터 기밀성|예|  
+|데이터 무결성|Yes|  
+|데이터 기밀성|Yes|  
 |전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   

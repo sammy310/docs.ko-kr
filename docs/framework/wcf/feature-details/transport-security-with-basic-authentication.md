@@ -1,16 +1,17 @@
 ---
 title: 기본 인증을 사용하는 전송 보안
+description: WCF 서비스 및 클라이언트에 대 한 기본 인증을 보여 주는이 WCF 시나리오를 검토 합니다. 서비스에는 클라이언트에서 신뢰 하는 유효한 인증서가 필요 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 7c83de70e404fe8304bc2e35c1bb5df9e42f95b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f15a19feaed631a76948efd24ee225acf789cb2d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576098"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244857"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
 다음 그림은 WCF (Windows Communication Foundation) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 인터넷 정보 서비스 (IIS)에서 기본 인증을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은을 참조 하십시오 <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> .  
@@ -22,8 +23,8 @@ ms.locfileid: "84576098"
 |보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스와의 상호 운용성|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(HTTPS 사용)<br /><br /> 예(사용자 이름/암호 사용)|  
-|무결성|예|  
-|기밀성|예|  
+|무결성|Yes|  
+|기밀성|Yes|  
 |전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -40,7 +41,7 @@ ms.locfileid: "84576098"
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
  다음에서는 전송 수준 보안이 설정된 기본 인증을 사용하도록 서비스를 구성합니다.  
   
 ```xml  
@@ -69,7 +70,7 @@ ms.locfileid: "84576098"
 </configuration>  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 사용자 이름 및 암호를 포함한 클라이언트 코드를 보여 줍니다. 사용자는 유효한 Windows 사용자 이름과 암호를 입력해야 합니다. 사용자 이름과 암호를 반환하는 코드는 여기에 표시하지 않습니다. 대화 상자나 다른 인터페이스를 사용하여 사용자에게 정보를 쿼리합니다.  
@@ -80,7 +81,7 @@ ms.locfileid: "84576098"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
  다음 코드에서는 클라이언트 구성을 보여 줍니다.  
   
 > [!NOTE]

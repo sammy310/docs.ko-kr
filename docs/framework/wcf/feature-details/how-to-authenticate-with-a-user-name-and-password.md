@@ -1,15 +1,16 @@
 ---
 title: '방법: 사용자 이름 및 암호를 사용하여 인증'
+description: WCF 서비스를 사용 하 여 샘플 코드와 함께 Windows 도메인 사용자 이름 및 암호를 사용 하 여 클라이언트를 인증 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601285"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247249"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>방법: 사용자 이름 및 암호를 사용하여 인증
 
@@ -32,7 +33,7 @@ Windows 도메인 사용자 이름 및 암호를 사용하여 클라이언트를
     // ...
     ```
 
-2. 유선으로 전송되는 사용자 이름과 암호 정보를 암호화하는 데 사용하는 서버 인증서를 지정합니다. 이 코드는 위 코드 바로 다음에 나와야 합니다. 다음 예제에서는 [메시지 보안 사용자 이름](../samples/message-security-user-name.md) 샘플에서 설치 .bat 파일에 의해 생성 된 인증서를 사용 합니다.
+2. 유선으로 전송되는 사용자 이름과 암호 정보를 암호화하는 데 사용하는 서버 인증서를 지정합니다. 이 코드는 위 코드 바로 다음에 나와야 합니다. 다음 예에서는 [메시지 보안 사용자 이름](../samples/message-security-user-name.md) 샘플에서 setup.bat 파일에 의해 생성 된 인증서를 사용 합니다.
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ Windows 도메인 사용자 이름 및 암호를 사용하여 클라이언트를
     // ...
     ```
 
-    사용자 인증서를 가리키도록 코드를 수정하면 사용자 인증서를 사용할 수도 있습니다. 인증서를 만들고 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요. 인증서가 로컬 컴퓨터에 대한 신뢰된 사용자 인증서 저장소에 있는지 확인하십시오. Mmc.exe를 실행 하 고 **파일**, **스냅인 추가/제거 ...** 메뉴 항목을 선택 하 여이 작업을 수행할 수 있습니다. **스냅인 추가/제거** 대화 상자에서 **인증서 스냅인** 을 선택 하 고 **추가**를 클릭 합니다. 인증서 스냅인 대화 상자에서 **컴퓨터 계정**을 선택 합니다. 기본적으로 Message Security User 이름 샘플에서 생성된 인증서는 Personal/Certificates 폴더에 있습니다.  MMC 창의 발급 대상 열 아래에 "localhost"로 나열 됩니다. 인증서를 **신뢰할 수 있는 사용자** 폴더로 끌어 놓습니다. 그러면 인증을 수행할 때 WCF가 인증서를 신뢰할 수 있는 인증서로 취급합니다.
+    사용자 인증서를 가리키도록 코드를 수정하면 사용자 인증서를 사용할 수도 있습니다. 인증서를 만들고 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요. 인증서가 로컬 컴퓨터에 대한 신뢰된 사용자 인증서 저장소에 있는지 확인하십시오. mmc.exe를 실행 하 고 **파일**, **스냅인 추가/제거 ...** 메뉴 항목을 선택 하 여이 작업을 수행할 수 있습니다. **스냅인 추가/제거** 대화 상자에서 **인증서 스냅인** 을 선택 하 고 **추가**를 클릭 합니다. 인증서 스냅인 대화 상자에서 **컴퓨터 계정**을 선택 합니다. 기본적으로 Message Security User 이름 샘플에서 생성된 인증서는 Personal/Certificates 폴더에 있습니다.  MMC 창의 발급 대상 열 아래에 "localhost"로 나열 됩니다. 인증서를 **신뢰할 수 있는 사용자** 폴더로 끌어 놓습니다. 그러면 인증을 수행할 때 WCF가 인증서를 신뢰할 수 있는 인증서로 취급합니다.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>사용자 이름과 암호를 전달하는 서비스를 호출하려면
 
