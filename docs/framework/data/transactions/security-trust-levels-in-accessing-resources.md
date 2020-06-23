@@ -1,22 +1,23 @@
 ---
 title: 리소스 액세스의 보안 신뢰 수준
+description: .NET에서 리소스 액세스의 보안 신뢰 수준 이해 시스템 트랜잭션에는 세 가지 기본 신뢰 수준이 있습니다.
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205874"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141954"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>리소스 액세스의 보안 신뢰 수준
 이 항목에서는 <xref:System.Transactions>에서 노출하는 리소스 형식에 따라 액세스가 제한되는 방법에 대해 설명합니다.  
   
  <xref:System.Transactions>에 대한 세 가지 기본 신뢰 수준이 있습니다. 신뢰 수준은 <xref:System.Transactions>에서 노출하는 리소스 형식과 이러한 리소스에 액세스하는 데 필요한 신뢰 수준을 기반으로 정의됩니다. <xref:System.Transactions>에서 액세스를 제공하는 리소스는 시스템 메모리, 공유 프로세스 범위 리소스 및 시스템 범위 리소스입니다. 수준은 다음과 같습니다.  
   
-- **AllowPartiallyTrustedCallers** (APTCA) 단일 응용 프로그램 도메인 내에서 트랜잭션을 사용 하는 응용 프로그램  
+- 단일 응용 프로그램 도메인 내에서 트랜잭션을 사용 하는 응용 프로그램에 대 한 **AllowPartiallyTrustedCallers** (APTCA)  
   
-- **DistributedTransactionPermission** (DTP) 분산 트랜잭션을 사용 하는 응용 프로그램  
+- 분산 트랜잭션을 사용 하는 응용 프로그램에 대 한 **DistributedTransactionPermission** (DTP).  
   
 - 지속적인 리소스, 구성 관리 애플리케이션 및 레거시 interop 애플리케이션에 대한 완전 신뢰  
   
@@ -26,7 +27,7 @@ ms.locfileid: "70205874"
 ## <a name="trust-levels"></a>신뢰 수준  
   
 ### <a name="aptca-partial-trust"></a>APTCA(부분 신뢰)  
- 어셈블리 <xref:System.Transactions> 는 **AllowPartiallyTrustedCallers** 특성 (APTCA)으로 표시 되어 부분적으로 신뢰할 수 있는 코드에서 호출할 수 있습니다. 이 특성은 기본적으로 각 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 형식에서 공개적으로 액세스할 수 있는 각 메서드에 자동으로 배치 되는 **FullTrust** 권한 집합에 대 한 암시적을 제거 합니다. 그러나 일부 형식과 멤버에는 더 강력한 권한이 필요합니다.  
+ <xref:System.Transactions>어셈블리는 **AllowPartiallyTrustedCallers** 특성 (APTCA)으로 표시 되어 부분적으로 신뢰할 수 있는 코드에서 호출할 수 있습니다. 이 특성은 기본적 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 으로 각 형식에서 공개적으로 액세스할 수 있는 각 메서드에 자동으로 배치 되는 **FullTrust** 권한 집합에 대 한 암시적을 제거 합니다. 그러나 일부 형식 및 멤버에도 더 강력한 권한이 필요 합니다.  
   
  APTCA 특성을 통해 애플리케이션은 단일 애플리케이션 도메인 내에서 부분 신뢰 트랜잭션을 사용할 수 있습니다. 이 경우 일시적인 인리스트먼트와 에스컬레이션되지 않는 트랜잭션을 오류 처리에 사용할 수 있습니다. 이러한 예로 트랜잭션된 해시 테이블과 이를 사용하는 애플리케이션이 있습니다. 단일 트랜잭션으로 해시 테이블에 데이터를 추가하고 제거할 수 있습니다. 나중에 트랜잭션을 롤백하는 경우 해당 트랜잭션에서 수행된 해시 테이블의 모든 변경 내용을 취소할 수 있습니다.  
   

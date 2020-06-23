@@ -1,17 +1,18 @@
 ---
 title: 어셈블리 위치 지정
+description: XML 구성 파일의 검색 요소 또는 codeBase 요소를 사용 하 여 .NET에서 어셈블리의 위치를 지정 하는 방법을 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646027"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141706"
 ---
 # <a name="specifying-an-assemblys-location"></a>어셈블리 위치 지정
 어셈블리 위치를 지정 하는 방법에는 두 가지가 있습니다.  

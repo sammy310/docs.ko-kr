@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504539"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141783"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> 요소(네트워크 설정)
 프록시 서버를 정의합니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "84504539"
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ ms.locfileid: "84504539"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`autoDetect`|프록시를 자동으로 검색할지 여부를 지정합니다. 기본값은 `unspecified`입니다.|  
-|`bypassonlocal`|로컬 리소스에 프록시가 사용되지 않는지 여부를 지정합니다. 로컬 리소스에는 로컬 서버 ( `http://localhost` , `http://loopback` 또는 `http://127.0.0.1` )와 마침표 없는 URI ()가 포함 `http://webserver` 됩니다. 기본값은 `unspecified`입니다.|  
+|`autoDetect`|프록시를 자동으로 검색할지 여부를 지정합니다. 기본값은 `Unspecified`입니다.|  
+|`bypassonlocal`|로컬 리소스에 프록시가 사용되지 않는지 여부를 지정합니다. 로컬 리소스에는 로컬 서버 ( `http://localhost` , `http://loopback` 또는 `http://127.0.0.1` )와 마침표 없는 URI ()가 포함 `http://webserver` 됩니다. 기본값은 `Unspecified`입니다.|  
 |`proxyaddress`|사용할 프록시 URI를 지정 합니다.|  
 |`scriptLocation`|구성 스크립트의 위치를 지정 합니다. 이 특성에는 특성을 사용 하지 마십시오 `bypassonlocal` . |  
-|`usesystemdefault`|Internet Explorer 프록시 설정을 사용할지 여부를 지정 합니다. 로 설정 되 면 `true` 후속 특성이 Internet Explorer 프록시 설정을 재정의 합니다. 기본값은 `unspecified`입니다.|  
+|`usesystemdefault`|Internet Explorer 프록시 설정을 사용할지 여부를 지정 합니다. 로 설정 되 면 `True` 후속 특성이 Internet Explorer 프록시 설정을 재정의 합니다. 기본값은 `Unspecified`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -82,16 +82,16 @@ ms.locfileid: "84504539"
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

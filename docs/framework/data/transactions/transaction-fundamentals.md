@@ -1,13 +1,14 @@
 ---
 title: 트랜잭션 기본 사항
+description: .NET의 트랜잭션 기본 사항을 검토 합니다. 모든 트랜잭션에는 기본 ACID 속성 (원자성, 일관성, 격리 및 내구성)이 있어야 합니다.
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: ed5865121a32f05f9b58c0ca0fca475fe7b98723
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 49292172b07985d379bfa5d520798d7d97af5749
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346212"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141941"
 ---
 # <a name="transaction-fundamentals"></a>트랜잭션 기본 사항
 트랜잭션은 여러 작업을 함께 바인딩합니다. 예를 들어 애플리케이션이 두 가지 작업을 수행한다고 가정합니다. 먼저 데이터베이스에 새 테이블을 만듭니다. 그런 다음 특수 개체를 호출하여 데이터를 수집하고 형식을 지정하여 새 테이블에 삽입합니다. 데이터를 채울 수 없는 경우 새 테이블을 만들지 않으려고 한다는 점에서 두 작업은 서로 관련이 있고 상호 종속적입니다. 단일 트랜잭션 범위 내에서 두 작업을 실행하면 두 작업 간의 연결이 적용됩니다. 두 번째 작업이 실패하면 첫 번째 작업이 새 테이블을 만들기 전의 지점으로 롤백됩니다.  
@@ -20,10 +21,10 @@ ms.locfileid: "75346212"
   
  <xref:System.Transactions>에서 제공하는 클래스를 사용하여 트랜잭션 애플리케이션을 개발하는 경우 필요한 트랜잭션 종류나 관련된 트랜잭션 관리자에 대해 염려할 필요가 없습니다. <xref:System.Transactions> 인프라가 자동으로 이를 관리합니다.  
   
- 트랜잭션을 만들 때 트랜잭션에 적용되는 격리 수준을 지정할 수 있습니다. <xref:System.Transactions.IsolationLevel> 열거형으로 정의 되는 격리 수준에 따라 트랜잭션의 영향을 받는 데이터에 대 한 다른 트랜잭션의 액세스 수준이 결정 됩니다.  
+ 트랜잭션을 만들 때 트랜잭션에 적용되는 격리 수준을 지정할 수 있습니다. 열거형으로 정의 되는 격리 수준에 따라 <xref:System.Transactions.IsolationLevel> 트랜잭션의 영향을 받는 데이터에 대 한 다른 트랜잭션의 액세스 수준이 결정 됩니다.  
   
- ADO.NET, <xref:System.EnterpriseServices>또는 <xref:System.Transactions> 네임 스페이스에서 제공 하는 트랜잭션 프로그래밍 모델을 사용 하 여 트랜잭션을 만들 수 있습니다. [System.object에서 제공](features-provided-by-system-transactions.md) 하는 기능 항목에서는 <xref:System.Transactions> 네임 스페이스를 사용 하 여 트랜잭션 응용 프로그램을 작성 하는 데 사용할 수 있는 기능에 대해 설명 합니다.  
+ ADO.NET, <xref:System.EnterpriseServices> 또는 네임 스페이스에서 제공 하는 트랜잭션 프로그래밍 모델을 사용 하 여 트랜잭션을 만들 수 있습니다 <xref:System.Transactions> . [시스템 트랜잭션 항목에서 제공](features-provided-by-system-transactions.md) 하는 기능 항목에서는 네임 스페이스를 사용 하 여 트랜잭션 응용 프로그램을 작성 하는 데 사용할 수 있는 기능에 대해 설명 합니다 <xref:System.Transactions> .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [System.Transactions에서 제공하는 기능](features-provided-by-system-transactions.md)

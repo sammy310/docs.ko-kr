@@ -1,13 +1,14 @@
 ---
-title: 트랜잭션 처리
+title: '트랜잭션 처리 '
+description: .NET에서 트랜잭션 처리를 검토 합니다. 트랜잭션은 모든 작업이 성공적으로 완료 되지 않는 한 데이터 지향 리소스가 영구적으로 업데이트 되지 않도록 합니다.
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 30d69c55d968865cc80b8633bdbc2442f6d216de
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205914"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141915"
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리
 온라인 서점에서 책을 구입하는 경우 책과 교환하여 신용 지불 형식으로 돈을 지불합니다. 신용이 좋으면 일련의 관련된 작업을 통해 책을 구입할 수 있으며 서점은 돈을 받을 수 있습니다. 그러나 교환 중에 시리즈 중 하나의 작업이 실패하면 전체 교환이 실패합니다. 책을 구입할 수 없고 서점도 돈을 받을 수 없습니다.  

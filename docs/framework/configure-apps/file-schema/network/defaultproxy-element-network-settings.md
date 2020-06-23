@@ -9,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504604"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141633"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> 요소(네트워크 설정)
 HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.  
@@ -27,8 +27,8 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
   
 ```xml  
 <defaultProxy  
-  enabled="true|false"  
-  useDefaultCredentials="true|false">  
+  enabled="True|False"  
+  useDefaultCredentials="True|False">  
     <bypasslist>...</bypasslist>  
     <proxy>...</proxy>  
     <module>...</module>  
@@ -42,8 +42,8 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|`enabled`|웹 프록시의 사용 여부를 지정합니다. 기본값은 `true`입니다.|  
-|`useDefaultCredentials`|이 호스트에 대한 기본 자격 증명을 사용하여 웹 프록시에 액세스하는지 여부를 지정합니다. 기본값은 `false`입니다.|  
+|`enabled`|웹 프록시의 사용 여부를 지정합니다. 기본값은 `True`입니다.|  
+|`useDefaultCredentials`|이 호스트에 대한 기본 자격 증명을 사용하여 웹 프록시에 액세스하는지 여부를 지정합니다. 기본값은 `False`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -51,7 +51,7 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용하지 않는 주소를 설명하는 정규식 집합을 제공합니다.|  
 |[모듈](module-element-network-settings.md)|애플리케이션에 새 프록시 모듈을 추가합니다.|  
-|[proxy](proxy-element-network-settings.md)|프록시 서버를 정의합니다.|  
+|[프록시](proxy-element-network-settings.md)|프록시 서버를 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -75,9 +75,9 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
       <bypasslist>  
         <add address="[a-z]+\.contoso\.com$" />  
@@ -87,7 +87,7 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](index.md)

@@ -1,5 +1,6 @@
 ---
 title: 어셈블리 버전 리디렉션
+description: 컴파일 시간 바인딩 참조를 다른 버전의 .NET 어셈블리, 타사 어셈블리 또는 고유의 앱 어셈블리로 리디렉션합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assembly binding, redirection
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 0d55171e37ec056b3470d238a60bc32f2feb04fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cfd4336fb9999c996bea28eb86f1143932d4c51
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646038"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141736"
 ---
 # <a name="redirecting-assembly-versions"></a>어셈블리 버전 리디렉션
 
@@ -23,7 +24,7 @@ ms.locfileid: "81646038"
 ## <a name="assembly-unification-and-default-binding"></a>어셈블리 통합 및 기본 바인딩
  .NET Framework 어셈블리에 대한 바인딩은 *어셈블리 통합*이라고 하는 프로세스를 통해 리디렉션되는 경우가 있습니다. .NET Framework는 공용 언어 런타임 버전과 형식 라이브러리를 구성하는 약 24개의 .NET Framework 어셈블리로 이루어져 있습니다. 이러한 .NET Framework 어셈블리는 런타임에서 하나의 단위로 처리됩니다. 기본적으로, 응용 프로그램이 시작되면 런타임으로 실행되는 코드의 형식에 대한 모든 참조는 프로세스에서 로드되는 런타임과 버전 번호가 같은 .NET Framework 어셈블리로 이동됩니다. 이 모델에서 발생하는 리디렉션은 런타임에 대한 기본 동작입니다.
 
- 예를 들어 앱이 SYSTEM.XML 네임 스페이스의 형식을 참조 하 고 .NET Framework 4.5를 사용 하 여 빌드된 경우, 런타임 버전 4.5과 함께 제공 되는 SYSTEM.XML 어셈블리에 대 한 정적 참조를 포함 합니다. .NET Framework 4와 함께 제공되는 System.XML 어셈블리를 가리키도록 바인딩 참조를 리디렉션하려는 경우에는 응용 프로그램 구성 파일에 리디렉션 정보를 넣을 수 있습니다. 통합된 .NET Framework 어셈블리에 대한 구성 파일에서 바인딩 리디렉션은 해당 어셈블리에 대한 통합을 취소합니다.
+ 예를 들어 앱이 System.XML 네임 스페이스의 형식을 참조 하 고 .NET Framework 4.5를 사용 하 여 빌드된 경우, 런타임 버전 4.5과 함께 제공 되는 System.XML 어셈블리에 대 한 정적 참조를 포함 합니다. .NET Framework 4와 함께 제공되는 System.XML 어셈블리를 가리키도록 바인딩 참조를 리디렉션하려는 경우에는 응용 프로그램 구성 파일에 리디렉션 정보를 넣을 수 있습니다. 통합된 .NET Framework 어셈블리에 대한 구성 파일에서 바인딩 리디렉션은 해당 어셈블리에 대한 통합을 취소합니다.
 
  또한 여러 버전을 사용할 수 있는 경우 타사 어셈블리에 대해 어셈블리 바인딩을 수동으로 리디렉션할 수 있습니다.
 
@@ -57,7 +58,7 @@ ms.locfileid: "81646038"
 
 .NET Framework 4.5.1 이상 버전을 대상으로 하는 Visual Studio에서 데스크톱 앱을 만드는 경우 앱에서 자동 바인딩 리디렉션을 사용 합니다. 즉, 두 구성 요소가 강력한 이름의 동일한 어셈블리의 다른 버전을 참조하는 경우 런타임에서 출력 앱 구성 파일(app.config)에 최신 버전의 어셈블리에 바인딩 리디렉션을 자동으로 추가한다는 의미입니다. 이 리디렉션은 그 밖에 발생할 수 있는 어셈블리 통합을 재정의합니다. 소스 app.config 파일은 수정되지 않습니다. 예를 들어, 앱에서 대역 외 .NET Framework 구성 요소를 직접 참조하지만 동일한 구성 요소의 이전 버전을 대상으로 하는 타사 라이브러리를 사용한다고 가정해 보겠습니다. 앱을 컴파일하면, 최신 버전의 구성 요소에 대한 바인딩 리디렉션이 포함되도록 출력 앱 구성 파일이 수정됩니다. 웹앱을 만드는 경우, 바인딩 충돌에 대한 빌드 경고가 표시된 후에 소스 웹 구성 파일에 필요한 바인딩 리디렉션을 추가할 수 있는 옵션이 제공됩니다.
 
-컴파일 시에 소스 app.config 파일에 바인딩 리디렉션을 수동으로 추가 하는 경우 Visual Studio는 추가 된 바인딩 리디렉션을 기준으로 어셈블리를 통합 하려고 시도 합니다. 예를 들어, 어셈블리에 대해 다음과 같은 바인딩 리디렉션을 삽입한다고 가정해 보겠습니다.
+소스 app.config 파일에 바인딩 리디렉션을 수동으로 추가 하는 경우 (컴파일 시간에) Visual Studio에서 추가 된 바인딩 리디렉션을 기준으로 어셈블리를 통합 하려고 시도 합니다. 예를 들어, 어셈블리에 대해 다음과 같은 바인딩 리디렉션을 삽입한다고 가정해 보겠습니다.
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 
@@ -65,7 +66,7 @@ ms.locfileid: "81646038"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-앱이 이전 버전의 .NET Framework를 대상으로 하는 경우 자동 바인딩 리디렉션을 사용 하도록 설정할 수 있습니다. 어셈블리에 대 한 app.config 파일에 바인딩 리디렉션 정보를 제공 하거나 바인딩 리디렉션 기능을 해제 하 여이 기본 동작을 재정의할 수 있습니다. 이 기능을 설정 하거나 해제 하는 방법에 대 한 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 및 사용 안 함](how-to-enable-and-disable-automatic-binding-redirection.md)을 참조 하세요.
+앱이 이전 버전의 .NET Framework를 대상으로 하는 경우 자동 바인딩 리디렉션을 사용 하도록 설정할 수 있습니다. 모든 어셈블리에 대 한 app.config 파일에 바인딩 리디렉션 정보를 제공 하거나 바인딩 리디렉션 기능을 해제 하 여이 기본 동작을 재정의할 수 있습니다. 이 기능을 설정 하거나 해제 하는 방법에 대 한 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 및 사용 안 함](how-to-enable-and-disable-automatic-binding-redirection.md)을 참조 하세요.
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>게시자 정책 무시
@@ -152,10 +153,10 @@ ms.locfileid: "81646038"
 </assemblyBinding>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<bindingRedirect>요소인](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect> 요소](./file-schema/runtime/bindingredirect-element.md)
 - [어셈블리 바인딩 리디렉션 보안 권한](assembly-binding-redirection-security-permission.md)
 - [.NET 어셈블리](../../standard/assembly/index.md)
 - [어셈블리를 사용한 프로그래밍](../../standard/assembly/index.md)

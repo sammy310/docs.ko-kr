@@ -1,18 +1,19 @@
 ---
-title: 리소스를 트랜잭션에 참가 요소로 등록
+title: 트랜잭션에서 리소스를 참가자로 등록
+description: 리소스를 .NET 트랜잭션에 참가자로 참여 시킵니다. 트랜잭션의 각 리소스는 트랜잭션 관리자에 의해 조정 되는 resource manager를 통해 관리 됩니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 786a12c2-d530-49f4-9c59-5c973e15a11d
-ms.openlocfilehash: 83d83df0f747198e93dd64308b904cad5c7439ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c3c777593750b3a4f05ae97ed6e26e19f58e4d72
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205971"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141877"
 ---
-# <a name="enlisting-resources-as-participants-in-a-transaction"></a>리소스를 트랜잭션에 참가 요소로 등록
+# <a name="enlisting-resources-as-participants-in-a-transaction"></a>트랜잭션에서 리소스를 참가자로 등록
 
 트랜잭션에 참여하는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. 코디네이션은 트랜잭션 관리자를 통해 트랜잭션에 참여한 구독자에게 제공되는 알림을 통해 수행됩니다.
 
@@ -20,7 +21,7 @@ ms.locfileid: "70205971"
 
 ## <a name="enlisting-resources-in-a-transaction"></a>트랜잭션에 리소스 참여
 
-리소스가 트랜잭션에 참가하려면 트랜잭션에 참여해야 합니다. 클래스 <xref:System.Transactions.Transaction> 는이 기능을 제공 하는 인 **리스트 먼 트** 로 시작 하는 메서드 집합을 정의 합니다. 다른 **참여** 메서드는 리소스 관리자가 가질 수 있는 다양 한 형식의 참여에 해당 합니다. 특히 일시적인 리소스에는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하고 지속적인 리소스에는 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 사용합니다. 리소스 관리자의 지속성(또는 일시성)은 리소스 관리자가 오류 복구를 지원하는지 여부를 나타냅니다. 오류 복구를 지원하는 경우 리소스 관리자는 Phase1(준비) 중에 지속적인 저장소에 데이터를 저장하여 리소스 관리자가 작동하지 않으면 복구 시 트랜잭션에 다시 참여하고 TM에서 받은 알림을 기반으로 적절한 작업을 수행할 수 있도록 합니다. 일반적으로 일시적인 리소스 관리자는 메모리 내 데이터 구조(예: 트랜잭션된 메모리 내 해시 테이블) 같은 일시적인 리소스를 관리하고 지속적인 리소스 관리자는 보다 지속적인 백업 저장소(예: 백업 저장소가 디스크인 데이터베이스)가 있는 리소스를 관리합니다.
+리소스가 트랜잭션에 참가하려면 트랜잭션에 참여해야 합니다. <xref:System.Transactions.Transaction>클래스는이 기능을 제공 하는 인 **리스트 먼 트** 로 시작 하는 메서드 집합을 정의 합니다. 다른 **참여** 메서드는 리소스 관리자가 가질 수 있는 다양 한 형식의 참여에 해당 합니다. 특히 일시적인 리소스에는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하고 지속적인 리소스에는 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 사용합니다. 리소스 관리자의 지속성(또는 일시성)은 리소스 관리자가 오류 복구를 지원하는지 여부를 나타냅니다. 오류 복구를 지원하는 경우 리소스 관리자는 Phase1(준비) 중에 지속적인 스토리지에 데이터를 저장하여 리소스 관리자가 작동하지 않으면 복구 시 트랜잭션에 다시 참여하고 TM에서 받은 알림을 기반으로 적절한 작업을 수행할 수 있도록 합니다. 일반적으로 일시적인 리소스 관리자는 메모리 내 데이터 구조(예: 트랜잭션된 메모리 내 해시 테이블) 같은 일시적인 리소스를 관리하고 지속적인 리소스 관리자는 보다 지속적인 백업 저장소(예: 백업 저장소가 디스크인 데이터베이스)가 있는 리소스를 관리합니다.
 
 단순성을 위해 리소스의 지속성 지원을 기반으로 <xref:System.Transactions.Transaction.EnlistDurable%2A> 또는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용할지 결정한 후 리소스 관리자에 대한 <xref:System.Transactions.IEnlistmentNotification> 인터페이스를 구현하여 2PC(2단계 커밋)에 참가할 리소스를 참여시켜야 합니다. 2PC에 대 한 자세한 내용은 [단일 단계 및 다단계에서 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)을 참조 하십시오.
 
@@ -28,7 +29,7 @@ ms.locfileid: "70205971"
 
 ### <a name="durable-enlistment"></a>지속적인 인리스트먼트
 
-<xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 지속적인 리소스로 트랜잭션에 참가할 리소스 관리자를 참여시키는 데 사용됩니다.  지속적인 리소스 관리자가 트랜잭션 중에 중단될 경우 <xref:System.Transactions.TransactionManager.Reenlist%2A> 메서드를 사용하여 참가자로 활동했으며 2단계를 완료하지 않은 모든 트랜잭션에 다시 참여하여 온라인 상태가 되면 복구를 수행할 수 있으며, 복구 처리가 완료되면 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>를 호출할 수 있습니다. 복구에 대 한 자세한 내용은 참조 하세요. [복구 수행](performing-recovery.md)합니다.
+<xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 지속적인 리소스로 트랜잭션에 참가할 리소스 관리자를 참여시키는 데 사용됩니다.  지속적인 리소스 관리자가 트랜잭션 중에 중단될 경우 <xref:System.Transactions.TransactionManager.Reenlist%2A> 메서드를 사용하여 참가자로 활동했으며 2단계를 완료하지 않은 모든 트랜잭션에 다시 참여하여 온라인 상태가 되면 복구를 수행할 수 있으며, 복구 처리가 완료되면 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>를 호출할 수 있습니다. 복구에 대 한 자세한 내용은 [복구 수행](performing-recovery.md)을 참조 하세요.
 
 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 모두 <xref:System.Guid> 개체를 첫 번째 매개 변수로 사용합니다. <xref:System.Guid>는 트랜잭션 관리자가 지속적인 인리스트먼트를 특정 리소스 관리자와 연결하는 데 사용됩니다. 따라서 리소스 관리자는 일관되게 동일한 <xref:System.Guid>를 사용하여 다시 시작할 때 여러 리소스 관리자에서 자신을 식별해야 합니다. 그렇지 않으면 복구가 실패할 수 있습니다.
 
@@ -53,7 +54,7 @@ ms.locfileid: "70205971"
 
 <xref:System.Transactions.Transaction> 클래스는 PSPE(승격 가능한 단일 단계 인리스트먼트)를 참여시키는 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 메서드도 제공합니다. 이 메서드를 사용하면 지속적인 RM(리소스 관리자)이 트랜잭션을 호스팅하고 "소유"할 수 있으며, 필요한 경우 MSDTC에서 관리하도록 나중에 해당 트랜잭션을 에스컬레이션할 수 있습니다. 이에 대 한 자세한 내용은 [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](optimization-spc-and-promotable-spn.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>추가 정보
 
 - [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](optimization-spc-and-promotable-spn.md)
-- [단일 단계 및 다단계 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [단일 단계 및 다단계에서 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)

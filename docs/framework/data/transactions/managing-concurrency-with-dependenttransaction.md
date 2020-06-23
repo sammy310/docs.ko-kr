@@ -1,13 +1,14 @@
 ---
 title: DependentTransaction으로 동시성 관리
+description: .NET의 DependentTransaction 클래스를 사용 하 여 비동기 작업을 비롯 한 트랜잭션 동시성을 관리 합니다.
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: a8ddcab4b065c3400f9f9f7ec9ce04befdd0f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c825c977419718c8b9870b40699c4d3516e8533
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174383"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141890"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction으로 동시성 관리
 <xref:System.Transactions.Transaction> 개체는 <xref:System.Transactions.Transaction.DependentClone%2A> 메서드를 사용하여 만듭니다. 이 개체는 다른 코드 부분(예: 작업자 스레드)이 여전히 트랜잭션에서 작업을 수행하는 동안 트랜잭션이 커밋되지 않도록 하는 용도로만 사용됩니다. 복제된 트랜잭션에서 수행한 작업이 완료되어 커밋할 준비가 되면 <xref:System.Transactions.DependentTransaction.Complete%2A> 메서드를 사용하여 트랜잭션 작성자에게 알릴 수 있습니다. 따라서 데이터의 일관성과 정확성을 유지할 수 있습니다.  
@@ -17,7 +18,7 @@ ms.locfileid: "79174383"
 ## <a name="creating-a-dependent-clone"></a>종속 복제본 만들기  
  종속 트랜잭션을 만들려면 <xref:System.Transactions.Transaction.DependentClone%2A> 메서드를 호출하고 <xref:System.Transactions.DependentCloneOption> 열거를 매개 변수로 전달합니다. 이 매개 변수는 종속 복제본이 `Commit` 메서드를 호출하여 트랜잭션을 커밋할 준비가 되었음을 나타내기 전에 부모 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>이 호출된 경우의 트랜잭션 동작을 정의합니다. 이 매개 변수에 유효한 값은 다음과 같습니다.  
   
-- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>부모 트랜잭션이 시간 만점될 때까지 또는 완료를 나타내는 모든 <xref:System.Transactions.DependentTransaction.Complete%2A> 종속 종속 가족에 대해 호출될 때까지 부모 트랜잭션의 커밋 프로세스를 차단하는 종속 트랜잭션을 만듭니다. 이 기능은 종속 트랜잭션이 완료될 때까지 클라이언트에서 부모 트랜잭션을 커밋하지 않으려는 경우에 유용합니다. 부모가 종속 트랜잭션보다 일찍 작업을 마치고 트랜잭션에서 <xref:System.Transactions.CommittableTransaction.Commit%2A>을 호출하면 모든 종속 트랜잭션이 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출할 때까지 커밋 프로세스가 트랜잭션에 대해 추가 작업을 수행하고 새 인리스트먼트를 만들 수 있는 상태로 차단됩니다. 모든 트랜잭션이 작업을 완료하고 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출하면 즉시 트랜잭션의 커밋 프로세스가 시작됩니다.  
+- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>부모 트랜잭션이 시간 초과 될 때까지 또는 <xref:System.Transactions.DependentTransaction.Complete%2A> 완료를 나타내는 모든 종속 항목에서가 호출 될 때까지 부모 트랜잭션의 커밋 프로세스를 차단 하는 종속 트랜잭션을 만듭니다. 이 기능은 종속 트랜잭션이 완료될 때까지 클라이언트에서 부모 트랜잭션을 커밋하지 않으려는 경우에 유용합니다. 부모가 종속 트랜잭션보다 일찍 작업을 마치고 트랜잭션에서 <xref:System.Transactions.CommittableTransaction.Commit%2A>을 호출하면 모든 종속 트랜잭션이 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출할 때까지 커밋 프로세스가 트랜잭션에 대해 추가 작업을 수행하고 새 인리스트먼트를 만들 수 있는 상태로 차단됩니다. 모든 트랜잭션이 작업을 완료하고 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출하면 즉시 트랜잭션의 커밋 프로세스가 시작됩니다.  
   
 - 반면 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>는 <xref:System.Transactions.CommittableTransaction.Commit%2A>가 호출되기 전에 부모 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>이 호출되는 경우 자동으로 중단되는 종속 트랜잭션을 만듭니다. 이 경우 종속 트랜잭션에서 수행된 모든 작업이 하나의 트랜잭션 수명 내에서 그대로 유지되며 아무도 작업의 일부만 커밋할 수 없습니다.  
   
@@ -70,7 +71,7 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` 메서드는 새 스레드에서 실행됩니다. 클라이언트는 새 스레드를 시작하고 종속 트랜잭션을 `ThreadMethod` 매개 변수로 전달합니다.  
   
- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>를 사용하여 종속 트랜잭션이 만들어지므로 두 번째 스레드에서 수행한 모든 트랜잭션 작업이 완료되고 종속 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>가 호출될 때까지 트랜잭션을 커밋할 수 없습니다. 즉, 새 스레드가 종속 트랜잭션을 호출하기 `using` <xref:System.Transactions.DependentTransaction.Complete%2A> 전에 클라이언트의 범위가 종료되면(명령문의 끝에 트랜잭션 개체를 삭제하려고 할 때) 클라이언트 코드는 종속 트랜잭션을 호출할 때까지 <xref:System.Transactions.DependentTransaction.Complete%2A> 차단됩니다. 그런 다음 트랜잭션이 커밋 또는 중단을 완료할 수 있습니다.  
+ <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>를 사용하여 종속 트랜잭션이 만들어지므로 두 번째 스레드에서 수행한 모든 트랜잭션 작업이 완료되고 종속 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>가 호출될 때까지 트랜잭션을 커밋할 수 없습니다. 즉, 새 스레드가 종속 트랜잭션에 대해를 호출 하기 전에 클라이언트의 범위가 종료 되 면 (문의 끝에 트랜잭션 개체를 삭제 하려고 할 때 `using` ) <xref:System.Transactions.DependentTransaction.Complete%2A> 종속 트랜잭션에서가 호출 될 때까지 클라이언트 코드가 차단 <xref:System.Transactions.DependentTransaction.Complete%2A> 됩니다. 그런 다음 트랜잭션이 커밋 또는 중단을 완료할 수 있습니다.  
   
 ## <a name="concurrency-issues"></a>동시성 문제  
  <xref:System.Transactions.DependentTransaction> 클래스를 사용할 때 주의해야 하는 몇 가지 추가 동시성 문제가 있습니다.  

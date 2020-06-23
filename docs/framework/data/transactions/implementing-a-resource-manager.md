@@ -1,20 +1,21 @@
 ---
 title: 리소스 관리자 구현
+description: .NET에서 리소스 관리자를 구현 합니다. 리소스 관리자는 트랜잭션에 사용 되는 리소스를 관리 합니다. 트랜잭션 관리자는 resource manager 동작을 조정 합니다.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205954"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141851"
 ---
 # <a name="implementing-a-resource-manager"></a>리소스 관리자 구현
 트랜잭션에 사용되는 각 리소스는 리소스 관리자에 의해 관리되고, RM의 작업은 트랜잭션 관리자에 의해 조정됩니다. 리소스 관리자는 트랜잭션 관리자와 함께 작업하여 애플리케이션에 원자성 및 격리를 보장합니다. Microsoft SQL Server, 지속적인 메시지 큐, 메모리 내 해시 테이블 등이 모두 리소스 관리자의 예입니다.  
   
  리소스 관리자는 지속적인 데이터나 일시적인 데이터를 관리합니다. 리소스 관리자의 지속성(또는 일시성)은 리소스 관리자가 오류 복구를 지원하는지 여부를 나타냅니다. 오류 복구를 지원하는 경우 리소스 관리자는 Phase1(준비) 중에 지속적인 스토리지에 데이터를 저장하여 리소스 관리자가 작동하지 않으면 복구 시 트랜잭션에 다시 참여하고 트랜잭션 관리자에서 받은 알림을 기반으로 적절한 작업을 수행할 수 있도록 합니다. 일반적으로 일시적인 리소스 관리자는 메모리 내 데이터 구조(예: 트랜잭션된 메모리 내 해시 테이블) 같은 일시적인 리소스를 관리하고 지속적인 리소스 관리자는 보다 지속적인 백업 저장소(예: 백업 저장소가 디스크인 데이터베이스)가 있는 리소스를 관리합니다.  
   
- 리소스가 트랜잭션에 참가하려면 트랜잭션에 참여해야 합니다. 클래스 <xref:System.Transactions.Transaction> 는이 기능을 제공 하는 인 **리스트 먼 트** 로 시작 하는 메서드 집합을 정의 합니다. 다른 **참여** 메서드는 리소스 관리자가 가질 수 있는 다양 한 형식의 참여에 해당 합니다. 특히 일시적인 리소스에는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하고 지속적인 리소스에는 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 사용합니다. 단순성을 위해 리소스의 지속성 지원을 기반으로 <xref:System.Transactions.Transaction.EnlistDurable%2A> 또는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용할지 결정한 후 리소스 관리자에 대한 <xref:System.Transactions.IEnlistmentNotification> 인터페이스를 구현하여 2PC(2단계 커밋)에 참가할 리소스를 참여시켜야 합니다. 2PC에 대 한 자세한 내용은 [단일 단계 및 다단계에서 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)을 참조 하십시오.  
+ 리소스가 트랜잭션에 참가하려면 트랜잭션에 참여해야 합니다. <xref:System.Transactions.Transaction>클래스는이 기능을 제공 하는 인 **리스트 먼 트** 로 시작 하는 메서드 집합을 정의 합니다. 다른 **참여** 메서드는 리소스 관리자가 가질 수 있는 다양 한 형식의 참여에 해당 합니다. 특히 일시적인 리소스에는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하고 지속적인 리소스에는 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 사용합니다. 단순성을 위해 리소스의 지속성 지원을 기반으로 <xref:System.Transactions.Transaction.EnlistDurable%2A> 또는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용할지 결정한 후 리소스 관리자에 대한 <xref:System.Transactions.IEnlistmentNotification> 인터페이스를 구현하여 2PC(2단계 커밋)에 참가할 리소스를 참여시켜야 합니다. 2PC에 대 한 자세한 내용은 [단일 단계 및 다단계에서 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)을 참조 하십시오.  
   
  인리스트먼트를 통해 리소스 관리자는 트랜잭션이 커밋 또는 중단될 때 트랜잭션 관리자로부터 콜백을 가져옵니다. 인리스트먼트당 하나의 <xref:System.Transactions.IEnlistmentNotification> 인스턴스가 있습니다. 일반적으로 트랜잭션당 하나의 인리스트먼트가 있지만 리소스 관리자는 동일한 트랜잭션에 여러 번 참여하도록 선택할 수 있습니다.  
   
@@ -35,11 +36,11 @@ ms.locfileid: "70205954"
 ## <a name="in-this-section"></a>섹션 내용  
  일반적으로 리소스 관리자가 수행하는 단계에 대해서는 다음 항목에서 간략하게 설명합니다.  
   
- [리소스를 트랜잭션에 참가 요소로 등록](enlisting-resources-as-participants-in-a-transaction.md)  
+ [트랜잭션에서 리소스를 참가자로 등록](enlisting-resources-as-participants-in-a-transaction.md)  
   
  지속적인 리소스나 일시적인 리소스가 트랜잭션에 참여할 수 있는 방법에 대해 설명합니다.  
   
- [단일 단계 및 다단계 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [단일 단계 및 다단계에서 트랜잭션 커밋](committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  리소스 관리자가 커밋 알림에 응답하고 커밋을 준비하는 방법에 대해 설명합니다.  
   

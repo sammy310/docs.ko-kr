@@ -1,17 +1,18 @@
 ---
 title: 데이터 및 모델링-.NET
+description: 모델링을 설명 하 고 .NET의 데이터에 액세스 하는 방법을 설명 하는 문서에 대 한 링크를 봅니다. 이 문서에서는 WCF Data Services, ADO.NET 및 트랜잭션 처리를 다룹니다.
 ms.date: 09/09/2019
 helpviewer_keywords:
 - .NET Framework, data access
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: ad9e63f74f5a79eba937ef16310926ae9b9f287d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894367"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141838"
 ---
 # <a name="data-and-modeling-in-net"></a>.NET의 데이터 및 모델링
 
@@ -23,7 +24,7 @@ ms.locfileid: "70894367"
  WCF Data Services를 사용하여 웹이나 인트라넷에 데이터 서비스를 배포하는 방법에 대한 정보를 제공합니다.  
 
  [ADO.NET](./adonet/index.md)  
- ADO.NET 아키텍처에 대해 설명하고, ADO.NET 클래스를 사용하여 응용 프로그램 데이터를 관리하는 방법과 Microsoft SQL Server, OLE DB 데이터 소스 및 XML을 포함하는 데이터 소스와 상호 작용하는 방법에 대해 설명합니다.  
+ ADO.NET 아키텍처에 대해 설명하고, ADO.NET 클래스를 사용하여 애플리케이션 데이터를 관리하는 방법과 Microsoft SQL Server, OLE DB 데이터 소스 및 XML을 포함하는 데이터 소스와 상호 작용하는 방법에 대해 설명합니다.  
   
  [트랜잭션 처리](./transactions/index.md)  
  트랜잭션에 대 한 .NET 지원에 대해 설명 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "70894367"
 ## <a name="related-sections"></a>관련 단원
 
  [LINQ(Language-Integrated Query)](../../csharp/programming-guide/concepts/linq/index.md)  
- 을 사용 하 C#는 LINQ (Language Integrated Query) 관련 설명서에 대 한 링크를 제공 합니다.  
+ C #을 사용 하는 LINQ (Language Integrated Query) 관련 설명서에 대 한 링크를 제공 합니다.  
   
  [LINQ(Language-Integrated Query)(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  Visual Basic를 사용 하는 LINQ (Language Integrated Query) 관련 설명서에 대 한 링크를 제공 합니다.  
