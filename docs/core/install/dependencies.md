@@ -3,14 +3,14 @@ title: .NET Core SDK 및 런타임 종속성 - .NET Core
 description: Windows, Linux 및 macOS에 .NET Core SDK 및 런타임을 설치하기 위한 운영 체제 및 CPU 아키텍처 사전 요구 사항에 대해 설명합니다.
 author: leecow
 ms.author: leecow
-ms.date: 04/30/2020
+ms.date: 06/01/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 81f6ab436428d71f71d9fd0f560bd2b0512a519b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895484"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590762"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 종속성 및 요구 사항
 
@@ -120,7 +120,7 @@ ms.locfileid: "82895484"
 >
 > \- 또는 -
 >
-> 라이브러리 *hostfxr.dll*을 찾았으나 *C:\\\<path_to_app>\\hostfxr.dll*에서 로드하지 못했습니다.
+> 라이브러리 *hostfxr.dll*을 찾았으나, *C:\\\<path_to_app>\\hostfxr.dll*에서 로드하지 못했습니다.
 
 ::: zone-end
 

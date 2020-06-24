@@ -1,22 +1,19 @@
 ---
-title: Visual Studio Code에서 .NET Standard 클래스 라이브러리 만들기
+title: Visual Studio Code로 .NET Standard 클래스 라이브러리 만들기
 description: Visual Studio Code를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446954"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701801"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>자습서: Visual Studio Code에서 .NET Standard 라이브러리 만들기
-
-*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 NuGet 패키지로 배포할지 또는 하나 이상의 애플리케이션과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
-
-> [!NOTE]
-> .NET Standard 버전 및 지원되는 플랫폼 목록은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>자습서: Visual Studio Code로 .NET Standard 라이브러리 만들기
 
 이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
+
+*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -27,9 +24,11 @@ ms.locfileid: "84446954"
 
 먼저 클래스 라이브러리 프로젝트를 배치할 빈 솔루션을 만듭니다. 솔루션은 하나 이상의 프로젝트에 대한 컨테이너로 작동합니다. 동일한 솔루션에 관련 프로젝트를 추가합니다.
 
-1. Visual Studio Code를 엽니다.
+1. Visual Studio Code를 시작합니다.
 
-1. 주 메뉴에서 **파일** > **폴더 열기**/**열기...** 를 선택하고, *ClassLibraryProjects* 폴더를 만든 다음, **폴더 선택**/**열기**를 클릭합니다.
+1. 주 메뉴에서 **파일** > **폴더 열기** (macOS에서는 **열기...** )를 선택합니다.
+
+1. **폴더 열기** 대화 상자에서 *ClassLibraryProjects* 폴더를 만들고 **폴더 선택**(macOS에서는 **열기**)을 클릭합니다.
 
 1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
 
@@ -156,7 +155,21 @@ ms.locfileid: "84446954"
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. 처음에는 새 콘솔 앱 프로젝트가 클래스 라이브러리에 액세스할 수 없습니다. 클래스 라이브러리의 메서드를 호출할 수 있도록 허용하려면 다음 명령을 실행하여 클래스 라이브러리 프로젝트에 대한 프로젝트 참조를 만듭니다.
+1. *ShowCase/Program.cs*를 열고 모든 코드를 다음 코드로 바꿉니다.
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   코드는 `row` 변수를 사용하여 콘솔 창에 기록된 데이터 행 수를 유지합니다. 25보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
+
+   프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 <kbd>Enter</kbd> 키를 누르면 애플리케이션이 종료되고 콘솔 창이 닫힙니다.
+
+1. 변경 내용을 저장합니다.
+
+## <a name="add-a-project-reference"></a>프로젝트 참조 추가
+
+처음에는 새 콘솔 앱 프로젝트가 클래스 라이브러리에 액세스할 수 없습니다. 클래스 라이브러리의 메서드를 호출할 수 있도록 허용하려면 클래스 라이브러리 프로젝트에 대한 프로젝트 참조를 만듭니다.
+
+1. 다음 명령을 실행합니다.
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ ms.locfileid: "84446954"
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. *ShowCase/Program.cs*를 열고 모든 코드를 다음 코드로 바꿉니다.
+## <a name="run-the-app"></a>앱 실행
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   코드는 `row` 변수를 사용하여 콘솔 창에 기록된 데이터 행 수를 유지합니다. 25보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
-
-   프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 Enter 키를 누르면 애플리케이션이 종료되고 콘솔 창이 닫힙니다.
-
-1. 변경 내용을 저장합니다.
-
-1. 프로그램을 실행합니다.
+1. 터미널에서 다음 명령을 실행합니다.
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,10 +208,11 @@ ms.locfileid: "84446954"
 ## <a name="additional-resources"></a>추가 자료
 
 * [.NET Core CLI를 사용하여 라이브러리 개발](libraries.md)
+* [지원되는 .NET Standard 버전 및 플랫폼](../../standard/net-standard.md)
 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 솔루션을 만들고, 라이브러리 프로젝트를 추가하고, 라이브러리를 사용하는 콘솔 앱 프로젝트를 추가했습니다. 다음 자습서에서는 솔루션에 단위 테스트 프로젝트를 추가합니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio-code.md)
+> [Visual Studio Code에서 .NET Core로 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio-code.md)

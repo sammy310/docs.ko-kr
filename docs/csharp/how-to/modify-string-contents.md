@@ -3,12 +3,12 @@ title: 문자열 내용 수정 방법 - C# 가이드
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389522"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663007"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
@@ -22,13 +22,13 @@ ms.locfileid: "81389522"
 
 다음 코드는 기존 텍스트를 대체로 바꿔 새 문자열을 만듭니다.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet1":::
 
 위의 코드는 문자열의 이러한 *변경할 수 없는* 속성을 보여 줍니다. 앞의 예제에서 원래 문자열, `source`가 수정되지 않는 것을 볼 수 있습니다. <xref:System.String.Replace%2A?displayProperty=nameWithType> 메서드는 수정 내용을 포함하는 새 `string`을 만듭니다.
 
 <xref:System.String.Replace%2A> 메서드는 문자열 또는 단일 문자를 바꿀 수 있습니다. 두 경우 모두에서 검색된 텍스트의 모든 항목이 대체됩니다.  다음 예제에서는 모든 ' ' 문자를 '\_'로 바꿉니다.
 
-[!code-csharp-interactive[replace characters](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#2)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet2":::
 
 원본 문자열은 변경되지 않으며, 새 문자열은 교체와 함께 반환됩니다.
 
@@ -36,13 +36,13 @@ ms.locfileid: "81389522"
 
 <xref:System.String.Trim%2A?displayProperty=nameWithType>, <xref:System.String.TrimStart%2A?displayProperty=nameWithType> 및 <xref:System.String.TrimEnd%2A?displayProperty=nameWithType> 메서드를 사용하여 선행 또는 후행 공백을 제거할 수 있습니다.  다음 코드에서는 각 예제를 보여 줍니다. 원본 문자열 변경되지 않습니다. 이러한 메서드는 수정된 내용이 포함된 새 문자열을 반환합니다.
 
-[!code-csharp-interactive[trim white space](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#3)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet3":::
 
 ## <a name="remove-text"></a>텍스트 제거
 
 <xref:System.String.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 텍스트를 제거할 수 있습니다. 이 메서드는 특정 인덱스에서 시작하는 문자 수를 제거합니다. 다음 예제에서는 <xref:System.String.Remove%2A>가 뒤에 오는 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>을 사용하여 문자열에서 텍스트를 제거하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet4":::
 
 ## <a name="replace-matching-patterns"></a>일치 패턴 바꾸기
 
@@ -50,7 +50,7 @@ ms.locfileid: "81389522"
 
 정규식은 알려진 텍스트가 아닌 패턴을 따르는 텍스트를 검색하고 대체하는 데 가장 유용합니다. 자세한 내용은 [문자열 검색 방법](search-strings.md)을 참조하세요. 검색 패턴, "the\s"는 공백 문자가 뒤에 오는 문자 "the"를 검색합니다. 패턴의 해당 부분을 사용하면 원본 문자열의 "there"와 일치하지 않습니다. 정규식 언어 요소에 대한 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet5":::
 
 <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> 메서드는 <xref:System.Text.StringBuilder> 개체의 내용으로 변경할 수 없는 문자열을 반환합니다.
 
@@ -60,17 +60,15 @@ ms.locfileid: "81389522"
 
 다음 예제에서는 문자열에서 문자 집합을 대체하는 방법을 보여 줍니다. 먼저 <xref:System.String.ToCharArray?displayProperty=nameWithType> 메서드를 사용하여 문자의 배열을 만듭니다. <xref:System.String.IndexOf%2A> 메서드를 사용하여 단어 "fox"의 시작 인덱스를 찾습니다. 다음 세 개의 문자는 서로 다른 단어로 바뀝니다. 마지막으로 새 문자열은 업데이트된 문자 배열에서 생성됩니다.
 
-[!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
+:::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet6":::
 
 ## <a name="programmatically-build-up-string-content"></a>프로그래밍 방식으로 문자열 콘텐츠 작성
 
 문자열은 변경할 수 없으므로 이전 예제에서는 모두 임시 문자열 또는 문자 배열을 만듭니다. 고성능 시나리오에서는 이 힙 할당을 방지하는 것이 좋습니다. .NET Core는 중간 임시 문자열 할당을 방지하면서 콜백을 통해 문자열의 문자 콘텐츠를 프로그래밍 방식으로 채울 수 있는 <xref:System.String.Create%2A?displayProperty=nameWithType> 메서드를 제공합니다.
 
-[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
 안전하지 않은 코드를 사용하여 고정 블록의 문자열을 수정할 수 있지만 문자열을 만든 후에는 문자열 내용을 수정하지 않는 것이 **좋습니다**. 그렇게 하면 예측할 수 없는 방식으로 작업이 중단되기 때문입니다. 예를 들어 다른 사용자가 자신이 소유하는 것과 동일한 내용이 포함된 문자열을 인턴하는 경우에는 복사본을 얻게 되며 해당 문자열을 수정하는 것으로 간주되지 않습니다.
-
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 

@@ -3,15 +3,15 @@ title: Windows, Linux 및 macOS에 .NET Core SDK 설치 - .NET Core
 description: Windows, Linux 및 macOS에 .NET Core를 설치하는 방법을 알아봅니다. .NET Core 앱을 개발하는 데 필요한 종속성에 대해 알아봅니다.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
+ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 13600ea01e18ad47e6295653ba3b79ce53ff3257
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b170765740600641f96056adc08ff0b69a03338
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397958"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768316"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 설치
 
@@ -53,34 +53,9 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>패키지 관리자를 사용하여 설치
+## <a name="install-on-linux"></a>Linux에 설치
 
-널리 사용되는 여러 Linux 패키지 관리자를 사용하여 .NET Core SDK를 설치할 수 있습니다. 자세한 내용은 [Linux 패키지 관리자 - .NET Core 설치](linux-package-managers.md)를 참조하세요.
-
-패키지 관리자를 사용한 설치는 x64 아키텍처에서만 지원됩니다. ARM과 같은 다른 아키텍처를 사용하여 .NET Core SDK를 설치하는 경우 아래 지침을 [다운로드하고 수동으로 설치](#download-and-manually-install)합니다. 지원되는 아키텍처에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](dependencies.md)을 참조하세요.
-
-## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
-
-SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 터미널을 열고 다음 명령을 실행합니다.
-
-```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
-
-> [!TIP]
-> 이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.
->
-> 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예를 들어:
->
-> - **Bash 셸**: *~/.bash_profile*, *~/.bashrc*
-> - **Korn 셸**: *~/.kshrc* 또는 *.profile*
-> - **Z 셸**: *~/.zshrc* 또는 *.zprofile*
->
-> 셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다. 포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.
->
-> 또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.
+이 문서는 곧 제거될 예정입니다. 현재 [Linux에서 .NET Core 설치](linux.md)로 대체되었습니다.
 
 ::: zone-end
 
@@ -122,7 +97,7 @@ Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케�
 
 런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 `%USERPROFILE%\dotnet`와 같이 설치할 디렉터리를 만듭니다. 마지막으로 다운로드한 zip 파일을 그 디렉터리로 추출합니다.
 
-기본적으로 .NET Core CLI 명령과 앱은 이러한 방식으로 설치된 .NET Core를 사용하지 않습니다. 이를 사용하려면 명시적으로 선택해야 합니다. 이렇게 하려면 애플리케이션이 시작되는 환경 변수를 변경합니다.
+기본적으로 .NET Core CLI 명령과 앱은 이런 방식으로 설치된 .NET Core를 사용하지 않으므로 명시적으로 사용을 선택해야 합니다. 이렇게 하려면 애플리케이션이 시작되는 환경 변수를 변경합니다.
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
@@ -149,6 +124,8 @@ Mac용 Visual Studio는 **.NET Core** 워크로드가 선택된 경우 .NET Core
 
 ::: zone-end
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-alongside-visual-studio-code"></a>Visual Studio Code와 함께 설치
 
 Visual Studio Code는 데스크톱에서 실행되는 강력한 경량 소스 코드 편집기입니다. Visual Studio Code는 Windows, macOS 및 Linux에서 사용할 수 있습니다.
@@ -158,6 +135,8 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 01. [Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).
 01. [.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
+
+::: zone-end
 
 ::: zone pivot="os-windows"
 
@@ -173,7 +152,7 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone-end
 
-::: zone pivot="os-linux,os-macos"
+::: zone pivot="os-macos"
 
 ## <a name="install-with-bash-automation"></a>배시 자동화를 사용하여 설치
 

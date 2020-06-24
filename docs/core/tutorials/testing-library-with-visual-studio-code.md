@@ -1,15 +1,15 @@
 ---
-title: Visual Studio Code에서 .NET Core를 사용하여 .NET Standard 클래스 라이브러리 테스트
+title: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292164"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701035"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>자습서: Visual Studio Code에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
 이 자습서에서는 솔루션에 테스트 프로젝트를 추가하여 단위 테스트를 자동화하는 방법을 보여 줍니다.
 
@@ -19,7 +19,9 @@ ms.locfileid: "84292164"
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
-1. Visual Studio Code를 엽니다.
+단위 테스트는 개발 및 게시 동안 자동화된 소프트웨어 테스트를 제공합니다. 이 자습서에서 사용하는 테스트 프레임워크는 MSTest입니다. [MSTest](https://github.com/Microsoft/testfx-docs)는 선택할 수 있는 세 가지 테스트 프레임워크 중 하나입니다. 다른 프레임워크는 [xUnit](https://xunit.net/)과 [nUnit](https://nunit.org/)입니다.
+
+1. Visual Studio Code를 시작합니다.
 
 1. [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
@@ -55,16 +57,17 @@ ms.locfileid: "84292164"
 
    [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)로 태그가 지정된 테스트 클래스에서 [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)로 태그가 지정된 각 메서드는 단위 테스트가 실행될 때 자동으로 실행됩니다.
 
-   > [!NOTE]
-   > MSTest는 선택할 수 있는 세 가지 테스트 프레임워크 중 하나입니다. 다른 프레임워크는 xUnit과 nUnit입니다.
-
 1. 테스트 프로젝트를 솔루션에 추가합니다.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. 다음 명령을 실행하여 클래스 라이브러리 프로젝트에 대한 프로젝트 참조를 만듭니다.
+## <a name="add-a-project-reference"></a>프로젝트 참조 추가
+
+테스트 라이브러리가 `StringLibrary` 클래스에 대해 작동하도록 하기 위해 `StringLibraryTest` 프로젝트의 참조를 `StringLibrary` 프로젝트에 추가합니다.
+
+1. 다음 명령을 실행합니다.
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 라이브러리 메서드가 문자열을 처리하므로, 이 메서드에서 [빈 문자열(`String.Empty`)](xref:System.String.Empty) 및 `null` 문자열이 성공적으로 처리되는지도 확인해야 합니다. 빈 문자열은 문자가 없고 <xref:System.String.Length>가 0인 문자열입니다. `null` 문자열은 초기화되지 않은 문자열입니다. `StartsWithUpper`를 직접 정적 메서드로 호출하고 단일 <xref:System.String> 인수를 전달할 수 있습니다. 또는 `null`에 할당된 `string` 변수에 대한 확장 메서드로 `StartsWithUpper`를 호출할 수 있습니다.
 
-각 메서드가 문자열 배열의 각 요소에 대해 해당 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 메서드를 반복적으로 호출하는 메서드 세 개를 정의해 보겠습니다. 첫 번째 오류가 발생하는 즉시 테스트 메서드가 실패하기 때문에 메서드 호출에 사용되는 문자열 값을 나타내는 문자열을 전달할 수 있도록 하는 메서드 오버로드를 호출합니다.
+각 메서드가 문자열 배열의 각 요소에 대해 해당 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 메서드를 호출하는 메서드 세 개를 정의해 보겠습니다. 테스트에 실패할 경우 표시될 오류 메시지를 지정할 수 있도록 하는 메서드 오버로드를 호출합니다. 메시지는 실패를 일으킨 문자열을 식별합니다.
 
 테스트 메서드를 만들려면
 
@@ -122,7 +125,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 ## <a name="handle-test-failures"></a>테스트 실패 처리
 
-TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성하고 첫 실행에서 실패합니다. 그런 다음, 테스트를 성공하게 만드는 코드를 앱에 추가합니다. 이 예제에서는 유효성을 검사하는 앱 코드를 작성한 후에 테스트를 만들었으므로 테스트에 실패하지 않았습니다. 테스트가 실패할 것으로 예상되는 시점에 테스트가 실패하는지 확인하려면 테스트 입력에 잘못된 값을 추가하세요.
+TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성하고 첫 실행에서 실패합니다. 그런 다음, 테스트를 성공하게 만드는 코드를 앱에 추가합니다. 이 자습서에서는 유효성을 검사하는 앱 코드를 작성한 후에 테스트를 만들었으므로 테스트에 실패하지 않았습니다. 테스트가 실패할 것으로 예상되는 시점에 테스트가 실패하는지 확인하려면 테스트 입력에 잘못된 값을 추가하세요.
 
 1. `TestDoesNotStartWithUpper` 메서드의 `words` 배열이 "Error" 문자열을 포함하도록 수정합니다.
 
@@ -137,7 +140,7 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   터미널 출력에 테스트 하나가 실패했음이 확인되고 실패한 테스트에 대한 오류 메시지가 제공됩니다.
+   터미널 출력에 테스트 하나가 실패했음이 확인되고 실패한 테스트에 대한 오류 메시지가 제공됩니다. "Assert.IsFalse가 실패했습니다. 'Error'에 필요한 값: false, 실제: True"가 표시됩니다. 이 오류 때문에 "Error" 다음에 나오는 배열의 문자열은 테스트되지 않았습니다.
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
    Total time: 1.7825 Seconds
    ```
 
-1. 1단계에서 수행한 수정을 실행 취소하고 “오류” 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
+1. 1단계에서 추가한 "Error" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
 
 ## <a name="test-the-release-version-of-the-library"></a>라이브러리의 릴리스 버전 테스트
 
-라이브러리의 디버그 버전을 실행할 때 테스트에 모두 통과했으므로 라이브러리의 릴리스 빌드에 대해 추가로 테스트를 실행합니다. 컴파일러 최적화를 비롯한 여러 가지 요인 때문에 디버그 및 릴리스 빌드 간에 서로 다른 동작이 발생할 수도 있습니다.
+라이브러리의 디버그 빌드를 실행할 때 테스트에 모두 통과했으므로 라이브러리의 릴리스 빌드에 대해 추가로 테스트를 실행합니다. 컴파일러 최적화를 비롯한 여러 가지 요인 때문에 디버그 및 릴리스 빌드 간에 서로 다른 동작이 발생할 수도 있습니다.
 
 1. 릴리스 빌드 구성을 사용하여 테스트를 실행합니다.
 
@@ -173,7 +176,7 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
 ## <a name="additional-resources"></a>추가 자료
 
-- [.NET Core 및 .NET Standard의 유닛 테스트](../testing/index.md)
+* [.NET Core 및 .NET Standard의 유닛 테스트](../testing/index.md)
 
 ## <a name="next-steps"></a>다음 단계
 

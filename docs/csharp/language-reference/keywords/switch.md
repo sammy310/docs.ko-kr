@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493671"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -86,7 +86,7 @@ case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 �
 
 각 case 레이블은 일치 식과 비교할 패턴(이전 예제의 `caseSwitch` 변수)을 지정합니다. 일치하는 경우 제어가 일치하는 **첫 번째** case 레이블을 포함하는 switch 섹션으로 전송됩니다. 일치 식과 일치하는 case 레이블 패턴이 없는 경우 제어가 `default` case 레이블을 포함하는 섹션으로 전송됩니다(있는 경우). `default` case가 없는 경우 switch 섹션의 문이 실행되지 않으며, 제어가 `switch` 문 외부로 전송됩니다.
 
-`switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern) 섹션을 참조하세요.
+`switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern-matching with-the-switch-statement) 섹션을 참조하세요.
 
 C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다. 따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.
 
@@ -100,7 +100,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 - switch 섹션의 순서 변경
 
-- `case` 레이블에서 [when 절](#when) 사용
+- `case` 레이블에서 [when 절](#the-case-statement-and-the-when-clause) 사용
 
 ## <a name="the-default-case"></a>`default` case
 
@@ -108,7 +108,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 `default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다. 소스 코드에서 해당 순서와 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a> `switch` 문을 사용한 패턴 일치
+## <a name="pattern-matching-with-the-switch-statement"></a>`switch` 문과 일치하는 패턴
 
 각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7.0부터 지원됩니다.
 
@@ -185,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case` 문 및 `when` 절
+## <a name="the-case-statement-and-the-when-clause"></a>`case` 문과 `when` 절
 
 C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 추가하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다.
 

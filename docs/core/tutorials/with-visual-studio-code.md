@@ -1,17 +1,17 @@
 ---
-title: Visual Studio Code를 사용하여 .NET Core로 콘솔 애플리케이션 만들기
+title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 description: Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201699"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717512"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 콘솔 애플리케이션 만들기
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 
-이 자습서에서는 Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다. 프로젝트 만들기, 컴파일, 실행과 같은 프로젝트 작업은 CLI를 사용하여 수행되므로 원하는 경우 다른 코드 편집기로 이 자습서를 수행하고 터미널에서 명령을 실행할 수 있습니다.
+이 자습서에서는 Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다. 프로젝트 만들기, 컴파일, 실행과 같은 프로젝트 작업은 .NET Core CLI를 사용하여 수행합니다. 원할 경우, 다른 코드 편집기를 사용하여 이 자습서를 따르고 터미널에서 명령을 실행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -20,25 +20,29 @@ ms.locfileid: "84201699"
 
 ## <a name="create-the-app"></a>앱 만들기
 
-1. Visual Studio Code를 엽니다.
+"HelloWorld"라는 .NET Core 콘솔 앱 프로젝트를 만듭니다.
 
-1. 프로젝트를 만듭니다.
+1. Visual Studio Code를 시작합니다.
 
-   1. 주 메뉴에서 **파일** > **폴더 열기**/**열기...** 를 선택하고, *HelloWorld* 폴더를 만든 다음 **폴더 선택**/**열기**를 클릭합니다.
+1. 주 메뉴에서 **파일** > **폴더 열기**(macOS에서는 **파일** > **열기...** )를 선택합니다.
 
-      기본적으로 폴더 이름은 프로젝트 이름 및 네임스페이스 이름이 됩니다. 프로젝트 네임스페이스가 `HelloWorld`라고 가정하는 코드를 자습서의 뒷부분에 추가합니다.
+1. **폴더 열기** 대화 상자에서*HelloWorld* 폴더를 만들고 **폴더 선택**(macOS에서는 **열기**)을 클릭합니다.
 
-   1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
+   기본적으로 폴더 이름은 프로젝트 이름 및 네임스페이스 이름이 됩니다. 프로젝트 네임스페이스가 `HelloWorld`라고 가정하는 코드를 자습서의 뒷부분에 추가합니다.
 
-      *HelloWorld* 폴더에서 명령 프롬프트와 함께 **터미널**이 열립니다.
+1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
 
-   1. **터미널**에서 다음 명령을 입력합니다.
+   *HelloWorld* 폴더에서 명령 프롬프트와 함께 **터미널**이 열립니다.
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. **터미널**에서 다음 명령을 입력합니다.
 
-.NET Core용 콘솔 애플리케이션 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`으로 `Program` 클래스를 정의합니다. *Program.cs* 파일에는 다음 코드가 있습니다.
+   ```dotnetcli
+   dotnet new console
+   ```
+
+템플릿은 간단한 "Hello World" 애플리케이션을 만듭니다. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 "Hello World!"를 콘솔 창에 표시합니다.
+
+템플릿 코드는 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`으로 `Program` 클래스를 정의합니다.
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다. 애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 *args* 배열에서 사용할 수 있습니다.
-
-템플릿은 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 "Hello World!"를 표시하는 간단한 애플리케이션을 만듭니다. 콘솔 창에 표시합니다.
 
 ## <a name="run-the-app"></a>앱 실행
 
@@ -85,11 +87,11 @@ dotnet run
 
    ![누락된 자산에 대한 프롬프트](media/with-visual-studio-code/missing-assets.png)
 
-1. 현재는 `Console.WriteLine`을 호출하는 줄에 불과한 *Program.cs*의 `Main` 메서드 내용을 다음 코드로 바꿉니다.
+1. *Program.cs*에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 **Enter** 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로 콘솔 창에 이러한 값을 표시합니다.
+   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 <kbd>Enter</kbd> 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로 콘솔 창에 이러한 값을 표시합니다.
 
    `\n`은 줄 바꿈 문자를 나타냅니다.
 
@@ -106,7 +108,7 @@ dotnet run
    dotnet run
    ```
 
-1. 이름을 입력하고 **Enter** 키를 눌러 프롬프트에 응답합니다.
+1. 이름을 입력하고 <kbd>Enter</kbd> 키를 눌러 프롬프트에 응답합니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="수정된 프로그램 출력이 표시된 터미널 창":::
 
@@ -118,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 .NET Core 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
+이 자습서에서는 .NET Core 콘솔 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
 
 > [!div class="nextstepaction"]
 > [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)

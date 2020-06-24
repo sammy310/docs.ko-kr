@@ -7,61 +7,23 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420554"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504656"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
 .NET은 언어 독립적입니다. 즉, 개발자는 C#, F#, Visual Basic 등의 .NET 구현을 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다. 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET 구현용으로 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 구성 요소 개발자인 경우 해당 언어와 관계없이 모든 .NET 앱에서 구성 요소에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 이 문서의 첫 부분에서는 언어 독립적 구성 요소, 즉 모든 언어로 작성된 앱에서 사용할 수 있는 구성 요소를 만드는 방법을 설명합니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#cross-language-interoperability)을 참조하세요.
+> 이 문서의 첫 부분에서는 언어 독립 구성 요소를 만드는 방법에 대해 설명합니다. 즉, 이러한 구성 요소는 어떠한 언어로 작성된 앱에서도 사용할 수 있습니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#cross-language-interoperability)을 참조하세요.
 
 어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다.
 
 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 소스 코드에 적용하여 구성 요소가 컴파일 시간에 공용 언어 사양을 준수하는지 여부를 확인할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute)을 참조하세요.
-
-이 문서의 내용
-
-* [CLS 준수 규칙](#cls-compliance-rules)
-
-  * [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures)
-
-  * [명명 규칙](#naming-conventions)
-
-  * [형식 변환](#type-conversion)
-
-  * [배열](#arrays)
-
-  * [인터페이스](#interfaces)
-
-  * [열거형](#enumerations)
-
-  * [형식 멤버 일반 사항](#type-members-in-general)
-
-  * [멤버 접근성](#member-accessibility)
-
-  * [제네릭 형식 및 멤버](#generic-types-and-members)
-
-  * [생성자](#constructors)
-
-  * [속성](#properties)
-
-  * [이벤트](#events)
-
-  * [오버로드](#overloads)
-
-  * [예외](#exceptions)
-
-  * [특성](#attributes)
-
-* [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute)
-
-* [언어 간 상호 운용성](#cross-language-interoperability)
 
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙
 
@@ -184,7 +146,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 멤버 | [형식 멤버 일반 사항](#type-members-in-general) | 전역 정적 필드 및 메서드는 CLS 규격입니다. | 36
 멤버 | -- | 리터럴 정적 값은 필드 초기화 메타데이터를 사용하여 지정됩니다. CLS 규격 리터럴에는 리터럴(또는 해당 리터럴이 `enum`인 경우 기본 형식)과 정확히 같은 형식인 필드 초기화 메타데이터에 지정된 값이 있어야 합니다. | 13
 멤버 | [형식 멤버 일반 사항](#type-members-in-general) | vararg 제약 조건은 CLS의 일부가 아니며, CLS에서는 관리되는 표준 호출 규칙만 지원합니다. | 15
-명명 규칙 | [명명 규칙](#naming-conventions) | 어셈블리는 시작하고 식별자에 포함할 수 있는 문자 집합을 규정하는 유니코드 표준 3.0 기술 보고서 15의 부록 7을 준수합니다. [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html)에서 온라인으로 확인할 수 있습니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있습니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다. | 4
+명명 규칙 | [명명 규칙](#naming-conventions) | 어셈블리는 시작하고 식별자에 포함할 수 있는 문자 집합을 규정하는 유니코드 표준 3.0 기술 보고서 15의 부록 7을 준수합니다. [Unicode Normalization Forms](https://unicode.org/reports/tr15/)에서 온라인으로 확인할 수 있습니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있습니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다. | 4
 오버로딩 | [명명 규칙](#naming-conventions) | CLS 규격 범위에 소개된 모든 이름은 이름이 동일한 경우를 제외하고는 종류가 독립적이고 고유한 이름이어야 하며 오버로드를 통해 확인됩니다. 즉, CTS에서는 메서드 및 필드에 동일한 이름을 사용하는 단일 형식이 허용되지만 CLS에서는 그렇지 않습니다. | 5
 오버로딩 | [명명 규칙](#naming-conventions) | CTS로 고유 시그니처가 구분될 수 있지만 필드 및 중첩 형식은 식별자 비교만으로 구분됩니다. 식별자를 비교했을 때 CLS 규칙 39에 지정된 경우를 제외하고 동일한 이름을 갖는 메서드, 속성 및 이벤트는 반환 형식 이상의 차이가 있습니다. | 6
 오버로딩 | [오버로드](#overloads) | 속성 및 메서드만 오버로드될 수 있습니다. | 37
@@ -201,6 +163,24 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 관리되지 않는 포인터 형식은 CLS 규격이 아닙니다. | 17
 유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | CLS 규격 클래스, 값 형식 및 인터페이스에는 CLS 규격이 아닌 멤버 구현이 필요하지 않습니다. | 20
 유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | [System.Object](xref:System.Object)는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다. | 23
+
+섹션의 하위 인덱스:
+
+* [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures)
+* [명명 규칙](#naming-conventions)
+* [형식 변환](#type-conversion)
+* [배열](#arrays)
+* [인터페이스](#interfaces)
+* [열거형](#enumerations)
+* [형식 멤버 일반 사항](#type-members-in-general)
+* [멤버 접근성](#member-accessibility)
+* [제네릭 형식 및 멤버](#generic-types-and-members)
+* [생성자](#constructors)
+* [속성](#properties)
+* [이벤트](#events)
+* [오버로드](#overloads)
+* [예외](#exceptions)
+* [특성](#attributes)
 
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처
 
@@ -607,13 +587,13 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-네임스페이스, 형식 및 멤버의 이름과 같은 언어 식별자 프로그래밍은 [유니코드 표준 3.0, 기술 보고서 15, 부록 7](https://www.unicode.org/reports/tr15/tr15-18.html)을 준수해야 합니다. 이는 다음을 의미합니다.
+네임스페이스, 형식 및 멤버의 이름과 같은 언어 식별자 프로그래밍은 [유니코드 표준 ](https://unicode.org/reports/tr15/)을 준수해야 합니다. 이는 다음을 의미합니다.
 
 * 식별자의 첫 문자로는 유니코드 대문자, 소문자, 제목 대/소문자, 한정자 문자, 기타 문자 또는 문자 숫자가 올 수 있습니다. 유니코드 문자 범주에 대한 자세한 내용은 [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) 열거형을 참조하세요.
 
 * 연속되는 문자는 첫 번째 문자로서 가능한 모든 범주의 문자가 올 수 있으며 간격 없음 표시, 간격 결합 기호, 10진수, 연결 문장 부호 및 형식 지정 코드를 포함할 수 있습니다.
 
-단일 문자를 다중 UTF-16 인코딩 코드 단위로 표시할 수 있으므로 식별자를 비교하기 전에 형식 지정 코드를 필터링하고 식별자를 유니코드 정규화 형식 C로 변환해야 합니다. 유니코드 정규화 형식 C에서 동일한 코드 단위를 만드는 문자 시퀀스는 CLS 규격이 아닙니다. 다음 예제에서는 ANGSTROM SIGN(U+212B) 문자로 구성된 `Å`라는 속성과 LATIN CAPITAL LETTER A WITH RING ABOVE(U+00C5) 문자로 구성된 두 번째 `Å`라는 속성을 정의합니다. C# 컴파일러는 소스 코드에 CLS 비규격으로 플래그를 지정합니다.
+단일 문자를 다중 UTF-16 인코딩 코드 단위로 표시할 수 있으므로 식별자를 비교하기 전에 형식 지정 코드를 필터링하고 식별자를 유니코드 정규화 형식 C로 변환해야 합니다. 유니코드 정규화 형식 C에서 동일한 코드 단위를 만드는 문자 시퀀스는 CLS 규격이 아닙니다. 다음 예제에서는 ANGSTROM SIGN(U+212B) 문자로 구성된 `Å`이라는 속성과 LATIN CAPITAL LETTER A WITH RING ABOVE(U+00C5) 문자로 구성된 두 번째 `Å`이라는 속성을 정의합니다. C# 컴파일러는 소스 코드에 CLS 비규격으로 플래그를 지정합니다.
 
 ```csharp
 public class Size

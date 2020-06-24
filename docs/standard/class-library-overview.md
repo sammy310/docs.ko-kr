@@ -1,5 +1,6 @@
 ---
 title: .NET 클래스 라이브러리 개요
+description: .NET 클래스 라이브러리에 대해 자세히 알아봅니다. .NET 구현에는 시스템 기능에 대한 액세스를 제공하는 클래스, 인터페이스, 대리자, 값 형식이 포함됩니다.
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289254"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662929"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 

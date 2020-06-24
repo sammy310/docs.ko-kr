@@ -1,26 +1,23 @@
 ---
-title: Visual Studio에서 .NET Standard 클래스 라이브러리 만들기
+title: Visual Studio를 사용하여 .NET Standard 클래스 라이브러리 만들기
 description: Visual Studio를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
-ms.date: 05/21/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7d64ca32bdbe20f949ae575bc4c3f9bbb594fffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283626"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701567"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio"></a>자습서: Visual Studio에서 .NET Standard 라이브러리 만들기
-
-*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소로 배포할지 또는 하나 이상의 애플리케이션과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
-
-> [!NOTE]
-> .NET Standard 버전 및 지원되는 플랫폼 목록은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
 
 이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
+
+*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -28,13 +25,13 @@ ms.locfileid: "84283626"
 
   자세한 내용은 [.NET Core SDK 설치](../install/sdk.md?pivots=os-windows) 문서의 [Visual Studio를 사용하여 설치](../install/sdk.md?pivots=os-windows#install-with-visual-studio) 섹션을 참조하세요.
 
-## <a name="create-a-visual-studio-solution"></a>Visual Studio 솔루션 만들기
+## <a name="create-a-solution"></a>솔루션 만들기
 
 먼저 클래스 라이브러리 프로젝트를 배치할 빈 솔루션을 만듭니다. Visual Studio 솔루션은 하나 이상의 프로젝트에 대한 컨테이너로 작동합니다. 동일한 솔루션에 관련 프로젝트를 추가합니다.
 
 빈 솔루션을 만들려면 다음을 수행합니다.
 
-1. Visual Studio를 엽니다.
+1. Visual Studio를 시작합니다.
 
 2. 시작 창에서 **새 프로젝트 만들기**를 선택합니다.
 
@@ -75,7 +72,7 @@ ms.locfileid: "84283626"
 
 ## <a name="add-a-console-app-to-the-solution"></a>솔루션에 콘솔 앱 추가
 
-사용자에게 문자열을 입력하라는 메시지를 표시하고 문자열이 대문자로 시작하는지 여부를 보고하는 콘솔 애플리케이션에서 이 클래스 라이브러리를 사용합니다.
+클래스 라이브러리를 사용하는 콘솔 애플리케이션을 추가합니다. 이 앱은 사용자에게 문자열을 입력하라는 메시지를 표시하고 문자열이 대문자로 시작하는지 여부를 보고합니다.
 
 1. "ShowCase"라는 새 .NET Core 콘솔 애플리케이션을 솔루션에 추가합니다.
 
@@ -87,18 +84,6 @@ ms.locfileid: "84283626"
 
    1. **새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **ShowCase**를 입력합니다. 그런 다음, **만들기**를 선택합니다.
 
-1. **솔루션 탐색기**에서 **ShowCase** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.
-
-   ![Visual Studio 프로젝트 상황에 맞는 메뉴로 시작 프로젝트 설정](media/library-with-visual-studio/set-startup-project-context-menu.png)
-
-1. 처음에는 새 콘솔 앱 프로젝트가 클래스 라이브러리에 액세스할 수 없습니다. 클래스 라이브러리의 메서드를 호출할 수 있도록 허용하려면 클래스 라이브러리 프로젝트에 대한 프로젝트 참조를 만듭니다. **솔루션 탐색기**에서 `ShowCase` 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 참조 추가**를 선택합니다.
-
-   ![Visual Studio의 참조 추가 상황에 맞는 메뉴](media/library-with-visual-studio/add-reference-context-menu.png)
-
-1. **참조 관리자** 대화 상자에서 **StringLibrary** 프로젝트를 선택하고 **확인**을 선택합니다.
-
-   ![StringLibrary를 선택한 참조 관리자 대화 상자](media/library-with-visual-studio/manage-project-references.png)
-
 1. *Program.cs* 또는 *Program.vb* 파일의 코드 창에서 모든 코드를 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
@@ -106,19 +91,42 @@ ms.locfileid: "84283626"
 
    코드는 `row` 변수를 사용하여 콘솔 창에 기록된 데이터 행 수를 유지합니다. 25보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
 
-   프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 Enter 키를 누르면 애플리케이션이 종료되고 콘솔 창이 닫힙니다.
+   프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 <kbd>Enter</kbd> 키를 누르면 애플리케이션이 종료되고 콘솔 창이 닫힙니다.
 
-1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
+## <a name="add-a-project-reference"></a>프로젝트 참조 추가
+
+처음에는 새 콘솔 앱 프로젝트가 클래스 라이브러리에 액세스할 수 없습니다. 클래스 라이브러리의 메서드를 호출할 수 있도록 허용하려면 클래스 라이브러리 프로젝트에 대한 프로젝트 참조를 만듭니다.
+
+1. **솔루션 탐색기**에서 `ShowCase` 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 참조 추가**를 선택합니다.
+
+   ![Visual Studio의 참조 추가 상황에 맞는 메뉴](media/library-with-visual-studio/add-reference-context-menu.png)
+
+1. **참조 관리자** 대화 상자에서 **StringLibrary** 프로젝트를 선택하고 **확인**을 선택합니다.
+
+   ![StringLibrary를 선택한 참조 관리자 대화 상자](media/library-with-visual-studio/manage-project-references.png)
+
+## <a name="run-the-app"></a>앱 실행
+
+1. **솔루션 탐색기**에서 **ShowCase** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.
+
+   ![Visual Studio 프로젝트 상황에 맞는 메뉴로 시작 프로젝트 설정](media/library-with-visual-studio/set-startup-project-context-menu.png)
+
+1. <kbd>Shift</kbd>+<kbd>F5</kbd>를 눌러 디버깅 없이 프로그램을 컴파일하고 실행합니다.
 
    ![Visual Studio 프로젝트 도구 모음 디버그 단추 표시](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. 문자열을 입력하고 **Enter** 키를 눌러 프로그램을 사용해 본 다음 **Enter** 키를 눌러 끝냅니다.
+1. 문자열을 입력하고 <kbd>Enter</kbd> 키를 눌러 프로그램을 사용해 본 다음 <kbd>Enter</kbd> 키를 눌러 끝냅니다.
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="ShowCase가 실행되는 콘솔 창":::
+
+## <a name="additional-resources"></a>추가 자료
+
+* [.NET Core CLI를 사용하여 라이브러리 개발](libraries.md)
+* [지원되는 .NET Standard 버전 및 플랫폼](../../standard/net-standard.md)
 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 솔루션을 만들고, 라이브러리 프로젝트를 추가하고, 라이브러리를 사용하는 콘솔 앱 프로젝트를 추가했습니다. 다음 자습서에서는 솔루션에 단위 테스트 프로젝트를 추가합니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio.md)
+> [Visual Studio를 사용하여 .NET Core로 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio.md)

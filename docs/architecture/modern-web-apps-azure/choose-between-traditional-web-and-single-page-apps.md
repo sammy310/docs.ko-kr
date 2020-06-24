@@ -4,16 +4,16 @@ description: 웹 애플리케이션을 구축하는 경우 기존 웹 앱과 SPA
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450110"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662708"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
-> "Atwood의 법칙: JavaScript로 작성할 수 있는 모든 애플리케이션은 결국 JavaScript로 작성됩니다.”  
+> "Atwood의 법칙: JavaScript로 작성할 수 있는 모든 애플리케이션은 결국 JavaScript로 작성됩니다."  
 > _\- Jeff Atwood_
 
 오늘날 웹 애플리케이션을 빌드하는 방법은 일반적으로 두 가지가 있습니다. 서버에서 대부분의 애플리케이션 논리를 수행하는 기존 웹 애플리케이션과 웹 브라우저에서 대부분의 사용자 인터페이스 논리를 수행하며 기본적으로 웹 API를 사용하여 웹 서버와 통신하는 SPA(단일 페이지 애플리케이션)가 바로 그것입니다. 혼합 방식도 가능합니다. 가장 간단한 방법은 더 큰 기존 웹 애플리케이션 내에서 하나 이상의 풍부한 SPA와 같은 하위 애플리케이션을 호스트하는 것입니다.
@@ -40,7 +40,9 @@ SPA 접근 방식 덕분에 향상된 사용자 경험을 이러한 고려 사�
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. 서버 측 Blazor를 사용하면 개발자가 서버에서 Razor를 사용하여 UI를 빌드하고, 이 코드를 브라우저에 전달하여 [WebAssembly](https://webassembly.org/)를 사용하여 클라이언트 쪽에서 실행되게 할 수 있습니다. Blazor 서버 쪽은 ASP.NET Core 3.0 이상 버전에서 사용할 수 있습니다. Blazor 클라이언트 쪽은 2020년에 사용할 수 있을 것입니다.
+ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. Blazor 서버 쪽을 사용하면 개발자가 서버에서 C#과 Razor로 UI를 빌드하고 이를 영구적인 SignalR 연결을 통해 실시간으로 브라우저에 대화형으로 연결할 수 있습니다.
+
+Blazor WebAssembly는 WebAssembly를 사용하는 브라우저에서 실행할 수 있도록 Blazor 앱을 위한 다른 옵션도 도입했습니다. 실제 .NET이 WebAssembly에서 실행 중이므로 애플리케이션의 서버측에서 코드와 라이브러리를 재사용할 수 있습니다.
 
 Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또는 SPA를 만들지 여부를 평가할 때 고려할 새로운 세 번째 옵션을 제공합니다. 중요한 JavaScript 개발 없이 Blazor를 사용하여 SPA와 유사한 풍부한 클라이언트 쪽 동작을 빌드할 수 있습니다. Blazor 애플리케이션은 API를 호출하여 데이터를 요청하거나 서버 쪽 작업을 수행할 수 있습니다.
 

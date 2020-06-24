@@ -1,21 +1,19 @@
 ---
-title: Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 게시
+title: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
-author: BillWagner
-ms.author: wiwagn
-ms.date: 05/20/2020
+ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241498"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701286"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
 이 자습서에서는 다른 사용자가 실행할 수 있도록 콘솔 앱을 게시하는 방법을 보여 줍니다. 게시하면 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다. 파일을 배포하려면 대상 컴퓨터로 복사합니다.
 
@@ -25,7 +23,11 @@ ms.locfileid: "84241498"
 
 ## <a name="publish-the-app"></a>앱 게시
 
-1. Visual Studio에서 애플리케이션의 릴리스 버전을 빌드하고 있는지 확인합니다. 필요한 경우 도구 모음의 빌드 구성 설정을 **디버그**에서 **릴리스**로 변경합니다.
+1. Visual Studio를 시작합니다.
+
+1. [Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 *HelloWorld* 프로젝트를 엽니다.
+
+1. Visual Studio에서 릴리스 빌드 구성을 사용 중인지 확인합니다. 필요한 경우 도구 모음의 빌드 구성 설정을 **디버그**에서 **릴리스**로 변경합니다.
 
    ![릴리스 빌드가 선택된 Visual Studio 도구 모음](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
@@ -47,7 +49,7 @@ ms.locfileid: "84241498"
 
 ## <a name="inspect-the-files"></a>파일 검사
 
-게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 .NET Core 런타임이 설치된 컴퓨터에서 게시된 애플리케이션이 실행되는 배포 유형입니다. 사용자는 실행 파일을 두 번 클릭하거나 명령 프롬프트에서 `dotnet HelloWorld.dll` 명령을 실행하여 게시된 앱을 실행할 수 있습니다.
+기본적으로 게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 .NET Core 런타임이 설치된 머신에서 게시된 애플리케이션이 실행되는 배포 유형입니다. 사용자는 실행 파일을 두 번 클릭하거나 명령 프롬프트에서 `dotnet HelloWorld.dll` 명령을 실행하여 게시된 앱을 실행할 수 있습니다.
 
 다음 단계에서는 게시 프로세스를 통해 생성된 파일을 살펴봅니다.
 
@@ -83,7 +85,7 @@ ms.locfileid: "84241498"
 
 1. **솔루션 탐색기**에서 *publish* 폴더를 마우스 오른쪽 단추로 클릭하고 **전체 경로 복사**를 선택합니다.
 
-1. 명령 프롬프트를 열고 *publish* 폴더로 이동합니다. `cd`를 입력한 다음 전체 경로를 붙여넣습니다. 예를 들어:
+1. 명령 프롬프트를 열고 *publish* 폴더로 이동합니다. 이를 위해 `cd`를 입력한 다음 전체 경로를 붙여넣습니다. 예를 들어:
 
    ```
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\

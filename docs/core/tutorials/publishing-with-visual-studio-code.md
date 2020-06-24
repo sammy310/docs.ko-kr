@@ -1,15 +1,15 @@
 ---
-title: Visual Studio Code를 사용하여 .NET Core Hello World 애플리케이션 게시
+title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246657"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701452"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
 이 자습서에서는 다른 사용자가 실행할 수 있도록 콘솔 앱을 게시하는 방법을 보여 줍니다. 게시하면 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다. 파일을 배포하려면 대상 컴퓨터로 복사합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "84246657"
 
 ## <a name="publish-the-app"></a>앱 게시
 
-1. Visual Studio Code를 엽니다.
+1. Visual Studio Code를 시작합니다.
 
 1. [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 *HelloWorld* 프로젝트 폴더를 엽니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "84246657"
 
 ## <a name="run-the-published-app"></a>게시된 앱 실행
 
-1. **Explorer**에서 *publish* 폴더를 마우스 오른쪽 단추로 클릭(또는 macOS의 경우 <kbd>Ctrl</kbd> 키를 누른 상태로 클릭)하고 **터미널에서 열기**를 선택합니다.
+1. **Explorer**에서 *publish* 폴더를 마우스 오른쪽 단추로 클릭(macOS의 경우 <kbd>Ctrl</kbd> 키를 누른 상태로 클릭)하고 **터미널에서 열기**를 선택합니다.
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="터미널에서 열기를 보여 주는 상황에 맞는 메뉴":::
 
@@ -109,10 +109,7 @@ ms.locfileid: "84246657"
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 콘솔 앱을 게시했습니다. 라이브러리를 빌드하는 방법에 대한 자세한 내용은 [.NET Core CLI를 사용하여 라이브러리 개발](libraries.md)을 참조하세요.
-
-<!--In the next tutorial, you create a class library.
+이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [Mac용 Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)
