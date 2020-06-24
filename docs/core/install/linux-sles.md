@@ -4,12 +4,12 @@ description: SLES에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양
 author: thraka
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: b2eab6a0305d492e37e1b33d02be43ca41d42b6f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9816e1f0253be58dc04c1302f334a7ea0b810810
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602791"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768402"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>SLES에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -75,10 +75,6 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 ### <a name="failed-to-fetch"></a>가져오지 못함
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
-
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
 ## <a name="dependencies"></a>종속성
 

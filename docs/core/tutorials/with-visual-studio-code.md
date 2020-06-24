@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 description: Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 ms.date: 05/22/2020
-ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717512"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811692"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 
@@ -89,7 +89,7 @@ dotnet run
 
 1. *Program.cs*에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 <kbd>Enter</kbd> 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로 콘솔 창에 이러한 값을 표시합니다.
 
