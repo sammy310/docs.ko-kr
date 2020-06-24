@@ -1,5 +1,6 @@
 ---
 title: 데이터 계약의 열거형 형식
+description: 데이터 계약 모델이 WFC 프로그래밍 모델의 일부로 열거형을 표현 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 86fa38b281d8944797fa858f8c67f0b60c733be8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff3184a285e88d47d4545a38a6c74b2f209827fb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595546"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247301"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>데이터 계약의 열거형 형식
 데이터 계약 모델에 열거형을 표현할 수 있습니다. 이 항목에서는 프로그래밍 모델을 설명하는 여러 예를 살펴봅니다.  

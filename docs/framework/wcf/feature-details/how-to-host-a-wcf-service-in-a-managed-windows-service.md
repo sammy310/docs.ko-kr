@@ -1,16 +1,17 @@
 ---
 title: '방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅'
+description: Windows 서비스에서 호스트 되는 WCF 서비스를 만드는 방법에 대해 알아봅니다. 모든 버전의 Windows에서 이 호스팅 옵션을 사용할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593180"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246938"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅
 
@@ -110,7 +111,7 @@ Windows 서비스는 MMC(Microsoft Management Console)의 Microsoft.ManagementCo
     </configuration>
     ```
 
-     **솔루션 탐색기** 에서 app.config 파일을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **출력 디렉터리에 복사** 에서 **최신 버전으로 복사**를 선택 합니다.
+     **솔루션 탐색기** 에서 App.config 파일을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **출력 디렉터리에 복사** 에서 **최신 버전으로 복사**를 선택 합니다.
 
      다음 예제에서는 구성 파일의 엔드포인트를 명시적으로 지정합니다. 서비스에 엔드포인트를 추가하지 않으면 런타임에서 기본 엔드포인트를 자동으로 추가합니다. 이 예제에서는 서비스의 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>가 `true`로 설정되어 있으므로 서비스의 메타데이터 게시 기능도 사용하도록 설정되었습니다. 기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../samples/simplified-configuration-for-wcf-services.md)을 참조하세요.
 

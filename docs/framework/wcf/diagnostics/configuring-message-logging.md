@@ -1,15 +1,16 @@
 ---
 title: 메시지 로깅 구성
+description: WCF에서 로깅, 로깅 수준, 메시지 필터를 사용 하도록 설정 하는 방법 및 사용자 지정 수신기를 구성 하는 방법을 비롯 하 여 메시지 로깅을 구성 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 283f43239d6cf5aea5ea668397a52313ff526e2a
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5203f19a18e5fa6b0ed7f68e1d1de0447da41abd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345191"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247664"
 ---
 # <a name="configuring-message-logging"></a>메시지 로깅 구성
 
@@ -17,7 +18,7 @@ ms.locfileid: "80345191"
 
 ## <a name="enabling-message-logging"></a>메시지 로깅 활성화
 
-WCF(Windows 통신 재단)는 기본적으로 메시지를 기록하지 않습니다. 메시지 로깅을 활성화하려면 추적 수신기를 `System.ServiceModel.MessageLogging` 추적 소스에 추가하고 구성 파일에서 `<messagelogging>` 요소의 특성을 설정해야 합니다.
+WCF (Windows Communication Foundation)는 기본적으로 메시지를 기록 하지 않습니다. 메시지 로깅을 활성화하려면 추적 수신기를 `System.ServiceModel.MessageLogging` 추적 소스에 추가하고 구성 파일에서 `<messagelogging>` 요소의 특성을 설정해야 합니다.
 
 다음 예제에서는 로깅을 활성화하고 추가 옵션을 지정하는 방법을 보여 줍니다.
 
@@ -47,7 +48,7 @@ WCF(Windows 통신 재단)는 기본적으로 메시지를 기록하지 않습�
 </system.serviceModel>
 ```
 
-메시지 로깅 설정에 대한 자세한 내용은 [추적 및 메시지 로깅에 대한 권장 설정을](./tracing/recommended-settings-for-tracing-and-message-logging.md)참조하십시오.
+메시지 로깅 설정에 대 한 자세한 내용은 [추적 및 메시지 로깅에 권장 되는 설정](./tracing/recommended-settings-for-tracing-and-message-logging.md)을 참조 하세요.
 
 `add`를 사용하여 사용할 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서는 수신기 이름을 "messages"로 지정하고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)를 사용할 형식으로 추가합니다. `System.Diagnostics.XmlWriterTraceListener`를 사용하려면 출력 파일의 위치와 이름을 구성 파일에 지정해야 합니다. 이 작업을 수행하려면 `initializeData`를 로그 파일의 이름으로 설정합니다. 그렇지 않으면 시스템에서 예외가 throw됩니다. 로그를 기본 파일에 내보내는 사용자 지정 수신기를 구현할 수도 있습니다.
 
@@ -63,7 +64,7 @@ WCF(Windows 통신 재단)는 기본적으로 메시지를 기록하지 않습�
 </source>
 ```
 
-추적 소스를 비활성화하려면 대신에 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 사용하고, 이러한 모든 특성을 `false`로 설정해야 합니다. 이 작업은 구성 편집기 UI 인터페이스나 WMI를 통해 이전 코드 예제의 구성 파일을 사용하여 수행할 수 있습니다. 구성 편집기 도구에 대한 자세한 내용은 [구성 편집기 도구(SvcConfigEditor.exe)를](../configuration-editor-tool-svcconfigeditor-exe.md)참조하십시오. WMI에 대한 자세한 내용은 [진단용 Windows 관리 계측 사용을](./wmi/index.md)참조하십시오.
+추적 소스를 비활성화하려면 대신에 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 사용하고, 이러한 모든 특성을 `false`로 설정해야 합니다. 이 작업은 구성 편집기 UI 인터페이스나 WMI를 통해 이전 코드 예제의 구성 파일을 사용하여 수행할 수 있습니다. 구성 편집기 도구에 대 한 자세한 내용은 [구성 편집기 도구 (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)를 참조 하세요. WMI에 대 한 자세한 내용은 [진단에 WMI(Windows Management Instrumentation) 사용](./wmi/index.md)을 참조 하세요.
 
 ## <a name="logging-levels-and-options"></a>로깅 수준 및 옵션
 
@@ -71,7 +72,7 @@ WCF(Windows 통신 재단)는 기본적으로 메시지를 기록하지 않습�
 
 나가는 메시지의 경우 로깅은 메시지가 사용자 코드를 벗어난 직후 및 메시지가 송신되기 직전에 발생합니다.
 
-WCF는 서비스 및 전송의 두 가지 수준에서 메시지를 기록합니다. 잘못된 형식의 메시지도 기록됩니다. 이 세 가지 범주는 서로 연관이 없으며 구성에서 별도로 활성화할 수 있습니다.
+WCF는 서비스와 전송 이라는 두 가지 수준에서 메시지를 기록 합니다. 잘못된 형식의 메시지도 기록됩니다. 이 세 가지 범주는 서로 연관이 없으며 구성에서 별도로 활성화할 수 있습니다.
 
 로깅 수준은 `logMessagesAtServiceLevel` 요소의 `logMalformedMessages`, `logMessagesAtTransportLevel` 및 `messageLogging` 특성을 설정하여 제어할 수 있습니다.
 
@@ -85,7 +86,7 @@ WCF는 서비스 및 전송의 두 가지 수준에서 메시지를 기록합니
 
 ### <a name="malformed-level"></a>잘못된 형식의 수준
 
-잘못된 메시지는 모든 처리 단계에서 WCF 스택에 의해 거부되는 메시지입니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대한 자세한 내용은 기타 옵션 섹션을 참조하십시오.
+형식이 잘못 된 메시지는 처리 단계에서 WCF 스택에 의해 거부 되는 메시지입니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 다른 옵션 섹션을 참조 하세요.
 
 ### <a name="other-options"></a>다른 옵션
 
@@ -102,11 +103,11 @@ WCF는 서비스 및 전송의 두 가지 수준에서 메시지를 기록합니
 
 구성 파일에 추적 수신기가 정의되어 있지 않으면 지정된 로깅 수준과 관계없이 로깅 출력이 생성되지 않습니다.
 
-이 단원에 설명된 특성과 같은 메시지 로깅 옵션은 WMI(Windows Management Instrumentation)를 사용하여 런타임에 변경할 수 있습니다. 이 작업은 이러한 부울 속성을 `LogMessagesAtServiceLevel` `LogMessagesAtTransportLevel` `LogMalformedMessages`노출하는 [AppDomainInfo](./wmi/appdomaininfo.md) 인스턴스에 액세스하여 수행할 수 있습니다. 따라서 메시지 로깅을 위한 추적 수신기를 구성하지만 이러한 옵션을 구성에서 `false`로 설정해도, 이후에 애플리케이션 실행 시 `true`로 변경할 수 있습니다. 이를 통해 메시지 로깅을 런타임에 효과적으로 활성화할 수 있습니다. 마찬가지로 구성 파일에 메시지 로깅을 활성화하더라도, WMI를 사용하여 런타임에 메시지 로깅을 비활성화할 수 있습니다. 자세한 내용은 [진단용 Windows 관리 계측 사용을](./wmi/index.md)참조하십시오.
+이 단원에 설명된 특성과 같은 메시지 로깅 옵션은 WMI(Windows Management Instrumentation)를 사용하여 런타임에 변경할 수 있습니다. 이러한 부울 속성을 노출 하는 [AppDomainInfo](./wmi/appdomaininfo.md) 인스턴스에 액세스 하 여이 작업을 수행할 수 있습니다. `LogMessagesAtServiceLevel` `LogMessagesAtTransportLevel` `LogMalformedMessages` 따라서 메시지 로깅을 위한 추적 수신기를 구성하지만 이러한 옵션을 구성에서 `false`로 설정해도, 이후에 애플리케이션 실행 시 `true`로 변경할 수 있습니다. 이를 통해 메시지 로깅을 런타임에 효과적으로 활성화할 수 있습니다. 마찬가지로 구성 파일에 메시지 로깅을 활성화하더라도, WMI를 사용하여 런타임에 메시지 로깅을 비활성화할 수 있습니다. 자세한 내용은 [진단을 위한 WMI(Windows Management Instrumentation) 사용](./wmi/index.md)을 참조 하세요.
 
 메시지 로그의 `source` 필드에서는 메시지가 기록되는 컨텍스트를 지정합니다. 즉, 요청 메시지를 보내거나 받을 때 요청-회신을 위한 것인지 단방향 요청인지, 그리고 위치가 서비스 모델 또는 전송 계층인지, 또는 잘못된 형식의 메시지인지 등을 지정합니다.
 
-잘못된 형식의 `source` 메시지의 `Malformed`경우 와 같습니다. 그렇지 않으면 소스는 컨텍스트에 따라 다음 값을 사용합니다.
+형식이 잘못 된 메시지의 경우 `source` 는와 같습니다 `Malformed` . 그렇지 않으면 소스는 컨텍스트에 따라 다음 값을 사용합니다.
 
 요청/회신의 경우
 
@@ -173,8 +174,8 @@ WCF는 서비스 및 전송의 두 가지 수준에서 메시지를 기록합니
 
 `type` 특성을 해당 형식의 정규화된 어셈블리 이름으로 설정해야 함에 유의합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [\<메시지 로깅>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
 - [메시지 로깅](message-logging.md)
 - [추적 및 메시지 로깅에 권장되는 설정](./tracing/recommended-settings-for-tracing-and-message-logging.md)

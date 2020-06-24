@@ -1,19 +1,20 @@
 ---
 title: '방법: 사용자 지정 클레임 만들기'
+description: WCF에서 사용자 지정 클레임을 만드는 방법에 대해 알아봅니다. WCF는 다양 한 기본 제공 클레임을 지원 하 고 일부 응용 프로그램에는 사용자 지정 클레임이 필요할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: e78f577e0fd3473575fab998e55616936212ebb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185614"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247548"
 ---
 # <a name="how-to-create-a-custom-claim"></a>방법: 사용자 지정 클레임 만들기
-WCF(Windows 통신 재단)의 ID 모델 인프라는 이러한 유형 및 권한으로 인스턴스를 만들기 <xref:System.IdentityModel.Claims.Claim> 위한 도우미 기능과 함께 기본 제공 클레임 유형 및 권한 집합을 제공합니다. 이러한 기본 제공 클레임은 WCF가 기본적으로 지원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링하도록 설계되었습니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 애플리케이션에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
+WCF (Windows Communication Foundation)의 Id 모델 인프라에서는 <xref:System.IdentityModel.Claims.Claim> 이러한 형식 및 권한으로 인스턴스를 만들기 위한 도우미 함수를 사용 하 여 기본 제공 클레임 형식 및 권한 집합을 제공 합니다. 이러한 기본 제공 클레임은 WCF에서 기본적으로 지 원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링 하도록 디자인 되었습니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 애플리케이션에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>기본 데이터 형식을 기반으로 사용자 지정 클레임을 만들려면  
   
@@ -21,15 +22,15 @@ WCF(Windows 통신 재단)의 ID 모델 인프라는 이러한 유형 및 권한
   
     1. 클레임 형식의 고유 값을 결정합니다.  
   
-         클레임 형식은 고유한 문자열 식별자입니다. 클레임 형식에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다. WCF에서 정의한 클레임 유형 목록은 클래스를 <xref:System.IdentityModel.Claims.ClaimTypes> 참조하십시오.  
+         클레임 형식은 고유한 문자열 식별자입니다. 클레임 형식에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다. WCF에 의해 정의 되는 클레임 형식 목록은 클래스를 참조 하세요 <xref:System.IdentityModel.Claims.ClaimTypes> .  
   
     2. 기본 데이터 형식과 리소스 값을 선택합니다.  
   
-         리소스는 개체입니다. 리소스의 CLR 형식은 기본(예: <xref:System.String> 또는 <xref:System.Int32>)이나 serialize할 수 있는 모든 형식일 수 있습니다. 클레임은 WCF에 의해 여러 지점에서 직렬화되므로 리소스의 CLR 형식은 직렬화할 수 있어야 합니다. 기본 형식은 serialize할 수 있습니다.  
+         리소스는 개체입니다. 리소스의 CLR 형식은 기본(예: <xref:System.String> 또는 <xref:System.Int32>)이나 serialize할 수 있는 모든 형식일 수 있습니다. WCF에 의해 다양 한 지점에서 클레임이 serialize 되기 때문에 리소스의 CLR 형식을 serialize 할 수 있어야 합니다. 기본 형식은 serialize할 수 있습니다.  
   
-    3. WCF에 의해 정의된 권리 또는 사용자 지정 오른쪽에 대한 고유 값을 선택합니다.  
+    3. WCF에서 정의한 권한을 선택 하거나 사용자 지정 권한에 대해 고유한 값을 선택 합니다.  
   
-         권한은 고유한 문자열 식별자입니다. WCF에 의해 정의된 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스에 정의됩니다.  
+         권한은 고유한 문자열 식별자입니다. WCF에 의해 정의 되는 권한은 클래스에서 정의 됩니다 <xref:System.IdentityModel.Claims.Rights> .  
   
          권한에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다.  
   
@@ -44,11 +45,11 @@ WCF(Windows 통신 재단)의 ID 모델 인프라는 이러한 유형 및 권한
   
     1. 클레임 형식의 고유 값을 결정합니다.  
   
-         클레임 형식은 고유한 문자열 식별자입니다. 클레임 형식에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다. WCF에서 정의한 클레임 유형 목록은 클래스를 <xref:System.IdentityModel.Claims.ClaimTypes> 참조하십시오.  
+         클레임 형식은 고유한 문자열 식별자입니다. 클레임 형식에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다. WCF에 의해 정의 되는 클레임 형식 목록은 클래스를 참조 하세요 <xref:System.IdentityModel.Claims.ClaimTypes> .  
   
     2. serialize할 수 있는 기본이 아닌 리소스 형식을 선택하거나 정의합니다.  
   
-         리소스는 개체입니다. 클레임은 WCF에 의해 여러 지점에서 직렬화되므로 리소스의 CLR 형식은 직렬화할 수 있어야 합니다. 기본 형식은 이미 serialize할 수 있습니다.  
+         리소스는 개체입니다. WCF에 의해 다양 한 지점에서 클레임이 serialize 되기 때문에 리소스의 CLR 형식을 serialize 할 수 있어야 합니다. 기본 형식은 이미 serialize할 수 있습니다.  
   
          새 형식을 정의하는 경우 <xref:System.Runtime.Serialization.DataContractAttribute>를 클래스에 적용합니다. 또한 클레임의 일부로 serialize할 수 있어야 하는 새 형식의 모든 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다.  
   
@@ -57,9 +58,9 @@ WCF(Windows 통신 재단)의 ID 모델 인프라는 이러한 유형 및 권한
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]
   
-    3. WCF에 의해 정의된 권리 또는 사용자 지정 오른쪽에 대한 고유 값을 선택합니다.  
+    3. WCF에서 정의한 권한을 선택 하거나 사용자 지정 권한에 대해 고유한 값을 선택 합니다.  
   
-         권한은 고유한 문자열 식별자입니다. WCF에 의해 정의된 권한은 <xref:System.IdentityModel.Claims.Rights> 클래스에 정의됩니다.  
+         권한은 고유한 문자열 식별자입니다. WCF에 의해 정의 되는 권한은 클래스에서 정의 됩니다 <xref:System.IdentityModel.Claims.Rights> .  
   
          권한에 사용되는 문자열 식별자를 고유하게 설정하는 작업은 사용자 지정 클레임 디자이너가 담당합니다.  
   

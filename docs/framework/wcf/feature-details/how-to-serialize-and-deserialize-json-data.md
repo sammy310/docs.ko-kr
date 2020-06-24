@@ -1,22 +1,23 @@
 ---
 title: '방법: DataContractJsonSerializer 사용'
+description: .NET 형식 개체를 JSON으로 인코딩된 데이터로 serialize 한 다음 이러한 데이터를 다시 .NET 형식의 인스턴스로 deserialize 하는 방법을 알아봅니다.
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 4ffa0e9dec0a677a38d244b4a0da476d91852da5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901221"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246807"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>DataContractJsonSerializer 사용 방법
 
 > [!NOTE]
-> 이 문서에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 대해 설명 합니다. JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 api를 권장 합니다.
+> 이 문서는에 대 한 내용입니다 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 [네임 스페이스의System.Text.Js](../../../standard/serialization/system-text-json-overview.md)에 api를 권장 합니다.
 
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.
 
-이 문서에서는 .NET 형식 개체를 JSON으로 인코딩된 데이터로 serialize 한 다음 JSON 형식의 데이터를 다시 .NET 형식의 인스턴스로 deserialize 하는 방법을 보여 줍니다. 이 예제에서는 데이터 계약을 사용 하 여 사용자 정의 `Person` 형식의 serialization 및 deserialization을 보여 주고 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용 합니다.
+이 문서에서는 .NET 형식 개체를 JSON으로 인코딩된 데이터로 serialize 한 다음 JSON 형식의 데이터를 다시 .NET 형식의 인스턴스로 deserialize 하는 방법을 보여 줍니다. 이 예제에서는 데이터 계약을 사용 하 여 사용자 정의 형식의 serialization 및 deserialization을 보여 `Person` 주고를 사용 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 합니다.
 
 일반적으로 JSON serialization 및 deserialization은 AJAX 사용 끝점을 통해 노출 되는 서비스 작업의 데이터 계약 형식을 사용할 때 WCF (Windows Communication Foundation)에 의해 자동으로 처리 됩니다. 그러나 경우에 따라 JSON 데이터를 직접 사용 해야 할 수도 있습니다.
 
@@ -51,7 +52,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     p.age = 42;
     ```
 
-2. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용 하 여 `Person` 개체를 메모리 스트림으로 Serialize 합니다.
+2. `Person`를 사용 하 여 개체를 메모리 스트림으로 Serialize <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 합니다.
 
     ```csharp
     var stream1 = new MemoryStream();
@@ -88,7 +89,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```csharp
 // Create a User object and serialize it to a JSON stream.
@@ -139,6 +140,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET의 JSON serialization](../../../standard/serialization/system-text-json-overview.md)

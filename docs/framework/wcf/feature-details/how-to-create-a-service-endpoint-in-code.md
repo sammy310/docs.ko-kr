@@ -1,16 +1,17 @@
 ---
 title: '방법: 코드에서 서비스 엔드포인트 만들기'
+description: 클래스에서 서비스를 구현 하 고 프로그래밍 방식으로 끝점을 정의 하는 방법을 알아봅니다. WCF에서 끝점은 일반적으로 구성 파일에 정의 되어 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b2ff2a17975bc381db61edc2c0f85f67edd3325
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598933"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247054"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>방법: 코드에서 서비스 엔드포인트 만들기
 이 예제에서는 계산기 서비스에 대해 `ICalculator` 계약을 정의하고, `CalculatorService` 클래스에서 서비스를 구현한 다음 코드로 엔드포인트를 정의합니다. 이 때 서비스가 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하도록 지정합니다.  

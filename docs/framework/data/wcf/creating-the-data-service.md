@@ -1,16 +1,17 @@
 ---
 title: Visual Studio에서 WCF 데이터 서비스 만들기
+description: WCF Data Services를 사용 하 여 샘플 데이터베이스를 기반으로 하는 OData 피드를 노출 하는 샘플 데이터 서비스를 만드는 방법에 대해 알아봅니다.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 72e3b35465968674a20aa48262d3425a2190ff74
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802271"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247793"
 ---
 # <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -28,25 +29,25 @@ ms.locfileid: "74802271"
 
 1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
-1. **새 프로젝트** 대화 상자의 Visual Basic 또는 시각적 개체 C# 에서 **웹** 범주를 선택 하 고 **ASP.NET 웹 응용 프로그램**을 선택 합니다.
+1. **새 프로젝트** 대화 상자의 Visual Basic 또는 Visual c #에서 **웹** 범주를 선택한 다음 **ASP.NET 웹 응용 프로그램**을 선택 합니다.
 
-1. 프로젝트 이름으로 `NorthwindService`를 입력 한 다음 **확인을**선택 합니다.
+1. `NorthwindService`프로젝트의 이름으로를 입력 한 다음 **확인을**선택 합니다.
 
 1. **새 ASP.NET 웹 응용 프로그램** 대화 상자에서 **비어 있음** 을 선택 하 고 **확인**을 선택 합니다.
 
-1. (선택 사항) 웹 애플리케이션의 특정 포트 번호를 지정합니다. 참고:이 일련의 빠른 시작 항목에서 포트 번호 `12345` 사용 됩니다.
+1. (선택 사항) 웹 애플리케이션의 특정 포트 번호를 지정합니다. 참고: 포트 번호는 `12345` 이 일련의 빠른 시작 항목에서 사용 됩니다.
 
     1. **솔루션 탐색기**에서 방금 만든 ASP.NET 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
 
-    2. **웹** 탭을 선택 하 고 **특정 포트** 텍스트 상자의 값을 `12345`로 설정 합니다.
+    2. **웹** 탭을 선택 하 고 **특정 포트** 텍스트 상자의 값을로 설정 `12345` 합니다.
 
 ## <a name="define-the-data-model"></a>데이터 모델 정의
 
-1. **솔루션 탐색기**에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 **추가** > **새 항목**을 클릭 합니다.
+1. **솔루션 탐색기**에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 **Add**  >  **새 항목**추가를 클릭 합니다.
 
 2. **새 항목 추가** 대화 상자에서 **데이터** 범주를 선택 하 고 **ADO.NET 엔터티 데이터 모델**를 선택 합니다.
 
-3. 데이터 모델의 이름에 `Northwind.edmx`을 입력 합니다.
+3. 데이터 모델의 이름에을 입력 `Northwind.edmx` 합니다.
 
 4. **엔터티 데이터 모델 마법사**에서 **데이터베이스에서 EF Designer**를 선택 하 고 **다음**을 클릭 합니다.
 
@@ -60,11 +61,11 @@ ms.locfileid: "74802271"
 
 6. 마법사의 마지막 페이지에서 데이터베이스의 모든 테이블에 대한 확인란을 선택하고 뷰 및 저장 프로시저에 대한 확인란의 선택을 취소합니다.
 
-7. **마침**을 클릭하여 마법사를 닫습니다.
+7. **마침** 을 클릭하여 마법사를 닫습니다.
 
 ## <a name="create-the-wcf-data-service"></a>WCF 데이터 서비스 만들기
 
-1. **솔루션 탐색기**에서 ASP.NET 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **추가** > **새 항목**을 선택 합니다.
+1. **솔루션 탐색기**에서 ASP.NET 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **Add**  >  **새 항목**추가를 선택 합니다.
 
 2. **새 항목 추가** 대화 상자의 **웹** 범주에서 **WCF 데이터 서비스** 항목 템플릿을 선택 합니다.
 
@@ -73,9 +74,9 @@ ms.locfileid: "74802271"
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015 이상에서 사용할 수 있지만 visual studio 2017 이상에서는 사용할 수 없습니다.
 
-3. 서비스 이름에 `Northwind`을 입력 합니다.
+3. 서비스의 이름에을 입력 `Northwind` 합니다.
 
-     에서 새 서비스의 XML 태그와 코드 파일이 만들어집니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기**서비스에는 이름이 *svc.cs* 또는. n a n *.vb*인 Northwind 이름이 있습니다.
+     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기**서비스에는 이름이 *svc.cs* 또는. n a n *.vb*인 Northwind 이름이 있습니다.
 
 4. 데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 데이터 모델의 엔터티 컨테이너인 형식(이 경우 `NorthwindEntities`)으로 바꿉니다. 클래스 정의는 다음과 같이 나타납니다.
 
@@ -101,6 +102,6 @@ Northwind 샘플 데이터베이스를 기반으로 하는 OData 피드를 노�
 > [!div class="nextstepaction"]
 > [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

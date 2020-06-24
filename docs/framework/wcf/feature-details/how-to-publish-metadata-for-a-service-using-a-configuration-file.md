@@ -1,13 +1,14 @@
 ---
 title: '방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시'
+description: 구성 파일을 사용 하 여 WCF 서비스에 대 한 메타 데이터를 게시 하는 방법에 대해 알아봅니다. 게시를 통해 클라이언트는 GET 또는 HTTP/GET 요청을 사용 하 여 해당 메타 데이터를 가져올 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 976e1e0bb2c6479f7599165a1c6fe83bae4e17c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596983"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246820"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시
 이 항목은 WCF (Windows Communication Foundation) 서비스용 게시 메타 데이터를 보여 주는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  

@@ -1,22 +1,23 @@
 ---
 title: 이중 서비스
+description: WCF에서 이중 서비스 계약을 만드는 방법에 대해 알아봅니다 .이를 통해 두 끝점 모두 클라이언트에서 만든 채널을 통해 메시지를 서로 보낼 수 있습니다.
 ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a43bb63a0ccf1a34b79dce755c19f7ed4cb6c16c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834775"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247353"
 ---
 # <a name="duplex-services"></a>이중 서비스
 
 이중 서비스 계약은 양쪽 엔드포인트에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 엔드포인트로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.
 
-이중 계약을 만들려면 인터페이스 쌍을 만듭니다. 첫 번째는 클라이언트가 호출할 수 있는 작업을 설명하는 서비스 계약 인터페이스입니다. 해당 서비스 계약에서는 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성에 *콜백 계약* 을 지정 해야 합니다. 콜백 계약은 서비스가 클라이언트 엔드포인트에서 호출할 수 있는 작업을 정의하는 인터페이스입니다. 시스템이 제공하는 이중 바인딩은 세션을 사용하지만 이중 계약에서는 세션이 필요 없습니다.
+이중 계약을 만들려면 인터페이스 쌍을 만듭니다. 첫 번째는 클라이언트가 호출할 수 있는 작업을 설명하는 서비스 계약 인터페이스입니다. 해당 서비스 계약에서는 속성에 *콜백 계약* 을 지정 해야 합니다 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> . 콜백 계약은 서비스가 클라이언트 엔드포인트에서 호출할 수 있는 작업을 정의하는 인터페이스입니다. 시스템이 제공하는 이중 바인딩은 세션을 사용하지만 이중 계약에서는 세션이 필요 없습니다.
 
 다음은 이중 계약의 예제입니다.
 
@@ -33,7 +34,7 @@ ms.locfileid: "71834775"
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-이중 계약에 대해 생성 된 WCF 클라이언트는 생성 시 <xref:System.ServiceModel.InstanceContext> 클래스를 제공 해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현하는 개체의 사이트로 사용되고 서비스에서 다시 전송된 메시지를 처리합니다. <xref:System.ServiceModel.InstanceContext> 클래스는 `CallbackHandler` 클래스의 인스턴스를 사용하여 생성됩니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.
+이중 계약에 대해 생성 된 WCF 클라이언트는 <xref:System.ServiceModel.InstanceContext> 생성 시 클래스를 제공 해야 합니다. 이 <xref:System.ServiceModel.InstanceContext> 클래스는 콜백 인터페이스를 구현하는 개체의 사이트로 사용되고 서비스에서 다시 전송된 메시지를 처리합니다. <xref:System.ServiceModel.InstanceContext> 클래스는 `CallbackHandler` 클래스의 인스턴스를 사용하여 생성됩니다. 이 개체는 콜백 인터페이스를 통해 서비스에서 클라이언트로 전송된 메시지를 처리합니다.
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -45,7 +46,7 @@ ms.locfileid: "71834775"
 > [!NOTE]
 > 보안 대화를 사용하여 인증할 수 없는 이중이 아닌 클라이언트는 일반적으로 <xref:System.ServiceModel.Security.MessageSecurityException>을 throw합니다. 그러나 보안 대화를 사용하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트는 대신 <xref:System.TimeoutException>을 수신합니다.
 
-`WSHttpBinding` 요소를 사용하여 클라이언트/서비스를 만들고 클라이언트 콜백 엔드포인트가 없는 경우 다음 오류를 수신합니다.
+ph x="1" /&gt; 요소를 사용하여 클라이언트/서비스를 만들고 클라이언트 콜백 엔드포인트가 없는 경우 다음 오류를 수신합니다.
 
 ```console
 HTTP could not register URL
@@ -87,10 +88,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 이중 모델에서는 서비스 또는 클라이언트가 해당 채널을 닫을 때 자동으로 감지 되지 않습니다. 따라서 클라이언트가 예기치 않게 종료 되는 경우 기본적으로 서비스에 알림이 표시 되지 않거나 서비스가 예기치 않게 종료 되는 경우 클라이언트에 게 알림이 표시 되지 않습니다. 연결이 끊어진 <xref:System.ServiceModel.CommunicationException> 서비스를 사용 하는 경우 예외가 발생 합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다. 오류 처리에 대 한 자세한 내용은 [WCF 오류 처리](../wcf-error-handling.md)를 참조 하세요.
+> 이중 모델에서는 서비스 또는 클라이언트가 해당 채널을 닫을 때 자동으로 감지 되지 않습니다. 따라서 클라이언트가 예기치 않게 종료 되는 경우 기본적으로 서비스에 알림이 표시 되지 않거나 서비스가 예기치 않게 종료 되는 경우 클라이언트에 게 알림이 표시 되지 않습니다. 연결이 끊어진 서비스를 사용 하는 경우 <xref:System.ServiceModel.CommunicationException> 예외가 발생 합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다. 오류 처리에 대 한 자세한 내용은 [WCF 오류 처리](../wcf-error-handling.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [이중](../samples/duplex.md)
 - [클라이언트 런타임 동작 지정](../specifying-client-run-time-behavior.md)
-- [방법: 채널 팩터리를 만들어 채널을 만들고 관리 하는 데 사용](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [방법: 채널 팩터리를 만들어 채널을 만들고 관리하는 데 사용](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

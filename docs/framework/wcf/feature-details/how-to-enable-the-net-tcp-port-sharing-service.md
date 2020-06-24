@@ -1,16 +1,17 @@
 ---
 title: '방법: Net.TCP Port Sharing Service 사용'
+description: 기본적으로 사용 되지 않는 Net.tcp를 사용 하도록 설정 하기 위해 MMC를 사용 하 여 Net TCP 포트 공유 서비스를 구성 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 8b305b98d620636328866bce848411f395053485
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593154"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247002"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>방법: Net.TCP Port Sharing Service 사용
 WCF (Windows Communication Foundation)는 Net.tcp Port Sharing Service 라는 Windows 서비스를 사용 하 여 여러 프로세스에서 TCP 포트를 쉽게 공유할 수 있도록 합니다. 이 서비스는 WCF의 일부로 설치 되지만, 기본적으로 보안 예방 조치로 서비스를 사용 하도록 설정 하지 않으므로 처음 사용 하기 전에 수동으로 사용 하도록 설정 해야 합니다. 이 항목에서는 MMC(Microsoft Management Console) 스냅인을 사용하여 Net TCP Port Sharing Service를 구성하는 방법에 대해 설명합니다.  

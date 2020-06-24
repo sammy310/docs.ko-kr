@@ -1,5 +1,6 @@
 ---
 title: 데이터 멤버 순서
+description: WCF의 데이터 멤버 순서에 대해 알아봅니다. 응용 프로그램은 데이터 멤버가 전송 되거나 예상 되는 순서를 확인 하거나 변경 해야 할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593466"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247366"
 ---
 # <a name="data-member-order"></a>데이터 멤버 순서
 일부 애플리케이션에서는 serialize된 XML로 표시되는 데이터 순서와 같이 여러 데이터 멤버로부터 데이터가 전송 또는 수신되는 순서를 알고 있는 것이 좋습니다. 이 순서는 경우에 따라 변경해야 할 수 있습니다. 이 항목에서는 순서 지정 규칙에 대해 설명합니다.  

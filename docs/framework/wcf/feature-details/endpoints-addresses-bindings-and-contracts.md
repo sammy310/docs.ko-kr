@@ -1,17 +1,18 @@
 ---
 title: '엔드포인트: 주소, 바인딩 및 계약'
+description: 서비스에서 제공 하는 기능에 대 한 액세스를 클라이언트에 제공 하는 서비스 끝점을 통해 WCF 서비스와의 모든 통신을 수행 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593518"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247314"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>엔드포인트: 주소, 바인딩 및 계약
 
@@ -41,7 +42,7 @@ WCF (Windows Communication Foundation) 서비스와의 모든 통신은 서비�
 
   자세한 내용은 [끝점 주소 지정](../specifying-an-endpoint-address.md)을 참조 하세요.
 
-- 바인딩: 바인딩은 엔드포인트와 통신하는 방법을 지정합니다. 여기에는 다음이 포함됩니다.
+- 바인딩: 바인딩은 엔드포인트와 통신하는 방법을 지정합니다. 다음 내용이 포함됩니다.
 
   - 사용할 전송 프로토콜(예: TCP 또는 HTTP)
 
@@ -89,7 +90,7 @@ WCF에서 끝점의 주소를 지정 하는 방법을 설명 합니다.
 코드에서 서비스 엔드포인트를 만드는 방법에 대해 설명합니다.
 
 [방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-[ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 서비스를 호스팅하지 않고 서비스 구현 및 구성에서 오류를 검색 하는 방법을 설명 합니다.
+[ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 서비스를 호스팅하지 않고 서비스 구현 및 구성에서 오류를 검색 하는 방법을 설명 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

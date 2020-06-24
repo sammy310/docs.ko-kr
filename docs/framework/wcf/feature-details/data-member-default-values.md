@@ -1,5 +1,6 @@
 ---
 title: 데이터 멤버 기본값
+description: .NET Framework 기본값이 있을 경우 serialize 된 데이터에서 데이터 멤버를 생략 하는 방법에 대해 알아봅니다. WCF는 기본값을 직렬화 하지 않고 성능을 향상 시킬 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593483"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247379"
 ---
 # <a name="data-member-default-values"></a>데이터 멤버 기본값
 .NET Framework에서는 형식에 *기본값*의 개념이 있습니다. 예를 들어 참조 형식의 기본값은 `null`이고 정수 형식의 기본값은 0입니다. 기본값으로 설정할 경우 serialize된 데이터에서 데이터 멤버를 생략하는 것이 좋을 수도 있습니다. 멤버에 기본값이 있기 때문에 실제 값을 serialize할 필요가 없으므로 성능이 향상됩니다.  

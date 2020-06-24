@@ -1,17 +1,18 @@
 ---
 title: '방법: ASP.NET 멤버 자격 공급자 사용'
+description: ASP.NET 멤버 자격 공급자가 Windows 도메인 계정을 사용 하지 않고 액세스를 위한 사용자 이름 및 암호를 만들 수 있는 웹 사이트를 지 원하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595325"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246729"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>방법: ASP.NET 멤버 자격 공급자 사용
 
@@ -28,7 +29,7 @@ WCF (Windows Communication Foundation) 개발자는 보안을 위해 이러한 �
 
 ### <a name="to-configure-the-membership-provider"></a>멤버 자격 공급자를 구성하려면
 
-1. Web.config 파일의 < `system.web` > 요소 아래에서 < `membership` > 요소를 만듭니다.
+1. Web.config 파일의 <> 요소 아래에서 `system.web` <`membership`> 요소를 만듭니다.
 
 2. `<membership>` 요소 아래에 `<providers>` 요소를 만듭니다.
 

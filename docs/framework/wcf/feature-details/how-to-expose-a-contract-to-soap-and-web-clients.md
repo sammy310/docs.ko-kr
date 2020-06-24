@@ -1,16 +1,17 @@
 ---
 title: '방법: SOAP 및 웹 클라이언트에 계약 공개'
+description: 모든 SOAP 및 비 SOAP 클라이언트에서 WFC 서버 끝점을 사용 하도록 설정 하는 방법에 대해 알아봅니다. 기본적으로 끝점은 SOAP 클라이언트에만 사용할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: fa02260976c710401a05cce3d723cc0f66804c6e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b1bdb7af51e0e2795c36865058fbeb34a716e3e2
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593135"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246976"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>방법: SOAP 및 웹 클라이언트에 계약 공개
 

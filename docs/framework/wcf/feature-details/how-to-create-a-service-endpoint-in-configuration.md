@@ -1,13 +1,14 @@
 ---
 title: '방법: 구성에서 서비스 엔드포인트 만들기'
+description: 상대 주소와 절대 주소를 모두 포함 하는 구성 파일을 사용 하 여 WCF 서비스에 대 한 끝점을 추가 하는 방법을 알아봅니다.
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 56b29da0c147eb9e73a08e2875e33e384da729ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 184bcb5f7f3e83f12608757b55bbb4d57be58f7d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598920"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247067"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>방법: 구성에서 서비스 엔드포인트 만들기
 끝점은 WCF (Windows Communication Foundation) 서비스에서 제공 하는 기능에 대 한 액세스를 클라이언트에 제공 합니다. 상대 및 절대 엔드포인트 주소 조합을 사용하여 엔드포인트를 하나 이상 정의할 수 있으며, 서비스 엔드포인트를 정의하지 않는 경우에는 런타임이 기본적으로 일부 엔드포인트를 자동으로 제공합니다. 이 항목에서는 상대 주소와 절대 주소를 모두 포함하는 구성 파일을 사용해 엔드포인트를 추가하는 방법을 보여 줍니다.  
