@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990098"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 
@@ -54,7 +54,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  따라서 정적 클래스를 만드는 것은 기본적으로 정적 멤버와 private 생성자만 포함된 클래스를 만드는 것과 동일합니다. private 생성자는 클래스가 인스턴스화되지 않도록 합니다. 정적 클래스를 사용하면 컴파일러에서 인스턴스 멤버가 실수로 추가되지 않도록 확인할 수 있다는 장점이 있습니다. 컴파일러는 이 클래스의 인스턴스를 만들 수 없도록 합니다.  
   
- 정적 클래스는 봉인되므로 상속할 수 없습니다. <xref:System.Object>를 제외하고 어떤 클래스에서도 상속할 수 없습니다. 정적 클래스는 인스턴스 생성자를 포함할 수 없지만 정적 생성자를 포함할 수 있습니다. 또한 클래스에 특수한 초기화가 필요한 정적 멤버가 포함된 경우 비정적 클래스에서 정적 생성자도 정의해야 합니다. 자세한 내용은 [정적 생성자](./static-constructors.md)를 참조하세요.  
+ 정적 클래스는 봉인되므로 상속할 수 없습니다. <xref:System.Object>를 제외하고 어떤 클래스에서도 상속할 수 없습니다. 정적 클래스는 인스턴스 생성자를 포함할 수 없습니다. 그러나 정적 생성자는 포함할 수 있습니다. 또한 클래스에 특수한 초기화가 필요한 정적 멤버가 포함된 경우 비정적 클래스에서 정적 생성자도 정의해야 합니다. 자세한 내용은 [정적 생성자](./static-constructors.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  온도를 섭씨에서 화씨로, 화씨에서 섭씨로 변환하는 두 메서드를 포함하는 정적 클래스의 예는 다음과 같습니다.  
@@ -68,9 +68,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  정적 메서드는 클래스 인스턴스가 아니라 클래스에 속해 있으므로 오버로드할 수 있지만 재정의할 수 없습니다.  
   
- 필드를 `static const`로 선언할 수는 없지만, [const](../../language-reference/keywords/const.md) 필드는 기본적으로 정적으로 동작합니다. 형식의 인스턴스가 아니라 형식에 속합니다. 따라서 정적 필드에 사용되는 것과 동일한 `ClassName.MemberName` 표기법을 사용하여 const 필드에 액세스할 수 있습니다. 개체 인스턴스는 필요하지 않습니다.  
+ 필드를 `static const`로 선언할 수는 없지만, [const](../../language-reference/keywords/const.md) 필드는 기본적으로 정적으로 동작합니다. 형식의 인스턴스가 아니라 형식에 속합니다. 따라서 정적 필드에 사용되는 것과 동일한 `ClassName.MemberName` 표기법을 사용하여 `const` 필드에 액세스할 수 있습니다. 개체 인스턴스는 필요하지 않습니다.  
   
- C#은 정적 지역 변수(메서드 범위 내에서 선언된 변수)를 지원하지 않습니다.  
+ C#은 정적 지역 변수(즉, 메서드 범위 내에서 선언된 변수)를 지원하지 않습니다.  
   
  다음 예제와 같이 멤버의 반환 형식 앞에 `static` 키워드를 사용하여 정적 클래스 멤버를 선언합니다.  
   

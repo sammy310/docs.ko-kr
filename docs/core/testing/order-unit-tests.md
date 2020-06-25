@@ -4,12 +4,12 @@ description: .NET Core를 사용하여 단위 테스트의 순서를 지정하�
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989263"
 ---
 # <a name="order-unit-tests"></a>단위 테스트 순서 지정
 
@@ -84,4 +84,4 @@ xUnit 테스트 프레임워크를 사용하면 테스트 실행 순서를 보�
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [단위 테스트 모범 사례](unit-testing-best-practices.md)
+> [단위 테스트 코드 검사](unit-testing-code-coverage.md)

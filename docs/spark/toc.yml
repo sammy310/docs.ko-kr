@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: 방법 가이드
   items:
+    - name: 브로드캐스트 가이드
+      href: how-to-guides/broadcast-guide.md
+    - name: UDF 가이드
+      href: how-to-guides/udf-guide.md
     - name: 애플리케이션 디버그
       href: how-to-guides/debug.md
     - name: HDInsight에 작업 제출

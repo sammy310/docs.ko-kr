@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 해당 인터페이스를 구현하�
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156781"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803206"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>자습서: C# 8.0에서 기본 인터페이스 메서드로 인터페이스를 업데이트
 
@@ -51,7 +51,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설�
 
 업그레이드는 할인 자격을 갖추기 위해 필요한 주문 수, 할인율, 이 두 가지 속성에 기능을 제공해야 합니다. 이로써 기본 인터페이스 메서드에 완벽한 시나리오가 됩니다. `ICustomer` 인터페이스에 메서드를 추가하고 가장 가능성이 높은 구현을 제공할 수 있습니다. 모든 기존, 그리고 새 구현은 기본 구현을 사용하거나 자체 구현을 제공할 수 있습니다.
 
-먼저, 구현에 새 메서드를 추가합니다.
+먼저 새 메서드를 메서드의 본문을 포함하여 인터페이스에 추가합니다.
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
