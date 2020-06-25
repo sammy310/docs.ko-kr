@@ -1,15 +1,15 @@
 ---
 title: Windows, Linux 및 macOS에 .NET Core 설치 - .NET Core
 description: Windows, Linux 및 macOS 버전에서 .NET Core에 적합한 설치 위치 및 설치 항목에 대해 알아봅니다. .NET Core 앱을 개발, 배포 및 실행하는 데 필요한 종속성을 검색합니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6dde0f76e23c106397ce6f6767f6edfbdc93152
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74836994"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324804"
 ---
 # <a name="download-and-install-net-core"></a>.NET Core 다운로드 및 설치
 
