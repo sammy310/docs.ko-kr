@@ -4,12 +4,12 @@ description: 어떤 Linux 배포가 Linux에서 .NET Core 설치를 지원하는
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fec3cf9e99c2db5d7312280f676bc2a3344f1ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903378"
 ---
 # <a name="install-net-core-on-linux"></a>Linux에 .NET Core 설치
 
@@ -28,6 +28,26 @@ ms.locfileid: "84602671"
 - 2.0
 
 지원되지 않는 버전은 아래 섹션에 자세히 설명되어 있지 않으며, 설치를 시도할 경우 진행 정도가 다양할 수 있습니다.
+
+## <a name="alpine"></a>Alpine
+
+Alpine용 설치 프로그램은 없습니다. [설치 스크립트](linux-alpine.md#scripted-install)를 사용하거나 [수동 설치](linux-alpine.md#manual-install) 지침을 따라야 합니다.
+
+다음 표는 현재 지원되는 .NET Core 릴리스와 지원되는 Alpine 버전의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 각 버전의 [Alpine이 지원 종료에 도달](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)할 때까지 지원됩니다.
+
+- ✔️는 Alpine 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
+- ❌는 Alpine 또는 .NET Core 버전이 해당 Alpine 릴리스에서 지원되지 않음을 나타냅니다.
+- Alpine 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET의 조합이 지원됨을 의미합니다.
+
+| Alpine                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 미리 보기 |
+|-----------------------------|---------------|---------------|----------------|
+| ✔️ [3.12](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [3.11](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [3.10](linux-alpine.md)  | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [3.9](linux-alpine.md)   | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ❌ [3.8](linux-alpine.md)   | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
+
+자세한 내용은 [Alpine에서 .NET Core 설치](linux-alpine.md)를 참조하세요.
 
 ## <a name="centos"></a>CentOS
 
@@ -57,6 +77,8 @@ Debian은 패키지 관리자로 APT(고급 패키지 도구)를 사용합니다
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 | ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
+
+자세한 내용은 [Debian에서 .NET Core 설치](linux-debian.md)를 참조하세요.
 
 ## <a name="fedora"></a>Fedora
 
@@ -93,6 +115,8 @@ openSUSE에서는 패키지 관리자로 zypper를 사용합니다.
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 
+자세한 내용은 [openSUSE에서 .NET Core 설치](linux-opensuse.md)를 참조하세요.
+
 ## <a name="red-hat"></a>Red Hat
 
 Red Hat Enterprise Linux(RHEL)에서는 패키지 관리자로 yum(RHEL 7)과 DNF(RHEL 8)를 사용합니다.
@@ -108,6 +132,8 @@ Red Hat Enterprise Linux(RHEL)에서는 패키지 관리자로 yum(RHEL 7)과 DN
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 | ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 
+자세한 내용은 [RHEL에서 .NET Core 설치](linux-rhel.md)를 참조하세요.
+
 ## <a name="sles"></a>SLES
 
 SLES에서는 패키지 관리자로 zypper를 사용합니다.
@@ -122,6 +148,8 @@ SLES에서는 패키지 관리자로 zypper를 사용합니다.
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
 | ✔️ [12 SP2](linux-sles.md#sles-12-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+
+자세한 내용은 [SLES에서 .NET Core 설치](linux-sles.md)를 참조하세요.
 
 ## <a name="ubuntu"></a>Ubuntu
 
