@@ -1,5 +1,6 @@
 ---
 title: '방법: DateTimePicker 컨트롤을 사용하여 시간 표시'
+description: Windows Forms DateTimePicker 컨트롤을 사용 하 여 사용자가 날짜 및 시간을 선택 하 고 해당 날짜와 시간을 지정 된 형식으로 표시할 수 있도록 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: 84f10540e7735ac1043e63eecda84161c10deeef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ab584367a189d05e567bb57d386c6bf629201102
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591725"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325586"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>방법: DateTimePicker 컨트롤을 사용하여 시간 표시
 애플리케이션에서 사용자가 날짜와 시간을 선택하고 해당 날짜와 시간을 지정된 형식으로 표시할 수 있게 하려면 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용합니다. 다음 절차에서는 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용하여 시간을 표시하는 방법을 보여 줍니다.  
@@ -42,6 +43,6 @@ ms.locfileid: "65591725"
   
 - System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)

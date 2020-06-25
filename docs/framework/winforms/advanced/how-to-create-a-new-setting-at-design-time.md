@@ -1,16 +1,17 @@
 ---
 title: '방법: 디자인 타임에 새 설정 만들기'
+description: Visual Studio의 설정 디자이너를 사용 하 여 디자인 타임에 새 Windows Forms 설정을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037900"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325846"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 
@@ -36,8 +37,8 @@ ms.locfileid: "69037900"
 
 4. 설정 디자이너에서 설정의 **이름**, **값**, **유형**및 **범위** 를 설정 합니다. 각 행은 단일 설정을 나타냅니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
-- [응용 프로그램 설정 개요](application-settings-overview.md)
+- [애플리케이션 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
+- [애플리케이션 설정 개요](application-settings-overview.md)
 - [방법: 디자인 타임에 기존 설정 값 변경](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

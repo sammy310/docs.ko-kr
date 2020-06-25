@@ -1,5 +1,6 @@
 ---
 title: 컨트롤 추가
+description: Windows Form에 컨트롤을 그리는 방법에 대해 알아봅니다. 컨트롤은 정보를 표시 하거나 사용자 입력을 수락 하는 데 사용할 수 있는 폼의 구성 요소입니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9ab0d78fa0153cce20fb17d22f6e9e781229ece
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743961"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325885"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 추가
 
@@ -44,14 +45,14 @@ ms.locfileid: "76743961"
     > [!NOTE]
     > **도구 상자** 에서 컨트롤을 두 번 클릭 하 여 기본 크기로 폼의 왼쪽 위 모퉁이에 추가할 수 있습니다.
 
-    런타임에 컨트롤을 폼에 동적으로 추가할 수도 있습니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤을 클릭할 때 폼에 <xref:System.Windows.Forms.TextBox> 컨트롤이 추가 됩니다.
+    런타임에 컨트롤을 폼에 동적으로 추가할 수도 있습니다. 다음 코드 예제에서는 컨트롤을 <xref:System.Windows.Forms.TextBox> 클릭할 때 폼에 컨트롤이 추가 됩니다 <xref:System.Windows.Forms.Button> .
 
     > [!NOTE]
-    > 다음 절차를 수행 하려면 단추가 이미 배치 된 `Button1`**단추** 컨트롤이 있는 폼이 있어야 합니다.
+    > 다음 절차를 수행 하려면 **단추** 컨트롤이 있는 폼 `Button1` 이 이미 배치 되어 있어야 합니다.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>프로그래밍 방식으로 폼에 컨트롤을 추가 하려면
 
-1. 폼의 클래스 내에서 단추의 `Click` 이벤트를 처리 하는 메서드에서 다음과 비슷한 코드를 삽입 하 여 컨트롤 변수에 대 한 참조를 추가 하 고 컨트롤의 `Location`를 설정 하 고 컨트롤을 추가 합니다.
+1. `Click`폼의 클래스 내에서 단추의 이벤트를 처리 하는 메서드에서 다음과 비슷한 코드를 삽입 하 여 컨트롤 변수에 대 한 참조를 추가 하 고 컨트롤의를 설정 하 `Location` 고 컨트롤을 추가 합니다.
 
     ```vb
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -85,11 +86,11 @@ ms.locfileid: "76743961"
     > 컨트롤의 다른 속성을 초기화 하는 코드를 추가할 수도 있습니다.
 
     > [!IMPORTANT]
-    > 악의적인 `UserControl`를 참조 하 여 네트워크를 통해 로컬 컴퓨터를 보안 위험에 노출 시킬 수 있습니다. 악의적인 사용자가 손상 된 사용자 지정 컨트롤을 만든 다음 실수로 프로젝트에 추가 하는 경우에만이 문제가 발생 합니다.
+    > 악의적인을 참조 하 여 네트워크를 통해 로컬 컴퓨터를 보안 위험에 노출 시킬 수 있습니다 `UserControl` . 악의적인 사용자가 손상 된 사용자 지정 컨트롤을 만든 다음 실수로 프로젝트에 추가 하는 경우에만이 문제가 발생 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤](index.md)
-- [방법: Windows Forms에서 컨트롤 크기 조정](how-to-resize-controls-on-windows-forms.md)
+- [방법: Windows Forms에서 컨트롤의 크기 조정](how-to-resize-controls-on-windows-forms.md)
 - [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

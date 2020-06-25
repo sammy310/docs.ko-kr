@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 설정 개요
+description: 응용 프로그램 및 사용자를 대신 하 여 설정 데이터를 만들고 저장 하는 방법 등 Windows Forms의 응용 프로그램 설정 기능에 대해 알아봅니다.
 ms.date: 03/30/2017
 f1_keywords:
 - ApplicationsSettingsOverview
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 72a15736fd21d1d626f88e728d70b7dd7ee6768f
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 864cab72b26ff7989c570347fb88b4009e7d705a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990181"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324219"
 ---
 # <a name="application-settings-overview"></a>애플리케이션 설정 개요
 
@@ -48,7 +49,7 @@ ms.locfileid: "84990181"
 
  <xref:System.Windows.Forms.Binding> 클래스를 사용하여 프로그래밍 방식으로 폼과 컨트롤의 속성에 설정을 바인딩할 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>

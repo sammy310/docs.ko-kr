@@ -1,5 +1,6 @@
 ---
 title: '방법: WebBrowser 컨트롤을 사용하여 URL로 이동'
+description: Windows Forms를 사용 하 여 특정 URL로 이동 하는 방법에 대해 알아봅니다. 또한 새 문서가 로드 되는 시기를 확인 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: f6cb26ff247bba75cc351d453314bade2d38d9f5
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6ad360cc73a84ca040869832bb59d354cb78bd5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144840"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325568"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용하여 URL로 이동
 다음 코드 예제에서는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 특정 URL로 탐색 하는 방법을 보여 줍니다.
@@ -41,7 +42,7 @@ this.webBrowser1.Navigate("https://www.microsoft.com");
 
 - `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>

@@ -1,5 +1,6 @@
 ---
 title: 데이터 바인딩
+description: Windows Forms에서 데이터 바인딩을 사용 하 여 양식의 컨트롤에 있는 데이터 원본의 정보를 표시 하 고 변경 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3dfce24147caf9b138916ca8dc3b7a9010439f58
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734615"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325540"
 ---
 # <a name="windows-forms-data-binding"></a>Windows Forms 데이터 바인딩
 Windows Forms의 데이터 바인딩은 폼의 컨트롤에서 데이터 소스의 정보를 표시하고 변경하는 방법을 제공합니다. 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다.  
@@ -60,7 +61,7 @@ Windows Forms의 데이터 바인딩은 폼의 컨트롤에서 데이터 소스�
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
  컨트롤에 바인딩하기 위해 데이터 소스를 캡슐화하는 클래스를 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [BindingSource 구성 요소](./controls/bindingsource-component.md)  
  <xref:System.Windows.Forms.BindingSource> 구성 요소를 사용하는 방법을 보여 주는 항목 목록을 포함합니다.  
   

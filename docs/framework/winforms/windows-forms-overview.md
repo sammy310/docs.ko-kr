@@ -1,16 +1,17 @@
 ---
 title: 개요
+description: Windows Forms를 사용 하 여 오늘날의 기업과 최종 사용자의 요구를 충족 하는 스마트 클라이언트를 빌드하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c3a8394086c9d744630179b089a1f986af12b339
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 820d5bae54ecb5a868314197d6a7e45e097b57de
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734542"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325989"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -22,7 +23,7 @@ ms.locfileid: "76734542"
 
 ### <a name="build-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드
 
- Windows Forms는 파일 시스템 읽기 및 쓰기와 같은 일반적인 응용 프로그램 작업을 간소화 하는 관리 되는 라이브러리 집합인 .NET Framework에 대 한 스마트 클라이언트 기술입니다. Visual Studio와 같은 개발 환경을 사용 하는 경우 정보를 표시 하 고, 사용자의 입력을 요청 하 고, 네트워크를 통해 원격 컴퓨터와 통신 하는 Windows Forms 스마트 클라이언트 응용 프로그램을 만들 수 있습니다.
+ Windows Forms는 .NET Framework를 위한 스마트 클라이언트 기술, 파일 시스템을 읽고 쓰기와 같은 일반 애플리케이션 작업을 간소화하는 관리되는 라이브러리의 세트입니다. Visual Studio와 같은 개발 환경을 사용하는 경우 정보를 표시하고 사용자에게 입력을 요청하며 네트워크를 통해 원격 컴퓨터와 통신하는 Windows Forms 스마트 클라이언트 애플리케이션을 만들 수 있습니다.
 
  Windows Forms에서 *폼*은 정보를 사용자에게 표시하는 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 추가하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 애플리케이션을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.
 
@@ -32,28 +33,28 @@ ms.locfileid: "76734542"
 
  Windows Forms에는 Microsoft Office와 같은 고급 애플리케이션의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하는 경우 텍스트와 이미지를 포함하고, 하위 메뉴를 표시하며, 텍스트 상자 및 콤보 상자와 같은 기타 컨트롤을 호스트하는 도구 모음과 메뉴를 만들 수 있습니다.
 
- Visual Studio에서 끌어서 놓기 **Windows Forms 디자이너** 를 사용 하면 Windows Forms 응용 프로그램을 쉽게 만들 수 있습니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. Visual Studio를 사용 하거나 명령줄에서 컴파일하는 경우에는 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 사용 하 여 더 짧은 시간 안에 고급 폼 레이아웃을 만들 수 있습니다.
+ Visual Studio에서 끌어서 놓기 **Windows Forms 디자이너** 를 사용 하면 Windows Forms 응용 프로그램을 쉽게 만들 수 있습니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. Visual Studio를 사용 하거나 명령줄에서 컴파일하는 경우 <xref:System.Windows.Forms.FlowLayoutPanel> , <xref:System.Windows.Forms.TableLayoutPanel> 및 컨트롤을 사용 하 여 <xref:System.Windows.Forms.SplitContainer> 더 짧은 시간 안에 고급 폼 레이아웃을 만들 수 있습니다.
 
  끝으로, 고유한 사용자 지정 UI 요소를 만들어야 하는 경우 <xref:System.Drawing> 네임스페이스에는 선, 원 및 기타 도형을 폼에 직접 렌더링하는 다양한 클래스가 포함되어 있습니다.
 
 > [!NOTE]
-> Windows Forms 컨트롤은 애플리케이션 도메인 간에 마샬링되도록 설계되어 있지 않습니다. 이런 이유로 Microsoft는 <xref:System.AppDomain>의 <xref:System.Windows.Controls.Control> 기본 형식이 가능한 것처럼 표시해도 <xref:System.MarshalByRefObject> 경계를 넘어서 Windows Forms 컨트롤을 전달하는 기능을 지원하지 않습니다. 애플리케이션 도메인 경계를 넘어서 Windows Forms 컨트롤이 전달되지 않는 한 여러 개의 애플리케이션 도메인을 가진 Windows Forms 애플리케이션이 지원됩니다.
+> Windows Forms 컨트롤은 애플리케이션 도메인 간에 마샬링되도록 설계되어 있지 않습니다. 이런 이유로 Microsoft는 <xref:System.MarshalByRefObject>의 <xref:System.Windows.Controls.Control> 기본 형식이 가능한 것처럼 표시해도 <xref:System.AppDomain> 경계를 넘어서 Windows Forms 컨트롤을 전달하는 기능을 지원하지 않습니다. 애플리케이션 도메인 경계를 넘어서 Windows Forms 컨트롤이 전달되지 않는 한 여러 개의 애플리케이션 도메인을 가진 Windows Forms 애플리케이션이 지원됩니다.
 
 #### <a name="create-forms-and-controls"></a>폼 및 컨트롤 만들기
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|Description|도움말 항목|
+|설명|도움말 항목|
 |-----------------|----------------|
 |폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](./controls/how-to-add-controls-to-windows-forms.md)|
-|<xref:System.Windows.Forms.ToolStrip> 컨트롤 사용|[방법: 디자이너를 사용하여 표준 항목이 있는 기본 ToolStrip 만들기](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|<xref:System.Windows.Forms.ToolStrip> 컨트롤 사용|[방법: 디자이너를 사용하여 표준 항목에서 기본 ToolStrip 만들기](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |<xref:System.Drawing>을 사용하여 그래픽 만들기|[그래픽 프로그래밍 시작](./advanced/getting-started-with-graphics-programming.md)|
 |사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>데이터 표시 및 조작
  많은 애플리케이션은 데이터베이스, XML 파일, XML Web services 또는 기타 데이터 소스의 데이터를 표시해야 합니다. Windows Forms는 각 데이터 조각이 해당 셀을 사용하도록 이러한 표 형식 데이터를 기존의 행과 열 형식으로 표시하기 위해 <xref:System.Windows.Forms.DataGridView> 컨트롤이라는 유연한 컨트롤을 제공합니다. <xref:System.Windows.Forms.DataGridView>를 사용하는 경우 다른 기능 중에서도 개별 셀의 모양을 사용자 지정하고, 임의의 행과 열을 제자리에 잠그고, 셀 안에 복잡한 컨트롤을 표시할 수 있습니다.
 
- 네트워크를 통해 데이터 소스에 연결하는 것은 Windows Forms 스마트 클라이언트에서 간단한 작업입니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 데이터 소스에 대 한 연결을 나타내며 데이터를 컨트롤에 바인딩하고, 이전 및 다음 레코드로 이동 하 고, 레코드를 편집 하 고, 변경 내용을 다시 원래 소스에 저장 하기 위한 메서드를 노출 합니다. <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 사용자가 레코드를 탐색하기 위한 간단한 인터페이스를 제공합니다.
+ 네트워크를 통해 데이터 소스에 연결하는 것은 Windows Forms 스마트 클라이언트에서 간단한 작업입니다. <xref:System.Windows.Forms.BindingSource>구성 요소는 데이터 소스에 대 한 연결을 나타내며 데이터를 컨트롤에 바인딩하고, 이전 및 다음 레코드로 이동 하 고, 레코드를 편집 하 고, 변경 내용을 다시 원래 소스에 저장 하기 위한 메서드를 노출 합니다. <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 통해 사용자가 레코드를 탐색하기 위한 간단한 인터페이스를 제공합니다.
 
  데이터 소스 창을 통해 데이터 바인딩된 컨트롤을 쉽게 만들 수 있습니다. 창에는 데이터베이스, 웹 서비스 및 개체와 같은 프로젝트의 데이터 소스가 표시됩니다. 이 창에서 프로젝트의 폼으로 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다. 데이터 소스 창에서 기존 컨트롤로 개체를 끌어 기존 컨트롤을 데이터에 바인딩할 수도 있습니다.
 
@@ -63,9 +64,9 @@ ms.locfileid: "76734542"
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|Description|도움말 항목|
+|설명|도움말 항목|
 |-----------------|----------------|
-|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 BindingSource 구성 요소 바인딩](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |ADO.NET 데이터 원본 사용|[방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |데이터 소스 창 사용|[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |애플리케이션 설정 사용|[방법: 애플리케이션 설정 만들기](./advanced/how-to-create-application-settings.md)|
@@ -82,10 +83,10 @@ ClickOnce 응용 프로그램은 사용자가 네트워크에 연결 된 경우�
 
 ClickOnce에 대 한 전체 개요는 [Clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조 하세요. 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|Description|도움말 항목|
+|설명|도움말 항목|
 |-----------------|----------------|
-|ClickOnce를 사용 하 여 응용 프로그램 배포|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 애플리케이션 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|ClickOnce 배포 업데이트|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|ClickOnce를 사용 하 여 응용 프로그램 배포|[방법: 게시 마법사를 사용 하 여 ClickOnce 응용 프로그램 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 애플리케이션 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|ClickOnce 배포 업데이트|[방법: ClickOnce 응용 프로그램에 대 한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
 |ClickOnce를 사용 하 여 보안 관리|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>기타 컨트롤 및 기능
@@ -96,12 +97,12 @@ Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|Description|도움말 항목|
+|설명|도움말 항목|
 |-----------------|----------------|
-|폼의 콘텐츠 인쇄|[방법: Windows Forms의 그래픽 인쇄](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|폼의 콘텐츠 인쇄|[방법: Windows Forms에서 그래픽 인쇄](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
 - [새 Windows Form 만들기](creating-a-new-windows-form.md)

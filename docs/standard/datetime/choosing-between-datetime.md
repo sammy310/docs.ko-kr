@@ -1,6 +1,6 @@
 ---
-title: DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
-description: DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 형식 중에서 선택 하 여 .NET에서 날짜 및 시간 정보를 표시 하는 방법에 대해 알아봅니다.
+title: DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 비교
+description: .NET에서 날짜 및 시간 정보를 나타내기 위해 DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 형식 간의 차이점에 대해 알아봅니다.
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 0b89d0fd36af00796105af50f51803c90cce2605
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662812"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326055"
 ---
-# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택
+# <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중에서 선택
 
-날짜 및 시간 정보를 사용하는 .NET 애플리케이션은 매우 다양하며 해당 정보를 여러 가지 방법으로 사용할 수 있습니다. 날짜 및 시간 정보를 사용하는 보다 일반적인 방법에는 다음 중 하나 이상이 포함됩니다.
+.NET 응용 프로그램은 여러 가지 방법으로 날짜 및 시간 정보를 사용할 수 있습니다. 날짜 및 시간 정보의 일반적인 용도는 다음과 같습니다.
 
 - 시간 정보가 중요하지 않도록 날짜만 반영합니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "84662812"
 
 - 일반적으로 날짜 및 시간 정보가 단순 데이터 형식으로 저장 되는 .NET 외부의 소스에서 날짜 및 시간 정보를 검색 합니다.
 
-- 단일 시점을 고유하고 명확하게 식별합니다. 호스트 시스템에서만 날짜와 시간이 명확하면 되는 애플리케이션도 있고, 시스템 간에 명확해야 하는 애플리케이션도 있습니다(즉, 한 시스템에서 직렬화된 날짜를 다른 시스템에서 의미 있게 역직렬화하고 사용할 수 있음).
+- 단일 시점을 고유하고 명확하게 식별합니다. 일부 응용 프로그램의 경우에는 호스트 시스템 에서만 날짜와 시간을 명확 하 게 해야 합니다. 다른 앱은 시스템 간에 명확 해야 합니다. 즉, 한 시스템에서 직렬화 된 날짜를 의미 있게 역직렬화 하 고 전 세계의 다른 시스템에서 사용할 수 있습니다.
 
 - 여러 개의 관련 시간(예: 요청자의 현지 시간 및 서버의 웹 요청 수신 시간)을 보존합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "84662812"
 
 <xref:System.DateTime> 값은 특정 날짜와 시간을 정의합니다. 여기에 <xref:System.DateTime.Kind%2A> 는 해당 날짜와 시간이 속한 표준 시간대에 대 한 제한 된 정보를 제공 하는 속성이 포함 됩니다. <xref:System.DateTimeKind> 값은 <xref:System.DateTime.Kind%2A> 속성에서 반환된 값은 <xref:System.DateTime> 값이 현지 시간(<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), UTC(협정 세계시)(<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 또는 지정되지 않은 시간(<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)인지를 나타냅니다.
 
-<xref:System.DateTime> 구조체는 다음을 수행하는 애플리케이션에 적합합니다.
+<xref:System.DateTime>구조는 다음 특성 중 하나 이상을 사용 하는 응용 프로그램에 적합 합니다.
 
 - 날짜만 사용합니다.
 
@@ -82,14 +82,14 @@ ms.locfileid: "84662812"
 - 시간이 두 개의 개별 값으로 저장되거나 한 구조체의 두 멤버로 저장된 경우 관련된 여러 시간을 보존합니다.
 
 > [!NOTE]
-> <xref:System.DateTimeOffset> 값의 사용은 <xref:System.DateTime> 값의 사용보다 훨씬 더 일반적입니다. 따라서 <xref:System.DateTimeOffset> 을 애플리케이션 개발의 기본 날짜 및 시간 형식으로 간주해야 합니다.
+> <xref:System.DateTimeOffset> 값의 사용은 <xref:System.DateTime> 값의 사용보다 훨씬 더 일반적입니다. 따라서 <xref:System.DateTimeOffset> 응용 프로그램 개발에 대 한 기본 날짜 및 시간 형식으로 간주 합니다.
 
-<xref:System.DateTimeOffset> 값은 특정 표준 시간대와 연결되지 않고 다양한 표준 시간대에서 발생할 수 있습니다. 이를 설명하기 위해 다음 예제에서는 많은 <xref:System.DateTimeOffset> 값(현지 태평양 표준시 포함)이 속할 수 있는 표준 시간대를 나열합니다.
+<xref:System.DateTimeOffset>값은 특정 표준 시간대에 연결 되지 않지만 다양 한 표준 시간대에서 발생할 수 있습니다. 다음 예제에서는 여러 <xref:System.DateTimeOffset> 값 (현지 태평양 표준시 포함)이 속할 수 있는 표준 시간대를 나열 합니다.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-출력은 이 예제의 각 날짜 및 시간 값이 세 개 이상의 표준 시간대에 속할 수 있음을 보여 줍니다. <xref:System.DateTimeOffset> 값 6/10/2007은 날짜 및 시간 값이 일광 절약 시간제를 나타내는 경우 UTC에서의 오프셋이 시작 표준 시간대의 기본 UTC 오프셋이나 표시 이름에 있는 UTC에서의 오프셋과 일치하지 않을 수도 있음을 보여 줍니다. 즉, 단일 <xref:System.DateTimeOffset> 값은 해당 표준 시간대와 긴밀히 연결되어 있지 않으므로 표준 시간대의 일광 절약 시간제 전환을 반영할 수 없습니다. 이는 날짜 및 시간 산술 연산을 사용하여 <xref:System.DateTimeOffset> 값을 조작하는 경우에 특히 문제가 될 수 있습니다. 표준 시간대의 조정 규칙을 고려 하는 방식으로 날짜 및 시간 산술 연산을 수행 하는 방법에 대 한 자세한 내용은 [날짜 및 시간으로 산술 연산 수행](performing-arithmetic-operations.md)을 참조 하세요.
+출력은 이 예제의 각 날짜 및 시간 값이 세 개 이상의 표준 시간대에 속할 수 있음을 보여 줍니다. <xref:System.DateTimeOffset>6/10/2007 값은 날짜 및 시간 값이 일광 절약 시간제를 나타내는 경우 utc에서의 오프셋이 시작 표준 시간대의 기본 UTC 오프셋 이나 표시 이름에 있는 UTC의 오프셋에 반드시 일치 하지 않는 것을 보여 줍니다. 단일 값은 <xref:System.DateTimeOffset> 해당 표준 시간대와 긴밀 하 게 연결 되어 있지 않으므로 표준 시간대의 일광 절약 시간제 전환을 반영할 수 없습니다. 이는 날짜 및 시간 산술 연산을 사용 하 여 값을 조작 하는 경우에 문제가 될 수 있습니다 <xref:System.DateTimeOffset> . 표준 시간대의 조정 규칙을 고려 하는 방식으로 날짜 및 시간 산술 연산을 수행 하는 방법에 대 한 자세한 내용은 [날짜 및 시간으로 산술 연산 수행](performing-arithmetic-operations.md)을 참조 하세요.
 
 ## <a name="the-timespan-structure"></a>TimeSpan 구조체
 
@@ -117,8 +117,8 @@ ms.locfileid: "84662812"
 
 <xref:System.TimeZoneInfo> 클래스를 완전히 활용하기 위해 추가 개발 작업이 필요한 경우도 있습니다. 날짜 및 시간 값이 속해 있는 표준 시간대와 긴밀 하 게 연결 되지 않은 경우에는 추가 작업이 필요 합니다. 응용 프로그램에서 날짜 및 시간을 관련 표준 시간대와 연결 하기 위한 몇 가지 메커니즘을 제공 하지 않는 한 특정 날짜 및 시간 값이 표준 시간대에서 분리 될 수 있습니다. 이 정보를 연결하는 한 가지 방법으로 날짜 및 시간 값, 그리고 연결되는 표준 시간대 개체를 둘 다 포함하는 클래스나 구조체를 정의합니다.
 
-날짜 및 시간 개체를 인스턴스화할 때 날짜 및 시간 값이 속하는 표준 시간대가 알려진 경우에만 .NET의 표준 시간대 지원을 활용할 수 있습니다. 웹 또는 네트워크 애플리케이션에서는 특히 알 수 없는 경우가 많습니다.
+.NET에서 표준 시간대 지원을 활용 하려면 해당 날짜 및 시간 개체가 인스턴스화될 때 날짜 및 시간 값이 속하는 표준 시간대를 알아야 합니다. 특히 웹 또는 네트워크 앱에서 표준 시간대를 알 수 없는 경우가 많습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [날짜, 시간 및 표준 시간대](index.md)
