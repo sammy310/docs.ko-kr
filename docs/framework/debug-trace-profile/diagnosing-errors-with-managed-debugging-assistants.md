@@ -1,5 +1,6 @@
 ---
 title: 관리 디버깅 도우미를 사용하여 오류 진단
+description: 관리 디버깅 도우미를 사용 하 여 .NET에서 오류를 진단 합니다. Mda는 런타임 상태 정보를 제공 하기 위해 CLR과 함께 작동 하는 디버깅을 지원 합니다.
 ms.date: 08/14/2018
 f1_keywords:
 - EHMDA
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ac6fdc09fb057cc55659ce076d37ab96fe2354d1
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216551"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416098"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>관리 디버깅 도우미를 사용 하 여 오류 진단
 
@@ -64,11 +65,11 @@ Windows 레지스트리에 키를 추가 하거나 환경 변수를 설정 하 �
 |[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
 |[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
 |[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[가능성](reentrancy-mda.md)|
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-기본적으로 .NET Framework는 모든 관리되는 디버거에 대한 MDA의 하위 집합을 활성화합니다. **디버그** 메뉴에서 **Windows** > **예외 설정** 을 선택 하 고 **관리 디버깅 도우미** 목록을 확장 하 여 Visual Studio의 기본 집합을 볼 수 있습니다.
+기본적으로 .NET Framework는 모든 관리되는 디버거에 대한 MDA의 하위 집합을 활성화합니다. **Windows**  >  **디버그** 메뉴에서 Windows**예외 설정** 을 선택 하 고 **관리 디버깅 도우미** 목록을 확장 하 여 Visual Studio의 기본 집합을 볼 수 있습니다.
 
 ![Visual Studio의 예외 설정 창](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -77,11 +78,11 @@ Windows 레지스트리에 키를 추가 하거나 환경 변수를 설정 하 �
 레지스트리 키, 환경 변수 및 애플리케이션 구성 설정을 사용하여 MDA를 사용하거나 사용하지 않도록 설정할 수 있습니다. 애플리케이션 구성 설정을 사용하려면 레지스트리 키 또는 환경 변수를 사용하도록 설정해야 합니다.
 
 > [!TIP]
-> Mda를 사용 하지 않도록 설정 하는 대신 MDA 알림이 수신 될 때마다 Visual Studio에서 MDA 대화 상자를 표시 하지 않도록 할 수 있습니다. 이렇게 하려면 **디버그** 메뉴에서 **Windows** > **예외 설정** 을 선택 하 고 **관리 디버깅 도우미** 목록을 확장 한 다음 개별 MDA에 대 한 **throw 될 때 중단** 확인란을 선택 하거나 선택 취소 합니다.
+> Mda를 사용 하지 않도록 설정 하는 대신 MDA 알림이 수신 될 때마다 Visual Studio에서 MDA 대화 상자를 표시 하지 않도록 할 수 있습니다. 이렇게 하려면 **Windows**  >  **디버그** 메뉴에서 Windows**예외 설정** 을 선택 하 고 **관리 디버깅 도우미** 목록을 확장 한 다음 개별 MDA에 대 한 **throw 될 때 중단** 확인란을 선택 하거나 선택 취소 합니다.
 
 ### <a name="registry-key"></a>레지스트리 키
 
-Mda를 사용 하도록 설정 하려면 **HKEY_LOCAL_MACHINE \software\microsoft\\를 추가 합니다.** Windows 레지스트리에 있는 NETFramework\MDA 하위 키 (유형 REG_SZ, 값 1)입니다. 다음 예제를 *Mdaenable .reg*라는 텍스트 파일에 복사 합니다. Windows 레지스트리 편집기 (Regedit.exe)를 열고 **파일** 메뉴에서 **가져오기**를 선택 합니다. *Mdaenable .reg* 파일을 선택 하 여 해당 컴퓨터에서 mda를 사용 하도록 설정 합니다. 하위 키를 문자열 값 **1** 로 설정 하면 (DWORD 값이 **1**이 아닌 경우) *ApplicationName*파일에서 mda 설정을 읽을 수 있습니다. 예를 들어, 메모장의 MDA 구성 파일은 notepad.exe로 이름이 지정 됩니다.
+Mda를 사용 하도록 설정 하려면 **HKEY_LOCAL_MACHINE \software\microsoft를 추가 \\ 합니다. **Windows 레지스트리에 있는 NETFramework\MDA 하위 키 (유형 REG_SZ, 값 1)입니다. 다음 예제를 *Mdaenable .reg*라는 텍스트 파일에 복사 합니다. Windows 레지스트리 편집기 (RegEdit.exe)를 열고 **파일** 메뉴에서 **가져오기**를 선택 합니다. *Mdaenable .reg* 파일을 선택 하 여 해당 컴퓨터에서 mda를 사용 하도록 설정 합니다. 하위 키를 문자열 값 **1** (DWORD 값 **1**이 아님)로 설정 하면 *ApplicationName*.mda.config 파일에서 MDA 설정을 읽을 수 있습니다. 예를 들어 메모장의 MDA 구성 파일 이름은 notepad.exe.mda.config입니다.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -127,7 +128,7 @@ MDA 활성화는 레지스트리 키를 재정의하는 환경 변수 COMPLUS_MD
 
 ### <a name="application-specific-configuration-settings"></a>응용 프로그램별 구성 설정
 
-애플리케이션의 MDA 구성 파일에서 일부 도우미를 개별적으로 사용하도록 설정, 사용하지 않도록 설정 및 구성할 수 있습니다. MDA를 구성하는 데 애플리케이션 구성 파일을 사용할 수 있으려면 MDA 레지스트리 키 또는 COMPLUS_MDA 환경 변수를 설정해야 합니다. 애플리케이션 구성 파일은 일반적으로 애플리케이션 실행 파일(.exe)과 동일한 디렉터리에 있습니다. 파일 이름은 *ApplicationName*. mda .config를 사용 합니다. 예를 들어 notepad.exe. 응용 프로그램 구성 파일에서 사용 하도록 설정 된 도우미에는 해당 도우미의 동작을 제어 하기 위해 특별히 디자인 된 특성 또는 요소가 있을 수 있습니다.
+애플리케이션의 MDA 구성 파일에서 일부 도우미를 개별적으로 사용하도록 설정, 사용하지 않도록 설정 및 구성할 수 있습니다. MDA를 구성하는 데 애플리케이션 구성 파일을 사용할 수 있으려면 MDA 레지스트리 키 또는 COMPLUS_MDA 환경 변수를 설정해야 합니다. 애플리케이션 구성 파일은 일반적으로 애플리케이션 실행 파일(.exe)과 동일한 디렉터리에 있습니다. 파일 이름은 *ApplicationName*.mda.config 형식으로 사용 합니다. 예를 들어 notepad.exe.mda.config 합니다. 응용 프로그램 구성 파일에서 사용 하도록 설정 된 도우미에는 해당 도우미의 동작을 제어 하기 위해 특별히 디자인 된 특성 또는 요소가 있을 수 있습니다.
 
 다음 예제에서는 [마샬링을](marshaling-mda.md)사용 하도록 설정 하 고 구성 하는 방법을 보여 줍니다.
 
@@ -146,7 +147,7 @@ MDA 활성화는 레지스트리 키를 재정의하는 환경 변수 COMPLUS_MD
 </mdaConfig>
 ```
 
-`Marshaling` MDA는 애플리케이션에서 각 관리되는-관리되지 않는 변환의 관리되지 않는 형식으로 마샬링되는 관리되는 형식에 대한 정보를 내보냅니다. `Marshaling` MDA는 각각 **methodfilter** 및 **fieldfilter** 자식 요소에 제공 된 메서드 및 구조 필드의 이름을 필터링 할 수도 있습니다.
+`Marshaling` MDA는 애플리케이션에서 각 관리되는-관리되지 않는 변환의 관리되지 않는 형식으로 마샬링되는 관리되는 형식에 대한 정보를 내보냅니다. `Marshaling`MDA는 각각 **methodfilter** 및 **fieldfilter** 자식 요소에 제공 된 메서드 및 구조 필드의 이름을 필터링 할 수도 있습니다.
 
 다음 예제에서는 기본 설정을 사용 하 여 여러 Mda를 사용 하도록 설정 하는 방법을 보여 줍니다.
 
@@ -168,14 +169,14 @@ MDA 활성화는 레지스트리 키를 재정의하는 환경 변수 COMPLUS_MD
 
 MDA가 활성화 되 면 코드가 디버거에서 실행 되지 않는 경우에도 활성화 됩니다. 디버거가 없을 때 MDA 이벤트가 발생하면 이벤트 메시지가 처리되지 않은 예외가 아니더라도 처리되지 않은 예외 대화 상자에 표시됩니다. 이 대화 상자가 표시되지 않도록 하려면 코드가 디버깅 환경에서 실행되지 않는 경우 MDA 사용 설정을 제거하세요.
 
-Visual Studio IDE (통합 개발 환경)에서 코드가 실행 되는 경우 특정 MDA 이벤트에 대해 표시 되는 예외 대화 상자를 방지할 수 있습니다. 이렇게 하려면 **디버그** 메뉴에서 **Windows** > **예외 설정**을 선택 합니다. **예외 설정** 창에서 **관리 디버깅 도우미** 목록을 확장 한 다음 개별 MDA에 대 한 **throw 될 때 중단** 확인란의 선택을 취소 합니다. 이 대화 상자를 사용 하 여 MDA 예외 대화 *상자를 표시할* 수도 있습니다.
+Visual Studio IDE (통합 개발 환경)에서 코드가 실행 되는 경우 특정 MDA 이벤트에 대해 표시 되는 예외 대화 상자를 방지할 수 있습니다. 이렇게 하려면 **디버그** 메뉴에서 **Windows**  >  **예외 설정**을 선택 합니다. **예외 설정** 창에서 **관리 디버깅 도우미** 목록을 확장 한 다음 개별 MDA에 대 한 **throw 될 때 중단** 확인란의 선택을 취소 합니다. 이 대화 상자를 사용 하 여 MDA 예외 대화 *상자를 표시할* 수도 있습니다.
 
 ## <a name="mda-output"></a>MDA 출력
 
-MDA 출력은 `PInvokeStackImbalance` MDA의 출력을 보여 주는 다음 예제와 유사 합니다.
+MDA 출력은 mda의 출력을 보여 주는 다음 예제와 유사 합니다 `PInvokeStackImbalance` .
 
 **PInvoke 함수 ' MDATest!를 호출 합니다. MDATest. Program:: StdCall '이 (가) 스택에서 불균형 했습니다. 이는 관리 되는 PInvoke 서명이 관리 되지 않는 대상 시그니처와 일치 하지 않기 때문일 수 있습니다. PInvoke 시그니처의 호출 규칙 및 매개 변수가 관리 되지 않는 대상 시그니처와 일치 하는지 확인 합니다.**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [디버깅, 추적 및 프로파일링](index.md)

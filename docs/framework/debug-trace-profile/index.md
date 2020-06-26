@@ -1,5 +1,6 @@
 ---
 title: 디버깅, 추적 및 프로파일링
+description: .NET의 디버깅, 추적 및 프로 파일링에 대해 읽어 보십시오. JIT (just-in-time) 디버깅, 응용 프로그램 추적 및 계측 등을 다루는 문서를 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217398"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415981"
 ---
 # <a name="debugging-tracing-and-profiling"></a>디버깅, 추적 및 프로파일링
 .NET Framework 애플리케이션을 디버그하려면 디버거가 애플리케이션에 연결하고 가능한 경우 애플리케이션 및 해당 MSIL(Microsoft intermediate language)에 대한 기호 및 라인 맵을 둘 다 생성할 수 있도록 컴파일러 및 런타임 환경을 구성해야 합니다. 관리되는 애플리케이션이 디버그된 후 성능을 향상시키기 위해 프로파일링할 수 있습니다. 프로파일링은 가장 자주 실행된 코드를 생성하는 소스 코드 줄과 실행하는 데 소요된 시간을 평가 및 설명합니다.  
@@ -44,8 +45,8 @@ ms.locfileid: "77217398"
  [성능 카운터](performance-counters.md)  
  애플리케이션의 성능을 추적하는 데 사용할 수 있는 카운터를 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
- [Visual Studio에서 ASP.NET 또는 ASP.NET Core apps 디버그](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
+## <a name="related-sections"></a>관련 단원  
+ [Visual Studio에서 ASP.NET 또는 ASP.NET Core 앱 디버그](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  개발 중이나 개발 후에 ASP.NET 애플리케이션을 디버그하는 방법에 대한 지침과 필수 전제 조건을 제공합니다.  
   
  [개발 가이드](../development-guide.md)  

@@ -1,5 +1,6 @@
 ---
 title: dirtyCastAndCallOnInterface MDA
+description: 런타임에 바인딩된 전용 클래스 인터페이스에서 초기 바인딩된 vtable 호출이 수행 될 때 호출 되는 Dirtyca/Calloneinterface 관리 디버깅 도우미를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2ed5589909915a261a22c48490e469ae52659c8c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216506"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416072"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
 `dirtyCastAndCallOnInterface` MDA(관리 디버깅 도우미)는 런타임에만 바인딩됨으로 표시된 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도할 때 활성화됩니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "77216506"
 ## <a name="resolution"></a>해결 방법  
  권장되는 해결 방법은 COM에서 사용할 명시적 인터페이스를 정의하고 자동으로 생성된 클래스 인터페이스 대신 이 인터페이스를 통해 COM 클라이언트가 호출하도록 하는 것입니다. 또는 `IDispatch`를 통해 COM 호출을 런타임에 바인딩된 호출로 변형할 수 있습니다.  
   
- 끝으로, 클래스를 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>(`[ClassInterface(ClassInterfaceType.AutoDual)]`)로 식별하여 COM에서 초기에 바인딩된 호출을 배치할 수 있도록 허용할 수 있습니다. 그러나 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>에 설명된 버전 관리 제한 사항 때문에 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>은 사용하지 않는 것이 좋습니다.  
+ 끝으로, 클래스를 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>(`[ClassInterface(ClassInterfaceType.AutoDual)]`)로 식별하여 COM에서 초기에 바인딩된 호출을 배치할 수 있도록 허용할 수 있습니다. 그러나 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>에 설명된 버전 관리 제한 사항 때문에 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>은 사용하지 않는 것이 좋습니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
  이 MDA는 CLR에 아무런 영향을 미치지 않습니다. 런타임에 바인딩된 인터페이스에 대한 초기에 바인딩된 호출 데이터만 보고합니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "77216506"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

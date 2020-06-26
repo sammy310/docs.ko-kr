@@ -1,5 +1,6 @@
 ---
 title: gcUnmanagedToManaged MDA
+description: .NET에서 gcManagedToUnmanaged 관리 디버깅 길잡이를 검토 합니다. 이 MDA는 관리 코드로 전환 하는 동안 가비지 힙 손상이 발생 하 여 활성화할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 320d55224e6a204d330447d6c68eabe0fa6cf892
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216450"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415903"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
 `gcUnmanagedToManaged` MDA(관리 디버깅 도우미)는 위협이 비관리 코드에서 관리 코드로 전환될 때마다 가비지 수집을 발생시킵니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "77216450"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

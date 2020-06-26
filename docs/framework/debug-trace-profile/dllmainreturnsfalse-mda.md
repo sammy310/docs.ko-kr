@@ -1,5 +1,6 @@
 ---
 title: dllMainReturnsFalse MDA
+description: .NET의 dllMainReturnsFalse 관리 디버깅 도우미에 대해 읽어 보세요. DLL 초기화에 실패 한 경우이 MDA가 활성화 됩니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), DllMain returns false
@@ -7,15 +8,15 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 21d5e37d6823876e07cf5b2cbb881c1cf8b47b11
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216437"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416059"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
-DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `dllMainReturnsFalse` 함수가 FALSE를 반환하면 `DllMain` MDA(관리 디버깅 도우미)가 활성화됩니다.  
+DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `DllMain` 함수가 FALSE를 반환하면 `dllMainReturnsFalse` MDA(관리 디버깅 도우미)가 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
  `DllMain` 함수가 FALSE를 반환했고 이는 함수가 제대로 실행되지 않았음을 나타냅니다. `DllMain` 함수에는 일반적으로 중요한 초기화 코드가 포함되므로 이로 인해 결정되지 않은 문제가 발생할 수 있습니다.  
@@ -42,6 +43,6 @@ DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `d
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
