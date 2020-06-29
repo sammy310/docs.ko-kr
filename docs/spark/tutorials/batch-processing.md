@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187561"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594519"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 일괄 처리
 
@@ -28,7 +28,7 @@ ms.locfileid: "79187561"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-.NET for Apache Spark를 처름 사용하는 경우 [.NET for Apache Spark 시작](../tutorials/get-started.md) 자습서를 확인하여 환경을 준비하고 첫 번째 .NET for Apache Spark 애플리케이션을 실행하는 방법을 알아봅니다.
+.NET for Apache Spark를 처름 사용하는 경우 [.NET for Apache Spark 시작](get-started.md) 자습서를 확인하여 환경을 준비하고 첫 번째 .NET for Apache Spark 애플리케이션을 실행하는 방법을 알아봅니다.
 
 ## <a name="download-the-sample-data"></a>샘플 데이터 다운로드
 

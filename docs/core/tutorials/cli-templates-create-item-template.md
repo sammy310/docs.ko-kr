@@ -1,16 +1,16 @@
 ---
 title: dotnet new에 대한 항목 템플릿 만들기 - .NET Core CLI
 description: dotnet new 명령에 대한 항목 템플릿을 만드는 방법을 알아봅니다. 항목 템플릿에 포함할 수 있는 파일 수에는 제한이 없습니다.
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503562"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324372"
 ---
 # <a name="tutorial-create-an-item-template"></a>자습서: 항목 템플릿 만들기
 

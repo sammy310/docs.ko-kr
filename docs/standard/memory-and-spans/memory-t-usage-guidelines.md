@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201937"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245598"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -121,7 +121,7 @@ class Program
 
 때로는 완전히 동기인 경우에도 <xref:System.Span%601> 매개 변수 대신 <xref:System.Memory%601> 매개 변수를 사용해야 합니다. 사용하는 API가 <xref:System.Memory%601> 인수만 허용하는 경우도 있습니다. 이 동작은 정상적이지만, <xref:System.Memory%601>를 동기적으로 사용하는 경우 관련된 절충에 유의해야 합니다.
 
-<a name="rule-2" />
+<a name="rule-2"></a>
 
 **규칙 #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용**을 참조하세요.
 

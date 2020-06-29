@@ -1,17 +1,17 @@
 ---
 title: Windows, Linux 및 macOS에서 설치된 .NET Core 버전 확인 - .NET Core
 description: 컴퓨터에 설치된 .NET Core 버전을 확인하는 방법을 알아봅니다. 여기에는 .NET Core 런타임 및 SDK가 포함됩니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645343"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324812"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core가 설치되어 있는지 확인하는 방법
 

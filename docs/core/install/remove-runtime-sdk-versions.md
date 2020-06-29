@@ -1,16 +1,16 @@
 ---
 title: .NET Core 런타임 및 SDK 제거
 description: 이 문서에서는 현재 설치된 .NET Core 런타임 및 SDK 버전을 확인하는 방법 및 Windows, Mac 및 Linux에서 제거하는 방법을 설명합니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/28/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f1482c243ba22fa81c69ede847a0f6b36a9cb83c
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 1e4a846cf5e3d0209f5ade873520ef64abc12e7c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595764"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324649"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core 런타임 및 SDK를 제거하는 방법
 

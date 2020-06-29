@@ -1,15 +1,15 @@
 ---
 title: macOS Catalina 공증 관련 사항
 description: .NET Core로 빌드된 .NET Core 런타임, SDK 및 앱을 설치할 때 macOS의 공증 및 인증 문제를 처리하는 방법.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146751"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324625"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향
 

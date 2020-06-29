@@ -1,18 +1,18 @@
 ---
 title: .NET Core CLI를 사용하여 앱 게시
 description: .NET Core CLI 명령을 사용하여 .NET Core 앱을 게시하는 방법을 알아봅니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a592b397d1ffee5b224638a8d17ce6fa9e44eea2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397994"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325021"
 ---
 # <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 앱 게시
 

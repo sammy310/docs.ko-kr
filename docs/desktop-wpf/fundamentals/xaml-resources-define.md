@@ -1,15 +1,15 @@
 ---
 title: XAML 리소스 정의
 description: .NET Core용 WPF의 XAML 리소스에 대해 알아봅니다. XAML 리소스의 형식을 이해하고 XAML 리소스를 정의하는 방법을 학습합니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: b278bb92afc308578d60e347871e0150b26a95db
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f8eaf3fd931aa6804b0b9a9c19c6bcc042678ebf
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "81432571"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325715"
 ---
 # <a name="overview-of-xaml-resources"></a>XAML 리소스 개요
 

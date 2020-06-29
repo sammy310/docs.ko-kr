@@ -5,12 +5,12 @@ ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, mlnet-tooling
-ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e366b3c66427ccd2810324abeb880f6cb9ebc1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849161"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602208"
 ---
 # <a name="load-training-data-into-model-builder"></a>모델 작성기로 학습 데이터 로드
 
@@ -109,6 +109,6 @@ SQL Server 데이터베이스에서 모델 작성기로 데이터를 로드하�
 모델 작성기를 사용하여 기계 학습 앱을 빌드하려면 다음 자습서를 따릅니다.
 
 - [회귀를 사용하여 가격 예측](../tutorials/predict-prices-with-model-builder.md)
-- [이진 분류를 사용하여 웹 애플리케이션에서 감정 분석](../tutorials/sentiment-analysis-model-builder.md )
+- [이진 분류를 사용하여 웹 애플리케이션에서 감정 분석](../tutorials/sentiment-analysis-model-builder.md)
 
 코드를 사용하여 모델을 학습하는 경우 [ML.NET API를 사용하여 데이터를 로드하는 방법을 알아보세요](load-data-ml-net.md).

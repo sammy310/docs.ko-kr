@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경의 형식
 description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
 ms.date: 06/10/2019
-ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628594"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415747"
 ---
 # <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
@@ -19,15 +19,14 @@ ms.locfileid: "77628594"
 
 .NET 구현 전체의 호환성과 더불어, 개발자는 .NET Core 버전 전체에서 높은 수준의 호환성을 기대합니다. 특히, 이전 버전의 .NET Core용으로 작성된 코드가 최신 .NET Core 버전에서 원활하게 실행되어야 합니다. 사실 대부분의 개발자는 새로 릴리스된 .NET Core 버전의 새 API가 해당 API를 도입한 시험판 버전과도 호환되어야 한다고 기대합니다.
 
-이 문서에서는 호환성 변경(또는 호환성이 손상되는 변경) 범주와 .NET 팀이 이러한 각 범주의 변경 내용을 평가하는 방법을 간략하게 설명합니다. .NET 팀이 호환성이 손상되는 가능한 변경에 접근하는 방법을 이해하는 것은 [dotnet/runtime](https://github.com/dotnet/runtime) GitHub 리포지토리에서 기존 API의 동작을 수정하는 끌어오기 요청을 여는 개발자에게 특히 유용합니다.
-
-> [!NOTE]
-> 이진 호환성, 이전 버전과 호환성 등의 호환성 범주에 대한 정의는 [호환성이 손상되는 변경 범주](categories.md)를 참조하세요.
+이 문서에서는 호환성에 영향을 주는 변경 내용과 .NET 팀이 각 변경 유형을 평가하는 방식에 대해 간략하게 설명합니다. .NET 팀이 호환성이 손상되는 가능한 변경에 접근하는 방법을 이해하는 것은 [기존 .NET API](https://github.com/dotnet/runtime)의 동작을 수정하는 끌어오기 요청을 여는 개발자에게 특히 유용합니다.
 
 다음 섹션에서는 .NET Core API의 변경 범주 및 애플리케이션 호환성에 미치는 영향을 설명합니다. 변경 내용은 허용 ✔️ 또는 허용되지 않음 ❌으로 적용되고, 이전 동작이 얼마나 예측 가능하고 명백하며 일관성이 있었는지 ❓에 대한 판단과 평가가 필요합니다.
 
 > [!NOTE]
-> .NET Core 라이브러리의 변경 내용을 평가하는 방법에 대한 가이드 역할을 할 뿐 아니라, 라이브러리 개발자는 이러한 기준을 사용하여 여러 .NET 구현과 버전을 대상으로 하는 고유한 라이브러리의 변경 내용을 평가할 수도 있습니다.
+>
+> - .NET 라이브러리의 변경 내용을 평가하는 방법에 대한 가이드 역할을 할 뿐 아니라, 라이브러리 개발자는 이러한 기준을 사용하여 여러 .NET 구현과 버전을 대상으로 하는 고유한 라이브러리의 변경 내용을 평가할 수도 있습니다.
+> - 호환성 범주에 대한 정보(예: 이후 버전과 이전 버전의 호환성)는 [호환성](categories.md)을 참조하세요.
 
 ## <a name="modifications-to-the-public-contract"></a>공용 계약 수정
 
@@ -105,7 +104,7 @@ ms.locfileid: "77628594"
 
 - ✔️ **허용: 이전에 클래스에 생성자가 없었던 경우 매개 변수가 없는 생성자와 함께 클래스에 생성자 추가**
 
-   단, 매개 변수가 없는 생성자를 추가하지 ‘않고’ 이전에 생성자가 없었던 클래스에 생성자를 추가할 수는 없습니다. 
+   단, 매개 변수가 없는 생성자를 추가하지 ‘않고’ 이전에 생성자가 없었던 클래스에 생성자를 추가할 수는 없습니다.
 
 - ✔️ **허용: 구성원을 [추상](../../csharp/language-reference/keywords/abstract.md)에서 [가상](../../csharp/language-reference/keywords/virtual.md)으로 변경**
 
@@ -162,7 +161,7 @@ ms.locfileid: "77628594"
 
 - ❌ **허용 안 함: 가상 구성원을 추상으로 설정**
 
-  [가상 멤버](../../csharp/language-reference/keywords/virtual.md)는 파생 클래스에서 재정의할 수 있는 메서드 구현을 제공합니다.  [추상 멤버](../../csharp/language-reference/keywords/abstract.md)는 구현을 제공하지 않으므로 재정의해야 합니다. 
+  [가상 멤버](../../csharp/language-reference/keywords/virtual.md)는 파생 클래스에서 재정의할 수 있는 메서드 구현을 제공합니다. [추상 멤버](../../csharp/language-reference/keywords/abstract.md)는 구현을 제공하지 않으므로 재정의해야 합니다.
 
 - ❌ **허용 안 함: 액세스할 수 있는(공용 또는 보호된) 생성자가 있고 [봉인된](../../csharp/language-reference/keywords/sealed.md) 형식이 아닌 공용 형식에 추상 구성원 추가**
 

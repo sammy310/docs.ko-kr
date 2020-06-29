@@ -2,12 +2,12 @@
 title: 문자 집합 및 마샬링 - .NET
 description: CharSet의 여러 값을 통해 .NET에서 데이터를 네이티브 코드로 마샬링하는 방식을 변경하는 방법을 알아봅니다.
 ms.date: 01/18/2019
-ms.openlocfilehash: 4be4bd5a968eb5c0d6959a0f378ee1223ed906ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 39566593aa38bacfa41b44a8af8cc2dfb294d766
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706389"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416111"
 ---
 # <a name="charsets-and-marshaling"></a>문자 집합 및 마샬링
 
@@ -17,8 +17,8 @@ ms.locfileid: "75706389"
 
 | `CharSet` 값 | Windows            | Unix에서 .NET Core 2.2 및 그 이전 | Unix에서 .NET core 3.0 이상 및 Mono |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char`(시스템 기본 [Windows(ANSI) 코드 페이지](/windows/win32/intl/code-pages))      | `char`(UTF-8)                    | `char`(UTF-8)                           |
-| 유니코드(Unicode)         | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char16_t`(UTF-16)                      |
-| 자동            | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char`(UTF-8)                           |
+| `Ansi`          | `char`(시스템 기본 [Windows(ANSI) 코드 페이지](/windows/win32/intl/code-pages))      | `char`(UTF-8)                    | `char`(UTF-8)                           |
+| `Unicode`       | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char16_t`(UTF-16)                      |
+| `Auto`          | `wchar_t`(UTF-16) | `char16_t`(UTF-16)               | `char`(UTF-8)                           |
 
 문자 집합을 선택할 때 네이티브 표현에 필요한 표현을 알고 있어야 합니다.

@@ -1,18 +1,18 @@
 ---
 title: 스타일 및 템플릿
 description: .NET Core용 WPF(Windows Presentation Foundation)의 XAML 리소스에 대해 알아봅니다. 스타일 및 테마와 관련된 XAML 리소스의 형식을 이해합니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 09/09/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f845e739ec3cae502d1e4fd6631f987c5364a42e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: faa54e0a3c827717114ca6ca4f033c1c4c3acfa8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "81433099"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325775"
 ---
 # <a name="styles-and-templates-in-wpf"></a>WPF의 스타일 및 템플릿
 

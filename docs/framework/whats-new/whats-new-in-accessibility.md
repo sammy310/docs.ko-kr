@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249723"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244155"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -78,7 +78,7 @@ ms.locfileid: "80249723"
 
 - [Windows WF(Workflow Foundation) 워크플로 디자이너](#wf48)
 
-<a name="winforms48" />
+<a name="winforms48"></a>
 
 ### <a name="windows-forms"></a>Windows Forms
 
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 ![사용자가 키보드를 사용하여 단추로 이동하는 경우 도구 설명의 스크린샷](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
-<a name="wpf48" />
+<a name="wpf48"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
 
@@ -305,7 +305,7 @@ Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 �
 </configuration>
 ```
 
-<a name="wf48" />
+<a name="wf48"></a>
 
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows WF(Workflow Foundation) 워크플로 디자이너
 

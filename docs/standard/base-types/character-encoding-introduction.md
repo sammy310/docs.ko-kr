@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288045"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599869"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
@@ -250,7 +250,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 * string "á"는 "Á"와 같아 보이지만 두 개의 스칼라 값으로 표현되고 두 개의 `char` 인스턴스를 포함합니다.
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * 마지막으로 string "`👩🏽‍🚒`"은 4개의 스칼라 값으로 표현되고 7개의 `char` 인스턴스를 포함합니다.
