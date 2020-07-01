@@ -6,12 +6,12 @@ metadata:
   description: .NET Core는 플랫폼 간 앱을 빌드하기 위한 오픈 소스 범용 개발 플랫폼입니다.
   ms.topic: landing-page
   ms.date: 03/25/2020
-  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
-  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.openlocfilehash: 0d8e8515512068ba391a906182142eb5ee2f38c4
+  ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "80351688"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85620757"
 landingContent:
 - title: .NET Core에 대한 자세한 정보
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
     links:
     - text: .NET Core 시작
       url: get-started.md
+    - text: ASP.NET Core 시작
+      url: /aspnet/core/
   - linkListType: concept
     links:
     - text: .NET Core 지원 정책
