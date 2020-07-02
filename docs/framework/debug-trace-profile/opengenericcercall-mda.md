@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall MDA
+description: 스레드가 중단 되거나 응용 프로그램 도메인이 언로드될 때 CER 코드가 실행 되지 않는 경우에 활성화 될 수 있는 openGenericCERCall 관리 디버깅 도우미를 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803939"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +30,7 @@ ms.locfileid: "79181777"
 
 결과적으로 생성되는 코드는 공유되며 각 개체 참조 형식 변수는 임의 개체 참조 형식일 수 있으므로 JIT 컴파일 시 개체 참조 형식을 포함하는 인스턴스는 대표일 뿐입니다. 따라서 런타임 리소스를 미리 준비하지 못할 수 있습니다.
 
-특히 제네릭 형식 변수를 사용하는 메서드는 백그라운드에서 리소스 할당을 지연시킬 수 있습니다. 이러한 항목은 제네릭 사전 항목이라고 합니다. 예를 들어 제네릭 형식 변수인 명령문의 `List<T> list = new List<T>();` `T` 경우 런타임을 조회하여 런타임(예: `List<Object>, List<String>`런타임)에서 정확한 인스턴스화를 만들 수 있습니다. 메모리 부족과 같이 개발자가 제어할 수 없는 다양한 이유 때문일 수 있습니다.
+특히 제네릭 형식 변수를 사용하는 메서드는 백그라운드에서 리소스 할당을 지연시킬 수 있습니다. 이러한 항목은 제네릭 사전 항목이라고 합니다. 예를 들어, `List<T> list = new List<T>();` `T` 가 제네릭 형식 변수인 문의 경우 런타임에서는를 조회 하 여 런타임에 정확한 인스턴스화 (예: 등)를 만들어야 합니다 `List<Object>, List<String>` . 메모리 부족과 같이 개발자가 제어할 수 없는 다양한 이유 때문일 수 있습니다.
 
 이 MDA는 정확한 인스턴스가 있을 때가 아니라 JIT 컴파일 시에만 활성화되어야 합니다.
 
@@ -45,7 +46,7 @@ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형�
 
 ## <a name="output"></a>출력
 
-다음은 이 MDA의 출력 샘플입니다.
+다음은이 MDA의 출력 샘플입니다.
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
@@ -54,7 +55,7 @@ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형�
  declaringType name="OpenGenericCERCall"
  ```
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 ```xml
 <mdaConfig>

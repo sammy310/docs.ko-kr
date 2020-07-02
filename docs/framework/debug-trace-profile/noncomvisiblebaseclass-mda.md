@@ -1,5 +1,6 @@
 ---
 title: nonComVisibleBaseClass MDA
+description: COR_E_INVALIDOPERATION로 실패 하는 네이티브 코드의 QueryInterface 호출에서 호출 되는 MDA (nonComVisibleBaseClass 관리 디버깅 도우미)를 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - visible classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f32b2c57f50fcd900b1fd78f4f8df1ec656a6db
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803924"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 `nonComVisibleBaseClass` MDA(관리 디버깅 도우미)는 COM 노출이 아닌 기본 클래스에서 파생된 COM 노출 관리되는 클래스의 COM CCW(호출 가능 래퍼)에서 네이티브 코드 또는 비관리 코드에 의해 `QueryInterface` 호출이 수행될 때 활성화됩니다.  `QueryInterface` 호출은 호출에서 클래스 인터페이스 또는 COM 노출 관리되는 클래스의 기본 `IDispatch`를 요청하는 경우에만 MDA가 활성화되게 합니다.  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성이 적용되고 COM 노출 클래스에 의해 명시적으로 구현된 명시적 인터페이스에 대한 `QueryInterface`인 경우에는 MDA가 활성화되지 않습니다.  
@@ -42,7 +43,7 @@ is done to prevent the non COM visible base class from being
 constrained by the COM versioning rules.
 ```  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -56,4 +57,4 @@ constrained by the COM versioning rules.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop 마샬링](../interop/interop-marshaling.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

@@ -1,5 +1,6 @@
 ---
 title: notMarshalable MDA
+description: 호출이 서비스 되지 않거나 COM 인터페이스 포인터에 대 한 잘못 된 컨텍스트에서 발생 하는 경우에 활성화할 수 있는 notMarshalable 수 있는 관리 디버깅 도우미를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), interface pointer not marshalable
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b464d914a8d83504daaf4cb276914da7798262dc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803796"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
 `notMarshalable` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)이 컨텍스트 간에 인터페이스를 마샬링하는 동안 등록된 유효한 프록시/스텁이 없는 COM 인터페이스 포인터 또는 잘못된 `IMarshal` 인터페이스 구현을 발견할 때 활성화됩니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "77217281"
 ## <a name="output"></a>출력  
  문제를 설명하는 메시지입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
