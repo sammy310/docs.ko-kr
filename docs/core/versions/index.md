@@ -1,13 +1,13 @@
 ---
 title: .NET Core 런타임 및 SDK의 버전 관리 방법
 description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
-ms.date: 07/26/2018
-ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.date: 06/24/2020
+ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619756"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -103,6 +103,9 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.1       | 최대 2.0     |
 | 2.2       | 최대 2.0     |
 | 3.0       | 최대 2.1     |
+| 3.1       | 최대 2.1     |
+
+.NET Standard 버전의 대화형 표와 .NET Standard 버전이 .NET 구현과 일치하는 방식에 대한 자세한 내용은 [.NET Standard 버전](https://dotnet.microsoft.com/platform/dotnet-standard#versions)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 
