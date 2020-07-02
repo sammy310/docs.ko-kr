@@ -6,24 +6,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617563"
 ---
 # <a name="attributes"></a>특성
-
 <xref:System.Attribute?displayProperty=nameWithType>는 사용자 지정 특성을 정의 하는 데 사용 되는 기본 클래스입니다.
 
- 특성은 어셈블리, 형식, 멤버 및 매개 변수와 같은 프로그래밍 요소에 추가할 수 있는 주석입니다. 어셈블리의 메타 데이터에 저장 되 고 리플렉션 Api를 사용 하 여 런타임에 액세스할 수 있습니다. 예를 들어 .NET은 형식 또는 멤버가 <xref:System.ObsoleteAttribute> 더 이상 사용 되지 않음을 나타내기 위해 형식 또는 멤버에 적용할 수 있는 특성을 정의 합니다.
+ 특성은 어셈블리, 형식, 멤버 및 매개 변수와 같은 프로그래밍 요소에 추가할 수 있는 주석입니다. 어셈블리의 메타 데이터에 저장 되 고 리플렉션 Api를 사용 하 여 런타임에 액세스할 수 있습니다. 예를 들어 프레임 워크는 형식 또는 멤버가 <xref:System.ObsoleteAttribute> 더 이상 사용 되지 않음을 나타내기 위해 형식 또는 멤버에 적용 될 수 있는를 정의 합니다.
 
- 특성에는 특성과 관련 된 추가 데이터를 포함 하는 하나 이상의 속성이 있을 수 있습니다. 예를 들어,는 `ObsoleteAttribute` 형식 또는 멤버가 더 이상 사용 되지 않는 릴리스에 대 한 추가 정보 및 사용 되지 않는 api를 대체 하는 새 api에 대 한 설명을 포함할 수 있습니다.
+ 특성에는 특성과 관련 된 추가 데이터를 포함 하는 하나 이상의 속성이 있을 수 있습니다. 예를 들어,는 `ObsoleteAttribute` 형식 또는 멤버가 더 이상 사용 되지 않는 릴리스에 대 한 추가 정보를 포함 하 고 새로운 api에 대 한 설명을 사용 하 여 사용 되지 않는 api를 대체할 수 있습니다.
 
  특성이 적용 될 때 특성의 일부 속성을 지정 해야 합니다. 이러한 속성은 위치 생성자 매개 변수로 표시 되기 때문에 필수 속성 또는 필수 인수 라고 합니다. 예를 들어 <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> 의 속성은 <xref:System.Diagnostics.ConditionalAttribute> 필수 속성입니다.
 
- 특성이 적용 될 때 반드시 지정할 필요는 없는 속성은 선택적 속성 (또는 선택적 인수) 이라고 합니다. 이러한 속성은 설정 가능한 속성으로 표시 됩니다. 컴파일러는 특성이 적용 될 때 이러한 속성을 설정 하는 특수 구문을 제공 합니다. 예를 들어 <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 속성은 선택적 인수를 나타냅니다.
+ 특성이 적용 될 때 반드시 지정 해야 하는 것은 아니지만 속성을 선택적 속성 (또는 선택적 인수) 이라고 합니다. 이러한 속성은 설정 가능한 속성으로 표시 됩니다. 컴파일러는 특성이 적용 될 때 이러한 속성을 설정 하는 특수 구문을 제공 합니다. 예를 들어 <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 속성은 선택적 인수를 나타냅니다.
 
  "Attribute" 라는 접미사를 사용 하 여 사용자 지정 특성 클래스의 이름을 지정 ✔️ 합니다.
 
