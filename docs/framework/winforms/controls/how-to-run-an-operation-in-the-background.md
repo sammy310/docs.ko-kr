@@ -1,5 +1,6 @@
 ---
 title: '방법: 백그라운드에서 작업 실행'
+description: BackgroundWorker 클래스를 사용 하 여 시간이 오래 걸리는 Windows Forms 작업을 백그라운드에서 실행 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 77f75a7eb1d7cc536df7110ef55727fbdf789f23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6b2a97f5acf1e906dfe141aee62e99a4e50dca9f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621576"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>방법: 백그라운드에서 작업 실행
 완료하는 데 오랜 시간이 걸리는 작업이 있으며 사용자 인터페이스에서 지연이 발생되지 않게 하려는 경우 <xref:System.ComponentModel.BackgroundWorker> 클래스를 사용하여 다른 스레드에서 작업을 실행할 수 있습니다.  
@@ -27,7 +28,7 @@ ms.locfileid: "65591607"
   
  Visual Studio에서는 이 작업이 광범위하게 지원됩니다.  
   
- 또한 참조 [연습: 백그라운드에서 작업 실행](walkthrough-running-an-operation-in-the-background.md)합니다.  
+ 또한 [연습: 백그라운드에서 작업 실행](walkthrough-running-an-operation-in-the-background.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
@@ -38,7 +39,7 @@ ms.locfileid: "65591607"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>

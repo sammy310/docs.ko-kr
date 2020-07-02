@@ -1,5 +1,6 @@
 ---
 title: raceOnRCWCleanup MDA
+description: 다른 스레드에서 RCW를 사용 하거나 .NET의 스레드를 해제할 때 활성화 되는 raceOnRCWCleanup MDA (관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RCW
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e86ef96bebb648c7927ae5fec8b68fc4429b268b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803653"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-`raceOnRCWCleanup` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)에서 [ 메서드와 같은 명령을 사용하여 해제 호출을 수행할 때 RCW( ](../../standard/native-interop/runtime-callable-wrapper.md)런타임 호출 가능 래퍼<xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>)가 사용 중임을 발견할 경우 활성화됩니다.  
+`raceOnRCWCleanup` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)에서 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 메서드와 같은 명령을 사용하여 해제 호출을 수행할 때 RCW( [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md))가 사용 중임을 발견할 경우 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 또는 이와 비슷한 메서드를 사용하여 RCW를 해제하는 중이나 그 이후에 액세스 위반 또는 메모리 손상이 발생합니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "77216190"
 ## <a name="output"></a>출력  
  오류를 설명하는 메시지입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  

@@ -1,5 +1,6 @@
 ---
 title: pInvokeStackImbalance MDA
+description: 플랫폼 호출을 수행 하거나 수행할 때 액세스 위반 또는 메모리 손상 중에 활성화 될 수 있는 PInvokeStackImbalance MDA를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -10,21 +11,21 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 89afd3fce3f2a8bffe88d45991ceeb59fc5e5b76
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803666"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-`PInvokeStackImbalance` MDA (관리 디버깅 도우미)는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정 된 호출 규칙 및 관리 되는 시그니처의 매개 변수 선언에 따라 플랫폼 호출 후 스택 깊이가 예상 스택 깊이와 일치 하지 않음을 감지할 때 활성화 됩니다.
+`PInvokeStackImbalance`MDA (관리 디버깅 도우미)는 특성에 지정 된 호출 규칙 <xref:System.Runtime.InteropServices.DllImportAttribute> 및 관리 되는 시그니처의 매개 변수 선언에 따라 플랫폼 호출 후 스택 깊이가 예상 스택 깊이와 일치 하지 않음을 감지 하면 활성화 됩니다.
 
 `PInvokeStackImbalance` MDA는 32비트 x86 플랫폼에 대해서만 구현됩니다.
 
 > [!NOTE]
-> `PInvokeStackImbalance` MDA는 기본적으로 사용 하지 않도록 설정 되어 있습니다. Visual Studio 2017 이상 버전에서 `PInvokeStackImbalance` MDA는 **예외 설정** 대화 상자의 **관리 디버깅 도우미** 목록에 표시 됩니다 ( **디버그** > **Windows** > **예외 설정**선택 시 표시 됨). 그러나 **Throw 되는 경우 중단** 확인란을 선택 하거나 선택 취소 하면 MDA가 활성화 또는 비활성화 되지 않습니다. MDA가 활성화 될 때 Visual Studio에서 예외를 throw 하는지 여부를 제어 합니다.
+> `PInvokeStackImbalance`MDA는 기본적으로 사용 되지 않습니다. Visual Studio 2017 이상 버전에서 `PInvokeStackImbalance` MDA는 **예외 설정** 대화 상자의 **관리 디버깅 도우미** 목록에 표시 됩니다 ( **Debug**  >  **Windows**  >  **예외 설정**디버그를 선택 하면 표시 됨). 그러나 **Throw 되는 경우 중단** 확인란을 선택 하거나 선택 취소 하면 MDA가 활성화 또는 비활성화 되지 않습니다. MDA가 활성화 될 때 Visual Studio에서 예외를 throw 하는지 여부를 제어 합니다.
 
 ## <a name="symptoms"></a>증상
 
@@ -48,7 +49,7 @@ MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 
 
 **PInvoke 함수 ' SampleMethod '에 대 한 호출이 스택에서 불균형 했습니다. 이는 관리 되는 PInvoke 서명이 관리 되지 않는 대상 시그니처와 일치 하지 않기 때문일 수 있습니다. PInvoke 시그니처의 호출 규칙 및 매개 변수가 관리 되지 않는 대상 시그니처와 일치 하는지 확인 합니다.**
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 ```xml
 <mdaConfig>

@@ -1,5 +1,6 @@
 ---
 title: 추적 수신기
+description: .NET에서 전송 된 추적 메시지를 수집 하 고 기록 하는 메커니즘인 추적 수신기를 탐색 합니다. 수신기는 메시지를 수집, 저장 및 라우팅합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803525"
 ---
 # <a name="trace-listeners"></a>추적 수신기
-**Trace**, **Debug** 및 <xref:System.Diagnostics.TraceSource>를 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. *수신기*가 추적 메시지를 수신합니다. 수신기의 목적은 추적 메시지를 수집하고 저장하며 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상으로 전송합니다.  
+**Trace**, **Debug** 및 <xref:System.Diagnostics.TraceSource>를 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. *수신기*에서 추적 메시지를 수신 합니다. 수신기의 목적은 추적 메시지를 수집, 저장 및 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상에 보냅니다.  
   
  각각 출력을 다양한 수신기 개체에 전송할 수 있는 **Debug**, **Trace** 및 <xref:System.Diagnostics.TraceSource> 클래스에서 수신기를 사용할 수 있습니다. 일반적으로 사용되는 미리 정의된 수신기는 다음과 같습니다.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "77216133"
   
 - <xref:System.Diagnostics.ConsoleTraceListener>는 추적 또는 디버깅 출력을 표준 출력이나 표준 오류 스트림에 전달합니다.  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener>는 추적 또는 디버깅 출력을 스트림 작성기와 같은 텍스트 작성기 또는 파일 스트림과 같은 스트림으로 보냅니다. 추적 출력은 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 속성에 지정 된 구분 기호를 사용 하는 구분 된 텍스트 형식으로 되어 있습니다.  
+- <xref:System.Diagnostics.DelimitedListTraceListener>는 추적 또는 디버깅 출력을 스트림 작성기와 같은 텍스트 작성기 또는 파일 스트림과 같은 스트림으로 보냅니다. 추적 출력은 속성으로 지정 된 구분 기호를 사용 하는 구분 된 텍스트 형식으로 되어 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 있습니다.  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener>는 추적 및 디버깅 출력을 XML로 인코딩된 데이터로 <xref:System.IO.TextWriter> 또는 <xref:System.IO.Stream>(예: <xref:System.IO.FileStream>)에 전달합니다.  
   

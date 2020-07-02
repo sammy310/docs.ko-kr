@@ -1,16 +1,17 @@
 ---
 title: 사용할 컨트롤
+description: Windows Forms에서 사용할 수 있는 컨트롤 및 구성 요소에 대해 알아봅니다. 또한 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f70c2df9fc9decb811124f0106ff56682e8efc5b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622837"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
@@ -22,7 +23,7 @@ ms.locfileid: "76737451"
  [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)  
  .NET Framework에 따라 Windows Forms 컨트롤을 나열 하 고 설명 합니다.  
   
- [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)  
+ [소유자가 그린 기본 제공 컨트롤 지원](controls-with-built-in-owner-drawing-support.md)  
  속성을 통해 사용할 수 없는 컨트롤의 모양의 측면을 변경하는 방법을 설명합니다.  
   
  [BackgroundWorker 구성 요소](backgroundworker-component.md)  
@@ -32,7 +33,7 @@ ms.locfileid: "76737451"
  데이터에 바인딩된 컨트롤에 대한 탐색 및 조작 UI(사용자 인터페이스)를 제공합니다.  
   
  [BindingSource 구성 요소](bindingsource-component.md)  
- 컨트롤에 바인딩하기 위해 데이터 소스를 캡슐화합니다.  
+ 컨트롤에 바인딩할 데이터 소스를 캡슐화합니다.  
   
  [Button 컨트롤](button-control-windows-forms.md)  
  사용자가 동작을 수행하기 위해 클릭할 수 있는 표준 단추를 표시합니다.  
@@ -50,10 +51,10 @@ ms.locfileid: "76737451"
  드롭다운 콤보 상자에서 데이터를 표시합니다.  
   
  [ContextMenu 구성 요소](contextmenu-component-windows-forms.md)  
- 사용자는 선택된 개체와 관련된 자주 사용되는 명령 메뉴를 쉽게 액세스할 수 있도록 제공합니다. <xref:System.Windows.Forms.ContextMenuStrip>를 대체 하 고 이전 버전의 <xref:System.Windows.Forms.ContextMenu> 제어에 기능을 추가 하는 경우에도 이전 버전과의 호환성 및 향후 사용을 위해 <xref:System.Windows.Forms.ContextMenu> 유지 됩니다.  
+ 사용자는 선택된 개체와 관련된 자주 사용되는 명령 메뉴를 쉽게 액세스할 수 있도록 제공합니다. <xref:System.Windows.Forms.ContextMenuStrip>는 이전 버전의 컨트롤을 대체 하 고 기능을 추가 하지만 <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu> 원하는 경우 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  [ContextMenuStrip 컨트롤](contextmenustrip-control.md)  
- 바로 가기 메뉴를 나타냅니다. <xref:System.Windows.Forms.ContextMenuStrip>를 대체 하 고 이전 버전의 <xref:System.Windows.Forms.ContextMenu> 제어에 기능을 추가 하는 경우에도 이전 버전과의 호환성 및 향후 사용을 위해 <xref:System.Windows.Forms.ContextMenu> 유지 됩니다.  
+ 바로 가기 메뉴를 나타냅니다. <xref:System.Windows.Forms.ContextMenuStrip>는 이전 버전의 컨트롤을 대체 하 고 기능을 추가 하지만 <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu> 원하는 경우 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  [DataGrid 컨트롤](datagrid-control-windows-forms.md)  
  데이터 세트에서 표 형식 데이터를 표시하고 데이터 원본에 대한 업데이트를 허용합니다.  
@@ -151,7 +152,7 @@ ms.locfileid: "76737451"
  인쇄할 때 나타나는 대로 문서를 표시합니다.  
   
  [ProgressBar 컨트롤](progressbar-control-windows-forms.md)  
- 완료될 작업의 진행 상태를 그래픽으로 나타냅니다.  
+ 완료될 동작의 진행 상태를 그래픽으로 나타냅니다.  
   
  [RadioButton 컨트롤](radiobutton-control-windows-forms.md)  
  사용자에게 둘 이상의 상호 배타적인 옵션 집합을 표시합니다.  
@@ -195,13 +196,13 @@ ms.locfileid: "76737451"
  Windows Forms 애플리케이션에 사용자 지정 툴바와 메뉴를 만듭니다. <xref:System.Windows.Forms.ToolStrip>은 이전 버전의 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 확장한 컨트롤이지만 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar>를 유지하도록 선택할 수 있습니다.  
   
  [ToolStripContainer 컨트롤](toolstripcontainer-control.md)  
- <xref:System.Windows.Forms.ToolStrip> 컨트롤을 도킹, 래프팅 (rafting) 및 정렬 하기 위한 폼의 양쪽에 있는 패널 및 기존 컨트롤에 대 한 중앙 <xref:System.Windows.Forms.ToolStripContentPanel>를 제공 합니다.  
+ 컨트롤을 도킹, 래프팅 (rafting) 및 정렬 하기 위한 폼의 양쪽 패널을 제공 <xref:System.Windows.Forms.ToolStrip> 하 고 <xref:System.Windows.Forms.ToolStripContentPanel> 기존 컨트롤에 대 한 중심을 제공 합니다.  
   
  [ToolStripPanel 컨트롤](toolstrippanel-control.md)  
- 도킹, 래프팅 (rafting) 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤 정렬에 사용할 패널을 하나 제공 합니다.  
+ 도킹, 래프팅 (rafting) 및 정렬 컨트롤에 대 한 패널을 제공 <xref:System.Windows.Forms.ToolStrip> 합니다.  
   
  [ToolStripProgressBar 컨트롤 개요](toolstripprogressbar-control-overview.md)  
- 완료될 작업의 진행 상태를 그래픽으로 나타냅니다. <xref:System.Windows.Forms.ToolStripProgressBar>은 일반적으로 <xref:System.Windows.Forms.StatusStrip>에 포함 되어 있습니다.  
+ 완료될 동작의 진행 상태를 그래픽으로 나타냅니다. 는 <xref:System.Windows.Forms.ToolStripProgressBar> 일반적으로에 포함 되어 <xref:System.Windows.Forms.StatusStrip> 있습니다.  
   
  [ToolStripStatusLabel 컨트롤](toolstripstatuslabel-control.md)  
  <xref:System.Windows.Forms.StatusStrip> 컨트롤에 있는 패널을 나타냅니다.  
@@ -218,10 +219,10 @@ ms.locfileid: "76737451"
  [WebBrowser 컨트롤](webbrowser-control-windows-forms.md)  
  웹 페이지를 호스트하고 인터넷 웹 검색 기능을 애플리케이션에 제공합니다.  
   
- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
+ [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
  선택할 옵션 목록을 사용자에게 제공하는 데 사용되는 컨트롤에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms 컨트롤](index.md)  
  Windows Forms 컨트롤 사용에 대해 설명하고 작업의 중요 개념을 설명합니다.  
   

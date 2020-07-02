@@ -1,5 +1,6 @@
 ---
 title: 추적 스위치
+description: 추적 출력을 활성화, 비활성화 및 필터링 할 수 있는 추적 스위치를 탐색 합니다. .NET에서는 BooleanSwitch, TraceSwitch 및 SourceSwitch 클래스를 제공 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de46afa2a96dd7011cec40f4f76e7bfb8ee454
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803538"
 ---
 # <a name="trace-switches"></a>추적 스위치
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다. 코드에 존재하며 .config 파일을 통해 외부에서 구성할 수 있는 개체입니다. .NET Framework에서 제공되는 세 가지 유형의 추적 스위치( <xref:System.Diagnostics.BooleanSwitch> 클래스, <xref:System.Diagnostics.TraceSwitch> 클래스 및 <xref:System.Diagnostics.SourceSwitch> 클래스)가 있습니다. <xref:System.Diagnostics.BooleanSwitch> 클래스는 다양한 trace 문을 사용하거나 사용하지 않도록 설정하는 토글 스위치 역할을 합니다. <xref:System.Diagnostics.TraceSwitch> 및 <xref:System.Diagnostics.SourceSwitch> 클래스를 통해 특정 추적 수준에 대한 추적 스위치를 사용하도록 설정하여 해당 수준 및 그 아래의 모든 수준에 대해 지정된 <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.TraceSource> 메시지를 표시할 수 있습니다. 스위치를 사용하지 않도록 설정하면 추적 메시지가 나타나지 않습니다. 이러한 모든 클래스는 사용자 개발 스위치와 마찬가지로 추상(**MustInherit**) 클래스 **Switch**에서 파생됩니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "79181727"
   
 |열거형 값|정수 값|표시(또는 지정된 출력 대상에 기록)되는 메시지 유형|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|꺼짐|0|None|  
+|끄기|0|없음|  
 |Error|1|오류 메시지만|  
 |Warning|2|경고 메시지와 오류 메시지|  
 |정보|3|정보 메시지, 경고 메시지 및 오류 메시지|  
@@ -55,7 +56,7 @@ ms.locfileid: "79181727"
   
  **TraceSwitch** 속성은 스위치에 대한 최대 추적 수준을 나타냅니다. 즉, 지정된 수준 및 모든 하위 수준에 대한 추적 정보가 기록됩니다. 예를 들어 **TraceInfo** 가 **true**이면 **TraceError** 및 **TraceWarning** 도 **true** 이지만 **TraceVerbose** 는 **false**가 될 수도 있습니다.  
   
- 이러한 속성은 읽기 전용입니다. **TraceLevel** 속성이 설정될 때 **TraceSwitch** 개체가 자동으로 설정합니다. 다음은 그 예입니다.  
+ 이러한 속성은 읽기 전용입니다. **TraceLevel** 속성이 설정될 때 **TraceSwitch** 개체가 자동으로 설정합니다. 예를 들면 다음과 같습니다.  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  

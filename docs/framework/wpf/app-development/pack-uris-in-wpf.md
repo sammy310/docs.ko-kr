@@ -1,5 +1,6 @@
 ---
 title: Pack Uri
+description: Uri (uniform resource identifier)를 사용 하 여 Windows Presentation Foundation (WPF)에서 파일을 식별 하 고 로드 하는 여러 가지 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1d19dec0d846659f8de6ed518a7f98d224354a82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621693"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 
 WPF (Windows Presentation Foundation)에서 Uri (uniform resource identifier)는 다음을 비롯 한 여러 가지 방법으로 파일을 식별 하 고 로드 하는 데 사용 됩니다.
 
-- 응용 프로그램을 처음 시작할 때 표시할 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 지정
+- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]응용 프로그램을 처음 시작할 때 표시할를 지정 하는입니다.
 
 - 이미지 로드
 
@@ -52,7 +53,7 @@ Pack URI 체계는 콘텐츠를 구성 하 고 식별 하기 위한 모델을 �
 
 URI로 지정 된 체계는 접두사에 의해 정의 됩니다. http, ftp 및 파일은 잘 알려진 예제입니다. Pack URI 체계는 "pack"을 체계로 사용 하 고 두 구성 요소인 authority와 path를 포함 합니다. 다음은 pack URI에 대 한 형식입니다.
 
-pack://*authority*/*경로*
+pack://*authority* / *경로*
 
 *기관은* 파트에 포함 된 패키지 유형을 지정 하는 반면 *경로* 는 패키지 내 파트의 위치를 지정 합니다.
 
@@ -85,7 +86,7 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 ## <a name="resource-file-pack-uris"></a>리소스 파일 Pack URI
 
-리소스 파일은 MSBuild `Resource` 항목으로 구성 되 고 어셈블리로 컴파일됩니다. WPF는 로컬 어셈블리로 컴파일되거나 로컬 어셈블리에서 참조 되는 어셈블리로 컴파일되는 리소스 파일을 식별 하는 데 사용할 수 있는 pack Uri 생성을 지원 합니다.
+리소스 파일은 MSBuild 항목으로 구성 되 `Resource` 고 어셈블리로 컴파일됩니다. WPF는 로컬 어셈블리로 컴파일되거나 로컬 어셈블리에서 참조 되는 어셈블리로 컴파일되는 리소스 파일을 식별 하는 데 사용할 수 있는 pack Uri 생성을 지원 합니다.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -97,11 +98,11 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 - **경로**: 로컬 어셈블리 프로젝트 폴더 루트에 상대적인 경로를 포함한 리소스 파일의 이름
 
-다음 예제에서는 로컬 어셈블리의 프로젝트 폴더 루트에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 리소스 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로컬 어셈블리의 프로젝트 폴더 루트에 있는 리소스 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/ResourceFile.xaml`
 
-다음 예제에서는 로컬 어셈블리의 프로젝트 폴더 하위 폴더에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 리소스 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로컬 어셈블리의 프로젝트 폴더 하위 폴더에 있는 리소스 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
@@ -115,7 +116,7 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 - **경로**: 참조된 어셈블리로 컴파일되는 리소스 파일의 이름. 경로는 다음 형식을 따라야 합니다.
 
-  *AssemblyShortName*{ *; Version*] { *; PublicKey*]; 구성 요소/*경로*
+  *AssemblyShortName*{*; Version*] {*; PublicKey*]; 구성 요소/*경로*
 
   - **AssemblyShortName**: 참조된 어셈블리에 대한 약식 이름
 
@@ -127,15 +128,15 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
   - **/Path**: 참조된 어셈블리 프로젝트 폴더의 루트에 상대적인 경로를 포함한 리소스 파일의 이름
 
-다음 예제에서는 참조 된 어셈블리의 프로젝트 폴더 루트에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 리소스 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 참조 된 어셈블리의 프로젝트 폴더 루트에 있는 리소스 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-다음 예제에서는 참조 된 어셈블리의 프로젝트 폴더에 있는 하위 폴더에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 리소스 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 참조 된 어셈블리의 프로젝트 폴더에 있는 하위 폴더에 있는 리소스 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-다음 예제에서는 참조 된 버전별 어셈블리의 프로젝트 폴더의 루트 폴더에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 리소스 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 참조 된 버전별 어셈블리의 프로젝트 폴더에 있는 루트 폴더에 있는 리소스 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
@@ -153,11 +154,11 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 - **경로**: 애플리케이션의 주 실행 가능 어셈블리의 파일 시스템 위치에 상대적인 경로를 포함한 콘텐츠 파일의 이름
 
-다음 예제에서는 실행 가능 어셈블리와 동일한 폴더에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 실행 가능한 어셈블리와 동일한 폴더에 있는 콘텐츠 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/ContentFile.xaml`
 
-다음 예제에서는 응용 프로그램의 실행 가능 어셈블리에 상대적인 하위 폴더에 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램의 실행 가능 어셈블리에 상대적인 하위 폴더에 있는 콘텐츠 파일의 PACK URI를 보여 줍니다.
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
@@ -174,11 +175,11 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 - **경로**: 실행 가능 어셈블리가 시작된 위치에 상대적인 경로를 포함한 원본 사이트 파일의 이름
 
-다음 예제에서는 실행 가능한 어셈블리가 시작 된 위치에 저장 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 원본 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 실행 가능한 어셈블리가 시작 된 위치에 저장 된 원본 사이트 파일에 대 한 PACK URI를 보여 줍니다.
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-다음 예제에서는 응용 프로그램의 실행 가능 어셈블리가 시작 된 위치에 상대적인 하위 폴더에 저장 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 원본 파일의 pack URI를 보여 줍니다.
+다음 예제에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램의 실행 가능 어셈블리가 시작 된 위치에 상대적인 하위 폴더에 저장 된 원본 사이트 파일에 대 한 PACK URI를 보여 줍니다.
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
@@ -186,9 +187,9 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 ## <a name="page-files"></a>페이지 파일
 
-MSBuild `Page` 항목으로 구성 된 XAML 파일은 리소스 파일과 같은 방식으로 어셈블리로 컴파일됩니다. 따라서 리소스 파일에 대 한 pack Uri를 사용 하 여 MSBuild `Page` 항목을 식별할 수 있습니다.
+MSBuild 항목으로 구성 된 XAML 파일 `Page` 은 리소스 파일과 같은 방식으로 어셈블리로 컴파일됩니다. 따라서 `Page` 리소스 파일에 대 한 Pack uri를 사용 하 여 MSBuild 항목을 식별할 수 있습니다.
 
-MSBuild`Page` 항목으로 일반적으로 구성 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일의 형식에는 다음 중 하나가 루트 요소로 포함 됩니다.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]일반적으로 MSBuild 항목으로 구성 되는 파일 형식에는 다음 중 `Page` 하나가 루트 요소로 포함 됩니다.
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -206,7 +207,7 @@ MSBuild`Page` 항목으로 일반적으로 구성 된 [!INCLUDE[TLA2#tla_xaml](.
 
 ## <a name="absolute-vs-relative-pack-uris"></a>절대 및 상대 Pack Uri 비교
 
-정규화 된 pack URI에는 체계, 인증 기관 및 경로가 포함 되며 절대 pack URI로 간주 됩니다. 개발자를 위한 단순화를 위해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 요소는 일반적으로 경로만 포함 하는 상대 pack URI를 사용 하 여 적절 한 특성을 설정할 수 있도록 합니다.
+정규화 된 pack URI에는 체계, 인증 기관 및 경로가 포함 되며 절대 pack URI로 간주 됩니다. 개발자를 위한 단순화를 위해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 요소는 일반적으로 경로만 포함 하는 상대 PACK URI를 사용 하 여 적절 한 특성을 설정할 수 있도록 합니다.
 
 예를 들어 로컬 어셈블리의 리소스 파일에 대 한 다음 절대 pack URI를 살펴보겠습니다.
 
@@ -253,21 +254,21 @@ Pack Uri의 형식을 사용 하면 여러 파일 형식의 pack Uri가 동일 �
 
 Pack URI가 참조 하는 파일의 형식을 확인 하기 위해 WPF는 다음 추론을 사용 하 여 로컬 어셈블리 및 콘텐츠 파일의 리소스 파일에 대 한 Uri를 확인 합니다.
 
-1. Pack URI와 일치 하는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성에 대 한 어셈블리 메타 데이터를 검색 합니다.
+1. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>PACK URI와 일치 하는 특성에 대 한 어셈블리 메타 데이터를 검색 합니다.
 
-2. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 있는 경우 pack URI의 경로는 콘텐츠 파일을 참조 합니다.
+2. 특성을 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 찾은 경우 PACK URI의 경로는 콘텐츠 파일을 참조 합니다.
 
-3. <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성을 찾을 수 없는 경우 로컬 어셈블리로 컴파일되는 집합 리소스 파일을 검색 합니다.
+3. 특성을 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 찾을 수 없는 경우 로컬 어셈블리로 컴파일되는 집합 리소스 파일을 검색 합니다.
 
 4. Pack URI의 경로와 일치 하는 리소스 파일이 있는 경우 pack URI의 경로는 리소스 파일을 참조 합니다.
 
-5. 리소스를 찾을 수 없는 경우 내부적으로 만든 <xref:System.Uri> 잘못 된 것입니다.
+5. 리소스를 찾을 수 없는 경우 내부적으로 만든 <xref:System.Uri> 가 잘못 된 것입니다.
 
 URI 확인은 다음을 참조 하는 uri에는 적용 되지 않습니다.
 
 - 참조 된 어셈블리의 콘텐츠 파일: 이러한 파일 형식은 WPF에서 지원 되지 않습니다.
 
-- 참조 된 어셈블리에 포함 된 파일: 참조 된 어셈블리의 이름과 `;component` 접미사를 모두 포함 하기 때문에이를 식별 하는 Uri는 고유 합니다.
+- 참조 된 어셈블리에 포함 된 파일: 참조 된 어셈블리의 이름과 접미사를 모두 포함 하기 때문에이를 식별 하는 Uri는 고유 `;component` 합니다.
 
 - 원본 사이트 파일: 해당 파일을 식별 하는 Uri는 siteoforigin:///권한이 포함 된 pack Uri에서 식별할 수 있는 유일한 파일 이므로 고유 합니다.
 
@@ -297,7 +298,7 @@ Pack URI를 확인 하는 한 가지 단순화는 코드를 리소스 및 콘텐
 
 ### <a name="using-pack-uris-in-markup"></a>태그에서 Pack URI 사용
 
-Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 다음은 그 예입니다.
+Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 예를 들면 다음과 같습니다.
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -334,19 +335,19 @@ Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI
 
 ### <a name="using-pack-uris-in-code"></a>코드에서 Pack URI 사용
 
-<xref:System.Uri> 클래스를 인스턴스화하고 pack URI를 매개 변수로 생성자에 전달 하 여 코드에서 pack URI를 지정 합니다. 다음 예제에 이 내용이 나와 있습니다.
+클래스를 인스턴스화하고 <xref:System.Uri> PACK uri를 매개 변수로 생성자에 전달 하 여 코드에서 PACK uri를 지정 합니다. 다음 예제에 이 내용이 나와 있습니다.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-기본적으로 <xref:System.Uri> 클래스는 pack Uri를 절대 Uri로 간주 합니다. 따라서 상대 pack URI를 사용 하 여 <xref:System.Uri> 클래스의 인스턴스를 만들 때 예외가 발생 합니다.
+기본적으로 클래스는 <xref:System.Uri> Pack uri를 절대 uri로 간주 합니다. 따라서 <xref:System.Uri> 상대 PACK URI를 사용 하 여 클래스의 인스턴스를 만들 때 예외가 발생 합니다.
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-다행히 <xref:System.Uri> 클래스 생성자의 <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> 오버 로드는 pack URI가 절대 인지 상대 인지를 지정할 수 있도록 <xref:System.UriKind> 형식의 매개 변수를 허용 합니다.
+다행히 <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> 클래스 생성자의 오버 로드에서 <xref:System.Uri> 형식의 매개 변수를 <xref:System.UriKind> 사용 하 여 pack URI가 절대 인지 상대 인지를 지정할 수 있습니다.
 
 ```csharp
 // Absolute URI (default)
@@ -356,7 +357,7 @@ Uri relativeUri = new Uri("/File.xaml",
                         UriKind.Relative);
 ```
 
-제공 된 pack URI가 하나 인지, 아니면 <xref:System.UriKind.Relative> <xref:System.UriKind.Absolute> 지정 해야 합니다. 런타임에 사용자가 pack URI를 입력 하는 경우와 같이 사용 되는 pack URI의 형식을 모르는 경우 <xref:System.UriKind.RelativeOrAbsolute>를 대신 사용 합니다.
+<xref:System.UriKind.Absolute> <xref:System.UriKind.Relative> 제공 된 pack URI가 하나 또는 다른 것이 확실 한 경우 또는만 지정 해야 합니다. 런타임에 사용자가 pack URI를 입력 하는 경우와 같이 사용 되는 pack URI의 형식을 모르는 경우를 <xref:System.UriKind.RelativeOrAbsolute> 대신 사용 합니다.
 
 ```csharp
 // Relative or Absolute URI provided by user via a text box
@@ -364,7 +365,7 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-표 3은 <xref:System.Uri?displayProperty=nameWithType>를 사용 하 여 코드에서 지정할 수 있는 다양 한 상대 pack Uri를 보여 줍니다.
+표 3에서는를 사용 하 여 코드에 지정할 수 있는 다양 한 상대 pack Uri를 보여 줍니다 <xref:System.Uri?displayProperty=nameWithType> .
 
 표 3: 코드의 절대 Pack URI
 
@@ -380,7 +381,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 |원본 사이트 파일|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
 |하위 폴더의 원본 사이트 파일|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-표 4에서는 <xref:System.Uri?displayProperty=nameWithType>를 사용 하 여 코드에서 지정할 수 있는 다양 한 상대 pack Uri를 보여 줍니다.
+표 4에서는를 사용 하 여 코드에서 지정할 수 있는 다양 한 상대 pack Uri를 보여 줍니다 <xref:System.Uri?displayProperty=nameWithType> .
 
 표 4: 코드의 상대 Pack URI
 
@@ -403,7 +404,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>애플리케이션을 시작할 때 표시되는 UI 지정
 
-<xref:System.Windows.Application.StartupUri%2A> WPF 응용 프로그램이 시작 될 때 표시 되는 첫 번째 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 지정 합니다. 독립 실행형 응용 프로그램의 경우 다음 예제와 같이 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 창이 될 수 있습니다.
+<xref:System.Windows.Application.StartupUri%2A>[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]WPF 응용 프로그램이 시작 될 때 표시 되는 첫 번째를 지정 합니다. 독립 실행형 응용 프로그램의 경우는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 다음 예제와 같이 창이 될 수 있습니다.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +412,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-응용 프로그램이 독립 실행형 응용 프로그램이 고 <xref:System.Windows.Application.StartupUri%2A>를 사용 하 여 페이지가 지정 된 경우 WPF는 페이지를 호스팅하는 <xref:System.Windows.Navigation.NavigationWindow>를 엽니다. Xbap의 경우 페이지가 호스트 브라우저에 표시 됩니다.
+응용 프로그램이 독립 실행형 응용 프로그램이 고를 사용 하 여 페이지를 지정 하는 경우 <xref:System.Windows.Application.StartupUri%2A> WPF는 페이지를 호스트 하는를 엽니다 <xref:System.Windows.Navigation.NavigationWindow> . Xbap의 경우 페이지가 호스트 브라우저에 표시 됩니다.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -433,7 +434,7 @@ WPF에서 다양 한 탐색 방법에 대 한 자세한 내용은 [탐색 개요
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-자세한 내용은 <xref:System.Windows.Window.Icon%2A>을 참조하세요.
+자세한 내용은 <xref:System.Windows.Window.Icon%2A>를 참조하세요.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -453,7 +454,7 @@ WPF를 사용 하면 다음 예제와 같이 응용 프로그램에서 다양 �
 
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>원본 사이트에서 리소스 사전 로드
 
-리소스 사전 (<xref:System.Windows.ResourceDictionary>)을 사용 하 여 응용 프로그램 테마를 지원할 수 있습니다. 테마를 만들고 관리하는 한 가지 방법은 애플리케이션의 원본 사이트에 위치한 리소스 사전으로 여러 개의 테마를 만드는 것입니다. 이렇게 하면 애플리케이션을 다시 컴파일하여 배포할 필요 없이 테마를 추가하고 업데이트할 수 있습니다. 다음 예제와 같이 pack Uri를 사용 하 여 이러한 리소스 사전을 식별 하 고 로드할 수 있습니다.
+리소스 사전 ( <xref:System.Windows.ResourceDictionary> )을 사용 하 여 응용 프로그램 테마를 지원할 수 있습니다. 테마를 만들고 관리하는 한 가지 방법은 애플리케이션의 원본 사이트에 위치한 리소스 사전으로 여러 개의 테마를 만드는 것입니다. 이렇게 하면 애플리케이션을 다시 컴파일하여 배포할 필요 없이 테마를 추가하고 업데이트할 수 있습니다. 다음 예제와 같이 pack Uri를 사용 하 여 이러한 리소스 사전을 식별 하 고 로드할 수 있습니다.
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 

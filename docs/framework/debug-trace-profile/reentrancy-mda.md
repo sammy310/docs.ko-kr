@@ -1,5 +1,6 @@
 ---
 title: reentrancy MDA
+description: 개체 힙이 손상 되었거나 네이티브에서 관리 코드로 전환할 때 다른 심각한 오류가 발생 하는 경우에 활성화 될 수 있는 재진입 MDA를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged code, debugging
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f666e505b8382b0bec8dcfdb34c775850e46c429
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803107"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.  
@@ -54,7 +55,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  

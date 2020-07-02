@@ -1,5 +1,6 @@
 ---
 title: releaseHandleFailed MDA
+description: .NET의 리소스 또는 메모리 누수 때문에 활성화 될 수 있는 releaseHandleFailed MDA (관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803640"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 `false`를 반환하면 `releaseHandleFailed` MDA(관리 디버깅 도우미)가 활성화되고 개발자에게 알립니다.  
@@ -51,7 +52,7 @@ ms.locfileid: "79181758"
  이 MDA는 CLR에 아무런 영향을 미치지 않습니다.  
   
 ## <a name="output"></a>출력  
- <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 다음은 그 예입니다.  
+ <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 예를 들면 다음과 같습니다.  
   
 ```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
@@ -61,7 +62,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -92,4 +93,4 @@ bool ReleaseHandle()
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop 마샬링](../interop/interop-marshaling.md)
+- [interop 마샬링](../interop/interop-marshaling.md)
