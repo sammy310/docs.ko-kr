@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: 8b21a85ae4e745a3d71261414e79dafbf3384131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d5423d18091545ad9d50325900f5a9a4fff6dd9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622117"
 ---
 ### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>ListBox에 중복된 값 형식이 포함되어 있을 때 중단되는 문제가 해결되었습니다.
 
-|   |   |
-|---|---|
-|세부 정보|항목 컬렉션에 중복된 값 형식의 개체가 포함되어 있을 때 스크롤하는 동안 가상화 <xref:System.Windows.Controls.ItemsControl>이 중지될 수 있는 문제가 해결되었습니다.|
-|범위|주요함|
-|Version|4.8|
+#### <a name="details"></a>설명
+
+항목 컬렉션에 중복된 값 형식의 개체가 포함되어 있을 때 스크롤하는 동안 가상화 <xref:System.Windows.Controls.ItemsControl>이 중지될 수 있는 문제가 해결되었습니다.
+
+| 이름    | 값       |
+|:--------|:------------|
+| Scope   |주요함|
+|버전|4.8|
 |형식|런타임|

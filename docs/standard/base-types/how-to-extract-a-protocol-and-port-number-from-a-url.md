@@ -1,6 +1,6 @@
 ---
 title: '방법: URL에서 프로토콜 및 포트 번호 추출'
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,16 +13,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: 48f2bf5c0d9af0a3fc286561ba978f86d1f11ac8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c1d45dbcb2916af86d645d7813594f2b278bb7c2
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803874"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>방법: URL에서 프로토콜 및 포트 번호 추출
 다음 예제에서는 URL에서 프로토콜 및 포트 번호를 추출합니다.  
-  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>예제  
  이 예제에서는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드를 사용하여 프로토콜, 콜론, 포트 번호 순서로 구성된 값을 반환합니다.  
   

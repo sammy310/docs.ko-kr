@@ -1,7 +1,7 @@
 ---
 title: .NET의 정규식에 대한 모범 사례
 description: .NET에서 효율적이고 효과적인 정규식을 만드는 방법을 알아봅니다.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,18 +10,20 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802931"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
 .NET의 정규식 엔진은 리터럴 텍스트에 대한 비교 및 검색 대신 패턴 일치를 기반으로 텍스트를 처리하는 완벽한 기능을 갖춘 강력한 도구입니다. 대부분의 경우 신속하고 효율적인 방식으로 패턴 일치가 수행됩니다. 하지만 일부 경우에는 정규식 엔진의 실행 속도가 매우 느리게 보일 수 있습니다. 심한 경우에는 입력 크기가 비교적 적은데도 처리하는 데 시간이 몇 시간 또는 며칠씩 걸려서 응답이 멎은 것처럼 보일 수도 있습니다.
 
 이 항목에서는 개발자가 자신의 정규식 성능을 최적화하기 위해 채택할 수 있는 몇 가지 모범 사례에 대해 설명합니다.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="consider-the-input-source"></a>입력 소스에 대한 고려
 

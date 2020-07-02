@@ -1,19 +1,21 @@
 ---
 title: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 description: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하는 방법에 대해 알아봅니다.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617719"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 
 이 방법은 Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하는 방법에 대한 일반적인 지침을 제공합니다. `spark-submit`를 사용하여 애플리케이션을 시작하는 데 일반적으로 사용되는 매개 변수뿐만 아니라 설정할 환경 변수를 알아봅니다.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>구성
 구성에는 Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하기 위해 일반적인 환경 변수 및 매개 변수 설정이 표시됩니다.

@@ -1,7 +1,7 @@
 ---
-title: .NET Framework 정규식
+title: .NET 정규식
 description: .NET에서 정규식을 사용하여 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하고, 텍스트 부분 문자열로 작업하고, 추출된 문자열을 컬렉션에 추가합니다.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802899"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 
@@ -67,6 +67,8 @@ ms.locfileid: "84768835"
 ## <a name="regular-expression-examples"></a>정규식 예제
 
 <xref:System.String> 클래스에는 큰 문자열에서 리터럴 문자열을 찾을 때 사용할 수 있는 다양한 문자열 검색 및 바꾸기 메서드가 포함되어 있습니다. 정규식은 다음 예제에서 보여 주는 것처럼 큰 문자열에서 여러 부분 문자열 중 하나를 찾거나 문자열에서 패턴을 식별할 때 가장 유용합니다.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > <xref:System.Web.RegularExpressions> 네임스페이스에는 HTML, XML 및 ASP.NET 문서의 문자열을 구문 분석하기 위해 미리 정의된 정규식 패턴을 구현하는 여러 정규식 개체가 포함되어 있습니다. 예를 들어 <xref:System.Web.RegularExpressions.TagRegex> 클래스는 문자열의 시작 태그를 식별하고, <xref:System.Web.RegularExpressions.CommentRegex> 클래스는 문자열의 ASP.NET 주석을 식별합니다.

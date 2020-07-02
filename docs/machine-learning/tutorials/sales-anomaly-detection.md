@@ -1,15 +1,15 @@
 ---
 title: '자습서: 제품 판매의 변칙 검색'
 description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션을 빌드하는 방법을 알아봅니다. 이 자습서에서는 Visual Studio 2019에서 C#을 사용하여 .NET Core 콘솔 애플리케이션을 만듭니다.
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2fc9c552f5a00d59ea2fddcbcfcbd240cf2fc83c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803289"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
@@ -43,6 +43,8 @@ ms.locfileid: "84201986"
 2. 프로젝트에 이름이 *Data*인 디렉터리를 만들어 데이터 세트 파일을 저장합니다.
 
 3. **Microsoft.ML NuGet 패키지**를 설치합니다.
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. "nuget.org"를 패키지 소스로 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색하고 **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다. **Microsoft.ML.TimeSeries**에 이 단계를 반복합니다.
 

@@ -1,15 +1,15 @@
 ---
 title: Amazon EMR Spark에 .NET for Apache Spark 애플리케이션 배포
 description: Amazon EMR Spark에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 살펴봅니다.
-ms.date: 05/17/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73454942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618261"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark에 .NET for Apache Spark 애플리케이션 배포
 
@@ -23,6 +23,8 @@ ms.locfileid: "73454942"
 > * Spark .NET 앱 게시
 > * Amazon EMR Spark에 앱 배포
 > * 앱 실행
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

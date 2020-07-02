@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e66a5c2a33a4ab5cf35013c1843936ffd01f90a2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614746"
 ---
 ### <a name="serialport-background-thread-exceptions"></a>SerialPort 백그라운드 스레드 예외
 
-|   |   |
-|---|---|
-|세부 정보|<xref:System.IO.Ports.SerialPort> 스트림을 사용하여 만든 백그라운드 스레드는 OS 예외가 throw될 때 더 이상 프로세스를 종료하지 않습니다. <br/>.NET Framework 4.7 및 이전 버전을 대상으로 하는 애플리케이션에서 운영 체제 예외가 <xref:System.IO.Ports.SerialPort> 스트림을 사용하여 만든 백그라운드에서 throw되면 프로세스가 종료됩니다. <br/>.NET Framework 4.7.1 또는 이상 버전을 대상으로 하는 애플리케이션에서 백그라운드 스레드는 활성 직렬 포트와 관련된 OS 이벤트에 대해 기다리며 직렬 포트의 급격한 제거와 같은 일부 경우에 충돌할 수 있습니다.|
-|제안 해결 방법|.NET Framework 4.7.1을 대상으로 하는 앱의 경우, 필요하지 않으면 <code>app.config</code> 파일의 <code>&lt;runtime&gt;</code> 섹션에 다음을 추가하여 예외 처리를 옵트아웃할 수 있습니다.<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 앱의 경우 <code>app.config</code> 파일의 <code>&lt;runtime&gt;</code> 섹션에 다음 줄을 추가하여 예외 처리를 옵트인할 수 있습니다.<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|범위|사소함|
-|Version|4.7.1|
-|형식|대상 변경|
-|영향을 받는 API|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>세부 정보
+
+<xref:System.IO.Ports.SerialPort> 스트림을 사용하여 만든 백그라운드 스레드는 OS 예외가 throw될 때 더 이상 프로세스를 종료하지 않습니다. <br/>.NET Framework 4.7 및 이전 버전을 대상으로 하는 애플리케이션에서 운영 체제 예외가 <xref:System.IO.Ports.SerialPort> 스트림을 사용하여 만든 백그라운드에서 throw되면 프로세스가 종료됩니다. <br/>.NET Framework 4.7.1 또는 이상 버전을 대상으로 하는 애플리케이션에서 백그라운드 스레드는 활성 직렬 포트와 관련된 OS 이벤트에 대해 기다리며 직렬 포트의 급격한 제거와 같은 일부 경우에 충돌할 수 있습니다.
+
+#### <a name="suggestion"></a>제안 해결 방법
+
+.NET Framework 4.7.1을 대상으로 하는 앱의 경우, 필요하지 않으면 `app.config` 파일의 `<runtime>` 섹션에 다음을 추가하여 예외 처리를 옵트아웃할 수 있습니다.
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=true" />
+</runtime>
+```
+
+이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 앱의 경우 `app.config` 파일의 `<runtime>` 섹션에 다음 줄을 추가하여 예외 처리를 옵트인할 수 있습니다.
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.Ports.DoNotCatchSerialStreamThreadExceptions=false" />
+</runtime>
+```
+
+| 이름    | 값       |
+|:--------|:------------|
+| Scope   | 부       |
+| 버전 | 4.7.1       |
+| 형식    | 대상 변경 |
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>

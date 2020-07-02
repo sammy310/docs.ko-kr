@@ -3,15 +3,15 @@ title: '자습서: ONNX 딥 러닝 모델을 사용하여 개체 검색'
 description: 이 자습서에서는 ML.NET에서 미리 학습된 ONNX 딥 러닝 학습 모델을 사용하여 이미지에서 개체를 검색하는 방법을 보여줍니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803406"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -89,6 +89,8 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 1. “ObjectDetection”이라는 **.NET Core 콘솔 애플리케이션**을 만듭니다.
 
 1. **Microsoft.ML NuGet 패키지**를 설치합니다.
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.

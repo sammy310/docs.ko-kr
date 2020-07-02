@@ -1,15 +1,15 @@
 ---
 title: '자습서: 웹 사이트 주석 분석 -이진 분류'
 description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류하고 적절한 조치를 취하는 .NET Core 콘솔 애플리케이션을 만드는 방법을 보여 줍니다. 감정 이진 분류자는 Visual Studio에서 C#을 사용합니다.
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803250"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -42,7 +42,9 @@ ms.locfileid: "81243299"
 
 3. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.FastTree** NuGet 패키지에 대해 동일한 작업을 수행합니다.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다.
 
 ## <a name="prepare-your-data"></a>데이터 준비
 

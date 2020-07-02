@@ -1,19 +1,21 @@
 ---
 title: .NET for Apache Spark에서 UDF(사용자 정의 함수) 만들기
 description: .NET for Apache Spark 애플리케이션에서 UDF(사용자 정의 함수)를 구현하는 방법을 알아봅니다.
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 97afda8ed17d3719c534d72ad3ad026745a70922
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85142019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620926"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>.NET for Apache Spark에서 UDF(사용자 정의 함수) 만들기
 
 이 문서에서는 .NET for Apache Spark에서 UDF(사용자 정의 함수)를 사용하는 방법을 알아봅니다. [UDF](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/expressions/UserDefinedFunction.html)는 사용자 지정 함수를 사용하여 시스템의 기본 제공 기능을 확장할 수 있는 Spark 기능입니다. UDF는 테이블 내에 있는 단일 행의 값을 변환하여 UDF에 정의된 논리를 기준으로 행당 하나의 해당 출력 값을 생성합니다.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="define-udfs"></a>UDF 정의
 

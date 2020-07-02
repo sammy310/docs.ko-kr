@@ -1,5 +1,6 @@
 ---
 title: 정규식의 수량자
+description: 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정하는 정규식 수량자에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276150"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662890"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>정규식의 수량자
 수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.  다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.  

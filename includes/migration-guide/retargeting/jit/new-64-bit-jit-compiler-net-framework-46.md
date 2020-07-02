@@ -1,17 +1,51 @@
 ---
-ms.openlocfilehash: ddae1bfdd1a6f67bce111e0f97dd501c82022f36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0237c848d71150aaea1f9de4f4b16a0cbbc4ab3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615669"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>.NET Framework 4.6의 새로운 64비트 JIT 컴파일러
 
-|   |   |
-|---|---|
-|세부 정보|.NET Framework 4.6부터는 새로운 64비트 JIT 컴파일러가 Just-In-Time 컴파일에 사용됩니다. 경우에 따라 예기치 않은 예외가 throw되거나 32비트 컴파일러 또는 이전 64비트 JIT 컴파일러를 사용하여 앱을 실행하는 경우와 다른 동작이 관찰됩니다. 이 변경 내용은 32비트 JIT 컴파일러에는 영향을 주지 않습니다. 알려진 차이점은 다음과 같습니다.<ul><li>특정 상황에서 최적화가 설정된 릴리스 빌드에서 Unboxing 작업으로 인해 <xref:System.NullReferenceException>이 throw될 수 있습니다.</li><li>일부 경우에는 큰 메서드 본문의 프로덕션 코드가 실행될 때 <xref:System.StackOverflowException>이 throw될 수 있습니다.</li><li>특정 상황에서 메서드에 전달된 구조체가 릴리스 빌드에서 값 형식이 아닌 참조 형식으로 처리됩니다. 이 문제의 징후 중 하나는 컬렉션의 개별 항목이 예기치 않은 순서로 표시되는 것입니다.</li><li>특정 상황에서 최적화가 사용되도록 설정되어 있을 경우 <xref:System.UInt16> 값을 높은 비트의 집합과 비교하면 결과가 잘못됩니다.</li><li>배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL 명령에 따라 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.</li><li>드물게 특정한 상황에서 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.</li><li>특정 상황에서 <code>try</code> 블록을 시작하기 전에 <code>if</code> 문을 사용해서 조건을 테스트한 후에 <code>try</code> 블록을 종료하고 <code>catch</code> 또는 <code>finally</code> 블록에서 동일한 조건을 평가하면 새로운 64비트 JIT 컴파일러는 코드를 최적화할 때 <code>catch</code> 또는 <code>finally</code> 블록에서 <code>if</code> 조건을 제거합니다. 결과적으로 <code>catch</code> 또는 <code>finally</code> 블록에서 <code>if</code> 문 내의 코드가 무조건적으로 실행됩니다.</li></ul>|
-|제안 해결 방법|**알려진 문제 완화** <br/> 위에 나열된 문제가 발생하는 경우 다음 중 하나를 수행하여 해결할 수 있습니다.<ul><li>.NET Framework 4.6.2로 업그레이드합니다. .NET Framework 4.6.2에 포함된 새로운 64비트 컴파일러는 이러한 각각의 알려진 문제를 해결합니다.</li><li>Windows 업데이트를 실행하여 사용 중인 Windows 버전을 최신 상태로 유지합니다. .NET Framework 4.6 및 4.6.1에 대한 서비스 업데이트는 unboxing 작업의 <xref:System.NullReferenceException>을 제외하고 이러한 각 문제를 해결합니다.</li><li>이전 64비트 JIT 컴파일러를 사용하여 컴파일합니다. 방법에 대한 자세한 내용은 **기타 문제 완화** 섹션을 참조하세요.</li></ul>**기타 문제 완화** <br/> 이전 64비트 JIT 컴파일러 및 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 코드 또는 둘 다 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 앱의 디버그 버전 및 릴리스 버전 간 동작에서 다른 차이가 발생하는 경우 다음을 수행하여 이전 64비트 JIT 컴파일러로 앱을 컴파일할 수 있습니다.<ul><li>애플리케이션별로 [<](~/docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 애플리케이션의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.</li></ul><pre><code class="lang-xml">&lt;?xml version =&quot;1.0&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;useLegacyJit enabled=&quot;1&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre><ul><li>사용자별로 레지스트리의 <code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework</code> 키에 <code>useLegacyJit</code>라는 <code>REG_DWORD</code> 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.</li><li>컴퓨터별로 레지스트리의 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework</code> 키에 <code>useLegacyJit</code>라는 <code>REG_DWORD</code> 값을 추가할 수 있습니다. 값이 <code>1</code>이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 <code>0</code>이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.</li></ul>[Microsoft Connect](https://connect.microsoft.com/VisualStudio)에 버그를 보고하여 문제를 알릴 수도 있습니다.|
-|범위|가장자리|
-|Version|4.6|
-|형식|대상 변경|
+#### <a name="details"></a>세부 정보
+
+.NET Framework 4.6부터는 새로운 64비트 JIT 컴파일러가 Just-In-Time 컴파일에 사용됩니다. 경우에 따라 예기치 않은 예외가 throw되거나 32비트 컴파일러 또는 이전 64비트 JIT 컴파일러를 사용하여 앱을 실행하는 경우와 다른 동작이 관찰됩니다. 이 변경 내용은 32비트 JIT 컴파일러에는 영향을 주지 않습니다. 알려진 차이점은 다음과 같습니다.
+
+- 특정 상황에서 최적화가 설정된 릴리스 빌드에서 Unboxing 작업으로 인해 <xref:System.NullReferenceException>이 throw될 수 있습니다.
+- 일부 경우에는 큰 메서드 본문의 프로덕션 코드가 실행될 때 <xref:System.StackOverflowException>이 throw될 수 있습니다.
+- 특정 상황에서 메서드에 전달된 구조체가 릴리스 빌드에서 값 형식이 아닌 참조 형식으로 처리됩니다. 이 문제의 징후 중 하나는 컬렉션의 개별 항목이 예기치 않은 순서로 표시되는 것입니다.
+- 특정 상황에서 최적화가 사용되도록 설정되어 있을 경우 <xref:System.UInt16> 값을 높은 비트의 집합과 비교하면 결과가 잘못됩니다.
+- 배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL 명령에 따라 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.
+- 드물게 특정한 상황에서 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.
+- 특정 상황에서 `try` 블록을 시작하기 전에 `if` 문을 사용해서 조건을 테스트한 후에 `try` 블록을 종료하고 `catch` 또는 `finally` 블록에서 동일한 조건을 평가하면 새로운 64비트 JIT 컴파일러는 코드를 최적화할 때 `catch` 또는 `finally` 블록에서 `if` 조건을 제거합니다. 결과적으로 `catch` 또는 `finally` 블록에서 `if` 문 내의 코드가 무조건적으로 실행됩니다.
+
+#### <a name="suggestion"></a>제안 해결 방법
+
+**알려진 문제 완화** <br/> 위에 나열된 문제가 발생하는 경우 다음 중 하나를 수행하여 해결할 수 있습니다.
+
+- .NET Framework 4.6.2로 업그레이드합니다. .NET Framework 4.6.2에 포함된 새로운 64비트 컴파일러는 이러한 각각의 알려진 문제를 해결합니다.
+- Windows 업데이트를 실행하여 사용 중인 Windows 버전을 최신 상태로 유지합니다. .NET Framework 4.6 및 4.6.1에 대한 서비스 업데이트는 unboxing 작업의 <xref:System.NullReferenceException>을 제외하고 이러한 각 문제를 해결합니다.
+- 이전 64비트 JIT 컴파일러를 사용하여 컴파일합니다. 방법에 대한 자세한 내용은 **기타 문제 완화** 섹션을 참조하세요.
+**기타 문제 완화** <br/> 이전 64비트 JIT 컴파일러 및 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 코드 또는 둘 다 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 앱의 디버그 버전 및 릴리스 버전 간 동작에서 다른 차이가 발생하는 경우 다음을 수행하여 이전 64비트 JIT 컴파일러로 앱을 컴파일할 수 있습니다.
+
+- 애플리케이션별로 [<](~/docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 애플리케이션의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.
+
+    ```xml
+    <?xml version ="1.0"?>
+    <configuration>
+      <runtime>
+       <useLegacyJit enabled="1" />
+      </runtime>
+    </configuration>
+    ```
+
+- 사용자별로 레지스트리의 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키에 `useLegacyJit`라는 `REG_DWORD` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.
+- 컴퓨터별로 레지스트리의 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키에 `useLegacyJit`라는 `REG_DWORD` 값을 추가할 수 있습니다. 값이 `1`이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 `0`이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.
+[Microsoft Connect](https://connect.microsoft.com/VisualStudio)에 버그를 보고하여 문제를 알릴 수도 있습니다.
+
+| 이름    | 값       |
+|:--------|:------------|
+| Scope   | Microsoft Edge        |
+| 버전 | 4.6         |
+| 형식    | 대상 변경 |

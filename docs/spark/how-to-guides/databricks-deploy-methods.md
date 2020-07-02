@@ -1,19 +1,21 @@
 ---
 title: Databricks에 .NET for Apache Spark 작업 제출
 description: Set Jar 및 spark-submit을 사용하여 Databricks에 Apache Spark 작업의 .NET을 제출하는 방법에 대해 알아봅니다.
-ms.date: 05/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a158110854f80921740954403a8fd51b30cbcb12
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617771"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks에 .NET for Apache Spark 작업 제출
 
 Databricks 클러스터에서 .NET for Apache Spark 작업을 실행할 수 있지만 기본적으로 사용할 수는 없습니다. .NET for Apache Spark 작업을 Databricks에 배포하는 방법은 두 가지(`spark-submit` 및 Set Jar)입니다.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="deploy-using-spark-submit"></a>spark-submit을 사용하여 배포
 

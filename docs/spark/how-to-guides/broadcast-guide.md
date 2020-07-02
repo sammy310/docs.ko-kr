@@ -1,21 +1,23 @@
 ---
 title: Apache Spark용으로 .NET에서 브로드캐스트 변수 사용
 description: .NET에서 Apache Spark 애플리케이션용으로 브로드캐스트 변수를 사용하는 방법을 알아봅니다.
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 391e32cda14a9b3186ac96800351ddcb39a3d359
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617858"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Apache Spark용으로 .NET에서 브로드캐스트 변수 사용
 
 이 문서에서는 .NET에서 Apache Spark용으로 브로드캐스트 변수를 사용하는 방법을 알아봅니다. [Apache Spark의 브로드캐스트 변수](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)는 읽기 전용으로 사용할 변수를 실행기에서 공유하는 메커니즘입니다. 브로드캐스트 변수를 사용하면 작업으로 복사본을 전달하는 대신 각 머신에 캐시된 읽기 전용 변수를 유지할 수 있습니다. 브로드캐스트 변수를 사용하여 효율적인 방식으로 모든 노드에 대규모 입력 데이터 세트의 사본을 제공할 수 있습니다.
 
 데이터는 한 번만 전송되기 때문에, 브로드캐스트 변수는 각 작업에서 실행기에 전달되는 지역 변수와 비교할 때 성능상의 이점이 있습니다. 브로드캐스트 변수 및 이 변수를 사용하는 이유를 더 깊이 있게 이해하려면 [공식 브로드캐스트 변수 설명서](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)를 참조하세요.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>브로드캐스트 변수 만들기
 

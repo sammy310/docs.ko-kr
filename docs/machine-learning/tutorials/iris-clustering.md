@@ -2,15 +2,15 @@
 title: '자습서: 아이리스 꽃 분류 - k-means 클러스터링'
 description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 알아보기
 author: pkulikov
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fe9c3eb1313fbacf512710f6872c543dca281b17
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803978"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>자습서: ML.NET와 함께 k-means 클러스터링을 사용하여 아이리스 꽃 분류
 
@@ -48,6 +48,8 @@ ms.locfileid: "81607430"
     **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더**를 선택합니다. “Data”를 입력하고 Enter 키를 누릅니다.
 
 1. **Microsoft.ML** NuGet 패키지를 설치합니다.
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. "nuget.org"를 패키지 소스로 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 

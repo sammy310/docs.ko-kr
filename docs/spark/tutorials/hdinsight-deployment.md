@@ -1,15 +1,15 @@
 ---
 title: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 살펴봅니다.
-ms.date: 01/23/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617641"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>자습서: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
@@ -24,6 +24,8 @@ ms.locfileid: "84144762"
 > * .NET for Apache Spark 앱 게시
 > * HDInsight 스크립트 동작 만들기 및 실행
 > * HDInsight 클러스터에서 .NET for Apache Spark 앱 실행
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

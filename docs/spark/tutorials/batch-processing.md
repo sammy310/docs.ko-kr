@@ -3,14 +3,14 @@ title: .NET for Apache Spark를 사용한 일괄 처리 자습서
 description: .NET for Apache Spark를 사용하여 일괄 처리하는 방법을 알아봅니다.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/13/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618287"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 일괄 처리
 
@@ -25,6 +25,8 @@ ms.locfileid: "84594519"
 > * .NET for Apache Spark 애플리케이션 만들기 및 실행
 > * DataFrame으로 데이터를 읽고 분석 준비
 > * Spark SQL을 사용하여 데이터 처리
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
