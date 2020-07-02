@@ -1,5 +1,6 @@
 ---
 title: reentrancy MDA
+description: 개체 힙이 손상 되었거나 네이티브에서 관리 코드로 전환할 때 다른 심각한 오류가 발생 하는 경우에 활성화 될 수 있는 재진입 MDA를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged code, debugging
@@ -13,38 +14,38 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f666e505b8382b0bec8dcfdb34c775850e46c429
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803107"
 ---
-# <a name="reentrancy-mda"></a><span data-ttu-id="6aac1-102">reentrancy MDA</span><span class="sxs-lookup"><span data-stu-id="6aac1-102">reentrancy MDA</span></span>
-<span data-ttu-id="6aac1-103">이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
+# <a name="reentrancy-mda"></a><span data-ttu-id="811c4-103">reentrancy MDA</span><span class="sxs-lookup"><span data-stu-id="811c4-103">reentrancy MDA</span></span>
+<span data-ttu-id="811c4-104">이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-104">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="6aac1-104">증상</span><span class="sxs-lookup"><span data-stu-id="6aac1-104">Symptoms</span></span>  
- <span data-ttu-id="6aac1-105">네이티브 코드에서 관리 코드로 전환할 때 개체 힙이 손상되었거나 다른 심각한 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-105">The object heap is corrupted or other serious errors are occurring when transitioning from native to managed code.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="811c4-105">증상</span><span class="sxs-lookup"><span data-stu-id="811c4-105">Symptoms</span></span>  
+ <span data-ttu-id="811c4-106">네이티브 코드에서 관리 코드로 전환할 때 개체 힙이 손상되었거나 다른 심각한 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-106">The object heap is corrupted or other serious errors are occurring when transitioning from native to managed code.</span></span>  
   
- <span data-ttu-id="6aac1-106">네이티브 코드와 관리 코드 사이에서 임의 방향으로 전환되는 스레드는 순차적 전환을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-106">Threads that switch between native and managed code in either direction must perform an orderly transition.</span></span> <span data-ttu-id="6aac1-107">그러나 벡터화된 예외 처리기와 같이 운영 체제의 특정한 하위 수준 확장 지점을 사용하면, 순차적 전환을 수행하지 않고도 관리 코드에서 네이티브 코드로 전환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-107">However, certain low-level extensibility points in the operating system, such as the vectored exception handler, allow switches from managed to native code without performing an orderly transition.</span></span>  <span data-ttu-id="6aac1-108">이러한 전환은 CLR(공용 언어 런타임) 제어가 아니라 운영 체제의 제어에 따라 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-108">These switches are under operating system control, rather than under common language runtime (CLR) control.</span></span>  <span data-ttu-id="6aac1-109">이러한 확장 지점 내에서 실행되는 모든 네이티브 코드는 관리 코드로 다시 호출되지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-109">Any native code that executes inside these extensibility points must avoid calling back into managed code.</span></span>  
+ <span data-ttu-id="811c4-107">네이티브 코드와 관리 코드 사이에서 임의 방향으로 전환되는 스레드는 순차적 전환을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-107">Threads that switch between native and managed code in either direction must perform an orderly transition.</span></span> <span data-ttu-id="811c4-108">그러나 벡터화된 예외 처리기와 같이 운영 체제의 특정한 하위 수준 확장 지점을 사용하면, 순차적 전환을 수행하지 않고도 관리 코드에서 네이티브 코드로 전환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-108">However, certain low-level extensibility points in the operating system, such as the vectored exception handler, allow switches from managed to native code without performing an orderly transition.</span></span>  <span data-ttu-id="811c4-109">이러한 전환은 CLR(공용 언어 런타임) 제어가 아니라 운영 체제의 제어에 따라 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-109">These switches are under operating system control, rather than under common language runtime (CLR) control.</span></span>  <span data-ttu-id="811c4-110">이러한 확장 지점 내에서 실행되는 모든 네이티브 코드는 관리 코드로 다시 호출되지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-110">Any native code that executes inside these extensibility points must avoid calling back into managed code.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="6aac1-110">원인</span><span class="sxs-lookup"><span data-stu-id="6aac1-110">Cause</span></span>  
- <span data-ttu-id="6aac1-111">관리 코드를 실행하는 중에 벡터화된 예외 처리기와 같은 하위 수준 운영 체제 확장 지점이 활성화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-111">A low-level operating system extensibility point, such as the vectored exception handler, has activated while executing managed code.</span></span>  <span data-ttu-id="6aac1-112">확장 지점을 통해 호출된 애플리케이션 코드에서 관리 코드를 다시 호출하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-112">The application code that is invoked through that extensibility point is attempting to call back into managed code.</span></span>  
+## <a name="cause"></a><span data-ttu-id="811c4-111">원인</span><span class="sxs-lookup"><span data-stu-id="811c4-111">Cause</span></span>  
+ <span data-ttu-id="811c4-112">관리 코드를 실행하는 중에 벡터화된 예외 처리기와 같은 하위 수준 운영 체제 확장 지점이 활성화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-112">A low-level operating system extensibility point, such as the vectored exception handler, has activated while executing managed code.</span></span>  <span data-ttu-id="811c4-113">확장 지점을 통해 호출된 애플리케이션 코드에서 관리 코드를 다시 호출하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-113">The application code that is invoked through that extensibility point is attempting to call back into managed code.</span></span>  
   
- <span data-ttu-id="6aac1-113">이 문제는 항상 애플리케이션 코드 때문에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-113">This problem is always caused by application code.</span></span>  
+ <span data-ttu-id="811c4-114">이 문제는 항상 애플리케이션 코드 때문에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-114">This problem is always caused by application code.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="6aac1-114">해결 방법</span><span class="sxs-lookup"><span data-stu-id="6aac1-114">Resolution</span></span>  
- <span data-ttu-id="6aac1-115">이 MDA가 활성화된 스레드의 스택 추적을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-115">Examine the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="6aac1-116">스레드에서 관리 코드를 올바르지 않게 호출하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-116">The thread is attempting to illegally call into managed code.</span></span>  <span data-ttu-id="6aac1-117">스택 추적은 이 확장 지점, 이 확장 지점을 제공하는 운영 체제 코드 및 확장 지점으로 인해 중단된 관리 코드를 사용하여 애플리케이션 코드를 표시해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-117">The stack trace should reveal the application code using this extensibility point, the operating system code that provides this extensibility point, and the managed code that was interrupted by the extensibility point.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="811c4-115">해결 방법</span><span class="sxs-lookup"><span data-stu-id="811c4-115">Resolution</span></span>  
+ <span data-ttu-id="811c4-116">이 MDA가 활성화된 스레드의 스택 추적을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-116">Examine the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="811c4-117">스레드에서 관리 코드를 올바르지 않게 호출하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-117">The thread is attempting to illegally call into managed code.</span></span>  <span data-ttu-id="811c4-118">스택 추적은 이 확장 지점, 이 확장 지점을 제공하는 운영 체제 코드 및 확장 지점으로 인해 중단된 관리 코드를 사용하여 애플리케이션 코드를 표시해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-118">The stack trace should reveal the application code using this extensibility point, the operating system code that provides this extensibility point, and the managed code that was interrupted by the extensibility point.</span></span>  
   
- <span data-ttu-id="6aac1-118">예를 들어 벡터화된 예외 처리기에서 관리 코드를 호출하려고 시도할 때 MDA가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-118">For example, you will see the MDA activated in an attempt to call managed code from inside a vectored exception handler.</span></span>  <span data-ttu-id="6aac1-119">스택에 운영 체제 예외 처리 코드와 <xref:System.DivideByZeroException> 또는 <xref:System.AccessViolationException> 등의 예외를 트리거하는 관리 코드가 일부 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-119">On the stack you will see the operating system exception handling code and some managed code triggering an exception such as a <xref:System.DivideByZeroException> or an <xref:System.AccessViolationException>.</span></span>  
+ <span data-ttu-id="811c4-119">예를 들어 벡터화된 예외 처리기에서 관리 코드를 호출하려고 시도할 때 MDA가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-119">For example, you will see the MDA activated in an attempt to call managed code from inside a vectored exception handler.</span></span>  <span data-ttu-id="811c4-120">스택에 운영 체제 예외 처리 코드와 <xref:System.DivideByZeroException> 또는 <xref:System.AccessViolationException> 등의 예외를 트리거하는 관리 코드가 일부 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-120">On the stack you will see the operating system exception handling code and some managed code triggering an exception such as a <xref:System.DivideByZeroException> or an <xref:System.AccessViolationException>.</span></span>  
   
- <span data-ttu-id="6aac1-120">이 예에서는 비관리 코드에서 완전히 벡터화된 예외 처리기를 구현하는 것이 올바른 해결 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-120">In this example, the correct resolution is to implement the vectored exception handler completely in unmanaged code.</span></span>  
+ <span data-ttu-id="811c4-121">이 예에서는 비관리 코드에서 완전히 벡터화된 예외 처리기를 구현하는 것이 올바른 해결 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-121">In this example, the correct resolution is to implement the vectored exception handler completely in unmanaged code.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="6aac1-121">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="6aac1-121">Effect on the Runtime</span></span>  
- <span data-ttu-id="6aac1-122">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-122">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="811c4-122">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="811c4-122">Effect on the Runtime</span></span>  
+ <span data-ttu-id="811c4-123">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-123">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="6aac1-123">출력</span><span class="sxs-lookup"><span data-stu-id="6aac1-123">Output</span></span>  
- <span data-ttu-id="6aac1-124">MDA에서 잘못된 재진입이 시도되고 있음을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-124">The MDA reports that illegal reentrancy is being attempted.</span></span>  <span data-ttu-id="6aac1-125">스레드 스택을 검사하여 이 문제가 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-125">Examine the thread's stack to determine why this is happening and how to correct the problem.</span></span> <span data-ttu-id="6aac1-126">다음은 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-126">The following is sample output.</span></span>  
+## <a name="output"></a><span data-ttu-id="811c4-124">출력</span><span class="sxs-lookup"><span data-stu-id="811c4-124">Output</span></span>  
+ <span data-ttu-id="811c4-125">MDA에서 잘못된 재진입이 시도되고 있음을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-125">The MDA reports that illegal reentrancy is being attempted.</span></span>  <span data-ttu-id="811c4-126">스레드 스택을 검사하여 이 문제가 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-126">Examine the thread's stack to determine why this is happening and how to correct the problem.</span></span> <span data-ttu-id="811c4-127">다음은 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-127">The following is sample output.</span></span>  
   
 ```output
 Additional Information: Attempting to call into managed code without
@@ -54,7 +55,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="6aac1-127">구성</span><span class="sxs-lookup"><span data-stu-id="6aac1-127">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="811c4-128">Configuration</span><span class="sxs-lookup"><span data-stu-id="811c4-128">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -64,8 +65,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6aac1-128">예제</span><span class="sxs-lookup"><span data-stu-id="6aac1-128">Example</span></span>  
- <span data-ttu-id="6aac1-129">다음 코드 예제는 <xref:System.AccessViolationException>가 throw되는 원인이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-129">The following code example causes an <xref:System.AccessViolationException> to be thrown.</span></span>  <span data-ttu-id="6aac1-130">따라서 벡터화된 예외 처리를 지원하는 Windows 버전에서 관리되는 벡터화된 예외 처리기가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-130">On versions of Windows that support vectored exception handling, this will cause the managed vectored exception handler to be called.</span></span>  <span data-ttu-id="6aac1-131">`reentrancy` MDA가 사용되면 운영 체제의 벡터화된 예외 처리 지원 코드에서 `MyHandler`를 호출하려는 동안 MDA가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="6aac1-131">If the `reentrancy` MDA is enabled, the MDA will activate during the attempted call to `MyHandler` from the operating system's vectored exception handling support code.</span></span>  
+## <a name="example"></a><span data-ttu-id="811c4-129">예제</span><span class="sxs-lookup"><span data-stu-id="811c4-129">Example</span></span>  
+ <span data-ttu-id="811c4-130">다음 코드 예제는 <xref:System.AccessViolationException>가 throw되는 원인이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-130">The following code example causes an <xref:System.AccessViolationException> to be thrown.</span></span>  <span data-ttu-id="811c4-131">따라서 벡터화된 예외 처리를 지원하는 Windows 버전에서 관리되는 벡터화된 예외 처리기가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-131">On versions of Windows that support vectored exception handling, this will cause the managed vectored exception handler to be called.</span></span>  <span data-ttu-id="811c4-132">`reentrancy` MDA가 사용되면 운영 체제의 벡터화된 예외 처리 지원 코드에서 `MyHandler`를 호출하려는 동안 MDA가 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="811c4-132">If the `reentrancy` MDA is enabled, the MDA will activate during the attempted call to `MyHandler` from the operating system's vectored exception handling support code.</span></span>  
   
 ```csharp
 using System;  
@@ -102,6 +103,6 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6aac1-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6aac1-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="811c4-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="811c4-133">See also</span></span>
 
-- [<span data-ttu-id="6aac1-133">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="6aac1-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="811c4-134">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="811c4-134">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)

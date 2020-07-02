@@ -1,5 +1,6 @@
 ---
 title: pInvokeLog MDA
+description: .NET에서 실행 하는 동안 사용 되는 각각의 고유한 플랫폼 호출 서명에 대해 활성화 된 MDA (pInvokeLog 관리 디버깅 도우미)를 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803692"
 ---
-# <a name="pinvokelog-mda"></a><span data-ttu-id="6d696-102">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="6d696-102">pInvokeLog MDA</span></span>
-<span data-ttu-id="6d696-103">`pInvokeLog` MDA(관리 디버깅 도우미)는 실행 중에 사용되는 고유한 각 플랫폼 호출을 위해 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="6d696-103">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
+# <a name="pinvokelog-mda"></a><span data-ttu-id="573e1-103">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="573e1-103">pInvokeLog MDA</span></span>
+<span data-ttu-id="573e1-104">`pInvokeLog` MDA(관리 디버깅 도우미)는 실행 중에 사용되는 고유한 각 플랫폼 호출을 위해 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="573e1-104">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="6d696-104">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="6d696-104">Effect on the Runtime</span></span>  
- <span data-ttu-id="6d696-105">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6d696-105">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="573e1-105">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="573e1-105">Effect on the Runtime</span></span>  
+ <span data-ttu-id="573e1-106">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="573e1-106">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="6d696-106">출력</span><span class="sxs-lookup"><span data-stu-id="6d696-106">Output</span></span>  
- <span data-ttu-id="6d696-107">실행 중에 사용된 플랫폼 호출 시그니처를 나타내는 메시지.</span><span class="sxs-lookup"><span data-stu-id="6d696-107">A message indicating the platform invoke signature used during execution.</span></span>  
+## <a name="output"></a><span data-ttu-id="573e1-107">출력</span><span class="sxs-lookup"><span data-stu-id="573e1-107">Output</span></span>  
+ <span data-ttu-id="573e1-108">실행 중에 사용된 플랫폼 호출 시그니처를 나타내는 메시지.</span><span class="sxs-lookup"><span data-stu-id="573e1-108">A message indicating the platform invoke signature used during execution.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="6d696-108">구성</span><span class="sxs-lookup"><span data-stu-id="6d696-108">Configuration</span></span>  
- <span data-ttu-id="6d696-109">일치하는 각 요소는 플랫폼 호출을 수행하는 .dll 파일을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="6d696-109">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="573e1-109">Configuration</span><span class="sxs-lookup"><span data-stu-id="573e1-109">Configuration</span></span>  
+ <span data-ttu-id="573e1-110">일치하는 각 요소는 플랫폼 호출을 수행하는 .dll 파일을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="573e1-110">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -41,7 +42,7 @@ ms.locfileid: "77216127"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6d696-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6d696-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="573e1-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="573e1-111">See also</span></span>
 
-- [<span data-ttu-id="6d696-111">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="6d696-111">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="6d696-112">관리되지 않는 DLL 함수 사용</span><span class="sxs-lookup"><span data-stu-id="6d696-112">Consuming Unmanaged DLL Functions</span></span>](../interop/consuming-unmanaged-dll-functions.md)
+- [<span data-ttu-id="573e1-112">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="573e1-112">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="573e1-113">관리되지 않는 DLL 함수 사용</span><span class="sxs-lookup"><span data-stu-id="573e1-113">Consuming Unmanaged DLL Functions</span></span>](../interop/consuming-unmanaged-dll-functions.md)
