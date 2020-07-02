@@ -1,5 +1,6 @@
 ---
 title: '방법: ObservableCollection 만들기 및 바인딩'
+description: Windows Presentation Foundation의 System.collections.objectmodel.observablecollection 클래스에서 파생 되는 컬렉션을 만들고 바인딩하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617871"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="4338a-102">방법: ObservableCollection 만들기 및 바인딩</span><span class="sxs-lookup"><span data-stu-id="4338a-102">How to: Create and Bind to an ObservableCollection</span></span>
-<span data-ttu-id="4338a-103">이 예제에서는 항목이 추가 되거나 제거 될 때 알림을 제공 하는 컬렉션 클래스인 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 파생 되는 컬렉션을 만들고 바인딩하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="a409e-103">방법: ObservableCollection 만들기 및 바인딩</span><span class="sxs-lookup"><span data-stu-id="a409e-103">How to: Create and Bind to an ObservableCollection</span></span>
+<span data-ttu-id="a409e-104">이 예제에서는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 항목을 추가 하거나 제거할 때 알림을 제공 하는 컬렉션 클래스인 클래스에서 파생 되는 컬렉션을 만들고 바인딩하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-104">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4338a-104">예제</span><span class="sxs-lookup"><span data-stu-id="4338a-104">Example</span></span>  
- <span data-ttu-id="4338a-105">다음 예제에서는 `NameList` 컬렉션의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-105">The following example shows the implementation of a `NameList` collection:</span></span>  
+## <a name="example"></a><span data-ttu-id="a409e-105">예제</span><span class="sxs-lookup"><span data-stu-id="a409e-105">Example</span></span>  
+ <span data-ttu-id="a409e-106">다음 예제에서는 `NameList` 컬렉션의 구현을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-106">The following example shows the implementation of a `NameList` collection:</span></span>  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +105,7 @@ Public Class PersonName
 End Class  
 ```  
   
- <span data-ttu-id="4338a-106">[XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)에 설명 된 대로 다른 CLR (공용 언어 런타임) 개체와 동일한 방식으로 컬렉션을 바인딩할 수 있도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-106">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="4338a-107">예를 들어 다음과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 컬렉션을 인스턴스화하고 컬렉션을 리소스로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
+ <span data-ttu-id="a409e-107">[XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)에 설명 된 대로 다른 CLR (공용 언어 런타임) 개체와 동일한 방식으로 컬렉션을 바인딩할 수 있도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-107">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="a409e-108">예를 들어 다음과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 컬렉션을 인스턴스화하고 컬렉션을 리소스로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-108">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
   
 ```xaml  
 <Window  
@@ -124,7 +125,7 @@ End Class
 </Window.Resources>  
 ```  
   
- <span data-ttu-id="4338a-108">그런 다음 컬렉션에 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-108">You can then bind to the collection:</span></span>  
+ <span data-ttu-id="a409e-109">그런 다음 컬렉션에 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-109">You can then bind to the collection:</span></span>  
   
 ```xaml  
 <ListBox Width="200"  
@@ -133,17 +134,17 @@ End Class
          IsSynchronizedWithCurrentItem="True"/>  
 ```  
   
- <span data-ttu-id="4338a-109">`NameItemTemplate`의 정의는 여기에 나와 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
+ <span data-ttu-id="a409e-110">`NameItemTemplate`의 정의는 여기에 나와 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-110">The definition of `NameItemTemplate` is not shown here.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="4338a-110">컬렉션의 개체는 [바인딩 소스 개요](binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="4338a-111">특히 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay>를 사용 하는 경우 (예: 소스 속성이 동적으로 변경 될 때 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 업데이트 하려는 경우) <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스와 같은 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4338a-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
+> <span data-ttu-id="a409e-111">컬렉션의 개체는 [바인딩 소스 개요](binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a409e-111">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="a409e-112">특히 또는를 사용 하는 경우 <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> (예 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] : 소스 속성이 동적으로 변경 될 때를 업데이트 하려는 경우) 인터페이스와 같은 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다 <xref:System.ComponentModel.INotifyPropertyChanged> .</span><span class="sxs-lookup"><span data-stu-id="a409e-112">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
   
- <span data-ttu-id="4338a-112">자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)에서 컬렉션에 바인딩 단원을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4338a-112">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../desktop-wpf/data/data-binding-overview.md).</span></span>  
+ <span data-ttu-id="a409e-113">자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)에서 컬렉션에 바인딩 단원을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a409e-113">For more information, see the Binding to Collections section in the [Data Binding Overview](../../../desktop-wpf/data/data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4338a-113">참조</span><span class="sxs-lookup"><span data-stu-id="4338a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a409e-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a409e-114">See also</span></span>
 
-- [<span data-ttu-id="4338a-114">뷰의 데이터 정렬</span><span class="sxs-lookup"><span data-stu-id="4338a-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="4338a-115">뷰에서 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="4338a-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="4338a-116">XAML 데이터 정렬 및 그룹화</span><span class="sxs-lookup"><span data-stu-id="4338a-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="4338a-117">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="4338a-117">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="4338a-118">방법 항목</span><span class="sxs-lookup"><span data-stu-id="4338a-118">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="a409e-115">뷰의 데이터 정렬</span><span class="sxs-lookup"><span data-stu-id="a409e-115">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="a409e-116">뷰에서 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="a409e-116">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="a409e-117">XAML에서 뷰를 사용 하 여 데이터 정렬 및 그룹화</span><span class="sxs-lookup"><span data-stu-id="a409e-117">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="a409e-118">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="a409e-118">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="a409e-119">방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="a409e-119">How-to Topics</span></span>](data-binding-how-to-topics.md)
