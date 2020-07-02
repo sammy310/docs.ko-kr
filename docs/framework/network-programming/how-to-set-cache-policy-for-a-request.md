@@ -1,5 +1,6 @@
 ---
 title: '방법: 요청에 캐시 정책 설정'
+description: .NET Framework의 요청에 대한 캐시 정책을 설정하는 방법을 알아봅니다. 이 캐시 정책에 따라, 최대 하루 동안 캐시에서 리소스를 사용할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180761"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502433"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="23aa9-102">방법: 요청에 캐시 정책 설정</span><span class="sxs-lookup"><span data-stu-id="23aa9-102">How to: Set Cache Policy for a Request</span></span>
-<span data-ttu-id="23aa9-103">다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="23aa9-103">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="23aa9-104">예제 입력은 `http://www.contoso.com/` 등의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="23aa9-104">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
+# <a name="how-to-set-cache-policy-for-a-request"></a><span data-ttu-id="691b4-104">방법: 요청에 캐시 정책 설정</span><span class="sxs-lookup"><span data-stu-id="691b4-104">How to: Set Cache Policy for a Request</span></span>
+<span data-ttu-id="691b4-105">다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="691b4-105">The following example demonstrates setting a cache policy for a request.</span></span> <span data-ttu-id="691b4-106">예제 입력은 `http://www.contoso.com/` 등의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="691b4-106">The example input is a URI such as `http://www.contoso.com/`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23aa9-105">예제</span><span class="sxs-lookup"><span data-stu-id="23aa9-105">Example</span></span>  
- <span data-ttu-id="23aa9-106">다음 코드 예제에서는 리소스가 캐시에 포함된 기간이 하루를 초과하지 않으면 캐시에서 요청된 리소스를 사용하도록 허용하는 캐시 정책을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="23aa9-106">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="23aa9-107">예제에서는 리소스가 캐시에서 사용되었는지 여부를 나타내는 메시지(예: `"The response was retrieved from the cache : False."`)를 표시하고 나서 리소스를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="23aa9-107">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="23aa9-108">클라이언트와 서버 간에 캐시를 통해 요청을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23aa9-108">A request can be fulfilled by any cache between the client and server.</span></span>  
+## <a name="example"></a><span data-ttu-id="691b4-107">예제</span><span class="sxs-lookup"><span data-stu-id="691b4-107">Example</span></span>  
+ <span data-ttu-id="691b4-108">다음 코드 예제에서는 리소스가 캐시에 포함된 기간이 하루를 초과하지 않으면 캐시에서 요청된 리소스를 사용하도록 허용하는 캐시 정책을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="691b4-108">The following code example creates a cache policy that allows the requested resource to be used from the cache if it has not been in the cache for longer than one day.</span></span> <span data-ttu-id="691b4-109">예제에서는 리소스가 캐시에서 사용되었는지 여부를 나타내는 메시지(예: `"The response was retrieved from the cache : False."`)를 표시하고 나서 리소스를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="691b4-109">The example displays a message that indicates whether the resource was used from the cache—for example, `"The response was retrieved from the cache : False."`—and then displays the resource.</span></span> <span data-ttu-id="691b4-110">클라이언트와 서버 간에 캐시를 통해 요청을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="691b4-110">A request can be fulfilled by any cache between the client and server.</span></span>  
   
 ```csharp  
 using System;  
@@ -105,10 +106,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="23aa9-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="23aa9-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="691b4-111">참조</span><span class="sxs-lookup"><span data-stu-id="691b4-111">See also</span></span>
 
-- [<span data-ttu-id="23aa9-110">네트워크 애플리케이션에 대한 캐시 관리</span><span class="sxs-lookup"><span data-stu-id="23aa9-110">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
-- [<span data-ttu-id="23aa9-111">캐시 정책</span><span class="sxs-lookup"><span data-stu-id="23aa9-111">Cache Policy</span></span>](cache-policy.md)
-- [<span data-ttu-id="23aa9-112">위치 기반 캐시 정책</span><span class="sxs-lookup"><span data-stu-id="23aa9-112">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
-- [<span data-ttu-id="23aa9-113">시간 기반 캐시 정책</span><span class="sxs-lookup"><span data-stu-id="23aa9-113">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
-- [<span data-ttu-id="23aa9-114">\<requestCaching> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="23aa9-114">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [<span data-ttu-id="691b4-112">네트워크 애플리케이션에 대한 캐시 관리</span><span class="sxs-lookup"><span data-stu-id="691b4-112">Cache Management for Network Applications</span></span>](cache-management-for-network-applications.md)
+- [<span data-ttu-id="691b4-113">캐시 정책</span><span class="sxs-lookup"><span data-stu-id="691b4-113">Cache Policy</span></span>](cache-policy.md)
+- [<span data-ttu-id="691b4-114">위치 기반 캐시 정책</span><span class="sxs-lookup"><span data-stu-id="691b4-114">Location-Based Cache Policies</span></span>](location-based-cache-policies.md)
+- [<span data-ttu-id="691b4-115">시간 기반 캐시 정책</span><span class="sxs-lookup"><span data-stu-id="691b4-115">Time-Based Cache Policies</span></span>](time-based-cache-policies.md)
+- [<span data-ttu-id="691b4-116">\<requestCaching> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="691b4-116">\<requestCaching> Element (Network Settings)</span></span>](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

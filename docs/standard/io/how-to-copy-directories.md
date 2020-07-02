@@ -1,5 +1,6 @@
 ---
 title: '방법: 디렉터리 복사'
+description: 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 I/O 클래스를 사용하여 디렉터리를 복사하는 방법을 참조하세요.
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,31 +13,31 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 65fe28c90a6cd6f0b3c8c32da19c1d9603900670
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288578"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662591"
 ---
-# <a name="how-to-copy-directories"></a><span data-ttu-id="ea7fc-102">방법: 디렉터리 복사</span><span class="sxs-lookup"><span data-stu-id="ea7fc-102">How to: Copy directories</span></span>
-<span data-ttu-id="ea7fc-103">이 항목에서는 I/O 클래스를 사용하여 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="ea7fc-103">This topic demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span>
+# <a name="how-to-copy-directories"></a><span data-ttu-id="4d1ad-103">방법: 디렉터리 복사</span><span class="sxs-lookup"><span data-stu-id="4d1ad-103">How to: Copy directories</span></span>
+<span data-ttu-id="4d1ad-104">이 항목에서는 I/O 클래스를 사용하여 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="4d1ad-104">This topic demonstrates how to use I/O classes to synchronously copy the contents of a directory to another location.</span></span>
 
-<span data-ttu-id="ea7fc-104">비동기 파일 복사의 예제는 [비동기 파일 I/O](asynchronous-file-i-o.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ea7fc-104">For an example of asynchronous file copy, see [Asynchronous file I/O](asynchronous-file-i-o.md).</span></span>
+<span data-ttu-id="4d1ad-105">비동기 파일 복사의 예제는 [비동기 파일 I/O](asynchronous-file-i-o.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4d1ad-105">For an example of asynchronous file copy, see [Asynchronous file I/O](asynchronous-file-i-o.md).</span></span>
 
-<span data-ttu-id="ea7fc-105">이 예제는 `DirectoryCopy` 메서드의 `copySubDirs`를 `true`로 설정하여 하위 디렉터리를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7fc-105">This example copies subdirectories by setting the `copySubDirs` of the `DirectoryCopy` method to `true`.</span></span> <span data-ttu-id="ea7fc-106">`DirectoryCopy` 메서드는 더 이상 복사할 항목이 없을 때까지 각 하위 디렉터리에서 자신을 호출하여 하위 디렉터리를 재귀적으로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7fc-106">The `DirectoryCopy` method recursively copies subdirectories by calling itself on each subdirectory until there are no more to copy.</span></span>  
+<span data-ttu-id="4d1ad-106">이 예제는 `DirectoryCopy` 메서드의 `copySubDirs`를 `true`로 설정하여 하위 디렉터리를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="4d1ad-106">This example copies subdirectories by setting the `copySubDirs` of the `DirectoryCopy` method to `true`.</span></span> <span data-ttu-id="4d1ad-107">`DirectoryCopy` 메서드는 더 이상 복사할 항목이 없을 때까지 각 하위 디렉터리에서 자신을 호출하여 하위 디렉터리를 재귀적으로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="4d1ad-107">The `DirectoryCopy` method recursively copies subdirectories by calling itself on each subdirectory until there are no more to copy.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ea7fc-107">예제</span><span class="sxs-lookup"><span data-stu-id="ea7fc-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4d1ad-108">예제</span><span class="sxs-lookup"><span data-stu-id="4d1ad-108">Example</span></span>  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
-## <a name="see-also"></a><span data-ttu-id="ea7fc-108">참조</span><span class="sxs-lookup"><span data-stu-id="ea7fc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d1ad-109">참조</span><span class="sxs-lookup"><span data-stu-id="4d1ad-109">See also</span></span>
 
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [<span data-ttu-id="ea7fc-109">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="ea7fc-109">File and stream I/O</span></span>](index.md)
-- [<span data-ttu-id="ea7fc-110">공통 I/O 작업</span><span class="sxs-lookup"><span data-stu-id="ea7fc-110">Common I/O tasks</span></span>](common-i-o-tasks.md)
-- [<span data-ttu-id="ea7fc-111">비동기 파일 I/O</span><span class="sxs-lookup"><span data-stu-id="ea7fc-111">Asynchronous file I/O</span></span>](asynchronous-file-i-o.md)
+- [<span data-ttu-id="4d1ad-110">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="4d1ad-110">File and stream I/O</span></span>](index.md)
+- [<span data-ttu-id="4d1ad-111">공통 I/O 작업</span><span class="sxs-lookup"><span data-stu-id="4d1ad-111">Common I/O tasks</span></span>](common-i-o-tasks.md)
+- [<span data-ttu-id="4d1ad-112">비동기 파일 I/O</span><span class="sxs-lookup"><span data-stu-id="4d1ad-112">Asynchronous file I/O</span></span>](asynchronous-file-i-o.md)
