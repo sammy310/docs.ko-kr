@@ -1,5 +1,6 @@
 ---
 title: 관찰자 디자인 패턴
+description: .NET의 관찰자 디자인 패턴에 대해 알아봅니다. 이 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291268"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662734"
 ---
 # <a name="observer-design-pattern"></a>관찰자 디자인 패턴
 
-관찰자 디자인 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다. 이는 푸시 기반 알림이 필요한 시나리오에 적합합니다. 이 패턴은 ‘공급자’(‘주체’ 또는 ‘관찰 가능 대상’이라고도 함) 및 0개 이상의 ‘관찰자’를 정의합니다.     관찰자는 공급자에 등록하며 미리 정의된 조건, 이벤트 또는 상태 변경이 발생할 때마다 공급자가 해당 메서드 중 하나를 호출하여 자동으로 모든 관찰자에게 알립니다. 이 메서드 호출에서 공급자는 관찰자에게 현재 상태 정보를 제공할 수도 있습니다. .NET Framework에서는 제네릭 <xref:System.IObservable%601?displayProperty=nameWithType> 및 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스를 구현하여 관찰자 디자인 패턴을 적용합니다. 제네릭 형식 매개 변수는 알림 정보를 제공하는 형식을 나타냅니다.
+관찰자 디자인 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다. 이는 푸시 기반 알림이 필요한 시나리오에 적합합니다. 이 패턴은 ‘공급자’(‘주체’ 또는 ‘관찰 가능 대상’이라고도 함) 및 0개 이상의 ‘관찰자’를 정의합니다.    관찰자는 공급자에 등록하며 미리 정의된 조건, 이벤트 또는 상태 변경이 발생할 때마다 공급자가 해당 메서드 중 하나를 호출하여 자동으로 모든 관찰자에게 알립니다. 이 메서드 호출에서 공급자는 관찰자에게 현재 상태 정보를 제공할 수도 있습니다. .NET Framework에서는 제네릭 <xref:System.IObservable%601?displayProperty=nameWithType> 및 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스를 구현하여 관찰자 디자인 패턴을 적용합니다. 제네릭 형식 매개 변수는 알림 정보를 제공하는 형식을 나타냅니다.
 
 ## <a name="applying-the-pattern"></a>패턴 적용
 

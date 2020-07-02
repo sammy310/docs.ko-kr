@@ -1,5 +1,6 @@
 ---
 title: 소켓
+description: Winsock32 API에서 제공하는 관리 코드 버전의 소켓 서비스인 .NET Framework Socket 클래스에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b44409a0fafc770625be55881ccef3b57045acef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502134"
 ---
 # <a name="sockets"></a>소켓
 <xref:System.Net.Sockets> 네임스페이스에는 Windows 소켓 인터페이스의 관리되는 구현이 포함됩니다. <xref:System.Net> 네임스페이스에 있는 다른 모든 네트워크 액세스 클래스는 이 소켓 구현 위에 구축됩니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "71047250"
   
  **Socket** 클래스는 동기 및 비동기의 두 가지 기본 모드를 지원합니다. 동기 모드에서 네트워크 작업을 수행하는 함수 호출(예: <xref:System.Net.Sockets.Socket.Send%2A> 및 <xref:System.Net.Sockets.Socket.Receive%2A>)은 작업이 완료될 때까지 기다린 후 제어를 호출하는 프로그램에 반환합니다. 비동기 모드에서는 이러한 호출이 즉시 반환됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 소켓 만들기](how-to-create-a-socket.md)
 

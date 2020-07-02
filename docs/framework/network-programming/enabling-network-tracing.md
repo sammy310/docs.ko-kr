@@ -1,5 +1,6 @@
 ---
 title: 네트워크 추적 사용
+description: .NET Framework에서 관리형 애플리케이션을 위한 메서드 호출 및 네트워크 트래픽에 대한 정보를 제공하는 네트워크 추적을 사용하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace destinations
@@ -11,21 +12,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180877"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502602"
 ---
 # <a name="enabling-network-tracing"></a>네트워크 추적 사용
 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 애플리케이션에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 애플리케이션에서 네트워크 추적을 사용하도록 설정하려면 다음 작업을 완료해야 합니다.  
   
-- 추적을 사용하도록 설정하고 코드를 컴파일합니다. 추적을 사용하도록 설정하는 데 필요한 컴파일러 스위치에 대한 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
+- 추적을 사용하도록 설정하고 코드를 컴파일합니다. [방법: 추적을 사용하도록 설정하는 데 필요한 컴파일러 스위치에 대한 자세한 내용은 추적 및 디버그를 사용한 조건부 컴파일](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
   
 - 추적 출력 대상을 지정합니다.  
   
-- 네트워크 추적 동작을 구성합니다. 자세한 내용은 [방법: 네트워크 추적 구성](how-to-configure-network-tracing.md)을 참조하세요.  
+- 네트워크 추적 동작을 구성합니다. [방법: 자세한 내용은 네트워크 추적 구성](how-to-configure-network-tracing.md)을 참조하세요.  
   
  추적 수신기라고도 하는 가장 일반적인 추적 대상은 기본 수신기 및 로그 파일입니다.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "79180877"
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [네트워크 추적 해석](interpreting-network-tracing.md)
 - [.NET Framework의 네트워크 추적](network-tracing.md)

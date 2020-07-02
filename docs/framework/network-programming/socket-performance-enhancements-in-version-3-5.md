@@ -1,13 +1,14 @@
 ---
 title: 버전 3.5의 소켓 성능 향상
+description: .NET Framework 버전 3.5의 System.Net.Sockets.Socket 클래스의 성능 향상에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047235"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502147"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>버전 3.5의 소켓 성능 향상
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스는 비동기 네트워크 I/O를 통해 성능을 최적화하는 애플리케이션에서 사용하기 위해 버전 3.5에서 개선되었습니다. 특수화된 고성능 소켓 애플리케이션에서 사용할 수 있는 대체 비동기 패턴을 제공하는 <xref:System.Net.Sockets.Socket> 클래스에 대한 향상된 기능 집합의 일부로 일련의 새로운 클래스가 추가되었습니다. 이러한 개선 사항은 특히 높은 성능이 필요한 네트워크 서버 애플리케이션용으로 설계되었습니다. 애플리케이션은 향상된 비동기 패턴을 단독으로 사용하거나, 애플리케이션의 대상 핫 영역에서만 사용할 수 있습니다(예: 많은 양의 데이터를 수신하는 경우).  
@@ -33,7 +34,7 @@ ms.locfileid: "71047235"
   
  새 비동기 소켓 작업 컨텍스트 개체의 수명은 애플리케이션 코드와 비동기 I/O 참조에서 참조를 통해 결정됩니다. 비동기 소켓 작업 방법 중 하나에 매개 변수로 제출된 후 애플리케이션이 비동기 소켓 작업 컨텍스트 개체에 대한 참조를 유지할 필요는 없습니다. 완료 콜백이 반환될 때까지 참조된 상태로 유지됩니다. 그러나 이후 비동기 소켓 작업에 다시 사용할 수 있도록 애플리케이션에서 컨텍스트 개체에 대한 참조를 유지하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>

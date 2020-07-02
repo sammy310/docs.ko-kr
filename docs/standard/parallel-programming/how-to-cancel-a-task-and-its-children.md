@@ -1,5 +1,6 @@
 ---
 title: '방법: 작업 및 해당 자식 취소'
+description: .NET에서 작업 및 해당 자식 항목을 취소하는 방법의 예제를 참조하세요. 예제에서는 취소 가능한 작업 만들기, 작업이 취소되었다는 알림 등 다양한 단계에 대해 설명합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290034"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662682"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>방법: 작업 및 해당 자식 취소
 이 예제는 다음 작업을 수행하는 방법을 보여줍니다.  
@@ -36,7 +37,7 @@ ms.locfileid: "84290034"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스는 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 및 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 유형을 기반으로 하는 취소 모델과 완전히 통합되었습니다. 자세한 내용은 [관리되는 스레드의 취소](../threading/cancellation-in-managed-threads.md) 및 [작업 취소](task-cancellation.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>

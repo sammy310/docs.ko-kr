@@ -2,14 +2,14 @@
 title: ML.NET CLI의 원격 분석 수집
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용 정보를 수집하는 ML.NET CLI 원격 분석 기능을 살펴봅니다. 또한 Microsoft의 GDPR 규정 준수에 대한 정보와 .NET 라이선스 링크를 확인합니다.
 ms.topic: conceptual
-ms.date: 09/03/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 833ee2ae54cf3a52adaf070837a33e00267d25dc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599841"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -17,7 +17,7 @@ ms.locfileid: "78849746"
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft가 데이터를 사용하는 방법
 
-제품 팀에서는 ML.NET CLI 원격 분석 데이터를 사용하여 도구의 개선 방법을 이해할 수 있습니다. 예를 들어, 고객이 드물게 특정 기계 학습 작업을 사용할 경우 제품 팀은 그 원인을 조사하고 결과에 따라 기능 개발의 우선 순위를 정할 수 있습니다. ML.NET CLI 원격 분석 분석은 충돌, 코드 예외 같은 문제의 디버깅에도 도움이 됩니다.
+제품 팀에서는 ML.NET CLI 원격 분석 데이터를 사용하여 도구의 개선 방법을 이해할 수 있습니다. 예를 들어, 고객이 드물게 특정 기계 학습 작업을 사용할 경우 제품 팀은 그 원인을 조사하고 결과에 따라 기능 개발의 우선 순위를 정할 수 있습니다. ML.NET CLI 원격 분석 분석은 크래시, 코드 예외 같은 문제의 디버깅에도 도움이 됩니다.
 
 제품 팀은 이 인사이트가 중요하지만 모두가 이런 데이터를 보내고자 하는 것은 아닙니다. [원격 분석을 사용하지 않도록 설정하는 방법을 살펴봅니다.](#opt-out-of-data-collection)
 
@@ -30,7 +30,7 @@ ms.locfileid: "78849746"
 - `mlnet`
 - `mlnet --help`
 
-`mlnet auto-train` 등, [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 실행할 때는 원격 분석을 *사용합니다*.
+`mlnet classification` 등, [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 실행할 때는 원격 분석을 *사용합니다*.
 
 ## <a name="opt-out-of-data-collection"></a>데이터 수집 옵트아웃
 
@@ -42,8 +42,8 @@ ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 
 이 기능은 다음 데이터를 수집합니다.
 
-- `auto-train`과 같이 호출된 명령
-- 사용된 명령줄 매개 변수 이름(예: "dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity")
+- `classification`과 같이 호출된 명령
+- 사용되는 명령줄 매개 변수 이름(즉, “dataset, label-col, output-path, train-time, verbosity”)
 - 해시된 MAC 주소: 컴퓨터에 대한 암호화된(SHA256) 익명 및 고유 ID입니다.
 - 호출의 타임스탬프
 - 지리적 위치 확인에만 사용되는 8진수 IP 주소 3개(전체 IP 주소 아님)
@@ -51,7 +51,7 @@ ML.NET CLI 원격 분석 기능은 기본적으로 사용됩니다.
 - 해시된 데이터 세트 파일 이름
 - 데이터 세트 파일 크기 버킷
 - 운영 체제 및 버전
-- 작업 매개 변수의 값: 범주 값(예: `regression`, `binary-classification` 및 `multiclass-classification`)
+- ML 작업 명령의 값: 범주 값(예: `regression`, `classification` 및 `recommendation`)
 - ML.NET CLI 버전(예: 0.3.27703.4)
 
 데이터는 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 기술을 사용하여 Microsoft 서버로 안전하게 전송되고, 제한된 액세스를 기준으로 보관되고, 안전한 [Azure Storage](https://azure.microsoft.com/services/storage/) 시스템에서 엄격한 보안 제어에 따라 사용됩니다.
@@ -72,7 +72,7 @@ ML.NET CLI의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Micr
 
 ## <a name="disclosure"></a>공개
 
-`mlnet auto-train` 같은 [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 처음 실행하면 ML.NET CLI 도구가 원격 분석에서 옵트아웃하는 방법을 설명하는 공개 텍스트를 표시합니다. 실행 중인 CLI 버전에 따라 텍스트가 약간 달라질 수 있습니다.
+`mlnet classification` 같은 [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 처음 실행하면 ML.NET CLI 도구가 원격 분석에서 옵트아웃하는 방법을 설명하는 공개 텍스트를 표시합니다. 실행 중인 CLI 버전에 따라 텍스트가 약간 달라질 수 있습니다.
 
 ## <a name="see-also"></a>참조
 

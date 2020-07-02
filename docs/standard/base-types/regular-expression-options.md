@@ -1,5 +1,6 @@
 ---
 title: 정규식 옵션
+description: .NET에서 대/소문자를 구분하지 않는 일치, 여러 줄 모드, 오른쪽에서 왼쪽 모드와 같은 정규식 옵션을 사용하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289293"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662877"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 

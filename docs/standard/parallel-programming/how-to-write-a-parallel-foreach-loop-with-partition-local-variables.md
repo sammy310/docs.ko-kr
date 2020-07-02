@@ -1,5 +1,6 @@
 ---
 title: '방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성'
+description: .NET에서 파티션 지역 변수를 사용하는 Parallel.ForEach 루프를 작성하는 방법의 예를 참조하세요.
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f598955fb2d6800f81bce050bdf474fc63bfb554
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290748"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599778"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성
 
@@ -48,7 +49,7 @@ ms.locfileid: "84290748"
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
 - [방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)

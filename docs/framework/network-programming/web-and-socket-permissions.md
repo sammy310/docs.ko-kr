@@ -1,5 +1,6 @@
 ---
 title: 웹 및 소켓 사용 권한
+description: WebPermission 및 SocketPermission 클래스가 .NET Framework의 System.Net 네임스페이스 사용에 관한 인터넷 보안을 제공하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: d1b993acbf20eac244e596075c3f826bba3211a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08ae360e8097f7281631da2a3f9846994dfbf5b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046860"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501900"
 ---
 # <a name="web-and-socket-permissions"></a>웹 및 소켓 사용 권한
 <xref:System.Net> 네임스페이스를 사용하는 애플리케이션에 대한 인터넷 보안은 <xref:System.Net.WebPermission> 및 <xref:System.Net.SocketPermission> 클래스에서 제공됩니다. **WebPermission** 클래스는 URI의 데이터를 요청하거나 인터넷에 URI를 제공하는 애플리케이션의 권한을 제어합니다. **SocketPermission** 클래스는 <xref:System.Net.Sockets.Socket>을 사용하여 로컬 포트에서 데이터를 허용하거나 호스트, 포트 번호 및 전송 프로토콜에 따라 다른 주소에서 전송 프로토콜을 사용하여 원격 디바이스에 연결하는 애플리케이션의 권한을 제어합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "71046860"
   
  **WebPermission** 인스턴스의 경우 허용은 애플리케이션이 **WebPermission**에 의해 제어되는 URI을 전 세계에 내보낼 수 있음을 의미합니다. 연결은 애플리케이션이 원격 또는 로컬 여부에 관계없이 해당 URI에 액세스할 수 있음을 의미합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안](../../standard/security/index.md)
 - [네트워크 프로그래밍의 보안](security-in-network-programming.md)

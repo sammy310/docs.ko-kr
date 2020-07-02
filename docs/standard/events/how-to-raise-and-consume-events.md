@@ -1,5 +1,6 @@
 ---
 title: '방법: 이벤트 발생 및 사용'
+description: .NET에서 이벤트를 발생시키고 사용합니다. EventHandler 대리자, EventHandler<TEventArgs> 대리자 및 사용자 지정 대리자를 사용하는 예제를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279960"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769277"
 ---
 # <a name="how-to-raise-and-consume-events"></a>방법: 이벤트 발생 및 사용
 이 항목의 예제에서는 이벤트로 작업하는 방법을 보여 줍니다. 여기서 <xref:System.EventHandler> 대리자, <xref:System.EventHandler%601> 대리자 및 사용자 지정 대리자의 예제를 통해 데이터를 사용하거나 사용하지 않는 이벤트를 설명합니다.  

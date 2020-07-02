@@ -1,17 +1,18 @@
 ---
 title: 완전 신뢰 모드에서 인트라넷 애플리케이션 실행
+description: .NET 3.5 SP1에서 완전 신뢰 모드로 인트라넷 애플리케이션을 실행합니다. 애플리케이션 및 해당 라이브러리 어셈블리를 네트워크 공유에서 완전 신뢰 어셈블리로 실행할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: f4fb3b61e434154b1c7252377c234aeff49f0227
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645443"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104604"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 애플리케이션 실행
 

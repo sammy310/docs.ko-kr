@@ -1,5 +1,6 @@
 ---
 title: '방법: 사용자 정의 예외 만들기'
+description: .NET의 Exception 기본 클래스에서 파생된 예외 클래스의 계층 구조의 대안인 사용자 정의 예외를 만드는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14eb6246ba4347f33766f7dff36463f2bf996330
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708877"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662799"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
 
@@ -31,6 +32,6 @@ ms.locfileid: "75708877"
 > [!NOTE]
 > 원격을 사용하는 경우 사용자 정의 예외에 대한 메타데이터를 서버(호출 수신자) 및 클라이언트(프록시 개체 또는 호출자)에서 사용할 수 있는지 확인해야 합니다. 자세한 내용은 [예외에 대한 모범 사례](best-practices-for-exceptions.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [예외](index.md)

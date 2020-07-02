@@ -1,5 +1,6 @@
 ---
 title: 소켓 코드 예제
+description: 다음 예제를 통해 Socket 클래스를 사용하여 클라이언트에서 네트워크 서비스에 연결하는 방법 및 클라이언트의 연결을 수신 대기할 서버로 사용하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, sockets
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a0911a779ed3d4938ad7ff57f048c176cf677fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047291"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502160"
 ---
 # <a name="socket-code-examples"></a>소켓 코드 예제
 다음 코드 예제에서는 <xref:System.Net.Sockets.Socket> 클래스를 원격 네트워크 서비스에 연결할 클라이언트 및 원격 클라이언트의 연결을 수신 대기할 서버로 사용하는 방법을 보여 줍니다.  

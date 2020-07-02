@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802719"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324432"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
+또한 bash 스크립트는 PowerShell 스위치를 읽으므로 Linux/macOS 시스템에서 스크립트와 함께 PowerShell 스위치를 사용할 수 있습니다.
+
 ## <a name="description"></a>설명
 
-`dotnet-install` 스크립트는 .NET Core CLI 및 공유 런타임을 포함하는 .NET Core SDK의 비관리자 설치를 수행하는 데 사용됩니다.
+`dotnet-install` 스크립트는 .NET Core CLI 및 공유 런타임을 포함하는 .NET Core SDK의 비관리자 설치를 수행합니다. 다음과 같은 두 가지 스크립트가 있습니다.
+
+* Windows에서 작동하는 PowerShell 스크립트
+* Linux/macOS에서 작동하는 bash 스크립트
+
+### <a name="purpose"></a>용도
+
+ 이 스크립트는 다음과 같은 CI(연속 통합) 시나리오에 사용하기 위한 것입니다.
+
+* 사용자 조작 및 관리자 권한 없이 SDK를 설치해야 합니다.
+* SDK 설치를 여러 CI 실행 간에 유지할 필요가 없습니다.
+
+  일반적인 이벤트 시퀀스는 다음과 같습니다.
+  * CI가 트리거됩니다.
+  * CI에서 이러한 스크립트 중 하나를 사용하여 SDK를 설치합니다.
+  * CI에서 작업을 완료하고 SDK 설치를 비롯해 임시 데이터를 지웁니다.
+
+개발 환경을 설정하거나 앱을 실행하려면 이러한 스크립트가 아니라 설치 관리자를 사용합니다.
+
+### <a name="recommended-version"></a>추천 버전
 
 안정적인 버전의 스크립트를 사용하는 것이 좋습니다.
 
 - Bash(Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
 - PowerShell(Windows): <https://dot.net/v1/dotnet-install.ps1>
 
-이러한 스크립트의 주요 유용성은 자동화 시나리오 및 비관리자 설치입니다. 두 개의 스크립트가 있습니다. 하나는 Windows에서 작동하는 PowerShell 스크립트이고, 다른 하나는 Linux/macOS에서 작동하는 bash 스크립트입니다. 두 스크립트의 동작은 동일합니다. 또한 bash 스크립트는 PowerShell 스위치를 읽으므로 Linux/macOS 시스템에서 스크립트와 함께 PowerShell 스위치를 사용할 수 있습니다.
+### <a name="script-behavior"></a>스크립트 동작
 
-설치 스크립트는 CLI 빌드 저장 위치에서 ZIP/tarball 파일을 다운로드하여 기본 위치나 `-InstallDir|--install-dir`로 지정한 위치에 설치를 계속 진행합니다. 기본적으로 설치 스크립트는 SDK를 다운로드하고 설치합니다. 공유 런타임만 가져오려는 경우 `-Runtime|--runtime` 인수를 지정합니다.
+두 스크립트의 동작은 동일합니다. 스크립트는 CLI 빌드 저장 위치에서 ZIP/tarball 파일을 다운로드하여 기본 위치나 `-InstallDir|--install-dir`로 지정한 위치에 설치를 계속 진행합니다.
 
-기본적으로 스크립트는 현재 세션에 대한 $PATH에 설치 위치를 추가합니다. `-NoPath|--no-path` 인수를 지정하여 이 기본 동작을 재정의합니다.
+기본적으로 설치 스크립트는 SDK를 다운로드하고 설치합니다. 공유 런타임만 가져오려는 경우 `-Runtime|--runtime` 인수를 지정합니다.
+
+기본적으로 스크립트는 현재 세션에 대한 $PATH에 설치 위치를 추가합니다. `-NoPath|--no-path` 인수를 지정하여 이 기본 동작을 재정의합니다. 스크립트는 `DOTNET_ROOT` 환경 변수를 설정하지 않습니다.
 
 스크립트를 실행하기 전에 필요한 모든 [종속성](../install/dependencies.md)을 설치하세요.
 
-`-Version|--version` 인수를 사용하여 특정 버전을 설치할 수 있습니다. 버전은 세 부분으로 구성된 버전(예: `2.1.0`)으로 지정해야 합니다. 제공하지 않으면 `latest` 버전을 사용합니다.
+`-Version|--version` 인수를 사용하여 특정 버전을 설치할 수 있습니다. 버전은 `2.1.0`과 같이 세 부분으로 구성된 버전 번호로 지정해야 합니다. 버전을 지정하지 않은 경우 스크립트는 `latest` 버전을 설치합니다.
 
 설치 스크립트는 Windows에서 레지스트리를 업데이트하지 않습니다. 단지 압축된 이진 파일을 다운로드하여 폴더에 복사합니다. 레지스트리 키 값을 업데이트하려면 .NET Core 설치 관리자를 사용합니다.
 
@@ -94,9 +117,9 @@ dotnet-install.sh --help
 
   Azure 피드에 추가할 쿼리 문자열로 사용됩니다. public이 아닌 Blob 스토리지 계정을 사용하도록 URL을 변경할 수 있습니다.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  스크립트에 대한 도움말을 출력합니다.
+  스크립트에 대한 도움말을 출력합니다. Bash 스크립트에만 적용됩니다. PowerShell의 경우 `Get-Help ./dotnet-install.ps1`을 사용합니다.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 

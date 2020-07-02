@@ -1,5 +1,6 @@
 ---
 title: 동기 메서드를 비동기 방식으로 호출
+description: BeginInvoke 및 EndInvoke 메서드를 사용하여 .NET에서 동기 메서드를 비동기적으로 호출하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 6a3dd83fe9d3fc48f66a0bb6bef333e4ff399108
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289904"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662643"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 

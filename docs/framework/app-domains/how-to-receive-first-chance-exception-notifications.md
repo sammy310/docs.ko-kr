@@ -1,5 +1,6 @@
 ---
 title: '방법: 첫째 예외 알림 받기'
+description: CLR에서 예외 처리기를 검색하기 전에 AppDomain 클래스의 FirstChanceException 이벤트를 통해 .NET의 첫째 예외 알림을 받습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119871"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104747"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
 <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.

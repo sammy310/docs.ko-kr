@@ -1,5 +1,6 @@
 ---
 title: 일반적으로 사용되는 컬렉션 형식
+description: 해시 테이블, 쿼리, 스택, 모음, 사전, 목록과 같이 .NET에서 일반적으로 사용되는 컬렉션 형식에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 47e54bb76c65dd5acc8ce1921ee385a5cb55cf95
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600843"
 ---
 # <a name="commonly-used-collection-types"></a>일반적으로 사용되는 컬렉션 형식
 컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.  

@@ -1,5 +1,6 @@
 ---
 title: '방법: 병렬 루프의 예외 처리'
+description: .NET에서 병렬 루프의 예외를 처리하는 방법을 알아봅니다. System.AggregateException에서 루프의 모든 예외를 래핑하는 방법의 예제를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278534"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768978"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>방법: 병렬 루프의 예외 처리
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 오버로드에는 throw될 수 있는 예외를 처리하기 위한 특별한 메커니즘이 없습니다. 이런 점에서 일반 `for` 및 `foreach` 루프(Visual Basic의 `For` 및 `For Each`)와 비슷합니다. 처리되지 않은 예외로 인해 현재 실행 중인 모든 반복이 완료되는 즉시 루프가 종료됩니다.
@@ -29,7 +30,7 @@ ms.locfileid: "84278534"
  [!code-csharp[TPL_Exceptions#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#08)]
  [!code-vb[TPL_Exceptions#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionsinloops.vb#08)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
 - [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)

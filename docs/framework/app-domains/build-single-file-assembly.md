@@ -1,5 +1,6 @@
 ---
 title: '방법: .NET Framework 단일 파일 어셈블리 빌드'
+description: .NET에서 단일 파일 어셈블리를 빌드하는 방법을 살펴봅니다. 단일 파일 어셈블리는 .NET을 대상으로 하는 라이브러리(.dll)이거나 실행 파일(.exe)일 수 있습니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644297"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104925"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>방법: .NET Framework 단일 파일 어셈블리 빌드
 
@@ -51,7 +52,7 @@ vbc myCode.vb
 
 명령 프롬프트에 다음 명령을 입력합니다.
 
-\<*compiler command*>  **/out:** \<*file name*> \<*module name*>
+\<*compiler command*> **/out:** \<*file name*> \<*module name*>
 
 이 명령에서 *compiler command*는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *file name*은 출력 파일 이름이고, *module name*은 어셈블리로 컴파일할 코드 모듈의 이름입니다.
 
@@ -70,7 +71,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 라이브러리 어셈블리를 만들려면 명령 프롬프트에서 다음 명령을 입력합니다.
 
-\<*compiler command*>  **-t:library** \<*module name*>
+\<*compiler command*> **-t:library** \<*module name*>
 
 이 명령에서 *compiler command*는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *module name*은 어셈블리로 컴파일할 코드 모듈의 이름입니다. **-out:** 옵션 등의 다른 컴파일러 옵션을 사용할 수도 있습니다.
 

@@ -1,5 +1,6 @@
 ---
 title: .NET에서 I/O 오류 처리
+description: .NET에서 I/O 오류를 처리하는 방법을 알아봅니다. 오류 코드를 예외에 매핑하고, I/O 작업에서 예외를 처리하고, IOException을 처리합니다.
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599804"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET에서 I/O 오류 처리
 

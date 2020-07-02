@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990235"
 ---
 # <a name="background-garbage-collection"></a>백그라운드 가비지 수집
 
@@ -57,7 +57,7 @@ ms.locfileid: "84307074"
 
 워크스테이션 또는 서버 가비지 수집에서 [동시 가비지 수집을 활성화](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)할 수 있습니다. 동시 가비지 수집을 사용하면 대부분의 수집 기간 동안 가비지 수집을 수행하는 전용 스레드와 다른 스레드가 동시에 실행될 수 있습니다. 이 옵션은 2세대 가비지 수집에만 영향을 미칩니다. 0세대 및 1세대는 빠르게 완료되므로 항상 비동시 수집입니다.
 
-동시 가비지 수집을 사용하면 수집을 위한 일시 중지가 최소화되어 대화형 애플리케이션의 응답성이 향상됩니다. 동시 가비지 수집 스레드가 실행되는 대부분의 시간 동안 관리되는 스레드가 계속 실행될 수 있습니다. 이로써 가비지 수집이 발생하는 동안 일시 중지 시간이 더 짧아지게 됩니다.
+동시 가비지 수집을 사용하면 수집을 위한 일시 중지가 최소화되어 대화형 애플리케이션의 응답성이 향상됩니다. 동시 가비지 수집 스레드가 실행되는 대부분의 시간 동안 관리되는 스레드가 계속 실행될 수 있습니다. 이렇게 디자인하면 가비지 수집이 발생하는 동안 일시 중지 시간이 더 짧아지게 됩니다.
 
 동시 가비지 수집은 전용 스레드에서 수행됩니다. 기본적으로 CLR은 단일 프로세서 및 다중 프로세서 컴퓨터에서 동시 가비지 수집을 사용하도록 설정하여 워크스테이션 가비지 수집을 실행합니다.
 

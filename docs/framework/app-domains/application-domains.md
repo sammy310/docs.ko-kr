@@ -1,5 +1,6 @@
 ---
 title: 애플리케이션 도메인
+description: 보안, 안정성, 버전 관리 및 어셈블리 언로드를 위해 .NET에서 애플리케이션 간의 격리 경계를 제공하는 애플리케이션 도메인에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903482"
 ---
 # <a name="application-domains"></a>애플리케이션 도메인
 

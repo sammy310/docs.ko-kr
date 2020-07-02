@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280792"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244012"
 ---
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
@@ -72,7 +72,7 @@ public class Program
 }
 ```
 
-이 간단한 예제에서는 `Main` 메서드 외부에서 정의된 메서드를 사용하는 것이 불필요해 보입니다. .NET Framework 2.0에는 추가 형식이 나 메서드를 지정하지 않고도 “인라인” 대리자를 만들 수 있는 ‘익명 대리자’ 개념이 도입되었습니다. 
+이 간단한 예제에서는 `Main` 메서드 외부에서 정의된 메서드를 사용하는 것이 불필요해 보입니다. .NET Framework 2.0에는 추가 형식이 나 메서드를 지정하지 않고도 “인라인” 대리자를 만들 수 있는 ‘익명 대리자’ 개념이 도입되었습니다.
 
 다음 예제에서는 익명 대리자가 목록에서 짝수 번호만 필터링하고 콘솔에 출력합니다.
 
@@ -106,9 +106,9 @@ public class Program
 }
 ```
 
-보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐이지만, 별도의 정의가 아니라 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 메서드 호출에서 ‘임시로’ 도입되었습니다. 
+보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐입니다. 별도의 정의가 아니라 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 메서드 호출에서 ‘임시로’ 도입되었습니다.
 
-그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 *람다 식*이 유용합니다. 람다 식 또는 줄여서 “람다”는 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 람다 식은 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 왼쪽 항으로 또는 다양한 LINQ 절과 메서드에서 직접 할당할 수 있습니다.
+그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 *람다 식*이 유용합니다. 람다 식 또는 줄여서 “람다”는 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 람다 식은 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 오른쪽 항으로 또는 다양한 LINQ 절과 메서드에서 직접 할당할 수 있습니다.
 
 람다 식은 대리자를 지정하는 또 다른 방법이므로 익명 대리자 대신 람다 식을 사용하도록 위의 샘플을 다시 작성할 수 있어야 합니다.
 

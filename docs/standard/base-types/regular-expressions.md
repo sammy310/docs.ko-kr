@@ -1,5 +1,6 @@
 ---
 title: .NET Framework 정규식
+description: .NET에서 정규식을 사용하여 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하고, 텍스트 부분 문자열로 작업하고, 추출된 문자열을 컬렉션에 추가합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635718"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768835"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 
@@ -99,7 +100,7 @@ ms.locfileid: "80635718"
   
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드가 정규식 옵션이 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>로 설정된 상태로 호출됩니다. 따라서 찾기 작업은 대/소문자를 구분하지 않으며, 이 예제에서는 부분 문자열 "This this"를 중복으로 식별합니다.  
   
- 입력 문자열에 하위 문자열 “this? This”가 포함되어 있습니다. 그러나 문장 부호가 중간에 있어 이는 중복으로 식별되지 않습니다.  
+ 입력 문자열에 하위 문자열 “this? This"가 포함되어 있습니다. 그러나 문장 부호가 중간에 있어 이는 중복으로 식별되지 않습니다.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>예제 3: 동적으로 문화권 구분 정규식 작성  
 

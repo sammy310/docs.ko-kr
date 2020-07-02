@@ -1,5 +1,6 @@
 ---
 title: XML 스키마 읽기 및 쓰기
+description: SOM(스키마 개체 모델) API를 사용하여 .NET의 파일 또는 다른 소스에서 XSD(XML 스키마 정의 언어) 스키마를 읽고 씁니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 874b0bdb0e13d545cfff4c813881f1398a8f9487
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291255"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767665"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML 스키마 읽기 및 쓰기
 SOM(스키마 개체 모델) API를 사용하여 파일 또는 기타 소스에서 XSD(XML 스키마 정의 언어) 스키마를 읽고 쓸 수 있으며 W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항에 정의된 구조에 매핑되는 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용하여 메모리 내 XML 스키마를 빌드할 수 있습니다.  

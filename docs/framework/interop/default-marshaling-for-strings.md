@@ -1,5 +1,6 @@
 ---
 title: 문자열에 대한 기본 마샬링
+description: .NET에서 인터페이스, 플랫폼 호출, 구조체 및 고정 길이 문자열 버퍼의 문자열에 대한 기본 마샬링 동작을 검토합니다.
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904119"
 ---
 # <a name="default-marshaling-for-strings"></a>문자열에 대한 기본 마샬링
 

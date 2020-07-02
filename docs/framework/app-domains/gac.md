@@ -1,5 +1,6 @@
 ---
 title: 전역 어셈블리 캐시
+description: .NET용 공용 언어 런타임이 설치된 경우 컴퓨터 전체 코드 캐시인 전역 어셈블리 캐시를 이해합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119926"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104915"
 ---
 # <a name="global-assembly-cache"></a>전역 어셈블리 캐시
 공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.  

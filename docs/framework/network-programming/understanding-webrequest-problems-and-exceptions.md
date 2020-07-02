@@ -1,13 +1,14 @@
 ---
 title: WebRequest 문제 및 예외 이해
+description: WebRequest 및 파생 클래스는 예외를 throw하여 비정상 상태를 알립니다. .NET Framework에서 이러한 조건을 확인하는 솔루션을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 172ad7508bdcac94cc278faab65a2e265b3c6a65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76743896"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502082"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest 문제 및 예외 이해
 <xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다. 이러한 문제의 해결이 분명하지 않은 경우도 있습니다.  
@@ -15,7 +16,7 @@ ms.locfileid: "76743896"
 ## <a name="solutions"></a>솔루션  
  <xref:System.Net.WebException>의 <xref:System.Net.WebException.Status%2A> 속성을 검사하여 문제를 확인합니다. 다음 표에서는 여러 상태 값과 몇 가지 가능한 해결 방법을 보여 줍니다.  
   
-|Status|세부 정보|솔루션|  
+|Status|설명|솔루션|  
 |------------|-------------|--------------|  
 |<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> 또는<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|기본 소켓에 문제가 있습니다. 연결이 재설정되었을 수 있습니다.|다시 연결하여 요청을 다시 보내세요.<br /><br /> 최신 서비스 팩이 설치되어 있는지 확인합니다.<br /><br /> <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType> 속성 값을 늘립니다.<br /><br /> <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType>를 `false`로 설정합니다.<br /><br /> <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 속성을 사용하여 최대 연결 수를 늘립니다.<br /><br /> 프록시 구성을 확인합니다.<br /><br /> SSL을 사용하는 경우 서버 프로세스에 인증서 저장소에 액세스할 수 있는 권한이 있는지 확인합니다.<br /><br /> 대량 데이터를 보내는 경우 <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A>을 `false`로 설정합니다.|  
 |<xref:System.Net.WebExceptionStatus.TrustFailure>|서버 인증서의 유효성을 검사할 수 없습니다.|Internet Explorer를 사용하여 URI를 열려고 합니다. IE에 표시되는 보안 경고를 해결합니다. 보안 경고를 해결할 수 없는 경우 `true`를 반환하는 <xref:System.Net.ICertificatePolicy>를 구현하는 인증서 정책 클래스를 만든 후 <xref:System.Net.ServicePointManager.CertificatePolicy%2A>에 전달할 수 있습니다.<br /><br /> <https://support.microsoft.com/?id=823177>을 참조하세요.<br /><br /> 서버 인증서에 서명한 인증 기관의 인증서가 Internet Explorer의 신뢰할 수 있는 인증 기관 목록에 추가되었는지 확인합니다.<br /><br /> URL의 호스트 이름이 서버 인증서의 일반 이름과 일치하는지 확인합니다.|  
@@ -28,7 +29,7 @@ ms.locfileid: "76743896"
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|도메인 이름 서비스가 프록시 호스트 이름을 확인할 수 없습니다.|프록시를 올바르게 구성합니다. <https://support.microsoft.com/?id=318140>을 참조하세요.<br /><br /> <xref:System.Net.HttpWebRequest.Proxy%2A> 속성을 `null`로 설정하여 <xref:System.Net.HttpWebRequest>가 프록시를 사용하지 않도록 강제로 적용합니다.|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|서버 응답이 유효한 HTTP 응답이 아닙니다. 이 문제는 .NET Framework에서 서버 응답이 HTTP 1.1 RFC에 맞지 않는 것을 감지할 경우 발생합니다. 응답에 잘못된 헤더 또는 잘못된 헤더 구분 기호가 포함된 경우 이 문제가 발생할 수 있습니다. RFC 2616에서는 HTTP 1.1 및 서버 응답에 유효한 형식을 정의합니다. 자세한 내용은 [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에서 [RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://tools.ietf.org/html/rfc2616)을 참조하세요.|트랜잭션의 네트워크 추적을 가져오고 응답의 헤더를 검사합니다.<br /><br /> 애플리케이션에 구문 분석 없이 서버 응답이 필요한 경우(보안 문제가 발생할 수 있음) 구성 파일에서 `useUnsafeHeaderParsing`을 `true`로 설정합니다. [\<httpWebRequest> 요소(네트워크 설정)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)를 참조하세요.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>

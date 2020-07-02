@@ -1,5 +1,6 @@
 ---
 title: Peverify.exe(PEVerify 도구)
+description: Peverify.exe(이식 가능한 실행 파일 확인)를 사용하면 MSIL(Microsoft 중간 언어) 코드 및 메타데이터가 .NET의 형식 안전성 표준을 충족하는지 확인할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - portable executable files, PEVerify
@@ -10,19 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104976"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325628"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
-PEVerify 도구를 사용하면 MSIL(Microsoft Intermediate Language)을 생성하는 개발자(컴파일러 작성자, 스크립트 엔진 개발자 등)는 MSIL 코드 및 관련 메타데이터가 형식 안전성 요구 사항을 충족시키는지 여부를 쉽게 확인할 수 있습니다. 일부 컴파일러에서는 특정 언어 구문을 사용하지 않는 경우에만 확인 가능한 형식 안전 코드가 생성됩니다. 이러한 컴파일러를 사용하는 개발자라면 해당 코드의 형식이 안전한지를 확인하려고 할 것입니다. 이런 경우, 해당 파일에 대해 PEVerify 도구를 실행하면 MSIL 및 메타데이터를 검사할 수 있습니다.  
+
+MSIL(Microsoft 중간 언어)을 생성하는 개발자(컴파일러 작성자, 스크립트 엔진 개발자 등)는 PEVerify 도구를 사용하여 MSIL 코드 및 관련 메타데이터가 형식 안전성 요구 사항을 충족하는지 쉽게 확인할 수 있습니다. 일부 컴파일러에서는 특정 언어 구문을 사용하지 않는 경우에만 확인 가능한 형식 안전 코드가 생성됩니다. 이러한 컴파일러를 사용하는 경우 해당 코드의 형식 안전성이 손상되지 않았는지 확인하는 것이 좋습니다. 해당 파일에 대해 PEVerify 도구를 실행하면 MSIL 및 메타데이터를 검사할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
-  
- 명령 프롬프트에 다음을 입력합니다.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ peverify filename [options]
 |**/ignore=** *hex.code* [, *hex.code*]|지정된 오류 코드를 무시합니다.|  
 |**/ignore=@** *responseFile*|지정된 지시 파일에 나열된 오류 코드를 무시합니다.|  
 |**/il**|*filename*으로 지정된 어셈블리에 구현된 메서드에 대해 MSIL 형식 안전성 확인 검사를 수행합니다. **/quiet** 옵션을 지정하지 않으면 발견된 각 문제점에 대해 자세한 설명이 반환됩니다.|  
-|**/md**|*filename*으로 지정된 어셈블리에 대해 메타데이터 유효성 검사를 수행합니다. 이 작업은 파일 내의 전체 메타데이터 구조에 대해 수행되며, 발생한 모든 유효성 검사 문제를 보고합니다.|  
+|**/md**|*filename*으로 지정된 어셈블리에 대해 메타데이터 유효성 검사를 수행합니다. 이 옵션은 파일 내의 전체 메타데이터 구조에 대해 수행되며, 발생한 모든 유효성 검사 문제를 보고합니다.|  
 |**/nologo**|제품 버전과 저작권 정보를 표시하지 않습니다.|  
 |**/nosymbols**|.NET Framework 버전 2.0에서 이전 버전과의 호환성에 대한 줄 번호를 표시하지 않습니다.|  
 |**/quiet**|자동 모드를 지정합니다. 즉, 확인 문제 보고서를 출력하지 않습니다. Peverify.exe를 통해 파일의 형식 안전성 여부는 보고되지만, 형식 안전성 확인을 방해하는 문제점에 대한 정보는 보고되지 않습니다.|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  Peverify.exe를 사용하여 데이터 흐름 분석과 올바른 메타데이터에 대한 수백 개의 규칙 목록에 따라 포괄적인 MSIL 확인 검사를 수행할 수 있습니다. Peverify.exe를 사용하여 수행하는 검사에 대한 자세한 내용은 Windows SDK의 Tools Developers Guide 폴더에 있는 "메타데이터 유효성 검사 사양" 및 "MSIL 명령 집합 사양"을 참조하세요.  
   
- .NET Framework 버전 2.0 이상은 `byref`, `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` 등의 MSIL 지침을 사용하여 지정된 확인할 수 있는 `unbox` 반환을 지원합니다.  
+.NET Framework 버전 2.0 이상은 `dup`, `ldsflda`, `ldflda`, `ldelema`, `call`, `unbox` 등의 MSIL 지침을 사용하여 지정된 확인할 수 있는 `byref` 반환을 지원합니다.  
   
 ## <a name="examples"></a>예  
  다음 명령을 사용하여 어셈블리 `myAssembly.exe`에 구현된 메서드에 대해 메타데이터 유효성 검사 및 MSIL 형식 안전성 확인 검사를 수행합니다.  

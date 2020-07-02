@@ -1,5 +1,6 @@
 ---
 title: 플러그형 프로토콜 프로그래밍
+description: 추상 WebRequest 및 WebResponse 클래스가 플러그형 프로토콜을 지원함으로써 프로토콜을 지정하지 않고 애플리케이션에서 데이터를 가져올 수 있게 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047395"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502199"
 ---
 # <a name="programming-pluggable-protocols"></a>플러그형 프로토콜 프로그래밍
 추상 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스에서 플러그형 프로토콜의 기초를 제공합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 프로토콜별 클래스를 파생시키면, 애플리케이션에서 사용할 프로토콜을 지정하지 않아도 인터넷 리소스에서 데이터를 요청하고 응답을 읽을 수 있습니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "71047395"
   
  플러그형 프로토콜을 이용하려면 <xref:System.Net.WebRequest> 하위 항목에서 프로토콜별 속성을 설정하지 않아도 되는 기본 요청 및 응답 트랜잭션을 제공해야 합니다. 예를 들어 HTTP의 <xref:System.Net.WebRequest> 클래스를 구현하는 <xref:System.Net.HttpWebRequest> 클래스에서 기본적으로 `GET` 요청을 제공하고 웹 서버에서 반환된 스트림을 포함하는 <xref:System.Net.HttpWebResponse>를 반환합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WebRequest에서 파생](deriving-from-webrequest.md)
 - [WebResponse에서 파생](deriving-from-webresponse.md)

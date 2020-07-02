@@ -1,5 +1,6 @@
 ---
 title: 스레드 및 스레딩
+description: 프로세스와 스레드, 다중 스레드 사용 시기, 다중 스레딩을 사용해 .NET의 응답성이나 처리량을 높이는 방법을 포함하여 스레딩에 대해 알아봅니다.
 ms.date: 11/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: bac2a3ca3278b48b35d0372d52bcb79025ba1148
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739720"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583403"
 ---
 # <a name="threads-and-threading"></a>스레드 및 스레딩
 

@@ -1,5 +1,6 @@
 ---
 title: 오류 처리
+description: WebRequest 및 WebResponse가 throw하는 시스템 및 웹 관련 예외에 대해 알아봅니다. Status 속성을 사용하여 문제를 확인하고 해결합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180867"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502576"
 ---
 # <a name="handling-errors"></a>오류 처리
 
@@ -168,7 +169,7 @@ End Try
   
 **SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET의 예외 처리 및 Throw](../../standard/exceptions/index.md)
 - [데이터 요청](requesting-data.md)

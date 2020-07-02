@@ -1,5 +1,6 @@
 ---
 title: 데이터 병렬 처리(작업 병렬 라이브러리)
+description: TPL(작업 병렬 라이브러리)에서 .NET의 소스 컬렉션이나 배열의 요소에 대해 동일한 작업을 동시에 수행하도록 데이터 병렬 처리를 지원하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: d7500666f12624d1a81d399a325827a416e5af3c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594467"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>데이터 병렬 처리(작업 병렬 라이브러리)
 *데이터 병렬 처리*는 소스 컬렉션 또는 배열의 요소에서 동일한 작업이 동시에(즉, 병렬로) 수행되는 시나리오를 가리킵니다. 데이터 병렬 작업에서 소스 컬렉션은 여러 스레드가 서로 다른 세그먼트에서 동시에 작동할 수 있도록 분할됩니다.  

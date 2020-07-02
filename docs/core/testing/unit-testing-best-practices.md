@@ -4,12 +4,12 @@ description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989376"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324480"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -24,7 +24,7 @@ ms.locfileid: "84989376"
 ### <a name="less-time-performing-functional-tests"></a>기능 테스트 수행 시간 단축
 기능 테스트는 비용이 많이 듭니다. 일반적으로 애플리케이션을 열고 사용자(또는 다른 사용자)가 예상되는 동작의 유효성을 검사하기 위해 따라야 하는 일련의 단계 수행이 포함됩니다. 이러한 단계는 항상 테스터에게 알려진 것은 아니며, 이는 테스트를 수행하기 위해 해당 영역에 더 많은 지식을 갖추어야 함을 의미합니다. 테스트 자체는 사소한 변경인 경우에는 몇 초가 걸리거나 큰 변경의 경우에는 몇 분 정도 걸릴 수 있습니다. 마지막으로, 이 프로세스는 시스템에서 수행하는 모든 변경 사항에 대해 반복되어야 합니다.
 
-반면에 단위 테스트는 밀리초가 소요되며, 단추를 눌러 실행할 수 있으며 시스템 전체에 대한 지식이 반드시 필요하지는 않습니다. 테스트 통과 또는 실패 여부는 개인이 아닌 test runner의 몫입니다.
+반면에 단위 테스트는 밀리초가 소요되고 단추를 눌러 실행할 수 있으며 시스템 전체에 대한 정보가 반드시 필요하지는 않습니다. 테스트 통과 또는 실패 여부는 개인이 아닌 test runner의 몫입니다.
 
 ### <a name="protection-against-regression"></a>회귀에 대한 보호
 회귀 오류는 애플리케이션이 변경될 때 도입된 결함입니다. 테스터는 새 기능을 테스트할 뿐만 아니라 이전에 구현된 기능이 여전히 예상대로 작동하는지 확인하기 위해 이전에 존재했던 기능도 테스트하는 것이 일반적입니다.
@@ -56,11 +56,11 @@ ms.locfileid: "84989376"
 높은 코드 검사 비율은 성공의 지표도 아니고 높은 코드 품질을 의미하지도 않습니다. 단위 테스트에서 검사되는 코드의 양을 나타낼 뿐입니다. 자세한 내용은 [유닛 테스트 코드 검사](unit-testing-code-coverage.md)를 참조하세요.
 
 ## <a name="lets-speak-the-same-language"></a>동일한 언어 사용
-*mock*이라는 용어는 불행히도 테스트에 대해 이야기할 때 잘못 사용됩니다. 다음은 단위 테스트를 작성할 때 *fakes*의 가장 일반적인 유형을 정의합니다.
+*mock*이라는 용어는 불행히도 테스트에 대해 이야기할 때 종종 잘못 사용됩니다. 다음은 단위 테스트를 작성할 때 *fakes*의 가장 일반적인 유형을 정의합니다.
 
-*Fake* - fake는 stub 또는 mock 개체를 설명하는 데 사용할 수 있는 일반적인 용어입니다. stub 또는 mock인지 여부는 사용되는 컨텍스트에 따라 달라집니다. 즉, fake는 stub 또는 mock이 될 수 있습니다.
+*Fake* - fake는 스텁 또는 모의 개체를 설명하는 데 사용할 수 있는 일반적인 용어입니다. stub 또는 mock인지 여부는 사용되는 컨텍스트에 따라 달라집니다. 즉, fake는 stub 또는 mock이 될 수 있습니다.
 
-*Mock* - mock 개체는 단위 테스트가 통과되었는지 여부를 결정하는 시스템에서 fake 개체입니다. mock은 어설션될 때까지 Fake로 시작합니다.
+*Mock* - mock 개체는 단위 테스트가 통과되었는지 여부를 결정하는 시스템에서 fake 개체입니다. mock은 어설션될 때까지 fake로 시작합니다.
 
 *Stub* - stub은 시스템의 기존 종속성(또는 협력자)을 제어할 수 있는 대체품입니다. stub을 사용하여 종속성을 직접 처리하지 않고 코드를 테스트할 수 있습니다. 기본적으로 fake는 stub으로 시작합니다.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-이는 stub이 mock이라고 불리는 예입니다. 이 경우 stub입니다. `Purchase`(테스트 중인 시스템)를 인스턴스화할 수 있는 수단으로 Order를 전달합니다. `MockOrder` 이름도 매우 잘못된 것입니다. 다시 말해서, 순서가 mock이 아니기 때문입니다.
+이는 stub이 mock이라고 불리는 예입니다. 이 경우 stub입니다. `Purchase`(테스트 중인 시스템)를 인스턴스화할 수 있는 수단으로 Order를 전달합니다. `MockOrder` 이름도 잘못된 것입니다. 다시 말해서, 순서가 mock이 아니기 때문입니다.
 
 더 나은 방법은
 
@@ -106,7 +106,7 @@ Assert.True(mockOrder.Validated);
 > [!IMPORTANT]
 > 이 용어를 올바르게 사용하는 것이 중요합니다. stubs를 "mocks"라고 부른다면 다른 개발자는 의도에 대해 잘못된 가정을 하게 될 것입니다.
 
-mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같지만, mock 개체에 대해 어설션하는 반면 stub에 대해서는 어설션하지 않습니다.
+mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같지만, 모의 개체에 대해 어설션하는 반면 stub에 대해서는 어설션하지 않습니다.
 
 ## <a name="best-practices"></a>최선의 구현 방법
 
@@ -210,7 +210,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 - 모든 코트가 각 테스트 내에서 볼 수 있기 때문에 테스트를 읽을 때 혼동이 적습니다.
 - 지정된 테스트에 대해 너무 많거나 너무 적게 설정될 가능성이 줄어듭니다.
-- 테스트 간 원치 않는 종속성을 만드는 테스트 간에 상태를 공유할 가능성이 줄어듭니다.
+- 테스트 간 상태 공유로 테스트 간에 원치 않는 종속성이 생길 가능성이 줄어듭니다.
 
 단위 테스트 프레임워크에서 `Setup`은 단위 테스트 도구 모음 내의 각각의 모든 단위 테스트 전에 호출됩니다. 일부는 이를 유용한 도구로 볼 수 있지만, 일반적으로 테스트를 읽기에는 비대해지고 어렵워집니다. 각 테스트는 일반적으로 테스트를 시작하고 실행하기 위한 요구 사항이 다릅니다. 아쉽게도 `Setup`에서는 각 테스트에 대해 정확히 동일한 요구 사항을 사용해야 합니다.
 

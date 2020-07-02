@@ -1,14 +1,14 @@
 ---
 title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구를 설치, 업그레이드, 다운그레이드 및 제거하는 방법에 대해 알아봅니다.
-ms.date: 12/18/2019
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848641"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602273"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -21,13 +21,13 @@ ML.NET CLI는 AutoML(자동화된 Machine Learning) 및 학습 데이터 세트�
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (선택 사항) [Visual Studio 2017 또는 2019](https://visualstudio.microsoft.com/vs/)
+- (선택 사항) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
 `F5` 키를 누르거나 `dotnet run`(.NET Core CLI)을 사용하여 Visual Studio에서 생성된 C# 코드 프로젝트를 실행할 수 있습니다.
 
-참고: [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) 설치 후 `dotnet tool` 명령이 작동하지 않는 경우 Windows에서 로그아웃했다가 다시 로그인합니다.
+참고: .NET Core SDK 설치 후 `dotnet tool` 명령이 작동하지 않는 경우 Windows에서 로그아웃했다가 다시 로그인합니다.
 
 ## <a name="install"></a>설치
 
@@ -54,7 +54,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 mlnet
 ```
 
-'auto-train' 명령처럼 mlnet 도구에 대해 사용 가능한 명령의 도움말을 참조해야 합니다.
+‘classification’ 명령처럼 mlnet 도구에 대해 사용 가능한 명령의 도움말을 참조해야 합니다.
 
 ## <a name="install-a-specific-release-version"></a>특정 릴리스 버전 설치
 

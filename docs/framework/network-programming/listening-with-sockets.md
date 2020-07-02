@@ -1,5 +1,6 @@
 ---
 title: 소켓으로 수신
+description: 서버 소켓이 네트워크에서 포트를 열고 해당 포트에 대한 클라이언트 연결을 대기하는 원격 서비스를 만드는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180738"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502316"
 ---
 # <a name="listening-with-sockets"></a>소켓으로 수신
 수신기 또는 서버 소켓에서 네트워크의 포트를 열고 클라이언트가 해당 포트에 연결할 때까지 기다립니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 TCP/IP 네트워크에 대한 원격 서비스를 만드는 방법을 보여 줍니다.  
@@ -59,7 +60,7 @@ listener.Listen(100);
   
  **Listen** 메서드는 연결 중인 클라이언트에 서버 사용 중 오류가 반환되기 전에 **Socket**에 대해 허용되는 보류 연결 수를 지정하는 단일 매개 변수를 사용합니다. 이 경우 클라이언트 번호 101에 서버 사용 중 응답이 반환되기 전에 최대 100개의 클라이언트를 연결 큐에 둡니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [동기 서버 소켓 사용](using-a-synchronous-server-socket.md)
 - [비동기 서버 소켓 사용](using-an-asynchronous-server-socket.md)

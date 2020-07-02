@@ -1,5 +1,6 @@
 ---
 title: 네트워크 프로그래밍의 보안 - .NET Framework
+description: 많이 사용되는 애플리케이션 인증 메커니즘 및 .NET Framework System.Net 네임스페이스 클래스에서 지원하는 코드 액세스 권한에 대해 알아봅니다.
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 546e7223ba4af3029a798fb3edfb503c07e1ab4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989235"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502173"
 ---
 # <a name="security-in-network-programming"></a>네트워크 프로그래밍의 보안
 

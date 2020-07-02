@@ -1,5 +1,6 @@
 ---
 title: TAP(작업 기반 비동기 패턴)
+description: TAP(작업 기반 비동기 패턴)에 대해 알아봅니다. TAP은 .NET에서의 개발을 위해 권장되는 비동기 디자인 패턴입니다.
 ms.date: 02/26/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +13,16 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21675d26fa2f11d93801e2ba4ffec96b238b97b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276441"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325078"
 ---
-# <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
-TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
+# <a name="task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴
+
+TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용하는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
   
 ## <a name="naming-parameters-and-return-types"></a>이름 지정, 매개 변수 및 반환 형식
 
@@ -28,7 +30,7 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
   
  TAP 메서드는 해당 동기 메서드가 void를 반환하는지 또는 `TResult` 형식을 반환하는지에 따라 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환합니다.  
   
- TAP 메서드의 매개 변수는 해당 동기 메서드의 매개 변수와 일치해야 하며 동일한 순서로 제공되어야 합니다.  그러나, `out` 및 `ref` 매개 변수는 이 규칙에서 제외되므로 사용하지 말아야 합니다. `out` 또는 `ref` 매개 변수를 통해 반환된 데이터는 `TResult`에 의해 반환되는 <xref:System.Threading.Tasks.Task%601>의 일부로 대신 반환되어야 하며, 여러 값을 수용하기 위해 튜플 또는 사용자 지정 데이터 구조를 사용해야 합니다. TAP 메서드의 동기 메서드가 매개 변수를 제공하지 않는 경우에도 <xref:System.Threading.CancellationToken> 매개 변수 추가를 고려해야 합니다.
+ TAP 메서드의 매개 변수는 해당 동기 메서드의 매개 변수와 일치해야 하며 동일한 순서로 제공되어야 합니다.  그러나, `out` 및 `ref` 매개 변수는 이 규칙에서 제외되므로 사용하지 말아야 합니다. `out` 또는 `ref` 매개 변수를 통해 반환된 데이터는 `TResult`에 의해 반환되는 <xref:System.Threading.Tasks.Task%601>의 일부로 대신 반환되어야 하며, 여러 값을 수용하기 위해 튜플 또는 사용자 지정 데이터 구조를 사용해야 합니다. 또한 TAP 메서드의 동기 메서드가 매개 변수를 제공하지 않는 경우에도 <xref:System.Threading.CancellationToken> 매개 변수를 추가하는 것이 좋습니다.
 
  작업의 생성, 조작 또는 조합에만 사용되는 메서드(메서드의 비동기 의도는 메서드 이름 또는 메서드가 속해 있는 형식의 이름에 분명하게 나타나 있음)는 이 명명 패턴을 따를 필요가 없습니다. 이런 메서드를 흔히 조합기라고 합니다. 조합기의 예로는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A>가 있으며, [작업 기반 비동기 패턴 사용](consuming-the-task-based-asynchronous-pattern.md) 문서의 [기본 제공 작업 기반 조합기 사용](consuming-the-task-based-asynchronous-pattern.md#combinators) 섹션에서 해당 설명을 확인할 수 있습니다.  
   
@@ -44,7 +46,7 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
  경우에 따라 작업을 완료하는 데 필요한 작업 시간이 비동기적으로 작업을 실행하는 데 필요한 작업 시간보다 적을 수 있습니다. 이미 메모리에 버퍼링된 데이터로 읽기 작업을 충족할 수 있는 스트림에서 읽기는 이러한 시나리오의 예입니다. 경우에 따라 작업을 동기적으로 완료하고 이미 완료된 작업을 반환할 수 있습니다.  
   
 ## <a name="exceptions"></a>예외  
- 비동기 메서드는 사용 오류에 응답에서만 비동기 메서드 호출에서 throw할 예외를 발생시켜야 합니다. 프로덕션 코드에서는 사용 오류가 절대 발생해서는 안 됩니다. 예를 들어, null 참조(Visual Basic에서 `Nothing`)를 오류 상태(일반적으로 <xref:System.ArgumentNullException>으로 표시되는 예외)를 유발하는 메서드 인수 중 하나로 전달하는 경우 null 참조가 전달되지 않도록 호출 코드를 수정할 수 있습니다. 기타 모든 오류에 대해 작업이 반환되기 전에 비동기 메서드가 완전하게 동기화되었다고 해도 비동기 메서드가 실행되는 동안 발생하는 예외를 반환된 작업에 할당해야 합니다. 일반적으로 작업에는 최대 하나의 예외가 포함됩니다. 그러나 <xref:System.Threading.Tasks.Task.WhenAll%2A>과 같이 작업이 여러 작업을 나타내는 경우 여러 예외가 단일 작업에 연결될 수 있습니다.  
+ 비동기 메서드는 사용 오류에 응답에서만 비동기 메서드 호출에서 throw할 예외를 발생시켜야 합니다. 프로덕션 코드에서는 사용 오류가 절대 발생해서는 안 됩니다. 예를 들어, null 참조(Visual Basic에서 `Nothing`)를 오류 상태(일반적으로 <xref:System.ArgumentNullException> 예외로 표시됨)를 유발하는 메서드 인수 중 하나로 전달하는 경우 null 참조가 전달되지 않도록 호출 코드를 수정할 수 있습니다. 기타 모든 오류에 대해 작업이 반환되기 전에 비동기 메서드가 완전하게 동기화되었다고 해도 비동기 메서드가 실행되는 동안 발생하는 예외를 반환된 작업에 할당해야 합니다. 일반적으로 작업에는 최대 하나의 예외가 포함됩니다. 그러나 <xref:System.Threading.Tasks.Task.WhenAll%2A>과 같이 작업이 여러 작업을 나타내는 경우 여러 예외가 단일 작업에 연결될 수 있습니다.  
   
 ## <a name="target-environment"></a>대상 환경  
  TAP 메서드를 구현하면 비동기 실행이 발생하는 위치를 확인할 수 있습니다. 스레드 풀에서 워크로드를 실행하는 방법, 대부분의 작업 실행을 위한 스레드에 바인딩하지 않고 비동기 I/O를 사용하여 구현하는 방법, UI 스레드와 같은 특정 스레드를 실행하는 방법 또는 원하는 수의 잠재 컨텍스트를 사용하는 방법 중 선택할 수 있습니다. TAP 메서드는 실행할 항목이 없을 수도 있으며 시스템 내 다른 위치에서의 조건 발생을 나타내는 <xref:System.Threading.Tasks.Task>만 반환할 수도 있습니다(예: 큐에 대기 중인 데이터 구조에 도착하는 데이터를 나타내는 작업).
@@ -78,7 +80,7 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
  [!code-csharp[Conceptual.TAP#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#2)]
  [!code-vb[Conceptual.TAP#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#2)]  
   
- `FindFilesAsync` 메서드가 특정 검색 패턴을 충족하는 모든 파일의 목록을 반환하는 경우 진행률 콜백은 완료된 작업 비율과 부분 결과의 현재 집합에 관한 예측을 제공할 수 있습니다.  튜플을 사용하여 이를 수행할 수 있습니다.  
+ `FindFilesAsync` 메서드가 특정 검색 패턴을 충족하는 모든 파일의 목록을 반환하는 경우 진행률 콜백은 완료된 작업 비율과 부분 결과의 현재 세트에 관한 예측을 제공할 수 있습니다. 튜플을 사용하여 이 정보를 제공할 수 있습니다.  
   
  [!code-csharp[Conceptual.TAP#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#3)]
  [!code-vb[Conceptual.TAP#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#3)]  
@@ -90,7 +92,7 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
   
  후자의 경우 일반적으로 특수 데이터 형식에 `ProgressInfo` 접미사가 붙습니다.  
   
- TAP 구현이 `progress` 매개 변수를 허용하는 오버로드를 제공하는 경우 진행률이 보고되지 않으면 `null`인 인수를 허용해야 합니다. TAP 구현에서는 비동기 메서드에서 신속하게 진행률을 제공하고 진행률의 소비자가 해당 정보를 다루는 방법과 가장 잘 처리할 수 있는 상황을 결정할 수 있는 <xref:System.Progress%601> 개체에 진행률을 동기적으로 보고해야 합니다. 예를 들어, 진행률 인스턴스에서 콜백 마샬링을 선택할 수 있으며, 캡처된 동기화 컨텍스트에 이벤트를 발생시킬 수 있습니다.  
+ TAP 구현이 `progress` 매개 변수를 허용하는 오버로드를 제공하는 경우 인수가 `null`일 수 있어야 하며, null인 경우 진행률이 보고되지 않습니다. TAP 구현에서는 진행률을 <xref:System.Progress%601> 개체에 동기적으로 보고해야 하므로, 비동기 메서드를 통해 진행률을 빠르게 제공합니다. 또한 진행률의 소비자가 정보를 처리하는 최선의 방법과 위치를 결정할 수 있습니다. 예를 들어, 진행률 인스턴스에서 콜백 마샬링을 선택할 수 있으며, 캡처된 동기화 컨텍스트에 이벤트를 발생시킬 수 있습니다.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 구현  
  .NET Framework 4.5는 단일 <xref:System.IProgress%601> 구현인 <xref:System.Progress%601>를 제공합니다. <xref:System.Progress%601> 클래스는 다음과 같이 선언됩니다.  
@@ -135,7 +137,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
                        progress As IProgress(Of T)) As Task  
 ```  
   
- 그러나 많은 TAP 구현에서 취소 또는 진행률 기능을 제공하지 않으므로 단일 방법이 필요합니다.  
+ 그러나 많은 TAP 구현에서 취소 또는 진행률 기능을 제공하지 않으므로 단일 메서드가 필요합니다.  
   
 ```csharp  
 public Task MethodNameAsync(…);  
@@ -187,7 +189,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
  여러 오버로드가 취소 또는 진행률을 선택하도록 노출되는 경우 취소 또는 진행률을 지원하지 않는 오버로드는 이를 지원하는 오버로드에 대해 취소의 경우 <xref:System.Threading.CancellationToken.None%2A> 및 진행률의 경우 `null`이 전달된 것처럼 동작해야 합니다.  
   
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-articles"></a>관련 문서
   
 |제목|설명|  
 |-----------|-----------------|  

@@ -1,5 +1,6 @@
 ---
 title: '방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기'
+description: .NET 4.5 설치 관리자에서 진행률을 가져오는 방법을 알아봅니다. 이 .NET 버전용 앱을 개발하는 경우 앱의 설치에 .NET 4.5 설치를 포함(연결)할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904262"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 

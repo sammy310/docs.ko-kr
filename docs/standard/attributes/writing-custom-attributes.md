@@ -1,5 +1,6 @@
 ---
 title: 사용자 지정 특성 작성
+description: .NET에서 고유의 사용자 지정 특성을 디자인합니다. 사용자 지정 특성은 본래 System.Attribute에서 직접 또는 간접적으로 파생된 클래스입니다.
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276168"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768484"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "84276168"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute>에는 사용자 지정 특성을 만드는 데 필요한 세 가지 멤버인 [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property) 및 [AllowMultiple](#allowmultiple-property)이 포함되어 있습니다.  
+ <xref:System.AttributeUsageAttribute>에는 사용자 지정 특성을 만드는 데 중요한 세 가지 멤버가 있습니다. [AttributeTargets](#attributetargets-member), [상속](#inherited-property) 및 [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 멤버  
  앞의 예제에는 특성을 모든 프로그램 요소에 적용할 수 있는 <xref:System.AttributeTargets.All?displayProperty=nameWithType>이 지정되어 있습니다. 또는 특성이 클래스에만 적용되도록 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>를 지정하거나 특성이 메서드에만 적용되도록 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>를 지정할 수 있습니다. 이러한 방법으로 사용자 지정 특성을 사용하여 모든 프로그램 요소의 설명을 표시할 수 있습니다.  
@@ -84,7 +85,7 @@ ms.locfileid: "84276168"
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
  [!code-vb[Conceptual.Attributes.Usage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#11)]  
   
- 이 특성의 인스턴스가 여러 개 적용되면 `MyAttribute`에서는 컴파일러 오류가 생성됩니다. 다음 코드 예제에서는 `YourAttribute` 를 올바르게 사용한 경우와 `MyAttribute`를 잘못 사용한 경우를 보여 줍니다.  
+ 이 특성의 인스턴스가 여러 개 적용되면 `MyAttribute` 에서는 컴파일러 오류가 생성됩니다. 다음 코드 예제에서는 `YourAttribute` 를 올바르게 사용한 경우와 `MyAttribute`를 잘못 사용한 경우를 보여 줍니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#13)]
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
@@ -146,7 +147,7 @@ ms.locfileid: "84276168"
   
  첫 번째 예제에서는 필수 요소인 명명된 매개 변수만 사용하여 적용된 특성을 보여 주고, 두 번째 예제에서는 필수 매개 변수와 선택적 매개 변수를 모두 사용하여 적용된 특성을 보여 줍니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

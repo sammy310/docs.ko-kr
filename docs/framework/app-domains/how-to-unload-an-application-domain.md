@@ -1,5 +1,6 @@
 ---
 title: '방법: 애플리케이션 도메인 언로드'
+description: AppDomain.Unload 메서드를 사용하여 지정 애플리케이션 도메인을 정상적으로 종료하는 방법을 통해 .NET에서 애플리케이션 도메인을 언로드하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b64a9553f63aa4a8deb57f23a97fa464edd64fee
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119840"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104679"
 ---
 # <a name="how-to-unload-an-application-domain"></a>방법: 애플리케이션 도메인 언로드
 애플리케이션 도메인 사용을 마쳤으면 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 메서드를 사용하여 언로드합니다. **Unload** 메서드는 지정된 애플리케이션 도메인을 정상적으로 종료합니다. 언로드 프로세스 중에는 새 스레드가 애플리케이션 도메인에 액세스할 수 없으며 모든 애플리케이션 도메인 특정 데이터 구조가 비워집니다.  

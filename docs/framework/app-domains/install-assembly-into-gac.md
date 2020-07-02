@@ -1,5 +1,6 @@
 ---
 title: '방법: 글로벌 어셈블리 캐시에 어셈블리 설치'
+description: 여러 애플리케이션에서 공유할 수 있도록 어셈블리를 .NET의 GAC(전역 어셈블리 캐시)에 설치합니다. Windows Installer 또는 GAC 유틸리티를 사용합니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155565"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104665"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에 어셈블리 설치
 
@@ -43,9 +44,9 @@ GAC에 어셈블리를 설치하기 위해 *gacutil.exe*를 사용하는 구문�
 gacutil -i <assembly name>
 ```
 
-이 명령에서 *\<어셈블리 이름>* 은 글로벌 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
+이 명령에서 *\<assembly name>* 은 전역 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
 
-*gacutil.exe*가 시스템 경로에 없는 경우 [Developer Command Prompt for VS *\<version>* ](../tools/developer-command-prompt-for-vs.md)을 사용하세요.
+*gacutil.exe*가 시스템 경로에 없는 경우 [VS *\<version>* 용 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)를 사용합니다.
 
 다음 예제는 파일 이름이 *hello.dll*인 어셈블리를 글로벌 어셈블리 캐시에 설치합니다.
 

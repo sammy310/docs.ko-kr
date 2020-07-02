@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903612"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -32,6 +32,20 @@ Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [V
 ![이식성 분석기의 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
 ApiPort 콘솔 애플리케이션을 사용하여 [ApiPort 리포지토리](https://aka.ms/apiportdownload)에서 다운로드할 수도 있습니다. `listTargets` 명령 옵션을 사용하여 사용 가능한 대상 목록을 표시한 다음, `-t` 또는 `--target` 명령 옵션을 지정하여 대상 플랫폼을 선택할 수 있습니다.
+
+### <a name="solution-wide-view"></a>솔루션 전체 보기
+
+많은 프로젝트에서 솔루션을 분석하는 데 있어 유용한 단계는 종속성을 시각화하여 어느 어셈블리의 하위 집합이 무엇에 종속되는지 이해하는 것입니다. 일반적인 권장 사항은 종속성 그래프의 리프 노드부터 시작하여 분석 결과를 상향식으로 적용하는 것입니다.
+
+검색하려면 다음 명령을 실행할 수 있습니다.
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+Visual Studio에서 열면 다음과 같은 결과가 나타납니다.
+
+![DGML 분석의 스크린샷](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>이식성 분석
 Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.

@@ -1,5 +1,6 @@
 ---
 title: 프록시 구성
+description: 적응형 및 정적 프록시 서버를 구성하는 방법을 알아봅니다. 프록시 구성에서는 프록시 서버가 클라이언트의 리소스 요청을 처리하는 방법을 제어합니다.
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047352"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141607"
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "71047352"
 <system.net>  
     <defaultProxy>  
         <proxy  proxyaddress="http://proxy.contoso.com:3128"  
-                bypassonlocal="true"  
+                bypassonlocal="True"  
         />  
         <bypasslist>  
             <add address="[a-z]+.blueyonderairlines.com$" />  
@@ -75,7 +76,7 @@ ms.locfileid: "71047352"
 </system.net>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>

@@ -1,6 +1,6 @@
 ---
 title: 공용 형식 시스템
-description: .NET의 형식 시스템에 대해 알아봅니다.
+description: .NET의 형식 시스템을 살펴봅니다. .NET의 형식(값 형식 또는 참조 형식), 형식 정의, 형식 멤버, 형식 멤버의 특성에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289345"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767834"
 ---
 # <a name="common-type-system"></a>CTS(공용 형식 시스템)
 

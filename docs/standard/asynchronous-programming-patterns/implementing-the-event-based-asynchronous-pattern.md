@@ -1,5 +1,6 @@
 ---
 title: 이벤트 기반 비동기 패턴 구현
+description: .NET에서 EAP(이벤트 기반 비동기 패턴)를 구현하는 방법을 알아봅니다. EAP는 비동기 기능을 포함하는 클래스를 패키징하는 표준 방법입니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904379"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 
-상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.
+상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴](event-based-asynchronous-pattern-overview.md)을 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.
 
 이벤트 기반 비동기 패턴은 비동기 기능을 포함하는 클래스를 패키지하는 표준화된 방법을 제공합니다. <xref:System.ComponentModel.AsyncOperationManager>와 같은 도우미 클래스를 구현한 경우 클래스는 ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 비롯한 모든 애플리케이션 모델에서 올바르게 작동합니다.
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144749"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767782"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -94,7 +94,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
     - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.
     - **설치** 단추를 선택합니다.
     - **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
-    - **Microsoft.ML.ImageAnalytics** 및 **Microsoft.ML.OnnxTransformer**에 대해 이 단계를 반복합니다.
+    - **Microsoft.ML.ImageAnalytics**, **Microsoft.ML.OnnxTransformer** 및 **Microsoft.ML.OnnxRuntime**에 대해 이 단계를 반복합니다.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>데이터 및 미리 학습된 모델 준비
 

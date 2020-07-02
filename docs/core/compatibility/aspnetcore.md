@@ -2,15 +2,15 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 06/11/2020
+ms.date: 06/23/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803279"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325455"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -45,15 +45,18 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [HTTP: 응답 본문 인프라 변경](#http-response-body-infrastructure-changes)
 - [HTTP: 일부 쿠키 SameSite 기본값이 변경됨](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: 기본적으로 사용하지 않도록 설정된 동기 IO](#http-synchronous-io-disabled-in-all-servers)
+- [HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [ID: AddDefaultUI 메서드 오버로드가 제거됨](#identity-adddefaultui-method-overload-removed)
 - [ID: UI 부트스트랩 버전 변경](#identity-default-bootstrap-version-of-ui-changed)
 - [ID: SignInAsync는 인증되지 않은 ID에 대해 예외를 throw합니다.](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [ID: SignInManager 생성자는 새 매개 변수를 허용합니다.](#identity-signinmanager-constructor-accepts-new-parameter)
 - [ID: UI는 정적 웹 자산 기능을 사용합니다.](#identity-ui-uses-static-web-assets-feature)
-- [Kestrel: 런타임의 구성 변경 내용이 기본적으로 검색됨](#kestrel-configuration-changes-at-run-time-detected-by-default)
+- [IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨](#iis-urlrewrite-middleware-query-strings-are-preserved)
+- [Kestrel: 런타임의 구성 변경 사항이 기본적으로 검색됨](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: 연결 어댑터가 제거됨](#kestrel-connection-adapters-removed)
 - [Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: 빈 HTTPS 어셈블리가 제거됨](#kestrel-empty-https-assembly-removed)
+- [Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
 - [Kestrel: 요청 후행부 헤더가 새 컬렉션으로 이동됨](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: 전송 추상화 계층 변경](#kestrel-transport-abstractions-removed-and-made-public)
 - [지역화: 사용되지 않음으로 표시된 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -100,10 +103,22 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
 [!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
 
 ***
 [!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
 
 ***
 

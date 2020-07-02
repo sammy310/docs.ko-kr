@@ -1,5 +1,6 @@
 ---
 title: TCP-UDP
+description: TcpClient, TcpListener 및 UdpClient 클래스 TCP 및 UDP 서비스를 처리하는 방법에 대해 알아봅니다. .NET Framework에서 데이터 전송의 세부 정보를 처리합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, TCP/UDP
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047106"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502095"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 애플리케이션은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "71047106"
   
  **UdpClient** 클래스는 바이트 배열을 사용하여 UDP 데이터그램을 보유합니다. <xref:System.Net.Sockets.UdpClient.Send%2A> 메서드를 사용하여 네트워크에 데이터를 보내고 <xref:System.Net.Sockets.UdpClient.Receive%2A> 메서드를 사용하여 들어오는 데이터그램을 받습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [TCP 서비스 사용](using-tcp-services.md)
 - [UDP 서비스 사용](using-udp-services.md)

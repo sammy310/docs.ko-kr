@@ -1,5 +1,6 @@
 ---
 title: 인터넷 인증
+description: System.Net 클래스가 .NET Framework에서 애플리케이션에 대해 지원하는 다양한 클라이언트 인증 메커니즘에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047913"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502381"
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "71047913"
   
  일부 인증 체계에서는 리소스에 대한 요청을 먼저 만들지 않고 사용자를 인증할 수 있습니다. 애플리케이션은 리소스에서 사용자를 사전 인증하여 서버에 대한 하나 이상의 왕복을 제거하는 방식으로 시간을 단축할 수 있습니다. 또는 나중에 사용자에게 더 빨리 응답할 수 있도록 프로그램 시작 중에 인증을 수행할 수 있습니다. 사전 인증을 사용하는 인증 체계는 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 속성을 **true**로 설정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 인증 및 다이제스트 인증](basic-and-digest-authentication.md)
 - [NTLM 및 Kerberos 인증](ntlm-and-kerberos-authentication.md)

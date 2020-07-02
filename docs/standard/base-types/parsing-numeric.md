@@ -1,5 +1,6 @@
 ---
 title: .NET에서 숫자 문자열 구문 분석
+description: .NET의 숫자 문자열 구문 분석에 대해 알아봅니다. 형식 공급자, NumberStyles 열거형 값, 유니코드 숫자를 사용하여 구문 분석하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 000419e63e86607cd76728ae6e15ac6cd67b87f4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589541"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET에서 숫자 문자열 구문 분석
 모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](standard-numeric-format-strings.md) 및 [사용자 지정 숫자 서식 문자열](custom-numeric-format-strings.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수 10진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.  
@@ -81,8 +82,8 @@ ms.locfileid: "84277650"
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.NumberStyles>
-- [문자열 구문 분석](parsing-strings.md)
+- [.NET에서 문자열 구문 분석](parsing-strings.md)
 - [형식 서식 지정](formatting-types.md)

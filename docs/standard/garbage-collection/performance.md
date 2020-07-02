@@ -1,17 +1,18 @@
 ---
 title: 가비지 컬렉션 및 성능
+description: 가비지 수집 및 메모리 사용량과 관련된 문제에 대해 알아봅니다. 가비지 수집이 애플리케이션에 미치는 영향을 최소화하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287625"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662851"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 

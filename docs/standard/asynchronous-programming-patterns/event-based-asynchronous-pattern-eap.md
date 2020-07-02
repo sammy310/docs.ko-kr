@@ -1,5 +1,6 @@
 ---
 title: 이벤트 기반 비동기 패턴(EAP)
+description: 구현, 모범 사례, EAP 클라이언트 구현 등과 같은 .NET의 EAP(이벤트 기반 비동기 패턴)에 대한 문서의 링크를 참조하세요.
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289436"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768874"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>이벤트 기반 비동기 패턴(EAP)
 
@@ -44,7 +45,7 @@ ms.locfileid: "84289436"
  [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  이벤트 기반 비동기 패턴을 지원하는 구성 요소를 사용하는 방법을 설명합니다.  
   
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
  <xref:System.ComponentModel.AsyncOperation>  
  <xref:System.ComponentModel.AsyncOperation> 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "84289436"
  [스레딩](../threading/index.md)  
  .NET의 다중 스레딩 기능에 대해 설명합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되는 스레딩을 구현하는 최선의 방법](../threading/managed-threading-best-practices.md)
 - [이벤트](../events/index.md)

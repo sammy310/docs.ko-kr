@@ -1,5 +1,6 @@
 ---
 title: 네트워크에서 스트림 사용
+description: .NET Framework는 네트워크 리소스를 스트림으로 나타냅니다. NetworkStream 클래스는 네트워크 리소스에 사용할 Stream 클래스를 구현합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180620"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501978"
 ---
 # <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
 네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  
@@ -102,7 +103,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: WebRequest 클래스를 사용하여 데이터 요청](how-to-request-data-using-the-webrequest-class.md)
 - [데이터 요청](requesting-data.md)

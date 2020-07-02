@@ -1,14 +1,15 @@
 ---
 title: XML 처리 옵션
+description: LINQ to XML, XmlReader, XmlWriter, XmlDocument, XPathNavigator, XslCompiledTransform, XmlLite, MSXML을 포함하여 XML 처리 옵션을 검토합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: 544c3467f46f5bebf79cb95906faeca7926c3824
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c41b3dd99264b9043c5914b84bbb76ac02b317ac
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291424"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767769"
 ---
 # <a name="xml-processing-options"></a>XML 처리 옵션
 XML 데이터를 처리하는 데 사용할 수 있는 Microsoft 기술 목록은 다음 표를 참조하세요.  

@@ -8,22 +8,12 @@ items:
   - name: 설치
     items:
       - name: 개요
-        href: install/index.md
-      - name: SDK 설치
-        href: install/sdk.md
-      - name: 런타임 설치
-        href: install/runtime.md
-      - name: 지원되는 OS 및 종속성
-        href: install/dependencies.md
-      - name: 오래된 런타임 및 SDK 제거
-        href: install/remove-runtime-sdk-versions.md
-      - name: .NET 템플릿 관리
-        href: install/templates.md
-      - name: macOS 공증 문제
-        href: install/macos-notarization-issues.md
-      - name: .NET Core 버전 확인 방법
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Windows에 설치
+        href: install/windows.md
+      - name: macOS에 설치
+        href: install/macos.md
+      - name: Linux에 설치
         items:
           - name: 개요
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: 오래된 런타임 및 SDK 제거
+        href: install/remove-runtime-sdk-versions.md
+      - name: .NET 템플릿 관리
+        href: install/templates.md
+      - name: macOS 공증 문제
+        href: install/macos-notarization-issues.md
+      - name: .NET Core 버전 확인 방법
+        href: install/how-to-detect-installed-versions.md
       - name: 지역화된 IntelliSense 설치
         href: install/localized-intellisense.md
   - name: 시작

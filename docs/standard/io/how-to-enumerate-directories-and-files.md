@@ -1,5 +1,6 @@
 ---
 title: '방법: 디렉터리 및 파일 열거'
+description: .NET에서 배열보다 더 나은 성능을 제공할 수 있는 열거 가능한 컬렉션을 사용하여 디렉터리와 파일을 열거하는 방법을 알아봅니다.
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: bcb10426175c1f2cabeec6d8d4f8d2ed74e5e3b4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291879"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662578"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>방법: 디렉터리 및 파일 열거
 열거 가능한 컬렉션은 대규모의 디렉터리 및 파일 컬렉션으로 작업할 때 배열보다 나은 성능을 제공합니다. 디렉터리 및 파일을 열거하려면 디렉터리, 파일 이름이나 해당 <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> 또는 <xref:System.IO.FileSystemInfo> 개체의 열거할 수 있는 컬렉션을 반환하는 메서드를 사용합니다.  

@@ -1,5 +1,6 @@
 ---
 title: 이벤트 기반 비동기 패턴 개요
+description: 다중 스레드 애플리케이션의 이점을 실제로 활용하지만 일부 디자인 복잡성은 숨기는 .NET의 EAP(이벤트 기반 비동기 패턴)를 검토합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289423"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768861"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>이벤트 기반 비동기 패턴 개요
 많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 애플리케이션에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 애플리케이션을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 애플리케이션의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 애플리케이션의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
@@ -45,7 +46,7 @@ ms.locfileid: "84289423"
  이벤트 기반 비동기 패턴을 사용하려면 비동기 작업을 취소할 수 있어야 하며, <xref:System.Windows.Forms.PictureBox> 컨트롤이 해당 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 메서드에 대해 이 요구 사항을 지원해야 합니다. <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>를 호출하면 보류 중인 다운로드를 중지하기 위한 요청이 전송되고, 작업이 취소되면 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트가 발생합니다.  
   
 > [!CAUTION]
-> 다운로드가 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 요청이 수행된 것처럼 완료될 수 있으므로 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A>가 취소 요청을 반영하지 않을 수 있습니다. 이를 ‘경합 상태’라고 하며, 이는 다중 스레드 프로그래밍에서 일반적인 문제입니다.  다중 스레드 프로그래밍 문제에 대한 자세한 내용은 [관리되는 스레딩을 구현하는 최선의 방법](../threading/managed-threading-best-practices.md)을 참조하세요.  
+> 다운로드가 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 요청이 수행된 것처럼 완료될 수 있으므로 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A>가 취소 요청을 반영하지 않을 수 있습니다. 이를 ‘경합 상태’라고 하며, 이는 다중 스레드 프로그래밍에서 일반적인 문제입니다. 다중 스레드 프로그래밍 문제에 대한 자세한 내용은 [관리되는 스레딩을 구현하는 최선의 방법](../threading/managed-threading-best-practices.md)을 참조하세요.  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴의 특징  
  이벤트 기반 비동기 패턴은 특정 클래스에서 지원하는 작업의 복잡성에 따라 여러 가지 형식을 취할 수 있습니다. 가장 단순한 클래스는 단일 _MethodName_**Async** 메서드 및 해당 _MethodName_**Completed** 이벤트를 포함할 수 있습니다. 더 복잡한 클래스는 여러 _MethodName_**Async** 메서드, 각 해당 _MethodName_**Completed** 이벤트 및 이러한 메서드의 동기 버전을 포함할 수 있습니다. 클래스는 선택적으로 각 비동기 메서드에 대해 취소, 진행률 보고 및 증분 결과를 지원할 수 있습니다.  
@@ -131,14 +132,14 @@ public class AsyncExample
   
  일부 클래스는 비동기 작업이 진행됨에 따라 증분 결과를 보고할 수 있습니다. 이러한 결과는 <xref:System.ComponentModel.ProgressChangedEventArgs>에서 파생되는 클래스에 저장되며 파생 클래스에 속성으로 나타납니다. `ProgressChanged` 속성에 액세스하는 것처럼 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 이벤트의 이벤트 처리기에서 이러한 결과에 액세스할 수 있습니다. 보류 중인 비동기 작업이 여러 개인 경우 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 속성을 사용하여 증분 결과를 보고 중인 작업을 구별할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
 - [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [방법: 배경 작업을 사용하는 양식 구현](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)
+- [방법: 백그라운드 작업을 사용하는 양식 구현](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)
 - [최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

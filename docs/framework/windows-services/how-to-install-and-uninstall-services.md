@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596360"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>방법: Windows 서비스 설치 및 제거
 
@@ -26,7 +26,7 @@ ms.locfileid: "81607921"
 > [!WARNING]
 > 서비스를 컴퓨터에서 제거하려면 이 문서의 단계를 수행하는 대신 서비스를 설치한 프로그램 또는 소프트웨어 패키지를 확인한 다음, 설정에서 **앱**을 선택하여 해당 프로그램을 제거합니다. 대부분의 서비스는 Windows의 필수 요소이므로 제거하는 경우 시스템이 불안정해질 수 있습니다.
 
-이 문서의 단계를 수행하려면 먼저 Windows 서비스에 서비스 설치 관리자를 추가해야 합니다. 자세한 내용은 [연습: Windows 서비스 앱 만들기](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)를 참조하세요.
+이 문서의 단계를 수행하려면 먼저 Windows 서비스에 서비스 설치 관리자를 추가해야 합니다. 자세한 내용은 [연습: Windows 서비스 앱 만들기](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)를 참조하세요.
 
 F5 키를 눌러 Visual Studio 개발 환경에서 직접 Windows 서비스 프로젝트를 실행할 수 없습니다. 프로젝트를 실행하려면 먼저 프로젝트에 서비스를 설치해야 합니다.
 
@@ -35,7 +35,7 @@ F5 키를 눌러 Visual Studio 개발 환경에서 직접 Windows 서비스 프�
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe 유틸리티를 사용하여 수동으로 서비스 설치
 
-1. **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음, **Developer Command Prompt for VS \<*version*>** 을 선택합니다.
+1. **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음 **VS \<*version*>용 개발자 명령 프롬프트**를 선택합니다.
 
      Visual Studio용 개발자 명령 프롬프트가 나타납니다.
 
@@ -55,7 +55,7 @@ F5 키를 눌러 Visual Studio 개발 환경에서 직접 Windows 서비스 프�
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe 유틸리티를 사용하여 수동으로 서비스 제거
 
-1. **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음, **Developer Command Prompt for VS \<*version*>** 을 선택합니다.
+1. **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음 **VS \<*version*>용 개발자 명령 프롬프트**를 선택합니다.
 
      Visual Studio용 개발자 명령 프롬프트가 나타납니다.
 
@@ -97,7 +97,7 @@ F5 키를 눌러 Visual Studio 개발 환경에서 직접 Windows 서비스 프�
 
 ## <a name="see-also"></a>참조
 
-- [Windows 서비스 애플리케이션 소개](../windows-services/introduction-to-windows-service-applications.md)
-- [방법: Windows 서비스 만들기](../windows-services/how-to-create-windows-services.md)
-- [방법: 서비스 애플리케이션에 설치 관리자 추가](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
+- [방법: Windows 서비스 만들기](how-to-create-windows-services.md)
+- [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe(설치 관리자 도구)](../tools/installutil-exe-installer-tool.md)

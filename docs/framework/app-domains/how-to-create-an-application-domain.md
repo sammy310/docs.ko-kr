@@ -1,5 +1,6 @@
 ---
 title: '방법: 애플리케이션 도메인 만들기'
+description: .NET에서 애플리케이션 도메인을 만드는 방법을 검토합니다. 개인적으로 관리할 어셈블리를 로드할 애플리케이션 도메인을 만들거나 코드를 실행할 애플리케이션 도메인을 만들 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e44e682f64854dbc0181b26f6ed3fa2905b7814
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119882"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104807"
 ---
 # <a name="how-to-create-an-application-domain"></a>방법: 애플리케이션 도메인 만들기
 공용 언어 런타임 호스트는 필요할 때 자동으로 애플리케이션 도메인을 만듭니다. 그러나 사용자 고유의 애플리케이션 도메인을 만들고 개인적으로 관리하려는 어셈블리를 해당 도메인에 로드할 수 있습니다. 코드를 실행할 애플리케이션 도메인을 만들 수도 있습니다.  

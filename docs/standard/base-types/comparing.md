@@ -1,5 +1,6 @@
 ---
 title: .NET에서 문자열 비교
+description: .NET에서 문자열을 비교하는 메서드에 대해 알아봅니다. CompareOrdinal, CompareTo, StartsWith, EndsWith, Equals, IndexOf, LastIndexOf 메서드에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289332"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602195"
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|두 문자열의 값을 비교합니다. 정수 값을 반환합니다.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|로컬 문화권에 관계없이 두 문자열을 비교합니다. 정수 값을 반환합니다.|  
@@ -57,9 +58,9 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#6)]
  [!code-vb[Conceptual.String.BasicOps#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#6)]  
   
- 이 예제에서는 콘솔에 `-1`을 표시합니다.  
+ 이 예제에서는 콘솔에 `-1` 를 표시합니다.  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 *culture* 매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용합니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 <xref:System.String.Compare%2A?displayProperty=nameWithType> culture *매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는* 메서드의 오버로드를 사용합니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다. 이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.  
@@ -73,7 +74,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#7)]
  [!code-vb[Conceptual.String.BasicOps#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#7)]  
   
- 이 예제에서는 콘솔에 `-32`을 표시합니다.  
+ 이 예제에서는 콘솔에 `-32` 를 표시합니다.  
   
 ## <a name="compareto"></a>CompareTo  
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다. 이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드가 반환하는 값과 동일합니다.  
@@ -87,9 +88,9 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
  [!code-vb[Conceptual.String.BasicOps#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#8)]  
   
- 이 예제에서는 콘솔에 `-1`을 표시합니다.  
+ 이 예제에서는 콘솔에 `-1` 를 표시합니다.  
   
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>를 지정하여 **String.Compare** 메서드를 대신 사용하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 **를 지정하고 문화권을 구분하지 않는 작업에는** 를 지정하여 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> String.Compare <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 메서드를 대신하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## <a name="equals"></a>같음  
  **String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다. 대/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다. 다음 예제와 같이 기존 클래스에서 사용할 수 있습니다. 다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.  
@@ -98,7 +99,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#9)]
  [!code-vb[Conceptual.String.BasicOps#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#9)]  
   
- 이 예제에서는 콘솔에 `True`을 표시합니다.  
+ 이 예제에서는 콘솔에 `True` 를 표시합니다.  
   
  이 메서드는 정적 메서드로 사용될 수도 있습니다. 다음 예제에서는 정적 메서드를 사용하여 두 문자열 개체를 비교합니다.  
   
@@ -106,7 +107,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#10)]
  [!code-vb[Conceptual.String.BasicOps#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#10)]  
   
- 이 예제에서는 콘솔에 `True`을 표시합니다.  
+ 이 예제에서는 콘솔에 `True` 를 표시합니다.  
   
 ## <a name="startswith-and-endswith"></a>StartsWith 및 EndsWith  
  **String.StartsWith** 메서드를 사용하여 문자열 개체가 다른 문자열을 포함하는 동일한 문자로 시작하는지 여부를 확인합니다. 이 대/소문자 구분 메서드는 현재 문자열 개체가 전달된 문자열로 시작하는 경우 **true** 를 반환하고, 그러지 않은 경우 **false** 를 반환합니다. 다음 예제에서는 이 메서드를 사용하여 문자열 개체가 "Hello"로 시작하는지 여부를 확인합니다.  
@@ -115,7 +116,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
  [!code-vb[Conceptual.String.BasicOps#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#11)]  
   
- 이 예제에서는 콘솔에 `True`을 표시합니다.  
+ 이 예제에서는 콘솔에 `True` 를 표시합니다.  
   
  **String.EndsWith** 메서드는 전달된 문자열을 현재 문자열 개체의 끝에 있는 문자와 비교합니다. 역시 부울 값을 반환합니다. 다음 예제에서는 **EndsWith** 메서드를 사용하여 문자열의 끝을 검사합니다.  
   
@@ -123,7 +124,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#12)]
  [!code-vb[Conceptual.String.BasicOps#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#12)]  
   
- 이 예제에서는 콘솔에 `False`을 표시합니다.  
+ 이 예제에서는 콘솔에 `False` 를 표시합니다.  
   
 ## <a name="indexof-and-lastindexof"></a>IndexOf 및 LastIndexOf  
  **String.IndexOf** 메서드를 사용하여 문자열 내에서 특정 문자의 첫 번째 발생 위치를 확인합니다. 이 대/소문자 구분 메서드는 문자열의 시작 부분에서 계산을 시작하고 0부터 시작하는 인덱스를 사용하여 전달된 문자의 위치를 반환합니다. 문자를 찾을 수 없는 경우 -1 값이 반환됩니다.  
@@ -134,7 +135,7 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#13)]
  [!code-vb[Conceptual.String.BasicOps#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#13)]  
   
- 이 예제에서는 콘솔에 `2`을 표시합니다.  
+ 이 예제에서는 콘솔에 `2` 를 표시합니다.  
   
  **String.LastIndexOf** 메서드는 문자열 내에서 특정 문자의 마지막 발생 위치를 반환한다는 점을 제외하고 **String.IndexOf** 메서드와 비슷합니다. 대/소문자를 구분하며 0부터 시작하는 인덱스를 사용합니다.  
   
@@ -144,11 +145,11 @@ ms.locfileid: "84289332"
  [!code-csharp[Conceptual.String.BasicOps#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#14)]
  [!code-vb[Conceptual.String.BasicOps#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#14)]  
   
- 이 예제에서는 콘솔에 `9`을 표시합니다.  
+ 이 예제에서는 콘솔에 `9` 를 표시합니다.  
   
  두 메서드는 모두 **String.Remove** 메서드와 함께 사용할 때 유용합니다. 문자 또는 해당 문자로 시작하는 단어를 제거하기 위해 **IndexOf** 또는 **LastIndexOf** 메서드 중 하나를 사용하여 문자의 위치를 검색한 다음 해당 위치를 **Remove** 메서드에 제공할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본적인 문자열 작업](basic-string-operations.md)
 - [Culture의 영향을 받지 않는 문자열 작업 수행](../globalization-localization/performing-culture-insensitive-string-operations.md)

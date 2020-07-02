@@ -1,5 +1,6 @@
 ---
 title: 네트워크 추적 해석
+description: 추적을 사용하여 애플리케이션이 .NET Framework의 다양한 System.Net 클래스 멤버를 실행하는 호출을 캡처하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TraceMode attribute
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a17e4ba14d8c5fe136667c4eb5bc5b2fd7a8242
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047898"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502368"
 ---
 # <a name="interpreting-network-tracing"></a>네트워크 추적 해석
 네트워크 추적이 사용하도록 설정되면 추적 기능을 사용하여 애플리케이션이 다양한 <xref:System.Net> 클래스 멤버에 대해 실행하는 호출을 캡처할 수 있습니다. 이러한 호출의 출력은 다음 예제와 비슷할 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: .NET에서 StringBuilder 클래스 사용
+description: .NET에서 StringBuilder 클래스를 사용하는 방법을 알아봅니다. 이 클래스를 사용하면 새 개체를 만들지 않고 문자열을 수정합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289267"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803220"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "84289267"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|문자열에 전달된 서식 지정자를 서식 있는 텍스트로 바꿉니다.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|현재 **StringBuilder**의 지정된 인덱스에 문자열 또는 개체를 삽입합니다.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|현재 **StringBuilder**에서 지정된 수의 문자를 제거합니다.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|지정된 인덱스에서 지정된 문자를 바꿉니다.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|현재 **StringBuilder**에서 발견되는 지정된 문자 또는 문자열을 지정된 다른 문자 또는 문자열로 모두 바꿉니다.|  
   
 ### <a name="append"></a>추가  
  **Append** 메서드를 사용하여 현재 **StringBuilder**에 표시되는 문자열의 끝에 개체의 문자열 표현이나 텍스트를 추가할 수 있습니다. 다음 예에서는 **StringBuilder**를 "Hello World"로 초기화한 다음 개체의 끝에 일부 텍스트를 추가합니다. 필요한 경우 공간이 자동으로 할당됩니다.  

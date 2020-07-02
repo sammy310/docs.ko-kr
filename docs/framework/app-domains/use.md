@@ -1,17 +1,18 @@
 ---
 title: 애플리케이션 도메인 사용
+description: CLR(공용 언어 런타임)에 대한 격리 단위를 제공하는 애플리케이션 도메인을 사용합니다. 프로세스 내에서 애플리케이션 도메인이 생성되고 실행됩니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645434"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105180"
 ---
 # <a name="using-application-domains"></a>애플리케이션 도메인 사용
 

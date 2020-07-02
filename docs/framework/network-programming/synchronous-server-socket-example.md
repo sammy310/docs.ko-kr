@@ -1,5 +1,6 @@
 ---
 title: 동기 서버 소켓 예제
+description: 이 예제 .NET Framework 프로그램에서는 동기 소켓을 사용하여 클라이언트에서 연결을 수신하는 서버를 만듭니다. 문자열을 수신하고 에코합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: e8924051a7087ac26793722457f934e58a75f23d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e2fb91dc493b2da4c68a98ac8a62494e78a9fd1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502108"
 ---
 # <a name="synchronous-server-socket-example"></a>동기 서버 소켓 예제
-다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단됩니다. 애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF >” 문자열이 포함되어야 합니다.  
+다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단됩니다. 애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF>” 문자열이 포함되어야 합니다.  
   
 ```vb  
 Imports System  
@@ -155,7 +156,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [동기 클라이언트 소켓 예제](synchronous-client-socket-example.md)
 - [동기 서버 소켓 사용](using-a-synchronous-server-socket.md)

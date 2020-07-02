@@ -1,5 +1,6 @@
 ---
 title: '방법: 디렉터리 복사'
+description: 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 I/O 클래스를 사용하여 디렉터리를 복사하는 방법을 참조하세요.
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 65fe28c90a6cd6f0b3c8c32da19c1d9603900670
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288578"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662591"
 ---
 # <a name="how-to-copy-directories"></a>방법: 디렉터리 복사
 이 항목에서는 I/O 클래스를 사용하여 디렉터리의 내용을 다른 위치로 동기적으로 복사하는 방법을 보여줍니다.

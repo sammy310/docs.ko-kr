@@ -1,19 +1,19 @@
 ---
 title: SDK 템플릿 설치 및 관리 - .NET Core
 description: Windows, Linux 및 macOS에 .NET Core 템플릿을 설치하는 방법을 알아봅니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200602"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324489"
 ---
 # <a name="manage-net-project-and-item-templates"></a>.NET 프로젝트 및 항목 템플릿 관리
 
@@ -23,13 +23,13 @@ ms.locfileid: "82200602"
 
 ## <a name="install-template"></a>템플릿 설치
 
-템플릿은 `-i` 매개 변수를 사용하여 [dotnet new](../tools/dotnet-new.md) SDK 명령을 통해 설치됩니다. 템플릿의 NuGet 패키지 식별자를 제공하거나 템플릿 파일이 포함된 폴더를 제공할 수 있습니다.
+템플릿은 [dotnet new](../tools/dotnet-new.md) SDK 명령에 `-i` 매개 변수를 사용하여 설치합니다. 템플릿의 NuGet 패키지 식별자를 제공하거나 템플릿 파일이 포함된 폴더를 제공할 수 있습니다.
 
 ### <a name="nuget-hosted-package"></a>NuGet 호스티드 패키지
 
 .NET CLI 템플릿은 광범위한 배포를 위해 [NuGet](https://www.nuget.org/)에 업로드됩니다. 템플릿은 프라이빗 피드에서 설치할 수도 있습니다. NuGet 피드에 템플릿을 업로드하는 대신 [로컬 NuGet 패키지](#local-nuget-package) 섹션에 설명된 대로 *nupkg* 템플릿 파일을 배포하고 수동으로 설치할 수 있습니다.
 
-NuGet 피드를 구성하는 방법에 관한 자세한 내용은 [dotnet nuget add source](../tools/dotnet-nuget-add-source.md)를 참조하세요.
+NuGet 피드를 구성하는 방법에 대한 자세한 내용은 [dotnet nuget add source](../tools/dotnet-nuget-add-source.md)를 참조하세요.
 
 기본 NuGet 피드에서 템플릿 팩을 설치하려면 `dotnet new -i {package-id}` 명령을 사용합니다.
 
@@ -127,7 +127,7 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>템플릿 제거
 
-템플릿은 `-u` 매개 변수를 사용하여 [dotnet new](../tools/dotnet-new.md) SDK 명령을 통해 제거됩니다. 템플릿의 NuGet 패키지 식별자를 제공하거나 템플릿 파일이 포함된 폴더를 제공할 수 있습니다.
+템플릿은 [dotnet new](../tools/dotnet-new.md) SDK 명령에 `-u` 매개 변수를 사용하여 제거합니다. 템플릿의 NuGet 패키지 식별자를 제공하거나 템플릿 파일이 포함된 폴더를 제공할 수 있습니다.
 
 ### <a name="nuget-package"></a>NuGet 패키지
 

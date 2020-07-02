@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662955"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324131"
 ---
 # <a name="how-to-search-strings"></a>문자열 검색 방법
 
@@ -23,7 +23,7 @@ ms.locfileid: "84662955"
 
 ## <a name="does-a-string-contain-text"></a>문자열에 텍스트가 포함되어 있나요?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 및 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 메서드는 특정 텍스트의 문자열을 검색합니다. 다음 예에서는 이러한 메서드 각각 및 대/소문자 구분 검색을 사용하는 변형을 보여줍니다.
+<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 및 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 메서드는 문자열에서 특정 텍스트를 검색합니다. 다음 예에서는 이러한 메서드 각각 및 대/소문자 구분 검색을 사용하는 변형을 보여 줍니다.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
@@ -41,7 +41,7 @@ ms.locfileid: "84662955"
 
 다음 코드 예제에서는 문장에서 "the" 또는 "their"라는 문자를 검색하고 대/소문자를 무시합니다. 고정 메서드 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>은 검색을 수행합니다. 검색할 문자열 및 검색 패턴을 입력합니다. 이 경우에 세 번째 인수는 대/소문자 구분 검색을 지정합니다. 자세한 내용은 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>를 참조하세요.
 
-검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\\`로 이스케이프되어야 하는 단일 `\`을 사용합니다.)
+검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\\`로 이스케이프되어야 하는 단일 `\`를 사용합니다.)
 
 | 무늬  | 의미                          |
 |----------|----------------------------------|

@@ -1,5 +1,6 @@
 ---
 title: 비동기 클라이언트 소켓 예제
+description: 이 예제 .NET Framework 프로그램에서는 비동기 소켓을 사용하여 서버에 연결하는 클라이언트를 만듭니다. 문자열을 보내고 결과를 표시합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 9cf8ffff1b219614cd57b56af48d72c03ac63dda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180923"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502732"
 ---
 # <a name="asynchronous-client-socket-example"></a>비동기 클라이언트 소켓 예제
 다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다. 이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 애플리케이션의 실행이 일시 중단되지 않습니다. 애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.  
@@ -321,7 +322,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비동기 서버 소켓 예제](asynchronous-server-socket-example.md)
 - [동기 서버 소켓 사용](using-a-synchronous-server-socket.md)

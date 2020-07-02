@@ -1,5 +1,6 @@
 ---
 title: 스레드 일시 중지 및 중단
+description: .NET에서 스레드를 일시 중지 및 중단하는 방법을 알아봅니다. Thread.Sleep 및 Thread.Interrupt 같은 메서드와 ThreadInterruptedException 같은 예외를 사용하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291164"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769121"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
 
@@ -47,7 +48,7 @@ ms.locfileid: "84291164"
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](destroying-threads.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 6c53d11a3830a5a8a2cb898728bed8694a226686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fd1ec25582e919b84235502f5921edfbc6e1dade
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990200"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발(Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "84411670"
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- `My.Resources` 개체는 글로벌 리소스만 노출합니다. 양식과 관련된 리소스 파일에 대한 액세스 권한은 제공되지 않습니다. 양식에서 양식 리소스에 액세스해야 합니다.  
+ `My.Resources` 개체는 글로벌 리소스만 노출합니다. 양식과 관련된 리소스 파일에 대한 액세스 권한은 제공되지 않습니다. 양식에서 양식 리소스에 액세스합니다.  
   
  마찬가지로 `My.Settings` 개체는 애플리케이션 설정에 대한 액세스를 제공하며 애플리케이션에 대한 속성 설정과 기타 정보를 동적으로 저장하고 검색할 수 있도록 합니다. 자세한 내용은 [My.Resources 개체](../../language-reference/objects/my-resources-object.md) 및 [My.Settings 개체](../../language-reference/objects/my-settings-object.md)를 참조하세요.  
   

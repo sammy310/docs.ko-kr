@@ -1,5 +1,6 @@
 ---
 title: 플러그형 프로토콜 소개
+description: 리소스에서 사용하는 프로토콜 세부 정보와 관계없이 인터넷 리소스를 사용하는 애플리케이션 개발을 지원하는 플러그형 프로토콜에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047868"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502355"
 ---
 # <a name="introducing-pluggable-protocols"></a>플러그형 프로토콜 소개
 Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. <xref:System.Net> 및 <xref:System.Net.Sockets> 네임스페이스의 인터넷 액세스 클래스를 사용하여 웹 기반 애플리케이션과 인터넷 기반 애플리케이션을 둘 다 구현할 수 있습니다.  
@@ -66,7 +67,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
   
  Windows 소켓 인터페이스에 익숙한 개발자나 소켓 수준에서 프로그래밍을 통해 제공되는 컨트롤이 필요한 개발자는 **System.Net.Sockets** 클래스가 필요에 맞는다는 것을 알 수 있습니다. **System.Net.Sockets** 클래스는 **System.Net** 클래스 내에서 관리 코드에서 네이티브 코드로 전환되는 지점입니다. 대부분의 경우 **System.Net.Sockets** 클래스는 데이터를 Windows 32비트 데이터로 마샬링하고 모든 필요한 보안 검사를 처리합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [플러그형 프로토콜 프로그래밍](programming-pluggable-protocols.md)
 - [.NET Framework의 네트워크 프로그래밍](index.md)

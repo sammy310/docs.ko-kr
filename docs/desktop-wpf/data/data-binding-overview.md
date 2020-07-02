@@ -1,18 +1,18 @@
 ---
 title: 데이터 바인딩 개요
 description: .NET Core용 Windows Presentation Foundation에서 프로젝트에 추가할 수 있는 다양한 데이터 소스에 관해 알아봅니다. 데이터 소스를 XAML 요소에 바인딩하여 동적 앱을 만들 수 있습니다.
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7f17ff094a35c04ba880c87c6966d7d249817516
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433255"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325759"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF의 데이터 바인딩 개요
 
@@ -40,9 +40,9 @@ WPF의 데이터 바인딩 기능은 광범위한 속성을 통한 기본적인 
 
 - `ListBox`에 표시된 데이터(*AuctionItem* 개체)는 각 항목에 관한 설명과 현재 위치가 표시되도록 템플릿으로 만들어집니다. 템플릿은 <xref:System.Windows.DataTemplate>을 사용하여 만듭니다. 또한 각 항목의 모양은 표시되는 *AuctionItem*의 *SpecialFeatures* 값에 따라 달라집니다. *AuctionItem*의 *SpecialFeatures* 값이 *Color*이면 항목에는 파란색 테두리가 포함됩니다. *Highlight* 값이면 항목에는 주황색 테두리와 별모양이 포함됩니다. [데이터 템플릿](#data-templating) 섹션에서는 데이터 템플릿을 살펴봅니다.
 
-- 사용자는 제공된 `CheckBoxes`를 사용하여 데이터를 그룹화, 필터링 또는 정렬할 수 있습니다. 위 이미지에는 **Group by category** 및 **Sort by category and date** `CheckBoxes`가 선택되어 있습니다. 데이터가 제품 범주에 따라 그룹화되고 범주 이름이 사전순으로 표시되어 있음을 알 수 있습니다. 이미지에서 확인하기는 어렵지만 항목은 각 범주 내에서 시작 날짜별로 정렬됩니다. 정렬에는 ‘컬렉션 뷰’가 사용됩니다.  [컬렉션에 바인딩](#binding-to-collections) 섹션에서는 컬렉션 뷰를 살펴봅니다.
+- 사용자는 제공된 `CheckBoxes`를 사용하여 데이터를 그룹화, 필터링 또는 정렬할 수 있습니다. 위 이미지에는 **Group by category** 및 **Sort by category and date** `CheckBoxes`가 선택되어 있습니다. 데이터가 제품 범주에 따라 그룹화되고 범주 이름이 사전순으로 표시되어 있음을 알 수 있습니다. 그림에서 확인하기는 어렵지만 항목은 각 범주 내에서 시작 날짜별로 정렬됩니다. 정렬에는 ‘컬렉션 뷰’가 사용됩니다. [컬렉션에 바인딩](#binding-to-collections) 섹션에서는 컬렉션 뷰를 살펴봅니다.
 
-- 사용자가 항목을 선택하면 <xref:System.Windows.Controls.ContentControl>은 선택한 항목의 세부 정보를 표시합니다. 이 환경을 ‘마스터-세부 시나리오’라고 합니다.  [마스터-세부 시나리오](#master-detail-binding-scenario) 섹션에서는 이 바인딩 유형을 살펴봅니다.
+- 사용자가 항목을 선택하면 <xref:System.Windows.Controls.ContentControl>은 선택한 항목의 세부 정보를 표시합니다. 이 환경을 ‘마스터-세부 시나리오’라고 합니다. [마스터-세부 시나리오](#master-detail-binding-scenario) 섹션에서는 이 바인딩 유형을 살펴봅니다.
 
 - *StartDate* 속성 형식은 밀리초까지 시간이 포함된 날짜를 반환하는 <xref:System.DateTime>입니다. 이 앱에는 더 짧은 날짜 문자열이 표시되도록 사용자 지정 변환기가 사용되었습니다. [데이터 변환](#data-conversion) 섹션에서는 변환기를 살펴봅니다.
 
@@ -50,7 +50,7 @@ WPF의 데이터 바인딩 기능은 광범위한 속성을 통한 기본적인 
 
 ![Add Product Listing 페이지](./media/data-binding-overview/demo-addproductlisting.png "DataBinding_Demo_AddProductListing")
 
-사용자는 양식에 있는 필드를 편집하고, 간단한 미리 보기 및 자세한 미리 보기 창을 사용하여 제품 목록을 미리 보고, `Submit`을 선택하여 새 제품 목록을 추가할 수 있습니다. 기존 그룹화, 필터링 및 정렬 설정이 새 항목에 적용됩니다. 이 경우 위 이미지에 입력된 항목은 *Computer* 범주에서 두 번째 항목으로 표시됩니다.
+사용자는 양식에 있는 필드를 편집하고, 간단한 미리 보기 및 자세한 미리 보기 창을 사용하여 제품 목록을 미리 보고, `Submit`을 선택하여 새 제품 목록을 추가할 수 있습니다. 기존 그룹화, 필터링 및 정렬 설정이 새 항목에 적용됩니다. 이 경우 위 그림에 입력된 항목은 *Computer* 범주에서 두 번째 항목으로 표시됩니다.
 
 *Start Date* <xref:System.Windows.Controls.TextBox>에 제공된 유효성 검사 논리는 이 이미지에 표시되지 않습니다. 사용자가 잘못된 날짜(형식이 잘못되거나 지난 날짜)를 입력하면 <xref:System.Windows.Controls.ToolTip>이 표시되고 <xref:System.Windows.Controls.TextBox> 옆에 빨간색 느낌표가 나타납니다. [데이터 유효성 검사](#data-validation) 섹션에서는 유효성 검사 논리를 만드는 방법을 설명합니다.
 
@@ -77,7 +77,7 @@ WPF의 데이터 바인딩 기능은 광범위한 속성을 통한 기본적인 
 
 - 그림에는 표시되지 않았지만 바인딩 소스 개체는 사용자 지정 .NET 개체로 제한되지 않습니다. WPF 데이터 바인딩은 .NET 개체 및 XML 형식의 데이터를 지원합니다. 예를 들어 바인딩 소스는 <xref:System.Windows.UIElement>, 목록 개체, ADO.NET 개체, Web Services 개체 또는 XML 데이터가 포함된 XmlNode일 수 있습니다. 자세한 내용은 [바인딩 소스 개요](../../framework/wpf/data/binding-sources-overview.md)를 참조하세요.
 
-바인딩을 설정하고 있다면 바인딩 소스’에’ 바인딩 대상을 바인딩하고 있다는 것을 기억하세요.  예를 들어 데이터 바인딩을 사용하여 몇몇 기본 XML 데이터를 <xref:System.Windows.Controls.ListBox>에 표시하고 있다면 XML 데이터에 `ListBox`를 바인딩하는 것입니다.
+바인딩을 설정하고 있다면 바인딩 소스’에’ 바인딩 대상을 바인딩하고 있다는 것을 기억하세요. 예를 들어 데이터 바인딩을 사용하여 몇몇 기본 XML 데이터를 <xref:System.Windows.Controls.ListBox>에 표시하고 있다면 XML 데이터에 `ListBox`를 바인딩하는 것입니다.
 
 바인딩을 설정하려면 <xref:System.Windows.Data.Binding> 개체를 사용합니다. 이 문서의 나머지 부분에서는 `Binding` 개체와 연결된 다양한 개념과 개체의 일부 속성 및 사용법을 살펴봅니다.
 
@@ -97,7 +97,7 @@ WPF의 데이터 바인딩 기능은 광범위한 속성을 통한 기본적인 
 
 - <xref:System.Windows.Data.BindingMode.OneWayToSource>는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 반대로, 대상 속성이 변경되면 소스 속성을 업데이트합니다. UI에서 소스 값을 다시 평가하면 되는 경우가 한 가지 예제 시나리오입니다.
 
-- 그림에는 나타나지 않지만 <xref:System.Windows.Data.BindingMode.OneTime> 바인딩을 사용하면 소스 속성이 대상 속성을 초기화하지만 이후 변경 내용을 전파하지 않습니다. 데이터 컨텍스트가 변경되거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 ‘않습니다’.  이 바인딩 유형은 현재 상태의 스냅샷이 적절하거나 데이터가 실제로 정적인 경우에 적합합니다. 또한 이 바인딩 유형은 소스 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이 모드는 기본적으로 소스 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형식입니다.
+- 그림에는 나타나지 않지만 <xref:System.Windows.Data.BindingMode.OneTime> 바인딩을 사용하면 소스 속성이 대상 속성을 초기화하지만 이후 변경 내용을 전파하지 않습니다. 데이터 컨텍스트가 변경되거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 ‘않습니다’. 이 바인딩 유형은 현재 상태의 스냅샷이 적절하거나 데이터가 실제로 정적인 경우에 적합합니다. 또한 이 바인딩 유형은 원본 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이 모드는 기본적으로 소스 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형식입니다.
 
 소스 변경 내용을 검색하려면(<xref:System.Windows.Data.BindingMode.OneWay> 및 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩에 적용 가능) 소스에서 <xref:System.ComponentModel.INotifyPropertyChanged>와 같은 적절한 속성 변경 알림 메커니즘을 구현해야 합니다. [방법: 속성 변경 알림 구현](../../framework/wpf/data/how-to-implement-property-change-notification.md)에서 <xref:System.ComponentModel.INotifyPropertyChanged> 구현의 예제를 참조하세요.
 
@@ -300,7 +300,7 @@ WPF는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스�
 
 #### <a name="grouping"></a>그룹화
 
-<xref:System.Collections.IEnumerable> 컬렉션을 보는 내부 클래스를 제외하고 모든 컬렉션 뷰는 사용자가 컬렉션 뷰의 컬렉션을 논리 그룹으로 분할할 수 있는 ‘그룹화’를 지원합니다.  그룹은 사용자가 그룹 목록을 제공하는 경우 명시적 그룹이고 데이터에 따라 그룹이 동적으로 생성되는 경우 암시적 그룹입니다.
+<xref:System.Collections.IEnumerable> 컬렉션을 보는 내부 클래스를 제외하고 모든 컬렉션 뷰는 사용자가 컬렉션 뷰의 컬렉션을 논리 그룹으로 분할할 수 있는 ‘그룹화’를 지원합니다. 그룹은 사용자가 그룹 목록을 제공하는 경우 명시적 그룹이고 데이터에 따라 그룹이 동적으로 생성되는 경우 암시적 그룹입니다.
 
 다음 예제에서는 "Group by category" <xref:System.Windows.Controls.CheckBox>의 논리를 보여 줍니다.
 
@@ -412,7 +412,7 @@ WPF 데이터 바인딩 모델을 사용하면 <xref:System.Windows.Data.Binding
 
 유효성 검사는 대개 대상 값이 바인딩 소스 속성에 전송될 때 수행됩니다. 이 전송은 <xref:System.Windows.Data.BindingMode.TwoWay> 및 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩에서 발생합니다. 다시 말하지만, [소스 업데이트를 트리거하는 항목](#what-triggers-source-updates) 섹션에서 설명한 대로 소스 업데이트는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성의 값에 따라 결정됩니다.
 
-다음 항목은 ‘유효성 검사’ 프로세스를 설명합니다.  이 프로세스 중에 유효성 검사 오류나 기타 오류가 발생하면 프로세스가 중단됩니다.
+다음 항목은 ‘유효성 검사’ 프로세스를 설명합니다. 이 프로세스 중에 유효성 검사 오류나 기타 오류가 발생하면 프로세스가 중단됩니다.
 
 1. 바인딩 엔진은 해당 <xref:System.Windows.Data.Binding>에 대해 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>이 <xref:System.Windows.Controls.ValidationStep.RawProposedValue>로 설정된 사용자 지정 <xref:System.Windows.Controls.ValidationRule> 개체가 정의되어 있는지 확인합니다. 이 경우 개체 중 하나에서 오류가 발생하거나 모든 개체가 통과할 때까지 각 <xref:System.Windows.Controls.ValidationRule>에서 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 메서드를 호출합니다.
 

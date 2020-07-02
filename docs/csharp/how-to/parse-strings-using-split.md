@@ -1,6 +1,6 @@
 ---
-title: String.Split(C# 가이드)를 사용하여 문자열을 구문 분석하는 방법
-description: String.Split은 구분 기호 집합에서 분리된 문자열 배열을 반환합니다. 문자열을 구문 분석하는 쉬운 방법입니다.
+title: String.Split을 사용하여 문자열 구문 분석(C# 가이드)
+description: Split 메서드는 구분 기호 세트에서 분리된 문자열 배열을 반환합니다. 문자열을 구문 분석하는 쉬운 방법입니다.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 4f0056426fb29ec3d76093e57fa45e2046f27a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662994"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324139"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-in-c"></a>C\#에서 String.Split을 사용하여 문자열을 구문 분석하는 방법
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> 메서드는 하나 이상의 구분 기호를 기준으로 입력 문자열을 분할하여 부분 문자열 배열을 만듭니다. 종종 단어 경계에서 문자열을 분리하는 가장 쉬운 방법입니다. 다른 특정 문자 또는 문자열에서 문자열을 분할하는 데도 사용됩니다.
+<xref:System.String.Split%2A?displayProperty=nameWithType> 메서드는 하나 이상의 구분 기호를 기준으로 입력 문자열을 분할하여 부분 문자열 배열을 만듭니다. 이 메서드는 종종 단어 경계에서 문자열을 분리하는 가장 쉬운 방법입니다. 다른 특정 문자 또는 문자열에서 문자열을 분할하는 데도 사용됩니다.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "84662994"
 반환된 배열에 빈 문자열을 제외하기 위해 선택적인 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> 매개 변수를 전달할 수 있습니다. 반환된 컬렉션의 더 복잡한 처리를 위해 [LINQ](../programming-guide/concepts/linq/index.md)를 사용하여 결과 시퀀스를 조작할 수 있습니다.
 
 <xref:System.String.Split%2A?displayProperty=nameWithType>은 다중 구분 문자를 사용할 수 있습니다.
-다음 예제에서는 공백, 쉼표, 마침표, 콜론 및 탭을 사용하며, 모두 이러한 구분 문자를 포함하는 배열에서 <xref:System.String.Split%2A>로 전달됩니다.
+다음 예제에서는 공백, 쉼표, 마침표, 콜론 및 탭을 구분 문자로 사용하며, 해당 문자는 <xref:System.String.Split%2A>의 배열로 전달됩니다.
 코드 맨 아래의 루프는 반환된 배열의 각 단어를 표시합니다.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet3":::

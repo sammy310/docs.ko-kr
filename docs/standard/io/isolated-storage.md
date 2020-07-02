@@ -1,5 +1,6 @@
 ---
 title: 격리된 스토리지
+description: 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘인 격리된 스토리지를 살펴봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278884"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325941"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
 <a name="top"></a> 데스크톱 앱에서 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 스토리지 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 스토리지를 조작하는 도구를 사용할 수 있습니다. 격리된 스토리지를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 스토리지에만 액세스할 수 있는 다른 애플리케이션으로부터 데이터가 보호됩니다. 애플리케이션의 스토리지 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.
@@ -104,6 +105,97 @@ ms.locfileid: "84278884"
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|`AssemblyIsolationByUser`와 동일하지만, 로밍 사용자 프로필을 사용할 수 있고 할당량이 적용되지 않은 경우 로밍되는 위치에 저장소가 저장됩니다.|`AssemblyIsolationByUser`의 경우와 동일하지만, 할당량이 없으므로 서비스 거부 공격 위험이 증가합니다.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|사용자별 격리. 일반적으로 관리 또는 디버깅 도구에서 이 권한 수준을 사용합니다.|이 권한으로 액세스하면 코드가 어셈블리 격리와 관계없이 사용자의 격리된 스토리지 파일 또는 디렉터리를 보거나 삭제할 수 있습니다. 정보 누출 및 데이터 손실 등의 위험이 있지만 이에 제한되지는 않습니다.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|모든 사용자, 도메인 및 어셈블리별 격리. 일반적으로 관리 또는 디버깅 도구에서 이 권한 수준을 사용합니다.|이 권한을 사용하면 모든 사용자에 대한 모든 격리된 저장소 전체가 손상될 가능성이 있습니다.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>신뢰할 수 없는 데이터와 관련하여 격리된 스토리지 구성 요소의 안전
+
+__이 섹션은 다음과 같은 프레임워크에 적용됩니다.__
+
+- .NET Framework(모든 버전)
+- .NET Core 2.1 이상
+- .NET 5.0 이상
+
+.NET Framework 및 .NET Core는 사용자, 애플리케이션 또는 구성 요소의 데이터를 유지하는 메커니즘으로 [격리된 스토리지](/dotnet/standard/io/isolated-storage)를 제공합니다. 기본적으로 이 레거시 구성 요소는 지금은 사용되지 않는 코드 액세스 보안 시나리오를 위해 설계되었습니다.
+
+다양한 격리된 스토리지 API 및 도구를 사용하여 신뢰 경계 전반에서 데이터를 읽을 수 있습니다. 예를 들어 머신 전체 범위에서 데이터를 읽으면 머신에서 신뢰할 수 없는 다른 사용자 계정의 데이터를 집계할 수 있습니다. 머신 전체의 격리된 스토리지 범위에서 읽는 구성 요소 또는 애플리케이션은 이 데이터를 읽는 경우 따르는 결과를 알고 있어야 합니다.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>머신 전체 범위에서 읽을 수 있는 보안 관련 API
+
+다음 API를 호출하는 구성 요소 또는 애플리케이션은 머신 전체 범위에서 읽습니다.
+
+* [IsolatedStorageFile.GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator) - IsolatedStorageScope.Machine 플래그를 포함하는 범위를 전달합니다.
+* [IsolatedStorageFile.GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+* [IsolatedStorageFile.GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+* [IsolatedStorageFile.GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+* [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore) - IsolatedStorageScope.Machine 플래그를 포함하는 범위를 전달합니다.
+* [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove) - `IsolatedStorageScope.Machine` 플래그를 포함하는 범위를 전달합니다.
+
+[격리된 스토리지 도구](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe`는 다음 코드에서처럼 `/machine` 스위치를 사용하여 호출되는 경우 영향을 받습니다.
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+격리된 스토리지 도구는 Visual Studio 및 .NET Framework SDK의 일부로 제공됩니다.
+
+애플리케이션에서 위의 API를 호출하지 않거나 워크플로에서 이러한 방식으로 `storeadm.exe`를 호출하지 않는 경우에는 이 문서의 내용이 적용되지 않습니다.
+
+### <a name="impact-in-multi-user-environments"></a>다중 사용자 환경에 미치는 영향
+
+앞에서 언급했듯이 이러한 API가 보안에 미치는 영향은 한 신뢰 환경에서 기록된 데이터를 다른 신뢰 환경에서 읽기 때문에 발생합니다. 격리된 스토리지는 일반적으로 다음 세 위치 중 하나를 사용하여 데이터를 읽고 씁니다.
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: 예를 들어 `User` 범위의 경우 `C:\Users\<username>\AppData\Local\IsolatedStorage\`입니다.
+2. `%APPDATA%\IsolatedStorage\`: 예를 들어 `User|Roaming` 범위의 경우 `C:\Users\<username>\AppData\Roaming\IsolatedStorage\`입니다.
+3. `%PROGRAMDATA%\IsolatedStorage\`: 예를 들어 `Machine` 범위의 경우 `C:\ProgramData\IsolatedStorage\`입니다.
+
+처음 두 위치는 사용자별로 격리됩니다. Windows에서는 같은 머신의 여러 사용자 계정이 서로의 사용자 프로필 폴더에 액세스할 수 없도록 합니다. `User` 또는 `User|Roaming` 저장소를 사용하는 서로 다른 두 사용자 계정은 서로의 데이터를 볼 수 없고 조작할 수 없습니다.
+
+세 번째 위치는 머신의 모든 사용자 계정 간에 공유됩니다. 다른 계정이 이 위치에서 읽고 위치에 쓸 수 있으며 서로의 데이터를 볼 수 있습니다.
+
+앞의 경로는 사용 중인 Windows 버전에 따라 다를 수 있습니다.
+
+이제 두 명의 등록된 사용자 _Mallory_ 및 _Bob_이 있는 다중 사용자 시스템을 살펴봅니다. Mallory는 자신의 사용자 프로필 디렉터리 `C:\Users\Mallory\`에 액세스할 수 있고 공유 머신 전체 스토리지 위치 `C:\ProgramData\IsolatedStorage\`에 액세스할 수 있습니다. Bob의 사용자 프로필 디렉터리 `C:\Users\Bob\`에는 액세스할 수 없습니다.
+
+Mallory가 Bob을 공격하려는 경우 머신 전체 스토리지 위치에 데이터를 쓴 다음 Bob이 머신 전체 저장소에서 읽도록 영향을 주려고 할 수 있습니다. Bob이 이 저장소에서 읽는 앱을 실행하면 해당 앱은 Mallory가 여기에 저장한 데이터를 사용하지만 Bob의 사용자 계정 컨텍스트 내에서 작동합니다. 이 문서의 나머지 부분에서는 다양한 공격 벡터와 이러한 공격의 위험을 최소화하기 위해 앱에서 수행할 수 있는 단계를 고려합니다.
+
+__참고:__ 이러한 공격을 수행하기 위해 Mallory는 다음이 필요합니다.
+
+* 머신의 사용자 계정
+* 파일 시스템의 알려진 위치에 파일을 저장할 수 있는 기능
+* Bob이 어느 시점에 이 데이터를 읽으려고 시도하는 앱을 실행할 것이라는 정보
+
+이러한 위협 벡터는 가정용 PC 또는 직원이 한 명인 기업 워크스테이션과 같은 표준 단일 사용자 데스크톱 환경에는 적용되지 않습니다.
+
+#### <a name="elevation-of-privilege"></a>권한 상승
+
+__권한 상승__ 공격은 Bob의 앱이 Mallory의 파일을 읽고 자동으로 해당 페이로드의 콘텐츠를 기반으로 작업을 수행하려고 할 때 발생합니다. 머신 전체 저장소에서 시작 스크립트의 콘텐츠를 읽고 해당 콘텐츠를 `Process.Start`에 전달하는 앱이 있다고 가정해 보세요. Mallory가 머신 전체 저장소 내에 악성 스크립트를 저장할 수 있는 경우 Bob이 앱을 시작하면 다음이 발생합니다.
+
+* 앱이 ‘Bob의 사용자 프로필 컨텍스트에서’ Mallory의 악성 스크립트를 구문 분석하고 시작합니다.
+* Mallory가 로컬 머신에서 Bob의 계정에 액세스합니다.
+
+#### <a name="denial-of-service"></a>서비스 거부
+
+__서비스 거부__ 공격은 Bob의 앱이 Mallory의 파일을 읽고 크래시되거나 제대로 작동하지 않을 때 발생합니다. 앞에서 언급한 앱이 머신 전체 저장소에서 시작 스크립트를 구문 분석하려고 시도한다고 가정해 보세요. Mallory가 머신 전체 저장소 내에서 잘 구성되지 않은 콘텐츠가 포함된 파일을 저장할 수 있는 경우 다음을 수행할 수 있습니다.
+
+* Bob의 앱이 시작 경로의 초기에 예외를 throw하도록 합니다.
+* 앱이 예외 때문에 제대로 시작되지 않게 합니다.
+
+그런 다음 자신의 사용자 계정에서 Bob이 앱을 시작할 수 있는 기능을 거부했습니다.
+
+#### <a name="information-disclosure"></a>정보 공개
+
+__정보 공개__ 공격은 Mallory가 Bob을 속여 정상적으로는 액세스할 수 없는 파일의 콘텐츠를 공개하도록 할 수 있는 경우 발생합니다. Bob의 비밀 파일 *C:\Users\Bob\secret.txt*를 Mallory가 읽고 싶어한다고 가정해 보겠습니다. Mallory는 파일의 경로는 알지만 Windows에서 Bob의 사용자 프로필 디렉터리에 액세스하지 못하게 하므로 파일을 읽을 수 없습니다.
+
+대신, Mallory는 하드 링크를 머신 전체 저장소에 배치합니다. 이 특수한 종류의 파일은 자체에 콘텐츠를 포함하지는 않고 디스크의 다른 파일을 가리킵니다. 하드 링크 파일을 읽으려고 하면 대신 링크의 대상으로 지정된 파일의 콘텐츠를 읽습니다. 하드 링크를 만든 후에도 Mallory는 링크의 대상(`C:\Users\Bob\secret.txt`)에 액세스할 수 없으므로 파일 콘텐츠를 읽을 수 없습니다. 그러나 Bob은 이 파일에 액세스할 수 ‘있습니다’.
+
+Bob의 앱이 머신 전체 저장소에서 읽을 때 이제 `secret.txt` 파일 자체가 머신 전체 저장소에 있었던 것처럼 파일 콘텐츠를 실수로 읽습니다. Bob의 앱이 종료될 때 파일을 머신 전체 저장소에 다시 저장하려고 하는 경우 파일의 실제 복사본을 *C:\ProgramData\IsolatedStorage\* 디렉터리에 저장하게 됩니다. 이 디렉터리는 머신의 모든 사용자가 읽을 수 있으므로 이제 Mallory는 파일의 콘텐츠를 읽을 수 있습니다.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>이러한 공격으로부터 방어하기 위한 모범 사례
+
+__중요:__ 환경에 상호 신뢰할 수 없는 사용자가 여러 명 있는 경우 API `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)`를 호출하거나 `storeadm.exe /machine /list` 도구를 호출하지 __마세요__. 둘은 모두 신뢰할 수 있는 데이터에서 작동하고 있다고 가정합니다. 공격자가 머신 전체 저장소에 악성 페이로드를 시드할 수 있는 경우 해당 페이로드로 인해 이러한 명령을 실행하는 사용자의 컨텍스트에서 권한 상승 공격이 발생할 수 있습니다.
+
+다중 사용자 환경에서 운영하는 경우 ‘머신’ 범위를 대상으로 하는 격리된 스토리지 기능 사용을 다시 고려하세요. 앱이 머신 전체 위치에서 데이터를 읽어야 하는 경우 관리자 계정만 쓸 수 있는 위치에서 데이터를 읽는 것이 좋습니다. `%PROGRAMFILES%` 디렉터리 및 `HKLM` 레지스트리 하이브는 관리자만 쓸 수 있고 모든 사용자가 읽을 수 있는 위치의 예입니다. 따라서 해당 위치에서 읽은 데이터는 신뢰할 수 있다고 간주합니다.
+
+앱이 다중 사용자 환경에서 ‘머신’ 범위를 사용해야 하는 경우에는 머신 전체 저장소에서 읽은 모든 파일의 콘텐츠를 유효성 검사하세요. 앱이 이러한 파일에서 개체 그래프를 역직렬화하는 경우 `BinaryFormatter` 또는 `NetDataContractSerializer`와 같이 위험한 직렬 변환기 대신 `XmlSerializer`와 같은 더 안전한 직렬 변환기를 사용하세요. 파일 콘텐츠에 따라 리소스 할당을 수행하는 개체 그래프나 많이 중첩된 개체 그래프는 주의해서 사용하세요.
 
 <a name="isolated_storage_locations"></a>
 

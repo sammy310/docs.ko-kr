@@ -1,5 +1,6 @@
 ---
 title: '방법: 명시적으로 예외 Throw'
+description: C# throw 문이나 Visual Basic Throw 문을 사용하여 .NET에서 명시적으로 예외를 throw하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd939f9edd58ba91ea74df5d6930087849f0560
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708864"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662786"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>명시적으로 예외를 throw하는 방법
 
@@ -28,6 +29,6 @@ C# [`throw`](../../csharp/language-reference/keywords/throw.md) 또는 Visual Ba
 [!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [예외](index.md)

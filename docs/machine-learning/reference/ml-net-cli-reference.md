@@ -1,18 +1,18 @@
 ---
 title: ML.NET CLI 명령 참조
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848927"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594545"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 명령 참조
 
-`auto-train` 명령은 ML.NET CLI 도구에서 제공하는 주 명령입니다. 이 명령을 사용하면 AutoML(자동화된 Machine Learning)을 사용하여 좋은 품질의 ML.NET 모델과 해당 모델을 실행/채점할 예제 C# 코드를 생성할 수 있습니다. 또한 모델을 학습할 C# 코드를 생성하여 모델의 알고리즘과 설정을 조사할 수 있습니다.
+`classification`, `regression` 및 `recommendation` 명령은 ML.NET CLI 도구에서 제공하는 주 명령입니다. 이 명령을 사용하면 AutoML(자동화된 Machine Learning)을 사용하여 분류, 회귀, 권장 사항 모델을 위한 좋은 품질의 ML.NET 모델과 해당 모델을 실행/채점할 예제 C# 코드를 생성할 수 있습니다. 또한 모델을 학습할 C# 코드를 생성하여 모델의 알고리즘과 설정을 조사할 수 있습니다.
 
 > [!NOTE]
 > 이 항목은 현재 미리 보기로 제공되는 ML.NET CLI 및 ML.NET AutoML을 참조하며, 자료는 변경될 수 있습니다.
@@ -22,10 +22,10 @@ ms.locfileid: "78848927"
 사용 예:
 
 ```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-`mlnet auto-train` 명령은 다음 자산을 생성합니다.
+`mlnet` ML 작업 명령(`classification`, `regression`, `recommendation`)은 다음과 같은 자산을 생성합니다.
 
 - 사용 준비가 된 Serialize된 모델 .zip("최적 모델")
 - 생성된 모델을 실행/채점할 C# 코드입니다.
@@ -37,75 +37,136 @@ mlnet auto-train --task regression --dataset "cars.csv" --label-column-name pric
 
 ## <a name="examples"></a>예
 
-이진 분류 문제에 가장 간단한 CLI 명령(AutoML은 제공된 데이터에서 대부분의 구성을 추론):
+분류 문제에 가장 간단한 CLI 명령(AutoML은 제공된 데이터에서 대부분의 구성을 추론):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
 ```
 
 회귀 문제에 대한 다른 간단한 CLI 명령:
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-학습 데이터 세트, 테스트 데이터 세트 및 추가 사용자 지정 명시적 인수로 이진 분류 모델을 만들고 학습합니다.
+학습 데이터 세트, 테스트 데이터 세트 및 추가 사용자 지정 명시적 인수로 분류 모델을 만들고 학습시킵니다.
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
 ## <a name="command-options"></a>명령 옵션
 
-`mlnet auto-train`은 제공된 데이터 세트에 따라 여러 모델을 학습하고 최종적으로 최적 모델을 선택한 후 직렬화된 .zip 파일로 저장하고 채점 및 학습을 위해 관련된 C# 코드를 생성합니다.
+`mlnet` ML 작업 명령(`classification`, `regression`, `recommendation`)은 제공된 데이터 세트와 ML.NET CLI 옵션을 기반으로 여러 모델을 학습시킵니다. 이러한 명령은 또한 최상의 모델을 선택하고, 모델을 직렬화된 .zip 파일로 저장하고, 채점 및 학습을 위한 관련 C# 코드를 생성합니다.
+
+### <a name="classification-options"></a>분류 옵션
+
+`mlnet classification`을 실행하면 분류 모델이 학습됩니다. ML 모델에서 데이터를 2개 이상의 클래스(예: 감정 분석)로 범주화하려면 이 명령을 선택합니다.
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="regression-options"></a>회귀 옵션
+
+`mlnet regression`을 실행하면 회귀 모델이 학습됩니다. ML 모델에서 숫자 값을 예측(예: 가격 예측)하게 하려면 이 명령을 선택합니다.
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--label-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--ignore-cols <cols>
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="recommendation-options"></a>권장 사항 옵션
+
+`mlnet recommendation`을 실행하면 권장 사항 모델이 학습됩니다.  ML 모델에서 등급(예: 제품 권장 사항)에 따라 사용자에게 항목을 추천하게 하려면 이 명령을 선택합니다.
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--item-col <col> (REQUIRED)
+
+--rating-col <col> (REQUIRED)
+
+--user-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
 잘못된 입력 옵션으로 인해 CLI 도구는 유효한 입력 목록과 오류 메시지를 내보냅니다.
-
-## <a name="task"></a>작업
-
-`--task | --mltask | -T`(문자열)
-
-해결할 ML 문제를 제공하는 단일 문자열입니다. 예를 들어, 다음 작업 중 하나(CLI는 결과적으로 AutoML에서 지원되는 모든 작업을 지원함):
-
-- `regression` - 숫자 값을 예측하기 위해 ML 모델을 사용할지 선택합니다.
-- `binary-classification` - ML 모델 결과에 두 개의 가능한 범주 부울 값(0 또는 1)이 있는지 선택합니다.
-- `multiclass-classification` - ML 모델 결과에 여러 개의 가능한 범주 값이 있는지 선택합니다.
-
-이 인수에는 단 하나의 ML 작업만 제공되어야 합니다.
 
 ## <a name="dataset"></a>데이터 세트
 
@@ -154,27 +215,41 @@ mlnet auto-train
 
 어떠한 경우에도 이러한 백분율은 이미 분할된 파일을 제공할 CLI를 사용하는 사용자가 결정합니다.
 
-## <a name="label-column-name"></a>레이블 열 이름
+## <a name="label-column"></a>레이블 열
 
-`--label-column-name | -n`(문자열)
+`--label-col`(int 또는 문자열)
 
-이 인수를 사용하면 특정 목표/대상 열(예측하려는 변수)은 데이터 세트의 헤더에서 지정된 열 이름을 사용하여 지정할 수 있습니다.
+이 인수를 사용하면 특정 목표/대상 열(예측하려는 변수)은 데이터 세트 헤더에 설정된 열 이름이나 데이터 세트 파일에서 열의 숫자 인덱스(열 인덱스 값은 0에서 시작)를 사용하여 지정할 수 있습니다.
 
-이 인수는 *분류 문제* 등의 감독된 ML 작업에만 사용됩니다. *클러스터링* 등의 감독되지 않은 ML 작업에는 사용할 수 없습니다.
+이 인수는 ‘분류’ 및 ‘회귀’ 문제에 사용됩니다. 
 
-## <a name="label-column-index"></a>레이블 열 인덱스
+## <a name="item-column"></a>항목 열
 
-`--label-column-index | -i`(int)
+`--item-col`(int 또는 문자열)
 
-이 인수를 사용하면 특정 목표/대상 열(예측하려는 변수)은 데이터 세트 파일에서 열의 숫자 인덱스(열 인덱스 값은 1에서 시작)를 사용하여 지정할 수 있습니다.
+항목 열에는 사용자가 평가하는 항목(사용자에게 권장되는 항목)의 목록이 있습니다. 이 열은 데이터 세트 헤더에 설정된 열 이름이나 데이터 세트 파일에서 열의 숫자 인덱스(열 인덱스 값은 0에서 시작)를 사용하여 지정할 수 있습니다.
 
-*참고:* 또한 사용자가 `--label-column-name`을 사용하고 있는 경우 `--label-column-name`도 사용되는 것입니다.
+이 인수는 ‘권장 사항’ 작업에만 사용됩니다.
 
-이 인수는 *분류 문제* 등의 감독된 ML 작업에만 사용됩니다. *클러스터링* 등의 감독되지 않은 ML 작업에는 사용할 수 없습니다.
+## <a name="rating-column"></a>등급 열
+
+`--rating-col`(int 또는 문자열)
+
+등급 열에는 사용자가 항목에 부여하는 등급의 목록이 있습니다. 이 열은 데이터 세트 헤더에 설정된 열 이름이나 데이터 세트 파일에서 열의 숫자 인덱스(열 인덱스 값은 0에서 시작)를 사용하여 지정할 수 있습니다.
+
+이 인수는 ‘권장 사항’ 작업에만 사용됩니다.
+
+## <a name="user-column"></a>사용자 열
+
+`--user-col`(int 또는 문자열)
+
+사용자 열에는 항목에 등급을 부여하는 사용자의 목록이 있습니다. 이 열은 데이터 세트 헤더에 설정된 열 이름이나 데이터 세트 파일에서 열의 숫자 인덱스(열 인덱스 값은 0에서 시작)를 사용하여 지정할 수 있습니다.
+
+이 인수는 ‘권장 사항’ 작업에만 사용됩니다.
 
 ## <a name="ignore-columns"></a>열 무시
 
-`--ignore-columns | -I`(문자열)
+`--ignore-columns`(문자열)
 
 이 인수를 사용하면 훈련 프로세스에서 로드되어 사용되지 않도록 데이터 세트 파일에서 기존 열을 무시할 수 있습니다.
 
@@ -186,7 +261,7 @@ mlnet auto-train
 
 ## <a name="has-header"></a>헤더 있음
 
-`--has-header | -h`(bool)
+`--has-header`(bool)
 
 데이터 세트 파일에 헤더 행이 있는지 지정합니다.
 가능한 값은
@@ -194,15 +269,13 @@ mlnet auto-train
 - `true`
 - `false`
 
-사용자가 이 인수를 지정하지 않은 경우 기본 값은 `true`입니다.
+사용자가 이 인수를 지정하지 않은 경우 ML.NET CLI에서 이 속성을 검색하려고 합니다.
 
-`--label-column-name` 인수를 사용하려면 데이터 세트 파일에 헤더가 있고 `--has-header`가 `true`로 설정되어 있어야 합니다(기본값).
+## <a name="train-time"></a>학습 시간
 
-## <a name="max-exploration-time"></a>최대 탐색 시간
+`--train-time`(문자열)
 
-`--max-exploration-time | -x`(문자열)
-
-기본적으로, 최대 검색 시간은 30분입니다.
+기본적으로 최대 탐색/학습 시간은 30분입니다.
 
 이 인수는 프로세스에서 여러 트레이너와 구성을 검색하는 최대 시간(초 단위)을 설정합니다. 단일 반복에 지정된 시간이 너무 짧을 경우(예를 들어 2초) 구성된 값이 초과될 수 있습니다. 이 경우에 실제 시간은 단일 반복에서 하나의 모델 구성을 생성하는 데 필요한 시간입니다.
 
@@ -210,7 +283,7 @@ mlnet auto-train
 
 ## <a name="cache"></a>캐시
 
-`--cache | -c`(문자열)
+`--cache`(문자열)
 
 캐싱을 사용할 경우 전체 학습 데이터 세트는 메모리에 로드됩니다.
 
@@ -228,7 +301,7 @@ mlnet auto-train
 
 ## <a name="name"></a>이름
 
-`--name | -N`(문자열)
+`--name`(문자열)
 
 생성된 출력 프로젝트 또는 솔루션의 이름입니다. 지정된 이름이 없을 경우 `sample-{mltask}`이 사용됩니다.
 
@@ -242,7 +315,7 @@ ML.NET 모델 파일(.ZIP 파일)도 같은 이름을 갖게 됩니다.
 
 ## <a name="verbosity"></a>자세한 정도
 
-`--verbosity | -V`(문자열)
+`--verbosity | -v`(문자열)
 
 표준 출력의 자세한 정도를 설정합니다.
 
@@ -252,11 +325,11 @@ ML.NET 모델 파일(.ZIP 파일)도 같은 이름을 갖게 됩니다.
 - `m[inimal]`(기본값)
 - `diag[nostic]`(로깅 정보 수준)
 
-기본적으로, CLI 도구는 작동 중인지 그리고, 가능하면 남은 시간 또는 완료된 시간 비율을 언급하는 등, 일부 최소 피드백(최소)을 표시해야 합니다.
+기본적으로 CLI 도구는 작동 중인지와 가능하다면 남은 시간 또는 완료된 시간 비율을 언급하는 등 일부 최소 피드백(`minimal`)을 표시해야 합니다.
 
 ## <a name="help"></a>도움말
 
-`-h|--help`
+`-h |--help`
 
 각 명령의 매개 변수에 대한 설명과 함께 명령에 대한 도움말을 출력합니다.
 

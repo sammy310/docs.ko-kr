@@ -1,5 +1,6 @@
 ---
 title: '방법: 애플리케이션 도메인에 어셈블리 로드'
+description: .NET에서 애플리케이션 도메인에 어셈블리를 로드하는 방법을 알아봅니다. 권장되는 방법은 System.Reflection.Assembly에서 정적(또는 공유) Load 메서드를 사용하는 것입니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119900"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104753"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
 애플리케이션 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  

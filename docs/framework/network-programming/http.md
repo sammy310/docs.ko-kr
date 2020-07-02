@@ -1,5 +1,6 @@
 ---
 title: HTTP
+description: .NET Framework에서 HttpWebRequest 및 HttpWebResponse 클래스를 사용하여 HTTP에 대해 제공하는 포괄적인 지원에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - protocols, HTTP
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ffb7a5d027ef7691d03caf0ac45d4a3dd9bdb652
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048007"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502420"
 ---
 # <a name="http"></a>HTTP
 .NET Framework에서는 <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.HttpWebResponse> 클래스를 사용하여 모든 인터넷 트래픽의 대부분을 구성하는 HTTP 프로토콜을 포괄적으로 지원합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 파생된 이러한 클래스는 기본적으로 정적 메서드 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>가 “http” 또는 “https”로 시작하는 URI를 발견할 때마다 반환됩니다. 대부분의 경우 **WebRequest** 및 **WebResponse** 클래스는 요청을 만드는 데 필요한 모든 것을 제공하지만, 속성으로 노출되는 HTTP별 기능에 액세스해야 할 경우 이러한 클래스를 **HttpWebRequest** 또는 **HttpWebResponse**로 형식 캐스팅해야 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "71048007"
   
  애플리케이션은 <xref:System.Net.WebException.Status%2A>가 <xref:System.Net.WebExceptionStatus>로 설정된 <xref:System.Net.WebException>을 catch하여 HTTP 프로토콜 오류를 수신합니다. <xref:System.Net.WebException.Response%2A> 속성은 서버에서 보낸 **WebResponse**를 포함하고 발생한 실제 HTTP 오류를 나타냅니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프록시를 통해 인터넷 액세스](accessing-the-internet-through-a-proxy.md)
 - [애플리케이션 프로토콜 사용](using-application-protocols.md)

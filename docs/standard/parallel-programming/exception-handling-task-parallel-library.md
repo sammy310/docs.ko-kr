@@ -1,5 +1,6 @@
 ---
 title: 예외 처리(작업 병렬 라이브러리)
+description: .NET에서 TPL(작업 병렬 라이브러리)을 사용한 예외 처리를 살펴봅니다. 중첩 집계 예외, 내부 예외, 관찰되지 않은 작업 예외 등을 참조하세요.
 ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290047"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662539"
 ---
 # <a name="exception-handling-task-parallel-library"></a>예외 처리(작업 병렬 라이브러리)
 

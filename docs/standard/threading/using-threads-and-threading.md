@@ -1,17 +1,18 @@
 ---
 title: 스레드 및 스레딩 사용
+description: 여러 작업을 동시에 수행(다중 스레딩)하는 애플리케이션을 작성할 수 있도록 .NET에서 스레드와 스레딩을 사용하는 방법에 대해 알아봅니다.
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588421"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663033"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
 
@@ -52,7 +53,7 @@ ms.locfileid: "80588421"
 |<xref:System.Threading.Thread.Priority%2A>|운영 체제에서 스레드 예약의 우선 순위를 지정하는 데 사용되는 <xref:System.Threading.ThreadPriority> 값을 가져오거나 설정합니다. 자세한 내용은 [스레드 예약](scheduling-threads.md) 및 <xref:System.Threading.ThreadPriority> 참조를 참조하세요.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|현재 스레드의 상태를 포함하는 <xref:System.Threading.ThreadState> 값을 가져옵니다.|  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [스레드 및 스레딩](threads-and-threading.md)

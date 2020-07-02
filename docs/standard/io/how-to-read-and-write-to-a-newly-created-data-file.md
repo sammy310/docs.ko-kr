@@ -1,5 +1,6 @@
 ---
 title: '방법: 새로 만든 데이터 파일 읽기 및 쓰기'
+description: .NET에서 System.IO.BinaryReader 및 System.IO.BinaryWriter 클래스를 사용하여 새로 생성된 데이터 파일에 읽고 쓰는 방법을 알아봅니다.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291814"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769160"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>방법: 새로 만든 데이터 파일 읽기 및 쓰기
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType>와 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 클래스는 문자열이 아닌 데이터를 쓰고 읽는 데 사용됩니다. 다음 예제에서는 빈 파일 스트림을 만들어서 여기에 데이터를 쓰고 데이터를 읽는 방법을 보여줍니다.

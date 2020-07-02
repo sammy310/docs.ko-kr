@@ -1,5 +1,6 @@
 ---
 title: '방법: 글로벌 어셈블리 캐시에서 어셈블리 제거'
+description: 전역 어셈블리 캐시 도구(Gacutil.exe)나 Windows Installer를 사용하여 .NET의 전역 어셈블리 캐시에서 어셈블리를 제거하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3a596ea6029ded190c33032e96b601de9d4012d
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119862"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104763"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에서 어셈블리 제거
 
@@ -30,7 +31,7 @@ GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 �
 
 명령 프롬프트에 다음 명령을 입력합니다.
 
-**gacutil –u** \<*어셈블리 이름*>
+**gacutil –u** \<*assembly name*>
 
 이 명령에서 *assembly name*은 전역 어셈블리 캐시에서 제거할 어셈블리의 이름입니다.
 

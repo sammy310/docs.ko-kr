@@ -1,5 +1,6 @@
 ---
 title: 다중 파일 어셈블리
+description: 명령줄 컴파일러 또는 Visual Studio를 Visual C++와 함께 사용하여 .NET을 대상으로 하는 다중 파일 어셈블리를 사용합니다. 어셈블리의 한 파일에 어셈블리 매니페스트가 있어야 합니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-ms.openlocfilehash: 2a70e45d50763cf99c55cf08600c3c816b4043b7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a5fb41b3b136a325e6b8658da521cba3176e929f
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644212"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104638"
 ---
 # <a name="multifile-assemblies"></a>다중 파일 어셈블리
 

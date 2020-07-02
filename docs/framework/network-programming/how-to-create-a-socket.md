@@ -1,5 +1,6 @@
 ---
 title: '방법: 소켓 만들기'
+description: 원격 디바이스와 통신하도록 소켓을 초기화하는 방법을 알아봅니다. Socket 클래스를 사용하여 주소 패밀리, 소켓 형식, 프로토콜 유형을 지정합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180834"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502550"
 ---
 # <a name="how-to-create-a-socket"></a>방법: 소켓 만들기
 소켓을 사용하여 원격 디바이스와 통신하려면 먼저 프로토콜 및 네트워크 주소 정보를 사용하여 소켓을 초기화해야 합니다. <xref:System.Net.Sockets.Socket> 클래스에 대한 생성자에는 소켓이 연결을 만드는 데 사용하는 주소 패밀리, 소켓 형식 및 프로토콜 형식을 지정하는 매개 변수가 있습니다.  
@@ -60,7 +61,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  **소켓**이 만들어진 후 원격 엔드포인트에 대한 연결을 시작하거나 원격 디바이스에서 연결을 수신할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클라이언트 소켓 사용](using-client-sockets.md)
 - [소켓으로 수신](listening-with-sockets.md)

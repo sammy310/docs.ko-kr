@@ -1,5 +1,6 @@
 ---
 title: 동기 클라이언트 소켓 사용
+description: 이 예제에서는 네트워크 작업이 완료되는 동안 애플리케이션 프로그램을 일시 중단하는 .NET Framework의 동기 클라이언트 소켓을 보여 줍니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047066"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502069"
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 애플리케이션을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 애플리케이션에 적합하지 않지만 다른 애플리케이션의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  
@@ -70,7 +71,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비동기 클라이언트 소켓 사용](using-an-asynchronous-client-socket.md)
 - [소켓으로 수신](listening-with-sockets.md)

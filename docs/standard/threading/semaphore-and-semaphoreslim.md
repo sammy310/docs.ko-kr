@@ -1,5 +1,6 @@
 ---
 title: 세마포 및 SemaphoreSlim
+description: 세마포 및 SemaphoreSlim에 대해 알아봅니다. Semaphore 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. SemaphoreSlim 클래스는 빠른 경량 세마포입니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600453"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
 로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  
@@ -44,7 +45,7 @@ ms.locfileid: "84291138"
   
  명명된 세마포를 나타내는 <xref:System.Threading.Semaphore> 개체를 보호하려면 액세스 제어 보안을 사용합니다. 이때 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 개체를 지정하는 생성자를 사용하는 것이 좋습니다. <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 메서드를 사용하여 액세스 제어 보안을 적용할 수도 있지만 이렇게 하면 세마포 작성 시간과 보호가 적용되는 시간 사이에 취약한 기간이 생기게 됩니다. 액세스 제어 보안을 통해 세마포를 보호하면 악의적인 공격을 방지할 수는 있지만 의도하지 않은 이름 충돌 문제는 해결되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

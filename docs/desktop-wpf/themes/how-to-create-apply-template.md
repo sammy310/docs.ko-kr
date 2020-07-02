@@ -1,7 +1,7 @@
 ---
 title: WPF에서 템플릿 만들기 - .NET Desktop
 description: Windows Presentation Foundation 및 .NET Core에서 컨트롤 템플릿을 만들고 참조하는 방법을 알아봅니다.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/15/2019
 no-loc:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - skinning controls [WPF]
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
-ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c372659676b450cde789c96e45c7ec5de2aea194
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "81432541"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325733"
 ---
 # <a name="create-a-template-for-a-control"></a>컨트롤의 템플릿 만들기
 
@@ -59,9 +59,9 @@ WPF(Windows Presentation Foundation)를 사용하면 다시 사용할 수 있는
 
 |     |     |
 | --- | --- |
-| **[!OP.NO-LOC(Title)]**         | `Template Intro Sample` |
-| **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
-| **[!OP.NO-LOC(MinWidth)]**      | `250` |
+| **Title**         | `Template Intro Sample` |
+| **SizeToContent** | `WidthAndHeight` |
+| **MinWidth**      | `250` |
 
 **\<Window>** 요소의 콘텐츠를 다음 XAML로 설정합니다.
 
@@ -83,7 +83,7 @@ WPF(Windows Presentation Foundation)를 사용하면 다시 사용할 수 있는
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-다음 속성 세트를 사용하여 새 **\<ControlTemplate>** 을 만듭니다.
+다음 속성 집합을 사용하여 새 **\<ControlTemplate>** 을 만듭니다.
 
 |     |     |
 | --- | --- |
@@ -138,7 +138,7 @@ WPF(Windows Presentation Foundation)를 사용하면 다시 사용할 수 있는
 
 ![템플릿 타원 단추가 하나 있는 WPF 창](media/create-apply-template/styled-button.png)
 
-단추가 원이 아니라 타원인 것을 볼 수 있습니다. **\<Ellipse>** 요소는 그 작동 방식 때문에 항상 사용 가능한 공간을 채우도록 확장됩니다. 단추의 **:::no-loc text="width":::** 및 **:::no-loc text="height":::** 속성을 동일한 값으로 변경하여 원을 균일하게 만듭니다.
+단추가 원이 아니라 타원인 것을 볼 수 있습니다. **\<Ellipse>** 요소는 작동 방식 때문에 항상 사용 가능한 공간을 채우도록 확장됩니다. 단추의 **:::no-loc text="width":::** 및 **:::no-loc text="height":::** 속성을 동일한 값으로 변경하여 원을 균일하게 만듭니다.
 
 [!code-xaml[StyledButtonSize](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButtonSize)]
 
@@ -170,11 +170,11 @@ WPF에서 제공하는 동적 이벤트 및 속성 시스템을 사용하면 값
 
 시각적 상태는 컨트롤을 통해 정의하고 트리거됩니다. 예를 들어 마우스를 컨트롤 위로 이동하면 `CommonStates.MouseOver` 상태가 트리거됩니다. 컨트롤의 현재 상태에 따라 속성 변경에 애니메이션 효과를 적용할 수 있습니다. 이전 섹션에서는 **\<PropertyTrigger>** 를 사용하여 `IsMouseOver` 속성이 `true`일 때 단추의 전경을 `AliceBlue`로 변경하도록 했습니다. 여기서는 그 대신 색의 변화에 애니메이션 효과를 적용하는 시각적 상태를 만들어 부드럽게 전환하겠습니다. *VisualStates*에 대한 자세한 내용은 [WPF의 스타일 및 템플릿](../fundamentals/styles-templates-overview.md#visual-states)을 참조하세요.
 
-**\<PropertyTrigger>** 를 애니메이션 시각적 상태로 변환하려면 템플릿에서 **\<ControlTemplate.Triggers>** 요소를 제거합니다.
+**\<PropertyTrigger>** 를 애니메이션 시각적 상태로 변환하려면 먼저 템플릿에서 **\<ControlTemplate.Triggers>** 요소를 제거합니다.
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-다음으로, 컨트롤 템플릿의 **\<Grid>** 루트에서 `CommonStates`에 대한 **\<VisualStateGroup>** 을 사용하여 **\<VisualStateManager.VisualStateGroups>** 요소를 추가합니다. 두 가지 상태 `Normal` 및 `MouseOver`를 정의합니다.
+그런 다음 컨트롤 템플릿의 **\<Grid>** 루트에서 `CommonStates`에 **\<VisualStateGroup>** 을 사용하여 **\<VisualStateManager.VisualStateGroups>** 요소를 추가합니다. 두 가지 상태 `Normal` 및 `MouseOver`를 정의합니다.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
@@ -192,7 +192,7 @@ WPF에서 제공하는 동적 이벤트 및 속성 시스템을 사용하면 값
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-**\<ControlTemplate>** 은 이제 다음과 비슷하게 표시됩니다.
+**\<ControlTemplate>** 은 이제 다음과 같이 보입니다.
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 

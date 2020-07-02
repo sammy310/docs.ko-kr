@@ -1,5 +1,6 @@
 ---
 title: TPL(작업 병렬 라이브러리)
+description: .NET에서 애플리케이션에 병렬 처리 및 동시성을 추가하는 프로세스를 단순화하는 공용 형식 및 API의 세트인 TPL(작업 병렬 라이브러리)을 살펴봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 45c9f43e67b66b00758afa0659897971aef317c2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 42768d99e7f3a15751ccf4c980edb9373666d49f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284977"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768603"
 ---
 # <a name="task-parallel-library-tpl"></a>TPL(작업 병렬 라이브러리)
 TPL(작업 병렬 라이브러리)은 <xref:System.Threading?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 네임스페이스에 포함된 공용 형식 및 API의 집합입니다. TPL의 목적은 애플리케이션에 병렬 처리 및 동시성 기능을 추가하는 과정을 단순화하여 개발자가 더 생산적으로 작업할 수 있도록 하는 것입니다. TPL은 사용할 수 있는 모든 프로세서를 가장 효율적으로 사용하도록 동시성 수준을 동적으로 조정합니다. 또한 TPL은 작업의 분할, <xref:System.Threading.ThreadPool>에 대한 스레드 예약, 취소 지원, 상태 관리 및 기타 하위 수준 세부 정보를 처리합니다. TPL을 사용하면 프로그램의 설계 목적인 작업을 처리하는 데 집중하면서 코드의 성능을 최대화할 수 있습니다.  

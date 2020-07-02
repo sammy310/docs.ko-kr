@@ -1,5 +1,6 @@
 ---
 title: 관리되는 스레딩 기본 사항
+description: 예외, 데이터 동기화, 포그라운드 및 백그라운드 스레드, 로컬 스토리지 등의 항목을 다루는 다른 관리형 스레딩 문서에 대한 링크를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: 4d2a96619fd1c48c79b5590efdb52c307d29710c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291008"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769095"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 
@@ -24,7 +25,7 @@ ms.locfileid: "84291008"
 > [!NOTE]
 > .NET Framework 4에서 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
  [스레드 및 스레딩](threads-and-threading.md)  
  다중 스레드의 장단점에 대해 설명하고 스레드를 만들거나 스레드 풀 스레드를 사용할 수 있는 시나리오를 간략하게 설명합니다.  
@@ -41,10 +42,10 @@ ms.locfileid: "84291008"
  [Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩](managed-and-unmanaged-threading-in-windows.md)  
  관리되는 스레딩과 관리되지 않는 스레딩, 간의 관계에 대해 설명하고, Windows 스레딩 API에 대해 관리되는 스레딩을 나열하고, COM 아파트 및 관리되는 스레드의 상호 작용에 대해 설명합니다.  
   
- [스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [스레드 로컬 스토리지: 스레드 관련 정적 필드 및 데이터 슬롯](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  스레드 관련 스토리지 메커니즘을 설명합니다.  
   
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
  <xref:System.Threading.Thread>  
  비관리 코드에서 가져왔는지 또는 관리되는 애플리케이션에서 만들어졌는지에 관계없이 관리되는 스레드를 나타내는 **Thread** 클래스에 대한 참조 설명서를 제공합니다.  

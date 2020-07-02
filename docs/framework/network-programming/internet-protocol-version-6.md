@@ -1,5 +1,6 @@
 ---
 title: 인터넷 프로토콜 버전 6
+description: IPv6 프로토콜 및 이 프로토콜이 IPv4와 어떻게 다른지 알아봅니다. .NET Framework 애플리케이션은 IPv6을 지원하지만 구성이 필요할 수도 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047873"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502394"
 ---
 # <a name="internet-protocol-version-6"></a>인터넷 프로토콜 버전 6
 IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한 새로운 표준 프로토콜 도구 모음입니다. IPv6은 주소 고갈, 보안, 자동 구성, 확장성 등에 관련된 현재 버전 인터넷 프로토콜 도구 모음(IPv4라고 함)의 많은 문제를 해결하도록 설계되었습니다. IPv6은 피어 투 피어 및 모바일 애플리케이션을 포함한 새로운 종류의 애플리케이션을 구현하기 위해 인터넷 기능을 확장합니다. 현재 IPv4 프로토콜의 주요 문제는 다음과 같습니다.  
@@ -44,7 +45,7 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
   
  자세한 내용은 [IPv6 주소 지정](ipv6-addressing.md), [IPv6 라우팅](ipv6-routing.md), [IPv6 자동 구성](ipv6-auto-configuration.md), [IPv6 사용 및 사용 안 함](enabling-and-disabling-ipv6.md) 및 [방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)을 참조하세요.  
   
-## <a name="references"></a>참조  
+## <a name="references"></a>참조 항목  
  [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에서 찾을 수 있는 선택된 RFC 문서는 다음과 같습니다.  
   
 - RFC 1287, Towards the Future Internet Architecture.  
@@ -57,7 +58,7 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
   
  또한 [IPv6(IP 버전 6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29)에서 IPv6 관련 정보를 찾을 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IPv6 소켓 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [네트워크 프로그래밍 샘플](network-programming-samples.md)

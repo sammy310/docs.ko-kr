@@ -1,5 +1,6 @@
 ---
 title: '방법: 다중 파일 어셈블리 빌드'
+description: 절차의 각 단계를 설명하는 샘플 코드를 사용하여 .NET에서 다중 파일 어셈블리를 빌드(생성)하는 방법을 알아봅니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,12 +18,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429563"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104955"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
 
@@ -209,7 +210,7 @@ ms.locfileid: "74429563"
 
     명령 프롬프트에 다음 명령을 입력합니다.
 
-    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*> **/out:** \<*file name*> **/target:** \<*assembly file type*>
 
     이 명령에서 *module name* 인수는 각 모듈의 이름을 지정하여 어셈블리에 포함합니다. **/main:** 옵션은 메서드 이름을 지정하는데, 이 메서드는 어셈블리의 진입점입니다. **/out:** 옵션은 출력 파일의 이름을 지정하는데, 이 파일에는 어셈블리 메타데이터가 들어 있습니다. **/target:** 옵션은 어셈블리를 콘솔 애플리케이션 실행 파일( *.exe*), Windows 실행 파일( *.win*) 또는 라이브러리 파일( *.lib*)로 지정합니다.
 

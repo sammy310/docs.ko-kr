@@ -1,5 +1,6 @@
 ---
 title: 비동기 서버 소켓 사용
+description: 이 예제에서는 비동기 서버 소켓을 보여 줍니다. Socket 클래스는 .NET Framework 비동기 프로그래밍을 사용하여 네트워크 서비스 요청을 처리합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 467804e685d800643c421ed1aad040a842b42886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180629"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502030"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>비동기 서버 소켓 사용
 비동기 서버 소켓은 .NET Framework 비동기 프로그래밍 모델을 사용하여 네트워크 서비스 요청을 처리합니다. <xref:System.Net.Sockets.Socket> 클래스는 표준 .NET Framework 비동기 명명 패턴을 따릅니다. 예를 들어 동기 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드는 비동기 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 및 <xref:System.Net.Sockets.Socket.EndAccept%2A> 메서드에 해당합니다.  
@@ -268,7 +269,7 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [동기 서버 소켓 사용](using-a-synchronous-server-socket.md)
 - [비동기 서버 소켓 예제](asynchronous-server-socket-example.md)

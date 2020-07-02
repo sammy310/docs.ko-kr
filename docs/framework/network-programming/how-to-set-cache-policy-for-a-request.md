@@ -1,5 +1,6 @@
 ---
 title: '방법: 요청에 캐시 정책 설정'
+description: .NET Framework의 요청에 대한 캐시 정책을 설정하는 방법을 알아봅니다. 이 캐시 정책에 따라, 최대 하루 동안 캐시에서 리소스를 사용할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180761"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502433"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>방법: 요청에 캐시 정책 설정
 다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다. 예제 입력은 `http://www.contoso.com/` 등의 URI입니다.  
@@ -105,7 +106,7 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [네트워크 애플리케이션에 대한 캐시 관리](cache-management-for-network-applications.md)
 - [캐시 정책](cache-policy.md)

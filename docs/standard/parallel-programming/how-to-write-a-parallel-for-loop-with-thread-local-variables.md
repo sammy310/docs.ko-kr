@@ -1,5 +1,6 @@
 ---
 title: '방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성'
+description: .NET에서 루프에 있는 개별 작업의 상태를 저장하고 검색하는 스레드 지역 변수를 사용하는 Parallel.For 루프를 작성하는 방법의 예를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290761"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599791"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성
 이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 로컬 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
@@ -42,7 +43,7 @@ Function() new MyClass()
   
  람다 식을 사용하는 방법은 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 병렬 처리](data-parallelism-task-parallel-library.md)
 - [병렬 프로그래밍](index.md)

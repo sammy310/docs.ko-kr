@@ -1,13 +1,14 @@
 ---
 title: 네트워크 프로그래밍 샘플
+description: .NET Framework System.Net 및 확장 클래스용으로 다운로드 가능한 네트워크 프로그래밍 샘플을 사용합니다.
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180709"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502264"
 ---
 # <a name="network-programming-samples"></a>네트워크 프로그래밍 샘플
 이 섹션에는 <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> 및 관련 네임스페이스의 클래스를 사용하는 다운로드 가능한 네트워크 프로그래밍 샘플에 대한 링크와 설명이 포함되어 있습니다.

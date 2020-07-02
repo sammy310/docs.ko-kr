@@ -1,5 +1,6 @@
 ---
 title: '방법: 작업에서 값 반환'
+description: .NET에서 System.Threading.Tasks.Task<TResult> 형식을 사용하여 Result 속성에서 값을 반환하는 방법을 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-ms.openlocfilehash: 144d004d697b84a011cedafc7d07b679ef8852c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 051cef7cac654e4369ec1486884876004370ba0b
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288149"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767977"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>방법: 작업에서 값 반환
 다음 예제에서는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 형식을 사용하여 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 반환하는 방법을 보여 줍니다. 이 예제를 실행하려면 C:\Users\Public\Pictures\Sample Pictures\ 디렉터리가 있고 파일을 포함해야 합니다.  

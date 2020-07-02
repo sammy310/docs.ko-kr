@@ -1,5 +1,6 @@
 ---
 title: 데이터 요청
+description: 플러그형 프로토콜을 사용하여 단일 인터페이스를 통해 여러 프로토콜에서 데이터를 검색하는 애플리케이션을 개발할 수 있는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047321"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502186"
 ---
 # <a name="requesting-data"></a>데이터 요청
 현재 인터넷의 분산된 운영 환경에서 실행되는 애플리케이션을 개발하려면 모든 형식의 리소스에서 데이터를 검색하기 위한 효율적이고 사용하기 쉬운 메서드가 필요합니다. 플러그형 프로토콜을 사용하면 단일 인터페이스를 사용하여 여러 인터넷 프로토콜에서 데이터를 검색하는 애플리케이션을 개발할 수 있습니다.  
@@ -52,7 +53,7 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework의 네트워크 프로그래밍](index.md)
 - [방법: 웹 페이지 요청 및 결과를 스트림으로 검색](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)

@@ -1,14 +1,14 @@
 ---
 title: ML.NET CLI를 통한 모델 학습 자동화
 description: ML.NET CLI 도구를 사용하여 명령줄에서 자동으로 최상의 모델을 학습하는 방법을 알아봅니다.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212414"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589666"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI를 통한 모델 학습 자동화
 
@@ -31,26 +31,26 @@ ML.NET CLI는 [.NET Core 도구](../core/tools/global-tools.md)입니다. 설치
 
 직접 코딩하지 않고도 자체 데이터 세트에서 해당 자산을 생성할 수 있기 때문에 ML.NET을 이미 알고 있더라도 생산성이 증대됩니다.
 
-현재 ML.NET CLI에서 지원되는 ML 작업은 다음과 같습니다.
+현재 ML.NET CLI에서 지원하는 ML 작업은 다음과 같습니다.
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- 앞으로 `recommendation`, `ranking`, `anomaly-detection`, `clustering` 같은 다른 기계 학습 작업도 지원될 것입니다.
+- 분류(이진 및 다중 클래스)
+- 재발
+- 권장 사항
+- 미래: 이미지 분류, 순위 지정, 변칙 검색, 클러스터링 등의 다른 기계 학습 작업
 
-사용 예:
+사용 예(분류 시나리오):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![이미지](media/automate-training-with-cli/cli-model-generation.gif)
+![이미지](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 *Windows PowerShell*, *macOS/Linux bash* 또는 *Windows CMD*에서 같은 방식으로 실행할 수 있습니다. 그러나 테이블 형식 자동 완성(매개 변수 제안)은 *Windows CMD*에서 작동하지 않습니다.
 
 ## <a name="output-assets-generated"></a>생성된 출력 자산
 
-CLI `auto-train` 명령은 출력 폴더에 다음 자산을 생성합니다.
+CLI의 ML 작업 명령은 출력 폴더에 다음 자산을 생성합니다.
 
 - 예측 실행에 사용할 수 있는 직렬화된 모델의 .zip("최상의 모델") 파일
 - 다음을 포함한 C# 솔루션:
@@ -68,23 +68,15 @@ CLI 도구를 사용하여 “최상의 모델”을 생성할 때는 대상으�
 
 여기에서는 ML 작업에 따라 메트릭이 그룹화되어 요약되므로 자동 생성된 ‘최상의 모델’ 품질을 이해할 수 있습니다.
 
-### <a name="metrics-for-binary-classification-models"></a>이진 분류 모델에 대한 메트릭
+### <a name="metrics-for-classification-models"></a>분류 모델에 대한 메트릭
 
-다음은 CLI에서 찾은 상위 5개 모델에 대한 이진 분류 ML 작업 메트릭 목록을 표시합니다.
-
-![이미지](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-정확도는 분류 문제에 대해 널리 사용되는 메트릭이나, 다음 참조에서 설명된 것처럼 최상의 모델을 선택하기 위해 항상 가장 적합한 메트릭인 것은 아닙니다. 추가적인 메트릭을 사용하여 모델 품질을 평가해야 하는 경우도 있습니다.
-
-CLI에서 출력하는 메트릭을 살펴보고 이해하려면 [이진 분류에 대한 평가 메트릭](resources/metrics.md#evaluation-metrics-for-binary-classification)을 참조하세요.
-
-### <a name="metrics-for-multi-class-classification-models"></a>다중 클래스 분류 모델에 대한 메트릭
-
-다음은 CLI에서 찾은 상위 5개 모델에 대한 다중 클래스 분류 ML 작업 메트릭 목록을 표시합니다.
+다음은 CLI에서 찾은 상위 5개 모델에 대한 분류 메트릭 목록을 표시합니다.
 
 ![이미지](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-CLI에서 출력하는 메트릭을 살펴보고 이해하려면 [다중 클래스 분류에 대한 평가 메트릭](resources/metrics.md#evaluation-metrics-for-multi-class-classification)을 참조하세요.
+ 정확도는 분류 문제에 대해 널리 사용되는 메트릭이나, 다음 참조에서 설명된 것처럼 최상의 모델을 선택하기 위해 항상 가장 적합한 메트릭인 것은 아닙니다. 추가적인 메트릭을 사용하여 모델 품질을 평가해야 하는 경우도 있습니다.
+
+CLI에서 출력하는 메트릭을 살펴보고 이해하려면 [Evaluation metrics for classification](resources/metrics.md#evaluation-metrics-for-multi-class-classification)(분류에 대한 평가 메트릭)을 참조하세요.
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>회귀용 메트릭 및 권장 모델
 
