@@ -1,5 +1,6 @@
 ---
 title: XAML 브라우저 응용 프로그램 개요
+description: XAML 브라우저 응용 프로그램이 Windows Presentation Foundation (WPF)에서 웹 응용 프로그램 및 다양 한 클라이언트 응용 프로그램의 기능을 결합 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +11,17 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 3395445dd5639e25f62aeef09d070e326704ed40
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617914"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>Xbap (XAML 브라우저 응용 프로그램)는 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 애플리케이션처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. 풍부한 클라이언트 응용 프로그램과 마찬가지로 Xbap는 WPF의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.
 
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 
 - [새 XBAP(XAML 브라우저 애플리케이션) 만들기](#creating_a_new_xaml_browser_application_xbap)
 
@@ -45,7 +46,7 @@ ms.locfileid: "77124210"
 ## <a name="deploying-an-xbap"></a>XBAP 배포
  XBAP를 빌드하는 경우 출력에는 다음 세 가지 파일이 포함됩니다.
 
-|파일|Description|
+|파일|설명|
 |----------|-----------------|
 |실행 파일(.exe)|컴파일된 코드가 포함되며 확장명이 .exe입니다.|
 |애플리케이션 매니페스트(.manifest)|애플리케이션과 연결된 메타데이터가 포함되며 확장명이 .manifest입니다.|
@@ -91,13 +92,13 @@ ms.locfileid: "77124210"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>호스트 웹 페이지와 통신
- 애플리케이션이 HTML 프레임에서 호스팅되는 경우 XBAP가 포함된 웹 페이지와 통신할 수 있습니다. <xref:System.Windows.Interop.BrowserInteropHelper>의 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 속성을 검색 하 여이 작업을 수행 합니다. 이 속성은 HTML 창을 나타내는 스크립트 개체를 반환합니다. 그런 다음 정규 점(dot) 구문을 사용하여 [창 개체](https://developer.mozilla.org/en-US/docs/Web/API/Window)에서 속성, 메서드 및 이벤트에 액세스할 수 있습니다. 또한 스크립트 메서드 및 전역 변수에도 액세스할 수 있습니다. 다음 예제에서는 스크립트 개체를 검색하고 브라우저를 닫는 방법을 보여 줍니다.
+ 애플리케이션이 HTML 프레임에서 호스팅되는 경우 XBAP가 포함된 웹 페이지와 통신할 수 있습니다. 이렇게 하려면의 속성을 검색 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper> 합니다. 이 속성은 HTML 창을 나타내는 스크립트 개체를 반환합니다. 그런 다음 정규 점(dot) 구문을 사용하여 [창 개체](https://developer.mozilla.org/en-US/docs/Web/API/Window)에서 속성, 메서드 및 이벤트에 액세스할 수 있습니다. 또한 스크립트 메서드 및 전역 변수에도 액세스할 수 있습니다. 다음 예제에서는 스크립트 개체를 검색하고 브라우저를 닫는 방법을 보여 줍니다.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
 
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript를 사용하는 XBAP 디버깅
- XBAP에서 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 개체를 사용 하 여 HTML 창과 통신 하는 경우 Visual Studio에서 응용 프로그램을 실행 하 고 디버깅 하기 위해 지정 해야 하는 두 가지 설정이 있습니다. 애플리케이션은 원본 사이트에 대한 액세스 권한이 있어야 하고 XBAP가 포함된 HTML 페이지로 애플리케이션을 시작해야 합니다. 다음 단계는 이러한 두 설정을 확인하는 방법을 설명합니다.
+ XBAP에서 개체를 사용 하 여 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> HTML 창과 통신 하는 경우 Visual Studio에서 응용 프로그램을 실행 하 고 디버깅 하기 위해 지정 해야 하는 두 가지 설정이 있습니다. 애플리케이션은 원본 사이트에 대한 액세스 권한이 있어야 하고 XBAP가 포함된 HTML 페이지로 애플리케이션을 시작해야 합니다. 다음 단계는 이러한 두 설정을 확인하는 방법을 설명합니다.
 
 1. Visual Studio에서 프로젝트 속성을 엽니다.
 
@@ -128,19 +129,19 @@ ms.locfileid: "77124210"
 ## <a name="xbap-security-considerations"></a>XBAP 보안 고려 사항
  일반적으로 XBAP는 인터넷 영역 권한 설정으로 제한된 부분 신뢰 보안 샌드박스에서 실행됩니다. 따라서 구현은 인터넷 영역에서 지원 되는 WPF 요소의 하위 집합을 지원 하거나 응용 프로그램의 권한을 높여야 합니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.
 
- 응용 프로그램에서 <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용 하는 경우 WPF는 내부적으로 네이티브 WebBrowser ActiveX 컨트롤을 인스턴스화합니다. 애플리케이션이 Internet Explorer에서 실행되는 부분 신뢰 XBAP인 경우 ActiveX 컨트롤은 Internet Explorer 프로세스의 전용 스레드에서 실행됩니다. 따라서 다음 제한 사항이 적용됩니다.
+ 응용 프로그램에서 컨트롤을 사용 하는 경우 <xref:System.Windows.Controls.WebBrowser> WPF는 내부적으로 네이티브 WebBrowser ActiveX 컨트롤을 인스턴스화합니다. 애플리케이션이 Internet Explorer에서 실행되는 부분 신뢰 XBAP인 경우 ActiveX 컨트롤은 Internet Explorer 프로세스의 전용 스레드에서 실행됩니다. 따라서 다음 제한 사항이 적용됩니다.
 
-- <xref:System.Windows.Controls.WebBrowser> 컨트롤은 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.
+- <xref:System.Windows.Controls.WebBrowser>컨트롤은 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.
 
 - XBAP가 HTML 페이지의 도메인 간에 로드되면 예외가 throw됩니다.
 
-- 입력은 WPF <xref:System.Windows.Controls.WebBrowser>와 별도의 스레드에 있으므로 키보드 입력을 가로챌 수 없으며 IME 상태가 공유 되지 않습니다.
+- 입력은 WPF와 별도의 스레드에 <xref:System.Windows.Controls.WebBrowser> 있으므로 키보드 입력을 가로챌 수 없으며 IME 상태가 공유 되지 않습니다.
 
 - 탐색 시간 또는 순서는 다른 스레드에서 실행 중인 ActiveX 컨트롤로 인해 달라질 수 있습니다. 예를 들어 페이지 탐색은 다른 탐색 요청을 시작할 때 항상 취소되는 것은 아닙니다.
 
 - WPF 애플리케이션은 별도의 스레드에서 실행되므로 사용자 지정 ActiveX 컨트롤이 통신하는 데 문제가 있을 수 있습니다.
 
-- <xref:System.Windows.Interop.HwndHost> 다른 스레드나 프로세스에서 실행 되는 창을 서브클래싱하 할 수 없기 때문에 <xref:System.Windows.Interop.HwndHost.MessageHook> 발생 하지 않습니다.
+- <xref:System.Windows.Interop.HwndHost.MessageHook>는 <xref:System.Windows.Interop.HwndHost> 다른 스레드나 프로세스에서 실행 되는 창을 서브클래싱하 할 수 없기 때문에 발생 하지 않습니다.
 
 ### <a name="creating-a-full-trust-xbap"></a>완전 신뢰 XBAP 만들기
  XBAP에 완전 신뢰가 필요한 경우 이 권한을 사용하도록 프로젝트를 변경할 수 있습니다. 다음 단계는 완전 권한을 설정하는 방법을 설명합니다.
@@ -153,7 +154,7 @@ ms.locfileid: "77124210"
 
 - 프로젝트 파일에서 `<TargetZone>` 요소 값이 `Custom`으로 변경됩니다.
 
-- 응용 프로그램 매니페스트 (manifest.xml)에서 `Unrestricted="true"` 특성이 '<xref:System.Security.PermissionSet> 요소에 추가 됩니다.
+- 응용 프로그램 매니페스트 (manifest.xml)에서 `Unrestricted="true"` 특성은 ' 요소에 추가 됩니다 <xref:System.Security.PermissionSet> .
 
     ```xml
     <PermissionSet class="System.Security.PermissionSet"
@@ -170,7 +171,7 @@ ms.locfileid: "77124210"
 |-------------------|--------------|------------------------|
 |수집|자동 완전 신뢰|어떤 조치가 필요하지 않습니다.|
 |인트라넷 및 신뢰할 수 있는 사이트|완전 신뢰 확인|사용자가 프롬프트에서 소스를 볼 수 있도록 인증서로 XBAP에 로그인합니다.|
-|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP에 로그인합니다.|
+|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP를 서명합니다.|
 
 > [!NOTE]
 > 위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.
@@ -187,5 +188,5 @@ ms.locfileid: "77124210"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)

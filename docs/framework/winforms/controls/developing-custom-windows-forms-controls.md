@@ -1,16 +1,17 @@
 ---
 title: 사용자 지정 컨트롤 개발
+description: Windows Form 컨트롤에 대해 알아봅니다. 특히 기존 컨트롤을 결합 하 고, 기존 컨트롤을 확장 하 고, 사용자 지정 컨트롤을 작성 하는 방법을 배웁니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 9dbc1c4530b3a0f4e579ca67c7ae88c1685222ea
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 12013496c9650489fdd7512206317000fc0ec78c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618378"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발
 Windows Forms 컨트롤은 사용자 인터페이스 기능을 캡슐화하고 클라이언트 측 Windows 기반 애플리케이션에서 사용되는 재사용 가능한 구성 요소입니다. Windows Forms은 바로 사용할 수 있는 많은 컨트롤을 제공할 뿐만 아니라 고유한 컨트롤을 개발하기 위한 인프라도 제공합니다. 기존 컨트롤을 결합 또는 확장하거나 고유한 사용자 지정 컨트롤을 작성할 수 있습니다. 이 섹션에서는 Windows Forms 컨트롤을 개발하는 데 도움이 되는 배경 정보 및 샘플을 제공합니다.  
@@ -50,7 +51,7 @@ Windows Forms 컨트롤은 사용자 인터페이스 기능을 캡슐화하고 �
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [구성 요소의 디자인 타임 특성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  비주얼 디자이너에서 디자인 타임에 올바르게 표시되도록 구성 요소 및 컨트롤에 적용할 메타데이터 특성을 나열합니다.  
   

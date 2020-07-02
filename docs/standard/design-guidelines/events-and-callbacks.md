@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619535"
 ---
 # <a name="events-and-callbacks"></a>이벤트 및 콜백
 콜백은 프레임 워크가 대리자를 통해 사용자 코드를 다시 호출할 수 있도록 하는 확장성 요소입니다. 이러한 대리자는 일반적으로 메서드의 매개 변수를 통해 프레임 워크에 전달 됩니다.
@@ -30,7 +30,7 @@ ms.locfileid: "84289800"
 
  ✔️는 `Func<...>` `Action<...>` `Expression<...>` 콜백을 사용 하 여 api를 정의할 때 사용자 지정 대리자 대신 새, 또는 형식을 사용 합니다.
 
- `Func<...>`및는 `Action<...>` 제네릭 대리자를 나타냅니다. `Expression<...>`런타임에 컴파일되고 이후에 호출 될 수 있는 함수 정의를 나타내며 serialize 되어 원격 프로세스에 전달 될 수도 있습니다.
+ `Func<...>`및는 `Action<...>` 제네릭 대리자를 나타냅니다. `Expression<...>`런타임에 컴파일되고 나중에 호출할 수 있는 함수 정의를 나타내며 serialize 되어 원격 프로세스에 전달 될 수도 있습니다.
 
  및 대리자를 사용 하는 대신를 사용 하는 경우의 성능 영향을 측정 하 고 이해 ✔️ `Expression<...>` `Func<...>` `Action<...>` 합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "84289800"
 
  대리자를 호출 하면 임의의 코드를 실행 하 고 보안, 정확성 및 호환성에 영향을 미칠 수 있는 것을 이해 하는 ✔️.
 
- *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
+ *&copy;2005 부분, 2009 Microsoft Corporation. All rights reserved.*
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 

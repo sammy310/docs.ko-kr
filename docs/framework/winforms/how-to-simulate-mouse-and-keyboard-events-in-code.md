@@ -1,6 +1,6 @@
 ---
 title: '방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션'
-description: Windows Forms에서 제공 하는 옵션을 사용 하 여 마우스 및 키보드 입력을 프로그래밍 방식으로 시뮬레이트하는 방법에 대해 알아봅니다.
+description: Windows Forms에서 제공 하는 옵션을 사용 하 여 프로그래밍 방식으로 마우스 및 키보드 입력을 시뮬레이션 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 9b453787f7fa7f5041f75e04d65557a0a3838bee
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 3c60533479352151ac4f28690413ebc7d8e5879d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619249"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>방법: 코드에서 마우스 및 키보드 이벤트 시뮬레이션
 

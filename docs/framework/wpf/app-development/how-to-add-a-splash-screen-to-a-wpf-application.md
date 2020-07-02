@@ -1,5 +1,6 @@
 ---
 title: 시작 화면을 추가 하는 방법
+description: 시작 창 또는 시작 화면을 Windows Presentation Foundation (WPF) 응용 프로그램에 추가 하는 방법을 알아봅니다.
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,22 +8,22 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d0cf2e2a550320650c3b4a0c257071a0403c32b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617962"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>방법: WPF 애플리케이션에 시작 화면 추가
 
 이 항목에서는 시작 창 또는 *시작 화면*을 WINDOWS PRESENTATION FOUNDATION (WPF) 응용 프로그램에 추가 하는 방법을 보여 줍니다.
 
-## <a name="to-add-an-existing-image-as-a-splash-screen"></a>기존 이미지를 시작 화면으로 추가하려면
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a>기존 이미지를 시작 화면으로 추가 하려면
 
-1. 시작 화면으로 사용하려는 이미지를 찾거나 만듭니다. Windows Imaging 구성 요소(WIC)에서 지원되는 모든 이미지 형식을 사용할 수 있습니다. 예를 들어, BMP, GIF, JPEG, PNG 또는 TIFF 형식으로 사용할 수 있습니다.
+1. 시작 화면에 사용할 이미지를 만들거나 찾습니다. WIC (Windows Imaging Component)에서 지 원하는 모든 이미지 형식을 사용할 수 있습니다. 예를 들어 BMP, GIF, JPEG, PNG 또는 TIFF 형식을 사용할 수 있습니다.
 
-2. WPF 응용 프로그램 프로젝트에 해당 이미지 파일을 추가합니다.
+2. WPF 응용 프로그램 프로젝트에 이미지 파일을 추가 합니다.
 
 3. **솔루션 탐색기**에서 이미지를 선택 합니다.
 
@@ -30,11 +31,11 @@ ms.locfileid: "76740456"
 
 5. 드롭다운 목록에서 **SplashScreen** 를 선택 합니다.
 
-6. **F5** 키를 눌러 애플리케이션을 빌드하고 실행합니다.
+6. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행 합니다.
 
-     시작 화면 이미지가 화면 중앙에 나타난 다음 메인 응용 프로그램 창이 나타나면 사라집니다.
+     시작 화면 이미지가 화면 가운데에 표시 되 고 주 응용 프로그램 창이 표시 되 면 페이드 인 됩니다.
 
-## <a name="to-exclude-the-splash-screen-from-build"></a>빌드에서 시작 화면을 제외하려면
+## <a name="to-exclude-the-splash-screen-from-build"></a>빌드에서 시작 화면을 제외 하려면
 
 1. **솔루션 탐색기**에서 시작 화면 이미지를 선택 합니다.
 

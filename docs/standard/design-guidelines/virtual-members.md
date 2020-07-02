@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620770"
 ---
 # <a name="virtual-members"></a>가상 멤버
 가상 멤버를 재정의할 수 있으므로 하위 클래스의 동작을 변경할 수 있습니다. 이러한 항목은 제공 하는 확장성 측면에서 콜백과 매우 유사 하지만 실행 성능과 메모리 사용 측면에서 더 효율적입니다. 또한 가상 멤버는 특수 한 종류의 기존 형식 (특수화)을 만들어야 하는 시나리오에서 보다 자연스럽 게 느껴질 수 있습니다.
@@ -33,7 +33,7 @@ ms.locfileid: "84288500"
 
  클래스의 public 멤버는 해당 클래스의 직접 소비자에 게 올바른 기능 집합을 제공 해야 합니다. 가상 멤버는 서브 클래스에서 재정의 되도록 설계 되었으며, 보호 된 액세스 가능성은 모든 가상 확장 지점을 사용할 수 있는 위치로 범위를 지정할 수 있는 좋은 방법입니다.
 
- *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
+ *&copy;2005 부분, 2009 Microsoft Corporation. All rights reserved.*
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 

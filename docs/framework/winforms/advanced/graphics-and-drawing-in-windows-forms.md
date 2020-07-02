@@ -1,5 +1,6 @@
 ---
 title: 그래픽 및 그리기
+description: 그래픽, 펜, 브러시 및 색 개체에 대해 알아보고, 도형을 그리거나, 텍스트를 그리거나, Windows Forms에서 이미지를 표시 하는 등의 작업을 수행 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618404"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Forms의 그래픽 및 그리기
 공용 언어 런타임은 gdi + 라는 Windows GDI (그래픽 장치 인터페이스)의 고급 구현을 사용 합니다. GDI +를 사용 하 여 그래픽을 만들고, 텍스트를 그리고, 그래픽 이미지를 개체로 조작할 수 있습니다. GDI +는 성능과 사용 편의성을 제공 하도록 설계 되었습니다. GDI +를 사용 하 여 Windows Forms 및 컨트롤에 그래픽 이미지를 렌더링할 수 있습니다. Web Forms에서 GDI +를 직접 사용할 수는 없지만 이미지 웹 서버 컨트롤을 통해 그래픽 이미지를 표시할 수 있습니다.  
@@ -25,10 +26,10 @@ ms.locfileid: "76746409"
  [그래픽 개요](graphics-overview-windows-forms.md)  
  그래픽 관련 관리되는 클래스를 소개합니다.  
   
- [GDI + 관리 코드 정보](about-gdi-managed-code.md)  
+ [GDI+ 관리 코드 정보](about-gdi-managed-code.md)  
  관리 GDI + 클래스에 대 한 정보를 제공 합니다.  
   
- [관리되는 그래픽 클래스 사용](using-managed-graphics-classes.md)  
+ [관리형 그래픽 클래스 사용](using-managed-graphics-classes.md)  
  GDI + 관리 되는 클래스를 사용 하 여 다양 한 작업을 완료 하는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
@@ -47,6 +48,6 @@ ms.locfileid: "76746409"
  <xref:System.Drawing.Printing>  
  인쇄 기능을 제공합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [사용자 지정 컨트롤 그리기 및 렌더링](../controls/custom-control-painting-and-rendering.md)  
  컨트롤을 그리기 위한 코드를 제공하는 방법을 자세히 설명합니다.
