@@ -1,7 +1,7 @@
 ---
 title: '정규식 예제: HREF 스캐닝'
 description: .NET의 정규식 예제를 참조하세요. 예제에서는 입력 문자열을 검색하고 모든 href 특성 값과 해당 위치를 보여 줍니다.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802856"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  
-  
-## <a name="the-regex-object"></a>Regex 개체  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>Regex 개체
  `DumpHRefs` 메서드는 사용자 코드에서 여러 번 호출할 수 있으므로 `static`(Visual Basic의 경우 `Shared`) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드를 사용합니다. 그러면 정규식 엔진이 정규식을 캐시할 수 있으며 메서드를 호출할 때마다 새 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하는 오버헤드를 방지합니다. 그리고 <xref:System.Text.RegularExpressions.Match> 개체는 문자열의 모든 일치 항목을 반복하는 데 사용됩니다.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]

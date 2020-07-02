@@ -1,5 +1,6 @@
 ---
 title: 정규식의 그룹화 구문
+description: .NET에서 그룹화 구문을 사용하는 방법을 알아봅니다. 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 5be98a5a213592b169bee430d84c4fc3a1d5fcef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290528"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662630"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -218,13 +219,13 @@ ms.locfileid: "84290528"
 |7|`[^<>]*`|오른쪽 꺾쇠괄호 뒤에서 꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |8|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
 |9|`)*`|캡처된 첫 번째 그룹의 값은 "\<abc>"입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백합니다.|  
-|10|`(((?'Open'<)`|"\<mno" and assigns it to the `Open` group. Its <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> collection의 왼쪽 꺾쇠 괄호와 일치 합니다. 이제 단일 값" < "가 있습니다.|  
+|10|`(((?'Open'<)`|에서 왼쪽 꺾쇠 괄호를 찾아 \<mno" and assigns it to the `Open` group. Its <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 단일 값 “<”가 있습니다.|  
 |11|`[^<>]*`|"mno"를 찾습니다.|  
 |12|`)+`|"<mno"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백합니다.|  
 |13|`(((?'Open'<)`|"\<xyz>"에서 왼쪽 꺾쇠 괄호를 찾아 `Open` 그룹에 할당합니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 2개 캡처인 “\<mno", and the left angle bracket from "\<xyz>”의 왼쪽 꺾쇠 괄호가 포함되어 있습니다.|  
 |14|`[^<>]*`|"xyz"를 찾습니다.|  
 |15|`)+`|"<xyz"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|16|`((?'Close-Open'>)`|"\<xyz>"에서 오른쪽 꺾쇠 괄호를 찾습니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값 (`Open` 그룹의 왼쪽 꺾쇠\<mno") becomes the current value of the `Open` group. The <xref:System.Text.RegularExpressions.Group.Captures%2A> 괄호는 이제 단일 캡처, "\<xyz>"의 왼쪽 꺾쇠 괄호)를 포함 합니다.|  
+|16|`((?'Close-Open'>)`|"\<xyz>"에서 오른쪽 꺾쇠 괄호를 찾습니다. “xyz”는 `Open` 그룹과 오른쪽 꺾쇠괄호 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(의 왼쪽 꺾쇠 괄호\<mno") becomes the current value of the `Open` group. The <xref:System.Text.RegularExpressions.Group.Captures%2A>. 이제 `Open` 그룹의 Captures 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠 괄호가 포함됩니다.|  
 |17|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |18|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호이므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백합니다.|  
 |19|`((?'Close-Open'>)`|"xyz>>"에서 최종 오른쪽 꺾쇠 괄호를 찾고 \<xyz> 그룹과 오른쪽 꺾쇠 괄호 사이의 부분 문자열인 "mno`Open`"를 `Close` 그룹에 할당한 다음 `Open` 그룹의 현재 값을 삭제합니다. 이제 `Open` 그룹이 비어 있습니다.|  
