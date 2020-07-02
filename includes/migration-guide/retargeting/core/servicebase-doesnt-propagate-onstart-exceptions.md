@@ -1,18 +1,38 @@
 ---
-ms.openlocfilehash: 1148d040aa3b292d5c37eb50224413b6ddd202e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 519de92ca4201d199941afe6382ddf9fc480fbbd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614779"
 ---
-### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a><span data-ttu-id="e9708-101">ServiceBase는 OnStart 예외를 전파하지 않음</span><span class="sxs-lookup"><span data-stu-id="e9708-101">ServiceBase doesn't propagate OnStart exceptions</span></span>
+### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a><span data-ttu-id="e56b1-101">ServiceBase는 OnStart 예외를 전파하지 않음</span><span class="sxs-lookup"><span data-stu-id="e56b1-101">ServiceBase doesn't propagate OnStart exceptions</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="e9708-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="e9708-102">Details</span></span>|<span data-ttu-id="e9708-103">.NET Framework 4.7 및 이전 버전에서 서비스 시작 시 throw되는 예외는 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>의 호출자에게 전파되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-103">In the .NET Framework 4.7 and earlier versions, exceptions thrown on service startup are not propagated to the caller of <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>.</span></span><br/><span data-ttu-id="e9708-104">.NET Framework 4.7.1을 대상으로 하는 애플리케이션을 시작으로 런타임은 시작에 실패하는 서비스에 대해 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>에 예외를 전파합니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-104">Starting with applications that target the .NET Framework 4.7.1, the runtime propagates exceptions to <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> for services that fail to start.</span></span>|
-|<span data-ttu-id="e9708-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="e9708-105">Suggestion</span></span>|<span data-ttu-id="e9708-106">서비스 시작 시 예외가 있는 경우 해당 예외가 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-106">On service start, if there is an exception, that exception will be propagated.</span></span> <span data-ttu-id="e9708-107">이는 서비스가 시작에 실패하는 사례를 진단하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-107">This should help diagnose cases where services fail to start.</span></span> <br/><span data-ttu-id="e9708-108">이 동작을 원치 않을 경우 애플리케이션 구성 파일의 &lt;runtime&gt; 섹션에 다음 &lt;AppContextSwitchOverrides&gt; 요소를 추가하여 옵트아웃할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-108">If this behavior is undesirable, you can opt out of it by adding the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceProcess.DontThrowExceptionsOnStart=true&quot; /&gt;&#13;&#10;</code></pre><span data-ttu-id="e9708-109">애플리케이션이 4.7.1 이전 버전을 대상으로 하지만 이 동작을 원할 경우 애플리케이션 구성 파일의 &lt;runtime&gt; 섹션에 다음 &lt;AppContextSwitchOverrides&gt; 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e9708-109">If your application targets an earlier version than 4.7.1 but you want to have this behavior, add the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceProcess.DontThrowExceptionsOnStart=false&quot; /&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="e9708-110">범위</span><span class="sxs-lookup"><span data-stu-id="e9708-110">Scope</span></span>|<span data-ttu-id="e9708-111">사소함</span><span class="sxs-lookup"><span data-stu-id="e9708-111">Minor</span></span>|
-|<span data-ttu-id="e9708-112">Version</span><span class="sxs-lookup"><span data-stu-id="e9708-112">Version</span></span>|<span data-ttu-id="e9708-113">4.7.1</span><span class="sxs-lookup"><span data-stu-id="e9708-113">4.7.1</span></span>|
-|<span data-ttu-id="e9708-114">형식</span><span class="sxs-lookup"><span data-stu-id="e9708-114">Type</span></span>|<span data-ttu-id="e9708-115">대상 변경</span><span class="sxs-lookup"><span data-stu-id="e9708-115">Retargeting</span></span>|
-|<span data-ttu-id="e9708-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="e9708-116">Affected APIs</span></span>|<ul><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType></li><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="e56b1-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="e56b1-102">Details</span></span>
+
+<span data-ttu-id="e56b1-103">.NET Framework 4.7 및 이전 버전에서 서비스 시작 시 throw되는 예외는 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>의 호출자에게 전파되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-103">In the .NET Framework 4.7 and earlier versions, exceptions thrown on service startup are not propagated to the caller of <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>.</span></span><br/><span data-ttu-id="e56b1-104">.NET Framework 4.7.1을 대상으로 하는 애플리케이션을 시작으로 런타임은 시작에 실패하는 서비스에 대해 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>에 예외를 전파합니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-104">Starting with applications that target the .NET Framework 4.7.1, the runtime propagates exceptions to <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> for services that fail to start.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="e56b1-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="e56b1-105">Suggestion</span></span>
+
+<span data-ttu-id="e56b1-106">서비스 시작 시 예외가 있는 경우 해당 예외가 전파됩니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-106">On service start, if there is an exception, that exception will be propagated.</span></span> <span data-ttu-id="e56b1-107">이는 서비스가 시작에 실패하는 사례를 진단하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-107">This should help diagnose cases where services fail to start.</span></span> <br/><span data-ttu-id="e56b1-108">이 동작을 원치 않을 경우 애플리케이션 구성 파일의 &lt;runtime&gt; 섹션에 다음 &lt;AppContextSwitchOverrides&gt; 요소를 추가하여 옵트아웃할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-108">If this behavior is undesirable, you can opt out of it by adding the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.ServiceProcess.DontThrowExceptionsOnStart=true" />
+```
+
+<span data-ttu-id="e56b1-109">애플리케이션이 4.7.1 이전 버전을 대상으로 하지만 이 동작을 원할 경우 애플리케이션 구성 파일의 &lt;runtime&gt; 섹션에 다음 &lt;AppContextSwitchOverrides&gt; 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e56b1-109">If your application targets an earlier version than 4.7.1 but you want to have this behavior, add the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.ServiceProcess.DontThrowExceptionsOnStart=false" />
+```
+
+| <span data-ttu-id="e56b1-110">이름</span><span class="sxs-lookup"><span data-stu-id="e56b1-110">Name</span></span>    | <span data-ttu-id="e56b1-111">값</span><span class="sxs-lookup"><span data-stu-id="e56b1-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="e56b1-112">Scope</span><span class="sxs-lookup"><span data-stu-id="e56b1-112">Scope</span></span>   | <span data-ttu-id="e56b1-113">부</span><span class="sxs-lookup"><span data-stu-id="e56b1-113">Minor</span></span>       |
+| <span data-ttu-id="e56b1-114">버전</span><span class="sxs-lookup"><span data-stu-id="e56b1-114">Version</span></span> | <span data-ttu-id="e56b1-115">4.7.1</span><span class="sxs-lookup"><span data-stu-id="e56b1-115">4.7.1</span></span>       |
+| <span data-ttu-id="e56b1-116">형식</span><span class="sxs-lookup"><span data-stu-id="e56b1-116">Type</span></span>    | <span data-ttu-id="e56b1-117">대상 변경</span><span class="sxs-lookup"><span data-stu-id="e56b1-117">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="e56b1-118">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="e56b1-118">Affected APIs</span></span>
+
+- <xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType>
+- <xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType>

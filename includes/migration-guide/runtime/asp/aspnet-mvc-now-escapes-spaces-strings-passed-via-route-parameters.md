@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 7444ddbdd4a7c5f731fba8528ee2334374fc254e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c53fe57f3278741a927a2f00b11af6e26dafce66
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620150"
 ---
-### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a><span data-ttu-id="5faa9-101">ASP.NET MVC가 이제 경로 매개 변수를 통해 전달된 문자열에 있는 공백을 이스케이프함</span><span class="sxs-lookup"><span data-stu-id="5faa9-101">ASP.NET MVC now escapes spaces in strings passed in via route parameters</span></span>
+### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a><span data-ttu-id="19bd7-101">ASP.NET MVC가 이제 경로 매개 변수를 통해 전달된 문자열에 있는 공백을 이스케이프함</span><span class="sxs-lookup"><span data-stu-id="19bd7-101">ASP.NET MVC now escapes spaces in strings passed in via route parameters</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="5faa9-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="5faa9-102">Details</span></span>|<span data-ttu-id="5faa9-103">RFC 2396를 준수하려면 경로에서 작업 매개 변수를 채울 때 경로의 공백은 이스케이프됩니다.</span><span class="sxs-lookup"><span data-stu-id="5faa9-103">In order to conform to RFC 2396, spaces in route paths are now escaped when populating action parameters from a route.</span></span> <span data-ttu-id="5faa9-104">따라서 이전에는 <code>/controller/action/some data</code>이 경로 <code>/controller/action/{data}</code>와 일치하고 <code>some data</code>를 데이터 매개 변수로 제공했지만 이제는 <code>some%20data</code>를 대신 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5faa9-104">So, whereas  <code>/controller/action/some data</code> would previously match the route <code>/controller/action/{data}</code> and provide <code>some data</code> as the data parameter, it will now provide <code>some%20data</code> instead.</span></span>|
-|<span data-ttu-id="5faa9-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="5faa9-105">Suggestion</span></span>|<span data-ttu-id="5faa9-106">경로에서 문자열 매개 변수를 이스케이프 해제하려면 코드를 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5faa9-106">Code should be updated to unescape string parameters from a route.</span></span> <span data-ttu-id="5faa9-107">원래의 URI가 필요한 경우 <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API를 통해 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5faa9-107">If the original URI is needed, it can be accessed with the <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API.</span></span>|
-|<span data-ttu-id="5faa9-108">범위</span><span class="sxs-lookup"><span data-stu-id="5faa9-108">Scope</span></span>|<span data-ttu-id="5faa9-109">사소함</span><span class="sxs-lookup"><span data-stu-id="5faa9-109">Minor</span></span>|
-|<span data-ttu-id="5faa9-110">Version</span><span class="sxs-lookup"><span data-stu-id="5faa9-110">Version</span></span>|<span data-ttu-id="5faa9-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="5faa9-111">4.5.2</span></span>|
-|<span data-ttu-id="5faa9-112">형식</span><span class="sxs-lookup"><span data-stu-id="5faa9-112">Type</span></span>|<span data-ttu-id="5faa9-113">런타임</span><span class="sxs-lookup"><span data-stu-id="5faa9-113">Runtime</span></span>|
-|<span data-ttu-id="5faa9-114">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="5faa9-114">Affected APIs</span></span>|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|
+#### <a name="details"></a><span data-ttu-id="19bd7-102">설명</span><span class="sxs-lookup"><span data-stu-id="19bd7-102">Details</span></span>
+
+<span data-ttu-id="19bd7-103">RFC 2396를 준수하려면 경로에서 작업 매개 변수를 채울 때 경로의 공백은 이스케이프됩니다.</span><span class="sxs-lookup"><span data-stu-id="19bd7-103">In order to conform to RFC 2396, spaces in route paths are now escaped when populating action parameters from a route.</span></span> <span data-ttu-id="19bd7-104">따라서 이전에는 <code>/controller/action/some data</code>이 경로 <code>/controller/action/{data}</code>와 일치하고 <code>some data</code>를 데이터 매개 변수로 제공했지만 이제는 <code>some%20data</code>를 대신 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="19bd7-104">So, whereas  <code>/controller/action/some data</code> would previously match the route <code>/controller/action/{data}</code> and provide <code>some data</code> as the data parameter, it will now provide <code>some%20data</code> instead.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="19bd7-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="19bd7-105">Suggestion</span></span>
+
+<span data-ttu-id="19bd7-106">경로에서 문자열 매개 변수를 이스케이프 해제하려면 코드를 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="19bd7-106">Code should be updated to unescape string parameters from a route.</span></span> <span data-ttu-id="19bd7-107">원래의 URI가 필요한 경우 <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API를 통해 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="19bd7-107">If the original URI is needed, it can be accessed with the <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API.</span></span>
+
+| <span data-ttu-id="19bd7-108">이름</span><span class="sxs-lookup"><span data-stu-id="19bd7-108">Name</span></span>    | <span data-ttu-id="19bd7-109">값</span><span class="sxs-lookup"><span data-stu-id="19bd7-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="19bd7-110">Scope</span><span class="sxs-lookup"><span data-stu-id="19bd7-110">Scope</span></span>   |<span data-ttu-id="19bd7-111">부</span><span class="sxs-lookup"><span data-stu-id="19bd7-111">Minor</span></span>|
+|<span data-ttu-id="19bd7-112">버전</span><span class="sxs-lookup"><span data-stu-id="19bd7-112">Version</span></span>|<span data-ttu-id="19bd7-113">4.5.2</span><span class="sxs-lookup"><span data-stu-id="19bd7-113">4.5.2</span></span>|
+|<span data-ttu-id="19bd7-114">형식</span><span class="sxs-lookup"><span data-stu-id="19bd7-114">Type</span></span>|<span data-ttu-id="19bd7-115">런타임</span><span class="sxs-lookup"><span data-stu-id="19bd7-115">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="19bd7-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="19bd7-116">Affected APIs</span></span>
+
+-<xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|

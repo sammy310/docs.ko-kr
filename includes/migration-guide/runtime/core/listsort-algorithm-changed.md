@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: d4859629fe3922b71cc90664e1e3304cdb312bae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9dada93c3330331064b7a944d97d61edb4dea299
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235597"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620249"
 ---
-### <a name="listsort-algorithm-changed"></a><span data-ttu-id="2d9be-101">List.Sort 알고리즘 변경</span><span class="sxs-lookup"><span data-stu-id="2d9be-101">List.Sort algorithm changed</span></span>
+### <a name="listsort-algorithm-changed"></a><span data-ttu-id="4803a-101">List.Sort 알고리즘 변경</span><span class="sxs-lookup"><span data-stu-id="4803a-101">List.Sort algorithm changed</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="2d9be-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="2d9be-102">Details</span></span>|<span data-ttu-id="2d9be-103">.NET Framework 4.5부터 <xref:System.Collections.Generic.List%601?displayProperty=name>의 정렬 알고리즘이 변경되었습니다(빠른 정렬 대신 내면적인 정렬).</span><span class="sxs-lookup"><span data-stu-id="2d9be-103">Beginning in .NET Framework 4.5, <xref:System.Collections.Generic.List%601?displayProperty=name>'s sort algorithm has changed (to be an introspective sort instead of a quick sort).</span></span> <span data-ttu-id="2d9be-104"><xref:System.Collections.Generic.List%601?displayProperty=name>의 정렬은 안정적이지 않았지만 이 변경으로 인해 다양한 시나리오가 불안정하게 정렬될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9be-104"><xref:System.Collections.Generic.List%601?displayProperty=name>'s sort has never been stable, but this change may cause different scenarios to sort in unstable ways.</span></span> <span data-ttu-id="2d9be-105">즉, API의 후속 호출에서 동일한 항목이 다른 순서로 정렬될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2d9be-105">That simply means that equivalent items may sort in different orders in subsequent calls of the API.</span></span>|
-|<span data-ttu-id="2d9be-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="2d9be-106">Suggestion</span></span>|<span data-ttu-id="2d9be-107">이전 정렬 알고리즘은 불안정했기 때문에(약간 다른 방식이지만) 항상 특정 순서로 정렬하는 해당 항목에 종속된 코드가 없어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d9be-107">Because the old sort algorithm was also unstable (though in slightly different ways), there should be no code that depends on equivalent items always sorting in a particular order.</span></span> <span data-ttu-id="2d9be-108">이에 종속된 코드의 인스턴스가 있고 이전 동작에 운이 따른다면 원하는 순서로 항목을 명확하게 정렬하는 비교자를 사용하도록 해당 코드를 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d9be-108">If there are instances of code depending upon that and being lucky with the old behavior, that code should be updated to use a comparer that will deterministically sort the items in the desired order.</span></span>|
-|<span data-ttu-id="2d9be-109">범위</span><span class="sxs-lookup"><span data-stu-id="2d9be-109">Scope</span></span>|<span data-ttu-id="2d9be-110">투명</span><span class="sxs-lookup"><span data-stu-id="2d9be-110">Transparent</span></span>|
-|<span data-ttu-id="2d9be-111">버전</span><span class="sxs-lookup"><span data-stu-id="2d9be-111">Version</span></span>|<span data-ttu-id="2d9be-112">4.5</span><span class="sxs-lookup"><span data-stu-id="2d9be-112">4.5</span></span>|
-|<span data-ttu-id="2d9be-113">형식</span><span class="sxs-lookup"><span data-stu-id="2d9be-113">Type</span></span>|<span data-ttu-id="2d9be-114">런타임</span><span class="sxs-lookup"><span data-stu-id="2d9be-114">Runtime</span></span>|
-|<span data-ttu-id="2d9be-115">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="2d9be-115">Affected APIs</span></span>|<ul><li><xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Comparison{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="4803a-102">설명</span><span class="sxs-lookup"><span data-stu-id="4803a-102">Details</span></span>
+
+<span data-ttu-id="4803a-103">.NET Framework 4.5부터 <xref:System.Collections.Generic.List%601?displayProperty=fullName>의 정렬 알고리즘이 변경되었습니다(빠른 정렬 대신 내면적인 정렬).</span><span class="sxs-lookup"><span data-stu-id="4803a-103">Beginning in .NET Framework 4.5, <xref:System.Collections.Generic.List%601?displayProperty=fullName>'s sort algorithm has changed (to be an introspective sort instead of a quick sort).</span></span> <span data-ttu-id="4803a-104"><xref:System.Collections.Generic.List%601?displayProperty=fullName>의 정렬은 안정적이지 않았지만 이 변경으로 인해 다양한 시나리오가 불안정하게 정렬될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4803a-104"><xref:System.Collections.Generic.List%601?displayProperty=fullName>'s sort has never been stable, but this change may cause different scenarios to sort in unstable ways.</span></span> <span data-ttu-id="4803a-105">즉, API의 후속 호출에서 동일한 항목이 다른 순서로 정렬될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4803a-105">That simply means that equivalent items may sort in different orders in subsequent calls of the API.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="4803a-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="4803a-106">Suggestion</span></span>
+
+<span data-ttu-id="4803a-107">이전 정렬 알고리즘은 불안정했기 때문에(약간 다른 방식이지만) 항상 특정 순서로 정렬하는 해당 항목에 종속된 코드가 없어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4803a-107">Because the old sort algorithm was also unstable (though in slightly different ways), there should be no code that depends on equivalent items always sorting in a particular order.</span></span> <span data-ttu-id="4803a-108">이에 종속된 코드의 인스턴스가 있고 이전 동작에 운이 따른다면 원하는 순서로 항목을 명확하게 정렬하는 비교자를 사용하도록 해당 코드를 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4803a-108">If there are instances of code depending upon that and being lucky with the old behavior, that code should be updated to use a comparer that will deterministically sort the items in the desired order.</span></span>
+
+| <span data-ttu-id="4803a-109">이름</span><span class="sxs-lookup"><span data-stu-id="4803a-109">Name</span></span>    | <span data-ttu-id="4803a-110">값</span><span class="sxs-lookup"><span data-stu-id="4803a-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="4803a-111">Scope</span><span class="sxs-lookup"><span data-stu-id="4803a-111">Scope</span></span>   |<span data-ttu-id="4803a-112">투명</span><span class="sxs-lookup"><span data-stu-id="4803a-112">Transparent</span></span>|
+|<span data-ttu-id="4803a-113">버전</span><span class="sxs-lookup"><span data-stu-id="4803a-113">Version</span></span>|<span data-ttu-id="4803a-114">4.5</span><span class="sxs-lookup"><span data-stu-id="4803a-114">4.5</span></span>|
+|<span data-ttu-id="4803a-115">형식</span><span class="sxs-lookup"><span data-stu-id="4803a-115">Type</span></span>|<span data-ttu-id="4803a-116">런타임</span><span class="sxs-lookup"><span data-stu-id="4803a-116">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="4803a-117">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="4803a-117">Affected APIs</span></span>
+
+-<xref:System.Collections.Generic.List%601.Sort?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Comparison{%600})?displayProperty=nameWithType></li><li><xref:System.Collections.Generic.List%601.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{%600})?displayProperty=nameWithType></li></ul>|

@@ -1,18 +1,50 @@
 ---
-ms.openlocfilehash: 72f907c117748fb19ca0663f24445a8c978afd32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614767"
 ---
-### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a><span data-ttu-id="2311b-101">이제 CspParameters.ParentWindowHandle에 HWND 값 필요</span><span class="sxs-lookup"><span data-stu-id="2311b-101">CspParameters.ParentWindowHandle now expects HWND value</span></span>
+### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a><span data-ttu-id="daae3-101">이제 CspParameters.ParentWindowHandle에 HWND 값 필요</span><span class="sxs-lookup"><span data-stu-id="daae3-101">CspParameters.ParentWindowHandle now expects HWND value</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="2311b-102">설명</span><span class="sxs-lookup"><span data-stu-id="2311b-102">Details</span></span>|<span data-ttu-id="2311b-103">.NET Framework 2.0에 도입된 <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 값을 사용하면 애플리케이션에서 키에 액세스하는 데 필요한 UI(PIN 프롬프트 또는 동의 대화 상자)가 지정된 창에 대한 모달 자식 항목으로 열리도록 부모 창 핸들 값을 등록할 수 있습니다. .NET Framework 4.7을 대상으로 하는 앱부터 Windows Forms 애플리케이션은 다음과 같은 코드로 <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-103">The <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> value, introduced in .NET Framework 2.0, allows an application to register a parent window handle value such that any UI required to access the key (such as a PIN prompt or consent dialog) opens as a modal child to the specified window.Starting with apps that target the .NET Framework 4.7, a Windows Forms application can set the <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> property with code like the following:</span></span><pre><code class="lang-csharp">cspParameters.ParentWindowHandle = form.Handle;&#13;&#10;</code></pre><span data-ttu-id="2311b-104">이전 버전의 .NET Framework에서 값은 [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 값이 있던 메모리의 위치를 나타내는 <xref:System.IntPtr?displayProperty=name>가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-104">In previous versions of the .NET Framework, the value was expected to be an <xref:System.IntPtr?displayProperty=name> representing a location in memory where the [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) value resided.</span></span> <span data-ttu-id="2311b-105">Windows 7 이전 버전에서 이 속성을 form.Handle로 설정해도 아무 영향이 없지만, Windows 8 이상 버전에서는 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=name>: 매개 변수가 잘못되었습니다.&quot;라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-105">Setting the property to form.Handle on Windows 7 and earlier versions had no effect, but on Windows 8 and later versions, it results in a &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=name>: The parameter is incorrect.&quot;</span></span>|
-|<span data-ttu-id="2311b-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="2311b-106">Suggestion</span></span>|<span data-ttu-id="2311b-107">부모 창 관계를 등록하려는 .NET Framework 4.7 이상을 대상으로 하는 애플리케이션에서는 다음과 같은 간단한 형식을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-107">Applications targeting .NET Framework 4.7 or higher wishing to register a parent window relationship are encouraged to use the simplified form:</span></span><pre><code class="lang-csharp">cspParameters.ParentWindowHandle = form.Handle;&#13;&#10;</code></pre><span data-ttu-id="2311b-108">통과시킬 올바른 값이 <code>form.Handle</code> 값을 가졌던 메모리 위치의 주소임을 확인한 사용자는 AppContext 스위치 <code>Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle</code>를 <code>true</code>로 설정하여 동작 변경을 옵트아웃할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-108">Users who had identified that the correct value to pass was the address of a memory location which held the value <code>form.Handle</code> can opt out of the behavior change by setting the AppContext switch <code>Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle</code> to <code>true</code>:</span></span><ol><li><span data-ttu-id="2311b-109">[여기](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)에 설명된 대로 AppContext에서 compat 스위치를 프로그래밍 방식으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-109">By programmatically setting compat switches on the AppContext, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span></li><li><span data-ttu-id="2311b-110">다음 줄을 app.config 파일의 <code>&lt;runtime&gt;</code> 섹션에 추가</span><span class="sxs-lookup"><span data-stu-id="2311b-110">By adding the following line to the <code>&lt;runtime&gt;</code> section of the app.config file:</span></span></li></ol><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="2311b-111">반대로 이전 버전의 .NET Framework에서 애플리케이션이 로드될 때 .NET Framework 4.7 런타임에서 새로운 동작을 옵트인하려는 사용자는 AppContext 스위치를 <code>false</code>로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2311b-111">Conversely, users who wish to opt in to the new behavior on the .NET Framework 4.7 runtime when the application loads under older .NET Framework versions can set the AppContext switch to <code>false</code>.</span></span>|
-|<span data-ttu-id="2311b-112">Scope</span><span class="sxs-lookup"><span data-stu-id="2311b-112">Scope</span></span>|<span data-ttu-id="2311b-113">부</span><span class="sxs-lookup"><span data-stu-id="2311b-113">Minor</span></span>|
-|<span data-ttu-id="2311b-114">버전</span><span class="sxs-lookup"><span data-stu-id="2311b-114">Version</span></span>|<span data-ttu-id="2311b-115">4.7</span><span class="sxs-lookup"><span data-stu-id="2311b-115">4.7</span></span>|
-|<span data-ttu-id="2311b-116">형식</span><span class="sxs-lookup"><span data-stu-id="2311b-116">Type</span></span>|<span data-ttu-id="2311b-117">대상 변경</span><span class="sxs-lookup"><span data-stu-id="2311b-117">Retargeting</span></span>|
-|<span data-ttu-id="2311b-118">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="2311b-118">Affected APIs</span></span>|<ul><li><xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="daae3-102">설명</span><span class="sxs-lookup"><span data-stu-id="daae3-102">Details</span></span>
+
+<span data-ttu-id="daae3-103">.NET Framework 2.0에 도입된 <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 값을 사용하면 애플리케이션에서 키에 액세스하는 데 필요한 UI(PIN 프롬프트 또는 동의 대화 상자)가 지정된 창에 대한 모달 자식 항목으로 열리도록 부모 창 핸들 값을 등록할 수 있습니다. .NET Framework 4.7을 대상으로 하는 앱부터 Windows Forms 애플리케이션은 다음과 같은 코드로 <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-103">The <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> value, introduced in .NET Framework 2.0, allows an application to register a parent window handle value such that any UI required to access the key (such as a PIN prompt or consent dialog) opens as a modal child to the specified window.Starting with apps that target the .NET Framework 4.7, a Windows Forms application can set the <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> property with code like the following:</span></span>
+
+```csharp
+cspParameters.ParentWindowHandle = form.Handle;
+```
+
+<span data-ttu-id="daae3-104">이전 버전의 .NET Framework에서 값은 [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 값이 있던 메모리의 위치를 나타내는 <xref:System.IntPtr?displayProperty=fullName>가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-104">In previous versions of the .NET Framework, the value was expected to be an <xref:System.IntPtr?displayProperty=fullName> representing a location in memory where the [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) value resided.</span></span> <span data-ttu-id="daae3-105">Windows 7 이전 버전에서 이 속성을 form.Handle로 설정해도 아무 영향이 없지만, Windows 8 이상 버전에서는 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: 매개 변수가 잘못되었습니다.&quot;라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-105">Setting the property to form.Handle on Windows 7 and earlier versions had no effect, but on Windows 8 and later versions, it results in a &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: The parameter is incorrect.&quot;</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="daae3-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="daae3-106">Suggestion</span></span>
+
+<span data-ttu-id="daae3-107">부모 창 관계를 등록하려는 .NET Framework 4.7 이상을 대상으로 하는 애플리케이션에서는 다음과 같은 간단한 형식을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-107">Applications targeting .NET Framework 4.7 or higher wishing to register a parent window relationship are encouraged to use the simplified form:</span></span>
+
+```csharp
+cspParameters.ParentWindowHandle = form.Handle;
+```
+
+<span data-ttu-id="daae3-108">통과시킬 올바른 값이 `form.Handle` 값을 가졌던 메모리 위치의 주소임을 확인한 사용자는 AppContext 스위치 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle`를 `true`로 설정하여 동작 변경을 옵트아웃할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-108">Users who had identified that the correct value to pass was the address of a memory location which held the value `form.Handle` can opt out of the behavior change by setting the AppContext switch `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` to `true`:</span></span>
+
+- <span data-ttu-id="daae3-109">[여기](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)에 설명된 대로 AppContext에서 compat 스위치를 프로그래밍 방식으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-109">By programmatically setting compat switches on the AppContext, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span>
+- <span data-ttu-id="daae3-110">다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가</span><span class="sxs-lookup"><span data-stu-id="daae3-110">By adding the following line to the `<runtime>` section of the app.config file:</span></span>
+
+```xml
+<runtime>
+ <AppContextSwitchOverrides value="Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle=true"/>
+</runtime>
+```
+
+<span data-ttu-id="daae3-111">반대로 이전 버전의 .NET Framework에서 애플리케이션이 로드될 때 .NET Framework 4.7 런타임에서 새로운 동작을 옵트인하려는 사용자는 AppContext 스위치를 `false`로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="daae3-111">Conversely, users who wish to opt in to the new behavior on the .NET Framework 4.7 runtime when the application loads under older .NET Framework versions can set the AppContext switch to `false`.</span></span>
+
+| <span data-ttu-id="daae3-112">이름</span><span class="sxs-lookup"><span data-stu-id="daae3-112">Name</span></span>    | <span data-ttu-id="daae3-113">값</span><span class="sxs-lookup"><span data-stu-id="daae3-113">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="daae3-114">Scope</span><span class="sxs-lookup"><span data-stu-id="daae3-114">Scope</span></span>   | <span data-ttu-id="daae3-115">부</span><span class="sxs-lookup"><span data-stu-id="daae3-115">Minor</span></span>       |
+| <span data-ttu-id="daae3-116">버전</span><span class="sxs-lookup"><span data-stu-id="daae3-116">Version</span></span> | <span data-ttu-id="daae3-117">4.7</span><span class="sxs-lookup"><span data-stu-id="daae3-117">4.7</span></span>         |
+| <span data-ttu-id="daae3-118">형식</span><span class="sxs-lookup"><span data-stu-id="daae3-118">Type</span></span>    | <span data-ttu-id="daae3-119">대상 변경</span><span class="sxs-lookup"><span data-stu-id="daae3-119">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="daae3-120">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="daae3-120">Affected APIs</span></span>
+
+- <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType>

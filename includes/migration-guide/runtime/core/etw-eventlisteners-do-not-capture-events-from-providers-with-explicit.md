@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 1ef31202d7c072ca27c21fc22db102aafa6b8de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d50962b518c15875a5f1a82f5b89ab87a1db02e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620236"
 ---
-### <a name="etw-eventlisteners-do-not-capture-events-from-providers-with-explicit-keywords-like-the-tpl-provider"></a><span data-ttu-id="3ed65-101">ETW EventListeners는 명시적 키워드를 사용하는 공급자의 이벤트를 캡처하지 않습니다(예: TPL 공급자).</span><span class="sxs-lookup"><span data-stu-id="3ed65-101">ETW EventListeners do not capture events from providers with explicit keywords (like the TPL provider)</span></span>
+### <a name="etw-eventlisteners-do-not-capture-events-from-providers-with-explicit-keywords-like-the-tpl-provider"></a><span data-ttu-id="430f1-101">ETW EventListeners는 명시적 키워드를 사용하는 공급자의 이벤트를 캡처하지 않습니다(예: TPL 공급자).</span><span class="sxs-lookup"><span data-stu-id="430f1-101">ETW EventListeners do not capture events from providers with explicit keywords (like the TPL provider)</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="3ed65-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="3ed65-102">Details</span></span>|<span data-ttu-id="3ed65-103">빈 키워드 마스크가 있는 ETW EventListeners는 명시적 키워드를 사용하는 공급자의 이벤트를 제대로 캡처하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3ed65-103">ETW EventListeners with a blank keyword mask do not properly capture events from providers with explicit keywords.</span></span> <span data-ttu-id="3ed65-104">.NET Framework 4.5에서 TPL 공급자는 명시적 키워드를 제공하기 시작했고 이 문제를 트리거했습니다.</span><span class="sxs-lookup"><span data-stu-id="3ed65-104">In the .NET Framework 4.5, the TPL provider began providing explicit keywords and triggered this issue.</span></span> <span data-ttu-id="3ed65-105">.NET Framework 4.6에서 더 이상 이 문제가 발생하지 않도록 EventListeners 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3ed65-105">In the .NET Framework 4.6, EventListeners have been updated to no longer have this issue.</span></span>|
-|<span data-ttu-id="3ed65-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="3ed65-106">Suggestion</span></span>|<span data-ttu-id="3ed65-107">이 문제를 해결하려면 <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)>에 대한 호출을 사용할 &quot;키워드&quot; 마스크를 명시적으로 지정하는 EnableEvents 오버로드 호출로 대체합니다(<code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>). 또한 이 문제는 .NET Framework 4.6에서 해결되었으며 .NET Framework의 해당 버전으로 업그레이드하면 해결될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ed65-107">To work around this problem, replace calls to <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)> with calls to the EnableEvents overload that explicitly specifies the &quot;any keywords&quot; mask to use: <code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>.Alternatively, this issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
-|<span data-ttu-id="3ed65-108">범위</span><span class="sxs-lookup"><span data-stu-id="3ed65-108">Scope</span></span>|<span data-ttu-id="3ed65-109">가장자리</span><span class="sxs-lookup"><span data-stu-id="3ed65-109">Edge</span></span>|
-|<span data-ttu-id="3ed65-110">Version</span><span class="sxs-lookup"><span data-stu-id="3ed65-110">Version</span></span>|<span data-ttu-id="3ed65-111">4.5</span><span class="sxs-lookup"><span data-stu-id="3ed65-111">4.5</span></span>|
-|<span data-ttu-id="3ed65-112">형식</span><span class="sxs-lookup"><span data-stu-id="3ed65-112">Type</span></span>|<span data-ttu-id="3ed65-113">런타임</span><span class="sxs-lookup"><span data-stu-id="3ed65-113">Runtime</span></span>|
-|<span data-ttu-id="3ed65-114">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="3ed65-114">Affected APIs</span></span>|<ul><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="430f1-102">설명</span><span class="sxs-lookup"><span data-stu-id="430f1-102">Details</span></span>
+
+<span data-ttu-id="430f1-103">빈 키워드 마스크가 있는 ETW EventListeners는 명시적 키워드를 사용하는 공급자의 이벤트를 제대로 캡처하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="430f1-103">ETW EventListeners with a blank keyword mask do not properly capture events from providers with explicit keywords.</span></span> <span data-ttu-id="430f1-104">.NET Framework 4.5에서 TPL 공급자는 명시적 키워드를 제공하기 시작했고 이 문제를 트리거했습니다.</span><span class="sxs-lookup"><span data-stu-id="430f1-104">In the .NET Framework 4.5, the TPL provider began providing explicit keywords and triggered this issue.</span></span> <span data-ttu-id="430f1-105">.NET Framework 4.6에서 더 이상 이 문제가 발생하지 않도록 EventListeners 업데이트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="430f1-105">In the .NET Framework 4.6, EventListeners have been updated to no longer have this issue.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="430f1-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="430f1-106">Suggestion</span></span>
+
+<span data-ttu-id="430f1-107">이 문제를 해결하려면 <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)>에 대한 호출을 사용할 &quot;키워드&quot; 마스크를 명시적으로 지정하는 EnableEvents 오버로드 호출로 대체합니다(<code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>). 또한 이 문제는 .NET Framework 4.6에서 해결되었으며 .NET Framework의 해당 버전으로 업그레이드하면 해결될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="430f1-107">To work around this problem, replace calls to <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)> with calls to the EnableEvents overload that explicitly specifies the &quot;any keywords&quot; mask to use: <code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>.Alternatively, this issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>
+
+| <span data-ttu-id="430f1-108">이름</span><span class="sxs-lookup"><span data-stu-id="430f1-108">Name</span></span>    | <span data-ttu-id="430f1-109">값</span><span class="sxs-lookup"><span data-stu-id="430f1-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="430f1-110">Scope</span><span class="sxs-lookup"><span data-stu-id="430f1-110">Scope</span></span>   |<span data-ttu-id="430f1-111">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="430f1-111">Edge</span></span>|
+|<span data-ttu-id="430f1-112">버전</span><span class="sxs-lookup"><span data-stu-id="430f1-112">Version</span></span>|<span data-ttu-id="430f1-113">4.5</span><span class="sxs-lookup"><span data-stu-id="430f1-113">4.5</span></span>|
+|<span data-ttu-id="430f1-114">형식</span><span class="sxs-lookup"><span data-stu-id="430f1-114">Type</span></span>|<span data-ttu-id="430f1-115">런타임</span><span class="sxs-lookup"><span data-stu-id="430f1-115">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="430f1-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="430f1-116">Affected APIs</span></span>
+
+-<xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li></ul>|

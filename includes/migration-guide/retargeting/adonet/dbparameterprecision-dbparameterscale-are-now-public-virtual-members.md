@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: 1721d32f8cdc9b6ea4b4732e38afa56a8a532600
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 063e10b0310880af255793215a80a5529a5db0ff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59234817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616108"
 ---
-### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a><span data-ttu-id="ae876-101">DbParameter.Precision 및 DbParameter.Scale는 이제 공용 가상 멤버임</span><span class="sxs-lookup"><span data-stu-id="ae876-101">DbParameter.Precision and DbParameter.Scale are now public virtual members</span></span>
+### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a><span data-ttu-id="78264-101">DbParameter.Precision 및 DbParameter.Scale는 이제 공용 가상 멤버임</span><span class="sxs-lookup"><span data-stu-id="78264-101">DbParameter.Precision and DbParameter.Scale are now public virtual members</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="ae876-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="ae876-102">Details</span></span>|<span data-ttu-id="ae876-103"><xref:System.Data.Common.DbParameter.Precision>과 <xref:System.Data.Common.DbParameter.Scale>은 공용 가상 속성으로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae876-103"><xref:System.Data.Common.DbParameter.Precision> and <xref:System.Data.Common.DbParameter.Scale> are implemented as public virtual properties.</span></span> <span data-ttu-id="ae876-104">이들은 명시적 인터페이스 구현에 해당하는 <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision>과 <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>로 대체됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae876-104">They replace the corresponding explicit interface implementations, <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> and <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.</span></span>|
-|<span data-ttu-id="ae876-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="ae876-105">Suggestion</span></span>|<span data-ttu-id="ae876-106">ADO.NET 데이터베이스 공급자를 다시 작성할 때 이러한 차이는 전체 자릿수 및 소수 자릿수 속성에 적용될 'override' 키워드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ae876-106">When re-building an ADO.NET database provider, these differences will require the 'override' keyword to be applied to the Precision and Scale properties.</span></span> <span data-ttu-id="ae876-107">이것은 구성 요소를 다시 빌드할 때만 필요하며 기존의 이진 파일은 계속 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="ae876-107">This is only needed when re-building the components; existing binaries will continue to work.</span></span>|
-|<span data-ttu-id="ae876-108">범위</span><span class="sxs-lookup"><span data-stu-id="ae876-108">Scope</span></span>|<span data-ttu-id="ae876-109">부</span><span class="sxs-lookup"><span data-stu-id="ae876-109">Minor</span></span>|
-|<span data-ttu-id="ae876-110">버전</span><span class="sxs-lookup"><span data-stu-id="ae876-110">Version</span></span>|<span data-ttu-id="ae876-111">4.5.1</span><span class="sxs-lookup"><span data-stu-id="ae876-111">4.5.1</span></span>|
-|<span data-ttu-id="ae876-112">형식</span><span class="sxs-lookup"><span data-stu-id="ae876-112">Type</span></span>|<span data-ttu-id="ae876-113">대상 변경</span><span class="sxs-lookup"><span data-stu-id="ae876-113">Retargeting</span></span>|
-|<span data-ttu-id="ae876-114">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="ae876-114">Affected APIs</span></span>|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="78264-102">설명</span><span class="sxs-lookup"><span data-stu-id="78264-102">Details</span></span>
+
+<span data-ttu-id="78264-103"><xref:System.Data.Common.DbParameter.Precision>과 <xref:System.Data.Common.DbParameter.Scale>은 공용 가상 속성으로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="78264-103"><xref:System.Data.Common.DbParameter.Precision> and <xref:System.Data.Common.DbParameter.Scale> are implemented as public virtual properties.</span></span> <span data-ttu-id="78264-104">이들은 명시적 인터페이스 구현에 해당하는 <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision>과 <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>로 대체됩니다.</span><span class="sxs-lookup"><span data-stu-id="78264-104">They replace the corresponding explicit interface implementations, <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> and <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="78264-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="78264-105">Suggestion</span></span>
+
+<span data-ttu-id="78264-106">ADO.NET 데이터베이스 공급자를 다시 작성할 때 이러한 차이는 전체 자릿수 및 소수 자릿수 속성에 적용될 'override' 키워드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="78264-106">When re-building an ADO.NET database provider, these differences will require the 'override' keyword to be applied to the Precision and Scale properties.</span></span> <span data-ttu-id="78264-107">이것은 구성 요소를 다시 빌드할 때만 필요하며 기존의 이진 파일은 계속 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="78264-107">This is only needed when re-building the components; existing binaries will continue to work.</span></span>
+
+| <span data-ttu-id="78264-108">이름</span><span class="sxs-lookup"><span data-stu-id="78264-108">Name</span></span>    | <span data-ttu-id="78264-109">값</span><span class="sxs-lookup"><span data-stu-id="78264-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="78264-110">Scope</span><span class="sxs-lookup"><span data-stu-id="78264-110">Scope</span></span>   | <span data-ttu-id="78264-111">부</span><span class="sxs-lookup"><span data-stu-id="78264-111">Minor</span></span>       |
+| <span data-ttu-id="78264-112">버전</span><span class="sxs-lookup"><span data-stu-id="78264-112">Version</span></span> | <span data-ttu-id="78264-113">4.5.1</span><span class="sxs-lookup"><span data-stu-id="78264-113">4.5.1</span></span>       |
+| <span data-ttu-id="78264-114">형식</span><span class="sxs-lookup"><span data-stu-id="78264-114">Type</span></span>    | <span data-ttu-id="78264-115">대상 변경</span><span class="sxs-lookup"><span data-stu-id="78264-115">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="78264-116">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="78264-116">Affected APIs</span></span>
+
+- <xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType>
+- <xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType>

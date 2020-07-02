@@ -1,17 +1,26 @@
 ---
-ms.openlocfilehash: 39a329597ef28e002242103a247515d94761676a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4d410811095786b33580d25f6c6eab3ac2f27148
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616103"
 ---
-### <a name="resolveassemblyreference-task-now-warns-of-dependencies-with-the-wrong-architecture"></a><span data-ttu-id="13575-101">ResolveAssemblyReference 작업이 이제 잘못된 아키텍처의 종속성에 대해 경고</span><span class="sxs-lookup"><span data-stu-id="13575-101">ResolveAssemblyReference task now warns of dependencies with the wrong architecture</span></span>
+### <a name="resolveassemblyreference-task-now-warns-of-dependencies-with-the-wrong-architecture"></a><span data-ttu-id="8b4c5-101">ResolveAssemblyReference 작업이 이제 잘못된 아키텍처의 종속성에 대해 경고</span><span class="sxs-lookup"><span data-stu-id="8b4c5-101">ResolveAssemblyReference task now warns of dependencies with the wrong architecture</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="13575-102">설명</span><span class="sxs-lookup"><span data-stu-id="13575-102">Details</span></span>|<span data-ttu-id="13575-103">이 작업은 참조 또는 해당 종속성이 앱 아키텍처와 일치하지 않음을 나타내는 경고 MSB3270을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="13575-103">The task emits a warning, MSB3270, which indicates that a reference or any of its dependencies does not match the app's architecture.</span></span> <span data-ttu-id="13575-104">예를 들어 <code>AnyCPU</code> 옵션으로 컴파일된 앱에 x86 참조가 포함된 경우 이 경고가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="13575-104">For example, this occurs if an app that was compiled with the <code>AnyCPU</code> option includes an x86 reference.</span></span> <span data-ttu-id="13575-105">이로 인해 앱의 런타임 오류가 발생할 수 있습니다(앱이 x64 프로세스로 배포된 경우).</span><span class="sxs-lookup"><span data-stu-id="13575-105">Such a scenario could result in an app failure at run time (in this case, if the app is deployed as an x64 process).</span></span>|
-|<span data-ttu-id="13575-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="13575-106">Suggestion</span></span>|<span data-ttu-id="13575-107">영향에는 다음 두 가지 영역이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="13575-107">There are two areas of impact:</span></span><ul><li><span data-ttu-id="13575-108">다시 컴파일하면 앱이 이전 MSBuild 버전에서 컴파일되었을 때는 나타나지 않았던 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="13575-108">Recompilation generates warnings that did not appear when the app was compiled under a previous version of MSBuild.</span></span> <span data-ttu-id="13575-109">하지만 런타임 오류가 발생한 소스를 경고에서 확인할 수 있으므로 이 문제를 조사하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="13575-109">However, because the warning identifies a possible source of runtime failure, it should be investigated and addressed.</span></span></li><li><span data-ttu-id="13575-110">경고가 오류로 처리되면 앱을 컴파일할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="13575-110">If warnings are treated as errors, the app will fail to compile.</span></span></li></ul>|
-|<span data-ttu-id="13575-111">범위</span><span class="sxs-lookup"><span data-stu-id="13575-111">Scope</span></span>|<span data-ttu-id="13575-112">부</span><span class="sxs-lookup"><span data-stu-id="13575-112">Minor</span></span>|
-|<span data-ttu-id="13575-113">버전</span><span class="sxs-lookup"><span data-stu-id="13575-113">Version</span></span>|<span data-ttu-id="13575-114">4.5.1</span><span class="sxs-lookup"><span data-stu-id="13575-114">4.5.1</span></span>|
-|<span data-ttu-id="13575-115">형식</span><span class="sxs-lookup"><span data-stu-id="13575-115">Type</span></span>|<span data-ttu-id="13575-116">대상 변경</span><span class="sxs-lookup"><span data-stu-id="13575-116">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="8b4c5-102">설명</span><span class="sxs-lookup"><span data-stu-id="8b4c5-102">Details</span></span>
+
+<span data-ttu-id="8b4c5-103">이 작업은 참조 또는 해당 종속성이 앱 아키텍처와 일치하지 않음을 나타내는 경고 MSB3270을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-103">The task emits a warning, MSB3270, which indicates that a reference or any of its dependencies does not match the app's architecture.</span></span> <span data-ttu-id="8b4c5-104">예를 들어 `AnyCPU` 옵션으로 컴파일된 앱에 x86 참조가 포함된 경우 이 경고가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-104">For example, this occurs if an app that was compiled with the `AnyCPU` option includes an x86 reference.</span></span> <span data-ttu-id="8b4c5-105">이로 인해 앱의 런타임 오류가 발생할 수 있습니다(앱이 x64 프로세스로 배포된 경우).</span><span class="sxs-lookup"><span data-stu-id="8b4c5-105">Such a scenario could result in an app failure at run time (in this case, if the app is deployed as an x64 process).</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="8b4c5-106">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="8b4c5-106">Suggestion</span></span>
+
+<span data-ttu-id="8b4c5-107">영향에는 다음 두 가지 영역이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-107">There are two areas of impact:</span></span>
+
+- <span data-ttu-id="8b4c5-108">다시 컴파일하면 앱이 이전 MSBuild 버전에서 컴파일되었을 때는 나타나지 않았던 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-108">Recompilation generates warnings that did not appear when the app was compiled under a previous version of MSBuild.</span></span> <span data-ttu-id="8b4c5-109">하지만 런타임 오류가 발생한 소스를 경고에서 확인할 수 있으므로 이 문제를 조사하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-109">However, because the warning identifies a possible source of runtime failure, it should be investigated and addressed.</span></span>
+- <span data-ttu-id="8b4c5-110">경고가 오류로 처리되면 앱을 컴파일할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8b4c5-110">If warnings are treated as errors, the app will fail to compile.</span></span>
+
+| <span data-ttu-id="8b4c5-111">이름</span><span class="sxs-lookup"><span data-stu-id="8b4c5-111">Name</span></span>    | <span data-ttu-id="8b4c5-112">값</span><span class="sxs-lookup"><span data-stu-id="8b4c5-112">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="8b4c5-113">Scope</span><span class="sxs-lookup"><span data-stu-id="8b4c5-113">Scope</span></span>   | <span data-ttu-id="8b4c5-114">부</span><span class="sxs-lookup"><span data-stu-id="8b4c5-114">Minor</span></span>       |
+| <span data-ttu-id="8b4c5-115">버전</span><span class="sxs-lookup"><span data-stu-id="8b4c5-115">Version</span></span> | <span data-ttu-id="8b4c5-116">4.5.1</span><span class="sxs-lookup"><span data-stu-id="8b4c5-116">4.5.1</span></span>       |
+| <span data-ttu-id="8b4c5-117">형식</span><span class="sxs-lookup"><span data-stu-id="8b4c5-117">Type</span></span>    | <span data-ttu-id="8b4c5-118">대상 변경</span><span class="sxs-lookup"><span data-stu-id="8b4c5-118">Retargeting</span></span> |

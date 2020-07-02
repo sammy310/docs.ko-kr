@@ -1,18 +1,31 @@
 ---
-ms.openlocfilehash: cdcf7f540a9ded4108121b2cd8e855687a0c7e27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23e278d38d6904d8afe927e6b54c388d443e41f5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616094"
 ---
-### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a><span data-ttu-id="ea8cf-101">SignedXml.GetPublicKey는 대상 변경 없이 net462(또는 lightup)에서 RSACng를 반환</span><span class="sxs-lookup"><span data-stu-id="ea8cf-101">SignedXml.GetPublicKey returns RSACng on net462 (or lightup) without retargeting change</span></span>
+### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a><span data-ttu-id="b6dad-101">SignedXml.GetPublicKey는 대상 변경 없이 net462(또는 lightup)에서 RSACng를 반환</span><span class="sxs-lookup"><span data-stu-id="b6dad-101">SignedXml.GetPublicKey returns RSACng on net462 (or lightup) without retargeting change</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="ea8cf-102">설명</span><span class="sxs-lookup"><span data-stu-id="ea8cf-102">Details</span></span>|<span data-ttu-id="ea8cf-103">.NET Framework 4.6.2부터는 <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> 메서드에서 반환된 개체의 구체적인 형식이 CryptoServiceProvider 구현에서 Cng 구현으로 변경되었습니다(쿼크 사용 안 함).</span><span class="sxs-lookup"><span data-stu-id="ea8cf-103">Starting with the .NET Framework 4.6.2, the concrete type of the object returned by the <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> method changed (without a quirk) from a CryptoServiceProvider implementation to a Cng implementation.</span></span> <span data-ttu-id="ea8cf-104">이는 구현이 <code>certificate.PublicKey.Key</code> 사용에서 <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>로 전달되는 내부 <code>certificate.GetAnyPublicKey</code> 사용으로 변경 되었기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="ea8cf-104">This is because the implementation changed from using <code>certificate.PublicKey.Key</code> to using the internal <code>certificate.GetAnyPublicKey</code> which forwards to <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span></span>|
-|<span data-ttu-id="ea8cf-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="ea8cf-105">Suggestion</span></span>|<span data-ttu-id="ea8cf-106">.NET Framework 4.7.1에서 실행되는 앱부터는 앱 구성 파일의 [런타임](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 스위치를 추가하여 .NET Framework 4.6.1 이전 버전에서 기본적으로 사용되는 CryptoServiceProvider 구현을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea8cf-106">Starting with apps running on the .NET Framework 4.7.1, you can use the CryptoServiceProvider implementation used by default in the .NET Framework 4.6.1 and earlier versions by adding the following configuration switch to the [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app config file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true&quot; /&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="ea8cf-107">Scope</span><span class="sxs-lookup"><span data-stu-id="ea8cf-107">Scope</span></span>|<span data-ttu-id="ea8cf-108">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="ea8cf-108">Edge</span></span>|
-|<span data-ttu-id="ea8cf-109">버전</span><span class="sxs-lookup"><span data-stu-id="ea8cf-109">Version</span></span>|<span data-ttu-id="ea8cf-110">4.6.2</span><span class="sxs-lookup"><span data-stu-id="ea8cf-110">4.6.2</span></span>|
-|<span data-ttu-id="ea8cf-111">형식</span><span class="sxs-lookup"><span data-stu-id="ea8cf-111">Type</span></span>|<span data-ttu-id="ea8cf-112">대상 변경</span><span class="sxs-lookup"><span data-stu-id="ea8cf-112">Retargeting</span></span>|
-|<span data-ttu-id="ea8cf-113">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="ea8cf-113">Affected APIs</span></span>|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="b6dad-102">설명</span><span class="sxs-lookup"><span data-stu-id="b6dad-102">Details</span></span>
+
+<span data-ttu-id="b6dad-103">.NET Framework 4.6.2부터는 <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> 메서드에서 반환된 개체의 구체적인 형식이 CryptoServiceProvider 구현에서 Cng 구현으로 변경되었습니다(쿼크 사용 안 함).</span><span class="sxs-lookup"><span data-stu-id="b6dad-103">Starting with the .NET Framework 4.6.2, the concrete type of the object returned by the <xref:System.Security.Cryptography.Xml.SignedXml.GetPublicKey%2A?displayProperty=nameWithType> method changed (without a quirk) from a CryptoServiceProvider implementation to a Cng implementation.</span></span> <span data-ttu-id="b6dad-104">이는 구현이 `certificate.PublicKey.Key` 사용에서 <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>로 전달되는 내부 `certificate.GetAnyPublicKey` 사용으로 변경 되었기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="b6dad-104">This is because the implementation changed from using `certificate.PublicKey.Key` to using the internal `certificate.GetAnyPublicKey` which forwards to <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A?displayProperty=nameWithType>.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="b6dad-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="b6dad-105">Suggestion</span></span>
+
+<span data-ttu-id="b6dad-106">.NET Framework 4.7.1에서 실행되는 앱부터는 앱 구성 파일의 [런타임](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 스위치를 추가하여 .NET Framework 4.6.1 이전 버전에서 기본적으로 사용되는 CryptoServiceProvider 구현을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6dad-106">Starting with apps running on the .NET Framework 4.7.1, you can use the CryptoServiceProvider implementation used by default in the .NET Framework 4.6.1 and earlier versions by adding the following configuration switch to the [runtime](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app config file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true" />
+```
+
+| <span data-ttu-id="b6dad-107">이름</span><span class="sxs-lookup"><span data-stu-id="b6dad-107">Name</span></span>    | <span data-ttu-id="b6dad-108">값</span><span class="sxs-lookup"><span data-stu-id="b6dad-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="b6dad-109">Scope</span><span class="sxs-lookup"><span data-stu-id="b6dad-109">Scope</span></span>   | <span data-ttu-id="b6dad-110">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="b6dad-110">Edge</span></span>        |
+| <span data-ttu-id="b6dad-111">버전</span><span class="sxs-lookup"><span data-stu-id="b6dad-111">Version</span></span> | <span data-ttu-id="b6dad-112">4.6.2</span><span class="sxs-lookup"><span data-stu-id="b6dad-112">4.6.2</span></span>       |
+| <span data-ttu-id="b6dad-113">형식</span><span class="sxs-lookup"><span data-stu-id="b6dad-113">Type</span></span>    | <span data-ttu-id="b6dad-114">대상 변경</span><span class="sxs-lookup"><span data-stu-id="b6dad-114">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="b6dad-115">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="b6dad-115">Affected APIs</span></span>
+
+- <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType>

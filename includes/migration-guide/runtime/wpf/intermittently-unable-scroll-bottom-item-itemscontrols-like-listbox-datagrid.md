@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b92dc8a1c48e83846c3d9a1d86e66629f31b7722
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622118"
 ---
-### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a><span data-ttu-id="ccfbc-101">사용자 지정 DataTemplate를 사용하는 경우 일시적으로 ItemsControls에서(예: ListBox 및 DataGrid) 하위 항목으로 스크롤할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ccfbc-101">Intermittently unable to scroll to bottom item in ItemsControls (like ListBox and DataGrid) when using custom DataTemplates</span></span>
+### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a><span data-ttu-id="120d7-101">사용자 지정 DataTemplate를 사용하는 경우 일시적으로 ItemsControls에서(예: ListBox 및 DataGrid) 하위 항목으로 스크롤할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="120d7-101">Intermittently unable to scroll to bottom item in ItemsControls (like ListBox and DataGrid) when using custom DataTemplates</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="ccfbc-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="ccfbc-102">Details</span></span>|<span data-ttu-id="ccfbc-103">일부 인스턴스에서 .NET Framework 4.5의 버그는 사용자 지정 DataTemplates를 사용할 때 ItemsControls(예: <xref:System.Windows.Controls.ListBox?displayProperty=name>, <xref:System.Windows.Controls.ComboBox?displayProperty=name>, <xref:System.Windows.Controls.DataGrid?displayProperty=name> 등)가 아래 항목으로 스크롤되지 않게 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccfbc-103">In some instances, a bug in the .NET Framework 4.5 is causing ItemsControls (like <xref:System.Windows.Controls.ListBox?displayProperty=name>, <xref:System.Windows.Controls.ComboBox?displayProperty=name>, <xref:System.Windows.Controls.DataGrid?displayProperty=name>, etc.) to not scroll to their bottom item when using custom DataTemplates.</span></span> <span data-ttu-id="ccfbc-104">스크롤이 두 번째 시도되는 경우(스크롤 백업 후) 그때에는 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="ccfbc-104">If the scrolling is attempted a second time (after scrolling back up), it will work then.</span></span>|
-|<span data-ttu-id="ccfbc-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="ccfbc-105">Suggestion</span></span>|<span data-ttu-id="ccfbc-106">.NET Framework 4.5.2에서 이 문제가 수정되어 해당 버전(또는 이후 버전)의 .NET Framework로 업그레이드하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccfbc-106">This issue has been fixed in the .NET Framework 4.5.2 and may be addressed by upgrading to that version (or a later version) of the .NET Framework.</span></span> <span data-ttu-id="ccfbc-107">또는 사용자가 이러한 컬렉션의 마지막 항목까지 스크롤 막대를 끌 수 있지만 성공하려면 두 번 시도해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccfbc-107">Alternatively, users can still drag scroll bars to the final items in these collections, but may need to try twice to do so successfully.</span></span>|
-|<span data-ttu-id="ccfbc-108">범위</span><span class="sxs-lookup"><span data-stu-id="ccfbc-108">Scope</span></span>|<span data-ttu-id="ccfbc-109">사소함</span><span class="sxs-lookup"><span data-stu-id="ccfbc-109">Minor</span></span>|
-|<span data-ttu-id="ccfbc-110">Version</span><span class="sxs-lookup"><span data-stu-id="ccfbc-110">Version</span></span>|<span data-ttu-id="ccfbc-111">4.5</span><span class="sxs-lookup"><span data-stu-id="ccfbc-111">4.5</span></span>|
-|<span data-ttu-id="ccfbc-112">형식</span><span class="sxs-lookup"><span data-stu-id="ccfbc-112">Type</span></span>|<span data-ttu-id="ccfbc-113">런타임</span><span class="sxs-lookup"><span data-stu-id="ccfbc-113">Runtime</span></span>|
+#### <a name="details"></a><span data-ttu-id="120d7-102">설명</span><span class="sxs-lookup"><span data-stu-id="120d7-102">Details</span></span>
+
+<span data-ttu-id="120d7-103">일부 인스턴스에서 .NET Framework 4.5의 버그는 사용자 지정 DataTemplates를 사용할 때 ItemsControls(예: <xref:System.Windows.Controls.ListBox?displayProperty=fullName>, <xref:System.Windows.Controls.ComboBox?displayProperty=fullName>, <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> 등)가 아래 항목으로 스크롤되지 않게 합니다.</span><span class="sxs-lookup"><span data-stu-id="120d7-103">In some instances, a bug in the .NET Framework 4.5 is causing ItemsControls (like <xref:System.Windows.Controls.ListBox?displayProperty=fullName>, <xref:System.Windows.Controls.ComboBox?displayProperty=fullName>, <xref:System.Windows.Controls.DataGrid?displayProperty=fullName>, etc.) to not scroll to their bottom item when using custom DataTemplates.</span></span> <span data-ttu-id="120d7-104">스크롤이 두 번째 시도되는 경우(스크롤 백업 후) 그때에는 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="120d7-104">If the scrolling is attempted a second time (after scrolling back up), it will work then.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="120d7-105">제안 해결 방법</span><span class="sxs-lookup"><span data-stu-id="120d7-105">Suggestion</span></span>
+
+<span data-ttu-id="120d7-106">.NET Framework 4.5.2에서 이 문제가 수정되어 해당 버전(또는 이후 버전)의 .NET Framework로 업그레이드하여 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="120d7-106">This issue has been fixed in the .NET Framework 4.5.2 and may be addressed by upgrading to that version (or a later version) of the .NET Framework.</span></span> <span data-ttu-id="120d7-107">또는 사용자가 이러한 컬렉션의 마지막 항목까지 스크롤 막대를 끌 수 있지만 성공하려면 두 번 시도해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="120d7-107">Alternatively, users can still drag scroll bars to the final items in these collections, but may need to try twice to do so successfully.</span></span>
+
+| <span data-ttu-id="120d7-108">이름</span><span class="sxs-lookup"><span data-stu-id="120d7-108">Name</span></span>    | <span data-ttu-id="120d7-109">값</span><span class="sxs-lookup"><span data-stu-id="120d7-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="120d7-110">Scope</span><span class="sxs-lookup"><span data-stu-id="120d7-110">Scope</span></span>   |<span data-ttu-id="120d7-111">부</span><span class="sxs-lookup"><span data-stu-id="120d7-111">Minor</span></span>|
+|<span data-ttu-id="120d7-112">버전</span><span class="sxs-lookup"><span data-stu-id="120d7-112">Version</span></span>|<span data-ttu-id="120d7-113">4.5</span><span class="sxs-lookup"><span data-stu-id="120d7-113">4.5</span></span>|
+|<span data-ttu-id="120d7-114">형식</span><span class="sxs-lookup"><span data-stu-id="120d7-114">Type</span></span>|<span data-ttu-id="120d7-115">런타임</span><span class="sxs-lookup"><span data-stu-id="120d7-115">Runtime</span></span>|
