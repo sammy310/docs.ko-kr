@@ -1,20 +1,18 @@
-- name: 새로운 기능
-  href: index.yml
-  expanded: true
-  items:
-    - name: 2020
-      items:
-        - name: 5월
-          href: dotnet-2020-05.md
-        - name: April
-          href: dotnet-2020-04.md
-        - name: 3월
-          href: dotnet-2020-03.md
-        - name: February
-          href: dotnet-2020-02.md
-        - name: January
-          href: dotnet-2020-01.md
-    - name: 2019
-      items:
-        - name: 12월
-          href: 2019-12.md
+name: 새로운 기능
+href: index.yml
+expanded: true
+items:
+  - name: 2020
+    items:
+      - name: 6월
+        href: 2020-06.md
+      - name: 5월
+        href: dotnet-2020-05.md
+      - name: April
+        href: dotnet-2020-04.md
+      - name: 3월
+        href: dotnet-2020-03.md
+      - name: February
+        href: dotnet-2020-02.md
+      - name: January
+        href: dotnet-2020-01.md
