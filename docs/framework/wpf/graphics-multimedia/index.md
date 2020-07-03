@@ -1,5 +1,6 @@
 ---
 title: 그래픽 및 멀티미디어
+description: Windows Presentation Foundation (WPF)의 미디어 기능을 검색 합니다. 응용 프로그램에 그래픽, 전환 효과, 소리 및 비디오를 추가 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: ecc54ad9453343f6306b0133fa180abd0db46f82
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ba52e78564484f7714ab0035a5e1861766b72bbf
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853676"
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
 
@@ -161,7 +162,7 @@ WPF의 그래픽 기능에 대 한 핵심 기능은 비디오와 오디오를 �
 
 자세한 내용은 [멀티미디어 개요](multimedia-overview.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>

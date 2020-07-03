@@ -1,6 +1,7 @@
 ---
 title: Visual Studio에서의 WPF 소개
 titleSuffix: ''
+description: Windows Presentation Foundation (WPF)에서 제공 하는 통합 프로그래밍 모델을 사용 하 여 lob (기간 업무) 데스크톱 응용 프로그램을 빌드합니다.
 ms.date: 01/26/2018
 helpviewer_keywords:
 - typography [WPF]
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: fc911d5d33820ba382446d15f8c7fac8f2cebf06
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 21c5311382b509fc3004f2609b2acc54e919eb56
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112338"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853826"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio에서의 WPF 소개
-Visual Studio의 WPF(Windows 프레젠테이션 재단)는 개발자에게 Windows에서 업무 용 데스크톱 응용 프로그램을 빌드하기 위한 통합 프로그래밍 모델을 제공합니다.  
+Visual Studio의 Windows Presentation Foundation (WPF)는 Windows에서 lob (기간 업무) 데스크톱 응용 프로그램을 빌드하기 위한 통합 프로그래밍 모델을 개발자에 게 제공 합니다.  
   
- [Windows 프레젠테이션 기반을 사용하여 데스크톱 응용 프로그램 만들기](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Windows Presentation Foundation를 사용 하 여 데스크톱 응용 프로그램 만들기](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
  [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
