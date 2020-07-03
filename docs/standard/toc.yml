@@ -46,6 +46,8 @@
           href: base-types/type-conversion.md
         - name: 형식 변환표
           href: base-types/conversion-tables.md
+        - name: 익명 형식과 튜플 형식 중에서 선택
+          href: base-types/choosing-between-anonymous-and-tuple.md
         - name: '숫자, 날짜, 기타 형식'
           items:
             - name: 개요
@@ -639,8 +641,6 @@
       items:
         - name: 클래스와 구조체 간의 선택
           href: design-guidelines/choosing-between-class-and-struct.md
-        - name: 익명 형식과 튜플 형식 중에서 선택
-          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: 추상 클래스 디자인
           href: design-guidelines/abstract-class.md
         - name: 정적 클래스 디자인
