@@ -4,12 +4,12 @@ description: RHEL에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 4a406fe1834c16bab9a5548b69206b51270b33fa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619452"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>RHEL에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -100,7 +100,7 @@ ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않�
 
 ## <a name="dependencies"></a>종속성
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 

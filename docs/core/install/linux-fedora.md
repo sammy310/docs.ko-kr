@@ -4,12 +4,12 @@ description: Fedora에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c9774ff347382a6fe0be1ac1dcb78a74242ec999
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: c90c08eefa074fa139642a268f879af79d7280da
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619483"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>Fedora에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -129,7 +129,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 ## <a name="dependencies"></a>종속성
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 

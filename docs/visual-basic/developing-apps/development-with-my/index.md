@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: 3befac591de8fbc7250777a8b87247ee395abf25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330280"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85840314"
 ---
 # <a name="development-with-my-visual-basic"></a>My를 사용한 개발(Visual Basic)
 
@@ -28,26 +28,26 @@ Visual Basic은 강력한 기능을 지원하며 생산성 및 사용 편의성�
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [My.Application, My.Computer 및 My.User를 사용한 작업 수행](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
+ [My.Application, My.Computer 및 My.User를 사용한 작업 수행](performing-tasks-with-my-application-my-computer-and-my-user.md)  
  정보 및 기능에 액세스할 수 있도록 하는 세 개의 핵심 `My` 개체 `My.Application`, `My.Computer` 및 `My.User`에 대해 설명합니다.  
   
- [My.Forms 및 My.WebServices에서 제공하는 기본 개체 인스턴스](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
+ [My.Forms 및 My.WebServices에서 제공하는 기본 개체 인스턴스](default-object-instances-provided-by-my-forms-and-my-webservices.md)  
  애플리케이션에서 사용되는 폼, 데이터 소스 및 XML Web services에 액세스할 수 있도록 하는 `My.Forms` 및 `My.WebServices` 개체에 대해 설명합니다.  
   
- [My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
+ [My.Resources 및 My.Settings를 사용한 신속한 애플리케이션 개발](rapid-application-development-with-my-resources-and-my-settings.md)  
  애플리케이션의 리소스 및 설정에 액세스할 수 있도록 하는 `My.Resources` 및 `My.Settings` 개체에 대해 설명합니다.  
   
- [Visual Basic 애플리케이션 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 응용 프로그램 시작/종료 모델 Visual Basic 설명 합니다.  
+ [Visual Basic 애플리케이션 모델 개요](overview-of-the-visual-basic-application-model.md)  
+ Visual Basic 애플리케이션 시작/종료 모델에 관해 설명합니다.  
   
- [My가 프로젝트 형식에 의존하는 방식](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ [My가 프로젝트 형식에 의존하는 방식](how-my-depends-on-project-type.md)  
  여러 다른 프로젝트 형식에서 사용할 수 있는 `My` 기능에 대해 자세히 설명합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
-- [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [My가 프로젝트 형식에 의존하는 방식](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [My.Forms 개체](../../language-reference/objects/my-forms-object.md)
+- [My.WebServices 개체](../../language-reference/objects/my-webservices-object.md)
+- [My가 프로젝트 형식에 의존하는 방식](how-my-depends-on-project-type.md)

@@ -4,12 +4,12 @@ description: CentOS에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9f4de70b4989be1d162f384518a015816a3e75a9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 6b1bad3a6c967483bb683866de84c9e5077a336f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619509"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>CentOS에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -74,7 +74,7 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ## <a name="dependencies"></a>종속성
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 

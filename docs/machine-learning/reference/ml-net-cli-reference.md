@@ -3,12 +3,12 @@ title: ML.NET CLI 명령 참조
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594545"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946943"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 명령 참조
 
@@ -309,7 +309,7 @@ ML.NET 모델 파일(.ZIP 파일)도 같은 이름을 갖게 됩니다.
 
 ## <a name="output-path"></a>출력 경로
 
-`--output-path | -o`(문자열)
+`--output | -o`(문자열)
 
 생성된 출력을 저장할 루트 위치/폴더입니다. 기본값은 현재 디렉터리입니다.
 

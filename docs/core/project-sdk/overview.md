@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803043"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 프로젝트 SDK
 
@@ -176,6 +176,6 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 설치](../install/index.md)
+- [.NET Core 설치](../install/index.yml)
 - [MSBuild 프로젝트 SDK 사용 방법](/visualstudio/msbuild/how-to-use-project-sdk)
 - [NuGet을 사용하여 사용자 지정 MSBuild 대상 및 속성 패키지](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

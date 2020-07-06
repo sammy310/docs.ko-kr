@@ -6,26 +6,26 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 4148cac9d0ba9ec6851de5babcd37d175be84645
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.openlocfilehash: ddc4558cbf79afc968509177e5be14f5e2f17ef7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345071"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "85840361"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 언어 사양
 
-Visual Basic 언어 사양은 Visual Basic 문법 및 구문에 대 한 모든 질문에 대 한 답변에 대 한 신뢰할 수 있는 원본입니다. 여기에는 Visual Basic 참조 설명서에서 다루지 않는 많은 요소를 포함 하 여 언어에 대 한 자세한 정보가 포함 되어 있습니다.  
+Visual Basic 언어 사양은 Visual Basic 문법 및 구문에 관한 모든 의문 사항을 해결할 수 있는 공식 문서입니다. Visual Basic 참조 설명서에서 다루지 않은 여러 항목을 비롯한 해당 언어에 관한 자세한 정보가 포함되어 있습니다.  
   
 이 사양은 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=188623)에서 제공됩니다.  
   
-이 사이트에는 [Visual Basic 11 사양이](../../../../_vblang/spec/introduction.md)포함 되어 있습니다. 이 사양은 [dotnet/vblang GitHub 리포지토리](https://github.com/dotnet/vblang/blob/master/spec/README.md)에 포함된 Markdown 파일에서 빌드됩니다.
+이 사이트에는 [Visual Basic 11 사양](../../../../_vblang/spec/introduction.md)이 포함됩니다. 이 사양은 [dotnet/vblang GitHub 리포지토리](https://github.com/dotnet/vblang/blob/master/spec/README.md)에 포함된 Markdown 파일에서 빌드됩니다.
 
-사양에 관한 문제는 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 리포지토리에 작성해야 합니다. 또는 발견 한 오류를 수정 하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/vblang/pulls) 을 제출할 수 있습니다.
+사양에 관한 문제는 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 리포지토리에 작성해야 합니다. 또는 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/vblang/pulls)을 제출할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 
-- [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
+- [Visual Basic 언어 참조](../../language-reference/index.md)
 
 >[!div class="step-by-step"]
 >[다음](../../../../_vblang/spec/introduction.md)
