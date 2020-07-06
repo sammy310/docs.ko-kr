@@ -1,0 +1,198 @@
+### YamlMime:Hub
+title: .NET 개발자용 Azure
+summary: Azure에서 .NET을 사용하는 데 필요한 정보 찾기
+brand: dotnet
+metadata:
+  title: .NET 개발자용 Azure
+  description: Azure의 .NET용 샘플, 자습서 및 교육
+  ms.topic: hub-page
+  ms.prod: azure-dotnet
+  ms.date: 03/04/2020
+  ms.openlocfilehash: d1fc6298f5a1aa03ba3df3f99c38245a3165b5be
+  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "85840298"
+highlightedContent:
+  items:
+  - itemType: quickstart
+    title: ASP.NET 웹앱 배포
+    url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+  - itemType: quickstart
+    title: 서버리스 기능 빌드
+    url: https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio
+  - itemType: quickstart
+    title: ASP.NET Core 및 Docker
+    url: https://docs.microsoft.com/visualstudio/containers/container-tools?view=vs-2019
+  - itemType: learn
+    title: Azure 기본 사항
+    url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
+  - itemType: tutorial
+    title: Azure DevOps를 사용하여 .NET 앱 배포
+    url: https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
+  - itemType: tutorial
+    title: App Service의 전체 스택 인증 엔드투엔드
+    url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-auth-aad
+  - itemType: learn
+    title: Microsoft ID를 사용하여 사용자 지정 API 보안 설정
+    url: https://docs.microsoft.com/learn/modules/identity-secure-custom-api/
+  - itemType: download
+    title: 샘플 코드
+    url: https://docs.microsoft.com/samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+conceptualContent:
+  items:
+  - title: 웹 앱 개발
+    links:
+    - itemType: learn
+      text: Azure App Service를 사용하여 웹 애플리케이션 호스트
+      url: https://docs.microsoft.com/learn/modules/host-a-web-app-with-azure-app-service/
+    - itemType: tutorial
+      text: App Service 및 Azure SQL Database를 사용한 ASP.NET Core 웹앱
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
+    - itemType: tutorial
+      text: ASP.NET 및 Azure SQL Database를 사용하는 관리 ID
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-connect-msi
+    - itemType: tutorial
+      text: Azure App Service의 CORS를 사용하는 웹 API
+      url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api
+    - itemType: learn
+      text: Azure API Management를 사용하여 API 게시 및 관리
+      url: https://docs.microsoft.com/learn/modules/publish-manage-apis-with-azure-api-management/
+  - title: 클라우드 네이티브 앱 빌드
+    links:
+    - itemType: quickstart
+      text: Kubernetes에서 마이크로 서비스 실행 및 디버그
+      url: https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio
+    - itemType: tutorial
+      text: Visual Studio 컨테이너 도구를 사용한 ASP.NET Core 앱
+      url: https://docs.microsoft.com/visualstudio/containers/container-tools?view=vs-2019
+    - itemType: tutorial
+      text: AKS에서 여러 컨테이너 배포 및 디버그
+      url: https://docs.microsoft.com/azure/dev-spaces/multi-service-netcore-visualstudio
+    - itemType: tutorial
+      text: Azure App Configuration을 사용한 동적 구성 및 기능 플래그
+      url: https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core
+    - itemType: how-to-guide
+      text: Azure Container Registry에 .NET Core 앱 배포
+      url: https://docs.microsoft.com/en-us/visualstudio/containers/hosting-web-apps-in-docker?view=vs-2019
+  - title: 스토리지 및 데이터 작업
+    links:
+    - itemType: learn
+      text: Azure SQL 데이터베이스를 쿼리하는 ASP.NET 애플리케이션 개발 및 구성
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+    - itemType: learn
+      text: Visual Studio Code에서 Azure Cosmos DB용 .NET Core 앱 빌드
+      url: https://docs.microsoft.com/learn/modules/build-cosmos-db-app-with-vscode/
+    - itemType: learn
+      text: Azure Blob Storage를 사용하여 애플리케이션 데이터 저장
+      url: https://docs.microsoft.com/learn/modules/store-app-data-with-azure-blob-storage/
+    - itemType: tutorial
+      text: Azure Cosmos DB SQL API를 사용하여 ASP.NET 웹앱 만들기
+      url: https://docs.microsoft.com/azure/cosmos-db/sql-api-dotnet-application
+    - itemType: quickstart
+      text: .NET을 사용하여 Azure PostgreSQL 쿼리
+      url: https://docs.microsoft.com/azure/postgresql/connect-csharp
+  - title: 인증 및 보안
+    links:
+    - itemType: overview
+      text: Microsoft ID 플랫폼(Azure AD)
+      url: https://docs.microsoft.com/azure/active-directory/develop/
+    - itemType: tutorial
+      text: ASP.NET Core에서 Azure Key Vault 사용
+      url: https://docs.microsoft.com/azure/key-vault/tutorial-net-create-vault-azure-web-app
+    - itemType: tutorial
+      text: 웹 API와 Azure AD B2C 통합
+      url: https://docs.microsoft.com/azure/active-directory-b2c/tutorial-single-page-app-webapi
+    - itemType: tutorial
+      text: Microsoft에 로그인을 ASP.NET 웹앱에 추가
+      url: https://docs.microsoft.com/azure/active-directory/develop/tutorial-v2-asp-webapp
+  - title: 마이그레이션
+    links:
+    - itemType: concept
+      text: Azure 호스팅 옵션 선택
+      url: ./migration/choose.md
+    - itemType: how-to-guide
+      text: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
+      url: ./migration/app-service.md
+    - itemType: how-to-guide
+      text: Azure VM으로 ASP.NET 앱 마이그레이션
+      url: ./migration/vm.md
+    - itemType: how-to-guide
+      text: Azure로 SQL Server 데이터베이스 마이그레이션
+      url: ./migration/sql.md
+  - title: 별도 비용 없는 .NET 및 Azure 교육
+    links:
+    - itemType: learn
+      text: Microsoft Learn
+      url: https://docs.microsoft.com/learn/
+    - itemType: video
+      text: 'Pluralsight: Azure에서 .NET 및 C#으로 개발'
+      url: https://www.pluralsight.com/courses/developing-dotnet-microsoft-azure-getting-started?twoid=d6abac77-7dcc-4d33-9e03-f85e78989f02
+    - itemType: video
+      text: .NET 101 비디오 시리즈
+      url: https://dot.net/videos
+  - title: .NET 아키텍처 가이드
+    links:
+    - itemType: overview
+      text: Azure 및 .NET 소개
+      url: intro.md
+    - itemType: learn
+      text: Azure에서 최신 애플리케이션 설계
+      url: https://docs.microsoft.com/learn/paths/architect-modern-apps/
+    - itemType: architecture
+      text: '.NET 마이크로 서비스: 컨테이너화된 .NET 앱의 아키텍처'
+      url: https://docs.microsoft.com/dotnet/architecture/microservices/
+    - itemType: architecture
+      text: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
+      url: https://docs.microsoft.com/dotnet/architecture/modern-web-apps-azure/
+    - itemType: architecture
+      text: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
+      url: https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/
+    - itemType: architecture
+      text: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
+      url: https://docs.microsoft.com/dotnet/architecture/modernize-with-azure-containers/
+    footerLink:
+      url: https://docs.microsoft.com/dotnet/architecture/
+      text: 자세히 보기
+tools:
+  title: Azure SDK for .NET
+  items:
+  - imageSrc: https://www.nuget.org/Content/gallery/img/default-package-icon.svg
+    title: NuGet 패키지
+    url: https://www.nuget.org/packages?q=windowsazureofficial
+  - imageSrc: https://docs.microsoft.com/en-us/media/common/i_reference.svg
+    title: 설명서
+    url: ./sdk/index.yml
+  - imageSrc: https://docs.microsoft.com/en-us/media/logos/logo_visual-studio.svg
+    title: 도구
+    url: ./sdk/tools.md
+additionalContent:
+  sections:
+  - title: .NET 및 Azure 커뮤니티 리소스
+    items:
+    - title: .NET
+      links:
+      - text: .NET 문서
+        url: https://docs.microsoft.com/dotnet
+      - text: ASP.NET 설명서
+        url: https://docs.microsoft.com/aspnet
+    - title: 웹 캐스트 및 쇼
+      links:
+      - text: Azure Friday
+        url: https://azure.microsoft.com/resources/videos/azure-friday/
+      - text: 클라우드 네이티브 쇼
+        url: https://channel9.msdn.com/Shows/The-Cloud-Native-Show
+      - text: '.NET:'
+        url: https://channel9.msdn.com/Shows/On-NET
+      - text: ASP.NET 커뮤니티 스탠드업
+        url: https://dotnet.microsoft.com/platform/community/standup
+    - title: 오픈 소스
+      links:
+      - text: Azure SDK for .NET
+        url: https://github.com/Azure/azure-sdk-for-net
+      - text: Microsoft ID 웹
+        url: https://github.com/AzureAD/microsoft-identity-web
+      - text: .NET 플랫폼
+        url: https://github.com/dotnet/
+  footer: .NET 문서에 참여합니다. [기여자 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)를 참조하세요.
