@@ -19,8 +19,11 @@
         - name: 가장 및 되돌리기
           href: impersonating-and-reverting.md
     - name: 암호화 모델
-      href: cryptography-model.md
       items:
+        - name: 개요
+          href: cryptography-model.md
+        - name: 플랫폼 간 암호화
+          href: cross-platform-cryptography.md
         - name: 암호화 서비스
           href: cryptographic-services.md
         - name: 암호화 및 해독용 키 생성
