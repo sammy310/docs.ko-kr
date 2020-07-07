@@ -1,16 +1,16 @@
 ---
 title: '방법: COM 래퍼 만들기'
+description: Visual Studio 또는 .NET 도구(Tlbimp.exe 및 Regasm.exe)를 사용하여 COM(구성 요소 개체 모델) 래퍼를 만듭니다. 두 메서드 모두 두 가지 형식의 COM 래퍼를 생성합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: HT
+ms.openlocfilehash: 286526c710287e6efa3e49a7f7c55e3687076e29
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617394"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 

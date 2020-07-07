@@ -1,5 +1,6 @@
 ---
 title: 런타임에서 어셈블리를 찾는 방법
+description: CLR(공용 언어 런타임)이 .NET에서 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622629"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 
@@ -33,7 +33,7 @@ ms.locfileid: "79181673"
 
 어셈블리 이름만 지정하는 등 호출 메서드에 어셈블리에 대한 부분 정보만 제공하여 어셈블리에 대한 동적 참조를 만들 수도 있습니다. 이 경우 애플리케이션 디렉터리에서만 어셈블리가 검색되고 다른 검사는 수행되지 않습니다. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>와 같은 다양한 어셈블리 로드 메서드 중 하나를 사용하여 부분 참조를 만듭니다.
 
-<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 애플리케이션 구성 파일에서 [\<qualifyAssembly&gt;](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 애플리케이션 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 애플리케이션 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.
+<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 애플리케이션 구성 파일에서 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 애플리케이션 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 애플리케이션 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.
 
 > [!NOTE]
 > 이 형식의 부분 참조는 여러 애플리케이션 간에 공유되는 어셈블리와 함께 사용하면 안 됩니다. 어셈블리 단위가 아니라 애플리케이션 단위로 구성 설정이 적용되기 때문에 이 형식의 부분 참조를 사용하는 공유 어셈블리에서는 공유 어셈블리를 사용하는 각 애플리케이션의 구성 파일에 적격한 정보가 있어야 합니다.
@@ -72,7 +72,7 @@ ms.locfileid: "79181673"
 
 - 컴퓨터 구성 파일
 
-이러한 파일은 동일한 구문을 따르며 바인딩 리디렉션, 코드 위치 및 특정 어셈블리에 대한 바인딩 모드와 같은 정보를 제공합니다. 각 구성 파일에는 바인딩 프로세스를 리디렉션하는 [\<assemblyBinding> 요소](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)가 포함될 수 있습니다. [\<assemblyBinding> 요소](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)의 자식 요소에는 [\<dependentAssembly> 요소](../configure-apps/file-schema/runtime/dependentassembly-element.md)가 포함됩니다. [\<dependentAssembly> 요소](../configure-apps/file-schema/runtime/dependentassembly-element.md)의 자식 요소에는 [\<assemblyIdentity> 요소](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect> 요소](../configure-apps/file-schema/runtime/bindingredirect-element.md) 및 [\<codeBase> 요소](../configure-apps/file-schema/runtime/codebase-element.md)가 포함됩니다.
+이러한 파일은 동일한 구문을 따르며 바인딩 리디렉션, 코드 위치 및 특정 어셈블리에 대한 바인딩 모드와 같은 정보를 제공합니다. 각 구성 파일에는 바인딩 프로세스를 리디렉션하는 [\<assemblyBinding> 요소](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)가 포함될 수 있습니다. [\<assemblyBinding> 요소](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)의 자식 요소에는 [\<dependentAssembly> 요소](../configure-apps/file-schema/runtime/dependentassembly-element.md)가 포함됩니다. [\<dependentAssembly> 요소](../configure-apps/file-schema/runtime/dependentassembly-element.md)의 자식에는 [\<assemblyIdentity> 요소](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect> 요소](../configure-apps/file-schema/runtime/bindingredirect-element.md), [\<codeBase> 요소](../configure-apps/file-schema/runtime/codebase-element.md)가 포함됩니다.
 
 > [!NOTE]
 > 세 개의 구성 파일에서 구성 정보를 확인할 수 있습니다. 모든 요소가 모든 구성 파일에서 유효한 것은 아닙니다. 예를 들어 바인딩 모드 및 전용 경로 정보는 애플리케이션 구성 파일에만 포함될 수 있습니다. 각 파일에 포함된 정보의 전체 목록은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
@@ -134,9 +134,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 게시자 정책 파일은 공유 구성 요소가 업데이트되고 해당 구성 요소를 사용하는 모든 애플리케이션이 새 버전의 공유 구성 요소를 선택할 때 사용됩니다. 애플리케이션 구성 파일이 안전 모드를 적용하지 않는 한 게시자 정책 파일의 설정이 애플리케이션 구성 파일의 설정을 재정의합니다.
 
 #### <a name="safe-mode"></a>안전 모드
-게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&#124;**no"/&amp;gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.
+게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 애플리케이션 구성 파일에만 있는 **\<publisherPolicy apply="yes**&#124;**no"/>** 요소에 의해 결정됩니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.
 
-전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/&gt;** 를 설정한 다음 \<**dependentAssembly**&gt; 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/&gt;** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
+전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면 **\<publisherPolicy apply\=no/>** 를 설정하고 \<**dependentAssembly**> 요소를 사용하여 이 설정을 적용할 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/>** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
 ### <a name="machine-configuration-file"></a>컴퓨터 구성 파일
 셋째, 런타임은 컴퓨터 구성 파일을 검사합니다. Machine.config라는 이 파일은 로컬 컴퓨터에서 런타임이 설치된 루트 디렉터리의 Config 하위 디렉터리에 상주합니다. 관리자는 이 파일을 사용하여 해당 컴퓨터에 로컬로 적용되는 어셈블리 바인딩 제한 사항을 지정할 수 있습니다. 컴퓨터 구성 파일의 설정은 다른 모든 구성 설정보다 우선합니다. 그러나 모든 구성 설정을 이 파일에 넣어야 한다는 의미는 아닙니다. 관리자 정책 파일에서 결정된 버전이 최종 버전이며 재정의할 수 없습니다. Machine.config 파일에서 지정된 재정의는 모든 애플리케이션에 영향을 줍니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
@@ -164,7 +164,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 호출 어셈블리 참조와 구성 파일의 정보를 사용하여 올바른 어셈블리 버전을 확인하고 전역 어셈블리 캐시를 검사한 후(강력한 이름의 어셈블리에만 해당) 공용 언어 런타임이 어셈블리를 찾으려고 시도합니다. 어셈블리를 찾는 프로세스는 다음 단계로 구성됩니다.
 
-1. 애플리케이션 구성 파일에 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 있을 경우 런타임은 지정한 위치를 확인합니다. 일치 항목이 있으면 해당 어셈블리가 사용되고 검색이 수행되지 않습니다. 어셈블리가 없으면 바인딩 요청이 실패합니다.
+1. 애플리케이션 구성 파일에 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 있을 경우 런타임은 지정한 위치를 확인합니다. 일치 항목이 있으면 해당 어셈블리가 사용되고 검색이 수행되지 않습니다. 어셈블리가 없으면 바인딩 요청이 실패합니다.
 
 2. 그런 다음 런타임은 이 섹션의 뒷부분에 지정된 규칙을 사용하여 참조된 어셈블리를 검색합니다.
 
@@ -173,16 +173,16 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 ### <a name="locating-the-assembly-through-codebases"></a>코드베이스를 통해 어셈블리 찾기
 
-구성 파일의 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 코드베이스 정보를 제공할 수 있습니다. 이 코드베이스는 항상 런타임이 참조된 어셈블리를 검색하기 전에 확인됩니다. 최종 버전 리디렉션이 포함된 게시자 정책 파일에도 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 포함되어 있으면, [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다. 예를 들어 애플리케이션 구성 파일에서 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되고 애플리케이션 정보를 재정의하는 게시자 정책 파일에서도 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되면 게시자 정책 파일의 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다.
+구성 파일의 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 코드베이스 정보를 제공할 수 있습니다. 이 코드베이스는 항상 런타임이 참조된 어셈블리를 검색하기 전에 확인됩니다. 최종 버전 리디렉션이 포함된 게시자 정책 파일에도 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 포함되어 있으면 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다. 예를 들어 애플리케이션 구성 파일에서 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되고 애플리케이션 정보를 재정의하는 게시자 정책 파일에서도 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 지정되면 게시자 정책 파일의 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 사용됩니다.
 
 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소에서 지정한 위치에 일치하는 항목이 없을 경우 바인드 요청은 실패하며 더 이상 다음 단계가 수행되지 않습니다. 런타임에서 어셈블리가 호출 어셈블리의 조건과 일치한다고 결정하면 해당 어셈블리가 사용됩니다. 지정한 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소에서 지정된 파일이 로드되면 런타임은 해당 이름, 버전, 문화권 및 공개 키가 호출하는 어셈블리의 참조와 일치하는지 확인합니다.
 
 > [!NOTE]
-> 애플리케이션의 루트 디렉터리 외부에 있는 참조된 어셈블리는 강력한 이름이 있어야 하며 전역 어셈블리 캐시에 설치되거나 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 지정되어야 합니다.
+> 애플리케이션의 루트 디렉터리 외부에 있는 참조된 어셈블리는 강력한 이름이 있어야 하며 전역 어셈블리 캐시에 설치되거나 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용하여 지정되어야 합니다.
 
 ### <a name="locating-the-assembly-through-probing"></a>검색을 통해 어셈블리 찾기
 
-애플리케이션 구성 파일에 [\<codeBase&gt;](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 없을 경우 런타임에서는 다음 네 가지 기준을 사용하여 어셈블리를 조사합니다.
+애플리케이션 구성 파일에 [\<codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) 요소가 없을 경우 런타임에서는 다음 네 가지 기준을 사용하여 어셈블리를 조사합니다.
 
 - 애플리케이션이 실행되는 루트 위치인 애플리케이션 기준 위치
 

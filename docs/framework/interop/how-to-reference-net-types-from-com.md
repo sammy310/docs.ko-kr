@@ -1,5 +1,6 @@
 ---
 title: '방법: COM에서 .NET 형식 참조'
+description: COM에서 .NET 형식을 참조합니다. VB 클라이언트는 개체 브라우저에서 .NET 개체를 볼 수 있지만 C++ 클라이언트는 \#import 지시어를 사용하여 TLB 파일을 참조해야 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618963"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>방법: COM에서 .NET 형식 참조
 클라이언트 및 서버 코드의 관점에서 COM과 .NET Framework의 차이점은 크게 눈에 띄지 않습니다. Microsoft Visual Basic 클라이언트는 개체 메서드와 구문, 속성 및 필드를 정확히 다른 COM 개체인 것처럼 노출하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  

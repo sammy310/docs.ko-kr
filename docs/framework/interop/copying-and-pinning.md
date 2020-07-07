@@ -1,5 +1,6 @@
 ---
 title: 복사 및 고정
+description: Interop 마샬러가 마샬링되는 데이터를 복사하거나 고정하는 방법을 살펴봅니다. 데이터를 복사하면 한 메모리 위치의 데이터 복사본이 다른 위치로 배치됩니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618781"
 ---
 # <a name="copying-and-pinning"></a>복사 및 고정
 

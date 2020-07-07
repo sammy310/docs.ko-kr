@@ -1,17 +1,17 @@
 ---
 title: '.NET Framework 초기화 오류: 사용자 환경 관리'
+description: 활성화 시스템에서 로드할 올바른 CLR 버전을 찾을 수 없는 경우와 같이 .NET 초기화 오류가 발생할 때의 사용자 환경을 제어합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 6db68b43381dfe275c93cae5610386e10a6f09ae
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619691"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 

@@ -1,17 +1,16 @@
 ---
 title: '자습서: 자전거 대여 수요 예측 - 시계열'
 description: 이 자습서에서는 시계열 분석 및 ML.NET를 사용하여 자전거 대여 서비스 수요를 예측하는 방법을 보여 줍니다.
-ms.date: 11/07/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: HT
+ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803220"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>자습서: 시계열 분석 및 ML.NET를 사용하여 자전거 대여 서비스 수요 예측
 
@@ -46,13 +45,16 @@ ML.NET를 통해 SQL Server 데이터베이스에 저장된 데이터에 대한 
 ## <a name="create-console-application"></a>콘솔 애플리케이션 만들기
 
 1. "BikeDemandForecasting"이라는 새 **C# .NET Core 애플리케이션**을 만듭니다.
-1. **Microsoft.ML** 버전 **1.4.0** NuGet 패키지를 설치합니다.
+1. **Microsoft.ML** 버전 NuGet 패키지 설치
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     1. 패키지 소스로 “nuget.org”를 선택하고, **찾아보기** 탭을 선택하고, **Microsoft.ML**을 검색합니다.
     1. **시험판 포함** 확인란을 선택합니다.
     1. **설치** 단추를 선택합니다.
     1. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 [라이선스 승인] 대화 상자에서 **동의함** 단추를 선택합니다.
-    1. **System.Data.SqlClient** 버전 **4.7.0** 및 **Microsoft.ML.TimeSeries** 버전 **1.4.0**에 대해 이러한 단계를 반복하세요.
+    1. **System.Data.SqlClient** 및 **Microsoft.ML.TimeSeries**에 이러한 단계를 반복합니다.
 
 ### <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 

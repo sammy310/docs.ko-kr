@@ -1,15 +1,14 @@
 ---
 title: '자습서: TensorFlow 모델을 사용하여 리뷰 감정 분석'
 description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용하여 웹 사이트 댓글의 감정을 분류하는 방법을 보여 줍니다. 이진 감정 분류자는 Visual Studio를 사용하여 개발된 C# 콘솔 애플리케이션입니다.
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9c1e45f183bd5edc488e4f37bea648566d124c65
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803263"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -40,7 +39,9 @@ ms.locfileid: "78241119"
 
 3. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.TensorFlow** 및 **SciSharp.TensorFlow.Redist**에 이 단계를 반복합니다.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. 패키지 소스로 "nuget.org"를 선택하고 **찾아보기** 탭을 선택합니다. **Microsoft.ML**을 검색하고 원하는 패키지를 선택한 다음, **설치** 단추를 선택합니다. 선택한 패키지의 사용 조건에 동의하여 설치를 진행합니다. **Microsoft.ML.TensorFlow**, **Microsoft.ML.SampleUtils** 및 **SciSharp.TensorFlow.Redist**에 이러한 단계를 반복합니다.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>TensorFlow 모델을 프로젝트에 추가합니다.
 

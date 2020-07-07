@@ -1,16 +1,16 @@
 ---
 title: Blittable 형식 및 비 Blittable 형식
+description: blittable 형식 및 비 blittable 형식에 대해 알아봅니다. blittable 데이터 형식은 일반적으로 관리되는 메모리와 관리되지 않는 메모리에 표시되며 특별한 처리가 필요하지 않습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621537"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다. 이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.  

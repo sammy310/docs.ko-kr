@@ -1,5 +1,6 @@
 ---
 title: Interop 애플리케이션 배포
+description: 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리의 interop 어셈블리, 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 배포합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617485"
 ---
 # <a name="deploying-an-interop-application"></a>Interop 애플리케이션 배포
 Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 Windows SDK에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 애플리케이션을 배포하는 두 가지 방법은 다음과 같습니다.  

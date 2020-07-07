@@ -1,16 +1,16 @@
 ---
 title: Side-by-Side 실행용 구성 요소를 만들기 위한 지침
+description: Side-by-Side 실행용 구성 요소를 만들기 위한 지침을 알아봅니다. 예를 들어 형식 ID를 특정 파일 버전에 바인딩하거나 버전 인식 스토리지를 사용합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622642"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Side-by-Side 실행용 구성 요소를 만들기 위한 지침
 다음 일반 지침에 따라 Side-by-Side 실행용으로 디자인된 관리되는 애플리케이션 또는 구성 요소를 만듭니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "73121583"
   
  [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하여 파일 버전 번호만 최신일 경우 어셈블리를 바꿀 수 있습니다. 일반적으로 설치 관리자는 어셈블리 버전 번호가 더 클 경우가 아니면 어셈블리를 통해 설치되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Side-by-Side 실행](side-by-side-execution.md)
 - [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

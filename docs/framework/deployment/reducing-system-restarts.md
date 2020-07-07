@@ -1,17 +1,17 @@
 ---
 title: .NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기
+description: .NET 4.5를 설치하는 동안 시스템 다시 시작을 줄이는 방법을 알아봅니다. .Net 4.5를 설치하는 동안 .NET 4 앱을 사용 중인 경우 다시 시작이 필요할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: bfde0c2f7297c048ba70062918e2281afbccf391
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618209"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기
 .NET Framework 4.5 설치 관리자는 설치 과정에서 가능할 때마다 시스템이 다시 시작되지 않도록 [다시 시작 관리자](/windows/win32/rstmgr/about-restart-manager)를 사용합니다. 앱 설치 프로그램이 .NET Framework를 설치하는 경우 이 기능을 활용하기 위해 다시 시작 관리자와 인터페이스할 수 있습니다. 자세한 내용은 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)를 참조하세요.  
@@ -27,12 +27,12 @@ ms.locfileid: "75716423"
  ![현재 실행 중인 프로그램을 나열하는 애플리케이션 닫기 대화 상자.](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>연결된 설치 관리자 사용  
- 앱과 함께 .NET Framework를 재배포하지만 사용자 고유의 설치 프로그램 및 UI를 사용하려면 설치 프로세스에 .NET Framework 설치 프로세스를 포함(연결)할 수 있습니다. 연결된 설치에 대한 자세한 내용은 [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)를 참조하세요. 연결된 설치에서 시스템 다시 시작을 줄이기 위해 .NET Framework 설치 관리자는 설치 프로그램에 닫을 앱 목록을 제공합니다. 설치 프로그램은 메시지 상자와 같은 사용자 인터페이스를 통해 이 정보를 사용자에게 제공하고, 사용자 응답을 받은 후 .NET Framework 설치 관리자에 다시 전달해야 합니다. 연결된 설치 관리자의 예는 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md) 문서를 참조하세요.  
+ 앱과 함께 .NET Framework를 재배포하지만 사용자 고유의 설치 프로그램 및 UI를 사용하려면 설치 프로세스에 .NET Framework 설치 프로세스를 포함(연결)할 수 있습니다. 연결된 설치에 대한 자세한 내용은 [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)를 참조하세요. 연결된 설치에서 시스템 다시 시작을 줄이기 위해 .NET Framework 설치 관리자는 설치 프로그램에 닫을 앱 목록을 제공합니다. 설치 프로그램은 메시지 상자와 같은 사용자 인터페이스를 통해 이 정보를 사용자에게 제공하고, 사용자 응답을 받은 후 .NET Framework 설치 관리자에 다시 전달해야 합니다. 연결된 설치 관리자의 예는 문서 [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)를 참조하세요.  
   
  연결된 설치 관리자를 사용하지만 앱을 닫기 위한 고유한 메시지 상자를 제공하지 않으려면 .NET Framework 설치 프로세스를 연결할 때 명령줄에서 `/showrmui` 및 `/passive` 옵션을 사용할 수 있습니다. 이러한 옵션을 함께 사용하면 설치 관리자에서 시스템 다시 시작을 방지하기 위해 닫을 수 있는 경우 앱을 닫기 위한 메시지 상자를 표시합니다. 이 메시지 상자는 수동 모드에서도 전체 사용자 인터페이스에서와 동일하게 동작합니다. .NET Framework 재배포 가능 패키지에 대한 명령줄 옵션의 전체 집합은 [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [배포](index.md)
 - [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
-- [How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)
+- [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)

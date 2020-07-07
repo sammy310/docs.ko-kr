@@ -3,15 +3,14 @@ title: '자습서: 전이 학습을 사용한 자동화된 시각적 개체 검�
 description: 이 자습서에서는 전이 학습을 사용하여 이미지 검색 API로 ML.NET의 TensorFlow 딥 러닝 모델을 학습함으로써 콘크리트 표면 이미지를 금이 갔는지 여부로 분류하는 방법을 설명합니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803744"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -81,7 +80,10 @@ ML.NET은 이미지를 분류하는 다양한 방법을 제공합니다. 이 자
 이제 전이 학습과 이미지 분류 API에 대한 일반적인 사항을 파악했으므로 애플리케이션을 빌드하겠습니다.
 
 1. “DeepLearning_ImageClassification_Binary”라는 **C# .NET Core 콘솔 애플리케이션**을 만듭니다.
-1. **Microsoft.ML** 버전 **1.4.0** NuGet 패키지를 설치합니다.
+1. **Microsoft.ML** NuGet 패키지를 설치합니다.
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     1. 패키지 원본으로 "nuget.org"를 선택합니다.
     1. **찾아보기** 탭을 선택합니다.
@@ -89,7 +91,7 @@ ML.NET은 이미지를 분류하는 다양한 방법을 제공합니다. 이 자
     1. **Microsoft.ML**을 검색합니다.
     1. **설치** 단추를 선택합니다.
     1. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
-    1. **Microsoft.ML.Vision** 버전 **1.4.0**, **SciSharp.TensorFlow.Redist** 버전 **1.15.0** 및 **Microsoft.ML.ImageAnalytics** 버전 **1.4.0** NuGet 패키지에 이러한 단계를 반복합니다.
+    1. **Microsoft.ML.Vision**, **SciSharp.TensorFlow.Redist** 및 **Microsoft.ML.ImageAnalytics** NuGet 패키지에 이러한 단계를 반복합니다.
 
 ### <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 

@@ -1,5 +1,6 @@
 ---
 title: 형식 라이브러리를 어셈블리로 가져오기
+description: COM 형식 정의를 포함하는 형식 라이브러리를 어셈블리로 가져옵니다. 형식 라이브러리에서 메타데이터를 만들어 Interop 어셈블리가 생성되도록 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,11 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622720"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 

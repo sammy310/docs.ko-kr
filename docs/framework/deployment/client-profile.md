@@ -1,5 +1,6 @@
 ---
 title: .NET Framework Client Profile
+description: .Net의 버전 4 및 이하 버전에서 제공된 .NET의 하위 집합인 .NET 클라이언트 프로필에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 9678e49cd5f3c37f59c1e5a0eda668e5602fbcb5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621745"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile은 .NET Framework 4 및 이전 버전에서 제공되었고 클라이언트 애플리케이션을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. .NET Framework 4 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "75716565"
   
  .NET Framework 4.5를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. .NET Framework 4.5 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../install/guide-for-developers.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 클라이언트 프로필(.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 멀티 타기팅 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework 타기팅 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [방법: .NET Framework 버전 대상 지정](/visualstudio/ide/visual-studio-multi-targeting-overview)

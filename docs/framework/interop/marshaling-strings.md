@@ -1,5 +1,6 @@
 ---
 title: 문자열 마샬링
+description: 문자열을 마샬링하는 방법을 살펴봅니다. 값별 또는 참조별 구조체 또는 클래스에서 결과로 값별 또는 참조별 문자열을 마샬링하는 옵션 등에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, samples
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0be5a5817bd92c5be6b701200a74650ef9de1955
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621485"
 ---
 # <a name="marshaling-strings"></a>문자열 마샬링
 플랫폼 호출은 문자열 매개 변수를 복사하고 필요한 경우 .NET Framework 형식(유니코드)을 관리되지 않는 형식(ANSI)으로 변환합니다. 관리되는 문자열은 변경할 수 없으므로 함수가 반환할 때 플랫폼 호출을 통해 해당 문자열을 관리되지 않는 메모리에서 관리되는 메모리로 다시 복사하지 않습니다.  

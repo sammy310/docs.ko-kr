@@ -1,5 +1,6 @@
 ---
 title: DLL 함수 식별
+description: DLL에서 함수를 식별합니다. DLL 함수 ID는 함수 이름 또는 서수와 구현을 찾을 수 있는 DLL 파일 이름으로 구성됩니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - platform invoke, identifying functions
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-ms.openlocfilehash: 1a94bb2020b07ba8405d901f46ec4a0687e79700
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 054d1351a9ee6adab17117c9f423aa26d0d9ed59
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622733"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 함수 식별
 DLL 함수 ID는 다음 요소로 구성됩니다.  

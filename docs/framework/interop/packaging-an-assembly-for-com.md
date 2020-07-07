@@ -1,5 +1,6 @@
 ---
 title: COM용 .NET Framework 어셈블리 패키징
+description: COM용 .NET 어셈블리를 패키지합니다. COM 애플리케이션에서 사용할 수 있는 형식 목록, 버전 관리 및 배포 지침, 형식 라이브러리를 수집합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,11 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620835"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM용 .NET Framework 어셈블리 패키징
 

@@ -1,5 +1,6 @@
 ---
 title: 최선의 어셈블리 로드 방법
+description: .NET에서 어셈블리 로드에 대한 모범 사례를 알아봅니다. 잘못된 캐스트, 누락된 메서드 및 기타 예외가 발생할 수 있는 형식 ID 문제를 방지합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,12 +13,11 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803508"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "79181697"
   
  이러한 어셈블리를 로드하는 데는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 이제 어셈블리가 검색 경로에 있으므로 어셈블리는 로드 소스 컨텍스트가 아닌 기본 로드 컨텍스트에 로드됩니다. 하지만 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드로 전환하고 전체 어셈블리 표시 이름을 제공하여 올바른 버전이 항상 사용되는지 확인하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

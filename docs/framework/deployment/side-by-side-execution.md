@@ -1,15 +1,15 @@
 ---
 title: .NET Framework의 Side-by-Side 실행
+description: .NET의 Side-by-Side 실행에 대해 살펴봅니다. Side-by-Side 실행을 사용하면 동일한 컴퓨터에서 여러 버전의 애플리케이션 또는 구성 요소를 실행할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 6cd6fb73b27957fdea85cd9a92bf2aa3bafda1ce
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619405"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 
@@ -61,7 +61,7 @@ Side-by-Side 실행 및 .NET Framework는 DLL 충돌을 없애기 위한 다음�
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>애플리케이션 구성 파일의 런타임 버전 정보  
 
-PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup&gt; 섹션](../configure-apps/file-schema/startup/startup-element.md)의 [\<requiredRuntime&gt; 요소](../configure-apps/file-schema/startup/requiredruntime-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
+PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup> 섹션](../configure-apps/file-schema/startup/startup-element.md)의 [\<requiredRuntime> 요소](../configure-apps/file-schema/startup/requiredruntime-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
   
 COM 및 COM + 애플리케이션을 비롯한 비관리 코드에는 런타임에서 관리 코드와 상호 작용하는 데 사용하는 애플리케이션 구성 파일이 포함될 수 있습니다. 애플리케이션 구성 파일은 COM을 통해 활성화하는 모든 관리 코드에 영향을 줍니다. 파일에서 지원하는 런타임 버전 및 어셈블리 리디렉션을 지정할 수 있습니다. 기본적으로 관리 코드를 호출하는 COM interop 애플리케이션은 컴퓨터에 설치된 최신 버전의 런타임을 사용합니다.  
   
@@ -81,7 +81,7 @@ COM 및 COM + 애플리케이션을 비롯한 비관리 코드에는 런타임�
   
 애플리케이션 구성 파일이 있으면 런타임은 다음 프로세스의 결과에 따라 로드할 적절한 런타임 버전을 결정합니다.  
   
-1. 런타임이 애플리케이션 구성 파일에서 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 검사합니다. **\<supportedRuntime>** 요소에 지정되어 있는 지원되는 런타임 버전이 하나 이상 있으면 런타임은 첫 번째 **\<supportedRuntime>** 요소에서 지정하는 런타임 버전을 로드합니다. 이 버전을 사용할 수 없으면 런타임은 다음 **\<supportedRuntime>** 요소를 확인하고 지정된 런타임 버전을 로드하려고 시도합니다. 이 런타임 버전을 사용할 수 없으면 그다음 **\<supportedRuntime>** 요소를 확인합니다. 지원되는 런타임 버전을 사용할 수 없으면 런타임에서 런타임 버전을 로드하지 못하고 사용자에게 메시지를 표시합니다(3단계 참조).  
+1. 런타임이 애플리케이션 구성 파일에서 [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)를 검사합니다. **\<supportedRuntime>** 요소에 지정되어 있는 지원되는 런타임 버전이 하나 이상 있으면 런타임은 첫 번째 **\<supportedRuntime>** 요소에서 지정하는 런타임 버전을 로드합니다. 이 버전을 사용할 수 없으면 런타임은 다음 **\<supportedRuntime>** 요소를 확인하고 지정된 런타임 버전을 로드하려고 시도합니다. 이 런타임 버전을 사용할 수 없으면 그다음 **\<supportedRuntime>** 요소를 확인합니다. 지원되는 런타임 버전을 사용할 수 없으면 런타임에서 런타임 버전을 로드하지 못하고 사용자에게 메시지를 표시합니다(3단계 참조).  
   
 2. 런타임이 애플리케이션 실행 파일의 PE 파일 헤더를 읽습니다. PE 파일 헤더에 지정된 런타임 버전을 사용할 수 있으면 런타임에서 해당 버전을 로드합니다. 지정된 런타임 버전을 사용할 수 없으면 런타임이 Microsoft에서 PE 헤더의 런타임 버전과 호환되는 것으로 확인된 런타임 버전을 검색합니다. 해당 버전이 없으면 프로세스가 3단계로 넘어갑니다.  
   
@@ -97,7 +97,7 @@ COM 및 COM + 애플리케이션을 비롯한 비관리 코드에는 런타임�
 
 Side-by-Side 문제의 잠재적 소스이므로 부분적으로 정규화된 어셈블리 참조는 애플리케이션 디렉터리 내의 어셈블리에 바인딩하는 데만 사용할 수 있습니다. 부분적으로 정규화된 어셈블리 참조를 코드에서 사용하지 마세요.  
   
-코드에서 부분적으로 정규화된 어셈블리 참조를 줄이려면 애플리케이션 구성 파일에서 [\<qualifyAssembly&gt;](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 코드에 나타나는 부분적으로 정규화된 어셈블리 참조를 완전히 정규화할 수 있습니다. **\<qualifyAssembly>** 요소를 사용하여 부분 참조에 설정되지 않은 필드만 지정합니다. **fullName** 특성에 나열된 어셈블리 ID는 어셈블리 이름을 정규화하는 데 필요한 모든 정보, 즉 어셈블리 이름, 공개 키, 문화권 및 버전을 포함해야 합니다.  
+코드에서 부분적으로 정규화된 어셈블리 참조를 줄이려면 애플리케이션 구성 파일에서 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 코드에 나타나는 부분적으로 정규화된 어셈블리 참조를 완전히 정규화할 수 있습니다. **\<qualifyAssembly>** 요소를 사용하여 부분 참조에 설정되지 않은 필드만 지정합니다. **fullName** 특성에 나열된 어셈블리 ID는 어셈블리 이름을 정규화하는 데 필요한 모든 정보, 즉 어셈블리 이름, 공개 키, 문화권 및 버전을 포함해야 합니다.  
   
  다음 예제에서는 `myAssembly`라는 어셈블리를 정규화하는 애플리케이션 구성 파일 항목을 보여 줍니다.  
   

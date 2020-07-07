@@ -1,5 +1,6 @@
 ---
 title: 클래스, 구조체 및 공용 구조체 마샬링
+description: 클래스, 구조체 및 공용 구조체를 마샬링하는 방법을 살펴봅니다. 마샬링 클래스, 중첩된 구조체를 포함하는 구조체, 구조체의 배열 및 공용 구조체의 샘플을 봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,11 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
-ms.translationtype: HT
+ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621524"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 
@@ -264,7 +264,7 @@ public struct STRRET_32
 }
 ```
 
-64비트 프로세스에서 크기 및 필드 오프셋은 다릅니다.  올바른 레이아웃은 다음과 같습니다.
+64비트 프로세스에서 크기 및 필드 오프셋은 다릅니다. 올바른 레이아웃은 다음과 같습니다.
 
 ``` CSharp
 [StructLayout(LayoutKind.Explicit, Size = 272)]

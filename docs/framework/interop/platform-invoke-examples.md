@@ -1,5 +1,6 @@
 ---
 title: 플랫폼 호출 예제
+description: User32.dll에서 MessageBox 함수를 정의하고 호출하는 방법을 보여 주는 플랫폼 호출 예제를 살펴봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,11 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-ms.openlocfilehash: 358d1ce662d56b8c31124f4b3264ec25a0f94586
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 97b0720b8954bc24a4058e6a03c32d32bd9e3180
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620809"
 ---
 # <a name="platform-invoke-examples"></a>플랫폼 호출 예제
 다음 예에서는 User32.dll에서 **MessageBox** 함수를 정의하고 호출하여 간단한 문자열을 인수로 전달하는 방법을 보여 줍니다. 이 예에서는 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드가 **Auto**로 설정되어 있으므로 대상 플랫폼에서 문자 너비와 문자열 마샬링을 판별할 수 있습니다.  

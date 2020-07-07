@@ -1,15 +1,14 @@
 ---
 title: '자습서: TensorFlow의 ML.NET 이미지 분류 모델'
 description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 모델로 정보를 전이하는 방법을 알아봅니다. TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었습니다. ML.NET 모델은 전이 학습을 사용하여 이미지를 좀 더 광범위한 범주로 분류합니다.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: HT
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804004"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -122,12 +121,14 @@ toaster2.png    appliance
 
 1. **Microsoft.ML NuGet 패키지**를 설치합니다.
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     * 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.
-    * **버전** 드롭다운을 클릭하고, 목록에서 **1.4.0** 패키지를 선택하고, **설치** 단추를 선택합니다.
+    * **설치** 단추를 선택합니다.
     * **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택합니다.
     * 나열된 패키지 라이선스 조건에 동의하면 **라이선스 수락** 대화 상자에서 **동의함** 단추를 선택합니다.
-    * **Microsoft.ML.ImageAnalytics v1.4.0**, **SciSharp.TensorFlow.Redist v1.15.0** 및 **Microsoft.ML.TensorFlow v1.4.0**에 이 단계를 반복합니다.
+    * **Microsoft.ML.ImageAnalytics**, **SciSharp.TensorFlow.Redist** 및 **Microsoft.ML.TensorFlow**에 이러한 단계를 반복합니다.
 
 ### <a name="download-assets"></a>자산 다운로드
 

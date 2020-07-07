@@ -1,5 +1,6 @@
 ---
 title: 개체에 대한 마샬링
+description: 개체에 대한 기본 마샬링을 이해합니다. 마샬링 옵션을 검토합니다. 개체를 인터페이스 또는 변형, 개체 변형 및 ByRef 변형으로 마샬링합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618456"
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 
