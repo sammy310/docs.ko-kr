@@ -1,16 +1,24 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: f78d15338aa49de5b729aca12964924a0df00ec6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614834"
 ---
-### <a name="improved-accessibility-for-some-net-sdk-tools"></a><span data-ttu-id="6bcd0-101">일부 .NET SDK 도구에 대해 향상된 액세스 가능성</span><span class="sxs-lookup"><span data-stu-id="6bcd0-101">Improved accessibility for some .NET SDK tools</span></span>
+### <a name="improved-accessibility-for-some-net-sdk-tools"></a><span data-ttu-id="d3495-101">일부 .NET SDK 도구에 대해 향상된 액세스 가능성</span><span class="sxs-lookup"><span data-stu-id="d3495-101">Improved accessibility for some .NET SDK tools</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="6bcd0-102">세부 정보</span><span class="sxs-lookup"><span data-stu-id="6bcd0-102">Details</span></span>|<span data-ttu-id="6bcd0-103">.NET Framework SDK 4.7.1에서 다양한 액세스 가능성 문제를 수정하여 SvcConfigEditor.exe 및 SvcTraceViewer.exe 도구가 개선되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6bcd0-103">In the .NET Framework SDK 4.7.1, the SvcConfigEditor.exe and SvcTraceViewer.exe tools have been improved by fixing varied accessibility issues.</span></span> <span data-ttu-id="6bcd0-104">이들 중 대부분은 정의되지 않은 이름이나 특정 UI 자동화 패턴이 올바르게 구현되지 않은 것과 같은 사소한 문제였습니다.</span><span class="sxs-lookup"><span data-stu-id="6bcd0-104">Most of these were small issues like a name not being defined or certain UI automation patterns not being implemented correctly.</span></span> <span data-ttu-id="6bcd0-105">많은 사용자가 이러한 잘못된 값을 인식하지 못하지만, 화면 판독기와 같은 보조 기술을 사용하는 고객은 이러한 SDK 도구를 보다 쉽게 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6bcd0-105">While many users wouldn’t be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.</span></span> <span data-ttu-id="6bcd0-106">물론 이러한 수정은 키보드 포커스 순서와 같은 이전 동작을 변경합니다. 이 도구에서 모든 액세스 가능성을 수정하기 위해 app.config 파일에서 다음을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6bcd0-106">Certainly, these fixes change some previous behaviors, like keyboard focus order.In order to get all the accessibility fixes in these tools, you can the following to your app.config file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="6bcd0-107">범위</span><span class="sxs-lookup"><span data-stu-id="6bcd0-107">Scope</span></span>|<span data-ttu-id="6bcd0-108">가장자리</span><span class="sxs-lookup"><span data-stu-id="6bcd0-108">Edge</span></span>|
-|<span data-ttu-id="6bcd0-109">Version</span><span class="sxs-lookup"><span data-stu-id="6bcd0-109">Version</span></span>|<span data-ttu-id="6bcd0-110">4.7.1</span><span class="sxs-lookup"><span data-stu-id="6bcd0-110">4.7.1</span></span>|
-|<span data-ttu-id="6bcd0-111">형식</span><span class="sxs-lookup"><span data-stu-id="6bcd0-111">Type</span></span>|<span data-ttu-id="6bcd0-112">대상 변경</span><span class="sxs-lookup"><span data-stu-id="6bcd0-112">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="d3495-102">설명</span><span class="sxs-lookup"><span data-stu-id="d3495-102">Details</span></span>
+
+<span data-ttu-id="d3495-103">.NET Framework SDK 4.7.1에서 다양한 액세스 가능성 문제를 수정하여 SvcConfigEditor.exe 및 SvcTraceViewer.exe 도구가 개선되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d3495-103">In the .NET Framework SDK 4.7.1, the SvcConfigEditor.exe and SvcTraceViewer.exe tools have been improved by fixing varied accessibility issues.</span></span> <span data-ttu-id="d3495-104">이들 중 대부분은 정의되지 않은 이름이나 특정 UI 자동화 패턴이 올바르게 구현되지 않은 것과 같은 사소한 문제였습니다.</span><span class="sxs-lookup"><span data-stu-id="d3495-104">Most of these were small issues like a name not being defined or certain UI automation patterns not being implemented correctly.</span></span> <span data-ttu-id="d3495-105">많은 사용자가 이러한 잘못된 값을 인식하지 못하지만, 화면 판독기와 같은 보조 기술을 사용하는 고객은 이러한 SDK 도구를 보다 쉽게 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3495-105">While many users wouldn't be aware of these incorrect values, customers who use assistive technologies like screen readers will find these SDK tools more accessible.</span></span> <span data-ttu-id="d3495-106">물론 이러한 수정은 키보드 포커스 순서와 같은 이전 동작을 변경합니다. 이 도구에서 모든 액세스 가능성을 수정하기 위해 app.config 파일에서 다음을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3495-106">Certainly, these fixes change some previous behaviors, like keyboard focus order.In order to get all the accessibility fixes in these tools, you can the following to your app.config file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false"/>
+</runtime>
+```
+
+| <span data-ttu-id="d3495-107">이름</span><span class="sxs-lookup"><span data-stu-id="d3495-107">Name</span></span>    | <span data-ttu-id="d3495-108">값</span><span class="sxs-lookup"><span data-stu-id="d3495-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="d3495-109">Scope</span><span class="sxs-lookup"><span data-stu-id="d3495-109">Scope</span></span>   | <span data-ttu-id="d3495-110">Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="d3495-110">Edge</span></span>        |
+| <span data-ttu-id="d3495-111">버전</span><span class="sxs-lookup"><span data-stu-id="d3495-111">Version</span></span> | <span data-ttu-id="d3495-112">4.7.1</span><span class="sxs-lookup"><span data-stu-id="d3495-112">4.7.1</span></span>       |
+| <span data-ttu-id="d3495-113">형식</span><span class="sxs-lookup"><span data-stu-id="d3495-113">Type</span></span>    | <span data-ttu-id="d3495-114">대상 변경</span><span class="sxs-lookup"><span data-stu-id="d3495-114">Retargeting</span></span> |
