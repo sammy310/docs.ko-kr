@@ -3,35 +3,36 @@ title: 유닛 테스트에 코드 검사 사용
 description: .NET 단위 테스트에 코드 검사 기능을 사용하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
-ms.translationtype: HT
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853898"
 ---
-# <a name="use-code-coverage-for-unit-testing"></a><span data-ttu-id="0287e-103">유닛 테스트에 코드 검사 사용</span><span class="sxs-lookup"><span data-stu-id="0287e-103">Use code coverage for unit testing</span></span>
+# <a name="use-code-coverage-for-unit-testing"></a><span data-ttu-id="9c18c-103">유닛 테스트에 코드 검사 사용</span><span class="sxs-lookup"><span data-stu-id="9c18c-103">Use code coverage for unit testing</span></span>
 
-<span data-ttu-id="0287e-104">기능을 확인하는 데 도움이 되는 단위 테스트를 통해 리팩터링 활동을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-104">Unit tests help to ensure functionality, and provide a means of verification for refactoring efforts.</span></span> <span data-ttu-id="0287e-105">코드 검사는 단위 테스트에서 실행되는 코드(줄, 분기 또는 메서드)의 양을 측정합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-105">Code coverage is a measurement of the amount of code that is run by unit tests - either lines, branches, or methods.</span></span> <span data-ttu-id="0287e-106">예를 들어 조건부 코드 분기가 두 개(‘분기 a’와 ‘분기 b’)만 포함된 단순한 애플리케이션이 있는 경우 조건부 ‘분기 a’를 확인하는 단위 테스트는 분기 코드 검사 50%를 보고합니다.  </span><span class="sxs-lookup"><span data-stu-id="0287e-106">As an example, if you have a simple application with only two conditional branches of code (_branch a_, and _branch b_), a unit test that verifies conditional _branch a_ will report branch code coverage of 50%.</span></span>
+<span data-ttu-id="9c18c-104">기능을 확인하는 데 도움이 되는 단위 테스트를 통해 리팩터링 활동을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-104">Unit tests help to ensure functionality, and provide a means of verification for refactoring efforts.</span></span> <span data-ttu-id="9c18c-105">코드 검사는 단위 테스트에서 실행되는 코드(줄, 분기 또는 메서드)의 양을 측정합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-105">Code coverage is a measurement of the amount of code that is run by unit tests - either lines, branches, or methods.</span></span> <span data-ttu-id="9c18c-106">예를 들어 조건부 코드 분기가 두 개(‘분기 a’와 ‘분기 b’)만 포함된 단순한 애플리케이션이 있는 경우 조건부 ‘분기 a’를 확인하는 단위 테스트는 분기 코드 검사 50%를 보고합니다.  </span><span class="sxs-lookup"><span data-stu-id="9c18c-106">As an example, if you have a simple application with only two conditional branches of code (_branch a_, and _branch b_), a unit test that verifies conditional _branch a_ will report branch code coverage of 50%.</span></span>
 
-<span data-ttu-id="0287e-107">이 문서에서는 Coverlet을 통한 유닛 테스트에 코드 검사 사용과 ReportGenerator를 사용한 보고서 생성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-107">This article discusses the usage of code coverage for unit testing with Coverlet and report generation using ReportGenerator.</span></span> <span data-ttu-id="0287e-108">이 문서에서는 테스트 프레임워크로 C# 및 xUnit에 초점을 두고 설명하지만 MSTest와 NUnit도 모두 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-108">While this article focuses on C# and xUnit as the test framework, both MSTest and NUnit would also work.</span></span> <span data-ttu-id="0287e-109">Coverlet은 C#용 플랫폼 간 코드 검사 프레임워크를 제공하는 [GitHub의 오픈 소스 프로젝트](https://github.com/coverlet-coverage/coverlet)입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-109">Coverlet is an [open source project on GitHub](https://github.com/coverlet-coverage/coverlet) that provides a cross platform code coverage framework for C#.</span></span> <span data-ttu-id="0287e-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet)은 .NET Foundation의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) is part of the .NET foundation.</span></span> <span data-ttu-id="0287e-111">Coverlet은 Cobertura 검사 테스트 실행 데이터를 수집하고, 이 데이터는 보고서 생성에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-111">Coverlet collects Cobertura coverage test run data, which is used for report generation.</span></span>
+<span data-ttu-id="9c18c-107">이 문서에서는 Coverlet을 통한 유닛 테스트에 코드 검사 사용과 ReportGenerator를 사용한 보고서 생성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-107">This article discusses the usage of code coverage for unit testing with Coverlet and report generation using ReportGenerator.</span></span> <span data-ttu-id="9c18c-108">이 문서에서는 테스트 프레임워크로 C# 및 xUnit에 초점을 두고 설명하지만 MSTest와 NUnit도 모두 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-108">While this article focuses on C# and xUnit as the test framework, both MSTest and NUnit would also work.</span></span> <span data-ttu-id="9c18c-109">Coverlet은 C#용 플랫폼 간 코드 검사 프레임워크를 제공하는 [GitHub의 오픈 소스 프로젝트](https://github.com/coverlet-coverage/coverlet)입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-109">Coverlet is an [open source project on GitHub](https://github.com/coverlet-coverage/coverlet) that provides a cross platform code coverage framework for C#.</span></span> <span data-ttu-id="9c18c-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet)은 .NET Foundation의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-110">[Coverlet](https://dotnetfoundation.org/projects/coverlet) is part of the .NET foundation.</span></span> <span data-ttu-id="9c18c-111">Coverlet은 Cobertura 검사 테스트 실행 데이터를 수집하고, 이 데이터는 보고서 생성에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-111">Coverlet collects Cobertura coverage test run data, which is used for report generation.</span></span>
 
-<span data-ttu-id="0287e-112">또한 이 문서에서는 Coverlet 테스트 실행에서 수집된 코드 검사 정보를 사용하여 보고서를 생성하는 방법도 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-112">Additionally, this article details how to use the code coverage information collected from a Coverlet test run to generate a report.</span></span> <span data-ttu-id="0287e-113">보고서 생성은 [GitHub의 또 다른 오픈 소스 프로젝트인 ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-113">The report generation is possible using another [open source project on GitHub - ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="0287e-114">ReportGenerator는 무엇보다 Cobertura에서 생성된 검사 보고서를 사람이 읽을 수 있는 다양한 형식의 보고서로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-114">ReportGenerator converts coverage reports generated by Cobertura among many others, into human readable reports in various formats.</span></span>
+<span data-ttu-id="9c18c-112">또한 이 문서에서는 Coverlet 테스트 실행에서 수집된 코드 검사 정보를 사용하여 보고서를 생성하는 방법도 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-112">Additionally, this article details how to use the code coverage information collected from a Coverlet test run to generate a report.</span></span> <span data-ttu-id="9c18c-113">보고서 생성은 [GitHub의 또 다른 오픈 소스 프로젝트인 ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-113">The report generation is possible using another [open source project on GitHub - ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="9c18c-114">ReportGenerator는 무엇보다 Cobertura에서 생성된 검사 보고서를 사람이 읽을 수 있는 다양한 형식의 보고서로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-114">ReportGenerator converts coverage reports generated by Cobertura among many others, into human readable reports in various formats.</span></span>
 
-## <a name="system-under-test"></a><span data-ttu-id="0287e-115">테스트 중인 시스템</span><span class="sxs-lookup"><span data-stu-id="0287e-115">System under test</span></span>
+<span data-ttu-id="9c18c-115">이 문서는 샘플 브라우저에서 사용할 수 있는 [샘플 소스 코드 프로젝트](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-115">This article is based on the [sample source code project](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs), available on samples browser.</span></span>
 
-<span data-ttu-id="0287e-116">“테스트 중인 시스템”은 단위 테스트 작성의 대상 코드를 의미하며 개체, 서비스 또는 테스트 가능한 기능을 노출하는 기타 항목일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-116">The "system under test" refers to the code that you're writing unit tests against, this could be an object, service, or anything else that exposes testable functionality.</span></span> <span data-ttu-id="0287e-117">이 문서의 목적을 위해 테스트 중인 시스템이 될 클래스 라이브러리와 해당하는 두 개의 단위 테스트 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-117">For the purpose of this article, you'll create a class library that will be the system under test, and two corresponding unit test projects.</span></span>
+## <a name="system-under-test"></a><span data-ttu-id="9c18c-116">테스트 중인 시스템</span><span class="sxs-lookup"><span data-stu-id="9c18c-116">System under test</span></span>
 
-### <a name="create-a-class-library"></a><span data-ttu-id="0287e-118">클래스 라이브러리 만들기</span><span class="sxs-lookup"><span data-stu-id="0287e-118">Create a class library</span></span>
+<span data-ttu-id="9c18c-117">“테스트 중인 시스템”은 단위 테스트 작성의 대상 코드를 의미하며 개체, 서비스 또는 테스트 가능한 기능을 노출하는 기타 항목일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-117">The "system under test" refers to the code that you're writing unit tests against, this could be an object, service, or anything else that exposes testable functionality.</span></span> <span data-ttu-id="9c18c-118">이 문서의 목적을 위해 테스트 중인 시스템이 될 클래스 라이브러리와 해당하는 두 개의 단위 테스트 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-118">For the purpose of this article, you'll create a class library that will be the system under test, and two corresponding unit test projects.</span></span>
 
-<span data-ttu-id="0287e-119">명령 프롬프트에서 `UnitTestingCodeCoverage`라는 새 디렉터리에 [`dotnet new classlib`](../tools/dotnet-new.md#classlib) 명령을 사용하여 새 .NET 표준 클래스 라이브러리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-119">From a command prompt in a new directory named `UnitTestingCodeCoverage`, create a new .NET standard class library using the [`dotnet new classlib`](../tools/dotnet-new.md#classlib) command:</span></span>
+### <a name="create-a-class-library"></a><span data-ttu-id="9c18c-119">클래스 라이브러리 만들기</span><span class="sxs-lookup"><span data-stu-id="9c18c-119">Create a class library</span></span>
+
+<span data-ttu-id="9c18c-120">명령 프롬프트에서 `UnitTestingCodeCoverage`라는 새 디렉터리에 [`dotnet new classlib`](../tools/dotnet-new.md#classlib) 명령을 사용하여 새 .NET 표준 클래스 라이브러리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-120">From a command prompt in a new directory named `UnitTestingCodeCoverage`, create a new .NET standard class library using the [`dotnet new classlib`](../tools/dotnet-new.md#classlib) command:</span></span>
 
 ```dotnetcli
 dotnet new classlib -n Numbers
 ```
 
-<span data-ttu-id="0287e-120">아래 코드 조각은 숫자가 소수인지 확인하는 기능을 제공하는 단순한 `PrimeService` 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-120">The snippet below defines a simple `PrimeService` class that provides functionality to check if a number is prime.</span></span> <span data-ttu-id="0287e-121">아래 코드 조각을 복사하고 *Numbers* 디렉터리에 자동으로 생성된 *Class1.cs* 파일의 내용을 이 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-121">Copy the snippet below and replace the contents of the *Class1.cs* file that was automatically created in the *Numbers* directory.</span></span> <span data-ttu-id="0287e-122">*Class1.cs* 파일의 이름을 *PrimeService.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-122">Rename the *Class1.cs* file to *PrimeService.cs*.</span></span>
+<span data-ttu-id="9c18c-121">아래 코드 조각은 숫자가 소수인지 확인하는 기능을 제공하는 단순한 `PrimeService` 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-121">The snippet below defines a simple `PrimeService` class that provides functionality to check if a number is prime.</span></span> <span data-ttu-id="9c18c-122">아래 코드 조각을 복사하고 *Numbers* 디렉터리에 자동으로 생성된 *Class1.cs* 파일의 내용을 이 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-122">Copy the snippet below and replace the contents of the *Class1.cs* file that was automatically created in the *Numbers* directory.</span></span> <span data-ttu-id="9c18c-123">*Class1.cs* 파일의 이름을 *PrimeService.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-123">Rename the *Class1.cs* file to *PrimeService.cs*.</span></span>
 
 ```csharp
 namespace System.Numbers
@@ -59,11 +60,11 @@ namespace System.Numbers
 ```
 
 > [!TIP]
-> <span data-ttu-id="0287e-123">`Numbers` 클래스 라이브러리는 `System` 네임스페이스에 의도적으로 추가한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-123">It is worth mentioning the that `Numbers` class library was intentionally added to the `System` namespace.</span></span> <span data-ttu-id="0287e-124">이렇게 해야 `using System;` 네임스페이스 선언 없이 <xref:System.Math?displayProperty=fullName>에 액세스할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-124">This allows for <xref:System.Math?displayProperty=fullName> to be accessible without a `using System;` namespace declaration.</span></span> <span data-ttu-id="0287e-125">자세한 내용은 [네임스페이스(C# 참조)](../../csharp/language-reference/keywords/namespace.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0287e-125">For more information, see [namespace (C# Reference)](../../csharp/language-reference/keywords/namespace.md).</span></span>
+> <span data-ttu-id="9c18c-124">`Numbers` 클래스 라이브러리는 `System` 네임스페이스에 의도적으로 추가한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-124">It is worth mentioning the that `Numbers` class library was intentionally added to the `System` namespace.</span></span> <span data-ttu-id="9c18c-125">이렇게 해야 `using System;` 네임스페이스 선언 없이 <xref:System.Math?displayProperty=fullName>에 액세스할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-125">This allows for <xref:System.Math?displayProperty=fullName> to be accessible without a `using System;` namespace declaration.</span></span> <span data-ttu-id="9c18c-126">자세한 내용은 [네임스페이스(C# 참조)](../../csharp/language-reference/keywords/namespace.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c18c-126">For more information, see [namespace (C# Reference)](../../csharp/language-reference/keywords/namespace.md).</span></span>
 
-### <a name="create-test-projects"></a><span data-ttu-id="0287e-126">테스트 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="0287e-126">Create test projects</span></span>
+### <a name="create-test-projects"></a><span data-ttu-id="9c18c-127">테스트 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="9c18c-127">Create test projects</span></span>
 
-<span data-ttu-id="0287e-127">동일한 명령 프롬프트에서 [`dotnet new xunit`](../tools/dotnet-new.md#test) 명령을 사용하여 두 개의 새 **xUnit 테스트 프로젝트(.NET Core)** 템플릿을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-127">Create two new **xUnit Test Project (.NET Core)** templates from the same command prompt using the [`dotnet new xunit`](../tools/dotnet-new.md#test) command:</span></span>
+<span data-ttu-id="9c18c-128">동일한 명령 프롬프트에서 [`dotnet new xunit`](../tools/dotnet-new.md#test) 명령을 사용하여 두 개의 새 **xUnit 테스트 프로젝트(.NET Core)** 템플릿을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-128">Create two new **xUnit Test Project (.NET Core)** templates from the same command prompt using the [`dotnet new xunit`](../tools/dotnet-new.md#test) command:</span></span>
 
 ```dotnetcli
 dotnet new xunit -n XUnit.Coverlet.Collector
@@ -73,7 +74,7 @@ dotnet new xunit -n XUnit.Coverlet.Collector
 dotnet new xunit -n XUnit.Coverlet.MSBuild
 ```
 
-<span data-ttu-id="0287e-128">새로 만든 xUnit 테스트 프로젝트 둘 다에 *Numbers* 클래스 라이브러리의 프로젝트 참조를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-128">Both of the newly created xUnit test projects need to add a project reference of the *Numbers* class library.</span></span> <span data-ttu-id="0287e-129">이렇게 해야만 테스트 프로젝트에서 테스트를 위해 *PrimeService*에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-129">This is so that the test projects have access to the *PrimeService* for testing.</span></span> <span data-ttu-id="0287e-130">명령 프롬프트에서 [`dotnet add`](../tools/dotnet-add-reference.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-130">From the command prompt, use the [`dotnet add`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="9c18c-129">새로 만든 xUnit 테스트 프로젝트 둘 다에 *Numbers* 클래스 라이브러리의 프로젝트 참조를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-129">Both of the newly created xUnit test projects need to add a project reference of the *Numbers* class library.</span></span> <span data-ttu-id="9c18c-130">이렇게 해야만 테스트 프로젝트에서 테스트를 위해 *PrimeService*에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-130">This is so that the test projects have access to the *PrimeService* for testing.</span></span> <span data-ttu-id="9c18c-131">명령 프롬프트에서 [`dotnet add`](../tools/dotnet-add-reference.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-131">From the command prompt, use the [`dotnet add`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```dotnetcli
 dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Numbers\Numbers.csproj
@@ -83,15 +84,15 @@ dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Nu
 dotnet add XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj reference Numbers\Numbers.csproj
 ```
 
-<span data-ttu-id="0287e-131">*MSBuild* 프로젝트의 이름을 [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet 패키지에 따라 적절하게 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-131">The *MSBuild* project is named appropriately, as it will depend on the [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet package.</span></span> <span data-ttu-id="0287e-132">[`dotnet add package`](../tools/dotnet-add-package.md) 명령을 실행하여 이 패키지 종속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-132">Add this package dependency by running the [`dotnet add package`](../tools/dotnet-add-package.md) command:</span></span>
+<span data-ttu-id="9c18c-132">*MSBuild* 프로젝트의 이름을 [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet 패키지에 따라 적절하게 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-132">The *MSBuild* project is named appropriately, as it will depend on the [coverlet.msbuild](https://www.nuget.org/packages/coverlet.msbuild) NuGet package.</span></span> <span data-ttu-id="9c18c-133">[`dotnet add package`](../tools/dotnet-add-package.md) 명령을 실행하여 이 패키지 종속성을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-133">Add this package dependency by running the [`dotnet add package`](../tools/dotnet-add-package.md) command:</span></span>
 
 ```dotnetcli
 cd XUnit.Coverlet.MSBuild && dotnet add package coverlet.msbuild && cd ..
 ```
 
-<span data-ttu-id="0287e-133">이전 명령은 디렉터리를 변경하여 결과적으로 범위를 *MSBuild* 테스트 프로젝트로 지정한 다음 NuGet 패키지를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-133">The previous command changed directories effectively scoping to the *MSBuild* test project, then added the NuGet package.</span></span> <span data-ttu-id="0287e-134">그런 다음 디렉터리를 한 수준 위로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-134">When that was done, it then changed directories, stepping up one level.</span></span>
+<span data-ttu-id="9c18c-134">이전 명령은 디렉터리를 변경하여 결과적으로 범위를 *MSBuild* 테스트 프로젝트로 지정한 다음 NuGet 패키지를 추가했습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-134">The previous command changed directories effectively scoping to the *MSBuild* test project, then added the NuGet package.</span></span> <span data-ttu-id="9c18c-135">그런 다음 디렉터리를 한 수준 위로 변경했습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-135">When that was done, it then changed directories, stepping up one level.</span></span>
 
-<span data-ttu-id="0287e-135">*UnitTest1.cs* 파일을 모두 열고 내용을 다음 코드 조각으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-135">Open both of the *UnitTest1.cs* files, and replace their contents with the following snippet.</span></span> <span data-ttu-id="0287e-136">*UnitTest1.cs* 파일의 이름을 *PrimeServiceTests.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-136">Rename the *UnitTest1.cs* files to *PrimeServiceTests.cs*.</span></span>
+<span data-ttu-id="9c18c-136">*UnitTest1.cs* 파일을 모두 열고 내용을 다음 코드 조각으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-136">Open both of the *UnitTest1.cs* files, and replace their contents with the following snippet.</span></span> <span data-ttu-id="9c18c-137">*UnitTest1.cs* 파일의 이름을 *PrimeServiceTests.cs*로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-137">Rename the *UnitTest1.cs* files to *PrimeServiceTests.cs*.</span></span>
 
 ```csharp
 using System.Numbers;
@@ -129,23 +130,23 @@ namespace XUnit.Coverlet
 }
 ```
 
-### <a name="create-a-solution"></a><span data-ttu-id="0287e-137">솔루션 만들기</span><span class="sxs-lookup"><span data-stu-id="0287e-137">Create a solution</span></span>
+### <a name="create-a-solution"></a><span data-ttu-id="9c18c-138">솔루션 만들기</span><span class="sxs-lookup"><span data-stu-id="9c18c-138">Create a solution</span></span>
 
-<span data-ttu-id="0287e-138">명령 프롬프트에서 위 클래스 라이브러리와 두 개의 테스트 프로젝트를 캡슐화할 새 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-138">From the command prompt, create a new solution to encapsulate the class library and the two test projects.</span></span> <span data-ttu-id="0287e-139">다음과 같이 [`dotnet sln`](../tools/dotnet-sln.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-139">Using the [`dotnet sln`](../tools/dotnet-sln.md) command:</span></span>
+<span data-ttu-id="9c18c-139">명령 프롬프트에서 위 클래스 라이브러리와 두 개의 테스트 프로젝트를 캡슐화할 새 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-139">From the command prompt, create a new solution to encapsulate the class library and the two test projects.</span></span> <span data-ttu-id="9c18c-140">다음과 같이 [`dotnet sln`](../tools/dotnet-sln.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-140">Using the [`dotnet sln`](../tools/dotnet-sln.md) command:</span></span>
 
 ```dotnetcli
 dotnet new sln -n XUnit.Coverage
 ```
 
-<span data-ttu-id="0287e-140">그러면 *UnitTestingCodeCoverage* 디렉터리에 `XUnit.Coverage`라는 새 솔루션 파일 이름이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-140">This will create a new solution file name `XUnit.Coverage` in the *UnitTestingCodeCoverage* directory.</span></span> <span data-ttu-id="0287e-141">솔루션의 루트에 프로젝트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-141">Add the projects to the root of the solution.</span></span>
+<span data-ttu-id="9c18c-141">그러면 *UnitTestingCodeCoverage* 디렉터리에 `XUnit.Coverage`라는 새 솔루션 파일 이름이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-141">This will create a new solution file name `XUnit.Coverage` in the *UnitTestingCodeCoverage* directory.</span></span> <span data-ttu-id="9c18c-142">솔루션의 루트에 프로젝트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-142">Add the projects to the root of the solution.</span></span>
 
-## <a name="linux"></a>[<span data-ttu-id="0287e-142">Linux</span><span class="sxs-lookup"><span data-stu-id="0287e-142">Linux</span></span>](#tab/linux)
+## <a name="linux"></a>[<span data-ttu-id="9c18c-143">Linux</span><span class="sxs-lookup"><span data-stu-id="9c18c-143">Linux</span></span>](#tab/linux)
 
 ```dotnetcli
 dotnet sln XUnit.Coverage.sln add **/*.csproj --in-root
 ```
 
-## <a name="windows"></a>[<span data-ttu-id="0287e-143">Windows</span><span class="sxs-lookup"><span data-stu-id="0287e-143">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="9c18c-144">Windows</span><span class="sxs-lookup"><span data-stu-id="9c18c-144">Windows</span></span>](#tab/windows)
 
 ```dotnetcli
 dotnet sln XUnit.Coverage.sln add (ls **/*.csproj) --in-root
@@ -153,38 +154,38 @@ dotnet sln XUnit.Coverage.sln add (ls **/*.csproj) --in-root
 
 ---
 
-<span data-ttu-id="0287e-144">[`dotnet build`](../tools/dotnet-build.md) 명령을 사용하여 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-144">Build the solution using the [`dotnet build`](../tools/dotnet-build.md) command:</span></span>
+<span data-ttu-id="9c18c-145">[`dotnet build`](../tools/dotnet-build.md) 명령을 사용하여 솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-145">Build the solution using the [`dotnet build`](../tools/dotnet-build.md) command:</span></span>
 
 ```dotnetcli
 dotnet build
 ```
 
-<span data-ttu-id="0287e-145">빌드가 성공하면 세 개의 프로젝트를 만들고, 프로젝트와 패키지를 적절히 참조하고, 소스 코드를 올바로 업데이트한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-145">If the build is successful, you've created the three projects, appropriately referenced projects and packages, and updated the source code correctly.</span></span> <span data-ttu-id="0287e-146">훌륭합니다!</span><span class="sxs-lookup"><span data-stu-id="0287e-146">Well done!</span></span>
+<span data-ttu-id="9c18c-146">빌드가 성공하면 세 개의 프로젝트를 만들고, 프로젝트와 패키지를 적절히 참조하고, 소스 코드를 올바로 업데이트한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-146">If the build is successful, you've created the three projects, appropriately referenced projects and packages, and updated the source code correctly.</span></span> <span data-ttu-id="9c18c-147">훌륭합니다!</span><span class="sxs-lookup"><span data-stu-id="9c18c-147">Well done!</span></span>
 
-## <a name="tooling"></a><span data-ttu-id="0287e-147">도구</span><span class="sxs-lookup"><span data-stu-id="0287e-147">Tooling</span></span>
+## <a name="tooling"></a><span data-ttu-id="9c18c-148">도구</span><span class="sxs-lookup"><span data-stu-id="9c18c-148">Tooling</span></span>
 
-<span data-ttu-id="0287e-148">코드 검사 도구의 두 가지 유형은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-148">There are two types of code coverage tools:</span></span>
+<span data-ttu-id="9c18c-149">코드 검사 도구의 두 가지 유형은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-149">There are two types of code coverage tools:</span></span>
 
-- <span data-ttu-id="0287e-149">**DataCollectors:** DataCollectors는 테스트 실행을 모니터링하고 테스트 실행에 관한 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-149">**DataCollectors:** DataCollectors monitor test execution and collect information about test runs.</span></span> <span data-ttu-id="0287e-150">수집한 정보는 XML 및 JSON과 같은 다양한 출력 형식으로 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-150">They report the collected information in various output formats, such as XML and JSON.</span></span> <span data-ttu-id="0287e-151">자세한 내용은 [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md)(첫 번째 DataCollector)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0287e-151">For more information, see [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md).</span></span>
-- <span data-ttu-id="0287e-152">**보고서 생성기:** 테스트 실행에서 수집된 데이터를 사용하여 보고서를 생성합니다. 주로 HTML 스타일의 보고서를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-152">**Report generators:** Use data collected from test runs to generate reports, often as styled HTML.</span></span>
+- <span data-ttu-id="9c18c-150">**DataCollectors:** DataCollectors는 테스트 실행을 모니터링하고 테스트 실행에 관한 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-150">**DataCollectors:** DataCollectors monitor test execution and collect information about test runs.</span></span> <span data-ttu-id="9c18c-151">수집한 정보는 XML 및 JSON과 같은 다양한 출력 형식으로 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-151">They report the collected information in various output formats, such as XML and JSON.</span></span> <span data-ttu-id="9c18c-152">자세한 내용은 [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md)(첫 번째 DataCollector)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c18c-152">For more information, see [your first DataCollector](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/datacollector.md).</span></span>
+- <span data-ttu-id="9c18c-153">**보고서 생성기:** 테스트 실행에서 수집된 데이터를 사용하여 보고서를 생성합니다. 주로 HTML 스타일의 보고서를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-153">**Report generators:** Use data collected from test runs to generate reports, often as styled HTML.</span></span>
 
-<span data-ttu-id="0287e-153">이 섹션에서는 데이터 수집기 도구를 주로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-153">In this section, the focus is on data collector tools.</span></span> <span data-ttu-id="0287e-154">코드 검사에 Coverlet을 사용하려면 기존 단위 테스트 프로젝트에 적절한 패키지 종속성이 있어야 하거나 [.NET 전역 도구](../tools/global-tools.md)와 해당하는 [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet 패키지를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-154">To use Coverlet for code coverage, an existing unit test project must have the appropriate package dependencies, or alternatively rely on [.NET global tooling](../tools/global-tools.md) and the corresponding [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet package.</span></span>
+<span data-ttu-id="9c18c-154">이 섹션에서는 데이터 수집기 도구를 주로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-154">In this section, the focus is on data collector tools.</span></span> <span data-ttu-id="9c18c-155">코드 검사에 Coverlet을 사용하려면 기존 단위 테스트 프로젝트에 적절한 패키지 종속성이 있어야 하거나 [.NET 전역 도구](../tools/global-tools.md)와 해당하는 [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet 패키지를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-155">To use Coverlet for code coverage, an existing unit test project must have the appropriate package dependencies, or alternatively rely on [.NET global tooling](../tools/global-tools.md) and the corresponding [coverlet.console](https://www.nuget.org/packages/coverlet.console) NuGet package.</span></span>
 
-## <a name="integrate-with-net-test"></a><span data-ttu-id="0287e-155">.NET 테스트와 통합</span><span class="sxs-lookup"><span data-stu-id="0287e-155">Integrate with .NET test</span></span>
+## <a name="integrate-with-net-test"></a><span data-ttu-id="9c18c-156">.NET 테스트와 통합</span><span class="sxs-lookup"><span data-stu-id="9c18c-156">Integrate with .NET test</span></span>
 
-<span data-ttu-id="0287e-156">xUnit 테스트 프로젝트 템플릿은 기본적으로 [coverlet.collector](https://www.nuget.org/packages/coverlet.collector)와 이미 통합되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-156">The xUnit test project template already integrates with [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) by default.</span></span>
-<span data-ttu-id="0287e-157">명령 프롬프트에서 디렉터리를 *XUnit.Coverlet.Collector* 프로젝트로 변경하고 [`dotnet test`](../tools/dotnet-test.md) 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-157">From the command prompt, change directories to the *XUnit.Coverlet.Collector* project, and run the [`dotnet test`](../tools/dotnet-test.md) command:</span></span>
+<span data-ttu-id="9c18c-157">xUnit 테스트 프로젝트 템플릿은 기본적으로 [coverlet.collector](https://www.nuget.org/packages/coverlet.collector)와 이미 통합되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-157">The xUnit test project template already integrates with [coverlet.collector](https://www.nuget.org/packages/coverlet.collector) by default.</span></span>
+<span data-ttu-id="9c18c-158">명령 프롬프트에서 디렉터리를 *XUnit.Coverlet.Collector* 프로젝트로 변경하고 [`dotnet test`](../tools/dotnet-test.md) 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-158">From the command prompt, change directories to the *XUnit.Coverlet.Collector* project, and run the [`dotnet test`](../tools/dotnet-test.md) command:</span></span>
 
 ```dotnetcli
 cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 ```
 
 > [!NOTE]
-> <span data-ttu-id="0287e-158">`"XPlat Code Coverage"` 인수는 Coverlet의 데이터 수집기에 해당하는 식별 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-158">The `"XPlat Code Coverage"` argument is a friendly name that corresponds to the data collectors from Coverlet.</span></span> <span data-ttu-id="0287e-159">이 이름은 필수이지만 대/소문자를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-159">This name is required but is case insensitive.</span></span>
+> <span data-ttu-id="9c18c-159">`"XPlat Code Coverage"` 인수는 Coverlet의 데이터 수집기에 해당하는 식별 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-159">The `"XPlat Code Coverage"` argument is a friendly name that corresponds to the data collectors from Coverlet.</span></span> <span data-ttu-id="9c18c-160">이 이름은 필수이지만 대/소문자를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-160">This name is required but is case insensitive.</span></span>
 
-<span data-ttu-id="0287e-160">`dotnet test` 실행의 일부로 결과 *coverage.cobertura.xml* 파일이 *TestResults* 디렉터리에 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-160">As part of the `dotnet test` run, a resulting *coverage.cobertura.xml* file is output to the *TestResults* directory.</span></span> <span data-ttu-id="0287e-161">이 XML 파일에 결과가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-161">The XML file contains the results.</span></span> <span data-ttu-id="0287e-162">이 플랫폼 간 옵션은 .NET Core CLI를 사용하므로 MSBuild를 사용할 수 없는 빌드 시스템에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-162">This is a cross platform option that relies on the .NET Core CLI, and it is great for build systems where MSBuild is not available.</span></span>
+<span data-ttu-id="9c18c-161">`dotnet test` 실행의 일부로 결과 *coverage.cobertura.xml* 파일이 *TestResults* 디렉터리에 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-161">As part of the `dotnet test` run, a resulting *coverage.cobertura.xml* file is output to the *TestResults* directory.</span></span> <span data-ttu-id="9c18c-162">이 XML 파일에 결과가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-162">The XML file contains the results.</span></span> <span data-ttu-id="9c18c-163">이 플랫폼 간 옵션은 .NET Core CLI를 사용하므로 MSBuild를 사용할 수 없는 빌드 시스템에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-163">This is a cross platform option that relies on the .NET Core CLI, and it is great for build systems where MSBuild is not available.</span></span>
 
-<span data-ttu-id="0287e-163">다음은 예제 *coverage.cobertura.xml* 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-163">Below is the example *coverage.cobertura.xml* file.</span></span>
+<span data-ttu-id="9c18c-164">다음은 예제 *coverage.cobertura.xml* 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-164">Below is the example *coverage.cobertura.xml* file.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -263,24 +264,24 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 ```
 
 > [!TIP]
-> <span data-ttu-id="0287e-164">또는 빌드 시스템에서 이미 MSBuild를 사용하는 경우 MSBuild 패키지를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-164">As an alternative, you could use the MSBuild package if your build system already makes use of MSBuild.</span></span> <span data-ttu-id="0287e-165">명령 프롬프트에서 디렉터리를 *XUnit.Coverlet.MSBuild* 프로젝트로 변경하고 `dotnet test` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-165">From the command prompt, change directories to the *XUnit.Coverlet.MSBuild* project, and run the `dotnet test` command:</span></span>
+> <span data-ttu-id="9c18c-165">또는 빌드 시스템에서 이미 MSBuild를 사용하는 경우 MSBuild 패키지를 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-165">As an alternative, you could use the MSBuild package if your build system already makes use of MSBuild.</span></span> <span data-ttu-id="9c18c-166">명령 프롬프트에서 디렉터리를 *XUnit.Coverlet.MSBuild* 프로젝트로 변경하고 `dotnet test` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-166">From the command prompt, change directories to the *XUnit.Coverlet.MSBuild* project, and run the `dotnet test` command:</span></span>
 >
 > ```dotnetcli
 > dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> <span data-ttu-id="0287e-166">결과 *coverage.cobertura.xml* 파일이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-166">The resulting *coverage.cobertura.xml* file is output.</span></span>  
-> <span data-ttu-id="0287e-167">[여기](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)의 msbuild 통합 가이드를 따르면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-167">You can follow msbuild integraton guide [here](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)</span></span>
+> <span data-ttu-id="9c18c-167">결과 *coverage.cobertura.xml* 파일이 출력됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-167">The resulting *coverage.cobertura.xml* file is output.</span></span>  
+> <span data-ttu-id="9c18c-168">[여기](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)에서 msbuild 통합 가이드를 따르면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-168">You can follow msbuild integration guide [here](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)</span></span>
 
-## <a name="generate-reports"></a><span data-ttu-id="0287e-168">보고서 생성</span><span class="sxs-lookup"><span data-stu-id="0287e-168">Generate reports</span></span>
+## <a name="generate-reports"></a><span data-ttu-id="9c18c-169">보고서 생성</span><span class="sxs-lookup"><span data-stu-id="9c18c-169">Generate reports</span></span>
 
-<span data-ttu-id="0287e-169">이제 단위 테스트 실행에서 데이터를 수집할 수 있으므로 [ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 보고서를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-169">Now that you're able to collect data from unit test runs, you can generate reports using [ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="0287e-170">[ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet 패키지를 [.NET 전역 도구](../tools/global-tools.md)로 설치하려면 [`dotnet tool install`](../tools/dotnet-tool-install.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-170">To install the [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet package as a [.NET global tool](../tools/global-tools.md), use the [`dotnet tool install`](../tools/dotnet-tool-install.md) command:</span></span>
+<span data-ttu-id="9c18c-170">이제 단위 테스트 실행에서 데이터를 수집할 수 있으므로 [ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 보고서를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-170">Now that you're able to collect data from unit test runs, you can generate reports using [ReportGenerator](https://github.com/danielpalme/ReportGenerator).</span></span> <span data-ttu-id="9c18c-171">[ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet 패키지를 [.NET 전역 도구](../tools/global-tools.md)로 설치하려면 [`dotnet tool install`](../tools/dotnet-tool-install.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-171">To install the [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) NuGet package as a [.NET global tool](../tools/global-tools.md), use the [`dotnet tool install`](../tools/dotnet-tool-install.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool install -g dotnet-reportgenerator-globaltool
 ```
 
-<span data-ttu-id="0287e-171">이전 테스트 실행에서 *coverage.cobertura.xml* 파일이 출력된 경우 도구를 실행하고 원하는 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-171">Run the tool and provide the desired options, given the output *coverage.cobertura.xml* file from the previous test run.</span></span>
+<span data-ttu-id="9c18c-172">이전 테스트 실행에서 *coverage.cobertura.xml* 파일이 출력된 경우 도구를 실행하고 원하는 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-172">Run the tool and provide the desired options, given the output *coverage.cobertura.xml* file from the previous test run.</span></span>
 
 ```console
 reportgenerator
@@ -289,19 +290,20 @@ reportgenerator
 -reporttypes:Html
 ```
 
-<span data-ttu-id="0287e-172">이 명령을 실행한 후의 HTML 파일이 생성되는 보고서입니다.</span><span class="sxs-lookup"><span data-stu-id="0287e-172">After running this command, an HTML file represents the generated report.</span></span>
+<span data-ttu-id="9c18c-173">이 명령을 실행한 후의 HTML 파일이 생성되는 보고서입니다.</span><span class="sxs-lookup"><span data-stu-id="9c18c-173">After running this command, an HTML file represents the generated report.</span></span>
 
 :::image type="content" source="media/test-report.png" lightbox="media/test-report.png" alt-text="단위 테스트 생성 보고서":::
 
-## <a name="see-also"></a><span data-ttu-id="0287e-174">참조</span><span class="sxs-lookup"><span data-stu-id="0287e-174">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c18c-175">참조</span><span class="sxs-lookup"><span data-stu-id="9c18c-175">See also</span></span>
 
-- [<span data-ttu-id="0287e-175">Visual Studio 단위 테스트 검사 범위</span><span class="sxs-lookup"><span data-stu-id="0287e-175">Visual Studio unit test cover coverage</span></span>](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
-- <span data-ttu-id="0287e-176">[GitHub - Coverlet repository](https://github.com/coverlet-coverage/coverlet)(GitHub - Coverlet 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="0287e-176">[GitHub - Coverlet repository](https://github.com/coverlet-coverage/coverlet)</span></span>
-- <span data-ttu-id="0287e-177">[GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)(GitHub - ReportGenerator 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="0287e-177">[GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)</span></span>
-- [<span data-ttu-id="0287e-178">ReportGenerator 프로젝트 사이트</span><span class="sxs-lookup"><span data-stu-id="0287e-178">ReportGenerator project site</span></span>](https://danielpalme.github.io/ReportGenerator)
-- [<span data-ttu-id="0287e-179">.NET Core CLI 테스트 명령</span><span class="sxs-lookup"><span data-stu-id="0287e-179">.NET Core CLI test command</span></span>](../tools/dotnet-test.md)
+- [<span data-ttu-id="9c18c-176">Visual Studio 단위 테스트 검사 범위</span><span class="sxs-lookup"><span data-stu-id="9c18c-176">Visual Studio unit test cover coverage</span></span>](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- <span data-ttu-id="9c18c-177">[GitHub - Coverlet repository](https://github.com/coverlet-coverage/coverlet)(GitHub - Coverlet 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="9c18c-177">[GitHub - Coverlet repository](https://github.com/coverlet-coverage/coverlet)</span></span>
+- <span data-ttu-id="9c18c-178">[GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)(GitHub - ReportGenerator 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="9c18c-178">[GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)</span></span>
+- [<span data-ttu-id="9c18c-179">ReportGenerator 프로젝트 사이트</span><span class="sxs-lookup"><span data-stu-id="9c18c-179">ReportGenerator project site</span></span>](https://danielpalme.github.io/ReportGenerator)
+- [<span data-ttu-id="9c18c-180">.NET Core CLI 테스트 명령</span><span class="sxs-lookup"><span data-stu-id="9c18c-180">.NET Core CLI test command</span></span>](../tools/dotnet-test.md)
+- [<span data-ttu-id="9c18c-181">샘플 소스 코드</span><span class="sxs-lookup"><span data-stu-id="9c18c-181">Sample source code</span></span>](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
-## <a name="next-steps"></a><span data-ttu-id="0287e-180">다음 단계</span><span class="sxs-lookup"><span data-stu-id="0287e-180">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="9c18c-182">다음 단계</span><span class="sxs-lookup"><span data-stu-id="9c18c-182">Next Steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0287e-181">유닛 테스트 모범 사례</span><span class="sxs-lookup"><span data-stu-id="0287e-181">Unit testing best practices</span></span>](unit-testing-best-practices.md)
+> [<span data-ttu-id="9c18c-183">단위 테스트 모범 사례</span><span class="sxs-lookup"><span data-stu-id="9c18c-183">Unit testing best practices</span></span>](unit-testing-best-practices.md)
