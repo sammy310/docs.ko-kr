@@ -4,12 +4,11 @@ description: Ubuntu에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619431"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -201,16 +200,17 @@ sudo apt-get update; \
 
 패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나, .NET Core를 수동으로 설치하거나 자체 포함된 앱을 게시할 경우 라이브러리가 설치되어 있는지 확인해야 합니다.
 
-- liblttng-ust0
-- libcurl3(14.x 및 16.x용)
-- libcurl4(18.x용)
-- libssl1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapi-krb5-2
 - libicu52(14.x용)
 - libicu55(16.x용)
-- libicu57(17.x용)
 - libicu60(18.x용)
+- libicu66(20.x용)
+- libssl1.0.0(14.x용, 16.x용)
+- libssl1.1(18.x용, 20.x용)
+- libstdc++6
+- zlib1g
 
 *System.Drawing.Common* 어셈블리를 사용하는 .NET Core 앱의 경우 다음과 같은 종속성도 필요합니다.
 

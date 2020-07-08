@@ -4,12 +4,11 @@ description: SLES에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: e1a2490c1d653eb07aebdd51e34e1bf462906482
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 8f64efcc8206b47855871104e5b6914570c06da0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619418"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>SLES에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -78,7 +77,22 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 ## <a name="dependencies"></a>종속성
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나, .NET Core를 수동으로 설치하거나 자체 포함된 앱을 게시할 경우 라이브러리가 설치되어 있는지 확인해야 합니다.
+
+- krb5
+- libicu
+- libopenssl1_1
+
+대상 런타임 환경의 OpenSSL 버전이 1.1 이상인 경우, **compat-openssl10**을 설치해야 합니다.
+
+종속성에 대한 자세한 내용은 [Self-contained Linux apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)(자체 포함 Linux 앱)를 참조하세요.
+
+*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 앱의 경우 다음과 같은 종속성도 필요합니다.
+
+- [libgdiplus(버전 6.0.1 이상)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > 시스템에 Mono 리포지토리를 추가하여 최신 버전의 *libgdiplus*를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 

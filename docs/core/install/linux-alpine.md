@@ -4,12 +4,11 @@ description: Alpine에 .NET Core SDK 및 .NET Core 런타임을 설치하는 다
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619522"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alpine에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -21,11 +20,11 @@ Alpine용 설치 관리자는 없습니다. [설치 스크립트](#scripted-inst
 
 ## <a name="supported-distributions"></a>지원되는 배포
 
-다음 표는 현재 지원되는 .NET Core 릴리스와 지원되는 Alpine 버전의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 [Alpine 버전이 지원 종료에 도달](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)할 때까지 지원됩니다.
+다음 표는 현재 지원되는 .NET Core 릴리스와 지원되는 Alpine 버전의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 각 버전의 [Alpine이 지원 종료에 도달](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)할 때까지 지원됩니다.
 
 - ✔️는 Alpine 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
 - ❌는 Alpine 또는 .NET Core 버전이 해당 Alpine 릴리스에서 지원되지 않음을 나타냅니다.
-- Alpine 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
+- Alpine 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET의 조합이 지원됨을 의미합니다.
 
 | Alpine                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 미리 보기 |
 |--------------------------|---------------|---------------|----------------|
@@ -47,12 +46,11 @@ Alpine Linux에서 .NET Core를 사용하려면 다음 종속성이 설치되어
 
 - icu-libs
 - krb5-libs
+- libgcc
 - libintl
 - libssl1.1(Alpine v3.9 이상)
-- libssl1.0(Alpine v3.8)
+- libssl1.0(Alpine v3.8 이하)
 - libstdc++
-- lttng-ust
-- numactl(선택 사항)
 - zlib
 
 ## <a name="scripted-install"></a>스크립팅된 설치
@@ -65,4 +63,4 @@ Alpine Linux에서 .NET Core를 사용하려면 다음 종속성이 설치되어
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: Visual Studio Code를 사용하여 .NET Core SDK로 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)
+- [자습서: Visual Studio Code](../tutorials/with-visual-studio-code.md)를 사용하는 .NET Core SDK로 콘솔 애플리케이션 만들기

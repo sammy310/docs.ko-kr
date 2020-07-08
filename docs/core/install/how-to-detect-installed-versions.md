@@ -6,12 +6,11 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802990"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core가 설치되어 있는지 확인하는 방법
 
@@ -19,7 +18,7 @@ ms.locfileid: "85324812"
 
 SDK를 설치하면 그에 해당하는 런타임도 설치됩니다.
 
-이 문서에서 안내하는 명령이 작동하지 않는다면 런타임 또는 SDK가 설치되지 않은 것입니다. 자세한 내용은 [.NET Core 다운로드 및 설치](index.md)를 참조하세요.
+이 문서에서 안내하는 명령이 작동하지 않는다면 런타임 또는 SDK가 설치되지 않은 것입니다. 자세한 내용은 [Windows](windows.md), [macOS](macos.md) 또는 [Linux](linux.md)에 대한 설치 문서를 참조하세요.
 
 ## <a name="check-sdk-versions"></a>SDK 버전 확인
 

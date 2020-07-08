@@ -1,15 +1,15 @@
 ---
 title: .NET Framework 개발 가이드
+description: .NET 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명하는 .NET 개발 가이드를 살펴봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
-ms.translationtype: HT
+ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622577"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 

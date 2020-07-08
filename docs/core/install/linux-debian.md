@@ -4,12 +4,11 @@ description: Debian에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619496"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Debian에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -127,7 +126,26 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>종속성
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나, .NET Core를 수동으로 설치하거나 자체 포함된 앱을 게시할 경우 라이브러리가 설치되어 있는지 확인해야 합니다.
+
+- libc6
+- libgcc1
+- libgssapi-krb5-2
+- libicu52(8.x용)
+- libicu57(9.x용)
+- libicu63(10.x용)
+- libicu67(11.x용)
+- libssl1.0.0(8.x용)
+- libssl1.1(9.x~11.x용)
+- libstdc++6
+- zlib1g
+
+*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 앱의 경우 다음과 같은 종속성도 필요합니다.
+
+- libgdiplus(버전 6.0.1 이상)
+
+  > [!WARNING]
+  > 시스템에 Mono 리포지토리를 추가하여 최신 버전의 *libgdiplus*를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 

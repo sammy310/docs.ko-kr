@@ -1,7 +1,7 @@
 ---
 title: 부울 논리 연산자 - C# 참조
 description: 부울 피연산자를 사용하여 논리 부정, 결합(AND) 및 포괄적/배타적 분리(OR) 작업을 수행하는 C# 연산자에 대해 알아봅니다.
-ms.date: 09/27/2019
+ms.date: 06/29/2020
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,11 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
-ms.translationtype: HT
+ms.openlocfilehash: a19c804c624153ef608885bc6493537302275765
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618196"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -115,8 +114,14 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 ## <a name="nullable-boolean-logical-operators"></a>Nullable 부울 논리 연산자
 
-`bool?` 피연산자의 경우 `&` 및 `|` 연산자는 값이 세 개인 논리를 지원합니다. 이러한 연산자의 의미 체계는 다음 표에서 정의됩니다.  
-  
+`bool?` 피연산자의 경우 [`&`(논리적 AND)](#logical-and-operator-) 및 [`|`(논리적 OR)](#logical-or-operator-) 연산자는 다음과 같이 값이 세 개인 논리를 지원합니다.
+
+- `&` 연산자는 두 피연산자가 모두 `true`로 평가되는 경우에만 `true`를 생성합니다. `x` 또는 `y`가 `false`로 평가되는 경우 다른 피연산자가 `null`로 평가되더라도 `x & y`는 `false`를 생성합니다. 그러지 않으면 `x & y`의 결과는 `null`입니다.
+
+- `|` 연산자는 두 피연산자가 모두 `false`로 평가되는 경우에만 `false`를 생성합니다. `x` 또는 `y`가 `true`로 평가되는 경우 다른 피연산자가 `null`로 평가되더라도 `x | y`는 `true`를 생성합니다. 그러지 않으면 `x | y`의 결과는 `null`입니다.
+
+다음 표는 이 의미 체계를 보여 줍니다.
+
 |x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  

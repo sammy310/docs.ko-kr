@@ -3,13 +3,12 @@ title: 유닛 테스트에 코드 검사 사용
 description: .NET 단위 테스트에 코드 검사 기능을 사용하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
-ms.translationtype: HT
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853898"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>유닛 테스트에 코드 검사 사용
 
@@ -18,6 +17,8 @@ ms.locfileid: "85105418"
 이 문서에서는 Coverlet을 통한 유닛 테스트에 코드 검사 사용과 ReportGenerator를 사용한 보고서 생성을 설명합니다. 이 문서에서는 테스트 프레임워크로 C# 및 xUnit에 초점을 두고 설명하지만 MSTest와 NUnit도 모두 작동합니다. Coverlet은 C#용 플랫폼 간 코드 검사 프레임워크를 제공하는 [GitHub의 오픈 소스 프로젝트](https://github.com/coverlet-coverage/coverlet)입니다. [Coverlet](https://dotnetfoundation.org/projects/coverlet)은 .NET Foundation의 일부입니다. Coverlet은 Cobertura 검사 테스트 실행 데이터를 수집하고, 이 데이터는 보고서 생성에 사용됩니다.
 
 또한 이 문서에서는 Coverlet 테스트 실행에서 수집된 코드 검사 정보를 사용하여 보고서를 생성하는 방법도 자세히 설명합니다. 보고서 생성은 [GitHub의 또 다른 오픈 소스 프로젝트인 ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 가능합니다. ReportGenerator는 무엇보다 Cobertura에서 생성된 검사 보고서를 사람이 읽을 수 있는 다양한 형식의 보고서로 변환합니다.
+
+이 문서는 샘플 브라우저에서 사용할 수 있는 [샘플 소스 코드 프로젝트](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)에 대해 설명합니다.
 
 ## <a name="system-under-test"></a>테스트 중인 시스템
 
@@ -270,7 +271,7 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > ```
 >
 > 결과 *coverage.cobertura.xml* 파일이 출력됩니다.  
-> [여기](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)의 msbuild 통합 가이드를 따르면 됩니다.
+> [여기](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)에서 msbuild 통합 가이드를 따르면 됩니다.
 
 ## <a name="generate-reports"></a>보고서 생성
 
@@ -300,8 +301,9 @@ reportgenerator
 - [GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)(GitHub - ReportGenerator 리포지토리)
 - [ReportGenerator 프로젝트 사이트](https://danielpalme.github.io/ReportGenerator)
 - [.NET Core CLI 테스트 명령](../tools/dotnet-test.md)
+- [샘플 소스 코드](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [유닛 테스트 모범 사례](unit-testing-best-practices.md)
+> [단위 테스트 모범 사례](unit-testing-best-practices.md)

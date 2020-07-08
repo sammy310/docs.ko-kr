@@ -4,12 +4,11 @@ description: .NET Core에서 프로그램에 대한 런타임 버전을 자동�
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
-ms.translationtype: HT
+ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803120"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -80,42 +79,42 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 [`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-runtime-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-runtime-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
 
-호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp3.0`을 지정하고 `3.0.4`가 설치된 최신 .NET 런타임인 경우 `3.0.4` 런타임이 사용됩니다.
+호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp3.0`을 지정하고 `3.0.2`가 설치된 최신 .NET 런타임인 경우 `3.0.2` 런타임이 사용됩니다.
 
 허용되는 `3.0.*` 버전이 없으면 새 `3.*` 버전이 사용됩니다. 예를 들어 `netcoreapp3.0`을 지정하고 `3.1.0`만 설치된 경우 `3.1.0` 런타임을 사용하여 애플리케이션이 실행됩니다. 이 동작을 "부 버전 롤포워드"라고 합니다. 또한 더 낮은 버전은 고려되지 않습니다. 허용 가능한 런타임이 설치되어 있지 않으면 애플리케이션이 실행되지 않습니다.
 
 3\.0을 대상으로 하는 경우 몇 가지 사용 예에서 동작을 시연합니다.
 
-- ✔️ 3.0이 지정되었습니다. 3.0.5가 설치된 가장 높은 패치 버전입니다. 3.0.5가 사용됩니다.
+- ✔️ 3.0이 지정되었습니다. 3.0.3이 설치된 가장 높은 패치 버전입니다. 3.0.3이 사용됩니다.
 - ❌ 3.0이 지정되었습니다. 3\.0.* 버전이 설치되어 있지 않습니다. 2.1.1이 설치된 가장 높은 런타임 버전입니다. 오류 메시지가 표시됩니다.
 - ✔️ 3.0이 지정되었습니다. 3\.0.* 버전이 설치되어 있지 않습니다. 3.1.0이 설치된 가장 높은 런타임 버전입니다. 3.1.0이 사용됩니다.
 - ❌ 2.0이 지정되었습니다. 2\.x 버전이 설치되어 있지 않습니다. 3.0.0이 설치된 가장 높은 런타임 버전입니다. 오류 메시지가 표시됩니다.
 
-부 버전 롤포워드에는 최종 사용자에게 영향을 줄 수 있는 하나의 부작용이 있습니다. 다음과 같은 시나리오를 고려해 보세요.
+부 버전 롤포워드에는 최종 사용자에게 영향을 줄 수 있는 하나의 부작용이 있습니다. 다음 시나리오를 고려하세요.
 
 1. 애플리케이션은 3.0이 필수가 되도록 지정합니다.
 2. 실행 시 버전 3.0.*은 설치되어 있지 않지만 3.1.0은 설치되어 있습니다. 버전 3.1.0이 사용됩니다.
-3. 나중에 사용자가 3.0.5를 설치하고 애플리케이션을 다시 실행하면 이제 3.0.5가 사용됩니다.
+3. 나중에 사용자가 3.0.3을 설치하고 애플리케이션을 다시 실행하면 3.0.3이 사용됩니다.
 
-3\.0.5와 3.1.0은 다르게 동작할 수도 있습니다. 특히 이진 데이터를 직렬화하는 것과 같은 시나리오에서는 다르게 동작합니다.
+3\.0.3과 3.1.0은 다르게 동작할 수도 있습니다. 특히 이진 데이터를 직렬화하는 것과 같은 시나리오에서는 다르게 동작합니다.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>자체 포함 배포에 선택한 런타임 포함
 
 애플리케이션을 [**자체 포함 배포**](../deploying/index.md#publish-self-contained)로 게시할 수 있습니다. 이 방법은 .NET Core 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
 
-게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 3.0.4가 .NET Core 3.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 3.0.4를 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
+게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 3.0.3이 .NET Core 3.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 3.0.3을 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
 
 애플리케이션에 대해 지정된 최소 버전이 충족되지 않으면 오류가 발생합니다. `dotnet publish`는 최신 런타임 패치 버전(지정된 major.minor 버전 제품군 내에서)에 바인딩합니다. `dotnet publish`는 `dotnet run`의 롤포워드 의미 체계를 지원하지 않습니다. 패치 및 자체 포함 배포에 대한 자세한 내용은 .NET Core 애플리케이션 배포의 [런타임 패치 선택](../deploying/runtime-patch-selection.md)에 대한 문서를 참조하세요.
 
 자체 포함 배포에는 특정 패치 버전이 필요할 수 있습니다. 다음 예제와 같이 프로젝트 파일에서 최소 런타임 패치 버전(더 높거나 낮은 버전)을 재정의할 수 있습니다.
 
 ``` xml
-<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.3</RuntimeFrameworkVersion>
 ```
 
 `RuntimeFrameworkVersion` 요소는 기본 버전 정책보다 우선합니다. 자체 포함 배포의 경우 `RuntimeFrameworkVersion`은 *정확한* 런타임 프레임워크 버전을 지정합니다. 프레임워크 종속 애플리케이션의 경우 `RuntimeFrameworkVersion`은 필요한 *최소* 런타임 프레임워크 버전을 지정합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [.NET Core 다운로드 및 설치](../install/index.md)
+- [.NET Core 다운로드 및 설치](../install/index.yml)
 - [.NET Core 런타임 및 SDK를 제거하는 방법](../install/remove-runtime-sdk-versions.md)

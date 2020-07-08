@@ -1,26 +1,38 @@
 ---
-ms.openlocfilehash: e7d35045892c62f759aad5067962ac5c15a9fb8b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: HT
+ms.openlocfilehash: ea2883912907843e4b6d65db5ba186af43f27aaa
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85805417"
 ---
 
-.NET Core SDK와 .NET Core 런타임 모두 다운로드 후 수동으로 설치할 수 있습니다. .NET Core SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 이진 릴리스를 다운로드합니다.
+<!-- Note, this content is copied in ../macos.md. Any fixes should be applied there too, though content may be different -->
+
+패키지 관리자의 대안으로, SDK와 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로서 또는 지원되지 않는 Linux 배포에서 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 패키지 관리자를 사용하는 것이 좋습니다.
+
+.NET Core SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 **이진** 릴리스를 다운로드합니다.
 
 - ✔️ [.NET 5.0 미리보기 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
 - ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ❌ [.NET Core 3.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- ❌ [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 그런 다음, 다운로드된 파일을 추출하고 `export` 명령을 사용하여 .NET Core에서 사용된 변수를 설정하고 .NET Core가 경로에 있는지 확인합니다.
 
-런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 다운로드합니다. 그런 다음, 터미널을 열고 파일이 저장된 디렉터리에서 다음 명령을 실행합니다.
+런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 다운로드합니다. 그런 다음, 터미널을 열고 파일이 저장된 디렉터리에서 다음 명령을 실행합니다. 보관 파일 이름은 다운로드한 항목에 따라 다를 수 있습니다.
+
+**다음 명령을 사용하여 런타임을 추출합니다.**
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C "$HOME/dotnet"
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+**다음 명령을 사용하여 SDK를 추출합니다.**
+
+```bash
+mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-3.1.301-linux-x64.tar.gz -C "$HOME/dotnet"
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```

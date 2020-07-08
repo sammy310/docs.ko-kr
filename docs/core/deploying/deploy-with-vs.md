@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
-ms.translationtype: HT
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803029"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -98,7 +97,7 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
 
    고정 모드를 사용하려면 **솔루션 탐색기**에서 프로젝트(솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 **SCD.csproj 편집** 또는 **SCD.vbproj 편집**을 선택합니다. 그런 다음, 강조 표시된 다음 줄을 파일에 추가합니다.
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. 애플리케이션의 디버그 빌드를 만듭니다.
 
@@ -194,7 +193,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
 
    단일 플랫폼에만 게시하는 경우 **폴더 선택** 텍스트 상자의 기본값을 적용합니다. 이렇게 하면 애플리케이션의 프레임워크 종속 배포를 *\<project-directory>\bin\Release\netcoreapp2.1\publish* 디렉터리에 게시합니다.
 
-   둘 이상의 플랫폼에 게시하는 경우 대상 플랫폼을 식별하는 문자열을 추가합니다. 예를 들어, 파일 경로에 "linux" 문자열을 추가하면 Visual Studio는 애플리케이션의 프레임워크 종속 배포를 *\<project-directory&gt;\bin\Release\netcoreapp2.1\publish\linux* 디렉터리에 게시합니다.
+   둘 이상의 플랫폼에 게시하는 경우 대상 플랫폼을 식별하는 문자열을 추가합니다. 예를 들어, 파일 경로에 “linux” 문자열을 추가하면 Visual Studio는 애플리케이션의 프레임워크 종속 배포를 *\<project-directory>\bin\Release\netcoreapp2.1\publish\linux* 디렉터리에 게시합니다.
 
 1. **게시** 단추 옆에 있는 드롭다운 목록 아이콘을 선택하고 **프로필 만들기**를 선택하여 프로필을 만듭니다. 그런 다음, **프로필 만들기** 단추를 선택하여 프로필을 만듭니다.
 
