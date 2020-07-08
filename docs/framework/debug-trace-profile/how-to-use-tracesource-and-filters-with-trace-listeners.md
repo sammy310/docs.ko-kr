@@ -1,5 +1,6 @@
 ---
 title: '방법: 추적 수신기와 함께 TraceSource 및 필터 사용'
+description: .NET의 추적 수신기와 함께 TraceSource 클래스 및 필터를 사용 합니다. TraceSource는 오래 된 추적 및 디버그 클래스의 정적 메서드를 대체 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181819"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051261"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>방법: 추적 수신기와 함께 TraceSource 및 필터 사용
 .NET Framework 버전 2.0의 새로운 기능 중 하나는 향상된 추적 시스템입니다. 기본 전제는 변경되지 않습니다. 추적 메시지는 스위치를 통해 수신기로 전송되고 이러한 수신기는 데이터를 연결된 출력 매체에 보고합니다. 버전 2.0에 대한 주요 차이점은 추적이 <xref:System.Diagnostics.TraceSource> 클래스의 인스턴스를 통해 시작될 수 있다는 것입니다. <xref:System.Diagnostics.TraceSource>는 향상된 추적 시스템으로 작동해야 하고 오래된 <xref:System.Diagnostics.Trace> 및 <xref:System.Diagnostics.Debug> 추적 클래스의 정적 메서드 대신 사용될 수 있습니다. 익숙한 <xref:System.Diagnostics.Trace> 및 <xref:System.Diagnostics.Debug> 클래스가 있지만 추적에는 <xref:System.Diagnostics.TraceSource> 클래스를 사용하는 것이 좋습니다.  
@@ -161,11 +161,11 @@ ms.locfileid: "79181819"
     }  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [방법: 추적 소스 생성 및 초기화](how-to-create-and-initialize-trace-sources.md)
+- [방법: 추적 소스 만들기 및 초기화](how-to-create-and-initialize-trace-sources.md)
 - [추적 수신기](trace-listeners.md)

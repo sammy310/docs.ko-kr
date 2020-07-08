@@ -2,12 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787795"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051365"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -15,7 +14,7 @@ ms.locfileid: "76787795"
 
 ## <a name="syntax"></a>구문
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -63,7 +62,7 @@ Xml Web services를 구현 하는 클래스가 동일한 파일에 있지 않고
 
 예를 들어에 대해 AJAX 사용 끝점을 사용 하도록 설정 하려면 `MyService` <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> `Factory` <xref:System.ServiceModel.Activation.ServiceHostFactory> 다음 예제와 같이 지시문에서 기본값 대신 특성 값에 대해를 지정 합니다 `@ServiceHost` .
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"
@@ -72,6 +71,6 @@ Factory="WebScriptServiceHostFactory"
 %>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [사용자 지정 서비스 호스트](../../../wcf/samples/custom-service-host.md)

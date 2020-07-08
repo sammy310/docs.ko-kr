@@ -1,5 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate MDA
+description: 대리자를 만들기 위해 잘못 된 함수 포인터를 전달 하는 경우 호출 되는 MDA (invalidFunctionPointerInDelegate 관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217374"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051742"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
 `invalidFunctionPointerInDelegate` MDA(관리 디버깅 도우미)는 잘못된 함수 포인터가 네이티브 함수 포인터를 통해 대리자를 생성하도록 전달되면 활성화됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "77217374"
 ## <a name="output"></a>출력  
  잘못된 함수 포인터입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,7 @@ ms.locfileid: "77217374"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

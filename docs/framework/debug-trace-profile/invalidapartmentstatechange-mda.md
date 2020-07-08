@@ -1,5 +1,6 @@
 ---
 title: invalidApartmentStateChange MDA
+description: COM 아파트 상태에 문제가 있는 경우에 활성화 되는 .NET의 invalidApartmentStateChange MDA (관리 디버깅 도우미)에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217409"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051829"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` MDA(관리 디버깅 도우미)는 다음 두 문제 중 하나가 발생하면 활성화됩니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "77217409"
   
 - 스레드의 COM 아파트 상태가 요청된 상태가 아닙니다. 이로 인해 현재 모델과 다른 스레딩 모델이 포함된 COM 구성 요소에 프록시가 사용될 수 있습니다. 이 사용으로 인해 아파트 간 마샬링에 사용하도록 설정되지 않은 인터페이스를 통해 COM 개체를 호출할 때 <xref:System.InvalidCastException>이 throw될 수 있습니다.  
   
-- 스레드의 COM 아파트 상태가 예상과 다릅니다. 이로 인해 RCW(<xref:System.Runtime.InteropServices.COMException>런타임 호출 가능 래퍼<xref:System.InvalidCastException>)에서 호출할 경우 [ 및 RPC_E_WRONG_THREAD의 HRESULT에서 ](../../standard/native-interop/runtime-callable-wrapper.md)이 발생할 수 있습니다. 또한 이로 인해 여러 스레드가 일부 단일 스레드 COM 구성 요소에 동시에 액세스할 수 있으므로 손상이나 데이터 손실이 발생할 수 있습니다.  
+- 스레드의 COM 아파트 상태가 예상과 다릅니다. 이로 인해 RCW([런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md))에서 호출할 경우 <xref:System.InvalidCastException> 및 RPC_E_WRONG_THREAD의 HRESULT에서 <xref:System.Runtime.InteropServices.COMException>이 발생할 수 있습니다. 또한 이로 인해 여러 스레드가 일부 단일 스레드 COM 구성 요소에 동시에 액세스할 수 있으므로 손상이나 데이터 손실이 발생할 수 있습니다.  
   
 ## <a name="cause"></a>원인  
   
-- 스레드가 이전에 다른 COM 아파트 상태로 초기화되었습니다. 스레드의 아파트 상태는 명시적으로 또는 암시적으로 설정할 수 있습니다. 명시적 작업에는 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성과 <xref:System.Threading.Thread.SetApartmentState%2A> 및 <xref:System.Threading.Thread.TrySetApartmentState%2A> 메서드가 포함됩니다. 스레드가 시작되기 전에 <xref:System.Threading.Thread.Start%2A>가 호출되지 않을 경우 <xref:System.Threading.ApartmentState.MTA> 메서드를 사용하여 만든 스레드는 암시적으로 <xref:System.Threading.Thread.SetApartmentState%2A>로 설정됩니다. 주 메서드에서 <xref:System.Threading.ApartmentState.MTA> 특성이 지정되지 않은 경우 애플리케이션의 주 스레드는 <xref:System.STAThreadAttribute>로 암시적으로 초기화됩니다.  
+- 스레드가 이전에 다른 COM 아파트 상태로 초기화되었습니다. 스레드의 아파트 상태는 명시적으로 또는 암시적으로 설정할 수 있습니다. 명시적 작업에는 <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성과 <xref:System.Threading.Thread.SetApartmentState%2A> 및 <xref:System.Threading.Thread.TrySetApartmentState%2A> 메서드가 포함됩니다. 스레드가 시작되기 전에 <xref:System.Threading.Thread.SetApartmentState%2A>가 호출되지 않을 경우 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만든 스레드는 암시적으로 <xref:System.Threading.ApartmentState.MTA>로 설정됩니다. 주 메서드에서 <xref:System.STAThreadAttribute> 특성이 지정되지 않은 경우 애플리케이션의 주 스레드는 <xref:System.Threading.ApartmentState.MTA>로 암시적으로 초기화됩니다.  
   
 - 다른 동시성 모델이 포함된 `CoUninitialize` 메서드(또는 `CoInitializeEx` 메서드)는 스레드에서 호출됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "77217409"
 ## <a name="output"></a>출력  
  현재 스레드의 COM 아파트 상태 및 코드에서 적용하려고 시도한 상태.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -75,7 +75,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

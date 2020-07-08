@@ -1,5 +1,6 @@
 ---
 title: loaderLock MDA
+description: Windows OS 로더 잠금을 보유 하는 스레드에서 관리 코드의 실행 시도를 검색 하는 .NET의 MDA (loaderLock 관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 055b07a805c5f0b613519d6019950a9b249a4b38
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217344"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051624"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` MDA(관리 디버깅 도우미)는 Microsoft Windows 운영 체제 로더 잠금을 보유하는 스레드에서 관리 코드를 실행하려는 시도를 감지합니다.  이와 같은 실행은 운영 체제의 로더에서 초기화하기 전에 DLL을 사용하고 교착 상태를 일으킬 수 있으므로 유효하지 않습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "77217344"
 ## <a name="output"></a>출력  
  이 MDA는 잘못된 관리 실행이 시도되고 있음을 보고합니다.  스레드 스택을 검사하여 로더 잠금이 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -53,6 +53,6 @@ ms.locfileid: "77217344"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

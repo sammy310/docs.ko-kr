@@ -2,12 +2,11 @@
 title: '방법: ASP.NET AJAX 엔드포인트에 대한 HTTP POST 및 HTTP GET 요청 중에서 선택'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 15d7ad43ce9120e97aba9119aff6a6c1a19f301f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: c74b1acdf3802ab680123cd9d676919fe47236e8
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596918"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051586"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>방법: ASP.NET AJAX 엔드포인트에 대한 HTTP POST 및 HTTP GET 요청 중에서 선택
 
@@ -75,7 +74,7 @@ WCF (Windows Communication Foundation)를 사용 하면 클라이언트 웹 사�
   
 3. 애플리케이션에서 .svc 확장명이 있는 service라는 새 파일을 만듭니다. 서비스에 대 한 적절 한 [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) 지시문 정보를 추가 하 여이 파일을 편집 합니다. <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>ASP.NET AJAX 끝점을 자동으로 구성 하기 위해 [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) 지시문에서를 사용 하도록 지정 합니다.  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
         language=c#
         Debug="true"
@@ -90,7 +89,7 @@ WCF (Windows Communication Foundation)를 사용 하면 클라이언트 웹 사�
   
 2. ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 서비스 URL을 입력하여 다른 ASP.NET AJAX 서비스와 동일한 방법으로 GET 작업을 통해 서비스를 사용할 수 있습니다. 예제는 [기본 AJAX 서비스](../samples/basic-ajax-service.md)를 참조 하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET AJAX용 WCF 서비스 만들기](creating-wcf-services-for-aspnet-ajax.md)
 - [방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

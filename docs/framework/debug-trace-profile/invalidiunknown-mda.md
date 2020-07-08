@@ -1,5 +1,6 @@
 ---
 title: invalidIUnknown MDA
+description: 네이티브 코드에서 관리 코드에 잘못 된 IUnknown 포인터를 전달할 때 활성화 되는 invalidIUnknown MDA (관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid IUnknown pointer
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 65d704463ed746390ff1710b590bf080013bf53d
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217359"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051729"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
 `invalidIUnknown` MDA(관리 디버깅 도우미)는 잘못된 `IUnknown` 포인터가 네이티브 코드에서 관리 코드로 전달될 때 활성화됩니다. `IUnknown` 인터페이스에 대해 쿼리될 때 `IUnknown`에서 성공을 반환하지 못합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "77217359"
 ## <a name="output"></a>출력  
  오류에 대한 설명입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +43,7 @@ ms.locfileid: "77217359"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

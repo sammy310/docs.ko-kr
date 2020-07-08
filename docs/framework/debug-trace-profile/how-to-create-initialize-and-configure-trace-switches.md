@@ -1,5 +1,6 @@
 ---
 title: '방법: 추적 스위치 만들기, 초기화 및 구성'
+description: .NET의 BooleanSwitch 및 시스템 진단 클래스를 사용 하 여 추적 스위치를 만들고 초기화 하 고 구성 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181834"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051326"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "79181834"
   
 1. 스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
   
-2. 추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성을](#configure)참조하십시오.  
+2. 추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조 하세요.  
   
      다음 코드에서는 각 형식당 하나씩, 두 개의 스위치를 만듭니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "79181834"
 ## <a name="configuring-trace-switches"></a>추적 스위치 구성  
  애플리케이션이 배포된 후 애플리케이션에서 추적 스위치를 구성하여 추적 출력을 사용하거나 사용하지 않도록 설정할 수도 있습니다. 스위치 구성은 스위치가 초기화된 후 외부 소스에서 해당 값을 변경하는 것을 의미합니다. 구성 파일을 사용하여 스위치 개체의 값을 변경할 수 있습니다. 추적 스위치를 구성하여 설정 및 해제하거나 해당 수준을 설정하고 수신기로 전달되는 메시지의 양과 형식을 결정합니다.  
   
- 스위치는 .config 파일을 사용하여 구성됩니다. 웹 애플리케이션의 경우 프로젝트와 연결된 Web.config 파일입니다. Windows 응용 프로그램에서 이 파일의 이름은 (응용 프로그램 이름).exe.config입니다. 배포된 응용 프로그램에서 이 파일은 실행 파일과 동일한 폴더에 있어야 합니다.  
+ 스위치는 .config 파일을 사용하여 구성됩니다. 웹 애플리케이션의 경우 프로젝트와 연결된 Web.config 파일입니다. Windows 응용 프로그램에서이 파일의 이름은 (응용 프로그램 이름) .exe.config입니다. 배포 된 응용 프로그램에서이 파일은 실행 파일과 동일한 폴더에 있어야 합니다.  
   
  애플리케이션은 스위치 인스턴스를 만드는 코드를 처음 실행할 때 명명된 스위치에 대한 추적 수준 정보를 구성 파일에서 확인합니다. 추적 시스템은 특정 스위치에 대해 한 번만, 즉 애플리케이션이 스위치를 처음 만들 때만 구성 파일을 검사합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "79181834"
  구성할 스위치의 이름을 지정하는 것은 물론 스위치의 값도 지정해야 합니다. 이 값은 정수입니다. <xref:System.Diagnostics.BooleanSwitch>에서 값 0은 **끄기**에 해당하고 0이 아닌 값은 **켜기**에 해당합니다. <xref:System.Diagnostics.TraceSwitch>에서 0, 1, 2, 3, 4는 각각 **끄기**, **오류**, **경고**, **정보** 및 **동사**에 해당합니다. 4보다 큰 숫자는 **동사**로 처리되고 0보다 작은 숫자는 **끄기**로 처리됩니다.  
   
 > [!NOTE]
-> .NET Framework 버전 2.0에서 텍스트를 사용하여 스위치의 값을 지정할 수 있습니다. 예를 들어 `true` a <xref:System.Diagnostics.BooleanSwitch> 또는 에 대한 열거형 값을 `Error` 나타내는 <xref:System.Diagnostics.TraceSwitch>텍스트의 경우 선은 `<add name="myTraceSwitch" value="Error" />` `<add name="myTraceSwitch" value="1" />`와 같습니다.  
+> .NET Framework 버전 2.0에서는 텍스트를 사용 하 여 스위치의 값을 지정할 수 있습니다. 예를 들어 `true` 의 경우 <xref:System.Diagnostics.BooleanSwitch> 또는와 같은 열거형 값을 나타내는 텍스트입니다 `Error` <xref:System.Diagnostics.TraceSwitch> . 줄은 `<add name="myTraceSwitch" value="Error" />` 와 동일 `<add name="myTraceSwitch" value="1" />` 합니다.  
   
  최종 사용자가 애플리케이션의 추적 스위치를 구성할 수 있으려면 애플리케이션에서 스위치에 대한 자세한 설명서를 제공해야 합니다. 어떤 스위치가 어떤 기능을 제어하는지 및 설정/해제하는 방법을 세부적으로 설정해야 합니다. 또한 주석에 적절한 도움말이 있는 .config 파일을 최종 사용자에게 제공해야 합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79181834"
   
          애플리케이션 구성 파일이 만들어져 열립니다. 이 파일은 루트 요소가 `<configuration>.`인 XML 문서입니다.  
   
-    - **Visual C#:****새 항목 추가** 대화 상자에서 **XML 파일**을 선택합니다. 이 파일 의 이름을 **app.config**. XML 편집기에서 XML 선언 후 다음 XML을 추가합니다.  
+    - **Visual C#:****새 항목 추가** 대화 상자에서 **XML 파일**을 선택합니다. 이 파일의 이름을 **app.config**합니다. Xml 편집기에서 XML 선언 뒤에 다음 XML을 추가 합니다.  
   
         ```xml  
         <configuration>  
@@ -123,7 +123,7 @@ ms.locfileid: "79181834"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)
 - [방법: 애플리케이션 코드에 추적 문 추가](how-to-add-trace-statements-to-application-code.md)

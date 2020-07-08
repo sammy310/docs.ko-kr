@@ -1,5 +1,6 @@
 ---
-title: '방법: 추적 소스 생성 및 초기화'
+title: '방법: 추적 소스 만들기 및 초기화'
+description: .NET에서 TraceSource 클래스를 사용 하 여 추적 소스를 만들고 초기화 합니다. 이 클래스는 이벤트와 데이터를 추적 하 고 정보 추적을 실행 하는 메서드를 제공 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +10,18 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: eeccad44bd2719a3cb2a721ba4e32a7bf477636f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 55d7854bff991ba185d3f5d6e4c6e7222c9e3039
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174734"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051274"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 생성 및 초기화
-<xref:System.Diagnostics.TraceSource> 클래스는 애플리케이션과 연결될 수 있는 추적을 만들기 위해 애플리케이션에서 사용됩니다. <xref:System.Diagnostics.TraceSource>에서는 이벤트를 쉽게 추적하고, 데이터를 추적하고, 정보 추적을 발행할 수 있는 추적 메서드를 제공합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
+# <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 만들기 및 초기화
+<xref:System.Diagnostics.TraceSource> 클래스는 애플리케이션과 연결될 수 있는 추적을 만들기 위해 애플리케이션에서 사용됩니다. <xref:System.Diagnostics.TraceSource>는 이벤트, 추적 데이터 및 문제 정보 추적을 쉽게 추적할 수 있는 추적 메서드를 제공 합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>구성 파일을 사용하여 추적 소스를 만들고 초기화하려면  
   
-1. Visual Studio 콘솔 응용 프로그램 프로젝트(.NET Framework)를 만들고 제공된 코드를 다음 코드로 바꿉니다. 이 코드는 오류 및 경고를 기록하며 그 중 일부는 콘솔에 출력하고 일부는 구성 파일의 항목에 의해 만들어진 myListener 파일에 출력합니다.  
+1. Visual Studio 콘솔 응용 프로그램 프로젝트 (.NET Framework)를 만들고 제공 된 코드를 다음 코드로 바꿉니다. 이 코드는 오류 및 경고를 기록하며 그 중 일부는 콘솔에 출력하고 일부는 구성 파일의 항목에 의해 만들어진 myListener 파일에 출력합니다.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
@@ -76,7 +76,7 @@ ms.locfileid: "79174734"
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

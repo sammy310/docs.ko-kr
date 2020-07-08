@@ -1,5 +1,6 @@
 ---
-title: '방법: 추적 및 디버그를 사용한 조건부 컴파일'
+title: '방법: 추적 및 디버그를 사용하여 조건부 컴파일'
+description: .NET 응용 프로그램을 컴파일할 때 추적 및 디버그 조건부 특성을 사용 하 여 조건부로 컴파일하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -10,14 +11,13 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217448"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051222"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용한 조건부 컴파일
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
 개발 중에 애플리케이션을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 애플리케이션에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 애플리케이션을 컴파일해야 합니다. 이렇게 하면 추적 코드를 애플리케이션의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
   
  추적 및 디버깅 메서드에는 연결된 조건부 특성이 포함됩니다. 예를 들어 추적에 대한 조건부 특성이 **true**이면 모든 trace 문이 어셈블리(컴파일된 .exe 파일 또는 .dll) 내에 포함되고, **Trace** 조건부 특성이 **false**이면 trace 문이 포함되지 않습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "77217448"
   
      예를 들어 명령줄에 입력된 다음 컴파일러 명령은 컴파일된 실행 파일에 추적 코드를 포함합니다.  
   
-     Visual Basic: **vbc-r:System.dll-d:TRACE = TRUE-d:DEBUG = FALSE MyApplication .vb**  
+     Visual Basic: **vbc -r:System.dll-d:TRACE = TRUE-d:DEBUG = FALSE MyApplication .vb**  
   
-     C#: **R:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
+     C #: **csc -r:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     > 애플리케이션 파일을 두 개 이상 컴파일하려면 파일 이름 사이에 공백을 남깁니다(예: **MyApplication1.vb MyApplication2.vb MyApplication3.vb** 또는 **MyApplication1.cs MyApplication2.cs MyApplication3.cs**).  
@@ -86,19 +86,19 @@ ms.locfileid: "77217448"
   
 소스 코드에서 컴파일러 지시문을 삭제합니다.  
   
-\- 또는-  
+\- 또는 -  
   
 컴파일러 지시문을 주석으로 처리합니다.  
   
 > [!NOTE]
 > 컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:** 을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)
 - [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
 - [추적 스위치](trace-switches.md)
 - [추적 수신기](trace-listeners.md)
-- [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 추적 문 추가](how-to-add-trace-statements-to-application-code.md)
 - [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [방법: 명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

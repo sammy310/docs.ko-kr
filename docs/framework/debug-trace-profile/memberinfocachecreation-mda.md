@@ -1,5 +1,6 @@
 ---
 title: memberInfoCacheCreation MDA
+description: MemberInfo 캐시가 생성 될 때 활성화 되는 .NET의 memberInfoCacheCreation MDA (관리 디버깅 도우미)를 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c48be7ac8632b8072981be01e01997ee8c34b6b3
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217306"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051144"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 `memberInfoCacheCreation` MDA(관리 디버깅 도우미)는 <xref:System.Reflection.MemberInfo> 캐시를 만들 때 활성화됩니다. 리소스 사용량이 많은 리플렉션 기능을 활용하는 프로그램을 나타냅니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "77217306"
 ## <a name="output"></a>출력  
  MDA에서 <xref:System.Reflection.MemberInfo> 캐시가 생성되었음을 표시하는 메시지를 출력합니다. 디버거를 사용하여 프로그램에서 리플렉션을 사용하는 위치를 보여 주는 스택 추적을 가져옵니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.MemberInfo>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

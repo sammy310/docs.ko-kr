@@ -4,12 +4,11 @@ description: Blazor를 사용 하 여 재사용 가능한 UI 구성 요소를 �
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378316"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051454"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor를 사용 하 여 재사용 가능한 UI 구성 요소 빌드
 
@@ -88,7 +87,7 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 |`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|없음|
 |`@page`      |구성 요소의 경로를 지정 합니다.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |구성 요소에 대 한 제네릭 형식 매개 변수를 지정 합니다.|`@typeparam TItem`|코드 숨김 사용|
-|`@using`     |범위에 가져올 네임 스페이스를 지정 합니다.|`@using MyComponentNamespace`|*Web.config* 에 네임 스페이스 추가|
+|`@using`     |범위에 가져올 네임 스페이스를 지정 합니다.|`@using MyComponentNamespace`|*web.config* 에서 네임 스페이스 추가|
 
 또한 Razor 구성 요소는 요소에 대 한 *지시문 특성* 을 광범위 하 게 사용 하 여 구성 요소가 컴파일되는 방법 (이벤트 처리, 데이터 바인딩, 구성 요소 & 요소 참조 등)의 다양 한 측면을 제어 합니다. 지시문 특성은 모두 괄호 안의 값이 선택 사항인 일반적인 제네릭 구문을 따릅니다.
 
@@ -98,7 +97,7 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 다음 표에서는 Blazor에 사용 되는 Razor 지시문에 대 한 다양 한 특성을 요약 합니다.
 
-|특성    |설명|예제|
+|특성    |Description|예제|
 |-------------|-----------|-------|
 |`@attributes`|특성 사전을 렌더링 합니다.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |양방향 데이터 바인딩을 만듭니다.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,12 +109,12 @@ Blazor (,, 등)에서 사용 하는 다양 한 지시문 특성은 `@onclick` `@
 
 *.Aspx* 및 *.ascx* 파일에 사용 되는 대부분의 구문에는 Razor의 병렬 구문이 있습니다. 다음은 ASP.NET Web Forms 및 Razor의 구문에 대 한 간단한 비교입니다.
 
-|기능                      |웹 양식           |구문               |Razor         |구문 |
+|기능                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |지시문                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |코드 블록                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|표현식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적`@`<br>뚜렷한`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|주석                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적`@`<br>뚜렷한`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|의견                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Razor 구성 요소 클래스에 멤버를 추가 하려면 지시문을 사용 `@code` 합니다. 이 기법은 `<script runat="server">...</script>` ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 블록을 사용 하는 것과 비슷합니다.
@@ -146,7 +145,7 @@ Razor는 c #을 기반으로 하기 때문에 c # 프로젝트 (*.csproj*) 내�
 ASP.NET Web Forms와 달리 Blazor의 구성 요소는 다음과 같습니다.
 
 - 요소 접두사를 사용 하지 않습니다 (예: `asp:` ).
-- 페이지 또는 *web.config*에서 등록이 필요 하지 않습니다.
+- 페이지 또는 *web.config*에서 등록 하지 않아도 됩니다.
 
 .NET 형식 처럼 Razor 구성 요소는 정확히 일치 해야 합니다. 구성 요소가 포함 된 어셈블리를 참조 하는 경우에는 구성 요소를 사용할 수 있습니다. 구성 요소의 네임 스페이스를 범위로 가져오려면 지시문을 적용 합니다 `@using` .
 
@@ -602,8 +601,8 @@ Blazor 구성 요소는 자식 콘텐츠를로 캡처하고 `RenderFragment` 구
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

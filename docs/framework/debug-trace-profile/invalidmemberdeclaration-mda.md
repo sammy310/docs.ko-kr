@@ -1,5 +1,6 @@
 ---
 title: invalidMemberDeclaration MDA
+description: 관리 되는 메서드를 호출 하지 않고 오류 HRESULT가 COM에 반환 되는 경우 호출 되는 invalidMemberDeclaration 관리 디버깅 도우미를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid member declaration
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 5dbfba2baec3263d91746c06379438e97a81f005
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216292"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051716"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
 `invalidMemberDeclaration` MDA(관리 디버깅 도우미)는 COM에서 호출할 멤버의 매개 변수를 마샬링하는 방법을 결정하는 동안 발생 하는 오류를 보고하기 위해 활성화됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "77216292"
 ## <a name="output"></a>출력  
  멤버 이름, 형식 이름 및 오류 메시지를 포함하는 정보 메시지입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +43,7 @@ ms.locfileid: "77216292"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

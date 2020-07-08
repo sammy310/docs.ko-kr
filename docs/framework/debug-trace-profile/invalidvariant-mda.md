@@ -1,5 +1,6 @@
 ---
 title: invalidVariant MDA
+description: 네이티브/관리 되지 않는 코드에서 관리 코드로의 호출에 잘못 된 변형이 발생 한 경우 호출 되는 invalidVariant 관리 디버깅 도우미를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid variant
@@ -8,12 +9,11 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: ab1233d9faa86ef1508fa8fe2b5af46cb37bd523
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216270"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051638"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant MDA
 `invalidVariant` MDA(관리 디버깅 도우미)는 네이티브 코드나 비관리 코드에서 관리 코드로 호출하는 동안 잘못된 `VARIANT` 구조가 발생할 때 활성화됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "77216270"
 ## <a name="output"></a>출력  
  런타임에서 비관리 모듈을 통해 관리 코드에 전달된 잘못된 `VARIANT`를 감지했음을 나타내는 MDA 메시지입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +43,7 @@ ms.locfileid: "77216270"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

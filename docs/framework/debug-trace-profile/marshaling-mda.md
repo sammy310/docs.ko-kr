@@ -1,5 +1,6 @@
 ---
 title: marshaling MDA
+description: CLR에서 메서드 매개 변수 또는 구조체 필드에 대 한 마샬링 정보를 설정 하는 경우 호출 되는 마샬링 MDA (관리 디버깅 도우미)를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 77811c526d1770b91b14aa1199dfc7b3177e6c59
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217329"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051157"
 ---
 # <a name="marshaling-mda"></a>marshaling MDA
 `marshaling` MDA(관리 디버깅 도우미)는 CLR이 메서드 매개 변수 또는 구조체 필드에 대한 마샬링 정보를 설정할 때 활성화됩니다. 이 MDA는 JIT 컴파일된 어셈블리에 대해 작동하지 않습니다.  
@@ -28,8 +28,8 @@ Marshaling from 'Char' to 'ANSI char'
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## <a name="configuration"></a>구성  
- MDA 구성을 통해 관련된 필드 또는 메서드 이름에 따라 보고된 마샬링 정보를 필터링할 수 있습니다.  다음 예제에서는 `methodFilter`, `fieldFilter` 및 `match` 요소를 사용하여 필터를 지정하는 방법을 보여 줍니다.  `name` 특성을 별표 (\*)로 설정 하면 모든 항목과 일치 합니다.  
+## <a name="configuration"></a>Configuration  
+ MDA 구성을 통해 관련된 필드 또는 메서드 이름에 따라 보고된 마샬링 정보를 필터링할 수 있습니다.  다음 예제에서는 `methodFilter`, `fieldFilter` 및 `match` 요소를 사용하여 필터를 지정하는 방법을 보여 줍니다.  특성을 `name` 별표 ()로 설정 \* 하면 모든 항목과 일치 합니다.  
   
 ```xml  
 <mdaConfig>  
@@ -48,7 +48,7 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
