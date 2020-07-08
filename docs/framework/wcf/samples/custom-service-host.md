@@ -2,12 +2,11 @@
 title: 사용자 지정 서비스 호스트
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 70d527599c310cba694624839f14a313f6000337
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
-ms.translationtype: MT
+ms.openlocfilehash: 8302c3c829883da954d200526ca641eb4c169f98
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728427"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052028"
 ---
 # <a name="custom-service-host"></a>사용자 지정 서비스 호스트
 이 샘플에서는 <xref:System.ServiceModel.ServiceHost> 클래스의 사용자 지정 파생 항목을 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 줍니다. 이 접근 방식을 사용하면 일반적인 방법으로 여러 서비스를 구성하는 대신 재사용 가능한 대체 방법이 제공됩니다. 또한 샘플에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory> 클래스를 사용하여 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 호스팅 환경에서 사용자 지정 ServiceHost를 사용하는 방법을 보여 줍니다.  
@@ -17,7 +16,7 @@ ms.locfileid: "82728427"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
@@ -32,7 +31,7 @@ ms.locfileid: "82728427"
 ## <a name="implementing-a-custom-servicehost"></a>사용자 지정 ServiceHost 구현
  <xref:System.ServiceModel.ServiceHost> 클래스는 상속자가 서비스의 런타임 동작을 변경하기 위해 재정의할 수 있는 여러 가지 유용한 가상 메서드를 노출합니다. 예를 들어, `ApplyConfiguration`() 메서드는 구성 저장소에서 서비스 구성 정보를 읽고 그에 따라 호스트의 <xref:System.ServiceModel.Description.ServiceDescription>을 변경합니다. 기본 구현은 응용 프로그램의 구성 파일에서 구성을 읽습니다. 사용자 지정 구현에서는 명령 코드를 사용하여 `ApplyConfiguration`을 추가로 변경하거나 기본 구성 저장소를 완전히 바꾸도록 <xref:System.ServiceModel.Description.ServiceDescription>()을 재정의할 수 있습니다. 예를 들어 응용 프로그램의 구성 파일 대신 데이터베이스에서 서비스의 끝점 구성을 읽습니다.  
   
- 이 샘플에서는이 동작이 서비스의 구성 파일에 명시적으로 추가 되지 않은 경우에도 ServiceMetadataBehavior (메타 데이터 게시를 사용 하도록 설정)를 추가 하는 사용자 지정 ServiceHost를 빌드하려고 합니다. 이를 수행 하려면에서 <xref:System.ServiceModel.ServiceHost> 상속 하는 새 클래스를 만들고 ( `ApplyConfiguration`)을 재정의 합니다.  
+ 이 샘플에서는이 동작이 서비스의 구성 파일에 명시적으로 추가 되지 않은 경우에도 ServiceMetadataBehavior (메타 데이터 게시를 사용 하도록 설정)를 추가 하는 사용자 지정 ServiceHost를 빌드하려고 합니다. 이를 수행 하려면에서 상속 하는 새 클래스를 만들고 <xref:System.ServiceModel.ServiceHost> `ApplyConfiguration` ()을 재정의 합니다.  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -57,7 +56,7 @@ class SelfDescribingServiceHost : ServiceHost
 }  
 ```  
   
- 응용 프로그램의 구성 파일에 제공 된 구성을 무시 하지 않기 때문에 `ApplyConfiguration`()를 재정의 하는 첫 번째 작업은 기본 구현을 호출 하는 것입니다. 이 메서드가 완료되면 다음 명령 코드를 사용하여 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 명령적으로 설명에 추가할 수 있습니다.  
+ 응용 프로그램의 구성 파일에 제공 된 구성을 무시 하지 않기 때문에 ()를 재정의 하는 첫 번째 작업은 `ApplyConfiguration` 기본 구현을 호출 하는 것입니다. 이 메서드가 완료되면 다음 명령 코드를 사용하여 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>를 명령적으로 설명에 추가할 수 있습니다.  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -119,7 +118,7 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- 사용자 지정 호스트는 기본 <xref:System.ServiceModel.ServiceHost> 클래스를 사용 하 여 서비스를 호스트 하는 것 처럼 응용 프로그램의 구성 파일에서 서비스의 끝점 구성을 계속 읽습니다. 그러나 사용자 지정 호스트의 내부에서 메타데이터 게시를 사용하도록 설정하는 논리를 추가했으므로 구성에서 메타데이터 게시 동작을 더 이상 명시적으로 사용하도록 설정할 필요가 없습니다. 이 접근 방식을 사용하면 여러 서비스가 포함된 애플리케이션을 빌드할 때 같은 구성 요소를 반복해서 작성하지 않고도 각 서비스에서 메타데이터 게시를 사용하도록 설정할 수 있다는 장점이 있습니다.  
+ 사용자 지정 호스트는 기본 클래스를 사용 하 여 서비스를 호스트 하는 것 처럼 응용 프로그램의 구성 파일에서 서비스의 끝점 구성을 계속 읽습니다 <xref:System.ServiceModel.ServiceHost> . 그러나 사용자 지정 호스트의 내부에서 메타데이터 게시를 사용하도록 설정하는 논리를 추가했으므로 구성에서 메타데이터 게시 동작을 더 이상 명시적으로 사용하도록 설정할 필요가 없습니다. 이 접근 방식을 사용하면 여러 서비스가 포함된 애플리케이션을 빌드할 때 같은 구성 요소를 반복해서 작성하지 않고도 각 서비스에서 메타데이터 게시를 사용하도록 설정할 수 있다는 장점이 있습니다.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS 또는 WAS 환경에서 사용자 지정 ServiceHost 사용  
  자체 호스팅 시나리오에서는 결국 애플리케이션 코드를 통해 서비스 호스트 인스턴스를 만들고 여는 작업을 수행하므로 사용자 지정 서비스 호스트 사용이 간단합니다. 그러나 IIS 또는 WAS 호스팅 환경에서 WCF 인프라는 들어오는 메시지에 응답 하 여 서비스의 호스트를 동적으로 인스턴스화합니다. 이 호스팅 환경에서 사용자 지정 서비스 호스트를 사용할 수도 있지만 ServiceHostFactory 형식의 추가 코드가 필요합니다. 다음 코드에서는 사용자 지정 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 `SelfDescribingServiceHost`의 파생 항목을 보여 줍니다.  
@@ -145,13 +144,13 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
  서비스 구현과 함께 사용자 지정 팩터리를 사용 하려면 서비스의 .svc 파일에 추가 메타 데이터를 추가 해야 합니다.  
   
-```xml
+```aspx-csharp
 <% @ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
                Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"
                language=c# Debug="true" %>
 ```
   
- 여기서는 `Factory` `@ServiceHost` 지시문에 추가 특성을 추가 하 고 사용자 지정 팩터리의 CLR 형식 이름을 특성의 값으로 전달 했습니다. IIS 또는 WAS가이 서비스에 대 한 메시지를 받으면 WCF 호스팅 인프라는 먼저 ServiceHostFactory의 인스턴스를 만든 다음를 호출 `ServiceHostFactory.CreateServiceHost()`하 여 서비스 호스트 자체를 인스턴스화합니다.  
+ 여기서는 `Factory` 지시문에 추가 특성을 추가 `@ServiceHost` 하 고 사용자 지정 팩터리의 CLR 형식 이름을 특성의 값으로 전달 했습니다. IIS 또는 WAS가이 서비스에 대 한 메시지를 받으면 WCF 호스팅 인프라는 먼저 ServiceHostFactory의 인스턴스를 만든 다음를 호출 하 여 서비스 호스트 자체를 인스턴스화합니다 `ServiceHostFactory.CreateServiceHost()` .  
   
 ## <a name="running-the-sample"></a>샘플 실행  
  이 샘플에서는 완벽 하 게 작동 하는 클라이언트 및 서비스 구현을 제공 하지만이 샘플에서는 사용자 지정 호스트를 사용 하 여 서비스의 런타임 동작을 변경 하는 방법을 보여 줍니다 .를 사용 하 여 다음 단계를 수행 합니다.  
@@ -168,11 +167,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 
 2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.
 
-3. 솔루션이 빌드된 후에는 Setup.exe를 실행 하 여 IIS 7.0에서 ServiceModelSamples 응용 프로그램을 설정 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 표시 됩니다.
+3. 솔루션이 빌드된 후 Setup.bat를 실행 하 여 IIS 7.0에서 ServiceModelSamples 응용 프로그램을 설정 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 표시 됩니다.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
-5. IIS 7.0 응용 프로그램을 제거 하려면 *Cleanup*을 실행 합니다.
+5. IIS 7.0 응용 프로그램을 제거 하려면 *Cleanup.bat*를 실행 합니다.
 
 ## <a name="see-also"></a>참조
 

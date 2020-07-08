@@ -2,12 +2,11 @@
 title: '방법: 신뢰할 수 있는 세션 내에서 메시지 교환'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579478"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052041"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>방법: 신뢰할 수 있는 세션 내에서 메시지 교환
 
@@ -27,13 +26,13 @@ ms.locfileid: "84579478"
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. *Web.config* `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> 신뢰할 수 있는 세션을 사용 하 고 필요한 메시지의 순차적 전달을 사용 하는에 대 한 끝점을 구성 하려면 web.config 파일을 만듭니다.
+1. *Web.config* 파일을 만들어 `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> 신뢰할 수 있는 세션을 사용 하 고 필요한 메시지의 순차적 전달을 사용 하는에 대 한 끝점을 구성 합니다.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. 줄이 포함 된 *서비스 .svc* 파일을 만듭니다.
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ ms.locfileid: "84579478"
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>신뢰할 수 있는 세션을 사용 하도록 WSHttpBinding으로 클라이언트 구성
 
-1. 명령줄에서 [ServiceModel Metadata 유틸리티 도구 (*svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 서비스 메타 데이터에서 코드를 생성 합니다.
+1. 명령줄에서 [ServiceModel Metadata 유틸리티 도구 (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 서비스 메타 데이터에서 코드를 생성 합니다.
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ ms.locfileid: "84579478"
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. 또한 *svcutil.exe* 는 클래스를 사용 하는 클라이언트에 대 한 구성을 생성 합니다 <xref:System.ServiceModel.WSHttpBinding> . Visual Studio를 사용 하는 경우 구성 파일의 이름을 *app.config* 로 설정 합니다.
+1. 또한 *Svcutil.exe* 는 클래스를 사용 하는 클라이언트에 대 한 구성을 생성 합니다 <xref:System.ServiceModel.WSHttpBinding> . Visual Studio를 사용 하는 경우 구성 파일의 이름을 *App.config* 합니다.
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -67,7 +66,7 @@ ms.locfileid: "84579478"
 
 ## <a name="example"></a>예제
 
-기본적으로 여러 시스템 제공 바인딩은 신뢰할 수 있는 세션을 지원합니다. 여기에는 다음이 포함됩니다.
+기본적으로 여러 시스템 제공 바인딩은 신뢰할 수 있는 세션을 지원합니다. 내용은 다음과 같습니다.
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -77,6 +76,6 @@ ms.locfileid: "84579478"
 
 신뢰할 수 있는 세션을 지 원하는 사용자 지정 바인딩을 만드는 방법에 대 한 예제는 [방법: HTTPS를 사용 하 여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기](how-to-create-a-custom-reliable-session-binding-with-https.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [신뢰할 수 있는 세션](reliable-sessions.md)
