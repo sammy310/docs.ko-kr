@@ -8,13 +8,14 @@ helpviewer_keywords:
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
 ms.openlocfilehash: c0c62f1999feaf591c512314515f01e83fa12591
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052093"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 [WPF 및 Win32 상호 운용성을](wpf-and-win32-interoperation.md)참조 하세요.
 
@@ -368,6 +369,6 @@ public partial class Window1 : Window {
 
 ![실행 중인 WPF 앱의 스크린샷](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
