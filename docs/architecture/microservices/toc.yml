@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Docker 컨테이너, 이미지 및 레지스트리'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에서 선택
+    - name: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
       href: net-core-net-framework-containers/index.md
       items:
         - name: 일반 지침
@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: 공식 .NET Docker 이미지
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: 컨테이너 기반 및 마이크로 서비스 기반 앱 설계
+    - name: 컨테이너 및 마이크로 서비스 기반 애플리케이션 설계
       href: architect-microservice-container-applications/index.md
       items:
         - name: 모놀리식 애플리케이션 컨테이너화
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Docker 기반 앱의 개발 프로세스
+    - name: Docker 기반 애플리케이션에 대한 개발 프로세스
       href: docker-application-development-process/index.md
       items:
         - name: Docker 앱에 대한 개발 워크플로
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: 다중 컨테이너 및 마이크로 서비스 기반 .NET 앱 디자인 및 개발
+    - name: 다중 컨테이너 및 마이크로서비스 기반 NET 애플리케이션 디자인 및 개발
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: 마이크로 서비스 지향 애플리케이션 디자인
@@ -118,14 +118,14 @@
         - name: 인프라 지속성 계층 디자인
           href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
         - name: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
-          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implementation-entity-framework-core.md
         - name: NoSQL 데이터베이스를 지속성 인프라로 사용
           href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
         - name: 마이크로 서비스 애플리케이션 레이어 및 웹 API 설계
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: 복원력 있는 앱 구현
+    - name: 복원력 있는 애플리케이션 구현
       href: implement-resilient-applications/index.md
       items:
         - name: 부분 실패 처리
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: 상태 모니터링
           href: implement-resilient-applications/monitor-app-health.md
-    - name: .NET 마이크로 서비스 및 웹앱 보호
+    - name: NET 마이크로서비스 및 웹 애플리케이션 보호
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: .NET 마이크로 서비스 및 웹 애플리케이션의 권한 부여 정보
