@@ -1,5 +1,6 @@
 ---
 title: 비트맵의 유형
+description: 비트맵 형식과 BMP, JPG, GIF, PNG 및 TIFF를 포함 하 여 지원 되는 GDI + 그래픽 파일 형식에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - jpeg files
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09b74ef476467b0bba5aac1f58db278b3898ef17
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914819"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174681"
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 사각형의 픽셀 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 개별 픽셀에 할당 되는 비트 수에 따라 해당 픽셀에 할당 될 수 있는 색의 수가 결정 됩니다. 예를 들어 각 픽셀이 4 비트로 표시 되는 경우 지정 된 픽셀에는 16 가지 다른 색 (2 ^ 4 = 16) 중 하나를 할당할 수 있습니다. 다음 표에서는 지정 된 비트 수로 표현 되는 픽셀에 할당할 수 있는 색 수의 몇 가지 예를 보여 줍니다.  
@@ -39,9 +40,9 @@ ms.locfileid: "69914819"
 |16|2^16 = 65,536|  
 |24|2^24 = 16,777,216|  
   
- 비트맵을 저장 하는 디스크 파일은 일반적으로 픽셀당 비트 수, 각 행의 픽셀 수 및 배열의 행 수와 같은 정보를 저장 하는 하나 이상의 정보 블록을 포함 합니다. 이러한 파일에는 색상표 라고도 하는 색 테이블이 포함 될 수도 있습니다. 색 테이블은 비트맵의 숫자를 특정 색에 매핑합니다. 다음 그림에서는 비트맵 및 색 표와 함께 확대 된 이미지를 보여 줍니다. 각 픽셀은 4 비트 숫자로 표시 되므로 색 테이블에 2 ^ 4 = 16 색이 있습니다. 테이블의 각 색은 24 비트 숫자로 표시 됩니다. 빨강의 경우 8 비트, 녹색의 경우 8 비트, 파랑의 경우 8 비트 숫자는 16 진수 (기 수 16) 형식으로 표시 됩니다. A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ 비트맵을 저장 하는 디스크 파일은 일반적으로 픽셀당 비트 수, 각 행의 픽셀 수 및 배열의 행 수와 같은 정보를 저장 하는 하나 이상의 정보 블록을 포함 합니다. 이러한 파일에는 색상표 라고도 하는 색 테이블이 포함 될 수도 있습니다. 색 테이블은 비트맵의 숫자를 특정 색에 매핑합니다. 다음 그림에서는 비트맵 및 색 표와 함께 확대 된 이미지를 보여 줍니다. 각 픽셀은 4 비트 숫자로 표시 되므로 색 테이블에 2 ^ 4 = 16 색이 있습니다. 테이블의 각 색은 24 비트 숫자로 표시 됩니다. 빨강의 경우 8 비트, 녹색의 경우 8 비트, 파란색의 경우 8 비트입니다. 숫자는 16 진수 (기 수 16) 형식으로 표시 됩니다. A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Bitmap 샘플](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![비트맵 샘플](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  이미지의 행 3, 열 5에서 픽셀을 확인 합니다. 비트맵의 해당 숫자는 1입니다. 색 테이블은 1은 빨간색을 나타내므로 픽셀이 빨강 임을 나타냅니다. 비트맵의 맨 위 행에 있는 모든 항목은 3입니다. 색 테이블은 3이 blue를 나타내므로 이미지의 맨 위 행에 있는 모든 픽셀이 파란색 임을 나타냅니다.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "69914819"
   
  인덱스를 색 테이블에 저장 하는 비트맵을 색상표 인덱스 비트맵 이라고 합니다. 일부 비트맵에서는 색 테이블이 필요 하지 않습니다. 예를 들어 비트맵이 픽셀당 24 비트를 사용 하는 경우 비트맵은 색 테이블에 인덱스가 아닌 색을 저장할 수 있습니다. 다음 그림에서는 색 표를 사용 하는 대신 색을 직접 저장 하는 비트맵 (픽셀 당 24 비트)을 보여 줍니다. 이 그림에서는 해당 이미지의 확대 된 보기도 보여 줍니다. 비트맵에서 FFFFFF는 흰색, FF0000는 빨강, 00FF00는 녹색, 0000FF>MICROSOFT는 blue를 나타냅니다.  
   
- ![Bitmap 샘플](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![비트맵 샘플](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>그래픽 파일 형식  
  비트맵을 디스크 파일에 저장 하는 데는 여러 가지 표준 형식이 있습니다. GDI +는 다음 단락에 설명 된 그래픽 파일 형식을 지원 합니다.  
@@ -66,11 +67,11 @@ ms.locfileid: "69914819"
   
  JPEG 이미지의 압축 수준은 구성 가능 하지만 더 높은 압축 수준 (작은 파일)으로 인해 정보가 손실 됩니다. 20:1 압축 비율은 종종 인간 눈동자에서 원래와 구별 하기 어려운 이미지를 생성 합니다. 다음 그림은 bmp 이미지와 해당 BMP 이미지에서 압축 된 두 개의 JPEG 이미지를 보여 줍니다. 첫 번째 JPEG의 압축 비율은 4:1이 고, 두 번째 JPEG의 압축 비율은 약 8:1입니다.  
   
- ![Filetype 샘플](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![파일 형식 샘플](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG 압축은 선 그리기, 단색 블록 및 선명한 경계의 경우 제대로 작동 하지 않습니다. 다음 그림에서는 두 개의 Jpeg와 GIF를 함께 사용 하는 BMP를 보여 줍니다. Jpeg와 GIF는 BMP에서 압축 되었습니다. 압축 비율은 GIF의 경우 4:1, 작은 JPEG의 경우 4:1, 큰 JPEG의 경우 8:3입니다. GIF는 선을 따라 선명한 경계를 유지 하지만 Jpeg는 경계를 흐리게 하는 경향이 있습니다.  
   
- ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![파일 형식](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG는 파일 형식이 아니라 압축 스키마입니다. JPEG 파일 교환 형식 (.JFIF)은 JPEG 체계에 따라 압축 된 이미지를 저장 하 고 전송 하는 데 일반적으로 사용 되는 파일 형식입니다. 웹 브라우저에서 표시 되는 .JFIF 파일은 .jpg 확장명을 사용 합니다.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "69914819"
 ### <a name="tag-image-file-format-tiff"></a>TIFF (태그 이미지 파일 형식)  
  TIFF는 다양 한 플랫폼 및 이미지 처리 응용 프로그램에서 지원 되는 유연 하 고 확장 가능한 형식입니다. TIFF 파일은 픽셀당 임의 수의 비트를 포함 하는 이미지를 저장할 수 있으며 다양 한 압축 알고리즘을 사용할 수 있습니다. 여러 이미지를 다중 페이지의 단일 TIFF 파일에 저장할 수 있습니다. 이미지와 관련 된 정보 (스캐너 제조업체, 호스트 컴퓨터, 압축 유형, 방향, 픽셀당 샘플 등)를 파일에 저장 하 고 태그를 사용 하 여 정렬할 수 있습니다. TIFF 형식은 승인 및 새 태그 추가에 필요에 따라 확장할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>

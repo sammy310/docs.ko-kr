@@ -1,15 +1,17 @@
 ---
 title: 상태 관리
-description: ASP.NET Web Forms 및 Blazor에서 상태를 관리 하는 다양 한 방법에 대해 알아봅니다.
+description: ASP.NET Web Forms 및의 상태를 관리 하는 다양 한 방법에 대해 알아봅니다 Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 7d2ac0e0f08723896b3b9b325ae545813d191400
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840786"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173096"
 ---
 # <a name="state-management"></a>상태 관리
 

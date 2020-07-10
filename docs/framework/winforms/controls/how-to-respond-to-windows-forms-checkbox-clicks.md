@@ -1,5 +1,6 @@
 ---
 title: CheckBox 클릭에 응답
+description: Windows Forms 응용 프로그램을 프로그래밍 하 여 확인란의 상태에 따라 몇 가지 작업을 수행 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 6ff20c443519446d3804b325924cb3c5cbedea97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58944bc421f990343b6c58484aaab3d79c8bda5e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141928"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174499"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>방법: Windows Forms CheckBox 클릭에 응답
-사용자가 Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤을 클릭할 <xref:System.Windows.Forms.Control.Click> 때마다 이벤트가 발생합니다. 확인란의 상태에 따라 응용 프로그램을 프로그래밍하여 일부 작업을 수행할 수 있습니다.  
+사용자가 Windows Forms 컨트롤을 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> <xref:System.Windows.Forms.Control.Click> 이벤트가 발생 합니다. 확인란의 상태에 따라 일부 작업을 수행 하도록 응용 프로그램을 프로그래밍할 수 있습니다.  
   
-### <a name="to-respond-to-checkbox-clicks"></a>확인란 클릭에 응답하려면  
+### <a name="to-respond-to-checkbox-clicks"></a>CheckBox 클릭에 응답 하려면  
   
-1. <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에서 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성을 사용하여 컨트롤의 상태를 확인하고 필요한 작업을 수행합니다.  
+1. <xref:System.Windows.Forms.Control.Click>이벤트 처리기에서 속성을 사용 <xref:System.Windows.Forms.CheckBox.Checked%2A> 하 여 컨트롤의 상태를 확인 하 고 필요한 작업을 수행 합니다.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +72,16 @@ ms.locfileid: "79141928"
     ```  
   
     > [!NOTE]
-    > 사용자가 <xref:System.Windows.Forms.CheckBox> 컨트롤을 두 번 클릭하려고 하면 각 클릭이 별도로 처리됩니다. 즉, 컨트롤은 <xref:System.Windows.Forms.CheckBox> 더블 클릭 이벤트를 지원하지 않습니다.  
+    > 사용자가 컨트롤을 두 번 클릭 하면 <xref:System.Windows.Forms.CheckBox> 각 클릭이 개별적으로 처리 됩니다. 즉, <xref:System.Windows.Forms.CheckBox> 컨트롤이 두 번 클릭 이벤트를 지원 하지 않습니다.  
   
     > [!NOTE]
-    > 속성이 <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> `true` (기본값) 경우, <xref:System.Windows.Forms.CheckBox> 속성이 클릭될 때 자동으로 선택되거나 지워집니다. 그렇지 않으면 <xref:System.Windows.Forms.CheckBox.Checked%2A> <xref:System.Windows.Forms.Control.Click> 이벤트가 발생할 때 속성을 수동으로 설정해야 합니다.  
+    > <xref:System.Windows.Forms.CheckBox.AutoCheck%2A>속성이 `true` (기본값) 이면가 <xref:System.Windows.Forms.CheckBox> 클릭 될 때가 자동으로 선택 되거나 선택 취소 됩니다. 그렇지 않으면 <xref:System.Windows.Forms.CheckBox.Checked%2A> 이벤트가 발생할 때 속성을 수동으로 설정 해야 합니다 <xref:System.Windows.Forms.Control.Click> .  
   
-     컨트롤을 <xref:System.Windows.Forms.CheckBox> 사용하여 작업 과정을 결정할 수도 있습니다.  
+     컨트롤을 사용 하 여 <xref:System.Windows.Forms.CheckBox> 작업 과정을 확인할 수도 있습니다.  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>확인란을 클릭할 때 작업 과정을 결정하려면  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>확인란을 클릭할 때 수행 되는 작업을 확인 하려면  
   
-1. 사례 문을 사용하여 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성 값을 쿼리하여 작업 과정을 결정합니다. <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이 `true`설정되면 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성은 선택 중인 확인란, 선택취소중인 상자 또는 옵션을 사용할 수 없음을 나타내기 위해 확인란이 흐리게 표시된 세 번째 확정되지 않은 상태를 나타내는 세 가지 가능한 값을 반환할 수 있습니다.  
+1. Case 문을 사용 하 여 속성 값을 쿼리하여 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 작업 과정을 확인할 수 있습니다. <xref:System.Windows.Forms.CheckBox.ThreeState%2A>속성이로 설정 된 경우이 `true` 속성은 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 선택 되는 상자, 선택 취소 되는 상자 또는 세 번째 비활성화 상태 (옵션을 사용할 수 없음을 나타내기 위해 흐리게 표시 되는 확인란)를 나타내는 세 가지 가능한 값을 반환할 수 있습니다.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,11 +134,11 @@ ms.locfileid: "79141928"
     ```  
   
     > [!NOTE]
-    > 속성이 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> `true`로 설정되면 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성이 `true` 둘 <xref:System.Windows.Forms.CheckState.Checked> <xref:System.Windows.Forms.CheckState.Indeterminate>다 및 에 대해 반환됩니다.  
+    > <xref:System.Windows.Forms.CheckBox.ThreeState%2A>속성이로 설정 되 면 `true` <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성은 `true` 및 둘 다에 대해를 반환 합니다 <xref:System.Windows.Forms.CheckState.Checked> <xref:System.Windows.Forms.CheckState.Indeterminate> .  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
 - [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [확인란 컨트롤](checkbox-control-windows-forms.md)
+- [CheckBox 컨트롤](checkbox-control-windows-forms.md)

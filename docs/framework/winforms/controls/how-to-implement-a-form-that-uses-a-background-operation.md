@@ -1,5 +1,6 @@
 ---
 title: '방법: 백그라운드 작업을 사용하는 양식 구현'
+description: 다른 작업이 진행 되는 동안 한 작업을 계속 실행할 수 있도록 백그라운드 작업을 사용 하는 Windows Form을 구현 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23bf4bc02fbf998d92dfce6d84e4e337cbefe7d9
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046199"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174525"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>방법: 백그라운드 작업을 사용하는 양식 구현
 다음 예제 프로그램은 피보나치 숫자를 계산하는 폼을 만듭니다. 계산은 사용자 인터페이스 스레드와 별개인 스레드에서 실행되므로 계산이 진행될 때 사용자 인터페이스가 지연 없이 계속 실행됩니다.  
   
  Visual Studio에서는 이 작업이 광범위하게 지원됩니다.  
   
- [또한 연습: 백그라운드 작업](walkthrough-implementing-a-form-that-uses-a-background-operation.md)을 사용 하는 폼 구현  
+ 또한 [연습: 백그라운드 작업을 사용하는 양식 구현](walkthrough-implementing-a-form-that-uses-a-background-operation.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -45,7 +46,7 @@ ms.locfileid: "70046199"
 > [!CAUTION]
 > 모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../standard/threading/managed-threading-best-practices.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>

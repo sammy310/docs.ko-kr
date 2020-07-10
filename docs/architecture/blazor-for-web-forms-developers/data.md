@@ -1,15 +1,17 @@
 ---
 title: 데이터 액세스 및 관리
-description: ASP.NET Web Forms 및 Blazor에서 데이터에 액세스 하 고 처리 하는 방법에 대해 알아봅니다.
+description: ASP.NET Web Forms 및에서 데이터에 액세스 하 고 처리 하는 방법에 대해 알아봅니다 Blazor .
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446480"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173306"
 ---
 # <a name="work-with-data"></a>데이터 작업
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-위의 코드는 지정 된 연결 문자열을 사용 하 여 SQL Server 데이터베이스에 연결 됩니다. *Appsettings* 파일, 환경 변수 또는 기타 구성 저장 위치에 연결 문자열을 저장 하 고 포함 된 문자열을 적절 하 게 바꿀 수 있습니다.
+위의 코드는 지정 된 연결 문자열을 사용 하 여 SQL Server 데이터베이스에 연결 됩니다. appsettings.js에 연결 문자열을 파일, 환경 변수 또는 기타 구성 저장소 위치 *에* 저장 하 고 포함 된 문자열을 적절 하 게 바꿀 수 있습니다.
 
 그런 다음, 다음 명령을 사용 하 여이 클래스에 적절 한 데이터베이스 테이블을 생성할 수 있습니다.
 
@@ -102,7 +104,7 @@ dotnet ef dbcontext scaffold "CONNECTION STRING" Microsoft.EntityFrameworkCore.S
 
 ## <a name="interact-with-web-services"></a>웹 서비스와 상호 작용
 
-ASP.NET가 처음 출시 될 때 웹 서버와 클라이언트가 데이터를 교환 하는 데는 SOAP 서비스가 선호 되는 방법입니다. 그 이후에는 대부분 변경 되었으며 서비스와의 기본 작용은 HTTP 클라이언트 상호 작용을 직접 이동 했습니다. ASP.NET Core 및 Blazor를 사용 하 여 클래스의 메서드에의 구성을 등록할 수 있습니다 `HttpClient` `Startup` `ConfigureServices` . HTTP 끝점과 상호 작용 해야 하는 경우이 구성을 사용 합니다. 다음 구성 코드를 고려 합니다.
+ASP.NET가 처음 출시 될 때 웹 서버와 클라이언트가 데이터를 교환 하는 데는 SOAP 서비스가 선호 되는 방법입니다. 그 이후에는 대부분 변경 되었으며 서비스와의 기본 작용은 HTTP 클라이언트 상호 작용을 직접 이동 했습니다. ASP.NET Core 및를 사용 하 여 Blazor 클래스의 메서드에의 구성을 등록할 수 있습니다 `HttpClient` `Startup` `ConfigureServices` . HTTP 끝점과 상호 작용 해야 하는 경우이 구성을 사용 합니다. 다음 구성 코드를 고려 합니다.
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-GitHub에서 데이터에 액세스 해야 할 때마다 이름이 인 클라이언트를 만듭니다 `github` . 클라이언트는 기본 주소를 사용 하 여 구성 되 고 요청 헤더는 적절 하 게 설정 됩니다. `IHttpClientFactory` `@inject` 속성의 지시문 또는 특성을 사용 하 여 Blazor 구성 요소에를 삽입 `[Inject]` 합니다. 명명 된 클라이언트를 만들고 다음 구문을 사용 하 여 서비스와 상호 작용 합니다.
+GitHub에서 데이터에 액세스 해야 할 때마다 이름이 인 클라이언트를 만듭니다 `github` . 클라이언트는 기본 주소를 사용 하 여 구성 되 고 요청 헤더는 적절 하 게 설정 됩니다. `IHttpClientFactory` Blazor `@inject` 속성의 지시문 또는 특성을 사용 하 여를 구성 요소에 삽입 `[Inject]` 합니다. 명명 된 클라이언트를 만들고 다음 구문을 사용 하 여 서비스와 상호 작용 합니다.
 
 ```razor
 @inject IHttpClientFactory factory

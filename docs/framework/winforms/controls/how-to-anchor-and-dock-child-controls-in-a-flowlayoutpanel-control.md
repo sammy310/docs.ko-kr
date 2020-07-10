@@ -1,5 +1,6 @@
 ---
 title: '방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹'
+description: Windows Forms FlowLayoutPanel 컨트롤에서 프로그래밍 방식으로 자식 컨트롤을 고정 및 도킹 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b4fb3bf6d148a526a75926bd67c1f967286332bf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046063"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174538"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹
 
@@ -22,11 +23,11 @@ ms.locfileid: "70046063"
 
 1. 폼에 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 만듭니다.
 
-2. <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowDirection.TopDown> <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 컨트롤의를 300로 설정 하 고를로 설정 합니다. <xref:System.Windows.Forms.FlowLayoutPanel>
+2. <xref:System.Windows.Forms.Control.Width%2A>컨트롤의를 <xref:System.Windows.Forms.FlowLayoutPanel> **300**로 설정 하 고 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 를로 설정 <xref:System.Windows.Forms.FlowDirection.TopDown> 합니다.
 
 3. 두 개의 <xref:System.Windows.Forms.Button> 컨트롤을 만들어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 배치합니다.
 
-4. 첫 번째 <xref:System.Windows.Forms.Control.Width%2A> 단추의를 **200**으로 설정 합니다.
+4. <xref:System.Windows.Forms.Control.Width%2A>첫 번째 단추의를 **200**으로 설정 합니다.
 
 5. 두 번째 단추의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.
 
@@ -42,11 +43,11 @@ ms.locfileid: "70046063"
 
 ## <a name="example"></a>예제
 
-다음 그림에서는 <xref:System.Windows.Forms.FlowLayoutPanel>의 파란색 단추를 기준으로 고정 및 도킹된 단추 4개를 보여 줍니다. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>이 <xref:System.Windows.Forms.FlowDirection.LeftToRight>인 경우
+다음 그림에서는 <xref:System.Windows.Forms.FlowLayoutPanel>의 파란색 단추를 기준으로 고정 및 도킹된 단추 4개를 보여 줍니다. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>은 <xref:System.Windows.Forms.FlowDirection.LeftToRight>입니다.
 
 ![FlowLayoutPanel 고정](./media/net-flpanchorexp.gif "NET_FLPanchorExp")
 
-다음 그림에서는 <xref:System.Windows.Forms.FlowLayoutPanel>의 파란색 단추를 기준으로 고정 및 도킹된 단추 4개를 보여 줍니다. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>이 <xref:System.Windows.Forms.FlowDirection.TopDown>인 경우
+다음 그림에서는 <xref:System.Windows.Forms.FlowLayoutPanel>의 파란색 단추를 기준으로 고정 및 도킹된 단추 4개를 보여 줍니다. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>은 <xref:System.Windows.Forms.FlowDirection.TopDown>입니다.
 
 ![FlowLayoutPanel 고정](./media/vs-flpanchor2.gif "VS_FLPanchor2")
 
@@ -61,7 +62,7 @@ ms.locfileid: "70046063"
 
 - System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - [FlowLayoutPanel 컨트롤 개요](flowlayoutpanel-control-overview.md)

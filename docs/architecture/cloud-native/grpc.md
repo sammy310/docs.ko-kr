@@ -2,13 +2,16 @@
 title: gRPC
 description: GRPC, 클라우드 네이티브 응용 프로그램에서의 역할 및 HTTP RESTful 통신과 어떻게 다른 지에 대해 알아봅니다.
 author: robvet
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201329"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173161"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -81,7 +84,7 @@ SDK에는 끝점 라우팅, 기본 제공 IoC 및 로깅에 대 한 도구가 �
 - 지점 간 실시간 통신-gRPC는 폴링을 사용 하지 않고 실시간으로 메시지를 푸시 하 고 양방향 스트리밍을 매우 잘 지원 합니다.
 - 네트워크 제한 환경 – 이진 gRPC 메시지는 항상 동등한 텍스트 기반 JSON 메시지 보다 작습니다.
 
-이 문서를 작성할 당시에는 gRPC가 백 엔드 서비스에서 주로 사용 됩니다. 대부분의 최신 브라우저는 프런트 엔드 gRPC 클라이언트를 지 원하는 데 필요한 HTTP/2 제어 수준을 제공할 수 없습니다. 즉, JavaScript 또는 Blazor Weasembom기술로 빌드된 브라우저 기반 앱에서 gRPC 통신을 가능 하 게 하는 [초기 이니셔티브](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) 가 있습니다. [.Net 용 grpc-웹](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) 을 사용 하면 ASP.NET Core grpc 앱이 브라우저 앱에서 grpc 기능을 지원할 수 있습니다.
+이 문서를 작성할 당시에는 gRPC가 백 엔드 서비스에서 주로 사용 됩니다. 대부분의 최신 브라우저는 프런트 엔드 gRPC 클라이언트를 지 원하는 데 필요한 HTTP/2 제어 수준을 제공할 수 없습니다. 즉, JavaScript 또는 기술을 사용 하 여 빌드된 브라우저 기반 앱에서 gRPC 통신을 가능 하 게 하는 [초기 이니셔티브](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) 가 있습니다 Blazor WebAssembly . [.Net 용 grpc-웹](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) 을 사용 하면 ASP.NET Core grpc 앱이 브라우저 앱에서 grpc 기능을 지원할 수 있습니다.
 
 - 강력 하 게 형식화 된 코드 생성 클라이언트
 - Compact Protobuf 메시지

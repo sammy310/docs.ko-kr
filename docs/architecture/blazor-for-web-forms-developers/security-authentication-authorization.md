@@ -1,17 +1,19 @@
 ---
-title: '보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여'
-description: ASP.NET Web Forms 및 Blazor에서 인증 및 권한 부여를 처리 하는 방법에 대해 알아봅니다.
+title: '보안: ASP.NET Web Forms 및의 인증 및 권한 부여Blazor'
+description: ASP.NET Web Forms 및에서 인증 및 권한 부여를 처리 하는 방법에 대해 알아봅니다 Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: c524d8ee76d67654236cf71537bfd5c9f33daef7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cacd6df15c7eb18c136491d0667f69b9c2036d66
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840804"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173031"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>보안: ASP.NET Web Forms 및의 인증 및 권한 부여Blazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 

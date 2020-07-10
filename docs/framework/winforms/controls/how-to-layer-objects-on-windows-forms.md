@@ -1,5 +1,6 @@
 ---
 title: 개체 계층화
+description: Windows Forms 컨트롤과 자식 폼에서 개체를 계층화 하 여 보다 복잡 한 사용자 인터페이스를 만드는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736344"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174512"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>방법: Windows Forms에서 개체 계층화
 
@@ -34,9 +35,9 @@ ms.locfileid: "76736344"
 
 ## <a name="to-layer-controls-programmatically"></a>프로그래밍 방식으로 컨트롤을 계층화 하려면
 
-<xref:System.Windows.Forms.Control.BringToFront%2A> 및 <xref:System.Windows.Forms.Control.SendToBack%2A> 메서드를 사용 하 여 컨트롤의 z 순서를 조작 합니다.
+<xref:System.Windows.Forms.Control.BringToFront%2A>및 메서드를 사용 <xref:System.Windows.Forms.Control.SendToBack%2A> 하 여 컨트롤의 z 순서를 조작 합니다.
 
-예를 들어 <xref:System.Windows.Forms.TextBox> 컨트롤 `txtFirstName`다른 컨트롤 아래에 있고 맨 위에 있는 경우 다음 코드를 사용 합니다.
+예를 들어, <xref:System.Windows.Forms.TextBox> 컨트롤이 `txtFirstName` 다른 컨트롤 아래에 있는 경우 맨 위에 표시 하려면 다음 코드를 사용 합니다.
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +52,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms는 *제어 제약*을 지원 합니다. 컨트롤 포함에는 포함 하는 컨트롤 내에 많은 컨트롤을 배치 하는 것이 포함 됩니다 (예: <xref:System.Windows.Forms.GroupBox> 컨트롤 내의 여러 <xref:System.Windows.Forms.RadioButton> 컨트롤). 그런 다음 포함 하는 컨트롤 내에서 컨트롤을 계층화 할 수 있습니다. 그룹 상자를 이동 하면 컨트롤이 내부에 포함 되어 있기 때문에 컨트롤도 이동 합니다.
+> Windows Forms는 *제어 제약*을 지원 합니다. 컨트롤 포함에는 컨트롤 내의 많은 컨트롤과 같이 포함 하는 컨트롤 내에 많은 컨트롤을 배치 하는 작업이 포함 됩니다 <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> . 그런 다음 포함 하는 컨트롤 내에서 컨트롤을 계층화 할 수 있습니다. 그룹 상자를 이동 하면 컨트롤이 내부에 포함 되어 있기 때문에 컨트롤도 이동 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

@@ -1,17 +1,20 @@
 ---
-title: ASP.NET Web Forms 개발자를 위한 Blazor 소개
-description: .NET으로 전체 스택 웹 앱을 Blazor 하 고 작성 하는 방법을 소개 합니다.
+title: BlazorASP.NET Web Forms 개발자를 위한 소개
+description: Blazor.Net을 사용한 전체 스택 웹 앱 소개 및 작성
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841932"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173135"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 개발자를 위한 Blazor 소개
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms 개발자를 위한 소개
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -34,7 +37,7 @@ ASP.NET Web Forms 프레임 워크는 .NET Framework 먼저 2002로 제공 되�
 
 .NET 커뮤니티는 플랫폼 간 지원과 오픈 소스를 모두 받아들이고 했습니다. .NET Core는 Windows, macOS 및 다양 한 Linux 배포를 비롯 하 여 다양 한 플랫폼에서 실행 되는 .NET의 오픈 소스 및 플랫폼 간 구현입니다. Xamarin은 .NET의 오픈 소스 버전인 Mono를 제공 합니다. Mono는 Android, iOS 및 감시 및 스마트 Tv를 비롯 한 다양 한 다른 폼 팩터를 실행 합니다. Microsoft는 [.net 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) 가 .net Core 및 Mono를 "모든 곳에서 사용 하 고 일관 된 런타임 동작 및 개발자 환경을 사용 하는 단일 .net 런타임 및 프레임 워크"로 조정 한다는 것을 발표 했습니다.
 
-는 오픈 소스 및 플랫폼 간 지원으로 이동 하 여 Web Forms 혜택을 ASP.NET? 불행 하 게 대답 한 것은 아닙니다. 또는 적어도 나머지 플랫폼과 동일한 익스텐트가 아닙니다. .NET 팀은 [최근에](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) ASP.NET Web Forms .net Core 또는 .net 5로 이식할 수 없다는 것을 명확 하 게 만들었습니다. 왜일까요?
+는 오픈 소스 및 플랫폼 간 지원으로 이동 하 여 Web Forms 혜택을 ASP.NET? 불행 하 게 대답 한 것은 아닙니다. 또는 적어도 나머지 플랫폼과 동일한 익스텐트가 아닙니다. .NET 팀은 [최근에](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) ASP.NET Web Forms .net Core 또는 .net 5로 이식할 수 없다는 것을 명확 하 게 만들었습니다. 그 이유는 무엇인가요?
 
 ASP.NET Web Forms에 대 한 .NET Core의 초기 일에 노력 했습니다. 필요한 주요 변경 수를 너무 많이 찾았습니다. 여기서는 Microsoft의 경우에도 동시에 지원할 수 있는 웹 프레임 워크 수에 제한이 있습니다. 커뮤니티의 누군가가 ASP.NET Web Forms의 오픈 소스 및 플랫폼 간 버전을 만드는 이유를 발생 시킬 수 있습니다. [ASP.NET Web Forms에 대 한 소스 코드](https://github.com/microsoft/referencesource) 는 참조 형태로 공개적으로 사용할 수 있게 되었습니다. 그러나이 경우에는 ASP.NET이 Windows 전용으로 유지 되 고 오픈 소스 기여 모델 없이는 Web Forms 것 처럼 보입니다. 시나리오에 대 한 플랫폼 간 지원 또는 오픈 소스가 중요할 경우에는 새로운 항목을 확인 해야 합니다.
 
@@ -50,15 +53,15 @@ ASP.NET Web Forms에 대 한 .NET Core의 초기 일에 노력 했습니다. 필
 
 하지만 서로 다른 두 플랫폼과 에코 시스템 (.NET 및 JavaScript)를 브리징 하는 것은 비용이 듭니다. 다른 언어, 프레임 워크 및 도구를 사용 하는 두 병렬 환경에서 전문 지식이 필요 합니다. 클라이언트와 서버 간에 코드 및 논리를 쉽게 공유할 수 없어 중복 및 엔지니어링 오버 헤드가 발생 합니다. 또한 변화 하는 속도에서 진화 하는 기록을 포함 하는 JavaScript 에코 시스템을 유지 하기 어려울 수 있습니다. 프런트 엔드 프레임 워크 및 빌드 도구 기본 설정은 빠르게 변경 됩니다. 업계에서는 Grunt에서 Gulp로의 진행을 관찰 했습니다. JQuery, 녹아웃, 각도, 반응, Vue 등의 프런트 엔드 프레임 워크에서 동일한 restless 변동 (code churn)이 발생 했습니다. 그러나 JavaScript의 browser monopoly 지정 된 경우에는 거의 선택 하지 않았습니다. 즉, 웹 커뮤니티를 함께 연결 하 여 *miracle* 발생 시킬 수 있습니다.
 
-## <a name="webassembly-fulfills-a-need"></a>요구 사항이 충족 되는 경우
+## <a name="webassembly-fulfills-a-need"></a>WebAssembly요구를 충족 합니다.
 
-2015에서 주요 브라우저 공급 업체는 W3C 커뮤니티 그룹을 강제로 실행 하 여 Weasembmboma 라는 새로운 오픈 웹 표준을 만듭니다. Weasembomis는 웹에 대 한 바이트 코드입니다. 코드를 Weasembomambmbomommbsembambmbambmbambambambambambamboma로 컴파일할 수 있으면 C/C++에 초점을 맞춘 초기 노력 그 결과, 플러그 인을 사용 하지 않고 브라우저에서 직접 기본 3D 그래픽 엔진을 실행 하는 것이 크게 데모 였습니다. 모든 주요 브라우저에서 표준화 되 고 구현 되었습니다.
+2015에서 주요 브라우저 공급 업체는 W3C 커뮤니티 그룹을 강제로 실행 하 여 라는 새 개방형 웹 표준을 만듭니다 WebAssembly . WebAssembly는 웹의 바이트 코드입니다. 코드를로 컴파일할 수 있는 경우에 WebAssembly 는 모든 플랫폼의 모든 브라우저에서 거의 기본 속도로 실행할 수 있습니다. C/c + +에 초점을 맞춘 초기 노력. 그 결과, 플러그 인을 사용 하지 않고 브라우저에서 직접 기본 3D 그래픽 엔진을 실행 하는 것이 크게 데모 였습니다. WebAssembly는 모든 주요 브라우저에서 표준화 되 고 구현 되었습니다.
 
-Weasembmbis에서 .NET을 실행 하는 작업은 2017 년 말에 발표 되었으며, .NET 5의 지원을 포함 하 여 2020에서 제공 될 예정입니다. 브라우저에서 직접 .NET 코드를 실행 하는 기능을 통해 .NET을 통한 전체 스택 웹 개발을 수행할 수 있습니다.
+에서 .NET을 실행 하 WebAssembly 는 작업은 2017 년대 이후 발표 되었으며, .net 5의 지원을 포함 하 여 2020에서 제공 될 예정입니다. 브라우저에서 직접 .NET 코드를 실행 하는 기능을 통해 .NET을 통한 전체 스택 웹 개발을 수행할 수 있습니다.
 
 ## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: .NET을 사용 하 여 전체 스택 웹 개발
 
-브라우저에서 .NET 코드를 실행 하는 기능은 클라이언트 쪽 웹 앱을 만들기 위한 종단 간 환경을 제공 하지 않습니다. 여기서 Blazor가 제공 됩니다. Blazor는 JavaScript 대신 C#을 기반으로 하는 클라이언트 쪽 웹 UI 프레임워크입니다. Blazor는 Weasembmba를 통해 브라우저에서 직접 실행할 수 있습니다. 브라우저 플러그 인은 필요 하지 않습니다. 또는 Blazor apps는 .NET Core에서 서버 쪽을 실행 하 고 브라우저를 사용 하 여 실시간 연결을 통해 모든 사용자 상호 작용을 처리할 수 있습니다.
+브라우저에서 .NET 코드를 실행 하는 기능은 클라이언트 쪽 웹 앱을 만들기 위한 종단 간 환경을 제공 하지 않습니다. 여기서가 Blazor 제공 됩니다. Blazor는 JavaScript 대신 c #을 기반으로 하는 클라이언트 쪽 웹 UI 프레임 워크입니다. Blazor는를 통해 브라우저에서 직접 실행할 수 있습니다 WebAssembly . 브라우저 플러그 인은 필요 하지 않습니다. 또는 Blazor 앱이 .Net Core에서 서버 쪽을 실행 하 고 브라우저를 사용 하 여 실시간 연결을 통해 모든 사용자 상호 작용을 처리할 수 있습니다.
 
 Blazor에는 Visual Studio 및 Visual Studio Code에서 뛰어난 도구가 지원 됩니다. 프레임 워크는 전체 UI 구성 요소 모델을 포함 하 고에 대 한 기본 제공 기능을 포함 합니다.
 
@@ -69,18 +72,18 @@ Blazor에는 Visual Studio 및 Visual Studio Code에서 뛰어난 도구가 지�
 - 브라우저 내 디버깅
 - JavaScript interop
 
-Blazor는 ASP.NET Web Forms와 공통적으로 많이 사용 됩니다. 두 프레임 워크는 모두 구성 요소 기반의 이벤트 구동 상태 저장 UI 프로그래밍 모델을 제공 합니다. 주요 아키텍처 차이점은 ASP.NET Web Forms 서버 에서만 실행 된다는 것입니다. Blazor는 클라이언트에서 브라우저에서 실행할 수 있습니다. 그러나 ASP.NET Web Forms 백그라운드에서 제공 되는 경우에는 Blazor에 익숙할 것입니다. Blazor는 클라이언트 쪽 개발과 .NET의 오픈 소스 플랫폼 간 미래를 활용 하는 방법을 찾고 있는 ASP.NET Web Forms 개발자를 위한 자연 스러운 솔루션입니다.
+BlazorASP.NET Web Forms와 공통적으로 많이 사용 됩니다. 두 프레임 워크는 모두 구성 요소 기반의 이벤트 구동 상태 저장 UI 프로그래밍 모델을 제공 합니다. 주요 아키텍처 차이점은 ASP.NET Web Forms 서버 에서만 실행 된다는 것입니다. Blazor브라우저에서 클라이언트를 실행할 수 있습니다. 그러나 ASP.NET Web Forms 백그라운드에서 제공 되는 경우에는 많은 부분이 있습니다 Blazor . Blazor는 클라이언트 쪽 개발과 .NET의 오픈 소스 플랫폼 간 미래를 활용 하는 방법을 찾는 ASP.NET Web Forms 개발자를 위한 자연 스러운 솔루션입니다.
 
-이 책에서는 Web Forms 개발자를 ASP.NET 하는 데 특히 적합 한 Blazor를 소개 합니다. 각 Blazor 개념은 유사한 ASP.NET Web Forms 기능 및 관행의 맥락에서 제공 됩니다. 이 설명서의 끝 부분에서는 다음을 이해 하 게 됩니다.
+이 책에서는 Web Forms 개발자에 게 특히 ASP.NET에 대 한 소개를 제공 Blazor 합니다. 각 Blazor 개념은 유사한 ASP.NET Web Forms 기능 및 관행의 맥락에서 제공 됩니다. 이 설명서의 끝 부분에서는 다음을 이해 하 게 됩니다.
 
-- Blazor apps를 빌드하는 방법.
-- Blazor 작동 방식
-- Blazor는 .NET Core와 관련 됩니다.
-- 기존 ASP.NET Web Forms 앱을 Blazor으로 마이그레이션하기 위한 적절 한 전략 (해당 하는 경우).
+- 앱을 빌드하는 방법 Blazor
+- 가 Blazor 작동 합니다.
+- 는 Blazor .Net Core와 관련 됩니다.
+- 기존 ASP.NET Web Forms 앱을 적절 한 위치로 마이그레이션하기 위한 적절 한 전략 Blazor
 
 ## <a name="get-started-with-blazor"></a>Blazor 시작
 
-Blazor 시작 하기는 쉽습니다. <https://blazor.net>로 이동 하 여 링크를 따라 적절 한 .NET Core SDK 및 Blazor 프로젝트 템플릿을 설치 합니다. Visual Studio 또는 Visual Studio Code에서 Blazor 도구를 설정 하는 방법에 대 한 지침을 찾을 수도 있습니다.
+시작 하기 Blazor 는 쉽습니다. 로 이동 하 여 <https://blazor.net> 링크를 따라 적절 한 .NET Core SDK 및 Blazor 프로젝트 템플릿을 설치 합니다. 또한 Blazor Visual Studio 또는 Visual Studio Code에서 도구를 설정 하는 방법에 대 한 지침을 찾을 수 있습니다.
 
 >[!div class="step-by-step"]
 >[이전](index.md)
