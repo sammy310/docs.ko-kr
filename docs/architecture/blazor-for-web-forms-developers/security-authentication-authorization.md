@@ -1,23 +1,25 @@
 ---
-title: '보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여'
-description: ASP.NET Web Forms 및 Blazor에서 인증 및 권한 부여를 처리 하는 방법에 대해 알아봅니다.
+title: '보안: ASP.NET Web Forms 및의 인증 및 권한 부여Blazor'
+description: ASP.NET Web Forms 및에서 인증 및 권한 부여를 처리 하는 방법에 대해 알아봅니다 Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: c524d8ee76d67654236cf71537bfd5c9f33daef7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cacd6df15c7eb18c136491d0667f69b9c2036d66
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840804"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173031"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="9b3c7-103">보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여</span><span class="sxs-lookup"><span data-stu-id="9b3c7-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="7c6f3-103">보안: ASP.NET Web Forms 및의 인증 및 권한 부여Blazor</span><span class="sxs-lookup"><span data-stu-id="7c6f3-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="9b3c7-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="9b3c7-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="7c6f3-104">*이 콘텐츠는 곧 제공 될 예정입니다.*</span><span class="sxs-lookup"><span data-stu-id="7c6f3-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="9b3c7-105">[이전](config.md)
->[다음](migration.md)</span><span class="sxs-lookup"><span data-stu-id="9b3c7-105">[Previous](config.md)
+><span data-ttu-id="7c6f3-105">[이전](config.md)
+>[다음](migration.md)</span><span class="sxs-lookup"><span data-stu-id="7c6f3-105">[Previous](config.md)
 [Next](migration.md)</span></span>
