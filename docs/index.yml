@@ -10,13 +10,13 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 04/21/2020
-  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
-  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+  ms.date: 07/10/2020
+  ms.openlocfilehash: d6ff1e976117bedd4a64b47a9856bbd64dff0080
+  ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82624932"
+  ms.lasthandoff: 07/10/2020
+  ms.locfileid: "86226649"
 highlightedContent:
   items:
   - title: .NET 다운로드
@@ -34,6 +34,9 @@ highlightedContent:
   - title: .NET의 새로운 기능 문서
     itemType: whats-new
     url: whats-new/index.yml
+  - title: .NET 개발자용 Azure
+    itemType: overview
+    url: azure/index.yml
 conceptualContent:
   title: '.NET: 비어 있음. 플랫폼 간에 사용할 수 있습니다. 오픈 소스.'
   summary: 웹, 모바일, 데스크톱, 게임, IoT 등 모든 앱을 빌드하기 위한 개발자 플랫폼. Windows, Linux, macOS에서 지원됩니다.
@@ -156,7 +159,7 @@ additionalContent:
       - url: /aspnet/core/tutorials
         text: ASP.NET Core 자습서
       - url: /aspnet/core
-        text: 'ASP.NET Core란? '
+        text: ASP.NET Core란?
       - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
         text: Visual Studio의 ASP.NET Core
       - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
