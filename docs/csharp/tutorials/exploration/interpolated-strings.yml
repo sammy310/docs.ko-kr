@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: a82fe645524e526d0373a4e4733c2fef9ca7c14f
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82861000"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174116"
 items:
 - durationInMinutes: 2
   content: >
@@ -53,7 +53,7 @@ items:
     이전 단계에서는 한 문자열을 다른 문자열 내에 삽입하는 데 문자열 보간을 사용했습니다. 보간된 문자열 식의 일부인 각 보간 식은 어떤 데이터 형식이든 될 수 있습니다. 보간된 문자열에 다양한 데이터 형식의 식 값을 포함시켜 보겠습니다.
 
 
-    다음 예제에서는 먼저 `Name`, `Price` 및 `perPackage` 멤버를 포함한 [튜플](../../tuples.md)을 정의합니다. 대화형 창에서 다음 코드를 실행합니다.
+    다음 예제에서는 먼저 `Name`, `Price` 및 `perPackage` 멤버를 포함한 [튜플](../../language-reference/builtin-types/value-tuples.md)을 정의합니다. 대화형 창에서 다음 코드를 실행합니다.
 
 
     ```csharp
