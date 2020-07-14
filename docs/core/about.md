@@ -2,14 +2,17 @@
 title: .NET Core 개요
 description: .NET Core의 특성 및 구성을 알아보고 다른 .NET 구현과 비교합니다.
 ms.date: 03/26/2020
-ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144528"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100732"
 ---
 # <a name="net-core-overview"></a>.NET Core 개요
+
+> [!div class="button"]
+> [.NET Core 다운로드](https://dotnet.microsoft.com/download)
 
 .NET Core에는 다음과 같은 특징이 있습니다.
 

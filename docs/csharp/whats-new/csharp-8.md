@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895429"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174733"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -194,7 +194,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>튜플 패턴
 
-일부 알고리즘은 여러 입력을 사용합니다. **튜플 패턴**을 사용하면 [튜플](../tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.  다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다. 
+일부 알고리즘은 여러 입력을 사용합니다. **튜플 패턴**을 사용하면 [튜플](../language-reference/builtin-types/value-tuples.md)로 표현되는 여러 값에 따라 전환할 수 있습니다.  다음 코드는 게임 ‘가위, 바위, 보’에 대한 전환 식을 보여 줍니다.
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -322,7 +322,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>정적 로컬 함수
 
-이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다.
+이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421`, “A static local function can't contain a reference to \<variable>”(정적 로컬 함수는 \<variable> 참조를 포함할 수 없습니다.)이(가) 생성됩니다.
 
 다음과 같은 코드를 생각해 볼 수 있습니다. 여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다. 따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.
 

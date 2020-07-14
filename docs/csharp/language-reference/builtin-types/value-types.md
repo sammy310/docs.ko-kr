@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a05b2b0f3f2a8377fdba6144b8aeb12bdee1086
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398270"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86172953"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -56,7 +56,7 @@ C#은 *단순 형식*이라고도 하는 다음과 같은 기본 제공 값 형�
 
 - 해당 피연산자가 모두 단순 형식의 상수인 상수 식은 컴파일 시간에 계산됩니다.
 
-C# 7.0부터는 C#에서 [값 튜플](../../tuples.md)을 지원합니다. 값 튜플은 단순 형식이 아닌 값 형식입니다.
+C# 7.0부터는 C#에서 [값 튜플](value-tuples.md)을 지원합니다. 값 튜플은 단순 형식이 아닌 값 형식입니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

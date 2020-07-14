@@ -4,12 +4,12 @@ description: 어떤 Azure 마이그레이션 경로가 ASP.NET 웹 애플리케�
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81433351"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174298"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>올바른 Azure 호스팅 옵션 선택
 
@@ -46,7 +46,7 @@ ms.locfileid: "81433351"
 
 ## <a name="networking-and-security-considerations"></a>네트워킹 및 보안 고려 사항
 
-Microsoft Azure와 같은 퍼블릭 클라우드에 애플리케이션을 배포하는 경우 [Azure와 온-프레미스 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 또는 [Azure와 인터넷 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)와 같은 [네트워크 DMZ를 생성하여](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/) 특정 네트워크를 격리하고 보호할 수 있습니다. DMZ는 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)로 구현할 수 있습니다.
+Microsoft Azure와 같은 퍼블릭 클라우드에 애플리케이션을 배포하는 경우 [Azure와 온-프레미스 사이의 DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 또는 [Azure와 인터넷 사이의 DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)와 같은 [네트워크 DMZ를 생성하여](/azure/architecture/reference-architectures/dmz/) 특정 네트워크를 격리하고 보호할 수 있습니다. DMZ는 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview)로 구현할 수 있습니다.
 
 Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 
@@ -57,15 +57,15 @@ Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 - 가상 어플라이언스가 포함된 고급 네트워크 토폴로지 만들기
 - 애플리케이션에 대해 격리되고 매우 안전한 환경 가져오기
 
-자체 가상 네트워크 구축을 시작하려면 [Azure Virtual Network 설명서](https://docs.microsoft.com/azure/virtual-network/)를 참조하세요.
+자체 가상 네트워크 구축을 시작하려면 [Azure Virtual Network 설명서](/azure/virtual-network/)를 참조하세요.
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Azure로 마이그레이션할 때 인증 및 권한 부여 고려 사항
 
 클라우드로 이동하는 조직의 가장 큰 관심사는 보안입니다. 대부분의 회사는 보안 모델을 설계하고 개발하는 데 상당한 시간, 비용 및 엔지니어링을 투자했으며, ID 저장소 및 Single Sign-On 솔루션과 같은 기존 투자를 활용할 수 있어야 합니다.
 
-온-프레미스를 실행하는 많은 기존 엔터프라이즈 B2E .NET 애플리케이션은 인증 및 ID 관리를 위해 Active Directory를 사용합니다. Azure AD Connect는 온-프레미스 디렉터리와 Azure Active Directory를 통합하도록 해줍니다. 시작하려면 [Azure Active Directory와 온-프레미스 디렉터리 통합](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)을 참조하세요.
+온-프레미스를 실행하는 많은 기존 엔터프라이즈 B2E .NET 애플리케이션은 인증 및 ID 관리를 위해 Active Directory를 사용합니다. Azure AD Connect는 온-프레미스 디렉터리와 Azure Active Directory를 통합하도록 해줍니다. 시작하려면 [Azure Active Directory와 온-프레미스 디렉터리 통합](/azure/active-directory/connect/active-directory-aadconnect)을 참조하세요.
 
-Azure Active Directory에 관련된 추가 계획은 [하이브리드 ID 솔루션에 대한 ID 요구 사항](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)을 참조하세요.
+Azure Active Directory에 관련된 추가 계획은 [하이브리드 ID 솔루션에 대한 ID 요구 사항](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)을 참조하세요.
 
 다른 인증 프로토콜 선택 사항은 소비자 관련 애플리케이션에서 일반적인 [OAuth ](https://en.wikipedia.org/wiki/OAuth) 및 [OpenID](https://en.wikipedia.org/wiki/OpenID)입니다. OAuth를 사용하여 IdentityServer4로 래핑된 ASP.NET Identity SQL 데이터베이스와 같은 자율적인 ID 데이터베이스를 사용할 때는 일반적으로 온-프레미스 데이터베이스 또는 디렉토리에 대한 연결이 필요하지 않습니다.
 

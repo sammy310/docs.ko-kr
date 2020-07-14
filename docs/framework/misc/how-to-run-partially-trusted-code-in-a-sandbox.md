@@ -1,5 +1,6 @@
 ---
 title: '방법: 샌드박스에서 부분 신뢰 코드 실행'
+description: .NET의 샌드박스에서 부분적으로 신뢰할 수 있는 코드를 실행 하는 방법을 알아봅니다. AppDomain 클래스는 관리 되는 응용 프로그램을 샌드 박싱 하는 효과적인 방법입니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181175"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282036"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분 신뢰 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - 어셈블리가 포함되지 않은 위치를 가리키는 코드베이스를 사용할 수 있습니다.  
   
-    - 중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)의 경우 <xref:System.Security.CodeAccessPermission.Assert%2A> 아래에서 만들기를 수행할 수 있습니다. 이 문제는 어셈블리에 투명도 표시가 없고 완전히 신뢰할 수 있는 것으로 로드될 때마다 발생합니다. 따라서 이 함수를 사용하여 신뢰할 수 있는 코드만 만들어야 하며 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
+    - 중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)의 경우 <xref:System.Security.CodeAccessPermission.Assert%2A> 아래에서 만들기를 수행할 수 있습니다. 이는 어셈블리에 투명도 표시가 없고 완전히 신뢰할 수 있는 상태로 로드 될 때마다 발생 합니다. 따라서이 함수를 사용 하 여 신뢰 하는 코드만 만들어야 하므로 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

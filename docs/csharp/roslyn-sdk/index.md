@@ -3,17 +3,17 @@ title: .NET Compiler Platform SDK(Roslyn API)
 description: .NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 872bfd388f6974a6d99f769c43e5d341454518cc
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76742734"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226675"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
-컴파일러는 애플리케이션 코드의 구문 및 의미 체계의 유효성을 검사할 때 애플리케이션 코드의 세부 모델을 빌드합니다. 컴파일러는 이 모델을 사용하여 소스 코드에서 실행 가능 출력을 빌드합니다. .NET Compiler Platform SDK는 이 모델에 대한 액세스를 제공합니다. 우리는 점점 더 IntelliSense, 리팩터링, 지능형 이름 바꾸기, “모든 참조 찾기” 및 “정의로 이동”과 같은 IDE(통합 개발 환경) 기능에 의존하여 생산성을 높입니다. 또한 코드 분석 도구를 사용하여 코드 품질을 개선하고 코드 생성기를 사용하여 애플리케이션 구성에서 도움을 받습니다. 이러한 도구가 더 스마트해짐에 따라 컴파일러가 애플리케이션 코드를 처리할 때 컴파일러만이 만드는 모델의 점점 더 많은 부분에 이러한 도구가 액세스해야 합니다. 이것이 바로 Roslyn API의 핵심 임무입니다. 블랙 박스를 열고 도구 및 최종 사용자가 컴파일러가 코드에 대해 가진 다양한 정보를 공유할 수 있도록 하는 것 말입니다.
-불투명한 소스 코드 입력 및 개체 코드 출력 변환기가 되는 대신 Roslyn을 통해 컴파일러는 플랫폼이 됩니다. 즉, 도구 및 애플리케이션에서 코드 관련 작업에 사용할 수 있는 API가 됩니다.
+컴파일러는 애플리케이션 코드의 구문 및 의미 체계의 유효성을 검사할 때 애플리케이션 코드의 세부 모델을 빌드합니다. 컴파일러는 이 모델을 사용하여 소스 코드에서 실행 가능 출력을 빌드합니다. .NET Compiler Platform SDK는 이 모델에 대한 액세스를 제공합니다. 우리는 점점 더 IntelliSense, 리팩터링, 지능형 이름 바꾸기, “모든 참조 찾기” 및 “정의로 이동”과 같은 IDE(통합 개발 환경) 기능에 의존하여 생산성을 높입니다. 또한 코드 분석 도구를 사용하여 코드 품질을 개선하고 코드 생성기를 사용하여 애플리케이션 구성에서 도움을 받습니다. 이러한 도구가 더 스마트해짐에 따라 컴파일러가 애플리케이션 코드를 처리할 때 컴파일러만이 만드는 모델의 점점 더 많은 부분에 이러한 도구가 액세스해야 합니다. 이것이 바로 Roslyn API의 핵심 임무입니다. 불투명 상자를 열고 도구 및 최종 사용자가 컴파일러가 코드에 대해 가진 다양한 정보를 공유할 수 있도록 하는 것 말입니다.
+컴파일러는 불투명한 소스 코드 입력 변환기 및 개체 코드 출력 변환기 대신 Roslyn을 통해 플랫폼이 됩니다. 즉, 도구 및 애플리케이션에서 코드 관련 작업에 사용할 수 있는 API입니다.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK 개념
 
@@ -31,7 +31,7 @@ ms.locfileid: "76742734"
 
 1. [*팀 코딩 표준 적용*](#enforce-team-coding-standards)
 1. [*라이브러리 패키지로 지침 제공*](#provide-guidance-with-library-packages)
-1. [일반 지침 제공  ](#provide-general-guidance)
+1. [일반 지침 제공](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>팀 코딩 표준 적용
 

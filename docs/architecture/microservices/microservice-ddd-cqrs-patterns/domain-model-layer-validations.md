@@ -2,12 +2,12 @@
 title: 도메인 모델 레이어에서 유효성 검사 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 도메인 모델 유효성 검사의 주요 개념을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988507"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100914"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 
@@ -53,7 +53,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>데이터 주석을 기반으로 하는 모델에서 유효성 검사 특성 사용
 
-필수 또는 MaxLength 특성과 같은 데이터 주석은 [테이블 매핑](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) 섹션에서 자세히 설명된 바와 같이 EF Core 데이터베이스 필드 속성을 구성하는 데 사용할 수 있지만, .NET Framework의 EF 4.x 이후 해온 것처럼 [EF Core에서 엔터티 유효성 검사를 위해 더 이상 작동하지 않습니다](https://github.com/dotnet/efcore/issues/3680)(<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 메서드도 수행하지 않음).
+필수 또는 MaxLength 특성과 같은 데이터 주석은 [테이블 매핑](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping) 섹션에서 자세히 설명된 바와 같이 EF Core 데이터베이스 필드 속성을 구성하는 데 사용할 수 있지만, .NET Framework의 EF 4.x 이후 해온 것처럼 [EF Core에서 엔터티 유효성 검사를 위해 더 이상 작동하지 않습니다](https://github.com/dotnet/efcore/issues/3680)(<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 메서드도 수행하지 않음).
 
 데이터 주석과 <xref:System.ComponentModel.DataAnnotations.IValidatableObject> 인터페이스는 일반적으로 컨트롤러의 작업을 호출하기 전 모델 바인딩 중에 모델 유효성 검사에 여전히 사용할 수 있지만, 해당 모델은 ViewModel 또는 DTO여야 하며 이는 도메인 모델 문제가 아닌 MVC 또는 API 관련 문제입니다.
 

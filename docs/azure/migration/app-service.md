@@ -2,17 +2,17 @@
 title: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 description: .NET 웹앱 또는 서비스를 온-프레미스에서 Azure App Service로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: conceptual
-ms.date: 08/11/2018
-ms.openlocfilehash: 8761642469b6f3d3c93d2e2e0fa7e02dbf3de6d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 07/08/2020
+ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447006"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174311"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 
-[App Service](https://docs.microsoft.com/azure/app-service/overview)는 확장 가능한 웹 사이트와 웹 애플리케이션 호스팅을 위해 최적화된 완전 관리형 컴퓨팅 플랫폼 서비스입니다. 이 문서에서는 기존 애플리케이션을 Azure App Service로 리프트 앤드 시프트하는 방법, 고려할 수정 사항 및 [클라우드로 이동](https://azure.microsoft.com/migration/web-applications/)하기 위한 추가 리소스에 대한 정보를 제공합니다. 대부분의 ASP.NET 웹 사이트(Webforms, MVC) 및 서비스(Web API, WCF)는 변경 없이 Azure App Service로 바로 이동할 수 있습니다. 일부는 사소한 변경이 필요할 수 있으며 약간의 리팩터링이 필요할 수도 있습니다.
+[App Service](/azure/app-service/overview)는 확장 가능한 웹 사이트와 웹 애플리케이션 호스팅을 위해 최적화된 완전 관리형 컴퓨팅 플랫폼 서비스입니다. 이 문서에서는 기존 애플리케이션을 Azure App Service로 리프트 앤드 시프트하는 방법, 고려할 수정 사항 및 [클라우드로 이동](https://azure.microsoft.com/migration/web-applications/)하기 위한 추가 리소스에 대한 정보를 제공합니다. 대부분의 ASP.NET 웹 사이트(Webforms, MVC) 및 서비스(Web API, WCF)는 변경 없이 Azure App Service로 바로 이동할 수 있습니다. 일부는 사소한 변경이 필요할 수 있으며 약간의 리팩터링이 필요할 수도 있습니다.
 
 시작할 준비가 되셨나요? [Azure App Service에 ASP.NET + SQL 애플리케이션 게시](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)
 
@@ -22,10 +22,10 @@ ms.locfileid: "84447006"
 
 마이그레이션하거나 변경해야 할 수 있으므로 온-프레미스 리소스에 대한 액세스를 확인합니다. 다음은 온-프레미스 리소스에 대한 액세스를 완화하기 위한 옵션입니다.
 
-* [Azure Virtual Network](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet)를 사용하여 App Service를 온-프레미스 리소스에 연결할 VPN을 만듭니다.
-* [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)를 사용하여 방화벽을 변경하지 않고 온-프레미스 서비스를 클라우드에 안전하게 노출합니다.
+* [Azure Virtual Network](/azure/app-service/web-sites-integrate-with-vnet)를 사용하여 App Service를 온-프레미스 리소스에 연결할 VPN을 만듭니다.
+* [Azure Relay](/azure/service-bus-relay/relay-what-is-it)를 사용하여 방화벽을 변경하지 않고 온-프레미스 서비스를 클라우드에 안전하게 노출합니다.
 * [SQL database](https://go.microsoft.com/fwlink/?linkid=863217)의 Azure에 대한 종속성과 같은 종속성을 마이그레이션합니다.
-* 클라우드의 Platform-as-a-Service 기능을 사용하여 종속성을 줄입니다. 예를 들어, 온-프레미스 메일 서버에 연결하는 것보다 [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email) 사용을 고려해 봅니다.
+* 클라우드의 Platform-as-a-Service 기능을 사용하여 종속성을 줄입니다. 예를 들어, 온-프레미스 메일 서버에 연결하는 것보다 [SendGrid](/azure/sendgrid-dotnet-how-to-send-email) 사용을 고려해 봅니다.
 
 ### <a name="port-bindings"></a>포트 바인딩
 
@@ -33,20 +33,20 @@ Azure App Service는 HTTP 트래픽에는 포트 80, HTTPS 트래픽에는 포�
 
 WCF의 경우 다음 바인딩이 지원됩니다.
 
-바인딩 | 참고
---------|--------
-BasicHttp |
-WSHttp |
-WSDualHttpBinding | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)을 활성화해야 합니다.
-NetHttpBinding | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다.
-NetHttpsBinding | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다.
-BasicHttpContextBinding |
-WebHttpBinding |
-WSHttpContextBinding |
+| 바인딩 | 참고 |
+|--|--|
+| `BasicHttp` |  |
+| `WSHttp` |  |
+| `WSDualHttpBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)을 활성화해야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)을 활성화해야 합니다. |
+| `NetHttpBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
+| `NetHttpsBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
+| `BasicHttpContextBinding` |  |
+| `WebHttpBinding` |  |
+| `WSHttpContextBinding` |  |
 
 ### <a name="authentication"></a>인증
 
-Azure App Service는 기본적으로 익명 인증을 지원하며 의도하는 경우 폼 인증을 지원합니다. Windows 인증은 Azure Active Directory 및 ADFS와 통합해야만 사용할 수 있습니다. [온-프레미스 디렉터리와 Azure Active Directory를 통합하는 방법에 대해 알아보세요](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Azure App Service는 기본적으로 익명 인증을 지원하며 의도하는 경우 폼 인증을 지원합니다. Windows 인증은 Azure Active Directory 및 ADFS와 통합해야만 사용할 수 있습니다. [온-프레미스 디렉터리와 Azure Active Directory를 통합하는 방법에 대해 알아보세요](/azure/active-directory/connect/active-directory-aadconnect).
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>GAC 어셈블리(전역 어셈블리 캐시)
 
@@ -54,11 +54,11 @@ Azure App Service는 기본적으로 익명 인증을 지원하며 의도하는 
 
 ### <a name="iis-settings"></a>IIS 설정
 
-기존에는 애플리케이션에서 applicationHost.config를 통해 구성하던 모든 것을 이제 Azure Portal을 통해 구성할 수 있습니다. 이는 AppPool 비트 수, WebSockets 활성화/비활성화, 관리형 파이프라인 버전, .NET Framework 버전(2.0/4.0) 등에 적용됩니다. [애플리케이션 설정](https://docs.microsoft.com/azure/app-service/web-sites-configure)을 수정하려면 [Azure Portal](https://portal.azure.com)로 이동하고 웹앱의 블레이드를 연 다음 **애플리케이션 설정** 탭을 선택합니다.
+기존에는 애플리케이션에서 applicationHost.config를 통해 구성하던 모든 것을 이제 Azure Portal을 통해 구성할 수 있습니다. 이는 AppPool 비트 수, WebSockets 활성화/비활성화, 관리형 파이프라인 버전, .NET Framework 버전(2.0/4.0) 등에 적용됩니다. [애플리케이션 설정](/azure/app-service/web-sites-configure)을 수정하려면 [Azure Portal](https://portal.azure.com)로 이동하고 웹앱의 블레이드를 연 다음 **애플리케이션 설정** 탭을 선택합니다.
 
 #### <a name="iis5-compatibility-mode"></a>IIS5 호환 모드
 
-IIS5 호환 모드는 지원되지 않습니다. Azure App Service에서 각 웹앱과 그 아래의 모든 애플리케이션은 특정 [애플리케이션 풀](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10)) 세트로 동일한 작업자 프로세스에서 실행됩니다.
+IIS5 호환 모드는 지원되지 않습니다. Azure App Service에서 각 웹앱과 그 아래의 모든 애플리케이션은 특정 [애플리케이션 풀](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10)) 세트로 동일한 작업자 프로세스에서 실행됩니다.
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ 스키마 준수
 
@@ -74,7 +74,7 @@ Azure App Service에서는 플랫폼에 COM 구성 요소를 등록할 수 없�
 
 ### <a name="physical-directories"></a>물리적 디렉터리
 
-Azure App Service는 물리적 드라이브 액세스를 허용하지 않습니다. SMB를 통해 파일에 액세스하려면 [Azure Files](https://docs.microsoft.com/azure/storage/files/storage-files-introduction)를 사용해야 할 수 있습니다. [Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)는 HTTPS 통한 액세스를 위해 파일을 저장할 수 있습니다.
+Azure App Service는 물리적 드라이브 액세스를 허용하지 않습니다. SMB를 통해 파일에 액세스하려면 [Azure Files](/azure/storage/files/storage-files-introduction)를 사용해야 할 수 있습니다. [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction)는 HTTPS 통한 액세스를 위해 파일을 저장할 수 있습니다.
 
 ### <a name="isapi-filters"></a>ISAPI 필터
 
@@ -82,7 +82,7 @@ Azure App Service는 ISAPI 필터의 사용을 지원할 수는 있지만 ISAPI 
 
 ### <a name="https-bindings-and-ssl"></a>HTTPS 바인딩 및 SSL
 
-HTTPS 바인딩은 마이그레이션되지 않으며, 웹 사이트와 연결된 SSL 인증서도 마이그레이션되지 않습니다. 하지만 사이트 마이그레이션이 완료된 후 [SSL 인증서를 수동으로 업로드할 수 있습니다](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl).
+HTTPS 바인딩은 마이그레이션되지 않으며, 웹 사이트와 연결된 SSL 인증서도 마이그레이션되지 않습니다. 하지만 사이트 마이그레이션이 완료된 후 [SSL 인증서를 수동으로 업로드할 수 있습니다](/azure/app-service/app-service-web-tutorial-custom-ssl).
 
 ### <a name="sharepoint-and-frontpage"></a>SharePoint 및 FrontPage
 
@@ -102,15 +102,15 @@ AAD는 무료 앱으로 작동하지 않습니다. AAD를 사용하려면 앱 SK
 
 ### <a name="monitoring-and-diagnostics"></a>모니터링 및 진단
 
-모니터링 및 진단을 위해 현재 온-프레미스 솔루션은 클라우드에서 작동하지 않을 수 있습니다. 그러나 Azure는 앱의 문제를 식별하고 디버깅할 수 있도록 로깅, 모니터링 및 진단을 위한 도구를 제공합니다. 구성에서 웹앱에 대해 쉽게 진단하고 Azure Application Insights에 기록된 로그를 볼 수 있습니다. [웹앱에 대한 진단 로깅을 사용하는 방법에 대해 자세히 알아보세요](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log).
+모니터링 및 진단을 위해 현재 온-프레미스 솔루션은 클라우드에서 작동하지 않을 수 있습니다. 그러나 Azure는 앱의 문제를 식별하고 디버깅할 수 있도록 로깅, 모니터링 및 진단을 위한 도구를 제공합니다. 구성에서 웹앱에 대해 쉽게 진단하고 Azure Application Insights에 기록된 로그를 볼 수 있습니다. [웹앱에 대한 진단 로깅을 사용하는 방법에 대해 자세히 알아보세요](/azure/app-service/web-sites-enable-diagnostic-log).
 
 ### <a name="connection-strings-and-application-settings"></a>연결 문자열 및 애플리케이션 설정
 
-애플리케이션에서 사용되는 중요한 정보를 안전하게 저장하는 서비스인 [Azure KeyVault](https://docs.microsoft.com/azure/key-vault/)를 사용하는 것이 좋습니다. 또는 이 데이터를 App Service 설정으로 저장할 수 있습니다.
+애플리케이션에서 사용되는 중요한 정보를 안전하게 저장하는 서비스인 [Azure KeyVault](/azure/key-vault/)를 사용하는 것이 좋습니다. 또는 이 데이터를 App Service 설정으로 저장할 수 있습니다.
 
 ### <a name="dns"></a>DNS
 
-애플리케이션의 요구 사항에 따라 DNS 구성을 업데이트해야 할 수도 있습니다. 이러한 DNS 설정은 App Service [사용자 지정 도메인 설정](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain)에서 구성할 수 있습니다.
+애플리케이션의 요구 사항에 따라 DNS 구성을 업데이트해야 할 수도 있습니다. 이러한 DNS 설정은 App Service [사용자 지정 도메인 설정](/azure/app-service/app-service-web-tutorial-custom-domain)에서 구성할 수 있습니다.
 
 ## <a name="azure-app-service-with-windows-containers"></a>Windows 컨테이너를 사용하는 Azure App Service
 

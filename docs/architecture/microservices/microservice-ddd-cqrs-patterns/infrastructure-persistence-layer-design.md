@@ -2,12 +2,12 @@
 title: 인프라 지속성 계층 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인에서 리포지토리 패턴을 탐색합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988481"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100849"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -129,4 +129,4 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 
 >[!div class="step-by-step"]
 >[이전](domain-events-design-implementation.md)
->[다음](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[다음](infrastructure-persistence-layer-implementation-entity-framework-core.md)

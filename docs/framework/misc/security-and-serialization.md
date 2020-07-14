@@ -1,5 +1,6 @@
 ---
 title: 보안 및 Serialization
+description: 보안 및 serialization에 대해 읽어 보세요. 개체 인스턴스 데이터를 보거나 수정 하기 위해 지정 된 SerializationFormatter 플래그를 사용 하 여 SecurityPermission을 사용 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181111"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281266"
 ---
 # <a name="security-and-serialization"></a>보안 및 Serialization
 다른 방법으로는 액세스할 수 없는 개체 인스턴스 데이터를 직렬화를 통해 다른 코드에서 보거나 수정할 수 있으므로 <xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 의 직렬화를 수행하려면 코드에 특수 권한이 필요합니다. 기본 정책에 따라 이 권한은 인터넷에서 다운로드한 코드나 인트라넷 코드에는 부여되지 않고 로컬 컴퓨터에 있는 코드에만 부여됩니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "79181111"
   
  <xref:System.Runtime.Serialization.ISerializable> 인터페이스는 직렬화 인프라에서만 사용됩니다. 하지만 보호되지 않는 경우에는 중요 중보가 노출될 수 있습니다. **ISerializable**을 구현하여 사용자 지정 직렬화를 제공할 때는 다음 예방 조치를 취해야 합니다.  
   
-- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> SerializationFormatter **권한을 지정하여** SecurityPermission **을 요청하거나 메서드 출력에 중요 정보가 노출되지 않도록 하여** 메서드의 보안을 명시적으로 유지해야 합니다. 다음은 그 예입니다.  
+- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> SerializationFormatter **권한을 지정하여** SecurityPermission **을 요청하거나 메서드 출력에 중요 정보가 노출되지 않도록 하여** 메서드의 보안을 명시적으로 유지해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  

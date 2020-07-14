@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e7f690030a5cb5605645f1ca42a6f08dcdd214f5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 207dba9327cfd6debd15c5573697f8950b6c2c95
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85615699"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86218097"
 ---
 ### <a name="tls-1x-by-default-passes-the-sch_send_aux_record-flag-to-the-underlying-schannel-api"></a>기본적으로 TLS 1.x는 SCH_SEND_AUX_RECORD 플래그를 기본 SCHANNEL API에 전달
 
@@ -14,7 +14,7 @@ TLS 1.x를 사용할 때 .NET Framework는 기본 Windows SCHANNEL API에 의존
 
 #### <a name="suggestion"></a>제안 해결 방법
 
-이 변경으로 인해 기존 서버와의 통신이 중단된 경우 [SCH_SEND_AUX_RECORD](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) 플래그 전송을 비활성화하고 앱 구성 파일의 [<](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 있는 [<](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 다음 스위치를 추가하여 데이터를 별도의 레코드로 분리하지 않는 이전 동작으로 복원할 수 있습니다.
+이 변경으로 인해 기존 서버와의 통신이 중단된 경우 [SCH_SEND_AUX_RECORD](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) 플래그 전송을 비활성화하고 앱 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 있는 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 다음 스위치를 추가하여 데이터를 별도의 레코드로 분리하지 않는 이전 동작으로 복원할 수 있습니다.
 
 ```xml
 <runtime>

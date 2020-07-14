@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: e9431ebad3fee4eaa1d39f4ac95a57a6d0313fc8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325951"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281721"
 ---
 # <a name="creating-a-new-windows-form"></a>새 Windows Form 만들기
 이 항목에는 첫 번째 Windows Forms 애플리케이션을 만드는 방법을 설명하는 항목의 링크가 포함되어 있습니다. 또한 이 섹션의 항목에서는 Windows Forms 애플리케이션을 만들 때 알고 있어야 하는 일부 기본 용어와 지침을 소개합니다. 응용 프로그램, 응용 프로그램에서 사용할 수 있는 컨트롤, 이벤트 및 처리 이벤트, 사용자의 입력을 처리 하는 방법 Windows Forms에 대해 자세히 알아보려면 관련 항목 목록을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Windows Forms 좌표](windows-forms-coordinates.md)입니다.  
+ [Windows Forms 좌표](windows-forms-coordinates.md)  
  클라이언트 좌표와 화면 좌표를 설명합니다.  
   
  [방법: 명령줄에서 Windows Forms 애플리케이션 만들기](how-to-create-a-windows-forms-application-from-the-command-line.md)  

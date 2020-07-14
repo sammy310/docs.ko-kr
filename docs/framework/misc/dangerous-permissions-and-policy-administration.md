@@ -1,5 +1,6 @@
 ---
 title: 위험한 권한 및 정책 관리
+description: .NET의 다양 한 위험한 사용 권한에 대 한 링크를 참조 하세요. 이러한 권한은 필요한 경우에만 신뢰할 수 있는 코드에만 부여 해야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], policy administration
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 15d28ff7d11b5d15ce44d9ab1f56548256850ff8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: ba3d47dc445e4b368f57d59d735fc331f5d6de81
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645753"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281617"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>위험한 권한 및 정책 관리
 .NET Framework가 권한을 제공하는 보호되는 몇몇 작업은 보안 시스템의 보안을 손상시킬 수 있습니다. 이렇게 위험한 권한은 필요한 경우에만, 그리고 신뢰할 수 있는 코드에만 제공되어야 합니다. 일반적으로 이러한 권한이 부여되면 악성 코드를 방어할 수 없습니다.  
   
 > [!NOTE]
-> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 중요한 변경 사항이 있었습니다. 이러한 변경 사항에 대한 자세한 내용은 [보안 변경 을](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)참조하십시오.  
+> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 대 한 중요 한 변경 내용이 있습니다. 이러한 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조 하세요.  
   
  위험한 권한은 다음 표에 설명되어 있습니다.  
   

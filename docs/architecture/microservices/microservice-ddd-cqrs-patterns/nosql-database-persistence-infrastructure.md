@@ -2,12 +2,12 @@
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 지속성을 구현하기 위한 옵션으로 일반적인 경우 NoSql 데이터베이스, 특정한 경우 Azure Cosmos DB의 사용을 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988442"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100810"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -342,5 +342,5 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[이전](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[이전](infrastructure-persistence-layer-implementation-entity-framework-core.md)
 >[다음](microservice-application-layer-web-api-design.md)

@@ -3,40 +3,40 @@ title: Azure로 SQL Server 데이터베이스 마이그레이션
 description: 온-프레미스 SQL Server에서 Azure로 SQL Server 데이터베이스를 마이그레이션하는 방법에 대해 알아보세요.
 ms.topic: how-to
 ms.date: 05/27/2020
-ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5f191cafbff3823d04e1dbd1fdf81e1157e20999
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241450"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174285"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>Azure로 SQL Server 데이터베이스 마이그레이션
 
 이 문서에서는 SQL Server 데이터베이스를 Azure로 마이그레이션하기 위한 두 가지 옵션의 간략한 개요를 제공합니다. Azure에는 프로덕션 SQL Server 데이터베이스의 마이그레이션을 위한 세 가지 기본 옵션이 있습니다. 이 문서에서는 다음 두 가지 옵션을 중점적으로 다룹니다.
 
-1. [Azure VM의 SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): Azure에서 실행되는 Windows Virtual Machine에 설치되고 호스팅되는 SQL Server 인스턴스로, IaaS(서비스 제공 인프라)라고도 합니다.
-2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): 완전히 관리되는 SQL 데이터베이스 Azure 서비스로, PaaS(Platform as a Service)라고도 합니다.
+1. [Azure VM의 SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): Azure에서 실행되는 Windows Virtual Machine에 설치되고 호스팅되는 SQL Server 인스턴스로, IaaS(서비스 제공 인프라)라고도 합니다.
+2. [Azure SQL Database](/azure/sql-database/sql-database-technical-overview): 완전히 관리되는 SQL 데이터베이스 Azure 서비스로, PaaS(Platform as a Service)라고도 합니다.
 
-두 가지 모두 장단점이 있으며 마이그레이션하기 전에 평가해야 합니다. 세 번째 옵션은 [Azure SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)입니다.
+두 가지 모두 장단점이 있으며 마이그레이션하기 전에 평가해야 합니다. 세 번째 옵션은 [Azure SQL Database 관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance)입니다.
 
 ## <a name="get-started"></a>시작
 
 다음 마이그레이션 가이드는 사용하는 서비스에 따라 유용합니다.
 
-* [Azure VM에서 SQL Server로 SQL Server 데이터베이스 마이그레이션](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-* [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+* [Azure VM에서 SQL Server로 SQL Server 데이터베이스 마이그레이션](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+* [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 또한 개념 콘텐츠에 대한 다음 링크는 VM을 더 잘 이해하는 데 도움이 됩니다.
 
-* [Azure Virtual Machines의 SQL Server에 대한 고가용성 및 재해 복구](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-* [Azure Virtual Machines의 SQL Server에 대한 성능 모범 사례](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
-* [Azure Virtual Machines의 SQL Server에 대한 애플리케이션 패턴 및 개발 전략](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
+* [Azure Virtual Machines의 SQL Server에 대한 고가용성 및 재해 복구](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+* [Azure Virtual Machines의 SQL Server에 대한 성능 모범 사례](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
+* [Azure Virtual Machines의 SQL Server에 대한 애플리케이션 패턴 및 개발 전략](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
 
 다음 링크는 Azure SQL Database를 더 잘 이해하는 데 도움이 됩니다.
 
-* [Azure SQL Database 서버 및 데이터베이스 만들기 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases)
-* [DTU(데이터베이스 트랜잭션 단위) 및 eDTU(탄력적 데이터베이스 트랜잭션 단위)](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)
-* [Azure SQL Database 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits)
+* [Azure SQL Database 서버 및 데이터베이스 만들기 및 관리](/azure/sql-database/sql-database-servers-databases)
+* [DTU(데이터베이스 트랜잭션 단위) 및 eDTU(탄력적 데이터베이스 트랜잭션 단위)](/azure/sql-database/sql-database-what-is-a-dtu)
+* [Azure SQL Database 리소스 제한](/azure/sql-database/sql-database-resource-limits)
 
 ## <a name="choosing-iaas-or-paas"></a>IaaS 또는 PaaS 선택
 
@@ -59,12 +59,12 @@ ms.locfileid: "84241450"
 | 시나리오 | Azure VM의 SQL Server | Azure SQL Database |
 |----------|-------------------------|--------------------|
 | 마이그레이션 | 데이터베이스를 최소한으로 변경해야 합니다. | [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)에 의해 결정된 대로 Azure SQL에서 사용할 수 없는 기능을 사용하거나 로컬로 설치된 실행 파일처럼 다른 종속성이 있는 경우 데이터베이스를 변경해야 할 수 있습니다.|
-| 가용성, 복구 및 업그레이드 관리 | 가용성 및 복구는 수동으로 구성됩니다. 업그레이드는 [VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)를 사용하여 자동화할 수 있습니다. | 자동으로 관리합니다. |
+| 가용성, 복구 및 업그레이드 관리 | 가용성 및 복구는 수동으로 구성됩니다. 업그레이드는 [VM Scale Sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)를 사용하여 자동화할 수 있습니다. | 자동으로 관리합니다. |
 | 기본 OS 구성 | 수동 구성. | 자동으로 관리합니다. |
 | 데이터베이스 크기 관리 | SQL Server 인스턴스당 최대 256TB의 스토리지 용량을 지원합니다. | 수평 분할 전까지 8TB의 스토리지 용량을 지원합니다. |
-| 비용 관리 | SQL Server 라이선스 비용, Windows Server 라이선스 비용 및 VM 비용(코어, RAM 및 스토리지 기준)을 관리해야 합니다. | 서비스 비용을 관리해야 합니다(탄력적인 풀을 사용하는 경우 [eDTU 또는 DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), 스토리지 및 데이터베이스 수 기준). SLA의 비용도 관리해야 합니다. |
+| 비용 관리 | SQL Server 라이선스 비용, Windows Server 라이선스 비용 및 VM 비용(코어, RAM 및 스토리지 기준)을 관리해야 합니다. | 서비스 비용을 관리해야 합니다(탄력적인 풀을 사용하는 경우 [eDTU 또는 DTU](/azure/sql-database/sql-database-what-is-a-dtu), 스토리지 및 데이터베이스 수 기준). SLA의 비용도 관리해야 합니다. |
 
-둘 간의 차이점을 자세히 알아보려면 [Choose the right deployment option in Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)(Azure SQL에서 적합한 배포 옵션 선택)을 참조하세요.
+둘 간의 차이점을 자세히 알아보려면 [Choose the right deployment option in Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)(Azure SQL에서 적합한 배포 옵션 선택)을 참조하세요.
 
 ## <a name="faq"></a>FAQ
 
