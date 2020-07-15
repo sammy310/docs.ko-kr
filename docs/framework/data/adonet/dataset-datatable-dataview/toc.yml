@@ -1,6 +1,8 @@
 - name: 'DataSets, DataTables 및 DataViews'
   href: index.md
   items:
+    - name: 보안 지침
+      href: security-guidance.md
     - name: 데이터 세트 만들기
       href: creating-a-dataset.md
     - name: 데이터 세트에 DataTable 추가
