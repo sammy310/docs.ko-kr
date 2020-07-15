@@ -1,5 +1,6 @@
 ---
 title: CLR ETW 키워드 및 수준
+description: CLR (공용 언어 런타임) ETW (Windows 용 이벤트 추적) 키워드 및 수준을 검토 합니다. 이벤트 CLR ETW 키워드를 통해 범주별로 이벤트를 필터링 할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW keywords
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: 2106ed0d85cd116be4d7c46396ad6e1597c4341d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401000"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309679"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#clr-etw-keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#etw-event-levels) 은 플래그로 식별됩니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "79401000"
   
 - [CLR ETW 런다운 키워드](#rundown)  
   
-- [런타임 공급자에 대 한 기호 확인에 대 한 키워드 조합](#runtime_combo)  
+- [런타임 공급자를 위한 기호 확인용 키워드 조합](#runtime_combo)  
   
 - [런다운 공급자를 위한 기호 확인용 키워드 조합](#rundown_combo)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "79401000"
 |`ContentionKeyword`|0x00004000|[경합 이벤트](contention-etw-events.md)를 수집할 수 있도록 합니다.|  
 |`ExceptionKeyword`|0x00008000|[예외 이벤트](exception-thrown-v1-etw-event.md)를 수집할 수 있도록 합니다.|  
 |`ThreadingKeyword`|0x00010000|[스레드 풀 이벤트](thread-pool-etw-events.md)를 수집할 수 있도록 합니다.|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(.NET 프레임워크 4.5 이상에서 사용할 수 있습니다.) 오버헤드가 `NGenKeyword` 높은 키워드를 억제하고 NGen 모듈 내부에 있는 메서드에 대한 이벤트 생성을 방지합니다. .NET Framework 4.5부터 프로파일링 도구를 `OverrideAndSuppressNGenEventsKeyword` 사용하여 `NGenKeyword` NGen 모듈의 메서드에 대한 이벤트 생성을 억제해야 합니다. 이를 통해 프로파일링 도구에서 더욱 효율적인 NGen PDB를 사용하여 NGen 모듈의 메서드에 대한 정보를 가져올 수 있습니다. .NET Framework 4 및 이전 버전의 CLR은 NGen PDB의 생성을 지원하지 않습니다. 이러한 초기 버전에서는 CLR에서 `OverrideAndSuppressNGenEventsKeyword` 를 인식하지 못하며, `NGenKeyword` 를 처리하여 NGen 모듈의 메서드에 대한 이벤트를 생성합니다.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|.NET Framework 4.5 이상에서 사용할 수 있습니다. 오버 헤드가 높은 키워드를 억제 `NGenKeyword` 하 고 NGen 모듈 내에 있는 메서드에 대 한 이벤트 생성을 방지 합니다. .NET Framework 4.5부터 프로 파일링 도구에서 `OverrideAndSuppressNGenEventsKeyword` 및를 함께 사용 `NGenKeyword` 하 여 NGen 모듈의 메서드에 대 한 이벤트를 생성 하지 않아야 합니다. 이를 통해 프로파일링 도구에서 더욱 효율적인 NGen PDB를 사용하여 NGen 모듈의 메서드에 대한 정보를 가져올 수 있습니다. .NET Framework 4 및 이전 버전의 CLR은 NGen PDB의 생성을 지원하지 않습니다. 이러한 초기 버전에서는 CLR에서 `OverrideAndSuppressNGenEventsKeyword` 를 인식하지 못하며, `NGenKeyword` 를 처리하여 NGen 모듈의 메서드에 대한 이벤트를 생성합니다.|  
 |`PerfTrackKeyWord`|0x2000000|`ModuleLoad` 및 `ModuleRange` 이벤트를 수집할 수 있도록 합니다.|  
 |`StackKeyword`|0x40000000|CLR [스택 추적 이벤트](stack-etw-event.md)를 수집할 수 있도록 합니다.|  
   
@@ -66,7 +67,7 @@ ms.locfileid: "79401000"
 |`EndRundownKeyword`|0x00000100|종료 런다운 동안 시스템 상태를 열거할 수 있도록 합니다.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|<xref:System.AppDomain> 또는 `StartRundownKeyword` 와 함께 사용될 때 `EndRundownKeyword`수준에서 리소스 모니터링에 대한 이벤트를 수집할 수 있도록 합니다.|  
 |`ThreadingKeyword`|0x00010000|스레드 풀 이벤트를 수집할 수 있도록 합니다.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(.NET 프레임워크 4.5 이상에서 사용할 수 있습니다.) 오버헤드가 `NGenRundownKeyword` 높은 키워드를 억제하고 NGen 모듈 내부에 있는 메서드에 대한 이벤트 생성을 방지합니다. .NET Framework 4.5부터 프로파일링 도구를 `OverrideAndSuppressNGenEventsRundownKeyword` 사용하여 `NGenRundownKeyword` NGen 모듈의 메서드에 대한 이벤트 생성을 억제해야 합니다. 이를 통해 프로파일링 도구에서 더욱 효율적인 NGen PDB를 사용하여 NGen 모듈의 메서드에 대한 정보를 가져올 수 있습니다. .NET Framework 4 및 이전 버전의 CLR은 NGen PDB의 생성을 지원하지 않습니다. 이러한 초기 버전에서는 CLR에서 `OverrideAndSuppressNGenEventsRundownKeyword` 를 인식하지 못하며, `NGenRundownKeyword` 를 처리하여 NGen 모듈의 메서드에 대한 이벤트를 생성합니다.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|.NET Framework 4.5 이상에서 사용할 수 있습니다. 오버 헤드가 높은 키워드를 억제 `NGenRundownKeyword` 하 고 NGen 모듈 내에 있는 메서드에 대 한 이벤트 생성을 방지 합니다. .NET Framework 4.5부터 프로 파일링 도구에서 `OverrideAndSuppressNGenEventsRundownKeyword` 및를 함께 사용 `NGenRundownKeyword` 하 여 NGen 모듈의 메서드에 대 한 이벤트를 생성 하지 않아야 합니다. 이를 통해 프로파일링 도구에서 더욱 효율적인 NGen PDB를 사용하여 NGen 모듈의 메서드에 대한 정보를 가져올 수 있습니다. .NET Framework 4 및 이전 버전의 CLR은 NGen PDB의 생성을 지원하지 않습니다. 이러한 초기 버전에서는 CLR에서 `OverrideAndSuppressNGenEventsRundownKeyword` 를 인식하지 못하며, `NGenRundownKeyword` 를 처리하여 NGen 모듈의 메서드에 대한 이벤트를 생성합니다.|  
 |`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`및 `ModuleRangeDCEnd` 이벤트를 수집할 수 있도록 합니다.|
   
 <a name="runtime_combo"></a>

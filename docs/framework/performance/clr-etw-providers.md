@@ -1,23 +1,24 @@
 ---
 title: CLR ETW 공급자
+description: 두 개의 CLR (공용 언어 런타임) ETW (Windows 용 이벤트 추적) 공급자 (runtimne 공급자 및 런다운 공급자)에 대 한 세부 정보를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f86e8334482880c4f7cb23ec93a3c826c083389
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401006"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309653"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
   
  런타임 공급자는 사용하도록 설정된 키워드(이벤트 범주)에 따라 이벤트를 발생시킵니다. 예를 들어 `LoaderKeyword` 키워드를 사용하도록 설정하면 로더 이벤트를 수집할 수 있습니다.  
   
- ETW(Windows용 이벤트 추적) 이벤트는 .etl 확장명이 있는 파일에 기록되며, 나중에 필요에 따라 쉼표로 구분된 값(.csv) 파일로 사후 처리될 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](controlling-logging.md)를 참조하세요.  
+ ETW (ETW(Windows용 이벤트 추적)) 이벤트는 확장명이 .etl 인 파일에 기록 되며, 나중에 필요에 따라 쉼표로 구분 된 값 (.csv) 파일에서 나중에 처리 될 수 있습니다. .etl 파일을 .csv 파일로 변환하는 방법에 대한 자세한 내용은 [.NET Framework 로깅 제어](controlling-logging.md)를 참조하세요.  
   
 ## <a name="the-runtime-provider"></a>런타임 공급자  
  런타임 공급자는 기본 CLR ETW 공급자입니다.  
@@ -35,7 +36,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
  일반적으로 ETW 로깅은 프로세스가 시작되기 전에 사용되고, 프로세스가 종료된 후 로깅이 꺼집니다. 그러나 프로세스를 실행하는 동안 ETW 로깅이 켜져 있는 경우 프로세스에 대한 추가 정보가 필요합니다. 예를 들어 기호를 확인하려면 로깅을 켜기 전에 이미 로드된 메서드에 대한 메서드 이벤트를 기록해야 합니다.  
   
- `DCStart` 및 `DCEnd` 이벤트는 데이터 수집이 시작 및 중지될 때 프로세스의 상태를 캡처합니다. 상태는 이미 적시에 컴파일된 메서드와 로드된 어셈블리를 포함하여 높은 수준의 정보를 나타냅니다. 이 두 이벤트는 프로세스에서 이미 발생한 일에 대한 정보를 제공할 수 있습니다. 예를 들어 JIT-컴파일된 메서드 등을 예로 들 수 있습니다.  
+ `DCStart` 및 `DCEnd` 이벤트는 데이터 수집이 시작 및 중지될 때 프로세스의 상태를 캡처합니다. 상태는 이미 JIT (just-in-time) 컴파일 되었으며 로드 된 어셈블리를 포함 하 여 높은 수준의 정보를 나타냅니다. 이러한 두 이벤트는 프로세스에서 이미 발생 한 상황에 대 한 정보를 제공할 수 있습니다. 예를 들어 JIT로 컴파일된 메서드 등이 있습니다.  
   
  `DC`, `DCStart`, `DCEnd` 또는 `DCInit`가 이름에 포함된 이벤트만 런다운 공급자 아래에서 발생합니다. 또한 이들 이벤트는 런다운 공급자에서만 발생합니다.  
   

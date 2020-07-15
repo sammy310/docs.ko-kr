@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: e02b5d679fb1f5947373399ac1226732623ef96d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282036"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309237"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분 신뢰 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -123,7 +123,7 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     새 도메인에서 클래스 인스턴스를 만들려면 해당 클래스가 <xref:System.MarshalByRefObject> 클래스를 확장해야 합니다.  
+     새 도메인에서 클래스의 인스턴스를 만들려면 클래스를 확장 해야 합니다 <xref:System.MarshalByRefObject> .
   
     ```csharp
     class Sandboxer:MarshalByRefObject  

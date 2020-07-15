@@ -1,16 +1,17 @@
 ---
 title: 보안 투명 코드
+description: 투명 코드 모델의 용도, 투명성 수준을 지정 하는 방법 및 보안에서 투명도 적용을 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215825"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309848"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 
@@ -33,7 +34,7 @@ ms.locfileid: "77215825"
 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 보안 모델을 단순화하고 이를 통해 보안 라이브러리 및 애플리케이션을 더 쉽게 배포할 수 있습니다. 투명 코드는 Microsoft Silverlight에서 부분적으로 신뢰할 수 있는 애플리케이션의 배포를 단순화하는 데도 사용됩니다.
 
 > [!NOTE]
-> 부분적으로 신뢰할 수 있는 애플리케이션을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 애플리케이션을 개발할 수 있습니다. 이 애플리케이션은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 애플리케이션을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 [방법: 제한된 사용 권한으로 ClickOnce 애플리케이션 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)을 참조하세요. ClickOnce 애플리케이션에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 애플리케이션에도 사용할 수 있습니다.
+> 부분적으로 신뢰할 수 있는 애플리케이션을 개발할 때 대상 호스트에 대한 권한 요구 사항을 알고 있어야 합니다. 일부 호스트에서 허용되지 않는 리소스를 사용하는 애플리케이션을 개발할 수 있습니다. 이 애플리케이션은 오류 없이 컴파일되지만 호스트된 환경으로 로드될 경우 실패합니다. Visual Studio를 사용하여 애플리케이션을 개발한 경우 개발 환경에서 부분 신뢰 또는 제한된 권한 집합으로 디버깅을 사용할 수 있습니다. 자세한 내용은 [How to: Debug a ClickOnce Application with Restricted Permissions](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)을 참조하세요. ClickOnce 애플리케이션에 제공된 권한 계산 기능은 부분적으로 신뢰할 수 있는 애플리케이션에도 사용할 수 있습니다.
 
 ## <a name="specifying-the-transparency-level"></a>투명도 수준 지정
 
@@ -41,7 +42,7 @@ ms.locfileid: "77215825"
 
 수준은 다음과 같습니다.
 
-- 수준 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 투명도 규칙입니다.
+- 수준 2 ( <xref:System.Security.SecurityRuleSet.Level2> ) – .NET Framework 4 투명도 규칙입니다.
 
 - 수준 1(<xref:System.Security.SecurityRuleSet.Level1>)-.NET Framework 2.0 투명도 규칙입니다.
 

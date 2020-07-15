@@ -2,12 +2,12 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389710"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309198"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>.NET 네이티브로 Windows 스토어 앱 마이그레이션
 
@@ -58,7 +58,7 @@ ms.locfileid: "81389710"
 > [!NOTE]
 > 앱을 .NET 네이티브로 이식할 때 모든 동적 코드 경로를 철저 하 게 테스트 해야 합니다.
 
-.NET 네이티브에 대 한 기본 구성은 대부분의 개발자에 게 충분 하지만, 일부 개발자는 런타임 지시문 (system.xml) 파일을 사용 하 여 구성을 미세 조정할 수 있습니다. 또한 경우에 따라 .NET 네이티브 컴파일러는 리플렉션에 사용할 수 있어야 하는 메타 데이터를 확인할 수 없으며, 특히 다음과 같은 경우에 힌트를 사용 해야 합니다.
+.NET 네이티브에 대 한 기본 구성은 대부분의 개발자에 게 충분 하지만, 일부 개발자는 .rd.xml (런타임 지시문) 파일을 사용 하 여 해당 구성을 미세 조정 하는 것이 좋습니다. 또한 경우에 따라 .NET 네이티브 컴파일러는 리플렉션에 사용할 수 있어야 하는 메타 데이터를 확인할 수 없으며, 특히 다음과 같은 경우에 힌트를 사용 해야 합니다.
 
 - <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> , <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 등의 일부 구문은 정적으로 확인할 수 없습니다.
 
@@ -79,7 +79,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 - .NET Framework 클래스 라이브러리의 형식 및 멤버에 대한 개인 리플렉션은 지원되지 않습니다. 그러나 고유한 개인 형식과 멤버 및 타사 라이브러리의 형식과 멤버에 대해서는 리플렉션을 수행할 수 있습니다.
 
-- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo> 를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL(중간 언어)은 이러한 반환을 직접 지원하지 않으며 해석은 언어에 따라 달라집니다.
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo> 를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL (중간 언어)은이를 직접 지원 하지 않으며 해석은 언어를 그대로 유지 합니다.
 
 - <xref:System.RuntimeFieldHandle> 및 <xref:System.RuntimeMethodHandle> 구조체에서는 public 멤버를 사용할 수 없습니다. 이러한 형식은 LINQ, 식 트리 및 정적 배열 초기화에서만 지원됩니다.
 
@@ -278,7 +278,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 - 대리자
 
-- 문자열(유니코드, ANSI 및 HSTRING)
+- 문자열 (유니코드, ANSI 및 HSTRING)
 
 - 구조체(`byref` 및 `byval`)
 

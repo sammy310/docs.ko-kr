@@ -2,12 +2,12 @@
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614255"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374496"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
 
@@ -66,7 +66,7 @@ Azure 자체는 [Microsoft 내 해커 팀](https://azure.microsoft.com/resources
 
 .NET Framework은 이미 매우 안전한 프레임 워크입니다. 배열의 끝을 탐색 하는 것과 같이 비관리 코드의 일부 문제를 방지 합니다. 검색 된 보안 허점을 해결 하기 위해 작업을 적극적으로 수행 하 고 있습니다. 프레임 워크에서 문제를 발견 하 고이를 악용 하는 대신 보고 하는 연구원을 지불 하는 [버그 포상 프로그램](https://www.microsoft.com/msrc/bounty) 도 있습니다.
 
-.NET 코드를 보다 안전 하 게 보호 하는 방법에는 여러 가지가 있습니다. [.Net에 대 한 보안 코딩 지침](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) 과 같은 지침에 따라 코드를 처음부터 안전 하 게 유지 하기 위해 수행할 수 있는 적절 한 단계가 있습니다. [OWASP top 10](https://owasp.org/www-project-top-ten/) 은 보안 코드를 빌드하기 위한 또 다른 유용한 가이드입니다.
+.NET 코드를 보다 안전 하 게 보호 하는 방법에는 여러 가지가 있습니다. [.Net에 대 한 보안 코딩 지침](../../standard/security/secure-coding-guidelines.md) 과 같은 지침에 따라 코드를 처음부터 안전 하 게 유지 하기 위해 수행할 수 있는 적절 한 단계가 있습니다. [OWASP top 10](https://owasp.org/www-project-top-ten/) 은 보안 코드를 빌드하기 위한 또 다른 유용한 가이드입니다.
 
 빌드 프로세스는 검색 도구를 사용 하 여 프로덕션 환경으로 전환 하기 전에 소스 코드의 문제를 검색 하는 데 적합 한 위치입니다. 대부분의 프로젝트에는 일부 다른 패키지에 대 한 종속성이 있습니다. 오래 된 패키지를 검색할 수 있는 도구는 야간 빌드의 문제를 파악 합니다. Docker 이미지를 작성 하는 경우에도 기본 이미지에 알려진 취약성이 없는지 확인 하 고 확인 하는 것이 유용 합니다. 어떤 경우에도 아무도 자격 증명을 체크 인하지 않았는지 확인 해야 합니다.
 
@@ -139,7 +139,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 보안 주체에 특정 사용 권한이 있는지 테스트할 때 역할 및 범위의 조합이 고려 됩니다. 이 조합은 강력한 권한 부여 메커니즘을 제공 합니다.
 
-## <a name="deny"></a>거부
+## <a name="deny"></a>Deny
 
 이전에는 RBAC에 대해 "허용" 규칙만 허용 되었습니다. 이 동작은 일부 범위를 빌드하기에 복잡 했습니다. 예를 들어 잠재적으로 무한 한 저장소 계정 목록에 명시적 사용 권한을 부여 하는 것을 제외 하 고 모든 저장소 계정에 대 한 보안 주체 액세스를 허용 합니다. 새 저장소 계정을 만들 때마다이 계정 목록에 추가 해야 합니다. 이로 인해 바람직하지 않은 관리 오버 헤드가 발생 했습니다.
 

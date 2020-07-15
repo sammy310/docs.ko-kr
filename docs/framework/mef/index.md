@@ -1,5 +1,6 @@
 ---
 title: MEF(Managed Extensibility Framework)
+description: 애플리케이션 개발자가 .NET 4 이상에서 구성 없이 확장을 검색하고 사용할 수 있게 해주는 MEF(Managed Extensibility Framework)에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 9a601ac860ac3bf81dd01980b020470d3323772f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181281"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281253"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
@@ -39,7 +40,7 @@ MEF(Managed Extensibility Framework)는 확장 가능한 경량 애플리케이�
 
 ## <a name="what-mef-provides"></a>MEF에서 제공하는 기능
 
-이처럼 사용 가능한 구성 요소를 명시적으로 등록하는 대신 MEF는 *컴퍼지션*을 통해 구성 요소를 암시적으로 검색하는 방법을 제공합니다. MEF 구성 요소(‘파트’)는 해당 종속성(*Import*)과 제공하는 기능(*Export*)을 모두 선언적으로 지정합니다.  파트를 작성할 때 MEF 컴퍼지션 엔진은 다른 파트에서 제공되는 항목을 사용하여 Import를 충족합니다.
+이처럼 사용 가능한 구성 요소를 명시적으로 등록하는 대신 MEF는 *컴퍼지션*을 통해 구성 요소를 암시적으로 검색하는 방법을 제공합니다. MEF 구성 요소(‘파트’)는 해당 종속성(*Import*)과 제공하는 기능(*Export*)을 모두 선언적으로 지정합니다. 파트를 작성할 때 MEF 컴퍼지션 엔진은 다른 파트에서 제공되는 항목을 사용하여 Import를 충족합니다.
 
 이러한 방식이 사용되므로 이전 섹션에서 설명한 문제가 해결됩니다. MEF 파트는 해당 기능을 선언적으로 지정하기 때문에 런타임에 검색이 가능합니다. 따라서 애플리케이션이 하드 코드된 참조나 취약한 구성 파일 없이도 파트를 사용할 수 있습니다. MEF를 사용하는 경우 애플리케이션이 파트를 인스턴스화하거나 어셈블리를 로드하지 않고도 메타데이터를 기준으로 파트를 검색 및 검사할 수 있습니다. 그러므로 확장을 로드해야 하는 시기와 방법을 면밀하게 지정하지 않아도 됩니다.
 
@@ -76,7 +77,7 @@ MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은
 
 ## <a name="composition-container-and-catalogs"></a>컴퍼지션 컨테이너 및 카탈로그
 
-MEF 컴퍼지션 모델에서 핵심적인 요소는 사용 가능한 모든 파트를 포함하며 컴퍼지션을 수행하는 ‘컴퍼지션 컨테이너’입니다.  컴퍼지션이란 Import를 Export에 일치시키는 작업입니다. SimpleCalculator에서는 가장 일반적인 유형의 컴퍼지션 컨테이너인 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>를 사용합니다.
+MEF 컴퍼지션 모델에서 핵심적인 요소는 사용 가능한 모든 파트를 포함하며 컴퍼지션을 수행하는 ‘컴퍼지션 컨테이너’입니다. 컴퍼지션이란 Import를 Export에 일치시키는 작업입니다. SimpleCalculator에서는 가장 일반적인 유형의 컴퍼지션 컨테이너인 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>를 사용합니다.
 
 Visual Basic을 사용하는 경우 *Module1.vb*에서 `Program`이라는 public 클래스를 추가합니다.
 
@@ -90,7 +91,7 @@ Dim _container As CompositionContainer
 private CompositionContainer _container;
 ```
 
-컴퍼지션 컨테이너는 사용 가능한 파트를 검색하기 위해 ‘카탈로그’를 사용합니다.  카탈로그는 일부 소스에서 사용 가능한 파트를 검색하는 개체입니다. MEF는 제공된 형식, 어셈블리 또는 디렉터리에서 파트를 검색하기 위한 카탈로그를 제공합니다. 애플리케이션 개발자는 쉽게 새 카탈로그를 만들어 웹 서비스 등의 다른 소스에서 파트를 검색할 수 있습니다.
+컴퍼지션 컨테이너는 사용 가능한 파트를 검색하기 위해 ‘카탈로그’를 사용합니다. 카탈로그는 일부 소스에서 사용 가능한 파트를 검색하는 개체입니다. MEF는 제공된 형식, 어셈블리 또는 디렉터리에서 파트를 검색하기 위한 카탈로그를 제공합니다. 애플리케이션 개발자는 쉽게 새 카탈로그를 만들어 웹 서비스 등의 다른 소스에서 파트를 검색할 수 있습니다.
 
 `Program` 클래스에 다음 생성자를 추가합니다.
 
@@ -157,7 +158,7 @@ public ICalculator calculator;
 
 `calculator` 개체는 일반적인 방식으로 선언되지만 여기서는 해당 개체가 <xref:System.ComponentModel.Composition.ImportAttribute> 특성으로 데코레이팅되어 있습니다. 이 특성은 Import로 지정할 항목을 선언합니다 즉, 개체를 구성할 때 컴퍼지션 엔진에서 특성이 채워집니다.
 
-모든 Import에는 일치시킬 Export를 결정하는 ‘계약’이 있습니다.  계약은 명시적으로 지정된 문자열일 수도 있고 MEF가 특정 형식(여기서는 `ICalculator` 인터페이스)에서 자동으로 생성할 수도 있습니다. 일치하는 계약을 사용하여 선언된 Export는 이 Import를 충족합니다. 여기서는 `calculator` 개체의 실제 형식이 `ICalculator`이지만 반드시 형식이 일치해야 하는 것은 아닙니다. 계약은 가져오는 개체의 형식과는 별개입니다. 그러므로 여기서 `typeof(ICalculator)`를 빼도 됩니다. 명시적으로 지정하지 않는 경우 MEF는 계약이 Import 형식을 기준으로 한다고 자동으로 가정합니다.
+모든 Import에는 일치시킬 Export를 결정하는 ‘계약’이 있습니다. 계약은 명시적으로 지정된 문자열일 수도 있고 MEF가 특정 형식(여기서는 `ICalculator` 인터페이스)에서 자동으로 생성할 수도 있습니다. 일치하는 계약을 사용하여 선언된 Export는 이 Import를 충족합니다. 여기서는 `calculator` 개체의 실제 형식이 `ICalculator`이지만 반드시 형식이 일치해야 하는 것은 아닙니다. 계약은 가져오는 개체의 형식과는 별개입니다. 그러므로 여기서 `typeof(ICalculator)`를 빼도 됩니다. 명시적으로 지정하지 않는 경우 MEF는 계약이 Import 형식을 기준으로 한다고 자동으로 가정합니다.
 
 아래의 매우 간단한 인터페이스를 모듈 또는 `SimpleCalculator` 네임스페이스에 추가합니다.
 
@@ -246,7 +247,7 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;
 ```
 
-<xref:System.Lazy%602>는 Export에 대한 간접 참조를 저장할 수 있도록 MEF에서 제공하는 형식입니다. 여기서는 내보낸 개체 자체뿐 아니라 내보낸 개체를 설명하는 정보인 ‘내보내기 메타데이터’도 제공됩니다.  각 <xref:System.Lazy%602>는 실제 연산을 나타내는 `IOperation` 개체와 해당 메타데이터를 나타내는 `IOperationData` 개체를 포함합니다.
+<xref:System.Lazy%602>는 Export에 대한 간접 참조를 저장할 수 있도록 MEF에서 제공하는 형식입니다. 여기서는 내보낸 개체 자체뿐 아니라 내보낸 개체를 설명하는 정보인 ‘내보내기 메타데이터’도 제공됩니다. 각 <xref:System.Lazy%602>는 실제 연산을 나타내는 `IOperation` 개체와 해당 메타데이터를 나타내는 `IOperationData` 개체를 포함합니다.
 
 모듈 또는 `SimpleCalculator` 네임스페이스에 다음과 같은 간단한 인터페이스를 추가합니다.
 
@@ -300,7 +301,7 @@ class Add: IOperation
 
 <xref:System.ComponentModel.Composition.ExportAttribute> 특성은 이전과 같이 작동합니다. <xref:System.ComponentModel.Composition.ExportMetadataAttribute> 특성은 메타데이터를 해당 Export에 이름-값 쌍 형식으로 연결합니다. `Add` 클래스가 `IOperation`을 구현하는 동안에는 `IOperationData`를 구현하는 클래스가 명시적으로 정의되지 않습니다. 대신 제공된 메타데이터 이름을 기준으로 하는 속성을 사용하여 MEF에서 클래스를 암시적으로 만듭니다. 이는 MEF에서 메타데이터에 액세스하는 여러 방법 중 하나입니다.
 
-MEF에서 컴퍼지션은 ‘재귀’ 방식으로 수행됩니다.  즉, 명시적으로 구성한 `Program` 개체가 `ICalculator` 형식으로 확인된 `MySimpleCalculator`를 가져왔습니다. `MySimpleCalculator`는 `IOperation` 개체 컬렉션을 가져오며 해당 Import는 `MySimpleCalculator`를 만들 때 `Program`의 Import와 동시에 채워집니다. `Add` 클래스가 추가 Import를 선언한 경우에는 해당 Import도 채워지는 식으로 작업이 진행됩니다. 채워지지 않은 Import가 있으면 컴퍼지션 오류가 발생합니다. 그러나 Import를 선택 사항으로 선언하거나 Import에 기본값을 할당할 수는 있습니다.
+MEF에서 컴퍼지션은 ‘재귀’ 방식으로 수행됩니다. 즉, 명시적으로 구성한 `Program` 개체가 `ICalculator` 형식으로 확인된 `MySimpleCalculator`를 가져왔습니다. `MySimpleCalculator`는 `IOperation` 개체 컬렉션을 가져오며 해당 Import는 `MySimpleCalculator`를 만들 때 `Program`의 Import와 동시에 채워집니다. `Add` 클래스가 추가 Import를 선언한 경우에는 해당 Import도 채워지는 식으로 작업이 진행됩니다. 채워지지 않은 Import가 있으면 컴퍼지션 오류가 발생합니다. 그러나 Import를 선택 사항으로 선언하거나 Import에 기본값을 할당할 수는 있습니다.
 
 ## <a name="calculator-logic"></a>계산기 논리
 

@@ -1,16 +1,17 @@
 ---
 title: ETW Events in the .NET Framework
+description: .NET에서 ETW (Windows 용 이벤트 추적)에 대 한 링크 문서를 참조 하세요. ETW는 고성능, 오버 헤드가 낮은, 확장 가능한 추적 시스템입니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-ms.openlocfilehash: f2ad939f2ee840bfe697b0202675c309843aedd0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 48d0723f0f010e5102d60940f515a478725f8263
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644261"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309523"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오버헤드가 낮고 확장 가능한 고성능 추적 시스템입니다. ETW는 .NET Framework에서 제공되는 프로파일링 및 디버깅 지원을 보완하며 다양한 시나리오 관련 문제를 해결하는 데 사용될 수 있습니다.  

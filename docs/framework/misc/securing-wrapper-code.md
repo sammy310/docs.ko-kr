@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281448"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309380"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281448"
  이러한 보안 허점을 방지 하기 위해 공용 언어 런타임은 **LinkDemand**로 보호 되는 메서드, 생성자, 속성 또는 이벤트에 대 한 간접 호출에 대 한 전체 스택 탐색 수요에 대 한 검사를 확장 합니다. 이 보호를 사용할 경우 성능이 약간 저하되고 보안 검사의 의미 체계가 변경됩니다. 보다 신속한 단일 수준 검사는 성공했을 경우에도 전체 스택 워크 요구는 실패할 수 있습니다.  
   
 ## <a name="assembly-loading-wrappers"></a>어셈블리 로딩 래퍼  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>를 포함하여 관리 코드를 로드하는 데 사용되는 여러 메서드는 호출자의 증거와 함께 어셈블리를 로드합니다. 이러한 메서드를 래핑하는 경우 보안 시스템이 래퍼 호출자의 권한 대신 코드의 권한 부여를 사용하여 어셈블리를 로드할 수 있습니다. 덜 신뢰되는 코드가 래퍼 호출자의 권한보다 더 높은 권한이 부여된 코드를 로드할 수 있도록 허용하면 안 됩니다.  
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>를 포함하여 관리 코드를 로드하는 데 사용되는 여러 메서드는 호출자의 증거와 함께 어셈블리를 로드합니다. 이러한 메서드를 래핑하는 경우 보안 시스템이 래퍼 호출자의 권한 대신 코드의 권한 부여를 사용하여 어셈블리를 로드할 수 있습니다. 낮은 신뢰 코드를 사용 하 여 호출자 보다 높은 권한이 부여 된 코드를 래퍼에 로드 하지 마십시오.  
   
  완전 신뢰 또는 잠재적인 호출자(인터넷 권한 수준 호출자 포함)보다 더 높은 신뢰 수준의 코드는 이런 방식으로 보안을 약화시킬 수 있습니다. 코드에 바이트 배열을 사용 하 여 어셈블리에 전달 하는 public 메서드가 있는 경우 **로드**하 여 호출자를 대신 하 여 어셈블리를 만들면 보안이 중단 될 수 있습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281448"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Demand와 LinkDemand 비교  
- 선언적 보안은 서로 비슷하지만 전혀 다른 검사를 수행하는 두 종류의 보안 검사를 제공합니다. 잘못 선택하면 보안이 약화되거나 성능이 저하될 수 있으므로 두 형태를 모두 이해해야 합니다.  
+ 선언적 보안은 유사 하지만 서로 다른 검사를 수행 하는 두 종류의 보안 검사를 제공 합니다. 잘못 된 선택으로 인해 보안이 취약 하거나 성능이 저하 될 수 있으므로 두 가지 형태를 모두 이해 하는 것이 좋습니다.  
   
  선언적 보안은 다음과 같은 보안 검사를 제공합니다.  
   

@@ -1,16 +1,17 @@
 ---
 title: ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
+description: '.NET의 ARM (응용 프로그램 도메인 리소스 모니터링) ETW 이벤트 (예: ThreadCreated, AppDomainMemAllocated, AppDomainMemSurvived 등)에 대해 읽어 보십시오.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716222"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309783"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(애플리케이션 도메인 리소스 모니터링) ETW 이벤트
 
@@ -35,7 +36,7 @@ ms.locfileid: "75716222"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|만들어진 스레드의 ID입니다.|
 |AppDomainID|win:UInt64|스레드 활동이 보고되는 애플리케이션 도메인의 식별자입니다.|
@@ -60,7 +61,7 @@ ms.locfileid: "75716222"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|리소스 사용량이 보고되는 애플리케이션 도메인의 식별자입니다.|
 |Allocated|win:UInt64|애플리케이션 도메인이 만들어진 후 이 애플리케이션 도메인에서 할당된 총 바이트 수입니다(해제된 메모리 양을 빼지 않음).|
@@ -82,7 +83,7 @@ ms.locfileid: "75716222"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |AppDomainID|win:UInt64|리소스 사용량이 보고되는 도메인의 식별자입니다.|
 |Survived|win:UInt64|마지막 수집 후에도 유지되고 이 애플리케이션 도메인에 저장되는 것으로 알려진 바이트 수입니다. 이 수는 전체 수집 후에 정확하고 완전하지만 임시 수집 후에는 불완전할 수 있습니다.|
@@ -106,7 +107,7 @@ ms.locfileid: "75716222"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|스레드 식별자입니다.|
 |AppDomainID|win:UInt64|애플리케이션 도메인 식별자입니다.|
@@ -129,12 +130,12 @@ ms.locfileid: "75716222"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|스레드 식별자입니다.|
 |AppDomainID|win:UInt64|애플리케이션 도메인 식별자입니다.|
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

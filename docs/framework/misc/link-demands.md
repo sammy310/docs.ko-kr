@@ -15,19 +15,19 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282061"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309107"
 ---
 # <a name="link-demands"></a>링크 요청
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  링크 요청으로 인해 Just-In-Time 컴파일 동안 보안 검사를 수행하며 코드의 직접 호출 어셈블리만 검사합니다. 연결은 함수 포인터 참조 및 메서드 호출을 포함하여 코드가 형식 참조에 바인딩된 경우에 발생합니다. 호출 어셈블리에 코드에 연결할 권한이 없는 경우 링크가 허용되지 않으며 코드가 로드 및 실행될 때 런타임 예외가 발생합니다. 코드에서 상속하는 클래스에서 링크 요청을 재정의할 수 있습니다.  
   
- 이 형식의 요청에서는 전체 스택 워크가 수행되지 않으며 코드가 여전히 보안 공격에 취약합니다. 예를 들어 어셈블리 A의 메서드가 링크 요청에 의해 보호 되 면 어셈블리 b의 직접 호출자는 어셈블리 B의 권한에 따라 평가 됩니다.  그러나 어셈블리 B의 메서드를 사용 하 여 어셈블리 A에서 메서드를 간접적으로 호출 하는 경우 링크 요청은 어셈블리 C의 메서드를 평가 하지 않습니다. 링크 요청은 직접 호출 어셈블리의 직접 호출자가 코드에 연결 하는 데 필요한 권한만 지정 합니다. 모든 호출자가 코드를 실행하는 데 필요한 권한은 지정하지 않습니다.  
+ 전체 스택 워크는 이러한 유형의 요청으로 수행 되지 않으며 코드에서 여전히 잠복 공격에 취약 합니다. 예를 들어 어셈블리 A의 메서드가 링크 요청에 의해 보호 되 면 어셈블리 b의 직접 호출자는 어셈블리 B의 권한에 따라 평가 됩니다.  그러나 어셈블리 B의 메서드를 사용 하 여 어셈블리 A에서 메서드를 간접적으로 호출 하는 경우 링크 요청은 어셈블리 C의 메서드를 평가 하지 않습니다. 링크 요청은 직접 호출 어셈블리의 직접 호출자가 코드에 연결 하는 데 필요한 권한만 지정 합니다. 모든 호출자가 코드를 실행하는 데 필요한 권한은 지정하지 않습니다.  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> 및 <xref:System.Security.CodeAccessPermission.PermitOnly%2A> 스택 워크 한정자는 링크 요청의 평가에 영향을 주지 않습니다.  링크 요청은 스택 워크를 수행하지 않으므로 스택 워크 한정자가 링크 요청에 영향을 주지 않습니다.  
   

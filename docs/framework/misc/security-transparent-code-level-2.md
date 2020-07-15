@@ -1,5 +1,6 @@
 ---
 title: 보안 투명 코드, 수준 2
+description: 수준 2 투명 코드를 이해 합니다. 사용 예제 및 동작, 재정의 패턴, 상속 규칙 등을 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645727"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309211"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-수준 2 투명성은 .NET 프레임워크 4에 도입되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
+수준 2 투명도는 .NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
 
 - 완전 신뢰로 실행되는 코드를 포함하는 투명 코드는 다른 투명 코드나 보안 안전에 중요 코드만 호출할 수 있습니다. 도메인의 부분 신뢰 권한 집합(있는 경우)에서 허용하는 작업만 수행할 수 있습니다. 투명 코드는 다음을 수행할 수 없습니다.
 
@@ -42,7 +43,7 @@ ms.locfileid: "81645727"
 
 ## <a name="usage-examples-and-behaviors"></a>사용 예제 및 동작
 
-.NET Framework 4 규칙(수준 2 투명도)을 지정하려면 어셈블리에 다음 지정을 사용합니다.
+.NET Framework 4 개 규칙 (수준 2 투명도)을 지정 하려면 어셈블리에 대해 다음 주석을 사용 합니다.
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +55,7 @@ ms.locfileid: "81645727"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-어셈블리에 추가하지 않으면 .NET Framework 4 규칙이 기본적으로 사용됩니다. 그러나 기본값에 따라 달라지는 <xref:System.Security.SecurityRulesAttribute> 대신 특성을 사용하는 것이 좋습니다.
+어셈블리에 주석을 추가 하지 않으면 기본적으로 .NET Framework 4 규칙이 사용 됩니다. 그러나 권장 되는 모범 사례는 기본값에 의존 하는 대신 특성을 사용 하는 것입니다 <xref:System.Security.SecurityRulesAttribute> .
 
 ### <a name="assembly-wide-annotation"></a>어셈블리 수준 주석
 
@@ -68,7 +69,7 @@ ms.locfileid: "81645727"
 
 - `AllowPartiallyTrustedCallers`(수준 2만 해당): 모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.
 
-다음 표는 수준 2의 어셈블리 수준 동작과 수준 1을 비교합니다.
+다음 표에서는 수준 2에 대 한 어셈블리 수준 동작과 수준 1을 비교 합니다.
 
 |어셈블리 특성|수준 2|수준 1|
 |------------------------|-------------|-------------|
@@ -165,7 +166,7 @@ ms.locfileid: "81645727"
 형식, 메서드 또는 필드가 `SecurityCritical`, `SecuritySafeCritical` 또는 `SecurityTransparent`인지 확인하려고 <xref:System.Reflection> 네임스페이스에 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> 속성이 추가되었습니다. 이들 속성을 사용하여 특성이 있는지 확인하는 것이 아니라 리플렉션을 통해 투명도를 확인합니다. 투명도 규칙은 복잡하고 특성이 있는지 확인하는 것으로는 충분하지 않을 수 있습니다.
 
 > [!NOTE]
-> 메서드는 `SafeCritical` `true` 매우 <xref:System.Type.IsSecurityCritical%2A> 중요하기 `SafeCritical` 때문에 및 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>에 대해 반환합니다(중요한 코드와 동일한 기능을 가지고 있지만 투명 코드에서 호출할 수 있음).
+> `SafeCritical`는 중요 한 `true` <xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> `SafeCritical` 코드와 동일한 기능을 제공 하지만 투명 코드에서 호출할 수 있으므로 메서드는 및 둘 다에 대해를 반환 합니다.
 
 동적 메서드는 연결된 모듈의 투명도를 상속합니다. 형식의 투명도를 상속하지 않습니다(형식에 연결된 경우).
 
@@ -175,9 +176,9 @@ ms.locfileid: "81645727"
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. `transparent` [PEVerify 도구에서](../tools/peverify-exe-peverify-tool.md)옵션을 사용하여 어셈블리의 투명 코드를 확인할 수 있는지 확인해야 합니다.
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. `transparent` [PEVerify 도구](../tools/peverify-exe-peverify-tool.md)에서 옵션을 사용 하 여 어셈블리의 투명 코드를 확인할 수 있는지 확인 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [보안 투명 코드, 레벨 1](security-transparent-code-level-1.md)
-- [보안 변경 사항](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
+- [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

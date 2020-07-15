@@ -1,15 +1,16 @@
 ---
 title: .NET Framework 로깅 제어
+description: ETW (Windows 용 이벤트 추적)를 사용 하 여 .NET 로깅을 제어 하 고 CLR (공용 언어 런타임) 이벤트를 기록 합니다. Logman, Tracerpt 및 Xperf와 같은 도구를 사용 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504106"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309588"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 
@@ -17,7 +18,7 @@ ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) �
 
 - Windows 운영 체제에 포함되어 있는 [Logman](/windows-server/administration/windows-commands/logman) 및 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 명령줄 도구
 
-- [Windows 성능 도구 키트](/windows-hardware/test/wpt/xperf-command-line-reference)에 있는 [Xperf](/windows-hardware/test/wpt/) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](https://docs.microsoft.com/archive/blogs/pigscanfly/)를 참조하세요.
+- [Windows 성능 도구 키트](/windows-hardware/test/wpt/)에 있는 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](https://docs.microsoft.com/archive/blogs/pigscanfly/)를 참조하세요.
 
 CLR 이벤트 정보를 캡처하려면 컴퓨터에 CLR 공급자가 설치되어 있어야 합니다. 공급자가 설치되어 있는지 확인하려면 명령줄에 `logman query providers`를 입력합니다. 공급자 목록이 나타납니다. 이 목록에는 다음과 같이 CLR 공급자 항목이 포함되어 있어야 합니다.
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자로 명령 프롬프트 창을 엽니다. 프롬프트 디렉터리를 .NET Framework 4 폴더 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 버전 > \)로 변경 합니다. 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.
+CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 명령줄 도구를 사용하여 Windows Vista 이상의 운영 체제에 설치할 수 있습니다. 관리자로 명령 프롬프트 창을 엽니다. 프롬프트 디렉터리를 .NET Framework 4 폴더 (%WINDIR%\Microsoft.NET\Framework [64] \v4.로 변경 합니다. \<.NET version> \ ). 이 폴더에는 CLR-ETW.man 파일이 들어 있습니다. 명령 프롬프트에서 다음 명령을 입력하여 CLR 공급자를 설치합니다.
 
 `wevtutil im CLR-ETW.man`
 
@@ -49,7 +50,7 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     각 항목이 나타내는 의미는 다음과 같습니다.
+     다음은 각 문자에 대한 설명입니다.
 
     - `-p` 매개 변수는 공급자 GUID를 식별합니다.
 

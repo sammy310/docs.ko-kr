@@ -1,16 +1,17 @@
 ---
 title: 제약이 있는 실행 지역
+description: 신뢰할 수 있는 관리 코드를 작성 하기 위한 메커니즘의 일부인 CER (제약이 있는 실행 영역)을 시작 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247729"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309614"
 ---
 # <a name="constrained-execution-regions"></a>제약이 있는 실행 지역
 CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작성하기 위한 메커니즘에 포함됩니다. CER은 CLR(공용 언어 런타임 지원)이 영역의 전체 코드가 실행되지 않도록 하는 대역 외 예외를 throw하지 못하도록 제한되는 영역을 정의합니다. 해당 영역 내에서 사용자 코드는 대역 외 예외 throw를 초래하는 실행이 제한됩니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 메서드는 `try` 블록 바로 앞에 와야 하고 `catch`, `finally` 및 `fault` 블록을 제약이 있는 실행 영역으로 표시합니다. 제약이 있는 영역으로 표시된 후 코드는 강한 안정성 계약을 사용하여 다른 코드를 호출해야 하고 코드는 실패를 처리할 준비가 된 경우에만 준비되지 않거나 신뢰할 수 없는 메서드에 대한 가상 호출을 할당하거나 수행할 수 있습니다. CLR은 CER에서 실행되는 코드의 스레드 중단을 지연합니다.  

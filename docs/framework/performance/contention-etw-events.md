@@ -1,16 +1,17 @@
 ---
 title: 경합 ETW 이벤트-.NET
+description: 경합 ETW 이벤트에 대 한 세부 정보를 가져옵니다 .이 이벤트는 런타임에 사용 되는 시스템. 모니터 잠금 또는 네이티브 잠금에 대 한 경합이 있을 때마다 발생 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - contention events [.NET Framework]
 - ETW, contention events (CLR)
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
-ms.openlocfilehash: 98fc2adcaebe4c9646ab9960f796982681a9015a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a36b091e0896562fffdb66e895d70049ce0667d7
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716128"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309601"
 ---
 # <a name="contention-etw-events"></a>경합 ETW 이벤트
 
@@ -31,11 +32,11 @@ ms.locfileid: "75716128"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |플래그|win:UInt8|0(관리), 1(네이티브).|
 |ClrInstanceID|win:UInt16|CLR 인스턴스의 고유 ID.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)
