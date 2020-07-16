@@ -6,11 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803220"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174408"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>자습서: 시계열 분석 및 ML.NET를 사용하여 자전거 대여 서비스 수요 예측
 
@@ -32,7 +33,7 @@ ML.NET를 통해 SQL Server 데이터베이스에 저장된 데이터에 대한 
 
 ## <a name="time-series-forecasting-sample-overview"></a>시계열 예측 샘플 개요
 
-이 샘플은 단일 스펙트럼 분석이라고 하는 일변량 시계열 분석 알고리즘을 사용하여 자전거 대여 수요를 예측하는 **C# .NET Core 콘솔 애플리케이션**입니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand)에서 찾을 수 있습니다.
+이 샘플은 Singular Spectrum Analysis라고 하는 일변량 시계열 분석 알고리즘을 사용하여 자전거 대여 수요를 예측하는 **C# .NET Core 콘솔 애플리케이션**입니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand)에서 찾을 수 있습니다.
 
 ## <a name="understand-the-problem"></a>문제 이해
 
@@ -40,7 +41,7 @@ ML.NET를 통해 SQL Server 데이터베이스에 저장된 데이터에 대한 
 
 이 자습서에서 사용되는 데이터를 분석하는 방법은 일변량 시계열 분석입니다. 일변량 시계열 분석은 월별 판매량 같은 특정 간격으로 일정 기간의 단일 수치를 확인합니다.
 
-이 자습서에서 사용되는 알고리즘은 [SSA(단일 스펙트럼 분석)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)입니다. SSA는 시계열을 주요 구성 요소 집합으로 분리하는 방식으로 작동합니다. 이러한 구성 요소는 추세, 노이즈, 계절성 및 기타 여러 요소에 해당하는 신호의 일부분으로 해석될 수 있습니다. 그런 다음 이러한 구성 요소가 재구성되어 나중에 값을 예측하는 데 사용됩니다.
+이 자습서에서 사용되는 알고리즘은 [SSA(Singular Spectrum Analysis)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)입니다. SSA는 시계열을 주요 구성 요소 집합으로 분리하는 방식으로 작동합니다. 이러한 구성 요소는 추세, 노이즈, 계절성 및 기타 여러 요소에 해당하는 신호의 일부분으로 해석될 수 있습니다. 그런 다음 이러한 구성 요소가 재구성되어 나중에 값을 예측하는 데 사용됩니다.
 
 ## <a name="create-console-application"></a>콘솔 애플리케이션 만들기
 

@@ -3,12 +3,12 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396277"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100940"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
@@ -17,6 +17,25 @@ ms.locfileid: "83396277"
 이 자습서에서는 Roslyn API를 사용하여 **분석기** 및 함께 제공되는 **코드 수정 사항**을 만드는 방법을 살펴봅니다. 분석기는 소스 코드 분석을 수행하고 사용자에게 문제를 보고하는 방법입니다. 필요한 경우 분석기는 사용자의 소스 코드에 대한 수정 사항을 나타내는 코드 수정 사항도 제공할 수 있습니다. 이 자습서에서는 `const` 한정자를 사용하여 선언할 수 있는 지역 변수 선언을 찾는 분석기를 만듭니다. 함께 제공되는 코드 수정 사항은 해당 선언을 수정하여 `const` 한정자를 추가합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
+
+> [!NOTE]
+> 현재 Visual Studio **코드 수정 사항이 포함된 분석기(.NET Standard)** 템플릿에는 알려진 버그가 있으며 Visual Studio 2019 버전 16.7에서 수정되어야 합니다. 다음과 같이 변경되어야 템플릿의 프로젝트가 컴파일됩니다.
+>
+> 1. **도구** > **옵션** > **NuGet 패키지 관리자** > **패키지 소스**를 선택합니다.
+>    - 더하기 단추를 선택하여 새 소스를 추가합니다.
+>    - **소스**를 `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json`으로 설정하고 **업데이트**를 선택합니다.
+> 1. **솔루션 탐색기**에서 **MakeConst.Vsix** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다.
+>    - `<AssemblyName>` 노드를 업데이트하여 `.Visx` 접미사를 추가합니다.
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - 줄 41의 `<ProjectReference>` 노드를 업데이트하여 `TargetFramework` 값을 변경합니다.
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. *MakeConst.Test* 프로젝트에서 *MakeConstUnitTests.cs* 파일을 업데이트합니다.
+>    - 줄 9를 다음으로 변경하고 네임스페이스 변경을 확인합니다.
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - 줄 24를 다음 메서드로 변경합니다.
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - 줄 62를 다음 메서드로 변경합니다.
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Console.WriteLine(x);
 - **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
 - 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
 
-코드 수정 사항 템플릿이 포함된 분석기는 세 개의 프로젝트를 만듭니다. 하나에는 분석기 및 코드 수정 사항이 포함되고, 두 번째는 단위 테스트 프로젝트이고, 세 번째는 VSIX 프로젝트입니다. 기본 시작 프로젝트는 VSIX 프로젝트입니다. **F5** 키를 눌러 VSIX 프로젝트를 시작합니다. 그러면 새 분석기를 로드한 Visual Studio의 두 번째 인스턴스가 시작됩니다.
+코드 수정 사항 템플릿이 포함된 분석기는 세 개의 프로젝트를 만듭니다. 하나에는 분석기 및 코드 수정 사항이 포함되고, 두 번째는 단위 테스트 프로젝트이고, 세 번째는 VSIX 프로젝트입니다. 기본 시작 프로젝트는 VSIX 프로젝트입니다. <kbd>F5</kbd> 키를 눌러 VSIX 프로젝트를 시작합니다. 그러면 새 분석기를 로드한 Visual Studio의 두 번째 인스턴스가 시작됩니다.
 
 > [!TIP]
 > 분석기를 실행할 때 Visual Studio의 두 번째 복사본을 시작합니다. 이 두 번째 복사본은 다른 레지스트리 하이브를 사용하여 설정을 저장합니다. 이렇게 하면 Visual Studio의 두 복사본에서 시각적 설정을 구별할 수 있습니다. Visual Studio의 실험 실행에 서로 다른 테마를 선택할 수 있습니다. 또한 Visual Studio의 실험 실행을 사용하여 사용자 설정 또는 로그인을 Visual Studio 계정에 로밍하지 마세요. 이렇게 하면 설정이 다르게 유지됩니다.
@@ -170,7 +189,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-**F5** 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 애플리케이션을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
+<kbd>F5</kbd> 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 애플리케이션을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
 
 ```csharp
 int x = 0;
@@ -251,7 +270,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-코드 수정 사항을 시도할 준비가 되었습니다.  F5 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
+코드 수정 사항을 시도할 준비가 되었습니다.  <kbd>F5</kbd> 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
 
 ![const 경고를 만들 수 있음](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-이러한 두 테스트를 실행하여 성공하는지 확인합니다. Visual Studio에서 **테스트** > **Windows** > **테스트 탐색기**를 선택하여 **테스트 탐색기**를 엽니다.  **모두 실행** 링크를 누릅니다.
+이러한 두 테스트를 실행하여 성공하는지 확인합니다. Visual Studio에서 **테스트** > **Windows** > **테스트 탐색기**를 선택하여 **테스트 탐색기**를 엽니다. 그런 다음, **모두 실행** 링크를 선택합니다.
 
 ## <a name="create-tests-for-valid-declarations"></a>유효한 선언에 대한 테스트 만들기
 
@@ -503,12 +522,12 @@ var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사�
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. Ctrl+F5를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
+테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. <kbd>Ctrl+F5</kbd>를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
 
 - 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
 - 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
 - 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
-- 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
+- 편집기 캐럿을 물결선 위로 이동하고 <kbd>Ctrl+</kbd>를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
 
 마지막으로 다음 코드를 추가합니다.
 

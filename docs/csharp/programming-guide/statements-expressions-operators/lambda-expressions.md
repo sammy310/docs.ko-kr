@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761839"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174155"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -141,7 +141,7 @@ public partial class Form1 : Form
 
 ## <a name="lambda-expressions-and-tuples"></a>람다 식 및 튜플
 
-C# 7.0부터 C# 언어에서 [튜플](../../tuples.md)을 기본적으로 지원합니다. 람다 식에 인수로 튜플을 제공할 수 있으며 람다 식에서 튜플을 반환할 수도 있습니다. 경우에 따라 C# 컴파일러는 형식 유추를 사용하여 튜플 구성 요소의 형식을 확인할 수 있습니다.
+C# 7.0부터 C# 언어에서 [튜플](../../language-reference/builtin-types/value-tuples.md)을 기본적으로 지원합니다. 람다 식에 인수로 튜플을 제공할 수 있으며 람다 식에서 튜플을 반환할 수도 있습니다. 경우에 따라 C# 컴파일러는 형식 유추를 사용하여 튜플 구성 요소의 형식을 확인할 수 있습니다.
 
 쉼표로 구분된 해당 구성 요소 목록을 괄호로 묶어 튜플을 정의합니다. 다음 예제에서는 3개 구성 요소가 있는 튜플을 사용하여 숫자 시퀀스를 람다 식에 전달하고 각 값을 두 배로 늘린 후 곱하기의 결과가 포함된, 3개 구성 요소가 있는 튜플을 반환합니다.
 
@@ -151,7 +151,7 @@ C# 7.0부터 C# 언어에서 [튜플](../../tuples.md)을 기본적으로 지원
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-C# 튜플에 대한 자세한 내용은 [C# 튜플 형식](../../tuples.md)을 참조하세요.
+C# 튜플에 관한 자세한 내용은 [튜플 형식](../../language-reference/builtin-types/value-tuples.md)을 참조하세요.
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>표준 쿼리 연산자와 람다 식
 

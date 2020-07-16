@@ -2,12 +2,12 @@
 title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398354"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174772"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
 
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-[튜플](../tuples.md) 문서에서 이 기능에 대해 자세히 알아볼 수 있습니다.
+[튜플 형식](../language-reference/builtin-types/value-tuples.md) 문서에서 해당 기능을 자세히 알아볼 수 있습니다.
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>제네릭 형식 매개 변수의 패턴 일치
 

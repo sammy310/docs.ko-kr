@@ -2,17 +2,18 @@
 title: 개체 지향 프로그래밍(C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241892"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226636"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
-C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
+C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 
+- ‘추상화’는 형식 소비자의 불필요한 세부 정보를 숨기는 것입니다.
 - *캡슐화*는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
 - *상속*은 기존 클래스를 기반으로 새로운 클래스를 만들 수 있는 능력을 나타냅니다.
 - *다형성*은 동일한 속성 또는 메서드를 각각 다른 방식으로 구현하는 여러 클래스를 서로 교체하여 사용할 수 있음을 의미합니다.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-C#에는 ‘구조체’라는 형식도 있는데, 구조체는 상속이나 다형성을 지원할 필요가 없는 경우에 유용합니다.
+C#에는 ‘구조체’라는 형식도 있는데, 구조체는 상속이나 다형성을 지원할 필요가 없는 경우에 유용합니다. 자세한 내용은 [클래스와 구조체 중에 선택](../../../standard/design-guidelines/choosing-between-class-and-struct.md)을 참조하세요.
 
 구조체를 정의하려면
 

@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd8f554516fb5078d9d2ed1eec787f36e8f4c7a7
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204554"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174759"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -70,7 +70,7 @@ class C
 }
 ```
 
-`p` 변수는 `myFixedField`의 한 요소에 액세스합니다. 별도의 `int*` 변수를 선언할 필요가 없습니다. 하지만 `unsafe` 컨텍스트는 계속 필요합니다. 이전 버전의 C#에서는 두 번째 고정된 포인터를 선언해야 합니다.
+`p` 변수는 `myFixedField`의 한 요소에 액세스합니다. 별도의 `int*` 변수를 선언할 필요가 없습니다. `unsafe` 컨텍스트는 계속 필요합니다. 이전 버전의 C#에서는 두 번째 고정된 포인터를 선언해야 합니다.
 
 ```csharp
 class C
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>튜플은 `==` 및 `!=`를 지원합니다.
 
-C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플](../tuples.md)에 대한 문서에서 [같음](../tuples.md#equality-and-tuples)을 다루는 섹션을 참조하세요.
+C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플 형식](../language-reference/builtin-types/value-tuples.md) 문서의 [튜플 같음](../language-reference/builtin-types/value-tuples.md#tuple-equality) 섹션을 참조하세요.
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>자동 구현 속성의 지원 필드에 특성 연결
 

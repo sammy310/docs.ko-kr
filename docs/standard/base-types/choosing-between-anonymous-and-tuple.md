@@ -1,13 +1,16 @@
 ---
 title: 무명 형식과 튜플 형식 중에서 선택
 description: 무명 형식과 튜플 형식 중에서 선택하는 것이 적절한 경우에 대해 알아봅니다.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 24ab770d709b9f3968f4c7fe4b01eb0729dbd751
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853988"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174220"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>무명 형식과 튜플 형식 중에서 선택
 
@@ -87,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C#에서는 <xref:System.ValueTuple> 형식으로 튜플에 대해 언어를 지원하고 다음에 대한 의미 체계를 제공합니다.
-
-- [튜플 할당](../../csharp/tuples.md#assignment-and-tuples)
-- [튜플 분해](../../csharp/deconstruct.md)(튜플로 제한되지 않음)
-- [튜플 같음 검사](../../csharp/tuples.md#equality-and-tuples)
-- [튜플 프로젝션 이니셜라이저](../../csharp/tuples.md#tuple-projection-initializers)
+튜플에 관한 자세한 내용은 [튜플 형식( C# 참조)](../../csharp/language-reference/builtin-types/value-tuples.md) 또는 [튜플(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)을 참조하세요.
 
 앞의 예제는 모든 기능 면에서 동일하지만 유용성 및 기본 구현에는 약간의 차이가 있습니다.
 
@@ -102,7 +100,7 @@ C#에서는 <xref:System.ValueTuple> 형식으로 튜플에 대해 언어를 지
 
 ### <a name="key-differences"></a>주요 차이점
 
-| 이름                     | 액세스 한정자 | 형식     | 사용자 지정 속성 이름 | 분해 지원 | 식 트리 지원 |
+| 이름                     | 액세스 한정자 | 형식     | 사용자 지정 멤버 이름 | 분해 지원 | 식 트리 지원 |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | 무명 형식          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -124,5 +122,6 @@ C#에서는 <xref:System.ValueTuple> 형식으로 튜플에 대해 언어를 지
 
 - [무명 형식](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [식 트리](../../csharp/expression-trees.md)
-- [튜플 형식](../../csharp/tuples.md)
+- [튜플 형식(C# 참조)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [튜플(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [형식 디자인 지침](../design-guidelines/type.md)

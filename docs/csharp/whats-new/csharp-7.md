@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392251"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174746"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -88,7 +88,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-[튜플 문서](../tuples.md)에서 튜플에 대해 자세히 알아볼 수 있습니다.
+자세한 내용은 [튜플 형식](../language-reference/builtin-types/value-tuples.md)을 참조하세요.
 
 ## <a name="discards"></a>버림
 

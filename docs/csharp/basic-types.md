@@ -4,12 +4,12 @@ description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202215"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174181"
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값
 
@@ -74,7 +74,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
   
 경우에 따라 저장하거나 메서드 경계 외부로 전달할 의도가 없는 관련 값의 단순 집합에 대한 명명된 형식을 만드는 것은 불편합니다. 이 목적으로는 *무명 형식*을 만들 수 있습니다. 자세한 내용은 [무명 형식](programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.
 
-메서드에서 값을 두 개 이상 반환하려는 것이 일반적입니다. 단일 메서드 호출에서 여러 값을 반환하는 *튜플 형식*을 만들 수 있습니다. 자세한 내용은 [튜플](tuples.md)을 참조하세요.
+메서드에서 값을 두 개 이상 반환하려는 것이 일반적입니다. 단일 메서드 호출에서 여러 값을 반환하는 *튜플 형식*을 만들 수 있습니다. 자세한 내용은 [튜플 형식](language-reference/builtin-types/value-tuples.md)을 참조하세요.
 
 ## <a name="the-common-type-system"></a>공용 형식 시스템
 

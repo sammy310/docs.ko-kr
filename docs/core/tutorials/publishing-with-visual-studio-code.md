@@ -1,13 +1,13 @@
 ---
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
-ms.date: 06/08/2020
-ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.date: 07/04/2020
+ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701452"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051885"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -112,4 +112,4 @@ ms.locfileid: "84701452"
 이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
 
 > [!div class="nextstepaction"]
-> [Mac용 Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)
+> [Visual Studio Code에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)

@@ -3,13 +3,16 @@ title: 기존 웹앱 및 단일 페이지 앱 중에서 선택
 description: 웹 애플리케이션을 구축하는 경우 기존 웹 앱과 SPA(단일 페이지 애플리케이션) 중에서 선택하는 방법을 알아봅니다.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662708"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174369"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -38,13 +41,13 @@ ms.locfileid: "84662708"
 
 SPA 접근 방식 덕분에 향상된 사용자 경험을 이러한 고려 사항과 비교해서 검토해야 합니다.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
 ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. Blazor 서버 쪽을 사용하면 개발자가 서버에서 C#과 Razor로 UI를 빌드하고 이를 영구적인 SignalR 연결을 통해 실시간으로 브라우저에 대화형으로 연결할 수 있습니다.
 
-Blazor WebAssembly는 WebAssembly를 사용하는 브라우저에서 실행할 수 있도록 Blazor 앱을 위한 다른 옵션도 도입했습니다. 실제 .NET이 WebAssembly에서 실행 중이므로 애플리케이션의 서버측에서 코드와 라이브러리를 재사용할 수 있습니다.
+Blazor WebAssembly는 WebAssembly를 사용하는 브라우저에서 실행할 수 있도록 Blazor 앱을 위한 다른 옵션도 도입했습니다. 실제 .NET이 WebAssembly에서 실행 중이므로 애플리케이션의 서버 쪽 부분에서 코드와 라이브러리를 다시 사용할 수 있습니다.
 
-Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또는 SPA를 만들지 여부를 평가할 때 고려할 새로운 세 번째 옵션을 제공합니다. 중요한 JavaScript 개발 없이 Blazor를 사용하여 SPA와 유사한 풍부한 클라이언트 쪽 동작을 빌드할 수 있습니다. Blazor 애플리케이션은 API를 호출하여 데이터를 요청하거나 서버 쪽 작업을 수행할 수 있습니다.
+Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또는 SPA를 빌드할지 여부를 평가할 때 고려할 새로운 세 번째 옵션을 제공합니다. 중대한 JavaScript 개발을 할 필요 없이 Blazor를 사용하여 SPA와 유사한 풍부한 클라이언트 쪽 동작을 빌드할 수 있습니다. Blazor 애플리케이션은 API를 호출하여 데이터를 요청하거나 서버 쪽 작업을 수행할 수 있습니다.
 
 다음과 같은 경우에는 Blazor를 사용하여 웹 애플리케이션을 빌드하는 것이 좋습니다.
 
@@ -52,7 +55,7 @@ Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또�
 
 - 개발 팀이 JavaScript 또는 TypeScript 개발보다 .NET 개발이 더 편안한 경우
 
-Blazor에 대한 자세한 내용은 [Blazor 시작](https://blazor.net/docs/get-started.html)을 참조하세요.
+Blazor에 관한 자세한 내용은 [시작Blazor](https://blazor.net/docs/get-started.html)을 참조하세요.
 
 ## <a name="when-to-choose-traditional-web-apps"></a>기존 웹앱을 선택하는 경우
 
@@ -99,11 +102,11 @@ SPA를 작성하려면 JavaScript 및/또는 TypeScript와 클라이언트 쪽 �
 
 ## <a name="when-to-choose-blazor"></a>Blazor를 선택하는 경우
 
-다음은 웹앱에 Blazor를 선택하는 경우에 대한 자세한 설명입니다.
+다음은 웹앱에 Blazor를 선택하는 경우에 관한 자세한 설명입니다.
 
 **애플리케이션이 풍부한 사용자 인터페이스를 노출해야 하는 경우**
 
-JavaScript 기반 SPA와 마찬가지로 Blazor 애플리케이션은 페이지를 다시 로드하지 않고도 풍부한 클라이언트 동작을 지원할 수 있습니다. 이러한 애플리케이션은 지정된 사용자 상호 작용에 응답하는 데 필요한 데이터(또는 HTML)만 페치하여 사용자에게 향상된 응답성을 제공합니다. 제대로 디자인되었다면 서버 쪽 Blazor 앱은 이 기능이 지원되면 최소한의 변경으로 클라이언트 쪽 Blazor 앱으로 실행되도록 구성할 수 있습니다.
+JavaScript 기반 SPA와 마찬가지로 Blazor 애플리케이션은 페이지를 다시 로드하지 않고도 풍부한 클라이언트 동작을 지원할 수 있습니다. 이러한 애플리케이션은 지정된 사용자 상호 작용에 응답하는 데 필요한 데이터(또는 HTML)만 페치하여 사용자에게 향상된 응답성을 제공합니다. 제대로 설계된 서버 쪽 Blazor 앱은 이 기능이 지원되면 최소한의 변경으로 클라이언트 쪽 Blazor 앱으로 실행되도록 구성할 수 있습니다.
 
 **개발 팀이 JavaScript 또는 TypeScript 개발보다 .NET 개발이 더 편안한 경우**
 
