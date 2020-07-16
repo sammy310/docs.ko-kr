@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382468"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405294"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -195,7 +195,8 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 
 및에 대 한 자세한 내용은 `TraceSource` `TraceListener` [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners)문서를 참조 하세요.
 
-**참고**: 감사 모드에서 응용 프로그램을 실행 하는 것은 .net Core 또는 .net 5.0 이상에서 사용할 수 없습니다.
+> [!NOTE]
+> 감사 모드에서 응용 프로그램을 실행 하는 것은 .NET Core 또는 .NET 5.0 이상에서 사용할 수 없습니다.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 * 사용할 수 있는 옵션은 앱이 대상으로 하는 프레임 워크에 따라 다릅니다.
 
 > [!WARNING]
-> 모든 형식 제한을 제거 하면 앱 내에 보안 허점이 발생할 수 있습니다. 이 메커니즘을 사용 하는 경우 앱에서 **not** `DataSet` 또는를 사용 `DataTable` 하 여 신뢰할 수 없는 입력을 읽지 않도록 합니다. 자세한 내용은 [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) 및 [신뢰할 수 없는 입력과 관련 하 여](#swr)다음 섹션의 안전성을 참조 하십시오.
+> 모든 형식 제한을 제거 하면 앱 내에 보안 허점이 발생할 수 있습니다. 이 메커니즘을 사용 하는 경우 앱에서 **not** `DataSet` 또는를 사용 `DataTable` 하 여 신뢰할 수 없는 입력을 읽지 않도록 합니다. 자세한 내용은 [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) 및 [신뢰할 수 없는 입력과 관련 하 여](#swr)다음 섹션의 안전성을 참조 하십시오.
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>AppContext 구성 (.NET Framework 4.6-4.8, .NET Core 2.1 이상, .NET 5.0 이상)을 통해
 
@@ -463,7 +464,8 @@ public class MyClass
 
 `DataSet` `DataTable` 트러스트 되지 않은 JSON blob에서 또는를이 방식으로 deserialize 하는 것은 안전 하지 않습니다. 이 패턴은 서비스 거부 공격에 취약 합니다. 이러한 공격으로 인해 앱이 중단 되거나 응답 하지 않을 수 있습니다.
 
-**참고**: Microsoft는 _Newtonsoft.Js_와 같은 타사 라이브러리의 구현을 보증 하거나 지원 하지 않습니다. 이 정보는 완전성을 위해 제공 되며이 정보를 작성 하는 시간을 정확 하 게 제공 합니다.
+> [!NOTE]
+> Microsoft는 _Newtonsoft.Js_와 같은 타사 라이브러리의 구현을 보증 하거나 지원 하지 않습니다. 이 정보는 완전성을 위해 제공 되며이 정보를 작성 하는 시간을 정확 하 게 제공 합니다.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter를 통해 데이터 집합 또는 DataTable Deserialize
 
