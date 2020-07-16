@@ -8,61 +8,64 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 1de3d51953b632e3881db76202b63d3f287b39fe
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802838"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051872"
 ---
-# <a name="-main-c-compiler-options"></a><span data-ttu-id="52831-102">-main(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="52831-102">-main (C# Compiler Options)</span></span>
-<span data-ttu-id="52831-103">이 옵션은 둘 이상의 클래스에 **Main** 메서드가 포함된 경우 프로그램에 대한 진입점을 포함하는 클래스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="52831-104">구문</span><span class="sxs-lookup"><span data-stu-id="52831-104">Syntax</span></span>  
-  
-```console  
--main:class  
-```  
-  
-## <a name="arguments"></a><span data-ttu-id="52831-105">인수</span><span class="sxs-lookup"><span data-stu-id="52831-105">Arguments</span></span>  
- `class`  
- <span data-ttu-id="52831-106">**Main** 메서드를 포함하는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="52831-106">The type that contains the **Main** method.</span></span>  
- <span data-ttu-id="52831-107">제공된 클래스 이름은 완전히 정규화되어야 하며, 클래스를 포함하는 전체 네임스페이스와 클래스 이름을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-107">The provided class name must be fully qualified; it must include the full namespace containing the class, followed by the class name.</span></span> <span data-ttu-id="52831-108">예를 들어 `Main` 메서드가 `MyApplication.Core` 네임스페이스의 `Program` 클래스 내에 있는 경우 컴파일러 옵션은 `-main:MyApplication.Core.Program`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-108">For example, when the `Main` method is located inside the `Program` class in the `MyApplication.Core` namespace, the compiler option has to be `-main:MyApplication.Core.Program`.</span></span>
-  
-## <a name="remarks"></a><span data-ttu-id="52831-109">설명</span><span class="sxs-lookup"><span data-stu-id="52831-109">Remarks</span></span>  
- <span data-ttu-id="52831-110">컴파일에 [Main](../../programming-guide/main-and-command-args/index.md) 메서드가 있는 형식이 둘 이상 포함된 경우 프로그램에 대한 진입점으로 사용할 **Main** 메서드를 포함하는 형식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52831-110">If your compilation includes more than one type with a [Main](../../programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>  
-  
- <span data-ttu-id="52831-111">이 옵션은 .exe 파일을 컴파일할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="52831-111">This option is for use when compiling an .exe file.</span></span>  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="52831-112">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="52831-112">To set this compiler option in the Visual Studio development environment</span></span>  
-  
-1. <span data-ttu-id="52831-113">프로젝트 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="52831-113">Open the project's **Properties** page.</span></span>  
-  
-2. <span data-ttu-id="52831-114">**애플리케이션** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-114">Click the **Application** property page.</span></span>  
-  
-3. <span data-ttu-id="52831-115">**시작 개체** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-115">Modify the **Startup object** property.</span></span>  
-  
-     <span data-ttu-id="52831-116">프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52831-116">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>  
-  
-### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a><span data-ttu-id="52831-117">수동으로 .csproj 파일을 편집하여 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="52831-117">To set this compiler option by manually editing the .csproj file</span></span>
-  
-<span data-ttu-id="52831-118">.csproj 파일을 편집하고 `PropertyGroup` 섹션 내에 `StartupObject` 요소를 추가하여 이 옵션을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52831-118">You can set this option by editing the .csproj file and adding an element `StartupObject` inside the `PropertyGroup` section.</span></span> <span data-ttu-id="52831-119">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="52831-119">For example:</span></span>
+# <a name="-main-c-compiler-options"></a><span data-ttu-id="e24ca-102">-main(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="e24ca-102">-main (C# Compiler Options)</span></span>
 
+<span data-ttu-id="e24ca-103">이 옵션은 둘 이상의 클래스에 **Main** 메서드가 포함된 경우 프로그램에 대한 진입점을 포함하는 클래스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="e24ca-104">구문</span><span class="sxs-lookup"><span data-stu-id="e24ca-104">Syntax</span></span>
+
+```console
+-main:class
 ```
+
+## <a name="arguments"></a><span data-ttu-id="e24ca-105">인수</span><span class="sxs-lookup"><span data-stu-id="e24ca-105">Arguments</span></span>
+ `class`  
+ <span data-ttu-id="e24ca-106">**Main** 메서드를 포함하는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-106">The type that contains the **Main** method.</span></span>  
+ <span data-ttu-id="e24ca-107">제공된 클래스 이름은 완전히 정규화되어야 하며, 클래스를 포함하는 전체 네임스페이스와 클래스 이름을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-107">The provided class name must be fully qualified; it must include the full namespace containing the class, followed by the class name.</span></span> <span data-ttu-id="e24ca-108">예를 들어 `Main` 메서드가 `MyApplication.Core` 네임스페이스의 `Program` 클래스 내에 있는 경우 컴파일러 옵션은 `-main:MyApplication.Core.Program`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-108">For example, when the `Main` method is located inside the `Program` class in the `MyApplication.Core` namespace, the compiler option has to be `-main:MyApplication.Core.Program`.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="e24ca-109">설명</span><span class="sxs-lookup"><span data-stu-id="e24ca-109">Remarks</span></span>
+
+<span data-ttu-id="e24ca-110">컴파일에 [Main](../../programming-guide/main-and-command-args/index.md) 메서드가 있는 형식이 둘 이상 포함된 경우 프로그램에 대한 진입점으로 사용할 **Main** 메서드를 포함하는 형식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-110">If your compilation includes more than one type with a [Main](../../programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>
+
+<span data-ttu-id="e24ca-111">이 옵션은 *.exe* 파일을 컴파일할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-111">This option is for use when compiling an *.exe* file.</span></span>
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="e24ca-112">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="e24ca-112">To set this compiler option in the Visual Studio development environment</span></span>
+
+1. <span data-ttu-id="e24ca-113">프로젝트 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-113">Open the project's **Properties** page.</span></span>
+
+2. <span data-ttu-id="e24ca-114">**애플리케이션** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-114">Click the **Application** property page.</span></span>
+
+3. <span data-ttu-id="e24ca-115">**시작 개체** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-115">Modify the **Startup object** property.</span></span>
+
+    <span data-ttu-id="e24ca-116">프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e24ca-116">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>
+
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a><span data-ttu-id="e24ca-117">수동으로 *.csproj* 파일을 편집하여 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="e24ca-117">To set this compiler option by manually editing the *.csproj* file</span></span>
+
+<span data-ttu-id="e24ca-118">.csproj 파일을 편집하고 `PropertyGroup` 섹션 내에 `StartupObject` 요소를 추가하여 이 옵션을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-118">You can set this option by editing the .csproj file and adding an element `StartupObject` inside the `PropertyGroup` section.</span></span> <span data-ttu-id="e24ca-119">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="e24ca-119">For example:</span></span>
+
+```xml
   <PropertyGroup>
     ...
     <StartupObject>MyApplication.Core.Program</StartupObject>
   </PropertyGroup>
 ```
 
-## <a name="example"></a><span data-ttu-id="52831-120">예제</span><span class="sxs-lookup"><span data-stu-id="52831-120">Example</span></span>  
- <span data-ttu-id="52831-121">**Main** 메서드가 `Test2`에 있다고 지정하여 `t2.cs` 및 `t3.cs`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="52831-121">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>  
-  
-```console  
-csc t2.cs t3.cs -main:Test2  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="52831-122">참조</span><span class="sxs-lookup"><span data-stu-id="52831-122">See also</span></span>
+## <a name="example"></a><span data-ttu-id="e24ca-120">예제</span><span class="sxs-lookup"><span data-stu-id="e24ca-120">Example</span></span>
 
-- [<span data-ttu-id="52831-123">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="52831-123">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="52831-124">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="52831-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+<span data-ttu-id="e24ca-121">**Main** 메서드가 `Test2`에 있다고 지정하여 `t2.cs` 및 `t3.cs`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="e24ca-121">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>
+
+```console
+csc t2.cs t3.cs -main:Test2
+```
+
+## <a name="see-also"></a><span data-ttu-id="e24ca-122">참조</span><span class="sxs-lookup"><span data-stu-id="e24ca-122">See also</span></span>
+
+- [<span data-ttu-id="e24ca-123">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="e24ca-123">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="e24ca-124">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="e24ca-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,0 +1,223 @@
+### YamlMime:Landing
+title: .NET 개발자용 Azure
+summary: .NET 개발자를 위한 관련 자습서 및 도구를 사용하여 클라우드에서 앱 개발을 시작하세요. .NET ❤ Azure
+metadata:
+  title: .NET 개발자용 Azure
+  description: .NET 및 Azure를 사용하여 개발하기 위한 설명서, 샘플 및 링크입니다.
+  ms.date: 06/12/2020
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.prod: azure-dotnet
+  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174860"
+landingContent:
+- title: Azure에서 .NET 시작
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure 및 .NET 소개
+      url: intro.md
+  - linkListType: get-started
+    links:
+    - text: .NET 개발자 도구
+      url: tools.md
+    - text: 앱 인증
+      url: authentication.md
+    - text: 로깅
+      url: logging.md
+    - text: SDK 예제
+      url: /samples/dotnet/samples/azure-identity-resource-management-storage/
+  - linkListType: learn
+    links:
+    - text: Azure 기본 사항
+      url: /learn/paths/azure-fundamentals/
+  - linkListType: download
+    links:
+    - text: 샘플 코드
+      url: /samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+  - linkListType: reference
+    links:
+    - text: .NET용 Azure 라이브러리 API 참조
+      url: /dotnet/api/overview/azure/?view=azure-dotnet
+- title: 웹 앱 개발
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: App Service
+      url: /azure/app-service/overview
+    - text: Azure Functions
+      url: /azure/azure-functions/functions-overview
+  - linkListType: quickstart
+    links:
+    - text: ASP.NET 웹앱 배포
+      url: /azure/app-service/app-service-web-get-started-dotnet
+    - text: 서버리스 기능 빌드
+      url: /azure/azure-functions/functions-create-your-first-function-visual-studio
+  - linkListType: learn
+    links:
+    - text: Azure App Service를 사용하여 웹앱 호스트
+      url: /learn/modules/host-a-web-app-with-azure-app-service/
+    - text: Visual Studio를 사용하여 Azure 함수 개발, 테스트 및 배포
+      url: /learn/modules/develop-test-deploy-azure-functions-with-visual-studio/
+    - text: Azure API Management를 사용하여 API 게시 및 관리
+      url: /learn/modules/publish-manage-apis-with-azure-api-management/
+  - linkListType: tutorial
+    links:
+    - text: App Service 및 Azure SQL Database를 사용한 ASP.NET Core 웹앱
+      url: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
+    - text: ASP.NET 및 Azure SQL Database를 사용하는 관리 ID
+      url: /azure/app-service/app-service-web-tutorial-connect-msi
+    - text: Azure App Service의 CORS를 사용하는 웹 API
+      url: /azure/app-service/app-service-web-tutorial-rest-api
+- title: 클라우드 네이티브 앱 빌드
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Kubernetes에서 마이크로 서비스 실행 및 디버그
+      url: /azure/dev-spaces/quickstart-netcore-visualstudio
+  - linkListType: learn
+    links:
+    - text: 클라우드 네이티브 ASP.NET Core 마이크로 서비스 만들기 및 배포
+      url: /learn/modules/microservices-aspnet-core/
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Container Registry에 .NET Core 앱 배포
+      url: /visualstudio/containers/hosting-web-apps-in-docker
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio 컨테이너 도구를 사용한 ASP.NET Core 앱
+      url: /visualstudio/containers/container-tools
+    - text: AKS에서 여러 컨테이너 배포 및 디버그
+      url: /azure/dev-spaces/multi-service-netcore-visualstudio
+    - text: Azure App Configuration을 사용한 동적 구성 및 기능 플래그
+      url: /azure/azure-app-configuration/use-feature-flags-dotnet-core
+- title: 인증 및 보안
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft ID 플랫폼(Azure AD)
+      url: /azure/active-directory/develop/
+  - linkListType: learn
+    links:
+    - text: OpenID Connect 및 Azure AD를 사용하여 애플리케이션 보호
+      url: /learn/modules/secure-app-with-oidc-and-azure-ad/
+    - text: Microsoft ID를 사용하여 사용자 지정 API 보안 설정
+      url: /learn/modules/identity-secure-custom-api/
+    - text: ASP.NET Identity 프레임워크를 사용하여 ASP.NET Core 웹앱 보호
+      url: /learn/modules/secure-aspnet-core-identity/
+  - linkListType: tutorial
+    links:
+    - text: Microsoft에 로그인을 ASP.NET 웹앱에 추가
+      url: /azure/active-directory/develop/tutorial-v2-asp-webapp
+    - text: ASP.NET Core에서 Azure Key Vault 사용
+      url: /azure/key-vault/tutorial-net-create-vault-azure-web-app
+    - text: 웹 API와 Azure AD B2C 통합
+      url: /azure/active-directory-b2c/tutorial-single-page-app-webapi
+  - linkListType: reference
+    links:
+    - text: .NET용 Azure ID 클라이언트 라이브러리
+      url: /dotnet/api/overview/azure/identity-readme?view=azure-dotnet
+- title: 스토리지 및 데이터 작업
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 적합한 데이터 스토리지 옵션 선택
+      url: /azure/architecture/guide/technology-choices/data-store-overview
+  - linkListType: quickstart
+    links:
+    - text: .NET을 사용하여 Azure SQL Database 또는 Azure SQL Managed Instance 쿼리
+      url: /azure/azure-sql/database/connect-query-dotnet-core
+    - text: .NET을 사용하여 Azure PostgreSQL 쿼리
+      url: /azure/postgresql/connect-csharp
+  - linkListType: learn
+    links:
+    - text: Azure SQL 데이터베이스를 쿼리하는 ASP.NET 애플리케이션 개발 및 구성
+      url: /learn/modules/develop-app-that-queries-azure-sql/
+    - text: Visual Studio Code에서 Azure Cosmos DB용 .NET Core 앱 빌드
+      url: /learn/modules/build-cosmos-db-app-with-vscode/
+    - text: Azure Blob Storage를 사용하여 애플리케이션 데이터 저장
+      url: /learn/modules/store-app-data-with-azure-blob-storage/
+    - text: Entity Framework Core를 사용하여 관계형 데이터 지속 및 검색
+      url: /learn/modules/persist-data-ef-core/
+  - linkListType: tutorial
+    links:
+    - text: Azure Database for PostgreSQL 데이터베이스에 연결 및 쿼리
+      url: /azure/postgresql/connect-csharp
+- title: Azure의 메시징
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure 큐를 사용하여 메시지 저장
+      url: /azure/storage/queues/storage-queues-introduction
+    - text: Azure Service Bus를 사용한 애플리케이션 간 메시징
+      url: /azure/service-bus-messaging
+    - text: Event Hubs를 사용한 빅 데이터 스트리밍
+      url: /azure/event-hubs/event-hubs-about
+    - text: Event Grid를 사용하여 이벤트 기반 애플리케이션 빌드
+      url: /azure/event-grid/overview
+  - linkListType: quickstart
+    links:
+    - text: Azure Queue Storage 사용
+      url: /azure/storage/queues/storage-dotnet-how-to-use-queues?tabs=dotnet
+    - text: Azure Service Bus 큐 사용
+      url: /azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues
+    - text: Azure Event Hubs를 통해 실시간으로 데이터 수집
+      url: /azure/event-hubs/event-hubs-dotnet-standard-getstarted-send
+    - text: Event Grid를 사용하여 사용자 지정 이벤트 라우팅
+      url: /azure/event-grid/custom-event-quickstart
+- title: 진단 및 모니터링
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Monitor
+      url: /azure/azure-monitor/overview
+  - linkListType: learn
+    links:
+    - text: Azure 웹앱에서 페이지 로드 시간 캡처 및 보기
+      url: /learn/modules/capture-page-load-times-application-insights/
+  - linkListType: how-to-guide
+    links:
+    - text: Azure App Service 및 IIS에서 ASP.NET Core 문제 해결
+      url: /aspnet/core/test/troubleshoot-azure-iis
+    - text: .NET Core ILogger를 사용한 Application Insights
+      url: /azure/azure-monitor/app/ilogger
+    - text: 작업자 서비스 애플리케이션에 대한 Application Insights
+      url: /azure/azure-monitor/app/worker-service
+    - text: Visual Studio를 사용하여 Azure App Service에서 앱 문제 해결
+      url: /azure/app-service/troubleshoot-dotnet-visual-studio
+- title: 마이그레이션
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure 호스팅 옵션 선택
+      url: ./migration/choose.md
+  - linkListType: how-to-guide
+    links:
+    - text: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
+      url: ./migration/app-service.md
+    - text: Azure VM으로 ASP.NET 앱 마이그레이션
+      url: ./migration/vm.md
+    - text: Azure로 SQL Server 데이터베이스 마이그레이션
+      url: ./migration/sql.md
+- title: .NET 아키텍처 가이드
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Azure에서 최신 애플리케이션 설계
+      url: /learn/paths/architect-modern-apps/
+  - linkListType: architecture
+    links:
+    - text: '.NET 마이크로 서비스: 컨테이너화된 .NET 앱의 아키텍처'
+      url: /dotnet/architecture/microservices/
+    - text: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
+      url: /dotnet/architecture/modern-web-apps-azure/
+    - text: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
+      url: /dotnet/architecture/containerized-lifecycle/
+    - text: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
+      url: /dotnet/architecture/modernize-with-azure-containers/
