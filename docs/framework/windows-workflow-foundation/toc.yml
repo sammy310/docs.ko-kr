@@ -136,7 +136,7 @@
               href: variables-and-arguments.md
             - name: 표현식
               href: expressions.md
-            - name: 'C# 식'
+            - name: C# 식
               href: csharp-expressions.md
             - name: 속성 및 인수
               href: properties-vs-arguments.md
