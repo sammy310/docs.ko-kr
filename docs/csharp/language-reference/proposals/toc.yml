@@ -1,6 +1,6 @@
 - name: 최신 기능 사양
   items:
-    - name: 'C# 7.0 사양 제안'
+    - name: C# 7.0 사양 제안
       items:
         - name: 패턴 일치
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: 자릿수 구분 기호
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'C# 7.1 사양 제안'
+    - name: C# 7.1 사양 제안
       items:
         - name: 비동기 Main 메서드
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: 제네릭과 패턴 일치
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'C# 7.2 사양 제안'
+    - name: C# 7.2 사양 제안
       items:
         - name: 읽기 전용 참조
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -38,7 +38,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
         - name: 선행 숫자 구분 기호
           href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-    - name: 'C# 7.3 사양 제안'
+    - name: C# 7.3 사양 제안
       items:
         - name: 관리되지 않는 제네릭 형식 제약 조건
           href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: 향상된 오버로드 후보
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'C# 8.0 사양 제안'
+    - name: C# 8.0 사양 제안
       items:
         - name: Nullable 참조 형식 - 제안
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md

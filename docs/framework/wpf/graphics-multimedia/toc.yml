@@ -264,7 +264,7 @@
               href: how-to-animate-a-3-d-rotation-using-key-frames.md
             - name: 키 프레임을 사용하여 3D 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)
               href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
-            - name: 3D 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기
+            - name: 3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
             - name: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기
               href: how-to-animate-camera-position-and-direction-using-key-frames.md

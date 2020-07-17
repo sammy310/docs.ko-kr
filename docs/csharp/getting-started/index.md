@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75713928"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415914"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
@@ -30,7 +30,7 @@ ms.locfileid: "75713928"
 
 - [Visual Studio에서 C# 및 .NET Standard를 사용하여 클래스 라이브러리 만들기](../../core/tutorials/library-with-visual-studio.md)
 
-   클래스 라이브러리를 사용하면 다른 애플리케이션에서 호출할 수 있는 형식 및 형식 멤버를 정의할 수 있습니다. 이 항목에서는 문자열이 대문자로 시작되는지 여부를 결정하는 단일 메서드로 클래스 라이브러리를 만들 수 있습니다. 라이브러리 빌드를 마친 후에는 [단위 테스트](../../core/tutorials/testing-library-with-visual-studio.md)를 개발하여 라이브러리가 예상대로 작동하는지 확인하고 [사용하려는 애플리케이션](../../core/tutorials/consuming-library-with-visual-studio.md)에서 사용 가능하게 만들 수 있습니다.
+   클래스 라이브러리를 사용하면 다른 애플리케이션에서 호출할 수 있는 형식 및 형식 멤버를 정의할 수 있습니다. 이 항목에서는 문자열이 대문자로 시작되는지 여부를 결정하는 단일 메서드로 클래스 라이브러리를 만들 수 있습니다. 라이브러리 빌드를 마친 후에는 [단위 테스트](../../core/tutorials/testing-library-with-visual-studio.md)를 개발하여 라이브러리가 예상대로 작동하는지 확인하고 [사용하려는 애플리케이션](/nuget/quickstart/install-and-use-a-package-in-visual-studio)에서 사용 가능하게 만들 수 있습니다.
 
 - [C# 및 Visual Studio Code 시작](../../core/tutorials/with-visual-studio-code.md)
 
@@ -52,6 +52,6 @@ ms.locfileid: "75713928"
 
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Studio를 사용한 C# 개발](/visualstudio/get-started/csharp/)

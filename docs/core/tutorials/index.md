@@ -4,12 +4,12 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283730"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415937"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -42,7 +42,7 @@ Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자�
 ## <a name="use-visual-studio-for-mac"></a>Mac용 Visual Studio 사용
 
 - [콘솔 앱 만들기](using-on-mac-vs.md)
-- [라이브러리 만들기 및 단위 테스트](using-on-mac-vs-full-solution.md)
+- [라이브러리 만들기 및 단위 테스트](library-with-visual-studio-mac.md)
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>고급 항목
