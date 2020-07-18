@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405294"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416195"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -193,7 +193,7 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 </configuration>
 ```
 
-및에 대 한 자세한 내용은 `TraceSource` `TraceListener` [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners)문서를 참조 하세요.
+및에 대 한 자세한 내용은 `TraceSource` `TraceListener` [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)문서를 참조 하세요.
 
 > [!NOTE]
 > 감사 모드에서 응용 프로그램을 실행 하는 것은 .NET Core 또는 .NET 5.0 이상에서 사용할 수 없습니다.
@@ -236,7 +236,7 @@ ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니
 </configuration>
 ```
 
-자세한 내용은 요소를 참조 하세요 [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) .
+자세한 내용은 요소를 참조 하세요 [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) .
 
 .NET Core, .NET 5 및 ASP.NET Core에서이 설정은 다음 JSON에 표시 된 것 처럼 _runtimeconfig.js에_의해 제어 됩니다.
 
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-위의 코드 샘플은 [DataAdapter에서 데이터 집합을 채울](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)때 발견 되는 더 큰 샘플의 일부입니다.
+위의 코드 샘플은 [DataAdapter에서 데이터 집합을 채울](../populating-a-dataset-from-a-dataadapter.md)때 발견 되는 더 큰 샘플의 일부입니다.
 
 > 대부분의 앱은 데이터베이스 계층이 신뢰 되는 것으로 단순화 하 고 가정할 수 있습니다. 그러나 앱을 [모델링](https://www.microsoft.com/securityengineering/sdl/threatmodeling) 하는 것이 습관 인 경우 위협 모델은 응용 프로그램 (클라이언트)과 데이터베이스 계층 (서버) 간에 트러스트 경계가 될 것으로 간주할 수 있습니다. 클라이언트와 서버 간의 [상호 인증](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections) 또는 [AAD 인증](/azure/azure-sql/database/authentication-aad-overview) 을 사용 하는 것은이와 관련 된 위험을 해결 하는 한 가지 방법입니다. 이 섹션의 나머지 부분에서는 신뢰할 수 없는 서버에 연결 하는 클라이언트의 가능한 결과에 대해 설명 합니다.
 
@@ -487,4 +487,4 @@ public class MyClass
 * 는 데이터베이스 공급자의 [다양 한 에코 시스템](/ef/core/providers/) 을 제공 하 여 Entity Framework 개체 모델을 통해 쉽게 데이터베이스 쿼리를 수행할 수 있도록 합니다.
 * 는 신뢰할 수 없는 소스의 데이터를 deserialize 할 때 기본 제공 보호 기능을 제공 합니다.
 
-SOAP 끝점을 사용 하는 앱의 경우 `.aspx` [WCF](/dotnet/framework/wcf/)를 사용 하도록 해당 끝점을 변경 하는 것이 좋습니다. WCF는 웹 서비스에 대 한 보다 완전 한 기능을 갖춘 대체 기능입니다 `.asmx` . WCF 끝점은 기존 호출자와의 호환성을 위해 [SOAP를 통해 노출 될 수 있습니다](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients) .
+SOAP 끝점을 사용 하는 앱의 경우 `.aspx` [WCF](/dotnet/framework/wcf/)를 사용 하도록 해당 끝점을 변경 하는 것이 좋습니다. WCF는 웹 서비스에 대 한 보다 완전 한 기능을 갖춘 대체 기능입니다 `.asmx` . WCF 끝점은 기존 호출자와의 호환성을 위해 [SOAP를 통해 노출 될 수 있습니다](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .

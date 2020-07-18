@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374388"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416216"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML web services에서 데이터 집합 사용
 
@@ -19,7 +19,7 @@ ms.locfileid: "86374388"
  다음 예제에서는 **데이터 집합** 을 사용 하 여 관계형 데이터 (수정 된 데이터 포함)를 전송 하 고 원래 데이터 원본에 대 한 업데이트를 다시 확인 하는 XML Web services 및 클라이언트를 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]
-> `DataSet`입력을 `DataTable` 신뢰할 수 없는 경우 XML Web services 호출의 일부로 또는 인스턴스를 전송 하는 것은 안전 하지 않습니다. 자세한 내용은 [DataSet 및 DataTable 보안 지침](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance)을 참조 하세요.
+> `DataSet`입력을 `DataTable` 신뢰할 수 없는 경우 XML Web services 호출의 일부로 또는 인스턴스를 전송 하는 것은 안전 하지 않습니다. 자세한 내용은 [DataSet 및 DataTable 보안 지침](security-guidance.md)을 참조 하세요.
 > 또한 XML Web services를 만들 때 항상 보안 문제를 고려 하는 것이 좋습니다. XML Web Services를 보호 하는 방법에 대 한 자세한 내용은 [ASP.NET를 사용 하 여 만든 Xml Web Services 보안](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))설정을 참조 하세요.  
   
 ## <a name="create-an-xml-web-service"></a>XML web services 만들기
@@ -263,7 +263,7 @@ ms.locfileid: "86374388"
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET](../index.md)
 - [DataSets, DataTables 및 DataViews](index.md)

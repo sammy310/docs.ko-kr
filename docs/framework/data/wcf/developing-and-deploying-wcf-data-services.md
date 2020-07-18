@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200056"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416066"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
 
@@ -32,7 +32,7 @@ WCF Data Services를 사용 하 여 OData (Open Data Protocol)를 지 원하는 
 
 3. **데이터 서비스 구성**
 
-     기본적으로 WCF Data Services는 엔터티 컨테이너에 의해 노출 되는 리소스에 대 한 액세스를 사용 하지 않도록 설정 합니다. <xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용 하면 리소스 및 서비스 작업에 대 한 액세스를 구성 하 고, 지원 되는 버전의 OData를 지정 하 고, 일괄 처리 동작 또는 단일 응답 피드에 반환 될 수 있는 최대 엔터티 수와 같은 다른 서비스 전체 동작을 정의할 수 있습니다. 자세한 내용은 [데이터 서비스 구성](configuring-the-data-service-wcf-data-services.md)합니다.
+     기본적으로 WCF Data Services는 엔터티 컨테이너에 의해 노출 되는 리소스에 대 한 액세스를 사용 하지 않도록 설정 합니다. <xref:System.Data.Services.DataServiceConfiguration>인터페이스를 사용 하면 리소스 및 서비스 작업에 대 한 액세스를 구성 하 고, 지원 되는 버전의 OData를 지정 하 고, 일괄 처리 동작 또는 단일 응답 피드에 반환 될 수 있는 최대 엔터티 수와 같은 다른 서비스 전체 동작을 정의할 수 있습니다. 자세한 내용은 [데이터 서비스 구성](configuring-the-data-service-wcf-data-services.md)합니다.
 
 이 문서에서는 Visual Studio를 사용 하 여 데이터 서비스를 개발 하 고 배포 하는 방법을 주로 다룹니다. 데이터를 OData 피드로 노출 하는 WCF Data Services에서 제공 하는 유연성에 대 한 자세한 내용은 [WCF Data Services 정의](defining-wcf-data-services.md)를 참조 하세요.
 
@@ -63,14 +63,14 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
     - 이 서버는 데이터 서비스에서 많은 이진 데이터에 액세스할 때 WCF Data Services 클라이언트에서 기본적으로 보내는 청크 된 HTTP 스트림을 처리할 수 없습니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)합니다.
 
-    - 키 값의 WCF Data Services에서이 문자를 지`.`원하는 경우에도이 서버는 URL에서 마침표 () 문자를 처리 하는 문제가 있습니다.
+    - `.`키 값의 WCF Data Services에서이 문자를 지 원하는 경우에도이 서버는 URL에서 마침표 () 문자를 처리 하는 문제가 있습니다.
 
     > [!TIP]
     > Visual Studio 개발 서버를 사용 하 여 개발 중에 데이터 서비스를 테스트할 수 있지만 IIS를 실행 하는 웹 서버에 배포한 후 다시 테스트 해야 합니다.
 
 3. **Azure 개발 환경**
 
-     Visual Studio 용 azure 도구에는 Visual Studio에서 Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이러한 도구를 사용 하 여 Azure에 배포할 수 있는 데이터 서비스를 개발할 수 있으며, 배포 하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 [Azure tools For Visual Studio 2015](../../../azure/sdk/vs2015-install.md)을 참조 하세요. Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하세요.
+     Visual Studio 용 azure 도구에는 Visual Studio에서 Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이러한 도구를 사용 하 여 Azure에 배포할 수 있는 데이터 서비스를 개발할 수 있으며, 배포 하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 [Azure tools For Visual Studio 2015](../../../azure/vs2015-install.md)을 참조 하세요. Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하세요.
 
 ### <a name="development-tips"></a>개발 팁
 
@@ -115,7 +115,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - **Azure**
 
-     [Azure Tools For Visual Studio](../../../azure/sdk/vs2015-install.md)를 사용 하 여 azure에 데이터 서비스를 배포할 수 있습니다. Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)를 참조 하세요.
+     [Azure Tools For Visual Studio](../../../azure/vs2015-install.md)를 사용 하 여 azure에 데이터 서비스를 배포할 수 있습니다. Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)를 참조 하세요.
 
 ### <a name="deployment-considerations"></a>배포 고려 사항
 
@@ -125,7 +125,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 서비스 호스팅](hosting-the-data-service-wcf-data-services.md)
 - [WCF Data Services에 보안 설정](securing-wcf-data-services.md)
