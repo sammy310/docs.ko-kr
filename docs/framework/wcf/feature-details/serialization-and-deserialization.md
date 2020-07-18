@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244909"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444497"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인가 포함 되어 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -20,7 +20,13 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
   
  XML을 역직렬화할 때 직렬 변환기에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용합니다. 또한 <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter> WCF 이진 XML 형식을 사용 하는 경우와 같은 일부 경우에 최적화 된 XML을 생성할 수 있도록 및 클래스를 지원 합니다.  
   
- WCF에는 도우미 serializer 인도 포함 되어 있습니다 <xref:System.Runtime.Serialization.NetDataContractSerializer> . 는 <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serialize 된 데이터의 일부로 .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다. 그리고 직렬화 측과 역직렬화 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
+ WCF에는 도우미 serializer 인도 포함 되어 있습니다 <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
+
+* 안전 ***하지*** 않습니다. 자세한 내용은 [Binaryformatter 보안 가이드](/dotnet/standard/serialization/binaryformatter-security-guide)를 참조 하세요.
+* 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serialize 된 데이터의 일부로 .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다.
+* Serialize 및 deserialize 종료 시 동일한 형식이 공유 될 때 사용 됩니다.
+
+ <xref:System.Runtime.Serialization.DataContractSerializer>와 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인에서 파생 <xref:System.Runtime.Serialization.XmlObjectSerializer> 됩니다.  
   
 > [!WARNING]
 > <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. 이렇게 하면 wcf 서비스에 이러한 데이터를 보낼 때 WCF가 아닌 클라이언트에서 문제가 발생할 수 있습니다.  
