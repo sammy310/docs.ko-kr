@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507431"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417335"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -87,9 +87,9 @@ ms.locfileid: "82507431"
 
 이 자습서에서는 Visual Studio for Mac을 사용하여 간단한 .NET Core 콘솔 앱을 빌드하는 방법을 보여 줍니다.
 
-**[Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Mac용 Visual Studio를 사용하여 macOS에서 .NET Standard 라이브러리 만들기](../core/tutorials/library-with-visual-studio-mac.md)**
 
-이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 완전한 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
+이 자습서에서는 Mac용 Visual Studio를 사용하여 간단한 .NET Standard 라이브러리를 빌드하는 방법을 보여 줍니다.
 
 **[플러그 인을 지원하는 .NET Core 애플리케이션 만들기](../core/tutorials/creating-app-with-plugin-support.md)**
 

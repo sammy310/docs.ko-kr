@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 및 해당 기능에 대한 개요입니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110843"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415959"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 개요
 
@@ -16,7 +16,7 @@ ms.locfileid: "80110843"
 
 .NET Core CLI(명령줄 인터페이스)는 .NET Core 애플리케이션의 개발, 빌드, 실행 및 게시에 사용되는 플랫폼 간 도구 체인입니다.
 
-.NET Core CLI는 [.NET Core SDK](../sdk.md)에 포함되어 있습니다. .NET Core SDK를 설치하는 방법에 대한 자세한 내용은 [.NET Core SDK 설치](../install/sdk.md)를 참조하세요.
+.NET Core CLI는 [.NET Core SDK](../sdk.md)에 포함되어 있습니다. .NET Core SDK를 설치하는 방법에 대한 자세한 내용은 [.NET Core 설치](../install/windows.md)를 참조하세요.
 
 ## <a name="cli-commands"></a>CLI 명령
 
@@ -104,4 +104,4 @@ dotnet build
 ## <a name="see-also"></a>참조
 
 - [dotnet/sdk GitHub 리포지토리](https://github.com/dotnet/sdk/)
-- [.NET Core 설치 가이드](../install/sdk.md)
+- [.NET Core 설치 가이드](../install/windows.md)
