@@ -4,12 +4,12 @@ description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 G
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: d4ab7f0fcc6b582e74f54d3f0e60032696277249
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051547"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282075"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
@@ -63,7 +63,7 @@ ms.locfileid: "86051547"
 
 *Program.cs* 파일 맨 위에 다음 추가 `using` 문을 추가합니다.
 
-[!code-csharp[AddUsings](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddUsings)]
+[!code-csharp[AddUsings](./snippets/github-issue-classification/csharp/Program.cs#AddUsings)]
 
 최근에 다운로드한 파일의 경로와 `MLContext`,`DataView` 및 `PredictionEngine`의 글로벌 변수가 포함될 세 개의 글로벌 필드를 만듭니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "86051547"
 
 `Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로와 다른 변수를 지정합니다.
 
-[!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DeclareGlobalVariables)]
+[!code-csharp[DeclareGlobalVariables](./snippets/github-issue-classification/csharp/Program.cs#DeclareGlobalVariables)]
 
 입력 데이터 및 예측에 대한 일부 클래스를 만듭니다. 새 클래스를 프로젝트에 추가합니다.
 
@@ -86,11 +86,11 @@ ms.locfileid: "86051547"
 
     *GitHubIssueData.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *GitHubIssueData.cs*의 맨 위에 추가합니다.
 
-[!code-csharp[AddUsings](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/GitHubIssueData.cs#AddUsings)]
+[!code-csharp[AddUsings](./snippets/github-issue-classification/csharp/GitHubIssueData.cs#AddUsings)]
 
 기존 클래스 정의를 제거하고 두 개의 클래스 `GitHubIssue` 및 `IssuePrediction`이 있는 다음 코드를 *GitHubIssueData.cs* 파일에 추가합니다.
 
-[!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/GitHubIssueData.cs#DeclareTypes)]
+[!code-csharp[DeclareGlobalVariables](./snippets/github-issue-classification/csharp/GitHubIssueData.cs#DeclareTypes)]
 
 `label`은 예측할 열입니다. 식별된 `Features`는 레이블 예측을 위해 모델에 제공하는 입력입니다.
 
@@ -111,7 +111,7 @@ ms.locfileid: "86051547"
 
 여러 학습에서 반복 가능한/결정적 결과를 얻기 위해 임의의 시드(`seed: 0`)가 있는 `MLContext`의 새 인스턴스로 `_mlContext` 글로벌 변수를 초기화합니다.  `Main` 메서드에서 `Console.WriteLine("Hello World!")` 줄을 다음 코드로 바꿉니다.
 
-[!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreateMLContext)]
+[!code-csharp[CreateMLContext](./snippets/github-issue-classification/csharp/Program.cs#CreateMLContext)]
 
 ## <a name="load-the-data"></a>데이터 로드
 
@@ -119,13 +119,13 @@ ML.NET은 숫자 또는 텍스트 테이블 형식 데이터를 설명하는 효
 
 `_trainingDataView` 글로벌 변수를 파이프라인에 사용하기 위해 초기화 및 로드하려면 `mlContext` 초기화 후에 다음 코드를 추가합니다.
 
-[!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#LoadTrainData)]
+[!code-csharp[LoadTrainData](./snippets/github-issue-classification/csharp/Program.cs#LoadTrainData)]
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)은 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다.
 
 `Main` 메서드에 아래 코드를 다음 코드 줄로 추가합니다.
 
-[!code-csharp[CallProcessData](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallProcessData)]
+[!code-csharp[CallProcessData](./snippets/github-issue-classification/csharp/Program.cs#CallProcessData)]
 
 `ProcessData` 메서드는 다음 작업을 실행합니다.
 
@@ -145,26 +145,26 @@ public static IEstimator<ITransformer> ProcessData()
 
 `GitHubIssue`에 대한 영역 GitHub 레이블을 예측하기 위해 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 메서드를 사용하여 `Area` 열을 숫자 키 형식 `Label` 열로 변환하고(분류 알고리즘에서 허용하는 형식) 새 데이터 세트 열로 추가합니다.
 
-[!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
+[!code-csharp[MapValueToKey](./snippets/github-issue-classification/csharp/Program.cs#MapValueToKey)]
 
 다음으로, 텍스트(`Title` 및 `Description`) 열을 `TitleFeaturized` 및 `DescriptionFeaturized` 각각에서 숫자 벡터로 변환하는 `mlContext.Transforms.Text.FeaturizeText`를 호출합니다. 다음 코드를 사용하여 두 열에 대한 기능화(featurization)를 파이프라인에 추가합니다.
 
-[!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
+[!code-csharp[FeaturizeText](./snippets/github-issue-classification/csharp/Program.cs#FeaturizeText)]
 
 데이터 준비의 마지막 단계에서는 [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 메서드를 사용하여 모든 기능 열을 **Features** 열에 결합합니다. 기본적으로, 학습 알고리즘은 **Features** 열의 기능만 처리합니다. 다음 코드를 사용하여 이 변환을 파이프라인에 추가합니다.
 
-[!code-csharp[Concatenate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Concatenate)]
+[!code-csharp[Concatenate](./snippets/github-issue-classification/csharp/Program.cs#Concatenate)]
 
  다음으로, <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A>를 추가하여 DataView를 캐시합니다. 따라서 해당 캐시를 사용하여 데이터를 여러 번 반복하면 다음 코드를 사용하는 것처럼 성능이 향상될 수 있습니다.
 
-[!code-csharp[AppendCache](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AppendCache)]
+[!code-csharp[AppendCache](./snippets/github-issue-classification/csharp/Program.cs#AppendCache)]
 
 > [!WARNING]
 > 작거나 중간 규모의 데이터 세트에서는 AppendCacheCheckpoint를 사용하여 학습 시간을 단축하세요. 규모가 매우 큰 데이터 세트를 다룰 때는 사용하지 마세요(AppendCacheCheckpoint()를 제거).
 
 `ProcessData` 메서드의 끝에 파이프라인을 반환합니다.
 
-[!code-csharp[ReturnPipeline](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#ReturnPipeline)]
+[!code-csharp[ReturnPipeline](./snippets/github-issue-classification/csharp/Program.cs#ReturnPipeline)]
 
 이 단계는 전처리/기능화를 처리합니다. ML.NET에서 사용 가능한 추가 구성 요소를 사용하면 모델에서 더 나은 결과를 얻을 수 있습니다.
 
@@ -172,7 +172,7 @@ public static IEstimator<ITransformer> ProcessData()
 
 `BuildAndTrainModel` 메서드에 다음 호출을 `Main` 메서드의 다음 코드 줄로 추가합니다.
 
-[!code-csharp[CallBuildAndTrainModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallBuildAndTrainModel)]
+[!code-csharp[CallBuildAndTrainModel](./snippets/github-issue-classification/csharp/Program.cs#CallBuildAndTrainModel)]
 
 `BuildAndTrainModel` 메서드는 다음 작업을 실행합니다.
 
@@ -201,7 +201,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 `BuildAndTrainModel()`의 첫 번째 코드 줄로 다음을 추가하여 데이터 변환 정의에 기계 학습 알고리즘을 추가합니다.
 
-[!code-csharp[AddTrainer](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddTrainer)]
+[!code-csharp[AddTrainer](./snippets/github-issue-classification/csharp/Program.cs#AddTrainer)]
 
 [SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer)는 다중 클래스 분류 학습 알고리즘입니다. 이것은 `pipeline`에 추가되고 기록 데이터에서 학습할 기능화된 `Title`, `Description`(`Features`) 및 `Label` 입력 매개 변수를 수락합니다.
 
@@ -209,35 +209,35 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 모델을 `splitTrainSet` 데이터에 맞추고 `BuildAndTrainModel()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 학습된 모델을 반환합니다.
 
-[!code-csharp[TrainModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#TrainModel)]
+[!code-csharp[TrainModel](./snippets/github-issue-classification/csharp/Program.cs#TrainModel)]
 
 `Fit()` 메서드는 데이터 세트를 변환하고 학습을 적용하여 모델을 학습합니다.
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스를 전달한 다음, 이 단일 데이터 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. 이 항목을 `BuildAndTrainModel()` 메서드에서 다음 줄로 추가합니다.
 
-[!code-csharp[CreatePredictionEngine1](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine1)]
+[!code-csharp[CreatePredictionEngine1](./snippets/github-issue-classification/csharp/Program.cs#CreatePredictionEngine1)]
 
 ### <a name="predict-with-the-trained-model"></a>학습된 모델을 통해 예측
 
 `GitHubIssue`의 인스턴스를 만들어 GitHub 문제를 추가하여 `Predict` 메서드에서 학습된 모델의 예측을 테스트합니다.
 
-[!code-csharp[CreateTestIssue1](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreateTestIssue1)]
+[!code-csharp[CreateTestIssue1](./snippets/github-issue-classification/csharp/Program.cs#CreateTestIssue1)]
 
 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 함수를 사용하여 단일 데이터 행에 대한 예측을 수행합니다.
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Predict)]
+[!code-csharp[Predict](./snippets/github-issue-classification/csharp/Program.cs#Predict)]
 
 ### <a name="using-the-model-prediction-results"></a>모델 사용: 예측 결과
 
 결과를 공유하고 이에 따라 작업을 수행하기 위해 `GitHubIssue` 및 해당 `Area` 레이블 예측을 표시합니다.  다음 <xref:System.Console.WriteLine?displayProperty=nameWithType> 코드를 사용하여 결과 표시를 만듭니다.
 
-[!code-csharp[OutputPrediction](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#OutputPrediction)]
+[!code-csharp[OutputPrediction](./snippets/github-issue-classification/csharp/Program.cs#OutputPrediction)]
 
 ### <a name="return-the-model-trained-to-use-for-evaluation"></a>평가에 사용하기 위해 학습된 모델 반환
 
 `BuildAndTrainModel` 메서드의 끝에 모델을 반환합니다.
 
-[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#ReturnModel)]
+[!code-csharp[ReturnModel](./snippets/github-issue-classification/csharp/Program.cs#ReturnModel)]
 
 ## <a name="evaluate-the-model"></a>모델 평가
 
@@ -259,17 +259,17 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 다음 코드를 사용하여 `BuildAndTrainModel` 메서드 호출 바로 아래에 `Main` 메서드의 새 메서드 호출을 추가합니다.
 
-[!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallEvaluate)]
+[!code-csharp[CallEvaluate](./snippets/github-issue-classification/csharp/Program.cs#CallEvaluate)]
 
 앞의 학습 데이터 세트에서처럼 `Evaluate` 메서드에 다음 코드를 추가하여 테스트 데이트 세트를 로드합니다.
 
-[!code-csharp[LoadTestDataset](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#LoadTestDataset)]
+[!code-csharp[LoadTestDataset](./snippets/github-issue-classification/csharp/Program.cs#LoadTestDataset)]
 
 [Evaluate()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) 메서드는 지정된 데이터 세트를 사용하여 모델에 대한 품질 메트릭을 계산합니다. 다중 클래스 분류 평가자가 계산한 전체 메트릭을 포함하는 <xref:Microsoft.ML.Data.MulticlassClassificationMetrics> 개체를 반환합니다.
 모델의 품질을 확인하기 위해 메트릭을 표시하려면 먼저 해당 메트릭을 가져와야 합니다.
 기계 학습 `_trainedModel` 글로벌 변수([ITransformer](xref:Microsoft.ML.ITransformer))의 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 기능을 입력하고 예측을 반환합니다. `Evaluate` 메서드에 아래 코드를 다음 줄로 추가합니다.
 
-[!code-csharp[Evaluate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Evaluate)]
+[!code-csharp[Evaluate](./snippets/github-issue-classification/csharp/Program.cs#Evaluate)]
 
 다중 클래스 분류에 대한 다음 메트릭이 계산됩니다.
 
@@ -285,13 +285,13 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 다음 코드를 사용하여 메트릭을 표시하고, 결과를 공유한 다음, 작업을 수행합니다.
 
-[!code-csharp[DisplayMetrics](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DisplayMetrics)]
+[!code-csharp[DisplayMetrics](./snippets/github-issue-classification/csharp/Program.cs#DisplayMetrics)]
 
 ### <a name="save-the-model-to-a-file"></a>모델을 파일에 저장
 
 모델이 만족스러운 경우 나중에 또는 다른 애플리케이션에서 예측을 수행하기 위해 모델을 파일에 저장합니다. `Evaluate` 메서드에 다음 코드를 추가합니다.
 
-[!code-csharp[SnippetCallSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetCallSaveModel)]
+[!code-csharp[SnippetCallSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetCallSaveModel)]
 
 `Evaluate` 메서드 아래 `SaveModelAsFile` 메서드를 만듭니다.
 
@@ -304,13 +304,13 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 
 `SaveModelAsFile` 메서드에 다음 코드를 추가합니다. 이 코드에서는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 사용하여 학습된 모델을 직렬화하고 zip 파일로 저장합니다.
 
-[!code-csharp[SnippetSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetSaveModel)]
+[!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 
 ## <a name="deploy-and-predict-with-a-model"></a>모델을 통해 배포 및 예측
 
 다음 코드를 사용하여 `Evaluate` 메서드 호출 바로 아래에 `Main` 메서드의 새 메서드 호출을 추가합니다.
 
-[!code-csharp[CallPredictIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallPredictIssue)]
+[!code-csharp[CallPredictIssue](./snippets/github-issue-classification/csharp/Program.cs#CallPredictIssue)]
 
 다음 코드를 사용하여 `Evaluate` 메서드 바로 뒤에 (또한 `SaveModelAsFile` 메서드 바로 앞에) `PredictIssue` 메서드를 만듭니다.
 
@@ -331,15 +331,15 @@ private static void PredictIssue()
 
 다음 코드를 `PredictIssue` 메서드에 추가하여 저장된 모델을 애플리케이션에 로드합니다.
 
-[!code-csharp[SnippetLoadModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetLoadModel)]
+[!code-csharp[SnippetLoadModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetLoadModel)]
 
 `GitHubIssue`의 인스턴스를 만들어 GitHub 문제를 추가하여 `Predict` 메서드에서 학습된 모델의 예측을 테스트합니다.
 
-[!code-csharp[AddTestIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddTestIssue)]
+[!code-csharp[AddTestIssue](./snippets/github-issue-classification/csharp/Program.cs#AddTestIssue)]
 
 이전에 수행한 것처럼 다음 코드로 `PredictionEngine` 인스턴스를 만듭니다.
 
-[!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine)]
+[!code-csharp[CreatePredictionEngine](./snippets/github-issue-classification/csharp/Program.cs#CreatePredictionEngine)]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core Web API에서 `PredictionEnginePool`을 사용하는 방법](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)에 대한 이 가이드를 참조하세요.
 
@@ -348,13 +348,13 @@ private static void PredictIssue()
 
 `PredictionEngine`을 사용하여 예측을 위해 다음 코드를 `PredictIssue` 메서드에 추가하여 영역 GitHub 레이블을 예측합니다.
 
-[!code-csharp[PredictIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#PredictIssue)]
+[!code-csharp[PredictIssue](./snippets/github-issue-classification/csharp/Program.cs#PredictIssue)]
 
 ### <a name="using-the-loaded-model-for-prediction"></a>예측에 로드된 모델 사용
 
 문제를 분류하고 이에 따라 조치를 취하기 위해 `Area`를 표시합니다. 다음 <xref:System.Console.WriteLine?displayProperty=nameWithType> 코드를 사용하여 결과 표시를 만듭니다.
 
-[!code-csharp[DisplayResults](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DisplayResults)]
+[!code-csharp[DisplayResults](./snippets/github-issue-classification/csharp/Program.cs#DisplayResults)]
 
 ## <a name="results"></a>결과
 

@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5445a255d32f824b1e451c828f1d46b3e1c16001
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 39c4aeef0b02a6bf47d78e6bf53cd42b4f592946
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803380"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282101"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>자습서: ML.NET에서 행렬 인수분해를 사용하여 영화 추천기 빌드
 
@@ -62,7 +62,7 @@ ms.locfileid: "85803380"
 
 4. *Program.cs* 파일 맨 위에 다음 `using` 문을 추가합니다.
 
-    [!code-csharp[UsingStatements](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
+    [!code-csharp[UsingStatements](./snippets/movie-recommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>데이터 다운로드
 
@@ -129,17 +129,17 @@ using Microsoft.ML.Data;
 
 기존 클래스 정의를 제거하고 *MovieRatingData.cs*에 다음 코드를 추가하여 `MovieRating`라는 클래스를 만듭니다.
 
-[!code-csharp[MovieRatingClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
+[!code-csharp[MovieRatingClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating`은 입력 데이터 클래스를 지정합니다. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 특성은 데이터 세트에서 로드해야 하는 열(열 인덱스 기준)을 지정합니다. `userId` 및 `movieId` 열은 `Features`(모델에서 `Label`을 예측하기 위해 제공하는 입력)이고, 등급 열은 예측할 `Label`(모델의 출력)입니다.
 
 *MovieRatingData.cs*의 `MovieRating` 클래스 뒤에 다음 코드를 추가하여 예측 결과를 나타내는 또 다른 클래스(`MovieRatingPrediction`)를 만듭니다.
 
-[!code-csharp[PredictionClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
+[!code-csharp[PredictionClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
 *Program.cs*에서 `Console.WriteLine("Hello World!")`을 `Main()` 내부의 다음 코드로 바꿉니다.
 
-[!code-csharp[MLContext](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MLContext "Add MLContext")]
+[!code-csharp[MLContext](./snippets/movie-recommendation/csharp/Program.cs#MLContext "Add MLContext")]
 
 [MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작점이며, `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
 
@@ -157,7 +157,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 데이터 경로 변수를 초기화하여 \*.csv 파일에서 데이터를 로드하고 `LoadData()`의 다음 코드 줄로 다음 항목을 추가하여 `Train` 및 `Test` 데이터를 `IDataView` 개체로 반환합니다.
 
-[!code-csharp[LoadData](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadData "Load data from data paths")]
+[!code-csharp[LoadData](./snippets/movie-recommendation/csharp/Program.cs#LoadData "Load data from data paths")]
 
 ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
 
@@ -165,7 +165,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 `Main()` 메서드에서 다음 코드를 추가하여 `LoadData()` 메서드를 호출하고 `Train` 및 `Test` 데이터를 반환합니다.
 
-[!code-csharp[LoadDataMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadDataMain "Add LoadData method to Main")]
+[!code-csharp[LoadDataMain](./snippets/movie-recommendation/csharp/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
 ## <a name="build-and-train-your-model"></a>모델 빌드 및 학습
 
@@ -197,7 +197,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 `BuildAndTrainModel()`에 다음 코드를 추가하여 데이터 변환을 정의합니다.
 
-[!code-csharp[DataTransformations](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#DataTransformations "Define data transformations")]
+[!code-csharp[DataTransformations](./snippets/movie-recommendation/csharp/Program.cs#DataTransformations "Define data transformations")]
 
 `userId` 및 `movieId`는 실제 값이 아닌 사용자와 영화 제목을 나타내기 때문에 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 메서드를 사용하여 각 `userId` 및 각 `movieId`를 숫자 키 형식 `Feature` 열(권장 알고리즘에서 허용하는 형식)로 변환하고 새 데이터 세트 열로 추가합니다.
 
@@ -209,7 +209,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 기계 학습 알고리즘을 선택하고 `BuildAndTrainModel()`의 다음 코드 줄로 다음 항목을 추가하여 데이터 변환 정의에 추가합니다.
 
-[!code-csharp[AddAlgorithm](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#AddAlgorithm "Add the training algorithm with options")]
+[!code-csharp[AddAlgorithm](./snippets/movie-recommendation/csharp/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
 [MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29)는 권장 학습 알고리즘입니다.  [Matrix Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))은 사용자가 이전에 제품을 평가한 방법에 대한 데이터가 있을 때 권장되는 일반적인 접근 방법입니다. 이는 이 자습서의 데이터 세트에 해당됩니다. 다른 데이터를 사용할 수 있는 경우에 대한 기타 권장 알고리즘이 있습니다(자세한 내용은 아래의 [기타 권장 알고리즘](#other-recommendation-algorithms) 섹션 참조).
 
@@ -226,13 +226,13 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 모델을 `Train` 데이터에 맞추고 `BuildAndTrainModel()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 학습된 모델을 반환합니다.
 
-[!code-csharp[FitModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
+[!code-csharp[FitModel](./snippets/movie-recommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 메서드는 제공된 학습 데이터 세트를 통해 모델을 학습합니다. 기술적으로 데이터를 변환하고 학습을 적용하여 `Estimator` 정의를 실행하고, 학습된 모델인 `Transformer`를 반환합니다.
 
 `Main()` 메서드에서 다음 줄의 코드로 다음 항목을 추가하여 `BuildAndTrainModel()` 메서드를 호출하고 학습된 모델을 반환합니다.
 
-[!code-csharp[BuildTrainModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
+[!code-csharp[BuildTrainModelMain](./snippets/movie-recommendation/csharp/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
 ## <a name="evaluate-your-model"></a>모델 평가
 
@@ -249,23 +249,23 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 
 `EvaluateModel()`에 다음 코드를 추가하여 `Test`데이터를 변환합니다.
 
-[!code-csharp[Transform](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Transform "Transform the test data")]
+[!code-csharp[Transform](./snippets/movie-recommendation/csharp/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드는 테스트 데이터 세트의 여러 입력 행을 예측합니다.
 
 `EvaluateModel()` 메서드에서 다음 코드 줄로 다음 항목을 추가하여 모델을 평가합니다.
 
-[!code-csharp[Evaluate](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
+[!code-csharp[Evaluate](./snippets/movie-recommendation/csharp/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
 예측 집합이 있으면 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 메서드는 모델을 평가하여 예측된 값을 테스트 데이터 세트의 실제 `Labels`와 비교하고, 모델 수행 방법에 대한 메트릭을 반환합니다.
 
 `EvaluateModel()` 메서드에 다음 코드 줄로 다음 항목을 추가하여 평가 메트릭을 콘솔에 인쇄합니다.
 
-[!code-csharp[PrintMetrics](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintMetrics "Print the evaluation metrics")]
+[!code-csharp[PrintMetrics](./snippets/movie-recommendation/csharp/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
 `EvaluateModel()` 메서드를 호출하려면 `Main()` 메서드에서 다음 코드 줄로 다음 항목을 추가합니다.
 
-[!code-csharp[EvaluateModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
+[!code-csharp[EvaluateModelMain](./snippets/movie-recommendation/csharp/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
 지금까지의 출력은 다음 텍스트와 비슷해야 합니다.
 
@@ -320,7 +320,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 `UseModelForSinglePrediction()`에 다음 코드를 추가하여 등급을 예측하려면 `PredictionEngine`을 사용합니다.
 
-[!code-csharp[PredictionEngine](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
+[!code-csharp[PredictionEngine](./snippets/movie-recommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core Web API에서 `PredictionEnginePool`을 사용하는 방법](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)에 대한 이 가이드를 참조하세요.
 
@@ -329,7 +329,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 `testInput`이라는 `MovieRating`의 인스턴스를 만들고 `UseModelForSinglePrediction()` 메서드에서 다음 코드 줄로 다음 항목을 추가하여 예측 엔진에 전달합니다.
 
-[!code-csharp[MakeSinglePrediction](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
+[!code-csharp[MakeSinglePrediction](./snippets/movie-recommendation/csharp/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 함수는 단일 데이터 열의 대한 예측을 수행합니다.
 
@@ -337,11 +337,11 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 결과를 인쇄하려면 `UseModelForSinglePrediction()` 메서드에서 다음 코드 줄로 다음 항목을 추가합니다.
 
-[!code-csharp[PrintResults](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintResults "Print the recommendation prediction results")]
+[!code-csharp[PrintResults](./snippets/movie-recommendation/csharp/Program.cs#PrintResults "Print the recommendation prediction results")]
 
 `UseModelForSinglePrediction()` 메서드를 호출하려면 `Main()` 메서드에서 다음 코드 줄로 다음 항목을 추가합니다.
 
-[!code-csharp[UseModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
+[!code-csharp[UseModelMain](./snippets/movie-recommendation/csharp/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
 이 메서드의 출력은 다음 텍스트와 비슷해야 합니다.
 
@@ -365,13 +365,13 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 `SaveModel()` 메서드의 다음 코드를 추가하여 학습된 모델을 저장합니다.
 
-[!code-csharp[SaveModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModel "Save the model to a zip file")]
+[!code-csharp[SaveModel](./snippets/movie-recommendation/csharp/Program.cs#SaveModel "Save the model to a zip file")]
 
 이 메서드는 학습된 모델을 .zip 파일("Data" 폴더에 있음)에 저장한 다음, 이를 다른 .NET 애플리케이션에서 예측을 수행하는 데 사용할 수 있습니다.
 
 `SaveModel()` 메서드를 호출하려면 `Main()` 메서드에서 다음 코드 줄로 다음 항목을 추가합니다.
 
-[!code-csharp[SaveModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModelMain "Create SaveModel method in Main")]
+[!code-csharp[SaveModelMain](./snippets/movie-recommendation/csharp/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>저장된 모델 사용
 

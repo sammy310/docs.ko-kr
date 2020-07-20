@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324432"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415931"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -82,7 +82,7 @@ dotnet-install.sh --help
 
 기본적으로 스크립트는 현재 세션에 대한 $PATH에 설치 위치를 추가합니다. `-NoPath|--no-path` 인수를 지정하여 이 기본 동작을 재정의합니다. 스크립트는 `DOTNET_ROOT` 환경 변수를 설정하지 않습니다.
 
-스크립트를 실행하기 전에 필요한 모든 [종속성](../install/dependencies.md)을 설치하세요.
+스크립트를 실행하기 전에 필요한 모든 [종속성](../install/windows.md#dependencies)을 설치하세요.
 
 `-Version|--version` 인수를 사용하여 특정 버전을 설치할 수 있습니다. 버전은 `2.1.0`과 같이 세 부분으로 구성된 버전 번호로 지정해야 합니다. 버전을 지정하지 않은 경우 스크립트는 `latest` 버전을 설치합니다.
 

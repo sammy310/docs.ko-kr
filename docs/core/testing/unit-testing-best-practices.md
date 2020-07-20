@@ -4,12 +4,12 @@ description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324480"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281110"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -22,21 +22,25 @@ ms.locfileid: "85324480"
 ## <a name="why-unit-test"></a>단위 테스트하는 이유는?
 
 ### <a name="less-time-performing-functional-tests"></a>기능 테스트 수행 시간 단축
+
 기능 테스트는 비용이 많이 듭니다. 일반적으로 애플리케이션을 열고 사용자(또는 다른 사용자)가 예상되는 동작의 유효성을 검사하기 위해 따라야 하는 일련의 단계 수행이 포함됩니다. 이러한 단계는 항상 테스터에게 알려진 것은 아니며, 이는 테스트를 수행하기 위해 해당 영역에 더 많은 지식을 갖추어야 함을 의미합니다. 테스트 자체는 사소한 변경인 경우에는 몇 초가 걸리거나 큰 변경의 경우에는 몇 분 정도 걸릴 수 있습니다. 마지막으로, 이 프로세스는 시스템에서 수행하는 모든 변경 사항에 대해 반복되어야 합니다.
 
 반면에 단위 테스트는 밀리초가 소요되고 단추를 눌러 실행할 수 있으며 시스템 전체에 대한 정보가 반드시 필요하지는 않습니다. 테스트 통과 또는 실패 여부는 개인이 아닌 test runner의 몫입니다.
 
 ### <a name="protection-against-regression"></a>회귀에 대한 보호
+
 회귀 오류는 애플리케이션이 변경될 때 도입된 결함입니다. 테스터는 새 기능을 테스트할 뿐만 아니라 이전에 구현된 기능이 여전히 예상대로 작동하는지 확인하기 위해 이전에 존재했던 기능도 테스트하는 것이 일반적입니다.
 
 단위 테스트를 사용하면 모든 빌드 후에 또는 코드 줄을 변경한 후에도 전체 테스트 도구 모음을 다시 실행할 수 있습니다. 새 코드가 기존 기능을 중단시키지 않는다는 신뢰를 줍니다.
 
 ### <a name="executable-documentation"></a>실행 가능한 설명서
+
 특정 메서드가 무엇을 하는지 또는 특정 입력이 지정된 동작이 어떻게 수행되는지 항상 명확하지는 않을 수 있습니다. 빈 문자열을 전달하면 이 메서드는 어떻게 작동하는가를 자문해 볼 수 있습니다. Null?
 
 이름이 잘 지정된 단위 테스트의 도구 모음이 있는 경우 각 테스트는 지정된 입력에 대해 예상되는 출력을 명확하게 설명할 수 있어야 합니다. 또한 실제로 작동하는지 확인할 수 있어야 합니다.
 
 ### <a name="less-coupled-code"></a>적은 결합 코드
+
 코드가 밀접하게 결합되면 단위 테스트하기가 어려울 수 있습니다. 작성 중인 코드에 대한 단위 테스트를 만들지 않으면 결합이 덜 분명해질 수 있습니다.
 
 코드 테스트를 작성하면 자연스럽게 분리됩니다. 그렇지 않으면 테스트하기가 더 어려워지기 때문입니다.
@@ -56,6 +60,7 @@ ms.locfileid: "85324480"
 높은 코드 검사 비율은 성공의 지표도 아니고 높은 코드 품질을 의미하지도 않습니다. 단위 테스트에서 검사되는 코드의 양을 나타낼 뿐입니다. 자세한 내용은 [유닛 테스트 코드 검사](unit-testing-code-coverage.md)를 참조하세요.
 
 ## <a name="lets-speak-the-same-language"></a>동일한 언어 사용
+
 *mock*이라는 용어는 불행히도 테스트에 대해 이야기할 때 종종 잘못 사용됩니다. 다음은 단위 테스트를 작성할 때 *fakes*의 가장 일반적인 유형을 정의합니다.
 
 *Fake* - fake는 스텁 또는 모의 개체를 설명하는 데 사용할 수 있는 일반적인 용어입니다. stub 또는 mock인지 여부는 사용되는 컨텍스트에 따라 달라집니다. 즉, fake는 stub 또는 mock이 될 수 있습니다.
@@ -111,6 +116,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 ## <a name="best-practices"></a>최선의 구현 방법
 
 ### <a name="naming-your-tests"></a>테스트 이름 지정
+
 테스트의 이름은 다음 세 부분으로 구성되어야 합니다.
 
 - 테스트할 메서드의 이름입니다.
@@ -124,12 +130,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 테스트는 단순히 코드가 작동하는지 확인하는 것 이상이며, 문서도 제공합니다. 단위 테스트 도구 모음을 살펴봄으로써 코드 자체를 조회하지 않고도 코드의 동작을 유추할 수 있습니다. 또한 테스트가 실패하는 경우 기대치를 충족하지 못하는 시나리오를 정확히 확인할 수 있습니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>테스트 정렬
+
 **정렬, 동작, 어설션**은 단위 테스트 시 일반적인 패턴입니다. 이름에서 알 수 있듯이 세 가지 주요 작업으로 구성됩니다.
 
 - 개체를 *정렬*하고 필요에 따라 만들고 설정합니다.
@@ -144,12 +153,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 가독성은 테스트를 작성할 때 가장 중요한 측면 중 하나입니다. 테스트 내에서 이러한 작업을 각각 구분하면 코드를 호출하는 데 필요한 종속성, 코드 호출 방법 및 어설션하려는 대상이 명확하게 강조 표시할 수 있습니다. 몇 가지 단계를 결합하여 테스트의 크기를 줄일 수 있지만, 기본적인 목표는 가능한 한 테스트를 최대한으로 읽을 수 있도록 하는 것입니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>최소한의 테스트 통과 작성
+
 단위 테스트에 사용할 입력은 현재 테스트 중인 동작을 확인하기 위해 가능한 한 가장 간단해야 합니다.
 
 #### <a name="why"></a>이유
@@ -160,12 +172,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 테스트를 통과하는 데 필요한 것보다 많은 정보를 포함하는 테스트는 테스트에 오류가 발생할 가능성이 높으며 테스트의 의도를 덜 명확하게 할 수 있습니다. 테스트를 작성할 때 동작에 집중하려고 합니다. 모델의 추가 속성을 설정하거나 필요하지 않을 때 0이 아닌 값을 사용하면 증명하려고 시도한 것만 손상됩니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>매직 문자열 방지
+
 단위 테스트의 이름 지정 변수는(프로덕션 코드의 이름 지정 변수보다 더 중요하지는 않지만) 중요합니다. 단위 테스트에는 매직 문자열이 없어야 합니다.
 
 #### <a name="why"></a>이유
@@ -179,12 +194,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 테스트를 작성할 때는 가능한 한 많은 의도를 표현하는 것을 목표로 해야 합니다. 매직 문자열의 경우 좋은 방법은 이러한 값을 상수에 할당하는 것입니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>테스트에서 논리 방지
+
 단위 테스트를 작성할 때 수동 문자열 연결 및 `if`, `while`, `for`, `switch` 등의 논리 조건을 방지합니다.
 
 #### <a name="why"></a>이유
@@ -198,12 +216,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 테스트의 논리가 불가피한 경우 테스트를 두 개 이상의 다른 테스트로 분할하는 것이 좋습니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>설정 및 해제할 도우미 방법 선호
+
 테스트에 비슷한 개체나 상태가 필요한 경우 Setup 및 Teardown 특성이 있는 경우보다 도우미 메서드를 선호합니다.
 
 #### <a name="why"></a>이유
@@ -218,6 +239,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > xUnit은 버전 2.x에서 SetUp 및 TearDown을 모두 제거했습니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
@@ -227,6 +249,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 [!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
@@ -236,6 +259,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 [!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>다중 어설션 방지
+
 테스트를 작성할 때 테스트당 하나의 Assert만 포함하려고 합니다. 하나의 어설션만 사용하는 일반적인 방법은 다음과 같습니다.
 
 - 각 어설션에 대한 별도의 테스트를 만듭니다.
@@ -253,12 +277,15 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 이 규칙에 대한 일반적인 예외는 개체에 대해 어설션할 때 발생합니다. 이 경우 일반적으로 각 속성에 대해 다중 어설션을 허용하여 개체가 예상되는 상태에 있는지 확인하는 것이 좋습니다.
 
 #### <a name="bad"></a>Bad:
+
 [!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Better:
+
 [!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>공용 메서드를 테스트하여 전용 메서드 유효성 검사
+
 대부분의 경우 전용 메서드를 테스트할 필요는 없습니다. 전용 메서드는 구현 세부 정보입니다. 전용 메서드는 절대 분리되어 존재하지 않는다고 생각할 수 있습니다. 특정 시점에서는 구현의 일부로 전용 메서드를 호출하는 공용 연결 메서드가 있을 것입니다. 주의해야 할 것은 사적인 것을 호출하는 공용 메서드의 최종 결과입니다.
 
 다음 경우를 참조
@@ -281,7 +308,7 @@ private string TrimInput(string input)
 실제 테스트는 공용 연결 메서드 `ParseLogLine`에 대해 수행되어야 합니다. 이는 최종적으로 주의를 기울여야 하는 것이기 때문이다.
 
 ```csharp
-public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
+public void ParseLogLine_StartsAndEndsWithSpace_ReturnsTrimmedResult()
 {
     var parser = new Parser();
 
@@ -294,12 +321,13 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 이 관점에서, 전용 메서드를 표시하는 경우 공용 메서드를 찾아 해당 메서드에 대해 테스트를 작성합니다. 단지 전용 메서드가 예상된 결과를 반환한다고 해서 최종적으로 전용 메서드를 호출하는 시스템이 결과를 올바르게 사용하는 것은 아닙니다.
 
 ### <a name="stub-static-references"></a>Stub 정적 참조
+
 단위 테스트의 원칙 중 하나는 테스트 중인 시스템을 완전히 제어해야 한다는 것입니다. 프로덕션 코드에 정적 참조(예: `DateTime.Now`)에 대한 호출을 포함하는 경우 문제가 될 수 있습니다. 다음 코드 참조
 
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+    if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -313,7 +341,7 @@ public int GetDiscountedPrice(int price)
 이 코드를 어떻게 단위 테스트할 수 있나요? 다음과 같은 방법을 시도하는 경우
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
 
@@ -347,7 +375,7 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
+    if (dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
@@ -361,7 +389,7 @@ public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 이제 테스트 도구 모음이 됩니다.
 
 ```csharp
-public void GetDiscountedPrice_ByDefault_ReturnsFullPrice()
+public void GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
 {
     var priceCalculator = new PriceCalculator();
     var dateTimeProviderStub = new Mock<IDateTimeProvider>();

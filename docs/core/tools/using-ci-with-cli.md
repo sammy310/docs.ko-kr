@@ -2,12 +2,12 @@
 title: .NET Core SDK 및 도구를 사용한 CI(연속 통합)
 description: 연속 통합을 사용하여 빌드 서버에서 .NET Core SDK 및 해당 도구를 사용하는 방법을 알아봅니다.
 ms.date: 05/18/2017
-ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451040"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415986"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
 
@@ -32,7 +32,7 @@ macOS 사용자는 PKG 설치 관리자를 사용해야 합니다. Linux에서�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/dependencies.md)을 참조하세요.
+> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/windows.md#dependencies)을 참조하세요.
 
 ## <a name="ci-setup-examples"></a>CI 설치 예제
 

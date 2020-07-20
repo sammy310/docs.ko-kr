@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 description: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713486"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416015"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 
@@ -15,7 +15,7 @@ ms.locfileid: "84713486"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](using-on-mac-vs.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "84713486"
 
 1. Mac용 Visual Studio를 시작합니다.
 
-1. [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](using-on-mac-vs.md)에서 만든 프로젝트를 엽니다.
+1. [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 프로젝트를 엽니다.
 
    현재 빌드 구성은 도구 모음에 표시됩니다. 다음 도구 모음 그림은 Visual Studio가 앱의 디버그 버전을 컴파일하도록 구성되어 있음을 보여줍니다.
 

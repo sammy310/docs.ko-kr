@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283444"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281539"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -177,17 +177,17 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 다음 예제에서는 <xref:System.Span%601> 및 <xref:System.Memory%601> 인스턴스를 사용하여 배열의 10개 요소에 대한 가상 보기를 제공합니다.
 
-[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
+[!code-csharp[Span\<T>](./snippets/dotnet-core-2-1/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](./snippets/dotnet-core-2-1/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 압축
 
 .NET Core 2.1은 Brotli 압축 및 압축 풀기에 대한 지원을 추가합니다. Brotli는 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt)에 정의되어 있고 대부분의 웹 브라우저와 주요 웹 서버에서 지원되는 범용 무손실 압축 알고리즘입니다. 스트림 기반 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 클래스 또는 고성능 범위 기반 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 및 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 다음 예제는 <xref:System.IO.Compression.BrotliStream> 클래스를 사용한 압축을 보여 줍니다.
 
-[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+[!code-csharp[Brotli compression](./snippets/dotnet-core-2-1/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](./snippets/dotnet-core-2-1/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 동작은 <xref:System.IO.Compression.DeflateStream> 및 <xref:System.IO.Compression.GZipStream>과 동일하므로, 이러한 API를 호출하는 코드를 <xref:System.IO.Compression.BrotliStream>으로 쉽게 변환할 수 있습니다.
 

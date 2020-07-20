@@ -4,12 +4,12 @@ description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803289"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281669"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
@@ -50,7 +50,7 @@ ms.locfileid: "85803289"
 
 4. *Program.cs* 파일 맨 위에 다음 `using` 문을 추가합니다.
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sales-anomaly-detection/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 ### <a name="download-your-data"></a>데이터 다운로드
 
@@ -92,7 +92,7 @@ ms.locfileid: "85803289"
 
 4. 기존 클래스 정의를 제거하고 두 개의 클래스 `ProductSalesData` 및 `ProductSalesPrediction`이 있는 다음 코드를 *ProductSalesData.cs* 파일에 추가합니다.
 
-    [!code-csharp[DeclareTypes](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
+    [!code-csharp[DeclareTypes](./snippets/sales-anomaly-detection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
     `ProductSalesData`은 입력 데이터 클래스를 지정합니다. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 특성은 데이터 세트에서 로드해야 하는 열(열 인덱스 기준)을 지정합니다.
 
@@ -105,13 +105,13 @@ ms.locfileid: "85803289"
 
 6. `Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로를 지정합니다.
 
-    [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+    [!code-csharp[Declare global variables](./snippets/sales-anomaly-detection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 ### <a name="initialize-variables-in-main"></a>Main에서 변수 초기화
 
 1. `Main` 메서드의 `Console.WriteLine("Hello World!")` 줄을 다음 코드로 대체하여 `mlContext` 변수를 선언하고 초기화합니다.
 
-    [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
     [MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작점이며, `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
 
@@ -121,7 +121,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 1. 아래 코드를 `Main()` 메서드의 다음 줄로 추가합니다.
 
-    [!code-csharp[LoadData](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#LoadData "loading dataset")]
+    [!code-csharp[LoadData](./snippets/sales-anomaly-detection/csharp/Program.cs#LoadData "loading dataset")]
 
     [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)은 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다.
 
@@ -160,7 +160,7 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 
 `Program.cs`에 다음 메서드를 추가합니다.
 
-[!code-csharp[CreateEmptyDataView](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEmptyDataView)]
+[!code-csharp[CreateEmptyDataView](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEmptyDataView)]
 
 `CreateEmptyDataView()`를 통해서는 `IEstimator.Fit()` 메서드의 입력으로 사용될 올바른 스키마를 사용하여 빈 데이터 뷰 개체를 생성합니다.
 
@@ -183,25 +183,25 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 
 1. [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator)를 사용하여 급증 검색에 대한 모델을 학습합니다. 다음 코드를 사용하여 `DetectSpike()` 메서드에 추가합니다.
 
-    [!code-csharp[AddSpikeTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddSpikeTrainer)]
+    [!code-csharp[AddSpikeTrainer](./snippets/sales-anomaly-detection/csharp/Program.cs#AddSpikeTrainer)]
 
 1. `DetectSpike()` 메서드에서 다음 코드 줄로 다음을 추가하여 급증 검색 변환을 만듭니다.
 
-    [!code-csharp[TrainModel1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel1)]
+    [!code-csharp[TrainModel1](./snippets/sales-anomaly-detection/csharp/Program.cs#TrainModel1)]
 
 1. 다음 코드 줄을 추가하여 `productSales` 데이터를 `DetectSpike()` 메서드에서 다음 줄로 변환합니다.
 
-    [!code-csharp[TransformData1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData1)]
+    [!code-csharp[TransformData1](./snippets/sales-anomaly-detection/csharp/Program.cs#TransformData1)]
 
     이전 코드에서는 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 여러 데이터 세트 입력 행에 대해 예측합니다.
 
 1. 쉽게 표시할 수 있도록 다음 코드로 [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용하여 `transformedData`를 강력한 형식의 `IEnumerable`로 변환합니다.
 
-    [!code-csharp[CreateEnumerable1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable1)]
+    [!code-csharp[CreateEnumerable1](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable1)]
 
 1. 다음 <xref:System.Console.WriteLine?displayProperty=nameWithType> 코드를 사용하여 표시 헤더 줄을 만듭니다.
 
-    [!code-csharp[DisplayHeader1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader1)]
+    [!code-csharp[DisplayHeader1](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayHeader1)]
 
     급증 검색 결과에서 다음 정보를 표시합니다.
 
@@ -211,11 +211,11 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 
 1. 다음 코드를 사용하여 `predictions` `IEnumerable`을 반복하고 결과를 표시합니다.
 
-    [!code-csharp[DisplayResults1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults1)]
+    [!code-csharp[DisplayResults1](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayResults1)]
 
 1. `Main()` 메서드의 `DetectSpike()` 메서드에 호출을 추가합니다.
 
-    [!code-csharp[CallDetectSpike](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectSpike)]
+    [!code-csharp[CallDetectSpike](./snippets/sales-anomaly-detection/csharp/Program.cs#CallDetectSpike)]
 
 ## <a name="spike-detection-results"></a>급증 검색 결과
 
@@ -289,23 +289,23 @@ Alert   Score   P-Value
 
 1. 다음 코드를 사용하여 `DetectChangepoint()` 메서드에 [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator)를 만듭니다.
 
-    [!code-csharp[AddChangepointTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddChangepointTrainer)]
+    [!code-csharp[AddChangepointTrainer](./snippets/sales-anomaly-detection/csharp/Program.cs#AddChangepointTrainer)]
 
 1. 이전에 수행한 방식대로 `DetectChangePoint()` 메서드에 다음 코드 줄을 추가하여 평가자에서 변환을 만듭니다.
 
-    [!code-csharp[TrainModel2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel2)]
+    [!code-csharp[TrainModel2](./snippets/sales-anomaly-detection/csharp/Program.cs#TrainModel2)]
 
 1. `Transform()` 메서드로 `DetectChangePoint()`에 다음 코드를 추가하여 데이터를 변환합니다.
 
-    [!code-csharp[TransformData2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData2)]
+    [!code-csharp[TransformData2](./snippets/sales-anomaly-detection/csharp/Program.cs#TransformData2)]
 
 1. 이전에 했던 것처럼 쉽게 표시할 수 있도록 다음 코드로 `CreateEnumerable()` 메서드를 사용하여 `transformedData`를 강력한 형식의 `IEnumerable`로 변환합니다.
 
-    [!code-csharp[CreateEnumerable2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable2)]
+    [!code-csharp[CreateEnumerable2](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable2)]
 
 1. `DetectChangePoint()` 메서드에 아래 코드를 사용하여 표시 헤더를 다음 줄로 만듭니다.
 
-    [!code-csharp[DisplayHeader2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader2)]
+    [!code-csharp[DisplayHeader2](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayHeader2)]
 
     변화점 검색 결과에서 다음 정보를 표시합니다.
 
@@ -316,11 +316,11 @@ Alert   Score   P-Value
 
 1. 다음 코드를 사용하여 `predictions` `IEnumerable`을 반복하고 결과를 표시합니다.
 
-    [!code-csharp[DisplayResults2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults2)]
+    [!code-csharp[DisplayResults2](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayResults2)]
 
 1. `Main()` 메서드의 `DetectChangepoint()` 메서드에 다음 호출을 추가합니다.
 
-    [!code-csharp[CallDetectChangepoint](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectChangepoint)]
+    [!code-csharp[CallDetectChangepoint](./snippets/sales-anomaly-detection/csharp/Program.cs#CallDetectChangepoint)]
 
 ## <a name="change-point-detection-results"></a>변화점 검색 결과
 
