@@ -744,6 +744,8 @@
         - name: 개요
           href: serialization/binary-serialization.md
           displayName: binary serialization
+        - name: BinaryFormatter 보안 가이드
+          href: serialization/binaryformatter-security-guide.md
         - name: Serialization 개념
           href: serialization/serialization-concepts.md
         - name: 기본 serialization
