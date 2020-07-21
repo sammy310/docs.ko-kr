@@ -1,5 +1,6 @@
 ---
 title: 안정성
+description: .NET의 안정성을 이해 합니다. SQL Server와 같이 .NET에서 실행 되는 호스트의 비동기 예외를 방지 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - writing reliable code
 - code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
-ms.openlocfilehash: 2d6601c4cbad32f768ff16301307083f35d986a0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ce9ffbb7f58c2f5dc016c56c0e2ce13b45c30f26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715964"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474256"
 ---
 # <a name="reliability"></a>안정성
 SQL Server와 같은 서버 환경에서 실행되는 코드를 비동기 예외로부터 보호하는 것이 중요합니다. 여기에서 설명한 대로 안정성은 SQL Server에는 특별하지 않지만 .NET Framework 버전 2.0 환경에서 실행되는 모든 호스트용으로 신뢰할 수 있는 코드를 작성할 때는 중요합니다. 그러나 SQL Server는 버전 2.0의 새로운 안정성 기능을 광범위하게 이용하는 첫 번째 서비스이므로 예제로 사용됩니다.  
@@ -27,7 +28,7 @@ SQL Server와 같은 서버 환경에서 실행되는 코드를 비동기 예외
  [안전성 모범 사례](reliability-best-practices.md)  
  안정성 요구 사항을 충족하는 코드를 작성하기 위한 지침을 제공합니다.  
   
- [제약이 있는 실행 영역](constrained-execution-regions.md)  
+ [제약이 있는 실행 지역](constrained-execution-regions.md)  
  제약이 있는 실행 영역(CER)의 동작과 함수에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  

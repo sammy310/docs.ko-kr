@@ -1,16 +1,17 @@
 ---
 title: 보안 ETW 이벤트
+description: .NET에서 강력한 이름 확인 및 Authenticode 확인 중에 발생 하는 보안 ETW 이벤트를 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2fd2d450223cd16a7791b8f6c67afe6bcb954eb3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715933"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474217"
 ---
 # <a name="security-etw-events"></a>보안 ETW 이벤트
 
@@ -25,17 +26,17 @@ ms.locfileid: "75715933"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|강력한 이름 확인의 시작입니다.|  
 |`StrongNameVerificationStop_V1`|182|강력한 이름 확인의 끝입니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |VerificationFlags|win:UInt32|확인 플래그입니다.|  
-|ErrorCode|win:UInt32|HResult 오류 코드입니다.|  
+|오류 코드|win:UInt32|HResult 오류 코드입니다.|  
 |FullyQualifiedAssemblyName|win:UnicodeString|정규화된 어셈블리 이름입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
 
@@ -48,20 +49,20 @@ ms.locfileid: "75715933"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Authenticode 확인의 시작입니다.|  
 |`AuthenticodeVerificationStop_V1`|184|Authenticode 확인의 끝입니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |VerificationFlags|win:UInt32|확인 플래그입니다.|  
-|ErrorCode|win:UInt32|HResult 오류 코드입니다.|  
+|오류 코드|win:UInt32|HResult 오류 코드입니다.|  
 |ModulePath|win:UnicodeString|모듈 경로입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

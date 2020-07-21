@@ -1,16 +1,17 @@
 ---
 title: JIT 추적 ETW 이벤트
+description: JIT (just-in-time) 추적 ETW 이벤트를 이해 합니다. 이러한 이벤트는 JIT 인라인 및 JIT 마무리 호출의 성공 또는 실패와 관련 된 정보를 수집 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716001"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474464"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.
@@ -26,13 +27,13 @@ ms.locfileid: "75716001"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 인라인 처리에 실패했습니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -56,13 +57,13 @@ ms.locfileid: "75716001"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|메서드 인라인 처리에 성공했습니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -86,13 +87,13 @@ ms.locfileid: "75716001"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|메서드 마무리 호출에 실패했습니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -116,13 +117,13 @@ ms.locfileid: "75716001"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|메서드 마무리 호출에 성공했습니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -137,6 +138,6 @@ ms.locfileid: "75716001"
 |TailCallType|win:UnicodeString|마무리 호출의 형식입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

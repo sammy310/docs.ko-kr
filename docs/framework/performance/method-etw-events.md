@@ -1,16 +1,17 @@
 ---
 title: 메서드 ETW 이벤트
+description: CLR 메서드 이벤트, CLR 메서드 표식 또는 CLR 메서드 자세한 이벤트, MethodJittingStarted 등의 메서드와 관련 된 정보를 수집 하는 ETW 이벤트를 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715989"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474321"
 ---
 # <a name="method-etw-events"></a>메서드 ETW 이벤트
 
@@ -33,7 +34,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|Event|이벤트 ID|설명|
+|이벤트|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|메서드가 JIT(Just-In-Time) 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 메서드 로드에 대해 이 버전을 사용하지 않습니다. JIT 도우미는 이 버전을 사용하지 않습니다.|
 |`MethodUnLoad_V1`|137|모듈이 언로드되거나 애플리케이션 도메인이 삭제될 때 발생합니다. 동적 메서드는 메서드 언로드에 대해 이 버전을 사용하지 않습니다.|
@@ -42,7 +43,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|메서드의 고유 식별자입니다. JIT 도우미 메서드에 대한 이 필드는 메서드의 시작 주소로 설정됩니다.|
 |ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).|
@@ -66,7 +67,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|Event|이벤트 ID|설명|
+|이벤트|이벤트 ID|설명|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|시작 런다운 중에 열거가 시작하기 전에 전송됩니다.|
 |`DCStartComplete_V1`|145|시작 런다운 중에 열거가 끝날 때 전송됩니다.|
@@ -75,7 +76,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|
 
@@ -92,7 +93,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|Event|이벤트 ID|설명|
+|이벤트|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|메서드가 JIT 로드되거나 NGEN 이미지가 로드될 때 발생합니다. 동적 및 제네릭 메서드는 항상 메서드 로드에 대해 이 버전을 사용합니다. JIT 도우미는 항상 이 버전을 사용합니다.|
 |`MethodUnLoadVerbose_V1`|144|동적 메서드가 삭제되거나, 모듈이 언로드되거나, 애플리케이션 도메인이 삭제될 때 발생합니다. 동적 메서드는 항상 메서드 언로드에 대해 이 버전을 사용합니다.|
@@ -101,7 +102,7 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|메서드의 고유 식별자입니다. JIT 도우미 메서드의 경우 메서드의 시작 주소로 설정합니다.|
 |ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다(JIT 도우미의 경우 0).|
@@ -127,13 +128,13 @@ ms.locfileid: "75715989"
 
 다음 표에서는 이벤트 정보를 보여 줍니다.
 
-|Event|이벤트 ID|설명|
+|이벤트|이벤트 ID|설명|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|메서드가 JIT로 컴파일되는 동안 발생합니다.|
 
 다음 표에서는 이벤트 데이터를 보여 줍니다.
 
-|필드 이름|데이터 형식|설명|
+|필드 이름|데이터 형식|Description|
 |----------------|---------------|-----------------|
 |MethodID|win:UInt64|메서드의 고유 식별자입니다.|
 |ModuleID|win:UInt64|이 메서드가 속한 모듈의 식별자입니다.|
@@ -144,6 +145,6 @@ ms.locfileid: "75715989"
 |MethodSignature|win:UnicodeString|메서드의 서명입니다(쉼표로 구분된 형식 이름 목록).|
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

@@ -1,15 +1,16 @@
 ---
 title: 대형 응답성 .NET Framework 응용 프로그램 작성
+description: 대용량의 응답성이 높은 .NET 앱 또는 파일 또는 데이터베이스와 같은 많은 양의 데이터를 처리 하는 앱을 작성 합니다.
 ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 57f65feff5260cb83df5354f5d7ee1bad0babb3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180577"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475192"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 
@@ -24,7 +25,7 @@ ms.locfileid: "79180577"
   
  최종 사용자는 앱과 상호 작용할 때 앱이 응답성을 유지할 것을 기대합니다. 입력이나 명령 처리가 차단되어서는 안 됩니다. 사용자가 입력을 계속하면 도움말은 신속하게 나타나거나 표시되지 않아야 합니다. 앱은 앱이 느리다고 느끼게 하는 오랜 계산으로 UI 스레드를 차단하는 것을 피해야 합니다.
   
- Roslyn 컴파일러에 대한 자세한 내용은 [.NET 컴파일러 플랫폼 SDK 를](../../csharp/roslyn-sdk/index.md)참조하십시오.
+ Roslyn 컴파일러에 대 한 자세한 내용은 [.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)를 참조 하세요.
   
 ## <a name="just-the-facts"></a>팩트  
  성능을 조정하고 응답성 있는 .NET Framework 앱을 만들 때는 다음 팩트를 고려하세요.
@@ -38,7 +39,7 @@ ms.locfileid: "79180577"
  앱의 핵심 사용자 환경 또는 시나리오에 대한 성능 목표를 설정하고 성능을 측정하기 위한 테스트를 작성해야 합니다. 과학적인 방법을 적용하여 실패 테스트를 조사합니다. 즉, 프로필을 사용하여 사용자를 안내하고, 문제가 무엇일지 가설을 세우고, 실험이나 코드 변경으로 가설을 테스트합니다. 정기 테스트로 시간의 흐름에 따른 기준 성능 측정값을 설정하여 성능 저하를 일으키는 변경 내용을 구분할 수 있습니다. 엄격한 방식으로 성능 작업에 접근하면 불필요한 코드 업데이트로 시간을 낭비하는 일이 없습니다.
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>팩트 3: 좋은 도구가 모든 차별화를 이뤄냄  
- 좋은 도구를 사용하면 가장 큰 성능 문제(CPU, 메모리 또는 디스크)에 신속하게 파고들어 해당 병목 현상을 일으키는 코드를 찾을 수 있습니다. 마이크로소프트는 [비주얼 스튜디오 프로파일러](/visualstudio/profiling/beginners-guide-to-performance-profiling) 와 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)와 같은 성능 도구의 다양 한 제공 .
+ 좋은 도구를 사용하면 가장 큰 성능 문제(CPU, 메모리 또는 디스크)에 신속하게 파고들어 해당 병목 현상을 일으키는 코드를 찾을 수 있습니다. Microsoft는 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 및 [perfview](https://www.microsoft.com/download/details.aspx?id=28567)와 같은 다양 한 성능 도구를 제공 합니다.
   
  PerfView는 디스크 I/O, GC 이벤트 및 메모리와 같은 깊이 있는 문제에 집중하는 데 도움을 주는 놀랄 만큼 강력한 도구로서 무료입니다. 성능 관련 ETW([Windows용 이벤트 추적](../wcf/samples/etw-tracing.md)) 이벤트를 캡처하여 앱, 프로세스, 스택 및 스레드 단위 정보를 쉽게 볼 수 있습니다. PerfView는 앱에서 할당하는 메모리의 양과 종류뿐만 아니라 함수 또는 호출 스택으로 인해 메모리가 할당되는 양이 어느 정도인지를 보여 줍니다. 자세한 내용은 도구에 포함된 다양한 도움말 항목, 데모 및 비디오(예: Channel 9의 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial))를 참조하세요.
   
@@ -196,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...
 ```  
   
- `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. 또한 "///"를 확인했습니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 공백이 아닌 첫 번째 문자를 찾은 다음 문자별로 문자를 확인하여 문자열이 "////"로 시작되는지 확인합니다. 새 코드는 `IndexOfFirstNonWhiteSpaceChar` 공백이 아닌 문자가 발생하는 첫 번째 인덱스(지정된 시작 인덱스 이후)를 반환하는 대신 <xref:System.String.TrimStart%2A> 사용합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다.
+ `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. "///"도 확인 합니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 공백이 아닌 첫 번째 문자를 찾은 다음 문자 단위로 문자를 검사 하 여 문자열이 "///"로 시작 하는지 확인 합니다. 새 코드에서는 대신를 사용 하 여 `IndexOfFirstNonWhiteSpaceChar` <xref:System.String.TrimStart%2A> 공백이 아닌 문자가 발생 하는 첫 번째 인덱스 (지정 된 시작 인덱스 뒤의)를 반환 합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다.
   
  **예제 4: StringBuilder**  
   
@@ -277,9 +278,9 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  이 간단한 캐싱 전략은 크기 한도를 포함하므로 좋은 캐시 디자인을 준수합니다. 그러나 이제는 원본보다 코드가 많아져 유지 관리 비용이 더 듭니다. 성능 문제를 발견한 경우에만 캐싱 전략을 채택해야 하며, PerfView에 <xref:System.Text.StringBuilder> 할당이 중요한 기여 요소라는 사실이 표시되어 있습니다.
   
 ### <a name="linq-and-lambdas"></a>LINQ 및 람다  
-람다 식과 함께 LINQ(언어 통합 쿼리)는 생산성 기능의 예입니다. 그러나 사용 시간이 지남에 따라 성능에 큰 영향을 미칠 수 있으며 코드를 다시 작성해야 할 수도 있습니다.
+LINQ (언어 통합 쿼리)는 람다 식과 함께 생산성 기능의 예입니다. 그러나 시간이 지남에 따라 성능에 상당한 영향을 줄 수 있으며 코드를 다시 작성 해야 할 수도 있습니다.
   
- **예제 5: 람다, List\<T> 및 IEnumerable\<T>**  
+ **예 5: 람다, 목록 \<T> 및 IEnumerable\<T>**  
   
  이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
   
@@ -413,7 +414,7 @@ class Compilation { /*...*/
   
  **예제 6에 대한 해결 방법**  
   
- 완료된 <xref:System.Threading.Tasks.Task> 할당을 제거하려면 완료된 결과로 Task 개체를 캐시할 수 있습니다.  
+ 완료 된 할당을 제거 하려면 완료 된 결과를 사용 하 여 <xref:System.Threading.Tasks.Task> 작업 개체를 캐시 하면 됩니다.  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -440,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>기타 고려 사항  
  다음은 규모가 큰 앱이나 많은 데이터를 처리하는 앱에서 발생할 수 있는 잠재적 문제에 대한 몇 가지 추가 사항입니다.
   
- **사전**  
+ **사전과**  
   
  사전은 많은 프로그램에서 보편적으로 사용되며 매우 편리하고 본질적으로 효율적이기는 하지만, 빈번히 부적절하게 사용됩니다. Visual Studio 및 새 컴파일러에서 분석에는 단일 요소를 포함했거나 비어 있는 사전이 많이 표시됩니다. 빈 <xref:System.Collections.Generic.Dictionary%602>에는 10개의 필드가 포함되어 있고 이는 x86 컴퓨터의 힙에서 48바이트를 차지합니다. 매핑 또는 결합형 데이터 구조와 일정 시간 조회 기능이 필요한 경우 사전은 유용합니다. 그러나 보유한 요소가 몇 개 되지 않는 경우 사전을 사용하면 많은 공간을 낭비하게 됩니다. 대신, 예를 들어 `List<KeyValuePair\<K,V>>`를 반복적으로 검토할 수 있으며 이는 원래 빠릅니다. 데이터가 포함된 사전을 로드한 다음 이 사전에서 읽기 위한 용도로만 사전을 사용하는 경우(매우 일반적인 패턴), 정렬된 배열과 함께 N(log(N)) 조회 기능을 사용하는 것이 거의 더 빠를 것입니다(사용 중인 요소 수에 따라 다름).
   
@@ -465,9 +466,9 @@ class Compilation { /*...*/
 ## <a name="see-also"></a>참고 항목
 
 - [이 항목의 프레젠테이션 비디오](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
-- [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [초보자를 위한 성능 프로 파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [성능](index.md)
 - [.NET 성능 팁](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [채널 9 PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
-- [GitHub의 닷트넷/로슬린 리포지토리](https://github.com/dotnet/roslyn)
+- [GitHub의 dotnet/roslyn 리포지토리](https://github.com/dotnet/roslyn)

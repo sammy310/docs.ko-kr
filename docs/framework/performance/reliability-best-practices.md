@@ -1,5 +1,6 @@
 ---
 title: 안전성 모범 사례
+description: SQL Server와 같은 .NET 호스트 기반 서버 응용 프로그램의 안정성에 대 한 모범 사례를 참조 하세요. 리소스가 누출 되거나 중단 되지 않도록 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marking locks
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 134b71153f95dffd4525f307d291ce4389e0ce60
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715977"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474243"
 ---
 # <a name="reliability-best-practices"></a>안전성 모범 사례
 
@@ -239,7 +240,7 @@ SQL Server의 경우 동기화 또는 스레딩을 소개하는 데 사용한 �
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>비관리 코드에서 무기한 차단 안 함
 
-관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows 동기화 기본 형식을 사용 하 여 차단 하는 것은 허용 되지 않는 항목의 명확한 예입니다.  가능 하면 소켓의 `ReadFile`에 대 한 호출 차단을 피해 야 합니다. 즉, Windows API가 시간 초과와 같은 작업에 대 한 메커니즘을 제공 해야 합니다.
+관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows 동기화 기본 형식을 사용 하 여 차단 하는 것은 허용 되지 않는 항목의 명확한 예입니다.  가능한 경우 소켓에서 호출을 차단 하는 것은 피해 야 합니다 `ReadFile` . 즉, WINDOWS API가 시간 초과와 같은 작업에 대 한 메커니즘을 제공 해야 합니다.
 
 네이티브를 호출하는 모든 메서드는 적절한 시간 제한 내에 Win32 호출을 사용해야 합니다.  사용자가 시간 제한을 지정할 수 있으면 특정 보안 권한이 없이는 무한 시간을 지정할 수 없어야 합니다.  참고로 메서드를 10초가 넘게 차단할 경우 시간 제한을 지원하는 버전을 사용하거나 추가 CLR 지원이 필요합니다.
 
@@ -275,7 +276,7 @@ COM STA(단일 스레드 아파트)를 사용하는 코드를 식별합니다.  
 
 #### <a name="code-analysis-rule"></a>코드 분석 규칙
 
-관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  에서 C#이는 `catch` {} 및 `catch(Exception)` {}모두에 플래그를 사용 하는 것을 의미 합니다.  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
+관리 코드에서 모든 개체를 catch하거나 모든 예외를 catch하는 모든 catch 블록을 검토합니다.  C #에서이는 및의 플래그를 나타냅니다 `catch` {} `catch(Exception)` {} .  예외 형식을 매우 구체적으로 만들거나 코드를 검토하여 예기치 않은 예외 형식을 catch하는 경우 잘못된 방식으로 작동하지 않게 합니다.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>관리 되는 스레드가 Win32 스레드 라고 가정 하지 않음-파이버입니다.
 
@@ -311,7 +312,7 @@ CER은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRe
 
 그러면 `try` 블록을 실행하기 전에 finally 블록의 모든 코드를 준비하도록 Just-In-Time 컴파일러에 지시합니다. 그러면 finally 블록의 코드가 빌드되고 경우에 상관없이 실행될 수 있습니다. CER에서 `try` 블록이 비어 있는 경우가 드물지 않습니다. CER을 사용하여 비동기 스레드 중단 및 메모리 부족 예외로부터 보호합니다. 매우 복잡한(deep) 코드의 스택 오버플로를 추가로 처리하는 CER 양식은 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.ConstrainedExecution>
 - [SQL Server 프로그래밍 및 호스트 보호 특성](sql-server-programming-and-host-protection-attributes.md)
