@@ -1,5 +1,6 @@
 ---
 title: C# 프로그래밍 가이드
+description: 다음 리소스에서 핵심 C# 언어 기능과 .NET을 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 확인하세요.
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,32 +10,32 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241658"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473879"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 
 이 섹션에서는 핵심 C# 언어 기능과 .NET을 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
   
- 이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념을 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자인 경우 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tutorials/intro-to-csharp/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
+ 이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념에 대해 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자는 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tutorials/intro-to-csharp/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
   
  특정 키워드, 연산자 및 전처리기 지시문에 대한 자세한 내용은 [C# 참조](../language-reference/index.md)를 참조하세요. C# 언어 사양에 대한 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요.  
   
 ## <a name="program-sections"></a>프로그램 섹션
 
-[C# 프로그램 내부](./inside-a-program/index.md)  
+[C# 프로그램 내용](./inside-a-program/index.md)  
   
 [Main()과 명령줄 인수](./main-and-command-args/index.md)  
 
 ## <a name="language-sections"></a>언어 섹션
 
-[문, 식, 연산자](./statements-expressions-operators/index.md)  
+[문, 식 및 연산자](./statements-expressions-operators/index.md)  
 
- [유형](./types/index.md)  
+ [형식](./types/index.md)  
 
  [클래스 및 구조체](./classes-and-structs/index.md)  
   

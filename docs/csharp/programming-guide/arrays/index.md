@@ -1,20 +1,21 @@
 ---
 title: 배열 - C# 프로그래밍 가이드
+description: C#의 배열 데이터 구조에 형식이 동일한 변수를 여러 개 저장합니다. 형식을 지정해 배열을 선언하거나 개체를 지정해 모든 형식을 저장합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715049"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474737"
 ---
 # <a name="arrays-c-programming-guide"></a>배열(C# 프로그래밍 가이드)
 
-배열 데이터 구조에 형식이 동일한 변수를 여러 개 저장할 수 있습니다. 요소의 형식을 지정하여 배열을 선언합니다. 배열이 모든 형식의 요소를 저장하도록 하려는 경우 `object`를 해당 형식으로 지정할 수 있습니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object>에서 상속합니다.
+배열 데이터 구조에 형식이 동일한 변수를 여러 개 저장할 수 있습니다. 요소의 형식을 지정하여 배열을 선언합니다. 배열이 모든 형식의 요소를 저장하도록 하려는 경우 `object`를 해당 형식으로 지정할 수 있습니다. C#의 통합 형식 시스템에서 모든 형식(사전 정의되거나 사용자 정의된 형식, 참조 형식, 값 형식)은 <xref:System.Object>에서 직접 또는 간접적으로 상속합니다.
 
 ```csharp
 type[] arrayName;
@@ -48,7 +49,7 @@ type[] arrayName;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [컬렉션](../concepts/collections.md)
