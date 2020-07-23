@@ -304,6 +304,10 @@ items:
         items:
           - name: 메모리 누수 디버그
             href: diagnostics/debug-memory-leak.md
+          - name: 높은 CPU 사용량 디버그
+            href: diagnostics/debug-highcpu.md
+          - name: 디버그 교착 상태
+            href: diagnostics/debug-deadlock.md
   - name: .NET Core 추가 도구
     items:
       - name: 개요
