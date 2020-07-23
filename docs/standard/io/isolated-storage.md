@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325941"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416382"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
-<a name="top"></a> 데스크톱 앱에서 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 스토리지 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 스토리지를 조작하는 도구를 사용할 수 있습니다. 격리된 스토리지를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 스토리지에만 액세스할 수 있는 다른 애플리케이션으로부터 데이터가 보호됩니다. 애플리케이션의 스토리지 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.
+
+데스크톱 앱에서 격리된 스토리지는 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘입니다. 표준화를 통해 다음과 같은 여러 가지 이점도 활용할 수 있습니다. 관리자는 파일 스토리지 구성, 보안 정책 설정, 사용하지 않은 데이터 삭제를 위해 격리된 스토리지를 조작하는 도구를 사용할 수 있습니다. 격리된 스토리지를 사용하면 더 이상 파일 시스템에서 안전한 위치를 지정하기 위해 코드에 고유 경로를 포함할 필요가 없으며 격리된 스토리지에만 액세스할 수 있는 다른 애플리케이션으로부터 데이터가 보호됩니다. 애플리케이션의 스토리지 영역 위치를 나타내는 하드 코드된 정보는 필요하지 않습니다.
 
 > [!IMPORTANT]
 > Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.
-
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
-
-- [데이터 구획 및 저장소](#data_compartments_and_stores)
-
-- [격리된 스토리지의 할당량](#quotas)
-
-- [액세스 보안](#secure_access)
-
-- [허용 수준과 보안 위험](#allowed_usage)
-
-- [격리된 스토리지 위치](#isolated_storage_locations)
-
-- [격리된 스토리지 만들기, 열거 및 삭제](#isolated_storage_tasks)
-
-- [격리된 스토리지 시나리오](#scenarios_for_isolated_storage)
-
-- [관련 항목](#related_topics)
-
-- [참조](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __이 섹션은 다음과 같은 프레임워크에 적용됩니다.__
 - .NET Core 2.1 이상
 - .NET 5.0 이상
 
-.NET Framework 및 .NET Core는 사용자, 애플리케이션 또는 구성 요소의 데이터를 유지하는 메커니즘으로 [격리된 스토리지](/dotnet/standard/io/isolated-storage)를 제공합니다. 기본적으로 이 레거시 구성 요소는 지금은 사용되지 않는 코드 액세스 보안 시나리오를 위해 설계되었습니다.
+.NET Framework 및 .NET Core는 사용자, 애플리케이션 또는 구성 요소의 데이터를 유지하는 메커니즘으로 격리된 스토리지를 제공합니다. 기본적으로 이 레거시 구성 요소는 지금은 사용되지 않는 코드 액세스 보안 시나리오를 위해 설계되었습니다.
 
 다양한 격리된 스토리지 API 및 도구를 사용하여 신뢰 경계 전반에서 데이터를 읽을 수 있습니다. 예를 들어 머신 전체 범위에서 데이터를 읽으면 머신에서 신뢰할 수 없는 다른 사용자 계정의 데이터를 집계할 수 있습니다. 머신 전체의 격리된 스토리지 범위에서 읽는 구성 요소 또는 애플리케이션은 이 데이터를 읽는 경우 따르는 결과를 알고 있어야 합니다.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>머신 전체 범위에서 읽을 수 있는 보안 관련 API
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>머신 전체 범위에서 읽을 수 있는 보안 관련 API
 
 다음 API를 호출하는 구성 요소 또는 애플리케이션은 머신 전체 범위에서 읽습니다.
 
@@ -129,7 +110,7 @@ __이 섹션은 다음과 같은 프레임워크에 적용됩니다.__
 * [IsolatedStorageFile.GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore) - IsolatedStorageScope.Machine 플래그를 포함하는 범위를 전달합니다.
 * [IsolatedStorageFile.Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove) - `IsolatedStorageScope.Machine` 플래그를 포함하는 범위를 전달합니다.
 
-[격리된 스토리지 도구](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe`는 다음 코드에서처럼 `/machine` 스위치를 사용하여 호출되는 경우 영향을 받습니다.
+[격리된 스토리지 도구](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe`는 다음 코드에서처럼 `/machine` 스위치를 사용하여 호출되는 경우 영향을 받습니다.
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ __중요:__ 환경에 상호 신뢰할 수 없는 사용자가 여러 명 있는
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-articles"></a>관련 문서
 
 |제목|설명|
 |-----------|-----------------|

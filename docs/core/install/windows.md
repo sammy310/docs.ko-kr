@@ -4,11 +4,12 @@ description: .NET Core를 설치할 수 있는 Windows 버전에 대해 알아�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804455"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308951"
 ---
 # <a name="install-net-core-on-windows"></a>Windows에 .NET Core 설치
 
@@ -22,7 +23,8 @@ ms.locfileid: "85804455"
 
 최신 버전의 .NET Core는 3.1입니다.
 
-[.NET Core를 다운로드합니다.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>지원되는 릴리스
 
@@ -70,13 +72,15 @@ Windows용 .NET Core WPF 및 .NET Core Windows Forms 데스크톱 앱을 실행�
 ‘.NET Core 런타임’\
 이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET Core 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’과 ‘데스크톱 런타임’을 모두 설치하는 것이 좋습니다. 
 
-[.NET Core 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK 정보
 
 SDK는 .NET Core 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니다. SDK를 설치하면 ASP.NET Core, 데스크톱 및 .NET Core의 세 가지 [런타임](#runtime-information)이 모두 포함됩니다.
 
-[.NET Core SDK 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>종속성
 
@@ -217,7 +221,8 @@ Visual Studio가 이미 설치되어 있다면 다음 단계에 따라 버전을
 
 Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니다.
 
-- [Visual Studio를 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)합니다.
+> [!div class="button"]
+> [Visual Studio를 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)합니다.
 
 ### <a name="select-a-workload"></a>워크로드 선택
 

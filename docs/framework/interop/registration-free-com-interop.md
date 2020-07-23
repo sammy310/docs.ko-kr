@@ -1,5 +1,6 @@
 ---
 title: 등록이 필요 없는 COM Interop
+description: 등록이 필요 없는 COM interop을 사용하면 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고도 구성 요소를 활성화할 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124967"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281604"
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
@@ -37,7 +38,7 @@ ms.locfileid: "73124967"
     |동시 Side-by-side|Microsoft Windows XP|필요하지 않음.|  
     |.NET 기반|Windows XP SP2|.NET Framework 버전 1.1 이상|  
   
-     Windows Server 2003 제품군은 .NET 기반 어셈블리에 대해서도 등록이 필요 없는 COM interop를 지원합니다.  
+     Windows Server 2003 제품군은 .NET 기반 어셈블리에 대해서도 등록이 필요 없는 COM interop을 지원합니다.  
   
      .NET 기반 클래스가 COM의 등록이 필요 없는 활성화와 호환되려면 클래스에 매개 변수가 없는 생성자가 있어야 하고 public이어야 합니다.  
   

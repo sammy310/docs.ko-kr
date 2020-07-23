@@ -1,14 +1,15 @@
 ---
-title: .NET Core 및 Linux 배포 설치
+title: Linux 배포에 .NET Core 설치
 description: 어떤 Linux 배포가 Linux에서 .NET Core 설치를 지원하는지 알아봅니다.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803094"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441412"
 ---
 # <a name="install-net-core-on-linux"></a>Linux에 .NET Core 설치
 

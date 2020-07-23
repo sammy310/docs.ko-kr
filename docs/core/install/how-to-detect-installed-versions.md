@@ -6,11 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b8825dee595c601e8adef0a52e651ac4a4f04831
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802990"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416046"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core가 설치되어 있는지 확인하는 방법
 
@@ -216,5 +217,4 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Install the .NET Core Runtime](runtime.md)(.NET Core 런타임 설치)
-- [Install the .NET Core SDK](sdk.md)(.NET Core SDK 설치)
+- [.NET Core 런타임 및 SDK 설치](windows.md)

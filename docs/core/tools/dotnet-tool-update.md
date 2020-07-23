@@ -2,12 +2,12 @@
 title: dotnet tool update 명령
 description: dotnet tool update 명령은 컴퓨터에서 지정된 .NET Core 도구를 업데이트합니다.
 ms.date: 07/08/2020
-ms.openlocfilehash: 7c4bde44ac9964828074baeb1a697ba64ed17887
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226623"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308873"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -21,20 +21,20 @@ ms.locfileid: "86226623"
 
 ```dotnetcli
 dotnet tool update <PACKAGE_ID> -g|--global
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update <PACKAGE_ID> --tool-path <PATH>
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update <PACKAGE_ID> --local
-    [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [--add-source <SOURCE>] [--disable-parallel]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--disable-parallel] [--framework <FRAMEWORK>]
     [--ignore-failed-sources] [--interactive] [--no-cache]
     [--tool-manifest <PATH>]
     [-v|--verbosity <LEVEL>] [--version <VERSION>]
@@ -86,7 +86,7 @@ dotnet tool update -h|--help
 
 - **`--local`**
 
-  도구 및 로컬 도구 매니페스트를 업데이트합니다. `--global` 옵션과 함께 사용할 수 없습니다.
+  도구 및 로컬 도구 매니페스트를 업데이트합니다. `--global` 옵션 또는 `--tool-path` 옵션과 함께 사용할 수 없습니다.
 
 - **`--no-cache`**
 

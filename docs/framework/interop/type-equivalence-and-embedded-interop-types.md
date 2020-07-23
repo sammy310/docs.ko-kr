@@ -1,5 +1,6 @@
 ---
 title: 형식 동등 및 포함된 Interop 형식
+description: 관리형 어셈블리를 사용하는 .NET 형식 및 멤버와 해당 어셈블리에 포함된 COM 형식 간의 형식 동등성을 이해합니다. .NET 4 이상에 해당합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d572133c42f01af7d50f6f771588f5173853f9a
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126401"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282010"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>형식 동등 및 포함된 Interop 형식
 

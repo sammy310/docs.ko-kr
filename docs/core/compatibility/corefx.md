@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 1c56358e69d0dd6e8572a41229c1b9edbcdad795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365620"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281310"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,8 @@ ms.locfileid: "85365620"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [기본 ActivityIdFormat이 W3C임](#default-activityidformat-is-w3c) | 5.0 |
+| [Vector2.Lerp 및 Vector4.Lerp의 동작 변경](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [SSE 및 SSE2 CompareGreaterThan 메서드가 NaN 입력을 올바르게 처리함](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [CounterSet.CreateCounterSetInstance는 인스턴스가 이미 있는 경우 이제 InvalidOperationException을 throw함](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [Microsoft.DotNet.PlatformAbstractions 패키지가 제거됨](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
@@ -43,6 +45,14 @@ ms.locfileid: "85365620"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
+
+***
+
+[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
+
+***
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
 

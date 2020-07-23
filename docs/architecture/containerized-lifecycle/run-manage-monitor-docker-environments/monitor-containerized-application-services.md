@@ -2,12 +2,12 @@
 title: 컨테이너화된 애플리케이션 서비스 모니터링
 description: 컨테이너 아키텍처 모니터링의 주요 특징을 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673460"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374444"
 ---
 # <a name="monitor-containerized-application-services"></a>컨테이너화된 애플리케이션 서비스 모니터링
 
@@ -15,7 +15,7 @@ ms.locfileid: "68673460"
 
 ## <a name="azure-monitor"></a>Azure Monitor
 
-[Azure Monitor](https://azure.microsoft.com/services/monitor/)는 라이브 애플리케이션을 모니터링하는 확장 가능한 분석 서비스입니다. 이 서비스를 사용하면 성능 이슈를 감지하고 진단하여 사용자가 실제로 앱에서 무엇을 하는지 파악할 수 있습니다. 이 서비스는 개발자가 서비스 또는 애플리케이션의 성능과 사용 편의성을 지속적으로 개선할 수 있도록 도와줄 의도로 설계되었습니다. Azure Monitor는 .NET, Java, Node.js, 온-프레미스 또는 클라우드에 호스트되는 다른 여러 플랫폼을 비롯한 다양한 플랫폼에서 웹/서비스 및 독립 실행형 앱과 함께 작동합니다.
+[Azure Monitor](https://azure.microsoft.com/services/monitor/)는 라이브 애플리케이션을 모니터링하는 확장 가능한 분석 서비스입니다. 이 서비스를 사용하면 성능 이슈를 감지하고 진단하여 사용자가 실제로 앱에서 무엇을 하는지 파악할 수 있습니다. 이 서비스는 개발자가 서비스 또는 애플리케이션의 성능과 사용 편의성을 지속해서 개선할 수 있도록 도와줄 의도로 설계되었습니다. Azure Monitor는 .NET, Java, Node.js, 온-프레미스 또는 클라우드에 호스트되는 다른 여러 플랫폼을 비롯한 다양한 플랫폼에서 웹/서비스 및 독립 실행형 앱과 함께 작동합니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
@@ -47,7 +47,7 @@ Azure 도구는 클라우드 리소스와 온-프레미스 리소스의 네 가�
   - 전송 및 저장 시 백업 데이터의 암호화를 유지합니다.
   - 다단계 인증을 기반으로 액세스 권한을 부여하여 단 사용을 방지합니다.
 
-- **온-프레미스 리소스**. [진정으로 일관적인 하이브리드 클라우드](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)를 사용합니다.
+- **온-프레미스 리소스**. [하이브리드 클라우드 솔루션](https://azure.microsoft.com/solutions/hybrid-cloud-app/) 사용
 
 >[!div class="step-by-step"]
 >[이전](manage-production-docker-environments.md)

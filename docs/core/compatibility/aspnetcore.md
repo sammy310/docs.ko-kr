@@ -2,15 +2,15 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 07/08/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174395"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441949"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -26,8 +26,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [권한 부여: AddAuthorization 오버로드가 다른 어셈블리로 이동됨](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [권한 부여: AuthorizationFilterContext.Filters에서 IAllowAnonymous 제거됨](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [권한 부여: IAuthorizationPolicyProvider 구현에는 새 메서드가 필요합니다.](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [권한 부여: 엔드포인트 라우팅의 리소스가 HttpContext임](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor: 컴파일 시간에 구성 요소에서 중요하지 않은 공백을 자름](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: NuGet 패키지의 대상 프레임워크가 변경됨](#blazor-target-framework-of-nuget-packages-changed)
 - [캐싱: CompactOnMemoryPressure 속성이 제거됨](#caching-compactonmemorypressure-property-removed)
 - [캐싱: Microsoft.Extensions.Caching.SqlServer는 새 SqlClient 패키지를 사용합니다.](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [캐싱: ResponseCaching “pubternal” 유형이 내부로 변경됨](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -62,6 +64,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [Kestrel: 전송 추상화 계층 변경](#kestrel-transport-abstractions-removed-and-made-public)
 - [지역화: 사용되지 않음으로 표시된 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
 - [지역화: “Pubternal” API가 제거됨](#localization-pubternal-apis-removed)
+- [지역화: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -70,6 +73,8 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [MVC: 형식이 내부로 변경됨](#mvc-pubternal-types-changed-to-internal)
 - [MVC: 웹 API 호환성 shim이 제거됨](#mvc-web-api-compatibility-shim-removed)
 - [Razor: 런타임 컴파일이 패키지로 이동됨](#razor-runtime-compilation-moved-to-a-package)
+- [보안: 쿠키 이름 인코딩이 제거됨](#security-cookie-name-encoding-removed)
+- [보안: IdentityModel NuGet 패키지 버전이 업데이트됨](#security-identitymodel-nuget-package-versions-updated)
 - [세션 상태: 사용되지 않는 API가 제거됨](#session-state-obsolete-apis-removed)
 - [공유 프레임워크: Microsoft.AspNetCore.App에서 어셈블리 제거](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [공유 프레임워크: 제거된 Microsoft.AspNetCore.All이 제거됨](#shared-framework-removed-microsoftaspnetcoreall)
@@ -88,11 +93,19 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 
@@ -131,7 +144,19 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 
 ***
 
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
+
+***
+
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
+
+***
+
+[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
 
 ***
 

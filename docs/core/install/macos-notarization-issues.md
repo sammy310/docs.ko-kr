@@ -4,12 +4,12 @@ description: .NET Core로 빌드된 .NET Core 런타임, SDK 및 앱을 설치�
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: cd3886b2e772a182156d212aefb9705a3fb5e17c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324625"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415949"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향
 
@@ -77,7 +77,7 @@ ASP.NET Core 인증서 문제를 해결하는 방법에 대한 자세한 내용�
 
 ## <a name="default-entitlements"></a>기본 자격
 
-.NET Core의 기본 호스트(`dotnet` 명령)는 기본 자격 집합을 갖습니다. 이러한 자격은 .NET Core가 올바르게 작동하는 데 필요합니다. 애플리케이션에 그 밖의 자격이 필요한 경우가 있는데, 이 경우 [appHost](#apphost-is-disabled-by-default)를 생성하여 사용한 다음 로컬에서 필수 자격을 추가해야 합니다.
+.NET Core의 기본 호스트(`dotnet` 명령)에는 기본 자격 세트가 있습니다. 이러한 자격은 .NET Core가 올바르게 작동하는 데 필요합니다. 애플리케이션에 그 밖의 자격이 필요한 경우가 있는데, 이 경우 [appHost](#apphost-is-disabled-by-default)를 생성하여 사용한 다음 로컬에서 필수 자격을 추가해야 합니다.
 
 .NET Core의 기본 자격 집합
 
@@ -93,5 +93,4 @@ ASP.NET Core 인증서 문제를 해결하는 방법에 대한 자세한 내용�
 ## <a name="next-steps"></a>다음 단계
 
 - [..NET Core 종속성 및 요구 사항](dependencies.md)
-- [Install the .NET Core SDK](sdk.md)(.NET Core SDK 설치)
-- [.NET Core 런타임 설치](runtime.md)
+- [.NET Core 런타임 및 SDK 설치](macos.md)

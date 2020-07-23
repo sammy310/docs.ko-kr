@@ -1,14 +1,14 @@
 ---
 title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202090"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441411"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -240,6 +240,7 @@ ms.locfileid: "84202090"
 
 - GC 힙 및 GC 기록의 최대 커밋 크기를 바이트 단위로 지정합니다.
 - 이 설정은 64비트 컴퓨터에만 적용됩니다.
+- [개체별 힙 제한](#per-object-heap-limits)을 구성하면 이 설정은 무시됩니다.
 - 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 큰 값입니다. 기본값은 다음 경우에 적용됩니다.
 
   - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
@@ -271,6 +272,7 @@ ms.locfileid: "84202090"
 - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)이 설정되는 경우에도 이 설정이 무시됩니다.
 - 이 설정은 64비트 컴퓨터에만 적용됩니다.
 - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우 백분율은 해당 메모리 제한의 백분율로 계산됩니다.
+- [개체별 힙 제한](#per-object-heap-limits)을 구성하면 이 설정은 무시됩니다.
 - 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 작은 값입니다. 기본값은 다음 경우에 적용됩니다.
 
   - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
@@ -295,6 +297,40 @@ ms.locfileid: "84202090"
 
 > [!TIP]
 > *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 힙의 사용량을 30%로 제한하려면 JSON 파일의 경우 값을 30으로 지정하고 환경 변수의 경우 값을 0x1E 또는 1E로 지정합니다.
+
+### <a name="per-object-heap-limits"></a>개체별 힙 제한
+
+개체별 힙을 기준으로 GC의 허용되는 힙 사용량을 지정할 수 있습니다. LOH(대형 개체 힙), SOH(작은 개체 힙), POH(고정 개체 힙) 등의 다양한 힙이 있습니다.
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
+
+- `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` 또는 `COMPLUS_GCHeapHardLimitPOH` 설정 중 하나의 값을 지정하는 경우 `COMPLUS_GCHeapHardLimitSOH` 및 `COMPLUS_GCHeapHardLimitLOH`의 값도 지정해야 합니다. 그러지 않으면 런타임이 초기화되지 않습니다.
+- `COMPLUS_GCHeapHardLimitPOH`의 기본값은 0입니다. `COMPLUS_GCHeapHardLimitSOH` 및 `COMPLUS_GCHeapHardLimitLOH`에는 기본값이 없습니다.
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitSOH` | *16진수 값* | .NET 5.0 |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitLOH` | *16진수 값* | .NET 5.0 |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitPOH` | *16진수 값* | .NET 5.0 |
+
+> [!TIP]
+> 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어 힙 하드 제한인 200MiB(메비바이트)를 지정하려면 값은 0xC800000 또는 C800000이 됩니다.
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+
+- `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` 또는 `COMPLUS_GCHeapHardLimitPOHPercent` 설정 중 하나의 값을 지정하는 경우 `COMPLUS_GCHeapHardLimitSOHPercent` 및 `COMPLUS_GCHeapHardLimitLOHPercent`의 값도 지정해야 합니다. 그러지 않으면 런타임이 초기화되지 않습니다.
+- `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` 및 `COMPLUS_GCHeapHardLimitPOH`를 지정하면 해당 설정은 무시됩니다.
+- 값이 1이면 GC가 해당 개체 힙의 총 실제 메모리 중 1%를 사용합니다.
+- 각 값은 0보다 크고 100보다 작아야 합니다. 또한 백분율 값 3개의 합계는 100보다 작아야 합니다. 그렇지 않으면 런타임이 초기화되지 않습니다.
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitSOHPercent` | *16진수 값* | .NET 5.0 |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitLOHPercent` | *16진수 값* | .NET 5.0 |
+| **환경 변수** | `COMPLUS_GCHeapHardLimitPOHPercent` | *16진수 값* | .NET 5.0 |
+
+> [!TIP]
+> 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어 힙 사용량을 30%로 제한하려면 값은 0x1E 또는 1E가 됩니다.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 

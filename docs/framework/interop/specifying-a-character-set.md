@@ -1,5 +1,6 @@
 ---
 title: 문자 집합 지정
+description: 좁은 인코딩(ANSI) 또는 와이드 인코딩(유니코드)을 사용하는 문자 집합을 지정하는 방법을 알아봅니다. 또는 자동 런타임 선택 영역을 지정할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125168"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309796"
 ---
-# <a name="specifying-a-character-set"></a>문자 집합 지정
+# <a name="specify-a-character-set"></a>문자 집합 지정
+
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 문자열 마샬링을 제어하고 플랫폼 호출이 DLL에서 함수 이름을 찾는 방법을 결정합니다. 이 항목에서는 두 동작에 대해 모두 설명합니다.  
   
  일부 API는 문자열 인수를 사용하는 함수의 두 가지 버전인 narrow(ANSI) 및 wide(Unicode)를 내보냅니다. 예를 들어 Windows API에는 **MessageBox** 함수에 대한 다음 진입점 이름이 포함됩니다.  
@@ -61,11 +63,12 @@ ms.locfileid: "73125168"
   
 - 플랫폼 호출이 대상 플랫폼에 따라 런타임에 ANSI와 유니코드 중에서 선택합니다.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic에서 문자 집합 지정  
- 다음 예제에서는 매번 서로 다른 문자 집합 동작을 사용하여 **MessageBox** 함수를 세 번 선언합니다. **Ansi**, **유니코드** 또는 **자동** 키워드를 선언문에 추가하여 Visual Basic에서 문자 집합 동작을 지정할 수 있습니다.  
-  
- 첫 번째 선언문과 같이 문자 집합 키워드를 생략하면 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본적으로 ANSI 문자 집합으로 설정됩니다. 예제에서 두 번째 문과 세 번째 문은 키워드를 사용해서 명시적으로 문자 집합을 지정합니다.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Visual Basic에서 문자 집합 지정
+
+`Ansi`, `Unicode` 또는 `Auto` 키워드를 선언문에 추가하여 Visual Basic에서 문자 집합 동작을 지정할 수 있습니다. 문자 집합 키워드를 생략하면 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본적으로 ANSI 문자 집합으로 설정됩니다.
+
+다음 예제에서는 매번 서로 다른 문자 집합 동작을 사용하여 **MessageBox** 함수를 세 번 선언합니다. 첫 번째 문은 문자 집합 키워드를 생략하므로 문자 집합이 기본적으로 ANSI로 설정됩니다. 두 번째 문과 세 번째 문은 키워드를 사용해서 명시적으로 문자 집합을 지정합니다.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -88,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>C# 및 C++에서 문자 집합 지정  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본 문자 집합을 ANSI 또는 유니코드로 식별합니다. 문자 집합은 메서드에 대한 문자열 인수를 마샬링하는 방법을 제어합니다. 다음 형식 중 하나를 사용하여 문자 집합을 나타냅니다.  
+## <a name="specify-a-character-set-in-c-and-c"></a>C# 및 C++에서 문자 집합 지정
+
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본 문자 집합을 ANSI 또는 유니코드로 식별합니다. 문자 집합은 메서드에 대한 문자열 인수를 마샬링하는 방법을 제어합니다. 다음 형식 중 하나를 사용하여 문자 집합을 나타냅니다.  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

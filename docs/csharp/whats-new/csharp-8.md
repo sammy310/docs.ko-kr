@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174733"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309406"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -398,7 +398,7 @@ await foreach (var number in GenerateSequence())
 
 ## <a name="asynchronous-disposable"></a>비동기 삭제 가능
 
-C# 8.0부터 언어는 <xref:System.IAsyncDisposable?displayProperty=nameWithType> 인터페이스를 구현하는 비동기 삭제 가능 형식을 지원합니다. `using` 식의 피연산자는 <xref:System.IDisposable> 또는 <xref:System.IAsyncDisposable>을 구현할 수 있습니다. `IAsyncDisposable`의 경우 컴파일러는 <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>에서 반환된 <xref:System.Threading.Tasks.Task>를 `await`하는 코드를 생성합니다. 자세한 내용은 [`using` 문](../language-reference/keywords/using-statement.md)을 참조하세요.
+C# 8.0부터 언어는 <xref:System.IAsyncDisposable?displayProperty=nameWithType> 인터페이스를 구현하는 비동기 삭제 가능 형식을 지원합니다. `await using` 문을 사용하여 삭제 가능한 개체를 비동기적으로 사용합니다. 자세한 내용은 [DisposeAsync 메서드 구현](../../standard/garbage-collection/implementing-disposeasync.md) 문서를 참조하세요.
 
 ## <a name="indices-and-ranges"></a>인덱스 및 범위
 

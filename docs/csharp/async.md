@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100901"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415979"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -207,7 +207,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-코드 양은 더 적지만 LINQ를 비동기 코드와 혼합할 경우 주의하세요. LINQ는 연기된(지연) 실행을 사용하므로, `.ToList()` 또는 `.ToArray()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `foreach` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
+코드 양은 더 적지만 LINQ를 비동기 코드와 함께 사용할 때는 주의하세요. LINQ는 연기된(지연) 실행을 사용하므로, `.ToList()` 또는 `.ToArray()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `foreach` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
 
 ## <a name="important-info-and-advice"></a>중요한 정보 및 조언
 

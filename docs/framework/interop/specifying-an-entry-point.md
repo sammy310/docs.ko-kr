@@ -1,17 +1,18 @@
 ---
 title: 진입점 지정
+description: DLL에서 함수의 위치를 식별하는 진입점을 지정하는 방법을 알아봅니다. 진입점을 다른 이름에 매핑하여 함수 이름을 바꿀 수 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181307"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282023"
 ---
 # <a name="specifying-an-entry-point"></a>진입점 지정
 

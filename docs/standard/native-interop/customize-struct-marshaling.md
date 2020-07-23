@@ -5,14 +5,14 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003895"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374535"
 ---
-# <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
+# <a name="customize-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
 구조체의 기본 마샬링 규칙이 필요한 것과 정확히 일치하지 않는 경우가 있습니다. .NET 런타임에서는 구조체 레이아웃과 필드 마샬링 방식을 사용자 지정할 수 있는 몇 가지 확장점을 제공합니다.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-WinRT 기반 API를 사용하는 경우 문자열을 `HSTRING`로 마샬링해야 할 수도 있습니다.  <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 값을 사용하여 문자열을 `HSTRING`로 마샬링할 수 있습니다.
+WinRT 기반 API를 사용하는 경우 문자열을 `HSTRING`로 마샬링해야 할 수도 있습니다. <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 값을 사용하여 문자열을 `HSTRING`로 마샬링할 수 있습니다.
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10진 필드 마샬링 사용자 지정
 
-Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
+Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>`System.Object` 마샬링
+## <a name="marshal-systemobject"></a>`System.Object` 마샬링
 
 Windows에서 `object` 형식 필드를 네이티브 코드로 마샬링할 수 있습니다. 이러한 필드는 다음 세 가지 형식 중 하나로 마샬링할 수 있습니다.
 

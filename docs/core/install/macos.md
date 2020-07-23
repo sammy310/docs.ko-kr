@@ -4,11 +4,12 @@ description: .NET Core를 설치할 수 있는 macOS 버전에 대해 알아봅�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804454"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308925"
 ---
 # <a name="install-net-core-on-macos"></a>macOS에 .NET Core 설치
 
@@ -22,7 +23,8 @@ ms.locfileid: "85804454"
 
 최신 버전의 .NET Core는 3.1입니다.
 
-[.NET Core를 다운로드합니다.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>지원되는 릴리스
 
@@ -58,13 +60,15 @@ ASP.NET Core 앱을 실행합니다. .NET Core 런타임을 포함합니다.
 ‘.NET Core 런타임’\
 이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET Core 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’을 설치하는 것이 좋습니다.
 
-[.NET Core 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK 정보
 
 SDK는 .NET Core 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니다. SDK를 설치하면 ASP.NET Core 및 .NET Core의 두 가지 [런타임](#runtime-information)이 모두 포함됩니다.
 
-[.NET Core SDK 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>종속성
 

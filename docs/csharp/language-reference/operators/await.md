@@ -1,18 +1,18 @@
 ---
 title: await 연산자 - C# 참조
-ms.date: 11/08/2019
+ms.date: 07/13/2020
 f1_keywords:
 - await_CSharpKeyword
 helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141035"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308847"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
@@ -31,11 +31,17 @@ ms.locfileid: "82141035"
 
 `await` 연산자의 피연산자는 일반적으로 .NET 형식인 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 또는 <xref:System.Threading.Tasks.ValueTask%601> 중 하나에 해당합니다. 그러나 대기 가능한 모든 식은 `await` 연산자의 피연산자일 수 있습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대기 가능 식](~/_csharplang/spec/expressions.md#awaitable-expressions) 섹션을 참조하세요.
 
-C# 8.0부터, `await foreach` 문을 사용하여 비동기 데이터 스트림을 사용할 수 있습니다. 자세한 내용은 [`foreach` 문](../keywords/foreach-in.md) 문서 및 [C# 8.0의 새로운 기능](../../whats-new/csharp-8.md) 문서의 [비동기 스트림](../../whats-new/csharp-8.md#asynchronous-streams) 섹션을 참조하세요.
-
 `t` 식의 형식이 <xref:System.Threading.Tasks.Task%601> 또는 <xref:System.Threading.Tasks.ValueTask%601>이면 `await t` 식의 형식은 `TResult`입니다. `t` 형식이 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.ValueTask>이면 `await t` 형식은 `void`입니다. 두 경우 모두 `t`가 예외를 throw하면 `await t`는 예외를 다시 throw합니다. 예외 처리에 대한 자세한 내용은 [try-catch 문](../keywords/try-catch.md) 문서에서 [비동기 메서드의 예외](../keywords/try-catch.md#exceptions-in-async-methods) 섹션을 참조하세요.
 
 `async` 및 `await` 키워드는 C# 5 이상 버전에서 사용할 수 있습니다.
+
+## <a name="asynchronous-streams-and-disposables"></a>비동기 스트림 및 삭제 가능한 항목
+
+C# 8.0부터 비동기 스트림 및 삭제 가능한 항목을 사용할 수 있습니다.
+
+`await foreach` 문을 사용하여 비동기 데이터 스트림을 사용합니다. 자세한 내용은 [`foreach` 문](../keywords/foreach-in.md) 문서 및 [C# 8.0의 새로운 기능](../../whats-new/csharp-8.md) 문서의 [비동기 스트림](../../whats-new/csharp-8.md#asynchronous-streams) 섹션을 참조하세요.
+
+`await using` 문을 사용하여 삭제 가능한 개체, 즉 <xref:System.IAsyncDisposable> 인터페이스를 구현하는 형식의 개체를 비동기적으로 사용합니다. 자세한 내용은 [DisposeAsync 메서드 구현](../../../standard/garbage-collection/implementing-disposeasync.md) 문서의 [삭제 가능한 비동기 항목 사용](../../../standard/garbage-collection/implementing-disposeasync.md#using-async-disposable) 섹션을 참조하세요.
 
 ## <a name="await-operator-in-the-main-method"></a>Main 메서드의 await 연산자
 

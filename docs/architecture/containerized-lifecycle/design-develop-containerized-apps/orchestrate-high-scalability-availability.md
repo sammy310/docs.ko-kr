@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: 실제 프로덕션 애플리케이션은 모든 컨테이너의 상태, 워크로드 및 수명 주기를 처리하는 오케스트레이터를 통해 배포하고 관리해야 합니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989001"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374483"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -74,7 +74,7 @@ AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하�
 
 기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 
-`kubectl` 및 원본 `.yaml` 파일을 기반으로 Kubernetes에 배포하는 방법에 대한 자세한 구현 정보는 [AKS(Azure Kubernetes Service)에서 eShopOnContainers 설정](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))의 게시물을 참조하세요.
+`kubectl` 및 원본 `.yaml` 파일을 기준으로 Kubernetes에 배포하는 방법에 대한 자세한 구현 정보는 [AKS(Azure Kubernetes Service)에 배포](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))를 참조하세요.
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Helm 차트를 사용하여 Kubernetes 클러스터에 배포
 
@@ -86,7 +86,7 @@ Helm 차트를 사용하면 가장 복잡한 Kubernetes 애플리케이션도 �
 
 Microsoft, Google, Bitnami 및 Helm 기여자 커뮤니티와 협업하여 [CNCF(Cloud Native Computing Foundation)](https://www.cncf.io/)에서 Helm을 유지 관리합니다.
 
-Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 사용하여 AKS에 eShopOnContainers 배포](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts)의 게시물을 참조하세요.
+Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm을 사용하여 eShopOnContainers 설치](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#install-eshoponcontainers-using-helm) 섹션을 참조하세요.
 
 ## <a name="use-azure-dev-spaces-for-you-kubernetes-application-lifecycle"></a>Kubernetes 애플케이션 수명 주기에 Azure Dev Spaces 사용
 
@@ -106,9 +106,9 @@ Azure Dev Spaces는 새 버전의 테스트를 쉽게 하기 위해 개발 컨�
 
 Azure Dev Spaces는 공간이라는 개념을 제공합니다. 이 공간을 사용하면 팀 구성원을 방해할 염려 없이 격리된 상태에서 작업할 수 있습니다. 이 기능은 URL 접두사를 기반으로 합니다. 컨테이너 요청의 URL에 개발 공간 접두사를 사용하면 Azure Dev Spaces는 해당 공간(있는 경우)에 대해 배포한 특별 버전의 컨테이너를 실행합니다. 그렇지 않으면 글로벌/통합 버전을 실행합니다.
 
-구체적인 예제를 살펴보려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)를 참조하세요.
+구체적인 예제는 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)를 참조하세요.
 
-자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)의 문서를 참조하세요.
+자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)을 참조하세요.
 
 ## <a name="additional-resources"></a>추가 자료
 

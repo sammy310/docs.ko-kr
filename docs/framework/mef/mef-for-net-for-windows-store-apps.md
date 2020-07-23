@@ -1,13 +1,14 @@
 ---
 title: Windows 스토어 앱용 .NET을 위한 MEF
+description: 확장 가능한 Windows 8.x 스토어 앱을 개발하기 위한 형식을 포함하는 MEF(Managed Extensibility Framework) 네임스페이스에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 3a4c2a2f7f6096794f9ea723eec56aa74f5c44c5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 764c42265ed7523d3581484cc9564b17e9a9b3bd
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802185"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281240"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows 스토어 앱용 .NET을 위한 MEF
 <xref:System.Composition?displayProperty=nameWithType> 및 자식 네임스페이스에는 MEF(Managed Extensibility Framework)를 사용하여 확장 가능한 Windows 8.x 스토어 앱을 개발하기 위한 형식이 포함되어 있습니다. 이러한 네임스페이스는 Windows 8 운영 체제의 Windows 8.x 스토어 앱용 .NET 하위 집합의 일부입니다.  

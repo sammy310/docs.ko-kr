@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325018"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416050"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -75,7 +75,7 @@ Hello World!
 - [Visual Studio Code를 사용하여 macOS에서 .NET Core 시작](./tutorials/using-on-macos.md)
 - [명령줄을 사용하여 .NET Core 시작](./tutorials/cli-create-console-app.md)
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](./tutorials/using-on-mac-vs.md)
-- [Mac용 Visual Studio를 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](./tutorials/using-on-mac-vs-full-solution.md)
+- [Mac용 Visual Studio를 사용하여 macOS에서 .NET Standard 라이브러리 빌드](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|

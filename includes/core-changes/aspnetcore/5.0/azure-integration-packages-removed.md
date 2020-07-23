@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8506893f5b3eefa6f46dc9f773e43b125ee5210
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 19ccdb634d4e53ea66c032502f2adb70423ab121
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291665"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416266"
 ---
 ### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
 
@@ -35,15 +35,15 @@ ASP.NET Core와 Azure SDK 간의 통합을 제공하는 다음 `Microsoft.*` 패
 * 오래된 버전의 Azure SDK를 사용합니다. 새 버전의 Azure SDK에 호환성이 손상되는 변경이 포함되어 간단한 업데이트를 수행할 수 없습니다.
 * .NET Core 릴리스 일정에 연동됩니다. 패키지의 소유권을 Azure SDK 팀으로 이전하면 Azure SDK가 업데이트될 때 패키지 업데이트를 사용할 수 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 ASP.NET Core 2.1 이상 프로젝트에서 이전 `Microsoft.*` 패키지를 새 `Azure.*` 패키지로 바꿉니다.
 
-| 이전 | 새로 만들기 |
+| 이전 | 단추를 사용하여 새 |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.Extensions.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.Extensions.AspNetCore.DataProtection.Blobs](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.AspNetCore.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets) |
 
 새 패키지는 호환성이 손상되는 변경을 포함하는 새 버전의 Azure SDK를 사용합니다. 일반적인 사용 패턴은 변경되지 않습니다. 일부 오버로드 및 옵션은 기본 Azure SDK API의 변경 내용에 맞게 달라질 수 있습니다.
 
@@ -54,7 +54,7 @@ ASP.NET Core 2.1 이상 프로젝트에서 이전 `Microsoft.*` 패키지를 새
 
 프로젝트를 .NET 5로 업그레이드하는 경우 `Azure.*` 패키지로 전환하여 지원을 유지하세요.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>범주
 
 ASP.NET Core
 

@@ -2,16 +2,16 @@
 title: Mac용 Visual Studio를 사용하여 .NET Standard 클래스 라이브러리 만들기
 description: Mac용 Visual Studio를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713420"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416003"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
 
-이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 클래스 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
+이 자습서에서는 단일 문자열 처리 메서드를 포함하는 클래스 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
 
 *클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.1을 대상으로 하는 클래스 라이브러리는 .NET Standard 버전 2.1이 지원되는 모든 .NET 구현을 대상으로 하는 애플리케이션에서 사용할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
 
