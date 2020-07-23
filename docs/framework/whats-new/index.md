@@ -1,5 +1,6 @@
 ---
 title: .NET Framework의 새로운 기능
+description: .NET Framework의 다양한 버전에서 제공되는 새로운 기능을 참조하세요. 각 버전의 주요 새로운 기능 및 향상된 기능에 대한 요약을 확인하세요.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244441"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925594"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 

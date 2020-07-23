@@ -1,12 +1,13 @@
 ---
 title: 특성(C#)
+description: 특성을 사용하여 C#에서 메타데이터 또는 선언적 정보를 코드와 연결하는 방법에 대해 알아봅니다. 특성은 리플렉션을 사용하여 런타임에 쿼리할 수 있습니다.
 ms.date: 04/26/2018
-ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241580"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924987"
 ---
 # <a name="attributes-c"></a>특성(C#)
 
