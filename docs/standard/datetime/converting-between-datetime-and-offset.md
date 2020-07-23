@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768679"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924905"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime과 DateTimeOffset 간 변환
 
@@ -105,7 +105,7 @@ UTC 및 지역 값의 경우 <xref:System.DateTime> <xref:System.DateTimeOffset.
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-속성을 사용 하 여 값을 검색 하는 경우 <xref:System.DateTime> <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성의 `get` 접근자는 먼저 <xref:System.DateTimeOffset> 값을 UTC로 변환한 다음 메서드를 호출 하 여 현지 시간으로 변환 합니다 <xref:System.DateTimeOffset.ToLocalTime%2A> . 즉, 속성에서 값을 검색 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 하 여 형식 변환을 수행할 때 표준 시간대 변환을 수행할 수 있습니다. 또한 변환을 수행할 때 현지 표준 시간대의 조정 규칙도 적용됩니다. 다음 코드에서는 속성을 사용 하 여 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 형식과 표준 시간대 변환을 모두 수행 하는 방법을 보여 줍니다.
+속성을 사용 하 여 값을 검색 하는 경우 <xref:System.DateTime> <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성의 `get` 접근자는 먼저 <xref:System.DateTimeOffset> 값을 UTC로 변환한 다음 메서드를 호출 하 여 현지 시간으로 변환 합니다 <xref:System.DateTimeOffset.ToLocalTime%2A> . 즉, 속성에서 값을 검색 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 하 여 형식 변환을 수행할 때 표준 시간대 변환을 수행할 수 있습니다. 또한 변환을 수행할 때 현지 표준 시간대의 조정 규칙도 적용됩니다. 다음 코드에서는 속성을 사용 하 여 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 형식과 표준 시간대 변환을 모두 수행 하는 방법을 보여 줍니다. 샘플 출력은 태평양 표준 시간대 (미국과 캐나다)로 설정 된 컴퓨터에 대 한 것입니다. 11 월 날짜는 태평양 표준시 (UTC-8)이 고 6 월 날짜는 일광 절약 시간 (UTC-7)입니다.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]
@@ -128,6 +128,6 @@ UTC 및 지역 값의 경우 <xref:System.DateTime> <xref:System.DateTimeOffset.
 
 - 현지 표준 시간대 오프셋과 동일한 오프셋의 날짜와 시간이 현지 표준 시간대를 나타낸다고 가정합니다. 그러나 날짜 및 시간 값이 원래 표준 시간대와 관련이 없기 때문에 이와 다른 경우가 있을 수 있습니다. 날짜와 시간은 동일한 오프셋을 사용하는 다른 표준 시간대에서 가져올 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)

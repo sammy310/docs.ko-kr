@@ -1,5 +1,6 @@
 ---
 title: UI 자동화에서 캐싱 사용
+description: UI 자동화에서 캐싱을 사용 하는 방법을 참조 하세요. 캐시 요청을 활성화 하 고, AutomationElement 속성을 캐시 하 고, 캐시 된 패턴을 가져오는 단계를 검토 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 679192b611a423e095ee9acc956d247364940edf
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8dff9db77e39dc66a16b6a7b395c76a3c768d48e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800801"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924489"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI 자동화에서 캐싱 사용
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "74800801"
   
 ### <a name="activate-a-cache-request"></a>캐시 요청 활성화  
   
-1. <xref:System.Windows.Automation.CacheRequest>를 만듭니다.  
+1. <xref:System.Windows.Automation.CacheRequest>을 만듭니다.  
   
 2. <xref:System.Windows.Automation.CacheRequest.Add%2A>를 사용하여 속성 및 패턴을 캐시에 지정합니다.  
   
@@ -33,9 +34,9 @@ ms.locfileid: "74800801"
   
 5. 개체에 대한 전체 참조를 검색하지 않음으로써 효율성을 높이려는 경우 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 속성을 <xref:System.Windows.Automation.AutomationElementMode.None> 으로 설정합니다. (이렇게 하면 해당 개체에서 현재 값을 검색할 수 없습니다.)  
   
-6. `using` 블록 (Microsoft Visual Basic .NET의`Using`) 내에서 <xref:System.Windows.Automation.CacheRequest.Activate%2A>를 사용 하 여 요청을 활성화 합니다.  
+6. 블록 내에서를 사용 하 여 요청을 활성화 <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` `Using` 합니다 (Microsoft Visual Basic .net).  
   
- <xref:System.Windows.Automation.AutomationElement> 개체를 가져오거나 이벤트를 구독한 후, <xref:System.Windows.Automation.CacheRequest.Pop%2A> ( <xref:System.Windows.Automation.CacheRequest.Push%2A> 가 사용된 경우)를 사용하거나 <xref:System.Windows.Automation.CacheRequest.Activate%2A>에서 생성된 개체를 삭제하여 요청을 비활성화합니다. `using` 블록 (Microsoft Visual Basic .NET의`Using`)에서 <xref:System.Windows.Automation.CacheRequest.Activate%2A>를 사용 합니다.  
+ <xref:System.Windows.Automation.AutomationElement> 개체를 가져오거나 이벤트를 구독한 후, <xref:System.Windows.Automation.CacheRequest.Pop%2A> ( <xref:System.Windows.Automation.CacheRequest.Push%2A> 가 사용된 경우)를 사용하거나 <xref:System.Windows.Automation.CacheRequest.Activate%2A>에서 생성된 개체를 삭제하여 요청을 비활성화합니다. <xref:System.Windows.Automation.CacheRequest.Activate%2A>블록에서 사용 `using` `Using` 합니다 (Microsoft Visual Basic .net의 경우).  
   
 ### <a name="cache-automationelement-properties"></a>AutomationElement 속성 캐시  
   
@@ -63,6 +64,6 @@ ms.locfileid: "74800801"
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
+- [UI 자동화 클라이언트에서 캐싱](caching-in-ui-automation-clients.md)

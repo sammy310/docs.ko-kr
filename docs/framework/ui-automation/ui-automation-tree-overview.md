@@ -1,16 +1,17 @@
 ---
 title: UI 자동화 트리 개요
+description: 'UI 자동화 트리 개요를 참조 하세요. UI 자동화 트리 (예: raw 뷰, 컨트롤 뷰 및 콘텐츠 뷰)의 다양 한 보기에 대해 알아봅니다.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179449"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924554"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 자동화 트리 개요
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179449"
   
  보조 기술 제품 및 테스트 스크립트가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 탐색하여 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 및 요소에 대한 정보를 수집합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에는 현재 데스크톱을<xref:System.Windows.Automation.AutomationElement.RootElement%2A>나타내는 루트 요소()가 있으며 자식 요소는 응용 프로그램 창을 나타냅니다. 이러한 자식 요소에는 메뉴, 단추, 도구 모음, 목록 상자 등과 같은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 조각을 나타내는 요소가 각각 포함될 수 있습니다. 따라서 이러한 요소에 목록 항목 등과 같은 요소가 포함될 수 있습니다.  
+ 트리 내에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 는 <xref:System.Windows.Automation.AutomationElement.RootElement%2A> 현재 데스크톱을 나타내고 해당 자식 요소가 응용 프로그램 창을 나타내는 루트 요소 ()가 있습니다. 이러한 자식 요소에는 메뉴, 단추, 도구 모음, 목록 상자 등과 같은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 조각을 나타내는 요소가 각각 포함될 수 있습니다. 따라서 이러한 요소에 목록 항목 등과 같은 요소가 포함될 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 고정된 구조가 아니며 수많은 요소가 포함될 수 있기 때문에 트리 전체가 표시되는 경우는 드뭅니다. 트리의 일부는 필요 시에 빌드되며 요소가 추가, 이동 또는 제거될 때 변경될 수 있습니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179449"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>Raw 뷰  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 Raw 뷰는 데스크톱이 루트인 <xref:System.Windows.Automation.AutomationElement> 개체의 전체 트리입니다. Raw 뷰는 애플리케이션의 기본 프로그래밍 방식의 구조를 엄격히 따르기 때문에 가장 자세한 뷰를 사용할 수 있습니다. 트리의 다른 뷰가 빌드되는 기준이기도 합니다. 이 보기는 기본 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 따라 다르므로 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 단추의 원시 뷰는 Win32 단추와 다른 원시 보기를 갖습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 Raw 뷰는 데스크톱이 루트인 <xref:System.Windows.Automation.AutomationElement> 개체의 전체 트리입니다. Raw 뷰는 애플리케이션의 기본 프로그래밍 방식의 구조를 엄격히 따르기 때문에 가장 자세한 뷰를 사용할 수 있습니다. 트리의 다른 뷰가 빌드되는 기준이기도 합니다. 이 뷰는 기본 프레임 워크에 따라 달라 지므로 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 단추의 raw 뷰에는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Win32 단추와 다른 원시 뷰가 있습니다.  
   
  Raw 뷰는 속성을 지정하지 않고 요소를 검색하거나 <xref:System.Windows.Automation.TreeWalker.RawViewWalker>를 통해 트리를 탐색하여 표시할 수 있습니다.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "79179449"
   
  콘텐츠 뷰는 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 속성이 `true`로 설정된 요소를 검색하거나 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>를 통해 트리를 탐색하여 표시할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Windows.Automation.AutomationElement>
 - [UI 자동화 개요](ui-automation-overview.md)
