@@ -2,20 +2,20 @@
 title: 애플리케이션 게시
 description: .NET Core 애플리케이션을 게시하는 방법을 알아봅니다. .NET Core에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 런타임 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 ms.date: 04/01/2020
-ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
-ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
+ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665535"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164944"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 애플리케이션 게시 개요
 
 .NET Core를 사용하여 만든 애플리케이션은 두 가지 모드로 게시할 수 있으며, 모드에 따라 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 
-앱을 ‘자체 포함’으로 게시하면 .NET Core 런타임 및 라이브러리와 해당 애플리케이션 및 관련 종속성을 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임이 설치되지 않은 컴퓨터에서 애플리케이션을 실행할 수 있습니다.
+앱을 ‘자체 포함’으로 게시하면 .NET Core 런타임 및 라이브러리와 해당 애플리케이션 및 관련 종속성을 포함하는 애플리케이션이 생성됩니다. 애플리케이션 사용자는 .NET Core 런타임이 설치되지 않은 컴퓨터에서 애플리케이션을 실행할 수 있습니다.
 
-앱을 ‘런타임 종속’(이전의 ‘프레임워크 종속’)으로 게시하면 애플리케이션 자체와 관련 종속성만 포함하는 애플리케이션이 생성됩니다.   애플리케이션 사용자는 .NET Core 런타임을 별도로 설치해야 합니다.
+앱을 ‘런타임 종속’(이전의 ‘프레임워크 종속’)으로 게시하면 애플리케이션 자체와 관련 종속성만 포함하는 애플리케이션이 생성됩니다. 애플리케이션 사용자는 .NET Core 런타임을 별도로 설치해야 합니다.
 
 두 게시 모드 모두 기본적으로 플랫폼별 실행 파일을 생성합니다. 런타임 종속 애플리케이션은 실행 파일 없이 만들 수 있으며 이 경우 플랫폼 간 애플리케이션입니다.
 
@@ -152,6 +152,5 @@ dotnet publish -r win-x64
 
 - [.NET Core CLI를 사용하여 .NET Core 앱 배포](deploy-with-cli.md)
 - [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)
-- [패키지, 메타패키지 및 프레임워크](../packages.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 - [사용할 .NET Core 버전 선택](../versions/selection.md)
