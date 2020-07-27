@@ -4,219 +4,219 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 66a5493f0084f5fa86c3eb928d2e4a4b4999e764
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618339"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924593"
 ---
-# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="5a4fc-103">자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="5a4fc-103">Tutorial: Deploy a .NET for Apache Spark application to Databricks</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="48a87-103">자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="48a87-103">Tutorial: Deploy a .NET for Apache Spark application to Databricks</span></span>
 
-<span data-ttu-id="5a4fc-104">이 자습서에서는 원 클릭 설정, 간소화된 워크플로 및 협업을 가능하게 하는 대화형 작업 영역이 포함된 Apache Spark 기반 분석 플랫폼인 Azure Databricks를 통해 클라우드에 앱을 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-104">This tutorial teaches you how to deploy your app to the cloud through Azure Databricks, an Apache Spark-based analytics platform with one-click setup, streamlined workflows, and interactive workspace that enables collaboration.</span></span>
+<span data-ttu-id="48a87-104">이 자습서에서는 원 클릭 설정, 간소화된 워크플로 및 협업을 가능하게 하는 대화형 작업 영역이 포함된 Apache Spark 기반 분석 플랫폼인 Azure Databricks를 통해 클라우드에 앱을 배포하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-104">This tutorial teaches you how to deploy your app to the cloud through Azure Databricks, an Apache Spark-based analytics platform with one-click setup, streamlined workflows, and interactive workspace that enables collaboration.</span></span>
 
-<span data-ttu-id="5a4fc-105">이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="48a87-105">이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="5a4fc-106">Azure Databricks 작업 영역 만들기</span><span class="sxs-lookup"><span data-stu-id="5a4fc-106">Create an Azure Databricks workspace.</span></span>
-> - <span data-ttu-id="5a4fc-107">.NET for Apache Spark 앱 게시</span><span class="sxs-lookup"><span data-stu-id="5a4fc-107">Publish your .NET for Apache Spark app.</span></span>
-> - <span data-ttu-id="5a4fc-108">Spark 작업 및 Spark 클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="5a4fc-108">Create a Spark job and Spark cluster.</span></span>
-> - <span data-ttu-id="5a4fc-109">Spark 클러스터에서 앱 실행</span><span class="sxs-lookup"><span data-stu-id="5a4fc-109">Run your app on the Spark cluster.</span></span>
+> - <span data-ttu-id="48a87-106">Azure Databricks 작업 영역 만들기</span><span class="sxs-lookup"><span data-stu-id="48a87-106">Create an Azure Databricks workspace.</span></span>
+> - <span data-ttu-id="48a87-107">.NET for Apache Spark 앱 게시</span><span class="sxs-lookup"><span data-stu-id="48a87-107">Publish your .NET for Apache Spark app.</span></span>
+> - <span data-ttu-id="48a87-108">Spark 작업 및 Spark 클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="48a87-108">Create a Spark job and Spark cluster.</span></span>
+> - <span data-ttu-id="48a87-109">Spark 클러스터에서 앱 실행</span><span class="sxs-lookup"><span data-stu-id="48a87-109">Run your app on the Spark cluster.</span></span>
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a><span data-ttu-id="5a4fc-110">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="5a4fc-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="48a87-110">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="48a87-110">Prerequisites</span></span>
 
-<span data-ttu-id="5a4fc-111">시작하기 전에 다음 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-111">Before you start, do the following tasks:</span></span>
+<span data-ttu-id="48a87-111">시작하기 전에 다음 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-111">Before you start, do the following tasks:</span></span>
 
-* <span data-ttu-id="5a4fc-112">Azure 계정이 없으면 [체험 계정](https://azure.microsoft.com/free/dotnet/)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-112">If you don't have an Azure account, create a [free account](https://azure.microsoft.com/free/dotnet/).</span></span>
-* <span data-ttu-id="5a4fc-113">[Azure Portal](https://portal.azure.com/)에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-113">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
-* <span data-ttu-id="5a4fc-114">[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-114">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
+* <span data-ttu-id="48a87-112">Azure 계정이 없으면 [체험 계정](https://azure.microsoft.com/free/dotnet/)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-112">If you don't have an Azure account, create a [free account](https://azure.microsoft.com/free/dotnet/).</span></span>
+* <span data-ttu-id="48a87-113">[Azure Portal](https://portal.azure.com/)에 로그인합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-113">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="48a87-114">[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서를 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-114">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="create-an-azure-databricks-workspace"></a><span data-ttu-id="5a4fc-115">Azure Databricks 작업 영역 만들기</span><span class="sxs-lookup"><span data-stu-id="5a4fc-115">Create an Azure Databricks workspace</span></span>
+## <a name="create-an-azure-databricks-workspace"></a><span data-ttu-id="48a87-115">Azure Databricks 작업 영역 만들기</span><span class="sxs-lookup"><span data-stu-id="48a87-115">Create an Azure Databricks workspace</span></span>
 
 > [!Note]
-> <span data-ttu-id="5a4fc-116">이 자습서는 **Azure 평가판 구독**을 사용하여 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-116">This tutorial cannot be carried out using **Azure Free Trial Subscription**.</span></span>
-> <span data-ttu-id="5a4fc-117">무료 계정이 있는 경우 프로필로 이동하고 구독을 **종량제**로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-117">If you have a free account, go to your profile and change your subscription to **pay-as-you-go**.</span></span> <span data-ttu-id="5a4fc-118">자세한 내용은 [Azure 체험 계정](https://azure.microsoft.com/free/dotnet/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-118">For more information, see [Azure free account](https://azure.microsoft.com/free/dotnet/).</span></span> <span data-ttu-id="5a4fc-119">그런 다음 [지출 한도를 제거](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)하고 해당 지역의 vCPU에 대한 [할당량 증가를 요청](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-119">Then, [remove the spending limit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), and [request a quota increase](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) for vCPUs in your region.</span></span> <span data-ttu-id="5a4fc-120">Azure Databricks 작업 영역을 만드는 경우 **평가판(프리미엄-14일 무료 DBU)** 가격 책정 계층을 선택하여 14일간 무료 프리미엄 Azure Databricks DBU를 위한 작업 영역 액세스 권한을 부여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-120">When you create your Azure Databricks workspace, you can select the **Trial (Premium - 14-Days Free DBUs)** pricing tier to give the workspace access to free Premium Azure Databricks DBUs for 14 days.</span></span>
+> <span data-ttu-id="48a87-116">이 자습서는 **Azure 평가판 구독**을 사용하여 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-116">This tutorial cannot be carried out using **Azure Free Trial Subscription**.</span></span>
+> <span data-ttu-id="48a87-117">무료 계정이 있는 경우 프로필로 이동하고 구독을 **종량제**로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-117">If you have a free account, go to your profile and change your subscription to **pay-as-you-go**.</span></span> <span data-ttu-id="48a87-118">자세한 내용은 [Azure 체험 계정](https://azure.microsoft.com/free/dotnet/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="48a87-118">For more information, see [Azure free account](https://azure.microsoft.com/free/dotnet/).</span></span> <span data-ttu-id="48a87-119">그런 다음 [지출 한도를 제거](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)하고 해당 지역의 vCPU에 대한 [할당량 증가를 요청](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-119">Then, [remove the spending limit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), and [request a quota increase](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) for vCPUs in your region.</span></span> <span data-ttu-id="48a87-120">Azure Databricks 작업 영역을 만드는 경우 **평가판(프리미엄-14일 무료 DBU)** 가격 책정 계층을 선택하여 14일간 무료 프리미엄 Azure Databricks DBU를 위한 작업 영역 액세스 권한을 부여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-120">When you create your Azure Databricks workspace, you can select the **Trial (Premium - 14-Days Free DBUs)** pricing tier to give the workspace access to free Premium Azure Databricks DBUs for 14 days.</span></span>
 
-<span data-ttu-id="5a4fc-121">이 섹션에서는 Azure Portal을 사용하여 Azure Databricks 작업 영역을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-121">In this section, you create an Azure Databricks workspace using the Azure portal.</span></span>
+<span data-ttu-id="48a87-121">이 섹션에서는 Azure Portal을 사용하여 Azure Databricks 작업 영역을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-121">In this section, you create an Azure Databricks workspace using the Azure portal.</span></span>
 
-1. <span data-ttu-id="5a4fc-122">Azure Portal에서 **리소스 만들기** > **분석** > **Azure Databricks**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-122">In the Azure portal, select **Create a resource** > **Analytics** > **Azure Databricks**.</span></span>
+1. <span data-ttu-id="48a87-122">Azure Portal에서 **리소스 만들기** > **분석** > **Azure Databricks**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-122">In the Azure portal, select **Create a resource** > **Analytics** > **Azure Databricks**.</span></span>
 
    ![Azure Portal에서 Azure Databricks 리소스 만들기](./media/databricks-deployment/create-databricks-resource.png)
 
-2. <span data-ttu-id="5a4fc-124">**Azure Databricks 서비스** 아래에서 Databricks 작업 영역을 만들기 위한 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-124">Under **Azure Databricks Service**, provide the values to create a Databricks workspace.</span></span>
+2. <span data-ttu-id="48a87-124">**Azure Databricks 서비스** 아래에서 Databricks 작업 영역을 만들기 위한 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-124">Under **Azure Databricks Service**, provide the values to create a Databricks workspace.</span></span>
 
-    |<span data-ttu-id="5a4fc-125">속성</span><span class="sxs-lookup"><span data-stu-id="5a4fc-125">Property</span></span>  |<span data-ttu-id="5a4fc-126">설명</span><span class="sxs-lookup"><span data-stu-id="5a4fc-126">Description</span></span>  |
+    |<span data-ttu-id="48a87-125">속성</span><span class="sxs-lookup"><span data-stu-id="48a87-125">Property</span></span>  |<span data-ttu-id="48a87-126">설명</span><span class="sxs-lookup"><span data-stu-id="48a87-126">Description</span></span>  |
     |---------|---------|
-    |<span data-ttu-id="5a4fc-127">**작업 영역 이름**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-127">**Workspace name**</span></span>     | <span data-ttu-id="5a4fc-128">Databricks 작업 영역에 대한 이름을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-128">Provide a name for your Databricks workspace.</span></span>        |
-    |<span data-ttu-id="5a4fc-129">**구독**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-129">**Subscription**</span></span>     | <span data-ttu-id="5a4fc-130">드롭다운에서 Azure 구독을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-130">From the drop-down, select your Azure subscription.</span></span>        |
-    |<span data-ttu-id="5a4fc-131">**리소스 그룹**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-131">**Resource group**</span></span>     | <span data-ttu-id="5a4fc-132">새 리소스 그룹을 만들지, 아니면 기존 그룹을 사용할지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-132">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="5a4fc-133">리소스 그룹은 Azure 솔루션에 관련된 리소스를 보유하는 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-133">A resource group is a container that holds related resources for an Azure solution.</span></span> <span data-ttu-id="5a4fc-134">자세한 내용은 [Azure Resource Manager 개요](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-134">For more information, see [Azure Resource Group overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).</span></span> |
-    |<span data-ttu-id="5a4fc-135">**위치**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-135">**Location**</span></span>     | <span data-ttu-id="5a4fc-136">기본 지역을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-136">Select your preferred region.</span></span> <span data-ttu-id="5a4fc-137">사용 가능한 지역에 대한 자세한 내용은 [지역별 사용 가능한 Azure 서비스](https://azure.microsoft.com/regions/services/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-137">For information about available regions, see [Azure services available by region](https://azure.microsoft.com/regions/services/).</span></span>        |
-    |<span data-ttu-id="5a4fc-138">**가격 책정 계층**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-138">**Pricing Tier**</span></span>     |  <span data-ttu-id="5a4fc-139">**표준**, **프리미엄** 또는 **평가판** 중에서 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-139">Choose between **Standard**, **Premium**, or **Trial**.</span></span> <span data-ttu-id="5a4fc-140">이러한 계층에 대한 자세한 내용은 [Databricks 가격 페이지](https://azure.microsoft.com/pricing/details/databricks/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-140">For more information on these tiers, see [Databricks pricing page](https://azure.microsoft.com/pricing/details/databricks/).</span></span>       |
-    |<span data-ttu-id="5a4fc-141">**Virtual Network**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-141">**Virtual Network**</span></span>     |   <span data-ttu-id="5a4fc-142">아니요</span><span class="sxs-lookup"><span data-stu-id="5a4fc-142">No</span></span>       |
+    |<span data-ttu-id="48a87-127">**작업 영역 이름**</span><span class="sxs-lookup"><span data-stu-id="48a87-127">**Workspace name**</span></span>     | <span data-ttu-id="48a87-128">Databricks 작업 영역에 대한 이름을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-128">Provide a name for your Databricks workspace.</span></span>        |
+    |<span data-ttu-id="48a87-129">**구독**</span><span class="sxs-lookup"><span data-stu-id="48a87-129">**Subscription**</span></span>     | <span data-ttu-id="48a87-130">드롭다운에서 Azure 구독을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-130">From the drop-down, select your Azure subscription.</span></span>        |
+    |<span data-ttu-id="48a87-131">**리소스 그룹**</span><span class="sxs-lookup"><span data-stu-id="48a87-131">**Resource group**</span></span>     | <span data-ttu-id="48a87-132">새 리소스 그룹을 만들지, 아니면 기존 그룹을 사용할지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-132">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="48a87-133">리소스 그룹은 Azure 솔루션에 관련된 리소스를 보유하는 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-133">A resource group is a container that holds related resources for an Azure solution.</span></span> <span data-ttu-id="48a87-134">자세한 내용은 [Azure Resource Manager 개요](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="48a87-134">For more information, see [Azure Resource Group overview](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview).</span></span> |
+    |<span data-ttu-id="48a87-135">**위치**</span><span class="sxs-lookup"><span data-stu-id="48a87-135">**Location**</span></span>     | <span data-ttu-id="48a87-136">기본 지역을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-136">Select your preferred region.</span></span> <span data-ttu-id="48a87-137">사용 가능한 지역에 대한 자세한 내용은 [지역별 사용 가능한 Azure 서비스](https://azure.microsoft.com/regions/services/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="48a87-137">For information about available regions, see [Azure services available by region](https://azure.microsoft.com/regions/services/).</span></span>        |
+    |<span data-ttu-id="48a87-138">**가격 책정 계층**</span><span class="sxs-lookup"><span data-stu-id="48a87-138">**Pricing Tier**</span></span>     |  <span data-ttu-id="48a87-139">**표준**, **프리미엄** 또는 **평가판** 중에서 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-139">Choose between **Standard**, **Premium**, or **Trial**.</span></span> <span data-ttu-id="48a87-140">이러한 계층에 대한 자세한 내용은 [Databricks 가격 페이지](https://azure.microsoft.com/pricing/details/databricks/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="48a87-140">For more information on these tiers, see [Databricks pricing page](https://azure.microsoft.com/pricing/details/databricks/).</span></span>       |
+    |<span data-ttu-id="48a87-141">**Virtual Network**</span><span class="sxs-lookup"><span data-stu-id="48a87-141">**Virtual Network**</span></span>     |   <span data-ttu-id="48a87-142">아니요</span><span class="sxs-lookup"><span data-stu-id="48a87-142">No</span></span>       |
 
-3. <span data-ttu-id="5a4fc-143">**만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-143">Select **Create**.</span></span> <span data-ttu-id="5a4fc-144">작업 영역 생성에는 몇 분 정도가 소요됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-144">The workspace creation takes a few minutes.</span></span> <span data-ttu-id="5a4fc-145">작업 영역을 만드는 동안 **알림**에서 배포 상태를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-145">During workspace creation, you can view the deployment status in **Notifications**.</span></span>
+3. <span data-ttu-id="48a87-143">**만들기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-143">Select **Create**.</span></span> <span data-ttu-id="48a87-144">작업 영역 생성에는 몇 분 정도가 소요됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-144">The workspace creation takes a few minutes.</span></span> <span data-ttu-id="48a87-145">작업 영역을 만드는 동안 **알림**에서 배포 상태를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-145">During workspace creation, you can view the deployment status in **Notifications**.</span></span>
 
-## <a name="install-azure-databricks-tools"></a><span data-ttu-id="5a4fc-146">Azure Databricks 도구 설치</span><span class="sxs-lookup"><span data-stu-id="5a4fc-146">Install Azure Databricks tools</span></span>
+## <a name="install-azure-databricks-tools"></a><span data-ttu-id="48a87-146">Azure Databricks 도구 설치</span><span class="sxs-lookup"><span data-stu-id="48a87-146">Install Azure Databricks tools</span></span>
 
-<span data-ttu-id="5a4fc-147">**Databricks CLI**를 사용하여 Azure Databricks 클러스터에 연결하고 로컬 머신에서 파일을 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-147">You can use the **Databricks CLI** to connect to Azure Databricks clusters and upload files to them from your local machine.</span></span> <span data-ttu-id="5a4fc-148">Databricks 클러스터는 DBFS(Databricks 파일 시스템)를 통해 파일에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-148">Databricks clusters access files through DBFS (Databricks File System).</span></span>
+<span data-ttu-id="48a87-147">**Databricks CLI**를 사용하여 Azure Databricks 클러스터에 연결하고 로컬 머신에서 파일을 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-147">You can use the **Databricks CLI** to connect to Azure Databricks clusters and upload files to them from your local machine.</span></span> <span data-ttu-id="48a87-148">Databricks 클러스터는 DBFS(Databricks 파일 시스템)를 통해 파일에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-148">Databricks clusters access files through DBFS (Databricks File System).</span></span>
 
-1. <span data-ttu-id="5a4fc-149">Databricks CLI를 사용하려면 Python 3.6 이상이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-149">The Databricks CLI requires Python 3.6 or above.</span></span> <span data-ttu-id="5a4fc-150">Python이 이미 설치되어 있는 경우 이 단계를 건너뛰어도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-150">If you already have Python installed, you can skip this step.</span></span>
+1. <span data-ttu-id="48a87-149">Databricks CLI를 사용하려면 Python 3.6 이상이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-149">The Databricks CLI requires Python 3.6 or above.</span></span> <span data-ttu-id="48a87-150">Python이 이미 설치되어 있는 경우 이 단계를 건너뛰어도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-150">If you already have Python installed, you can skip this step.</span></span>
 
-   <span data-ttu-id="5a4fc-151">**Windows:**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-151">**For Windows:**</span></span>
+   <span data-ttu-id="48a87-151">**Windows:**</span><span class="sxs-lookup"><span data-stu-id="48a87-151">**For Windows:**</span></span>
 
-   <span data-ttu-id="5a4fc-152">[Windows용 Python을 다운로드](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-152">[Download Python for Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)</span></span>
+   <span data-ttu-id="48a87-152">[Windows용 Python을 다운로드](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-152">[Download Python for Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)</span></span>
 
-   <span data-ttu-id="5a4fc-153">**Linux:** 대부분의 Linux 배포에는 Python이 사전 설치되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-153">**For Linux:** Python comes preinstalled on most Linux distributions.</span></span> <span data-ttu-id="5a4fc-154">다음 명령을 실행하여 설치된 버전을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-154">Run the following command to see which version you have installed:</span></span>
+   <span data-ttu-id="48a87-153">**Linux:** 대부분의 Linux 배포에는 Python이 사전 설치되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-153">**For Linux:** Python comes preinstalled on most Linux distributions.</span></span> <span data-ttu-id="48a87-154">다음 명령을 실행하여 설치된 버전을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-154">Run the following command to see which version you have installed:</span></span>
 
    ```bash
    python3 --version
    ```
 
-2. <span data-ttu-id="5a4fc-155">pip를 사용하여 Databricks CLI를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-155">Use pip to install the Databricks CLI.</span></span> <span data-ttu-id="5a4fc-156">Python 3.4 이상에는 기본적으로 pip가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-156">Python 3.4 and later include pip by default.</span></span> <span data-ttu-id="5a4fc-157">Python 3의 pip3을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-157">Use pip3 for Python 3.</span></span> <span data-ttu-id="5a4fc-158">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-158">Run the following command:</span></span>
+2. <span data-ttu-id="48a87-155">pip를 사용하여 Databricks CLI를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-155">Use pip to install the Databricks CLI.</span></span> <span data-ttu-id="48a87-156">Python 3.4 이상에는 기본적으로 pip가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-156">Python 3.4 and later include pip by default.</span></span> <span data-ttu-id="48a87-157">Python 3의 pip3을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-157">Use pip3 for Python 3.</span></span> <span data-ttu-id="48a87-158">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-158">Run the following command:</span></span>
 
    ```bash
    pip3 install databricks-cli
    ```
 
-3. <span data-ttu-id="5a4fc-159">Databricks CLI를 설치한 후 새 명령 프롬프트를 열고 `databricks` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-159">Once you've installed the Databricks CLI, open a new command prompt and run the command `databricks`.</span></span> <span data-ttu-id="5a4fc-160">**'databricks'가 내부 또는 외부 명령으로 인식되지 않음 오류**가 표시되면 새 명령 프롬프트를 열었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-160">If you receive a **'databricks' is not recognized as an internal or external command error**, make sure you opened a new command prompt.</span></span>
+3. <span data-ttu-id="48a87-159">Databricks CLI를 설치한 후 새 명령 프롬프트를 열고 `databricks` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-159">Once you've installed the Databricks CLI, open a new command prompt and run the command `databricks`.</span></span> <span data-ttu-id="48a87-160">**'databricks'가 내부 또는 외부 명령으로 인식되지 않음 오류**가 표시되면 새 명령 프롬프트를 열었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-160">If you receive a **'databricks' is not recognized as an internal or external command error**, make sure you opened a new command prompt.</span></span>
 
-## <a name="set-up-azure-databricks"></a><span data-ttu-id="5a4fc-161">Azure Databricks 설정</span><span class="sxs-lookup"><span data-stu-id="5a4fc-161">Set up Azure Databricks</span></span>
+## <a name="set-up-azure-databricks"></a><span data-ttu-id="48a87-161">Azure Databricks 설정</span><span class="sxs-lookup"><span data-stu-id="48a87-161">Set up Azure Databricks</span></span>
 
-<span data-ttu-id="5a4fc-162">이제 Databricks CLI가 설치되었으므로 인증 정보를 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-162">Now that you have the Databricks CLI installed, you need to set up authentication details.</span></span>
+<span data-ttu-id="48a87-162">이제 Databricks CLI가 설치되었으므로 인증 정보를 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-162">Now that you have the Databricks CLI installed, you need to set up authentication details.</span></span>
 
-1. <span data-ttu-id="5a4fc-163">Databricks CLI 명령 `databricks configure --token`을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-163">Run the Databricks CLI command `databricks configure --token`.</span></span>
+1. <span data-ttu-id="48a87-163">Databricks CLI 명령 `databricks configure --token`을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-163">Run the Databricks CLI command `databricks configure --token`.</span></span>
 
-2. <span data-ttu-id="5a4fc-164">구성 명령을 실행하면 호스트를 입력하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-164">After running the configure command, you are prompted to enter a host.</span></span> <span data-ttu-id="5a4fc-165">호스트 URL은 `https://<Location>.azuredatabricks.net` 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-165">Your host URL uses the format: `https://<Location>.azuredatabricks.net`.</span></span> <span data-ttu-id="5a4fc-166">예를 들어 Azure Databricks 서비스를 만드는 동안 **eastus2**를 선택한 경우 호스트는 `https://eastus2.azuredatabricks.net`이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-166">For instance, if you selected **eastus2** during Azure Databricks Service creation, the host would be `https://eastus2.azuredatabricks.net`.</span></span>
+2. <span data-ttu-id="48a87-164">구성 명령을 실행하면 호스트를 입력하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-164">After running the configure command, you are prompted to enter a host.</span></span> <span data-ttu-id="48a87-165">호스트 URL은 `https://<Location>.azuredatabricks.net` 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-165">Your host URL uses the format: `https://<Location>.azuredatabricks.net`.</span></span> <span data-ttu-id="48a87-166">예를 들어 Azure Databricks 서비스를 만드는 동안 **eastus2**를 선택한 경우 호스트는 `https://eastus2.azuredatabricks.net`이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-166">For instance, if you selected **eastus2** during Azure Databricks Service creation, the host would be `https://eastus2.azuredatabricks.net`.</span></span>
 
-3. <span data-ttu-id="5a4fc-167">호스트를 입력하면 토큰을 입력하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-167">After entering your host, you are prompted to enter a token.</span></span> <span data-ttu-id="5a4fc-168">Azure Portal에서 **작업 영역 시작**을 선택하여 Azure Databricks 작업 영역을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-168">In the Azure portal, select **Launch Workspace** to launch your Azure Databricks workspace.</span></span>
+3. <span data-ttu-id="48a87-167">호스트를 입력하면 토큰을 입력하라는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-167">After entering your host, you are prompted to enter a token.</span></span> <span data-ttu-id="48a87-168">Azure Portal에서 **작업 영역 시작**을 선택하여 Azure Databricks 작업 영역을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-168">In the Azure portal, select **Launch Workspace** to launch your Azure Databricks workspace.</span></span>
 
    ![Azure Databricks 작업 영역 시작](./media/databricks-deployment/launch-databricks-workspace.png)
 
-4. <span data-ttu-id="5a4fc-170">작업 영역의 홈페이지에서 **사용자 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-170">On the home page of your workspace, select **User Settings**.</span></span>
+4. <span data-ttu-id="48a87-170">작업 영역의 홈페이지에서 **사용자 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-170">On the home page of your workspace, select **User Settings**.</span></span>
 
    ![Azure Databricks 작업 영역의 사용자 설정](./media/databricks-deployment/databricks-user-settings.png)
 
-5. <span data-ttu-id="5a4fc-172">사용자 설정 페이지에서 새 토큰을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-172">On the User Settings page, you can generate a new token.</span></span> <span data-ttu-id="5a4fc-173">생성된 토큰을 복사하여 명령 프롬프트에 다시 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-173">Copy the generated token and paste it back into your command prompt.</span></span>
+5. <span data-ttu-id="48a87-172">사용자 설정 페이지에서 새 토큰을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-172">On the User Settings page, you can generate a new token.</span></span> <span data-ttu-id="48a87-173">생성된 토큰을 복사하여 명령 프롬프트에 다시 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-173">Copy the generated token and paste it back into your command prompt.</span></span>
 
    ![Azure Databricks 작업 영역에서 새 액세스 토큰 생성](./media/databricks-deployment/generate-token.png)
 
-<span data-ttu-id="5a4fc-175">이제 만들어진 Azure Databricks 클러스터에 액세스하고 파일을 DBFS에 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-175">You should now be able to access any Azure Databricks clusters you create and upload files to the DBFS.</span></span>
+<span data-ttu-id="48a87-175">이제 만들어진 Azure Databricks 클러스터에 액세스하고 파일을 DBFS에 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-175">You should now be able to access any Azure Databricks clusters you create and upload files to the DBFS.</span></span>
 
-## <a name="download-worker-dependencies"></a><span data-ttu-id="5a4fc-176">작업자 종속성 다운로드</span><span class="sxs-lookup"><span data-stu-id="5a4fc-176">Download worker dependencies</span></span>
+## <a name="download-worker-dependencies"></a><span data-ttu-id="48a87-176">작업자 종속성 다운로드</span><span class="sxs-lookup"><span data-stu-id="48a87-176">Download worker dependencies</span></span>
 
-1. <span data-ttu-id="5a4fc-177">Microsoft.Spark.Worker를 통해 Apache Spark는 사용자가 작성했을 수 있는 UDF(사용자 정의 함수) 등의 앱을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-177">Microsoft.Spark.Worker helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="5a4fc-178">[Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-178">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span></span>
+1. <span data-ttu-id="48a87-177">Microsoft.Spark.Worker를 통해 Apache Spark는 사용자가 작성했을 수 있는 UDF(사용자 정의 함수) 등의 앱을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-177">Microsoft.Spark.Worker helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="48a87-178">[Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-178">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span></span>
 
-2. <span data-ttu-id="5a4fc-179">*install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-179">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span>
+2. <span data-ttu-id="48a87-179">*install-worker.sh*는 .NET for Apache Spark 종속 파일을 클러스터의 노드에 복사하는 데 사용할 수 있는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-179">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span>
 
-   <span data-ttu-id="5a4fc-180">로컬 컴퓨터에 **install-worker.sh**라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-180">Create a new file named **install-worker.sh** on your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span>
+   <span data-ttu-id="48a87-180">로컬 컴퓨터에 **install-worker.sh**라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-180">Create a new file named **install-worker.sh** on your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span>
 
-3. <span data-ttu-id="5a4fc-181">*db-init.sh*는 Databricks Spark 클러스터에 종속성을 설치하는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-181">The *db-init.sh* is a script that installs dependencies onto your Databricks Spark cluster.</span></span>
+3. <span data-ttu-id="48a87-181">*db-init.sh*는 Databricks Spark 클러스터에 종속성을 설치하는 스크립트입니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-181">The *db-init.sh* is a script that installs dependencies onto your Databricks Spark cluster.</span></span>
 
-   <span data-ttu-id="5a4fc-182">로컬 컴퓨터에 **db-init.sh**라는 새 파일을 만들고 GitHub에 있는 [db-init.sh 콘텐츠](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-182">Create a new file named **db-init.sh** on your local computer, and paste the [db-init.sh contents](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) located on GitHub.</span></span>
+   <span data-ttu-id="48a87-182">로컬 컴퓨터에 **db-init.sh**라는 새 파일을 만들고 GitHub에 있는 [db-init.sh 콘텐츠](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-182">Create a new file named **db-init.sh** on your local computer, and paste the [db-init.sh contents](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) located on GitHub.</span></span>
 
-   <span data-ttu-id="5a4fc-183">방금 만든 파일에서 `DOTNET_SPARK_RELEASE` 변수를 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-183">In the file you just created, set the `DOTNET_SPARK_RELEASE` variable to `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span></span> <span data-ttu-id="5a4fc-184">*db-init.sh* 파일의 나머지 내용은 그대로 둡니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-184">Leave the rest of the *db-init.sh* file as-is.</span></span>
+   <span data-ttu-id="48a87-183">방금 만든 파일에서 `DOTNET_SPARK_RELEASE` 변수를 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-183">In the file you just created, set the `DOTNET_SPARK_RELEASE` variable to `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span></span> <span data-ttu-id="48a87-184">*db-init.sh* 파일의 나머지 내용은 그대로 둡니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-184">Leave the rest of the *db-init.sh* file as-is.</span></span>
 
 > [!Note]
-> <span data-ttu-id="5a4fc-185">Windows를 사용하는 경우 *install-worker.sh* 및 *db-init.sh* 스크립트의 줄 끝이 Unix 스타일(LF)인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-185">If you are using Windows, verify that the line-endings in your *install-worker.sh* and *db-init.sh* scripts are Unix-style (LF).</span></span> <span data-ttu-id="5a4fc-186">Notepad++, Atom 등의 텍스트 편집기를 통해 줄 끝을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-186">You can change line endings through text editors like Notepad++ and Atom.</span></span>
+> <span data-ttu-id="48a87-185">Windows를 사용하는 경우 *install-worker.sh* 및 *db-init.sh* 스크립트의 줄 끝이 Unix 스타일(LF)인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-185">If you are using Windows, verify that the line-endings in your *install-worker.sh* and *db-init.sh* scripts are Unix-style (LF).</span></span> <span data-ttu-id="48a87-186">Notepad++, Atom 등의 텍스트 편집기를 통해 줄 끝을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-186">You can change line endings through text editors like Notepad++ and Atom.</span></span>
 
-## <a name="publish-your-app"></a><span data-ttu-id="5a4fc-187">앱 게시</span><span class="sxs-lookup"><span data-stu-id="5a4fc-187">Publish your app</span></span>
+## <a name="publish-your-app"></a><span data-ttu-id="48a87-187">앱 게시</span><span class="sxs-lookup"><span data-stu-id="48a87-187">Publish your app</span></span>
 
-<span data-ttu-id="5a4fc-188">[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-188">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial to ensure your Spark cluster has access to all the files it needs to run your app.</span></span>
+<span data-ttu-id="48a87-188">[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서에서 만든 *mySparkApp*을 게시하여 Spark 클러스터가 앱을 실행하는 데 필요한 모든 파일에 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-188">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial to ensure your Spark cluster has access to all the files it needs to run your app.</span></span>
 
-1. <span data-ttu-id="5a4fc-189">다음 명령을 실행하여 *mySparkApp*을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-189">Run the following commands to publish the *mySparkApp*:</span></span>
+1. <span data-ttu-id="48a87-189">다음 명령을 실행하여 *mySparkApp*을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-189">Run the following commands to publish the *mySparkApp*:</span></span>
 
    ```dotnetcli
    cd mySparkApp
    dotnet publish -c Release -f netcoreapp3.1 -r ubuntu.16.04-x64
    ```
 
-2. <span data-ttu-id="5a4fc-190">다음 작업을 수행하여 게시된 앱 파일을 압축하면 Databricks Spark 클러스터에 쉽게 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-190">Do the following tasks to zip your published app files so that you can easily upload them to your Databricks Spark cluster.</span></span>
+2. <span data-ttu-id="48a87-190">다음 작업을 수행하여 게시된 앱 파일을 압축하면 Databricks Spark 클러스터에 쉽게 업로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-190">Do the following tasks to zip your published app files so that you can easily upload them to your Databricks Spark cluster.</span></span>
 
-   <span data-ttu-id="5a4fc-191">**Windows:**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-191">**On Windows:**</span></span>
+   <span data-ttu-id="48a87-191">**Windows:**</span><span class="sxs-lookup"><span data-stu-id="48a87-191">**On Windows:**</span></span>
 
-   <span data-ttu-id="5a4fc-192">mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-192">Navigate to mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64.</span></span> <span data-ttu-id="5a4fc-193">**게시** 폴더를 마우스 오른쪽 단추로 클릭하고 **보내기 > 압축(zip) 폴더**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-193">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="5a4fc-194">새 폴더의 이름을 **publish.zip**으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-194">Name the new folder **publish.zip**.</span></span>
+   <span data-ttu-id="48a87-192">mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-192">Navigate to mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64.</span></span> <span data-ttu-id="48a87-193">**게시** 폴더를 마우스 오른쪽 단추로 클릭하고 **보내기 > 압축(zip) 폴더**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-193">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="48a87-194">새 폴더의 이름을 **publish.zip**으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-194">Name the new folder **publish.zip**.</span></span>
 
-   <span data-ttu-id="5a4fc-195">**Linux에서는 다음 명령을 실행합니다.**</span><span class="sxs-lookup"><span data-stu-id="5a4fc-195">**On Linux, run the following command:**</span></span>
+   <span data-ttu-id="48a87-195">**Linux에서는 다음 명령을 실행합니다.**</span><span class="sxs-lookup"><span data-stu-id="48a87-195">**On Linux, run the following command:**</span></span>
 
    ```bash
    zip -r publish.zip .
    ```
 
-## <a name="upload-files"></a><span data-ttu-id="5a4fc-196">파일 업로드</span><span class="sxs-lookup"><span data-stu-id="5a4fc-196">Upload files</span></span>
+## <a name="upload-files"></a><span data-ttu-id="48a87-196">파일 업로드</span><span class="sxs-lookup"><span data-stu-id="48a87-196">Upload files</span></span>
 
-<span data-ttu-id="5a4fc-197">이 섹션에서는 클라우드에서 앱을 실행하는 데 필요한 모든 파일이 클러스터에 포함되도록 여러 개의 파일을 DBFS에 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-197">In this section, you upload several files to DBFS so that your cluster has everything it needs to run your app in the cloud.</span></span> <span data-ttu-id="5a4fc-198">DBFS에 파일을 업로드할 때는 항상 파일이 있는 컴퓨터의 디렉터리에서 업로드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-198">Each time you upload a file to the DBFS, make sure you are in the directory where that file is located on your computer.</span></span>
+<span data-ttu-id="48a87-197">이 섹션에서는 클라우드에서 앱을 실행하는 데 필요한 모든 파일이 클러스터에 포함되도록 여러 개의 파일을 DBFS에 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-197">In this section, you upload several files to DBFS so that your cluster has everything it needs to run your app in the cloud.</span></span> <span data-ttu-id="48a87-198">DBFS에 파일을 업로드할 때는 항상 파일이 있는 컴퓨터의 디렉터리에서 업로드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-198">Each time you upload a file to the DBFS, make sure you are in the directory where that file is located on your computer.</span></span>
 
-1. <span data-ttu-id="5a4fc-199">다음 명령을 실행하여 *db-init.sh*, *install-worker.sh* 및 *Microsoft.Spark.Worker*를 DBFS에 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-199">Run the following commands to upload the *db-init.sh*, *install-worker.sh*, and *Microsoft.Spark.Worker* to DBFS:</span></span>
+1. <span data-ttu-id="48a87-199">다음 명령을 실행하여 *db-init.sh*, *install-worker.sh* 및 *Microsoft.Spark.Worker*를 DBFS에 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-199">Run the following commands to upload the *db-init.sh*, *install-worker.sh*, and *Microsoft.Spark.Worker* to DBFS:</span></span>
 
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. <span data-ttu-id="5a4fc-200">다음 명령을 실행하여 클러스터에서 앱을 실행하는 데 필요한 나머지 파일(압축 게시 폴더, *input.txt* 및 *microsoft-spark-2.4.x-0.3.1.jar*)을 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-200">Run the following commands to upload the remaining files your cluster will need to run your app: the zipped publish folder, *input.txt*, and *microsoft-spark-2.4.x-0.3.1.jar*.</span></span>
+2. <span data-ttu-id="48a87-200">다음 명령을 실행하여 클러스터에서 앱을 실행하는 데 필요한 나머지 파일(압축 게시 폴더, *input.txt* 및 *microsoft-spark-2.4.x-0.3.1.jar*)을 업로드합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-200">Run the following commands to upload the remaining files your cluster will need to run your app: the zipped publish folder, *input.txt*, and *microsoft-spark-2.4.x-0.3.1.jar*.</span></span>
 
    ```console
    cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
-   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
 
-## <a name="create-a-job"></a><span data-ttu-id="5a4fc-201">작업 만들기</span><span class="sxs-lookup"><span data-stu-id="5a4fc-201">Create a job</span></span>
+## <a name="create-a-job"></a><span data-ttu-id="48a87-201">작업 만들기</span><span class="sxs-lookup"><span data-stu-id="48a87-201">Create a job</span></span>
 
-<span data-ttu-id="5a4fc-202">.NET for Apache Spark 작업을 실행하는 데 사용하는 명령인 **spark-submit**을 실행하는 작업을 통해 Azure Databricks에서 앱이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-202">Your app runs on Azure Databricks through a job that runs **spark-submit**, which is the command you use to run .NET for Apache Spark jobs.</span></span>
+<span data-ttu-id="48a87-202">.NET for Apache Spark 작업을 실행하는 데 사용하는 명령인 **spark-submit**을 실행하는 작업을 통해 Azure Databricks에서 앱이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-202">Your app runs on Azure Databricks through a job that runs **spark-submit**, which is the command you use to run .NET for Apache Spark jobs.</span></span>
 
-1. <span data-ttu-id="5a4fc-203">Azure Databricks 작업 영역에서 **작업** 아이콘, **+ 작업 만들기**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-203">In your Azure Databricks Workspace, select the **Jobs** icon and then **+ Create Job**.</span></span>
+1. <span data-ttu-id="48a87-203">Azure Databricks 작업 영역에서 **작업** 아이콘, **+ 작업 만들기**를 차례로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-203">In your Azure Databricks Workspace, select the **Jobs** icon and then **+ Create Job**.</span></span>
 
    ![Azure Databricks 작업 만들기](./media/databricks-deployment/create-job.png)
 
-2. <span data-ttu-id="5a4fc-205">작업 제목을 선택한 다음, **spark-submit 구성**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-205">Choose a title for your job, and then select **Configure spark-submit**.</span></span>
+2. <span data-ttu-id="48a87-205">작업 제목을 선택한 다음, **spark-submit 구성**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-205">Choose a title for your job, and then select **Configure spark-submit**.</span></span>
 
    ![Databricks 작업에 대해 spark-submit 구성](./media/databricks-deployment/configure-spark-submit.png)
 
-3. <span data-ttu-id="5a4fc-207">작업 구성에 다음 매개 변수를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-207">Paste the following parameters in the job configuration.</span></span> <span data-ttu-id="5a4fc-208">**확인**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-208">Then, select **Confirm**.</span></span>
+3. <span data-ttu-id="48a87-207">작업 구성에 다음 매개 변수를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-207">Paste the following parameters in the job configuration.</span></span> <span data-ttu-id="48a87-208">**확인**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-208">Then, select **Confirm**.</span></span>
 
    ```
    ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
-## <a name="create-a-cluster"></a><span data-ttu-id="5a4fc-209">클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="5a4fc-209">Create a cluster</span></span>
+## <a name="create-a-cluster"></a><span data-ttu-id="48a87-209">클러스터 만들기</span><span class="sxs-lookup"><span data-stu-id="48a87-209">Create a cluster</span></span>
 
-1. <span data-ttu-id="5a4fc-210">작업으로 이동한 다음 **편집**을 선택하여 작업 클러스터를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-210">Navigate to your job and select **Edit** to configure your job's cluster.</span></span>
+1. <span data-ttu-id="48a87-210">작업으로 이동한 다음 **편집**을 선택하여 작업 클러스터를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-210">Navigate to your job and select **Edit** to configure your job's cluster.</span></span>
 
-2. <span data-ttu-id="5a4fc-211">클러스터를 **Spark 2.4.1**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-211">Set your cluster to **Spark 2.4.1**.</span></span> <span data-ttu-id="5a4fc-212">**고급 옵션** > **Init 스크립트**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-212">Then, select **Advanced Options** > **Init Scripts**.</span></span> <span data-ttu-id="5a4fc-213">Init 스크립트 경로를 `dbfs:/spark-dotnet/db-init.sh`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-213">Set Init Script Path as `dbfs:/spark-dotnet/db-init.sh`.</span></span>
+2. <span data-ttu-id="48a87-211">클러스터를 **Spark 2.4.1**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-211">Set your cluster to **Spark 2.4.1**.</span></span> <span data-ttu-id="48a87-212">**고급 옵션** > **Init 스크립트**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-212">Then, select **Advanced Options** > **Init Scripts**.</span></span> <span data-ttu-id="48a87-213">Init 스크립트 경로를 `dbfs:/spark-dotnet/db-init.sh`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-213">Set Init Script Path as `dbfs:/spark-dotnet/db-init.sh`.</span></span>
 
    ![Azure Databricks에서 Spark 클러스터 구성](./media/databricks-deployment/cluster-config.png)
 
-3. <span data-ttu-id="5a4fc-215">**확인**을 선택하여 클러스터 설정을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-215">Select **Confirm** to confirm your cluster settings.</span></span>
+3. <span data-ttu-id="48a87-215">**확인**을 선택하여 클러스터 설정을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-215">Select **Confirm** to confirm your cluster settings.</span></span>
 
-## <a name="run-your-app"></a><span data-ttu-id="5a4fc-216">앱 실행</span><span class="sxs-lookup"><span data-stu-id="5a4fc-216">Run your app</span></span>
+## <a name="run-your-app"></a><span data-ttu-id="48a87-216">앱 실행</span><span class="sxs-lookup"><span data-stu-id="48a87-216">Run your app</span></span>
 
-1. <span data-ttu-id="5a4fc-217">작업으로 이동한 다음 **지금 실행**을 선택하여 새로 구성된 Spark 클러스터에서 작업을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-217">Navigate to your job and select **Run Now** to run your job on your newly configured Spark cluster.</span></span>
+1. <span data-ttu-id="48a87-217">작업으로 이동한 다음 **지금 실행**을 선택하여 새로 구성된 Spark 클러스터에서 작업을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-217">Navigate to your job and select **Run Now** to run your job on your newly configured Spark cluster.</span></span>
 
-2. <span data-ttu-id="5a4fc-218">작업 클러스터를 만드는 데 몇 분 정도 걸립니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-218">It takes a few minutes for the job's cluster to create.</span></span> <span data-ttu-id="5a4fc-219">클러스터를 만들고 나면 작업이 제출되고 출력을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-219">Once it is created, your job will be submitted, and you can view the output.</span></span>
+2. <span data-ttu-id="48a87-218">작업 클러스터를 만드는 데 몇 분 정도 걸립니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-218">It takes a few minutes for the job's cluster to create.</span></span> <span data-ttu-id="48a87-219">클러스터를 만들고 나면 작업이 제출되고 출력을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-219">Once it is created, your job will be submitted, and you can view the output.</span></span>
 
-3. <span data-ttu-id="5a4fc-220">왼쪽 메뉴에서 **클러스터**를 선택한 다음, 작업의 이름과 실행을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-220">Select **Clusters** from the left menu, and then the name and run of your job.</span></span>
+3. <span data-ttu-id="48a87-220">왼쪽 메뉴에서 **클러스터**를 선택한 다음, 작업의 이름과 실행을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-220">Select **Clusters** from the left menu, and then the name and run of your job.</span></span>
 
-4. <span data-ttu-id="5a4fc-221">**드라이버 로그**를 선택하여 작업의 출력을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-221">Select **Driver Logs** to view the output of your job.</span></span> <span data-ttu-id="5a4fc-222">앱 실행이 완료되면 시작 로컬 실행과 동일한 단어 개수 테이블이 표준 출력 콘솔에 기록됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-222">When your app finishes executing, you see the same word count table from the getting started local run written to the standard output console.</span></span>
+4. <span data-ttu-id="48a87-221">**드라이버 로그**를 선택하여 작업의 출력을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-221">Select **Driver Logs** to view the output of your job.</span></span> <span data-ttu-id="48a87-222">앱 실행이 완료되면 시작 로컬 실행과 동일한 단어 개수 테이블이 표준 출력 콘솔에 기록됩니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-222">When your app finishes executing, you see the same word count table from the getting started local run written to the standard output console.</span></span>
 
    ![Azure Databricks 작업 출력 테이블](./media/databricks-deployment/table-output.png)
 
-   <span data-ttu-id="5a4fc-224">축하합니다. 클라우드에서 첫 번째 .NET for Apache Spark 애플리케이션을 실행했습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-224">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
+   <span data-ttu-id="48a87-224">축하합니다. 클라우드에서 첫 번째 .NET for Apache Spark 애플리케이션을 실행했습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-224">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
 
-## <a name="clean-up-resources"></a><span data-ttu-id="5a4fc-225">리소스 정리</span><span class="sxs-lookup"><span data-stu-id="5a4fc-225">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="48a87-225">리소스 정리</span><span class="sxs-lookup"><span data-stu-id="48a87-225">Clean up resources</span></span>
 
-<span data-ttu-id="5a4fc-226">Databricks 작업 영역이 더 이상 필요하지 않은 경우 Azure Portal에서 Azure Databricks 리소스를 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-226">If you no longer need the Databricks workspace, you can delete your Azure Databricks resource in the Azure portal.</span></span> <span data-ttu-id="5a4fc-227">또한 리소스 그룹 이름을 선택하여 리소스 그룹 페이지를 연 다음, **리소스 그룹 삭제**를 선택할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-227">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span>
+<span data-ttu-id="48a87-226">Databricks 작업 영역이 더 이상 필요하지 않은 경우 Azure Portal에서 Azure Databricks 리소스를 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-226">If you no longer need the Databricks workspace, you can delete your Azure Databricks resource in the Azure portal.</span></span> <span data-ttu-id="48a87-227">또한 리소스 그룹 이름을 선택하여 리소스 그룹 페이지를 연 다음, **리소스 그룹 삭제**를 선택할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-227">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="5a4fc-228">다음 단계</span><span class="sxs-lookup"><span data-stu-id="5a4fc-228">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="48a87-228">다음 단계</span><span class="sxs-lookup"><span data-stu-id="48a87-228">Next steps</span></span>
 
-<span data-ttu-id="5a4fc-229">이 자습서에서는 Databricks에 .NET for Apache Spark 애플리케이션을 배포했습니다.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-229">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="5a4fc-230">Databricks에 대해 자세히 알아보려면 Azure Databricks 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a4fc-230">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
+<span data-ttu-id="48a87-229">이 자습서에서는 Databricks에 .NET for Apache Spark 애플리케이션을 배포했습니다.</span><span class="sxs-lookup"><span data-stu-id="48a87-229">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="48a87-230">Databricks에 대해 자세히 알아보려면 Azure Databricks 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="48a87-230">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="5a4fc-231">Azure Databricks 설명서</span><span class="sxs-lookup"><span data-stu-id="5a4fc-231">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
+> [<span data-ttu-id="48a87-231">Azure Databricks 설명서</span><span class="sxs-lookup"><span data-stu-id="48a87-231">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
