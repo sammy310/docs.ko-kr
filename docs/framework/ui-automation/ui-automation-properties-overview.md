@@ -1,16 +1,17 @@
 ---
 title: UI 자동화 속성 개요
+description: Microsoft UI 자동화 속성의 광범위 한 개요를 참조 하세요. 속성 식별자, 범주별 속성, 지역화 및 속성 및 이벤트에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179864"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163205"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
 > [!NOTE]
@@ -20,17 +21,17 @@ ms.locfileid: "79179864"
   
  이 섹션에서는 광범위한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 속성 개요를 제공합니다. 보다 구체적인 정보는 다음 항목에서 제공됩니다.  
   
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+- [클라이언트에 대한 UI 자동화 속성](ui-automation-properties-for-clients.md)  
   
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>속성 식별자  
- 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 아이디를 사용하여 들어오는 속성 요청을 식별합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
+ 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 Id를 사용 하 여 들어오는 속성 요청을 식별 합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
   
  특정 속성을 나타내는<xref:System.Windows.Automation.AutomationProperty> 개체는 다양한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
   
- 다음 표는 <xref:System.Windows.Automation.AutomationProperty>속성을 포함 하는 클래스별로 분류 합니다.  
+ 다음 표에서는 id를 포함 하는 클래스로 속성을 분류 합니다 <xref:System.Windows.Automation.AutomationProperty> .  
   
 |속성의 종류|클라이언트가 ID를 가져오는 위치|공급자 ID를 가져오는 위치|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "79179864"
   
 <a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>항목별 속성  
- 다음 표에서는 에서 해당 ID가 있는 <xref:System.Windows.Automation.AutomationElement> 속성을 <xref:System.Windows.Automation.AutomationElementIdentifiers>분류합니다. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
+ 다음 표에서는 및에서 Id를 찾을 수 있는 속성을 분류 합니다 <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> . 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
   
  **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)을 참조하세요.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "79179864"
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### <a name="identification"></a>Identification(식별)  
+### <a name="identification"></a>식별  
   
 |속성 식별자|속성 액세스|  
 |-------------------------|---------------------|  
@@ -161,9 +162,9 @@ ms.locfileid: "79179864"
   
 ## <a name="see-also"></a>참고 항목
 
-- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
+- [UI 자동화 클라이언트에서 캐싱](caching-in-ui-automation-clients.md)
+- [클라이언트에 대한 UI 자동화 속성](ui-automation-properties-for-clients.md)
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
-- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md)
+- [속성 조건에 따라 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)
 - [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)

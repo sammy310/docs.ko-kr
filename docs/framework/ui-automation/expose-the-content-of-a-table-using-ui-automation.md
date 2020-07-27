@@ -1,5 +1,6 @@
 ---
 title: UI 자동화를 사용하여 표의 콘텐츠 노출
+description: UI 자동화를 사용 하 여 테이블 내용을 노출 하는 방법을 참조 하세요. 테이블 형식 컨트롤 내에 있는 각 셀의 내용 및 기본 속성이 노출 됩니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +10,21 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: e1c1d43073ce47a45a78bcbeb1d4da368988ca3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6ceb05421547a7e84f612ed6da2bd7002bf095b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433629"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168463"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI 자동화를 사용하여 표의 콘텐츠 노출
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- 이 항목에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]를 사용 하 여 테이블 형식 컨트롤 내에서 각 셀의 내용 및 기본 속성을 노출 하는 방법을 보여 줍니다.  
+ 이 항목에서는를 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 사용 하 여 테이블 형식 컨트롤 내에서 각 셀의 내용 및 기본 속성을 노출 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예에서는 테이블 셀의 내용을 나타내는 <xref:System.Windows.Automation.AutomationElement>를 가져오는 방법을 보여 줍니다. 행 및 열 인덱스, 행 및 열 범위, 행 및 열 머리글 정보 등의 셀 속성을 가져올 수도 있습니다. 이 예제에서는 포커스 변경 이벤트 처리기를 사용 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 구현 하는 테이블 형식 컨트롤의 키보드 트래버스를 시뮬레이션 합니다. 각 테이블 항목에 대 한 정보는 포커스 변경 이벤트에 노출 됩니다.  
+ 다음 코드 예에서는 <xref:System.Windows.Automation.AutomationElement> 테이블 셀의 내용을 나타내는를 가져오는 방법을 보여 줍니다. 행 및 열 인덱스, 행 및 열 범위, 행 및 열 머리글 정보 등의 셀 속성도 가져옵니다. 이 예제에서는 포커스 변경 이벤트 처리기를 사용 하 여을 구현 하는 테이블 형식 컨트롤의 키보드 트래버스를 시뮬레이션 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 합니다. 각 테이블 항목에 대 한 정보는 포커스 변경 이벤트에 노출 됩니다.  
   
 > [!NOTE]
 > 포커스 변경은 전역 데스크톱 이벤트 이므로 테이블 외부의 포커스 변경 이벤트가 필터링 되어야 합니다. 관련 구현에 대 한 이동 [포커스 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) 을 참조 하세요.  

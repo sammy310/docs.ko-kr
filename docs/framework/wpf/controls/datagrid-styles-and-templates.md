@@ -1,5 +1,6 @@
 ---
 title: DataGrid 스타일 및 템플릿
+description: Windows Presentation Foundation DataGrid 컨트롤에 대 한 스타일 및 템플릿에 대해 알아봅니다. ControlTemplate를 수정 하 여 컨트롤에 고유한 모양을 제공 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], DataGrid
@@ -9,29 +10,29 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd526ec64d5077dad58f31c004f47e63c57ec9de
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283799"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168336"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 스타일 및 템플릿에 대해 설명 합니다. 기본 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
+이 항목에서는 컨트롤의 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.DataGrid> . 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
   
 ## <a name="datagrid-parts"></a>DataGrid 파트  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 명명 된 파트를 나열 합니다.  
+ 다음 표에서는 컨트롤의 명명 된 파트를 나열 합니다 <xref:System.Windows.Controls.DataGrid> .  
   
-|파트|형식|설명|  
+|부분|Type|Description|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|열 머리글을 포함 하는 행입니다.|  
   
- <xref:System.Windows.Controls.DataGrid>에 대 한 <xref:System.Windows.Controls.ControlTemplate>를 만들 때 템플릿에 <xref:System.Windows.Controls.ScrollViewer>내에 <xref:System.Windows.Controls.ItemsPresenter> 포함 될 수 있습니다. <xref:System.Windows.Controls.ItemsPresenter>은 <xref:System.Windows.Controls.DataGrid>의 각 항목을 표시 하 고 <xref:System.Windows.Controls.ScrollViewer>는 컨트롤 내에서 스크롤할 수 있도록 합니다.  <xref:System.Windows.Controls.ItemsPresenter> <xref:System.Windows.Controls.ScrollViewer>의 직계 자식이 아닌 경우 <xref:System.Windows.Controls.ItemsPresenter> 이름 `ItemsPresenter`를 지정 해야 합니다.  
+ 에 대해를 만들 때 <xref:System.Windows.Controls.ControlTemplate> 템플릿에는 내에 <xref:System.Windows.Controls.DataGrid> 이 포함 될 수 있습니다 <xref:System.Windows.Controls.ItemsPresenter> <xref:System.Windows.Controls.ScrollViewer> . 는의 <xref:System.Windows.Controls.ItemsPresenter> 각 항목을 표시 하 <xref:System.Windows.Controls.DataGrid> 고,는 <xref:System.Windows.Controls.ScrollViewer> 컨트롤 내에서 스크롤할 수 있도록 합니다.  <xref:System.Windows.Controls.ItemsPresenter>이의 직계 자식이 아닌 경우 <xref:System.Windows.Controls.ScrollViewer> 이름을 지정 해야 합니다 <xref:System.Windows.Controls.ItemsPresenter> `ItemsPresenter` .  
   
- <xref:System.Windows.Controls.DataGrid>에 대 한 기본 템플릿에는 <xref:System.Windows.Controls.ScrollViewer> 컨트롤이 포함 되어 있습니다. <xref:System.Windows.Controls.ScrollViewer>에서 정의 되는 파트에 대 한 자세한 내용은 [ScrollViewer 스타일 및 템플릿](scrollviewer-styles-and-templates.md)을 참조 하세요.  
+ 의 기본 템플릿에는 <xref:System.Windows.Controls.DataGrid> 컨트롤이 포함 되어 있습니다 <xref:System.Windows.Controls.ScrollViewer> . 에서 정의 되는 파트에 대 한 자세한 내용은 <xref:System.Windows.Controls.ScrollViewer> [ScrollViewer 스타일 및 템플릿](scrollviewer-styles-and-templates.md)을 참조 하세요.  
   
 ## <a name="datagrid-states"></a>DataGrid 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤의 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 컨트롤의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.DataGrid> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -42,10 +43,10 @@ ms.locfileid: "74283799"
 |Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridcell-parts"></a>DataGridCell 파트  
- <xref:System.Windows.Controls.DataGridCell> 요소에는 명명 된 파트가 없습니다.  
+ <xref:System.Windows.Controls.DataGridCell>요소에 명명 된 부분이 없습니다.  
   
 ## <a name="datagridcell-states"></a>DataGridCell 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGridCell> 요소에 대 한 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 요소의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.DataGridCell> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -54,20 +55,20 @@ ms.locfileid: "74283799"
 |포커스 있음|FocusStates|셀에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|셀에 포커스가 없습니다.|  
 |현재|CurrentStates|현재 셀이 셀입니다.|  
-|기본|CurrentStates|셀이 현재 셀이 아닙니다.|  
+|주기적|CurrentStates|셀이 현재 셀이 아닙니다.|  
 |표시|InteractionStates|셀이 표시 모드에 있습니다.|  
 |편집|InteractionStates|셀이 편집 모드에 있습니다.|  
-|Selected|SelectionStates|셀이 선택 됩니다.|  
+|선택|SelectionStates|셀이 선택 됩니다.|  
 |선택 취소|SelectionStates|셀이 선택 되지 않았습니다.|  
 |InvalidFocused|ValidationStates|셀이 잘못 되었으며 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|셀이 잘못 되었으며 포커스가 없습니다.|  
 |Valid|ValidationStates|셀이 유효 합니다.|  
   
 ## <a name="datagridrow-parts"></a>DataGridRow 파트  
- <xref:System.Windows.Controls.DataGridRow> 요소에는 명명 된 파트가 없습니다.  
+ <xref:System.Windows.Controls.DataGridRow>요소에 명명 된 부분이 없습니다.  
   
 ## <a name="datagridrow-states"></a>DataGridRow 상태  
- 다음 표에서는 <xref:System.Windows.Controls.DataGridRow> 요소에 대 한 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 요소의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.DataGridRow> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -87,15 +88,15 @@ ms.locfileid: "74283799"
 |Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader 파트  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소에 대 한 명명 된 파트를 나열 합니다.  
+ 다음 표에서는 요소에 대해 명명 된 파트를 나열 합니다 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> .  
   
-|파트|형식|설명|  
+|부분|Type|Description|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|위쪽에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|아래쪽에서 행 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
   
 ## <a name="datagridrowheader-states"></a>DataGridRowHeader 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> 요소에 대 한 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 요소의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.Primitives.DataGridRowHeader> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -120,14 +121,14 @@ ms.locfileid: "74283799"
 |Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter 파트  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소에 대 한 명명 된 파트를 나열 합니다.  
+ 다음 표에서는 요소에 대해 명명 된 파트를 나열 합니다 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> .  
   
-|파트|형식|설명|  
+|부분|Type|Description|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|열 머리글의 자리 표시자입니다.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>DataGridColumnHeadersPresenter 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> 요소에 대 한 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 요소의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -136,15 +137,15 @@ ms.locfileid: "74283799"
 |Valid|ValidationStates|셀이 유효 합니다.|  
   
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader 파트  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소에 대 한 명명 된 파트를 나열 합니다.  
+ 다음 표에서는 요소에 대해 명명 된 파트를 나열 합니다 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> .  
   
-|파트|형식|설명|  
+|부분|Type|Description|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|왼쪽에서 열 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|오른쪽에서 열 머리글의 크기를 조정 하는 데 사용 되는 요소입니다.|  
   
 ## <a name="datagridcolumnheader-states"></a>DataGridColumnHeader 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> 요소에 대 한 시각적 상태를 보여 줍니다.  
+ 다음 표에서는 요소의 시각적 상태를 보여 줍니다 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> .  
   
 |VisualState 이름|VisualStateGroup 이름|설명|  
 |-|-|-|  
@@ -159,7 +160,7 @@ ms.locfileid: "74283799"
 |Valid|ValidationStates|컨트롤이 유효합니다.|  
   
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤 및 관련 형식에 대 한 <xref:System.Windows.Controls.ControlTemplate>를 정의 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.DataGrid> 컨트롤 및 관련 형식에 대 한을 정의 하는 방법을 보여 줍니다.  
   
  [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
@@ -176,4 +177,4 @@ ms.locfileid: "74283799"
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)
 - [컨트롤 사용자 지정](control-customization.md)
 - [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)
+- [컨트롤의 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)

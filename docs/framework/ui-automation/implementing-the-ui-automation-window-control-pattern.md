@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Window 컨트롤 패턴 구현
+description: UI 자동화에서 Window 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IWindowProvider 인터페이스에 필요한 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180041"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168190"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI 자동화 Window 컨트롤 패턴 구현
 > [!NOTE]
@@ -19,7 +20,7 @@ ms.locfileid: "79180041"
   
  이 항목에서는 <xref:System.Windows.Automation.Provider.IWindowProvider>속성, 메서드 및 이벤트에 대한 정보를 포함하여 <xref:System.Windows.Automation.WindowPattern> 를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 항목 끝에 나열되어 있습니다.  
   
- 컨트롤 <xref:System.Windows.Automation.WindowPattern> 패턴은 기존의 그래픽 사용자 인터페이스(GUI) 내에서 기본 창 기반 기능을 제공하는 컨트롤을 지원하는 데 사용됩니다. 이 컨트롤 패턴을 구현해야 하는 컨트롤의 예로는 최상위 응용 프로그램 창, MDI(다중 문서 인터페이스) 자식 창, 조정 가능한 분할 창 컨트롤, 모달 대화 상자 및 풍선 도움말 창이 있습니다.  
+ <xref:System.Windows.Automation.WindowPattern>컨트롤 패턴은 기존 GUI (그래픽 사용자 인터페이스) 내에서 기본적인 창 기반 기능을 제공 하는 컨트롤을 지 원하는 데 사용 됩니다. 이 컨트롤 패턴을 구현 해야 하는 컨트롤의 예로는 최상위 응용 프로그램 창, MDI (다중 문서 인터페이스) 자식 창, 크기 조정 가능한 분할 창 컨트롤, 모달 대화 상자 및 풍선 도움말 창이 있습니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
@@ -39,34 +40,34 @@ ms.locfileid: "79180041"
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider에 필요한 멤버  
  IWindowProvider 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|방법|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|행사|None|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|행사|None|  
-|<xref:System.Windows.Automation.WindowInteractionState>|행사|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|이벤트|없음|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|이벤트|없음|  
+|<xref:System.Windows.Automation.WindowInteractionState>|이벤트|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - 컨트롤이 요청된 동작을 지원하지 않는 경우.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - 매개 변수가 유효한 숫자가 아닌 경우.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -컨트롤에서 요청 된 동작을 지원 하지 않는 경우|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -매개 변수가 유효한 숫자가 아닌 경우|  
   
 ## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

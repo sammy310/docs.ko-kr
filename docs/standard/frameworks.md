@@ -4,12 +4,12 @@ description: .NET Core 앱 및 라이브러리의 대상 프레임워크에 대�
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398798"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164302"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 
@@ -129,7 +129,6 @@ public class MyClass
 
 ## <a name="see-also"></a>참고 항목
 
-- [패키지, 메타패키지 및 프레임워크](../core/packages.md)
 - [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 버전 관리](../core/versions/index.md)

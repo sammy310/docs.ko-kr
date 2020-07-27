@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 MultipleView 컨트롤 패턴 구현
+description: UI 자동화에서 MultipleView 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IMultipleViewProvider 인터페이스에 필요한 멤버를 참조 하십시오.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 9decb617e30a340d3e73e911f7848110de5599e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d65d57637891fcb1307f5ee83a417941ff323fb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180163"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168230"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI 자동화 MultipleView 컨트롤 패턴 구현
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79180163"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 컨트롤 패턴은 동일한 정보 또는 자식 컨트롤 집합의 여러 표현 간을 전환할 수 있는 컨트롤을 지원하는 데 사용됩니다.  
   
- 여러 뷰를 표시할 수 있는 컨트롤의 예로는 목록 보기(해당 내용을 축소판, 타일, 아이콘 또는 세부 정보로 표시할 수 있음), Microsoft Excel 차트(수식이 있는 원형, 선, 막대, 셀 값), Microsoft Word 문서(일반, 웹 레이아웃, 인쇄) 등이 있습니다. 레이아웃, 읽기 레이아웃, 개요), 마이크로 소프트 아웃룩 달력 (년, 월, 주, 일), 마이크로 소프트 윈도우 미디어 플레이어 스킨. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
+ 여러 뷰를 표시할 수 있는 컨트롤의 예로는 목록 뷰가 있습니다. 여기에는 해당 내용이 축소판 그림으로 표시 될 수 있습니다. 타일, 아이콘 또는 세부 정보), Microsoft Excel 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), Microsoft Word 문서 (보통, 웹 레이아웃, 인쇄 레이아웃, 읽기 레이아웃, 개요), Microsoft Outlook 일정 (연도, 월, 주, 일) 및 Microsoft Windows Media Player 스킨이 있습니다. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
@@ -39,12 +40,12 @@ ms.locfileid: "79180163"
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider에 필요한 멤버  
  IMultipleViewProvider를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|메서드|없음|  
   
  이 컨트롤 패턴과 관련된 이벤트가 없습니다.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "79180163"
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 발생해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|지원되는 뷰 컬렉션 멤버가 아닌 매개 변수로 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> 또는 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> 이 호출되는 경우.|  
   
@@ -61,5 +62,5 @@ ms.locfileid: "79180163"
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

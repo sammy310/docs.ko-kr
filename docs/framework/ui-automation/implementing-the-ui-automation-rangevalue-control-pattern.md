@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 RangeValue 컨트롤 패턴 구현
+description: UI 자동화에서 범위 값 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IRangeValueProvider 인터페이스에 필요한 멤버를 참조 하십시오.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Range Value
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 847a8aae3fd0c3d6965c910d19a4cec11cd2a3b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180176"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164076"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI 자동화 RangeValue 컨트롤 패턴 구현
 > [!NOTE]
@@ -29,21 +30,21 @@ ms.locfileid: "79180176"
   
 - 진행률 표시줄 또는 슬라이더와 같은 모호한 범위 값이 있는 컨트롤에서는 해당 값을 정규화해야 합니다.  
   
- ![진행률 표시줄.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![진행률 표시줄입니다.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 이 예로는 값이 정수 유형인 진행률 표시줄이며 최소 및 최대 속성 값이 각각 0과 100으로 정규화됩니다.  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider에 필요한 멤버  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|속성|None|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|메서드|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|속성|없음|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|메서드|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "79180176"
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 은 <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> 보다 크거나 <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>보다 작은 값으로 호출됩니다.|  
   
@@ -60,5 +61,5 @@ ms.locfileid: "79180176"
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

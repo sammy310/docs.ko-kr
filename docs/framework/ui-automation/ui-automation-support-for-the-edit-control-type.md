@@ -1,17 +1,18 @@
 ---
 title: Edit 컨트롤 형식에 대한 UI 자동화 지원
+description: Edit 컨트롤 형식에 대 한 UI 자동화 지원에 대 한 정보를 가져옵니다. 필요한 트리 구조, 속성, 컨트롤 패턴 및 이벤트에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Edit
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: cdbb400d438231689fe35c4bff2bd2946b6bed80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6c404786d58cfcb4cc7dabd982eea33694b7cd0b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789503"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167937"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Edit 컨트롤 형식에 대한 UI 자동화 지원
 
@@ -22,17 +23,17 @@ ms.locfileid: "76789503"
 
 편집 컨트롤은 다양한 서식 지원 없이 사용자가 간단한 텍스트 줄을 보고 편집할 수 있도록 합니다.
 
-다음 섹션에서는 Edit 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms에 관계 없이 모든 편집 컨트롤에 적용 됩니다.
+다음 섹션에서는 Edit 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 편집 컨트롤에 적용 됩니다.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조
 
-다음 표는 편집 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.
+다음 표는 편집 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.
 
-|컨트롤 뷰|콘텐츠 보기|
+|컨트롤 뷰|콘텐츠 뷰|
 |------------------|------------------|
-|Edit|Edit|
+|편집|편집|
 
 Edit 컨트롤 형식을 구현하는 컨트롤은 한 줄 컨트롤이기 때문에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 스크롤 막대가 없습니다. 일부 레이아웃 시나리오에서는 텍스트 한 줄이 줄 바꿈될 수도 있습니다. Edit 컨트롤 형식은 편집 가능하거나 선택 가능한 텍스트의 양이 적은 경우에 가장 적합합니다.
 
@@ -40,7 +41,7 @@ Edit 컨트롤 형식을 구현하는 컨트롤은 한 줄 컨트롤이기 때�
 
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성
 
-다음 표에서는 값 또는 정의가 편집 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.
+다음 표에서는 값 또는 정의가 편집 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.
 
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|
 |------------------------------------------------------------------------------------|-----------|-----------|
@@ -50,7 +51,7 @@ Edit 컨트롤 형식을 구현하는 컨트롤은 한 줄 컨트롤이기 때�
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|편집 컨트롤의 이름은 일반적으로 정적 텍스트 레이블에서 생성됩니다. 정적 텍스트 레이블이 없는 경우 애플리케이션 개발자가 `Name` 의 속성 값을 할당해야 합니다. `Name` 속성에는 편집 컨트롤의 텍스트 내용이 포함되지 않아야 합니다.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|컨트롤과 연결된 정적 텍스트 레이블이 있는 경우, 이 속성은 해당 컨트롤에 대한 참조를 노출해야 합니다. 텍스트 컨트롤이 다른 컨트롤의 하위 구성 요소일 경우 이 컨트롤에 `LabeledBy` 속성 집합이 없습니다.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Edit|이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|편집|이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"edit"|Edit 컨트롤 형식에 해당하는 지역화된 문자열입니다.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 항상 포함됩니다.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.|
@@ -64,11 +65,11 @@ Edit 컨트롤 형식을 구현하는 컨트롤은 한 줄 컨트롤이기 때�
 
 |컨트롤 패턴/컨트롤 패턴 속성|지원/값|참고|
 |-----------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.Provider.ITextProvider>|종속|클라이언트에서 자세한 텍스트 정보를 항상 사용할 수 있어야 하기 때문에 편집 컨트롤은 Text 컨트롤 패턴을 지원해야 합니다.|
-|<xref:System.Windows.Automation.Provider.IValueProvider>|종속|문자열을 사용할 수 있는 모든 편집 컨트롤은 Value 패턴을 노출해야 합니다.|
+|<xref:System.Windows.Automation.Provider.ITextProvider>|개체|클라이언트에서 자세한 텍스트 정보를 항상 사용할 수 있어야 하기 때문에 편집 컨트롤은 Text 컨트롤 패턴을 지원해야 합니다.|
+|<xref:System.Windows.Automation.Provider.IValueProvider>|개체|문자열을 사용할 수 있는 모든 편집 컨트롤은 Value 패턴을 노출해야 합니다.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|메모를 참조하세요.|이 속성은 컨트롤에 프로그래밍 방식으로 설정된 값을 사용할 수 있는지 또는 사용자가 컨트롤을 편집할 수 있는지를 나타내도록 설정되어야 합니다.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|메모를 참조하세요.|이 속성은 편집 컨트롤의 텍스트 내용을 반환합니다. `IsPasswordProperty` 가 `true`로 설정되어 있으면, 이 속성은 요청될 때 `InvalidOperationException` 을 발생해야 합니다.|
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|숫자 범위를 사용할 수 있는 모든 편집 컨트롤은 Range Value 컨트롤 패턴을 노출해야 합니다.|
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|개체|숫자 범위를 사용할 수 있는 모든 편집 컨트롤은 Range Value 컨트롤 패턴을 노출해야 합니다.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|메모를 참조하세요.|이 속성은 편집 컨트롤의 콘텐츠를 설정할 수 있는 가장 작은 값이어야 합니다.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|메모를 참조하세요.|이 속성은 편집 컨트롤의 콘텐츠를 설정할 수 있는 가장 큰 값이어야 합니다.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|메모를 참조하세요.|이 속성은 값을 설정할 수 있는 소수 자릿수를 나타내야 합니다. 편집에 정수만 사용할 수 있는 경우 `SmallChangeProperty` 는 1이어야 합니다. 편집에 1.0에서 2.0까지의 범위를 사용할 수 있는 경우 `SmallChangeProperty` 는 0.1이어야 합니다. 편집 컨트롤에 1.00에서 2.00까지의 범위를 사용할 수 있는 경우 `SmallChangeProperty` 는 0.001이어야 합니다.|
@@ -83,25 +84,25 @@ Edit 컨트롤 형식을 구현하는 컨트롤은 한 줄 컨트롤이기 때�
 
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|
 |---------------------------------------------------------------------------------|-------------|-----------|
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|필수|None|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|필수|None|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|필수|None|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|None|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|None|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|None|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.|필수|None|
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 속성 변경 이벤트.|Never|None|
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|컨트롤이 Range Value 컨트롤 패턴을 지원하는 경우 이 이벤트를 지원해야 합니다.|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|None|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|None|
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|필수|없음|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|필수|없음|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|필수|없음|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.|필수|없음|
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|개체|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 속성 변경 이벤트.|안 함|없음|
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|개체|컨트롤이 Range Value 컨트롤 패턴을 지원하는 경우 이 이벤트를 지원해야 합니다.|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Automation.ControlType.Edit>
 - [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127551"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924385"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
 
@@ -23,9 +23,6 @@ ms.locfileid: "73127551"
  관리되지 않는 스레드가 COM 호출 가능 래퍼를 통해 런타임에 들어가면 시스템에서는 해당 스레드의 스레드 로컬 저장소를 확인하여 내부의 관리되는 <xref:System.Threading.Thread> 개체를 찾습니다. 이 개체를 찾은 경우 런타임이 이미 이 스레드에 대해 알고 있는 것입니다. 그러나 이 개체를 찾을 수 없으면 런타임은 새 <xref:System.Threading.Thread> 개체를 빌드하여 해당 스레드의 스레드 로컬 저장소에 설치합니다.  
   
  관리되는 스레딩에서 <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 는 안정적인 관리되는 스레드 ID입니다. 이는 이 값을 가져온 애플리케이션 도메인과 관계없이 스레드 수명 동안 다른 모든 스레드의 값과 충돌하지 않습니다.  
-  
-> [!NOTE]
-> 관리되지 않는 호스트가 관리되는 스레드와 관리되지 않는 스레드 간의 관계를 제어할 수 있으므로 운영 체제 **ThreadId** 는 관리되는 스레드에 대한 고정 관계를 포함하지 않습니다. 특히, 정교한 호스트는 파이버 API를 사용하여 동일한 운영 체제 스레드에 대해 관리되는 여러 스레드를 예약하거나 다양한 운영 체제 스레드 간에 관리되는 스레드를 이동할 수 있습니다.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Win32 스레딩에서 관리되는 스레딩으로 매핑
 
@@ -71,7 +68,7 @@ ms.locfileid: "73127551"
 
 .NET 스레딩 모델은 [파이버](/windows/desktop/procthread/fibers)를 지원하지 않습니다. 파이버를 사용하여 구현된 관리되지 않는 함수를 호출하면 안 됩니다. 이러한 호출로 인해 .NET 런타임에서 크래시가 발생할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
 - <xref:System.Threading.ThreadState>

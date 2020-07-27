@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Transform 컨트롤 패턴 구현
+description: UI 자동화에서 Transform 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. ITransformProvider 인터페이스의 필수 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Transform
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180047"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168213"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>UI 자동화 Transform 컨트롤 패턴 구현
 > [!NOTE]
@@ -37,14 +38,14 @@ ms.locfileid: "79180047"
 ## <a name="required-members-for-itransformprovider"></a>ITransformProvider에 필요한 멤버  
  <xref:System.Windows.Automation.Provider.ITransformProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|메서드|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -54,14 +55,14 @@ ms.locfileid: "79180047"
   
 |예외 유형|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 거짓인 경우.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 거짓인 경우.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 거짓인 경우.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> 이 false 인 경우|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> 이 false 인 경우|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> 이 false 인 경우|  
   
 ## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289475"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924580"
 ---
 # <a name="model-builder-azure-training-resources"></a>모델 작성기 Azure 학습 리소스
 
@@ -56,7 +56,7 @@ Azure Machine Learning 작업 영역을 만들려면 다음이 필요합니다.
 
 ## <a name="training"></a>교육
 
-Azure에 대한 학습은 모델 작성기 이미지 분류 시나리오에만 사용할 수 있습니다. 이 모델을 학습시키는 데 사용되는 알고리즘은 ResNet50 아키텍처를 기반으로 한 심층 신경망입니다. 학습 프로세스에는 어느 정도 시간이 걸리며, 선택한 컴퓨팅 크기 및 데이터의 양에 따라 걸리는 시간이 달라질 수 있습니다. 처음 모델을 학습시킬 때는 리소스를 프로비저닝해야 하므로 학습 시간이 약간 길어질 수 있습니다. Visual Studio에서 “Monitor current run in Azure portal”(Azure Portal에서 현재 실행 모니터링) 링크를 선택하여 실행의 진행률을 추적할 수 있습니다.
+Azure에 대한 학습은 모델 작성기 이미지 분류 시나리오에만 사용할 수 있습니다. 이 모델을 학습시키는 데 사용되는 알고리즘은 ResNet50 아키텍처를 기반으로 한 심층 신경망입니다. 학습 프로세스에는 어느 정도 시간이 걸리며, 선택한 컴퓨팅 크기 및 데이터의 양에 따라 걸리는 시간이 달라질 수 있습니다. Visual Studio에서 “Monitor current run in Azure portal”(Azure Portal에서 현재 실행 모니터링) 링크를 선택하여 실행의 진행률을 추적할 수 있습니다.
 
 ## <a name="results"></a>결과
 

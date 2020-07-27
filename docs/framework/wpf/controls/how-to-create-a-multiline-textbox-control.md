@@ -1,29 +1,30 @@
 ---
 title: '방법: 여러 줄 TextBox 컨트롤 만들기'
+description: XAML을 사용 하 여 Windows Presentation Foundation 응용 프로그램에서 여러 줄의 텍스트에 맞게 확장 되는 TextBox 컨트롤을 정의 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-ms.openlocfilehash: 29fb4c9498fe163c36e71680242d3ef8cf98c089
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a88d4d768884df135afddb491431650b9ba2d24
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001275"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166254"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>방법: 여러 줄 TextBox 컨트롤 만들기
-이 예제에 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 정의 하는 <xref:System.Windows.Controls.TextBox> 컨트롤을 여러 줄의 텍스트에 맞게 자동으로 확장 됩니다.  
+이 예제에서는를 사용 하 여 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <xref:System.Windows.Controls.TextBox> 여러 줄의 텍스트에 맞게 자동으로 확장 되는 컨트롤을 정의 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 설정 합니다 <xref:System.Windows.Controls.TextBox.TextWrapping%2A> 특성을 **줄 바꿈** 입력 한 텍스트를 새 줄 바꿈이 발생 할 때 줄 가장자리를 <xref:System.Windows.Controls.TextBox> 컨트롤에 도달 하면 자동으로 확장 되는 <xref:System.Windows.Controls.TextBox> 제어 하는 경우 새 줄에 대 한 공간을 포함 하도록 필요 합니다.  
+ 특성을 <xref:System.Windows.Controls.TextBox.TextWrapping%2A> **wrap** 으로 설정 하면 컨트롤의 가장자리에 도달할 때 텍스트를 새 줄로 래핑하여 <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> 필요한 경우 새 줄의 공간을 포함 하도록 컨트롤을 자동으로 확장 합니다.  
   
- 설정 합니다 <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> 특성을 **true** RETURN 키를 누르면 자동으로 다시 한 번 확장 삽입할 새 줄을 <xref:System.Windows.Controls.TextBox> 필요한 경우 새 줄에 대 한 공간을 포함 하도록 합니다.  
+ 특성을 <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> **true** 로 설정 하면 반환 키를 누를 때 새 줄이 삽입 됩니다 .를 다시 한 번 자동으로 확장 <xref:System.Windows.Controls.TextBox> 하 여 필요한 경우 새 줄의 공간을 포함 합니다.  
   
- <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> 특성에 있는 스크롤 막대를 추가 합니다 <xref:System.Windows.Controls.TextBox>되도록 내용의 <xref:System.Windows.Controls.TextBox> 경우 스크롤할 수를 <xref:System.Windows.Controls.TextBox> 포함 하는 창 프레임의 크기 이상으로 확장.  
+ 특성은에 <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> 스크롤 막대를 추가 하 여가 해당 콘텐츠를 포함 <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> 하는 프레임 또는 창의 크기 보다 크게 확장 될 때까지 스크롤할 수 있도록 합니다.  
   
  [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.TextWrapping>
 - [TextBox 개요](textbox-overview.md)

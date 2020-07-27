@@ -1,5 +1,6 @@
 ---
 title: TextPattern 및 포함 개체 개요
+description: UI 자동화가 TextPattern 및 TextPatternRange를 사용 하 여 텍스트 문서나 컨테이너 내에서 포함 된 개체 또는 자식 요소를 노출 하는 방법에 대 한 개요를 읽으십시오.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201065"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163566"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 및 포함 개체 개요
 > [!NOTE]

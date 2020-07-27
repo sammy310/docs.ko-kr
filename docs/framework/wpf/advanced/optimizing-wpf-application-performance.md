@@ -1,5 +1,6 @@
 ---
 title: 앱 성능 최적화
+description: 이러한 리소스를 사용 하 여 성능 계획 및 하드웨어 활용과 같은 Windows Presentation Foundation 응용 프로그램의 성능을 향상 시킵니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 54d69e87ef2a9c5318e394422e3bcfcabcc76210
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 165caaf102a66988db0254839a947b8e262a386d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646257"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166326"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF 애플리케이션 성능 최적화
-이 섹션은 응용 프로그램의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 성능을 향상시키는 방법을 찾고 있는 응용 프로그램 개발자를 위한 참조입니다. Microsoft .NET Framework를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]처음 접하는 개발자인 경우 먼저 두 플랫폼에 익숙해져야 합니다. 이 섹션에서는 두 가지 모두에 대한 실무 지식을 가정하고 응용 프로그램을 실행하고 실행할 수 있을 만큼 충분히 알고 있는 프로그래머를 위해 작성되었습니다.  
+이 섹션은 응용 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 프로그램의 성능을 향상 시키는 방법을 찾고 있는 응용 프로그램 개발자를 위한 참조로 제공 됩니다. Microsoft .NET Framework 및를 처음 사용 하는 개발자는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 먼저 두 플랫폼에 대해 잘 알고 있어야 합니다. 이 섹션에서는 두 가지 모두에 대 한 실무 지식이 있다고 가정 하 고, 응용 프로그램을 실행 하는 데 충분 한 지식이 이미 있는 프로그래머를 위해 작성 되었습니다.  
   
 > [!NOTE]
-> 이 섹션에서 제공하는 성능 데이터는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 512 RAM과 ATI Radeon 9700 그래픽 카드가 있는 2.8GHz PC에서 실행되는 응용 프로그램을 기반으로 합니다.  
+> 이 섹션에서 제공 하는 성능 데이터는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 2.8 GHZ PC에서 실행 되는 응용 프로그램을 기반으로 하며 512 RAM 및 ATI Radeon 9700 그래픽 카드를 사용 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [애플리케이션 성능 계획](planning-for-application-performance.md)  
@@ -49,7 +50,7 @@ ms.locfileid: "81646257"
 - <xref:System.Windows.Media.RenderCapability>
 - [그래픽 렌더링 계층](graphics-rendering-tiers.md)
 - [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [레이아웃](layout.md)
+- [레이아웃](layout.md):
 - [WPF의 트리](trees-in-wpf.md)
 - [Drawing 개체 개요](../graphics-multimedia/drawing-objects-overview.md)
 - [DrawingVisual 개체 사용](../graphics-multimedia/using-drawingvisual-objects.md)

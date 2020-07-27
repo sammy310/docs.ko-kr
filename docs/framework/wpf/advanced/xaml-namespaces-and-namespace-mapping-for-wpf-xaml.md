@@ -1,5 +1,6 @@
 ---
-title: XAML 네임스페이스 및 네임스페이스 매핑
+title: XAML 네임 스페이스 및 네임 스페이스 매핑
+description: Windows Presentation Foundation XAML 파일의 루트 태그에서 자주 발견 되는 두 XAML 네임 스페이스 매핑의 현재 상태와 용도에 대해 자세히 알아보세요.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 9b01643e8f8d77073595253580ebea60fabfd23b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42808df8e7483f60b1420fda890fe374493538f1
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186242"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168372"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "79186242"
   
  이러한 선언 간의 관계에서 `x:` 접두사 매핑은 XAML 언어 정의의 일부인 내장 항목을 지원하며, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 XAML을 언어로 사용하고 XAML에 대한 해당 개체의 어휘를 정의하는 하나의 구현입니다. WPF 어휘의 사용이 XAML 내장 항목 사용보다 훨씬 더 일반적일 것이므로 WPF 어휘가 기본값으로 매핑됩니다.  
   
- `x:` XAML 언어 내장 지원을 매핑하기 위한 접두사 규칙 다음에는 프로젝트 템플릿, 샘플 코드 및 이 SDK 내의 언어 기능에 대한 설명서가 있습니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md) 또는 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.  
+ `x:`XAML 언어 내장 함수를 매핑하기 위한 접두사 규칙 뒤에는 프로젝트 템플릿, 샘플 코드 및이 SDK 내 언어 기능의 설명서가 나옵니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md) 또는 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>사용자 지정 클래스 및 어셈블리 매핑  
@@ -49,9 +50,9 @@ ms.locfileid: "79186242"
   
  `clr-namespace:` 요소로 노출되는 공용 형식을 포함하는 어셈블리 내에서 선언된 CLR 네임스페이스입니다.  
   
- `assembly=`참조된 CLR 네임스페이스의 일부 또는 전부를 포함하는 어셈블리입니다. 이 값은 일반적으로 경로가 아니라 어셈블리의 이름이며 .dll 또는 .exe와 같은 확장명을 포함하지 않습니다. 해당 어셈블리의 경로는 매핑하려는 XAML을 포함하는 프로젝트 파일에서 프로젝트 참조로 설정해야 합니다. 버전 전환 및 강력한 이름 서명을 통합하기 `assembly` 위해 값은 간단한 <xref:System.Reflection.AssemblyName>문자열 이름이 아니라 에 의해 정의된 문자열일 수 있습니다.  
+ `assembly=`참조 된 CLR 네임 스페이스의 전체 또는 일부를 포함 하는 어셈블리입니다. 이 값은 일반적으로 경로가 아니라 어셈블리의 이름이며 .dll 또는 .exe와 같은 확장명을 포함하지 않습니다. 해당 어셈블리의 경로는 매핑하려는 XAML을 포함하는 프로젝트 파일에서 프로젝트 참조로 설정해야 합니다. 버전 관리 및 강력한 이름 서명을 통합 하기 위해이 값은 `assembly` <xref:System.Reflection.AssemblyName> 단순 문자열 이름이 아니라에 의해 정의 된 문자열일 수 있습니다.  
   
- `clr-namespace` 토큰과 해당 값을 구분하는 문자는 콜론(:)이지만, `assembly` 토큰과 해당 값을 구분하는 문자는 등호(=)입니다. 이 두 토큰 간을 구분하는 데 사용되는 문자는 세미콜론입니다. 또한 선언의 공백은 포함하지 마십시오.  
+ `clr-namespace` 토큰과 해당 값을 구분하는 문자는 콜론(:)이지만, `assembly` 토큰과 해당 값을 구분하는 문자는 등호(=)입니다. 이 두 토큰 간을 구분하는 데 사용되는 문자는 세미콜론입니다. 또한 선언에서 아무 곳에 나 공백을 포함 하지 마십시오.  
   
 ### <a name="a-basic-custom-mapping-example"></a>기본 사용자 지정 매핑 예제  
  다음 코드에서는 예제 사용자 지정 클래스를 정의합니다.  
@@ -105,33 +106,33 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>CLR 네임스페이스를 어셈블리의 XML 네임스페이스에 매핑  
- WPF는 여러 CLR 네임스페이스를 단일 XAML 네임스페이스에 매핑하기 위해 XAML 프로세서에서 사용되는 CLR 특성을 정의합니다. 이 특성은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>어셈블리를 생성하는 소스 코드의 어셈블리 수준에 배치됩니다. WPF 어셈블리 소스 코드는 이 특성을 사용하여 <xref:System.Windows> 및 <xref:System.Windows.Controls>와 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 같은 다양한 일반적인 네임스페이스를 네임스페이스에 매핑합니다.  
+ WPF는 여러 CLR 네임스페이스를 단일 XAML 네임스페이스에 매핑하기 위해 XAML 프로세서에서 사용되는 CLR 특성을 정의합니다. 이 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 은 어셈블리를 생성 하는 소스 코드의 어셈블리 수준에 배치 됩니다. WPF 어셈블리 소스 코드에서는이 특성을 사용 하 여 및와 같은 다양 한 일반 네임 스페이스를 <xref:System.Windows> <xref:System.Windows.Controls> `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 네임 스페이스에 매핑합니다.  
   
- 는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XML/XAML 네임스페이스 이름과 CLR 네임스페이스 이름의 두 가지 매개 변수를 사용합니다. 여러 CLR 네임스페이스를 동일한 XML 네임스페이스에 매핑하기 위해 두 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 개 이상의 CLR 네임스페이스가 존재할 수 있습니다. 매핑한 후에는 partial 클래스의 코드 숨김 페이지에서 적절한 `using` 문을 사용하여 정규화된 이름 없이도 이러한 네임스페이스의 멤버를 참조할 수 있습니다. 자세한 내용은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 참조하세요.  
+ 는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 두 개의 매개 변수인 XML/XAML 네임 스페이스 이름과 CLR 네임 스페이스 이름을 사용 합니다. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>여러 CLR 네임 스페이스를 동일한 XML 네임 스페이스에 매핑하기 위해 둘 이상의가 있을 수 있습니다. 매핑한 후에는 partial 클래스의 코드 숨김 페이지에서 적절한 `using` 문을 사용하여 정규화된 이름 없이도 이러한 네임스페이스의 멤버를 참조할 수 있습니다. 자세한 내용은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 참조하세요.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML 템플릿의 디자이너 네임스페이스 및 기타 접두사  
  여러 가지 WPF XAML 개발 환경 및/또는 디자인 도구를 사용하는 경우 XAML 태그 내에 다른 XAML 네임스페이스 및 접두사가 정의되어 있을 수 있습니다.  
   
- 비주얼 스튜디오용 WPF 디자이너는 일반적으로 접두사에 `d:`매핑되는 디자이너 네임스페이스를 사용합니다. WPF에 대한 최신 프로젝트 템플릿은 이 XAML 네임스페이스를 미리 매핑하여 비주얼 스튜디오 및 기타 디자인 환경에 대한 WPF 디자이너 간의 XAML 교환을 지원할 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
+ Visual Studio 용 WPF 디자이너는 일반적으로 접두사에 매핑되는 디자이너 네임 스페이스를 사용 `d:` 합니다. WPF 용 최신 프로젝트 템플릿은 Visual Studio 용 WPF 디자이너와 기타 디자인 환경의 XAML 교환을 지원 하기 위해이 XAML 네임 스페이스를 미리 매핑할 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
   
  매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:`은 태그 호환성을 위해 사용되며, XAML에 반드시 필요하지는 않은 태그 호환성 패턴을 활용합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 이 개념과 WPF의 관련성에 대한 자세한 내용은 [태그 호환성(mc:) 언어 기능](markup-compatibility-mc-language-features.md)을 참조하세요.  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 및 어셈블리 로딩  
- WPF에 대한 XAML 스키마 컨텍스트는 WPF 응용 프로그램 모델과 통합되며, 이 <xref:System.AppDomain>경우 CLR 정의 개념의 을 사용합니다. 다음 시퀀스는 XAML 스키마 컨텍스트가 WPF 사용 <xref:System.AppDomain> 및 기타 요인에 따라 어셈블리를 로드하거나 런타임 또는 디자인 시간에 형식을 찾는 방법을 해석하는 방법을 설명합니다.  
+ WPF에 대 한 XAML 스키마 컨텍스트는 WPF 응용 프로그램 모델과 통합 되며,이 모델은의 CLR 정의 개념을 사용 합니다 <xref:System.AppDomain> . 다음 시퀀스에서는 XAML 스키마 컨텍스트에서 및 기타 요소의 WPF 사용에 따라 어셈블리를 로드 하거나 런타임 또는 디자인 타임에 형식을 찾는 방법을 해석 하는 방법을 설명 합니다 <xref:System.AppDomain> .  
   
-1. <xref:System.AppDomain>을 반복하여 가장 최근에 로드된 어셈블리부터 시작하여 이름의 모든 측면과 일치하는 이미 로드된 어셈블리를 찾습니다.  
+1. 를 반복 <xref:System.AppDomain> 하 여 가장 최근에 로드 된 어셈블리에서 시작 하는 이름의 모든 측면과 일치 하는 이미 로드 된 어셈블리를 찾습니다.  
   
-2. 이름이 정규화된 경우 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화된 이름을 호출합니다.  
+2. 이름이 정규화 된 경우 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 대해를 호출 합니다.  
   
 3. 약식 이름 + 정규화된 이름의 공개 키 토큰이 로드한 태그의 소스 어셈블리와 일치하는 경우 이 어셈블리를 반환합니다.  
   
-4. 짧은 이름 + 공개 키 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>토큰을 사용하여 을 호출합니다.  
+4. 약식 이름 + 공개 키 토큰을 사용 하 여를 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 합니다.  
   
-5. 이름이 정규화되지 않은 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>경우 를 호출합니다.  
+5. 이름이 정규화 되지 않은 경우를 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 합니다.  
   
  느슨한 XAML에서는 로드할 소스 어셈블리가 없으므로 3단계가 사용되지 않습니다.  
   
- WPF에 대한 컴파일된 XAML(XamlBuildTask을 통해 생성됨)은 <xref:System.AppDomain> (1단계)에서 이미 로드된 어셈블리를 사용하지 않습니다. 또한 XamlBuildTask 출력에서 이름이 정규화되지 않아서는 안되므로 5단계가 적용되지 않습니다.  
+ WPF 용 컴파일된 XAML (XamlBuildTask를 통해 생성)은의 이미 로드 된 어셈블리를 사용 하지 않습니다 <xref:System.AppDomain> (1 단계). 또한 XamlBuildTask 출력에서 이름이 정규화되지 않아서는 안되므로 5단계가 적용되지 않습니다.  
   
  BAML도 정규화되지 않은 어셈블리 이름을 포함해서는 안되지만 PresentationBuildTask를 통해 생성된 컴파일된 BAML에서는 모든 단계를 사용합니다.  
   

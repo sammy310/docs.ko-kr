@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287456"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163121"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -139,8 +139,6 @@ Just-In-Time 컴파일러입니다.
 ## <a name="metapackage"></a>메타패키지
 
 고유한 라이브러리는 없고 종속성 목록만 갖는 NuGet 패키지입니다. 포함된 패키지는 필요에 따라 대상 프레임워크에 대한 API를 설정할 수 있습니다.
-
-[패키지, 메타패키지 및 프레임워크](../core/packages.md)를 참조하세요.
 
 ## <a name="mono"></a>Mono
 

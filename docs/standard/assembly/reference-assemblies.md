@@ -4,12 +4,12 @@ description: 라이브러리의 공용 API 화면만 포함하는 .NET에서 특
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43a9dab037f4d0f1926ff67f8f38eaa6734a6d67
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79141070"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164525"
 ---
 # <a name="reference-assemblies"></a>참조 어셈블리
 
@@ -25,7 +25,7 @@ ms.locfileid: "79141070"
 
 프로젝트에서 특정 API를 사용하려면 해당 어셈블리에 대한 참조를 추가해야 합니다. 구현 어셈블리 또는 참조 어셈블리에 참조를 추가할 수 있습니다. 참조 어셈블리를 사용할 수 있을 때마다 이 어셈블리를 사용하는 것이 좋습니다. 이렇게 하면 API 디자이너가 사용하도록 지정된 대상 버전에서 지원되는 API 멤버만 사용하게 됩니다. 참조 어셈블리를 사용하면 구현 세부 정보에 대한 종속성을 사용하지 않게 됩니다.
 
-.NET Framework 라이브러리의 참조 어셈블리는 대상 팩과 함께 배포됩니다. 독립 실행형 설치 관리자를 다운로드하거나 Visual Studio 설치 관리자에서 구성 요소를 선택하여 가져올 수 있습니다. 자세한 내용은 [개발자용 .NET Framework 설치](../../framework/install/guide-for-developers.md)를 참조하세요. .NET Core 및 .NET Standard의 경우 참조 어셈블리는 필요에 따라(NuGet을 통해) 자동으로 다운로드되고 참조됩니다. .NET Core 3.0 이상의 경우 핵심 프레임워크의 참조 어셈블리는 [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) 패키지에 있습니다([Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) 패키지는 3.0 이전 버전에 대신 사용됨). 자세한 내용은 .NET Core 가이드의 [패키지, 메타패키지 및 프레임워크](../../core/packages.md)를 참조하세요.
+.NET Framework 라이브러리의 참조 어셈블리는 대상 팩과 함께 배포됩니다. 독립 실행형 설치 관리자를 다운로드하거나 Visual Studio 설치 관리자에서 구성 요소를 선택하여 가져올 수 있습니다. 자세한 내용은 [개발자용 .NET Framework 설치](../../framework/install/guide-for-developers.md)를 참조하세요. .NET Core 및 .NET Standard의 경우 참조 어셈블리는 필요에 따라(NuGet을 통해) 자동으로 다운로드되고 참조됩니다. .NET Core 3.0 이상의 경우 핵심 프레임워크의 참조 어셈블리는 [Microsoft.NETCore.App.Ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) 패키지에 있습니다([Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) 패키지는 3.0 이전 버전에 대신 사용됨).
 
 **참조 추가** 대화 상자를 사용하여 Visual Studio에서 .NET Framework 어셈블리에 대한 참조를 추가하는 경우 목록에서 어셈블리를 선택하면 Visual Studio는 프로젝트에서 선택한 대상 프레임워크 버전에 해당하는 참조 어셈블리를 자동으로 찾습니다. [참조](/visualstudio/msbuild/common-msbuild-project-items#reference) 프로젝트 항목을 사용하여 MSBuild 프로젝트에 참조를 직접 추가하는 경우에도 동일하게 적용됩니다. 전체 파일 경로가 아닌 어셈블리 이름만 지정하면 됩니다. `-reference` 컴파일러 옵션([C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 및 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md))을 사용하거나 Roslyn API의 <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> 메서드를 사용하여 명령줄에서 이러한 어셈블리에 대한 참조를 추가할 때 올바른 대상 플랫폼 버전에 대한 참조 어셈블리 파일을 수동으로 지정해야 합니다. .NET Framework 참조 어셈블리 파일은 *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework* 디렉터리에 있습니다. .NET Core의 경우 `PreserveCompilationContext` 프로젝트 속성을 `true`로 설정하여 게시 작업이 대상 플랫폼의 참조 어셈블리를 출력 디렉터리의 *publish/refs* 하위 디렉터리로 복사하도록 할 수 있습니다. 그런 다음 이러한 참조 어셈블리 파일을 컴파일러에 전달할 수 있습니다. [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) 패키지에서 `DependencyContext`를 사용하면 해당 경로를 찾을 수 있습니다.
 

@@ -1,5 +1,6 @@
 ---
 title: ComboBox 스타일 및 템플릿
+description: Windows Presentation Foundation ComboBox 컨트롤의 스타일 및 템플릿에 대해 알아봅니다. ControlTemplate를 수정 하 여 컨트롤에 고유한 모양을 제공 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ComboBox [WPF], styles and templates
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: af7f8a544af5e9892a8f3f059048bbfd113d2491
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 5e929bafeaf849b4b5682a17ca51cb0aab963613
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865361"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165910"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox 스타일 및 템플릿
 이 항목에서는 컨트롤의 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.ComboBox> . 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [컨트롤에 대 한 템플릿 만들기](../../../desktop-wpf/themes/how-to-create-apply-template.md)를 참조 하세요.  
@@ -22,7 +23,7 @@ ms.locfileid: "86865361"
 ## <a name="combobox-parts"></a>ComboBox 파트  
  다음 표에서는 컨트롤의 명명 된 파트를 나열 합니다 <xref:System.Windows.Controls.ComboBox> .  
   
-|부분|형식|Description|  
+|부분|Type|Description|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|의 텍스트를 포함 합니다 <xref:System.Windows.Controls.ComboBox> .|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|콤보 상자의 항목이 들어 있는 드롭다운입니다.|  
@@ -59,7 +60,7 @@ ms.locfileid: "86865361"
 |MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.ComboBoxItem> 컨트롤 위에 있습니다.|  
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
-|선택됨|SelectionStates|항목이 현재 선택 되어 있습니다.|  
+|선택|SelectionStates|항목이 현재 선택 되어 있습니다.|  
 |선택 취소|SelectionStates|항목이 선택되어 있지 않습니다.|  
 |SelectedUnfocused|SelectionStates|항목이 선택되었지만 항목에 포커스가 없습니다.|  
 |Valid|ValidationStates|컨트롤은 클래스를 사용 하 <xref:System.Windows.Controls.Validation> 고 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false` 입니다.|  
@@ -77,7 +78,7 @@ ms.locfileid: "86865361"
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>

@@ -1,27 +1,28 @@
 ---
 title: UI 자동화 보안 개요
+description: Microsoft UI 자동화에 대 한 보안 모델 개요를 참조 하세요. 사용자 계정 컨트롤, 높은 권한이 필요한 작업 및 매니페스트 파일을 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d483f282db8ce8e5653d6d83361fa44df05f63f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448777"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163144"
 ---
 # <a name="ui-automation-security-overview"></a>UI 자동화 보안 개요
 
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
-이 개요에서는 Windows Vista의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 대 한 보안 모델을 설명 합니다.
+이 개요에서는 Windows Vista의에 대 한 보안 모델을 설명 합니다 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .
 
 <a name="User_Account_Control"></a>
 
-## <a name="user-account-control"></a>사용자 계정 컨트롤(User Account Control)
+## <a name="user-account-control"></a>사용자 계정 컨트롤
 
 보안은 Windows Vista의 주요 초점은 사용자가 더 높은 권한이 필요한 응용 프로그램 및 서비스를 실행할 수 없도록 차단 되지 않고 표준 (비관리자) 사용자로 실행할 수 있는 기능입니다.
 
@@ -41,7 +42,7 @@ UI 자동화 클라이언트는 더 높은 권한 수준에서 실행 중일 수
 
 ## <a name="manifest-files"></a>매니페스트 파일
 
-보호 된 시스템 UI에 대 한 액세스 권한을 얻으려면 다음과 같이 `requestedExecutionLevel` 태그에 `uiAccess` 특성을 포함 하는 매니페스트 파일을 사용 하 여 응용 프로그램을 빌드해야 합니다.
+보호 된 시스템 UI에 대 한 액세스 권한을 얻으려면 다음과 `uiAccess` 같이 태그에 특성을 포함 하는 매니페스트 파일을 사용 하 여 응용 프로그램을 빌드해야 합니다 `requestedExecutionLevel` .
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,4 +58,4 @@ UI 자동화 클라이언트는 더 높은 권한 수준에서 실행 중일 수
 
 이 코드에서 `level` 특성의 값은 예제일 뿐입니다.
 
-`uiAccess`은 기본적으로 "false"입니다. 즉, 특성을 생략 하거나 어셈블리에 대 한 매니페스트가 없는 경우 응용 프로그램은 보호 된 UI에 대 한 액세스 권한을 얻을 수 없습니다.
+`uiAccess`는 기본적으로 "false"입니다. 즉, 특성을 생략 하거나 어셈블리에 대 한 매니페스트가 없는 경우 응용 프로그램은 보호 된 UI에 대 한 액세스 권한을 얻을 수 없습니다.

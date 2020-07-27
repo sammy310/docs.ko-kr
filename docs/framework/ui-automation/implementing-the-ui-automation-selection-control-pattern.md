@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Selection 컨트롤 패턴 구현
+description: UI 자동화에서 Selection 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. ISelectionProvider 인터페이스에 필요한 멤버를 참조 하십시오.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection control pattern
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 083a4bb56fe76c1d65015ffabf741d7e1953d2ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180127"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163592"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI 자동화 Selection 컨트롤 패턴 구현
 > [!NOTE]
@@ -29,23 +30,23 @@ ms.locfileid: "79180127"
   
 - **볼륨** 슬라이더 컨트롤과 같이 최소, 최대, 연속 범위를 가진 컨트롤은 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 대신 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 합니다.  
   
-- **디스플레이 속성** 대화 상자의 **화면 해상도** 슬라이더 또는 Microsoft Word의 색상 **선택** 선택 컨트롤(아래 그림 참조)과 같이 <xref:System.Windows.Automation.Provider.ISelectionProvider>구현하는 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>자식 컨트롤을 관리하는 단일 선택 컨트롤을 구현해야 합니다. 자녀는 모두 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>을 구현해야 합니다.  
+- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> **표시 속성** 대화 상자의 **화면 해상도** 슬라이더 또는 Microsoft Word의 **색 선택** 선택 컨트롤 (아래 그림 참조)과 같이를 구현 하는 자식 컨트롤을 관리 하는 단일 선택 컨트롤은를 구현 해야 <xref:System.Windows.Automation.Provider.ISelectionProvider> 하며, 해당 자식 항목은 및를 모두 구현 해야 합니다 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> <xref:System.Windows.Automation.Provider.ISelectionItemProvider> .  
   
  ![노란색이 강조 표시된 색 선택](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  
   
-- 메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. 그래픽과 텍스트(예: Microsoft Outlook의 **보기 메뉴의 미리 보기** 창 **View** 항목)가 포함된 메뉴 항목으로 작업하고 상태를 전달해야 하는 경우 을 구현해야 <xref:System.Windows.Automation.Provider.IToggleProvider>합니다.  
+- 메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. Microsoft Outlook의 **보기** 메뉴에 있는 **미리 보기 창** 항목과 같이 그래픽과 텍스트가 모두 포함 된 메뉴 항목을 사용 하 여 작업 하는 경우를 구현 해야 <xref:System.Windows.Automation.Provider.IToggleProvider> 합니다.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider에 필요한 멤버  
  <xref:System.Windows.Automation.Provider.ISelectionProvider> 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.  
   
-|필요한 멤버|Type|메모|  
+|필요한 멤버|Type|참고|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|속성|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|속성|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 및 <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>를 사용하여 속성 변경 이벤트를 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|방법|None|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|행사|컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 상수가 허용하는 것보다 더 많은 추가 및 제거 이벤트를 보내야 하는 경우에 발생합니다.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|이벤트|컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 상수가 허용하는 것보다 더 많은 추가 및 제거 이벤트를 보내야 하는 경우에 발생합니다.|  
   
  <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 및 <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> 은 동적 속성일 수 있습니다. 예를 들어, 컨트롤의 초기 상태에서 기본적으로 항목이 선택되지 않을 수 있으며 이는 <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 가 `false`임을 나타냅니다. 그러나 항목이 선택된 후에는 컨트롤에 하나 이상의 항목이 항상 선택되어 있어야 합니다. 마찬가지로, 드문 경우지만 초기화될 때 컨트롤에서 여러 항목이 선택될 수 있지만 이후에는 하나의 선택 항목만 허용됩니다.  
   
@@ -64,5 +65,5 @@ ms.locfileid: "79180127"
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 SelectionItem 컨트롤 패턴 구현](implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

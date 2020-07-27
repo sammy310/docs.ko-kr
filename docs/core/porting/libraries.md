@@ -3,18 +3,18 @@ title: .NET Core로 라이브러리 포팅
 description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397910"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164286"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
 .NET Framework 라이브러리 코드를 .NET Core로 포팅하고, 플랫폼 간에 실행하고, 코드를 사용하는 앱의 도달 범위를 확장하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서에서는 다음을 전제로 합니다.
 
@@ -26,9 +26,6 @@ ms.locfileid: "79397910"
 
 [.NET 표준](../../standard/net-standard.md)\
 이 문서에서는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양에 관해 설명합니다.
-
-[패키지, 메타패키지 및 프레임워크](../packages.md)\
-이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 구현에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
 
 [플랫폼 간 도구로 라이브러리 개발](../tutorials/libraries.md)\
 이 문서에서는 .NET Core CLI를 사용하여 라이브러리를 작성하는 방법에 대해 설명합니다.

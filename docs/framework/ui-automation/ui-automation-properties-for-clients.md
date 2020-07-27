@@ -1,5 +1,6 @@
 ---
 title: 클라이언트에 대한 UI 자동화 속성
+description: Ui 자동화 클라이언트 응용 프로그램에 노출 되는 UI 자동화 속성의 개요를 참조 하세요.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 3ef1e7c6e21f30c5bdea096003f192c38059ab2e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe78d7da154d79a5f66ee6c190b199065675841f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441369"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163131"
 ---
 # <a name="ui-automation-properties-for-clients"></a>클라이언트에 대한 UI 자동화 속성
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 개요에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성이 UI 자동화 클라이언트 애플리케이션에 노출될 때 이 속성에 대해 설명합니다.  
   
@@ -30,12 +31,12 @@ ms.locfileid: "74441369"
  성능 향상을 위해 <xref:System.Windows.Automation.AutomationElement> 개체가 검색될 때 컨트롤 및 컨트롤 패턴의 속성 값을 캐시할 수 있습니다. 자세한 내용은 [UI 자동화 클라이언트에서 캐싱](caching-in-ui-automation-clients.md)을 참조 하세요.  
   
 ## <a name="property-ids"></a>속성 ID  
- Id (속성 식별자)는 <xref:System.Windows.Automation.AutomationProperty> 개체에서 캡슐화 되는 고유한 상수 값입니다. UI 자동화 클라이언트 응용 프로그램은 <xref:System.Windows.Automation.AutomationElement> 클래스 또는 <xref:System.Windows.Automation.ScrollPattern>와 같은 적절 한 컨트롤 패턴 클래스에서 이러한 Id를 가져옵니다. UI 자동화 공급자는 이러한 ID를 <xref:System.Windows.Automation.AutomationElementIdentifiers> 또는 <xref:System.Windows.Automation.ScrollPatternIdentifiers>와 같은 컨트롤 패턴 식별자 클래스 중 하나에서 가져옵니다.  
+ Id (속성 식별자)는 개체에서 캡슐화 되는 고유한 상수 값입니다 <xref:System.Windows.Automation.AutomationProperty> . UI 자동화 클라이언트 응용 프로그램은 <xref:System.Windows.Automation.AutomationElement> 클래스 또는와 같은 적절 한 컨트롤 패턴 클래스에서 이러한 id를 가져옵니다 <xref:System.Windows.Automation.ScrollPattern> . UI 자동화 공급자는 이러한 ID를 <xref:System.Windows.Automation.AutomationElementIdentifiers> 또는 <xref:System.Windows.Automation.ScrollPatternIdentifiers>와 같은 컨트롤 패턴 식별자 클래스 중 하나에서 가져옵니다.  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 의 <xref:System.Windows.Automation.AutomationProperty> 숫자는 공급자가 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 메서드에서 쿼리되는 속성을 식별하는 데 사용됩니다. 일반적으로 클라이언트 애플리케이션은 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>를 검사할 필요가 없습니다. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 은 디버깅 및 진단 용도로만 사용됩니다.  
   
 ## <a name="property-conditions"></a>속성 조건  
- 속성 Id는 <xref:System.Windows.Automation.AutomationElement> 개체를 찾는 데 사용 되는 <xref:System.Windows.Automation.PropertyCondition> 개체를 생성 하는 데 사용 됩니다. 예를 들어, 특정 이름의 <xref:System.Windows.Automation.AutomationElement> 를 찾거나 활성화된 모든 컨트롤을 찾을 수 있습니다. 각 <xref:System.Windows.Automation.PropertyCondition> 은 속성과 일치해야 하는 <xref:System.Windows.Automation.AutomationProperty> 식별자 및 값을 지정합니다.  
+ 속성 Id는 <xref:System.Windows.Automation.PropertyCondition> 개체를 찾는 데 사용 되는 개체를 생성 하는 데 사용 됩니다 <xref:System.Windows.Automation.AutomationElement> . 예를 들어, 특정 이름의 <xref:System.Windows.Automation.AutomationElement> 를 찾거나 활성화된 모든 컨트롤을 찾을 수 있습니다. 각 <xref:System.Windows.Automation.PropertyCondition> 은 속성과 일치해야 하는 <xref:System.Windows.Automation.AutomationProperty> 식별자 및 값을 지정합니다.  
   
  자세한 내용은 다음 참조 항목을 참조하세요.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "74441369"
 ## <a name="additional-automationelement-properties"></a>추가 AutomationElement 속성  
  <xref:System.Windows.Automation.AutomationElement.Current%2A> 및 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 외에, <xref:System.Windows.Automation.AutomationElement> 에는 다음과 같은 속성이 있으며 이러한 속성은 간단한 속성 접근자를 통해 검색됩니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.Automation.AutomationElement.CachedChildren%2A>|캐시에 있는 자식 <xref:System.Windows.Automation.AutomationElement> 개체의 컬렉션입니다.|  
 |<xref:System.Windows.Automation.AutomationElement.CachedParent%2A>|캐시에 있는 <xref:System.Windows.Automation.AutomationElement> 부모 개체입니다.|  
@@ -99,6 +100,6 @@ ms.locfileid: "74441369"
   
 ## <a name="see-also"></a>참고 항목
 
-- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
+- [UI 자동화 클라이언트에서 캐싱](caching-in-ui-automation-clients.md)
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
 - [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)

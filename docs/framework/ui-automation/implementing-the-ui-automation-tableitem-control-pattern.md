@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 TableItem 컨트롤 패턴 구현
+description: UI 자동화에서 TableItem 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. ITableItemProvider 인터페이스에 필요한 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180072"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163517"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>UI 자동화 TableItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -24,15 +25,15 @@ ms.locfileid: "79180072"
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
   
-- 관련 그리드 항목 기능에 대해서는 [UI 자동화 GridItem 제어 패턴 구현을](implementing-the-ui-automation-griditem-control-pattern.md)참조하십시오.  
+- 관련 그리드 항목 기능에 대해서는 [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)을 참조 하세요.  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider에 필요한 멤버  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|메서드|없음|  
   
  이 컨트롤 패턴에는 연결된 속성 또는 이벤트가 없습니다.  
   
@@ -47,5 +48,5 @@ ms.locfileid: "79180072"
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 Table 컨트롤 패턴 구현](implementing-the-ui-automation-table-control-pattern.md)
 - [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

@@ -1,5 +1,6 @@
 ---
 title: 명령 개요
+description: 장치 입력 보다 더 의미 수준에서 입력 처리를 제공 하는 Windows Presentation Foundation의 입력 메커니즘인 명령에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7d12fbf0de9b1546f15061ab7eb1318378bbbb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186209"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168120"
 ---
 # <a name="commanding-overview"></a>명령 개요
 <a name="introduction"></a> 명령은 디바이스 입력보다 더 의미 있는 수준의 입력 처리를 제공하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 입력 메커니즘입니다. 이러한 명령의 예로는 많은 애플리케이션의 **복사**, **잘라내기** 및 **붙여넣기** 작업을 들 수 있습니다.  
@@ -173,9 +174,9 @@ ms.locfileid: "79186209"
 ## <a name="command-library"></a>명령 라이브러리  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 미리 정의된 명령 집합을 제공합니다.  명령 라이브러리는 다음과 같은 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> 및 <xref:System.Windows.Input.ComponentCommands> 클래스로 구성됩니다.  이러한 클래스는 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> 및 <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> 및 <xref:System.Windows.Input.MediaCommands.Pause%2A> 같은 명령을 제공합니다.  
   
- 이 중 많은 명령이 기본 입력 바인딩 집합을 포함합니다.  예를 들어 응용 프로그램에서 복사 명령을 처리한다고 지정하면 키보드 바인딩 "CTRL+C"가 자동으로 받게 되며 Tablet PC 펜 제스처 및 음성 정보와 같은 다른 입력 장치에 대한 바인딩도 가져옵니다.  
+ 이 중 많은 명령이 기본 입력 바인딩 집합을 포함합니다.  예를 들어 응용 프로그램에서 복사 명령을 처리 하도록 지정 하는 경우 자동으로 키보드 바인딩 "CTRL + C"가 표시 되 고, Tablet PC 펜 제스처 및 음성 정보와 같은 다른 입력 장치에 대 한 바인딩도 표시 됩니다.  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 다양한 명령 라이브러리에서 명령을 참조할 때 일반적으로 정적 명령 특성을 노출하는 라이브러리 클래스의 클래스 이름을 생략할 수 있습니다. 일반적으로 명령 이름은 문자열처럼 명확하지 않으며 명령의 논리적 그룹화를 제공하기 위한 소유 유형이 존재하지만 명확성을 위해 반드시 필요하지는 않습니다. 예를 들어 더 자세한 `Command="ApplicationCommands.Cut"` 대신 `Command="Cut"`을 지정할 수 있습니다. 이것은 명령에 대한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에 내장된 편리한 메커니즘입니다(보다 정확하게는 <xref:System.Windows.Input.ICommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 로드 시 참조하는 형식 변환기 동작입니다).  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 다양한 명령 라이브러리에서 명령을 참조할 때 일반적으로 정적 명령 특성을 노출하는 라이브러리 클래스의 클래스 이름을 생략할 수 있습니다. 일반적으로 명령 이름은 문자열처럼 명확하지 않으며 명령의 논리적 그룹화를 제공하기 위한 소유 유형이 존재하지만 명확성을 위해 반드시 필요하지는 않습니다. 예를 들어 더 자세한 `Command="ApplicationCommands.Cut"` 대신 `Command="Cut"`을 지정할 수 있습니다. 명령에 대 한 프로세서에 기본 제공 되는 편리한 메커니즘입니다 .이 메커니즘은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Input.ICommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로드 시 프로세서가 참조 하는의 형식 변환기 동작입니다.  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>사용자 지정 명령 만들기  

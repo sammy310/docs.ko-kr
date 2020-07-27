@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Value 컨트롤 패턴 구현
+description: UI 자동화에서 Value 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IValueProvider 인터페이스에 필요한 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: eb77f26bbe3546a3f90804c3648f8547fb6abad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180084"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168199"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI 자동화 Value 컨트롤 패턴 구현
 > [!NOTE]
@@ -36,7 +37,7 @@ ms.locfileid: "79180084"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 는 서식 정보 및 하위 문자열 값 검색을 지원하지 않습니다. 이러한 시나리오에서는 <xref:System.Windows.Automation.Provider.ITextProvider> 를 구현합니다.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>색상 값(예: "노란색")과 이에 상응하는 내부 RGB 구조 간의 문자열 매핑을 지원하는 Microsoft Word의 **색상 선택** 선택 컨트롤(아래 그림)과 같은 컨트롤에 의해 구현되어야 합니다.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>는 색 값 (예: "노란색") 및 해당 하는 내부 RGB 구조 간의 문자열 매핑을 지 원하는 Microsoft Word의 **색 선택** 선택 컨트롤 (아래 그림 참조)과 같은 컨트롤에서 구현 해야 합니다.  
   
  ![노란색이 강조 표시된 색 선택](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  
@@ -47,27 +48,27 @@ ms.locfileid: "79180084"
 ## <a name="required-members-for-ivalueprovider"></a>IValueProvider에 필요한 멤버  
  <xref:System.Windows.Automation.Provider.IValueProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|속성|None|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|속성|None|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|방법|None|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|속성|없음|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|속성|없음|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|메서드|없음|  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 로캘 관련 정보가 잘못된 형식의 날짜와 같은 잘못된 형식으로 컨트롤에 전달되는 경우.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 새 값을 문자열에서 컨트롤이 인식하는 형식으로 변환할 수 없는 경우.|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 활성화되지 않은 컨트롤을 조작하려고 시도하는 경우|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -로캘 관련 정보가 잘못 된 형식의 날짜와 같은 잘못 된 형식으로 컨트롤에 전달 되는 경우입니다.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -새 값을 문자열에서 컨트롤이 인식 하는 형식으로 변환할 수 없는 경우입니다.|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -사용 하도록 설정 되지 않은 컨트롤을 조작 하려고 한 경우.|  
   
 ## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [값 패턴 삽입 텍스트 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [ValuePattern Insert 텍스트 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

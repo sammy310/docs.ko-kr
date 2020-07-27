@@ -1,16 +1,17 @@
 ---
 title: UI 자동화 요소 가져오기
+description: UI (사용자 인터페이스) 요소에 대해 UI 자동화 요소 (AutomationElement) 개체를 가져오는 다양 한 방법을 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b741dde3b30334ba8fa990d73044da7e3bdd2da
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179995"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168168"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
@@ -98,6 +99,6 @@ ms.locfileid: "79179995"
   
 ## <a name="see-also"></a>참고 항목
 
-- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [속성 조건에 따라 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)

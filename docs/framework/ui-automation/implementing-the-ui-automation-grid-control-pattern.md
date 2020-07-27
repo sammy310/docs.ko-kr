@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Grid 컨트롤 패턴 구현
+description: UI 자동화에서 GridPattern grid 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 이해 합니다. IGridProvider 인터페이스를 구현 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180223"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165873"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI 자동화 Grid 컨트롤 패턴 구현
 > [!NOTE]
@@ -46,11 +47,11 @@ ms.locfileid: "79180223"
 ## <a name="required-members-for-igridprovider"></a>IGridProvider에 필요한 멤버  
  IGridProvider 인터페이스를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|Type|메모|  
+|필요한 멤버|Type|참고|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|메서드|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -58,10 +59,10 @@ ms.locfileid: "79180223"
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 요청된 행 좌표가 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 보다 크거나 열 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>좌표가 보다 큰 경우.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 요청된 행 또는 열 좌표 중 하나가 0보다 적은 경우.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> 요청 된 행 좌표가 보다 크거나 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 열 좌표가 보다 큰 경우 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 입니다.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -요청 된 행 또는 열 좌표 중 하나가 0 보다 작은 경우|  
   
 ## <a name="see-also"></a>참고 항목
 
@@ -69,5 +70,5 @@ ms.locfileid: "79180223"
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Toggle 컨트롤 패턴 구현
+description: UI 자동화에서 Toggle 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IToggleProvider 인터페이스의 필수 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Toggle control pattern
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: 5f64842d31d46af3d648b9b570d1cfb210e2910a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9ae850a560101582b5f1a461de19f260ef59798
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180059"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168027"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI 자동화 Toggle 컨트롤 패턴 구현
 > [!NOTE]
@@ -37,10 +38,10 @@ ms.locfileid: "79180059"
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider에 필요한 멤버  
  <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|방법|None|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|속성|None|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|속성|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -54,5 +55,5 @@ ms.locfileid: "79180059"
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
 - [UI 자동화를 사용하여 확인란의 전환 상태 가져오기](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)
