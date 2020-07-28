@@ -1,5 +1,6 @@
 ---
 title: '연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시'
+description: 이 연습을 사용 하 여 SQL Server 데이터베이스에서 데이터를 가져와 Windows Presentation Foundation DataGrid 컨트롤에 표시 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591035"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167546"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시
 
@@ -47,7 +48,7 @@ ms.locfileid: "84591035"
 
 6. 데이터 연결 선택 화면에서 AdventureWorksLT2008 데이터베이스에 대 한 연결을 제공 합니다. 자세한 내용은 [데이터 연결 선택 대화 상자](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100))를 참조 하세요.
 
-    이름이이 `AdventureWorksLT2008Entities` 고 **다른 이름으로 app.config의 엔터티 연결 설정 저장** 확인란이 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.
+    이름이이 `AdventureWorksLT2008Entities` 고 **App.Config 다음으로 엔터티 연결 설정 저장** 확인란이 선택 되어 있는지 확인 하 고 **다음**을 클릭 합니다.
 
 7. 데이터베이스 개체 선택 화면에서 테이블 노드를 확장 하 고 **제품 및 제품** **범주** 테이블을 선택 합니다.
 
@@ -97,6 +98,6 @@ ms.locfileid: "84591035"
 
      ![SQL 데이터베이스의 데이터가 있는 DataGrid](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.DataGrid>

@@ -1,5 +1,6 @@
 ---
 title: UI 자동화 및 Microsoft Active Accessibility
+description: 응용 프로그램에 액세스할 수 있도록 하기 위한 이전 솔루션인 UI 자동화와 Microsoft Active Accessibility 간의 차이점을 이해 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144788"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164068"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
 > [!NOTE]
@@ -71,7 +72,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |Active Accessibility 역할|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 형식|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|단추|  
-|ROLE_SYSTEM_CLIENT|캘린더|  
+|ROLE_SYSTEM_CLIENT|일정|  
 |ROLE_SYSTEM_CHECKBUTTON|확인란|  
 |ROLE_SYSTEM_COMBOBOX|콤보 상자|  
 |ROLE_SYSTEM_CLIENT|사용자 지정|  
@@ -79,7 +80,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |ROLE_SYSTEM_LISTITEM|데이터 항목|  
 |ROLE_SYSTEM_DOCUMENT|문서|  
 |ROLE_SYSTEM_TEXT|편집|  
-|ROLE_SYSTEM_GROUPING|그룹|  
+|ROLE_SYSTEM_GROUPING|그룹화|  
 |ROLE_SYSTEM_LIST|헤더|  
 |ROLE_SYSTEM_COLUMNHEADER|헤더 항목|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
@@ -191,7 +192,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> 속성 변경|  
 |EVENT_OBJECT_CONTENTSCROLLED|연결된 스크롤 막대의 또는  속성 변경|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_DEFACTIONCHANGE|해당 키 없음|  
+|EVENT_OBJECT_DEFACTIONCHANGE|동일한 요소 없음|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|정확하게 해당하는 요소가 없습니다. <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> 또는 <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> 속성 변경이 이에 해당할 수 있습니다.|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
@@ -204,19 +205,19 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
 |EVENT_OBJECT_SELECTIONADD|<xref:System.Windows.Automation.SelectionItemPattern.ElementAddedToSelectionEvent>|  
 |EVENT_OBJECT_SELECTIONREMOVE|<xref:System.Windows.Automation.SelectionItemPattern.ElementRemovedFromSelectionEvent>|  
-|EVENT_OBJECT_SELECTIONWITHIN|해당 키 없음|  
+|EVENT_OBJECT_SELECTIONWITHIN|동일한 요소 없음|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|다양한 속성 변경 이벤트|  
 |EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> 변경|  
-|EVENT_SYSTEM_ALERT|해당 키 없음|  
-|EVENT_SYSTEM_CAPTUREEND|해당 키 없음|  
-|EVENT_SYSTEM_CAPTURESTART|해당 키 없음|  
-|EVENT_SYSTEM_CONTEXTHELPEND|해당 키 없음|  
-|EVENT_SYSTEM_CONTEXTHELPSTART|해당 키 없음|  
+|EVENT_SYSTEM_ALERT|동일한 요소 없음|  
+|EVENT_SYSTEM_CAPTUREEND|동일한 요소 없음|  
+|EVENT_SYSTEM_CAPTURESTART|동일한 요소 없음|  
+|EVENT_SYSTEM_CONTEXTHELPEND|동일한 요소 없음|  
+|EVENT_SYSTEM_CONTEXTHELPSTART|동일한 요소 없음|  
 |EVENT_SYSTEM_DIALOGEND|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|  
 |EVENT_SYSTEM_DIALOGSTART|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|  
-|EVENT_SYSTEM_DRAGDROPEND|해당 키 없음|  
-|EVENT_SYSTEM_DRAGDROPSTART|해당 키 없음|  
+|EVENT_SYSTEM_DRAGDROPEND|동일한 요소 없음|  
+|EVENT_SYSTEM_DRAGDROPSTART|동일한 요소 없음|  
 |EVENT_SYSTEM_FOREGROUND|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
 |EVENT_SYSTEM_MENUEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
@@ -228,20 +229,20 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 속성 변경|  
 |EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> or <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 속성 변경|  
 |EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> or <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 속성 변경|  
-|EVENT_SYSTEM_SOUND|해당 키 없음|  
+|EVENT_SYSTEM_SOUND|동일한 요소 없음|  
 |EVENT_SYSTEM_SWITCHEND|동일한 요소가 없지만 <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> 이벤트는 새 애플리케이션이 포커스를 받았음을 신호로 알립니다.|  
-|EVENT_SYSTEM_SWITCHSTART|해당 키 없음|  
-|해당 키 없음|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 속성 변경|  
-|해당 키 없음|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> 이벤트|  
-|해당 키 없음|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
+|EVENT_SYSTEM_SWITCHSTART|동일한 요소 없음|  
+|동일한 요소 없음|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 속성 변경|  
+|동일한 요소 없음|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> 이벤트|  
+|동일한 요소 없음|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
 ## <a name="security"></a>보안  
@@ -249,6 +250,6 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 모델에서는 다른 공급자 코드를 통해 호출하는 데 공급자가 필요하지 않습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 핵심 서비스는 필요한 모든 집계를 수행합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [UI 자동화 기본 사항](index.md)

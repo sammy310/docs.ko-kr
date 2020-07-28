@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Table 컨트롤 패턴 구현
+description: UI 자동화에서 Table 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. ITableProvider 인터페이스에 필요한 멤버를 알고 있어야 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180112"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168237"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI 자동화 Table 컨트롤 패턴 구현
 > [!NOTE]
@@ -32,9 +33,9 @@ ms.locfileid: "79180112"
 - 열 및 행 헤더에는 모든 지원 헤더는 물론 기본 헤더가 포함될 수 있습니다.  
   
 > [!NOTE]
-> 이 개념은 사용자가 "이름" 열을 정의한 Microsoft Excel 스프레드시트에서 분명하게 나타납니다. 이제 이 열에는 사용자가 정의한 &quot;이름&quot; 헤더와 애플리케이션에서 할당한 해당 열의 영숫자 지정 두 개의 헤더가 있습니다.  
+> 이 개념은 사용자가 "이름" 열을 정의한 Microsoft Excel 스프레드시트에서 분명 하 게 드러납니다. 이제 이 열에는 사용자가 정의한 &quot;이름&quot; 헤더와 애플리케이션에서 할당한 해당 열의 영숫자 지정 두 개의 헤더가 있습니다.  
   
-- 관련 그리드 기능에 대한 [UI 자동화 그리드 제어 패턴 구현을](implementing-the-ui-automation-grid-control-pattern.md) 참조하십시오.  
+- 관련 그리드 기능에 대 한 [UI 자동화 Grid 컨트롤 패턴 구현](implementing-the-ui-automation-grid-control-pattern.md) 을 참조 하세요.  
   
  ![복잡한 헤더 항목이 있는 표](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 복잡한 열 헤더가 있는 테이블의 예  
@@ -46,11 +47,11 @@ ms.locfileid: "79180112"
 ## <a name="required-members-for-itableprovider"></a>ITableProvider에 필요한 멤버  
  ITableProvider 인터페이스에는 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|방법|None|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|메서드|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -58,12 +59,12 @@ ms.locfileid: "79180112"
 ## <a name="exceptions"></a>예외  
  이 컨트롤 패턴에 연결된 예외가 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 TableItem 컨트롤 패턴 구현](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [UI 자동화 Grid 컨트롤 패턴 구현](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

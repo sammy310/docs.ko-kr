@@ -1,5 +1,6 @@
 ---
 title: '방법: XAML에서 특수 문자 사용'
+description: Windows Presentation Foundation의 XAML 파일에서 사용 하기 위해 Visual Studio에서 유니코드 UTF-8 파일 형식의 특수 문자를 인코딩하는 구문에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -8,19 +9,19 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ac2388fd96aa26ddd99408ac9f847ce517958568
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740835"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168355"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>방법: XAML에서 특수 문자 사용
 Visual Studio에서 만든 태그 파일은 자동으로 유니코드 UTF-8 파일 형식으로 저장 됩니다. 즉, 대부분의 특수 문자 (예: 악센트 표시)가 올바르게 인코딩됩니다. 그러나 다르게 처리되는 일반적으로 사용되는 특수 문자 집합이 있습니다. 이러한 특수 문자는 인코딩에 대해 W3C (World Wide Web 컨소시엄) XML 표준을 따릅니다.  
   
  다음 표는 이 특수 문자 집합을 인코딩하는 구문을 보여 줍니다.  
   
-|문자|구문|설명|  
+|문자|구문|Description|  
 |---------------|------------|-----------------|  
 |<|`&lt;`|보다 작음 기호|  
 |>|`&gt;`|보다 큼 기호|  

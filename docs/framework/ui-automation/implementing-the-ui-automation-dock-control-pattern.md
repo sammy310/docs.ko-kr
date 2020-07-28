@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 Dock 컨트롤 패턴 구현
+description: UI 자동화 dock 컨트롤 패턴을 구현 하는 방법을 알아봅니다. DockPattern 컨트롤 패턴을 사용 하 여 컨트롤의 dock 속성을 노출 합니다. IDockProvider을 구현 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180202"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165901"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI 자동화 Dock 컨트롤 패턴 구현
 > [!NOTE]
@@ -40,10 +41,10 @@ Visual Studio에서 "클래스 뷰" 창이 DockPosition.Right이고 "오류 목�
 ## <a name="required-members-for-idockprovider"></a>IDockProvider에 필요한 멤버  
  IDockProvider 인터페이스를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|속성|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|방법|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|속성|없음|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|메서드|없음|  
   
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
@@ -51,14 +52,14 @@ Visual Studio에서 "클래스 뷰" 창이 DockPosition.Right이고 "오류 목�
 ## <a name="exceptions"></a>예외  
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
-|예외 형식|조건|  
+|예외 종류|조건|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - 컨트롤이 요청된 도크 스타일을 실행할 수 없는 경우.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -컨트롤이 요청 된 도킹 스타일을 실행할 수 없는 경우|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

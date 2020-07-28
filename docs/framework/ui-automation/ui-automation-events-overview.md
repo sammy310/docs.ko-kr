@@ -1,5 +1,6 @@
 ---
 title: UI 자동화 이벤트 개요
+description: Microsoft UI 자동화 이벤트 알림 개요를 참조 하세요. 이벤트 유형, UI 자동화 이벤트 식별자 및 UI 자동화 이벤트 인수를 검토 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, providers
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179888"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168099"
 ---
 # <a name="ui-automation-events-overview"></a>UI 자동화 이벤트 개요
 > [!NOTE]
@@ -28,7 +29,7 @@ ms.locfileid: "79179888"
 ## <a name="types-of-events"></a>이벤트 형식  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 다음 범주로 구분됩니다.  
   
-|행사|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |속성 변경|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소의 속성이나 컨트롤 패턴이 변경되면 발생합니다. 예를 들어 클라이언트가 애플리케이션의 확인란 컨트롤을 모니터링해야 하는 경우 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> 속성에 대한 속성 변경 이벤트를 수신하도록 등록할 수 있습니다. 확인란 컨트롤을 선택하거나 선택 취소하면 공급자가 이벤트를 발생시키며 클라이언트가 필요에 따라 동작할 수 있습니다.|  
 |요소 작업|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 결과가 최종 사용자나 프로그래밍 작업에 의해 변경되면(예: 단추를 클릭하거나 <xref:System.Windows.Automation.InvokePattern>을 통해 호출) 발생합니다.|  
@@ -66,7 +67,7 @@ ms.locfileid: "79179888"
 ## <a name="ui-automation-event-arguments"></a>UI 자동화 이벤트 인수  
  다음 클래스는 이벤트 인수를 캡슐화합니다.  
   
-|클래스|Description|  
+|클래스|설명|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|로딩 완료율을 포함하여 콘텐츠의 비동기 로드에 대한 정보를 포함합니다.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|추가 데이터가 필요 없는 간단한 이벤트에 대한 정보를 포함합니다.|  
@@ -81,8 +82,8 @@ ms.locfileid: "79179888"
   
  이벤트 식별자 목록은 [UI Automation Events for Clients](ui-automation-events-for-clients.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [클라이언트에 대한 UI 자동화 이벤트](ui-automation-events-for-clients.md)
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
 - [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)

@@ -1,17 +1,18 @@
 ---
 title: UI 자동화 ScrollItem 컨트롤 패턴 구현
+description: UI 자동화에서 ScrollItem 컨트롤 패턴을 구현 하기 위한 지침 및 규칙을 검토 합니다. IScrollItemProvider 인터페이스에 필요한 멤버를 참조 하십시오.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Scroll Item
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 3a0647ab98dcb86306573a0e9826fa7232fa9ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180140"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163578"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI 자동화 ScrollItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -31,9 +32,9 @@ ms.locfileid: "79180140"
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider에 필요한 멤버  
  다음 메서드는 IScrollProvider 인터페이스를 구현하는 데 필요합니다.  
   
-|필요한 멤버|멤버 형식|메모|  
+|필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|- 방법|None|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-메서드|없음|  
   
  이 컨트롤 패턴에는 연결된 속성 또는 이벤트가 없습니다.  
   
@@ -45,10 +46,10 @@ ms.locfileid: "79180140"
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|항목을 스크롤하여 볼 수 없는 경우:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)
