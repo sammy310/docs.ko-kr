@@ -1,5 +1,6 @@
 ---
 title: .NET Framework 도구
+description: .NET을 대상으로 하는 애플리케이션 및 구성 요소를 더 쉽게 만들고 배포하고 관리할 수 있게 해주는 .NET 도구 목록을 확인하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - command line, .NET Framework tools
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645558"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166845"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 
