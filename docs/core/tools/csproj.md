@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251207"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -180,7 +180,7 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-`DotNetCliToolReference`는 [더 이상 사용되지 않으며](https://github.com/dotnet/announcements/issues/107) [.NET Core Local Tools](https://aka.ms/local-tools)로 대체되었습니다.
+`DotNetCliToolReference`는 [더 이상 사용되지 않으며](https://github.com/dotnet/announcements/issues/107) [.NET Core Local Tools](./global-tools.md#install-a-local-tool)로 대체되었습니다.
 
 #### <a name="version"></a>버전
 
