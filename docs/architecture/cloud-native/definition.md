@@ -3,12 +3,12 @@ title: 클라우드 네이티브 정의
 description: 클라우드 기본 시스템용 bedrock을 제공 하는 기본 핵심 요소에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614180"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427036"
 ---
 # <a name="defining-cloud-native"></a>클라우드 네이티브 정의
 
@@ -34,7 +34,7 @@ Cloud native는 *속도* 와 *민첩성*에 대 한 것입니다. 비즈니스 �
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 에는 프로덕션에서 600 개 이상의 서비스가 있습니다. 하루에 100 회 배포 합니다. |
 | [Uber](https://eng.uber.com/micro-deploy/) | 에는 프로덕션 환경에서 1000 개 이상의 서비스가 있습니다. 매주 몇 천 번 배포 합니다. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 에는 프로덕션 환경에서 300 개 이상의 서비스가 있습니다. 하루에 1000 번 배포 합니다. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 에는 프로덕션 환경에 3,000 개 이상의 서비스가 있습니다. 하루에 1000 번 배포 합니다. |
 
 여기에서 볼 수 있듯이 Netflix, Uber 및 WeChat는 수많은 독립 마이크로 서비스로 구성 된 시스템을 노출 합니다. 이 아키텍처 스타일을 통해 시장 상황에 신속 하 게 대응할 수 있습니다. 이러한 사용자는 라이브, 복잡 한 응용 프로그램의 작은 영역을 즉시 업데이트 하 고 필요에 따라 이러한 영역을 개별적으로 확장할 수 있습니다.
 
@@ -74,7 +74,7 @@ Azure 클라우드 플랫폼은 자동 크기 조정, 자동 복구 및 모니�
 
 다음 표에서는 12 단계 방법을 중점적으로 설명 합니다.
 
-|    |  요소 | 설명  |
+|    |  요인 | 설명  |
 | :-------- | :-------- | :-------- |
 | 1 | 코드 베이스 | 자체 리포지토리에 저장 된 각 마이크로 서비스에 대 한 단일 코드 베이스입니다. 버전 제어로 추적 되 고 여러 환경 (QA, 스테이징, 프로덕션)에 배포할 수 있습니다. |
 | 2 | 종속성 | 각 마이크로 서비스는 자체 종속성을 격리 하 고 패키지 하 여 전체 시스템에 영향을 주지 않고 변경 내용을 수용 합니다. |
@@ -173,7 +173,7 @@ Id는 세부 정보 Chapter 8, *id*에 설명 되어 있습니다.
 
 Microsoft .NET Core 플랫폼을 선택 하는 것이 좋습니다. 무료 오픈 소스는 마이크로 서비스 개발을 간소화 하는 여러 가지 기본 제공 기능을 제공 합니다. .NET Core는 플랫폼 간입니다. Windows, macOS 및 대부분의 Linux에서 응용 프로그램을 빌드하고 실행할 수 있습니다.
 
-.NET Core는 성능이 뛰어나고 node.js 및 기타 경쟁 플랫폼과 비교 하 여 잘 점수가 매겨집니다. 흥미롭게도 [TechEmpower](https://www.techempower.com/) 는 여러 웹 응용 프로그램 플랫폼 및 프레임 워크에서 광범위 한 [성능 벤치 마크](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) 를 수행 했습니다. .NET Core는 상위 10 개 이상의 node.js 및 기타 경쟁 플랫폼에서 점수가 매겨집니다.
+.NET Core는 성능이 뛰어나고 Node.js 및 기타 경쟁 플랫폼과 비교 하 여 잘 점수가 매겨집니다. 흥미롭게도 [TechEmpower](https://www.techempower.com/) 는 여러 웹 응용 프로그램 플랫폼 및 프레임 워크에서 광범위 한 [성능 벤치 마크](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) 를 수행 했습니다. 상위 10 개 이상의 Node.js 및 기타 경쟁 플랫폼에서 .NET Core 점수가 매겨집니다.
 
 .NET Core는 Microsoft 및 GitHub의 .NET 커뮤니티에서 유지 관리 됩니다.
 
@@ -276,7 +276,7 @@ Azure Kubernetes 서비스는 *클라우드 네이티브 응용 프로그램 크
 
 지원 서비스에 대 한 자세한 내용은 5 장, *클라우드 네이티브 데이터 패턴*및 4 장, *클라우드 네이티브 통신 패턴*을 참조 하세요.
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>자동화
 
 앞서 살펴본 것 처럼 클라우드 네이티브 시스템은 마이크로 서비스, 컨테이너 및 최신 시스템 디자인을 수용 하 여 속도와 민첩성을 구현 합니다. 그러나이는 스토리의 일부일 뿐입니다. 이러한 시스템이 실행 되는 클라우드 환경을 프로 비전 하려면 어떻게 해야 하나요? 앱 기능 및 업데이트를 신속 하 게 배포 하려면 어떻게 해야 하나요? 전체 사진을 어떻게 반올림 하나요?
 
@@ -331,7 +331,7 @@ Azure Pipelines는 CI (지속적인 통합) 및 CD (지속적인 업데이트)�
 앱에 대 한 코드의 나머지 부분과 함께 YAML 파일의 코드에서 파이프라인을 정의 합니다.
 
 - 파이프라인은 코드를 사용 하 여 버전이 지정 되며 동일한 분기 구조를 따릅니다.
-- 끌어오기 요청 및 분기 빌드 정책에서 코드 검토를 통해 변경 내용에 대 한 유효성을 검사 합니다.
+- 끌어오기 요청 및 분기 빌드 정책의 코드 검토를 통해 변경 내용의 유효성을 검사합니다.
 - 사용 하는 모든 분기는 azure-pipelines 파일을 수정 하 여 빌드 정책을 사용자 지정할 수 있습니다.
 - 파이프라인 파일이 버전 제어에 체크 인 되 고 문제가 있는 경우 조사할 수 있습니다.
 
