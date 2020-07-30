@@ -1,22 +1,23 @@
 ---
 title: C# 프로그램 내부
+description: 해당 리소스를 사용하여 표준적인 예인 Hello, World!를 비롯한 C# 프로그램의 일반적인 구조를 이해할 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecf526d77fcf9df83fa832c57de0e1921d27e3f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69589261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303350"
 ---
 # <a name="inside-a-c-program"></a>C# 프로그램 내부
 
 이 단원에서는 C# 프로그램의 일반적인 구조를 설명하고 표준 "Hello, World!" 예가 포함됩니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 - [Hello World -- 프로그램 처음 만들기](hello-world-your-first-program.md)
 
@@ -40,6 +41,6 @@ ms.locfileid: "69589261"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)

@@ -1,17 +1,18 @@
 ---
 title: 이벤트 - C# 프로그래밍 가이드
+description: 이벤트에 대해 알아봅니다. 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: e15c3d124b4d1c30e2f9bb9f44b40e25b6a72346
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 3160d1e381c6cb3af0f017538f9555b3fded9910
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240724"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302076"
 ---
 # <a name="events-c-programming-guide"></a>이벤트(C# 프로그래밍 가이드)
 [클래스](../../language-reference/keywords/class.md) 나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려줄 수 있습니다. 이벤트를 보내거나 *발생시키는*클래스를 *게시자* 라고 하며 이벤트를 받거나 *처리하는*클래스를 *구독자*라고 합니다.  

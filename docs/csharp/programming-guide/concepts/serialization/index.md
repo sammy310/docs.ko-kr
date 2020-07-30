@@ -1,12 +1,13 @@
 ---
 title: Serialization(C#)
+description: Serialization은 개체를 바이트 스트림으로 변환하여 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송합니다.
 ms.date: 01/02/2020
-ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b2b3105887ad6f000fcba895452a483881ae5a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302778"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
