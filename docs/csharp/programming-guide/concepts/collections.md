@@ -1,58 +1,59 @@
 ---
 title: 컬렉션(C#)
+description: 개체 그룹 작업에 사용되는 C#의 컬렉션에 대해 알아봅니다. 애플리케이션의 요구가 변경됨에 따라 컬렉션이 동적으로 확장되거나 축소될 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2375980e2915d4daa5a221a94eee2aea41959852
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241398"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924931"
 ---
-# <a name="collections-c"></a><span data-ttu-id="9b93d-102">컬렉션(C#)</span><span class="sxs-lookup"><span data-stu-id="9b93d-102">Collections (C#)</span></span>
+# <a name="collections-c"></a><span data-ttu-id="7f093-104">컬렉션(C#)</span><span class="sxs-lookup"><span data-stu-id="7f093-104">Collections (C#)</span></span>
 
-<span data-ttu-id="9b93d-103">대부분의 애플리케이션의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="9b93d-104">개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>
+<span data-ttu-id="7f093-105">대부분의 애플리케이션의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-105">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="7f093-106">개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-106">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>
 
-<span data-ttu-id="9b93d-105">배열은 고정된 개수의 강력한 형식 개체를 만들고 작업하는 데 가장 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-105">Arrays are most useful for creating and working with a fixed number of strongly typed objects.</span></span> <span data-ttu-id="9b93d-106">배열에 대한 자세한 내용은 [배열](../arrays/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-106">For information about arrays, see [Arrays](../arrays/index.md).</span></span>
+<span data-ttu-id="7f093-107">배열은 고정된 개수의 강력한 형식 개체를 만들고 작업하는 데 가장 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-107">Arrays are most useful for creating and working with a fixed number of strongly typed objects.</span></span> <span data-ttu-id="7f093-108">배열에 대한 자세한 내용은 [배열](../arrays/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-108">For information about arrays, see [Arrays](../arrays/index.md).</span></span>
 
-<span data-ttu-id="9b93d-107">컬렉션은 개체 그룹에 대해 작업하는 보다 유연한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-107">Collections provide a more flexible way to work with groups of objects.</span></span> <span data-ttu-id="9b93d-108">배열과 달리, 애플리케이션의 요구가 변경됨에 따라 작업하는 개체 그룹이 동적으로 확장되거나 축소될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-108">Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change.</span></span> <span data-ttu-id="9b93d-109">일부 컬렉션의 경우 키를 사용하여 개체를 신속하게 검색할 수 있도록 컬렉션에 추가하는 모든 개체에 키를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-109">For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.</span></span>
+<span data-ttu-id="7f093-109">컬렉션은 개체 그룹에 대해 작업하는 보다 유연한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-109">Collections provide a more flexible way to work with groups of objects.</span></span> <span data-ttu-id="7f093-110">배열과 달리, 애플리케이션의 요구가 변경됨에 따라 작업하는 개체 그룹이 동적으로 확장되거나 축소될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-110">Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change.</span></span> <span data-ttu-id="7f093-111">일부 컬렉션의 경우 키를 사용하여 개체를 신속하게 검색할 수 있도록 컬렉션에 추가하는 모든 개체에 키를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-111">For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.</span></span>
 
-<span data-ttu-id="9b93d-110">컬렉션은 클래스이므로 해당 컬렉션에 요소를 추가하려면 먼저 클래스 인스턴스를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-110">A collection is a class, so you must declare an instance of the class before you can add elements to that collection.</span></span>
+<span data-ttu-id="7f093-112">컬렉션은 클래스이므로 해당 컬렉션에 요소를 추가하려면 먼저 클래스 인스턴스를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-112">A collection is a class, so you must declare an instance of the class before you can add elements to that collection.</span></span>
 
-<span data-ttu-id="9b93d-111">컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-111">If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="9b93d-112">제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-112">A generic collection enforces type safety so that no other data type can be added to it.</span></span> <span data-ttu-id="9b93d-113">제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-113">When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.</span></span>
+<span data-ttu-id="7f093-113">컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-113">If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="7f093-114">제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-114">A generic collection enforces type safety so that no other data type can be added to it.</span></span> <span data-ttu-id="7f093-115">제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-115">When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="9b93d-114">이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [using](../../language-reference/keywords/using-directive.md) 지시문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-114">For the examples in this topic, include [using](../../language-reference/keywords/using-directive.md) directives for the `System.Collections.Generic` and `System.Linq` namespaces.</span></span>
+> <span data-ttu-id="7f093-116">이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [using](../../language-reference/keywords/using-directive.md) 지시문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-116">For the examples in this topic, include [using](../../language-reference/keywords/using-directive.md) directives for the `System.Collections.Generic` and `System.Linq` namespaces.</span></span>
 
- <span data-ttu-id="9b93d-115">**항목 내용**</span><span class="sxs-lookup"><span data-stu-id="9b93d-115">**In this topic**</span></span>
+ <span data-ttu-id="7f093-117">**항목 내용**</span><span class="sxs-lookup"><span data-stu-id="7f093-117">**In this topic**</span></span>
 
-- [<span data-ttu-id="9b93d-116">간단한 컬렉션 사용</span><span class="sxs-lookup"><span data-stu-id="9b93d-116">Using a Simple Collection</span></span>](#BKMK_SimpleCollection)
+- [<span data-ttu-id="7f093-118">간단한 컬렉션 사용</span><span class="sxs-lookup"><span data-stu-id="7f093-118">Using a Simple Collection</span></span>](#BKMK_SimpleCollection)
 
-- [<span data-ttu-id="9b93d-117">컬렉션 종류</span><span class="sxs-lookup"><span data-stu-id="9b93d-117">Kinds of Collections</span></span>](#BKMK_KindsOfCollections)
+- [<span data-ttu-id="7f093-119">컬렉션 종류</span><span class="sxs-lookup"><span data-stu-id="7f093-119">Kinds of Collections</span></span>](#BKMK_KindsOfCollections)
 
-  - [<span data-ttu-id="9b93d-118">System.Collections.Generic 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-118">System.Collections.Generic Classes</span></span>](#BKMK_Generic)
+  - [<span data-ttu-id="7f093-120">System.Collections.Generic 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-120">System.Collections.Generic Classes</span></span>](#BKMK_Generic)
 
-  - [<span data-ttu-id="9b93d-119">System.Collections.Concurrent 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-119">System.Collections.Concurrent Classes</span></span>](#BKMK_Concurrent)
+  - [<span data-ttu-id="7f093-121">System.Collections.Concurrent 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-121">System.Collections.Concurrent Classes</span></span>](#BKMK_Concurrent)
 
-  - [<span data-ttu-id="9b93d-120">System.Collections 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-120">System.Collections Classes</span></span>](#BKMK_Collections)
+  - [<span data-ttu-id="7f093-122">System.Collections 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-122">System.Collections Classes</span></span>](#BKMK_Collections)
 
-- [<span data-ttu-id="9b93d-121">키/값 쌍의 컬렉션 구현</span><span class="sxs-lookup"><span data-stu-id="9b93d-121">Implementing a Collection of Key/Value Pairs</span></span>](#BKMK_KeyValuePairs)
+- [<span data-ttu-id="7f093-123">키/값 쌍의 컬렉션 구현</span><span class="sxs-lookup"><span data-stu-id="7f093-123">Implementing a Collection of Key/Value Pairs</span></span>](#BKMK_KeyValuePairs)
 
-- [<span data-ttu-id="9b93d-122">LINQ를 사용하여 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="9b93d-122">Using LINQ to Access a Collection</span></span>](#BKMK_LINQ)
+- [<span data-ttu-id="7f093-124">LINQ를 사용하여 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="7f093-124">Using LINQ to Access a Collection</span></span>](#BKMK_LINQ)
 
-- [<span data-ttu-id="9b93d-123">컬렉션 정렬</span><span class="sxs-lookup"><span data-stu-id="9b93d-123">Sorting a Collection</span></span>](#BKMK_Sorting)
+- [<span data-ttu-id="7f093-125">컬렉션 정렬</span><span class="sxs-lookup"><span data-stu-id="7f093-125">Sorting a Collection</span></span>](#BKMK_Sorting)
 
-- [<span data-ttu-id="9b93d-124">사용자 지정 컬렉션 정의</span><span class="sxs-lookup"><span data-stu-id="9b93d-124">Defining a Custom Collection</span></span>](#BKMK_CustomCollection)
+- [<span data-ttu-id="7f093-126">사용자 지정 컬렉션 정의</span><span class="sxs-lookup"><span data-stu-id="7f093-126">Defining a Custom Collection</span></span>](#BKMK_CustomCollection)
 
-- [<span data-ttu-id="9b93d-125">반복기</span><span class="sxs-lookup"><span data-stu-id="9b93d-125">Iterators</span></span>](#BKMK_Iterators)
+- [<span data-ttu-id="7f093-127">반복기</span><span class="sxs-lookup"><span data-stu-id="7f093-127">Iterators</span></span>](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
-## <a name="using-a-simple-collection"></a><span data-ttu-id="9b93d-126">간단한 컬렉션 사용</span><span class="sxs-lookup"><span data-stu-id="9b93d-126">Using a Simple Collection</span></span>
+## <a name="using-a-simple-collection"></a><span data-ttu-id="7f093-128">간단한 컬렉션 사용</span><span class="sxs-lookup"><span data-stu-id="7f093-128">Using a Simple Collection</span></span>
 
-<span data-ttu-id="9b93d-127">이 섹션의 예제에서는 강력한 형식의 개체 목록을 사용할 수 있게 해주는 제네릭 <xref:System.Collections.Generic.List%601> 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-127">The examples in this section use the generic <xref:System.Collections.Generic.List%601> class, which enables you to work with a strongly typed list of objects.</span></span>
+<span data-ttu-id="7f093-129">이 섹션의 예제에서는 강력한 형식의 개체 목록을 사용할 수 있게 해주는 제네릭 <xref:System.Collections.Generic.List%601> 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-129">The examples in this section use the generic <xref:System.Collections.Generic.List%601> class, which enables you to work with a strongly typed list of objects.</span></span>
 
-<span data-ttu-id="9b93d-128">다음 예제에서는 문자열 목록을 만든 다음, [foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 문자열을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-128">The following example creates a list of strings and then iterates through the strings by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span>
+<span data-ttu-id="7f093-130">다음 예제에서는 문자열 목록을 만든 다음, [foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 문자열을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-130">The following example creates a list of strings and then iterates through the strings by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span>
 
 ```csharp
 // Create a list of strings.
@@ -70,9 +71,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="9b93d-129">컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저*를 사용하여 컬렉션을 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-129">If the contents of a collection are known in advance, you can use a *collection initializer* to initialize the collection.</span></span> <span data-ttu-id="9b93d-130">자세한 내용은 [개체 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-130">For more information, see [Object and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md).</span></span>
+<span data-ttu-id="7f093-131">컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저*를 사용하여 컬렉션을 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-131">If the contents of a collection are known in advance, you can use a *collection initializer* to initialize the collection.</span></span> <span data-ttu-id="7f093-132">자세한 내용은 [개체 및 컬렉션 이니셜라이저](../classes-and-structs/object-and-collection-initializers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-132">For more information, see [Object and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md).</span></span>
 
-<span data-ttu-id="9b93d-131">다음 예제는 컬렉션 이니셜라이저를 사용하여 컬렉션에 요소를 추가한다는 점을 제외하고 이전 예제와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-131">The following example is the same as the previous example, except a collection initializer is used to add elements to the collection.</span></span>
+<span data-ttu-id="7f093-133">다음 예제는 컬렉션 이니셜라이저를 사용하여 컬렉션에 요소를 추가한다는 점을 제외하고 이전 예제와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-133">The following example is the same as the previous example, except a collection initializer is used to add elements to the collection.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -87,9 +88,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="9b93d-132">`foreach` 문 대신 [for](../../language-reference/keywords/for.md) 문을 사용하여 컬렉션을 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-132">You can use a [for](../../language-reference/keywords/for.md) statement instead of a `foreach` statement to iterate through a collection.</span></span> <span data-ttu-id="9b93d-133">인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-133">You accomplish this by accessing the collection elements by the index position.</span></span> <span data-ttu-id="9b93d-134">요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-134">The index of the elements starts at 0 and ends at the element count minus 1.</span></span>
+<span data-ttu-id="7f093-134">`foreach` 문 대신 [for](../../language-reference/keywords/for.md) 문을 사용하여 컬렉션을 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-134">You can use a [for](../../language-reference/keywords/for.md) statement instead of a `foreach` statement to iterate through a collection.</span></span> <span data-ttu-id="7f093-135">인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-135">You accomplish this by accessing the collection elements by the index position.</span></span> <span data-ttu-id="7f093-136">요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-136">The index of the elements starts at 0 and ends at the element count minus 1.</span></span>
 
-<span data-ttu-id="9b93d-135">다음 예제에서는 `foreach` 대신 `for`를 사용하여 컬렉션의 요소를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-135">The following example iterates through the elements of a collection by using `for` instead of `foreach`.</span></span>
+<span data-ttu-id="7f093-137">다음 예제에서는 `foreach` 대신 `for`를 사용하여 컬렉션의 요소를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-137">The following example iterates through the elements of a collection by using `for` instead of `foreach`.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -103,7 +104,7 @@ for (var index = 0; index < salmons.Count; index++)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="9b93d-136">다음 예제에서는 제거할 개체를 지정하여 컬렉션에서 요소를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-136">The following example removes an element from the collection by specifying the object to remove.</span></span>
+<span data-ttu-id="7f093-138">다음 예제에서는 제거할 개체를 지정하여 컬렉션에서 요소를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-138">The following example removes an element from the collection by specifying the object to remove.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -122,7 +123,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-<span data-ttu-id="9b93d-137">다음 예제에서는 제네릭 목록에서 요소를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-137">The following example removes elements from a generic list.</span></span> <span data-ttu-id="9b93d-138">`foreach` 문 대신 내림차순으로 반복하는 [for](../../language-reference/keywords/for.md) 문을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-138">Instead of a `foreach` statement, a [for](../../language-reference/keywords/for.md) statement that iterates in descending order is used.</span></span> <span data-ttu-id="9b93d-139">이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-139">This is because the <xref:System.Collections.Generic.List%601.RemoveAt%2A> method causes elements after a removed element to have a lower index value.</span></span>
+<span data-ttu-id="7f093-139">다음 예제에서는 제네릭 목록에서 요소를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-139">The following example removes elements from a generic list.</span></span> <span data-ttu-id="7f093-140">`foreach` 문 대신 내림차순으로 반복하는 [for](../../language-reference/keywords/for.md) 문을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-140">Instead of a `foreach` statement, a [for](../../language-reference/keywords/for.md) statement that iterates in descending order is used.</span></span> <span data-ttu-id="7f093-141">이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-141">This is because the <xref:System.Collections.Generic.List%601.RemoveAt%2A> method causes elements after a removed element to have a lower index value.</span></span>
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -146,7 +147,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8
 ```
 
-<span data-ttu-id="9b93d-140"><xref:System.Collections.Generic.List%601>의 요소 형식에 대해 고유한 클래스를 정의할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-140">For the type of elements in the <xref:System.Collections.Generic.List%601>, you can also define your own class.</span></span> <span data-ttu-id="9b93d-141">다음 예제에서, <xref:System.Collections.Generic.List%601>에서 사용되는 `Galaxy` 클래스는 코드에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-141">In the following example, the `Galaxy` class that is used by the <xref:System.Collections.Generic.List%601> is defined in the code.</span></span>
+<span data-ttu-id="7f093-142"><xref:System.Collections.Generic.List%601>의 요소 형식에 대해 고유한 클래스를 정의할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-142">For the type of elements in the <xref:System.Collections.Generic.List%601>, you can also define your own class.</span></span> <span data-ttu-id="7f093-143">다음 예제에서, <xref:System.Collections.Generic.List%601>에서 사용되는 `Galaxy` 클래스는 코드에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-143">In the following example, the `Galaxy` class that is used by the <xref:System.Collections.Generic.List%601> is defined in the code.</span></span>
 
 ```csharp
 private static void IterateThroughList()
@@ -180,72 +181,72 @@ public class Galaxy
 
 <a name="BKMK_KindsOfCollections"></a>
 
-## <a name="kinds-of-collections"></a><span data-ttu-id="9b93d-142">컬렉션 종류</span><span class="sxs-lookup"><span data-stu-id="9b93d-142">Kinds of Collections</span></span>
+## <a name="kinds-of-collections"></a><span data-ttu-id="7f093-144">컬렉션 종류</span><span class="sxs-lookup"><span data-stu-id="7f093-144">Kinds of Collections</span></span>
 
-<span data-ttu-id="9b93d-143">.NET은 다양한 일반적인 컬렉션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-143">Many common collections are provided by .NET.</span></span> <span data-ttu-id="9b93d-144">컬렉션의 각 형식은 특정 목적에 맞게 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-144">Each type of collection is designed for a specific purpose.</span></span>
+<span data-ttu-id="7f093-145">.NET은 다양한 일반적인 컬렉션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-145">Many common collections are provided by .NET.</span></span> <span data-ttu-id="7f093-146">컬렉션의 각 형식은 특정 목적에 맞게 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-146">Each type of collection is designed for a specific purpose.</span></span>
 
-<span data-ttu-id="9b93d-145">이 섹션에서는 다음 몇 가지 일반적인 컬렉션 클래스에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-145">Some of the common collection classes are described in this section:</span></span>
+<span data-ttu-id="7f093-147">이 섹션에서는 다음 몇 가지 일반적인 컬렉션 클래스에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-147">Some of the common collection classes are described in this section:</span></span>
 
-- <span data-ttu-id="9b93d-146"><xref:System.Collections.Generic> 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-146"><xref:System.Collections.Generic> classes</span></span>
+- <span data-ttu-id="7f093-148"><xref:System.Collections.Generic> 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-148"><xref:System.Collections.Generic> classes</span></span>
 
-- <span data-ttu-id="9b93d-147"><xref:System.Collections.Concurrent> 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-147"><xref:System.Collections.Concurrent> classes</span></span>
+- <span data-ttu-id="7f093-149"><xref:System.Collections.Concurrent> 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-149"><xref:System.Collections.Concurrent> classes</span></span>
 
-- <span data-ttu-id="9b93d-148"><xref:System.Collections> 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-148"><xref:System.Collections> classes</span></span>
+- <span data-ttu-id="7f093-150"><xref:System.Collections> 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-150"><xref:System.Collections> classes</span></span>
 
 <a name="BKMK_Generic"></a>
 
-### <a name="systemcollectionsgeneric-classes"></a><span data-ttu-id="9b93d-149">System.Collections.Generic 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-149">System.Collections.Generic Classes</span></span>
+### <a name="systemcollectionsgeneric-classes"></a><span data-ttu-id="7f093-151">System.Collections.Generic 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-151">System.Collections.Generic Classes</span></span>
 
-<span data-ttu-id="9b93d-150"><xref:System.Collections.Generic> 네임스페이스의 클래스 중 하나를 사용하여 제네릭 컬렉션을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-150">You can create a generic collection by using one of the classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="9b93d-151">제네릭 컬렉션은 컬렉션의 모든 항목에 동일한 데이터 형식이 있는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-151">A generic collection is useful when every item in the collection has the same data type.</span></span> <span data-ttu-id="9b93d-152">제네릭 컬렉션은 원하는 데이터 형식만 추가할 수 있도록 하여 강력한 형식 지정을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-152">A generic collection enforces strong typing by allowing only the desired data type to be added.</span></span>
+<span data-ttu-id="7f093-152"><xref:System.Collections.Generic> 네임스페이스의 클래스 중 하나를 사용하여 제네릭 컬렉션을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-152">You can create a generic collection by using one of the classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="7f093-153">제네릭 컬렉션은 컬렉션의 모든 항목에 동일한 데이터 형식이 있는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-153">A generic collection is useful when every item in the collection has the same data type.</span></span> <span data-ttu-id="7f093-154">제네릭 컬렉션은 원하는 데이터 형식만 추가할 수 있도록 하여 강력한 형식 지정을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-154">A generic collection enforces strong typing by allowing only the desired data type to be added.</span></span>
 
-<span data-ttu-id="9b93d-153">다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-153">The following table lists some of the frequently used classes of the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace:</span></span>
+<span data-ttu-id="7f093-155">다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-155">The following table lists some of the frequently used classes of the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace:</span></span>
 
-|<span data-ttu-id="9b93d-154">클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-154">Class</span></span>|<span data-ttu-id="9b93d-155">설명</span><span class="sxs-lookup"><span data-stu-id="9b93d-155">Description</span></span>|
+|<span data-ttu-id="7f093-156">클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-156">Class</span></span>|<span data-ttu-id="7f093-157">Description</span><span class="sxs-lookup"><span data-stu-id="7f093-157">Description</span></span>|
 |---|---|
-|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="9b93d-156">키에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-156">Represents a collection of key/value pairs that are organized based on the key.</span></span>|
-|<xref:System.Collections.Generic.List%601>|<span data-ttu-id="9b93d-157">인덱스로 액세스할 수 있는 개체 목록을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-157">Represents a list of objects that can be accessed by index.</span></span> <span data-ttu-id="9b93d-158">목록의 검색, 정렬 및 수정에 사용할 수 있는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-158">Provides methods to search, sort, and modify lists.</span></span>|
-|<xref:System.Collections.Generic.Queue%601>|<span data-ttu-id="9b93d-159">FIFO(선입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-159">Represents a first in, first out (FIFO) collection of objects.</span></span>|
-|<xref:System.Collections.Generic.SortedList%602>|<span data-ttu-id="9b93d-160">연관된 <xref:System.Collections.Generic.IComparer%601> 구현을 기반으로 키에 따라 정렬된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-160">Represents a collection of key/value pairs that are sorted by key based on the associated <xref:System.Collections.Generic.IComparer%601> implementation.</span></span>|
-|<xref:System.Collections.Generic.Stack%601>|<span data-ttu-id="9b93d-161">LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-161">Represents a last in, first out (LIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="7f093-158">키에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-158">Represents a collection of key/value pairs that are organized based on the key.</span></span>|
+|<xref:System.Collections.Generic.List%601>|<span data-ttu-id="7f093-159">인덱스로 액세스할 수 있는 개체 목록을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-159">Represents a list of objects that can be accessed by index.</span></span> <span data-ttu-id="7f093-160">목록의 검색, 정렬 및 수정에 사용할 수 있는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-160">Provides methods to search, sort, and modify lists.</span></span>|
+|<xref:System.Collections.Generic.Queue%601>|<span data-ttu-id="7f093-161">FIFO(선입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-161">Represents a first in, first out (FIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Generic.SortedList%602>|<span data-ttu-id="7f093-162">연관된 <xref:System.Collections.Generic.IComparer%601> 구현을 기반으로 키에 따라 정렬된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-162">Represents a collection of key/value pairs that are sorted by key based on the associated <xref:System.Collections.Generic.IComparer%601> implementation.</span></span>|
+|<xref:System.Collections.Generic.Stack%601>|<span data-ttu-id="7f093-163">LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-163">Represents a last in, first out (LIFO) collection of objects.</span></span>|
 
-<span data-ttu-id="9b93d-162">자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../standard/collections/commonly-used-collection-types.md), [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md) 및 <xref:System.Collections.Generic>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-162">For additional information, see [Commonly Used Collection Types](../../../standard/collections/commonly-used-collection-types.md), [Selecting a Collection Class](../../../standard/collections/selecting-a-collection-class.md), and <xref:System.Collections.Generic>.</span></span>
+<span data-ttu-id="7f093-164">자세한 내용은 [일반적으로 사용되는 컬렉션 형식](../../../standard/collections/commonly-used-collection-types.md), [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md) 및 <xref:System.Collections.Generic>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-164">For additional information, see [Commonly Used Collection Types](../../../standard/collections/commonly-used-collection-types.md), [Selecting a Collection Class](../../../standard/collections/selecting-a-collection-class.md), and <xref:System.Collections.Generic>.</span></span>
 
 <a name="BKMK_Concurrent"></a>
 
-### <a name="systemcollectionsconcurrent-classes"></a><span data-ttu-id="9b93d-163">System.Collections.Concurrent 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-163">System.Collections.Concurrent Classes</span></span>
+### <a name="systemcollectionsconcurrent-classes"></a><span data-ttu-id="7f093-165">System.Collections.Concurrent 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-165">System.Collections.Concurrent Classes</span></span>
 
-<span data-ttu-id="9b93d-164">.NET Framework 4 이상 버전에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-164">In .NET Framework 4 and later versions, the collections in the <xref:System.Collections.Concurrent> namespace provide efficient thread-safe operations for accessing collection items from multiple threads.</span></span>
+<span data-ttu-id="7f093-166">.NET Framework 4 이상 버전에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-166">In .NET Framework 4 and later versions, the collections in the <xref:System.Collections.Concurrent> namespace provide efficient thread-safe operations for accessing collection items from multiple threads.</span></span>
 
-<span data-ttu-id="9b93d-165">여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=nameWithType> 및 <xref:System.Collections?displayProperty=nameWithType>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-165">The classes in the <xref:System.Collections.Concurrent> namespace should be used instead of the corresponding types in the <xref:System.Collections.Generic?displayProperty=nameWithType> and <xref:System.Collections?displayProperty=nameWithType> namespaces whenever multiple threads are accessing the collection concurrently.</span></span> <span data-ttu-id="9b93d-166">자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-166">For more information, see [Thread-Safe Collections](../../../standard/collections/thread-safe/index.md) and <xref:System.Collections.Concurrent>.</span></span>
+<span data-ttu-id="7f093-167">여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=nameWithType> 및 <xref:System.Collections?displayProperty=nameWithType>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-167">The classes in the <xref:System.Collections.Concurrent> namespace should be used instead of the corresponding types in the <xref:System.Collections.Generic?displayProperty=nameWithType> and <xref:System.Collections?displayProperty=nameWithType> namespaces whenever multiple threads are accessing the collection concurrently.</span></span> <span data-ttu-id="7f093-168">자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-168">For more information, see [Thread-Safe Collections](../../../standard/collections/thread-safe/index.md) and <xref:System.Collections.Concurrent>.</span></span>
 
-<span data-ttu-id="9b93d-167"><xref:System.Collections.Concurrent> 네임스페이스에 포함된 일부 클래스는 <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601>입니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-167">Some classes included in the <xref:System.Collections.Concurrent> namespace are <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>
+<span data-ttu-id="7f093-169"><xref:System.Collections.Concurrent> 네임스페이스에 포함된 일부 클래스는 <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601>입니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-169">Some classes included in the <xref:System.Collections.Concurrent> namespace are <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>
 
 <a name="BKMK_Collections"></a>
 
-### <a name="systemcollections-classes"></a><span data-ttu-id="9b93d-168">System.Collections 클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-168">System.Collections Classes</span></span>
+### <a name="systemcollections-classes"></a><span data-ttu-id="7f093-170">System.Collections 클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-170">System.Collections Classes</span></span>
 
-<span data-ttu-id="9b93d-169"><xref:System.Collections?displayProperty=nameWithType> 네임스페이스의 클래스는 구체적 형식의 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-169">The classes in the <xref:System.Collections?displayProperty=nameWithType> namespace do not store elements as specifically typed objects, but as objects of type `Object`.</span></span>
+<span data-ttu-id="7f093-171"><xref:System.Collections?displayProperty=nameWithType> 네임스페이스의 클래스는 구체적 형식의 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-171">The classes in the <xref:System.Collections?displayProperty=nameWithType> namespace do not store elements as specifically typed objects, but as objects of type `Object`.</span></span>
 
-<span data-ttu-id="9b93d-170">가능하면 항상 `System.Collections` 네임스페이스의 레거시 형식 대신 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 또는 <xref:System.Collections.Concurrent> 네임스페이스의 제네릭 컬렉션을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-170">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the legacy types in the `System.Collections` namespace.</span></span>
+<span data-ttu-id="7f093-172">가능하면 항상 `System.Collections` 네임스페이스의 레거시 형식 대신 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 또는 <xref:System.Collections.Concurrent> 네임스페이스의 제네릭 컬렉션을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-172">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the legacy types in the `System.Collections` namespace.</span></span>
 
-<span data-ttu-id="9b93d-171">다음 표에서는 자주 사용되는 `System.Collections` 네임스페이스 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-171">The following table lists some of the frequently used classes in the `System.Collections` namespace:</span></span>
+<span data-ttu-id="7f093-173">다음 표에서는 자주 사용되는 `System.Collections` 네임스페이스 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-173">The following table lists some of the frequently used classes in the `System.Collections` namespace:</span></span>
 
-|<span data-ttu-id="9b93d-172">클래스</span><span class="sxs-lookup"><span data-stu-id="9b93d-172">Class</span></span>|<span data-ttu-id="9b93d-173">설명</span><span class="sxs-lookup"><span data-stu-id="9b93d-173">Description</span></span>|
+|<span data-ttu-id="7f093-174">클래스</span><span class="sxs-lookup"><span data-stu-id="7f093-174">Class</span></span>|<span data-ttu-id="7f093-175">설명</span><span class="sxs-lookup"><span data-stu-id="7f093-175">Description</span></span>|
 |---|---|
-|<xref:System.Collections.ArrayList>|<span data-ttu-id="9b93d-174">필요에 따라 크기가 동적으로 증가하는 개체 배열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-174">Represents an array of objects whose size is dynamically increased as required.</span></span>|
-|<xref:System.Collections.Hashtable>|<span data-ttu-id="9b93d-175">키의 해시 코드에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-175">Represents a collection of key/value pairs that are organized based on the hash code of the key.</span></span>|
-|<xref:System.Collections.Queue>|<span data-ttu-id="9b93d-176">FIFO(선입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-176">Represents a first in, first out (FIFO) collection of objects.</span></span>|
-|<xref:System.Collections.Stack>|<span data-ttu-id="9b93d-177">LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-177">Represents a last in, first out (LIFO) collection of objects.</span></span>|
+|<xref:System.Collections.ArrayList>|<span data-ttu-id="7f093-176">필요에 따라 크기가 동적으로 증가하는 개체 배열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-176">Represents an array of objects whose size is dynamically increased as required.</span></span>|
+|<xref:System.Collections.Hashtable>|<span data-ttu-id="7f093-177">키의 해시 코드에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-177">Represents a collection of key/value pairs that are organized based on the hash code of the key.</span></span>|
+|<xref:System.Collections.Queue>|<span data-ttu-id="7f093-178">FIFO(선입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-178">Represents a first in, first out (FIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Stack>|<span data-ttu-id="7f093-179">LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-179">Represents a last in, first out (LIFO) collection of objects.</span></span>|
 
-<span data-ttu-id="9b93d-178"><xref:System.Collections.Specialized> 네임스페이스는 문자열 전용 컬렉션 및 연결된 목록과 하이브리드 사전 등의 특수한 강력한 형식의 컬렉션 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-178">The <xref:System.Collections.Specialized> namespace provides specialized and strongly typed collection classes, such as string-only collections and linked-list and hybrid dictionaries.</span></span>
+<span data-ttu-id="7f093-180"><xref:System.Collections.Specialized> 네임스페이스는 문자열 전용 컬렉션 및 연결된 목록과 하이브리드 사전 등의 특수한 강력한 형식의 컬렉션 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-180">The <xref:System.Collections.Specialized> namespace provides specialized and strongly typed collection classes, such as string-only collections and linked-list and hybrid dictionaries.</span></span>
 
 <a name="BKMK_KeyValuePairs"></a>
 
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a><span data-ttu-id="9b93d-179">키/값 쌍의 컬렉션 구현</span><span class="sxs-lookup"><span data-stu-id="9b93d-179">Implementing a Collection of Key/Value Pairs</span></span>
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a><span data-ttu-id="7f093-181">키/값 쌍의 컬렉션 구현</span><span class="sxs-lookup"><span data-stu-id="7f093-181">Implementing a Collection of Key/Value Pairs</span></span>
 
-<span data-ttu-id="9b93d-180"><xref:System.Collections.Generic.Dictionary%602> 제네릭 컬렉션을 사용하면 각 요소의 키를 통해 컬렉션의 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-180">The <xref:System.Collections.Generic.Dictionary%602> generic collection enables you to access to elements in a collection by using the key of each element.</span></span> <span data-ttu-id="9b93d-181">사전에 추가하는 각 항목은 값과 관련 키로 이루어져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-181">Each addition to the dictionary consists of a value and its associated key.</span></span> <span data-ttu-id="9b93d-182">`Dictionary` 클래스는 해시 테이블로 구현되므로 해당 키를 사용하여 값을 검색하는 것이 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-182">Retrieving a value by using its key is fast because the `Dictionary` class is implemented as a hash table.</span></span>
+<span data-ttu-id="7f093-182"><xref:System.Collections.Generic.Dictionary%602> 제네릭 컬렉션을 사용하면 각 요소의 키를 통해 컬렉션의 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-182">The <xref:System.Collections.Generic.Dictionary%602> generic collection enables you to access to elements in a collection by using the key of each element.</span></span> <span data-ttu-id="7f093-183">사전에 추가하는 각 항목은 값과 관련 키로 이루어져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-183">Each addition to the dictionary consists of a value and its associated key.</span></span> <span data-ttu-id="7f093-184">`Dictionary` 클래스는 해시 테이블로 구현되므로 해당 키를 사용하여 값을 검색하는 것이 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-184">Retrieving a value by using its key is fast because the `Dictionary` class is implemented as a hash table.</span></span>
 
-<span data-ttu-id="9b93d-183">다음 예제에서는 `Dictionary` 컬렉션을 만들고 `foreach` 문을 사용하여 사전을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-183">The following example creates a `Dictionary` collection and iterates through the dictionary by using a `foreach` statement.</span></span>
+<span data-ttu-id="7f093-185">다음 예제에서는 `Dictionary` 컬렉션을 만들고 `foreach` 문을 사용하여 사전을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-185">The following example creates a `Dictionary` collection and iterates through the dictionary by using a `foreach` statement.</span></span>
 
 ```csharp
 private static void IterateThruDictionary()
@@ -294,7 +295,7 @@ public class Element
 }
 ```
 
-<span data-ttu-id="9b93d-184">대신 컬렉션 이니셜라이저를 사용하여 `Dictionary` 컬렉션을 빌드하려면 `BuildDictionary` 및 `AddToDictionary` 메서드를 다음 메서드로 바꾸면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-184">To instead use a collection initializer to build the `Dictionary` collection, you can replace the `BuildDictionary` and `AddToDictionary` methods with the following method.</span></span>
+<span data-ttu-id="7f093-186">대신 컬렉션 이니셜라이저를 사용하여 `Dictionary` 컬렉션을 빌드하려면 `BuildDictionary` 및 `AddToDictionary` 메서드를 다음 메서드로 바꾸면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-186">To instead use a collection initializer to build the `Dictionary` collection, you can replace the `BuildDictionary` and `AddToDictionary` methods with the following method.</span></span>
 
 ```csharp
 private static Dictionary<string, Element> BuildDictionary2()
@@ -313,7 +314,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }
 ```
 
-<span data-ttu-id="9b93d-185">다음 예제에서는 `Dictionary`의 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 메서드 및 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 속성을 사용하여 키를 통해 항목을 신속하게 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-185">The following example uses the <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> method and the <xref:System.Collections.Generic.Dictionary%602.Item%2A> property of `Dictionary` to quickly find an item by key.</span></span> <span data-ttu-id="9b93d-186">`Item` 속성을 사용하면 C#에서 `elements[symbol]`를 통해 `elements` 컬렉션의 항목에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-186">The `Item` property enables you to access an item in the `elements` collection by using the `elements[symbol]` in C#.</span></span>
+<span data-ttu-id="7f093-187">다음 예제에서는 `Dictionary`의 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 메서드 및 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 속성을 사용하여 키를 통해 항목을 신속하게 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-187">The following example uses the <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> method and the <xref:System.Collections.Generic.Dictionary%602.Item%2A> property of `Dictionary` to quickly find an item by key.</span></span> <span data-ttu-id="7f093-188">`Item` 속성을 사용하면 C#에서 `elements[symbol]`를 통해 `elements` 컬렉션의 항목에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-188">The `Item` property enables you to access an item in the `elements` collection by using the `elements[symbol]` in C#.</span></span>
 
 ```csharp
 private static void FindInDictionary(string symbol)
@@ -332,7 +333,7 @@ private static void FindInDictionary(string symbol)
 }
 ```
 
-<span data-ttu-id="9b93d-187">다음 예제에서는 대신 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 메서드를 사용하여 키를 통해 항목을 신속하게 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-187">The following example instead uses the <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> method quickly find an item by key.</span></span>
+<span data-ttu-id="7f093-189">다음 예제에서는 대신 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 메서드를 사용하여 키를 통해 항목을 신속하게 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-189">The following example instead uses the <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> method quickly find an item by key.</span></span>
 
 ```csharp
 private static void FindInDictionary2(string symbol)
@@ -349,11 +350,11 @@ private static void FindInDictionary2(string symbol)
 
 <a name="BKMK_LINQ"></a>
 
-## <a name="using-linq-to-access-a-collection"></a><span data-ttu-id="9b93d-188">LINQ를 사용하여 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="9b93d-188">Using LINQ to Access a Collection</span></span>
+## <a name="using-linq-to-access-a-collection"></a><span data-ttu-id="7f093-190">LINQ를 사용하여 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="7f093-190">Using LINQ to Access a Collection</span></span>
 
-<span data-ttu-id="9b93d-189">LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-189">LINQ (Language-Integrated Query) can be used to access collections.</span></span> <span data-ttu-id="9b93d-190">LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-190">LINQ queries provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="9b93d-191">자세한 내용은 [C#에서 LINQ 시작](linq/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-191">For more information, see [Getting Started with LINQ in C#](linq/index.md).</span></span>
+<span data-ttu-id="7f093-191">LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-191">LINQ (Language-Integrated Query) can be used to access collections.</span></span> <span data-ttu-id="7f093-192">LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-192">LINQ queries provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="7f093-193">자세한 내용은 [C#에서 LINQ 시작](linq/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-193">For more information, see [Getting Started with LINQ in C#](linq/index.md).</span></span>
 
-<span data-ttu-id="9b93d-192">다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-192">The following example runs a LINQ query against a generic `List`.</span></span> <span data-ttu-id="9b93d-193">LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-193">The LINQ query returns a different collection that contains the results.</span></span>
+<span data-ttu-id="7f093-194">다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-194">The following example runs a LINQ query against a generic `List`.</span></span> <span data-ttu-id="7f093-195">LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-195">The LINQ query returns a different collection that contains the results.</span></span>
 
 ```csharp
 private static void ShowLINQ()
@@ -398,13 +399,13 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 
-## <a name="sorting-a-collection"></a><span data-ttu-id="9b93d-194">컬렉션 정렬</span><span class="sxs-lookup"><span data-stu-id="9b93d-194">Sorting a Collection</span></span>
+## <a name="sorting-a-collection"></a><span data-ttu-id="7f093-196">컬렉션 정렬</span><span class="sxs-lookup"><span data-stu-id="7f093-196">Sorting a Collection</span></span>
 
-<span data-ttu-id="9b93d-195">다음 예제에서는 컬렉션 정렬 절차를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-195">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="9b93d-196">예제에서는 <xref:System.Collections.Generic.List%601>에 저장된 `Car` 클래스 인스턴스를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-196">The example sorts instances of the `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="9b93d-197">`Car` 클래스는 <xref:System.IComparable%601.CompareTo%2A> 메서드가 구현되어야 하는 <xref:System.IComparable%601> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-197">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>
+<span data-ttu-id="7f093-197">다음 예제에서는 컬렉션 정렬 절차를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-197">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="7f093-198">예제에서는 <xref:System.Collections.Generic.List%601>에 저장된 `Car` 클래스 인스턴스를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-198">The example sorts instances of the `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="7f093-199">`Car` 클래스는 <xref:System.IComparable%601.CompareTo%2A> 메서드가 구현되어야 하는 <xref:System.IComparable%601> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-199">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>
 
-<span data-ttu-id="9b93d-198"><xref:System.IComparable%601.CompareTo%2A> 메서드를 호출할 때마다 정렬에 사용되는 단일 비교가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-198">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that is used for sorting.</span></span> <span data-ttu-id="9b93d-199">`CompareTo` 메서드의 사용자 작성 코드는 다른 개체와 현재 개체의 각 비교에 대한 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-199">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="9b93d-200">현재 개체가 다른 개체보다 작으면 반환되는 값이 0보다 작고, 현재 개체가 다른 개체보다 크면 0보다 크고, 같으면 0입니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-200">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="9b93d-201">이렇게 하면 보다 큼, 보다 작음 및 같음에 대한 조건을 코드에서 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-201">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>
+<span data-ttu-id="7f093-200"><xref:System.IComparable%601.CompareTo%2A> 메서드를 호출할 때마다 정렬에 사용되는 단일 비교가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-200">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that is used for sorting.</span></span> <span data-ttu-id="7f093-201">`CompareTo` 메서드의 사용자 작성 코드는 다른 개체와 현재 개체의 각 비교에 대한 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-201">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="7f093-202">현재 개체가 다른 개체보다 작으면 반환되는 값이 0보다 작고, 현재 개체가 다른 개체보다 크면 0보다 크고, 같으면 0입니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-202">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="7f093-203">이렇게 하면 보다 큼, 보다 작음 및 같음에 대한 조건을 코드에서 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-203">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>
 
-<span data-ttu-id="9b93d-202">`ListCars` 메서드에서 `cars.Sort()` 문은 목록을 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-202">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="9b93d-203"><xref:System.Collections.Generic.List%601>의 <xref:System.Collections.Generic.List%601.Sort%2A> 메서드를 호출하면 `List`의 `Car` 개체에 대해 `CompareTo` 메서드가 자동으로 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-203">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>
+<span data-ttu-id="7f093-204">`ListCars` 메서드에서 `cars.Sort()` 문은 목록을 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-204">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="7f093-205"><xref:System.Collections.Generic.List%601>의 <xref:System.Collections.Generic.List%601.Sort%2A> 메서드를 호출하면 `List`의 `Car` 개체에 대해 `CompareTo` 메서드가 자동으로 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-205">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>
 
 ```csharp
 private static void ListCars()
@@ -478,15 +479,15 @@ public class Car : IComparable<Car>
 
 <a name="BKMK_CustomCollection"></a>
 
-## <a name="defining-a-custom-collection"></a><span data-ttu-id="9b93d-204">사용자 지정 컬렉션 정의</span><span class="sxs-lookup"><span data-stu-id="9b93d-204">Defining a Custom Collection</span></span>
+## <a name="defining-a-custom-collection"></a><span data-ttu-id="7f093-206">사용자 지정 컬렉션 정의</span><span class="sxs-lookup"><span data-stu-id="7f093-206">Defining a Custom Collection</span></span>
 
-<span data-ttu-id="9b93d-205"><xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-205">You can define a collection by implementing the <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.IEnumerable> interface.</span></span>
+<span data-ttu-id="7f093-207"><xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-207">You can define a collection by implementing the <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.IEnumerable> interface.</span></span>
 
-<span data-ttu-id="9b93d-206">사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 문서의 앞부분에 있는 [컬렉션 종류](#BKMK_KindsOfCollections)에서 설명한 .NET에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-206">Although you can define a custom collection, it is usually better to instead use the collections that are included in .NET, which are described in [Kinds of Collections](#BKMK_KindsOfCollections) earlier in this article.</span></span>
+<span data-ttu-id="7f093-208">사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 문서의 앞부분에 있는 [컬렉션 종류](#BKMK_KindsOfCollections)에서 설명한 .NET에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-208">Although you can define a custom collection, it is usually better to instead use the collections that are included in .NET, which are described in [Kinds of Collections](#BKMK_KindsOfCollections) earlier in this article.</span></span>
 
-<span data-ttu-id="9b93d-207">다음 예제에서는 `AllColors`라는 사용자 지정 컬렉션 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-207">The following example defines a custom collection class named `AllColors`.</span></span> <span data-ttu-id="9b93d-208">이 클래스는 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 구현되어야 하는 <xref:System.Collections.IEnumerable> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-208">This class implements the <xref:System.Collections.IEnumerable> interface, which requires that the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method be implemented.</span></span>
+<span data-ttu-id="7f093-209">다음 예제에서는 `AllColors`라는 사용자 지정 컬렉션 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-209">The following example defines a custom collection class named `AllColors`.</span></span> <span data-ttu-id="7f093-210">이 클래스는 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 구현되어야 하는 <xref:System.Collections.IEnumerable> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-210">This class implements the <xref:System.Collections.IEnumerable> interface, which requires that the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method be implemented.</span></span>
 
-<span data-ttu-id="9b93d-209">`GetEnumerator` 메서드는 `ColorEnumerator` 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-209">The `GetEnumerator` method returns an instance of the `ColorEnumerator` class.</span></span> <span data-ttu-id="9b93d-210">`ColorEnumerator`는 <xref:System.Collections.IEnumerator.Current%2A> 속성, <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드 및 <xref:System.Collections.IEnumerator.Reset%2A> 메서드가 구현되어야 하는 <xref:System.Collections.IEnumerator> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-210">`ColorEnumerator` implements the <xref:System.Collections.IEnumerator> interface, which requires that the <xref:System.Collections.IEnumerator.Current%2A> property, <xref:System.Collections.IEnumerator.MoveNext%2A> method, and <xref:System.Collections.IEnumerator.Reset%2A> method be implemented.</span></span>
+<span data-ttu-id="7f093-211">`GetEnumerator` 메서드는 `ColorEnumerator` 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-211">The `GetEnumerator` method returns an instance of the `ColorEnumerator` class.</span></span> <span data-ttu-id="7f093-212">`ColorEnumerator`는 <xref:System.Collections.IEnumerator.Current%2A> 속성, <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드 및 <xref:System.Collections.IEnumerator.Reset%2A> 메서드가 구현되어야 하는 <xref:System.Collections.IEnumerator> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-212">`ColorEnumerator` implements the <xref:System.Collections.IEnumerator> interface, which requires that the <xref:System.Collections.IEnumerator.Current%2A> property, <xref:System.Collections.IEnumerator.MoveNext%2A> method, and <xref:System.Collections.IEnumerator.Reset%2A> method be implemented.</span></span>
 
 ```csharp
 private static void ListColors()
@@ -561,15 +562,15 @@ public class Color
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a><span data-ttu-id="9b93d-211">반복기</span><span class="sxs-lookup"><span data-stu-id="9b93d-211">Iterators</span></span>
+## <a name="iterators"></a><span data-ttu-id="7f093-213">반복기</span><span class="sxs-lookup"><span data-stu-id="7f093-213">Iterators</span></span>
 
-<span data-ttu-id="9b93d-212">*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-212">An *iterator* is used to perform a custom iteration over a collection.</span></span> <span data-ttu-id="9b93d-213">반복기는 메서드 또는 `get` 접근자일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-213">An iterator can be a method or a `get` accessor.</span></span> <span data-ttu-id="9b93d-214">반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-214">An iterator uses a [yield return](../../language-reference/keywords/yield.md) statement to return each element of the collection one at a time.</span></span>
+<span data-ttu-id="7f093-214">*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-214">An *iterator* is used to perform a custom iteration over a collection.</span></span> <span data-ttu-id="7f093-215">반복기는 메서드 또는 `get` 접근자일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-215">An iterator can be a method or a `get` accessor.</span></span> <span data-ttu-id="7f093-216">반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-216">An iterator uses a [yield return](../../language-reference/keywords/yield.md) statement to return each element of the collection one at a time.</span></span>
 
-<span data-ttu-id="9b93d-215">[foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-215">You call an iterator by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="9b93d-216">각각의 `foreach` 루프의 반복이 반복기를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-216">Each iteration of the `foreach` loop calls the iterator.</span></span> <span data-ttu-id="9b93d-217">`yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-217">When a `yield return` statement is reached in the iterator, an expression is returned, and the current location in code is retained.</span></span> <span data-ttu-id="9b93d-218">다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-218">Execution is restarted from that location the next time that the iterator is called.</span></span>
+<span data-ttu-id="7f093-217">[foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-217">You call an iterator by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="7f093-218">각각의 `foreach` 루프의 반복이 반복기를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-218">Each iteration of the `foreach` loop calls the iterator.</span></span> <span data-ttu-id="7f093-219">`yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-219">When a `yield return` statement is reached in the iterator, an expression is returned, and the current location in code is retained.</span></span> <span data-ttu-id="7f093-220">다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-220">Execution is restarted from that location the next time that the iterator is called.</span></span>
 
-<span data-ttu-id="9b93d-219">자세한 내용은 [반복기(C#)](./iterators.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b93d-219">For more information, see [Iterators (C#)](./iterators.md).</span></span>
+<span data-ttu-id="7f093-221">자세한 내용은 [반복기(C#)](./iterators.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7f093-221">For more information, see [Iterators (C#)](./iterators.md).</span></span>
 
-<span data-ttu-id="9b93d-220">다음 예제에서는 반복기 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-220">The following example uses an iterator method.</span></span> <span data-ttu-id="9b93d-221">반복기 메서드는 [for](../../language-reference/keywords/for.md) 루프 내부에 있는 `yield return` 문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-221">The iterator method has a `yield return` statement that is inside a [for](../../language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="9b93d-222">`ListEvenNumbers` 메서드에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b93d-222">In the `ListEvenNumbers` method, each iteration of the `foreach` statement body creates a call to the iterator method, which proceeds to the next `yield return` statement.</span></span>
+<span data-ttu-id="7f093-222">다음 예제에서는 반복기 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-222">The following example uses an iterator method.</span></span> <span data-ttu-id="7f093-223">반복기 메서드는 [for](../../language-reference/keywords/for.md) 루프 내부에 있는 `yield return` 문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-223">The iterator method has a `yield return` statement that is inside a [for](../../language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="7f093-224">`ListEvenNumbers` 메서드에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="7f093-224">In the `ListEvenNumbers` method, each iteration of the `foreach` statement body creates a call to the iterator method, which proceeds to the next `yield return` statement.</span></span>
 
 ```csharp
 private static void ListEvenNumbers()
@@ -596,14 +597,14 @@ private static IEnumerable<int> EvenSequence(
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9b93d-223">참조</span><span class="sxs-lookup"><span data-stu-id="9b93d-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f093-225">참조</span><span class="sxs-lookup"><span data-stu-id="7f093-225">See also</span></span>
 
-- [<span data-ttu-id="9b93d-224">개체 이니셜라이저 및 컬렉션 이니셜라이저</span><span class="sxs-lookup"><span data-stu-id="9b93d-224">Object and Collection Initializers</span></span>](../classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="9b93d-225">프로그래밍 개념(C#)</span><span class="sxs-lookup"><span data-stu-id="9b93d-225">Programming Concepts (C#)</span></span>](./index.md)
-- [<span data-ttu-id="9b93d-226">Option Strict 문</span><span class="sxs-lookup"><span data-stu-id="9b93d-226">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [<span data-ttu-id="9b93d-227">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="9b93d-227">LINQ to Objects (C#)</span></span>](./linq/linq-to-objects.md)
-- [<span data-ttu-id="9b93d-228">PLINQ(병렬 LINQ)</span><span class="sxs-lookup"><span data-stu-id="9b93d-228">Parallel LINQ (PLINQ)</span></span>](../../../standard/parallel-programming/introduction-to-plinq.md)
-- [<span data-ttu-id="9b93d-229">컬렉션 및 데이터 구조</span><span class="sxs-lookup"><span data-stu-id="9b93d-229">Collections and Data Structures</span></span>](../../../standard/collections/index.md)
-- [<span data-ttu-id="9b93d-230">Collection 클래스 선택</span><span class="sxs-lookup"><span data-stu-id="9b93d-230">Selecting a Collection Class</span></span>](../../../standard/collections/selecting-a-collection-class.md)
-- [<span data-ttu-id="9b93d-231">컬렉션 내에서 비교 및 정렬</span><span class="sxs-lookup"><span data-stu-id="9b93d-231">Comparisons and Sorts Within Collections</span></span>](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [<span data-ttu-id="9b93d-232">제네릭 컬렉션 사용 기준</span><span class="sxs-lookup"><span data-stu-id="9b93d-232">When to Use Generic Collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
+- [<span data-ttu-id="7f093-226">개체 이니셜라이저 및 컬렉션 이니셜라이저</span><span class="sxs-lookup"><span data-stu-id="7f093-226">Object and Collection Initializers</span></span>](../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="7f093-227">프로그래밍 개념(C#)</span><span class="sxs-lookup"><span data-stu-id="7f093-227">Programming Concepts (C#)</span></span>](./index.md)
+- [<span data-ttu-id="7f093-228">Option Strict 문</span><span class="sxs-lookup"><span data-stu-id="7f093-228">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="7f093-229">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="7f093-229">LINQ to Objects (C#)</span></span>](./linq/linq-to-objects.md)
+- [<span data-ttu-id="7f093-230">PLINQ(병렬 LINQ)</span><span class="sxs-lookup"><span data-stu-id="7f093-230">Parallel LINQ (PLINQ)</span></span>](../../../standard/parallel-programming/introduction-to-plinq.md)
+- [<span data-ttu-id="7f093-231">컬렉션 및 데이터 구조</span><span class="sxs-lookup"><span data-stu-id="7f093-231">Collections and Data Structures</span></span>](../../../standard/collections/index.md)
+- [<span data-ttu-id="7f093-232">Collection 클래스 선택</span><span class="sxs-lookup"><span data-stu-id="7f093-232">Selecting a Collection Class</span></span>](../../../standard/collections/selecting-a-collection-class.md)
+- [<span data-ttu-id="7f093-233">컬렉션 내에서 비교 및 정렬</span><span class="sxs-lookup"><span data-stu-id="7f093-233">Comparisons and Sorts Within Collections</span></span>](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [<span data-ttu-id="7f093-234">제네릭 컬렉션 사용 기준</span><span class="sxs-lookup"><span data-stu-id="7f093-234">When to Use Generic Collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
