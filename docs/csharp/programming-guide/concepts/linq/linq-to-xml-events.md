@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 이벤트(C#)
+description: C#의 LINQ to XML 이벤트를 XObject의 인스턴스에 추가합니다. 이벤트 처리기는 해당 XObject의 XML 트리가 수정될 때 이벤트를 수신합니다.
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576b0a5d0472bddd66e01d3bef8f3affa1c9458b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253169"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165421"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 이벤트(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
@@ -19,14 +20,14 @@ ms.locfileid: "70253169"
 ## <a name="types-and-events"></a>형식 및 이벤트  
  이벤트 작업을 할 때 다음 형식을 사용할 수 있습니다.  
   
-|형식|설명|  
+|Type|설명|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|<xref:System.Xml.Linq.XObject>에 대한 이벤트가 발생할 때 이벤트 형식을 지정합니다.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed> 이벤트에 대한 데이터를 제공합니다.|  
   
  다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
   
-|이벤트(event)|설명|  
+|이벤트|Description|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.|  
@@ -75,7 +76,7 @@ Console.WriteLine("Total:{0}", (int)total);
 Console.WriteLine(root);  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
  이 코드의 결과는 다음과 같습니다.  
   
 ```output  

@@ -1,5 +1,6 @@
 ---
 title: Ildasm.exe(IL 디스어셈블러)
+description: Ildasm.exe(IL 디스어셈블러)는 IL(중간 언어) 코드가 포함된 PE(이식 가능한 실행 파일) 파일을 가져와서 Ilasm.exe를 위한 텍스트 파일을 만듭니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PE files, MSIL Disassembler
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105054"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166836"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -153,7 +154,7 @@ ildasm MyFile.exe /output:MyFile.il
 ildasm MyFile.exe /text
 ```
 
-`MyApp.exe` 파일에 관리되는 포함 리소스와 관리되지 않는 포함 리소스가 들어 있는 경우, 다음 명령을 사용하여 다음과 같은 4개 파일을 생성합니다. *MyApp.il*, *MyApp.res*, *Icons.resources* 및 *Message.resources*.
+`MyApp.exe` 파일에 관리되는 포함 리소스와 관리되지 않은 포함 리소스가 들어 있는 경우 다음 명령을 사용하여 *MyApp.il*, *MyApp.res*, *Icons.resources*, *Message.resources* 등 네 개의 파일을 생성합니다.
 
 ```console
 ildasm MyApp.exe /output:MyApp.il

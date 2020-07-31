@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607482"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167408"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,7 +49,7 @@ ms.locfileid: "81607482"
 1. 다음으로 낮은 버전의 .NET 표준을 대상으로 지정하고 프로젝트를 빌드합니다.
 2. 프로젝트가 성공적으로 빌드되면 1단계를 반복합니다. 그렇지 않으면 다음으로 높은 버전으로 대상을 변경합니다. 이 버전을 사용해야 합니다.
 
-그러나 하위 .NET Standard 버전을 대상으로 지정하면 많은 지원 종속성이 도입됩니다. 프로젝트에서 .NET 1.x를 대상으로 지정하는 경우에는 .NET Standard 2.0 ‘또한 대상으로 지정’하는 것이 좋습니다.  이렇게 하면 .NET Standard 2.0 호환 프레임워크에서 실행되는 라이브러리의 사용자에 대한 종속성 그래프가 단순화되고 다운로드해야 하는 패키지 수가 감소합니다.
+그러나 하위 .NET Standard 버전을 대상으로 지정하면 많은 지원 종속성이 도입됩니다. 프로젝트에서 .NET 1.x를 대상으로 지정하는 경우에는 .NET Standard 2.0 ‘또한 대상으로 지정’하는 것이 좋습니다. 이렇게 하면 .NET Standard 2.0 호환 프레임워크에서 실행되는 라이브러리의 사용자에 대한 종속성 그래프가 단순화되고 다운로드해야 하는 패키지 수가 감소합니다.
 
 ### <a name="net-standard-versioning-rules"></a>.NET 표준 버전 관리 규칙
 
@@ -76,11 +76,11 @@ ms.locfileid: "81607482"
 보다 편리하게 읽을 수 있고 특정 개발자 시나리오(예: 컴파일러 사용)를 지원할 수 있도록 파생 아티팩트가 제공됩니다.
 
 - [API list in markdown](https://github.com/dotnet/standard/tree/master/docs/versions)(Markdown의 API 목록)
-- [NuGet 패키지](../core/packages.md)로 배포되고 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지에서 참조되는 참조 어셈블리입니다.
+- NuGet 패키지로 배포되고 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지에서 참조되는 참조 어셈블리입니다.
 
 ### <a name="package-representation"></a>패키지 표현
 
-.NET Standard 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현체는 각 .NET 구현에 적절한 다양한 방법으로 제공됩니다.
+.NET Standard 참조 어셈블리의 기본 배포 수단은 NuGet 패키지입니다. 구현체는 각 .NET 구현에 적절한 다양한 방법으로 제공됩니다.
 
 NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [압축 TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET Standard 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, 광범위한 API의 경우 사용 가능한 API 수가 .NET Standard 1.6과 2.0 간에 세 배 이상 증가하므로 `netstandard2.0`을 대상으로 지정합니다.
 
@@ -102,7 +102,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 ## <a name="target-net-standard"></a>.NET Standard 대상 지정
 
-`netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다. [.NET Core 도구를 사용하여 .NET Standard를 대상으로 지정](../core/packages.md)하는 예제를 확인할 수 있습니다.
+`netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다.
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
 

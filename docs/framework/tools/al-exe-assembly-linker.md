@@ -1,5 +1,6 @@
 ---
 title: Al.exe(어셈블리 링커)
+description: 어셈블리 링커 도구인 AI.exe를 사용합니다. 이 도구는 모듈 또는 리소스 파일인 하나 이상의 파일에서 어셈블리 매니페스트가 있는 파일을 생성합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Al.exe
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: b7081f00e31dfa8ac46909e61c7d389ba7954878
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66408b11f4e82776058ac19b8454bf50906b4b86
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611408"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167359"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 

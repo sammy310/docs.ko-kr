@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365585"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251181"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -54,8 +54,10 @@ dotnet publish -h|--help
 `dotnet publish` 명령은 속성 설정에 대한 `-p` 및 로거를 정의하는 `-l` 같은 MSBuild 옵션을 수락합니다. 예를 들어 `-p:<NAME>=<VALUE>` 형식을 사용하여 MSBuild 속성을 설정할 수 있습니다. *.pubxml* 파일을 참조하여 게시 관련 속성을 설정할 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
+
+앞의 예제에서는 *\<project_folder>/Properties/PublishProfiles* 폴더에 있는 *FolderProfile.pubxml* 파일을 사용합니다. `PublishProfile` 속성을 설정할 때 지정하는 경로 및 파일 확장명은 무시됩니다. MSBuild는 기본적으로 *Properties/PublishProfiles* 폴더를 검색하고 *pubxml* 파일 확장명으로 간주합니다. 확장명을 포함한 경로 및 파일 이름을 지정하려면 `PublishProfile` 속성 대신 `PublishProfileFullPath` 속성을 설정합니다.
 
 자세한 내용은 다음 자료를 참조하세요.
 

@@ -3,12 +3,12 @@ title: Microsoft.NET.Sdk의 MSBuild 속성
 description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206104"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164376"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
 
@@ -25,7 +25,7 @@ ms.locfileid: "83206104"
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework` 속성은 [메타패키지](../packages.md#metapackages)를 암시적으로 참조하는 앱의 대상 프레임워크 버전을 지정합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-framework-versions)를 참조하세요.
+`TargetFramework` 속성은 앱의 대상 프레임워크 버전을 지정합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-framework-versions)를 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ ms.locfileid: "83206104"
 > [!NOTE]
 > 이 속성은 `netstandard1.x`를 사용하는 프로젝트에만 적용됩니다. `netstandard2.x`를 사용하는 프로젝트에는 적용되지 않습니다.
 
-[메타패키지](../packages.md#metapackages) 버전보다 낮은 프레임워크 버전을 지정하려면 `NetStandardImplicitPackageVersion` 속성을 사용합니다. 다음 예제의 프로젝트 파일은 `netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용합니다.
+메타패키지 버전보다 낮은 프레임워크 버전을 지정하려면 `NetStandardImplicitPackageVersion` 속성을 사용합니다. 다음 예제의 프로젝트 파일은 `netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용합니다.
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ ms.locfileid: "83206104"
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference` 항목은 NuGet 패키지에 대한 참조를 정의합니다. 예를 들어 [메타패키지](../packages.md#metapackages) 대신 단일 패키지를 참조하려고 할 수 있습니다.
+`PackageReference` 항목은 NuGet 패키지에 대한 참조를 정의합니다.
 
 `Include` 특성은 패키지 ID를 지정합니다. `Version` 특성은 버전 또는 버전 범위를 지정합니다. 최소 버전, 최대 버전, 범위 또는 정확한 일치를 지정하는 방법에 대한 자세한 내용은 [버전 범위](/nuget/concepts/package-versioning#version-ranges)를 참조하세요. 또한 메타데이터 `IncludeAssets`, `ExcludeAssets`, `PrivateAssets`를 프로젝트 참조에 추가할 수도 있습니다.
 

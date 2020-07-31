@@ -1,13 +1,14 @@
 ---
 title: 혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
+description: LINQ to XML 메서드는 XML 트리를 직접 수정할 수 있습니다. XML 트리를 수정하는 동안 축 중 하나를 반복하면 버그가 발생할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eaed10f0a2e64abeb7725dcd70816d75d8a0423
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168351"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165292"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
@@ -17,7 +18,7 @@ ms.locfileid: "79168351"
 ## <a name="definition-of-the-problem"></a>문제에 대한 정의  
  LINQ를 사용하여 컬렉션을 반복하는 코드를 작성하는 경우 선언적 스타일로 코드를 작성할 수 있습니다. 이는 작업을 수행하는 *방법*이 아니라 원하는 *작업*을 설명하는 것과 유사합니다. 1\) 첫 번째 요소를 가져오고 2) 특정 조건에 대해 테스트한 다음 3) 요소를 수정하고 4) 요소를 다시 목록에 배치하는 코드를 작성하는 경우 코드는 명령적 코드일 수 있습니다. 즉, 작업을 수행할 *방법*을 컴퓨터에 지시합니다.  
   
- 이러한 스타일의 코드를 동일한 작업에서 혼합하면 문제가 발생할 수 있습니다. 다음 사항을 고려합니다.  
+ 이러한 스타일의 코드를 동일한 작업에서 혼합하면 문제가 발생할 수 있습니다. 다음을 살펴보세요.  
   
  세 항목(a, b 및 c)이 포함된 연결된 목록이 있는 경우를 생각해 보겠습니다.  
   

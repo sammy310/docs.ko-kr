@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416723"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164433"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
@@ -118,7 +118,7 @@ Azure는 다양한 데이터 스토리지 옵션을 제공하므로, 애플리�
 
 구조화되지 않은 JSON 데이터는 SQL Database 열에서 Azure Storage의 Blob 또는 테이블, Azure Cosmos DB에 이르기까지 다양한 방법으로 저장할 수 있습니다. 이 중에서 Azure Cosmos DB는 최상의 쿼리 기능을 제공하며, 쿼리를 지원해야 하는 다수의 JSON 기반 문서에 권장되는 옵션입니다.
 
-애플리케이션 동작을 오케스트레이션하는 데 사용되는 일시적인 명령 또는 이벤트 기반 데이터는 Azure Service Bus 또는 Azure Storage Queue를 사용할 수 있습니다. Azure Storage Bus는 더 많은 유연성을 제공하며 애플리케이션 내 및 애플리케이션 간의 중요한 메시징에 권장되는 서비스입니다.
+애플리케이션 동작을 오케스트레이션하는 데 사용되는 일시적인 명령 또는 이벤트 기반 데이터는 Azure Service Bus 또는 Azure Storage Queue를 사용할 수 있습니다. Azure Service Bus는 더 많은 유연성을 제공하며 애플리케이션 내 및 애플리케이션 간의 중요한 메시지에 권장되는 서비스입니다.
 
 ## <a name="architecture-recommendations"></a>아키텍처 권장 사항
 
