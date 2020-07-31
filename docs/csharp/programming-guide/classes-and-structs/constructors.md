@@ -1,17 +1,18 @@
 ---
 title: 생성자 - C# 프로그래밍 가이드
+description: 클래스 또는 구조체가 만들어지면 C#의 생성자가 호출됩니다. 생성자를 사용하여 기본값을 설정하고, 인스턴스화를 제한하고, 유연하고 읽기 쉬운 코드를 씁니다.
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398402"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474906"
 ---
 # <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
 
@@ -56,7 +57,7 @@ ms.locfileid: "79398402"
   
  [복사 생성자 작성 방법](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

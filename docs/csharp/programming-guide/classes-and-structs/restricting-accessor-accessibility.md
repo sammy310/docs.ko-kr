@@ -1,5 +1,6 @@
 ---
 title: 접근자 액세스 가능성 제한 - C# 프로그래밍 가이드
+description: C#에서 속성의 get 및 set 접근자는 자신이 속한 속성과 기본적으로 가시성 또는 액세스 수준이 같습니다. 액세스를 제한할 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fd1d58dc6125b5180118b2e0d3edc885a4b971
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714687"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863970"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
-속성 또는 인덱서의 [get](../../language-reference/keywords/get.md) 및 [set](../../language-reference/keywords/set.md) 부분을 *접근자*라고 합니다. 기본적으로 이러한 접근자는 속하는 속성 또는 인덱서와 동일한 표시 유형 또는 액세스 수준을 갖습니다. 자세한 내용은 [접근성 수준](../../language-reference/keywords/accessibility-levels.md)을 참조하세요. 그러나 이러한 접근자 중 하나에 대한 액세스를 제한하는 것이 유용한 경우도 있습니다. 이렇게 하려면 일반적으로 `set` 접근자의 접근성을 제한하는 동시에 `get` 접근자를 공개적으로 액세스할 수 있도록 유지해야 합니다. 예들 들어 다음과 같습니다.  
+속성 또는 인덱서의 [get](../../language-reference/keywords/get.md) 및 [set](../../language-reference/keywords/set.md) 부분을 *접근자*라고 합니다. 기본적으로 이러한 접근자는 속하는 속성 또는 인덱서와 동일한 표시 유형 또는 액세스 수준을 갖습니다. 자세한 내용은 [접근성 수준](../../language-reference/keywords/accessibility-levels.md)을 참조하세요. 그러나 이러한 접근자 중 하나에 대한 액세스를 제한하는 것이 유용한 경우도 있습니다. 이렇게 하려면 일반적으로 `set` 접근자의 접근성을 제한하는 동시에 `get` 접근자를 공개적으로 액세스할 수 있도록 유지해야 합니다. 예를 들어:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
@@ -35,7 +36,7 @@ ms.locfileid: "75714687"
 - 접근자의 접근성 수준은 속성 또는 인덱서 자체의 접근성 수준보다 더 제한적이어야 합니다.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>재정의 접근자의 액세스 한정자  
- 속성 또는 인덱서를 재정의하는 경우 재정의 코드에서 재정의된 접근자에 액세스할 수 있어야 합니다. 또한 속성/인덱서 및 접근자의 접근성이 재정의된 속성/인덱서 및 해당 접근자와 일치해야 합니다. 예들 들어 다음과 같습니다.  
+ 속성 또는 인덱서를 재정의하는 경우 재정의 코드에서 재정의된 접근자에 액세스할 수 있어야 합니다. 또한 속성/인덱서 및 접근자의 접근성이 재정의된 속성/인덱서 및 해당 접근자와 일치해야 합니다. 예를 들어:  
   
  [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
@@ -56,7 +57,7 @@ ms.locfileid: "75714687"
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
  `new private string Id` 선언을 `new public string Id`로 바꿀 경우 다음과 같이 출력됩니다.  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  

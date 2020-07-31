@@ -1,13 +1,14 @@
 ---
 title: 함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
+description: 이 문서에서는 C#의 함수형 프로그래밍을 절차적 접근 방법과 비교합니다. 함수형 프로그래밍은 순수 함수를 통해 불변성을 적용합니다.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594318"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103745"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  

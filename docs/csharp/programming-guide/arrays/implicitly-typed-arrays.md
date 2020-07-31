@@ -1,17 +1,18 @@
 ---
 title: 암시적으로 형식화된 배열 - C# 프로그래밍 가이드
+description: C#에서 암시적으로 형식화된 배열의 형식은 배열 이니셜라이저에서 지정된 요소에서 유추됩니다. 쿼리 식에서 암시적으로 형식화된 배열을 사용합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicitly-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f14f68207dfb79c92eaa01ac2a8ffaa08facc03
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705719"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474711"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>암시적으로 형식화된 배열(C# 프로그래밍 가이드)
 

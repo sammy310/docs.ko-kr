@@ -1,13 +1,14 @@
 ---
 title: LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)
+description: 이 예제에서는 LINQ를 사용하여 C#에서 ArrayList를 쿼리합니다. 컬렉션에 있는 개체의 형식을 반영하도록 범위 변수의 형식을 선언해야 합니다.
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168936"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104606"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)
 LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.  
@@ -83,6 +84,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to Objects(C#)](./linq-to-objects.md)

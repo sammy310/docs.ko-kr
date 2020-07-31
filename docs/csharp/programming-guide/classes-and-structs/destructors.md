@@ -1,17 +1,18 @@
 ---
 title: 종료자 - C# 프로그래밍 가이드
+description: 소멸자라고도 하는 C#의 종료자는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 모든 최종 정리를 수행합니다.
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 62fc531a8064a8a5cb144a89aa9975b3199db976
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990118"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474893"
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
 종료자(**소멸자**라고도 함)는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 최종 정리를 수행하는 데 사용됩니다.  

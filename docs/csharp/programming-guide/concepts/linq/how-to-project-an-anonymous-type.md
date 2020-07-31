@@ -1,13 +1,14 @@
 ---
 title: 무명 형식을 프로젝션하는 방법(C#)
+description: C#에서 익명 형식으로 쿼리를 프로젝션하는 방법에 대해 알아봅니다. 잠깐 동안만 사용할 새 형식을 만드는 것보다 익명 형식을 사용하는 것이 더 쉬울 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6598796a4ba95362340f2551b1da6ac6d857eaae
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345727"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104631"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>무명 형식을 프로젝션하는 방법(C#)
 새 형식을 잠깐 동안만 사용할 경우에도 필요에 따라 쿼리를 해당 형식으로 프로젝션하려고 할 수 있습니다. 프로젝션에서만 사용하기 위해 새 형식을 만드는 것은 비효율적입니다. 이 경우 더 효율적인 방법은 익명 형식을 프로젝션하는 것입니다. 익명 형식을 사용하면 클래스를 정의한 다음 클래스의 이름을 지정하지 않고도 클래스의 개체를 선언하고 초기화할 수 있습니다.  
@@ -28,7 +29,7 @@ Country: USA
 ## <a name="example"></a>예제  
  이 예제에서 `select` 절은 익명 형식을 프로젝션한 다음 `var`을 사용하여 `IEnumerable` 개체를 만듭니다. `foreach` 루프에서 반복 변수는 쿼리 식에서 만든 익명 형식의 인스턴스가 됩니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  

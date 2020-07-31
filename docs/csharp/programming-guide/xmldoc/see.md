@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287248"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863788"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(C# 프로그래밍 가이드)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287248"
 
 ## <a name="remarks"></a>설명
 
-`<see>` 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 참조 섹션에 텍스트를 배치해야 한다고 지정하려면 [\<seealso>](./seealso.md)를 사용합니다. 코드 요소의 문서 페이지에 대한 내부 하이퍼링크를 만들려면 [cref 특성](./cref-attribute.md)을 사용합니다.
+`<see>` 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 참조 섹션에 텍스트를 배치해야 한다고 지정하려면 [\<seealso>](./seealso.md)를 사용합니다. 코드 요소의 문서 페이지에 대한 내부 하이퍼링크를 만들려면 [cref 특성](./cref-attribute.md)을 사용합니다. 또한 ``href``는 하이퍼링크로 작동하는 유효한 특성입니다.
 
 [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
 

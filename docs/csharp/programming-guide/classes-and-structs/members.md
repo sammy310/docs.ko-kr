@@ -1,16 +1,17 @@
 ---
 title: 멤버 - C# 프로그래밍 가이드
+description: C#의 클래스 및 구조체에는 클래스에 선언되고 상속 계층 구조에 선언된 멤버를 포함하여 데이터와 동작을 나타내는 멤버가 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa4981ea20d86994bfae92d5db8c9abfa7c8f906
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705511"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864594"
 ---
 # <a name="members-c-programming-guide"></a>멤버(C# 프로그래밍 가이드)
 

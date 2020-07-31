@@ -1,13 +1,14 @@
 ---
 title: 함수 생성(LINQ to XML)(C#)
+description: LINQ to XML 프로그래밍 인터페이스를 사용하여 C#에서 단일 문으로 XML 트리를 만들 수 있는 함수를 생성하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635758"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103775"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>함수 생성(LINQ to XML)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다. 함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.  

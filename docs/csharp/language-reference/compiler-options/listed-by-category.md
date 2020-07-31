@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811677"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474022"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 
@@ -37,7 +37,7 @@ ms.locfileid: "84811677"
 |[/preferreduilang](preferreduilang-compiler-option.md)|컴파일러 출력 언어를 지정합니다.|
 |[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|
 |[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|
-|[-target](target-compiler-option.md)|다섯 가지 옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) 또는 [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|
+|[-target](target-compiler-option.md)|옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) 또는 [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|
 |-modulename:\<string>|소스 모듈의 이름을 지정합니다.|
 
 ## <a name="net-framework-assemblies"></a>.NET Framework 어셈블리

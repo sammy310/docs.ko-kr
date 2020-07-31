@@ -1,16 +1,17 @@
 ---
 title: C#에서 상수 정의 방법
+description: 컴파일 시간에 값이 설정되는 필드인 C#에서 상수를 정의하는 방법에 대해 알아봅니다. 상수를 사용하여 특수 값에 의미 있는 이름을 제공합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afa2799cf76f976e332f91b631dc90e2799a0aa0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337662"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864646"
 ---
 # <a name="how-to-define-constants-in-c"></a>C\#에서 상수 정의 방법
 상수는 해당 값이 컴파일 시간에 설정되며 변경할 수 없는 필드입니다. 상수를 사용하여 특수 값에 대해 숫자 리터럴(“매직 넘버”) 대신 의미 있는 이름을 제공할 수 있습니다.  
@@ -27,6 +28,6 @@ ms.locfileid: "75337662"
   
  클래스 이름 한정자를 통해 사용자와 상수를 사용하는 다른 사용자가 상수이며 수정할 수 없음을 쉽게 파악할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클래스 및 구조체](./index.md)

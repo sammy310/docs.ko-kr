@@ -1,13 +1,14 @@
 ---
 title: 단일 특성을 검색하는 방법(LINQ to XML)(C#)
+description: 특성 이름이 제공되는 경우 LINQ to XML을 사용하여 C# 요소의 단일 특성을 검색하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4efcae5324ad5a2e4664e68e35e15ec2053daece
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168715"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103436"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>단일 특성을 검색하는 방법(LINQ to XML)(C#)
 이 항목에서는 특성 이름이 제공되는 경우 요소의 단일 특성을 검색하는 방법에 대해 설명합니다. 이 방법은 특정 특성을 가진 요소를 찾으려는 경우 쿼리 식을 작성하는 데 유용합니다.  

@@ -1,16 +1,17 @@
 ---
 title: '완화: TLS 프로토콜'
+description: .NET Framework 4.6부터 TLS 프로토콜 변경에 대한 영향과 완화에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb5aab3361663d7b5401d7e68688265fbc65b36f
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457830"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475361"
 ---
 # <a name="mitigation-tls-protocols"></a>완화: TLS 프로토콜
 .NET Framework 4.6부터 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 및 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 클래스에서 Tls1.0, Tls1.1 또는 Tls 1.2 프로토콜 중 하나를 사용할 수 있습니다. SSL3.0 프로토콜 및 RC4 암호화는 지원되지 않습니다.  
@@ -22,7 +23,7 @@ ms.locfileid: "73457830"
   
 - Tls1.0, Tls1.1 또는 Tls 1.2를 지원하기 위해 업그레이드할 수 없는 모든 서버 쪽 앱  
   
-## <a name="mitigation"></a>완화 방법  
+## <a name="mitigation"></a>완화  
  권장되는 완화 방법은 Tls1.0, Tls1.1 또는 Tls 1.2로 서버 쪽 앱을 업그레이드하는 것입니다. 이 작업이 불가능하거나 클라이언트 앱이 손상된 경우 <xref:System.AppContext> 클래스를 사용하여 다음 두 방법 중 하나로 이 기능을 옵트아웃(opt out)할 수 있습니다.  
   
 - 다음과 같은 코드 조각을 사용하여 프로그래밍 방식으로  
@@ -32,7 +33,7 @@ ms.locfileid: "73457830"
   
      <xref:System.Net.ServicePointManager> 개체는 한 번만 초기화되므로 먼저 애플리케이션에서 이러한 호환성 설정을 정의해야 합니다.  
   
-- 다음 줄을 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 추가  
+- 다음 줄을 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 추가하여 다음을 수행합니다.  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -40,6 +41,6 @@ ms.locfileid: "73457830"
   
  그러나 애플리케이션 보안 수준이 낮아지므로 기본 동작은 옵트아웃(opt out)하지 않는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

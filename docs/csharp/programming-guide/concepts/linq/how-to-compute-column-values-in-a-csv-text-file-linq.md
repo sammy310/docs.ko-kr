@@ -1,13 +1,14 @@
 ---
 title: CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
+description: 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등 C#의 LINQ를 사용하여 집계 계산을 수행하는 방법을 보여줍니다.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169352"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105323"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
@@ -161,7 +162,7 @@ class SumColumns
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

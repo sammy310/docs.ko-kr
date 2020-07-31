@@ -1,5 +1,6 @@
 ---
 title: '자습서: Windows 서비스 앱 만들기'
+description: 이 자습서에서는 이벤트 로그에 메시지를 쓰는 Windows 서비스 앱을 Visual Studio에서 만듭니다. 기능을 추가하고, 상태를 설정하고, 설치 관리자를 추가합니다.
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053479"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925633"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -51,7 +52,7 @@ ms.locfileid: "71053479"
 
 2. 팝업 창에서 **예**를 선택합니다.
 
-    ![이름 바꾸기 프롬프트](./media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
+    ![프롬프트 이름 바꾸기](./media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
 
 3. **디자인** 탭의 바로 가기 메뉴에서 **속성**을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService*로 변경합니다.
 
@@ -350,7 +351,7 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 
 8. 완료되면 **속성** 창이 다름 그림과 같아야 합니다.
 
-     ![Windows 서비스에 대한 설치 관리자 속성](./media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
+     ![Windows 서비스의 설치 관리자 속성](./media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
 
 9. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다.
 

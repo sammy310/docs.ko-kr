@@ -1,13 +1,14 @@
 ---
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
+description: 이 연습에서는 동기 애플리케이션을 async 및 await 기능을 사용하는 C#의 비동기 솔루션으로 변환합니다.
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925113"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 

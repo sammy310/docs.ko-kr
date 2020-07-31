@@ -1,15 +1,16 @@
 ---
 title: 중첩 형식 - C# 프로그래밍 가이드
+description: 클래스, 구조체 또는 인터페이스 내에서 정의된 형식을 C#에서 중첩 형식이라고 합니다.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 12e44ccc1254424c152a238c8390f133550fa54c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e1c6c1e8b22b5447d43915ab02984aa13146301
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626492"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864945"
 ---
 # <a name="nested-types-c-programming-guide"></a>중첩 형식(C# 프로그래밍 가이드)
 
@@ -41,7 +42,7 @@ ms.locfileid: "77626492"
 
 [!code-csharp[UseNestedInstance](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#UseNestedInstance)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

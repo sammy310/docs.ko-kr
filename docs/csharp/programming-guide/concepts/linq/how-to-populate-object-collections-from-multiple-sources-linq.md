@@ -1,13 +1,14 @@
 ---
 title: 여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
+description: C#에서 LINQ를 사용하여 여러 소스의 데이터를 새 형식의 시퀀스에 병합하는 방법에 대해 알아봅니다. 이러한 예제에서는 익명 및 명명된 형식을 모두 사용합니다.
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dc9f98ae09e0fe3437b5d2ccab32b3dbcd93714
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345751"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104726"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
 
@@ -139,7 +140,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)

@@ -1,5 +1,6 @@
 ---
 title: 오래된 멤버 - .NET Framework
+description: .NET 4.5 이상 버전에서 사용되지 않는 형식 멤버의 목록을 확인합니다. 형식 멤버는 어셈블리로 그룹화됩니다. 사용되지 않는 형식의 멤버는 여기에서 제외됩니다.
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 64bbcd099016dd3d11fea2eaba81ae4559ba6762
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243078"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925828"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 
@@ -602,7 +603,7 @@ ms.locfileid: "81243078"
 > |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|이 속성은 사용되지 않습니다. 대신에 개별 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>의 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 속성을 설정합니다.|
 > |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|이 속성은 사용되지 않습니다. <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType>를 사용하는 대신 개별 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>의 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 속성을 설정합니다.|
 > |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|<xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>을 사용하십시오.|
-> |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|<xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>을 사용하십시오.|
+> |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|<xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>을 사용하세요.|
 > |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>는 스크립트 참조에 더 이상 필요하지 않습니다.|
 > |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptResourceAttribute.ScriptResourceName%2A>|이 속성은 사용되지 않습니다. 대신 <xref:System.Web.UI.ScriptResourceAttribute.StringResourceName%2A?displayProperty=nameWithType>를 사용하세요.|
 > |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|이 속성은 사용되지 않습니다. 대신 <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=nameWithType>를 사용하세요.|

@@ -1,16 +1,17 @@
 ---
 title: ToString 메서드 재정의 방법 - C# 프로그래밍 가이드
+description: C#에서 ToString 메서드를 재정의하는 방법에 대해 알아봅니다. 모든 클래스 또는 구조체는 Object를 상속하고 해당 개체의 문자열 표현을 반환하는 ToString을 가져옵니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 7c7196df56821c134b31982d7956a75039e9f929
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65b34b485d4b90173a4c956dd0ebaaa590a0c7c9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705576"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865010"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>ToString 메서드 재정의 방법(C# 프로그래밍 가이드)
 

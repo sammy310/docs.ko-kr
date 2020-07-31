@@ -1,13 +1,14 @@
 ---
 title: '완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현'
+description: .NET Framework 4.6.1 이상 버전을 대상으로 하는 Windows Forms 앱에 포함된 사용자 지정 IMessageFilter.PreFilterMessage 구현에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fe7500d3ed6ff293514495df150a747e7946dda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398648"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475257"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현
 
@@ -27,7 +28,7 @@ ms.locfileid: "79398648"
 
 이전 버전의 .NET Framework를 대상으로 하는 Windows Forms 앱에서는 경우에 따라 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 메서드를 호출할 때 이러한 구현이 <xref:System.IndexOutOfRangeException> 예외를 throw할 수 있습니다.
 
-## <a name="mitigation"></a>완화 방법
+## <a name="mitigation"></a>완화
 
 이러한 변경을 원치 않는 경우 .NET Framework 4.6.1 이상 버전을 대상으로 하는 앱은 앱 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 구성 설정을 추가하여 이 동작을 사용하지 않을 수 있습니다.
 
@@ -45,6 +46,6 @@ ms.locfileid: "79398648"
 </runtime>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

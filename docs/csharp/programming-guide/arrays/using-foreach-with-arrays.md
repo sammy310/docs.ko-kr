@@ -1,16 +1,17 @@
 ---
 title: 배열에 foreach 사용 - C# 프로그래밍 가이드
+description: C#의 foreach 문은 배열의 요소 반복합니다. 1차원 배열의 경우 foreach는 늘어나는 인덱스 순서로 요소를 처리합니다.
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d924a3ef3351cbb30b809a1542f35314ee721852
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705680"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474542"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>배열에 foreach 사용(C# 프로그래밍 가이드)
 

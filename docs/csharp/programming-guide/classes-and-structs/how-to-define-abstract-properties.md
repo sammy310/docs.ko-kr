@@ -1,16 +1,17 @@
 ---
 title: 추상 속성 정의 방법 - C# 프로그래밍 가이드
+description: C#에서 추상 속성을 정의하는 방법에 대해 알아봅니다. 추상 속성을 선언하는 것은 클래스가 속성을 지원함을 의미합니다. 파생된 클래스는 접근자를 구현합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4db71721495857c634e8090b986704d8a592b4e2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705615"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864399"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>추상 속성 정의 방법(C# 프로그래밍 가이드)
 다음 예제에서는 [abstract](../../language-reference/keywords/abstract.md) 속성을 정의하는 방법을 보여 줍니다. 추상 속성 선언은 속성 접근자의 구현을 제공하지 않습니다. 클래스가 속성을 지원하도록 선언하지만 접근자 구현은 파생 클래스에서 처리되도록 합니다. 다음 예제에서는 기본 클래스에서 상속된 추상 속성을 구현하는 방법을 보여 줍니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "75705615"
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- 속성의 한정자는 속성 선언 자체에 배치됩니다. 예들 들어 다음과 같습니다.  
+- 속성의 한정자는 속성 선언 자체에 배치됩니다. 예를 들어:  
   
     ```csharp  
     public abstract double Area  

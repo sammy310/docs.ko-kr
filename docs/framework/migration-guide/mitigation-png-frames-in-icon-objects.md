@@ -1,13 +1,14 @@
 ---
 title: '완화: 아이콘 개체의 PNG 프레임'
+description: .NET Framework 4.6 이상에 포함된 새 동작이 필요 없는 경우 아이콘 개체에서 PNG 프레임의 동작을 구성하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b7ba2951a38ee2d1c7a9b1fc45c5a81d24986a85
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248897"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475439"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>완화: 아이콘 개체의 PNG 프레임
 .NET Framework 4.6부터는 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드가 PNG 프레임이 있는 아이콘을 <xref:System.Drawing.Bitmap> 개체로 성공적으로 변환합니다.  
@@ -18,7 +19,7 @@ ms.locfileid: "80248897"
  이 변경은 <xref:System.ArgumentOutOfRangeException> 개체에 PNG 프레임이 있을 때 throw되는 <xref:System.Drawing.Icon> 에 대해 특수 처리를 구현하고 .NET Framework 4.6을 대상으로 다시 컴파일되는 앱에 영향을 줍니다. .NET Framework 4.6에서 실행되는 경우 변환이 성공하고 <xref:System.ArgumentOutOfRangeException> 이 더 이상 throw되지 않습니다. 따라서 예외 처리기가 더 이상 호출되지 않습니다.  
   
 ### <a name="mitigation"></a>완화  
- 이 동작이 필요 없는 경우 다음 요소를 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 추가하여 이전 동작을 유지할 수 있습니다.  
+ 이 동작이 필요 없는 경우 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 요소를 추가하여 이전 동작을 유지할 수 있습니다.  
   
 ```xml  
 <AppContextSwitchOverrides

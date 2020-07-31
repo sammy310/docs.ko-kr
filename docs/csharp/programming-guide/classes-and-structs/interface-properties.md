@@ -1,16 +1,17 @@
 ---
 title: 인터페이스 속성 - C# 프로그래밍 가이드
+description: C#의 인터페이스에 속성을 선언할 수 있습니다. 이 예제에서는 인터페이스 속성 접근자를 선언합니다.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 920381ae804a6a968bfd667171269377f3d7e448
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626622"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864971"
 ---
 # <a name="interface-properties-c-programming-guide"></a>인터페이스 속성(C# 프로그래밍 가이드)
 
@@ -53,7 +54,7 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [속성](./properties.md)

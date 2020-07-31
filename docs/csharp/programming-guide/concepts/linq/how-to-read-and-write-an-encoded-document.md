@@ -1,13 +1,14 @@
 ---
 title: 인코딩된 문서를 읽고 쓰는 방법(C#)
+description: XDeclaration을 XML 트리에 추가하고 인코딩을 원하는 코드 페이지 이름으로 설정하여 C#에서 인코딩된 XML 문서를 작성하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02b7467f4de71455da516a6c894070337684e7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347670"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104314"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>인코딩된 문서를 읽고 쓰는 방법(C#)
 인코딩된 XML 문서를 만들려면 <xref:System.Xml.Linq.XDeclaration>을 XML 트리에 추가하여 인코딩을 원하는 코드 페이지 이름으로 설정합니다.  
@@ -54,7 +55,7 @@ Console.WriteLine();
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```output  
 Creating a document with utf-8 encoding  

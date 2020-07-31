@@ -1,13 +1,14 @@
 ---
 title: 네임스페이스로 문서 만드는 방법(C#)(LINQ to XML)
+description: 네임스페이스를 로컬 이름과 결합하기 위해 XNamespace 개체를 사용하여 C#에서 LINQ to XML의 네임스페이스가 있는 문서를 만드는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6472baefc73285af1c6dca0bfe7d874003940fc4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141328"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103389"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>네임스페이스로 문서 만드는 방법(C#)(LINQ to XML)
 이 항목에서는 네임스페이스를 사용하여 문서를 만드는 방법을 보여 줍니다.  
@@ -134,7 +135,7 @@ XElement root = new XElement("{http://www.adventure-works.com}Root",
 Console.WriteLine(root);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  

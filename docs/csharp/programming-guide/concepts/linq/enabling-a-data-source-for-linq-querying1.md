@@ -1,13 +1,14 @@
 ---
 title: LINQ 쿼리에 대한 데이터 소스 활성화
+description: 클라이언트가 데이터 원본을 쉽게 쿼리할 수 있도록 C#에서 LINQ를 확장하여 모든 데이터 원본을 LINQ 패턴에서 쿼리할 수 있도록 하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635771"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103943"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ 쿼리에 대한 데이터 소스 활성화
 다양한 방법으로 LINQ를 확장하여 LINQ 패턴에서 원하는 데이터 소스를 쿼리할 수 있습니다. 데이터 소스의 예를 몇 가지 들자면 데이터 구조, 웹 서비스, 파일 시스템 또는 데이터베이스가 있습니다. 쿼리의 구문과 패턴은 변경되지 않으므로 LINQ 패턴을 사용하면 LINQ 쿼리가 사용 설정된 데이터 소스를 클라이언트가 쉽게 쿼리할 수 있습니다. 다음은 LINQ를 이러한 데이터 소스로 확장할 수 있는 방법입니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "75635771"
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 공급자와 같은 복잡한 `IQueryable` 공급자가 전체 LINQ 쿼리를 SQL과 같이 표현이 가능한 쿼리 언어로 변환할 수 있습니다. 복잡한 공급자가 덜 복잡한 공급자보다 더욱 다양하고 방대한 질문을 쿼리로 처리할 수 있기 때문에 더 일반적이라 할 수 있습니다. 또한 개방형 형식 시스템을 가지므로 사용자 정의 형식을 매핑하는 확장 인프라를 포함해야 합니다. 복잡성이 높은 공급자를 개발하려면 상당한 노력이 필요합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>

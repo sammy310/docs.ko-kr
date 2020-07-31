@@ -1,15 +1,16 @@
 ---
 title: 생성자 사용 - C# 프로그래밍 가이드
+description: 이 예제에서는 C#에서 new 연산자를 사용하여 클래스를 인스턴스화하는 방법을 보여줍니다. 단순 생성자는 새 개체에 메모리가 할당된 후 호출됩니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b441b04bd6bfcb5564f40a90718e822f56ac21e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626414"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863957"
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
 
@@ -54,7 +55,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  따라서 값 형식에 대해 매개 변수 없는 생성자를 호출할 필요가 없습니다.  
   
- 클래스와 `structs` 모두 매개 변수를 사용하는 생성자를 정의할 수 있습니다. 매개 변수를 사용하는 생성자는 `new` 문 또는 [base](../../language-reference/keywords/base.md) 문을 통해 호출해야 합니다. 클래스 및 `structs`는 여러 생성자를 정의할 수 있으며, 매개 변수 없는 생성자를 정의하는 데에는 둘 다 필요하지 않습니다. 예들 들어 다음과 같습니다.  
+ 클래스와 `structs` 모두 매개 변수를 사용하는 생성자를 정의할 수 있습니다. 매개 변수를 사용하는 생성자는 `new` 문 또는 [base](../../language-reference/keywords/base.md) 문을 통해 호출해야 합니다. 클래스 및 `structs`는 여러 생성자를 정의할 수 있으며, 매개 변수 없는 생성자를 정의하는 데에는 둘 다 필요하지 않습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +63,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- 생성자는 `base` 키워드를 사용하여 기본 클래스의 생성자를 호출할 수 있습니다. 예들 들어 다음과 같습니다.  
+ 생성자는 `base` 키워드를 사용하여 기본 클래스의 생성자를 호출할 수 있습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   

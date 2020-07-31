@@ -1,15 +1,16 @@
 ---
 title: 개체 형식 배열 - C# 프로그래밍 가이드
+description: C#의 배열은 추상 기본 형식 배열의 개체입니다. Length 속성과 같이 배열의 속성 및 다른 클래스 멤버를 사용할 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 984def3ef74b07d7099fae6cae6d6f8ce7e03e12
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715099"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474724"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>개체 형식 배열(C# 프로그래밍 가이드)
 

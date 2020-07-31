@@ -1,13 +1,14 @@
 ---
 title: XML의 함수 변환(C#)
+description: C#에서 순수 함수 변환 접근 방식을 사용하여 XML 문서를 수정하는 방법과 이 방법이 절차적 접근 방식과 어떻게 다른지 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ccc6859f3663eb3760c7faeaf115a5e88a2278a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75336803"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103669"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML의 함수 변환(C#)
 이 항목에서는 XML 문서를 수정하는 순수 함수 변환 방법에 대해 설명하고 이 방법을 절차적 방법과 대조합니다.  

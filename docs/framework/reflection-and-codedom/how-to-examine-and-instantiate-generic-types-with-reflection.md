@@ -1,5 +1,6 @@
 ---
 title: '방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화'
+description: 리플렉션을 사용하여 제네릭 형식을 검사하고 인스턴스화하는 방법을 참조하세요. IsGenericType, IsGenericParameter 및 GenericParameterPosition 속성을 사용합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130132"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865101"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화
 다른 형식에 대한 정보와 동일한 방식으로 제네릭 형식에 대한 정보를 가져올 수 있습니다. 제네릭 형식을 나타내는 <xref:System.Type> 개체를 검사하면 됩니다. 원칙의 차이점은 제네릭 형식에는 제네릭 형식 매개 변수를 나타내는 <xref:System.Type> 개체 목록이 있다는 것입니다. 이 섹션의 첫 번째 절차에서는 제네릭 형식을 검사합니다.  

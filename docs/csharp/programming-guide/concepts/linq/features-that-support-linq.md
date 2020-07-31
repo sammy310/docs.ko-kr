@@ -1,15 +1,16 @@
 ---
 title: LINQ를 지원하는 C# 기능
+description: LINQ 쿼리 및 기타 컨텍스트에서 사용할 C# 기능에 대해 알아봅니다. 이러한 언어 구문은 C# 3.0에서 도입되었습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202404"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105417"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ를 지원하는 C# 기능
 

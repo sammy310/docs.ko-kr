@@ -1,16 +1,17 @@
 ---
 title: 정적 생성자 - C# 프로그래밍 가이드
+description: C#의 정적 생성자는 정적 데이터를 초기화하거나 첫 번째 인스턴스가 작성되거나 정적 멤버가 참조되기 전에 한 번만 수행되는 작업을 수행합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e324b2aa968ff5fdf9c268fa3891f67e8530ff87
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170119"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863984"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "79170119"
 ## <a name="c-language-specification"></a>C# 언어 사양
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [정적 생성자](~/_csharplang/spec/classes.md#static-constructors) 섹션을 참조하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

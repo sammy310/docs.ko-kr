@@ -1,13 +1,14 @@
 ---
 title: 사용자 지정 특성 만들기(C#)
+description: Attribute 클래스에서 파생되는 특성 클래스를 정의하여 C#에서 사용자 지정 특성을 작성하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 3a70b738b376e52482e63f2eb9cc4d7bb62a9b35
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 7d6f98620388af8715652dcbcfe78366952b853d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141620"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925087"
 ---
 # <a name="creating-custom-attributes-c"></a>사용자 지정 특성 만들기(C#)
 메타데이터를 통해 특성의 정의를 빠르고 쉽게 식별할 수 있도록 해주는 <xref:System.Attribute>로부터 직접적으로 또는 간접적으로 상속한 특성 클래스를 정의하여 사용자 지정 특성을 만들 수 있습니다. 형식을 작성한 프로그래머의 이름을 형식에 태그로 지정한다고 가정해봅시다. 사용자 지정 `Author` 특성 클래스를 아래와 같이 정의할 수 있습니다.  

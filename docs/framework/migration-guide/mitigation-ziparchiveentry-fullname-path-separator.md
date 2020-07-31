@@ -1,5 +1,6 @@
 ---
 title: '완화: ZipArchiveEntry.FullName 경로 구분 기호'
+description: ZipArchiveEntry.FullName의 경로 구분 기호가 .NET Framework 4.6.1을 대상으로 하는 앱부터 변경되는 방식을 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8cd6362038ce0548681f3d3b44724f3ef9ff62cb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102621"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475296"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>완화: ZipArchiveEntry.FullName 경로 구분 기호
 
@@ -27,7 +28,7 @@ ms.locfileid: "82102621"
  .NET Framework <xref:System.IO> 네임스페이스의 API는 슬래시("/") 또는 백슬래시("\\")를 경로 구분 기호 문자로 원활하게 처리할 수 있으므로 이러한 API에 의해 Windows 운영 체제에서 압축 해제된 .ZIP 파일에 이러한 변경이 미치는 영향은 최소로 유지될 것입니다.  
   
 ## <a name="mitigation"></a>완화  
- 이 동작을 원치 않을 경우 애플리케이션 구성 파일의 [\<runtime&gt;](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 구성 설정을 추가하여 옵트아웃(opt out)할 수 있습니다. 다음에서는 `<runtime>` 섹션 및 옵트아웃 스위치를 둘 다 보여 줍니다.  
+ 이 동작을 원치 않을 경우 애플리케이션 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 구성 설정을 추가하여 옵트아웃(opt out)할 수 있습니다. 다음에서는 `<runtime>` 섹션 및 옵트아웃 스위치를 둘 다 보여 줍니다.  
   
 ```xml  
 <runtime>  

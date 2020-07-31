@@ -1,5 +1,6 @@
 ---
 title: 동적 메서드 및 어셈블리 생성
+description: 컴파일러 또는 도구가 런타임에 메타데이터 및 MSIL 코드를 내보낼 수 있도록 하는 System.Reflection.Emit 네임스페이스를 사용하여 동적 메서드 및 어셈블리를 내보냅니다.
 ms.date: 08/30/2017
 helpviewer_keywords:
 - reflection emit
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76d2a83943d9df06cc66cf86c6869f18fac2a12c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180534"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475049"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>동적 메서드 및 어셈블리 생성
 

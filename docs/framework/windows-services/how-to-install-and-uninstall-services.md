@@ -1,5 +1,6 @@
 ---
 title: '방법: Windows 서비스 설치 및 제거'
+description: Windows 서비스를 설치하고 제거하는 방법을 참조하세요. .NET을 통해 Windows 서비스를 개발하는 경우 InstallUtil.exe 또는 PowerShell을 사용할 수 있습니다.
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925607"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>방법: Windows 서비스 설치 및 제거
 

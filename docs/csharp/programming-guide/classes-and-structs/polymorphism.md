@@ -1,16 +1,17 @@
 ---
 title: 다형성 - C# 프로그래밍 가이드
+description: 기본 및 파생 클래스 간의 관계를 설명하는 C#과 같은 개체 지향 프로그래밍 언어의 핵심 개념인 다형성에 대해 알아봅니다.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662656"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925451"
 ---
 # <a name="polymorphism-c-programming-guide"></a>다형성(C# 프로그래밍 가이드)
 
@@ -38,7 +39,7 @@ C#에서 모든 형식은 사용자 정의 형식을 포함한 모든 형식이 
 
 ### <a name="virtual-members"></a>가상 멤버
 
-기본 클래스에서 파생 클래스가 상속되면 파생 클래스는 기본 클래스의 모든 메서드, 필드, 속성 및 이벤트를 얻습니다. 파생 클래스의 디자이너는 가상 메서드의 동작에 대해 다음과 같이 선택할 수 있습니다.
+기본 클래스에서 파생 클래스가 상속되면 파생 클래스는 기본 클래스의 모든 메서드, 필드, 속성 및 이벤트를 얻습니다. 파생 클래스의 디자이너는 가상 메서드의 동작에 대한 다양한 선택 사항이 있습니다.
 
 - 파생 클래스가 기본 클래스의 가상 멤버를 재정의하여 새로운 동작을 정의할 수 있습니다.
 - 파생 클래스가 가장 가까운 기본 클래스 메서드를 재정의하지 않고 상속하여 기존 동작은 보존하되 다른 파생 클래스가 해당 메서드를 재정의할 수 있도록 지원합니다.
@@ -112,7 +113,7 @@ public class Derived : Base
 - [Override 및 New 키워드를 사용해야 하는 경우](./knowing-when-to-use-override-and-new-keywords.md)
 - [ToString 메서드 재정의 방법](./how-to-override-the-tostring-method.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [상속](./inheritance.md)
@@ -121,4 +122,4 @@ public class Derived : Base
 - [이벤트](../events/index.md)
 - [속성](./properties.md)
 - [인덱서](../indexers/index.md)
-- [유형](../types/index.md)
+- [형식](../types/index.md)

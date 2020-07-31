@@ -1,13 +1,14 @@
 ---
 title: 특정 특성으로 요소를 찾는 방법(XPath-LINQ to XML)(C#)
+description: 이 C# 예제에서는 특정 특성이 있는 요소를 찾는 방법에 대해 XPath와 LINQ to XML을 비교합니다.
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0b5c27fb3993b487c5e8d70c6562c1d0562860
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141045"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105269"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>특정 특성으로 요소를 찾는 방법(XPath-LINQ to XML)(C#)
 특정 특성을 가진 모든 요소를 찾으려는 경우가 있습니다. 특성의 내용에는 관심이 없으며, 대신 특성의 존재에 따라 선택하려고 합니다.  

@@ -1,13 +1,14 @@
 ---
 title: 비동기 앱에서 재진입 처리(C#)
+description: C# 비동기 애플리케이션에서 재진입을 처리하는 방법에 대해 알아봅니다. 이는 예기치 않은 결과가 발생하기 전에 비동기 작업에 재진입하는 것을 의미합니다.
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241814"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925243"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 

@@ -1,17 +1,18 @@
 ---
 title: 확장 메서드 - C# 프로그래밍 가이드
+description: C#에서 확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 추가할 수 있습니다.
 ms.date: 03/19/2020
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803183"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474815"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 
@@ -116,7 +117,7 @@ static class DomainEntityExtensions
 
 구현된 클래스 라이브러리의 경우 어셈블리의 버전 번호가 증가되는 것을 방지하기 위해 확장 메서드를 사용해서는 안 됩니다. 소스 코드를 소유하고 있는 라이브러리에 중요 기능을 추가하려는 경우 어셈블리 버전 관리를 위한 .NET 지침을 따르세요. 자세한 내용은 [어셈블리 버전 관리](../../../standard/assembly/versioning.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [병렬 프로그래밍 샘플(많은 예제 확장 메서드 포함)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

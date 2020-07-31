@@ -1,15 +1,16 @@
 ---
 title: 컬렉션 이니셜라이저를 사용하여 사전을 초기화하는 방법 - C# 프로그래밍 가이드
+description: Add 메서드 또는 인덱스 이니셜라이저를 사용하여 C#에서 사전을 초기화하는 방법에 대해 알아봅니다. 이 예제에서는 두 가지 옵션을 모두 보여줍니다.
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f33240b02785c5c886a1ebebb8984d29c9f7795
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75741362"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865049"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>컬렉션 이니셜라이저를 사용하여 사전을 초기화하는 방법(C# 프로그래밍 가이드)
 

@@ -1,13 +1,14 @@
 ---
 title: 비동기 반환 형식(C#)
+description: 각 형식 및 추가 리소스에 대한 코드 예제를 통해 C#에서 비동기 메서드의 가능한 반환 형식에 대해 알아봅니다.
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761878"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925386"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 
@@ -17,7 +18,7 @@ ms.locfileid: "83761878"
 - <xref:System.Threading.Tasks.Task> - 작업을 수행하지만 아무 값도 반환하지 않는 비동기 메서드의 경우
 - `void` - 이벤트 처리기의 경우
 - C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 인터페이스를 구현해야 합니다.
-- C# 8.0부터 ‘비동기 스트림’을 반환하는 비동기 메서드의 경우 <xref:System.Collections.Generic.IAsyncEnumerable%601>. 
+- C# 8.0부터 ‘비동기 스트림’을 반환하는 비동기 메서드의 경우 <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 
 비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)을 참조하세요.  
   
@@ -74,9 +75,9 @@ C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드�
   
 :::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
-## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\>를 사용하는 비동기 스트림
+## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\>을 사용하는 비동기 스트림
 
-C# 8.0부터 비동기 메서드는 <xref:System.Collections.Generic.IAsyncEnumerable%601>을 통해 표시되는 ‘비동기 스트림’을 반환할 수 있습니다.  비동기 스트림은 반복되는 비동기 호출을 통해 요소가 청크로 생성될 때 스트림에서 읽은 항목을 열거하는 방법을 제공합니다. 다음 예제에서는 비동기 스트림을 생성하는 비동기 메서드를 보여 줍니다.
+C# 8.0부터 비동기 메서드는 <xref:System.Collections.Generic.IAsyncEnumerable%601>을 통해 표시되는 ‘비동기 스트림’을 반환할 수 있습니다. 비동기 스트림은 반복되는 비동기 호출을 통해 요소가 청크로 생성될 때 스트림에서 읽은 항목을 열거하는 방법을 제공합니다. 다음 예제에서는 비동기 스트림을 생성하는 비동기 메서드를 보여 줍니다.
 
 :::code language="csharp" source="./snippets/async-return-types/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
 

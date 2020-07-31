@@ -1,13 +1,14 @@
 ---
 title: 컬렉션(C#)
+description: 개체 그룹 작업에 사용되는 C#의 컬렉션에 대해 알아봅니다. 애플리케이션의 요구가 변경됨에 따라 컬렉션이 동적으로 확장되거나 축소될 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2375980e2915d4daa5a221a94eee2aea41959852
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241398"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924931"
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 
@@ -200,7 +201,7 @@ public class Galaxy
 
 다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.
 
-|클래스|설명|
+|클래스|Description|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|키에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.|
 |<xref:System.Collections.Generic.List%601>|인덱스로 액세스할 수 있는 개체 목록을 나타냅니다. 목록의 검색, 정렬 및 수정에 사용할 수 있는 메서드를 제공합니다.|

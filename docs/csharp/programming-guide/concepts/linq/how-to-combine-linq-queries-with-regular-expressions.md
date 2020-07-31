@@ -1,13 +1,14 @@
 ---
 title: LINQ 쿼리와 정규식 결합 방법(C#)
+description: 이 예제에서는 C#에서 Regex 클래스를 사용하여 텍스트 문자열 일치를 찾는 정규식을 작성합니다.
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: af63d096e3c2f19ed557180d82d606989a016120
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169431"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105339"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>LINQ 쿼리와 정규식 결합 방법(C#)
 이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 더 복잡한 텍스트 문자열 일치를 찾는 정규식을 작성하는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.  
@@ -98,7 +99,7 @@ class QueryWithRegEx
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Linq 및 System.IO 네임 스페이스에 대한 `using`지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

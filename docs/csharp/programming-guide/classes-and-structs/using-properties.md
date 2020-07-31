@@ -1,17 +1,18 @@
 ---
 title: 속성 사용 - C# 프로그래밍 가이드
+description: 다음 예제에서는 C#의 속성을 사용하는 방법을 보여줍니다. get 및 set 접근자가 읽기 및 쓰기 액세스를 구현하고 속성 사용법을 알아보는 방법을 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77452021"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864659"
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 
@@ -21,7 +22,7 @@ ms.locfileid: "77452021"
 
 속성은 여러 가지 용도로 사용됩니다. 변경을 허용하기 전에 데이터의 유효성을 검사하고, 데이터가 실제로 데이터베이스 등의 다른 소스에서 검색되는 클래스에 데이터를 투명하게 공개하고, 데이터 변경 시 이벤트 발생, 다른 필드의 값 변경 등의 작업을 수행할 수 있습니다.
 
-속성은 필드의 액세스 수준, 속성 형식, 속성 이름, `get` 접근자 및/또는 `set` 접근자를 선언하는 코드 블록을 차례로 지정하여 클래스 블록에서 선언됩니다. 예들 들어 다음과 같습니다.
+속성은 필드의 액세스 수준, 속성 형식, 속성 이름, `get` 접근자 및/또는 `set` 접근자를 선언하는 코드 블록을 차례로 지정하여 클래스 블록에서 선언됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "77452021"
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-할당 대상을 제외하고 속성을 참조하는 경우 속성 값을 읽기 위해 `get` 접근자가 호출됩니다. 예들 들어 다음과 같습니다.
+할당 대상을 제외하고 속성을 참조하는 경우 속성 값을 읽기 위해 `get` 접근자가 호출됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -45,7 +46,7 @@ ms.locfileid: "77452021"
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-`get` 접근자를 사용하여 필드 값을 반환하거나 계산한 후 반환할 수 있습니다. 예들 들어 다음과 같습니다.
+`get` 접근자를 사용하여 필드 값을 반환하거나 계산한 후 반환할 수 있습니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -57,7 +58,7 @@ ms.locfileid: "77452021"
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-속성에 값을 할당하는 경우 새 값을 제공하는 인수를 사용하여 `set` 접근자가 호출됩니다. 예들 들어 다음과 같습니다.
+속성에 값을 할당하는 경우 새 값을 제공하는 인수를 사용하여 `set` 접근자가 호출됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 

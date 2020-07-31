@@ -9,15 +9,15 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 80cec001b27000e71b74f380a0f33e30602c01af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644351"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473911"
 ---
 # <a name="-target-c-compiler-options"></a>-target(C# 컴파일러 옵션)
-**-target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.  
+**-target** 컴파일러 옵션은 다음 형태 중 하나로 지정할 수 있습니다.  
   
  [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
  Windows 8.x 스토어 앱에 사용할 .exe 파일을 만듭니다.  

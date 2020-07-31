@@ -1,16 +1,17 @@
 ---
 title: XPath 및 LINQ to XML 비교
+description: C#의 LINQ to XML 및 XPath 간 기능의 유사성과 차이점에 대해 알아봅니다. 둘 다 사용하여 XML 트리를 쿼리할 수 있습니다.
 ms.date: 07/20/2015
 dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2f34903b20a53dea6e5ff4858d4fadaebd9c37a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487536"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104011"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 및 LINQ to XML 비교
 XPath와 LINQ to XML은 유사한 기능을 제공합니다. XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다. 하지만 차이점도 있습니다.  
@@ -29,7 +30,7 @@ XPath와 LINQ to XML은 유사한 기능을 제공합니다. XML 트리를 쿼�
   
  이와 반대로 대부분의 LINQ to XML 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다. 다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.  
   
-|LINQ to XML 축|순서|  
+|LINQ to XML 축|정렬|  
 |----------------------|--------------|  
 |XContainer.DescendantNodes|문서 순서|  
 |XContainer.Descendants|문서 순서|  

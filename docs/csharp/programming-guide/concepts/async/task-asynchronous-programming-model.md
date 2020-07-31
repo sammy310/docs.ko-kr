@@ -1,13 +1,14 @@
 ---
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
+description: C#에서 비동기 프로그래밍에 대한 간소화된 접근 방식인 작업 기반 비동기 프로그래밍을 사용하는 시기 및 방법에 대해 알아봅니다.
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990076"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925139"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 

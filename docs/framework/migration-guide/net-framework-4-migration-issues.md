@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 4 마이그레이션 문제
+description: 수정, 표준 준수 및 보안에 대한 변경 내용을 포함하여 .NET Framework 3.5 서비스 팩 1과 .NET Framework 4 간의 마이그레이션 문제에 대해 알아봅니다.
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 8e83859733f021afbe074a7b4818b155d74efdff
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bbb9a3803986c922fd1ef04a87cd1e230fc3d623
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420463"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475283"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -126,7 +127,7 @@ ms.locfileid: "83420463"
 | ------- | ------------------------ | ------------------- |
 | **버퍼 길이**(관리되지 않는 API) | 메모리를 절약하기 위해 [ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 메서드에 대한 `pBufferLengthOffset` 매개 변수의 기능이 `pStringLengthOffset` 매개 변수와 일치하도록 변경되었습니다. 이제 두 매개 변수가 문자열 길이의 오프셋 위치를 가리킵니다. 문자열 클래스의 표시에서 버퍼 길이가 제거되었습니다. | 버퍼 길이에 대한 종속성을 제거하세요. |
 | **JIT 디버깅** | JIT(Just-In-Time) 디버깅에 대한 등록을 단순화하기 위해 .NET Framework 디버거는 이제 네이티브 코드의 JIT 디버깅 동작을 제어하는 AeDebug 레지스트리 키만 사용합니다. 이 변경의 결과는 다음과 같습니다.<br><br>\* 더 이상 관리되는 네이티브 코드에 대해 서로 다른 두 가지 디버거를 등록할 수 없습니다.<br>\* 비대화형 프로세스에 대해 자동으로 디버거를 시작할 수는 없지만, 사용자에게 대화형 프로세스를 요구할 수 있습니다.<br>\* 디버거가 시작되지 않거나 시작해야 하는 등록된 디버거가 없을 때 더 이상 알림이 표시되지 않습니다.<br>\* 애플리케이션의 대화형 작업에 의존하는 자동 시작 정책이 더 이상 지원되지 않습니다. | 필요에 따라 디버깅 작업을 조정하세요. |
-| **플랫폼 호출** | 비관리 코드와의 상호 운용성 성능을 향상하기 위해, 이제 플랫폼 호출에 잘못된 호출 규칙이 있으면 애플리케이션이 실패합니다. 이전 버전에서는 마샬링 계층이 스택 위에서 이러한 오류를 해결했습니다. | Microsoft Visual Studio에서 애플리케이션을 디버그하면 이러한 오류를 알려주므로 수정할 수 있습니다.<br><br>업데이트할 수 없는 이진 파일이 있는 경우 애플리케이션의 구성 파일에 [\<NetFx40_PInvokeStackResilience&gt;](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 요소를 포함하면 이전 버전과 마찬가지로 스택 위에서 호출 오류를 해결할 수 있습니다. 그러나 이 경우 애플리케이션의 성능에 영향을 줄 수 있습니다. |
+| **플랫폼 호출** | 비관리 코드와의 상호 운용성 성능을 향상하기 위해, 이제 플랫폼 호출에 잘못된 호출 규칙이 있으면 애플리케이션이 실패합니다. 이전 버전에서는 마샬링 계층이 스택 위에서 이러한 오류를 해결했습니다. | Microsoft Visual Studio에서 애플리케이션을 디버그하면 이러한 오류를 알려주므로 수정할 수 있습니다.<br><br>업데이트할 수 없는 이진 파일이 있는 경우 애플리케이션의 구성 파일에 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 요소를 포함하면 이전 버전과 마찬가지로 스택 위에서 호출 오류를 해결할 수 있습니다. 그러나 이 경우 애플리케이션의 성능에 영향을 줄 수 있습니다. |
 | **제거된 인터페이스**(관리되지 않는 API) | 개발자에게 혼란을 주지 않도록 다음 인터페이스가 제거되었습니다. 이러한 인터페이스는 유용한 런타임 시나리오를 제공하지 않았고 CLR이 구현을 제공하거나 수락하지 않았기 때문입니다.<br><br>\* **INativeImageINativeImageDependency**<br>\* **INativeImageInstallInfo**<br>\* **INativeImageEvaluate**<br>\* **INativeImageConverter**<br>\* **ICorModule**<br>\* **IMetaDataConverter** | 없음 |
 
 ## <a name="data"></a>데이터
