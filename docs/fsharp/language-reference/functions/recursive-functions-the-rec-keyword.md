@@ -2,12 +2,12 @@
 title: '재귀 함수: rec 키워드'
 description: "' Let ' 키워드와 함께 F # ' rec ' 키워드를 사용 하 여 재귀 함수를 정의 하는 방법을 알아봅니다."
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426978"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455656"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>재귀 함수: rec 키워드
 
@@ -43,7 +43,7 @@ function2-body
 
 ## <a name="tail-recursion"></a>비상 재귀
 
-일부 재귀 함수의 경우에는 더 많은 "순수" 정의를 [tail 재귀](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)인 하나에 리팩터링 해야 합니다. 이렇게 하면 불필요 한 다시 계산 되지 않습니다. 예를 들어 이전 피보나치 수 생성기는 다음과 같이 다시 작성할 수 있습니다.
+일부 재귀 함수의 경우에는 더 많은 "순수" 정의를 [tail 재귀](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)인 하나에 리팩터링 해야 합니다. 이렇게 하면 불필요 한 계산이 수행 되지 않습니다. 예를 들어 이전 피보나치 수 생성기는 다음과 같이 다시 작성할 수 있습니다.
 
 ```fsharp
 let fib n =

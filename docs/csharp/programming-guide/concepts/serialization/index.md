@@ -2,12 +2,12 @@
 title: Serialization(C#)
 description: Serialization은 개체를 바이트 스트림으로 변환하여 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송합니다.
 ms.date: 01/02/2020
-ms.openlocfilehash: b2b3105887ad6f000fcba895452a483881ae5a09
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302778"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455749"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
@@ -45,6 +45,8 @@ JSON serialization은 개체의 퍼블릭 속성을 [RFC 8259 JSON 사양](https
 <xref:System.Runtime.Serialization> 네임스페이스에는 이진 및 XML serialization 및 deserialization 클래스가 포함되어 있습니다.
 
 이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 스트림 기반 네트워크 스트림과 같은 용도로 사용할 수 있는 압축 serialization을 생성합니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다.
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 XML serialization은 개체의 public 필드와 속성 또는 메서드의 매개 변수와 반환 값을 특정 XSD(XML 스키마 정의 언어) 문서와 일치하는 XML 스트림으로 serialize합니다. XML serialization을 사용하면 XML로 변환되는 public 속성 및 필드가 있는 강력한 형식의 클래스가 만들어집니다. <xref:System.Xml.Serialization>에는 XML을 직렬화 및 역직렬화하기 위한 클래스가 포함되어 있습니다. <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어하기 위해 클래스 및 클래스 멤버에 특성을 적용합니다.
 
