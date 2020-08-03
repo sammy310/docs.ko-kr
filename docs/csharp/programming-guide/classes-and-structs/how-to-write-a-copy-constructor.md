@@ -1,16 +1,17 @@
 ---
 title: 복사 생성자를 작성하는 방법 - C# 프로그래밍 가이드
+description: C#에서 클래스의 인스턴스를 가져와서 입력 값으로 새 인스턴스를 반환하는 복사 생성자를 작성하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: aa6feb1b07f491a90a78684e254910d387b9bccd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: beb2fcfaa36303eeaabd5278cf5e7a128282270e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714846"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864230"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>복사 생성자를 작성하는 방법(C# 프로그래밍 가이드)
 C#에서는 개체에 대한 복사 생성자를 제공하지 않지만 직접 작성할 수 있습니다.  

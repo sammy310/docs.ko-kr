@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML과 비교 DOM(C#)
+description: LINQ to XML과 W3C DOM(문서 개체 모델) XML 프로그래밍 API 간의 주요 차이점에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5fc3fd7869079d47d7c9031e3668afeed7a117b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168391"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165339"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML과 비교 DOM(C#)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 현재 주로 사용되는 XML 프로그래밍 API인 W3C DOM(문서 개체 모델)의 몇 가지 주요 차이점에 대해 설명합니다.  

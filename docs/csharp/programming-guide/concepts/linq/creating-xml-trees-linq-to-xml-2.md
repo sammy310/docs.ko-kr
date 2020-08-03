@@ -1,13 +1,14 @@
 ---
 title: C#에서 XML 트리 만들기(LINQ to XML)
+description: 요소 생성 및 XElement 생성자 사용을 포함하여 C#에서 XML 트리를 생성하는 작업에 대해 알아봅니다.
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3991f461c4c870a64320853ccd1d45026a8a6bf6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169547"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105478"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
 이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.  
@@ -42,7 +43,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement 생성자  
  <xref:System.Xml.Linq.XElement> 클래스는 함수 생성을 위해 다음 생성자를 사용합니다. <xref:System.Xml.Linq.XElement>의 다른 생성자도 있지만 함수 생성에 사용되지 않기 때문에 여기에 나와 있지 않습니다.  
   
-|생성자|설명|  
+|생성자|Description|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement>를 만듭니다. `name` 매개 변수는 요소의 이름을 지정하고, `content`는 요소의 내용을 지정합니다.|  
 |`XElement(XName name)`|<xref:System.Xml.Linq.XElement>을 지정된 이름으로 초기화하여 <xref:System.Xml.Linq.XName>를 만듭니다.|  
@@ -234,6 +235,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 트리 만들기(C#)](./linq-to-xml-overview.md)

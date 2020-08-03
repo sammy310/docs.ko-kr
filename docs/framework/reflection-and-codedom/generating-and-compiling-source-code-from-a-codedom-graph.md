@@ -1,5 +1,6 @@
 ---
 title: CodeDOM 그래프에서 소스 코드 생성 및 컴파일
+description: .NET의 CodeDOM 그래프에서 소스 코드를 생성하고 컴파일합니다. CodeDOM 코드 공급자를 사용하여 소스 코드를 생성하고 어셈블리를 컴파일합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130228"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474048"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM 그래프에서 소스 코드 생성 및 컴파일
 <xref:System.CodeDom.Compiler> 네임스페이스는 CodeDOM 개체 그래프에서 소스 코드를 생성하고 지원되는 컴파일러를 통한 컴파일을 관리하기 위한 인터페이스를 제공합니다. 코드 공급자는 CodeDOM 그래프에 따라 특정 프로그래밍 언어로 소스 코드를 생성할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 파생되는 클래스는 일반적으로 공급자가 지원하는 언어의 코드를 생성 및 컴파일하기 위한 메서드를 제공할 수 있습니다.  

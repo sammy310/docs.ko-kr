@@ -1,13 +1,14 @@
 ---
 title: 비동기 작업 또는 작업 목록 취소(C#)
+description: 이 예제를 통해 작업이 완료되기 전에 비동기 애플리케이션을 취소하는 버튼을 추가합니다. 이 C# 애플리케이션은 하나 이상의 웹 사이트의 콘텐츠를 다운로드합니다.
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595727"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925348"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
 
@@ -24,7 +25,7 @@ ms.locfileid: "69595727"
 
 ### <a name="download-the-example"></a>예제 다운로드
 
-[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
+[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
 
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -144,7 +145,7 @@ ms.locfileid: "69595727"
 
 ### <a name="download-the-example"></a>예제 다운로드
 
-[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
+[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
 
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -258,7 +259,7 @@ ms.locfileid: "69595727"
 
 다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.
 
-[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
+[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
 
 ### <a name="example---cancel-a-task"></a>예제 - 작업 취소
 
@@ -517,10 +518,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [Async 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)
-- [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

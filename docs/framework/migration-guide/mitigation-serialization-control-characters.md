@@ -1,5 +1,6 @@
 ---
 title: DataContractJsonSerializer로 제어 문자 직렬화
+description: 제어 문자 직렬화가 .NET Framework 4.7의 ECMAScript V6 및 V8에 맞게 변경되는 방식에 대해 알아봅니다.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: b60b78f9ee944552fafbe75754ecd29d60dd4093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a317884da014097a7a60aef2cef4ec146ccb04f7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181207"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475387"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>완화: DataContractJsonSerializer로 제어 문자 직렬화
 

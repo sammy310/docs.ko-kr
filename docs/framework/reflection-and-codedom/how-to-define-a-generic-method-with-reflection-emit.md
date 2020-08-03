@@ -1,5 +1,6 @@
 ---
 title: '방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의'
+description: 리플렉션 내보내기를 사용하여 제네릭 메서드를 정의합니다. 하나의 예제에서는 두 개의 형식 매개 변수를 사용하여 제네릭 메서드를 만듭니다. 두 번째 예제에서는 메서드 본문을 내보내는 방법을 보여줍니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b85fb480e5862daa3b2800f75392adbe92348f2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130171"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865140"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의
 

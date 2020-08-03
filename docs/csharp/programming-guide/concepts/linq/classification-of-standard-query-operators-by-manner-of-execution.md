@@ -1,13 +1,14 @@
 ---
 title: 실행 방식에 따라 표준 쿼리 연산자 분류(C#)
+description: C#에서 LINQ to Objects에 대해 표준 쿼리 연산자를 실행하는 방식(즉시, 연기된 스트리밍, 연기된 비스트리밍)에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924286"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105497"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>실행 방식에 따라 표준 쿼리 연산자 분류(C#)
 표준 쿼리 연산자 메서드의 LINQ to Objects 구현은 즉시 실행 또는 지연된 실행의 두 가지 기본 방식 중 하나로 실행됩니다. 지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍의 두 가지 범주로 추가로 구분할 수 있습니다. 여러 쿼리 연산자가 어떻게 실행되는지 알고 있으면 제공된 쿼리에서 얻을 결과를 이해하는 데 도움이 될 수 있습니다. 데이터 소스가 변경되거나 다른 쿼리 위에 쿼리를 빌드할 경우 특히 도움이 됩니다. 이 항목에서는 실행 방식에 따라 표준 쿼리 연산자를 분류합니다.  
@@ -39,28 +40,28 @@ ms.locfileid: "69924286"
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|x|||  
 |<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|x|||  
-|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Average%2A>|단일 숫자 값|x|||  
 |<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|x|||  
 |<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|x|||  
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|x|||  
-|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.First%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|X|  
+|<xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
 |<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
 <xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|x|  
-|<xref:System.Linq.Enumerable.Last%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x|X|  
+|<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|x|||  
-|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|x|||  
-|<xref:System.Linq.Enumerable.Max%2A>|단일 숫자 값, TSource 또는 TResult|x|||  
+|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
+|<xref:System.Linq.Enumerable.Max%2A>|단일 숫자 값, TSource 또는 TResult|X|||  
 |<xref:System.Linq.Enumerable.Min%2A>|단일 숫자 값, TSource 또는 TResult|x|||  
 |<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
@@ -70,24 +71,24 @@ ms.locfileid: "69924286"
 |<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||x|  
 |<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|x|||  
-|<xref:System.Linq.Enumerable.Single%2A>|TSource|x|||  
+|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|X|||  
+|<xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|x|||  
 |<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Sum%2A>|단일 숫자 값|x|||  
 |<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 <xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
 |<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
-|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||x|  
+|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
 |<xref:System.Linq.Enumerable.ToArray%2A>|TSource 배열|x|||  
 |<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|x|||  
 |<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|x|||  
 |<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|x|||  
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
-|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||x||  
+|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

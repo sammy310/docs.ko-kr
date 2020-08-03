@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "83703587"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865335"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
 
@@ -318,11 +318,27 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-[POCO 클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
+<xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
-이 패턴을 따르는 경우 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 또는 <xref:System.Text.Json.JsonSerializer.Deserialize%2A>를 재귀적으로 호출할 때 options 개체를 전달하지 마세요. options 개체는 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 컬렉션을 포함하고 있습니다. 이 개체를 `Serialize` 또는 `Deserialize`에 전달하면 사용자 지정 변환기가 자신을 호출하여 스택 오버플로 예외로 이어지는 무한 루프가 발생합니다. 기본 옵션이 실현 불가능한 경우 필요한 설정을 사용하여 새로운 옵션 인스턴스를 만듭니다. 이 방법은 각각의 새 인스턴스가 독립적으로 캐시하므로 속도가 느립니다.
+변환기를 재귀적으로 호출하는 이 패턴을 사용하려면 특성이 아닌 <xref:System.Text.Json.JsonSerializerOptions>를 사용하여 변환기를 등록해야 합니다. 특성을 사용하여 변환기를 등록하는 경우 사용자 지정 변환기가 재귀적으로 자신을 호출합니다. 그 결과 스택 오버플로 예외로 이어지는 무한 루프가 발생합니다.
 
-위의 변환기 코드는 단순화된 예제입니다. 특성(예: [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 또는 다른 옵션(예: 사용자 지정 인코더)을 처리해야 하는 경우에는 추가 논리가 필요합니다. 또한 예제 코드는 생성자에서 기본값이 설정된 속성을 처리하지 않습니다. 이 방법은 다음과 같은 시나리오를 구분하지 않습니다.
+옵션 개체를 사용하여 변환기를 등록하는 경우 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 또는 <xref:System.Text.Json.JsonSerializer.Deserialize%2A>를 재귀적으로 호출할 때 옵션 개체를 전달하지 않음으로써 무한 루프 발생을 방지합니다. options 개체는 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 컬렉션을 포함하고 있습니다. 이 개체를 `Serialize` 또는 `Deserialize`에 전달하면 사용자 지정 변환기가 자신을 호출하여 스택 오버플로 예외로 이어지는 무한 루프가 발생합니다. 기본 옵션이 실현 불가능한 경우 필요한 설정을 사용하여 새로운 옵션 인스턴스를 만듭니다. 이 방법은 각각의 새 인스턴스가 독립적으로 캐시하므로 속도가 느립니다.
+
+변환할 클래스에서 `JsonConverterAttribute` 등록을 사용할 수 있는 대체 패턴이 있습니다. 이 방식으로 변환기 코드는 변환할 클래스에서 파생된 클래스에 대해 `Serialize` 또는 `Deserialize`를 호출합니다. 파생 클래스에는 `JsonConverterAttribute`가 적용되지 않습니다. 이 대체 패턴의 다음 예제에서:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`는 역직렬화할 클래스이며 `JsonConverterAttribute`가 적용됩니다.
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`는 변환기 특성이 없는 파생 클래스입니다.
+* 변환기의 코드는 `WeatherForecastWithoutRequiredPropertyConverterAttribute`에서 `Serialize` 및 `Deserialize`를 호출하여 무한 루프를 방지합니다. 추가 개체 인스턴스화 및 속성 값 복사로 인해 직렬화에 대한 이 방식에 성능 비용이 발생합니다.
+
+`WeatherForecast*` 형식은 다음과 같습니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+변환기는 다음과 같습니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+특성(예: [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 또는 다른 옵션(예: 사용자 지정 인코더))을 처리해야 하는 경우에는 필수 속성 변환기에 추가 논리가 필요합니다. 또한 예제 코드는 생성자에서 기본값이 설정된 속성을 처리하지 않습니다. 이 방법은 다음과 같은 시나리오를 구분하지 않습니다.
 
 * JSON에서 속성이 누락되었습니다.
 * null을 허용하지 않는 형식의 속성은 JSON에 있지만, 값은 형식에 대한 기본값입니다(`int`는 0).
@@ -391,7 +407,7 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 이전 샘플을 따르는 사용자 지정 변환기를 사용하는 경우:
 
 * `OnDeserializing` 코드는 새 POCO 인스턴스에 액세스할 수 없습니다. 역직렬화를 시작할 때 새 POCO 인스턴스를 조작하려면 이 코드를 POCO 생성자에 배치하세요.
-* `Serialize` 또는 `Deserialize`를 재귀적으로 호출할 때 options 개체를 전달하지 마세요. options 개체는 `Converters` 컬렉션을 포함하고 있습니다. 이 개체를 `Serialize` 또는 `Deserialize`에 전달하면 변환기가 사용되어 스택 오버플로 예외로 이어지는 무한 루프가 발생합니다.
+* 옵션 개체에 변환기를 등록하고 `Serialize` 또는 `Deserialize`를 재귀적으로 호출할 때 옵션 개체를 전달하지 않음으로써 무한 루프 발생을 방지합니다. 자세한 내용은 이 문서 앞부분에서 [필수 속성](#required-properties) 섹션을 참조하세요.
 
 ### <a name="public-and-non-public-fields"></a>public 및 비-public 필드
 

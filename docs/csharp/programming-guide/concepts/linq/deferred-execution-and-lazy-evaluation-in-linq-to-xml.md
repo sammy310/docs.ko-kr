@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML에서 지연된 실행 및 지연 계산(C#)
+description: 쿼리 및 축 연산은 C#에서 지연된 실행을 사용할 수 있습니다. 지연된 실행의 요구 사항 및 장점과 몇 가지 구현 고려 사항에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8559505572404f895d75e0d9895f9ae2c07b795e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594558"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105463"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML에서 지연된 실행 및 지연 계산(C#)
 쿼리 및 축 연산은 흔히 지연된 실행을 사용하도록 구현됩니다. 이 항목에서는 지연된 실행의 요구 사항 및 장점과 몇 가지 구현 고려 사항에 대해 설명합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "69594558"
   
 - [지연 실행 예제(C#)](./deferred-execution-example.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [개념과 용어(함수 변환)(C#)](./concepts-and-terminology-functional-transformation.md)

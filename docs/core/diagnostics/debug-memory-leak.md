@@ -3,16 +3,16 @@ title: 메모리 누수 디버그 자습서
 description: .NET Core의 메모리 누수를 디버그하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021365"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924892"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>자습서: .NET Core의 메모리 누수 디버그
+# <a name="debug-a-memory-leak-in-net-core"></a>.NET Core의 메모리 누수 디버그
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
+**이 문서의 적용 대상:** ✔️ .NET Core 3.1 SDK 이상 버전
 
 이 자습서에서는 .NET Core 메모리 누수를 분석하는 도구를 보여줍니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "82021365"
 
 이 자습서에서는 다음을 사용합니다.
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
 - 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md).
 - 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md).
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md).
@@ -102,7 +102,7 @@ Press p to pause, r to resume, q to quit.
 
 시작 직후 관리되는 힙 메모리가 4MB인 것을 알 수 있습니다.
 
-이제 URL `http://localhost:5000/api/diagscenario/memleak/20000`을 입력합니다.
+이제 URL `https://localhost:5001/api/diagscenario/memleak/20000`을 입력합니다.
 
 메모리 사용량이 30MB로 증가하는 것을 확인합니다.
 
@@ -133,7 +133,7 @@ Complete
 
 덤프가 수집되면 실패한 프로세스를 진단하는 데 충분한 정보가 확보될 것입니다. 실패한 프로세스가 프로덕션 서버에서 실행 중이라면 프로세스를 다시 시작하여 단기 수정하기에 가장 적합한 때입니다.
 
-이 자습서에서는 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)이 완료되었으므로 이를 종료할 수 있습니다. 서버를 시작한 터미널로 이동하고 `Control-C`를 누릅니다.
+이 자습서에서는 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)이 완료되었으므로 이를 종료할 수 있습니다. 서버를 시작한 터미널로 이동하고 <kbd>Ctrl+C</kbd>를 누릅니다.
 
 ### <a name="analyze-the-core-dump"></a>코어 덤프 분석
 
@@ -232,14 +232,14 @@ Found 2 roots.
 
 또한 생성된 덤프 파일을 삭제할 수 있습니다.
 
+## <a name="see-also"></a>참조
+
+- 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md)
+- 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md)
+- 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+
 ## <a name="next-steps"></a>다음 단계
 
-축하합니다. 이 자습서를 마쳤습니다.
-
-더 많은 진단 자습서가 게시되어 있습니다. [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) 리포지토리에서 초안 버전을 읽을 수 있습니다.
-
-이 자습서에서는 핵심 .NET 진단 도구의 기본 사항을 설명했습니다. 고급 사용은 다음 참조 설명서를 참조하세요.
-
-* 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md).
-* 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md).
-* 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md).
+> [!div class="nextstepaction"]
+> [.NET Core에서 높은 CPU 디버그](debug-highcpu.md)

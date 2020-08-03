@@ -1,13 +1,14 @@
 ---
 title: 순수 함수 변환 소개(C#)
+description: C#의 기본 개념 및 언어 구문을 포함하여 함수 변환에 대해 알아봅니다. 이러한 리소스는 예제에 XML 변환을 사용합니다.
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f9dcb072b5f67521f668b1802d12a455f383fa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69592110"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165674"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>순수 함수 변환 소개(C#)
 이 단원에서는 기본 개념과 지원하는 언어 구문을 비롯하여 함수 변환에 대해 소개합니다. 프로그래밍에 대한 개체 지향 및 함수 변환 방법을 대조하고 함수 변환 방법으로 전환하는 방법에 대한 조언을 제공합니다. 많은 프로그래밍 시나리오에서 함수 변환을 사용할 수 있지만 여기에서는 XML 변환이 구체적인 예제로 사용되었습니다.  
@@ -18,7 +19,7 @@ ms.locfileid: "69592110"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[개념과 용어(함수 변환)(C#)](./concepts-and-terminology-functional-transformation.md)|순수 함수 변환의 개념과 용어에 대해 소개합니다.|  
 |[함수형 프로그래밍과 명령형 프로그래밍 비교(C#)](./functional-programming-vs-imperative-programming.md)|함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.|  

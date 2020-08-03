@@ -1,13 +1,14 @@
 ---
 title: 선행 형제를 찾는 방법(XPath 및 LINQ to XML)(C#)
+description: 이 C# 예제에서는 XPath 이전 형제 축과 LINQ to XML 자식 XNode.ElementsBeforeSelf 축을 비교합니다.
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4150c94fe1e30e7a72bb53b4c6c12481ee0bad19
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141051"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103456"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>선행 형제를 찾는 방법(XPath 및 LINQ to XML)(C#)
 이 항목에서는 XPath `preceding-sibling` 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 자식 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 축을 비교합니다.  
@@ -21,7 +22,7 @@ ms.locfileid: "74141051"
 ## <a name="example"></a>예제  
  다음 예제에서는 `FullAddress` 요소를 찾은 다음 `preceding-sibling` 축을 사용하여 이전 요소를 검색합니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

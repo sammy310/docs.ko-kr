@@ -1,17 +1,18 @@
 ---
 title: .NET Framework에서 사용되지 않는 형식
+description: 어셈블리별로 구성된 .NET Framework 4.5 및 .NET 4.6에서 사용되지 않는 형식 목록을 참조하세요. 권장 대안도 나열되어 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925815"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 
@@ -86,7 +87,7 @@ ms.locfileid: "74802689"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|대신 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>를 사용하십시오.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 클래스는 사용되지 않습니다.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음 System.Runtime.CompilerServices 네임스페이스의 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 클래스를 대신 사용합니다.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|대체 API 사용 가능: <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 사용자 지정 특성을 대신 내보냅니다.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|대체 API를 사용할 수 있습니다. 대신 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 사용자 지정 특성을 내보냅니다.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>를 사용하세요.|
@@ -806,7 +807,7 @@ Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 �
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클래스 라이브러리의 사용되지 않는 기능](whats-obsolete.md)
 - [사용되지 않는 멤버](obsolete-members.md)

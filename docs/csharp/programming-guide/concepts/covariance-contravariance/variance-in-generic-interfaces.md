@@ -1,13 +1,14 @@
 ---
 title: 제네릭 인터페이스의 가변성(C#)
+description: .NET Framework 4 및 4.5의 기존 인터페이스에 대한 업데이트된 정보를 포함하여 제네릭 인터페이스에 대한 가변성 지원 정보를 확인하세요.
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 91218742c01eeb6e65ea26d9dc41ed7c98827377
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241333"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105632"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
 

@@ -1,13 +1,14 @@
 ---
 title: 텍스트를 XML로 변환 스트리밍을 수행하는 방법(C#)
+description: 텍스트 파일을 한 번에 한 줄씩 스트리밍하고 LINQ 쿼리를 사용하여 텍스트 파일을 처리하는 C#의 XML로 텍스트의 스트리밍을 변환하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345791"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104749"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>텍스트를 XML로 변환 스트리밍을 수행하는 방법(C#)
 
@@ -66,7 +67,7 @@ class Program
 }
 ```
 
- 이 예제는 다음과 같은 출력을 생성합니다.
+ 이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```xml
 <Root>

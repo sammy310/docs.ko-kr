@@ -1,13 +1,14 @@
 ---
 title: 문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)(C#)
+description: 이 예제에서는 C#에서 LINQ 쿼리를 사용하여 문자열에서 지정된 단어의 발생 수를 계산합니다. Split 메서드를 사용하여 단어의 배열을 만듭니다.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103370"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)(C#)
 이 예제에서는 LINQ 쿼리를 사용하여 문자열에서 지정된 단어의 발생 수를 계산하는 방법을 보여 줍니다. 계산을 수행하려면 먼저 <xref:System.String.Split%2A> 메서드를 호출하여 단어 배열을 만듭니다. <xref:System.String.Split%2A> 메서드를 사용하는 경우 성능이 저하됩니다. 문자열의 유일한 작업이 단어 개수 계산인 경우 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 또는 <xref:System.String.IndexOf%2A> 메서드를 대신 사용하는 것이 좋습니다. 그러나 성능이 중요한 문제가 아니거나 다른 유형의 쿼리를 수행하기 위해 이미 문장을 분할한 경우 LINQ를 사용하여 단어 또는 구도 계산하는 것이 좋습니다.  
@@ -57,6 +58,6 @@ class CountWords
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)

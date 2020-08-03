@@ -1,13 +1,14 @@
 ---
 title: 트리의 모든 노드를 나열하는 방법(C#)
+description: C#의 LINQ to XML을 사용하는 XPath 식을 실행하여 트리의 모든 노드를 나열하는 방법에 대해 알아봅니다. 메서드나 속성이 트리에 미치는 영향을 확인할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345875"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104965"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>트리의 모든 노드를 나열하는 방법(C#)
 

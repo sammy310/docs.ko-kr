@@ -1,13 +1,14 @@
 ---
 title: 파일 액세스에 Async 사용(C#)
+description: C#에서 비동기 기능을 사용하여 파일에 액세스하는 방법에 대해 알아봅니다. 콜백을 사용하거나 여러 메서드에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396954"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925126"
 ---
 # <a name="using-async-for-file-access-c"></a>파일 액세스에 Async 사용(C#)
 파일에 액세스하는 비동기 기능을 사용할 수 있습니다. 비동기 기능을 사용하면 콜백을 사용하거나 여러 메서드 또는 람다 식에서 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 동기 코드를 비동기로 만들려면 동기 메서드 대신 비동기 메서드를 호출하고 몇 가지 키워드를 코드에 추가하면 됩니다.  

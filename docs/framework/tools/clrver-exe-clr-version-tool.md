@@ -1,16 +1,17 @@
 ---
 title: Clrver.exe(CLR 버전 도구)
+description: Clrver.exe 즉, CLR 버전 도구를 검토합니다. 이 도구는 컴퓨터에 있는 CLR(공용 언어 런타임)의 모든 설치 버전을 보고합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715792"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167282"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe(CLR 버전 도구)
 CLR 버전 도구(Clrver.exe)에서는 컴퓨터에서 CLR(공용 언어 런타임)의 모든 설치 버전을 보고합니다.  
@@ -27,7 +28,7 @@ clrver [option]
   
 ## <a name="options"></a>옵션  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |`-all`|CLR을 사용 중인 컴퓨터에 모든 프로세스를 표시합니다.|  
 |*pid*|지정한 프로세스 ID(PID)를 가진 프로세스에서 사용하는 CLR의 버전을 표시합니다.|  
@@ -54,7 +55,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

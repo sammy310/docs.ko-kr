@@ -1,13 +1,14 @@
 ---
 title: 식 트리를 사용하여 동적 쿼리를 빌드하는 방법(C#)
+description: 식 트리를 사용하여 동적 LINQ 쿼리를 만드는 방법을 알아봅니다. 이러한 쿼리는 컴파일 시 쿼리의 세부 정보를 알 수 없는 경우에 유용합니다.
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcef4068c19ba8e789683cf6ba4d5ef2477e0d8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635901"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105587"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>식 트리를 사용하여 동적 쿼리를 빌드하는 방법(C#)
 LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 구현하는 데이터 소스를 대상으로 하는 구조적 쿼리를 나타냅니다. 예를 들어 LINQ 공급자는 관계형 데이터 저장소를 쿼리하기 위한 <xref:System.Linq.IQueryable%601> 인터페이스를 구현합니다. C# 컴파일러는 이러한 데이터 소스를 대상으로 하는 쿼리를 런타임에 식 트리를 작성하는 코드로 컴파일합니다. 그런 다음 쿼리 공급자는 식 트리 데이터 구조를 트래버스하고 데이터 소스에 적합한 쿼리 언어로 변환할 수 있습니다.  
@@ -105,7 +106,7 @@ foreach (string company in results)
   
 - System.Linq.Expressions 네임스페이스를 포함합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [식 트리(C#)](./index.md)
 - [식 트리 실행 방법(C#)](./how-to-execute-expression-trees.md)

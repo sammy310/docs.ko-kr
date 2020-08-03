@@ -1,17 +1,18 @@
 ---
 title: Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법 - C# 프로그래밍 가이드
+description: Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 액세스를 지원하는 명명된 인수 및 선택적 인수를 사용하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714872"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864347"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법(C# 프로그래밍 가이드)
 
@@ -107,6 +108,6 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [명명된 인수 및 선택적 인수](./named-and-optional-arguments.md)

@@ -1,13 +1,14 @@
 ---
 title: LINQ to ADO.NET(포털 페이지)
+description: LINQ to ADO.NET을 사용하면 LINQ 프로그래밍 모델을 통해 ADO.NET의 열거 가능한 개체를 쿼리할 수 있습니다. 세 가지 ADO.NET LINQ 기술에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 84412e43a9d6b1e256e4ac8306a94126a3eaaaf4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b09e678d29d27de5758cf5a5fcacd7391342792
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635550"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165753"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET(포털 페이지)
 LINQ to ADO.NET을 사용하면 LINQ(Language-Integrated Query) 프로그래밍 모델을 통해 ADO.NET의 열거 가능한 개체를 쿼리할 수 있습니다.  

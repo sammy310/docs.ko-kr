@@ -1,5 +1,6 @@
 ---
 title: 형식 정보 보기
+description: .NET에서 리플렉션의 핵심인 System.Type을 사용하여 형식 정보를 봅니다. ConstructorInfo, MemberInfo, MethodInfo, FieldInfo 및 PropertyInfo를 검토합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130012"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865205"
 ---
 # <a name="viewing-type-information"></a>형식 정보 보기
 <xref:System.Type?displayProperty=nameWithType> 클래스는 리플렉션의 핵심입니다. 공용 언어 런타임은 리플렉션이 요청할 때 로드된 형식의 **Type**을 만듭니다. **Type** 개체의 메서드, 필드, 속성 및 중첩 클래스를 사용하여 해당 형식에 대한 모든 것을 찾을 수 있습니다.  

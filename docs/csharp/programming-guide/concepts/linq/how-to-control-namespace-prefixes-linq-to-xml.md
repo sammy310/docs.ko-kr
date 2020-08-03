@@ -1,13 +1,14 @@
 ---
 title: 네임스페이스 접두사 제어 방법(C#)(LINQ to XML)
+description: CML 트리를 C#의 LINQ to XML로 serialize할 때 네임스페이스를 제어하는 방법에 대해 알아봅니다. 경우에 따라 네임스페이스 접두사를 제어해야 합니다.
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b0c5cbfa7488f3a7105595830ef6765e6bfb1f12
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141386"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105309"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>네임스페이스 접두사 제어 방법(C#)(LINQ to XML)
 이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -42,7 +43,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  

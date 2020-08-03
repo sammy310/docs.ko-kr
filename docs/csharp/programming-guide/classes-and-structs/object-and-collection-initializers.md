@@ -1,16 +1,17 @@
 ---
 title: 개체 및 컬렉션 이니셜라이저 - C# 프로그래밍 가이드
+description: C#의 개체 이니셜라이저는 생성자를 호출한 다음 생성 시 개체의 액세스 가능한 필드나 속성에 값을 할당합니다.
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81deed8a21bff10364524c3e0784c562d4e727e6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170197"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864776"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>개체 및 컬렉션 이니셜라이저(C# 프로그래밍 가이드)
 

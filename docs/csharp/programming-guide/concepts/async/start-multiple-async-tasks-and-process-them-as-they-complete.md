@@ -1,13 +1,14 @@
 ---
 title: 완료되면 비동기 작업 처리
+description: 이 예제에서는 C#에서 Task.WhenAny를 사용하여 여러 작업을 시작하고 해당 결과를 시작한 순서가 아닌 완료될 때 처리하는 방법을 보여줍니다.
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71736724"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925152"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)
 
@@ -20,7 +21,7 @@ ms.locfileid: "71736724"
 
 ## <a name="download-an-example-solution"></a>예제 솔루션 다운로드
 
-[Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.
+[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.
 
 > [!TIP]
 > 프로젝트를 다운로드하지 않으려는 경우 대신 이 항목의 끝에 있는 *MainWindow.xaml.cs* 파일을 검토할 수 있습니다.
@@ -29,7 +30,7 @@ ms.locfileid: "71736724"
 
 2. 메뉴 모음에서 **파일** > **열기** > **프로젝트/솔루션**을 선택합니다.
 
-3. **프로젝트 열기** 대화 상자에서 다운로드한 샘플 코드가 포함된 폴더를 열고 *AsyncFineTuningCS*/*AsyncFineTuningVB*에 대한 솔루션(*.sln*) 파일을 엽니다.
+3. **프로젝트 열기** 대화 상자에서 다운로드한 샘플 코드가 포함된 폴더를 열고 *AsyncFineTuningCS*/*AsyncFineTuningVB*에 대한 솔루션( *.sln*) 파일을 엽니다.
 
 4. **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.
 
@@ -87,7 +88,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 다음 코드는 예제에 대한 *MainWindow.xaml.cs* 파일의 전체 텍스트입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다. 또한 <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.
 
-[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
+[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.
 
 ```csharp
 using System;
@@ -225,9 +226,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Async 애플리케이션 미세 조정(C#)](fine-tuning-your-async-application.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](index.md)
-- [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

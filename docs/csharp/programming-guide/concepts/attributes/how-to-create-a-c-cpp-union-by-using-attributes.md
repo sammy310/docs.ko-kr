@@ -1,13 +1,14 @@
 ---
 title: 특성을 사용하여 C/C++ 공용 구조체 만드는 방법(C#)
+description: 특성을 사용하여 C#의 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정하는 방법에 대해 알아봅니다. 이 예제에서는 C/C++의 공용 구조체와 같은 요소를 구현합니다.
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141581"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925074"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>특성을 사용하여 C/C++ 공용 구조체 만드는 방법(C#)
 

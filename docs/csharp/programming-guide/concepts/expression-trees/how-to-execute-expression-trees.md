@@ -1,13 +1,14 @@
 ---
 title: 식 트리 실행 방법(C#)
+description: 식 트리를 실행하여 값을 반환하거나 메서드 호출과 같은 작업을 수행하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969889"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105616"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>식 트리 실행 방법(C#)
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  
@@ -46,7 +47,7 @@ Console.WriteLine(result);
   
 - System.Linq.Expressions 네임스페이스를 포함합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [식 트리(C#)](./index.md)
 - [식 트리 수정 방법(C#)](./how-to-modify-expression-trees.md)

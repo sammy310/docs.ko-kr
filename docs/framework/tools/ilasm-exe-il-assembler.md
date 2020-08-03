@@ -1,5 +1,6 @@
 ---
 title: Ilasm.exe(IL 어셈블러)
+description: Ilasm.exe 즉, IL 어셈블러를 시작합니다. 이 도구는 IL(Intermediate Language)로 PE(이식 가능한 실행) 파일을 생성합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105100"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166978"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -34,7 +35,7 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>매개 변수
 
-| 인수 | 설명 |
+| 인수 | Description |
 | -------- | ----------- |
 |`filename`|.il 소스 파일의 이름을 나타냅니다. 이 파일은 메타데이터 선언 지시문과 기호화된 IL 명령으로 구성됩니다. *Ilasm.exe*를 사용하여 여러 개의 소스 파일 인수를 제공하면 하나의 PE 파일을 생성할 수 있습니다. **참고:** .il 소스 파일의 마지막 코드 줄에는 후행 공백이나 줄 끝(EOL) 문자가 있어야 합니다.|
 

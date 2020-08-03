@@ -1,13 +1,14 @@
 ---
 title: 두 폴더의 내용을 비교하는 방법(LINQ)(C#)
+description: 이 예제에서는 C#에서 LINQ 쿼리를 사용하여 파일 목록을 비교하는 세 가지 방법을 보여줍니다. 이러한 기술을 조정하여 형식에 관계없이 개체의 시퀀스를 비교할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cdac57d3d746aa2290c51d1263a7d42dc3463e0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169404"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105331"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>두 폴더의 내용을 비교하는 방법(LINQ)(C#)
 이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.  
@@ -128,7 +129,7 @@ namespace QueryCompareTwoDirs
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to Objects(C#)](./linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

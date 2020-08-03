@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 및 Windows OS 버전
+description: 기본 CLR 버전 및 Windows 운영 체제에 설치된 버전을 포함하여 각 .NET Framework 버전의 주요 기능에 대해 알아봅니다.
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77504051"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475478"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 
@@ -236,7 +237,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|2.0|
 |**포함된 Visual Studio 버전**|2005|
-|**Windows 버전**|해당 없음|
+|**Windows 버전**|N/A|
 |**Windows Server 버전**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
@@ -252,7 +253,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|1.1|
 |**포함된 Visual Studio 버전**|2003|
-|**Windows 버전**|해당 없음|
+|**Windows 버전**|N/A|
 |**Windows Server 버전**|✔️ 2003|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
@@ -262,8 +263,8 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|1.0|
 |**포함된 Visual Studio 버전**|Visual Studio .NET|
-|**Windows 버전**|해당 없음|
-|**Windows Server 버전**|해당 없음|
+|**Windows 버전**|N/A|
+|**Windows Server 버전**|N/A|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
 > [!NOTE]
@@ -302,7 +303,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 
 - 컴퓨터에 설치된 버전 또는 업데이트 확인에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md) 및 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md)을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [버전 호환성](version-compatibility.md)
 | [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

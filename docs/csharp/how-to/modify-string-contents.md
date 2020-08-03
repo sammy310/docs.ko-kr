@@ -1,14 +1,15 @@
 ---
 title: 문자열 내용 수정 방법 - C# 가이드
+description: C#에서 기존 문자열 콘텐츠를 수정하여 새 문자열 개체를 반환하는 다양한 기술의 예제를 검토합니다.
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324164"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473970"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 

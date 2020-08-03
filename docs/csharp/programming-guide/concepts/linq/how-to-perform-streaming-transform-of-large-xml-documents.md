@@ -1,13 +1,14 @@
 ---
 title: 큰 XML 문서의 스트리밍 변환을 수행하는 방법(C#)
+description: 일부 파일에 과도한 메모리 사용을 피하기 위해 C#의 XML로 텍스트의 스트리밍을 변환하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1ab2866079b2244dc764271d7ba63173349e2f3
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169106"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104860"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>큰 XML 문서의 스트리밍 변환을 수행하는 방법(C#)
 큰 XML 파일을 변환하고 애플리케이션의 메모리 사용 공간이 예상 가능하도록 애플리케이션을 작성해야 하는 경우가 있습니다. XML 트리를 매우 큰 XML 파일로 채우려는 경우 메모리 사용은 파일 크기에 비례하므로 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  

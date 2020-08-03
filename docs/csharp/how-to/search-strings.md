@@ -1,17 +1,18 @@
 ---
 title: 문자열 검색 방법(C# 가이드)
+description: C#의 문자열에서 텍스트를 검색하는 두 가지 전략에 대해 알아봅니다. String 클래스 메서드는 특정 텍스트를 검색합니다. 정규식은 텍스트에서 패턴을 검색합니다.
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 17bf6e080542242d30791b70ffbf00b05f03a7b0
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324131"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473996"
 ---
 # <a name="how-to-search-strings"></a>문자열 검색 방법
 

@@ -1,17 +1,18 @@
 ---
 title: 런타임 및 대상 다시 지정 변경 내용 - .NET Framework
+description: .NET Framework의 애플리케이션 호환성과 이 호환성이 다른 버전으로 마이그레이션할 때 런타임 및 대상 다시 지정 변경 내용에 어떻게 영향을 받는지에 대해 알아봅니다.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26f36dd34c6c5ecae8fc5ab373ff60d9e56f8245
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196704"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475491"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 애플리케이션 호환성
 
@@ -62,7 +63,7 @@ ms.locfileid: "73196704"
 **투명**\
 앱 개발자나 사용자에게 뚜렷한 영향을 주지 않는 변경 내용입니다. 이 변경 내용으로 인한 앱 수정은 필요하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [버전 및 종속성](versions-and-dependencies.md)
 - [새로운 기능](../whats-new/index.md)

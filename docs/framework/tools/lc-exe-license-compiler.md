@@ -1,5 +1,6 @@
 ---
 title: Lc.exe(라이선스 컴파일러)
+description: Lc.exe 즉, 라이선스 컴파일러를 사용합니다. 이 도구는 라이선스 정보를 포함하는 텍스트 파일을 읽고 CLR 실행 파일에 리소스로 포함할 이진 파일을 만듭니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180405"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164255"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe(라이선스 컴파일러)
 라이선스 컴파일러를 사용하면 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함될 수 있는 바이너리 파일을 생성할 수 있습니다.  
@@ -38,7 +39,7 @@ targetPE /complist:filename [-outdir:path]
 /i:modules [/nologo] [/v]  
 ```  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**/complist:** *filename*|.licenses 파일에 포함할 라이선스가 있는 구성 요소의 목록이 들어 있는 파일 이름을 지정합니다. 각 구성 요소는 한 줄에 하나의 구성 요소로 전체 이름을 사용하여 참조됩니다.<br /><br /> 명령줄 사용자는 프로젝트의 각 형식마다 별도의 파일을 지정할 수 있습니다. Lc.exe로 여러 개의 입력 파일을 사용하여 하나의 .licenses 파일을 생성할 수도 있습니다.|  
 |**/h**[**elp**]|이 도구의 명령 구문 및 옵션을 표시합니다.|  
@@ -52,7 +53,7 @@ targetPE /complist:filename [-outdir:path]
   
 ## <a name="example"></a>예제  
   
-1. `HostApp.exe`  라는 애플리케이션의 `Samples.DLL`에 들어 있는 라이선스가 있는 컨트롤 `MyCompany.Samples.LicControl1`을 사용하는 경우 다음 내용이 들어 있는 `HostAppLic.txt`를 만들 수 있습니다.  
+1. `HostApp.exe`라는 애플리케이션의 `Samples.DLL`에 들어 있는 라이선스가 있는 컨트롤 `MyCompany.Samples.LicControl1`을 사용하는 경우 다음 내용이 들어 있는 `HostAppLic.txt`를 만들 수 있습니다.  
   
     ```text
     MyCompany.Samples.LicControl1, Samples.DLL  

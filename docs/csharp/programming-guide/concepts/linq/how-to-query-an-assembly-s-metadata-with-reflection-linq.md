@@ -1,13 +1,14 @@
 ---
 title: 리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)(C#)
+description: C#에서 .NET 리플렉션 API와 함께 LINQ를 사용하여 검색 조건과 일치하는 메서드에 대한 특정 메타데이터를 검색하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 092cb386af0c3f2e2241c2c2ac8e50eab74cc43b
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: dc5352e9cb90e9ad2808fb027823174d07d69da6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241541"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104590"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)(C#)
 

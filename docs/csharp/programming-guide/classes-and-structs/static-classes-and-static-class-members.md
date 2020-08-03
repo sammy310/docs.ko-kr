@@ -1,5 +1,6 @@
 ---
 title: 정적 클래스 및 정적 클래스 멤버 - C# 프로그래밍 가이드
+description: 정적 클래스는 C#에서 인스턴스화할 수 없습니다. 클래스 이름 자체를 사용하여 정적 클래스의 멤버에 액세스합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990098"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863879"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 
@@ -88,7 +89,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)에서 [정적 클래스](~/_csharplang/spec/classes.md#static-classes) 및 [정적 및 인스턴스 멤버](~/_csharplang/spec/classes.md#static-and-instance-members)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [static](../../language-reference/keywords/static.md)

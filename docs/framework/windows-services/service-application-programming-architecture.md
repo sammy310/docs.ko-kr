@@ -1,5 +1,6 @@
 ---
 title: 서비스 애플리케이션 프로그래밍 아키텍처
+description: 서비스 애플리케이션 프로그래밍 아키텍처를 이해합니다. Windows 서비스 애플리케이션은 System.ServiceProcess.ServiceBase에서 상속되는 클래스를 기반으로 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053495"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925581"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 애플리케이션 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  

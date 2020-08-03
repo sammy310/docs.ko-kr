@@ -1,13 +1,14 @@
 ---
 title: LINQ 및 문자열(C#)
+description: LINQ는 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. LINQ 쿼리와 C# 문자열 함수 및 정규식을 결합할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635537"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165616"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 및 문자열(C#)
 
@@ -72,7 +73,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
   
   .csv 파일의 텍스트 데이터에 대해 수학적 계산을 수행하는 방법을 보여 줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(C#)](index.md)
 - [CSV 파일에서 XML을 생성하는 방법](how-to-generate-xml-from-csv-files.md)

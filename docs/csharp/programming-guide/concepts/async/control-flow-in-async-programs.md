@@ -1,13 +1,14 @@
 ---
 title: 비동기 프로그램의 제어 흐름(C#)
+description: async 및 await 키워드를 사용하여 비동기 프로그램을 쓰고 유지 관리하는 방법을 이해하기 위해 간단한 비동기 C# 프로그램의 제어 흐름에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3946db958466a9f9914a5fa7b37c0db3a64d4b3d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204447"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925373"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 

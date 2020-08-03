@@ -1,13 +1,14 @@
 ---
 title: Word 문서에서 텍스트 찾기(C#)
+description: C#에서 LINQ를 사용하여 WordprocessingML 문서를 처리하는 방법을 알아봅니다. 이 예제에서는 문서에서 문자열의 모든 항목을 찾습니다.
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1efcbef6185b718287f1222ecc086f4c675f02ab
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205388"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105396"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 문서에서 텍스트 찾기(C#)
 이 항목에서는 이전 쿼리를 확장하여 문서에 있는 문자열을 모두 찾습니다.  
@@ -327,7 +328,7 @@ StyleName:Code ><
   
 - [Office Open XML WordprocessingML 문서 정보(C#)](./wordprocessingml-document-with-styles.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자습서: WordprocessingML 문서에서 내용 조작(C#)](./shape-of-wordprocessingml-documents.md)
 - [순수 함수를 사용하여 리팩터링(C#)](./refactoring-using-a-pure-function.md)

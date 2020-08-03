@@ -1,5 +1,6 @@
 ---
 title: Visual Studio용 개발자 명령 프롬프트
+description: .NET 도구를 더 쉽게 사용할 수 있는 Visual Studio용 개발자 명령 프롬프트를 사용하는 방법에 대해 알아봅니다. 이는 특정 환경 변수를 자동으로 설정합니다.
 ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92416820f47cb778dfcc916b8626df4aa328814c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715819"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167169"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 
 Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework 도구를 더 쉽게 사용할 수 있습니다. 이는 특정 환경 변수를 자동으로 설정하는 명령 프롬프트입니다. 개발자 명령 프롬프트를 연 후 `ildasm` 또는 `clrver`와 같은 [.NET Framework 도구](index.md)에 대한 명령을 입력할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 

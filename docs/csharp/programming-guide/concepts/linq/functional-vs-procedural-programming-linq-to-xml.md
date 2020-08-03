@@ -1,13 +1,14 @@
 ---
 title: 함수형 프로그래밍과 절차적 프로그래밍 비교(LINQ to XML)(C#)
+description: XML 처리를 위해 LINQ to XML은 절차적, 메모리 내 XML 트리 수정 및 선언적 방법을 사용하는 함수 생성을 모두 지원합니다.
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e19f9311c56f4fe2c5e7e5f228aca6c03c6fe04d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594253"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103649"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>함수형 프로그래밍과 절차적 프로그래밍 비교(LINQ to XML)(C#)
 다양한 유형의 XML 애플리케이션이 있습니다.  

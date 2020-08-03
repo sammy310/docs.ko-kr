@@ -1,5 +1,6 @@
 ---
 title: Windows 스토어 앱에 대한 .NET Framework의 리플렉션
+description: Windows 스토어 앱용 .NET에서 리플렉션을 사용합니다. 전체 .NET에서 사용할 수 있는 Windows 스토어 앱에서 사용할 리플렉션 형식 및 멤버 집합이 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-ms.openlocfilehash: 42bcfd4a1adc66511a1183807c09e77d1448c754
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 86bb633e97f0f88dc2a2a042b6897695a258cc3c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715892"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865270"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
 

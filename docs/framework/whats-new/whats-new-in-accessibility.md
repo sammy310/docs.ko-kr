@@ -1,5 +1,6 @@
 ---
 title: .NET Framework에서 내게 필요한 옵션의 새로운 기능
+description: .NET Framework 4.7.1부터 적용되는 .NET 접근성의 새로운 기능을 확인하세요. 내게 필요한 옵션 기능을 통해 앱은 보조 기술 사용자에게 적절한 환경을 제공할 수 있습니다.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244155"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925841"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 

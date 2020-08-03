@@ -2,12 +2,12 @@
 title: dotnet list package 명령
 description: ‘dotnet list package’ 명령은 프로젝트 또는 솔루션에 대한 패키지 참조를 나열하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463658"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164758"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463658"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,6 +79,10 @@ Project 'HelloPlugin' has the following package references
 
   최신 패키지를 검색할 때 사용할 NuGet 소스입니다. `--outdated` 옵션이 필요합니다.
 
+- **`--deprecated`**
+
+  사용되지 않는 패키지를 표시합니다.
+
 - **`--framework <FRAMEWORK>`**
 
   지정된 [대상 프레임워크](../../standard/frameworks.md)에 적용 가능한 패키지만 표시합니다. 여러 프레임워크를 지정하려면 옵션을 여러 번 반복합니다. 예를 들어 `--framework netcoreapp2.2 --framework netstandard2.0`을 참조하십시오.
@@ -88,15 +93,15 @@ Project 'HelloPlugin' has the following package references
 
 - **`--highest-minor`**
 
-  최신 패키지를 검색할 때 주 버전 번호가 일치하는 패키지만 고려합니다. `--outdated` 옵션이 필요합니다.
+  최신 패키지를 검색할 때 주 버전 번호가 일치하는 패키지만 고려합니다. `--outdated` 또는 `--deprecated` 옵션이 필요합니다.
 
 - **`--highest-patch`**
 
-  최신 패키지를 검색할 때 주 및 부 버전 번호가 일치하는 패키지만 고려합니다. `--outdated` 옵션이 필요합니다.
+  최신 패키지를 검색할 때 주 및 부 버전 번호가 일치하는 패키지만 고려합니다. `--outdated` 또는 `--deprecated` 옵션이 필요합니다.
 
 - **`--include-prerelease`**
 
-  최신 패키지를 검색할 때 사전 릴리스 버전을 가진 패키지를 고려합니다. `--outdated` 옵션이 필요합니다.
+  최신 패키지를 검색할 때 사전 릴리스 버전을 가진 패키지를 고려합니다. `--outdated` 또는 `--deprecated` 옵션이 필요합니다.
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`-s|--source <SOURCE>`**
 
-  최신 패키지를 검색할 때 사용할 NuGet 소스입니다. `--outdated` 옵션이 필요합니다.
+  최신 패키지를 검색할 때 사용할 NuGet 소스입니다. `--outdated` 또는 `--deprecated` 옵션이 필요합니다.
 
 ## <a name="examples"></a>예
 

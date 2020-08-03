@@ -1,5 +1,6 @@
 ---
 title: Cert2spc.exe(SPC 테스트 도구)
+description: Cert2spc.exe 즉, SPC 테스트 도구를 사용합니다. 이 도구는 하나 이상의 X.509 인증서에서 SPC(소프트웨어 게시자 인증서)를 만듭니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SPC
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2eb6339aa6f5d23a5b87986410cbeaac2dac2bec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129881"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167313"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe(SPC 테스트 도구)
 SPC(소프트웨어 게시자 인증서) 테스트 도구를 사용하면 하나 이상의 X.509 인증서에서 SPC를 만들 수 있습니다. Cert2spc.exe는 테스트 전용이며, VeriSign 또는 Thawte 같은 인증 기관에서 유효한 SPC를 받을 수 있습니다. X.509 인증서를 만드는 방법은 [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)를 참조하세요.  
@@ -30,13 +31,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
   
 ## <a name="parameters"></a>매개 변수  
   
-|인수|설명|  
+|인수|Description|  
 |--------------|-----------------|  
 |`certN.cer`|SPC 파일에 포함할 X.509 인증서의 이름입니다. 여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.|  
 |`crlN.crl`|SPC 파일에 포함할 인증서 해지 목록의 이름입니다. 여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.|  
 |`outputSPCfile.spc`|X.509 인증서가 들어 있는 PKCS #7 개체의 이름을 나타냅니다.|  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
@@ -53,7 +54,7 @@ cert2spc myCertificate.cer mySPCFile.spc
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)

@@ -1,18 +1,19 @@
 ---
 title: 대리자의 가변성 사용(C#)
+description: 포함된 공변성(Covariance) 및 반공변성(Contravariance) 코드 예제를 사용하여 대리자의 가변성을 사용하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169768"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105680"
 ---
 # <a name="using-variance-in-delegates-c"></a>대리자의 가변성 사용(C#)
 메서드를 대리자에 할당하면 *공변성(covariance)* 및 *반공변성(Contravariance)* 은 대리자 형식과 메서드 시그니처의 일치를 확인하는 유연성을 제공합니다. 공변성(covariance)은 메서드가 대리자에 정의된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변성(contravariance)은 메서드가 대리자 형식보다 더 적은 수의 파생된 매개 변수 형식을 갖도록 허용합니다.  
   
-## <a name="example-1-covariance"></a>예제 1: 공변성(Covariance)  
+## <a name="example-1-covariance"></a>예제 1: 공변성  
   
 ### <a name="description"></a>설명  
  이 예제에서는 대리자를 대리자 시그니처의 반환 형식에서 파생된 반환 형식이 있는 메서드와 함께 사용하는 방법을 보여 줍니다. `DogsHandler`에서 반환된 데이터 형식은 `Dogs`이고, 이 형식은 대리자에 정의된 `Mammals` 형식에서 파생됩니다.  
@@ -48,7 +49,7 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>예제 2: 반공변성(Contravariance)  
+## <a name="example-2-contravariance"></a>예제 2: 반공변성(contravariance)  
   
 ### <a name="description"></a>설명
 
@@ -92,7 +93,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대리자의 가변성(C#)](./variance-in-delegates.md)
 - [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)

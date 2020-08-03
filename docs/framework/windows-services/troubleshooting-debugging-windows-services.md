@@ -1,5 +1,6 @@
 ---
 title: '문제 해결: Windows 서비스 디버깅'
+description: Windows 서비스에서 디버깅을 시작합니다. Windows 서비스 애플리케이션을 디버그할 때 서비스와 Windows 서비스 관리자가 상호 작용합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-ms.openlocfilehash: cbedb0051cbb08c2875e145a2bad35ae4d02a74e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 935f5dcbd369ba5d723cc0e947ba708afdd590ea
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053504"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925542"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>문제 해결: Windows 서비스 디버깅
 Windows 서비스 애플리케이션을 디버그할 때 서비스와 **Windows 서비스 관리자**가 상호 작용합니다. **서비스 관리자**는 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 호출하여 서비스를 시작한 다음, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드가 반환될 때까지 30초 기다립니다. 이 시간 이내에 메서드가 반환되지 않으면 관리자는 서비스를 시작할 수 없다는 오류를 표시합니다.  

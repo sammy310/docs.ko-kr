@@ -1,5 +1,6 @@
 ---
 title: .NET Framework에서 사용되지 않는 기능
+description: .NET 클래스 라이브러리가 멤버를 사용되지 않음으로 표시하는 방법에 대해 알아봅니다. ObsoleteAttribute 특성과 사용되지 않는 형식 및 멤버를 처리하는 방법 등을 이해합니다.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 7cfebfde859a95495e9d2d5e42bd034ad5d55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143137"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925802"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 
@@ -81,6 +82,6 @@ ms.locfileid: "79143137"
 - [.NET Framework 3.5에서 사용되지 않는 항목 목록](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 - [.NET Framework 2.0에서 사용되지 않는 항목 목록](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)

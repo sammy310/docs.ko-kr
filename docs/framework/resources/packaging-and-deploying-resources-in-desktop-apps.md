@@ -1,5 +1,6 @@
 ---
 title: .NET 앱에서 리소스 패키징 및 배포
+description: 주 어셈블리(허브) 및 위성 어셈블리(스포크)를 사용하여 .NET 앱에서 리소스를 패키지하고 배포합니다. 스포크는 지역화된 리소스를 포함하지만 코드는 포함하지 않습니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243052"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166181"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -116,7 +117,7 @@ ms.locfileid: "81243052"
 
 - 애플리케이션 코드는 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하지 않습니다.
 
-다음 예제와 같이 애플리케이션 구성 파일에 [\<relativeBindForResources&gt;](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소를 포함하고 해당 `enabled` 특성을 `true`로 설정하여 위성 어셈블리에 대한 프로브를 최적화합니다.
+다음 예제와 같이 애플리케이션 구성 파일에 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소를 포함하고 해당 `enabled` 특성을 `true`로 설정하여 위성 어셈블리에 대한 프로브를 최적화합니다.
 
 ```xml
 <configuration>
@@ -126,7 +127,7 @@ ms.locfileid: "81243052"
 </configuration>
 ```
 
-위성 어셈블리에 대해 최적화된 프로브는 옵트인 기능입니다. 즉, 런타임은 [\<relativeBindForResources&gt;](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소가 애플리케이션의 구성 파일에 있고 해당 `enabled` 특성이 `true`로 설정된 경우가 아니면 [리소스 대체 프로세스](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)에 문서화된 단계를 따릅니다. 이런 경우에는 위성 어셈블리 검색 프로세스가 다음과 같이 수정됩니다.
+위성 어셈블리에 대해 최적화된 프로브는 옵트인 기능입니다. 즉, 런타임은 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 요소가 애플리케이션의 구성 파일에 있고 해당 `enabled` 특성이 `true`로 설정된 경우가 아니면 [리소스 대체 프로세스](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)에 문서화된 단계를 따릅니다. 이런 경우에는 위성 어셈블리 검색 프로세스가 다음과 같이 수정됩니다.
 
 - 런타임은 부모 코드 어셈블리의 위치를 사용하여 위성 어셈블리를 검색합니다. 부모 어셈블리가 전역 어셈블리 캐시에 설치된 경우 런타임은 캐시에서만 검색하고 애플리케이션 디렉터리에서 검색하지 않습니다. 부모 어셈블리가 애플리케이션 디렉터리에 설치된 경우 런타임은 애플리케이션 디렉터리에서만 검색하고 전역 어셈블리 캐시에서 검색하지 않습니다.
 

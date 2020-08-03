@@ -1,13 +1,14 @@
 ---
 title: 요소, 특성 및 노드를 XML 트리에 추가(C#)
+description: 요소, 특성, 주석, 처리 명령 및 텍스트와 같은 내용을 기존 XML 트리에 추가하는 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169577"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105558"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>요소, 특성 및 노드를 XML 트리에 추가(C#)
 내용(요소, 특성, 주석, 처리 명령, 텍스트 및 CDATA)을 기존 XML 트리에 추가할 수 있습니다.  
@@ -15,14 +16,14 @@ ms.locfileid: "79169577"
 ## <a name="methods-for-adding-content"></a>내용을 추가하는 메서드  
  다음 메서드는 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가합니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|<xref:System.Xml.Linq.XContainer>의 자식 내용 끝 부분에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<xref:System.Xml.Linq.XContainer>의 자식 내용 시작 부분에 내용을 추가합니다.|  
   
  다음 메서드는 <xref:System.Xml.Linq.XNode>의 형제 노드로 내용을 추가합니다. 유효한 형제 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XText>와 같은 다른 형식의 노드에 추가할 수 있지만, 형제 내용을 추가할 가장 일반적인 노드는 <xref:System.Xml.Linq.XComment>입니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<xref:System.Xml.Linq.XNode> 뒤에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<xref:System.Xml.Linq.XNode> 앞에 내용을 추가합니다.|  
@@ -61,7 +62,7 @@ xmlTree.Add(srcTree.Element("Child9"));
 Console.WriteLine(xmlTree);  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
  이 코드의 결과는 다음과 같습니다.  
   
 ```xml  

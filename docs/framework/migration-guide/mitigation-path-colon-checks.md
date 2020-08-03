@@ -1,13 +1,14 @@
 ---
 title: '완화: 경로 콜론 검사'
+description: 적절한 드라이브 구분 기호 구문(콜론)에 대한 검사를 지원하도록 .NET Framework 4.6.2에서 변경된 사항에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32ee54f88bc4747fd0d8065b0dce06b151d1d9a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181241"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475452"
 ---
 # <a name="mitigation-path-colon-checks"></a>완화: 경로 콜론 검사
 .NET Framework 4.6.2를 대상으로 하는 앱부터 이전에 지원되지 않던 경로를 지원하도록 여러 가지 변경이 수행되었습니다(길이 및 형식 측면에서). 특히 적절한 드라이브 구분 기호 구문(콜론)에 대한 확인이 좀 더 정확해졌습니다.  
@@ -15,7 +16,7 @@ ms.locfileid: "79181241"
 ## <a name="impact"></a>영향  
  이러한 변경으로 인해 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 및 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드에서 이전에 지원했던 일부 URI 경로가 차단됩니다.  
   
-## <a name="mitigation"></a>완화 방법  
+## <a name="mitigation"></a>완화  
  전에는 허용되었지만 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 및 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드로 더 이상 지원되지 않는 경로 문제를 해결하려면 다음을 수행할 수 있습니다.  
   
 - URL에서 스키마를 수동으로 제거합니다. 예를 들어 URL에서 `file://`을 제거합니다.  
@@ -30,6 +31,6 @@ ms.locfileid: "79181241"
     </runtime>  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

@@ -1,13 +1,14 @@
 ---
 title: 문자열을 구문 분석하는 방법(C#)
+description: 문자열의 구문을 분석하여 C#에서 XML 트리를 만드는 방법을 알아봅니다. 구문 분석된 XML의 특정 데이터에 액세스하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345802"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104820"
 ---
 # <a name="how-to-parse-a-string-c"></a>문자열을 구문 분석하는 방법(C#)
 
@@ -54,6 +55,6 @@ List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [특정 특성으로 요소를 찾는 방법(C#)](how-to-find-an-element-with-a-specific-attribute.md)

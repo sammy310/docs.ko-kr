@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 축 개요(C#)
+description: 축이라고도 하는 C#의 축 메서드에 대해 알아봅니다. LINQ에서 XML 트리를 쿼리하여 요소와 특성을 찾고 축을 통해 해당 값을 검색할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbda844e8cb2e3b1ff116fd834c6ab1fdd20c1f8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635524"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165440"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 축 개요(C#)
 XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다. *축 메서드*(*축*)를 통해 컬렉션을 검색합니다. 일부 축은 <xref:System.Xml.Linq.XElement> 컬렉션을 반환하는 <xref:System.Xml.Linq.XDocument> 및 <xref:System.Collections.Generic.IEnumerable%601> 클래스의 메서드이고, 일부 축은 <xref:System.Xml.Linq.Extensions> 클래스의 확장 메서드입니다. 확장명 메서드로 구현되는 축은 컬렉션에 대해 작동하고 컬렉션을 반환합니다.  
@@ -23,7 +24,7 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>요소 컬렉션을 검색하는 메서드  
  다음은 요소 컬렉션을 반환하기 위해 <xref:System.Xml.Linq.XElement>에 대해 호출하는 <xref:System.Xml.Linq.XElement> 클래스(또는 해당 기본 클래스)의 메서드를 요약한 것입니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|이 요소의 상위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 상위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|이 요소의 하위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 하위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
@@ -36,21 +37,21 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
 ## <a name="method-for-retrieving-a-single-element"></a>단일 요소를 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 단일 자식을 검색합니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|지정된 <xref:System.Xml.Linq.XElement>을 가진 첫 번째 자식 <xref:System.Xml.Linq.XName> 개체를 반환합니다.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>특성 컬렉션을 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 특성을 검색합니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|모든 특성에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XAttribute>을 반환합니다.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>단일 특성을 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 단일 특성을 검색합니다.  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|지정된 <xref:System.Xml.Linq.XAttribute>을 가진 <xref:System.Xml.Linq.XName>를 반환합니다.|  
   

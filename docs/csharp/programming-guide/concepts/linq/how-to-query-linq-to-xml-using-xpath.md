@@ -1,13 +1,14 @@
 ---
 title: XPath를 사용하여 LINQ to XML을 쿼리하는 방법(C#)
+description: C#에서 확장 메서드를 사용하면 XPath를 통해 XML 트리를 쿼리할 수 있습니다. 일반적으로 LINQ to XML과 함께 XPath를 사용하지 않는 것이 좋습니다.
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fff45a93380b5af85aa640fc690783cc95e6298b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104342"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>XPath를 사용하여 LINQ to XML을 쿼리하는 방법(C#)
 이 항목에서는 XPath를 사용하여 XML 트리를 쿼리할 수 있도록 하는 확장명 메서드에 대해 소개합니다. 이러한 확장 메서드 사용에 대한 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>를 참조하세요.  

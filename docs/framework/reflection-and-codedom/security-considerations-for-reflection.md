@@ -1,5 +1,6 @@
 ---
 title: 리플렉션의 보안 고려 사항
+description: .NET에서 리플렉션의 보안 고려 사항에 대해 알아봅니다. 형식 및 멤버에 대한 정보를 가져올 수 있지만 멤버 액세스에는 제한이 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644180"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865257"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 

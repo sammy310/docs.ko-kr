@@ -1,13 +1,14 @@
 ---
 title: 제네릭 컬렉션용 인터페이스의 가변성 사용(C#)
+description: 제네릭 컬렉션용 공변(covariant) 및 반공변(contravariant) 인터페이스를 사용하는 방법에 대해 알아봅니다. 제네릭 컬렉션을 변환하고 비교하는 예제를 참조하세요.
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241359"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105673"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>제네릭 컬렉션용 인터페이스의 가변성 사용(C#)
 공변(covariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변(contravariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 적은 파생된 형식의 매개 변수를 수락하도록 허용합니다.  

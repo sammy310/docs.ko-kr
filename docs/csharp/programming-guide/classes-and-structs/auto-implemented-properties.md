@@ -1,16 +1,17 @@
 ---
 title: 자동으로 구현된 속성 - C# 프로그래밍 가이드
+description: C#에서 자동으로 구현된 속성의 경우 컴파일러는 속성의 get 및 set 접근자를 통해서만 액세스하는 전용 익명 지원 필드를 만듭니다.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 791455c1eaef752da2b551e20187d390ca6c65e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f58f9a23f26bde7e80d834528d94e38af1231e7b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170327"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474477"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>자동으로 구현된 속성(C# 프로그래밍 가이드)
 

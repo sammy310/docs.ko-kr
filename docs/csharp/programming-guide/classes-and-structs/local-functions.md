@@ -1,14 +1,15 @@
 ---
 title: 로컬 함수 - C# 프로그래밍 가이드
+description: C#의 로컬 함수는 다른 멤버에 중첩되어 포함된 멤버에서 호출할 수 있는 전용 메서드입니다.
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 200fbd097b7c71a1cd392d62622955528a80fd66
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102946"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864529"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 

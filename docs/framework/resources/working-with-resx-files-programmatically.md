@@ -1,5 +1,6 @@
 ---
 title: 프로그래밍 방식으로 .resx 파일 작업
+description: .NET 클래스 라이브러리의 System.Resources 네임스페이스에 있는 형식 및 멤버를 사용하여 프로그래밍 방식으로 XML 리소스(.resx)에서 데이터를 만들거나 검색합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243039"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166165"
 ---
 # <a name="work-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
 

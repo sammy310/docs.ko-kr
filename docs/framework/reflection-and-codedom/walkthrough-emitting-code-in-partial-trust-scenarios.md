@@ -1,5 +1,6 @@
 ---
 title: '연습: 부분 신뢰 시나리오에서 코드 내보내기'
+description: 부분 신뢰 시나리오에서 코드를 내보내는 방법을 살펴봅니다. 리플렉션 내보내기는 동일한 API를 사용하지만 일부 기능은 부분 신뢰 코드에 특수 권한이 필요합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70adb3ce67b45459b18741948092a912f6173731
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129987"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865192"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 

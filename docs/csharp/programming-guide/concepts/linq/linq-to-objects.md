@@ -1,13 +1,14 @@
 ---
 title: LINQ to Objects(C#)
+description: 중간 LINQ 공급자 또는 API 없이 모든 IEnumerable 또는 IEnumerable<T> 컬렉션으로 LINQ 쿼리를 사용하는 C#의 LINQ to Objects에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f4ca6e57ffff026cb73121ecaf443ae54b25262c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 7b67690ee13f207441bc94155acd91047b63b3df
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990030"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165553"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects(C#)
 

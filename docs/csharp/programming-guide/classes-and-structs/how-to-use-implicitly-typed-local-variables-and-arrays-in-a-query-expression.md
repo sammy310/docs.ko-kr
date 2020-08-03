@@ -1,15 +1,16 @@
 ---
 title: 쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열을 사용하는 방법 - C# 프로그래밍 가이드
+description: C#에서 암시적으로 형식화된 지역 변수를 사용하여 컴파일러에서 지역 변수의 형식을 확인하도록 할 수 있습니다. 반드시 익명 형식을 저장하기 위해 사용해야 합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: f4ff71fc4dc1a0b2affa1f032ab1d3d6bb04d297
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b69c646aa878166cca3adc1a568ce16454fb7574
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705563"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864334"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열을 사용하는 방법(C# 프로그래밍 가이드)
 컴파일러에서 지역 변수의 형식을 확인하려는 경우 항상 암시적으로 형식화된 지역 변수를 사용할 수 있습니다. 쿼리 식에 자주 사용되는 무명 형식을 저장하려면 암시적으로 형식화된 지역 변수를 사용해야 합니다. 다음 예제에서는 쿼리에서 암시적으로 형식화된 지역 변수의 선택적 및 필수 사용을 보여 줍니다.  

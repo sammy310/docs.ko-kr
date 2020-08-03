@@ -1,16 +1,17 @@
 ---
 title: 가변 배열 - C# 프로그래밍 가이드
+description: C#의 가변 배열은 요소의 치수와 크기가 서로 다른 배열입니다. 가변 배열을 선언, 초기화 및 액세스하는 방법을 보여줍니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705706"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474685"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>가변 배열(C# 프로그래밍 가이드)
 
@@ -26,7 +27,7 @@ ms.locfileid: "75705706"
   
  각 요소는 정수의 1차원 배열입니다. 첫 번째 요소는 5개 정수의 배열이고, 두 번째 요소는 4개 정수의 배열이고, 세 번째 요소는 2개 정수의 배열입니다.  
   
- 이니셜라이저를 사용하여 배열 요소에 값을 채울 수도 있으며, 이 경우 배열 크기가 필요 없습니다. 예들 들어 다음과 같습니다.  
+ 이니셜라이저를 사용하여 배열 요소에 값을 채울 수도 있으며, 이 경우 배열 크기가 필요 없습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   

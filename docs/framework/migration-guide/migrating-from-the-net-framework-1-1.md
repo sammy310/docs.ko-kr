@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 1.1에서 마이그레이션
+description: Windows 7 이상에서 .NET Framework 1.1을 사용하여 컴파일된 애플리케이션을 실행하는 데 필요한 단계에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974963"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475270"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 
@@ -20,7 +21,7 @@ Windows 7 이상 버전의 Windows 운영 체제는 .NET Framework 1.1을 지원
 
 .NET Framework 1.1을 사용하여 컴파일된 애플리케이션을 가져와서 Windows 7 이상의 Windows 운영 체제에서 실행하는 방법에는 두 가지가 있습니다.
 
-- .NET Framework 4 이상 버전에서 실행되도록 애플리케이션 대상을 변경할 수 있습니다. 대상을 변경하려면 애플리케이션을 .NET Framework 4 이상 버전에서 실행하도록 허용하는 애플리케이션의 구성 파일에 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 추가해야 합니다. 이러한 구성 파일은 다음과 같은 형식을 사용합니다.
+- .NET Framework 4 이상 버전에서 실행되도록 애플리케이션 대상을 변경할 수 있습니다. 대상을 변경하려면 애플리케이션을 .NET Framework 4 이상 버전에서 실행하도록 허용하는 애플리케이션의 구성 파일에 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 추가해야 합니다. 이러한 구성 파일은 다음과 같은 형식을 사용합니다.
 
     ```xml
     <configuration>
@@ -42,7 +43,7 @@ Windows 7 이상 버전의 Windows 운영 체제는 .NET Framework 1.1을 지원
 
 ## <a name="breaking-changes"></a>호환성이 손상되는 변경
 
-주요 변경 사항이 발생하면 구체적인 변경 사항에 따라 대상이 변경되거나 다시 컴파일된 애플리케이션 모두에 대해 해결 방법을 사용할 수 있습니다. 이 경우 자식 요소를 애플리케이션의 구성 파일에 있는 [\<runtime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소에 추가하여 이전 동작을 복원할 수 있습니다. 예를 들어 다음 구성 파일에서는 .NET Framework 1.1에서 사용된 문자열 정렬 및 비교 동작을 복원하여 대상이 변경되거나 다시 컴파일된 애플리케이션에서 사용할 수 있습니다.
+주요 변경 사항이 발생하면 구체적인 변경 사항에 따라 대상이 변경되거나 다시 컴파일된 애플리케이션 모두에 대해 해결 방법을 사용할 수 있습니다. 이 경우 자식 요소를 애플리케이션의 구성 파일에 있는 [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소에 추가하여 이전 동작을 복원할 수 있습니다. 예를 들어 다음 구성 파일에서는 .NET Framework 1.1에서 사용된 문자열 정렬 및 비교 동작을 복원하여 대상이 변경되거나 다시 컴파일된 애플리케이션에서 사용할 수 있습니다.
 
 ```xml
 <configuration>

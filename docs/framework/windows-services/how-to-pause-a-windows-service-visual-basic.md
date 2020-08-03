@@ -1,5 +1,6 @@
 ---
 title: '방법: Windows 서비스 일시 중지(Visual Basic)'
+description: 'ServiceController 구성 요소를 사용하여 Visual Basic이 설치된 로컬 컴퓨터에서 Windows 서비스(예: IIS Admin Service)를 일시 중지하는 방법을 읽어보세요.'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 166eda4a9348188fa6e5048fd3ce41645cde4816
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 628cc2e896f7f8a289e52674b721c4aef605854c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053593"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925568"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>방법: Windows 서비스 일시 중지(Visual Basic)
 이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 일시 중지합니다.  

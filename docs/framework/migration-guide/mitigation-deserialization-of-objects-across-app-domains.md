@@ -1,15 +1,16 @@
 ---
 title: '완화: 응용 프로그램 도메인 간 개체의 deserialization'
+description: 여러 앱 도메인 간에 논리 호출 컨텍스트의 개체를 역직렬화하려고 시도하면 예외가 throw되는 문제를 진단하고 완화하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457931"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475244"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 응용 프로그램 도메인 간 개체의 deserialization
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 애플리케이션 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 애플리케이션을 기반으로 하여 두 개 이상의 애플리케이션 도메인을 사용하면 여러 애플리케이션 도메인 간에 논리 호출 컨텍스트의 개체를 역직렬화하려는 시도로 인해 예외가 throw됩니다.  
   
 ## <a name="diagnosing-the-issue"></a>문제 진단  
@@ -35,7 +36,7 @@ ms.locfileid: "73457931"
   
 6. 기본 응용 프로그램 도메인에서 논리 호출 컨텍스트에 있는 형식을 확인할 수 없으므로 예외가 throw됩니다.  
   
-## <a name="mitigation"></a>완화 방법  
+## <a name="mitigation"></a>완화  
  이 문제를 해결하려면 다음을 수행합니다.  
   
 1. 예외가 throw될 때 호출 스택에서 `get_Evidence`에 대한 호출을 찾습니다. 이 예외는 <xref:System.IO.FileNotFoundException> 및 <xref:System.Runtime.Serialization.SerializationException>을 포함한 예외의 큰 하위 집합 중 하나일 수 있습니다.  
@@ -46,6 +47,6 @@ ms.locfileid: "73457931"
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

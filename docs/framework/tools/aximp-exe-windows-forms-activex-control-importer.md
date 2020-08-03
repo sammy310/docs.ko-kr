@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
+description: Aximp.exe 즉, Windows Forms ActiveX 컨트롤 가져오기를 이해합니다. 이 도구는 ActiveX용 COM 형식 라이브러리의 형식 정의를 Windows Forms로 변환합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180423"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167349"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -34,7 +35,7 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>설명  
   
-|인수|설명|  
+|인수|Description|  
 |--------------|-----------------|  
 |*file*|변환할 ActiveX 컨트롤이 들어 있는 소스 파일의 이름입니다. file 인수의 확장명은 .dll 또는 .ocx이어야 합니다.|  
   
@@ -77,7 +78,7 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Ildasm.exe(IL 디스어셈블러)](ildasm-exe-il-disassembler.md)

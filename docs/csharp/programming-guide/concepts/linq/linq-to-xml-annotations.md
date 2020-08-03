@@ -1,13 +1,14 @@
 ---
-title: LINQ to XML 주석3
+title: LINQ to XML 주석
+description: LINQ to XML에서 주석을 사용하여 임의의 형식에 대한 임의의 개체를 XML 트리의 XML 구성 요소와 연결하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 5f1940be2fc126ff9e9c7a4cb37e5cc7fc95d3c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7da666139c10b26de37816693202d96498f52d8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66689950"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165569"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML 주석
 
@@ -21,7 +22,7 @@ ms.locfileid: "66689950"
 
 주석 작업을 할 때 다음 메서드를 사용할 수 있습니다.
 
-|메서드|설명|
+|메서드|Description|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|<xref:System.Xml.Linq.XObject>의 주석 목록에 개체를 추가합니다.|
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|지정된 형식의 첫 번째 주석 개체를 <xref:System.Xml.Linq.XObject>에서 가져옵니다.|

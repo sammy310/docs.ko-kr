@@ -4,12 +4,12 @@ description: 수집 가능한 AssemblyLoadContext를 사용하여 관리형 어�
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159743"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865348"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
 
@@ -30,7 +30,7 @@ ms.locfileid: "78159743"
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>수집 가능한 AssemblyLoadContext 만들기
 
-<xref:System.Runtime.Loader.AssemblyLoadContext>에서 클래스를 파생시키고 <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> 메서드를 오버로드해야 합니다. 이 메서드는 해당 `AssemblyLoadContext`에 로드된 어셈블리의 종속 항목인 모든 어셈블리의 참조를 확인합니다.
+<xref:System.Runtime.Loader.AssemblyLoadContext>에서 클래스를 파생시키고 <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> 메서드를 재정의해야 합니다. 이 메서드는 해당 `AssemblyLoadContext`에 로드된 어셈블리의 종속 항목인 모든 어셈블리의 참조를 확인합니다.
 
 다음 코드는 가장 간단한 사용자 지정 `AssemblyLoadContext`의 예입니다.
 

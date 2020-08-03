@@ -1,15 +1,16 @@
 ---
 title: 쿼리에서 요소 속성의 하위 집합을 반환하는 방법 - C# 프로그래밍 가이드
+description: C#에서 쿼리 표현식의 익명 형식을 사용하여 각 원본 요소의 속성 중 일부를 반환하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 882d94bc82527c14bd6c038f4bf574c2211b9089
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714864"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864373"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>쿼리에서 요소 속성의 하위 집합을 반환하는 방법(C# 프로그래밍 가이드)
 이러한 조건이 둘 다 적용되는 경우 쿼리 식에서 무명 형식을 사용합니다.  

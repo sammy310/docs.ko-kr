@@ -1,26 +1,27 @@
 ---
 title: '방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성'
+description: 포함된 예제를 통해 .NET Framework 4 이상을 지원하도록 데스크톱 앱을 구성하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-ms.openlocfilehash: 30fb1da8d758b0e8996b4fcdebbb7fbf545a46c1
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 58d71cb7fac7a3c2bef975c99cfab1ca730fb6eb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228753"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475465"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성
 
-CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서 관리 코드를 실행하기 위해서는 CLR을 시작하거나 *활성화*해야 합니다. 일반적으로 .NET Framework 애플리케이션은 빌드된 CLR 버전에서 실행되지만 애플리케이션 구성 파일(app.config 파일이라고도 함)을 사용하여 데스크톱 애플리케이션에 대해 이 동작을 변경할 수 있습니다. 그러나 애플리케이션 구성 파일을 사용하여 Windows 스토어 앱 또는 Windows Phone 앱에 대한 기본 활성화 동작을 변경할 수는 없습니다. 이 문서에서는 다른 버전의 .NET Framework에서 데스크톱 애플리케이션을 실행하도록 설정하는 방법을 설명하고 버전 4 이상을 대상으로 하는 방법에 대한 예제를 제공합니다.
+CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서 관리 코드를 실행하기 위해서는 CLR을 시작하거나 *활성화*해야 합니다. 일반적으로 .NET Framework 앱은 빌드된 CLR 버전에서 실행되지만 애플리케이션 구성 파일(app.config 파일이라고도 함)을 사용하여 데스크톱 앱에 대해 이 동작을 변경할 수 있습니다. 그러나 애플리케이션 구성 파일을 사용하여 Windows 스토어 앱 또는 Windows Phone 앱에 대한 기본 활성화 동작을 변경할 수는 없습니다. 이 문서에서는 다른 버전의 .NET Framework에서 데스크톱 애플리케이션을 실행하도록 설정하는 방법을 설명하고 버전 4 이상을 대상으로 하는 방법에 대한 예제를 제공합니다.
 
  응용 프로그램을 실행하는 .NET Framework의 버전은 다음 순서로 결정됩니다.
 
 - 구성 파일
 
-     애플리케이션 구성 파일에 사용자 컴퓨터에 있는 하나 이상의 .NET Framework 버전 및 이러한 버전 중 하나를 지정하는 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목이 포함되어 있는 경우, 애플리케이션은 해당 버전에서 실행됩니다. 구성 파일은 나열된 순서대로 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목을 읽고 사용자의 컴퓨터에 있는 목록의 첫 번째 .NET Framework 버전을 사용합니다. (버전 1.0용 [\<requiredRuntime> 요소](../configure-apps/file-schema/startup/requiredruntime-element.md) 사용)
+     애플리케이션 구성 파일에 사용자 컴퓨터에 있는 하나 이상의 .NET Framework 버전 및 이러한 버전 중 하나를 지정하는 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목이 포함되어 있는 경우, 애플리케이션은 해당 버전에서 실행됩니다. 구성 파일은 나열된 순서대로 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 항목을 읽고 사용자의 컴퓨터에 있는 목록의 첫 번째 .NET Framework 버전을 사용합니다. (버전 1.0에 [\<requiredRuntime> element](../configure-apps/file-schema/startup/requiredruntime-element.md)를 사용합니다.)
 
 - 컴파일 버전
 
@@ -28,7 +29,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
 - 설치된 최신 버전
 
-     응용 프로그램을 빌드한 .NET Framework 버전이 사용자 컴퓨터에 없고 구성 파일이 [\<supportedRuntime> element](../configure-apps/file-schema/startup/supportedruntime-element.md)의 버전을 지정하지 않으면 응용 프로그램은 사용자 컴퓨터에 있는 .NET Framework의 최신 버전에서 실행을 시도합니다.
+     애플리케이션을 빌드한 .NET Framework 버전이 사용자 컴퓨터에 없고 구성 파일이 [\<supportedRuntime> element](../configure-apps/file-schema/startup/supportedruntime-element.md)의 버전을 지정하지 않으면 응용 프로그램은 사용자 컴퓨터에 있는 .NET Framework의 최신 버전에서 실행을 시도합니다.
 
      그러나 .NET Framework 1.0, 1.1, 2.0, 3.0 및 3.5 응용 프로그램은 .NET Framework 4 이상에서 자동으로 실행되지 않으며 경우에 따라 오류가 발생할 수 있고 .NET Framework 3.5를 설치하라는 메시지가 나타날 수 있습니다. 또한 다른 버전의 Windows 시스템에는 다른 버전의 .NET Framework가 포함되어 있으므로, 활성화 동작은 사용자의 운영 체제에 따라서도 달라질 수 있습니다. 응용 프로그램이 .NET Framework 3.5 및 4 이상을 모두 지원하는 경우 .NET Framework 초기화 오류를 방지하도록 구성 파일에 여러 항목을 사용하여 이를 표시하는 것이 좋습니다. 자세한 내용은 [버전 및 종속성](versions-and-dependencies.md)을 참조하세요.
 
@@ -45,7 +46,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
 
      Visual Studio 메뉴 모음에 구성 파일을 추가하려면 **프로젝트**, **새 항목 추가**를 차례로 선택합니다. 왼쪽 창에서 **일반**을 선택한 다음 **구성 파일**을 선택합니다. 구성 파일 이름을 *appName*.exe.config로 지정합니다. 해당 플랫폼에서 활성화 정책이 변경될 수 없으므로 이러한 메뉴 선택은 Windows 스토어 앱 또는 Windows Phone 앱 프로젝트에서 사용할 수 없습니다.
 
-2. 다음과 같은 [\<supportedRuntime&gt;](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 애플리케이션 구성 파일에 추가합니다.
+2. 다음과 같은 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 애플리케이션 구성 파일에 추가합니다.
 
     ```xml
     <configuration>

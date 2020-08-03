@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447136"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165799"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -124,7 +124,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 이 정규화는 암시적으로 일어나지만 [GetFullPathName() 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 호출을 래핑하는 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 메서드를 호출하여 명시적으로 수행할 수도 있습니다. 또한 P/Invoke를 사용하여 Windows [GetFullPathName() 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)를 직접 호출할 수도 있습니다.
 
-### <a name="identifying-the-path"></a>경로 식별
+### <a name="identify-the-path"></a>경로 확인
 
 경로 정규화의 첫 번째 단계는 경로의 형식 식별입니다. 경로는 몇 가지 범주 중 하나에 속합니다.
 
@@ -138,13 +138,13 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 경로 형식은 현재 디렉터리가 일정한 방법으로 적용되는지 여부를 결정합니다. 경로의 "루트"가 무엇인지도 결정합니다.
 
-### <a name="handling-legacy-devices"></a>구형 디바이스 처리
+### <a name="handle-legacy-devices"></a>구형 디바이스 처리
 
 경로가 `CON`, `COM1` 또는 `LPT1` 같은 구형 DOS 디바이스인 경우 앞에 `\\.\`를 덧붙여 디바이스 경로로 변환한 다음, 반환합니다.
 
 구형 디바이스 이름으로 시작하는 경로는 언제나 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 메서드에 의해 구형 디바이스로 해석됩니다. 예를 들어 `CON.TXT`에 대한 DOS 디바이스 경로는 `\\.\CON`이며, `COM1.TXT\file1.txt`에 대한 DOS 디바이스 경로는 `\\.\COM1`입니다.
 
-### <a name="applying-the-current-directory"></a>현재 디렉터리 적용
+### <a name="apply-the-current-directory"></a>현재 디렉터리 적용
 
 경로가 정규화되지 않은 경우 Windows는 현재 디렉터리를 해당 경로에 적용합니다. UNC 및 디바이스 경로에는 현재 디렉터리가 적용되지 않습니다. 구분 기호 C:\\를 포함한 전체 드라이브에도 적용되지 않습니다.
 
@@ -157,11 +157,11 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 > [!IMPORTANT]
 > 현재 디렉터리는 프로세스에 따른 설정이므로 상대 경로는 멀티스레드 애플리케이션(즉, 대부분의 애플리케이션)에서 위험합니다. 스레드는 현재 디렉터리를 언제든지 변경할 수 있기 때문입니다. .NET Core 2.1부터 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 메서드를 호출하여 상대 경로 및 기본 경로(현재 디렉터리)에서 확인하려는 기준이 되는 절대 경로를 가져올 수 있습니다.
 
-### <a name="canonicalizing-separators"></a>구분 기호 정규화
+### <a name="canonicalize-separators"></a>구분 기호 정규화
 
 모든 슬래시(`/`)는 표준 Windows 구분 기호인 백슬래시(`\`)로 변환됩니다. 슬래시가 존재하는 경우 첫 번째 슬래시 다음에 오는 일련의 슬래시를 단일 슬래시로 축소합니다.
 
-### <a name="evaluating-relative-components"></a>상대 구성 요소 평가
+### <a name="evaluate-relative-components"></a>상대 구성 요소 평가
 
 경로가 처리될 때 단일 또는 이중 마침표(`.` 또는 `..`)로 구성된 구성 요소 또는 세그먼트를 평가합니다.
 
@@ -171,7 +171,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
    부모 디렉터리는 경로의 루트를 지나가지 않는 경우에만 제거합니다. 경로의 루트는 경로의 형식에 따라 달라집니다. 즉, DOS 경로의 경우 드라이브(`C:\`)이고, UNC(`\\Server\Share`) 경로의 경우 서버/공유이며, 디바이스 경로(`\\?\` 또는 `\\.\`)의 경우 디바이스 경로 접두사입니다.
 
-### <a name="trimming-characters"></a>문자 잘라내기
+### <a name="trim-characters"></a>문자 자르기
 
 앞에서 제거한 일련의 구분 기호 및 상대 세그먼트와 함께 일부 추가 문자를 정규화 중에 제거합니다.
 
@@ -184,7 +184,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
    > [!IMPORTANT]
    > 후행 공백을 사용하여 디렉터리 또는 파일 이름을 만들지 **말아야** 합니다. 후행 공백은 디렉터리 액세스를 어렵게 또는 불가능하게 만들 수 있으며, 해당 이름이 후행 공백을 포함하는 디렉터리 또는 파일의 처리를 시도할 때 흔히 애플리케이션이 실패합니다.
 
-## <a name="skipping-normalization"></a>정규화 건너뛰기
+## <a name="skip-normalization"></a>건너뛰기 정규화
 
 일반적으로 Windows API에 전달되는 경로는 (결과적으로) [GetFullPathName 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달되고 정규화됩니다. 여기에 중요한 한 가지 예외가 있는데, 바로 마침표 대신에 물음표로 시작하는 디바이스 경로입니다. 경로는 `\\?\`로 시작하지 않는 한(canonical 백슬래시 사용에 주의) 정규화됩니다.
 
@@ -222,4 +222,4 @@ TeStDiReCtOrY라는 디렉터리를 생성합니다. 해당 대/소문자를 변
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-그러나 디렉터리 및 파일 이름 비교는 대/소문자를 구분하지 않습니다. "test.txt"라는 파일을 검색하는 경우, .NET 파일 시스템 API는 비교 시 대/소문자를 무시합니다. Test.txt, TEST.TXT, test.TXT 및 다른 어떤 대/소문자 조합도 "test.txt"와 일치합니다.
+그러나 디렉터리 및 파일 이름 비교는 대/소문자를 구분하지 않습니다. "test.txt"라는 파일을 검색하는 경우, .NET 파일 시스템 API는 비교 시 대/소문자를 무시합니다. "Test.txt", "TEST.TXT", "test.TXT" 및 다른 어떤 대/소문자 조합도 "test.txt"와 일치합니다.

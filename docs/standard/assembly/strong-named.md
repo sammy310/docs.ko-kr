@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378605"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925659"
 ---
 # <a name="strong-named-assemblies"></a>강력한 이름의 어셈블리
 
@@ -30,9 +30,7 @@ Visual Studio나 명령줄 도구를 사용하여 강력한 이름의 어셈블�
 
 ## <a name="why-strong-name-your-assemblies"></a>강력한 이름의 어셈블리를 사용해야 하는 이유는?
 
-강력한 이름의 어셈블리를 참조하면 버전 관리나 이름 보호와 같은 이점이 있습니다. .NET Framework에서 강력한 이름의 어셈블리는 일부 시나리오를 수행하는 데 필요한 전역 어셈블리 캐시에 설치할 수 있습니다.
-
-강력한 이름의 어셈블리는 다음과 같은 시나리오에 유용합니다.
+.NET Framework의 경우 강력한 이름의 어셈블리는 다음과 같은 시나리오에 유용합니다.
 
 - 강력한 이름의 어셈블리가 어셈블리를 참조할 수 있도록 설정하거나 다른 강력한 이름의 어셈블리에서 어셈블리에 대해 `friend` 액세스 권한을 제공하려는 경우
 
@@ -42,7 +40,9 @@ Visual Studio나 명령줄 도구를 사용하여 강력한 이름의 어셈블�
 
 - 게시자 정책을 적용하여 앱 서비스를 한 위치에서 제공하려면 어셈블리를 전역 어셈블리 캐시에 설치해야 합니다.
 
-강력한 이름의 어셈블리가 제공하는 ID 이점을 원하는 오픈 소스 개발자의 경우 어셈블리와 연관된 프라이빗 키를 소스 제어 시스템에 체크 인할 수 있습니다.
+.NET Core의 경우 강력한 이름의 어셈블리는 자료의 이점을 제공하지 않습니다.
+
+.NET Framework와의 호환성을 높이기 위해 강력한 이름의 어셈블리가 제공하는 ID 이점을 원하는 오픈 소스 개발자의 경우 어셈블리와 연관된 프라이빗 키를 소스 제어 시스템에 체크 인할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 

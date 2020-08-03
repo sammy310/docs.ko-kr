@@ -1,13 +1,14 @@
 ---
 title: 요소 컬렉션을 검색하는 방법(LINQ to XML)(C#)
+description: C#의 Elements 메서드는 요소의 자식 요소 컬렉션을 검색합니다. 이 LINQ to XML 예제에서는 요소의 자식 요소를 반복합니다.
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f9b6ae4713af9ce1a4eeb5257f57cd9724f68b2
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345015"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103357"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>요소 컬렉션을 검색하는 방법(LINQ to XML)(C#)
 이 항목에서는 <xref:System.Xml.Linq.XContainer.Elements%2A> 메서드를 보여 줍니다. 이 메서드는 요소의 자식 요소 컬렉션을 검색합니다.  
@@ -15,7 +16,7 @@ ms.locfileid: "75345015"
 ## <a name="example"></a>예제  
  이 예제에서는 `purchaseOrder` 요소의 자식 요소를 반복합니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)에서 설명하는 것과 같은 일반적인 XML 구매 주문이 있을 수 있습니다.  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  

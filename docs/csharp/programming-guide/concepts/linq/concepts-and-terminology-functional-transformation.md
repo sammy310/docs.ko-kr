@@ -1,13 +1,14 @@
 ---
 title: 개념과 용어(함수 변환)(C#)
+description: 함수형 프로그래밍 기능을 사용하면 XML을 쉽게 변환할 수 있습니다. C#에서의 순수 함수 변환의 개념과 용어에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70040638"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103975"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>개념과 용어(함수 변환)(C#)
 

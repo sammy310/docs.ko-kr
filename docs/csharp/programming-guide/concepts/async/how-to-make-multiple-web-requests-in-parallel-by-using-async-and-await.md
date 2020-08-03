@@ -1,13 +1,14 @@
 ---
 title: async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
+description: 작업이 생성될 때 작업을 적용하는 대신 C#에서 await 연산자 사용과 작업 생성을 구분하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241801"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925165"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. 작업이 완료될 때까지 처리를 계속할 수 없는 메서드 지점의 작업에 [await](../../../language-reference/operators/await.md) 연산자가 적용됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  

@@ -1,16 +1,17 @@
 ---
 title: 액세스 한정자 - C# 프로그래밍 가이드
+description: C#의 모든 형식과 형식 멤버에는 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다. 이 액세스 한정자 목록을 검토합니다.
 ms.date: 03/08/2020
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 749d53344a2518966cfa5d937069ba73dfd6be8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 557f5d9f302b08d32896b462e86ce1d96710ff36
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628230"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474529"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 
