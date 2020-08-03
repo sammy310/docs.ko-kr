@@ -4,12 +4,12 @@ description: .NET Core를 설치할 수 있는 macOS 버전에 대해 알아봅�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308925"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302934"
 ---
 # <a name="install-net-core-on-macos"></a>macOS에 .NET Core 설치
 
@@ -200,7 +200,7 @@ Docker 컨테이너에서 .NET Core를 사용하는 방법에 대한 자세한 �
 
 - [.NET Core가 설치되어 있는지 확인하는 방법](how-to-detect-installed-versions.md?pivots=os-macos)
 - [macOS Catalina 공증 관련 사항](macos-notarization-issues.md)
-- [자습서: macOS에서 시작](../tutorials/using-on-mac-vs.md)
+- [자습서: macOS에서 시작](../tutorials/with-visual-studio-mac.md)
 - [자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)
 - [자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)
 

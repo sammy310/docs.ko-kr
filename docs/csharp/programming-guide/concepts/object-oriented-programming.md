@@ -1,13 +1,14 @@
 ---
 title: 개체 지향 프로그래밍(C#)
+description: C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 0c5495aefad73a2916ad6e2bd2bf3701d0868f24
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302817"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -20,7 +21,7 @@ C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍�
 
 ## <a name="classes-and-objects"></a>클래스 및 개체
 
-‘클래스’와 ‘개체’라는 용어는 각각 개체의 ‘형식’과 클래스의 ‘인스턴스’를 의미합니다.    따라서 개체를 만드는 작업을 *인스턴스화*라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
+‘클래스’와 ‘개체’라는 용어는 각각 개체의 ‘형식’과 클래스의 ‘인스턴스’를 의미합니다. 따라서 개체를 만드는 작업을 *인스턴스화*라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
 
 클래스를 정의하려면
 
