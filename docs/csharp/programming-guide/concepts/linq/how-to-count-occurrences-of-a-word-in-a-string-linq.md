@@ -1,18 +1,19 @@
 ---
 title: 문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)(C#)
+description: 이 예제에서는 C#에서 LINQ 쿼리를 사용하여 문자열에서 지정된 단어의 발생 수를 계산합니다. Split 메서드를 사용하여 단어의 배열을 만듭니다.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103370"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="98953-102">문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="98953-102">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
-<span data-ttu-id="98953-103">이 예제에서는 LINQ 쿼리를 사용하여 문자열에서 지정된 단어의 발생 수를 계산하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="98953-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="98953-104">계산을 수행하려면 먼저 <xref:System.String.Split%2A> 메서드를 호출하여 단어 배열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="98953-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="98953-105"><xref:System.String.Split%2A> 메서드를 사용하는 경우 성능이 저하됩니다.</span><span class="sxs-lookup"><span data-stu-id="98953-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="98953-106">문자열의 유일한 작업이 단어 개수 계산인 경우 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 또는 <xref:System.String.IndexOf%2A> 메서드를 대신 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="98953-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="98953-107">그러나 성능이 중요한 문제가 아니거나 다른 유형의 쿼리를 수행하기 위해 이미 문장을 분할한 경우 LINQ를 사용하여 단어 또는 구도 계산하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="98953-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="679e9-104">문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="679e9-104">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
+<span data-ttu-id="679e9-105">이 예제에서는 LINQ 쿼리를 사용하여 문자열에서 지정된 단어의 발생 수를 계산하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-105">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="679e9-106">계산을 수행하려면 먼저 <xref:System.String.Split%2A> 메서드를 호출하여 단어 배열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-106">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="679e9-107"><xref:System.String.Split%2A> 메서드를 사용하는 경우 성능이 저하됩니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-107">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="679e9-108">문자열의 유일한 작업이 단어 개수 계산인 경우 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 또는 <xref:System.String.IndexOf%2A> 메서드를 대신 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-108">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="679e9-109">그러나 성능이 중요한 문제가 아니거나 다른 유형의 쿼리를 수행하기 위해 이미 문장을 분할한 경우 LINQ를 사용하여 단어 또는 구도 계산하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-109">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98953-108">예제</span><span class="sxs-lookup"><span data-stu-id="98953-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="679e9-110">예제</span><span class="sxs-lookup"><span data-stu-id="679e9-110">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -54,9 +55,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="98953-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="98953-109">Compiling the Code</span></span>  
- <span data-ttu-id="98953-110">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="98953-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="679e9-111">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="679e9-111">Compiling the Code</span></span>  
+ <span data-ttu-id="679e9-112">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="679e9-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98953-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="98953-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="679e9-113">참조</span><span class="sxs-lookup"><span data-stu-id="679e9-113">See also</span></span>
 
-- [<span data-ttu-id="98953-112">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="98953-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="679e9-114">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="679e9-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

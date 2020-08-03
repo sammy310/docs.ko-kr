@@ -1,21 +1,22 @@
 ---
 title: Func 및 Action 제네릭 대리자에 가변성 사용(C#)
+description: 코드의 유연성을 높이기 위해 Func 및 Action 제네릭 대리자에 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7174b0f734d10ab69d0936cb5ca4aa2f4fafdf7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169794"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105708"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-c"></a><span data-ttu-id="e977d-102">Func 및 Action 제네릭 대리자에 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="e977d-102">Using Variance for Func and Action Generic Delegates (C#)</span></span>
-<span data-ttu-id="e977d-103">이러한 예제는 메서드를 다시 사용하고 코드의 유연성을 높이기 위해 `Func` 및 `Action` 제네릭 대리자에서 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
+# <a name="using-variance-for-func-and-action-generic-delegates-c"></a><span data-ttu-id="3dee6-103">Func 및 Action 제네릭 대리자에 가변성 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="3dee6-103">Using Variance for Func and Action Generic Delegates (C#)</span></span>
+<span data-ttu-id="3dee6-104">이러한 예제는 메서드를 다시 사용하고 코드의 유연성을 높이기 위해 `Func` 및 `Action` 제네릭 대리자에서 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-104">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>  
   
- <span data-ttu-id="e977d-104">공변성(covariance) 및 반공변성(contravariance)에 대한 자세한 내용은 [대리자에서의 분산(C#)](./variance-in-delegates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e977d-104">For more information about covariance and contravariance, see [Variance in Delegates (C#)](./variance-in-delegates.md).</span></span>  
+ <span data-ttu-id="3dee6-105">공변성(covariance) 및 반공변성(contravariance)에 대한 자세한 내용은 [대리자에서의 분산(C#)](./variance-in-delegates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3dee6-105">For more information about covariance and contravariance, see [Variance in Delegates (C#)](./variance-in-delegates.md).</span></span>  
   
-## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="e977d-105">공변 형식 매개 변수가 있는 대리자 사용</span><span class="sxs-lookup"><span data-stu-id="e977d-105">Using Delegates with Covariant Type Parameters</span></span>  
- <span data-ttu-id="e977d-106">다음 예제는 `Func` 대리자에서 공변성(covariance) 지원의 이점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="e977d-107">`FindByTitle` 메서드는 `String` 형식의 매개 변수를 가져오고 `Employee` 형식의 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="e977d-108">그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Func<String, Person>` 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-108">However, you can assign this method to the `Func<String, Person>` delegate because `Employee` inherits `Person`.</span></span>  
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="3dee6-106">공변 형식 매개 변수가 있는 대리자 사용</span><span class="sxs-lookup"><span data-stu-id="3dee6-106">Using Delegates with Covariant Type Parameters</span></span>  
+ <span data-ttu-id="3dee6-107">다음 예제는 `Func` 대리자에서 공변성(covariance) 지원의 이점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-107">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="3dee6-108">`FindByTitle` 메서드는 `String` 형식의 매개 변수를 가져오고 `Employee` 형식의 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-108">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="3dee6-109">그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Func<String, Person>` 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-109">However, you can assign this method to the `Func<String, Person>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -48,8 +49,8 @@ class Program
 }  
 ```  
   
-## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="e977d-109">반공변 형식 매개 변수가 있는 대리자 사용</span><span class="sxs-lookup"><span data-stu-id="e977d-109">Using Delegates with Contravariant Type Parameters</span></span>  
- <span data-ttu-id="e977d-110">다음 예제에서는 제네릭 `Action` 대리자에서 반공변성(contravariance) 지원의 이점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="e977d-111">`AddToContacts` 메서드는 `Person` 형식의 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="e977d-112">그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Action<Employee>` 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e977d-112">However, you can assign this method to the `Action<Employee>` delegate because `Employee` inherits `Person`.</span></span>  
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="3dee6-110">반공변 형식 매개 변수가 있는 대리자 사용</span><span class="sxs-lookup"><span data-stu-id="3dee6-110">Using Delegates with Contravariant Type Parameters</span></span>  
+ <span data-ttu-id="3dee6-111">다음 예제에서는 제네릭 `Action` 대리자에서 반공변성(contravariance) 지원의 이점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-111">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="3dee6-112">`AddToContacts` 메서드는 `Person` 형식의 매개 변수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-112">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="3dee6-113">그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Action<Employee>` 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3dee6-113">However, you can assign this method to the `Action<Employee>` delegate because `Employee` inherits `Person`.</span></span>  
   
 ```csharp  
 public class Person { }  
@@ -81,7 +82,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e977d-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e977d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dee6-114">참조</span><span class="sxs-lookup"><span data-stu-id="3dee6-114">See also</span></span>
 
-- [<span data-ttu-id="e977d-114">공변성(Covariance) 및 반공변성(Contravariance)(C#)</span><span class="sxs-lookup"><span data-stu-id="e977d-114">Covariance and Contravariance (C#)</span></span>](./index.md)
-- [<span data-ttu-id="e977d-115">제네릭</span><span class="sxs-lookup"><span data-stu-id="e977d-115">Generics</span></span>](../../../../standard/generics/index.md)
+- [<span data-ttu-id="3dee6-115">공변성(Covariance) 및 반공변성(Contravariance)(C#)</span><span class="sxs-lookup"><span data-stu-id="3dee6-115">Covariance and Contravariance (C#)</span></span>](./index.md)
+- [<span data-ttu-id="3dee6-116">제네릭</span><span class="sxs-lookup"><span data-stu-id="3dee6-116">Generics</span></span>](../../../../standard/generics/index.md)

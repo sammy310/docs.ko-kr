@@ -1,21 +1,22 @@
 ---
 title: CSV 파일에서 XML을 생성하는 방법(C#)
+description: C#의 LINQ 및 LINQ to XML을 사용하여 .csv 파일에서 XML을 생성하는 방법에 대해 알아봅니다. 이 쿼리에서는 let 절을 사용하여 문자열을 필드 배열로 분할합니다.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635810"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105174"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="3f8e9-102">CSV 파일에서 XML을 생성하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="3f8e9-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="3f8e9-103">이 예제에서는 LINQ(Language-Integrated Query) 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3f8e9-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="91bd2-104">CSV 파일에서 XML을 생성하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="91bd2-104">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="91bd2-105">이 예제에서는 LINQ(Language-Integrated Query) 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="91bd2-105">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3f8e9-104">예제</span><span class="sxs-lookup"><span data-stu-id="3f8e9-104">Example</span></span>  
- <span data-ttu-id="3f8e9-105">다음 코드에서는 문자열 배열에 대해 LINQ 쿼리를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3f8e9-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="91bd2-106">예제</span><span class="sxs-lookup"><span data-stu-id="91bd2-106">Example</span></span>  
+ <span data-ttu-id="91bd2-107">다음 코드에서는 문자열 배열에 대해 LINQ 쿼리를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="91bd2-107">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="3f8e9-106">쿼리에서 `let` 절을 사용하여 각 문자열을 필드 배열로 분할합니다.</span><span class="sxs-lookup"><span data-stu-id="3f8e9-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="91bd2-108">쿼리에서 `let` 절을 사용하여 각 문자열을 필드 배열로 분할합니다.</span><span class="sxs-lookup"><span data-stu-id="91bd2-108">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +49,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="3f8e9-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3f8e9-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="91bd2-109">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="91bd2-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

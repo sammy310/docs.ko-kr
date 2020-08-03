@@ -1,38 +1,39 @@
 ---
 title: 요소, 특성 및 노드를 XML 트리에 추가(C#)
+description: 요소, 특성, 주석, 처리 명령 및 텍스트와 같은 내용을 기존 XML 트리에 추가하는 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169577"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105558"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a><span data-ttu-id="3e967-102">요소, 특성 및 노드를 XML 트리에 추가(C#)</span><span class="sxs-lookup"><span data-stu-id="3e967-102">Adding Elements, Attributes, and Nodes to an XML Tree (C#)</span></span>
-<span data-ttu-id="3e967-103">내용(요소, 특성, 주석, 처리 명령, 텍스트 및 CDATA)을 기존 XML 트리에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a><span data-ttu-id="4045d-103">요소, 특성 및 노드를 XML 트리에 추가(C#)</span><span class="sxs-lookup"><span data-stu-id="4045d-103">Adding Elements, Attributes, and Nodes to an XML Tree (C#)</span></span>
+<span data-ttu-id="4045d-104">내용(요소, 특성, 주석, 처리 명령, 텍스트 및 CDATA)을 기존 XML 트리에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-104">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
   
-## <a name="methods-for-adding-content"></a><span data-ttu-id="3e967-104">내용을 추가하는 메서드</span><span class="sxs-lookup"><span data-stu-id="3e967-104">Methods for Adding Content</span></span>  
- <span data-ttu-id="3e967-105">다음 메서드는 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
+## <a name="methods-for-adding-content"></a><span data-ttu-id="4045d-105">내용을 추가하는 메서드</span><span class="sxs-lookup"><span data-stu-id="4045d-105">Methods for Adding Content</span></span>  
+ <span data-ttu-id="4045d-106">다음 메서드는 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-106">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|<span data-ttu-id="3e967-106">메서드</span><span class="sxs-lookup"><span data-stu-id="3e967-106">Method</span></span>|<span data-ttu-id="3e967-107">설명</span><span class="sxs-lookup"><span data-stu-id="3e967-107">Description</span></span>|  
+|<span data-ttu-id="4045d-107">메서드</span><span class="sxs-lookup"><span data-stu-id="4045d-107">Method</span></span>|<span data-ttu-id="4045d-108">Description</span><span class="sxs-lookup"><span data-stu-id="4045d-108">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="3e967-108"><xref:System.Xml.Linq.XContainer>의 자식 내용 끝 부분에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="3e967-109"><xref:System.Xml.Linq.XContainer>의 자식 내용 시작 부분에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="4045d-109"><xref:System.Xml.Linq.XContainer>의 자식 내용 끝 부분에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-109">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="4045d-110"><xref:System.Xml.Linq.XContainer>의 자식 내용 시작 부분에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-110">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
   
- <span data-ttu-id="3e967-110">다음 메서드는 <xref:System.Xml.Linq.XNode>의 형제 노드로 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="3e967-111">유효한 형제 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XText>와 같은 다른 형식의 노드에 추가할 수 있지만, 형제 내용을 추가할 가장 일반적인 노드는 <xref:System.Xml.Linq.XComment>입니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
+ <span data-ttu-id="4045d-111">다음 메서드는 <xref:System.Xml.Linq.XNode>의 형제 노드로 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-111">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="4045d-112">유효한 형제 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XText>와 같은 다른 형식의 노드에 추가할 수 있지만, 형제 내용을 추가할 가장 일반적인 노드는 <xref:System.Xml.Linq.XComment>입니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-112">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
   
-|<span data-ttu-id="3e967-112">메서드</span><span class="sxs-lookup"><span data-stu-id="3e967-112">Method</span></span>|<span data-ttu-id="3e967-113">설명</span><span class="sxs-lookup"><span data-stu-id="3e967-113">Description</span></span>|  
+|<span data-ttu-id="4045d-113">메서드</span><span class="sxs-lookup"><span data-stu-id="4045d-113">Method</span></span>|<span data-ttu-id="4045d-114">Description</span><span class="sxs-lookup"><span data-stu-id="4045d-114">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="3e967-114"><xref:System.Xml.Linq.XNode> 뒤에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="3e967-115"><xref:System.Xml.Linq.XNode> 앞에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="4045d-115"><xref:System.Xml.Linq.XNode> 뒤에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-115">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="4045d-116"><xref:System.Xml.Linq.XNode> 앞에 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-116">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3e967-116">예제</span><span class="sxs-lookup"><span data-stu-id="3e967-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4045d-117">예제</span><span class="sxs-lookup"><span data-stu-id="4045d-117">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="3e967-117">설명</span><span class="sxs-lookup"><span data-stu-id="3e967-117">Description</span></span>  
- <span data-ttu-id="3e967-118">다음 예제에서는 두 가지 XML 트리를 만든 다음 두 트리 중 하나를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
+### <a name="description"></a><span data-ttu-id="4045d-118">설명</span><span class="sxs-lookup"><span data-stu-id="4045d-118">Description</span></span>  
+ <span data-ttu-id="4045d-119">다음 예제에서는 두 가지 XML 트리를 만든 다음 두 트리 중 하나를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-119">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="3e967-119">코드</span><span class="sxs-lookup"><span data-stu-id="3e967-119">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="4045d-120">코드</span><span class="sxs-lookup"><span data-stu-id="4045d-120">Code</span></span>  
   
 ```csharp  
 XElement srcTree = new XElement("Root",
@@ -61,8 +62,8 @@ xmlTree.Add(srcTree.Element("Child9"));
 Console.WriteLine(xmlTree);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="3e967-120">설명</span><span class="sxs-lookup"><span data-stu-id="3e967-120">Comments</span></span>  
- <span data-ttu-id="3e967-121">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3e967-121">This code produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="4045d-121">주석</span><span class="sxs-lookup"><span data-stu-id="4045d-121">Comments</span></span>  
+ <span data-ttu-id="4045d-122">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4045d-122">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

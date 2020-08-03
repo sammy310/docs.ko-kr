@@ -1,23 +1,24 @@
 ---
 title: Office Open XML 문서를 수정하는 방법(C#)
+description: Office Open XML 문서를 열고, 수정하고, 저장하는 방법에 대해 알아봅니다. 이 C# 예제에서는 WindowsBase 어셈블리에 있는 클래스를 사용합니다.
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1155851696a0a6ed651c5f84290a3879e73276db
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345853"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104830"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="fab06-102">Office Open XML 문서를 수정하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="fab06-102">How to modify an Office Open XML document (C#)</span></span>
-<span data-ttu-id="fab06-103">이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="393f9-104">Office Open XML 문서를 수정하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="393f9-104">How to modify an Office Open XML document (C#)</span></span>
+<span data-ttu-id="393f9-105">이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-105">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="fab06-104">Office Open XML에 대한 자세한 내용은 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 및 [www.ericwhite.com](http://ericwhite.com/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fab06-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
+ <span data-ttu-id="393f9-106">Office Open XML에 대한 자세한 내용은 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 및 [www.ericwhite.com](http://ericwhite.com/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="393f9-106">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fab06-105">예제</span><span class="sxs-lookup"><span data-stu-id="fab06-105">Example</span></span>  
- <span data-ttu-id="fab06-106">이 예제에서는 문서의 첫 번째 단락 요소를 찾고</span><span class="sxs-lookup"><span data-stu-id="fab06-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="fab06-107">단락에서 텍스트를 검색한 다음 단락의 모든 텍스트 실행을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="fab06-108">또한 대문자로 변환된 첫 번째 단락 텍스트로 구성된 새로운 텍스트 실행을 만들고</span><span class="sxs-lookup"><span data-stu-id="fab06-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="fab06-109">변경된 XML을 Open XML 패키지로 serialize한 후 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="393f9-107">예제</span><span class="sxs-lookup"><span data-stu-id="393f9-107">Example</span></span>  
+ <span data-ttu-id="393f9-108">이 예제에서는 문서의 첫 번째 단락 요소를 찾고</span><span class="sxs-lookup"><span data-stu-id="393f9-108">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="393f9-109">단락에서 텍스트를 검색한 다음 단락의 모든 텍스트 실행을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-109">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="393f9-110">또한 대문자로 변환된 첫 번째 단락 텍스트로 구성된 새로운 텍스트 실행을 만들고</span><span class="sxs-lookup"><span data-stu-id="393f9-110">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="393f9-111">변경된 XML을 Open XML 패키지로 serialize한 후 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-111">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="fab06-110">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="fab06-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="fab06-111"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="393f9-112">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="393f9-112">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="393f9-113"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-113">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -139,9 +140,9 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="fab06-112">이 프로그램을 실행한 후 `SampleDoc.docx`를 열면 이 프로그램에서 해당 문서의 첫 번째 단락을 대문자로 변환한 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="393f9-114">이 프로그램을 실행한 후 `SampleDoc.docx`를 열면 이 프로그램에서 해당 문서의 첫 번째 단락을 대문자로 변환한 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-114">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="fab06-113">[원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fab06-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="393f9-115">[원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="393f9-115">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```output  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

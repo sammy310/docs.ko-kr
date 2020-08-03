@@ -1,28 +1,29 @@
 ---
 title: 트리의 모든 노드를 나열하는 방법(C#)
+description: C#의 LINQ to XML을 사용하는 XPath 식을 실행하여 트리의 모든 노드를 나열하는 방법에 대해 알아봅니다. 메서드나 속성이 트리에 미치는 영향을 확인할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345875"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104965"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="d5f4e-102">트리의 모든 노드를 나열하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="d5f4e-102">How to list all nodes in a tree (C#)</span></span>
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a><span data-ttu-id="fe923-104">트리의 모든 노드를 나열하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="fe923-104">How to list all nodes in a tree (C#)</span></span>
 
-<span data-ttu-id="d5f4e-103">경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="d5f4e-104">이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="d5f4e-105">텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
+<span data-ttu-id="fe923-105">경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-105">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="fe923-106">이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-106">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="fe923-107">텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-107">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>
 
-<span data-ttu-id="d5f4e-106">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 XPath 식을 실행하는 것은 특히 유용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="d5f4e-107">XPath 식은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리보다 성능이 낮으며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리가 훨씬 더 강력합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="d5f4e-108">그러나 XML 트리의 노드를 식별하는 방법으로 XPath는 효과적으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
+<span data-ttu-id="fe923-108">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 XPath 식을 실행하는 것은 특히 유용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-108">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="fe923-109">XPath 식은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리보다 성능이 낮으며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리가 훨씬 더 강력합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-109">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="fe923-110">그러나 XML 트리의 노드를 식별하는 방법으로 XPath는 효과적으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-110">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d5f4e-109">예제</span><span class="sxs-lookup"><span data-stu-id="d5f4e-109">Example</span></span>
- <span data-ttu-id="d5f4e-110">이 예제에서는 XML 트리의 노드에 대한 특정 XPath 식을 생성하는 `GetXPath`라는 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-110">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="d5f4e-111">이 함수는 노드가 네임스페이스에 있는 경우에도 적절한 XPath 식을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="d5f4e-112">XPath 식은 네임스페이스 접두사를 사용하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-112">The XPath expressions are generated by using namespace prefixes.</span></span>
+## <a name="example"></a><span data-ttu-id="fe923-111">예제</span><span class="sxs-lookup"><span data-stu-id="fe923-111">Example</span></span>
+ <span data-ttu-id="fe923-112">이 예제에서는 XML 트리의 노드에 대한 특정 XPath 식을 생성하는 `GetXPath`라는 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-112">This example shows a function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="fe923-113">이 함수는 노드가 네임스페이스에 있는 경우에도 적절한 XPath 식을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-113">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="fe923-114">XPath 식은 네임스페이스 접두사를 사용하여 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-114">The XPath expressions are generated by using namespace prefixes.</span></span>
 
- <span data-ttu-id="d5f4e-113">그런 다음 이 예제에서는 몇 가지 형식의 노드 예가 포함된 작은 XML 트리를 만든 후</span><span class="sxs-lookup"><span data-stu-id="d5f4e-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="d5f4e-114">하위 노드를 반복하고 각 노드에 대한 XPath 식을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
+ <span data-ttu-id="fe923-115">그런 다음 이 예제에서는 몇 가지 형식의 노드 예가 포함된 작은 XML 트리를 만든 후</span><span class="sxs-lookup"><span data-stu-id="fe923-115">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="fe923-116">하위 노드를 반복하고 각 노드에 대한 XPath 식을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-116">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>
 
- <span data-ttu-id="d5f4e-115">XML 선언은 트리의 노드가 아닌 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-115">You will notice that the XML declaration is not a node in the tree.</span></span>
+ <span data-ttu-id="fe923-117">XML 선언은 트리의 노드가 아닌 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-117">You will notice that the XML declaration is not a node in the tree.</span></span>
 
- <span data-ttu-id="d5f4e-116">몇 가지 형식의 노드가 포함된 XML 파일은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-116">The following is an XML file that contains several types of nodes:</span></span>
+ <span data-ttu-id="fe923-118">몇 가지 형식의 노드가 포함된 XML 파일은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-118">The following is an XML file that contains several types of nodes:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -38,7 +39,7 @@ ms.locfileid: "75345875"
 </Root>
 ```
 
- <span data-ttu-id="d5f4e-117">XPath 식으로 표현된, XML 트리 위의 노드 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
+ <span data-ttu-id="fe923-119">XPath 식으로 표현된, XML 트리 위의 노드 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-119">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>
 
 ```text
 /processing-instruction()
@@ -316,7 +317,7 @@ class Program
 }
 ```
 
- <span data-ttu-id="d5f4e-118">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d5f4e-118">This example produces the following output:</span></span>
+ <span data-ttu-id="fe923-120">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fe923-120">This example produces the following output:</span></span>
 
 ```output
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
