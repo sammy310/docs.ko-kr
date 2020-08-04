@@ -1,16 +1,17 @@
 ---
 title: 네임스페이스 - C# 프로그래밍 가이드
+description: C# 프로그래밍에서 네임스페이스에 대해 알아봅니다. 네임스페이스 속성의 개요를 확인하고 추가 리소스를 봅니다.
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fca2c641520bd9cd19a48bff2119a6f09c3713ea
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75937610"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382102"
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 

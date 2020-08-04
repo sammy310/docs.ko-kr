@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 76a9b1efb46af976e59e5f16d3180891ec54ecee
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 96bb97690f8954cce2cc75cad921e21985972798
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507405"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301777"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
 
@@ -45,7 +45,7 @@ Console.WriteLine(a); //  output: 8
 | [x.y](member-access-operators.md#member-access-expression-), [f(x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [`x?.y`](member-access-operators.md#null-conditional-operators--and-), [`x?[y]`](member-access-operators.md#null-conditional-operators--and-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [x!](null-forgiving.md), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | 주 |
 | [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^x](member-access-operators.md#index-from-end-operator-), [(T)x](type-testing-and-cast.md#cast-expression), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x](pointer-related-operators.md#pointer-indirection-operator-), [true 및 false](true-false-operators.md) | 단항 |
 | [x..y](member-access-operators.md#range-operator-) | 범위 |
-| [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch` 식 |
+| [switch](switch-expression.md) | `switch` 식 |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | 곱하기|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | 더하기 |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
@@ -64,8 +64,8 @@ Console.WriteLine(a); //  output: 8
 
 연산자의 우선 순위가 같은 경우 연산자의 결합성이 연산이 수행되는 순서를 결정합니다.
 
-- ‘왼쪽 결합성이 있는’ 연산자는 왼쪽에서 오른쪽으로 계산됩니다.  [대입 연산자](assignment-operator.md) 및 [null 병합 연산자 ](null-coalescing-operator.md)를 제외하고, 모든 이진 연산자는 왼쪽 결합성이 있습니다. 예를 들어, `a + b - c`는 `(a + b) - c`로 계산됩니다.
-- ‘오른쪽 결합성이 있는’ 연산자는 오른쪽에서 왼쪽으로 계산됩니다.  대입 연산자, null 병합 연산자 및 [조건 연산자 `?:`](conditional-operator.md)는 오른쪽 결합성이 있습니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
+- ‘왼쪽 결합성이 있는’ 연산자는 왼쪽에서 오른쪽으로 계산됩니다. [대입 연산자](assignment-operator.md) 및 [null 병합 연산자 ](null-coalescing-operator.md)를 제외하고, 모든 이진 연산자는 왼쪽 결합성이 있습니다. 예를 들어, `a + b - c`는 `(a + b) - c`로 계산됩니다.
+- ‘오른쪽 결합성이 있는’ 연산자는 오른쪽에서 왼쪽으로 계산됩니다. 대입 연산자, null 병합 연산자 및 [조건 연산자 `?:`](conditional-operator.md)는 오른쪽 결합성이 있습니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
 
 괄호를 사용하여 연산자 결합성에 따라 주어진 계산 순서를 변경합니다.
 

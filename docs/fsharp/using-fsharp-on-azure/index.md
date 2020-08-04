@@ -2,13 +2,13 @@
 title: Azure에서 F# 사용
 description: F#과 함께 Azure 서비스 사용에 대한 가이드
 author: sylvanc
-ms.date: 09/22/2016
-ms.openlocfilehash: f074ac192f6dedbadf8132430cf27dc5865e6371
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.date: 07/29/2020
+ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501822"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455711"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -55,12 +55,14 @@ Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요�
 * [F# Azure 웹 API 예제](https://github.com/fsprojects/azure-webapi-example)
 * [Azure의 웹 애플리케이션에서 F# 호스트](https://github.com/isaacabraham/fsharp-demonstrator)
 
-## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>F#을 사용한 Apache Spark와 함께 Azure HDInsight 사용
+## <a name="using-apache-spark-with-f-on-azure-hdinsight-or-azure-databricks"></a>Azure HDInsight 또는 Azure Databricks에서 F#과 함께 Apache Spark 사용
 
-[Azure HDInsight용 Apache Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/)는 대규모 데이터 분석 애플리케이션을 실행하는 오픈 소스 처리 프레임워크입니다. Azure는 배포하기에 간단하고 비용 효과적인 Apache Spark를 만듭니다. Spark용 .NET API인 [Mobius](https://github.com/Microsoft/Mobius)를 사용하여 F#으로 Spark 애플리케이션을 개발합니다.
+[Azure HDInsight용 Apache Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)는 대규모 데이터 분석 애플리케이션을 실행하는 오픈 소스 처리 프레임워크입니다. [Azure Databricks](https://docs.microsoft.com/azure/databricks/scenarios/what-is-azure-databricks)는 Microsoft Azure Cloud Services 플랫폼에 대해 최적화된 Apache Spark 기반 분석 플랫폼입니다. Azure는 배포하기에 간단하고 비용 효과적인 Apache Spark를 만듭니다. Apache Spark용 .NET 바인딩 세트인 [.NET for Apache Spark](../../spark/what-is-apache-spark-dotnet.md)를 사용하여 F#으로 Spark 애플리케이션을 만듭니다.
 
-* [Mobius를 사용하여 F#으로 Spark 앱 구현](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Mobius를 사용하는 예제 F# Spark 앱](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [.NET for Apache Spark F# 샘플](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [Azure HDInsight에서 .NET Interactive Jupyter Notebook 설치](../../spark/how-to-guides/hdinsight-notebook-installation.md)
+* [Azure HDInsight에 Apache Spark 작업 제출](../../spark/how-to-guides/hdinsight-deploy-methods.md)
+* [Azure Databricks에 Apache Spark 작업 제출](../../spark/how-to-guides/databricks-deploy-methods.md)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>F\#과 함께 Azure Cosmos DB 사용
 

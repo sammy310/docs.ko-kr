@@ -1,5 +1,6 @@
 ---
 title: 인덱서 - C# 프로그래밍 가이드
+description: C#의 인덱서를 사용하면 클래스 또는 구조체 인스턴스를 배열처럼 인덱싱할 수 있습니다. 형식 또는 인스턴스 멤버를 지정하지 않고 인덱싱된 값을 설정하거나 가져올 수 있습니다.
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303116"
 ---
 # <a name="indexers-c-programming-guide"></a>인덱서(C# 프로그래밍 가이드)
 
@@ -33,7 +34,7 @@ ms.locfileid: "79167544"
 
 `=>`에서 식 본문을 도입하며 `get` 키워드는 사용되지 않습니다.
 
-C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드를 둘 다 사용해야 합니다. 예들 들어 다음과 같습니다.
+C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드를 둘 다 사용해야 합니다. 예를 들어:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

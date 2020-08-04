@@ -1,16 +1,17 @@
 ---
 title: 인터페이스 - C# 프로그래밍 가이드
+description: C#의 인터페이스에는 비추상 클래스 또는 구조체에서 구현해야 하는 관련 기능 그룹에 대한 정의가 포함되어 있습니다.
 ms.date: 02/20/2020
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441338"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303051"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 

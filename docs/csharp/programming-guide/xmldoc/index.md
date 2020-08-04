@@ -1,5 +1,6 @@
 ---
 title: XML 문서 주석 - C# 프로그래밍 가이드
+description: XML 문서 주석에 대해 알아봅니다. 특수 주석 필드에 XML 요소를 넣어 코드의 설명서를 만들 수 있습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: f5a507bc35b0cc0a679fd055bfc255bb3cb9a090
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbdeb53331d9fc63d24a3322ea13863d7c0a3630
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76789788"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381881"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 문서 주석(C# 프로그래밍 가이드)
 
@@ -36,7 +37,7 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 > [!NOTE]
 > XML 문서 주석은 메타데이터가 아닙니다. 이러한 주석은 컴파일된 어셈블리에 포함되지 않으므로 리플렉션을 통해 액세스할 수 없습니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)
 
@@ -48,7 +49,7 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 
 ## <a name="related-sections"></a>관련 단원
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [-설명서(문서 주석 처리)](../../language-reference/compiler-options/doc-compiler-option.md)
 
@@ -56,6 +57,6 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)

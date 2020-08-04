@@ -1,5 +1,6 @@
 ---
 title: 상호 운용성 - C# 프로그래밍 가이드
+description: 상호 운용성을 통해 공용 언어 런타임에서 실행되는 코드 외에 비관리 코드도 지원됩니다. 해당 리소스를 사용하여 interop 옵션을 이해하세요.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84242009"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302973"
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
 
@@ -43,7 +44,7 @@ ms.locfileid: "84242009"
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [기본 개념](~/_csharplang/spec/unsafe-code.md)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)
