@@ -1,22 +1,23 @@
 ---
 title: 액세스 가능성에 대한 유용한 정보
+description: .NET의 접근성 모범 사례에 대해 알아봅니다. 프로그래밍 방식 액세스, 사용자 설정, 시각적 UI 디자인, 탐색 및 다중 모달 인터페이스를 탐색 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: c6f0f31260ffae43e59703ef53dd7ef30a73320b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725bb0c60972e2d0dc6089b4370dd7e3e436e444
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180291"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517063"
 ---
 # <a name="accessibility-best-practices"></a>액세스 가능성에 대한 유용한 정보
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- 컨트롤 또는 응용 프로그램에서 다음 모범 사례를 구현하면 보조 기술 장치를 사용하는 사용자에게 접근성이 향상됩니다. 이들 모범 사례는 대부분 효율적인 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 디자인에 초점을 맞춥니다. 각 모범 사례에는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤 또는 애플리케이션에 대한 구현 정보가 포함됩니다. 대부분 경우에 이들 모범 사례에 맞는 작업이 이미 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에 포함되어 있습니다.  
+ 컨트롤이 나 응용 프로그램에서 다음 모범 사례를 구현 하면 보조 기술 장치를 사용 하는 사용자에 대 한 접근성이 향상 됩니다. 이들 모범 사례는 대부분 효율적인 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 디자인에 초점을 맞춥니다. 각 모범 사례에는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤 또는 애플리케이션에 대한 구현 정보가 포함됩니다. 대부분 경우에 이들 모범 사례에 맞는 작업이 이미 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에 포함되어 있습니다.  
   
 <a name="Programmatic_Access"></a>
 ## <a name="programmatic-access"></a>프로그래밍 방식 액세스  
@@ -24,19 +25,19 @@ ms.locfileid: "79180291"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>모든 UI 요소 및 텍스트에 대해 프로그래밍 방식 액세스 사용  
- 사용자 인터페이스(UI) 요소는 프로그래밍 방식으로 액세스할 수 있어야 합니다. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
+ UI (사용자 인터페이스) 요소는 프로그래밍 방식 액세스를 사용 하도록 설정 해야 합니다. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
   
- 이 모범 사례를 따르면 보조 기술 공급업체는 제품의 의 요소를 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]식별하고 조작할 수 있습니다.  
+ 이 모범 사례를 따라 보조 기술 공급 업체에서 제품의 요소를 식별 하 고 조작할 수 있습니다 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>UI 개체, 프레임 및 페이지에 대한 위치 이름, 제목 및 설명  
- 보조 기술, 특히 화면 읽기 프로그램에서는 제목을 사용하여 탐색 체계에서 프레임, 개체 또는 페이지의 위치를 인식합니다. 따라서 제목은 구체적인 설명을 포함해야 합니다. 예를 들어 사용자가 특정 영역을 자세히 탐색한 경우에는 웹 페이지 제목이 "Microsoft 웹 페이지"인 것은 도움이 되지 않습니다. 시각 장애가 있고 화면 읽기 프로그램에 의존하는 사용자에게는 구체적인 설명이 포함된 제목이 중요합니다. 마찬가지로 컨트롤의 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Automation.AutomationProperties.NameProperty> <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 경우 보조 기술 장치에 중요합니다.  
+ 보조 기술, 특히 화면 읽기 프로그램에서는 제목을 사용하여 탐색 체계에서 프레임, 개체 또는 페이지의 위치를 인식합니다. 따라서 제목은 구체적인 설명을 포함해야 합니다. 예를 들어 사용자가 특정 영역을 자세히 탐색한 경우에는 웹 페이지 제목이 "Microsoft 웹 페이지"인 것은 도움이 되지 않습니다. 시각 장애가 있고 화면 읽기 프로그램에 의존하는 사용자에게는 구체적인 설명이 포함된 제목이 중요합니다. 마찬가지로 컨트롤의 경우 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Automation.AutomationProperties.NameProperty> 및 <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 는 보조 기술 장치에 중요 합니다.  
   
- 이 모범 사례를 따르면 보조 기술은 샘플 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 제어 및 응용 프로그램을 식별하고 조작할 수 있습니다.  
+ 이 모범 사례를 따라 보조 technologys [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에서 샘플 컨트롤 및 응용 프로그램을 식별 하 고 조작할 수 있습니다.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>프로그래밍 방식 이벤트가 모든 UI 작업에서 트리거되는지 확인  
- 이 모범 사례를 따르면 보조 기술은 변경 사항을 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 듣고 이러한 변경 사항에 대해 사용자에게 알릴 수 있습니다.  
+ 이 모범 사례를 따라 보조 technologys는의 변경 내용을 수신 대기 하 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 고 이러한 변경 내용을 사용자에 게 알릴 수 있습니다.  
   
 <a name="User_Settings"></a>
 ## <a name="user-settings"></a>사용자 설정  
@@ -50,7 +51,7 @@ ms.locfileid: "79180291"
   
 <a name="Visual_UI_Design"></a>
 ## <a name="visual-ui-design"></a>시각적 UI 디자인  
- 이 섹션의 모범 사례는 컨트롤 또는 응용 프로그램이 색상과 이미지를 효과적으로 사용하고 보조 기술에서 사용할 수 있도록 합니다.  
+ 이 섹션의 모범 사례는 컨트롤이 나 응용 프로그램에서 색 및 이미지를 효과적으로 사용 하 고 보조 기술에서 사용할 수 있도록 합니다.  
   
 <a name="Don_t_Hard_Code_Colors"></a>
 ### <a name="dont-hard-code-colors"></a>색 하드 코드 안 함  
@@ -66,7 +67,7 @@ ms.locfileid: "79180291"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>DPI 설정으로 모든 UI가 올바르게 크기 조정되는지 확인  
- 모든 것이 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 인치(dpi) 설정당 점으로 올바르게 배율을 조정할 수 있는지 확인합니다. 또한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 인치당 120도(dpi)로 1024 x 768의 화면에 맞도록 합니다.  
+ 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] dpi (인치당 도트 수) 설정에 따라 올바르게 크기를 조정할 수 있는지 확인 합니다. 또한 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 120 dpi (인치당 도트 수)로 1024 x 768 화면에 맞는지 확인 합니다.  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>탐색  
@@ -128,9 +129,9 @@ ms.locfileid: "79180291"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>디바이스 독립적 호출을 통해 표준 입력 API 사용  
- 장치 독립적인 호출은 키보드 및 마우스 기능 의 평등을 보장하는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]동시에 보조 기술에 에 대한 필요한 정보를 제공합니다.  
+ 장치 독립적 호출을 사용 하면 키보드와 마우스 기능이 동일 하 게 유지 되 고에 대 한 필요한 정보와 함께 보조 기술을 제공 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.Peers>
 - [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
