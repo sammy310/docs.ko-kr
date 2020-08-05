@@ -678,3 +678,39 @@
           href: whats-new/obsolete-types.md
         - name: 사용되지 않는 멤버
           href: whats-new/obsolete-members.md
+- name: 코드 액세스 보안
+  items:
+    - name: 개요
+      href: misc/code-access-security.md
+    - name: 코드 액세스 보안 기본 사항
+      href: misc/code-access-security-basics.md
+    - name: 코드 액세스 보안 정책 호환성 및 마이그레이션
+      href: misc/code-access-security-policy-compatibility-and-migration.md
+    - name: 위험한 권한 및 정책 관리
+      href: misc/dangerous-permissions-and-policy-administration.md
+    - name: 샌드박스에서 부분적으로 신뢰할 수 있는 코드를 실행하는 방법
+      href: misc/how-to-run-partially-trusted-code-in-a-sandbox.md
+    - name: 링크 요청
+      href: misc/link-demands.md
+    - name: 예외 처리 보안
+      href: misc/securing-exception-handling.md
+    - name: 메서드 액세스 보안
+      href: misc/securing-method-access.md
+    - name: 래퍼 코드 보안
+      href: misc/securing-wrapper-code.md
+    - name: 보안 및 공용 읽기 전용 배열 필드
+      href: misc/security-and-public-read-only-array-fields.md
+    - name: 보안 및 원격 서비스 고려 사항
+      href: misc/security-and-remoting-considerations.md
+    - name: 보안 및 serialization
+      href: misc/security-and-serialization.md
+    - name: '보안 투명 코드, 수준 1'
+      href: misc/security-transparent-code-level-1.md
+    - name: '보안 투명 코드, 수준 2'
+      href: misc/security-transparent-code-level-2.md
+    - name: 보안 투명 코드
+      href: misc/security-transparent-code.md
+    - name: 부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용
+      href: misc/using-libraries-from-partially-trusted-code.md
+    - name: Assert 메서드 사용
+      href: misc/using-the-assert-method.md

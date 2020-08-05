@@ -1,6 +1,7 @@
 ---
-title: C# 연산자 - C# 참조
-ms.date: 04/28/2020
+title: C# 연산자 및 식 - C# 참조
+description: C# 연산자 및 식, 연산자 우선 순위와 연산자 결합성에 대해 알아보세요.
+ms.date: 08/04/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,18 +10,52 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 96bb97690f8954cce2cc75cad921e21985972798
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301777"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556555"
 ---
-# <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
+# <a name="c-operators-and-expressions-c-reference"></a>C# 연산자 및 식(C# 참조)
 
-C#은 기본 제공 형식에서 지원되는 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 숫자 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../builtin-types/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다. 특정 연산자는 [오버로드](operator-overloading.md)할 수 있습니다. 연산자 오버로드를 사용하여 사용자 정의 형식의 피연산자에 대해 연산자 동작을 지정할 수 있습니다.
+C#은 여러 연산자를 제공합니다. 상당수의 연산자는 [기본 제공 형식](../builtin-types/built-in-types.md)에서 지원되며 해당 형식의 값을 사용하여 기본 연산을 수행할 수 있습니다. 해당 연산자는 다음 그룹을 포함합니다.
 
-[식](../../programming-guide/statements-expressions-operators/expressions.md)에서 연산자 우선 순위 및 결합성은 연산이 수행되는 순서를 결정합니다. 괄호를 사용하여 연산자 우선 순위 및 결합성에 따라 주어진 계산 순서를 변경할 수 있습니다.
+- [산술 연산자](arithmetic-operators.md): 숫자 피연산자를 사용하여 산술 연산을 수행함
+- [비교 연산자](comparison-operators.md): 숫자 피연산자를 비교함
+- [부울 논리 연산자](boolean-logical-operators.md): [`bool`](../builtin-types/bool.md) 피연산자를 사용하여 논리 연산을 수행함
+- [비트 및 시프트 연산자](bitwise-and-shift-operators.md): 정수 형식의 피연산자를 사용하여 비트 또는 시프트 연산을 수행함
+- [같음 연산자](equality-operators.md): 해당 피연산자가 같은지를 확인함
+
+일반적으로 이 연산자들을 [오버로드](operator-overloading.md)할 수 있습니다. 즉, 사용자 정의 형식의 피연산자에 대한 연산자 동작을 지정할 수 있습니다.
+
+가장 간단한 C# 식은 리터럴(예: [정수](../builtin-types/integral-numeric-types.md#integer-literals) 및 [실수](../builtin-types/floating-point-numeric-types.md#real-literals)) 및 변수 이름입니다. 연산자를 사용하여 이들을 복잡한 식으로 결합할 수 있습니다. 연산자 [우선 순위](#operator-precedence) 및 [결합성](#operator-associativity)은 식에서 연산이 수행되는 순서를 결정합니다. 괄호를 사용하여 연산자 우선 순위 및 결합성에 따라 주어진 계산 순서를 변경할 수 있습니다.
+
+다음 코드에서 식의 예는 할당의 오른쪽에 있습니다.
+
+[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+
+일반적으로 식은 결과를 생성하고 다른 식에 포함될 수 있습니다. [`void`](../builtin-types/void.md) 메서드 호출은 결과를 생성하지 않는 식의 예입니다. 다음 예에 나와 있는 것처럼 이 메서드 호출은 [문](../../programming-guide/statements-expressions-operators/statements.md)으로만 사용할 수 있습니다.
+
+```csharp
+Console.WriteLine("Hello, world!");
+```
+
+C#에서 제공하는 몇 가지 다른 종류의 식은 다음과 같습니다.
+
+- [보간된 문자열 식](../tokens/interpolated.md): 다음과 같이 형식 문자열을 만들 수 있는 편리한 구문을 제공합니다.
+
+  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+
+- [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md): 다음과 같이 익명 함수를 만들 수 있습니다.
+
+  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+
+- [쿼리 식](../keywords/query-keywords.md): 다음과 같이 C#에서 직접 쿼리 기능을 사용할 수 있습니다.
+
+  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+
+[식 본문 정의](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)를 사용하여 메서드, 생성자, 속성, 인덱서 또는 종료자에 대한 간결한 정의를 제공할 수 있습니다.
 
 ## <a name="operator-precedence"></a>연산자 우선 순위
 
@@ -90,9 +125,13 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [연산자](~/_csharplang/spec/expressions.md#operators) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 다음 섹션을 참조하세요.
+
+- [식](~/_csharplang/spec/expressions.md)
+- [연산자](~/_csharplang/spec/expressions.md#operators)
 
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [식](../../programming-guide/statements-expressions-operators/expressions.md)
+- [연산자 오버로드](operator-overloading.md)
+- [식 트리](../../programming-guide/concepts/expression-trees/index.md)
