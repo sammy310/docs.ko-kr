@@ -1,6 +1,6 @@
 ---
 title: '방법: XML 문서의 디지털 서명 확인'
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,25 +8,29 @@ dev_langs:
 helpviewer_keywords:
 - System.Security.Cryptography.SignedXml class
 - signatures, cryptographic
-- System.Security.Cryptography.RSACryptoServiceProvider class
+- System.Security.Cryptography.RSA class
 - verifying signatures
 - checking signatures
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: fa5e13e4a84a7d5d5c07c63df9079f4a07aebc62
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9b2dc6a558d1fd6acd2922a7c8ad82ce8776c26
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277143"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557049"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>방법: XML 문서의 디지털 서명 확인
+
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 디지털 서명으로 서명된 XML 데이터를 확인할 수 있습니다. XML 디지털 서명(XMLDSIG)을 사용하면 서명된 후 데이터가 변경되지 않았음을 확인할 수 있습니다. XMLDSIG 표준에 대 한 자세한 내용은에서 W3C (World Wide Web 컨소시엄) 사양을 참조 하십시오 <https://www.w3.org/TR/xmldsig-core/> .
   
- 이 절차의 코드 예제에서는 <> 요소에 포함 된 XML 디지털 서명을 확인 하는 방법을 보여 줍니다 `Signature` .  이 예제에서는 키 컨테이너에서 RSA 공개 키를 검색한 다음 키를 사용하여 서명을 확인합니다.  
+> [!NOTE]
+> 이 문서의 코드는 Windows에 적용 됩니다.
+
+이 절차의 코드 예제에서는 <> 요소에 포함 된 XML 디지털 서명을 확인 하는 방법을 보여 줍니다 `Signature` .  이 예제에서는 키 컨테이너에서 RSA 공개 키를 검색한 다음 키를 사용하여 서명을 확인합니다.  
   
- 이 기법을 사용 하 여 확인할 수 있는 디지털 서명을 만드는 방법에 대 한 자세한 내용은 [방법: 디지털 서명으로 XML 문서 서명](how-to-sign-xml-documents-with-digital-signatures.md)을 참조 하세요.  
+이 기법을 사용 하 여 확인할 수 있는 디지털 서명을 만드는 방법에 대 한 자세한 내용은 [방법: 디지털 서명으로 XML 문서 서명](how-to-sign-xml-documents-with-digital-signatures.md)을 참조 하세요.  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>XML 문서의 디지털 서명을 확인하려면  
   
@@ -65,24 +69,32 @@ ms.locfileid: "84277143"
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
-## <a name="example"></a>예제  
- 이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  `"test.xml"` [방법: 디지털 서명으로 XML 문서 서명](how-to-sign-xml-documents-with-digital-signatures.md)에 설명 된 기술을 사용 하 여 파일에 서명 해야 합니다.  
+## <a name="example"></a>예제
+
+이 예제에서는 `"test.xml"`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  `"test.xml"` [방법: 디지털 서명으로 XML 문서 서명](how-to-sign-xml-documents-with-digital-signatures.md)에 설명 된 기술을 사용 하 여 파일에 서명 해야 합니다.  
   
- [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
- [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
+[!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
+[!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
-- 이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
+- .NET Framework를 대상으로 하는 프로젝트에서에 대 한 참조를 포함 `System.Security.dll` 합니다.
+
+- .NET Core 또는 .NET 5를 대상으로 하는 프로젝트에서 NuGet 패키지 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)를 설치 합니다.
   
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
+## <a name="net-security"></a>.NET 보안
+
+비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
   
- 소스 코드에 직접 프라이빗 키를 포함하지 마세요.  [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 포함 된 키를 쉽게 읽을 수 있습니다.  
+소스 코드에 직접 프라이빗 키를 포함하지 마세요.  포함 된 키는 [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 쉽게 읽을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 
+- [암호화 모델](cryptography-model.md)
+- [암호화 서비스](cryptographic-services.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [방법: 디지털 서명으로 XML 문서 서명](how-to-sign-xml-documents-with-digital-signatures.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

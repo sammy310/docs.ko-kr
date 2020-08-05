@@ -1,30 +1,30 @@
 ---
 title: '방법: 대칭 키를 사용하여 XML 요소 암호화'
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - AES algorithm
-- cryptography [.NET Framework], symmetric keys
-- encryption [.NET Framework], symmetric keys
+- cryptography [.NET], symmetric keys
+- encryption [.NET], symmetric keys
 - symmetric keys
 - System.Security.Cryptography.EncryptedXml class
-- System.Security.Cryptography.RijndaelManaged class
+- System.Security.Cryptography.Aes class
 - XML encryption
 - Advanced Encryption Standard algorithm
-- Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: 1ad75b7f36130a9f3acad97f724406650a7fdb68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277325"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555815"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 암호화
-<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 절차는 Rijndael이 라고도 하는 AES (AES(Advanced Encryption Standard)) 알고리즘을 사용 하 여 XML 요소를 암호화 합니다.  
+
+<xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 프로시저는 AES (AES(Advanced Encryption Standard)) 알고리즘을 사용 하 여 XML 요소를 암호화 합니다.  
   
  이 절차를 사용 하 여 암호화 된 XML 요소의 암호를 해독 하는 방법에 대 한 자세한 내용은 [방법: 대칭 키를 사용 하 여 Xml 요소 암호 해독](how-to-decrypt-xml-elements-with-symmetric-keys.md)을 참조 하세요.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "84277325"
   
 ### <a name="to-encrypt-an-xml-element-with-a-symmetric-key"></a>대칭 키를 사용하여 XML 요소를 암호화하려면  
   
-1. <xref:System.Security.Cryptography.RijndaelManaged> 클래스를 사용하여 대칭 키를 생성합니다.  이 키는 XML 요소를 암호화하는 데 사용됩니다.  
+1. <xref:System.Security.Cryptography.Aes> 클래스를 사용하여 대칭 키를 생성합니다.  이 키는 XML 요소를 암호화하는 데 사용됩니다.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#2)]  
@@ -90,16 +90,23 @@ ms.locfileid: "84277325"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
-- 이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
+- .NET Framework를 대상으로 하는 프로젝트에서에 대 한 참조를 포함 `System.Security.dll` 합니다.
+
+- .NET Core 또는 .NET 5를 대상으로 하는 프로젝트에서 NuGet 패키지 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)를 설치 합니다.
   
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 키를 전송하지 마세요.  대신, 보안 키 컨테이너를 사용하여 암호화 키를 저장합니다.  
+## <a name="net-security"></a>.NET 보안
+
+암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 키를 전송하지 마세요.  대신, 보안 키 컨테이너를 사용하여 암호화 키를 저장합니다.  
   
- 암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  
+암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  
   
 ## <a name="see-also"></a>참고 항목
 
+- [암호화 모델](cryptography-model.md) -기본 클래스 라이브러리에서 암호화가 구현 되는 방법에 대해 설명 합니다.
+- [암호화 서비스](cryptographic-services.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [방법: 대칭 키를 사용하여 XML 요소 해독](how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

@@ -7,25 +7,28 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - storing asymmetric keys
 - keys, asymmetric
 - encryption keys
 - keys, storing in key containers
-- asymmetric keys [.NET Framework]
-- encryption [.NET Framework], asymmetric keys
+- asymmetric keys [.NET]
+- encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: a0fbde37491043cc1aab71e9733087bf410b997d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769031"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556295"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>키 컨테이너에 비대칭 키 저장
 
 비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장 해야 하는 경우 키 컨테이너를 사용 합니다. 키 컨테이너에 대 한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조 하세요.
+
+> [!NOTE]
+> 이 문서의 코드는 Windows에 적용 됩니다.
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>비대칭 키를 만들어 키 컨테이너에 저장
 
@@ -244,7 +247,10 @@ Key deleted.
 
 ## <a name="see-also"></a>참고 항목
 
+- [암호화 모델](cryptography-model.md)
+- [암호화 서비스](cryptographic-services.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
 - [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)
 - [데이터 암호화](encrypting-data.md)
 - [데이터 암호 해독](decrypting-data.md)
-- [암호화 서비스](cryptographic-services.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

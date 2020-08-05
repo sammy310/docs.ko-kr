@@ -1,6 +1,6 @@
 ---
 title: '방법: GenericPrincipal 및 GenericIdentity 개체 만들기'
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,14 +11,19 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290865"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557218"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
+
+> [!NOTE]
+> 이 문서는 Windows에 적용 됩니다.
+>
+> ASP.NET Core에 대 한 자세한 내용은 [ASP.NET Core 보안 개요](https://docs.microsoft.com/aspnet/core/security/)를 참조 하세요.
 
 클래스 <xref:System.Security.Principal.GenericIdentity> 와 클래스를 함께 사용 <xref:System.Security.Principal.GenericPrincipal> 하 여 Windows 도메인에 독립적으로 존재 하는 권한 부여 체계를 만들 수 있습니다.
 

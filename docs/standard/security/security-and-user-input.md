@@ -1,20 +1,20 @@
 ---
 title: 보안 및 사용자 입력
 description: 코드는 사용자가 입력 한 데이터를 다른 코드에 대 한 매개 변수로 전달 하 여 보안에 영향을 줄 수 있습니다. 범위 검사를 수행 하 여 문제가 있는 입력을 거부할 수 있습니다.
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- security [.NET Framework], user input
+- security [.NET], user input
 - user input, security
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e46bf8e653567637b4e6236849981fdb32df447c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84275947"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555944"
 ---
 # <a name="security-and-user-input"></a>보안 및 사용자 입력
 
@@ -61,3 +61,4 @@ ms.locfileid: "84275947"
 ## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](secure-coding-guidelines.md)
+- [ASP.NET Core 보안](/aspnet/core/security/)

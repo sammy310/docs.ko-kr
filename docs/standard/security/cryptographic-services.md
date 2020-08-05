@@ -1,46 +1,44 @@
 ---
 title: 암호화 서비스
-description: ClickOnce 매니페스트, Suite B, & CNG (Cryptography Next Generation) 지원 등 .NET에서 지원 되는 암호화 방법 및 방법에 대 한 개요를 확인 하세요.
-ms.date: 03/30/2017
+description: .NET에서 지원 되는 암호화 방법 및 방법에 대 한 개요입니다.
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- cryptography [.NET Framework]
+- cryptography [.NET]
 - pattern of derived class inheritance
 - digital signatures
 - asymmetric cryptographic algorithms
 - digital signatures, public-key systems
 - public keys
-- decryption [.NET Framework]
+- decryption [.NET]
 - private keys
 - MAC algorithms
 - cryptographic algorithms
 - private keys, overview
-- encryption [.NET Framework]
-- security [.NET Framework], encryption
+- encryption [.NET]
+- security [.NET], encryption
 - cryptographic services
 - symmetric cryptographic algorithms
 - hash
 - message authentication codes
 - derived class inheritance
-- cryptography [.NET Framework], about
+- cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596334"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557023"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
 인터넷과 같은 공용 네트워크에서는 엔터티 간의 보안 통신 수단을 제공하지 않습니다. 이러한 네트워크를 통한 통신은 권한이 없는 제3자가 읽거나 심지어는 수정하기도 쉽습니다. 암호화는 데이터를 볼 수 없도록 보호하며 데이터가 수정되었는지 감지하는 방법을 제공하며 기타 보안상 위험한 채널을 통한 안전한 통신 수단 제공을 지원합니다. 예를 들어 데이터를 암호화된 상태로 전송하고 나중에 의도된 당사자가 해독하는 암호화 알고리즘을 사용하여 데이터를 암호화할 수 있습니다. 제3자가 암호화된 데이터를 가로채는 경우 해독하기 어렵습니다.
 
-.NET Framework에서 <xref:System.Security.Cryptography?displayProperty=nameWithType> 네임스페이스의 클래스는 고유한 여러 암호화 세부 정보를 관리합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI(암호화 API)에 대한 래퍼이지만, 나머지는 완전하게 관리되는 구현 클래스입니다. 이러한 클래스를 사용하기 위해 암호화 전문가가 될 필요는 없습니다. 암호화 알고리즘 클래스 중 하나의 새 인스턴스를 만들 경우 키가 사용 편의를 위해 자동으로 생성되며, 기본 속성은 가능한 한 안전합니다.
+.NET에서 네임 스페이스의 클래스는 <xref:System.Security.Cryptography> 여러 암호화 세부 정보를 관리 합니다. 일부는 운영 체제 구현에 대 한 래퍼입니다. 다른 일부는 순수 하 게 관리 되는 구현입니다. 이러한 클래스를 사용하기 위해 암호화 전문가가 될 필요는 없습니다. 암호화 알고리즘 클래스 중 하나의 새 인스턴스를 만들 경우 키가 사용 편의를 위해 자동으로 생성되며, 기본 속성은 가능한 한 안전합니다.
 
-이 개요에서는 ClickOnce 매니페스트, Suite B 및 .NET Framework 3.5에 도입 된 CNG (Cryptography Next Generation) 지원을 비롯 하 여 .NET Framework에서 지 원하는 암호화 방법 및 방법의 개요 제공 합니다.
-
-Microsoft 서비스, 구성 요소 및 애플리케이션에 암호화 보안을 추가할 수 있도록 하는 도구 및 암호화에 대한 자세한 내용은 이 설명서의 Win32 및 COM 개발, 보안 섹션을 참조하세요.
+이 개요에서는 ClickOnce 매니페스트를 비롯 하 여 .NET에서 지원 되는 암호화 방법 및 방법의 개요 제공 합니다.
 
 ## <a name="cryptographic-primitives"></a>암호화 기본
 
@@ -58,7 +56,7 @@ Microsoft 서비스, 구성 요소 및 애플리케이션에 암호화 보안을
 
 이러한 목표를 달성하기 위해 암호화 기본이라고 알려진 알고리즘과 방법을 결합하여 암호화 체계를 만들 수 있습니다. 다음 표는 암호화 기본 및 해당 기능 목록을 보여 줍니다.
 
-|암호화 기본|기능|
+|암호화 기본|Windows Server Update Services와 함께|
 |-----------------------------|---------|
 |비밀 키 암호화(대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 공유된 하나의 비밀 키를 사용하여 데이터를 암호화하고 해독합니다.|
 |공개 키 암호화(비대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 퍼블릭/프라이빗 키 쌍을 사용하여 데이터를 암호화하고 해독합니다.|
@@ -85,19 +83,11 @@ CBC 암호화로 암호화된 데이터를 손상시킬 수 있는 한 가지 �
 
 두 당사자인 Alice와 Bob이 안전하지 않은 채널을 통해 통신하려는 경우를 가정할 때 그들은 다음과 같은 방법으로 비밀 키 암호화를 사용할 수 있습니다. 즉, Alice와 Bob은 특정 키 및 IV와 함께 하나의 특정 알고리즘(예: AES)을 사용하기로 동의합니다. Alice는 메시지를 작성 하 고 메시지를 보낼 네트워크 스트림 (아마도 명명 된 파이프 또는 네트워크 메일)을 만듭니다. 그런 다음 키와 IV를 사용하여 텍스트를 암호화하고 인트라넷을 통해 Bob에게 암호화된 메시지와 IV를 전송합니다. Bob은 암호화된 텍스트를 수신하고 IV와 미리 동의한 키를 사용하여 텍스트를 해독합니다. 전송을 가로채는 경우 인터셉터는 키를 알 수 없으므로 원래 메시지를 복구할 수 없습니다. 이 시나리오에서는 키만 비밀로 유지하면 됩니다. 실제 시나리오에서는 Alice 또는 Bob 중 한 사람이 비밀 키를 생성하고 공개 키(비대칭) 암호화를 사용하여 비밀(대칭) 키를 상대방에게 전송합니다. 공개 키 암호화에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
-.NET Framework는 비밀 키 암호화 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
+.NET에서는 비밀 키 암호화 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.AesManaged>.NET Framework 3.5에서 도입 되었습니다.
+- <xref:System.Security.Cryptography.Aes>
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.HMACSHA1> (비밀 키와 결합된 암호화 해시 함수를 사용하여 계산된 메시지 인증 코드를 나타내므로 기술적으로 비밀 키 알고리즘입니다. 이 항목의 뒷부분에 있는 [해시 값](#hash-values)을 참조하세요.)
-
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.RijndaelManaged>.
-
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.HMACSHA256>, <xref:System.Security.Cryptography.HMACSHA384> 및 <xref:System.Security.Cryptography.HMACSHA512>입니다. (비밀 키와 결합 된 암호화 해시 함수를 사용 하 여 계산 된 메시지 인증 코드를 나타내므로 기술적으로 비밀 키 알고리즘입니다. 이 문서의 뒷부분에 있는 [해시 값](#hash-values)을 참조 하세요.)
 
 ## <a name="public-key-encryption"></a>공개 키 암호화
 
@@ -123,23 +113,17 @@ Alice의 공개 키를 전송하는 동안 권한이 없는 제3자가 키를 �
 
 - 공개 키 알고리즘은 비밀 키 알고리즘과 비교하면 매우 느리므로 대규모 데이터를 암호화할 때는 적합하지 않습니다. 공개 키 알고리즘은 매우 적은 양의 데이터를 전송하는 데만 유용합니다. 일반적으로 공개 키 암호화는 비밀 키 알고리즘에서 사용하는 키 및 IV를 암호화하는 데 사용합니다. 키 및 IV가 전송되면 비밀 키 암호화가 나머지 세션에서 사용됩니다.
 
-.NET Framework는 공개 키 암호화 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
+.NET에서는 공개 키 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDiffieHellman> (기본 클래스)
+- <xref:System.Security.Cryptography.ECDiffieHellman>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCng>
+- <xref:System.Security.Cryptography.DSA>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (기본 클래스)
-
-- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (기본 클래스)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
-
-RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명에만 사용할 수 있고 Diffie-Hellman은 키 생성에만 사용할 수 있습니다. 일반적으로 퍼블릭 키 알고리즘은 비밀 키 알고리즘보다 용도가 제한됩니다.
+RSA는 암호화 및 서명을 모두 허용 하지만 서명에만 DSA를 사용할 수 있습니다. DSA는 RSA 만큼 안전 하지 않으며 RSA를 권장 합니다. Diffie-hellman은 키 생성에만 사용할 수 있습니다. 일반적으로 퍼블릭 키 알고리즘은 비밀 키 알고리즘보다 용도가 제한됩니다.
 
 ## <a name="digital-signatures"></a>디지털 서명
 
@@ -150,15 +134,13 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 > [!NOTE]
 > 보낸 사람의 공개 키는 공개된 정보이고 일반적으로 디지털 서명 형식에 포함되므로 누구나 서명을 확인할 수 있습니다. 이 방법이 메시지의 기밀성을 유지하지는 않으므로 메시지의 기밀을 위해서는 메시지에 대한 암호화도 수행해야 합니다.
 
-.NET Framework에서는 디지털 서명 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
+.NET에서는 디지털 서명 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDsa> (기본 클래스)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
+- <xref:System.Security.Cryptography.DSA>
 
 ## <a name="hash-values"></a>해시 값
 
@@ -184,38 +166,21 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 이러한 방법 중 어떠한 방법을 사용해도 일반 텍스트로 전송되는 Alice의 메시지를 다른 사람이 읽지 못하게 할 수는 없습니다. 일반적으로 완벽한 보안을 구현하려면 디지털 서명(메시지 서명)과 암호화가 필요합니다.
 
-.NET Framework는 해싱 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
+.NET에서는 해시 알고리즘을 구현 하는 다음 클래스를 제공 합니다.
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.SHA256>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.SHA384>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.SHA512>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
-
-- <xref:System.Security.Cryptography.SHA1Managed>.
-
-- <xref:System.Security.Cryptography.SHA256Managed>.
-
-- <xref:System.Security.Cryptography.SHA384Managed>.
-
-- <xref:System.Security.Cryptography.SHA512Managed>.
-
-- 모든 SHA(Secure Hash Algorithm), MD5(Message Digest 5) 및 RIPEMD-160 알고리즘의 HMAC 변형
-
-- 모든 SHA 알고리즘의 CryptoServiceProvider 구현(관리 코드 래퍼)
-
-- 모든 MD5 및 SHA 알고리즘의 CNG(Cryptography Next Generation) 구현
-
-> [!NOTE]
-> 1996년에 MD5 디자인 결함이 발견되었으므로 대신 SHA-1을 사용하는 것이 좋습니다. 2004년에 결함이 추가로 발견되어 MD5 알고리즘은 더 이상 안전한 것으로 간주되지 않습니다. SHA-1 알고리즘에서도 보안 결함이 발견되었으므로 이제는 SHA-2를 대신 사용하는 것이 좋습니다.
+.NET에서는 및도 제공 <xref:System.Security.Cryptography.MD5> <xref:System.Security.Cryptography.SHA1> 합니다. 그러나 MD5 및 SHA-1 알고리즘은 안전 하지 않은 것으로 확인 되었으므로 이제는 s h a-2를 대신 권장 합니다. S h a-2에는 SHA256, SHA384 및 SHA512가 포함 됩니다.
 
 ## <a name="random-number-generation"></a>난수 생성
 
 난수 생성은 여러 암호화 작업에 필수적입니다. 예를 들어 암호화 키는 재현이 불가능하도록 가능한 한 무작위적이어야 합니다. 암호화 난수 생성기는 계산상 1/2 이상의 확률로 예측할 수 없는 출력을 생성해야 합니다. 따라서 어떠한 다음 출력 비트 예측 방법도 임의 추측보다 더 잘 예측할 수 없어야 합니다. .NET Framework의 클래스는 난수 생성기를 사용 하 여 암호화 키를 생성 합니다.
 
-<xref:System.Security.Cryptography.RNGCryptoServiceProvider> 클래스는 난수 생성기 알고리즘을 구현한 것입니다.
+<xref:System.Security.Cryptography.RandomNumberGenerator> 클래스는 난수 생성기 알고리즘을 구현한 것입니다.
 
 ## <a name="clickonce-manifests"></a>ClickOnce 매니페스트
 
@@ -237,25 +202,9 @@ RSA는 암호화 및 서명에서 모두 사용할 수 있지만, DSA는 서명�
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> 는 Authenticode 서명을 신뢰할 수 있는지 확인할 수 있는 간단한 방법을 제공합니다.
 
-## <a name="suite-b-support"></a>Suite B 지원
-
-.NET Framework 3.5은 NSA (국가 보안 기관)에서 게시 한 암호화 알고리즘의 Suite B 집합을 지원 합니다. Suite B에 대한 자세한 내용은 [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/)를 참조하세요.
-
-다음 알고리즘이 포함되어 있습니다.
-
-- 암호화의 경우 키 크기가 128, 192 및 256비트인 AES(Advanced Encryption Standard) 알고리즘
-
-- 해시의 경우 SHA(Secure Hash Algorithm)-1, SHA-256, SHA-384 및 SHA-512. 일반적으로 마지막 세 알고리즘을 함께 묶어 SHA-2라고 합니다.
-
-- 서명의 경우 256비트, 384비트 및 521비트 소수법 곡선을 사용하는 ECDSA(Elliptic Curve Digital Signature Algorithm). NSA 문서에서는 이러한 곡선을 구체적으로 정의하여 P-256, P-384 및 P-521로 호칭합니다. 이 알고리즘은 <xref:System.Security.Cryptography.ECDsaCng> 클래스에서 제공합니다. 이를 통해 프라이빗 키로 서명하고 퍼블릭 키로 서명을 확인할 수 있습니다.
-
-- 키 교환 및 비밀 계약의 경우 256비트, 384비트 및 521비트 소수법 곡선을 사용하는 ECDH(Elliptic Curve Diffie-Hellman) 알고리즘. 이 알고리즘은 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 클래스에서 제공합니다.
-
-AES, SHA-256, SHA-384 및 SHA-512 구현에 대한 FIPS(Federal Information Processing Standard) 인증 구현의 관리 코드 래퍼는 새로운 <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>및 <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> 클래스에서 사용할 수 있습니다.
-
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG(Cryptography Next Generation) 클래스
 
-CNG(Cryptography Next Generation) 클래스는 네이티브 CNG 함수 관련 관리 래퍼를 제공합니다. (CNG는 CryptoAPI를 대체 합니다.) 이러한 클래스는 이름의 일부로 "Cng"를 포함 합니다. CNG 래퍼 클래스의 핵심은 CNG 키의 스토리지 및 사용을 추상화하는 <xref:System.Security.Cryptography.CngKey> 키 컨테이너 클래스입니다. 이 클래스를 통해 키 쌍 또는 공개 키를 안전하게 저장하고 간단한 문자열 이름을 사용하여 참조할 수 있습니다. 타원 곡선 기반 <xref:System.Security.Cryptography.ECDsaCng> 서명 클래스 및 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 암호화 클래스는 <xref:System.Security.Cryptography.CngKey> 개체를 사용할 수 있습니다.
+.NET Framework 3.5 이상 버전에서 CNG (Cryptography Next Generation) 클래스는 네이티브 CNG 함수를 중심으로 관리 되는 래퍼를 제공 합니다. (CNG는 CryptoAPI를 대체 합니다.) 이러한 클래스는 이름의 일부로 "Cng"를 포함 합니다. CNG 래퍼 클래스의 핵심은 CNG 키의 스토리지 및 사용을 추상화하는 <xref:System.Security.Cryptography.CngKey> 키 컨테이너 클래스입니다. 이 클래스를 통해 키 쌍 또는 공개 키를 안전하게 저장하고 간단한 문자열 이름을 사용하여 참조할 수 있습니다. 타원 곡선 기반 <xref:System.Security.Cryptography.ECDsaCng> 서명 클래스 및 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 암호화 클래스는 <xref:System.Security.Cryptography.CngKey> 개체를 사용할 수 있습니다.
 
 <xref:System.Security.Cryptography.CngKey> 클래스는 키 열기, 생성, 삭제, 내보내기 등의 다양한 추가 작업에 사용됩니다. 또한 네이티브 함수를 직접 호출할 때 사용할 기본 키 핸들에 대한 액세스를 제공합니다.
 
@@ -267,10 +216,9 @@ CNG(Cryptography Next Generation) 클래스는 네이티브 CNG 함수 관련 �
 
 - <xref:System.Security.Cryptography.CngProperty> 는 자주 사용되는 키 속성을 유지 관리합니다.
 
-## <a name="related-topics"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-|제목|Description|
-|-----------|-----------------|
-|[암호화 모델](cryptography-model.md)|기본 클래스 라이브러리에서 암호화가 구현되는 방식에 대해 설명합니다.|
-|[연습: 암호화 애플리케이션 만들기](walkthrough-creating-a-cryptographic-application.md)|기본 암호화 및 해독 작업을 보여 줍니다.|
-|[암호화 클래스 구성](../../framework/configure-apps/configure-cryptography-classes.md)|암호화 클래스에 알고리즘 이름을 매핑하고 암호화 알고리즘에 개체 식별자를 매핑하는 방법에 대해 설명합니다.|
+- [암호화 모델](cryptography-model.md) -기본 클래스 라이브러리에서 암호화가 구현 되는 방법에 대해 설명 합니다.
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
+- [패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성](vulnerabilities-cbc-mode.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

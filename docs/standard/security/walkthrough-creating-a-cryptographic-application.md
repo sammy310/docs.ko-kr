@@ -1,34 +1,40 @@
 ---
 title: '연습: 암호화 애플리케이션 만들기'
 description: 암호화 응용 프로그램을 만드는 과정을 안내 합니다. Windows Forms 응용 프로그램에서 콘텐츠를 암호화 하 고 암호 해독 하는 방법을 알아봅니다.
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [NET Framework], example
-- cryptography [NET Framework], cryptographic application example
-- cryptography [NET Framework], application example
+- cryptography [NET], example
+- cryptography [NET], cryptographic application example
+- cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602182"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557192"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 애플리케이션 만들기
+
+> [!NOTE]
+> 이 문서는 Windows에 적용 됩니다.
+>
+> ASP.NET Core에 대 한 자세한 내용은 [데이터 보호 ASP.NET Core](/aspnet/core/security/data-protection/introduction)를 참조 하세요.
+
 이 연습에서는 콘텐츠를 암호화 및 암호 해독하는 방법을 보여 줍니다. 코드 예제는 Windows Forms 애플리케이션용으로 설계되었습니다. 이 애플리케이션은 스마트 카드 사용과 같은 실제 시나리오를 보여 주지 않습니다. 대신, 암호화 및 암호 해독의 기초를 보여 줍니다.  
   
- 이 연습에서는 암호화에 대한 다음 지침을 사용합니다.  
+이 연습에서는 암호화에 대한 다음 지침을 사용합니다.  
   
-- 대칭 알고리즘인 <xref:System.Security.Cryptography.RijndaelManaged> 클래스를 사용하여 자동으로 생성된 해당 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 및 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>를 통해 데이터를 암호화 및 암호 해독합니다.  
+- 대칭 알고리즘인 <xref:System.Security.Cryptography.Aes> 클래스를 사용하여 자동으로 생성된 해당 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 및 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>를 통해 데이터를 암호화 및 암호 해독합니다.  
   
-- 비대칭 알고리즘인 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 사용하여 <xref:System.Security.Cryptography.RijndaelManaged>를 통해 암호화된 데이터에 대한 키를 암호화 및 암호 해독합니다. 비대칭 알고리즘은 키와 같은 적은 양의 데이터에 가장 적합합니다.  
+- <xref:System.Security.Cryptography.RSA>비대칭 알고리즘을 사용 하 여로 암호화 된 데이터에 대 한 키를 암호화 하 고 해독 <xref:System.Security.Cryptography.Aes> 합니다. 비대칭 알고리즘은 키와 같은 적은 양의 데이터에 가장 적합합니다.  
   
     > [!NOTE]
-    > 암호화된 콘텐츠를 다른 사용자와 교환하는 대신 컴퓨터에서 데이터를 보호하려는 경우 <xref:System.Security.Cryptography.ProtectedData> 또는 <xref:System.Security.Cryptography.ProtectedMemory> 클래스를 사용하는 것이 좋습니다.  
+    > 암호화 된 콘텐츠를 다른 사용자와 교환 하지 않고 컴퓨터의 데이터를 보호 하려는 경우 클래스를 사용 하는 것이 좋습니다 <xref:System.Security.Cryptography.ProtectedData> .  
   
  다음 표에는 이 항목의 암호화 작업이 요약되어 있습니다.  
   
@@ -44,15 +50,17 @@ ms.locfileid: "84602182"
 |공개 키 가져오기|XML 파일의 키를 키 컨테이너에 로드합니다.|  
 |애플리케이션 테스트|이 애플리케이션을 테스트하기 위한 절차를 나열합니다.|  
   
-## <a name="prerequisites"></a>사전 요구 사항  
- 이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>필수 구성 요소  
+
+이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.  
   
 - <xref:System.IO> 및 <xref:System.Security.Cryptography> 네임스페이스에 대한 참조  
   
 ## <a name="creating-a-windows-forms-application"></a>Windows Forms 애플리케이션 만들기  
- 이 연습의 대다수 코드 예제는 단추 컨트롤에 대한 이벤트 처리기로 설계되었습니다. 다음 표에서는 샘플 애플리케이션에 필요한 컨트롤 및 코드 예제와 일치하는 데 필요한 이름을 보여 줍니다.  
+
+이 연습의 대다수 코드 예제는 단추 컨트롤에 대한 이벤트 처리기로 설계되었습니다. 다음 표에서는 샘플 애플리케이션에 필요한 컨트롤 및 코드 예제와 일치하는 데 필요한 이름을 보여 줍니다.  
   
-|제어|Name|텍스트 속성(필요에 따라)|  
+|제어|이름|텍스트 속성(필요에 따라)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|파일 암호화|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|파일 암호 해독|  
@@ -64,16 +72,18 @@ ms.locfileid: "84602182"
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- 이벤트 처리기를 만들려면 Visual Studio 디자이너에서 해당 단추를 두 번 클릭합니다.  
+ Visual Studio 디자이너에서 단추를 두 번 클릭 하 여 이벤트 처리기를 만듭니다.
   
 ## <a name="declaring-global-objects"></a>전역 개체 선언  
- 폼의 생성자에 다음 코드를 추가합니다. 사용자 환경 및 기본 설정에 맞게 문자열 변수를 편집합니다.  
+
+폼의 생성자에 다음 코드를 추가합니다. 사용자 환경 및 기본 설정에 맞게 문자열 변수를 편집합니다.  
   
- [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
- [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
+[!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
+[!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
 ## <a name="creating-an-asymmetric-key"></a>비대칭 키 만들기  
- 이 작업은 <xref:System.Security.Cryptography.RijndaelManaged> 키를 암호화 및 암호 해독하는 비대칭 키를 만듭니다. 이 키는 콘텐츠를 암호화하는 데 사용되었으며 레이블 컨트롤에 키 컨테이너 이름을 표시합니다.  
+
+이 작업은 <xref:System.Security.Cryptography.Aes> 키를 암호화 및 암호 해독하는 비대칭 키를 만듭니다. 이 키는 콘텐츠를 암호화하는 데 사용되었으며 레이블 컨트롤에 키 컨테이너 이름을 표시합니다.  
   
  `Create Keys` 단추(`buttonCreateAsmKeys_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
   
@@ -81,15 +91,16 @@ ms.locfileid: "84602182"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>파일 암호화  
- 이 작업에는 단추에 대 한 이벤트 처리기 메서드 `Encrypt File` ( `buttonEncryptFile_Click` ) 및 `EncryptFile` 메서드에 대 한 두 가지 메서드가 포함 됩니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호화를 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
+
+이 작업에는 단추에 대 한 이벤트 처리기 메서드 `Encrypt File` ( `buttonEncryptFile_Click` ) 및 `EncryptFile` 메서드에 대 한 두 가지 메서드가 포함 됩니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호화를 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
   
- 암호화된 콘텐츠, 키 및 IV가 모두 하나의 <xref:System.IO.FileStream>에 저장되며, 이를 암호화 패키지라고 합니다.  
+암호화된 콘텐츠, 키 및 IV가 모두 하나의 <xref:System.IO.FileStream>에 저장되며, 이를 암호화 패키지라고 합니다.  
   
- `EncryptFile` 메서드는 다음 작업을 수행합니다.  
+`EncryptFile` 메서드는 다음 작업을 수행합니다.  
   
-1. <xref:System.Security.Cryptography.RijndaelManaged> 대칭 알고리즘을 만들어 콘텐츠를 암호화합니다.  
+1. <xref:System.Security.Cryptography.Aes> 대칭 알고리즘을 만들어 콘텐츠를 암호화합니다.  
   
-2. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 만들어 <xref:System.Security.Cryptography.RijndaelManaged> 키를 암호화합니다.  
+2. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 만들어 <xref:System.Security.Cryptography.Aes> 키를 암호화합니다.  
   
 3. <xref:System.Security.Cryptography.CryptoStream> 개체를 사용하여 소스 파일의 <xref:System.IO.FileStream>을 바이트 블록 단위로 암호화된 파일의 대상 <xref:System.IO.FileStream> 개체로 읽고 암호화합니다.  
   
@@ -122,17 +133,18 @@ ms.locfileid: "84602182"
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>파일 암호 해독  
- 이 작업에는 `Decrypt File` 단추에 대한 이벤트 처리기 메서드(`buttonDecryptFile_Click`) 및 `DecryptFile` 메서드의 두 메서드가 필요합니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호 해독을 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
+
+이 작업에는 `Decrypt File` 단추에 대한 이벤트 처리기 메서드(`buttonDecryptFile_Click`) 및 `DecryptFile` 메서드의 두 메서드가 필요합니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호 해독을 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
   
- `Decrypt` 메서드는 다음 작업을 수행합니다.  
+`Decrypt` 메서드는 다음 작업을 수행합니다.  
   
-1. <xref:System.Security.Cryptography.RijndaelManaged> 대칭 알고리즘을 만들어 콘텐츠를 암호 해독합니다.  
+1. 콘텐츠를 <xref:System.Security.Cryptography.Aes> 해독 하는 대칭 알고리즘을 만듭니다.  
   
 2. 암호화된 패키지 <xref:System.IO.FileStream>의 처음 8바이트를 바이트 배열로 읽어 암호화된 키 및 IV의 길이를 가져옵니다.  
   
 3. 암호화 패키지에서 바이트 배열로 키 및 IV를 추출합니다.  
   
-4. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 만들어 <xref:System.Security.Cryptography.RijndaelManaged> 키를 암호 해독합니다.  
+4. <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 만들어 <xref:System.Security.Cryptography.Aes> 키를 암호 해독합니다.  
   
 5. <xref:System.Security.Cryptography.CryptoStream> 개체를 사용하여 <xref:System.IO.FileStream> 암호화 패키지의 암호화 텍스트 섹션을 바이트 블록 단위로 암호 해독된 파일의 <xref:System.IO.FileStream> 개체로 읽고 암호 해독합니다. 이 작업을 완료하면 암호 해독이 완료됩니다.  
   
@@ -146,38 +158,42 @@ ms.locfileid: "84602182"
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
-## <a name="exporting-a-public-key"></a>공개 키 내보내기  
- 이 작업은 `Create Keys` 단추를 사용하여 만든 키를 파일에 저장합니다. public 매개 변수만 내보냅니다.  
+## <a name="exporting-a-public-key"></a>공개 키 내보내기
+
+이 작업은 `Create Keys` 단추를 사용하여 만든 키를 파일에 저장합니다. public 매개 변수만 내보냅니다.  
   
- 이 작업은 Bob이 파일을 암호화할 수 있도록 Alice가 Bob에게 공개 키를 제공하는 시나리오를 시뮬레이트합니다. Bob과 해당 공개 키를 가진 다른 사용자는 private 매개 변수가 있는 전체 키 쌍이 없기 때문에 파일을 암호 해독할 수 없습니다.  
+이 작업은 Bob이 파일을 암호화할 수 있도록 Alice가 Bob에게 공개 키를 제공하는 시나리오를 시뮬레이트합니다. Bob과 해당 공개 키를 가진 다른 사용자는 private 매개 변수가 있는 전체 키 쌍이 없기 때문에 파일을 암호 해독할 수 없습니다.  
   
- `Export Public Key` 단추(`buttonExportPublicKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
+`Export Public Key` 단추(`buttonExportPublicKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
   
- [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
- [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
+[!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
+[!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
-## <a name="importing-a-public-key"></a>공개 키 가져오기  
- 이 작업은 `Export Public Key` 단추를 사용하여 만든 public 매개 변수만 있는 키를 로드하고 키 컨테이너 이름으로 설정합니다.  
+## <a name="importing-a-public-key"></a>공개 키 가져오기
+
+이 작업은 `Export Public Key` 단추를 사용하여 만든 public 매개 변수만 있는 키를 로드하고 키 컨테이너 이름으로 설정합니다.  
   
- 이 작업은 Bob이 파일을 암호화할 수 있도록 public 매개 변수만 있는 Alice의 키를 Bob이 로드하는 시나리오를 시뮬레이트합니다.  
+이 작업은 Bob이 파일을 암호화할 수 있도록 public 매개 변수만 있는 Alice의 키를 Bob이 로드하는 시나리오를 시뮬레이트합니다.  
   
- `Import Public Key` 단추(`buttonImportPublicKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
+`Import Public Key` 단추(`buttonImportPublicKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
   
- [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
- [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
+[!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
+[!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
 ## <a name="getting-a-private-key"></a>프라이빗 키 가져오기  
- 이 작업은 키 컨테이너 이름을 `Create Keys` 단추를 사용하여 만든 키의 이름으로 설정합니다. 키 컨테이너는 private 매개 변수가 있는 전체 키 쌍을 포함합니다.  
+
+이 작업은 키 컨테이너 이름을 `Create Keys` 단추를 사용하여 만든 키의 이름으로 설정합니다. 키 컨테이너는 private 매개 변수가 있는 전체 키 쌍을 포함합니다.  
   
- 이 작업은 Alice가 프라이빗 키를 사용하여 Bob이 암호화한 파일을 암호 해독하는 시나리오를 시뮬레이트합니다.  
+이 작업은 Alice가 프라이빗 키를 사용하여 Bob이 암호화한 파일을 암호 해독하는 시나리오를 시뮬레이트합니다.  
   
- `Get Private Key` 단추(`buttonGetPrivateKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
+`Get Private Key` 단추(`buttonGetPrivateKey_Click`)에 대한 `Click` 이벤트 처리기로 다음 코드를 추가합니다.  
   
- [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
- [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
+[!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
+[!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>애플리케이션 테스트  
- 애플리케이션을 빌드한 후 다음과 같은 테스트 시나리오를 수행합니다.  
+## <a name="testing-the-application"></a>애플리케이션 테스트
+
+애플리케이션을 빌드한 후 다음과 같은 테스트 시나리오를 수행합니다.  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>키를 만들고 암호화 및 암호 해독하려면  
   
@@ -211,4 +227,7 @@ ms.locfileid: "84602182"
   
 ## <a name="see-also"></a>참고 항목
 
+- [암호화 모델](cryptography-model.md) -기본 클래스 라이브러리에서 암호화가 구현 되는 방법에 대해 설명 합니다.
 - [암호화 서비스](cryptographic-services.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

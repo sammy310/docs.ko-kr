@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854028"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557153"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core 및 .NET 5의 플랫폼 간 암호화
 
@@ -213,7 +213,7 @@ ECDH 키 곡선은 OS 라이브러리에 의해 정의 되며 해당 제한 사�
 
 DSA (디지털 서명 알고리즘) 키 생성은 시스템 라이브러리에 의해 수행 되며 크기 제한 및 성능 특성이 적용 됩니다.
 
-| 함수                      | Windows CNG | Linux | macOS         | Windows CAPI |
+| 기능                      | Windows CNG | Linux | macOS         | Windows CAPI |
 |-------------------------------|-------------|-------|---------------|--------------|
 | 키 만들기 (<= 1024 비트)   | ✔️         | ✔️    | ❌            | ✔️           |
 | 키 생성 (> 1024 비트)    | ✔️         | ✔️    | ❌            | ❌            |
@@ -365,7 +365,9 @@ macOS는 오프 라인 CRL 사용률을 지원 하지 않으므로 `X509Revocati
 
 macOS는 CRL (인증서 해지 목록)/a p (온라인 인증서 상태 프로토콜)/AIA (기관 정보 액세스)를 다운로드 하는 동안 사용자가 시작한 시간 제한을 지원 하지 않으므로 `X509ChainPolicy.UrlRetrievalTimeout` 가 무시 됩니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 * [.NET 암호화 모델](cryptography-model.md)
 * [.NET 암호화 서비스](cryptographic-services.md)
+* [패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성](vulnerabilities-cbc-mode.md)
+* [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

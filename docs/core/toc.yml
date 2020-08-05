@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: 네이티브 코드에서 .NET Core 호스팅
     href: tutorials/netcore-hosting.md
-  - name: '패키지, 메타패키지 및 프레임워크'
-    href: packages.md
   - name: 연속 통합
     href: tools/using-ci-with-cli.md

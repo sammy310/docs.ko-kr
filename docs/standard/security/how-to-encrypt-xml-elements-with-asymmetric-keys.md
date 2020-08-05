@@ -1,39 +1,39 @@
 ---
 title: '방법: 비대칭 키를 사용하여 XML 요소 암호화'
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - AES algorithm
-- System.Security.Cryptography.RSACryptoServiceProvider class
-- asymmetric keys [.NET Framework]
+- System.Security.Cryptography.RSA class
+- asymmetric keys [.NET]
 - System.Security.Cryptography.EncryptedXml class
 - XML encryption
 - key containers
 - Advanced Encryption Standard algorithm
-- Rijndael
-- encryption [.NET Framework], asymmetric keys
+- encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 475446f6206676e93ea72d16e01bcf1067c24e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1c824b00a1df920108cfcd8c4590b680020cdf3e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277377"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555789"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>방법: 비대칭 키를 사용하여 XML 요소 암호화
+
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은에 있는 XML 암호화에 대 한 World Wide Web 컨소시엄 (W3C) 사양을 참조 하십시오 <https://www.w3.org/TR/xmldsig-core/> .  
   
  XML 암호화를 사용하여 암호화된 XML 데이터가 포함된 <`EncryptedData`> 요소의 문서나 XML 요소를 대체할 수 있습니다.  <`EncryptedData`> 요소는 암호화 중에 사용 된 키와 프로세스에 대 한 정보를 포함 하는 하위 요소를 포함할 수도 있습니다.  XML 암호화를 사용하면 문서에 암호화된 여러 요소가 포함될 수 있고 한 요소가 여러 번 암호화될 수 있습니다.  이 절차의 코드 예제에서는 `EncryptedData` 나중에 암호 해독 중에 사용할 수 있는 다른 여러 하위 요소와 함께 <> 요소를 만드는 방법을 보여 줍니다.  
   
- 이 예제에서는 두 키를 사용하여 XML 요소를 암호화합니다.  RSA 퍼블릭/프라이빗 키 쌍을 생성하고 보안 키 컨테이너에 키 쌍을 저장합니다.  다음 예제에서는 Rijndael 알고리즘이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 별도 세션 키를 만듭니다.  이 예제에서는 AES 세션 키를 사용하여 XML 문서를 암호화한 다음 RSA 공개 키를 사용하여 AES 세션 키를 암호화합니다.  마지막으로,이 예제에서는 암호화 된 AES 세션 키와 암호화 된 XML 데이터를 새 <> 요소 내의 XML 문서에 저장 합니다 `EncryptedData` .  
+ 이 예제에서는 두 키를 사용하여 XML 요소를 암호화합니다.  RSA 퍼블릭/프라이빗 키 쌍을 생성하고 보안 키 컨테이너에 키 쌍을 저장합니다.  그런 다음 AES(Advanced Encryption Standard) (AES) 알고리즘을 사용 하 여 별도의 세션 키를 만듭니다.  이 예제에서는 AES 세션 키를 사용하여 XML 문서를 암호화한 다음 RSA 공개 키를 사용하여 AES 세션 키를 암호화합니다.  마지막으로,이 예제에서는 암호화 된 AES 세션 키와 암호화 된 XML 데이터를 새 <> 요소 내의 XML 문서에 저장 합니다 `EncryptedData` .  
   
  XML 요소를 암호 해독하려면 키 컨테이너에서 RSA 프라이빗 키를 검색하고 세션 키를 암호 해독하는 데 사용한 다음 세션 키를 사용하여 문서를 암호 해독합니다.  이 절차를 사용 하 여 암호화 된 XML 요소의 암호를 해독 하는 방법에 대 한 자세한 내용은 [방법: 비대칭 키를 사용 하 여 Xml 요소 암호 해독](how-to-decrypt-xml-elements-with-asymmetric-keys.md)을 참조 하세요.  
   
- 이 예제는 여러 애플리케이션이 암호화된 데이터를 공유해야 하거나 애플리케이션이 실행되는 시간 사이에 암호화된 데이터를 저장해야 경우에 적합합니다.  
+ 이 예제는 여러 애플리케이션이 암호화된 데이터를 공유해야 하거나 애플리케이션이 실행되는 시간 사이에 암호화된 데이터를 저장해야 경우에 적합합니다.
   
 ### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>비대칭 키를 사용하여 XML 요소를 암호화하려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "84277377"
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5. <xref:System.Security.Cryptography.RijndaelManaged> 클래스를 사용하여 새 세션 키를 만듭니다.  이 키는 XML 요소를 암호화한 다음 자체 암호화되어 XML 문서에 배치됩니다.  
+5. <xref:System.Security.Cryptography.Aes> 클래스를 사용하여 새 세션 키를 만듭니다.  이 키는 XML 요소를 암호화한 다음 자체 암호화되어 XML 문서에 배치됩니다.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
@@ -129,18 +129,24 @@ ms.locfileid: "84277377"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
-- 이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
+- .NET Framework를 대상으로 하는 프로젝트에서에 대 한 참조를 포함 `System.Security.dll` 합니다.
+
+- .NET Core 또는 .NET 5를 대상으로 하는 프로젝트에서 NuGet 패키지 [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)를 설치 합니다.
   
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 대칭 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 대칭 키를 전송하지 마세요.  또한 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
+## <a name="net-security"></a>.NET 보안
+
+대칭 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 대칭 키를 전송하지 마세요.  또한 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
   
- 소스 코드에 직접 키를 포함하지 마세요.  [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 포함 된 키를 쉽게 읽을 수 있습니다.  
+소스 코드에 직접 키를 포함하지 마세요.  포함 된 키는 [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 쉽게 읽을 수 있습니다.  
   
- 암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  디버거가 메모리에서 암호화 키를 읽거나 메모리 위치가 디스크에 페이징된 경우 하드 드라이브에서 읽을 수 있는 경우도 있습니다.  
+암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  디버거가 메모리에서 암호화 키를 읽거나 메모리 위치가 디스크에 페이징된 경우 하드 드라이브에서 읽을 수 있는 경우도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Security.Cryptography.Xml>
+- [암호화 모델](cryptography-model.md)
+- [암호화 서비스](cryptographic-services.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
 - [방법: 비대칭 키를 사용하여 XML 요소 해독](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)

@@ -1,22 +1,23 @@
 ---
 title: 데이터 해독
-ms.date: 03/30/2017
+description: 대칭 알고리즘 또는 비대칭 알고리즘을 사용 하 여 .NET에서 데이터의 암호를 해독 하는 방법에 대해 알아봅니다.
+ms.date: 07/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- data [.NET Framework], decryption
+- data [.NET], decryption
 - symmetric decryption
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 844561c0d207106a183243f5f2b3e0cea3e70422
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ba4c3ba43d688aeb66c67ec3f94f4a503d47892
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288370"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556984"
 ---
 # <a name="decrypting-data"></a>데이터 해독
 
@@ -24,28 +25,26 @@ ms.locfileid: "84288370"
 
 ## <a name="symmetric-decryption"></a>대칭 암호 해독
 
-대칭 알고리즘을 사용하여 암호화된 데이터의 암호 해독은 대칭 알고리즘을 사용하여 데이터를 암호화하는 데 사용된 프로세스와 비슷합니다. <xref:System.Security.Cryptography.CryptoStream> 클래스는 .NET Framework에서 제공하는 대칭 암호화 클래스와 함께 모든 관리되는 스트림 개체에서 읽은 데이터를 암호 해독하는 데 사용됩니다.
+대칭 알고리즘을 사용하여 암호화된 데이터의 암호 해독은 대칭 알고리즘을 사용하여 데이터를 암호화하는 데 사용된 프로세스와 비슷합니다. 클래스는 관리 되는 <xref:System.Security.Cryptography.CryptoStream> 스트림 개체에서 읽은 데이터를 해독 하기 위해 .net에서 제공 하는 대칭 암호화 클래스와 함께 사용 됩니다.
 
-다음 예제에서는 <xref:System.Security.Cryptography.RijndaelManaged> 클래스의 새 인스턴스를 만들고 <xref:System.Security.Cryptography.CryptoStream> 개체에서 암호 해독을 수행하는 데 사용하는 방법을 보여 줍니다. 이 예제에서는 먼저 **RijndaelManaged** 클래스의 새 인스턴스를 만듭니다. 그런 다음 **CryptoStream** 개체를 만들고 `myStream`이라는 관리되는 스트림의 값으로 초기화합니다. **RijndaelManaged** 클래스의 **CreateDecryptor** 메서드에 암호화에 사용된 것과 동일한 키 및 IV가 전달된 후 메서드가 **CryptoStream** 생성자에 전달됩니다. 끝으로, **CryptoStreamMode.Read** 열거형이 **CryptoStream** 생성자에 전달되어 스트림에 대한 읽기 권한을 지정합니다.
+다음 예제에서는 알고리즘에 대 한 기본 구현 클래스의 새 인스턴스를 만드는 방법을 보여 줍니다 <xref:System.Security.Cryptography.Aes> . 인스턴스는 개체에 대 한 암호 해독을 수행 하는 데 사용 됩니다 <xref:System.Security.Cryptography.CryptoStream> . 이 예제에서는 먼저 **Aes** 구현 클래스의 새 인스턴스를 만듭니다. 그런 다음 **CryptoStream** 개체를 만들고 `myStream`이라는 관리되는 스트림의 값으로 초기화합니다. 그런 다음 **Aes** 클래스의 **CreateDecryptor** 메서드에는 암호화에 사용 된 것과 동일한 키와 IV가 전달 된 다음 **CryptoStream** 생성자에 전달 됩니다.
 
 ```vb
-Dim rmCrypto As New RijndaelManaged()
-Dim cryptStream As New CryptoStream(myStream, rmCrypto.CreateDecryptor(rmCrypto.Key, rmCrypto.IV), CryptoStreamMode.Read)
+Dim aes As Aes = Aes.Create()
+Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
-RijndaelManaged rmCrypto = new RijndaelManaged();
-CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
+Aes aes = Aes.Create();
+CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
-다음 예제에서는 스트림을 만들고, 스트림을 암호 해독하고, 스트림에서 읽고, 스트림을 닫는 전체 프로세스를 보여 줍니다. 수신 대기하는 개체에 연결할 때 네트워크 스트림을 초기화하는 <xref:System.Net.Sockets.TcpListener> 개체가 생성됩니다. 그런 다음 **CryptoStream** 클래스 및 **RijndaelManaged** 클래스를 사용하여 네트워크 스트림을 암호 해독합니다. 이 예제에서는 키 및 IV 값이 성공적으로 전송되었거나 이전에 합의되었다고 가정합니다. 이러한 값을 암호화 및 전송하는 데 필요한 코드는 표시되지 않습니다.
+다음 예제에서는 스트림을 만들고, 스트림을 암호 해독하고, 스트림에서 읽고, 스트림을 닫는 전체 프로세스를 보여 줍니다. *TestData.txt*라는 파일을 읽는 파일 스트림 개체가 만들어집니다. 그런 다음 **CryptoStream** 클래스와 **Aes** 클래스를 사용 하 여 파일 스트림을 해독 합니다. 이 예에서는 [데이터 암호화](encrypting-data.md)를 위한 대칭 암호화 예제에서 사용 되는 키 및 IV 값을 지정 합니다. 이러한 값을 암호화 및 전송하는 데 필요한 코드는 표시되지 않습니다.
 
 ```vb
+Imports System
 Imports System.IO
-Imports System.Net
-Imports System.Net.Sockets
 Imports System.Security.Cryptography
-Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -54,33 +53,16 @@ Module Module1
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
         Try
-            'Initialize a TCPListener on port 11000
-            'using the current IP address.
-            Dim tcpListen As New TcpListener(IPAddress.Any, 11000)
+            'Create a file stream.
+            Dim myStream As FileStream = new FileStream("TestData.txt", FileMode.Open)
 
-            'Start the listener.
-            tcpListen.Start()
-
-            'Check for a connection every five seconds.
-            While Not tcpListen.Pending()
-                Console.WriteLine("Still listening. Will try in 5 seconds.")
-
-                Thread.Sleep(5000)
-            End While
-
-            'Accept the client if one is found.
-            Dim tcp As TcpClient = tcpListen.AcceptTcpClient()
-
-            'Create a network stream from the connection.
-            Dim netStream As NetworkStream = tcp.GetStream()
-
-            'Create a new instance of the RijndaelManaged class
+            'Create a new instance of the default Aes implementation class
             'and decrypt the stream.
-            Dim rmCrypto As New RijndaelManaged()
+            Dim aes As Aes = Aes.Create()
 
-            'Create an instance of the CryptoStream class, pass it the NetworkStream, and decrypt
+            'Create an instance of the CryptoStream class, pass it the file stream, and decrypt
             'it with the Rijndael class using the key and IV.
-            Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+            Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 
             'Read the stream.
             Dim sReader As New StreamReader(cryptStream)
@@ -90,11 +72,11 @@ Module Module1
 
             'Close the streams.
             sReader.Close()
-            netStream.Close()
-            tcp.Close()
+            myStream.Close()
             'Catch any exceptions.
         Catch
-            Console.WriteLine("The Listener Failed.")
+            Console.WriteLine("The decryption Failed.")
+            Throw
         End Try
     End Sub
 End Module
@@ -103,72 +85,52 @@ End Module
 ```csharp
 using System;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using System.Security.Cryptography;
-using System.Threading;
 
 class Class1
 {
-   static void Main(string[] args)
-   {
-      //The key and IV must be the same values that were used
-      //to encrypt the stream.
-      byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      try
-      {
-         //Initialize a TCPListener on port 11000
-         //using the current IP address.
-         TcpListener tcpListen = new TcpListener(IPAddress.Any, 11000);
+    static void Main(string[] args)
+    {
+        //The key and IV must be the same values that were used
+        //to encrypt the stream.
+        byte[] key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        byte[] iv = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        try
+        {
+            //Create a file stream.
+            FileStream myStream = new FileStream("TestData.txt", FileMode.Open);
 
-         //Start the listener.
-         tcpListen.Start();
+            //Create a new instance of the default Aes implementation class
+            Aes aes = Aes.Create();
 
-         //Check for a connection every five seconds.
-         while(!tcpListen.Pending())
-         {
-            Console.WriteLine("Still listening. Will try in 5 seconds.");
-            Thread.Sleep(5000);
-         }
+            //Create a CryptoStream, pass it the file stream, and decrypt
+            //it with the Aes class using the key and IV.
+            CryptoStream cryptStream = new CryptoStream(
+               myStream,
+               aes.CreateDecryptor(key, iv),
+               CryptoStreamMode.Read);
 
-         //Accept the client if one is found.
-         TcpClient tcp = tcpListen.AcceptTcpClient();
+            //Read the stream.
+            StreamReader sReader = new StreamReader(cryptStream);
 
-         //Create a network stream from the connection.
-         NetworkStream netStream = tcp.GetStream();
+            //Display the message.
+            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
 
-         //Create a new instance of the RijndaelManaged class
-         // and decrypt the stream.
-         RijndaelManaged rmCrypto = new RijndaelManaged();
-
-         //Create a CryptoStream, pass it the NetworkStream, and decrypt
-         //it with the Rijndael class using the key and IV.
-         CryptoStream cryptStream = new CryptoStream(netStream,
-            rmCrypto.CreateDecryptor(key, iv),
-            CryptoStreamMode.Read);
-
-         //Read the stream.
-         StreamReader sReader = new StreamReader(cryptStream);
-
-         //Display the message.
-         Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
-
-         //Close the streams.
-         sReader.Close();
-         netStream.Close();
-         tcp.Close();
-      }
-      //Catch any exceptions.
-      catch
-      {
-         Console.WriteLine("The Listener Failed.");
-      }
-   }
+            //Close the streams.
+            sReader.Close();
+            myStream.Close();
+        }
+        //Catch any exceptions.
+        catch
+        {
+            Console.WriteLine("The decryption failed.");
+            throw;
+        }
+    }
 }
 ```
 
-이전 샘플이 작동하려면 수신기에 대한 암호화된 연결이 필요합니다. 연결이 수신기에 사용된 것과 동일한 키, IV 및 알고리즘을 사용해야 합니다. 이러한 연결이 설정되면 메시지가 암호 해독되고 콘솔에 표시됩니다.
+앞의 예제에서는 [데이터 암호화](encrypting-data.md)를 위한 대칭 암호화 예제에 사용 된 것과 동일한 키, IV 및 알고리즘을 사용 합니다. 해당 예제에서 만든 *TestData.txt* 파일의 암호를 해독 하 고 콘솔에 원래 텍스트를 표시 합니다.
 
 ## <a name="asymmetric-decryption"></a>비대칭 암호 해독
 
@@ -176,30 +138,30 @@ class Class1
 
 안전한 암호화 키 컨테이너에 비대칭 키를 저장하는 방법 및 나중에 비대칭 키를 검색하는 방법에 대한 자세한 내용은 [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.
 
-다음 예제에서는 대칭 키 및 IV를 나타내는 두 바이트 배열의 암호 해독을 보여 줍니다. 제3자에게 쉽게 보낼 수 있는 형식으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체에서 비대칭 공개 키를 추출하는 방법에 대한 자세한 내용은 [Encrypting Data](encrypting-data.md)이라는 관리되는 스트림의 값으로 초기화합니다.
+다음 예제에서는 대칭 키 및 IV를 나타내는 두 바이트 배열의 암호 해독을 보여 줍니다. 제3자에게 쉽게 보낼 수 있는 형식으로 <xref:System.Security.Cryptography.RSA> 개체에서 비대칭 공개 키를 추출하는 방법에 대한 자세한 내용은 [Encrypting Data](encrypting-data.md)이라는 관리되는 스트림의 값으로 초기화합니다.
 
 ```vb
-'Create a new instance of the RSACryptoServiceProvider class.
-Dim rsa As New RSACryptoServiceProvider()
+'Create a new instance of the RSA class.
+Dim rsa As RSA = RSA.Create()
 
 ' Export the public key information and send it to a third party.
 ' Wait for the third party to encrypt some data and send it back.
 
 'Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, False)
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV, False)
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1)
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV, RSAEncryptionPadding.Pkcs1)
 ```
 
 ```csharp
-//Create a new instance of the RSACryptoServiceProvider class.
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+//Create a new instance of the RSA class.
+RSA rsa = RSA.Create();
 
 // Export the public key information and send it to a third party.
 // Wait for the third party to encrypt some data and send it back.
 
 //Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1);
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 ```
 
 ## <a name="see-also"></a>참고 항목
@@ -207,3 +169,7 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 - [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
 - [데이터 암호화](encrypting-data.md)
 - [암호화 서비스](cryptographic-services.md)
+- [암호화 모델](cryptography-model.md)
+- [플랫폼 간 암호화](cross-platform-cryptography.md)
+- [패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성](vulnerabilities-cbc-mode.md)
+- [ASP.NET Core 데이터 보호](/aspnet/core/security/data-protection/introduction)
