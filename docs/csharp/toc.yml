@@ -876,8 +876,6 @@
           href: programming-guide/statements-expressions-operators/index.md
         - name: 문
           href: programming-guide/statements-expressions-operators/statements.md
-        - name: 표현식
-          href: programming-guide/statements-expressions-operators/expressions.md
         - name: 식 본문 멤버
           href: programming-guide/statements-expressions-operators/expression-bodied-members.md
         - name: 익명 함수
@@ -1561,7 +1559,7 @@
       items:
         - name: 개요
           href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity'
+          displayName: 'operator precedence, operator associativity, expressions'
         - name: 산술 연산자
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
