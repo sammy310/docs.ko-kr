@@ -1,23 +1,24 @@
 ---
 title: 요소의 부분 값을 검색하는 방법(C#)
+description: 요소의 단순 값을 가져오는 방법을 알아봅니다. 단순 값은 특정 요소 전용입니다.
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 597859e5b66606aa0cff9c1a475e79e6b66c39fc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347441"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301582"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="bc17d-102">요소의 부분 값을 검색하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="bc17d-102">How to retrieve the shallow value of an element (C#)</span></span>
-<span data-ttu-id="bc17d-103">이 항목에서는 요소의 부분 값을 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="bc17d-104">단일 문자열로 연결된 모든 하위 요소의 값을 포함하는 상세 값과 달리 부분 값은 특정 요소의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a><span data-ttu-id="21b95-104">요소의 부분 값을 검색하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="21b95-104">How to retrieve the shallow value of an element (C#)</span></span>
+<span data-ttu-id="21b95-105">이 항목에서는 요소의 부분 값을 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-105">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="21b95-106">단일 문자열로 연결된 모든 하위 요소의 값을 포함하는 상세 값과 달리 부분 값은 특정 요소의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-106">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>  
   
- <span data-ttu-id="bc17d-105">캐스팅을 사용하거나 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성을 사용하여 요소 값을 검색하는 경우에는 상세 값이 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="bc17d-106">부분 값을 검색하려면 다음 예제와 같이 `ShallowValue` 확장 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="bc17d-107">요소의 내용을 기준으로 요소를 선택하려는 경우에는 부분 값을 검색하는 것이 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
+ <span data-ttu-id="21b95-107">캐스팅을 사용하거나 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성을 사용하여 요소 값을 검색하는 경우에는 상세 값이 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-107">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="21b95-108">부분 값을 검색하려면 다음 예제와 같이 `ShallowValue` 확장 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-108">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="21b95-109">요소의 내용을 기준으로 요소를 선택하려는 경우에는 부분 값을 검색하는 것이 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-109">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>  
   
- <span data-ttu-id="bc17d-108">다음 예제에서는 요소의 부분 값을 검색하는 확장 메서드를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="bc17d-109">그런 다음 쿼리에 해당 확장명 메서드를 사용하여 계산된 값을 포함하는 모든 요소를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
+ <span data-ttu-id="21b95-110">다음 예제에서는 요소의 부분 값을 검색하는 확장 메서드를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-110">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="21b95-111">그런 다음 쿼리에 해당 확장명 메서드를 사용하여 계산된 값을 포함하는 모든 요소를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-111">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc17d-110">예제</span><span class="sxs-lookup"><span data-stu-id="bc17d-110">Example</span></span>  
- <span data-ttu-id="bc17d-111">아래에 있는 Report.xml 텍스트 파일은 이 예제의 소스입니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-111">The following text file, Report.xml, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="21b95-112">예제</span><span class="sxs-lookup"><span data-stu-id="21b95-112">Example</span></span>  
+ <span data-ttu-id="21b95-113">아래에 있는 Report.xml 텍스트 파일은 이 예제의 소스입니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-113">The following text file, Report.xml, is the source for this example.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +71,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="bc17d-112">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bc17d-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="21b95-114">이 예에서 생성되는 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="21b95-114">This example produces the following output:</span></span>  
   
 ```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  
@@ -79,6 +80,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc17d-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bc17d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21b95-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="21b95-115">See also</span></span>
 
-- [<span data-ttu-id="bc17d-114">LINQ to XML 축(C#)</span><span class="sxs-lookup"><span data-stu-id="bc17d-114">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="21b95-116">LINQ to XML 축(C#)</span><span class="sxs-lookup"><span data-stu-id="21b95-116">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)

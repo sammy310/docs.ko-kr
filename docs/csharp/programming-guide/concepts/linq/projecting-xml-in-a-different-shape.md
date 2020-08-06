@@ -1,25 +1,26 @@
 ---
 title: 여러 모양으로 XML 프로젝션(C#)
+description: XML을 원본 XML과 다른 모양으로 프로젝션하는 방법을 알아봅니다. WindowsBase 어셈블리의 클래스를 사용하는 코드 예제를 검토합니다.
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 492c0671b6a81f7e6b8d5f93698f84b88b14bd23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299099"
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="ebd4a-102">여러 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="ebd4a-102">Projecting XML in a Different Shape (C#)</span></span>
-<span data-ttu-id="ebd4a-103">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="e34c8-104">여러 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="e34c8-104">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="e34c8-105">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-105">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="ebd4a-104">많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="ebd4a-105">특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="e34c8-106">많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-106">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="e34c8-107">특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-107">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ebd4a-106">예제</span><span class="sxs-lookup"><span data-stu-id="ebd4a-106">Example</span></span>  
- <span data-ttu-id="ebd4a-107">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="ebd4a-108">또한 각 단락의 스타일과 텍스트도 식별하고</span><span class="sxs-lookup"><span data-stu-id="ebd4a-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="ebd4a-109">마지막으로 다른 모양으로 XML을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="ebd4a-110">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="ebd4a-111">프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="e34c8-108">예제</span><span class="sxs-lookup"><span data-stu-id="e34c8-108">Example</span></span>  
+ <span data-ttu-id="e34c8-109">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-109">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="e34c8-110">또한 각 단락의 스타일과 텍스트도 식별하고</span><span class="sxs-lookup"><span data-stu-id="e34c8-110">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="e34c8-111">마지막으로 다른 모양으로 XML을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-111">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="e34c8-112">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-112">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="e34c8-113">프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-113">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="ebd4a-112">이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="e34c8-114">이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e34c8-114">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="ebd4a-113">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="ebd4a-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="ebd4a-114"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="e34c8-115">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="e34c8-115">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="e34c8-116"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-116">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +164,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="ebd4a-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="e34c8-117">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-117">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -230,8 +231,8 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="ebd4a-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="ebd4a-116">Next Steps</span></span>  
- <span data-ttu-id="ebd4a-117">다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd4a-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="e34c8-118">다음 단계</span><span class="sxs-lookup"><span data-stu-id="e34c8-118">Next Steps</span></span>  
+ <span data-ttu-id="e34c8-119">다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="e34c8-119">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
-- [<span data-ttu-id="ebd4a-118">Word 문서에서 텍스트 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="ebd4a-118">Finding Text in Word Documents (C#)</span></span>](./finding-text-in-word-documents.md)  
+- [<span data-ttu-id="e34c8-120">Word 문서에서 텍스트 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="e34c8-120">Finding Text in Word Documents (C#)</span></span>](./finding-text-in-word-documents.md)  
   

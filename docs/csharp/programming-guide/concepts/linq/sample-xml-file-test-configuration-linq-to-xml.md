@@ -1,18 +1,19 @@
 ---
 title: '샘플 XML 파일: 테스트 구성(LINQ to XML)'
+description: 이 XML 파일은 LINQ to XML 설명서의 다양한 예제에서 사용됩니다. 이 파일은 테스트 구성 파일입니다.
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 713e0b69ea896d9f4198ae68f1a3a258d74f24f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14402a4d7988e767464a53a159bcb25661dc82f8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487242"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302466"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="e5d7b-102">샘플 XML 파일: 테스트 구성(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e5d7b-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="e5d7b-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e5d7b-104">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="e5d7b-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="ad9b3-104">샘플 XML 파일: 테스트 구성(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ad9b3-104">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="ad9b3-105">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad9b3-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ad9b3-106">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="ad9b3-106">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="e5d7b-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="e5d7b-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="ad9b3-107">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="ad9b3-107">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
