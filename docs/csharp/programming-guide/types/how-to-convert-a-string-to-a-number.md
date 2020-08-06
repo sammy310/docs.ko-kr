@@ -1,5 +1,6 @@
 ---
 title: 문자열을 숫자로 변환하는 방법 - C# 프로그래밍 가이드
+description: C#에서 Parse, TryParse 또는 Convert 클래스 메서드를 호출하여 문자열을 숫자로 변환하는 방법을 알아봅니다.
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442204"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381972"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>문자열을 숫자로 변환하는 방법(C# 프로그래밍 가이드)
 
@@ -56,6 +57,6 @@ ms.locfileid: "83442204"
   
 ## <a name="see-also"></a>참조
 
-- [유형](./index.md)
+- [형식](./index.md)
 - [문자열이 숫자 값을 나타내는지 확인 방법](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)

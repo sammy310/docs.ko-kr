@@ -1,5 +1,6 @@
 ---
 title: Office interop 개체에 액세스하는 방법 - C# 프로그래밍 가이드
+description: Office API 개체에 간편하게 액세스할 수 있는 C# 기능에 대해 알아봅니다. 새 기능을 사용하여 Excel 워크시트를 만들고 표시하는 코드를 작성합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700837"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303025"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office interop 개체에 액세스하는 방법(C# 프로그래밍 가이드)
 

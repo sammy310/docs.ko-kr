@@ -1,16 +1,17 @@
 ---
 title: 바이트 배열을 int로 변환하는 방법 - C# 프로그래밍 가이드
+description: 바이트 배열을 int로 변환하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 9f477649dba1b42d7a10d521c010977707daf3ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24037a5e212326cf5e670214a6774eff52bd8faf
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75698757"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381569"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>바이트 배열을 int로 변환하는 방법(C# 프로그래밍 가이드)
 
@@ -47,8 +48,8 @@ ms.locfileid: "75698757"
 
 [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.BitConverter>
 - <xref:System.BitConverter.IsLittleEndian>
-- [유형](./index.md)
+- [형식](./index.md)

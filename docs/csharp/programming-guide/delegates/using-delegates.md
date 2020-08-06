@@ -1,15 +1,16 @@
 ---
 title: 대리자 사용 - C# 프로그래밍 가이드
+description: 대리자를 사용하는 방법을 알아봅니다. 대리자는 메서드를 안전하게 캡슐화하는 개체 지향적이고 형식이 안전하며 보안이 유지되는 형식입니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a9b625b8c0785ed2f446be27c11dc76108bc4bce
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302154"
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
 
@@ -63,11 +64,11 @@ The number is: 3
 
 멀티캐스트 대리자는 이벤트 처리에서 광범위하게 사용됩니다. 이벤트 소스 개체는 해당 이벤트를 받도록 등록된 받는 사람 개체에 이벤트 알림을 보냅니다. 이벤트를 등록하기 위해 받는 사람은 이벤트를 처리하도록 설계된 메서드를 만든 다음 해당 메서드의 대리자를 만들어 이벤트 소스로 전달합니다. 소스는 이벤트 발생 시 대리자를 호출합니다. 그러면 대리자가 받는 사람에 대해 이벤트 처리 메서드를 호출하여 이벤트 데이터를 전달합니다. 지정된 이벤트의 대리자 형식은 이벤트 소스에 의해 정의됩니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
 
-컴파일 시간에 할당된 서로 다른 형식의 두 대리자를 비교하면 컴파일 오류가 발생합니다. 대리자 인스턴스가 정적 `System.Delegate` 형식이면 비교는 허용되지만 런타임에서 false가 반환됩니다. 예를 들어:
+컴파일 시간에 할당된 서로 다른 형식의 두 대리자를 비교하면 컴파일 오류가 발생합니다. 대리자 인스턴스가 정적 `System.Delegate` 형식이면 비교는 허용되지만 런타임에서 false가 반환됩니다. 예를 들면 다음과 같습니다.
 
 [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [대리자](./index.md)

@@ -1,13 +1,14 @@
 ---
 title: XmlReader에서 XML 조각을 스트리밍하는 방법(C#)
+description: XmlReader에서 XML 조각을 스트리밍하는 방법을 알아봅니다. 이 방법은 대량 XML 파일을 처리하는 데 사용됩니다.
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e35322724712816180d48c1957719cf87079aedd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714650"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301023"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>XmlReader에서 XML 조각을 스트리밍하는 방법(C#)
 

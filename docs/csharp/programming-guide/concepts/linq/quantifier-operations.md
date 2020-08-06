@@ -1,13 +1,14 @@
 ---
 title: 수량자 작업(C#)
+description: 수량자 작업에 대해 알아봅니다. 이러한 작업은 시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 여부를 나타내는 부울 값을 반환합니다.
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 5c931e0971a2ae7970415905be8772a64a82ee39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce06f887d3ad7b10cbdedf9e33072df2c0819ef1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635485"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299151"
 ---
 # <a name="quantifier-operations-c"></a>수량자 작업(C#)
 수량자 작업은 시퀀스에서 조건을 충족하는 요소가 일부인지 전체인지를 나타내는 <xref:System.Boolean> 값을 반환합니다.  
@@ -22,9 +23,9 @@ ms.locfileid: "75635485"
   
 |메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|모두|시퀀스의 모든 요소가 조건을 만족하는지를 확인합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|임의의 값|시퀀스의 임의의 요소가 조건을 만족하는지를 확인합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
-|포함|시퀀스에 지정된 요소가 들어 있는지를 확인합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
+|모두|시퀀스의 모든 요소가 조건을 만족하는지를 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|임의의 값|시퀀스의 임의의 요소가 조건을 만족하는지를 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|포함|시퀀스에 지정된 요소가 들어 있는지를 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
 
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75635485"
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

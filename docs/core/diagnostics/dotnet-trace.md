@@ -2,12 +2,12 @@
 title: dotnet-trace 도구 - .NET Core
 description: dotnet-trace 명령줄 도구를 설치하고 사용합니다.
 ms.date: 11/21/2019
-ms.openlocfilehash: 6dd968dc49522229dca02c0dc6f3de898026dd82
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924853"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517310"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -38,13 +38,13 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>옵션
 
-- **`--version`**
-
-  dotnet-trace 유틸리티의 버전을 표시합니다.
-
 - **`-h|--help`**
 
   명령줄 도움말을 표시합니다.
+
+- **`--version`**
+
+  dotnet-trace 유틸리티의 버전을 표시합니다.
 
 ## <a name="commands"></a>명령
 
@@ -62,23 +62,45 @@ dotnet-trace [-h, --help] [--version] <command>
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
-    [--providers] [--profile <profile-name>] [--format]
+dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
+    [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
+    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
 ```
 
 ### <a name="options"></a>옵션
-
-- **`-p|--process-id <PID>`**
-
-  추적을 수집하는 프로세스입니다.
 
 - **`--buffersize <size>`**
 
   메모리 내 순환 버퍼의 크기를 MB(메가바이트) 단위로 설정합니다. 기본값은 256MB입니다.
 
+- **`--clreventlevel <clreventlevel>`**
+
+  내보낼 CLR 이벤트의 자세한 정도입니다.
+
+- **`--clrevents <clrevents>`**
+
+  내보낼 CLR 런타임 이벤트의 목록입니다.
+
+- **`--format {Chromium|NetTrace|Speedscope}`**
+
+  추적 파일 변환에 대한 출력 형식을 설정합니다. 기본값은 `NetTrace`입니다.
+
+- **`-n, --name <name>`**
+
+  추적을 수집할 프로세스의 이름입니다.
+
 - **`-o|--output <trace-file-path>`**
 
-  수집된 추적 데이터의 출력 경로입니다. 지정하지 않으면 기본값인 `trace.nettrace`로 지정됩니다.
+  수집된 추적 데이터의 출력 경로입니다. 지정하지 않으면 기본값인 `trace.nettrace`로 설정됩니다.
+
+- **`-p|--process-id <PID>`**
+
+  추적을 수집할 프로세스 ID입니다.
+
+- **`--profile <profile-name>`**
+
+  일반적인 추적 시나리오를 간략하게 지정할 수 있는 미리 정의되어 명명된 공급자 구성 세트입니다.
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -90,14 +112,6 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
   - `Provider`의 형식: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]`
   - `KeyValueArgs`의 형식: `[key1=value1][;key2=value2]`
 
-- **`--profile <profile-name>`**
-
-  일반적인 추적 시나리오를 간략하게 지정할 수 있는 미리 정의되어 명명된 공급자 구성 세트입니다.
-
-- **`--format {NetTrace|Speedscope}`**
-
-  추적 파일 변환에 대한 출력 형식을 설정합니다. 기본값은 `NetTrace`입니다.
-
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
 `nettrace` 추적을 대체 추적 분석 도구와 함께 사용할 대체 형식으로 변환합니다.
@@ -105,7 +119,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
+dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
 ### <a name="arguments"></a>인수
@@ -116,7 +130,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ### <a name="options"></a>옵션
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format <Chromium|NetTrace|Speedscope>`**
 
   추적 파일 변환에 대한 출력 형식을 설정합니다.
 
@@ -126,7 +140,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
-첨부할 수 있는 dotnet 프로세스를 나열합니다.
+ 추적을 수집할 수 있는 dotnet 프로세스를 나열합니다.
 
 ### <a name="synopsis"></a>개요
 

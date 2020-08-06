@@ -1,16 +1,17 @@
 ---
 title: 참조 같음(ID)을 테스트하는 방법 - C# 프로그래밍 가이드
+description: 참조 같음(ID)을 테스트하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fece0fbc0179f5707e7f3fcd62371b8dde84eb6a
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75699056"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381387"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>참조 같음(ID)을 테스트하는 방법(C# 프로그래밍 가이드)
 형식에서 참조 같음 비교를 지원하기 위해 사용자 지정 논리를 구현할 필요는 없습니다. 이 기능은 정적 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 메서드가 모든 형식에 대해 제공합니다.  
@@ -26,6 +27,6 @@ ms.locfileid: "75699056"
   
  동일한 어셈블리 내의 상수 문자열은 항상 런타임에서 인턴 지정됩니다. 즉, 고유한 각 리터럴 문자열의 인스턴스 하나만 유지됩니다. 그러나 런타임은 런타임에 생성된 문자열이 인턴 지정되도록 보장하지 않으며, 서로 다른 어셈블리에 있는 동일한 두 상수 문자열이 인턴 지정되도록 보장하지도 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [같음 비교](./equality-comparisons.md)

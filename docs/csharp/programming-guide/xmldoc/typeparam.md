@@ -1,5 +1,6 @@
 ---
 title: <typeparam> - C# 프로그래밍 가이드
+description: XML <typeparam> 태그에 대해 알아봅니다. 이 태그는 제네릭 형식 또는 메서드 선언의 주석에서 형식 매개 변수를 설명하는 데 사용됩니다.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793361"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380789"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam>(C# 프로그래밍 가이드)
 

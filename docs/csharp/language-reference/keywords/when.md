@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712834"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426997"
 ---
 # <a name="when-c-reference"></a>when(C# 참조)
 
-`when` 상황별 키워드를 사용하여 두 가지 상황에서 필터 조건을 지정할 수 있습니다.
+`when` 상황별 키워드를 사용하여 다음 컨텍스트에서 필터 조건을 지정할 수 있습니다.
 
 - [try/catch](try-catch.md) 또는 [try/catch/finally](try-catch-finally.md) 블록의 `catch` 문에서
 - [switch](switch.md) 문의 `case` 레이블에서
+- [`switch` 식](../operators/switch-expression.md)에서
 
 ## <a name="when-in-a-catch-statement"></a>`catch` 문의 `when`
 
@@ -49,7 +50,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [switch 문](switch.md)
 - [try/catch 문](try-catch.md)

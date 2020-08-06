@@ -1,5 +1,6 @@
 ---
 title: 플랫폼 호출을 사용하여 WAV 파일을 재생하는 방법 - C# 프로그래밍 가이드
+description: 이 C# 코드 예제에서는 플랫폼 호출 서비스를 사용하여 Windows 운영 체제에서 WAV 사운드 파일을 재생하는 방법을 설명합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 3ea90f0739ad45c31e4f25836c9de8e708dff2cc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b30cb08e2dcde0eb85e8d88a690ae24bf7ae7f22
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700824"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302986"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>플랫폼 호출을 사용하여 WAV 파일을 재생하는 방법(C# 프로그래밍 가이드)
 

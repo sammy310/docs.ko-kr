@@ -1,13 +1,14 @@
 ---
 title: XDocument 클래스 개요(C#)
+description: C#의 XDocument 클래스에는 XML 선언, 처리 명령 및 주석을 포함하여 유효한 XML 문서에 필요한 정보가 포함되어 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d522cef25e99e4a5ea54e644855c8dfa7a05f4a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302193"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 클래스 개요(C#)
 이 항목에서는 <xref:System.Xml.Linq.XDocument> 클래스에 대해 소개합니다.  
@@ -86,6 +87,6 @@ d.Save("test.xml");
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to XML 프로그래밍 개요(C#)](./linq-to-xml-overview.md)

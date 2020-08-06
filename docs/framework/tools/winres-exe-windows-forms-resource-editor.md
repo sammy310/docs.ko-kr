@@ -1,5 +1,6 @@
 ---
 title: Winres.exe(Windows 리소스 지역화 편집기)
+description: Windows 리소스 지역화 편집기인 Winres.exe를 사용합니다. 지역화 전문가는 이 시각적 레이아웃 도구를 활용하여 양식에서 사용되는 Windows Forms UI 리소스를 지역화할 수 있습니다.
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715702"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516907"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
 
@@ -135,7 +136,7 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 
    도구는 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일을 저장합니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

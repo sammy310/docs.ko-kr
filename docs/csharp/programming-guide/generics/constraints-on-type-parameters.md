@@ -1,17 +1,18 @@
 ---
 title: 형식 매개 변수에 대한 제약 조건 - C# 프로그래밍 가이드
+description: 형식 매개 변수에 대한 제약 조건을 알아봅니다. 제약 조건은 형식 인수에 포함되어야 하는 기능을 컴파일러에 알립니다.
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 4c4554c808ab15776f3217c257e0a60119ea2338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368363"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301946"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 

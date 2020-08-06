@@ -1,16 +1,17 @@
 ---
 title: 인터페이스의 인덱서 - C# 프로그래밍 가이드
+description: C#의 인터페이스에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서의 접근자와 클래스 인덱서의 접근자가 어떻게 다른지 알아봅니다.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 9ce6e4f0e0533c2880c6241f44409435248a336a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec77843bdf3181a543bd6c02cfb034b21ded1ae7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287482"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303103"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
 

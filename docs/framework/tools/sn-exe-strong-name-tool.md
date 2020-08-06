@@ -1,5 +1,6 @@
 ---
 title: Sn.exe(강력한 이름 도구)
+description: 강력한 이름 도구인 Sn.exe를 시작합니다. 강력한 이름을 사용하여 어셈블리에 서명합니다. 키를 관리하고 서명을 생성 및 확인합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - public keys, signing files
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: b5eee15a08dcae42263e06939c197ec0848816a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180310"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517193"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../standard/assembly/strong-named.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
@@ -52,10 +53,10 @@ sn [-quiet][option [parameter(s)]]
 |`-i infile container`|지정된 키 컨테이너에 있는 *infile*에서 키 쌍을 설치합니다. 키 컨테이너는 강력한 이름 CSP에 상주합니다.|  
 |`-k [keysize] outfile`|지정한 크기의 새 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 키를 생성하여 지정된 파일에 씁니다.  퍼블릭 키와 프라이빗 키 모두 이 파일에 작성됩니다.<br /><br /> 키 크기를 지정하지 않으면 Microsoft 고급 암호화 공급자가 설치된 경우 기본적으로 1,024비트 키가 생성되고 그러지 않은 경우 512비트 키가 생성됩니다.<br /><br /> *keysize* 매개 변수는 Microsoft 고급 암호화 공급자가 설치된 경우 8비트씩 증가시킬 수 있는 384비트에서 16,384비트까지의 키 길이를 지원합니다.  Microsoft Base Cryptographic Provider가 설치되어 있는 경우에는 길이가 384 - 512비트(8비트 단위로 증가)인 키를 지원합니다.|  
 |`-m [y|n]`|키 컨테이너가 컴퓨터 관련 컨테이너인지 아니면 사용자 관련 컨테이너인지를 지정합니다. *y*를 지정하면 키 컨테이너는 컴퓨터 관련 컨테이너입니다. *n*을 지정하면 키 컨테이너는 사용자 관련 컨테이너입니다.<br /><br /> y나 n을 모두 지정하지 않으면 현재 설정이 표시됩니다.|  
-|`-o infile [outfile]`|*infile*에서 공개 키를 추출하여 .csv 파일에 저장합니다. 공개 키의 각 바이트는 쉼표로 구분됩니다. 이 형식은 키에 대한 참조를 소스 코드의 초기화된 배열로 하드 코드하는 데 유용합니다. *outfile*을 지정하지 않으면 출력 파일은 클립보드에 넣어집니다. **참고:** 이 옵션은 입력 파일에 공개 키만 있는지는 확인하지 않습니다. `infile`에 프라이빗 키를 포함한 키 쌍이 들어 있으면 프라이빗 키도 추출됩니다.|  
+|`-o infile [outfile]`|*infile*에서 공개 키를 추출하여 .csv 파일에 저장합니다. 공개 키의 각 바이트는 쉼표로 구분됩니다. 이 형식은 키에 대한 참조를 소스 코드의 초기화된 배열로 하드 코드하는 데 유용합니다. *outfile*을 지정하지 않으면 출력 파일은 클립보드에 넣어집니다. **참고:**  이 옵션은 입력 파일에 공개 키만 있는지는 확인하지 않습니다. `infile`에 프라이빗 키를 포함한 키 쌍이 들어 있으면 프라이빗 키도 추출됩니다.|  
 |`-p infile outfile [hashalg]`|*infile*의 키 쌍에서 공개 키를 추출하며 *outfile*에 저장하며, 이 경우 *hashalg*에서 지정된 RSA 알고리즘을 선택적으로 사용합니다. 이 공개 키는 [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)의 **/delaysign+** 및 **/keyfile** 옵션을 사용하여 어셈블리 서명을 연기하는 데 사용될 수 있습니다. 어셈블리 서명이 연기되면 컴파일 타임에 퍼블릭 키만 설정되고, 나중에 프라이빗 키가 알려질 때 서명을 추가할 공간이 파일에 예약됩니다.|  
 |`-pc container outfile [hashalg]`|*container*의 키 쌍에서 공개 키를 추출하여 *outfile*에 저장합니다. *hashalg* 옵션을 사용할 경우 RSA 알고리즘은 공개 키를 추출하는 데 사용됩니다.|  
-|`-Pb [y|n]`|강력한 이름 건너뛰기 정책을 적용할지 여부를 지정합니다. *y*를 지정하면 완전 신뢰 <xref:System.AppDomain>에 완전 신뢰 어셈블리가 로드될 때 강력한 이름의 유효성이 검사되지 않습니다. *n*을 지정하면 강력한 이름이 올바른지 검사되지만 특정 강력한 이름은 검사되지 않습니다. 완전 신뢰 어셈블리에는 <xref:System.Security.Permissions.StrongNameIdentityPermission>이 적용되지 않으므로 강력한 이름이 일치하는지 여부는 직접 검사해야 합니다.<br /><br /> `y`나 `n`을 모두 지정하지 않으면 현재 설정이 표시됩니다. 기본값은 `y`입니다. **참고:** 64비트 컴퓨터에서는 Sn.exe의 32비트 및 64비트 인스턴스 모두에 이 매개 변수를 설정해야 합니다.|  
+|`-Pb [y|n]`|강력한 이름 건너뛰기 정책을 적용할지 여부를 지정합니다. *y*를 지정하면 완전 신뢰 <xref:System.AppDomain>에 완전 신뢰 어셈블리가 로드될 때 강력한 이름의 유효성이 검사되지 않습니다. *n*을 지정하면 강력한 이름이 올바른지 검사되지만 특정 강력한 이름은 검사되지 않습니다. 완전 신뢰 어셈블리에는 <xref:System.Security.Permissions.StrongNameIdentityPermission>이 적용되지 않으므로 강력한 이름이 일치하는지 여부는 직접 검사해야 합니다.<br /><br /> `y`나 `n`을 모두 지정하지 않으면 현재 설정이 표시됩니다. 기본값은 `y`입니다. **참고:**  64비트 컴퓨터에서는 Sn.exe의 32비트 및 64비트 인스턴스 모두에 이 매개 변수를 설정해야 합니다.|  
 |`-q[uiet]`|자동 모드를 지정합니다. 즉, 성공 메시지가 표시되지 않도록 합니다.|  
 |`-R[a] assembly infile`|*infile*에 있는 키 쌍을 사용하여 이전에 서명했거나 서명을 연기한 어셈블리에 다시 서명합니다.<br /><br /> **-Ra**를 사용하는 경우 어셈블리에 있는 모든 파일에 대해 해시가 다시 계산됩니다.|  
 |`-Rc[a] assembly container`|*container*에 있는 키 쌍을 사용하여 이전에 서명했거나 서명이 연기된 어셈블리에 다시 서명합니다.<br /><br /> **-Rca**를 사용하는 경우 어셈블리에 있는 모든 파일에 대해 해시가 다시 계산됩니다.|  
@@ -68,7 +69,7 @@ sn [-quiet][option [parameter(s)]]
 |`-vf assembly`|*assembly*에서 강력한 이름을 확인합니다. **-v** 옵션과 달리 **-vf** 옵션을 사용하면 **-Vr** 옵션으로 비활성화된 경우에도 확인이 수행됩니다.|  
 |`-Vk regfile.reg assembly [userlist] [infile]`|확인을 건너뛸 지정된 어셈블리를 등록하는 데 사용할 수 있는 등록 항목 파일(.reg)을 만듭니다. **-Vr** 옵션에 적용되는 어셈블리 명명 규칙은 **–Vk**에도 적용됩니다. *userlist* 및 *infile* 옵션에 대한 자세한 내용은 **–Vr** 옵션을 참조하세요.|  
 |`-Vl`|해당 컴퓨터의 강력한 이름 확인에 대한 현재 설정을 표시합니다.|  
-|`-Vr  assembly [userlist] [infile]`|확인을 건너뛸 *assembly*를 등록합니다. 필요에 따라 확인 건너뛰기 적용을 쉼표로 구분된 사용자 이름 목록에 지정할 수 있습니다. *infile*을 지정하면 확인은 활성화된 상태로 유지되지만 *infile*의 공개 키는 확인 작업에 사용됩니다. *assembly*를 *\*, strongname* 형식으로 지정하여 지정된 강력한 이름을 가진 모든 어셈블리를 등록할 수 있습니다. *strongname*으로 공개 키의 토큰 형식을 나타내는 16진수 문자열을 지정합니다. 공개 키 토큰을 표시하려면 **-t** 및 **-T** 옵션을 참조하세요. **주의:** 개발하는 동안에만 이 옵션을 사용합니다. 어셈블리를 확인 생략 목록에 추가하면 보안상 허점이 발생합니다. 악의적인 어셈블리가 확인 건너뛰기 목록에 추가된 어셈블리의 정규화된 어셈블리 이름(어셈블리 이름, 버전, culture 및 공개 키 토큰)을 사용하여 해당 어셈블리의 ID를 모방할 수 있습니다. 이렇게 되면 악의적인 어셈블리도 확인을 건너뛸 수 있습니다.|  
+|`-Vr  assembly [userlist] [infile]`|확인을 건너뛸 *assembly*를 등록합니다. 필요에 따라 확인 건너뛰기 적용을 쉼표로 구분된 사용자 이름 목록에 지정할 수 있습니다. *infile*을 지정하면 확인은 활성화된 상태로 유지되지만 *infile*의 공개 키는 확인 작업에 사용됩니다. *assembly*를 *\*, strongname* 형식으로 지정하여 지정된 강력한 이름을 가진 모든 어셈블리를 등록할 수 있습니다. *strongname*으로 공개 키의 토큰 형식을 나타내는 16진수 문자열을 지정합니다. 공개 키 토큰을 표시하려면 **-t** 및 **-T** 옵션을 참조하세요. **주의:**  개발하는 동안에만 이 옵션을 사용합니다. 어셈블리를 확인 생략 목록에 추가하면 보안상 허점이 발생합니다. 악의적인 어셈블리가 확인 건너뛰기 목록에 추가된 어셈블리의 정규화된 어셈블리 이름(어셈블리 이름, 버전, culture 및 공개 키 토큰)을 사용하여 해당 어셈블리의 ID를 모방할 수 있습니다. 이렇게 되면 악의적인 어셈블리도 확인을 건너뛸 수 있습니다.|  
 |||  
 |`-Vu  assembly`|확인을 건너뛸 *assembly*를 등록 취소합니다. **-Vr**에 적용되는 것과 동일한 어셈블리 명명 규칙이 **-Vu**에도 적용됩니다.|  
 |`-Vx`|확인을 건너뛸 모든 항목을 제거합니다.|  
@@ -122,7 +123,7 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)

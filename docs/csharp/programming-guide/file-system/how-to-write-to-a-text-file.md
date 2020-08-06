@@ -1,5 +1,6 @@
 ---
 title: 텍스트 파일에 쓰는 방법 - C# 프로그래밍 가이드
+description: C#를 사용하여 텍스트 파일을 작성하는 방법을 알아봅니다. 몇 가지 코드 예제와 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4108163121d56268b810121ca3ae2b2c1338aeab
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712249"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301647"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>텍스트 파일에 쓰는 방법(C# 프로그래밍 가이드)
 다음 코드 예제에서는 파일에 텍스트를 쓰는 여러 가지 방법을 보여 줍니다. 처음 두 예에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 편의 메서드를 사용하여 `IEnumerable<string>`의 각 요소와 문자열을 텍스트 파일에 씁니다. 예제 3에서는 파일에 쓸 때 각 줄을 개별적으로 처리해야 하는 경우 파일에 텍스트를 추가하는 방법을 보여 줍니다. 예제 1-3에서는 파일의 기존 내용을 모두 덮어쓰지만 예제 4에서는 기존 파일에 텍스트를 추가하는 방법을 보여 줍니다.  

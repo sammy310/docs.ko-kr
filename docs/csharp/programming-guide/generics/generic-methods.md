@@ -1,15 +1,16 @@
 ---
 title: 제네릭 메서드 - C# 프로그래밍 가이드
+description: 제네릭 메서드라고 하는 형식 매개 변수를 사용하여 선언된 메서드에 대해 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77b81de26961a8b59644643bf043ed723dbf374f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712197"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301881"
 ---
 # <a name="generic-methods-c-programming-guide"></a>제네릭 메서드(C# 프로그래밍 가이드)
 제네릭 메서드는 다음과 같은 형식 매개 변수를 사용하여 선언된 메서드입니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "75712197"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#methods)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

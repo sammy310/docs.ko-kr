@@ -1,5 +1,6 @@
 ---
 title: <exception> - C# 프로그래밍 가이드
+description: XML <exception> 태그에 대해 알아봅니다. 이 태그는 throw할 수 있는 예외를 지정하는 데 사용되며 메서드, 속성, 이벤트 및 인덱서에 적용될 수 있습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287393"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381738"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception>(C# 프로그래밍 가이드)
 

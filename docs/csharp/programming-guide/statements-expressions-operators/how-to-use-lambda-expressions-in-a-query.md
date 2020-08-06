@@ -1,15 +1,16 @@
 ---
 title: 쿼리에 람다 식을 사용하는 방법 - C# 프로그래밍 가이드
+description: 쿼리에 람다 식을 사용하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711963"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381634"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>쿼리에 람다 식을 사용하는 방법(C# 프로그래밍 가이드)
 람다 식은 쿼리 구문에 직접 사용하지 않고 메서드 호출에 사용하며, 쿼리 식에 메서드 호출이 포함될 수 있습니다. 실제로 일부 쿼리 작업은 메서드 구문으로만 표현할 수 있습니다. 쿼리 구문과 메서드 구문 간의 차이점에 대한 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
@@ -29,7 +30,7 @@ ms.locfileid: "75711963"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 코드를 실행하려면 메서드를 복사하고 [개체 컬렉션 쿼리](../../linq/query-a-collection-of-objects.md)에 제공된 `StudentClass`에 붙여넣은 다음 `Main` 메서드에서 호출합니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [람다 식](./lambda-expressions.md)
 - [식 트리(C#)](../concepts/expression-trees/index.md)

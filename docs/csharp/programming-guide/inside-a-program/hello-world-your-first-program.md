@@ -1,5 +1,6 @@
 ---
 title: Hello World -- Windows 또는 Mac에서 Visual Studio를 사용하여 프로그램 처음 만들기 - C# 프로그래밍 가이드
+description: Visual Studio는 .NET 개발을 위한 다양한 기능을 갖춘 전문적인 개발 환경입니다. Visual Studio를 사용하여 C# 버전의 Hello World를 만드세요.
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 6d78ec83fec72b30f5cee398af1816d0cac35886
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b78937b8ba1c7d4718bfb6252dac705945336d2a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241866"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301829"
 ---
 # <a name="hello-world----your-first-program"></a>Hello World -- 프로그램 처음 만들기
 

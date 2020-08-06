@@ -1,13 +1,14 @@
 ---
 title: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법(C#)
+description: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법을 알아봅니다. XForm 함수를 사용하여 트리를 변환하는 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 844ca08cb2c6b47f7803d388663daeacb65bdb68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168559"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302882"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법(C#)
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
@@ -236,7 +237,7 @@ static XElement XForm(XElement source)
 }
 ```  
   
-## <a name="complete-example"></a>전체 예제  
+## <a name="complete-example"></a>완성된 예제  
  다음 코드는 `XForm` 함수가 포함된 전체 예제입니다. 이 코드에는 이러한 유형의 변환에 대한 몇 가지 일반적인 사용이 포함되어 있습니다.  
   
 ```csharp  

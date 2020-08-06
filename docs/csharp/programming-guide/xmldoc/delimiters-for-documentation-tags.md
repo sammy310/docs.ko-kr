@@ -1,17 +1,18 @@
 ---
 title: 문서 태그에 대한 구분 기호 - C# 프로그래밍 가이드
+description: 문서 태그 구분 기호에 대해 알아봅니다. 구분 기호는 컴파일러에게 설명서 주석을 시작하고 종료하는 위치를 나타냅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: db8d43edc8b7cb0066fd3afcb75a1852603e86c4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3191e32b0ff2dbde004abaab0b699cd61fcbb150
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594428"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381985"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>문서 태그에 대한 구분 기호(C# 프로그래밍 가이드)
 

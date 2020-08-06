@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe(리소스 파일 생성기)
+description: 리소스 파일 생성기인 Resgen.exe를 사용합니다. 텍스트(.txt, .restext) 및 XML 리소스 형식(.resx) 파일을 해당하는 CLR 런타임 이진 파일(.resources)로 변환합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201114"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517232"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -109,7 +110,7 @@ resgen filename.extension [outputDirectory]
 |텍스트(.txt 또는 .restext) 파일|--|문제 없음|지원 안 함|문제 없음|  
 |.resx 파일|파일에 문자열이 아닌 리소스(파일 링크 포함)를 포함하는 경우 변환 실패|--|지원 안 함|문제 없음|  
 |.resources 파일|파일에 문자열이 아닌 리소스(파일 링크 포함)를 포함하는 경우 변환 실패|문제 없음|지원 안 함|--|  
-|.exe 또는 .dll 어셈블리|지원 안 함|지원 안 함|문자열 리소스(경로 이름 포함)만 리소스로 인식됩니다.|지원 안 함|  
+|.exe 또는 .dll 어셈블리|지원되지 않음|지원 안 함|문자열 리소스(경로 이름 포함)만 리소스로 인식됩니다.|지원 안 함|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>특정 Resgen.exe 작업을 수행합니다.  
  텍스트 기반 또는 XML 기반 리소스 파일을 바이너리 파일로 컴파일, <xref:System.Resources.ResourceManager> 기능 래핑, 리소스로의 액세스를 제공하는 클래스 생성 등 다양한 방법으로 Resgen.exe를 사용할 수 있습니다. 이 단원에서는 각 작업에 대해 자세하게 설명합니다.  

@@ -1,13 +1,14 @@
 ---
 title: XML 트리에서 요소, 특성 및 노드 제거(C#)
+description: XML 트리에서 요소, 특성 및 노드를 제거하는 방법을 알아봅니다. 제거 메서드 목록을 확인하고 코드 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e753c3d96c4cbc050b08076ca8bff8c17b2e252
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591264"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300048"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML 트리에서 요소, 특성 및 노드 제거(C#)
 
@@ -64,7 +65,7 @@ root.Element("Child3").Elements().Remove();
 Console.WriteLine(root);
 ```
 
-### <a name="comments"></a>설명
+### <a name="comments"></a>주석
 
 이 코드의 결과는 다음과 같습니다.
 

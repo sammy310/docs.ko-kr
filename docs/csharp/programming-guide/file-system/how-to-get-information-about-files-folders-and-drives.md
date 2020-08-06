@@ -1,15 +1,16 @@
 ---
 title: 파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법 - C# 프로그래밍 가이드
+description: 파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법을 알아봅니다. 코드 예제 및 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241619"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299931"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법(C# 프로그래밍 가이드)
 .NET에서 다음 클래스를 사용하여 파일 시스템 정보에 액세스할 수 있습니다.  

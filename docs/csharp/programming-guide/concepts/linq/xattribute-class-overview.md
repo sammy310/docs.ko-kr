@@ -1,13 +1,14 @@
 ---
 title: XAttribute 클래스 개요(C#)
+description: 특성은 요소와 연결된 이름/값 쌍입니다. XAttribute는 XML 특성을 나타냅니다. C#의 LINQ to XML에서 특성을 사용하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a19de601041bbb20241c959e909483b97bcf797
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635667"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302232"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 클래스 개요(C#)
 특성은 요소와 연결된 이름/값 쌍입니다. <xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.  
@@ -20,7 +21,7 @@ ms.locfileid: "75635667"
 ## <a name="the-xattribute-constructor"></a>XAttribute 생성자  
  <xref:System.Xml.Linq.XAttribute> 클래스의 다음 생성자는 가장 일반적으로 사용하는 생성자입니다.  
   
-|생성자|설명|  
+|생성자|Description|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> 개체를 만듭니다. `name` 인수는 특성의 이름을 지정하고, `content`는 특성의 내용을 지정합니다.|  
   
@@ -79,6 +80,6 @@ Console.WriteLine(c);
   
  이 차이는 주로 노드 수준에서 XML 트리 작업을 하는 코드를 작성하는 개발자에게만 중요합니다. 대부분의 개발자는 이 차이에 대해 염려하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to XML 프로그래밍 개요(C#)](./linq-to-xml-overview.md)

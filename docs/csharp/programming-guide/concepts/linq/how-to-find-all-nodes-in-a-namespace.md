@@ -1,13 +1,14 @@
 ---
 title: 네임스페이스에서 모든 노드를 찾는 방법(C#)
+description: 각 요소 또는 특성의 네임스페이스를 필터링하여 해당 네임스페이스에서 모든 노드를 찾는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141187"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303311"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>네임스페이스에서 모든 노드를 찾는 방법(C#)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
@@ -46,7 +47,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>예제  
  다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다. 쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 통합된 구매 주문](./sample-xml-file-consolidated-purchase-orders.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 통합된 구매 주문](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

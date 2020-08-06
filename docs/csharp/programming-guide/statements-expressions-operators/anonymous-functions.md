@@ -1,17 +1,18 @@
 ---
 title: 익명 함수 - C# 프로그래밍 가이드
+description: 익명 함수에 대해 알아봅니다. 람다 식 또는 무명 메서드를 사용하여 익명 함수를 만들 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: c99aaf4f35d2d294a9f07de54129bb3b4fbfbfde
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241905"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381673"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 

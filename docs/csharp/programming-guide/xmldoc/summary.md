@@ -1,5 +1,6 @@
 ---
 title: <summary> - C# 프로그래밍 가이드
+description: XML <summary> 태그에 대해 알아봅니다. 이 태그는 형식 또는 형식 멤버를 설명하는 데 사용됩니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f6984c60e6a7132e94c5c91837535484b12f93c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f9243e598aaf0c12dd48b48045f461b4b307c18f
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590620"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380607"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary>(C# 프로그래밍 가이드)
 

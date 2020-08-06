@@ -1,17 +1,18 @@
 ---
 title: C# 연습
+description: 일반적인 시나리오에 대한 단계별 지침을 확인합니다. 이러한 C# 연습은 제품 또는 특정 기능 영역에 대한 학습을 시작하는 데 적합합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: f563e5ed1b14831f9fea6575ced0f7a95d9157fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626362"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381894"
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 
@@ -71,7 +72,7 @@ ms.locfileid: "77626362"
 - [배포 샘플 및 연습](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)\
   일반적인 배포 시나리오의 단계별 예제를 제공합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](./programming-guide/index.md)
 - [Visual Studio 샘플](/visualstudio/ide/visual-studio-ide)

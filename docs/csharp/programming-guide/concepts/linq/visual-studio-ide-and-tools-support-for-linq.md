@@ -1,13 +1,14 @@
 ---
 title: LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
+description: 개체 관계형 디자이너, SQLMetal 도구, LINQ 인식 코드 편집기, 디버거와 같은 LINQ 개발을 지원하는 Visual Studio 기능에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd0c936624b4d5329cb2eb0f1cdd5215bbc96f23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590911"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302245"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
 Visual Studio IDE(통합 개발 환경)는 LINQ 애플리케이션 개발을 지원하는 다음과 같은 기능을 제공합니다.  
@@ -24,6 +25,6 @@ Visual Studio IDE(통합 개발 환경)는 LINQ 애플리케이션 개발을 지
 ## <a name="visual-studio-debugger-support"></a>Visual Studio 디버거 지원  
  Visual Studio 디버거는 쿼리 식의 디버깅을 지원합니다. 자세한 내용은 [LINQ 디버깅](/visualstudio/debugger/debugging-linq)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(C#)](./index.md)

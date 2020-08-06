@@ -1,5 +1,6 @@
 ---
 title: 파일 또는 폴더를 만드는 방법 - C# 프로그래밍 가이드
+description: 프로그래밍 방식으로 파일 또는 폴더를 만드는 방법을 알아봅니다. 폴더 및 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 해당 파일에 데이터를 쓸 수 있습니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f5641dc765b1a2d62adb76babe3f111730d4550b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241645"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302687"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>파일 또는 폴더를 만드는 방법(C# 프로그래밍 가이드)
 프로그래밍 방식으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 파일에 데이터를 쓸 수 있습니다.  

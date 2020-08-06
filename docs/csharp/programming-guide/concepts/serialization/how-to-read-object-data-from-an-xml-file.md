@@ -1,13 +1,14 @@
 ---
 title: XML 파일에서 개체 데이터를 읽는 방법(C#)
+description: 이 C# 예제에서는 XmlSerializer 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241879"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302791"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML 파일에서 개체 데이터를 읽는 방법(C#)
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.  

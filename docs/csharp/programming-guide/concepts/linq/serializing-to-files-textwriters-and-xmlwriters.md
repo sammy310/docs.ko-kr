@@ -1,13 +1,14 @@
 ---
 title: Files, TextWriters 및 XmlWriters로 serialization
+description: C#에서 ToString 또는 Save 메서드를 사용하여 XML 트리를 파일, TextWriter 또는 XmlWriter로 직렬화하는 옵션에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43c51ae7e9bf1a7848d45fd900424d6186671e53
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868850"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302388"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Files, TextWriters 및 XmlWriters로 serialization
 
@@ -31,6 +32,6 @@ XML 트리를 <xref:System.IO.File>, <xref:System.IO.TextWriter> 또는 <xref:Sy
 
 예제를 보려면 적절한 참조 항목을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 트리 serialize(C#)](serializing-to-files-textwriters-and-xmlwriters.md)

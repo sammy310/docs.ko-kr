@@ -1,13 +1,14 @@
 ---
 title: 요소의 부분 값을 검색하는 방법(C#)
+description: 요소의 단순 값을 가져오는 방법을 알아봅니다. 단순 값은 특정 요소 전용입니다.
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 597859e5b66606aa0cff9c1a475e79e6b66c39fc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347441"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301582"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>요소의 부분 값을 검색하는 방법(C#)
 이 항목에서는 요소의 부분 값을 가져오는 방법을 보여 줍니다. 단일 문자열로 연결된 모든 하위 요소의 값을 포함하는 상세 값과 달리 부분 값은 특정 요소의 값입니다.  
@@ -70,7 +71,7 @@ class Program
 }  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```output  
 Column  Name="CustomerId"   =Customer.CustomerId.Heading  

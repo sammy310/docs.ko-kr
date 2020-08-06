@@ -1,15 +1,16 @@
 ---
 title: 파일 작업에 대한 진행률 대화 상자를 제공하는 방법 - C# 프로그래밍 가이드
+description: CopyFile(String, String, UIOption) 메서드를 사용하여 파일 작업에 대한 진행률 대화 상자를 제공하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea18d924b47fc10412d37479f1b09f7eef7ad3b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301972"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>파일 작업에 대한 진행률 대화 상자를 제공하는 방법(C# 프로그래밍 가이드)
 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 네임스페이스의 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 메서드를 사용하는 경우 Windows에서 파일 작업 진행률을 보여 주는 표준 대화 상자를 제공할 수 있습니다.  
@@ -31,6 +32,6 @@ ms.locfileid: "75705134"
   
  [!code-csharp[csFilesandFolders#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#11)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](./index.md)

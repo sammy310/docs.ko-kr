@@ -1,17 +1,18 @@
 ---
 title: SOS.dll(SOS 디버깅 확장명)
+description: SOS 디버깅 확장인 SOS.dll을 사용합니다. Visual Studio 및 WinDbg.exe에서 내부 CLR 환경에 대한 정보를 가져와 관리되는 프로그램을 디버그합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-ms.openlocfilehash: 4c3a7f2798791f0c8a6b752f06bc2937fc970d40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc9fed8432b5b24c20c3c470a842895a901d9efb
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715727"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517180"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장)
 
@@ -28,8 +29,8 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |명령|설명|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|가비지 수집 힙에 대한 할당 요청에 발생한 마지막 OOM(메모리 부족)에 대한 정보를 표시합니다. (서버 가비지 컬렉션에서 각 가비지 컬렉션 힙에 OOM(있는 경우)을 표시합니다.)|
-|**BPMD** [ **-nofuturemodule**] [\<*module name*> \<*method name*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*>  **-clearall**|지정된 모듈의 지정된 메서드에 중단점을 만듭니다.<br /><br /> 지정된 모듈 및 메서드가 로드되지 않은 경우 이 명령은 모듈이 로드되고 JIT(Just-In-Time) 컴파일되었다는 알림을 받을 때까지 기다렸다가 중단점을 만듭니다.<br /><br /> **-list**, **-clear** 및 **-clearall** 옵션을 사용하여 보류 중단점 목록을 관리할 수 있습니다.<br /><br /> **-list** 옵션은 모든 보류 중단점의 목록을 생성합니다. 보류 중인 중단점에 0이 아닌 모듈 ID가 있는 경우 해당 중단점은 로드된 특정 모듈의 함수에 적용됩니다. 보류 중인 중단점에 0인 모듈 ID가 있을 경우 해당 중단점은 아직 로드되지 않은 모듈에 적용됩니다.<br /><br /> **-clear** 또는 **-clearall** 옵션을 사용하여 목록에서 보류 중단점을 제거합니다.|
-|**CLRStack** [ **-a**] [ **-l**] [ **-p**] [ **-n**]|관리 코드의 스택 추적만 제공합니다.<br /><br /> **-p** 옵션은 관리되는 함수의 인수를 표시합니다.<br /><br /> **-l** 옵션은 프레임의 지역 변수에 대한 정보를 표시합니다. SOS 디버깅 확장에서는 로컬 이름을 검색할 수 없으므로, 로컬 이름의 출력은 \<*local address*>  **=** \<*value*> 형식입니다.<br /><br /> **-a**(all) 옵션은 **-l** 및 **-p** 옵션을 동시에 지정하는 바로 가기입니다.<br /><br /> **-n** 옵션은 소스 파일 이름과 줄 번호의 표시를 사용하지 않도록 설정합니다. 디버거에 옵션 SYMOPT_LOAD_LINES가 지정된 경우 SOS는 관리되는 모든 프레임에 대한 기호를 조회하고, 성공한 경우, 해당 소스 파일 이름과 줄 번호를 표시합니다. 이 동작을 사용하지 않으려면 **-n**(줄 번호 없음) 매개 변수를 지정할 수 있습니다.<br /><br /> SOS 디버깅 확장에서는 x64 및 IA-64 기반 플랫폼에 전환 프레임을 표시하지 않습니다.|
+|**BPMD** [ **-nofuturemodule**] [\<*module name*> \<*method name*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|지정된 모듈의 지정된 메서드에 중단점을 만듭니다.<br /><br /> 지정된 모듈 및 메서드가 로드되지 않은 경우 이 명령은 모듈이 로드되고 JIT(Just-In-Time) 컴파일되었다는 알림을 받을 때까지 기다렸다가 중단점을 만듭니다.<br /><br /> **-list**, **-clear** 및 **-clearall** 옵션을 사용하여 보류 중단점 목록을 관리할 수 있습니다.<br /><br /> **-list** 옵션은 모든 보류 중단점의 목록을 생성합니다. 보류 중인 중단점에 0이 아닌 모듈 ID가 있는 경우 해당 중단점은 로드된 특정 모듈의 함수에 적용됩니다. 보류 중인 중단점에 0인 모듈 ID가 있을 경우 해당 중단점은 아직 로드되지 않은 모듈에 적용됩니다.<br /><br /> **-clear** 또는 **-clearall** 옵션을 사용하여 목록에서 보류 중단점을 제거합니다.|
+|**CLRStack** [ **-a**] [ **-l**] [ **-p**] [ **-n**]|관리 코드의 스택 추적만 제공합니다.<br /><br /> **-p** 옵션은 관리되는 함수의 인수를 표시합니다.<br /><br /> **-l** 옵션은 프레임의 지역 변수에 대한 정보를 표시합니다. SOS 디버깅 확장에서 로컬 이름을 검색할 수 없으므로 로컬 이름의 출력은 \<*local address*> **=** \<*value*> 형식입니다.<br /><br /> **-a**(all) 옵션은 **-l** 및 **-p** 옵션을 동시에 지정하는 바로 가기입니다.<br /><br /> **-n** 옵션은 소스 파일 이름과 줄 번호의 표시를 사용하지 않도록 설정합니다. 디버거에 옵션 SYMOPT_LOAD_LINES가 지정된 경우 SOS는 관리되는 모든 프레임에 대한 기호를 조회하고, 성공한 경우, 해당 소스 파일 이름과 줄 번호를 표시합니다. 이 동작을 사용하지 않으려면 **-n**(줄 번호 없음) 매개 변수를 지정할 수 있습니다.<br /><br /> SOS 디버깅 확장에서는 x64 및 IA-64 기반 플랫폼에 전환 프레임을 표시하지 않습니다.|
 |**COMState**|각 스레드의 COM 아파트 모델과 `Context` 포인터를 나열합니다(사용할 수 있는 경우).|
 |**DumpArray** [ **-start** \<*startIndex*>] [ **-length** \<*length*>] [ **-details**] [ **-nofields**] \<*array object address*><br /><br /> 또는<br /><br /> **DA** [ **-start** \<*startIndex*>] [ **-length** \<*length*>] [ **-detail**] [ **-nofields**] *array object address*>|배열 개체의 요소를 검사합니다.<br /><br /> **-start** 옵션은 요소를 표시할 시작 인덱스를 지정합니다.<br /><br /> **-length** 옵션은 표시할 요소의 수를 지정합니다.<br /><br /> **-details** 옵션은 **DumpObj** 및 **DumpVC** 형식을 사용하여 요소의 세부 정보를 표시합니다.<br /><br /> **-nofields** 옵션은 배열이 표시되지 않도록 합니다. 이 옵션은 **-detail** 옵션을 지정한 경우에만 사용할 수 있습니다.|
 |**DumpAssembly** \<*assembly address*>|어셈블리에 대한 정보를 표시합니다.<br /><br /> **DumpAssembly** 명령은 여러 모듈을 나열합니다(있는 경우).<br /><br /> **DumpDomain** 명령을 사용하여 어셈블리 주소를 가져올 수 있습니다.|
@@ -56,7 +57,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**FAQ**|FAQ(질문과 대답)를 표시합니다.|
 |**FinalizeQueue** [ **-detail**] &#124; [ **-allReady**] [ **-short**]|종료하도록 등록된 모든 개체를 표시합니다.<br /><br /> **-detail** 옵션은 정리해야 하는 모든 `SyncBlocks`와 정리를 기다리는 모든 `RuntimeCallableWrappers`(RCWs)에 대한 추가 정보를 표시합니다. 이러한 두 데이터 구조는 실행할 때 모두 종료자 스레드에서 캐시되고 정리됩니다.<br /><br /> `-allReady` 옵션은 가비지 컬렉션에 의해 이미 표시되거나 다음 가비지 컬렉션에 의해 표시될지 여부에 관계없이 종료할 준비가 된 모든 개체를 표시합니다. "종료 준비" 목록에 있는 개체는 더 이상 루트에 있지 않은 종료할 수 있는 개체입니다. 종료 가능한 큐에 있는 모든 개체가 여전히 루트인지 여부를 확인하기 때문에 이 옵션은 매우 많은 비용이 소요될 수 있습니다.<br /><br /> `-short` 옵션은 각 개체의 주소로 출력을 제한합니다. **-allReady**와 함께 사용하면 더 이상 루트가 아닌 종료자가 있는 개체를 모두 열거합니다. 독립적으로 사용되는 경우 종료 가능 및 "종료 준비" 큐에 모든 개체를 나열합니다.|
 |**FindAppDomain** \<*Object address*>|지정된 주소에 있는 개체의 애플리케이션 도메인을 확인합니다.|
-|**FindRoots** **-gen** \<*N*> &#124; **-gen any** &#124;\<*object address*>|디버거가 지정된 생성의 다음 컬렉션에서 디버기를 중단하도록 합니다. 효과는 중단이 발생하는 즉시 다시 설정됩니다. 다음 컬렉션에서 중단하려면 명령을 다시 실행해야 합니다. 이 명령의 *\<object address>* 양식은 **-gen** 또는 **-gen any**로 인한 중단이 발생한 후에 사용됩니다. 중단 발생 시점에서 디버기가 현재 문제가 되는 생성의 개체에 대한 루트를 **FindRoots**에서 식별하는 올바른 상태에 있습니다.|
+|**FindRoots** **-gen** \<*N*> &#124; **-gen any** &#124;\<*object address*>|디버거가 지정된 생성의 다음 컬렉션에서 디버기를 중단하도록 합니다. 효과는 중단이 발생하는 즉시 다시 설정됩니다. 다음 컬렉션에서 중단하려면 명령을 다시 실행해야 합니다. 이 명령의 *\<object address>* 형식은 **-gen** 또는 **-gen any**로 인한 중단이 발생한 후에 사용됩니다. 중단 발생 시점에서 디버기가 현재 문제가 되는 생성의 개체에 대한 루트를 **FindRoots**에서 식별하는 올바른 상태에 있습니다.|
 |**GCHandles** [ **-perdomain**]|프로세스의 가비지 수집기 핸들에 대한 통계를 표시합니다.<br /><br /> **-perdomain** 옵션은 통계를 애플리케이션 도메인별로 정렬합니다.<br /><br /> 가비지 수집기 핸들 누수로 인한 메모리 누수를 확인하려면 **GCHandles** 명령을 사용합니다. 예를 들어, 강력한 가비지 수집기 핸들이 코드에서 큰 배열을 가리키고 있어서 아직 배열이 해제되지 않은 상태로 핸들을 삭제하면 메모리 누수가 발생합니다.|
 |**GCHandleLeaks**|메모리에서 프로세스의 강력하고 고정된 가비지 수집기 핸들에 대한 참조를 검색하여 결과를 표시합니다. 핸들이 있으면 **GCHandleLeaks** 명령은 참조의 주소를 표시합니다. 메모리에 핸들이 없으면 이 명령은 알림을 표시합니다.|
 |**GCInfo** \<*MethodDesc address*>\<*Code address*>|레지스터 또는 스택 위치에 관리되는 개체가 포함되는 시기를 나타내는 데이터를 표시합니다. 가비지 컬렉션이 수행될 때 수집기에서는 개체에 대한 참조의 위치를 알고 있어야 새 개체 포인터 값으로 업데이트할 수 있습니다.|
@@ -202,7 +203,7 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 !token2ee unittest.exe 02000003
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

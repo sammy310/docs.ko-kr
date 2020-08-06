@@ -1,13 +1,14 @@
 ---
 title: 부모의 특성을 찾는 방법(XPath-LINQ to XML)(C#)
+description: 부모 요소의 특성을 찾는 방법을 알아봅니다. 샘플 XML 파일을 사용하는 코드 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03344bb66f617970d9598c91366eb7d69514397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141169"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303298"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>부모의 특성을 찾는 방법(XPath-LINQ to XML)(C#)
 
@@ -21,7 +22,7 @@ XPath 식은 다음과 같습니다.
 
 이 예제에서는 먼저 `Author` 요소를 찾은 다음 부모 요소의 `id` 특성을 찾습니다.
 
-이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)를 사용합니다.
+이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");

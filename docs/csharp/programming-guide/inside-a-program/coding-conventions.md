@@ -1,17 +1,18 @@
 ---
 title: C# 코딩 규칙 - C# 프로그래밍 가이드
+description: C#의 코딩 규칙에 대해 알아봅니다. 코딩 규칙은 코드를 일관되게 표시하고 코드 복사, 변경 및 유지 관리를 용이하게 합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301855"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
 
@@ -204,7 +205,7 @@ ms.locfileid: "79398378"
 
 [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)의 지침을 따르세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 코딩 규칙](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)

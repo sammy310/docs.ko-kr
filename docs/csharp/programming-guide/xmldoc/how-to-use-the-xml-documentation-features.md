@@ -1,16 +1,17 @@
 ---
 title: XML 문서 기능을 사용하는 방법 - C# 프로그래밍 가이드
+description: XML 문서 기능을 사용하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287365"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380672"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML 문서 기능을 사용하는 방법
 

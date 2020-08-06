@@ -1,15 +1,16 @@
 ---
 title: My 네임스페이스를 사용하는 방법 - C# 프로그래밍 가이드
+description: "'My' 네임스페이스에 대해 알아봅니다. 'My' 네임스페이스는 다양한 .NET 클래스에 대한 쉽고 직관적인 액세스를 제공합니다."
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241944"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381712"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>My 네임스페이스를 사용하는 방법(C# 프로그래밍 가이드)
 

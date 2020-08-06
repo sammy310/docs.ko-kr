@@ -1,13 +1,14 @@
 ---
 title: 특정 이름으로 형제의 특성을 찾는 방법(XPath-LINQ to XML)(C#)
+description: 컨텍스트 노드에 대한 형제의 특성을 모두 찾는 방법을 알아봅니다. 샘플 XML 파일을 사용하는 코드 예제를 검토합니다.
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12bba22c91fef92fc3383d028ff9dfb8bd3cfa3e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301699"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>특정 이름으로 형제의 특성을 찾는 방법(XPath-LINQ to XML)(C#)
 이 항목에서는 컨텍스트 노드에 대한 형제의 특성을 모두 찾는 방법을 보여 줍니다. 특정 이름을 가진 특성만 컬렉션에 반환됩니다.  
@@ -19,7 +20,7 @@ ms.locfileid: "79169261"
 ## <a name="example"></a>예제  
  이 예제에서는 먼저 `Book` 요소를 찾은 다음 `Book`이라는 모든 형제 요소를 찾고 `id`라는 모든 특성을 찾습니다. 결과는 특성의 컬렉션입니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

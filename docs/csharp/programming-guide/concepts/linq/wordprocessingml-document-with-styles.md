@@ -1,13 +1,14 @@
 ---
-title: 스타일이 사용된 WordprocessingML 문서3
+title: 스타일이 사용된 WordprocessingML 문서
+description: 이 예제 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다. 스타일에 관련된 문서 부분에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b799c1bee95d7d638e6a3210b4876ff036e088eb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302206"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  
@@ -17,7 +18,7 @@ ms.locfileid: "79167870"
  패키지에 액세스할 때 임의의 경로를 사용하는 대신 부분 간 관계를 통해 액세스해야 합니다. 이 문제는 WordprocessingML 문서의 내용 조작 자습서의 범위를 벗어나지만 이 자습서에 포함된 예제 프로그램에서는 올바른 방법을 보여 줍니다.  
   
 ## <a name="a-document-that-uses-styles"></a>스타일을 사용하는 문서  
- [WordprocessingML 문서의 모양(C#)](./shape-of-wordprocessingml-documents.md) 항목에서 제공하는 WordML 예제는 매우 단순하지만 다음 문서는 더 복잡합니다. 이 문서에는 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성하는 XML을 보는 가장 쉬운 방법은 [Office Open XML 문서 부분을 출력하는 예제(C#)](./example-that-outputs-office-open-xml-document-parts.md)를 실행하는 것입니다.  
+ [WordprocessingML 문서의 모양(C#)](./shape-of-wordprocessingml-documents.md) 항목에서 제공하는 WordML 예제는 매우 단순하지만 다음 문서는 더 복잡합니다. 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성하는 XML을 보는 가장 쉬운 방법은 [Office Open XML 문서 부분을 출력하는 예제(C#)](./example-that-outputs-office-open-xml-document-parts.md)를 실행하는 것입니다.  
   
  다음 문서에서 첫 번째 단락에는 `Heading1` 스타일이 있습니다. 기본 스타일이 있는 단락이 많이 있으며 `Code` 스타일이 있는 단락도 많이 있습니다. 이 문서는 이와 같이 비교적 복잡하기 때문에 LINQ to XML을 사용하여 구문 분석하기가 더 흥미로운 대상입니다.  
   

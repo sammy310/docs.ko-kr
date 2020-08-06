@@ -1,13 +1,14 @@
 ---
 title: 컨텍스트에 따라 요소를 찾는 쿼리를 작성하는 방법(C#)
+description: 컨텍스트에 따라 요소를 찾는 쿼리를 작성하는 방법을 알아봅니다. 코드 예제를 살펴보고 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303194"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>컨텍스트에 따라 요소를 찾는 쿼리를 작성하는 방법(C#)
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  

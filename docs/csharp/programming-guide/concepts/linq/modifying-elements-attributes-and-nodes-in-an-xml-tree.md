@@ -1,13 +1,14 @@
 ---
-title: XML 트리에서 요소, 특성 및 노드 수정3
+title: XML 트리에서 요소, 특성 및 노드 수정
+description: 요소, 해당 자식 노드 또는 해당 특성을 수정하는 데 사용할 수 있는 메서드 및 속성에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0ed22e4e-4c6b-4eb1-b0eb-06685efd8c33
-ms.openlocfilehash: 93a4d67129e22d0bbeef464c1d4d8758439edb7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfff882dc57a4f6f4b228563ac923122097d88d0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484238"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303168"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML 트리에서 요소, 특성 및 노드 수정
 다음 표에는 요소, 해당 요소의 자식 요소 또는 특성을 수정하는 데 사용할 수 있는 메서드와 속성이 요약되어 있습니다.  
