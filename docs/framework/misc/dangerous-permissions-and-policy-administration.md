@@ -9,14 +9,17 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: ba3d47dc445e4b368f57d59d735fc331f5d6de81
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 1d3fb53775a4d88f9372b582189a38e18376761a
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281617"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855818"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>위험한 권한 및 정책 관리
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 .NET Framework가 권한을 제공하는 보호되는 몇몇 작업은 보안 시스템의 보안을 손상시킬 수 있습니다. 이렇게 위험한 권한은 필요한 경우에만, 그리고 신뢰할 수 있는 코드에만 제공되어야 합니다. 일반적으로 이러한 권한이 부여되면 악성 코드를 방어할 수 없습니다.  
   
 > [!NOTE]

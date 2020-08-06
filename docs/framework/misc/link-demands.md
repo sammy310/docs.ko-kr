@@ -15,14 +15,15 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 7f5475d5bfff8cc3c500f95b05d54daacc9b253e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309107"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855792"
 ---
 # <a name="link-demands"></a>링크 요청
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  링크 요청으로 인해 Just-In-Time 컴파일 동안 보안 검사를 수행하며 코드의 직접 호출 어셈블리만 검사합니다. 연결은 함수 포인터 참조 및 메서드 호출을 포함하여 코드가 형식 참조에 바인딩된 경우에 발생합니다. 호출 어셈블리에 코드에 연결할 권한이 없는 경우 링크가 허용되지 않으며 코드가 로드 및 실행될 때 런타임 예외가 발생합니다. 코드에서 상속하는 클래스에서 링크 요청을 재정의할 수 있습니다.  

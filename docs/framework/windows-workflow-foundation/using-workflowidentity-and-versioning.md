@@ -2,28 +2,28 @@
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 97224caa24b38a00a1cbb4fa76781eea3a10faaf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1d31739c135dbb518f05c40ba802c782b6817bff
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787913"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855636"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 
 <xref:System.Activities.WorkflowIdentity>는 워크플로 애플리케이션 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 애플리케이션 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의를 side-by-side로 실행 하는 방법에 대 한 자세한 내용은 [WorkflowServiceHost의 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)를 참조 하세요. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](dynamic-update.md)를 참조 하세요.
 
-## <a name="in-this-topic"></a>이 항목의 내용
+## <a name="in-this-topic"></a>항목 내용
 
 - [WorkflowIdentity 사용](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
   - [WorkflowIdentity를 사용한 side-by-side 실행](using-workflowidentity-and-versioning.md#SxS)
 
-- [워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
+- [워크플로 버전 관리를 지원하기 위해 .NET Framework 4 지속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
 
-  - [데이터베이스 스키마를 업그레이드 하려면](using-workflowidentity-and-versioning.md#ToUpgrade)
+  - [데이터베이스 스키마를 업그레이드하려면](using-workflowidentity-and-versioning.md#ToUpgrade)
 
-## <a name="UsingWorkflowIdentity"></a>WorkflowIdentity 사용
+## <a name="using-workflowidentity"></a><a name="UsingWorkflowIdentity"></a>WorkflowIdentity 사용
 
 <xref:System.Activities.WorkflowIdentity>를 사용하려면 인스턴스를 만들어 구성한 다음 <xref:System.Activities.WorkflowApplication> 인스턴스에 연결합니다. <xref:System.Activities.WorkflowIdentity> 인스턴스에는 세 가지 식별 정보가 포함됩니다. 필수 요소인 <xref:System.Activities.WorkflowIdentity.Name%2A> 및 <xref:System.Activities.WorkflowIdentity.Version%2A>에는 이름과 <xref:System.Version>이 포함되며, 선택적인 <xref:System.Activities.WorkflowIdentity.Package%2A>는 어셈블리 이름 등의 정보나 원하는 다른 정보를 포함하는 추가 문자열을 지정하는 데 사용할 수 있습니다. 세 개의 속성 중 하나라도 다른 <xref:System.Activities.WorkflowIdentity>와 다르면 <xref:System.Activities.WorkflowIdentity>가 고유한 것으로 간주됩니다.
 
@@ -82,7 +82,7 @@ wfApp.Load(instanceId);
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
-### <a name="SxS"></a>WorkflowIdentity를 사용한 side-by-side 실행
+### <a name="side-by-side-execution-using-workflowidentity"></a><a name="SxS"></a>WorkflowIdentity를 사용한 side-by-side 실행
 
 <xref:System.Activities.WorkflowIdentity>를 사용하면 여러 버전의 워크플로를 손쉽게 side-by-side로 실행할 수 있습니다. 한 가지 일반적인 시나리오는 장기 실행 워크플로에 대한 비즈니스 요구 사항을 변경하는 것입니다. 업데이트된 버전이 배포될 때 여러 워크플로 인스턴스가 실행 중일 수 있습니다. 새 인스턴스를 시작할 때 업데이트된 워크플로 정의를 사용하도록 호스트 애플리케이션을 구성할 수 있으며, 호스트 애플리케이션에서는 인스턴스를 다시 시작할 때 올바른 워크플로 정의를 제공해야 합니다. <xref:System.Activities.WorkflowIdentity>를 사용하면 워크플로 인스턴스를 다시 시작할 때 일치하는 워크플로 정의를 식별하고 제공할 수 있습니다.
 
@@ -91,7 +91,7 @@ The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded inst
 > [!NOTE]
 > <xref:System.Activities.WorkflowIdentity>는 null일 수 있으며, 이 값은 호스트에서 적절한 워크플로 정의에 <xref:System.Activities.WorkflowIdentity>가 연결되지 않은 상태에서 유지된 인스턴스를 매핑하는 데 사용될 수 있습니다. 이 시나리오는 워크플로 응용 프로그램이 처음에 워크플로 버전 관리로 작성 되지 않았거나 응용 프로그램이 .NET Framework 4에서 업그레이드 된 경우에 발생할 수 있습니다. 자세한 내용은 [워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)를 참조 하세요.
 
-다음 예에서는 `Dictionary<WorkflowIdentity, Activity>`를 사용 하 여 <xref:System.Activities.WorkflowIdentity> 인스턴스와 일치 하는 워크플로 정의를 연결 하 고, `identityV1` <xref:System.Activities.WorkflowIdentity>와 연결 된 `MortgageWorkflow` 워크플로 정의를 사용 하 여 워크플로를 시작 합니다.
+다음 예제에서는를 사용 하 여 인스턴스를 일치 하는 `Dictionary<WorkflowIdentity, Activity>` 워크플로 정의에 연결 하 고, 워크플로는 <xref:System.Activities.WorkflowIdentity> `MortgageWorkflow` 와 연결 된 워크플로 정의를 사용 하 여 시작 됩니다 `identityV1` <xref:System.Activities.WorkflowIdentity> .
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -144,21 +144,21 @@ wfApp.Load(instance);
 // Resume the workflow...
 ```
 
-## <a name="UpdatingWF4PersistenceDatabases"></a>워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드
+## <a name="upgrading-net-framework-4-persistence-databases-to-support-workflow-versioning"></a><a name="UpdatingWF4PersistenceDatabases"></a>워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드
 
 .NET Framework 4 데이터베이스 스크립트를 사용 하 여 만든 지 속성 데이터베이스를 업그레이드 하는 Sqlworkflowinstancestoreschemaupgrade.sql 데이터베이스 스크립트가 제공 됩니다. 이 스크립트는 .NET Framework 4.5에 도입 된 새로운 버전 관리 기능을 지원 하도록 데이터베이스를 업데이트 합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.
 
-.NET Framework 4.5 워크플로 응용 프로그램이 제공 된 스크립트를 사용 하 여 업그레이드 되지 않은 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하면 다음 메시지와 비슷한 메시지가 포함 된 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> throw 됩니다.
+.NET Framework 4.5 워크플로 응용 프로그램이 제공 된 스크립트를 사용 하 여 업그레이드 되지 않은 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하면 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> 다음 메시지와 유사한 메시지가 나타납니다.
 
 ```output
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 
-### <a name="ToUpgrade"></a>데이터베이스 스키마를 업그레이드 하려면
+### <a name="to-upgrade-the-database-schema"></a><a name="ToUpgrade"></a>데이터베이스 스키마를 업그레이드 하려면
 
 1. SQL Server Management Studio를 열고 지 속성 데이터베이스 서버에 연결 합니다 (예: **.\SQLEXPRESS**).
 
-2. **파일** 메뉴에서 **열기**, **파일** 을 선택 합니다. `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en` 폴더로 이동합니다.
+2. **파일** 메뉴에서 **열기**, **파일** 을 선택 합니다. `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en` 폴더로 이동합니다.
 
 3. **Sqlworkflowinstancestoreschemaupgrade.sql** 를 선택 하 고 **열기**를 클릭 합니다.
 

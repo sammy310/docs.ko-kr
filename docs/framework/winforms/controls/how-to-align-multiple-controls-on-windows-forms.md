@@ -1,6 +1,8 @@
 ---
 title: 여러 컨트롤 맞춤
 ms.date: 03/30/2017
+f1_keywords:
+- Designer_Microsoft.VisualStudio.Windows.Forms.Design.DocumentDesigner
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
 - Windows Forms, aligning controls
@@ -10,12 +12,12 @@ ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5593c20e0e00e646949bf7357ecd126cbd1271f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4bde1926b89fe553ec9eda29ca5dfc1f3373af52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747200"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855623"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>방법: Windows Forms에서 여러 컨트롤 맞춤
 
@@ -33,9 +35,9 @@ Windows 기반 응용 프로그램의 UI (사용자 인터페이스) 레이아�
 
 - [Windows Forms 컨트롤](index.md)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
-- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
-- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [방법: 다른 부모에 기존 컨트롤 다시 할당](how-to-reassign-existing-controls-to-a-different-parent.md)

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 3c125e6c57ce7da459c03fc7d51fc9311fdc8e3b
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 49d55ffde3dcb88720f47af6f9702013d8a7f1ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309016"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855870"
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  복잡하게 연결된 오늘날의 컴퓨터 시스템은 다양한 알 수 없는 소스에서 시작되는 코드에 자주 노출됩니다. 코드를 전자 메일에 첨부 하거나, 문서에 포함 하거나, 인터넷을 통해 다운로드할 수 있습니다. 많은 컴퓨터 사용자는 데이터를 손상하거나 제거하여 시간과 비용 손실을 초래할 수 있는 악성 모바일 코드(바이러스와 웜 포함)의 효과를 직접 체험했습니다.  

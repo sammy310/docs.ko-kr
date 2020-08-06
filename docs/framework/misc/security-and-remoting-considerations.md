@@ -8,14 +8,17 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309367"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855714"
 ---
 # <a name="security-and-remoting-considerations"></a>보안 및 원격 서비스 고려 사항
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 원격 기능을 사용하면 애플리케이션 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다. 그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다(동일한 프로세스의 애플리케이션 도메인 간에 적용됨).  
   
  원격으로 사용 가능한(<xref:System.MarshalByRefObject> 클래스에서 파생된) 모든 클래스는 보안을 책임져야 합니다. 호출하는 코드를 암시적으로 신뢰할 수 있는 폐쇄된 환경에서만 코드를 사용해야 하거나, 악의적으로 사용될 수 있는 외부 입력이 보호된 코드에 적용되지 않도록 원격 호출을 설계해야 합니다.  

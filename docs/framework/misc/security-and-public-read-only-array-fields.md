@@ -5,14 +5,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 0a6a82c2c88fe61bd34c0accb831f018cf8702fc
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 5e499f8052306cd1ad063c9f44a2a0f1d0b365ef
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281435"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855740"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>보안 및 공용 읽기 전용 배열 필드
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 읽기 전용 공용 배열 필드를 수정할 수 있으므로 관리 되는 라이브러리의 읽기 전용 공용 배열 필드를 사용 하 여 응용 프로그램의 경계 동작 또는 보안을 정의 하지 마십시오.  
   
 ## <a name="remarks"></a>설명  

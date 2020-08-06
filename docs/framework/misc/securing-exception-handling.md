@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309042"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855779"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Visual C++ 및 Visual Basic에서 스택의 추가 필터 식은 모든 문 보다 먼저 실행 됩니다 `finally` . 해당 필터와 연결 된 **catch** 블록은 문 다음에 실행 됩니다 `finally` . 자세한 내용은 [사용자 필터 예외 사용](../../standard/exceptions/using-user-filtered-exception-handlers.md)을 참조 하세요. 이 섹션에서는이 주문의 보안 의미를 검사 합니다. 필터 문과 문이 실행 되는 순서를 설명 하는 다음 의사 코드 예를 고려해 보세요 `finally` .  
   
 ```cpp  

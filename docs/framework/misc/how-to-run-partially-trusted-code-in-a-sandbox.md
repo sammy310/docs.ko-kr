@@ -9,14 +9,15 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: e02b5d679fb1f5947373399ac1226732623ef96d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309237"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855805"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분 신뢰 코드 실행
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  샌드박싱은 코드에 부여되는 액세스 권한을 제한하는 제한된 보안 환경에서 코드를 실행하는 사례입니다. 예를 들어 완전히 신뢰할 수는 없는 출처의 관리되는 라이브러리가 있으면 완전히 신뢰할 수 있는 것처럼 실행하면 안 됩니다. 대신에 코드에 필요한 항목에 대한 권한을 제한하는 샌드박스에 코드를 배치해야 합니다(예: <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한).  

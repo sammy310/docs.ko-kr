@@ -8,14 +8,15 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f448cbf55f3ad992ba9dcc53d5be70b364038744
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309380"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855753"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  특히 래퍼의 신뢰 수준이 래퍼를 사용하는 코드보다 더 높은 래퍼 코드는 고유한 보안 약점 집합을 초래할 수 있습니다. 호출자의 제한된 권한이 적절한 보안 검사에 포함되지 않은 경우 호출자 대신 수행되는 모든 작업은 악용되는 잠재적인 약점이 됩니다.  
