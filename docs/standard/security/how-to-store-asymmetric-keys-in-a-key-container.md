@@ -16,19 +16,19 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556295"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854726"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>키 컨테이너에 비대칭 키 저장
 
 비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장 해야 하는 경우 키 컨테이너를 사용 합니다. 키 컨테이너에 대 한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조 하세요.
 
 > [!NOTE]
-> 이 문서의 코드는 Windows에 적용 됩니다.
+> 이 문서의 코드는 Windows에 적용 되며 .NET Core 2.2 이전 버전에서 사용할 수 없는 기능을 사용 합니다. 자세한 내용은 [dotnet/runtime # 23391](https://github.com/dotnet/runtime/issues/23391)를 참조 하세요.
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>비대칭 키를 만들어 키 컨테이너에 저장
 

@@ -2,12 +2,12 @@
 title: 일반 텍스트 서식 지정
 description: 'F # 응용 프로그램 및 스크립트에서 printf 및 기타 일반 텍스트 서식 지정을 사용 하는 방법에 대해 알아봅니다.'
 ms.date: 07/22/2020
-ms.openlocfilehash: a0f2c52431be894c4f74dd2940345a518f620589
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795761"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854921"
 ---
 # <a name="plain-text-formatting"></a>일반 텍스트 서식 지정
 
@@ -81,15 +81,15 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 | `%f`               | 기본 부동 소수점 형식 | 형식을 가진 부호 있는 값으로 형식이 지정 `[-]dddd.dddd` `dddd` 됩니다. 여기서은 하나 이상의 10 진수입니다. 소수점 앞의 자릿수는 수의 크기에 따라 다르며, 소수점 뒤의 자릿수는 요청된 정밀도에 따라 다릅니다. |
 | `%g`, `%G` | 기본 부동 소수점 형식 |  또는 형식으로 인쇄 된 부호 있는 값으로를 사용 하 여 서식이 지정 된 `%f` `%e` 값 및 전체 자릿수에 대해 더 간결한 형식으로 표시 됩니다. |
 | `%M` | `System.Decimal`값  |    형식 지정자를 사용 하 여 형식이 지정 됩니다. `"G"``System.Decimal.ToString(format)` |
-| `%O` | 모든 값  |   개체를 boxing 하 고 메서드를 valling 하 여 형식이 지정 됩니다. `System.Object.ToString()` |
+| `%O` | 모든 값  |   개체를 boxing 하 고 메서드를 호출 하 여 형식이 지정 됩니다. `System.Object.ToString()` |
 | `%A` | 모든 값  |   기본 레이아웃 설정을 사용 하 여 [구조적 일반 텍스트 서식 지정](plaintext-formatting.md) 을 사용 하 여 서식 지정 |
-| `%a` | 모든 값  |   두 개의 인수, 즉 컨텍스트 매개 변수와 값을 허용 하는 형식 지정 함수 및 인쇄할 특정 값이 필요 합니다. |
-| `%t` | 모든 값  |   하나의 인수가 필요 하며, 해당 텍스트를 출력 하거나 반환 하는 컨텍스트 매개 변수를 허용 하는 형식 지정 함수입니다. |
+| `%a` | 모든 값  |   두 개의 인수가 필요 합니다. 형식 지정 함수는 컨텍스트 매개 변수 및 값을 허용 하 고 특정 값은 인쇄 해야 합니다. |
+| `%t` | 모든 값  |   하나의 인수가 필요 합니다. 형식 지정 함수는 적절 한 텍스트를 출력 하거나 반환 하는 컨텍스트 매개 변수를 허용 합니다. |
 
 기본 정수 형식은 `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), (), (), (), (), (), (), () `int16` `System.Int16` `uint16` `System.UInt16` `int32` `System.Int32` `uint32` `System.UInt32` `int64` `System.Int64` `uint64` `System.UInt64` `nativeint` `System.IntPtr` 및 () `unativeint` `System.UIntPtr` 입니다.
 기본 부동 소수점 형식은 `float` ( `System.Double` ) 및 `float32` ( `System.Single` )입니다.
 
-선택적 너비는 결과의 최소 너비를 나타내는 정수입니다. 예를 들어는 `%6d` 정수를 인쇄 하 여 6 자 이상을 채우는 공백을 사용 합니다. Width가 이면 `*` 추가 정수 인수를 사용 하 여 해당 너비를 지정 합니다.
+선택적 너비는 결과의 최소 너비를 나타내는 정수입니다. 예를 들어는 `%6d` 정수를 인쇄 하 여 6 자 이상으로 채울 수 있는 공백을 접두사로 사용 합니다. Width가 이면 `*` 추가 정수 인수를 사용 하 여 해당 너비를 지정 합니다.
 
 유효한 플래그는 다음과 같습니다.
 
@@ -161,7 +161,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 
 ### <a name="structured-values"></a>구조적 값
 
-지정자를 사용 하 여 일반 텍스트의 서식을 지정 하는 경우 `%A` F # 목록 및 튜플에 대해 블록 들여쓰기가 사용 됩니다. 는 이전 예제에 나와 있습니다.
+지정자를 사용 하 여 일반 텍스트의 서식을 지정 하는 경우 `%A` F # 목록 및 튜플에 대해 블록 들여쓰기가 사용 됩니다. 이전 예제에 표시 된 것입니다.
 다차원 배열을 비롯 한 배열의 구조도 사용 됩니다.  1 차원 배열에는 구문이 표시 됩니다 `[| ... |]` . 예를 들면 다음과 같습니다.
 
 ```fsharp
@@ -200,12 +200,12 @@ printfn "%50A" [| for i in 1 .. 5 -> (i, i*i) |]
 [|(1, 1); (2, 4); (3, 9); (4, 16); (5, 25)|]
 ```
 
-인쇄 너비를 0으로 지정 하면 인쇄 너비가 사용 되지 않습니다. 출력에 포함 된 문자열에 linebreaks가 포함 된 경우를 제외 하 고는 한 줄의 텍스트를 반환 합니다.  예
+인쇄 너비를 0으로 지정 하면 인쇄 너비가 사용 되지 않습니다. 출력의 포함 된 문자열이 줄 바꿈을 포함 하는 경우를 제외 하 고 한 줄의 텍스트를 반환 합니다.  예
 
 ```fsharp
 printfn "%0A" [| for i in 1 .. 5 -> (i, i*i) |]
 
-printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef |]
+printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef" |]
 ```
 
 예제의
@@ -318,7 +318,7 @@ printfn "%A" r
 
 `Value is not created`값이 아직 계산 되지 않은 경우 지연 값은 또는 동등한 텍스트로 인쇄 됩니다.
 
-Null 값은 `null` 값의 정적 형식이 union 형식으로 결정 되는 경우를 제외 하 고는로 출력 됩니다 `null` . 여기서는 허용 되는 표현인입니다.
+Null 값은 `null` 값의 정적 형식이 공용 구조체 형식으로 결정 되는 경우를 제외 하 고는로 출력 됩니다 `null` . 여기서가 허용 되는 표현입니다.
 
 F # 함수 값은 내부적으로 생성 된 클로저 이름으로 인쇄 됩니다 (예:) `<fun:it@43-7>` .
 
