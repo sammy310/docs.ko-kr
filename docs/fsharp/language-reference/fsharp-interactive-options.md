@@ -2,12 +2,12 @@
 title: 대화형 옵션
 description: F# 대화형 fsi.exe에서 지 원하는 명령줄 옵션에 대해 알아봅니다.
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795465"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855350"
 ---
 # <a name="f-interactive-options"></a>F# 대화형 옵션
 
@@ -25,7 +25,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 
 ## <a name="table-of-f-interactive-options"></a>F# 대화형 옵션 표
 
-다음 표에서는 F# 대화형에서 지 원하는 옵션을 요약 하 여 보여 줍니다. 명령줄에서 또는 Visual Studio IDE를 통해 이러한 옵션을 설정할 수 있습니다. Visual Studio IDE에서 이러한 옵션을 설정 하려면 **도구** 메뉴를 열고 **옵션 ...** 을 선택한 다음 **F # 도구** 노드를 확장 하 고 **F# 대화형**를 선택 합니다.
+다음 표에서는 F# 대화형에서 지 원하는 옵션을 요약 하 여 보여 줍니다. 이러한 옵션은 명령줄 또는 Visual Studio IDE를 통해 설정할 수 있습니다. Visual Studio IDE에서 이러한 옵션을 설정 하려면 **도구** 메뉴를 열고 **옵션**을 선택한 다음 **F # 도구** 노드를 확장 하 고 **F# 대화형**를 선택 합니다.
 
 목록 요소가 F# 대화형 옵션 인수에 표시 되는 경우 목록 요소는 세미콜론 ()으로 구분 됩니다 `;` .
 
@@ -42,7 +42,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 |**--exec**|파일을 로드 하거나 명령줄에 지정 된 스크립트 파일을 실행 한 후 F # interactive를 종료 하도록 지시 합니다.|
 |**--fullpaths**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--gui**[ **+**&#124;**-** ]|Windows Forms 이벤트 루프를 사용 하거나 사용 하지 않도록 설정 합니다. 기본값을 사용합니다.|
-|**--도움말**<br /><br />**-?**|명령줄 구문 및 각 옵션에 대 한 간단한 설명을 표시 하는 데 사용 됩니다.|
+|**--도움말**<br /><br />**-?**|각 옵션에 대 한 간단한 설명 및 명령줄 구문을 표시 하는 데 사용 됩니다.|
 |**--lib: &lt; 폴더-목록&gt;**<br /><br />**-I: &lt; 폴더-목록&gt;**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--load: &lt; filename&gt;**|시작 시 지정 된 소스 코드를 컴파일하고 컴파일된 F # 구문을 세션에 로드 합니다. 대상 소스에 **#use** 또는 **#load**같은 스크립팅 지시문이 포함 되어 있는 경우-- **load** 또는 **#load**대신-- **use** 또는 **#use** 를 사용 해야 합니다.|
 |**--mlcompatibility**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
@@ -56,7 +56,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 |**--readline**[ **+**&#124;**-** ]|대화형 모드에서 탭 완성 기능을 사용 하거나 사용 하지 않도록 설정 합니다.|
 |**--참조: &lt; 파일 이름&gt;**<br /><br />**-r: &lt; 파일 이름&gt;**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--tailcalls**[ **+**&#124;**-** ]|Tail IL 명령을 사용 하거나 사용 하지 않도록 설정 하 여 tail 재귀 함수에 스택 프레임을 다시 사용 하도록 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
-|**--targetprofile: &lt; 문자열&gt;**|이 어셈블리의 대상 프레임 워크 프로필을 지정 합니다. 유효한 값은 mscorlib, microsoft.netcore.portable.compatibility 또는 microsoft.netcore.portable.compatibility입니다.  기본값은 mscorlib입니다.|
+|**--targetprofile: &lt; 문자열&gt;**|이 어셈블리의 대상 프레임 워크 프로필을 지정 합니다. 유효한 값은 `mscorlib`, `netcore` 또는 `netstandard`입니다. 기본값은 `mscorlib`입니다.|
 |**--사용: &lt; 파일 이름&gt;**|시작 시 지정 된 파일을 초기 입력으로 사용 하도록 인터프리터에 지시 합니다.|
 |**--utf8output**|fsc.exe 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--경고: &lt; 경고 수준&gt;**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|

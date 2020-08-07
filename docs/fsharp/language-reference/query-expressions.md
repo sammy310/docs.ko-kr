@@ -2,19 +2,18 @@
 title: 쿼리 식
 description: 'F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419189"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855038"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
-> [!NOTE]
-> 이 문서의 API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
-
 쿼리 식을 사용 하면 데이터 원본을 쿼리하고 원하는 형식으로 데이터를 저장할 수 있습니다. 쿼리 식은 F #의 LINQ에 대 한 지원을 제공 합니다.
+> [!NOTE]
+> F #에 대 한 docs.microsoft.com API 참조가 완전 하지 않습니다. 끊어진 링크가 있는 경우 대신 [F # 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/) 를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -502,7 +501,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 다음 표에서는 몇 가지 일반적인 Transact-sql 쿼리 및 F #에서의 해당 쿼리를 보여 줍니다. 또한이 테이블의 코드는 이전 테이블과 동일한 데이터베이스를 가정 하 고 형식 공급자를 설정 하는 동일한 초기 코드를 가정 합니다.
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>테이블 2. Transact-SQL 및 F# 쿼리 식
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>표 2. Transact-SQL 및 F# 쿼리 식
 
 <table style="width:100%">
   <tr>
@@ -706,7 +705,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> 및 <code>TOP</code><br/>
+<code>LIKE</code>와 <code>TOP</code>을 참조하세요.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -2439,6 +2438,6 @@ end
 
 ## <a name="see-also"></a>참고 항목
 
-- [F # 언어 참조](index.md)
+- [F# 언어 참조](index.md)
 - [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [계산 식](Computation-Expressions.md)
