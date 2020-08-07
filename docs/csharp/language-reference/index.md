@@ -1,6 +1,8 @@
 ---
-title: C# 참조
+title: C# 참고자료
 ms.date: 02/14/2017
+f1_keywords:
+- _CSharpKeyword
 helpviewer_keywords:
 - Visual C#, language reference
 - language reference [C#]
@@ -8,18 +10,18 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bed8f430793a8d8544cf0bbb5ea765490945bfc0
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74428611"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855337"
 ---
-# <a name="c-reference"></a>C# 참조
+# <a name="c-reference"></a>C# 참고자료
 
 이 섹션에서는 C# 키워드, 연산자, 특수 문자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 참조 자료를 제공합니다.  
   
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
  [C# 키워드](./keywords/index.md)  
  C# 키워드 및 구문에 대한 정보 링크를 제공합니다.  
