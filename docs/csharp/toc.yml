@@ -1277,68 +1277,68 @@
       href: language-reference/index.md
     - name: 언어 버전 구성
       href: language-reference/configure-language-version.md
-    - name: C# 키워드
+    - name: 유형
+      items:
+        - name: 값 형식
+          items:
+            - name: 개요
+              href: language-reference/builtin-types/value-types.md
+              displayName: 'value types, simple types'
+            - name: 정수 숫자 형식
+              href: language-reference/builtin-types/integral-numeric-types.md
+              displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
+            - name: 부동 소수점 숫자 형식
+              href: language-reference/builtin-types/floating-point-numeric-types.md
+              displayName: 'float, decimal, double, rational, real, literal'
+            - name: 기본 제공 숫자 변환
+              href: language-reference/builtin-types/numeric-conversions.md
+            - name: bool
+              href: language-reference/builtin-types/bool.md
+              displayName: 'Boolean, true, false'
+            - name: char
+              href: language-reference/builtin-types/char.md
+              displayName: 'Unicode, character, UTF-16'
+            - name: 열거형 형식
+              href: language-reference/builtin-types/enum.md
+              displayName: 'enum, bit flags, bit field'
+            - name: 구조체 형식
+              href: language-reference/builtin-types/struct.md
+              displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+            - name: 튜플 형식
+              href: language-reference/builtin-types/value-tuples.md
+              displayName: 'value tuples, ValueTuple'
+            - name: Nullable 값 형식
+              href: language-reference/builtin-types/nullable-value-types.md
+              displayName: '? token, ? symbol'
+        - name: 참조 형식
+          items:
+            - name: 참조 형식의 기능
+              href: language-reference/keywords/reference-types.md
+            - name: 기본 제공 참조 형식
+              displayName: 'object, delegate, dynamic, string'
+              href: language-reference/builtin-types/reference-types.md
+            - name: class
+              href: language-reference/keywords/class.md
+            - name: interface(인터페이스)
+              href: language-reference/keywords/interface.md
+            - name: nullable 참조 형식
+              href: language-reference/builtin-types/nullable-reference-types.md
+              displayName: '? token, ? symbol'
+        - name: void
+          href: language-reference/builtin-types/void.md
+        - name: var
+          href: language-reference/keywords/var.md
+        - name: 기본 제공 형식
+          href: language-reference/builtin-types/built-in-types.md
+        - name: 관리되지 않는 형식
+          href: language-reference/builtin-types/unmanaged-types.md
+        - name: 기본값
+          href: language-reference/builtin-types/default-values.md
+    - name: 키워드
       items:
         - name: 개요
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 유형
-          items:
-            - name: 값 형식
-              items:
-                - name: 개요
-                  href: language-reference/builtin-types/value-types.md
-                  displayName: 'value types, simple types'
-                - name: 정수 숫자 형식
-                  href: language-reference/builtin-types/integral-numeric-types.md
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
-                - name: 부동 소수점 숫자 형식
-                  href: language-reference/builtin-types/floating-point-numeric-types.md
-                  displayName: 'float, decimal, double, rational, real, literal'
-                - name: 기본 제공 숫자 변환
-                  href: language-reference/builtin-types/numeric-conversions.md
-                - name: bool
-                  href: language-reference/builtin-types/bool.md
-                  displayName: 'Boolean, true, false'
-                - name: char
-                  href: language-reference/builtin-types/char.md
-                  displayName: 'Unicode, character, UTF-16'
-                - name: 열거형 형식
-                  href: language-reference/builtin-types/enum.md
-                  displayName: 'enum, bit flags, bit field'
-                - name: 구조체 형식
-                  href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
-                - name: 튜플 형식
-                  href: language-reference/builtin-types/value-tuples.md
-                  displayName: 'value tuples, ValueTuple'
-                - name: Nullable 값 형식
-                  href: language-reference/builtin-types/nullable-value-types.md
-                  displayName: '? token, ? symbol'
-            - name: 참조 형식
-              items:
-                - name: 참조 형식의 기능
-                  href: language-reference/keywords/reference-types.md
-                - name: 기본 제공 참조 형식
-                  displayName: 'object, delegate, dynamic, string'
-                  href: language-reference/builtin-types/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
-                - name: interface(인터페이스)
-                  href: language-reference/keywords/interface.md
-                - name: nullable 참조 형식
-                  href: language-reference/builtin-types/nullable-reference-types.md
-                  displayName: '? token, ? symbol'
-            - name: void
-              href: language-reference/builtin-types/void.md
-            - name: var
-              href: language-reference/keywords/var.md
-            - name: 기본 제공 형식
-              href: language-reference/builtin-types/built-in-types.md
-            - name: 관리되지 않는 형식
-              href: language-reference/builtin-types/unmanaged-types.md
-            - name: 기본값
-              href: language-reference/builtin-types/default-values.md
         - name: 한정자
           items:
             - name: 액세스 한정자
@@ -1555,7 +1555,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: C# 연산자 및 식
+    - name: 연산자 및 식
       items:
         - name: 개요
           href: language-reference/operators/index.md
@@ -1638,7 +1638,7 @@
           href: language-reference/operators/true-false-operators.md
         - name: 연산자 오버로드
           href: language-reference/operators/operator-overloading.md
-    - name: C# 특수 문자
+    - name: 특수 문자
       items:
         - name: 개요
           displayName: special characters
@@ -1661,7 +1661,7 @@
         - name: null 허용 정적 분석
           displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
           href: language-reference/attributes/nullable-analysis.md
-    - name: C# 전처리기 지시문
+    - name: 전처리기 지시문
       items:
         - name: 개요
           displayName: preprocessor directives
@@ -1694,7 +1694,7 @@
           href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
         - name: '#pragma checksum'
           href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: C# 컴파일러 옵션
+    - name: 컴파일러 옵션
       items:
         - name: 개요
           displayName: compiler options
@@ -1825,7 +1825,7 @@
               href: language-reference/compiler-options/win32manifest-compiler-option.md
             - name: '-win32res'
               href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: C# 컴파일러 오류
+    - name: 컴파일러 오류
       href: language-reference/compiler-messages/index.md
     - name: C# 6.0 초안 사양
       href: language-reference/specification/

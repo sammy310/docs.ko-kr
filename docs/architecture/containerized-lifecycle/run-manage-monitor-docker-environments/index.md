@@ -1,13 +1,13 @@
 ---
 title: Docker 프로덕션 환경 실행, 관리 및 모니터링
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
-ms.date: 02/15/2019
-ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 013918a5b3f0b9dc6c60416af186dc3e51a29a98
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295032"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914918"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker 프로덕션 환경 실행, 관리 및 모니터링
 

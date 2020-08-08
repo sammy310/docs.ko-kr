@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556555"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916812"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# 연산자 및 식(C# 참조)
 
@@ -33,7 +33,7 @@ C#은 여러 연산자를 제공합니다. 상당수의 연산자는 [기본 제
 
 다음 코드에서 식의 예는 할당의 오른쪽에 있습니다.
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 일반적으로 식은 결과를 생성하고 다른 식에 포함될 수 있습니다. [`void`](../builtin-types/void.md) 메서드 호출은 결과를 생성하지 않는 식의 예입니다. 다음 예에 나와 있는 것처럼 이 메서드 호출은 [문](../../programming-guide/statements-expressions-operators/statements.md)으로만 사용할 수 있습니다.
 
@@ -45,15 +45,15 @@ C#에서 제공하는 몇 가지 다른 종류의 식은 다음과 같습니다.
 
 - [보간된 문자열 식](../tokens/interpolated.md): 다음과 같이 형식 문자열을 만들 수 있는 편리한 구문을 제공합니다.
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md): 다음과 같이 익명 함수를 만들 수 있습니다.
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - [쿼리 식](../keywords/query-keywords.md): 다음과 같이 C#에서 직접 쿼리 기능을 사용할 수 있습니다.
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 [식 본문 정의](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)를 사용하여 메서드, 생성자, 속성, 인덱서 또는 종료자에 대한 간결한 정의를 제공할 수 있습니다.
 
