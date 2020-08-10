@@ -1,23 +1,24 @@
 ---
 title: 순수 함수를 사용하여 리팩터링(C#)
+description: 순수 함수를 사용하여 코드를 리팩터링하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300113"
 ---
-# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="9ea7b-102">순수 함수를 사용하여 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="9ea7b-102">Refactoring Using a Pure Function (C#)</span></span>
-<span data-ttu-id="9ea7b-103">다음 예제에서는 순수 함수를 사용하기 위해 이전 예제 [확장 메서드를 사용하여 리팩터링(C#)](./refactoring-using-an-extension-method.md)을 리팩터링합니다. 이 예제에서 단락의 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](./refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
+# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="bcd4b-104">순수 함수를 사용하여 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="bcd4b-104">Refactoring Using a Pure Function (C#)</span></span>
+<span data-ttu-id="bcd4b-105">다음 예제에서는 순수 함수를 사용하기 위해 이전 예제 [확장 메서드를 사용하여 리팩터링(C#)](./refactoring-using-an-extension-method.md)을 리팩터링합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-105">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](./refactoring-using-an-extension-method.md), to use a pure function.</span></span> <span data-ttu-id="bcd4b-106">이 예제에서 단락의 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-106">In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9ea7b-104">예제</span><span class="sxs-lookup"><span data-stu-id="9ea7b-104">Example</span></span>  
- <span data-ttu-id="9ea7b-105">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="9ea7b-106">또한 각 단락의 스타일도 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="9ea7b-107">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="9ea7b-108">리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-108">The refactored code is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="bcd4b-107">예제</span><span class="sxs-lookup"><span data-stu-id="bcd4b-107">Example</span></span>  
+ <span data-ttu-id="bcd4b-108">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-108">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="bcd4b-109">또한 각 단락의 스타일도 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-109">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="bcd4b-110">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="bcd4b-111">리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-111">The refactored code is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="9ea7b-109">이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="bcd4b-112">이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="9ea7b-110">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="9ea7b-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="9ea7b-111"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="bcd4b-113">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="bcd4b-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="bcd4b-114"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -154,7 +155,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="9ea7b-112">이 예제의 결과는 리팩터링하기 전의 결과와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-112">This example produces the same output as before the refactoring:</span></span>  
+ <span data-ttu-id="bcd4b-115">이 예제의 결과는 리팩터링하기 전의 결과와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-115">This example produces the same output as before the refactoring:</span></span>  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -174,13 +175,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a><span data-ttu-id="9ea7b-113">다음 단계</span><span class="sxs-lookup"><span data-stu-id="9ea7b-113">Next Steps</span></span>  
- <span data-ttu-id="9ea7b-114">다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ea7b-114">The next example shows how to project XML into a different shape:</span></span>  
+### <a name="next-steps"></a><span data-ttu-id="bcd4b-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="bcd4b-116">Next Steps</span></span>  
+ <span data-ttu-id="bcd4b-117">다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bcd4b-117">The next example shows how to project XML into a different shape:</span></span>  
   
-- [<span data-ttu-id="9ea7b-115">다른 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="9ea7b-115">Projecting XML in a Different Shape (C#)</span></span>](./projecting-xml-in-a-different-shape.md)  
+- [<span data-ttu-id="bcd4b-118">다른 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="bcd4b-118">Projecting XML in a Different Shape (C#)</span></span>](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9ea7b-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9ea7b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcd4b-119">참조</span><span class="sxs-lookup"><span data-stu-id="bcd4b-119">See also</span></span>
 
-- [<span data-ttu-id="9ea7b-117">자습서: WordprocessingML 문서에서 내용 조작(C#)</span><span class="sxs-lookup"><span data-stu-id="9ea7b-117">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](./shape-of-wordprocessingml-documents.md)
-- [<span data-ttu-id="9ea7b-118">확장 메서드를 사용하여 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="9ea7b-118">Refactoring Using an Extension Method (C#)</span></span>](./refactoring-using-an-extension-method.md)
-- [<span data-ttu-id="9ea7b-119">순수 함수로 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="9ea7b-119">Refactoring Into Pure Functions (C#)</span></span>](./refactoring-into-pure-functions.md)
+- [<span data-ttu-id="bcd4b-120">자습서: WordprocessingML 문서에서 내용 조작(C#)</span><span class="sxs-lookup"><span data-stu-id="bcd4b-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](./shape-of-wordprocessingml-documents.md)
+- [<span data-ttu-id="bcd4b-121">확장 메서드를 사용하여 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="bcd4b-121">Refactoring Using an Extension Method (C#)</span></span>](./refactoring-using-an-extension-method.md)
+- [<span data-ttu-id="bcd4b-122">순수 함수로 리팩터링(C#)</span><span class="sxs-lookup"><span data-stu-id="bcd4b-122">Refactoring Into Pure Functions (C#)</span></span>](./refactoring-into-pure-functions.md)

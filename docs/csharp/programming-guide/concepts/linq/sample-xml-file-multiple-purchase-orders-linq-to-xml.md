@@ -1,18 +1,19 @@
 ---
 title: '샘플 XML 파일: 여러 구매 주문(LINQ to XML)'
+description: 이 XML 파일은 LINQ to XML 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: d73887308c07b161887716ccf2194eeb3918ff51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8902b262e838c385581fc221d210f2b7ec11cd47
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168143"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302518"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="998c1-102">샘플 XML 파일: 여러 구매 주문(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="998c1-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="998c1-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="998c1-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="998c1-104">이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="998c1-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="2168d-104">샘플 XML 파일: 여러 구매 주문(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2168d-104">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="2168d-105">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2168d-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2168d-106">이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2168d-106">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="998c1-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="998c1-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="2168d-107">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="2168d-107">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

@@ -1,42 +1,43 @@
 ---
 title: 문서 주석에 대한 권장 태그 - C# 프로그래밍 가이드
+description: 문서 주석용 권장 태그에 대해 알아봅니다. 권장 태그 목록 및 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 01/21/2020
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65bca6f979c5ffd91507b571a4f049377315192d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789720"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381517"
 ---
-# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a><span data-ttu-id="2a8ad-102">문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="2a8ad-102">Recommended tags for documentation comments (C# programming guide)</span></span>
+# <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a><span data-ttu-id="cd242-104">문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="cd242-104">Recommended tags for documentation comments (C# programming guide)</span></span>
 
-<span data-ttu-id="2a8ad-103">C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 옵션에서 지정한 이름의 파일에 XML로 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-103">The C# compiler processes documentation comments in your code and formats them as XML in a file whose name you specify in the **/doc** command-line option.</span></span> <span data-ttu-id="2a8ad-104">컴파일러에서 생성한 파일을 기반으로 해서 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [DocFX](https://dotnet.github.io/docfx/) 또는 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-104">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>
+<span data-ttu-id="cd242-105">C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 옵션에서 지정한 이름의 파일에 XML로 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-105">The C# compiler processes documentation comments in your code and formats them as XML in a file whose name you specify in the **/doc** command-line option.</span></span> <span data-ttu-id="cd242-106">컴파일러에서 생성한 파일을 기반으로 해서 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [DocFX](https://dotnet.github.io/docfx/) 또는 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-106">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>
 
-<span data-ttu-id="2a8ad-105">태그는 형식, 형식 멤버 등의 코드 구문에서 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-105">Tags are processed on code constructs such as types and type members.</span></span>
+<span data-ttu-id="cd242-107">태그는 형식, 형식 멤버 등의 코드 구문에서 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-107">Tags are processed on code constructs such as types and type members.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2a8ad-106">네임스페이스에는 문서 주석을 적용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-106">Documentation comments cannot be applied to a namespace.</span></span>  
+> <span data-ttu-id="cd242-108">네임스페이스에는 문서 주석을 적용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-108">Documentation comments cannot be applied to a namespace.</span></span>  
   
- <span data-ttu-id="2a8ad-107">컴파일러는 유효한 XML인 태그를 모두 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-107">The compiler will process any tag that is valid XML.</span></span> <span data-ttu-id="2a8ad-108">다음 태그는 사용자 문서에서 일반적으로 사용되는 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-108">The following tags provide generally used functionality in user documentation.</span></span>  
+ <span data-ttu-id="cd242-109">컴파일러는 유효한 XML인 태그를 모두 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-109">The compiler will process any tag that is valid XML.</span></span> <span data-ttu-id="cd242-110">다음 태그는 사용자 문서에서 일반적으로 사용되는 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-110">The following tags provide generally used functionality in user documentation.</span></span>  
   
-## <a name="tags"></a><span data-ttu-id="2a8ad-109">태그들</span><span class="sxs-lookup"><span data-stu-id="2a8ad-109">Tags</span></span>  
+## <a name="tags"></a><span data-ttu-id="cd242-111">Tags</span><span class="sxs-lookup"><span data-stu-id="cd242-111">Tags</span></span>  
   
 |||||  
 |---|---|---|---|
-|[<span data-ttu-id="2a8ad-110">\<c></span><span class="sxs-lookup"><span data-stu-id="2a8ad-110">\<c></span></span>](./code-inline.md)|[<span data-ttu-id="2a8ad-111">\<para></span><span class="sxs-lookup"><span data-stu-id="2a8ad-111">\<para></span></span>](./para.md)|<span data-ttu-id="2a8ad-112">[\<see>](./see.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-112">[\<see>](./see.md)\*</span></span>|[<span data-ttu-id="2a8ad-113">\<value></span><span class="sxs-lookup"><span data-stu-id="2a8ad-113">\<value></span></span>](./value.md)  
-|[<span data-ttu-id="2a8ad-114">\<code></span><span class="sxs-lookup"><span data-stu-id="2a8ad-114">\<code></span></span>](./code.md)|<span data-ttu-id="2a8ad-115">[\<param>](./param.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-115">[\<param>](./param.md)\*</span></span>|<span data-ttu-id="2a8ad-116">[\<seealso>](./seealso.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-116">[\<seealso>](./seealso.md)\*</span></span>|  
-|[<span data-ttu-id="2a8ad-117">\<example></span><span class="sxs-lookup"><span data-stu-id="2a8ad-117">\<example></span></span>](./example.md)|[<span data-ttu-id="2a8ad-118">\<paramref></span><span class="sxs-lookup"><span data-stu-id="2a8ad-118">\<paramref></span></span>](./paramref.md)|[<span data-ttu-id="2a8ad-119">\<summary></span><span class="sxs-lookup"><span data-stu-id="2a8ad-119">\<summary></span></span>](./summary.md)|  
-|<span data-ttu-id="2a8ad-120">[\<exception>](./exception.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-120">[\<exception>](./exception.md)\*</span></span>|<span data-ttu-id="2a8ad-121">[\<permission>](./permission.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-121">[\<permission>](./permission.md)\*</span></span>|<span data-ttu-id="2a8ad-122">[\<typeparam>](./typeparam.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-122">[\<typeparam>](./typeparam.md)\*</span></span>|  
-|<span data-ttu-id="2a8ad-123">[\<include>](./include.md)\*</span><span class="sxs-lookup"><span data-stu-id="2a8ad-123">[\<include>](./include.md)\*</span></span>|[<span data-ttu-id="2a8ad-124">\<remarks></span><span class="sxs-lookup"><span data-stu-id="2a8ad-124">\<remarks></span></span>](./remarks.md)|[<span data-ttu-id="2a8ad-125">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="2a8ad-125">\<typeparamref></span></span>](./typeparamref.md)|  
-|[<span data-ttu-id="2a8ad-126">\<list></span><span class="sxs-lookup"><span data-stu-id="2a8ad-126">\<list></span></span>](./list.md)|[<span data-ttu-id="2a8ad-127">\<inheritdoc></span><span class="sxs-lookup"><span data-stu-id="2a8ad-127">\<inheritdoc></span></span>](./inheritdoc.md)|[<span data-ttu-id="2a8ad-128">\<returns></span><span class="sxs-lookup"><span data-stu-id="2a8ad-128">\<returns></span></span>](./returns.md)|
+|[\<c>](./code-inline.md)|[\<para>](./para.md)|[\<see>](./see.md)*|[\<value>](./value.md)  
+|[\<code>](./code.md)|[\<param>](./param.md)*|[\<seealso>](./seealso.md)*|  
+|[\<example>](./example.md)|[\<paramref>](./paramref.md)|[\<summary>](./summary.md)|  
+|[\<exception>](./exception.md)*|[\<permission>](./permission.md)*|[\<typeparam>](./typeparam.md)*|  
+|[\<include>](./include.md)*|[\<remarks>](./remarks.md)|[\<typeparamref>](./typeparamref.md)|  
+|[\<list>](./list.md)|[\<inheritdoc>](./inheritdoc.md)|[\<returns>](./returns.md)|
   
-<span data-ttu-id="2a8ad-129">(\* 컴파일러에서 구문을 확인함을 나타냅니다.)</span><span class="sxs-lookup"><span data-stu-id="2a8ad-129">(\* denotes that the compiler verifies syntax.)</span></span>
+<span data-ttu-id="cd242-112">(\* 컴파일러에서 구문을 확인함을 나타냅니다.)</span><span class="sxs-lookup"><span data-stu-id="cd242-112">(\* denotes that the compiler verifies syntax.)</span></span>
 
-<span data-ttu-id="2a8ad-130">문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 각각 `&lt;` 및 `&gt;`인 `<` 및 `>`의 HTML 인코딩을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-130">If you want angle brackets to appear in the text of a documentation comment, use the HTML encoding of `<` and `>` which is `&lt;` and `&gt;` respectively.</span></span> <span data-ttu-id="2a8ad-131">이 인코딩은 다음 예제에서 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a8ad-131">This encoding is shown in the following example.</span></span>
+<span data-ttu-id="cd242-113">문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 각각 `&lt;` 및 `&gt;`인 `<` 및 `>`의 HTML 인코딩을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-113">If you want angle brackets to appear in the text of a documentation comment, use the HTML encoding of `<` and `>` which is `&lt;` and `&gt;` respectively.</span></span> <span data-ttu-id="cd242-114">이 인코딩은 다음 예제에서 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd242-114">This encoding is shown in the following example.</span></span>
 
 ```csharp
 /// <summary>
@@ -44,8 +45,8 @@ ms.locfileid: "76789720"
 /// </summary>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2a8ad-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2a8ad-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd242-115">참조</span><span class="sxs-lookup"><span data-stu-id="cd242-115">See also</span></span>
 
-- [<span data-ttu-id="2a8ad-133">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="2a8ad-133">C# programming guide</span></span>](../index.md)
-- [<span data-ttu-id="2a8ad-134">-doc(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="2a8ad-134">-doc (C# compiler options)</span></span>](../../language-reference/compiler-options/doc-compiler-option.md)
-- [<span data-ttu-id="2a8ad-135">XML 문서 주석</span><span class="sxs-lookup"><span data-stu-id="2a8ad-135">XML documentation comments</span></span>](./index.md)
+- [<span data-ttu-id="cd242-116">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="cd242-116">C# programming guide</span></span>](../index.md)
+- [<span data-ttu-id="cd242-117">-doc(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="cd242-117">-doc (C# compiler options)</span></span>](../../language-reference/compiler-options/doc-compiler-option.md)
+- [<span data-ttu-id="cd242-118">XML 문서 주석</span><span class="sxs-lookup"><span data-stu-id="cd242-118">XML documentation comments</span></span>](./index.md)

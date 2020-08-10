@@ -1,23 +1,24 @@
 ---
 title: 여러 키로 요소를 정렬하는 방법(C#)
+description: 여러 키로 요소를 정렬하는 방법을 알아봅니다. 샘플 XML 문서를 사용하는 요소 정렬 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301504"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="5a01b-102">여러 키로 요소를 정렬하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="5a01b-102">How to sort elements on multiple keys (C#)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="8111a-104">여러 키로 요소를 정렬하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="8111a-104">How to sort elements on multiple keys (C#)</span></span>
 
-<span data-ttu-id="5a01b-103">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-103">This topic shows how to sort on multiple keys.</span></span>
+<span data-ttu-id="8111a-105">이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8111a-105">This topic shows how to sort on multiple keys.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5a01b-104">예제</span><span class="sxs-lookup"><span data-stu-id="5a01b-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8111a-106">예제</span><span class="sxs-lookup"><span data-stu-id="8111a-106">Example</span></span>
 
-<span data-ttu-id="5a01b-105">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
+<span data-ttu-id="8111a-107">이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="8111a-107">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
 
-<span data-ttu-id="5a01b-106">이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
+<span data-ttu-id="8111a-108">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="8111a-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,7 +37,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="5a01b-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-107">This code produces the following output:</span></span>
+<span data-ttu-id="8111a-109">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8111a-109">This code produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -63,11 +64,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example"></a><span data-ttu-id="5a01b-108">예제</span><span class="sxs-lookup"><span data-stu-id="5a01b-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8111a-110">예제</span><span class="sxs-lookup"><span data-stu-id="8111a-110">Example</span></span>
 
-<span data-ttu-id="5a01b-109">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="5a01b-110">자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5a01b-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="8111a-111">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8111a-111">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="8111a-112">자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8111a-112">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
 
-<span data-ttu-id="5a01b-111">이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](./sample-xml-file-customers-and-orders-in-a-namespace.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
+<span data-ttu-id="8111a-113">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="8111a-113">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,7 +89,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="5a01b-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5a01b-112">This code produces the following output:</span></span>
+<span data-ttu-id="8111a-114">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8111a-114">This code produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
