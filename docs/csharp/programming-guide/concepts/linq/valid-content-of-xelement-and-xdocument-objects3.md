@@ -1,13 +1,14 @@
 ---
 title: XElement 및 XDocument 개체의 유효한 콘텐츠3
+description: 생성자에 전달될 수 있는 유효한 인수에 대해 알아보고 요소 및 문서에 콘텐츠를 추가하는 데 사용하는 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfafbe76b078db6c22b475770ebadaff38c75ba8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302258"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "69590942"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- 구현하는 모든 형식 <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
   
  개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XNode> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 컬렉션에 텍스트(또는 텍스트로 변환된 개체)가 포함되어 있으면 컬렉션의 텍스트가 연결되어 단일 텍스트 노드로 추가됩니다.  
   

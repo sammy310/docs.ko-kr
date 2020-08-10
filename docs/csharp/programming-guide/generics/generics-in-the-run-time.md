@@ -1,15 +1,16 @@
 ---
 title: 런타임의 제네릭 - C# 프로그래밍 가이드
+description: 런타임의 제네릭 형식에 대해 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: a53a21d3028e588f5c4d5ce7bf35fad8d3720a08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e072e7aa53177929dda0be931beb85863b6a12e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75702989"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299229"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>런타임의 제네릭(C# 프로그래밍 가이드)
 제네릭 형식 또는 메서드가 MSIL(Microsoft Intermediate Language)로 컴파일되면 자체적으로 형식 매개 변수를 갖는 것으로 식별하는 메타데이터가 포함됩니다. 제네릭 형식의 MSIL이 사용되는 방식은 제공된 형식 매개 변수가 값 형식인지 참조 형식인지에 따라 다릅니다.  

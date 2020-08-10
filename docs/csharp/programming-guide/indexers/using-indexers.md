@@ -1,15 +1,16 @@
 ---
 title: 인덱서 사용 - C# 프로그래밍 가이드
+description: C#에서 클래스, 구조체 또는 인터페이스에 대한 인덱서를 선언하고 사용하는 방법을 알아봅니다. 이 문서에는 예제 코드가 포함되어 있습니다.
 ms.date: 07/15/2020
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: e742e4dd5ea92ec3baf37c915e024e713022b7b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a8a9e05c1d2e44841177a924c6ff51c6c9e6a05a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301868"
 ---
 # <a name="using-indexers-c-programming-guide"></a>인덱서 사용(C# 프로그래밍 가이드)
 

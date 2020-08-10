@@ -1,13 +1,14 @@
 ---
 title: 요소 값을 검색하는 방법(LINQ to XML)(C#)
+description: 요소의 값을 가져오는 방법을 알아봅니다. 문자열 캐스팅, 정수 캐스팅 및 Value 속성을 사용하는 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: eb750927d74c3068d7ab06caba9835110bd77a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805825"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301543"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>요소 값을 검색하는 방법(LINQ to XML)(C#)
 
@@ -44,7 +45,7 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (int)e);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```output  
 <Age>44</Age>  
@@ -150,6 +151,6 @@ v4:element does not exist
   
  일반적으로 요소 및 특성 내용을 검색하는 데 캐스팅을 사용하면 보다 간단한 코드를 작성할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)

@@ -1,15 +1,16 @@
 ---
 title: 대리자를 선언, 인스턴스화, 사용하는 방법 - C# 프로그래밍 가이드
+description: 대리자를 선언, 인스턴스화, 사용하는 방법을 알아봅니다. C# 1.0, 2.0 및 3.0 이상을 사용하는 예제를 살펴봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d4c8424b07a9bccc9112ca9e635a78b9e1a3366
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712366"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300217"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>대리자를 선언, 인스턴스화, 사용하는 방법(C# 프로그래밍 가이드)
 C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수 있습니다.  

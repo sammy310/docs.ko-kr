@@ -1,13 +1,14 @@
 ---
 title: XmlReader로 serialize(XSLT 호출)(C#)
+description: C#에서 CreateReader를 사용하여 XmlReader를 만드는 방법을 알아봅니다. 이 XmlReader에서 읽는 모듈은 XML 트리에서 노드를 읽고 처리합니다.
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa5a232c74c5314cb7f1cf03c2a8875ca1cd04df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302414"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>XmlReader로 serialize(XSLT 호출)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 <xref:System.Xml?displayProperty=nameWithType> 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다. 만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.  
@@ -50,7 +51,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```xml  
 <Root>  

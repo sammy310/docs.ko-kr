@@ -1,17 +1,18 @@
 ---
 title: COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법 - C# 프로그래밍 가이드
+description: 이 C# 예제에서 어떻게 인덱싱된 속성이 매개 변수가 있는 COM 속성이 사용되는 방식을 개선하는지 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abd785864bd79d455024cb4501c76a21b349aa91
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712067"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303012"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법(C# 프로그래밍 가이드)
 *인덱싱된 속성*은 매개 변수가 있는 COM 속성이 C# 프로그래밍에서 사용되는 방식을 개선합니다. 인덱싱된 속성은 Visual C#의 다른 기능(예: [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)), 새 형식([dynamic](../../language-reference/builtin-types/reference-types.md)), [포함된 형식 정보](../../../standard/assembly/embed-types-visual-studio.md)와 함께 작동하여 Microsoft Office 프로그래밍을 개선합니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "75712067"
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)

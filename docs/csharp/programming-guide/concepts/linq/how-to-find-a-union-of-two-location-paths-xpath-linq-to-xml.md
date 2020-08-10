@@ -1,13 +1,14 @@
 ---
 title: 두 위치 경로의 공용 구조체를 찾는 방법(XPath-LINQ to XML)(C#)
+description: XPath 식을 사용하여 두 XPath 위치 경로의 합집합을 찾는 방법을 알아봅니다. 샘플 XML 파일을 사용하는 코드 예제를 검토합니다.
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65b20fe25a0990fd82ce3bd08c3433499e728512
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141214"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303324"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>두 위치 경로의 공용 구조체를 찾는 방법(XPath-LINQ to XML)(C#)
 XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니다.  
@@ -21,7 +22,7 @@ XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니�
 ## <a name="example"></a>예제  
  이 예제에서는 모든 `Category` 요소와 모든 `Price` 요소를 찾은 다음 단일 컬렉션으로 연결합니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>을 호출하여 결과를 정렬합니다. XPath 식 계산의 결과도 문서 순서로 되어 있습니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  

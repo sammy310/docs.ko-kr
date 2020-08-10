@@ -1,13 +1,14 @@
 ---
 title: XSD를 사용하여 유효성을 검사하는 방법(LINQ to XML)(C#)
+description: XSD(XML 스키마 정의 언어) 파일에 대해 XML 트리의 유효성을 검사하는 방법을 알아봅니다. 코드 예제를 살펴보고 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347246"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302635"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD를 사용하여 유효성을 검사하는 방법(LINQ to XML)(C#)
 <xref:System.Xml.Schema> 네임스페이스에는 XSD(XML 스키마 정의 언어) 파일에 대해 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. 자세한 내용은 <xref:System.Xml.Schema.Extensions.Validate%2A> 메서드 설명서를 참조하세요.  
@@ -78,9 +79,9 @@ doc2 did not validate
 ## <a name="example"></a>예제  
  다음 예제에서는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)의 XML 문서가 [샘플 XSD 파일: Customers 및 Orders](./sample-xsd-file-customers-and-orders1.md)의 스키마별로 유효한지 확인합니다. 소스 XML 문서를 수정합니다. 여기에서는 첫 번째 고객에 대한 `CustomerID` 특성을 변경합니다. 변경한 후에는 주문이 존재하지 않는 고객을 참조하게 되므로 XML 문서가 더 이상 유효하지 않습니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- 이 예제에서는 XSD 스키마로 [샘플 XSD 파일: Customers 및 Orders](./sample-xsd-file-customers-and-orders1.md)을 사용합니다.  
+ 이 예제에서는 XSD 스키마을 사용합니다. [샘플 XSD 파일: Customer 및 Order](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -109,7 +110,7 @@ custOrdDoc.Validate(schemas, (o, e) =>
 Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```output  
 Attempting to validate  

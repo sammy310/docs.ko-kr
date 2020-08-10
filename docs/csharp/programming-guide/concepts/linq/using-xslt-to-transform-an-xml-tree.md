@@ -1,13 +1,14 @@
 ---
 title: XSLT를 사용하여 XML 트리 변환(C#)
+description: XmlReader 및 XmlWriter 인스턴스에서 XSLT 변형을 호출하여 C#에서 XSLT를 사용해 XML 트리를 변환하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce92136850aeef52e5b17cd7bc658b85fe70604
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140917"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302271"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>XSLT를 사용하여 XML 트리 변환(C#)
 XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다. 그런 다음 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 변환에 전달하여 XSLT 변환을 호출할 수 있습니다. 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
@@ -58,7 +59,7 @@ string result = newDocument.ToString();
 Console.WriteLine(result);
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```xml  
 <Root>  

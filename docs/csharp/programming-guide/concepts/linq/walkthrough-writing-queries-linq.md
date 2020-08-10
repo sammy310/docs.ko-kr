@@ -1,5 +1,6 @@
 ---
 title: '연습: C#에서 쿼리 작성(LINQ)'
+description: 이 연습에서는 LINQ 쿼리 식에서 C# 언어 기능을 사용하는 방법을 보여 줍니다. 이 문서에서는 Visual Studio를 개발 환경으로 사용합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418063"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302219"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -26,7 +27,7 @@ ms.locfileid: "73418063"
   
 1. Visual Studio를 시작합니다.  
   
-2. 주 메뉴에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.  
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
@@ -182,7 +183,7 @@ ms.locfileid: "73418063"
   
  [LINQ to Objects(C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(C#)](./index.md)
 - [LINQ 쿼리 식](../../../linq/index.md)

@@ -1,13 +1,14 @@
 ---
 title: XName 개체의 사전 원자화(LINQ to XML)(C#)
+description: XName 개체의 사전 원자화에 대해 알아봅니다. 개체를 사전 원자화하면 특정 이름이 반복되는 대형 XML 트리를 만들 때 성능이 향상됩니다.
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d217f6c78dc5d83ce424fb3ba95785f2dac0b73
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591502"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302830"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>XName 개체의 사전 원자화(LINQ to XML)(C#)
 LINQ to XML의 성능을 향상시키는 한 가지 방법은 <xref:System.Xml.Linq.XName> 개체를 사전 원자화하는 것입니다. 사전 원자화는 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XElement> 클래스의 생성자를 사용하여 XML 트리를 만들기 전에 문자열을 <xref:System.Xml.Linq.XAttribute> 개체에 할당하는 것입니다. 그런 다음 문자열을 생성자에 전달하여 문자열을 <xref:System.Xml.Linq.XName>으로 암시적으로 변환하는 대신 초기화된 <xref:System.Xml.Linq.XName> 개체를 전달합니다.  
@@ -117,6 +118,6 @@ DateTime t2 = DateTime.Now;
 Console.WriteLine("Time to construct:{0}", t2 - t1);  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)](./atomized-xname-and-xnamespace-objects-linq-to-xml.md)

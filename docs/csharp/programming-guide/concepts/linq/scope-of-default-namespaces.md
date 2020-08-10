@@ -1,13 +1,14 @@
 ---
 title: C#에서 기본 네임스페이스 범위
+description: C#의 LINQ to XML에서 기본 XML 네임스페이스에 쿼리하는 방법을 알아봅니다. XNamespace 변수와 로컬 이름을 사용하여 쿼리의 정규화된 이름을 만듭니다.
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 912e47099f89daa9b80ac58b422d39d598509ac9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253044"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302401"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\#에서 기본 네임스페이스 범위
 XML 트리에 나타나는 기본 네임스페이스는 쿼리에 범위에 포함되지 않습니다. 기본 네임스페이스에 있는 XML을 사용하는 경우 <xref:System.Xml.Linq.XNamespace> 변수를 선언하고 로컬 이름과 결합하여 쿼리에서 사용할 정규화된 이름을 만들어야 합니다.  
@@ -42,7 +43,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
  이 예제의 결과는 다음과 같습니다.  
   
 ```output  
@@ -77,7 +78,7 @@ foreach (XElement el in c1)
 Console.WriteLine("End of result set");  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
  이 예제의 결과는 다음과 같습니다.  
   
 ```output  

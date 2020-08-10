@@ -1,13 +1,14 @@
 ---
 title: XML 선언으로 serialize(C#)
+description: C#의 serialization이 파일, TextWriter, XmlWriter로 직렬화하는 등 XML 선언을 생성하는 구성에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91b61f037d28149f7c2355f4233dc319b54627
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483473"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302362"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 선언으로 serialize(C#)
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  
@@ -55,7 +56,7 @@ using (XmlWriter xw = XmlWriter.Create(sb, xws)) {
 Console.WriteLine(sb.ToString());  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```xml  
 <Root><Child>child content</Child></Root>  

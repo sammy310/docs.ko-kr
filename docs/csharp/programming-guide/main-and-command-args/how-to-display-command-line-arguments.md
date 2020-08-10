@@ -1,15 +1,16 @@
 ---
 title: 명령줄 인수를 표시하는 방법 - C# 프로그래밍 가이드
+description: 명령줄 인수를 표시하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ac5dc5a5f4e974c9202d2ce23f61071494e1977
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712028"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381816"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>명령줄 인수를 표시하는 방법(C# 프로그래밍 가이드)
 명령줄에서 실행 파일에 제공된 인수는 `Main`에 대한 선택적 매개 변수를 통해 액세스할 수 있습니다. 인수는 문자열 배열의 형태로 제공됩니다. 배열의 각 요소에는 하나의 인수가 포함되어 있습니다. 인수 사이의 공백은 제거됩니다. 예를 들어 명령줄에서 다음과 같이 가상 실행 파일을 호출한다고 가정합니다.  

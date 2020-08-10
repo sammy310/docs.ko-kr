@@ -1,5 +1,6 @@
 ---
 title: Boxing 및 Unboxing - C# 프로그래밍 가이드
+description: C# 프로그래밍의 boxing 및 unboxing에 대해 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a5bfcc79de8ba3ff66ca8aab9d86d69d89f9221
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745420"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380698"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 및 Unboxing(C# 프로그래밍 가이드)
 
@@ -112,7 +113,7 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [참조 형식](../../language-reference/keywords/reference-types.md)

@@ -1,16 +1,17 @@
 ---
 title: 디렉터리 트리를 반복하는 방법 - C# 프로그래밍 가이드
+description: 디렉터리 트리를 반복하는 방법을 알아봅니다. 지정된 루트 폴더 아래의 중첩된 각 하위 디렉터리에 있는 각 파일에 액세스합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301985"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>디렉터리 트리를 반복하는 방법(C# 프로그래밍 가이드)
 "디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=nameWithType> 또는 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 개체의 형태로 추가 정보를 검색할 수 있습니다.  

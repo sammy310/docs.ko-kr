@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205839"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427023"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -475,7 +475,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
   <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
   <PackageTags>machine learning;framework</PackageTags>
   <PackageReleaseNotes>Version 0.9.12-beta</PackageReleaseNotes>
-  <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+  <PackageIcon>ico.png</PackageIcon>
   <PackageProjectUrl>http://numl.net</PackageProjectUrl>
   <PackageLicenseUrl>https://raw.githubusercontent.com/sethjuarez/numl/master/LICENSE.md</PackageLicenseUrl>
   <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -485,7 +485,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
 </PropertyGroup>
 ```
 
-MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다. `summary`의 경우 MSBuild `<Description>` 속성을 사용할 수 있습니다. `summary`의 값은 이 속성에 자동으로 마이그레이션되지 않습니다. 이 속성이 [`description`](#other-common-root-level-options) 요소에 매핑되기 때문입니다.
+MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다. `summary`의 경우 MSBuild `<Description>` 속성을 사용할 수 있습니다. `summary`의 값은 이 속성에 자동으로 마이그레이션되지 않습니다. 이 속성이 [`description`](#other-common-root-level-options) 요소에 매핑되기 때문입니다.  [PackageIconUrl은 더 이상 사용되지 않고](/nuget/reference/msbuild-targets#packageiconurl) 대신 PackageIcon이 사용됩니다.
 
 ## <a name="scripts"></a>스크립트
 

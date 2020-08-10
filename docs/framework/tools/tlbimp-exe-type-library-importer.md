@@ -1,5 +1,6 @@
 ---
 title: Tlbimp.exe(형식 라이브러리 가져오기)
+description: 형식 라이브러리 가져오기 도구인 Tlbimp.exe를 사용합니다. 이 도구는 COM 형식 라이브러리에 있는 형식 정의를 CLR 어셈블리의 동등한 정의로 변환합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: d942378888b06049022188c75456f438d4b187e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1e50336e6c159ae56b393098868e4b8f5310b49
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180242"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516998"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  

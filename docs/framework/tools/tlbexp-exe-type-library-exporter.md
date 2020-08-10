@@ -1,5 +1,6 @@
 ---
 title: Tlbexp.exe(형식 라이브러리 내보내기)
+description: 형식 라이브러리 내보내기 도구인 Tlbexp.exe에 대해 알아봅니다. 이 도구는 CLR(공용 언어 런타임) 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exporting type library [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180264"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517037"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  

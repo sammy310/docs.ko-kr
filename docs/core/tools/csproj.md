@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251207"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427010"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -342,9 +342,9 @@ SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선
 
 패키지에 적용되는 라이선스에 대한 URL입니다. (Visual Studio 15.9.4, .NET SDK 2.1.502 및 2.2.101 이후부터 사용되지 않습니다.)
 
-### <a name="packageiconurl"></a>PackageIconUrl
+### <a name="packageicon"></a>PackageIcon
 
-UI 표시에서 패키지에 대한 아이콘으로 사용하는 투명한 배경의 64x64 이미지에 대한 URL입니다.
+패키지 아이콘으로 사용할 패키지의 이미지에 대한 경로입니다. [`icon` 메타데이터](/nuget/reference/nuspec#icon)에 대해 자세히 알아봅니다. [PackageIconUrl은 더 이상 사용되지 않고](/nuget/reference/msbuild-targets#packageiconurl) 대신 PackageIcon이 사용됩니다.
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 

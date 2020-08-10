@@ -1,13 +1,14 @@
 ---
 title: 순수 함수로 리팩터링(C#)
+description: 순수 함수를 사용하여 코드를 리팩터링하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253108"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300230"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>순수 함수로 리팩터링(C#)
 

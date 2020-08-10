@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 49041ce906ab0bb8b9482b79c44302465c4ca788
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 74c3d3247912dcd638a9379d54e682967c5e400b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702260"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302717"
 ---
 ### <a name="globalization-apis-use-icu-libraries-on-windows"></a>Windows에서 세계화 API가 ICU 라이브러리를 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "83702260"
 
 #### <a name="recommended-action"></a>권장 조치
 
-개발자는 아무 작업도 수행하지 않아도 됩니다. 하지만 NLS 세계화 API를 계속 사용하려는 경우 [런타임 스위치](../../../../docs/core/run-time-config/globalization.md#nls)를 설정하여 해당 동작으로 되돌릴 수 있습니다.
+개발자는 아무 작업도 수행하지 않아도 됩니다. 하지만 NLS 세계화 API를 계속 사용하려는 경우 [런타임 스위치](../../../../docs/core/run-time-config/globalization.md#nls)를 설정하여 해당 동작으로 되돌릴 수 있습니다. 사용 가능한 스위치에 대한 자세한 내용은 [.NET 세계화 및 ICU](/dotnet/standard/globalization-localization/globalization-icu) 문서를 참조하세요.
 
 #### <a name="category"></a>범주
 
@@ -43,7 +43,7 @@ ms.locfileid: "83702260"
 
 #### Affected APIs
 
-- `T:System.Span%601`
+- ``T:System.Span`1``
 - `T:System.String`
 - `N:System.Globalization`
 

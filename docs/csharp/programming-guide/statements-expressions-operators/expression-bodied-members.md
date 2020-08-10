@@ -1,15 +1,16 @@
 ---
 title: 식 본문 멤버 - C# 프로그래밍 가이드
+description: 식 본문 멤버에 대해 알아봅니다. 속성, 생성자, 종료자 등에 대해 식 본문 정의를 사용하는 코드 예제를 살펴봅니다.
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e68e96e4aa3ff6a64590459a7197da1833e1a275
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711989"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381660"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
 

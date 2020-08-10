@@ -1,13 +1,14 @@
 ---
 title: 리플렉션(C#)
+description: 리플렉션은 C#에서 어셈블리, 모듈 및 형식을 설명하는 개체를 제공합니다. 코드에 특성이 포함되어 있으면 리플렉션을 사용하여 액세스할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: a56fb24b63e4d80dbb67b079466b67cd11672023
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711670"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302804"
 ---
 # <a name="reflection-c"></a>리플렉션(C#)
 

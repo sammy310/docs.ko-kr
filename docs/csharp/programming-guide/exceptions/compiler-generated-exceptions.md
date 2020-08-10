@@ -1,15 +1,16 @@
 ---
 title: 컴파일러 생성 예외 - C# 프로그래밍 가이드
+description: 컴파일러 생성 예외에 대해 알아봅니다. 자동으로 throw된 예외 및 해당 오류 조건의 목록을 검토합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 1d2d561df3e496893657b050fa93b44c56542d97
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1def83f72e83976ac672ec35169b4950a20ef54e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240735"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302063"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>컴파일러 생성 예외(C# 프로그래밍 가이드)
 

@@ -1,13 +1,14 @@
 ---
 title: 복합 필터링으로 쿼리를 작성하는 방법(C#)
+description: 복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하는 방법을 알아봅니다. 코드 예제를 살펴보고 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: bc85d7f1e5c5305407ad22f3ada908523313d964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d2c1aafc210b35d4d6b1f1b2d74b11966d90c80
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168520"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303428"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>복합 필터링으로 쿼리를 작성하는 방법(C#)
 복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하려는 경우가 있습니다. 예를 들어, 특정 이름과 값을 가진 자식 요소가 있는 모든 요소를 찾으려고 할 수 있습니다. 이 항목에서는 복잡한 필터링을 사용하여 쿼리를 작성하는 예제를 제공합니다.  
@@ -15,7 +16,7 @@ ms.locfileid: "79168520"
 ## <a name="example"></a>예제  
  이 예제에서는 `PurchaseOrder` 특성이 "Shipping"과 같고 자식 `Address` 요소가 "NY"와 같은 자식 `Type` 요소가 있는 모든 `State` 요소를 찾는 방법을 보여 줍니다. 이 예제에서는 `Where` 절에서 중첩 쿼리를 사용하며, `Any` 연산자는 컬렉션에 요소가 있는 경우 `true`를 반환합니다. 메서드 기반 쿼리 구문을 사용하는 방법에 대한 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](./query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
  `Any` 연산자에 대한 자세한 내용은 [수량자 작업(C#)](./quantifier-operations.md)을 참조하세요.  
   
@@ -44,7 +45,7 @@ foreach (XElement el in purchaseOrders)
 ## <a name="example"></a>예제  
  다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스에서 여러 구매 주문](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 여러 구매 주문](./sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrdersInNamespace.xml");  

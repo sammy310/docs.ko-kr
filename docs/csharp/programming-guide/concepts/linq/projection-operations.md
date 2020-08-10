@@ -1,13 +1,14 @@
 ---
 title: 프로젝션 작업(C#)
+description: 프로젝션 작업에 대해 알아봅니다. 이러한 작업은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환합니다.
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168338"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299164"
 ---
 # <a name="projection-operations-c"></a>프로젝션 작업(C#)
 프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다. 프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다. 속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다. 원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.  
@@ -159,7 +160,7 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

@@ -1,13 +1,14 @@
 ---
 title: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
+description: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168572"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301062"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
@@ -128,7 +129,7 @@ class SplitWithGroups
 
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

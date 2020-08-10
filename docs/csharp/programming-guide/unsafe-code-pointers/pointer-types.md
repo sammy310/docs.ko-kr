@@ -1,15 +1,16 @@
 ---
 title: 포인터 형식 - C# 프로그래밍 가이드
+description: 포인터 형식에 대해 알아봅니다. 다양한 포인터의 예, 코드 예제 및 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396261"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382037"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 

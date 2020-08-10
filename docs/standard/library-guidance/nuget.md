@@ -2,12 +2,12 @@
 title: NuGet 및 .NET 라이브러리
 description: .NET 라이브러리용 NuGet을 사용하여 패키지하는 모범 사례 권장 사항입니다.
 ms.date: 01/15/2019
-ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9f8d7cc4402a87e1429791b57a0306b318dfbe4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398534"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382115"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -52,7 +52,7 @@ NuGet 패키지는 많은 [메타데이터 속성](/nuget/reference/nuspec)을 �
 | `Description`                      | `description`              | UI에 표시되는, 패키지에 대한 자세한 설명입니다.             |
 | `Authors`                          | `authors`                  | nuget.org의 프로필 이름과 일치하는 패키지 작성자의 쉼표로 구분된 목록입니다.             |
 | `PackageTags`                      | `tags`                     | 패키지를 설명하는 태그 및 키워드의 공백으로 구분된 목록입니다. 태그는 패키지를 검색할 때 사용됩니다.             |
-| `PackageIconUrl`                   | `iconUrl`                  | 패키지의 아이콘으로 사용할 이미지의 URL입니다. URL은 HTTPS여야 하며, 이미지는 64x64이고 투명한 배경을 사용해야 합니다.             |
+| `PackageIcon`                   | `icon`                  | 패키지 아이콘으로 사용할 패키지의 이미지에 대한 경로입니다. [`icon` 메타데이터](/nuget/reference/nuspec#icon)에 대해 자세히 알아봅니다. |
 | `PackageProjectUrl`                | `projectUrl`               | 프로젝트 홈페이지 또는 소스 리포지토리의 URL입니다.             |
 | `PackageLicenseExpression`         | `license`                  | 프로젝트 라이선스의 [SPDX 식별자](https://spdx.org/licenses/)입니다. OSI 및 FSF 승인 라이선스만 식별자를 사용할 수 있습니다. 다른 라이선스는 `PackageLicenseFile`을 사용해야 합니다. [`license` 메타데이터](/nuget/reference/nuspec#license)에 대해 자세히 알아봅니다. |
 

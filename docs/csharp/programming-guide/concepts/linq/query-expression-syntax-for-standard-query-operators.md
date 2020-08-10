@@ -1,13 +1,14 @@
 ---
 title: 표준 쿼리 연산자의 쿼리 식 구문(C#)
+description: 표준 쿼리 연산자의 쿼리 식 구문에 대해 알아봅니다. 동등한 쿼리 식 절이 있는 표준 쿼리 연산자의 목록을 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: dac63ae165b88924cb0e91336571173f764569ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591434"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299125"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>표준 쿼리 연산자의 쿼리 식 구문(C#)
 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리 식*의 일부로 호출할 수 있는 전용 C# 언어 키워드 구문이 있습니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "69591434"
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`orderby …, … descending`<br /><br /> 자세한 내용은 [orderby 절](../../../language-reference/keywords/orderby-clause.md)을 참조하세요.|  
 |<xref:System.Linq.Enumerable.Where%2A>|`where`<br /><br /> 자세한 내용은 [where 절](../../../language-reference/keywords/where-clause.md)을 참조하세요.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

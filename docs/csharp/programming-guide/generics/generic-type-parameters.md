@@ -1,16 +1,17 @@
 ---
 title: 제네릭 형식 매개 변수 - C# 프로그래밍 가이드
+description: C#의 제네릭 형식 정의에 대해 알아봅니다. C#에서 형식 매개 변수는 클라이언트가 제네릭 형식의 인스턴스에 대해 지정하는 형식의 자리 표시자입니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8412980d35989c445d2e0a44c0b9f35e6087bb8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc37029378ac1e9ec194d95b561787761d69a9fd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712184"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299255"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>제네릭 형식 매개 변수(C# 프로그래밍 가이드)
 

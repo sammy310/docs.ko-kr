@@ -1,5 +1,6 @@
 ---
 title: SqlMetal.exe(코드 생성 도구)
+description: 코드 생성 도구인 SqlMetal.exe에 대해 알아봅니다. 이 도구를 사용하여 .NET의 LINQ to SQL 구성 요소에 대한 코드 및 매핑을 생성합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71044084"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517050"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
@@ -77,7 +78,7 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<type>*|데이터 컨텍스트 클래스의 이름을 지정합니다. 기본값: 데이터베이스 이름에서 파생됩니다.|  
 |**/entitybase:** *\<type>*|생성된 코드에서 엔터티 클래스의 기본 클래스를 지정합니다. 기본값: 엔터티에 기본 클래스가 없습니다.|  
 |**/pluralize**|클래스 및 멤버 이름을 자동으로 복수 및 단수로 지정합니다.<br /><br /> 이 옵션은 미국에서만 사용할 수 있습니다. 영어 버전입니다.|  
-|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> Valid *\<option>* : None, Unidirectional. 기본값: 없음<br /><br /> 자세한 내용은 [Serialization](../data/adonet/sql/linq/serialization.md)을 참조하세요.|  
+|**/serialization:** *\<option>*|serialize 가능한 클래스를 생성합니다.<br /><br /> 유효한 *\<option>* : None, Unidirectional. 기본값: 없음<br /><br /> 자세한 내용은 [Serialization](../data/adonet/sql/linq/serialization.md)을 참조하세요.|  
   
  **입력 파일**  
   

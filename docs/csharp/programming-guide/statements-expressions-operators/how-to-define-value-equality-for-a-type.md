@@ -1,5 +1,6 @@
 ---
 title: 형식에 대한 값 같음을 정의하는 방법 - C# 프로그래밍 가이드
+description: 형식에 대한 값 같음을 정의하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 140be18698a40be8f394b31fcd42b97d6685cb98
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157093"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381647"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>형식에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
 
@@ -37,7 +38,7 @@ ms.locfileid: "79157093"
   
 1. [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드를 재정의합니다. 대부분의 경우 `bool Equals( object obj )` 구현에서 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스 구현인 형식별 `Equals` 메서드만 호출하면 됩니다. 2단계를 참조하세요.  
   
-2. 형식별 `Equals` 메서드를 제공하여 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스를 구현합니다. 여기서 실제 동등 비교가 수행됩니다. 예를 들어 형식에서 한 개나 두 개의 필드만 비교하여 같음 정의를 결정할 수도 있습니다. `Equals`에서 예외를 throw하지 않습니다. 클래스만 해당: 이 메서드는 클래스에 선언되어 있는 필드만 검사해야 합니다. `base.Equals`를 호출하여 기본 클래스에 있는 필드를 검사해야 합니다. 형식이 <xref:System.Object>에서 직접 상속하는 경우에는 이 작업을 수행하지 마세요. <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 <xref:System.Object> 구현에서 참조 같음 검사를 수행합니다.  
+2. 형식별 `Equals` 메서드를 제공하여 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스를 구현합니다. 여기서 실제 동등 비교가 수행됩니다. 예를 들어 형식에서 한 개나 두 개의 필드만 비교하여 같음 정의를 결정할 수도 있습니다. `Equals`에서 예외를 throw하지 않습니다. 클래스만 해당: 이 메서드는 클래스에 선언된 필드만 검사해야 합니다. `base.Equals`를 호출하여 기본 클래스에 있는 필드를 검사해야 합니다. 형식이 <xref:System.Object>에서 직접 상속하는 경우에는 이 작업을 수행하지 마세요. <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 <xref:System.Object> 구현에서 참조 같음 검사를 수행합니다.  
   
 3. 선택 사항이지만 권장됨: [==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자를 오버로드합니다.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "79157093"
   
  [==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자는 구조체에서 명시적으로 오버로드하지 않는 한 구조체에 대해 연산을 수행할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [같음 비교](equality-comparisons.md)
 - [C# 프로그래밍 가이드](../index.md)

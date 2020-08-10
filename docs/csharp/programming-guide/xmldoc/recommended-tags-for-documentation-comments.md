@@ -1,16 +1,17 @@
 ---
 title: 문서 주석에 대한 권장 태그 - C# 프로그래밍 가이드
+description: 문서 주석용 권장 태그에 대해 알아봅니다. 권장 태그 목록 및 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 01/21/2020
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65bca6f979c5ffd91507b571a4f049377315192d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789720"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381517"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)
 
@@ -23,7 +24,7 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
   
  컴파일러는 유효한 XML인 태그를 모두 처리합니다. 다음 태그는 사용자 문서에서 일반적으로 사용되는 기능을 제공합니다.  
   
-## <a name="tags"></a>태그들  
+## <a name="tags"></a>Tags  
   
 |||||  
 |---|---|---|---|
@@ -44,7 +45,7 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
 /// </summary>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)

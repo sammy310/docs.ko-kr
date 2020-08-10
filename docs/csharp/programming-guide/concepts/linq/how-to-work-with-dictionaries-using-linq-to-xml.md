@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML을 사용하여 사전 작업을 수행하는 방법(C#)
+description: LINQ to XML을 사용하여 사전 작업을 수행하는 방법을 알아봅니다. 사전을 XML로 변환하고 다시 XML을 다른 데이터 구조체로 변환하는 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdba7a2b3dfc16fab1e239ac804c317dfefb7d9e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347222"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302622"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML을 사용하여 사전 작업을 수행하는 방법(C#)
 다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목에서는 <xref:System.Collections.Generic.Dictionary%602>를 XML로 변환하고 다시 그 반대로 변환하여 이 일반적인 방법을 구체적으로 구현하는 것을 보여 줍니다.  

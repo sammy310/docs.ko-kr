@@ -1,5 +1,6 @@
 ---
 title: LINQ 쿼리 작업의 형식 관계(C#)
+description: LINQ 쿼리의 변수 형식이 서로 관련되는 방식에 대해 알아봅니다. LINQ 쿼리 작업은 데이터 원본, 쿼리 및 실행에서 강력하게 형식화됩니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635615"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302284"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ 쿼리 작업의 형식 관계(C#)
 쿼리를 효과적으로 작성하려면 전체 쿼리 작업의 변수 형식이 모두 어떻게 서로 관련되는지를 이해해야 합니다. 이러한 관계를 이해하면 설명서의 LINQ 샘플 및 코드 예제를 더 쉽게 이해할 수 있습니다. 또한 `var`을 사용하여 변수를 암시적으로 형식화하는 경우 백그라운드에서 발생하는 상황을 이해할 수 있습니다.  

@@ -1,13 +1,14 @@
 ---
 title: '샘플 XML 파일: 통합된 구매 주문2'
+description: 이 XML 파일은 LINQ to XML 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 여러 회사에 속한 모양이 다른 구매 주문이 포함되어 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 99cb9e09f9ea14420908aa7cd28f70ff6329baeb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483786"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302570"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>샘플 XML 파일: 통합된 구매 주문
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일은 여러 회사에 속한 모양이 다른 구매 주문의 집합입니다. 각 회사의 구매 주문은 별도의 네임스페이스에 있습니다.  

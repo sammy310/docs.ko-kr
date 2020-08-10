@@ -1,5 +1,6 @@
 ---
 title: 상호 운용성 개요 - C# 프로그래밍 가이드
+description: 플랫폼 호출, C++ 상호 운용성, COM 구성 요소를 C#에 노출, C#을 COM에 노출 등 C#과 비관리 코드 간의 상호 운용성에 대해 알아봅니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241736"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302960"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  

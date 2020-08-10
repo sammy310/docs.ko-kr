@@ -1,13 +1,14 @@
 ---
 title: WordprocessingML 문서의 스타일 부분
+description: Office Open XML WordprocessingML 문서의 스타일 부분에 대해 알아봅니다. 기본 스타일 식별자를 사용하여 기본 스타일이 있는 단락을 식별합니다.
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2b0b30643a1e8582bc5a7ea8d22c002b78689e6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302297"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 문서의 스타일 부분
 이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.  

@@ -1,16 +1,17 @@
 ---
 title: SignTool.exe(서명 도구)
+description: 서명 도구인 SignTool.exe에 대해 알아봅니다. 이 명령줄 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 적용합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180320"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517206"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  

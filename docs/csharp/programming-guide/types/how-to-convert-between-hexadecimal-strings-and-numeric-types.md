@@ -1,5 +1,6 @@
 ---
 title: 16진수 문자열과 숫자 형식 간 변환 방법 - C# 프로그래밍 가이드
+description: 16진수 문자열과 숫자 형식 간에 변환하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a49c4a9ee1fc19134d434d42b1eae59376c89fa4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75698523"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381803"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>16진수 문자열과 숫자 형식 간 변환 방법(C# 프로그래밍 가이드)
 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
@@ -55,5 +56,5 @@ ms.locfileid: "75698523"
 ## <a name="see-also"></a>참조
 
 - [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
-- [유형](./index.md)
+- [형식](./index.md)
 - [문자열이 숫자 값을 나타내는지 확인 방법](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

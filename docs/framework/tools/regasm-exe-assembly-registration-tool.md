@@ -1,5 +1,6 @@
 ---
 title: Regasm.exe(어셈블리 등록 도구)
+description: 어셈블리 등록 도구인 Regasm.exe를 사용합니다. 어셈블리 메타데이터를 읽고 레지스트리에 필요한 항목을 추가하여 COM 클라이언트가 .NET 클래스를 만들 수 있도록 합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Assembly Registration tool
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635413"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517258"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 
@@ -30,7 +31,7 @@ regasm assemblyFile [options]
 
 ## <a name="parameters"></a>매개 변수
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*assemblyFile*|COM을 사용하여 등록할 어셈블리를 나타냅니다.|
 

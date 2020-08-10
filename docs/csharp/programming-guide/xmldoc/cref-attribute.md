@@ -1,15 +1,16 @@
 ---
 title: cref 특성 - C# 프로그래밍 가이드
+description: cref 특성에 대해 알아봅니다. cref 특성은 "코드 참조"를 의미하며 태그의 내부 텍스트가 코드 요소임을 지정합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157015"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381998"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 특성(C# 프로그래밍 가이드)
 
@@ -82,7 +83,7 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
 </doc>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML 문서 주석](./index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447175"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455729"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose 메서드 구현
 
-<xref:System.IDisposable.Dispose%2A> 메서드 구현은 주로 코드에서 사용하는 관리되지 않는 리소스를 해제하는 데 사용됩니다. <xref:System.IDisposable> 구현인 인스턴스 멤버를 사용하는 경우에는 <xref:System.IDisposable.Dispose%2A> 호출을 계단식 배열하는 것이 일반적입니다. <xref:System.IDisposable.Dispose%2A> 구현에는 이전에 수행한 작업을 실행 취소하는 것과 같은 추가적인 이유가 있습니다. 예를 들어 할당된 메모리를 해제하고, 추가된 컬렉션에서 항목을 제거하고, 획득한 잠금의 해제 신호를 보내는 등의 작업이 있습니다.
+<xref:System.IDisposable.Dispose%2A> 메서드 구현은 주로 관리되지 않는 리소스를 해제하는 데 사용됩니다. <xref:System.IDisposable> 구현인 인스턴스 멤버를 사용하는 경우에는 <xref:System.IDisposable.Dispose%2A> 호출을 계단식 배열하는 것이 일반적입니다. 예를 들어 할당된 메모리를 해제하거나, 컬렉션에 추가된 항목을 제거하거나, 획득한 잠금 해제를 알리는 등 <xref:System.IDisposable.Dispose%2A>를 구현하는 추가적인 이유가 있습니다.
 
 [.NET 가비지 수집기](index.md)는 관리되지 않는 메모리를 할당하거나 해제하지 않습니다. Dispose 패턴이라고도 하는 개체 삭제 패턴에서는 개체의 수명에 순서를 적용합니다. Dispose 패턴은 <xref:System.IDisposable> 인터페이스를 구현하는 개체에 사용되며, 파일 및 파이프 핸들, 레지스트리 핸들, 대기 핸들 또는 관리되지 않는 메모리 블록에 대한 포인터와 상호 작용하는 경우 일반적으로 사용됩니다. 이는 가비지 수집기가 관리되지 않는 개체를 회수할 수 없기 때문입니다.
 

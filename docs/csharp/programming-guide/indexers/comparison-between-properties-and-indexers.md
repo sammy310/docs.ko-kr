@@ -1,16 +1,17 @@
 ---
 title: 속성 및 인덱서 비교 - C# 프로그래밍 가이드
+description: C#의 인덱서와 속성이 어떻게 유사한지 비교합니다. 일부 차이점을 제외하고 속성 접근자에 정의된 규칙이 인덱서 접근자에 적용됩니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 330d222083ce599719698c023803196dfe88da84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b83ce3db3d4b53fb7bcc5f3b3cd603a375d5d473
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299177"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>속성 및 인덱서 비교(C# 프로그래밍 가이드)
 인덱서는 속성과 비슷합니다. 다음 표에 나와 있는 차이점을 제외하면 속성 접근자에 대해 정의된 모든 규칙이 인덱서 접근자에도 적용됩니다.  

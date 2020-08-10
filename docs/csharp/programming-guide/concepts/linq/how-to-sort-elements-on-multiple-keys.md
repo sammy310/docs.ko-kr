@@ -1,13 +1,14 @@
 ---
 title: 여러 키로 요소를 정렬하는 방법(C#)
+description: 여러 키로 요소를 정렬하는 방법을 알아봅니다. 샘플 XML 문서를 사용하는 요소 정렬 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301504"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>여러 키로 요소를 정렬하는 방법(C#)
 
@@ -17,7 +18,7 @@ ms.locfileid: "75347377"
 
 이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.
 
-이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.
+이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +68,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.
 
-이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](./sample-xml-file-customers-and-orders-in-a-namespace.md)을 사용합니다.
+이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](./sample-xml-file-customers-and-orders-in-a-namespace.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

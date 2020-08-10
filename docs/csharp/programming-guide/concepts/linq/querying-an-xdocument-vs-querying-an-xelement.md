@@ -1,13 +1,14 @@
 ---
 title: XDocument 쿼리와 XElement 쿼리 비교(C#)
+description: XDocument 쿼리와 XElement 쿼리의 차이점을 알아봅니다. 이러한 차이점을 보여 주는 코드 예제를 검토합니다.
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300321"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument 쿼리와 XElement 쿼리 비교(C#)
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  

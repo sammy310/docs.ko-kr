@@ -1,5 +1,6 @@
 ---
 title: Ngen.exe(네이티브 이미지 생성기)
+description: 네이티브 이미지 생성기인 Ngen.exe를 검토합니다. 네이티브 이미지를 만들고 로컬 네이티브 이미지 캐시에 설치하여 관리형 애플리케이션 성능을 향상시킵니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741797"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517271"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -88,7 +89,7 @@ ngen /? | /help
 
 ## <a name="arguments"></a>인수
 
-|인수|설명|
+|인수|Description|
 |--------------|-----------------|
 |`assemblyName`|어셈블리의 전체 표시 이름입니다. 예: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **참고:**  `myAssembly` 및 `display` 작업의 경우 `uninstall`와 같은 부분 어셈블리 이름을 제공할 수 있습니다. <br /><br /> Ngen.exe 명령줄 당 어셈블리를 하나만 지정할 수 있습니다.|
 |`assemblyPath`|어셈블리의 명시적 경로입니다. 전체 또는 상대 경로를 지정할 수 있습니다.<br /><br /> 경로 없이 파일 이름을 지정하는 경우 어셈블리가 현재 디렉터리에 있어야 합니다.<br /><br /> Ngen.exe 명령줄 당 어셈블리를 하나만 지정할 수 있습니다.|
@@ -117,7 +118,7 @@ ngen /? | /help
 
 ## <a name="config"></a>Config
 
-|Configuration|설명|
+|구성|설명|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|지정한 실행 어셈블리의 구성을 사용합니다.<br /><br /> Ngen.exe는 종속성에 바인딩할 때 로더와 같은 결정을 해야 합니다. 공유 구성 요소가 런타임 시 로드되면 애플리케이션의 구성 파일은 <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하여 공유 구성 요소에 대해 로드된 종속성을 결정합니다(예: 로드된 종속성 버전). `/ExeConfig` 스위치는 런타임 시 종속성을 로드하는 Ngen.exe 지침을 제공합니다.|
 |`/AppBase:` `directoryPath`|종속성을 찾을 때 지정된 디렉터리를 애플리케이션 기본 디렉터리로 사용합니다.|
@@ -567,7 +568,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |작업 이름|32비트 컴퓨터|64비트 컴퓨터|
 |---------------|----------------------|----------------------|
 |NET Framework NGEN v4.0.30319|예|예|
-|NET Framework NGEN v4.0.30319 64|아니요|예|
+|NET Framework NGEN v4.0.30319 64|예|예|
 
 Windows 8 이상에서 실행되는 경우 네이티브 이미지 작업은 .NET Framework 4.5 이상 버전에서 사용할 수 있습니다. 이전 버전의 Windows에서는 .NET Framework에서 [네이티브 이미지 서비스](#native-image-service)를 사용합니다.
 

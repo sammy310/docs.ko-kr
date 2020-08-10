@@ -1,13 +1,14 @@
 ---
 title: Descendants 메서드를 사용하여 단일 하위 항목을 찾는 방법(C#)
+description: 하위 항목 축 메서드를 사용하여 단일 하위 항목을 찾는 방법을 알아봅니다. 이 메서드는 특정 이름을 가진 특정 하위 항목을 찾는 데 유용합니다.
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 993e2b45f93509cf526d0c8c5de488b50de3efef
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141204"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303337"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Descendants 메서드를 사용하여 단일 하위 항목을 찾는 방법(C#)
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다. 이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다. 원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.  

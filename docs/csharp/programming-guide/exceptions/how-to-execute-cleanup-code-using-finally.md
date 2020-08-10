@@ -1,17 +1,18 @@
 ---
 title: finally를 사용하여 정리 코드를 실행하는 방법 - C# 프로그래밍 가이드
+description: "'finally' 문을 사용하여 정리 코드를 실행하는 방법을 알아봅니다. Finally 문은 필요한 개체 정리가 즉시 발생하도록 합니다."
 ms.date: 07/20/2015
 helpviewer_keywords:
 - try/finally blocks [C#]
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: d1ba761e64053d656ad4cd004133fc455a57c6f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 148c1f9fba67659a07c667bb15619d6f3f7c3b2f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705277"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302024"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>finally를 사용하여 정리 코드를 실행하는 방법(C# 프로그래밍 가이드)
 `finally` 문은 예외가 throw된 경우에도 개체, 일반적으로 외부 리소스를 포함하는 개체의 필요한 정리가 즉시 수행되도록 합니다. 이러한 정리 작업의 한 가지 예로 다음과 같이 개체가 공용 언어 런타임에 의해 수집될 때까지 기다리지 않고 사용 후 즉시 <xref:System.IO.FileStream>에서 <xref:System.IO.Stream.Close%2A>를 호출하는 것을 들 수 있습니다.  

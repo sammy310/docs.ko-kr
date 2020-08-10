@@ -1,17 +1,18 @@
 ---
 title: try-catch를 사용하여 예외를 처리하는 방법 - C# 프로그래밍 가이드
+description: try-catch 블록을 사용하여 예외를 처리하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: a07958c2738f020a831400df43f217e6e1b9e876
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 357aebe042bc5b6e761b3c1bad258021441de22c
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301998"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>try-catch를 사용하여 예외를 처리하는 방법(C# 프로그래밍 가이드)
 [try-catch](../../language-reference/keywords/try-catch.md) 블록은 작업 코드에서 생성된 예외를 catch하고 처리하기 위한 것입니다. 일부 예외는 `catch` 블록에서 처리될 수 있으며, 예외가 다시 throw되지 않고 문제가 해결됩니다. 그러나 대체로 수행할 수 있는 작업은 적절한 예외가 throw되었는지 확인하는 것뿐입니다.  

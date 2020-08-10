@@ -1,16 +1,17 @@
 ---
 title: 명시적 인터페이스 구현 - C# 프로그래밍 가이드
+description: 클래스는 C#에서 동일한 시그니처를 가진 멤버를 포함하는 인터페이스를 구현할 수 있습니다. 명시적 구현에서는 하나의 인터페이스에 고유한 클래스 멤버를 만듭니다.
 ms.date: 01/24/2020
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: ea32a279b7c464174a7fada5ef93ccf62ef39884
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6ec328c08d1da84a11431d9400a094df8c72223
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303089"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>명시적 인터페이스 구현(C# 프로그래밍 가이드)
 
@@ -44,7 +45,7 @@ ms.locfileid: "79167675"
 
 `IControl` 인터페이스를 구현하는 모든 클래스는 기본 `Paint` 메서드를 public 메서드로 또는 명시적 인터페이스 구현으로 재정의할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](../classes-and-structs/index.md)

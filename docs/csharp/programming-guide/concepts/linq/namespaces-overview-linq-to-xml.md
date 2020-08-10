@@ -1,13 +1,14 @@
 ---
 title: 네임스페이스 개요(LINQ to XML)
+description: 네임스페이스, XName 클래스, XNamespace 클래스 및 XML 이름의 기타 측면에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 010d8661afe063c06f042084f6b320acb1235ac4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 56dca481dd5f3066fa5359fc57b3311cf2569ee0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300165"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>네임스페이스 개요(LINQ to XML)
 

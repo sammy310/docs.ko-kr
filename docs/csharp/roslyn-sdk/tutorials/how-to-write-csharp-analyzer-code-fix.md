@@ -3,12 +3,12 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100940"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381595"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
@@ -504,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs**로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
+`var` 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs**로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
 
 - 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
 - 유추 형식에 대한 새 형식을 만듭니다.
@@ -522,12 +522,12 @@ var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사�
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. <kbd>Ctrl+F5</kbd>를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
+테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. <kbd>Ctrl</kbd>+<kbd>F5</kbd>를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
 
 - 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
 - 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
 - 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
-- 편집기 캐럿을 물결선 위로 이동하고 <kbd>Ctrl+</kbd>를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
+- 편집기 캐럿을 물결선 위로 이동하고 <kbd>Ctrl</kbd>+<kbd>.</kbd>를 누릅니다. 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 `var` 키워드가 올바르게 처리됩니다.
 
 마지막으로 다음 코드를 추가합니다.
 

@@ -1,13 +1,14 @@
 ---
 title: DataContractSerializer를 사용하여 직렬화하는 방법(C#)
+description: DataContractSerializer를 사용하여 개체를 직렬화하는 방법을 알아봅니다. 개체를 만들고 텍스트 파일로 직렬화한 다음 역직렬화하는 예제를 살펴봅니다.
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 0b6d35a2f73ac512f05341f5aaffa61484657576
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b713f36cde594f7cd7011073345d33c6f46585e0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168702"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301530"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>DataContractSerializer를 사용하여 직렬화하는 방법(C#)
 이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.  

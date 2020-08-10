@@ -1,16 +1,17 @@
 ---
 title: COM 클래스 예제 - C# 프로그래밍 가이드
+description: C#에서 클래스를 COM 개체로 노출하는 방법을 알아봅니다. 이 예제에서는 .cs 파일의 코드를 프로젝트에 추가하고 COM Interop 등록 속성을 설정합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241853"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303038"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 클래스 예제(C# 프로그래밍 가이드)
 다음은 COM 개체로 노출되는 클래스의 예제입니다. 이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다. 자세한 내용은 [방법: COM Interop에 대한 구성 요소 등록](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))을 참조하세요.
@@ -36,7 +37,7 @@ ms.locfileid: "84241853"
 ## <a name="example"></a>예제  
  [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [상호 운용성](./index.md)

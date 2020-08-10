@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 축 메서드를 작성하는 방법(C#)
+description: LINQ to XML 축 메서드를 작성하는 방법을 알아봅니다. XML 축 메서드는 XML 트리에서 컬렉션을 검색하는 데 사용됩니다.
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 76469e767a6a54813770498488460e3e92897770
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662448"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303207"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>LINQ to XML 축 메서드를 작성하는 방법(C#)
 

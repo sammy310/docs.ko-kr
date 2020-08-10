@@ -1,13 +1,14 @@
 ---
 title: 빈 쿼리 결과 집합 디버그 방법(C#)
+description: 빈 쿼리 결과 집합을 디버그하는 방법을 알아봅니다. 이러한 집합은 개발자가 네임스페이스에 XML이 없는 것처럼 쿼리를 작성한 경우에 발생할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad6d39697e5a59fe23ca700ceeb2a9860d05bb94
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141284"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302908"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>빈 쿼리 결과 집합 디버그 방법(C#)
 XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.  

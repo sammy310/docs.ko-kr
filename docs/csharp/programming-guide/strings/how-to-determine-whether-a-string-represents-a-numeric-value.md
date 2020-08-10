@@ -1,17 +1,18 @@
 ---
 title: 문자열이 숫자 값을 나타내는지 확인하는 방법 - C# 프로그래밍 가이드
+description: 문자열이 지정된 숫자 형식의 유효한 표현인지 여부를 확인하는 방법을 알아봅니다. 코드 예제를 살펴보고 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c248c6c54de493ab06a833fc525252fa812d60da
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241723"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381751"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>문자열이 숫자 값을 나타내는지 확인하는 방법(C# 프로그래밍 가이드)
 문자열이 지정된 숫자 형식의 유효한 표현인지 확인하려면 모든 기본 숫자 형식 및 <xref:System.DateTime>, <xref:System.Net.IPAddress> 등의 형식에 의해서도 구현되는 정적 `TryParse` 메서드를 사용합니다. 다음 예제에서는 "108"이 유효한 [int](../../language-reference/builtin-types/integral-numeric-types.md)인지 확인하는 방법을 보여 줍니다.  

@@ -1,13 +1,14 @@
 ---
 title: 직렬화할 때 공백 유지3
+description: XML 트리를 직렬화할 때 XElement 및 XDocument 클래스의 메서드를 사용하여 공백을 제어하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01e68671e2fde1a2b5b1d0bc429841077ba0205f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484082"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303415"
 ---
 # <a name="preserving-white-space-while-serializing"></a>serialize할 때 공백 유지
 이 항목에서는 XML 트리를 serialize할 때 공백을 제어하는 방법에 대해 설명합니다.  

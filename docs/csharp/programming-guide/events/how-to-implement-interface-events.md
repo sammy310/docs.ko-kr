@@ -1,16 +1,17 @@
 ---
 title: 인터페이스 이벤트를 구현하는 방법 - C# 프로그래밍 가이드
+description: 클래스에서 인터페이스 이벤트를 구현하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167482"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302128"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>인터페이스 이벤트를 구현하는 방법(C# 프로그래밍 가이드)
 [인터페이스](../../language-reference/keywords/interface.md)는 [이벤트](../../language-reference/keywords/event.md)를 선언할 수 있습니다. 다음 예제에서는 클래스에서 인터페이스 이벤트를 구현하는 방법을 보여 줍니다. 기본적인 규칙은 다른 모든 인터페이스 메서드나 속성을 구현할 때의 규칙과 같습니다.  

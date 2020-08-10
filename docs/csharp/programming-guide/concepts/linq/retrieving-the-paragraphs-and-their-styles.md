@@ -1,13 +1,14 @@
 ---
 title: 단락 및 해당 스타일 검색(C#)
+description: 단락을 검색하는 쿼리를 작성한 다음 각 단락의 스타일을 식별하는 방법을 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168299"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303402"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>단락 및 해당 스타일 검색(C#)
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  
@@ -132,6 +133,6 @@ StyleName:Code
 ## <a name="next-steps"></a>다음 단계  
  다음 항목 [단락의 텍스트 검색(C#)](./retrieving-the-text-of-the-paragraphs.md)에서는 단락의 텍스트를 검색하기 위한 쿼리를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자습서: WordprocessingML 문서에서 내용 조작(C#)](./shape-of-wordprocessingml-documents.md)
