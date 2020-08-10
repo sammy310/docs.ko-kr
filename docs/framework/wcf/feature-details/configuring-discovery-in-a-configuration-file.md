@@ -13,7 +13,7 @@ ms.locfileid: "84597555"
 검색에 사용되는 구성 설정에는 네 가지 기본 그룹이 있습니다. 이 항목에서는 각 그룹에 대해 간략하게 설명하고 이러한 그룹을 구성하는 방법을 보여 줍니다. 아래에 나오는 각 단원은 각 영역에 대해 보다 자세히 설명하는 문서로 연결됩니다.  
   
 ## <a name="behavior-configuration"></a>동작 구성  
- 검색에는 서비스 동작과 엔드포인트 동작이 사용됩니다. ph x="1" /&gt; 동작을 사용하면 모든 서비스의 엔드포인트를 검색하고 알림 엔드포인트를 지정할 수 있습니다.  다음 예제에서는 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>를 추가하고 알림 엔드포인트를 지정하는 방법을 보여 줍니다.  
+ 검색에는 서비스 동작과 엔드포인트 동작이 사용됩니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>동작을 사용하면 모든 서비스의 엔드포인트를 검색하고 알림 엔드포인트를 지정할 수 있습니다.  다음 예제에서는 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>를 추가하고 알림 엔드포인트를 지정하는 방법을 보여 줍니다.  
   
 ```xml  
 <behaviors>  
@@ -67,7 +67,7 @@ ms.locfileid: "84597555"
 </services>
 ```  
   
- ph x="1" /&gt; 동작은 특정 엔드포인트의 검색을 사용하거나 사용하지 않도록 설정하는 데 사용됩니다.  다음 예제에서는 하나는 검색이 가능하고 다른 하나는 검색이 가능하지 않은 두 개의 애플리케이션 엔드포인트가 있는 서비스를 구성합니다. 각 엔드포인트에는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작이 추가됩니다.  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>동작은 특정 엔드포인트의 검색을 사용하거나 사용하지 않도록 설정하는 데 사용됩니다.  다음 예제에서는 하나는 검색이 가능하고 다른 하나는 검색이 가능하지 않은 두 개의 애플리케이션 엔드포인트가 있는 서비스를 구성합니다. 각 엔드포인트에는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작이 추가됩니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -108,7 +108,7 @@ ms.locfileid: "84597555"
 </system.serviceModel>  
 ```  
   
- ph x="1" /&gt; 동작을 사용하여 서비스에서 반환되는 엔드포인트 메타데이터에 사용자 지정 메타데이터를 추가할 수도 있습니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작을 사용하여 서비스에서 반환되는 엔드포인트 메타데이터에 사용자 지정 메타데이터를 추가할 수도 있습니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.  
   
 ```xml  
 <behavior name="ep4Behavior">  
