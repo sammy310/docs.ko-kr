@@ -1,21 +1,21 @@
-- name: 'F# 설명서'
+- name: F# 설명서
   href: index.yml
-- name: 'F#이란?'
+- name: F#이란?
   href: what-is-fsharp.md
 - name: 시작
   href: get-started/index.md
   items:
-    - name: 'F# 설치'
+    - name: F# 설치
       href: get-started/install-fsharp.md
-    - name: 'Visual Studio의 F#'
+    - name: Visual Studio의 F#
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio Code의 F#'
+    - name: Visual Studio Code의 F#
       href: get-started/get-started-vscode.md
-    - name: '.NET Core CLI와 F#'
+    - name: .NET Core CLI와 F#
       href: get-started/get-started-command-line.md
-    - name: 'Mac용 Visual Studio의 F#'
+    - name: Mac용 Visual Studio의 F#
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F# 둘러보기'
+- name: F# 둘러보기
   href: tour.md
 - name: 자습서
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: 형식 공급자 문제 해결
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# Interactive'
+    - name: F# Interactive
       href: tutorials/fsharp-interactive/index.md
-- name: 'F#의 새로운 기능'
+- name: F#의 새로운 기능
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'F# 언어 참조'
+- name: F# 언어 참조
   href: language-reference/index.md
   items:
     - name: 키워드 참조
@@ -87,7 +87,7 @@
           href: language-reference/values/null-values.md
     - name: 리터럴
       href: language-reference/literals.md
-    - name: 'F# 형식'
+    - name: F# 형식
       href: language-reference/fsharp-types.md
     - name: 형식 유추
       href: language-reference/type-inference.md
@@ -99,7 +99,7 @@
       href: language-reference/strings.md
     - name: 튜플
       href: language-reference/tuples.md
-    - name: 'F# 컬렉션 형식'
+    - name: F# 컬렉션 형식
       href: language-reference/fsharp-collection-types.md
     - name: 목록
       href: language-reference/lists.md
@@ -226,6 +226,8 @@
       href: language-reference/signature-files.md
     - name: 측정 단위
       href: language-reference/units-of-measure.md
+    - name: 일반 텍스트 형식
+      href: language-reference/plaintext-formatting.md
     - name: XML 문서
       href: language-reference/xml-documentation.md
     - name: Lazy 식
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: 컴파일러 옵션
       href: language-reference/compiler-options.md
-    - name: 'F# Interactive 옵션'
+    - name: F# Interactive 옵션
       href: language-reference/fsharp-interactive-options.md
     - name: '소스 줄, 파일 및 경로 식별자'
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: 컴파일러 오류 및 경고
       href: language-reference/compiler-messages/index.md
-- name: 'F# 스타일 가이드'
+- name: F# 스타일 가이드
   href: style-guide/index.md
   items:
-    - name: 'F# 코드 서식 지정 지침'
+    - name: F# 코드 서식 지정 지침
       href: style-guide/formatting.md
-    - name: 'F# 코딩 규칙'
+    - name: F# 코딩 규칙
       href: style-guide/conventions.md
-    - name: 'F# 구성 요소 디자인 지침'
+    - name: F# 구성 요소 디자인 지침
       href: style-guide/component-design-guidelines.md
-- name: 'Azure에서 F# 사용'
+- name: Azure에서 F# 사용
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 'F#을 사용하여 Azure Blob 스토리지 시작'
+    - name: F#을 사용하여 Azure Blob 스토리지 시작
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 'F#을 사용하여 Azure File 스토리지 시작'
+    - name: F#을 사용하여 Azure File 스토리지 시작
       href: using-fsharp-on-azure/file-storage.md
-    - name: 'F#을 사용하여 Azure Queue 스토리지 시작'
+    - name: F#을 사용하여 Azure Queue 스토리지 시작
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 'F#을 사용하여 Azure Table 스토리지 시작'
+    - name: F#을 사용하여 Azure Table 스토리지 시작
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'F# Azure 종속성에 대한 패키지 관리'
+    - name: F# Azure 종속성에 대한 패키지 관리
       href: using-fsharp-on-azure/package-management.md

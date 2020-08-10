@@ -10,12 +10,12 @@ metadata:
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "73423936"
+  ms.lasthandoff: 08/05/2020
+  ms.locfileid: "87795491"
 landingContent:
 - title: ML.NET 기본 사항
   linkLists:
@@ -37,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Visual Studio에서 모델 작성기 설정
-      url: how-to-guides/install-model-builder.md
-    - text: ML.NET API 시작
+    - text: ML.NET API 시작(코드 중심)
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Mac OS, Windows 또는 Linux에 CLI 설치
+    - text: Visual Studio에서 Model Builder 설정(로우 코드)
+      url: how-to-guides/install-model-builder.md
+    - text: macOS, Windows 또는 Linux에 CLI 설치(로우 코드)
       url: how-to-guides/install-ml-net-cli.md
 - title: 자습서
   linkLists:
