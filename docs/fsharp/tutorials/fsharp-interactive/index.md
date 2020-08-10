@@ -1,37 +1,36 @@
 ---
 title: F# Interactive(fsi.exe) 참조
-description: 대화형 ( F# fsi.exe)을 사용 하 여 콘솔에서 코드를 F# 대화형으로 실행 하거나 스크립트를 실행 F# 하는 방법에 대해 알아봅니다.
+description: F# 대화형(fsi.exe)이 어떻게 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용되는지 알아보세요.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+f1_keywords:
+- VS.ToolsOptionsPages.F#_Tools.F#_Interactive
+ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419900"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854947"
 ---
-# <a name="interactive-programming-with-f"></a>F\#를 사용한 대화형 프로그래밍
+# <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
 > [!NOTE]
-> 이 문서에서는 현재 Windows만을 위한 환경에 대해 설명합니다.  다시 작성될 예정입니다.
-
-> [!NOTE]
-> API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
+> 이 문서에서는 현재 Windows만을 위한 환경에 대해 설명합니다.
 
 F# Interactive(fsi.exe)는 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용됩니다. 즉, F# Interactive는 F# 언어에 대해 REPL(읽기, 평가, 인쇄 루프)을 실행합니다.
 
-콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다.  Fsi.exe는 다음 위치에서 찾을 수 있습니다.
+콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다. fsi.exe는 다음 위치에서 찾을 수 있습니다.
 
 ```console
 C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-여기서 `sku`는 `Community`, `Professional`또는 `Enterprise`입니다.
+여기서 `sku`는 `Community`, `Professional` 또는 `Enterprise`입니다.
 
 사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](../../language-reference/fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
 
 Visual Studio를 통해 F# Interactive를 실행하려면 **F# Interactive**라는 레이블이 있는 적절한 도구 모음 단추를 클릭하거나 **Ctrl+Alt+F** 키를 사용합니다. 이렇게 하면 대화형 창(F# Interactive 세션을 실행하는 도구 창)이 열립니다. 대화형 창에서 실행할 코드를 선택하고 **Alt+Enter** 키 조합을 눌러도 됩니다. 그러면 레이블이 **F# Interactive**인 도구 창에서 F# Interactive가 시작됩니다. 이 키 조합을 사용할 때 편집기 창에 포커스가 있는지 확인합니다.
 
-콘솔을 사용하든 Visual Studio를 사용하든 상관없이 명령 프롬프트가 나타납니다. 해석기를 실행하려면 사용자가 이 명령 프롬프트에 필요한 사항을 입력해야 합니다. 코드 파일에서와 같은 방법으로 코드를 입력할 수 있습니다. 코드를 컴파일하고 실행하려면 세미콜론 두 개( **;;** )를 입력하여 입력 줄 하나 또는 여러 개를 종료합니다.
+콘솔을 사용하든 Visual Studio를 사용하든 상관없이 명령 프롬프트가 나타납니다. 해석기를 실행하려면 사용자가 이 명령 프롬프트에 필요한 사항을 입력해야 합니다. 코드 파일에서와 같은 방법으로 코드를 입력할 수 있습니다. 코드를 컴파일하고 실행하려면 세미콜론 두 개(**;;**)를 입력하여 입력 줄 하나 또는 여러 개를 종료합니다.
 
 F# Interactive가 코드 컴파일을 시도하며, 컴파일이 성공하면 코드를 실행하고 컴파일된 형식과 값의 서명을 인쇄합니다. 오류가 발생하면 해석기에 오류 메시지가 출력됩니다.
 
@@ -43,7 +42,7 @@ F# Interactive는 Visual Studio에서 실행할 때 프로젝트와 독립적으
 
 설정을 조정하여 F# Interactive 명령줄 인수(옵션)를 제어할 수 있습니다. 이렇게 하려면 **도구** 메뉴에서 **옵션...** 을 선택하고 **F# 도구**를 확장합니다. 변경 가능한 두 가지 설정은 F# Interactive 옵션과 **64비트 F# Interactive** 설정(F# Interactive를 64비트 컴퓨터에서 실행하는 경우만 해당)입니다. 이 설정은 전용 64비트 버전의 fsi.exe 또는 fsianycpu.exe(컴퓨터 아키텍처를 사용하여 32비트 또는 64비트 프로세스로 실행할지 여부를 결정)를 실행할지 여부를 결정합니다.
 
-## <a name="scripting-with-f"></a>F\# 스크립팅
+## <a name="scripting-with-f"></a>F\#을 사용한 스크립팅
 
 스크립트는 파일 확장명 **.fsx** 또는 **.fsscript**를 사용합니다. 소스 코드를 컴파일한 다음 나중에 컴파일된 어셈블리를 실행하는 대신 **fsi.exe**를 실행하고 F# 소스 코드의 스크립트 파일 이름을 지정하면 F# Interactive가 코드를 읽어 실시간으로 실행합니다.
 
@@ -95,9 +94,9 @@ test
 90
 ```
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-articles"></a>관련 문서
 
-|제목|설명|
+|제목|Description|
 |-----|-----------|
-|[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|F# 대화형의 명령줄 구문 및 옵션에 대해 설명 합니다. fsi.exe.|
+|[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|F# 대화형(fsi.exe)의 명령줄 구문 및 옵션에 대해 설명합니다.|
 |[F# Interactive 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive에서 코드를 실행할 때 사용할 수 있는 라이브러리 기능에 대해 설명합니다.|
