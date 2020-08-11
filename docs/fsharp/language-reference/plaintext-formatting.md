@@ -1,13 +1,13 @@
 ---
-title: 일반 텍스트 서식 지정
+title: 일반 텍스트 형식
 description: 'F # 응용 프로그램 및 스크립트에서 printf 및 기타 일반 텍스트 서식 지정을 사용 하는 방법에 대해 알아봅니다.'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854921"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063785"
 ---
 # <a name="plain-text-formatting"></a>일반 텍스트 서식 지정
 
@@ -70,8 +70,8 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 
 | 형식 지정자   | 유형        | 설명                      |
 |:-------------------|:---------------|:-----------------------------|
-| `%b`               | 부울      | 또는로 형식이 지정 됨 `true``false`                |
-| `%s`               | string    | 이스케이프 되지 않은 콘텐츠로 서식 지정         |
+| `%b`               | bool      | 또는로 형식이 지정 됨 `true``false`                |
+| `%s`               | 문자열    | 이스케이프 되지 않은 콘텐츠로 서식 지정         |
 | `%c`               | char      | 문자 리터럴로 형식이 지정 됩니다.  |
 | `%d`, `%i`         | 기본 정수 형식 | 기본 정수 형식이 서명 된 경우 부호 있는 10 진수 정수로 형식이 지정 됩니다. |
 | `%u`               | 기본 정수 형식 | 부호 없는 10 진수 정수로 형식이 지정 됩니다.   |
@@ -85,6 +85,7 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 | `%A` | 모든 값  |   기본 레이아웃 설정을 사용 하 여 [구조적 일반 텍스트 서식 지정](plaintext-formatting.md) 을 사용 하 여 서식 지정 |
 | `%a` | 모든 값  |   두 개의 인수가 필요 합니다. 형식 지정 함수는 컨텍스트 매개 변수 및 값을 허용 하 고 특정 값은 인쇄 해야 합니다. |
 | `%t` | 모든 값  |   하나의 인수가 필요 합니다. 형식 지정 함수는 적절 한 텍스트를 출력 하거나 반환 하는 컨텍스트 매개 변수를 허용 합니다. |
+| `%%` | (없음)  |   인수를 사용 하지 않고 일반 백분율 기호를 인쇄 합니다.`%` |
 
 기본 정수 형식은 `byte` ( `System.Byte` ), `sbyte` ( `System.SByte` ), (), (), (), (), (), (), () `int16` `System.Int16` `uint16` `System.UInt16` `int32` `System.Int32` `uint32` `System.UInt32` `int64` `System.Int64` `uint64` `System.UInt64` `nativeint` `System.IntPtr` 및 () `unativeint` `System.UIntPtr` 입니다.
 기본 부동 소수점 형식은 `float` ( `System.Double` ) 및 `float32` ( `System.Single` )입니다.
@@ -324,7 +325,7 @@ F # 함수 값은 내부적으로 생성 된 클로저 이름으로 인쇄 됩�
 
 ### <a name="customize-plain-text-formatting-with-structuredformatdisplay"></a>일반 텍스트 서식 지정 사용자 지정`StructuredFormatDisplay`
 
-지정자를 사용 하는 경우 `%A` `StructuredFormatDisplay` 형식 선언에 특성이 있는지 여부를 확인 합니다.  서로게이트 텍스트와 속성을 지정 하 여 값을 표시 하는 데 사용할 수 있습니다. 예를 들어:
+지정자를 사용 하는 경우 `%A` `StructuredFormatDisplay` 형식 선언에 특성이 있는지 여부를 확인 합니다.  서로게이트 텍스트와 속성을 지정 하 여 값을 표시 하는 데 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 [<StructuredFormatDisplay("Counts({Clicks})")>]
@@ -419,4 +420,4 @@ F # 컴파일러는 구별 된 공용 구조체 및 레코드 형식에 대해 �
 - [문자열](strings.md)
 - [레코드](records.md)
 - [구별된 공용 구조체](discriminated-unions.md)
-- [F# 대화형](fsharp-interactive-options.md)
+- [F# Interactive](fsharp-interactive-options.md)

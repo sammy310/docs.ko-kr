@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8b1c9ab25299fcbafca6aba7b13217713a941ce8
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475192"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063759"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 첫 번째 줄에서 [람다 식](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [은 ](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)지역 변수 `name`을 닫습니다. 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
+ 첫 번째 줄에서 [람다 식](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [은 ](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)지역 변수 `name`을 닫습니다. 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

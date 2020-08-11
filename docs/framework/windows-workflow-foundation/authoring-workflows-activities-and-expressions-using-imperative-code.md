@@ -3,12 +3,12 @@ title: 명령 코드를 사용하여 워크플로, 활동 및 식 작성
 description: Workflow Foundation 워크플로 정의는 구성 된 활동 개체의 트리입니다. 코드를 사용 하 여 워크플로 정의, 활동 및 식을 만듭니다.
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: d8b4cb8b85d3ea3759d58e15df823a72146772e8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d169049c47c154858a2e653b5f286fa6b66ba44d
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421555"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063798"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>명령 코드를 사용하여 워크플로, 활동 및 식 작성
 워크플로 정의는 구성된 활동 개체의 트리입니다. XAML을 수동으로 편집하거나 Workflow Designer를 사용하여 XAML을 생성하는 등 여러 가지 방법으로 이 활동 트리를 정의할 수 있습니다. 하지만 XAML 사용은 필수 사항이 아닙니다. 프로그래밍 방식으로 워크플로 정의를 만들 수도 있습니다. 이 항목에서는 코드를 사용하여 워크플로 정의, 활동 및 식을 만드는 방법을 간략히 설명합니다. 코드를 사용 하 여 XAML 워크플로를 사용 하는 예제는 [xaml로 워크플로 및 작업 serialize](serializing-workflows-and-activities-to-and-from-xaml.md)를 참조 하세요.  
@@ -62,7 +62,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- 람다 식에 대 한 자세한 내용은 [람다 식 (c # 프로그래밍 가이드)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [람다 식 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조 하세요.  
+ 람다 식에 대 한 자세한 내용은 [람다 식 (c # 참조)](../../csharp/language-reference/operators/lambda-expressions.md) 또는 [람다 식 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조 하세요.  
   
  람다 식은 XAML 형식으로 serialize할 수 없습니다. 람다 식을 사용하여 워크플로를 serialize하려고 시도하면 <xref:System.Activities.Expressions.LambdaSerializationException>이 throw되고 "이 워크플로에는 코드에 지정된 람다 식이 포함됩니다. 이러한 식은 직렬화할 수 있는 XAML 식이 아닙니다. 워크플로를 직렬화할 수 있는 XAML로 만들려면 VisualBasicValue/VisualBasicReference 또는 ExpressionServices.Convert(lambda)를 사용하세요. 그러면 람다 식이 식 작업으로 변환됩니다."라는 메시지가 표시됩니다. 이 식을 XAML과 호환 가능하게 만들려면 다음 예와 같이 <xref:System.Activities.Expressions.ExpressionServices>와 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>을 사용합니다.  
   

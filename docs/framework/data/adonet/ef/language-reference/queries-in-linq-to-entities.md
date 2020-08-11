@@ -3,12 +3,12 @@ title: LINQ to Entities에서 쿼리
 description: LINQ에서 프로그래밍 개체를 사용 하 여 다양 한 종류의 데이터 소스 및 형식에 대 한 데이터 작업을 수행 하기 위한 간단 하 고 일관적인 모델을 제공 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 048fd56fc687dd715292fb3bb09405130de09779
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286820"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063733"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. LINQ(Language-Integrated Query)는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. LINQ 쿼리에서는 항상 프로그래밍 개체가 사용됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "84286820"
 - [쿼리 식 구문 예제: 관계 탐색](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>메서드 기반 쿼리 구문  
- LINQ to Entities 쿼리를 작성 하는 또 다른 방법은 메서드 기반 쿼리를 사용 하는 것입니다. 메서드 기반 쿼리 구문은 람다 식을 매개 변수로 전달하는 LINQ 연산자 메서드에 대한 직접 메서드 호출의 시퀀스입니다. 자세한 내용은 [람다 식](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요. 메서드 기반 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
+ LINQ to Entities 쿼리를 작성 하는 또 다른 방법은 메서드 기반 쿼리를 사용 하는 것입니다. 메서드 기반 쿼리 구문은 람다 식을 매개 변수로 전달하는 LINQ 연산자 메서드에 대한 직접 메서드 호출의 시퀀스입니다. 자세한 내용은 [람다 식](../../../../../csharp/language-reference/operators/lambda-expressions.md)을 참조하세요. 메서드 기반 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
   
 - [메서드 기반 쿼리 구문 예제: 프로젝션](method-based-query-syntax-examples-projection.md)  
   
