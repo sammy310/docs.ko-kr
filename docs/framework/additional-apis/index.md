@@ -1,7 +1,7 @@
 ---
 title: 추가 클래스 라이브러리 및 API
 description: 대역 외 (OOB) 프로젝트, 플랫폼별 라이브러리 및 개인 Api를 포함 하 여 .NET의 추가 클래스 라이브러리 및 Api를 살펴보세요.
-ms.date: 06/12/2020
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989742"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075477"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
@@ -24,7 +24,7 @@ ms.locfileid: "84989742"
 
 플랫폼 간 개발을 향상 시키고 새로운 기능을 조기에 도입 하려면 일부 .NET Framework 기능이 대역 외 (OOB)에서 출시 되었습니다.
 
-| Project | Description |  
+| 프로젝트 | 설명 |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 해당 내용을 절대로 변경하지 않도록 보장하는 안전한 스레드인 컬렉션을 제공합니다. |
 | <xref:System.Net.Http.WinHttpHandler> | Windows의 WinHTTP 인터페이스에 따라 <xref:System.Net.Http.HttpClient> 에 메시지 처리기를 제공합니다. |
@@ -35,7 +35,7 @@ ms.locfileid: "84989742"
 
 일부 라이브러리는 특정 플랫폼을 대상으로 합니다. 예를 들어 <xref:System.Text.CodePagesEncodingProvider> 클래스는 .NET Framework을 사용 하 여 개발 된 UWP 앱에 사용할 수 있는 코드 페이지 인코딩을 만듭니다.
   
-| Project | Description |  
+| 프로젝트 | 설명 |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | 클래스를 확장 <xref:System.Text.EncodingProvider> 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
   
@@ -87,6 +87,7 @@ ms.locfileid: "84989742"
 * [시스템 .Net. WebHeaderCollection. AddInternal 메서드](system.net.webheadercollection.addinternal.md)
 * [BodyToString 메서드입니다.](system.servicemodel.channels.message.bodytostring.md)
 * [WriteStartHeaders 메서드입니다.](system.servicemodel.channels.message.writestartheaders.md)
+* [ControlBuilderInterceptor 클래스입니다.](controlbuilderinterceptor-class.md)
 * [IsDebuggerCheckDisabledForTestPurposes 필드를 삭제 합니다. \_](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [DataMemberFieldEditor 클래스입니다.](datamemberfieldeditor-class.md)
 * [DataMemberListEditor 클래스입니다.](datamemberlisteditor-class.md)
