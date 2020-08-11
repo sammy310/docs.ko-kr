@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: 관리형 디버거
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: 로깅 및 추적
         href: diagnostics/logging-tracing.md
       - name: .NET Core CLI 전역 도구
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: .NET Core 진단 자습서
         items:
+          - name: EventCounters를 사용하여 성능 메트릭 가져오기
+            href: diagnostics/event-counter-perf.md
           - name: 메모리 누수 디버그
             href: diagnostics/debug-memory-leak.md
           - name: 높은 CPU 사용량 디버그

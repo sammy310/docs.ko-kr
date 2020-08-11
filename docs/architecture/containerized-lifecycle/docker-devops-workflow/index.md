@@ -1,13 +1,13 @@
 ---
 title: Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 description: Microsoft 플랫폼 및 도구가 포함된 컨테이너화된 Docker 애플리케이션 수명 주기 및 Microsoft 도구를 사용하는 DevOps 워크플로
-ms.date: 02/15/2019
-ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295074"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915211"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 
@@ -23,7 +23,7 @@ Microsoft 도구는 Azure DevOps Services 또는 Team Foundation Server를 사�
 
 - Azure DevOps Services/Team Foundation Server 소스 코드 관리(Git 또는 Team Foundation 버전 제어 기반), Agile 계획(Agile, 스크럼 및 CMMI가 지원됨), CI, 릴리스 관리 및 Agile 팀에 대한 기타 도구.
 
-- Azure DevOps Services 및 Team Foundation Server에는 마이크로서비스에 대한 CI, 빌드, 테스트, 전송 및 관리 파이프라인을 손쉽게 생성할 수 있게 해주며 점점 확대되고 있는 강력한 자사 및 타사 확장 프로그램 에코시스템이 포함됩니다.
+- Azure DevOps Services 및 Team Foundation Server에는 마이크로서비스에 대한 CI, 빌드, 테스트, 전송 및 릴리스 관리 파이프라인을 손쉽게 생성할 수 있게 해주며 점점 확대되고 있는 강력한 자사 및 타사 확장 프로그램 에코시스템이 포함됩니다.
 
 - Azure DevOps Services에서 빌드 파이프라인의 일부로 자동화된 테스트를 실행합니다.
 

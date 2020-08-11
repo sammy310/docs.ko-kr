@@ -1,14 +1,17 @@
 - name: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
   href: index.md
   items:
-    - name: Docker란?
-      href: what-is-docker.md
-    - name: Docker 용어
-      href: docker-terminology.md
-    - name: 'Docker 컨테이너, 이미지 및 레지스트리'
-      href: docker-containers-images-and-registries.md
-    - name: 컨테이너에 기반한 최신 애플리케이션으로 전환
-      href: road-to-modern-applications-based-on-containers.md
+    - name: 컨테이너 및 Docker 소개
+      href: introduction-to-containers-and-docker.md
+      items:
+        - name: Docker란?
+          href: what-is-docker.md
+        - name: Docker 용어
+          href: docker-terminology.md
+        - name: 'Docker 컨테이너, 이미지 및 레지스트리'
+          href: docker-containers-images-and-registries.md
+        - name: 컨테이너에 기반한 최신 애플리케이션으로 전환
+          href: road-to-modern-applications-based-on-containers.md
     - name: Docker 애플리케이션 수명 주기 소개
       href: Docker-application-lifecycle/index.md
       items:
@@ -41,14 +44,14 @@
           href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
         - name: DockerFile에서 Windows PowerShell 명령을 사용하여 Windows 컨테이너 설정(Docker 표준 기반)
           href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-        - name: AKS/Kubernetes 오케스트레이터에 Linux 컨테이너로 배포된 ASP.NET Core 2.0 애플리케이션 빌드
+        - name: AKS/Kubernetes 오케스트레이터에 Linux 컨테이너로 배포된 Build ASP.NET Core 애플리케이션 빌드
           href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
     - name: Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
       href: docker-devops-workflow/index.md
       items:
         - name: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
           href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
-        - name: Azure DevOps 서비스에서 컨테이너의 .NET Core 2.0 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
+        - name: Azure DevOps Services에서 컨테이너의 ASP.NET Core 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
           href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
     - name: 'Docker 프로덕션 환경 실행, 관리 및 모니터링'
       href: run-manage-monitor-docker-environments/index.md
