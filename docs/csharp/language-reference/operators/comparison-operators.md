@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9fa739d8b5461d4043f3ae51f5d14949a95c68e5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207223"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916876"
 ---
 # <a name="comparison-operators-c-reference"></a>비교 연산자(C# 참조)
 
@@ -43,25 +43,25 @@ ms.locfileid: "83207223"
 
 `<` 연산자는 왼쪽 피연산자가 오른쪽 피연산자보다 작으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[less than example](snippets/ComparisonOperators.cs#Less)]
+[!code-csharp-interactive[less than example](snippets/shared/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>보다 큼 연산자 >
 
 `>` 연산자는 왼쪽 피연산자가 오른쪽 피연산자보다 크면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[greater than example](snippets/ComparisonOperators.cs#Greater)]
+[!code-csharp-interactive[greater than example](snippets/shared/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>작거나 같음 연산자 \<=
 
 `<=` 연산자는 왼쪽 피연산자가 오른쪽 피연산자보다 작거나 같으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[less than or equal example](snippets/ComparisonOperators.cs#LessOrEqual)]
+[!code-csharp-interactive[less than or equal example](snippets/shared/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>크거나 같음 연산자 >=
 
 `>=` 연산자는 왼쪽 피연산자가 오른쪽 피연산자보다 크거나 같으면 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.
 
-[!code-csharp-interactive[greater than or equal example](snippets/ComparisonOperators.cs#GreaterOrEqual)]
+[!code-csharp-interactive[greater than or equal example](snippets/shared/ComparisonOperators.cs#GreaterOrEqual)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -76,6 +76,6 @@ ms.locfileid: "83207223"
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [같음 연산자](equality-operators.md)

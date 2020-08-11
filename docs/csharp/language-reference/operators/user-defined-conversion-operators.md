@@ -5,17 +5,19 @@ ms.date: 07/09/2019
 f1_keywords:
 - explicit_CSharpKeyword
 - implicit_CSharpKeyword
+- explicit
+- implicit
 helpviewer_keywords:
 - explicit keyword [C#]
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121399"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916634"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>사용자 정의 전환 연산자(C# 참조)
 
@@ -29,7 +31,7 @@ ms.locfileid: "81121399"
 
 다음 예제에서는 암시적 및 명시적 변환을 정의하는 방법을 보여줍니다.
 
-[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/shared/UserDefinedConversions.cs)]
 
 또한 `operator` 키워드를 사용하여 미리 정의된 C# 연산자를 오버로드합니다. 자세한 내용은 [연산자 오버로드](operator-overloading.md)를 참조하세요.
 
@@ -45,7 +47,7 @@ ms.locfileid: "81121399"
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [연산자 오버로드](operator-overloading.md)
 - [형식 테스트 및 캐스트 연산자](type-testing-and-cast.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)

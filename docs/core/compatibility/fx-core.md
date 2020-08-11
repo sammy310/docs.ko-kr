@@ -3,12 +3,12 @@ title: 호환성이 손상되는 변경 사항 - .NET Framework에서 .NET Core�
 titleSuffix: ''
 description: .NET Framework에서 .NET Core로의 호환성이 손상되는 변경 사항을 나열합니다.
 ms.date: 05/05/2020
-ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5f7424fdd959044b729dfb04f4f0147fbc946bfd
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420450"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556308"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 변경 사항
 
@@ -96,8 +96,6 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. .NET F
 - [EnableVisualStyleValidation 호환성 스위치가 지원되지 않음](#enablevisualstylevalidation-compatibility-switch-not-supported)
 - [UseLegacyContextMenuStripSourceControlValue 호환성 스위치가 지원되지 않음](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
 - [UseLegacyImages 호환성 스위치가 지원되지 않음](#uselegacyimages-compatibility-switch-not-supported)
-- [AccessibleObject.RuntimeIDFirstItem에 대한 액세스 변경](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Windows Forms에서 중복된 API가 제거되었습니다.](#duplicated-apis-removed-from-windows-forms)
 
 ### <a name="net-core-31"></a>.NET Core 3.1
 
@@ -152,14 +150,6 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. .NET F
 ***
 
 [!INCLUDE[UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
 ***
 

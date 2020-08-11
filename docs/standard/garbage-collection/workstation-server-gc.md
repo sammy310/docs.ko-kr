@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306697"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917015"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>워크스테이션 및 서버 가비지 수집
 
@@ -40,7 +40,7 @@ ms.locfileid: "84306697"
 
 - 수집은 가비지 수집을 트리거한 사용자 스레드에서 발생하여 동일한 우선 순위를 유지합니다. 사용자 스레드는 일반적으로 보통 우선 순위로 실행되므로 보통 우선 순위 스레드에서 실행되는 가비지 수집기는 다른 스레드와 CPU 시간을 두고 경쟁해야 합니다. (네이티브 코드를 실행하는 스레드는 서버 또는 워크스테이션 가비지 수집에서 일시 중단되지 않습니다.)
 
-- 프로세서가 하나뿐인 컴퓨터에서는 [구성 설정](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)에 관계없이 항상 워크스테이션 가비지 수집이 사용됩니다.
+- 프로세서가 하나뿐인 컴퓨터에서는 [구성 설정](../../core/run-time-config/garbage-collector.md#workstation-vs-server)에 관계없이 항상 워크스테이션 가비지 수집이 사용됩니다.
 
 ### <a name="server-gc"></a>서버 GC
 

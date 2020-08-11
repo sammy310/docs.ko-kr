@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990219"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917028"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 
@@ -186,7 +186,7 @@ GC 알고리즘은 몇 가지 고려 사항을 기반으로 합니다.
   일반적으로 대형 개체를 복사하면 성능 저하가 발생하기 때문에 LOH(대형 개체 힙)는 압축되지 않습니다. 하지만 .NET Core 및 .NET Framework 4.5.1 이상에서, <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 속성을 사용하면 필요 시 대형 개체 힙을 압축시킬 수 있습니다. 또한 다음 중 하나를 지정하여 하드 한도가 설정된 경우 LOH가 자동으로 압축됩니다.
 
   - 컨테이너의 메모리 제한입니다.
-  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) 또는 [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) 런타임 구성 옵션입니다.
+  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#heap-limit) 또는 [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#heap-limit-percent) 런타임 구성 옵션입니다.
 
 가비지 수집기는 다음 정보를 사용하여 개체가 활성 개체인지 여부를 판단합니다.
 

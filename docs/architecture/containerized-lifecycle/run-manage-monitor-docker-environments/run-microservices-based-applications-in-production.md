@@ -1,13 +1,13 @@
 ---
 title: 프로덕션 환경에서 구성된 마이크로서비스 기반 애플리케이션 실행
 description: 프로덕션 환경에서 컨테이너 기반 애플리케이션을 실행하기 위한 주요 구성 요소를 알아봅니다.
-ms.date: 02/15/2019
-ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: a045804e2e40dcf401a697d3e58b13f05ca61b94
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672920"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915051"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>프로덕션 환경에서 구성된 마이크로서비스 기반 애플리케이션 실행
 

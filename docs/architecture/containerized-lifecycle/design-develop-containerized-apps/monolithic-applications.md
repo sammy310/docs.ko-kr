@@ -1,13 +1,13 @@
 ---
 title: 모놀리식 애플리케이션
 description: 모놀리식 애플리케이션 컨테이너화의 핵심 개념을 알아봅니다.
-ms.date: 02/15/2019
-ms.openlocfilehash: 3c186f6a300588816916886927f93e0c06ebd6bc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/06/2020
+ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988988"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915450"
 ---
 # <a name="monolithic-applications"></a>모놀리식 애플리케이션
 

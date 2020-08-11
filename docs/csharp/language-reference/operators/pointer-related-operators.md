@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738609"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916712"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -46,11 +46,11 @@ ms.locfileid: "81738609"
 
 단항 `&` 연산자는 해당 피연산자의 주소를 반환합니다.
 
-[!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](snippets/shared/PointerOperators.cs#AddressOf)]
 
 `&` 연산자의 피연산자는 고정 변수여야 합니다. *고정* 변수는 [가비지 수집기](../../../standard/garbage-collection/index.md)의 작동에 영향을 받지 않는 스토리지 위치에 있는 변수입니다. 앞의 예제에서 로컬 변수 `number`는 스택에 있으므로 고정 변수입니다. 가비지 수집기에 의해 영향을 받을 수 있는 스토리지 위치에 상주하는 변수(예: 재배치됨)를 *이동 가능한* 변수라고 합니다. 개체 필드 및 배열 요소는 이동 가능한 변수의 예입니다. [`fixed` 문](../keywords/fixed-statement.md)으로 "fix" 또는 "pin"으로 할 경우 이동 가능한 변수의 주소를 가져올 수 있습니다. 가져온 주소는 `fixed` 문 블록 내에서만 유효합니다. 다음 예제에서는 `fixed` 문과 `&` 연산자를 사용하는 방법을 보여줍니다.
 
-[!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](snippets/shared/PointerOperators.cs#AddressOfFixed)]
 
 상수 또는 값의 주소를 가져올 수 없습니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "81738609"
 
 단항 포인터 간접 참조 연산자 `*`는 피연산자가 가리키는 변수를 가져옵니다. 역참조 연산자라고도 합니다. `*` 연산자의 피연산자는 포인터 형식이여야 합니다.
 
-[!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](snippets/shared/PointerOperators.cs#PointerIndirection)]
 
 `*` 연산자를 `void*` 유형의 식에 적용할 수 없습니다.
 
@@ -84,7 +84,7 @@ x->y
 
 다음 예제에서는 `->` 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](snippets/shared/PointerOperators.cs#MemberAccess)]
 
 `->` 연산자를 `void*` 유형의 식에 적용할 수 없습니다.
 
@@ -94,7 +94,7 @@ x->y
 
 다음 예제에서는 포인터 및 `[]` 연산자를 사용하여 배열 요소에 액세스하는 방법을 보여 줍니다.
 
-[!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](snippets/shared/PointerOperators.cs#ElementAccess)]
 
 앞의 예제에서 [`stackalloc` 식](stackalloc.md)은 스택에 메모리 블록을 할당합니다.
 
@@ -128,7 +128,7 @@ x->y
 
 다음 예제에서는 포인터로 `+` 연산자를 사용하는 방법을 보여줍니다.
 
-[!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](snippets/shared/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>포인터 빼기
 
@@ -136,7 +136,7 @@ x->y
 
 다음 예제에서는 포인터 빼기를 보여줍니다.
 
-[!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](snippets/shared/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>포인터 증가 및 감소
 
@@ -146,7 +146,7 @@ x->y
 
 다음 예제에서는 접미사 및 접두사 증가 연산자의 동작을 보여줍니다.
 
-[!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](snippets/shared/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>포인터 비교 연산자
 
@@ -188,7 +188,7 @@ x->y
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [unsafe 키워드](../keywords/unsafe.md)
 - [fixed 키워드](../keywords/fixed-statement.md)

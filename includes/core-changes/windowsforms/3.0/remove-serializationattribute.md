@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b35e99b1516c3236d07153cf0b69dae55a4bff7d
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 4fb1ffed97a5b7f906bed13a69f1e71563d11dae
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83720899"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556206"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>일부 Windows Forms 형식에서 SerializableAttribute 제거됨
 
@@ -32,7 +32,7 @@ ms.locfileid: "83720899"
 
 #### <a name="version-introduced"></a>도입된 버전
 
-3.0 미리 보기 9
+3.0
 
 #### <a name="recommended-action"></a>권장 조치
 

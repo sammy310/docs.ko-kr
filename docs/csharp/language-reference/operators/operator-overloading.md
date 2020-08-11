@@ -4,15 +4,16 @@ description: C# 연산자를 오버로드하는 방법과 오버로드가 가능
 ms.date: 07/05/2019
 f1_keywords:
 - operator_CSharpKeyword
+- operator
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1324a4a3610b96f7258a856609dc4090b9751e52
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4fde25cac21b2cb32efc9282578f32102a0f607f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301764"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916724"
 ---
 # <a name="operator-overloading-c-reference"></a>연산자 오버로드(C# 참조)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87301764"
 
 다음 예제에서는 유리수를 나타내는 간단한 구조를 정의합니다. 구조체가 [산술 연산자](arithmetic-operators.md) 중 일부를 오버로드합니다.
 
-[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/shared/OperatorOverloading.cs)]
 
 [암시적 변환](user-defined-conversion-operators.md)을 `int`에서 `Fraction`으로 정의하여 앞의 예제를 확장할 수 있습니다. 그런 다음, 오버로드된 연산자는 해당 두 형식의 인수를 지원합니다. 즉, 분수에 정수를 추가하고 그 결과로 분수를 얻을 수 있습니다.
 
@@ -62,7 +63,7 @@ ms.locfileid: "87301764"
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [사용자 정의 전환 연산자](user-defined-conversion-operators.md)
 - [디자인 지침 - 연산자 오버 로드](../../../standard/design-guidelines/operator-overloads.md)
 - [디자인 지침 - 같음 연산자](../../../standard/design-guidelines/equality-operators.md)

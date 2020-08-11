@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
-ms.openlocfilehash: bc7faae3b00d412aa8d50fe181a26873232a0939
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415734"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916266"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
 
@@ -17,13 +17,31 @@ ms.locfileid: "85415734"
 
 현재 대상으로 하는 .NET 버전을 선택한 후 마이그레이션할 .NET Core 버전을 선택합니다.
 
-[!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+> [!div class="op_multi_selector" title1="대상 버전" title2="마이그레이션된 버전"]
+>
+> - [(3.1 | 5.0)](3.1-5.0.md)
+> - [(3.0 | 3.1)](3.0-3.1.md)
+> - [(2.2 | 3.1)](2.2-3.1.md)
+> - [(2.2 | 3.0)](2.2-3.0.md)
+> - [(2.0 | 2.1)](2.0-2.1.md)
+> - [(.NET Framework | .NET Core)](fx-core.md)
 
 ## <a name="by-technology-area"></a>기술 영역별
 
 관심 있는 .NET Core 기술 영역을 선택합니다. 개별 변경 내용은 .NET Core 버전별로 정렬되어 있습니다.
 
-[!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
+> [!div class="op_single_selector"]
+>
+> - [ASP.NET Core](aspnetcore.md)
+> - [핵심 .NET 라이브러리](corefx.md)
+> - [암호화](cryptography.md)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
+> - [전역화](globalization.md)
+> - [Interop](interop.md)
+> - [네트워킹](networking.md)
+> - [serialization](serialization.md)
+> - [Visual Basic](visualbasic.md)
+> - [Windows Forms](winforms.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub 문제 및 알림
 

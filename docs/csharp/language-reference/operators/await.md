@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308847"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916915"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
@@ -20,7 +20,7 @@ ms.locfileid: "86308847"
 
 다음 예제에서 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 메서드는 완료 시 바이트 배열을 생성하는 비동기 작업을 나타내는 `Task<byte[]>` 인스턴스를 반환합니다. 작업이 완료될 때까지 `await` 연산자는 `DownloadDocsMainPageAsync` 메서드를 일시 중단합니다. `DownloadDocsMainPageAsync`가 일시 중단되면 제어는 `DownloadDocsMainPageAsync`의 호출자인 `Main` 메서드에 반환됩니다. `Main` 메서드는 `DownloadDocsMainPageAsync` 메서드가 수행한 비동기 작업의 결과가 필요할 때까지 실행됩니다. <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>가 모든 바이트를 가져오면 나머지 `DownloadDocsMainPageAsync` 메서드가 평가됩니다. 그 후에는 나머지 `Main` 메서드가 평가됩니다.
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 앞의 예제에서는 C# 7.1부터 가능한 [비동기 `Main` 메서드](../../programming-guide/main-and-command-args/index.md)를 사용합니다. 자세한 내용은 [Main 메서드 섹션의 await 연산자](#await-operator-in-the-main-method)를 참조하세요.
 
@@ -54,7 +54,7 @@ C# 7.1부터 애플리케이션 진입점인 [`Main` 메서드](../../programmin
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [async](../keywords/async.md)
 - [작업 비동기 프로그래밍 모델](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [비동기 프로그래밍](../../async.md)

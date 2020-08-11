@@ -1,15 +1,17 @@
 ---
 title: new 연산자 - C# 참조
 ms.date: 06/25/2019
+f1_keywords:
+- new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 42128cf23fe2410bf33bb40131843325939646de
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199731"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916764"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 
@@ -21,21 +23,21 @@ ms.locfileid: "82199731"
 
 새 인스턴스 유형을 만들려면 일반적으로 `new` 연산자를 사용하여 해당 유형의 [생성자](../../programming-guide/classes-and-structs/constructors.md) 중 하나를 호출합니다.
 
-[!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](snippets/shared/NewOperator.cs#Constructor)]
 
 다음 예제와 같이 `new` 연산자와 함께 [개체 또는 컬렉션 이니셜라이저](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)를 사용하여 하나의 명령문에서 개체를 인스턴스화하고 초기화할 수 있습니다.
 
-[!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>배열 생성
 
 또한 다음 예제와 같이 `new` 연산자를 사용하여 배열 인스턴스를 만듭니다.
 
-[!code-csharp-interactive[create array](snippets/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](snippets/shared/NewOperator.cs#Array)]
 
 배열 초기화 구문을 사용하여 배열 인스턴스를 만들고 하나의 명령문에 요소를 채웁니다. 다음 예제에서는 이를 수행하는 다양한 방법을 보여줍니다.
 
-[!code-csharp-interactive[initialize array](snippets/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](snippets/shared/NewOperator.cs#ArrayInitialization)]
 
 배열에 대한 자세한 내용은 [배열](../../programming-guide/arrays/index.md)을 참조하세요.
 
@@ -43,7 +45,7 @@ ms.locfileid: "82199731"
 
 [익명 형식](../../programming-guide/classes-and-structs/anonymous-types.md)의 인스턴스를 만들려면 `new` 연산자와 개체 이니셜라이저 구문을 사용합니다.
 
-[!code-csharp-interactive[anonymous type](snippets/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](snippets/shared/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>형식 인스턴스의 소멸
 
@@ -62,5 +64,5 @@ ms.locfileid: "82199731"
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [개체 및 컬렉션 이니셜라이저](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)

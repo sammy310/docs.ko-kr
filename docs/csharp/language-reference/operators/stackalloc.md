@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916679"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc 식(C# 참조)
 
@@ -20,24 +20,24 @@ ms.locfileid: "79546603"
 
 - C# 7.2부터 <xref:System.Span%601?displayProperty=nameWithType> 또는 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>(다음 예제 참조):
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601> 변수에 스택 할당 메모리 블록을 할당할 때 [unsafe](../keywords/unsafe.md) 컨텍스트를 사용하지 않아도 됩니다.
 
   이러한 형식으로 작업하는 경우 다음 예제와 같이 [조건식](conditional-operator.md) 또는 대입식에 `stackalloc` 식을 사용할 수 있습니다.
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   C# 8.0부터 다음 예제와 같이 <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601> 변수가 허용되는 경우 다른 식 내부에서 `stackalloc` 식을 사용할 수 있습니다.
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > 스택 할당 메모리로 작업할 때는 가능한 한, <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601> 형식을 사용하는 것이 좋습니다.
 
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)(다음 예제 참조)
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   포인터 형식으로 작업할 때는 위 예제와 같이 `unsafe` 컨텍스트를 사용해야 합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "79546603"
 
 - `stackalloc`을 사용하여 할당하는 메모리의 양을 제한합니다.
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   스택에서 사용 가능한 메모리 양은 코드를 실행하는 환경에 따라 달라지므로 실제 제한 값을 정의할 때는 신중해야 합니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "79546603"
 
 C# 7.3부터, 배열 이니셜라이저 구문을 사용하여 새로 할당된 메모리의 콘텐츠를 정의할 수 있습니다. 다음 예제에서는 이 작업을 수행하는 다양한 방법을 보여 줍니다.
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 식 `stackalloc T[E]`에서 `T`는 [관리되지 않는 형식](../builtin-types/unmanaged-types.md)이어야 하며 `E`는 음수가 아닌 [int](../builtin-types/integral-numeric-types.md) 값으로 계산되어야 합니다.
 
@@ -72,7 +72,7 @@ C# 7.3부터, 배열 이니셜라이저 구문을 사용하여 새로 할당된 
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [포인터 관련 연산자](pointer-related-operators.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [메모리 및 범위 관련 형식](../../../standard/memory-and-spans/index.md)

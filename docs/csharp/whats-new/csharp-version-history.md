@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 96d6e07d5553d65e95144a0cede7cab86b4c5ef7
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738148"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556855"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -42,7 +42,7 @@ C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
 - [이벤트](../events-overview.md)
 - [속성](../properties.md)
 - [대리자](../delegates-overview.md)
-- [식](../programming-guide/statements-expressions-operators/expressions.md)
+- [연산자 및 식](../language-reference/operators/index.md)
 - [문](../programming-guide/statements-expressions-operators/statements.md)
 - [특성](../programming-guide/concepts/attributes/index.md)
 

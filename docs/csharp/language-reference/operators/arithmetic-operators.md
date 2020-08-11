@@ -11,6 +11,8 @@ f1_keywords:
 - '%_CSharpKeyword'
 - +_CSharpKeyword
 - -_CSharpKeyword
+- '%=_CSharpKeyword'
+- '*=_CSharpKeyword'
 helpviewer_keywords:
 - arithmetic operators [C#]
 - increment operator [C#]
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f5da9c4433ffcf3e6a110bbb1543343289240778
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207233"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916942"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -55,13 +57,13 @@ ms.locfileid: "83207233"
 
 `x++`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
-[!code-csharp-interactive[postfix increment](snippets/ArithmeticOperators.cs#PostfixIncrement)]
+[!code-csharp-interactive[postfix increment](snippets/shared/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>후위 증가 연산자
 
 `++x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
-[!code-csharp-interactive[prefix increment](snippets/ArithmeticOperators.cs#PrefixIncrement)]
+[!code-csharp-interactive[prefix increment](snippets/shared/ArithmeticOperators.cs#PrefixIncrement)]
 
 ## <a name="decrement-operator---"></a>감소 연산자 --
 
@@ -73,19 +75,19 @@ ms.locfileid: "83207233"
 
 `x--`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
-[!code-csharp-interactive[postfix decrement](snippets/ArithmeticOperators.cs#PostfixDecrement)]
+[!code-csharp-interactive[postfix decrement](snippets/shared/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>후위 감소 연산자
 
 `--x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
-[!code-csharp-interactive[prefix decrement](snippets/ArithmeticOperators.cs#PrefixDecrement)]
+[!code-csharp-interactive[prefix decrement](snippets/shared/ArithmeticOperators.cs#PrefixDecrement)]
 
 ## <a name="unary-plus-and-minus-operators"></a>단항 더하기 및 빼기 연산자
 
 단항 `+` 연산자는 피연산자의 값을 반환합니다. 단항 `-` 연산자는 피연산자의 숫자 부정을 계산합니다.
 
-[!code-csharp-interactive[unary plus and minus](snippets/ArithmeticOperators.cs#UnaryPlusAndMinus)]
+[!code-csharp-interactive[unary plus and minus](snippets/shared/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
 단항 `-` 연산자는 [ulong](../builtin-types/integral-numeric-types.md) 형식을 지원하지 않습니다.
 
@@ -93,7 +95,7 @@ ms.locfileid: "83207233"
 
 곱하기 연산자 `*`는 피연산자의 곱을 계산합니다.
 
-[!code-csharp-interactive[multiplication operator](snippets/ArithmeticOperators.cs#Multiplication)]
+[!code-csharp-interactive[multiplication operator](snippets/shared/ArithmeticOperators.cs#Multiplication)]
 
 단항 `*` 연산자는 [포인터 간접 참조 연산자](pointer-related-operators.md#pointer-indirection-operator-)입니다.
 
@@ -105,17 +107,17 @@ ms.locfileid: "83207233"
 
 정수 형식의 피연산자의 경우 `/` 연산자의 결과는 정수 형식이고 두 피연산자의 몫과 동일한 값은 0으로 반올림됩니다.
 
-[!code-csharp-interactive[integer division](snippets/ArithmeticOperators.cs#IntegerDivision)]
+[!code-csharp-interactive[integer division](snippets/shared/ArithmeticOperators.cs#IntegerDivision)]
 
 두 피연산자의 몫을 부동 소수점 숫자로 가져오려면 `float`, `double` 또는 `decimal` 형식을 사용하세요.
 
-[!code-csharp-interactive[integer as floating-point division](snippets/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
+[!code-csharp-interactive[integer as floating-point division](snippets/shared/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
 ### <a name="floating-point-division"></a>부동 소수점 나누기
 
 `float`, `double` 및 `decimal` 형식의 경우 `/` 연산자의 결과는 두 피연산자의 몫입니다.
 
-[!code-csharp-interactive[floating-point division](snippets/ArithmeticOperators.cs#FloatingPointDivision)]
+[!code-csharp-interactive[floating-point division](snippets/shared/ArithmeticOperators.cs#FloatingPointDivision)]
 
 피연산자 중 하나가 `decimal`이면 `float` 또는 `double` 모두 `decimal`로 암시적으로 변환할 수 없기 때문에 나머지 피연산자는 `float` 또는 `double`일 수 없습니다. `float` 또는 `double` 피연산자를 `decimal` 형식으로 암시적으로 변환해야 합니다. 숫자 형식 간의 변환에 대한 자세한 내용은 [기본 제공 숫자 변환](../builtin-types/numeric-conversions.md)을 참조하세요.
 
@@ -127,7 +129,7 @@ ms.locfileid: "83207233"
 
 정수 형식의 피연산자의 경우 `a % b`의 결과가 `a - (a / b) * b`에서 생성된 값입니다. 다음 예와 같이 0이 아닌 나머지의 부호는 왼쪽 피연산자와 동일합니다.
 
-[!code-csharp-interactive[integer remainder](snippets/ArithmeticOperators.cs#IntegerRemainder)]
+[!code-csharp-interactive[integer remainder](snippets/shared/ArithmeticOperators.cs#IntegerRemainder)]
 
 <xref:System.Math.DivRem%2A?displayProperty=nameWithType> 메서드를 사용하여 정수 나누기 및 나머지 결과를 모두 컴퓨팅합니다.
 
@@ -147,13 +149,13 @@ ms.locfileid: "83207233"
 
 다음 예제에서는 부동 소수점 피연산자를 포함한 나머지 연산자의 동작을 보여줍니다.
 
-[!code-csharp-interactive[floating-point remainder](snippets/ArithmeticOperators.cs#FloatingPointRemainder)]
+[!code-csharp-interactive[floating-point remainder](snippets/shared/ArithmeticOperators.cs#FloatingPointRemainder)]
 
 ## <a name="addition-operator-"></a>더하기 연산자 +
 
 더하기 연산자 `+`는 피연산자의 합계를 계산합니다.
 
-[!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
+[!code-csharp-interactive[addition operator](snippets/shared/ArithmeticOperators.cs#Addition)]
 
 문자열 연결 및 대리자 조합의 경우 `+` 연산자를 사용할 수도 있습니다. 자세한 내용은 참조는 [`+` 및 `+=`연산자](addition-operator.md) 문서를 참조하세요.
 
@@ -161,7 +163,7 @@ ms.locfileid: "83207233"
 
 빼기 연산자 `-`는 왼쪽 피연산자에서 오른쪽 피연산자를 뺍니다.
 
-[!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
+[!code-csharp-interactive[subtraction operator](snippets/shared/ArithmeticOperators.cs#Subtraction)]
 
 대리자 제거를 위해 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 참조는 [`-` 및 `-=`연산자](subtraction-operator.md) 문서를 참조하세요.
 
@@ -183,11 +185,11 @@ x = x op y
 
 다음 예제에서는 산술 연산자를 사용하는 복합 할당의 사용법을 보여줍니다.
 
-[!code-csharp-interactive[compound assignment](snippets/ArithmeticOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/shared/ArithmeticOperators.cs#CompoundAssignment)]
 
 [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)으로 인해 `op` 연산의 결과가 암시적으로 `x`의 `T` 형식으로 변환되지 못할 수 있습니다. 이 경우 `op`가 미리 정의된 연산자이고 연산의 결과가 명시적으로 `x`의 `T` 형식으로 변환 가능하다면 `x op= y` 양식의 복합 할당 식이 `x = (T)(x op y)`에 해당합니다. 단 `x`는 한 번만 평가됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
 
-[!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](snippets/shared/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 각각 `+=` 및 `-=` 연산자를 사용하여 [이벤트](../keywords/event.md)에서 구독하거나 구독을 취소할 수도 있습니다. 자세한 내용은 [이벤트를 구독 및 구독 취소하는 방법](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)을 참조하세요.
 
@@ -204,7 +206,7 @@ x = x op y
 
 괄호(`()`)를 사용하여 연산자 우선 순위와 연결에 따라 주어진 계산 순서를 변경할 수 있습니다.
 
-[!code-csharp-interactive[precedence and associativity](snippets/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+[!code-csharp-interactive[precedence and associativity](snippets/shared/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
 우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
@@ -223,7 +225,7 @@ x = x op y
 
 [checked 및 unchecked](../keywords/checked-and-unchecked.md) 문과 함께 `checked` 및 `unchecked` 연산자를 사용하여 식을 계산하는 오버플로 검사 컨텍스트를 제어합니다.
 
-[!code-csharp-interactive[checked and unchecked](snippets/ArithmeticOperators.cs#CheckedUnchecked)]
+[!code-csharp-interactive[checked and unchecked](snippets/shared/ArithmeticOperators.cs#CheckedUnchecked)]
 
 기본적으로 산술 연산은 *unchecked* 컨텍스트에서 발생합니다.
 
@@ -231,7 +233,7 @@ x = x op y
 
 `float` 및 `double` 형식을 포함한 산술 연산은 예외를 throw하지 않습니다. 이러한 형식의 산술 연산 결과는 무한대를 나타내거나 숫자가 아닌 특수 값 중 하나일 수 있습니다.
 
-[!code-csharp-interactive[double non-finite values](snippets/ArithmeticOperators.cs#FloatingPointOverflow)]
+[!code-csharp-interactive[double non-finite values](snippets/shared/ArithmeticOperators.cs#FloatingPointOverflow)]
 
 `decimal` 형식의 피연산자의 경우 산술 오버플로는 항상 <xref:System.OverflowException>을 throw하고, 0으로 나누기는 항상 <xref:System.DivideByZeroException>을 throw합니다.
 
@@ -239,7 +241,7 @@ x = x op y
 
 실수 및 부동 소수점 산술의 부동 소수점 표현을 일반적으로 제한함으로 인해 부동 소수점 형식을 사용하는 계산에서 반올림 오류가 발생할 수 있습니다. 즉, 생성된 식의 결과는 예상되는 수학적 결과와 다를 수 있습니다. 다음 예제에서는 이러한 몇몇 사례에 대해 설명합니다.
 
-[!code-csharp-interactive[round-off errors](snippets/ArithmeticOperators.cs#RoundOffErrors)]
+[!code-csharp-interactive[round-off errors](snippets/shared/ArithmeticOperators.cs#RoundOffErrors)]
 
 자세한 내용은 [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks) 또는 [System.Decimal](/dotnet/api/system.decimal#remarks) 참조 페이지에서 설명을 참조하세요.
 
@@ -267,7 +269,7 @@ x = x op y
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
 - [.NET의 숫자](../../../standard/numerics.md)

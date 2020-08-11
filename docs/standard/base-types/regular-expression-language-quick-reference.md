@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446368"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556802"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 
@@ -94,8 +94,8 @@ ms.locfileid: "84446368"
 |그룹화 구문|설명|무늬|일치 항목|
 |------------------------|-----------------|-------------|-------------|
 |`(` *subexpression* `)`|일치하는 하위 식을 캡처하고 서수(1부터 시작)를 할당합니다.|`(\w)\1`|`"deep"`의 `"ee"`|
-|`(?<` *name* `>` *subexpression* `)`|일치하는 하위 식을 명령된 그룹에 캡처합니다.|`(?<double>\w)\k<double>`|`"deep"`의 `"ee"`|
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|균형 조정 그룹 정의를 정의합니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)의 "균형 조정 그룹 정의" 섹션을 참조하세요.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"`의 `"((1-3)*(3-1))"`|
+|`(?<` *name* `>` *subexpression* `)`<br /> 또는 <br />`(?'` *name* `'` *subexpression* `)`|일치하는 하위 식을 명령된 그룹에 캡처합니다.|`(?<double>\w)\k<double>`|`"deep"`의 `"ee"`|
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> 또는 <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|균형 조정 그룹 정의를 정의합니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)의 "균형 조정 그룹 정의" 섹션을 참조하세요.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"`의 `"((1-3)*(3-1))"`|
 |`(?:` *subexpression* `)`|비캡처 그룹을 정의합니다.|`Write(?:Line)?`|`"Console.WriteLine()"`의 `"WriteLine"`<br /><br /> `"Console.Write(value)"`의 `"Write"`|
 |`(?imnsx-imnsx:` *subexpression* `)`|*subexpression* 내에서 지정된 옵션을 적용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [정규식 옵션](regular-expression-options.md)을 참조하세요.|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"`의 `"A12xl"`, `"A12XL"`|
 |`(?=` *subexpression* `)`|너비가 0인 긍정 우측 어설션입니다.|`\w+(?=\.)`|`"He is. The dog ran. The sun is out."`의 `"is"`, `"ran"` 및 `"out"`|

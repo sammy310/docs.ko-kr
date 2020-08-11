@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15342c3d9cd66195639e38265875a7ed4008dd51
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846221"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916616"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 및 false 연산자(C# 참조)
 
@@ -31,7 +31,7 @@ ms.locfileid: "78846221"
 
 다음 예제는 `true` 및 `false` 연산자를 둘 다 정의하는 형식을 제공합니다. `&&` 연산자도 해당 형식의 피연산자에 대해 계산될 수 있는 방식으로 논리적 AND 연산자 `&`를 오버로드합니다.
 
-[!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](snippets/shared/TrueFalseOperators.cs)]
 
 `&&` 연산자의 단락 동작을 확인합니다. `GetFuelLaunchStatus` 메서드가 `LaunchStatus.Red`를 반환하면 `&&` 연산자의 오른쪽 피연산자는 계산되지 않습니다. `LaunchStatus.Red`가 확실히 false이기 때문입니다. 따라서 논리적 AND의 결과가 오른쪽 피연산자의 값에 종속되지 않습니다. 예제 출력은 다음과 같습니다.
 
@@ -43,4 +43,4 @@ Wait!
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)

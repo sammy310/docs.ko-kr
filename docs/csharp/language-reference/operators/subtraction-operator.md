@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 2017aade92e8d7ad2af7101a107122fa8d7b9e27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a00957c8d36a96b5ee23b9e5a309b6139b33fd36
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847653"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916682"
 ---
 # <a name="--and---operators-c-reference"></a>- 및 -= 연산자(C# 참조)
 
@@ -31,17 +31,17 @@ ms.locfileid: "78847653"
 
 - 두 피연산자가 모두 null이 아니고 오른쪽 피연산자의 호출 목록이 왼쪽 피연산자의 호출 목록에 적절한 연속 하위 목록인 경우, 이 연산의 결과는 왼쪽 피연산자의 호출 목록에서 오른쪽 피연산자의 항목을 제거하여 얻은 새로운 호출 목록입니다. 오른쪽 피연산자의 목록이 왼쪽 피연산자 목록의 여러 개의 연속 하위 목록과 일치하는 경우 가장 오른쪽의 일치하는 하위 목록만 제거됩니다. 제거로 인해 빈 목록이 생성되면 결과는 `null`입니다.
 
-  [!code-csharp-interactive[delegate removal](snippets/SubtractionOperator.cs#DelegateRemoval)]
+  [!code-csharp-interactive[delegate removal](snippets/shared/SubtractionOperator.cs#DelegateRemoval)]
 
 - 오른쪽 피연산자의 호출 목록이 왼쪽 피연산자의 호출 목록의 적절한 연속 하위 목록이 아닌 경우, 해당 연산의 결과는 왼쪽 피연산자입니다. 예를 들어 멀티 캐스트 대리자의 일부가 아닌 대리자를 제거하면 아무 작업도 수행되지 않고 변경되지 않은 멀티 캐스트 대리자가 됩니다.
 
-  [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
+  [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   또한 앞의 예제에서는 대리자 제거 중 대리자 인스턴스를 비교하는 것을 보여줍니다. 예를 들어 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)의 평가에서 생성된 대리자는 동일하지 않습니다. 대리자 같음에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
 
 - 왼쪽 피연산자가 `null`이면, 연산 결과는 `null`입니다. 오른쪽 피연산자가 `null`이면, 연산 결과는 왼쪽 피연산자입니다.
 
-  [!code-csharp-interactive[delegate removal and null](snippets/SubtractionOperator.cs#DelegateRemovalAndNull)]
+  [!code-csharp-interactive[delegate removal and null](snippets/shared/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
 대리자를 결합하려면 [`+` 연산자](addition-operator.md#delegate-combination)를 사용합니다.
 
@@ -65,7 +65,7 @@ x = x - y
 
 다음 예제에서는 `-=` 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
+[!code-csharp-interactive[-= examples](snippets/shared/SubtractionOperator.cs#SubtractAndAssign)]
 
 또한 [이벤트](../keywords/event.md)에서 구독 취소할 때 `-=` 연산자를 사용하여 제거할 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [이벤트를 구독 및 구독 취소하는 방법](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)을 참조하세요.
 
@@ -80,7 +80,7 @@ x = x - y
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [이벤트](../../programming-guide/events/index.md)
 - [산술 연산자](arithmetic-operators.md)
 - [+ 및 += 연산자](addition-operator.md)

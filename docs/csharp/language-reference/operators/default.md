@@ -7,12 +7,12 @@ f1_keywords:
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f03971efa87bf03967c79512e44d22134dd80c17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507180"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916874"
 ---
 # <a name="default-value-expressions-c-reference"></a>기본값 식(C# 참조)
 
@@ -24,7 +24,7 @@ ms.locfileid: "79507180"
 
 `default` 연산자의 인수는 다음 예제와 같이 형식 또는 형식 매개 변수의 이름이어야 합니다.
 
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/shared/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>기본 리터럴
 
@@ -37,7 +37,7 @@ C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 �
 
 다음 예제에서는 `default` 리터의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/shared/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -48,6 +48,6 @@ C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 �
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [C# 형식의 기본값](../builtin-types/default-values.md)
 - [.NET의 제네릭](../../../standard/generics/index.md)

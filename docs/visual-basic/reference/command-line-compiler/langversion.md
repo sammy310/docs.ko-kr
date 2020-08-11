@@ -6,12 +6,12 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 271606ac021e6afcb28fdac3e1bc86e1aaba7d2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 286dd8bd9949b584cec38642f44ba9ac5e924732
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408540"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557179"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion(Visual Basic)
 컴파일러에서 지정된 Visual Basic 언어 버전에 포함된 구문만 허용하도록 합니다.  
@@ -48,4 +48,3 @@ vbc -langversion:9.0 sample.vb
 
 - [Visual Basic 명령줄 컴파일러](index.md)
 - [샘플 컴파일 명령줄](sample-compilation-command-lines.md)
-- [특정 대상 .NET Framework 버전 지정](/visualstudio/ide/visual-studio-multi-targeting-overview)

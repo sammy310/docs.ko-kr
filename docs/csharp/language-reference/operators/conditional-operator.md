@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 1a17ba092d4228ba909c8774a2f7e15c2c50cfdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fcde0476935108122d7f7e825d701e48952873f6
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398216"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916854"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -51,7 +51,7 @@ a ? b : (c ? d : e)
 
 다음 예제에서는 조건부 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>조건부 ref 식
 
@@ -69,13 +69,13 @@ condition ? ref consequent : ref alternative
 
 다음 예제에서는 조건부 ref 식의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/shared/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>조건부 연산자 및 `if..else` 문
 
 [if-else](../keywords/if-else.md) 문보다 조건부 연산자를 사용하면 조건부로 값을 컴퓨팅해야 하는 경우 코드가 보다 간결해질 수 있습니다. 다음 예제에서는 정수를 음수 또는 음수가 아닌 값으로 분류하는 두 가지 방법을 보여 줍니다.
 
-[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/shared/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -90,7 +90,7 @@ condition ? ref consequent : ref alternative
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [if-else 문](../keywords/if-else.md)
 - [?. 및 ?[] 연산자](member-access-operators.md#null-conditional-operators--and-)
 - [및 ??= 연산자](null-coalescing-operator.md)
