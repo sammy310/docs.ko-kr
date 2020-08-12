@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473879"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063601"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 
@@ -33,9 +33,9 @@ ms.locfileid: "86473879"
 
 ## <a name="language-sections"></a>언어 섹션
 
-[문, 식 및 연산자](./statements-expressions-operators/index.md)  
+[문, 식, 연산자](./statements-expressions-operators/index.md)  
 
- [형식](./types/index.md)  
+ [유형](./types/index.md)  
 
  [클래스 및 구조체](./classes-and-structs/index.md)  
   
@@ -58,8 +58,6 @@ ms.locfileid: "86473879"
  [반복기](./concepts/iterators.md)
   
  [LINQ 쿼리 식](../linq/index.md)  
-  
- [람다 식](./statements-expressions-operators/lambda-expressions.md)  
   
  [네임스페이스](./namespaces/index.md)  
   

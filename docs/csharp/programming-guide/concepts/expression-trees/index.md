@@ -3,12 +3,12 @@ title: 식 트리(C#)
 description: 식 트리에 대해 알아보세요. 각 노드가 식인 이 데이터 구조가 나타내는 코드를 컴파일하고 실행하는 방법을 확인하세요.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105581"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063317"
 ---
 # <a name="expression-trees-c"></a>식 트리(C#)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "87105581"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>람다 식에서 식 트리 만들기  
  람다 식을 <xref:System.Linq.Expressions.Expression%601> 형식 변수에 할당하면 컴파일러가 해당 람다 식을 나타내는 식 트리를 작성하기 위해 코드를 내보냅니다.  
   
- C# 컴파일러는 람다 식(한 줄 람다)에서만 식 트리를 생성할 수 있으며 문 람다(여러 줄 람다)는 구문 분석할 수 없습니다. C#의 람다 식에 대한 자세한 내용은 [람다 식](../../statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
+ C# 컴파일러는 람다 식(한 줄 람다)에서만 식 트리를 생성할 수 있으며 문 람다(여러 줄 람다)는 구문 분석할 수 없습니다. C#의 람다 식에 대한 자세한 내용은 [람다 식](../../../language-reference/operators/lambda-expressions.md)을 참조하세요.  
   
  다음 코드 예제에서는 C# 컴파일러에서 람다 식 `num => num < 5`를 나타내는 식 트리를 만드는 방법을 보여 줍니다.  
   
@@ -153,6 +153,6 @@ Console.WriteLine(expr.Compile()(4));
 - <xref:System.Linq.Expressions>
 - [식 트리 실행 방법(C#)](./how-to-execute-expression-trees.md)
 - [식 트리 수정 방법(C#)](./how-to-modify-expression-trees.md)
-- [람다 식](../../statements-expressions-operators/lambda-expressions.md)
+- [람다 식](../../../language-reference/operators/lambda-expressions.md)
 - [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [프로그래밍 개념(C#)](../index.md)
