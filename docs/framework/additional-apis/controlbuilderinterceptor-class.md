@@ -9,18 +9,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 312d977f832d262b1bebc6638280b67b133babdf
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.openlocfilehash: 0cd7409deb9cb84783cfa70600999fa4b2a2d2e2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88084407"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187989"
 ---
 # <a name="controlbuilderinterceptor-class"></a>ControlBuilderInterceptor 클래스
 
 `ControlBuilderInterceptor`클래스를 사용 하면 컴파일 프로세스를 사용자 지정 하거나 제어할 수 있습니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```csharp
 internal class ControlBuilderInterceptor
@@ -57,8 +57,9 @@ Type type = Type.GetType("System.Web.Compilation.ControlBuilderInterceptor, Syst
          value="Fabrikam.Interceptor, Fabrikam, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2b3831f2f2b744f7" />
   </appSettings>
 </configuration>
+```
 
-To retrieve the assembly-qualified name of a type, use the <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> property, as demonstrated in the following code.
+형식의 어셈블리 정규화 된 이름을 검색 하려면 <xref:System.Type.AssemblyQualifiedName?displayProperty=nameWithType> 다음 코드에 나와 있는 것 처럼 속성을 사용 합니다.
 
 ```csharp
 string assemblyQualifiedName = typeof(Fabrikam.Interceptor).AssemblyQualifiedName;
