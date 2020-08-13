@@ -1,70 +1,64 @@
 ---
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Azure Kubernetes Service를 사용하여 앱을 배포하는 방법을 알아봅니다.
-ms.date: 02/15/2019
-ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: b4deb9906e0fece7fb611b6988df576e8b07fe46
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71182363"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916106"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service)에 배포
 
-원하는 클라이언트 운영 체제를 사용하여 AKS와 상호 작용할 수 있으며, 여기서는 Microsoft Windows 및 Windows의 Ubuntu Linux 임베디드 버전에서 Bash 명령을 사용하여 상호 작용하는 방법을 살펴보겠습니다.
-
-AKS를 사용하기 전에 갖추어야 할 필수 구성 요소는 다음과 같습니다.
-
-- Linux 또는 Mac 개발 머신
-- Windows 개발 컴퓨터
-  - Windows에서 사용하도록 설정된 개발자 모드.
-  - Linux용 Windows 하위 시스템
-- [Windows, Mac 또는 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli)에 설치된 Azure CLI
-
-> [!NOTE]
-> 다음 항목에 대한 전체 정보를 찾으려면 다음을 수행합니다.
->
-> Azure-CLI: <https://docs.microsoft.com/cli/azure/index>
->
-> Linux용 Windows 하위 시스템: <https://docs.microsoft.com/windows/wsl/about>
+Azure CLI(Azure 명령줄 인터페이스)가 설치된 기본 클라이언트 운영 체제(Windows, macOS 또는 Linux)를 사용하여 AKS와 상호 작용할 수 있습니다. 자세한 내용은 [Azure CLI 설명서](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest) 및 사용 가능한 환경에 대한 [설치 가이드](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)를 참조하세요.
 
 ## <a name="create-the-aks-environment-in-azure"></a>Azure에서 AKS 환경 만들기
 
 AKS 환경을 만드는 여러 가지 방법이 있습니다. Azure CLI 명령을 사용하는 방법도 있고 Azure Portal을 사용하는 방법도 있습니다.
 
-여기서는 Azure CLI를 사용하여 클러스터를 만들고 Azure Portal에서 결과를 검토하는 예제를 살펴볼 수 있습니다. 개발 머신에 Kubectl 및 Docker도 있어야 합니다.  
+여기서는 Azure CLI를 사용하여 클러스터를 만들고 Azure Portal에서 결과를 검토하는 예제를 살펴볼 수 있습니다. 개발 머신에 Kubectl 및 Docker도 있어야 합니다.
 
 ## <a name="create-the-aks-cluster"></a>AKS 클러스터 만들기
 
-이 명령을 사용하여 AKS 클러스터를 만듭니다.
+이 명령을 사용하여 AKS 클러스터를 만듭니다(리소스 그룹이 있어야 함).
 
 ```console
-az aks create --resource-group MSSampleResourceGroup --name MSSampleClusterK801 --agent-count 1 --generate-ssh-keys --location westus2
+az aks create --resource-group explore-docker-aks-rg --name explore-docker-aks --node-vm-size Standard_B2s --node-count 1 --generate-ssh-keys --location westeurope
 ```
 
-만들기 작업이 완료되면 Azure Portal에서 AKS가 생성된 것을 확인할 수 있습니다.
+> [!NOTE]
+> `--node-vm-size` 및 `--node-count` 매개 변수 값은 샘플/개발 애플리케이션에 적합합니다.
 
-리소스 그룹:
+만들기 작업이 완료되면 다음을 확인할 수 있습니다.
 
-![Azure AKS 리소스 그룹의 브라우저 보기.](media/aks-resource-group-view.png)
+- 초기 리소스 그룹에서 만든 AKS 클러스터
+- 다음 이미지에 표시된 것처럼 AKS 클러스터와 관련된 리소스를 포함하는 새로운 관련 리소스 그룹
+
+AKS 클러스터를 포함하는 초기 리소스 그룹:
+
+![AKS 리소스 그룹의 브라우저 보기.](media/deploy-azure-kubernetes-service/aks-cluster-view.png)
 
 **그림 4-17**. Azure의 AKS 리소스 그룹 보기.
 
-AKS 클러스터:
+AKS 클러스터 리소스 그룹:
 
-![AKS 리소스 그룹의 브라우저 보기.](media/aks-cluster-view.png)
+![Azure AKS 리소스 그룹의 브라우저 보기.](media/deploy-azure-kubernetes-service/aks-resource-group-view.png)
 
 **그림 4-18**. Azure의 AKS 보기.
 
-`Azure-CLI` 및 `Kubectl`을 사용하여 만든 노드를 볼 수도 있습니다.
+> [!IMPORTANT]
+> 일반적으로 AKS 클러스터 리소스 그룹에서는 리소스를 수정할 필요가 없습니다. 예를 들어 AKS 클러스터를 삭제하면 리소스 그룹이 삭제됩니다.
+
+`Azure CLI` 및 `Kubectl`을 사용하여 만든 노드를 볼 수도 있습니다.
 
 먼저, 자격 증명을 가져옵니다.
 
 ```console
-az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
+az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
 ```
 
-![위 명령의 콘솔 출력: /root/.kube/config의 현재 컨텍스트로 병합된 "MsSampleK8Cluster"](media/get-credentials-command-result.png)
+![위 명령의 콘솔 출력: /home/miguel/.kube/config에서 “explore-docker-aks”가 현재 컨텍스트로 병합됩니다.](media/deploy-azure-kubernetes-service/get-credentials-command-result.png)
 
 **그림 4-19**. `aks get-credentials` 명령 결과입니다.
 
@@ -74,10 +68,10 @@ az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Clu
 kubectl get nodes
 ```
 
-![위 명령의 콘솔 출력: 상태, 기간(실행된 시간) 및 버전이 있는 노드 목록](media/kubectl-get-nodes-command-result.png)
+![위 명령의 콘솔 출력: 상태, 기간(실행된 시간) 및 버전이 있는 노드 목록](media/deploy-azure-kubernetes-service/kubectl-get-nodes-command-result.png)
 
 **그림 4-20**. `kubectl get nodes` 명령 결과입니다.
 
->[!div class="step-by-step"]
->[이전](orchestrate-high-scalability-availability.md)
->[다음](docker-apps-development-environment.md)
+> [!div class="step-by-step"]
+> [이전](orchestrate-high-scalability-availability.md)
+> [다음](docker-apps-development-environment.md)

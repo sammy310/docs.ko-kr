@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e0cdcce9b8c7d591925b08635e3354dadaf22b7b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721672"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556031"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms를 기본적으로 AES-256 암호화로 설정
 
@@ -12,11 +12,11 @@ ms.locfileid: "83721672"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.Net Core 미리 보기 7 버전 이하에서 생성자 오버로드를 통해 대칭 암호화 알고리즘을 지정하지 않고 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms>가 데이터를 암호화하는 데 사용되는 경우 데이터가 TripleDES/3des/3DEA/DES3 알고리즘을 사용하여 암호화되었습니다.
+이전 버전에서는 생성자 오버로드를 통해 대칭 암호화 알고리즘을 지정하지 않고 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms>가 데이터를 암호화하는 데 사용되는 경우 데이터가 TripleDES/3DES/3DEA/DES3-EDE 알고리즘을 사용하여 암호화됩니다.
 
-.Net Core 3.0 미리 보기 8부터( [System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet 패키지의 버전 4.6.0을 통해) 기본 알고리즘이 현대화 알고리즘용 AES-256으로 변경되어 보안 기본 옵션을 개선합니다. 메시지 받는 사람 인증서에 (EC가 아닌) Diffie-Hellman 공개 키가 있는 경우 기본 플랫폼의 제한 사항으로 인해 <xref:System.Security.Cryptography.CryptographicException>에서 암호화 작업이 실패할 수 있습니다.
+.NET Core 3.0부터( [System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet 패키지의 버전 4.6.0을 통해) 기본 알고리즘이 현대화 알고리즘용 AES-256으로 변경되어 보안 기본 옵션을 개선합니다. 메시지 받는 사람 인증서에 (EC가 아닌) Diffie-Hellman 공개 키가 있는 경우 기본 플랫폼의 제한 사항으로 인해 <xref:System.Security.Cryptography.CryptographicException>에서 암호화 작업이 실패할 수 있습니다.
 
-다음 샘플 코드에서는 .NET Core 3.0마미리 보기 7 이전 버전에서 실행되는 경우 데이터가 TripleDES로 암호화됩니다. .NET Core 3.0 미리 보기 8 이상에서 실행되는 경우 데이터가 AES-256로 암호화됩니다.
+다음 샘플 코드에서는 .NET Core 2.2 이전 버전에서 실행되는 경우 데이터가 TripleDES로 암호화됩니다. .NET Core 3.0 이상에서 실행되는 경우 데이터가 AES-256으로 암호화됩니다.
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -26,7 +26,7 @@ return cms.Encode();
 
 #### <a name="version-introduced"></a>도입된 버전
 
-3.0 미리 보기 8
+3.0
 
 #### <a name="recommended-action"></a>권장 조치
 

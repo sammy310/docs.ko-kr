@@ -4,12 +4,12 @@ description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: de8ea511b3d421e391b182a6de079b854d3f2390
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281760"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557166"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 

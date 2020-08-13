@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925516"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555125"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -133,23 +133,26 @@ dotnet nuget push -h|--help
 - 기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
 
   ```dotnetcli
-  dotnet nuget push *.nupkg
+  dotnet nuget push "*.nupkg"
   ```
 
   > [!NOTE]
   > 이 명령이 작동하지 않는 경우 이전 버전의 SDK(.NET Core 2.1 SDK 및 이전 버전)에 존재했던 버그 때문일 수 있습니다.
-  > 이 문제를 해결하려면 SDK 버전을 업그레이드하거나 대신 `dotnet nuget push **/*.nupkg` 명령을 실행합니다.
+  > 이 문제를 해결하려면 SDK 버전을 업그레이드하거나 대신 `dotnet nuget push "**/*.nupkg"` 명령을 실행합니다.
+  
+  > [!NOTE]
+  > 파일 와일드카드 사용을 수행하는 bash와 같은 셸에는 묶는 따옴표를 사용해야 합니다. 자세한 내용은 [NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120)을 참조하세요.
 
 - HTTP(S) 서버가 409 충돌 응답을 반환하더라도 모든 *.nupkg* 파일을 푸시합니다.
 
   ```dotnetcli
-  dotnet nuget push *.nupkg --skip-duplicate
+  dotnet nuget push "*.nupkg" --skip-duplicate
   ```
 
 - 로컬 피드 디렉터리에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
 
   ```dotnetcli
-  dotnet nuget push *.nupkg -s c:\mydir
+  dotnet nuget push "*.nupkg" -s c:\mydir
   ```
 
   이 명령은 성능 최적화를 위해 권장되는 계층 구조 폴더 구조로 패키지를 저장하지 않습니다. 자세한 내용은 [로컬 피드](/nuget/hosting-packages/local-feeds)를 참조하세요.  

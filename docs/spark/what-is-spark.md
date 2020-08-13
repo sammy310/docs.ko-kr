@@ -4,12 +4,12 @@ description: Apache Spark 및 빅 데이터 시나리오에 대해 알아봅니�
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cde66c4084b7c86e1b78d89c2bad94402dbd7d60
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73458168"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555996"
 ---
 # <a name="what-is-apache-spark"></a>Apache Spark란?
 
@@ -82,7 +82,7 @@ Apache Spark에서 지원하는 프로그래밍 언어는 다음과 같습니다
 * Java
 * SQL
 * R
-* .NET
+* .NET 언어(C#/F#)
 
 ## <a name="spark-apis"></a>Spark API
 

@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702490"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556260"
 ---
 ### <a name="removed-status-bar-controls"></a>상태 표시줄 컨트롤 제거
 
-.NET 5.0 미리 보기 1부터 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없습니다.
+.NET 5.0부터 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없습니다.
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET 5.0 미리 보기 1부터 상태 표시줄 관련 Windows Forms 컨트롤 중 일부를 더 이상 사용할 수 없습니다. 향상된 디자인 및 지원을 제공하는 대체 컨트롤이 .NET Framework 2.0에 도입되었습니다. 사용되지 않는 컨트롤은 이전에 디자이너 도구 상자에서 제거되었지만, 여전히 사용할 수 있습니다. 이제 완전히 제거되었습니다.
+.NET 5.0부터 상태 표시줄 관련 Windows Forms 컨트롤 중 일부를 더 이상 사용할 수 없습니다. 향상된 디자인 및 지원을 제공하는 대체 컨트롤이 .NET Framework 2.0에 도입되었습니다. 사용되지 않는 컨트롤은 이전에 디자이너 도구 상자에서 제거되었지만, 여전히 사용할 수 있습니다. 이제 완전히 제거되었습니다.
 
 다음 형식은 더 이상 사용할 수 없습니다.
 

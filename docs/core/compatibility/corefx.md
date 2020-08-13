@@ -1,13 +1,13 @@
 ---
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 09/20/2019
-ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.date: 07/27/2020
+ms.openlocfilehash: 0667d975ce5bba5692fe5d179341235bd3c61790
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281310"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024704"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,11 @@ ms.locfileid: "86281310"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [IntPtr 및 UIntPtr에서 IFormattable 구현](#intptr-and-uintptr-implement-iformattable) | 5.0 |
+| [PrincipalPermissionAttribute는 오류로 인해 사용되지 않습니다.](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
+| [ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [UTF-7 코드 경로가 사용되지 않음](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vector\<T>가 지원되지 않는 형식에 대해 항상 NotSupportedException을 throw](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [기본 ActivityIdFormat이 W3C임](#default-activityidformat-is-w3c) | 5.0 |
 | [Vector2.Lerp 및 Vector4.Lerp의 동작 변경](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [SSE 및 SSE2 CompareGreaterThan 메서드가 NaN 입력을 올바르게 처리함](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
@@ -30,11 +35,6 @@ ms.locfileid: "86281310"
 | [잘못된 형식의 UTF-8바이트 시퀀스 교체는 유니코드 지침을 따름](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute가 다른 어셈블리로 이동됨](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry가 더 이상 일치하지 않는 항목 크기의 아카이브를 처리하지 않음](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [JSON 직렬 변환기 예외 형식이 JsonException에서 NotSupportedException으로 변경됨](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
-| [Utf8JsonWriter에서 (문자열)null의 의미 체계가 변경됨](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
-| [JsonEncodedText.Encode 메서드에 JavaScriptEncoder 인수 추가](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
-| [JsonFactoryConverter.CreateConverter 서명이 변경되었습니다.](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
-| [JsonElement API 변경 내용](#jsonelement-api-changes) | 3.0 |
 | [FieldInfo.SetValue가 초기화 전용 정적 필드에 대해 예외를 throw](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [기본 제공 구조체 형식에 추가된 프라이빗 필드](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [UseShellExecute의 기본값 변경](#change-in-default-value-of-useshellexecute) | 2.1 |
@@ -45,6 +45,26 @@ ms.locfileid: "86281310"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
+
+***
+
+[!INCLUDE [principalpermissionattribute-obsolete](../../../includes/core-changes/corefx/5.0/principalpermissionattribute-obsolete.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
+
+[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
+
+***
 
 [!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
 
@@ -97,26 +117,6 @@ ms.locfileid: "86281310"
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
-
-***
-
-[!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
-
-***
-
-[!INCLUDE[JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument](~/includes/core-changes/corefx/3.0/jsonencodedtext-encode-has-additional-argument.md)]
-
-***
-
-[!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/3.0/jsonfactoryconverter-createconverter.md)]
-
-***
-
-[!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
 ***
 

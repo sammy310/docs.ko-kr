@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811649"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795387"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 
@@ -79,7 +79,7 @@ End Module
 
 ## <a name="run-the-app"></a>앱 실행
 
-1. <kbd>Shift</kbd>+<kbd>F5</kbd>를 눌러 디버깅 없이 프로그램을 실행합니다.
+1. <kbd>Ctrl</kbd>+<kbd>F5</kbd>를 눌러 디버깅 없이 프로그램을 실행합니다.
 
    콘솔 창이 열리고 "Hello World!"라는 텍스트가 화면에 표시되며 일부 Visual Studio 디버그 정보도 표시됩니다.
 
@@ -102,7 +102,7 @@ End Module
 
    문자열 앞의 달러 기호(`$`)를 사용하면 변수 이름과 같은 식을 문자열의 중괄호 안에 넣을 수 있습니다. 식 값은 식 대신 문자열에 삽입됩니다. 이 구문을 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)이라고 합니다.
 
-1. <kbd>Shift</kbd>+<kbd>F5</kbd>를 눌러 디버깅 없이 프로그램을 실행합니다.
+1. <kbd>Ctrl</kbd>+<kbd>F5</kbd>를 눌러 디버깅 없이 프로그램을 실행합니다.
 
 1. 이름을 입력하고 <kbd>Enter</kbd> 키를 눌러 프롬프트에 응답합니다.
 

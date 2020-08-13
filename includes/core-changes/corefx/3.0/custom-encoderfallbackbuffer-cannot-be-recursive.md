@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 00c32c10f77995284264e795d386f699082dcb84
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 54ef49755dc0b9d1b821ae7999ab218626d455e1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721191"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556338"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음
 
@@ -16,7 +16,7 @@ ms.locfileid: "83721191"
 
 그런 다음 런타임은 이러한 대체 문자를 대상 인코딩으로 트랜스코딩하려고 합니다. 이 작업이 성공하면 런타임은 원래 입력 문자열에서 중단된 위치에서 트랜스코딩을 계속 실행합니다.
 
-.Net Core 미리 보기 7 버전 이하에서 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType>에 대한 사용자 지정 구현은 대상 인코딩으로 변환할 수 없는 문자 시퀀스를 반환할 수 있습니다. 대체된 문자를 대상 인코딩으로 변환할 수 없는 경우 런타임은 대체 문자를 사용하여 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드를 다시 한 번 호출하여 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> 메서드가 새 대체 시퀀스를 반환할 것을 예상합니다. 이 프로세스는 런타임이 올바른 형식의 변환 가능한 대체를 확인하거나 최대 재귀 횟수에 도달할 때까지 계속됩니다.
+이전에는 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType>에 대한 사용자 지정 구현은 대상 인코딩으로 변환할 수 없는 문자 시퀀스를 반환할 수 있습니다. 대체된 문자를 대상 인코딩으로 변환할 수 없는 경우 런타임은 대체 문자를 사용하여 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드를 다시 한 번 호출하여 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> 메서드가 새 대체 시퀀스를 반환할 것을 예상합니다. 이 프로세스는 런타임이 올바른 형식의 변환 가능한 대체를 확인하거나 최대 재귀 횟수에 도달할 때까지 계속됩니다.
 
 .Net Core 3.0부터 <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType>에 대한 사용자 지정 구현은 대상 인코딩으로 변환할 수 있는 문자 시퀀스를 반환해야 합니다. 대체된 문자를 대상 인코딩으로 트랜스 코딩할 수 없으면 <xref:System.ArgumentException>이 throw됩니다. 런타임은 더 이상 <xref:System.Text.EncoderFallbackBuffer> 인스턴스에 대한 재귀 호출을 수행하지 않습니다.
 

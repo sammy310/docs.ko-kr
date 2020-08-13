@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter 명령줄 도구를 설치하고 사용하는 방법에 대해 알아봅니다.
 ms.date: 02/26/2020
-ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147180"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024630"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -44,11 +44,11 @@ dotnet-counters [-h|--help] [--version] <command>
 ## <a name="commands"></a>명령
 
 | 명령                                             |
-| --------------------------------------------------- |
+|-----------------------------------------------------|
 | [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters 목록](#dotnet-counters-list)       |
 | [dotnet-counters 모니터](#dotnet-counters-monitor) |
-| [dotnet-counters ps](#dotnet-counters-ps) |
+| [dotnet-counters ps](#dotnet-counters-ps)           |
 
 ## <a name="dotnet-counters-collect"></a>dotnet-counters collect
 
@@ -107,17 +107,38 @@ dotnet-counters list [-h|--help]
 
 ```console
 > dotnet-counters list
+Showing well-known counters only. Specific processes may support additional counters.
 
-    Showing well-known counters only. Specific processes may support additional counters.
-    System.Runtime
-        cpu-usage                    Amount of time the process has utilized the CPU (ms)
-        working-set                  Amount of working set used by the process (MB)
-        gc-heap-size                 Total heap size reported by the GC (MB)
-        gen-0-gc-count               Number of Gen 0 GCs / sec
-        gen-1-gc-count               Number of Gen 1 GCs / sec
-        gen-2-gc-count               Number of Gen 2 GCs / sec
-        exception-count              Number of Exceptions / sec
+System.Runtime
+    cpu-usage                                    Amount of time the process has utilized the CPU (ms)
+    working-set                                  Amount of working set used by the process (MB)
+    gc-heap-size                                 Total heap size reported by the GC (MB)
+    gen-0-gc-count                               Number of Gen 0 GCs / min
+    gen-1-gc-count                               Number of Gen 1 GCs / min
+    gen-2-gc-count                               Number of Gen 2 GCs / min
+    time-in-gc                                   % time in GC since the last GC
+    gen-0-size                                   Gen 0 Heap Size
+    gen-1-size                                   Gen 1 Heap Size
+    gen-2-size                                   Gen 2 Heap Size
+    loh-size                                     LOH Heap Size
+    alloc-rate                                   Allocation Rate
+    assembly-count                               Number of Assemblies Loaded
+    exception-count                              Number of Exceptions / sec
+    threadpool-thread-count                      Number of ThreadPool Threads
+    monitor-lock-contention-count                Monitor Lock Contention Count
+    threadpool-queue-length                      ThreadPool Work Items Queue Length
+    threadpool-completed-items-count             ThreadPool Completed Work Items Count
+    active-timer-count                           Active Timers Count
+
+Microsoft.AspNetCore.Hosting
+    requests-per-second                  Request rate
+    total-requests                       Total number of requests
+    current-requests                     Current number of requests
+    failed-requests                      Failed number of requests
 ```
+
+> [!NOTE]
+> 이러한 카운터를 지원하는 프로세스를 식별한 경우, 예를 들어 호스트 머신에서 ASP.NET Core 애플리케이션이 실행되고 있는 경우 `Microsoft.AspNetCore.Hosting` 카운터가 표시됩니다.
 
 ## <a name="dotnet-counters-monitor"></a>dotnet-counters 모니터
 
@@ -172,7 +193,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- 사용자 정의 `EventSource`에서 `EventCounter` 값을 모니터링합니다. 자세한 내용은 [자습서: EventCounters를 사용하여 매우 자주 발생하는 이벤트의 성능을 측정하는 방법](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)을 참조하세요.
+- 사용자 정의 `EventSource`에서 `EventCounter` 값을 모니터링합니다. 자세한 내용은 [자습서: .NET Core에서 EventCounters를 사용하여 성능 측정](event-counter-perf.md)을 참조하세요.
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

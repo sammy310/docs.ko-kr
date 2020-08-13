@@ -2,12 +2,12 @@
 title: switch 식 - C# 참조
 description: 패턴 일치 및 기타 데이터 검사에 C# switch 식을 사용하는 방법을 알아봅니다.
 ms.date: 03/19/2020
-ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140661"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916659"
 ---
 # <a name="switch-expression-c-reference"></a>switch 식(C# 참조)
 
@@ -17,7 +17,7 @@ ms.locfileid: "82140661"
 
 `switch` 식은 식 컨텍스트에서 `switch`와 유사한 의미 체계를 제공합니다. 스위치 암(arm)에서 값을 생성할 때 간결한 구문을 제공합니다. 다음 예제에서는 switch 식의 구조를 보여 줍니다. 온라인 맵의 시각적 방향을 나타내는 `enum`의 값을 해당하는 기본 방향으로 변환합니다.
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetBasicStructure":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetBasicStructure":::
 
 위의 샘플에서는 switch 식의 기본 요소를 보여 줍니다.
 
@@ -30,21 +30,21 @@ ms.locfileid: "82140661"
 
 ## <a name="patterns-and-case-guards"></a>패턴 및 케이스 가드
 
-switch 식 암(arm)에서는 많은 패턴이 지원됩니다. 앞의 예제에서는 *값 패턴*을 사용했습니다. *값 패턴*은 range 식을 값과 비교합니다. 이 값은 컴파일 시간 상수여야 합니다. *형식 패턴*은 range 식을 알려진 형식과 비교합니다. 다음 예제에서는 시퀀스에서 세 번째 요소를 검색합니다. 시퀀스의 형식에 따라 다른 메서드를 사용합니다.
+switch 식 암(arm)에서는 많은 패턴이 지원됩니다. 앞의 예제에서는 ‘상수 패턴’을 사용합니다. ‘상수 패턴’은 range 식을 값과 비교합니다. 이 값은 컴파일 시간 상수여야 합니다. *형식 패턴*은 range 식을 알려진 형식과 비교합니다. 다음 예제에서는 시퀀스에서 세 번째 요소를 검색합니다. 시퀀스의 형식에 따라 다른 메서드를 사용합니다.
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetTypePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetTypePattern":::
 
 패턴은 재귀적으로 지정할 수 있습니다. 그러면 패턴이 형식을 테스트하고 해당 형식이 일치하는 경우 패턴이 range 식의 하나 이상의 속성 값과 일치합니다. 재귀 패턴을 사용하여 앞의 예제를 확장할 수 있습니다. 요소가 3개 미만인 배열에 대해 switch 식 암(arm)을 추가합니다. 다음 예제에서는 재귀 패턴을 보여 줍니다.
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetRecursivePattern":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetRecursivePattern":::
 
 재귀 패턴은 range 식의 속성을 검사할 수 있지만 임의의 코드를 실행할 수는 없습니다. `when` 절에 지정된 *케이스 가드*를 사용하여 다른 시퀀스 형식에 비슷한 검사를 제공할 수 있습니다.
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetGuardCase":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetGuardCase":::
 
 마지막으로 `_` 패턴과 `null` 패턴을 추가하여 다른 switch 식 암(arm)에서 처리되지 않은 인수를 catch할 수 있습니다. 이렇게 하면 switch 식이 range 식의 가능한 값을 모두 처리합니다(*exhaustive*). 다음 예제에서는 이러한 식 암(arm)을 추가합니다.
 
-:::code language="csharp" source="snippets/SwitchExpressions.cs" id="SnippetExhaustive":::
+:::code language="csharp" source="snippets/shared/SwitchExpressions.cs" id="SnippetExhaustive":::
 
 앞의 예제는 `null` 패턴을 추가하고 `IEnumerable<T>` 형식 패턴을 `_` 패턴으로 변경합니다. `null` 패턴은 switch 식 암(arm)으로 null 검사를 제공합니다. 해당 암(arm)에 대한 식에서 <xref:System.ArgumentNullException>을 throw합니다. `_` 패턴은 이전 암(arm)과 일치하지 않은 모든 입력을 일치시킵니다. `null` 검사 후에 오거나 `null` 입력과 일치해야 합니다.
 
@@ -53,5 +53,5 @@ switch 식 암(arm)에서는 많은 패턴이 지원됩니다. 앞의 예제에�
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)
 - [패턴 일치](../../pattern-matching.md)

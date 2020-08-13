@@ -3,12 +3,12 @@ title: Microsoft.NET.Sdk의 MSBuild 속성
 description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164376"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916248"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
 
@@ -182,7 +182,7 @@ ms.locfileid: "87164376"
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-`ConcurrentGarbageCollection` 속성은 [백그라운드(동시) 가비지 수집](../../standard/garbage-collection/background-gc.md)이 사용하도록 설정되었는지 여부를 구성합니다. 백그라운드 가비지 수집을 사용하지 않으려면 값을 `false`로 설정합니다. 자세한 내용은 [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)를 참조하세요.
+`ConcurrentGarbageCollection` 속성은 [백그라운드(동시) 가비지 수집](../../standard/garbage-collection/background-gc.md)이 사용하도록 설정되었는지 여부를 구성합니다. 백그라운드 가비지 수집을 사용하지 않으려면 값을 `false`로 설정합니다. 자세한 내용은 [백그라운드 GC](../run-time-config/garbage-collector.md#background-gc)를 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ ms.locfileid: "87164376"
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-`RetainVMGarbageCollection` 속성은 삭제된 메모리 세그먼트를 나중에 사용하기 위해 대기 목록에 넣거나 릴리스하도록 가비지 수집기를 구성합니다. 값을 `true`로 설정하여 가비지 수집기가 대기 목록에 세그먼트를 넣도록 지시합니다. 자세한 내용은 [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)을 참조하세요.
+`RetainVMGarbageCollection` 속성은 삭제된 메모리 세그먼트를 나중에 사용하기 위해 대기 목록에 넣거나 릴리스하도록 가비지 수집기를 구성합니다. 값을 `true`로 설정하여 가비지 수집기가 대기 목록에 세그먼트를 넣도록 지시합니다. 자세한 내용은 [VM 유지](../run-time-config/garbage-collector.md#retain-vm)를 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ ms.locfileid: "87164376"
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-`ServerGarbageCollection` 속성은 애플리케이션이 [워크스테이션 가비지 수집 또는 서버 가비지 수집](../../standard/garbage-collection/workstation-server-gc.md)을 사용할지 여부를 구성합니다. 서버 가비지 수집을 사용하려면 값을 `true`로 설정합니다. 자세한 내용은 [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)를 참조하세요.
+`ServerGarbageCollection` 속성은 애플리케이션이 [워크스테이션 가비지 수집 또는 서버 가비지 수집](../../standard/garbage-collection/workstation-server-gc.md)을 사용할지 여부를 구성합니다. 서버 가비지 수집을 사용하려면 값을 `true`로 설정합니다. 자세한 내용은 [워크스테이션과 서버 비교](../run-time-config/garbage-collector.md#workstation-vs-server)를 참조하세요.
 
 ```xml
 <PropertyGroup>

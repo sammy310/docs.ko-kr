@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/07/2020
+ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988234"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024604"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -198,11 +198,11 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 
 ### <a name="additional-resources"></a>추가 자료
 
-- GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 테스트** \
-    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
+- eShopOnContainers에 대한 **단위 및 통합 테스트** \
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Unit-and-integration-testing>
 
-- GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 부하 테스트** \
-    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
+- eShopOnContainers에 대한 **부하 테스트** \
+    <https://github.com/dotnet-architecture/eShopOnContainers/wiki/Load-testing>
 
 > [!div class="step-by-step"]
 > [이전](subscribe-events.md)

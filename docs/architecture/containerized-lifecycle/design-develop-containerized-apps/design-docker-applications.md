@@ -1,13 +1,13 @@
 ---
 title: Docker 애플리케이션 설계
 description: 이 가이드에서 자세히 설명하지 않은 주제이므로, 여기에서 마이크로서비스 아키텍처에 대한 심층적인 안내서를 참조하세요.
-ms.date: 02/15/2019
-ms.openlocfilehash: b8a08658ec6c3df3e1aed596a0240223768dd647
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 08/06/2020
+ms.openlocfilehash: b63d4344abb358a393587bdacf91f6091b531af0
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738457"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915979"
 ---
 # <a name="design-docker-applications"></a>Docker 애플리케이션 설계
 

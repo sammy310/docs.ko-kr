@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 15c02e11610866f359e3e3a7e2751ded918154b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846257"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916802"
 ---
 # <a name="-operator-c-reference"></a>=> 연산자(C# 참조)
 
@@ -24,15 +24,15 @@ ms.locfileid: "78846257"
 
 다음 예제에서는 메서드 구문이 포함된 [LINQ](../../programming-guide/concepts/linq/index.md) 기능을 사용하여 람다 식의 사용법을 보여줍니다.
 
-[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/shared/LambdaOperator.cs#InferredTypes)]
 
 람다 식의 입력 매개 변수는 컴파일 시 강력한 형식을 지정합니다. 위의 예제와 같이 컴파일러가 입력 매개 변수의 형식을 추론하는 경우, 형식 선언을 생략할 수 있습니다. 입력 매개 변수의 형식을 지정해야 하는 경우 다음 예제와 같이 각 매개 변수에 대해 입력매개 변수를 지정해야 합니다.
 
-[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/shared/LambdaOperator.cs#ExplicitTypes)]
 
 다음 예제에서는 입력 매개 변수 없이 람다 식을 정의하는 방법을 보여줍니다.
 
-[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
 자세한 내용은 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.
 
@@ -44,7 +44,7 @@ ms.locfileid: "78846257"
 member => expression;
 ```
 
-여기서 `expression`은(는) 유효한 식입니다. `expression`의 반환 형식은 구성원의 반환 형식으로 암시적으로 변환할 수 있어야 합니다. 구성원의 반환 형식이 `void`이거나 구성원이 생성자, 종료자 또는 속성 `set` 접근자인 경우 `expression`은 [*식 문*](~/_csharplang/spec/statements.md#expression-statements)이어야 하며 모든 형식을 사용할 수 있습니다.
+여기서 `expression`은(는) 유효한 식입니다. `expression`의 반환 형식은 구성원의 반환 형식으로 암시적으로 변환할 수 있어야 합니다. 멤버의 반환 형식이 `void`거나 구성원이 생성자, 종료자, 속성 또는 인덱서 `set` 접근자인 경우 `expression`은 [‘식 문’](~/_csharplang/spec/statements.md#expression-statements)이어야 합니다. 식의 결과는 삭제되므로 해당 식의 반환 형식은 어떤 형식도 될 수 있습니다.
 
 다음 예제에서는 `Person.ToString` 메서드에 대한 식 본문 정의를 보여줍니다.
 
@@ -73,7 +73,7 @@ public override string ToString()
 
 람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 연산자](index.md)
+- [C# 연산자 및 식](index.md)

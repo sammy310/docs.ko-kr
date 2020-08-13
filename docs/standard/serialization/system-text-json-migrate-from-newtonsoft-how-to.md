@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865335"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916966"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
+# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
 
 이 문서에서는 [Newtonsoft.Json](https://www.newtonsoft.com/json)에서 <xref:System.Text.Json>로 마이그레이션하는 방법을 보여줍니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "86865335"
 
 이 문서의 대부분은 <xref:System.Text.Json.JsonSerializer> API 사용 방법에 대한 내용이지만, <xref:System.Text.Json.JsonDocument>(DOM(문서 개체 모델)을 나타냄), <xref:System.Text.Json.Utf8JsonReader> 및 <xref:System.Text.Json.Utf8JsonWriter> 형식을 사용하는 방법에 대한 지침도 포함되어 있습니다.
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.Json와 System.Text.Json 간의 차이점 표
+## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Newtonsoft.Json와 System.Text.Json 간의 차이점 표
 
 다음 표에는 `Newtonsoft.Json` 기능과 그에 상응하는 `System.Text.Json` 기능이 나열되어 있습니다. 상응하는 기능은 다음 범주로 분류됩니다.
 
@@ -83,7 +83,7 @@ ms.locfileid: "86865335"
 
 이 목록은 `Newtonsoft.Json` 기능의 전체 목록이 아닙니다. 이 목록에는 [GitHub 이슈](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에 요청된 여러 시나리오가 포함되어 있습니다. 여기에 나열된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대한 해결 방법을 구현하셨으며 그 방법을 공유하려는 분들은 이 페이지 하단의 **피드백** 섹션에서 **이 페이지**를 선택하세요. 그러면 이 설명서의 GitHub 리포지토리에 이슈가 작성되고 이 페이지의 **피드백** 섹션에도 이슈가 나열됩니다.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>기본 JsonSerializer와 Newtonsoft.Json의 동작 차이
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>기본 JsonSerializer와 Newtonsoft.Json의 동작 차이
 
 <xref:System.Text.Json>은 기본적으로 엄격하며, 호출자를 대신하여 추측하거나 해석하는 것을 금지하고 결정적 동작을 강조합니다. 이 라이브러리는 성능과 보안을 위해 의도적으로 이렇게 설계되었습니다. `Newtonsoft.Json`은 기본적으로 유연합니다. 이러한 기본적인 디자인의 차이로 인해 기본 동작에서 다음과 같은 여러 가지 차이가 있습니다.
 
@@ -91,7 +91,7 @@ ms.locfileid: "86865335"
 
 역직렬화를 수행하는 동안 `Newtonsoft.Json`은 기본적으로 대/소문자를 구분하지 않는 속성 이름을 매칭합니다. <xref:System.Text.Json>은 기본적으로 대/소문자를 구분하며, 이 방법은 매칭을 정확히 수행하기 때문에 보다 나은 성능을 제공합니다. 대/소문자를 구분하지 않는 매칭 방법에 대한 자세한 내용은 [대/소문자를 구분하지 않는 속성 매칭](system-text-json-how-to.md#case-insensitive-property-matching)을 참조하세요.
 
-ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 경우 `Newtonsoft.Json`과 같은 동작을 얻기 위해 아무것도 할 필요가 없습니다. ASP.NET Core는 `System.Text.Json`을 사용할 때 [카멜식 대/소문자 구분 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분하지 않는 매칭에 대한 설정을 지정합니다.
+ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 경우 `Newtonsoft.Json`과 같은 동작을 얻기 위해 아무것도 할 필요가 없습니다. ASP.NET Core는 `System.Text.Json`을 사용할 때 [카멜식 대/소문자 구분 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분하지 않는 매칭에 대한 설정을 지정합니다. 기본값은 [JsonOptions 클래스](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)에 설정됩니다.
 
 ### <a name="minimal-character-escaping"></a>최소 문자 이스케이프
 
@@ -128,6 +128,8 @@ ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 
 ### <a name="maximum-depth"></a>최대 깊이
 
 `Newtonsoft.Json`은 기본적으로 최대 깊이 제한이 없습니다. <xref:System.Text.Json>의 경우 기본 제한은 64이며, <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>을 설정하여 구성할 수 있습니다.
+
+ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`를 사용하는 경우 기본 최대 깊이 제한은 32입니다. 기본값은 모델 바인딩과 동일하며 [JsonOptions 클래스](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20)에 설정됩니다.
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON 문자열(속성 이름 및 문자열 값)
 
@@ -402,12 +404,14 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-[클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
+<xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
 이전 샘플을 따르는 사용자 지정 변환기를 사용하는 경우:
 
 * `OnDeserializing` 코드는 새 POCO 인스턴스에 액세스할 수 없습니다. 역직렬화를 시작할 때 새 POCO 인스턴스를 조작하려면 이 코드를 POCO 생성자에 배치하세요.
-* 옵션 개체에 변환기를 등록하고 `Serialize` 또는 `Deserialize`를 재귀적으로 호출할 때 옵션 개체를 전달하지 않음으로써 무한 루프 발생을 방지합니다. 자세한 내용은 이 문서 앞부분에서 [필수 속성](#required-properties) 섹션을 참조하세요.
+* 옵션 개체에 변환기를 등록하고 `Serialize` 또는 `Deserialize`를 재귀적으로 호출할 때 옵션 개체를 전달하지 않음으로써 무한 루프 발생을 방지합니다.
+
+`Serialize` 또는 `Deserialize`를 재귀적으로 호출하는 사용자 지정 변환기에 대한 자세한 내용은 이 문서의 앞부분에 나오는 [필수 속성](#required-properties) 섹션을 참조하세요.
 
 ### <a name="public-and-non-public-fields"></a>public 및 비-public 필드
 

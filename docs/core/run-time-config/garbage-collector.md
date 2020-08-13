@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441411"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915993"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -30,7 +30,10 @@ ms.locfileid: "86441411"
 
 다음 설정을 사용하여 가비지 수집의 버전을 선택합니다.
 
-### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
+- [워크스테이션과 서버 GC 비교](#workstation-vs-server)
+- [백그라운드 GC](#background-gc)
+
+### <a name="workstation-vs-server"></a>워크스테이션과 서버 비교
 
 - 애플리케이션이 워크스테이션 가비지 수집과 서버 가비지 수집 중 어느 것을 사용하는지 구성합니다.
 - 기본값: 워크스테이션 가비지 수집. 이는 값을 `false`로 설정하는 것과 같습니다.
@@ -42,7 +45,7 @@ ms.locfileid: "86441411"
 | **환경 변수** | `COMPlus_gcServer` | `0` - 워크스테이션<br/>`1` - 서버 | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - 워크스테이션<br/>`true` - 서버 |  |
 
-### <a name="examples"></a>예
+#### <a name="examples"></a>예
 
 *runtimeconfig.json* 파일:
 
@@ -68,7 +71,7 @@ ms.locfileid: "86441411"
 </Project>
 ```
 
-### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
+### <a name="background-gc"></a>백그라운드 GC
 
 - 백그라운드(동시) 가비지 수집이 사용하도록 설정되었는지 여부를 구성합니다.
 - 기본값: 백그라운드 GC를 사용합니다. 이는 값을 `true`로 설정하는 것과 같습니다.
@@ -81,7 +84,7 @@ ms.locfileid: "86441411"
 | **환경 변수** | `COMPlus_gcConcurrent` | `1` - 백그라운드 GC<br/>`0` - 비동시 GC | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - 백그라운드 GC<br/>`false` - 비동시 GC |  |
 
-### <a name="examples"></a>예
+#### <a name="examples"></a>예
 
 *runtimeconfig.json* 파일:
 
@@ -109,16 +112,28 @@ ms.locfileid: "86441411"
 
 ## <a name="manage-resource-usage"></a>리소스 사용량 관리
 
-이 섹션에서 설명하는 설정은 가비지 수집기의 메모리 및 프로세서 사용량을 관리하는 데 사용합니다.
+다음 설정을 사용하여 가비지 수집기의 메모리 및 프로세서 사용량을 관리합니다.
+
+- [선호도 지정](#affinitize)
+- [선호도 지정 마스크](#affinitize-mask)
+- [선호도 지정 범위](#affinitize-ranges)
+- [CPU 그룹](#cpu-groups)
+- [힙 수](#heap-count)
+- [힙 제한](#heap-limit)
+- [힙 제한 비율](#heap-limit-percent)
+- [최소 메모리 비율](#high-memory-percent)
+- [개체별 힙 제한](#per-object-heap-limits)
+- [개체별-힙 제한 비율](#per-object-heap-limit-percents)
+- [VM 유지](#retain-vm)
 
 이들 중 일부 설정에 대한 자세한 내용은 [Middle ground between workstation and server GC](https://devblogs.microsoft.com/dotnet/middle-ground-between-server-and-workstation-gc/)(워크스테이션 및 서버 GC의 중간 지점) 블로그 게시물을 참조하세요.
 
-### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
+### <a name="heap-count"></a>힙 수
 
 - 가비지 수집기가 생성하는 힙의 개수를 제한합니다.
 - 서버 가비지 수집에만 적용됩니다.
-- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)가 사용하도록 설정된 경우(기본값), 힙 개수 설정은 `n` GC 힙/스레드의 선호도를 처음 `n`개의 프로세서로 지정합니다. (정확히 어떤 프로세서의 선호도를 지정하려는지 지정하려면 [선호도 지정 마스크](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) 또는 [선호도 지정 범위](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) 설정을 사용하세요.)
-- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하는 경우, 이 설정으로 GC 힙 개수가 제한됩니다.
+- [GC 프로세서 선호도](#affinitize)가 사용하도록 설정된 경우(기본값), 힙 개수 설정은 `n` GC 힙/스레드의 선호도를 처음 `n`개의 프로세서로 지정합니다. (정확히 어떤 프로세서의 선호도를 지정하려는지 지정하려면 [선호도 지정 마스크](#affinitize-mask) 또는 [선호도 지정 범위](#affinitize-ranges) 설정을 사용하세요.)
+- [GC 프로세서 선호도](#affinitize)를 사용하지 않도록 설정하는 경우, 이 설정으로 GC 힙 개수가 제한됩니다.
 - 자세한 내용은 [GCHeapCount 설명](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)을 참조하세요.
 
 | | 설정 이름 | 값 | 도입된 버전 |
@@ -142,10 +157,10 @@ ms.locfileid: "86441411"
 > [!TIP]
 > *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 힙의 개수를 16으로 제한하려면 JSON 파일의 경우 값을 16으로 지정하고 환경 변수의 경우 값을 0x10 또는 10으로 지정합니다.
 
-### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
+### <a name="affinitize-mask"></a>선호도 지정 마스크
 
 - 가비지 수집기 스레드가 사용할 정확한 프로세서를 지정합니다.
-- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
+- [GC 프로세서 선호도](#affinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
 - 서버 가비지 수집에만 적용됩니다.
 - 값은 프로세스에서 사용할 수 있는 프로세서를 정의하는 비트 마스크입니다. 예를 들어, 10진수 값 1023(환경 변수를 사용하는 경우에는 16진수 값 0x3FF 또는 3FF)은 이진 표기법으로 0011 1111 1111입니다. 이는 처음 10개의 프로세서를 사용하도록 지정합니다. 다음 10개의 프로세서, 즉 프로세서 10~19를 지정하려면 10진수 값 1047552(또는 16진수 값 0xFFC00 또는 FFC00)을 지정합니다. 이는 이진수 값 1111 1111 1100 0000 0000과 같습니다.
 
@@ -167,12 +182,12 @@ ms.locfileid: "86441411"
 }
 ```
 
-### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
+### <a name="affinitize-ranges"></a>선호도 지정 범위
 
 - 가비지 수집기 스레드가 사용할 프로세서 목록을 지정합니다.
-- 이 설정은 64개가 넘는 프로세서를 지정할 수 있다는 점을 제외하면 [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask)와 비슷합니다.
+- 이 설정은 64개가 넘는 프로세서를 지정할 수 있다는 점을 제외하면 [System.GC.HeapAffinitizeMask](#affinitize-mask)와 비슷합니다.
 - Windows 운영 체제에서는 번호 또는 범위 앞에 해당하는 [CPU 그룹](/windows/win32/procthread/processor-groups)(예: “0:1-10,0:12,1:50-52,1:70”)을 붙입니다.
-- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
+- [GC 프로세서 선호도](#affinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
 - 서버 가비지 수집에만 적용됩니다.
 - 자세한 내용은 Maoni Stephens의 블로그에서 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)(CPU가 64개가 넘는 머신에서 GC를 위한 CPU 구성 개선하기) 게시물을 참조하세요.
 
@@ -193,7 +208,7 @@ ms.locfileid: "86441411"
 }
 ```
 
-### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
+### <a name="cpu-groups"></a>CPU 그룹
 
 - 가비지 수집기가 [CPU 그룹](/windows/win32/procthread/processor-groups)을 사용하는지 여부는 구성합니다.
 
@@ -205,14 +220,14 @@ ms.locfileid: "86441411"
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | N/A | N/A |
+| **runtimeconfig.json** | `System.GC.CpuGroup` | `0` - 사용 안 함<br/>`1` - 사용 | .NET 5.0 |
 | **환경 변수** | `COMPlus_GCCpuGroup` | `0` - 사용 안 함<br/>`1` - 사용 | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` - 사용 안 함<br/>`true` - 사용 |  |
 
 > [!NOTE]
 > 모든 CPU 그룹의 스레드 풀에서도 스레드를 분산하도록 CLR(공용 언어 런타임)을 구성하려면 [Thread_UseAllCpuGroups 요소](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) 옵션을 사용하도록 설정합니다. .NET Core 앱의 경우, `COMPlus_Thread_UseAllCpuGroups` 환경 변수의 값을 `1`로 설정하여 이 옵션을 사용하도록 설정할 수 있습니다.
 
-### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
+### <a name="affinitize"></a>선호도 지정
 
 - 가비지 수집 스레드가 프로세서를 *선호*하도록 지정할지 여부를 지정합니다. GC 스레드의 선호도를 지정한다는 것은 특정 CPU에서만 실행할 수 있음을 의미합니다. 각 GC 스레드에 대해 힙이 생성됩니다.
 - 서버 가비지 수집에만 적용됩니다.
@@ -236,7 +251,7 @@ ms.locfileid: "86441411"
 }
 ```
 
-### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
+### <a name="heap-limit"></a>힙 제한
 
 - GC 힙 및 GC 기록의 최대 커밋 크기를 바이트 단위로 지정합니다.
 - 이 설정은 64비트 컴퓨터에만 적용됩니다.
@@ -244,7 +259,7 @@ ms.locfileid: "86441411"
 - 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 큰 값입니다. 기본값은 다음 경우에 적용됩니다.
 
   - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
-  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)가 설정되지 않은 경우.
+  - [System.GC.HeapHardLimitPercent](#heap-limit-percent)가 설정되지 않은 경우.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -266,17 +281,17 @@ ms.locfileid: "86441411"
 > [!TIP]
 > *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 힙의 하드 한도를 200메비바이트(MiB) 지정하려면 JSON 파일의 경우 값을 209715200으로 지정하고 환경 변수의 경우 값을 0xC800000 또는 C800000으로 지정합니다.
 
-### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
+### <a name="heap-limit-percent"></a>힙 제한 비율
 
 - 허용되는 GC 힙 사용량을 총 실제 메모리의 백분율로 지정합니다.
-- [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)이 설정되는 경우에도 이 설정이 무시됩니다.
+- [System.GC.HeapHardLimit](#heap-limit)이 설정되는 경우에도 이 설정이 무시됩니다.
 - 이 설정은 64비트 컴퓨터에만 적용됩니다.
 - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우 백분율은 해당 메모리 제한의 백분율로 계산됩니다.
 - [개체별 힙 제한](#per-object-heap-limits)을 구성하면 이 설정은 무시됩니다.
 - 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 작은 값입니다. 기본값은 다음 경우에 적용됩니다.
 
   - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
-  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)가 설정되지 않은 경우.
+  - [System.GC.HeapHardLimit](#heap-limit)가 설정되지 않은 경우.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -302,21 +317,30 @@ ms.locfileid: "86441411"
 
 개체별 힙을 기준으로 GC의 허용되는 힙 사용량을 지정할 수 있습니다. LOH(대형 개체 힙), SOH(작은 개체 힙), POH(고정 개체 힙) 등의 다양한 힙이 있습니다.
 
-#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
-
 - `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` 또는 `COMPLUS_GCHeapHardLimitPOH` 설정 중 하나의 값을 지정하는 경우 `COMPLUS_GCHeapHardLimitSOH` 및 `COMPLUS_GCHeapHardLimitLOH`의 값도 지정해야 합니다. 그러지 않으면 런타임이 초기화되지 않습니다.
 - `COMPLUS_GCHeapHardLimitPOH`의 기본값은 0입니다. `COMPLUS_GCHeapHardLimitSOH` 및 `COMPLUS_GCHeapHardLimitLOH`에는 기본값이 없습니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOH` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitSOH` | *16진수 값* | .NET 5.0 |
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOH` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitLOH` | *16진수 값* | .NET 5.0 |
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOH` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitPOH` | *16진수 값* | .NET 5.0 |
 
 > [!TIP]
-> 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어 힙 하드 제한인 200MiB(메비바이트)를 지정하려면 값은 0xC800000 또는 C800000이 됩니다.
+> *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 힙의 하드 한도를 200메비바이트(MiB) 지정하려면 JSON 파일의 경우 값을 209715200으로 지정하고 환경 변수의 경우 값을 0xC800000 또는 C800000으로 지정합니다.
 
-#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+### <a name="per-object-heap-limit-percents"></a>개체별-힙 제한 비율
+
+개체별 힙을 기준으로 GC의 허용되는 힙 사용량을 지정할 수 있습니다. LOH(대형 개체 힙), SOH(작은 개체 힙), POH(고정 개체 힙) 등의 다양한 힙이 있습니다.
 
 - `COMPLUS_GCHeapHardLimitSOHPercent`, `COMPLUS_GCHeapHardLimitLOHPercent` 또는 `COMPLUS_GCHeapHardLimitPOHPercent` 설정 중 하나의 값을 지정하는 경우 `COMPLUS_GCHeapHardLimitSOHPercent` 및 `COMPLUS_GCHeapHardLimitLOHPercent`의 값도 지정해야 합니다. 그러지 않으면 런타임이 초기화되지 않습니다.
 - `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` 및 `COMPLUS_GCHeapHardLimitPOH`를 지정하면 해당 설정은 무시됩니다.
@@ -325,14 +349,40 @@ ms.locfileid: "86441411"
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitSOHPercent` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitSOHPercent` | *16진수 값* | .NET 5.0 |
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitLOHPercent` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitLOHPercent` | *16진수 값* | .NET 5.0 |
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HeapHardLimitPOHPercent` | *10진수 값* | .NET 5.0 |
 | **환경 변수** | `COMPLUS_GCHeapHardLimitPOHPercent` | *16진수 값* | .NET 5.0 |
 
 > [!TIP]
-> 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어 힙 사용량을 30%로 제한하려면 값은 0x1E 또는 1E가 됩니다.
+> *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 힙의 사용량을 30%로 제한하려면 JSON 파일의 경우 값을 30으로 지정하고 환경 변수의 경우 값을 0x1E 또는 1E로 지정합니다.
 
-### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
+### <a name="high-memory-percent"></a>최소 메모리 비율
+
+메모리 로드는 사용 중인 실제 메모리의 비율로 표시됩니다. 기본적으로 실제 메모리 부하가 **90%** 에 도달하면 가비지 수집은 페이징이 발생하지 않도록 더 적극적으로 가비지 수집을 꽉 채우고 완전히 압축하려고 합니다. 메모리 부하가 90% 미만이면 GC는 전체 가비지 수집을 백그라운드에서 수행하여 일시 중지 시간을 줄이면서 전체 힙 크기는 크게 줄이지 않으려고 합니다. 많은 양의 메모리(80GB 이상)를 사용하는 머신에서 기본 부하 임계값은 90~97%입니다.
+
+높은 메모리 부하 임계값은 `COMPlus_GCHighMemPercent` 환경 변수 또는 `System.GC.HighMemoryPercent` JSON 구성 설정으로 조정할 수 있습니다. 힙 크기를 제어하려면 임계값을 조정하는 것이 좋습니다. 예를 들어 메모리가 64GB인 컴퓨터의 주요 프로세스의 경우, 가용 메모리가 10%가 되면 GC가 반응하기 시작하는 것이 합당합니다. 그러나 작은 프로세스(예: 1GB 메모리만 사용하는 프로세스)의 경우 가용 메모리가 10% 미만일 때도 GC가 최적으로 실행됩니다. 이러한 작은 프로세스의 경우 임계값을 높게 설정하는 것이 좋습니다. 반면, 큰 프로세스의 힙 크기를 더 작게 유지하려는 경우(사용할 수 있는 실제 메모리가 많은 경우에도) 이 임계값을 낮추는 것은 GC가 더 빠르게 반응하여 힙을 압축하게 되는 효과적인 방법입니다.
+
+> [!NOTE]
+> 컨테이너에서 실행되는 프로세스의 경우 GC는 컨테이너 제한을 기준으로 실제 메모리를 고려합니다.
+
+| | 설정 이름 | 값 | 도입된 버전 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.GC.HighMemoryPercent` | *10진수 값* | .NET 5.0 |
+| **환경 변수** | `COMPlus_GCHighMemPercent` | *16진수 값* | |
+
+> [!TIP]
+> *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어 높은 메모리 임계값을 75%로 설정하려면 JSON 파일의 경우 값을 75로 지정하고, 환경 변수의 경우 값을 0x4B 또는 4B로 지정합니다.
+
+### <a name="retain-vm"></a>VM 유지
 
 - 삭제해야 할 세그먼트를 나중에 사용할 수 있도록 대기 목록에 둘지 아니면 해제하여 운영 체제(OS)로 돌려보낼지를 구성합니다.
 - 기본값: 세그먼트를 해제하여 운영 체제로 돌려보냅니다. 이는 값을 `false`로 설정하는 것과 같습니다.
@@ -343,7 +393,7 @@ ms.locfileid: "86441411"
 | **MSBuild 속성** | `RetainVMGarbageCollection` | `false` - OS로 해제<br/>`true` - 대기 목록에 두기 | .NET Core 1.0 |
 | **환경 변수** | `COMPlus_GCRetainVM` | `0` - OS로 해제<br/>`1` - 대기 목록에 두기 | .NET Core 1.0 |
 
-### <a name="examples"></a>예
+#### <a name="examples"></a>예
 
 *runtimeconfig.json* 파일:
 
@@ -371,8 +421,6 @@ ms.locfileid: "86441411"
 
 ## <a name="large-pages"></a>큰 페이지
 
-### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
-
 - 힙의 하드 한도가 설정된 경우 큰 페이지를 사용할지 여부를 지정합니다.
 - 기본값: 힙 하드 한도가 설정된 경우 대용량 페이지를 사용하지 않습니다. 이는 값을 `0`으로 설정하는 것과 같습니다.
 - 이것은 실험적인 설정입니다.
@@ -382,9 +430,7 @@ ms.locfileid: "86441411"
 | **runtimeconfig.json** | N/A | N/A | N/A |
 | **환경 변수** | `COMPlus_GCLargePages` | `0` - 사용 안 함<br/>`1` - 사용 | .NET Core 3.0 |
 
-## <a name="large-objects"></a>큰 개체
-
-### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
+## <a name="allow-large-objects"></a>대형 개체 허용
 
 - 64비트 플랫폼에서 총 크기가 2기가바이트(GB)보다 큰 배열에 대한 가비지 수집기 지원을 구성합니다.
 - 기본값: GC가 2GB를 초과하는 배열을 지원합니다. 이는 값을 `1`로 설정하는 것과 같습니다.
@@ -397,8 +443,6 @@ ms.locfileid: "86441411"
 | **.NET Framework의 app.config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` - 사용<br/> `0` - 사용 안 함 | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>큰 개체 힙 임계값
-
-### <a name="systemgclohthresholdcomplus_gclohthreshold"></a>System.GC.LOHThreshold/COMPlus_GCLOHThreshold
 
 - 개체가 큰 개체 힙(LOH)으로 이동되도록 하는 임계값 크기를 바이트 단위로 지정합니다.
 - 기본 임계값은 85,000바이트입니다.
@@ -426,8 +470,6 @@ ms.locfileid: "86441411"
 > *runtimeconfig.json*의 옵션을 설정할 때는 10진수 값을 지정합니다. 옵션을 환경 변수로 설정할 때는 16진수 값을 지정합니다. 예를 들어, 임계값 크기를 120,000바이트로 설정하려면 JSON 파일의 경우 값을 120000으로 지정하고 환경 변수의 경우 값을 0x1D4C0 또는 1D4C0으로 지정합니다.
 
 ## <a name="standalone-gc"></a>독립 실행형 GC
-
-### <a name="complus_gcname"></a>COMPlus_GCName
 
 - 런타임이 로드하려는 가비지 수집기를 포함하는 라이브러리의 경로를 지정합니다.
 - 자세한 내용은 [Standalone GC loader design](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)(독립 실행형 GC 로더 설계)을 참조하세요.

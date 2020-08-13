@@ -1,13 +1,13 @@
 ---
 title: Docker 용어
 description: Docker를 사용할 때 매일 사용되는 몇 가지 기본 용어를 알아봅니다.
-ms.date: 04/16/2020
-ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507327"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915194"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -29,7 +29,7 @@ docker build
 
 **태그**: (버전 번호 또는 대상 환경에 따라) 다양한 이미지 또는 동일한 이미지의 버전을 식별할 수 있도록 표시 또는 레이블은 이미지에 적용할 수 있습니다.
 
-**다단계 빌드**: 최종 이미지의 크기를 줄이는 데 도움이 되는 Docker 17.05 이상의 기능입니다. 일부 문장에서는 다단계 빌드를 통해 애플리케이션을 컴파일 및 게시하기 위한 SDK가 포함된 큰 기본 이미지를 사용한 후 작은 런타임 전용 기본 이미지가 포함된 게시 폴더를 사용하여 훨씬 작은 최종 이미지를 생성할 수 있습니다.
+**다단계 빌드**: 최종 이미지의 크기를 줄이는 데 도움이 되는 Docker 17.05 이상의 기능입니다. 예를 들어 SDK를 포함하는 대형 기본 이미지를 컴파일 및 게시에 사용할 수 있으며, 그 후에는 소형 런타임 전용 기본 이미지를 사용하여 애플리케이션을 호스트할 수 있습니다.
 
 **리포지토리**: 이미지 버전을 나타내는 태그를 사용하여 이미지가 지정된 관련 Docker 이미지의 컬렉션입니다. 일부 리포지토리에는 SDK를 포함하는 이미지(무거움), 런타임(가벼움)만을 포함하는 이미지 등 특정 이미지의 여러 변형이 포함됩니다. 이러한 변형은 태그로 표시할 수 있습니다. 단일 리포지토리는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다.
 
@@ -41,7 +41,7 @@ docker build
 
 **Azure Container Registry**: Docker 이미지로 작업하는 공용 리소스 및 Azure의 해당 구성 요소입니다. 여기서는 Azure에서 배포에 가깝고, 액세스에 대한 제어를 제공하는 레지스트리를 제공하여 Azure Active Directory 그룹 및 권한을 사용할 수 있도록 합니다.
 
-**DTR(Docker Trusted Registry)** : 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 프라이빗 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
+**DTR(Docker Trusted Registry)** : 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 프라이빗 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf)를 참조하세요.
 
 **Docker CE(Community Edition)** : 로컬로 컨테이너를 빌드하고, 실행하고, 테스트하는 Windows 및 macOS용 개발 도구입니다. Windows용 Docker CE는 Linux 및 Windows 컨테이너에 개발 환경을 제공합니다. Windows의 Linux Docker 호스트는 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 가상 머신을 기반으로 합니다. Windows 컨테이너에 대한 호스트는 Windows를 직접 기반으로 합니다. Mac용 Docker CE는 Apple 하이퍼바이저 및 [xhyve 하이퍼바이저](https://github.com/mist64/xhyve) 프레임워크를 기반으로 합니다. 여기서는 Mac OS X에서 Linux Docker 가상 머신을 제공합니다. Windows 및 Mac용 Docker CE는 Oracle VirtualBox를 기반으로 하는 Docker 도구 상자를 대체합니다.
 
