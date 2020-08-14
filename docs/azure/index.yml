@@ -7,21 +7,21 @@ metadata:
   description: Azure의 .NET용 샘플, 자습서 및 교육
   ms.topic: hub-page
   ms.prod: azure-dotnet
-  ms.date: 07/31/2020
-  ms.openlocfilehash: 114f12dd33a565ec8332f24c965a74b083bd32c7
-  ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+  ms.date: 08/12/2020
+  ms.openlocfilehash: 041b2124dde5ea5a1d6c04947fe14b1f72f6dacc
+  ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87916272"
+  ms.lasthandoff: 08/13/2020
+  ms.locfileid: "88187942"
 highlightedContent:
   items:
   - itemType: overview
     title: Azure 및 .NET 소개
     url: intro.md
   - itemType: quickstart
-    title: ASP.NET 웹앱 배포
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+    title: Azure에서 ASP.NET Core 웹앱 만들기
+    url: /azure/app-service/quickstart-dotnetcore
   - itemType: quickstart
     title: 서버리스 기능 빌드
     url: /azure/azure-functions/functions-create-your-first-function-visual-studio
@@ -30,16 +30,16 @@ highlightedContent:
     url: /visualstudio/containers/container-tools?view=vs-2019
   - itemType: deploy
     title: Azure DevOps를 사용하여 .NET 앱 배포
-    url: https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
+    url: /azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
   - itemType: tutorial
     title: App Service의 엔드투엔드 인증
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-auth-aad
+    url: /azure/app-service/app-service-web-tutorial-auth-aad
   - itemType: learn
     title: Microsoft ID를 사용하여 사용자 지정 API 보안 설정
-    url: https://docs.microsoft.com/learn/modules/identity-secure-custom-api/
+    url: /learn/modules/identity-secure-custom-api/
   - itemType: learn
     title: Azure 기본 사항
-    url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
+    url: /learn/paths/azure-fundamentals/
 conceptualContent:
   title: 추천 콘텐츠
   summary: 다양한 Azure 서비스를 활용하여 .NET 앱을 개발하는 방법에 대해 알아봅니다.
