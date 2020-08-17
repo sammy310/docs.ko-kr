@@ -6,22 +6,20 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267791"
 ---
 # <a name="pages-routing-and-layouts"></a>페이지, 라우팅, 레이아웃
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET Web Forms 앱은 *.aspx* 파일에 정의 된 페이지로 구성 됩니다. 각 페이지의 주소는 프로젝트의 실제 파일 경로를 기반으로 합니다. 브라우저에서 페이지를 요청 하면 페이지 내용이 서버에서 동적으로 렌더링 됩니다. 페이지의 HTML 태그와 해당 서버 컨트롤 모두에 대 한 렌더링 계정
 
 에서 Blazor 앱의 각 페이지는 일반적으로 하나 이상의 지정 된 경로를 사용 하 여 *razor* 파일에 정의 된 구성 요소입니다. 라우팅은 주로 특정 서버 요청을 포함 하지 않고 클라이언트 쪽에서 발생 합니다. 브라우저는 먼저 앱의 루트 주소에 요청을 만듭니다. `Router`그러면 앱의 루트 구성 요소가 Blazor 탐색 요청 가로채기와 올바른 구성 요소를 처리 합니다.
 
-Blazor는 *딥 링크*도 지원 합니다. 브라우저에서 앱의 루트 이외의 특정 경로를 요청 하면 딥 링크가 발생 합니다. 서버로 전송 되는 딥 링크에 대 한 요청은 앱으로 라우팅됩니다 Blazor . 그러면 요청 클라이언트 쪽이 올바른 구성 요소로 라우팅됩니다.
+Blazor 는 *딥 링크*도 지원 합니다. 브라우저에서 앱의 루트 이외의 특정 경로를 요청 하면 딥 링크가 발생 합니다. 서버로 전송 되는 딥 링크에 대 한 요청은 앱으로 라우팅됩니다 Blazor . 그러면 요청 클라이언트 쪽이 올바른 구성 요소로 라우팅됩니다.
 
 ASP.NET Web Forms의 간단한 페이지에는 다음과 같은 태그가 포함 될 수 있습니다.
 
@@ -94,7 +92,7 @@ public partial class Name : System.Web.UI.Page
 
 경로 템플릿 매개 변수는 필수입니다. ASP.NET Web Forms와 달리 구성 요소에 대 한 경로는 Blazor 파일 위치에서 유추 *되지 않습니다* (나중에 추가 된 기능 일 수 있음).
 
-경로 템플릿 구문은 ASP.NET Web Forms의 라우팅에 사용 되는 것과 동일한 기본 구문입니다. 경로 매개 변수는 중괄호를 사용 하 여 템플릿에 지정 됩니다. Blazor은 경로 값을 같은 이름의 구성 요소 매개 변수에 바인딩합니다 (대/소문자 구분 안 함).
+경로 템플릿 구문은 ASP.NET Web Forms의 라우팅에 사용 되는 것과 동일한 기본 구문입니다. 경로 매개 변수는 중괄호를 사용 하 여 템플릿에 지정 됩니다. Blazor 은 경로 값을 같은 이름의 구성 요소 매개 변수에 바인딩합니다 (대/소문자 구분 안 함).
 
 ```razor
 @page "/product/{id}"
@@ -147,7 +145,7 @@ public partial class Name : System.Web.UI.Page
 
 ## <a name="navigation"></a>탐색
 
-ASP.NET Web Forms에서는 브라우저에 리디렉션 응답을 반환 하 여 다른 페이지로의 탐색을 트리거합니다. 예를 들면 다음과 같습니다.
+ASP.NET Web Forms에서는 브라우저에 리디렉션 응답을 반환 하 여 다른 페이지로의 탐색을 트리거합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)
@@ -156,7 +154,7 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-에서는 일반적으로 리디렉션 응답을 반환할 수 없습니다 Blazor . Blazor는 요청-회신 모델을 사용 하지 않습니다. 그러나 JavaScript를 사용할 때와 마찬가지로 브라우저 탐색을 직접 트리거할 수 있습니다.
+에서는 일반적으로 리디렉션 응답을 반환할 수 없습니다 Blazor . Blazor 는 요청-회신 모델을 사용 하지 않습니다. 그러나 JavaScript를 사용할 때와 마찬가지로 브라우저 탐색을 직접 트리거할 수 있습니다.
 
 Blazor`NavigationManager`는 다음과 같은 작업에 사용할 수 있는 서비스를 제공 합니다.
 

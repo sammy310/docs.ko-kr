@@ -6,16 +6,14 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267505"
 ---
 # <a name="app-configuration"></a>앱 구성
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Web Forms에서 앱 구성을 로드 하는 기본적인 방법은 *web.config* 파일의 항목을 &mdash; 서버 또는 *web.config*에서 참조 하는 관련 구성 파일에 포함 하는 것입니다. 정적 개체를 사용 하 여 앱 `ConfigurationManager` 설정, 데이터 저장소 연결 문자열 및 앱에 추가 되는 기타 확장 된 구성 공급자와 상호 작용할 수 있습니다. 다음 코드에 표시 된 것 처럼 앱 구성과의 상호 작용을 확인 하는 것이 일반적입니다.
 
@@ -42,7 +40,7 @@ ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더
 
 ## <a name="appsettingsjson-format-and-access"></a>appsettings.js형식 및 액세스
 
-파일 *의appsettings.js* 는 다음 JSON 처럼 구조화 된 값이 있는 계층적 일 수 있습니다.
+파일 * 의appsettings.js* 는 다음 JSON 처럼 구조화 된 값이 있는 계층적 일 수 있습니다.
 
 ```json
 {
@@ -74,7 +72,7 @@ ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더
 dotnet user-secrets init
 ```
 
-이전 명령은 `UserSecretsId` 프로젝트 파일에 요소를 추가 합니다. 요소는 암호를 앱에 연결 하는 데 사용 되는 GUID를 포함 합니다. 그런 다음 명령을 사용 하 여 비밀을 정의할 수 있습니다 `set` . 예를 들면 다음과 같습니다.
+이전 명령은 `UserSecretsId` 프로젝트 파일에 요소를 추가 합니다. 요소는 암호를 앱에 연결 하는 데 사용 되는 GUID를 포함 합니다. 그런 다음 명령을 사용 하 여 비밀을 정의할 수 있습니다 `set` . 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"
@@ -161,7 +159,7 @@ ASP.NET Core에서 구성 값을 받을 클래스 계층 구조를 지정할 수
 * 부모 클래스에서 상속할 필요가 없습니다.
 * `public`캡처할 구성 구조에 대 한 속성 및 형식 참조와 일치 하는 속성을 포함 해야 합니다.
 
-이전appsettings.js샘플 *에서* 다음 클래스를 정의 하 여 값을 캡처할 수 있습니다.
+이전appsettings.js샘플 * 에서* 다음 클래스를 정의 하 여 값을 캡처할 수 있습니다.
 
 ```csharp
 public class MyConfig

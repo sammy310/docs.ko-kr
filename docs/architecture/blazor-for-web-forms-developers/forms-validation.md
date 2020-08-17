@@ -7,22 +7,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 1a99719f59415872510aef051d1f3c73daf53e15
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: d2dce23996e996a736b04c9cdd1ccf3b549ff3ff
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267557"
 ---
 # <a name="forms-and-validation"></a>양식 및 유효성 검사
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ASP.NET Web Forms 프레임 워크에는 폼 ( `RequiredFieldValidator` ,, `CompareValidator` 등)에 입력 된 사용자 입력의 유효성 검사를 처리 하는 유효성 검사 서버 컨트롤 집합이 포함 되어 있습니다 `RangeValidator` . ASP.NET Web Forms 프레임 워크는 또한 모델 바인딩과 데이터 주석 (,, 등)을 기반으로 모델의 유효성 검사를 지원 `[Required]` `[StringLength]` `[Range]` 합니다. 유효성 검사 논리는 서버와 클라이언트에서 모두 비 JavaScript 기반 유효성 검사를 사용 하 여 적용할 수 있습니다. `ValidationSummary`서버 컨트롤은 유효성 검사 오류에 대 한 요약을 사용자에 게 표시 하는 데 사용 됩니다.
 
-Blazor는 클라이언트와 서버 둘 다에서 유효성 검사 논리를 공유할 수 있도록 지원 합니다. ASP.NET는 많은 일반 서버 유효성 검사에 대 한 미리 빌드된 JavaScript 구현을 제공 합니다. 대부분의 경우 개발자는 응용 프로그램별 유효성 검사 논리를 완전히 구현 하기 위해 JavaScript를 작성 해야 합니다. 서버와 클라이언트 모두에서 동일한 모델 유형, 데이터 주석 및 유효성 검사 논리를 사용할 수 있습니다.
+Blazor 는 클라이언트와 서버 둘 다에서 유효성 검사 논리를 공유할 수 있도록 지원 합니다. ASP.NET는 많은 일반 서버 유효성 검사에 대 한 미리 빌드된 JavaScript 구현을 제공 합니다. 대부분의 경우 개발자는 응용 프로그램별 유효성 검사 논리를 완전히 구현 하기 위해 JavaScript를 작성 해야 합니다. 서버와 클라이언트 모두에서 동일한 모델 유형, 데이터 주석 및 유효성 검사 논리를 사용할 수 있습니다.
 
-Blazor입력 구성 요소 집합을 제공 합니다. 입력 구성 요소는 필드 데이터를 모델에 바인딩하고 폼이 제출 될 때 사용자 입력의 유효성을 검사 합니다.
+Blazor 입력 구성 요소 집합을 제공 합니다. 입력 구성 요소는 필드 데이터를 모델에 바인딩하고 폼이 제출 될 때 사용자 입력의 유효성을 검사 합니다.
 
 |입력 구성 요소|렌더링 된 HTML 요소    |
 |---------------|-------------------------|

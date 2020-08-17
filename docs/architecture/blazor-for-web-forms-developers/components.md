@@ -1,25 +1,23 @@
 ---
-title: 에서 재사용 가능한 UI 구성 요소 빌드Blazor
+title: 에서 재사용 가능한 UI 구성 요소 빌드 Blazor
 description: 에서 재사용 가능한 UI 구성 요소를 빌드하는 방법 Blazor 및 ASP.NET Web Forms 컨트롤을 비교 하는 방법에 대해 알아봅니다.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267687"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>에서 재사용 가능한 UI 구성 요소 빌드Blazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="build-reusable-ui-components-with-no-locblazor"></a>에서 재사용 가능한 UI 구성 요소 빌드 Blazor
 
 ASP.NET Web Forms에 대 한 멋진 사항 중 하나는 다시 사용할 수 있는 ui (사용자 인터페이스) 코드를 다시 사용할 수 있는 UI 컨트롤에 캡슐화 하는 방법입니다. *.Ascx* 파일을 사용 하 여 태그에서 사용자 지정 사용자 정의 컨트롤을 정의할 수 있습니다. 전체 디자이너 지원으로 코드에서 정교한 서버 컨트롤을 빌드할 수도 있습니다.
 
-Blazor는 *구성 요소*를 통한 UI 캡슐화도 지원 합니다. 구성 요소:
+Blazor 는 *구성 요소*를 통한 UI 캡슐화도 지원 합니다. 구성 요소:
 
 - 는 자체 포함 UI의 청크입니다.
 - 자체 상태 및 렌더링 논리를 유지 관리 합니다.
@@ -81,13 +79,13 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 |지시문    |설명|예제|Web Forms 동일|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|없음|
+|`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|None|
 |`@code`      |구성 요소에 클래스 멤버를 추가 합니다.|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|지정 된 인터페이스를 구현 합니다.|`@implements IDisposable`|코드 숨김 사용|
 |`@inherits`  |지정 된 기본 클래스에서 상속 됩니다.|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |구성 요소에 서비스를 삽입 합니다.|`@inject IJSRuntime JS`|없음|
+|`@inject`    |구성 요소에 서비스를 삽입 합니다.|`@inject IJSRuntime JS`|None|
 |`@layout`    |구성 요소에 대 한 레이아웃 구성 요소를 지정 합니다.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|없음|
+|`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|None|
 |`@page`      |구성 요소의 경로를 지정 합니다.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |구성 요소에 대 한 제네릭 형식 매개 변수를 지정 합니다.|`@typeparam TItem`|코드 숨김 사용|
 |`@using`     |범위에 가져올 네임 스페이스를 지정 합니다.|`@using MyComponentNamespace`|*web.config* 에서 네임 스페이스 추가|
@@ -112,12 +110,12 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 *.Aspx* 및 *.ascx* 파일에 사용 되는 대부분의 구문에는 Razor의 병렬 구문이 있습니다. 다음은 ASP.NET Web Forms 및 Razor의 구문에 대 한 간단한 비교입니다.
 
-|특징                      |Web Forms           |구문               |Razor         |구문 |
+|기능                      |Web Forms           |구문               |Razor         |구문 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |지시문                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |코드 블록                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적`@`<br>뚜렷한`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|설명                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|표현식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적 `@`<br>뚜렷한 `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|주석                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Razor 구성 요소 클래스에 멤버를 추가 하려면 지시문을 사용 `@code` 합니다. 이 기법은 `<script runat="server">...</script>` ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 블록을 사용 하는 것과 비슷합니다.
@@ -168,7 +166,7 @@ ASP.NET Web Forms와 달리의 구성 요소는 Blazor 다음과 같습니다.
 
 ## <a name="component-parameters"></a>구성 요소 매개 변수
 
-ASP.NET Web Forms에서 공용 속성을 사용 하 여 매개 변수 및 데이터를 컨트롤에 전달할 수 있습니다. 이러한 속성은 특성을 사용 하 여 태그에서 설정 하거나 코드에서 직접 설정할 수 있습니다. Blazor구성 요소 속성은 구성 요소 `[Parameter]` 매개 변수로 간주 되는 특성으로도 표시 되어야 하지만 구성 요소는 비슷한 방식으로 작동 합니다.
+ASP.NET Web Forms에서 공용 속성을 사용 하 여 매개 변수 및 데이터를 컨트롤에 전달할 수 있습니다. 이러한 속성은 특성을 사용 하 여 태그에서 설정 하거나 코드에서 직접 설정할 수 있습니다. Blazor 구성 요소 속성은 구성 요소 `[Parameter]` 매개 변수로 간주 되는 특성으로도 표시 되어야 하지만 구성 요소는 비슷한 방식으로 작동 합니다.
 
 다음 `Counter` 구성 요소는 단추를 클릭할 때마다 `IncrementAmount` 가 증가 해야 하는 양을 지정 하는 데 사용할 수 있는 이라는 구성 요소 매개 변수를 정의 합니다 `Counter` .
 
@@ -311,7 +309,7 @@ public partial class Counter : System.Web.UI.UserControl
 
 ## <a name="data-binding"></a>데이터 바인딩
 
-BlazorUI 구성 요소에서 구성 요소의 상태에 데이터를 바인딩하는 간단한 메커니즘을 제공 합니다. 이 방식은 데이터 소스에서 UI 컨트롤로 데이터를 바인딩하는 ASP.NET Web Forms의 기능과 다릅니다. 데이터 처리 섹션에서 다양 한 데이터 원본의 데이터를 처리 [하](data.md) 는 방법을 다룹니다.
+Blazor UI 구성 요소에서 구성 요소의 상태에 데이터를 바인딩하는 간단한 메커니즘을 제공 합니다. 이 방식은 데이터 소스에서 UI 컨트롤로 데이터를 바인딩하는 ASP.NET Web Forms의 기능과 다릅니다. 데이터 처리 섹션에서 다양 한 데이터 원본의 데이터를 처리 [하](data.md) 는 방법을 다룹니다.
 
 UI 구성 요소에서 구성 요소의 상태로 양방향 데이터 바인딩을 만들려면 `@bind` 지시문 특성을 사용 합니다. 다음 예제에서 확인란의 값은 필드에 바인딩됩니다 `isChecked` .
 
@@ -433,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor구성 요소에는 잘 정의 된 수명 주기도 있습니다. 구성 요소의 수명 주기를 사용 하 여 구성 요소 상태를 초기화 하 고 고급 구성 요소 동작을 구현할 수 있습니다.
+Blazor 구성 요소에는 잘 정의 된 수명 주기도 있습니다. 구성 요소의 수명 주기를 사용 하 여 구성 요소 상태를 초기화 하 고 고급 구성 요소 동작을 구현할 수 있습니다.
 
 모든 Blazor 의 구성 요소 수명 주기 메서드에는 동기 버전과 비동기 버전이 모두 있습니다. 구성 요소 렌더링이 동기식입니다. 비동기 논리는 구성 요소 렌더링의 일부로 실행할 수 없습니다. 모든 비동기 논리는 수명 주기 메서드의 일부로 실행 되어야 합니다 `async` .
 
@@ -482,7 +480,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazor구성 요소 `IDisposable` 는 UI에서 구성 요소가 제거 될 때 리소스를 삭제 하도록 구현할 수 있습니다. Razor 구성 요소는 `IDispose` 지시문을 사용 하 여를 구현할 수 있습니다 `@implements` .
+Blazor 구성 요소 `IDisposable` 는 UI에서 구성 요소가 제거 될 때 리소스를 삭제 하도록 구현할 수 있습니다. Razor 구성 요소는 `IDispose` 지시문을 사용 하 여를 구현할 수 있습니다 `@implements` .
 
 ```razor
 @using System
@@ -523,17 +521,17 @@ ASP.NET Web Forms에서 해당 ID를 참조 하 여 코드에서 직접 컨트�
 
 ## <a name="capture-element-references"></a>캡처 요소 참조
 
-Blazor구성 요소는 요소에 대 한 참조를 캡처할 수 있습니다. ASP.NET Web Forms의 HTML 서버 컨트롤과 달리의 요소 참조를 사용 하 여 DOM을 직접 조작할 수 없습니다 Blazor . Blazor는 DOM diff 알고리즘을 사용 하 여 대부분의 DOM 상호 작용을 처리 합니다. 의 캡처된 요소 참조 Blazor 는 불투명 합니다. 그러나 JavaScript interop 호출에서 특정 요소 참조를 전달 하는 데 사용 됩니다. JavaScript interop에 대 한 자세한 내용은 [ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)를 참조 하세요.
+Blazor 구성 요소는 요소에 대 한 참조를 캡처할 수 있습니다. ASP.NET Web Forms의 HTML 서버 컨트롤과 달리의 요소 참조를 사용 하 여 DOM을 직접 조작할 수 없습니다 Blazor . Blazor 는 DOM diff 알고리즘을 사용 하 여 대부분의 DOM 상호 작용을 처리 합니다. 의 캡처된 요소 참조 Blazor 는 불투명 합니다. 그러나 JavaScript interop 호출에서 특정 요소 참조를 전달 하는 데 사용 됩니다. JavaScript interop에 대 한 자세한 내용은 [ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)를 참조 하세요.
 
 ## <a name="templated-components"></a>템플릿 기반 구성 요소
 
 ASP.NET Web Forms에서 *템플릿 기반 컨트롤*을 만들 수 있습니다. 개발자는 템플릿 기반 컨트롤을 사용 하 여 컨테이너 컨트롤을 렌더링 하는 데 사용 되는 HTML 부분을 지정할 수 있습니다. 템플릿 기반 서버 컨트롤을 작성 하는 메커니즘은 복잡 하지만 사용자 지정 가능한 방식으로 데이터를 렌더링 하는 강력한 시나리오를 가능 하 게 합니다. 템플릿 기반 컨트롤의 예로는 `Repeater` 및가 `DataList` 있습니다.
 
-Blazor또는 형식의 구성 요소 매개 변수를 정의 하 여 구성 요소를 템플릿을 만들 수도 있습니다 `RenderFragment` `RenderFragment<T>` . 는 `RenderFragment` 구성 요소에서 렌더링할 수 있는 Razor 태그의 청크를 나타냅니다. 는 `RenderFragment<T>` 렌더링 조각이 렌더링 될 때 지정할 수 있는 매개 변수를 사용 하는 Razor 태그의 청크입니다.
+Blazor 또는 형식의 구성 요소 매개 변수를 정의 하 여 구성 요소를 템플릿을 만들 수도 있습니다 `RenderFragment` `RenderFragment<T>` . 는 `RenderFragment` 구성 요소에서 렌더링할 수 있는 Razor 태그의 청크를 나타냅니다. 는 `RenderFragment<T>` 렌더링 조각이 렌더링 될 때 지정할 수 있는 매개 변수를 사용 하는 Razor 태그의 청크입니다.
 
 ### <a name="child-content"></a>자식 콘텐츠
 
-Blazor구성 요소는 자식 콘텐츠를로 캡처하고 `RenderFragment` 구성 요소 렌더링의 일부로 해당 콘텐츠를 렌더링할 수 있습니다. 자식 콘텐츠를 캡처하려면 형식의 구성 요소 매개 변수를 정의 하 `RenderFragment` 고 이름을로 지정 `ChildContent` 합니다.
+Blazor 구성 요소는 자식 콘텐츠를로 캡처하고 `RenderFragment` 구성 요소 렌더링의 일부로 해당 콘텐츠를 렌더링할 수 있습니다. 자식 콘텐츠를 캡처하려면 형식의 구성 요소 매개 변수를 정의 하 `RenderFragment` 고 이름을로 지정 `ChildContent` 합니다.
 
 *ChildContentComponent. razor*
 

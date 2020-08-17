@@ -1,5 +1,5 @@
 ---
-title: ASP.NET Web Forms에서로 마이그레이션Blazor
+title: ASP.NET Web Forms에서로 마이그레이션 Blazor
 description: 기존 ASP.NET Web Forms 앱을로 마이그레이션하는 방법에 대해 알아봅니다 Blazor .
 author: twsouthwick
 ms.author: tasou
@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267804"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms에서로 마이그레이션Blazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms에서로 마이그레이션 Blazor
 
 ASP.NET Web Forms에서로 코드 베이스를 마이그레이션하는 Blazor 작업은 계획을 수행 해야 하는 시간이 많이 걸리는 작업입니다. 이 장에서는 프로세스를 간략하게 설명 합니다. 쉽게 전환할 수 있는 것은 앱이 *N 계층* 아키텍처를 준수 하는지 확인 하는 것입니다. 즉, 앱 모델 (이 경우 Web Forms)은 비즈니스 논리와는 별개입니다. 이러한 계층의 논리적 분리를 통해 .NET Core와로 이동 해야 하는 것을 명확 하 게 파악할 수 있습니다 Blazor .
 
@@ -24,8 +22,8 @@ ASP.NET Web Forms에서로 코드 베이스를 마이그레이션하는 Blazor �
 
 작업 중인 앱을로 마이그레이션해야 하는 이유는 무엇 Blazor 인가요? 많은 시간이 필요 하지 않습니다. ASP.NET Web Forms는 계속 해 서 많은 년 동안 지원 됩니다. 그러나 제공 되는 대부분의 기능은 Blazor 마이그레이션된 앱 에서만 지원 됩니다. 이러한 기능은 다음과 같습니다.
 
-- 과 같은 프레임 워크의 성능 향상`Span<T>`
-- 다음으로 실행 기능WebAssembly
+- 과 같은 프레임 워크의 성능 향상 `Span<T>`
+- 다음으로 실행 기능 WebAssembly
 - Linux 및 macOS에 대 한 플랫폼 간 지원
 - 다른 앱에 영향을 주지 않고 앱 로컬 배포 또는 공유 프레임 워크 배포
 
@@ -525,7 +523,7 @@ namespace eShopLegacyWebForms.Catalog
 
 코드와 태그가 동일한 파일에 있습니다. 모든 필수 서비스에는 특성을 사용 하 여 액세스할 수 있습니다 `@inject` . 지시문에 따라 `@page` 이 페이지는 경로에서 액세스할 수 있습니다 `Catalog/Details/{id}` . 경로 `{id}` 자리 표시자의 값이 정수로 제한 되었습니다. [라우팅](pages-routing-layouts.md) 섹션에 설명 된 대로 Web Forms와 달리 Razor 구성 요소는 해당 경로 및 포함 된 모든 매개 변수를 명시적으로 명시 합니다. 많은 Web Forms 컨트롤에는 정확히 일치 하는 항목이 없을 수 있습니다 Blazor . 동일한 용도로 사용 되는 것과 동일한 HTML 코드 조각이 종종 있습니다. 예를 들어, `<asp:Label />` 컨트롤은 HTML 요소로 바뀔 수 있습니다 `<label>` .
 
-### <a name="model-validation-in-blazor"></a>모델 유효성 검사Blazor
+### <a name="model-validation-in-no-locblazor"></a>모델 유효성 검사 Blazor
 
 Web Forms 코드에 유효성 검사가 포함 된 경우 거의 변경 하지 않고 많은 항목을 전송할 수 있습니다. 에서를 실행 하는 경우의 혜택은 Blazor 사용자 지정 JavaScript가 없어도 동일한 유효성 검사 논리를 실행할 수 있다는 것입니다. 데이터 주석을 사용 하면 모델의 유효성을 쉽게 확인할 수 있습니다.
 

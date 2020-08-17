@@ -6,26 +6,24 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267596"
 ---
 # <a name="work-with-data"></a>데이터 작업
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 데이터 액세스는 ASP.NET Web Forms 앱의 백본입니다. 웹에 대 한 양식을 작성 하는 경우 해당 데이터는 어떻게 되나요? Web Forms에서 데이터베이스와 상호 작용 하는 데 사용할 수 있는 여러 데이터 액세스 기술이 있습니다.
 
-- Data Sources
+- 솔루션 탐색기
 - ADO.NET
 - Entity Framework
 
 데이터 원본은 Web Forms 페이지에 놓고 다른 컨트롤과 같이 구성할 수 있는 컨트롤입니다. Visual Studio는 컨트롤을 구성 하 고 Web Forms 페이지에 바인딩하는 데 사용할 수 있는 친숙 한 대화 집합을 제공 합니다. "코드 부족" 또는 "코드 없음" 방식을 활용 하는 개발자는 Web Forms 처음 출시 될 때이 기술을 선호 합니다.
 
-![Data Sources](media/data/datasources.png)
+![솔루션 탐색기](media/data/datasources.png)
 
 ADO.NET는 데이터베이스와 상호 작용 하는 하위 수준 방법입니다. 앱에서 상호 작용 하기 위해 명령, 레코드 집합 및 데이터 집합을 사용 하 여 데이터베이스에 대 한 연결을 만들 수 있습니다. 그런 다음 결과를 많은 코드 없이 화면에 있는 필드에 바인딩할 수 있습니다. 이 방법의 단점은 각 ADO.NET 개체 집합 ( `Connection` , `Command` 및 `Recordset` )이 데이터베이스 공급 업체에서 제공 하는 라이브러리에 바인딩 되었다는 것입니다. 이러한 구성 요소를 사용 하면 코드가 고정 되어 다른 데이터베이스로 마이그레이션하기 어려워집니다.
 
@@ -57,8 +55,8 @@ public class Product
 제품에는 기본 키와 데이터베이스에 생성 되는 세 가지 추가 필드가 있습니다.  
 
 - EF는 규칙에 `Id` 따라 속성을 기본 키로 식별 합니다.
-- `Name`텍스트 저장소로 구성 된 열에 저장 됩니다. `[Required]`이 속성을 데코레이팅하는 특성은 `not null` 이 선언 된 속성 동작을 강제 적용 하는 데 도움이 되는 제약 조건을 추가 합니다.
-- `Description`는 텍스트 저장소로 구성 된 열에 저장 되며, 특성에 의해 결정 된 대로 최대 길이가 4000 자로 구성 됩니다 `[MaxLength]` . 데이터베이스 스키마는 `MaxLength` 데이터 형식을 사용 하 여 라는 열로 구성 됩니다 `varchar(4000)` .
+- `Name` 텍스트 저장소로 구성 된 열에 저장 됩니다. `[Required]`이 속성을 데코레이팅하는 특성은 `not null` 이 선언 된 속성 동작을 강제 적용 하는 데 도움이 되는 제약 조건을 추가 합니다.
+- `Description` 는 텍스트 저장소로 구성 된 열에 저장 되며, 특성에 의해 결정 된 대로 최대 길이가 4000 자로 구성 됩니다 `[MaxLength]` . 데이터베이스 스키마는 `MaxLength` 데이터 형식을 사용 하 여 라는 열로 구성 됩니다 `varchar(4000)` .
 - `Price`속성이 통화로 저장 됩니다. `[Range]`특성은 선언 된 최소값과 최대값 이외의 데이터 저장을 방지 하기 위해 적절 한 제약 조건을 생성 합니다.
 
 데이터베이스에 대 `Product` 한 연결 및 변환 작업을 정의 하는 데이터베이스 컨텍스트 클래스에이 클래스를 추가 해야 합니다.
@@ -77,7 +75,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-위의 코드는 지정 된 연결 문자열을 사용 하 여 SQL Server 데이터베이스에 연결 됩니다. appsettings.js에 연결 문자열을 파일, 환경 변수 또는 기타 구성 저장소 위치 *에* 저장 하 고 포함 된 문자열을 적절 하 게 바꿀 수 있습니다.
+위의 코드는 지정 된 연결 문자열을 사용 하 여 SQL Server 데이터베이스에 연결 됩니다. appsettings.js에 연결 문자열을 파일, 환경 변수 또는 기타 구성 저장소 위치 * 에* 저장 하 고 포함 된 문자열을 적절 하 게 바꿀 수 있습니다.
 
 그런 다음, 다음 명령을 사용 하 여이 클래스에 적절 한 데이터베이스 테이블을 생성할 수 있습니다.
 

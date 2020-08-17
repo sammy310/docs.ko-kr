@@ -4,16 +4,14 @@ description: 앱에 대 한 시작 논리를 정의 하는 방법을 알아봅�
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: 3d460750c36f64b8ad343755bd63b47af5c310d9
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267700"
 ---
 # <a name="app-startup"></a>앱 시작
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET 용으로 작성 된 응용 프로그램에는 일반적으로 `global.asax.cs` `Application_Start` 구성 되 고 HTML 렌더링과 .net 처리에 사용할 수 있는 서비스를 제어 하는 이벤트를 정의 하는 파일이 있습니다. 이 장에서는 ASP.NET Core 및 Blazor Server와 약간 어떻게 다른 지 살펴봅니다.
 
@@ -21,10 +19,10 @@ ASP.NET 용으로 작성 된 응용 프로그램에는 일반적으로 `global.a
 
 기본 web forms `Application_Start` 메서드는 여러 구성 작업을 처리 하기 위해 몇 년 이상 효율적으로 성장 하 고 있습니다.  이제 Visual Studio 2019의 기본 템플릿이 있는 새로운 web forms 프로젝트에는 이제 다음과 같은 구성 논리가 포함 됩니다.
 
-- `RouteConfig`-응용 프로그램 URL 라우팅
-- `BundleConfig`-CSS 및 JavaScript 묶음 및 축소
+- `RouteConfig` -응용 프로그램 URL 라우팅
+- `BundleConfig` -CSS 및 JavaScript 묶음 및 축소
 
-이러한 개별 파일은 모두 폴더에 상주 `App_Start` 하며 응용 프로그램 시작 시 한 번만 실행 됩니다.  `RouteConfig`기본 프로젝트 템플릿에서는 `FriendlyUrlSettings` 응용 프로그램 url이 파일 확장명을 생략할 수 있도록 web forms 용를 추가 합니다 `.ASPX` .  기본 템플릿에는 페이지에 대 한 영구 HTTP 리디렉션 상태 코드 (HTTP 301)를 `.ASPX` 확장명이 없는 파일 이름으로 친숙 한 URL에 제공 하는 지시문도 포함 됩니다.
+이러한 개별 파일은 모두 폴더에 상주 `App_Start` 하며 응용 프로그램 시작 시 한 번만 실행 됩니다.  `RouteConfig` 기본 프로젝트 템플릿에서는 `FriendlyUrlSettings` 응용 프로그램 url이 파일 확장명을 생략할 수 있도록 web forms 용를 추가 합니다 `.ASPX` .  기본 템플릿에는 페이지에 대 한 영구 HTTP 리디렉션 상태 코드 (HTTP 301)를 `.ASPX` 확장명이 없는 파일 이름으로 친숙 한 URL에 제공 하는 지시문도 포함 됩니다.
 
 ASP.NET Core 및 Blazor를 사용 하면 이러한 메서드를 간소화 하 고 클래스로 통합 `Startup` 하거나 일반적인 웹 기술에 대해 제거 합니다.
 

@@ -4,16 +4,14 @@ description: ASP.NET Web Forms 및 Blazor에서 상태를 관리 하는 다양 �
 author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
-ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267726"
 ---
 # <a name="state-management"></a>상태 관리
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 상태 관리는 Web Forms 응용 프로그램의 주요 개념으로, 뷰 상태, 세션 상태, 응용 프로그램 상태 및 포스트백 기능을 통해 쉽게 활용할 수 있습니다. 프레임 워크의 이러한 상태 저장 기능은 응용 프로그램에 필요한 상태 관리를 숨기고 응용 프로그램 개발자가 해당 기능을 제공 하는 데 집중할 수 있도록 합니다. ASP.NET Core 및 Blazor를 사용 하는 경우 이러한 기능 중 일부는 재배치 되 고 일부는 완전히 제거 되었습니다. 이 장에서는 상태를 유지 관리 하 고 Blazor의 새로운 기능을 사용 하 여 동일한 기능을 제공 하는 방법을 검토 합니다.
 
@@ -84,8 +82,8 @@ app.AddSingleton<MyApplicationState>();
 
 응용 프로그램 데이터는 나중에 사용할 수 있도록 사용자의 장치에 클라이언트 쪽으로 저장 될 수도 있습니다. 사용자 브라우저의 여러 범위에 있는 데이터의 지 속성을 허용 하는 두 가지 브라우저 기능이 있습니다.
 
-- `localStorage`-사용자의 전체 브라우저로 범위가 한정 됩니다. 페이지를 다시 로드 하는 경우 브라우저를 닫았다가 다시 열거나 동일한 URL을 사용 하 여 다른 탭을 열면 브라우저에서 동일 하 게 제공 됩니다. `localStorage`
-- `sessionStorage`-사용자의 현재 브라우저 탭으로 범위가 지정 됩니다. 탭이 다시 로드 되 면 상태는 지속 됩니다. 그러나 사용자가 응용 프로그램에 다른 탭을 열거나 브라우저를 닫고 다시 열면 상태가 손실 됩니다.
+- `localStorage` -사용자의 전체 브라우저로 범위가 한정 됩니다. 페이지를 다시 로드 하는 경우 브라우저를 닫았다가 다시 열거나 동일한 URL을 사용 하 여 다른 탭을 열면 브라우저에서 동일 하 게 제공 됩니다. `localStorage`
+- `sessionStorage` -사용자의 현재 브라우저 탭으로 범위가 지정 됩니다. 탭이 다시 로드 되 면 상태는 지속 됩니다. 그러나 사용자가 응용 프로그램에 다른 탭을 열거나 브라우저를 닫고 다시 열면 상태가 손실 됩니다.
 
 이러한 기능과 상호 작용 하는 사용자 지정 JavaScript 코드를 작성 하거나이 기능을 제공 하는 데 사용할 수 있는 여러 NuGet 패키지를 만들 수 있습니다. 이러한 패키지 중 하나는 [AspNetCore. ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage)입니다.
 

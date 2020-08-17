@@ -1,21 +1,19 @@
 ---
-title: ASP.NET Web Forms 및의 아키텍처 비교Blazor
+title: ASP.NET Web Forms 및의 아키텍처 비교 Blazor
 description: ASP.NET의 아키텍처가 Web Forms 하 고 비교 하는 방법을 알아봅니다 Blazor .
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 51b114c842e131ad9b9a589bf5137a522e135082
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9a8e78338aff53002647a10ed9007296e4682b5a
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267713"
 ---
-# <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>ASP.NET Web Forms 및의 아키텍처 비교Blazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>ASP.NET Web Forms 및의 아키텍처 비교 Blazor
 
 ASP.NET Web Forms 하 고 Blazor 개념은 매우 비슷하지만, 작업 방식에는 차이가 있습니다. 이 장에서는 ASP.NET Web Forms 및의 내부 기능과 아키텍처를 검사 합니다 Blazor .
 
@@ -40,19 +38,19 @@ ASP.NET Web Forms 프레임 워크는 페이지 중심 아키텍처를 기반으
 
 ## Blazor
 
-Blazor클라이언트 쪽 웹 UI 프레임 워크는 각도 또는 반응 같은 JavaScript 프런트 엔드 프레임 워크의 특성과 유사 합니다. Blazor사용자 상호 작용을 처리 하 고 필요한 UI 업데이트를 렌더링 합니다. Blazor는 요청-회신 모델을 기반으로 *하지 않습니다* . 사용자 상호 작용은 특정 HTTP 요청의 컨텍스트에 속하지 않는 이벤트로 처리 됩니다.
+Blazor 클라이언트 쪽 웹 UI 프레임 워크는 각도 또는 반응 같은 JavaScript 프런트 엔드 프레임 워크의 특성과 유사 합니다. Blazor 사용자 상호 작용을 처리 하 고 필요한 UI 업데이트를 렌더링 합니다. Blazor는 요청-회신 모델을 기반으로 *하지 않습니다* . 사용자 상호 작용은 특정 HTTP 요청의 컨텍스트에 속하지 않는 이벤트로 처리 됩니다.
 
-Blazor앱은 HTML 페이지에서 렌더링 되는 하나 이상의 루트 구성 요소로 구성 됩니다.
+Blazor 앱은 HTML 페이지에서 렌더링 되는 하나 이상의 루트 구성 요소로 구성 됩니다.
 
-![BlazorHTML의 구성 요소](./media/architecture-comparison/blazor-components-in-html.png)
+![::: no-loc (Blazor)::: HTML의 구성 요소](./media/architecture-comparison/blazor-components-in-html.png)
 
 사용자가 구성 요소를 렌더링할 위치를 지정 하는 방법과 구성 요소가 사용자 상호 작용을 위해 유선으로 연결 되는 방식을 지정 하는 방법은 [호스팅 모델](hosting-models.md) 에 따라 다릅니다.
 
 Blazor[구성 요소](components.md) 는 다시 사용할 수 있는 UI 부분을 나타내는 .net 클래스입니다. 각 구성 요소는 자체 상태를 유지 하 고 다른 구성 요소 렌더링을 포함할 수 있는 자체 렌더링 논리를 지정 합니다. 구성 요소는 구성 요소의 상태를 업데이트 하기 위한 특정 사용자 상호 작용에 대 한 이벤트 처리기를 지정 합니다.
 
-구성 요소가 이벤트를 처리 한 후는 Blazor 구성 요소를 렌더링 하 고 렌더링 된 출력에서 변경 된 내용을 추적 합니다. 구성 요소는 DOM (문서 개체 모델)에 직접 렌더링 되지 않습니다. 대신,를 통해 `RenderTree` 변경 내용을 추적할 수 있도록 이라는 DOM의 메모리 내 표현으로 렌더링 Blazor 합니다. Blazor새로 렌더링 된 출력을 이전 출력과 비교 하 여 DOM에 효율적으로 적용 되는 UI 차이를 계산 합니다.
+구성 요소가 이벤트를 처리 한 후는 Blazor 구성 요소를 렌더링 하 고 렌더링 된 출력에서 변경 된 내용을 추적 합니다. 구성 요소는 DOM (문서 개체 모델)에 직접 렌더링 되지 않습니다. 대신,를 통해 `RenderTree` 변경 내용을 추적할 수 있도록 이라는 DOM의 메모리 내 표현으로 렌더링 Blazor 합니다. Blazor 새로 렌더링 된 출력을 이전 출력과 비교 하 여 DOM에 효율적으로 적용 되는 UI 차이를 계산 합니다.
 
-![BlazorDOM 상호 작용](./media/architecture-comparison/blazor-dom-interaction.png)
+![::: no loc (Blazor)::: DOM 상호 작용](./media/architecture-comparison/blazor-dom-interaction.png)
 
 구성 요소는 정상적인 UI 이벤트 외부에서 상태가 변경 되는 경우 렌더링 되어야 함을 수동으로 나타낼 수도 있습니다. Blazor는 `SynchronizationContext`를 사용하여 단일 논리적 실행 스레드를 적용합니다. 구성 요소의 수명 주기 메서드 및 Blazor에서 발생하는 모든 이벤트 콜백은 이 `SynchronizationContext`에서 실행됩니다.
 

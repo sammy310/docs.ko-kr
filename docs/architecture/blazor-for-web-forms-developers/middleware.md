@@ -6,16 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267882"
 ---
 # <a name="modules-handlers-and-middleware"></a>모듈, 처리기 및 미들웨어
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET Core 앱은 일련의 *미들웨어*를 기반으로 빌드됩니다. 미들웨어는 요청 및 응답을 처리 하기 위해 파이프라인으로 정렬 되는 처리기입니다. Web Forms 앱에서 HTTP 처리기와 모듈은 유사한 문제를 해결 합니다. ASP.NET Core 모듈, 처리기, *Global.asax.cs*및 앱 수명 주기가 미들웨어로 바뀝니다. 이 장에서는 앱의 컨텍스트에서 미들웨어에 대해 알아봅니다 Blazor .
 

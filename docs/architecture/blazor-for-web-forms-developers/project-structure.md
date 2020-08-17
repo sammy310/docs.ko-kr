@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 473b708a9b58fa88844bc6f79a898943d5a7db71
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 225ebbdd5e23516ae7d5465371e95c73c440c82b
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267778"
 ---
-# <a name="project-structure-for-blazor-apps"></a>앱에 대 한 프로젝트 구조 Blazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="project-structure-for-no-locblazor-apps"></a>앱에 대 한 프로젝트 구조 Blazor
 
 중요 한 프로젝트 구조 차이에도 불구 하 고 ASP.NET Web Forms 하 고 Blazor 다양 한 개념을 공유 합니다. 여기서는 프로젝트의 구조를 살펴보고 Blazor ASP.NET Web Forms 프로젝트와 비교 합니다.
 
@@ -24,7 +22,7 @@ ms.locfileid: "86173044"
 
 ## <a name="project-file"></a>프로젝트 파일
 
-Blazor서버 앱은 .NET Core 프로젝트입니다. 서버 앱에 대 한 프로젝트 파일은 다음과 같이 간단 하 게 Blazor 가져올 수 있습니다.
+Blazor 서버 앱은 .NET Core 프로젝트입니다. 서버 앱에 대 한 프로젝트 파일은 다음과 같이 간단 하 게 Blazor 가져올 수 있습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -95,7 +93,7 @@ public class Program
 
 BlazorWebAssembly또한 앱은 *Program.cs*에서 진입점을 정의 합니다. 코드는 약간 다르게 보입니다. 코드는 앱 호스트를 설정 하 여 앱에 동일한 호스트 수준 서비스를 제공 한다는 점에서 유사 합니다. WebAssembly그러나 응용 프로그램 호스트는 브라우저에서 직접 실행 되므로 HTTP 서버를 설정 하지 않습니다.
 
-Blazor앱에는 `Startup` 응용 프로그램에 대 한 시작 논리를 정의 하 *는 global.asax* 파일 대신 클래스가 있습니다. `Startup`클래스는 앱 및 앱 별 서비스를 구성 하는 데 사용 됩니다. Blazor서버 앱에서 `Startup` 클래스는 Blazor 클라이언트 브라우저와 서버 간에에서 사용 되는 실시간 연결에 대 한 끝점을 설정 하는 데 사용 됩니다. 앱에서 Blazor WebAssembly `Startup` 클래스는 앱의 루트 구성 요소를 정의 하 고 렌더링 해야 하는 위치를 정의 합니다. `Startup` [앱 시작](./app-startup.md) 섹션의 클래스를 자세히 살펴보겠습니다.
+Blazor 앱에는 `Startup` 응용 프로그램에 대 한 시작 논리를 정의 하 *는 global.asax* 파일 대신 클래스가 있습니다. `Startup`클래스는 앱 및 앱 별 서비스를 구성 하는 데 사용 됩니다. Blazor서버 앱에서 `Startup` 클래스는 Blazor 클라이언트 브라우저와 서버 간에에서 사용 되는 실시간 연결에 대 한 끝점을 설정 하는 데 사용 됩니다. 앱에서 Blazor WebAssembly `Startup` 클래스는 앱의 루트 구성 요소를 정의 하 고 렌더링 해야 하는 위치를 정의 합니다. `Startup` [앱 시작](./app-startup.md) 섹션의 클래스를 자세히 살펴보겠습니다.
 
 ## <a name="static-files"></a>정적 파일
 
@@ -103,7 +101,7 @@ ASP.NET Web Forms 프로젝트와 달리 프로젝트의 모든 파일을 Blazor
 
 ## <a name="configuration"></a>구성
 
-ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor앱은 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신, Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 Blazor WebAssembly . 현재 앱은 동일한 구성 추상화를 지원 하지만 이후에 추가 된 기능 일 수 있습니다. 예를 들어 기본 Blazor 서버 앱은 *appsettings.js*에 일부 설정을 저장 합니다.
+ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor 앱은 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신, Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 Blazor WebAssembly . 현재 앱은 동일한 구성 추상화를 지원 하지만 이후에 추가 된 기능 일 수 있습니다. 예를 들어 기본 Blazor 서버 앱은 *appsettings.js*에 일부 설정을 저장 합니다.
 
 ```json
 {
@@ -142,7 +140,7 @@ ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config
 
 ## <a name="pages"></a>페이지
 
-앱의 페이지는 어디에 Blazor 있나요? BlazorASP.NET Web Forms apps의 *.aspx* 파일과 같이 주소 지정 가능한 페이지에 대 한 별도의 파일 확장명을 정의 하지 않습니다. 대신, 페이지는 구성 요소에 경로를 할당 하 여 정의 됩니다. 경로는 일반적으로 Razor 지시어를 사용 하 여 할당 됩니다 `@page` . 예를 들어 `Counter` *Pages/Counter. razor* 파일에서 작성 된 구성 요소는 다음 경로를 정의 합니다.
+앱의 페이지는 어디에 Blazor 있나요? Blazor ASP.NET Web Forms apps의 *.aspx* 파일과 같이 주소 지정 가능한 페이지에 대 한 별도의 파일 확장명을 정의 하지 않습니다. 대신, 페이지는 구성 요소에 경로를 할당 하 여 정의 됩니다. 경로는 일반적으로 Razor 지시어를 사용 하 여 할당 됩니다 `@page` . 예를 들어 `Counter` *Pages/Counter. razor* 파일에서 작성 된 구성 요소는 다음 경로를 정의 합니다.
 
 ```razor
 @page "/counter"
@@ -154,11 +152,11 @@ ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config
 
 Blazor [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에서 라우팅하는 방법에 대해 더 자세히 살펴보겠습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 ASP.NET Web Forms apps에서 일반 페이지 레이아웃은 마스터*페이지 (site.master*)를 사용 하 여 처리 됩니다. Blazor앱에서 페이지 레이아웃은 레이아웃 구성 요소 (*Shared/mainlayout. razor*)를 사용 하 여 처리 됩니다. 레이아웃 구성 요소는 [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에 자세히 설명 되어 있습니다.
 
-## <a name="bootstrap-blazor"></a>부트스트랩Blazor
+## <a name="bootstrap-no-locblazor"></a>부트스트랩 Blazor
 
 부트스트랩 하려면 Blazor 앱에서 다음을 수행 해야 합니다.
 
@@ -167,7 +165,7 @@ ASP.NET Web Forms apps에서 일반 페이지 레이아웃은 마스터*페이�
 
 Blazor서버 앱에서 루트 구성 요소의 호스트 페이지는 *_Host. cshtml* 파일에 정의 되어 있습니다. 이 파일은 구성 요소가 아닌 Razor 페이지를 정의 합니다. Razor Pages Razor 구문를 사용 하 여 .aspx 페이지와 매우 유사한 서버 주소 지정 가능 페이지를 정의 합니다 *.* `Html.RenderComponentAsync<TComponent>(RenderMode)`메서드는 루트 수준 구성 요소를 렌더링 해야 하는 위치를 정의 하는 데 사용 됩니다. `RenderMode`옵션은 구성 요소가 렌더링 되는 방식을 나타냅니다. 다음 표에서는 지원 되는 옵션을 간략하게 설명 합니다 `RenderMode` .
 
-|옵션                        |설명       |
+|옵션                        |Description       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |브라우저와의 연결이 설정 되 면 대화형으로 렌더링 됨|
 |`RenderMode.ServerPrerendered`|첫 번째 미리 렌더링 된 대화형으로 렌더링|
@@ -243,7 +241,7 @@ public class Startup
 
 ## <a name="run-the-app"></a>앱 실행
 
-서버 앱을 실행 하려면 Blazor `F5` Visual Studio에서 키를 누릅니다. Blazor앱은 런타임 컴파일을 지원 하지 않습니다. 코드 및 구성 요소 태그 변경의 결과를 확인 하려면 디버거가 연결 된 앱을 다시 빌드하고 다시 시작 합니다. 디버거를 연결 하지 않고 ()를 실행 하는 경우 `Ctrl+F5` Visual Studio는 파일 변경 내용을 감시 하 고 변경 내용이 적용 되 면 앱을 다시 시작 합니다. 변경 사항이 적용 되 면 브라우저를 수동으로 새로 고칩니다.
+서버 앱을 실행 하려면 Blazor `F5` Visual Studio에서 키를 누릅니다. Blazor 앱은 런타임 컴파일을 지원 하지 않습니다. 코드 및 구성 요소 태그 변경의 결과를 확인 하려면 디버거가 연결 된 앱을 다시 빌드하고 다시 시작 합니다. 디버거를 연결 하지 않고 ()를 실행 하는 경우 `Ctrl+F5` Visual Studio는 파일 변경 내용을 감시 하 고 변경 내용이 적용 되 면 앱을 다시 시작 합니다. 변경 사항이 적용 되 면 브라우저를 수동으로 새로 고칩니다.
 
 앱을 실행 하려면 Blazor WebAssembly 다음 방법 중 하나를 선택 합니다.
 

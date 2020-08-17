@@ -1,5 +1,5 @@
 ---
-title: Blazor앱 호스팅 모델
+title: Blazor 앱 호스팅 모델
 description: 또는 서버에서 브라우저를 포함 하 여 앱을 호스트 하는 여러 가지 방법을 알아봅니다 Blazor WebAssembly .
 author: danroth27
 ms.author: daroth
@@ -7,47 +7,45 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: a0d37392a65cfcbff9642476d9fdb1e5c662e66a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267609"
 ---
-# <a name="blazor-app-hosting-models"></a>Blazor앱 호스팅 모델
+# <a name="no-locblazor-app-hosting-models"></a>Blazor 앱 호스팅 모델
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Blazor앱은 ASP.NET Web Forms apps와 마찬가지로 IIS에서 호스팅될 수 있습니다. Blazor다음 방법 중 하나로 앱을 호스팅할 수도 있습니다.
+Blazor 앱은 ASP.NET Web Forms apps와 마찬가지로 IIS에서 호스팅될 수 있습니다. Blazor 다음 방법 중 하나로 앱을 호스팅할 수도 있습니다.
 
 - 클라이언트 쪽의 브라우저에 WebAssembly 있습니다.
 - ASP.NET Core 앱의 서버 쪽
 
-## <a name="blazor-webassembly-apps"></a>BlazorWebAssembly앱
+## <a name="no-locblazor-no-locwebassembly-apps"></a>BlazorWebAssembly앱
 
 BlazorWebAssembly앱은 기반 .net 런타임의 브라우저에서 직접 실행 WebAssembly 됩니다. BlazorWebAssembly앱은 각도 또는 반응 처럼 프런트 엔드 JavaScript 프레임 워크와 비슷한 방식으로 작동 합니다. 그러나 JavaScript를 작성 하는 대신 c #을 작성 합니다. 앱 어셈블리 및 모든 필수 종속성과 함께 .NET 런타임이 앱과 함께 다운로드 됩니다. 브라우저 플러그 인 또는 확장이 필요 하지 않습니다.
 
 다운로드 된 어셈블리는 다른 .NET 앱에서 사용 하는 것과 같은 일반적인 .NET 어셈블리입니다. 런타임에서는 .NET Standard을 지원 하기 때문에 기존 .NET Standard 라이브러리를 앱과 함께 사용할 수 있습니다 Blazor WebAssembly . 그러나 이러한 어셈블리는 여전히 브라우저 보안 샌드박스에서 실행 됩니다. 일부 기능은 <xref:System.PlatformNotSupportedException> 파일 시스템에 액세스 하거나 임의의 네트워크 연결을 여는 등의을 throw 할 수 있습니다.
 
-앱이 로드 되 면 .NET 런타임이 시작 되 고 응용 프로그램 어셈블리를 가리킵니다. 앱 시작 논리가 실행 되 고 루트 구성 요소가 렌더링 됩니다. Blazor구성 요소의 렌더링 된 출력을 기반으로 UI 업데이트를 계산 합니다. 그러면 DOM 업데이트가 적용 됩니다.
+앱이 로드 되 면 .NET 런타임이 시작 되 고 응용 프로그램 어셈블리를 가리킵니다. 앱 시작 논리가 실행 되 고 루트 구성 요소가 렌더링 됩니다. Blazor 구성 요소의 렌더링 된 출력을 기반으로 UI 업데이트를 계산 합니다. 그러면 DOM 업데이트가 적용 됩니다.
 
-![Blazor WebAssembly](media/hosting-models/blazor-webassembly.png)
+![::: no loc (Blazor):::::: no loc (Weasembomambommbomommboma):::](media/hosting-models/blazor-webassembly.png)
 
 BlazorWebAssembly앱은 전적으로 클라이언트 쪽을 실행 합니다. 이러한 앱은 GitHub 페이지 또는 Azure 정적 웹 사이트 호스팅 같은 정적 사이트 호스팅 솔루션에 배포할 수 있습니다. 서버에는 .NET이 필요 하지 않습니다. 앱의 일부에 대 한 심층 링크를 사용 하려면 일반적으로 서버에서 라우팅 솔루션이 필요 합니다. 라우팅 솔루션은 요청을 앱의 루트에 리디렉션합니다. 예를 들어 IIS에서 URL 다시 쓰기 규칙을 사용 하 여이 리디렉션을 처리할 수 있습니다.
 
 Blazor및 전체 스택 .net 웹 개발의 모든 이점을 얻으려면 Blazor WebAssembly ASP.NET Core으로 앱을 호스팅합니다. 클라이언트와 서버 모두에서 .NET을 사용 하면 일관 된 언어, 프레임 워크 및 도구 집합을 사용 하 여 코드를 쉽게 공유 하 고 앱을 빌드할 수 있습니다. BlazorBlazor앱과 ASP.NET Core 호스트 프로젝트를 모두 포함 하는 솔루션을 설정 하기 위한 편리한 템플릿을 제공 WebAssembly 합니다. 솔루션이 빌드될 때 앱에서 빌드된 정적 파일은 Blazor 대체 라우팅이 이미 설정 된 ASP.NET Core 앱에서 호스팅됩니다.
 
-## <a name="blazor-server-apps"></a>Blazor서버 앱
+## <a name="no-locblazor-server-apps"></a>Blazor 서버 앱
 
-[ Blazor 아키텍처](architecture-comparison.md#blazor) 에 Blazor 대 한 설명은 구성 요소가 이라는 중간 추상화로 출력을 렌더링 `RenderTree` 합니다. Blazor그런 다음 프레임 워크는 이전에 렌더링 된 항목을 사용 하 여 렌더링 된 항목을 비교 합니다. 차이점은 DOM에 적용 됩니다. Blazor구성 요소는 렌더링 된 출력이 적용 되는 방식에서 분리 됩니다. 따라서 구성 요소 자체는 UI를 업데이트 하는 프로세스와 동일한 프로세스에서 실행할 필요가 없습니다. 실제로 동일한 컴퓨터에서 실행 해야 하는 것은 아닙니다.
+[ Blazor 아키텍처](architecture-comparison.md#blazor) 에 Blazor 대 한 설명은 구성 요소가 이라는 중간 추상화로 출력을 렌더링 `RenderTree` 합니다. Blazor그런 다음 프레임 워크는 이전에 렌더링 된 항목을 사용 하 여 렌더링 된 항목을 비교 합니다. 차이점은 DOM에 적용 됩니다. Blazor 구성 요소는 렌더링 된 출력이 적용 되는 방식에서 분리 됩니다. 따라서 구성 요소 자체는 UI를 업데이트 하는 프로세스와 동일한 프로세스에서 실행할 필요가 없습니다. 실제로 동일한 컴퓨터에서 실행 해야 하는 것은 아닙니다.
 
 Blazor서버 앱에서 구성 요소는 브라우저에서 클라이언트 쪽이 아닌 서버에서 실행 됩니다. 브라우저에서 발생 하는 UI 이벤트는 실시간 연결을 통해 서버에 전송 됩니다. 이벤트는 올바른 구성 요소 인스턴스로 디스패치 됩니다. 구성 요소가 렌더링 되 고, 계산 된 UI 차이는 serialize 되어 DOM에 적용 되는 브라우저에 전송 됩니다.
 
-![Blazor서버인](media/hosting-models/blazor-server.png)
+![::: no loc (Blazor)::: Server](media/hosting-models/blazor-server.png)
 
-BlazorASP.NET AJAX 및 컨트롤을 사용 하는 경우 서버 호스팅 모델이 익숙할 수 있습니다 <xref:System.Web.UI.UpdatePanel> . `UpdatePanel`컨트롤은 페이지의 트리거 이벤트에 대 한 응답으로 부분 페이지 업데이트 적용을 처리 합니다. 트리거된 경우은 `UpdatePanel` 부분 업데이트를 요청한 다음 페이지를 새로 고칠 필요 없이 적용 합니다. UI 상태는를 사용 하 여 관리 됩니다 `ViewState` . Blazor서버 앱은 응용 프로그램에 클라이언트와의 활성 연결이 필요 하다는 차이가 있습니다. 또한 모든 UI 상태가 서버에서 유지 관리 됩니다. 이러한 차이를 제외 하 고 두 모델은 개념적으로 유사 합니다.
+BlazorASP.NET AJAX 및 컨트롤을 사용 하는 경우 서버 호스팅 모델이 익숙할 수 있습니다 <xref:System.Web.UI.UpdatePanel> . `UpdatePanel`컨트롤은 페이지의 트리거 이벤트에 대 한 응답으로 부분 페이지 업데이트 적용을 처리 합니다. 트리거된 경우은 `UpdatePanel` 부분 업데이트를 요청한 다음 페이지를 새로 고칠 필요 없이 적용 합니다. UI 상태는를 사용 하 여 관리 됩니다 `ViewState` . Blazor 서버 앱은 응용 프로그램에 클라이언트와의 활성 연결이 필요 하다는 차이가 있습니다. 또한 모든 UI 상태가 서버에서 유지 관리 됩니다. 이러한 차이를 제외 하 고 두 모델은 개념적으로 유사 합니다.
 
-## <a name="how-to-choose-the-right-blazor-hosting-model"></a>올바른 호스팅 모델을 선택 하는 방법 Blazor
+## <a name="how-to-choose-the-right-no-locblazor-hosting-model"></a>올바른 호스팅 모델을 선택 하는 방법 Blazor
 
 [ Blazor 호스팅 모델 문서](/aspnet/core/blazor/hosting-models)에 설명 된 대로 서로 다른 Blazor 호스팅 모델은 서로 다른 장단점을 갖습니다.
 
@@ -84,7 +82,7 @@ Blazor WebAssembly 호스팅 모델에는 다음과 같은 이점이 있습니�
 
 ## <a name="deploy-your-app"></a>앱 배포
 
-ASP.NET Web Forms 앱은 일반적으로 Windows Server 컴퓨터 또는 클러스터의 IIS에서 호스팅됩니다. Blazor앱은 다음을 수행할 수도 있습니다.
+ASP.NET Web Forms 앱은 일반적으로 Windows Server 컴퓨터 또는 클러스터의 IIS에서 호스팅됩니다. Blazor 앱은 다음을 수행할 수도 있습니다.
 
 - 정적 파일 또는 ASP.NET Core 앱으로 IIS에서 호스팅되어야 합니다.
 - ASP.NET Core의 유연성을 활용 하 여 다양 한 플랫폼 및 서버 인프라에서 호스트할 수 있습니다. 예를 들어 Blazor Linux에서 [Nginx](/aspnet/core/host-and-deploy/linux-nginx) 또는 [Apache](/aspnet/core/host-and-deploy/linux-apache) 를 사용 하 여 앱을 호스트할 수 있습니다. 앱을 게시 하 고 배포 하는 방법에 대 한 자세한 내용은 Blazor Blazor [호스팅 및 배포](/aspnet/core/host-and-deploy/blazor/) 설명서를 참조 하세요.
