@@ -2,12 +2,12 @@
 title: .NET Core의 EventCounters
 description: 이 문서에서는 EventCounters의 정의, 구현 방법 및 사용 방법에 대해 알아봅니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: 68868ff8b4e1393fc3b23af2bc8eef239ac56975
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024971"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062966"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core의 EventCounters
 
@@ -177,7 +177,9 @@ EventCounters는 Azure Monitor에서, 특히 Azure Application Insights에서 �
 
 #### <a name="dotnet-monitor"></a>dotnet-monitor
 
-`dotnet-monitor`는 .NET 프로세스의 진단 정보에 쉽게 액세스할 수 있게 해 주는 실험적 도구입니다. 자세한 내용은 [실험적 도구 dotnet-monitor 소개](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)를 참조하세요.
+`dotnet-monitor` 도구는 .NET 프로세스의 진단 정보에 쉽게 액세스할 수 있게 해 주는 실험적 도구입니다. 이 도구는 모든 진단 도구의 상위 집합으로 사용됩니다. 추적 외에도, 메트릭을 모니터링하고 메모리 덤프를 수집하고 GC 덤프를 수집할 수 있습니다. CLI 도구와 Docker 이미지 둘 다로 배포됩니다. 해당 도구가 REST API를 노출하면 진단 아티팩트의 컬렉션이 REST 호출을 통해 발생합니다.
+
+자세한 내용은 [실험적 도구 dotnet-monitor 소개](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)를 참조하세요.
 
 ### <a name="consume-in-proc"></a>In-proc에서 사용
 

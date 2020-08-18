@@ -4,12 +4,12 @@ description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개�
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398714"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063356"
 ---
 # <a name="methods"></a>메서드
 
@@ -33,7 +33,7 @@ ms.locfileid: "79398714"
 이러한 부분이 결합되어 메서드 시그니처를 구성합니다.
 
 > [!NOTE]
-> 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 파트입니다.
+> 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 부분입니다.
 
 다음 예제에서는 다섯 개의 메서드를 포함하는 `Motorcycle`이라는 클래스를 정의합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "79398714"
 
 ## <a name="passing-parameters"></a>매개 변수 전달
 
-C#의 형식은 *값 형식* 또는 *참조 형식*입니다. 기본 제공 값 형식 목록을 보려면 [형식 및 변수](./tour-of-csharp/types-and-variables.md)를 참조하세요. 기본적으로, 값 형식과 참조 형식은 둘 다 값으로 메서드에 전달됩니다.
+C#의 형식은 *값 형식* 또는 *참조 형식*입니다. 기본 제공 값 형식의 목록은 [형식](./tour-of-csharp/types.md)을 참조하세요. 기본적으로, 값 형식과 참조 형식은 둘 다 값으로 메서드에 전달됩니다.
 
 <a name="byval"></a>
 
@@ -276,9 +276,9 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="iterators"></a>Iterators
 
-반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
+반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](language-reference/keywords/yield.md) 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
 
-반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
+반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
 
 자세한 내용은 [반복기](programming-guide/concepts/iterators.md)를 참조하세요.
 
