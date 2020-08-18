@@ -4,12 +4,12 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: f7cd7caf11d9f076a5d6e82aae696c914bd60e44
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 33c438b88f1e993f4648786da9b20b91961b7ee1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916844"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062992"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 연산자(C# 참조)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87916844"
 >
 > [!code-csharp-interactive[lambda expression](snippets/shared/DelegateOperator.cs#Lambda)]
 >
-> 람다 식의 기능(예: 외부 변수 캡처)에 대한 자세한 내용은 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.
+> 람다 식의 기능(예: 외부 변수 캡처)에 대한 자세한 내용은 [람다 식](lambda-expressions.md)을 참조하세요.
 
 `delegate` 연산자를 사용하는 경우 매개 변수 목록을 생략할 수 있습니다. 이렇게 하면 다음 예제와 같이 매개 변수 목록을 사용하여 생성된 무명 메서드를 대리자 형식으로 변환할 수 있습니다.
 

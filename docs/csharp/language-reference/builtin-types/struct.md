@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021265"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062498"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -111,7 +111,7 @@ C# 7.2부터 구조체 형식 선언에 `ref` 한정자를 사용할 수 있습�
 - `ref` 구조체는 인터페이스를 구현할 수 없습니다.
 - `ref` 구조체는 <xref:System.ValueType?displayProperty=nameWithType> 또는 <xref:System.Object?displayProperty=nameWithType>에 boxing할 수 없습니다.
 - `ref` 구조체는 형식 인수일 수 없습니다.
-- [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [로컬 함수](../../programming-guide/classes-and-structs/local-functions.md)에서 `ref` 구조체 변수를 캡처할 수 없습니다.
+- [람다 식](../operators/lambda-expressions.md) 또는 [로컬 함수](../../programming-guide/classes-and-structs/local-functions.md)에서 `ref` 구조체 변수를 캡처할 수 없습니다.
 - [`async`](../keywords/async.md) 메서드에서는 `ref` 구조체 변수를 사용할 수 없습니다. 그러나 동기 메서드에서는 `ref` 구조체 변수(예: <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 변수)를 사용할 수 있습니다.
 - [반복기](../../iterators.md)에서는 `ref` 구조체 변수를 사용할 수 없습니다.
 

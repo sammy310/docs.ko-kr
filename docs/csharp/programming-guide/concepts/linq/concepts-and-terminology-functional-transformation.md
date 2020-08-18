@@ -3,12 +3,12 @@ title: 개념과 용어(함수 변환)(C#)
 description: 함수형 프로그래밍 기능을 사용하면 XML을 쉽게 변환할 수 있습니다. C#에서의 순수 함수 변환의 개념과 용어에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103975"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063278"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>개념과 용어(함수 변환)(C#)
 
@@ -55,7 +55,7 @@ ms.locfileid: "87103975"
 람다 식 \
 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 인라인 익명 함수입니다. 이는 람다 식에 대한 간략한 정의이지만 이 자습서의 목적에 적합합니다.
 
-자세한 내용은 [람다 식](../../statements-expressions-operators/lambda-expressions.md)을 참조하세요.
+자세한 내용은 [람다 식](../../../language-reference/operators/lambda-expressions.md)을 참조하세요.
 
 컬렉션 \
 대개 동일한 형식을 갖고 있는 구조화된 데이터 집합입니다. LINQ와 호환되려면 컬렉션은 <xref:System.Collections.IEnumerable> 인터페이스나 <xref:System.Linq.IQueryable> 인터페이스(또는 해당하는 제네릭 항목인 <xref:System.Collections.Generic.IEnumerator%601> 또는 <xref:System.Linq.IQueryable%601> 중 하나)를 구현해야 합니다.

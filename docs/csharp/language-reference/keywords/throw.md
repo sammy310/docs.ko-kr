@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398114"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063122"
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
 
@@ -57,7 +57,7 @@ C# 7.0부터 `throw`를 명령문뿐만 아니라 식으로도 사용할 수 있
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 식 본문 [람다](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 메서드. 다음 예제에서는 <xref:System.DateTime> 값으로 변환이 지원되지 않기 때문에 <xref:System.InvalidCastException>을 throw하는 식 본문 메서드를 보여 줍니다.
+- 식 본문 [람다](../operators/lambda-expressions.md) 또는 메서드. 다음 예제에서는 <xref:System.DateTime> 값으로 변환이 지원되지 않기 때문에 <xref:System.InvalidCastException>을 throw하는 식 본문 메서드를 보여 줍니다.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 

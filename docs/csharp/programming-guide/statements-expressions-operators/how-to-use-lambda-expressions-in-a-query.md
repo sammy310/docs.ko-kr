@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ef8a7e3b4cd5302d6c928ad7ad81811797777b4a
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381634"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063252"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>쿼리에 람다 식을 사용하는 방법(C# 프로그래밍 가이드)
 람다 식은 쿼리 구문에 직접 사용하지 않고 메서드 호출에 사용하며, 쿼리 식에 메서드 호출이 포함될 수 있습니다. 실제로 일부 쿼리 작업은 메서드 구문으로만 표현할 수 있습니다. 쿼리 구문과 메서드 구문 간의 차이점에 대한 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
@@ -32,5 +32,5 @@ ms.locfileid: "87381634"
   
 ## <a name="see-also"></a>참조
 
-- [람다 식](./lambda-expressions.md)
+- [람다 식](../../language-reference/operators/lambda-expressions.md)
 - [식 트리(C#)](../concepts/expression-trees/index.md)

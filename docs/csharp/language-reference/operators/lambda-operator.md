@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 30e1a3546f83a0a1ba5b1363238878868e94ab93
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916802"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063135"
 ---
 # <a name="-operator-c-reference"></a>=> 연산자(C# 참조)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87916802"
 
 ## <a name="lambda-operator"></a>람다 연산자
 
-[람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)에서 람다 연산자 `=>`은 왼쪽의 입력 매개 변수를 오른쪽의 람다 본문과 구분합니다.
+[람다 식](lambda-expressions.md)에서 람다 연산자 `=>`은 왼쪽의 입력 매개 변수를 오른쪽의 람다 본문과 구분합니다.
 
 다음 예제에서는 메서드 구문이 포함된 [LINQ](../../programming-guide/concepts/linq/index.md) 기능을 사용하여 람다 식의 사용법을 보여줍니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "87916802"
 
 [!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
-자세한 내용은 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.
+자세한 내용은 [람다 식](lambda-expressions.md)을 참조하세요.
 
 ## <a name="expression-body-definition"></a>식 본문 정의
 

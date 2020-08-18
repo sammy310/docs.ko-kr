@@ -1,13 +1,14 @@
 ---
 title: '자습서: .NET Core 도구 만들기'
 description: .NET Core 도구를 만드는 방법을 알아봅니다. 도구는 .NET Core CLI를 사용하여 설치되는 콘솔 애플리케이션입니다.
+ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156727"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062784"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 도구 만들기
 

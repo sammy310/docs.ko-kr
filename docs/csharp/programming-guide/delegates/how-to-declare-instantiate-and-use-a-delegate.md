@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 8d4c8424b07a9bccc9112ca9e635a78b9e1a3366
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300217"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063668"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>대리자를 선언, 인스턴스화, 사용하는 방법(C# 프로그래밍 가이드)
 C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수 있습니다.  
@@ -31,7 +31,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- 자세한 내용은 [람다 식](../statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
+ 자세한 내용은 [람다 식](../../language-reference/operators/lambda-expressions.md)을 참조하세요.  
   
  다음 예제에서는 대리자를 선언, 인스턴스화 및 사용하는 방법을 보여 줍니다. `BookDB` 클래스는 책 데이터베이스를 유지 관리하는 서점 데이터베이스를 캡슐화합니다. 그리고 데이터베이스의 모든 문고판 책을 찾아 각 책에 대해 대리자를 호출하는 `ProcessPaperbackBooks` 메서드를 표시합니다. 이때 사용되는 `delegate` 형식의 이름은 `ProcessBookDelegate`입니다. `Test` 클래스는 이 클래스를 사용하여 문고판 책의 제목과 평균 가격을 인쇄합니다.  
   

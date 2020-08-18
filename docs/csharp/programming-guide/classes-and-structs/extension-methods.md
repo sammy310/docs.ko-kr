@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474815"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063707"
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 
@@ -22,7 +22,7 @@ ms.locfileid: "86474815"
 
 ### <a name="orderby-example"></a>OrderBy 예제
 
-다음 예제에서는 정수 배열에서 표준 쿼리 연산자 `OrderBy`를 호출하는 방법을 보여 줍니다. 괄호 안의 식은 람다 식입니다. 많은 표준 쿼리 연산자가 람다 식을 매개 변수로 사용하지만 확장명 메서드에 대한 요구 사항은 아닙니다. 자세한 내용은 [람다 식](../statements-expressions-operators/lambda-expressions.md)을 참조하세요.
+다음 예제에서는 정수 배열에서 표준 쿼리 연산자 `OrderBy`를 호출하는 방법을 보여 줍니다. 괄호 안의 식은 람다 식입니다. 많은 표준 쿼리 연산자가 람다 식을 매개 변수로 사용하지만 확장명 메서드에 대한 요구 사항은 아닙니다. 자세한 내용은 [람다 식](../../language-reference/operators/lambda-expressions.md)을 참조하세요.
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
@@ -121,7 +121,7 @@ static class DomainEntityExtensions
 
 - [C# 프로그래밍 가이드](../index.md)
 - [병렬 프로그래밍 샘플(많은 예제 확장 메서드 포함)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
-- [람다 식](../statements-expressions-operators/lambda-expressions.md)
+- [람다 식](../../language-reference/operators/lambda-expressions.md)
 - [표준 쿼리 연산자 개요](../concepts/linq/standard-query-operators-overview.md)
 - [인스턴스 매개 변수의 변환 규칙 및 그에 따른 영향](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [언어 간 확장 메서드 상호 운용성](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)

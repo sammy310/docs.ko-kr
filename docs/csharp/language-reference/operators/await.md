@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916915"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063239"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87916915"
 > [!NOTE]
 > 비동기 프로그래밍에 대한 소개는 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)을 참조하세요. `async` 및 `await`를 사용하는 비동기 프로그래밍은 [작업 기반 비동기 패턴](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 따릅니다.
 
-[async](../keywords/async.md) 키워드로 수정된 메서드, [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](delegate-operator.md)에는 `await` 연산자만 사용할 수 있습니다. 비동기 메서드 내의 동기 함수 본문, [lock 문](../keywords/lock-statement.md) 블록 및 [unsafe](../keywords/unsafe.md) 컨텍스트에서는 `await` 연산자를 사용할 수 없습니다.
+[async](../keywords/async.md) 키워드로 수정된 메서드, [람다 식](lambda-expressions.md) 또는 [무명 메서드](delegate-operator.md)에는 `await` 연산자만 사용할 수 있습니다. 비동기 메서드 내의 동기 함수 본문, [lock 문](../keywords/lock-statement.md) 블록 및 [unsafe](../keywords/unsafe.md) 컨텍스트에서는 `await` 연산자를 사용할 수 없습니다.
 
 `await` 연산자의 피연산자는 일반적으로 .NET 형식인 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 또는 <xref:System.Threading.Tasks.ValueTask%601> 중 하나에 해당합니다. 그러나 대기 가능한 모든 식은 `await` 연산자의 피연산자일 수 있습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대기 가능 식](~/_csharplang/spec/expressions.md#awaitable-expressions) 섹션을 참조하세요.
 

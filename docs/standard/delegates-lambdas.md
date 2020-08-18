@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244012"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063746"
 ---
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
@@ -159,4 +159,4 @@ public MainWindow()
 
 * [대리자](../csharp/programming-guide/delegates/index.md)
 * [익명 함수](../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [람다 식](../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [람다 식](../csharp/language-reference/operators/lambda-expressions.md)

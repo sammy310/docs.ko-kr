@@ -3,12 +3,12 @@ title: C#에서 LINQ 쿼리 작성하기
 description: C#에서 LINQ 쿼리를 작성하는 방법을 알아봅니다.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd7da81f2873c6a25570cab32fafecc66fd98be4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65632891"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063447"
 ---
 # <a name="write-linq-queries-in-c"></a>C\#에서 LINQ 쿼리 작성하기
 
@@ -43,7 +43,7 @@ ms.locfileid: "65632891"
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-메서드에 Action 또는 Func 매개 변수가 있는 경우 다음 예제와 같이 [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) 식의 형식으로 제공됩니다.
+메서드에 Action 또는 Func 매개 변수가 있는 경우 다음 예제와 같이 [lambda](../language-reference/operators/lambda-expressions.md) 식의 형식으로 제공됩니다.
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 

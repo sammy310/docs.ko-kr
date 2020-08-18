@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 46b0e44182d22158aa5fa54a0f44bae70aa8ddd9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300763"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063044"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ의 쿼리 구문 및 메서드 구문(C#)
 LINQ(Language Integrated Query) 소개 설명서에 있는 대부분의 쿼리는 LINQ 선언적 쿼리 구문을 사용하여 작성되었습니다. 그러나 쿼리 구문은 코드를 컴파일할 때 .NET CLR(공용 언어 런타임)에 대한 메서드 호출로 변환해야 합니다. 이러한 메서드 호출은 `Where`, `Select`, `GroupBy`, `Join`, `Max`, `Average` 등과 같은 표준 쿼리 연산자를 호출합니다. 사용자는 쿼리 구문 대신 메서드 구문을 사용하여 연산자를 직접 호출할 수 있습니다.  
@@ -38,7 +38,7 @@ LINQ(Language Integrated Query) 소개 설명서에 있는 대부분의 쿼리�
 ## <a name="lambda-expressions"></a>람다 식  
  앞의 예제에서 조건식(`num % 2 == 0`)은 `Where` 메서드(`Where(num => num % 2 == 0).`)에 인라인 인수로 전달됩니다. 이 인라인 식을 람다 식이라고 합니다. 이 방법을 사용하면 무명 메서드나 제네릭 대리자 또는 식 트리로서 좀 더 복잡한 형식으로 작성해야 하는 코드를 편리하게 작성할 수 있습니다. C#에서 `=>`는 "goes to"로 읽는 람다 연산자입니다. 연산자 왼쪽의 `num`은 쿼리 식의 `num`에 해당하는 입력 변수입니다. 컴파일러는 `numbers`가 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 형식이라는 것을 알고 있으므로 `num`의 형식을 유추할 수 있습니다. 람다의 본문은 쿼리 구문의 식 또는 다른 C# 식이나 문의 식과 동일하며, 메서드 호출 및 기타 복잡한 논리를 포함할 수 있습니다. "반환 값"은 식 결과입니다.  
   
- LINQ 사용을 시작하기 위해 람다를 광범위하게 사용할 필요는 없습니다. 그러나 특정 쿼리는 메서드 구문으로만 표현할 수 있으며 그중 일부는 람다 식이 필요합니다. 람다에 익숙해지면 LINQ 도구 상자에서 람다가 강력하고 유연한 도구임을 알게 될 것입니다. 자세한 내용은 [람다 식](../../statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
+ LINQ 사용을 시작하기 위해 람다를 광범위하게 사용할 필요는 없습니다. 그러나 특정 쿼리는 메서드 구문으로만 표현할 수 있으며 그중 일부는 람다 식이 필요합니다. 람다에 익숙해지면 LINQ 도구 상자에서 람다가 강력하고 유연한 도구임을 알게 될 것입니다. 자세한 내용은 [람다 식](../../../language-reference/operators/lambda-expressions.md)을 참조하세요.  
   
 ## <a name="composability-of-queries"></a>쿼리 작성 가능성  
  이전 코드 예제에서는 `Where` 호출 시 점 연산자를 사용하여 `OrderBy` 메서드를 호출합니다. `Where`가 필터링된 시퀀스를 생성하면 `Orderby`는 이를 정렬하여 해당 시퀀스에서 작동합니다. 쿼리는 `IEnumerable`을 반환하기 때문에, 사용자는 메서드 호출을 함께 연결하여 메서드 구문에서 쿼리를 작성합니다. 사용자가 쿼리 구문을 사용하여 쿼리를 작성할 때 백그라운드에서는 컴파일러가 이 작업을 수행합니다. 쿼리 변수는 쿼리 결과를 저장하지 않기 때문에 언제든지 수정할 수 있으며, 실행한 후에도 언제든지 새 쿼리의 기반으로 사용할 수 있습니다.  

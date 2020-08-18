@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381673"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063265"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 
 익명 함수는 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 “인라인” 문 또는 식입니다. 이를 사용하여 명명된 대리자를 초기화하거나 명명된 대리자 형식 대신 이를 메서드 매개 변수로 전달할 수 있습니다.
 
-[람다 식](lambda-expressions.md) 또는 [무명 메서드](../../language-reference/operators/delegate-operator.md)를 사용하여 익명 함수를 만들 수 있습니다. 인라인 코드를 작성하는 더 간결하고 이해하기 쉬운 방법을 제공하는 람다 식을 사용하는 것이 좋습니다. 무명 메서드와 달리 일부 형식의 람다 식은 식 트리 형식으로 변환될 수 있습니다.
+[람다 식](../../language-reference/operators/lambda-expressions.md) 또는 [무명 메서드](../../language-reference/operators/delegate-operator.md)를 사용하여 익명 함수를 만들 수 있습니다. 인라인 코드를 작성하는 더 간결하고 이해하기 쉬운 방법을 제공하는 람다 식을 사용하는 것이 좋습니다. 무명 메서드와 달리 일부 형식의 람다 식은 식 트리 형식으로 변환될 수 있습니다.
 
 ## <a name="the-evolution-of-delegates-in-c"></a>C\#에서 대리자의 발전
 
@@ -35,6 +35,6 @@ ms.locfileid: "87381673"
 ## <a name="see-also"></a>참조
 
 - [문, 식, 연산자](./index.md)
-- [람다 식](./lambda-expressions.md)
+- [람다 식](../../language-reference/operators/lambda-expressions.md)
 - [대리자](../delegates/index.md)
 - [식 트리(C#)](../concepts/expression-trees/index.md)

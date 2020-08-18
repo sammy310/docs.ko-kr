@@ -1,13 +1,14 @@
 ---
 title: '자습서: .NET Core 로컬 도구 설치 및 사용'
 description: .NET 도구를 로컬 도구로 설치하고 사용하는 방법을 알아봅니다.
+ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156701"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062678"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용
 

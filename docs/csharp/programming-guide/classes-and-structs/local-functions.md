@@ -4,12 +4,12 @@ description: C#의 로컬 함수는 다른 멤버에 중첩되어 포함된 멤�
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864529"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063304"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 
@@ -78,7 +78,7 @@ C# 7.0부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 �
 
 ## <a name="local-functions-vs-lambda-expressions"></a>로컬 함수 및 람다 식
 
-얼핏 보기에 로컬 함수와 [람다 식](../statements-expressions-operators/lambda-expressions.md)은 매우 유사합니다. 대부분의 경우 람다 식과 로컬 함수 사용 간 선택은 스타일 및 개인 기본 설정의 문제입니다. 그러나 하나 또는 다른 것을 사용할 수 있는 것에 알고 있어야 하는 실제 차이점이 있습니다.
+얼핏 보기에 로컬 함수와 [람다 식](../../language-reference/operators/lambda-expressions.md)은 매우 유사합니다. 대부분의 경우 람다 식과 로컬 함수 사용 간 선택은 스타일 및 개인 기본 설정의 문제입니다. 그러나 하나 또는 다른 것을 사용할 수 있는 것에 알고 있어야 하는 실제 차이점이 있습니다.
 
 계승 알고리즘의 로컬 함수 및 람다 식 구현 간의 차이점을 살펴보겠습니다. 먼저 로컬 함수를 사용하는 버전은 다음과 같습니다.
 

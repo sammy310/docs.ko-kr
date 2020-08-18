@@ -4,12 +4,12 @@ description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507379"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062485"
 ---
 # <a name="iterators"></a>반복기
 
@@ -195,7 +195,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-이전 동작에서는 람다 식과 관련된 버그를 진단하기가 어렵고 미묘할 수 있기 때문에 변경되었습니다. 람다 식에 대한 자세한 내용은 [람다 식](./programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.
+이전 동작에서는 람다 식과 관련된 버그를 진단하기가 어렵고 미묘할 수 있기 때문에 변경되었습니다. 람다 식에 대한 자세한 내용은 [람다 식](language-reference/operators/lambda-expressions.md)을 참조하세요.
 
 컴파일러에서 생성되는 정확한 코드는 약간 더 복잡하며 `GetEnumerator()`에서 반환된 개체가 `IDisposable` 인터페이스를 구현하는 상황을 처리합니다. 전체 확장에서는 다음과 더 유사한 코드를 생성합니다.
 

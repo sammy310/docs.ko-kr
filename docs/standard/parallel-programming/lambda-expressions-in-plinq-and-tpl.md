@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: 3d985a003fe613699c89e38583f84be9e21b383d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 469c164630e1dab84b3d54c16c43d031ebf560ed
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290670"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063772"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 및 TPL의 람다 식
 
 TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?displayProperty=nameWithType> 또는 <xref:System.Action?displayProperty=nameWithType> 패밀리 중 하나를 입력 매개 변수로 사용하는 많은 메서드가 포함되어 있습니다. 이러한 대리자를 사용하여 병렬 루프, 작업 또는 쿼리에 사용자 지정 프로그램 논리를 전달합니다. TPL 및 PLINQ에 대한 코드 예제는 람다 식을 사용하여 인라인 코드 블록으로 해당 대리자의 인스턴스를 만듭니다. 이 항목에서는 Func 및 Action에 대한 간략한 소개를 제공하고 작업 병렬 라이브러리 및 PLINQ에서 람다 식을 사용하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 일반적인 대리자에 대한 자세한 내용은 [대리자](../../csharp/programming-guide/delegates/index.md) 및 [대리자](../../visual-basic/programming-guide/language-features/delegates/index.md)를 참조하세요. C# 및 Visual Basic의 람다 식에 대한 자세한 내용은 [람다 식](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 및 [람다 식](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.
+> 일반적인 대리자에 대한 자세한 내용은 [대리자](../../csharp/programming-guide/delegates/index.md) 및 [대리자](../../visual-basic/programming-guide/language-features/delegates/index.md)를 참조하세요. C# 및 Visual Basic의 람다 식에 대한 자세한 내용은 [람다 식](../../csharp/language-reference/operators/lambda-expressions.md) 및 [람다 식](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.
 
 ## <a name="func-delegate"></a>Func 대리자
 

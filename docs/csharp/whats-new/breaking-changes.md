@@ -1,13 +1,14 @@
 ---
 title: C# 컴파일러의 호환성이 손상되는 변경
 description: 사용 중인 C# 컴파일러의 호환성이 손상되는 변경을 확인합니다.
+ms.topic: troubleshooting
 ms.date: 12/12/2019
-ms.openlocfilehash: 1b1f5d57c5fa6e86878d8aa59f602a92f59288d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 539282441a407e348f214981e4117c357effa682
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75437944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267973"
 ---
 # <a name="learn-about-any-breaking-changes-in-the-c-compiler"></a>C# 컴파일러의 호환성이 손상되는 변경에 대해 알아봅니다
 

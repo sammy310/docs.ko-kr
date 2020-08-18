@@ -1,13 +1,14 @@
 ---
 title: '자습서: .NET Core 전역 도구 설치 및 사용'
 description: .NET 도구를 전역 도구로 설치하고 사용하는 방법을 알아봅니다.
+ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156740"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062771"
 ---
 # <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용
 

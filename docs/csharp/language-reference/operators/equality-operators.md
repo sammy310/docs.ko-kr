@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 47e550226cdef31c82b30348d779207200f32b90
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916835"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063096"
 ---
 # <a name="equality-operators-c-reference"></a>같음 연산자(C# 참조)
 
@@ -69,7 +69,7 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../builtin-types/value-tu
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
 
-의미상 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 평가에서 생성된 대리자는 다음 예제와 같이 동일하지 않습니다.
+의미상 동일한 [람다 식](lambda-expressions.md) 평가에서 생성된 대리자는 다음 예제와 같이 동일하지 않습니다.
 
 [!code-csharp-interactive[from identical lambdas](snippets/shared/EqualityOperators.cs#IdenticalLambdas)]
 

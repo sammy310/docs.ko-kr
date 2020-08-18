@@ -2,13 +2,14 @@
 title: .NET Core 도구 사용 문제 해결
 description: .NET Core 도구를 실행할 때 발생하는 일반적인 문제와 가능한 해결 방법을 검색합니다.
 author: kdollard
+ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146452"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062638"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core 도구 사용 문제 해결
 
