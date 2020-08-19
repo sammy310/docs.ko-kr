@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: 507ee5cfc579a75231bf49b1db0d28ec32927ecd
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
+  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88268155"
+  ms.lasthandoff: 08/18/2020
+  ms.locfileid: "88559208"
 landingContent:
 - title: 시작
   linkLists:
@@ -22,10 +22,10 @@ landingContent:
       url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
-    - text: “Hello World” 앱 빌드
-      url: ../core/tutorials/vb-with-visual-studio.md
-    - text: 클래스 라이브러리 빌드
-      url: ../core/tutorials/vb-library-with-visual-studio.md
+    - text: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
+      url: ../core/tutorials/with-visual-studio.md
+    - text: Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
+      url: ../core/tutorials/library-with-visual-studio.md
     - text: 연습
       url: walkthroughs.md
     - text: 추가 자료
