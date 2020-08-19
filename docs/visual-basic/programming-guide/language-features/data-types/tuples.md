@@ -84,7 +84,7 @@ Visual Basic 튜플은 **system.valuetuple** 제네릭 형식 중 하나의 인�
 
 Visual Basic 튜플은 **system.valuetuple** 형식의 멤버를 상속 합니다. 이러한 필드 외에도 다음과 같은 메서드가 포함 됩니다.
 
-| 메서드 | Description |
+| 방법 | Description |
 | ---|---|
 | CompareTo | 현재 튜플을 동일한 수의 요소를 사용 하는 다른 튜플로 비교 합니다. |
 | 같음 | 현재 튜플이 다른 튜플 또는 개체와 같은지 여부를 확인 합니다. |

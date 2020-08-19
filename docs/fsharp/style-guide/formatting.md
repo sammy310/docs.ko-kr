@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 11/04/2019
-ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309705"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558311"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -100,37 +100,51 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Long 멤버 정의에 대해 새 줄에 매개 변수를 추가 합니다.
+### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>긴 정의를 위해 새 줄에 매개 변수를 추가 합니다.
 
-멤버 정의가 매우 긴 경우 새 줄에 매개 변수를 추가 하 고 다음 매개 변수의 들여쓰기 수준에 맞게 들여씁니다.
+함수 정의가 매우 긴 경우 새 줄에 매개 변수를 추가 하 고 다음 매개 변수의 들여쓰기 수준에 맞게 들여씁니다.
 
 ```fsharp
-type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+module M =
+    let LongFunctionWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                        =
         // ... the body of the method follows
 ```
 
-이는 생성자에도 적용 됩니다.
+이는 튜플을 사용 하 여 멤버, 생성자 및 매개 변수에도 적용 됩니다.
 
 ```fsharp
-type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type TM() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse) =
+        // ... the body of the method
+
+type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aSecondVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
 ```
 
-명시적 반환 형식 주석이 있는 경우 또는의 끝 `)` `=` 또는 새 줄에 있을 수 있습니다. 반환 형식에 긴 이름이 있는 경우 후자의 경우에는 다음을 수행 하는 것이 좋습니다.
+매개 변수가 비어 있는 경우 또는 명시적 반환 형식 주석이 있으면 `=` 새 줄에 문자를 추가 하는 것이 좋습니다.
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
-                                            : AVeryLongReturnType =
-        // ... the body of the method follows
+    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                            : AReturnType =
+        // ... the body of the method
+    member _.LongMethodWithLotsOfCurrifiedParams(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+                                                =
+        // ... the body of the method
 ```
+
+이 방법으로 너무 긴 줄을 방지 하는 방법 (반환 형식에 긴 이름이 있을 수 있음) 및 매개 변수를 추가할 때 줄 손상이 줄어듭니다.
 
 ### <a name="type-annotations"></a>형식 주석
 

@@ -2,12 +2,12 @@
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
 ms.date: 05/13/2020
-ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374496"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557648"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
 
@@ -139,7 +139,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 보안 주체에 특정 사용 권한이 있는지 테스트할 때 역할 및 범위의 조합이 고려 됩니다. 이 조합은 강력한 권한 부여 메커니즘을 제공 합니다.
 
-## <a name="deny"></a>Deny
+## <a name="deny"></a>거부
 
 이전에는 RBAC에 대해 "허용" 규칙만 허용 되었습니다. 이 동작은 일부 범위를 빌드하기에 복잡 했습니다. 예를 들어 잠재적으로 무한 한 저장소 계정 목록에 명시적 사용 권한을 부여 하는 것을 제외 하 고 모든 저장소 계정에 대 한 보안 주체 액세스를 허용 합니다. 새 저장소 계정을 만들 때마다이 계정 목록에 추가 해야 합니다. 이로 인해 바람직하지 않은 관리 오버 헤드가 발생 했습니다.
 
@@ -201,7 +201,7 @@ kubectl apply -f ./secret.yaml
 
 그런 다음 이러한 암호를 볼륨에 탑재 하거나 환경 변수를 통해 컨테이너 프로세스에 노출할 수 있습니다. 응용 프로그램 빌드에 대 한 [12 단계 앱](https://12factor.net/) 접근 방식은 응용 프로그램에 설정을 전송 하는 데 가장 낮은 공통 분모를 사용 하는 것을 제안 합니다. 환경 변수는 운영 체제 또는 응용 프로그램에 상관 없이 지원 되기 때문에 가장 낮은 공통 분모입니다.
 
-기본 제공 Kubernetes 암호를 사용 하는 대신 Kubernetes 내에서 Azure Key Vault의 비밀에 액세스할 수 있습니다. 이 작업을 수행 하는 가장 간단한 방법은 암호를 로드 하는 컨테이너에 RBAC 역할을 할당 하는 것입니다. 그런 다음 응용 프로그램은 Azure Key Vault Api를 사용 하 여 암호에 액세스할 수 있습니다. 그러나이 방법은 코드를 수정 해야 하며 환경 변수를 사용 하는 패턴을 따르지 않습니다. 대신 [Azure Key Vault 인젝터](https://mrdevops.io/introducing-azure-key-vault-to-kubernetes-931f82364354)를 사용 하 여 컨테이너에 값을 삽입할 수 있습니다. 이 방법은 클러스터의 사용자가 액세스할 수 있으므로 Kubernetes 암호를 직접 사용 하는 것 보다 실제로 더 안전 합니다.
+기본 제공 Kubernetes 암호를 사용 하는 대신 Kubernetes 내에서 Azure Key Vault의 비밀에 액세스할 수 있습니다. 이 작업을 수행 하는 가장 간단한 방법은 암호를 로드 하는 컨테이너에 RBAC 역할을 할당 하는 것입니다. 그런 다음 응용 프로그램은 Azure Key Vault Api를 사용 하 여 암호에 액세스할 수 있습니다. 그러나이 방법은 코드를 수정 해야 하며 환경 변수를 사용 하는 패턴을 따르지 않습니다. 대신 컨테이너에 값을 삽입할 수 있습니다. 이 방법은 클러스터의 사용자가 액세스할 수 있으므로 Kubernetes 암호를 직접 사용 하는 것 보다 실제로 더 안전 합니다.
 
 ## <a name="encryption-in-transit-and-at-rest"></a>전송 중 및 미사용 암호화
 

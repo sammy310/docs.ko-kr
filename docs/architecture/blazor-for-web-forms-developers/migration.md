@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267804"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557544"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms에서로 마이그레이션 Blazor
 
@@ -559,10 +559,6 @@ Web Forms 코드에 유효성 검사가 포함 된 경우 거의 변경 하지 �
 ```
 
 `EditForm`컨텍스트에는 유효성 검사 지원이 포함 되며 입력 주위에 래핑할 수 있습니다. 데이터 주석은 유효성 검사를 추가 하는 일반적인 방법입니다. 이러한 유효성 검사 지원은 구성 요소를 통해 추가할 수 있습니다 `DataAnnotationsValidator` . 이 메커니즘에 대 한 자세한 내용은 [ASP.NET Core Blazor 폼 및 유효성 검사](/aspnet/core/blazor/forms-validation)를 참조 하세요.
-
-## <a name="migrate-built-in-web-forms-controls"></a>기본 제공 Web Forms 컨트롤 마이그레이션
-
-*이 콘텐츠는 곧 제공 될 예정입니다.*
 
 ## <a name="migrate-configuration"></a>구성 마이그레이션
 

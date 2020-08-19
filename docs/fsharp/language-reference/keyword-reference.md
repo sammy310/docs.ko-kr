@@ -96,7 +96,7 @@ ms.locfileid: "88558103"
 |키워드|링크|Description|
 |-------|----|-----------|
 |`abstract`|[멤버](./members/index.md)<br /><br />[추상 클래스](abstract-classes.md)|선언 된 형식에 구현이 없거나 가상 이며 기본 구현을 포함 하는 메서드를 나타냅니다.|
-|`and`|[`let` 바인딩하](./functions/let-bindings.md)<br /><br />[레코드](records.md)<br /><br />[멤버](./members/index.md)<br /><br />[적용](./generics/constraints.md)|상호 재귀 바인딩과 레코드, 속성 선언 및 제네릭 매개 변수에 대 한 여러 제약 조건에 사용 됩니다.|
+|`and`|[`let` 바인딩하](./functions/let-bindings.md)<br /><br />[레코드](records.md)<br /><br />[멤버](./members/index.md)<br /><br />[제약 조건](./generics/constraints.md)|상호 재귀 바인딩과 레코드, 속성 선언 및 제네릭 매개 변수에 대 한 여러 제약 조건에 사용 됩니다.|
 |`as`|[클래스](classes.md)<br /><br />[패턴 일치](Pattern-Matching.md)|현재 클래스 개체에 개체 이름을 지정 하는 데 사용 됩니다. 패턴 일치 내에서 전체 패턴에 이름을 지정 하는 데도 사용 됩니다.|
 |`assert`|[어설션](assertions.md)|디버깅 하는 동안 코드를 확인 하는 데 사용 됩니다.|
 |`base`|[클래스](classes.md)<br /><br />[상속](inheritance.md)|기본 클래스 개체의 이름으로 사용 됩니다.|
@@ -135,12 +135,12 @@ ms.locfileid: "88558103"
 |`module`|[모듈](modules.md)|이름을 관련 형식, 값 및 함수 그룹에 연결 하 여 다른 코드와 논리적으로 구분 하는 데 사용 됩니다.|
 |`mutable`|[let 바인딩](./functions/let-bindings.md)|변수를 선언 하는 데 사용 됩니다. 값은 변경할 수 있습니다.|
 |`namespace`|[네임스페이스](namespaces.md)|이름을 관련 형식 및 모듈의 그룹과 연결 하 여 다른 코드와 논리적으로 구분 하는 데 사용 됩니다.|
-|`new`|[생성자](./members/constructors.md)<br /><br />[적용](./generics/constraints.md)|를 만들거나 개체를 만들 수 있는 생성자를 선언, 정의 또는 호출 하는 데 사용 됩니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 되어 형식에 특정 생성자가 있어야 함을 표시 합니다.|
-|`not`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[적용](./generics/constraints.md)|실제로 키워드가 아닙니다. 그러나를 `not struct` 조합 하 여 제네릭 매개 변수 제약 조건으로 사용 합니다.|
-|`null`|[Null 값](./values/null-values.md)<br /><br />[적용](./generics/constraints.md)|개체가 없다는 것을 나타냅니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 됩니다.|
+|`new`|[생성자](./members/constructors.md)<br /><br />[제약 조건](./generics/constraints.md)|를 만들거나 개체를 만들 수 있는 생성자를 선언, 정의 또는 호출 하는 데 사용 됩니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 되어 형식에 특정 생성자가 있어야 함을 표시 합니다.|
+|`not`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[제약 조건](./generics/constraints.md)|실제로 키워드가 아닙니다. 그러나를 `not struct` 조합 하 여 제네릭 매개 변수 제약 조건으로 사용 합니다.|
+|`null`|[Null 값](./values/null-values.md)<br /><br />[제약 조건](./generics/constraints.md)|개체가 없다는 것을 나타냅니다.<br /><br />제네릭 매개 변수 제약 조건에도 사용 됩니다.|
 |`of`|[구별된 공용 구조체](discriminated-unions.md)<br /><br />[대리자](delegates.md)<br /><br />[예외 형식](./exception-handling/exception-types.md)|구분 된 공용 구조체에서 값 범주 형식 및 대리자 및 예외 선언에 사용 됩니다.|
 |`open`|[가져오기 선언: `open` 키워드](import-declarations-the-open-keyword.md)|네임 스페이스 또는 모듈의 콘텐츠를 한정자 없이 사용할 수 있도록 하는 데 사용 됩니다.|
-|`or`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[적용](./generics/constraints.md)|부울 조건에 부울 `or` 연산자로 사용 됩니다. `||`와 같습니다.<br /><br />멤버 제약 조건에도 사용 됩니다.|
+|`or`|[기호 및 연산자 참조](./symbol-and-operator-reference/index.md)<br /><br />[제약 조건](./generics/constraints.md)|부울 조건에 부울 `or` 연산자로 사용 됩니다. `||`와 같습니다.<br /><br />멤버 제약 조건에도 사용 됩니다.|
 |`override`|[멤버](./members/index.md)|기본 버전과 다른 추상 또는 가상 메서드의 버전을 구현 하는 데 사용 됩니다.|
 |`private`|[Access Control](access-control.md)|동일한 형식이 나 모듈의 코드에 대 한 멤버 액세스를 제한 합니다.|
 |`public`|[Access Control](access-control.md)|형식 외부에서 멤버에 대 한 액세스를 허용 합니다.|
@@ -149,7 +149,7 @@ ms.locfileid: "88558103"
 |`return!`|[계산 식](computation-expressions.md)<br /><br />[비동기 워크플로](asynchronous-workflows.md)|계산 되는 경우 포함 하는 계산 식의 결과를 제공 하는 계산 식을 나타내는 데 사용 됩니다.|
 |`select`|[쿼리 식](query-expressions.md)|추출할 필드 또는 열을 지정 하기 위해 쿼리 식에 사용 됩니다. 이는 상황별 키워드입니다. 즉, 실제로 예약어는 아니며 적절 한 컨텍스트에서 키워드 처럼 동작 합니다.|
 |`static`|[멤버](./members/index.md)|형식의 인스턴스 없이 호출 될 수 있는 메서드 또는 속성 또는 형식의 모든 인스턴스 간에 공유 되는 값 멤버를 나타내는 데 사용 됩니다.|
-|`struct`|[구조체](structures.md)<br /><br /> [튜플](tuples.md)<br/><br/>[적용](./generics/constraints.md)|구조체 형식을 선언 하는 데 사용 됩니다.<br /><br/>구조체 튜플을 지정 하는 데 사용 됩니다.<br/><br />제네릭 매개 변수 제약 조건에도 사용 됩니다.<br /><br />모듈 정의에서 OCaml 호환성에 사용 됩니다.|
+|`struct`|[구조체](structures.md)<br /><br /> [튜플](tuples.md)<br/><br/>[제약 조건](./generics/constraints.md)|구조체 형식을 선언 하는 데 사용 됩니다.<br /><br/>구조체 튜플을 지정 하는 데 사용 됩니다.<br/><br />제네릭 매개 변수 제약 조건에도 사용 됩니다.<br /><br />모듈 정의에서 OCaml 호환성에 사용 됩니다.|
 |`then`|[조건식: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[생성자](./members/constructors.md)|조건식에 사용 됩니다.<br /><br />개체 생성 후 의도 하지 않은 결과를 수행 하는 데도 사용 됩니다.|
 |`to`|[루프: `for...to` 식](loops-for-to-expression.md)|`for`범위를 나타내는 루프에 사용 됩니다.|
 |`true`|[기본 유형](basic-types.md)|부울 리터럴로 사용 됩니다.|
@@ -160,7 +160,7 @@ ms.locfileid: "88558103"
 |`use!`|[계산 식](computation-expressions.md)<br /><br />[비동기 워크플로](asynchronous-workflows.md)|`let!` `Dispose` 리소스를 해제 하기 위해 호출 해야 하는 값에 대 한 비동기 워크플로 및 기타 계산 식에서 대신 사용 됩니다.|
 |`val`|[명시적 필드: `val` 키워드](./members/explicit-fields-the-val-keyword.md)<br /><br />[시그니처](signature-files.md)<br /><br />[멤버](./members/index.md)|제한 된 상황에서 값을 나타내기 위해 서명에서 사용 되거나 멤버를 선언 하는 형식에 사용 됩니다.|
 |`void`|[기본 유형](basic-types.md)|.NET 유형을 나타냅니다 `void` . 다른 .NET 언어와 상호 작용할 때 사용 됩니다.|
-|`when`|[적용](./generics/constraints.md)|패턴 일치에 대 한 부울 조건 (*가드*)에 사용 되며 제네릭 형식 매개 변수에 대 한 제약 조건 절을 도입 하는 데 사용 됩니다.|
+|`when`|[제약 조건](./generics/constraints.md)|패턴 일치에 대 한 부울 조건 (*가드*)에 사용 되며 제네릭 형식 매개 변수에 대 한 제약 조건 절을 도입 하는 데 사용 됩니다.|
 |`while`|[루프: `while...do` 식](loops-while-do-expression.md)|루핑 구문을 소개 합니다.|
 |`with`|[일치 식](match-expressions.md)<br /><br />[개체 식](object-expressions.md)<br /><br />[레코드 식 복사 및 업데이트](copy-and-update-record-expressions.md)<br /><br />[형식 확장](type-extensions.md)<br /><br />[예외: `try...with` 식](./exception-handling/the-try-with-expression.md)|`match`패턴 일치 식에서 키워드와 함께 사용 됩니다. 또한 개체 식에 사용 되 고, 레코드 복사 식 및 형식 확장을 사용 하 여 멤버 정의를 소개 하 고, 예외 처리기를 도입 합니다.|
 |`yield`|[목록](lists.md), [배열](arrays.md), [시퀀스](sequences.md)|시퀀스에 대 한 값을 생성 하기 위해 목록, 배열 또는 시퀀스 식에 사용 됩니다. 일반적으로 대부분의 상황에서 암시적 이므로 생략할 수 있습니다.|

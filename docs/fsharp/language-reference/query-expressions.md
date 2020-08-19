@@ -1,19 +1,17 @@
 ---
 title: 쿼리 식
 description: 'F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다.'
-ms.date: 05/16/2016
-ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855038"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559065"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
 쿼리 식을 사용 하면 데이터 원본을 쿼리하고 원하는 형식으로 데이터를 저장할 수 있습니다. 쿼리 식은 F #의 LINQ에 대 한 지원을 제공 합니다.
-> [!NOTE]
-> F #에 대 한 docs.microsoft.com API 참조가 완전 하지 않습니다. 끊어진 링크가 있는 경우 대신 [F # 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/) 를 참조 하세요.
 
 ## <a name="syntax"></a>구문
 
@@ -45,9 +43,9 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-위의 코드 예제에서 쿼리 식은 중괄호 안에 있습니다. 식에서 코드의 의미는 쿼리 결과에서 데이터베이스의 Customers 테이블에 있는 모든 고객을 반환 하는 것입니다. 쿼리 식은 및를 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> 하므로 예제에서 보여 주는 것 처럼 [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 을 사용 하 여 반복할 수 있습니다.
+위의 코드 예제에서 쿼리 식은 중괄호 안에 있습니다. 식에서 코드의 의미는 쿼리 결과에서 데이터베이스의 Customers 테이블에 있는 모든 고객을 반환 하는 것입니다. 쿼리 식은 및를 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> 하므로 예제에서 보여 주는 것 처럼 [Seq 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) 을 사용 하 여 반복할 수 있습니다.
 
-모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스는 `QueryBuilder` 입니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)를 참조 하세요.
+모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스는 `QueryBuilder` 입니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)를 참조 하세요.
 
 ## <a name="query-operators"></a>쿼리 연산자
 
@@ -55,7 +53,7 @@ query1
 
 SQL로 변환할 수 있는 식만 쿼리 식에 사용할 수 있습니다. 예를 들어 쿼리 연산자를 사용 하는 경우 식에는 함수 호출이 허용 되지 않습니다 `where` .
 
-표 1에는 사용 가능한 쿼리 연산자가 표시 됩니다. 또한이 항목의 뒷부분에 나오는 SQL 쿼리와 이와 동등한 F # 쿼리 식을 비교 하는 Table2을 참조 하십시오. 일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다. 특히 odata 유형 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다. 자세한 내용은 [Odataservice 형식 공급자 (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)를 참조 하세요.
+표 1에는 사용 가능한 쿼리 연산자가 표시 됩니다. 또한이 항목의 뒷부분에 나오는 SQL 쿼리와 이와 동등한 F # 쿼리 식을 비교 하는 Table2을 참조 하십시오. 일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다. 특히 odata 유형 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다.
 
 이 표에는 다음과 같은 형식의 데이터베이스가 있다고 가정 합니다.
 
@@ -83,7 +81,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>연산자</th>
-    <th>설명</th>
+    <th>Description</th>
   </tr>
   <tr>
   <td><code>contains</code></td>
@@ -566,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>그룹화<br/>
+<td>Grouping(그룹화)<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -682,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>지정 된 값의 집합입니다.<br/>
+<code>IN</code> 지정 된 값의 집합입니다.<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -723,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>패턴 일치 집합을 사용 합니다.<br/>
+<code>LIKE</code> 패턴 일치 집합을 사용 합니다.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -740,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>set 제외 패턴이 포함 된입니다.<br/>
+<code>LIKE</code> set 제외 패턴이 포함 된입니다.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -759,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>한 필드에서 다른 필드를 선택 합니다.<br/>
+<code>LIKE</code> 한 필드에서 다른 필드를 선택 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -809,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>두 개의 테이블이 있습니다.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> 두 개의 테이블이 있습니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -911,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>순서 지정<br/>
+</td></tr><tr><td><code>OR</code> 순서 지정<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -951,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>두 개의 쿼리<br/>
+</td></tr><tr><td><code>UNION</code> 두 개의 쿼리<br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1006,7 +1004,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>조건.<br/>
+</td></tr><tr><td><code>CASE</code> 조건.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2439,5 +2437,5 @@ end
 ## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)
-- [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [쿼리만 클래스](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
 - [계산 식](Computation-Expressions.md)

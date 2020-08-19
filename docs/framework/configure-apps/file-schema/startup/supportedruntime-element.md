@@ -1,7 +1,6 @@
 ---
-title: <supportedRuntime>구성 요소-.NET
+title: <supportedRuntime> 구성 요소-.NET
 ms.date: 04/02/2019
-ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82796043"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558675"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 요소
 
@@ -68,7 +67,7 @@ ms.locfileid: "82796043"
 |3.5|"v2.0.50727"|
 |4.0-4.8|"v4.0"|
 
-## <a name="sku-id-values"></a><a name="sku"></a>"sku id" 값
+## <a name="sku-id-values"></a><a name="sku"></a> "sku id" 값
 
 `sku`특성은 TFM (대상 프레임 워크 모니커)를 사용 하 여 앱이 대상으로 하 고 실행 해야 하는 .NET Framework 버전을 표시 합니다. 다음 표에서는 `sku` .NET Framework 4부터 시작 하 여 특성에서 지원 되는 유효한 값을 보여 줍니다.
 
@@ -82,7 +81,7 @@ ms.locfileid: "82796043"
 |4.0, Client Profile, 업데이트 2|". NETFramework, Version = v 4.0.2, Profile = Client "|
 |4.0, 플랫폼 업데이트 3|". NETFramework, Version = v 4.0.3 "|
 |4.0, Client Profile, 업데이트 3|". NETFramework, Version = v 4.0.3, Profile = Client "|
-|4.5|".NETFramework,Version=v4.5"|
+|4.5.|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
 |4.6|".NETFramework,Version=v4.6"|

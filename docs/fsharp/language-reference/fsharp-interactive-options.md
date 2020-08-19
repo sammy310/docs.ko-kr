@@ -1,13 +1,13 @@
 ---
 title: 대화형 옵션
 description: F# 대화형 fsi.exe에서 지 원하는 명령줄 옵션에 대해 알아봅니다.
-ms.date: 07/22/2020
-ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855350"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558610"
 ---
 # <a name="f-interactive-options"></a>F# 대화형 옵션
 
@@ -29,7 +29,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 
 목록 요소가 F# 대화형 옵션 인수에 표시 되는 경우 목록 요소는 세미콜론 ()으로 구분 됩니다 `;` .
 
-|옵션|설명|
+|옵션|Description|
 |------|-----------|
 |**--**|**Fsi.exe my.application.commandlineargs**를 사용 하 여 코드에서 액세스할 수 있는 F # 프로그램 또는 스크립트에 대 한 명령줄 인수로 나머지 인수를 처리 하도록 F# 대화형에 지시 하는 데 사용 됩니다.|
 |**--확인**됨 [ **+**&#124;**-** ]|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
@@ -44,7 +44,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 |**--gui**[ **+**&#124;**-** ]|Windows Forms 이벤트 루프를 사용 하거나 사용 하지 않도록 설정 합니다. 기본값을 사용합니다.|
 |**--도움말**<br /><br />**-?**|각 옵션에 대 한 간단한 설명 및 명령줄 구문을 표시 하는 데 사용 됩니다.|
 |**--lib: &lt; 폴더-목록&gt;**<br /><br />**-I: &lt; 폴더-목록&gt;**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
-|**--load: &lt; filename&gt;**|시작 시 지정 된 소스 코드를 컴파일하고 컴파일된 F # 구문을 세션에 로드 합니다. 대상 소스에 **#use** 또는 **#load**같은 스크립팅 지시문이 포함 되어 있는 경우-- **load** 또는 **#load**대신-- **use** 또는 **#use** 를 사용 해야 합니다.|
+|**--load: &lt; filename&gt;**|시작 시 지정 된 소스 코드를 컴파일하고 컴파일된 F # 구문을 세션에 로드 합니다.|
 |**--mlcompatibility**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--noframework**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md) 을 참조 하세요.|
 |**--nologo**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
@@ -126,7 +126,7 @@ val newYearsDay1999 : DateAndLabel = { Date = 1999-01-01T00:00:00
                                        Label = "New Year" }
 ```
 
-`fsi.AddPrintTransformer`를 사용 하 여 인쇄를 위한 서로게이트 개체를 제공할 수 있습니다.
+`fsi.AddPrintTransformer` 를 사용 하 여 인쇄를 위한 서로게이트 개체를 제공할 수 있습니다.
 
 ```fsharp
 type MyList(values: int list) =
@@ -144,7 +144,7 @@ val x : MyList = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
 ```
 
 에 전달 된 변환기 함수가를 반환 하는 경우 `fsi.AddPrintTransformer` `null` 인쇄 변환기는 무시 됩니다.
-형식으로 시작 하 여 입력 값을 필터링 하는 데 사용할 수 있습니다 `obj` .  예를 들어:
+형식으로 시작 하 여 입력 값을 필터링 하는 데 사용할 수 있습니다 `obj` .  예를 들면 다음과 같습니다.
 
 ```fsharp
 fsi.AddPrintTransformer(fun (x:obj) ->
@@ -163,6 +163,6 @@ val y : string = ["quack"; "quack"; "quack"]
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----|-----------|
 |[컴파일러 옵션](compiler-options.md)|**fsc.exe**F # 컴파일러에 사용할 수 있는 명령줄 옵션에 대해 설명 합니다.|

@@ -1,6 +1,5 @@
 ---
 title: AppContextSwitchOverrides 요소
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82102933"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558753"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 요소
 
@@ -68,19 +67,19 @@ ms.locfileid: "82102933"
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|로 설정 되 면 `false` FIPS를 사용 하도록 설정 된 경우 Visual Studio를 사용 하 여 XAML 기반 워크플로 프로젝트를 디버그할 수 있습니다. 이를 사용 하지 않으면 <xref:System.NullReferenceException> system.object 어셈블리의 메서드 호출에서이 throw 됩니다.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|디버거의 워크플로 인스턴스에 대 한 체크섬이 MD5 또는 SHA1을 사용 하는지 여부를 제어 합니다. | .NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시가 .NET Framework 4.7 ()에서 기본값으로 도입 된 SHA1 알고리즘을 사용 하는지 `true` 또는 .NET Framework 4.8 ()의 기본값으로 도입 된 기본 SHA256 알고리즘을 사용 하는지 여부를 제어 `false` 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.8|
-|`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|이식 가능 Pdb를 사용할 때 스택 추적에서 가져올 것인지 여부를 제어 합니다. 소스 파일 및 줄 정보를 포함할 수 있습니다. `false`소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true` 입니다.|.NET Framework 4.7.2|
+|`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|이식 가능 Pdb를 사용할 때 스택 추적에서 가져올 것인지 여부를 제어 합니다. 소스 파일 및 줄 정보를 포함할 수 있습니다. `false` 소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true` 입니다.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>개체에 PNG 프레임이 있는 경우 메서드가 예외를 throw 할지 여부를 제어 합니다 <xref:System.Drawing.Icon> . 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)을 참조하십시오.|.NET Framework 4.6|
-|`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>메서드가 컬렉션에 추가 될 때 개체가 제대로 삭제 되는지 여부를 결정 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 합니다. `true`레거시 동작을 유지 관리 하려면 `false`모든 전용 글꼴 개체를 삭제 하려면입니다. |.NET Framework 4.7.2|
+|`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>메서드가 컬렉션에 추가 될 때 개체가 제대로 삭제 되는지 여부를 결정 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 합니다. `true` 레거시 동작을 유지 관리 하려면 `false` 모든 전용 글꼴 개체를 삭제 하려면입니다. |.NET Framework 4.7.2|
 |`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|의 성능이 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 최적화 되어 있는지 여부를 제어 합니다. 자세한 내용은 [PrintPreviewDialog 컨트롤 개요](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)를 참조 하세요.|.NET Framework 4.6|
-|`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|일본어 달력 연대에 대 한 연도 범위 검사가 적용 되는지 여부를 제어 합니다. `true`연도 범위 검사를 적용 하 고 `false` 사용 하지 않도록 설정 하려면 (기본 동작) 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
-|`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|구문 분석 작업에서 "1"만 일본 달력 연대의 첫 번째 연도로 인식 되는지 여부를 제어 합니다. `true`"1"만 인식 하려면 `false`"1" 또는 Gannen (기본 동작)를 인식할 수 있습니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
-|`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|서식 지정 작업에서 일본 달력 연대의 첫 해를 "1"로 나타낼지 아니면 Gannen로 표시할지를 제어 합니다. `true`연대의 첫 해를 "1"로 서식 지정 하려면 `false`형식 지정 하려면 Gannen (기본 동작)를 지정 합니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|일본어 달력 연대에 대 한 연도 범위 검사가 적용 되는지 여부를 제어 합니다. `true` 연도 범위 검사를 적용 하 고 `false` 사용 하지 않도록 설정 하려면 (기본 동작) 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|구문 분석 작업에서 "1"만 일본 달력 연대의 첫 번째 연도로 인식 되는지 여부를 제어 합니다. `true` "1"만 인식 하려면 `false` "1" 또는 Gannen (기본 동작)를 인식할 수 있습니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
+|`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|서식 지정 작업에서 일본 달력 연대의 첫 해를 "1"로 나타낼지 아니면 Gannen로 표시할지를 제어 합니다. `true` 연대의 첫 해를 "1"로 서식 지정 하려면 `false` 형식 지정 하려면 Gannen (기본 동작)를 지정 합니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|비동기 작업이 호출 하는 스레드의 컨텍스트에서 전달 되지 않는지 여부를 제어 합니다. 자세한 내용은 [CurrentCulture And CurrentUICulture flow to tasks](../../../migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)을 참조 하세요.|.NET Framework 4.6|
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>메서드가 클레임 형식을 마지막 DNS 항목에만 일치 시 키 려 고 할지 여부를 제어 합니다. 자세한 내용은 [완화: X509CertificateClaimSet.FindClaims 메서드](../../../migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)를 참조하십시오.|.NET Framework 4.6.1|
 |`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|변경할 수 있는 개체를 반환 하기 위해 AuthorizationContext를 허용할지 여부를 제어 합니다.|.NET Framework 4.6|
 |`Switch.System.IO.BlockLongPaths`|`MAX_PATH`에서 (260 자) 보다 긴 경로를 throw 하는지 여부를 제어 <xref:System.IO.PathTooLongException> 합니다. 자세한 내용은 [긴 경로 지원](../../../migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)을 참조 하세요.|.NET Framework 4.6.2|
-|`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|네이티브 OS 루틴이 클래스의 압축을 푸는 데 사용 되는지 여부를 제어 <xref:System.IO.Compression.DeflateStream> 합니다. `false`네이티브 Api를 사용 하려면 `true`구현을 사용 하려면 <xref:System.IO.Compression.DeflateStream> 입니다.|.NET Framework 4.7.2|
-|`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|\\속성에서 슬래시 ("/")가 아닌 백슬래시 ("")를 경로 구분 기호로 사용 합니다 <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> . 자세한 내용은 [완화: ZipArchiveEntry 경로 구분 기호](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)를 참조 하세요.|.NET Framework 4.6.1|
+|`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|네이티브 OS 루틴이 클래스의 압축을 푸는 데 사용 되는지 여부를 제어 <xref:System.IO.Compression.DeflateStream> 합니다. `false` 네이티브 Api를 사용 하려면 `true` 구현을 사용 하려면 <xref:System.IO.Compression.DeflateStream> 입니다.|.NET Framework 4.7.2|
+|`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|\\속성에서 슬래시 ("/")가 아닌 백슬래시 ("")를 경로 구분 기호로 사용 합니다 <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> . 자세한 내용은  [완화: ZipArchiveEntry 경로 구분 기호](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)를 참조 하세요.|.NET Framework 4.6.1|
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|스트림을 사용 하 여 만든 백그라운드 스레드에서 throw 된 운영 체제 예외가 프로세스를 종료 하는지 여부를 제어 <xref:System.IO.Ports.SerialPort> 합니다.|.NET Framework 4.7.1|
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|레거시 경로 정규화를 사용 하 고 및 메서드에서 URI 경로를 지원 하는지 여부를 제어 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 합니다. 자세한 내용은 [완화: 경로 정규화](../../../migration-guide/mitigation-path-normalization.md) 및 [완화: 경로 콜론 확인](../../../migration-guide/mitigation-path-colon-checks.md)을 참조 하세요.|.NET Framework 4.6.2|
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|같은지 테스트 한 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> 개체의 속성을 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> 두 번째 개체의 속성과 비교 하는지 여부를 제어 합니다. 자세한 내용은 [MemberDescriptor의 잘못 된 구현](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals)을 참조 하십시오. Equals.|.NET Framework 4.6.2|
@@ -113,16 +112,16 @@ ms.locfileid: "82102933"
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|서비스 시작 시 throw 된 예외가 메서드의 호출자에 게 전파 되는지 여부를 제어 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> 합니다.|.NET Framework 4.7.1|
 |`Switch.System.Threading.UseNetCoreTimer`|<xref:System.Threading.Timer>인스턴스가 높은 규모의 환경에 대 한 성능 향상을 활용할 지 여부를 제어 합니다. 인 경우 `true` 성능이 향상 되 고, `false` (기본값) 이면 사용 하지 않도록 설정 됩니다.|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|간혹 디코딩되는 특정 백분율 인코딩된 문자가 이제 일관 되 게 왼쪽으로 인코딩 되는지 여부를 결정 합니다. 이면 `true` 디코딩되 고, 그렇지 않으면 `false` 입니다.|.NET Framework 4.7.2|
-|`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Uri에서 유니코드 양방향 문자를 처리 하는 방법을 결정 합니다. `true`Uri에서 제거 하려면 이 `false` 를 유지 하 고 비율을 인코딩하려면입니다.|.NET Framework 4.7.2|
+|`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Uri에서 유니코드 양방향 문자를 처리 하는 방법을 결정 합니다. `true` Uri에서 제거 하려면 이 `false` 를 유지 하 고 비율을 인코딩하려면입니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |열에 공간을 할당할 때 Windows Presentation Foundation 이전 알고리즘 ( `true` ) 또는 새 알고리즘 ()을 적용할지 여부를 결정 `false` \* 합니다. 자세한 내용은 [완화: Grid 컨트롤의 별 열 공간 할당](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)을 참조하세요. |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|선택 변경 이벤트를 발생 시키기 전에 선택기 또는 탭 컨트롤이 항상 선택 된 값 속성의 값을 업데이트 하는지 여부를 제어 합니다.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|폐색 text ()를 방지 하기 위해 및 컨트롤에 대해 비 표시기 기반 선택 렌더링을 사용할 수 있는지 여부 <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.PasswordBox> `false` 또는 표시기 계층 에서만 텍스트가 렌더링 되는지 여부를 결정 `true` 합니다 ().|.NET Framework 4.7.2|
 |`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|클래스에 의해 사용자 지정 IList 인덱서가 잘못 사용 ( `true` ) 되는지 또는 올바르게 사용 되는지 ()를 제어 `false` <xref:System.Windows.Data.Binding?displayProperty=nameWithType> 합니다.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|DPI 변경이 시스템 단위 (값 `false` ) 또는 모니터 단위 기준 (값)에서 발생 하는지 여부를 결정 `true` 합니다.|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|<xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType>모니터 당 인식 모드에서 WPF가 실행 될 때의 컨트롤 크기 조정 기능이 사용 안 함 ( `true` ) 또는 사용 () 인지 여부를 제어 `false` 합니다.|.NET Framework 4.8|
-|`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|컨트롤 텍스트가 있을 때 개발자가 작업을 특수 하 게 처리 해야 하는지 여부를 결정 합니다 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> . `true`동작을 처리 하려면 <xref:System.Windows.Forms.DomainUpDown.UpButton> 이 `false` 고, <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> 작업이 동기화 될 수 있도록 하려면입니다.|.NET Framework 4.7.2|
+|`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|컨트롤 텍스트가 있을 때 개발자가 작업을 특수 하 게 처리 해야 하는지 여부를 결정 합니다 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> . `true` 동작을 처리 하려면 <xref:System.Windows.Forms.DomainUpDown.UpButton> 이 `false` 고, <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> 작업이 동기화 될 수 있도록 하려면입니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>메서드가 호출 될 때 예외를 발생 시 키 지 않고 사용자 지정 구현이 메시지를 안전 하 게 필터링 할 수 있도록 하는 코드를 Opts <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 합니다. 자세한 내용은 [완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현](../../../migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)을 참조하십시오.|.NET Framework 4.6.1|
-|`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>사용자가 중첩 된 컨트롤에서 메뉴를 열 때 속성이 소스 제어를 반환 하는지 여부를 확인 합니다 <xref:System.Windows.Forms.ToolStripMenuItem> . `true`을 반환 하려면 레거시 동작을 반환 하 고, `null` `false` 소스 제어를 반환 하려면를 반환 합니다.|.NET Framework 4.7.2|
+|`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>사용자가 중첩 된 컨트롤에서 메뉴를 열 때 속성이 소스 제어를 반환 하는지 여부를 확인 합니다 <xref:System.Windows.Forms.ToolStripMenuItem> . `true` 을 반환 하려면 레거시 동작을 반환 하 고, `null` `false` 소스 제어를 반환 하려면를 반환 합니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|도구 설명 호출 지원을 사용 하지 않도록 설정할지 ( `true` ) 또는 enabled ()를 제어 `false` 합니다. 도구 설명 호출 지원을 사용 하려면, 및에 정의 된 레거시 접근성 기능이 필요 `Switch.UseLegacyAccessibilityFeatures` `Switch.UseLegacyAccessibilityFeatures.2` 하며 `Switch.UseLegacyAccessibilityFeatures.3` 모두 사용 하지 않도록 설정 됩니다 (로 설정 `false` ).|.NET Framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|`WM_POINTER`WPF 응용 프로그램에서 선택적 기반 터치/스타일러스 스택을 사용 하는지 여부를 결정 합니다. 자세한 내용은 [완화: 포인터 기반 터치 및 스타일러스 지원](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md) 을 참조 하세요.|.NET Framework 4.7|
 |`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|체크섬에 사용 되는 기본 해시 알고리즘이 SHA256 ( `false` ) 또는 SHA1 () 인지 여부를 확인 `true` 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.2|
@@ -143,7 +142,7 @@ ms.locfileid: "82102933"
 
 ## <a name="switches-in-aspnet-apps"></a>ASP.NET apps의 스위치
 
-Web.config [\<Add>](../appsettings/add-element-for-appsettings.md) 파일의 섹션에 요소를 추가 하 여 호환성 설정을 사용 하도록 ASP.NET 응용 프로그램을 구성할 수 있습니다 [\<appSettings>](../appsettings/index.md) .
+[\<Add>](../appsettings/add-element-for-appsettings.md)web.config 파일의 섹션에 요소를 추가 하 여 호환성 설정을 사용 하도록 ASP.NET 응용 프로그램을 구성할 수 있습니다 [\<appSettings>](../appsettings/index.md) .
 
 다음 예제에서는 요소를 사용 하 여 `<add>` `<appSettings>` web.config 파일의 섹션에 두 설정을 추가 합니다.
 
@@ -181,5 +180,5 @@ Web.config [\<Add>](../appsettings/add-element-for-appsettings.md) 파일의 섹
 
 - [.NET Framework 4.6 이상에서 새로운 동작 완화](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
-- [\<runtime>요소인](runtime-element.md)
-- [\<configuration>요소인](../configuration-element.md)
+- [\<runtime> 요소](runtime-element.md)
+- [\<configuration> 요소](../configuration-element.md)

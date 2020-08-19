@@ -1,13 +1,13 @@
 ---
 title: 유연한 형식
-description: 매개 변수, 변수 F# 또는 값에 지정 된 형식과 호환 되는 형식이 있음을 나타내는 유연한 형식 주석을 사용 하는 방법에 대해 알아봅니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+description: '매개 변수, 변수 또는 값에 지정 된 형식과 호환 되는 형식이 있음을 나타내는 F # 유연한 형식 주석을 사용 하는 방법에 대해 알아봅니다.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 44241ad082cd7f3de9e0cc6a48b8a8946e7b33d3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083073"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557752"
 ---
 # <a name="flexible-types"></a>유연한 형식
 
@@ -31,13 +31,13 @@ ms.locfileid: "71083073"
 'T when 'T :> SomeType
 ```
 
-유연한 형식은 여러 유형의 상황에서 유용 합니다. 예를 들어 고차 함수 (함수를 인수로 사용 하는 함수)가 있는 경우 함수에서 유연한 형식을 반환 하는 것이 유용한 경우가 많습니다. 다음 예제에서의 `iterate2` 시퀀스 인수를 사용 하는 유연한 형식을 사용 하면 고차 함수에서 시퀀스, 배열, 목록 및 기타 열거 가능한 형식을 생성 하는 함수를 사용할 수 있습니다.
+유연한 형식은 여러 유형의 상황에서 유용 합니다. 예를 들어 고차 함수 (함수를 인수로 사용 하는 함수)가 있는 경우 함수에서 유연한 형식을 반환 하는 것이 유용한 경우가 많습니다. 다음 예제에서의 시퀀스 인수를 사용 하는 유연한 형식을 사용 하면 `iterate2` 고차 함수에서 시퀀스, 배열, 목록 및 기타 열거 가능한 형식을 생성 하는 함수를 사용할 수 있습니다.
 
 다음 두 함수 중 하나는 시퀀스를 반환 하는 함수 중 하나는 유연한 형식을 반환 하는 함수입니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-또 다른 예로, [Seq. concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) library 함수를 살펴보겠습니다.
+또 다른 예로, [Seq. concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#concat) library 함수를 살펴보겠습니다.
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -51,7 +51,7 @@ val concat: sequences:seq<#seq<'T>> -> seq<'T>
 - 시퀀스의 배열입니다.
 - 열거 가능한 시퀀스의 다른 조합
 
-다음 코드에서는를 `Seq.concat` 사용 하 여 유연한 형식으로 지원할 수 있는 시나리오를 보여 줍니다.
+다음 코드에서는를 사용 하 여 `Seq.concat` 유연한 형식으로 지원할 수 있는 시나리오를 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
@@ -65,9 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-에서는 F#다른 개체 지향 언어에서와 같이 인터페이스를 구현 하는 파생 형식이 나 형식이 자동으로 기본 형식 또는 인터페이스 형식으로 변환 되는 컨텍스트를 제공 합니다. 이러한 자동 변환은 직접 인수에서 발생 하지만 형식이 하위 위치에 있거나 함수 형식의 반환 형식 또는 형식 인수로 같은 보다 복잡 한 형식의 일부로 포함 된 경우에는 발생 하지 않습니다. 따라서 유연한 형식 표기법은 적용 하는 형식이 보다 복잡 한 형식의 일부일 때 주로 유용 합니다.
+다른 개체 지향 언어와 마찬가지로 F #의 경우 인터페이스를 구현 하는 파생 형식 또는 형식이 자동으로 기본 형식 또는 인터페이스 형식으로 변환 됩니다. 이러한 자동 변환은 직접 인수에서 발생 하지만 형식이 하위 위치에 있거나 함수 형식의 반환 형식 또는 형식 인수로 같은 보다 복잡 한 형식의 일부로 포함 된 경우에는 발생 하지 않습니다. 따라서 유연한 형식 표기법은 적용 하는 형식이 보다 복잡 한 형식의 일부일 때 주로 유용 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)
 - [제네릭](./generics/index.md)

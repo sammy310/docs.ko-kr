@@ -1,13 +1,13 @@
 ---
 title: '재귀 함수: rec 키워드'
 description: "' Let ' 키워드와 함께 F # ' rec ' 키워드를 사용 하 여 재귀 함수를 정의 하는 방법을 알아봅니다."
-ms.date: 05/16/2016
-ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.date: 08/12/2020
+ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455656"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558714"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>재귀 함수: rec 키워드
 
@@ -18,28 +18,44 @@ ms.locfileid: "87455656"
 ```fsharp
 // Recursive function:
 let rec function-nameparameter-list =
-function-body
+    function-body
 
 // Mutually recursive functions:
 let rec function1-nameparameter-list =
-function1-body
+    function1-body
+
 and function2-nameparameter-list =
-function2-body
+    function2-body
 ...
 ```
 
 ## <a name="remarks"></a>설명
 
-재귀 함수, 자신을 호출 하는 함수는 F # 언어에서 명시적으로 식별 됩니다. 이렇게 하면 함수 범위에서 정의 되는 식별자를 사용할 수 있습니다.
+재귀 함수-자신을 호출 하는 함수는 F # 언어에서 키워드를 사용 하 여 명시적으로 식별 됩니다 `rec` . `rec`키워드는 `let` 해당 본문에서 바인딩 이름을 사용할 수 있도록 합니다.
 
-다음 코드는 수학적 정의를 사용 하 여 *n*<sup>번째</sup> 피보나치 수를 계산 하는 재귀 함수를 보여 줍니다.
+다음 예에서는 수학적 정의를 사용 하 여 *n*<sup>번째</sup> 피보나치 수를 계산 하는 재귀 함수를 보여 줍니다.
 
-[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+```fsharp
+let fib n =
+    match n with
+    | 0 | 1 -> 1
+    | n -> fib (n-1) + fib (n-2)
+```
 
 > [!NOTE]
 > 실제로 이전 샘플과 같은 코드는 이미 계산 된 대해 값을 unecessarily 하기 때문에 이상적이 지 않습니다. 이는이 문서의 뒷부분에서 설명 하는 tail recursive가 아니기 때문입니다.
 
-메서드는 형식 내에서 암시적으로 재귀적입니다. 키워드를 추가할 필요가 없습니다 `rec` . 클래스 내의 바인딩이 암시적으로 재귀적이 지 않습니다.
+메서드는 정의 된 형식 내에서 암시적으로 재귀적으로 수행 됩니다. 즉, 키워드를 추가할 필요가 없습니다 `rec` . 예를 들면 다음과 같습니다.
+
+```fsharp
+type MyClass() =
+    member this.Fib(n) =
+        match n with
+        | 0 | 1 -> 1
+        | n -> this.Fib(n-1) + this.Fib(n-2)
+```
+
+그러나 클래스 내의 바인딩이 암시적으로 재귀적이 지는 않습니다. 모든 `let` 바인딩된 함수에는 `rec` 키워드가 필요 합니다.
 
 ## <a name="tail-recursion"></a>비상 재귀
 
@@ -75,6 +91,14 @@ let fib n =
 다음 예에서는 두 개의 상호 재귀 함수를 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+
+## <a name="recursive-values"></a>재귀 값
+
+또한 재귀적으로 바인딩되는 값을 정의할 수 있습니다 `let` . 이는 로깅에 대해 수행 되는 경우도 있습니다. F # 5와 함수를 사용 하 여 `nameof` 다음을 수행할 수 있습니다.
+
+```fsharp
+let rec nameDoubles = nameof nameDoubles + nameof nameDoubles
+```
 
 ## <a name="see-also"></a>참조
 

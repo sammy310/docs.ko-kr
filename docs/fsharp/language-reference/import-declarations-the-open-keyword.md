@@ -1,13 +1,13 @@
 ---
 title: '선언 가져오기: open 키워드'
 description: 'F # 가져오기 선언과 정규화 된 이름을 사용 하지 않고 참조할 수 있는 요소를 포함 하는 모듈 또는 네임 스페이스를 지정 하는 방법에 대해 알아봅니다.'
-ms.date: 04/04/2019
-ms.openlocfilehash: 2b88427ca92212fb4a7598447dd1a5e12061093a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855090"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557609"
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언: `open` 키워드
 
@@ -20,9 +20,6 @@ open module-or-namespace-name
 ```
 
 ## <a name="remarks"></a>설명
-
-> [!NOTE]
-> F #에 대 한 docs.microsoft.com API 참조가 완전 하지 않습니다. 끊어진 링크가 있는 경우 대신 [F # 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/) 를 참조 하세요.
 
 항상 정규화 된 네임 스페이스 또는 모듈 경로를 사용 하 여 코드를 참조 하면 쓰기, 읽기 및 유지 관리가 어려운 코드를 만들 수 있습니다. 대신, `open` 자주 사용 되는 모듈 및 네임 스페이스에 대 한 키워드를 사용 하 여 해당 모듈 또는 네임 스페이스의 멤버를 참조할 때 정규화 된 이름 대신 짧은 형식의 이름을 사용할 수 있습니다. 이 키워드는 `using` c #의 키워드, `using namespace` Visual C++ 및 Visual Basic와 비슷합니다 `Imports` .
 
@@ -52,19 +49,19 @@ printfn "%A" empty
 
 |네임스페이스|Description|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|및와 같은 기본 제공 형식에 대 한 기본 F # 형식 정의를 포함 `int` `float` 합니다.|
-|`Microsoft.FSharp.Core.Operators`|및와 같은 기본 산술 연산을 `+` 포함 `*` 합니다.|
-|`Microsoft.FSharp.Collections`|및와 같은 변경할 수 없는 컬렉션 클래스 `List` 를 포함 `Array` 합니다.|
-|`Microsoft.FSharp.Control`|지연 계산, 비동기 워크플로 등의 제어 구문에 대 한 형식을 포함 합니다.|
-|`Microsoft.FSharp.Text`|함수와 같은 형식이 지정 된 IO에 대 한 함수를 포함 `printf` 합니다.|
+|`FSharp.Core`|및와 같은 기본 제공 형식에 대 한 기본 F # 형식 정의를 포함 `int` `float` 합니다.|
+|`FSharp.Core.Operators`|및와 같은 기본 산술 연산을 `+` 포함 `*` 합니다.|
+|`FSharp.Collections`|및와 같은 변경할 수 없는 컬렉션 클래스 `List` 를 포함 `Array` 합니다.|
+|`FSharp.Control`|지연 계산, 비동기 워크플로 등의 제어 구문에 대 한 형식을 포함 합니다.|
+|`FSharp.Text`|함수와 같은 형식이 지정 된 IO에 대 한 함수를 포함 `printf` 합니다.|
 
 ## <a name="autoopen-attribute"></a>AutoOpen 특성
 
-`AutoOpen`어셈블리를 참조할 때 네임 스페이스나 모듈을 자동으로 열려면 어셈블리에 특성을 적용 하면 됩니다. `AutoOpen`부모 모듈이 나 네임 스페이스를 열 때 모듈에 특성을 적용 하 여 해당 모듈을 자동으로 열 수도 있습니다. 자세한 내용은 [Core. AutoOpenAttribute 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)를 참조 하세요.
+`AutoOpen`어셈블리를 참조할 때 네임 스페이스나 모듈을 자동으로 열려면 어셈블리에 특성을 적용 하면 됩니다. `AutoOpen`부모 모듈이 나 네임 스페이스를 열 때 모듈에 특성을 적용 하 여 해당 모듈을 자동으로 열 수도 있습니다. 자세한 내용은 [Autoopenattribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-autoopenattribute.html)를 참조 하세요.
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 특성
 
-일부 모듈, 레코드 또는 공용 구조체 형식에서 특성을 지정할 수 있습니다 `RequireQualifiedAccess` . 이러한 모듈, 레코드 또는 공용 구조체의 요소를 참조할 때는 가져오기 선언을 포함 하는지 여부에 관계 없이 정규화 된 이름을 사용 해야 합니다. 일반적으로 사용 되는 이름을 정의 하는 형식에 대해이 특성을 사용 하는 경우 이름 충돌을 방지 하 고 라이브러리의 변경에 대 한 코드의 복원 력을 높일 수 있습니다. 자세한 내용은 [RequireQualifiedAccessAttribute 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)를 참조 하세요.
+일부 모듈, 레코드 또는 공용 구조체 형식에서 특성을 지정할 수 있습니다 `RequireQualifiedAccess` . 이러한 모듈, 레코드 또는 공용 구조체의 요소를 참조할 때는 가져오기 선언을 포함 하는지 여부에 관계 없이 정규화 된 이름을 사용 해야 합니다. 일반적으로 사용 되는 이름을 정의 하는 형식에 대해이 특성을 사용 하는 경우 이름 충돌을 방지 하 고 라이브러리의 변경에 대 한 코드의 복원 력을 높일 수 있습니다. 자세한 내용은 [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
