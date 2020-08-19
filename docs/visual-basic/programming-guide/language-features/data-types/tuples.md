@@ -4,14 +4,14 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226662"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559091"
 ---
-# <a name="tuples-visual-basic"></a>튜플 (Visual Basic)
+# <a name="tuples-visual-basic"></a>튜플(Visual Basic)
 
 Visual Basic 2017부터 Visual Basic 언어는 튜플을 만들고 튜플 요소에 더 쉽게 액세스할 수 있도록 하는 튜플에 대 한 기본 제공 지원을 제공 합니다. 튜플은 값의 특정 개수와 시퀀스를 포함 하는 간단한 데이터 구조입니다. 튜플을 인스턴스화할 때 각 값 (또는 요소)의 숫자와 데이터 형식을 정의 합니다. 예를 들어 2 튜플 (또는 쌍)에는 두 개의 요소가 있습니다. 첫 번째 `Boolean` 값은 값이 고, 두 번째는 일 수 있습니다 `String` . 튜플을 사용 하면 여러 값을 단일 개체에 쉽게 저장할 수 있으므로 일반적으로 메서드에서 여러 값을 반환 하는 간단한 방법으로 사용 됩니다.
 
@@ -72,7 +72,7 @@ Visual Basic 15.3부터 Visual Basic 튜플 요소의 이름을 유추할 수 �
 
 ## <a name="tuples-versus-structures"></a>튜플 및 구조체
 
-Visual Basic 튜플은 **system.valuetuple** 제네릭 형식 중 하나의 인스턴스인 값 형식입니다. 예를 들어 `holiday` 이전 예제에서 정의 된 튜플은 구조체의 인스턴스입니다 <xref:System.ValueTuple%603> . 데이터에 대 한 간단한 컨테이너로 설계 되었습니다. 튜플은 여러 데이터 항목을 사용 하 여 개체를 쉽게 만들 수 있도록 하기 때문에 사용자 지정 구조에 포함 될 수 있는 일부 기능이 부족 합니다. 내용은 다음과 같습니다.
+Visual Basic 튜플은 **system.valuetuple** 제네릭 형식 중 하나의 인스턴스인 값 형식입니다. 예를 들어 `holiday` 이전 예제에서 정의 된 튜플은 구조체의 인스턴스입니다 <xref:System.ValueTuple%603> . 데이터에 대 한 간단한 컨테이너로 설계 되었습니다. 튜플은 여러 데이터 항목을 사용 하 여 개체를 쉽게 만들 수 있도록 하기 때문에 사용자 지정 구조에 포함 될 수 있는 일부 기능이 부족 합니다. 여기에는 다음이 포함됩니다.
 
 - 사용자 지정 멤버. 튜플에 대해 고유한 속성, 메서드 또는 이벤트를 정의할 수 없습니다.
 
@@ -84,14 +84,14 @@ Visual Basic 튜플은 **system.valuetuple** 제네릭 형식 중 하나의 인�
 
 Visual Basic 튜플은 **system.valuetuple** 형식의 멤버를 상속 합니다. 이러한 필드 외에도 다음과 같은 메서드가 포함 됩니다.
 
-| 멤버 | 설명 |
+| 메서드 | Description |
 | ---|---|
 | CompareTo | 현재 튜플을 동일한 수의 요소를 사용 하는 다른 튜플로 비교 합니다. |
 | 같음 | 현재 튜플이 다른 튜플 또는 개체와 같은지 여부를 확인 합니다. |
 | GetHashCode | 현재 인스턴스에 대 한 해시 코드를 계산 합니다. |
 | ToString | 형식을 사용 하는이 튜플의 문자열 표현을 반환 합니다 `(Item1, Item2...)` . 여기서 및는 `Item1` `Item2` 튜플의 필드 값을 나타냅니다. |
 
-또한 **system.valuetuple** 형식은 <xref:System.Collections.IStructuralComparable> 및 인터페이스를 구현 하 여 <xref:System.Collections.IStructuralEquatable> 고객 비교자를 정의할 수 있도록 합니다.
+또한 **system.valuetuple** 형식은 <xref:System.Collections.IStructuralComparable> <xref:System.Collections.IStructuralEquatable> 사용자 지정 비교자를 정의 하는 데 사용할 수 있는 및 인터페이스를 구현 합니다.
 
 ## <a name="assignment-and-tuples"></a>할당 및 튜플
 
@@ -101,7 +101,7 @@ Visual Basic는 필드 수가 같은 튜플 형식 간의 할당을 지원 합�
 
 - 원본 형식에서 대상 형식으로의 확대 또는 암시적 변환이 정의 됩니다.
 
-- `Option Strict`가이 `On` 고 원본 형식에서 대상 형식으로의 축소 또는 명시적 변환이 정의 되어 있습니다. 소스 값이 대상 형식의 범위를 벗어나면이 변환에서 예외를 throw 할 수 있습니다.
+- `Option Strict` 가이 `On` 고 원본 형식에서 대상 형식으로의 축소 또는 명시적 변환이 정의 되어 있습니다. 소스 값이 대상 형식의 범위를 벗어나면이 변환에서 예외를 throw 할 수 있습니다.
 
 다른 변환은 할당에 고려되지 않습니다. 튜플 형식 간에 허용되는 할당 종류를 살펴보겠습니다.
 

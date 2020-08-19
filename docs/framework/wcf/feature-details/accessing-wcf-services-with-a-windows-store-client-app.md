@@ -2,14 +2,15 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ff6638936f476bd8fe75a065d3e61e96790cb7f4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597698"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558974"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
+# <a name="access-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 앱을 사용 하 여 WCF 서비스에 액세스
+
 Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다. 이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다. .NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Windows 스토어 애플리케이션의 WCF 지원  
@@ -19,7 +20,7 @@ Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형�
 > WCF에서 노출하는 API 대신 WinRT 배포 API를 사용하세요. 자세한 내용은 [WinRT 배포 API](xref:Windows.Web.Syndication)를 참조하세요.  
   
 > [!WARNING]
-> 서비스 참조 추가 기능을 사용하여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.  
+> 서비스 참조 추가를 사용 하 여 Windows 런타임 구성 요소에 웹 서비스 참조를 추가할 수는 없습니다.  
   
 ### <a name="supported-bindings"></a>지원되는 바인딩  
  Windows 스토어 애플리케이션에서는 다음과 같은 WCF 바인딩이 지원됩니다.  
@@ -139,7 +140,7 @@ Windows 스토어 응용 프로그램에서는 다음과 같은 클라이언트 
  Windows 스토어 애플리케이션이 기본 Windows 자격 증명에 액세스하여 이를 보내도록 하려면 Package.appmanifest 파일 내에서 이 기능을 사용하도록 설정해야 합니다. 이 파일을 열고 기능 탭을 선택한 다음 "기본 Windows 자격 증명"을 선택 합니다. 그러면 도메인 자격 증명이 필요한 인트라넷 리소스에 애플리케이션을 연결할 수 있습니다.  
   
 > [!IMPORTANT]
-> Windows 스토어 응용 프로그램이 컴퓨터 간 호출을 수행 하도록 하려면 "홈/회사 네트워킹" 이라는 다른 기능을 사용 하도록 설정 해야 합니다. 이 설정은 appmanifest 파일의 기능 탭에도 있습니다. 홈/회사 네트워킹 확인란을 선택 합니다. 그러면 집이나 회사와 같이 사용자가 신뢰할 수 있는 장소의 네트워크에 대한 인바운드 및 아웃바운드 액세스 권한이 애플리케이션에 부여됩니다. 중요한 인바운드 포트는 항상 차단됩니다. 인터넷의 서비스에 액세스하려면 인터넷(클라이언트) 기능도 사용하도록 설정해야 합니다.  
+> Windows 스토어 응용 프로그램이 컴퓨터 간 호출을 수행 하도록 하려면 "홈/회사 네트워킹" 이라는 다른 기능을 사용 하도록 설정 해야 합니다. 이 설정은 appmanifest 파일의 기능 탭에도 있습니다. 홈/회사 네트워킹 확인란을 선택 합니다. 이를 통해 응용 프로그램은 home 및 work와 같이 사용자가 신뢰할 수 있는 장소의 네트워크에 대 한 인바운드 및 아웃 바운드 액세스를 제공 합니다. 중요한 인바운드 포트는 항상 차단됩니다. 인터넷의 서비스에 액세스하려면 인터넷(클라이언트) 기능도 사용하도록 설정해야 합니다.  
   
 ### <a name="misc"></a>기타  
  Windows 스토어 애플리케이션에 는 다음 클래스를 사용할 수 있습니다.  
@@ -176,9 +177,5 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 스토어 앱의 WCF 블로그](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [WCF Windows 스토어 클라이언트 및 보안](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Windows 스토어 앱 및 컴퓨터 간 호출](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Windows 스토어 앱에서 Azure에 배포된 WCF 서비스 호출](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF 보안 프로그래밍](programming-wcf-security.md)
 - [바인딩](../bindings.md)

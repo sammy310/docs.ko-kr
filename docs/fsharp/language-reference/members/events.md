@@ -1,20 +1,17 @@
 ---
 title: 이벤트
 description: 'F # 이벤트를 사용 하 여 함수 호출을 GUI 프로그래밍에서 중요 한 사용자 동작에 연결 하는 방법을 알아봅니다.'
-ms.date: 05/16/2016
-ms.openlocfilehash: 682686ba58d0f7a56e7da2585e6507ccd0156a44
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 42783255412d56c6ff6729694c31d0868ed99633
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854934"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559195"
 ---
 # <a name="events"></a>이벤트
 
 이벤트를 사용하면 함수 호출을 사용자 동작에 연결할 수 있습니다. 이벤트는 GUI 프로그래밍에서 중요한 부분을 차지합니다. 애플리케이션이나 운영 체제에서 이벤트를 트리거할 수도 있습니다.
-
-> [!NOTE]
-> F #에 대 한 docs.microsoft.com API 참조가 완전 하지 않습니다. 끊어진 링크가 있는 경우 대신 [F # 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/) 를 참조 하세요.
 
 ## <a name="handling-events"></a>이벤트 처리
 
@@ -28,9 +25,9 @@ Windows Forms 또는 WPF(Windows Presentation Foundation) 같은 GUI 라이브�
 
 ## <a name="creating-custom-events"></a>사용자 지정 이벤트 만들기
 
-F # 이벤트는 [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) 인터페이스를 구현 하는 f # [이벤트](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) 클래스로 표현 됩니다. `IEvent`자체는 다른 두 인터페이스 및 IDelegateEvent의 기능을 결합 하는 인터페이스입니다 `System.IObservable<'T>` . [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a) 따라서 `Event`에는 다른 언어의 대리자와 동등한 기능에 더해 `IObservable`의 기능이 추가로 포함됩니다. 즉, F# 이벤트는 이벤트 필터링을 지원하며 F# 고급 함수와 람다 식을 이벤트 처리기로 사용할 수 있습니다. 이 기능은 [이벤트 모듈](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)에서 제공 됩니다.
+F # 이벤트는 [IEvent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-ievent-1.html) 인터페이스를 구현 하는 f # [이벤트](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpevent-1.html) 형식으로 표현 됩니다. `IEvent`자체는 다른 두 인터페이스 및 IDelegateEvent의 기능을 결합 하는 인터페이스입니다 `System.IObservable<'T>` . [IDelegateEvent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-idelegateevent-1.html) 따라서 `Event`에는 다른 언어의 대리자와 동등한 기능에 더해 `IObservable`의 기능이 추가로 포함됩니다. 즉, F# 이벤트는 이벤트 필터링을 지원하며 F# 고급 함수와 람다 식을 이벤트 처리기로 사용할 수 있습니다. 이 기능은 [이벤트 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-eventmodule.html)에서 제공 됩니다.
 
-클래스에 대해 다른 .NET Framework 이벤트와 같은 방식으로 작동하는 이벤트를 만들려면 클래스의 필드로 `let` 를 정의하는 `Event` 바인딩을 클래스에 추가하면 됩니다. 원하는 이벤트 인수 형식을 형식 인수로 지정하거나, 인수 형식을 비워 두고 컴파일러가 적합한 형식을 유추하도록 할 수 있습니다. 또한 이벤트를 노출하는 이벤트 멤버를 CLI이벤트로 정의해야 합니다. 이 멤버에는 [Clievent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) 특성이 있어야 합니다. 이 클래스는 속성으로 선언 되며, 해당 구현은 이벤트의 [게시](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) 속성에 대 한 호출 일 뿐입니다. 클래스 사용자는 게시된 이벤트의 `Add` 메서드를 사용하여 처리기를 추가할 수 있습니다. `Add` 메서드에 대한 인수는 람다 식일 수 있습니다. 이벤트의 `Trigger` 속성을 사용하여 이벤트를 발생시키고 인수를 처리기 함수에 전달할 수 있습니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다. 이 예에서 이벤트에 대해 유추된 형식 인수는 람다 식의 인수를 나타내는 튜플입니다.
+클래스에 대해 다른 .NET Framework 이벤트와 같은 방식으로 작동하는 이벤트를 만들려면 클래스의 필드로 `let` 를 정의하는 `Event` 바인딩을 클래스에 추가하면 됩니다. 원하는 이벤트 인수 형식을 형식 인수로 지정하거나, 인수 형식을 비워 두고 컴파일러가 적합한 형식을 유추하도록 할 수 있습니다. 또한 이벤트를 노출하는 이벤트 멤버를 CLI이벤트로 정의해야 합니다. 이 멤버에는 [Clievent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-clieventattribute.html) 특성이 있어야 합니다. 이 클래스는 속성으로 선언 되며, 해당 구현은 이벤트의 [게시](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpevent-1.html#Publish) 속성에 대 한 호출 일 뿐입니다. 클래스 사용자는 게시된 이벤트의 `Add` 메서드를 사용하여 처리기를 추가할 수 있습니다. `Add` 메서드에 대한 인수는 람다 식일 수 있습니다. 이벤트의 `Trigger` 속성을 사용하여 이벤트를 발생시키고 인수를 처리기 함수에 전달할 수 있습니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다. 이 예에서 이벤트에 대해 유추된 형식 인수는 람다 식의 인수를 나타내는 튜플입니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -53,13 +50,13 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>이벤트 스트림 처리
 
-Event [. add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) 함수를 사용 하 여 이벤트에 대 한 이벤트 처리기를 추가 하는 대신 모듈의 함수를 사용 `Event` 하 여 고도로 사용자 지정 된 방식으로 이벤트 스트림을 처리할 수 있습니다. 이를 위해서는 일련의 함수 호출에서 첫째 값으로 이벤트를 사용하고 이후의 함수 호출로는 `|>` 모듈 함수를 사용하면서 전달 파이프(`Event`)를 사용해야 합니다.
+Event [. add](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-eventmodule.html#add) 함수를 사용 하 여 이벤트에 대 한 이벤트 처리기를 추가 하는 대신 모듈의 함수를 사용 `Event` 하 여 고도로 사용자 지정 된 방식으로 이벤트 스트림을 처리할 수 있습니다. 이를 위해서는 일련의 함수 호출에서 첫째 값으로 이벤트를 사용하고 이후의 함수 호출로는 `|>` 모듈 함수를 사용하면서 전달 파이프(`Event`)를 사용해야 합니다.
 
 다음 코드 예제에서는 특정 조건이 충족될 때만 처리기가 호출되는 이벤트를 설정하는 방법을 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3604.fs)]
 
-[관찰 가능한 모듈](https://msdn.microsoft.com/library/16b8610b-b30a-4df7-aa99-d9d352276227) 은 관찰 가능한 개체에서 작동 하는 유사한 함수를 포함 합니다. 관찰 가능한 개체는 이벤트와 비슷하지만 개체 자체가 구독 대상인 경우에만 능동적으로 이벤트를 구독합니다.
+[관찰 가능한 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-observablemodule.html) 은 관찰 가능한 개체에서 작동 하는 유사한 함수를 포함 합니다. 관찰 가능한 개체는 이벤트와 비슷하지만 개체 자체가 구독 대상인 경우에만 능동적으로 이벤트를 구독합니다.
 
 ## <a name="implementing-an-interface-event"></a>인터페이스 이벤트 구현
 
@@ -179,6 +176,3 @@ Application.Run(appForm)
 - [멤버](index.md)
 - [이벤트 처리 및 발생](../../../standard/events/index.md)
 - [람다 식: `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)
-- [Control. 이벤트 모듈](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
-- [Control. 이벤트&#60; '&#62; 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-- [Control. 이벤트&#60; ' Delegate, ' Args&#62; 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

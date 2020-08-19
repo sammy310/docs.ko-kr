@@ -1,20 +1,17 @@
 ---
 title: 목록
 description: '동일한 형식의 변경 되지 않은 순서가 지정 된 일련의 요소에 대 한 F # 목록에 대해 알아봅니다.'
-ms.date: 05/16/2016
-ms.openlocfilehash: 236ae77813a3448f159228c5c58d9fe3d024fbd8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 16d7195039d25cf63630f5cc3be6563b1bf45c44
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854973"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559169"
 ---
 # <a name="lists"></a>목록
 
-F#의 목록은 순서가 지정되고 변경할 수 없는 일련의 동일 형식 요소입니다. 목록에 대 한 기본 작업을 수행 하려면 [목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)의 함수를 사용 합니다.
-
-> [!NOTE]
-> F #에 대 한 docs.microsoft.com API 참조가 완전 하지 않습니다. 끊어진 링크가 있는 경우 대신 [F # 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/) 를 참조 하세요.
+F#의 목록은 순서가 지정되고 변경할 수 없는 일련의 동일 형식 요소입니다. 목록에 대 한 기본 작업을 수행 하려면 [목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)의 함수를 사용 합니다.
 
 ## <a name="creating-and-initializing-lists"></a>목록 만들기 및 초기화
 
@@ -52,7 +49,7 @@ F#의 목록은 순서가 지정되고 변경할 수 없는 일련의 동일 형
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 
-목록에서 작업을 수행 하는 함수는 [목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)에서 사용할 수 있습니다.
+목록에서 작업을 수행 하는 함수는 [목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)에서 사용할 수 있습니다.
 
 F#의 목록은 변경이 불가능하므로 수정 작업을 수행하면 기존 목록이 수정되는 대신 새 목록이 생성됩니다.
 
@@ -62,14 +59,14 @@ F #의 목록은 단일 연결 된 목록으로 구현 됩니다. 즉, 목록의
 
 목록 형식이 지원하는 속성은 다음과 같습니다.
 
-|속성|Type|설명|
+|속성|Type|Description|
 |--------|----|-----------|
-|[사장](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|첫 번째 요소입니다.|
-|[비어 있음](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|해당 형식의 빈 목록을 반환하는 정적 속성입니다.|
-|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|목록에 요소가 없으면 `true`입니다.|
-|[항목](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|지정한 인덱스에 있는 요소로서 0부터 시작합니다.|
-|[길이](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|요소의 수입니다.|
-|[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|첫 번째 요소가 없는 목록입니다.|
+|[사장](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|첫 번째 요소입니다.|
+|[비어 있음](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Empty)|`'T list`|해당 형식의 빈 목록을 반환하는 정적 속성입니다.|
+|[IsEmpty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#IsEmpty)|`bool`|목록에 요소가 없으면 `true`입니다.|
+|[항목](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Item)|`'T`|지정한 인덱스에 있는 요소로서 0부터 시작합니다.|
+|[길이](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Length)|`int`|요소의 수입니다.|
+|[Tail](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Tail)|`'T list`|첫 번째 요소가 없는 목록입니다.|
 
 이러한 속성을 사용하는 몇 가지 예는 다음과 같습니다.
 
@@ -106,13 +103,13 @@ Primes Up To 100:
 
 ## <a name="module-functions"></a>모듈 함수
 
-[목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) 은 목록의 요소에 액세스 하는 함수를 제공 합니다. 가장 빠르고 쉽게 액세스할 수 있는 요소는 헤드 요소입니다. 속성 [head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) 또는 모듈 함수 [List. head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2)를 사용 합니다. [Tail 속성 또는](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) [list. tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) 함수를 사용 하 여 목록의 꼬리 부분에 액세스할 수 있습니다. 인덱스를 기준으로 요소를 찾으려면 [List. n a n](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) 함수를 사용 합니다. `List.nth`는 목록을 트래버스하므로 따라서 O (*n*)입니다. 코드에서 `List.nth`를 자주 사용하는 경우 목록 대신 배열을 사용해볼 수 있습니다. 배열의 요소 액세스는 O(1)입니다.
+[목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html) 은 목록의 요소에 액세스 하는 함수를 제공 합니다. 가장 빠르고 쉽게 액세스할 수 있는 요소는 헤드 요소입니다. 속성 [head](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head) 또는 모듈 함수 [List. head](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#head)를 사용 합니다. [Tail 속성 또는](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Tail) [list. tail](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#tail) 함수를 사용 하 여 목록의 꼬리 부분에 액세스할 수 있습니다. 인덱스를 기준으로 요소를 찾으려면 [List. n a n](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#nth) 함수를 사용 합니다. `List.nth`는 목록을 트래버스하므로 따라서 O (*n*)입니다. 코드에서 `List.nth`를 자주 사용하는 경우 목록 대신 배열을 사용해볼 수 있습니다. 배열의 요소 액세스는 O(1)입니다.
 
 ### <a name="boolean-operations-on-lists"></a>목록에 대한 부울 작업
 
-[IsEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) 함수는 목록에 요소가 있는지 여부를 확인 합니다.
+[IsEmpty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#isEmpty) 함수는 목록에 요소가 있는지 여부를 확인 합니다.
 
-[Exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) 함수는 목록 요소에 부울 테스트를 적용 하 고, `true` 어떤 요소가 테스트를 충족 하는지 여부를 반환 합니다. [Array.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) 는 유사 하지만 두 목록에서 연속 되는 요소 쌍에 대해 작동 합니다.
+[Exists](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#exists) 함수는 목록 요소에 부울 테스트를 적용 하 고, `true` 어떤 요소가 테스트를 충족 하는지 여부를 반환 합니다. [Array.exists2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#exists2) 는 유사 하지만 두 목록에서 연속 되는 요소 쌍에 대해 작동 합니다.
 
 다음 코드는 `List.exists`의 사용법을 보여줍니다.
 
@@ -134,7 +131,7 @@ For list [0; 1; 2; 3], contains zero is true
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
-목록의 모든 요소가 조건을 충족 하는지 여부를 테스트 하려는 경우 forall를 사용할 수 있습니다 [.](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7)
+목록의 모든 요소가 조건을 충족 하는지 여부를 테스트 하려는 경우 forall를 사용할 수 있습니다 [.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#forall)
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet3.fs)]
 
@@ -145,7 +142,7 @@ true
 false
 ```
 
-마찬가지로 [list.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) 는 두 목록의 해당 위치에 있는 모든 요소가 각 요소 쌍을 포함 하는 부울 식을 만족 하는지 여부를 확인 합니다.
+마찬가지로 [list.forall2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#forall2) 는 두 목록의 해당 위치에 있는 모든 요소가 각 요소 쌍을 포함 하는 부울 식을 만족 하는지 여부를 확인 합니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet4.fs)]
 
@@ -158,7 +155,7 @@ false
 
 ### <a name="sort-operations-on-lists"></a>목록에 대한 정렬 작업
 
-[List. sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359)및 lists는 함수 정렬 목록을 [사용](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) 합니다. 정렬 함수는 이 세 함수 중 사용할 함수를 결정합니다. `List.sort`는 기본 제네릭 비교를 사용합니다. 제네릭 비교에서는 제네릭 비교 함수를 기반으로 전역 연산자를 사용해 값을 비교합니다. 이 함수는 단순한 숫자 형식, 튜플, 레코드, 구분된 공용 구조체, 목록, 배열, 그리고 `System.IComparable`을 구현하는 모든 형식과 같은 광범위한 요소 형식에서 효율적으로 작동합니다. `System.IComparable`을 구현하는 형식의 경우 제네릭 비교에서는 `System.IComparable.CompareTo()` 함수를 사용합니다. 제네릭 비교는 문자열에도 작동하지만 이 경우에는 문화권과 독립적인 정렬 순서를 사용합니다. 함수 형식 등의 지원되지 않는 형식에는 제네릭 비교를 사용하면 안 됩니다. 또한 기본 제네릭 비교의 성능은 작은 구조의 형식에서 가장 우수합니다. 자주 비교하고 정렬해야 하는 큰 구조의 형식에 대해서는 `System.IComparable`을 구현하고 효율적인 `System.IComparable.CompareTo()` 메서드 구현을 제공하는 것이 좋습니다.
+[List. sort](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#sort), [sortBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#sortBy)및 lists는 함수 정렬 목록을 [사용](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#sortWith) 합니다. 정렬 함수는 이 세 함수 중 사용할 함수를 결정합니다. `List.sort`는 기본 제네릭 비교를 사용합니다. 제네릭 비교에서는 제네릭 비교 함수를 기반으로 전역 연산자를 사용해 값을 비교합니다. 이 함수는 단순한 숫자 형식, 튜플, 레코드, 구분된 공용 구조체, 목록, 배열, 그리고 `System.IComparable`을 구현하는 모든 형식과 같은 광범위한 요소 형식에서 효율적으로 작동합니다. `System.IComparable`을 구현하는 형식의 경우 제네릭 비교에서는 `System.IComparable.CompareTo()` 함수를 사용합니다. 제네릭 비교는 문자열에도 작동하지만 이 경우에는 문화권과 독립적인 정렬 순서를 사용합니다. 함수 형식 등의 지원되지 않는 형식에는 제네릭 비교를 사용하면 안 됩니다. 또한 기본 제네릭 비교의 성능은 작은 구조의 형식에서 가장 우수합니다. 자주 비교하고 정렬해야 하는 큰 구조의 형식에 대해서는 `System.IComparable`을 구현하고 효율적인 `System.IComparable.CompareTo()` 메서드 구현을 제공하는 것이 좋습니다.
 
 `List.sortBy`는 정렬 기준으로 사용되는 값을 반환하는 함수를 사용하며 `List.sortWith`는 비교 함수를 인수로 사용합니다. 비교를 지원하지 않는 형식으로 작업 중이거나 비교 시 문화권 인식 문자열과 같이 보다 복잡한 비교 의미 체계를 사용할 때는 이 두 함수가 유용합니다.
 
@@ -199,7 +196,7 @@ Rev = 1;}]
 
 ### <a name="search-operations-on-lists"></a>목록에 대한 검색 작업
 
-목록에는 다양한 검색 작업이 지원됩니다. 가장 간단한 [List. find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06)를 사용 하면 지정 된 조건과 일치 하는 첫 번째 요소를 찾을 수 있습니다.
+목록에는 다양한 검색 작업이 지원됩니다. 가장 간단한 [List. find](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#find)를 사용 하면 지정 된 조건과 일치 하는 첫 번째 요소를 찾을 수 있습니다.
 
 다음 코드 예제에서는 `List.find`를 사용하여 목록에서 5로 나눌 수 있는 첫 번째 숫자를 찾습니다.
 
@@ -207,7 +204,7 @@ Rev = 1;}]
 
 해당 결과는 5입니다.
 
-요소를 먼저 변환 해야 하는 경우에는 옵션을 반환 하는 함수를 사용 하 고 첫 번째 옵션 값을 검색 하는 [pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2)를 호출 `Some(x)` 합니다. `List.pick`은 요소를 반환하는 대신 `x` 결과를 반환합니다. 일치하는 요소가 없으면 `List.pick`은 `System.Collections.Generic.KeyNotFoundException`을 throw합니다. 다음 코드는 `List.pick`의 사용법을 보여줍니다.
+요소를 먼저 변환 해야 하는 경우에는 옵션을 반환 하는 함수를 사용 하 고 첫 번째 옵션 값을 검색 하는 [pick](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#pick)를 호출 `Some(x)` 합니다. `List.pick`은 요소를 반환하는 대신 `x` 결과를 반환합니다. 일치하는 요소가 없으면 `List.pick`은 `System.Collections.Generic.KeyNotFoundException`을 throw합니다. 다음 코드는 `List.pick`의 사용법을 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet9.fs)]
 
@@ -217,7 +214,7 @@ Rev = 1;}]
 "b"
 ```
 
-다른 검색 작업 그룹인 [\Find](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d) 및 관련 함수는 옵션 값을 반환 합니다. `List.tryFind` 함수는 조건을 만족하는 목록의 첫 번째 요소가 있으면 해당 요소를 반환하고 요소가 없으면 옵션 값 `None`을 반환합니다. 변형 [목록. tryFindIndex](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec) 는 요소 자체가 아닌 요소 (있는 경우)의 인덱스를 반환 합니다. 다음 코드에서는 이러한 함수를 보여줍니다.
+다른 검색 작업 그룹인 [\Find](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#tryFind) 및 관련 함수는 옵션 값을 반환 합니다. `List.tryFind` 함수는 조건을 만족하는 목록의 첫 번째 요소가 있으면 해당 요소를 반환하고 요소가 없으면 옵션 값 `None`을 반환합니다. 변형 [목록. tryFindIndex](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#tryFindIndex) 는 요소 자체가 아닌 요소 (있는 경우)의 인덱스를 반환 합니다. 다음 코드에서는 이러한 함수를 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet10.fs)]
 
@@ -230,7 +227,7 @@ The first even value is at position 8.
 
 ### <a name="arithmetic-operations-on-lists"></a>목록에 대한 산술 연산
 
-합계 및 평균과 같은 일반적인 산술 연산은 [목록 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)에 기본 제공 됩니다. [List. sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9)을 사용 하려면 목록 요소 형식이 연산자를 지원 하 `+` 고 값이 0 이어야 합니다. 모든 기본 제공 연산 형식은 이러한 조건을 만족합니다. [Average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1)를 사용 하 여 작업 하려면 요소 형식이 나머지 없이 나누기를 지원 해야 합니다 .이는 정수 형식을 제외 하지만 부동 소수점 형식을 허용 합니다. [List. sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) 및 [array.averageby](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) 함수는 함수를 매개 변수로 사용 하며,이 함수의 결과는 합계 또는 평균 값을 계산 하는 데 사용 됩니다.
+합계 및 평균과 같은 일반적인 산술 연산은 [목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)에 기본 제공 됩니다. [List. sum](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#sum)을 사용 하려면 목록 요소 형식이 연산자를 지원 하 `+` 고 값이 0 이어야 합니다. 모든 기본 제공 연산 형식은 이러한 조건을 만족합니다. [Average](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#average)를 사용 하 여 작업 하려면 요소 형식이 나머지 없이 나누기를 지원 해야 합니다 .이는 정수 형식을 제외 하지만 부동 소수점 형식을 허용 합니다. [List. sumBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#sumBy) 및 [array.averageby](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#averageBy) 함수는 함수를 매개 변수로 사용 하며,이 함수의 결과는 합계 또는 평균 값을 계산 하는 데 사용 됩니다.
 
 다음 코드는 `List.sum`, `List.sumBy` 및 `List.average`의 사용법을 보여줍니다.
 
@@ -246,7 +243,7 @@ The first even value is at position 8.
 
 ### <a name="lists-and-tuples"></a>목록 및 튜플
 
-튜플을 포함하는 목록은 zip 및 unzip 함수를 통해 조작할 수 있습니다. 이러한 함수는 단일 값의 두 목록을 튜플 목록 하나로 결합하거나 튜플 목록 하나를 단일 값의 두 목록으로 분리합니다. 가장 간단한 [List.zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) 함수는 단일 요소 목록 두 개를 사용 하 여 단일 튜플 쌍 목록을 생성 합니다. 다른 버전인 [List.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b)은 단일 요소 목록 세 개를 사용 하 여 세 개의 요소가 포함 된 단일 튜플 목록을 생성 합니다. 다음 코드 예제에서는 `List.zip`의 사용법을 보여줍니다.
+튜플을 포함하는 목록은 zip 및 unzip 함수를 통해 조작할 수 있습니다. 이러한 함수는 단일 값의 두 목록을 튜플 목록 하나로 결합하거나 튜플 목록 하나를 단일 값의 두 목록으로 분리합니다. 가장 간단한 [List.zip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#zip) 함수는 단일 요소 목록 두 개를 사용 하 여 단일 튜플 쌍 목록을 생성 합니다. 다른 버전인 [List.zip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#zip3)은 단일 요소 목록 세 개를 사용 하 여 세 개의 요소가 포함 된 단일 튜플 목록을 생성 합니다. 다음 코드 예제에서는 `List.zip`의 사용법을 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet13.fs)]
 
@@ -266,7 +263,7 @@ The first even value is at position 8.
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
-해당 하는 압축 풀기 버전 (list.unzip3 및 [목록](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4))은 튜플에 있는 튜플 및 반환 목록 목록을 사용 합니다. 여기서 첫 번째 목록에는 각 튜플의 첫 번째 요소를 포함 하 고 두 번째 목록에는 각 튜플의 두 번째 요소가 포함 [됩니다.](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)
+해당 하는 압축 풀기 버전 (list.unzip3 및 [목록](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3))은 튜플에 있는 튜플 및 반환 목록 목록을 사용 합니다. 여기서 첫 번째 목록에는 각 튜플의 첫 번째 요소를 포함 하 고 두 번째 목록에는 각 튜플의 두 번째 요소가 포함 [됩니다.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)
 
 다음 코드 예제에서는 [List. 압축](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)해제를 사용 하는 방법을 보여 줍니다.
 
@@ -291,7 +288,7 @@ The first even value is at position 8.
 
 ### <a name="operating-on-list-elements"></a>목록 요소에 대한 작업
 
-F#에서는 목록 요소에 대한 여러 작업을 지원합니다. 가장 간단한 방법은 목록의 모든 요소에 대해 함수를 호출할 수 있도록 하는 [iter입니다.](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f) [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40)를 사용 하면 두 목록의 요소에 대 한 작업을 수행할 수 있습니다 [. list.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60)는 `List.iter` 각 요소의 인덱스가 각 요소에 대해 호출 되는 함수에 인수로 전달 되는 것을 제외 하 고 및의 기능과의 조합 인 [list.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c)를 사용 하는 것을 제외 하 고 `List.iter2` `List.iteri` 와 비슷합니다. 다음 코드 예제에서는 이러한 함수를 보여줍니다.
+F#에서는 목록 요소에 대한 여러 작업을 지원합니다. 가장 간단한 방법은 목록의 모든 요소에 대해 함수를 호출할 수 있도록 하는 [iter입니다.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#iter) [List.iter2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#iter2)를 사용 하면 두 목록의 요소에 대 한 작업을 수행할 수 있습니다 [. list.iteri](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#iteri)는 `List.iter` 각 요소의 인덱스가 각 요소에 대해 호출 되는 함수에 인수로 전달 되는 것을 제외 하 고 및의 기능과의 조합 인 [list.iteri2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#iteri2)를 사용 하는 것을 제외 하 고 `List.iter2` `List.iteri` 와 비슷합니다. 다음 코드 예제에서는 이러한 함수를 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet17.fs)]
 
@@ -312,7 +309,7 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-자주 사용 되는 또 다른 함수는 목록 요소를 변환 하는 [목록입니다. map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 사용 하면 목록의 각 요소에 함수를 적용 하 고 모든 결과를 새 목록에 넣을 수 있습니다. [Array.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) 및 [list.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) 는 여러 목록을 사용 하는 변형입니다. [Array.mapi2 및 list.](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49)를 사용할 수도 [있습니다. 요소](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) 외에도 함수는 각 요소의 인덱스를 전달 해야 합니다. `List.mapi2`와 `List.mapi`의 차이점은 `List.mapi2`의 경우 목록 두 개를 사용한다는 것뿐입니다. 다음 예에서는 [map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6)을 보여 줍니다.
+자주 사용 되는 또 다른 함수는 목록 요소를 변환 하는 [목록입니다. map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#map)을 사용 하면 목록의 각 요소에 함수를 적용 하 고 모든 결과를 새 목록에 넣을 수 있습니다. [Array.map2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#map2) 및 [list.map3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#map3) 는 여러 목록을 사용 하는 변형입니다. [Array.mapi2 및 list.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#mapi2)를 사용할 수도 [있습니다. 요소](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#mapi) 외에도 함수는 각 요소의 인덱스를 전달 해야 합니다. `List.mapi2`와 `List.mapi`의 차이점은 `List.mapi2`의 경우 목록 두 개를 사용한다는 것뿐입니다. 다음 예에서는 [map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#map)을 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet18.fs)]
 
@@ -362,7 +359,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 [0; 7; 18]
 ```
 
-Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) `List.map` 단, 각 요소는 목록을 생성 하 고 이러한 모든 목록은 최종 목록에 연결 됩니다. 다음 코드에서는 목록의 각 요소가 숫자 3개를 생성합니다. 이러한 숫자는 모두 목록 하나에 수집됩니다.
+Lists [는와 유사 합니다.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#collect) `List.map` 단, 각 요소는 목록을 생성 하 고 이러한 모든 목록은 최종 목록에 연결 됩니다. 다음 코드에서는 목록의 각 요소가 숫자 3개를 생성합니다. 이러한 숫자는 모두 목록 하나에 수집됩니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet23.fs)]
 
@@ -372,13 +369,13 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
-부울 조건을 사용 하 고 지정 된 조건을 충족 하는 요소로만 구성 된 새 목록을 생성 하는 [list. filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248)를 사용할 수도 있습니다.
+부울 조건을 사용 하 고 지정 된 조건을 충족 하는 요소로만 구성 된 새 목록을 생성 하는 [list. filter](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#filter)를 사용할 수도 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet24.fs)]
 
 그러면 `[2; 4; 6]` 목록이 생성됩니다.
 
-지도와 필터 [목록의 조합입니다 .를 선택](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) 하면 요소를 동시에 변환 하 고 선택할 수 있습니다. `List.choose`는 목록의 각 요소에 대한 옵션을 반환하는 함수를 적용하고, 함수가 옵션 값 `Some`을 반환하면 요소에 대해 새 결과 목록을 반환합니다.
+지도와 필터 [목록의 조합입니다 .를 선택](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#choose) 하면 요소를 동시에 변환 하 고 선택할 수 있습니다. `List.choose`는 목록의 각 요소에 대한 옵션을 반환하는 함수를 적용하고, 함수가 옵션 값 `Some`을 반환하면 요소에 대해 새 결과 목록을 반환합니다.
 
 다음 코드는 `List.choose`를 사용하여 단어 목록에서 대문자로 표기된 단어를 선택하는 방법을 보여줍니다.
 
@@ -392,7 +389,7 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 
 ### <a name="operating-on-multiple-lists"></a>여러 목록에 대한 작업
 
-여러 목록을 연결할 수 있습니다. 두 목록을 하나로 조인 하려면 [List. append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426)를 사용 합니다. 세 개 이상의 목록을 조인 하려면 [concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c)를 사용 합니다.
+여러 목록을 연결할 수 있습니다. 두 목록을 하나로 조인 하려면 [List. append](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#append)를 사용 합니다. 세 개 이상의 목록을 조인 하려면 [concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#concat)를 사용 합니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet26.fs)]
 
@@ -402,21 +399,21 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 
 목록에 대해 계산을 수행하려면 `List.fold`를 사용합니다.
 
-다음 코드 예제에서는 [List. 접기](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) 를 사용 하 여 다양 한 작업을 수행 하는 방법을 보여 줍니다.
+다음 코드 예제에서는 [List. 접기](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#fold) 를 사용 하 여 다양 한 작업을 수행 하는 방법을 보여 줍니다.
 
 이 함수는 목록을 트래버스합니다. 누적기 `acc`는 계산이 진행되면서 전달되는 값입니다. 첫 번째 인수는 누적기와 목록 요소를 사용하여 해당 목록 요소에 대한 계산의 중간 결과를 반환합니다. 두 번째 인수는 누적기의 초기 값입니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet27.fs)]
 
-이러한 함수 중 함수 이름에 숫자가 있는 버전은 둘 이상의 목록에 대해 작동합니다. 예를 들어 [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) 는 두 개의 목록에서 계산을 수행 합니다.
+이러한 함수 중 함수 이름에 숫자가 있는 버전은 둘 이상의 목록에 대해 작동합니다. 예를 들어 [list.fold2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#fold2) 는 두 개의 목록에서 계산을 수행 합니다.
 
 다음 예에서는 `List.fold2`의 사용법을 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`및 [List. scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) 은 `List.fold` 추가 매개 변수의 최종 값을 반환 하지만 `List.scan` 추가 매개 변수의 최종 값과 함께 중간 값의 목록을 반환 합니다.
+`List.fold` 및 [List. scan](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#scan) 은 `List.fold` 추가 매개 변수의 최종 값을 반환 하지만 `List.scan` 추가 매개 변수의 최종 값과 함께 중간 값의 목록을 반환 합니다.
 
-이러한 각 함수에는 목록이 트래버스 되는 순서와 인수의 순서와 다른 역방향 변형 (예: [foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7))이 포함 되어 있습니다. 또한 `List.fold` 및에 `List.foldBack` 는 동일한 길이의 두 목록을 사용 하는 [list.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) 및 [array.foldback2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)변형이 있습니다. 각 요소에 대해 실행되는 함수는 두 목록의 해당 요소를 사용하여 일부 작업을 수행할 수 있습니다. 다음 예에서와 같이 두 목록의 요소 형식은 다를 수 있습니다. 여기서 한 목록은 은행 계좌의 거래 금액을 포함하고 다른 목록은 거래 형식(입금 또는 출금)을 포함합니다.
+이러한 각 함수에는 목록이 트래버스 되는 순서와 인수의 순서와 다른 역방향 변형 (예: [foldBack](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#foldBack))이 포함 되어 있습니다. 또한 `List.fold` 및에 `List.foldBack` 는 동일한 길이의 두 목록을 사용 하는 [list.fold2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#fold2) 및 [array.foldback2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#foldBack2)변형이 있습니다. 각 요소에 대해 실행되는 함수는 두 목록의 해당 요소를 사용하여 일부 작업을 수행할 수 있습니다. 다음 예에서와 같이 두 목록의 요소 형식은 다를 수 있습니다. 여기서 한 목록은 은행 계좌의 거래 금액을 포함하고 다른 목록은 거래 형식(입금 또는 출금)을 포함합니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet29.fs)]
 
@@ -428,7 +425,7 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet34.fs)]
 
-함수 [목록입니다.](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) 는 별도의 누적기를 전달 하는 `List.fold` `List.scan` 대신 `List.reduce` 요소 형식의 두 인수를 사용 하는 함수를 사용 하 고, 이러한 인수 중 하나가 누적기의 역할을 하 여 계산의 중간 결과를 저장 한다는 점을 제외 하면 및와 유사 합니다. `List.reduce`는 먼저 처음 두 목록 요소에 대해 실행된 후 해당 작업의 결과를 다음 요소와 함께 사용합니다. 고유한 형식이 지정된 별도의 누적기가 없으므로 `List.reduce`는 누적기와 요소 형식이 같을 때만 `List.fold` 대신 사용할 수 있습니다. 다음 코드는 `List.reduce`의 사용법을 보여줍니다. 제공된 목록에 요소가 없으면 `List.reduce`는 예외를 throw합니다.
+함수 [목록입니다.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#reduce) 는 별도의 누적기를 전달 하는 `List.fold` `List.scan` 대신 `List.reduce` 요소 형식의 두 인수를 사용 하는 함수를 사용 하 고, 이러한 인수 중 하나가 누적기의 역할을 하 여 계산의 중간 결과를 저장 한다는 점을 제외 하면 및와 유사 합니다. `List.reduce`는 먼저 처음 두 목록 요소에 대해 실행된 후 해당 작업의 결과를 다음 요소와 함께 사용합니다. 고유한 형식이 지정된 별도의 누적기가 없으므로 `List.reduce`는 누적기와 요소 형식이 같을 때만 `List.fold` 대신 사용할 수 있습니다. 다음 코드는 `List.reduce`의 사용법을 보여줍니다. 제공된 목록에 요소가 없으면 `List.reduce`는 예외를 throw합니다.
 
 다음 코드에서는 첫 번째 람다 식 호출에 인수 2와 4가 사용되며 결과로 6이 반환됩니다. 그 다음 호출에는 인수 6과 10이 사용되며 결과로 16이 반환됩니다.
 
@@ -436,11 +433,11 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 
 ### <a name="converting-between-lists-and-other-collection-types"></a>목록과 기타 컬렉션 형식 간 변환
 
-`List` 모듈은 시퀀스와 배열 간 변환을 위한 함수를 제공합니다. 시퀀스에서 또는 시퀀스로 변환 하려면 [list. toseq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) 또는 [List. ofseq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0)를 사용 합니다. 배열과 변환 하려면 [list. toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) 또는 [List. ofarray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032)를 사용 합니다.
+`List` 모듈은 시퀀스와 배열 간 변환을 위한 함수를 제공합니다. 시퀀스에서 또는 시퀀스로 변환 하려면 [list. toseq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#toSeq) 또는 [List. ofseq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#ofSeq)를 사용 합니다. 배열과 변환 하려면 [list. toArray](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#toArray) 또는 [List. ofarray](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#ofArray)를 사용 합니다.
 
 ### <a name="additional-operations"></a>추가 작업
 
-목록의 추가 작업에 대 한 자세한 내용은 라이브러리 참조 항목 [컬렉션. 목록 모듈](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d)을 참조 하세요.
+목록의 추가 작업에 대 한 자세한 내용은 라이브러리 참조 항목 [목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -448,4 +445,4 @@ Lists [는와 유사 합니다.](https://msdn.microsoft.com/library/cd08bbc7-a3b
 - [F# 형식](fsharp-types.md)
 - [시퀀스](sequences.md)
 - [배열](arrays.md)
-- [Options](options.md)
+- [옵션](options.md)
