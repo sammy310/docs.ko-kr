@@ -2,12 +2,12 @@
 title: 배열
 description: 'F # 프로그래밍 언어에서 배열을 만들고 사용 하는 방법에 대해 알아봅니다.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 93d524046ff93a7f1b04e72d580d9d0e1360ba0b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558883"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608504"
 ---
 # <a name="arrays"></a>배열
 
@@ -381,7 +381,7 @@ Did not find an element that is both a perfect square and a perfect cube.
 
 변형을 사용 하 여 [`Array.iteri`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri) [`Array.iteri2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri2) 요소의 인덱스를 계산에 포함 시킬 수 있습니다. 및의 경우에도 [`Array.mapi`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi) 마찬가지입니다. [`Array.mapi2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi2)
 
-,, [`Array.fold`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold) ,, 및 함수는 [`Array.foldBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack) [`Array.reduce`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduce) [`Array.reduceBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduceBack) [`Array.scan`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scan) [`Array.scanBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scanBack) 배열의 모든 요소를 포함 하는를 실행 합니다. 마찬가지로, 변형이 [`Array.fold2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold2) [`Array.foldBack2`](foldBack2) 두 배열에 대해 계산을 수행 합니다.
+,, [`Array.fold`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold) ,, 및 함수는 [`Array.foldBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack) [`Array.reduce`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduce) [`Array.reduceBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduceBack) [`Array.scan`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scan) [`Array.scanBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scanBack) 배열의 모든 요소를 포함 하는를 실행 합니다. 마찬가지로, 변형이 [`Array.fold2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold2) [`Array.foldBack2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack2) 두 배열에 대해 계산을 수행 합니다.
 
 계산을 수행 하는 이러한 함수는 [목록 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)에 있는 동일한 이름의 함수에 해당 합니다. 사용 예제는 [목록](lists.md)을 참조 하십시오.
 

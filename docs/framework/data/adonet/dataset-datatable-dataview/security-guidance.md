@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416195"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608527"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -29,7 +29,7 @@ ms.locfileid: "86416195"
 * 기본 형식 및 해당 하는 기본 형식:,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, `bool` `char` `sbyte` `byte` `short` `ushort` `int` `uint` `long` `ulong` `float` `double` `decimal` `DateTime` `DateTimeOffset` `TimeSpan` `string` `Guid` `SqlBinary` `SqlBoolean` `SqlByte` `SqlBytes` `SqlChars` `SqlDateTime` `SqlDecimal` `SqlDouble` `SqlGuid` `SqlInt16` `SqlInt32` `SqlInt64` `SqlMoney` `SqlSingle` 및 `SqlString`
 * 일반적으로 사용 되는 기본 형식이 아닌 `Type` , `Uri` 및 `BigInteger` 입니다.
 * 일반적으로 사용 되는 _system.web_ ,,,,, `Color` `Point` `PointF` `Rectangle` `RectangleF` `Size` 및 `SizeF` 입니다.
-* `Enum`종류.
+* `Enum` 종류.
 * 위 형식의 배열 및 목록입니다.
 
 들어오는 XML 데이터에이 목록에 없는 형식의 개체가 포함 된 경우:
@@ -252,7 +252,7 @@ ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니
 
 자세한 내용은 [".Net Core 런타임 구성 설정"](/dotnet/core/run-time-config/)을 참조 하십시오.
 
-`AllowArbitraryDataSetTypeInstantiation`는 다음 코드와 같이 구성 파일을 사용 하는 대신 [Appcontext. SetSwitch](/dotnet/api/system.appcontext.setswitch) 를 통해 프로그래밍 방식으로 설정할 수도 있습니다.
+`AllowArbitraryDataSetTypeInstantiation` 는 다음 코드와 같이 구성 파일을 사용 하는 대신 [Appcontext. SetSwitch](/dotnet/api/system.appcontext.setswitch) 를 통해 프로그래밍 방식으로 설정할 수도 있습니다.
 
 ```cs
 // Warning: setting the following switch can introduce a security problem.
@@ -289,7 +289,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 * `DataSet.ReadXml`또는 `DataTable.ReadXml` 메서드는 열 및 행 정보를 포함 하는 XML 파일을 읽는 데 사용 됩니다.
 * `DataSet`또는 `DataTable` 인스턴스는 ASP.NET (SOAP) 웹 서비스 또는 WCF 끝점의 일부로 serialize 됩니다.
 * 와 같은 serializer는 `XmlSerializer` `DataSet` XML 스트림에서 또는 인스턴스를 deserialize 하는 데 사용 됩니다 `DataTable` .
-* 와 같은 serializer는 `JsonConvert` `DataSet` JSON 스트림에서 또는 인스턴스를 deserialize 하는 데 사용 됩니다 `DataTable` . `JsonConvert`는 라이브러리의 인기 있는 타사 [Newtonsoft.Js](https://www.newtonsoft.com/json) 의 메서드입니다.
+* 와 같은 serializer는 `JsonConvert` `DataSet` JSON 스트림에서 또는 인스턴스를 deserialize 하는 데 사용 됩니다 `DataTable` . `JsonConvert` 는 라이브러리의 인기 있는 타사 [Newtonsoft.Js](https://www.newtonsoft.com/json) 의 메서드입니다.
 * 와 같은 serializer는 `BinaryFormatter` `DataSet` 원시 바이트 스트림에서 또는 인스턴스를 deserialize 하는 데 사용 됩니다 `DataTable` .
 
 이 문서에서는 위의 시나리오에 대 한 안전 고려 사항을 설명 합니다.
@@ -330,7 +330,7 @@ adapter.Fill(customers, "Customers");
 
 및의 구현은 `DataSet.ReadXml` `DataTable.ReadXml` serialization 취약점이 잘 이해 된 위협 범주 였습니다. 따라서 코드는 현재 보안 모범 사례를 따르지 않습니다. 이러한 Api는 공격자가 웹 앱에 대해 DoS 공격을 수행할 수 있는 벡터로 사용 될 수 있습니다. 이러한 공격으로 인해 웹 서비스가 응답 하지 않거나 예기치 않은 프로세스가 종료 될 수 있습니다. 프레임 워크는 이러한 공격 범주에 대 한 완화를 제공 하지 않으며 .NET은이 동작을 "의도적으로" 고려 합니다.
 
-.NET은 및에서 정보 공개 또는 원격 코드 실행과 같은 일부 문제를 완화 하기 위해 보안 업데이트를 릴리스 했습니다 `DataSet.ReadXml` `DataTable.ReadXml` . .NET 보안 업데이트는 이러한 위협 범주에 대 한 완전 한 보호를 제공 하지 않을 수 있습니다. 소비자는 개별 시나리오를 평가 하 고 이러한 위험에 노출 될 가능성을 고려해 야 합니다.
+.NET은 및에서 정보 공개 또는 원격 코드 실행과 같은 일부 문제를 완화 하기 위해 보안 업데이트를 릴리스 했습니다 `DataSet.ReadXml` `DataTable.ReadXml` . .NET 보안 업데이트는 이러한 위협 범주에 대 한 완전 한 보호를 제공 하지 않을 수 있습니다. 소비자는 개별 시나리오를 평가하고 이러한 위험에 노출될 가능성을 고려해야 합니다.
 
 소비자는 이러한 Api에 대 한 보안 업데이트가 일부 상황에서 응용 프로그램 호환성에 영향을 줄 수 있음을 알고 있어야 합니다. 또한 이러한 Api의 novel 취약성은 .NET에서 실제로 보안 업데이트를 게시할 수 없는 것으로 검색 될 가능성이 있습니다.
 
@@ -488,3 +488,28 @@ public class MyClass
 * 는 신뢰할 수 없는 소스의 데이터를 deserialize 할 때 기본 제공 보호 기능을 제공 합니다.
 
 SOAP 끝점을 사용 하는 앱의 경우 `.aspx` [WCF](/dotnet/framework/wcf/)를 사용 하도록 해당 끝점을 변경 하는 것이 좋습니다. WCF는 웹 서비스에 대 한 보다 완전 한 기능을 갖춘 대체 기능입니다 `.asmx` . WCF 끝점은 기존 호출자와의 호환성을 위해 [SOAP를 통해 노출 될 수 있습니다](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .
+
+## <a name="code-analyzers"></a>코드 분석기
+
+소스 코드를 컴파일할 때 실행 되는 코드 분석기 보안 규칙은 c # 및 Visual Basic 코드에서이 보안 문제와 관련 된 취약성을 찾는 데 도움이 될 수 있습니다. FxCopAnalyzers는 [nuget.org](https://www.nuget.org/)에 배포 되는 코드 분석기의 NuGet 패키지입니다.
+
+코드 분석기의 개요는 [소스 코드 분석기 개요](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview)를 참조 하세요.
+
+다음 FxCopAnalyzers 규칙을 사용 하도록 설정 합니다.
+
+- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350): 신뢰할 수 없는 데이터와 함께 ReadXml ()를 사용 하지 마십시오.
+- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351): 신뢰할 수 없는 데이터와 ReadXml ()를 사용 하지 마십시오.
+- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352): 안전 하지 않은 데이터 집합 또는 serialize 할 수 있는 형식의 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353): serializable 형식의 안전 하지 않은 데이터 집합 또는 DataTable
+- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354): deserialize 된 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355): deserialize 가능한 개체 그래프에 안전 하지 않은 데이터 집합 또는 DataTable 형식이 있습니다.
+- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356): web deserialize 가능한 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable 형식
+- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361): ReadXml ()를 포함 하는 자동 생성 된 클래스가 신뢰할 수 없는 데이터와 함께 사용 되지 않는지 확인 합니다.
+- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362): 자동 생성 serialize 할 수 있는 형식에서 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+
+규칙을 구성 하는 방법에 대 한 자세한 내용은 [코드 분석기 사용](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers)을 참조 하세요.
+
+새 보안 규칙은 다음 NuGet 패키지에서 사용할 수 있습니다.
+
+- FxCopAnalyzers 3.3.0: Visual Studio 2019 버전 16.3 이상
+- FxCopAnalyzers 2.9.11: Visual Studio 2017 버전 15.9 이상
