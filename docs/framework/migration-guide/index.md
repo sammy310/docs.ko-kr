@@ -1,18 +1,17 @@
 ---
-title: '.NET Framework 4.8, 4.7, 4.6 및 4.5 마이그레이션 가이드 '
+title: .NET Framework 4.8, 4.7, 4.6 및 4.5 마이그레이션 가이드
 description: 새 기능 및 애플리케이션 호환성에 대한 리소스가 포함된 최신 .NET Framework 버전으로 마이그레이션하기 위한 가이드입니다.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: a5b632824efacdb5e99228727b8751dc7f17d363
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: c597f6e7b67e190ffe61a425506a1a34f254942c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86443418"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558506"
 ---
 # <a name="migrate-to-net-framework-48-47-46-and-45"></a>.NET Framework 4.8, 4.7, 4.6 및 4.5로 마이그레이션
 
