@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77451527"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557934"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
@@ -24,6 +24,8 @@ ms.locfileid: "77451527"
 [dotnet-counters](../diagnostics/dotnet-counters.md)는 1단계 상태 모니터링 및 성능 조사를 위한 성능 모니터링 도구입니다.
 
 [dotnet-dump](../diagnostics/dotnet-dump.md)는 네이티브 디버거 없이 Windows 및 Linux 코어 덤프를 수집하고 분석하는 방법을 제공합니다.
+
+[dotnet-gcdump](../diagnostics/dotnet-gcdump.md)로 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집할 수 있습니다.
 
 [dotnet-trace](../diagnostics/dotnet-trace.md)는 앱이 느리게 실행되는 이유를 확인해야 하는 시나리오에서 도움이 될 수 있는 프로파일링 데이터를 앱에서 수집합니다.
 
