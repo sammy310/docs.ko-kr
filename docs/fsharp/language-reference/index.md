@@ -1,17 +1,21 @@
 ---
 title: 언어 참조
 description: 이 참조 자료에서 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 토픽에 대한 F# 언어 기능 정보를 찾을 수 있습니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: 43272c6684c8fc763e8f99611901f35695f48981
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 02711489c214c1fcdb2da80f30bff63d67769c17
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854960"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558155"
 ---
 # <a name="f-language-reference"></a>F# 언어 참조
 
 이 섹션에서는 .NET을 대상으로 하는 다중 패러다임 프로그래밍 언어인 F# 언어를 다룹니다. F# 언어는 함수형, 개체 지향 그리고 명령형의 프로그래밍 모델을 지원합니다.
+
+## <a name="f-core-library-api-reference"></a>F# 핵심 라이브러리 API 참조
+
+[F# 핵심 라이브러리(FSharp.core) API 참조](https://fsharp.github.io/fsharp-core-docs/)는 모든 F# 핵심 라이브러리 네임스페이스, 모듈, 형식 및 함수에 대한 참조입니다.
 
 ## <a name="f-tokens"></a>F# 토큰
 
