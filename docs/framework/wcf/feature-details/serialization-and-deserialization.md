@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: a861ee38963f77bffe23bbca19a6f895289e372d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444497"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656816"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인가 포함 되어 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -22,7 +22,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
   
  WCF에는 도우미 serializer 인도 포함 되어 있습니다 <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
 
-* 안전 ***하지*** 않습니다. 자세한 내용은 [Binaryformatter 보안 가이드](/dotnet/standard/serialization/binaryformatter-security-guide)를 참조 하세요.
+* 안전 ***하지*** 않습니다. 자세한 내용은 [Binaryformatter 보안 가이드](../../../standard/serialization/binaryformatter-security-guide.md)를 참조 하세요.
 * 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serialize 된 데이터의 일부로 .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다.
 * Serialize 및 deserialize 종료 시 동일한 형식이 공유 될 때 사용 됩니다.
 

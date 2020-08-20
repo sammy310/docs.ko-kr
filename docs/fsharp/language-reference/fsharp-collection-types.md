@@ -2,12 +2,12 @@
 title: 컬렉션 형식
 description: 'F # 컬렉션 형식 및 컬렉션 형식과 .NET의 차이점에 대해 알아봅니다.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267284"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656907"
 ---
 # <a name="f-collection-types"></a>F# 컬렉션 형식
 
@@ -19,19 +19,19 @@ ms.locfileid: "88267284"
 
 다음 표에서는 F # 컬렉션 형식을 보여 줍니다.
 
-|Type|Description|관련 링크|
+|유형|설명|관련 링크|
 |----|-----------|-------------|
-|[목록](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|동일한 형식의 변경 되지 않은 순서가 지정 된 일련의 요소입니다. 연결 된 목록으로 구현 됩니다.|[목록](lists.md)<br /><br />[List 모듈](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[배열](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|동일한 형식의 연속 데이터 요소에 대 한 변경 가능한 고정 크기 컬렉션 (0부터 시작)입니다.|[배열](arrays.md)<br /><br />[Array 모듈](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 모듈](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 모듈](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[차이가](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|단일 형식의 논리적 일련의 요소입니다. 시퀀스는 데이터의 순서가 지정 된 컬렉션이 크고 모든 요소를 사용할 필요가 없는 경우에 특히 유용 합니다. 개별 시퀀스 요소는 필요한 경우에만 계산 되므로 모든 요소가 사용 되지 않는 경우 시퀀스가 목록 보다 더 잘 수행 될 수 있습니다. 시퀀스는 `seq<'T>` 의 별칭인 형식으로 표현 됩니다 `IEnumerable<T>` . 따라서을 구현 하는 모든 .NET Framework 형식을 `System.Collections.Generic.IEnumerable<'T>` 시퀀스로 사용할 수 있습니다.|[시퀀스](sequences.md)<br /><br />[Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Map](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|요소에 대 한 변경할 수 없는 사전입니다. 요소는 키로 액세스 됩니다.|[지도 모듈](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[설정](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|이진 트리를 기반으로 하는 변경할 수 없는 집합입니다. 비교는 `System.IComparable` 키 값에 대 한 인터페이스 구현을 사용 하는 F # 구조적 비교 함수입니다.|[모듈 설정](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[목록](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|동일한 형식의 변경 되지 않은 순서가 지정 된 일련의 요소입니다. 연결 된 목록으로 구현 됩니다.|[목록](lists.md)<br /><br />[List 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[배열](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|동일한 형식의 연속 데이터 요소에 대 한 변경 가능한 고정 크기 컬렉션 (0부터 시작)입니다.|[배열](arrays.md)<br /><br />[Array 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[차이가](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|단일 형식의 논리적 일련의 요소입니다. 시퀀스는 데이터의 순서가 지정 된 컬렉션이 크고 모든 요소를 사용할 필요가 없는 경우에 특히 유용 합니다. 개별 시퀀스 요소는 필요한 경우에만 계산 되므로 모든 요소가 사용 되지 않는 경우 시퀀스가 목록 보다 더 잘 수행 될 수 있습니다. 시퀀스는 `seq<'T>` 의 별칭인 형식으로 표현 됩니다 `IEnumerable<T>` . 따라서을 구현 하는 모든 .NET Framework 형식을 `System.Collections.Generic.IEnumerable<'T>` 시퀀스로 사용할 수 있습니다.|[시퀀스](sequences.md)<br /><br />[Seq 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[Map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|요소에 대 한 변경할 수 없는 사전입니다. 요소는 키로 액세스 됩니다.|[지도 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[설정](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|이진 트리를 기반으로 하는 변경할 수 없는 집합입니다. 비교는 `System.IComparable` 키 값에 대 한 인터페이스 구현을 사용 하는 F # 구조적 비교 함수입니다.|[모듈 설정](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>함수 테이블
 
 이 섹션에서는 F # 컬렉션 형식에서 사용할 수 있는 함수를 비교 합니다. 함수의 계산 복잡성이 제공 됩니다. 여기서 N은 첫 번째 컬렉션의 크기이 고 M은 두 번째 컬렉션의 크기 (있는 경우)입니다. 대시 (-)는이 함수를 컬렉션에서 사용할 수 없음을 나타냅니다. 시퀀스는 지연 계산 되기 때문에 Seq와 같은 함수는 반환 될 때 시퀀스의 성능에도 영향을 주지만이를 즉시 반환 하기 때문에 O (1) 일 수 있습니다.
 
-|기능|Array|목록|시퀀스|지도|설정|Description|
+|함수|Array|목록|순서|지도|설정|설명|
 |--------|-----|----|--------|---|---|-----------|
 |추가|O (N)|O (N)|O (N)|-|-|첫 번째 컬렉션의 요소와 두 번째 컬렉션의 요소를 포함 하는 새 컬렉션을 반환 합니다.|
 |add|-|-|-|O (log (N))|O (log (N))|요소가 추가 된 새 컬렉션을 반환 합니다.|
@@ -44,7 +44,7 @@ ms.locfileid: "88267284"
 |collect|O (N)|O (N)|O (N)|-|-|지정 된 함수를 컬렉션의 각 요소에 적용 하 고 모든 결과를 연결 하 고 결합 된 목록을 반환 합니다.|
 |Seq.comparewith|-|-|O (N)|-|-|지정 된 비교 함수를 사용 하 여 두 시퀀스를 요소 별로 비교 합니다.|
 |concat|O (N)|O (N)|O (N)|-|-|지정 된 열거형 열거를 연결 된 단일 열거형으로 결합 합니다.|
-|contains|-|-|-|-|O (log (N))|집합에 지정 된 요소가 포함 된 경우 true를 반환 합니다.|
+|포함|-|-|-|-|O (log (N))|집합에 지정 된 요소가 포함 된 경우 true를 반환 합니다.|
 |containsKey|-|-|-|O (log (N))|-|요소가 맵의 도메인에 있는지 여부를 테스트 합니다.|
 |count|-|-|-|-|O (N)|집합에 있는 요소 수를 반환합니다.|
 |Seq.countby|-|-|O (N)|-|-|시퀀스의 각 요소에 키 생성 함수를 적용 하 고 원래 시퀀스에서 고유 키와 해당 항목 수를 생성 하는 시퀀스를 반환 합니다.|

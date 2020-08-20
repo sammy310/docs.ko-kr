@@ -1,17 +1,17 @@
 ---
 title: 결과
-description: F# ' Result ' 유형을 사용 하 여 오류를 방지 하는 코드를 작성 하는 방법을 알아봅니다.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: "F # ' Result ' 유형을 사용 하 여 오류를 방지 하는 코드를 작성 하는 방법을 알아봅니다."
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656920"
 ---
 # <a name="results"></a>결과
 
-F# 4.1부터 구성 될 수 있는 오류 허용 코드를 작성 하는 데 사용할 수 있는 `Result<'T,'TFailure>` 형식이 있습니다.
+`Result<'T,'TFailure>`형식을 사용 하 여 작성할 수 있는 오류 허용 코드를 작성할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -25,11 +25,13 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-결과 형식은 4.1에 F# 도입 된 또 다른 기능인 [구조체 구별 된 공용 구조체](discriminated-unions.md#struct-discriminated-unions)입니다.  구조적 같음 의미 체계가 여기에 적용 됩니다.
+에 [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) 대 한 기본 제공 조합 기 모듈을 참조 하세요 `Result` . 형식의 매개 변수로 변환됩니다.
 
-`Result` 형식은 일반적으로 F# 커뮤니티 내에서 [철도 지향 프로그래밍](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) 이 라고도 하는 monadic 오류 처리에 사용 됩니다.  다음은이 방법을 보여 주는 간단한 예제입니다.
+결과 형식은 [구조체 구별 된 공용 구조체](discriminated-unions.md#struct-discriminated-unions)입니다. 구조적 같음 의미 체계가 여기에 적용 됩니다.
+
+`Result`형식은 일반적으로 F # 커뮤니티 내에서 [철도 지향 프로그래밍](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) 이 라고도 하는 monadic 오류 처리에 사용 됩니다.  다음은이 방법을 보여 주는 간단한 예제입니다.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-여기에서 볼 수 있듯이 모두 `Result`을 반환 하도록 강제 하는 경우 다양 한 유효성 검사 함수를 매우 쉽게 연결할 수 있습니다.  이를 통해 이러한 기능을 필요에 따라 구성 가능한 작은 부분으로 나눌 수 있습니다.  또한 유효성 검사의 끝에 [패턴 일치](pattern-matching.md) 를 사용 하는 것이 추가 된 값을 가지 며,이 *로 인해 더* 높은 수준의 프로그램 정확성이 적용 됩니다.
+여기에서 볼 수 있듯이 모두를 강제로 반환 하는 경우 다양 한 유효성 검사 함수를 함께 연결 하는 것이 매우 쉽습니다 `Result` .  이를 통해 이러한 기능을 필요에 따라 구성 가능한 작은 부분으로 나눌 수 있습니다.  또한 유효성 검사의 끝에 [패턴 일치](pattern-matching.md) 를 사용 하는 것이 추가 된 값을 가지 며,이 *로 인해 더* 높은 수준의 프로그램 정확성이 적용 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [구별된 공용 구조체](discriminated-unions.md)
 - [패턴 일치](pattern-matching.md)

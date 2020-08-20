@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441819"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656972"
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 
@@ -90,7 +90,7 @@ MTOM 메시지 인코더에는 또한 `MaxBufferSize` 설정이 있습니다. �
 
 ## <a name="xml-based-streaming-attacks"></a>XML 기반 스트리밍 공격
 
-`MaxBufferSize`만으로는 스트리밍이 예상 되는 경우 WCF를 강제로 버퍼링 할 수 없습니다. 예를 들어 WCF XML 판독기는 새 요소를 읽기 시작할 때 항상 전체 XML 요소 시작 태그를 버퍼링 합니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize` 가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 이는이 항목의 뒷부분에 나오는 "안전한 XML 사용" 단원에 설명 된 대로 XML 판독기 할당량을 사용 하 여 완화할 수 있는 여러 가지 XML 기반 서비스 거부 공격 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.
+`MaxBufferSize` 만으로는 스트리밍이 예상 되는 경우 WCF를 강제로 버퍼링 할 수 없습니다. 예를 들어 WCF XML 판독기는 새 요소를 읽기 시작할 때 항상 전체 XML 요소 시작 태그를 버퍼링 합니다. 이렇게 하면 네임스페이스와 특성이 올바르게 처리됩니다. `MaxReceivedMessageSize` 가 크게(예: 큰 파일을 직접 디스크로 스트리밍하는 시나리오가 가능하도록) 구성된 경우 메시지 본문 전체가 거대한 XML 요소 시작 태그인 악의적인 메시지가 구성될 수 있습니다. 이 메시지를 읽으려고 하면 <xref:System.OutOfMemoryException>이 발생합니다. 이는이 항목의 뒷부분에 나오는 "안전한 XML 사용" 단원에 설명 된 대로 XML 판독기 할당량을 사용 하 여 완화할 수 있는 여러 가지 XML 기반 서비스 거부 공격 중 하나입니다. 스트리밍을 사용할 때는 이러한 할당량을 모두 설정하는 것이 특히 중요합니다.
 
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>스트리밍과 버퍼링 프로그래밍 모델 혼합
 
@@ -284,7 +284,7 @@ WCF에서 지 원하는 이진 XML 인코딩에는 *사전 문자열* 기능이 
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터에서 .NET Framework 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정 합니다. WCF의 일부 이지만이 serialization 엔진을 연결 하는 방법은 제공 되지 않습니다. 사용자 지정 코드를 작성 해야 합니다. 는 `NetDataContractSerializer` .NET Framework remoting에서 WCF로 쉽게 마이그레이션할 수 있도록 주로 제공 됩니다. 자세한 내용은 [Serialization 및 Deserialization](serialization-and-deserialization.md)의 관련 섹션을 참조 하세요.
 
-메시지 자체에서 로드할 형식을 지정할 수 있기 때문에 <xref:System.Runtime.Serialization.NetDataContractSerializer> 메커니즘은 본질적으로 안전하지 않으며 신뢰할 수 있는 데이터에만 사용해야 합니다. 자세한 내용은 [Binaryformatter 보안 가이드](/dotnet/standard/serialization/binaryformatter-security-guide)를 참조 하세요.
+메시지 자체에서 로드할 형식을 지정할 수 있기 때문에 <xref:System.Runtime.Serialization.NetDataContractSerializer> 메커니즘은 본질적으로 안전하지 않으며 신뢰할 수 있는 데이터에만 사용해야 합니다. 자세한 내용은 [Binaryformatter 보안 가이드](../../../standard/serialization/binaryformatter-security-guide.md)를 참조 하세요.
 
 신뢰할 수 있는 데이터와 함께 사용하는 경우라도, 들어오는 데이터에서 로드할 형식을 불충분하게 지정할 수가 있습니다. 특히 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 속성이 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>로 설정되어 있으면 더욱 그렇습니다. 애플리케이션의 디렉터리나 전역 어셈블리 캐시에 액세스할 수 있는 사람은 로드할 형식을 악의적인 형식으로 대체할 수 있습니다. 사용 권한을 올바르게 설정하여 항상 애플리케이션 디렉터리와 전역 어셈블리 캐시의 보안을 보장해야 합니다.
 
@@ -382,7 +382,7 @@ WCF는 유연 하 고 사용자 지정이 가능한 시스템입니다. 이 항�
 
 - 일반적으로 할당량을 수락하는 구성 요소를 사용하는 경우에는 보안상의 영향을 이해하고 안전한 값으로 설정해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>
