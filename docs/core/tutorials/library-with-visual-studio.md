@@ -1,29 +1,29 @@
 ---
 title: Visual Studio를 사용하여 .NET Standard 클래스 라이브러리 만들기
 description: Visual Studio를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
-ms.date: 06/08/2020
+ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.custom: vs-dotnet,contperfq1
+ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164409"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187953"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
 
-이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
+이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 클래스 라이브러리를 만듭니다.
 
-*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
+*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다.
+
+클래스 라이브러리를 마칠 때 NuGet 패키지 또는 라이브러리를 사용하는 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - **.NET Core 플랫폼 간 개발** 워크로드가 설치된 [Visual Studio 2019 버전 16.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). 이 워크로드를 선택하면 .NET Core 3.1 SDK가 자동으로 설치됩니다.
-
-  자세한 내용은 [.NET Core SDK 설치](../install/sdk.md?pivots=os-windows) 문서의 [Visual Studio를 사용하여 설치](../install/sdk.md?pivots=os-windows#install-with-visual-studio) 섹션을 참조하세요.
 
 ## <a name="create-a-solution"></a>솔루션 만들기
 
@@ -67,6 +67,8 @@ ms.locfileid: "87164409"
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
    클래스 라이브러리 `UtilityLibraries.StringLibrary`에는 `StartsWithUpper`라는 메서드가 포함되어 있습니다. 이 메서드는 현재 문자열 인스턴스가 대문자로 시작하는지 여부를 나타내는 <xref:System.Boolean> 값을 반환합니다. 유니코드 표준은 대문자와 소문자를 구분합니다. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 메서드는 문자가 대문자인 경우 `true`를 반환합니다.
+
+   `StartsWithUpper`은 <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현됩니다.
 
 1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택하여 프로젝트가 오류 없이 컴파일되는지 확인합니다.
 
@@ -126,7 +128,17 @@ ms.locfileid: "87164409"
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 솔루션을 만들고, 라이브러리 프로젝트를 추가하고, 라이브러리를 사용하는 콘솔 앱 프로젝트를 추가했습니다. 다음 자습서에서는 솔루션에 단위 테스트 프로젝트를 추가합니다.
+이 자습서에서는 클래스 라이브러리를 만들었습니다. 다음 자습서에서는 클래스 라이브러리의 유닛 테스트를 실행하는 방법을 알아봅니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio를 사용하여 .NET Core로 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio.md)
+> [Visual Studio를 사용하여 .NET Standard 라이브러리의 유닛 테스트 실행](testing-library-with-visual-studio.md)
+
+또는 자동화된 유닛 테스트를 건너뛰고 NuGet 패키지를 만들어서 라이브러리를 공유하는 방법을 알아볼 수도 있습니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio를 사용하여 패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+
+또는 콘솔 앱을 게시하는 방법을 알아보세요. 이 자습서에서 만든 솔루션에서 콘솔 앱을 게시하는 경우 클래스 라이브러리는 *.dll* 파일로 함께 포함됩니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio.md)

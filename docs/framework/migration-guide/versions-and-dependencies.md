@@ -6,12 +6,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475478"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187900"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 
@@ -31,8 +31,9 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 
 다음 표에는 .NET Framework 버전 기록이 요약되어 있으며 Visual Studio, Windows 및 Windows Server와의 상관 관계가 나와 있습니다. Visual Studio에서는 나열된 .NET Framework 버전으로 사용이 제한되지 않도록 멀티 타기팅을 지원합니다.
 
-- 확인 표시 아이콘(✔️)은️ .NET Framework가 설치되어 있지만 [제어판](../install/dotnet-35-windows-10.md)(Windows의 경우) 또는 서버 관리자(Windows Server의 경우)에서 사용하도록 설정해야 하는 OS 버전을 나타냅니다.
+- 확인 표시 아이콘(➕)은 .NET Framework가 기본적으로 설치되어 있는 OS 버전을 나타냅니다.
 - 더하기 기호 아이콘(➕)은 .NET Framework가 미리 설치되지 않았지만 설치할 수 있는 OS 버전을 나타냅니다.
+- 별표 **\*** 는 .NET Framework가(사전 설치되어 있는지와 관계없이) [제어판에서](../install/dotnet-35-windows-10.md) 또는 Windows의 Server의 경우 서버 관리자를 통해 사용하도록 설정되어야 하는 OS 버전을 나타냅니다.
 
 | | |
 | - | - |

@@ -3,12 +3,12 @@ title: .NET Core 배포 패키징
 description: 배포를 위해 .NET Core를 패키지하고 이름과 버전을 지정하는 방법에 관해 알아봅니다.
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 3324a6a151fc6dc46a8f13ea17c89da99d108d82
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "81386641"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062888"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 배포 패키징
 
@@ -67,19 +67,19 @@ ms.locfileid: "81386641"
 
 단일 호스트가 있지만 다른 구성 요소는 대부분 버전이 지정된 디렉터리(2,3,5,6)에 있습니다. 여러 버전이 나란히 설치되므로 시스템에 여러 버전이 표시될 수 있습니다.
 
-- (2) **host/fxr/\<fxr 버전>** 에는 호스트에서 사용하는 프레임워크 확인 논리가 포함됩니다. 호스트는 설치된 최신 hostfxr을 사용합니다. hostfxr는 .NET Core 애플리케이션을 실행할 때 적합한 런타임을 선택하는 일을 담당합니다. 예를 들어 .NET Core 2.0.0에 대해 빌드된 애플리케이션을 사용할 수 있는 경우 2.0.5 런타임을 사용합니다. 마찬가지로 hostfxr은 개발 중에 적절한 SDK를 선택합니다.
+- (2) **host/fxr/\<fxr version>** 에는 호스트에서 사용하는 프레임워크 확인 논리가 포함됩니다. 호스트는 설치된 최신 hostfxr을 사용합니다. hostfxr는 .NET Core 애플리케이션을 실행할 때 적합한 런타임을 선택하는 일을 담당합니다. 예를 들어 .NET Core 2.0.0에 대해 빌드된 애플리케이션을 사용할 수 있는 경우 2.0.5 런타임을 사용합니다. 마찬가지로 hostfxr은 개발 중에 적절한 SDK를 선택합니다.
 
-- (3) **sdk/\<sdk version>** SDK("도구"라고도 함)는 .NET Core 라이브러리 및 애플리케이션을 작성하고 빌드하는 데 사용할 수 있는 관리형 도구 집합입니다. SDK는 .NET Core CLI, 관리형 언어 컴파일러, MSBuild 및 연결된 빌드 작업과 대상, NuGet, 새 프로젝트 템플릿 등을 포함합니다.
+- (3)**sdk/\<sdk version>** SDK("도구"라고도 함)는 .NET Core 라이브러리 및 애플리케이션을 작성하고 빌드하는 데 사용되는 관리형 도구 세트입니다. SDK는 .NET Core CLI, 관리형 언어 컴파일러, MSBuild 및 연결된 빌드 작업과 대상, NuGet, 새 프로젝트 템플릿 등을 포함합니다.
 
 - (4) **sdk/NuGetFallbackFolder**에는 `dotnet restore` 또는 `dotnet build` 실행처럼 복원 작업 중에 SDK에서 사용하는 NuGet 패키지의 캐시가 포함됩니다. 이 폴더는 .NET Core 3.0 이전에만 사용됩니다. `nuget.org`에서 미리 빌드된 이진 자산을 포함하므로 소스에서 빌드할 수 없습니다.
 
 **공유** 폴더에는 프레임워크가 포함됩니다. 공유 프레임워크는 다른 애플리케이션에서 사용할 수 있도록 중앙 위치에 라이브러리의 집합을 제공합니다.
 
-- (5) **shared/Microsoft.NETCore.App/\<runtime 버전>** 이 프레임워크에는 지원되는 .NET Core 런타임 및 관리 라이브러리가 포함됩니다.
+- (5) **shared/Microsoft.NETCore.App/\<runtime version>** 이 프레임워크에는 지원되는 .NET Core 런타임 및 관리 라이브러리가 포함됩니다.
 
-- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore 버전>** 에는 ASP.NET Core 라이브러리가 포함됩니다. `Microsoft.AspNetCore.App`에서 라이브러리를 개발하고 .NET Core 프로젝트의 일부로 지원합니다. `Microsoft.AspNetCore.All`의 라이브러리는 타사 라이브러리도 포함하는 상위 집합입니다.
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** 에는 ASP.NET Core 라이브러리가 포함됩니다. `Microsoft.AspNetCore.App`에서 라이브러리를 개발하고 .NET Core 프로젝트의 일부로 지원합니다. `Microsoft.AspNetCore.All`의 라이브러리는 타사 라이브러리도 포함하는 상위 집합입니다.
 
-- (7) **shared/Microsoft.Desktop.App/\<데스크톱 앱 버전>** 은 Windows 데스크톱 라이브러리를 포함합니다. Windows 이외의 플랫폼에는 포함되지 않습니다.
+- (7) **shared/Microsoft.Desktop.App/\<desktop app version>** 은 Windows 데스크톱 라이브러리를 포함합니다. Windows 이외의 플랫폼에는 포함되지 않습니다.
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt**는 각각 .NET Core에서 사용되는 .NET Core 라이선스 및 타사 라이브러리의 라이선스입니다.
 
@@ -111,57 +111,57 @@ SDK 버전은 동일한 `[major].[minor]`를 사용하고, SDK의 기능 및 패
 다음은 권장되는 패키지 목록입니다.
 
 - `dotnet-sdk-[major].[minor]` - 특정 런타임의 최신 sdk를 설치합니다.
-  - **버전:** \<런타임 버전>
+  - **버전:** \<sdk version>
   - **예:** dotnet-sdk-2.1
   - **포함:** (3),(4)
   - **종속성:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]` - 특정 ASP.NET Core 런타임을 설치합니다.
-  - **버전:** \<aspnetcore 런타임 버전>
+  - **버전:** \<aspnetcore runtime version>
   - **예:** aspnetcore-runtime-2.1
   - **포함:** (6)
   - **종속성:** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _(선택 사항)_ - 자체 포함 애플리케이션을 실행하기 위한 종속성을 설치합니다.
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **예:** dotnet-runtime-deps-2.1
   - **종속성:** _배포 관련 종속성_
 
 - `dotnet-runtime-[major].[minor]` - 특정 런타임을 설치합니다.
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **예:** dotnet-runtime-2.1
   - **포함:** (5)
   - **종속성:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]` - 종속성
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **예:** dotnet-hostfxr-3.0
   - **포함:** (2)
   - **종속성:** `dotnet-host`
 
 - `dotnet-host` - 종속성
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **예:** dotnet-host
   - **포함:** (1),(8),(9),(10),(16)
 
 - `dotnet-apphost-pack-[major].[minor]` - 종속성
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **포함:** (13)
 
 - `dotnet-targeting-pack-[major].[minor]` - 최신이 아닌 런타임 대상 지정 허용
-  - **버전:** \<런타임 버전>
+  - **버전:** \<runtime version>
   - **포함:** (12)
 
 - `aspnetcore-targeting-pack-[major].[minor]` - 최신이 아닌 런타임 대상 지정 허용
-  - **버전:** \<aspnetcore 런타임 버전>
+  - **버전:** \<aspnetcore runtime version>
   - **포함:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]` - netstandard 버전 대상 지정 허용
-  - **버전:** \<sdk 버전>
+  - **버전:** \<sdk version>
   - **포함:** (15)
 
 - `dotnet-templates-[major].[minor]`
-  - **버전:** \<sdk 버전>
+  - **버전:** \<sdk version>
   - **포함:** (15)
 
 `dotnet-runtime-deps-[major].[minor]`에서는 _배포판 특정 종속성_에 대해 이해해야 합니다. 배포판 빌드 시스템은 이를 자동으로 파생시킬 수도 있으므로 패키지는 선택 사항입니다. 이 경우 이러한 종속성은 `dotnet-runtime-[major].[minor]` 패키지에 직접 추가됩니다.

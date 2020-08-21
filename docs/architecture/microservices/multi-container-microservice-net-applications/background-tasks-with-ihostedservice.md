@@ -1,17 +1,17 @@
 ---
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/14/2020
+ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267999"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
-백그라운드 작업 및 예약된 작업은 마이크로 서비스 기반 애플리케이션 또는 모든 종류의 애플리케이션에서 결국 구현해야 하는 것입니다. 마이크로 서비스 아키텍처를 사용하는 경우 차이점은 이러한 백그라운드 작업을 호스팅하기 위한 단일 마이크로 서비스 프로세스/컨테이너를 구현할 수 있으므로 필요에 따라 축소/확대하거나 해당 마이크로 서비스 프로세스/컨테이너의 단일 인스턴스를 실행하는지 확인할 수도 있다는 점입니다.
+백그라운드 작업 및 예약된 작업은 애플리케이션이 마이크로 서비스 아키텍처 패턴을 따르는지 여부와 관계없이 모든 종류의 애플리케이션에서 구현해야 합니다. 마이크로 서비스 아키텍처를 사용하는 경우 차이점은 필요에 따라 축소/확장할 수 있도록 백그라운드 작업을 호스팅을 위해 별도의 프로세스/컨테이너에 구현해야 한다는 것입니다.
 
 일반 관점에서 호스트/애플리케이션/마이크로 서비스 내에서 호스팅하는 서비스/논리이기 때문에 .NET Core에서 이러한 유형의 작업 *호스팅 서비스*를 호출했습니다. 이 경우 호스팅 서비스는 단순히 백그라운드 작업 논리가 있는 클래스를 의미합니다.
 
@@ -68,29 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 인터페이스
 
-`IHostedService`를 등록할 때 .NET Core는 애플리케이션 시작 및 중지 중에 각각 `IHostedService` 유형의 `StartAsync()` 및 `StopAsync()` 메서드를 호출합니다. 특히 서버가 시작되고 `IApplicationLifetime.ApplicationStarted`가 트리거된 후 시작이 호출됩니다.
-
-.NET Core에 정의된 대로 `IHostedService`는 다음과 같습니다.
-
-```csharp
-namespace Microsoft.Extensions.Hosting
-{
-    //
-    // Summary:
-    //     Defines methods for objects that are managed by the host.
-    public interface IHostedService
-    {
-        //
-        // Summary:
-        // Triggered when the application host is ready to start the service.
-        Task StartAsync(CancellationToken cancellationToken);
-        //
-        // Summary:
-        // Triggered when the application host is performing a graceful shutdown.
-        Task StopAsync(CancellationToken cancellationToken);
-    }
-}
-```
+`IHostedService`를 등록할 때 .NET Core는 애플리케이션 시작 및 중지 중에 각각 `IHostedService` 유형의 `StartAsync()` 및 `StopAsync()` 메서드를 호출합니다. 자세한 내용은 [IHostedService 인터페이스](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface)를 참조하세요.
 
 상상할 수 있듯이 IHostedService의 여러 구현을 만들고 이전에 표시된 것처럼 `ConfigureService()` 메서드에서 DI 컨테이너로 등록할 수 있습니다. 이러한 모든 호스팅 서비스는 애플리케이션/마이크로 서비스와 함께 시작되고 중지됩니다.
 
@@ -236,7 +214,7 @@ ASP.NET Core `WebHost` 또는 .NET Core `Host`를 배포하는 방법은 최종 
 
 하지만 앱 풀에 배포된 `WebHost`의 경우에도 애플리케이션의 메모리 내 캐시를 다시 채우거나 플러시하는 등의 시나리오는 계속 적용할 수 있습니다.
 
-`IHostedService` 인터페이스는 ASP.NET Core 웹 애플리케이션(.NET Core 2.0 이상 버전에서) 또는 모든 프로세스/호스트(`IHost`로 .NET Core 2.1에서 시작)에서 백그라운드 작업을 시작하는 편리한 방법을 제공합니다. 주요 혜택은 호스트 자체가 종료될 때 백그라운드 작업의 정리 코드에 대한 정상적인 취소를 얻는 기회입니다.
+`IHostedService` 인터페이스는 ASP.NET Core 웹 애플리케이션(.NET Core 2.0 이상 버전에서) 또는 모든 프로세스/호스트(`IHost`로 .NET Core 2.1에서 시작)에서 백그라운드 작업을 시작하는 편리한 방법을 제공합니다. 주요 이점은 호스트 자체가 종료될 때 백그라운드 작업의 정리 코드에 대한 정상적인 취소를 얻는 기회입니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

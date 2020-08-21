@@ -2,12 +2,12 @@
 title: 상태 모니터링
 description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅니다.
 ms.date: 03/02/2020
-ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267895"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -195,7 +195,6 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-}
 ```
 
 ### <a name="query-your-microservices-to-report-about-their-health-status"></a>마이크로 서비스를 쿼리하여 성능 상태에 대해 보고
@@ -220,7 +219,7 @@ eShopOnContainers 샘플에는 그림 8-9와 같이 샘플 상태 검사 보고�
 
 **그림 8-9**. eShopOnContainers의 샘플 상태 검사 보고서
 
-요약하자면, 이 Watchdog 서비스는 각 마이크로 서비스의 “/hc” 엔드포인트를 쿼리합니다. 이렇게 하면 내부에 정의된 모든 상태 검사가 실행되고, 모든 검사에 따라 전체 성능 상태가 반환됩니다. HealthChecksUI는 watchdog 서비스의 Startup.cs에 추가해야 하는 몇 가지 구성 항목과 두 줄의 코드로 쉽게 사용할 수 있습니다.
+요약하자면, 이 Watchdog 서비스는 각 마이크로 서비스의 “/hc” 엔드포인트를 쿼리합니다. 이렇게 하면 내부에 정의된 모든 상태 검사가 실행되고, 모든 검사에 따라 전체 성능 상태가 반환됩니다. HealthChecksUI는 watchdog 서비스의 *Startup.cs*에 추가해야 하는 몇 가지 구성 항목과 두 줄의 코드로 쉽게 사용할 수 있습니다.
 
 상태 검사 UI의 샘플 구성 파일:
 
@@ -242,7 +241,7 @@ eShopOnContainers 샘플에는 그림 8-9와 같이 샘플 상태 검사 보고�
 }
 ```
 
-HealthChecksUI를 추가하는 Startup.cs 파일:
+HealthChecksUI를 추가하는 *Startup.cs* 파일:
 
 ```csharp
 // Startup.cs from WebStatus(Watch Dog) service
@@ -257,7 +256,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
+    app.UseHealthChecksUI(config => config.UIPath = "/hc-ui");
     //…
 }
 ```

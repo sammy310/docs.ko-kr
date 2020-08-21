@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251181"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187975"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -51,7 +51,9 @@ dotnet publish -h|--help
 
 `dotnet publish` 명령은 `Publish` 대상을 불러오는 MSBuild를 호출합니다. `dotnet publish` 및 MSBuild에 전달된 모든 매개 변수. `-c` 및 `-o` 매개 변수는 각각 MSBuild의 `Configuration` 및 `PublishDir` 속성에 매핑됩니다.
 
-`dotnet publish` 명령은 속성 설정에 대한 `-p` 및 로거를 정의하는 `-l` 같은 MSBuild 옵션을 수락합니다. 예를 들어 `-p:<NAME>=<VALUE>` 형식을 사용하여 MSBuild 속성을 설정할 수 있습니다. *.pubxml* 파일을 참조하여 게시 관련 속성을 설정할 수도 있습니다. 예를 들면 다음과 같습니다.
+`dotnet publish` 명령은 속성 설정에 대한 `-p` 및 로거를 정의하는 `-l` 같은 MSBuild 옵션을 수락합니다. 예를 들어 `-p:<NAME>=<VALUE>` 형식을 사용하여 MSBuild 속성을 설정할 수 있습니다.
+
+*.pubxml* 파일(.NET Core 3.1 SDK부터 제공)을 참조하여 게시 관련 속성을 설정할 수도 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile

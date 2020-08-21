@@ -1,13 +1,13 @@
 ---
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/14/2020
+ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267960"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -57,7 +57,7 @@ EF(Entity Framework) Core는 널리 사용되는 Entity Framework 데이터 액�
 
 #### <a name="the-data-model"></a>데이터 모델
 
-EF Core에서는 데이터 액세스가 모델을 통해 수행됩니다. 모델은 도메인 모델 엔터티 클래스와, 데이터베이스를 포함한 세션을 나타내는 파생된 컨텍스트(DbContext)로 구성되어 데이터를 쿼리하고 저장할 수 있습니다. 기존 데이터베이스에서 모델을 생성하거나, 데이터베이스에 맞는 모델을 수동으로 작성하거나, EF 마이그레이션을 사용하여 모델의 데이터베이스를 만들 수 있습니다. 그러면 시간에 따라 모델이 변경되면 데이터베이스를 쉽게 발전시킬 수 있는 코드 중심 방법을 사용할 수 있습니다. 카탈로그 마이크로 서비스에는 마지막 방법을 사용합니다. 다음 코드 예제에서 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)(Plain Old CLR Object) 엔터티 클래스인 CatalogItem 항목 클래스의 예를 확인할 수 있습니다.
+EF Core에서는 데이터 액세스가 모델을 통해 수행됩니다. 모델은 도메인 모델 엔터티 클래스와, 데이터베이스를 포함한 세션을 나타내는 파생된 컨텍스트(DbContext)로 구성되어 데이터를 쿼리하고 저장할 수 있습니다. 기존 데이터베이스에서 모델을 생성하거나, 데이터베이스에 맞는 모델을 수동으로 작성하거나, EF 마이그레이션 기법을 사용하여 모델의 데이터베이스를 만들 수 있습니다. 그러면 시간에 따라 모델이 변경되면 데이터베이스를 쉽게 발전시킬 수 있는 코드 중심 방법을 사용할 수 있습니다. 카탈로그 마이크로 서비스에는 마지막 방법이 사용되었습니다. 다음 코드 예제에서 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)(Plain Old CLR Object) 엔터티 클래스인 CatalogItem 항목 클래스의 예를 확인할 수 있습니다.
 
 ```csharp
 public class CatalogItem
@@ -185,15 +185,14 @@ _context.SaveChanges();
 
 ASP.NET Core에서는 DI(Dependency Injection)를 즉시 사용할 수 있습니다. 원한다면 선호하는 IoC 컨테이너를 ASP.NET Core 인프라에 연결할 수 있지만 타사 IoC(Inversion of Control) 컨테이너를 사용할 필요가 없습니다. 이 경우 컨트롤러 생성자를 통해 필요한 EF DBContext나 추가 저장소를 직접 주입할 수 있습니다.
 
-위의 `CatalogController` 클래스 예제에서는 `CatalogController()` 생성자를 통해 `CatalogContext` 유형의 개체와 다른 개체를 주입합니다.
+앞에서 설명한 `CatalogController` 클래스 `CatalogContext`(`DbContext`에서 상속됨)에서는 `CatalogController()` 생성자의 다른 필수 개체와 함께 형식이 삽입됩니다.
 
-Web API 프로젝트를 설정하는 데 중요한 구성은 서비스의 IoC 컨테이너에 DbContext 클래스를 등록하는 것입니다. **단순화된** 다음 예제에서와 같이 일반적으로 `ConfigureServices()` 메서드 안에서 `services.AddDbContext<DbContext>()` 메서드를 호출하여 `Startup` 클래스에서 이를 수행합니다.
+Web API 프로젝트를 설정하는 데 중요한 구성은 서비스의 IoC 컨테이너에 DbContext 클래스를 등록하는 것입니다. **단순화된** 다음 예제에서와 같이 일반적으로 `ConfigureServices()` 메서드 안에서 `services.AddDbContext<CatalogContext>()` 메서드를 호출하여 `Startup` 클래스에서 이를 수행합니다.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // Additional code...
-
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],

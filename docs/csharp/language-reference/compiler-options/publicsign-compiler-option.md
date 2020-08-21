@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2655e0216a412053e052ab2ec2fcc8c68ea4f968
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61662532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268051"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign(C# 컴파일러 옵션)
 
@@ -36,10 +36,13 @@ ms.locfileid: "61662532"
 
 “모조 서명” 또는 “OSS 서명”이라고도 하는 퍼블릭 서명은 출력 어셈블리에 퍼블릭 키를 포함하고 “서명된” 플래그를 설정하지만 프라이빗 키를 사용하여 어셈블리에 실제로 서명하지는 않습니다. 이 서명은 릴리스된 “완전히 서명된” 어셈블리와 호환되지만 어셈블리 서명에 사용된 프라이빗 키에는 액세스할 수 없는 어셈블리를 빌드하려는 오픈 소스 프로젝트에 유용합니다. 어셈블리가 완전히 서명되었는지 실제로 확인해야 하는 소비자는 거의 없으므로 완전히 서명된 어셈블리가 사용되는 거의 모든 시나리오에서 이러한 공개적으로 빌드된 어셈블리를 사용할 수 있습니다.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
+### <a name="to-set-this-compiler-option-in-a-csproj-file"></a>csproj 파일에서 이 컴파일러 옵션을 설정하는 방법
 
-1. 프로젝트의 **속성** 페이지를 엽니다.
-1. **서명만 연기** 속성을 수정합니다.
+프로젝트에 대한 .csproj 파일을 열고 다음 요소를 추가합니다.
+
+```xml
+<PublicSign>true</PublicSign>
+```
 
 ## <a name="see-also"></a>참고 항목
 

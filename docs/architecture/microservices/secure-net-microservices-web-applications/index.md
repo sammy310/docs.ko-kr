@@ -3,16 +3,16 @@ title: .NET 마이크로 서비스 및 웹 애플리케이션 보안
 description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP.NET Core 웹 애플리케이션의 인증 옵션을 살펴봅니다.
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024617"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608091"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
-항목에서는 이와 같은 여러 설명서를 쉽게 사용할 수 있는 마이크로 서비스 및 웹 애플리케이션의 보안에 대한 많은 측면이 있으므로 이 섹션에서는 인증, 권한 및 애플리케이션 비밀에 집중하도록 하겠습니다.
+마이크로 서비스 및 웹 애플리케이션 보안에는 여러 측면이 있기 때문에 이와 같이 한 토픽에 대하여 설명서가 여러 개 있을 수 있습니다. 따라서 이 섹션에서는 인증, 권한 부여 및 애플리케이션 비밀에 대해 중점적으로 다루겠습니다.
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션의 인증 구현
 

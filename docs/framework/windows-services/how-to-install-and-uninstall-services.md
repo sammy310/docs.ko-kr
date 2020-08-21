@@ -13,16 +13,16 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 883b587a7ef60bc686d6f453c775f6651f0ccb7f
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925607"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063824"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>방법: Windows 서비스 설치 및 제거
 
-.NET Framework를 사용하여 Windows 서비스를 개발하는 경우 [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) 명령줄 유틸리티 또는 [PowerShell](/powershell/scripting/overview)을 사용하여 서비스 앱을 신속하게 설치할 수 있습니다. 사용자가 설치하고 제거할 수 있는 Windows 서비스를 릴리스하려는 개발자는 InstallShield를 사용해야 합니다. 자세한 내용은 [설치 관리자 패키지 만들기(Windows 데스크톱)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)를 참조하세요.
+.NET Framework를 사용하여 Windows 서비스를 개발하는 경우 [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) 명령줄 유틸리티 또는 [PowerShell](/powershell/scripting/overview)을 사용하여 서비스 앱을 신속하게 설치할 수 있습니다. 사용자가 설치하고 제거할 수 있는 Windows 서비스를 릴리스하려는 개발자는 비용이 발생하지 않는 [WiX Toolset](https://wixtoolset.org/)이나 [Advanced Installer](https://www.advancedinstaller.com/), [InstallShield](https://www.revenera.com/install/products/installshield.html) 등과 같은 상용 도구를 사용할 수 있습니다. 자세한 내용은 [설치 관리자 패키지 만들기(Windows 데스크톱)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)를 참조하세요.
 
 > [!WARNING]
 > 서비스를 컴퓨터에서 제거하려면 이 문서의 단계를 수행하는 대신 서비스를 설치한 프로그램 또는 소프트웨어 패키지를 확인한 다음, 설정에서 **앱**을 선택하여 해당 프로그램을 제거합니다. 대부분의 서비스는 Windows의 필수 요소이므로 제거하는 경우 시스템이 불안정해질 수 있습니다.

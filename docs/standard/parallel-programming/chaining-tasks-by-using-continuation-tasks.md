@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024591"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063837"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 

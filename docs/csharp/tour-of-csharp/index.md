@@ -2,12 +2,12 @@
 title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: 42c4ff59a520a1b99bbb2fb01d79d8902e16bdd5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063551"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656230"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -15,7 +15,7 @@ C#(“씨샵”이라고 발음합니다.)은 형식이 안전한 최신 개체 
 
 C#은 개체 지향, ****** 구성 요소 지향 프로그래밍 언어입니다. C#은 이러한 개념을 직접적으로 지원하는 언어 구문을 제공함으로써 소프트웨어 구성 요소를 만들고 사용할 수 있는 자연 언어로 자리매김하게 되었습니다. 원본 이후로 C#은 새로운 워크로드를 지원하기 위한 기능 및 새로운 소프트웨어 디자인 사례를 추가했습니다.
 
-몇 가지 C# 기능은 강력하고 안정적인 애플리케이션을 구축하는 데 도움을 줍니다. [****** 가비지 수집](../../standard/garbage-collection/index.md)은 연결할 수 없는 사용되지 않는 개체가 있는 메모리를 자동으로 회수합니다. [****** 예외 처리](../programming-guide/exceptions/index.md)는 오류 검색 및 복구에 대한 구조적이고 확장 가능한 방법을 제공합니다. [****** 람다 식](../programming-guide/statements-expressions-operators/lambda-expressions.md)은 함수형 프로그래밍 기술을 지원합니다. [****** 쿼리 구문](../linq/index.md)은 모든 원본의 데이터로 작업하기 위한 일반적인 패턴을 만듭니다. [****** 비동기 작업](../programming-guide/concepts/async/index.md)에 대한 언어 지원은 분산 시스템을 빌드하기 위한 구문을 제공합니다. [****** 패턴 일치](..//pattern-matching.md)는 최신 분산 시스템의 알고리즘과 데이터를 쉽게 구분하는 구문을 제공합니다. C#에는 [****** 통합 형식 시스템](../programming-guide/types/index.md)이 있습니다. `int` 및 `double`과 같은 기본 형식을 포함하는 모든 C# 형식은 단일 루트 `object`에서 상속됩니다. 모든 형식은 일반 작업 집합을 공유합니다. 모든 형식의 값을 일관된 방식으로 저장 및 전송하고 작업을 수행할 수 있습니다. 또한 C#은 사용자 정의 참조 형식 및 값 형식을 모두 지원합니다. C#은 개체의 동적 할당 및 경량 구조체의 인라인 스토리지를 허용합니다.
+몇 가지 C# 기능은 강력하고 안정적인 애플리케이션을 구축하는 데 도움을 줍니다. [****** 가비지 수집](../../standard/garbage-collection/index.md)은 연결할 수 없는 사용되지 않는 개체가 있는 메모리를 자동으로 회수합니다. [****** 예외 처리](../programming-guide/exceptions/index.md)는 오류 검색 및 복구에 대한 구조적이고 확장 가능한 방법을 제공합니다. [****** 람다 식](../language-reference/operators/lambda-expressions.md)은 함수형 프로그래밍 기술을 지원합니다. [****** 쿼리 구문](../linq/index.md)은 모든 원본의 데이터로 작업하기 위한 일반적인 패턴을 만듭니다. [****** 비동기 작업](../programming-guide/concepts/async/index.md)에 대한 언어 지원은 분산 시스템을 빌드하기 위한 구문을 제공합니다. [****** 패턴 일치](..//pattern-matching.md)는 최신 분산 시스템의 알고리즘과 데이터를 쉽게 구분하는 구문을 제공합니다. C#에는 [****** 통합 형식 시스템](../programming-guide/types/index.md)이 있습니다. `int` 및 `double`과 같은 기본 형식을 포함하는 모든 C# 형식은 단일 루트 `object`에서 상속됩니다. 모든 형식은 일반 작업 집합을 공유합니다. 모든 형식의 값을 일관된 방식으로 저장 및 전송하고 작업을 수행할 수 있습니다. 또한 C#은 사용자 정의 참조 형식 및 값 형식을 모두 지원합니다. C#은 개체의 동적 할당 및 경량 구조체의 인라인 스토리지를 허용합니다.
 
 C#은 시간 경과에 따라 프로그램 및 라이브러리가 호환 가능한 방식으로 개선될 수 있도록 ****** 버전 관리를 강조합니다. 버전 관리 고려 사항의 직접적인 영향을 받은 C# 설계의 측면에는 별도의 `virtual` 및 `override` 한정자, 메서드 오버로드 확인 규칙 및 명시적 인터페이스 멤버 선언에 대한 지원이 포함됩니다.
 
@@ -45,7 +45,7 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
   - [단순 형식](../language-reference/builtin-types/value-types.md#built-in-value-types)
     - [부호 있는 정수](../language-reference/builtin-types/integral-numeric-types.md): `sbyte`, `short`, `int`, `long`
     - [부호 없는 정수](../language-reference/builtin-types/integral-numeric-types.md): `byte`, `ushort`, `uint`, `ulong`
-    - [유니코드 문자](/dotnet/standard/base-types/character-encoding-introduction): `char`(UTF-16 코드 단위)
+    - [유니코드 문자](../../standard/base-types/character-encoding-introduction.md): `char`(UTF-16 코드 단위)
     - [IEEE 이진 부동 소수점](../language-reference/builtin-types/floating-point-numeric-types.md): `float`, `double`
     - [고정밀 10진수 부동 소수점](../language-reference/builtin-types/floating-point-numeric-types.md): `decimal`
     - 부울: `bool`은 부울 값, 즉 `true` 또는 `false`를 나타내는 값입니다.
@@ -55,18 +55,18 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
     - `struct S {...}` 양식의 사용자 정의 형식
   - [Nullable 값 형식](../language-reference/builtin-types/nullable-value-types.md)
     - `null` 값을 갖는 다른 모든 값 형식의 확장
-  - [튜플 값 형식](../tuples.md)
+  - [튜플 값 형식](../language-reference/builtin-types/value-tuples.md)
     - `(T1, T2, ...)` 양식의 사용자 정의 형식
 - [참조 형식](../language-reference/keywords/reference-types.md)
   - [클래스 형식](../language-reference/keywords/class.md)
     - 다른 모든 형식의 기본 클래스: `object`
-    - [유니코드 문자열](/dotnet/standard/base-types/character-encoding-introduction): `string`(UTF-16 코드 유닛 시퀀스)
+    - [유니코드 문자열](../../standard/base-types/character-encoding-introduction.md): `string`(UTF-16 코드 유닛 시퀀스)
     - `class C {...}` 양식의 사용자 정의 형식
   - [인터페이스 형식](../language-reference/keywords/interface.md)
     - `interface I {...}` 양식의 사용자 정의 형식
   - [배열 형식](../programming-guide/arrays/index.md)
     - 단일 차원 및 다차원, 가변 배열(예: `int[]`, `int[,]` 및 `int[][]`)
-  - [대리자 형식](../language-reference/keywords/delegate.md)
+  - [대리자 형식](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - `delegate int D(...)` 양식의 사용자 정의 형식
 
 C# 프로그램에서는 *형식 선언*을 사용하여 새 형식을 만듭니다. 형식 선언은 새 형식의 이름과 멤버를 지정합니다. 사용자 정의가 가능한 C#의 5가지 형식 범주는 클래스 형식, 구조체 형식, 인터페이스 형식, 열거형 형식 및 대리자 형식입니다.
