@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 11/04/2019
-ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558311"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720152"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -936,3 +936,47 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 특성을 값과 같은 줄에 배치 하지 마십시오.
+
+## <a name="formatting-computation-expression-operations"></a>계산 식 작업 서식 지정
+
+[계산 식](../language-reference/computation-expressions.md) 에 대 한 사용자 지정 작업을 만들 때 camelCase 명명을 사용 하는 것이 좋습니다.
+
+```fsharp
+type MathBuilder () =
+    member _.Yield _ = 0
+
+    [<CustomOperation("addOne")>]
+    member _.AddOne (state: int) =
+        state + 1
+
+    [<CustomOperation("subtractOne")>]
+    member _.SubtractOne (state: int) =
+        state - 1
+
+    [<CustomOperation("divideBy")>]
+    member _.DivideBy (state: int, divisor: int) =
+        state / divisor
+
+    [<CustomOperation("multiplyBy")>]
+    member _.MultiplyBy (state: int, factor: int) =
+        state * factor
+
+let math = MathBuilder()
+
+// 10
+let myNumber =
+    math {
+        addOne
+        addOne
+        addOne
+
+        subtractOne
+
+        divideBy 2
+
+        multiplyBy 10
+    }
+```
+
+사용 되는 명명 규칙은 궁극적으로 모델링 되는 도메인에 의해 결정 됩니다.
+다른 규칙을 사용 하는 자연 스러운 경우에는 해당 규칙을 대신 사용 해야 합니다.
