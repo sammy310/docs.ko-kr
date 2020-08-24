@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 2324b61bcffb686a455fcfd154284a2b78aa746b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283496"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656178"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -34,7 +34,7 @@ ms.locfileid: "84283496"
 
 ## <a name="sample-hosts"></a>샘플 호스트
 
-자습서에 설명된 단계를 보여주는 [샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting)는 GitHub의 dotnet/samples 리포지토리에서 사용할 수 있습니다. 샘플에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+자습서에 설명된 단계를 보여주는 [샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting)는 GitHub의 dotnet/samples 리포지토리에서 사용할 수 있습니다. 샘플에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 샘플 호스트는 학습 목적으로 사용되므로 오류 검사가 부족하며 효율성보다 가독성을 강조하도록 설계되었습니다.
 

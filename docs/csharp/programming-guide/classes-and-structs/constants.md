@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: dd42dcd62bb46898c20f14cdc893b8f5801894f2
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474984"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558428"
 ---
 # <a name="constants-c-programming-guide"></a>상수(C# 프로그래밍 가이드)
 상수는 컴파일 시간에 알려진 변경할 수 없는 값입니다. 프로그램 수명 동안 변경하지 마세요. 상수는 [const](../../language-reference/keywords/const.md) 한정자로 선언됩니다. C# [기본 제공 형식](../../language-reference/builtin-types/built-in-types.md)(<xref:System.Object?displayProperty=nameWithType> 제외)만 `const`로 선언할 수 있습니다. 클래스, 구조체 및 배열을 비롯한 사용자 정의 형식은 `const`가 될 수 없습니다. [readonly](../../language-reference/keywords/readonly.md) 한정자를 사용하여 런타임에 한 번 초기화되고(예: 생성자에서) 이후 변경할 수 없는 클래스, 구조체 또는 배열을 만듭니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "86474984"
   
  [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
   
- 이 예제에서 `months` 상수는 항상 12이고 클래스 자체에 의해서도 변경될 수 없습니다. 실제로 컴파일러는 C# 소스 코드에서 상수 식별자를 발견할 경우(예: `months`) 리터럴 값을 직접 컴파일러에서 생성하는 IL(중간 언어) 코드로 대체합니다. 런타임에 상수와 연결된 변수 주소가 없으므로 `const` 필드는 참조를 통해 전달될 수 없고 식에 l-value로 표시될 수 없습니다.  
+ 이 예제에서 `Months` 상수는 항상 12이고 클래스 자체에 의해서도 변경될 수 없습니다. 실제로 컴파일러는 C# 소스 코드에서 상수 식별자를 발견할 경우(예: `Months`) 리터럴 값을 직접 컴파일러에서 생성하는 IL(중간 언어) 코드로 대체합니다. 런타임에 상수와 연결된 변수 주소가 없으므로 `const` 필드는 참조를 통해 전달될 수 없고 식에 l-value로 표시될 수 없습니다.  
   
 > [!NOTE]
 > DLL과 같이 다른 코드에 정의된 상수 값을 참조할 경우 주의하세요. DLL의 새 버전에서 상수의 새 값을 정의할 경우 프로그램은 새 버전에 대해 다시 컴파일될 때까지 이전 리터럴 값을 포함합니다.  

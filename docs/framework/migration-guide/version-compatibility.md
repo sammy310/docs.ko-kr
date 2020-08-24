@@ -1,19 +1,18 @@
 ---
 title: .NET Framework의 버전 호환성
 description: 이전 버전과의 호환성 및 Side-By-Side 실행을 포함하여 .NET Framework 버전 간의 호환성에 대해 알아봅니다.
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475504"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558766"
 ---
 # <a name="version-compatibility"></a>버전 호환성
 

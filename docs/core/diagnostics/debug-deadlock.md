@@ -3,12 +3,12 @@ title: 디버깅 교착 상태 - .NET Core
 description: .NET Core의 잠금 문제를 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926369"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557882"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core의 교착 상태 디버그
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 명령 출력에서 프로세스 ID를 기록해 둡니다. 기존 프로세스 ID는 `4807`이었지만 사용자의 프로세스 ID는 다를 것입니다. 샘플 사이트의 API 엔드포인트인 다음 URL로 이동합니다.
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 사이트에 대한 API 요청이 중단되고 응답하지 않습니다. 약 10-15초 동안 요청이 실행되도록 합니다. 다음 명령을 실행하여 코어 덤프를 만듭니다.
 

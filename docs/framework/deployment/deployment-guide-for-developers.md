@@ -1,17 +1,17 @@
 ---
 title: 개발자를 위한 .NET Framework 배포 가이드
 description: 개발자를 위한 .NET 배포 가이드를 읽습니다. 앱에 .NET 버전 4.5~4.8을 설치하려는 경우 이 정보를 사용합니다.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622668"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558831"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.

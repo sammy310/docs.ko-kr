@@ -1,19 +1,18 @@
 ---
 title: .NET Framework에서 사용되지 않는 기능
 description: .NET 클래스 라이브러리가 멤버를 사용되지 않음으로 표시하는 방법에 대해 알아봅니다. ObsoleteAttribute 특성과 사용되지 않는 형식 및 멤버를 처리하는 방법 등을 이해합니다.
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925802"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558870"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 

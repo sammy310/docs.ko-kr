@@ -1,7 +1,6 @@
 ---
 title: .NET Framework 개발자 팩 또는 재배포 가능 패키지 설치
 description: 개발자는 .NET Framework 개발자 팩 및 대상 팩을 다운로드하여 설치할 수 있습니다. 앱에 .NET Framework 재배포 가능 패키지를 포함할 수 있습니다.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 0a099c5fb0492cd6cb9fd02e2c2ee1af63e7166e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506998"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558467"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 

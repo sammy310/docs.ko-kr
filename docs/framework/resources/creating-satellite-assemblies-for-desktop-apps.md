@@ -24,12 +24,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-ms.openlocfilehash: be6603f3a593d9756d55204024214660b2220af3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3e515028919518cb93cdbec3417eef061a512832
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166212"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558415"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 
@@ -95,8 +95,13 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 
 2. 영어(en)가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.
 
-    [!code-csharp[Conceptual.Resources.Locating#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-    [!code-vb[Conceptual.Resources.Locating#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    ```csharp
+    [assembly: NeutralResourcesLanguageAttribute("en")]
+    ```
+
+    ```vb
+    <Assembly: NeutralResourcesLanguageAttribute("en")>
+    ```
   
 3. 추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 애플리케이션에 다음과 같이 추가할 수 있습니다.  
   

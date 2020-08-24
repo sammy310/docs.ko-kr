@@ -4,12 +4,12 @@ description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062485"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656100"
 ---
 # <a name="iterators"></a>반복기
 
@@ -24,7 +24,7 @@ ms.locfileid: "88062485"
 
 C# 언어는 이러한 두 시나리오에 대한 기능을 제공합니다. 이 문서에서는 해당 기능에 대한 개요를 제공합니다.
 
-이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. 이 항목에 대한 [전체 샘플을 보거나 다운로드](https://github.com/dotnet/samples/blob/master/csharp/iterators)할 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. 이 항목에 대한 [전체 샘플을 보거나 다운로드](https://github.com/dotnet/samples/blob/master/csharp/iterators)할 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 ## <a name="iterating-with-foreach"></a>foreach로 반복 처리
 

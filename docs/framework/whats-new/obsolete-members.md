@@ -1,19 +1,18 @@
 ---
 title: 오래된 멤버 - .NET Framework
 description: .NET 4.5 이상 버전에서 사용되지 않는 형식 멤버의 목록을 확인합니다. 형식 멤버는 어셈블리로 그룹화됩니다. 사용되지 않는 형식의 멤버는 여기에서 제외됩니다.
-ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925828"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558935"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 

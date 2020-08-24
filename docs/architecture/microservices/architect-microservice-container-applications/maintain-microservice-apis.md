@@ -2,18 +2,18 @@
 title: 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 description: 요구 사항의 변화에 따라 발전과 버전을 고려하여 마이크로 서비스 API 및 계약을 작성하세요.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9164bfd12df18a88ac187c8962f0afc80b702881
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672900"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557674"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 
 마이크로 서비스 API는 서비스와 클라이언트 간 계약입니다. API 계약을 위반하지 않는 경우에만 독립적으로 마이크로 서비스를 확대할 수 있습니다. 계약이 중요한 이유가 바로 여기에 있습니다. 계약을 변경하면 클라이언트 애플리케이션이나 API 게이트웨이에 영향을 미칩니다.
 
-API 정의의 특성은 사용 중인 프로토콜에 따라 다릅니다. 예를 들어, 메시징을 사용할 경우(예: [AMQP](https://www.amqp.org/)) API는 메시지 유형으로 구성됩니다. HTTP 및 RESTful 서비스를 사용할 경우 API는 URL과 요청 및 응답 JSON 형식으로 구성됩니다.
+API 정의의 특성은 사용 중인 프로토콜에 따라 다릅니다. 예를 들어, 메시징을 사용할 경우(예: [AMQP](http://www.amqp.org/)) API는 메시지 유형으로 구성됩니다. HTTP 및 RESTful 서비스를 사용할 경우 API는 URL과 요청 및 응답 JSON 형식으로 구성됩니다.
 
 그러나 초기 계약에서 신중했다 하더라도 서비스 API는 시간에 따른 변화가 필요합니다. 이 상황에서, 특히 API가 여러 클라이언트 애플리케이션에서 사용하는 공개 API인 경우 보통은 모든 클라이언트가 새 API 계약으로 업그레이드하게 강제할 수 없습니다. 일반적으로 기존 및 새 서비스 계약 버전이 동시 실행되는 방식으로 서비스의 새 버전을 점진적으로 배포하게 됩니다. 따라서 서비스 버전 관리를 위한 전략을 갖추는 것이 중요합니다.
 

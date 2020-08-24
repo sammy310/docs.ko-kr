@@ -2,13 +2,12 @@
 title: Windows 10에 .NET Framework 설치
 description: Windows 10 또는 Windows Server 2016에서 .NET Framework를 설치하는 방법을 알아봅니다.
 ms.date: 04/18/2019
-ms.custom: updateeachrelease
-ms.openlocfilehash: 1443ae8f8d4e61b0561f4827fafc9ecedd80fccc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8bd54133f67395d0f110dd24e9e77521bbfe2bab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144736"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558779"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 및 Windows Server 2016 이상에 .NET Framework 설치
 

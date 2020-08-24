@@ -4,12 +4,12 @@ description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656998"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>LINQ(Language-Integrated Query) 작업
 
@@ -27,7 +27,7 @@ ms.locfileid: "78240017"
 
 이 자습서에서는 데이터 시퀀스 조작 과정을 간단하게 살펴봅니다. 빌드할 애플리케이션은 카드 데크를 생성한 다음 섞기 시퀀스를 수행하여 매번 시퀀스를 작성합니다. 또한 업데이트된 순서를 원래 순서와 비교할 것입니다.
 
-이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. [완료된 샘플](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)은 GitHub의 dotnet/samples 리포지토리에서도 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. [완료된 샘플](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)은 GitHub의 dotnet/samples 리포지토리에서도 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

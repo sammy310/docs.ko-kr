@@ -1,14 +1,13 @@
 ---
 title: Windows 8에 .NET Framework 설치
-ms.custom: updateeachrelease
 description: Windows 8에 .NET Framework를 설치하는 방법 알아보기
 ms.date: 04/18/2019
-ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf95a670055008b61930657c066a5dd6650452ee
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965999"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558584"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 및 Windows Server 2012에 .NET Framework 설치
 

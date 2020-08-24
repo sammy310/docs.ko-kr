@@ -1,14 +1,13 @@
 ---
 title: Windows Vista에 .NET Framework 설치
 description: Windows Vista에서.NET Framework를 설치하는 방법을 알아봅니다.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54f1b9f66ce43352d2f5122c0e0e1c9bcd158b54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181540"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558493"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista 및 Windows Server 2008에 .NET Framework 설치
 

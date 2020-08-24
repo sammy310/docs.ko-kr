@@ -3,12 +3,12 @@ title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062875"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608325"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -56,7 +56,7 @@ ms.locfileid: "88062875"
 
 > 알려진 문제: .NET Core 2.1 SDK는 프로젝트에서 Microsoft.NET.Sdk.Web을 사용하는 경우에만 이 구문을 지원했습니다. 이 문제는 .NET Core 2.2 SDK에서 해결되었습니다.
 
-ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일반 NuGet 패키지와 약간 다릅니다. 이 메타패키지를 사용하는 애플리케이션의 [프레임워크 종속 배포](../deploying/index.md#publish-runtime-dependent)에서는 자동으로 ASP.NET Core 공유 프레임워크를 활용합니다. 메타패키지를 사용할 경우, 참조되는 ASP.NET Core NuGet 패키지의 자산이 애플리케이션을 사용하여 배포되지 **않습니다**. 이 자산은 ASP.NET Core 공유 프레임워크에 포함됩니다. 공유 프레임워크의 자산은 애플리케이션 시작 시간을 개선하기 위해 대상 플랫폼에 최적화됩니다. 공유 프레임워크에 대한 자세한 내용은 [.NET Core 배포 패키징](../distribution-packaging.md)을 참조하세요.
+ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일반 NuGet 패키지와 약간 다릅니다. 이 메타패키지를 사용하는 애플리케이션의 [프레임워크 종속 배포](../deploying/index.md#publish-framework-dependent)에서는 자동으로 ASP.NET Core 공유 프레임워크를 활용합니다. 메타패키지를 사용할 경우, 참조되는 ASP.NET Core NuGet 패키지의 자산이 애플리케이션을 사용하여 배포되지 **않습니다**. 이 자산은 ASP.NET Core 공유 프레임워크에 포함됩니다. 공유 프레임워크의 자산은 애플리케이션 시작 시간을 개선하기 위해 대상 플랫폼에 최적화됩니다. 공유 프레임워크에 대한 자세한 내용은 [.NET Core 배포 패키징](../distribution-packaging.md)을 참조하세요.
 
 버전이 지정되면 프레임워크 종속 배포의 경우 ASP.NET Core 공유 프레임워크의 최소 버전으로 처리되고, 자체 포함 배포의 경우 정확한 버전으로 처리됩니다. 다음과 같은 결과가 나타날 수 있습니다.
 

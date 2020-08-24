@@ -3,16 +3,16 @@ title: dotnet test 및 NUnit을 사용하여 .NET Core에서 Visual Basic 단위
 description: NUnit를 사용하여 샘플 Visual Basic 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b807463d29f271d1a707b6254b7b5e66f745319
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240924"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656412"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 Visual Basic .NET Core 라이브러리 유닛 테스트
 
-이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 

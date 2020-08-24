@@ -4,12 +4,12 @@ description: .NET Core로 빌드된 .NET Core 런타임, SDK 및 앱을 설치�
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415949"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656529"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향
 
@@ -92,5 +92,5 @@ ASP.NET Core 인증서 문제를 해결하는 방법에 대한 자세한 내용�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [..NET Core 종속성 및 요구 사항](dependencies.md)
+- [..NET Core 종속성 및 요구 사항](macos.md#dependencies)
 - [.NET Core 런타임 및 SDK 설치](macos.md)

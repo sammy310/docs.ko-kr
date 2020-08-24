@@ -5,12 +5,12 @@ description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다
 ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474828"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720243"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -28,6 +28,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [권한 부여: IAuthorizationPolicyProvider 구현에는 새 메서드가 필요합니다.](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [권한 부여: 엔드포인트 라우팅의 리소스가 HttpContext임](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: 컴파일 시간에 구성 요소에서 중요하지 않은 공백을 자름](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Blazor: NuGet 패키지의 대상 프레임워크가 변경됨](#blazor-target-framework-of-nuget-packages-changed)
 - [캐싱: CompactOnMemoryPressure 속성이 제거됨](#caching-compactonmemorypressure-property-removed)
@@ -99,6 +100,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
 ***
 

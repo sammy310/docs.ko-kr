@@ -4,12 +4,12 @@ description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 06affa01b67edeea09088834cf131adb55650bbb
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794665"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656985"
 ---
 # <a name="console-app"></a>콘솔 앱
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>파일 읽기 및 에코
 
-추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
+추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples) 항목의 지침을 참조하세요.
 
 다음에는 다음 메서드를 `Program` 클래스에 추가합니다(`Main` 메서드 바로 아래).
 

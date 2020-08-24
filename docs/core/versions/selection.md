@@ -4,11 +4,12 @@ description: .NET Core에서 프로그램에 대한 런타임 버전을 자동�
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803120"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608201"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -77,7 +78,7 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 ## <a name="framework-dependent-apps-roll-forward"></a>프레임워크 종속 응용 프로그램 롤포워드
 
-[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-runtime-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-runtime-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
+[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-framework-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-framework-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
 
 호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp3.0`을 지정하고 `3.0.2`가 설치된 최신 .NET 런타임인 경우 `3.0.2` 런타임이 사용됩니다.
 

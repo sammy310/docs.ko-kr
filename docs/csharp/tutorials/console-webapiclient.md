@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004857"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656946"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -25,7 +25,7 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 애플리케이션을
 
 이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다.
 
-이 항목에 대한 [최종 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 항목에 대한 [최종 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

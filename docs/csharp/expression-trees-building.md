@@ -4,12 +4,12 @@ description: 식 트리를 빌드하기 위한 기술을 알아봅니다.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146049"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656152"
 ---
 # <a name="building-expression-trees"></a>식 트리 작성
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 계승 함수에 대한 식 트리를 작성하는 코드는 훨씬 더 길고 더 복잡하며, 레이블과 break 문 및 일상적인 코딩 작업에서 방지하려는 기타 요소로 인해 복잡해집니다.
 
-이 섹션에서는 이 식 트리의 모든 노드를 방문하는 방문자 코드도 업데이트하고 이 샘플에서 만들어진 노드에 대한 정보를 기록했습니다. GitHub의 dotnet/docs 리포지토리에서 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)할 수 있습니다. 샘플을 빌드하고 실행하여 직접 실험합니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+이 섹션에서는 이 식 트리의 모든 노드를 방문하는 방문자 코드도 업데이트하고 이 샘플에서 만들어진 노드에 대한 정보를 기록했습니다. GitHub의 dotnet/docs 리포지토리에서 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)할 수 있습니다. 샘플을 빌드하고 실행하여 직접 실험합니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 ## <a name="examining-the-apis"></a>API 검사
 

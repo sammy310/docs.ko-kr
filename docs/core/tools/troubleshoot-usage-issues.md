@@ -4,12 +4,12 @@ description: .NET Core 도구를 실행할 때 발생하는 일반적인 문제�
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: db88958e1605fef589c5dbcb12065a6318183705
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062638"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608314"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core 도구 사용 문제 해결
 
@@ -74,7 +74,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>런타임을 찾을 수 없음
 
-전역 도구는 [프레임워크 종속 애플리케이션](../deploying/index.md#publish-runtime-dependent)이므로, 머신에 설치된 .NET Core 런타임을 사용합니다. 필요한 런타임을 찾을 수 없는 경우, 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
+전역 도구는 [프레임워크 종속 애플리케이션](../deploying/index.md#publish-framework-dependent)이므로, 머신에 설치된 .NET Core 런타임을 사용합니다. 필요한 런타임을 찾을 수 없는 경우, 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
 
 * 애플리케이션은 지정된 주 및 부 버전의 가장 높은 패치 릴리스로 롤포워드합니다.
 * 일치하는 주 버전 및 부 버전 번호를 가진, 일치하는 런타임이 없으면 다음으로 높은 부 버전이 사용됩니다.
