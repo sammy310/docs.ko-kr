@@ -2,24 +2,24 @@
 title: '자습서: 형식 공급자 만들기'
 description: '기본 개념을 설명 하는 몇 가지 간단한 형식 공급자를 검사 하 여 F # 3.0에서 고유한 F # 형식 공급자를 만드는 방법에 대해 알아봅니다.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 67ebd91007ff814370573ebc1a65b2c7a8399f7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810874"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
 F #의 형식 공급자 메커니즘은 정보 기능이 풍부한 프로그래밍에 대 한 지원의 중요 한 부분입니다. 이 자습서에서는 기본 개념을 설명 하기 위해 몇 가지 간단한 형식 공급자를 개발 하는 과정을 통해 사용자 고유의 형식 공급자를 만드는 방법을 설명 합니다. F #의 형식 공급자 메커니즘에 대 한 자세한 내용은 [형식 공급자](index.md)를 참조 하세요.
 
-F # 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자 범위가 포함 되어 있습니다. 예:
+F # 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자 범위가 포함 되어 있습니다. 예를 들어:
 
 - [Fsharp.core](https://fsharp.github.io/FSharp.Data/) 에는 JSON, XML, CSV 및 HTML 문서 형식에 대 한 형식 공급자가 포함 되어 있습니다.
 
 - [Sqlprovider](https://fsprojects.github.io/SQLProvider/) 는 이러한 데이터 원본에 대 한 개체 매핑 및 F # LINQ 쿼리를 통해 SQL database에 대 한 강력한 형식의 액세스를 제공 합니다.
 
-- [Fsharp.core](https://fsprojects.github.io/FSharp.Data.SqlClient/) 에는 F #에서 t-sql을 확인 하는 컴파일 시간에 대 한 형식 공급자 집합이 있습니다.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)에는 F#에서 컴파일 시간에 확인하여 포함되는 T-SQL에 대한 형식 공급자가 있습니다.
 
 - [Fsharp.core 공급자](https://fsprojects.github.io/FSharp.Data.TypeProviders/) 는 SQL, Entity Framework, ODATA 및 WSDL Data services에 액세스 하기 위한 .NET Framework 프로그래밍에만 사용할 수 있는 이전 형식 공급자 집합입니다.
 
@@ -175,9 +175,9 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-이 형식은 public 이어야 하며, 별도의 F # 프로젝트에서 해당 형식을 포함 하는 어셈블리를 참조할 때 컴파일러가 형식 공급자를 인식할 수 있도록 [typeprovider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) 특성으로 표시 해야 합니다. *Config* 매개 변수는 선택 사항이 며, 있는 경우 F # 컴파일러가 만드는 형식 공급자 인스턴스에 대 한 컨텍스트 구성 정보를 포함 합니다.
+이 형식은 public 이어야 하며, 별도의 F # 프로젝트에서 해당 형식을 포함 하는 어셈블리를 참조할 때 컴파일러가 형식 공급자를 인식할 수 있도록 [typeprovider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) 특성으로 표시 해야 합니다. *Config* 매개 변수는 선택 사항이 며, 있는 경우 F # 컴파일러가 만드는 형식 공급자 인스턴스에 대 한 컨텍스트 구성 정보를 포함 합니다.
 
-다음으로 [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) 인터페이스를 구현 합니다. 이 경우 `TypeProviderForNamespaces` API의 형식을 `ProvidedTypes` 기본 형식으로 사용 합니다. 이 도우미 형식은 적극적으로 제공 되는 네임 스페이스의 한정 된 컬렉션을 제공할 수 있습니다. 각 네임 스페이스는 고정 된 수의 고정 된 형식을 직접 포함 합니다. 이 컨텍스트에서 공급자는 필요 하거나 사용 하지 않더라도 형식을 *적극적* 으로 생성 합니다.
+다음으로 [ITypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) 인터페이스를 구현 합니다. 이 경우 `TypeProviderForNamespaces` API의 형식을 `ProvidedTypes` 기본 형식으로 사용 합니다. 이 도우미 형식은 적극적으로 제공 되는 네임 스페이스의 한정 된 컬렉션을 제공할 수 있습니다. 각 네임 스페이스는 고정 된 수의 고정 된 형식을 직접 포함 합니다. 이 컨텍스트에서 공급자는 필요 하거나 사용 하지 않더라도 형식을 *적극적* 으로 생성 합니다.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -236,7 +236,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 다음 사항에 유의 해야 합니다.
 
-- 제공 된 형식이 지워집니다.  기본 형식이 임을 나타내므로 `obj` 인스턴스는 컴파일된 코드에서 [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 형식의 값으로 표시 됩니다.
+- 제공 된 형식이 지워집니다.  기본 형식이 임을 나타내므로 `obj` 인스턴스는 컴파일된 코드에서 [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) 형식의 값으로 표시 됩니다.
 
 - 중첩 되지 않은 형식을 지정 하는 경우 어셈블리와 네임 스페이스를 지정 해야 합니다. 지워진 형식의 경우 어셈블리는 형식 공급자 어셈블리 자체 여야 합니다.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-이 속성을 가져오면 항상 문자열 "Hello!"로 평가 됩니다. 속성의는 `GetterCode` 호스트 컴파일러가 속성을 가져오기 위해 생성 하는 코드를 나타내는 F # 따옴표를 사용 합니다. 인용구에 대 한 자세한 내용은 [코드 인용 (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)을 참조 하세요.
+이 속성을 가져오면 항상 문자열 "Hello!"로 평가 됩니다. 속성의는 `GetterCode` 호스트 컴파일러가 속성을 가져오기 위해 생성 하는 코드를 나타내는 F # 따옴표를 사용 합니다. 인용구에 대 한 자세한 내용은 [코드 인용 (F #)](../../language-reference/code-quotations.md)을 참조 하세요.
 
 속성에 XML 문서를 추가 합니다.
 
@@ -282,7 +282,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
 new Type10()
 ```
 
-제공 된 형식의 인스턴스는 기본 데이터 "the object data"를 사용 하 여 생성 됩니다. 따옴표 붙은 코드는 제공 된 형식을 선언할 때 지정한 대로이 형식이 제공 된 형식을 모두 지우기 때문에 [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 로의 변환을 포함 합니다.
+제공 된 형식의 인스턴스는 기본 데이터 "the object data"를 사용 하 여 생성 됩니다. 따옴표 붙은 코드는 제공 된 형식을 선언할 때 지정한 대로이 형식이 제공 된 형식을 모두 지우기 때문에 [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) 로의 변환을 포함 합니다.
 
 생성자에 XML 문서를 추가 하 고 제공 된 형식에 제공 된 생성자를 추가 합니다.
 
@@ -750,7 +750,7 @@ do ()
 
 - 헤더 이름은 단위 이거나 "이름 (단위)" 형식이 며 쉼표를 포함 하지 않습니다.
 
-- 단위는 [Fsharp.core 모듈 (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) 모듈이 정의 하는 모든 SI (System 다국어) 단위입니다.
+- 단위는 [fsharp.core (F #)](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-data-unitsystems-si-unitnames.html) 모듈이 정의 하는 모든 SI (System 국제) 단위입니다.
 
 - 단위는 복합이 아닌 모든 단순 (예: 미터) (예: 미터/초)입니다.
 
@@ -877,7 +877,7 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 
 - 오버 로드 된 생성자는 원본 파일 또는 동일한 스키마를 가진 파일을 읽을 수 있습니다. 이 패턴은 로컬 또는 원격 데이터 원본에 대 한 형식 공급자를 작성할 때 일반적으로 사용 되며,이 패턴을 사용 하면 로컬 파일을 원격 데이터의 템플릿으로 사용할 수 있습니다.
 
-- 형식 공급자 생성자에 전달 된 [Typeproviderconfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) 값을 사용 하 여 상대 파일 이름을 확인할 수 있습니다.
+- 형식 공급자 생성자에 전달 된 [Typeproviderconfig](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderconfig.html) 값을 사용 하 여 상대 파일 이름을 확인할 수 있습니다.
 
 - 메서드를 사용 하 여 `AddDefinitionLocation` 제공 된 속성의 위치를 정의할 수 있습니다. 따라서 제공 된 속성에서를 사용 하는 경우 `Go To Definition` CSV 파일은 Visual Studio에서 열립니다.
 
@@ -901,7 +901,7 @@ let function1 () =
     obj1.InstanceProperty
 ```
 
-Ildasm.exe를 사용 하 여 결과 코드 디컴파일된 이미지는 다음과 같습니다.
+ildasm.exe를 사용 하 여 결과 코드 디컴파일된 이미지는 다음과 같습니다.
 
 ```il
 .class public abstract auto ansi sealed Module1
@@ -976,7 +976,7 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 #### <a name="the-getconnection-design-pattern"></a>GetConnection 디자인 패턴
 
-`GetConnection`다음 예제와 같이 fsharp.core의 형식 공급자가 사용 하는 패턴을 사용 하도록 대부분의 형식 공급자를 작성 해야 합니다.
+`GetConnection`다음 예제와 같이 FSharp.Data.TypeProviders.dll의 형식 공급자가 사용 하는 패턴을 사용 하도록 대부분의 형식 공급자를 작성 해야 합니다.
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -1118,7 +1118,7 @@ F #의 형식 공급자 메커니즘에는 다음과 같은 제한 사항이 있
 
 테스트 IDE는 형식 공급자가 다시 작성 되지 않도록 방지 하는 .dll 파일에 대 한 잠금을 사용 하기 때문에 한 인스턴스에서 형식 공급자를 개발 하 고 다른 공급자에서 공급자를 테스트할 수 있습니다. 따라서 공급자가 첫 번째 인스턴스에서 빌드되는 동안 Visual Studio의 두 번째 인스턴스를 닫은 다음 공급자가 작성 된 후에 두 번째 인스턴스를 다시 열어야 합니다.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Fsc.exe 호출을 사용 하 여 형식 공급자를 디버그 합니다.
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>fsc.exe 호출을 사용 하 여 형식 공급자 디버그
 
 다음 도구를 사용 하 여 형식 공급자를 호출할 수 있습니다.
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   인쇄 stdout 로깅을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [형식 공급자](index.md)
 - [형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

@@ -2,12 +2,12 @@
 title: '방법: WCF URL 예약을 제한된 예약으로 바꾸기'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202368"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811615"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>방법: WCF URL 예약을 제한된 예약으로 바꾸기
 
@@ -17,7 +17,7 @@ URL 예약을 사용하여 URL 또는 URL 집합에서 메시지를 수신할 �
   
 Windows Vista 또는 Windows Server 2008에서는를 입력 하 여 관리자 권한 명령 프롬프트에서 모든 HTTP URL 예약을 볼 수 있습니다 `netsh http show urlacl` . 다음 예제에서는 WCF URL 예약이 어떻게 유사 해야 하는지 보여 줍니다.
 
-```
+```output
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
         User: \Everyone  
             Listen: Yes  

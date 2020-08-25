@@ -2,12 +2,12 @@
 title: 컴파일러 옵션
 description: 'F # 컴파일러의 명령줄 옵션을 사용 하 여 F # 앱 및 라이브러리의 컴파일을 제어 합니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557362"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812148"
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
@@ -52,7 +52,7 @@ ms.locfileid: "88557362"
 |`--pdb:pdb-filename`|출력 디버그 PDB (프로그램 데이터베이스) 파일의 이름을로 합니다. 이 옵션 `--debug` 은가 사용 하도록 설정 된 경우에만 적용 됩니다.<br /><br />이 컴파일러 옵션은 같은 이름의 c # 컴파일러 옵션과 같습니다. 자세한 내용은 [&#47;pdb &#40;C&#35; 컴파일러 옵션&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md)을 참조 하세요.|
 |`--platform:platform-name`|생성 된 코드가 지정 된 플랫폼 에서만 실행 되도록 지정 합니다 ( `x86` , `Itanium` 또는 `x64` ). 또는 플랫폼 이름을 선택 하는 경우 생성 된 `anycpu` 코드를 모든 플랫폼에서 실행할 수 있도록 지정 합니다.<br /><br />이 컴파일러 옵션은 같은 이름의 c # 컴파일러 옵션과 같습니다. 자세한 내용은 [&#47;platform &#40;C&#35; 컴파일러 옵션&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md)을 참조 하세요.|
 |`--preferreduilang:lang`| 기본 출력 언어 문화권 이름을 지정 합니다 (예:  `es-ES` , `ja-JP` ). |
-|`--quotations-debug`|F # 인용 리터럴에서 파생 된 정의와 리플렉션 정의에서 파생 된 식에 대 한 추가 디버깅 정보를 내보내도록 지정 합니다. 디버그 정보는 F # 식 트리 노드의 사용자 지정 특성에 추가 됩니다. [코드 인용](code-quotations.md) 및 [Expr. customattributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d)를 참조 하세요.|
+|`--quotations-debug`|F # 인용 리터럴에서 파생 된 정의와 리플렉션 정의에서 파생 된 식에 대 한 추가 디버깅 정보를 내보내도록 지정 합니다. 디버그 정보는 F # 식 트리 노드의 사용자 지정 특성에 추가 됩니다. [코드 인용](code-quotations.md) 및 [Expr. customattributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes)를 참조 하세요.|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|컴파일하는 코드에서 F # 또는 .NET Framework 어셈블리의 코드를 사용할 수 있도록 합니다.<br /><br />이 컴파일러 옵션은 같은 이름의 c # 컴파일러 옵션과 같습니다. 자세한 내용은 [&#47;참조 &#40;C&#35; 컴파일러 옵션&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md)을 참조 하세요.|
 |`--resource:resource-filename`|관리 되는 리소스 파일을 생성 된 어셈블리에 포함 합니다.<br /><br />이 컴파일러 옵션은 같은 이름의 c # 컴파일러 옵션과 같습니다. 자세한 내용은 [&#47;리소스 &#40;C&#35; 컴파일러 옵션&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md)를 참조 하세요.|
 |`--sig:signature-filename`|생성 된 어셈블리를 기반으로 서명 파일을 생성 합니다. 서명 파일에 대 한 자세한 내용은 [서명](signature-files.md)을 참조 하세요.|

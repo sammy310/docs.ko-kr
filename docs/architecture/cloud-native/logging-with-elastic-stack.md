@@ -2,12 +2,12 @@
 title: 탄력적 스택으로 로깅
 description: 탄력적 스택, Logstash 태 시 및 Kibana를 사용 하 여 로깅
 ms.date: 05/13/2020
-ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613852"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811173"
 ---
 # <a name="logging-with-elastic-stack"></a>탄력적 스택으로 로깅
 
@@ -81,7 +81,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 에서 방문한 상위 10 페이지를 검색 하는 쿼리는 `jill@example.com` 그림 7-9에 나와 있습니다.
 
-```
+```json
 "query": {
     "match": {
       "user": "jill@example.com"

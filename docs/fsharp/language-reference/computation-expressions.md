@@ -1,15 +1,15 @@
 ---
 title: 계산 식
 description: '제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하 고 결합할 수 있는 F #에서 계산을 작성 하기 위한 편리한 구문을 만드는 방법을 알아봅니다.'
-ms.date: 11/04/2019
+ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 32638e9493fb2c6b7aae30d044a0cda2a97f2178
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855363"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812161"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -81,7 +81,7 @@ let doThingsAsync url =
 
 를 사용 하 여 계산 식에 대 한 호출을 바인딩하는 경우 `let` 계산 식의 결과를 얻을 수 없습니다. 대신 계산 식에 대 한 계산 되지 *않은 호출 값* 을 바인딩 했습니다. `let!`를 사용 하 여 결과에 바인딩합니다.
 
-`let!`는 작성기 형식의 멤버에 의해 정의 됩니다 `Bind(x, f)` .
+`let!` 는 작성기 형식의 멤버에 의해 정의 됩니다 `Bind(x, f)` .
 
 ### `do!`
 
@@ -97,7 +97,7 @@ let doThingsAsync data url =
 
 [비동기 워크플로의](asynchronous-workflows.md)경우이 형식은 `Async<unit>` 입니다. 다른 계산 식의 경우 형식은이 될 수 있습니다 `CExpType<unit>` .
 
-`do!`는 작성기 형식의 멤버에 의해 정의 됩니다 `Bind(x, f)` `f` . 여기서는을 생성 `unit` 합니다.
+`do!` 는 작성기 형식의 멤버에 의해 정의 됩니다 `Bind(x, f)` `f` . 여기서는을 생성 `unit` 합니다.
 
 ### `yield`
 
@@ -144,7 +144,7 @@ let weekdays includeWeekend =
 
 [C #의 yield 키워드](../../csharp/language-reference/keywords/yield.md)와 마찬가지로 계산 식의 각 요소는 반복 될 때 다시 생성 됩니다.
 
-`yield`는 작성기 형식의 멤버에 의해 정의 됩니다 `Yield(x)` `x` . 여기서은 다시 생성할 항목입니다.
+`yield` 는 작성기 형식의 멤버에 의해 정의 됩니다 `Yield(x)` `x` . 여기서은 다시 생성할 항목입니다.
 
 ### `yield!`
 
@@ -172,7 +172,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 
 평가 되는 경우에 의해 호출 되는 계산 식에서 `yield!` 해당 항목이 하나씩 다시 생성 되어 결과를 평면화 합니다.
 
-`yield!`는 작성기 형식의 멤버에 의해 정의 됩니다 `YieldFrom(x)` `x` . 여기서는 값의 컬렉션입니다.
+`yield!` 는 작성기 형식의 멤버에 의해 정의 됩니다 `YieldFrom(x)` `x` . 여기서는 값의 컬렉션입니다.
 
 와 달리 `yield` 는를 `yield!` 명시적으로 지정 해야 합니다. 해당 동작은 계산 식에서 암시적이 아닙니다.
 
@@ -191,7 +191,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return`는 작성기 형식의 멤버에 의해 정의 됩니다 `Return(x)` `x` . 여기서은 래핑할 항목입니다.
+`return` 는 작성기 형식의 멤버에 의해 정의 됩니다 `Return(x)` `x` . 여기서은 래핑할 항목입니다.
 
 ### `return!`
 
@@ -207,7 +207,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!`는 작성기 형식의 멤버에 의해 정의 됩니다 `ReturnFrom(x)` `x` . 여기서는 다른 계산 식입니다.
+`return!` 는 작성기 형식의 멤버에 의해 정의 됩니다 `ReturnFrom(x)` `x` . 여기서는 다른 계산 식입니다.
 
 ### `match!`
 
@@ -234,7 +234,7 @@ F # 핵심 라이브러리는 세 가지 기본 제공 계산 식인 [시퀀스 
 
 다음 표에서는 workflow builder 클래스에서 사용할 수 있는 메서드에 대해 설명 합니다.
 
-|**방법**|**일반적인 서명**|**설명**|
+|**메서드**|**일반적인 서명**|**설명**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|`let!`계산 식에서 및에 대해 호출 `do!` 됩니다.|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|계산 식을 함수로 래핑합니다.|
@@ -410,20 +410,20 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-계산 식에는 식이 반환 하는 기본 형식이 있습니다. 기본 형식은 계산 된 결과 또는 수행 될 수 있는 지연 계산을 나타내거나 일부 형식의 컬렉션을 반복 하는 방법을 제공할 수 있습니다. 이전 예제에서는 기본 형식이 **결국**였습니다. 시퀀스 식의 경우 기본 형식은 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 입니다. 쿼리 식의 경우 기본 형식은 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 입니다. 비동기 워크플로의 경우 기본 형식은 [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7) 입니다. `Async`개체는 결과를 계산 하기 위해 수행할 작업을 나타냅니다. 예를 들어를 호출 [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) 하 여 계산을 실행 하 고 결과를 반환 합니다.
+계산 식에는 식이 반환 하는 기본 형식이 있습니다. 기본 형식은 계산 된 결과 또는 수행 될 수 있는 지연 계산을 나타내거나 일부 형식의 컬렉션을 반복 하는 방법을 제공할 수 있습니다. 이전 예제에서는 기본 형식이 **결국**였습니다. 시퀀스 식의 경우 기본 형식은 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 입니다. 쿼리 식의 경우 기본 형식은 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 입니다. 비동기 워크플로의 경우 기본 형식은 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 입니다. `Async`개체는 결과를 계산 하기 위해 수행할 작업을 나타냅니다. 예를 들어를 호출 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 하 여 계산을 실행 하 고 결과를 반환 합니다.
 
 ## <a name="custom-operations"></a>사용자 지정 작업
 
-계산 식에 대 한 사용자 지정 작업을 정의 하 고 계산 식에서 사용자 지정 작업을 연산자로 사용할 수 있습니다. 예를 들어 쿼리 식에 쿼리 연산자를 포함할 수 있습니다. 사용자 지정 작업을 정의 하는 경우 계산 식의 메서드에 Yield 및를 정의 해야 합니다. 사용자 지정 작업을 정의 하려면 계산 식의 작성기 클래스에 배치한 다음를 적용 [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19) 합니다. 이 특성은 사용자 지정 작업에 사용 되는 이름인 문자열을 인수로 사용 합니다. 이 이름은 계산 식의 여는 중괄호의 시작 부분에서 범위에 제공 됩니다. 따라서이 블록에서 사용자 지정 작업과 이름이 같은 식별자를 사용 하면 안 됩니다. 예를 들어 `all` 쿼리 식에서 또는와 같은 식별자를 사용 하지 않습니다 `last` .
+계산 식에 대 한 사용자 지정 작업을 정의 하 고 계산 식에서 사용자 지정 작업을 연산자로 사용할 수 있습니다. 예를 들어 쿼리 식에 쿼리 연산자를 포함할 수 있습니다. 사용자 지정 작업을 정의 하는 경우 계산 식의 메서드에 Yield 및를 정의 해야 합니다. 사용자 지정 작업을 정의 하려면 계산 식의 작성기 클래스에 배치한 다음를 적용 [`CustomOperationAttribute`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-customoperationattribute.html) 합니다. 이 특성은 사용자 지정 작업에 사용 되는 이름인 문자열을 인수로 사용 합니다. 이 이름은 계산 식의 여는 중괄호의 시작 부분에서 범위에 제공 됩니다. 따라서이 블록에서 사용자 지정 작업과 이름이 같은 식별자를 사용 하면 안 됩니다. 예를 들어 `all` 쿼리 식에서 또는와 같은 식별자를 사용 하지 않습니다 `last` .
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>새 사용자 지정 작업으로 기존 작성기 확장
 
 작성기 클래스가 이미 있는 경우이 작성기 클래스 외부에서 해당 사용자 지정 작업을 확장할 수 있습니다. 모듈에서 확장을 선언 해야 합니다. 네임 스페이스는 동일한 파일 및 형식이 정의 된 동일한 네임 스페이스 선언 그룹을 제외 하 고 확장 멤버를 포함할 수 없습니다.
 
-다음 예제에서는 기존 클래스의 확장을 보여 줍니다 `Microsoft.FSharp.Linq.QueryBuilder` .
+다음 예제에서는 기존 클래스의 확장을 보여 줍니다 `FSharp.Linq.QueryBuilder` .
 
 ```fsharp
-type Microsoft.FSharp.Linq.QueryBuilder with
+type FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
     member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
@@ -434,5 +434,5 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 
 - [F# 언어 참조](index.md)
 - [비동기 워크플로](asynchronous-workflows.md)
-- [시퀀스](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [시퀀스](sequences.md)
 - [쿼리 식](query-expressions.md)

@@ -2,12 +2,12 @@
 title: 레코드
 description: 'F # 레코드가 선택적으로 멤버와 함께 명명 된 값의 단순 집계를 나타내는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812356"
 ---
 # <a name="records"></a>레코드
 
@@ -179,10 +179,10 @@ The records are equal.
 
 레코드에 대 한 참조 일치가 필요한 경우에는 레코드 위에 특성을 추가 합니다 `[<ReferenceEquality>]` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [F# 형식](fsharp-types.md)
 - [클래스](classes.md)
 - [F# 언어 참조](index.md)
-- [참조-같음](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [참조-같음](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [패턴 일치](pattern-matching.md)

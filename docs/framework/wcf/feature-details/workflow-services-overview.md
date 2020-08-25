@@ -2,12 +2,12 @@
 title: 워크플로 서비스 개요
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7055ea6e6b6d6a5d7bef8d5ff465d2eb0c838bf6
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594870"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812187"
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
 
@@ -60,7 +60,7 @@ WCF 서비스와 마찬가지로 워크플로 서비스는 호스팅해야 합�
 
 IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (사용 <xref:System.ServiceModel.BasicHttpBinding> )이 자동으로 생성 됩니다. 자세한 내용은 [간소화 된 구성](../simplified-configuration.md)을 참조 하세요. 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 엔드포인트를 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.
 
-```
-<%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory
+```aspx-csharp
+<%@ServiceHost Factory="System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory"
 Service="EchoService"%>
 ```

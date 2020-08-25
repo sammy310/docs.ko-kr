@@ -2,19 +2,19 @@
 title: '방법: 익명 형식 프로젝션'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-ms.openlocfilehash: 459602eb7ede0bd055e00d3c7620cb95ec5408ff
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c486fbd7ee8ae917cd0ccf57e2b04e472784b11d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396482"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810562"
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a>방법: 무명 형식 프로젝션 (Visual Basic)
 새 형식을 잠깐 동안만 사용할 경우에도 필요에 따라 쿼리를 해당 형식으로 프로젝션하려고 할 수 있습니다. 프로젝션에서만 사용하기 위해 새 형식을 만드는 것은 비효율적입니다. 이 경우 더 효율적인 방법은 익명 형식을 프로젝션하는 것입니다. 익명 형식을 사용하면 클래스를 정의한 다음 클래스의 이름을 지정하지 않고도 클래스의 개체를 선언하고 초기화할 수 있습니다.  
   
  무명 형식은 *튜플*이라는 수학적 개념의 C# 구현입니다. 수학 용어인 튜플은 단일(single), 이중(double), 3중(triple), 4중(quadruple), 5중(quintuple), n중(n-tuple)에서 유래되었습니다. 튜플은 각각 특정 형식으로 되어 있는 개체의 유한 시퀀스를 의미합니다. 이를 이름/값 쌍의 목록이라고 하기도 합니다. 예를 들어 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 문서의 주소 내용은 다음과 같이 표현될 수 있습니다.  
   
-```  
+```
 Name: Ellen Adams  
 Street: 123 Maple Street  
 City: Mill Valley  
@@ -28,7 +28,7 @@ Country: USA
 ## <a name="example"></a>예제  
  이 예제에서 `Select` 절은 익명 형식을 프로젝션한 다음 `Dim`을 사용하여 `IEnumerable` 개체를 만듭니다. `For Each` 루프에서 반복 변수는 쿼리 식에서 만든 익명 형식의 인스턴스가 됩니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  

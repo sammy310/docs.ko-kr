@@ -2,12 +2,12 @@
 title: 대화형 옵션
 description: F# 대화형 fsi.exe에서 지 원하는 명령줄 옵션에 대해 알아봅니다.
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558610"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810535"
 ---
 # <a name="f-interactive-options"></a>F# 대화형 옵션
 
@@ -52,7 +52,7 @@ F # 스크립트 파일의 파일 확장명은 `.fsx` 입니다.
 |**--optimize**[ **+**&#124;**-** ]|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--preferreduilang: &lt; lang&gt;**| 기본 출력 언어 문화권 이름 (예: es, ja-jp)을 지정 합니다. |
 |**--quiet**|**Stdout** 스트림에 대 한 F# 대화형 출력을 표시 하지 않습니다.|
-|**--인용구-debug**|F # 인용 리터럴에서 파생 된 정의와 리플렉션 정의에서 파생 된 식에 대 한 추가 디버깅 정보를 내보내도록 지정 합니다. 디버그 정보는 F # 식 트리 노드의 사용자 지정 특성에 추가 됩니다. [코드 인용](code-quotations.md) 및 [Expr. customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)를 참조 하세요.|
+|**--인용구-debug**|F # 인용 리터럴에서 파생 된 정의와 리플렉션 정의에서 파생 된 식에 대 한 추가 디버깅 정보를 내보내도록 지정 합니다. 디버그 정보는 F # 식 트리 노드의 사용자 지정 특성에 추가 됩니다. [코드 인용](code-quotations.md) 및 [Expr. customattributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes)를 참조 하세요.|
 |**--readline**[ **+**&#124;**-** ]|대화형 모드에서 탭 완성 기능을 사용 하거나 사용 하지 않도록 설정 합니다.|
 |**--참조: &lt; 파일 이름&gt;**<br /><br />**-r: &lt; 파일 이름&gt;**|**fsc.exe** 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조 하세요.|
 |**--tailcalls**[ **+**&#124;**-** ]|Tail IL 명령을 사용 하거나 사용 하지 않도록 설정 하 여 tail 재귀 함수에 스택 프레임을 다시 사용 하도록 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
@@ -144,7 +144,7 @@ val x : MyList = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
 ```
 
 에 전달 된 변환기 함수가를 반환 하는 경우 `fsi.AddPrintTransformer` `null` 인쇄 변환기는 무시 됩니다.
-형식으로 시작 하 여 입력 값을 필터링 하는 데 사용할 수 있습니다 `obj` .  예를 들면 다음과 같습니다.
+형식으로 시작 하 여 입력 값을 필터링 하는 데 사용할 수 있습니다 `obj` .  예를 들어:
 
 ```fsharp
 fsi.AddPrintTransformer(fun (x:obj) ->

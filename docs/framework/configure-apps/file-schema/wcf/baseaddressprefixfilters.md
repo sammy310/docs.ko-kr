@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 0673507b72690c3a5c7dcc35442c05e378dba43c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 635e4f02f4d286b63c4f4845563ba1953d23592a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811901"
 ---
 # \<baseAddressPrefixFilters>
 IIS에서 WCF (Windows Communication Foundation) 응용 프로그램을 호스팅할 때 적절 한 IIS (인터넷 정보 서비스) 바인딩을 선택 하는 메커니즘을 제공 하는 통과 필터를 지정 하는 구성 요소 컬렉션을 나타냅니다.  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters>"localhost"를 인식 하지 않습니다. 대신 정규화 된 컴퓨터 이름을 사용 하십시오.  
+> \<baseAddressPrefixFilters> "localhost"를 인식 하지 않습니다. 대신 정규화 된 컴퓨터 이름을 사용 하십시오.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -57,7 +57,7 @@ IIS에서 WCF (Windows Communication Foundation) 응용 프로그램을 호스�
   
  예를 들어 사이트에는 다음과 같은 기본 주소가 포함 될 수 있습니다.
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
@@ -82,7 +82,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 > 필터는 와일드카드를 지원하지 않습니다. 또한 IIS에서 제공하는 baseAddress는 `baseAddressPrefixFilters` 목록에 없는 다른 체계에 바인딩되는 주소를 가질 수 있습니다. 이러한 주소는 필터링되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

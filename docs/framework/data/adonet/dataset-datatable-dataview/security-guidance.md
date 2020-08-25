@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812239"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -34,7 +34,14 @@ ms.locfileid: "88608527"
 
 들어오는 XML 데이터에이 목록에 없는 형식의 개체가 포함 된 경우:
 
-* 예외가 throw됩니다.
+* 다음 메시지 및 스택 추적을 사용 하 여 예외가 throw 됩니다.  
+오류 메시지:  
+InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> '는 여기에서 사용할 수 없습니다. [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)자세한 내용은을 참조 하세요.  
+스택 추적:  
+at TypeLimiter. EnsureTypeIsAllowed (Type type, TypeLimiter capturedLimiter)  
+at UpdateColumnType (형식 형식, StorageType typeCode)  
+at System.web. set_DataType (유형 값)  
+
 * Deserialization 작업이 실패 합니다.
 
 XML `DataSet` 을 기존 또는 인스턴스로 로드할 때 `DataTable` 기존 열 정의도 고려 됩니다. 테이블에 사용자 지정 형식의 열 정의가 이미 포함 되어 있으면 해당 형식이 XML deserialization 작업 기간 동안 허용 목록에 일시적으로 추가 됩니다.
@@ -268,7 +275,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 * 관리자가 레지스트리를 구성 해야 합니다.
 * 레지스트리를 사용 하는 것은 시스템 전체에서 변경 되며 컴퓨터에서 실행 되는 _모든_ 앱에 영향을 줍니다.
 
-| Type  |  값 |
+| 형식  |  값 |
 |---|---|
 | **레지스트리 키** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **값 이름** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
