@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: Entity Framework용 SqlClient에서 알려진 문제
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: Entity Framework 데이터 공급자 작성
-      href: writing-an-ef-data-provider.md
+    - name: 개발 및 배포 고려 사항
+      href: development-and-deployment-considerations.md
       items:
-        - name: SQL 생성
-          href: sql-generation.md
-          items:
-            - name: 명령 트리의 모양
-              href: the-shape-of-the-command-trees.md
-            - name: 명령 트리에서 SQL 생성 - 최선의 방법
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: 샘플 공급자의 SQL 생성
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: 아키텍처 및 디자인
-                  href: architecture-and-design.md
-                - name: '연습: SQL 생성'
-                  href: walkthrough-sql-generation.md
-        - name: 수정 SQL 생성
-          href: modification-sql-generation.md
-        - name: 공급자 매니페스트 지정
-          href: provider-manifest-specification.md
-- name: 개발 및 배포 고려 사항
-  href: development-and-deployment-considerations.md
-  items:
-    - name: 보안 고려 사항
-      href: security-considerations.md
-    - name: 성능 고려 사항
-      href: performance-considerations.md
-    - name: 마이그레이션 고려 사항
-      href: migration-considerations.md
-    - name: 배포 고려 사항
-      href: deployment-considerations.md
+        - name: 보안 고려 사항
+          href: security-considerations.md
+        - name: 성능 고려 사항
+          href: performance-considerations.md
+        - name: 마이그레이션 고려 사항
+          href: migration-considerations.md
+        - name: 배포 고려 사항
+          href: deployment-considerations.md
 - name: Entity Framework 리소스
   href: resources.md
 - name: Entity Framework 용어
