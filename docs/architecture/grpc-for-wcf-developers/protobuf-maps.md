@@ -2,16 +2,16 @@
 title: 사전에 대 한 Protobuf 지도-WCF 개발자를 위한 gRPC
 description: Protobuf maps를 사용 하 여 .NET에서 사전 형식을 나타내는 방법을 알아봅니다.
 ms.date: 09/09/2019
-ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543133"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867467"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>사전용 Protobuf 맵
 
-메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서이는 일반적으로 사전 형식을 통해 처리 됩니다. Protobuf (프로토콜 버퍼)의 .NET <xref:System.Collections.Generic.IDictionary%602> 형식에 해당 하는 값은 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 `map` 형식을 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다.
+메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서이는 일반적으로 사전 형식을 통해 처리 됩니다. <xref:System.Collections.Generic.IDictionary%602>프로토콜 버퍼의 .net 형식 (Protobuf)에 해당 하는 값은 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 형식을 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다 `map` .
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-생성 된 코드에서 `map` 필드는 `Google.Protobuf.Collections.MapField<TKey, TValue>` 클래스를 사용 합니다. 이 클래스는 <xref:System.Collections.Generic.IDictionary%602>을 포함 하 여 표준 .NET 컬렉션 인터페이스를 구현 합니다.
+생성 된 코드에서 `map` 필드는 형식의 읽기 전용 속성으로 표시 됩니다 [`Google.Protobuf.Collections.MapField<TKey, TValue>`][map-field] . 이 형식은를 비롯 한 표준 .NET 컬렉션 인터페이스를 구현 <xref:System.Collections.Generic.IDictionary%602> 합니다.
 
-맵 필드는 메시지 정의에서 직접 반복할 수 없습니다. 그러나 다음 예제와 같이 맵을 포함 하는 중첩 된 메시지를 만들고 메시지 유형에 `repeated`를 사용할 수 있습니다.
+맵 필드는 메시지 정의에서 직접 반복할 수 없습니다. 그러나 `repeated` 다음 예제와 같이 맵을 포함 하 고 메시지 유형에 서를 사용 하는 중첩 된 메시지를 만들 수 있습니다.
 
 ```protobuf
 message Order {
@@ -34,7 +34,7 @@ message Order {
 
 ## <a name="using-mapfield-properties-in-code"></a>코드에서 MapField 속성 사용
 
-`map` 필드에서 생성 된 `MapField` 속성은 읽기 전용 이며 `null`되지 않습니다. Map 속성을 설정 하려면 empty `MapField` 속성에 `Add(IDictionary<TKey,TValue> values)` 메서드를 사용 하 여 .NET 사전의 값을 복사 합니다.
+`MapField`필드에서 생성 된 속성은 `map` 읽기 전용 이며이는 그렇지 않습니다 `null` . Map 속성을 설정 하려면 `Add(IDictionary<TKey,TValue> values)` empty 속성의 메서드를 사용 하 여 `MapField` .net 사전의 값을 복사 합니다.
 
 ```csharp
 public Order CreateOrder(Dictionary<string, string> attributes)
@@ -45,9 +45,11 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>추가 정보
+## <a name="further-reading"></a>추가 참고 자료
 
 Protobuf에 대 한 자세한 내용은 공식 [Protobuf 설명서](https://developers.google.com/protocol-buffers/docs/overview)를 참조 하세요.
+
+[map-field]: https://developers.google.cn/protocol-buffers/docs/reference/csharp/class/google/protobuf/collections/map-field-t-key-t-value-
 
 >[!div class="step-by-step"]
 >[이전](protobuf-enums.md)
