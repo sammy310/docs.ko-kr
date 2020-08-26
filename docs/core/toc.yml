@@ -368,6 +368,13 @@ items:
         href: run-time-config/networking.md
       - name: 스레딩 설정
         href: run-time-config/threading.md
+  - name: 코드 분석
+    items:
+      - name: 개요
+        href: ../fundamentals/productivity/code-analysis.md
+        displayName: 'code analysis, analyzers'
+      - name: 규칙 구성
+        href: ../fundamentals/productivity/configure-code-analysis-rules.md
   - name: 마이그레이션
     items:
       - name: .NET Core 2.0 ~ 2.1
