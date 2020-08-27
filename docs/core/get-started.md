@@ -5,18 +5,18 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416050"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656692"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
 이 문서에서는 .NET Core로 시작하는 데 필요한 정보를 제공합니다. Windows, Linux 및 macOS에서 .NET Core를 설치할 수 있습니다. 원하는 텍스트 편집기에서 코딩하고 플랫폼 간 라이브러리 및 애플리케이션을 생성할 수 있습니다.
 
-.NET Core가 무엇인지 또는 다른 .NET 기술과 어떻게 관련있는지에 대해 잘 모를 경우 [.NET이란](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) 개요로 시작하세요. 간단히 말해 .NET Core는 오픈 소스의 플랫폼 간 .NET의 구현입니다.
+.NET Core가 무엇인지 또는 다른 .NET 기술과 어떻게 연결되는지를 잘 모르겠으면 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) 개요부터 시작하세요. 간단히 말해 .NET Core는 오픈 소스의 플랫폼 간 .NET의 구현입니다.
 
 ## <a name="create-an-application"></a>애플리케이션 만들기
 
@@ -35,7 +35,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-지금까지 간단한 .NET Core 애플리케이션을 만들었습니다. 또한 [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio](./tutorials/with-visual-studio.md)(Windows만 해당) 또는 [Mac용 Visual Studio](./tutorials/using-on-mac-vs.md)(macOS만 해당)를 사용하여 .NET Core 애플리케이션을 만들 수도 있습니다.
+지금까지 간단한 .NET Core 애플리케이션을 만들었습니다. 또한 [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio](./tutorials/with-visual-studio.md)(Windows만 해당) 또는 [Mac용 Visual Studio](tutorials/with-visual-studio-mac.md)(macOS만 해당)를 사용하여 .NET Core 애플리케이션을 만들 수도 있습니다.
 
 ## <a name="tutorials"></a>자습서
 
@@ -47,7 +47,7 @@ Hello World!
 
 - [Visual Studio 2019에서 첫 번째 .NET Core 콘솔 애플리케이션 만들기](./tutorials/with-visual-studio.md)
 - [Visual Studio에서 .NET Standard를 사용하여 클래스 라이브러리 빌드](./tutorials/library-with-visual-studio.md)
-- [.NET Core CLI를 사용하여 .NET Core 시작하기](./tutorials/cli-create-console-app.md)
+- [자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 앱 만들기](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -60,7 +60,7 @@ Hello World!
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작합니다.
 
-- [명령줄을 사용하여 .NET Core 시작](./tutorials/cli-create-console-app.md)
+- [자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 앱 만들기](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -72,9 +72,8 @@ Hello World!
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작합니다.
 
-- [Visual Studio Code를 사용하여 macOS에서 .NET Core 시작](./tutorials/using-on-macos.md)
-- [명령줄을 사용하여 .NET Core 시작](./tutorials/cli-create-console-app.md)
-- [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](./tutorials/using-on-mac-vs.md)
+- [자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](tutorials/with-visual-studio-code.md)
+- [자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](tutorials/with-visual-studio-mac.md)
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Standard 라이브러리 빌드](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281513"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608210"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -54,7 +54,7 @@ Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standar
 
 ### <a name="default-executables"></a>기본 실행 파일
 
-이제 .NET Core에서 기본적으로 [런타임 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)을 빌드합니다. 이는 전역적으로 설치된 .NET Core 버전을 사용하는 애플리케이션을 위한 새로운 동작입니다. 지금까지는 [자체 포함 배포](../deploying/index.md#publish-self-contained)만 실행 파일을 생성했습니다.
+이제 .NET Core에서 기본적으로 [프레임워크 종속 실행 파일](../deploying/index.md#publish-framework-dependent)을 빌드합니다. 이는 전역적으로 설치된 .NET Core 버전을 사용하는 애플리케이션을 위한 새로운 동작입니다. 지금까지는 [자체 포함 배포](../deploying/index.md#publish-self-contained)만 실행 파일을 생성했습니다.
 
 `dotnet build` 또는 `dotnet publish` 중에 사용 중인 SDK의 환경 및 플랫폼과 일치하는 실행 파일(**appHost**)이 생성됩니다. 다른 네이티브 실행 파일과 마찬가지로 이러한 실행 파일에서도 다음과 같은 동일한 기능을 예상할 수 있습니다.
 
@@ -69,7 +69,7 @@ Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standar
 
 appHost 설정이 사용하도록 설정된 경우, 빌드 또는 게시할 때 .NET Core가 네이티브 Mach-O 실행 파일을 생성합니다. 앱을 `dotnet run` 명령을 사용하여 소스 코드에서 실행하거나 Mach-O 실행 파일을 직접 시작하면 앱이 appHost 컨텍스트에서 실행됩니다.
 
-사용자가 appHost 없이 [런타임 종속](../deploying/index.md#publish-runtime-dependent) 앱을 시작할 유일할 방법은 `dotnet <filename.dll>` 명령을 사용하는 것입니다. appHost는 앱을 [자체 포함](../deploying/index.md#publish-self-contained) 방식으로 게시하면 항상 만들어집니다.
+사용자가 appHost 없이 [프레임워크 종속](../deploying/index.md#publish-framework-dependent) 앱을 시작할 수 있는 유일한 방법은 `dotnet <filename.dll>` 명령을 사용하는 것입니다. appHost는 앱을 [자체 포함](../deploying/index.md#publish-self-contained) 방식으로 게시하면 항상 만들어집니다.
 
 appHost는 다음과 같이 프로젝트 수준에서 구성하거나 `-p:UseAppHost` 매개 변수를 사용하여 특정 `dotnet` 명령에 대해 켜거나 끌 수 있습니다.
 

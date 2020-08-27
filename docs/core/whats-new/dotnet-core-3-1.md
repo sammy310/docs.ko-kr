@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2373b21e92c6ca68aac33684a9bd0912a2e642b3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324274"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608123"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
@@ -45,7 +45,7 @@ Visual Studio 2019를 사용하는 경우 .NET Core 3.1 프로젝트와 함께 �
 
 appHost 설정이 사용하도록 설정된 경우, 빌드 또는 게시할 때 .NET Core가 네이티브 Mach-O 실행 파일을 생성합니다. 앱을 `dotnet run` 명령을 사용하여 소스 코드에서 실행하거나 Mach-O 실행 파일을 직접 시작하면 앱이 appHost 컨텍스트에서 실행됩니다.
 
-사용자가 appHost 없이 [런타임 종속](../deploying/index.md#publish-runtime-dependent) 앱을 시작할 유일할 방법은 `dotnet <filename.dll>` 명령을 사용하는 것입니다. appHost는 앱을 [자체 포함](../deploying/index.md#publish-self-contained) 방식으로 게시하면 항상 만들어집니다.
+사용자가 appHost 없이 [프레임워크 종속](../deploying/index.md#publish-framework-dependent) 앱을 시작할 수 있는 유일한 방법은 `dotnet <filename.dll>` 명령을 사용하는 것입니다. appHost는 앱을 [자체 포함](../deploying/index.md#publish-self-contained) 방식으로 게시하면 항상 만들어집니다.
 
 appHost는 다음과 같이 프로젝트 수준에서 구성하거나 `-p:UseAppHost` 매개 변수를 사용하여 특정 `dotnet` 명령에 대해 켜거나 끌 수 있습니다.
 

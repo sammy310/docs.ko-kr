@@ -1,7 +1,6 @@
 ---
 title: .NET Framework 시스템 요구 사항
 description: .NET Framework 4.5 이상 버전을 설치하기 위한 하드웨어, 운영 체제 및 소프트웨어 요구 사항을 확인하세요.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389484"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557336"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
@@ -54,6 +53,8 @@ ms.locfileid: "81389484"
 
 | 운영 체제 | 지원되는 버전 | OS가 사전 설치됨 | 별도로 설치 가능 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10 2020년 5월 업데이트<br/> (버전 2004) | 32비트 및 64비트 | .NET Framework 4.8 | -- |
+| Windows 10 2019년 11월 업데이트<br/> (버전 1909) | 32비트 및 64비트 | .NET Framework 4.8 | -- |
 | Windows 10 2019년 5월 업데이트<br/> (버전 1903) | 32비트 및 64비트 | .NET Framework 4.8 | -- |
 | Windows 10 2018년 10월 업데이트<br/> (버전 1809) | 32비트 및 64비트 | .NET Framework 4.7.2 | .NET Framework 4.8 |
 | Windows 10 2018년 4월 업데이트<br/> (버전 1803) | 32비트 및 64비트 | .NET Framework 4.7.2 |.NET Framework 4.8|

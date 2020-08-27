@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/27/2020
-ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
-ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
+ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88137480"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720205"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,10 @@ ms.locfileid: "88137480"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [참조 어셈블리의 매개 변수 이름 변경됨](#parameter-names-changed-in-reference-assemblies) | 5.0 |
+| [Unix에서 비ASCII 문자를 포함하는 URI 경로가 올바르게 구문 분석됨](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
+| [Unix에서 UNC 경로의 URI 인식](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
+| [Environment.OSVersion에서 올바른 운영 체제 버전이 반환됨](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
 | [LINQ OrderBy.First{OrDefault}의 복잡성이 증가함](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr 및 UIntPtr에서 IFormattable 구현](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionAttribute는 오류로 인해 사용되지 않습니다.](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
@@ -46,6 +50,22 @@ ms.locfileid: "88137480"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
+
+***
+
+[!INCLUDE [non-ascii-chars-in-uri-parsed-correctly](../../../includes/core-changes/corefx/5.0/non-ascii-chars-in-uri-parsed-correctly.md)]
+
+***
+
+[!INCLUDE [unc-path-recognition-unix](../../../includes/core-changes/corefx/5.0/unc-path-recognition-unix.md)]
+
+***
+
+[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
+
+***
 
 [!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d85fb8df7afdc5f4c3faecebcd24d11677798bc9
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: a635e2ed6a735b5234c92fd8f5ffa1685fe9373e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365619"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558184"
 ---
 ### <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
 
@@ -39,7 +39,7 @@ ms.locfileid: "85365619"
   | `RuntimeEnvironment.OperatingSystemVersion` | <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> 및 <xref:System.Environment.OSVersion?displayProperty=nameWithType> |
 
   > [!NOTE]
-  > `RuntimeEnvironment.OperatingSystem` 및 `RuntimeEnvironment.OperatingSystemVersion`의 사용 사례 대부분은 표시(예: 사용자, 로깅 및 원격 분석에 표시)가 그 목적입니다. OS(운영 체제) 버전에 따라 런타임 결정을 내리는 것은 권장되지 않습니다. <xref:System.Environment.OSVersion?displayProperty=nameWithType>은 이제 Windows 및 macOS 운영 체제를 위한 올바른 버전을 반환합니다. 그러나 대부분의 Unix 배포에서는 무엇을 “OS 버전”으로 간주할지가 간단하지 않습니다. 예를 들어 Linux 커널 버전이거나 배포판 버전이 될 수 있습니다. 대부분의 Unix 플랫폼에서 <xref:System.Environment.OSVersion?displayProperty=nameWithType> 및 <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType>는 `uname`에서 반환된 버전을 반환합니다. Linux 배포판 이름 및 버전 정보를 가져오려면 */etc/os-release* 파일을 읽는 것이 좋습니다.
+  > `RuntimeEnvironment.OperatingSystem` 및 `RuntimeEnvironment.OperatingSystemVersion`의 사용 사례 대부분은 표시(예: 사용자, 로깅 및 원격 분석에 표시)가 그 목적입니다. OS(운영 체제) 버전에 따라 런타임 결정을 내리는 것은 권장되지 않습니다. <xref:System.Environment.OSVersion?displayProperty=nameWithType>에서 이제 Windows 및 macOS 운영 체제의 [올바른 버전이 반환](../../../../docs/core/compatibility/corefx.md#environmentosversion-returns-the-correct-operating-system-version)됩니다. 그러나 대부분의 Unix 배포에서는 무엇을 “OS 버전”으로 간주할지가 간단하지 않습니다. 예를 들어 Linux 커널 버전이거나 배포판 버전이 될 수 있습니다. 대부분의 Unix 플랫폼에서 <xref:System.Environment.OSVersion?displayProperty=nameWithType> 및 <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType>는 `uname`에서 반환된 버전을 반환합니다. Linux 배포판 이름 및 버전 정보를 가져오려면 */etc/os-release* 파일을 읽는 것이 좋습니다.
 
 #### <a name="category"></a>범주
 

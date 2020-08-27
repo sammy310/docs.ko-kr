@@ -2,12 +2,12 @@
 title: 런타임 패키지 저장소
 description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사용되는 매니페스트를 대상으로 지정하는 방법을 알아봅니다.
 ms.date: 08/12/2017
-ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: e9e27ef535dbd9e7197c323f7e49a9960aeff0f9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158294"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608361"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 
@@ -114,7 +114,7 @@ dotnet publish --manifest manifest.xml
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>프로젝트 파일에서 대상 매니페스트 지정
 
-[`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 대상 매니페스트를 지정하는 대신, 프로젝트 파일에서 **\<TargetManifestFiles>** 태그 아래에 세미콜론으로 구분된 경로 목록으로 대상 매니페스트를 지정할 수 있습니다.
+[`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 대상 매니페스트를 지정하는 대신, 프로젝트 파일의 **\<TargetManifestFiles>** 태그 아래에 세미콜론으로 구분된 경로 목록으로 대상 매니페스트를 지정할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -128,11 +128,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암시적 저장소를 사용하지 **않는** ASP.NET Core 2.1 이상을 사용하는 애플리케이션을 강력히 권장합니다. ASP.NET Core 2.1 이상에서는 공유 프레임워크를 사용합니다.
 
-.NET Core 2.0의 경우 런타임 패키지 저장소 기능은 앱이 [런타임 종속 배포](index.md#publish-runtime-dependent) 앱으로 배포될 때 ASP.NET Core 앱에서 암시적으로 사용됩니다. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)의 대상에는 대상 시스템의 암시적 패키지 저장소를 참조하는 매니페스트가 포함됩니다. 또한 `Microsoft.AspNetCore.All` 패키지를 사용하는 런타임 종속 앱은 앱과 자산만 포함되고 `Microsoft.AspNetCore.All` 메타패키지에 나열된 패키지가 포함되지 않은 게시된 앱이 됩니다. 해당 패키지는 대상 시스템에 있는 것으로 가정합니다.
+.NET Core 2.0에서는 앱이 [프레임워크 종속 배포](index.md#publish-framework-dependent) 앱으로 배포된 경우 ASP.NET Core 앱에서 암시적으로 런타임 패키지 저장소 기능을 사용합니다. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)의 대상에는 대상 시스템의 암시적 패키지 저장소를 참조하는 매니페스트가 포함됩니다. 또한 `Microsoft.AspNetCore.All` 패키지를 사용하는 모든 프레임워크 종속 앱은 앱과 해당 자산만 포함하고 `Microsoft.AspNetCore.All` 메타패키지에 나열된 패키지를 포함하지 않는 게시된 앱이 됩니다. 해당 패키지는 대상 시스템에 있는 것으로 가정합니다.
 
 런타임 패키지 저장소는 .NET Core SDK가 설치될 때 호스트에 설치됩니다. 다른 설치 관리자에서는 .NET Core SDK, `apt-get`, Red Hat Yum, .NET Core Windows Server 호스팅 번들의 Zip/tarball 설치와 수동 런타임 패키지 저장소 설치를 포함한 런타임 패키지 저장소를 제공할 수 있습니다.
 
-[런타임 종속 배포](index.md#publish-runtime-dependent) 앱을 배포할 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포할 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>** 를 `false`로 지정하여 암시적 저장소를 옵트아웃(opt out)할 수 있습니다.
+[프레임워크 종속 배포](index.md#publish-framework-dependent) 앱을 배포하는 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포하는 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>** 를 `false`로 지정하여 암시적 저장소를 옵트아웃할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,7 @@ ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암�
 ```
 
 > [!NOTE]
-> [자체 포함 배포](index.md#publish-self-contained) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 자체 포함 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>** 는 `true`로 설정될 수 없습니다.
+> [자체 포함 배포](index.md#publish-self-contained) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 자체 포함 앱에 대해서는 **\<PublishWithAspNetCoreTargetManifest>** 를 `true`로 설정할 수 없습니다.
 
 ## <a name="see-also"></a>참조
 

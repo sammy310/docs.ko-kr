@@ -2,12 +2,12 @@
 title: 네트워킹 관련 호환성이 손상되는 변경
 description: .NET Core의 네트워킹에 호환성이 손상되는 변경을 나열합니다.
 ms.date: 05/05/2020
-ms.openlocfilehash: 07e0b2e062ce244cd6312bbe08bcc63db4c74347
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 568d26bde43ccd6e19fbe2d947f576ef5f99450a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859633"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608481"
 ---
 # <a name="networking-breaking-changes"></a>네트워킹 관련 호환성이 손상되는 변경
 
@@ -15,8 +15,20 @@ ms.locfileid: "82859633"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | - |
+| [.NET 런타임에서 WinHttpHandler 제거됨](#winhttphandler-removed-from-net-runtime) | 5.0 |
+| [MulticastOption.Group에서 null 값을 허용하지 않음](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
 | [HttpRequestMessage.Version의 기본값은 1.1로 변경되었습니다.](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
 | [WebClient.CancelAsync가 항상 즉시 취소되지는 않음](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [winhttphandler-removed-from-runtime](../../../includes/core-changes/networking/5.0/winhttphandler-removed-from-runtime.md)]
+
+***
+
+[!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

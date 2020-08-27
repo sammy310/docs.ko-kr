@@ -2,17 +2,16 @@
 title: 차단된 .NET Framework 설치 및 제거 문제 해결
 description: .NET Framework를 설치하지 못하게 하는 문제를 해결합니다. 문제 해결에 대한 정보는 상태 메시지를 참조하세요.
 ms.date: 04/18/2019
-ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: e6f5dbce6bd10ae68b2033a135660d1e31aceff9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506959"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558454"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>차단된 .NET Framework 설치 및 제거 문제 해결
 
@@ -36,7 +35,7 @@ Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독�
 |이 패키지를 사용하여 .NET Framework 4.5.x/4.6.x/4.7.x/4.8을 제거할 수 없습니다. 컴퓨터에서 .NET Framework 4.5.x/4.6.x/4.7.x/4.8을 제거하려면 **제어판**으로 이동하여 **프로그램 및 기능**, **설치된 업데이트 보기**, Microsoft Windows(KB2828152)에 대한 업데이트를 차례로 선택한 다음, **제거**를 선택합니다.|설치 패키지로는 .NET Framework의 Preview 또는 RC 릴리스를 제거할 수 없습니다.<br /><br /> 제어판에서 Preview 또는 RC 릴리스를 제거합니다.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8을 제거할 수 없습니다. 컴퓨터의 다른 애플리케이션이 이 프로그램에 종속되어 있습니다.|사용하는 애플리케이션이 특정 버전의 .NET Framework에 종속될 수 있으므로 일반적으로 컴퓨터에서 .NET Framework 버전을 제거해서는 안 됩니다. 자세한 내용은 *시작* 가이드의 [사용자용 .NET Framework](../get-started/index.md#ForUsers)를 참조하십시오.|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 재배포 가능 패키지는 이 운영 체제에 적용되지 않습니다. .NET Framework 다운로드 페이지에서 해당 운영 체제용 .NET Framework 4.5.x/4.6.x/4.7.x/4.8을 다운로드하세요.|지원되지 않는 플랫폼에 .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8을 설치하려고 했거나 지원되는 모든 운영 체제에 대한 구성 요소가 포함되지 않은 설치 패키지를 선택했을 수 있습니다. 오프라인 설치 관리자([4.5.1용](https://go.microsoft.com/fwlink/p/?LinkId=309493), [4.5.2용](https://dotnet.microsoft.com/download/dotnet-framework/net452), [4.6용](https://dotnet.microsoft.com/download/dotnet-framework/net46), [4.6.1용](https://dotnet.microsoft.com/download/dotnet-framework/net461), [4.6.2용](https://go.microsoft.com/fwlink/p/?LinkId=780604), [4.7용](https://go.microsoft.com/fwlink/p/?LinkId=825306)), [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)용, [4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)용 또는 [4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)용을 사용하여 설치를 다시 실행합니다. 자세한 내용은 지원되는 운영 체제의 [설치 가이드](guide-for-developers.md) 및 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
-|이 제품을 설치하기 전에 Kb\<*번호*>에 해당하는 업데이트를 설치해야 합니다.|.NET Framework를 설치하기 전에 KB 업데이트가 설치되어 있어야 .NET Framework를 설치할 수 있습니다. 업데이트를 설치하고 .NET Framework 설치를 다시 시작합니다.<br /><br /> 예를 들어 .NET Framework에 Windows 8.1, Windows RT 8.1 및 Windows Server 2012 R2의 업데이트된 버전 설치는 [KB 2919355](https://support.microsoft.com/kb/2919355)에 해당하는 업데이트가 설치되어 있어야 합니다.|  
+|이 제품을 설치하기 전에 KB\<*number*>에 해당하는 업데이트를 설치해야 합니다.|.NET Framework를 설치하기 전에 KB 업데이트가 설치되어 있어야 .NET Framework를 설치할 수 있습니다. 업데이트를 설치하고 .NET Framework 설치를 다시 시작합니다.<br /><br /> 예를 들어 .NET Framework에 Windows 8.1, Windows RT 8.1 및 Windows Server 2012 R2의 업데이트된 버전 설치는 [KB 2919355](https://support.microsoft.com/kb/2919355)에 해당하는 업데이트가 설치되어 있어야 합니다.|  
 |컴퓨터에서 현재 Windows Server 2008 운영 체제의 Server Core 설치를 실행하고 있습니다. .NET Framework 4.5.x를 실행하려면 이후 버전의 운영 체제가 필요합니다. Windows Server 2008 R2 SP1 이상을 설치한 후 .NET Framework 4.5.x 설치 프로그램을 다시 실행하세요.|.NET Framework 4.5.1 및 4.5.2는 Windows Server 2008 R2 SP1 이상의 Server Core 역할에서 지원됩니다. [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오.|  
 |이 컴퓨터의 모든 사용자가 사용하도록 이 작업을 완료할 수 있는 권한이 없습니다. 관리자로 로그온한 다음 **설치 프로그램**을 다시 실행하십시오.|.NET Framework를 설치하려면 컴퓨터의 관리자여야 합니다.|  
 |이전에 실행한 설치 작업을 사용하려면 컴퓨터를 다시 시작해야 하므로 설치 프로그램을 계속할 수 없습니다. 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하십시오.|설치를 완료하려면 컴퓨터를 다시 시작해야 할 수도 있습니다. 지침에 따라 컴퓨터를 다시 시작하고 설치 프로그램을 다시 실행하세요.<br /><br /> 드문 경우지만 Windows가 누락된 업데이트 횟수를 감지하고 다음 순서의 업데이트를 설치하기 위해 다시 시작하는 경우 두 번 이상 시스템을 다시 시작하라는 메시지가 나타날 수 있습니다.|  

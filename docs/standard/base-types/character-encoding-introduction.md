@@ -1,6 +1,6 @@
 ---
 title: .NET의 문자 인코딩 소개
-description: .NET에서 문자 인코딩 및 디코딩에 대해 알아봅니다.
+description: .NET의 문자 인코딩/디코딩에 대해 알아봅니다.
 ms.date: 03/09/2020
 no-loc:
 - Rune
@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599869"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656295"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
-이 문서에서는 .NET에서 사용되는 문자 인코딩 시스템에 대해 소개합니다. 이 문서에서는 <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> 및 <xref:System.Globalization.StringInfo> 형식이 유니코드, UTF-16 및 UTF-8에서 작동하는 방식에 대해 설명합니다.
+이 문서에서는 .NET에서 사용되는 문자 인코딩 시스템을 소개합니다. 이 문서에서는 <xref:System.String>, <xref:System.Char>, <xref:System.Text.Rune> 및 <xref:System.Globalization.StringInfo> 형식이 유니코드, UTF-16 및 UTF-8에서 작동하는 방식에 대해 설명합니다.
 
-여기서는 *문자*라는 용어를 *판독기가 단일 표시 요소로 인식*한다는 일반적인 의미로 사용합니다. 일반적인 예는 문자 "a", 기호 "@" 및 이모지 "🐂"입니다. [문자소 클러스터](#grapheme-clusters)에 대한 섹션에서 설명된 것처럼 한 문자가 실제로는 여러 독립적인 표시 요소로 구성되는 경우도 있습니다.
+여기서 ‘문자’라는 용어는 ‘판독기가 단일 표시 요소로 인식’한다는 일반적인 의미로 사용합니다.  일반적인 예는 문자 "a", 기호 "@" 및 이모지 "🐂"입니다. [문자소 클러스터](#grapheme-clusters) 섹션에 설명된 것처럼 한 문자처럼 보이는 것이 실제로는 독립적인 여러 표시 요소로 구성된 경우도 있습니다.
 
-## <a name="the-string-and-char-types"></a>string 및 char 형식
+## <a name="the-no-locstring-and-no-locchar-types"></a>string 및 char 형식
 
 [string](xref:System.String) 클래스의 인스턴스는 일부 텍스트를 나타냅니다. `string`은 논리적으로 16비트 값의 시퀀스이며, 각각은 [char](xref:System.Char) 구조체의 인스턴스입니다. [string.Length](xref:System.String.Length) 속성은 `string` 인스턴스의 `char` 인스턴스 수를 반환합니다.
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-각 문자는 단일 `char` 값으로 표현됩니다. 이 패턴은 대부분의 세계 언어에 적용됩니다. 예를 들어 다음은 *nǐ hǎo*로 발음되고 *Hello*를 의미하는 두 개의 중국어 문자의 출력입니다.
+각 문자는 단일 `char` 값으로 표현됩니다. 이 패턴은 대부분의 세계 언어에 적용됩니다. 예를 들어 다음은 *nǐ hǎo*로 발음되고 *Hello*를 의미하는 중국어 문자 2자의 출력입니다.
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-그러나 일부 언어와 일부 기호 및 이모지에서는 두 개의 `char` 인스턴스를 사용하여 단일 문자를 나타냅니다. 예를 들어 오세이지족 언어에서 *Osage*를 의미하는 단어의 문자와 `char` 인스턴스를 비교해 보겠습니다.
+그러나 일부 언어와 일부 기호 및 이모지에서는 `char` 인스턴스 2개를 사용하여 단일 문자를 나타냅니다. 예를 들어 오세이지족 언어에서 *Osage*를 의미하는 단어의 문자와 `char` 인스턴스를 비교해 보겠습니다.
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -85,7 +85,7 @@ s[15] = '�' ('\ud801')
 s[16] = '�' ('\udcdf')
 ```
 
-위의 예제에서 공백을 제외한 각 문자는 두 개의 `char` 인스턴스로 표현됩니다.
+위의 예제에서 공백을 제외한 각 문자는 `char` 인스턴스 2개로 표현됩니다.
 
 ox 이모지를 보여 주는 다음 예제에 표시된 것처럼 단일 유니코드 이모지도 두 개의 `char`로 표현됩니다.
 
@@ -95,9 +95,9 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-이러한 예제에서는 `char` 인스턴스의 수를 나타내는 `string.Length` 값이 표시되는 문자 수를 반드시 나타내지는 않음을 보여 줍니다. 단일 `char` 인스턴스 자체가 반드시 문자를 나타내는 것은 아닙니다.
+예제를 통해 `char` 인스턴스 수를 나타내는 `string.Length` 값과 표시되는 문자 수가 반드시 같은 것은 아님을 알 수 있습니다. 단일 `char` 인스턴스만으로 한 문자를 나타낼 수 없는 경우도 있습니다.
 
-단일 문자에 매핑되는 `char` 쌍을 *서로게이트 쌍*이라고 합니다. 그 작동 방식을 이해하려면 유니코드 및 UTF-16 인코딩을 이해해야 합니다.
+단일 문자에 매핑되는 `char` 쌍을 ‘서로게이트 쌍’이라고 합니다. 그 작동 방식을 이해하려면 유니코드 및 UTF-16 인코딩을 이해해야 합니다.
 
 ## <a name="unicode-code-points"></a>유니코드 코드 포인트
 
@@ -105,7 +105,7 @@ s[1] = '�' ('\udc02')
 
 유니코드 표준은 110만 개 이상의 [코드 포인트](https://www.unicode.org/glossary/#code_point)를 정의합니다. 코드 포인트는 0과 `U+10FFFF`(10진수 1,114,111) 사이의 정수 값입니다. 일부 코드 포인트는 문자, 기호 또는 이모지에 할당됩니다. 다른 코드 포인트는 텍스트 또는 문자가 표시되는 방식을 제어하는 작업(예: 새 줄로 이동)에 할당됩니다. 많은 코드 포인트가 아직 할당되지 않은 상태입니다.
 
-다음은 코드 포인트 할당의 몇 가지 예제와 해당 유니코드 차트에 대한 링크입니다.
+다음은 코드 포인트 할당의 몇 가지 예제와 해당 유니코드 차트의 링크입니다.
 
 |Decimal|Hex       |예제|설명|
 |------:|----------|-------|-----------|
@@ -128,7 +128,7 @@ s[1] = '�' ('\udc02')
 
 ## <a name="utf-16-code-units"></a>UTF-16 코드 단위
 
-16비트 유니코드 변환 형식([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16))은 유니코드 코드 포인트를 나타내기 위해 16비트 *코드 단위*를 사용하는 문자 인코딩 시스템입니다. .NET에서는 UTF-16을 사용하여 `string`의 텍스트를 인코딩합니다. `char` 인스턴스는 16비트 코드 단위를 나타냅니다.
+16비트 유니코드 변환 형식([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16))은 16비트 ‘코드 단위’를 사용하여 유니코드 코드 포인트를 나타내는 문자 인코딩 시스템입니다. .NET에서는 UTF-16을 사용하여 `string`의 텍스트를 인코딩합니다. `char` 인스턴스는 16비트 코드 단위를 나타냅니다.
 
 단일 16비트 코드 단위는 기본 다국어 평면 16비트 범위의 코드 포인트를 나타낼 수 있습니다. 하지만 보조 범위의 코드 포인트의 경우 두 개의 `char` 인스턴스가 필요합니다.
 
@@ -180,13 +180,13 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 ## <a name="unicode-scalar-values"></a>유니코드 스칼라 값
 
-용어 [유니코드 스칼라 값](https://www.unicode.org/glossary/#unicode_scalar_value)은 서로게이트 코드 포인트가 아닌 모든 코드 포인트를 참조합니다. 즉, 스칼라 값은 문자에 할당했거나 나중에 문자에 할당할 수 있는 임의의 코드 포인트입니다. 여기서 "문자"는 텍스트 또는 문자가 표시되는 방식을 제어하는 작업 등을 포함하여 코드 포인트에 할당할 수 있는 모든 것을 나타냅니다.
+용어 [유니코드 스칼라 값](https://www.unicode.org/glossary/#unicode_scalar_value)은 서로게이트 코드 포인트가 아닌 모든 코드 포인트를 참조합니다. 즉, 스칼라 값은 문자가 할당되었거나 나중에 문자가 할당될 수 있는 모든 코드 포인트입니다. 여기서 “문자”는 텍스트 또는 문자가 표시되는 방식을 제어하는 작업 등을 포함하여 코드 포인트에 할당될 수 있는 모든 것을 가리킵니다.
 
 다음 다이어그램에서는 스칼라 값 코드 포인트를 보여 줍니다.
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="스칼라 값":::
 
-### <a name="the-rune-type-as-a-scalar-value"></a>스칼라 값의 Rune 형식
+### <a name="the-no-locrune-type-as-a-scalar-value"></a>스칼라 값의 Rune 형식
 
 .NET Core 3.0부터 <xref:System.Text.Rune?displayProperty=fullName> 형식은 유니코드 스칼라 값을 나타냅니다. **`Rune`는 .NET Core 2.x 또는 .NET Framework 4.x에서 사용할 수 없습니다.**
 
@@ -202,7 +202,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="rune-usage-example-changing-letter-case"></a>Rune 사용 예제: 문자 대/소문자 변경
+### <a name="no-locrune-usage-example-changing-letter-case"></a>Rune 사용 예제: 문자 대/소문자 변경
 
 `char`를 사용하고 스칼라 값 코드 포인트에서 작동하는 것으로 가정하는 API는 `char`가 서로게이트 쌍의 일부인 경우 올바르게 작동하지 않습니다. 예를 들어 string의 각 char에서 <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType>를 호출하는 다음 메서드를 살펴보겠습니다.
 
@@ -217,7 +217,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-rune-apis"></a>기타 Rune API
+### <a name="other-no-locrune-apis"></a>기타 Rune API
 
 `Rune` 형식은 다수의 `char` API의 아날로그를 제공합니다. 예를 들어 다음 메서드는 `char` 형식에 대한 정적 API를 미러링합니다.
 
@@ -236,9 +236,9 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 ## <a name="grapheme-clusters"></a>문자소 클러스터
 
-한 문자는 여러 코드 포인트가 조합되어 표시될 수 있으므로 "문자" 대신 자주 사용되는 보다 설명적인 용어가 [문자소 클러스터](https://www.unicode.org/glossary/#grapheme_cluster)입니다. .NET에서 해당 용어는 [텍스트 요소](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A)입니다.
+한 문자처럼 보이는 것이 여러 코드 포인트가 조합된 결과일 수 있으므로 “문자” 대신 자주 사용되는 보다 서술적인 용어가 [문자소 클러스터](https://www.unicode.org/glossary/#grapheme_cluster)입니다. .NET에서 해당 용어는 [텍스트 요소](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A)입니다.
 
-`string` 인스턴스 "a", "á", "á" 및 "`👩🏽‍🚒`"를 살펴보겠습니다. 운영 체제가 유니코드 표준에 지정된 대로 이들 항목을 처리하는 경우 각 `string` 인스턴스는 단일 텍스트 요소나 문자소 클러스터로 나타납니다. 하지만 마지막 두 개는 둘 이상의 스칼라 값 코드 포인트로 표현됩니다.
+`string` 인스턴스 “a”, “á”, “á”, “`👩🏽‍🚒`” 등을 살펴보겠습니다, 운영 체제가 유니코드 표준에 지정된 대로 이들 항목을 처리하는 경우 각 `string` 인스턴스는 단일 텍스트 요소나 문자소 클러스터로 나타납니다. 하지만 마지막 두 개는 둘 이상의 스칼라 값 코드 포인트로 표현됩니다.
 
 * string "a"는 하나의 스칼라 값으로 표현되고 하나의 `char` 인스턴스를 포함합니다.
 
@@ -260,11 +260,11 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
   * `U+200D ZERO WIDTH JOINER`
   * `U+1F692 FIRE ENGINE`(보조 범위, 서로게이트 쌍 필요)
 
-위의 예제 중 일부(예: 결합 악센트 한정자 또는 스킨 톤 한정자)에서는 코드 포인트가 화면에 독립 실행형 요소로 표시되지 않습니다. 대신, 텍스트 요소의 모양을 수정하는 데 사용됩니다. 이러한 예제에서는 단일 "문자" 또는 "문자소 클러스터"로 생각하는 것을 구성하기 위해 여러 스칼라 값이 필요할 수 있음을 보여 줍니다.
+위의 예제 중 일부(예: 결합 악센트 한정자 또는 스킨 톤 한정자)에서는 코드 포인트가 화면에 독립 실행형 요소로 표시되지 않습니다. 대신, 텍스트 요소의 모양을 수정하는 데 사용됩니다. 예제를 통해 단일 “문자” 또는 “문자소 클러스터”로 간주되는 것을 구성하기 위해 여러 스칼라 값이 필요할 수 있음을 알 수 있습니다.
 
 `string`의 문자소 클러스터를 열거하려면 다음 예제와 같이 <xref:System.Globalization.StringInfo> 클래스를 사용합니다. Swift에 대해 잘 알고 있는 경우 .NET `StringInfo` 형식은 개념적으로 [Swift의 `character` 형식](https://developer.apple.com/documentation/swift/character)과 비슷합니다.
 
-### <a name="example-count-char-rune-and-text-element-instances"></a>예: count char, Rune 및 텍스트 요소 인스턴스
+### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>예: count char, Rune 및 텍스트 요소 인스턴스
 
 .NET API에서는 문자소 클러스터를 *텍스트 요소*라고 합니다. 다음 메서드는 `string`에서 `char`, `Rune` 및 텍스트 요소 인스턴스 간의 차이점을 보여 줍니다.
 
@@ -274,9 +274,9 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 .NET Framework 또는 .NET Core 3.1 이전 버전에서 이 코드를 실행하는 경우 이모지의 텍스트 요소 수에 `4`가 표시됩니다. 이는 .NET 5에서 수정된 `StringInfo` 클래스의 버그로 인한 것입니다.
 
-### <a name="example-splitting-string-instances"></a>예: string 인스턴스 분할
+### <a name="example-splitting-no-locstring-instances"></a>예: string 인스턴스 분할
 
-`string` 인스턴스를 분할하는 경우 서로게이트 쌍 및 문자소 클러스터를 분할하지 마세요. 다음의 잘못된 코드 예제를 살펴보겠습니다. 이 코드는 string에서 10자마다 줄 바꿈을 삽입하려고 한 것입니다.
+`string` 인스턴스를 분할하는 경우 서로게이트 쌍 및 문자소 클러스터를 분할하지 마세요. 다음은 string에 10자마다 줄 바꿈을 삽입하려는 코드의 잘못된 예입니다.
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
 

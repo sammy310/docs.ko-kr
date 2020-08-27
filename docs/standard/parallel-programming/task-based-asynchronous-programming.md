@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446381"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720165"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 
@@ -159,7 +159,7 @@ Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFramewor
 
 ## <a name="creating-child-tasks"></a>자식 작업 만들기
 
-작업에서 실행되는 사용자 코드를 통해 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용해서 작업을 만들 경우, 새 작업은 부모 작업의 ‘연결된 자식 작업’으로 알려집니다. <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여 줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.
+작업에서 실행되는 사용자 코드에 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하여 작업을 만드는 경우 새 작업을 부모 작업의 ‘연결된 자식 작업’이라고 합니다. <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하면 부모 작업은 암시적으로 모든 연결된 자식 작업이 완료될 때까지 대기하게 되므로 이 옵션을 사용하여 구조적 작업 병렬 처리를 표현할 수 있습니다. 다음 예제에서는 10개의 연결된 자식 작업을 만드는 부모 작업을 보여 줍니다. 예제는 부모 작업이 완료되기를 기다리도록 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하지만 첨부된 자식 작업이 완료되기를 명시적으로 기다릴 필요가 없습니다.
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

@@ -4,12 +4,12 @@ description: 종속성을 찾기 위한 .NET Core의 System.Runtime.Loader.Assem
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 13ce4c7de5f6ce1b76b2e61db810c0f19717540f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859517"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608418"
 ---
 # <a name="default-probing"></a>기본 검색
 
@@ -31,16 +31,18 @@ ms.locfileid: "82859517"
 
 ### <a name="how-are-the-properties-populated"></a>속성이 채워지는 방법
 
-*\<myapp>.deps.json* 파일의 존재 여부에 따라 속성을 채우는 두 가지 주요 시나리오가 있습니다.
+*\<myapp>.deps.json* 파일이 있는지 여부에 따라 속성을 채우는 두 가지 주요 시나리오가 있습니다.
 
 - *\*.deps.json* 파일이 있으면 검색 속성을 채우도록 구문 분석됩니다.
 - *\*.deps.json* 파일이 없으면 애플리케이션의 디렉터리에 모든 종속성이 포함된 것으로 가정합니다. 디렉터리의 콘텐츠는 검색 속성을 채우는 데 사용됩니다.
 
 또한 참조된 프레임워크의 *\*.deps.json* 파일도 유사하게 구문 분석됩니다.
 
-마지막으로 `ADDITIONAL_DEPS` 환경 변수를 사용하여 추가 종속성을 추가할 수 있습니다.
+마지막으로 `ADDITIONAL_DEPS` 환경 변수를 사용하여 추가 종속성을 추가할 수 있습니다.  `dotnet.exe`에는 애플리케이션을 시작할 때 이 값을 설정하는 선택적 매개 변수 `--additional-deps`도 포함되어 있습니다.
 
 `APP_PATHS` 및 `APP_NI_PATHS` 속성은 기본적으로 채워지지 않으며 대부분의 애플리케이션에서 생략됩니다.
+
+애플리케이션에서 사용되는 모든 *\*.deps.json* 파일 목록은 `System.AppContext.GetData("APP_CONTEXT_DEPS_FILES")`를 통해 액세스할 수 있습니다.
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>관리 코드에서 검색 속성을 확인하는 방법
 

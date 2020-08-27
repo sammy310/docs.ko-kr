@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242870"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608341"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
@@ -93,6 +93,6 @@ GitHub의 dotnet/samples 리포지토리에는 완벽하게 작동하는 [COM �
 
 .NET Framework와 달리 .NET Core에서는 .NET Core 어셈블리에서 COM 형식 라이브러리(TLB)를 생성하는 기능을 지원하지 않습니다. 이 지침에서는 COM 인터페이스의 기본 선언을 위한 IDL 파일 또는 C/C++ 헤더를 수동으로 작성해야 합니다.
 
-COM 구성 요소의 [자체 포함 배포](../deploying/index.md#publish-self-contained)는 지원되지 않습니다. COM 구성 요소의 [런타임 종속 배포](../deploying/index.md#publish-runtime-dependent)만 지원됩니다.
+COM 구성 요소의 [자체 포함 배포](../deploying/index.md#publish-self-contained)는 지원되지 않습니다. COM 구성 요소의 [프레임워크 종속 배포](../deploying/index.md#publish-framework-dependent)만 지원됩니다.
 
 또한 .NET Framework와 .NET Core를 같은 프로세스에 로드하는 경우 진단 제한 사항이 있습니다. .NET Framework와 .NET Core를 동시에 디버그할 수 없으므로 기본 제한 사항은 관리형 구성 요소를 디버그하는 것입니다. 또한 두 런타임 인스턴스는 관리형 어셈블리를 공유하지 않습니다. 즉, 두 런타임 간에 실제 .NET 형식을 공유할 수 없으며 대신 모든 상호 작용을 노출된 COM 인터페이스 계약으로 제한해야 합니다.

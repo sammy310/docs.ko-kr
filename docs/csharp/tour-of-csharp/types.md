@@ -2,12 +2,12 @@
 title: 형식과 그 멤버 정의하기 - C# 둘러보기
 description: 형식은 프로그램의 기본적인 구성 요소입니다. C#에서 클래스, 구조체, 인터페이스 등을 만드는 방법을 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: 69d6f0fe1e11f287fb5e385761fc210a61929d10
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068478"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559117"
 ---
 # <a name="types-and-members"></a>형식 및 멤버
 
@@ -97,7 +97,7 @@ ms.locfileid: "88068478"
 
 ## <a name="nullable-types"></a>Nullable 유형
 
-모든 형식의 변수는 ‘null을 허용하지 않는’ 또는 ‘null 허용’으로 선언될 수 있습니다.************ null 허용 변수는 값이 없음을 나타내는 추가 `null` 값을 포함할 수 있습니다. null 허용 값 형식(구조체 또는 열거형)은 <xref:System.Nullable%601?displayProperty=nameWithType>로 표현됩니다. null을 허용하지 않는 형식과 null 참조 형식은 모두 기본 참조 형식으로 표현됩니다. 둘 사이의 구분은 컴파일러와 일부 라이브러리에서 읽어 들이는 메타데이터로 표현됩니다. 컴파일러는 null 참조가 먼저 `null`에 대해 값을 검사하지 않고 역참조될 경우 경고를 발생시킵니다. 컴파일러는 null을 허용하지 않는 참조가 `null`일 수 있는 값에 할당되는 경우에도 경고를 발생시킵니다. 다음 예제에서는 ‘null 허용 int’를 선언하고 `null`로 초기화합니다.****** 그런 다음 값을 `5`로 설정합니다. 이 예제는 ‘null 허용 문자열’과 동일한 개념을 보여 줍니다.****** 자세한 내용은 [null 허용 값 형식](../language-reference/builtin-types/nullable-value-types.md) 및 [null 허용 참조 형식](../nullable-references.md)을 참조하세요.
+모든 형식의 변수는 ‘null을 허용하지 않는’ 또는 ‘null 허용’으로 선언될 수 있습니다.************ null 허용 변수는 값이 없음을 나타내는 추가 `null` 값을 포함할 수 있습니다. null 허용 값 형식(구조체 또는 열거형)은 <xref:System.Nullable%601?displayProperty=nameWithType>로 표현됩니다. null을 허용하지 않는 형식과 null 참조 형식은 모두 기본 참조 형식으로 표현됩니다. 둘 사이의 구분은 컴파일러와 일부 라이브러리에서 읽어 들이는 메타데이터로 표현됩니다. 컴파일러는 null 참조가 먼저 `null`에 대해 값을 검사하지 않고 역참조될 경우 경고를 발생시킵니다. 컴파일러는 null을 허용하지 않는 참조에 `null`일 수 있는 값을 할당하는 경우에도 경고를 표시합니다. 다음 예제에서는 ‘null 허용 int’를 선언하고 `null`로 초기화합니다.****** 그런 다음 값을 `5`로 설정합니다. 이 예제는 ‘null 허용 문자열’과 동일한 개념을 보여 줍니다.****** 자세한 내용은 [null 허용 값 형식](../language-reference/builtin-types/nullable-value-types.md) 및 [null 허용 참조 형식](../nullable-references.md)을 참조하세요.
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareNullable":::
 

@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187975"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656667"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -123,7 +123,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   출력 디렉터리의 경로를 지정합니다.
   
-  지정하지 않으면 런타임 종속 실행 파일과 플랫폼 간 이진 파일에 대해 *[project_file_folder]./bin/[configuration]/[framework]/publish/* 로 기본 설정되고 자체 포함 실행 파일에 대해 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
+  지정하지 않으면 프레임워크 종속 실행 파일과 플랫폼 간 이진 파일에 대해 *[project_file_folder]./bin/[configuration]/[framework]/publish/* 로 기본 설정되고, 자체 포함 실행 파일에 대해 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
 
   웹 프로젝트에서 출력 폴더가 프로젝트 폴더에 있는 경우 연속 `dotnet publish` 명령에서는 중첩된 출력 폴더가 생성됩니다. 예를 들어 프로젝트 폴더가 *myproject*이고 게시 출력 폴더가 *myproject/publish*일 때 `dotnet publish`를 두 번 실행하면 두 번째 실행에서는 *.config* 및 *.json* 파일과 같은 콘텐츠 파일이 *myproject/publish/publish*에 삽입됩니다. 게시 폴더가 중첩되지 않게 하려면 프로젝트 폴더 **바로** 아래에 있지 않은 게시 폴더를 지정하거나 프로젝트에서 게시 폴더를 제외합니다. *publishoutput*이라는 게시 폴더를 제외하려면 *.csproj* 파일의 `PropertyGroup` 요소에 다음 요소를 추가합니다.
 
@@ -159,7 +159,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-p:PublishTrimmed=true`**
 
-  자체 포함 실행 파일을 게시할 때 앱의 배포 크기를 줄이기 위해 사용되지 않는 라이브러리를 트리밍합니다. 자세한 내용은 [자체 포함 배포 및 실행 파일 트리밍](../deploying/trim-self-contained.md)을 참조하세요. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+  자체 포함 실행 파일을 게시할 때 앱의 배포 크기를 줄이기 위해 사용되지 않는 라이브러리를 트리밍합니다. 자세한 내용은 [자체 포함 배포 및 실행 파일 트리밍](../deploying/trim-self-contained.md)을 참조하세요. .NET Core 3.0 SDK부터 미리 보기 기능으로 사용할 수 있습니다.
 
   이 옵션은 명령줄이 아닌 게시 프로필에서 지정하는 것이 좋습니다. 자세한 내용은 [MSBuild](#msbuild)를 참조하세요.
 
@@ -187,13 +187,13 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 ## <a name="examples"></a>예
 
-- 현재 디렉터리에 있는 프로젝트에 대해 [런타임 종속 플랫폼 간 이진 파일](../deploying/index.md#produce-a-cross-platform-binary)을 만듭니다.
+- 현재 디렉터리에 프로젝트의 [프레임워크 종속 플랫폼 간 이진 파일](../deploying/index.md#produce-a-cross-platform-binary)을 만듭니다.
 
   ```dotnetcli
   dotnet publish
   ```
 
-  .NET Core 3.0 SDK부터, 이 예제는 현재 플랫폼에 대해 [런타임 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)도 만듭니다.
+  .NET Core 3.0 SDK부터 이 예제에서 현재 플랫폼의 [프레임워크 종속 실행 파일](../deploying/index.md#publish-framework-dependent)도 만듭니다.
 
 - 현재 디렉터리에 있는 프로젝트에 대해 특정 런타임에 대한 [자체 포함 실행 파일](../deploying/index.md#publish-self-contained)을 만듭니다.
 
@@ -203,7 +203,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   RID가 프로젝트 파일 안에 있어야 합니다.
 
-- 현재 디렉터리에 있는 프로젝트에 대해 특정 플랫폼에 대한 [런타임 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)을 만듭니다.
+- 현재 디렉터리에 프로젝트의 특정 플랫폼용 [프레임워크 종속 실행 파일](../deploying/index.md#publish-framework-dependent)을 만듭니다.
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false

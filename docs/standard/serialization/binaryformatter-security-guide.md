@@ -4,12 +4,12 @@ description: 이 문서에서는 BinaryFormatter 형식에 내재된 보안 위�
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: f6a54b34bbf1e19212fe37aadb448a1722fe9ff0
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444753"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607926"
 ---
 # <a name="binaryformatter-security-guide"></a>BinaryFormatter 보안 가이드
 
@@ -87,7 +87,6 @@ __데스크톱 설치 모델에서 클라우드 우선 모델로 이동하는 �
 ## <a name="further-resources"></a>추가 리소스
 
 * [YSoSerial.Net](https://github.com/pwntester/ysoserial.net) - `BinaryFormatter`를 활용하는 앱을 공격하는 방법 연구
-* [위협 모델링](/securityengineering/sdl/threatmodeling) - 위협 모델링 앱 및 서비스에 대한 정보
 * deserialization 취약성에 대한 일반적인 배경 정보:
   * [OWASP 상위 10 - A8:2017-안전하지 않은 deserialization](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization)
   * [CWE-502: 신뢰할 수 없는 데이터의 deserialization](https://cwe.mitre.org/data/definitions/502.html)

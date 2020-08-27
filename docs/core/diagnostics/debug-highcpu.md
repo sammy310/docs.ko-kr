@@ -3,12 +3,12 @@ title: 높은 CPU 사용량 디버그 - .NET 코어
 description: .NET Core의 높은 CPU 사용량을 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: e69585d0eb6f04bf37d0c023a1956be62c2a1cf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926366"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557804"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET 코어에서 높은 CPU 사용량 디버그
 
@@ -85,7 +85,7 @@ Press p to pause, r to resume, q to quit.
 
 웹앱을 실행하면 시작 직후에 CPU가 전혀 소비되지 않고 `0%`에 보고됩니다. 경로 매개 변수로 `60000`을 사용하여 `api/diagscenario/highcpu` 경로로 이동합니다.
 
-[https://localhost:5001/api/diagscenario/highcpu/60000](https://localhost:5001/api/diagscenario/highcpu/60000)
+`https://localhost:5001/api/diagscenario/highcpu/60000`
 
 이제 [dotnet-counters](dotnet-counters.md) 명령을 다시 실행합니다. `cpu-usage`만 모니터링하려면 `System.Runtime[cpu-usage]`을 명령의 일부로 지정합니다.
 
@@ -127,7 +127,7 @@ export COMPlus_PerfMapEnabled=1
 dotnet run
 ```
 
-높은 CPU API(<https://localhost:5001/api/diagscenario/highcpu/60000>) 엔드포인트를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 프로세스 ID를 사용하여 `perf` 명령을 실행합니다.
+높은 CPU API 엔드포인트(`https://localhost:5001/api/diagscenario/highcpu/60000`)를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 프로세스 ID를 사용하여 `perf` 명령을 실행합니다.
 
 ```bash
 sudo perf record -p 2266 -g
@@ -152,7 +152,7 @@ sudo perf script | FlameGraph/stackcollapse-perf.pl | FlameGraph/flamegraph.pl >
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows에서는 [dotnet-trace](dotnet-trace.md) 도구를 프로파일러로 사용할 수 있습니다. 이전 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)을 사용하여 높은 CPU(<https://localhost:5001/api/diagscenario/highcpu/60000>) 엔드포인트를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 다음과 같이 `collect` 명령을 사용합니다.
+Windows에서는 [dotnet-trace](dotnet-trace.md) 도구를 프로파일러로 사용할 수 있습니다. 이전 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)을 사용하여 높은 CPU 엔드포인트(`https://localhost:5001/api/diagscenario/highcpu/60000`)를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 다음과 같이 `collect` 명령을 사용합니다.
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler
