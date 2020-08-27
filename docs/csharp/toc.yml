@@ -299,38 +299,25 @@
         - name: 개요
           displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: async 및 await를 사용한 비동기 프로그래밍
+        - name: 비동기 프로그래밍
+          displayName: 'async, await, asynchronous programming, task, cancellation'
           items:
             - name: 개요
               displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: 작업 비동기 프로그래밍 모델
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: '연습: Async 및 Await를 사용하여 웹에 액세스'
-              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Task.WhenAll을 사용하여 비동기 연습 확장 방법
-              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만드는 방법
-              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: 비동기 반환 형식
               href: programming-guide/concepts/async/async-return-types.md
-            - name: 비동기 프로그램의 제어 흐름
-              href: programming-guide/concepts/async/control-flow-in-async-programs.md
-            - name: 작업 취소 및 완료된 작업 처리
+            - name: 작업 취소
               items:
-                - name: 개요
-                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
-                - name: 비동기 작업 또는 작업 목록 취소
+                - name: 작업 목록 취소
                   href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: 일정 기간 이후 비동기 작업 취소
+                - name: 일정 기간 이후 작업 취소
                   href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-                - name: 비동기 작업 하나가 완료되면 남은 비동기 작업 취소
-                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
-                - name: 비동기 작업을 여러 개 시작하고 완료될 때마다 처리
-                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: 비동기 앱에서 재진입 처리
-              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
-            - name: 파일 액세스에 Async 사용
+            - name: 완료되면 비동기 작업 처리
+              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: 비동기 파일 액세스
               href: programming-guide/concepts/async/using-async-for-file-access.md
         - name: 특성
           items:
