@@ -3,7 +3,6 @@ title: Main()과 명령줄 인수 - C# 프로그래밍 가이드
 description: Main()과 명령줄 인수에 대해 알아봅니다. ‘Main’ 메서드는 실행 가능한 프로그램의 진입점입니다.
 ms.date: 08/02/2017
 f1_keywords:
-- CS5001
 - main_CSharpKeyword
 - Main
 helpviewer_keywords:
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 95ec9d3dfebe4721d4b1822939f925aa37b9e9c4
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 611b0c8818f8f800cf1cf5c0f6b2789882939b7b
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382076"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957540"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main()과 명령줄 인수(C# 프로그래밍 가이드)
 

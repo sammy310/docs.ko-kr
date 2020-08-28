@@ -1,30 +1,21 @@
 ---
-title: F# Interactive(fsi.exe) 참조
-description: F# 대화형(fsi.exe)이 어떻게 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용되는지 알아보세요.
-ms.date: 05/16/2016
+title: F# 대화형(dotnet) 참조
+description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용되는지 알아보세요.
+ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854947"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867622"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
-> [!NOTE]
-> 이 문서에서는 현재 Windows만을 위한 환경에 대해 설명합니다.
+F# 대화형(dotnet fsi)은 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용됩니다. 즉, F# Interactive는 F# 언어에 대해 REPL(읽기, 평가, 인쇄 루프)을 실행합니다.
 
-F# Interactive(fsi.exe)는 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용됩니다. 즉, F# Interactive는 F# 언어에 대해 REPL(읽기, 평가, 인쇄 루프)을 실행합니다.
-
-콘솔에서 F# Interactive를 실행하려면 fsi.exe를 실행합니다. fsi.exe는 다음 위치에서 찾을 수 있습니다.
-
-```console
-C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
-```
-
-여기서 `sku`는 `Community`, `Professional` 또는 `Enterprise`입니다.
+콘솔에서 F# 대화형을 실행하려면 `dotnet fsi`를 실행합니다. 모든 .NET SDK에서 `dotnet fsi`를 찾을 수 있습니다.
 
 사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](../../language-reference/fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
 
@@ -44,7 +35,7 @@ F# Interactive는 Visual Studio에서 실행할 때 프로젝트와 독립적으
 
 ## <a name="scripting-with-f"></a>F\#을 사용한 스크립팅
 
-스크립트는 파일 확장명 **.fsx** 또는 **.fsscript**를 사용합니다. 소스 코드를 컴파일한 다음 나중에 컴파일된 어셈블리를 실행하는 대신 **fsi.exe**를 실행하고 F# 소스 코드의 스크립트 파일 이름을 지정하면 F# Interactive가 코드를 읽어 실시간으로 실행합니다.
+스크립트는 파일 확장명 **.fsx** 또는 **.fsscript**를 사용합니다. 소스 코드를 컴파일한 다음 나중에 컴파일된 어셈블리를 실행하는 대신 **dotnet fsi**를 실행하고 F# 소스 코드의 스크립트 파일 이름을 지정하면 F# 대화형이 실시간으로 코드를 읽고 실행할 수 있습니다.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>대화형, 스크립팅 및 컴파일된 환경의 차이점
 
@@ -92,6 +83,36 @@ Command line arguments:
 file1.fsx
 test
 90
+```
+
+## <a name="package-management-in-f-interactive"></a>F# 대화형 패키지 관리
+
+[!NOTE] 패키지 관리는 .NET SDK의 모든 `5.*` 버전 뿐만 아니라 `3.1.300` 이상 버전의 .NET SDK에서 제공되는 `dotnet fsi` 버전의 미리 보기 기능으로 제공됩니다. 이 미리 보기 릴리스에서 패키지 관리를 사용하도록 설정하려면 `--langversion:preview` 인수를 사용하여 `dotnet fsi`를 실행합니다.
+
+F# 대화형에서 DLL을 참조하는 `#r` 구문은 다음 구문을 통해 nuget 패키지를 참조하는 데도 사용할 수 있습니다.
+
+```fsharp
+#r "nuget: <package name>
+```
+
+예를 들어 `FSharp.Data` 패키지를 참조하려면 다음 `#r` 참조를 사용합니다.
+
+```fsharp
+#r "nuget: FSharp.Data"
+```
+
+이 줄을 실행하면 최신 버전의 `FSharp.Data` 패키지가 nuget 캐시로 다운로드되어 현재 F# 대화형 세션에서 참조됩니다.
+
+패키지 이름 외에도 간단한 구문을 통해 특정 버전의 패키지를 참조할 수 있습니다.
+
+```fsharp
+#r "nuget: FSharp.Data, 3.3.2"
+```
+
+아니면 보다 명시적인 방식으로 다음과 같이 할 수도 있습니다.
+
+```fsharp
+#r "nuget: FSharp.Data, Version=3.3.2"
 ```
 
 ## <a name="related-articles"></a>관련 문서
