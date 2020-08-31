@@ -2,12 +2,12 @@
 title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463408"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053033"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -180,7 +180,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 - 와일드카드 사용 패턴을 사용하여 솔루션에 여러 C# 프로젝트를 추가합니다(Windows PowerShell만 해당).
 
   ```dotnetcli
-  dotnet sln todo.sln add (ls **/*.csproj)
+  dotnet sln todo.sln add (ls -r **/*.csproj)
   ```
 
 - 와일드카드 사용 패턴을 사용하여 솔루션에서 여러 C# 프로젝트를 제거합니다(Unix/Linux만 해당).
@@ -192,5 +192,5 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 - 와일드카드 사용 패턴을 사용하여 솔루션에서 여러 C# 프로젝트를 제거합니다(Windows PowerShell만 해당).
 
   ```dotnetcli
-  dotnet sln todo.sln remove (ls **/*.csproj)
+  dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```

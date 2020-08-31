@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701035"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811719"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -112,7 +112,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
    터미널 출력에 모든 테스트를 통과했음이 확인됩니다.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.
@@ -142,7 +142,7 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
    터미널 출력에 테스트 하나가 실패했음이 확인되고 실패한 테스트에 대한 오류 메시지가 제공됩니다. "Assert.IsFalse가 실패했습니다. 'Error'에 필요한 값: false, 실제: True"가 표시됩니다. 이 오류 때문에 "Error" 다음에 나오는 배열의 문자열은 테스트되지 않았습니다.
 
-   ```
+   ```output
    Starting test execution, please wait...
 
    A total of 1 test files matched the specified pattern.

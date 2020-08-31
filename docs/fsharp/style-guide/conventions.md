@@ -2,12 +2,12 @@
 title: F# 코딩 규칙
 description: 'F # 코드를 작성할 때 일반적인 지침과 관용구에 대해 알아봅니다.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 47e9183ce22689a050878cf10d7a9bcf3b929ec6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143534"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053013"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -46,7 +46,7 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>신중 하 게 적용`[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>신중 하 게 적용 `[<AutoOpen>]`
 
 `[<AutoOpen>]`생성자는 호출자에 게 제공 되는 항목의 범위를 pollute 수 있으며,이는 무엇 인지에 대 한 답은 "매직"입니다. 이것은 좋은 방법이 아닙니다. 이 규칙의 예외는 F # 핵심 라이브러리 자체 이지만 (이 사실은 약간의 논쟁 이기도 합니다.)
 
@@ -108,34 +108,19 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Compiler
-open Microsoft.FSharp.Compiler.AbstractIL
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
-open Microsoft.FSharp.Compiler.AbstractIL.IL
-open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Internal
-open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
+open FSharp.Compiler
+open FSharp.Compiler.AbstractIL
+open FSharp.Compiler.AbstractIL.Diagnostics
+open FSharp.Compiler.AbstractIL.IL
+open FSharp.Compiler.AbstractIL.ILBinaryReader
+open FSharp.Compiler.AbstractIL.Internal
+open FSharp.Compiler.AbstractIL.Internal.Library
 
-open Microsoft.FSharp.Compiler.AccessibilityLogic
-open Microsoft.FSharp.Compiler.Ast
-open Microsoft.FSharp.Compiler.CompileOps
-open Microsoft.FSharp.Compiler.CompileOptions
-open Microsoft.FSharp.Compiler.Driver
-open Microsoft.FSharp.Compiler.ErrorLogger
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
-open Microsoft.FSharp.Compiler.Lib
-open Microsoft.FSharp.Compiler.NameResolution
-open Microsoft.FSharp.Compiler.PrettyNaming
-open Microsoft.FSharp.Compiler.Parser
-open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Tast
-open Microsoft.FSharp.Compiler.Tastops
-open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.TypeChecker
-open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
+open FSharp.Compiler.AccessibilityLogic
+open FSharp.Compiler.Ast
+open FSharp.Compiler.CompileOps
+open FSharp.Compiler.CompileOptions
+open FSharp.Compiler.Driver
 
 open Internal.Utilities
 open Internal.Utilities.Collections
@@ -237,7 +222,7 @@ let handleWithdrawal amount =
 
 `failwith`및 `failwithf` 함수는 `Exception` 특정 예외가 아닌 기본 형식을 발생 시키기 때문에 일반적으로 피해 야 합니다. [예외 디자인 지침](../../standard/design-guidelines/exceptions.md)에 따라 가능 하면 더 구체적인 예외를 발생 시킬 수 있습니다.
 
-### <a name="using-exception-handling-syntax"></a>예외 처리 구문 사용
+### <a name="use-exception-handling-syntax"></a>예외 처리 구문 사용
 
 F #은 구문을 통해 예외 패턴을 지원 합니다 `try...with` .
 
@@ -365,7 +350,7 @@ MySolution.sln
 |_/API.fsproj
 ```
 
-`ImplementationLogic.fsproj`는 다음과 같은 코드를 노출할 수 있습니다.
+`ImplementationLogic.fsproj` 는 다음과 같은 코드를 노출할 수 있습니다.
 
 ```fsharp
 module Transactions =
@@ -443,18 +428,18 @@ F #에는 .NET 런타임에서 사용할 수 있는 것으로 상속 된 [Access
 
 ## <a name="performance"></a>성능
 
-### <a name="prefer-structs-for-small-data-types"></a>작은 데이터 형식에 대 한 구조체 선호
+### <a name="consider-structs-for-small-types-with-high-allocation-rates"></a>할당 속도가 높은 작은 형식의 구조체 고려
 
 구조체 (값 형식이 라고도 함)를 사용 하면 일반적으로 개체 할당을 방지 하기 때문에 일부 코드에서 성능이 더 높아질 수 있습니다. 그러나 구조체의 데이터 크기가 16 바이트를 초과 하는 경우에는 구조체의 데이터 크기가 16 바이트를 초과 하는 경우 데이터를 복사 하면 참조 형식을 사용 하는 것 보다 CPU 시간이 더 많이 소요 될 수 있습니다.
 
 구조체를 사용 해야 하는지 확인 하려면 다음 조건을 고려 합니다.
 
 - 데이터의 크기가 16 바이트이 하입니다.
-- 이러한 데이터 형식이 많은 경우 실행 중인 프로그램의 메모리에 상주 합니다.
+- 이러한 형식의 여러 인스턴스가 실행 중인 프로그램의 메모리에 상주 하는 경우가 있습니다.
 
 첫 번째 조건이 적용 되는 경우 일반적으로 구조체를 사용 해야 합니다. 둘 다 적용 되는 경우 거의 항상 구조체를 사용 해야 합니다. 이전 조건이 적용 되는 경우도 있지만 구조체를 사용 하는 것은 참조 형식을 사용 하는 것 보다 더 나 좋지 않지만 드문 경우가 있습니다. 이와 같이 변경 하는 경우를 항상 측정 하 고 가정 또는 intuition에서 작동 하지 않는 것이 중요 합니다.
 
-#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>작은 값 형식을 그룹화 할 때 구조체 튜플 선호
+#### <a name="consider-struct-tuples-when-grouping-small-value-types-with-high-allocation-rates"></a>할당 속도가 높은 작은 값 형식을 그룹화 할 때 구조체 튜플 고려
 
 다음 두 가지 함수를 고려 하세요.
 
@@ -486,7 +471,7 @@ let rec runWithStructTuple t offset times =
 
 그러나 이러한 결과는 항상 사용자 고유의 코드에 있는 경우가 아닙니다. 함수를로 표시 하 `inline` 는 경우 참조 튜플을 사용 하는 코드에서 몇 가지 추가 최적화가 발생 하거나, 할당 되는 코드는 간단히 최적화 될 수 있습니다. 성능이 염려 될 때마다 항상 결과를 측정 하 고 가정 또는 intuition에 따라 작동 하지 않아야 합니다.
 
-#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>데이터 형식이 작은 경우 구조체 레코드 선호
+#### <a name="consider-struct-records-when-the-type-is-small-and-has-high-allocation-rates"></a>형식이 작고 할당 속도가 높은 경우 구조체 레코드를 고려 합니다.
 
 앞에서 설명한 것 처럼 앞에서 설명한 규칙은 [F # 레코드 형식](../language-reference/records.md)에도 포함 되어 있습니다. 다음 데이터 형식 및 함수를 처리 하는 함수를 고려 하십시오.
 
@@ -521,7 +506,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 [BenchmarkDotNet](https://benchmarkdotnet.org/)와 같은 통계적 벤치마킹 도구를 사용 하 여 이러한 기능을 벤치 마크 하는 경우 `processStructPoint` 거의 60% 더 빠르게 실행 되 고 관리 되는 힙에서 아무것도 할당 되지 않습니다.
 
-#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>데이터 형식이 작은 경우 구별 된 공용 구조체를 사용 하는 것이 좋습니다.
+#### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>할당 속도가 높은 데이터 형식이 작은 경우 구별 된 공용 구조체를 참조 하세요.
 
 구조체 튜플 및 레코드와의 성능에 대 한 이전 관찰은 [F # 구분 된 공용 구조체](../language-reference/discriminated-unions.md)에도 포함 됩니다. 다음 코드를 살펴보세요.
 
@@ -616,11 +601,11 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table`내부 변형 기반 데이터 구조를 캡슐화 하 여 호출자가 내부 데이터 구조를 유지 하지 않도록 합니다. 클래스는 세부 정보를 호출자에 게 노출 하지 않고 변형 기반 데이터 및 루틴을 캡슐화 하는 강력한 방법입니다.
+`Closure1Table` 내부 변형 기반 데이터 구조를 캡슐화 하 여 호출자가 내부 데이터 구조를 유지 하지 않도록 합니다. 클래스는 세부 정보를 호출자에 게 노출 하지 않고 변형 기반 데이터 및 루틴을 캡슐화 하는 강력한 방법입니다.
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable`셀 참조 선호
 
-참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용할 수 있지만 권장 되지는 않습니다. 다음과 같은 예제를 참조하세요.
+참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용할 수 있지만 권장 되지는 않습니다. 다음 예제를 참조하세요.
 
 ```fsharp
 let kernels =
@@ -670,7 +655,7 @@ F #에는 개체 및 OO (개체 지향) 개념을 완벽 하 게 지원 합니�
 * 캡슐화 된 변경 가능한 데이터
 * 형식에 대 한 연산자
 * 자동 속성
-* 구현 `IDisposable` 및`IEnumerable`
+* 구현 `IDisposable` 및 `IEnumerable`
 * 형식 확장
 * 이벤트
 * 구조체
@@ -680,7 +665,7 @@ F #에는 개체 및 OO (개체 지향) 개념을 완벽 하 게 지원 합니�
 **일반적으로 이러한 기능을 사용 해야 하는 경우를 방지 합니다.**
 
 * 상속 기반 형식 계층 구조 및 구현 상속
-* Null 및`Unchecked.defaultof<_>`
+* Null 및 `Unchecked.defaultof<_>`
 
 ### <a name="prefer-composition-over-inheritance"></a>상속 보다 컴퍼지션 선호
 
@@ -740,7 +725,7 @@ type BufferSize = int
 
 이는 여러 가지 방법으로 혼동 될 수 있습니다.
 
-* `BufferSize`는 추상이 아닙니다. 단지 정수에 대 한 다른 이름입니다.
+* `BufferSize` 는 추상이 아닙니다. 단지 정수에 대 한 다른 이름입니다.
 * `BufferSize`가 공용 API에 노출 되는 경우이 두 가지 이상의 의미로 쉽게 잘못 해석 될 수 있습니다 `int` . 일반적으로 도메인 형식은 여러 특성을 가지 며와 같이 기본 형식이 아닙니다 `int` . 이 약어는 이러한 가정을 위반 합니다.
 * (대/소문자 구분)의 대/소문자 구분은 `BufferSize` 이 형식에 더 많은 데이터가 포함 되어 있음을 의미 합니다.
 * 이 별칭은 함수에 명명 된 인수를 제공 하는 것과 비교 하 여 향상 된 명확성을 제공 하지 않습니다.

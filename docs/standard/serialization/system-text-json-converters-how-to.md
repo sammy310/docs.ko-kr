@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84279765"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811069"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization(마샬링)용 사용자 지정 변환기를 작성하는 방법
 
@@ -93,7 +93,7 @@ ms.locfileid: "84279765"
 
 오류 처리 코드에서 예외를 throw해야 하는 경우에는 메시지 없이 <xref:System.Text.Json.JsonException>을 throw하는 것이 좋습니다. 이 예외 형식은 JSON에서 오류를 발생시킨 부분의 경로를 포함하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
 
-```
+```output
 Unhandled exception. System.Text.Json.JsonException:
 The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.

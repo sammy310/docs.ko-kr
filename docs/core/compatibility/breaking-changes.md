@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810900"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
 
@@ -33,6 +33,7 @@ ms.locfileid: "87916266"
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [코드 분석](code-analysis.md)
 > - [핵심 .NET 라이브러리](corefx.md)
 > - [암호화](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)

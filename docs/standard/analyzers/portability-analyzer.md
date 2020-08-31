@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: d8b5fcf8b6c3230e41585261de747edb9105aa31
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903612"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811810"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -39,7 +39,7 @@ ApiPort 콘솔 애플리케이션을 사용하여 [ApiPort 리포지토리](http
 
 검색하려면 다음 명령을 실행할 수 있습니다.
 
-```
+```console
 ApiPort.exe analyze -r DGML -f [directory or file]
 ```
 

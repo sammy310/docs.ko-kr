@@ -2,12 +2,12 @@
 title: Visual Studio Code로 .NET Standard 클래스 라이브러리 만들기
 description: Visual Studio Code를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308886"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810861"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>자습서: Visual Studio Code로 .NET Standard 라이브러리 만들기
 
@@ -42,7 +42,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    The template "Solution File" was created successfully.
    ```
 
@@ -58,7 +58,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    The template "Class library" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
@@ -75,7 +75,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
@@ -109,7 +109,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0 for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
@@ -134,7 +134,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    The template "Console Application" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
@@ -151,7 +151,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
@@ -177,7 +177,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
@@ -193,7 +193,7 @@ ms.locfileid: "86308886"
 
    터미널 출력은 다음 예제처럼 표시됩니다.
 
-   ```
+   ```output
    Press <Enter> only to exit; otherwise, enter a string and press <Enter>:
 
    A string that starts with an uppercase letter
