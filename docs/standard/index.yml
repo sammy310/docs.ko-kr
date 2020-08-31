@@ -6,12 +6,12 @@ metadata:
   description: 다양한 유형의 애플리케이션을 빌드하기 위한 오픈 소스 개발자 플랫폼인 .NET에 대해 알아보세요.
   ms.topic: landing-page
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 37908d252d6dfcef92ce642f6f7c6f7e12f551f1
+  ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135817"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89053214"
 landingContent:
 - title: .NET에 대해 자세히 알아보기
   linkLists:
@@ -141,6 +141,8 @@ landingContent:
       url: garbage-collection/fundamentals.md
     - text: Dispose 메서드 구현
       url: garbage-collection/implementing-dispose.md
+    - text: DisposeAsync 메서드 구현
+      url: garbage-collection/implementing-disposeasync.md
 - title: 병렬 프로그래밍에 대한 자세한 정보
   linkLists:
   - linkListType: overview
