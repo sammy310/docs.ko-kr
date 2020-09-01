@@ -1,24 +1,25 @@
 ---
+description: 쿼리 키워드 - C# 참조
 title: 쿼리 키워드 - C# 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0beea8634d13222aa18f14d79fdbd95a35cc832e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173525"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137138"
 ---
 # <a name="query-keywords-c-reference"></a>쿼리 키워드(C# 참조)
 
 이 섹션에는 쿼리 식에 사용되는 상황별 키워드가 포함되어 있습니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
-|절|설명|
+|절|Description|
 |------------|-----------------|
 |[from](from-clause.md)|데이터 소스와 범위 변수(반복 변수와 유사함)를 지정합니다.|
 |[where](where-clause.md)|논리적 AND 및 OR 연산자(`&&` 또는 <code>&#124;&#124;</code>)로 구분된 하나 이상의 부울 식을 기준으로 소스 요소를 필터링합니다.|
@@ -35,7 +36,7 @@ ms.locfileid: "79173525"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 |[descending](descending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 키워드](index.md)
 - [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)

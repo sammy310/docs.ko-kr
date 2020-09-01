@@ -1,4 +1,5 @@
 ---
+description: readonly 키워드 - C# 참조
 title: readonly 키워드 - C# 참조
 ms.date: 04/14/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 66a096e8831f72a2216e8ba5dd9866046504624f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1bab5af18216fcef2162179493dbbb59e3470cf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368623"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137177"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -89,7 +90,7 @@ p2.y = 66;        // Error
 - [readonly ref 및 readonly 구조체](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [readonly 구조체 멤버](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,15 +1,16 @@
 ---
+description: 액세스 가능성 수준 사용에 대한 제한 - C# 참조
 title: 액세스 가능성 수준 사용에 대한 제한 - C# 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 542e463e41c70f2e8aed5c20dc1294e296a88518
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795159"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137002"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>액세스 가능성 수준 사용에 대한 제한(C# 참조)
 
@@ -22,7 +23,7 @@ public class MyClass: BaseClass {...} // Error
 
 다음 표에는 선언된 액세스 가능성 수준에 대한 제한이 요약되어 있습니다.
 
-|컨텍스트|설명|
+|Context|설명|
 |-------------|-------------|
 |[클래스](../../programming-guide/classes-and-structs/classes.md)|클래스 형식의 직접 기본 클래스는 적어도 클래스 형식 자체 수준만큼 액세스 가능해야 합니다.|
 |[인터페이스](../../programming-guide/interfaces/index.md)|인터페이스 형식의 명시적 기본 인터페이스는 적어도 인터페이스 형식 자체 수준만큼 액세스 가능해야 합니다.|
@@ -107,13 +108,13 @@ public class A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [액세스 한정자](access-modifiers.md)
-- [접근성 도메인](accessibility-domain.md)
+- [내게 필요한 옵션 도메인](accessibility-domain.md)
 - [액세스 수준](accessibility-levels.md)
 - [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](public.md)
