@@ -1,21 +1,22 @@
 ---
+description: 상황별 키워드 - C# 참조
 title: 상황별 키워드 - C# 참조
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 1de8fbccfa9485a546689233ea8a601a8bd697a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd9bcfe2702083573cef979b40ff4d7167e8041
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713650"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128403"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 
 상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다. 다음 상황별 키워드를 이 섹션에서 소개합니다.  
   
-|키워드|설명|  
+|키워드|Description|  
 |-------------|-----------------|  
 |[add](./add.md)|클라이언트 코드가 이벤트를 구독할 때 호출되는 사용자 지정 이벤트 접근자를 정의합니다.|  
 |[async](./async.md)|수정된 메서드, 람다 식 또는 무명 메서드가 비동기임을 나타냅니다.|  
@@ -26,7 +27,7 @@ ms.locfileid: "75713650"
 |[partial](./partial-type.md)|같은 컴파일 단위 전체에서 partial 클래스, 구조체 및 인터페이스를 정의합니다.|  
 |[remove](./remove.md)|클라이언트 코드가 이벤트를 구독 취소할 때 호출되는 사용자 지정 이벤트 접근자를 정의합니다.|  
 |[set](./set.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  
-|[값](./value.md)|접근자를 설정하고 이벤트 처리기를 추가하거나 제거하는 데 사용됩니다.|  
+|[value](./value.md)|접근자를 설정하고 이벤트 처리기를 추가하거나 제거하는 데 사용됩니다.|  
 |[var](./var.md)|컴파일러가 메서드 범위에 선언된 변수의 형식을 확인하는 데 사용됩니다.|  
 |[when](when.md)|`switch` 문의 `catch` 블록 또는 `case` 레이블에 대한 필터 조건을 지정합니다.|
 |[where](./where-generic-type-constraint.md)|제네릭 선언에 제약 조건을 추가합니다. [where](./where-clause.md)를 참조하세요.|  

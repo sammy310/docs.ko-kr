@@ -3,12 +3,12 @@ title: LINQ to Entities에서 쿼리
 description: LINQ에서 프로그래밍 개체를 사용 하 여 다양 한 종류의 데이터 소스 및 형식에 대 한 데이터 작업을 수행 하기 위한 간단 하 고 일관적인 모델을 제공 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 908a4a601c075e0845ba6d1eeeaa0f4dbaa3b53d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063733"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129142"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. LINQ(Language-Integrated Query)는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. LINQ 쿼리에서는 항상 프로그래밍 개체가 사용됩니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "88063733"
  LINQ to Entities 쿼리는 쿼리 식 구문과 메서드 기반 쿼리 구문이라는 두 가지 구문으로 작성할 수 있습니다. 쿼리 식 구문은 C# 3.0과 Visual Basic 9.0에 새로 도입된 것으로서 Transact-SQL 또는 XQuery와 유사한 선언적 구문으로 작성된 일련의 절로 구성되어 있습니다. 그러나 .NET Framework CLR (공용 언어 런타임)에서는 쿼리 식 구문 자체를 읽을 수 없습니다. 따라서 컴파일 타임에 쿼리 식은 CLR에서 인식할 수 있는 메서드 호출로 변환됩니다. 이러한 메서드를 *표준 쿼리 연산자*라고 합니다. 개발자는 쿼리 구문을 사용하는 대신 메서드 구문을 사용하여 표준 쿼리 연산자를 직접 호출할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
   
 ### <a name="query-expression-syntax"></a>쿼리 식 구문  
- 쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 개발자는 Transact-SQL과 비슷한 높은 수준의 언어로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 [기본 쿼리 작업 (Visual Basic)을](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). 쿼리 식 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
+ 쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 개발자는 Transact-SQL과 비슷한 높은 수준의 언어로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 [기본 쿼리 작업 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조 하세요. 쿼리 식 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
   
 - [쿼리 식 구문 예제: 프로젝션](query-expression-syntax-examples-projection.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88063733"
   
 - [메서드 기반 쿼리 구문 예제: 관계 탐색](method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ to Entities](linq-to-entities.md)
 - [C#에서 LINQ 시작](../../../../../csharp/programming-guide/concepts/linq/index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326055"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129130"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중에서 선택
 
@@ -43,6 +43,28 @@ ms.locfileid: "85326055"
 
 > [!NOTE]
 > <xref:System.TimeZone>해당 기능이 클래스에 거의 완전히 통합 되었기 때문에이 항목에서는 설명 하지 않습니다 <xref:System.TimeZoneInfo> . 가능한 경우 <xref:System.TimeZoneInfo> 클래스 대신 클래스를 사용 <xref:System.TimeZone> 합니다.
+
+## <a name="the-datetimeoffset-structure"></a>DateTimeOffset 구조체
+
+<xref:System.DateTimeOffset> 구조체는 날짜 및 시간 값과 해당 값이 UTC와 다른 정도를 나타내는 오프셋을 나타냅니다. 따라서 값이 항상 단일 시점을 명확하게 식별합니다.
+
+<xref:System.DateTimeOffset> 형식에는 <xref:System.DateTime> 형식의 모든 기능과 표준 시간대 인식 기능이 포함됩니다. 이렇게 하면 다음을 수행 하는 응용 프로그램에 적합 합니다.
+
+- 단일 시점을 고유하고 명확하게 식별합니다. <xref:System.DateTimeOffset> 형식을 통해 “now"의 의미를 명확하게 정의하고, 트랜잭션 시간을 기록하고, 시스템 또는 애플리케이션 이벤트의 시간을 기록하고, 파일을 만든 시간과 수정 시간을 기록할 수 있습니다.
+
+- 일반적인 날짜 및 시간 산술 연산을 수행합니다.
+
+- 시간이 두 개의 개별 값으로 저장되거나 한 구조체의 두 멤버로 저장된 경우 관련된 여러 시간을 보존합니다.
+
+> [!NOTE]
+> <xref:System.DateTimeOffset> 값의 사용은 <xref:System.DateTime> 값의 사용보다 훨씬 더 일반적입니다. 따라서 <xref:System.DateTimeOffset> 응용 프로그램 개발에 대 한 기본 날짜 및 시간 형식으로 간주 합니다.
+
+<xref:System.DateTimeOffset>값은 특정 표준 시간대에 연결 되지 않지만 다양 한 표준 시간대에서 발생할 수 있습니다. 다음 예제에서는 여러 <xref:System.DateTimeOffset> 값 (현지 태평양 표준시 포함)이 속할 수 있는 표준 시간대를 나열 합니다.
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+출력은 이 예제의 각 날짜 및 시간 값이 세 개 이상의 표준 시간대에 속할 수 있음을 보여 줍니다. <xref:System.DateTimeOffset>6/10/2007 값은 날짜 및 시간 값이 일광 절약 시간제를 나타내는 경우 utc에서의 오프셋이 시작 표준 시간대의 기본 UTC 오프셋 이나 표시 이름에 있는 UTC의 오프셋에 반드시 일치 하지 않는 것을 보여 줍니다. 단일 값은 <xref:System.DateTimeOffset> 해당 표준 시간대와 긴밀 하 게 연결 되어 있지 않으므로 표준 시간대의 일광 절약 시간제 전환을 반영할 수 없습니다. 이는 날짜 및 시간 산술 연산을 사용 하 여 값을 조작 하는 경우에 문제가 될 수 있습니다 <xref:System.DateTimeOffset> . 표준 시간대의 조정 규칙을 고려 하는 방식으로 날짜 및 시간 산술 연산을 수행 하는 방법에 대 한 자세한 내용은 [날짜 및 시간으로 산술 연산 수행](performing-arithmetic-operations.md)을 참조 하세요.
 
 ## <a name="the-datetime-structure"></a>DateTime 구조체
 
@@ -68,28 +90,6 @@ ms.locfileid: "85326055"
 
 > [!IMPORTANT]
 > <xref:System.DateTime> 데이터를 저장하거나 공유하는 경우 UTC를 사용해야 하며 <xref:System.DateTime> 값의 <xref:System.DateTime.Kind%2A> 속성을 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>로 설정해야 합니다.
-
-## <a name="the-datetimeoffset-structure"></a>DateTimeOffset 구조체
-
-<xref:System.DateTimeOffset> 구조체는 날짜 및 시간 값과 해당 값이 UTC와 다른 정도를 나타내는 오프셋을 나타냅니다. 따라서 값이 항상 단일 시점을 명확하게 식별합니다.
-
-<xref:System.DateTimeOffset> 형식에는 <xref:System.DateTime> 형식의 모든 기능과 표준 시간대 인식 기능이 포함됩니다. 이렇게 하면 다음을 수행 하는 응용 프로그램에 적합 합니다.
-
-- 단일 시점을 고유하고 명확하게 식별합니다. <xref:System.DateTimeOffset> 형식을 통해 “now"의 의미를 명확하게 정의하고, 트랜잭션 시간을 기록하고, 시스템 또는 애플리케이션 이벤트의 시간을 기록하고, 파일을 만든 시간과 수정 시간을 기록할 수 있습니다.
-
-- 일반적인 날짜 및 시간 산술 연산을 수행합니다.
-
-- 시간이 두 개의 개별 값으로 저장되거나 한 구조체의 두 멤버로 저장된 경우 관련된 여러 시간을 보존합니다.
-
-> [!NOTE]
-> <xref:System.DateTimeOffset> 값의 사용은 <xref:System.DateTime> 값의 사용보다 훨씬 더 일반적입니다. 따라서 <xref:System.DateTimeOffset> 응용 프로그램 개발에 대 한 기본 날짜 및 시간 형식으로 간주 합니다.
-
-<xref:System.DateTimeOffset>값은 특정 표준 시간대에 연결 되지 않지만 다양 한 표준 시간대에서 발생할 수 있습니다. 다음 예제에서는 여러 <xref:System.DateTimeOffset> 값 (현지 태평양 표준시 포함)이 속할 수 있는 표준 시간대를 나열 합니다.
-
-[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
-
-출력은 이 예제의 각 날짜 및 시간 값이 세 개 이상의 표준 시간대에 속할 수 있음을 보여 줍니다. <xref:System.DateTimeOffset>6/10/2007 값은 날짜 및 시간 값이 일광 절약 시간제를 나타내는 경우 utc에서의 오프셋이 시작 표준 시간대의 기본 UTC 오프셋 이나 표시 이름에 있는 UTC의 오프셋에 반드시 일치 하지 않는 것을 보여 줍니다. 단일 값은 <xref:System.DateTimeOffset> 해당 표준 시간대와 긴밀 하 게 연결 되어 있지 않으므로 표준 시간대의 일광 절약 시간제 전환을 반영할 수 없습니다. 이는 날짜 및 시간 산술 연산을 사용 하 여 값을 조작 하는 경우에 문제가 될 수 있습니다 <xref:System.DateTimeOffset> . 표준 시간대의 조정 규칙을 고려 하는 방식으로 날짜 및 시간 산술 연산을 수행 하는 방법에 대 한 자세한 내용은 [날짜 및 시간으로 산술 연산 수행](performing-arithmetic-operations.md)을 참조 하세요.
 
 ## <a name="the-timespan-structure"></a>TimeSpan 구조체
 

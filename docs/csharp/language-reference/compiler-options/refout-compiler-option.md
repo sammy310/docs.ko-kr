@@ -1,4 +1,5 @@
 ---
+description: -refout(C# 컴파일러 옵션)
 title: -refout(C# 컴파일러 옵션)
 ms.date: 08/08/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 424782e4607fea63130e95ab09a671c75fe1404d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771753"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128716"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout(C# 컴파일러 옵션)
 
@@ -34,7 +35,7 @@ ms.locfileid: "72771753"
 
 `-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

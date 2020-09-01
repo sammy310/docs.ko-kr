@@ -1,4 +1,5 @@
 ---
+description: -target:module(C# 컴파일러 옵션)
 title: -target:module(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c592d2fe001bb0908a06a6eb3287a39040b8715
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602447"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128454"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module(C# 컴파일러 옵션)
 이 옵션은 컴파일러에서 어셈블리 매니페스트를 생성하지 않도록 합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "69602447"
   
  Visual Studio 개발 환경에서는 모듈을 만들 수 없습니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 `in.netmodule`을 만듭니다.  
