@@ -1,4 +1,5 @@
 ---
+description: -preferreduilang(C# 컴파일러 옵션)
 title: -preferreduilang(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f68652e910651ab5c4184376d9eb7729303382d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602565"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124853"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang(C# 컴파일러 옵션)
 `-preferreduilang` 컴파일러 옵션을 사용하여 C# 컴파일러에서 오류 메시지 등의 출력을 표시하는 언어를 지정할 수 있습니다.  

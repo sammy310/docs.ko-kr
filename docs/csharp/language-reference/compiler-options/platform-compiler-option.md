@@ -1,4 +1,5 @@
 ---
+description: -platform(C# 컴파일러 옵션)
 title: -platform(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70849873"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124866"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform(C# 컴파일러 옵션)
 
@@ -71,7 +72,7 @@ Windows 64비트 운영 체제에서 실행할 애플리케이션을 개발하�
 > [!NOTE]
 > `-platform`은 Visual C# Express의 개발 환경에서 사용할 수 없습니다.
 
-이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>을 참조하세요.
+이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>를 참조하세요.
 
 ## <a name="example"></a>예제
 

@@ -1,4 +1,5 @@
 ---
+description: -refonly(C# 컴파일러 옵션)
 title: -refonly(C# 컴파일러 옵션)
 ms.date: 07/08/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 856b65d3b2217dbe5d53ecda00723b47247d80a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9a92462203bedff93a4a711ca8742465b7a561c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72773846"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124749"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly(C# 컴파일러 옵션)
 
@@ -30,7 +31,7 @@ ms.locfileid: "72773846"
 
 `-refonly` 및 [`-refout`](refout-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

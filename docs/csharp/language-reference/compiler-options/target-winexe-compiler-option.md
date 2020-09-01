@@ -1,4 +1,5 @@
 ---
+description: -target:winexe(C# 컴파일러 옵션)
 title: -target:winexe(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 981f1b0b6ca9f708bb022a3662ab181a4f472040
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1be07455b54b375106fef1fb480d7abd2f1ca4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606386"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124723"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe(C# 컴파일러 옵션)
 **-target:winexe** 옵션을 사용하면 컴파일러가 Windows 프로그램 실행 파일(EXE)을 만듭니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "69606386"
   
  [-target:exe](./target-exe-compiler-option.md)를 사용하여 콘솔 애플리케이션을 만듭니다.  
   
- [-out](./out-compiler-option.md) 옵션을 사용하여 지정하지 않으면 출력 파일 이름은 [Main](../../programming-guide/main-and-command-args/index.md) 메서드를 포함하는 입력 파일의 이름을 사용합니다.  
+ [-out](./out-compiler-option.md) 옵션을 사용하여 지정하지 않으면 [Main](../../programming-guide/main-and-command-args/index.md) 메서드가 포함된 입력 파일의 이름이 출력 파일의 이름으로 사용됩니다.  
   
  명령줄에서 지정된 경우, 다음 **-out** 또는 [-target](./target-compiler-option.md) 옵션까지의 모든 파일이 Windows 프로그램을 만드는 데 사용됩니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "69606386"
   
 3. **출력 형식** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  `in.cs`를 Windows 프로그램으로 컴파일합니다.  

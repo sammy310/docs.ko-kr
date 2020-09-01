@@ -1,4 +1,5 @@
 ---
+description: -optimize(C# 컴파일러 옵션)
 title: -optimize(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606606"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125035"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize(C# 컴파일러 옵션)
 **-optimize** 옵션은 컴파일러에서 더 작지만 빠르고 효율적인 출력 파일을 만들기 위해 수행하는 최적화 기능을 사용하거나 사용하지 않도록 설정합니다.  
@@ -47,7 +48,7 @@ ms.locfileid: "69606606"
   
 3. **코드 최적화** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  `t2.cs`를 컴파일하고 컴파일러 최적화를 사용하도록 설정합니다.  

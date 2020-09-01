@@ -1,4 +1,5 @@
 ---
+description: -reference(C# 컴파일러 옵션)
 title: -reference(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173668"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124801"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference(C# 컴파일러 옵션)
 **-reference** 옵션을 사용하면 컴파일러가 지정된 파일의 [public](../keywords/public.md) 형식 정보를 현재 프로젝트로 가져오므로 지정된 어셈블리 파일의 메타데이터를 참조할 수 있습니다.  
@@ -61,7 +62,7 @@ ms.locfileid: "79173668"
  자주 사용되는 .NET Framework 어셈블리를 참조하는 csc 지시 파일(.rsp)이 기본적으로 사용됩니다. 컴파일러에서 csc.rsp를 사용하지 않도록 하려면 [-noconfig](./noconfig-compiler-option.md)를 사용합니다.  
   
 > [!NOTE]
-> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)를 참조하세요. `-reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
+> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)를 참조하세요. `-reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 [extern 별칭](../keywords/extern-alias.md) 기능을 사용하는 방법을 보여 줍니다.  
