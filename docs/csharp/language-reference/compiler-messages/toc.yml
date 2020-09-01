@@ -1,4 +1,4 @@
-- name: 'C# 컴파일러 오류'
+- name: C# 컴파일러 메시지
   href: index.md
   items:
     - name: 컴파일러 오류 CS0001
@@ -273,3 +273,5 @@
       href: cs1591.md
     - name: 컴파일러 경고(수준 4) CS1610
       href: cs1610.md
+    - name: 컴파일러 경고(수준 5) CS8892
+      href: cs8892.md

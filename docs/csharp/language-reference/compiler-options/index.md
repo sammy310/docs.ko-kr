@@ -1,4 +1,5 @@
 ---
+description: C# 컴파일러 옵션
 title: C# 컴파일러 옵션
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcb246055ecb553bbefad2a0d5c95bf6a083ee6f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972755"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125529"
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 
@@ -25,7 +26,7 @@ ms.locfileid: "73972755"
 
 Visual Studio에서는 *web.config* 파일에서 컴파일러 옵션을 설정합니다. 자세한 내용은 [\<compiler> 요소](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)를 참조하세요.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 - [csc.exe를 사용한 명령줄 빌드](command-line-building-with-csc-exe.md) 명령줄에서 Visual C# 애플리케이션을 빌드하는 방법에 대한 정보를 제공합니다.
 

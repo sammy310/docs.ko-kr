@@ -1,4 +1,5 @@
 ---
+description: -delaysign(C# 컴파일러 옵션)
 title: -delaysign(C# 컴파일러 옵션)
 ms.date: 05/15/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5512ebeca4672f5d69852ab07c3f3fa40c305327
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970440"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125841"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign(C# 컴파일러 옵션)
 
@@ -48,7 +49,7 @@ ms.locfileid: "70970440"
 1. 프로젝트의 **속성** 페이지를 엽니다.
 1. **서명만 연기** 속성을 수정합니다.
 
-이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>을 참조하세요.
+이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

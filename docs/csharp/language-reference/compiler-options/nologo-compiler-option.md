@@ -1,4 +1,5 @@
 ---
+description: -nologo(C# 컴파일러 옵션)
 title: -nologo(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5107563b5133c183dca7626281ad11df9d09a8d8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606650"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125217"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo(C# 컴파일러 옵션)
 **-nologo** 옵션은 컴파일러가 시작될 때 로그온 배너의 표시를 억제하고 컴파일하는 동안 정보 메시지를 표시합니다.  

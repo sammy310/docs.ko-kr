@@ -1,4 +1,5 @@
 ---
+description: -noconfig(C# 컴파일러 옵션)
 title: -noconfig(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26d0680743ccc3af26a0e81eeec9cd2fc0d693af
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602743"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125230"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig(C# 컴파일러 옵션)
 **-noconfig** 옵션은 csc.exe 파일과 동일한 디렉터리에 있고 여기서 로드되는 csc.rsp 파일로 컴파일하지 않도록 컴파일러에 알립니다.  

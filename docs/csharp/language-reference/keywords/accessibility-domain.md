@@ -1,15 +1,16 @@
 ---
+description: 액세스 가능 도메인 - C# 참조
 title: 액세스 가능 도메인 - C# 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 4a4319b03f3e0d7f9ec721e611b78c124a8a8ee5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cfc4cc72a79b33276b7d822a2b31eb518dcf784
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713833"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127063"
 ---
 # <a name="accessibility-domain-c-reference"></a>액세스 가능 도메인(C# 참조)
 멤버의 액세스 가능 도메인은 멤버가 참조될 수 있는 프로그램 섹션을 지정합니다. 멤버가 다른 형식 내에 중첩되면 해당 액세스 가능 도메인은 멤버의 [액세스 가능성 수준](./accessibility-levels.md) 및 한 수준 위 형식의 액세스 가능 도메인에 의해 결정됩니다.  
@@ -24,14 +25,14 @@ ms.locfileid: "75713833"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](./index.md)
 - [액세스 한정자](./access-modifiers.md)
 - [액세스 수준](./accessibility-levels.md)
-- [접근성 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md)
+- [내게 필요한 옵션 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md)
 - [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
 - [private](./private.md)

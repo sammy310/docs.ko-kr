@@ -1,4 +1,5 @@
 ---
+description: -filealign(C# 컴파일러 옵션)
 title: -filealign(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603016"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125711"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign(C# 컴파일러 옵션)
 **-filealign** 옵션을 사용하여 출력 파일의 섹션 크기를 지정할 수 있습니다.  
@@ -53,7 +54,7 @@ ms.locfileid: "69603016"
   
 4. **파일 맞춤** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

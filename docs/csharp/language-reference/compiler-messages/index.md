@@ -1,4 +1,5 @@
 ---
+description: C# 컴파일러 오류
 title: C# 컴파일러 오류
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7c0290c799a7ae4a371578396d2d2d747d00d28
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72771871"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126244"
 ---
 # <a name="c-compiler-errors"></a>C# 컴파일러 오류
 
@@ -29,10 +30,10 @@ ms.locfileid: "72771871"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](../compiler-options/index.md)
-- [죄송합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
 - [-warn(C# 컴파일러 옵션)](../compiler-options/warn-compiler-option.md)
 - [-nowarn(C# 컴파일러 옵션)](../compiler-options/nowarn-compiler-option.md)

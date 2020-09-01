@@ -1,4 +1,5 @@
 ---
+description: -define(C# 컴파일러 옵션)
 title: -define(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173746"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125880"
 ---
 # <a name="-define-c-compiler-options"></a>-define(C# 컴파일러 옵션)
 **-define** 옵션은 프로그램의 모든 소스 코드 파일에서 `name`을 기호로 정의합니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "79173746"
   
  **-d**는 **-define**의 약식 형태입니다.  
   
- 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예들 들어 다음과 같습니다.  
+ 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예:  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -55,7 +56,7 @@ ms.locfileid: "79173746"
   
 2. **빌드** 탭의 **조건부 컴파일 기호** 상자에 정의할 기호를 입력합니다. 예를 들어 다음 코드 예제를 사용하는 경우 텍스트 상자에 `xx`를 입력합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
   

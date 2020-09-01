@@ -1,4 +1,5 @@
 ---
+description: abstract - C# 참조
 title: abstract - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713860"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127206"
 ---
 # <a name="abstract-c-reference"></a>abstract(C# 참조)
 `abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 자체에서 인스턴스화되지 않고 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. 추상으로 표시된 멤버는 추상 클래스에서 파생된 비 추상 클래스에 의해 구현되어야 합니다.
@@ -40,7 +41,7 @@ ms.locfileid: "75713860"
   
 - 추상 메서드 선언은 추상 클래스에서만 허용됩니다.  
   
-- 추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다. 예들 들어 다음과 같습니다.  
+- 추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다. 예:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -60,7 +61,7 @@ ms.locfileid: "75713860"
   
  추상 클래스는 모든 인터페이스 멤버에 대한 구현을 제공해야 합니다.  
   
- 인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수 있습니다. 예들 들어 다음과 같습니다.  
+ 인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수 있습니다. 예를 들어:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   

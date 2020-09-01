@@ -1,4 +1,5 @@
 ---
+description: -highentropyva(C# 컴파일러 옵션)
 title: -highentropyva(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -highentropyva compiler option [C#]
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
-ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c2e2780693a89072c4bb55b318be94089bf3ced
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606850"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125659"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva(C# 컴파일러 옵션)
 **-highentropyva** 컴파일러 옵션은 특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 Windows 커널에 알려줍니다.  

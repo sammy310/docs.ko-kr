@@ -1,4 +1,5 @@
 ---
+description: -lib(C# 컴파일러 옵션)
 title: -lib(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606827"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125451"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib(C# 컴파일러 옵션)
 **-lib** 옵션은 [-reference(C# 컴파일러 옵션)](./reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "69606827"
   
 3. 목록 상자 내용을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  t2.cs를 컴파일하여 .exe 파일을 만듭니다. 컴파일러는 작업 디렉터리 및 C 드라이브의 루트 디렉터리에서 어셈블리 참조를 찾습니다.  

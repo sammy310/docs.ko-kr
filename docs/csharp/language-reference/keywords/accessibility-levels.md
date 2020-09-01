@@ -1,16 +1,17 @@
 ---
+description: 액세스 가능성 수준 - C# 참조
 title: 액세스 가능성 수준 - C# 참조
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26b8f78595b1406deb371113cf491b80ad7c1474
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713826"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127024"
 ---
 # <a name="accessibility-levels-c-reference"></a>액세스 가능성 수준(C# 참조)
 
@@ -39,7 +40,7 @@ ms.locfileid: "75713826"
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|None|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|없음|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  중첩된 형식의 액세스 가능성은 액세스 가능 도메인에 따라 다릅니다. [액세스 가능성 도메인](./accessibility-domain.md)은 멤버에 대해 선언된 액세스 가능성 및 한 수준 위 형식의 액세스 가능성 도메인에 의해 결정됩니다. 그러나 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수는 없습니다.  
@@ -53,8 +54,8 @@ ms.locfileid: "75713826"
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](./index.md)
 - [액세스 한정자](./access-modifiers.md)
-- [접근성 도메인](./accessibility-domain.md)
-- [접근성 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md)
+- [내게 필요한 옵션 도메인](./accessibility-domain.md)
+- [내게 필요한 옵션 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md)
 - [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
 - [private](./private.md)

@@ -1,4 +1,5 @@
 ---
+description: -link(C# 컴파일러 옵션)
 title: -link(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: d5684298bbd736cae2d9c13381431036806aab17
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144463"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125399"
 ---
 # <a name="-link-c-compiler-options"></a>-link(C# 컴파일러 옵션)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.
@@ -59,7 +60,7 @@ ms.locfileid: "84144463"
  다음 섹션에서는 interop 형식을 포함하는 애플리케이션에서 제네릭 형식을 사용할 경우의 제한 사항에 대해 설명합니다.
 
 ### <a name="generic-interfaces"></a>제네릭 인터페이스
- interop 어셈블리에서 포함되는 제네릭 인터페이스는 사용할 수 없습니다. 이는 다음 예에서 확인할 수 있습니다.
+ interop 어셈블리에서 포함되는 제네릭 인터페이스는 사용할 수 없습니다. 다음 예제에서 이를 확인할 수 있습니다.
 
  [!code-csharp[VbLinkCompilerCS#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vblinkcompilercs/cs/program.cs#1)]
 

@@ -1,4 +1,5 @@
 ---
+description: -linkresource(C# 컴파일러 옵션)
 title: -linkresource(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 162baad57397b6d992dcf8f03f0b3661e0105cb8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173733"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125347"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource(C# 컴파일러 옵션)
 출력 파일에 .NET Framework 리소스에 대한 링크를 만듭니다. 리소스 파일은 출력 파일에 추가되지 않습니다. 이 점에서 출력 파일에 리소스 파일을 포함하는 [-resource](./resource-compiler-option.md) 옵션과 다릅니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "79173733"
   
  **-linkresource**에는 **-target:module** 이외의 [-target](./target-compiler-option.md) 옵션 중 하나가 필요합니다.  
   
- 예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.  
+ 예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.  
   
  `filename`에 지정된 파일은 모든 형식일 수 있습니다. 예를 들어 네이티브 DLL을 어셈블리의 일부로 설정하면 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 다음 중 두 번째 예제에서 이 작업을 수행하는 방법을 보여 줍니다. 어셈블리 링커에서도 동일한 작업을 수행할 수 있습니다. 다음 중 세 번째 예제에서 이 작업을 수행하는 방법을 보여 줍니다. 자세한 내용은 [Al.exe(어셈블리 링커)](../../../framework/tools/al-exe-assembly-linker.md) 및 [어셈블리 및 전역 어셈블리 캐시 사용](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)을 참조하세요.  
   

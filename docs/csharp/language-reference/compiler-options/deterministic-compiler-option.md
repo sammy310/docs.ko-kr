@@ -1,4 +1,5 @@
 ---
+description: -deterministic(C# 컴파일러 옵션)
 title: -deterministic(C# 컴파일러 옵션)
 ms.date: 04/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73455178"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125828"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -52,7 +53,7 @@ ms.locfileid: "73455178"
 
 원본을 공개적으로 사용할 수 있는 경우 결정적 컴파일을 사용하여 이진 파일이 신뢰할 수 있는 원본에서 컴파일되는지 여부를 설정할 수 있습니다. 또한 연속 빌드 시스템에서 이진 파일 변경에 종속된 빌드 단계를 실행해야 하는지 여부를 확인하는 데 유용할 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

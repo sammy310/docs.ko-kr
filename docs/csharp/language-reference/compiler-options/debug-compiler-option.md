@@ -1,4 +1,5 @@
 ---
+description: -debug(C# 컴파일러 옵션)
 title: -debug(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922506"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125919"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug(C# 컴파일러 옵션)
 **-debug** 옵션을 사용하면 컴파일러에서 디버깅 정보를 생성하여 출력 파일에 넣습니다.  
@@ -54,7 +55,7 @@ ms.locfileid: "69922506"
   
 4. **디버그 정보** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  출력 파일 `app.pdb`에 디버깅 정보를 넣습니다.  
