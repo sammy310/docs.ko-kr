@@ -1,4 +1,5 @@
 ---
+description: unsafe 키워드 - C# 참조
 title: unsafe 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e047a4cff77877862c5cbbb5e49eb1a75b42499
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712990"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141961"
 ---
 # <a name="unsafe-c-reference"></a>unsafe(C# 참조)
 
@@ -33,7 +34,7 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-안전하지 않은 블록을 통해 이 블록 내에서 안전하지 않은 코드를 사용할 수도 있습니다. 예들 들어 다음과 같습니다.
+안전하지 않은 블록을 통해 이 블록 내에서 안전하지 않은 코드를 사용할 수도 있습니다. 예:
 
 ```csharp
 unsafe

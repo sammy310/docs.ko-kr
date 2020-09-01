@@ -1,15 +1,16 @@
 ---
+description: using 문 - C# 참조
 title: using 문 - C# 참조
 ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: c7f1fc4b7e911bdec3bd38ae88aa39b7f1795300
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307048"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141935"
 ---
 # <a name="using-statement-c-reference"></a>using 문(C# 참조)
 
@@ -57,7 +58,7 @@ C# 8.0부터는 중괄호가 필요하지 않은 `using` 문에 다음 대체 �
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [using 문](~/_csharplang/spec/statements.md#the-using-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,4 +1,5 @@
 ---
+description: orderby 절 - C# 참조
 title: orderby 절 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f64b45ff252c7cc02e56c465da21ccc5e861aec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173577"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142351"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby 절(C# 참조)
 

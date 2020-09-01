@@ -1,4 +1,5 @@
 ---
+description: value 상황별 키워드 제거 - C# 참조
 title: value 상황별 키워드 제거 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: 84d0c51ddafb59144f4ba8c6e73412642fa8fa28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f72e9f097880d9de725a85a0973001baaefd9a9c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712899"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141740"
 ---
 # <a name="value-c-reference"></a>value(C# 참조)
 
@@ -25,7 +26,7 @@ ms.locfileid: "75712899"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

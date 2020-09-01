@@ -1,4 +1,5 @@
 ---
+description: volatile - C# 참조
 title: volatile - C# 참조
 ms.date: 10/24/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb89e99e8e28ff1e263817f498619dbfae700a50
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712847"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141701"
 ---
 # <a name="volatile-c-reference"></a>volatile(C# 참조)
 
@@ -47,7 +48,7 @@ ms.locfileid: "75712847"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 언어 사양: volatile 키워드](../../../../_csharplang/spec/classes.md#volatile-fields)
 - [C# 참조](../index.md)

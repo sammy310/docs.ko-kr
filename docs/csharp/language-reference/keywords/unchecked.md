@@ -1,4 +1,5 @@
 ---
+description: unchecked 키워드 - C# 참조
 title: unchecked 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb66639e3657b247b9ebcad1594daf1f57a5c76b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713003"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141987"
 ---
 # <a name="unchecked-c-reference"></a>unchecked(C# 참조)
 
@@ -38,7 +39,7 @@ unchecked 컨텍스트에서 식이 대상 형식의 범위를 벗어난 값을 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

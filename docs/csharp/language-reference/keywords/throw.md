@@ -1,4 +1,5 @@
 ---
+description: throw - C# 참조
 title: throw - C# 참조
 ms.date: 03/02/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 4cad4810b89f976f92ce576917feb2398acce636
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063122"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142039"
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
 
@@ -65,7 +66,7 @@ C# 7.0부터 `throw`를 명령문뿐만 아니라 식으로도 사용할 수 있
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

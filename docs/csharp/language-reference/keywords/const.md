@@ -1,4 +1,5 @@
 ---
+description: const 키워드 - C# 참조
 title: const 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 812aeb331b6dd333075d19076a896246ecc5b374
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 312725c3a231f0ca766d5b99bf7d9308ddd634c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713671"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142091"
 ---
 # <a name="const-c-reference"></a>const(C# 참조)
 
-상수 필드 또는 지역 상수를 선언할 때는 `const` 키워드를 사용합니다. 상수 필드 및 지역 상수는 변수가 아니며 수정할 수 없습니다. 상수는 숫자, 부울 값, 문자열 또는 null 참조일 수 있습니다. 언제든지 변경될 수 있는 정보를 나타낼 때는 상수를 만들지 마세요. 예를 들어, 상수 필드를 사용하여 서비스의 가격, 제품 버전 번호 또는 회사의 브랜드 이름을 저장하지 마세요. 이러한 값은 시간이 지남에 따라 변경될 수 있으며, 컴파일러는 상수를 전파하므로 변경 내용을 보기 위해서는 라이브러리를 사용하여 컴파일된 다른 코드를 다시 컴파일해야 합니다. [readonly](./readonly.md) 키워드를 참조하세요. 예들 들어 다음과 같습니다.
+상수 필드 또는 지역 상수를 선언할 때는 `const` 키워드를 사용합니다. 상수 필드 및 지역 상수는 변수가 아니며 수정할 수 없습니다. 상수는 숫자, 부울 값, 문자열 또는 null 참조일 수 있습니다. 언제든지 변경될 수 있는 정보를 나타낼 때는 상수를 만들지 마세요. 예를 들어, 상수 필드를 사용하여 서비스의 가격, 제품 버전 번호 또는 회사의 브랜드 이름을 저장하지 마세요. 이러한 값은 시간이 지남에 따라 변경될 수 있으며, 컴파일러는 상수를 전파하므로 변경 내용을 보기 위해서는 라이브러리를 사용하여 컴파일된 다른 코드를 다시 컴파일해야 합니다. [readonly](./readonly.md) 키워드를 참조하세요. 다음은 그 예입니다.
 
 ```csharp
 const int X = 0;
@@ -62,7 +63,7 @@ public const int C2 = C1 + 100;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

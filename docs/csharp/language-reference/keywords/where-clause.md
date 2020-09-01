@@ -1,4 +1,5 @@
 ---
+description: where 절 - C# 참조
 title: where 절 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a8dc226bb2720b6a8251f028712a80f74e893c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173486"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141688"
 ---
 # <a name="where-clause-c-reference"></a>where 절(C# 참조)
 
