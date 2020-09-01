@@ -1,4 +1,5 @@
 ---
+description: protected 키워드 - C# 참조
 title: protected 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c18d1f2f45a0a154dccd42736a01874dd1af853
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713185"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122383"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 
