@@ -1,4 +1,5 @@
 ---
+description: 네임스페이스 키워드 - C# 참조
 title: 네임스페이스 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6cfd1c3d37cbdef1f0dd72ddca85ce91f2e183b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625802"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139582"
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
 
@@ -60,6 +61,6 @@ C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)
 - [using](using-directive.md)
-- [using static](using-static.md)
+- [Static 사용](using-static.md)
 - [네임스페이스 별칭 한정자`::`](../operators/namespace-alias-qualifier.md)
 - [네임스페이스](../../programming-guide/namespaces/index.md)

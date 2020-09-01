@@ -1,4 +1,5 @@
 ---
+description: 프라이빗 키워드 - C# 참조
 title: 프라이빗 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6f40712fd2cca6d7b1f64760f1c6c5dd5c71370
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715192"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139400"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
 

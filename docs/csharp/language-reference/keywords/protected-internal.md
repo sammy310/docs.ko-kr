@@ -1,15 +1,16 @@
 ---
+description: protected internal - C# 참조
 title: protected internal - C# 참조
 ms.date: 11/15/2017
 f1_keywords:
 - protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 4067da93bcceba0fa3e4a14aa58b4cde812412f3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a7537fba93c0d7145f04c6236d15c11b70f8bf98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301790"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139439"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal(C# 참조)
 
@@ -67,7 +68,7 @@ class DerivedClass : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
