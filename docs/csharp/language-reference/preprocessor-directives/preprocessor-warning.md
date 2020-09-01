@@ -1,4 +1,5 @@
 ---
+description: '#warning - C# 참조'
 title: '#warning - C# 참조'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715066"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137840"
 ---
 # <a name="warning-c-reference"></a>#warning(C# 참조)
-`#warning`을 사용하면 코드의 특정 위치에서 [CS1030](../../misc/cs1030.md) 수준 1 컴파일러 경고를 생성할 수 있습니다. 예들 들어 다음과 같습니다.  
+`#warning`을 사용하면 코드의 특정 위치에서 [CS1030](../../misc/cs1030.md) 수준 1 컴파일러 경고를 생성할 수 있습니다. 다음은 그 예입니다.  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
 ## <a name="remarks"></a>설명
- `#warning`은 일반적으로 조건부 지시문에 사용됩니다. [#error](./preprocessor-error.md)를 사용하여 사용자 정의 오류를 생성할 수도 있습니다.  
+ `#warning`는 일반적으로 조건부 지시문에 사용됩니다. [#error](./preprocessor-error.md)를 사용하여 사용자 정의 오류를 생성할 수도 있습니다.  
   
 ## <a name="example"></a>예제  
 

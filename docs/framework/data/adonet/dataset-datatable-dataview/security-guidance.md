@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812239"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137619"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -45,6 +45,9 @@ at System.web. set_DataType (유형 값)
 * Deserialization 작업이 실패 합니다.
 
 XML `DataSet` 을 기존 또는 인스턴스로 로드할 때 `DataTable` 기존 열 정의도 고려 됩니다. 테이블에 사용자 지정 형식의 열 정의가 이미 포함 되어 있으면 해당 형식이 XML deserialization 작업 기간 동안 허용 목록에 일시적으로 추가 됩니다.
+
+> [!NOTE]
+> 에 열을 추가 하면가 `DataTable` `ReadXml` XML에서 스키마를 읽지 않으며 스키마가 일치 하지 않는 경우에도 레코드에서 읽지 않으므로이 메서드를 사용 하려면 모든 열을 직접 추가 해야 합니다.
 
 ```cs
 XmlReader xmlReader = GetXmlReader();

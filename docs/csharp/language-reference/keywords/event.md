@@ -1,4 +1,5 @@
 ---
+description: event - C# 참조
 title: event - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: eb1805ed55921497fea88e6b39989c876ef003d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e75fec12390cb694126c5bec684c40caa378915
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713566"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139101"
 ---
 # <a name="event-c-reference"></a>event(C# 참조)
 
@@ -34,7 +35,7 @@ ms.locfileid: "75713566"
 
 이벤트에 적용되는 키워드는 다음과 같습니다.
 
-|키워드|설명|참조 항목|
+|키워드|Description|참조 항목|
 |-------------|-----------------|--------------------------|
 |[static](./static.md)|클래스의 인스턴스가 없는 경우에도 언제든지 호출자가 이벤트를 사용할 수 있도록 설정합니다.|[정적 클래스 및 정적 클래스 멤버](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
 |[virtual](./virtual.md)|파생 클래스에서 [override](./override.md) 키워드를 사용하여 이벤트 동작을 재정의할 수 있도록 합니다.|[상속](../../programming-guide/classes-and-structs/inheritance.md)|
@@ -49,7 +50,7 @@ ms.locfileid: "75713566"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

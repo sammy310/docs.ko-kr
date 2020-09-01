@@ -1,4 +1,5 @@
 ---
+description: '#if 전처리기 지시문 - C# 참조'
 title: '#if 전처리기 지시문 - C# 참조'
 ms.date: 10/27/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899849"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138139"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
-C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 `#if` 문은 부울이고, 기호가 정의되었는지 여부만 테스트합니다. 예들 들어 다음과 같습니다.
+C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 `#if` 문은 부울이고, 기호가 정의되었는지 여부만 테스트합니다. 예:
 
 ```csharp
 #if DEBUG

@@ -1,4 +1,5 @@
 ---
+description: '#pragma checksum - C# 참조'
 title: '#pragma checksum - C# 참조'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60c491000337fd50da217e97054e86faccb2e7d7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712483"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137983"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum(C# 참조)
 ASP.NET 페이지 디버깅을 돕기 위해 소스 파일에 대한 체크섬을 생성합니다.  

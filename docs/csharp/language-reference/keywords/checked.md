@@ -1,4 +1,5 @@
 ---
+description: checked 키워드 - C# 참조
 title: checked 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dd8bc02d3af89d6bab3aef55a88cb8b40704da6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713700"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138282"
 ---
 # <a name="checked-c-reference"></a>checked(C# 참조)
 
@@ -40,7 +41,7 @@ ms.locfileid: "75713700"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,4 +1,5 @@
 ---
+description: -win32icon(C# 컴파일러 옵션)
 title: -win32icon(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76a54f9011371492bdc15f15c3e40d51082deed3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606273"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138412"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon(C# 컴파일러 옵션)
 **-win32icon** 옵션은 .ico 파일을 출력 파일에 삽입하여 파일 탐색기에서 출력 파일을 원하는 모양으로 표시합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "69606273"
 ## <a name="remarks"></a>설명  
  .ico 파일은 [리소스 컴파일러](/windows/desktop/menurc/resource-compiler)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .iso 파일이 만들어집니다.  
   
- .NET Framework 리소스 파일을 참조하려면 [-linkresource](./linkresource-compiler-option.md)를, 첨부하려면 [-resource](./resource-compiler-option.md)를 참조하세요. .res 파일을 가져오려면 [-win32res](./win32res-compiler-option.md)를 참조하세요.  
+ .NET Framework 리소스 파일을(참조하려면) [-linkresource](./linkresource-compiler-option.md)를(첨부하려면) [-resource](./resource-compiler-option.md)를 참조하세요. .res 파일을 가져오려면 [-win32res](./win32res-compiler-option.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -41,7 +42,7 @@ ms.locfileid: "69606273"
   
 3. **애플리케이션 아이콘** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 .ico 파일 `rf.ico`를 첨부하여 `in.exe`를 생성합니다.  

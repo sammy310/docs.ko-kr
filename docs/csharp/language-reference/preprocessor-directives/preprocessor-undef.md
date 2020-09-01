@@ -1,4 +1,5 @@
 ---
+description: '#undef - C# 참조'
 title: '#undef - C# 참조'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97f99ab4230585e61fed0e057552b78c7a4c2bb5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712444"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137866"
 ---
 # <a name="undef-c-reference"></a>#undef(C# 참조)
 `#undef`를 사용하면 기호의 정의를 해제할 수 있습니다. 그러면 [#if](./preprocessor-if.md) 지시문에서 해당 기호를 식으로 사용하여 식이 `false`로 평가됩니다.  

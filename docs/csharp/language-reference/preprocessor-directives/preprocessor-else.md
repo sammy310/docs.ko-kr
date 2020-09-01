@@ -1,4 +1,5 @@
 ---
+description: '#else - C# 참조'
 title: '#else - C# 참조'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
-ms.openlocfilehash: 967ef38687b739ef3bea3f8923ab26bba0b6cea9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb1a9f30a42c78b5c4c7323ec213ab8c20b9bb76
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712561"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138178"
 ---
 # <a name="else-c-reference"></a>#else(C# 참조)
 `#else`를 사용하면 복합 조건부 지시문을 만들 수 있습니다. 이 경우 앞의 [#if](./preprocessor-if.md) 또는 (선택 사항)[#elif](./preprocessor-elif.md) 지시문에 `true`로 평가하는 식이 없으면 컴파일러는 `#else`와 후속 `#endif` 사이에 있는 모든 코드를 평가합니다.  
