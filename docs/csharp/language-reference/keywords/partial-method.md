@@ -1,4 +1,5 @@
 ---
+description: partial 메서드 - C# 참조
 title: partial 메서드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c433fd30f6ec51355bdefee90d815783487c1b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713224"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134382"
 ---
 # <a name="partial-method-c-reference"></a>partial 메서드(C# 참조)
 
@@ -27,7 +28,7 @@ ms.locfileid: "75713224"
 
 [!code-csharp[csrefKeywordsContextual#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#9)]
 
-자세한 내용은 [Partial 클래스 및 메서드](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)를 참조하세요.
+자세한 내용은 참조 [Partial 클래스 및 메서드](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.
 
 ## <a name="see-also"></a>참고 항목
 

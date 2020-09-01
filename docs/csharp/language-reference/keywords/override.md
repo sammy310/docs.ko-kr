@@ -1,4 +1,5 @@
 ---
+description: override 한정자 - C# 참조
 title: override 한정자 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca806310214981b7ff24a796fe078d902dca4d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713250"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134461"
 ---
 # <a name="override-c-reference"></a>override(C# 참조)
 
@@ -46,7 +47,7 @@ ms.locfileid: "75713250"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

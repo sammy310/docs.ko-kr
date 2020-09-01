@@ -1,4 +1,5 @@
 ---
+description: is - C# 참조
 title: is - C# 참조
 ms.date: 06/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398306"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134512"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -26,7 +27,7 @@ C# 7.0부터는 `is` 및 [switch](switch.md) 문에서 패턴 일치를 지원�
 
 - [상수 패턴](#constant-pattern) - 식이 지정된 상수 값으로 평가되는지 여부를 테스트합니다.
 
-- [var 패턴](#var-pattern) - 항상 성공하고 식의 값을 새 지역 변수에 바인딩하는 일치입니다.
+- [var 패턴](#var-pattern) - 항상 성공하고 식의 값을 새 로컬 변수에 바인딩하는 일치입니다.
 
 ### <a name="type-pattern"></a>형식 패턴
 
@@ -70,7 +71,7 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 
 ### <a name="constant-pattern"></a>상수 패턴
 
-상수 패턴을 사용한 패턴 일치를 수행하는 경우 `is`는 식이 지정된 상수와 같은지 여부를 테스트합니다. C# 6 이전 버전에서는 상수 패턴이 [switch](switch.md) 문에서 지원됩니다. C# 7.0부터는 `is` 문에서도 지원됩니다. 사용되는 구문은 다음과 같습니다.
+상수 패턴을 사용한 패턴 일치를 수행하는 경우 `is`는 식이 지정된 상수와 같은지 여부를 테스트합니다. C# 6 이전 버전에서는 상수 패턴이 [switch](switch.md) 문에서 지원됩니다. C# 7.0부터는 `is` 문에서도 지원됩니다. 구문은 다음과 같습니다.
 
 ```csharp
    expr is constant
@@ -78,23 +79,23 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 
 여기서 *expr*은 평가할 식이고 *constant*는 테스트할 값입니다. *constant*는 다음 상수 식 중 하나가 될 수 있습니다.
 
-- 리터럴 값.
+- 리터럴 값입니다.
 
-- 선언된 `const` 변수의 이름.
+- 선언된 `const` 변수의 이름
 
-- 열거형 상수.
+- 열거형 상수
 
 상수 식은 다음과 같이 계산됩니다.
 
 - *expr* 및 *constant*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`를 반환하는지 여부 즉, `expr == constant`인지 여부를 확인합니다.
 
-- 정수 형식이 아닌 경우 정적 [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
+- 정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
 
 다음 예제에서는 형식 패턴과 상수 패턴을 결합하여 개체가 `Dice` 인스턴스인지 여부를 테스트하고, 그럴 경우 주사위 굴리기 값이 6인지 여부를 확인합니다.
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-상수 패턴을 사용하여 `null`을 검사할 수 있습니다. `null` 키워드는 `is` 문에서 지원됩니다. 사용되는 구문은 다음과 같습니다.
+상수 패턴을 사용하여 `null`을 검사할 수 있습니다. `null` 키워드는 `is` 문에서 지원됩니다. 구문은 다음과 같습니다.
 
 ```csharp
    expr is null
@@ -106,7 +107,7 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 
 ### <a name="var-pattern"></a>var 패턴
 
-`var` 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 구문은 다음과 같습니다.
+`var` 패턴을 사용한 패턴 일치는 항상 성공합니다. 구문은 다음과 같습니다.
 
 ```csharp
    expr is var varname
@@ -127,9 +128,9 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [s 연산자](~/_csharplang/spec/expressions.md#the-is-operator) 섹션과 다음 C# 언어 제안을 참조하세요.
 
 - [패턴 일치](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
-- [제네릭과 일치하는 패턴](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
+- [제네릭과 패턴 일치](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)

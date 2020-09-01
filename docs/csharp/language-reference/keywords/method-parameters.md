@@ -1,4 +1,5 @@
 ---
+description: 메서드 매개 변수 - C# 참조
 title: 메서드 매개 변수 - C# 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7090bf1c3df65cf1e65942404f883b49612e7521
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713378"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134408"
 ---
 # <a name="method-parameters-c-reference"></a>메서드 매개 변수(C# 참조)
 
