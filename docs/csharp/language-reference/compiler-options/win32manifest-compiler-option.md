@@ -1,4 +1,5 @@
 ---
+description: -win32manifest(C# 컴파일러 옵션)
 title: -win32manifest(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ce4033323eb938caff1d769198ca69782b470ab
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924681"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140830"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest(C# 컴파일러 옵션)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별하려면 **-win32manifest** 옵션을 사용합니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "69924681"
 </assembly>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [-nowin32manifest(C# 컴파일러 옵션)](./nowin32manifest-compiler-option.md)

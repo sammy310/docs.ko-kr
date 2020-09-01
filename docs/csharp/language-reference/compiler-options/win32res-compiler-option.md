@@ -1,4 +1,5 @@
 ---
+description: -win32res(C# 컴파일러 옵션)
 title: -win32res(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: c220c78a6d2c3109402a20f0de40fe9665d6c730
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794379"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140817"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res(C# 컴파일러 옵션)
 **-win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "82794379"
   
  Win32 리소스는 파일 탐색기에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵 (아이콘) 정보를 포함할 수 있습니다. **-win32res**를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 하여 버전 정보를 생성합니다.  
   
- .NET Framework 리소스 파일을 참조하려면 [-linkresource](./linkresource-compiler-option.md)를, 첨부하려면 [-resource](./resource-compiler-option.md)를 참조하세요.  
+ .NET Framework 리소스 파일을(참조하려면) [-linkresource](./linkresource-compiler-option.md)를(첨부하려면) [-resource](./resource-compiler-option.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

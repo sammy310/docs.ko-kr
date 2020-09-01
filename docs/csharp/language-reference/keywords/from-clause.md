@@ -1,4 +1,5 @@
 ---
+description: from 절 - C# 참조
 title: from 절 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 474b22f5a9d8f12c8a4365159817f878761b563c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715285"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140791"
 ---
 # <a name="from-clause-c-reference"></a>from 절(C# 참조)
 
