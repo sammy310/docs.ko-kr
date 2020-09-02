@@ -2,12 +2,12 @@
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
 ms.date: 05/13/2020
-ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557648"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358975"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
 
@@ -139,7 +139,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 보안 주체에 특정 사용 권한이 있는지 테스트할 때 역할 및 범위의 조합이 고려 됩니다. 이 조합은 강력한 권한 부여 메커니즘을 제공 합니다.
 
-## <a name="deny"></a>거부
+## <a name="deny"></a>Deny
 
 이전에는 RBAC에 대해 "허용" 규칙만 허용 되었습니다. 이 동작은 일부 범위를 빌드하기에 복잡 했습니다. 예를 들어 잠재적으로 무한 한 저장소 계정 목록에 명시적 사용 권한을 부여 하는 것을 제외 하 고 모든 저장소 계정에 대 한 보안 주체 액세스를 허용 합니다. 새 저장소 계정을 만들 때마다이 계정 목록에 추가 해야 합니다. 이로 인해 바람직하지 않은 관리 오버 헤드가 발생 했습니다.
 
@@ -147,7 +147,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 ## <a name="checking-access"></a>액세스 확인
 
-짐작할 수 있듯이, 많은 수의 역할 및 범위를 사용 하는 경우 서비스 주체의 유효 사용 권한을 파악 하기가 매우 어렵습니다. 누적 거부 규칙을 기반으로 하 여 복잡성을 높이는 역할만 합니다. 다행히 모든 서비스 사용자에 대 한 유효 사용 권한을 표시할 수 있는 사용 권한 계산기가 있습니다. 일반적으로 그림 10-3에 표시 된 것 처럼 포털의 IAM 탭 아래에 있습니다.
+짐작할 수 있듯이, 많은 수의 역할 및 범위를 사용 하는 경우 서비스 주체의 유효 사용 권한을 파악 하기가 매우 어렵습니다. 누적 거부 규칙을 기반으로 하 여 복잡성을 높이는 역할만 합니다. 다행히 모든 서비스 사용자에 대 한 유효 사용 권한을 표시할 수 있는 [사용 권한 계산기](https://docs.microsoft.com/azure/role-based-access-control/check-access) 가 있습니다. 일반적으로 그림 10-3에 표시 된 것 처럼 포털의 IAM 탭 아래에 있습니다.
 
 ![그림 9-4 app service에 대 한 권한 계산기](./media/check-rbac.png)
 
