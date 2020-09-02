@@ -9,19 +9,19 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 51da6a1ed6d5e98b99c64ee23be52f7b2385897f
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: aa4f45ac426c59b829b6be9e63e8f0ed50512661
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853874"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358923"
 ---
 # <a name="3d-graphics-overview"></a>3D 그래픽 개요
-<a name="introduction"></a>의 3D 기능을 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하면 개발자는 태그와 절차적 코드 모두에서 3d 그래픽을 그리거나, 변환 하 고, 애니메이션 효과를 적용할 수 있습니다. 개발자는 2D 및 3D 그래픽을 결합 하 여 다양 한 컨트롤을 만들거나 복잡 한 데이터 그림을 제공 하거나 응용 프로그램 인터페이스의 사용자 환경을 향상 시킬 수 있습니다. 의 3D 지원은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전 한 기능을 갖춘 게임 개발 플랫폼을 제공 하도록 설계 되지 않았습니다. 이 항목에서는 그래픽 시스템의 3D 기능에 대해 간략하게 설명 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .  
+<a name="introduction"></a> 의 3D 기능을 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하면 개발자는 태그와 절차적 코드 모두에서 3d 그래픽을 그리거나, 변환 하 고, 애니메이션 효과를 적용할 수 있습니다. 개발자는 2D 및 3D 그래픽을 결합 하 여 다양 한 컨트롤을 만들거나 복잡 한 데이터 그림을 제공 하거나 응용 프로그램 인터페이스의 사용자 환경을 향상 시킬 수 있습니다. 의 3D 지원은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전 한 기능을 갖춘 게임 개발 플랫폼을 제공 하도록 설계 되지 않았습니다. 이 항목에서는 그래픽 시스템의 3D 기능에 대해 간략하게 설명 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .  
 
 <a name="threed_in_2d"></a>
 ## <a name="3d-in-a-2d-container"></a>2D 컨테이너의 3D  
- 의 3D 그래픽 콘텐츠는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Viewport3D> 2 차원 요소 구조에 참여할 수 있는 요소에 캡슐화 됩니다. 그래픽 시스템은 <xref:System.Windows.Controls.Viewport3D> 의 다른 여러 요소 처럼 2 차원 시각적 요소로 처리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 합니다. <xref:System.Windows.Controls.Viewport3D>3 차원 장면으로 창 (뷰포트)으로 작동 합니다. 보다 정확 하 게, 3D 장면이 프로젝션 되는 표면입니다.  
+ 의 3D 그래픽 콘텐츠는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Viewport3D> 2 차원 요소 구조에 참여할 수 있는 요소에 캡슐화 됩니다. 그래픽 시스템은 <xref:System.Windows.Controls.Viewport3D> 의 다른 여러 요소 처럼 2 차원 시각적 요소로 처리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 합니다. <xref:System.Windows.Controls.Viewport3D> 3 차원 장면으로 창 (뷰포트)으로 작동 합니다. 보다 정확 하 게, 3D 장면이 프로젝션 되는 표면입니다.  
   
  기존 2D 응용 프로그램에서 <xref:System.Windows.Controls.Viewport3D> 표 또는 Canvas와 같은 다른 컨테이너 요소를 사용 하 여를 사용 합니다.  <xref:System.Windows.Controls.Viewport3D>동일한 장면 그래프에서 다른 2d 그리기 개체와 함께를 사용할 수 있지만 내에서 2d 및 3d 개체를 상호 침투 시킬 수 없습니다 <xref:System.Windows.Controls.Viewport3D> .  이 항목에서는 내에서 3D 그래픽을 그리는 방법에 대해 집중적으로 설명 <xref:System.Windows.Controls.Viewport3D> 합니다.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "85853874"
   
  3D 장면이 2D 화면에 표시 되는 방식을 이해 하는 또 다른 방법은 장면을 보기 화면에 대 한 프로젝션으로 설명 하는 것입니다. 에서는 <xref:System.Windows.Media.Media3D.ProjectionCamera> 다양 한 프로젝션 및 해당 속성을 지정 하 여 보는이에서 3d 모델을 인식 하는 방법을 변경할 수 있습니다. 는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 장면을 단축 하는 프로젝션을 지정 합니다.  즉,는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 소실점 관점을 제공 합니다.  장면 좌표 공간에서의 카메라 위치, 카메라의 방향 및 시야, 장면의 "위쪽" 방향을 정의하는 벡터를 지정할 수 있습니다. 다음 다이어그램에서는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 의 프로젝션을 보여 줍니다.  
   
- <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>의 및 <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 속성은 <xref:System.Windows.Media.Media3D.ProjectionCamera> 카메라의 프로젝션 범위를 제한 합니다. 카메라는 장면의 어느 위치에나 배치될 수 있으므로 카메라가 실제로 모델 내 또는 모델에 매우 가깝게 배치될 수 있으며 이로 인해 개체를 제대로 구별하기가 어려워집니다.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>카메라에서 개체를 그리지 않는 최소 거리를 지정할 수 있습니다.  반대로를 <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 사용 하면 개체를 그리지 않을 때까지 카메라에서 거리를 지정할 수 있습니다. 이렇게 하면 개체가 너무 멀리 떨어져 있을 때 장면에 포함 되지 않습니다.  
+ <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>의 및 <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 속성은 <xref:System.Windows.Media.Media3D.ProjectionCamera> 카메라의 프로젝션 범위를 제한 합니다. 카메라는 장면의 어느 위치에나 배치될 수 있으므로 카메라가 실제로 모델 내 또는 모델에 매우 가깝게 배치될 수 있으며 이로 인해 개체를 제대로 구별하기가 어려워집니다.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 카메라에서 개체를 그리지 않는 최소 거리를 지정할 수 있습니다.  반대로를 <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 사용 하면 개체를 그리지 않을 때까지 카메라에서 거리를 지정할 수 있습니다. 이렇게 하면 개체가 너무 멀리 떨어져 있을 때 장면에 포함 되지 않습니다.  
   
  ![카메라 설정](./media/coordsystem-6.png "CoordSystem-6")  
 카메라 위치  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera>3D 모델의 직교 프로젝션을 2D 시각적 화면으로 지정 합니다. 다른 카메라와 마찬가지로 이는 위치, 보기 방향 및 "위쪽" 방향을 지정합니다. 와 달리 <xref:System.Windows.Media.Media3D.PerspectiveCamera>그러나 <xref:System.Windows.Media.Media3D.OrthographicCamera> 원근 단축법을 포함 하지 않는 프로젝션을 설명 합니다. 즉,는 해당 측면이 <xref:System.Windows.Media.Media3D.OrthographicCamera> 카메라의 지점에서 만나는 것이 아니라 병렬 인 보기 상자를 설명 합니다. 다음 그림에서는 및을 사용 하 여 볼 때와 동일한 모델을 보여 줍니다 <xref:System.Windows.Media.Media3D.PerspectiveCamera> <xref:System.Windows.Media.Media3D.OrthographicCamera> .  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> 3D 모델의 직교 프로젝션을 2D 시각적 화면으로 지정 합니다. 다른 카메라와 마찬가지로 이는 위치, 보기 방향 및 "위쪽" 방향을 지정합니다. 와 달리 <xref:System.Windows.Media.Media3D.PerspectiveCamera>그러나 <xref:System.Windows.Media.Media3D.OrthographicCamera> 원근 단축법을 포함 하지 않는 프로젝션을 설명 합니다. 즉,는 해당 측면이 <xref:System.Windows.Media.Media3D.OrthographicCamera> 카메라의 지점에서 만나는 것이 아니라 병렬 인 보기 상자를 설명 합니다. 다음 그림에서는 및을 사용 하 여 볼 때와 동일한 모델을 보여 줍니다 <xref:System.Windows.Media.Media3D.PerspectiveCamera> <xref:System.Windows.Media.Media3D.OrthographicCamera> .  
   
  ![직교 및 원근 프로젝션](./media/camera-projections4.png "Camera_projections4")  
 원근 및 직교 프로젝션  
@@ -58,7 +58,7 @@ ms.locfileid: "85853874"
 <a name="models_meshes"></a>
 ## <a name="model-and-mesh-primitives"></a>모델 및 메시 기본 형식  
   
- <xref:System.Windows.Media.Media3D.Model3D>는 일반 3D 개체를 나타내는 추상 기본 클래스입니다. 3D 장면을 만들려면 보려는 개체가 필요 하며, 장면 그래프를 구성 하는 개체는에서 파생 <xref:System.Windows.Media.Media3D.Model3D> 됩니다. 현재는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 로 모델링 기 하 도형을 지원 합니다 <xref:System.Windows.Media.Media3D.GeometryModel3D> . <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>이 모델의 속성은 메시 기본 형식을 사용 합니다.  
+ <xref:System.Windows.Media.Media3D.Model3D> 는 일반 3D 개체를 나타내는 추상 기본 클래스입니다. 3D 장면을 만들려면 보려는 개체가 필요 하며, 장면 그래프를 구성 하는 개체는에서 파생 <xref:System.Windows.Media.Media3D.Model3D> 됩니다. 현재는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 로 모델링 기 하 도형을 지원 합니다 <xref:System.Windows.Media.Media3D.GeometryModel3D> . <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>이 모델의 속성은 메시 기본 형식을 사용 합니다.  
   
  모델을 빌드하려면 먼저 기본 형식 또는 메시를 빌드합니다. 3D 기본 형식은 단일 3D 엔터티를 형성 하는 꼭 짓 점 컬렉션입니다. 대부분의 3D 시스템은 가장 간단한 폐쇄형 그림 (세 개의 꼭 짓 점에 의해 정의 된 삼각형)에서 모델링 된 기본 형식을 제공 합니다.  삼각형의 세 점은 같은 평면에 있으므로 메시라는 보다 복잡한 도형을 모델링하기 위해 계속해서 삼각형을 추가할 수 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85853874"
   
  및 속성에 대 한 값을 지정 하 여 모델을 계속 정의할 수 있습니다 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> .  모델의 표면을 렌더링하려면 지정된 임의의 삼각형에서 해당 표면이 어느 방향을 바라보고 있는지에 대한 정보를 그래픽 시스템에 제공해야 합니다. 그래픽 시스템은 이 정보를 사용하여 모델에 대한 조명 계산을 수행할 수 있습니다. 즉, 광원 쪽 표면이 광원 반대쪽 표면보다 밝게 나타납니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 위치 좌표를 사용하여 기본 법선 벡터를 결정할 수 있지만 다른 법선 벡터를 지정하여 곡선 표면의 모양을 대략적으로 나타낼 수도 있습니다.  
   
- <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>속성은의 컬렉션을 지정 하는 컬렉션을 지정 합니다 .이 컬렉션은 <xref:System.Windows.Point> 질감을 망상의 꼭 짓 점에 그리는 방법을 결정 하는 좌표를 매핑하는 방법을 그래픽 시스템에 알려 줍니다. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>는 0과 1 사이의 값 (포함)으로 지정 됩니다.  <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>속성과 마찬가지로 그래픽 시스템은 기본 질감 좌표를 계산할 수 있지만 반복 패턴의 일부를 포함 하는 질감의 매핑을 제어 하도록 다른 질감 좌표를 설정 하도록 선택할 수 있습니다 (예:). 질감 좌표에 대한 자세한 내용은 다음 항목 또는 Managed Direct3D SDK를 참조하세요.  
+ <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>속성은의 컬렉션을 지정 하는 컬렉션을 지정 합니다 .이 컬렉션은 <xref:System.Windows.Point> 질감을 망상의 꼭 짓 점에 그리는 방법을 결정 하는 좌표를 매핑하는 방법을 그래픽 시스템에 알려 줍니다. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> 는 0과 1 사이의 값 (포함)으로 지정 됩니다.  <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>속성과 마찬가지로 그래픽 시스템은 기본 질감 좌표를 계산할 수 있지만 반복 패턴의 일부를 포함 하는 질감의 매핑을 제어 하도록 다른 질감 좌표를 설정 하도록 선택할 수 있습니다 (예:). 질감 좌표에 대한 자세한 내용은 다음 항목 또는 Managed Direct3D SDK를 참조하세요.  
   
  다음 예제에서는 프로시저 코드로 큐브 모델의 한 면을 만드는 방법을 보여 줍니다. 전체 큐브를 단일 GeometryModel3D 그릴 수 있습니다. 이 예에서는 나중에 각 면에 별도의 질감을 적용 하기 위해 큐브의 표면을 고유한 모델로 그립니다.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "85853874"
   
  모델 표면의 특성을 정의 하기 위해에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 추상 클래스를 사용 합니다 <xref:System.Windows.Media.Media3D.Material> . Material의 구체적 하위 클래스는 모델 표면의 일부 모양 특성을 결정하며 이들 각각은 SolidColorBrush, TileBrush 또는 VisualBrush를 전달할 수 있는 Brush 속성도 제공합니다.  
   
-- <xref:System.Windows.Media.Media3D.DiffuseMaterial>모델이 lit 확산 모델에 브러시가 적용 되도록 지정 합니다. DiffuseMaterial를 사용 하는 것은 2D 모델에서 직접 브러시를 사용 하는 것과 비슷합니다. 모델 표면에는 빛나는 것 처럼 빛이 반영 되지 않습니다.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 모델이 lit 확산 모델에 브러시가 적용 되도록 지정 합니다. DiffuseMaterial를 사용 하는 것은 2D 모델에서 직접 브러시를 사용 하는 것과 비슷합니다. 모델 표면에는 빛나는 것 처럼 빛이 반영 되지 않습니다.  
   
-- <xref:System.Windows.Media.Media3D.SpecularMaterial>모델의 표면이 하드 또는 반짝이는 것 처럼 브러시를 모델에 적용 하 여 하이라이트를 반영할 수 있도록 지정 합니다. 질감에서이 반사 품질을 제안 하는 정도 또는 속성의 값을 지정 하 여 "빛"을 설정할 수 있습니다 <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> .  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> 모델의 표면이 하드 또는 반짝이는 것 처럼 브러시를 모델에 적용 하 여 하이라이트를 반영할 수 있도록 지정 합니다. 질감에서이 반사 품질을 제안 하는 정도 또는 속성의 값을 지정 하 여 "빛"을 설정할 수 있습니다 <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> .  
   
-- <xref:System.Windows.Media.Media3D.EmissiveMaterial>모델이 브러시 색과 같은 빛을 내보내는 것 처럼 질감이 적용 되도록 지정할 수 있습니다. 그러나 이로 인해 모델이 광원이 되는 것은 아니며 DiffuseMaterial 또는 SpecularMaterial을 사용하여 질감을 표현할 때와는 다른 방식으로 섀도잉에 참여합니다.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> 모델이 브러시 색과 같은 빛을 내보내는 것 처럼 질감이 적용 되도록 지정할 수 있습니다. 그러나 이로 인해 모델이 광원이 되는 것은 아니며 DiffuseMaterial 또는 SpecularMaterial을 사용하여 질감을 표현할 때와는 다른 방식으로 섀도잉에 참여합니다.  
   
  성능 향상을 위해 backfaces <xref:System.Windows.Media.Media3D.GeometryModel3D> (카메라에서 모델의 반대쪽에 있기 때문에 표시 되지 않는 얼굴)는 장면에서 추출 됩니다.  <xref:System.Windows.Media.Media3D.Material>평면과 같은 모델의 백 면에 적용할를 지정 하려면 모델의 속성을 설정 <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> 합니다.  
   
@@ -100,9 +100,9 @@ ms.locfileid: "85853874"
  다음 코드 예에서는 단색 및 그리기를 3D 모델에 브러시로 적용 하는 방법을 보여 줍니다.  
   
  [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
-  ' [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
- ' [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
-  [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
+ [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
+ [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]  
+ [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>장면 비추기  
@@ -114,7 +114,7 @@ ms.locfileid: "85853874"
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: 원거리 광원 처럼 비춥니다.  방향성 광원에는 <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> Vector3D으로 지정 되었지만 지정 된 위치는 없습니다.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: 주변 광원 처럼 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase>모델에 <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 조명이 표시 되지 않는 거리를 결정 하는 속성을 노출 합니다. PointLight도 감쇠 속성을 노출 하 여 거리에 대 한 조명의 강도가 저하 되는 방법을 결정 합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
+- <xref:System.Windows.Media.Media3D.PointLight>: 주변 광원 처럼 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase> 모델에 <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 조명이 표시 되지 않는 거리를 결정 하는 속성을 노출 합니다. PointLight도 감쇠 속성을 노출 하 여 거리에 대 한 조명의 강도가 저하 되는 방법을 결정 합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>:에서 상속 <xref:System.Windows.Media.Media3D.PointLight> 됩니다. SpotLight는 PointLight와 유사하게 비추며 위치와 방향이 모두 있습니다. 이러한 프로젝트는 및 속성으로 설정 된 원뿔 모양 영역에서도로 지정 된 빛을 프로젝션 <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> 합니다.  
   
