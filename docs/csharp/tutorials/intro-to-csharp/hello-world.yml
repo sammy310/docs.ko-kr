@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267401"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812278"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
 
 
-    첫 번째 프로그램은 메시지를 하나만 출력할 수 있습니다. **변수**를 사용하여 유용한 프로그램을 더 많이 작성할 수 있습니다. **변수**는 여러 값을 사용하여 동일한 코드를 실행하는 데 사용할 수 있는 기호입니다. 사용해 보겠습니다. 대화형 창에서 작성한 코드를 다음 코드로 바꿉니다.
+    첫 번째 프로그램은 메시지를 하나만 출력할 수 있습니다. *변수*를 사용하여 유용한 프로그램을 더 많이 작성할 수 있습니다. *변수*는 여러 값을 사용하여 동일한 코드를 실행하는 데 사용할 수 있는 기호입니다. 사용해 보겠습니다. 대화형 창에서 작성한 코드를 다음 코드로 바꿉니다.
 
 
     ```csharp
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > 이제 스스로 학습해 보세요. `Console.WriteLine()`으로 화면에 텍스트를 작성하는 방법을 학습했습니다. 변수를 선언하고 문자열을 함께 연결하는 방법을 학습했습니다. 대화형 창에서 연습하세요. 창에는 수행할 수 있는 작업에 대한 제안을 제공하는 **IntelliSense** 기능이 있습니다. `firstFriend`에서 `d` 뒤에 `.`를 입력합니다. 사용할 수 있는 속성 및 메서드에 대한 제안 목록이 표시됩니다.
+    > 이제 스스로 학습해 보세요. `Console.WriteLine()`으로 화면에 텍스트를 작성하는 방법을 학습했습니다. 변수를 선언하고 문자열을 함께 연결하는 방법을 학습했습니다. 대화형 창에서 연습하세요. 창에는 수행할 수 있는 작업에 대한 제안을 제공하는 *IntelliSense* 기능이 있습니다. `firstFriend`에서 `d` 뒤에 `.`를 입력합니다. 사용할 수 있는 속성 및 메서드에 대한 제안 목록이 표시됩니다.
 - title: 더 많은 문자열 작업
   durationInMinutes: 5
   content: >
-    **메서드**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하여 메시지를 출력했습니다. **메서드**는 몇몇 작업을 구현하는 코드 블록입니다. 메서드에는 액세스할 수 있도록 이름이 있습니다.
+    *메서드*<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하여 메시지를 출력했습니다. *메서드*는 몇몇 작업을 구현하는 코드 블록입니다. 메서드에는 액세스할 수 있도록 이름이 있습니다.
 
 
     문자열에 표시하지 않으려는 선행 또는 후행 공백이 있다고 가정합니다. 문자열에서 공백을 **잘라내려고** 합니다.
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> 메서드는 검색한 문자열을 찾았는지 여부를 알려주는 **부울** 값을 반환합니다. **부울**은 `true` 또는 `false` 값을 저장합니다. 텍스트 출력으로 표시되는 경우 각각 `True` 및 `False`로 대문자 지정됩니다. 이후 단원에서 **부울** 값에 대해 자세히 학습합니다.
+    <xref:System.String.Contains%2A> 메서드는 검색한 문자열을 찾았는지 여부를 알려주는 *부울* 값을 반환합니다. *부울*은 `true` 또는 `false` 값을 저장합니다. 텍스트 출력으로 표시되는 경우 각각 `True` 및 `False`로 대문자 지정됩니다. 이후 단원에서 *부울* 값에 대해 자세히 학습합니다.
 
 
     ***과제***
