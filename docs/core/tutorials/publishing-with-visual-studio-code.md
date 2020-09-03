@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051885"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867648"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -17,13 +17,13 @@ ms.locfileid: "86051885"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="publish-the-app"></a>앱 게시
 
 1. Visual Studio Code를 시작합니다.
 
-1. [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 *HelloWorld* 프로젝트 폴더를 엽니다.
+1. [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 *HelloWorld* 프로젝트 폴더를 엽니다.
 
 1. 주 메뉴에서 **보기** > **터미널**을 선택합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "86051885"
 
    명령 출력은 다음 예제와 유사합니다.
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -112,4 +112,4 @@ ms.locfileid: "86051885"
 이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)
+> [Visual Studio Code를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)

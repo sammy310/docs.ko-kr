@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 description: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416015"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957527"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 
@@ -15,7 +15,7 @@ ms.locfileid: "86416015"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
@@ -23,11 +23,11 @@ ms.locfileid: "86416015"
 
 디버그 구성에서 프로그램은 완전히 기호화된 디버그 정보를 사용하여 컴파일되며 최적화되지 않습니다. 최적화하면 소스 코드와 생성된 명령 간의 관계가 복잡해지므로 디버깅이 복잡해집니다. 프로그램의 릴리스 구성은 완전히 최적화되고, 기호화된 디버그 정보를 포함하지 않습니다.
 
-기본적으로 Visual Studio는 디버그 빌드 구성을 사용하므로 디버깅 전에 변경할 필요가 없습니다.
+기본적으로 Mac용 Visual Studio는 디버그 빌드 구성을 사용하므로 디버그하기 전에 변경할 필요가 없습니다.
 
 1. Mac용 Visual Studio를 시작합니다.
 
-1. [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 프로젝트를 엽니다.
+1. [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 프로젝트를 엽니다.
 
    현재 빌드 구성은 도구 모음에 표시됩니다. 다음 도구 모음 그림은 Visual Studio가 앱의 디버그 버전을 컴파일하도록 구성되어 있음을 보여줍니다.
 
@@ -178,4 +178,4 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 이 자습서에서는 Visual Studio 디버깅 도구를 사용했습니다. 다음 자습서에서는 앱의 배포 가능 버전을 게시합니다.
 
 > [!div class="nextstepaction"]
-> [Mac용 Visual Studio로 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-mac.md)
+> [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-mac.md)

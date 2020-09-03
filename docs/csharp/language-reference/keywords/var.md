@@ -1,4 +1,5 @@
 ---
+description: var - C# 참조
 title: var - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 303a880a54a79e50515060e0ea28e8d021fa1b76
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712886"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141714"
 ---
 # <a name="var-c-reference"></a>var(C# 참조)
 
@@ -24,6 +25,9 @@ int i = 10; // Explicitly typed.
 ```
 
 자세한 내용은 [암시적 형식 지역 변수](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) 및 [LINQ 쿼리 작업의 형식 관계](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)를 참조하세요.
+
+> [!IMPORTANT]
+> nullable 참조 형식을 사용하도록 설정하고 `var`을 사용하면 식 형식이 nullable이 아니더라도 항상 nullable 참조 형식을 의미합니다.
 
 ## <a name="example"></a>예제
 

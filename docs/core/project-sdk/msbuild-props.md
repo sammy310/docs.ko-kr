@@ -3,12 +3,13 @@ title: Microsoft.NET.Sdk의 MSBuild 속성
 description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.custom: updateeachrelease
+ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916248"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810524"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
 
@@ -165,6 +166,50 @@ ms.locfileid: "87916248"
 ```
 
 자세한 내용은 [C# 언어 버전 관리](../../csharp/language-reference/configure-language-version.md#override-a-default)를 참조하세요.
+
+## <a name="code-analysis-properties"></a>코드 분석 속성
+
+### <a name="analysislevel"></a>AnalysisLevel
+
+`AnalysisLevel` 속성을 사용하여 코드 분석 수준을 지정할 수 있습니다. 예를 들어 코드 분석기를 미리 보기 위해 액세스하려면 `AnalysisLevel`을 `preview`로 설정합니다. 기본값은 `latest`입니다.
+
+```xml
+<PropertyGroup>
+  <AnalysisLevel>preview</AnalysisLevel>
+</PropertyGroup>
+```
+
+다음 표에 사용 가능한 옵션이 나와 있습니다.
+
+| 값 | 의미 |
+|-|-|
+| `latest` | 릴리스된 최신 코드 분석기가 사용됩니다. 이것이 기본값입니다. |
+| `preview` | 최신 코드 분석기는 미리 보기로 제공되는 경우에도 사용됩니다. |
+| `5.0` | 최신 규칙을 사용할 수 있는 경우에도 .NET 5.0 릴리스에서 사용된 규칙 세트가 사용됩니다. |
+| `5` | 최신 규칙을 사용할 수 있는 경우에도 .NET 5.0 릴리스에서 사용된 규칙 세트가 사용됩니다. |
+
+### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
+
+`CodeAnalysisTreatWarningsAsErrors` 속성을 사용하면 코드 분석 경고를 경고로 처리할지 여부를 구성하고 빌드를 중단할 수 있습니다. 프로젝트를 빌드할 때 `-warnaserror` 플래그를 사용하면 [.NET 코드 분석](../../fundamentals/productivity/code-analysis.md) 경고도 오류로 처리됩니다. 컴파일러 경고만 오류로 처리하기 위해 프로젝트 파일에서 `CodeAnalysisTreatWarningsAsErrors` MSBuild 속성을 `false`로 설정할 수 있습니다.
+
+```xml
+<PropertyGroup>
+  <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+</PropertyGroup>
+```
+
+### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
+
+.Net 5.0 이상을 대상으로 하는 프로젝트의 경우 기본적으로 [.NET 코드 분석](../../fundamentals/productivity/code-analysis.md)이 사용됩니다. `EnableNETAnalyzers` 속성을 true로 설정하여 이전 버전의 .NET을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있습니다. 모든 프로젝트에서 코드 분석을 사용하지 않으려면 해당 속성을 `false`로 설정합니다.
+
+```xml
+<PropertyGroup>
+  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+</PropertyGroup>
+```
+
+> [!TIP]
+> .Net 5.0 이전 .NET 버전을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있는 또 다른 방법은 [AnalysisLevel](#analysislevel) 속성을 `latest`로 설정하는 것입니다.
 
 ## <a name="run-time-configuration-properties"></a>런타임 구성 속성
 

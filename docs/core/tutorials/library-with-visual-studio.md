@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187953"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118262"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
 
@@ -70,7 +70,7 @@ ms.locfileid: "88187953"
 
    `StartsWithUpper`은 <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현됩니다.
 
-1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택하여 프로젝트가 오류 없이 컴파일되는지 확인합니다.
+1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택하거나 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>를 눌러 프로젝트가 오류 없이 컴파일되는지 확인합니다.
 
 ## <a name="add-a-console-app-to-the-solution"></a>솔루션에 콘솔 앱 추가
 

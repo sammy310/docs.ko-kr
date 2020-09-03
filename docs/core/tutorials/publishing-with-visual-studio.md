@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701286"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867557"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -19,13 +19,13 @@ ms.locfileid: "84701286"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio 2019에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="publish-the-app"></a>앱 게시
 
 1. Visual Studio를 시작합니다.
 
-1. [Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 *HelloWorld* 프로젝트를 엽니다.
+1. [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 *HelloWorld* 프로젝트를 엽니다.
 
 1. Visual Studio에서 릴리스 빌드 구성을 사용 중인지 확인합니다. 필요한 경우 도구 모음의 빌드 구성 설정을 **디버그**에서 **릴리스**로 변경합니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "84701286"
 
 1. 명령 프롬프트를 열고 *publish* 폴더로 이동합니다. 이를 위해 `cd`를 입력한 다음 전체 경로를 붙여넣습니다. 예를 들어:
 
-   ```
+   ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 
@@ -112,4 +112,4 @@ ms.locfileid: "84701286"
 이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)
+> [Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)

@@ -4,20 +4,24 @@ description: 자체 포함 앱을 트리밍하여 크기를 줄이는 방법을 
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720126"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053109"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>자체 포함 배포 및 실행 파일 트리밍
 
 [프레임워크 종속 배포 모델](index.md#publish-framework-dependent)은 .NET 도입 이후 가장 성공적인 배포 모델입니다. 이 시나리오에서 애플리케이션 개발자는 애플리케이션과 타사 어셈블리만 번들하고 .NET 런타임 및 프레임워크 라이브러리는 클라이언트 머신에서 사용할 수 있을 것으로 예상합니다. 이 배포 모델은 .NET Core에서도 주요 모델로 계속 사용되지만 프레임워크 종속 모델이 최적이 아닌 몇 가지 시나리오가 있습니다. 다른 방법은 .NET Core 런타임과 프레임워크가 애플리케이션 및 타사 어셈블리와 함께 번들되는 [자체 포함 애플리케이션](index.md#publish-self-contained)을 게시하는 것입니다.
 
-트리밍된 자체 포함 배포 모델은 배포 크기를 줄이도록 최적화된 특수 버전의 자체 포함 배포 모델입니다. 배포 크기 최소화는 Blazor 애플리케이션과 같은 일부 클라이언트 쪽 시나리오의 중요한 요구 사항입니다. 애플리케이션 복잡성에 따라 애플리케이션 실행에 필요한 것은 프레임워크 어셈블리의 일부일 뿐입니다. 사용되지 않는 라이브러리 부분은 필요 없으며 패키지된 애플리케이션에서 트리밍할 수 있습니다. 그러나 다양한 문제 코드 패턴을 안정적으로 분석할 수 없다는 점에서(주로 리플렉션 사용을 중심으로 함) 애플리케이션의 빌드 시간 분석으로 인해 런타임에 오류가 발생할 위험이 있습니다. 안정성을 보장할 수 없으므로 이 배포 모델은 미리 보기 기능으로 제공됩니다. 빌드 시간 분석 엔진은 문제가 되는 코드 패턴의 개발자에게 경고하고, 해당 코드 패턴이 수정될 것이라고 예상합니다. 가능한 경우 동일한 요구 사항을 충족하는 코드를 사용하여 애플리케이션의 런타임 리플렉션 종속성을 빌드 시간으로 모두 이동하는 것이 좋습니다.
+트리밍된 자체 포함 배포 모델은 배포 크기를 줄이도록 최적화된 특수 버전의 자체 포함 배포 모델입니다. 배포 크기 최소화는 Blazor 애플리케이션과 같은 일부 클라이언트 쪽 시나리오의 중요한 요구 사항입니다. 애플리케이션 복잡성에 따라 프레임워크 어셈블리의 하위 집합만 참조되며 각 어셈블리 내 코드의 하위 집합은 애플리케이션 실행에 필요합니다. 사용되지 않는 라이브러리 부분은 필요가 없으며 패키지된 애플리케이션에서 트리밍할 수 있습니다.
 
-애플리케이션의 트리밍 모드는 TrimMode를 통해 구성할 수 있으며, 애플리케이션에서 사용되는 어셈블리를 번들하는 `copyused`로 기본 설정됩니다. Blazor WebAssembly 애플리케이션은 어셈블리 내에서 사용되지 않는 코드를 트리밍하는 더 적극적인 모드(`link`)를 사용합니다. 트리밍 분석 경고는 전체 종속성 분석이 불가능한 코드 패턴에 대한 정보를 제공합니다. 해당 경고는 기본적으로 표시되지 않으며, `SuppressTrimAnalysisWarnings` 플래그를 false로 설정하여 켤 수 있습니다. 사용 가능한 트리밍 옵션에 대한 자세한 내용은 [ILLinker 페이지](https://github.com/mono/linker/blob/master/docs/illink-options.md)에서 확인할 수 있습니다.
+그러나 다양한 문제 코드 패턴을 안정적으로 분석할 수 없다는 점에서(주로 리플렉션 사용을 중심으로 함) 애플리케이션의 빌드 시간 분석으로 인해 런타임에 오류가 발생할 위험이 있습니다. 안정성을 보장할 수 없으므로 이 배포 모델은 미리 보기 기능으로 제공됩니다.
+
+빌드 시간 분석 엔진은 필요한 다른 코드를 검색하도록 문제가 있는 코드 패턴의 개발자에게 경고를 제공합니다. 포함할 다른 항목을 트리머에 알리도록 특성을 사용하여 코드에 주석을 달 수 있습니다. [소스 생성기](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)를 사용하여 많은 리플렉션 패턴을 빌드 시간 코드 생성으로 바꿀 수 있습니다.
+
+애플리케이션의 트리밍 모드는 `TrimMode` 설정으로 구성됩니다. 기본값은 `copyused`이며 참조된 어셈블리를 애플리케이션에서 번들로 묶습니다. `link` 값은 Blazor WebAssembly 애플리케이션에서 사용되며 어셈블리 내에서 사용되지 않는 코드를 트리밍합니다. 트리밍 분석 경고는 전체 종속성 분석이 불가능한 코드 패턴에 대한 정보를 제공합니다. 해당 경고는 기본적으로 표시되지 않으며, `SuppressTrimAnalysisWarnings` 플래그를 `false`로 지정하여 켤 수 있습니다. 사용 가능한 트리밍 옵션에 관한 자세한 내용은 [트리밍 옵션](trimming-options.md)을 참조하세요.
 
 > [!NOTE]
 > 트리밍은 .NET Core 3.1, 5.0의 실험적 기능이며 ‘게시된 자체 포함 애플리케이션에만’ 사용할 수 있습니다.
@@ -36,28 +40,29 @@ ms.locfileid: "88720126"
 
 ## <a name="trim-your-app---cli"></a>앱 트리밍 - CLI
 
-[dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 애플리케이션을 트리밍합니다. 앱을 게시하는 경우 다음 세 가지 설정을 지정합니다.
+[dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 애플리케이션을 트리밍합니다. 앱을 게시할 때 다음 속성을 설정합니다.
 
-- 자체 포함으로 게시: `--self-contained true`
-- 트리밍 사용: `p:PublishTrimmed=true`
+- 특정 런타임을 위해 자체 포함 앱으로 게시: `-r win-x64`
+- 트리밍 사용: `/p:PublishTrimmed=true`
 
 다음 예제에서는 Windows용 앱을 자체 포함으로 게시하고 출력을 트리밍합니다.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 다음 예제에서는 어셈블리 내의 사용되지 않는 코드가 트리밍되고 트리머 경고가 사용되는 적극적인 트리밍 모드로 앱을 게시합니다.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 자세한 내용은 [.NET Core CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)를 참조하세요.

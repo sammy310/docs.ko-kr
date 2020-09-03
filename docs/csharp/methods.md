@@ -4,14 +4,14 @@ description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개�
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063356"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810575"
 ---
-# <a name="methods"></a>메서드
+# <a name="methods-in-c"></a>메서드(C#)
 
 메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다. `Main` 메서드는 모든 C# 애플리케이션의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "88063356"
 
 이러한 부분이 결합되어 메서드 시그니처를 구성합니다.
 
-> [!NOTE]
+> [!IMPORTANT]
 > 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 부분입니다.
 
 다음 예제에서는 다섯 개의 메서드를 포함하는 `Motorcycle`이라는 클래스를 정의합니다.
@@ -249,11 +249,11 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 다음 예제에서 `DelayAsync`는 정수를 반환하는 return 문을 포함하는 비동기 메서드입니다. 비동기 메서드이기 때문에 해당 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `DoSomethingAsync`의 `await` 식 계산에서 다음 `int result = await delayTask` 문과 같이 정수가 생성됩니다.
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 비동기 메서드는 모든 [in](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md) 또는 [out](language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
 
- 비동기 메서드에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](async.md), [비동기 프로그램의 제어 흐름](programming-guide/concepts/async/control-flow-in-async-programs.md) 및 [비동기 반환 형식](programming-guide/concepts/async/async-return-types.md)을 참조하세요.
+ 비동기 메서드에 관한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](async.md) 및 [비동기 반환 형식](programming-guide/concepts/async/async-return-types.md)을 참조하세요.
 
 <a name="expr"></a>
 

@@ -6,11 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 593897b31c86e79db2376dde94f3e5c87fdf8289
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803744"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052825"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -123,11 +124,11 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
 1. *Program.cs* 파일을 열고 파일의 맨 위에 있는 기존 `using` 문을 다음 문으로 바꿉니다.
 
-    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
+    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L1-L7)]
 
 1. *Program.cs*의 `Program` 클래스 아래에 `ImageData`라는 클래스를 만듭니다. 이 클래스는 처음에 로드된 데이터를 나타내는 데 사용됩니다.
 
-    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L137-L142)]
+    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L138-L143)]
 
     `ImageData`에는 다음 속성이 있습니다.
 
@@ -138,7 +139,7 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
     1. `ImageData` 클래스 아래에 있는 `ModelInput`이라는 새 클래스에서 입력 데이터의 스키마를 정의합니다.
 
-        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L144-L153)]
+        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L145-L154)]
 
         `ModelInput`에는 다음 속성이 있습니다.
 
@@ -151,7 +152,7 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
     1. 그런 다음, `ModelInput` 클래스 아래에 있는 `ModelOutput`이라는 새 클래스에서 출력 데이터의 스키마를 정의합니다.
 
-        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L155-L162)]
+        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L156-L163)]
 
         `ModelOutput`에는 다음 속성이 있습니다.
 
@@ -171,13 +172,13 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
 1. `Main` 메서드에서 자산의 위치, 계산된 병목 상태 값, 모델의 `.pb` 버전을 정의합니다.
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
+    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L15-L17)]
 
 1. [MLContext](xref:Microsoft.ML.MLContext)의 새 인스턴스를 사용하여 `mlContext` 변수를 초기화합니다.
 
-    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
+    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L19)]
 
-    [MLContext](xref:Microsoft.ML.MLContext) 클래스는 모든 ML.NET 작업의 시작점이며, mlContext를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
+    [MLContext](xref:Microsoft.ML.MLContext) 클래스는 모든 ML.NET 작업의 시작점이며, mlContext를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DbContext`와 유사합니다.
 
 ## <a name="load-the-data"></a>데이터 로드
 
@@ -192,9 +193,9 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 }
 ```
 
-1. `LoadImagesDirectory` 안에 다음 코드를 추가하여 하위 디렉터리에서 파일 경로를 모두 가져옵니다.
+1. `LoadImagesFromDirectory` 안에 다음 코드를 추가하여 하위 디렉터리에서 파일 경로를 모두 가져옵니다.
 
-    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L104-L105)]
+    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L105-L106)]
 
 1. `foreach` 문을 사용하여 각 파일을 반복합니다.
 
@@ -207,41 +208,41 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. `foreach` 문 내에서 파일 확장명이 지원되는지 확인합니다. 이미지 분류 API는 JPEG 및 PNG 형식을 지원합니다.
 
-    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L109-L110)]
+    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L110-L111)]
 
 1. 파일의 레이블을 가져옵니다. `useFolderNameAsLabel` 매개 변수를 `true`로 설정하면 파일이 저장된 부모 디렉터리가 레이블로 사용됩니다. true로 설정하지 않으면 파일 이름의 접두사 또는 파일 이름 자체가 레이블이 됩니다.
 
-    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L112-L126)]
+    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L113-L127)]
 
 1. 마지막으로, `ModelInput`의 새 인스턴스를 만듭니다.
 
-    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L128-L132)]
+    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L129-L133)]
 
 ### <a name="prepare-the-data"></a>데이터 준비
 
-1. `Main` 메서드로 돌아가서 `LoadFromDirectory` 유틸리티 메서드를 사용하여 학습에 사용할 이미지 목록을 가져옵니다.
+1. `Main` 메서드로 돌아가서 `LoadImagesFromDirectory` 유틸리티 메서드를 사용하여 학습에 사용할 이미지 목록을 가져옵니다.
 
-    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L21)]
+    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L22)]
 
 1. [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 메서드를 사용하여[`IDataView`](xref:Microsoft.ML.IDataView)에 이미지를 로드합니다.
 
-    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L23)]
+    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L24)]
 
 1. 디렉터리에서 읽어온 순서대로 데이터가 로드됩니다. 데이터의 균형을 조정하려면 [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) 메서드를 사용하여 순서를 섞습니다.
 
-    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L25)]
+    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L26)]
 
 1. 기계 학습 모델에서는 입력이 숫자 형식이어야 합니다. 따라서 학습 전에 데이터에서 몇 가지 전처리 작업을 수행해야 합니다. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) 및 `LoadRawImageBytes` 변환으로 구성된 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)을 만듭니다. `MapValueToKey` 변환은 `Label` 열의 범주 값을 사용하여 숫자 `KeyType` 값으로 변환하고 `LabelAsKey`라는 새 열에 저장합니다. `LoadImages`는 `ImagePath` 열의 값을 `imageFolder` 매개 변수와 함께 사용하여 학습에 사용할 이미지를 로드합니다.
 
-    [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L27-L33)]
+    [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L28-L34)]
 
 1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 메서드를 사용하여 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)에 데이터를 적용합니다. 그 다음에 오는 [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) 메서드가 전처리된 데이터를 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 반환합니다.
 
-    [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L35-L37)]
+    [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L36-L38)]
 
 1. 모델을 학습하려면 유효성 검사 데이터 세트뿐만 아니라 학습 데이터 세트도 있어야 합니다. 학습 세트에서 모델이 학습됩니다. 보이지 않는 데이터의 예측 성능은 유효성 검사 세트에 대한 성능으로 측정됩니다. 성능 결과에 따라 모델이 배운 내용을 조정하여 개선합니다. 유효성 검사 세트는 원본 데이터 세트를 분할해서 얻거나, 이 용도로 이미 설정된 다른 소스에서 가져올 수 있습니다. 이 예제에서는 전처리된 데이터 세트를 학습, 유효성 검사 및 테스트 세트로 분할합니다.
 
-    [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L39-L40)]
+    [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L40-L41)]
 
     위의 코드 샘플은 두 가지 분할 작업을 수행합니다. 먼저, 전처리된 데이터가 분할되어 70%는 학습에 사용되고 나머지 30%는 유효성 검사에 사용됩니다. 그런 다음 30% 유효성 검사 세트가 유효성 검사 및 테스트 세트로 다시 분할됩니다. 여기서 90%는 유효성 검사에 사용되고 10%는 테스트에 사용됩니다.
 
@@ -249,7 +250,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. 학습, 유효성 검사 및 테스트 데이터의 파티션에 해당 값을 할당합니다.
 
-    [!code-csharp [CreateDatasets](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L42-L44)]
+    [!code-csharp [CreateDatasets](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L43-L45)]
 
 ## <a name="define-the-training-pipeline"></a>학습 파이프라인 정의
 
@@ -257,7 +258,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. `ImageClassificationTrainer`에 대한 필수 및 선택적 매개 변수 집합을 저장할 새 변수를 만듭니다.
 
-    [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
+    [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L47-L58)]
 
     `ImageClassificationTrainer`는 다음과 같은 몇 가지 선택적 매개 변수를 사용합니다.
 
@@ -273,11 +274,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. `mapLabelEstimator` 및 `ImageClassificationTrainer`로 구성된 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 학습 파이프라인을 정의합니다.
 
-    [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L59-L60)]
+    [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L60-L61)]
 
 1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 메서드를 사용하여 모델을 학습합니다.
 
-    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L62)]
+    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L63)]
 
 ## <a name="use-the-model"></a>모델 사용
 
@@ -285,7 +286,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 `Main` 메서드 아래에 예측 정보를 콘솔에 표시하는 `OutputPrediction`이라는 새 유틸리티 메서드를 만듭니다.
 
-[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L96-L100)]
+[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L97-L101)]
 
 ### <a name="classify-a-single-image"></a>단일 이미지 분류
 
@@ -300,23 +301,23 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. `ClassifySingleImage` 메서드 안에 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만듭니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스를 전달하고 예측하는 데 사용할 수 있는 편리한 API입니다.
 
-    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L73)]
+    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L74)]
 
 1. 단일 `ModelInput` 인스턴스에 액세스하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용하여 `data` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 첫 번째 관찰을 가져옵니다.
 
-    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L75)]
+    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L76)]
 
 1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) 메서드를 사용하여 이미지를 분류합니다.
 
-    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L77)]
+    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L78)]
 
 1. `OutputPrediction` 메서드를 사용하여 예측을 콘솔에 출력합니다.
 
-    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L79-L80)]
+    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L80-L81)]
 
 1. `Main` 메서드 내에서 테스트 이미지 세트를 사용하여 `ClassifySingleImage`를 호출합니다.
 
-    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L64)]
+    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L65)]
 
 ### <a name="classify-multiple-images"></a>여러 이미지 분류
 
@@ -331,19 +332,19 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 메서드를 사용하여 예측을 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다. `ClassifyImages` 메서드 내에 다음 코드를 추가합니다.
 
-    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L85)]
+    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L86)]
 
 1. 예측을 반복하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용하여 `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 처음 10개의 관찰을 가져옵니다.
 
-    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L87)]
+    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L88)]
 
 1. 예측을 반복하고 예측의 원래 레이블과 예측 레이블을 출력합니다.
 
-    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L89-L93)]
+    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L90-L94)]
 
 1. 최종 단계로, `Main` 메서드 내에서 테스트 이미지 세트를 사용하여 `ClassifyImages`를 호출합니다.
 
-    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L66)]
+    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L67)]
 
 ## <a name="run-the-application"></a>애플리케이션 실행
 

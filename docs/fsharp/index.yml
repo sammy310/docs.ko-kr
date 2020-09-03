@@ -1,37 +1,37 @@
 ### YamlMime:Landing
-title: F#설명을
-summary: .NET에서 F# 프로그래밍 언어를 사용 하 여 응용 프로그램을 작성 하는 방법에 대해 알아봅니다.
+title: F# 설명서
+summary: .NET에서 F# 프로그래밍 언어를 사용하여 애플리케이션을 작성하는 방법에 대해 알아봅니다.
 metadata:
-  title: F#문서-시작, 자습서, 참조.
-  description: 프로그래밍 F# 배우기-개발자를 위한 새로운 F#개발자와 숙련 F# 된/.net 개발자 용
+  title: F# 문서 - 시작, 자습서, 참조.
+  description: F# 프로그래밍 알아보기 - F# 초급자와 숙련된 F#/.NET 개발자용
   ms.topic: landing-page
   author: cartermp
   ms.author: phcart
-  ms.date: 11/25/2019
-  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
-  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
-  ms.translationtype: MT
+  ms.date: 08/29/2020
+  ms.openlocfilehash: 7d7f9492bcd41975616ddd4d8f552aea5217b2d7
+  ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+  ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/28/2019
-  ms.locfileid: "74569495"
+  ms.lasthandoff: 09/01/2020
+  ms.locfileid: "89271856"
 landingContent:
-- title: 프로그램에 대 한 자세한 정보F#
+- title: F#에서 프로그래밍하는 방법 알아보기
   linkLists:
   - linkListType: get-started
     links:
-    - text: 무엇 F#인가요?
+    - text: F#이란?
       url: what-is-fsharp.md
     - text: F# 설치
       url: get-started/install-fsharp.md
-    - text: Visual Studio F# 에서 시작 하기
+    - text: Visual Studio에서 F# 시작
       url: get-started/get-started-visual-studio.md
-    - text: Visual Studio Code F# 에서 시작
+    - text: Visual Studio Code에서 F# 시작
       url: get-started/get-started-vscode.md
   - linkListType: download
     links:
     - text: .NET Core SDK 다운로드
       url: https://dotnet.microsoft.com/download
-- title: F#기초적인
+- title: F# 기본 사항
   linkLists:
   - linkListType: overview
     links:
@@ -51,19 +51,19 @@ landingContent:
       url: style-guide/conventions.md
   - linkListType: tutorial
     links:
-    - text: 비동기 프로그래밍F#
+    - text: F#의 비동기 프로그래밍
       url: tutorials/asynchronous-and-concurrent-programming/async.md
-- title: 의 새로운 기능F#
+- title: F#의 새 기능
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 4.7의 F# 새로운 기능
+    - text: F# 4.7의 새로운 기능
       url: whats-new/fsharp-47.md
-    - text: 4.6의 F# 새로운 기능
+    - text: F# 4.6의 새로운 기능
       url: whats-new/fsharp-46.md
-    - text: 4.5의 F# 새로운 기능
+    - text: F# 4.5의 새로운 기능
       url: whats-new/fsharp-45.md
-- title: F#언어 참조
+- title: F# 언어 참조
   linkLists:
   - linkListType: reference
     links:
@@ -75,5 +75,11 @@ landingContent:
       url: language-reference/symbol-and-operator-reference/index.md
     - text: 함수
       url: language-reference/functions/index.md
-    - text: F#종류
+    - text: F# 형식
       url: language-reference/fsharp-types.md
+- title: F# 주요 라이브러리 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: FSharp.Core API 참조
+      url: https://fsharp.github.io/fsharp-core-docs/

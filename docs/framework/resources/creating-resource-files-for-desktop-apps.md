@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865179"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957439"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET 앱의 리소스 파일 만들기
 
@@ -206,5 +206,5 @@ csc greeting.cs -resource:GreetingResources.resources
 ## <a name="see-also"></a>참조
 
 - <xref:System.Resources>
-- [데스크톱 앱의 리소스](index.md)
+- [.NET 앱의 리소스](index.md)
 - [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)

@@ -1,4 +1,5 @@
 ---
+description: C#의 기본 제공 숫자 형식 간 암시적 및 명시적 변환에 대해 알아봅니다.
 title: 기본 제공 숫자 변환 - C# 참조
 ms.date: 10/22/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121460"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142247"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>기본 제공 숫자 변환(C# 참조)
 

@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 67762481d3a56b8473e643f71b8df909b6e54fc6
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713354"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867544"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -15,13 +15,13 @@ ms.locfileid: "84713354"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="publish-the-app"></a>앱 게시
 
 1. Mac용 Visual Studio를 시작합니다.
 
-1. [Mac용 Visual Studio에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 HelloWorld 프로젝트를 엽니다.
+1. [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-mac.md)에서 만든 HelloWorld 프로젝트를 엽니다.
 
 1. Visual Studio에서 애플리케이션의 릴리스 버전을 빌드하고 있는지 확인합니다. 필요한 경우 도구 모음의 빌드 구성 설정을 **디버그**에서 **릴리스**로 변경합니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "84713354"
 
 1. 터미널을 열고 *publish* 폴더로 이동합니다. 이를 위해 `cd`를 입력한 다음 앞서 복사한 경로를 붙여넣습니다. 예를 들어:
 
-   ```
+   ```console
    cd ~/Projects/HelloWorld/HelloWorld/bin/Release/netcoreapp3.1/publish/
    ```
 
@@ -88,4 +88,4 @@ ms.locfileid: "84713354"
 이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
 
 > [!div class="nextstepaction"]
-> [Mac용 Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)
+> [Mac용 Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)

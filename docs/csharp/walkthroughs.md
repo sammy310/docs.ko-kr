@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810601"
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 
@@ -22,7 +22,7 @@ ms.locfileid: "87381894"
 
 ## <a name="in-this-section"></a>단원 내용
 
-- [Async 및 Await를 사용하여 웹에 액세스](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)\
+- [완료되면 비동기 작업 처리](./programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)\
   [async](./language-reference/keywords/async.md) 및 [await](./language-reference/operators/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.
 
 - [C# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만든 다음 JavaScript에서 호출](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)\

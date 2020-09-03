@@ -4,12 +4,12 @@ description: .NET Core를 설치할 수 있는 macOS 버전에 대해 알아봅�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302934"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132757"
 ---
 # <a name="install-net-core-on-macos"></a>macOS에 .NET Core 설치
 
@@ -79,10 +79,10 @@ SDK는 .NET Core 앱과 라이브러리를 빌드하고 게시하는 데 사용�
 
 | .NET Core 버전 | macOS                 | 아키텍처 |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.1               | High Sierra(10.13+)  | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra(10.13+)  | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.1               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개발자 ID로 배포되는 모든 소프트웨어는 공증을 받아야 합니다. 이 요구 사항은 .NET Core 런타임, .NET Core SDK, 그리고 .NET Core로 만든 소프트웨어에 적용됩니다.
 
@@ -159,7 +159,7 @@ export PATH=$PATH:$HOME/dotnet
 
 ## <a name="install-with-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 설치
 
-Mac용 Visual Studio는 **.NET Core** 워크로드가 선택된 경우 .NET Core SDK를 설치합니다. macOS에서 .NET Core 개발을 시작하려면 [Mac용 Visual Studio 2019 설치](/visualstudio/mac/installation)를 참조하세요. 최신 릴리스인 .NET Core 3.1의 경우 Mac용 Visual Studio 8.4 미리 보기를 사용해야 합니다.
+Mac용 Visual Studio는 **.NET Core** 워크로드가 선택된 경우 .NET Core SDK를 설치합니다. macOS에서 .NET Core 개발을 시작하려면 [Mac용 Visual Studio 2019 설치](/visualstudio/mac/installation)를 참조하세요. 최신 릴리스인 .NET Core 3.1의 경우 Mac용 Visual Studio 8.4를 사용해야 합니다.
 
 [![macOS Mac용 Visual Studio 2019 및 .NET Core 워크로드의 특징](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 

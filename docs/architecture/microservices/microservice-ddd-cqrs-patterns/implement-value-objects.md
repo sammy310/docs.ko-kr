@@ -1,13 +1,13 @@
 ---
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 08/21/2020
+ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805741"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811121"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -56,7 +56,7 @@ public abstract class ValueObject
         return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -65,31 +65,16 @@ public abstract class ValueObject
             return false;
         }
 
-        ValueObject other = (ValueObject)obj;
-        IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-        IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (ReferenceEquals(thisValues.Current, null) ^
-                ReferenceEquals(otherValues.Current, null))
-            {
-                return false;
-            }
+        var other = (ValueObject)obj;
 
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
-         .Select(x => x != null ? x.GetHashCode() : 0)
-         .Aggregate((x, y) => x ^ y);
+        return GetEqualityComponents()
+            .Select(x => x != null ? x.GetHashCode() : 0)
+            .Aggregate((x, y) => x ^ y);
     }
     // Other utility methods
 }
@@ -106,7 +91,7 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    private Address() { }
+    public Address() { }
 
     public Address(string street, string city, string state, string country, string zipcode)
     {
@@ -117,7 +102,7 @@ public class Address : ValueObject
         ZipCode = zipcode;
     }
 
-    protected override IEnumerable<object> GetAtomicValues()
+    protected override IEnumerable<object> GetEqualityComponents()
     {
         // Using a yield return statement to return each element one at a time
         yield return Street;
@@ -180,7 +165,7 @@ DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이�
 
 - 소유된 형식의 컬렉션인 경우 독립 구성 요소(EF Core 2.2 이상에서 지원됨).
 
-예를 들어 eShopOnContainers의 주문 도메인 모델에서, 주문 엔터티의 일부로 주소 값 개체가 소유자 엔터티 내부의 소유된 엔터티 형식으로 구현되며, 이것이 주문 엔터티입니다. 주소는 도메인 모델에 정의된 ID 속성이 없는 형식입니다. 특정 주문의 배송 주소를 지정하기 위한 Order 형식 속성으로 사용됩니다.
+예를 들어 eShopOnContainers의 주문 도메인 모델에서, 주문 엔터티의 일부로 주소 값 개체가 소유자 엔터티 내부의 소유된 엔터티 형식으로 구현되며, 이것이 주문 엔터티입니다. `Address`는 도메인 모델에 정의된 ID 속성이 없는 형식입니다. 특정 주문의 배송 주소를 지정하기 위한 Order 형식 속성으로 사용됩니다.
 
 규칙에 따라, 소유된 형식에 대해 섀도 기본 키가 만들어지며 테이블 분할을 사용하여 소유자와 동일한 테이블에 매핑됩니다. 따라서 기존 .NET Framework의 EF6에서 복합 형식이 사용되는 방식과 유사하게 소유된 형식을 사용할 수 있습니다.
 
@@ -295,7 +280,7 @@ public class Address
 
 - 소유된 형식에는 `ModelBuilder.Entity<T>()`를 호출할 수 없습니다(현재 디자인임).
 
-- 동일한 테이블(예: 테이블 분할 사용)에서 소유자로 매핑되는 선택적(즉, null 허용) 소유된 형식이 지원되지 않습니다. 각 속성에 대해 매핑이 수행되기 때문에 null 복합 값에 대한 별도 sentinel이 전체로 포함되지 않습니다.
+- 동일한 테이블(예: 테이블 분할 사용)에서 소유자로 매핑되는 선택적(즉, null 허용) 소유된 형식이 지원되지 않습니다. 각 속성에 대해 매핑이 수행되기 때문에 전체로서 null 복합 값의 별도 sentinel이 없습니다.
 
 - 소유된 형식에 대한 상속 매핑이 지원되지 않지만, 다른 소유된 형식과 상속 계층 구조가 동일한 두 가지 리프 형식을 매핑할 수 있습니다. EF Core는 이러한 형식이 동일한 계층 구조의 일부라는 사실의 근거가 되지 못합니다.
 

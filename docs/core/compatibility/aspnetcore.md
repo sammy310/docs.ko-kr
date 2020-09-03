@@ -2,21 +2,27 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 07/17/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720243"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957732"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
 ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합니다.
 
-이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.
+특정 버전의 호환성이 손상되는 변경에 해당하는 다음 링크 중 하나를 선택합니다.
+
+* [ASP.NET Core 5.0](#aspnet-core-50)
+* [ASP.NET Core 3.1](#aspnet-core-31)
+* [ASP.NET Core 3.0](#aspnet-core-30)
+
+이 페이지에는 ASP.NET Core 3.0, 3.1 및 5.0의 다음과 같은 호환성이 손상되는 변경이 설명되어 있습니다.
 
 - [사용되지 않는 위조 방지, CORS, 진단, MVC 및 라우팅 API가 제거됨](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [인증: Google + 사용 중단](#authentication-google-deprecated-and-replaced)
@@ -69,11 +75,13 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [지역화: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
+- [미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지](#middleware-database-error-page-marked-as-obsolete)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult를 Microsoft.AspNetCore.Mvc.Core로 이동](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: 미리 컴파일 도구가 사용되지 않음](#mvc-precompilation-tool-deprecated)
 - [MVC: 형식이 내부로 변경됨](#mvc-pubternal-types-changed-to-internal)
 - [MVC: 웹 API 호환성 shim이 제거됨](#mvc-web-api-compatibility-shim-removed)
+- [Razor: RazorTemplateEngine API가 제거됨](#razor-razortemplateengine-api-removed)
 - [Razor: 런타임 컴파일이 패키지로 이동됨](#razor-runtime-compilation-moved-to-a-package)
 - [보안: 쿠키 이름 인코딩이 제거됨](#security-cookie-name-encoding-removed)
 - [보안: IdentityModel NuGet 패키지 버전이 업데이트됨](#security-identitymodel-nuget-package-versions-updated)
@@ -159,6 +167,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 
@@ -343,6 +355,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 

@@ -1,7 +1,7 @@
 ---
 description: C# 컴파일러 옵션
 title: C# 컴파일러 옵션
-ms.date: 07/20/2015
+ms.date: 08/28/2020
 f1_keywords:
 - cs.build.options
 helpviewer_keywords:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: bcb246055ecb553bbefad2a0d5c95bf6a083ee6f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 502bd83ae52be9ae2f914847bb6bf7c7f2a0c411
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125529"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271817"
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 
@@ -30,7 +30,7 @@ Visual Studio에서는 *web.config* 파일에서 컴파일러 옵션을 설정�
 
 - [csc.exe를 사용한 명령줄 빌드](command-line-building-with-csc-exe.md) 명령줄에서 Visual C# 애플리케이션을 빌드하는 방법에 대한 정보를 제공합니다.
 
-- [Visual Studio 명령줄에 대한 환경 변수 설정 방법](how-to-set-environment-variables-for-the-visual-studio-command-line.md)*vsvars32.bat*를 실행하여 명령줄 빌드를 사용하도록 설정하는 단계를 제공합니다.
+- [Visual Studio 명령줄에 대한 환경 변수 설정 방법](how-to-set-environment-variables-for-the-visual-studio-command-line.md)*VsDevCmd.bat*를 실행하여 명령줄 빌드를 사용하도록 설정하는 단계를 제공합니다.
 
 - [C# 컴파일러 옵션 범주별 목록](listed-by-category.md) 컴파일러 옵션의 범주별 목록입니다.
 

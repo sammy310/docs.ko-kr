@@ -3,18 +3,18 @@ title: .NET용 Azure 라이브러리의 인증 이해
 description: .NET용 Azure SDK를 사용하여 인증하는 다양한 방법을 설명합니다.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811381"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>.NET용 Azure SDK를 사용하여 인증
 
 ## <a name="recommended-azureidentity"></a>권장: Azure.Identity
 
-.NET용 Azure SDK의 최신 패키지는 인증하는 데 일반적인 인증 패키지인 `Azure.Identity`를 사용합니다. 이 문서의 뒷부분에 설명된 다른 인증 메커니즘보다는 `Azure.Identity`를 사용하는 것이 좋습니다. `Azure.Identity`에서 제공하는 자격 증명을 지원하는 패키지는 `Azure.Core`를 기준으로 빌드되며 *Azure.* 로 시작하는 패키지 식별자를 가집니다. `Azure.Core`를 사용하는 패키지의 인벤토리에 대해서는 [패키지 목록을 참조하세요](packages.md).
+.NET용 Azure SDK의 최신 패키지는 인증하는 데 일반적인 인증 패키지인 `Azure.Identity`를 사용합니다. 이 문서의 뒷부분에 설명된 다른 인증 메커니즘보다는 `Azure.Identity`를 사용하는 것이 좋습니다. `Azure.Identity`에서 제공하는 자격 증명을 지원하는 패키지는 `Azure.Core`를 기준으로 빌드되며 *Azure*로 시작하는 패키지 식별자를 가집니다. `Azure.Core`를 사용하는 패키지의 인벤토리에 대해서는 [패키지 목록을 참조하세요](packages.md).
 
 프로젝트에서 `Azure.Identity`를 사용하는 방법에 관한 자세한 내용은 [.NET용 Azure ID 클라이언트](/dotnet/api/overview/azure/identity-readme) 설명서를 참조하세요.
 

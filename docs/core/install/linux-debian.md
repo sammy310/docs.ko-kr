@@ -4,11 +4,12 @@ description: Debian에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d4a54a8a5354a1430141d2c06d4aa90dbafc3edf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619496"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134941"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Debian에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -48,7 +49,7 @@ ms.locfileid: "85619496"
 
 ```bash
 wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-dpkg -i packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
 ```
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
@@ -98,7 +99,7 @@ sudo apt-get upgrade
 
 이 섹션에서는 APT를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
 
-### <a name="unable-to-locate"></a>찾을 수 없음
+### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>찾을 수 없음 \\ 일부 패키지를 설치할 수 없음
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
 

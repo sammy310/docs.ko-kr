@@ -1,4 +1,5 @@
 ---
+description: C#의 기본 제공 문자 형식에 관한 자세한 정보
 title: char 형식- C# 참조
 ms.date: 05/11/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5c15cfb8050bc93e055dbde53308f9460ff90bc8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205786"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126387"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
@@ -55,7 +56,7 @@ ms.locfileid: "83205786"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)

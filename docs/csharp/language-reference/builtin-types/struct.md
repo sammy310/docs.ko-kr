@@ -1,4 +1,5 @@
 ---
+description: C#의 구조체 형식에 관한 자세한 정보
 title: 구조체 형식 - C# 참조
 ms.date: 04/21/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062498"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132731"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -38,14 +39,14 @@ C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 
 - 모든 필드 선언에는 [`readonly` 한정자](../keywords/readonly.md)가 있어야 합니다.
 - 자동 구현된 속성을 포함하여 모든 속성은 읽기 전용이어야 합니다.
 
-이렇게 하면 `readonly` 구조체의 멤버가 구조체의 상태를 수정하지 않습니다.
+이렇게 하면 `readonly` 구조체의 멤버가 구조체의 상태를 수정하지 않습니다. C# 8.0 이상에서는 생성자를 제외한 다른 인스턴스 멤버는 암시적으로 [`readonly`](#readonly-instance-members)임을 의미합니다.
 
 > [!NOTE]
 > `readonly` 구조체에서 변경 가능한 참조 형식의 데이터 멤버는 여전히 자체 상태를 변경할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601> 인스턴스를 바꿀 수는 없지만 새 요소를 추가할 수는 있습니다.
 
 ## <a name="readonly-instance-members"></a>`readonly` 인스턴스 멤버
 
-C# 8.0부터 `readonly` 한정자를 사용하여 인스턴스 멤버가 구조체의 상태를 수정하지 않도록 선언할 수도 있습니다. 전체 구조체 형식을 `readonly`로 선언할 수 없는 경우 `readonly` 한정자를 사용하여 구조체의 상태를 수정하지 않는 인스턴스 멤버를 표시합니다. `readonly` 구조체에서 모든 인스턴스 멤버는 암시적으로 `readonly`입니다.
+C# 8.0부터 `readonly` 한정자를 사용하여 인스턴스 멤버가 구조체의 상태를 수정하지 않도록 선언할 수도 있습니다. 전체 구조체 형식을 `readonly`로 선언할 수 없는 경우 `readonly` 한정자를 사용하여 구조체의 상태를 수정하지 않는 인스턴스 멤버를 표시합니다.
 
 `readonly` 인스턴스 멤버 내에서 구조체의 인스턴스 필드에 할당할 수 없습니다. 그러나 `readonly` 멤버는`readonly`가 아닌 멤버를 호출할 수 있습니다. 이 경우 컴파일러는 구조체 인스턴스의 복사본을 만들고 해당 복사본에서 `readonly`가 아닌 멤버를 호출합니다. 따라서 원래 구조체 인스턴스는 수정되지 않습니다.
 

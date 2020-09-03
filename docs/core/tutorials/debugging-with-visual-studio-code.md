@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 description: Visual Studio Code를 사용하여 .NET Core 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 05/26/2020
-ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702129"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118301"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 
@@ -15,7 +15,7 @@ ms.locfileid: "84702129"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "84702129"
 
 1. Visual Studio Code를 시작합니다.
 
-1. [Visual Studio Code에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 프로젝트의 폴더를 엽니다.
+1. [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 프로젝트의 폴더를 엽니다.
 
 ## <a name="set-a-breakpoint"></a>중단점 설정
 
@@ -35,7 +35,7 @@ ms.locfileid: "84702129"
 
 1. *Program.cs* 파일을 엽니다.
 
-1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 ‘중단점’을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. <kbd>F9</kbd>를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행** > **중단점 설정/해제**를 선택해도 중단점을 설정할 수 있습니다.
+1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 ‘중단점’을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. <kbd>F9</kbd> 키를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행** > **중단점 설정/해제**를 선택해도 중단점을 설정할 수 있습니다.
 
    Visual Studio Code에서는 왼쪽 여백에 빨간 점을 표시하여 중단점이 설정된 줄을 표시합니다.
 
@@ -51,13 +51,13 @@ ms.locfileid: "84702129"
 
    원본:
 
-   ```
+   ```json
    "console": "internalConsole",
    ```
 
    대상:
 
-   ```
+   ```json
    "console": "integratedTerminal",
    ```
 
@@ -69,7 +69,7 @@ ms.locfileid: "84702129"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code에서 디버그 탭 열기":::
 
-1. **.NET Core 시작(콘솔)** 옆에 있는 창 맨 위의 녹색 화살표를 선택합니다. 메뉴에서 **실행** > **디버깅 시작**을 선택해도 디버깅 모드에서 프로그램을 시작할 수 있습니다.
+1. **.NET Core 시작(콘솔)** 옆에 있는 창 맨 위의 녹색 화살표를 선택합니다. <kbd>F5</kbd> 키를 누르거나 메뉴에서 **실행** > **디버깅 시작**을 선택해도 디버깅 모드에서 프로그램을 시작할 수 있습니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="디버깅 시작":::
 

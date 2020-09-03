@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864152"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810939"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
 
@@ -24,7 +24,7 @@ ms.locfileid: "86864152"
 
 메서드는 [클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/builtin-types/struct.md) 또는 [인터페이스](../interfaces/index.md)에서 액세스 수준(예: `public` 또는 `private`), 선택적 한정자(예: `abstract` 또는 `sealed`), 반환 값, 메서드 이름 및 기타 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.
 
-> [!NOTE]
+> [!IMPORTANT]
 > 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 부분입니다.
 
 메서드 매개 변수는 괄호로 묶고 쉼표로 구분합니다. 빈 괄호는 메서드에 매개 변수가 필요하지 않음을 나타냅니다. 이 클래스에는 다음 네 개의 메서드가 있습니다.
@@ -129,13 +129,13 @@ public static void FillMatrix(int[,] matrix)
 
 다음 예제에서 `DelayAsync` 는 반환 형식이 <xref:System.Threading.Tasks.Task%601>인 비동기 메서드입니다. `DelayAsync` 에는 정수를 반환하는 `return` 문이 포함됩니다. 따라서 `DelayAsync` 의 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `await` 의 `DoSomethingAsync` 식 계산에서 다음 문과 같이 정수가 생성됩니다. `int result = await delayTask`.
 
-`startButton_Click` 메서드는 반환 형식이 void인 비동기 메서드의 한 가지 예입니다. `DoSomethingAsync` 는 비동기 메서드이므로 다음 문과 같이 `DoSomethingAsync` 호출에 대한 작업을 기다려야 합니다. `await DoSomethingAsync();`. `startButton_Click` 메서드에 `async` 식이 포함되므로 `await` 한정자를 사용하여 해당 메서드를 정의해야 합니다.
+`Main` 메서드는 반환 형식이 <xref:System.Threading.Tasks.Task>인 비동기 메서드의 한 가지 예입니다. `DoSomethingAsync` 메서드로 이동하며, 해당 메서드는 한 줄로 표현되므로 `async` 및 `await` 키워드를 생략할 수 있습니다. `DoSomethingAsync` 는 비동기 메서드이므로 다음 문과 같이 `DoSomethingAsync` 호출에 대한 작업을 기다려야 합니다. `await DoSomethingAsync();`.
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 비동기 메서드는 모든 [ref](../../language-reference/keywords/ref.md) 또는 [out](../../language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
 
-비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../concepts/async/index.md), [비동기 프로그램의 제어 흐름](../concepts/async/control-flow-in-async-programs.md) 및 [비동기 반환 형식](../concepts/async/async-return-types.md)을 참조하세요.
+비동기 메서드에 관한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../concepts/async/index.md) 및 [비동기 반환 형식](../concepts/async/async-return-types.md)을 참조하세요.
 
 ## <a name="expression-body-definitions"></a>식 본문 정의
 

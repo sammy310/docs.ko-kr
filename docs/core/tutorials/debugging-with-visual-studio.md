@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 743603cb037406948190c7090ca3527bfc40db18
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702069"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957227"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그
 
@@ -19,7 +19,7 @@ ms.locfileid: "84702069"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio 2019에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
@@ -27,11 +27,11 @@ ms.locfileid: "84702069"
 
 디버그 구성에서 프로그램은 완전히 기호화된 디버그 정보를 사용하여 컴파일되며 최적화되지 않습니다. 최적화하면 소스 코드와 생성된 명령 간의 관계가 복잡해지므로 디버깅이 복잡해집니다. 프로그램의 릴리스 구성은 완전히 최적화되고, 기호화된 디버그 정보를 포함하지 않습니다.
 
- 기본적으로 Visual Studio Code는 디버그 빌드 구성을 사용하므로 디버깅 전에 변경할 필요가 없습니다.
+ 기본적으로 Visual Studio는 디버그 빌드 구성을 사용하므로 디버깅 전에 변경할 필요가 없습니다.
 
 1. Visual Studio를 시작합니다.
 
-1. [Visual Studio 2019에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 프로젝트를 엽니다.
+1. [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 프로젝트를 엽니다.
 
    현재 빌드 구성은 도구 모음에 표시됩니다. 다음 도구 모음 그림은 Visual Studio가 앱의 디버그 버전을 컴파일하도록 구성되어 있음을 보여줍니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "84702069"
 
 중단점은 중단점이 설정된 줄이 실행되기 전에 애플리케이션 실행을 일시적으로 중단합니다.
 
-1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 해당 줄에 중단점을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다.  코드 줄에 커서를 배치한 다 메뉴 막대에서 **디버그** > **중단점 설정/해제**를 선택하여 중단점을 설정할 수도 있습니다.
+1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 해당 줄에 중단점을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다.  중단점을 설정하는 다른 방법은 코드 줄에 커서를 배치한 다음, <kbd>F9</kbd> 키를 누르거나 메뉴 모음에서 **디버그** > **중단점 설정/해제**를 선택하는 것입니다.
 
    다음 이미지에서 볼 수 있듯이 Visual Studio는 중단점이 설정된 줄을 강조 표시하고 왼쪽 여백에 빨간 점을 표시합니다.
 
@@ -127,7 +127,7 @@ ms.locfileid: "84702069"
 
 1. 아무 키나 눌러 콘솔 창을 닫고 디버깅을 중지합니다.
 
-1. 코드 창 왼쪽 여백에 있는 점을 클릭하여 중단점을 지웁니다. 중단점을 지우는 또 다른 방법은 코드 줄이 선택되어 있는 동안 **디버그 > 중단점 설정/해제**를 선택하는 것입니다.
+1. 코드 창 왼쪽 여백에 있는 점을 클릭하여 중단점을 지웁니다. <kbd>F9</kbd> 키를 누르거나 코드 줄이 선택된 상태로 **디버그 > 중단점 설정/해제**를 선택해도 중단점을 지울 수 있습니다.
 
 ## <a name="step-through-a-program"></a>단계별 프로그램 실행
 

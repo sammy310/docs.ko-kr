@@ -2,21 +2,21 @@
 title: dotnet-dump - .NET Core
 description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
 ms.date: 10/14/2019
-ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888204"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140934"
 ---
-# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(`dotnet-dump`)
+# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(dotnet-dump)
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
 
 > [!NOTE]
 > `dotnet-dump`는 macOS에서 지원되지 않습니다.
 
-## <a name="installing-dotnet-dump"></a>`dotnet-dump` 설치
+## <a name="install-dotnet-dump"></a>dotnet-dump 설치
 
 `dotnet-dump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-dump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
 
@@ -223,3 +223,8 @@ Microsoft .NET Core SDK Linux Docker 이미지에서 일부 `dotnet-dump` 명령
 > 처리되지 않은 예외: System.DllNotFoundException: 'libdl.so' 공유 라이브러리 또는 해당 종속성 예외 중 하나를 로드할 수 없습니다.
 
 이 문제를 해결하려면 "libc6-dev" 패키지를 설치하세요.
+
+## <a name="see-also"></a>참고 항목
+
+- [메모리 덤프 수집 및 분석 블로그](https://devblogs.microsoft.com/dotnet/collecting-and-analyzing-memory-dumps/)
+- [힙 분석 도구(dotnet-gcdump)](dotnet-gcdump.md)

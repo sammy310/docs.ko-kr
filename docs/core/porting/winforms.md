@@ -4,12 +4,12 @@ description: Windows용 .NET Core에 .NET Framework Windows Forms 애플리케�
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206130"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118548"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
 
@@ -26,7 +26,7 @@ ms.locfileid: "83206130"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 수행할 디자이너 작업용 [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 이상. [Visual Studio 미리 보기 버전](https://visualstudio.microsoft.com/vs/preview/)으로 업데이트하는 것이 좋습니다.
+- 수행할 디자이너 작업용 [Visual Studio 2019 버전 16.5 이상](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16). [Visual Studio 최신 버전](https://visualstudio.microsoft.com/vs/)으로 업데이트하는 것이 좋습니다.
 
   다음 Visual Studio 워크로드를 설치합니다.
   
@@ -37,7 +37,7 @@ ms.locfileid: "83206130"
 - C#로 코딩된 프로젝트입니다.
 
 > [!NOTE]
-> .NET Core 3.0 프로젝트는 **Visual Studio 2019** 이상 버전에서만 지원됩니다. **Visual Studio 2019 16.5 Preview 1 버전**부터는 .NET Core Windows Forms 디자이너도 지원됩니다.
+> .NET Core Windows Forms 프로젝트는 Visual Studio 2019 이상 버전에서 지원됩니다. .NET Core Windows Forms 디자이너는 Visual Studio 2019 버전 16.5부터 지원됩니다.
 >
 > 디자이너를 사용하도록 설정하려면 **도구** > **옵션** > **환경** > **미리 보기 기능**으로 이동하여**Use the preview Windows Forms designer for .NET Core apps**(.NET Core 앱에 미리 보기 Windows Forms 디자이너 사용) 옵션을 선택하세요.
 

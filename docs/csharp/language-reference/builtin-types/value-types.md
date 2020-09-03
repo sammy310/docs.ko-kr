@@ -1,4 +1,5 @@
 ---
+description: C#의 값 형식, 관련 종류 및 기본 제공 항목에 관한 자세한 정보
 title: 값 형식 - C# 참조
 ms.date: 01/22/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0a05b2b0f3f2a8377fdba6144b8aeb12bdee1086
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 7826e71fee235d32655ccfbc9060c3bbb48d76c5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86172953"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134772"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -66,7 +67,7 @@ C# 7.0부터는 C#에서 [값 튜플](value-tuples.md)을 지원합니다. 값 �
 - [단순 형식](~/_csharplang/spec/types.md#simple-types)
 - [변수](~/_csharplang/spec/variables.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>

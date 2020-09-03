@@ -1,4 +1,5 @@
 ---
+description: /doc(C# 컴파일러 옵션)
 title: /doc(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73422968"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125750"
 ---
 # <a name="-doc-c-compiler-options"></a>/doc(C# 컴파일러 옵션)
 **-doc** 옵션을 사용하면 XML 파일에 문서 주석을 삽입할 수 있습니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "73422968"
   
 3. **XML 문서 파일** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
