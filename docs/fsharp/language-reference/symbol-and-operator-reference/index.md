@@ -1,22 +1,19 @@
 ---
 title: 기호 및 연산자 참조
 description: F# 프로그래밍 언어에 사용되는 기호와 연산자에 대해 알아보세요.
-ms.date: 02/11/2019
+ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 4c3af80e8f5a686535b7c09579d29bb3da8591a3
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855400"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359092"
 ---
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
 이 문서에는 F# 언어에서 사용되는 기호와 연산자의 표가 나와 있습니다.
-
-> [!NOTE]
-> F#에 대한 docs.microsoft.com API 참조가 완전하지 않습니다. 끊어진 링크가 나타나는 경우 [F# 핵심 라이브러리 설명서](https://fsharp.github.io/fsharp-core-docs/)를 참조하세요.
 
 ## <a name="table-of-symbols-and-operators"></a>기호 및 연산자 표
 
@@ -76,9 +73,12 @@ ms.locfileid: "87855400"
 |`<>?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "같지 않음" 연산을 계산합니다.<br /></li></ul>|
 |`<=`|[산술 연산자](arithmetic-operators.md)|<ul><li>좌변이 우변 이하이면 `true`를 반환하고 이상이면 `false`를 반환합니다.<br /></li></ul>|
 |`<=?`|[null 허용 연산자](nullable-operators.md)|<ul><li>우변이 nullable 형식이면 "작거나 같음" 연산을 계산합니다.<br /></li></ul>|
+|<code>&#124;></code>|[함수](../functions/index.md)|<ul><li>좌변의 결과를 우변의 함수에 전달합니다(정방향 파이프 연산자).<br /></li></ul>|
+|<code>&#124;&#124;></code>|[&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; 함수](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%3E%20))|<ul><li>좌변의 두 인수 튜플을 우변의 함수에 전달합니다.<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; 함수](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%7C%3E%20))|<ul><li>좌변의 세 인수 튜플을 우변의 함수에 전달합니다.<br /></li></ul>|
 |<code>&lt;&#124;</code>|[함수](../functions/index.md)|<ul><li>우변의 식 결과를 좌변의 함수에 전달합니다(역방향 파이프 연산자).<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[연산자&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>우변의 두 인수 튜플을 좌변의 함수에 전달합니다.<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[연산자&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>우변의 세 인수 튜플을 좌변의 함수에 전달합니다.<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; 함수](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%20))|<ul><li>우변의 두 인수 튜플을 좌변의 함수에 전달합니다.<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; 함수](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%7C%20))|<ul><li>우변의 세 인수 튜플을 좌변의 함수에 전달합니다.<br /></li></ul>|
 |`<@...@>`|[코드 인용](../code-quotations.md)|<ul><li>형식화된 코드 인용을 구분합니다.<br /></li></ul>|
 |`<@@...@@>`|[코드 인용](../code-quotations.md)|<ul><li>형식화되지 않은 코드 인용을 구분합니다.<br /></li></ul>|
 |`=`|[산술 연산자](arithmetic-operators.md)|<ul><li>좌변이 우변과 같으면 `true`를 반환하고 같지 않으면 `false`를 반환합니다.<br /></li></ul>|
@@ -108,9 +108,6 @@ ms.locfileid: "87855400"
 |<code>&#124;</code>|[일치 식](../match-expressions.md)|<ul><li>개별 일치 케이스, 구분된 개별 공용 구조체 케이스 및 열거형 값을 구분합니다.<br /></li></ul>|
 |<code>&#124;&#124;</code>|[부울 연산자](boolean-operators.md)|<ul><li>부울 OR 연산을 계산합니다.<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[비트 연산자](bitwise-operators.md)|<ul><li>비트 OR 연산을 계산합니다.<br /></li></ul>|
-|<code>&#124;></code>|[함수](../functions/index.md)|<ul><li>좌변의 결과를 우변의 함수에 전달합니다(정방향 파이프 연산자).<br /></li></ul>|
-|<code>&#124;&#124;></code>|[연산자&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>좌변의 두 인수 튜플을 우변의 함수에 전달합니다.<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[연산자&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; 함수](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>좌변의 세 인수 튜플을 우변의 함수에 전달합니다.<br /></li></ul>|
 |`~~`|[연산자 오버로드](../operator-overloading.md)|<ul><li>단항 부정 연산자에 대한 오버로드를 선언하는 데 사용됩니다.<br /></li></ul>|
 |`~~~`|[비트 연산자](bitwise-operators.md)|<ul><li>비트 NOT 연산을 계산합니다.<br /></li></ul>|
 |`~-`|[연산자 오버로드](../operator-overloading.md)|<ul><li>단항 빼기 연산자 오버로드를 선언하는 데 사용됩니다.<br /></li></ul>|
