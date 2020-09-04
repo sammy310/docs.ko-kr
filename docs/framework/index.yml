@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135908"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379176"
 landingContent:
 - title: .NET Framework에 대해 알아보기
   linkLists:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: Windows 서비스 설치 및 제거
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Windows Forms 앱 만들기
+- title: 데스크톱 앱 만들기
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows Forms 개요
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: Windows Forms 디자이너 시작
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: 명령줄에서 Windows Forms 앱 만들기
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: ComboBox, ListBox 및 CheckedListBox 컨트롤에서 항목 추가 및 제거
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: 스레드로부터 안전한 컨트롤 호출
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: 데스크톱 가이드 소개
+      url: /dotnet/desktop/
+    - text: .NET Framework WPF
+      url: wpf/index.md
+    - text: .NET Framework Windows Forms
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: WPF 앱 만들기
   linkLists:
   - linkListType: overview
