@@ -2,12 +2,12 @@
 title: C# 자습서
 description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 ms.date: 10/25/2018
-ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345101"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414822"
 ---
 # <a name="c-tutorials"></a>C# 자습서
 
@@ -56,7 +56,7 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 
 ## <a name="general-tutorials"></a>일반 자습서
 
-다음 자습서를 사용하면 [.NET Core](../../core/index.yml)를 사용하여 C# 프로그램을 빌드할 수 있습니다.
+다음 자습서를 사용하면 [.NET Core](../../core/introduction.md)를 사용하여 C# 프로그램을 빌드할 수 있습니다.
 
 * [콘솔 애플리케이션](console-teleprompter.md): 콘솔 I/O, 콘솔 애플리케이션의 구조 및 태스크 기반 비동기 프로그래밍 모델의 기본 사항에 대해 설명합니다.
 * [REST 클라이언트](console-webapiclient.md): C# 언어의 웹 통신, JSON serialization 및 개체 지향 기능에 대해 설명합니다.
