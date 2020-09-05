@@ -6,12 +6,12 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1797afe3e6347da1aef916d13be7678b7b8d4acf
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74431053"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495175"
 ---
 # <a name="run-time-settings-schema"></a>런타임 설정 스키마
 
@@ -45,7 +45,7 @@ ms.locfileid: "74431053"
 &nbsp;&nbsp;&nbsp;&nbsp;[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<etwEnable>](etwenable-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent>](gcconcurrent-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup>](gccpugroup-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)\
@@ -78,7 +78,7 @@ ms.locfileid: "74431053"
 
 ## <a name="alphabetical-list-of-runtime-elements"></a>사전순 요소 목록 \<runtime>
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<add>](add-element-for-namedcaches.md)|메모리 캐시용으로 명명된 캐시를 `namedCaches` 컬렉션에 추가합니다.|
 |[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|가장을 수행하는 방법과 관계없이 Windows ID가 항상 비동기 지점 간을 흐르도록 지정합니다.|
