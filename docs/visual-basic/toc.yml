@@ -1,7 +1,9 @@
 - name: Visual Basic 가이드
   href: index.yml
 - name: Visual Basic의 새로운 기능
-  href: getting-started/whats-new.md
+  href: whats-new/index.md
+- name: 컴파일러의 호환성이 손상되는 변경
+  href: whats-new/breaking-changes.md
 - name: 시작
   href: getting-started/index.md
   items:
@@ -535,7 +537,7 @@
               href: language-reference/operators/addition-operator.md
             - name: += 연산자
               href: language-reference/operators/addition-assignment-operator.md
-            - name: = 연산자
+            - name: '= 연산자'
               href: language-reference/operators/assignment-operator.md
             - name: '- 연산자'
               href: language-reference/operators/subtraction-operator.md
