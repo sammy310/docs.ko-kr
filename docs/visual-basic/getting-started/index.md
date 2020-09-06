@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a56532a33bc0ef0aae73de7f80e533038212c5ec
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243195"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495488"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 
@@ -24,7 +24,7 @@ ms.locfileid: "81243195"
 
 ## <a name="additional-information"></a>추가 정보
 
-- [Visual Basic의 새로운 기능](whats-new.md) 각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
+- [Visual Basic의 새로운 기능](../whats-new/index.md) 각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
 
 - [Visual Basic 프로그래머를 위한 추가 리소스](additional-resources.md) 일반적인 문제의 답변을 찾을 수 있는 웹 사이트 및 뉴스 그룹 목록을 제공합니다.
 
