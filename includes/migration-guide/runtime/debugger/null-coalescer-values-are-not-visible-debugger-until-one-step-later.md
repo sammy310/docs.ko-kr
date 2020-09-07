@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 907c4aa5573c392a68afad0a4d937eadcd556440
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: af8de731ee93d0bfb01042d894f5730570dcdd78
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620296"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496383"
 ---
 ### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>디버거에서 한 단계가 지날 때까지 null 병합기 값을 볼 수 없습니다.
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620296"
 | Scope   |Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

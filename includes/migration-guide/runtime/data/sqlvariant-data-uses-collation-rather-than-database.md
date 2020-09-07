@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fb339fb35cdcbba4f1c860fae9c17162c4cff596
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620289"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497452"
 ---
 ### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Sql_variant 데이터는 데이터베이스 데이터 정렬 대신 sql_variant 데이터 정렬을 사용합니다.
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620289"
 | Scope   |투명|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

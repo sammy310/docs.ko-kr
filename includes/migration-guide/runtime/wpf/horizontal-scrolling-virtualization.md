@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 14585b6de3ce02884f8be789930fc8610f73ba7d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 2ae17e0823ec2fa064c948d9ea7bd19cbd34cb6a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621266"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496221"
 ---
 ### <a name="horizontal-scrolling-and-virtualization"></a>가로 스크롤 및 가상화
 
@@ -16,12 +16,20 @@ ms.locfileid: "85621266"
 
 <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=fullName>의 예측 값을 사용하는 앱의 경우 가상화 취소로 인해 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName>가 변경될 수 있는 가로 스크롤 이후 실제 값과 <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName>의 값을 페치하도록 변경해야 합니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |부|
 |버전|4.6.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.Primitives.IScrollInfo`
+
+-->

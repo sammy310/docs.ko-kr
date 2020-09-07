@@ -4,12 +4,12 @@ description: C#에서 기존 문자열 콘텐츠를 수정하여 새 문자열 �
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473970"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465054"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
@@ -73,5 +73,5 @@ ms.locfileid: "86473970"
 
 ## <a name="see-also"></a>참조
 
-- [.NET Framework 정규식](../../standard/base-types/regular-expressions.md)
+- [.NET 정규식](../../standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83d3f24680531d1e447f047151a28c98ce0da04b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26539011f0650c7a3bac9e1c41847561905fff58
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620399"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496657"
 ---
 ### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>.NET Framework 1.1 및 2.0에서 관리되는 브라우저 호스팅 컨트롤이 차단됩니다.
 
@@ -21,3 +21,15 @@ Internet Explorer에서는 관리되는 브라우저 호스팅 컨트롤을 사�
 | Scope   |부|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f17efc89b738a9fd20cc687de1dae01a44664271
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0d38e2177377e7e9ea911071eb65aa13aa1f5900
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621237"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497412"
 ---
 ### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>"dataAnnotations:dataTypeAttribute:disableRegEx" 앱 설정은 .NET Framework 4.7.2에서 기본적으로 설정됩니다.
 
@@ -21,3 +21,15 @@ ms.locfileid: "85621237"
 | Scope   |부|
 |버전|4.7.2|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

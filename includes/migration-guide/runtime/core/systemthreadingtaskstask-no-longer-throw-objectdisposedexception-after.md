@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3eab96149be1e40d528cfd552bbe05ca766cf4e8
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 58dbb54d42d89b450134758072e3133ae4e6b13d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620269"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496734"
 ---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>개체를 삭제한 후 System.Threading.Tasks.Task는 더 이상 ObjectDisposedException을 throw하지 않습니다
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620269"
 | Scope   |부|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f955e270f709ddf6eea2e44bbcf386e372b9f6e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4e685722271a8079e727ea9c2e0e501f68b30fc9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621314"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497664"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>기본 앱 도메인에 대한 TargetFrameworkName을 설정하지 않으면 더 이상 null을 기본값으로 하지 않습니다
 
@@ -16,12 +16,20 @@ ms.locfileid: "85621314"
 
 코드는 기본값을 null로 하는 <xref:System.AppDomainSetup.TargetFrameworkName>에 종속하지 않도록 업데이트되어야 합니다. 이 속성이 계속 null을 평가해야 하는 경우 명시적으로 해당 값을 설정할 수 있습니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.6|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+- <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.AppDomainSetup.TargetFrameworkName`
+
+-->

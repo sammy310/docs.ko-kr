@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: af8cb9435be078351e3430dc8ded3f7cac377948
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e9f769af6d85403c2a6f085cbc3462cf549adae9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620499"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496392"
 ---
 ### <a name="wpf-treeviewitem-must-be-used-within-a-treeview"></a>TreeView 내에서 WPF TreeViewItem을 사용해야 합니다.
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620499"
 | Scope   |부|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

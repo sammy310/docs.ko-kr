@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 662c140f019add66ff6605d47ad1f32c3f50d711
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 99a7fa0fcfce6d490a182f85709b5dd0e0e8c86f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620239"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496138"
 ---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource.WriteEvent impls는 수신된 매개 변수와 동일한 WriteEvent를 전달해야 합니다(추가 ID).
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620239"
 | Scope   |부|
 |버전|4.5.1|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

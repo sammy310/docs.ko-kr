@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d7a18a0b457c2a38f40c1da3b2f0bfc578259475
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c27c63e5bbd4a144b9482a0b1cb74250ae78d91c
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621177"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497856"
 ---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Azure SQL 데이터베이스에 대한 연결 풀 차단 기간이 제거되었습니다.
 
@@ -16,12 +16,24 @@ ms.locfileid: "85621177"
 
 이 동작이 필요 없는 경우 .NET Framework 4.6.2에서 새로 추가된 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod?displayProperty=fullName> 속성을 설정하여 연결 풀 차단 기간을 구성할 수 있습니다. 속성의 값은 다음의 세 값 중 하나를 사용할 수 있는 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> 열거형의 멤버입니다.<ul><li><xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock></li><li><xref:System.Data.SqlClient.PoolBlockingPeriod.Auto></li><li><xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock></li></ul><xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod?displayProperty=fullName> 속성을 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>으로 설정하여 이전 동작을 복원할 수 있습니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |부|
 |버전|4.6.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Data.Common.DbConnection.OpenAsync?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Common.DbConnection.OpenAsync?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Data.Common.DbConnection.OpenAsync`
+- `M:System.Data.SqlClient.SqlConnection.Open`
+- `M:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)`
+
+-->

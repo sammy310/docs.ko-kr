@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23ba6064a283b47312a66f3636c2834a7d58106e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7f7e718d543a4abdf2b8a87e52d8c0e2ba28203f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620186"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497060"
 ---
 ### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET가 이제 끊어진 SQL 연결을 자동으로 다시 연결 시도
 
@@ -20,8 +20,32 @@ ms.locfileid: "85620186"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.5.1|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)></li></ul>|
+- <xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType>
+- <xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType>
+- <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType>
+- <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor>
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)>
+- <xref:System.Data.Common.DbConnectionStringBuilder.%23ctor>
+- <xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Data.IDbConnection.ConnectionString`
+- `P:System.Data.SqlClient.SqlConnection.ConnectionString`
+- `P:System.Configuration.ConnectionStringSettings.ConnectionString`
+- `P:System.Data.Common.DbConnection.ConnectionString`
+- `P:System.Data.Common.DbConnectionStringBuilder.ConnectionString`
+- `M:System.Data.SqlClient.SqlConnectionStringBuilder.#ctor`
+- `M:System.Data.SqlClient.SqlConnectionStringBuilder.#ctor(System.String)`
+- `M:System.Data.Common.DbConnectionStringBuilder.#ctor`
+- `M:System.Data.Common.DbConnectionStringBuilder.#ctor(System.Boolean)`
+
+-->

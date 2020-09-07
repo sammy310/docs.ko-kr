@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 150b94b55fa8f2a29f1da7cf7ac7bf6dd06b9666
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 65fa5d8629ce8e426cf1623590a056e5cad0b91f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622078"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496552"
 ---
 ### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>.NET Interop는 이제 IAgileObject(WinRT 인터페이스)에 대한 QueryInterface가 됩니다.
 
@@ -21,3 +21,15 @@ IAgileObject에 대한 QI를 활성화하여 실행이 중단되면 다음 구�
 | Scope   |Microsoft Edge|
 |버전|4.8|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -2,12 +2,12 @@
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: DevOps 워크플로의 "외부 루프"에 대한 단계 알아보기
 ms.date: 08/06/2020
-ms.openlocfilehash: 5515c204b09cecba323540572c6769c65c6c93ab
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915274"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271909"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 
@@ -94,7 +94,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker 지원을 사용하여 Linux 기반 Visual Studio Team Service 빌드 머신 구축: \
->   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+>   <https://www.donovanbrown.com/post/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>다중 컨테이너 Docker 애플리케이션 통합, 테스트 및 유효성 검사
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d19ed4c74b0ca25edb19c05a987ef2e3a6610628
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 74e40a682dc0ede6750f9d0a3dccaee5db48cb79
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622098"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496754"
 ---
 ### <a name="keyboard-navigation-improvement-in-listbox-with-hyperlinks"></a>하이퍼링크가 포함된 ListBox의 키보드 탐색 개선
 
@@ -17,3 +17,15 @@ ms.locfileid: "85622098"
 | Scope   |주요함|
 |버전|4.8|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

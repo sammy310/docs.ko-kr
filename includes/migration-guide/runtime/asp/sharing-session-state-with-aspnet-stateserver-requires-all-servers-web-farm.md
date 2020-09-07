@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0fe07ac21effacffc56d37ccb46a121f443acd20
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 76425ca03c98cd6a23b8366257f9e0d53b486edb
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620174"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496729"
 ---
 ### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>Asp.Net StateServer와 세션 상태를 공유하려면 웹 팜의 모든 서버가 동일한 .NET Framework 버전을 사용해야 합니다.
 
@@ -24,4 +24,12 @@ ms.locfileid: "85620174"
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `F:System.Web.SessionState.SessionStateMode.StateServer`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8cc4f2ba2923774ef4e4e6861a89a7797ca988e1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5c8ea3565fbe599dd53a71ba8bd339704f7d7f8a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621201"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496996"
 ---
 ### <a name="signedxml-and-encryptedxml-breaking-changes"></a>SignedXml 및 EncryptedXml 주요 변경 내용
 
@@ -16,12 +16,24 @@ ms.locfileid: "85621201"
 
 개발자는 <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform> 및 <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform>과 <xref:System.Security.Cryptography.Xml.Transform>에서 파생된 형식의 사용을 검토해야 합니다. 문서 수신기가 이러한 사용을 처리하지 못할 수도 있기 때문입니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |부|
 |버전|4.6.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Security.Cryptography.Xml.Transform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXPathTransform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXsltTransform`
+
+-->

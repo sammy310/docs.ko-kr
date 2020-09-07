@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fc6066fd0b23d299158114cb397934041b99ba47
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a806107456a65a4919592da9535a2617f677cfe0
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620463"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497025"
 ---
 ### <a name="wpf-dispatchersynchronizationcontextcreatecopy-now-returns-a-new-copy-instead-of-the-current-instance"></a>이제 WPF DispatcherSynchronizationContext.CreateCopy는 현재 인스턴스 대신 새 복사본을 반환
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620463"
 |:--------|:------------|
 | Scope   |부|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy`
+
+-->

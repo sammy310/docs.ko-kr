@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5d5423d18091545ad9d50325900f5a9a4fff6dd9
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7637c2d96aef93b4cf8f2314c1dd1edba51d553c
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622117"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497199"
 ---
 ### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>ListBox에 중복된 값 형식이 포함되어 있을 때 중단되는 문제가 해결되었습니다.
 
@@ -17,3 +17,15 @@ ms.locfileid: "85622117"
 | Scope   |주요함|
 |버전|4.8|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

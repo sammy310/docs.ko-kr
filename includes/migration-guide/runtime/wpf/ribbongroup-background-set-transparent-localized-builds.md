@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a3ba42868577ac20ea2e082f90fc4973a1bfe108
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d6405573e476ce18513938b500041adefbeeef1b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622372"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496743"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>RibbonGroup 배경은 지역화된 빌드에서 투명하게 설정됩니다.
 
@@ -21,3 +21,15 @@ NET Framework 4.7로 업그레이드
 | Scope   |Microsoft Edge|
 |버전|4.6.2|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

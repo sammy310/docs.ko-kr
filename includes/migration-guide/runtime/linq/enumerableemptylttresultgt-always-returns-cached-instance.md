@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 05f60978f5380c406c43aa98ded0c812b1d50694
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620336"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497857"
 ---
 ### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt;가 항상 캐시된 인스턴스를 반환
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620336"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+- <xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- ``M:System.Linq.Enumerable.Empty``1``
+
+-->

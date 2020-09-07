@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f123f37d3f1be7d5b6805ac58529c1872a81f20b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 151f88f1214e3abedf491761144ffc1a89d29e43
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620205"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496413"
 ---
 ### <a name="compiler-support-for-type-forwarding-when-multi-targeting-mscorlib"></a>mscorlib를 멀티타기팅할 때 형식 전달을 위한 컴파일러 지원
 
@@ -17,3 +17,15 @@ ms.locfileid: "85620205"
 | Scope   |Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

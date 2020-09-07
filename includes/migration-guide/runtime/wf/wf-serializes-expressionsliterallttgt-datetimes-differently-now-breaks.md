@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87013a04f7ff975e40a3c49c41c1c5acc2374066
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 06424c4fa40343a881356c20003300f65e93efbb
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620409"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496716"
 ---
 ### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF가 Expressions.Literal&lt;T&gt; DateTimes를 직렬화합니다(사용자 지정 XAML 파서 중단).
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620409"
 | Scope   |Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

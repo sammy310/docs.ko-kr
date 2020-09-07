@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad953a1562db407c04d7860c60eb5964fe6fe2ca
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 2c44c2e1658f8de556d3f7222de3fa6d4594163a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620346"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497466"
 ---
 ### <a name="deserialization-of-mailmessage-objects-serialized-under-the-net-framework-45-may-fail"></a>.NET Framework 4.5에서 직렬화된 MailMessage 개체의 역직렬화가 실패할 수 있음
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620346"
 |:--------|:------------|
 | Scope   |부|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.Mail.MailMessage?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Web.Mail.MailMessage`
+
+-->

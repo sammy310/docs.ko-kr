@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 08a9292c5a41e7b9b7c1bcc18ec96460de19863f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3c32d2e13447f8fd9aa6b185b5fc7e60f9e1bb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621182"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497932"
 ---
 ### <a name="support-special-relative-uri-notation-when-unicode-is-present"></a>유니코드가 있는 경우 특별한 상대 URI 표기법 지원
 
@@ -20,8 +20,20 @@ ms.locfileid: "85621182"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.7.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)?displayProperty=nameWithType>
+- <xref:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)?displayProperty=nameWithType>
+- <xref:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)`
+- `M:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)`
+- `M:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)`
+
+-->

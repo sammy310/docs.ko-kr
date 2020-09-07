@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 421b1aaf3965bd3aa80c6e09da963404d2a46c09
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389195"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359077"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -383,7 +383,7 @@ services:
       - sqldata
 
   sqldata:
-    image: mssql-server-linux:latest
+    image: mcr.microsoft.com/mssql/server:latest
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y

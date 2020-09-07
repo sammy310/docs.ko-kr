@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
 ms.date: 07/04/2020
-ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 79c69546b79de3d702fb4bb6550e615d8d59fa74
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867648"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495527"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
@@ -40,13 +40,12 @@ ms.locfileid: "88867648"
    명령 출력은 다음 예제와 유사합니다.
 
    ```output
-   Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
+   Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET
    Copyright (C) Microsoft Corporation. All rights reserved.
-
-   Determining projects to restore...
-   All projects are up-to-date for restore.
-   HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\HelloWorld.dll
-   HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+     Determining projects to restore...
+     All projects are up-to-date for restore.
+     HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\HelloWorld.dll
+     HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 
 ## <a name="inspect-the-files"></a>파일 검사

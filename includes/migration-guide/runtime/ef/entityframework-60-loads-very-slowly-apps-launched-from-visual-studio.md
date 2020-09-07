@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ee12ccdfb95cc576cd35815b895c6041c08a0353
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 30d12db888c3ac612b0717f903cea64e572e9725
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620319"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496252"
 ---
 ### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6.0은 Visual Studio에서 시작된 앱에서 매우 느리게 로드됩니다.
 
@@ -21,3 +21,15 @@ EntityFramework 6.0을 사용하는 Visual Studio 2013에서 응용 프로그램
 | Scope   |Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

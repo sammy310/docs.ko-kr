@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e92cbb7decb5e530bbf611cec26ce03a05e06eb3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4788f5b80306116e63ee56584d65b862ce0606ee
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622260"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497239"
 ---
 ### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng 및 DSACng는 부분 신뢰 시나리오에서 다시 사용할 수 있습니다.
 
@@ -16,12 +16,36 @@ CngLightup(<xref:System.Security.Cryptography.Xml.EncryptedXml?displayProperty=n
 
 .NET Framework 4.6.2에서 이러한 변경 내용이 부분 신뢰 앱에 부정적인 영향을 주는 경우 .NET Framework 4.7.1로 업그레이드합니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.6.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Security.Cryptography.DSACng.%23ctor(System.Security.Cryptography.CngKey)></li><li><xref:System.Security.Cryptography.DSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.LegalKeySizes?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.CreateSignature(System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.%23ctor(System.Security.Cryptography.CngKey)></li><li><xref:System.Security.Cryptography.RSACng.Key?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.DSACng.%23ctor(System.Security.Cryptography.CngKey)>
+- <xref:System.Security.Cryptography.DSACng.Key?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.DSACng.LegalKeySizes?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.DSACng.CreateSignature(System.Byte[])?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSACng.%23ctor(System.Security.Cryptography.CngKey)>
+- <xref:System.Security.Cryptography.RSACng.Key?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Security.Cryptography.DSACng.#ctor(System.Security.Cryptography.CngKey)`
+- `P:System.Security.Cryptography.DSACng.Key`
+- `P:System.Security.Cryptography.DSACng.LegalKeySizes`
+- `M:System.Security.Cryptography.DSACng.CreateSignature(System.Byte[])`
+- `M:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])`
+- `M:System.Security.Cryptography.RSACng.#ctor(System.Security.Cryptography.CngKey)`
+- `P:System.Security.Cryptography.RSACng.Key`
+- `M:System.Security.Cryptography.RSACng.Decrypt(System.Byte[],System.Security.Cryptography.RSAEncryptionPadding)`
+- `M:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)`
+
+-->

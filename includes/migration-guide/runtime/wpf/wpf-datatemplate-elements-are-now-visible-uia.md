@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 06c699281c8890ac65be1d282b72b54774acc280
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4394e69dafeb6cce2d7719a67bbce396d3bc1086
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620475"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496971"
 ---
 ### <a name="wpf-datatemplate-elements-are-now-visible-to-uia"></a>WPF DataTemplate 요소가 UIA에 표시됩니다.
 
@@ -20,8 +20,18 @@ ms.locfileid: "85620475"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.DataTemplate.%23ctor></li><li><xref:System.Windows.DataTemplate.%23ctor(System.Object)></li></ul>|
+- <xref:System.Windows.DataTemplate.%23ctor>
+- <xref:System.Windows.DataTemplate.%23ctor(System.Object)>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.DataTemplate.#ctor`
+- `M:System.Windows.DataTemplate.#ctor(System.Object)`
+
+-->

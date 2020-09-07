@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c462c7b4ec8423ce8fd331d3cd31154283cf1f1d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 086dac69d085d070511fcfd5820bd2644ee4598e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620259"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497953"
 ---
 ### <a name="marshalsizeof-and-marshalptrtostructure-overloads-break-dynamic-code"></a>Marshal.SizeOf와 Marshal.PtrToStructure 오버로드가 동적 코드를 중단시킵니다.
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620259"
 | Scope   |부|
 |버전|4.5.1|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

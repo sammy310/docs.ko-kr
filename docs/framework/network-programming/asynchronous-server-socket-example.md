@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 089de8ce9629e30cb6e4458c0f9a4613c9674a21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502719"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359054"
 ---
 # <a name="asynchronous-server-socket-example"></a>비동기 서버 소켓 예제
 다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 비동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단되지 않습니다. 애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF>” 문자열이 포함되어야 합니다.  
@@ -150,25 +150,32 @@ using System.Text;
 using System.Threading;  
   
 // State object for reading client data asynchronously  
-public class StateObject {  
-    // Client  socket.  
-    public Socket workSocket = null;  
+public class StateObject
+{
     // Size of receive buffer.  
-    public const int BufferSize = 1024;  
+    public const int BufferSize = 1024;
+
     // Receive buffer.  
-    public byte[] buffer = new byte[BufferSize];  
-// Received data string.  
+    public byte[] buffer = new byte[BufferSize];
+
+    // Received data string.
     public StringBuilder sb = new StringBuilder();
+
+    // Client socket.
+    public Socket workSocket = null;
 }  
   
-public class AsynchronousSocketListener {  
+public class AsynchronousSocketListener
+{
     // Thread signal.  
-    public static ManualResetEvent allDone = new ManualResetEvent(false);  
-  
-    public AsynchronousSocketListener() {  
-    }  
-  
-    public static void StartListening() {  
+    public static ManualResetEvent allDone = new ManualResetEvent(false);
+
+    public AsynchronousSocketListener()
+    {
+    }
+
+    public static void StartListening()
+    {
         // Establish the local endpoint for the socket.  
         // The DNS name of the computer  
         // running the listener is "host.contoso.com".  
@@ -206,9 +213,10 @@ public class AsynchronousSocketListener {
         Console.WriteLine("\nPress ENTER to continue...");  
         Console.Read();  
   
-    }  
-  
-    public static void AcceptCallback(IAsyncResult ar) {  
+    }
+
+    public static void AcceptCallback(IAsyncResult ar)
+    {
         // Signal the main thread to continue.  
         allDone.Set();  
   
@@ -221,9 +229,10 @@ public class AsynchronousSocketListener {
         state.workSocket = handler;  
         handler.BeginReceive( state.buffer, 0, StateObject.BufferSize, 0,  
             new AsyncCallback(ReadCallback), state);  
-    }  
-  
-    public static void ReadCallback(IAsyncResult ar) {  
+    }
+
+    public static void ReadCallback(IAsyncResult ar)
+    {
         String content = String.Empty;  
   
         // Retrieve the state object and the handler socket  
@@ -255,19 +264,22 @@ public class AsynchronousSocketListener {
                 new AsyncCallback(ReadCallback), state);  
             }  
         }  
-    }  
-  
-    private static void Send(Socket handler, String data) {  
+    }
+
+    private static void Send(Socket handler, String data)
+    {
         // Convert the string data to byte data using ASCII encoding.  
         byte[] byteData = Encoding.ASCII.GetBytes(data);  
   
         // Begin sending the data to the remote device.  
         handler.BeginSend(byteData, 0, byteData.Length, 0,  
             new AsyncCallback(SendCallback), handler);  
-    }  
-  
-    private static void SendCallback(IAsyncResult ar) {  
-        try {  
+    }
+
+    private static void SendCallback(IAsyncResult ar)
+    {
+        try
+        {
             // Retrieve the socket from the state object.  
             Socket handler = (Socket) ar.AsyncState;  
   
@@ -278,16 +290,19 @@ public class AsynchronousSocketListener {
             handler.Shutdown(SocketShutdown.Both);  
             handler.Close();  
   
-        } catch (Exception e) {  
+        }
+        catch (Exception e)
+        {
             Console.WriteLine(e.ToString());  
         }  
-    }  
-  
-    public static int Main(String[] args) {  
+    }
+
+    public static int Main(String[] args)
+    {
         StartListening();  
         return 0;  
-    }  
-}  
+    }
+}
 ```  
   
 ## <a name="see-also"></a>참조

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c53fe57f3278741a927a2f00b11af6e26dafce66
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: afbf34710c75d0f0586ddfdb2e7937d8d76d5399
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620150"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496930"
 ---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC가 이제 경로 매개 변수를 통해 전달된 문자열에 있는 공백을 이스케이프함
 
@@ -20,8 +20,16 @@ RFC 2396를 준수하려면 경로에서 작업 매개 변수를 채울 때 경�
 |:--------|:------------|
 | Scope   |부|
 |버전|4.5.2|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|
+- <xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Web.Mvc.RouteAttribute.#ctor(System.String)`
+
+-->

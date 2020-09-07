@@ -3,12 +3,12 @@ title: .NET Core에서 지원되지 않는 API
 titleSuffix: ''
 description: .NET Core에서 항상 예외를 throw하는 .NET Framework의 API를 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794600"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414437"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core에서 항상 예외를 throw하는 API
 
@@ -267,7 +267,6 @@ ms.locfileid: "82794600"
 | 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | 모두 |
-| <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
@@ -324,6 +323,6 @@ ms.locfileid: "82794600"
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 주요 변경](fx-core.md)
+- [.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 변경 사항](fx-core.md)
 - [.NET Core의 이진 Serialization](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md):

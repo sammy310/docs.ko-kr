@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7002c74594993ac6bf28643ef3271da356190c66
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 904a6abee2b4b2cf2f5727fb70e286c8a1a592c4
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622067"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497354"
 ---
 ### <a name="aspnet-validationcontextmembername-is-not-null-when-using-custom-dataannotationsvalidationattribute"></a>사용자 지정 DataAnnotations.ValidationAttribute를 사용할 때 ASP.NET ValidationContext.MemberName은 NULL이 아닙니다.
 
@@ -20,8 +20,16 @@ ms.locfileid: "85622067"
 |:--------|:------------|
 | Scope   |알 수 없음|
 |버전|4.8|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType></li></ul>|
+- <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.ComponentModel.DataAnnotations.ValidationContext.MemberName`
+
+-->

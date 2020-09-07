@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 00ffc782c9a15c0d88f797f52372b4658706b350
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d9e1624bbeb91db63bc284b8eb52643938eb42e5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620427"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497761"
 ---
 ### <a name="glyphruncomputeinkboundingbox-and-formattedtextextent-return-different-values-beginning-in-net-framework-45"></a>.NET Framework 4.5부터 GlyphRun.ComputeInkBoundingBox() 및 FormattedText.Extent는 다른 값 반환
 
@@ -20,8 +20,18 @@ ms.locfileid: "85620427"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType>
+- <xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Media.GlyphRun.ComputeInkBoundingBox`
+- `P:System.Windows.Media.FormattedText.Extent`
+
+-->

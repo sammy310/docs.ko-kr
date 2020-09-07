@@ -2,12 +2,12 @@
 title: C#주요 언어 영역 둘러보기
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068471"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414905"
 ---
 # <a name="major-language-areas"></a>주 언어 영역
 
@@ -60,7 +60,7 @@ C# [문자열 보간](../language-reference/tokens/interpolated.md)을 사용하
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-보간된 문자열은 `$` 토큰을 사용하여 선언됩니다. 문자열 보간은 `{`와 `}` 사이의 식을 계산한 다음 결과를 `string`으로 변환하고 대괄호 사이에 있는 텍스트를 식의 문자열 결과로 바꿉니다. 첫 번째 식 `{weatherData.Data:MM-DD-YYYY}`의 `:`은 ‘서식 문자열’을 지정합니다. 앞의 예제에서는 “MM-DD_YYYY” 형식으로 출력해야 할 날짜를 지정합니다.
+보간된 문자열은 `$` 토큰을 사용하여 선언됩니다. 문자열 보간은 `{`와 `}` 사이의 식을 계산한 다음 결과를 `string`으로 변환하고 대괄호 사이에 있는 텍스트를 식의 문자열 결과로 바꿉니다. 첫 번째 식 `{weatherData.Date:MM-DD-YYYY}`의 `:`은 ‘서식 문자열’을 지정합니다. 앞의 예제에서는 “MM-DD_YYYY” 형식으로 출력해야 할 날짜를 지정합니다.
 
 ## <a name="pattern-matching"></a>패턴 일치
 

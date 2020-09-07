@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cecb7b2abd4f57fdaacb0ea373cc19dc3cd9b24a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c1793bb51f7da9169e912078fde202d0d62a4183
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620169"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496676"
 ---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>더 이상 EnableViewStateMac를 false로 설정할 수 없음
 
@@ -21,3 +21,15 @@ EnableViewStateMac은 true로 간주되어야 하고 모든 결과 MAC 오류는
 | Scope   |주요함|
 |버전|4.5.2|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

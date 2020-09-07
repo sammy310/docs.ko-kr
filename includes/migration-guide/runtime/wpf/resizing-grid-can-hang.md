@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 86169b5c9a20678647153c951550e590a5bce588
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8dc1b4d94d01813a8124d1340b50fa78a9b157f8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622261"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497587"
 ---
 ### <a name="resizing-a-grid-can-hang"></a>눈금 크기 조정이 중지될 수 있음
 
@@ -16,8 +16,20 @@ ms.locfileid: "85622261"
 
 .NET Framework 4.7.1로 업그레이드합니다.  또는 4.7 할당 알고리즘이 필요하지 않은 경우, 다음 구성 설정을 사용할 수 있습니다.<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.7|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

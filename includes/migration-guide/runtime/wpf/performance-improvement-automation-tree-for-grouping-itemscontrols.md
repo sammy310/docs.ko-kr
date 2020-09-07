@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b90df72057594044458771f6824f7621a427725f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 70665ae4a2f5284afcea4602f6e4c04951fb3760
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622107"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496904"
 ---
 ### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>ItemsControls 그룹화를 위한 자동화 트리의 성능 개선
 
@@ -17,3 +17,15 @@ ms.locfileid: "85622107"
 | Scope   |주요함|
 |버전|4.8|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

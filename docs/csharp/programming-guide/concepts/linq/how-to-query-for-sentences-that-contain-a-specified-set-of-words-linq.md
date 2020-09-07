@@ -3,12 +3,12 @@ title: 지정된 단어 집합이 들어 있는 문장을 쿼리하는 방법(LI
 description: C#에서 LINQ를 사용하여 런타임에 채워질 수 있는 각 단어 집합과 일치하는 항목이 포함된 텍스트 파일에서 문장을 찾는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104527"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465652"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>지정된 단어 집합이 들어 있는 문장을 쿼리하는 방법(LINQ)(C#)
 이 예제에서는 지정된 각 단어 집합과 일치하는 항목이 포함된 문장을 텍스트 파일에서 찾는 방법을 보여 줍니다. 이 예제에서는 검색어 배열이 하드 코드되어 있지만 런타임에 동적으로 채워질 수도 있습니다. 이 예제에서 쿼리는 "Historically", "data" 및 "integrated" 단어가 포함된 문장을 반환합니다.  
@@ -23,7 +23,7 @@ class FindSentences
         string text = @"Historically, the world of data and the world of objects " +  
         @"have not been well integrated. Programmers work in C# or Visual Basic " +  
         @"and also in SQL or XQuery. On the one side are concepts such as classes, " +  
-        @"objects, fields, inheritance, and .NET Framework APIs. On the other side " +  
+        @"objects, fields, inheritance, and .NET APIs. On the other side " +  
         @"are tables, columns, rows, nodes, and separate languages for dealing with " +  
         @"them. Data types often require translation between the two worlds; there are " +  
         @"different standard functions. Because the object world has no notion of query, a " +  

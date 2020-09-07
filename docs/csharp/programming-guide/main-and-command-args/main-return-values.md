@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382063"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414645"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
@@ -26,7 +26,7 @@ ms.locfileid: "87382063"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 [.NET Core](../../../core/index.yml) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 문서](../../../core/tutorials/with-visual-studio-code.md)에서 알아볼 수 있습니다.
+이 예제에서는 [.NET Core](../../../core/introduction.md) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 문서](../../../core/tutorials/with-visual-studio-code.md)에서 알아볼 수 있습니다.
 
 *program.cs* 에서 `Main` 메서드를 다음과 같이 수정합니다.
 

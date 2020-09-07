@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fb9436ec9e525afb497033775e34b6b636ced22d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: afcb9b950d4c47b4251dcc8ab0cf9cfc702005c8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621350"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496345"
 ---
 ### <a name="wcf-services-that-use-nettcp-with-ssl-security-and-md5-certificate-authentication"></a>SSL 보안 및 MD5 인증서 인증과 함께 NETTCP를 사용하는 WCF 서비스
 
@@ -48,8 +48,20 @@ ms.locfileid: "85621350"
 > [!WARNING]
 > MD5 해시 알고리즘을 사용하는 인증서는 안전하지 않은 것으로 간주되므로 이 해결 방법은 권장되지 않습니다.
 
-| 이름    | 값   |
+| Name    | 값   |
 |:--------|:--------|
 | Scope   | 부   |
 | 버전 | 4.6     |
 | 형식    | 런타임 |
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

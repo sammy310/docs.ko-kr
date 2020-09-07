@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c8e597310ec0b02edbf993709f931a6093b6285
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 11bb23232dfedc9fd62cac46493c3fa5d195721b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621813"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496585"
 ---
 ### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
@@ -16,12 +16,20 @@ ms.locfileid: "85621813"
 
 가능한 경우 .NET Framework 4.6.2로 업그레이드하세요.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |부|
 |버전|4.6|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted`
+
+-->

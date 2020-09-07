@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0470cefc05fb5da6a6195ee0a96f04feef01fd10
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a61005e317020c47a283dae292236624ec6057ce
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620432"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496709"
 ---
 ### <a name="flowdocument-may-show-an-extra-line-of-text"></a>FlowDocument는 텍스트의 추가 줄을 표시할 수 있습니다.
 
@@ -20,8 +20,24 @@ ms.locfileid: "85620432"
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.5|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.Windows.Documents.FlowDocument.%23ctor></li><li><xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)></li><li><xref:System.Windows.Controls.FlowDocumentReader.%23ctor></li><li><xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor></li><li><xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor></li></ul>|
+- <xref:System.Windows.Documents.FlowDocument.%23ctor>
+- <xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)>
+- <xref:System.Windows.Controls.FlowDocumentReader.%23ctor>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor>
+- <xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Documents.FlowDocument.#ctor`
+- `M:System.Windows.Documents.FlowDocument.#ctor(System.Windows.Documents.Block)`
+- `M:System.Windows.Controls.FlowDocumentReader.#ctor`
+- `M:System.Windows.Controls.FlowDocumentPageViewer.#ctor`
+- `M:System.Windows.Controls.Primitives.DocumentPageView.#ctor`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a5c6dda0c1d68468cd95f67716709dd059948c80
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6a79f04af44f78313c4d5bb5c37dfad252d3024b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621338"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497256"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>.NET Framework 4.6 및 이후 버전의 제품 버전 관리 변경 내용
 
@@ -16,8 +16,20 @@ ms.locfileid: "85621338"
 
 일반적으로 애플리케이션은 .NET Framework 및 설치 디렉터리 검색의 런타임 버전과 같은 항목 검색을 위한 권장 기술에 의존해야 합니다.<ul><li>.NET Framework의 런타임 버전을 검색하려면 [방법: 설치된 .NET Framework 버전 확인](~/docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조합니다.</li><li>.NET Framework의 설치 경로를 확인하려면<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</code> 키의 <code>InstallPath</code> 항목 값을 사용합니다.</li></ul> <blockquote> [!IMPORTANT] 하위 키 이름은 <code>.NET Framework Setup</code>이 아니라 <code>NET Framework Setup</code>입니다.</blockquote> <ul><li>.NET Framework 공용 언어 런타임에 대한 디렉터리 경로를 확인하려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory?displayProperty=nameWithType> 메서드를 호출합니다.</li><li>CLR 버전을 알아보려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion?displayProperty=nameWithType> 메서드를 호출합니다. .NET Framework 4 및 해당 지점 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2 및 .NET Framework 4.6, 4.6.1, 4.6.2, 4.7 및 4.7.1)의 경우 문자열 v4.0.30319를 반환합니다.</li></ul>
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |부|
 |버전|4.6|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

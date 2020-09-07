@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 22b5abbe769733e8d5ca3e78dd9e6e13b2363737
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 346fb6ecd43f7f93529e45f169c79b7acacc9c1f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620309"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497503"
 ---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>다른 4.5 SQL 생성에서 더 간단한 4.0 SQL 생성으로 되돌리는 옵트인 문제
 
@@ -21,3 +21,15 @@ OrderBy를 먼저 사용하지 않고 JOIN 문을 생성하고 제한 작업에 
 | Scope   |투명|
 |버전|4.5.2|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

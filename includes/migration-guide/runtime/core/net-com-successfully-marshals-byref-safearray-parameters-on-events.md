@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 77e9d28d79a92cf1523e4ef5779d78394b00ae80
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1907c9b82c9685899d328f67da8001c0fa4fb697
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622087"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496136"
 ---
 ### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a>.NET COM이 이벤트에 대해 ByRef SafeArray 매개 변수를 성공적으로 마샬링
 
@@ -21,3 +21,15 @@ COM 이벤트에 대한 적절한 ByRef SafeArray 매개 변수 마샬링이 실
 | Scope   |부|
 |버전|4.8|
 |형식|런타임|
+
+#### <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

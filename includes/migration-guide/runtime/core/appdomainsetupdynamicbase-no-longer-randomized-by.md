@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 08ad6fd4ccb6d5ddbbb4fa7ef1b325ce30689748
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26c50ac8b0e570e31a38b1913f73acbe21fae08b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621290"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496177"
 ---
 ### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup.DynamicBase는 더 이상 UseRandomizedStringHashAlgorithm에 의해 무작위화되지 않음
 
@@ -16,12 +16,20 @@ ms.locfileid: "85621290"
 
 <code>UseRandomizedStringHashAlgorithm</code>을 사용하도록 설정해도 <xref:System.AppDomainSetup.DynamicBase>가 무작위화되지 않습니다. 임의 기반이 필요한 경우 이 API를 통하지 않고 앱의 코드에서 생성해야 합니다.
 
-| 이름    | 값       |
+| Name    | 값       |
 |:--------|:------------|
 | Scope   |Microsoft Edge|
 |버전|4.6|
-|형식|런타임
+|형식|런타임|
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
--<xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
+- <xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.AppDomainSetup.DynamicBase`
+
+-->
