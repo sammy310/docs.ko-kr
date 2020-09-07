@@ -1,0 +1,1323 @@
+items:
+  - name: .NET 문서
+    href: index.yml
+  - name: 시작(1일)
+    items:
+      - name: Hello World
+        href: ../core/get-started.md
+      - name: 자습서 시작하기
+        href: ../standard/get-started.md
+      - name: .NET 101 비디오
+        href: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80'
+      - name: 설치 방법
+        items:
+          - name: 개요
+            href: ../core/install/index.yml
+          - name: Windows에 설치
+            href: ../core/install/windows.md
+          - name: macOS에 설치
+            href: ../core/install/macos.md
+          - name: Linux에 설치
+            items:
+              - name: 개요
+                href: ../core/install/linux.md
+              - name: Ubuntu
+                href: ../core/install/linux-ubuntu.md
+              - name: Alpine
+                href: ../core/install/linux-alpine.md
+              - name: CentOS
+                href: ../core/install/linux-centos.md
+              - name: Debian
+                href: ../core/install/linux-debian.md
+              - name: Fedora
+                href: ../core/install/linux-fedora.md
+              - name: OpenSUSE
+                href: ../core/install/linux-opensuse.md
+              - name: RedHat Enterprise Linux
+                href: ../core/install/linux-rhel.md
+              - name: SLES
+                href: ../core/install/linux-sles.md
+          - name: 오래된 런타임 및 SDK 제거
+            href: ../core/install/remove-runtime-sdk-versions.md
+          - name: .NET 템플릿 관리
+            href: ../core/install/templates.md
+          - name: macOS 공증 문제
+            href: ../core/install/macos-notarization-issues.md
+          - name: .NET Core 버전 확인 방법
+            href: ../core/install/how-to-detect-installed-versions.md
+          - name: 지역화된 IntelliSense 설치
+            href: ../core/install/localized-intellisense.md
+  - name: 개요(1주)
+    items:
+      - name: .NET 둘러보기
+        href: ../standard/tour.md
+      - name: .NET 아키텍처 구성 요소
+        href: ../standard/components.md
+      - name: .NET 클래스 라이브러리
+        href: ../standard/class-libraries.md
+      - name: .NET Core 개요
+        href: ../core/introduction.md
+      - name: .NET Standard 개요
+        href: ../standard/net-standard.md
+      - name: .NET 용어
+        href: ../standard/glossary.md
+      - name: 자습서
+        items:
+          - name: Visual Studio 사용
+            items:
+              - name: 콘솔 앱 만들기
+                href: ../core/tutorials/with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 앱 디버그
+                href: ../core/tutorials/debugging-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 앱 게시
+                href: ../core/tutorials/publishing-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 라이브러리 만들기
+                href: ../core/tutorials/library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 라이브러리 단위 테스트
+                href: ../core/tutorials/testing-library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 패키지 설치 및 사용
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+              - name: 패키지 만들기 및 게시
+                href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+          - name: Visual Studio Code 사용
+            items:
+              - name: 콘솔 앱 만들기
+                href: ../core/tutorials/with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code, cli'
+              - name: 앱 디버그
+                href: ../core/tutorials/debugging-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 앱 게시
+                href: ../core/tutorials/publishing-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 라이브러리 만들기
+                href: ../core/tutorials/library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 라이브러리 단위 테스트
+                href: ../core/tutorials/testing-library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 패키지 설치 및 사용
+                href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+                displayName: 'tutorials, cli'
+              - name: 패키지 만들기 및 게시
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Mac용 Visual Studio 사용
+            items:
+              - name: 콘솔 앱 만들기
+                href: ../core/tutorials/with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+              - name: 앱 디버그
+                href: ../core/tutorials/debugging-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 앱 게시
+                href: ../core/tutorials/publishing-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 라이브러리 만들기
+                href: ../core/tutorials/library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 라이브러리 단위 테스트
+                href: ../core/tutorials/testing-library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 패키지 설치 및 사용
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 패키지 만들기 및 게시
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: 더 많은 자습서
+            href: ../core/tutorials/index.md
+  - name: 새로운 기능
+    items:
+      - name: .NET Core 3.1의 새로운 기능
+        href: ../core/whats-new/dotnet-core-3-1.md
+      - name: .NET Core 3.0의 새로운 기능
+        href: ../core/whats-new/dotnet-core-3-0.md
+      - name: .NET Core 2.2의 새로운 기능
+        href: ../core/whats-new/dotnet-core-2-2.md
+      - name: .NET Core 2.1의 새로운 기능
+        href: ../core/whats-new/dotnet-core-2-1.md
+      - name: .NET Core 2.0의 새로운 기능
+        href: ../core/whats-new/dotnet-core-2-0.md
+      - name: .NET Standard의 새로운 기능
+        href: ../standard/whats-new/whats-new-in-dotnet-standard.md
+  - name: 환경 및 런타임 구성 요소
+    items:
+      - name: 도구 및 생산성
+        items:
+          - name: .NET Core SDK 개요
+            href: ../core/sdk.md
+          - name: .NET Core CLI
+            items:
+              - name: 개요
+                href: ../core/tools/index.md
+              - name: 참고
+                items:
+                  - name: dotnet
+                    href: ../core/tools/dotnet.md
+                  - name: dotnet build
+                    href: ../core/tools/dotnet-build.md
+                  - name: dotnet build-server
+                    href: ../core/tools/dotnet-build-server.md
+                  - name: dotnet clean
+                    href: ../core/tools/dotnet-clean.md
+                  - name: dotnet help
+                    href: ../core/tools/dotnet-help.md
+                  - name: dotnet 마이그레이션
+                    href: ../core/tools/dotnet-migrate.md
+                  - name: dotnet msbuild
+                    href: ../core/tools/dotnet-msbuild.md
+                  - name: dotnet new
+                    href: ../core/tools/dotnet-new.md
+                  - name: dotnet nuget
+                    items:
+                      - name: dotnet nuget delete
+                        href: ../core/tools/dotnet-nuget-delete.md
+                      - name: dotnet nuget locals
+                        href: ../core/tools/dotnet-nuget-locals.md
+                      - name: dotnet nuget push
+                        href: ../core/tools/dotnet-nuget-push.md
+                      - name: dotnet nuget add source
+                        href: ../core/tools/dotnet-nuget-add-source.md
+                      - name: dotnet nuget disable source
+                        href: ../core/tools/dotnet-nuget-disable-source.md
+                      - name: dotnet nuget enable source
+                        href: ../core/tools/dotnet-nuget-enable-source.md
+                      - name: dotnet nuget list source
+                        href: ../core/tools/dotnet-nuget-list-source.md
+                      - name: dotnet nuget remove source
+                        href: ../core/tools/dotnet-nuget-remove-source.md
+                      - name: dotnet nuget update source
+                        href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet pack
+                    href: ../core/tools/dotnet-pack.md
+                  - name: dotnet publish
+                    href: ../core/tools/dotnet-publish.md
+                  - name: dotnet restore
+                    href: ../core/tools/dotnet-restore.md
+                  - name: dotnet run
+                    href: ../core/tools/dotnet-run.md
+                  - name: dotnet sln
+                    href: ../core/tools/dotnet-sln.md
+                  - name: dotnet store
+                    href: ../core/tools/dotnet-store.md
+                  - name: dotnet test
+                    href: ../core/tools/dotnet-test.md
+                  - name: dotnet tool
+                    items:
+                      - name: dotnet tool install
+                        href: ../core/tools/dotnet-tool-install.md
+                      - name: dotnet tool list
+                        href: ../core/tools/dotnet-tool-list.md
+                      - name: dotnet tool restore
+                        href: ../core/tools/dotnet-tool-restore.md
+                      - name: dotnet tool run
+                        href: ../core/tools/dotnet-tool-run.md
+                      - name: dotnet tool uninstall
+                        href: ../core/tools/dotnet-tool-uninstall.md
+                      - name: dotnet tool update
+                        href: ../core/tools/dotnet-tool-update.md
+                  - name: dotnet vstest
+                    href: ../core/tools/dotnet-vstest.md
+                  - name: dotnet 설치 스크립트
+                    href: ../core/tools/dotnet-install-script.md
+                  - name: 프로젝트 참조 명령
+                    items:
+                      - name: dotnet add reference
+                        href: ../core/tools/dotnet-add-reference.md
+                      - name: dotnet list reference
+                        href: ../core/tools/dotnet-list-reference.md
+                      - name: dotnet remove reference
+                        href: ../core/tools/dotnet-remove-reference.md
+                  - name: 프로젝트 패키지 명령
+                    items:
+                      - name: dotnet add package
+                        href: ../core/tools/dotnet-add-package.md
+                      - name: dotnet list package
+                        href: ../core/tools/dotnet-list-package.md
+                      - name: dotnet remove package
+                        href: ../core/tools/dotnet-remove-package.md
+              - name: 전역 및 로컬 도구
+                items:
+                  - name: 도구 관리
+                    href: ../core/tools/global-tools.md
+                  - name: 문제 해결 도구
+                    href: ../core/tools/troubleshoot-usage-issues.md
+                  - name: CLI용 도구 만들기
+                    items:
+                      - name: 1 - 도구 만들기
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-create.md
+                      - name: 2 - 전역 도구 사용
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-use.md
+                      - name: 3 - 로컬 도구 사용
+                        href: ../core/tools/local-tools-how-to-use.md
+                        displayName: 'tools, tutorials, cli'
+              - name: global.json 개요
+                href: ../core/tools/global-json.md
+              - name: 원격 분석
+                href: ../core/tools/telemetry.md
+              - name: 상승된 액세스 권한
+                href: ../core/tools/elevated-access.md
+              - name: Tab 완성 기능 사용
+                href: ../core/tools/enable-tab-autocomplete.md
+          - name: CLI와의 연속 통합
+            href: ../core/tools/using-ci-with-cli.md
+          - name: CLI를 사용하여 라이브러리 개발
+            href: ../core/tutorials/libraries.md
+          - name: CLI용 템플릿 만들기
+            items:
+              - name: 사용자 지정 템플릿
+                href: ../core/tools/custom-templates.md
+              - name: 1 - 항목 템플릿 만들기
+                href: ../core/tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 - 프로젝트 템플릿 만들기
+                href: ../core/tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 - 템플릿 팩 만들기
+                href: ../core/tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: .NET Core 추가 도구
+            items:
+              - name: 개요
+                href: ../core/additional-tools/index.md
+              - name: .NET Core 제거 도구
+                href: ../core/additional-tools/uninstall-tool.md
+              - name: WCF Web Service Reference 공급자
+                href: ../core/additional-tools/wcf-web-service-reference-guide.md
+              - name: dotnet-svcutil
+                href: ../core/additional-tools/dotnet-svcutil-guide.md
+              - name: dotnet-svcutil.xmlserializer
+                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+              - name: XML Serializer Generator
+                href: ../core/additional-tools/xml-serializer-generator.md
+          - name: 진단 도구
+            items:
+              - name: 개요
+                href: ../core/diagnostics/index.md
+              - name: 관리형 디버거
+                href: ../core/diagnostics/managed-debuggers.md
+              - name: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: 로깅 및 추적
+                href: ../core/diagnostics/logging-tracing.md
+              - name: .NET Core CLI 전역 도구
+                items:
+                  - name: dotnet-counters
+                    href: ../core/diagnostics/dotnet-counters.md
+                  - name: dotnet-dump
+                    href: ../core/diagnostics/dotnet-dump.md
+                  - name: dotnet-gcdump
+                    href: ../core/diagnostics/dotnet-gcdump.md
+                  - name: dotnet-trace
+                    href: ../core/diagnostics/dotnet-trace.md
+              - name: .NET Core 진단 자습서
+                items:
+                  - name: EventCounters를 사용하여 성능 메트릭 가져오기
+                    href: ../core/diagnostics/event-counter-perf.md
+                  - name: 메모리 누수 디버그
+                    href: ../core/diagnostics/debug-memory-leak.md
+                  - name: 높은 CPU 사용량 디버그
+                    href: ../core/diagnostics/debug-highcpu.md
+                  - name: 디버그 교착 상태
+                    href: ../core/diagnostics/debug-deadlock.md
+          - name: 코드 분석
+            items:
+              - name: 개요
+                href: productivity/code-analysis.md
+                displayName: 'code analysis, analyzers'
+              - name: 규칙 구성
+                href: productivity/configure-code-analysis-rules.md
+              - name: API 분석기
+                href: ../standard/analyzers/api-analyzer.md
+              - name: 이식성 분석기
+                href: ../standard/analyzers/portability-analyzer.md
+      - name: 실행 모델
+        items:
+          - name: CLR(공용 언어 런타임)
+            href: ../standard/clr.md
+          - name: 관리형 실행 프로세스
+            href: ../standard/managed-execution-process.md
+          - name: .NET 어셈블리
+            href: ../standard/assembly/
+          - name: 메타데이터 및 자동 기술 구성 요소
+            href: ../standard/metadata-and-self-describing-components.md
+          - name: 종속성 로딩
+            items:
+              - name: 종속성 로딩
+                href: ../core/dependency-loading/overview.md
+              - name: AssemblyLoadContext 이해
+                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+              - name: 종속성 로딩 정보
+                items:
+                  - name: 기본 종속성 프로브
+                    href: ../core/dependency-loading/default-probing.md
+                  - name: 관리되는 어셈블리 로드
+                    href: ../core/dependency-loading/loading-managed.md
+                  - name: 위성 어셈블리 로드
+                    href: ../core/dependency-loading/loading-resources.md
+                  - name: 관리되지 않는 라이브러리 로드
+                    href: ../core/dependency-loading/loading-unmanaged.md
+              - name: 자습서
+                items:
+                  - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+                    href: ../core/tutorials/creating-app-with-plugin-support.md
+                  - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
+                    href: ../core/../standard/assembly/unloadability.md
+          - name: 버전 관리
+            items:
+              - name: 개요
+                href: ../core/versions/index.md
+              - name: .NET Core 버전 선택
+                href: ../core/versions/selection.md
+          - name: 런타임 구성
+            items:
+              - name: 설정
+                href: ../core/run-time-config/index.md
+              - name: 컴파일 설정
+                href: ../core/run-time-config/compilation.md
+              - name: 디버깅 및 프로파일링 설정
+                href: ../core/run-time-config/debugging-profiling.md
+              - name: 가비지 수집기 설정
+                href: ../core/run-time-config/garbage-collector.md
+              - name: 전역 설정
+                href: ../core/run-time-config/globalization.md
+              - name: 네트워킹 설정
+                href: ../core/run-time-config/networking.md
+              - name: 스레딩 설정
+                href: ../core/run-time-config/threading.md
+      - name: 배포 모델
+        items:
+          - name: 개요
+            href: ../core/deploying/index.md
+          - name: Visual Studio를 사용한 앱 배포
+            href: ../core/deploying/deploy-with-vs.md
+          - name: CLI를 사용하여 앱 게시
+            href: ../core/deploying/deploy-with-cli.md
+          - name: CLI를 사용하여 NuGet 패키지 만들기
+            href: ../core/deploying/creating-nuget-packages.md
+          - name: 자체 포함된 배포 런타임 롤포워드
+            href: ../core/deploying/runtime-patch-selection.md
+          - name: 자체 포함 배포 및 실행 파일 트리밍
+            href: ../core/deploying/trim-self-contained.md
+          - name: 런타임 패키지 저장소
+            href: ../core/deploying/runtime-store.md
+          - name: RID(런타임 식별자) 카탈로그
+            href: ../core/rid-catalog.md
+          - name: 리소스 매니페스트 이름
+            href: ../core/resources/manifest-file-names.md
+          - name: Docker
+            items:
+              - name: .NET 및 Docker 소개
+                href: ../core/docker/introduction.md
+              - name: .NET Core 앱 컨테이너화
+                href: ../core/docker/build-container.md
+              - name: Visual Studio의 컨테이너 도구
+                href: /visualstudio/containers/overview
+      - name: MSBuild 및 프로젝트 파일
+        items:
+          - name: 프로젝트 SDK
+            items:
+              - name: 개요
+                href: ../core/project-sdk/overview.md
+              - name: 참고
+                items:
+                  - name: Microsoft.NET.Sdk
+                    href: ../core/project-sdk/msbuild-props.md
+                  - name: Microsoft.NET.Sdk.Web
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Razor
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: 대상 프레임워크
+            href: ../standard/frameworks.md
+          - name: csproj 형식에 대한 추가 사항
+            href: ../core/tools/csproj.md
+          - name: 종속성 관리
+            href: ../core/tools/dependencies.md
+  - name: 기본 코딩 구성 요소
+    items:
+      - name: 기본 형식 개요
+        items:
+          - name: 공용 형식 시스템 및 공용 언어 사양
+            href: ../standard/common-type-system.md
+          - name: CTS(공용 형식 시스템)
+            href: ../standard/base-types/common-type-system.md
+          - name: 언어 독립성
+            href: ../standard/language-independence.md
+          - name: 언어 독립적 구성 요소
+            href: ../standard/language-independence-and-language-independent-components.md
+          - name: .NET에서 형식 변환
+            href: ../standard/base-types/type-conversion.md
+          - name: 형식 변환표
+            href: ../standard/base-types/conversion-tables.md
+          - name: 프레임워크 라이브러리
+            href: ../standard/framework-libraries.md
+          - name: 클래스 라이브러리 개요
+            href: ../standard/class-library-overview.md
+      - name: 제네릭 형식
+        items:
+          - name: 개요
+            href: ../standard/generics/index.md
+          - name: 제네릭 형식 소개
+            href: ../standard/generics.md
+          - name: .NET의 제네릭 컬렉션
+            href: ../standard/generics/collections.md
+          - name: 배열과 목록을 조작하기 위한 제네릭 대리자
+            href: ../standard/generics/delegates-for-manipulating-arrays-and-lists.md
+          - name: 제네릭 인터페이스
+            href: ../standard/generics/interfaces.md
+          - name: 공변성(Covariance) 및 반공변성(Contravariance)
+            href: ../standard/generics/covariance-and-contravariance.md
+      - name: 컬렉션 및 데이터 구조
+        items:
+          - name: 개요
+            href: ../standard/collections/index.md
+            displayName: 'collections, data structures'
+          - name: 컬렉션 클래스 선택
+            href: ../standard/collections/selecting-a-collection-class.md
+          - name: 일반적으로 사용되는 컬렉션 형식
+            href: ../standard/collections/commonly-used-collection-types.md
+          - name: 제네릭 컬렉션 사용 기준
+            href: ../standard/collections/when-to-use-generic-collections.md
+          - name: 컬렉션 내에서 비교 및 정렬
+            href: ../standard/collections/comparisons-and-sorts-within-collections.md
+          - name: Sorted 컬렉션 형식
+            href: ../standard/collections/sorted-collection-types.md
+          - name: Hashtable 및 Dictionary 형식
+            href: ../standard/collections/hashtable-and-dictionary-collection-types.md
+          - name: 스레드로부터 안전한 컬렉션
+            href: ../standard/collections/thread-safe/
+      - name: 대리자 및 람다 식
+        href: ../standard/delegates-lambdas.md
+      - name: 이벤트
+        items:
+          - name: 개요
+            href: ../standard/events/index.md
+            displayName: events
+          - name: 이벤트 발생 및 사용
+            href: ../standard/events/how-to-raise-and-consume-events.md
+          - name: 이벤트 속성을 사용하여 여러 이벤트 처리
+            href: ../standard/events/how-to-handle-multiple-events-using-event-properties.md
+          - name: 관찰자 디자인 패턴
+            items:
+              - name: 개요
+                href: ../standard/events/observer-design-pattern.md
+                displayName: Observer design pattern
+              - name: 최선의 구현 방법
+                href: ../standard/events/observer-design-pattern-best-practices.md
+              - name: '방법: 공급자 구현'
+                href: ../standard/events/how-to-implement-a-provider.md
+              - name: '방법: 관찰자 구현'
+                href: ../standard/events/how-to-implement-an-observer.md
+      - name: 예외
+        items:
+          - name: 개요
+            href: ../standard/exceptions/index.md
+            displayName: exceptions
+          - name: Exception 클래스 및 속성
+            href: ../standard/exceptions/exception-class-and-properties.md
+          - name: 방법
+            items:
+              - name: Try-Catch 블록을 사용하여 예외 catch
+                href: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+              - name: Catch 블록에서 특정 예외 사용
+                href: ../standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+              - name: 명시적으로 예외 Throw
+                href: ../standard/exceptions/how-to-explicitly-throw-exceptions.md
+              - name: 사용자 정의 예외 만들기
+                href: ../standard/exceptions/how-to-create-user-defined-exceptions.md
+              - name: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 만들기
+                href: ../standard/exceptions/how-to-create-localized-exception-messages.md
+              - name: Finally 블록 사용
+                href: ../standard/exceptions/how-to-use-finally-blocks.md
+          - name: 사용자 필터 예외 처리기 사용
+            href: ../standard/exceptions/using-user-filtered-exception-handlers.md
+          - name: COM interop 예외 처리
+            href: ../standard/exceptions/handling-com-interop-exceptions.md
+          - name: 최선의 구현 방법
+            href: ../standard/exceptions/best-practices-for-exceptions.md
+      - name: 숫자 유형
+        href: ../standard/numerics.md
+      - name: '날짜, 시간 및 표준 시간대'
+        href: ../standard/datetime/
+      - name: '숫자, 날짜, 기타 형식'
+        items:
+          - name: 개요
+            href: ../standard/base-types/formatting-types.md
+          - name: 표준 숫자 서식 문자열
+            href: ../standard/base-types/standard-numeric-format-strings.md
+          - name: 사용자 지정 숫자 형식 문자열
+            href: ../standard/base-types/custom-numeric-format-strings.md
+          - name: 표준 날짜 및 시간 서식 문자열
+            href: ../standard/base-types/standard-date-and-time-format-strings.md
+          - name: 사용자 지정 날짜 및 시간 서식 문자열
+            href: ../standard/base-types/custom-date-and-time-format-strings.md
+          - name: 표준 TimeSpan 서식 문자열
+            href: ../standard/base-types/standard-timespan-format-strings.md
+          - name: 사용자 지정 TimeSpan 형식 문자열
+            href: ../standard/base-types/custom-timespan-format-strings.md
+          - name: 열거형 형식 문자열
+            href: ../standard/base-types/enumeration-format-strings.md
+          - name: 복합 형식 지정
+            href: ../standard/base-types/composite-formatting.md
+          - name: 방법
+            items:
+              - name: 숫자 앞에 0으로 채우기
+                href: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+              - name: 날짜의 요일 추출
+                href: ../standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+              - name: 사용자 지정 숫자 서식 공급자 사용
+                href: ../standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md
+              - name: 날짜 및 시간 값 라운드트립
+                href: ../standard/base-types/how-to-round-trip-date-and-time-values.md
+              - name: 날짜 및 시간 값의 밀리초 표시
+                href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+              - name: 그레고리오력이 아닌 달력으로 날짜 표시
+                href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
+      - name: 문자열 조작
+        items:
+          - name: .NET의 문자 인코딩
+            href: ../standard/base-types/character-encoding-introduction.md
+          - name: 문자 인코딩 클래스를 사용하는 방법
+            href: ../standard/base-types/character-encoding.md
+          - name: 문자열 사용에 대한 모범 사례
+            href: ../standard/base-types/best-practices-strings.md
+          - name: 기본적인 문자열 작업
+            items:
+              - name: 개요
+                href: ../standard/base-types/basic-string-operations.md
+                displayName: string operations
+              - name: 새 문자열 만들기
+                href: ../standard/base-types/creating-new.md
+              - name: 문자 트리밍 및 제거
+                href: ../standard/base-types/trimming.md
+              - name: 문자열 패딩
+                href: ../standard/base-types/padding.md
+              - name: 문자열 비교
+                href: ../standard/base-types/comparing.md
+              - name: 대/소문자 변경
+                href: ../standard/base-types/changing-case.md
+              - name: StringBuilder 클래스 사용
+                href: ../standard/base-types/stringbuilder.md
+              - name: '방법: 기본적인 문자열 조작 수행'
+                href: ../standard/base-types/basic-manipulations.md
+          - name: .NET에서의 정규식
+            items:
+              - name: 개요
+                href: ../standard/base-types/regular-expressions.md
+                displayName: regular expressions
+              - name: 언어 참조
+                items:
+                  - name: 개요
+                    href: ../standard/base-types/regular-expression-language-quick-reference.md
+                  - name: 문자 이스케이프
+                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
+                  - name: 문자 클래스
+                    href: ../standard/base-types/character-classes-in-regular-expressions.md
+                  - name: 앵커
+                    href: ../standard/base-types/anchors-in-regular-expressions.md
+                  - name: 그룹화 구문
+                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+                  - name: 수량자
+                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
+                  - name: 역참조 구문
+                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+                  - name: 교체 구문
+                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+                  - name: 대체
+                    href: ../standard/base-types/substitutions-in-regular-expressions.md
+                  - name: 정규식 옵션
+                    href: ../standard/base-types/regular-expression-options.md
+                  - name: 기타 구문
+                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+              - name: 정규식에 대한 모범 사례
+                href: ../standard/base-types/best-practices.md
+              - name: 정규식 개체 모델
+                href: ../standard/base-types/the-regular-expression-object-model.md
+              - name: 정규식 동작
+                items:
+                  - name: 개요
+                    href: ../standard/base-types/details-of-regular-expression-behavior.md
+                  - name: 역추적
+                    href: ../standard/base-types/backtracking-in-regular-expressions.md
+                  - name: 컴파일 및 다시 사용
+                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+                  - name: 스레드로부터의 안전성
+                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
+              - name: 예
+                items:
+                  - name: HREF 검색
+                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+                  - name: 날짜 형식 변경
+                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+                  - name: URL에서 프로토콜 및 포트 번호 추출
+                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                  - name: 문자열에서 유효하지 않은 문자 제거
+                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+                  - name: 문자열이 유효한 전자 메일 형식인지 확인
+                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+      - name: 문자열 구문 분석
+        items:
+          - name: 개요
+            href: ../standard/base-types/parsing-strings.md
+          - name: 숫자 문자열 구문 분석
+            href: ../standard/base-types/parsing-numeric.md
+          - name: 날짜 및 시간 문자열 구문 분석
+            href: ../standard/base-types/parsing-datetime.md
+          - name: 기타 문자열 구문 분석
+            href: ../standard/base-types/parsing-other.md
+      - name: 특성
+        items:
+          - name: 개요
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: 특성 적용
+            href: ../standard/attributes/applying-attributes.md
+          - name: 사용자 지정 특성 작성
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: 특성에 저장된 정보 검색
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+      - name: 익명 형식과 튜플 형식 중에서 선택
+        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+  - name: Microsoft 확장명
+    items:
+      - name: Configuration
+        href: /aspnet/core/fundamentals/configuration/
+      - name: 종속성 주입
+        href: /aspnet/core/fundamentals/dependency-injection/
+      - name: 로깅
+        href: /aspnet/core/fundamentals/logging/
+  - name: 데이터 액세스
+    items:
+      - name: LINQ
+        href: ../standard/using-linq.md
+      - name: XML 문서 및 데이터
+        href: ../standard/data/xml/
+      - name: Microsoft.Data.Sqlite
+        href: ../standard/data/sqlite/
+  - name: '병렬 처리, 동시성 및 비동기'
+    items:
+      - name: 개요
+        href: ../standard/parallel-processing-and-concurrency.md
+        displayName: 'Parallel processing, concurrency, async'
+      - name: 비동기 프로그래밍
+        items:
+          - name: 개요
+            href: ../standard/async.md
+          - name: 심층 비동기 프로그래밍
+            href: ../standard/async-in-depth.md
+          - name: 비동기 프로그래밍 패턴
+            href: ../standard/asynchronous-programming-patterns/
+      - name: 병렬 프로그래밍
+        items:
+          - name: 개요
+            href: ../standard/parallel-programming/index.md
+          - name: TPL(작업 병렬 라이브러리)
+            href: ../standard/parallel-programming/task-parallel-library-tpl.md
+            items:
+              - name: 데이터 병렬 처리
+                href: ../standard/parallel-programming/data-parallelism-task-parallel-library.md
+                items:
+                  - name: '방법: 간단한 Parallel.For 루프 작성'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                  - name: '방법: 간단한 Parallel.ForEach 루프 작성'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                  - name: '방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                  - name: '방법: 파티션 로컬 변수를 사용하여 Parallel.ForEach 루프 작성'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                  - name: '방법: Parallel.For 또는 ForEach 루프 취소'
+                    href: ../standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                  - name: '방법: 병렬 루프의 예외 처리'
+                    href: ../standard/parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                  - name: '방법: 작은 루프 본문 속도 개선'
+                    href: ../standard/parallel-programming/how-to-speed-up-small-loop-bodies.md
+                  - name: '방법: 병렬 클래스를 사용하여 파일 디렉터리 반복'
+                    href: ../standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+              - name: 작업 기반 비동기 프로그래밍
+                href: ../standard/parallel-programming/task-based-asynchronous-programming.md
+                items:
+                  - name: 연속 작업을 사용하여 작업 연결
+                    href: ../standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                  - name: 연결된 자식 작업 및 분리된 자식 작업
+                    href: ../standard/parallel-programming/attached-and-detached-child-tasks.md
+                  - name: 작업 취소
+                    href: ../standard/parallel-programming/task-cancellation.md
+                  - name: 예외 처리
+                    href: ../standard/parallel-programming/exception-handling-task-parallel-library.md
+                  - name: '방법: Parallel.Invoke를 사용하여 병렬 작업 실행'
+                    href: ../standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                  - name: '방법: 작업에서 값 반환'
+                    href: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md
+                  - name: '방법: 작업 및 해당 자식 취소'
+                    href: ../standard/parallel-programming/how-to-cancel-a-task-and-its-children.md
+                  - name: '방법: 미리 계산된 작업 만들기'
+                    href: ../standard/parallel-programming/how-to-create-pre-computed-tasks.md
+                  - name: '방법: 병렬 작업을 사용하여 이진 트리 트래버스'
+                    href: ../standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                  - name: '방법: 중첩된 작업 래핑 취소'
+                    href: ../standard/parallel-programming/how-to-unwrap-a-nested-task.md
+                  - name: '방법: 자식 작업이 부모 작업에 연결되지 않도록 방지'
+                    href: ../standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+              - name: 데이터 흐름
+                href: ../standard/parallel-programming/dataflow-task-parallel-library.md
+                items:
+                  - name: '방법: 데이터 흐름 블록에 메시지 쓰기 및 테이터 흐름 블록에서 메시지 읽기'
+                    href: ../standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                  - name: '방법: 공급자-소비자 데이터 흐름 패턴 구현'
+                    href: ../standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                  - name: '방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행'
+                    href: ../standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                  - name: '연습: 데이터 흐름 파이프라인 만들기'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                  - name: '방법: 데이터 흐름 블록 링크 끊기'
+                    href: ../standard/parallel-programming/how-to-unlink-dataflow-blocks.md
+                  - name: '연습: Windows Forms 애플리케이션에서 데이터 흐름 사용'
+                    href: ../standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                  - name: '방법: 데이터 흐름 블록 취소'
+                    href: ../standard/parallel-programming/how-to-cancel-a-dataflow-block.md
+                  - name: '연습: 사용자 지정 데이터 흐름 블록 형식 만들기'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                  - name: '방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기'
+                    href: ../standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                  - name: '방법: 데이터 흐름 블록의 병렬 처리 수준 지정'
+                    href: ../standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                  - name: '방법: 데이터 흐름 블록에서 작업 스케줄러 지정'
+                    href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                  - name: '연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상'
+                    href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+              - name: TPL과 기타 비동기 패턴 사용
+                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+                items:
+                  - name: TPL 및 일반적인 .NET Framework 비동기 프로그래밍
+                    href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
+                  - name: '방법: 작업에서 EAP 패턴 래핑'
+                    href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+              - name: 데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
+                href: ../standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+          - name: PLINQ(병렬 LINQ)
+            items:
+              - name: PLINQ 소개
+                href: ../standard/parallel-programming/introduction-to-plinq.md
+              - name: PLINQ의 속도 향상 이해
+                href: ../standard/parallel-programming/understanding-speedup-in-plinq.md
+              - name: PLINQ에서 순서 유지
+                href: ../standard/parallel-programming/order-preservation-in-plinq.md
+              - name: PLINQ의 병합 옵션
+                href: ../standard/parallel-programming/merge-options-in-plinq.md
+              - name: PLINQ에서 발생할 수 있는 문제
+                href: ../standard/parallel-programming/potential-pitfalls-with-plinq.md
+              - name: '방법: 간단한 PLINQ 쿼리 만들기 및 실행'
+                href: ../standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+              - name: '방법: PLINQ 쿼리의 순서 제어'
+                href: ../standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+              - name: '방법: 병렬 및 순차적 LINQ 쿼리 결합'
+                href: ../standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+              - name: '방법: PLINQ 쿼리의 예외 처리'
+                href: ../standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+              - name: '방법: PLINQ 쿼리 취소'
+                href: ../standard/parallel-programming/how-to-cancel-a-plinq-query.md
+              - name: '방법: 사용자 지정 PLINQ 집계 함수 작성'
+                href: ../standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+              - name: '방법: PLINQ에 실행 모드 지정'
+                href: ../standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+              - name: '방법: PLINQ에서 병합 옵션 지정'
+                href: ../standard/parallel-programming/how-to-specify-merge-options-in-plinq.md
+              - name: '방법: PLINQ를 사용하여 파일 디렉터리 반복'
+                href: ../standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md
+              - name: '방법: PLINQ 쿼리 성능 측정'
+                href: ../standard/parallel-programming/how-to-measure-plinq-query-performance.md
+              - name: PLINQ 데이터 샘플
+                href: ../standard/parallel-programming/plinq-data-sample.md
+          - name: 병렬 프로그래밍을 위한 데이터 구조
+            href: ../standard/parallel-programming/data-structures-for-parallel-programming.md
+          - name: 병렬 진단 도구
+            href: ../standard/parallel-programming/parallel-diagnostic-tools.md
+          - name: PLINQ 및 TPL에 대한 사용자 지정 파티셔너
+            items:
+              - name: 개요
+                href: ../standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+                displayName: custom partitioners
+              - name: '방법: 동적 파티션 구현'
+                href: ../standard/parallel-programming/how-to-implement-dynamic-partitions.md
+              - name: '방법: 정적 분할을 위한 파티셔너 구현'
+                href: ../standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+          - name: PLINQ 및 TPL의 람다 식
+            href: ../standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+          - name: 추가 정보
+            href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
+      - name: 스레딩
+        href: ../standard/threading/
+  - name: Serialization
+    items:
+      - name: 개요
+        href: ../standard/serialization/index.md
+      - name: JSON serialization
+        items:
+          - name: 개요
+            href: ../standard/serialization/system-text-json-overview.md
+            displayName: json serialization
+          - name: JSON 직렬화 및 역직렬화 방법
+            href: ../standard/serialization/system-text-json-how-to.md
+          - name: 사용자 지정 변환기를 작성하는 방법
+            href: ../standard/serialization/system-text-json-converters-how-to.md
+          - name: Newtonsoft.Json에서 마이그레이션하는 방법
+            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+      - name: 이진 Serialization
+        items:
+          - name: 개요
+            href: ../standard/serialization/binary-serialization.md
+            displayName: binary serialization
+          - name: BinaryFormatter 보안 가이드
+            href: ../standard/serialization/binaryformatter-security-guide.md
+          - name: Serialization 개념
+            href: ../standard/serialization/serialization-concepts.md
+          - name: 기본 serialization
+            href: ../standard/serialization/basic-serialization.md
+          - name: 선택적 serialization
+            href: ../standard/serialization/selective-serialization.md
+          - name: 사용자 지정 serialization
+            href: ../standard/serialization/custom-serialization.md
+          - name: serialization 프로세스의 단계
+            href: ../standard/serialization/steps-in-the-serialization-process.md
+          - name: 버전 독립적 serialization
+            href: ../standard/serialization/version-tolerant-serialization.md
+          - name: Serialization 지침
+            href: ../standard/serialization/serialization-guidelines.md
+          - name: '방법: 직렬화된 데이터 청크'
+            href: ../standard/serialization/how-to-chunk-serialized-data.md
+          - name: '방법: .NET 표준 개체가 직렬화 가능한지 확인'
+            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+          - name: 예제
+            href: ../standard/serialization/basic-serialization-technology-sample.md
+      - name: XML 및 SOAP serialization
+        items:
+          - name: 개요
+            href: ../standard/serialization/xml-and-soap-serialization.md
+          - name: XML serialization 심층 분석
+            href: ../standard/serialization/introducing-xml-serialization.md
+          - name: 예
+            href: ../standard/serialization/examples-of-xml-serialization.md
+          - name: XML 스키마 정의 도구
+            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+          - name: 특성을 사용하여 XML serialization 제어
+            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+          - name: XML serialization을 제어하는 특성
+            href: ../standard/serialization/attributes-that-control-xml-serialization.md
+          - name: XML Web Services의 XML serialization
+            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+          - name: 인코딩된 SOAP serialization을 제어하는 특성
+            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+          - name: 방법
+            items:
+              - name: 개체 직렬화
+                href: ../standard/serialization/how-to-serialize-an-object.md
+              - name: 개체 역직렬화
+                href: ../standard/serialization/how-to-deserialize-an-object.md
+              - name: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성
+                href: ../standard/serialization/xml-schema-def-tool-gen.md
+              - name: 파생 클래스의 serialization 제어
+                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+              - name: XML 스트림의 대체 요소 이름 지정
+                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+              - name: XML 요소 및 XML 특성 이름 한정
+                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+              - name: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화
+                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+              - name: 인코딩된 SOAP XML serialization 재정의
+                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+          - name: XML serialization 요소
+            items:
+              - name: system.xml.serialization
+                href: ../standard/serialization/system-xml-serialization-element.md
+              - name: dateTimeSerialization
+                href: ../standard/serialization/datetimeserialization-element.md
+              - name: schemaImporterExtensions
+                href: ../standard/serialization/schemaimporterextensions-element.md
+              - name: schemaImporterExtensions에 대한 add 요소
+                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+              - name: xmlSerializer
+                href: ../standard/serialization/xmlserializer-element.md
+          - name: 도구
+            items:
+              - name: XML Serializer 생성기 도구(Sgen.exe)
+                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+              - name: XML 스키마 정의 도구(Xsd.exe)
+                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+  - name: 파일 및 스트림 I/O
+    items:
+      - name: 개요
+        href: ../standard/io/index.md
+      - name: Windows 시스템의 파일 경로 형식
+        href: ../standard/io/file-path-formats.md
+      - name: 공통적인 I/O 작업
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: '방법: 디렉터리 복사'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: '방법: 디렉터리 및 파일 열거'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: '방법: 새로 만든 데이터 파일 읽기 및 쓰기'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: '방법: 로그 파일 열기 및 추가'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: '방법: 파일에 텍스트 쓰기'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: '방법: 파일에서 텍스트 읽기'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: '방법: 문자열에서 문자 읽기'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: '방법: 문자열에 문자 쓰기'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: '방법: 액세스 제어 목록 항목 추가 또는 제거'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: '방법: 파일 압축 및 추출'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: 스트림 작성
+            href: ../standard/io/composing-streams.md
+          - name: '방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: 비동기 파일 I/O
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: I/O 오류 처리
+        href: ../standard/io/handling-io-errors.md
+      - name: 격리된 스토리지
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: 격리 유형
+            href: ../standard/io/types-of-isolation.md
+          - name: '방법: 격리된 스토리지의 저장소 가져오기'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 저장소 열거'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: '방법: 격리된 스토리지에서 저장소 삭제'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 공간 부족 상태 예상'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 만들기'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 읽기 및 쓰기'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 삭제'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: 파이프
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: '방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: 파이프라인
+        href: ../standard/io/pipelines.md
+      - name: 버퍼 작업
+        href: ../standard/io/buffers.md
+      - name: 메모리 매핑된 파일
+        href: ../standard/io/memory-mapped-files.md
+  - name: 단위 테스트
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: 개요
+        href: ../core/testing/index.md
+      - name: 단위 테스트 모범 사례
+        href: ../core/testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: C# 단위 테스트
+            href: ../core/testing/unit-testing-with-dotnet-test.md
+          - name: F# 단위 테스트
+            href: ../core/testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: VB 단위 테스트
+            href: ../core/testing/unit-testing-visual-basic-with-dotnet-test.md
+          - name: xUnit을 사용하여 프로젝트 및 테스트 구성
+            href: ../core/tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+      - name: NUnit
+        items:
+          - name: C# 단위 테스트
+            href: ../core/testing/unit-testing-with-nunit.md
+          - name: F# 단위 테스트
+            href: ../core/testing/unit-testing-fsharp-with-nunit.md
+          - name: VB 단위 테스트
+            href: ../core/testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: C# 단위 테스트
+            href: ../core/testing/unit-testing-with-mstest.md
+          - name: F# 단위 테스트
+            href: ../core/testing/unit-testing-fsharp-with-mstest.md
+          - name: VB 단위 테스트
+            href: ../core/testing/unit-testing-visual-basic-with-mstest.md
+      - name: 선택적 단위 테스트 실행
+        href: ../core/testing/selective-unit-tests.md
+      - name: 단위 테스트 순서 지정
+        href: ../core/testing/order-unit-tests.md
+      - name: 단위 테스트 코드 검사
+        href: ../core/testing/unit-testing-code-coverage.md
+      - name: 게시된 출력 단위 테스트
+        href: ../core/testing/unit-testing-published-output.md
+      - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
+        href: /visualstudio/test/live-unit-testing-start
+  - name: 보안
+    href: ../standard/security/
+  - name: 고급 항목
+    items:
+      - name: 성능
+        items:
+          - name: 메모리 관리
+            items:
+              - name: '"관리 코드"란?'
+                href: ../standard/managed-code.md
+              - name: 자동 메모리 관리
+                href: ../standard/automatic-memory-management.md
+              - name: 관리되지 않는 리소스 정리
+                items:
+                  - name: 개요
+                    href: ../standard/garbage-collection/unmanaged.md
+                    displayName: 'unmanaged resources, memory management'
+                  - name: Dispose 메서드 구현
+                    href: ../standard/garbage-collection/implementing-dispose.md
+                    displayName: 'using, Dispose, dispose pattern, IDisposable'
+                  - name: DisposeAsync 메서드 구현
+                    href: ../standard/garbage-collection/implementing-disposeasync.md
+                    displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
+                  - name: IDisposable을 구현하는 개체 사용
+                    href: ../standard/garbage-collection/using-objects.md
+              - name: 가비지 수집
+                items:
+                  - name: 개요
+                    href: ../standard/garbage-collection/index.md
+                    displayName: garbage collection
+                  - name: 기본 사항
+                    href: ../standard/garbage-collection/fundamentals.md
+                  - name: 워크스테이션 및 서버 GC
+                    href: ../standard/garbage-collection/workstation-server-gc.md
+                  - name: 백그라운드 GC
+                    href: ../standard/garbage-collection/background-gc.md
+                  - name: LOB(Large Object) 힙
+                    href: ../standard/garbage-collection/large-object-heap.md
+                  - name: 가비지 수집 및 성능
+                    href: ../standard/garbage-collection/performance.md
+                  - name: 발생한 컬렉션
+                    href: ../standard/garbage-collection/induced.md
+                  - name: 대기 시간 모드
+                    href: ../standard/garbage-collection/latency.md
+                  - name: 공유 웹 호스팅을 위한 최적화
+                    href: ../standard/garbage-collection/optimization-for-shared-web-hosting.md
+                  - name: 가비지 수집 알림
+                    href: ../standard/garbage-collection/notifications.md
+                  - name: 애플리케이션 도메인 리소스 모니터링
+                    href: ../standard/garbage-collection/app-domain-resource-monitoring.md
+                  - name: Weak references
+                    href: ../standard/garbage-collection/weak-references.md
+          - name: 메모리 및 범위 관련 형식
+            items:
+              - name: 개요
+                href: ../standard/memory-and-spans/index.md
+              - name: Memory<T> 및 Span<T> 사용 지침
+                href: ../standard/memory-and-spans/memory-t-usage-guidelines.md
+          - name: SIMD 사용 형식
+            href: ../standard/simd.md
+      - name: 기본 상호 운용성
+        items:
+          - name: 개요
+            href: ../standard/native-interop/index.md
+            displayName: Native interop
+          - name: P/Invoke
+            href: ../standard/native-interop/pinvoke.md
+          - name: 형식 마샬링
+            href: ../standard/native-interop/type-marshaling.md
+          - name: 구조체 마샬링 사용자 지정
+            href: ../standard/native-interop/customize-struct-marshaling.md
+          - name: 매개 변수 마샬링 사용자 지정
+            href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Interop 지침
+            href: ../standard/native-interop/best-practices.md
+          - name: 문자 집합 및 마샬링
+            href: ../standard/native-interop/charset.md
+          - name: COM에 .NET Core 구성 요소 공개
+            href: ../core/native-interop/expose-components-to-com.md
+          - name: 네이티브 코드에서 .NET Core 호스팅
+            href: ../core/tutorials/netcore-hosting.md
+          - name: COM interop
+            items:
+              - name: 개요
+                href: ../standard/native-interop/cominterop.md
+                displayName: COM interop
+              - name: COM 래퍼
+                items:
+                  - name: 개요
+                    href: ../standard/native-interop/com-wrappers.md
+                    displayName: COM wrappers
+                  - name: 런타임 호출 가능 래퍼
+                    href: ../standard/native-interop/runtime-callable-wrapper.md
+                  - name: COM 호출 가능 래퍼
+                    href: ../standard/native-interop/com-callable-wrapper.md
+              - name: COM interop을 위한 .NET 형식 정규화
+                href: ../standard/native-interop/qualify-net-types-for-interoperation.md
+          - name: interop 특성 적용
+            href: ../standard/native-interop/apply-interop-attributes.md
+          - name: 예외
+            href: ../standard/native-interop/exceptions-interoperability.md
+      - name: .NET Core 배포 패키징
+        href: ../core/distribution-packaging.md
+      - name: 전역화 및 지역화
+        href: ../standard/globalization-localization/
+      - name: 오픈 소스 라이브러리 지침
+        href: ../standard/library-guidance/
+      - name: 프레임워크 디자인 지침
+        items:
+          - name: 개요
+            href: ../standard/design-guidelines/index.md
+          - name: 명명 지침
+            href: ../standard/design-guidelines/naming-guidelines.md
+            items:
+              - name: 대/소문자 표기법
+                href: ../standard/design-guidelines/capitalization-conventions.md
+              - name: 일반 명명 규칙
+                href: ../standard/design-guidelines/general-naming-conventions.md
+              - name: 어셈블리 및 DLL의 이름
+                href: ../standard/design-guidelines/names-of-assemblies-and-dlls.md
+              - name: 네임스페이스의 이름
+                href: ../standard/design-guidelines/names-of-namespaces.md
+              - name: '클래스, 구조체 및 인터페이스의 이름'
+                href: ../standard/design-guidelines/names-of-classes-structs-and-interfaces.md
+              - name: 형식 멤버의 이름
+                href: ../standard/design-guidelines/names-of-type-members.md
+              - name: 매개 변수 이름 지정
+                href: ../standard/design-guidelines/naming-parameters.md
+              - name: 리소스 명명
+                href: ../standard/design-guidelines/naming-resources.md
+          - name: 형식 디자인 지침
+            href: ../standard/design-guidelines/type.md
+            items:
+              - name: 클래스와 구조체 간의 선택
+                href: ../standard/design-guidelines/choosing-between-class-and-struct.md
+              - name: 추상 클래스 디자인
+                href: ../standard/design-guidelines/abstract-class.md
+              - name: 정적 클래스 디자인
+                href: ../standard/design-guidelines/static-class.md
+              - name: 인터페이스 디자인
+                href: ../standard/design-guidelines/interface.md
+              - name: 구조체 디자인
+                href: ../standard/design-guidelines/struct.md
+              - name: 열거형 디자인
+                href: ../standard/design-guidelines/enum.md
+              - name: 중첩 형식
+                href: ../standard/design-guidelines/nested-types.md
+          - name: 멤버 디자인 지침
+            href: ../standard/design-guidelines/member.md
+            items:
+              - name: 멤버 오버로드
+                href: ../standard/design-guidelines/member-overloading.md
+              - name: 속성 디자인
+                href: ../standard/design-guidelines/property.md
+              - name: 생성자 디자인
+                href: ../standard/design-guidelines/constructor.md
+              - name: 이벤트 디자인
+                href: ../standard/design-guidelines/event.md
+              - name: 필드 디자인
+                href: ../standard/design-guidelines/field.md
+              - name: 확장 메서드
+                href: ../standard/design-guidelines/extension-methods.md
+              - name: 연산자 오버로드
+                href: ../standard/design-guidelines/operator-overloads.md
+              - name: 매개 변수 디자인
+                href: ../standard/design-guidelines/parameter-design.md
+          - name: 확장성을 위한 설계
+            href: ../standard/design-guidelines/designing-for-extensibility.md
+            items:
+              - name: 봉인되지 않은 클래스
+                href: ../standard/design-guidelines/unsealed-classes.md
+              - name: 보호된 멤버
+                href: ../standard/design-guidelines/protected-members.md
+              - name: 이벤트 및 콜백
+                href: ../standard/design-guidelines/events-and-callbacks.md
+              - name: 가상 멤버
+                href: ../standard/design-guidelines/virtual-members.md
+              - name: 추상화(추상 형식 및 인터페이스)
+                href: ../standard/design-guidelines/abstractions-abstract-types-and-interfaces.md
+              - name: 추상화 구현을 위한 기본 클래스
+                href: ../standard/design-guidelines/base-classes-for-implementing-abstractions.md
+              - name: 봉인
+                href: ../standard/design-guidelines/sealing.md
+          - name: 예외 디자인 지침
+            href: ../standard/design-guidelines/exceptions.md
+            items:
+              - name: 예외 Throw
+                href: ../standard/design-guidelines/exception-throwing.md
+              - name: 표준 예외 형식 사용
+                href: ../standard/design-guidelines/using-standard-exception-types.md
+              - name: 예외 및 성능
+                href: ../standard/design-guidelines/exceptions-and-performance.md
+          - name: 사용 지침
+            href: ../standard/design-guidelines/usage-guidelines.md
+            items:
+              - name: 배열
+                href: ../standard/design-guidelines/arrays.md
+              - name: 특성
+                href: ../standard/design-guidelines/attributes.md
+              - name: 컬렉션
+                href: ../standard/design-guidelines/guidelines-for-collections.md
+              - name: Serialization
+                href: ../standard/design-guidelines/serialization.md
+              - name: System.Xml 사용법
+                href: ../standard/design-guidelines/system-xml-usage.md
+              - name: 같음 연산자
+                href: ../standard/design-guidelines/equality-operators.md
+          - name: 일반 디자인 패턴
+            href: ../standard/design-guidelines/common-design-patterns.md
+            items:
+              - name: 종속성 속성
+                href: ../standard/design-guidelines/dependency-properties.md
+  - name: 마이그레이션 가이드
+    items:
+      - name: 주요 변경 내용
+        displayName: app compatibility
+        href: ../core/compatibility/
+      - name: 마이그레이션
+        items:
+          - name: .NET Core 2.0 ~ 2.1
+            href: ../core/migration/20-21.md
+          - name: Project. json에서 마이그레이션
+            href: ../core/migration/index.md
+          - name: project.json 및 csproj 간 매핑
+            href: ../core/tools/project-json-to-csproj.md
+          - name: CLI의 변경 내용 개요
+            href: ../core/tools/cli-msbuild-architecture.md
+          - name: DNX에서 마이그레이션
+            href: ../core/migration/from-dnx.md
+      - name: .NET Framework 포트
+        items:
+          - name: 개요
+            href: ../core/porting/index.md
+          - name: 타사 종속성 분석
+            href: ../core/porting/third-party-deps.md
+          - name: 포트 라이브러리
+            href: ../core/porting/libraries.md
+          - name: .NET Core 프로젝트 구성
+            href: ../core/porting/project-structure.md
+          - name: 사용할 수 없는 기술
+            href: ../core/porting/net-framework-tech-unavailable.md
+          - name: 도구
+            href: ../core/porting/tools.md
+          - name: Windows 호환 기능 팩 사용
+            href: ../core/porting/windows-compat-pack.md
+          - name: Windows Forms 프로젝트 포팅
+            href: ../core/porting/winforms.md
+          - name: WPF 프로젝트 포팅
+            href: ../core/../desktop-wpf/migration/convert-project-from-net-framework.md
+          - name: 포트 C++/CLI 프로젝트
+            href: ../core/porting/cpp-cli.md
+      - name: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
+        href: ../standard/choosing-core-framework-server.md

@@ -1,26 +1,25 @@
-- name: 환영
-  href: welcome.md
-- name: .NET의 새로운 기능 문서
-  href: whats-new/index.yml
-- name: .NET 가이드
-  href: standard/
-- name: .NET Core 가이드
-  href: core/
-- name: .NET Framework 가이드
-  href: framework/
-- name: .NET 데스크톱 가이드 - WPF
-  href: desktop-wpf/
-- name: 'C# 가이드'
-  href: csharp/index.yml
-- name: 'F# 가이드'
-  href: fsharp/index.yml
-- name: Visual Basic 가이드
-  href: visual-basic/index.yml
-- name: ML.NET 가이드
-  href: machine-learning/index.yml
-- name: .NET for Apache Spark 가이드
-  href: spark/index.yml
-- name: .NET 애플리케이션 아키텍처 가이드
-  href: architecture/index.yml
-- name: 샘플 및 자습서
-  href: samples-and-tutorials/index.md
+items:
+  - name: 환영
+    href: welcome.md
+  - name: .NET의 새로운 기능 문서
+    href: whats-new/index.yml
+  - name: .NET 기본 사항
+    href: fundamentals/
+  - name: .NET Framework 가이드
+    href: framework/
+  - name: .NET 데스크톱 가이드 - WPF
+    href: desktop-wpf/
+  - name: C# 가이드
+    href: csharp/index.yml
+  - name: F# 가이드
+    href: fsharp/index.yml
+  - name: Visual Basic 가이드
+    href: visual-basic/index.yml
+  - name: ML.NET 가이드
+    href: machine-learning/index.yml
+  - name: .NET for Apache Spark 가이드
+    href: spark/index.yml
+  - name: .NET 애플리케이션 아키텍처 가이드
+    href: architecture/index.yml
+  - name: 샘플 및 자습서
+    href: samples-and-tutorials/index.md
