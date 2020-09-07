@@ -3,12 +3,12 @@ title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646289"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415061"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -42,8 +42,7 @@ ms.locfileid: "81646289"
 
 이 문서에서는 .NET의 다양한 플랫폼 및 언어 지원에 대해 설명합니다. 다음 섹션 중 하나에서 .NET 및 해당 언어를 시작할 수 있습니다.
 
-- [.NET 가이드](standard/index.yml)
-- [.NET Core 가이드](core/index.yml)
+- [.NET 기본 사항](fundamentals/index.yml)
 - [.NET Framework 가이드](framework/index.yml)
 - [C# 가이드](csharp/index.yml)
 - [F# 가이드](fsharp/index.yml)
