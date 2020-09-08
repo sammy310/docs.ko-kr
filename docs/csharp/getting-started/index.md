@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 769098134799800d45a31c22f4390734545ff6ff
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415914"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465249"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
@@ -18,7 +18,7 @@ ms.locfileid: "86415914"
 
 다음 항목을 사용할 수 있습니다.
 
-- [C# 언어 및 .NET Framework 소개](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [C# 언어 및 .NET 소개](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      C# 언어 및 .NET에 대해 간략히 설명합니다.
 

@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794704"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465158"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -94,7 +94,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 - [이벤트를 구독하거나 구독 취소합니다](../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 - [인터페이스에서 선언된 이벤트를 구현합니다](../programming-guide/events/how-to-implement-interface-events.md).
-- [코드가 이벤트를 게시할 때 .NET Framework 지침을 준수합니다](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
+- [코드가 이벤트를 게시할 때 .NET 지침을 준수합니다](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [파생된 클래스로부터 기본 클래스에서 정의된 이벤트를 발생시킵니다](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
 - [사용자 지정 이벤트 접근자를 구현합니다](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 

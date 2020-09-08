@@ -5,7 +5,7 @@
     - name: 개요
       displayName: get started
       href: getting-started/index.md
-    - name: C# 언어 및 .NET Framework 소개
+    - name: C# 언어 및 .NET 소개
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: 자습서
   items:
@@ -80,8 +80,10 @@
       href: tour-of-csharp/features.md
 - name: C#의 새로운 기능
   items:
-    - name: C# 8.0
+    - name: C# 9.0
       displayName: what's new
+      href: whats-new/csharp-9.md
+    - name: C# 8.0
       href: whats-new/csharp-8.md
     - name: C# 7.3
       href: whats-new/csharp-7-3.md
@@ -1066,7 +1068,7 @@
           href: programming-guide/events/index.md
         - name: 이벤트를 구독 및 구독 취소하는 방법
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: .NET Framework 지침을 따르는 이벤트를 게시하는 방법
+        - name: .NET 지침을 따르는 이벤트를 게시하는 방법
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
         - name: 파생 클래스에서 기본 클래스 이벤트를 발생하는 방법
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md

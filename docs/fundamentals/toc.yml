@@ -136,6 +136,8 @@ items:
             href: ../core/tutorials/index.md
   - name: 새로운 기능
     items:
+      - name: .NET Core에서 .NET 5로의 진화
+        href: ../core/dotnet-five.md
       - name: .NET Core 3.1의 새로운 기능
         href: ../core/whats-new/dotnet-core-3-1.md
       - name: .NET Core 3.0의 새로운 기능
@@ -407,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: 자체 포함된 배포 런타임 롤포워드
             href: ../core/deploying/runtime-patch-selection.md
+          - name: 단일 파일 배포 및 실행 파일
+            href: ../core/deploying/single-file.md
           - name: 자체 포함 배포 및 실행 파일 트리밍
             href: ../core/deploying/trim-self-contained.md
           - name: 런타임 패키지 저장소

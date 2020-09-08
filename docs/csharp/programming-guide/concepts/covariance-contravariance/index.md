@@ -3,12 +3,12 @@ title: 공변성(Covariance) 및 반공변성(Contravariance)(C#)
 description: 공변성(Covariance) 및 반공변성(Contravariance)과 이 기능이 할당 호환성에 미치는 영향에 대해 알아보세요. 이 둘의 차이점을 보여 주는 코드 예제를 확인하세요.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105694"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465665"
 ---
 # <a name="covariance-and-contravariance-c"></a>공변성(Covariance) 및 반공변성(Contravariance)(C#)
 C#에서 공변성(Covariance)과 반공변성(Contravariance)은 배열 형식, 대리자 형식 및 제네릭 형식 인수에 대한 암시적 참조 변환을 가능하게 합니다. 공변성(Covariance)은 할당 호환성을 유지하고 반공변성(Contravariance)은 할당 호환성을 유지하지 않습니다.  
@@ -84,9 +84,9 @@ IEnumerable<Object> objects = strings;
   
 |제목|설명|  
 |-----------|-----------------|  
-|[제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md)|제네릭 인터페이스의 공분산 및 반공분산에 대해 설명하고 .NET Framework의 Variant 제네릭 인터페이스의 목록을 제공합니다.|  
+|[제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md)|제네릭 인터페이스의 공변성(Covariance) 및 반공변성(Contravariance)에 대해 설명하고 .NET의 Variant 제네릭 인터페이스 목록을 제공합니다.|  
 |[Variant 제네릭 인터페이스 만들기(C#)](./creating-variant-generic-interfaces.md)|사용자 지정 variant 인터페이스를 만드는 방법을 보여 줍니다.|  
 |[제네릭 컬렉션용 인터페이스의 가변성 사용(C#)](./using-variance-in-interfaces-for-generic-collections.md)|<xref:System.Collections.Generic.IEnumerable%601> 및 <xref:System.IComparable%601> 인터페이스의 공변성(Covariance) 및 반공변성(Contravariance) 지원을 통해 코드를 다시 사용하는 방법을 보여 줍니다.|  
-|[대리자의 가변성(C#)](./variance-in-delegates.md)|제네릭 및 제네릭이 아닌 대리자의 공변성(Covariance) 및 반공변성(Contravariance)을 설명하고 .NET Framework의 Variant 제네릭 인터페이스의 목록을 제공합니다.|  
+|[대리자의 가변성(C#)](./variance-in-delegates.md)|제네릭 및 제네릭이 아닌 대리자의 공변성(Covariance) 및 반공변성(Contravariance)을 설명하고 .NET의 Variant 제네릭 인터페이스 목록을 제공합니다.|  
 |[대리자의 가변성 사용(C#)](./using-variance-in-delegates.md)|제네릭이 아닌 대리자의 공변성(Covariance) 및 반공변성(Contravariance) 지원을 사용하여 메서드 시그니처를 대리자 형식과 일치시키는 방법을 보여 줍니다.|  
 |[Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)|`Func` 및 `Action` 대리자의 공변성(Covariance) 및 반공변성(Contravariance) 지원을 통해 코드를 다시 사용하는 방법을 보여 줍니다.|
