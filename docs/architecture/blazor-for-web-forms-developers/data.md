@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/26/2020
-ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 09/08/2020
+ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267596"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515854"
 ---
 # <a name="work-with-data"></a>데이터 작업
 
@@ -128,7 +128,7 @@ GitHub에서 데이터에 액세스 해야 할 때마다 이름이 인 클라이
         var client = factory.CreateClient("github");
         var response = await client.GetAsync("repos/dotnet/docs/issues");
         response.EnsureStatusCode();
-        var content = async response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync();
     }
 }
 ```
