@@ -703,7 +703,7 @@ items:
   - name: 데이터 액세스
     items:
       - name: LINQ
-        href: ../standard/using-linq.md
+        href: ../standard/linq/
       - name: XML 문서 및 데이터
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
