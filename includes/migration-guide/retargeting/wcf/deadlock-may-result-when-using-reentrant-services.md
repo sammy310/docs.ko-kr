@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd7d3e445772e4b5ec148576ccd1374d56e251bd
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f61cf21f9f30662cc8e383bb3aeb5c642f1665b8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614782"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497302"
 ---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>재진입 서비스를 사용할 때 교착 상태가 발생할 수 있습니다.
 
@@ -20,7 +20,7 @@ ms.locfileid: "85614782"
 
 이 문제를 해결하려면 다음을 수행합니다.
 
-- 서비스의 동시성 모드를 <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> 또는 &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt;로 설정합니다. 예를 들어:
+- 서비스의 동시성 모드를 <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>로 설정합니다. 예를 들어:
 
 ```csharp
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
