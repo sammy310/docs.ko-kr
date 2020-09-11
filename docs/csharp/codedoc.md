@@ -4,12 +4,12 @@ description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파�
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146319"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465301"
 ---
 # <a name="document-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -35,7 +35,7 @@ XML 문서 주석은 모든 다른 주석처럼 컴파일러에서 무시됩니�
 
 - Visual Studio를 사용하여 애플리케이션을 개발할 경우 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. [속성] 대화 상자에서 **빌드** 탭을 선택하고 **XML 문서 파일**을 선택합니다. 컴파일러가 파일을 쓰는 위치를 변경할 수도 있습니다.
 
-- 명령줄에서 .NET Framework 애플리케이션을 컴파일할 경우 컴파일 시 [-doc 컴파일러 옵션](language-reference/compiler-options/doc-compiler-option.md)을 추가합니다.  
+- 명령줄에서 .NET 애플리케이션을 컴파일할 경우 컴파일 시 [-doc 컴파일러 옵션](language-reference/compiler-options/doc-compiler-option.md)을 추가합니다.  
 
 XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문이 사용됩니다. 예를 들어:
 
@@ -54,7 +54,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 이제 라이브러리를 사용하지만 소스 코드에 대한 액세스 권한이 없는 타사 개발자를 위해 코드에서 API 참조 문서를 만들 수 있습니다.
 앞에서 언급한 대로 XML 문서 태그를 사용하여 이 작업을 수행할 수 있습니다. 이제 C# 컴파일러가 지원하는 표준 XML 태그를 소개하겠습니다.
 
-## <a name="summary"></a>\<summary>
+## \<summary>
 
 `<summary>` 태그는 형식 또는 멤버에 대한 간단한 정보를 추가합니다.
 `Math` 클래스 정의 및 첫 번째 `Add` 메서드에 태그를 추가하여 사용하는 방법을 설명합니다. 나머지 코드에 자유롭게 적용하세요.
@@ -63,27 +63,27 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 `<summary>` 태그는 중요하며, 태그 내용은 IntelliSense 또는 API 참조 문서에서 형식 또는 멤버 정보의 기본 소스이므로 포함하는 것이 좋습니다.
 
-## <a name="remarks"></a>\<remarks>
+## \<remarks>
 
 `<remarks>` 태그는 `<summary>` 태그가 제공하는 형식 또는 멤버에 대한 정보를 보완합니다. 이 예제에서는 클래스에 태그를 추가합니다.
 
 [!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-## <a name="returns"></a>\<returns>
+## \<returns>
 
 `<returns>` 태그는 메서드 선언의 반환 값을 설명합니다.
 이전과 같이 다음 예제에서는 첫 번째 `Add` 메서드에 대한 `<returns>` 태그를 보여 줍니다. 다른 메서드에 대해 같은 작업을 수행할 수 있습니다.
 
 [!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-## <a name="value"></a>\<value>
+## \<value>
 
 `<value>` 태그는 속성에 사용한다는 점을 제외하고 `<returns>` 태그와 비슷합니다.
 `Math` 라이브러리에 `PI`라는 정적 속성이 있다고 가정할 경우 이 태그를 사용하는 방법은 다음과 같습니다.
 
 [!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a>\<example>
+## \<example>
 
 `<example>` 태그를 사용하여 XML 문서에 예제를 포함합니다.
 이 과정에는 자식 `<code>` 태그 사용이 포함됩니다.
@@ -92,14 +92,14 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 `code` 태그는 더 긴 예제에 대한 줄 바꿈 및 들여쓰기를 보존합니다.
 
-## <a name="para"></a>\<para>
+## \<para>
 
 `<para>` 태그를 사용하여 부모 태그 내에서 내용의 서식을 지정합니다. `<para>`는 대개 `<remarks>` 또는 `<returns>`와 같은 태그 내부에서 텍스트를 단락으로 나누는 데 사용됩니다.
 클래스 정의에 대한 `<remarks>` 태그의 내용에 서식을 지정할 수 있습니다.
 
 [!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-## <a name="c"></a>\<c>
+## \<c>
 
 서식 지정 항목에서 텍스트 부분을 코드로 표시하는 데 `<c>` 태그를 사용합니다.
 `<code>` 태그와 비슷하지만 인라인입니다. 태그 내용의 일부로 빠른 코드 예제를 표시하려는 경우 유용합니다.
@@ -107,7 +107,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 [!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<exception>
+## \<exception>
 
 `<exception>` 태그를 사용하여 메서드가 특정 예외를 throw할 수 있음을 개발자에게 알립니다.
 `Math` 라이브러리를 살펴보면 특정 조건에 해당할 경우 두 `Add` 메서드가 모두 예외를 throw함을 알 수 있습니다. `b` 매개 변수가 0인 경우 정수 `Divide` 메서드도 throw하는지는 분명하지 않습니다. 이제 이 메서드에 예외 문서를 추가합니다.
@@ -117,7 +117,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 `cref` 특성은 현재 컴파일 환경에서 사용할 수 있는 예외에 대한 참조를 나타냅니다.
 이 특성은 프로젝트 또는 참조된 어셈블리에서 정의된 형식일 수 있습니다. 해당 값을 확인할 수 없는 경우 컴파일러에서 경고가 발생합니다.
 
-## <a name="see"></a>\<see>
+## \<see>
 
 `<see>` 태그를 사용하여 다른 코드 요소에 대한 문서 페이지의 클릭 가능한 링크를 만들 수 있습니다. 다음 예제에서는 두 `Add` 메서드 간의 클릭 가능한 링크를 만듭니다.
 
@@ -126,7 +126,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 `cref`는 현재 컴파일 환경에서 사용할 수 있는 형식 또는 멤버에 대한 참조를 나타내는 **required** 특성입니다.
 이 특성은 프로젝트 또는 참조된 어셈블리에서 정의된 형식일 수 있습니다.
 
-## <a name="seealso"></a>\<seealso>
+## \<seealso>
 
 `<seealso>` 태그는 `<see>` 태그와 같은 방법으로 사용합니다. 유일한 차이점은 내용이 일반적으로 "참고 항목" 섹션에 배치된다는 것입니다. 이제 정수 `Add` 메서드에 대해 `seealso` 태그를 추가하여 클래스에서 정수 매개 변수를 허용하는 다른 메서드를 참조합니다.
 
@@ -135,33 +135,33 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 `cref`는 현재 컴파일 환경에서 사용할 수 있는 형식 또는 멤버에 대한 참조를 나타냅니다.
 이 특성은 프로젝트 또는 참조된 어셈블리에서 정의된 형식일 수 있습니다.
 
-## <a name="param"></a>\<param>
+## \<param>
 
 `<param>` 태그를 사용하여 메서드의 매개 변수를 설명합니다. 다음은 double `Add` 메서드에 대한 예제입니다. 태그가 설명하는 매개 변수는 **required** `name` 특성에서 지정됩니다.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-## <a name="typeparam"></a>\<typeparam>
+## \<typeparam>
 
 `<typeparam>` 태그는 `<param>` 태그처럼 사용하지만 제네릭 매개 변수를 설명하는 제네릭 형식 또는 메서드 선언에 사용합니다.
 `Math` 클래스에 빠른 제네릭 메서드를 추가하여 한 수량이 다른 수량보다 큰지 확인합니다.
 
 [!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-## <a name="paramref"></a>\<paramref>
+## \<paramref>
 
 `<summary>` 태그와 같은 태그에서 메서드가 수행하는 작업을 설명하는 동안 매개 변수에 대한 참조를 만들려는 경우 `<paramref>` 태그를 사용하는 것이 좋습니다. double 기반 `Add` 메서드의 요약을 업데이트해 보겠습니다. `<param>` 태그처럼 매개 변수 이름은 **required** `name` 특성에서 지정됩니다.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-## <a name="typeparamref"></a>\<typeparamref>
+## \<typeparamref>
 
 `<typeparamref>` 태그는 `<paramref>` 태그처럼 사용하지만 제네릭 매개 변수를 설명하는 제네릭 형식 또는 메서드 선언에 사용합니다.
 이전에 만든 것과 같은 제네릭 메서드를 사용할 수 있습니다.
 
 [!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a>\<list>
+## \<list>
 
 `<list>` 태그를 사용하여 문서 정보의 서식을 순서가 지정된 목록, 순서가 지정되지 않은 목록 또는 표로 지정합니다. `Math` 라이브러리에서 지원하는 모든 수학 연산의 순서가 지정되지 않은 목록을 만듭니다.
 
@@ -169,13 +169,13 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 `type` 특성을 각각 `number` 또는 `table`로 변경하여 순서가 지정된 목록 또는 표를 만들 수 있습니다.
 
-## <a name="inheritdoc"></a>\<inheritdoc>
+## \<inheritdoc>
 
-`<inheritdoc>` 태그를 사용하여 기본 클래스, 인터페이스 및 유사한 메서드에서 XML 주석을 상속할 수 있습니다. 이렇게 하면 중복 XML 주석을 복사하여 붙여넣을 필요가 없으며 XML 주석이 자동으로 동기화됩니다.
+`<inheritdoc>` 태그를 사용하여 기본 클래스, 인터페이스 및 유사한 메서드에서 XML 주석을 상속할 수 있습니다. 이렇게 하면 중복 XML 주석을 복사하여 붙여 넣을 필요가 없으며 XML 주석이 자동으로 동기화됩니다.
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
-### <a name="put-it-all-together"></a>전체 과정
+### <a name="put-it-all-together"></a>모든 요소 결합
 
 이 자습서에 따라 필요한 경우 코드에 태그를 적용했습니다. 이제 코드는 다음과 같이 표시되어야 합니다.
 
@@ -185,7 +185,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 자세히 살펴볼 정보가 너무 많으므로 이 코드에 참여하려는 개발자에게는 큰 문제일 수 있습니다.
 다행히도 이 문제를 처리할 수 있는 XML 태그가 있습니다.
 
-## <a name="include"></a>\<include>
+## \<include>
 
 소스 코드 파일에 직접 문서 주석을 배치하는 것과 달리 `<include>` 태그를 사용하면 소스 코드에서 형식과 멤버를 설명하는 주석을 개별 XML 파일에서 참조할 수 있습니다.
 
@@ -226,7 +226,7 @@ Sandcastle 등의 도구는 [\<event>](https://ewsoftware.github.io/XMLCommentsG
 - 컴파일러에서 `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` 및 `<typeparam>` 태그의 구문을 확인합니다.
 - 컴파일러는 파일 경로와 코드의 다른 부분에 대한 참조가 포함된 매개 변수의 유효성을 검사합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 문서 주석(C# 프로그래밍 가이드)](programming-guide/xmldoc/index.md)
 - [문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

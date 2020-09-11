@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f20b089fd22794d5aaeff34502e960fe41a565e1
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700971"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359196"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -19,7 +19,7 @@ ms.locfileid: "84700971"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 솔루션에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 솔루션에 사용할 수 있습니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
@@ -27,7 +27,7 @@ ms.locfileid: "84700971"
 
 1. Visual Studio를 시작합니다.
 
-1. [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. "StringLibraryTest"라는 새 단위 테스트 프로젝트를 솔루션에 추가합니다.
 

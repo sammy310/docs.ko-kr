@@ -3,12 +3,12 @@ title: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 description: 서버 앱을 빌드할 때 사용할 .NET의 구현을 결정하는 데 도움이 되는 가이드입니다.
 author: cartermp
 ms.date: 04/28/2020
-ms.openlocfilehash: 30157276bce53ed44dca5b660172e5556dab14f8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: a3c15e8f2198b1bcc4e623a7dc7f5cddca9c83f6
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507444"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415021"
 ---
 # <a name="net-core-vs-net-framework-for-server-apps"></a>서버 앱에 대한 .NET Core 및 .NET Framework
 
@@ -111,7 +111,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 - [ASP.NET 및 ASP.NET Core 중에서 선택](/aspnet/core/choose-aspnet-framework)
 - [.NET Framework를 대상으로 하는 ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [대상 프레임워크](frameworks.md)
-- [.NET Core 가이드](../core/index.yml)
+- [.NET Core 소개](../core/introduction.md)
 - [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)
 - [.NET 및 Docker 소개](../core/docker/introduction.md)
 - [.NET 구성 요소 개요](components.md)

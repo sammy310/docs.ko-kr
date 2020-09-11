@@ -1,13 +1,13 @@
 ---
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
-ms.date: 03/03/2020
-ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/31/2020
+ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507301"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271830"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -17,7 +17,7 @@ ms.locfileid: "82507301"
 
 잘 알려진 원래의 <xref:System.Net.Http.HttpClient> 클래스는 쉽게 사용할 수 있지만, 많은 개발자가 제대로 사용하지 못하는 경우도 있습니다.
 
-이 클래스는 `IDisposable`을 구현하지만, `using` 문 내에서 이 클래스를 선언하고 인스턴스화하는 것은 선호되지 않습니다. `HttpClient` 개체가 삭제될 때 기본 소켓이 즉시 해제되지 않아 ‘소켓 소모’ 문제가 발생할 수 있기 때문입니다.  이 문제에 대한 자세한 내용은 블로그 게시물 [You're using HttpClient wrong and it's destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)(잘못 사용하고 있는 HttpClient로 인해 불안정해지고 있는 소프트웨어)를 참조하세요.
+이 클래스는 `IDisposable`을 구현하지만, `using` 문 내에서 해당 클래스를 선언하고 인스턴스화하는 것은 바람직하지 않습니다. `HttpClient` 개체가 삭제될 때 기본 소켓이 즉시 해제되지 않아 ‘소켓 소모’ 문제가 발생할 수 있기 때문입니다. 이 문제에 대한 자세한 내용은 블로그 게시물 [You're using HttpClient wrong and it's destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)(잘못 사용하고 있는 HttpClient로 인해 불안정해지고 있는 소프트웨어)를 참조하세요.
 
 따라서 `HttpClient`는 한 번 인스턴스화되어 애플리케이션의 수명 동안 다시 사용됩니다. 모든 요청에 대해 `HttpClient` 클래스를 인스턴스화하면 과도한 부하에서 사용할 수 있는 소켓 수가 소진됩니다. 이 문제로 인해 `SocketException` 오류가 발생합니다. 이 문제를 해결하는 데 가능한 방법은 [HttpClient 사용에 관한 Microsoft 문서](../../../csharp/tutorials/console-webapiclient.md)에서 설명한 대로 `HttpClient` 개체를 singleton 또는 정적으로 만드는 것을 기반으로 합니다. 이 방법은 단기 콘솔 앱 또는 하루에 몇 번 실행되는 유사한 앱에 좋은 해결책일 수 있습니다.
 
@@ -151,13 +151,13 @@ public class CatalogService : ICatalogService
 }
 ```
 
-형식화된 클라이언트(예제에서는 `CatalogService`)는 DI(종속성 주입)를 통해 활성화됩니다. 즉, `HttpClient` 외에도 생성자에서 등록된 모든 서비스를 허용할 수 있습니다.
+형식화된 클라이언트(예제에서는 `CatalogService`)는 DI(종속성 주입)를 통해 활성화됩니다. 즉, `HttpClient` 외에도 생성자에 등록된 모든 서비스를 수락할 수 있습니다.
 
-형식화된 클라이언트는 실제로 임시 개체입니다. 즉, 필요할 때마다 새 인스턴스가 만들어지고, 생성될 때마다 새 `HttpClient` 인스턴스를 받게 됩니다. 그러나 풀의 `HttpMessageHandler` 개체는 여러 `HttpClient` 인스턴스에서 재사용되는 개체입니다.
+형식화된 클라이언트는 사실상 임시 개체입니다. 즉, 새 인스턴스가 필요할 때마다 생성됩니다. 생성될 때마다 새 `HttpClient` 인스턴스를 수신합니다. 그러나 풀의 `HttpMessageHandler` 개체는 여러 `HttpClient` 인스턴스에서 재사용되는 개체입니다.
 
 ### <a name="use-your-typed-client-classes"></a>형식화된 클라이언트 클래스 사용
 
-마지막으로, 형식화된 클래스를 구현하고 `AddHttpClient()`에 등록하고 구성한 후에는 DI를 사용하여 서비스를 삽입할 수 있는 위치에서 해당 클래스를 사용할 수 있습니다. 예를 들어 eShopOnContainers의 다음 코드와 같이 MVC 웹 앱 컨트롤러 또는 Razor 페이지 코드에서 사용할 수 있습니다.
+마지막으로, 형식화된 클래스를 구현한 후에는 `AddHttpClient()`에 등록하고 구성할 수 있습니다. 그러면 DI를 통해 서비스를 삽입한 모든 곳에서 해당 클래스를 사용할 수 있습니다. 예를 들어 eShopOnContainers의 다음 코드와 같이 MVC 웹 앱 컨트롤러 또는 Razor 페이지 코드에서 사용할 수 있습니다.
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -186,7 +186,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-이 시점까지 보여 준 코드는 정기적인 HTTP 요청만 수행하는 것이지만, 다음 섹션에서는 정책을 추가하고, 등록된 형식화된 클라이언트에 처리기를 위임하여 `HttpClient`에서 수행할 모든 HTTP 요청을 처리하는 '마법 같은 일'이 펼쳐집니다. 이 과정에서 지수 백오프를 사용하는 다시 시도, 회로 차단기 또는 다른 사용자 지정 위임 처리기와 같은 복원력 정책을 고려하여 인증 토큰 사용, 기타 사용자 지정 기능 등의 추가 보안 기능을 구현합니다.
+지금까지 위의 코드 조각에서는 일반적인 HTTP 요청을 수행하는 예만 보여 주었습니다. 이외의 유용한 기능은 다음 섹션에서 설명됩니다. 다음 섹션에서는 `HttpClient`에서 수행하는 모든 HTTP 요청이 지수 백오프로 다시 시도, 회로 차단기, 인증 토큰을 사용하는 보안 기능 또는 기타 사용자 지정 기능과 같은 복원력 있는 정책을 사용할 수 있는 방법을 보여 줍니다. 정책을 추가하고 처리기를 등록된 형식화된 클라이언트에 위임하기만 하면 이 모든 기능을 이용할 수 있습니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

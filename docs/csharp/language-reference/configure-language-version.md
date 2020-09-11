@@ -2,26 +2,28 @@
 title: C# 언어 버전 관리 - C# 가이드
 description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
-ms.date: 05/20/2020
-ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 08/11/2020
+ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811953"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495462"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
 최신 C# 컴파일러는 프로젝트의 대상 프레임워크를 기반으로 기본 언어 버전을 결정합니다. Visual Studio는 이 값을 변경하는 UI를 제공하지 않지만, *csproj* 파일을 편집하여 값을 변경할 수 있습니다. 기본값이 이렇게 선택되면 항상 대상 프레임워크와 호환되는 최신 언어 버전을 사용할 수 있게 됩니다. 프로젝트의 대상과 호환되는 최신 언어 기능을 이용할 수 있다는 이점이 있습니다. 또한, 기본값이 이렇게 선택되면 대상 프레임워크에서 사용할 수 없는 형식이나 런타임 동작이 필요한 언어를 사용하지 않을 수 있습니다. 기본값보다 최신의 언어 버전을 선택할 경우 컴파일 시간 및 런타임 오류를 진단하기 어려워질 수 있습니다.
 
-이 문서의 규칙은 Visual Studio 2019 또는 .NET Core 3.0 SDK와 함께 제공되는 컴파일러에 적용됩니다. Visual Studio 2017 설치 또는 이전 .NET Core SDK 버전의 일부인 C# 컴파일러는 기본적으로 C# 7.0을 대상으로 합니다.
+이 문서의 규칙은 Visual Studio 2019 또는 .NET SDK와 함께 제공되는 컴파일러에 적용됩니다. Visual Studio 2017 설치 또는 이전 .NET Core SDK 버전의 일부인 C# 컴파일러는 기본적으로 C# 7.0을 대상으로 합니다.
 
-C# 8.0(이상)은 .NET Core 3.x 및 이후 버전에서만 지원됩니다. 대부분의 최신 기능에는 .NET Core 3.x에서 도입된 라이브러리 및 런타임 기능이 필요합니다.
+C# 8.0은 .NET Core 3.x 이상 버전에서만 지원됩니다. 대부분의 최신 기능에는 .NET Core 3.x에서 도입된 라이브러리 및 런타임 기능이 필요합니다.
 
 - [기본 인터페이스 구현](../whats-new/csharp-8.md#default-interface-methods)에는 .NET Core 3.0 CLR의 새로운 기능이 필요합니다.
 - [비동기 스트림](../whats-new/csharp-8.md#asynchronous-streams)에는 새로운 형식인 <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>이 필요합니다.
 - [인덱스 및 범위](../whats-new/csharp-8.md#indices-and-ranges)에는 새로운 형식인 <xref:System.Index?displayProperty=nameWithType> 및 <xref:System.Range?displayProperty=nameWithType>이 필요합니다.
 - [Nulle 허용 참조 형식](../whats-new/csharp-8.md#nullable-reference-types)은 더 효과적인 경고를 제공하기 위해 몇 가지 [특성](attributes/nullable-analysis.md)을 사용하는데, 이러한 특성은 .NET Core 3.0에서 추가되었습니다. 다른 대상 프레임워크는 이러한 특성으로 주석이 추가되지 않았습니다. 즉, null 허용 경고가 잠재적인 문제를 정확하게 반영하지 못할 수 있습니다.
+
+C# 9.0은 .NET 5 이상 버전에서만 지원됩니다.
 
 ## <a name="defaults"></a>기본값
 
@@ -29,6 +31,7 @@ C# 8.0(이상)은 .NET Core 3.x 및 이후 버전에서만 지원됩니다. 대�
 
 | 대상 프레임워크 | 버전 | C# 언어 버전 기본값 |
 |------------------|---------|-----------------------------|
+| .NET             | 5.x     | C# 9.0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |

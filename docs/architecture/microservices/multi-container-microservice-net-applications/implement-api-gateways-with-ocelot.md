@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 03/02/2020
-ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864100"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358988"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -15,6 +15,7 @@ ms.locfileid: "86864100"
 > 참조 마이크로 서비스 애플리케이션 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)는 현재 [Envoy](https://www.envoyproxy.io/)에서 제공하는 기능을 사용하여 이전에 참조된 [Ocelot](https://github.com/ThreeMammals/Ocelot) 대신 API 게이트웨이를 구현합니다.
 > Envoy가 eShopOnContainers에서 구현되는 새로운 gRPC 서비스 간 통신에 필요한 WebSocket 프로토콜을 기본적으로 지원하기 때문에 이 디자인을 선택했습니다.
 > 그러나 가이드에서는 프로덕션 등급 시나리오에 적합한 간단하고, 사용할 수 있고, 가벼운 API 게이트웨이로 Ocelot을 고려할 수 있도록 이 섹션을 할애했습니다.
+> 또한 최신 Ocelot 버전의 json 스키마에는 호환성이 손상되는 변경 사항이 포함되어 있습니다. Ocelot v16.0.0 이전 버전을 사용하거나 ReRoutes 대신 Routes 키를 사용하는 것이 좋습니다.
 
 ## <a name="architect-and-design-your-api-gateways"></a>API 게이트웨이 구성 및 설계
 

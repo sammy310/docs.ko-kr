@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957575"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415012"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -161,7 +161,7 @@ Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
 [.NET 5](#net-5-and-later-versions)(현재 미리 보기 상태)가 릴리스되면 모든 새로운 .NET 개발에 권장되는 .NET 구현이 되므로 일부 컨텍스트에서 “.NET”은 “.NET 5 이상 버전”을 의미합니다.
 
-[.NET 가이드](index.yml)를 참조하세요.
+[.NET 기본 사항](../fundamentals/index.yml)을 참조하세요.
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 이상 버전
 
@@ -169,7 +169,7 @@ Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
 이 .NET 구현의 초기 버전을 .NET Core라고 합니다. .Net 5.0은 .NET Core 3.1 다음 버전입니다. [.NET Framework](#net-framework)라고 알려진 이전 구현과 최신 .NET 구현을 혼동하지 않도록 버전 4를 건너뛰었습니다. 현재 버전의 .NET Framework는 4.8입니다.
 
-[.NET](../core/index.yml)을 참조하세요.
+[.NET 기본 사항](../fundamentals/index.yml)을 참조하세요.
 
 ## <a name="net-cli"></a>.NET CLI
 
@@ -294,8 +294,7 @@ IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이�
 
 ## <a name="see-also"></a>참조
 
-- [.NET 가이드](index.yml)
+- [.NET 기본 사항](../fundamentals/index.yml)
 - [.NET Framework 가이드](../framework/index.yml)
-- [.NET Core](../core/index.yml)
 - [ASP.NET 개요](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 개요](/aspnet/index#pivot=core)

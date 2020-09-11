@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a1b65db6efb60d27ab82ab47854c0399b9476729
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125295"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466081"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 
@@ -41,7 +41,7 @@ ms.locfileid: "89125295"
 |[-target](target-compiler-option.md)|옵션([-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) 또는 [-target:winmdobj](target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|
 |-modulename:\<string>|소스 모듈의 이름을 지정합니다.|
 
-## <a name="net-framework-assemblies"></a>.NET Framework 어셈블리
+## <a name="net-assemblies"></a>.NET 어셈블리
 
 |옵션|용도|
 |------------|-------------|
@@ -85,7 +85,7 @@ ms.locfileid: "89125295"
 |------------|-------------|
 |[-link](link-compiler-option.md)|지정된 어셈블리의 COM 형식 정보를 프로젝트에 사용할 수 있도록 합니다.|
 |[-linkresource](linkresource-compiler-option.md)|관리되는 리소스에 대한 링크를 만듭니다.|
-|[-resource](resource-compiler-option.md)|.NET Framework 리소스를 출력 파일에 포함합니다.|
+|[-resource](resource-compiler-option.md)|출력 파일에 .NET 리소스를 포함합니다.|
 |[-win32icon](win32icon-compiler-option.md)|출력 파일에 삽입할 .ico 파일을 지정합니다.|
 |[/win32res:](win32res-compiler-option.md)|출력 파일에 삽입할 Win32 리소스를 지정합니다.|
 

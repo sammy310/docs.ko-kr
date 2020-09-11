@@ -1,13 +1,13 @@
 ---
 title: .NET Core RID(런타임 식별자) 카탈로그
-description: RID(런타임 식별자) 및 .NET Core에서 RID의 사용 방법에 관해 알아봅니다.
+description: RID(런타임 식별자)에 대한 정보와 .NET Core에서 RID 사용 방법에 대해 알아봅니다.
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903287"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414567"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
@@ -72,7 +72,7 @@ NuGet에서 패키지를 복원할 때 지정된 런타임에 대한 정확한 �
 
 RID를 사용할 때는 RID에 대한 다음과 같은 몇 가지 고려 사항을 알고 있어야 합니다.
 
-- RID는 **불투명 문자열**이며 블랙 박스로 취급해야 합니다.
+- 구성 요소 파트를 검색하기 위해 RID를 구문 분석하지 않습니다.
 - RID를 프로그래밍 방식으로 빌드하지 마세요.
 - 플랫폼에 대해 이미 정의된 RID를 사용합니다.
 - RID는 구체적이어야 하므로 실제 RID 값에서 어느 것도 가정하지 마세요.

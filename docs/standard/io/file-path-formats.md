@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165799"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271791"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -33,19 +33,19 @@ ms.locfileid: "87165799"
 
 |Path  |설명  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | 드라이브 C의 루트에서 시작하는 절대 파일 경로: |
+| `C:\Documents\Newsletters\Summer2018.pdf` | `C:` 드라이브의 루트에서 시작하는 절대 파일 경로입니다. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 현재 드라이브의 루트에서 시작하는 절대 경로입니다. |
 | `2018\January.xlsx` | 현재 디렉터리의 하위 디렉터리에 있는 파일에 대한 상대 경로입니다. |
 | `..\Publications\TravelBrochure.pdf` | 현재 디렉터리의 피어인 디렉터리에 있는 파일에 대한 상대 경로입니다. |
-| `C:\Projects\apilibrary\apilibrary.sln` | 드라이브 C의 루트에서 시작하는 파일에 대한 절대 파일 경로: |
-| `C:Projects\apilibrary\apilibrary.sln` | C: 드라이브의 현재 디렉터리에서 시작하는 상대 경로입니다. |
+| `C:\Projects\apilibrary\apilibrary.sln` | `C:` 드라이브의 루트에서 시작하는 파일의 절대 경로입니다. |
+| `C:Projects\apilibrary\apilibrary.sln` | `C:` 드라이브의 현재 디렉터리에서 시작하는 상대 경로입니다. |
 
 > [!IMPORTANT]
-> 마지막 두 경로 간의 차이점에 주목하십시오. 둘이 다 선택적 볼륨 지정자(두 경우 모두 C:)를 지정하지만, 첫 번째 경로는 지정한 볼륨의 루트로 시작하는 반면에, 두 번째 경로는 그렇지 않습니다. 따라서 첫 번째 경로는 드라이브 C의 루트 디렉터리에서 시작하는 절대 경로인 반면에, 두 번째 경로는 드라이브 C의 현재 디렉터리에서 시작하는 상대 경로입니다. 첫 번째 경로가 의도한 두 번째 양식을 사용하는 것은 Windows 파일 경로를 수반하는 버그의 일반적인 원인입니다.
+> 마지막 두 경로 간의 차이점에 주목하십시오. 둘 다 선택적 볼륨 지정자(두 경우 모두 `C:`)를 지정하지만 첫 번째 경로는 지정한 볼륨의 루트에서 시작하는 반면, 두 번째 경로는 그러지 않습니다. 따라서 첫 번째 경로는 `C:` 드라이브의 루트 디렉터리에서 시작하는 절대 경로인 반면, 두 번째 경로는 `C:` 드라이브의 현재 디렉터리에서 시작하는 상대 경로입니다. 첫 번째 경로가 의도한 두 번째 양식을 사용하는 것은 Windows 파일 경로를 수반하는 버그의 일반적인 원인입니다.
 
 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 메서드를 호출하여 파일 경로가 정규화되는지(즉, 경로가 현재 디렉터리와 독립적이며 현재 디렉터리가 변경되어도 변경되지 않음) 여부를 결정할 수 있습니다. 참고로 그러한 경로는 상대 디렉터리 세그먼트(`.` 및 `..`)를 포함할 수 있으며 확인된 경로가 언제나 같은 위치를 가리키는 경우 여전히 정규화됩니다.
 
-다음 예제에서는 절대 경로와 상대 경로 간의 차이점을 보여 줍니다. 예제를 실행하기 전에 디렉터리 D:\FY2018\가 존재하고 명령 프롬프트에서 D:\ 에 대한 현재 디렉터리를 설정하지 않은 것으로 가정합니다.
+다음 예제에서는 절대 경로와 상대 경로 간의 차이점을 보여 줍니다. `D:\FY2018\` 디렉터리가 있고, 예제를 실행하기 전에 명령 프롬프트에서 `D:\`의 현재 디렉터리를 설정하지 않았다고 가정합니다.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ ms.locfileid: "87165799"
 
 네트워크 리소스에 액세스하기 위해 사용하는 UNC(범용 명명 규칙) 경로는 다음과 같은 형식을 가집니다.
 
-- \\\\로 시작하는 서버 또는 호스트 이름. 서버 이름에 NetBIOS 컴퓨터 이름 또는 IP/FQDN 주소(IPv4 및 v6을 지원함)가 올 수 있습니다.
-- \\에 의해 호스트 이름과 구분되는 공유 이름. 서버 이름과 공유 이름이 함께 볼륨을 구성합니다.
+- `\\`로 시작하는 서버 또는 호스트 이름. 서버 이름에 NetBIOS 컴퓨터 이름 또는 IP/FQDN 주소(IPv4 및 v6을 지원함)가 올 수 있습니다.
+- `\`에 의해 호스트 이름과 구분되는 공유 이름. 서버 이름과 공유 이름이 함께 볼륨을 구성합니다.
 - 디렉터리 이름. [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)는 중첩된 디렉터리 계층 내에서 하위 디렉터리를 구분합니다.
 - 선택적 파일 이름. [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)는 파일 경로 및 파일 이름을 구분합니다.
 
@@ -65,8 +65,8 @@ ms.locfileid: "87165799"
 
 |경로  |설명  |
 | -- | -- |
-| `\\system07\C$\` | `system07`에 있는 C: 드라이브의 루트 디렉터리. |
-| `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\ 공유 볼륨의 Test 디렉터리에 있는 Foo.txt 파일입니다.|
+| `\\system07\C$\` | `system07`에 있는 `C:` 드라이브의 루트 디렉터리입니다. |
+| `\\Server2\Share\Test\Foo.txt` | `\\Server2\Share` 볼륨의 Test 디렉터리에 있는 `Foo.txt` 파일입니다.|
 
 UNC 경로는 언제나 정규화해야 합니다. 이 경로는 상대 디렉터리 세그먼트(`.` 및 `..`)를 포함할 수 있지만 정규화된 경로의 일부이어야 합니다. UNC 경로를 드라이브 문자에 매핑해야만 상대 경로를 사용할 수 있습니다.
 
@@ -101,7 +101,7 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 구성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 server1\utilities입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다.
+    디바이스 UNC의 경우, 서버/공유 부분이 볼륨을 구성합니다. 예를 들어 `\\?\server1\e:\utilities\\filecomparer\`에서 서버/공유 부분은 `server1\utilities`입니다. 이는 상대 디렉터리 경로를 사용하여 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 같은 메서드를 호출할 때 중요하며, 볼륨을 지나서 탐색하는 것은 불가능합니다.
 
 DOS 디바이스 경로는 정의에 의해 정규화됩니다. 상대 디렉터리 세그먼트(`.` 및 `..`)는 허용되지 않습니다. 현재 디렉터리는 해당 사용에 포함되지 않습니다.
 
@@ -146,7 +146,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 ### <a name="apply-the-current-directory"></a>현재 디렉터리 적용
 
-경로가 정규화되지 않은 경우 Windows는 현재 디렉터리를 해당 경로에 적용합니다. UNC 및 디바이스 경로에는 현재 디렉터리가 적용되지 않습니다. 구분 기호 C:\\를 포함한 전체 드라이브에도 적용되지 않습니다.
+경로가 정규화되지 않은 경우 Windows는 현재 디렉터리를 해당 경로에 적용합니다. UNC 및 디바이스 경로에는 현재 디렉터리가 적용되지 않습니다. 구분 기호를 포함하는 전체 드라이브 `C:\`에도 적용되지 않습니다.
 
 경로가 단일 구성 요소 구분 기호로 시작하는 경우 현재 디렉터리의 드라이브를 적용합니다. 예를 들어 파일 경로가 `\utilities`이고 현재 디렉터리가 `C:\temp\`인 경우, 정규화하면 `C:\utilities`가 생성됩니다.
 

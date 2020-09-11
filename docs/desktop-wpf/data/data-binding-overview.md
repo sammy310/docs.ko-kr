@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325759"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271999"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF의 데이터 바인딩 개요
 
@@ -173,12 +173,12 @@ WPF의 데이터 바인딩 기능은 광범위한 속성을 통한 기본적인 
 
 데이터 바인딩의 다른 기능과 사용법을 살펴보기 전에 <xref:System.Windows.Data.BindingExpression> 클래스를 알아보는 것이 도움이 됩니다. 이전 섹션에서 살펴본 대로 <xref:System.Windows.Data.Binding> 클래스는 바인딩 선언의 상위 수준 클래스입니다. 이 클래스는 바인딩의 특징을 지정할 수 있는 다양한 속성을 제공합니다. 관련 클래스인 <xref:System.Windows.Data.BindingExpression>은 소스와 대상 간에 연결을 유지 관리하는 기본 개체입니다. 바인딩에는 여러 바인딩 식에서 공유될 수 있는 모든 정보가 포함됩니다. <xref:System.Windows.Data.BindingExpression>은 공유될 수 없는 인스턴스 식이고 <xref:System.Windows.Data.Binding>의 모든 인스턴스 정보를 포함합니다.
 
-다음 예제를 참조하세요. 여기서 `myDataObject`는 `MyData` 클래스의 인스턴스이고, `myBinding`은 소스 <xref:System.Windows.Data.Binding> 개체이며, `MyData`는 `MyDataProperty` 문자열 속성을 포함하는 정의된 클래스입니다. 이 예제에서는 <xref:System.Windows.Controls.TextBlock>의 인스턴스인 `myText`의 텍스트 콘텐츠를 `MyDataProperty`에 바인딩합니다.
+다음 예제를 참조하세요. 여기서 `myDataObject`는 `MyData` 클래스의 인스턴스이고, `myBinding`은 소스 <xref:System.Windows.Data.Binding> 개체이며, `MyData`는 `ColorName` 문자열 속성을 포함하는 정의된 클래스입니다. 이 예제에서는 <xref:System.Windows.Controls.TextBlock>의 인스턴스인 `myText`의 텍스트 콘텐츠를 `ColorName`에 바인딩합니다.
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-같은 *myBinding* 개체를 사용하여 다른 바인딩을 만들 수 있습니다. 예를 들어 *myBinding* 개체를 사용하여 확인란의 텍스트 콘텐츠를 *MyDataProperty*에 바인딩할 수 있습니다. 이 시나리오에는 *myBinding* 개체를 공유하는 두 개의 <xref:System.Windows.Data.BindingExpression> 인스턴스가 있습니다.
+같은 *myBinding* 개체를 사용하여 다른 바인딩을 만들 수 있습니다. 예를 들어 *myBinding* 개체를 사용하여 확인란의 텍스트 콘텐츠를 *ColorName*에 바인딩할 수 있습니다. 이 시나리오에는 *myBinding* 개체를 공유하는 두 개의 <xref:System.Windows.Data.BindingExpression> 인스턴스가 있습니다.
 
 <xref:System.Windows.Data.BindingExpression> 개체는 데이터에 바인딩된 개체에서 <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>을 호출하여 반환됩니다. 다음 문서에서는 <xref:System.Windows.Data.BindingExpression> 클래스를 사용하는 몇 가지 방법을 설명합니다.
 

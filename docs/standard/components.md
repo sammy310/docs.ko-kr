@@ -4,12 +4,12 @@ description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344161"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414736"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -38,7 +38,7 @@ Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본
 
 .NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)는 모두 .NET Core에서 실행됩니다.
 
-.NET Core의 자세한 내용은 [.NET Core 가이드](../core/index.yml)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
+.NET Core의 자세한 내용은 [.NET Core 소개](../core/introduction.md)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -106,8 +106,8 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](h
 ## <a name="see-also"></a>참조
 
 - [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)
-- [.NET Standard](net-standard.md)
-- [.NET Core 가이드](../core/index.yml)
+- [.NET Standard 소개](net-standard.md)
+- [.NET Core 소개](../core/introduction.md)
 - [.NET Framework 가이드](../framework/index.yml)
 - [C# 가이드](../csharp/index.yml)
 - [F# 가이드](../fsharp/index.yml)

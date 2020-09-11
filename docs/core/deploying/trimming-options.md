@@ -4,12 +4,12 @@ description: 자체 포함 앱의 트리밍을 제어하는 방법을 알아봅�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142260"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465418"
 ---
 # <a name="trimming-options"></a>트리밍 옵션
 
@@ -25,7 +25,7 @@ ms.locfileid: "89142260"
 
 ## <a name="trimming-granularity"></a>트리밍 세분성
 
-다음 세분성 설정은 적극적으로 사용되지 않는 IL을 삭제하는 방법을 제어합니다. 해당 항목은 속성으로 설정하거나 [개별 어셈블리](#Trimmed-assemblies)에서 메타데이터로 설정할 수 있습니다.
+다음 세분성 설정은 적극적으로 사용되지 않는 IL을 삭제하는 방법을 제어합니다. 해당 항목은 속성으로 설정하거나 [개별 어셈블리](#trimmed-assemblies)에서 메타데이터로 설정할 수 있습니다.
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -39,7 +39,7 @@ ms.locfileid: "89142260"
 
 ## <a name="trimmed-assemblies"></a>트리밍된 어셈블리
 
-트리밍된 앱을 게시하면 SDK는 트리밍을 위해 처리할 파일 세트를 나타내는 `ManagedAssemblyToLink`라는 `ItemGroup`을 계산합니다. `ManagedAssemblyToLink`에는 어셈블리별로 트리밍 동작을 제어하는 메타데이터가 있을 수 있습니다. 해당 메타데이터를 설정하려면 기본 제공 `PrepareForILLink` 대상 전에 실행되는 대상을 만듭니다. 예제에서는 `MyAssembly`의 트리밍을 사용하는 방법을 보여 줍니다.
+트리밍된 앱을 게시하면 SDK는 트리밍을 위해 처리할 파일 세트를 나타내는 `ManagedAssemblyToLink`라는 `ItemGroup`을 계산합니다. `ManagedAssemblyToLink`에는 어셈블리별로 트리밍 동작을 제어하는 메타데이터가 있을 수 있습니다. 해당 메타데이터를 설정하려면 기본 제공 `PrepareForILLink` 대상 전에 실행되는 대상을 만듭니다. 다음 예제에서는 `MyAssembly` 트리밍을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -60,7 +60,7 @@ SDK는 게시 중에 해당 세트를 계산하고 변경하지 않을 것으로
 
 - `<TrimMode>copyused</TrimMode>` 또는 `<TrimMode>link</TrimMode>`
 
-  해당 어셈블리의 [트리밍 세분성](#Trimming-granularity)을 제어합니다. 이 옵션은 전역 `TrimMode`보다 우선합니다. 어셈블리에서 `TrimMode`를 설정하는 것은 `<IsTrimmable>true</IsTrimmable>`을 의미합니다.
+  해당 어셈블리의 [트리밍 세분성](#trimming-granularity)을 제어합니다. 이 옵션은 전역 `TrimMode`보다 우선합니다. 어셈블리에서 `TrimMode`를 설정하는 것은 `<IsTrimmable>true</IsTrimmable>`을 의미합니다.
 
 ## <a name="root-assemblies"></a>루트 어셈블리
 
@@ -106,7 +106,7 @@ SDK는 게시 중에 해당 세트를 계산하고 변경하지 않을 것으로
 
 ## <a name="warning-versions"></a>경고 버전
 
-트리밍 분석은 SDK에서 분석 경고 버전을 제어하는 [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) 속성을 적용합니다. 트리밍 분석 경고의 버전을 독립적으로 제어하는 또 다른 속성이 있습니다(컴파일러의 `WarningLevel`과 비슷함).
+트리밍 분석은 SDK에서 분석 경고 버전을 제어하는 [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) 속성을 적용합니다. 트리밍 분석 경고의 버전을 독립적으로 제어하는 또 다른 속성이 있습니다(컴파일러의 `WarningLevel`과 비슷함).
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

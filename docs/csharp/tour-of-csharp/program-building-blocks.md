@@ -2,12 +2,12 @@
 title: C# 프로그램의 구성 요소
 description: C# 멤버, 식 및 문에 대해 알아봅니다. 형식에는 사용자가 작성하는 멤버가 포함됩니다. 이러한 멤버는 문과 식에서 빌드됩니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268142"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358819"
 ---
 # <a name="program-building-blocks"></a>프로그램 구성 요소
 
@@ -192,8 +192,6 @@ C#은 인스턴스 및 정적 생성자를 모두 지원합니다. *인스턴스
 속성은 필드처럼 선언되지만, 선언이 세미콜론으로 끝나지 않고, 구분 기호 `{` 및 `}` 사이에 쓴 get 접근자 또는 set 접근자로 끝난다는 점이 다릅니다. get 접근자 및 set 접근자가 둘 다 있는 속성은 *읽기/쓰기 속성*이고, get 접근자만 있는 속성은 *읽기 전용 속성*이고, set 접근자만 있는 속성은 *쓰기 전용 속성*입니다.
 
 get 접근자는 속성 형식의 반환 값을 갖는 매개 변수 없는 메서드에 해당합니다. set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 없는 메서드에 해당합니다. get 접근자는 속성의 값을 계산합니다. set 접근자는 속성에 새 값을 제공합니다. 속성이 할당의 대상이거나 `++` 또는 `--`의 피연산자인 경우 set 접근자가 호출됩니다. 속성이 참조되는 그 밖의 경우에는 get 접근자가 호출됩니다.
-
- 속성이 할당 대상이나 ++ 또는 --의 피연산자로 참조되면 set 접근자는 새 값을 제공하는 인수를 사용하여 호출됩니다.
 
 `MyList<T>` 클래스는 각각 읽기 전용 및 읽기/쓰기 특성을 갖는 두 개의 속성 `Count` 및 `Capacity`를 선언합니다. 다음 코드는 이러한 속성을 사용하는 예입니다.
 

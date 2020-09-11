@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 ms.date: 01/30/2020
-ms.openlocfilehash: 2697ae56eda104a0ee8e7bfcd79d3972943d1f79
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 116ba02878a60487f1af3c2b2e084307fad29618
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344991"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414424"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -49,8 +49,8 @@ ms.locfileid: "80344991"
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **.NET Core 가이드** \
-  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.yml)
+- **.NET 기본 사항** \
+  [https://docs.microsoft.com/dotnet/fundamentals](../../../fundamentals/index.yml)
 
 - **.NET Framework에서 .NET Core로 이식** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)

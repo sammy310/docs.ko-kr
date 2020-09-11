@@ -4,12 +4,12 @@ description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개�
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810575"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495540"
 ---
 # <a name="methods-in-c"></a>메서드(C#)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88810575"
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-위치 인수와 명명된 인수 둘 다를 사용하여 메서드를 호출할 수 있습니다. 그러나 위치 인수는 명명된 인수 다음에 올 수 없습니다. 다음 예제에서는 위치 인수 하나와 명명된 인수 하나를 사용하여 이전 예제의 `TestMotorcycle.Drive` 메서드를 호출합니다.
+위치 인수와 명명된 인수 둘 다를 사용하여 메서드를 호출할 수 있습니다. 그러나 명명된 인수가 올바른 위치에 있는 경우에만 명명된 인수 뒤에 위치 인수를 사용할 수 있습니다. 다음 예제에서는 위치 인수 하나와 명명된 인수 하나를 사용하여 이전 예제의 `TestMotorcycle.Drive` 메서드를 호출합니다.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 

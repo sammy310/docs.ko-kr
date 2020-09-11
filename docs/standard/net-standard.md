@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167408"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359313"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -92,7 +92,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 .NET Standard는 어느 하나의 .NET 구현에 특정되지 않고, 이러한 런타임 중 하나의 버전 관리 체계와 일치하지도 않습니다.
 
-구현(예: .NET Framework, .NET Core, Mono) 중 하나에 추가된 API는 특히 기본적인 특성으로 간주되는 경우 사양에 추가할 후보로 고려될 수 있습니다. .NET 구현 릴리스에 따라 새 [.NET Standard 버전](https://github.com/dotnet/standard/blob/master/docs/versions.md)이 생성되므로 .NET Standard PCL에서 새 API를 대상으로 지정할 수 있습니다. 버전 관리 메커니즘에 대해서는 [.NET Core 버전 관리](../core/versions/index.md)에서 자세히 설명합니다.
+.NET 구현(예: .NET Framework, .NET Core, Mono) 중 하나에 추가된 API는 특히 기본적인 특성으로 간주되는 경우 사양에 추가할 후보로 고려될 수 있습니다. .NET 구현 릴리스에 따라 새 [.NET Standard 버전](https://github.com/dotnet/standard/blob/master/docs/versions.md)이 생성되므로 .NET Standard PCL(이식 가능한 클래스 라이브러리)에서 새 API를 대상으로 지정할 수 있습니다. 버전 관리 메커니즘에 대해서는 [.NET Core 버전 관리](../core/versions/index.md)에서 자세히 설명합니다.
 
 .NET 표준 버전 관리는 사용에 중요합니다. .NET 표준 버전이 지정된 경우 동일한 버전이나 하위 버전을 대상으로 하는 라이브러리를 사용할 수 있습니다. 다음 방법에서는 .NET 표준 대상 지정과 관련된 .NET 표준 PCL 사용 워크플로에 대해 설명합니다.
 

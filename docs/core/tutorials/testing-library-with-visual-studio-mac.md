@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: a183049623df44cbb8c4abd47ce6e78d91adae12
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713306"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359222"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -15,7 +15,7 @@ ms.locfileid: "84713306"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Mac용 Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)에서 만든 솔루션에 사용할 수 있습니다.
+- 이 자습서는 [Mac용 Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)에서 만든 솔루션에 사용할 수 있습니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "84713306"
 
 1. Mac용 Visual Studio를 시작합니다.
 
-1. [Mac용 Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Mac용 Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-mac.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. **솔루션** 패드에서 <kbd>ctrl</kbd>을 누른 채로 `ClassLibraryProjects` 솔루션을 클릭하고 **추가** > **새 프로젝트**를 선택합니다.
 
@@ -186,4 +186,4 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 라이브러리는 패키지로 배포하지 않아도 됩니다. 라이브러리를 사용하는 콘솔 앱과 함께 제공할 수 있습니다. 콘솔 앱을 게시하는 방법을 알아보려면 이 시리즈의 이전 자습서를 참조하세요.
 
 > [!div class="nextstepaction"]
-> [Mac용 Visual Studio로 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-mac.md)
+> [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-mac.md)

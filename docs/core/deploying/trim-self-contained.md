@@ -4,12 +4,12 @@ description: 자체 포함 앱을 트리밍하여 크기를 줄이는 방법을 
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053109"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465483"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>자체 포함 배포 및 실행 파일 트리밍
 
@@ -19,7 +19,7 @@ ms.locfileid: "89053109"
 
 그러나 다양한 문제 코드 패턴을 안정적으로 분석할 수 없다는 점에서(주로 리플렉션 사용을 중심으로 함) 애플리케이션의 빌드 시간 분석으로 인해 런타임에 오류가 발생할 위험이 있습니다. 안정성을 보장할 수 없으므로 이 배포 모델은 미리 보기 기능으로 제공됩니다.
 
-빌드 시간 분석 엔진은 필요한 다른 코드를 검색하도록 문제가 있는 코드 패턴의 개발자에게 경고를 제공합니다. 포함할 다른 항목을 트리머에 알리도록 특성을 사용하여 코드에 주석을 달 수 있습니다. [소스 생성기](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)를 사용하여 많은 리플렉션 패턴을 빌드 시간 코드 생성으로 바꿀 수 있습니다.
+빌드 시간 분석 엔진은 문제가 있는 코드 패턴의 개발자에게 필요한 다른 코드를 검색하도록 경고합니다. 포함할 다른 항목을 트리머에 알리도록 특성을 사용하여 코드에 주석을 달 수 있습니다. [소스 생성기](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)를 사용하여 많은 리플렉션 패턴을 빌드 시간 코드 생성으로 바꿀 수 있습니다.
 
 애플리케이션의 트리밍 모드는 `TrimMode` 설정으로 구성됩니다. 기본값은 `copyused`이며 참조된 어셈블리를 애플리케이션에서 번들로 묶습니다. `link` 값은 Blazor WebAssembly 애플리케이션에서 사용되며 어셈블리 내에서 사용되지 않는 코드를 트리밍합니다. 트리밍 분석 경고는 전체 종속성 분석이 불가능한 코드 패턴에 대한 정보를 제공합니다. 해당 경고는 기본적으로 표시되지 않으며, `SuppressTrimAnalysisWarnings` 플래그를 `false`로 지정하여 켤 수 있습니다. 사용 가능한 트리밍 옵션에 관한 자세한 내용은 [트리밍 옵션](trimming-options.md)을 참조하세요.
 

@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811719"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359170"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -15,7 +15,7 @@ ms.locfileid: "88811719"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio Code에서 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 솔루션에 사용할 수 있습니다.
+- 이 자습서는 [Visual Studio Code를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 솔루션에 사용할 수 있습니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "88811719"
 
 1. Visual Studio Code를 시작합니다.
 
-1. [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Visual Studio Code를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. “StringLibraryTest”라는 단위 테스트 프로젝트를 만듭니다.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8de15dc033ecda3137f5f3ea37b9e35ac9df7e13
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134382"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359300"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -236,7 +236,7 @@ Windows Registry Editor Version 5.00
 
 클라이언트 및/또는 서버 앱이 협상하는 프로토콜에 대한 세분화된 제어에 레지스트리를 사용할 수 있습니다. 앱의 네트워킹이 Schannel( [보안 채널](/windows/desktop/SecAuthN/secure-channel)의 다른 이름)을 거칩니다. `Schannel`을 구성하여 앱 동작을 구성할 수 있습니다.
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 레지스트리 키로 시작합니다. `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` 및 `TLS 1.2` 집합에서 해당 키 아래에 하위 키를 만들 수 있습니다. 각 하위 키 아래에 하위 키 `Client` 및/또는 `Server`를 만들 수 있습니다. `Client` 및 `Server` 아래에 DWORD 값 `DisabledByDefault`(0 또는 1) 및 `Enabled`(0 또는 0xFFFFFFFF)를 만들 수 있습니다.
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 레지스트리 키로 시작합니다. `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` 및 `TLS 1.2` 집합에서 해당 키 아래에 하위 키를 만들 수 있습니다. 각 하위 키 아래에 하위 키 `Client` 및/또는 `Server`를 만들 수 있습니다. `Client` 및 `Server` 아래에 DWORD 값 `DisabledByDefault`(0 또는 1) 및 `Enabled`(0 또는 1)를 만들 수 있습니다.
 
 ## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO 플래그
 

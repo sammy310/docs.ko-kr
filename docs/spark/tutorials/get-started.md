@@ -1,19 +1,19 @@
 ---
 title: .NET for Apache Spark 시작
-description: Windows, MacOS 및 Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 살펴봅니다.
+description: Windows, macOS, Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 살펴봅니다.
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: be150bcef0029f69136e21c35791c863220af244
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d7297b11a2b5b21420fcb2f0f9ae823cb29b88d1
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617654"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359001"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
-이 자습서에서는 Windows, MacOS 및 Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 설명합니다.
+이 자습서에서는 Windows, macOS, Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 설명합니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
@@ -41,9 +41,9 @@ ms.locfileid: "85617654"
 
 ### <a name="2-install-java"></a>2. Java 설치
 
-Windows 및 MacOS용 [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 또는 Ubuntu용 [OpenJDK 8](https://openjdk.java.net/install/)을 설치합니다.
+Windows 및 macOS용 [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 또는 Ubuntu용 [OpenJDK 8](https://openjdk.java.net/install/)을 설치합니다.
 
-운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 컴퓨터의 경우 **jdk-8u201-windows-x64.exe**(아래 참조), MacOS의 경우 **jdk-8u231-macosx-x64.dmg**를 선택합니다. 그런 다음, `java` 명령을 사용하여 설치를 확인합니다.
+운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 **jdk-8u201-windows-x64.exe**(아래 참조), macOS의 경우 **jdk-8u231-macosx-x64.dmg**를 선택합니다. 그런 다음, `java` 명령을 사용하여 설치를 확인합니다.
 
 ![Java 다운로드](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
@@ -80,7 +80,7 @@ setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
 
-다음 명령을 실행하여 **MacOS** 및 **Ubuntu**에서 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다.
+다음 명령을 실행하여 **macOS** 및 **Ubuntu**에서 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다.
 
 ```bash
 export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
@@ -123,7 +123,7 @@ Microsoft.Spark.Worker 압축을 풀려면:
 
 **Windows**에서 [새 환경 변수](https://www.java.com/en/download/help/path.xml) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: `C:\bin\Microsoft.Spark.Worker\`)를 다운로드하여 추출한 디렉터리로 설정합니다.
 
-**MacOS**에서 `export DOTNET_WORKER_DIR <your_path>`을 사용하여 새 환경 변수를 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker/* )를 다운로드하여 추출한 디렉터리로 설정합니다.
+**macOS**에서 `export DOTNET_WORKER_DIR <your_path>`을 사용하여 새 환경 변수를 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker/* )를 다운로드하여 추출한 디렉터리로 설정합니다.
 
 **Ubuntu**에서 [새 환경 변수](https://help.ubuntu.com/community/EnvironmentVariables) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker*)를 다운로드하여 추출한 디렉터리로 설정합니다.
 

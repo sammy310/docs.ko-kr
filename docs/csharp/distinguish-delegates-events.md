@@ -4,12 +4,12 @@ description: 대리자와 이벤트 간의 차이점 및 .NET Core의 이러한 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 193a9b0fe0e0c36deb6552449c92135057412225
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805761"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414671"
 ---
 # <a name="distinguishing-delegates-and-events"></a>대리자 및 이벤트를 구별
 
@@ -23,7 +23,7 @@ ms.locfileid: "80805761"
 
 ## <a name="listening-to-events-is-optional"></a>이벤트 수신은 선택 사항임
 
-사용할 언어 기능을 결정할 때 가장 중요하게 고려할 사항은 연결된 구독자가 있어야 하는지 여부입니다. 코드에서 구독자가 제공하는 코드를 호출해야 하는 경우에는 대리자 기반 디자인을 사용해야 합니다. 코드에서 구독자를 호출하지 않고 모든 작업을 완료할 수 있는 경우에는 이벤트 기반 디자인을 사용해야 합니다.
+사용할 언어 기능을 결정할 때 가장 중요하게 고려할 사항은 연결된 구독자가 있어야 하는지 여부입니다. 코드에서 구독자가 제공하는 코드를 호출해야 하는 경우에는 콜백을 구현해야 할 때 대리자 기반 디자인을 사용해야 합니다. 코드에서 구독자를 호출하지 않고 모든 작업을 완료할 수 있는 경우에는 이벤트 기반 디자인을 사용해야 합니다.
 
 이 섹션 중 작성된 예제를 살펴보겠습니다. `List.Sort()`를 사용하여 작성한 코드에서 요소를 제대로 정렬하려면 비교자 함수가 제공되어야 합니다. 반환할 요소를 결정하려면 대리자와 함께 LINQ 쿼리를 제공해야 합니다. 둘 다 대리자로 작성된 디자인을 사용했습니다.
 

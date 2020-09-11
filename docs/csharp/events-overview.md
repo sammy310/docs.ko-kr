@@ -3,12 +3,12 @@ title: 이벤트 소개
 description: 이 개요에서는 .NET Core의 이벤트와 이벤트에 대한 언어 디자인 목표를 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4da44c151244e8b5de34f550040c271131d9598c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146116"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465236"
 ---
 # <a name="introduction-to-events"></a>이벤트 소개
 
@@ -77,7 +77,7 @@ fileLister.Progress += onProgress;
 fileLister.Progress -= onProgress;
 ```
 
-이벤트 처리기를 나타내는 식에 대해 지역 변수를 선언했습니다. 따라서 구독 취소하면 처리기가 제거됩니다.
+이벤트 처리기를 나타내는 식에 대해 지역 변수를 선언하는 것이 중요합니다. 따라서 구독 취소하면 처리기가 제거됩니다.
 대신 람다 식의 본문을 사용한 경우 연결되지 않아 아무 작업도 수행하지 않는 처리기를 제거하려고 합니다.
 
 다음 문서에서는 일반적인 이벤트 패턴 및 이 예제의 다양한 변형에 대해 자세히 알아봅니다.

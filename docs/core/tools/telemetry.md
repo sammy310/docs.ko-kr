@@ -3,12 +3,12 @@ title: .NET Core SDK 원격 분석
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용량 정보를 수집하는 .NET Core SDK 원격 분석 기능을 살펴봅니다.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226571"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359235"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
@@ -138,5 +138,5 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core CLI 원격 분석 - 2019 Q2 데이터](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [.NET Core CLI 원격 분석 데이터](https://dotnet.microsoft.com/platform/telemetry)
 - [원격 분석 참조 소스(dotnet/sdk 리포지토리)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 593897b31c86e79db2376dde94f3e5c87fdf8289
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052825"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359326"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -32,7 +32,7 @@ ms.locfileid: "89052825"
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>이미지 분류 전이 학습 샘플 개요
 
-이 샘플은 사전 학습된 딥 러닝 TensorFlow 모델을 사용하여 이미지를 분류하는 C# .NET Core 콘솔 애플리케이션입니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary)에서 찾을 수 있습니다.
+이 샘플은 사전 학습된 딥 러닝 TensorFlow 모델을 사용하여 이미지를 분류하는 C# .NET Core 콘솔 애플리케이션입니다. 이 샘플의 코드는 [샘플 브라우저](/samples/dotnet/machinelearning-samples/mlnet-image-classification-transfer-learning/)에서 확인할 수 있습니다.
 
 ## <a name="understand-the-problem"></a>문제 이해
 

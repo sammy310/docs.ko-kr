@@ -2,12 +2,12 @@
 title: 네트워킹 관련 호환성이 손상되는 변경
 description: .NET Core의 네트워킹에 호환성이 손상되는 변경을 나열합니다.
 ms.date: 05/05/2020
-ms.openlocfilehash: 568d26bde43ccd6e19fbe2d947f576ef5f99450a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: fa5807c882c3bc6f66e8a27361ccc14254e90b3e
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608481"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465518"
 ---
 # <a name="networking-breaking-changes"></a>네트워킹 관련 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ ms.locfileid: "88608481"
 | - | - |
 | [.NET 런타임에서 WinHttpHandler 제거됨](#winhttphandler-removed-from-net-runtime) | 5.0 |
 | [MulticastOption.Group에서 null 값을 허용하지 않음](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
+| [이제 쿠키 경로 처리가 RFC 6265를 준수함](#cookie-path-handling-now-conforms-to-rfc-6265) | 5.0 |
 | [HttpRequestMessage.Version의 기본값은 1.1로 변경되었습니다.](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
 | [WebClient.CancelAsync가 항상 즉시 취소되지는 않음](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
 
@@ -27,6 +28,10 @@ ms.locfileid: "88608481"
 ***
 
 [!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
+
+***
+
+[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

@@ -1,20 +1,20 @@
 ---
 title: .NET 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
-description: .NET 지침을 따르는 이벤트를 게시하는 방법을 알아봅니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 EventHandler 대리자를 기반으로 합니다.
+description: .NET 지침을 따르는 이벤트를 게시하는 방법을 알아봅니다. .NET 클래스 라이브러리의 모든 이벤트는 EventHandler 대리자를 기반으로 합니다.
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 1b802e236026911b55bafcb3f48d487c43bba174
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8cc8b0a9fdaeeb6ab6290630c5d78044c2696b9a
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302115"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466172"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>.NET 지침을 따르는 이벤트를 게시하는 방법(C# 프로그래밍 가이드)
 
-다음 절차에서는 표준 .NET 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.
+다음 절차에서는 표준 .NET 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);

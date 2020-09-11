@@ -3,12 +3,12 @@ title: 컬렉션 작업 - C# 소개 자습서
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396889"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414685"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>일반 목록 형식을 사용하여 데이터 컬렉션을 관리하는 방법 알아보기
 
@@ -230,4 +230,4 @@ foreach (var item in fibonacciNumbers)
 
 축하합니다. 목록 자습서를 완료했습니다. 자체 개발 환경에서 [클래스 소개](introduction-to-classes.md) 자습서를 계속할 수 있습니다.
 
-[.NET 가이드](../../../standard/index.yml)의 [컬렉션](../../../standard/collections/index.md) 문서에서 `List` 형식에 대해 자세히 알아볼 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.
+.NET 기본 사항 문서의 [컬렉션](../../../standard/collections/index.md)에서 `List` 형식 작업에 대해 자세히 알아볼 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.

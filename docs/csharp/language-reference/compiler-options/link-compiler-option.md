@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fd291c49c282713ea56ca20d8d58616d38ec752
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125399"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465717"
 ---
 # <a name="-link-c-compiler-options"></a>-link(C# 컴파일러 옵션)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.
@@ -52,7 +52,7 @@ ms.locfileid: "89125399"
 
 - 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.
 
- [-reference](./reference-compiler-option.md) 컴파일러 옵션과 마찬가지로 `-link` 컴파일러 옵션은 Csc.rsp 지시 파일을 사용하며, 자주 사용되는 .NET Framework 어셈블리를 참조합니다. 컴파일러에서 Csc.rsp 파일을 사용하지 않도록 하려면 [-noconfig](./noconfig-compiler-option.md) 컴파일러 옵션을 사용하세요.
+ [-reference](./reference-compiler-option.md) 컴파일러 옵션과 마찬가지로, `-link` 컴파일러 옵션은 Csc.rsp 지시 파일을 사용하며, 자주 사용되는 .NET 어셈블리를 참조합니다. 컴파일러에서 Csc.rsp 파일을 사용하지 않도록 하려면 [-noconfig](./noconfig-compiler-option.md) 컴파일러 옵션을 사용하세요.
 
  `-link`의 약식은 `-l`입니다.
 

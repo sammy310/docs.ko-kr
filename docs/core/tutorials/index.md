@@ -2,14 +2,14 @@
 title: .NET Core 자습서
 description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요.
 author: richlander
-ms.date: 03/16/2017
+ms.date: 09/09/2020
 titleSuffix: ''
-ms.openlocfilehash: 4bba8d48b3da7acb643ffa6a08468f40f1b1b415
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656731"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656160"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -42,8 +42,12 @@ Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자�
 ## <a name="use-visual-studio-for-mac"></a>Mac용 Visual Studio 사용
 
 - [콘솔 앱 만들기](with-visual-studio-mac.md)
-- [라이브러리 만들기 및 단위 테스트](library-with-visual-studio-mac.md)
+- [앱 디버그](debugging-with-visual-studio-mac.md)
+- [앱 게시](publishing-with-visual-studio-mac.md)
+- [클래스 라이브러리 만들기](library-with-visual-studio-mac.md)
+- [클래스 라이브러리 단위 테스트](testing-library-with-visual-studio-mac.md)
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 
 ## <a name="advanced-topics"></a>고급 항목
 

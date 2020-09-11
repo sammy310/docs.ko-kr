@@ -1,7 +1,7 @@
 ---
 title: I/O 파이프라인 - .NET
 description: .NET에서 I/O 파이프라인을 효율적으로 사용하고 코드에서 문제를 방지하는 방법에 대해 알아봅니다.
-ms.date: 10/01/2019
+ms.date: 08/27/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81462517"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271986"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
-<xref:System.IO.Pipelines>는 .NET에서 고성능 I/O를 더 쉽게 수행할 수 있도록 설계된 새 라이브러리입니다. 모든 .NET 구현에서 작동하는 .NET Standard를 대상으로 하는 라이브러리입니다.
+<xref:System.IO.Pipelines>는 .NET에서 고성능 I/O를 더 쉽게 수행할 수 있도록 설계된 새 라이브러리입니다. .NET Standard를 대상으로 하며 모든 .NET 구현에서 작동하는 라이브러리입니다.
 
 <a name="solve"></a>
 
@@ -64,7 +64,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * 메모리를 반복해서 할당하지 않도록 버퍼 풀링을 사용하는 것이 좋습니다.
 * 다음 코드는 이러한 문제 중 일부를 해결합니다.
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs" id="snippet":::
 
 이전 코드는 복잡하며, 식별된 모든 문제를 해결하지는 않습니다. 고성능 네트워킹은 일반적으로 성능을 최대화하는 매우 복잡한 코드를 작성하는 것을 의미합니다. `System.IO.Pipelines`는 이러한 종류의 코드 작성을 더 쉽게 만들기 위해 설계되었습니다.
 
@@ -74,13 +74,13 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 <xref:System.IO.Pipelines.Pipe> 클래스를 사용하여 `PipeWriter/PipeReader` 쌍을 만들 수 있습니다. `PipeWriter`에 작성된 모든 데이터는 `PipeReader`에서 사용할 수 있습니다.
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet2":::
 
 <a name="pbu"></a>
 
 ### <a name="pipe-basic-usage"></a>파이프 기본 사용 방법
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet":::
 
 두 가지 루프가 있습니다.
 
@@ -128,7 +128,7 @@ EOL(줄의 끝) 구분 기호를 찾은 후 줄을 구문 분석합니다.
 * <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> 일시 중지를 호출하기 전에 버퍼링되어야 하는 데이터의 양을 결정합니다.
 * <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: `PipeWriter.FlushAsync` 호출을 다시 시작하기 전에 판독기가 관찰해야 하는 데이터의 양을 결정합니다.
 
-![ResumeWriterThreshold 및PauseWriterThreshold의 다이어그램](./media/pipelines/resume-pause.png)
+![ResumeWriterThreshold 및PauseWriterThreshold의 다이어그램](media/pipelines/resume-pause.png)
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
@@ -155,7 +155,7 @@ I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어�
 * 현재 <xref:System.Threading.SynchronizationContext>가 사용됩니다.
 * `SynchronizationContext`가 없으면 스레드 풀을 사용하여 콜백을 실행합니다.
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Program.cs" id="snippet":::
 
 [PipeScheduler.ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool)은 스레드 풀에 대한 콜백을 큐에 대기시키는 <xref:System.IO.Pipelines.PipeScheduler> 구현입니다. `PipeScheduler.ThreadPool`은 기본값이며 일반적으로 최상의 선택입니다. [PipeScheduler.Inline](xref:System.IO.Pipelines.PipeScheduler.Inline)은 교착 상태와 같은 의도하지 않은 결과를 발생시킬 수 있습니다.
 
@@ -191,7 +191,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 다음 코드는 `PipeReader`에서 단일 메시지를 읽고 호출자에게 반환합니다.
 
-[!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs" id="snippet":::
 
 위의 코드는
 
@@ -209,7 +209,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 다음 코드는 `PipeReader`에서 모든 메시지를 읽고 각각에 대해 `ProcessMessageAsync`를 호출합니다.
 
-[!code-csharp[MyConnection1](~/samples/snippets/csharp/pipelines/MyConnection1.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection1.cs" id="snippet":::
 
 ### <a name="cancellation"></a>취소
 
@@ -219,7 +219,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 읽기 보류 중에 `CancellationToken`이 취소되는 경우 <xref:System.OperationCanceledException>이 throw됩니다.
 * <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>을 통해 현재 읽기 작업을 취소하는 방법을 지원하여 예외 증가를 방지합니다. `PipeReader.CancelPendingRead`를 호출하면 `PipeReader.ReadAsync`에 대한 현재 또는 다음 호출이 `IsCanceled`가 `true`로 설정된 <xref:System.IO.Pipelines.ReadResult>를 반환합니다. 이는 기존 읽기 루프를 비파괴적이고 예외 없는 방식으로 중지하는 데 유용할 수 있습니다.
 
-[!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection.cs" id="snippet":::
 
 <a name="gotchas"></a>
 
@@ -245,7 +245,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#1](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -255,7 +255,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#2](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet2":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -263,7 +263,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#3](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet3)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet3":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -276,7 +276,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#4](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet4)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet4":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -289,7 +289,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#5](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet5)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet5":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -299,9 +299,9 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#Message](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippetMessage)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippetMessage":::
 
-[!code-csharp[DoNotUse#6](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet6)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet6":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -309,7 +309,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 <xref:System.IO.Pipelines.PipeWriter>는 호출자를 대신해 쓰기 위한 버퍼를 관리합니다. `PipeWriter`는 [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)를 구현합니다. `IBufferWriter<byte>`는 추가 버퍼 복사본 없이 쓰기를 수행하기 위해 버퍼에 액세스할 수 있습니다.
 
-[!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet":::
 
 이전 코드는 다음과 같습니다.
 
@@ -323,7 +323,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 기존 버퍼를 `PipeWriter`에 복사합니다.
 * `GetSpan`, `Advance`를 적절하게 호출하고 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>를 호출합니다.
 
-[!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet2":::
 
 ### <a name="cancellation"></a>취소
 
@@ -343,8 +343,34 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 <xref:System.IO.Pipelines.IDuplexPipe>는 읽기와 쓰기를 모두 지원하는 형식에 대한 계약입니다. 예를 들어 네트워크 연결은 `IDuplexPipe`로 표시됩니다.
 
- `PipeReader` 및 `PipeWriter`를 포함하는 `Pipe`와 달리 `IDuplexPipe`는 전체 이중 연결의 단일한 측면을 나타냅니다. 이는 `PipeWriter`로 쓴 내용이 `PipeReader`에서 읽히지 않는다는 의미입니다.
+ `PipeReader` 및 `PipeWriter`를 포함하는 `Pipe`와 달리 `IDuplexPipe`는 전이중 연결의 단일 측면을 나타냅니다. 이는 `PipeWriter`로 쓴 내용이 `PipeReader`에서 읽히지 않는다는 의미입니다.
 
 ## <a name="streams"></a>스트림
 
-스트림 데이터를 읽거나 쓸 때는 일반적으로 역직렬 변환기를 사용하여 데이터를 읽고 직렬 변환기를 사용하여 데이터를 씁니다. 대부분의 읽기 및 쓰기 스트림 API에는 `Stream` 매개 변수가 있습니다. 기존 API와 쉽게 통합할 수 있도록 `PipeReader` 및 `PipeWriter`는 <xref:System.IO.Pipelines.PipeReader.AsStream%2A>를 제공합니다.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>은 `PipeReader` 또는 `PipeWriter` 주위에 `Stream` 구현을 반환합니다.
+스트림 데이터를 읽거나 쓸 때는 일반적으로 역직렬 변환기를 사용하여 데이터를 읽고 직렬 변환기를 사용하여 데이터를 씁니다. 대부분의 읽기 및 쓰기 스트림 API에는 `Stream` 매개 변수가 있습니다. 기존 API와 더욱 쉽게 통합할 수 있도록 `PipeReader` 및 `PipeWriter`는 <xref:System.IO.Pipelines.PipeReader.AsStream%2A> 메서드를 제공합니다. <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>은 `PipeReader` 또는 `PipeWriter` 주위에 `Stream` 구현을 반환합니다.
+
+### <a name="stream-example"></a>스트림 예제
+
+<xref:System.IO.Stream> 개체와 선택적으로 해당하는 생성 옵션이 제공된 경우 정적 `Create` 메서드를 사용하여 `PipeReader` 및 `PipeWriter` 인스턴스를 만들 수 있습니다.
+
+<xref:System.IO.Pipelines.StreamPipeReaderOptions>를 사용하면 다음 매개 변수로 `PipeReader` 인스턴스 생성을 제어할 수 있습니다.
+
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.BufferSize?displayProperty=nameWithType>은 풀에서 메모리를 대여할 때 사용되는 최소 버퍼 크기(바이트)이며, 기본값은 `4096`입니다.
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.LeaveOpen?displayProperty=nameWithType> 플래그는 `PipeReader`가 완료된 후 기본 스트림을 열어 둘지 여부를 결정하며, 기본값은 `false`입니다.
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.MinimumReadSize?displayProperty=nameWithType>은 새 버퍼가 할당되기 전에 버퍼에 남은 바이트의 임계값을 나타내며, 기본값은 `1024`입니다.
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.Pool?displayProperty=nameWithType>은 메모리를 할당할 때 사용되는 `MemoryPool<byte>`이며, 기본값은 `null`입니다.
+
+<xref:System.IO.Pipelines.StreamPipeWriterOptions>를 사용하면 다음 매개 변수로 `PipeWriter` 인스턴스 생성을 제어할 수 있습니다.
+
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.LeaveOpen?displayProperty=nameWithType> 플래그는 `PipeWriter`가 완료된 후 기본 스트림을 열어 둘지 여부를 결정하며, 기본값은 `false`입니다.
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.MinimumBufferSize?displayProperty=nameWithType>은 <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool>에서 메모리를 대여할 때 사용할 최소 버퍼 크기를 나타내며, 기본값은 `4096`입니다.
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool?displayProperty=nameWithType>은 메모리를 할당할 때 사용되는 `MemoryPool<byte>`이며, 기본값은 `null`입니다.
+
+> [!IMPORTANT]
+> `Create` 메서드를 사용하여 `PipeReader` 및 `PipeWriter` 인스턴스를 만드는 경우 `Stream` 개체 수명을 고려해야 합니다. 판독기 또는 기록기 작업이 완료된 후 스트림에 액세스해야 하는 경우 생성 옵션의 `LeaveOpen` 플래그를 `true`로 설정해야 합니다. 그러지 않으면 스트림이 닫힙니다.
+
+다음 코드는 스트림에서 `Create` 메서드를 사용하여 `PipeReader` 및 `PipeWriter` 인스턴스를 만드는 방법을 보여 줍니다.
+
+:::code language="csharp" source="snippets/pipelines/Program.cs":::
+
+애플리케이션이 <xref:System.IO.StreamReader>를 사용하여 *lorem-ipsum.txt* 파일을 스트림으로 읽어옵니다. <xref:System.IO.FileStream>이 `PipeReader` 개체를 인스턴스화하는 <xref:System.IO.Pipelines.PipeReader.Create%2A?displayProperty=nameWithType>에 전달됩니다. 그런 다음, 콘솔 애플리케이션이 <xref:System.Console.OpenStandardOutput?displayProperty=nameWithType>을 사용하여 표준 출력 스트림을 <xref:System.IO.Pipelines.PipeWriter.Create%2A?displayProperty=nameWithType>에 전달합니다. 이 예제에서는 [취소](#cancellation)를 지원합니다.

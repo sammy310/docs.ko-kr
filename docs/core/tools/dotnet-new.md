@@ -4,13 +4,13 @@ description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET C
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 04/10/2020
-ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 09/01/2020
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173122"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495475"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,15 +62,15 @@ dotnet new -h|--help
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 콘솔 애플리케이션                          | [콘솔](#console)             | [C#], F#, VB | 일반/콘솔                        | 1.0        |
 | 클래스 라이브러리                                | [classlib](#classlib)           | [C#], F#, VB | 일반/라이브러리                        | 1.0        |
-| WPF 애플리케이션                              | [wpf](#wpf)                     | [C#]         | 일반/WPF                            | 3.0        |
-| WPF 클래스 라이브러리                            | [wpflib](#wpf)                  | [C#]         | 일반/WPF                            | 3.0        |
-| WPF 사용자 지정 컨트롤 라이브러리                   | [wpfcustomcontrollib](#wpf)     | [C#]         | 일반/WPF                            | 3.0        |
-| WPF 사용자 컨트롤 라이브러리                     | [wpfusercontrollib](#wpf)       | [C#]         | 일반/WPF                            | 3.0        |
-| Windows Forms(WinForms) 애플리케이션         | [winforms](#winforms)           | [C#]         | 일반/WinForms                       | 3.0        |
-| Windows Forms(WinForms) 클래스 라이브러리       | [winformslib](#winforms)        | [C#]         | 일반/WinForms                       | 3.0        |
+| WPF 애플리케이션                              | [wpf](#wpf)                     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 클래스 라이브러리                            | [wpflib](#wpf)                  | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 사용자 지정 컨트롤 라이브러리                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 사용자 컨트롤 라이브러리                     | [wpfusercontrollib](#wpf)       | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| Windows Forms(WinForms) 애플리케이션         | [winforms](#winforms)           | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
+| Windows Forms(WinForms) 클래스 라이브러리       | [winformslib](#winforms)        | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
 | Worker Service                               | [worker](#web-others)           | [C#]         | 일반/Worker/웹                     | 3.0        |
 | 단위 테스트 프로젝트                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
-| NUnit 3 테스트 프로젝트                         | [nunit](#nunit)                  | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 테스트 프로젝트                         | [nunit](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
 | NUnit 3 테스트 항목                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
 | xUnit 테스트 프로젝트                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
 | Razor 구성 요소                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
@@ -78,7 +78,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor 서버 앱                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly 앱                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
+| Blazor WebAssembly 앱                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core 비어 있음                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
 | ASP.NET Core 웹앱(모델-뷰-컨트롤러) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core 웹앱                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |

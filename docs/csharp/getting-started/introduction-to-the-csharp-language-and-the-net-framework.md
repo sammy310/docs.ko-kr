@@ -1,21 +1,21 @@
 ---
-title: C# 언어 및 .NET Framework 소개
+title: C# 언어 및 .NET 소개
 description: C# 및 .NET의 기본 사항에 대해 알아봅니다. C# 언어 및 .NET 에코시스템에 대한 개요를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 55b90d10a1d8ac8534ba98e1cc5af906d69822a6
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9e84726a8f6056c5beeedae9081a68980150efdd
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100836"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465171"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
+# <a name="introduction-to-the-c-language-and-net"></a>C# 언어 및 .NET 소개
 
-유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 .NET 에코시스템에서 실행되는 안전하고 강력한 여러 애플리케이션을 빌드할 수 있도록 지원합니다. .NET 에코시스템은 [.NET Core](../../core/index.yml) 및 [.NET Framework](../../framework/index.yml)를 모두 포함하지만 이에 국한되지 않는 .NET의 모든 구현으로 구성됩니다. 이 문서에서는 .NET Framework를 중점적으로 다룹니다. C#을 사용하여 Windows 클라이언트 애플리케이션, XML Web services, 분산 구성 요소, 클라이언트-서버 애플리케이션, 데이터베이스 애플리케이션 등을 만들 수 있습니다.
+유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 .NET 에코시스템에서 실행되는 안전하고 강력한 여러 애플리케이션을 빌드할 수 있도록 지원합니다. .NET 에코시스템은 [.NET Core](../../core/introduction.md) 및 [.NET Framework](../../framework/index.yml)를 모두 포함하지만 이에 국한되지 않는 .NET의 모든 구현으로 구성됩니다. 이 문서에서는 .NET Framework를 중점적으로 다룹니다. C#을 사용하여 Windows 클라이언트 애플리케이션, XML Web services, 분산 구성 요소, 클라이언트-서버 애플리케이션, 데이터베이스 애플리케이션 등을 만들 수 있습니다.
 
 > [!NOTE]
 > Visual C# 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 Visual C#을 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.
@@ -44,19 +44,19 @@ C# 빌드 프로세스는 C 및 C++과 비교해서 비교적 간단하며 Java�
 - C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../language-reference/index.md)를 참조하세요.
 - LINQ에 대한 자세한 내용은 [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)를 참조하세요.
 
-## <a name="net-framework-platform-architecture"></a>.NET Framework 플랫폼 아키텍처
+## <a name="net-platform-architecture"></a>.NET 플랫폼 아키텍처
 
-C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 세트를 포함하는 Windows의 통합 구성 요소인 .NET Framework에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.
+C# 프로그램은 CLR(공용 언어 런타임)이라는 가상 실행 시스템 및 통합 클래스 라이브러리 세트를 포함하는 Windows의 필수 구성 요소인 .NET에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.
 
 C#으로 작성된 소스 코드는 CLI 사양을 준수하는 [IL(중간 언어)](../../standard/managed-code.md)로 컴파일됩니다. IL 코드 및 리소스(예: 비트맵 및 문자열)는 일반적으로 확장명이 .exe 또는 .dll인 어셈블리라는 실행 파일로 디스크에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전, 문화권 및 보안 요구 사항에 대한 정보를 제공하는 매니페스트를 포함합니다.
 
-C# 프로그램이 실행될 경우 어셈블리가 CLR에 로드되어 매니페스트의 정보를 기준으로 다양한 작업을 수행할 수 있습니다. 그런 다음 보안 요구 사항이 충족되면 CLR은 JIT(Just-In-Time) 컴파일을 수행하여 IL 코드를 네이티브 기계어 명령으로 변환합니다. 또한 CLR은 자동 가비지 수집, 예외 처리 및 리소스 관리와 관련된 다른 서비스도 제공합니다. CLR에서 실행되는 코드는 "관리 코드"라고도 합니다. 즉, 특정 시스템을 대상으로 하는 네이티브 기계어로 컴파일되는 "비관리 코드"와는 반대됩니다. 다음 다이어그램은 C# 소스 코드 파일, .NET Framework 클래스 라이브러리, 어셈블리 및 CLR의 컴파일 타임 및 런타임 관계를 보여 줍니다.
+C# 프로그램이 실행될 경우 어셈블리가 CLR에 로드되어 매니페스트의 정보를 기준으로 다양한 작업을 수행할 수 있습니다. 그런 다음 보안 요구 사항이 충족되면 CLR은 JIT(Just-In-Time) 컴파일을 수행하여 IL 코드를 네이티브 기계어 명령으로 변환합니다. 또한 CLR은 자동 가비지 수집, 예외 처리 및 리소스 관리와 관련된 다른 서비스도 제공합니다. CLR에서 실행되는 코드는 "관리 코드"라고도 합니다. 즉, 특정 시스템을 대상으로 하는 네이티브 기계어로 컴파일되는 "비관리 코드"와는 반대됩니다. 다음 다이어그램은 C# 소스 코드 파일, .NET 클래스 라이브러리, 어셈블리, CLR의 컴파일 시간 및 런타임 관계를 보여 줍니다.
 
 ![C# 소스 코드에서 컴퓨터 실행으로](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)
 
-언어 상호 운용성은 .NET Framework의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.
+언어 상호 운용성은 .NET의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.
 
-.NET Framework에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개가 넘는 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 애플리케이션은 .NET Framework 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.
+.NET에는 런타임 서비스뿐 아니라 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함되어 있습니다. 전형적인 C# 애플리케이션은 .NET 클래스 라이브러리를 광범위하게 사용하여 일반적인 “배관” 작업을 처리합니다.
 
 .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](../../framework/get-started/overview.md)를 참조하세요.
 

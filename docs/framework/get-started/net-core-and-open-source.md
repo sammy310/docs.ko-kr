@@ -3,15 +3,16 @@ title: .NET Core 및 오픈 소스
 description: .NET Standard의 범용 모듈식 플랫폼 간 오픈 소스 구현인 .NET Core에 대한 개요를 읽습니다.
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4627d4cc1bf45f3a7ad3f269279384b4a303f00d
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622759"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414918"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 
-이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 설명서에 대한 전체 목록은 [.NET Core 가이드](../../core/index.yml)를 참조하세요.
+이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다.
 
 ## <a name="what-is-net-core"></a>.NET Core란?  
 
@@ -46,5 +47,5 @@ ms.locfileid: "85622759"
 ## <a name="see-also"></a>참조
 
 - [.NET 자습서 - Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core 가이드](../../core/index.yml)
+- [.NET Core 소개](../../core/introduction.md)
 - [ASP.NET Core 문서](/aspnet/core/)

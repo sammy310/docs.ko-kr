@@ -4,12 +4,12 @@ description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249235"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414996"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
