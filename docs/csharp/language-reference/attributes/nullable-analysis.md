@@ -2,12 +2,12 @@
 title: 'C# 예약된 특성: null 허용 정적 분석'
 ms.date: 04/14/2020
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102712"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656312"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
@@ -57,10 +57,10 @@ API에 대한 규칙은 `TryGetValue` API 시나리오에서 살펴본 것처럼
 ```csharp
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName;
+private string _screenName;
 ```
 
 null 허용 인식 불가능 컨텍스트에서 이전 코드를 컴파일하면 정상적으로 작동합니다. null 허용 참조 형식을 사용하도록 설정하면 `ScreenName` 속성이 null을 허용하지 않는 참조가 됩니다. `get` 접근자의 경우도 마찬가지입니다. 이 접근자는 `null`을 반환하지 않습니다. 호출자는 `null`에 대해 반환된 속성을 검사할 필요가 없습니다. 그러나 지금 속성을 `null`로 설정하면 경고가 생성됩니다. 이 형식의 코드를 계속 지원하기 위해 다음 코드와 같이 속성에 <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 특성을 추가합니다.
@@ -69,10 +69,10 @@ null 허용 인식 불가능 컨텍스트에서 이전 코드를 컴파일하면
 [AllowNull]
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName = GenerateRandomScreenName();
+private string _screenName = GenerateRandomScreenName();
 ```
 
 이 특성과 이 문서에 설명된 다른 특성을 사용하려면 <xref:System.Diagnostics.CodeAnalysis>에 대한 `using` 지시문을 추가해야 할 수 있습니다. 이 특성은 `set` 접근자가 아니라 속성에 적용됩니다. `AllowNull` 특성은 ‘전제 조건’을 지정하며 입력에만 적용됩니다.  `get` 접근자에는 반환 값이 있지만 입력 인수가 없습니다. 따라서 `AllowNull` 특성은 `set` 접근자에만 적용됩니다.
@@ -132,14 +132,14 @@ public Customer FindCustomer(string lastName, string firstName)
 [제네릭 정의 및 null 허용 여부](../../nullable-migration-strategies.md#generic-definitions-and-nullability)에서 설명되는 이유로 해당 기술은 제네릭 메서드에서 작동하지 않습니다. 비슷한 패턴을 따르는 제네릭 메서드가 있을 수 있습니다.
 
 ```csharp
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 반환 값이 `T?`이도록 지정할 수 없습니다. 검색한 항목을 찾을 수 없는 경우 메서드는 `null`을 반환합니다. `T?` 반환 형식을 선언할 수 없으므로 `MaybeNull` 주석을 메서드 반환에 추가합니다.
 
 ```csharp
 [return: MaybeNull]
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 이전 코드는 계약이 null을 허용하지 않는 형식을 의미한다는 것을 호출자에게 알리지만, 반환 값은 실제로 null’일 수 있습니다’.   API가 null을 허용하지 않는 형식(일반적으로 제네릭 형식 매개 변수)이어야 하지만 `null`이 반환되는 인스턴스가 있을 수 있는 경우 `MaybeNull` 특성을 사용합니다.
@@ -162,7 +162,7 @@ EnsureCapacity<string>(messages, 50);
 null 참조 형식을 사용하도록 설정한 후 이전 코드가 경고 없이 컴파일되는지 확인하려고 합니다. 메서드가 반환하는 경우 `storage` 인수는 null이 아님이 보장됩니다. 그러나 null 참조를 사용하여 `EnsureCapacity`를 호출할 수 있습니다. `storage`를 null 허용 참조 형식으로 만들고 `NotNull` 사후 조건을 매개 변수 선언에 추가할 수 있습니다.
 
 ```csharp
-public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
+public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 ```
 
 이전 코드는 기존 계약을 명확하게 표현합니다. 호출자는 `null` 값과 함께 변수를 전달할 수 있지만 반환 값은 null이 아님이 보장됩니다. `null`이 인수로 전달될 수 있지만 메서드가 반환할 때 해당 인수가 null이 아님이 보장되는 경우 `NotNull` 특성은 `ref` 및 `out` 인수에 가장 유용합니다.
@@ -177,7 +177,7 @@ public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 `string` 메서드 <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>에 대해 잘 알고 있을 수 있습니다. 인수가 null이거나 빈 문자열인 경우 이 메서드는 `true`를 반환합니다. 이는 null 검사의 한 가지 형태입니다. 메서드가 `false`를 반환하는 경우 호출자는 인수를 null 검사할 필요가 없습니다. 메서드를 이 null 허용 인식처럼 만들려면 인수를 null 허용 참조 형식으로 설정하고 `NotNullWhen` 특성을 추가합니다.
 
 ```csharp
-bool IsNullOrEmpty([NotNullWhen(false)]string? value);
+bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
 이를 통해 반환 값이 `false`인 코드는 null 검사할 필요가 없음을 컴파일러에 알립니다. 특성을 추가하여 `IsNullOrEmpty`가 필요한 null 검사를 수행한다는 것을 컴파일러의 정적 분석에 알립니다. `false`를 반환하는 경우 입력 인수는 `null`이 아닙니다.
@@ -246,38 +246,44 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 [DoesNotReturn]
 private void FailFast()
 {
-   throw new InvalidOperationException();
+    throw new InvalidOperationException();
 }
 
 public void SetState(object containedField)
 {
-   if (!isInitialized)
-      FailFast();
+    if (!isInitialized)
+    {
+        FailFast();
+    }
 
-   // unreachable code:
-   this.field = containedField;
+    // unreachable code:
+    _field = containedField;
 }
 ```
 
 두 번째 경우에는 메서드의 부울 매개 변수에 `DoesNotReturnIf` 특성을 추가합니다. 이전 예제를 다음과 같이 수정할 수 있습니다.
 
 ```csharp
-private void FailFast([DoesNotReturnIf(false)]bool isValid)
+private void FailFast([DoesNotReturnIf(false)] bool isValid)
 {
-   if (!isValid)
-       throw new InvalidOperationException();
+    if (!isValid)
+    {
+        throw new InvalidOperationException();
+    }
 }
 
 public void SetState(object containedField)
 {
-   FailFast(isInitialized);
+    FailFast(isInitialized);
 
-   // unreachable code when "isInitialized" is false:
-   this.field = containedField;
+    // unreachable code when "isInitialized" is false:
+    _field = containedField;
 }
 ```
 
 ## <a name="summary"></a>요약
+
+[!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
 null 허용 참조 형식을 추가하면 `null`일 수 있는 변수의 API 기대치를 설명하는 초기 어휘가 제공됩니다. 추가 특성은 변수의 null 상태를 전제 조건 및 사후 조건으로 설명하는 다양한 어휘를 제공합니다. 해당 특성은 기대치를 명확하게 설명하며 API를 사용하는 개발자에게 더 나은 환경을 제공합니다.
 

@@ -2,12 +2,12 @@
 title: 연습 및 기술 시작 개요
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 연습 및 기술 시작 개요
 ms.date: 04/28/2018
-ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987871"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516127"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작 개요
 
@@ -212,7 +212,7 @@ Azure Container Instances를 사용하면 가상 머신을 프로비전하거나
 
 결론적으로 Azure Container Instances 사용은 개발/테스트 시나리오 및 CI/CD 파이프라인에 매우 매력적인 옵션입니다.
 
-## <a name="next-steps"></a>다음 단계
+### <a name="next-steps"></a>다음 단계
 
 다음 GitHub wiki에서 이 콘텐츠를 보다 심층적으로 살펴봅니다.
 
@@ -274,7 +274,7 @@ Kubernetes를 통해 개발자는 물리적 컴퓨터와 가상 머신에 대한
 
 - 애플리케이션 상태 검사
 
-## <a name="next-steps"></a>다음 단계
+### <a name="next-steps"></a>다음 단계
 
 이 콘텐츠를 GitHub wiki(<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>)에서 보다 심층적으로 살펴봅니다.
 
@@ -302,7 +302,7 @@ Windows 컨테이너를 사용하는 간단한 컨테이너화된 애플리케�
 
 컨테이너용 Azure App Service에 배포하면 Azure App Service의 PaaS 이점과 쌍을 이루는 컨테이너의 이점을 얻을 수 있습니다. App Service는 수직 및 수평으로 쉽게 확장할 수 있으며 자동 크기 조정을 구성하여 변화하는 수요를 충족할 수 있습니다. 가동 중지 시간 없이 업데이트를 수행할 수 있으며, 레지스트리에서 지속적인 배포를 구성하는 것도 손쉽습니다.
 
-## <a name="next-steps"></a>다음 단계
+### <a name="next-steps"></a>다음 단계
 
 이 콘텐츠를 GitHub wiki(<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>)에서 보다 심층적으로 살펴봅니다.
 

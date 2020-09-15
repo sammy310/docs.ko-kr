@@ -4,12 +4,12 @@ description: .NET Core 도구를 설치, 사용, 업데이트 및 제거하는 �
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 00c0317fcfc4da0e7205c23faa7b355c20882ec9
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062732"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598124"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core 도구를 관리하는 방법
 
@@ -42,7 +42,7 @@ ms.locfileid: "88062732"
 * [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 목록을 확인합니다.
 * [ToolGet](https://www.toolget.net/)을 사용하여 .NET 도구를 검색합니다.
 * [dotnet/aspnetcore GitHub 리포지토리의 Tools 디렉터리](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)에서 ASP.NET Core 팀이 만든 도구의 소스 코드를 참조합니다.
-* [.NET Core dotnet 진단 도구](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)에서 진단 도구에 대해 자세히 알아보세요.
+* [.NET Core dotnet 진단 도구](../diagnostics/index.md#net-core-diagnostic-global-tools)에서 진단 도구에 대해 자세히 알아보세요.
 
 ## <a name="check-the-author-and-statistics"></a>작성자 및 통계 확인
 

@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
-ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: eea6542acb9fa659af764bfd3a2af00fd9740191
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810900"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656277"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
 
@@ -43,6 +43,7 @@ ms.locfileid: "88810900"
 > - [serialization](serialization.md)
 > - [Visual Basic](visualbasic.md)
 > - [Windows Forms](winforms.md)
+> - [WPF](wpf.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub 문제 및 알림
 
