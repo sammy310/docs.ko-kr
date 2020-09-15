@@ -104,6 +104,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: 공변 반환 형식
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Foreach 루프의 확장 GetEnumerator
+          href: ../../../../_csharplang/proposals/csharp-9.0/extension-getenumerator.md
         - name: 람다 무시 항목 매개 변수
           href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
         - name: 로컬 함수의 특성
