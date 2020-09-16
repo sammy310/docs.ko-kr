@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9d27c3e3cd42039aeefcb517ecc81eadeb5c183
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421035"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557426"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 열거형
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -35,7 +35,7 @@ typedef enum ILCodeKind {
   
 ## <a name="members"></a>멤버  
   
-|멤버 이름|설명|  
+|멤버 이름|Description|  
 |-----------------|-----------------|  
 |`ILCODE_ORIGINAL_IL`|디버거가 ReJIT 계측의 정보에 액세스할 수 없습니다.|  
 |`ILCODE_REJIT_IL`|디버거가 ReJIT 계측의 정보에 액세스할 수 있습니다.|  
@@ -52,8 +52,8 @@ typedef enum ILCodeKind {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)
-- [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: 방법 가이드](/archive/blogs/davbr/rejit-a-how-to-guide)

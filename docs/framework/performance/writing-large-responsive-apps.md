@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063759"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555252"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 
@@ -282,7 +282,7 @@ LINQ (언어 통합 쿼리)는 람다 식과 함께 생산성 기능의 예입�
   
  **예 5: 람다, 목록 \<T> 및 IEnumerable\<T>**  
   
- 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
+ 이 예제에서는 이름 문자열이 제공될 경우 [LINQ 및 기능 스타일 코드](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)를 사용하여 컴파일러 모델에서 기호를 찾습니다.  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 첫 번째 줄에서 [람다 식](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [은 ](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)지역 변수 `name`을 닫습니다. 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
+ 첫 번째 줄에서 [람다 식](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [은 ](/archive/blogs/ericlippert/what-are-closures)지역 변수 `name`을 닫습니다. 즉, 이 코드에서는 `predicate`를 유지하는 [대리자](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)에 대한 개체를 할당할 뿐만 아니라 `name`의 값을 캡처하는 환경을 유지하기 위한 정적 클래스를 할당합니다. 컴파일러는 다음과 같은 코드를 생성합니다.  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -441,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>기타 고려 사항  
  다음은 규모가 큰 앱이나 많은 데이터를 처리하는 앱에서 발생할 수 있는 잠재적 문제에 대한 몇 가지 추가 사항입니다.
   
- **사전과**  
+ **사전**  
   
  사전은 많은 프로그램에서 보편적으로 사용되며 매우 편리하고 본질적으로 효율적이기는 하지만, 빈번히 부적절하게 사용됩니다. Visual Studio 및 새 컴파일러에서 분석에는 단일 요소를 포함했거나 비어 있는 사전이 많이 표시됩니다. 빈 <xref:System.Collections.Generic.Dictionary%602>에는 10개의 필드가 포함되어 있고 이는 x86 컴퓨터의 힙에서 48바이트를 차지합니다. 매핑 또는 결합형 데이터 구조와 일정 시간 조회 기능이 필요한 경우 사전은 유용합니다. 그러나 보유한 요소가 몇 개 되지 않는 경우 사전을 사용하면 많은 공간을 낭비하게 됩니다. 대신, 예를 들어 `List<KeyValuePair\<K,V>>`를 반복적으로 검토할 수 있으며 이는 원래 빠릅니다. 데이터가 포함된 사전을 로드한 다음 이 사전에서 읽기 위한 용도로만 사전을 사용하는 경우(매우 일반적인 패턴), 정렬된 배열과 함께 N(log(N)) 조회 기능을 사용하는 것이 거의 더 빠를 것입니다(사용 중인 요소 수에 따라 다름).
   
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 - 결국은 모두 할당에 관련된 문제임 – 이 부분이 바로 컴파일러 플랫폼 팀이 새 컴파일러의 성능을 향상시키기 위해 대부분의 시간을 사용하는 부분입니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [이 항목의 프레젠테이션 비디오](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [초보자를 위한 성능 프로 파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [성능](index.md)
-- [.NET 성능 팁](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [.NET 성능 팁](/previous-versions/dotnet/articles/ms973839(v=msdn.10))
 - [채널 9 PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub의 dotnet/roslyn 리포지토리](https://github.com/dotnet/roslyn)

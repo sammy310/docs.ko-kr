@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246027"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547462"
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
 이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그는 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 수 있습니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "85246027"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [추적](../diagnostics/tracing/index.md)
-- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

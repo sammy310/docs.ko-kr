@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: d67d64dcf0003de28775ac947f8b5f72d7c2ba2a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597633"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556260"
 ---
 # <a name="authorization-in-wcf"></a>WCF에서 권한 부여
 권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 단원의 항목에서는 Windows Communication Foundation (WCF)에서 다양 한 방법으로이 기본 작업을 수행 하는 방법을 보여 줍니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "84597633"
 ## <a name="related-sections"></a>관련 단원  
  [인증](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

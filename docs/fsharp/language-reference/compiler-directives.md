@@ -4,12 +4,12 @@ description: 'F # 언어 전처리기 지시문, 조건부 컴파일 지시문, 
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: aee307eb7bccc8d91b5162f3f43db3b806b761d0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855376"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557322"
 ---
 # <a name="compiler-directives"></a>컴파일러 지시문
 
@@ -40,7 +40,7 @@ ms.locfileid: "87855376"
 > [!NOTE]
 > 다른 언어에 있는 그대로 동일한 조건부 컴파일 지시문의 동작을 볼 수 없습니다. 예를 들어 기호가 포함된 부울 식은 사용할 수 없으며 `true` 및 `false`가 특별한 의미를 가지지도 않습니다. `if` 지시문에 사용하는 기호는 명령줄이나 프로젝트 설정에서 정의해야 합니다. `define` 전처리기 지시문이 없습니다.
 
-다음 코드에서는 `#if`, `#else` 및 `#endif` 지시문을 사용하는 방법을 보여 줍니다. 이 예제의 코드에는 `function1`에 대한 두 가지 버전의 정의가 포함되어 있습니다. `VERSION1` [-Define 컴파일러 옵션](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)을 사용 하 여가 정의 되 면 지시문과 지시문 사이에 있는 코드가 `#if` `#else` 활성화 됩니다. 그렇지 않은 경우에는 `#else`와 `#endif` 사이의 코드가 활성화됩니다.
+다음 코드에서는 `#if`, `#else` 및 `#endif` 지시문을 사용하는 방법을 보여 줍니다. 이 예제의 코드에는 `function1`에 대한 두 가지 버전의 정의가 포함되어 있습니다. `VERSION1` [-Define 컴파일러 옵션](./compiler-options.md)을 사용 하 여가 정의 되 면 지시문과 지시문 사이에 있는 코드가 `#if` `#else` 활성화 됩니다. 그렇지 않은 경우에는 `#else`와 `#endif` 사이의 코드가 활성화됩니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -76,7 +76,7 @@ let str = "Debugging!"
 
 |지시문|설명|
 |---------|-----------|
-|`#light`["&#124;" 꺼짐 "]|다른 ML 버전과의 호환성을 위해 간단한 구문을 사용하거나 사용하지 않도록 설정합니다. 기본적으로 간단한 구문을 사용하도록 설정됩니다. 자세한 구문은 항상 사용할 수 있도록 설정됩니다. 따라서 간단한 구문과 자세한 구문을 함께 사용할 수 있습니다. `#light` 지시문 자체는 `#light "on"`과 같습니다. `#light "off"`를 지정하는 경우에는 모든 언어 구문에 대해 자세한 구문 형식을 사용해야 합니다. F# 관련 설명에 나오는 구문은 간단한 구문을 사용하는 것을 전제로 하여 제시됩니다. 자세한 내용은 자세한 [구문](verbose-syntax.md)을 참조 하세요.|
+|`#light` ["&#124;" 꺼짐 "]|다른 ML 버전과의 호환성을 위해 간단한 구문을 사용하거나 사용하지 않도록 설정합니다. 기본적으로 간단한 구문을 사용하도록 설정됩니다. 자세한 구문은 항상 사용할 수 있도록 설정됩니다. 따라서 간단한 구문과 자세한 구문을 함께 사용할 수 있습니다. `#light` 지시문 자체는 `#light "on"`과 같습니다. `#light "off"`를 지정하는 경우에는 모든 언어 구문에 대해 자세한 구문 형식을 사용해야 합니다. F# 관련 설명에 나오는 구문은 간단한 구문을 사용하는 것을 전제로 하여 제시됩니다. 자세한 내용은 자세한 [구문](verbose-syntax.md)을 참조 하세요.|
 
 인터프리터 (fsi.exe) 지시문은 [F #을 사용한 대화형 프로그래밍](../tutorials/fsharp-interactive/index.md)을 참조 하세요.
 

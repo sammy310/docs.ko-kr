@@ -2,12 +2,12 @@
 title: SQL Server에서 행 수준 권한 부여
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782359"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554855"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server에서 행 수준 권한 부여
 
@@ -23,7 +23,7 @@ ms.locfileid: "70782359"
 
 - 행 수준 필터링을 사용하도록 설정합니다.
 
-  - SQL Server 2016 이상이나 [Azure SQL 데이터베이스](https://docs.microsoft.com/azure/sql-database/)를 사용하고 있으면 반환되는 행을 현재 데이터베이스 사용자(CURRENT_USER() 기본 제공 함수 사용) 또는 현재 로그인 이름(SUSER_SNAME() 기본 제공 함수 사용)과 일치하는 행으로 제한하는 조건자를 테이블에 추가하는 보안 정책을 만듭니다.
+  - SQL Server 2016 이상이나 [Azure SQL 데이터베이스](/azure/sql-database/)를 사용하고 있으면 반환되는 행을 현재 데이터베이스 사용자(CURRENT_USER() 기본 제공 함수 사용) 또는 현재 로그인 이름(SUSER_SNAME() 기본 제공 함수 사용)과 일치하는 행으로 제한하는 조건자를 테이블에 추가하는 보안 정책을 만듭니다.
 
       ```sql
       CREATE SCHEMA Security
@@ -61,12 +61,12 @@ ms.locfileid: "70782359"
 
 - 데이터베이스 역할에 저장 프로시저에 대한 EXECUTE 권한을 부여합니다. 사용자는 제공된 저장 프로시저를 통해서만 데이터에 액세스할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [행 수준 보안](/sql/relational-databases/security/row-level-security)
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [SQL Server 보안 개요](overview-of-sql-server-security.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [SQL Server의 애플리케이션 보안 시나리오](application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 저장 프로시저를 사용하여 권한 관리](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [SQL Server에서 동적 보안 SQL 작성](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server에서 보안 동적 SQL 작성](writing-secure-dynamic-sql-in-sql-server.md)
 - [ADO.NET 개요](../ado-net-overview.md)

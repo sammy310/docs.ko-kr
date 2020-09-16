@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557582"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "84599271"
 ## <a name="auditing-event-log-can-be-filled"></a>감사 이벤트 로그가 채워질 수 있음  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목이 기록되게 할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다.  
   
- 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))을 참조 하십시오. 자세한 내용은 [감사](auditing-security-events.md)합니다.  
+ 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다. 이벤트 뷰어를 사용 하 여 이벤트 로그를 보고 관리 하는 방법에 대 한 자세한 내용은 [이벤트 뷰어](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))을 참조 하십시오. 자세한 내용은 [감사](auditing-security-events.md)합니다.  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>IAuthorizationPolicy의 구현이 잘못 된 경우 서비스가 응답 하지 않을 수 있습니다.  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>인터페이스의 잘못 된 구현에서 메서드를 호출 하면 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 서비스가 응답 하지 않을 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "84599271"
   
  이를 완화 하려면에서 보다 정확한 검색 기준을 사용 하 여 사용할 정확한 인증서를 참조 합니다 [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 옵션을 사용하고 고유한 지문(해시)으로 인증서를 지정합니다.  
   
- 자동 등록 기능에 대 한 자세한 내용은 [Windows Server 2003의 인증서 자동 등록](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))을 참조 하세요.  
+ 자동 등록 기능에 대 한 자세한 내용은 [Windows Server 2003의 인증서 자동 등록](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10))을 참조 하세요.  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>권한 부여에 사용되는 여러 개의 대체 주체 이름 중 마지막  
  드물지만 X.509 인증서에 여러 개의 대체 주체 이름이 포함된 경우 대체 주체 이름을 사용하여 권한을 부여하면 권한 부여가 실패할 수도 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "84599271"
   
  이 문제를 완화하려면 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 설정하여 활성 세션의 최대 개수와 세션의 최대 수명에 대해 제한을 설정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Security Considerations](security-considerations-in-wcf.md)
 - [정보 공개](information-disclosure.md)

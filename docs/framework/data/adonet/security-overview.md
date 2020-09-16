@@ -2,12 +2,12 @@
 title: 보안 개요
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545031"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550692"
 ---
 # <a name="security-overview"></a>보안 개요
 
@@ -25,9 +25,9 @@ ms.locfileid: "75545031"
 
  위협 모델링은 애플리케이션의 취약성을 평가하여 가장 위험한 영역, 즉 가장 중요한 데이터가 노출되는 영역을 찾아내기 위한 반복되는 작업입니다. 취약한 영역을 식별한 후에는 심각도 순으로 영역에 등급을 매기고, 위협에 대한 대응책을 마련한 다음 여기에도 우선 순위를 지정합니다.
 
-자세한 내용은 다음 참고 자료를 참조하십시오.
+자세한 내용은 다음 자료를 참조하세요.
 
-|리소스|설명|
+|리소스|Description|
 |--------------|-----------------|
 |보안 엔지니어링 포털의 [위협 모델링](https://www.microsoft.com/securityengineering/sdl/threatmodeling) 사이트|이 페이지의 리소스는 위협 모델링 프로세스를 이해하고 애플리케이션을 안전하게 보호하는 데 사용할 수 있는 위협 모델을 만드는 데 유용한 정보를 제공합니다.|
 
@@ -40,9 +40,9 @@ ms.locfileid: "75545031"
 
 응용 프로그램을 보호 하는 방법에 대 한 자세한 내용은 다음 리소스를 참조 하세요.
 
-|리소스|설명|
+|리소스|Description|
 |--------------|-----------------|
-|[애플리케이션 보안](/visualstudio/ide/securing-applications)|일반 보안 항목에 대한 링크를 제공합니다. 분산 애플리케이션, 웹 애플리케이션, 모바일 애플리케이션 및 데스크톱 애플리케이션을 보호하는 방법에 대해 설명하는 항목에 대한 링크도 제공합니다.|
+|[응용 프로그램 보안](/visualstudio/ide/securing-applications)|일반 보안 항목에 대한 링크를 제공합니다. 분산 애플리케이션, 웹 애플리케이션, 모바일 애플리케이션 및 데스크톱 애플리케이션을 보호하는 방법에 대해 설명하는 항목에 대한 링크도 제공합니다.|
 
 ## <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)
 
@@ -64,9 +64,9 @@ CAS(코드 액세스 보안)는 보호된 리소스 및 작업에 대한 코드�
 
 공격이 감행될 경우 발생할 수 있는 피해를 최소화하려면 코드 실행에 꼭 필요한 리소스에 대한 액세스 권한만 부여하는 코드 보안 컨텍스트를 선택합니다.
 
-자세한 내용은 다음 참고 자료를 참조하십시오.
+자세한 내용은 다음 자료를 참조하세요.
 
-|리소스|설명|
+|리소스|Description|
 |--------------|-----------------|
 |[코드 액세스 보안 및 ADO.NET](code-access-security.md)|코드 액세스 보안, 역할 기반 보안, 부분적으로 신뢰할 수 있는 환경 간의 상호 작용을 ADO.NET 애플리케이션의 측면에서 설명합니다.|
 |[코드 액세스 보안](../../misc/code-access-security.md)|.NET Framework의 CAS에 대해 설명하는 추가 항목 링크를 제공합니다.|
@@ -87,23 +87,23 @@ CAS(코드 액세스 보안)는 보호된 리소스 및 작업에 대한 코드�
 
 - 보안 위험에 대한 알림을 받을 수 있도록 사용 중인 데이터베이스에 대해 보안 감사 및 로깅 기능을 설정합니다.
 
-자세한 내용은 다음 참고 자료를 참조하십시오.
+자세한 내용은 다음 자료를 참조하세요.
 
-|리소스|설명|
+|리소스|Description|
 |--------------|-----------------|
 |[SQL Server 보안](./sql/sql-server-security.md)|SQL Server를 대상으로 하는 안전한 ADO.NET 애플리케이션을 만드는 지침을 제공하는 애플리케이션 시나리오와 함께 SQL Server 보안에 대해 간략하게 설명합니다.|
-|[데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|
+|[데이터 액세스 전략에 대 한 권장 사항](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|
 
 ## <a name="security-policy-and-administration"></a>보안 정책 및 관리
 
 CAS(코드 액세스 보안) 정책을 잘못 관리하면 보안 허점이 생길 수 있습니다. 애플리케이션을 배포한 후에는 새로운 위협이 출현할 때마다 보안 모니터링 기술을 사용하고 위험을 평가해야 합니다.
 
-자세한 내용은 다음 참고 자료를 참조하십시오.
+자세한 내용은 다음 자료를 참조하세요.
 
-|리소스|설명|
+|리소스|Description|
 |--------------|-----------------|
-|[보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|보안 정책을 만들고 관리하는 작업에 대한 정보를 제공합니다.|
-|[보안 정책 모범 사례](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|보안 정책을 관리하는 방법에 대해 설명하는 링크를 제공합니다.|
+|[보안 정책 관리](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|보안 정책을 만들고 관리하는 작업에 대한 정보를 제공합니다.|
+|[보안 정책 모범 사례](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|보안 정책을 관리하는 방법에 대해 설명하는 링크를 제공합니다.|
 
 ## <a name="see-also"></a>참조
 

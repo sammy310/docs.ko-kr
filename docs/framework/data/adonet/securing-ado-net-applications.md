@@ -2,12 +2,12 @@
 title: 애플리케이션 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 1e08bb2386dff5d824d46aba652609ec5a373008
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: af184f64b43c2d3dc39f8c0add08940d3b002c24
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374522"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550757"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
 
@@ -17,7 +17,7 @@ ms.locfileid: "86374522"
   
 보안 코드를 작성하면 데이터베이스와 같은 관리되지 않는 리소스 작업을 할 때 자초한 보안 허점을 막지 못합니다. SQL Server와 같은 대부분의 서버 데이터베이스는 제대로 구현되는 경우 보안을 강화하는 자체 보안 시스템을 가집니다. 그러나 제대로 구성되지 않은 경우 강력한 보안 시스템으로 구성된 데이터 소스라 할지라도 공격에 취약할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
  [보안 개요](security-overview.md)  
  보안 ADO.NET 애플리케이션 디자인에 대한 권장 사항을 제공합니다.  
@@ -48,16 +48,16 @@ ms.locfileid: "86374522"
  [보안](../../../standard/security/index.md)  
  .NET의 모든 보안 측면을 설명 하는 문서에 대 한 링크를 포함 합니다.  
   
- [보안 도구](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
+ [보안 도구](/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  보안 정책을 보호하고 관리하는 .NET Framework 도구입니다.  
   
- [보안 애플리케이션을 만들기 위한 리소스](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
+ [보안 애플리케이션을 만들기 위한 리소스](/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  보안 응용 프로그램을 만들기 위한 아티클에 대 한 링크를 제공 합니다.  
   
  [보안 참고 자료](/visualstudio/ide/securing-applications)  
  온라인 및 인쇄 작업에서 사용 가능한 외부 리소스의 링크를 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET](index.md)
 - [ADO.NET 개요](ado-net-overview.md)

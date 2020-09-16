@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bbff7b53bacd50746de56c8dba85cdc9e4b1ad9b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309211"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556410"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
@@ -178,7 +178,7 @@ ms.locfileid: "86309211"
 
 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. `transparent` [PEVerify 도구](../tools/peverify-exe-peverify-tool.md)에서 옵션을 사용 하 여 어셈블리의 투명 코드를 확인할 수 있는지 확인 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
-- [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)

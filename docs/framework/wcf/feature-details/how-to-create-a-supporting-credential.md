@@ -2,18 +2,18 @@
 title: '방법: 지원하는 자격 증명 만들기'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597152"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557400"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>방법: 지원하는 자격 증명 만들기
 둘 이상의 자격 증명이 필요한 사용자 지정 보안 체계를 사용할 수 있습니다. 예를 들어 서비스는 클라이언트로부터 사용자 이름과 암호뿐 아니라 클라이언트가 18세 이상임을 입증하는 자격 증명을 요구할 수 있습니다. 두 번째 자격 증명은 *지원 자격 증명*입니다. 이 항목에서는 WCF (Windows Communication Foundation) 클라이언트에서 이러한 자격 증명을 구현 하는 방법을 설명 합니다.  
   
 > [!NOTE]
-> 지원 자격 증명의 사양은 WS-SecurityPolicy 사양의 일부입니다. 자세한 내용은 [Web Services Security 사양](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10))을 참조 하세요.  
+> 지원 자격 증명의 사양은 WS-SecurityPolicy 사양의 일부입니다. 자세한 내용은 [Web Services Security 사양](/previous-versions/dotnet/articles/ms951273(v=msdn.10))을 참조 하세요.  
   
 ## <a name="supporting-tokens"></a>Supporting Tokens  
  간단히 말해서 메시지 보안을 사용 하는 경우 *기본 자격 증명* 을 사용 하 여 메시지를 보호 합니다 (예: x.509 인증서 또는 Kerberos 티켓).  
@@ -27,7 +27,7 @@ ms.locfileid: "84597152"
 ## <a name="endorsing-signing-and-encrypting"></a>보증, 서명 및 암호화  
  지원 자격 증명은 메시지 내부에 전송 된 *지원 토큰* 을 생성 합니다. WS-SecurityPolicy 사양은 다음 표에 설명된 것처럼 지원 토큰을 메시지에 첨부하는 네 가지 방법을 정의합니다.  
   
-|목적|Description|  
+|용도|Description|  
 |-------------|-----------------|  
 |서명|지원 토큰은 보안 헤더에 포함되고 메시지 서명으로 서명됩니다.|  
 |보증|*보증 토큰* 은 메시지 서명에 서명 합니다.|  
@@ -64,7 +64,7 @@ ms.locfileid: "84597152"
   
  속성 이름이 나타내는 것처럼 지원 자격 증명은 필수 또는 옵션일 수 있습니다. 즉, 지원 자격 증명이 있으면 필요하지 않아도 사용되지만 없어도 인증이 실패하지 않습니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>지원 자격 증명을 포함하는 사용자 지정 바인딩을 만들려면  
   
@@ -80,6 +80,6 @@ ms.locfileid: "84597152"
 ### <a name="code"></a>코드  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

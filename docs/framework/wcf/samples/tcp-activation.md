@@ -2,12 +2,12 @@
 title: TCP 활성화
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0fa737adbdc7acc51511557877799c89849149bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555187"
 ---
 # <a name="tcp-activation"></a>TCP 활성화
 
@@ -206,6 +206,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > 이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 호스팅 및 지속성 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

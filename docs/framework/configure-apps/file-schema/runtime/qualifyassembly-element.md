@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0479b966abd0cfa3c570355e62e4b42264a3114f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153921"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554556"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> 요소
 부분 이름이 사용될 때 동적으로 로드되어야 하는 어셈블리의 전체 이름을 지정합니다.  
@@ -73,8 +73,8 @@ ms.locfileid: "79153921"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [부분 어셈블리 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [부분 어셈블리 참조](/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

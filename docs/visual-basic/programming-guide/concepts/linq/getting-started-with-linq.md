@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 97db059c33e8c5603c2bf54bbcf128612a0d028f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398398"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554386"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic에서 LINQ 시작
 이 섹션에는 Visual Basic 및 LINQ (통합 언어 쿼리)를 이해 하 고 사용 하는 데 도움이 되는 개요, 예제 및 배경 정보가 포함 되어 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "84398398"
  [LINQ to Objects(Visual Basic)](linq-to-objects.md)  
  메모리 내 컬렉션에서 LINQ를 사용 하는 방법에 대 한 선택 항목을 제공 합니다.  
   
- [LINQ to XML(Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML(Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  DOM(문서 개체 모델)의 메모리 내 문서 수정 기능을 제공하고 LINQ 쿼리 식을 지원하는 LINQ to XML을 사용하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  
   
  [LINQ(Language-Integrated Query)(Visual Basic)](index.md)  

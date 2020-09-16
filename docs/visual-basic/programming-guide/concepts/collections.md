@@ -2,12 +2,12 @@
 title: 컬렉션
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400657"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551069"
 ---
 # <a name="collections-visual-basic"></a>컬렉션(Visual Basic)
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>사용자 지정 컬렉션 정의
 
-<xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 [컬렉션 열거](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100))를 참조 하세요.
+<xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 [컬렉션 열거](/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100))를 참조 하세요.
 
 사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 항목의 앞부분에 있는 [컬렉션 종류](#kinds-of-collections)에서 설명한 .NET Framework에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.
 

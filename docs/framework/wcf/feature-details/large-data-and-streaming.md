@@ -3,12 +3,12 @@ title: 큰 데이터 및 스트리밍
 description: 이진 데이터 전송을 포함 하 여 WCF XML 기반 통신, 인코더 및 스트리밍 데이터에 대 한 고려 사항에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 58ef2ea1fd4f9aa800a91edbaabeb80f989b38f4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246586"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555031"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 
@@ -58,7 +58,7 @@ WCF (Windows Communication Foundation)는 XML 기반 통신 인프라입니다. 
   
  이러한 제약이 없는 데이터의 경우에는 보통 큰 메시지 하나보다 세션 범위 내의 메시지 시퀀스로 보내는 것이 더 좋습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "스트리밍 데이터" 섹션을 참조 하세요.  
   
- 많은 양의 데이터를 전송 하는 경우 `maxAllowedContentLength` iis 설정 (자세한 내용은 [Iis 요청 제한 구성](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)참조) 및 `maxReceivedMessageSize` 바인딩 설정 (예: [MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 또는)을 설정 해야 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> 합니다. `maxAllowedContentLength`속성의 기본값은 28.6이 고, `maxReceivedMessageSize` 속성의 기본값은 64kb입니다.  
+ 많은 양의 데이터를 전송 하는 경우 `maxAllowedContentLength` iis 설정 (자세한 내용은 [Iis 요청 제한 구성](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)참조) 및 `maxReceivedMessageSize` 바인딩 설정 (예: [MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) 또는)을 설정 해야 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> 합니다. `maxAllowedContentLength`속성의 기본값은 28.6이 고, `maxReceivedMessageSize` 속성의 기본값은 64kb입니다.  
   
 ## <a name="encodings"></a>인코딩  
  *인코딩은* 통신 중에 메시지를 표시 하는 방법에 대 한 규칙 집합을 정의 합니다. *인코더* 는 이러한 인코딩을 구현 하 고 발신자 쪽에서 메모리 내를 <xref:System.ServiceModel.Channels.Message> 바이트 스트림 또는 네트워크를 통해 전송 될 수 있는 바이트 버퍼로 전환 하는 일을 담당 합니다. 받는 쪽에서는 인코더가 바이트 시퀀스를 메모리 내 메시지로 변환합니다.  
@@ -240,6 +240,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > 버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 엔드포인트의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. WCF 클라이언트를 서비스에 생성 한 후에는 스트리밍 전송에서 사용 하도록 설정 된 서비스의 구성 파일을 편집 하 여 모드를 설정 해야 합니다. TCP 및 명명 된 파이프 전송의 경우 전송 모드가 정책 어설션으로 전파 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 스트리밍 사용](how-to-enable-streaming.md)

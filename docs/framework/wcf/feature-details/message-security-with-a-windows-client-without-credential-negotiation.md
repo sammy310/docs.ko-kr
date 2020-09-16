@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 7845bc45d0baecb07e4c03531f21d900c4e23bf7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595247"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551095"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 
@@ -53,7 +53,7 @@ ms.locfileid: "84595247"
 
 2. 임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정에 대한 SPN을 설정해야 합니다. 그렇게 하는 한 가지 방법으로 Setspn.exe 유틸리티 도구를 사용합니다. 서비스 계정에 대 한 SPN이 생성 되 면 해당 메타 데이터 (WSDL)를 통해 서비스의 클라이언트에 해당 SPN을 게시 하도록 WCF를 구성 합니다. 이 작업은 애플리케이션 구성 파일이나 코드를 통해 노출된 엔드포인트에 대한 엔드포인트 ID를 설정하여 수행합니다. 다음 예제에서는 ID를 프로그래밍 방식으로 게시합니다.
 
-Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))를 참조 하십시오. 끝점 id에 대 한 자세한 내용은 [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md)를 참조 하세요.
+Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](/previous-versions/msp-n-p/ff649429(v=pandp.10))를 참조 하십시오. 끝점 id에 대 한 자세한 내용은 [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md)를 참조 하세요.
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
@@ -102,7 +102,7 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:
 
   [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
   [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -112,9 +112,9 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 다음 코드에서는 클라이언트를 구성합니다. 보안 모드는 Message로 설정되고, 클라이언트 자격 증명 형식은 Windows로 설정됩니다. <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 및 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 속성은 `false`로 설정됩니다.
 
 > [!NOTE]
-> Windows 자격 증명 형식을 협상 없이 사용하려면 서비스와 통신을 시작하기 전에 서비스의 계정 SPN을 사용하여 클라이언트를 구성해야 합니다. 클라이언트는 SPN을 사용하여 Kerberos 토큰을 가져온 다음 서비스와의 통신을 인증하고 보안합니다. 다음 예제에서는 서비스의 SPN을 사용하여 클라이언트를 구성하는 방법을 보여 줍니다. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트를 생성 하는 경우 서비스의 SPN이 서비스의 메타 데이터 (WSDL)에서 클라이언트에 자동으로 전파 됩니다 (서비스의 메타 데이터에 해당 정보가 포함 된 경우). 서비스의 메타 데이터에 SPN을 포함 하도록 서비스를 구성 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 "서비스" 섹션을 참조 하세요.
+> Windows 자격 증명 형식을 협상 없이 사용하려면 서비스와 통신을 시작하기 전에 서비스의 계정 SPN을 사용하여 클라이언트를 구성해야 합니다. 클라이언트는 SPN을 사용하여 Kerberos 토큰을 가져온 다음 서비스와의 통신을 인증하고 보안합니다. 다음 예제에서는 서비스의 SPN을 사용하여 클라이언트를 구성하는 방법을 보여 줍니다. [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트를 생성 하는 경우 서비스의 SPN이 서비스의 메타 데이터 (WSDL)에서 클라이언트에 자동으로 전파 됩니다 (서비스의 메타 데이터에 해당 정보가 포함 된 경우). 서비스의 메타 데이터에 SPN을 포함 하도록 서비스를 구성 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 "서비스" 섹션을 참조 하세요.
 >
-> Spn, Kerberos 및 Active Directory에 대 한 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))를 참조 하십시오. 끝점 id에 대 한 자세한 내용은 [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md) 항목을 참조 하세요.
+> Spn, Kerberos 및 Active Directory에 대 한 자세한 내용은 [Windows 용 Kerberos 기술 보충 자료](/previous-versions/msp-n-p/ff649429(v=pandp.10))를 참조 하십시오. 끝점 id에 대 한 자세한 내용은 [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md) 항목을 참조 하세요.
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
@@ -153,8 +153,8 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
 - [서비스 ID 및 인증](service-identity-and-authentication.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

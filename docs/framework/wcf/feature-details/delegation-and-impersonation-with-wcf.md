@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 91e7ea8df5c32329f0eb8d12943ce5f816ff0e5a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245078"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557595"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 애플리케이션을 보려면 [Impersonating the Client](../samples/impersonating-the-client.md)을 참조하세요. 가장을 사용하는 방법에 대한 예제는 [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md)을 참조하십시오.  
@@ -94,8 +94,8 @@ ms.locfileid: "85245078"
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|동작|  
 |---------------------------|------------------------------------------------|--------------|  
 |필수|해당 없음|WCF는 호출자를 가장 합니다.|  
-|허용됨|false|WCF는 호출자를 가장 하지 않습니다.|  
-|허용됨|true|WCF는 호출자를 가장 합니다.|  
+|허용|false|WCF는 호출자를 가장 하지 않습니다.|  
+|허용|true|WCF는 호출자를 가장 합니다.|  
 |NotAllowed|false|WCF는 호출자를 가장 하지 않습니다.|  
 |NotAllowed|true|허용되지 않습니다. <xref:System.InvalidOperationException> 이 throw됩니다.|  
   
@@ -115,30 +115,30 @@ ms.locfileid: "85245078"
 |`AllowedImpersonationLevel` 값|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |익명|예|해당 없음|가장|  
-|익명|예|해당 없음|Identification(식별)|  
-|Identification(식별)|해당 없음|해당 없음|Identification(식별)|  
+|익명|예|해당 없음|식별|  
+|식별|해당 없음|해당 없음|식별|  
 |가장|예|해당 없음|가장|  
-|가장|예|해당 없음|Identification(식별)|  
-|위임|Yes|Yes|위임|  
-|위임|Yes|No|가장|  
-|위임|예|해당 없음|Identification(식별)|  
+|가장|예|해당 없음|식별|  
+|위임|예|예|위임|  
+|위임|예|아니요|가장|  
+|위임|예|해당 없음|식별|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>사용자 이름 자격 증명 및 캐시된 토큰 가장에서 가져온 가장 수준  
  클라이언트는 서비스의 사용자 이름 및 암호를 전달 하 여 WCF에서 해당 사용자로 로그온 할 수 있게 합니다. 즉, 속성을로 설정 하는 것과 같습니다 `AllowedImpersonationLevel` <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> . 는 `AllowedImpersonationLevel` 및 클래스에서 사용할 수 <xref:System.ServiceModel.Security.WindowsClientCredential> <xref:System.ServiceModel.Security.HttpDigestClientCredential> 있습니다. 다음 표에는 서비스에서 사용자 이름 자격 증명을 받을 때 획득 한 가장 수준이 나와 있습니다.  
   
 |`AllowedImpersonationLevel`|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|해당 없음|Yes|Yes|위임|  
-|해당 없음|Yes|No|가장|  
-|해당 없음|예|해당 없음|Identification(식별)|  
+|해당 없음|예|예|위임|  
+|해당 없음|예|아니요|가장|  
+|해당 없음|예|해당 없음|식별|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U 기반 가장에서 가져온 가장 수준  
   
 |서비스의 `SeTcbPrivilege`포함 여부|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Yes|예|해당 없음|가장|  
-|Yes|예|해당 없음|Identification(식별)|  
-|예|해당 없음|해당 없음|Identification(식별)|  
+|예|예|해당 없음|가장|  
+|예|예|해당 없음|식별|  
+|예|해당 없음|해당 없음|식별|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Windows 계정에 클라이언트 인증서 매핑  
  클라이언트가 인증서를 사용하여 자신을 서비스에 인증하고 서비스에서 Active Directory를 통해 클라이언트를 기존 계정에 매핑하도록 할 수 있습니다. 다음 XML에서는 인증서를 매핑하도록 서비스를 구성하는 방법을 보여 줍니다.  
@@ -171,7 +171,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>위임  
- 백 엔드 서비스에 위임하려면 서비스에서는 클라이언트 Windows ID를 사용하여 백 엔드 서비스에 대해 Kerberos multi-leg(NTLM 대체(fallback) 없는 SSPI) 인증 또는 Kerberos 직접 인증을 수행해야 합니다. 백 엔드 서비스에 위임하기 위해 <xref:System.ServiceModel.ChannelFactory%601> 및 채널을 만든 다음 클라이언트를 가장하는 동안 채널을 통해 통신합니다. 이 형식의 위임을 사용하는 경우 프런트 엔드 서비스에서 백 엔드 서비스가 위치할 수 있는 범위는 프런트 엔드 서비스에서 수행한 가장 수준에 따라 달라집니다. 가장 수준이 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>인 경우 프런트 엔드 및 백 엔드 서비스는 동일한 시스템에서 실행되어야 합니다. 가장 수준이 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>인 경우 프런트 엔드 및 백 엔드 서비스는 개별 시스템 또는 동일한 시스템에 있을 수 있습니다. 위임 수준 가장을 사용하려면 위임을 허용하도록 Windows 도메인 정책을 구성해야 합니다. 위임 지원을 위한 Active Directory 구성에 대한 자세한 내용은 [Enabling Delegated Authentication](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10))을 참조하십시오.  
+ 백 엔드 서비스에 위임하려면 서비스에서는 클라이언트 Windows ID를 사용하여 백 엔드 서비스에 대해 Kerberos multi-leg(NTLM 대체(fallback) 없는 SSPI) 인증 또는 Kerberos 직접 인증을 수행해야 합니다. 백 엔드 서비스에 위임하기 위해 <xref:System.ServiceModel.ChannelFactory%601> 및 채널을 만든 다음 클라이언트를 가장하는 동안 채널을 통해 통신합니다. 이 형식의 위임을 사용하는 경우 프런트 엔드 서비스에서 백 엔드 서비스가 위치할 수 있는 범위는 프런트 엔드 서비스에서 수행한 가장 수준에 따라 달라집니다. 가장 수준이 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>인 경우 프런트 엔드 및 백 엔드 서비스는 동일한 시스템에서 실행되어야 합니다. 가장 수준이 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>인 경우 프런트 엔드 및 백 엔드 서비스는 개별 시스템 또는 동일한 시스템에 있을 수 있습니다. 위임 수준 가장을 사용하려면 위임을 허용하도록 Windows 도메인 정책을 구성해야 합니다. 위임 지원을 위한 Active Directory 구성에 대한 자세한 내용은 [Enabling Delegated Authentication](/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10))을 참조하십시오.  
   
 > [!NOTE]
 > 클라이언트가 백 엔드 서비스의 Windows 계정에 해당하는 사용자 이름 및 암호를 사용하여 프런트 엔드 서비스를 인증하는 경우 프런트 엔드 서비스는 해당 클라이언트의 사용자 이름과 암호를 다시 사용하여 백 엔드 서비스를 인증할 수 있습니다. 사용자 이름과 암호를 백 엔드 서비스에 전달하면 백 엔드 서비스가 가장을 수행할 수 있으므로 이 방식은 매우 유용한 ID 전달 방식이지만 Kerberos를 사용하지 않기 때문에 위임을 구성하지 않습니다. 위임에 대한 Active Directory 제어는 사용자 이름 및 암호 인증에 적용되지 않습니다.  
@@ -180,9 +180,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |가장 수준|서비스에서 프로세스 간 위임을 수행할 수 있음|서비스에서 시스템 간 위임을 수행할 수 있음|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|아니요|예|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|No|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|예|Yes|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|아니요|아니요|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|예|아니요|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|예|예|  
   
  다음 코드 예제에서는 위임을 사용하는 방법을 보여 줍니다.  
   
@@ -190,7 +190,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>한정된 위임을 사용하도록 애플리케이션을 구성하는 방법  
- 한정된 위임을 사용하기 전에 발신자, 수신자 및 도메인 컨트롤러는 한정된 위임을 사용하도록 구성되어야 합니다. 다음 절차에서는 한정된 위임을 사용하는 단계를 보여 줍니다. 위임과 한정된 위임의 차이에 대한 자세한 내용은 간략하게 설명된 [Windows Server 2003 Kerberos Extensions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) 부분을 참조하십시오.  
+ 한정된 위임을 사용하기 전에 발신자, 수신자 및 도메인 컨트롤러는 한정된 위임을 사용하도록 구성되어야 합니다. 다음 절차에서는 한정된 위임을 사용하는 단계를 보여 줍니다. 위임과 한정된 위임의 차이에 대한 자세한 내용은 간략하게 설명된 [Windows Server 2003 Kerberos Extensions](/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) 부분을 참조하십시오.  
   
 1. 도메인 컨트롤러에서 클라이언트 애플리케이션이 실행 중인 계정에 대해 **계정이 민감하여 위임할 수 없음** 확인란의 선택을 취소합니다.  
   
@@ -200,9 +200,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 4. 도메인 컨트롤러에서 **지정한 서비스에 대한 위임용으로만 이 컴퓨터 트러스트** 옵션을 클릭하여 한정된 위임을 사용하도록 중간 계층의 컴퓨터를 구성합니다.  
   
- 제한 된 위임 구성에 대 한 자세한 지침은 [Kerberos 프로토콜 전환 및 제한 위임](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))을 참조 하세요.
+ 제한 된 위임 구성에 대 한 자세한 지침은 [Kerberos 프로토콜 전환 및 제한 위임](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))을 참조 하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>

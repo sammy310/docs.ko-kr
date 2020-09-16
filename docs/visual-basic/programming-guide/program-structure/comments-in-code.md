@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403319"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550991"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
 코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가 뒤에 나오는 텍스트 또는 *주석을*무시 하도록 지시 합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84403319"
 |---|---|  
 |주석 형식|주석 설명|  
 |용도|프로시저의 작업 수행 방식이 아니라 해당 프로시저에서 수행하는 작업에 대해 설명합니다.|  
-|Assumptions|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
+|가정|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
 |효과|영향을 받은 외부 변수, 컨트롤 또는 파일을 나열하고, 분명하지 않은 경우에는 그 효과를 나열합니다.|  
 |입력|인수의 용도를 지정합니다.|  
 |반환|프로시저에 의해 반환된 값에 대해 설명합니다.|  
@@ -59,9 +59,9 @@ ms.locfileid: "84403319"
 > [!NOTE]
 > `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 `'` 기호 및 **주석** / **주석 처리** 되지 않은 단추는 사용 하기 쉬우며 공간 및 메모리를 줄일 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Basic 직감-XML 주석을 사용 하 여 코드 문서화](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Basic 직감-XML 주석을 사용 하 여 코드 문서화](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [방법: XML 설명서 만들기](how-to-create-xml-documentation.md)
 - [XML 주석 태그](../../language-reference/xmldoc/index.md)
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)

@@ -2,15 +2,15 @@
 title: LINQ to Entities 쿼리에서 표준 쿼리 연산자
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a61296d924ab1ff32b5bee523d6f0a06dda95db3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249142"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557777"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 표준 쿼리 연산자
-쿼리에는 데이터 소스에서 검색하려는 정보를 지정합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서는 쿼리에서 사용할 수 있는 표준 쿼리 메서드 집합을 제공합니다. 이러한 메서드의 대부분은 시퀀스에서 작동 합니다. 이 컨텍스트에서 시퀀스는 해당 형식이 인터페이스 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> 또는 인터페이스를 구현 하는 개체입니다. 표준 쿼리 연산자 쿼리 기능에는 필터링, 프로젝션, 집계, 정렬, 그룹화, 페이징 등이 포함됩니다. 자주 사용되는 표준 쿼리 연산자 중 일부는 전용 키워드 구문이 있어서 쿼리 식 구문을 사용하여 호출할 수 있습니다. 쿼리 식은 메서드 기반 방법과는 다른, 가독성이 더 우수한 쿼리 표현 방법입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다. 동일한 쿼리 식 절이 있는 표준 쿼리 연산자의 목록은 [표준 쿼리 연산자 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))를 참조 하세요.  
+쿼리에는 데이터 소스에서 검색하려는 정보를 지정합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서는 쿼리에서 사용할 수 있는 표준 쿼리 메서드 집합을 제공합니다. 이러한 메서드의 대부분은 시퀀스에서 작동 합니다. 이 컨텍스트에서 시퀀스는 해당 형식이 인터페이스 또는 인터페이스를 구현 하는 개체입니다 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . 표준 쿼리 연산자 쿼리 기능에는 필터링, 프로젝션, 집계, 정렬, 그룹화, 페이징 등이 포함됩니다. 자주 사용되는 표준 쿼리 연산자 중 일부는 전용 키워드 구문이 있어서 쿼리 식 구문을 사용하여 호출할 수 있습니다. 쿼리 식은 메서드 기반 방법과는 다른, 가독성이 더 우수한 쿼리 표현 방법입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다. 동일한 쿼리 식 절이 있는 표준 쿼리 연산자의 목록은 [표준 쿼리 연산자 개요](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))를 참조 하세요.  
   
  모든 표준 쿼리 연산자가 LINQ to Entities 쿼리에서 지원 되는 것은 아닙니다. 자세한 내용은 [지원 되거나 지원 되지 않는 LINQ 메서드 (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)를 참조 하세요. 이 항목에서는 LINQ to Entities 관련 된 표준 쿼리 연산자에 대 한 정보를 제공 합니다. LINQ to Entities 쿼리의 알려진 문제에 대 한 자세한 내용은 [LINQ to Entities의 알려진 문제 및 고려 사항](known-issues-and-considerations-in-linq-to-entities.md)을 참조 하세요.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "70249142"
   
 |메서드|데이터 없음|모든 null 값|일부 null 값|null 값 없음|  
 |------------|-------------|---------------------|----------------------|--------------------|  
-|`Average`|@FSHO2@null을 반환합니다.|@FSHO2@null을 반환합니다.|시퀀스의 null이 아닌 값의 평균을 반환합니다.|숫자 값 시퀀스의 평균을 계산합니다.|  
+|`Average`|null을 반환합니다.|null을 반환합니다.|시퀀스의 null이 아닌 값의 평균을 반환합니다.|숫자 값 시퀀스의 평균을 계산합니다.|  
 |`Count`|0을 반환합니다.|시퀀스의 null 값의 개수를 반환합니다.|시퀀스의 null 값과 null이 아닌 값의 개수를 반환합니다.|시퀀스의 요소 개수를 반환합니다.|  
-|`Max`|@FSHO2@null을 반환합니다.|@FSHO2@null을 반환합니다.|시퀀스의 null이 아닌 값의 최대값을 반환합니다.|시퀀스의 최대값을 반환합니다.|  
-|`Min`|@FSHO2@null을 반환합니다.|@FSHO2@null을 반환합니다.|시퀀스의 null이 아닌 값의 최소값을 반환합니다.|시퀀스의 최소값을 반환합니다.|  
-|`Sum`|@FSHO2@null을 반환합니다.|@FSHO2@null을 반환합니다.|시퀀스의 null이 아닌 값의 합계를 반환합니다.|숫자 값 시퀀스의 합계를 계산합니다.|  
+|`Max`|null을 반환합니다.|null을 반환합니다.|시퀀스의 null이 아닌 값의 최대값을 반환합니다.|시퀀스의 최대값을 반환합니다.|  
+|`Min`|null을 반환합니다.|null을 반환합니다.|시퀀스의 null이 아닌 값의 최소값을 반환합니다.|시퀀스의 최소값을 반환합니다.|  
+|`Sum`|null을 반환합니다.|null을 반환합니다.|시퀀스의 null이 아닌 값의 합계를 반환합니다.|숫자 값 시퀀스의 합을 계산합니다.|  
   
 ## <a name="type-methods"></a>형식 메서드  
  형식 변환 및 테스트를 처리 하는 두 가지 LINQ 메서드는 모두 Entity Framework 컨텍스트에서 지원 됩니다. 즉, 유일 하 게 지원 되는 형식은 적절 한 Entity Framework 형식에 매핑되는 형식입니다. 이러한 형식 목록은 [개념적 모델 형식 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)을 참조 하세요. 형식 메서드는 `Convert` 및 `OfType`입니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "70249142"
  `OfType`은 엔터티 형식에 대해 지원됩니다. `Convert`는 개념적 모델 기본 형식에 대해 지원됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
   
 ## <a name="paging-methods"></a>페이징 메서드  
- 페이징 작업은 시퀀스에서 단일 요소 또는 여러 요소를 반환 합니다. 지원 되는 페이징 메서드 `First`는 `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, 및 `Take`입니다.  
+ 페이징 작업은 시퀀스에서 단일 요소 또는 여러 요소를 반환 합니다. 지원 되는 페이징 메서드는 `First` , `FirstOrDefault` , `Single` , `SingleOrDefault` , `Skip` 및 `Take` 입니다.  
   
  데이터 원본에 함수를 매핑할 수 없거나 데이터 소스에 대 한 집합의 암시적 순서가 부족 하기 때문에 많은 페이징 메서드가 지원 되지 않습니다. 기본값을 반환하는 메서드는 null 기본값을 갖는 개념적 모델 기본 형식과 참조 형식으로 제한됩니다. 빈 시퀀스에서 페이징 메서드가 실행되면 null이 반환됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [지원 및 미지원 LINQ 메서드 (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [표준 쿼리 연산자 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [표준 쿼리 연산자 개요](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

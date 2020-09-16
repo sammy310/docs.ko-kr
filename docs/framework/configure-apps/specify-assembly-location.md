@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141706"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555122"
 ---
 # <a name="specifying-an-assemblys-location"></a>어셈블리 위치 지정
 어셈블리 위치를 지정 하는 방법에는 두 가지가 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "85141706"
   
 - 요소를 사용 [\<probing>](./file-schema/runtime/probing-element.md) 합니다.  
   
- 또한 [.NET Framework 구성 도구 (mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) 를 사용 하 여 어셈블리 위치를 지정 하거나 어셈블리를 검색할 공용 언어 런타임에 대 한 위치를 지정할 수 있습니다.  
+ 또한 [.NET Framework 구성 도구 (mscorcfg.msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) 를 사용 하 여 어셈블리 위치를 지정 하거나 어셈블리를 검색할 공용 언어 런타임에 대 한 위치를 지정할 수 있습니다.  
   
 ## <a name="using-the-codebase-element"></a>요소 사용 \<codeBase>  
  **\<codeBase>** 요소는 어셈블리 버전을 리디렉션하는 컴퓨터 구성 또는 게시자 정책 파일 에서만 사용할 수 있습니다. 런타임에서 사용할 어셈블리 버전을 결정 하면 버전을 결정 하는 파일의 코드 베이스 설정을 적용 합니다. 코드 베이스가 표시 되지 않는 경우 런타임은 일반적인 방법으로 어셈블리를 검색 합니다. 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)을 참조 하세요.  

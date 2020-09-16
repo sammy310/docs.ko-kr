@@ -2,12 +2,12 @@
 title: 메시지 분포 제한
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586314"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555018"
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
 
@@ -19,7 +19,7 @@ ms.locfileid: "84586314"
 
 메시지 클래스 구현 시 적용 가능한 속성이나 필드에 `PeerHopCount`를 특성으로 추가하여 메시지에 홉 수를 추가할 수 있습니다. 메시지를 메시에 보내기 전에 이 홉 수를 특정 값으로 설정할 수 있습니다. 이런 방식으로 홉 수를 사용하여 필요한 경우 전체 메시에서 메시지 배포를 제한하면 불필요한 메시지 복제를 방지할 수 있습니다. 이 방법은 메시에 중복 데이터가 아주 많은 경우 또는 바로 인접한 환경이나 홉 수가 많이 차이 나지 않는 환경으로 메시지를 보내는 경우 유용합니다.
 
-- 코드 조각 및 관련 정보는 피어 채널 블로그에서 [PeerHopCount 특성: 메시지 배포 제어](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) 를 참조 하세요.
+- 코드 조각 및 관련 정보는 피어 채널 블로그에서 [PeerHopCount 특성: 메시지 배포 제어](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) 를 참조 하세요.
 
 ## <a name="message-propagation-filter"></a>메시지 전파 필터
 
@@ -27,7 +27,7 @@ ms.locfileid: "84586314"
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter>는 단일 함수 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>가 있는 기본 추상 클래스입니다. 메서드 호출의 첫 번째 인수는 메시지의 전체 복사본을 전달합니다. 메시지를 변경해도 실제 메시지는 영향을 받지 않습니다. 메서드 호출의 마지막 인수는 메시지의 발생 위치(`PeerMessageOrigination.Local` 또는 `PeerMessageOrigination.Remote`)를 식별합니다. 이 메서드를 구체적으로 구현하면 메시지를 로컬 애플리케이션으로 전달하거나(<xref:System.ServiceModel.PeerMessagePropagation>), 원격 클라이언트로 전달하거나(`Local`), 두 위치 모두로 전달하거나(`Remote`), 두 위치 모두로 전달하지 않음(`LocalAndRemote`)을 나타내는 상수를 `None` 열거형에서 반환해야 합니다. 해당 `PeerNode` 개체에 액세스하고 `PeerNode.MessagePropagationFilter` 속성에 파생된 전파 필터 클래스의 인스턴스를 지정하여 이 필터를 적용할 수 있습니다. 피어 채널을 열기 전에 전파 필터가 연결되어 있는지 확인하십시오.
 
-- 코드 조각 및 관련 정보는 피어 채널 블로그의 [피어 채널 및 MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) 게시물을 참조 하세요.
+- 코드 조각 및 관련 정보는 피어 채널 블로그의 [피어 채널 및 MessagePropagationFilter](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) 게시물을 참조 하세요.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>메시의 개별 노드에 연결
 
@@ -69,6 +69,6 @@ ms.locfileid: "84586314"
 
   - *낮음*: 직접 연결 하는 것은 필요 하지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [피어 채널 애플리케이션 빌드](building-a-peer-channel-application.md)

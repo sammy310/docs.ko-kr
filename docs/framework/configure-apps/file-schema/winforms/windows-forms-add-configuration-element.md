@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: 26b806f84c3e1bc44e0437a8f8806316b14897b8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73109657"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557634"
 ---
 # <a name="windows-forms-add-configuration-element"></a>구성 요소 Windows Forms 추가
 
@@ -35,7 +35,7 @@ ms.locfileid: "73109657"
 | `key`     | 필수 특성입니다. 특정 Windows Forms 사용자 지정 가능 기능에 해당 하는 미리 정의 된 키 이름입니다. |
 | `value`   | 필수 특성입니다. `key`에 할당할 값입니다. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`특성 이름 및 관련 값
+### <a name="key-attribute-names-and-associated-values"></a>`key` 특성 이름 및 관련 값
 
 | `key` 이름 | 값 | Description |
 | ---------- | ------ | ----------- |
@@ -65,7 +65,7 @@ ms.locfileid: "73109657"
 
 `<System.Windows.Forms.ApplicationConfigurationSection>`요소를 사용 하면 `<add>` 각각 특정 구성 설정을 정의 하는 하나 이상의 자식 요소를 추가할 수 있습니다.
 
-Windows Forms 높은 DPI 지원에 대 한 개요는 [Windows Forms에서 높은 Dpi 지원](../../../winforms/high-dpi-support-in-windows-forms.md)을 참조 하세요.
+Windows Forms 높은 DPI 지원에 대 한 개요는 [Windows Forms에서 높은 Dpi 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)을 참조 하세요.
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
@@ -97,7 +97,7 @@ Windows 10 크리에이터 Edition 이상에서 실행 되는 Windows 버전에�
 
 일반적으로 프로그래밍 방식으로 처리 하도록 선택 했기 때문에 특정 기능을 옵트아웃 (opt out) 할 수 있습니다.
 
-Windows Forms 응용 프로그램에서 높은 DPI 지원을 활용 하는 방법에 대 한 자세한 내용은 [Windows Forms의 높은 Dpi 지원](../../../winforms/high-dpi-support-in-windows-forms.md)을 참조 하세요.
+Windows Forms 응용 프로그램에서 높은 DPI 지원을 활용 하는 방법에 대 한 자세한 내용은 [Windows Forms의 높은 Dpi 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)을 참조 하세요.
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
@@ -107,7 +107,7 @@ Windows Forms 응용 프로그램에서 높은 DPI 지원을 활용 하는 방�
 
 단일 또는 다중 패스 배율은 사용자 인터페이스의 인식 되는 응답성과 크기가 조정 될 때 사용자 인터페이스 요소의 시각적 모양에 영향을 미칩니다. .NET Framework 4.7부터 Windows Forms는 단일 패스 크기 조정을 사용 합니다. 이전 버전의 .NET Framework에서는 여러 패스를 통해 크기 조정을 수행 했습니다 .이로 인해 일부 컨트롤의 크기가 필요 이상으로 조정 되었습니다. 앱이 이전 동작에 종속 되는 경우에만 단일 패스 크기 조정을 사용 하지 않도록 설정 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows Forms 구성 섹션](index.md)
-- [Windows Forms의 높은 DPI 지원](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Windows Forms의 높은 DPI 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

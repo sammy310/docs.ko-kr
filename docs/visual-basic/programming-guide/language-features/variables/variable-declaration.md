@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410298"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557478"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 변수를 선언 하 여 해당 이름 및 특성을 지정 합니다. 변수에 대 한 선언문은 [Dim 문](../../../language-reference/statements/dim-statement.md)입니다. 해당 위치 및 내용에 따라 변수의 특징이 결정 됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "84410298"
 ## <a name="declaring-data-type"></a>데이터 형식 선언  
  선언문의 [As](../../../language-reference/statements/as-clause.md) 절을 사용 하 여 선언 하는 변수의 데이터 형식 또는 개체 유형을 정의할 수 있습니다. 변수에 대해 다음 형식 중 하나를 지정할 수 있습니다.  
   
-- 기본 데이터 형식 (예: `Boolean` , `Long` 또는)`Decimal`  
+- 기본 데이터 형식 (예: `Boolean` , `Long` 또는) `Decimal`  
   
 - 복합 데이터 형식 (예: 배열 또는 구조체)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "84410298"
   
 - 또는와 같은 .NET Framework 클래스 <xref:System.Windows.Forms.Label><xref:System.Windows.Forms.TextBox>  
   
-- 인터페이스 형식 (예: <xref:System.IComparable> 또는)<xref:System.IDisposable>  
+- 인터페이스 형식 (예: <xref:System.IComparable> 또는) <xref:System.IDisposable>  
   
  데이터 형식을 반복할 필요 없이 하나의 문에서 여러 변수를 선언할 수 있습니다. 다음 문에서, 및 변수는 `i` `j` `k` 형식으로 선언 되 고 및는로 선언 됩니다 `Integer` `l` `m` `Long` `x` `y` `Single` .  
   
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- 데이터 형식에 대 한 자세한 내용은 [데이터 형식](../data-types/index.md)을 참조 하세요. 개체에 대 한 자세한 내용은 [개체 및 클래스](../objects-and-classes/index.md) 및 [구성 요소를 사용한 프로그래밍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))을 참조 하세요.  
+ 데이터 형식에 대 한 자세한 내용은 [데이터 형식](../data-types/index.md)을 참조 하세요. 개체에 대 한 자세한 내용은 [개체 및 클래스](../objects-and-classes/index.md) 및 [구성 요소를 사용한 프로그래밍](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))을 참조 하세요.  
   
 ## <a name="local-type-inference"></a>지역 형식 유추  
  *형식 유추* 는 절 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 데 사용 됩니다 `As` . 컴파일러는 초기화 식의 형식에서 변수 형식을 유추 합니다. 이렇게 하면 명시적으로 형식을 명시 하지 않고도 변수를 선언할 수 있습니다. 다음 예제에서 `num1` 및 `num2` 는 모두 정수로 강력 하 게 형식화 됩니다.  
@@ -77,7 +77,7 @@ Dim l, m As Long, x, y As Single
   
  변수의 *액세스 수준은* 액세스 권한이 있는 코드의 범위입니다. 이는 문에 사용 하는 액세스 한정자 (예: [공용](../../../language-reference/modifiers/public.md) 또는 [개인](../../../language-reference/modifiers/private.md))에 의해 결정 됩니다 `Dim` . 자세한 내용은 [Visual Basic의 액세스 수준](../declared-elements/access-levels.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 새 변수 만들기](how-to-create-a-new-variable.md)
 - [방법: 변수 값 저장 및 검색](how-to-move-data-into-and-out-of-a-variable.md)

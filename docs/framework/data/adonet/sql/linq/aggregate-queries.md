@@ -2,12 +2,12 @@
 title: 집계 쿼리
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2085808d631d1d9f97573c557e9e66e07113df52
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634744"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554223"
 ---
 # <a name="aggregate-queries"></a>집계 쿼리
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Average`, `Count`, `Max`, `Min` 및 `Sum` 집계 연산자가 지원됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 집계 연산자의 다음과 같은 특징에 유의하세요.  
@@ -18,7 +18,7 @@ ms.locfileid: "75634744"
   
 - 집계 쿼리는 일반적으로 컬렉션 대신 숫자를 반환합니다.  
   
-     자세한 내용은 [집계 작업](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))을 참조 하세요.  
+     자세한 내용은 [집계 작업](/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))을 참조 하세요.  
   
 - 익명 형식에 대해서 집계를 호출할 수 없습니다.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "75634744"
  [숫자 시퀀스에서 값의 합계 컴퓨팅](compute-the-sum-of-values-in-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [쿼리 예제](query-examples.md)  
  Visual Basic 및 C#의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리에 대한 링크를 제공합니다.  
   
  [쿼리 개념](query-concepts.md)  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 LINQ 쿼리를 디자인 하는 개념을 설명 하는 항목에 대 한 링크를 제공 합니다.  
+ 에서 LINQ 쿼리를 디자인 하는 개념을 설명 하는 항목에 대 한 링크를 제공 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 합니다.  
   
  [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  LINQ에서 쿼리를 작동 하는 방법을 설명 합니다.

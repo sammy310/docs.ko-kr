@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247793"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554015"
 ---
 # <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -53,7 +53,7 @@ ms.locfileid: "85247793"
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델을 데이터베이스에 연결한 **후 다음을 클릭 합니다**.
 
-    - 데이터베이스 연결이 이미 구성 되어 있지 않은 경우 **새 연결** 을 클릭 하 고 새 연결을 만듭니다. 자세한 내용은 [How to: Create Connections to SQL Server Databases](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))을 참조하십시오. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
+    - 데이터베이스 연결이 이미 구성 되어 있지 않은 경우 **새 연결** 을 클릭 하 고 새 연결을 만듭니다. 자세한 내용은 [How to: Create Connections to SQL Server Databases](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))을 참조하십시오. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
 
          \- 또는 -
 
@@ -61,7 +61,7 @@ ms.locfileid: "85247793"
 
 6. 마법사의 마지막 페이지에서 데이터베이스의 모든 테이블에 대한 확인란을 선택하고 뷰 및 저장 프로시저에 대한 확인란의 선택을 취소합니다.
 
-7. **마침** 을 클릭하여 마법사를 닫습니다.
+7. **마침** 을 클릭 하 여 마법사를 닫습니다.
 
 ## <a name="create-the-wcf-data-service"></a>WCF 데이터 서비스 만들기
 
@@ -102,6 +102,6 @@ Northwind 샘플 데이터베이스를 기반으로 하는 OData 피드를 노�
 > [!div class="nextstepaction"]
 > [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
