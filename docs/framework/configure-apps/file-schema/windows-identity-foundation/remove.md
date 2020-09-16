@@ -3,12 +3,12 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: cfdfbb3aabde253ad17b221801b20c1ac9a45c2d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7581f581c4b97a07eb4bdeb49eb5ae5ce72c2aa7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251924"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535718"
 ---
 # \<remove>
 토큰 처리기 컬렉션에서 지정 된 보안 토큰 처리기를 제거 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "70251924"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|type|제거할 토큰 처리기의 CLR 형식 이름입니다. 특성을 지정 하는 방법에 대 한 자세한 내용은 `type` [사용자 지정 형식 참조](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)를 참조 하세요. 필수 요소.|  
+|type|제거할 토큰 처리기의 CLR 형식 이름입니다. 특성을 지정 하는 방법에 대 한 자세한 내용은 `type` [사용자 지정 형식 참조](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)를 참조 하세요. 필수 요소.|  
   
 ### <a name="child-elements"></a>자식 요소  
  None  
