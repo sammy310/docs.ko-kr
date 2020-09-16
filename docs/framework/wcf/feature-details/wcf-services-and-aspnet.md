@@ -3,12 +3,12 @@ title: WCF 서비스 및 ASP.NET
 description: ASP.NET와 함께 WCF 서비스를 함께 호스팅하고 ASP.NET 호환성 모드에서 호스트 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 765a509f94a0a934cdbbf0212cfc1d4053d29f9c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246417"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553319"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET
 
@@ -66,7 +66,7 @@ Wcf 호스팅 인프라가 WCF 메시지를 가로채 고 HTTP 파이프라인�
 
 - 구성 가능한 URL 권한 부여: ASP. WCF 서비스를 ASP.NET Compatibility 모드로 실행 하는 경우 .NET의 URL 권한 부여 규칙이 WCF 요청에 적용 됩니다.
 
-- <xref:System.Web.HttpModuleCollection>확장성: ASP.NET 호환 모드에서 실행 되는 WCF 서비스는 ASP.NET HTTP 요청 수명 주기에 완전히 참여 하므로 HTTP 파이프라인에 구성 된 모든 HTTP 모듈은 서비스 호출 전후에 WCF 요청에서 작동할 수 있습니다.
+- <xref:System.Web.HttpModuleCollection> 확장성: ASP.NET 호환 모드에서 실행 되는 WCF 서비스는 ASP.NET HTTP 요청 수명 주기에 완전히 참여 하므로 HTTP 파이프라인에 구성 된 모든 HTTP 모듈은 서비스 호출 전후에 WCF 요청에서 작동할 수 있습니다.
 
 - ASP.NET 가장: WCF 서비스는 응용 프로그램에 대 한 ASP.NET 가장이 사용 하도록 설정 된 경우 IIS 프로세스 id와 다를 수 있는 ASP.NET 가장 스레드의 현재 id를 사용 하 여 실행 됩니다. 특정 서비스 작업에 ASP.NET 가장 및 WCF 가장을 모두 사용 하는 경우 서비스 구현은 궁극적으로 WCF에서 가져온 id를 사용 하 여 실행 됩니다.
 
@@ -90,7 +90,7 @@ public class CalculatorService : ICalculatorSession
 
 다음 표에서는 애플리케이션 수준의 호환 모드 설정이 개별 서비스에 명시된 지원 수준과 상호 작용하는 방법을 보여 줍니다.
 
-|애플리케이션 수준의 호환 모드 설정|[AspNetCompatibilityRequirementsMode]<br /><br /> 설정|확인된 결과|
+|애플리케이션 수준의 호환 모드 설정|[AspNetCompatibilityRequirementsMode]<br /><br /> Setting|확인된 결과|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
 |aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|서비스가 활성화됩니다.|
 |aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|서비스가 활성화됩니다.|
@@ -104,7 +104,7 @@ public class CalculatorService : ICalculatorSession
 
 WCF 서비스에 ASP.NET 호환 모드를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> 및 [ASP.NET compatibility](../samples/aspnet-compatibility.md) 샘플을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

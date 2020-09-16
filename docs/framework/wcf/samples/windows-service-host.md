@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 9c041f6e9505d2ec5865dd512359b497a411cb40
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d4e034e3e18433714fcbcc3f061cb05bd8f2f441
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602286"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552885"
 ---
 # <a name="windows-service-host"></a>Windows Service 호스트
 이 샘플에서는 관리 되는 Windows 서비스에서 호스팅되는 WCF (Windows Communication Foundation) 서비스를 보여 줍니다. Windows 서비스는 **제어판** 의 서비스 애플릿을 사용 하 여 제어 되며 시스템을 다시 부팅 한 후 자동으로 시작 되도록 구성할 수 있습니다. 이 샘플은 클라이언트 프로그램과 Windows 서비스 프로그램으로 구성됩니다. 서비스는 .exe 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. WAS(Windows Process Activation Services) 또는 IIS(인터넷 정보 서비스) 등의 다른 호스팅 환경에서는 직접 호스팅 코드를 작성할 필요가 없습니다.
@@ -59,10 +59,10 @@ ms.locfileid: "84602286"
   
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.  
   
-3. 솔루션이 빌드된 후에는 관리자 권한 Visual Studio 2012 명령 프롬프트에서 Setup.exe를 실행 하 여 Installutil.exe 도구를 사용 하 여 Windows 서비스를 설치 합니다. 서비스가 서비스에 표시됩니다.  
+3. 솔루션을 빌드한 후에는 Installutil.exe 도구를 사용 하 여 Windows 서비스를 설치 하기 위해 관리자 권한 Visual Studio 2012 명령 프롬프트에서 Setup.bat를 실행 합니다. 서비스가 서비스에 표시됩니다.  
   
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 호스팅 및 지속성 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

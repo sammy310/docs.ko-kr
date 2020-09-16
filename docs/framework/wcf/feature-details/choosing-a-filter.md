@@ -2,12 +2,12 @@
 title: 필터 선택
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587497"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559391"
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.
@@ -142,9 +142,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임스페이스가 포함되어 있기 때문에 XPath 필터를 사용하면 네임스페이스 테이블을 통해 네임스페이스에 대한 고유한 접두사를 정의할 수 있습니다. 네임 스페이스 테이블에 대 한 자세한 내용은 [메시지 필터](message-filters.md)를 참조 하세요.
 
-XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 [Xpath 구문](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))을 참조 하세요.
+XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 [Xpath 구문](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메시지 필터](message-filters.md)
 - [방법: 필터 사용](how-to-use-filters.md)

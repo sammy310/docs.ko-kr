@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558753"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552286"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 요소
 
@@ -70,7 +70,7 @@ ms.locfileid: "88558753"
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|이식 가능 Pdb를 사용할 때 스택 추적에서 가져올 것인지 여부를 제어 합니다. 소스 파일 및 줄 정보를 포함할 수 있습니다. `false` 소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true` 입니다.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>개체에 PNG 프레임이 있는 경우 메서드가 예외를 throw 할지 여부를 제어 합니다 <xref:System.Drawing.Icon> . 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)을 참조하십시오.|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>메서드가 컬렉션에 추가 될 때 개체가 제대로 삭제 되는지 여부를 결정 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 합니다. `true` 레거시 동작을 유지 관리 하려면 `false` 모든 전용 글꼴 개체를 삭제 하려면입니다. |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|의 성능이 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 최적화 되어 있는지 여부를 제어 합니다. 자세한 내용은 [PrintPreviewDialog 컨트롤 개요](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)를 참조 하세요.|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|의 성능이 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 최적화 되어 있는지 여부를 제어 합니다. 자세한 내용은 [PrintPreviewDialog 컨트롤 개요](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms)를 참조 하세요.|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|일본어 달력 연대에 대 한 연도 범위 검사가 적용 되는지 여부를 제어 합니다. `true` 연도 범위 검사를 적용 하 고 `false` 사용 하지 않도록 설정 하려면 (기본 동작) 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|구문 분석 작업에서 "1"만 일본 달력 연대의 첫 번째 연도로 인식 되는지 여부를 제어 합니다. `true` "1"만 인식 하려면 `false` "1" 또는 Gannen (기본 동작)를 인식할 수 있습니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|서식 지정 작업에서 일본 달력 연대의 첫 해를 "1"로 나타낼지 아니면 Gannen로 표시할지를 제어 합니다. `true` 연대의 첫 해를 "1"로 서식 지정 하려면 `false` 형식 지정 하려면 Gannen (기본 동작)를 지정 합니다. 자세한 내용은 [달력 작업](../../../../standard/datetime/working-with-calendars.md)을 참조 하세요.|.NET Framework 4.6|
@@ -176,7 +176,7 @@ ms.locfileid: "88558753"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 4.6 이상에서 새로운 동작 완화](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>

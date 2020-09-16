@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937736"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558435"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 .NET Framework 4.5의 WF (Windows Workflow Foundation)에는 여러 가지 새로운 기능이 도입 되었습니다. 여기에는 Workflow designer 환경의 몇 가지 향상 된 기능이 포함 되어 있습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -19,7 +19,7 @@ ms.locfileid: "75937736"
  기본 제공 활동 라이브러리에는 새로운 활동과 기존 활동의 새로운 기능이 들어 있습니다. 이러한 모든 새 활동은 재호스트된 디자이너에서 지원됩니다. 이러한 새 활동에 대 한 자세한 내용은 [.net 4.5의 새로운 기능 Windows Workflow Foundation](whats-new-in-wf-in-dotnet.md)의 [작업](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) 섹션을 참조 하세요.
 
 ## <a name="c-expressions"></a>C# 식
- .NET Framework 4.5 이전에는 워크플로의 모든 식을 Visual Basic 으로만 작성할 수 있었습니다. .NET Framework 4.5에서 Visual Basic 식은 Visual Basic를 사용 하 여 만든 프로젝트에만 사용 됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로를 제작할 때 문법 강조 표시 C# 및 intellisense와 같은 기능을 제공 하는 기능을 갖춘 식 편집기가 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
+ .NET Framework 4.5 이전에는 워크플로의 모든 식을 Visual Basic 으로만 작성할 수 있었습니다. .NET Framework 4.5에서 Visual Basic 식은 Visual Basic를 사용 하 여 만든 프로젝트에만 사용 됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로를 제작할 때 문법 강조 표시 및 intellisense와 같은 기능을 제공 하는 완전 한 기능의 c # 식 편집기가 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
 
 > [!WARNING]
 > 재호스트된 디자이너에서는 C# 식이 지원되지 않습니다.
@@ -40,7 +40,7 @@ ms.locfileid: "75937736"
  ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>시퀀스로 자동 감싸기
- 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. .NET Framework 4.5부터 디자이너 화면에 두 번째 활동을 추가 하는 경우 두 활동을 래핑하는 `Sequence` 활동이 자동으로 생성 됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
+ 워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. .NET Framework 4.5부터 디자이너 화면에 두 번째 활동을 추가할 때 `Sequence` 두 활동을 래핑하는 활동이 자동으로 생성 됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "75937736"
  ![Visual Studio에서 순차 워크플로를 사용 하는 개요 보기의 스크린샷](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>셸 표시줄 및 헤더 항목의 표시 방식 제어 향상
- 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. .NET Framework 4에서이 사용자 지정은 디자이너 하단의 셸 표시줄 에서만 지원 됩니다. .NET Framework 4.5에서는 적절 한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값을 사용 하 여 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>을 설정 하 여 디자이너 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
+ 재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. .NET Framework 4에서이 사용자 지정은 디자이너 하단의 셸 표시줄 에서만 지원 됩니다. .NET Framework 4.5에서를 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 적절 한 값으로 설정 하 여 디자이너 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> .
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>순서도 및 상태 시스템 워크플로의 자동 연결 및 자동 삽입
  .NET Framework 4에서는 순서도 워크플로의 노드 간 연결을 수동으로 추가 해야 했습니다. .NET Framework 4.5에서 순서도 및 상태 시스템 노드에는 활동을 도구 상자에서 디자이너 화면으로 끌 때 표시 되는 자동 연결 지점이 있습니다. 이러한 지점 중 하나에 활동을 놓으면 필요한 연결과 함께 활동이 자동으로 추가됩니다.
@@ -95,7 +95,7 @@ ms.locfileid: "75937736"
  디자이너 주석은 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>디자이너에서 ActivityDelegate 개체 정의 및 사용
- .NET Framework 4의 활동은 <xref:System.Activities.ActivityDelegate> 개체를 사용 하 여 워크플로의 다른 부분이 워크플로의 실행과 상호 작용할 수 있는 실행 지점을 노출 하지만, 이러한 실행 지점을 사용 하려면 일반적으로 상당한 양의 코드가 필요 합니다. 이 릴리스에서는 개발자가 워크플로 디자이너를 사용하여 활동 대리자를 정의하고 사용할 수 있습니다. 자세한 내용은 [방법: 워크플로 디자이너에서 작업 대리자 정의 및 사용](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)을 참조 하세요.
+ .NET Framework 4의 활동을 사용 <xref:System.Activities.ActivityDelegate> 하 여 워크플로의 다른 부분이 워크플로의 실행과 상호 작용할 수 있는 실행 지점을 노출 하지만 이러한 실행 지점을 사용 하려면 일반적으로 상당한 양의 코드가 필요 합니다. 이 릴리스에서는 개발자가 워크플로 디자이너를 사용하여 활동 대리자를 정의하고 사용할 수 있습니다. 자세한 내용은 [방법: 워크플로 디자이너에서 작업 대리자 정의 및 사용](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)을 참조 하세요.
 
  활동 대리자는 재호스트된 디자이너에서 지원됩니다.
 
@@ -122,7 +122,7 @@ ms.locfileid: "75937736"
  순서도 및 순차 워크플로 개발 모델 외에도 이 릴리스에는 상태 시스템 워크플로 및 계약 중심 워크플로 서비스가 포함되어 있습니다.  
   
 ### <a name="state-machine-workflows"></a>상태 시스템 워크플로  
- 상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)에서 .NET Framework 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.  
+ 상태 시스템 워크플로는 [Microsoft .NET Framework 4 플랫폼 업데이트 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)에서 .NET Framework 4.0.1의 일부로 도입 되었습니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. 이러한 클래스와 활동은 .NET Framework 4.5에 대해 업데이트 되었습니다. 업데이트에는 다음이 포함됩니다.  
   
 1. 상태에 중단점을 설정할 수 있는 기능  
   

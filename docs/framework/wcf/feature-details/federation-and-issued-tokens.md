@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: aeffc1e2a7b61dfd9406b9f06678064533ea61ec
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595507"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559254"
 ---
 # <a name="federation-and-issued-tokens"></a>페더레이션 및 발급된 토큰
 WCF (Windows Communication Foundation)를 사용 하면 WS-FEDERATION 및 WS-TRUST 사양을 구현 하는 서비스와 안전 하 게 통신 하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  
@@ -65,4 +65,4 @@ WCF (Windows Communication Foundation)를 사용 하면 WS-FEDERATION 및 WS-TRU
 
 - [권한 부여](authorization-in-wcf.md)
 - [사용자 지정 토큰](../extending/custom-tokens.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

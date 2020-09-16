@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245351"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558903"
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 엔드투엔드 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "85245351"
   
  원격 데이터베이스와 같은 연결을 통해 추적을 보내도록 사용자 지정 추적 수신기를 구성할 수 있습니다. 애플리케이션 배포자인 경우 원격 컴퓨터의 추적 로그에 적절한 액세스 제어를 적용해야 합니다.  
   
- 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. 자세한 내용은 [방법: 추적 수신기 만들기 및 초기화](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) 및 [사용자 지정 TraceListener 만들기](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)를 참조 하세요.  
+ 추적 수신기를 프로그래밍 방식으로 구성할 수도 있습니다. 자세한 내용은 [방법: 추적 수신기 만들기 및 초기화](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) 및 [사용자 지정 TraceListener 만들기](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)를 참조 하세요.  
   
 > [!CAUTION]
 > `System.Diagnostics.XmlWriterTraceListener`는 스레드로부터 안전하지 않으므로 추적을 출력할 때 추적 소스가 리소스를 단독으로 잠글 수도 있습니다. 여러 스레드에서 이 수신기를 사용하도록 구성된 추적 소스로 추적을 출력하면 리소스 경합이 발생할 수 있으며, 이로 인해 성능이 크게 저하될 수 있습니다. 이 문제를 해결하려면 스레드로부터 안전한 사용자 지정 수신기를 구현해야 합니다.  
@@ -153,12 +153,12 @@ ms.locfileid: "85245351"
   
 |추적 수준|추적 이벤트의 특성|추적 이벤트의 내용|추적 이벤트|사용자 대상|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|끄기|해당 없음|해당 없음|내보낸 추적이 없습니다.|해당 없음|  
-|위험|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.||다음을 포함하여 처리되지 않은 예외를 기록합니다.<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (CLR은 모든 ThreadAbortExceptionHandler를 호출 합니다.)<br />-System.stackoverflowexception (catch 할 수 없음)<br />-System.configuration.configurationerrorsexception<br />-SEHException<br />-응용 프로그램 시작 오류<br />-Failfast 이벤트<br />-시스템 중지<br />-포이즌 메시지: 응용 프로그램 실패를 유발 하는 메시지 추적입니다.|관리자<br /><br /> 애플리케이션 개발자|  
-|오류|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.|예기치 않은 처리가 발생했습니다. 애플리케이션이 예상한 대로 작업을 수행하지 못했습니다. 그러나 애플리케이션이 여전히 실행 중입니다.|모든 예외가 기록됩니다.|관리자<br /><br /> 애플리케이션 개발자|  
-|경고|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.|문제가 발생했거나 발생할 수도 있지만 애플리케이션이 여전히 올바르게 작동합니다. 그러나 계속 올바르게 작동하지 않을 수도 있습니다.|-응용 프로그램이 제한 설정에서 허용 하는 것 보다 많은 요청을 받고 있습니다.<br />-수신 큐가 구성 된 최대 용량에 도달 했습니다.<br />-제한 시간이 초과 되었습니다.<br />-자격 증명이 거부 됩니다.|관리자<br /><br /> 애플리케이션 개발자|  
-|정보|"긍정" 이벤트: 성공적인 마일스 톤을 표시 하는 이벤트|애플리케이션이 올바르게 작동하는지 여부에 관계 없이 애플리케이션 실행의 중요한 중요 시점과 성공적인 중요 시점입니다.|일반적으로 시스템 상태 모니터링 및 진단, 성능 측정 또는 프로파일링에 유용한 메시지가 생성됩니다. 용량 계획 및 성능 관리에 이러한 정보를 사용할 수 있습니다.<br /><br /> -채널이 생성 됩니다.<br />-끝점 수신기가 생성 됩니다.<br />-메시지가 전송 되 고 전송 됩니다.<br />-보안 토큰을 검색 합니다.<br />-구성 설정을 읽었습니다.|관리자<br /><br /> 애플리케이션 개발자<br /><br /> 제품 개발자|  
-|자세히|"긍정" 이벤트: 성공적인 마일스 톤을 표시 하는 이벤트입니다.|사용자 코드 및 서비스에 대 한 하위 수준 이벤트를 내보냅니다.|일반적으로 디버깅 또는 애플리케이션 최적화에 이 수준을 사용할 수 있습니다.<br /><br /> -메시지 헤더를 이해 했습니다.|관리자<br /><br /> 애플리케이션 개발자<br /><br /> 제품 개발자|  
+|끄기|N/A|N/A|내보낸 추적이 없습니다.|N/A|  
+|중요|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.||다음을 포함하여 처리되지 않은 예외를 기록합니다.<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (CLR은 모든 ThreadAbortExceptionHandler를 호출 합니다.)<br />-System.stackoverflowexception (catch 할 수 없음)<br />-System.configuration.configurationerrorsexception<br />-SEHException<br />-응용 프로그램 시작 오류<br />-Failfast 이벤트<br />-시스템 중지<br />-포이즌 메시지: 응용 프로그램 실패를 유발 하는 메시지 추적입니다.|Administrators<br /><br /> 애플리케이션 개발자|  
+|Error|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.|예기치 않은 처리가 발생했습니다. 애플리케이션이 예상한 대로 작업을 수행하지 못했습니다. 그러나 애플리케이션이 여전히 실행 중입니다.|모든 예외가 기록됩니다.|Administrators<br /><br /> 애플리케이션 개발자|  
+|경고|"음수" 이벤트: 예기치 않은 처리 또는 오류 상태를 나타내는 이벤트입니다.|문제가 발생했거나 발생할 수도 있지만 애플리케이션이 여전히 올바르게 작동합니다. 그러나 계속 올바르게 작동하지 않을 수도 있습니다.|-응용 프로그램이 제한 설정에서 허용 하는 것 보다 많은 요청을 받고 있습니다.<br />-수신 큐가 구성 된 최대 용량에 도달 했습니다.<br />-제한 시간이 초과 되었습니다.<br />-자격 증명이 거부 됩니다.|Administrators<br /><br /> 애플리케이션 개발자|  
+|정보|"긍정" 이벤트: 성공적인 마일스 톤을 표시 하는 이벤트|애플리케이션이 올바르게 작동하는지 여부에 관계 없이 애플리케이션 실행의 중요한 중요 시점과 성공적인 중요 시점입니다.|일반적으로 시스템 상태 모니터링 및 진단, 성능 측정 또는 프로파일링에 유용한 메시지가 생성됩니다. 용량 계획 및 성능 관리에 이러한 정보를 사용할 수 있습니다.<br /><br /> -채널이 생성 됩니다.<br />-끝점 수신기가 생성 됩니다.<br />-메시지가 전송 되 고 전송 됩니다.<br />-보안 토큰을 검색 합니다.<br />-구성 설정을 읽었습니다.|Administrators<br /><br /> 애플리케이션 개발자<br /><br /> 제품 개발자|  
+|자세히|"긍정" 이벤트: 성공적인 마일스 톤을 표시 하는 이벤트입니다.|사용자 코드 및 서비스에 대 한 하위 수준 이벤트를 내보냅니다.|일반적으로 디버깅 또는 애플리케이션 최적화에 이 수준을 사용할 수 있습니다.<br /><br /> -메시지 헤더를 이해 했습니다.|Administrators<br /><br /> 애플리케이션 개발자<br /><br /> 제품 개발자|  
 |ActivityTracing||처리 동작과 구성 요소 간의 흐름 이벤트입니다.|이 수준에서 관리자와 개발자가 같은 애플리케이션 도메인의 애플리케이션을 서로 연결할 수 있습니다.<br /><br /> -시작/중지와 같은 작업 경계를 추적 합니다.<br />-전송에 대 한 추적입니다.|모두|  
 |모두||애플리케이션이 올바르게 작동할 수 있습니다. 모든 이벤트를 내보냅니다.|앞의 이벤트 모두|모두|  
   
@@ -181,9 +181,9 @@ ms.locfileid: "85245351"
   
  `propagateActivity` 특성은 사용자 정의 추적 소스에 사용할 수 없습니다. 사용자 코드 동작 ID 전파를 위해 ServiceModel `ActivityTracing`은 설정하지 않고 ServiceModel `propagateActivity` 특성은 `true`로 설정해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [추적](index.md)
 - [관리 및 진단](../index.md)
 - [방법: 추적 수신기 만들기 및 초기화](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Creating a Custom TraceListener](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Creating a Custom TraceListener](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

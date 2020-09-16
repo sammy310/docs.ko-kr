@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: f1ff707c90e884dc66ab10563dc41ea7789f5cda
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 63c6e903fa811d5c61550d086b4f1ce84973f2bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202018"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553625"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>서비스 작업 호출(WCF Data Services)
 OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을 정의 합니다. WCF Data Services를 사용 하면 데이터 서비스에서 메서드로 이러한 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로, 이러한 서비스 작업도 URI를 사용하여 지정합니다. 서비스 작업은 엔터티 형식의 컬렉션, 단일 엔터티 형식 인스턴스, 그리고 정수, 문자열과 같은 기본 형식을 반환할 수 있습니다. 서비스 작업은 `null`(Visual Basic에서 `Nothing`)도 반환할 수 있습니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 HTTP GET 요청을 지 원하는 서비스 작업에 액세스할 수 있습니다. 이러한 종류의 서비스 작업은 <xref:System.ServiceModel.Web.WebGetAttribute>가 적용된 메서드로 정의할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.  
   
- 서비스 작업은 OData를 구현 하는 데이터 서비스에서 반환 하는 메타 데이터에 노출 됩니다. 메타데이터에서 서비스 작업은 `FunctionImport` 요소로 표현됩니다. 강력한 형식의를 생성할 때 <xref:System.Data.Services.Client.DataServiceContext> 서비스 참조 추가 및 datasvcutil.exe 도구는이 요소를 무시 합니다. 이 때문에 서비스 작업을 직접 호출하는 데 사용할 수 있는 컨텍스트에서 메서드를 찾을 수 없습니다. 그러나 다음 두 가지 방법 중 하나로 WCF Data Services 클라이언트를 사용 하 여 서비스 작업을 호출할 수 있습니다.  
+ 서비스 작업은 OData를 구현 하는 데이터 서비스에서 반환 하는 메타 데이터에 노출 됩니다. 메타데이터에서 서비스 작업은 `FunctionImport` 요소로 표현됩니다. 강력한 형식의를 생성할 때 <xref:System.Data.Services.Client.DataServiceContext> 서비스 참조 추가 및 DataSvcUtil.exe 도구는이 요소를 무시 합니다. 이 때문에 서비스 작업을 직접 호출하는 데 사용할 수 있는 컨텍스트에서 메서드를 찾을 수 없습니다. 그러나 다음 두 가지 방법 중 하나로 WCF Data Services 클라이언트를 사용 하 여 서비스 작업을 호출할 수 있습니다.  
   
 - 기타 매개 변수와 함께 서비스 작업의 URI를 제공하여 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>에 <xref:System.Data.Services.Client.DataServiceContext> 메서드를 호출합니다. 이 메서드는 모든 GET 서비스 작업을 호출하는 데 사용합니다.  
   
@@ -32,7 +32,7 @@ OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을
   
 - 엔터티 또는 기본 형식의 단일 결과 또는 두 개 이상의 입력 매개 변수가 필요한 단일 결과를 반환하는 GET 서비스 작업을 호출하기 위해 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>을 사용할 수 없습니다. 대신 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 메서드를 호출해야 합니다.  
   
-- <xref:System.Data.Services.Client.DataServiceContext>도구에서 생성 되 고 또는 메서드를 사용 하 여 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 서비스 작업을 호출 하는 강력한 형식의 부분 클래스에 확장 메서드를 만드는 것이 좋습니다. 이렇게 하면 컨텍스트에서 직접 서비스 작업을 호출할 수 있습니다. 자세한 내용은 블로그 게시물 [서비스 작업 및 WCF Data Services 클라이언트](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)를 참조 하세요.  
+- <xref:System.Data.Services.Client.DataServiceContext>도구에서 생성 되 고 또는 메서드를 사용 하 여 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 서비스 작업을 호출 하는 강력한 형식의 부분 클래스에 확장 메서드를 만드는 것이 좋습니다. 이렇게 하면 컨텍스트에서 직접 서비스 작업을 호출할 수 있습니다. 자세한 내용은 블로그 게시물 [서비스 작업 및 WCF Data Services 클라이언트](/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)를 참조 하세요.  
   
 - 를 사용 하 여 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 서비스 작업을 호출 하는 경우 클라이언트 라이브러리는 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 앰퍼샌드 (&)와 같은 예약 문자의 백분율 인코딩 및 문자열의 작은따옴표 이스케이프를 수행 하 여에 제공 된 문자를 자동으로 이스케이프 합니다. 그러나 *Execute* 메서드 중 하나를 호출 하 여 서비스 작업을 호출 하는 경우 사용자가 제공 하는 문자열 값의 이스케이프를 수행 해야 합니다. URI의 작은 따옴표는 작은 따옴표의 쌍으로 이스케이프됩니다.  
   
@@ -124,6 +124,6 @@ OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)

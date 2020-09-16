@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405120"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559339"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저로 시각화할 수도 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식입니다. 즉, 실행 흐름이 *이벤트*라는 외부 발생에 의해 결정 됩니다.  
@@ -74,7 +74,7 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들면 다음과 같습니다.  
+ 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들어:  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -91,7 +91,7 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
 ### <a name="to-handle-events-from-a-base-class"></a>기본 클래스의 이벤트를 처리하려면  
   
-- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들면 다음과 같습니다.  
+- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들어:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
@@ -105,5 +105,5 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
 |[방법: 메모리를 절약하는 사용자 지정 이벤트 선언](how-to-declare-custom-events-to-conserve-memory.md)|이벤트가 처리될 때만 메모리를 사용하는 사용자 지정 이벤트를 정의하는 방법을 보여 줍니다.|  
 |[Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](troubleshooting-inherited-event-handlers.md)|상속된 구성 요소의 이벤트 처리기에서 발생하는 일반적인 문제에 대해 설명합니다.|  
 |[이벤트](../../../../standard/events/index.md)|.NET Framework의 이벤트 모델 개요를 제공합니다.|  
-|[Windows Forms에서 이벤트 처리기 만들기](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
+|[Windows Forms에서 이벤트 처리기 만들기](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
 |[대리자](../delegates/index.md)|Visual Basic의 대리자에 대해 간략하게 설명합니다.|

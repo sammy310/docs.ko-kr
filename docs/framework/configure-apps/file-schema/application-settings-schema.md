@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242831"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552312"
 ---
 # <a name="application-settings-schema"></a>응용 프로그램 설정 스키마
 
 응용 프로그램 설정을 통해 Windows Forms 또는 ASP.NET 응용 프로그램에서 응용 프로그램 범위 및 사용자 범위 설정을 저장 하 고 검색할 수 있습니다. 이 컨텍스트에서 *설정은* 응용 프로그램 또는 현재 사용자와 관련 된 정보 이며, 데이터베이스 연결 문자열에서 사용자의 기본 설정 기본 창 크기에 이르기까지 모든 정보를 지정 합니다.
 
-기본적으로 Windows Forms 응용 프로그램의 응용 프로그램 설정은 <xref:System.Configuration.LocalFileSettingsProvider> 클래스를 사용 합니다 .이 클래스는 .net 구성 시스템을 사용 하 여 설정을 XML 구성 파일에 저장 합니다. 응용 프로그램 설정에 사용 되는 파일에 대 한 자세한 내용은 [응용 프로그램 설정 아키텍처](../../winforms/advanced/application-settings-architecture.md)를 참조 하세요.
+기본적으로 Windows Forms 응용 프로그램의 응용 프로그램 설정은 <xref:System.Configuration.LocalFileSettingsProvider> 클래스를 사용 합니다 .이 클래스는 .net 구성 시스템을 사용 하 여 설정을 XML 구성 파일에 저장 합니다. 응용 프로그램 설정에 사용 되는 파일에 대 한 자세한 내용은 [응용 프로그램 설정 아키텍처](/dotnet/desktop/winforms/advanced/application-settings-architecture)를 참조 하세요.
 
 응용 프로그램 설정은 사용 하는 구성 파일의 일부로 다음 요소를 정의 합니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "81242831"
 
 | attribute        | Description |
 | ---------------- | ----------- |
-| **name**         | 필수 요소. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름으로 저장 됩니다 `ProjectName.Properties.Settings` . |
+| **name**         | 필수 사항입니다. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름으로 저장 됩니다 `ProjectName.Properties.Settings` . |
 | **serializeAs** | 필수 요소. 값을 텍스트로 직렬화 하는 데 사용할 형식입니다. 유효한 값은 다음과 같습니다.<br><br>- `string`. 값은을 사용 하 여 문자열로 serialize 됩니다 <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. 값은 XML 직렬화를 사용 하 여 serialize 됩니다.<br>- `binary`. 이 값은 이진 serialization을 사용 하 여 텍스트 인코딩 이진으로 serialize 됩니다.<br />- `custom`. 설정 공급자는이 설정에 대 한 기본적인 지식을 갖고 있으며 직렬화 및 역직렬화 합니다. |
 
 ## <a name="value-element"></a>\<value> 요소
@@ -88,7 +88,7 @@ ms.locfileid: "81242831"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [애플리케이션 설정 개요](../../winforms/advanced/application-settings-overview.md)
-- [애플리케이션 설정 아키텍처](../../winforms/advanced/application-settings-architecture.md)
+- [애플리케이션 설정 개요](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [애플리케이션 설정 아키텍처](/dotnet/desktop/winforms/advanced/application-settings-architecture)

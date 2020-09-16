@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105360"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559293"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 애플리케이션이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 애플리케이션에서 액세스할 수 있는 보호되는 리소스와 애플리케이션에서 사용할 어셈블리 버전 그리고 원격 애플리케이션과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 애플리케이션을 다시 컴파일할 필요가 없습니다. 이 단원에서는 애플리케이션 구성과 유용성에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "85105360"
 ```  
   
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
- 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
+ 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
  구성 시스템은 먼저 컴퓨터 구성 파일에서 개발자가 정의할 수 있는 [ **\<appSettings>** 요소](./file-schema/appsettings/index.md) 및 다른 구성 섹션을 찾습니다. 그런 다음 애플리케이션 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 애플리케이션 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 애플리케이션이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "85105360"
   
 - ASP.NET에서 호스팅되는 응용 프로그램.  
   
-     ASP.NET 구성 파일에 대 한 자세한 내용은 [ASP.NET 구성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))을 참조 하세요.
+     ASP.NET 구성 파일에 대 한 자세한 내용은 [ASP.NET 구성 설정](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))을 참조 하세요.
   
 - Internet Explorer에서 호스팅되는 응용 프로그램.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85105360"
 - [구성 파일 스키마](./file-schema/index.md)
 - [어셈블리 위치 지정](specify-assembly-location.md)
 - [어셈블리 버전 리디렉션](redirect-assembly-versions.md)
-- [ASP.NET 웹 사이트 관리 도구](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [ASP.NET 웹 사이트 관리 도구](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [보안 정책 관리](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe(코드 액세스 보안 정책 도구)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET 어셈블리](../../standard/assembly/index.md)

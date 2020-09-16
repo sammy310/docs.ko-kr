@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: bfb3efb479668bcd70a3ce87b80253a73c18bb51
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 313cb46813d8c0cfa9f1f317a65d2e21298ecff9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "85840290"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552853"
 ---
 # <a name="xaml-services"></a>XAML 서비스
 
@@ -35,7 +35,7 @@ ms.locfileid: "85840290"
 
 - `Lookup` 또는 `Invoker` 기술을 사용하여 XAML 형식 시스템 및 형식 지원을 평가하는 방법에 적용
 
-언어로서 XAML의 소개 자료를 찾는 경우에는 [XAML 개요(WPF)](../fundamentals/xaml.md)를 사용해 볼 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation)와 XAML 태그 및 XAML 언어 기능을 둘 다 처음 사용하는 대상 그룹을 위해 XAML을 설명합니다. 또 다른 유용한 문서는 [XAML 언어 사양](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))의 소개 자료입니다.
+언어로서 XAML의 소개 자료를 찾는 경우에는 [XAML 개요(WPF)](../fundamentals/xaml.md)를 사용해 볼 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation)와 XAML 태그 및 XAML 언어 기능을 둘 다 처음 사용하는 대상 그룹을 위해 XAML을 설명합니다. 또 다른 유용한 문서는 [XAML 언어 사양](/previous-versions/msp-n-p/ff650760(v=pandp.10))의 소개 자료입니다.
 
 ## <a name="net-xaml-services-and-systemxaml-in-the-net-architecture"></a>.Net 아키텍처의 .NET XAML 서비스 및 `System.Xaml`
 

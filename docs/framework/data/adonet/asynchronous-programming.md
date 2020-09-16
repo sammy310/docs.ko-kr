@@ -3,12 +3,12 @@ title: 비동기 프로그래밍
 description: .NET Framework 4.5에 도입 된 향상 된 기능을 포함 하 여 SQL Server에 대 한 .NET Framework Data Provider의 비동기 프로그래밍에 대해 알아봅니다.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287105"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558474"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -39,9 +39,9 @@ ms.locfileid: "84287105"
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (1 부)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (1 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (2 부)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (2 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 사용자 인터페이스가 응답하지 않거나 서버가 확장되지 않을 경우 코드를 좀 더 비동기화해야 할 수 있습니다. 기존에는 비동기 코드를 작성하려면 비동기 작업이 완료될 때 발생하는 논리를 표현하기 위한 콜백 설치 과정(연속이라고도 함)이 필요했습니다. 이로 인해 비동기 코드의 구조는 동기 코드에 비해 복잡했습니다.
 
@@ -182,7 +182,7 @@ class A {
 
 다른 데이터베이스에 연결하고 쿼리를 실행할 수 있는 도구를 만들어야 하는 경우가 있습니다. 이러한 경우 기본 공급자 모델과 새로운 비동기 기능을 사용할 수 있습니다.
 
-서버에서 분산 트랜잭션을 사용하기 위해 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하도록 설정해야 합니다. MSDTC를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [웹 서버에서 msdtc를 사용 하도록 설정 하는 방법](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))을 참조 하세요.
+서버에서 분산 트랜잭션을 사용하기 위해 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하도록 설정해야 합니다. MSDTC를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [웹 서버에서 msdtc를 사용 하도록 설정 하는 방법](/previous-versions/commerce-server/dd327979(v=cs.90))을 참조 하세요.
 
 ```csharp
 using System;
@@ -827,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

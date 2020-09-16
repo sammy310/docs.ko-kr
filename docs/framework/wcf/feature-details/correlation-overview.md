@@ -2,12 +2,12 @@
 title: 상관 관계 개요
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 65f87195fde0c3dbda610804260f0ebfbf599073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586977"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552559"
 ---
 # <a name="correlation-overview"></a>상관 관계 개요
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 애플리케이션 상태와 연결하는 메커니즘입니다. 예를 들어 응답을 초기 요청과 연결하거나 특정 주문 ID를 주문 처리 워크플로의 지속된 상태와 연결할 수 있습니다. 이 항목에서는 상관 관계에 대해 간략하게 설명하고 이 단원의 다른 항목에서는 각 상관 관계 형식에 대해 자세히 설명합니다.  
@@ -19,14 +19,14 @@ ms.locfileid: "84586977"
   
 ## <a name="protocol-based-correlation"></a>프로토콜 기반 상관 관계
 
-프로토콜 기반 상관 관계는 전송 메커니즘을 사용하여 메시지를 서로 연결하거나 적절한 인스턴스와 연결합니다. 일부 시스템 제공 프로토콜 상관 관계에는 요청-회신 상관 관계와 컨텍스트 기반 상관 관계가 포함됩니다. 요청-회신 상관 관계는 <xref:System.ServiceModel.Activities.Send>와 쌍을 이루는 <xref:System.ServiceModel.Activities.ReceiveReply> 또는 <xref:System.ServiceModel.Activities.Receive>와 쌍을 이루는 <xref:System.ServiceModel.Activities.SendReply>처럼 한 쌍의 메시징 작업을 상호 연결하여 양방향 작업을 만드는 데 사용됩니다. Visual Studio 워크플로 디자이너는이 패턴을 신속 하 게 구현 하는 일련의 작업 템플릿도 제공 합니다. 컨텍스트 기반 상관 관계는 [.Net 컨텍스트 교환 프로토콜 사양](https://docs.microsoft.com/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)에 설명 된 컨텍스트 교환 메커니즘을 기반으로 합니다. 컨텍스트 상관 관계를 사용하려면 엔드포인트에서 <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> 또는 <xref:System.ServiceModel.NetTcpContextBinding>을 사용해야 합니다.  
+프로토콜 기반 상관 관계는 전송 메커니즘을 사용하여 메시지를 서로 연결하거나 적절한 인스턴스와 연결합니다. 일부 시스템 제공 프로토콜 상관 관계에는 요청-회신 상관 관계와 컨텍스트 기반 상관 관계가 포함됩니다. 요청-회신 상관 관계는 <xref:System.ServiceModel.Activities.Send>와 쌍을 이루는 <xref:System.ServiceModel.Activities.ReceiveReply> 또는 <xref:System.ServiceModel.Activities.Receive>와 쌍을 이루는 <xref:System.ServiceModel.Activities.SendReply>처럼 한 쌍의 메시징 작업을 상호 연결하여 양방향 작업을 만드는 데 사용됩니다. Visual Studio 워크플로 디자이너는이 패턴을 신속 하 게 구현 하는 일련의 작업 템플릿도 제공 합니다. 컨텍스트 기반 상관 관계는 [.Net 컨텍스트 교환 프로토콜 사양](/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)에 설명 된 컨텍스트 교환 메커니즘을 기반으로 합니다. 컨텍스트 상관 관계를 사용하려면 엔드포인트에서 <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> 또는 <xref:System.ServiceModel.NetTcpContextBinding>을 사용해야 합니다.  
   
-프로토콜 상관 관계에 대 한 자세한 내용은 [내구성이 있는 이중](durable-duplex-correlation.md) 및 [요청-회신](request-reply-correlation.md)을 참조 하세요. Visual Studio 워크플로 디자이너 활동 템플릿 사용에 대 한 자세한 내용은 [메시징 활동](messaging-activities.md)을 참조 하세요. 샘플 코드는 [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) 샘플을 참조 하세요.  
+프로토콜 상관 관계에 대 한 자세한 내용은 [내구성이 있는 이중](durable-duplex-correlation.md) 및 [요청-회신](request-reply-correlation.md)을 참조 하세요. Visual Studio 워크플로 디자이너 활동 템플릿 사용에 대 한 자세한 내용은 [메시징 활동](messaging-activities.md)을 참조 하세요. 샘플 코드는 [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100)) 샘플을 참조 하세요.  
   
 ## <a name="content-based-correlation"></a>내용 기반 상관 관계
 
 내용 기반 상관 관계는 메시지에 있는 일부 정보를 사용하여 해당 메시지를 특정 인스턴스와 연결합니다. 프로토콜 기반 상관 관계와 달리 내용 기반 상관 관계는 애플리케이션 작성자가 연결된 각 메시지에서 이러한 데이터를 찾을 수 있는 위치를 명시적으로 지정해야 합니다. 내용 기반 상관 관계를 사용하는 작업은 <xref:System.ServiceModel.MessageQuerySet>을 사용하여 이 메시지 데이터를 지정합니다. 내용 기반 상관 관계는 <xref:System.ServiceModel.BasicHttpContextBinding>과 같은 컨텍스트 바인딩 중 하나를 사용하지 않는 서비스와 통신할 때 유용합니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

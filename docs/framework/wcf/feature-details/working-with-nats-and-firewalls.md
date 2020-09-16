@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921071"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558981"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 엔드포인트 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 애플리케이션의 예입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "76921071"
   
 ## <a name="using-teredo"></a>Teredo 사용  
 
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. Windows XP 이상 운영 체제에서는 Teredo를 지원 합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. Windows XP SP2 및 Windows Server 2003에서는 사용자가 i p v 6과 Teredo를 모두 사용 하도록 설정 해야 합니다. 자세한 내용은 [Teredo 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))를 참조 하세요.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. Windows XP 이상 운영 체제에서는 Teredo를 지원 합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. Windows XP SP2 및 Windows Server 2003에서는 사용자가 i p v 6과 Teredo를 모두 사용 하도록 설정 해야 합니다. 자세한 내용은 [Teredo 개요](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))를 참조 하세요.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  

@@ -2,12 +2,12 @@
 title: 성능 카운터 사용
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596502"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553046"
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
 이 샘플에서는 WCF (Windows Communication Foundation) 성능 카운터에 액세스 하는 방법과 사용자 정의 성능 카운터를 만드는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "84596502"
 </configuration>  
 ```  
   
- [구성 편집기 도구 (SvcConfigEditor)](../configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여이 작업을 수행할 수도 있습니다.  
+ [구성 편집기 도구 (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)를 사용 하 여이 작업을 수행할 수도 있습니다.  
   
  성능 카운터를 사용 하도록 설정 하면 서비스에 대 한 전체 WCF 성능 카운터 집합이 활성화 됩니다. .NET Framework는 `ServiceModelService`, `ServiceModelEndpoint` 및 `ServiceModelOperation`의 세 가지 수준에서 성능 데이터를 자동으로 유지 관리합니다. 이러한 각 수준에는 "Calls", "Calls per Second" 및 "Security Calls Not Authorized"와 같은 성능 카운터가 있습니다.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "84596502"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

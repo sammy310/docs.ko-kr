@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1a8c312248b0c15bb2e366a3d9925014556b6dd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553163"
 ---
 # <a name="custom-token"></a>Custom Token
 
@@ -28,7 +28,7 @@ ms.locfileid: "70928659"
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>사용자 지정 보안 토큰을 사용한 클라이언트 인증
 
- 서비스는 `BindingHelper` 및 `EchoServiceHost` 클래스를 사용하여 프로그래밍 방식으로 만들어진 단일 엔드포인트를 노출합니다. 끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `SymmetricSecurityBindingElement` 및 `HttpTransportBindingElement`를 사용하여 사용자 지정 바인딩으로 구성됩니다. 이 샘플에서는 서비스의 X.509 인증서를 사용하여 전송 도중 대칭 키를 보호하고 WS-Security 메시지 헤더에서 사용자 지정 `SymmetricSecurityBindingElement`을 서명 및 암호화된 보안 토큰으로 전달하도록 `CreditCardToken`를 설정합니다. 동작은 클라이언트 인증에 사용되는 서비스 자격 증명과 서비스 X.509 인증서에 대한 정보를 지정합니다.
+ 서비스는 `BindingHelper` 및 `EchoServiceHost` 클래스를 사용하여 프로그래밍 방식으로 만들어진 단일 엔드포인트를 노출합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `SymmetricSecurityBindingElement` 및 `HttpTransportBindingElement`를 사용하여 사용자 지정 바인딩으로 구성됩니다. 이 샘플에서는 서비스의 X.509 인증서를 사용하여 전송 도중 대칭 키를 보호하고 WS-Security 메시지 헤더에서 사용자 지정 `SymmetricSecurityBindingElement`을 서명 및 암호화된 보안 토큰으로 전달하도록 `CreditCardToken`를 설정합니다. 동작은 클라이언트 인증에 사용되는 서비스 자격 증명과 서비스 X.509 인증서에 대한 정보를 지정합니다.
 
 ```csharp
 public static class BindingHelper
@@ -85,7 +85,7 @@ class EchoServiceHost : ServiceHost
 }
 ```
 
- 클라이언트 엔드포인트는 서비스 엔드포인트와 동일한 방식으로 구성됩니다. 클라이언트는 동일한 `BindingHelper` 클래스를 사용하여 바인딩을 만듭니다. 설정의 나머지 부분은 `Client` 클래스에 있습니다. 또한 클라이언트는 적절한 데이터와 함께 `CreditCardToken` 인스턴스를 클라이언트 끝점 동작 컬렉션에 추가하여 `CreditCardClientCredentials`에 포함될 정보와 설정 코드의 서비스 X.509 인증서에 대한 정보를 설정합니다. 이 샘플에서는 `CN=localhost`로 설정된 주체 이름을 가진 X.509 인증서를 서비스 인증서로 사용합니다.
+ 클라이언트 엔드포인트는 서비스 엔드포인트와 동일한 방식으로 구성됩니다. 클라이언트는 동일한 `BindingHelper` 클래스를 사용하여 바인딩을 만듭니다. 설정의 나머지 부분은 `Client` 클래스에 있습니다. 또한 클라이언트는 적절한 데이터와 함께 `CreditCardToken` 인스턴스를 클라이언트 엔드포인트 동작 컬렉션에 추가하여 `CreditCardClientCredentials`에 포함될 정보와 설정 코드의 서비스 X.509 인증서에 대한 정보를 설정합니다. 이 샘플에서는 `CN=localhost`로 설정된 주체 이름을 가진 X.509 인증서를 서비스 인증서로 사용합니다.
 
 ```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
@@ -252,7 +252,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  토큰 공급자는 클라이언트 또는 서비스 자격 증명에 포함된 정보를 기반으로 토큰의 개체 표현을 만듭니다. 그런 다음 토큰 개체 표현은 앞 단원에 설명된 토큰 serializer를 사용하여 메시지에 기록됩니다.
 
- 토큰 인증자는 메시지에 도착하는 토큰의 유효성을 검사합니다. 들어오는 토큰 개체 표현은 토큰 serializer에 의해 만들어집니다. 그런 다음 이 개체 표현은 유효성 검사를 위해 토큰 인증자에 전달됩니다. 토큰의 유효성이 검사되고 나면 토큰 인증자는 토큰에 포함된 정보를 나타내는 `IAuthorizationPolicy` 개체의 컬렉션을 반환합니다. 이 정보는 권한 부여 결정을 수행하고 응용 프로그램에 대한 클레임을 제공하기 위해 나중에 메시지 처리 도중 사용됩니다. 이 예제에서 신용 카드 토큰 인증자는 이러한 목적을 위해 `CreditCardTokenAuthorizationPolicy`를 사용합니다.
+ 토큰 인증자는 메시지에 도착하는 토큰의 유효성을 검사합니다. 들어오는 토큰 개체 표현은 토큰 serializer에 의해 만들어집니다. 그런 다음 이 개체 표현은 유효성 검사를 위해 토큰 인증자에 전달됩니다. 토큰의 유효성이 검사되고 나면 토큰 인증자는 토큰에 포함된 정보를 나타내는 `IAuthorizationPolicy` 개체의 컬렉션을 반환합니다. 이 정보는 권한 부여 결정을 수행하고 애플리케이션에 대한 클레임을 제공하기 위해 나중에 메시지 처리 도중 사용됩니다. 이 예제에서 신용 카드 토큰 인증자는 이러한 목적을 위해 `CreditCardTokenAuthorizationPolicy`를 사용합니다.
 
  토큰 serializer는 연결을 통해 토큰의 개체 표현을 가져오거나 가져갑니다. 이에 대해서는 위의 단원에서 설명했습니다.
 
@@ -547,7 +547,7 @@ string GetCallerCreditCardNumber()
 
 ## <a name="setup-batch-file"></a>설치 배치 파일
 
- 이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 IIS에서 호스트되는 응용 프로그램을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다. 다중 컴퓨터 구성이나 호스트되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.
+ 이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 IIS에서 호스트되는 애플리케이션을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다. 다중 컴퓨터 구성이나 호스트되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.
 
  아래에는 적절한 구성에서 실행할 수 있도록 배치 파일을 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.
 
@@ -578,7 +578,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
-- IIS에서 호스트되는 서비스에서 인증서 개인 키에 액세스할 수 있게 하려면 IIS에서 호스트되는 프로세스가 실행 중인 사용자 계정에 개인 키에 대한 적절한 사용 권한을 부여해야 합니다. Setup.bat 스크립트에서 마지막 단계를 통해 이 작업을 수행합니다.
+- IIS에서 호스트되는 서비스에서 인증서 프라이빗 키에 액세스할 수 있게 하려면 IIS에서 호스트되는 프로세스가 실행 중인 사용자 계정에 프라이빗 키에 대한 적절한 사용 권한을 부여해야 합니다. Setup.bat 스크립트에서 마지막 단계를 통해 이 작업을 수행합니다.
 
     ```bat
     echo ************
@@ -592,7 +592,7 @@ string GetCallerCreditCardNumber()
     ```
 
 > [!NOTE]
-> 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
+> Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
@@ -602,14 +602,14 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. 관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
+1. 관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
 
 > [!NOTE]
 > 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
   
 1. client\bin 디렉터리에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-2. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+2. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-run-the-sample-across-computer"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -617,7 +617,7 @@ string GetCallerCreditCardNumber()
   
 2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. CreditCardFile.txt를 복사해야 합니다. 그렇지 않으면 클라이언트에서 보내진 신용 카드 정보의 유효성을 신용 카드 인증자에서 검사할 수 없습니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.exe 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 실행 해야 합니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.bat 파일은 관리자 권한으로 Visual Studio가 열려 있는 개발자 명령 프롬프트에서 실행 해야 합니다.  
   
 4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
   
@@ -631,8 +631,8 @@ string GetCallerCreditCardNumber()
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.  
   
-10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.

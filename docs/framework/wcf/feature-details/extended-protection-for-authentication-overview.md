@@ -2,12 +2,12 @@
 title: 인증에 대한 확장된 보호 개요
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964610"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559267"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>인증에 대한 확장된 보호 개요
 인증에 대한 보호를 강화하면 공격자가 클라이언트의 자격 증명을 가로채서 서버로 전달하는 MITM(Man-In-The-Middle) 공격을 방지할 수 있습니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "75964610"
   
  서버는 다음과 같은 보호 수준을 사용할 수 있습니다.  
   
-- 없음. 채널 바인딩 유효성 검사가 수행되지 않습니다. 업데이트되지 않은 모든 서버의 기본 동작입니다.  
+- 없음 채널 바인딩 유효성 검사가 수행되지 않습니다. 업데이트되지 않은 모든 서버의 기본 동작입니다.  
   
-- 부분. 업데이트된 모든 클라이언트는 채널 바인딩 정보를 서버에 제공해야 합니다. 업데이트되지 않은 클라이언트는 해당 정보를 제공하지 않아도 됩니다. 애플리케이션 호환성을 허용하는 중간 옵션입니다.  
+- 부분 업데이트된 모든 클라이언트는 채널 바인딩 정보를 서버에 제공해야 합니다. 업데이트되지 않은 클라이언트는 해당 정보를 제공하지 않아도 됩니다. 애플리케이션 호환성을 허용하는 중간 옵션입니다.  
   
-- 전체. 모든 클라이언트는 채널 바인딩 정보를 제공해야 합니다. 서버는 채널 바인딩 정보를 제공하지 않는 클라이언트의 인증 요청을 거부합니다.  
+- 전체입니다. 모든 클라이언트는 채널 바인딩 정보를 제공해야 합니다. 서버는 채널 바인딩 정보를 제공하지 않는 클라이언트의 인증 요청을 거부합니다.  
   
  자세한 내용은 Win7 CBT/Extended Protection 샘플을 참조하십시오.  
   
 ## <a name="see-also"></a>참조
 
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

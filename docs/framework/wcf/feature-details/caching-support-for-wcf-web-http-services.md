@@ -2,22 +2,22 @@
 title: WCF 웹 HTTP 서비스에 대한 캐싱 지원
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 63c83cc1af9a3ccfdbdd79f8d0480e6c29eaf2f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0445f0214f90873dad4241789db270c9b6f4a2f6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185436"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559417"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF 웹 HTTP 서비스에 대한 캐싱 지원
 
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]이를 사용하면 WCF 웹 HTTP 서비스의 ASP.NET 이미 사용 가능한 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. ASP.NET 캐싱에 대한 자세한 내용은 [ASP.NET 캐싱 개요를](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))참조하십시오.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF 웹 HTTP 서비스의 ASP.NET에서 이미 사용할 수 있는 선언적 캐싱 메커니즘을 사용할 수 있습니다. 이렇게 하면 WCF 웹 HTTP 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료되면 다음에 사용자가 HTTP GET을 보낼 때 서비스 메서드가 호출되고 응답이 다시 한 번 캐시됩니다. ASP.NET 캐싱에 대 한 자세한 내용은 [ASP.NET 캐싱 개요](/previous-versions/aspnet/ms178597(v=vs.100))를 참조 하세요.  
   
 ## <a name="basic-web-http-service-caching"></a>기본 웹 HTTP 서비스 캐싱  
 
-  WEB HTTP 서비스 캐싱을 사용하려면 먼저 ASP.NET 서비스 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 설정 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 또는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>에 적용하여 호환성을 활성화해야 합니다.  
+  웹 HTTP 서비스 캐싱을 사용 하도록 설정 하려면 먼저를 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 서비스 설정에 또는로 적용 하 여 ASP.NET 호환성을 사용 하도록 설정 해야 합니다 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> .  
   
- .NET Framework 4에서는 캐시 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 프로필 이름을 지정할 수 있는 새 특성이 도입되었습니다. 이 특성은 서비스 작업에 적용됩니다. 다음 예제에서는 서비스에 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>를 적용하여 ASP.NET 호환성을 사용하도록 설정하고 `GetCustomer` 작업을 캐시용으로 구성합니다. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 특성은 사용할 캐시 설정이 들어 있는 캐시 프로필을 지정합니다.  
+ .NET Framework 4에서는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 캐시 프로필 이름을 지정할 수 있는 라는 새 특성을 소개 합니다. 이 특성은 서비스 작업에 적용됩니다. 다음 예제에서는 서비스에 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>를 적용하여 ASP.NET 호환성을 사용하도록 설정하고 `GetCustomer` 작업을 캐시용으로 구성합니다. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 특성은 사용할 캐시 설정이 들어 있는 캐시 프로필을 지정합니다.  
   
 ```csharp
 [ServiceContract]
@@ -33,7 +33,7 @@ public class Service
 }
 ```  
   
-또한 다음 예제와 같이 Web.config 파일에서 ASP.NET 호환성 모드를 켭니다.  
+또한 다음 예제와 같이 Web.config 파일에서 ASP.NET 호환 모드를 설정 합니다.  
   
 ```xml
 <system.serviceModel>
@@ -44,7 +44,7 @@ public class Service
 > [!WARNING]
 > ASP.NET 호환성 모드가 사용되도록 설정되어 있지 않은 경우 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>를 사용하면 예외가 throw됩니다.  
   
- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>에 지정된 캐시 프로필 이름은 Web.config 구성 파일에 추가되는 캐시 프로필을 식별합니다. 캐시 프로파일은 다음 구성 `outputCacheSetting` 예제와 같이 <> 요소로 정의됩니다.  
+ <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>에 지정된 캐시 프로필 이름은 Web.config 구성 파일에 추가되는 캐시 프로필을 식별합니다. 캐시 프로필은 `outputCacheSetting` 다음 구성 예제에 표시 된 것 처럼 <> 요소에서로 정의 됩니다.  
   
 ```xml
 <!-- ...  -->
@@ -60,11 +60,11 @@ public class Service
 </system.web>  
 ```  
   
- 이 요소는 ASP.NET 애플리케이션에서 사용할 수 있는 구성 요소와 동일합니다. ASP.NET 캐시 프로필에 대한 자세한 <xref:System.Web.Configuration.OutputCacheProfile>내용은 을 참조하십시오. 웹 HTTP 서비스의 경우 캐시 프로필에서 가장 중요한 특성이 `cacheDuration` 및 `varyByParam`입니다. 두 특성 모두 필요합니다. `cacheDuration`은 응답이 캐시되어야 하는 기간(초)을 설정합니다. `varyByParam`에서는 응답을 캐시하는 데 사용하는 쿼리 문자열 매개 변수를 지정할 수 있습니다. 여러 쿼리 문자열 매개 변수 값을 사용하여 수행한 모든 요청은 개별적으로 캐시됩니다. 예를 `http://MyServer/MyHttpService/MyOperation?param=10`들어, 초기 요청이 완료되면 동일한 URI로 이루어진 모든 후속 요청은 캐시된 응답이 반환됩니다(캐시 기간이 경과되지 않은 경우). 동일하지만 쿼리 문자열 매개 변수 값이 다른 유사한 요청에 대한 응답은 개별적으로 캐시됩니다. 이 개별 캐시 동작을 사용하지 않으려면 `varyByParam`을 "none"으로 설정합니다.  
+ 이 요소는 ASP.NET 애플리케이션에서 사용할 수 있는 구성 요소와 동일합니다. ASP.NET cache 프로필에 대 한 자세한 내용은을 참조 하십시오 <xref:System.Web.Configuration.OutputCacheProfile> . 웹 HTTP 서비스의 경우 캐시 프로필에서 가장 중요한 특성이 `cacheDuration` 및 `varyByParam`입니다. 두 특성 모두 필요합니다. `cacheDuration`은 응답이 캐시되어야 하는 기간(초)을 설정합니다. `varyByParam`에서는 응답을 캐시하는 데 사용하는 쿼리 문자열 매개 변수를 지정할 수 있습니다. 여러 쿼리 문자열 매개 변수 값을 사용하여 수행한 모든 요청은 개별적으로 캐시됩니다. 예를 들어,에 대 한 초기 요청이 이루어지면 `http://MyServer/MyHttpService/MyOperation?param=10` 동일한 URI를 사용 하 여 수행 된 모든 후속 요청이 캐시 된 응답을 반환 합니다 (캐시 기간이 경과 하지 않은 경우). 동일하지만 쿼리 문자열 매개 변수 값이 다른 유사한 요청에 대한 응답은 개별적으로 캐시됩니다. 이 개별 캐시 동작을 사용하지 않으려면 `varyByParam`을 "none"으로 설정합니다.  
   
 ## <a name="sql-cache-dependency"></a>SQL 캐시 종속성  
 
-  웹 HTTP 서비스 응답도 SQL 캐시 종속성을 사용하여 캐시할 수 있습니다. WCF 웹 HTTP 서비스에서 SQL 데이터베이스에 저장된 데이터를 사용하는 경우 이 서비스의 응답을 캐시하고 SQL 데이터베이스 테이블의 데이터가 변경되면 캐시된 응답을 무효화할 수 있습니다. 이 동작은 Web.config 파일에서 완전히 구성할 수 있습니다. 먼저 <`connectionStrings`> 요소에서 연결 문자열을 정의합니다.  
+  웹 HTTP 서비스 응답도 SQL 캐시 종속성을 사용하여 캐시할 수 있습니다. WCF 웹 HTTP 서비스에서 SQL 데이터베이스에 저장된 데이터를 사용하는 경우 이 서비스의 응답을 캐시하고 SQL 데이터베이스 테이블의 데이터가 변경되면 캐시된 응답을 무효화할 수 있습니다. 이 동작은 Web.config 파일에서 완전히 구성할 수 있습니다. 먼저 <> 요소에서 연결 문자열을 정의 `connectionStrings` 합니다.  
   
 ```xml
 <connectionStrings>
@@ -74,7 +74,7 @@ public class Service
 </connectionStrings>
 ```  
   
- 그런 다음 다음 구성 예제와 같이 `caching` <`system.web`> 요소 내의 <> 요소 내에서 SQL 캐시 종속성을 사용하도록 설정해야 합니다.  
+ 그런 다음 `caching` `system.web` 다음 구성 예제에 표시 된 것 처럼 <> 요소 내의 <> 요소 내에서 SQL 캐시 종속성을 사용 하도록 설정 해야 합니다.  
   
 ```xml  
 <system.web>
@@ -90,7 +90,7 @@ public class Service
 </system.web>
 ```  
   
- 여기서 SQL 캐시 종속성이 사용되도록 설정되었고 폴링 시간이 1000밀리초로 설정되었습니다. 폴링 시간이 만료될 때마다 데이터베이스 테이블이 업데이트되었는지 확인하는 작업이 수행됩니다. 변경 내용이 감지되면 캐시의 내용이 제거되고 다음에 서비스 작업이 호출될 때 새 응답이 캐시됩니다. <`sqlCacheDependency`> 요소 내에서 데이터베이스를 추가하고 다음 예제와 같이 `databases` <> 요소 내의 연결 문자열을 참조합니다.  
+ 여기서 SQL 캐시 종속성이 사용되도록 설정되었고 폴링 시간이 1000밀리초로 설정되었습니다. 폴링 시간이 만료될 때마다 데이터베이스 테이블이 업데이트되었는지 확인하는 작업이 수행됩니다. 변경 내용이 감지되면 캐시의 내용이 제거되고 다음에 서비스 작업이 호출될 때 새 응답이 캐시됩니다. <`sqlCacheDependency`> 요소 내에서 다음 예제와 같이 데이터베이스를 추가 하 고 <> 요소 내에서 연결 문자열을 참조 `databases` 합니다.  
   
 ```xml  
 <system.web>
@@ -106,7 +106,7 @@ public class Service
 </system.web>  
 ```  
   
- 다음으로 다음 예제와 같이 <`caching`> 요소 내에서 출력 캐시 설정을 구성해야 합니다.  
+ 다음 예제와 같이 <> 요소 내에서 출력 캐시 설정을 구성 해야 합니다 `caching` .  
   
 ```xml
 <system.web>
@@ -122,20 +122,20 @@ public class Service
 </system.web>
 ```  
   
- 여기서 캐시 기간은 60초로 `varyByParam` 설정되고 없음으로 `sqlDependency` 설정되며 콜론으로 구분된 데이터베이스 이름/테이블 쌍의 세미콜론으로 구분됩니다. `MyTable`의 데이터가 변경되면 서비스 작업의 캐시된 응답이 제거되고, 서비스 작업이 호출되면 새 응답이 생성 및 캐시된 후 클라이언트에 반환됩니다.  
+ 여기서 캐시 기간은 60 초로 설정 되 `varyByParam` 고,는 none으로 설정 되며, `sqlDependency` 는 콜론으로 구분 된 데이터베이스 이름/테이블 쌍의 세미콜론으로 구분 된 목록으로 설정 됩니다. `MyTable`의 데이터가 변경되면 서비스 작업의 캐시된 응답이 제거되고, 서비스 작업이 호출되면 새 응답이 생성 및 캐시된 후 클라이언트에 반환됩니다.  
   
 > [!IMPORTANT]
-> ASP.NET SQL 데이터베이스에 액세스하려면 [ASP.NET SQL Server 등록 도구를](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))사용해야 합니다. 또한 적절한 사용자 계정을 사용하여 데이터베이스와 테이블에 액세스할 수 있도록 해야 합니다. 자세한 내용은 [웹 응용 프로그램에서 SQL Server 액세스 를](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100))참조하십시오.  
+> ASP.NET에서 SQL database에 액세스 하려면 [ASP.NET SQL Server 등록 도구](/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90))를 사용 해야 합니다. 또한 적절한 사용자 계정을 사용하여 데이터베이스와 테이블에 액세스할 수 있도록 해야 합니다. 자세한 내용은 [웹 응용 프로그램에서 SQL Server에 액세스](/previous-versions/aspnet/ht43wsex(v=vs.100))를 참조 하세요.  
   
 ## <a name="conditional-http-get-based-caching"></a>조건부 HTTP GET 기반 캐싱  
 
-  웹 HTTP 시나리오에서 조건부 HTTP GET은 [HTTP 사양에](https://www.w3.org/Protocols/rfc2616/rfc2616.html)설명된 대로 지능형 HTTP 캐싱을 구현하기 위해 서비스에서 자주 사용됩니다. 이렇게 하려면 서비스는 HTTP 응답에서 ETag 헤더의 값을 설정해야 합니다. HTTP 요청에 있는 If-None-Match 헤더를 검사하여 지정된 ETag가 현재 ETag와 일치하는지 여부도 확인해야 합니다.  
+  웹 HTTP 시나리오에서 조건부 HTTP GET은 [Http 사양](https://www.w3.org/Protocols/rfc2616/rfc2616.html)에 설명 된 대로 지능형 http 캐싱을 구현 하기 위해 서비스에서 자주 사용 됩니다. 이렇게 하려면 서비스가 HTTP 응답에서 ETag 헤더의 값을 설정 해야 합니다. HTTP 요청에 있는 If-None-Match 헤더를 검사하여 지정된 ETag가 현재 ETag와 일치하는지 여부도 확인해야 합니다.  
   
- GET 및 HEAD 요청의 경우 <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A>는 ETag 값을 가져와서 요청의 If-None-Match 헤더와 비교합니다. 헤더가 있고 일치하는 경우 HTTP 상태 <xref:System.ServiceModel.Web.WebFaultException> 코드 304(수정되지 않음)가 있는 헤더가 throw되고 ETag 헤더가 일치하는 ETag를 사용하여 응답에 추가됩니다.  
+ GET 및 HEAD 요청의 경우 <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A>는 ETag 값을 가져와서 요청의 If-None-Match 헤더와 비교합니다. 헤더가 있고 일치 하는 경우 <xref:System.ServiceModel.Web.WebFaultException> HTTP 상태 코드 304 (수정 되지 않음)가 있는이 throw 되 고 etag 헤더가 일치 하는 etag를 사용 하 여 응답에 추가 됩니다.  
   
  <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> 메서드의 한 오버로드는 마지막으로 수정한 날짜를 가져와서 요청의 If-Modified-Since 헤더와 비교합니다. 이 헤더가 있고 리소스가 수정되지 않은 경우 HTTP 상태 코드 304(수정 안 됨)와 함께 <xref:System.ServiceModel.Web.WebFaultException>이 throw됩니다.  
   
- PUT, POST 및 DELETE 요청의 경우 <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A>는 리소스의 현재 ETag 값을 사용합니다. 현재 ETag 값이 null이면 메서드는 If-None-일치 헤더의 값이 "*"임을 확인합니다.  현재 ETag 값이 기본값이 아니면 이 메서드는 현재 ETag 값을 요청의 If- Match 헤더와 비교합니다. 두 경우 모두 예상 헤더가 요청에 없거나 해당 값이 조건부 검사를 충족하지 못하면 이 메서드는 HTTP 상태 코드 412(사전 조건 실패)와 함께 <xref:System.ServiceModel.Web.WebFaultException>을 throw하고 응답의 ETag 헤더를 현재 ETag 값으로 설정합니다.  
+ PUT, POST 및 DELETE 요청의 경우 <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalUpdate%2A>는 리소스의 현재 ETag 값을 사용합니다. 현재 ETag 값이 null 인 경우 메서드는 비-일치 헤더에 "*" 값이 있는지 확인 합니다.  현재 ETag 값이 기본값이 아니면 이 메서드는 현재 ETag 값을 요청의 If- Match 헤더와 비교합니다. 두 경우 모두 예상 헤더가 요청에 없거나 해당 값이 조건부 검사를 충족하지 못하면 이 메서드는 HTTP 상태 코드 412(사전 조건 실패)와 함께 <xref:System.ServiceModel.Web.WebFaultException>을 throw하고 응답의 ETag 헤더를 현재 ETag 값으로 설정합니다.  
   
  `CheckConditional` 메서드와 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.SetETag%2A> 메서드는 모두 HTTP 사양에 따라 응답 헤더에 설정된 ETag 값이 유효한 ETag인지 확인합니다. 여기에는 이러한 ETag 값이 아직 없고 내부 큰따옴표 문자로 올바로 이스케이프되지 않는 경우 큰따옴표로 이러한 값을 묶는 작업이 포함됩니다. 약한 ETag 비교는 지원되지 않습니다.  
   
@@ -166,5 +166,5 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>보안 고려사항  
+## <a name="security-considerations"></a>보안 고려 사항  
  응답이 캐시에서 제공될 때는 권한 부여가 수행되지 않으므로 권한 부여가 필요한 요청의 경우 응답이 캐시되지 않아야 합니다.  이러한 응답을 캐시하면 보안이 심각하게 취약해집니다.  일반적으로 권한 부여가 필요한 요청에서는 사용자별 데이터를 제공하므로 서버 쪽 캐싱도 효과적이지 않습니다.  이러한 경우 클라이언트 쪽 캐싱을 사용하거나 캐싱을 전혀 사용하지 않는 것이 더 적절합니다.

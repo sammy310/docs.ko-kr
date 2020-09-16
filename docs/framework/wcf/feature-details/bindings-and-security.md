@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 86b9a1d7b0c772a308b9f059bb31c1f489635300
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245337"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559404"
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 
@@ -193,7 +193,7 @@ WCF의 모든 바인딩에는 API와 구성 파일에 사용 되는 XML 요소�
 
 다음 표에서는 보안 모드 설정에서 제공하는 기능에 대해 요약하여 설명합니다. 즉, 보안 모드를 `Transport`, `Message` 또는 `TransportWithMessageCredential`로 설정한 경우 사용할 수 있는 기능을 보여 줍니다. 이 표를 사용하면 애플리케이션에서 필요한 보안 기능을 찾는 데 도움을 줍니다.
 
-|설정|기능|
+|Setting|기능|
 |-------------|--------------|
 |전송|서버 인증<br /><br /> 클라이언트 인증<br /><br /> 지점 간 보안<br /><br /> 상호 운용성<br /><br /> 하드웨어 가속<br /><br /> 높은 처리량<br /><br /> 보안 방화벽<br /><br /> 대기 시간이 긴 애플리케이션<br /><br /> 여러 홉을 통해 다시 암호화|
 |메시지|서버 인증<br /><br /> 클라이언트 인증<br /><br /> 엔드투엔드 보안<br /><br /> 상호 운용성<br /><br /> 다양한 클레임<br /><br /> 페더레이션<br /><br /> Multi-Factor Authentication<br /><br /> 사용자 지정 토큰<br /><br /> 공증/타임스탬프 서비스<br /><br /> 대기 시간이 긴 애플리케이션<br /><br /> 메시지 서명 지속성|
@@ -203,20 +203,20 @@ WCF의 모든 바인딩에는 API와 구성 파일에 사용 되는 XML 요소�
 
 |바인딩|Transport 모드 지원|Message 모드 지원|TransportWithMessageCredential 지원|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|Yes|Yes|Yes|
-|`WSHttpBinding`|Yes|Yes|예|
-|`WSDualHttpBinding`|예|예|예|
-|`NetTcpBinding`|예|Yes|Yes|
-|`NetNamedPipeBinding`|예|아니요|예|
-|`NetMsmqBinding`|예|예|예|
+|`BasicHttpBinding`|예|예|예|
+|`WSHttpBinding`|예|예|예|
+|`WSDualHttpBinding`|아니요|예|아니요|
+|`NetTcpBinding`|예|예|예|
+|`NetNamedPipeBinding`|예|아니요|아니요|
+|`NetMsmqBinding`|예|예|아니요|
 |`MsmqIntegrationBinding`|예|아니요|아니요|
-|`wsFederationHttpBinding`|예|예|Yes|
+|`wsFederationHttpBinding`|아니요|예|예|
 
 ## <a name="transport-credentials-in-bindings"></a>바인딩의 전송 자격 증명
 
 다음 표에서는 전송 보안 모드에서 `BasicHttpBinding` 또는 `WSHttpBinding` 사용 시 사용할 수 있는 클라이언트 자격 증명 형식을 보여 줍니다.
 
-|Type|Description|
+|형식|Description|
 |----------|-----------------|
 |None|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|
 |Basic|기본 인증입니다. 자세한 내용은 RFC 2617 – HTTP 인증: 기본 및 다이제스트 인증 (에서 사용 가능)을 참조 하세요 <https://go.microsoft.com/fwlink/?LinkId=84023> .|
@@ -230,7 +230,7 @@ WCF의 모든 바인딩에는 API와 구성 파일에 사용 되는 XML 요소�
 
 다음 표에서는 메시지 보안 모드에서 바인딩 사용 시 사용할 수 있는 클라이언트 자격 증명 형식을 보여 줍니다.
 
-|Type|Description|
+|형식|Description|
 |----------|-----------------|
 |None|서비스와 익명 클라이언트가 상호 작용할 수 있습니다.|
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다.|
@@ -238,11 +238,11 @@ WCF의 모든 바인딩에는 API와 구성 파일에 사용 되는 XML 요소�
 |인증서|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|
 |IssuedToken|서비스가 보안 토큰 서비스를 사용하여 사용자 지정 토큰을 제공할 수 있습니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
 - [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)
 - [자격 증명 형식 선택](selecting-a-credential-type.md)
 - [사용자 지정 바인딩을 사용하는 보안 기능](security-capabilities-with-custom-bindings.md)
 - [보안 동작](security-behaviors-in-wcf.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

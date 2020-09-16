@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스 호스팅을 위한 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e62fed4f6a711ecc317b8f758d4948a477d136e1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c875920ed70ea8bd35642d0b7725b2dfad08f2b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558877"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>인터넷 정보 서비스 호스팅을 위한 최선의 방법
 이 항목에서는 WCF (Windows Communication Foundation) 서비스를 호스팅하기 위한 몇 가지 모범 사례를 설명 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "84595273"
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>중간 계층 시나리오에서 성능 최적화  
  *중간 계층 시나리오*에서 최적의 성능을 위해 (들어오는 메시지에 대 한 응답으로 다른 서비스를 호출 하는 서비스) WCF 서비스 클라이언트를 원격 서비스에 한 번 인스턴스화하고 들어오는 여러 요청에서 다시 사용 합니다. WCF 서비스 클라이언트 인스턴스화는 기존 클라이언트 인스턴스에서 서비스 호출을 수행 하는 것과 관련 하 여 비용이 많이 드는 작업이 며 중간 계층 시나리오는 요청 간에 원격 클라이언트를 캐시 하 여 고유한 성능 향상을 생성 합니다. WCF 서비스 클라이언트는 스레드로부터 안전 하므로 여러 스레드 간에 클라이언트에 대 한 액세스를 동기화 할 필요가 없습니다.  
   
- 중간 계층 시나리오는 또한 `svcutil /a` 옵션에서 생성된 비동기 API를 사용하여 성능을 향상시킵니다. `/a`옵션을 사용 하면 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 가 `BeginXXX/EndXXX` 각 서비스 작업에 대 한 메서드를 생성 하므로 백그라운드 스레드에서 원격 서비스에 대 한 장기 실행 호출이 발생할 수 있습니다.  
+ 중간 계층 시나리오는 또한 `svcutil /a` 옵션에서 생성된 비동기 API를 사용하여 성능을 향상시킵니다. `/a`옵션을 사용 하면 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 가 `BeginXXX/EndXXX` 각 서비스 작업에 대 한 메서드를 생성 하므로 백그라운드 스레드에서 원격 서비스에 대 한 장기 실행 호출이 발생할 수 있습니다.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>멀티홈 또는 여러 개의 이름이 지정된 시나리오의 WCF  
  IIS 웹 팜 내에서 WCF 서비스를 배포할 수 있습니다. 여기에서 컴퓨터 집합은와 같은 공통 외부 이름을 공유 `http://www.contoso.com` 하지만 다른 호스트 이름으로 개별적으로 주소가 지정 됩니다. 예를 들어는 `http://www.contoso.com` 및 라는 두 개의 다른 컴퓨터로 트래픽을 보낼 수 있습니다 `http://machine1.internal.contoso.com` `http://machine2.internal.contoso.com` . 이 배포 시나리오는 WCF에서 완벽 하 게 지원 되지만 WCF 서비스를 호스트 하는 IIS 웹 사이트의 특별 한 구성이 있어야 서비스의 메타 데이터 (웹 서비스 기술 언어)에 올바른 (외부) 호스트 이름이 표시 됩니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "84595273"
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [서비스 호스팅 샘플](../samples/hosting.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

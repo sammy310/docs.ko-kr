@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 성능
 description: 이 문서에서는 .NET Framework 4의 일부인 Windows Workflow Foundation의 주요 수정 버전에 대 한 성능 특징을 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9b1b9e7c4fd7cdd122d425b2746859dde30ec209
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421568"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558344"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
@@ -18,11 +18,11 @@ ms.locfileid: "83421568"
 
 ## <a name="terminology"></a>용어
 
- [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 4에서 도입 된의 버전은이 항목의 나머지 부분에 대 한 w f 4로 참조 됩니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 .NET Framework 3.0에서 도입 되었으며 .NET Framework 3.5 s p 1을 통해 몇 가지 사소한 수정 사항이 있었습니다. Workflow Foundation의 .NET Framework 3.5 버전은이 항목의 나머지 부분에 대 한 WF3 이라고 합니다. WF3는 W F 4와 나란히 .NET Framework 4로 제공 됩니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [Windows Workflow Foundation 4 마이그레이션 가이드](migration-guidance.md)를 참조 하세요.
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 4에서 도입 된의 버전은이 항목의 나머지 부분에 대 한 w f 4로 참조 됩니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)] 는 .NET Framework 3.0에서 도입 되었으며 .NET Framework 3.5 s p 1을 통해 몇 가지 사소한 수정 사항이 있었습니다. Workflow Foundation의 .NET Framework 3.5 버전은이 항목의 나머지 부분에 대 한 WF3 이라고 합니다. WF3는 W F 4와 나란히 .NET Framework 4로 제공 됩니다. WF3 아티팩트를 W F 4로 마이그레이션하는 방법에 대 한 자세한 내용은 [Windows Workflow Foundation 4 마이그레이션 가이드](migration-guidance.md)를 참조 하세요.
 
  WCF (Windows Communication Foundation)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델입니다. WF3와 함께 .NET 3.0의 일부로 처음 도입 되었으며 현재는 .NET Framework의 주요 구성 요소 중 하나입니다.
 
- Windows Server AppFabric은 IIS에서 실행되는 웹 애플리케이션 및 복합 애플리케이션을 쉽게 빌드하고, 확장 및 관리할 수 있게 하는 통합 기술 집합입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))을 참조 하세요.
+ Windows Server AppFabric은 IIS에서 실행되는 웹 애플리케이션 및 복합 애플리케이션을 쉽게 빌드하고, 확장 및 관리할 수 있게 하는 통합 기술 집합입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 [Windows Server AppFabric 1.0](/previous-versions/appfabric/ff384253(v=azure.10))을 참조 하세요.
 
 ## <a name="goals"></a>목표
  이 항목은 각각 다른 시나리오에 대해 측정된 데이터와 함께 WF4의 성능 특성을 보여 주는 것을 목표로 합니다. 또한 WF4와 WF3을 자세히 비교하고 이 새로운 수정 버전에서 향상된 기능을 보여 줍니다. 이 문서에 제공된 시나리오와 데이터는 WF4 및 WF3의 여러 측면에 대한 기본 비용을 수량화합니다. 이 데이터는 WF4의 성능 특징을 파악하는 데 유용하며 WF3에서 WF4로의 마이그레이션을 계획하거나 애플리케이션 개발에 WF4를 사용할 때 도움이 될 수 있습니다. 하지만 이 문서에 제공된 데이터에서 결론을 도출할 때는 주의해야 합니다. 복합 워크플로 애플리케이션의 성능은 워크플로 구현 방법과 여러 구성 요소의 통합 방법에 따라 크게 달라집니다. 각 애플리케이션을 측정하여 해당 애플리케이션의 성능 특성을 결정해야 합니다.
@@ -42,7 +42,7 @@ ms.locfileid: "83421568"
 
  WF3에서는 워크플로를 만들 때 작업이 초기화되었습니다. WF4에서는 해당 작업이 실행되는 경우에만 작업이 초기화됩니다. 이렇게 하면 새 워크플로 인스턴스를 만들 때 초기화/초기화 취소 작업을 수행하지 않고 작업 수명 주기를 간소화할 수 있으므로 효율성이 향상됩니다.
 
-### <a name="control-flow"></a>흐름 제어
+### <a name="control-flow"></a>제어 흐름
  모든 프로그래밍 언어와 마찬가지로 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에서는 시퀀싱, 반복, 분기 및 기타 패턴에 대한 제어 흐름 작업 집합을 도입하여 워크플로 정의에 대한 제어 흐름을 지원합니다. WF3에서는 동일한 작업을 다시 실행해야 하는 경우 새로운 <xref:System.Workflow.ComponentModel.ActivityExecutionContext>가 생성되고 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 기반으로 하는 중량 serialization 및 deserialization 논리를 통해 작업이 복제됩니다. 일반적으로 반복 제어 흐름의 성능은 작업 시퀀스를 실행하는 것보다 훨씬 느립니다.
 
  WF4에서는 이러한 경우를 완전히 다른 방식으로 처리합니다. 작업 템플릿을 사용하고 새 ActivityInstance 개체를 만든 다음 스케줄러 큐에 추가합니다. 이 전체 프로세스는 명시적 개체 생성과 관련 된 것 이며 매우 간단 합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "83421568"
  .NET 4의 WCF에서 제공 하는 통합 메시지 처리 파이프라인은 W F 4 services가 WF3 보다 훨씬 향상 된 성능 및 확장성을 제공 하는 데 도움이 됩니다. WF4는 복잡한 MEP(메시지 Exchange 패턴)를 모델링할 수 있는 보다 풍부한 메시징 프로그래밍 지원도 제공합니다. 개발자는 형식화된 서비스 계약을 사용하여 프로그래밍을 간소화하거나 형식화되지 않은 서비스 계약을 사용하여 serialization 비용 없이 성능을 향상시킬 수 있습니다. WF4의 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 클래스를 통한 클라이언트 쪽 채널 캐싱 지원은 개발자가 최소한의 노력으로 빠른 애플리케이션을 빌드하는 데 도움이 됩니다. 자세한 내용은 [Send 활동의 캐시 공유 수준 변경](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)을 참조 하세요.
 
 ### <a name="declarative-programming"></a>선언적 프로그래밍
- WF4는 비즈니스 프로세스 및 서비스를 모델링하는 명료하고 단순한 선언적 프로그래밍 프레임워크를 제공합니다. 프로그래밍 모델은 코드 없이 선언적 작업 구성을 지원하므로 워크플로 작성이 훨씬 간소화됩니다. .NET Framework 4에서 XAML 기반 선언적 프로그래밍 프레임 워크는 WPF 및 WF를 모두 지원 하기 위해 단일 어셈블리 System.xaml로 통합 되었습니다.
+ WF4는 비즈니스 프로세스 및 서비스를 모델링하는 명료하고 단순한 선언적 프로그래밍 프레임워크를 제공합니다. 프로그래밍 모델은 코드 없이 선언적 작업 구성을 지원하므로 워크플로 작성이 훨씬 간소화됩니다. .NET Framework 4에서 XAML 기반 선언적 프로그래밍 프레임 워크는 WPF 및 WF를 모두 지원 하기 위해 단일 어셈블리 System.Xaml.dll 통합 되었습니다.
 
  WF4에서는 XAML이 선언적 경험을 제공하며 .NET을 사용하여 빌드된 작업과 형식을 참조하여 XML 태그로 전체 워크플로 정의를 정의할 수 있도록 합니다. 사용자 지정 코드 숨김 논리를 포함하지 않는 WF3의 XOML 형식으로는 이러한 작업을 수행하는 것이 어려웠습니다. .NET 4의 새로운 XAML 스택은 워크플로 아티팩트를 serialize/deserialize 할 때 훨씬 더 나은 성능을 가지 며 선언적 프로그래밍을 더욱 매력적인 및 solid로 만듭니다.
 
@@ -183,7 +183,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  두 개의 백 엔드 서비스인 주문 확인 서비스와 웨어하우스 서비스는 두 테스트에서 모두 동일하게 유지됩니다.  변경되는 부분은 오케스트레이션을 수행하는 온라인 저장소 서비스입니다.  한 경우에 서비스는 WCF 서비스로 직접 코딩 됩니다.  다른 경우에는 서비스는 W F 4에서 WCF 워크플로 서비스로 작성 됩니다. 추적 및 지속성과 같은 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 관련 기능은 이 테스트에서 해제됩니다.
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>환경
 ![성능 측정을 위한 환경 설정](./media/performance/performance-test-environment.gif)
 
  여러 컴퓨터에서 HTTP를 통해 온라인 저장소 서비스에 대한 클라이언트 요청이 수행됩니다.  한 컴퓨터에서 서비스 3개를 모두 호스트합니다.  온라인 저장소 서비스와 백 엔드 서비스 사이의 전송 계층은 TCP 또는 HTTP입니다.  작업/초 측정은 온라인 저장소 서비스에 대해 완료된 `PurchaseOrder` 호출 수를 기반으로 합니다.  채널 풀링은 WF4의 새로운 기능입니다.  이 테스트의 WCF 부분에서 채널 풀링은 즉시 제공 되지 않으므로 온라인 저장소 서비스에서 간단한 풀링 기술에 대 한 직접 코딩 된 구현이 사용 되었습니다.

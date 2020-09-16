@@ -2,63 +2,63 @@
 title: Windows용 WCF 서비스 및 이벤트 추척
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: b8a1f30f20aa2c541a574a070b3644569d633ca2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38e26c369d17f4aa9ccb39d2ae649facffe65418
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183208"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552968"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows용 WCF 서비스 및 이벤트 추척
-이 샘플에서는 WCF(Windows 통신 재단)의 분석 추적을 사용하여 ETW(Windows용 이벤트 추적)에서 이벤트를 내보하는 방법을 보여 줍니다. 분석 추적은 프로덕션 환경에서 WCF 서비스 문제를 해결할 수 있는 WCF 스택의 핵심 지점에서 내보낸 이벤트입니다.
+이 샘플에서는 Windows Communication Foundation (WCF)에서 분석 추적을 사용 하 여 ETW (ETW(Windows용 이벤트 추적))에서 이벤트를 내보내는 방법을 보여 줍니다. 분석 추적은 프로덕션 환경에서 WCF 서비스의 문제를 해결할 수 있는 WCF 스택의 주요 지점에서 발생 하는 이벤트입니다.
 
- WCF 서비스의 분석 추적은 성능에 미치는 영향을 최소화하면서 프로덕션 환경에서 켜질 수 있는 추적입니다. 이러한 추적은 ETW 세션에 이벤트로 내보내집니다.
+ WCF 서비스의 분석 추적은 성능에 미치는 영향을 최소화 하면서 프로덕션 환경에서 설정 될 수 있는 추적입니다. 이러한 추적은 ETW 세션에 이벤트로 내보내집니다.
 
- 이 샘플에는 이벤트 뷰어를 사용하여 볼 수 있는 이벤트로 이벤트가 서비스에서 이벤트로 내보내지는 기본 WCF 서비스가 포함되어 있습니다. WCF 서비스의 이벤트를 수신하는 전용 ETW 세션을 시작할 수도 있습니다. 이 샘플에는 이벤트 뷰어를 사용하여 읽을 수 있는 이진 파일에 이벤트를 저장하는 전용 ETW 세션을 만드는 스크립트가 포함되어 있습니다.
+ 이 샘플에는 서비스에서 이벤트 로그로 이벤트를 내보내는 기본 WCF 서비스가 포함 되어 있습니다 .이 서비스는 이벤트 뷰어을 사용 하 여 볼 수 있습니다. 또한 WCF 서비스에서 이벤트를 수신 대기 하는 전용 ETW 세션을 시작할 수 있습니다. 이 샘플에는 이벤트 뷰어를 사용하여 읽을 수 있는 이진 파일에 이벤트를 저장하는 전용 ETW 세션을 만드는 스크립트가 포함되어 있습니다.
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2012를 사용하여 EtwAnalyticTraceSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2012을 사용 하 여 EtwAnalyticTraceSample 솔루션 파일을 엽니다.
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
 3. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
-     웹 브라우저에서 **계산기.svc를 클릭합니다.** 서비스의 WSDL 문서에 대한 URI가 브라우저에 나타납니다. 이 URI를 복사합니다.
+     웹 브라우저에서 **계산기 .svc**를 클릭 합니다. 서비스의 WSDL 문서에 대한 URI가 브라우저에 나타납니다. 이 URI를 복사합니다.
 
-     기본적으로 서비스는 포트 1378에서 `http://localhost:1378/Calculator.svc`요청을 수신 대기하기 시작합니다.
+     기본적으로 서비스는 포트 1378에서 요청 수신을 시작 `http://localhost:1378/Calculator.svc` 합니다.
 
-4. WCF 테스트 클라이언트(WcfTestClient.exe)를 실행합니다.
+4. WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다.
 
-     WCF 테스트 클라이언트(WcfTestClient.exe)는 `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`에 있습니다.  기본 Visual Studio 2012 `C:\Program Files\Microsoft Visual Studio 10.0`설치 dir은 .
+     WCF 테스트 클라이언트 (WcfTestClient.exe)는에 `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe` 있습니다.  기본 Visual Studio 2012 설치 디렉터리는 `C:\Program Files\Microsoft Visual Studio 10.0` 입니다.
 
-5. WCF 테스트 클라이언트 내에서 **파일**을 선택한 다음 **서비스 추가를**선택하여 서비스를 추가합니다.
+5. WCF 테스트 클라이언트 내에서 **파일**을 선택 하 고 **서비스 추가**를 선택 하 여 서비스를 추가 합니다.
 
      입력 상자에 엔드포인트 주소를 추가합니다. 기본값은 `http://localhost:1378/Calculator.svc`입니다.
 
 6. 이벤트 뷰어 애플리케이션을 엽니다.
 
-     서비스를 호출하기 전에 이벤트 뷰어를 시작하고 이벤트 로그가 WCF 서비스에서 내보낸 이벤트를 추적하는 지 확인합니다.
+     서비스를 호출 하기 전에 이벤트 뷰어를 시작 하 고 이벤트 로그가 WCF 서비스에서 내보낸 추적 이벤트를 수신 대기 하 고 있는지 확인 합니다.
 
-7. **시작** 메뉴에서 **관리 도구를**선택한 다음 이벤트 **뷰어**를 선택합니다.  **분석** 및 **디버그** 로그를 활성화합니다.
+7. **시작** 메뉴에서 **관리 도구**를 선택한 다음 **이벤트 뷰어**합니다.  **분석** 및 **디버그** 로그를 사용 하도록 설정 합니다.
 
-8. 이벤트 뷰어의 트리 보기에서 **이벤트 뷰어,** **응용 프로그램 및 서비스 로그,** **Microsoft,** **Windows**및 응용 프로그램 서버 응용 **프로그램으로 이동합니다.** **응용 프로그램 서버-응용 프로그램을**마우스 오른쪽 단추로 클릭하고 **보기를**선택한 다음 분석 및 디버그 로그 표시 를 **선택합니다.**
+8. 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용**프로그램으로 이동 합니다. **응용 프로그램 서버-응용 프로그램**을 마우스 오른쪽 단추로 클릭 하 고 **보기**를 선택한 다음 **분석 및 디버그 로그 표시**를 선택 합니다.
 
-     **분석 및 디버그 로그 표시** 옵션이 선택되어 있는지 확인합니다.
+     **분석 및 디버그 로그 표시** 옵션이 선택 되어 있는지 확인 합니다.
 
-9. 분석 로그를 **활성화합니다.**
+9. **분석** 로그를 사용 하도록 설정 합니다.
 
-     이벤트 뷰어의 트리 보기에서 **이벤트 뷰어,** **응용 프로그램 및 서비스 로그,** **Microsoft,** **Windows**및 응용 프로그램 서버 응용 **프로그램으로 이동합니다.** **분석** 클릭하고 **로그 사용 을**선택합니다.
+     이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용**프로그램으로 이동 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
 
 #### <a name="to-test-the-service"></a>서비스를 테스트하려면
 
-1. WCF 테스트 클라이언트로 다시 전환하고 두 번 클릭하고 `Divide` 분모를 0으로 지정하는 기본값을 유지합니다.
+1. WCF 테스트 클라이언트로 다시 전환 하 고 분모를 0으로 지정 하는 기본값을 두 번 클릭 `Divide` 하 고 유지 합니다.
 
      분모가 0이면 서비스에서는 오류를 throw합니다.
 
 2. 서비스에서 내보낸 이벤트를 확인합니다.
 
-     이벤트 뷰어로 다시 전환 하고 **이벤트 뷰어로**이동 , **응용 프로그램 및 서비스 로그**, **마이크로 소프트**, **윈도우**, 다음 응용 프로그램 서버 **응용 프로그램**. **분석** 단추를 클릭하고 **새로 고침을**선택합니다.
+     이벤트 뷰어으로 다시 전환 하 고 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용**프로그램으로 이동 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **새로 고침**을 선택 합니다.
 
      WCF 분석 추적 이벤트가 이벤트 뷰어에 표시됩니다. 서비스에서 오류가 throw되었으므로 이벤트 뷰어에 오류 추적 이벤트가 표시됩니다.
 
@@ -72,21 +72,21 @@ ms.locfileid: "79183208"
 
 1. 이벤트 뷰어를 엽니다.
 
-2. 이벤트 **뷰어,** **응용 프로그램 및 서비스 로그,** **Microsoft**, **Windows**및 **응용 프로그램-서버-응용 프로그램으로**이동합니다. 분석 클릭을 마우스 **오른쪽 단추로** 클릭하고 **로그 사용 안 함**선택.
+2. **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램-서버-** 응용 프로그램으로 이동 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 사용 안 함**을 선택 합니다.
 
-3. 이벤트 **뷰어,** **응용 프로그램 및 서비스 로그,** **Microsoft**, **Windows**및 **응용 프로그램-서버-응용 프로그램으로**이동합니다. 분석 클릭을 마우스 **오른쪽 단추로** 클릭하고 **로그 지우기**를 선택합니다.
+3. **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램-서버-** 응용 프로그램으로 이동 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 지우기**를 선택 합니다.
 
-4. 이벤트를 지우려면 **지우기** 옵션을 선택합니다.
+4. **지우기** 옵션을 선택 하 여 이벤트를 지웁니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
-ms.openlocfilehash: aa422dcb7efbc0f6f7f09e09a6c9e44b40ada86b
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: e1da57abba559cdb1e54071c103d67b5327c30ac
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309484"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553703"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>공용 언어 런타임의 ETW 이벤트
 CLR(공용 언어 런타임)은 다양한 디버깅 및 프로파일링 이벤트를 통해 ETW(Windows용 이벤트 추적) 진단 정보에 대한 유용한 이벤트 추적을 제공합니다. CLR ETW 이벤트는 Windows ETW 추적 시스템을 사용하여 공용 언어 런타임에서 제공되는 기존 프로파일링 및 디버깅 지원을 확장합니다.  
   
- ETW에 대 한 자세한 내용은 ETW를 [사용한 디버깅 및 성능 조정 개선](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) 문서에 나와 있습니다. Xperf에 대한 자세한 내용은 NTDebugging 블로그의 [Windows Performance Toolkit - Xperf](https://docs.microsoft.com/archive/blogs/ntdebugging/windows-performance-toolkit-xperf)(Windows 성능 도구 키트 - Xperf) 항목에서 찾을 수 있습니다.  
+ ETW에 대 한 자세한 내용은 ETW를 [사용한 디버깅 및 성능 조정 개선](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) 문서에 나와 있습니다. Xperf에 대한 자세한 내용은 NTDebugging 블로그의 [Windows Performance Toolkit - Xperf](/archive/blogs/ntdebugging/windows-performance-toolkit-xperf)(Windows 성능 도구 키트 - Xperf) 항목에서 찾을 수 있습니다.  
   
  .NET Framework 4 이상은 이벤트 항목에 설명 된 모든 이벤트에 필요 합니다. Windows Vista 운영 체제가 최소 지원 클라이언트이고, Windows Server 2008이 최소 지원 서버입니다.  
   
@@ -34,6 +34,6 @@ CLR(공용 언어 런타임)은 다양한 디버깅 및 프로파일링 이벤�
  [CLR ETW 이벤트](clr-etw-events.md)  
  CLR ETW 이벤트, 해당 키워드 및 이벤트 데이터를 자세히 설명합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ETW Events in the .NET Framework](etw-events.md)

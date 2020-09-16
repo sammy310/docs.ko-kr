@@ -2,12 +2,12 @@
 title: 변수 및 인수 추적
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: c5d3fe6626c22184edd83de6aedad8589ab2ef35
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837547"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552494"
 ---
 # <a name="variable-and-argument-tracking"></a>변수 및 인수 추적
 워크플로 실행을 추적할 때 데이터를 추출하는 것이 유용할 때가 많습니다. 이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 추적을 통해 워크플로의 활동 범위 내에서 표시 변수 또는 인수를 추출할 수 있습니다. 추적 프로필을 사용하여 데이터를 쉽게 추출할 수 있습니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "74837547"
   
 - 변수 이름으로 변수를 지정할 경우 추적을 실행하면 추적 중인 현재 활동과 부모 활동에서 변수를 찾습니다. 즉, 현재 활동 범위와 부모 범위에서 변수를 검색합니다.  
   
-- Name = "\*"을 사용 하 여 추출할 변수를 지정 하면 추적 중인 현재 활동 내의 모든 변수가 추출 됩니다. 이 경우 범위 내에 있지만 부모 활동에 정의된 변수는 추출되지 않습니다.  
+- Name = ""를 사용 하 여 추출할 변수를 지정 하면 \* 추적 중인 현재 활동 내의 모든 변수가 추출 됩니다. 이 경우 범위 내에 있지만 부모 활동에 정의된 변수는 추출되지 않습니다.  
   
  인수를 추출할 경우 추출되는 인수는 활동의 상태에 따라 다릅니다. 활동 상태가 Executing인 경우 `InArguments`만 추출할 수 있습니다. 다른 활동 상태(Closed, Faulted, Canceled)인 경우 모든 인수, InArguments 및 OutArguments를 추출할 수 있습니다.  
   
@@ -48,5 +48,5 @@ ms.locfileid: "74837547"
   
 ## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric을 사용 하 여 응용 프로그램 모니터링](/previous-versions/appfabric/ee677276(v=azure.10))
