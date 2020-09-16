@@ -5,12 +5,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115649"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551587"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> 요소
 애플리케이션 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 애플리케이션이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "73115649"
   
 |값|Description|  
 |-----------|-----------------|  
-|true|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정 합니다. 기본값입니다.|  
+|true|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정 합니다. 이것이 기본값입니다.|  
 |false|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하지 않도록 설정 합니다. 이렇게 하면 응용 프로그램에서 지정 된 어셈블리의 여러 구현에 대 한 참조를 사용할 수 있습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -80,7 +80,7 @@ ms.locfileid: "73115649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [-appconfig(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET Framework 어셈블리 통합 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [.NET Framework 어셈블리 통합 개요](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

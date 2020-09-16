@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9aadf9701444d215291b6fc19cc8cd61ca832837
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a276ecfe65ed9752f39ed68a36e8e17a24255508
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452242"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558318"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 메서드
 
@@ -42,22 +42,22 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 - `clientData`
 
-  \[in] 프로파일러 제공 데이터를 `callback` 함수에 전달 합니다.
+  \[in] 프로파일러에서 함수에 전달할 데이터를 제공 `callback` 합니다.
 
 ## <a name="remarks"></a>설명
 
-`EnumerateObjectReferences` 메서드는 참조를 저장 하는 배열을 미리 할당 하는 대신 프로파일러의 요청 시 참조를 안내 한다는 점을 제외 하 고 [ObjectReferences](icorprofilercallback-objectreferences-method.md)와 비슷합니다.
+`EnumerateObjectReferences`메서드는 참조를 저장 하는 배열을 미리 할당 하는 대신 프로파일러의 요청 시 참조를 [ObjectReferences](icorprofilercallback-objectreferences-method.md)한다는 점을 제외 하 고는와 유사 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?pivots=os-windows)를 참조 하세요.
+**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/windows.md?pivots=os-windows)를 참조 하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
 **라이브러리:** CorGuids.lib
 
-**.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

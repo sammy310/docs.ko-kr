@@ -2,12 +2,12 @@
 title: 서비스 ID 샘플
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: e4b5e739db04fbb3270c9870468433aec7787061
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3365b8e17d847e6e1dc42062dc7fd5c1e4de80d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558136"
 ---
 # <a name="service-identity-sample"></a>서비스 ID 샘플
 이 Service Identity 샘플에서는 서비스의 ID를 설정하는 방법을 보여 줍니다. 클라이언트는 디자인 타임에 서비스의 메타데이터를 사용하여 ID를 검색한 다음 런타임에 서비스의 ID를 인증할 수 있습니다. 서비스 ID의 개념을 사용하면 클라이언트가 작업을 호출하기 전에 서비스를 인증함으로써 인증되지 않은 호출로부터 클라이언트를 보호할 수 있습니다. 보안 연결에서는 또한 서비스가 클라이언트의 액세스를 허용하기 전에 클라이언트의 자격 증명을 인증하는데, 이 부분은 샘플에서 다루지 않습니다. 서버 인증을 표시 하는 [클라이언트](client.md) 의 샘플을 참조 하세요.
@@ -115,18 +115,18 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. Windows XP 또는 Windows Vista에서 MMC 스냅인 도구를 사용 하 여 Id 솔루션 폴더의 Identity .pfx 인증서 파일을 LocalMachine/My (Personal) 인증서 저장소로 가져옵니다. 이 파일은 암호로 보호됩니다. 가져오는 동안 암호를 묻는 메시지가 나타납니다. `xyz`암호 상자에를 입력 합니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) 항목을 참조 하세요. 이 작업이 완료 되 면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트에서 Setup.exe를 실행 합니다. 그러면이 인증서가 클라이언트에서 사용 하기 위해 CurrentUser/Trusted 사용자 저장소로 복사 됩니다.
+1. Windows XP 또는 Windows Vista에서 MMC 스냅인 도구를 사용 하 여 Id 솔루션 폴더의 Identity .pfx 인증서 파일을 LocalMachine/My (Personal) 인증서 저장소로 가져옵니다. 이 파일은 암호로 보호됩니다. 가져오는 동안 암호를 묻는 메시지가 나타납니다. `xyz`암호 상자에를 입력 합니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) 항목을 참조 하세요. 이 작업이 완료 되 면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트에서 Setup.bat를 실행 합니다. 그러면이 인증서가 클라이언트에서 사용 하기 위해 CurrentUser/Trusted 사용자 저장소로 복사 됩니다.
 
-2. Windows Server 2003에서는 관리자 권한으로 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+2. Windows Server 2003에서는 관리자 권한으로 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다. 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
+    > Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다. 샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
   
 3. \service\bin 디렉터리에서 Service.exe를 시작합니다. 서비스가 준비 되었음을 나타내고 서비스 종료를 누르기 위한 프롬프트를 표시 하는지 확인 \<Enter> 합니다.  
   
 4. 빌드하고 실행하려면 \client\bin 디렉터리에서 Client.exe를 시작하거나 Visual Studio에서 F5 키를 누릅니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-5. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+5. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 ### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -146,11 +146,11 @@ class CustomIdentityVerifier : IdentityVerifier
   
 8. 클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 여러 개의 인스턴스를 변경해야 합니다.  
   
-9. 클라이언트에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트 열고 importservicecert.bat를 실행 합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.  
+9. 클라이언트에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 ImportServiceCert.bat를 실행 합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.  
   
 10. 서비스 컴퓨터의 명령 프롬프트에서 Service.exe를 실행합니다.  
   
-11. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+11. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   

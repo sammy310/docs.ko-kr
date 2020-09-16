@@ -2,12 +2,12 @@
 title: Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 06d3a7bd798913b06d342ac09d12e736fc436b3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dccfea990afff1d2aacd5e9714472e733684c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597503"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556605"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 이 항목에서는 Windows Vista에서 HTTP 네트워크 프로토콜을 통해 통신 하지 않는 WCF (Windows Communication Foundation) 서비스를 호스트 하는 Windows Process Activation Service (WAS 라고도 함)를 설정 하는 데 필요한 단계에 대해 설명 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "84597503"
 ## <a name="configuring-a-site-with-non-http-bindings"></a>HTTP가 아닌 바인딩을 사용하여 사이트 구성  
  WAS에 HTTP가 아닌 바인딩을 사용하려면 사이트 바인딩을 WAS 구성에 추가해야 합니다. WAS에 대한 구성 저장소는 %windir%\system32\inetsrv\config 디렉터리에 있는 applicationHost.config 파일입니다. WAS와 IIS 7.0에서 이 구성 저장소를 공유합니다.  
   
- applicationHost.config는 메모장과 같은 표준 텍스트 편집기에서 열 수 있는 XML 텍스트 파일입니다. 그러나 IIS 7.0 명령줄 구성 도구 (appcmd.exe)는 비 HTTP 사이트 바인딩을 추가 하는 데 선호 되는 방법입니다.  
+ applicationHost.config는 메모장과 같은 표준 텍스트 편집기에서 열 수 있는 XML 텍스트 파일입니다. 그러나 IIS 7.0 명령줄 구성 도구 (appcmd.exe)는 HTTP가 아닌 사이트 바인딩을 추가 하는 데 선호 되는 방법입니다.  
   
  다음 명령은 appcmd.exe(이 명령은 한 줄로 입력됨)를 사용하여 net.tcp 사이트 바인딩을 기본 웹 사이트에 추가합니다.  
   
@@ -52,7 +52,7 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- \<applicationDefaults>Applicationhost.config에 저장 된 사이트 XML 구성의 요소에서 사용 하도록 설정 된 프로토콜의 목록을 설정할 수도 있습니다.  
+ \<applicationDefaults>ApplicationHost.config에 저장 된 사이트의 XML 구성 요소에서 사용 하도록 설정 된 프로토콜의 목록을 설정할 수도 있습니다.  
   
  applicationHost.config의 다음과 같은 XML 코드는 HTTP 프로토콜 및 HTTP가 아닌 프로토콜에 모두 바인딩되는 사이트를 보여 줍니다. HTTP가 아닌 프로토콜을 지원하는 데 필요한 추가 구성은 주석으로 호출됩니다.  
   
@@ -96,7 +96,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
   
  WAS 활성 WCF 서비스를 빌드하는 방법에 대 한 자세한 지침은 [방법: was에서 WCF 서비스 호스팅](how-to-host-a-wcf-service-in-was.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows Process Activation Service에서의 호스팅](hosting-in-windows-process-activation-service.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

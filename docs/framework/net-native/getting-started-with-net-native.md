@@ -2,12 +2,12 @@
 title: .NET 네이티브 시작
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128404"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551212"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
 
@@ -58,7 +58,7 @@ ms.locfileid: "73128404"
 
 - 리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 직렬화 또는 역직렬화할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.
 
-- 타사 직렬 변환기. Newtonsoft.json JSON serializer가 가장 일반적으로 사용 되는 타사 직렬화 라이브러리는 일반적으로 리플렉션 기반 이며 \* 개체 serialization 및 deserialization을 지원 하기 위해. x l l 파일의 항목이 필요 합니다. 자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "타사 직렬 변환기" 섹션을 참조하세요.
+- 타사 직렬 변환기. Newtonsoft.json JSON serializer가 가장 일반적으로 사용 되는 타사 직렬화 라이브러리는 일반적으로 리플렉션 기반 이며 \* 개체 serialization 및 deserialization을 지원 하기 위해.rd.xml 파일의 항목이 필요 합니다. 자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "타사 직렬 변환기" 섹션을 참조하세요.
 
 **리플렉션을 사용하는 메서드**
 
@@ -79,7 +79,7 @@ ms.locfileid: "73128404"
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>3단계: 앱의 릴리스 빌드 배포 및 테스트
 
-런타임 지시문 파일을 업데이트한 후에는 앱의 릴리스 빌드를 다시 빌드하고 배포할 수 있습니다. .NET 네이티브 이진 파일은 프로젝트의 **속성** 대화 상자, **컴파일** 탭의 **빌드 출력 경로** 텍스트 상자에 지정 된 디렉터리의 ILC 하위 디렉터리에 배치 됩니다 .이 폴더에 없는 이진 파일은 .NET 네이티브으로 컴파일되지 않았습니다. 각각의 대상 플랫폼에서 앱을 철저하게 테스트하고 오류 시나리오를 비롯한 모든 시나리오를 테스트합니다.
+런타임 지시문 파일을 업데이트한 후에는 앱의 릴리스 빌드를 다시 빌드하고 배포할 수 있습니다. .NET 네이티브 이진 파일은 프로젝트의 **속성** 대화 상자, **컴파일** 탭의 **빌드 출력 경로** 텍스트 상자에 지정 된 디렉터리의 ILC 하위 디렉터리에 배치 됩니다. 이 폴더에 없는 이진 파일은 .NET 네이티브으로 컴파일되지 않았습니다. 각각의 대상 플랫폼에서 앱을 철저하게 테스트하고 오류 시나리오를 비롯한 모든 시나리오를 테스트합니다.
 
 앱이 정상적으로 작동하지 않는 경우(특히 런타임에 [MissingMetadataException](missingmetadataexception-class-net-native.md) 또는 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외가 throw되는 경우) 다음 섹션인 [4단계: 수동으로 누락된 메타데이터 문제 해결](#Step4)의 지침을 따릅니다. 첫째 예외를 사용하도록 설정하면 이러한 버그를 찾는 데 도움이 될 수 있습니다.
 
@@ -121,10 +121,10 @@ ms.locfileid: "73128404"
 
 - [.NET 네이티브 앱의 런타임 예외](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET 네이티브 설치 및 구성](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET 네이티브 설치 및 구성](/previous-versions/dn600164(v=vs.110))
 - [.NET 네이티브 및 컴파일](net-native-and-compilation.md)
 - [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
 - [리플렉션을 사용하는 API](apis-that-rely-on-reflection.md)

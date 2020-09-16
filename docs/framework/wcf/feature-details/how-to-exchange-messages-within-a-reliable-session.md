@@ -2,18 +2,18 @@
 title: '방법: 신뢰할 수 있는 세션 내에서 메시지 교환'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052041"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550191"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>방법: 신뢰할 수 있는 세션 내에서 메시지 교환
 
 이 항목에서는 기본적이지는 않지만 신뢰할 수 있는 세션을 지원하는 시스템 제공 바인딩 중 하나를 사용하여 이러한 세션을 사용하도록 설정하는 데 필요한 단계에 대해 간략하게 설명합니다. 구성 파일에서 선언적으로 또는 코드를 사용 하 여 신뢰할 수 있는 세션을 사용 하도록 설정 합니다. 이 절차에서는 클라이언트 및 서비스 구성 파일을 사용 하 여 신뢰할 수 있는 세션을 사용 하도록 설정 하 고 메시지가 전송 된 순서 대로 도착 규정 합니다.
 
-이 절차의 핵심 부분은 끝점 구성 요소에 `bindingConfiguration` 이라는 바인딩 구성을 참조 하는 특성이 포함 되어 있다는 것입니다 `Binding1` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)구성 요소는 요소의 특성을로 설정 하 여 신뢰할 수 있는 세션을 사용 하도록이 이름을 참조 합니다 `enabled` [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) `true` . `ordered` 특성을 `true`로 설정하여 신뢰할 수 있는 세션에 대해 순서가 지정된 배달 보증을 지정합니다.
+이 절차의 핵심 부분은 끝점 구성 요소에 `bindingConfiguration` 이라는 바인딩 구성을 참조 하는 특성이 포함 되어 있다는 것입니다 `Binding1` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)구성 요소는 요소의 특성을로 설정 하 여 신뢰할 수 있는 세션을 사용 하도록이 이름을 참조 합니다 `enabled` [**\<reliableSession>**](/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) `true` . `ordered` 특성을 `true`로 설정하여 신뢰할 수 있는 세션에 대해 순서가 지정된 배달 보증을 지정합니다.
 
 이 예제의 소스 복사에 대해서는 [WS 신뢰할 수 있는 세션](../samples/ws-reliable-session.md)을 참조 하세요.
 
@@ -67,7 +67,7 @@ ms.locfileid: "86052041"
 
 ## <a name="example"></a>예제
 
-기본적으로 여러 시스템 제공 바인딩은 신뢰할 수 있는 세션을 지원합니다. 내용은 다음과 같습니다.
+기본적으로 여러 시스템 제공 바인딩은 신뢰할 수 있는 세션을 지원합니다. 여기에는 다음이 포함됩니다.
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -77,6 +77,6 @@ ms.locfileid: "86052041"
 
 신뢰할 수 있는 세션을 지 원하는 사용자 지정 바인딩을 만드는 방법에 대 한 예제는 [방법: HTTPS를 사용 하 여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기](how-to-create-a-custom-reliable-session-binding-with-https.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [신뢰할 수 있는 세션](reliable-sessions.md)

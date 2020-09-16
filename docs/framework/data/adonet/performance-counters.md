@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286678"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557907"
 ---
 # <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
 ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 애플리케이션 상태와 애플리케이션에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
@@ -395,11 +395,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 소스에 연결](connecting-to-a-data-source.md)
 - [OLE DB, ODBC 및 Oracle 연결 풀링](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET용 성능 카운터](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [런타임 프로파일링](../../debug-trace-profile/runtime-profiling.md)
-- [성능 임계값 모니터링 소개](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [ASP.NET용 성능 카운터](/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [런타임 프로 파일링](../../debug-trace-profile/runtime-profiling.md)
+- [성능 임계값 모니터링 소개](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET 개요](ado-net-overview.md)

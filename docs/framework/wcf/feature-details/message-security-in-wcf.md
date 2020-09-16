@@ -3,12 +3,12 @@ title: WCF의 메시지 보안
 description: 전송 및 메시지 보안 모드의 조합을 사용 하는 WCF 메시지 보안 유형인 TransportWithMessageCredential에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea10a87a7c8f9e545c320af30c5cf9958317c2f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245026"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551134"
 ---
 # <a name="message-security-in-wcf"></a>WCF의 메시지 보안
 
@@ -64,9 +64,9 @@ WCF (Windows Communication Foundation)에는 보안을 제공 하는 두 가지 
 
 - XML 수준 보안 메커니즘과 WS-Security 사양 지원을 구현해야 합니다. 이로 인해 상호 운용성이 저하될 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)
 - [전송 보안](transport-security.md)
 - [방법: 전송 보안 및 메시지 자격 증명 사용](how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft 패턴 및 실습, 3장: 전송 및 메시지 레이어 보안 구현](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Microsoft 패턴 및 실습, 3장: 전송 및 메시지 레이어 보안 구현](/previous-versions/msp-n-p/ff647370(v=pandp.10))

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 2a9b26f8da7616480f69a6c4580b8d351833c9ee
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d2d8556b1ed2ac0a2b030a88d6bfc0ad48ed6f5c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646313"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557517"
 ---
 # <a name="workflow-security"></a>워크플로 보안
-WF(Windows 워크플로우 파운데이션)는 Microsoft SQL Server 및 WCF(Windows 통신 재단)와 같은 여러 가지 기술과 통합되어 있습니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.
+WF (Windows Workflow Foundation)는 WCF (Microsoft SQL Server 및 Windows Communication Foundation)와 같은 다양 한 기술과 통합 됩니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.
 
 ## <a name="persistence-security-concerns"></a>지속성 보안 고려 사항
 
@@ -38,14 +38,14 @@ WF(Windows 워크플로우 파운데이션)는 Microsoft SQL Server 및 WCF(Wind
 
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost에 대한 고려 사항
 
-- 워크플로에 사용되는 WCF(Windows 통신 재단) 끝점을 보호해야 합니다. 자세한 내용은 [WCF 보안 개요를](../wcf/feature-details/security-overview.md)참조하십시오.
+- 워크플로에서 사용 되는 WCF (Windows Communication Foundation) 끝점을 보호 해야 합니다. 자세한 내용은 [WCF 보안 개요](../wcf/feature-details/security-overview.md)를 참조 하세요.
 
-- <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 를 만들어](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) 자세한 내용을 확인하세요.
+- <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. 자세한 내용은 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) 를 참조 하세요.
 
 - 들어오는 메시지에 대한 ServiceSecurityContext는 OperationContext에 액세스하여 워크플로 내에서도 사용할 수 있습니다.
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
- Microsoft WF 보안 팩 커뮤니티 기술 미리 보기(CTP) 1은 [.NET Framework 4(WF 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) 및 [Windows ID Foundation(WIF)의](https://docs.microsoft.com/previous-versions/dotnet/framework/security/index) [Windows 워크플로 우영 재단을](index.md) 기반으로 한 일련의 활동 및 구현입니다. Microsoft WF Security Pack CTP 1에는 다음과 같은 워크플로를 사용하여 다양한 보안 관련 시나리오를 손쉽게 사용하는 방법을 보여 주는 활동과 디자이너가 모두 포함되어 있습니다.
+ Microsoft WF Security Pack community 기술 미리 보기 (CTP) 1은 [.NET Framework 4](/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (wf 4) 및 [WIF (Windows Identity Foundation](/previous-versions/dotnet/framework/security/index))의 [Windows Workflow Foundation](index.md) 을 기반으로 하는 일련의 작업 및 구현입니다. Microsoft WF Security Pack CTP 1에는 다음과 같은 워크플로를 사용하여 다양한 보안 관련 시나리오를 손쉽게 사용하는 방법을 보여 주는 활동과 디자이너가 모두 포함되어 있습니다.
 
 1. 워크플로에서 클라이언트 ID 가장
 
@@ -55,4 +55,4 @@ WF(Windows 워크플로우 파운데이션)는 Microsoft SQL Server 및 WCF(Wind
 
 4. WS-Trust ActAs를 사용하여 클라이언트 보안 토큰이 백엔드 서비스로 이동(클레임 기반 위임)
 
-WF 보안 팩 CTP를 다운로드하려면 [WF 보안 팩 CTP를](https://archive.codeplex.com/?p=wf) 참조하십시오.
+자세한 내용을 보고 WF Security Pack CTP를 다운로드 하려면 다음을 참조 하세요. [Wf Security PACK ctp](https://archive.codeplex.com/?p=wf)

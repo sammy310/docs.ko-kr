@@ -6,12 +6,12 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 4c3348cfb84b8571dc1f24b774ffcd691aaa5001
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247522"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558279"
 ---
 # <a name="authentication-in-wcf"></a>WCF에서 권한 부여
 다음 항목에서는 Windows 인증, x.509 인증서, 사용자 이름 및 암호 등의 인증을 제공 하는 Windows Communication Foundation (WCF)의 다양 한 메커니즘을 보여 줍니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "85247522"
 ## <a name="related-sections"></a>관련 단원  
  [일반적인 보안 시나리오](common-security-scenarios.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

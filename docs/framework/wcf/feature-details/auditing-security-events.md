@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5ab10bcc58166d5a38768f988fb18f23088256cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558292"
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그램은 감사 기능을 사용 하 여 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
@@ -75,7 +75,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
   
  감사가 설정되어 있지만 `auditLogLocation`이 지정되어 있지 않으면 보안 로그 기록을 지원하는 플랫폼의 기본 로그 이름은 "Security" 로그이고, 그렇지 않으면 "Application" 로그입니다. Windows Server 2003 및 Windows Vista 운영 체제만 보안 로그에 쓰기를 지원 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 "운영 체제" 단원을 참조 하십시오.  
   
-## <a name="security-considerations"></a>보안 고려사항  
+## <a name="security-considerations"></a>보안 고려 사항  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목을 기록할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다. 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다.  
   
  Windows XP의 응용 프로그램 로그에 기록 된 감사 이벤트는 모든 인증 된 사용자에 게 표시 됩니다.  
@@ -93,12 +93,12 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
 #### <a name="other-factors"></a>기타 요소  
  다음 표에서는 운영 체제 이외에 로깅 사용을 제어하는 기타 설정에 대해 설명합니다.  
   
-|요소|애플리케이션 로그|보안 로그|  
+|요인|애플리케이션 로그|보안 로그|  
 |------------|---------------------|------------------|  
 |정책 관리 감사|해당 사항 없음|구성과 함께 보안 로그는 LSA(로컬 보안 기관) 정책에 의해서도 제어됩니다. "개체 액세스 감사" 범주 또한 사용하도록 설정해야 합니다.|  
 |기본 사용자 경험|모든 인증된 사용자는 애플리케이션 로그에 기록할 수 있으므로 애플리케이션 프로세스를 위한 추가 권한 단계가 필요하지 않습니다.|애플리케이션 프로세스(컨텍스트)에 `SeAuditPrivilege`가 있어야 합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
@@ -107,4 +107,4 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
 - [방법: 보안 이벤트 감사](how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

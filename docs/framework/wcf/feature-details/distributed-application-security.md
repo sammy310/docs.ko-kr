@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599154"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557543"
 ---
 # <a name="distributed-application-security"></a>분산 애플리케이션 보안
 WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어 및 감사의 세 가지 주요 기능 영역으로 구분 됩니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
@@ -29,7 +29,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 ## <a name="integrity-confidentiality-and-authentication"></a>무결성, 기밀성 및 인증  
  세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 애플리케이션에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |무결성|*무결성* 은 데이터를 완료 하 고 정확 하 게 지정 하는 것입니다. 특히, 한 지점에서 다른 지점으로 이동 하 여 많은 행위자가 읽을 수 있습니다. 무결성은 데이터 변조 방지를 위해 유지되어야 하며, 일반적으로 메시지에 대한 디지털 서명을 통해 수행됩니다.|  
 |기밀성|*기밀성* 은 의도 된 판독기가 아닌 다른 사람이 메시지를 읽지 않았다는 것입니다. 예를 들어, 인터넷을 통해 전송되는 신용 카드 번호를 기밀로 유지해야 합니다. 기밀성은 대개 퍼블릭 키/프라이빗 키 스키마를 사용하는 데이터 암호화를 통해 제공됩니다.|  
@@ -38,7 +38,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 ## <a name="security-modes"></a>보안 모드  
  WCF에는 다음 표에 설명 된 여러 가지 전송 보안 모드가 있습니다.  
   
-|모드|Description|  
+|Mode|Description|  
 |----------|-----------------|  
 |None|전송 계층 또는 메시지 계층에 보안이 제공되지 않습니다. 요소 또는 코드를 사용할 때 클래스를 제외 하 고 기본적으로이 모드를 사용 하는 미리 정의 된 바인딩이 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) <xref:System.ServiceModel.BasicHttpBinding> 없습니다.|  
 |전송|무결성, 기밀성 및 상호 인증을 위해 HTTPS와 같은 보안 전송을 사용합니다.|  
@@ -62,7 +62,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 ### <a name="transport-client-credential-types"></a>전송 클라이언트 자격 증명 형식  
  다음 표에서는 전송 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
-|설정|Description|  
+|Setting|Description|  
 |-------------|-----------------|  
 |None|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
 |Basic|기본 인증을 지정합니다. 자세한 내용은 RFC2617, "[HTTP 인증: 기본 및 다이제스트 인증](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)"을 참조 하세요.|  
@@ -74,7 +74,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 ### <a name="message-client-credential-types"></a>메시지 클라이언트 자격 증명 형식  
  다음 표에서는 메시지 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
-|설정|Description|  
+|Setting|Description|  
 |-------------|-----------------|  
 |None|서비스와 익명 클라이언트가 상호 작용할 수 있습니다.|  
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다. SSPI 협상 메커니즘을 사용하여 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.|  
@@ -94,9 +94,9 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
   
  메시지 보안 모드에서는 초기 협상 과정에서 서비스 자격 증명을 클라이언트와 교환하도록 전송 보안을 수행할 수도 있습니다. 협상을 사용하도록 설정하려면 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 속성을 `true`로 설정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [엔드포인트 만들기 개요](../endpoint-creation-overview.md)
 - [시스템 제공 바인딩](../system-provided-bindings.md)
 - [보안 개요](security-overview.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

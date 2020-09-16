@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7269b32e509039fdd767446bd6e10202b089c094
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550021"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core 및 .NET 5의 플랫폼 간 암호화
 
@@ -109,7 +109,7 @@ OS 라이브러리는 암호화 및 암호 해독 패딩에 사용 됩니다. �
 | PKCS1 서명 (SHA-2)               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | PSS                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows CryptoAPI (CAPI)는 PKCS1 알고리즘을 사용 하 여 서명할 수 있습니다. 하지만 개별 RSA 개체는이를 지원 하지 않는 CSP (암호화 서비스 공급자)에서 로드 될 수 있습니다.
+\* Windows CryptoAPI (CAPI)는 PKCS1 알고리즘을 사용 하 여 서명할 수 있습니다. 하지만 개별 RSA 개체는이를 지원 하지 않는 CSP (암호화 서비스 공급자)에서 로드 될 수 있습니다.
 
 #### <a name="rsa-on-windows"></a>Windows의 RSA
 
@@ -151,7 +151,7 @@ ECDSA 키 곡선은 OS 라이브러리에 의해 정의 되며 해당 제한 사
 
 <sup>1</sup> Linux 배포판은 모두 동일한 명명 된 곡선을 지원 하지 않습니다.
 
-<sup>2</sup> 명명 된 곡선에 대 한 지원은 windows 10의 windows CNG에 추가 되었습니다. 자세한 내용은 [타원 커브로 명명 된 CNG](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx)를 참조 하세요. Windows 7의 세 가지 곡선을 제외 하 고 이전 버전의 Windows에서는 명명 된 곡선을 사용할 수 없습니다.
+<sup>2</sup> 명명 된 곡선에 대 한 지원은 windows 10의 windows CNG에 추가 되었습니다. 자세한 내용은 [타원 커브로 명명 된 CNG](/windows/win32/seccng/cng-named-elliptic-curves)를 참조 하세요. Windows 7의 세 가지 곡선을 제외 하 고 이전 버전의 Windows에서는 명명 된 곡선을 사용할 수 없습니다.
 
 <sup>3</sup> 명시적 곡선 매개 변수를 사용한 내보내기는 macos 또는 이전 버전의 Windows에서 사용할 수 없는 OS 라이브러리를 지원 해야 합니다.
 
@@ -164,7 +164,7 @@ ECDSA 키 곡선은 OS 라이브러리에 의해 정의 되며 해당 제한 사
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
 
-\*MacOS에서 <xref:System.Security.Cryptography.ECDsaOpenSsl> OpenSSL가 시스템에 설치 되어 있고 동적 라이브러리 로드를 통해 적절 한 dylib crypto을 찾을 수 있는 경우 작동 합니다. 적절 한 라이브러리를 찾을 수 없는 경우 예외가 throw 됩니다.
+\* MacOS에서 <xref:System.Security.Cryptography.ECDsaOpenSsl> OpenSSL가 시스템에 설치 되어 있고 동적 라이브러리 로드를 통해 적절 한 dylib crypto을 찾을 수 있는 경우 작동 합니다. 적절 한 라이브러리를 찾을 수 없는 경우 예외가 throw 됩니다.
 
 ### <a name="ecdh"></a>ECDH
 
@@ -194,7 +194,7 @@ ECDH 키 곡선은 OS 라이브러리에 의해 정의 되며 해당 제한 사�
 
 <sup>1</sup> Linux 배포판은 모두 동일한 명명 된 곡선을 지원 하지 않습니다.
 
-<sup>2</sup> 명명 된 곡선에 대 한 지원은 windows 10의 windows CNG에 추가 되었습니다. 자세한 내용은 [타원 커브로 명명 된 CNG](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx)를 참조 하세요. Windows 7의 세 가지 곡선을 제외 하 고 이전 버전의 Windows에서는 명명 된 곡선을 사용할 수 없습니다.
+<sup>2</sup> 명명 된 곡선에 대 한 지원은 windows 10의 windows CNG에 추가 되었습니다. 자세한 내용은 [타원 커브로 명명 된 CNG](/windows/win32/seccng/cng-named-elliptic-curves)를 참조 하세요. Windows 7의 세 가지 곡선을 제외 하 고 이전 버전의 Windows에서는 명명 된 곡선을 사용할 수 없습니다.
 
 <sup>3</sup> 명시적 곡선 매개 변수를 사용한 내보내기는 macos 또는 이전 버전의 Windows에서 사용할 수 없는 OS 라이브러리를 지원 해야 합니다.
 
@@ -207,7 +207,7 @@ ECDH 키 곡선은 OS 라이브러리에 의해 정의 되며 해당 제한 사�
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
 
-\*MacOS에서 <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL가 설치 되 고 동적 라이브러리 로드를 통해 적절 한 dylib crypto을 찾을 수 있는 경우 작동 합니다. 적절 한 라이브러리를 찾을 수 없는 경우 예외가 throw 됩니다.
+\* MacOS에서 <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL가 설치 되 고 동적 라이브러리 로드를 통해 적절 한 dylib crypto을 찾을 수 있는 경우 작동 합니다. 적절 한 라이브러리를 찾을 수 없는 경우 예외가 throw 됩니다.
 
 ### <a name="dsa"></a>DSA
 
@@ -222,7 +222,7 @@ DSA (디지털 서명 알고리즘) 키 생성은 시스템 라이브러리에 �
 | FIPS 186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
 | FIPS 186-3 (SHA-2 서명) | ✔️         | ✔️    | ❌            | ❌            |
 
-\*macOS는 1024 비트 보다 큰 DSA 키를 로드 하지만 해당 키의 동작이 정의 되지 않습니다. FIPS 186-3에 따라 동작 하지 않습니다.
+\* macOS는 1024 비트 보다 큰 DSA 키를 로드 하지만 해당 키의 동작이 정의 되지 않습니다. FIPS 186-3에 따라 동작 하지 않습니다.
 
 #### <a name="dsa-on-windows"></a>Windows의 DSA
 
@@ -261,7 +261,7 @@ DSA (디지털 서명 알고리즘) 키 생성은 시스템 라이브러리에 �
 | 여러 인증서, 하나의 개인 키       | ✔️     | ✔️    | ✔️   |
 | 여러 인증서, 여러 개인 키 | ✔️     | ⚠️\*  | ✔️   |
 
-\*.NET 5 preview 릴리스에서 사용할 수 있습니다.
+\* .NET 5 preview 릴리스에서 사용할 수 있습니다.
 
 ### <a name="write-a-pkcs12pfx"></a>PKCS12/PFX 작성
 
@@ -275,7 +275,7 @@ DSA (디지털 서명 알고리즘) 키 생성은 시스템 라이브러리에 �
 | 여러 인증서, 여러 개인 키 | ✔️     | ⚠️\*  | ✔️   |
 | 임시 로드                            | ✔️     | ✔️    | ⚠️\* |
 
-\*.NET 5 preview 릴리스에서 사용할 수 있습니다.
+\* .NET 5 preview 릴리스에서 사용할 수 있습니다.
 
 macOS는 키 집합 개체가 없는 인증서 개인 키를 로드할 수 없습니다 .이 경우 디스크에 써야 합니다. Keychains은 PFX를 로드 하기 위해 자동으로 생성 되며 더 이상 사용 되지 않을 때 삭제 됩니다. 옵션은 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 개인 키를 디스크에 쓰지 않아야 함을 의미 하므로 macOS에서 해당 플래그를 어설션하 면이 발생 <xref:System.PlatformNotSupportedException> 합니다.
 

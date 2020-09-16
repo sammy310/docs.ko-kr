@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416066"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556091"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
 
@@ -55,7 +55,7 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
     - 이 서버는 로컬 컴퓨터에서만 액세스할 수 있습니다.
 
-    - 이 서버는 HTTP 메시지의 기본 포트인 특정 포트(포트 80 제외)와 `localhost` 에서 수신 대기합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))를 참조하세요.
+    - 이 서버는 HTTP 메시지의 기본 포트인 특정 포트(포트 80 제외)와 `localhost` 에서 수신 대기합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](/previous-versions/aspnet/58wxa9w5(v=vs.120))를 참조하세요.
 
     - 이 서버는 현재 사용자 계정의 컨텍스트에서 데이터 서비스를 실행합니다. 예를 들어 관리자 수준의 사용자로를 실행 하는 경우 Visual Studio 개발 서버에서 실행 되는 데이터 서비스에는 관리자 수준의 권한이 있습니다. 따라서 데이터 서비스가 IIS 서버에 배포된 리소스 중 액세스 권한이 없는 리소스에도 액세스할 수 있습니다.
 
@@ -70,7 +70,7 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
 3. **Azure 개발 환경**
 
-     Visual Studio 용 azure 도구에는 Visual Studio에서 Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이러한 도구를 사용 하 여 Azure에 배포할 수 있는 데이터 서비스를 개발할 수 있으며, 배포 하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 [Azure tools For Visual Studio 2015](../../../azure/vs2015-install.md)을 참조 하세요. Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하세요.
+     Visual Studio 용 azure 도구에는 Visual Studio에서 Azure 서비스를 개발 하기 위한 통합 된 도구 집합이 포함 되어 있습니다. 이러한 도구를 사용 하 여 Azure에 배포할 수 있는 데이터 서비스를 개발할 수 있으며, 배포 하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Azure 플랫폼에서 실행 되는 데이터 서비스를 개발할 때 이러한 도구를 사용 합니다. 도구를 설치 하는 방법에 대 한 자세한 내용은 [Azure tools For Visual Studio 2015](../../../azure/vs2015-install.md)을 참조 하세요. Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조 하세요.
 
 ### <a name="development-tips"></a>개발 팁
 
@@ -80,9 +80,9 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
 - HTTP 검사 프로그램은 요청 및 응답 메시지의 내용을 검사할 수 있도록 하 여 데이터 서비스를 디버깅할 때 유용할 수 있습니다. 원시 패킷을 표시할 수 있는 네트워크 패킷 분석기를 사용하여 데이터 서비스와 주고받는 HTTP 요청 및 응답을 검사할 수 있습니다.
 
-- 데이터 서비스를 디버깅할 때 일반 작업을 수행 하는 것 보다 데이터 서비스에서 오류에 대 한 자세한 정보를 얻을 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 [디버깅 후 WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)를 참조 하세요. WCF에서 추적을 사용 하도록 설정 하 여 HTTP 메시징 계층에서 발생 하는 예외를 볼 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.
+- 데이터 서비스를 디버깅할 때 일반 작업을 수행 하는 것 보다 데이터 서비스에서 오류에 대 한 자세한 정보를 얻을 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 [디버깅 후 WCF Data Services](/archive/blogs/phaniraj/debugging-wcf-data-services)를 참조 하세요. WCF에서 추적을 사용 하도록 설정 하 여 HTTP 메시징 계층에서 발생 하는 예외를 볼 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.
 
-- 데이터 서비스는 일반적으로 ASP.NET 응용 프로그램 프로젝트로 개발 되지만 Visual Studio에서 ASP.NET 웹 사이트 프로젝트로 데이터 서비스를 만들 수도 있습니다. 두 프로젝트 형식 간의 차이점에 대 한 자세한 내용은 [웹 응용 프로그램 프로젝트와 Visual Studio의 웹 사이트 프로젝트](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))를 참조 하세요.
+- 데이터 서비스는 일반적으로 ASP.NET 응용 프로그램 프로젝트로 개발 되지만 Visual Studio에서 ASP.NET 웹 사이트 프로젝트로 데이터 서비스를 만들 수도 있습니다. 두 프로젝트 형식 간의 차이점에 대 한 자세한 내용은 [웹 응용 프로그램 프로젝트와 Visual Studio의 웹 사이트 프로젝트](/previous-versions/aspnet/dd547590(v=vs.110))를 참조 하세요.
 
 - Visual Studio에서 **새 항목 추가** 대화 상자를 사용 하 여 데이터 서비스를 만들면 데이터 서비스는 IIS의 ASP.NET에서 호스팅됩니다. ASP.NET 및 IIS는 데이터 서비스의 기본 호스트 이지만 다른 호스팅 옵션도 지원 됩니다. 자세한 내용은 [데이터 서비스 호스팅](hosting-the-data-service-wcf-data-services.md)합니다.
 
@@ -96,34 +96,34 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
   - **ASP.NET 웹 애플리케이션을 위한 배포 기술**
 
-    - [방법: Visual Studio에서 웹 배포 패키지 만들기](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [방법: Visual Studio에서 웹 배포 패키지 만들기](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [방법: Visual Studio에서 한 번 클릭으로 게시를 사용 하 여 웹 프로젝트 배포](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [방법: Visual Studio에서 한 번 클릭으로 게시를 사용 하 여 웹 프로젝트 배포](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **ASP.NET 웹 사이트를 위한 배포 기술**
 
-    - [방법: 웹 사이트 복사 도구를 사용 하 여 웹 사이트 파일 복사](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [방법: 웹 사이트 복사 도구를 사용 하 여 웹 사이트 파일 복사](/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [방법: 웹 사이트 게시](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [방법: 웹 사이트 게시](/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-    - [연습: XCOPY를 사용 하 여 ASP.NET 웹 응용 프로그램 배포](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [연습: XCOPY를 사용 하 여 ASP.NET 웹 응용 프로그램 배포](/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     ASP.NET 응용 프로그램의 배포 옵션에 대 한 자세한 내용은 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))를 참조 하세요.
+     ASP.NET 응용 프로그램의 배포 옵션에 대 한 자세한 내용은 [Visual Studio 및 ASP.NET에 대 한 웹 배포 개요](/previous-versions/aspnet/dd394698(v=vs.110))를 참조 하세요.
 
     > [!TIP]
     > 데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
 
 - **Azure**
 
-     [Azure Tools For Visual Studio](../../../azure/vs2015-install.md)를 사용 하 여 azure에 데이터 서비스를 배포할 수 있습니다. Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)를 참조 하세요.
+     [Azure Tools For Visual Studio](../../../azure/vs2015-install.md)를 사용 하 여 azure에 데이터 서비스를 배포할 수 있습니다. Azure에 데이터 서비스를 배포 하는 방법에 대 한 자세한 내용은 [azure에서 OData 서비스 배포](/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)를 참조 하세요.
 
 ### <a name="deployment-considerations"></a>배포 고려 사항
 
 데이터 서비스를 배포할 때 다음 사항을 고려 하십시오.
 
-- Entity Framework 공급자를 사용 하는 데이터 서비스를 배포 하 여 SQL Server 데이터베이스에 액세스 하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파 해야 할 수도 있습니다. Visual Studio는 대상 데이터베이스에서이 작업을 수행 하기 위해 스크립트 (.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트를 ASP.NET 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 [방법: 웹 응용 프로그램 프로젝트를 사용 하 여 데이터베이스 배포](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))를 참조 하세요. ASP.NET 웹 사이트의 경우 Visual Studio에서 **데이터베이스 게시 마법사** 를 사용 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL Database 게시](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))를 참조 하십시오.
+- Entity Framework 공급자를 사용 하는 데이터 서비스를 배포 하 여 SQL Server 데이터베이스에 액세스 하는 경우 데이터 서비스 배포와 함께 데이터 구조, 데이터 또는 둘 다를 전파 해야 할 수도 있습니다. Visual Studio는 대상 데이터베이스에서이 작업을 수행 하기 위해 스크립트 (.sql 파일)를 자동으로 만들 수 있으며, 이러한 스크립트를 ASP.NET 응용 프로그램의 웹 배포 패키지에 포함할 수 있습니다. 자세한 내용은 [방법: 웹 응용 프로그램 프로젝트를 사용 하 여 데이터베이스 배포](/previous-versions/dd465343(v=vs.100))를 참조 하세요. ASP.NET 웹 사이트의 경우 Visual Studio에서 **데이터베이스 게시 마법사** 를 사용 하 여이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL Database 게시](/previous-versions/aspnet/bb907585(v=vs.100))를 참조 하십시오.
 
-- WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
+- WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
 
 ## <a name="see-also"></a>참조
 

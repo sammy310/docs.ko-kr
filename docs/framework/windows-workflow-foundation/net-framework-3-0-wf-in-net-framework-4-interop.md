@@ -2,18 +2,18 @@
 title: .NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 02f7a4d9cdda0a6c4f23574c5a20ac78eb783ef2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802572"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556078"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
-<xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 내에서 WF 3.5 (.NET Framework 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. 실행 (취소 및 예외 처리 포함) 및 .NET Framework 3.5 작업의 지 속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생 합니다.  
+<xref:System.Activities.Statements.Interop>활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 내에서 .NET Framework 3.5 (wf 3.5) 활동을 래핑하는 (wf 4.5) 활동입니다 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. 실행 (취소 및 예외 처리 포함) 및 .NET Framework 3.5 작업의 지 속성은 실행 중인 워크플로 인스턴스의 컨텍스트 내에서 발생 합니다 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] .  
   
 > [!NOTE]
-> 워크플로 프로젝트의 **대상 프레임 워크** 설정이 **.NET Framework 4.5**로 설정 되어 있지 않으면 <xref:System.Activities.Statements.Interop> 활동이 workflow designer 도구 상자에 나타나지 않습니다.  
+> <xref:System.Activities.Statements.Interop>워크플로 프로젝트의 **대상 프레임 워크** 설정이 **.NET Framework 4.5**으로 설정 되어 있지 않으면 활동이 workflow designer 도구 상자에 나타나지 않습니다.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Interop 활동에서 WF 3 활동 사용을 위한 기준  
  WF 3 활동을 <xref:System.Activities.Statements.Interop> 활동 내에서 성공적으로 실행하려면 다음 기준을 충족해야 합니다.  
@@ -24,12 +24,12 @@ ms.locfileid: "74802572"
   
 - WF 3 활동에는 매개 변수가 없는 public 생성자가 있어야 합니다.  
   
-- <xref:System.Activities.Statements.Interop> 작업이 지원하는 인터페이스 형식의 제한 사항 때문에 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>를 직접 사용할 수는 없지만 워크플로 통신 작업 도구(WCA.exe)를 사용하여 만든 파생 작업을 사용할 수 있습니다. 참조 [Windows Workflow Foundation 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) 세부 정보에 대 한 합니다.  
+- <xref:System.Activities.Statements.Interop> 작업이 지원하는 인터페이스 형식의 제한 사항 때문에 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>를 직접 사용할 수는 없지만 워크플로 통신 작업 도구(WCA.exe)를 사용하여 만든 파생 작업을 사용할 수 있습니다. 참조 [Windows Workflow Foundation 도구](/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) 세부 정보에 대 한 합니다.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Interop 활동에서 WF 3 활동 구성  
  상호 운용 경계에서 WF 3 활동을 구성하여 데이터를 주고 받으려면 WF 3 활동의 속성 및 메타데이터 속성을 <xref:System.Activities.Statements.Interop> 활동에서 노출해야 합니다. WF 3 활동의 메타데이터 속성(예: <xref:System.Workflow.ComponentModel.Activity.Name%2A>)은 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 컬렉션을 통해 노출됩니다. 이 컬렉션은 WF 3 활동의 메타데이터 속성 값을 정의하는 데 사용되는 이름-값 쌍의 컬렉션입니다. 메타데이터 속성은 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 플래그가 설정되는 종속성 속성에 의해 지원되는 속성입니다.  
   
- WF 3 활동 속성은 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 컬렉션을 통해 노출됩니다. 이 컬렉션은 이름-값 쌍의 집합이며 각 값은 WF 3 활동 속성의 인수를 정의하는 데 사용되는 <xref:System.Activities.Argument> 개체입니다. WF 3 활동 속성의 방향은 유추할 수 없기 때문에 모든 속성이 <xref:System.Activities.InArgument>/<xref:System.Activities.OutArgument> 쌍으로 표시 됩니다. 속성의 활동 용도에 따라 <xref:System.Activities.InArgument> 항목, <xref:System.Activities.OutArgument> 항목 또는 둘 모두를 제공할 수 있습니다. 컬렉션에서 <xref:System.Activities.InArgument> 항목에 필요한 이름은 WF 3 활동에 정의된 속성 이름입니다. 컬렉션에서 <xref:System.Activities.OutArgument> 항목의 예상 이름은 속성 이름과 문자열 "Out"의 연결입니다.  
+ WF 3 활동 속성은 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 컬렉션을 통해 노출됩니다. 이 컬렉션은 이름-값 쌍의 집합이며 각 값은 WF 3 활동 속성의 인수를 정의하는 데 사용되는 <xref:System.Activities.Argument> 개체입니다. WF 3 활동 속성의 방향은 유추할 수 없기 때문에 모든 속성이 쌍으로 표시 됩니다 <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> . 속성의 활동 용도에 따라 <xref:System.Activities.InArgument> 항목, <xref:System.Activities.OutArgument> 항목 또는 둘 모두를 제공할 수 있습니다. 컬렉션에서 <xref:System.Activities.InArgument> 항목에 필요한 이름은 WF 3 활동에 정의된 속성 이름입니다. <xref:System.Activities.OutArgument>컬렉션에서 항목의 예상 이름은 속성 이름 및 문자열 "Out"의 연결입니다.  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Interop 활동에서 WF 3 활동 사용 제한  
  WF 3 시스템 제공 활동은 <xref:System.Activities.Statements.Interop> 활동에서 직접 래핑될 수 없습니다. <xref:System.Workflow.Activities.DelayActivity>와 같은 일부 WF 3 활동에서는 유사한 WF 4.5 활동이 있기 때문이고, 다른 활동에서는 활동 기능이 지원되지 않기 때문입니다. 많은 WF 3 시스템 제공 활동은 <xref:System.Activities.Statements.Interop> 활동에 의해 래핑되는 워크플로 내에서 사용될 수 있지만, 다음과 같은 제한 사항이 적용됩니다.  

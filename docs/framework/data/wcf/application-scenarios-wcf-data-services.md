@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 842f560df5229fc8a2249e1317cb348b7ed3361a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346192"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556891"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>애플리케이션 시나리오(WCF Data Services)
 
@@ -20,15 +20,15 @@ WCF Data Services는 OData (Open Data Protocol) 피드로 데이터를 표시 �
 
 - [빠른 시작](quickstart-wcf-data-services.md)
 
-- [서비스로 데이터 노출](exposing-your-data-as-a-service-wcf-data-services.md)
+- [서비스로 데이터 공개](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기](create-a-data-service-using-an-adonet-ef-data-wcf.md)
 
 임의의 CLR 데이터 클래스를 OData 피드로 노출 합니다.
 
-- [서비스로 데이터 노출](exposing-your-data-as-a-service-wcf-data-services.md)
+- [서비스로 데이터 공개](exposing-your-data-as-a-service-wcf-data-services.md)
 
-- [방법: 리플렉션 공급자 사용하여 데이터 서비스 만들기](create-a-data-service-using-rp-wcf-data-services.md)
+- [방법: 리플렉션 공급자를 사용하여 데이터 서비스 만들기](create-a-data-service-using-rp-wcf-data-services.md)
 
 - [Data Services 공급자](data-services-providers-wcf-data-services.md)
 
@@ -42,11 +42,11 @@ WCF Data Services는 OData (Open Data Protocol) 피드로 데이터를 표시 �
 
 Silverlight 기반 클라이언트 응용 프로그램에서 OData 피드를 사용 합니다.
 
-- [WCF Data Services(Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services(Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [비동기 작업](asynchronous-operations-wcf-data-services.md)
 
-- [방법: 컨트롤에 데이터 서비스 데이터 바인딩 (Silverlight 클라이언트)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
+- [방법: 데이터 서비스 데이터를 컨트롤에 바인딩(Silverlight 클라이언트)](/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
 AJAX 기반 클라이언트 응용 프로그램에서 OData 피드를 사용 합니다.
 
@@ -54,7 +54,7 @@ AJAX 기반 클라이언트 응용 프로그램에서 OData 피드를 사용 합
 
 - [OData: URI 규칙](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [OData: JavaScript Object Notation (JSON) 형식](https://www.odata.org/developers/protocols/json-format/)
+- [OData: JSON(JavaScript Object Notation) 형식](https://www.odata.org/developers/protocols/json-format/)
 
 OData를 사용 하 여 클라이언트와 서버 간에 데이터를 전송 하는 종단 간 데이터 솔루션을 만듭니다.
 
@@ -70,13 +70,13 @@ OData를 사용 하 여 클라이언트와 서버 간에 데이터를 전송 하
 
 - [비동기 작업](asynchronous-operations-wcf-data-services.md)
 
-- [WCF Data Services(Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services(Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 스트림으로 액세스 되 고 변경 되는 blob (binary large object)로 OData 피드를 노출 하 고 사용 합니다.
 
 - [스트리밍 공급자](streaming-provider-wcf-data-services.md)
 
-- [이진 데이터 작업](working-with-binary-data-wcf-data-services.md)
+- [이진 데이터 사용](working-with-binary-data-wcf-data-services.md)
 
 OData 피드를 WPF (Windows Presentation Framework) 응용 프로그램의 컨트롤에 바인딩합니다.
 

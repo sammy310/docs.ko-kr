@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 2ba0ae7adedc3bf0e0ca0cb92b4205edc968a5d8
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 30910d428ddace7a5d5fc10fc0def21ea14d39c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052015"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556000"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>방법: IIS에서 WCF 서비스 호스팅
 이 항목에서는 인터넷 정보 서비스 (IIS)에서 호스트 되는 WCF (Windows Communication Foundation) 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명 합니다. 이 항목에서는 사용자가 IIS에 대해 잘 알고 있으며 IIS 관리 도구를 사용해 IIS 애플리케이션을 만들고 관리하는 방법을 이해하고 있다고 가정합니다. IIS에 대 한 자세한 내용은 [인터넷 정보 서비스](https://www.iis.net/)를 참조 하세요. IIS 환경에서 실행 되는 WCF 서비스는 프로세스 재활용, 유휴 상태 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화와 같은 IIS 기능을 최대한 활용 합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. HTTP 전송을 사용하는 경우에만 IIS 호스팅을 사용할 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "86052015"
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>IIS에 의해 호스팅되는 서비스를 만들려면  
   
-1. IIS가 컴퓨터에 설치되어 실행되고 있는지 확인합니다. IIS를 설치 하 고 구성 하는 방법에 대 한 자세한 내용은 [iis 7.0 설치 및 구성을](https://docs.microsoft.com/iis/install/installing-iis-7/installing-necessary-iis-components-on-windows-vista) 참조 하세요.  
+1. IIS가 컴퓨터에 설치되어 실행되고 있는지 확인합니다. IIS를 설치 하 고 구성 하는 방법에 대 한 자세한 내용은 [iis 7.0 설치 및 구성을](/iis/install/installing-iis-7/installing-necessary-iis-components-on-windows-vista) 참조 하세요.  
   
 2. "IISHostedCalcService" 라는 응용 프로그램 파일에 대 한 새 폴더를 만들고, ASP.NET에 폴더의 콘텐츠에 대 한 액세스 권한이 있는지 확인 하 고, IIS 관리 도구를 사용 하 여이 응용 프로그램 디렉터리에 실제로 있는 새 IIS 응용 프로그램을 만듭니다. 애플리케이션 디렉터리의 별칭을 만들 때는 “IISHostedCalc”를 사용합니다.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "86052015"
   
 11. 서비스가 올바르게 호스팅되는지 확인하려면 Internet Explorer 인스턴스를 열고 서비스 URL인 `http://localhost/IISHostedCalc/Service.svc`로 이동합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 IIS에서 호스팅되는 계산기 서비스에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[C_HowTo_HostInIIS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#1)]
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)]
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [인터넷 정보 서비스에서의 호스팅](hosting-in-internet-information-services.md)
 - [서비스 호스팅](../hosting-services.md)
 - [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)
 - [보안](security.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

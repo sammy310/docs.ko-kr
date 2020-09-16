@@ -2,12 +2,12 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589983"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558305"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
 이 섹션에서는를 사용할 때 WCF 메시지 보안에 대해 설명 <xref:System.ServiceModel.NetMsmqBinding> 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84589983"
   
  연결되지 않은 쿼리의 성질을 생각하면, 클라이언트와 서비스는 동시에 온라인 상태가 아닐 수도 있습니다. 따라서 클라이언트와 서비스는 out-of-band로 인증서를 교환해야 합니다. 특히 신뢰할 수 있는 저장소에 서비스의 인증서(인증 기관에 체인으로 연결 가능)를 가지고 있는 클라이언트는 올바른 서비스와 통신하고 있는 것을 신뢰해야 합니다. 클라이언트 인증의 경우 서비스에서는 메시지와 함께 첨부된 X.509 인증서를 저장소에 있는 인증서와 비교하여 클라이언트를 인증합니다. 인증서는 인증 기관에 연결되어 있어야 합니다.  
   
- Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))를 참조 하세요.  
+ Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))를 참조 하세요.  
   
 ### <a name="windows"></a>Windows  
  Windows 메시지 자격 증명 형식에는 Kerberos 프로토콜이 사용됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "84589983"
 ## <a name="using-transport-and-message-security"></a>전송 및 메시지 보안 사용  
  전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [전송 보안을 사용하여 메시지에 보안 설정](securing-messages-using-transport-security.md)
 - [메시지 큐에 대한 메시지 보안](../samples/message-security-over-message-queuing.md)

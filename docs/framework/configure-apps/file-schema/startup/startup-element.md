@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: e936c069275bfa9f7ac81ef1c6fc6228828182a8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd91abb288c1cfb281f17f2fce95d4956908468f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153735"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550848"
 ---
 # <a name="startup-element"></a>\<startup> 요소
 
@@ -36,7 +36,7 @@ ms.locfileid: "79153735"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> .NET Framework 2.0 런타임 활성화 정책 사용 여부를 지정 하거나 .NET Framework 4 활성화 정책을 사용할지 여부를 지정 합니다.|
 
@@ -71,7 +71,7 @@ ms.locfileid: "79153735"
  이 특성은 [CorBindToRuntimeEx 함수와](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)같은 레거시 활성화 경로를 사용 하는 응용 프로그램에서 이전 버전 대신 CLR의 버전 4를 활성화 하는 경우 또는 응용 프로그램이 .NET Framework 4로 빌드된 경우 이전 버전의 .NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 대 한 종속성이 있는 경우에 유용 합니다. 이러한 시나리오에서는 특성을로 설정 `true` 합니다.
 
 > [!NOTE]
-> 특성을로 설정 하면 `true` clr 버전 1.1 또는 clr 버전 2.0이 동일한 프로세스로 로드 되지 않으므로 in-process side-by-side 기능을 효과적으로 사용 하지 않도록 설정 합니다 ( [COM Interop에 대 한 side-by-side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))참조).
+> 특성을로 설정 하면 `true` clr 버전 1.1 또는 clr 버전 2.0이 동일한 프로세스로 로드 되지 않으므로 in-process side-by-side 기능을 효과적으로 사용 하지 않도록 설정 합니다 ( [COM Interop에 대 한 side-by-side 실행](/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))참조).
 
 ## <a name="example"></a>예제
 
@@ -93,10 +93,10 @@ ms.locfileid: "79153735"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시작 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
 - [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM Interop의 Side-By-Side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+- [COM Interop의 Side-By-Side 실행](/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [In-Process Side-by-Side 실행](../../../deployment/in-process-side-by-side-execution.md)

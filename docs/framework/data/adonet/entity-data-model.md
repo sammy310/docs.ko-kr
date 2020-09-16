@@ -3,12 +3,12 @@ title: 엔터티 데이터 모델
 description: 엔터티 데이터 모델는 저장 된 폼에 관계 없이 데이터의 구조를 설명 합니다. 그러면 데이터를 여러 형식으로 저장 하 여 발생 하는 문제를 해결할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d32207e3a9dd35d2d8f8990bcbbd35e38d21d8bb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286742"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557621"
 ---
 # <a name="entity-data-model"></a>엔터티 데이터 모델
 EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구조를 설명하는 개념 집합입니다. EDM은 Peter Chen이 1976년에 설명한 엔터티-관계 모델에서 차용하지만 엔터티-관계 모델을 기반으로 하여 기존의 사용을 확장합니다.  
@@ -62,8 +62,8 @@ EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구�
   
  [참조 무결성 제약 조건](referential-integrity-constraint.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [.edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [.edmx 파일 개요](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 사양](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921168"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557816"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 
@@ -20,26 +20,26 @@ ms.locfileid: "76921168"
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP 및 보안 컨텍스트 토큰 쿠키 사용
 
-WCF는 가장을 지원 하지 않으며 다음 조건에 해당할 경우 <xref:System.InvalidOperationException> throw 됩니다.
+WCF는 가장을 지원 하지 않으며 <xref:System.InvalidOperationException> 다음 조건에 해당할 경우이 throw 됩니다.
 
 - 운영 체제가 Windows XP입니다.
 
 - 인증 모드에서 Windows ID를 생성하는 경우
 
-- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>의 <xref:System.ServiceModel.OperationBehaviorAttribute> 속성은 <xref:System.ServiceModel.ImpersonationOption.Required>로 설정됩니다.
+- <xref:System.ServiceModel.OperationBehaviorAttribute>의 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성이 <xref:System.ServiceModel.ImpersonationOption.Required>로 설정됩니다.
 
 - 상태 기반 SCT(보안 컨텍스트 토큰)가 만들어지는 경우(기본값: 만들기 사용 안 함)
 
- 상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요. 코드에서는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 메서드를 사용 하 여 보안 바인딩 요소 (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>)를 만들고 `requireCancellation` 매개 변수를 `false`로 설정 하 여 토큰을 사용 하도록 설정 합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.
+ 상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. 자세한 내용은 [방법: 보안 세션에 대 한 보안 컨텍스트 토큰 만들기](how-to-create-a-security-context-token-for-a-secure-session.md)를 참조 하세요. 코드에서 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 메서드를 사용 하 여 보안 바인딩 요소 (또는)를 만들고 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> `requireCancellation` 매개 변수를로 설정 `false` 하 여 토큰을 사용 하도록 설정 합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.
 
- 또는 구성에서 토큰은 <`customBinding`> 만든 다음 <`security`> 요소를 추가 하 고 `authenticationMode` 특성을 Ws-secureconversation로 설정 하 고 `requireSecurityContextCancellation` 특성을 `true`로 설정 하 여 사용할 수 있습니다.
+ 또는 구성에서는 <`customBinding`> 만든 다음 <> 요소를 추가 하 `security` 고 특성을 ws-secureconversation로 설정 하 고 특성을로 설정 하 여 토큰을 사용 하도록 설정 합니다 `authenticationMode` `requireSecurityContextCancellation` `true` .
 
 > [!NOTE]
-> 앞의 요구 사항은 각기 고유합니다. 예를 들어, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>는 Windows ID를 생성하는 바인딩 요소를 만들지만 SCT를 설정하지 않습니다. 따라서 Windows XP의 `Required` 옵션과 함께 사용할 수 있습니다.
+> 앞의 요구 사항은 각기 고유합니다. 예를 들어, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>는 Windows ID를 생성하는 바인딩 요소를 만들지만 SCT를 설정하지 않습니다. 따라서 `Required` WINDOWS XP의 옵션과 함께 사용할 수 있습니다.
 
 ### <a name="possible-aspnet-conflict"></a>가능한 ASP.NET 충돌
 
-WCF 및 ASP.NET는 모두 가장을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. ASP.NET가 WCF 응용 프로그램을 호스트 하는 경우 WCF와 ASP.NET 구성 설정 사이에 충돌이 있을 수 있습니다. 충돌이 발생 한 경우 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성이 <xref:System.ServiceModel.ImpersonationOption.NotAllowed>로 설정 되지 않는 한 WCF 설정이 우선 합니다 .이 경우 ASP.NET 가장 설정이 우선 적용 됩니다.
+WCF 및 ASP.NET는 모두 가장을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. ASP.NET가 WCF 응용 프로그램을 호스트 하는 경우 WCF와 ASP.NET 구성 설정 사이에 충돌이 있을 수 있습니다. 충돌이 발생 하는 경우 속성이로 설정 되지 않은 경우 WCF 설정이 우선적으로 적용 됩니다 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> <xref:System.ServiceModel.ImpersonationOption.NotAllowed> .이 경우 ASP.NET 가장 설정이 우선적으로 적용 됩니다.
 
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>가장 하는 동안 어셈블리 로드가 실패할 수 있음
 
@@ -80,15 +80,15 @@ FIPS 규격 AES 암호화는 id 수준 가장의 이중 콜백에서 작동 하�
 
 - `p/invoke`에 대해 `CertGetCertificateContextProperty`를 실행하고 반환되는 `dwProvType`에서 `CertGetCertificateContextProperty`이 있는지 확인합니다.
 
-- 명령줄에서 `certutil` 명령을 사용 하 여 인증서를 쿼리 합니다. 자세한 내용은 [인증서 문제 해결을 위한 Certutil 작업](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10))을 참조 하세요.
+- 명령줄에서 명령을 사용 하 여  `certutil` 인증서를 쿼리 합니다. 자세한 내용은 [인증서 문제 해결을 위한 Certutil 작업](/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10))을 참조 하세요.
 
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용 해야 하는 경우 메시지 보안 실패
 
 WCF는 클라이언트 인증이 발생 하는 것을 방지할 수 있기 때문에 다음과 같은 설정 조합을 지원 하지 않습니다.
 
-- ASP.NET 가장을 사용할 수 있습니다. 이는 <`identity`> 요소의 `impersonate` 특성을 `true`로 설정 하 여 web.config 파일에서 수행 됩니다.
+- ASP.NET 가장을 사용할 수 있습니다. Web.config 파일에서 `impersonate` <> 요소의 특성을로 설정 하 여이 작업을 수행 `identity` `true` 합니다.
 
-- ASP.NET [serviceHostingEnvironment >\<](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) `aspNetCompatibilityEnabled` 특성을 `true`로 설정 하 여 호환성 모드를 사용 하도록 설정 합니다.
+- ASP.NET 호환성 모드는의 특성을로 설정 하 여 사용할 수 `aspNetCompatibilityEnabled` [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) `true` 있습니다.
 
 - 메시지 모드 보안이 사용됩니다.
 
@@ -124,7 +124,7 @@ WSDL 가져오기를 실행할 때는 WCF에서 `<wst:Claims>` 템플릿의 `RST
 
 ## <a name="see-also"></a>참조
 
-- [보안 고려 사항](security-considerations-in-wcf.md)
+- [Security Considerations](security-considerations-in-wcf.md)
 - [정보 공개](information-disclosure.md)
 - [권한 상승](elevation-of-privilege.md)
 - [서비스 거부](denial-of-service.md)

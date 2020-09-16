@@ -2,15 +2,15 @@
 title: 인스턴스 저장소
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 69b50942c36406bd29147d243e0501b8048d56dc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 26e0c28fe3061306a00e75b0498ef0781b7013c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802559"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555798"
 ---
 # <a name="instance-stores"></a>인스턴스 저장소
-인스턴스 저장소는 인스턴스의 논리적 컨테이너입니다. 이 저장소는 인스턴스 데이터와 메타데이터가 저장되는 장소입니다. 인스턴스 스토리지가 전용 물리적 스토리지를 의미하지는 않습니다. 인스턴스 저장소는 지속적인 정보를 SQL Server 데이터베이스에 포함시키거나 지속적이 아닌 정보를 메모리에 포함시킬 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 워크플로에서 인스턴스 데이터 및 메타데이터를 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 유지할 수 있는 인스턴스 저장소의 구체적인 구현인 SQL 워크플로 인스턴스 저장소와 함께 제공됩니다. 또한 Windows Server AppFabric은 인스턴스 저장소의 구체적인 구현을 제공합니다. 자세한 내용은 [Windows Server App Fabric 인스턴스 저장소, 쿼리 및 제어 공급자](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))를 참조 하세요.  
+인스턴스 저장소는 인스턴스의 논리적 컨테이너입니다. 이 저장소는 인스턴스 데이터와 메타데이터가 저장되는 장소입니다. 인스턴스 스토리지가 전용 물리적 스토리지를 의미하지는 않습니다. 인스턴스 저장소는 지속적인 정보를 SQL Server 데이터베이스에 포함시키거나 지속적이 아닌 정보를 메모리에 포함시킬 수 있습니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 워크플로에서 인스턴스 데이터 및 메타데이터를 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 유지할 수 있는 인스턴스 저장소의 구체적인 구현인 SQL 워크플로 인스턴스 저장소와 함께 제공됩니다. 또한 Windows Server AppFabric은 인스턴스 저장소의 구체적인 구현을 제공합니다. 자세한 내용은 [Windows Server App Fabric 인스턴스 저장소, 쿼리 및 제어 공급자](/previous-versions/appfabric/ff383417(v=azure.10))를 참조 하세요.  
   
  지속성 API는 호스트에서 인스턴스 저장소로 명령 요청(예: <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> 및 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>)을 보낼 수 있는 호스트와 인스턴스 저장소 간의 인터페이스입니다. 이 API의 구체적인 구현을 지속성 공급자라고 합니다. 지속성 공급자는 호스트에서 요청을 받고 인스턴스 저장소를 수정합니다.  
   
@@ -24,8 +24,8 @@ ms.locfileid: "74802559"
   
 1. 지 속성 공급자에서 **InstanceStore** 를 가져옵니다.  
 
-2. **InstanceStore**에서 <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> 메서드를 호출 하 여 인스턴스에 대 한 핸들을 가져옵니다.  
+2. <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> **InstanceStore**에서 메서드를 호출 하 여 인스턴스에 대 한 핸들을 가져옵니다.  
   
-3. **InstanceStore**에서 <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> 메서드를 호출 하 여 인스턴스 핸들에 대해 명령을 호출 합니다.  
+3. <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> **InstanceStore**에서 메서드를 호출 하 여 인스턴스 핸들에 대해 명령을 호출 합니다.  
   
-4. **InstanceStore** 에서 반환 된 <xref:System.Runtime.DurableInstancing.InstanceView>를 검사 하 여 명령의 결과를 확인 합니다.
+4. <xref:System.Runtime.DurableInstancing.InstanceView> **InstanceStore.Exe귀여운** 에서 반환 된를 검사 하 여 명령의 결과를 확인 합니다.

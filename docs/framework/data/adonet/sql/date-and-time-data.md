@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286496"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551493"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
 SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식이 도입되었습니다. 새 데이터 형식에는 날짜 및 시간에 대한 별도의 형식, 그리고 더 큰 범위, 전체 자릿수 및 표준 시간대 인식이 포함된 확장된 데이터 형식이 포함됩니다. .NET Framework 버전 3.5 SP(서비스 팩) 1부터는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에 SQL Server 2008 데이터베이스 엔진의 새로운 모든 기능이 완벽하게 지원됩니다. SqlClient에서 이러한 새 기능을 사용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
@@ -22,7 +22,7 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
   
  **SQL Server 설명서**  
   
-1. [날짜 및 시간 데이터 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008에 도입된 날짜/시간 데이터 형식  
  다음 표에서는 새로운 날짜 및 시간 데이터 형식에 대해 설명합니다.  
@@ -47,7 +47,7 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
 > [!NOTE]
 > 문자열 형식에서 `date`, `time`, `datetime2` 또는 `datetimeoffset`로 변환할 때는 YDM 날짜 형식이 지원되지 않습니다.  
   
- 날짜 및 시간 데이터를 해석 SQL Server는 방법에 대 한 자세한 내용은 [날짜 및 시간 데이터 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))을 참조 하세요.  
+ 날짜 및 시간 데이터를 해석 SQL Server는 방법에 대 한 자세한 내용은 [날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))을 참조 하세요.  
   
 ## <a name="datetime-data-types-and-parameters"></a>날짜/시간 데이터 형식 및 매개 변수  
  새 날짜 및 시간 데이터 형식을 지원하기 위해 <xref:System.Data.SqlDbType>에 다음 열거형이 추가되었습니다.  
@@ -77,7 +77,7 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
   
 |SQL Server 데이터 형식|.NET Framework 형식|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System.DateTime|날짜|날짜|  
+|날짜|System.DateTime|Date|Date|  
 |time|System.TimeSpan|시간|시간|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
@@ -237,10 +237,10 @@ command.Parameters.AddWithValue( _
 |항목|Description|  
 |-----------|-----------------|  
 |[날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|모든 Transact-SQL 날짜 및 시간 데이터 형식 및 함수에 대한 개요를 제공합니다.|  
-|[날짜 및 시간 데이터 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|날짜 및 시간 데이터 형식 및 함수에 관한 정보와 사용 예제를 제공합니다.|  
+|[날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|날짜 및 시간 데이터 형식 및 함수에 관한 정보와 사용 예제를 제공합니다.|  
 |[데이터 형식 (Transact-sql)](/sql/t-sql/data-types/data-types-transact-sql)|SQL Server의 시스템 데이터 형식에 대해 설명 합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)

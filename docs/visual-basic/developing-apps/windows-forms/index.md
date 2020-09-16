@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840306"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557021"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 애플리케이션 기초(Visual Basic)
 
@@ -20,9 +20,9 @@ Visual Basic의 중요한 부분은 사용자 컴퓨터에서 로컬로 실행�
 
 Visual Studio를 사용하여 Windows Forms 및 Windows 서비스 애플리케이션을 만들 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.
 
-- [Windows Forms 시작](../../../framework/winforms/getting-started-with-windows-forms.md). Windows Forms를 만들고 프로그래밍하는 방법에 관한 정보를 제공합니다.
+- [Windows Forms 시작](/dotnet/desktop/winforms/getting-started-with-windows-forms). Windows Forms를 만들고 프로그래밍하는 방법에 관한 정보를 제공합니다.
 
-- [Windows Forms 컨트롤](../../../framework/winforms/controls/index.md). Windows Forms 컨트롤 사용을 자세히 설명하는 항목 컬렉션입니다.
+- [Windows Forms 컨트롤](/dotnet/desktop/winforms/controls/). Windows Forms 컨트롤 사용을 자세히 설명하는 항목 컬렉션입니다.
 
 - [Windows 서비스 애플리케이션](../../../framework/windows-services/index.md). Windows 서비스를 만드는 방법을 설명하는 항목을 나열합니다.
 
@@ -34,11 +34,11 @@ Windows Forms에서 양식은 사용자에게 정보를 표시하는 시각적 �
 
 ### <a name="events"></a>이벤트
 
-사용자가 양식이나 컨트롤 중 하나에 작업을 수행하면 이벤트가 생성됩니다. 애플리케이션은 코드를 사용하여 이러한 이벤트에 대응하고, 발생 시 이벤트를 처리합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)를 참조하세요.
+사용자가 양식이나 컨트롤 중 하나에 작업을 수행하면 이벤트가 생성됩니다. 애플리케이션은 코드를 사용하여 이러한 이벤트에 대응하고, 발생 시 이벤트를 처리합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)를 참조하세요.
 
 ### <a name="controls"></a>컨트롤
 
-Windows Forms에는 텍스트 상자, 단추, 드롭다운 상자, 라디오 단추 및 웹 페이지를 표시하는 컨트롤 등 양식에 배치할 수 있는 다양한 컨트롤이 포함되어 있습니다. 폼에서 사용할 수 있는 모든 컨트롤의 목록은 [Windows Forms에서 사용할 수 있는 컨트롤](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md)을 참조하세요. 기존 컨트롤이 요구를 충족하지 않는 경우 Windows Forms에서 <xref:System.Windows.Forms.UserControl> 클래스를 사용하여 고유한 사용자 지정 컨트롤을 만들 수도 있습니다.
+Windows Forms에는 텍스트 상자, 단추, 드롭다운 상자, 라디오 단추 및 웹 페이지를 표시하는 컨트롤 등 양식에 배치할 수 있는 다양한 컨트롤이 포함되어 있습니다. 폼에서 사용할 수 있는 모든 컨트롤의 목록은 [Windows Forms에서 사용할 수 있는 컨트롤](/dotnet/desktop/winforms/controls/controls-to-use-on-windows-forms)을 참조하세요. 기존 컨트롤이 요구를 충족하지 않는 경우 Windows Forms에서 <xref:System.Windows.Forms.UserControl> 클래스를 사용하여 고유한 사용자 지정 컨트롤을 만들 수도 있습니다.
 
 Windows Forms에는 Microsoft Office와 같은 고급 애플리케이션의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하면 텍스트와 이미지를 포함하고, 하위 메뉴를 표시하며, 텍스트 상자 및 콤보 상자와 같은 기타 컨트롤을 호스트하는 도구 모음과 메뉴를 만들 수 있습니다.
 
@@ -53,9 +53,9 @@ Visual Studio 끌어서 놓기 양식 디자이너를 사용하여 Windows Forms
 |대상|참조 항목|
 |--------|---------|
 |Visual Studio를 사용하여 새 Windows Forms 애플리케이션 만들기|[자습서 1: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|양식에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|<xref:System.Drawing>을 사용하여 그래픽 만들기|[그래픽 프로그래밍 시작](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|양식에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](/dotnet/desktop/winforms/controls/how-to-add-controls-to-windows-forms)|
+|<xref:System.Drawing>을 사용하여 그래픽 만들기|[그래픽 프로그래밍 시작](/dotnet/desktop/winforms/advanced/getting-started-with-graphics-programming)|
+|사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](/dotnet/desktop/winforms/controls/how-to-inherit-from-the-usercontrol-class)|
 
 ## <a name="displaying-and-manipulating-data"></a>데이터 표시 및 조작
 
@@ -75,8 +75,8 @@ Windows Forms에서 관리할 수 있는 다른 형식의 데이터 바인딩은
 
 |대상|참조 항목|
 |--------|---------|
-|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 BindingSource 구성 요소 바인딩](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|ADO.NET 데이터 소스 작업|[방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 BindingSource 구성 요소 바인딩](/dotnet/desktop/winforms/controls/bind-wf-controls-with-the-bindingsource)|
+|ADO.NET 데이터 소스 작업|[방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링](/dotnet/desktop/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component)|
 |데이터 소스 창 사용|[연습: Windows Form에 데이터 표시](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>클라이언트 컴퓨터에 애플리케이션 배포
@@ -103,11 +103,11 @@ Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추
 
 |대상|참조 항목|
 |--------|---------|
-|양식 콘텐츠 인쇄|[방법: Windows Forms에서 그래픽 인쇄](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](../../../framework/winforms/security-in-windows-forms-overview.md)|
+|양식 콘텐츠 인쇄|[방법: Windows Forms에서 그래픽 인쇄](/dotnet/desktop/winforms/advanced/how-to-print-graphics-in-windows-forms)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](/dotnet/desktop/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms)|
+|Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](/dotnet/desktop/winforms/security-in-windows-forms-overview)|
 
 ## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Windows Forms 개요](../../../framework/winforms/windows-forms-overview.md)
+- [Windows Forms 개요](/dotnet/desktop/winforms/windows-forms-overview)
 - [My.Forms 개체](../../language-reference/objects/my-forms-object.md)

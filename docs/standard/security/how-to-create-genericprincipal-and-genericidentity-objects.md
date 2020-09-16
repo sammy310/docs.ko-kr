@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 57ffe3fd2d446b4a7364aa531e785bfb79520a0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557218"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558214"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 
 > [!NOTE]
 > 이 문서는 Windows에 적용 됩니다.
 >
-> ASP.NET Core에 대 한 자세한 내용은 [ASP.NET Core 보안 개요](https://docs.microsoft.com/aspnet/core/security/)를 참조 하세요.
+> ASP.NET Core에 대 한 자세한 내용은 [ASP.NET Core 보안 개요](/aspnet/core/security/)를 참조 하세요.
 
 클래스 <xref:System.Security.Principal.GenericIdentity> 와 클래스를 함께 사용 <xref:System.Security.Principal.GenericPrincipal> 하 여 Windows 도메인에 독립적으로 존재 하는 권한 부여 체계를 만들 수 있습니다.
 
@@ -144,7 +144,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

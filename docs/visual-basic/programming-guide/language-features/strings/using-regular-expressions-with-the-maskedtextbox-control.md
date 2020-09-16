@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: efda70be0ccdbc1f4b59d548e50f743f6c493b19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363717"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555746"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
 이 예제에서는 간단한 정규식을 컨트롤에서 사용할 수 있도록 변환 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox> .  
@@ -20,7 +20,7 @@ ms.locfileid: "84363717"
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>컨트롤의 속성은 <xref:System.Windows.Forms.MaskedTextBox> 사용할 입력 마스크를 지정 합니다. 마스크는 다음 표의 마스킹 요소 중 하나 이상으로 구성 된 문자열 이어야 합니다.  
   
-|마스킹 요소|Description|Regular expression 요소|  
+|마스킹 요소|설명|Regular expression 요소|  
 |---------------------|-----------------|--------------------------------|  
 |0|0에서 9 사이의 단일 숫자입니다. 항목이 필요 합니다.|\d|  
 |9|숫자 또는 공간. 항목을 선택 합니다.|[\d]?|  
@@ -48,16 +48,16 @@ ms.locfileid: "84363717"
   
  다음 표에서는 정규식 4 개와 각 정규식에 해당 하는 마스크를 비교 합니다.  
   
-|정규식|Mask|메모|  
+|정규식|Mask|참고|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/`마스크의 문자는 논리적 날짜 구분 기호 이며, 사용자에 게 응용 프로그램의 현재 문화권에 적절 한 날짜 구분 기호로 표시 됩니다.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|미국 형식으로 된 날짜 (일, 월 약어 및 연도)로, 세 문자 월 약어가 앞에 대문자를 표시 하 고 두 개의 소문자를 표시 합니다.|  
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|미국 전화 번호, 지역 번호 (선택 사항). 사용자가 선택적 문자를 입력 하지 않으려는 경우 공백을 입력 하거나 처음 0으로 표시 되는 마스크의 위치에 직접 마우스 포인터를 놓을 수 있습니다.|  
 |`$\d{6}.00`|`$999,999.00`|0 ~ 999999 범위의 통화 값입니다. 통화, 1000, 10 진수 문자는 런타임에 해당 하는 문화권 관련 항목으로 바뀝니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Visual Basic의 문자열 유효성 검사](validating-strings.md)
-- [MaskedTextBox 컨트롤](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox 컨트롤](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

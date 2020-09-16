@@ -54,7 +54,7 @@ ms.locfileid: "90555811"
 ## <a name="deployment"></a>배포
  웹 배포 도구는 배포 작업을 보다 쉽게 수행할 수 있도록 하기 위해 만들어졌습니다. 이 도구를 사용하면 IIS 6.0과 IIS 7.0 사이에서 애플리케이션을 마이그레이션하고, 서버 팜을 동기화하고, 웹 애플리케이션을 패키징, 보관 및 배포할 수 있습니다. 자세한 내용은 [MS Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=178690)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [워크플로 서비스 호스트 내부 기능](workflow-service-host-internals.md)
 - [WorkflowServiceHost 구성](configuring-workflowservicehost.md)

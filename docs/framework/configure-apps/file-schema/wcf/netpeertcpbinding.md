@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 921da4d0b010672585a045d58d03182e480a255a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5fe221c5ec6c51afb199b2c66eab9d72cdfd750b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140735"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556143"
 ---
 # \<netPeerTcpBinding>
 피어 채널 전용 TCP 메시징의 바인딩을 정의합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "74140735"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
 |[\<resolver>](resolver.md)|피어 메시 내에서 노드의 엔드포인트 IP 주소에 대해 피어 메시 ID를 확인하기 위해 이 바인딩에서 사용하는 피어 확인자를 지정합니다.|  
 |[\<security>](security-of-netpeerbinding.md)|메시지에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.PeerSecurityElement> 형식입니다.|  
   
@@ -73,8 +73,8 @@ ms.locfileid: "74140735"
 ## <a name="remarks"></a>설명  
  이 바인딩은 TCP를 통한 피어 전송을 사용하여 피어 투 피어 다자 간 애플리케이션을 만들 수 있도록 지원합니다. 각 피어 노드는 이 바인딩 형식으로 정의된 여러 피어 채널을 호스트할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 피어 채널을 사용하여 여러 상대방과의 통신을 제공하는 NetPeerTcpBinding binding 바인딩 사용을 보여 줍니다. 이 바인딩을 사용 하는 자세한 시나리오는 [Net 피어 TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))를 참조 하십시오.  
+## <a name="example"></a>예  
+ 다음 예제에서는 피어 채널을 사용하여 여러 상대방과의 통신을 제공하는 NetPeerTcpBinding binding 바인딩 사용을 보여 줍니다. 이 바인딩을 사용 하는 자세한 시나리오는 [Net 피어 TCP](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))를 참조 하십시오.  
   
 ```xml  
 <configuration>
@@ -101,7 +101,7 @@ ms.locfileid: "74140735"
 </configuration>
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.ServiceModel.NetPeerTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
@@ -109,5 +109,5 @@ ms.locfileid: "74140735"
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)
-- [Net Peer TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
+- [Net Peer TCP](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
 - [피어 투 피어 네트워킹](../../../wcf/feature-details/peer-to-peer-networking.md)

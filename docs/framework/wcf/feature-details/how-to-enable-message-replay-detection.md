@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597087"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557881"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>방법: 메시지 재생 검색 사용
 공격자가 두 당사자 간에 메시지 스트림을 복사하고 하나 이상의 당사자에게 스트림을 재생하는 경우 재생 공격이 발생합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
   
- 메시지 재생 검색에 대 한 자세한 내용은 [메시지 재생 검색](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))을 참조 하세요.  
+ 메시지 재생 검색에 대 한 자세한 내용은 [메시지 재생 검색](/previous-versions/msp-n-p/ff649371(v=pandp.10))을 참조 하세요.  
   
  다음 절차에서는 Windows Communication Foundation (WCF)를 사용 하 여 재생 검색을 제어 하는 데 사용할 수 있는 다양 한 속성을 보여 줍니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "84597087"
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
