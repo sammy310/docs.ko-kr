@@ -2,18 +2,18 @@
 title: 복제와 연결 비교
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: aaf3344c0439d96a01006ee000d0a827884a5af9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1974e10579e87f17746d5a9ba8a86ea8d819d9ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555759"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="fe466-102">복제 및 연결 비교 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe466-102">Cloning vs. Attaching (Visual Basic)</span></span>
-<span data-ttu-id="fe466-103"><xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 새 트리에 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다.</span><span class="sxs-lookup"><span data-stu-id="fe466-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="fe466-104">새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고</span><span class="sxs-lookup"><span data-stu-id="fe466-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="fe466-105">새로 복제된 내용이 XML 트리에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="fe466-105">The newly cloned content is then attached to the XML tree.</span></span>  
+# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="acc5d-102">복제 및 연결 비교 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="acc5d-102">Cloning vs. Attaching (Visual Basic)</span></span>
+<span data-ttu-id="acc5d-103"><xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 새 트리에 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다.</span><span class="sxs-lookup"><span data-stu-id="acc5d-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="acc5d-104">새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고</span><span class="sxs-lookup"><span data-stu-id="acc5d-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="acc5d-105">새로 복제된 내용이 XML 트리에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="acc5d-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe466-106">예제</span><span class="sxs-lookup"><span data-stu-id="fe466-106">Example</span></span>  
- <span data-ttu-id="fe466-107">다음 코드에서는 부모가 있는 요소를 트리에 추가할 때의 동작과 부모가 없는 요소를 트리에 추가할 때의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fe466-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="acc5d-106">예</span><span class="sxs-lookup"><span data-stu-id="acc5d-106">Example</span></span>  
+ <span data-ttu-id="acc5d-107">다음 코드에서는 부모가 있는 요소를 트리에 추가할 때의 동작과 부모가 없는 요소를 트리에 추가할 때의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="acc5d-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -43,13 +43,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- <span data-ttu-id="fe466-108">이 예에서 생성되는 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="fe466-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="acc5d-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="acc5d-108">This example produces the following output:</span></span>  
   
 ```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe466-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fe466-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acc5d-109">참조</span><span class="sxs-lookup"><span data-stu-id="acc5d-109">See also</span></span>
 
-- [<span data-ttu-id="fe466-110">XML 트리 만들기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe466-110">Creating XML Trees (Visual Basic)</span></span>](creating-xml-trees.md)
+- [<span data-ttu-id="acc5d-110">XML 트리 만들기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="acc5d-110">Creating XML Trees (Visual Basic)</span></span>](../../../../standard/linq/xml-literals.md)

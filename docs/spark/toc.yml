@@ -46,7 +46,7 @@
 - name: 참고
   items:
     - name: API 참조
-      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+      href: ../../api/index.md?view=spark-dotnet
 - name: 리소스
   items:
     - name: 리소스 개요
