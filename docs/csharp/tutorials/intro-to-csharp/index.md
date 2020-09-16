@@ -3,12 +3,12 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202427"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554569"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
@@ -22,7 +22,7 @@ C# 소개 자습서를 시작합니다. 이 단원은 브라우저에서 실행�
 다양한 환경에서 이 자습서를 사용해 볼 수 있습니다. 학습할 개념은 같습니다. 차이점은 선호하는 환경입니다.
 
 - [브라우저의 docs 플랫폼](hello-world.yml). 이 환경에는 실행 가능한 C# 코드 창이 docs 페이지에 포함되어 있습니다. 브라우저에서 C# 코드를 작성하고 실행합니다.
-- [Microsoft Learn 환경](https://docs.microsoft.com/learn/paths/csharp-first-steps/). 이 학습 경로에는 C#의 기본 사항을 설명하는 여러 모듈이 포함되어 있습니다.
+- [Microsoft Learn 환경](/learn/paths/csharp-first-steps/). 이 학습 경로에는 C#의 기본 사항을 설명하는 여러 모듈이 포함되어 있습니다.
 - [Binder의 Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb). Binder의 Jupyter Notebook에서 C# 코드를 시험해 볼 수 있습니다.
 - [로컬 머신](numbers-in-csharp-local.md). 온라인에서 살펴본 후 머신에 .NET Core SDK를 [다운로드](https://dotnet.microsoft.com/download)하고 프로그램을 빌드할 수 있습니다.
 
@@ -30,7 +30,7 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브�
 
 ## <a name="hello-world"></a>[Hello World](hello-world.yml)
 
-[Hello World](hello-world.yml) 자습서에서는 가장 기본적인 C# 프로그램을 만듭니다. `string` 형식을 살펴보고 텍스트를 사용하는 방법을 살펴봅니다. 또한 [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) 또는 [Binder의 Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) 경로를 사용할 수 있습니다.
+[Hello World](hello-world.yml) 자습서에서는 가장 기본적인 C# 프로그램을 만듭니다. `string` 형식을 살펴보고 텍스트를 사용하는 방법을 살펴봅니다. 또한 [Microsoft Learn](/learn/paths/csharp-first-steps/) 또는 [Binder의 Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) 경로를 사용할 수 있습니다.
 
 ## <a name="numbers-in-c"></a>[C#의 숫자](numbers-in-csharp.yml)
 

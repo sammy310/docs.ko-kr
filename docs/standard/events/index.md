@@ -15,18 +15,18 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447110"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545705"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
 
 .NET의 이벤트는 대리자 모델을 기반으로 합니다. 대리자 모델은 구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 [관찰자 디자인 패턴](observer-design-pattern.md)을 따릅니다. 이벤트 전송자는 이벤트가 발생했음을 알리고, 이벤트 수신자는 해당 알림을 수신하고 그에 대한 응답을 정의합니다. 이 문서에서는 대리자 모델의 주요 구성 요소, 애플리케이션에서 이벤트를 사용하는 방법 및 코드에서 이벤트를 구현하는 방법에 대해 설명합니다.  
   
- Windows 8.x Store 앱에서의 이벤트 처리에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))를 참조하세요.  
+ Windows 8.x Store 앱에서의 이벤트 처리에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조하세요.  
   
 ## <a name="events"></a>이벤트
 

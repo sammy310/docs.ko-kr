@@ -2,19 +2,19 @@
 title: WCF 라이브러리 프로젝트 배포
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-ms.openlocfilehash: 186ce5ae3087fd9b4c7e5c32e110de4bc7d5e578
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0f4c880bbd5c1bb819a04f42e91f531250c4f32e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801987"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554321"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
 이 항목에서는 WCF (Windows Communication Foundation) 서비스 라이브러리 프로젝트를 배포할 수 있는 방법에 대해 설명 합니다.  
   
 ## <a name="deploying-a-wcf-service-library"></a>WCF 서비스 라이브러리 배포  
- WCF 서비스 라이브러리는 DLL (동적 연결 라이브러리)입니다. 따라서 자체적으로 실행될 수 없으며 호스팅 환경에서 배포되어야 합니다. 이 프로세스에 대 한 자세한 내용은 [WCF 서비스 호스팅 및](https://docs.microsoft.com/previous-versions/dotnet/articles/bb332338(v=msdn.10))사용을 참조 하세요.  
+ WCF 서비스 라이브러리는 DLL (동적 연결 라이브러리)입니다. 따라서 자체적으로 실행될 수 없으며 호스팅 환경에서 배포되어야 합니다. 이 프로세스에 대 한 자세한 내용은 [WCF 서비스 호스팅 및](/previous-versions/dotnet/articles/bb332338(v=msdn.10))사용을 참조 하세요.  
   
- WCF 서비스 라이브러리는 다른 WCF 서비스와 마찬가지로 배포할 수 있습니다. 그러나 .NET Framework는 Dll에 대 한 구성을 지원 하지 않습니다. <xref:System.Configuration>은 응용 프로그램 도메인당 하나의 구성 파일을 지원합니다. WCF 서비스 라이브러리 프로젝트는 개발 중에 라이브러리에 대 한 app.config 파일을 제공 하 여이 제한을 완화 합니다. 그러나 App.config 파일은 배포 후에 인식되지 않습니다.  
+ WCF 서비스 라이브러리는 다른 WCF 서비스와 마찬가지로 배포할 수 있습니다. 그러나 .NET Framework는 Dll에 대 한 구성을 지원 하지 않습니다. <xref:System.Configuration>은 응용 프로그램 도메인당 하나의 구성 파일을 지원합니다. WCF 서비스 라이브러리 프로젝트는 개발 중에 라이브러리에 대 한 App.config 파일을 제공 하 여 이러한 제한을 완화 합니다. 그러나 App.config 파일은 배포 후에 인식되지 않습니다.  
   
  구성 코드를 호스팅 환경에서 인식하는 구성 파일로 이동해야 합니다. 자체 호스팅의 경우 App.config 파일의 내용을 호스팅 실행 파일의 App.config 파일에 복사해야 합니다. IIS를 사용하여 서비스를 호스팅하려면 App.config 파일의 내용을 가상 디렉터리의 Web.config 파일에 복사해야 합니다.

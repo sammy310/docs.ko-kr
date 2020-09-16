@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554647"
 ---
 # <a name="net-performance-tips"></a>.NET 성능 팁
 *성능*이라는 용어는 일반적으로 프로그램의 실행 속도를 나타냅니다. 경우에 따라 소스 코드에서 특정 기본 규칙을 따라 실행 속도를 높일 수 있습니다. 일부 프로그램에서는 코드를 자세히 검사하고 프로파일러를 사용하여 최대한 빠르게 실행 중인지 확인하는 작업을 해야 합니다. 다른 프로그램에서는 코드가 작성된 대로 만족스럽게 실행되므로 이러한 최적화를 수행하지 않아도 됩니다. 이 문서에서는 성능이 떨어질 수 있는 몇 가지 일반적인 영역과 성능 향상 팁 및 추가 성능 항목에 대한 링크를 나열합니다. 성능 계획 및 측정에 대한 자세한 내용은 [성능](index.md)을 참조하세요.  
@@ -31,19 +31,19 @@ ms.locfileid: "86474269"
   
 ## <a name="other-resources"></a>기타 리소스  
   
-- [관리 코드를 더 빠르게 작성: 리소스를 많이 사용하는 요소 파악](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [관리 코드를 더 빠르게 작성: 리소스를 많이 사용하는 요소 파악](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [고성능의 관리되는 애플리케이션 작성: 입문서](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [고성능의 관리되는 애플리케이션 작성: 입문서](/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [가비지 수집기 기본 및 성능 힌트](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [가비지 수집기 기본 및 성능 힌트](/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [.NET 애플리케이션에서의 성능 팁과 요량](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [.NET 애플리케이션에서의 성능 팁과 요량](/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani의 성능 정보](https://docs.microsoft.com/archive/blogs/ricom/)  
+- [Rico Mariani의 성능 정보](/archive/blogs/ricom/)  
 
-- [Vance Morrison의 블로그](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Vance Morrison의 블로그](/archive/blogs/vancem/)
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [성능](index.md)
 - [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)

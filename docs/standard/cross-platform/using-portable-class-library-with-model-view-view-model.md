@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2baa2aaa32c4138eee0932e5c46c2b52482007cd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288851"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547560"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model과 함께 이식 가능한 클래스 라이브러리 사용
 .NET Framework [이식 가능한 클래스 라이브러리](cross-platform-development-with-the-portable-class-library.md) 를 사용 하 여 MVVM (모델 뷰 뷰 모델) 패턴을 구현 하 고 여러 플랫폼에서 어셈블리를 공유할 수 있습니다.
@@ -25,7 +25,7 @@ ms.locfileid: "84288851"
 
  ![플랫폼 간에 어셈블리를 MVVM 공유 하는 이식 가능한 클래스 라이브러리를 보여 줍니다.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- 이 항목에서는 MVVM 패턴에 대 한 일반 정보를 제공 하지 않습니다. 이식 가능한 클래스 라이브러리를 사용 하 여 MVVM를 구현 하는 방법에 대 한 정보만 제공 합니다. MVVM에 대 한 자세한 내용은 [프리즘 Library 5.0 FOR WPF를 사용 하 여 MVVM 빠른](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))시작을 참조 하세요.
+ 이 항목에서는 MVVM 패턴에 대 한 일반 정보를 제공 하지 않습니다. 이식 가능한 클래스 라이브러리를 사용 하 여 MVVM를 구현 하는 방법에 대 한 정보만 제공 합니다. MVVM에 대 한 자세한 내용은 [프리즘 Library 5.0 FOR WPF를 사용 하 여 MVVM 빠른](/previous-versions/msp-n-p/gg430857(v=pandp.40))시작을 참조 하세요.
 
 ## <a name="classes-that-support-mvvm"></a>MVVM를 지 원하는 클래스
  이식 가능한 클래스 라이브러리 프로젝트에 대해 .NET Framework 4.5, .NET for Windows 8.x 스토어 앱, Silverlight 또는 Windows Phone 7.5를 대상으로 하는 경우 MVVM 패턴을 구현 하는 데 다음 클래스를 사용할 수 있습니다.
@@ -84,11 +84,11 @@ ms.locfileid: "84288851"
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>보기  
+### <a name="view"></a>View  
  .NET Framework 4.5 앱, Windows 8.x 스토어 앱, Silverlight 기반 앱 또는 Windows Phone 7.5 앱에서 모델 및 뷰 모델 프로젝트를 포함 하는 어셈블리를 참조할 수 있습니다.  그런 다음 뷰 모델과 상호 작용 하는 뷰를 만듭니다. 다음 예제에서는 뷰 모델에서 데이터를 검색 하 고 업데이트 하는 간단한 WPF (Windows Presentation Foundation) 앱을 보여 줍니다. Silverlight, Windows Phone 또는 Windows 8.x 스토어 앱에서 유사한 뷰를 만들 수 있습니다.  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [이식 가능한 클래스 라이브러리](cross-platform-development-with-the-portable-class-library.md)

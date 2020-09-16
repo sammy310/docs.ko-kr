@@ -7,18 +7,18 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 0bf02eb56c042361c973d410b1f21e2ef92dd9f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141838"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553846"
 ---
 # <a name="data-and-modeling-in-net"></a>.NET의 데이터 및 모델링
 
 이 섹션에서는 .NET Framework의 데이터에 액세스 하는 방법에 대 한 정보를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
  [WCF Data Services 4.5](./wcf/index.md)  
  WCF Data Services를 사용하여 웹이나 인트라넷에 데이터 서비스를 배포하는 방법에 대한 정보를 제공합니다.  
@@ -40,5 +40,5 @@ ms.locfileid: "85141838"
  [XML 문서 및 데이터](../../standard/data/xml/index.md)  
  .NET Framework에서 XML 문서 및 데이터로 작업하는 종합적이고 통합된 클래스 집합에 대한 개요를 제공합니다.  
   
- [XML 표준 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
- Microsoft에서 지원하는 XML 표준에 대한 참조 정보를 제공합니다.  
+ [XML 표준 참조](/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
+ Microsoft에서 지원하는 XML 표준에 대한 참조 정보를 제공합니다.

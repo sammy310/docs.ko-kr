@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 4aa87acaf9080959ba8b53e3ec3216314dc745b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732586"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545456"
 ---
 # \<webMessageEncoding>
 WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍스트 XML, JSON(JavaScript Object Notation) 메시지 인코딩 및 "원시" 이진 콘텐츠를 읽고 쓸 수 있게 합니다.  
@@ -42,7 +42,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -61,7 +61,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
   
  `maxReadPoolSize` 및 `maxWritePoolSize`를 사용하여 할당할 판독기 및 작성기의 최대 수를 각각 설정할 수도 있습니다. 기본적으로 64개의 판독기와 16개의 작성기가 할당됩니다.  
   
- 또한 [\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) 메시지 복잡성을 사용 하 여 끝점 처리 리소스를 연결 하려고 시도 하는 dos (서비스 거부) 공격 클래스 로부터 보호 하기 위해 요소를 사용 하 여 기본 복잡성 제약 조건을 설정 합니다.  
+ 또한 [\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) 메시지 복잡성을 사용 하 여 끝점 처리 리소스를 연결 하려고 시도 하는 dos (서비스 거부) 공격 클래스 로부터 보호 하기 위해 요소를 사용 하 여 기본 복잡성 제약 조건을 설정 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -72,7 +72,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
                     textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

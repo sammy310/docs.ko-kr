@@ -3,12 +3,12 @@ title: WCF 서비스를 위한 단순화된 구성
 description: WCF를 사용 하 여 일반적인 서비스 및 클라이언트를 구현 하 고 구성 하는 방법에 대해 알아봅니다. 서비스는 구성 파일에 지정 된 끝점을 사용 하 여 통신 합니다.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 46a0c878b29de34219413a508799ddaddf507dd8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246222"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554269"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 서비스를 위한 단순화된 구성
 이 샘플에서는 WCF (Windows Communication Foundation)를 사용 하 여 일반적인 서비스 및 클라이언트를 구현 하 고 구성 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "85246222"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 관리 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383405(v=azure.10))
+- [AppFabric 관리 샘플](/previous-versions/appfabric/ff383405(v=azure.10))
 - [단순화된 구성](../simplified-configuration.md)

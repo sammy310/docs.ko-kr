@@ -8,12 +8,12 @@ ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 2e8abef547d8cc06d80b8cbf865ec984eb91d330
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551617"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554998"
 ---
 # <a name="linq-overview"></a>LINQ 개요
 
@@ -111,7 +111,7 @@ End Function
 
 이 작업을 수행하기 위해 XML 문서를 수동으로 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.
 
-XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.
+XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.
 
 ## <a name="reasons-to-use-the-query-syntax"></a>쿼리 구문을 사용하는 이유
 
@@ -159,7 +159,7 @@ API 구문이 쿼리 구문을 수행하는 더 간결한 방법이 아닌가요
 
 ## <a name="essential-linq"></a>필수 LINQ
 
-LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)을 참조하세요.
+LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](/samples/dotnet/try-samples/101-linq-samples/)을 참조하세요.
 
 다음 예제는 LINQ의 일부 필수 요소를 간단하게 보여 줍니다. LINQ는 여기에 소개된 것보다 더 많은 기능을 제공하므로 모든 기능을 포괄한다고 볼 수 없습니다.
 
@@ -394,6 +394,6 @@ LINQ를 통해 쉽게 표현할 수 있는 병렬 처리 가능한 CPU 바인딩
 
 ## <a name="more-resources"></a>추가 리소스
 
-* [101 LINQ 샘플](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [101 LINQ 샘플](/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/Visual Basic에 대한 데이터베이스 쿼리 엔진
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 eBook

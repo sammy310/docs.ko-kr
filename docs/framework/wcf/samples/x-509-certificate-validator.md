@@ -2,12 +2,12 @@
 title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594831"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554243"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 
@@ -23,7 +23,7 @@ ms.locfileid: "84594831"
 
 - 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
-서비스는 구성 파일 App.config를 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 `wsHttpBinding` `WSSecurity` 및 클라이언트 인증서 인증을 기본적으로 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 X.509 인증서의 유효성을 검사하기 위한 사용자 지정 모드와 유효성 검사기 클래스의 형식을 지정합니다. 동작에서는 serviceCertificate 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는의와 동일한 값이 포함 되어야 합니다 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+서비스는 App.config 구성 파일을 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 `wsHttpBinding` `WSSecurity` 및 클라이언트 인증서 인증을 기본적으로 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 X.509 인증서의 유효성을 검사하기 위한 사용자 지정 모드와 유효성 검사기 클래스의 형식을 지정합니다. 동작에서는 serviceCertificate 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는의와 동일한 값이 포함 되어야 합니다 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -311,16 +311,16 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. 관리자 권한으로 연 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. 관리자 권한으로 연 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!IMPORTANT]
-    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
+    > Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
 
 2. service\bin에서 Service.exe를 실행합니다.
 
 3. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.
 
-4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
+4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
 
 #### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면
 
@@ -334,7 +334,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 5. 서버에서 `setup.bat service` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트를 실행 합니다. `setup.bat`인수를 사용 하 여를 실행 하면 컴퓨터의 정규화 된 `service` 도메인 이름으로 서비스 인증서가 생성 되 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.
 
-6. `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 (의 특성)을 반영 하도록 setup.exe를 편집 합니다. 또한 요소의 컴퓨터 이름을 \<service> / \<baseAddresses> localhost에서 서비스 컴퓨터의 정규화 된 이름으로 변경 합니다.
+6. `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 (의 특성)을 반영 하도록 Service.exe.config를 편집 합니다. 또한 요소의 컴퓨터 이름을 \<service> / \<baseAddresses> localhost에서 서비스 컴퓨터의 정규화 된 이름으로 변경 합니다.
 
 7. 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.
 
@@ -344,13 +344,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 10. 클라이언트 디렉터리에서 서버의 서비스 디렉터리로 Client.cer 파일을 복사합니다.
 
-11. 클라이언트에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트 열고 importservicecert.bat를 실행 합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.
+11. 클라이언트에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 ImportServiceCert.bat를 실행 합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.
 
-12. 서버에서 Importclientcert.bat를 실행 하 여 관리자 권한으로 연 Visual Studio에 대 한 개발자 명령 프롬프트 합니다. 이 작업은 Client.cer 파일의 클라이언트 인증서를 LocalMachine - TrustedPeople 저장소로 가져옵니다.
+12. 서버에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 ImportClientCert.bat를 실행 합니다. 이 작업은 Client.cer 파일의 클라이언트 인증서를 LocalMachine - TrustedPeople 저장소로 가져옵니다.
 
 13. 서버 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.
 
-14. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
+14. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
 
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면
 

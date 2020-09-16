@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c7c89a9104ac72bf03f2900e7ca474b709be40c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286717"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554464"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory 가져오기
 <xref:System.Data.Common.DbProviderFactory>를 가져오는 프로세스에서는 데이터 공급자에 대한 정보가 <xref:System.Data.Common.DbProviderFactories> 클래스에 전달됩니다. <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> 메서드는 이 정보를 기반으로 하여 강력한 형식의 공급자 팩터리를 만듭니다. 예를 들어 <xref:System.Data.SqlClient.SqlClientFactory>를 만들려면 공급자 이름을 "System.Data.SqlClient"로 지정하는 문자열을 `GetFactory`에 전달합니다. `GetFactory`의 다른 오버로드는 <xref:System.Data.DataRow>를 사용합니다. 공급자 팩터리를 만든 후에는 해당 메서드를 사용하여 다른 개체를 만들 수 있습니다. `SqlClientFactory`의 메서드로는 <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> 및 <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>가 있습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "84286717"
 > .NET Framework <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> 및 <xref:System.Data.OleDb.OleDbFactory> 클래스도 이와 유사한 기능을 제공합니다.  
   
 ## <a name="registering-dbproviderfactories"></a>DbProviderFactories 등록  
- 팩터리 기반 클래스를 지 원하는 각 .NET Framework 데이터 공급자는 로컬 컴퓨터 **에 있는 machine.config 파일의** **dbproviderfactories** 섹션에 구성 정보를 등록 합니다. 다음 구성 파일 조각에서는 <xref:System.Data.SqlClient>의 구문과 형식을 보여 줍니다.  
+ 팩터리 기반 클래스를 지 원하는 각 .NET Framework 데이터 공급자는 로컬 컴퓨터에 있는 **machine.config** 파일의 **dbproviderfactories** 섹션에 구성 정보를 등록 합니다. 다음 구성 파일 조각에서는 <xref:System.Data.SqlClient>의 구문과 형식을 보여 줍니다.  
   
 ```xml  
 <system.data>  
@@ -42,7 +42,7 @@ ms.locfileid: "84286717"
   
 |열 서수|열 이름|예제 출력|Description|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**이름**|SqlClient Data Provider|읽을 수 있는 데이터 공급자 이름|  
+|0|**Name**|SqlClient Data Provider|읽을 수 있는 데이터 공급자 이름|  
 |1|**설명**|.Net Framework Data Provider for SqlServer|읽을 수 있는 데이터 공급자 설명|  
 |2|**InvariantName**|System.Data.SqlClient|데이터 공급자를 프로그래밍 방식으로 참조하는 데 사용할 수 있는 이름|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|개체를 인스턴스화하는 데 충분한 정보가 포함된 팩터리 클래스의 정규화된 이름|  
@@ -56,7 +56,7 @@ ms.locfileid: "84286717"
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>애플리케이션 구성 파일을 사용하여 팩터리 정보 저장  
- 팩터리를 사용 하는 데 사용 되는 디자인 패턴에는 응용 프로그램 구성 파일에 공급자 및 연결 문자열 정보 (예: Windows 응용 프로그램용 **app.config** 및 ASP.NET 응용 프로그램에 대 **한 web.config)** 가 저장 됩니다.  
+ 팩터리를 사용 하는 데 사용 되는 디자인 패턴에는 응용 프로그램 구성 파일에 공급자 및 연결 문자열 정보 (예: Windows 응용 프로그램 **app.config** , ASP.NET 응용 프로그램에 대 한 **web.config** 를 저장 하는 작업이 포함 됩니다.  
   
  다음 구성 파일 조각에서는 SQL Server에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindSQL" 및 Access/Jet에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindAccess"라는 두 가지 명명된 연결 문자열을 저장하는 방법을 보여 줍니다. **ProviderName** 특성에는 **고정** 이름이 사용 됩니다.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "84286717"
  [!code-csharp[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [연결 문자열](connection-strings.md)
-- [구성 클래스 사용](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [구성 클래스 사용](/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

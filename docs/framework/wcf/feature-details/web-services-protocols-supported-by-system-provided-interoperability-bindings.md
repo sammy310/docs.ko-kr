@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0b901be2d90a70b4a44fdafb5005f9dc7fb9d556
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c468dc3992b61ce09485ed19da1f2edb3c761525
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594909"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547423"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜
 WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 일련의 사양을 지 원하는 웹 서비스와 상호 운용 되도록 빌드됩니다. 상호 운용성 모범 사례에 대 한 서비스 구성을 간소화 하기 위해 WCF는 세 가지 상호 운용 가능한 시스템 제공 바인딩 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> , 및를 도입 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 했습니다. OASIS (구조적 정보 표준) 표준에 대 한 조직과의 상호 운용성을 위해 WCF에는 상호 운용 가능한 시스템 제공 바인딩이 포함 되어 <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType> 있습니다. 메타 데이터 게시의 경우 WCF에는 및 라는 두 개의 상호 운용 가능한 시스템 제공 바인딩이 포함 되어 있습니다. [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md) [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) 이 항목에서는 시스템에서 제공하는 상호 운용 가능한 바인딩이 지원하는 사양을 나열합니다.  
@@ -27,7 +27,7 @@ WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 �
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
 |전송|HTTP 1.1|[HTTP 1.1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` 및 `WS2007HttpBinding`은 HTTP 및 HTTPS 전송을 사용합니다.|  
-|메시징|MTOM|[MTOM](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding`, `wsHttpBinding` 및 `ws2007HttpBinding`은 MTOM(Message-Transmission Optimization Mechanism)을 지원합니다. 기본적으로 사용되지 않으며 MTOM을 사용하려면 `messageEncoding` 특성을 `"Mtom"`으로 설정하십시오.<br /><br /> 예제:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
+|메시징|MTOM|[MTOM](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding`, `wsHttpBinding` 및 `ws2007HttpBinding`은 MTOM(Message-Transmission Optimization Mechanism)을 지원합니다. 기본적으로 사용되지 않으며 MTOM을 사용하려면 `messageEncoding` 특성을 `"Mtom"`으로 설정하십시오.<br /><br /> 예:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
 |메타데이터|WSDL 1.1|[WSDL 1.1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF는 WSDL (웹 서비스 기술 언어)을 사용 하 여 서비스를 설명 합니다.|  
 |메타데이터|WS-Policy|[WS-Policy](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF에서는 WS-POLICY 사양을 도메인별 어설션과 함께 사용 하 여 서비스 요구 사항 및 기능을 설명 합니다.|  
 |메타데이터|WS-Policy 1.5|[WS-Policy 1.5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF에서는 WS-POLICY 사양을 도메인별 어설션과 함께 사용 하 여 서비스 요구 사항 및 기능을 설명 합니다.|  
@@ -58,7 +58,7 @@ WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 �
 |보안|WS-Trust|[WS-TRUST](http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf)<br /><br /> WS-SecureConversation에 의해 사용됩니다(위 참조).|  
 |신뢰할 수 있는 메시징|WS-ReliableMessaging|[WS-ReliableMessaging](http://specs.xmlsoap.org/ws/2005/02/rm/ws-reliablemessaging.pdf)<br /><br /> `reliableSession` 사용을 위해 바인딩을 구성할 때 사용합니다.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |트랜잭션|WS-AtomicTransaction|[WS-AtomicTransaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)<br /><br /> 트랜잭션 관리자간 통신에 사용합니다. WCF 클라이언트 및 서비스는 항상 로컬 트랜잭션 관리자를 사용 합니다.|  
-|트랜잭션|WS-Coordination|[WS-Coordination](https://docs.microsoft.com/previous-versions/ms951231(v=msdn.10))<br /><br /> `flowTransactions` 특성이 "Allowed" 또는 "Required"로 설정된 경우 트랜잭션 컨텍스트 이동을 위해 사용합니다.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|트랜잭션|WS-Coordination|[WS-Coordination](/previous-versions/ms951231(v=msdn.10))<br /><br /> `flowTransactions` 특성이 "Allowed" 또는 "Required"로 설정된 경우 트랜잭션 컨텍스트 이동을 위해 사용합니다.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 및 ws2007FederationHttpBinding  
  [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)및 [\<ws2007FederationHttpBinding>](../../configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) 요소는 제 3 자가 클라이언트를 인증 하는 데 사용 되는 토큰을 발급 하는 페더레이션된 시나리오에 대 한 지원을 제공 하기 위해 도입 되었습니다. `wsHttpBinding`에서 사용하는 프로토콜과 함께 `wsFederationHttpBinding`에서 사용합니다.  
@@ -67,7 +67,7 @@ WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 �
   
 - 가장 일반적으로 발급되는 토큰 형식에 대한 WSS SAML(Security Assertions Markup Language) Token Profile 1.0 및 1.1입니다.  
   
- 예제:  
+ 예:  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -99,7 +99,7 @@ WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 �
 |메타데이터|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF는 Ws-metadataexchange를 구현 하 여 XML 스키마, WSDL 및 WS-POLICY를 검색 합니다.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md)에서는 다음 프로토콜을 지원 합니다. 이 바인딩을 사용 하는 방법에 대 한 자세한 내용은 [메타 데이터 게시](publishing-metadata.md)를 참조 하세요.  
+ [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) 에서는 다음 프로토콜을 지원 합니다. 이 바인딩을 사용 하는 방법에 대 한 자세한 내용은 [메타 데이터 게시](publishing-metadata.md)를 참조 하세요.  
   
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
@@ -108,7 +108,7 @@ WCF (Windows Communication Foundation)는 웹 서비스 사양으로 알려진 �
 |메시징|WS-ADDRESSING 2005/08|[Web Services Addressing 1.0 - Core](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
 |메타데이터|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF는 Ws-metadataexchange를 구현 하 여 XML 스키마, WSDL 및 WS-POLICY를 검색 합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시스템 제공 바인딩](../system-provided-bindings.md)
 - [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)

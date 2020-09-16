@@ -7,21 +7,21 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803705"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554451"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 
-이 항목에서는 [Windows 성능 모니터](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)에서 확인할 수 있는 성능 카운터 목록을 제공 합니다.  
+이 항목에서는 [Windows 성능 모니터](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))에서 확인할 수 있는 성능 카운터 목록을 제공 합니다.  
 
 ## <a name="exception-performance-counters"></a>예외 성능 카운터  
  성능 콘솔 .NET CLR 예외 범주에는 애플리케이션에서 발생한 예외에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|애플리케이션이 시작된 이후 발생한 예외의 총수를 표시합니다. .NET 예외 및 .NET 예외로 변환된 관리되지 않는 예외를 모두 포함합니다. 예를 들어 비관리 코드에서 반환된 HRESULT는 관리 코드에서 예외로 변환됩니다.<br /><br /> 이 카운터는 처리된 예외와 처리되지 않은 예외를 모두 포함합니다. 다시 발생한 예외는 다시 계산됩니다.|  
 |**# of Exceps Thrown / Sec**|초당 발생한 예외 수를 표시합니다. .NET 예외 및 .NET 예외로 변환된 관리되지 않는 예외를 모두 포함합니다. 예를 들어 비관리 코드에서 반환된 HRESULT는 관리 코드에서 예외로 변환됩니다.<br /><br /> 이 카운터는 처리된 예외와 처리되지 않은 예외를 모두 포함합니다. 시간별 평균이 아니라 마지막 두 샘플에서 관찰된 값의 차이를 샘플 간격 기간으로 나눈 값을 표시합니다. 이 카운터는 대량 (>100) 개의 예외가 throw 되는 경우 잠재적 성능 문제를 나타내는 표시기입니다.|  
@@ -32,18 +32,18 @@ ms.locfileid: "85803705"
 ## <a name="interop-performance-counters"></a>interop 성능 카운터  
  성능 콘솔 .NET CLR Interop 범주에는 애플리케이션과 COM 구성 요소, COM+ 서비스 및 외부 형식 라이브러리의 상호 작용에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**# of CCWs**|현재 CCW(COM 호출 가능 래퍼) 수를 표시합니다. CCW는 관리되지 않는 COM 클라이언트에서 참조되는 관리되는 개체에 대한 프록시입니다. 이 카운터는 관리되지 않는 COM 코드에서 참조되는 관리되는 개체 수를 나타냅니다.|  
 |**# of marshaling**|애플리케이션이 시작된 이후 인수 및 반환 값을 관리 코드에서 비관리 코드로 마샬링하거나 그 반대로 마샬링한 총 횟수를 표시합니다. 이 카운터는 스텁이 인라인인 경우에는 증가하지 않습니다. 스텁은 인수 및 반환 값을 마샬링합니다. 일반적으로 스텁은 마샬링 오버헤드가 적을 때 인라인됩니다.|  
 |**# of Stubs**|공용 언어 런타임에서 만든 현재 스텁 수를 표시합니다. 스텁은 COM interop 호출이나 플랫폼 호출 중에 인수 및 반환 값을 관리 코드에서 비관리 코드로 마샬링하거나 그 반대로 마샬링합니다.|  
-|**# of TLB exports / sec**|다음에 사용하도록 예약됩니다.|  
-|**# of TLB imports / sec**|다음에 사용하도록 예약됩니다.|  
+|**# of TLB exports / sec**|나중에 사용하기 위해 예약되어 있습니다.|  
+|**# of TLB imports / sec**|나중에 사용하기 위해 예약되어 있습니다.|  
 
 ## <a name="jit-performance-counters"></a>JIT 성능 카운터  
  성능 콘솔 .NET CLR JIT 범주에는 JIT 컴파일된 코드에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**# of IL Bytes JITted**|애플리케이션이 시작된 이후 JIT(Just-In-Time) 컴파일러에서 컴파일된 MSIL(Microsoft Intermediate Language) 바이트의 총수를 표시합니다. 이 카운터는 **Total # of IL Bytes Jitted** 카운터에 해당합니다.|  
 |**# of Methods JITted**|애플리케이션이 시작된 이후 JIT 컴파일된 메서드의 총수를 표시합니다. 이 카운터는 사전 JIT 컴파일된 메서드를 포함하지 않습니다.|  
@@ -55,10 +55,10 @@ ms.locfileid: "85803705"
 ## <a name="loading-performance-counters"></a>로드 성능 카운터  
  성능 콘솔 .NET CLR 로드 범주에는 로드된 어셈블리, 클래스 및 애플리케이션 도메인에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
-|**% Time Loading**|다음에 사용하도록 예약됩니다.|  
-|**Assembly Search Length**|다음에 사용하도록 예약됩니다.|  
+|**% Time Loading**|나중에 사용하기 위해 예약되어 있습니다.|  
+|**Assembly Search Length**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**Bytes in Loader Heap**|모든 애플리케이션 도메인에 클래스 로더가 커밋된 메모리의 현재 크기(바이트)를 표시합니다. 커밋된 메모리는 디스크 페이징 파일에 예약된 실제 공간입니다.|  
 |**Current appdomains**|이 애플리케이션에 로드된 애플리케이션 도메인의 현재 개수를 표시합니다.|  
 |**현재 어셈블리**|현재 실행 중인 애플리케이션에서 모든 애플리케이션 도메인에 로드된 어셈블리의 현재 개수를 표시합니다. 어셈블리가 여러 애플리케이션 도메인에서 도메인 중립적으로 로드되는 경우 이 카운터는 한 번만 증가됩니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "85803705"
 ## <a name="lock-and-thread-performance-counters"></a>잠금 및 스레드 성능 카운터  
  성능 콘솔 .NET CLR LocksAndThreads 범주에는 애플리케이션에서 사용하는 관리되는 잠금 및 스레드에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**# of current logical Threads**|애플리케이션에서 현재 관리 되는 스레드 개체 수를 표시합니다. 이 카운터는 실행 중인 스레드와 중지된 스레드 둘 다의 개수를 유지 관리합니다. 이 카운터는 시간별 평균이 아니라 마지막으로 관찰된 값만 표시합니다.|  
 |**# of current physical Threads**|공용 언어 런타임에서 관리되는 스레드 개체에 대한 기본 스레드로 사용하기 위해 만들고  소유한 네이티브 운영 체제 스레드 수를 표시합니다. 런타임에서 내부 작업에 사용하는 스레드는 이 카운터 값에 포함되지 않고 운영 체제 프로세스의 스레드 하위 집합입니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "85803705"
 ## <a name="memory-performance-counters"></a>메모리 성능 카운터  
  성능 콘솔 .NET CLR 메모리 범주에는 가비지 수집기에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**#모든 힙의 바이트**|**Gen 1 Heap Size**, **Gen 2 Heap Size** 및 **Large Object Heap Size** 카운터의 합계를 표시합니다. 이 카운터는 가비지 수집 힙에 할당된 현재 메모리 크기(바이트)를 나타냅니다.|  
 |**GC 핸들 수**|사용 중인 가비지 컬렉션 핸들의 현재 개수를 표시합니다. 가비지 수집 핸들은 공용 언어 런타임 및 관리되는 환경의 외부 리소스에 대한 핸들입니다.|  
@@ -123,7 +123,7 @@ ms.locfileid: "85803705"
 
 성능 콘솔 .NET CLR 네트워킹 범주에는 애플리케이션이 네트워크를 통해 보내고 받는 데이터에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**수신된 바이트**|프로세스가 시작된 이후 <xref:System.AppDomain> 내의 모든 <xref:System.Net.Sockets.Socket> 개체가 받은 바이트 수의 누적 합계입니다. 이 개수에는 TCP/IP에서 정의되지 않은 데이터 및 프로토콜 정보가 포함됩니다.|  
 |**보낸 바이트**|프로세스가 시작된 이후 <xref:System.AppDomain> 내의 모든 <xref:System.Net.Sockets.Socket> 개체가 보낸 바이트 수의 누적 합계입니다. 이 개수에는 TCP/IP에서 정의되지 않은 데이터 및 프로토콜 정보가 포함됩니다.|  
@@ -195,7 +195,7 @@ ms.locfileid: "85803705"
   
  네트워킹 성능 카운터는 <xref:System.Diagnostics> 네임스페이스의 <xref:System.Diagnostics.PerformanceCounter> 및 관련 클래스를 통해 액세스하고 관리할 수 있습니다. Windows 성능 모니터 콘솔을 통해 네트워킹 성능 카운터를 볼 수도 있습니다.  
   
- 네트워킹 성능 카운터를 사용하려면 구성 파일에서 사용하도록 설정해야 합니다. 구성 파일의 단일 설정을 통해 모든 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정합니다. 개별 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정할 수는 없습니다. 자세한 내용은 [ \<performanceCounter> 요소 (네트워크 설정)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)를 참조 하세요.  
+ 네트워킹 성능 카운터를 사용하려면 구성 파일에서 사용하도록 설정해야 합니다. 구성 파일의 단일 설정을 통해 모든 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정합니다. 개별 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정할 수는 없습니다. 자세한 내용은 [\<performanceCounter> 요소(네트워크 설정)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)를 참조하세요.  
   
  네트워킹 카운터를 사용하도록 설정하면 AppDomain별 성능 카운터와 전역 성능 카운터가 모두 생성 및 업데이트됩니다. 사용하지 않도록 설정하면 애플리케이션이 네트워킹 성능 카운터 데이터를 제공하지 않습니다.  
   
@@ -220,15 +220,15 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="security-performance-counters"></a>보안 성능 카운터  
  성능 콘솔 .NET CLR 보안 범주에는 공용 언어 런타임이 애플리케이션에 대해 수행하는 보안 검사에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |**# Link Time Checks**|애플리케이션이 시작된 이후 링크 타임 코드 액세스 보안 검사의 총수를 표시합니다. 링크 타임 코드 액세스 보안 검사는 호출자가 JIT(Just-In-Time) 컴파일 타임에 특정 권한을 요구하는 경우에 수행됩니다. 링크 타임 검사는 호출자당 한 번 수행됩니다. 이 개수는 심각한 성능 문제가 아니라 단순히 보안 시스템 동작을 나타냅니다.|  
 |**% Time in RT checks**|마지막 샘플 이후 런타임 코드 액세스 보안 검사를 수행하는 데 소요된 경과 시간의 백분율을 표시합니다. 이 카운터는 .NET Framework 보안 검사가 끝날 때 업데이트됩니다. 평균이 아니라 마지막으로 관찰된 값을 나타냅니다.|  
-|**% Time Sig Authenticating**|다음에 사용하도록 예약됩니다.|  
+|**% Time Sig Authenticating**|나중에 사용하기 위해 예약되어 있습니다.|  
 |**Stack Walk Depth**|마지막 런타임 코드 액세스 보안 검사 중 스택의 깊이를 표시합니다. 런타임 코드 액세스 보안 검사는 스택을 따라 수행됩니다. 이 카운터는 평균이 아니라 마지막으로 관찰된 값만 표시합니다.|  
 |**Total Runtime Checks**|애플리케이션이 시작된 이후 수행된 런타임 코드 액세스 보안 검사의 총수를 표시합니다. 런타임 코드 액세스 보안 검사는 호출자가 특정 권한을 요구하는 경우에 수행됩니다. 런타임 검사는 호출자에 의해 각 호출에서 수행되고 호출자의 현재 스레드 스택을 검사합니다. **Stack Walk Depth** 카운터와 함께 사용할 경우 이 카운터는 보안 검사에 대해 발생하는 성능 저하를 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [성능 카운터](performance-counters.md)
-- [런타임 프로파일링](runtime-profiling.md)
+- [런타임 프로 파일링](runtime-profiling.md)

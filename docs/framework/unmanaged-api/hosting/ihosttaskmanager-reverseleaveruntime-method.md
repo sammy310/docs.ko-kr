@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841856"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554803"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime 메서드
 컨트롤이 CLR (공용 언어 런타임)을 유지 하 고 관리 코드에서 호출 된 관리 되지 않는 함수를 시작 했음을 호스트에 알립니다.  
@@ -33,9 +33,9 @@ HRESULT ReverseLeaveRuntime ();
   
 ## <a name="return-value"></a>Return Value  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`성공적으로 반환 되었습니다.|  
+|S_OK|`ReverseLeaveRuntime` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -51,11 +51,11 @@ HRESULT ReverseLeaveRuntime ();
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CallNeedsHostHook 메서드](ihosttaskmanager-callneedshosthook-method.md)
 - [EnterRuntime 메서드](ihosttaskmanager-enterruntime-method.md)
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask 인터페이스](ihosttask-interface.md)
 - [IHostTaskManager 인터페이스](ihosttaskmanager-interface.md)
 - [LeaveRuntime 메서드](ihosttaskmanager-leaveruntime-method.md)
-- [플랫폼 호출 자세히 보기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [플랫폼 호출 자세히 보기](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

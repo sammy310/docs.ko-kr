@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404773"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545521"
 ---
 # <a name="declare-statement"></a>Declare 문
 
@@ -120,7 +120,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 - **문자 집합.** 에서 `charsetmodifier` 외부 프로시저를 호출할 때 문자열을 마샬링하 Visual Basic는 방법을 지정할 수 있습니다. `Ansi`한정자는 모든 문자열을 ANSI 값으로 마샬링하기 위해 Visual Basic를 전달 하 고 `Unicode` 한정자는 모든 문자열을 유니코드 값으로 마샬링하는 것으로 지시 합니다. `Auto`한정자는 외부 참조를 기반으로 하는 .NET Framework 규칙에 따라 문자열을 마샬링할 Visual Basic `name` 또는 `aliasname` 지정 된 경우를 전달 합니다. 기본값은 `Ansi`입니다.
 
-  `charsetmodifier`는 외부 파일 내에서 외부 프로시저를 Visual Basic 하는 방법도 지정 합니다. `Ansi`및는 `Unicode` 둘 다 검색 중에 이름을 수정 하지 않고 조회 하기 위해 직접 Visual Basic 합니다. `Auto`는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같이 외부 프로시저 이름을 수정할 수 Visual Basic를 전달 합니다.
+  `charsetmodifier` 는 외부 파일 내에서 외부 프로시저를 Visual Basic 하는 방법도 지정 합니다. `Ansi` 및는 `Unicode` 둘 다 검색 중에 이름을 수정 하지 않고 조회 하기 위해 직접 Visual Basic 합니다. `Auto` 는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같이 외부 프로시저 이름을 수정할 수 Visual Basic를 전달 합니다.
 
   - ANSI 플랫폼 (예: Windows 95, Windows 98 또는 Windows Millennium Edition)에서 먼저 이름 수정 없이 외부 프로시저를 조회 합니다. 실패 하면 외부 프로시저 이름의 끝에 "A"를 추가 하 고 다시 확인 합니다.
 
@@ -129,7 +129,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 - **방법일.** Visual Basic는 PInvoke (.NET Framework *platform invoke* ) 메커니즘을 사용 하 여 외부 프로시저를 확인 하 고 액세스 합니다. `Declare`문과 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스 모두이 메커니즘을 자동으로 사용 하 고 PInvoke에 대 한 지식이 필요 하지 않습니다. 자세한 내용은 [연습: Windows Api 호출](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.
 
 > [!IMPORTANT]
-> 외부 프로시저가 CLR (공용 언어 런타임) 외부에서 실행 되는 경우 *관리 되지 않는 코드*입니다. 이러한 프로시저 (예: Windows API 함수 또는 COM 메서드)를 호출 하는 경우 응용 프로그램을 보안 위험에 노출 시킬 수 있습니다. 자세한 내용은 [비관리 코드에 대 한 보안 코딩 지침](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)을 참조 하세요.
+> 외부 프로시저가 CLR (공용 언어 런타임) 외부에서 실행 되는 경우 *관리 되지 않는 코드*입니다. 이러한 프로시저 (예: Windows API 함수 또는 COM 메서드)를 호출 하는 경우 응용 프로그램을 보안 위험에 노출 시킬 수 있습니다. 자세한 내용은 [비관리 코드에 대 한 보안 코딩 지침](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -145,7 +145,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
 - [Imports 문(.NET 네임스페이스 및 형식)](imports-statement-net-namespace-and-type.md)

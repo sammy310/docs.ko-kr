@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558675"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554041"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 요소
 
@@ -47,7 +47,7 @@ ms.locfileid: "88558675"
   
 .NET Framework 1.1~3.5의 런타임 버전을 지원하는 앱의 경우 여러 버전의 런타임이 지원되면 첫 번째 요소는 우선 순위가 가장 높은 런타임 버전을 지정하고 마지막 요소는 우선 순위가 가장 낮은 버전을 지정해야 합니다. .NET Framework 4.0 이상 버전을 지 원하는 앱의 경우 특성은 `version` .NET Framework 4 이상 버전에 공통 된 CLR 버전을 나타내며, `sku` 특성은 앱이 대상으로 하는 단일 .NET Framework 버전을 나타냅니다.
 
-**\<supportedRuntime>** 특성이 있는 요소가 `sku` 구성 파일에 있고 설치 된 .NET Framework 버전이 지원 되는 지정 된 버전 보다 낮으면 응용 프로그램이 실행 되지 않고, 지원 되는 버전을 설치 하 라는 메시지가 표시 됩니다. 그렇지 않으면 응용 프로그램이 설치 된 모든 버전에서 실행을 시도 하지만 해당 버전과 완전히 호환 되지 않으면 예기치 않게 동작할 수 있습니다. .NET Framework 버전 간의 호환성 차이점 [은 .NET Framework의 응용 프로그램 호환성](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)을 참조 하세요. 따라서 보다 쉬운 오류 진단을 위해이 요소를 응용 프로그램 구성 파일에 포함 하는 것이 좋습니다. (새 프로젝트를 만들 때 자동으로 생성 된 구성 파일에는 Visual Studio가 이미 포함 되어 있습니다.)
+**\<supportedRuntime>** 특성이 있는 요소가 `sku` 구성 파일에 있고 설치 된 .NET Framework 버전이 지원 되는 지정 된 버전 보다 낮으면 응용 프로그램이 실행 되지 않고, 지원 되는 버전을 설치 하 라는 메시지가 표시 됩니다. 그렇지 않으면 응용 프로그램이 설치 된 모든 버전에서 실행을 시도 하지만 해당 버전과 완전히 호환 되지 않으면 예기치 않게 동작할 수 있습니다. .NET Framework 버전 간의 호환성 차이점 [은 .NET Framework의 응용 프로그램 호환성](../../../migration-guide/application-compatibility.md)을 참조 하세요. 따라서 보다 쉬운 오류 진단을 위해이 요소를 응용 프로그램 구성 파일에 포함 하는 것이 좋습니다. (새 프로젝트를 만들 때 자동으로 생성 된 구성 파일에는 Visual Studio가 이미 포함 되어 있습니다.)
   
 > [!NOTE]
 > 응용 프로그램에서 [CorBindToRuntimeEx 함수와](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)같은 레거시 활성화 경로를 사용 하 고 이러한 경로를 사용 하 여 이전 버전 대신 CLR의 버전 4를 활성화 하는 경우 또는 응용 프로그램이 .NET Framework 4로 빌드되고 이전 버전의 .NET Framework를 사용 하 여 빌드된 혼합 모드 어셈블리에 대 한 종속성이 있는 경우 지원 되는 런타임 목록에서 .NET Framework 4를 지정 하는 것 만으로는 충분 하지 않습니다. 또한 구성 파일의 [ \<startup> 요소](startup-element.md) 에서 특성을로 설정 해야 합니다 `useLegacyV2RuntimeActivationPolicy` `true` . 그러나이 특성을로 설정 하면 `true` 이전 버전의 .NET Framework 빌드된 모든 구성 요소가를 사용 하 여 빌드된 런타임 대신 .NET Framework 4를 사용 하 여 실행 됩니다.
@@ -81,7 +81,7 @@ ms.locfileid: "88558675"
 |4.0, Client Profile, 업데이트 2|". NETFramework, Version = v 4.0.2, Profile = Client "|
 |4.0, 플랫폼 업데이트 3|". NETFramework, Version = v 4.0.3 "|
 |4.0, Client Profile, 업데이트 3|". NETFramework, Version = v 4.0.3, Profile = Client "|
-|4.5.|".NETFramework,Version=v4.5"|
+|4.5|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
 |4.6|".NETFramework,Version=v4.6"|
@@ -108,7 +108,7 @@ ms.locfileid: "88558675"
 
 이 요소는 애플리케이션 구성 파일에 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시작 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

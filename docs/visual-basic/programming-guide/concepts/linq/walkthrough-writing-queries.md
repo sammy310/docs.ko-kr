@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 25905d7ac3ca4bb66a22ad1df421b400eaa6b08f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554595"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 
@@ -32,7 +32,7 @@ ms.locfileid: "84413273"
 
 4. 프로젝트 형식 목록에서 **콘솔 응용 프로그램**을 클릭 합니다. **이름** 상자에 프로젝트의 이름을 입력 하 고 **확인**을 클릭 합니다.
 
-    프로젝트가 생성 됩니다. 기본적으로이 파일에는 System.object에 대 한 참조가 포함 되어 있습니다. 또한 [프로젝트 디자이너 (Visual Basic)의 참조 페이지](/visualstudio/ide/reference/references-page-project-designer-visual-basic) 에서 **가져온 네임 스페이스** 목록에는 <xref:System.Linq?displayProperty=nameWithType> 네임 스페이스가 포함 됩니다.
+    프로젝트가 생성 됩니다. 기본적으로 System.Core.dll에 대 한 참조가 포함 되어 있습니다. 또한 [프로젝트 디자이너 (Visual Basic)의 참조 페이지](/visualstudio/ide/reference/references-page-project-designer-visual-basic) 에서 **가져온 네임 스페이스** 목록에는 <xref:System.Linq?displayProperty=nameWithType> 네임 스페이스가 포함 됩니다.
 
 5. [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On**으로 설정 되어 있는지 확인 합니다.
 
@@ -145,11 +145,11 @@ ms.locfileid: "84413273"
 
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 
-- [LINQ to XML](linq-to-xml.md)
+- [LINQ to XML](../../../../standard/linq/linq-xml-overview.md)
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](index.md)
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)

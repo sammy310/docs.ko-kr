@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab6f12be01899f5b7e54a7ec2d9675d502d88bc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73039153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555135"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework의 구성 파일 스키마
 
@@ -37,7 +37,7 @@ ms.locfileid: "73039153"
 > [!IMPORTANT]
 > 구성 파일에서 XML 태그 및 특성은 대/소문자를 구분합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [**\<configuration>** 요소인](configuration-element.md)\
 모든 구성 파일의 최상위 요소입니다.
@@ -92,14 +92,14 @@ WIF (Windows Identity Foundation) 구성 스키마의 모든 요소입니다.
 
 ## <a name="related-sections"></a>관련 단원
 
-[원격 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[원격 설정 스키마](/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 리모팅을 구현하는 클라이언트 및 서버 응용 프로그램을 구성하는 요소에 대해 설명합니다.
 
-[ASP.NET Settings 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
+[ASP.NET Settings 스키마](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 ASP.NET 웹 응용 프로그램의 동작을 제어하는 요소에 대해 설명합니다.
 
-[웹 서비스 설정 스키마](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+[웹 서비스 설정 스키마](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 ASP.NET 웹 서비스와 해당 클라이언트를 제어하는 요소에 대해 설명합니다.
 
-[.NET Framework 앱 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+[.NET Framework 앱 구성](/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
 .NET Framework에서 보안, 어셈블리 바인딩 및 리모팅을 구성하는 방법에 대해 설명합니다.

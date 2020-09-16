@@ -2,12 +2,12 @@
 title: 발급된 토큰을 사용하는 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-ms.openlocfilehash: 4742af43c2f4965b0a1f0458a35638e220c1a59f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1bf55cf6f964db891a428c84c4c7786d42897997
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576462"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553976"
 ---
 # <a name="message-security-with-issued-tokens"></a>발급된 토큰을 사용하는 메시지 보안
 발급 된 토큰 클라이언트는 WCF (Windows Communication Foundation)에서 페더레이션된 보안 시나리오를 사용 하도록 설정 합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "84576462"
   
  페더레이션된 시나리오에 대 한 자세한 설명은 [페더레이션 및 발급 된 토큰](federation-and-issued-tokens.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [페더레이션 및 발급된 토큰](federation-and-issued-tokens.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

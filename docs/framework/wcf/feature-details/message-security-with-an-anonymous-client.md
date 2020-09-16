@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595221"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553768"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
 
@@ -94,7 +94,7 @@ ms.locfileid: "84595221"
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -138,10 +138,10 @@ ms.locfileid: "84595221"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
 - [분산 애플리케이션 보안](distributed-application-security.md)
 - [Message Security Anonymous](../samples/message-security-anonymous.md)
 - [서비스 ID 및 인증](service-identity-and-authentication.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

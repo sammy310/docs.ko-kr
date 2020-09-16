@@ -2,12 +2,12 @@
 title: F# 코딩 규칙
 description: 'F # 코드를 작성할 때 일반적인 지침과 관용구에 대해 알아봅니다.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053013"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554028"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -174,7 +174,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>도메인의 내장 형식에서 오류 사례 및 잘못 된 상태를 나타냅니다.
 
-[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 사용 하면 F #은 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들면 다음과 같습니다.
+[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 사용 하면 F #은 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들어:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -209,7 +209,7 @@ let handleWithdrawal amount =
 
 예외를 발생 시키기 위해 F #에서 사용할 수 있는 기본 구문은 다음과 같은 기본 설정 순서로 고려 되어야 합니다.
 
-| 함수 | 구문 | 목적 |
+| 기능 | 구문 | 용도 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 지정 된 `System.ArgumentNullException` 인수 이름을 사용 하 여을 발생 시킵니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 지정 된 `System.ArgumentException` 인수 이름 및 메시지를 사용 하 여을 발생 시킵니다. |
@@ -703,7 +703,7 @@ Visual Studio Code API와 상호 작용할 때 클래스가 필요 하지 않기
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>서명을 줄이려면 형식 약어를 고려 하십시오.
 
-[형식 약어](../language-reference/type-abbreviations.md) 는 함수 시그니처 또는 보다 복잡 한 형식과 같은 다른 형식에 레이블을 할당 하는 편리한 방법입니다. 예를 들어 다음 별칭은 심층 학습 라이브러리인 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)를 사용 하 여 계산을 정의 하는 데 필요한 항목에 레이블을 할당 합니다.
+[형식 약어](../language-reference/type-abbreviations.md) 는 함수 시그니처 또는 보다 복잡 한 형식과 같은 다른 형식에 레이블을 할당 하는 편리한 방법입니다. 예를 들어 다음 별칭은 심층 학습 라이브러리인 [CNTK](/cognitive-toolkit/)를 사용 하 여 계산을 정의 하는 데 필요한 항목에 레이블을 할당 합니다.
 
 ```fsharp
 open CNTK

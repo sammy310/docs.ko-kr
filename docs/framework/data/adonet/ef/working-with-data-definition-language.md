@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854229"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553872"
 ---
 # <a name="working-with-data-definition-language"></a>데이터 정의 언어로 작업
 .NET Framework 버전 4부터 Entity Framework은 DDL (데이터 정의 언어)을 지원 합니다. 이렇게 하면 연결 문자열 및 스토리지(SSDL) 모델의 메타데이터를 기반으로 데이터베이스 인스턴스를 만들거나 삭제할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "70854229"
   
  다음 예제에서는 기존 모델을 기반으로 데이터베이스를 생성하는 방법을 보여 줍니다. 또한 새 엔터티 개체를 개체 컨텍스트에 추가한 다음 데이터베이스에 저장합니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 ### <a name="to-define-a-database-based-on-the-existing-model"></a>기존 모델을 기반으로 데이터베이스를 정의하려면  
   
@@ -40,11 +40,11 @@ ms.locfileid: "70854229"
   
 2. 애플리케이션에 기존 모델을 추가합니다.  
   
-    1. 이라는 `SchoolModel`빈 모델을 추가 합니다. 빈 모델 [을 만들려면 방법: 새 .edmx 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) 항목을 만듭니다.  
+    1. 이라는 빈 모델을 추가 `SchoolModel` 합니다. 빈 모델을 만들려면 [방법: 새 .Edmx 파일 만들기](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) 항목을 참조 하세요.  
   
      SchoolModel.edmx 파일이 프로젝트에 추가됩니다.  
   
-    1. [School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) 모델 토픽에서 school 모델에 대 한 개념, 저장소 및 매핑 콘텐츠를 복사 합니다.  
+    1. [School](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) 모델 토픽에서 school 모델에 대 한 개념, 저장소 및 매핑 콘텐츠를 복사 합니다.  
   
     2. SchoolModel.edmx 파일을 열고 콘텐츠를 `edmx:Runtime` 태그 안에 붙여 넣습니다.  
   

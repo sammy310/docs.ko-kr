@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: aef28af3eff6aba03003f156b9226b61a8e72d5b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3149318a1dc20c96bccc9b81347192bfa2e4bfdf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213753"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554829"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -54,8 +54,8 @@ HRESULT EnumerateLocalVariablesEx(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
-- [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: 방법 가이드](/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287001"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554738"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
 .NET Framework 데이터 공급자는 데이터베이스에 연결 하 고, 명령을 실행 하 고, 결과를 검색 하는 데 사용 됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. 데이터 공급자가 간단 하 고, 데이터 소스와 코드 간에 최소의 계층을 만들고, 기능을 저하 시 키 지 않고 성능을 향상 시킵니다. .NET Framework  
@@ -25,12 +25,12 @@ ms.locfileid: "84287001"
 |.NET Framework Data Provider for ODBC|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.Odbc> 네임스페이스를 사용합니다.|  
 |.NET Framework Data Provider for Oracle|Oracle 데이터 소스에서 사용합니다. Oracle의 .NET Framework Data Provider는 Oracle 클라이언트 소프트웨어 버전 8.1.7 이상을 지원 하며 네임 스페이스를 사용 합니다 <xref:System.Data.OracleClient> .|  
 |EntityClient 공급자|EDM(엔터티 데이터 모델) 애플리케이션에 대한 데이터 액세스를 제공합니다. <xref:System.Data.EntityClient> 네임스페이스를 사용합니다.|  
-|SQL Server Compact 4.0에 대 한 Data Provider를 .NET Framework 합니다.|Microsoft SQL Server Compact 4.0에 대 한 데이터 액세스를 제공 합니다. [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 네임스페이스를 사용합니다.|  
+|SQL Server Compact 4.0에 대 한 Data Provider를 .NET Framework 합니다.|Microsoft SQL Server Compact 4.0에 대 한 데이터 액세스를 제공 합니다. [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 네임스페이스를 사용합니다.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 데이터 공급자의 핵심 개체  
  다음 표에서는 .NET Framework 데이터 공급자를 구성 하는 네 가지 핵심 개체에 대해 간략하게 설명 합니다.  
   
-|Object|Description|  
+|개체|Description|  
 |------------|-----------------|  
 |`Connection`|특정 데이터 소스에 연결합니다. 모든 `Connection` 개체의 기본 클래스는 <xref:System.Data.Common.DbConnection> 클래스입니다.|  
 |`Command`|데이터 소스에 대해 명령을 실행합니다. `Parameters` 를 노출하고 `Transaction` 의 `Connection`범위 내에서 실행할 수 있습니다. 모든 `Command` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommand> 클래스입니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "84287001"
   
  이 문서 앞부분의 표에 나와 있는 핵심 클래스 외에도 .NET Framework 데이터 공급자에는 다음 표에 나와 있는 클래스가 포함 되어 있습니다.  
   
-|Object|Description|  
+|개체|Description|  
 |------------|-----------------|  
 |`Transaction`|데이터 소스의 트랜잭션에 명령을 인리스트먼트합니다. 모든 `Transaction` 개체의 기본 클래스는 <xref:System.Data.Common.DbTransaction> 클래스입니다. ADO.NET에서는 <xref:System.Transactions> 네임스페이스에 있는 클래스를 사용하여 트랜잭션에 대한 지원을 제공합니다.|  
 |`CommandBuilder`|`DataAdapter` 의 명령 속성을 자동으로 생성하거나 저장 프로시저에서 매개 변수 정보를 파생하여 `Parameters` 개체의 `Command` 컬렉션을 채우는 도우미 개체입니다. 모든 `CommandBuilder` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommandBuilder> 클래스입니다.|  
@@ -158,7 +158,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>EntityClient 공급자  
  EntityClient 공급자는 EDM(엔터티 데이터 모델)을 기반으로 데이터에 액세스하는 데 사용됩니다. EntityClient 공급자는 다른 .NET Framework 데이터 공급자와 달리 데이터 소스와 직접 상호 작용하지 않고 대신 Entity SQL을 사용하여 기본 데이터 공급자와 통신합니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](./ef/entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

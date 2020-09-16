@@ -2,12 +2,12 @@
 title: WSE 3.0 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: ecf27c227b3e39d0c449a1d2ff32dc5bd59c750b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c7feac0a44883e8019acfeaa288752fb051c667f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598790"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554093"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 웹 서비스를 WCF로 마이그레이션
 WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레이션하는 경우의 이점에는 향상 된 성능 및 추가 전송, 추가 보안 시나리오 및 WS-* 사양이 지원 됩니다. WSE 3.0에서 WCF로 마이그레이션된 웹 서비스는 최대 200%에서 400% 성능 개선을 경험할 수 있습니다. WCF에서 지 원하는 전송에 대 한 자세한 내용은 [전송 선택](choosing-a-transport.md)을 참조 하세요. WCF에서 지원 되는 시나리오 목록은 [일반적인 보안 시나리오](common-security-scenarios.md)를 참조 하세요. WCF에서 지 원하는 사양의 목록은 [웹 서비스 프로토콜 상호 운용성 가이드](web-services-protocols-interoperability-guide.md)를 참조 하세요.  
@@ -20,7 +20,7 @@ WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레�
  WCF와 ASP.NET 또는 WSE 3.0 프로그래밍 모델 간에는 비슷한 많은 측면이 있지만 서로 다릅니다. WCF 프로그래밍 모델에 대 한 자세한 내용은 [기본 프로그래밍 수명 주기](../basic-programming-lifecycle.md)를 참조 하세요.  
   
 > [!NOTE]
-> WSE 웹 서비스를 WCF로 마이그레이션하려면 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 클라이언트를 생성할 수 있습니다. 그러나 이 클라이언트에는 WCF 서비스의 시작 지점으로 사용할 수 있는 인터페이스와 클래스도 포함되어 있습니다. 생성되는 인터페이스에는 <xref:System.ServiceModel.OperationContractAttribute> 속성이 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A>로 설정되어 계약의 멤버에 적용되는 `*` 특성이 있습니다. WSE 클라이언트에서이 설정을 사용 하 여 웹 서비스를 호출 하는 경우 다음과 같은 예외가 throw 됩니다. **Services3: ResponseProcessingException: WSE910: 응답 메시지를 처리 하는 동안 오류가 발생 하 고 내부 예외에서 오류를 찾을 수**있습니다. 이를 완화하려면 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 특성의 <xref:System.ServiceModel.OperationContractAttribute> 속성을 `null`처럼 `http://Microsoft.WCF.Documentation/ResponseToOCAMethod`이 아닌 값으로 설정합니다.  
+> WSE 웹 서비스를 WCF로 마이그레이션하려면 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 클라이언트를 생성할 수 있습니다. 그러나 이 클라이언트에는 WCF 서비스의 시작 지점으로 사용할 수 있는 인터페이스와 클래스도 포함되어 있습니다. 생성되는 인터페이스에는 <xref:System.ServiceModel.OperationContractAttribute> 속성이 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A>로 설정되어 계약의 멤버에 적용되는 `*` 특성이 있습니다. WSE 클라이언트에서이 설정을 사용 하 여 웹 서비스를 호출 하는 경우 다음과 같은 예외가 throw 됩니다. **Services3: ResponseProcessingException: WSE910: 응답 메시지를 처리 하는 동안 오류가 발생 하 고 내부 예외에서 오류를 찾을 수**있습니다. 이를 완화하려면 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 특성의 <xref:System.ServiceModel.OperationContractAttribute> 속성을 `null`처럼 `http://Microsoft.WCF.Documentation/ResponseToOCAMethod`이 아닌 값으로 설정합니다.  
   
 ## <a name="security"></a>보안  
   
@@ -66,7 +66,7 @@ WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레�
  WCF에서 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 [사용자 지정 바인딩](../extending/custom-bindings.md)을 참조 하세요.  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>애플리케이션 코드를 사용하여 보안된 WSE 3.0 웹 서비스  
- WSE 3.0 또는 WCF를 사용 하는지 여부에 관계 없이 응용 프로그램 코드에서 구성 대신 보안 요구 사항을 지정할 수 있습니다. WSE 3.0에서 보안 요구 사항을 지정하려면 `Policy` 클래스에서 파생되는 클래스를 만든 다음 `Add` 메서드를 호출하여 요구 사항을 추가합니다. 코드에서 보안 요구 사항을 지정 하는 방법에 대 한 자세한 내용은 [방법: 정책 파일을 사용 하지 않고 웹 서비스 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10))을 참조 하세요. WCF에서 코드에 보안 요구 사항을 지정 하려면 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.Channels.BindingElementCollection> 의 인스턴스를에 추가 <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> 합니다. 보안 어설션 요구 사항은 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 정적 인증 모드 도우미 메서드를 사용하여 설정됩니다. WCF를 사용 하는 코드에서 보안 요구 사항을 지정 하는 방법에 대 한 자세한 내용은 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md) 및 [방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)를 참조 하세요.  
+ WSE 3.0 또는 WCF를 사용 하는지 여부에 관계 없이 응용 프로그램 코드에서 구성 대신 보안 요구 사항을 지정할 수 있습니다. WSE 3.0에서 보안 요구 사항을 지정하려면 `Policy` 클래스에서 파생되는 클래스를 만든 다음 `Add` 메서드를 호출하여 요구 사항을 추가합니다. 코드에서 보안 요구 사항을 지정 하는 방법에 대 한 자세한 내용은 [방법: 정책 파일을 사용 하지 않고 웹 서비스 보안](/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10))을 참조 하세요. WCF에서 코드에 보안 요구 사항을 지정 하려면 클래스의 인스턴스를 만들고 <xref:System.ServiceModel.Channels.BindingElementCollection> 의 인스턴스를에 추가 <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> 합니다. 보안 어설션 요구 사항은 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 정적 인증 모드 도우미 메서드를 사용하여 설정됩니다. WCF를 사용 하는 코드에서 보안 요구 사항을 지정 하는 방법에 대 한 자세한 내용은 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](how-to-create-a-custom-binding-using-the-securitybindingelement.md) 및 [방법: 지정 된 인증 모드에 대 한 SecurityBindingElement 만들기](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)를 참조 하세요.  
   
 ### <a name="wse-30-custom-policy-assertion"></a>WSE 3.0 사용자 지정 정책 어설션  
  WSE 3.0에는 SOAP 메시지를 보안하는 사용자 지정 정책 어설션과 SPAO 메시지를 보안하지 않는 사용자 지정 정책 어설션이 있습니다. SOAP 메시지를 보호 하는 정책 어설션은 WSE 3.0 `SecurityPolicyAssertion` 클래스에서 파생 되며 WCF의 개념은 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스입니다.  
@@ -78,7 +78,7 @@ WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레�
  SOAP 메시지를 보호 하지 않는 사용자 지정 정책 어설션을 변환 하려면 [필터링](filtering.md) 및 샘플 [사용자 지정 메시지 인터셉터](../samples/custom-message-interceptor.md)를 참조 하세요.  
   
 ### <a name="wse-30-custom-security-token"></a>WSE 3.0 사용자 지정 보안 토큰  
- 사용자 지정 토큰을 만들기 위한 WCF 프로그래밍 모델은 WSE 3.0과 다릅니다. WSE에서 사용자 지정 토큰을 만드는 방법에 대 한 자세한 내용은 [사용자 지정 보안 토큰 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10))를 참조 하세요. WCF에서 사용자 지정 토큰을 만드는 방법에 대 한 자세한 내용은 [방법: 사용자 지정 토큰 만들기](../extending/how-to-create-a-custom-token.md)를 참조 하세요.  
+ 사용자 지정 토큰을 만들기 위한 WCF 프로그래밍 모델은 WSE 3.0과 다릅니다. WSE에서 사용자 지정 토큰을 만드는 방법에 대 한 자세한 내용은 [사용자 지정 보안 토큰 만들기](/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10))를 참조 하세요. WCF에서 사용자 지정 토큰을 만드는 방법에 대 한 자세한 내용은 [방법: 사용자 지정 토큰 만들기](../extending/how-to-create-a-custom-token.md)를 참조 하세요.  
   
 ### <a name="wse-30-custom-token-manager"></a>WSE 3.0 사용자 지정 토큰 관리자  
  사용자 지정 토큰 관리자를 만드는 프로그래밍 모델은 WSE 3.0이 아닌 WCF에서 다릅니다. 사용자 지정 토큰 관리자 및 사용자 지정 보안 토큰에 필요한 기타 구성 요소를 만드는 방법에 대 한 자세한 내용은 [방법: 사용자 지정 토큰 만들기](../extending/how-to-create-a-custom-token.md)를 참조 하세요.  
@@ -111,7 +111,7 @@ WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레�
   
 ### <a name="wse-30-applications-that-use-the-wse-messaging-api"></a>WSE 메시징 API를 사용하는 WSE 3.0 애플리케이션  
 
- WSE 메시징 API를 사용하여 클라이언트와 웹 서비스 간에 전달되는 XML에 직접 액세스할 수 있으면 &quot;POX&quot;(Plain Old XML)를 사용하도록 애플리케이션을 변환할 수 있습니다. POX에 대 한 자세한 내용은 [POX 응용 프로그램과의 상호 운용성](interoperability-with-pox-applications.md)을 참조 하세요. WSE 메시징 API에 대 한 자세한 내용은 [Wse 메시징 api를 사용 하 여 SOAP 메시지 전송 및 수신](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10))을 참조 하세요.  
+ WSE 메시징 API를 사용하여 클라이언트와 웹 서비스 간에 전달되는 XML에 직접 액세스할 수 있으면 &quot;POX&quot;(Plain Old XML)를 사용하도록 애플리케이션을 변환할 수 있습니다. POX에 대 한 자세한 내용은 [POX 응용 프로그램과의 상호 운용성](interoperability-with-pox-applications.md)을 참조 하세요. WSE 메시징 API에 대 한 자세한 내용은 [Wse 메시징 api를 사용 하 여 SOAP 메시지 전송 및 수신](/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10))을 참조 하세요.  
   
 ## <a name="transports"></a>전송  
   
@@ -123,7 +123,7 @@ WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)로 마이그레�
 ### <a name="custom-transport"></a>사용자 지정 전송  
  WCF의 WSE 3.0 사용자 지정 전송은 채널 확장에 해당 합니다. 채널 확장을 만드는 방법에 대 한 자세한 내용은 [채널 계층 확장](../extending/extending-the-channel-layer.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 프로그래밍 수명 주기](../basic-programming-lifecycle.md)
 - [사용자 지정 바인딩](../extending/custom-bindings.md)

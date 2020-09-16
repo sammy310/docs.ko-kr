@@ -2,12 +2,12 @@
 title: <certificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: e28e7d16073a56f3b6126439644bfff86c9af18b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400550"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554373"
 ---
 # <a name="certificate-element"></a>\<certificate> 요소
 피어 투 피어 클라이언트의 메시지를 서명 및 암호화하는 데 사용하는 X.509 인증서를 지정합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "70400550"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
@@ -83,6 +83,6 @@ ms.locfileid: "70400550"
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [인증서 사용](../../../wcf/feature-details/working-with-certificates.md)
 - [피어 투 피어 네트워킹](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peer Channel Message Authentication](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Peer Channel Custom Authentication](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [피어 채널 애플리케이션 보안](../../../wcf/feature-details/securing-peer-channel-applications.md)

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309588"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553807"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 
@@ -18,7 +18,7 @@ ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) �
 
 - Windows 운영 체제에 포함되어 있는 [Logman](/windows-server/administration/windows-commands/logman) 및 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 명령줄 도구
 
-- [Windows 성능 도구 키트](/windows-hardware/test/wpt/)에 있는 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](https://docs.microsoft.com/archive/blogs/pigscanfly/)를 참조하세요.
+- [Windows 성능 도구 키트](/windows-hardware/test/wpt/)에 있는 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 도구 Xperf에 대한 자세한 내용은 [Windows Performance 블로그](/archive/blogs/pigscanfly/)를 참조하세요.
 
 CLR 이벤트 정보를 캡처하려면 컴퓨터에 CLR 공급자가 설치되어 있어야 합니다. 공급자가 설치되어 있는지 확인하려면 명령줄에 `logman query providers`를 입력합니다. 공급자 목록이 나타납니다. 이 목록에는 다음과 같이 CLR 공급자 항목이 포함되어 있어야 합니다.
 
@@ -50,7 +50,7 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     다음은 각 문자에 대한 설명입니다.
+     여기서
 
     - `-p` 매개 변수는 공급자 GUID를 식별합니다.
 
@@ -110,7 +110,7 @@ CLR 공급자가 목록에 없는 경우 Windows [Wevtutil](/windows-server/admi
 
      이 명령에 의해 XPerf는 사용자가 볼 수 있는 쉼표로 분리된 값 파일(CSV)로 이벤트를 덤프하게 됩니다. 이벤트별로 서로 다른 필드가 있기 때문에 이 CSV 파일에서는 데이터 앞에 헤더 줄이 둘 이상 있습니다. 모든 줄의 첫 번째 필드는 이벤트 유형이고, 이 유형은 나머지 필드 확인에 사용되어야 하는 헤더를 나타냅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 성능 도구 키트](/windows-hardware/test/wpt/)
 - [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md)

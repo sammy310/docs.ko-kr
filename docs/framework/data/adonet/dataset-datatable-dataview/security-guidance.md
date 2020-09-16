@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 34fb95e35e169ca0b72735a16539ecfdec037f87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137619"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554543"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -18,9 +18,9 @@ ms.locfileid: "89137619"
 * .NET Core 이상
 * .NET 5.0 이상
 
-[DataSet](/dotnet/api/system.data.dataset) 및 [DataTable](/dotnet/api/system.data.datatable) 형식은 데이터 집합을 관리 되는 개체로 표현할 수 있도록 하는 레거시 .net 구성 요소입니다. 이러한 구성 요소는 원래 [ADO.NET 인프라](/dotnet/framework/data/adonet/dataset-datatable-dataview/)의 일부로 .net 1.0에서 도입 되었습니다. 이러한 목표는 관계형 데이터 집합에 대 한 관리 되는 뷰를 제공 하 여 데이터의 기본 원본이 XML, SQL 또는 다른 기술 인지 여부를 추상화 하는 것 이었습니다.
+[DataSet](/dotnet/api/system.data.dataset) 및 [DataTable](/dotnet/api/system.data.datatable) 형식은 데이터 집합을 관리 되는 개체로 표현할 수 있도록 하는 레거시 .net 구성 요소입니다. 이러한 구성 요소는 원래 [ADO.NET 인프라](./index.md)의 일부로 .net 1.0에서 도입 되었습니다. 이러한 목표는 관계형 데이터 집합에 대 한 관리 되는 뷰를 제공 하 여 데이터의 기본 원본이 XML, SQL 또는 다른 기술 인지 여부를 추상화 하는 것 이었습니다.
 
-최신 데이터 뷰 패러다임을 비롯 한 ADO.NET에 대 한 자세한 내용은 [ADO.NET 설명서](/dotnet/framework/data/adonet/)를 참조 하세요.
+최신 데이터 뷰 패러다임을 비롯 한 ADO.NET에 대 한 자세한 내용은 [ADO.NET 설명서](../index.md)를 참조 하세요.
 
 ## <a name="default-restrictions-when-deserializing-a-dataset-or-datatable-from-xml"></a>XML에서 DataSet 또는 DataTable을 deserialize 할 때의 기본 제한 사항
 
@@ -49,7 +49,7 @@ XML `DataSet` 을 기존 또는 인스턴스로 로드할 때 `DataTable` 기존
 > [!NOTE]
 > 에 열을 추가 하면가 `DataTable` `ReadXml` XML에서 스키마를 읽지 않으며 스키마가 일치 하지 않는 경우에도 레코드에서 읽지 않으므로이 메서드를 사용 하려면 모든 열을 직접 추가 해야 합니다.
 
-```cs
+```csharp
 XmlReader xmlReader = GetXmlReader();
 
 // Assume the XML blob contains data for type MyCustomClass.
@@ -105,7 +105,7 @@ _App.config_ 를 사용 하 여 허용 되는 형식 목록을 확장할 수 있
 
 형식의 어셈블리 정규화 된 이름을 검색 하려면 다음 코드에 나와 있는 것 처럼 [AssemblyQualifiedName](/dotnet/api/system.type.assemblyqualifiedname) 속성을 사용 합니다.
 
-```cs
+```csharp
 string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName;
 ```
 
@@ -136,7 +136,7 @@ string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName
 
 다음 코드에 표시 된 것 처럼 잘 _알려진 키를_사용 하는 경우에는 [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) 를 사용 하 여 허용 되는 형식 목록을 프로그래밍 방식으로 확장할 수도 있습니다.
 
-```cs
+```csharp
 Type[] extraAllowedTypes = new Type[]
 {
     typeof(Fabrikam.CustomType),
@@ -260,11 +260,11 @@ ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니
 }
 ```
 
-자세한 내용은 [".Net Core 런타임 구성 설정"](/dotnet/core/run-time-config/)을 참조 하십시오.
+자세한 내용은 [".Net Core 런타임 구성 설정"](../../../../core/run-time-config/index.md)을 참조 하십시오.
 
 `AllowArbitraryDataSetTypeInstantiation` 는 다음 코드와 같이 구성 파일을 사용 하는 대신 [Appcontext. SetSwitch](/dotnet/api/system.appcontext.setswitch) 를 통해 프로그래밍 방식으로 설정할 수도 있습니다.
 
-```cs
+```csharp
 // Warning: setting the following switch can introduce a security problem.
 AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation", true);
 ```
@@ -308,13 +308,13 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 `DataSet` `DataAdapter` 다음 예제와 같이 [ `DataAdapter.Fill` 메서드](/dotnet/api/system.data.common.dataadapter.fill)를 사용 하 여에서 인스턴스를 채울 수 있습니다.
 
-```cs
-// Assumes that connection is a valid SqlConnection object.  
+```csharp
+// Assumes that connection is a valid SqlConnection object.
 string queryString =
-  "SELECT CustomerID, CompanyName FROM dbo.Customers";  
-SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);  
-  
-DataSet customers = new DataSet();  
+  "SELECT CustomerID, CompanyName FROM dbo.Customers";
+SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+
+DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
@@ -355,7 +355,7 @@ adapter.Fill(customers, "Customers");
 
 `DataSet` `DataTable` 다음 코드에서 보여 주는 것 처럼 ASP.NET (SOAP) 웹 서비스에서 또는 인스턴스를 받아들일 수 있습니다.
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -372,7 +372,7 @@ public class MyService : WebService
 
 이에 대 한 변형은 `DataSet` `DataTable` 다음 코드에 표시 된 것 처럼 전체 SOAP 직렬화 된 개체 그래프의 일부로이를 허용 하는 대신 또는 매개 변수로 사용할 수 없습니다.
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -396,7 +396,7 @@ public class MyClass
 
 또는 ASP.NET 웹 서비스 대신 WCF를 사용 합니다.
 
-```cs
+```csharp
 using System.Data;
 using System.ServiceModel;
 
@@ -423,7 +423,7 @@ public class MyClass
 
 개발자는 `XmlSerializer` 다음 코드와 같이를 사용 하 여 `DataSet` 및 인스턴스를 deserialize 할 수 있습니다 `DataTable` .
 
-```cs
+```csharp
 using System.Data;
 using System.IO;
 using System.Xml.Serialization;
@@ -452,7 +452,7 @@ public class MyClass
 
 다음 코드에 표시 된 것 처럼 인기 있는 타사 Newtonsoft.json library [JSON.NET](https://www.newtonsoft.com/json) 를 사용 하 여 `DataSet` 및 인스턴스를 deserialize 할 수 있습니다 `DataTable` .
 
-```cs
+```csharp
 using System.Data;
 using Newtonsoft.Json;
 
@@ -497,27 +497,27 @@ public class MyClass
 * 는 데이터베이스 공급자의 [다양 한 에코 시스템](/ef/core/providers/) 을 제공 하 여 Entity Framework 개체 모델을 통해 쉽게 데이터베이스 쿼리를 수행할 수 있도록 합니다.
 * 는 신뢰할 수 없는 소스의 데이터를 deserialize 할 때 기본 제공 보호 기능을 제공 합니다.
 
-SOAP 끝점을 사용 하는 앱의 경우 `.aspx` [WCF](/dotnet/framework/wcf/)를 사용 하도록 해당 끝점을 변경 하는 것이 좋습니다. WCF는 웹 서비스에 대 한 보다 완전 한 기능을 갖춘 대체 기능입니다 `.asmx` . WCF 끝점은 기존 호출자와의 호환성을 위해 [SOAP를 통해 노출 될 수 있습니다](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .
+SOAP 끝점을 사용 하는 앱의 경우 `.aspx` [WCF](../../../wcf/index.md)를 사용 하도록 해당 끝점을 변경 하는 것이 좋습니다. WCF는 웹 서비스에 대 한 보다 완전 한 기능을 갖춘 대체 기능입니다 `.asmx` . WCF 끝점은 기존 호출자와의 호환성을 위해 [SOAP를 통해 노출 될 수 있습니다](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .
 
 ## <a name="code-analyzers"></a>코드 분석기
 
 소스 코드를 컴파일할 때 실행 되는 코드 분석기 보안 규칙은 c # 및 Visual Basic 코드에서이 보안 문제와 관련 된 취약성을 찾는 데 도움이 될 수 있습니다. FxCopAnalyzers는 [nuget.org](https://www.nuget.org/)에 배포 되는 코드 분석기의 NuGet 패키지입니다.
 
-코드 분석기의 개요는 [소스 코드 분석기 개요](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview)를 참조 하세요.
+코드 분석기의 개요는 [소스 코드 분석기 개요](/visualstudio/code-quality/roslyn-analyzers-overview)를 참조 하세요.
 
 다음 FxCopAnalyzers 규칙을 사용 하도록 설정 합니다.
 
-- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350): 신뢰할 수 없는 데이터와 함께 ReadXml ()를 사용 하지 마십시오.
-- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351): 신뢰할 수 없는 데이터와 ReadXml ()를 사용 하지 마십시오.
-- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352): 안전 하지 않은 데이터 집합 또는 serialize 할 수 있는 형식의 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
-- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353): serializable 형식의 안전 하지 않은 데이터 집합 또는 DataTable
-- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354): deserialize 된 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
-- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355): deserialize 가능한 개체 그래프에 안전 하지 않은 데이터 집합 또는 DataTable 형식이 있습니다.
-- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356): web deserialize 가능한 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable 형식
-- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361): ReadXml ()를 포함 하는 자동 생성 된 클래스가 신뢰할 수 없는 데이터와 함께 사용 되지 않는지 확인 합니다.
-- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362): 자동 생성 serialize 할 수 있는 형식에서 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+- [CA2350](/visualstudio/code-quality/ca2350): 신뢰할 수 없는 데이터와 함께 ReadXml ()를 사용 하지 마십시오.
+- [CA2351](/visualstudio/code-quality/ca2351): 신뢰할 수 없는 데이터와 ReadXml ()를 사용 하지 마십시오.
+- [CA2352](/visualstudio/code-quality/ca2352): 안전 하지 않은 데이터 집합 또는 serialize 할 수 있는 형식의 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+- [CA2353](/visualstudio/code-quality/ca2353): serializable 형식의 안전 하지 않은 데이터 집합 또는 DataTable
+- [CA2354](/visualstudio/code-quality/ca2354): deserialize 된 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
+- [CA2355](/visualstudio/code-quality/ca2355): deserialize 가능한 개체 그래프에 안전 하지 않은 데이터 집합 또는 DataTable 형식이 있습니다.
+- [CA2356](/visualstudio/code-quality/ca2356): web deserialize 가능한 개체 그래프의 안전 하지 않은 데이터 집합 또는 DataTable 형식
+- [CA2361](/visualstudio/code-quality/ca2361): ReadXml ()를 포함 하는 자동 생성 된 클래스가 신뢰할 수 없는 데이터와 함께 사용 되지 않는지 확인 합니다.
+- [CA2362](/visualstudio/code-quality/ca2362): 자동 생성 serialize 할 수 있는 형식에서 안전 하지 않은 데이터 집합 또는 DataTable은 원격 코드 실행 공격에 취약할 수 있습니다.
 
-규칙을 구성 하는 방법에 대 한 자세한 내용은 [코드 분석기 사용](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers)을 참조 하세요.
+규칙을 구성 하는 방법에 대 한 자세한 내용은 [코드 분석기 사용](/visualstudio/code-quality/use-roslyn-analyzers)을 참조 하세요.
 
 새 보안 규칙은 다음 NuGet 패키지에서 사용할 수 있습니다.
 

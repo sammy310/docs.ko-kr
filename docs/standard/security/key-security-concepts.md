@@ -11,19 +11,19 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554399"
 ---
 # <a name="key-security-concepts"></a>주요 보안 개념
 
 > [!NOTE]
 > 이 문서는 Windows에 적용 됩니다.
 >
-> ASP.NET Core에 대 한 자세한 내용은 [ASP.NET Core 보안 개요](https://docs.microsoft.com/aspnet/core/security/)를 참조 하세요.
+> ASP.NET Core에 대 한 자세한 내용은 [ASP.NET Core 보안 개요](/aspnet/core/security/)를 참조 하세요.
 
 .NET에서는 역할 기반 보안 기능을 제공 하 여 모바일 코드에 대 한 보안 문제를 해결 하 고, 구성 요소에서 사용자가 수행할 수 있는 작업을 결정할 수 있는 지원을 제공 합니다.  
   
@@ -75,6 +75,6 @@ JIT(Just-In-Time) 컴파일 중에 선택적 검증 프로세스는 네이티브
 
 권한 부여는 보안 주체가 요청된 작업을 수행할 수 있는지 여부를 확인하는 프로세스입니다. 권한 부여는 인증 후 발생하며 보안 주체의 ID 및 역할에 대한 정보를 사용하여 보안 주체가 액세스할 수 있는 리소스를 확인합니다. .NET 역할 기반 보안을 사용 하 여 권한 부여를 구현할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET Core 보안](/aspnet/core/security/)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-ms.openlocfilehash: 7ca5a1259f970f2db5400837eb7d20998dd824cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2d1b35181f508a616ab264c859119da7512e5f23
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288864"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547573"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 
 .NET Framework 4.5는 Windows 런타임를 사용 하 여 다양 한 소프트웨어 개발 시나리오를 지원 합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.
 
-- [C # 또는 Visual Basic를 사용 하는 Windows 스토어 앱 용 로드맵](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), how [to (Xaml)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))및 [windows 스토어 앱 용 .net 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에 설명 된 대로 Xaml 컨트롤을 사용 하 여 windows 8.x 스토어 앱을 개발 합니다.
+- [C # 또는 Visual Basic를 사용 하는 Windows 스토어 앱 용 로드맵](/previous-versions/windows/apps/br229583(v=win.10)), how [to (Xaml)](/previous-versions/windows/apps/br229566(v=win.10))및 [windows 스토어 앱 용 .net 개요](/previous-versions/windows/apps/br230302(v=vs.140))에 설명 된 대로 Xaml 컨트롤을 사용 하 여 windows 8.x 스토어 앱을 개발 합니다.
 
 - .NET Framework를 사용 하 여 만든 Windows 8.x 스토어 앱에서 사용할 클래스 라이브러리를 개발 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "84288864"
 
 .NET Framework는 Windows 8.x 스토어 앱 용 .NET을 제공 하 고 Windows 런타임 자체를 지원 하 여 앞에서 설명한 세 가지 개발 시나리오를 지원 합니다.
 
-- [.NET Framework 및 Windows 런타임 네임 스페이스](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) 는 .NET Framework 클래스 라이브러리를 간소화 된 뷰로 제공 하며 Windows 8.x 스토어 앱 및 Windows 런타임 구성 요소를 만드는 데 사용할 수 있는 형식과 멤버만 포함 합니다.
+- [.NET Framework 및 Windows 런타임 네임 스페이스](/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) 는 .NET Framework 클래스 라이브러리를 간소화 된 뷰로 제공 하며 Windows 8.x 스토어 앱 및 Windows 런타임 구성 요소를 만드는 데 사용할 수 있는 형식과 멤버만 포함 합니다.
 
   - Visual Studio (Visual Studio 2012 이상)를 사용 하 여 Windows 8.x 스토어 앱 또는 Windows 런타임 구성 요소를 개발 하는 경우 참조 어셈블리 집합은 관련 형식 및 멤버만 볼 수 있도록 합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "84288864"
 
   - Windows 런타임는 관리 코드에서 쉽게 호출할 수 있으므로 단순히 운영 체제 API를 래핑하는 기능도 제거 됩니다.
 
-  Windows 8.x 스토어 앱 용 .NET에 대 한 자세한 내용은 [Windows 스토어 앱 용 .net 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조 하세요. API 선택 프로세스에 대 한 자세한 내용은 .NET 블로그에서 [Metro 스타일 앱 용 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 항목을 참조 하세요.
+  Windows 8.x 스토어 앱 용 .NET에 대 한 자세한 내용은 [Windows 스토어 앱 용 .net 개요](/previous-versions/windows/apps/br230302(v=vs.140))를 참조 하세요. API 선택 프로세스에 대 한 자세한 내용은 .NET 블로그에서 [Metro 스타일 앱 용 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 항목을 참조 하세요.
 
 - [Windows 런타임](/uwp/api/) 는 Windows 8.x 스토어 앱을 빌드하기 위한 사용자 인터페이스 요소를 제공 하 고 운영 체제 기능에 대 한 액세스를 제공 합니다. .NET Framework와 마찬가지로 Windows 런타임에는 c # 및 Visual Basic 컴파일러가 .NET Framework 클래스 라이브러리를 사용 하는 방식으로 Windows 런타임를 사용할 수 있도록 하는 메타 데이터가 있습니다. .NET Framework를 사용 하면 몇 가지 차이점을 숨겨 Windows 런타임를 더 쉽게 사용할 수 있습니다.
 
@@ -110,7 +110,7 @@ Windows 런타임에서 `IMap<K, V>` 및는를 `IMapView<K, V>` 사용 하 여 �
 
 ### <a name="other-differences"></a>기타 차이점
 
-일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 <xref:System.Uri?displayProperty=nameWithType> .NET Framework 코드에서로 나타납니다. <xref:System.Uri?displayProperty=nameWithType>상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 절대 uri가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달을](passing-a-uri-to-the-windows-runtime.md)참조 하세요.
+일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 <xref:System.Uri?displayProperty=nameWithType> .NET Framework 코드에서로 나타납니다. <xref:System.Uri?displayProperty=nameWithType> 상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 절대 uri가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달을](passing-a-uri-to-the-windows-runtime.md)참조 하세요.
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -155,11 +155,11 @@ JavaScript를 사용 하 여 windows 용 Windows 8.x 스토어 앱을 개발 하
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
-|[Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8.x 스토어 앱 및 Windows RuntimeComponents을 만드는 데 사용할 수 있는 .NET Framework 형식 및 멤버에 대해 설명 합니다. (Windows 개발자 센터)|
-|[C# 또는 Visual Basic을 사용한 Windows 스토어 앱용 로드맵](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|많은 빠른 시작 항목, 지침 및 모범 사례를 포함 하 여 c # 또는 Visual Basic를 사용 하 여 Windows 8.x 스토어 앱 개발을 시작 하는 데 도움이 되는 주요 리소스를 제공 합니다. (Windows 개발자 센터)|
-|[방법 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|많은 빠른 시작 항목, 지침 및 모범 사례를 포함 하 여 c # 또는 Visual Basic를 사용 하 여 Windows 8.x 스토어 앱 개발을 시작 하는 데 도움이 되는 주요 리소스를 제공 합니다. (Windows 개발자 센터)|
+|[Windows 스토어 앱용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8.x 스토어 앱 및 Windows RuntimeComponents을 만드는 데 사용할 수 있는 .NET Framework 형식 및 멤버에 대해 설명 합니다. (Windows 개발자 센터)|
+|[C# 또는 Visual Basic을 사용한 Windows 스토어 앱용 로드맵](/previous-versions/windows/apps/br229583(v=win.10))|많은 빠른 시작 항목, 지침 및 모범 사례를 포함 하 여 c # 또는 Visual Basic를 사용 하 여 Windows 8.x 스토어 앱 개발을 시작 하는 데 도움이 되는 주요 리소스를 제공 합니다. (Windows 개발자 센터)|
+|[방법 (XAML)](/previous-versions/windows/apps/br229566(v=win.10))|많은 빠른 시작 항목, 지침 및 모범 사례를 포함 하 여 c # 또는 Visual Basic를 사용 하 여 Windows 8.x 스토어 앱 개발을 시작 하는 데 도움이 되는 주요 리소스를 제공 합니다. (Windows 개발자 센터)|
 |[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법 및 JavaScript를 사용 하 여 Windows 용으로 빌드된 Windows 8.x 스토어 앱의 일부로 사용 하는 방법을 설명 하 고 Visual Studio와의 조합을 디버그 하는 방법을 설명 합니다. (Windows 개발자 센터)|
 |[Windows 런타임 참조](/uwp/api/)|Windows 런타임에 대 한 참조 설명서입니다. (Windows 개발자 센터)|
 |[Windows 런타임에 URI 전달](passing-a-uri-to-the-windows-runtime.md)|관리 코드에서 Windows 런타임 URI를 전달 하는 경우 발생할 수 있는 문제와이를 방지 하는 방법을 설명 합니다.|

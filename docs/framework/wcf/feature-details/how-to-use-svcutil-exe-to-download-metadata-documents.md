@@ -3,15 +3,15 @@ title: '방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드'
 description: Svcutil.exe를 사용 하 여 실행 중인 서비스에서 메타 데이터를 다운로드 하 고 로컬 파일에 메타 데이터를 저장 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 42df55fe7bbae6d8c977263e05053d8a8fa87aff
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6877d860a4465947268d6535b9edeb9856d4d689
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554308"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드
-Svcutil.exe를 사용하면 실행 중인 서비스에서 메타데이터를 다운로드하여 로컬 파일에 저장할 수 있습니다. HTTP 및 HTTPS URL 스키마의 경우 Svcutil.exe는 Ws-metadataexchange 및 [XML Web Services 검색](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))을 사용 하 여 메타 데이터 검색을 시도 합니다. 기타 URL 스키마의 경우 Svcutil.exe에서 WS-MetadataExchange만 사용합니다.  
+Svcutil.exe를 사용하면 실행 중인 서비스에서 메타데이터를 다운로드하여 로컬 파일에 저장할 수 있습니다. HTTP 및 HTTPS URL 스키마의 경우 Svcutil.exe는 Ws-metadataexchange 및 [XML Web Services 검색](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))을 사용 하 여 메타 데이터 검색을 시도 합니다. 기타 URL 스키마의 경우 Svcutil.exe에서 WS-MetadataExchange만 사용합니다.  
   
  기본적으로 Svcutil.exe는 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 클래스에 정의된 바인딩을 사용합니다. WS-MetadataExchange에 사용되는 바인딩을 구성하려면 `IMetadataExchange` 계약을 사용하고 메타데이터 엔드포인트 주소의 URI(Uniform Resource Identifier) 스키마와 이름이 같은 Svcutil.exe(svcutil.exe.config)의 구성 파일에서 클라이언트 엔드포인트를 정의해야 합니다.  
   
@@ -47,6 +47,6 @@ Svcutil.exe를 사용하면 실행 중인 서비스에서 메타데이터를 다
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
