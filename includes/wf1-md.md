@@ -6,4 +6,4 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "65635566"
 ---
-<span data-ttu-id="2410d-101">WF</span><span class="sxs-lookup"><span data-stu-id="2410d-101">WF</span></span>
+<span data-ttu-id="1f980-101">WF</span><span class="sxs-lookup"><span data-stu-id="1f980-101">WF</span></span>

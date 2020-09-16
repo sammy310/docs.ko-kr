@@ -6,4 +6,4 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65671492"
 ---
-<span data-ttu-id="4c4b1-101">UI 자동화</span><span class="sxs-lookup"><span data-stu-id="4c4b1-101">UI Automation</span></span>
+<span data-ttu-id="2189f-101">UI 자동화</span><span class="sxs-lookup"><span data-stu-id="2189f-101">UI Automation</span></span>

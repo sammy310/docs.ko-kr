@@ -6,4 +6,4 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65672188"
 ---
-<span data-ttu-id="c1177-101">UI(사용자 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="c1177-101">user interface (UI)</span></span>
+<span data-ttu-id="90c34-101">UI(사용자 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="90c34-101">user interface (UI)</span></span>
