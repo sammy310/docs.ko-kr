@@ -6,12 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-ms.openlocfilehash: e6430e16de39b4acecf55d855785503ff19673ec
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 550b663ec7fc41309c000d7c616d94c846b0cb40
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842311"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555694"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>호스팅(관리되지 않는 API 참조)
 호스팅 API는 관리되지 않는 호스트가 CLR(공용 언어 런타임)을 애플리케이션에 통합할 수 있게 해줍니다.  
@@ -33,5 +33,5 @@ ms.locfileid: "83842311"
  호스팅 API가 사용하는 관리되지 않는 구조체를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [런타임 호스트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
+ [런타임 호스트](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  .NET Framework에 포함된 런타임 호스트를 설명합니다.

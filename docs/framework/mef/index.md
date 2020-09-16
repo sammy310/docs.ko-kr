@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b743a26dd401e7015c588be2a197551aa891a687
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281253"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555577"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
@@ -62,7 +62,7 @@ MEF는 .NET Framework 4의 필수 요소로, .NET Framework를 사용하는 모�
 
 MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은 간단한 MEF 애플리케이션을 빌드하는 것입니다. 이 예제에서는 SimpleCalculator라는 매우 간단한 계산기를 빌드합니다. SimpleCalculator에서는 &quot;5+3&quot; 또는 &quot;6-2&quot;와 같은 형식의 기본적인 산술 명령을 수락하고 정답을 반환하는 콘솔 애플리케이션을 만들려고 합니다. MEF를 사용하면 애플리케이션 코드를 변경하지 않고도 새 연산자를 추가할 수 있습니다.
 
-이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)(SimpleCalculator 샘플(Visual Basic))을 참조하세요.
+이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/)(SimpleCalculator 샘플(Visual Basic))을 참조하세요.
 
 > [!NOTE]
 > SimpleCalculator는 사용 방식을 보여 주는 실제 시나리오를 제공하기보다는 MEF의 개념과 구문을 제시하는 데 사용됩니다. MEF의 이점을 가장 효율적으로 활용할 수 있는 대부분의 애플리케이션은 SimpleCalculator보다 복잡합니다. 보다 포괄적인 예제는 GitHub에서 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)를 참조하세요.
@@ -484,6 +484,6 @@ public class Mod : SimpleCalculator.IOperation
 
 ## <a name="next-steps"></a>다음 단계
 
-이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)(SimpleCalculator 샘플(Visual Basic))을 참조하세요.
+이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/)(SimpleCalculator 샘플(Visual Basic))을 참조하세요.
 
  코드 예제에 대한 자세한 내용은 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)를 참조하세요. MEF 형식 목록은 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 네임스페이스를 참조하세요.

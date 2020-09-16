@@ -12,12 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: 582e28c18f36b253425b1e0a2034cdd262fddd57
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 06a0a4c788155d6fb909e4537b980f0ba740f21a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213740"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554816"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -52,8 +52,8 @@ HRESULT GetCodeEx(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
-- [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: 방법 가이드](/archive/blogs/davbr/rejit-a-how-to-guide)

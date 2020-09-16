@@ -2,12 +2,12 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: 815ee3993a2f2b2819210b225c0cb0b3d3fd8b87
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f788849a9b11b81b4542eb2c6f855a8d4db4dd44
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84201020"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555486"
 ---
 # \<netHttpBinding>
 WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수 있는 끝점을 구성 및 노출 하는 데 사용할 수 있는 바인딩을 나타냅니다. 이중 계약과 함께 사용하는 경우 WebSocket이 사용되고, 그렇지 않으면 HTTP가 사용됩니다.  
@@ -53,7 +53,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
 </netHttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -86,7 +86,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
 |요소|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement> 형식입니다.|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -173,7 +173,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
   
  기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

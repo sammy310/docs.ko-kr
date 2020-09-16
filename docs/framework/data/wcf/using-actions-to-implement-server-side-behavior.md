@@ -2,40 +2,40 @@
 title: 동작을 사용하여 서버 쪽 동작 구현
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 7068845054e04a002296e7c157655eef6a98db78
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6595a2648730a25f5322f1bcb743795230ad27eb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774134"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555083"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>동작을 사용하여 서버 쪽 동작 구현
 
-OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동작을 구현할 수 있습니다. 예를 들어 디지털 영화를 리소스로 가정하면, 체크 아웃, 등급/코멘트 또는 체크 인 등 디지털 영화와 관련하여 수행할 수 있는 여러 동작이 있습니다. 이러한 동작은 디지털 영화를 관리하는 WCF Data Service로 구현할 수 있는 동작의 예입니다. 동작은 동작을 호출할 수 있는 리소스를 포함하는 OData 응답에 설명되어 있습니다. 사용자가 디지털 영화를 나타내는 리소스를 요청하면 WCF Data Service에서 반환된 응답은 해당 리소스에서 사용할 수 있는 동작에 대한 정보를 포함합니다. 동작의 사용 가능 여부는 데이터 서비스 또는 리소스의 상태에 따라 달라질 수 있습니다. 예를 들어 디지털 영화를 체크 아웃하면 다른 사용자가 이 디지털 영화를 체크 아웃할 수 없습니다. 클라이언트는 URL을 지정하기만 하면 동작을 호출할 수 있습니다. 예를 들어 `http://MyServer/MovieService.svc/Movies(6)`는 특정 디지털 영화를 식별 하 고 특정 동영상에서 작업을 호출 `http://MyServer/MovieService.svc/Movies(6)/Checkout` 합니다. 동작을 사용하여 데이터 모델을 노출하지 않고 서비스 모델을 노출할 수 있습니다. 영화 서비스를 계속 예로 들자면 사용자가 영화의 평점을 매길 수 있도록 하지만 등급 데이터를 리소스로 직접적으로 노출하지 않도록 할 수 있습니다. 사용자가 영화에 대한 평점을 매길 수 있지만 평가 데이터를 리소스로 직접 액세스하지 않도록 평가 동작을 구현할 수 있습니다.
+OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동작을 구현할 수 있습니다. 예를 들어 디지털 영화를 리소스로 가정하면, 체크 아웃, 등급/코멘트 또는 체크 인 등 디지털 영화와 관련하여 수행할 수 있는 여러 동작이 있습니다. 이러한 동작은 디지털 영화를 관리하는 WCF Data Service로 구현할 수 있는 동작의 예입니다. 동작은 동작을 호출할 수 있는 리소스를 포함하는 OData 응답에 설명되어 있습니다. 사용자가 디지털 영화를 나타내는 리소스를 요청하면 WCF Data Service에서 반환된 응답은 해당 리소스에서 사용할 수 있는 동작에 대한 정보를 포함합니다. 동작의 사용 가능 여부는 데이터 서비스 또는 리소스의 상태에 따라 달라질 수 있습니다. 예를 들어 디지털 영화를 체크 아웃하면 다른 사용자가 이 디지털 영화를 체크 아웃할 수 없습니다. 클라이언트는 URL을 지정하기만 하면 동작을 호출할 수 있습니다. 예를 들어는 `http://MyServer/MovieService.svc/Movies(6)` 특정 디지털 영화를 식별 하 고 `http://MyServer/MovieService.svc/Movies(6)/Checkout` 특정 영화에 대 한 작업을 호출 합니다. 동작을 사용하여 데이터 모델을 노출하지 않고 서비스 모델을 노출할 수 있습니다. 영화 서비스를 계속 예로 들자면 사용자가 영화의 평점을 매길 수 있도록 하지만 등급 데이터를 리소스로 직접적으로 노출하지 않도록 할 수 있습니다. 사용자가 영화에 대한 평점을 매길 수 있지만 평가 데이터를 리소스로 직접 액세스하지 않도록 평가 동작을 구현할 수 있습니다.
 
 ## <a name="implementing-an-action"></a>동작 구현
- 서비스 작업을 구현 하려면 <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))및 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 인터페이스를 구현 해야 합니다. <xref:System.IServiceProvider>를 사용 하 여 WCF Data Services [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))구현을 가져올 수 있습니다. [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 를 사용 하면 WCF Data Services에서 서비스 작업을 만들고, 찾고, 설명 하 고, 호출할 수 있습니다. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 를 사용 하면 서비스 동작의 동작을 구현 하는 코드를 호출 하 고 결과를 가져올 수 있습니다 (있는 경우). WCF Data Services가 Per-Call WCF Services이고 서비스를 호출할 때마다 서비스의 새 인스턴스가 만들어진다는 점에 주의합니다.  서비스를 만들 때 불필요한 동작이 수행되지 않는지 확인합니다.
+ 서비스 작업을 구현 하려면 <xref:System.IServiceProvider> , [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))및 [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 인터페이스를 구현 해야 합니다. <xref:System.IServiceProvider> WCF Data Services에서 [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))구현을 가져올 수 있습니다. [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 를 사용 하면 WCF Data Services에서 서비스 작업을 만들고, 찾고, 설명 하 고, 호출할 수 있습니다. [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 를 사용 하면 서비스 동작의 동작을 구현 하는 코드를 호출 하 고 결과를 가져올 수 있습니다 (있는 경우). WCF Data Services가 Per-Call WCF Services이고 서비스를 호출할 때마다 서비스의 새 인스턴스가 만들어진다는 점에 주의합니다.  서비스를 만들 때 불필요한 동작이 수행되지 않는지 확인합니다.
 
 ### <a name="iserviceprovider"></a>IServiceProvider
- <xref:System.IServiceProvider>는 <xref:System.IServiceProvider.GetService%2A>라는 메서드를 포함합니다. 이 메서드는 WCF Data Services에 의해 호출되어 메타데이터 서비스 공급자 및 데이터 동작 공급자를 비롯하여 여러 서비스 공급자를 가져옵니다. 데이터 서비스 동작 공급자를 묻는 메시지가 표시 되 면 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현을 반환 합니다.
+ <xref:System.IServiceProvider>는 <xref:System.IServiceProvider.GetService%2A>라는 메서드를 포함합니다. 이 메서드는 WCF Data Services에 의해 호출되어 메타데이터 서비스 공급자 및 데이터 동작 공급자를 비롯하여 여러 서비스 공급자를 가져옵니다. 데이터 서비스 동작 공급자를 묻는 메시지가 표시 되 면 [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현을 반환 합니다.
 
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider
- [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 에는 사용 가능한 작업에 대 한 정보를 검색할 수 있는 메서드가 포함 되어 있습니다. [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 을 구현 하는 경우 서비스의 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현에 정의 된 서비스에 대 한 메타 데이터 (작업 및 해당 작업에 대 한 디스패치 처리)를 확대 합니다. 적당.
+ [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 에는 사용 가능한 작업에 대 한 정보를 검색할 수 있는 메서드가 포함 되어 있습니다. [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 을 구현 하는 경우 서비스의 [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현에 정의 된 서비스에 대 한 메타 데이터 (작업 및 해당 작업에 대 한 디스패치를 적절 하 게 처리)를 확대 합니다.
 
 #### <a name="advertiseserviceaction"></a>AdvertiseServiceAction
- [AdvertiseServiceAction 메서드](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859971(v=vs.103)) 를 호출 하 여 지정 된 리소스에 사용할 수 있는 작업을 결정 합니다. 이 메서드는 항상 사용할 수 있는 것은 아닌 동작에 대해서만 호출됩니다. 요청 중인 리소스 상태 또는 서비스의 상태를 기반으로 하는 OData 응답에 동작을 포함해야 하는지 여부를 확인할 때 사용됩니다. 이를 확인하는 방법은 전적으로 사용자의 재량에 따라 결정됩니다. 가용성을 계산하는 비용이 높거나 현재 리소스가 피드에 있는 경우 확인을 건너뛰고 동작을 알려도 됩니다. 반환 중인 현재 리소스가 피드의 일부인 경우 `inFeed` 매개 변수가 `true`로 설정됩니다.
+ [AdvertiseServiceAction 메서드](/previous-versions/dotnet/wcf-data-services/hh859971(v=vs.103)) 를 호출 하 여 지정 된 리소스에 사용할 수 있는 작업을 결정 합니다. 이 메서드는 항상 사용할 수 있는 것은 아닌 동작에 대해서만 호출됩니다. 요청 중인 리소스 상태 또는 서비스의 상태를 기반으로 하는 OData 응답에 동작을 포함해야 하는지 여부를 확인할 때 사용됩니다. 이를 확인하는 방법은 전적으로 사용자의 재량에 따라 결정됩니다. 가용성을 계산하는 비용이 높거나 현재 리소스가 피드에 있는 경우 확인을 건너뛰고 동작을 알려도 됩니다. 반환 중인 현재 리소스가 피드의 일부인 경우 `inFeed` 매개 변수가 `true`로 설정됩니다.
 
 #### <a name="createinvokable"></a>CreateInvokable
- [CreateInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859940(v=vs.103)) 은 동작의 동작을 구현 하는 코드를 캡슐화 하는 대리자를 포함 하는 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 를 만들기 위해 호출 됩니다. 이렇게 하면 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 인스턴스가 만들어지지만 동작을 호출 하지는 않습니다. WCF Data Service 동작은 의도하지 않은 결과를 포함할 수 있고 이러한 변경 내용을 디스크에 저장하도록 업데이트 공급자와 함께 사용해야 합니다. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859924(v=vs.103)) 메서드는 업데이트 공급자의 SaveChanges () 메서드에서 호출 됩니다.
+ [CreateInvokable](/previous-versions/dotnet/wcf-data-services/hh859940(v=vs.103)) 은 동작의 동작을 구현 하는 코드를 캡슐화 하는 대리자를 포함 하는 [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 를 만들기 위해 호출 됩니다. 이렇게 하면 [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 인스턴스가 만들어지지만 동작을 호출 하지는 않습니다. WCF Data Service 동작은 의도하지 않은 결과를 포함할 수 있고 이러한 변경 내용을 디스크에 저장하도록 업데이트 공급자와 함께 사용해야 합니다. [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859924(v=vs.103)) 메서드는 업데이트 공급자의 SaveChanges () 메서드에서 호출 됩니다.
 
 #### <a name="getserviceactions"></a>GetServiceActions
- 이 메서드는 WCF Data Service가 노출 하는 모든 동작을 나타내는 [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 인스턴스의 컬렉션을 반환 합니다. [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 은 동작의 메타 데이터 표현 이며 작업 이름, 해당 매개 변수 및 반환 형식과 같은 정보를 포함 합니다.
+ 이 메서드는 WCF Data Service가 노출 하는 모든 동작을 나타내는 [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 인스턴스의 컬렉션을 반환 합니다. [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 은 동작의 메타 데이터 표현 이며 작업 이름, 해당 매개 변수 및 반환 형식과 같은 정보를 포함 합니다.
 
 #### <a name="getserviceactionsbybindingparametertype"></a>GetServiceActionsByBindingParameterType
- 이 메서드는 지정 된 바인딩 매개 변수 형식에 바인딩할 수 있는 모든 [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 인스턴스의 컬렉션을 반환 합니다. 즉, 지정 된 리소스 형식 (바인딩 매개 변수 형식이 라고도 함)에 대해 작동할 수 있는 모든 [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))이 있습니다. 이는 해당 리소스에 대해 호출할 수 있는 작업에 대 한 정보를 포함 하기 위해 서비스에서 리소스를 반환할 때 사용 됩니다. 이 메서드는 파생된 형식이 아닌 정확한 바인딩 매개 변수 형식을 바인딩할 수 있는 동작만 반환해야 합니다. 이 메서드는 발생하는 형식 당 요청마다 한 번만 호출되며 결과는 WCF Data Services에서 캐시합니다.
+ 이 메서드는 지정 된 바인딩 매개 변수 형식에 바인딩할 수 있는 모든 [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 인스턴스의 컬렉션을 반환 합니다. 즉, 지정 된 리소스 형식 (바인딩 매개 변수 형식이 라고도 함)에 대해 작동할 수 있는 모든 [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103))이 있습니다. 이는 해당 리소스에 대해 호출할 수 있는 작업에 대 한 정보를 포함 하기 위해 서비스에서 리소스를 반환할 때 사용 됩니다. 이 메서드는 파생된 형식이 아닌 정확한 바인딩 매개 변수 형식을 바인딩할 수 있는 동작만 반환해야 합니다. 이 메서드는 발생하는 형식 당 요청마다 한 번만 호출되며 결과는 WCF Data Services에서 캐시합니다.
 
 #### <a name="tryresolveserviceaction"></a>TryResolveServiceAction
- 이 메서드는 지정 된 [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 을 검색 하 고 [serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 이 있으면 `true`를 반환 합니다. 검색 된 경우 [Serviceaction](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 은 `serviceAction` `out` 매개 변수에 반환 됩니다.
+ 이 메서드는 지정 된 [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 을 검색 하 고 `true` [serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 이 있는 경우를 반환 합니다. 검색 된 경우 매개 변수에서 [Serviceaction](/previous-versions/dotnet/wcf-data-services/hh544089(v=vs.103)) 이 반환 됩니다 `serviceAction` `out` .
 
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable
  이 인터페이스는 WCF Data Service 동작을 실행하는 방법을 제공합니다. IDataServiceInvokable을 구현하는 경우 다음 세 가지 작업을 수행해야 합니다.

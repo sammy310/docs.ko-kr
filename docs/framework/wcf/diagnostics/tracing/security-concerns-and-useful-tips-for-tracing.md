@@ -2,12 +2,12 @@
 title: 보안 고려 사항 및 추적에 대한 유용한 정보
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0a09e387a4f964441f11d07a84bd492345d5b691
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555044"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>보안 고려 사항 및 추적에 대한 유용한 정보
 이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.  
@@ -86,10 +86,10 @@ ms.locfileid: "84578879"
   
  PII 로깅에 대 한 자세한 내용은 [Pii Security 잠금](../../samples/pii-security-lockdown.md) 샘플을 참조 하세요.  
   
- 컴퓨터 관리자와 애플리케이션 배포자는 이러한 두 개의 스위치를 사용할 때 특별히 주의를 기울여야 합니다. PII 로깅을 사용하도록 설정하면 보안 키와 PII가 기록됩니다. PII 로깅을 사용하지 않도록 설정해도 중요한 데이터와 애플리케이션별 데이터는 메시지 헤더 및 본문에 기록됩니다. 개인 정보에 대 한 자세한 내용 및 PII가 노출 되지 않도록 보호 하는 방법에 대해서는 [사용자 개인 정보](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))를 참조 하세요.  
+ 컴퓨터 관리자와 애플리케이션 배포자는 이러한 두 개의 스위치를 사용할 때 특별히 주의를 기울여야 합니다. PII 로깅을 사용하도록 설정하면 보안 키와 PII가 기록됩니다. PII 로깅을 사용하지 않도록 설정해도 중요한 데이터와 애플리케이션별 데이터는 메시지 헤더 및 본문에 기록됩니다. 개인 정보에 대 한 자세한 내용 및 PII가 노출 되지 않도록 보호 하는 방법에 대해서는 [사용자 개인 정보](/previous-versions/dotnet/articles/aa480490(v=msdn.10))를 참조 하세요.  
   
  또한, 연결 지향 전송에 대한 연결마다 한 번, 그리고 그렇지 않게 전송된 메시지마다 한 번 메시지 발신자의 IP 주소가 기록됩니다. 이 작업은 발신자의 동의 없이 수행됩니다. 그러나 이 로깅은 Information 또는 Verbose 추적 수준에서만 발생하며 이러한 수준은 라이브 디버깅을 제외하고 프로덕션에서 기본 추적 수준 또는 권장 추적 수준이 아닙니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [추적](index.md)

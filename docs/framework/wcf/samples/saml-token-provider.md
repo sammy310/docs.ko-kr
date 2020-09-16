@@ -2,12 +2,12 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: db1307b0f440f8bd55f1728b6645aec706dfe442
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e371d518d7ef25152aba83fa00d79893397b07f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602416"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554425"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
 이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. WCF (Windows Communication Foundation)의 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자와 함께 제공 됩니다. WCF는 또한 CardSpace 토큰 공급자와 함께 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "84602416"
 
 - 서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법
 
- 서비스는 구성 파일 App.config를 사용 하 여 정의 된 서비스와 통신 하기 위한 두 개의 끝점을 노출 합니다. 각 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 메시지 보안을 사용하는 표준 `wsFederationHttpBinding`으로 구성됩니다. 한 엔드포인트에서는 클라이언트가 대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상하고, 다른 엔드포인트에서는 클라이언트가 비대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상합니다. 또한 서비스는 `serviceCredentials` 동작을 사용하여 서비스 인증서를 구성합니다. `serviceCredentials` 동작을 통해 서비스 인증서를 구성할 수 있습니다. 서비스 인증서는 클라이언트에서 서비스를 인증하고 메시지 보호를 제공하는 데 사용됩니다. 다음 구성에서는 이 항목의 끝에 나오는 설치 지침에 설명된 대로 샘플 설치 중에 설치되는 "localhost" 인증서를 참조합니다. `serviceCredentials` 동작을 사용하면 SAML 토큰에 서명하도록 신뢰되는 인증서를 구성할 수도 있습니다. 다음 구성에서는 샘플 설치 중에 설치되는 'Alice' 인증서를 참조합니다.
+ 서비스는 App.config 구성 파일을 사용 하 여 정의 된 서비스와 통신 하기 위한 두 개의 끝점을 노출 합니다. 각 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 메시지 보안을 사용하는 표준 `wsFederationHttpBinding`으로 구성됩니다. 한 엔드포인트에서는 클라이언트가 대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상하고, 다른 엔드포인트에서는 클라이언트가 비대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상합니다. 또한 서비스는 `serviceCredentials` 동작을 사용하여 서비스 인증서를 구성합니다. `serviceCredentials` 동작을 통해 서비스 인증서를 구성할 수 있습니다. 서비스 인증서는 클라이언트에서 서비스를 인증하고 메시지 보호를 제공하는 데 사용됩니다. 다음 구성에서는 이 항목의 끝에 나오는 설치 지침에 설명된 대로 샘플 설치 중에 설치되는 "localhost" 인증서를 참조합니다. `serviceCredentials` 동작을 사용하면 SAML 토큰에 서명하도록 신뢰되는 인증서를 구성할 수도 있습니다. 다음 구성에서는 샘플 설치 중에 설치되는 'Alice' 인증서를 참조합니다.
 
 ```xml
 <system.serviceModel>
@@ -361,16 +361,16 @@ ms.locfileid: "84602416"
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. 관리자 권한으로 실행 되는 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. 관리자 권한으로 실행 되는 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.  
+    > Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup.bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.  
   
 2. service\bin에서 Service.exe를 실행합니다.  
   
 3. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -378,7 +378,7 @@ ms.locfileid: "84602416"
   
 2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 Service.exe.config 파일을 업데이트해야 합니다. Setup.bat 배치 파일을 수정하여 서버 인증서를 만들 수 있습니다. Setup.exe 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트 창에서 실행 해야 합니다. 서비스를 호스트하는 데 사용되는 컴퓨터의 정규화된 호스트 이름으로 `%SERVER_NAME%` 변수를 설정해야 합니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 Service.exe.config 파일을 업데이트해야 합니다. Setup.bat 배치 파일을 수정하여 서버 인증서를 만들 수 있습니다. setup.bat 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트 창에서 실행 해야 합니다. 서비스를 호스트하는 데 사용되는 컴퓨터의 정규화된 호스트 이름으로 `%SERVER_NAME%` 변수를 설정해야 합니다.  
   
 4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 클라이언트 발급자가 서버 인증서를 발급한 경우에는 이 단계를 수행할 필요가 없습니다.  
   
@@ -392,8 +392,8 @@ ms.locfileid: "84602416"
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `Client.exe`를 실행합니다.  
   
-10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.

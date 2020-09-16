@@ -2,12 +2,12 @@
 title: 피어 투 피어 네트워킹
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 42bda754afa58354c087e587e500bebfe72169f4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1729b7defd6a9145a1cff150b51c2117e22e3af0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600765"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554295"
 ---
 # <a name="peer-to-peer-networking"></a>피어 투 피어 네트워킹
 피어 채널은 WCF (Windows Communication Foundation)에서의 P2P (피어 투 피어) 통신 기술입니다. 피어 채널은 애플리케이션 개발자에게 안전하고 확장 가능한 메시지 기반 P2P 통신 채널을 제공합니다. 피어 채널을 활용할 수 있는 다자간 애플리케이션의 대표적인 예로 여러 사용자가 서버 없이 피어 투 피어 방식으로 서로 채트하는 대화방 같은 협업 애플리케이션을 들 수 있습니다. 피어 채널은 소비자 및 기업 시나리오 모두에서 P2P 협업, 콘텐츠 배포, 부하 분산 및 분산 처리를 가능하게 합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "84600765"
  [피어 채널 응용 프로그램 빌드](building-a-peer-channel-application.md): 피어 채널 응용 프로그램 개발에 대 한 지침을 제공 합니다.  
   
 ## <a name="peer-channel-code-examples"></a>피어 채널 코드 예제  
- [Peer Channel Custom Peer Resolver](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
+ [Peer Channel Custom Peer Resolver](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>피어 채널 팀 블로그  
- [피어 채널 팀 블로그](https://docs.microsoft.com/archive/blogs/peerchan/)
+ [피어 채널 팀 블로그](/archive/blogs/peerchan/)

@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465158"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537407"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -106,23 +106,23 @@ LINQ를 사용하면 LINQ 쿼리 식 패턴을 지원하는 데이터 소스를 
 - [쿼리에서 람다 식을 사용합니다](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [쿼리 식에서 `var`를 사용합니다](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [쿼리에서 요소 속성의 하위 집합을 반환합니다](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
-- [복합 필터링으로 쿼리를 작성합니다](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).
-- [데이터 원본의 요소를 정렬합니다](../programming-guide/concepts/linq/how-to-sort-elements.md).
-- [여러 키로 요소를 정렬합니다](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
-- [프로젝션 형식을 제어합니다](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
+- [복합 필터링으로 쿼리를 작성합니다](../../standard/linq/write-queries-complex-filtering.md).
+- [데이터 원본의 요소를 정렬합니다](../../standard/linq/sort-elements.md).
+- [여러 키로 요소를 정렬합니다](../../standard/linq/sort-elements-multiple-keys.md).
+- [프로젝션 형식을 제어합니다](../../standard/linq/control-type-projection.md).
 - [소스 시퀀스에서 값의 발생 수를 카운트합니다](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
-- [중간 값을 계산합니다](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
+- [중간 값을 계산합니다](../../standard/linq/calculate-intermediate-values.md).
 - [여러 원본의 데이터를 병합합니다](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [두 시퀀스 간의 차집합을 반환합니다](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).
-- [빈 쿼리 결과를 디버깅합니다](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md).
+- [빈 쿼리 결과를 디버깅합니다](../../standard/linq/debug-empty-query-results-sets.md).
 - [사용자 지정 메서드를 LINQ 쿼리에 추가합니다](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md).
 
 ## <a name="multiple-threads-and-async-processing"></a>여러 스레드 및 비동기 처리
 
 최신 프로그램은 종종 비동기 작업을 사용합니다. 이러한 문서를 통해 이러한 기법을 사용하는 방법을 배울 수 있습니다.
 
-- [`System.Threading.Tasks.Task.WhenAll`를 사용하여 비동기 성능을 개선합니다](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
-- [`async` 및 `await`를 사용하여 여러 웹을 동시에 요청합니다](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
+- [`System.Threading.Tasks.Task.WhenAll`를 사용하여 비동기 성능을 개선합니다](../programming-guide/concepts/async/index.md).
+- [`async` 및 `await`를 사용하여 여러 웹을 동시에 요청합니다](../programming-guide/concepts/async/index.md).
 - [스레드 풀을 사용합니다](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>프로그램에 대한 명령줄 인수

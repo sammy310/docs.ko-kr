@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345241"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555408"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.  
@@ -346,27 +346,27 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>샘플을 설치, 실행 및 빌드하려면  
   
-1. 오른쪽 단추로 클릭 합니다 **알려진Assembly속성** 및 **선택 속성**입니다.  
+1. **Knownassemblyattribute** 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
   
-2. **공통 속성에서** **시작 프로젝트를**선택한 다음 여러 시작 **프로젝트를**클릭합니다.  
+2. **공용 속성**에서 **시작 프로젝트**를 선택한 다음 **여러 개의 시작 프로젝트**를 클릭 합니다.  
   
-3. **서비스** 및 **클라이언트** 프로젝트에 **시작** 작업을 추가합니다.  
+3. **서비스** 및 **클라이언트** 프로젝트에 **시작** 작업을 추가 합니다.  
   
-4. **확인을**클릭하고 **F5를** 눌러 샘플을 실행합니다.  
+4. **확인**을 클릭 하 고 **f5** 키를 눌러 샘플을 실행 합니다.  
   
 5. 애플리케이션이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.  
   
-6. Windows 통신 기초 [샘플에 대한 일회성 설정 절차를](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)수행했어야 합니다.  
+6. [Windows Communication Foundation 샘플에 대 한 일회성 설정 절차](./one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-7. 솔루션을 빌드하려면 Windows 통신 [기반 빌드 샘플의](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)지침을 따르십시오.  
+7. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](./building-the-samples.md)의 지침을 따르세요.  
   
-8. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)  
+8. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](./running-the-samples.md)의 지침을 따르세요.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`

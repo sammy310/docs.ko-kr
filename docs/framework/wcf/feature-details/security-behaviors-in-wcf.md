@@ -2,12 +2,12 @@
 title: WCF의 보안 동작
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: b25d476e9c9b4a70834274c6970dad1b056cecb9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f15a5aec2f5da89e4069deec946cc20b54f414e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595208"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554067"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정 합니다. 일반적인 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../specifying-service-run-time-behavior.md)을 참조 하세요. *보안 동작* 을 통해 자격 증명, 인증, 권한 부여 및 감사 로그를 제어할 수 있습니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
@@ -55,10 +55,10 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
   
  요소를 사용 하는 방법에 대 한 자세한 내용은 [방법: 클라이언트 자격 증명 값 지정을](../how-to-specify-client-credential-values.md)참조 하세요.  
   
-### <a name="certificate-of-clientcertificate-element"></a>\<certificate>of \<clientCertificate> 요소  
+### <a name="certificate-of-clientcertificate-element"></a>\<certificate> of \<clientCertificate> 요소  
  [\<certificate>](../../configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)클라이언트와 안전 하 게 통신 하기 위해 서비스에 클라이언트 인증서가 있어야 하는 경우 요소를 사용 합니다. 이는 양방향 통신 패턴을 사용하는 경우 발생합니다. 대부분의 일반적인 요청-회신 패턴의 경우, 클라이언트는 요청 시 서비스가 클라이언트에게 해당 응답을 안전하게 보내기 위해 사용하는 인증서를 포함합니다. 그러나 양방향 통신 패턴에는 요청 및 회신이 없습니다. 서비스는 통신에서 클라이언트의 인증서를 유추할 수 없기 때문에 서비스는 클라이언트에 대해 메시지 보안을 유지하기 위해 클라이언트 인증서를 필요로 합니다. 클라이언트 인증서를 out-of-band 방식으로 가져와서 이 요소를 사용하여 인증서를 지정해야 합니다. 이중 서비스에 대 한 자세한 내용은 [방법: 이중 계약 만들기](how-to-create-a-duplex-contract.md)를 참조 하세요.  
   
-### <a name="authentication-of-clientcertificate-element"></a>\<authentication>of \<clientCertificate> 요소  
+### <a name="authentication-of-clientcertificate-element"></a>\<authentication> of \<clientCertificate> 요소  
  [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)요소를 사용 하면 클라이언트가 인증 되는 방법을 사용자 지정할 수 있습니다. `CertificateValidationMode` 특성을 `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` 또는 `Custom`으로 설정할 수 있습니다. 기본적으로 수준은로 설정 되며,이 `ChainTrust` 는 각 인증서가 체인 맨 위의 *루트 기관* 에서 종료 되는 인증서의 계층 구조에 있어야 함을 지정 합니다. 이 모드가 가장 안전한 모드입니다. 또한 값을 `PeerOrChainTrust`로 설정할 수 있으며, 이는 자체 발급된 인증서(신뢰 피어)가 신뢰 체인에 있는 인증서와 함께 수락됨을 지정합니다. 자체 발급 인증서를 신뢰할 수 있는 기관에서 구입할 필요 없기 때문에 클라이언트 및 서비스를 개발 및 디버깅하는 경우 이 값이 사용됩니다. 클라이언트를 배포하는 경우 `ChainTrust` 값을 대신 사용합니다. 또한 값을 `Custom`으로 설정할 수도 있습니다. `Custom` 값으로 설정할 경우 `CustomCertificateValidatorType` 특성도 인증서 유효성을 검사하는 데 사용되는 어셈블리 및 형식으로 설정해야 합니다. 사용자 지정 유효성 검사기를 만들려면 추상 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스에서 상속해야 합니다.  
   
 ### <a name="issuedtokenauthentication-element"></a>\<issuedTokenAuthentication> 요소  
@@ -82,7 +82,7 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
   
 - 이 컬렉션에 URI를 추가하여 유효한 URI 집합을 지정합니다. 이렇게 하려면 [\<add>](../../configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) 각 URI에 대해를 삽입 합니다.  
   
- 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>을 참조하세요.  
+ 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 참조하세요.  
   
  이 구성 요소를 사용 하는 방법에 대 한 자세한 내용은 [방법: 페더레이션 서비스 자격 증명 구성](how-to-configure-credentials-on-a-federation-service.md)을 참조 하세요.  
   
@@ -119,7 +119,7 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
  이 요소로 클라이언트를 인증하는 데 사용하는 인증서를 설정합니다. 자세한 내용은 [방법: 클라이언트 자격 증명 값 지정을](../how-to-specify-client-credential-values.md)참조 하세요.  
   
 #### \<httpDigest>  
- 이 기능은 Windows 및 IIS(인터넷 정보 서비스)의 Active Directory를 통해 사용해야 합니다. 자세한 내용은 [IIS 6.0의 다이제스트 인증](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))을 참조 하세요.  
+ 이 기능은 Windows 및 IIS(인터넷 정보 서비스)의 Active Directory를 통해 사용해야 합니다. 자세한 내용은 [IIS 6.0의 다이제스트 인증](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))을 참조 하세요.  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken> 요소  
  에는 [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) 토큰의 로컬 발급자를 구성 하는 데 사용 되는 요소 또는 보안 토큰 서비스에 사용 되는 동작이 포함 되어 있습니다. 로컬 발급자를 사용 하도록 클라이언트를 구성 하는 방법에 대 한 지침은 [방법: 로컬 발급자 구성](how-to-configure-a-local-issuer.md)을 참조 하세요.  
@@ -221,7 +221,7 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [감사](auditing-security-events.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

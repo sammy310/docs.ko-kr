@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 기능 특성
 description: 이 문서에서는 .NET Framework 4에서 Windows Workflow Foundation에 추가 하 고 기능이 유용할 수 있는 시나리오에 대해 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: fb490b3dd368710bf2ed98f7c53b7b184fa15b0b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419956"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554608"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -16,7 +16,7 @@ ms.locfileid: "83419956"
 
 ## <a name="messaging-activities"></a>메시징 활동
 
-메시징 활동 ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> )은 워크플로에서 WCF 메시지를 보내고 받는 데 사용 됩니다. <xref:System.ServiceModel.Activities.Receive>및 <xref:System.ServiceModel.Activities.SendReply> 활동은 표준 wcf 웹 서비스와 마찬가지로 WSDL을 통해 노출 되는 wcf (Windows Communication Foundation) 서비스 작업을 구성 하는 데 사용 됩니다. <xref:System.ServiceModel.Activities.Send>및 <xref:System.ServiceModel.Activities.ReceiveReply> 는 WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다. <xref:System.ServiceModel.ChannelFactory> 미리 구성 된 작업을 생성 하는 Workflow Foundation에 대 한 **서비스 참조 추가** 환경이 있습니다.
+메시징 활동 ( <xref:System.ServiceModel.Activities.Receive> , <xref:System.ServiceModel.Activities.SendReply> , <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> )은 워크플로에서 WCF 메시지를 보내고 받는 데 사용 됩니다. <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동은 표준 wcf 웹 서비스와 마찬가지로 WSDL을 통해 노출 되는 wcf (Windows Communication Foundation) 서비스 작업을 구성 하는 데 사용 됩니다. <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 는 WCF와 유사한 웹 서비스를 사용 하는 데 사용 됩니다. <xref:System.ServiceModel.ChannelFactory> 미리 구성 된 작업을 생성 하는 Workflow Foundation에 대 한 **서비스 참조 추가** 환경이 있습니다.
 
 ### <a name="getting-started-with-messaging-activities"></a>메시징 작업 시작
 
@@ -54,7 +54,7 @@ ms.locfileid: "83419956"
 
 BestPriceFinder 서비스는 여러 항공편 서비스를 호출 하 여 특정 경로에 대 한 최상의 티켓 가격을 찾습니다. 이 시나리오를 구현 하려면에서 워크플로를 호스트 해야 <xref:System.ServiceModel.WorkflowServiceHost> 합니다. 또한 메시지 활동을 사용 하 여 가격 요청을 받고, 백 엔드 서비스에서 가격을 검색 하 고, 최상의 가격으로 가격 요청에 회신 합니다.
 
-## <a name="correlation"></a>Correlation
+## <a name="correlation"></a>상관 관계
 
 상관 관계는 다음 두 가지 중 하나입니다.
 
@@ -86,7 +86,7 @@ BestPriceFinder 서비스는 여러 항공편 서비스를 호출 하 여 특정
 
 WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾을 수 있는 기능을 제공 합니다. 에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] WCF 사용자가 다음과 같은 기능을 사용 하 여 서비스를 구성 하는 데 중점을 두었습니다.
 
-- 서비스별 명시적 구성의 필요성을 제거합니다. 서비스 \< 에 대 한 서비스> 요소를 구성 하지 않고 서비스에서 프로그래밍 방식으로 끝점을 정의 하지 않는 경우 서비스 기준 주소와 서비스에 의해 구현 되는 계약 당 하나씩, 끝점 집합이 서비스에 자동으로 추가 됩니다.
+- 서비스별 명시적 구성의 필요성을 제거합니다. 서비스 \<service> 에 대 한 요소를 구성 하지 않고 서비스에서 프로그래밍 방식으로 끝점을 정의 하지 않는 경우 서비스 기준 주소와 서비스에 의해 구현 되는 계약 당 하나씩, 끝점 집합이 서비스에 자동으로 추가 됩니다.
 
 - 사용자가 명시적 구성 없이 서비스에 적용될 WCF 바인딩 및 동작의 기본값을 정의할 수 있도록 합니다.
 
@@ -96,15 +96,15 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ### <a name="getting-started"></a>시작하기
 
-- [WCF 4.0 개발자 가이드](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
+- [WCF 4.0 개발자 가이드](/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
 - [구성 채널 팩터리](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
 - [표준 엔드포인트 요소](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4의 서비스 구성 개선](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
+- [.NET Framework 4의 서비스 구성 개선](/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름의 잘못된 입력](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
+- [.NET 4의 일반적인 사용자 오류: WF/WCF 서비스 구성 이름의 잘못된 입력](/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>단순화된 구성 시나리오
 
@@ -128,7 +128,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - [데이터 계약 확인자 API 설명서](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [데이터 계약 확인자 소개](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
+- [데이터 계약 확인자 소개](/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - 샘플:
 
@@ -142,7 +142,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - XML blob의 크기를 줄입니다.
 
-## <a name="flowchart"></a>Flowchart
+## <a name="flowchart"></a>순서도
 
 순서도는 도메인 문제를 시각적으로 나타내는 잘 알려진 패러다임입니다. .NET 4에서 도입 하는 새로운 제어 흐름 스타일입니다. 순서도의 핵심 특성은 주어진 시간에 항상 작업 한 개만 실행된다는 것입니다. 순서도는 루프 및 대체 결과를 표현할 수 있지만 여러 노드의 동시 실행은 기본적으로 표현할 수 없습니다.
 
@@ -206,7 +206,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
   - [Parallel 활동 디자이너](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [ParallelForEach \< T> Activity Designer](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T> 활동 디자이너 사용](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>절차 작업 시나리오
 
@@ -288,7 +288,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 2. 샘플: [라우팅 서비스 &#91;WCF 샘플&#93;](../wcf/samples/routing-services.md)
 
-3. 블로그: [라우팅 규칙](https://docs.microsoft.com/archive/blogs/RoutingRules/)
+3. 블로그: [라우팅 규칙](/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>라우팅 시나리오
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d12c7c7dcbc3a24cf51ade5481f59715c4c4d88
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555109"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 코드 예제
 
@@ -138,7 +138,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>형식화된 ObjectQuery
-이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.
+이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
-이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 이 예제는 Northwind 데이터 컨텍스트를 기반으로 합니다. 자세한 내용은 [시작](./sql/linq/getting-started.md)을 참조 하세요.
+이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 이 예제는 Northwind 데이터 컨텍스트를 기반으로 합니다. 자세한 내용은 [시작](./sql/linq/getting-started.md)을 참조하십시오.
 
 ```csharp
 using System;
@@ -341,10 +341,10 @@ Class LinqSqlSample
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
-- [데이터 애플리케이션 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [엔터티 데이터 모델 쿼리(Entity Framework 작업)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [방법: 익명 형식 개체를 반환하는 쿼리 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [데이터 애플리케이션 만들기](/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [엔터티 데이터 모델 쿼리(Entity Framework 작업)](/previous-versions/bb738455(v=vs.90))
+- [방법: 익명 형식 개체를 반환하는 쿼리 실행](/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
