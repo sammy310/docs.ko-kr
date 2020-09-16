@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: 0ec9c9a730516b22b4eaa215e042e9393c01d752
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 377b031c48ed831cfa5e270426283ed03a55f886
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569101"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542309"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>방법: 데이터 서비스에 액세스할 수 있도록 설정(WCF Data Services)
 WCF Data Services에서 데이터 서비스에 의해 노출 되는 리소스에 대 한 액세스 권한을 명시적으로 부여 해야 합니다. 즉, 새 데이터 서비스를 만든 후 엔터티 집합으로 개별 리소스에 대한 액세스 권한을 명시적으로 제공해야 합니다. 이 항목에서는 [빠른](quickstart-wcf-data-services.md)시작을 완료할 때 만들어지는 Northwind 데이터 서비스에서 5 개의 엔터티 집합에 대 한 읽기 및 쓰기 액세스를 설정 하는 방법을 보여 줍니다. <xref:System.Data.Services.EntitySetRights> 열거형이 <xref:System.FlagsAttribute>를 사용하여 정의되기 때문에 논리 OR 연산자를 사용하여 단일 엔터티 집합에 여러 사용 권한을 지정할 수 있습니다.  
   
 > [!NOTE]
-> ASP.NET 애플리케이션에 액세스할 수 있는 클라이언트는 데이터 서비스에 의해 노출되는 리소스에도 액세스할 수 있습니다. 리소스에 무단으로 액세스할 수 없도록 하려면 프로덕션 데이터 서비스에서 애플리케이션 자체에도 보안을 설정해야 합니다. 자세한 내용은 [ASP.NET 웹 사이트 보안](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
+> ASP.NET 애플리케이션에 액세스할 수 있는 클라이언트는 데이터 서비스에 의해 노출되는 리소스에도 액세스할 수 있습니다. 리소스에 무단으로 액세스할 수 없도록 하려면 프로덕션 데이터 서비스에서 애플리케이션 자체에도 보안을 설정해야 합니다. 자세한 내용은 [ASP.NET 웹 사이트 보안](/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
   
 ### <a name="to-enable-access-to-the-data-service"></a>데이터 서비스에 액세스할 수 있도록 설정하려면  
   
@@ -31,5 +31,5 @@ WCF Data Services에서 데이터 서비스에 의해 노출 되는 리소스에
   
 ## <a name="see-also"></a>참조
 
-- [방법: IIS에서 실행되는 WCF Data Services 개발](how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [방법: IIS에서 실행되는 WCF Data Service 개발](how-to-develop-a-wcf-data-service-running-on-iis.md)
 - [데이터 서비스 구성](configuring-the-data-service-wcf-data-services.md)

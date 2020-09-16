@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81645351"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541786"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 요소
 런타임에서 <xref:System.Security.Policy.Publisher> CAS (코드 액세스 보안)에 대 한 증명 정보를 만들지 여부를 지정 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "81645351"
 |값|Description|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Policy.Publisher>증명 정보를 만들지 않습니다.|  
-|`true`|<xref:System.Security.Policy.Publisher>증명 정보를 만듭니다. 기본값입니다.|  
+|`true`|<xref:System.Security.Policy.Publisher>증명 정보를 만듭니다. 이것이 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -55,7 +55,7 @@ ms.locfileid: "81645351"
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
-> .NET Framework 4 이상에서이 요소는 어셈블리 로드 시간에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)의 "보안 정책 단순화" 섹션을 참조 하세요.  
+> .NET Framework 4 이상에서이 요소는 어셈블리 로드 시간에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)의 "보안 정책 단순화" 섹션을 참조 하세요.  
   
  CLR (공용 언어 런타임)은 로드할 때 Authenticode 서명을 확인 하 여 <xref:System.Security.Policy.Publisher> 어셈블리에 대 한 증명 정보를 만듭니다. 그러나 대부분의 응용 프로그램에는 기본적으로 증명 정보가 필요 하지 않습니다 <xref:System.Security.Policy.Publisher> . 표준 CAS 정책은를 사용 하지 않습니다 <xref:System.Security.Policy.PublisherMembershipCondition> . 응용 프로그램이 사용자 지정 CAS 정책을 사용 하는 컴퓨터에서 실행 되지 않거나 <xref:System.Security.Permissions.PublisherIdentityPermission> 부분 신뢰 환경에서에 대 한 요구를 충족 하는 경우에만 게시자 서명 확인에 관련 된 불필요 한 시작 비용을 피해 야 합니다. (Id 권한 요구는 항상 완전 신뢰 환경에서 성공 합니다.)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81645351"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

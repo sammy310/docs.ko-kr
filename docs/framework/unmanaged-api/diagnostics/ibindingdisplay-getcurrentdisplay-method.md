@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d28eeea4-c4e0-40d4-91de-198d98cfa13c
 topic_type:
 - apiref
-ms.openlocfilehash: 6fe8c3266a8c9a52cd1022589cd68485c4326fd1
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: db2474741012c4fd1734adafed112821c42c099c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442191"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541710"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay 메서드
 현재 바인딩 표시 정보를 반환 합니다.  
@@ -40,7 +40,7 @@ HRESULT GetCurrentDisplay (
 ## <a name="remarks"></a>설명  
  [IBindingDisplay:: InitializeForProcess](ibindingdisplay-initializeforprocess-method.md) 메서드는 이전에 성공 했 고 프로그램은 디버거에서 중지 되어야 합니다.  
   
- 호출자는 `SAFEARRAY` [Safearraydestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)를 사용 하 여 반환 된 메모리의 할당을 취소 해야 합니다.  
+ 호출자는 `SAFEARRAY` [Safearraydestroy](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy)를 사용 하 여 반환 된 메모리의 할당을 취소 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
@@ -51,7 +51,7 @@ HRESULT GetCurrentDisplay (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IBindingDisplay 인터페이스](ibindingdisplay-interface.md)
 - [InitializeForProcess 메서드](ibindingdisplay-initializeforprocess-method.md)

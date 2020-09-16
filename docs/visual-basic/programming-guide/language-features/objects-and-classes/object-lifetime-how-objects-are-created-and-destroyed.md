@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a32a5d075b5b1d02632c80216e7c2c12920bf4a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544143"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체가 만들어지고 소멸되는 방법(Visual Basic)
 
@@ -155,10 +155,10 @@ CLR은 시스템에서 더 이상 필요하지 않다고 결정하는 개체를 
 
 가비지 컬렉션 시스템 간의 또 다른 차이점은 `Nothing` 사용법입니다. Visual Basic 6.0 이하 버전에서는 프로그래머가 참조 횟수 기능을 활용하기 위해 개체 변수에 `Nothing`을 할당하여 해당 변수에 저장된 참조를 해제하는 경우가 있었습니다. 이때 개체에 대한 마지막 참조가 변수에 저장되어 있었다면 해당 개체의 리소스가 즉시 해제됩니다. 최신 Visual Basic 버전에서는 이 프로시저가 계속 유용한 경우도 있지만, 해당 프로시저를 수행해도 참조되는 개체가 리소스를 즉시 해제하지는 않습니다. 리소스를 즉시 해제하려면 개체의 <xref:System.IDisposable.Dispose%2A> 메서드를 사용합니다(사용 가능한 경우). 가비지 수집기가 분리된 개체를 검색하는 데 걸리는 시간에 비해 변수의 수명이 더 긴 경우에만 해당 변수를 `Nothing`로 설정해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IDisposable.Dispose%2A>
-- [구성 요소의 초기화 및 종료](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [구성 요소의 초기화 및 종료](/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [새 운영자](../../../language-reference/operators/new-operator.md)
-- [관리 되지 않는 리소스 정리](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../language-reference/nothing.md)
+- [관리되지 않는 리소스 정리](../../../../standard/garbage-collection/unmanaged.md)
+- [없는지](../../../language-reference/nothing.md)
