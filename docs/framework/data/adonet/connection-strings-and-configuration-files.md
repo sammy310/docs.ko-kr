@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287040"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556553"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 
@@ -66,13 +66,13 @@ ms.locfileid: "84287040"
  .NET Framework 2.0에서는 런타임에 구성 파일에서 연결 문자열을 쉽게 검색할 수 있도록 <xref:System.Configuration> 네임스페이스에 새 클래스가 추가되었습니다. 이름 또는 공급자 이름을 사용하여 프로그래밍 방식으로 연결 문자열을 검색할 수 있습니다.  
   
 > [!NOTE]
-> **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. Windows 응용 프로그램의 **app.config** 파일에서 공급자 이름으로 연결 문자열을 검색할 때 **machine.config의 연결** 문자열이 먼저 로드 된 다음 **app.config**의 항목이 로드 됩니다. **ConnectionStrings** 요소 바로 뒤에 **clear** 를 추가 하면 로컬 **app.config** 파일에 정의 된 연결 문자열만 고려 되도록 메모리의 데이터 구조에서 상속 된 참조가 모두 제거 됩니다.  
+> **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. Windows 응용 프로그램의 **app.config** 파일에서 공급자 이름으로 연결 문자열을 검색 하는 경우 **machine.config** 의 연결 문자열이 먼저 로드 된 다음 **app.config**의 항목이 로드 됩니다. **ConnectionStrings** 요소 바로 뒤에 **clear** 를 추가 하면 메모리의 데이터 구조에서 상속 된 모든 참조가 제거 되어 로컬 **app.config** 파일에 정의 된 연결 문자열만 고려 됩니다.  
   
 ### <a name="working-with-the-configuration-classes"></a>구성 클래스 사용  
  .NET Framework 2.0부터는 로컬 컴퓨터의 구성 파일을 사용할 경우 더 이상 사용되지 않는 <xref:System.Configuration.ConfigurationManager> 대신 <xref:System.Configuration.ConfigurationSettings>가 사용됩니다. ASP.NET 구성 파일을 사용하는 경우에는 <xref:System.Web.Configuration.WebConfigurationManager>가 사용됩니다. 이 클래스는 웹 서버의 구성 파일에 사용하도록 디자인되었으며 **system.web**과 같은 구성 파일 섹션에 프로그래밍 방식으로 액세스할 수 있도록 합니다.  
   
 > [!NOTE]
-> 런타임에 구성 파일에 액세스하려면 호출자에게 권한을 부여해야 합니다. 필요한 권한은 애플리케이션의 종류와 구성 파일 및 구성 파일의 위치에 따라 다릅니다. 자세한 내용은 [구성 클래스 사용](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) 및 <xref:System.Web.Configuration.WebConfigurationManager>(ASP.NET 애플리케이션)와 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션)를 참조하세요.  
+> 런타임에 구성 파일에 액세스하려면 호출자에게 권한을 부여해야 합니다. 필요한 권한은 애플리케이션의 종류와 구성 파일 및 구성 파일의 위치에 따라 다릅니다. 자세한 내용은 [구성 클래스 사용](/previous-versions/aspnet/ms228063(v=vs.100)) 및 <xref:System.Web.Configuration.WebConfigurationManager>(ASP.NET 애플리케이션)와 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션)를 참조하세요.  
   
  <xref:System.Configuration.ConnectionStringSettingsCollection>을 사용하여 애플리케이션 구성 파일에서 연결 문자열을 검색할 수 있습니다. 이 컬렉션에는 <xref:System.Configuration.ConnectionStringSettings> 개체 컬렉션이 포함되어 있으며, 각 개체는 **connectionStrings** 섹션의 단일 항목을 나타냅니다. 개체 속성은 연결 문자열 특성에 매핑되므로 이름 또는 공급자 이름을 지정하여 연결 문자열을 검색할 수 있습니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "84287040"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>보호되는 구성을 사용하여 구성 파일 섹션 암호화  
- ASP.NET 2.0에서는 *보호되는 구성*이라는 새 기능이 추가되어 구성 파일에서 중요한 정보를 암호화할 수 있습니다. 보호되는 구성은 원래 ASP.NET용으로 디자인된 것이지만 Windows 애플리케이션의 구성 파일 섹션을 암호화하는 데도 사용할 수 있습니다. 보호되는 구성 기능에 대한 자세한 내용은 [보호되는 구성을 사용하여 구성 정보 암호화](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))를 참조하세요.  
+ ASP.NET 2.0에서는 *보호되는 구성*이라는 새 기능이 추가되어 구성 파일에서 중요한 정보를 암호화할 수 있습니다. 보호되는 구성은 원래 ASP.NET용으로 디자인된 것이지만 Windows 애플리케이션의 구성 파일 섹션을 암호화하는 데도 사용할 수 있습니다. 보호되는 구성 기능에 대한 자세한 내용은 [보호되는 구성을 사용하여 구성 정보 암호화](/previous-versions/aspnet/53tyfkaw(v=vs.100))를 참조하세요.  
   
  다음 구성 파일 조각에서는 암호화된 후의 **connectionStrings** 섹션을 보여 줍니다. **configProtectionProvider**에는 연결 문자열을 암호화하고 해독하는 데 사용되는 보호되는 구성 공급자가 지정되어 있습니다. **EncryptedData** 섹션에는 암호화 텍스트가 들어 있습니다.  
   
@@ -138,16 +138,16 @@ ms.locfileid: "84287040"
   
 |공급자|설명|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|RSA 암호화 알고리즘을 사용하여 데이터를 암호화하고 해독합니다. 공개 키 암호화 및 디지털 서명에도 RSA 알고리즘을 사용할 수 있습니다. 두 개의 서로 다른 키를 사용하므로 "공개 키" 또는 비대칭 암호화라고도 합니다. [ASP.NET IIS 등록 도구(Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 사용하여 Web.config 파일의 섹션을 암호화하고 암호화 키를 관리할 수 있습니다. ASP.NET에서는 파일을 처리할 때 구성 파일의 암호를 해독합니다. ASP.NET 애플리케이션의 ID는 섹션을 암호화하고 해독하는 데 사용되는 암호화 키에 대해 읽기 액세스 권한이 있어야 합니다.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|RSA 암호화 알고리즘을 사용하여 데이터를 암호화하고 해독합니다. 공개 키 암호화 및 디지털 서명에도 RSA 알고리즘을 사용할 수 있습니다. 두 개의 서로 다른 키를 사용하므로 "공개 키" 또는 비대칭 암호화라고도 합니다. [ASP.NET IIS 등록 도구(Aspnet_regiis.exe)](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 사용하여 Web.config 파일의 섹션을 암호화하고 암호화 키를 관리할 수 있습니다. ASP.NET에서는 파일을 처리할 때 구성 파일의 암호를 해독합니다. ASP.NET 애플리케이션의 ID는 섹션을 암호화하고 해독하는 데 사용되는 암호화 키에 대해 읽기 액세스 권한이 있어야 합니다.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Windows DPAPI(데이터 보호 API)를 사용하여 구성 섹션을 암호화합니다. Windows 기본 제공 암호화 서비스를 사용하며 시스템별 또는 사용자 계정별로 보호되도록 구성할 수 있습니다. 시스템별 보호는 동일한 서버에 정보를 공유해야 하는 여러 애플리케이션이 있을 때 유용합니다. 사용자 계정별 보호는 공유된 호스팅 환경과 같이 특정 사용자 ID와 함께 실행되는 서비스에서 사용할 수 있습니다. 각 애플리케이션은 파일 및 데이터베이스와 같은 리소스에 대한 액세스를 제한하는 개별 ID에 대해 실행됩니다.|  
   
- 두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 <xref:System.Configuration.RsaProtectedConfigurationProvider>를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
+ 두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 <xref:System.Configuration.RsaProtectedConfigurationProvider>를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
   
 ### <a name="using-the-configuration-classes"></a>구성 클래스 사용  
  <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 애플리케이션 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 클래스를 사용할 수 있습니다 <xref:System.Web.Configuration.WebConfigurationManager> .이 클래스는에서 제공 하는 것과 같이 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동시에 동일한 기능을 제공 합니다 **\<system.web>** .  
   
 > [!NOTE]
-> <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))를 참조하세요.  
+> <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))를 참조하세요.  
   
 ### <a name="appconfig-example"></a>App.config 예제  
  이 예제에서는 Windows 애플리케이션의 **app.config** 파일에 있는 **connectionStrings** 섹션의 암호화를 전환하는 방법에 대해 설명합니다. 이 예제의 프로시저에서는 애플리케이션 이름을 인수로 사용합니다(예: "MyApplication.exe"). **app.config** 파일을 암호화한 다음 이름이 "MyApplication.exe.config"인 실행 파일이 들어 있는 폴더로 복사합니다.  
@@ -169,13 +169,13 @@ ms.locfileid: "84287040"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET 응용 프로그램을 보호 하는 방법에 대 한 자세한 내용은 [ASP.NET 웹 사이트 보안](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
+ ASP.NET 응용 프로그램을 보호 하는 방법에 대 한 자세한 내용은 [ASP.NET 웹 사이트 보안](/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연결 문자열 작성기](connection-string-builders.md)
 - [연결 정보 보호](protecting-connection-information.md)
-- [구성 클래스 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [구성 클래스 사용](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [응용 프로그램 구성](../../configure-apps/index.md)
-- [ASP.NET 웹 사이트 관리 도구](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [ASP.NET 웹 사이트 관리 도구](/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

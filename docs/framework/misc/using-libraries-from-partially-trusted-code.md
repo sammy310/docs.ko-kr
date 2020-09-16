@@ -10,19 +10,19 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-ms.openlocfilehash: 38d9c7c7239c849041683525895293a281e3e10f
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: d3c75b4b0ab07efe46ffafbe185a686c7d5a7a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855727"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556397"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> 이 항목에서는 강력한 이름의 어셈블리 동작에 대해 설명 하 고 [수준 1](security-transparent-code-level-1.md) 어셈블리에만 적용 됩니다. .NET Framework 4 이상의 [보안 투명 코드, 수준 2](security-transparent-code-level-2.md) 어셈블리는 강력한 이름의 영향을 받지 않습니다. 보안 시스템 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조 하세요.  
+> 이 항목에서는 강력한 이름의 어셈블리 동작에 대해 설명 하 고 [수준 1](security-transparent-code-level-1.md) 어셈블리에만 적용 됩니다. .NET Framework 4 이상의 [보안 투명 코드, 수준 2](security-transparent-code-level-2.md) 어셈블리는 강력한 이름의 영향을 받지 않습니다. 보안 시스템 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조 하세요.  
   
  해당 호스트 또는 샌드박스로부터 완전 신뢰 미만을 받는 애플리케이션은 라이브러리 작성자가 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성을 사용하여 특별히 허용하지 않는 한 관리되는 공유 라이브러리를 호출할 수 없습니다. 따라서 애플리케이션 작성자는 부분적으로 신뢰할 수 있는 컨텍스트에서 일부 라이브러리가 제공되지 않음을 알고 있어야 합니다. 기본적으로 부분 신뢰 [샌드박스에서](how-to-run-partially-trusted-code-in-a-sandbox.md) 실행 되 고 완전 신뢰 어셈블리 목록에 없는 모든 코드는 부분적으로 신뢰할 수 있습니다. 코드가 부분적으로 신뢰할 수 있는 컨텍스트에서 실행되거나 부분적으로 신뢰할 수 있는 코드에서 호출되지 않는 경우에는 이 섹션의 내용에 주의할 필요가 없습니다. 그러나 부분적으로 신뢰할 수 있는 코드와 상호 작용하거나 부분적으로 신뢰할 수 있는 컨텍스트에서 작동해야 하는 코드를 작성하는 경우 다음과 같은 요소를 고려해야 합니다.  
   
@@ -51,6 +51,6 @@ ms.locfileid: "87855727"
 > [!NOTE]
 > .NET Framework 클래스 라이브러리의 일부 클래스에는 **AllowPartiallyTrustedCallersAttribute** 특성이 없으며 부분적으로 신뢰할 수 있는 코드에서 호출할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [코드 액세스 보안](code-access-security.md)

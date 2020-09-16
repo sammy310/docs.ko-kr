@@ -3,12 +3,12 @@ title: LINQ(Language-Integrated Query)(C#)
 description: LINQ(Language-Integrated Query)에 대해 알아보고 전체 쿼리 작업의 예를 검토하세요.
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 6c8844c387177ce858b63a52b1f5c7246b570beb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 967f69e94b0424e208fb675a312ab306d5e11842
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103426"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556735"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
 
@@ -41,7 +41,7 @@ SQL Server 데이터베이스, XML 문서, ADO.NET 데이터 세트 및 <xref:Sy
 
 LINQ에 대한 자세한 내용을 알아보려면 [쿼리 식 기본 사항](../../../linq/query-expression-basics.md)에서 몇 가지 기본 개념을 익힌 후 관심 있는 LINQ 기술에 대한 설명서를 읽어보세요.
 
-- XML 문서: [LINQ to XML](linq-to-xml-overview.md)  
+- XML 문서: [LINQ to XML](../../../../standard/linq/linq-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects](linq-to-objects.md)
 

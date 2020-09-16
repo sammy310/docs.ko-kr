@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 8780b9c0fc06a49ddaf42166c292a41e9124f6e1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244831"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556800"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 되는 바인딩 및 전송에 따라 달라 집니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템에서 제공 하는 바인딩에 사용 되는 주요 전송 보안 메커니즘에 대해 설명 합니다.  
@@ -48,19 +48,19 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
  다음 단원에서는 기타 다른 클라이언트 자격 증명 형식에 대해 설명합니다.  
   
 #### <a name="basic"></a>Basic  
- IIS의 기본 인증 방식입니다. 이 모드를 사용하려면 Windows 사용자 계정과 적절한 NTFS 파일 시스템 권한으로 IIS 서버를 구성해야 합니다. IIS 6.0에 대 한 자세한 내용은 [기본 인증 사용 및 영역 이름 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [기본 인증 구성 (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))을 참조 하세요.  
+ IIS의 기본 인증 방식입니다. 이 모드를 사용하려면 Windows 사용자 계정과 적절한 NTFS 파일 시스템 권한으로 IIS 서버를 구성해야 합니다. IIS 6.0에 대 한 자세한 내용은 [기본 인증 사용 및 영역 이름 구성](/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [기본 인증 구성 (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))을 참조 하세요.  
   
 #### <a name="certificate"></a>인증서  
- IIS에는 클라이언트가 인증서를 사용하여 로그온해야 하는 옵션이 있습니다. 또한 이 기능을 사용하면 IIS에서 클라이언트 인증서를 Windows 계정에 매핑할 수 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0에서 클라이언트 인증서 사용](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))을 참조 하십시오. IIS 7.0에 대 한 자세한 내용은 [iis 7에서 서버 인증서 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조 하십시오.  
+ IIS에는 클라이언트가 인증서를 사용하여 로그온해야 하는 옵션이 있습니다. 또한 이 기능을 사용하면 IIS에서 클라이언트 인증서를 Windows 계정에 매핑할 수 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0에서 클라이언트 인증서 사용](/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))을 참조 하십시오. IIS 7.0에 대 한 자세한 내용은 [iis 7에서 서버 인증서 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조 하십시오.  
   
 #### <a name="digest"></a>다이제스트  
- 다이제스트 인증은 기본 인증과 비슷하지만 자격 증명을 일반 텍스트가 아닌 해시로 보낼 수 있는 이점이 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0의 다이제스트 인증](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [다이제스트 인증 구성 (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))을 참조 하세요.  
+ 다이제스트 인증은 기본 인증과 비슷하지만 자격 증명을 일반 텍스트가 아닌 해시로 보낼 수 있는 이점이 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0의 다이제스트 인증](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [다이제스트 인증 구성 (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))을 참조 하세요.  
   
 #### <a name="windows"></a>Windows  
- IIS의 Windows 통합 인증입니다. 이 값으로 설정하는 경우 도메인 컨트롤러가 Kerberos 프로토콜인 Windows 도메인에 서버가 있어야 합니다. 서버가 Kerberos 기반 도메인에 있지 않거나 Kerberos 시스템에 오류가 있는 경우에는 다음 단원에 설명되어 있는 NTLM(NT LAN Manager) 값을 사용할 수 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0의 Windows 통합 인증](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [iis 7에서 서버 인증서 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조 하십시오.
+ IIS의 Windows 통합 인증입니다. 이 값으로 설정하는 경우 도메인 컨트롤러가 Kerberos 프로토콜인 Windows 도메인에 서버가 있어야 합니다. 서버가 Kerberos 기반 도메인에 있지 않거나 Kerberos 시스템에 오류가 있는 경우에는 다음 단원에 설명되어 있는 NTLM(NT LAN Manager) 값을 사용할 수 있습니다. IIS 6.0에 대 한 자세한 내용은 [iis 6.0의 Windows 통합 인증](/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))을 참조 하세요. IIS 7.0에 대 한 자세한 내용은 [iis 7에서 서버 인증서 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조 하십시오.
   
 #### <a name="ntlm"></a>NTLM  
- Kerberos 프로토콜에 오류가 있는 경우 이를 통해 서버가 인증에 NTLM을 사용할 수 있습니다. IIS 6.0에서 IIS를 구성 하는 방법에 대 한 자세한 내용은 [NTLM 인증 강제](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))적용을 참조 하세요. IIS 7.0의 경우 Windows 인증에 NTLM 인증이 포함 됩니다. 자세한 내용은 [IIS 7에서 서버 인증서 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조하십시오.
+ Kerberos 프로토콜에 오류가 있는 경우 이를 통해 서버가 인증에 NTLM을 사용할 수 있습니다. IIS 6.0에서 IIS를 구성 하는 방법에 대 한 자세한 내용은 [NTLM 인증 강제](/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))적용을 참조 하세요. IIS 7.0의 경우 Windows 인증에 NTLM 인증이 포함 됩니다. 자세한 내용은 [IIS 7에서 서버 인증서 구성](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))을 참조하십시오.
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다. SSL을 사용 하는 WCF 응용 프로그램을 만들려면 IIS를 사용 하 여 응용 프로그램을 호스팅합니다. 또는 자체 호스팅 애플리케이션을 만들려면 HttpCfg.exe 도구를 사용하여 X.509 인증서를 컴퓨터의 특정 포트에 바인딩합니다. 포트 번호는 WCF 응용 프로그램의 일부로 끝점 주소로 지정 됩니다. 전송 모드 사용 시 엔드포인트 주소에 HTTPS 프로토콜이 포함되어야 하고, 그렇지 않으면 런타임에 예외가 throw됩니다. 자세한 내용은 [HTTP 전송 보안](http-transport-security.md)을 참조 하세요.  
@@ -83,7 +83,7 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>클라이언트  
  클라이언트에서는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 메서드를 사용하여 인증서를 지정해야 합니다.  
   
 > [!NOTE]
@@ -121,6 +121,6 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 및 NetMsmqBinding  
  메시지 큐 (이전에는 MSMQ 라고 함)를 사용한 전송 보안에 대 한 자세한 설명은 [전송 보안을 사용 하 여 메시지 보안](securing-messages-using-transport-security.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 보안 프로그래밍](programming-wcf-security.md)

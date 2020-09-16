@@ -2,16 +2,16 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556930"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>.NET 네이티브로 Windows 스토어 앱 마이그레이션
 
-.NET 네이티브는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공 합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 차이점에도 불구 하 고 .NET 네이티브는 [Windows 스토어 앱 용 .net과의](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)호환성을 유지 하려고 합니다. 대부분의 경우 Windows 스토어 앱 용 .NET에서 작동 하는 작업은 .NET 네이티브 에서도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱 용 표준 .NET과 .NET 네이티브 간의 이러한 차이점에 대해 설명 합니다.
+.NET 네이티브는 Windows 스토어 또는 개발자 컴퓨터에서 앱을 정적으로 컴파일하는 기능을 제공 합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 차이점에도 불구 하 고 .NET 네이티브는 [Windows 스토어 앱 용 .net과의](/previous-versions/windows/apps/br230302(v=vs.140))호환성을 유지 하려고 합니다. 대부분의 경우 Windows 스토어 앱 용 .NET에서 작동 하는 작업은 .NET 네이티브 에서도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서에서는 다음과 같은 영역에서 Windows 스토어 앱 용 표준 .NET과 .NET 네이티브 간의 이러한 차이점에 대해 설명 합니다.
 
 - [일반 런타임 차이점](#Runtime)
 
@@ -225,9 +225,9 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>는 지원 되지만 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 variant와 함께 사용 하는 경우와 같은 일부 시나리오에서는 예외를 throw `byref` 합니다.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 는 지원 되지만 [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 variant와 함께 사용 하는 경우와 같은 일부 시나리오에서는 예외를 throw `byref` 합니다.
 
- [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 지원에 대해 사용 되지 않는 api는 다음과 같습니다.
+ [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 지원에 대해 사용 되지 않는 api는 다음과 같습니다.
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName>
@@ -324,7 +324,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 - 관리되는 형식에서 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 인터페이스 구현
 
-- [특성을 통해 관리되는 형식에서](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나를 통해 COM 개체를 호출할 수 없으며 `IDispatch` 관리 되는 개체는를 구현할 수 없습니다 `IDispatch` .
+- [특성을 통해 관리되는 형식에서](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나를 통해 COM 개체를 호출할 수 없으며 `IDispatch` 관리 되는 개체는를 구현할 수 없습니다 `IDispatch` .
 
 리플렉션을 사용하여 플랫폼 호출 메서드를 호출할 수는 없습니다. 대신 다른 메서드에서 메서드 호출을 래핑하고 리플렉션을 사용해 래퍼를 호출하여 이 제한을 해결할 수 있습니다.
 
@@ -661,9 +661,9 @@ Visual Studio에서 기본적으로 사용되는 x86 빌드 도구를 사용합�
 
 Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리에서 .NET 네이티브를 사용 하도록 설정 하는 것은 지원 되지 않으며 프로젝트 빌드에 실패 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시작](getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Windows 스토어 앱 용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Windows 스토어 앱 용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))
 - [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

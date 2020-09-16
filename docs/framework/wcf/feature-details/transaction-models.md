@@ -2,12 +2,12 @@
 title: 트랜잭션 모델
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: d6c78a5342bf19d19308352cddc241f436bfcb3a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2d3d0631c47506e7bd99d90ed49a1fdc76cc7a59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745328"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556826"
 ---
 # <a name="transaction-models"></a>트랜잭션 모델
 이 항목에서는 트랜잭션 프로그래밍 모델 및 Microsoft가 제공하는 인프라 구성 요소 간의 관계에 대해 설명합니다.  
@@ -26,11 +26,11 @@ ms.locfileid: "76745328"
   
  이러한 두 모델을 사용 하 여 트랜잭션 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 [트랜잭션 응용 프로그램 작성](https://go.microsoft.com/fwlink/?LinkId=94947)을 참조 하세요.  
   
- WCF 서비스 또는 응용 프로그램에서 <xref:System.Transactions>은 클라이언트 응용 프로그램 내에서 트랜잭션을 만들고 필요한 경우 서비스 내에서 트랜잭션과 명시적으로 상호 작용 하는 프로그래밍 모델을 제공 합니다.  
+ WCF 서비스 또는 응용 프로그램에서는 <xref:System.Transactions> 클라이언트 응용 프로그램 내에서 트랜잭션을 만들고 필요한 경우 서비스 내에서 트랜잭션과 명시적으로 상호 작용 하기 위한 프로그래밍 모델을 제공 합니다.  
   
 ## <a name="msdtc-transactions"></a>MSDTC 트랜잭션  
  MSDTC(Microsoft Distributed Transaction Coordinator)는 분산 트랜잭션을 지원하는 트랜잭션 관리자입니다.  
   
- 자세한 내용은 [DTC 프로그래머 참조](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108(v=vs.85))를 참조 하세요.  
+ 자세한 내용은 [DTC 프로그래머 참조](/previous-versions/windows/desktop/ms686108(v=vs.85))를 참조 하세요.  
   
  WCF 서비스 또는 응용 프로그램에서 MSDTC는 클라이언트 또는 서비스 내에서 만든 트랜잭션의 조정을 위한 인프라를 제공 합니다.

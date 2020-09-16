@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 619a893e0973f6691e32446d75f101201a0b6799
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247184"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556384"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 
@@ -23,7 +23,7 @@ ms.locfileid: "85247184"
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- Windows Server 2003를 실행 하는 경우 HttpCfg.exe 도구를 사용 합니다. Windows Server 2003에서는이 도구가 설치 되어 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 Httpcfg.exe 도구의 구문을 설명 합니다.  
+ Windows Server 2003를 실행 하는 경우 HttpCfg.exe 도구를 사용 합니다. Windows Server 2003에서는이 도구가 설치 되어 있습니다. 자세한 내용은 [Httpcfg.exe 개요](/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 Httpcfg.exe 도구의 구문을 설명 합니다.  
   
  Windows Vista를 실행 하는 경우 이미 설치 되어 있는 Netsh.exe 도구를 사용 합니다.
   
@@ -121,6 +121,6 @@ ms.locfileid: "85247184"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [HTTP 전송 보안](http-transport-security.md)

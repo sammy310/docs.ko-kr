@@ -3,12 +3,12 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646074"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555889"
 ---
 # \<sessionSecurityTokenCache>
 서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 세션 토큰에 대 한 캐시를 등록 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "81646074"
 |[\<caches>](caches.md)|서비스 또는 보안 토큰 처리기 컬렉션에서 사용 하는 캐시를 등록 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 XML에서는 세션 보안 토큰을 보유 하는 사용자 지정 캐시의 구성 ()을 보여 줍니다 <xref:System.IdentityModel.Tokens.SessionSecurityToken> . 이 구성은 샘플에서 가져온 것입니다 `ClaimsAwareWebFarm` . 이 샘플에 대 한 자세한 내용은 [WIF Code 샘플 Index](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index)를 참조 하세요.  
+ 다음 XML에서는 세션 보안 토큰을 보유 하는 사용자 지정 캐시의 구성 ()을 보여 줍니다 <xref:System.IdentityModel.Tokens.SessionSecurityToken> . 이 구성은 샘플에서 가져온 것입니다 `ClaimsAwareWebFarm` . 이 샘플에 대 한 자세한 내용은 [WIF Code 샘플 Index](/previous-versions/dotnet/framework/security/wif-code-sample-index)를 참조 하세요.  
   
 ```xml  
 <caches>  
@@ -62,6 +62,6 @@ ms.locfileid: "81646074"
 </caches>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865166"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535572"
 ---
 # <a name="resources-in-net-apps"></a>.NET 앱의 리소스
 
@@ -25,7 +25,7 @@ ms.locfileid: "86865166"
 
 .NET Framework 및 .NET Core에서는 리소스 만들기 및 지역화를 포괄적으로 지원합니다. .NET은 지역화된 리소스를 패키징하고 배포하는 간단한 모델 또한 지원합니다.
 
-ASP.NET의 리소스에 대한 자세한 내용은 [ASP.NET 페이지 리소스 개요](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))를 참조하세요.
+ASP.NET의 리소스에 대한 자세한 내용은 [ASP.NET 페이지 리소스 개요](/previous-versions/aspnet/ms227427(v=vs.100))를 참조하세요.
 
 ## <a name="create-and-localize-resources"></a>리소스 만들기 및 지역화
 

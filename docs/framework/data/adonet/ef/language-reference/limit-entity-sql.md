@@ -2,12 +2,12 @@
 title: LIMIT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 275b22686c6c932b2a9e4b20973ac07e99d47e14
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319623"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556286"
 ---
 # <a name="limit-entity-sql"></a>LIMIT(Entity SQL)
 ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수행할 수 있습니다. LIMIT 절은 ORDER BY 절과 별도로 사용할 수 없습니다.  
@@ -39,6 +39,6 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
 ## <a name="see-also"></a>참조
 
 - [ORDER BY](order-by-entity-sql.md)
-- [방법: 쿼리 결과를 통해 페이징](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [방법: 쿼리 결과를 통해 페이징](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [페이징](paging-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [맨 위로](top-entity-sql.md)

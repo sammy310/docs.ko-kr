@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 52f7857a2dc7108eb308fde942bf153d85d8e8ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593609"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556644"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 
@@ -18,7 +18,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF (Win
   
  바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. ASP.NET 웹 서비스 클라이언트는 MTOM 메시지 인코딩을 지원 하지 않으므로 속성은 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 기본값인로 유지 해야 합니다 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> . ASP.NET 웹 서비스 클라이언트는 WS-SECURITY를 지원 하지 않으므로 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 를로 설정 해야 합니다 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> .  
   
- ASP.NET 웹 서비스 프록시 생성 도구 ( [웹 서비스 기술 언어 도구 (wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), [웹 서비스 검색 도구 (Disco)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))및 Visual Studio의 **웹 참조 추가** 기능)에서 WCF 서비스에 대 한 메타 데이터를 사용할 수 있도록 하려면 HTTP/GET 메타 데이터 끝점을 노출 해야 합니다.  
+ ASP.NET 웹 서비스 프록시 생성 도구 ( [Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [웹 서비스 검색 도구 (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100)), Visual Studio의 **웹 참조 추가** 기능 등 WCF 서비스에 대 한 메타 데이터를 사용할 수 있도록 하려면 HTTP/GET 메타 데이터 끝점을 노출 해야 합니다.  
   
 ## <a name="add-an-endpoint-in-code"></a>코드에서 끝점 추가  
   
@@ -47,7 +47,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF (Win
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 코드에서 서비스 엔드포인트 만들기](how-to-create-a-service-endpoint-in-code.md)
 - [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](how-to-publish-metadata-for-a-service-using-code.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363687"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556247"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사(Visual Basic)
 이 메서드는 몇 가지 강력한 암호 특성을 확인 하 고 암호가 실패 한 검사에 대 한 정보를 사용 하 여 문자열 매개 변수를 업데이트 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "84363687"
 - <xref:System.Text.RegularExpressions> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
 ## <a name="security"></a>보안  
- 네트워크를 통해 암호를 이동 하는 경우 데이터를 전송 하는 안전한 방법을 사용 해야 합니다. 자세한 내용은 [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))을 참조 하세요.
+ 네트워크를 통해 암호를 이동 하는 경우 데이터를 전송 하는 안전한 방법을 사용 해야 합니다. 자세한 내용은 [ASP.NET Web Application Security](/previous-versions/aspnet/330a99hc(v=vs.100))을 참조 하세요.
   
  `ValidatePassword`더 복잡 한 검사를 추가 하 여 함수의 정확도를 향상할 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "84363687"
   
 - 모든 기호가 키보드의 맨 위 행에서 입력 되는 암호를 허용 하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET 웹 애플리케이션 보안](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [ASP.NET 웹 애플리케이션 보안](/previous-versions/aspnet/330a99hc(v=vs.100))

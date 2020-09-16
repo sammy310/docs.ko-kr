@@ -3,12 +3,12 @@ title: XML 문서 및 데이터
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287690"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540136"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 
@@ -24,7 +24,7 @@ ms.locfileid: "84287690"
 
 - <xref:System.Xml.Linq>
 
-전체 목록을 보려면 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?term=system.xml)에서 "System.Xml"을 검색하세요.
+전체 목록을 보려면 [.NET API 브라우저](../../../../api/index.md?term=system.xml)에서 "System.Xml"을 검색하세요.
 
 이러한 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) 권장 사항을 지원합니다. 예를 들어:
 
@@ -38,7 +38,7 @@ ms.locfileid: "84287690"
 
 .NET Framework의 XML 클래스는 다음과 같은 이점을 제공합니다.
 
-- **생산성** [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 통해 XML로 프로그래밍하기 쉽고 SQL과 유사한 쿼리 환경을 제공합니다.
+- **생산성** [LINQ to XML(C#)](../../linq/linq-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../linq/linq-xml-overview.md)을 통해 XML로 프로그래밍하기 쉽고 SQL과 유사한 쿼리 환경을 제공합니다.
 
 - **확장성** .NET Framework의 XML 클래스는 추상 기본 클래스와 가상 메서드를 사용하여 확장 가능합니다. 예를 들어, 캐시 스트림을 로컬 디스크에 저장하는 <xref:System.Xml.XmlUrlResolver> 클래스의 파생 클래스를 만들 수 있습니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "84287690"
 
 [XML 처리 옵션](xml-processing-options.md) XML 데이터를 처리하기 위한 옵션을 설명합니다.
 
-[메모리 내 XML 데이터 처리](processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
+[메모리 내 XML 데이터 처리](processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../linq/linq-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../linq/linq-xml-overview.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
 
 [XSLT 변환](xslt-transformations.md)\
 XSLT 프로세서의 사용 방법에 대해 설명합니다.

@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 07/10/2020
-  ms.openlocfilehash: d324cfe43f5558f255746421ebd4d143e7343e81
-  ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+  ms.openlocfilehash: 98de6da2ffd990c5ec99f1a4043b089af712dd6b
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/05/2020
-  ms.locfileid: "89495553"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90556052"
 highlightedContent:
   items:
   - title: .NET 다운로드
@@ -168,11 +168,11 @@ additionalContent:
         text: 'Blazor: .NET을 사용한 대화형 클라이언트 쪽 웹 UI'
     - title: 클라우드 기본 및 마이크로 서비스
       links:
-      - url: /dotnet/azure/
+      - url: ./azure/index.yml
         text: .NET 설명서에 대한 Azure
       - url: /azure/storage
         text: 스토리지
-      - url: /dotnet/fsharp/using-fsharp-on-azure/
+      - url: ./fsharp/using-fsharp-on-azure/index.md
         text: Azure에서 F# 사용
       - url: architecture/serverless/index.md
         text: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
@@ -224,7 +224,7 @@ additionalContent:
       links:
       - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
         text: '.NET: .NET Core의 IoT 지원에 대한 자세한 정보'
-      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+      - url: /archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
         text: .NET Core 3.0을 사용한 플랫폼 간 IoT 프로그래밍
       - url: https://github.com/dotnet/iot
         text: .NET Core IoT 라이브러리
@@ -235,19 +235,19 @@ additionalContent:
     items:
     - title: .NET Core API 참조
       summary: .NET Core의 API 참조 문서
-      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+      url: ../api/index.md?view=netcore-3.1
     - title: .NET Framework API 참조
       summary: .NET Framework의 API 참조 문서
-      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+      url: ../api/index.md?view=netframework-4.8
     - title: ASP.NET Core API 참조
       summary: ASP.NET Core의 API 참조 문서
-      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+      url: ../api/index.md?view=aspnetcore-3.1
     - title: ML.NET API 참조
       summary: ML.NET의 API 참조 문서
-      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+      url: ../api/index.md?view=ml-dotnet
     - title: .NET for Apache Spark API 참조
       summary: .NET for Apache Spark의 API 참조 문서
-      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+      url: ../api/index.md?view=spark-dotnet
     - title: C# 언어 참조
       summary: C# 언어 참조 및 사양
       url: csharp/language-reference/index.md
@@ -257,4 +257,4 @@ additionalContent:
     - title: Visual Basic 언어 참조
       summary: Visual Basic 언어 참조 및 사양
       url: visual-basic/language-reference/index.md
-  footer: .NET 문서에 참여합니다. [기여자 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)를 참조하세요.
+  footer: .NET 문서에 참여합니다. [기여자 가이드](/contribute/dotnet/dotnet-contribute)를 참조하세요.

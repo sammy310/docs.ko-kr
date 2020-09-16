@@ -3,12 +3,12 @@ title: Azure에서 F# 사용
 description: F#과 함께 Azure 서비스 사용에 대한 가이드
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: 24ef3fd14a4d0173935fac3e67aadf86110fa6d8
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 0f516b8a3b4fd60eea8facad83a440e33ffd521c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517375"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548425"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -57,7 +57,7 @@ Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요�
 
 ## <a name="using-apache-spark-with-f-on-azure-hdinsight-or-azure-databricks"></a>Azure HDInsight 또는 Azure Databricks에서 F#과 함께 Apache Spark 사용
 
-[Azure HDInsight용 Apache Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview)는 대규모 데이터 분석 애플리케이션을 실행하는 오픈 소스 처리 프레임워크입니다. [Azure Databricks](https://docs.microsoft.com/azure/databricks/scenarios/what-is-azure-databricks)는 Microsoft Azure Cloud Services 플랫폼에 대해 최적화된 Apache Spark 기반 분석 플랫폼입니다. Azure는 배포하기에 간단하고 비용 효과적인 Apache Spark를 만듭니다. Apache Spark용 .NET 바인딩 세트인 [.NET for Apache Spark](../../spark/what-is-apache-spark-dotnet.md)를 사용하여 F#으로 Spark 애플리케이션을 만듭니다.
+[Azure HDInsight용 Apache Spark](/azure/hdinsight/spark/apache-spark-overview)는 대규모 데이터 분석 애플리케이션을 실행하는 오픈 소스 처리 프레임워크입니다. [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks)는 Microsoft Azure Cloud Services 플랫폼에 대해 최적화된 Apache Spark 기반 분석 플랫폼입니다. Azure는 배포하기에 간단하고 비용 효과적인 Apache Spark를 만듭니다. Apache Spark용 .NET 바인딩 세트인 [.NET for Apache Spark](../../spark/what-is-apache-spark-dotnet.md)를 사용하여 F#으로 Spark 애플리케이션을 만듭니다.
 
 * [.NET for Apache Spark F# 샘플](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
 * [Azure HDInsight에서 .NET Interactive Jupyter Notebook 설치](../../spark/how-to-guides/hdinsight-notebook-installation.md)
@@ -89,7 +89,7 @@ Azure Event Hubs는 다음과 같은 두 가지 방법으로 F#과 함께 사용
 Azure Notification Hubs는 다음과 같은 두 가지 방법으로 F#과 함께 사용할 수 있습니다.
 
 1. 알림 허브로 결과를 보내는 F# Azure Functions 생성을 통해. [Notification Hubs에 대한 Azure Function 출력 트리거](/azure/azure-functions/functions-bindings-notification-hubs)를 참조하세요.
-2. [Azure용 .NET SDK](https://docs.microsoft.com/archive/blogs/azuremobile/push-notifications-using-notification-hub-and-net-backend)를 사용하여. 이러한 예제는 C#으로 작성됩니다.
+2. [Azure용 .NET SDK](/archive/blogs/azuremobile/push-notifications-using-notification-hub-and-net-backend)를 사용하여. 이러한 예제는 C#으로 작성됩니다.
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>F\#을 사용하여 Azure에서 WebHook 구현
 
@@ -111,7 +111,7 @@ Webhook는 [F#의 Azure Function 및 Webhook 바인딩](/azure/azure-functions/f
 
 ## <a name="deploying-and-managing-azure-resources-with-f-scripts"></a>F# 스크립트를 통해 Azure 리소스 배포 및 관리
 
-Azure VM은 Microsoft.Azure.Management 패키지 및 API를 사용하여 프로그래밍 방식으로 배포하고 관리할 수 있습니다. 예를 들어 [.NET용 관리 라이브러리 시작](https://msdn.microsoft.com/library/dn722415.aspx) 및 [Azure Resource Manager 사용](/azure/azure-resource-manager/resource-manager-deployment-model)을 참조하세요.
+Azure VM은 Microsoft.Azure.Management 패키지 및 API를 사용하여 프로그래밍 방식으로 배포하고 관리할 수 있습니다. 예를 들어 [.NET용 관리 라이브러리 시작](/previous-versions/azure/dn722415(v=azure.100)) 및 [Azure Resource Manager 사용](/azure/azure-resource-manager/resource-manager-deployment-model)을 참조하세요.
 
 마찬가지로, 동일한 구성 요소를 사용하여 F# 스크립트에서 다른 Azure 리소스를 배포하고 관리할 수 있습니다. 예를 들어 F# 스크립트에서 프로그래밍 방식으로 스토리지 계정을 만들고, Azure Cloud Services를 배포하고, Azure Cosmos DB 인스턴스를 만들고, Azure Notifcation Hubs를 관리할 수 있습니다.
 

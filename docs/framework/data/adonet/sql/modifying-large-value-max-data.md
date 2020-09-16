@@ -1,16 +1,16 @@
 ---
-title: 대용량(최대) 데이터 수정
+title: 대량 값 (max) 데이터 수정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174279"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556969"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대값) 데이터 수정
 LOB(Large Object) 데이터 형식은 최대 행 크기가 8KB를 초과하는 형식입니다. SQL Server는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 도입하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열과 Transact-SQL 변수는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. ADO.NET에서는 `max`를 사용하여 `DataReader` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우 데이터를 증분 방식으로 검색하고 업데이트할 수 있습니다.  
@@ -19,9 +19,9 @@ LOB(Large Object) 데이터 형식은 최대 행 크기가 8KB를 초과하는 �
   
  다음 표에는 SQL Server 온라인 설명서의 문서에 대한 링크가 나와 있습니다.  
   
- **SQL 서버 설명서**  
+ **SQL Server 설명서**  
   
-1. [큰 값 데이터 형식 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [큰 값 데이터 형식 사용](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>큰 값 형식 제한 사항  
  `max` 데이터 형식에는 더 작은 데이터 형식에서는 존재하지 않는 다음 제한 사항이 적용됩니다.  
@@ -57,15 +57,15 @@ FROM OPENROWSET
   
  UPDATE  
   
- { * \<개체>* }  
+ { *\<object>* }  
   
  SET  
   
- { *column_name* = { . 쓰기 *(표현식* , @Offset , @Length ) }  
+ { *column_name* = {. WRITE ( *expression* , @Offset , @Length )}  
   
  WRITE 메서드에서는 *column_name* 값의 일정 부분이 수정되도록 지정합니다. 식은 *column_name*에 복사되는 값이고, `@Offset`은 식이 작성되는 시작점이며, `@Length` 인수는 열에 있는 일정 부분의 길이입니다.  
   
-|다음과 같은 경우|작업|  
+|조건|결과|  
 |--------|----------|  
 |식이 NULL로 설정되었습니다.|`@Length`가 무시되고 *column_name*의 값은 지정된 `@Offset`에서 잘립니다.|  
 |`@Offset`은 NULL입니다.|업데이트 작업을 통해 기존 *column_name* 값의 끝에 식이 추가되고 `@Length`는 무시됩니다.|  
@@ -249,9 +249,9 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [SQL 서버 바이너리 및 대값 데이터](sql-server-binary-and-large-value-data.md)
+- [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
-- [ADO.NET SQL 서버 데이터 작업](sql-server-data-operations.md)
+- [ADO.NET의 SQL Server 데이터 작업](sql-server-data-operations.md)
 - [ADO.NET 개요](../ado-net-overview.md)

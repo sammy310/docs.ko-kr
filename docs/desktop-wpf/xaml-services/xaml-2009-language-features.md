@@ -5,21 +5,21 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: e58e6757b88958bf8a3547c8a272c2e6298dcecb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: dfa2841d8bc1ed1429372908f0dda97d178c4ac3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432841"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556709"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 언어 기능
-XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에는 [x:인수 지시문이 포함됩니다.](xarguments-directive.md) [x:FactoryMethod 지시문;](xfactorymethod-directive.md) [x:참조 마크업 확장;](xreference-markup-extension.md) [x:TypeArguments 지시문;](xtypearguments-directive.md) 및 공통 언어 프리미티브에 대한 기본 `x:Char`제공 형식(예: ).
+XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에는 [X:Arguments 지시문](xarguments-directive.md)이 포함 됩니다. [X:FactoryMethod 지시문](xfactorymethod-directive.md) [X:reference 태그 확장명](xreference-markup-extension.md)입니다. [X:TypeArguments 지시문](xtypearguments-directive.md) 공용 언어 기본 형식에 대 한 기본 제공 형식 (예: `x:Char` )
 
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>WPF 및 Visual Studio의 XAML 2009 지원
 
 WPF에서 XAML 2009 기능을 사용할 수 있지만 WPF 태그 컴파일된 XAML에만 사용할 수 있습니다. 태그 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 언어 키워드 및 기능을 지원하지 않습니다.
 
-WPF에서 느슨한 XAML을 로드하는 기존 기술은 태그 컴파일된 XAML보다 제한적인 CLR 형식 및 형식 시스템에 대해 가능한 보안 및 액세스 제한이 있을 수도 있습니다. 자세한 내용은 [보안(WPF)](../../framework/wpf/security-wpf.md) 또는 [WPF 보안 전략 - 플랫폼 보안](../../framework/wpf/wpf-security-strategy-platform-security.md)을 참조하세요.
+WPF에서 느슨한 XAML을 로드하는 기존 기술은 태그 컴파일된 XAML보다 제한적인 CLR 형식 및 형식 시스템에 대해 가능한 보안 및 액세스 제한이 있을 수도 있습니다. 자세한 내용은 [보안(WPF)](/dotnet/desktop/wpf/security-wpf) 또는 [WPF 보안 전략 - 플랫폼 보안](/dotnet/desktop/wpf/wpf-security-strategy-platform-security)을 참조하세요.
 
 XAML 2009에서는 이전 XAML 2006 구문을 수정하거나 기본 태그 폼을 수정하는 추가 기능도 도입되었습니다.
 

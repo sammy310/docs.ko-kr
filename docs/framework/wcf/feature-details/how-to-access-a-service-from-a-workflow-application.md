@@ -2,12 +2,12 @@
 title: '방법: 워크플로 애플리케이션에서 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 2ce79b726b623c2a25bf14065682e685455ca575
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597243"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556878"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>방법: 워크플로 애플리케이션에서 서비스 액세스
 이 항목에서는 워크플로 콘솔 애플리케이션에서 워크플로 서비스를 호출하는 방법에 대해 설명합니다. 이 [는 방법: 메시징 작업을 사용 하 여 워크플로 서비스 만들기](how-to-create-a-workflow-service-with-messaging-activities.md) 항목의 완료에 따라 달라 집니다. 이 항목에서는 워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 방법에 대해 설명 하지만, 워크플로 응용 프로그램에서 WCF (Windows Communication Foundation) 서비스를 호출 하는 데 동일한 메서드를 사용할 수 있습니다.
@@ -62,8 +62,8 @@ ms.locfileid: "84597243"
 
 12. Ctrl+F5를 눌러 서비스와 클라이언트를 둘 다 시작합니다. ASP.NET 개발 서버은 서비스를 호스팅하고, Internet Explorer는 WCF 도움말 페이지를 표시 하 고, 클라이언트 워크플로 응용 프로그램은 콘솔 창에서 시작 되며 서비스에서 반환 된 문자열을 표시 합니다 ("Hello, 세계").
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [워크플로 서비스](workflow-services.md)
 - [방법: 메시징 활동을 사용하여 워크플로 서비스 만들기](how-to-create-a-workflow-service-with-messaging-activities.md)
-- [웹 프로젝트의 워크플로에서 WCF 서비스 사용](https://docs.microsoft.com/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)
+- [웹 프로젝트의 워크플로에서 WCF 서비스 사용](/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)

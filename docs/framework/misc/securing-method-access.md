@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855766"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555720"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855766"
   
 - 액세스 가능성 범위를 신뢰할 수 있는 클래스, 어셈블리 또는 파생 클래스로 제한합니다. 이는 메서드 액세스를 제한하는 가장 간단한 방법입니다. 일반적으로 파생 클래스는 부모 클래스의 id를 공유 하는 경우 파생 클래스는 파생 클래스에서 파생 된 클래스 보다 신뢰 수준이 떨어질 수 있습니다. 특히 `protected` 보안 컨텍스트에서 반드시 사용 되는 것은 아니므로 키워드에서 트러스트를 유추 하지 마십시오.  
   
-- 지정 된 id의 호출자에 대 한 액세스 권한을 제한 합니다. 기본적으로 특정 [증명 정보](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (강력한 이름, 게시자, 영역 등)를 선택 합니다.  
+- 지정 된 id의 호출자에 대 한 액세스 권한을 제한 합니다. 기본적으로 특정 [증명 정보](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) (강력한 이름, 게시자, 영역 등)를 선택 합니다.  
   
 - 메서드 액세스를 선택한 권한을 가진 호출자로 제한합니다.  
   
@@ -240,6 +240,6 @@ class Implemented : ICanCastToMe
   
  언어 컴파일러에서 컴파일 오류가 발생 하 여 이러한 재정의를 방지 하는 경우에도 다른 컴파일러를 사용 하 여 작성 된 코드를 재정의할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

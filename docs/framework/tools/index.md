@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166845"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556683"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 
@@ -37,7 +37,7 @@ ms.locfileid: "87166845"
 ActiveX 컨트롤용 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환합니다.
 
 - [Caspol.exe(코드 액세스 보안 정책 도구)](caspol-exe-code-access-security-policy-tool.md)  
-컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 보고 구성할 수 있도록 합니다. .NET Framework 4 이상에서 [\<legacyCasPolicy> 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정하지 않으면 이 도구는 CAS(코드 액세스 보안) 정책에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.
+컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 보고 구성할 수 있도록 합니다. .NET Framework 4 이상에서 [\<legacyCasPolicy> 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정하지 않으면 이 도구는 CAS(코드 액세스 보안) 정책에 영향을 주지 않습니다. 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.
 
 - [Cert2spc.exe(SPC 테스트 도구)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 하나 이상의 X.509 인증서에서 SPC(소프트웨어 게시 인증서)를 만듭니다. 이 도구는 테스트 전용입니다.
@@ -134,7 +134,7 @@ Windows Forms에 사용되는 UI(사용자 인터페이스) 리소스( *.resx* �
 
 ## <a name="related-sections"></a>관련 단원
 
-- [WPF 도구](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+- [WPF 도구](/previous-versions/ms742404(v=vs.110))  
 isXPS 규칙 도구(isXPS.exe) 및 성능 프로파일링 도구와 같은 도구가 포함되어 있습니다.
 
 - [Windows Communication Foundation 도구](../wcf/tools.md)  

@@ -2,12 +2,12 @@
 title: Windows 서비스 애플리케이션에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597334"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555850"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 애플리케이션에서의 호스팅
 Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 애플리케이션에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 애플리케이션의 프로세스 수명은 Windows 서비스 애플리케이션을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. 컴퓨터가 시작 될 때 자동으로 시작 되도록 Windows 서비스 프로세스를 구성 하 여 "always on" 응용 프로그램에 적합 한 호스팅 환경을 만들 수 있습니다. Windows 서비스 응용 프로그램에 대 한 자세한 내용은 [Windows 서비스 응용 프로그램](https://go.microsoft.com/fwlink/?LinkId=89450)을 참조 하십시오.  
@@ -36,11 +36,11 @@ Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 �
   
      Wcf 서비스를 호스트 하는 windows 서비스 응용 프로그램은 WCF를 사용 하지 않는 Windows 서비스 응용 프로그램과 동일한 방식으로 배포 및 관리 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceProcess>
 - [연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](https://go.microsoft.com/fwlink/?LinkId=94875)
 - [방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows Service 호스트](../samples/windows-service-host.md)
 - [서비스 애플리케이션 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=94876)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

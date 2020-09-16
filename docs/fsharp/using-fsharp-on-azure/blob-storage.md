@@ -3,18 +3,18 @@ title: F#을 사용하여 Azure Blob 스토리지 시작
 description: Azure Blob storage를 사용 하 여 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092631"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548477"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F\#를 사용 하 여 Azure Blob storage 시작
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob storage 시작\#
 
-Azure Blob Storage는 클라우드에서 구조화되지 않은 데이터를 개체/Blob으로 저장하는 서비스입니다. Blob Storage는 문서, 미디어 파일, 애플리케이션 설치 관리자 등과 같은 모든 유형의 텍스트 또는 이진 데이터를 저장할 수 있습니다. Blob 스토리지를 개체 스토리지라고도 합니다.
+Azure Blob Storage는 클라우드에 구조화되지 않은 데이터를 개체/Blob로 저장하는 서비스입니다. Blob Storage는 문서, 미디어 파일 또는 애플리케이션 설치 프로그램과 같은 모든 종류의 텍스트 또는 이진 데이터를 저장할 수 있습니다. 또한 Blob Storage를 개체 스토리지라고 합니다.
 
-이 문서에서는 Blob storage를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다. 샘플은 .NET 용 Azure Storage F# 클라이언트 라이브러리를 사용 하 여 작성 되었습니다. 여기에서 설명 하는 태스크에는 blob을 업로드, 나열, 다운로드 및 삭제 하는 방법이 포함 됩니다.
+이 문서에서는 Blob storage를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다. 샘플은 .NET 용 Azure Storage 클라이언트 라이브러리를 사용 하 여 F #을 사용 하 여 작성 되었습니다. 여기에서 설명 하는 태스크에는 blob을 업로드, 나열, 다운로드 및 삭제 하는 방법이 포함 됩니다.
 
 Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net 가이드](/azure/storage/blobs/storage-quickstart-blobs-dotnet)를 참조 하세요.
 
@@ -22,15 +22,15 @@ Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net �
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/common/storage-account-create)합니다. 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>F# 스크립트 만들기 및 대화형 시작 F#
+## <a name="create-an-f-script-and-start-f-interactive"></a>F # 스크립트를 만들고 F# 대화형를 시작 합니다.
 
-이 문서의 샘플은 F# 응용 프로그램 또는 F# 스크립트에서 사용할 수 있습니다. F# 스크립트를 만들려면 F# 개발 환경에서 `blobs.fsx`같은 `.fsx` 확장명을 사용 하 여 파일을 만듭니다.
+이 문서의 샘플은 F # 응용 프로그램 또는 F # 스크립트에서 사용할 수 있습니다. F # 스크립트를 만들려면 `.fsx` `blobs.fsx` f # 개발 환경에서 확장명을 사용 하 여 파일을 만듭니다.
 
-그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 `WindowsAzure.Storage`를 설치 하 고 `#r` 지시문을 사용 하 여 스크립트에 `WindowsAzure.Storage.dll` 및 `Microsoft.WindowsAzure.Configuration.dll`를 `Microsoft.WindowsAzure.ConfigurationManager` 합니다.
+그런 다음 [Paket](https://fsprojects.github.io/Paket/) 또는 [NuGet](https://www.nuget.org/) 과 같은 [패키지 관리자](package-management.md) 를 사용 하 여 `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` `Microsoft.WindowsAzure.Configuration.dll` 지시문을 사용 하 여 및 패키지를 설치 하 고 스크립트에 및를 참조 합니다 `#r` .
 
 ### <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`open` 파일 맨 위에 다음 `blobs.fsx` 문을 추가합니다.
+`blobs.fsx` 파일 맨 위에 다음 `open` 문을 추가합니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
@@ -48,7 +48,7 @@ Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net �
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L13-L15)]
 
-Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `ConfigurationManager` 형식과 같은 API를 사용할 수도 있습니다.
+Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 형식과 같은 API를 사용할 수도 있습니다 `ConfigurationManager` .
 
 ### <a name="parse-the-connection-string"></a>연결 문자열 구문 분석
 
@@ -56,7 +56,7 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `Conf
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L21-L22)]
 
-그러면 `CloudStorageAccount`반환 됩니다.
+그러면이 반환 `CloudStorageAccount` 됩니다.
 
 ### <a name="create-some-local-dummy-data"></a>로컬 더미 데이터 만들기
 
@@ -66,7 +66,7 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `Conf
 
 ### <a name="create-the-blob-service-client"></a>Blob service 클라이언트 만들기
 
-`CloudBlobClient` 형식을 사용 하면 Blob 저장소에 저장 된 컨테이너 및 blob을 검색할 수 있습니다. 서비스 클라이언트를 만드는 한 가지 방법은 다음과 같습니다.
+`CloudBlobClient`형식을 사용 하 여 blob 저장소에 저장 된 컨테이너 및 blob을 검색할 수 있습니다. 서비스 클라이언트를 만드는 한 가지 방법은 다음과 같습니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L36-L36)]
 
@@ -88,30 +88,30 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `Conf
 
 Azure Blob Storage는 블록 Blob 및 페이지 Blob을 지원합니다. 대부분의 경우 블록 blob은 사용 하기에 권장 되는 형식입니다.
 
-블록 Blob에 파일을 업로드하려면 컨테이너 참조를 가져온 다음 이 참조를 사용하여 블록 Blob 참조를 가져옵니다. Blob 참조가 있으면 `UploadFromFile` 메서드를 호출 하 여 데이터 스트림을 업로드할 수 있습니다. 이 작업은 blob이 없는 경우 새로 만들고, blob이 있는 경우 덮어씁니다.
+블록 Blob에 파일을 업로드하려면 컨테이너 참조를 가져온 다음 이 참조를 사용하여 블록 Blob 참조를 가져옵니다. Blob 참조가 있으면 메서드를 호출 하 여 데이터 스트림을 업로드할 수 있습니다 `UploadFromFile` . 이 작업은 blob이 없는 경우 새로 만들고, blob이 있는 경우 덮어씁니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L55-L59)]
 
 ## <a name="list-the-blobs-in-a-container"></a>컨테이너의 Blob 나열
 
-컨테이너의 Blob을 나열하려면 먼저 컨테이너 참조를 가져옵니다. 그런 다음 컨테이너의 `ListBlobs` 메서드를 사용 하 여 컨테이너 내의 blob 및/또는 디렉터리를 검색할 수 있습니다. 반환 된 `IListBlobItem`에 대 한 다양 한 속성 및 메서드 집합에 액세스 하려면이를 `CloudBlockBlob`, `CloudPageBlob`또는 `CloudBlobDirectory` 개체로 캐스팅 해야 합니다. 형식을 알 수 없는 경우 형식 검사를 사용하여 캐스트할 형식을 확인할 수 있습니다. 다음 코드는 `mydata` 컨테이너에 있는 각 항목의 URI를 검색하고 출력하는 방법을 보여 줍니다.
+컨테이너의 Blob을 나열하려면 먼저 컨테이너 참조를 가져옵니다. 그런 다음 컨테이너의 메서드를 사용 하 여 컨테이너 `ListBlobs` 내의 blob 및/또는 디렉터리를 검색할 수 있습니다. 반환 된에 대 한 다양 한 속성 및 메서드 집합에 액세스 하려면 `IListBlobItem` 이를 `CloudBlockBlob` , `CloudPageBlob` 또는 개체로 캐스팅 해야 합니다 `CloudBlobDirectory` . 형식을 알 수 없는 경우 형식 검사를 사용하여 캐스트할 형식을 확인할 수 있습니다. 다음 코드는 `mydata` 컨테이너에 있는 각 항목의 URI를 검색하고 출력하는 방법을 보여 줍니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-이름에 경로 정보를 사용 하 여 blob의 이름을 지정할 수도 있습니다. 이렇게 하면 기존 파일 시스템과 같이 구성 및 트래버스할 수 있는 가상 디렉터리 구조를 만듭니다. 디렉터리 구조는 가상만 해당됩니다. Blob Storage에서 사용할 수 있는 리소스만 컨테이너 및 Blob입니다. 그러나 저장소 클라이언트 라이브러리는 가상 디렉터리를 참조 하는 `CloudBlobDirectory` 개체를 제공 하 고 이러한 방식으로 구성 된 blob을 사용 하 여 작업 하는 프로세스를 간소화 합니다.
+이름에 경로 정보를 사용 하 여 blob의 이름을 지정할 수도 있습니다. 이렇게 하면 기존 파일 시스템과 같이 구성 및 트래버스할 수 있는 가상 디렉터리 구조를 만듭니다. 디렉터리 구조는 가상만 해당됩니다. Blob Storage에서 사용할 수 있는 리소스만 컨테이너 및 Blob입니다. 그러나 저장소 클라이언트 라이브러리는 `CloudBlobDirectory` 가상 디렉터리를 참조 하는 개체를 제공 하 고 이러한 방식으로 구성 된 blob을 사용 하 여 작업 하는 프로세스를 간소화 합니다.
 
 예를 들어 `photos`컨테이너에 있는 다음 블록 Blob 집합을 고려합니다.
 
-*photo1*\
-*2015/아키텍처/설명 .txt*\
-*2015/architecture/photo3*\
-*2015/architecture/photo4*\
-*2016/architecture/photo5*\
-*2016/architecture/photo6*\
-*2016/아키텍처/설명 .txt*\
-*2016/photo7*\
+*photo1.jpg*\
+*2015/아키텍처/description.txt*\
+*2015/아키텍처/photo3.jpg*\
+*2015/아키텍처/photo4.jpg*\
+*2016/아키텍처/photo5.jpg*\
+*2016/아키텍처/photo6.jpg*\
+*2016/아키텍처/description.txt*\
+*2016/photo7.jpg*\
 
-위의 샘플과 같이 컨테이너에서 `ListBlobs`를 호출 하면 계층적 목록이 반환 됩니다. 컨테이너의 디렉터리와 blob을 각각 나타내는 `CloudBlobDirectory` 및 `CloudBlockBlob` 개체를 모두 포함 하는 경우 결과 출력은 다음과 유사 합니다.
+`ListBlobs`위의 샘플과 같이 컨테이너에서를 호출 하면 계층적 목록이 반환 됩니다. `CloudBlobDirectory` `CloudBlockBlob` 컨테이너의 디렉터리와 blob을 각각 나타내는 및 개체가 둘 다 포함 된 경우 결과 출력은 다음과 유사 하 게 표시 됩니다.
 
 ```console
 Directory: https://<accountname>.blob.core.windows.net/photos/2015/
@@ -119,7 +119,7 @@ Directory: https://<accountname>.blob.core.windows.net/photos/2016/
 Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/photo1.jpg
 ```
 
-필요에 따라 `ListBlobs` 메서드의 `UseFlatBlobListing` 매개 변수를 `true`로 설정할 수 있습니다. 이 경우 컨테이너의 모든 blob은 `CloudBlockBlob` 개체로 반환 됩니다. 플랫 목록을 반환 하는 `ListBlobs`에 대 한 호출은 다음과 같습니다.
+필요에 따라 `UseFlatBlobListing` 메서드의 매개 변수를로 설정할 수 있습니다 `ListBlobs` `true` . 이 경우 컨테이너의 모든 blob이 개체로 반환 됩니다 `CloudBlockBlob` . `ListBlobs`플랫 목록을 반환 하기 위해에 대 한 호출은 다음과 같습니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L82-L89)]
 
@@ -138,17 +138,17 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ## <a name="download-blobs"></a>Blob 다운로드
 
-Blob을 다운로드 하려면 먼저 blob 참조를 검색 한 다음 `DownloadToStream` 메서드를 호출 합니다. 다음 예제에서는 `DownloadToStream` 메서드를 사용 하 여 blob 콘텐츠를 스트림 개체로 전송한 다음이 개체를 로컬 파일에 유지할 수 있습니다.
+Blob을 다운로드 하려면 먼저 blob 참조를 검색 한 다음 메서드를 호출 `DownloadToStream` 합니다. 다음 예제에서는 메서드를 사용 하 여 `DownloadToStream` blob 콘텐츠를 스트림 개체로 전송 합니다. 그러면이 개체를 로컬 파일에 유지할 수 있습니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L95-L101)]
 
-`DownloadToStream` 메서드를 사용 하 여 blob 콘텐츠를 텍스트 문자열로 다운로드할 수도 있습니다.
+메서드를 사용 하 여 `DownloadToStream` blob 콘텐츠를 텍스트 문자열로 다운로드할 수도 있습니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L103-L106)]
 
 ## <a name="delete-blobs"></a>Blob 삭제
 
-Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음이 참조에 대 한 `Delete` 메서드를 호출 합니다.
+Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음 메서드를 호출 `Delete` 합니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L112-L116)]
 
@@ -156,9 +156,9 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음이 참조에 대
 
 많은 수의 Blob을 나열하거나 한 번의 나열 작업에서 반환되는 결과 수를 제어하려는 경우에는 여러 결과 페이지에 Blob을 나열할 수 있습니다. 이 예제에서는 여러 페이지에서 비동기식으로 결과를 반환하는 방법을 보여 주므로 큰 결과 집합이 반환되도록 기다리는 동안 실행이 차단되지 않습니다.
 
-이 예에서는 플랫 blob 목록을 표시 하지만 `ListBlobsSegmentedAsync` 메서드의 `useFlatBlobListing` 매개 변수를 `false`로 설정 하 여 계층적 목록을 수행할 수도 있습니다.
+이 예제에서는 플랫 blob 목록을 보여 주지만 메서드의 매개 변수를로 설정 하 여 계층적 목록을 수행할 수도 있습니다 `useFlatBlobListing` `ListBlobsSegmentedAsync` `false` .
 
-이 샘플에서는 `async` 블록을 사용 하 여 비동기 메서드를 정의 합니다. ``let!`` 키워드는 나열 작업이 완료 될 때까지 샘플 메서드의 실행을 일시 중단 합니다.
+이 샘플에서는 블록을 사용 하 여 비동기 메서드를 정의 합니다 `async` . ``let!``키워드는 나열 작업이 완료 될 때까지 샘플 메서드의 실행을 일시 중단 합니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L122-L160)]
 
@@ -166,7 +166,7 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음이 참조에 대
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L162-L166)]
 
-이제 루틴을 호출 합니다. `Async.RunSynchronously`를 사용 하 여 비동기 작업을 강제로 실행 합니다.
+이제 루틴을 호출 합니다. 를 사용 `Async.RunSynchronously` 하 여 비동기 작업을 강제로 실행 합니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L168-L168)]
 
@@ -180,7 +180,7 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음이 참조에 대
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L174-L203)]
 
-세 가지 Blob 유형의 차이점에 대한 자세한 내용은 [블록 Blob, 페이지 Blob 및 추가 Blob 이해](https://msdn.microsoft.com/library/azure/ee691964.aspx) 를 참조하세요.
+세 가지 Blob 유형의 차이점에 대한 자세한 내용은 [블록 Blob, 페이지 Blob 및 추가 Blob 이해](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs) 를 참조하세요.
 
 ## <a name="concurrent-access"></a>동시 액세스
 
@@ -226,24 +226,24 @@ Azure Storage은 클라이언트와 서버 모두에서 blob 데이터를 암호
 
 ### <a name="tools"></a>도구
 
-- [ F# Azurestorag및 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-Blob F# , 테이블 및 큐 Azure Storage 자산을 탐색 하 고이에 대 한 CRUD 작업을 쉽게 적용 하는 데 사용할 수 있는 형식 공급자입니다.
+- [F # Azurestorag. 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Blob, 테이블 및 큐 Azure Storage 자산을 탐색 하 고이에 대 한 CRUD 작업을 쉽게 적용 하는 데 사용할 수 있는 F # 형식 공급자입니다.
 
 - [Fsharp.core](https://github.com/fsprojects/FSharp.Azure.Storage)\
-Microsoft Azure F# Table Storage 서비스를 사용 하는 API
+Microsoft Azure Table Storage 서비스를 사용 하기 위한 F # API
 
 - [Microsoft Azure Storage 탐색기 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
 Windows, OS X 및 Linux에서 Azure Storage 데이터로 시각적으로 작업할 수 있도록 해 주는 Microsoft의 독립 실행형 무료 앱입니다.
 
 ### <a name="blob-storage-reference"></a>Blob Storage 참조
 
-- [.NET 용 Azure Storage Api](/dotnet/api/overview/azure/storage)
+- [.NET용 Azure Storage API](/dotnet/api/overview/azure/storage)
 - [Azure Storage 서비스 REST API 참조](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>관련 가이드
 
-- [.NET용 Azure Blob Storage 샘플](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [.NET용 Azure Blob Storage 샘플](/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
 - [AzCopy 시작](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Storage 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
-- [Azure Storage 팀 블로그](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
-- [빠른 시작: .NET을 사용 하 여 개체 저장소에 blob 만들기](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
+- [Azure Storage 팀 블로그](/archive/blogs/windowsazurestorage/)
+- [빠른 시작: .Net을 사용하여 개체 스토리지에 Blob 만들기](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

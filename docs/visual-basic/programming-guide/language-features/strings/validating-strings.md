@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 58ca052f4a03d99ab62e651f5c15e45c94b8d483
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363718"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555733"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
 이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법을 설명 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "84363718"
  [연습: 암호 복합성의 유효성 검사](walkthrough-validating-that-passwords-are-complex.md)  
  문자열에 강력한 암호의 특징이 있는지 확인 하는 방법입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [문자열](index.md)
-- [MaskedTextBox 컨트롤](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox 컨트롤](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)
