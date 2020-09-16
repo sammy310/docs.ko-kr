@@ -2,12 +2,12 @@
 title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579165"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551974"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 환경에서 실행 될 때 제한 된 기능의 하위 집합을 지원 합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -90,12 +90,12 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
   
 - 부분 신뢰 애플리케이션으로 배포될 때 실행될 수 있도록 일반 동작을 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성으로 표시합니다. APTCA로 표시된 어셈블리가 실행되지 않도록 컴퓨터에 레지스트리 항목을 설정할 수 있습니다. .  
   
-- 부분 신뢰 환경에서 애플리케이션을 실행하기 위해 사용자가 코드 액세스 보안 설정을 수정할 수 없는 완전 신뢰 애플리케이션으로서 애플리케이션이 배포되는지 확인합니다. 사용자가 보안 설정을 수정할 수 있는 경우 동작이 실행되지 않고 예외가 throw되지 않습니다. 이를 확인 하려면 Caspol.exe를 사용 하 여 **levelfinal** 옵션 [(코드 액세스 보안 정책 도구)](../../tools/caspol-exe-code-access-security-policy-tool.md)을 참조 하세요.  
+- 부분 신뢰 환경에서 애플리케이션을 실행하기 위해 사용자가 코드 액세스 보안 설정을 수정할 수 없는 완전 신뢰 애플리케이션으로서 애플리케이션이 배포되는지 확인합니다. 사용자가 보안 설정을 수정할 수 있는 경우 동작이 실행되지 않고 예외가 throw되지 않습니다. 이를 확인 하려면Caspol.exe 사용 하 여 **levelfinal** 옵션 [ (코드 액세스 보안 정책 도구)](../../tools/caspol-exe-code-access-security-policy-tool.md)을 참조 하세요.  
   
  일반적인 동작에 대 한 예제는 [방법: 엔터프라이즈에서 끝점 잠그기](../extending/how-to-lock-down-endpoints-in-the-enterprise.md)를 참조 하세요.  
   
 ## <a name="configuration"></a>구성  
- 한 가지 예외를 제외 하 고 부분적으로 신뢰할 수 있는 코드는 로컬 파일의 WCF 구성 섹션만 로드할 수 있습니다 `app.config` . Machine.config 또는 루트 web.config 파일에서 WCF 섹션을 참조 하는 WCF 구성 섹션을 로드 하려면 ConfigurationPermission (제한 없음)이 필요 합니다. 이 권한이 없으면 로컬 구성 파일 외부에 있는 WCF 구성 섹션 (동작, 바인딩)을 참조할 때 구성이 로드 될 때 예외가 발생 합니다.  
+ 한 가지 예외를 제외 하 고 부분적으로 신뢰할 수 있는 코드는 로컬 파일의 WCF 구성 섹션만 로드할 수 있습니다 `app.config` . machine.config 또는 루트 web.config 파일에서 WCF 섹션을 참조 하는 WCF 구성 섹션을 로드 하려면 ConfigurationPermission (제한 없음)이 필요 합니다. 이 권한이 없으면 로컬 구성 파일 외부에 있는 WCF 구성 섹션 (동작, 바인딩)을 참조할 때 구성이 로드 될 때 예외가 발생 합니다.  
   
  한 가지 예외는 이 항목의 Serialization 단원에서 설명한 것처럼 serialization에 대한 알려진 형식 구성입니다.  
   
@@ -119,7 +119,7 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>및 <xref:System.IdentityModel.Tokens>가 있습니다.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> 및 <xref:System.IdentityModel.Tokens>.  
   
  다음 추적 소스는 지원되지 않습니다.  
   
@@ -127,7 +127,7 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
   
 - <xref:System.IO.Log>  
 
-- [System.servicemodel. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.servicemodel. TransactionBridge](/previous-versions/aa346556(v=vs.110))]
   
  <xref:System.Diagnostics.TraceOptions> 열거형에 대한 다음 멤버는 지정하지 않아야 합니다.  
   
@@ -145,7 +145,7 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
   
 ## <a name="other-limitations"></a>기타 제한 사항  
 
-  WCF는 일반적으로 호스팅 응용 프로그램에서 적용 되는 보안 고려 사항으로 제한 됩니다. 예를 들어 WCF가 XBAP (XAML 브라우저 응용 프로그램)에서 호스트 되는 경우 [Windows Presentation Foundation 부분 신뢰 보안](../../wpf/wpf-partial-trust-security.md)에 설명 된 대로 xbap 제한의 영향을 받습니다.  
+  WCF는 일반적으로 호스팅 응용 프로그램에서 적용 되는 보안 고려 사항으로 제한 됩니다. 예를 들어 WCF가 XBAP (XAML 브라우저 응용 프로그램)에서 호스트 되는 경우 [Windows Presentation Foundation 부분 신뢰 보안](/dotnet/desktop/wpf/wpf-partial-trust-security)에 설명 된 대로 xbap 제한의 영향을 받습니다.  
   
  다음 추가 기능은 indigo2를 부분 신뢰 환경에서 실행하는 경우 사용할 수 없습니다.  
   
@@ -160,7 +160,7 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
 ## <a name="unlisted-features"></a>목록에 없는 기능  
  부분 신뢰 환경에서 실행할 때 사용할 수 없는 정보 또는 작업 부분을 검색하는 가장 좋은 방법은 리소스에 액세스하거나 `try` 블록 내의 작업을 수행한 다음 오류를 `catch` 하는 것입니다. 중복 오류가 발생 한 추적 파일의 초과를 방지 하기 위해 WCF는 첫 번째 보안 실패 후 리소스 또는 작업 추적을 사용 하지 않도록 설정 합니다. 처음으로 리소스에 액세스하거나 작업을 수행할 때 실패한 각 리소스 액세스에 대해 한 가지 예외 추적이 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

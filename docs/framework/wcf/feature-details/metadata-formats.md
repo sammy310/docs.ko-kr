@@ -2,14 +2,15 @@
 title: 메타데이터 형식
 ms.date: 03/30/2017
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
-ms.openlocfilehash: a74a57843beaba09b969678a34cad3ad8bed7050
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a304b6026ae9b8bc9506bfa82ab6eaa3c80b2a42
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598842"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679379"
 ---
-# <a name="metadata-formats"></a>메타데이터 형식
+# <a name="metadata-formats"></a>메타 데이터 형식
+
 WCF (Windows Communication Foundation)는 다음 표에 나와 있는 메타 데이터 형식을 지원 합니다.  
   
 ## <a name="metadata-specifications-and-usage"></a>메타데이터 사양 및 사용  
@@ -20,10 +21,10 @@ WCF (Windows Communication Foundation)는 다음 표에 나와 있는 메타 데
 |XML 스키마|[Xml 스키마 파트 2: 데이터 형식 Second edition](https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/) 및 [XML Schema Part 1: 구조 second edition](https://www.w3.org/TR/2004/REC-xmlschema-1-20041028/)<br /><br /> WCF는 XML 스키마를 사용 하 여 메시지에 사용 되는 데이터 형식을 설명 합니다.|  
 |WS Policy|[Web Services Policy 1.2 - Framework (WS-Policy)](https://www.w3.org/Submission/WS-Policy/)<br /><br /> [Web Services Policy 1.5 - Framework](https://www.w3.org/TR/ws-policy/)<br /><br /> WCF는 도메인 특정 어설션과 함께 WS-POLICY 1.2 또는 1.5 사양을 사용 하 여 서비스 요구 사항 및 기능을 설명 합니다.|  
 |WS Policy 첨부 파일|[Web Services Policy 1.2 - Attachment (WS-PolicyAttachment)](https://www.w3.org/Submission/WS-PolicyAttachment/)<br /><br /> WCF는 WS-POLICY 첨부 파일을 구현 하 여 WSDL의 다양 한 범위에서 정책 식을 연결 합니다.|  
-|WS Metadata Exchange|[Web Services Metadata Exchange (WS-MetadataExchange) version 1.1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF는 Ws-metadataexchange를 구현 하 여 XML 스키마, WSDL 및 WS-POLICY를 검색 합니다.|  
+|WS Metadata Exchange|[웹 서비스 메타 데이터 교환 (Ws-metadataexchange)](https://www.w3.org/TR/ws-metadata-exchange/)<br /><br /> WCF는 Ws-metadataexchange를 구현 하 여 XML 스키마, WSDL 및 WS-POLICY를 검색 합니다.|  
 |WSDL에 대한 WS-Addressing 바인딩|[Web Services Addressing 1.0 - WSDL Binding](https://www.w3.org/TR/ws-addr-wsdl/)<br /><br /> WCF는 wsdl에 대 한 ws-addressing 바인딩을 구현 하 여 WSDL에서 주소 지정 정보를 첨부 합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
 - [WSDL 및 정책](wsdl-and-policy.md)

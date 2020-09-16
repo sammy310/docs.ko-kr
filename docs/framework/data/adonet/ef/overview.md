@@ -3,12 +3,12 @@ title: Entity Framework 개요
 description: ADO.NET의 Entity Framework는 기존 응용 프로그램 보다 더 높은 추상화 수준에서 작동 하는 데이터 지향 응용 프로그램의 개발을 지원 합니다.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286807"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557985"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -48,7 +48,7 @@ Entity Framework는 이러한 모델 및 매핑 파일을 사용 하 여 개념�
 
 - LINQ to Entities. 개념적 모델에 정의된 엔터티 형식을 쿼리하기 위한 LINQ(Language-Integrated Query) 지원을 제공합니다. 자세한 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)를 참조 하세요.
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티와 직접 작동 하며 엔터티 데이터 모델 개념을 지 원하는, 저장소에 독립적인 SQL 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]는 EntityClient 공급자를 사용 하 여 실행 되는 개체 쿼리 및 쿼리와 함께 사용 됩니다. 자세한 내용은 [Entity SQL 개요](./language-reference/entity-sql-overview.md)를 참조 하세요.
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 개념적 모델의 엔터티와 직접 작동 하며 엔터티 데이터 모델 개념을 지 원하는, 저장소에 독립적인 SQL 언어입니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 는 EntityClient 공급자를 사용 하 여 실행 되는 개체 쿼리 및 쿼리와 함께 사용 됩니다. 자세한 내용은 [Entity SQL 개요](./language-reference/entity-sql-overview.md)를 참조 하세요.
 
 Entity Framework는 EntityClient 데이터 공급자를 포함 합니다. 이 공급자는 연결을 관리 하 고, 엔터티 쿼리를 데이터 소스 관련 쿼리로 변환 하 고, Entity Framework에서 엔터티 데이터를 개체로 구체화 하는 데 사용 하는 데이터 판독기를 반환 합니다. 개체 구체화가 필요하지 않은 경우 응용 프로그램에서 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리를 실행하고 반환된 읽기 전용 데이터 판독기를 사용할 수 있도록 하여 EntityClient 공급자를 표준 ADO.NET 데이터 공급자처럼 사용할 수도 있습니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.
 
@@ -72,12 +72,12 @@ Visual Studio는 Entity Framework 런타임과 함께 매핑 및 모델링 도�
 
 Entity Framework에 대 한 자세한 내용은 다음을 참조 하세요.
 
-[시작](getting-started.md) -간단한 Entity Framework 응용 프로그램을 만드는 방법을 보여 주는 [빠른](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))시작을 사용 하 여 빠르게 시작 하 고 실행 하는 방법에 대 한 정보를 제공 합니다.
+[시작](getting-started.md) -간단한 Entity Framework 응용 프로그램을 만드는 방법을 보여 주는 [빠른](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))시작을 사용 하 여 빠르게 시작 하 고 실행 하는 방법에 대 한 정보를 제공 합니다.
 
 [Entity Framework 용어](terminology.md) -엔터티 데이터 모델 및 Entity Framework에 의해 도입 된 여러 용어와 Entity Framework 설명서에서 사용 되는 용어를 정의 합니다.
 
 [Entity Framework 리소스](resources.md) -개념 항목에 대 한 링크와 Entity Framework 응용 프로그램 빌드를 위한 외부 항목 및 리소스에 대 한 링크를 제공 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET Entity Framework](index.md)

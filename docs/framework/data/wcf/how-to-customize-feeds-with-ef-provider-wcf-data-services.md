@@ -35,11 +35,11 @@ WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜�
   
 6. 프로젝트를 다시 컴파일합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이전 예제에서는 URI에 대해 다음 결과를 반환 합니다 `http://myservice/Northwind.svc/Customers('ALFKI')` .  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Entity Framework 공급자](entity-framework-provider-wcf-data-services.md)

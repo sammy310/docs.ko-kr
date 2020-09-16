@@ -5,18 +5,18 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a0dcffe378cdd09de0fbd8f0a6ef0635c033fd9c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48da852bd1e209aed5ed5e75d8e510027a96d6d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154064"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558011"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> 요소
 원격 소스에서 로드 된 어셈블리에 .NET Framework 4 이상에서 완전 신뢰를 부여 해야 하는지 여부를 지정 합니다.
   
 > [!NOTE]
-> Visual Studio 프로젝트 오류 목록 또는 빌드 오류의 오류 메시지 때문에이 문서를 전달 하 [는 경우 방법: Visual studio에서 웹의 어셈블리 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))을 참조 하세요.  
+> Visual Studio 프로젝트 오류 목록 또는 빌드 오류의 오류 메시지 때문에이 문서를 전달 하 [는 경우 방법: Visual studio에서 웹의 어셈블리 사용](/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))을 참조 하세요.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
@@ -42,7 +42,7 @@ ms.locfileid: "79154064"
   
 |값|Description|  
 |-----------|-----------------|  
-|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 기본값입니다.|  
+|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 이것이 기본값입니다.|  
 |`true`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -99,7 +99,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 일반적으로 애플리케이션 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 .NET 보안 블로그에서 [Ca 정책의 더 암시적인 사용: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) 문서를 참조 하세요.  
+이 요소는 일반적으로 애플리케이션 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 .NET 보안 블로그에서 [Ca 정책의 더 암시적인 사용: loadFromRemoteSources](/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) 문서를 참조 하세요.  
 
 ## <a name="example"></a>예제
 
@@ -113,9 +113,9 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 </configuration>  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [CAS 정책의 보다 암시적 사용: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
+- [CAS 정책의 보다 암시적 사용: loadFromRemoteSources](/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

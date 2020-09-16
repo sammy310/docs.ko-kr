@@ -6,12 +6,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247041"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557413"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>방법: 개발 중에 사용할 임시 인증서 만들기
 
@@ -22,7 +22,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 보안 서비스 또는
 >
 > 기본적으로 [new-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet은 자체 서명 된 인증서를 만들며 이러한 인증서는 안전 하지 않습니다. 자체 서명 된 인증서를 신뢰할 수 있는 루트 인증 기관 저장소에 배치 하면 배포 환경을 보다 긴밀 하 게 시뮬레이션 하는 개발 환경을 만들 수 있습니다.
 
- 인증서를 만들고 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요. 인증서를 자격 증명으로 사용 하는 방법에 대 한 자세한 내용은 [서비스 및 클라이언트 보안](securing-services-and-clients.md)설정을 참조 하세요. Microsoft Authenticode 기술을 사용하는 방법에 대한 자습서는 [Authenticode Overviews and Tutorials](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85))를 참조하십시오.
+ 인증서를 만들고 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요. 인증서를 자격 증명으로 사용 하는 방법에 대 한 자세한 내용은 [서비스 및 클라이언트 보안](securing-services-and-clients.md)설정을 참조 하세요. Microsoft Authenticode 기술을 사용하는 방법에 대한 자습서는 [Authenticode Overviews and Tutorials](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85))를 참조하십시오.
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>자체 서명된 루트 인증 기관 인증서를 만들고 프라이빗 키를 내보내려면
 
@@ -113,7 +113,7 @@ WCF에서의 인증서 사용에 대한 자세한 내용은 [Working with Certif
 
 인증서를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭하여 **신뢰할 수 있는 루트 인증 기관** 및 **개인**폴더에서 임시 루트 인증 기관 인증서를 모두 삭제합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인증서 사용](working-with-certificates.md)
 - [방법: MMC 스냅인을 사용하여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)

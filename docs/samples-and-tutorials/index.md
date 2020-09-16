@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656959"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557192"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -107,7 +107,7 @@ ms.locfileid: "88656959"
 
 1. 다음 절차 중 하나를 수행하여 샘플 코드가 포함된 리포지토리를 다운로드합니다.
    * 로컬 시스템으로 리포지토리의 ZIP를 다운로드 합니다. 압축된 보관 파일의 압축을 풉니다.
-   * 리포지토리를 [분기](https://help.github.com/articles/fork-a-repo/)하고 로컬 시스템에 분기를 [복제](https://help.github.com/articles/cloning-a-repository/)합니다. 분기 및 복제를 사용하면 분기에 변경 내용을 커밋한 다음 공식 문서 리포지토리에 대한 끌어오기 요청을 만듦으로써 설명서에 기여할 수 있습니다. 자세한 내용은 [.NET 설명서 기여 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) 및 [ASP.NET Core 문서 기여 가이드](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)를 참조하세요.
+   * 리포지토리를 [분기](https://help.github.com/articles/fork-a-repo/)하고 로컬 시스템에 분기를 [복제](https://help.github.com/articles/cloning-a-repository/)합니다. 분기 및 복제를 사용하면 분기에 변경 내용을 커밋한 다음 공식 문서 리포지토리에 대한 끌어오기 요청을 만듦으로써 설명서에 기여할 수 있습니다. 자세한 내용은 [.NET 설명서 기여 가이드](/contribute/dotnet/dotnet-contribute) 및 [ASP.NET Core 문서 기여 가이드](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)를 참조하세요.
    * 리포지토리를 로컬로 복제합니다. 로컬 시스템에 직접 문서 리포지토리를 복제하는 경우 공식 리포지토리에 직접 커밋할 수 없으므로 나중에 설명서에 기여할 수가 없습니다. 나중에 설명서에 기여할 수 있는 기회를 잃지 않으려면 앞서 설명한 분기 및 복제 절차를 사용하세요.
 1. 리포지토리의 폴더 내에서 샘플의 위치로 이동합니다. 샘플에 대한 링크를 따라가면 브라우저의 주소 표시줄에 샘플 위치에 대한 상대 경로가 나타납니다.
 1. 다음과 같은 몇 가지 옵션을 사용하여 샘플을 실행할 수 있습니다.

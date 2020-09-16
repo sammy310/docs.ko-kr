@@ -2,12 +2,12 @@
 title: '디자인 패턴: 목록 기반 게시-구독'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 5aaea5b0def544f8b3e963d71e269592b9b40784
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 02668962afff5f760fc02692a92e72e765089545
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592348"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545581"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
 이 샘플에서는 WCF (Windows Communication Foundation) 프로그램으로 구현 된 목록 기반 게시-구독 패턴을 보여 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "84592348"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 목록 기반 게시-구독 디자인 패턴은 Microsoft 패턴 & 사례 게시, [통합 패턴](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))에 설명 되어 있습니다. 게시-구독 패턴에서는 정보 항목을 구독한 받는 사람 컬렉션으로 정보를 전달합니다. 목록 기반 게시-구독에서는 구독자 목록을 유지 관리합니다. 공유할 정보가 있으면 목록에 있는 각 구독자에게 복사본이 전송됩니다. 이 샘플에서는 필요할 때마다 클라이언트에서 구독하거나 구독 취소할 수 있는 동적 목록 기반 게시-구독 패턴을 보여 줍니다.  
+ 목록 기반 게시-구독 디자인 패턴은 Microsoft 패턴 & 사례 게시, [통합 패턴](/previous-versions/msp-n-p/ff647309(v=pandp.10))에 설명 되어 있습니다. 게시-구독 패턴에서는 정보 항목을 구독한 받는 사람 컬렉션으로 정보를 전달합니다. 목록 기반 게시-구독에서는 구독자 목록을 유지 관리합니다. 공유할 정보가 있으면 목록에 있는 각 구독자에게 복사본이 전송됩니다. 이 샘플에서는 필요할 때마다 클라이언트에서 구독하거나 구독 취소할 수 있는 동적 목록 기반 게시-구독 패턴을 보여 줍니다.  
   
  List-based Publish-Subscribe 샘플은 클라이언트, 서비스 및 데이터 소스 프로그램으로 구성됩니다. 둘 이상의 클라이언트와 둘 이상의 데이터 소스 프로그램이 실행될 수 있습니다. 클라이언트에서는 서비스를 구독하고 알림을 수신하며 구독을 취소합니다. 데이터 소스 프로그램에서는 현재 모든 구독자와 공유할 정보를 서비스로 보냅니다.  
   
@@ -120,17 +120,17 @@ public class PriceChangeEventArgs : EventArgs
   
 1. 다음 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 테스트 `http://localhost/servicemodelsamples/service.svc` 합니다. 확인 페이지가 응답으로 표시됩니다.  
   
-2. 언어별 폴더의 \client\bin에서 setup.exe를 실행 \\ 합니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다. 여러 클라이언트가 시작됩니다.  
+2. 언어별 폴더의 \client\bin에서 Client.exe를 실행 \\ 합니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다. 여러 클라이언트가 시작됩니다.  
   
-3. 언어별 폴더의 \datasource\bin에서 Datasource를 실행 \\ 합니다. 데이터 소스 동작이 콘솔 창에 표시됩니다. 데이터 소스에서 서비스로 정보를 보내면 각 클라이언트로 전달되어야 합니다.  
+3. 언어별 폴더의 \datasource\bin에서 Datasource.exe를 실행 \\ 합니다. 데이터 소스 동작이 콘솔 창에 표시됩니다. 데이터 소스에서 서비스로 정보를 보내면 각 클라이언트로 전달되어야 합니다.  
   
-4. 클라이언트, 데이터 원본 및 서비스 프로그램이 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+4. 클라이언트, 데이터 원본 및 서비스 프로그램이 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 ### <a name="to-run-the-sample-across-machines"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
 1. 서비스 컴퓨터를 설정합니다.  
   
-    1. 서비스 컴퓨터에서 ServiceModelSamples라는 가상 디렉터리를 만듭니다. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md) 의 배치 파일을 사용 하 여 디스크 디렉터리와 가상 디렉터리를 만들 수 있습니다.  
+    1. 서비스 컴퓨터에서 ServiceModelSamples라는 가상 디렉터리를 만듭니다. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md) 에서 Setupvroot.bat 배치 파일을 사용 하 여 디스크 디렉터리와 가상 디렉터리를 만들 수 있습니다.  
   
     2. %SystemDrive%\Inetpub\wwwroot\servicemodelsamples에서 서비스 컴퓨터의 ServiceModelSamples 가상 디렉터리로 서비스 프로그램 파일을 복사합니다. \bin 디렉터리에 파일을 포함해야 합니다.  
   
@@ -159,4 +159,4 @@ public class PriceChangeEventArgs : EventArgs
 >
 > 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`

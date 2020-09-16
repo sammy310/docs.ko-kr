@@ -3,12 +3,12 @@ title: Windows Presentation Foundation의 개념
 description: 이 문서에서는 .NET Core와 관련해서 WPF(Windows Presentation Foundation)의 개념 및 제공되는 기능을 간단히 살펴봅니다.
 ms.date: 07/18/2019
 ms.topic: overview
-ms.openlocfilehash: 63b2e431b5ab5fd3875887b8b574a77aa12018a6
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 37443b692ba840da847b2a21c3220f2c36025c12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "85840294"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551865"
 ---
 # <a name="what-is-windows-presentation-foundation"></a>Windows Presentation Foundation의 개념
 
@@ -22,7 +22,7 @@ WPF에는 다음과 같은 두 가지 구현이 있습니다.
 
 01. Visual Studio 2019 및 Visual Studio 2017에서 지원되는 .NET Framework 구현.
 
-이 데스크톱 가이드는 .NET Core 3.0 및 WPF용으로 작성되었습니다. .NET Framework와 함께 WPF의 기존 설명서에 관한 자세한 내용은 [프레임워크 Windows Presentation Foundation](../../framework/wpf/index.md)을 참조하세요.
+이 데스크톱 가이드는 .NET Core 3.0 및 WPF용으로 작성되었습니다. .NET Framework와 함께 WPF의 기존 설명서에 관한 자세한 내용은 [프레임워크 Windows Presentation Foundation](/dotnet/desktop/wpf/)을 참조하세요.
 
 ## <a name="xaml"></a>XAML
 
@@ -52,7 +52,7 @@ XAML은 태그 확장 구문을 제공합니다. 태그 확장은 특성 양식,
 
 WPF는 데이터 바인딩의 `{Binding}`과 같이 XAML에 대해 다른 태그 확장을 제공합니다.
 
-자세한 내용은 [태그 확장 및 WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.
+자세한 내용은 [태그 확장 및 WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)을 참조하세요.
 
 ## <a name="property-system"></a>속성 시스템
 
@@ -144,6 +144,6 @@ WPF 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 
 
 ## <a name="next-steps"></a>다음 단계
 
-- [WPF 애플리케이션 만들기](https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json)
+- [WPF 애플리케이션 만들기](/visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json)
 - [.NET Framework의 차이점 살펴보기](../migration/differences-from-net-framework.md)
 - [XAML에 관한 자세한 정보](../fundamentals/xaml.md)

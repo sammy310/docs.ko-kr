@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 671a18d43a297026e4264cc35412fb9d233b2f33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163551"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551506"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI 자동화 SelectionItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "87163551"
   
 |필요한 멤버|멤버 형식|참고|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|속성|없음|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|속성|없음|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|메서드|없음|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|속성|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|속성|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|메서드|None|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|이벤트|컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 상수가 허용하는 것보다 더 많은 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 및 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 이벤트를 보내야 하는 경우에 발생합니다.|  
   
 - <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, 또는의 결과가 선택 된 단일 항목인 경우이 <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A> <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 발생 해야 합니다. 그렇지 않으면를 적절 하 게 보냅니다 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> .  
@@ -57,4 +57,4 @@ ms.locfileid: "87163551"
 - [UI 자동화 Selection 컨트롤 패턴 구현](implementing-the-ui-automation-selection-control-pattern.md)
 - [UI 자동화 트리 개요](ui-automation-tree-overview.md)
 - [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)
-- [조각 공급자 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [조각 공급자 샘플](/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

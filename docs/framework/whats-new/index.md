@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559026"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551714"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -389,9 +389,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [DI(종속성 주입)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection)는 개체와 해당 종속성을 분리하여 종속성이 변경으로 인해 개체의 코드를 더 이상 분리할 필요가 없도록 합니다. .NET Framework 4.7.2를 대상으로 하는 ASP.NET 애플리케이션을 개발하는 경우 다음 작업을 수행할 수 있습니다.
 
-- ASP.NET 웹 애플리케이션 프로젝트의 [처리기 및 모듈](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [페이지 인스턴스](xref:System.Web.UI.Page) 및 [사용자 정의 컨트롤](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))에서 setter 기반, 인터페이스 기반 및 생성자 기반 주입을 사용합니다.
+- ASP.NET 웹 애플리케이션 프로젝트의 [처리기 및 모듈](/previous-versions/aspnet/bb398986(v=vs.100)), [페이지 인스턴스](xref:System.Web.UI.Page) 및 [사용자 정의 컨트롤](/previous-versions/aspnet/y6wb1a0e(v=vs.100))에서 setter 기반, 인터페이스 기반 및 생성자 기반 주입을 사용합니다.
 
-- ASP.NET 웹 사이트 프로젝트의 [처리기 및 모듈](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [페이지 인스턴스](xref:System.Web.UI.Page) 및 [사용자 정의 컨트롤](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))에서 setter 기반 및 인터페이스 기반 주입을 사용합니다.
+- ASP.NET 웹 사이트 프로젝트의 [처리기 및 모듈](/previous-versions/aspnet/bb398986(v=vs.100)), [페이지 인스턴스](xref:System.Web.UI.Page) 및 [사용자 정의 컨트롤](/previous-versions/aspnet/y6wb1a0e(v=vs.100))에서 setter 기반 및 인터페이스 기반 주입을 사용합니다.
 
 - 다른 종속성 주입 프레임워크에 연결합니다.
 
@@ -517,9 +517,9 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **ResourceDictionary 소유자 찾기**
 
-.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조를 자동으로 찾습니다.
+.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조를 자동으로 찾습니다.
 
-Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 처리하기 위해 이를 확장할 수 있습니다. 이 프로세스의 첫 번째 단계는 사전의 소유자를 찾는 것입니다. 즉, `Resources` 속성이 사전을 참조하는 모든 개체를 찾습니다(<xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> 속성을 통해 직접 또는 간접적). `Resources` 속성이 있는 각 기본 형식을 위한 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> 클래스에서 구현된 세 개의 새로운 정적 메서드는 이 단계를 지원합니다.
+Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 처리하기 위해 이를 확장할 수 있습니다. 이 프로세스의 첫 번째 단계는 사전의 소유자를 찾는 것입니다. 즉, `Resources` 속성이 사전을 참조하는 모든 개체를 찾습니다(<xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> 속성을 통해 직접 또는 간접적). `Resources` 속성이 있는 각 기본 형식을 위한 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> 클래스에서 구현된 세 개의 새로운 정적 메서드는 이 단계를 지원합니다.
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,7 +531,7 @@ Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우�
 
 **StaticResource 참조 찾기**
 
-이제 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
+이제 진단 도우미는 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
 
 알림은 새로운 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> 이벤트에 의해 구현됩니다.
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-이 이벤트는 런타임이 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는  <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
+이 이벤트는 런타임이 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는  <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -758,7 +758,7 @@ WCF에는 경합 상태를 제거하는 다양한 코드 변경 내용이 포함
 
 .NET Framework 4.7을 대상으로 하는 애플리케이션부터, .NET Framework는 Windows Forms 애플리케이션에 대한 높은 DPI 및 동적 DPI 지원을 제공합니다. 높은 DPI 지원은 높은 DPI 모니터에는 폼 및 컨트롤의 모양과 레이아웃을 개선합니다. 동적 DPI는 사용자가 실행 중인 애플리케이션의 DPI 또는 디스플레이 배율을 변경할 때 폼 및 컨트롤의 모양과 레이아웃을 변경합니다.
 
-높은 DPI 지원은 애플리케이션 구성 파일의 [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) 섹션을 정의하여 구성하는 옵트인 기능입니다. Windows Forms 애플리케이션에 높은 DPI 지원 및 동적 DPI 지원을 추가하는 방법에 대한 자세한 내용은 [Windows Forms의 높은 DPI 지원](../winforms/high-dpi-support-in-windows-forms.md)을 참조하세요.
+높은 DPI 지원은 애플리케이션 구성 파일의 [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) 섹션을 정의하여 구성하는 옵트인 기능입니다. Windows Forms 애플리케이션에 높은 DPI 지원 및 동적 DPI 지원을 추가하는 방법에 대한 자세한 내용은 [Windows Forms의 높은 DPI 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)을 참조하세요.
 
 <a name="WPF47"></a>
 
@@ -768,7 +768,7 @@ WCF에는 경합 상태를 제거하는 다양한 코드 변경 내용이 포함
 
 **Windows WM_POINTER 메시지 기반의 터치/스타일러스 스택 지원**
 
-WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) 기반의 터치/스타일러스 스택 사용 옵션이 제공됩니다. 이것은 .NET Framework의 옵트인 기능입니다. 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
+WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](/previous-versions/windows/desktop/InputMsg/messages) 기반의 터치/스타일러스 스택 사용 옵션이 제공됩니다. 이것은 .NET Framework의 옵트인 기능입니다. 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
 
 **WPF 인쇄 API에 대한 새로운 구현**
 
@@ -1196,7 +1196,7 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 **다시 호스트된 WF 디자이너에서 C# 식 및 IntelliSense 지원**
 
-.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)를 참조하십시오.
+.NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)를 참조하십시오.
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF 디자이너 IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
@@ -1886,7 +1886,7 @@ Windows Forms의 향상된 기능은 다음과 같습니다.
 
 Visual Studio 2013의 .NET Framework 응용 프로그램 디버깅 시 개선된 기능은 다음과 같습니다.
 
-- Visual Studio 디버거에서 값 반환. Visual Studio 2013에서 관리되는 응용 프로그램을 디버깅하면 자동 창에 메서드에 대한 반환 형식 및 값이 표시됩니다. 이 정보는 데스크톱, Windows 스토어 및 Windows Phone 응용 프로그램에서 사용할 수 있습니다. 자세한 내용은 [메서드 호출의 반환 값 검사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))를 참조하세요.
+- Visual Studio 디버거에서 값 반환. Visual Studio 2013에서 관리되는 응용 프로그램을 디버깅하면 자동 창에 메서드에 대한 반환 형식 및 값이 표시됩니다. 이 정보는 데스크톱, Windows 스토어 및 Windows Phone 응용 프로그램에서 사용할 수 있습니다. 자세한 내용은 [메서드 호출의 반환 값 검사](/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))를 참조하세요.
 
 - 64비트 응용 프로그램의 편집하며 계속하기. Visual Studio 2013은 데스크톱, Windows 스토어 및 Windows Phone용 64비트 관리되는 응용 프로그램의 편집하며 계속하기 기능을 지원합니다. 기존 제한은 32비트 응용 프로그램과 64비트 응용 프로그램에서 그대로 적용됩니다. [지원되는 코드 변경 내용(C#)](/visualstudio/debugger/supported-code-changes-csharp) 문서의 마지막 섹션을 참조하십시오.
 
@@ -1972,7 +1972,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성능 향상 및 기타 많은 기능을 바인딩하는 모델을 추가합니다. 자세한 내용은 다음 자료를 참조하세요.
 
-- [ASP.NET 4.5 및 Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 및 Visual Studio 2012](/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Visual Studio 2013용 ASP.NET 및 Web Tools 릴리스 정보](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 .NET Framework 4.5의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
-- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
+- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
 
   - 상태에 중단점을 설정하는 기능
 
@@ -2118,7 +2118,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x 스토어 앱용 .NET
 
-Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 [개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에 설명되어 있습니다.
+Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 [개요](/previous-versions/windows/apps/br230302(v=vs.140))에 설명되어 있습니다.
 
 ### <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리 <a name="portable"></a>
 

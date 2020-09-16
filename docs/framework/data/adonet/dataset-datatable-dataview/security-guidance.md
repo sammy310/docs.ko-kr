@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 34fb95e35e169ca0b72735a16539ecfdec037f87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554543"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679457"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -278,7 +278,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 * 관리자가 레지스트리를 구성 해야 합니다.
 * 레지스트리를 사용 하는 것은 시스템 전체에서 변경 되며 컴퓨터에서 실행 되는 _모든_ 앱에 영향을 줍니다.
 
-| 형식  |  값 |
+| 유형  |  값 |
 |---|---|
 | **레지스트리 키** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **값 이름** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -457,11 +457,11 @@ using System.Data;
 using Newtonsoft.Json;
 
 public DataSet PerformDeserialization1(string json) {
-    return JsonConvert.DeserializeObect<DataSet>(data);
+    return JsonConvert.DeserializeObject<DataSet>(data);
 }
 
 public MyClass PerformDeserialization2(string json) {
-    return JsonConvert.DeserializeObect<MyClass>(data);
+    return JsonConvert.DeserializeObject<MyClass>(data);
 }
 
 public class MyClass

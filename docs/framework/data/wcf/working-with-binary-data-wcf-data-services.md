@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 3c391e641df52d9143630406a40e17c6bc853865
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900837"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551753"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>이진 데이터 작업(WCF Data Services)
 
@@ -23,25 +23,25 @@ WCF Data Services 클라이언트 라이브러리를 사용 하면 다음 방법
 
 - 별도의 이진 리소스 스트림으로. 이 방법은 사진, 비디오 또는 다른 형식의 이진 인코딩 데이터를 나타낼 수 있는 BLOB(Binary Large Object) 데이터에 액세스하고 변경하는 경우 권장됩니다.
 
-WCF Data Services는 OData에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 구현 합니다. 이 메커니즘에서 이진 데이터는와 별개 이지만 미디어 링크 항목 이라고 하는 엔터티와 관련 된 미디어 리소스로 처리 됩니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)합니다.
+WCF Data Services는 OData에 정의 된 대로 HTTP를 사용 하 여 이진 데이터의 스트리밍을 구현 합니다. 이 메커니즘에서 이진 데이터는 미디어 링크 항목이라고 하는 엔터티와 관련되어 있지만 별도로 존재하는 미디어 리소스로 처리됩니다. 자세한 내용은 [스트리밍 공급자](streaming-provider-wcf-data-services.md)합니다.
 
 > [!TIP]
-> 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 GitHub의 [스트리밍 사진 데이터 서비스 샘플](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 을 참조 하세요.
+> 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 GitHub의 [스트리밍 사진 데이터 서비스 샘플](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 을 참조 하세요.
 
 ## <a name="entity-metadata"></a>엔터티 메타데이터
 
-관련 미디어 리소스 스트림이 있는 엔터티는 미디어 링크 항목인 엔터티 형식에 적용된 `HasStream` 특성을 통해 데이터 서비스 메타데이터에 표시됩니다. 다음 예제에서 `PhotoInfo` 엔터티는 `HasStream` 특성으로 표시 되는 관련 미디어 리소스가 있는 미디어 링크 항목입니다.
+관련 미디어 리소스 스트림이 있는 엔터티는 미디어 링크 항목인 엔터티 형식에 적용된 `HasStream` 특성을 통해 데이터 서비스 메타데이터에 표시됩니다. 다음 예제에서 `PhotoInfo` 엔터티는 특성으로 표시 되는 관련 미디어 리소스가 있는 미디어 링크 항목입니다 `HasStream` .
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-이 항목의 나머지 예제에서는 미디어 리소스 스트림에 액세스하고 변경하는 방법을 보여 줍니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 미디어 리소스 스트림을 사용 하는 방법에 대 한 전체 예제는 [클라이언트에서 미디어 리소스 스트림에 액세스](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요.
+이 항목의 나머지 예제에서는 미디어 리소스 스트림에 액세스하고 변경하는 방법을 보여 줍니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 미디어 리소스 스트림을 사용 하는 방법에 대 한 전체 예제는 [클라이언트에서 미디어 리소스 스트림에 액세스](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요.
 
 ## <a name="accessing-the-binary-resource-stream"></a>이진 리소스 스트림 액세스
 
 WCF Data Services 클라이언트 라이브러리는 OData 기반 데이터 서비스에서 이진 리소스 스트림에 액세스 하는 메서드를 제공 합니다. 미디어 리소스를 다운로드할 때 미디어 리소스의 URI를 사용하거나 미디어 리소스 데이터 자체가 포함된 이진 스트림을 가져올 수 있습니다. 또한 미디어 리소스 데이터를 이진 스트림으로 업로드할 수도 있습니다.
 
 > [!TIP]
-> 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 GitHub의 [스트리밍 사진 데이터 서비스 샘플](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 을 참조 하세요.
+> 사진을 저장 하는 OData 서비스에서 이진 이미지 파일을 다운로드 하는 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 만드는 방법에 대 한 단계별 예제는 [Data Services 스트리밍 공급자 시리즈-2 부: 클라이언트에서 미디어 리소스 스트림에 액세스](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)게시물을 참조 하세요. 블로그 게시물에 제공 되는 stream photo data service에 대 한 샘플 코드를 다운로드 하려면 GitHub의 [스트리밍 사진 데이터 서비스 샘플](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 을 참조 하세요.
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>이진 스트림의 URI 가져오기
 
@@ -72,7 +72,7 @@ WCF Data Services 클라이언트 라이브러리는 OData 기반 데이터 서�
 > [!NOTE]
 > <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>을 호출하면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출할 때까지 데이터 서비스로 스트림이 전송되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
 - [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)

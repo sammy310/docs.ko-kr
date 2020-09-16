@@ -3,12 +3,12 @@ title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 707f83e912b6bd6999423949412cffba852093a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495149"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558076"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -35,7 +35,7 @@ ms.locfileid: "89495149"
 
 - [.NET Core 3.1의 새로운 기능](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework의 새로운 기능](framework/whats-new/index.md)
-- [C#의 새로운 기능](csharp/whats-new/index.md)
+- [C#의 새로운 기능](./csharp/whats-new/csharp-9.md)
 - [Visual Basic의 새로운 기능](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>설명서
@@ -51,7 +51,7 @@ ms.locfileid: "89495149"
 - [Apache Spark용 .NET](spark/index.yml)
 - [.NET 애플리케이션 아키텍처](architecture/index.yml)
 
-또한 [.NET API 참조](/dotnet/api)를 찾아볼 수 있습니다.
+또한 [.NET API 참조](../api/index.md)를 찾아볼 수 있습니다.
 
 ## <a name="videos"></a>비디오
 

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 085a69421f0aa7b763bd2222820ced4b4a7e1c81
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557868"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>방법: WCF 활성화 구성 요소 설치 및 구성
 
@@ -102,9 +102,9 @@ Was를 설치 및 구성한 후에는 방법: was를 활용 하는 HTTP가 아�
     > [!NOTE]
     > 이 명령은 줄 바꿈 없이 한 줄로 입력해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [TCP 활성화](../samples/tcp-activation.md)
 - [MSMQ 활성화](../samples/msmq-activation.md)
 - [NamedPipe 활성화](../samples/namedpipe-activation.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

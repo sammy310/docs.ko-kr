@@ -2,12 +2,12 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d575907feea3d831b7e6f69410c8d4647e6ac95d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558974"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557959"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 앱을 사용 하 여 WCF 서비스에 액세스
 
@@ -56,7 +56,7 @@ Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형�
  텍스트 인코딩과 이진 인코딩 모두가 지원됩니다. 모든 WCF 전송 모드가 지원됩니다. 자세한 내용은 [Streaming Message Transfer](streaming-message-transfer.md)를 참조하세요.  
   
 ### <a name="add-service-reference"></a>에서  
- Windows 스토어 애플리케이션에서 WCF 서비스를 호출하려면 Visual Studio 2012의 서비스 참조 추가 기능을 사용하세요. Windows 스토어 애플리케이션 내에서 서비스 참조 추가 기능이 완료될 때 몇 가지 변경 내용을 확인할 수 있습니다. 먼저, 구성 파일이 생성되지 않습니다. Windows 스토어 애플리케이션은 구성 파일을 사용하지 않으므로 코드로 구성되어야 합니다. 이 구성 코드는 서비스 참조 추가를 통해 생성된 References.cs 파일에 있습니다. 이 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택 해야 합니다. 해당 파일은 프로젝트 내의 서비스 참조 노드 및 Reference.svcmap 노드 아래에 있습니다. Windows 스토어 애플리케이션 내의 WCF 서비스에 대해 생성된 모든 작업은 태스크 기반 비동기 패턴을 사용하여 비동기화됩니다. 자세한 내용은 비동기 [작업-작업을 사용 하 여 비동기 프로그래밍 단순화](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)를 참조 하세요.  
+ Windows 스토어 애플리케이션에서 WCF 서비스를 호출하려면 Visual Studio 2012의 서비스 참조 추가 기능을 사용하세요. Windows 스토어 애플리케이션 내에서 서비스 참조 추가 기능이 완료될 때 몇 가지 변경 내용을 확인할 수 있습니다. 먼저, 구성 파일이 생성되지 않습니다. Windows 스토어 애플리케이션은 구성 파일을 사용하지 않으므로 코드로 구성되어야 합니다. 이 구성 코드는 서비스 참조 추가를 통해 생성된 References.cs 파일에 있습니다. 이 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택 해야 합니다. 해당 파일은 프로젝트 내의 서비스 참조 노드 및 Reference.svcmap 노드 아래에 있습니다. Windows 스토어 애플리케이션 내의 WCF 서비스에 대해 생성된 모든 작업은 태스크 기반 비동기 패턴을 사용하여 비동기화됩니다. 자세한 내용은 비동기 [작업-작업을 사용 하 여 비동기 프로그래밍 단순화](/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)를 참조 하세요.  
   
  이제 구성이 코드로 생성되므로 서비스 참조가 업데이트될 때마다 Reference.cs 파일의 모든 변경 내용을 덮어쓰게 됩니다. 이러한 문제를 해결하기 위해 구성 코드는 부분 메서드(Partial Method) 내에서 생성됩니다. 부분 메서드는 클라이언트 프록시 클래스에서 구현할 수 있습니다. 부분 메서드는 다음과 같이 선언됩니다.  
   
@@ -175,7 +175,7 @@ void async SomeMethod()
   
  비동기 호출을 수행하는 메서드에서는 async 키워드가 사용되고 비동기 메서드를 호출할 때는 await 키워드가 사용됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 보안 프로그래밍](programming-wcf-security.md)
 - [바인딩](../bindings.md)

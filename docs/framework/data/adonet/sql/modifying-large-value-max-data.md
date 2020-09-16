@@ -75,7 +75,7 @@ FROM OPENROWSET
 > [!NOTE]
 > `@Offset` 및 `@Length` 모두 음수일 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 Transact-SQL 예제는 AdventureWorks 데이터베이스의 Document 테이블에 있는 `nvarchar(max)` 열인 DocumentSummary에서 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋), 그리고 대체할 문자 수(길이)를 지정함으로써 ‘구성 요소’가 로 ‘기능’으로 대체됩니다. 예제에는 결과를 비교하기 위해 UPDATE 문 앞뒤에 SELECT 문이 포함되어 있습니다.  
   
 ```sql
@@ -221,7 +221,7 @@ while (reader.Read())
 }  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드는 `AdventureWorks` 데이터베이스의 `ProductPhoto` 테이블에서 이름 및 `LargePhoto` 개체를 검색하여 파일에 저장합니다. 어셈블리는 <xref:System.Drawing> 네임스페이스에 대한 참조를 사용하여 컴파일해야 합니다.  <xref:System.Data.SqlClient.SqlDataReader>의 <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 메서드는 `Stream` 속성을 노출하는 <xref:System.Data.SqlTypes.SqlBytes> 개체를 반환합니다. 코드에서는 이 개체를 사용하여 새 `Bitmap` 개체를 만든 다음 Gif `ImageFormat`으로 저장합니다.  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
@@ -243,13 +243,13 @@ FROM    Production.Document
 WHERE   DocumentID=@DocumentID  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  ADO.NET 코드는 <xref:System.Data.SqlClient.SqlConnection> 및 <xref:System.Data.SqlClient.SqlCommand> 개체를 만들어 GetDocumentSummary 저장 프로시저를 실행하고 문서 요약을 검색하여 큰 값 형식으로 저장합니다. 이 코드에서는 @DocumentID 입력 매개 변수 값을 전달한 다음 콘솔 창에 @DocumentSummary 출력 매개 변수에 다시 전달된 결과를 표시합니다.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)

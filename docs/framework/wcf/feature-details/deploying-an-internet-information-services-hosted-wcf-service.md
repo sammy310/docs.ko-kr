@@ -3,12 +3,12 @@ title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 description: IIS에서 호스트 되는 WCF 서비스를 개발 하 고 배포 하는 데 필요한 작업에 대해 알아봅니다. 구성 요소 설치를 확인 하는 것부터 시작 합니다.
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245095"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557569"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -38,13 +38,13 @@ IIS가 컴퓨터에 이미 있는 경우 .NET Framework 설치 프로세스에�
 
 - Windows 7 및 Windows Server 2003: [ServiceModel 등록 도구 (ServiceModelReg.exe)](../servicemodelreg-exe.md) 도구를 사용 하 여 WCF를 IIS에 등록 합니다. 이 도구를 사용 하려면 [Visual Studio 용 개발자 명령 프롬프트](../../tools/developer-command-prompt-for-vs.md)에서 **ServiceModelReg.exe/i/x** 를 입력 합니다.
 
-- Windows 7: 마지막으로 ASP.NET가 .NET Framework 버전 4 이상을 사용 하도록 구성 되어 있는지 확인 해야 합니다. 옵션으로 ASPNET_Regiis 도구를 실행 하 여이 작업을 수행할 수 있습니다 `–i` . 자세한 내용은 [ASP.NET IIS 등록 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 참조 하세요.
+- Windows 7: 마지막으로 ASP.NET가 .NET Framework 버전 4 이상을 사용 하도록 구성 되어 있는지 확인 해야 합니다. 옵션으로 ASPNET_Regiis 도구를 실행 하 여이 작업을 수행할 수 있습니다 `–i` . 자세한 내용은 [ASP.NET IIS 등록 도구](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 참조 하세요.
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>새 IIS 애플리케이션을 만들거나 기존 ASP.NET 애플리케이션을 다시 사용
 
 IIS에서 호스팅되는 WCF 서비스는 IIS 응용 프로그램 내에 있어야 합니다. 새 IIS 응용 프로그램을 만들어 WCF 서비스를 단독으로 호스팅할 수 있습니다. 또는 ASP.NET 2.0 콘텐츠 (예: .aspx 페이지 및 ASP.NET 웹 서비스 [ASMX])를 이미 호스팅하고 있는 기존 응용 프로그램에 WCF 서비스를 배포할 수 있습니다. 이러한 옵션에 대 한 자세한 내용은 [Wcf 서비스 및 ASP.NET](wcf-services-and-aspnet.md)의 "ASP.NET와 함께 wcf 호스팅" 및 "ASP.NET 호환 모드에서 Wcf 서비스 호스팅" 섹션을 참조 하세요.
 
-IIS 6.0 이상 버전은 격리 된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작 합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 [PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))를 참조 하십시오.
+IIS 6.0 이상 버전은 격리 된 개체 지향 프로그래밍 응용 프로그램을 정기적으로 다시 시작 합니다. 기본값은 1740분입니다. 지원되는 최대값은 71,582분입니다. 다시 시작은 사용할 수 없습니다. 이 속성에 대 한 자세한 내용은 [PeriodicRestartTime](/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))를 참조 하십시오.
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF 서비스에 대한 .svc 파일 만들기
 
@@ -72,7 +72,7 @@ IIS에서 호스팅되는 WCF 서비스는 ASP.NET 2.0와 동일한 동적 컴�
 
 - .Svc 파일에 직접 배치 된 컴파일되지 않은 코드입니다. 구현 코드는 ServiceHost 지시문 뒤에 있는 서비스의 .svc 파일에 인라인으로 배치 될 수도 있습니다 \@ . 인라인 코드를 변경하면 다음 요청을 받았을 때 애플리케이션이 재활용되고 다시 컴파일됩니다.
 
-ASP.NET 2.0 컴파일 모델에 대 한 자세한 내용은 [ASP.NET 컴파일 개요](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100))를 참조 하세요.
+ASP.NET 2.0 컴파일 모델에 대 한 자세한 내용은 [ASP.NET 컴파일 개요](/previous-versions/aspnet/ms178466(v=vs.100))를 참조 하세요.
 
 ## <a name="configure-the-wcf-service"></a>WCF 서비스 구성
 
@@ -110,8 +110,8 @@ IIS에서 호스트 하는 WCF 서비스는 서비스를 포함 하는 IIS 가�
 
 예를 들어 HTTP 다이제스트 인증을 사용 하도록 구성 된 WCF 끝점은 HTTP digest 인증을 허용 하도록 구성 된 IIS 가상 디렉터리에 있어야 합니다. IIS 설정과 WCF 끝점 설정의 조합이 일치 하지 않으면 서비스 활성화 중에 오류가 발생 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터넷 정보 서비스에서의 호스팅](hosting-in-internet-information-services.md)
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))
