@@ -114,9 +114,9 @@
 - name: 참고
   items:
     - name: ML.NET API 참조
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+      href: ../../api/index.md?view=ml-dotnet
     - name: ML.NET API 미리 보기 API 참조
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+      href: ../../api/index.md?view=ml-dotnet-preview
     - name: CLI 참조
       href: reference/ml-net-cli-reference.md
 - name: 리소스
