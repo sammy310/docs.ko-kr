@@ -6,4 +6,4 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65669588"
 ---
-<span data-ttu-id="32cac-101">UI</span><span class="sxs-lookup"><span data-stu-id="32cac-101">UI</span></span>
+<span data-ttu-id="d156f-101">UI</span><span class="sxs-lookup"><span data-stu-id="d156f-101">UI</span></span>
