@@ -2,12 +2,12 @@
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
 ms.date: 05/31/2020
-ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446869"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540545"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -183,7 +183,7 @@ Visual Studio는 웹 기반 응용 프로그램에 대 한 Docker 개발을 지�
 
 이 옵션을 선택 하면 프로젝트는 해당 루트에를 사용 하 여 생성 됩니다 .이 프로젝트는 `Dockerfile` Docker 컨테이너에서 앱을 빌드하고 호스트 하는 데 사용할 수 있습니다. 예제 Dockerfile은 그림 3 -6에 나와 있습니다.
 
-```docker
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80

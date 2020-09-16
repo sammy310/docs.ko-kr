@@ -3,12 +3,12 @@ title: 서비스 간 통신
 description: 백 엔드 클라우드 네이티브 마이크로 서비스가 다른 백 엔드 마이크로 서비스와 통신 하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613709"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539811"
 ---
 # <a name="service-to-service-communication"></a>서비스 간 통신
 
@@ -118,7 +118,7 @@ HTTP 또는 HTTPS를 사용 하 여 인증 된 호출을 통해 전 세계 어�
 
 Azure Storage 큐는 클라우드 네이티브 응용 프로그램에서 명령 메시지를 구현 하는 경제적인 옵션입니다. 특히 큐 크기가 80 GB를 초과 하거나 간단한 기능 집합을 사용할 수 있는 경우입니다. 메시지 저장소에 대해서만 비용을 지불 하면 됩니다. 고정 된 시간당 요금이 청구 되지 않습니다.
 
-### <a name="azure-service-bus-queues"></a>Azure Service Bus Queues
+### <a name="azure-service-bus-queues"></a>Azure Service Bus 큐
 
 더 복잡 한 메시징 요구 사항은 큐를 Azure Service Bus 하는 것이 좋습니다.
 
@@ -164,7 +164,7 @@ Service Bus은 [트랜잭션 지원](https://docs.microsoft.com/azure/service-bu
 
 **그림 4-16**. 토픽 아키텍처
 
-위의 그림에서 게시자는 토픽에 메시지를 보냅니다. 결국 구독자는 구독에서 메시지를 받습니다. 가운데에서 항목은 진한 파란색 상자에 표시 된 *규칙*집합에 따라 구독에 메시지를 전달 합니다. 규칙은 특정 메시지를 구독으로 전달 하는 필터 역할을 합니다. 여기에서 "CreateOrder" 이벤트는 구독 \# 1 및 구독 3으로 전송 \# 되지만 구독 2에는 전송 되지 않습니다 \# . "OrderCompleted" 이벤트가 구독 \# 2 및 구독 3으로 전송 됩니다 \# .
+위의 그림에서 게시자는 토픽에 메시지를 보냅니다. 결국 구독자는 구독에서 메시지를 받습니다. 가운데에서 항목은 진한 파란색 상자에 표시 된 규칙 집합에 따라 구독에 메시지를 전달 합니다. 규칙은 특정 메시지를 구독으로 전달 하는 필터 역할을 합니다. 여기서는 로깅 구독이 모든 메시지를 받도록 선택 했으므로 "GetPrice" 이벤트가 가격 및 로깅 구독으로 전송 됩니다.  "GetInformation" 이벤트가 정보 및 로깅 구독으로 전송 됩니다.
 
 Azure 클라우드는 Azure Service Bus 토픽 및 Azure EventGrid와 같은 두 가지 토픽 서비스를 지원 합니다.
 
@@ -218,7 +218,7 @@ Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것
 
 이벤트 허브는 HTTPS 및 AMQP를 비롯 한 일반적인 이벤트 게시 프로토콜을 지원 합니다. Kafka 1.0도 지원 합니다. [기존 kafka 응용 프로그램](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 은 대량 kafka 클러스터 관리에 대 한 대안을 제공 하는 kafka 프로토콜을 사용 하 여 이벤트 허브와 통신할 수 있습니다. 많은 오픈 소스 클라우드 네이티브 시스템은 Kafka을 수용 합니다.
 
-Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴에서는 이벤트 처리를 위해 매우 폭넓은 수평 확장이 가능하며, 큐와 항목에서는 사용할 수 없는 기타 스트림 중심 기능이 제공됩니다. 파티션은 Event Hub에서 보유하는 순서가 지정된 이벤트 시퀀스입니다. 최신 이벤트가 도착 하면이 시퀀스의 끝에 추가 됩니다.그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
+Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴에서는 이벤트 처리를 위해 매우 폭넓은 수평 확장이 가능하며, 큐와 항목에서는 사용할 수 없는 기타 스트림 중심 기능이 제공됩니다. 파티션은 Event Hub에서 보유하는 순서가 지정된 이벤트 시퀀스입니다. 최신 이벤트가 도착하면 이 시퀀스의 끝에 추가됩니다.그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
 
 ![이벤트 허브 분할](./media/event-hub-partitioning.png)
 

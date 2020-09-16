@@ -2,12 +2,12 @@
 title: SQL Server 지속성 데이터베이스
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-ms.openlocfilehash: 705d53057a9ea78f71157967f2c7697717f0d8cf
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 059fc3695a4da15c82cacdd5360112ca58a7b297
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837664"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540247"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 지속성 데이터베이스
 이 단원에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 데이터베이스 뷰에 대한 세부 정보를 제공하고, 기본 인스턴스 데이터 속성을 deserialize하는 방법과 비지속형 인스턴스를 쿼리하는 방법을 보여 줍니다.  
@@ -22,4 +22,4 @@ ms.locfileid: "74837664"
   
 ## <a name="see-also"></a>참조
 
-- [응용 프로그램 패브릭 SQL Server 지 속성 데이터베이스](https://docs.microsoft.com/previous-versions/appfabric/ee790819(v=azure.10))
+- [AppFabric SQL Server 지속성 데이터베이스](/previous-versions/appfabric/ee790819(v=azure.10))

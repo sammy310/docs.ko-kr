@@ -3,16 +3,16 @@ title: 기능 플래그
 description: Azure 앱 구성을 활용 하는 클라우드 네이티브 응용 프로그램에서 기능 플래그 구현
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614073"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540467"
 ---
 # <a name="feature-flags"></a>기능 플래그
 
-1 장에서는 cloud native가 속도와 민첩성에 affirmed. 사용자는 신속한 응답성, 혁신적인 기능 및 가동 중지 시간을 예측할 수 있습니다. `Feature flags`는 클라우드 네이티브 응용 프로그램의 민첩성을 향상 시키는 데 도움이 되는 최신 배포 기술입니다. 이를 통해 프로덕션 환경에 새 기능을 배포할 수 있지만 가용성을 제한할 수 있습니다. 스위치 긋기를 사용 하면 앱을 다시 시작 하거나 새 코드를 배포 하지 않고도 특정 사용자에 대 한 새 기능을 활성화할 수 있습니다. 코드 배포에서 새 기능의 릴리스를 분리 합니다.
+1 장에서는 cloud native가 속도와 민첩성에 affirmed. 사용자는 신속한 응답성, 혁신적인 기능 및 가동 중지 시간을 예측할 수 있습니다. `Feature flags` 는 클라우드 네이티브 응용 프로그램의 민첩성을 향상 시키는 데 도움이 되는 최신 배포 기술입니다. 이를 통해 프로덕션 환경에 새 기능을 배포할 수 있지만 가용성을 제한할 수 있습니다. 스위치 긋기를 사용 하면 앱을 다시 시작 하거나 새 코드를 배포 하지 않고도 특정 사용자에 대 한 새 기능을 활성화할 수 있습니다. 코드 배포에서 새 기능의 릴리스를 분리 합니다.
 
 기능 플래그는 런타임에 사용자의 기능 표시 여부를 제어 하는 조건부 논리를 기반으로 빌드됩니다. 최신 클라우드 네이티브 시스템에서 초기에 새로운 기능을 프로덕션에 배포 하는 것이 일반적 이며 제한 된 대상으로 테스트 합니다. 신뢰도가 증가 함에 따라이 기능은 더 광범위 한 대상에 게 점진적으로 롤아웃 될 수 있습니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "83614073"
 
 핵심에서 기능 플래그는 단순에 대 한 참조입니다 `decision object` . 또는의 부울 상태를 반환 `on` 합니다 `off` . 플래그는 일반적으로 기능 기능을 캡슐화 하는 코드 블록을 래핑합니다. 플래그 상태는 지정 된 사용자에 대해 해당 코드 블록이 실행 되는지 여부를 결정 합니다. 그림 10-11에서는 구현을 보여 줍니다.
 
-```c#
+```csharp
 if (featureFlag) {
     // Run this code block if the featureFlag value is true
 } else {
@@ -49,7 +49,7 @@ if (featureFlag) {
 
 Startup 클래스에서 구성 된 후에는 컨트롤러, 작업 또는 미들웨어 수준에서 기능 플래그 기능을 추가할 수 있습니다. 그림 10-12은 컨트롤러 및 작업 구현을 제공 합니다.
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public class ProductController : Controller
 {
@@ -57,7 +57,7 @@ public class ProductController : Controller
 }
 ```
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public IActionResult UpdateProductStatus()
 {
@@ -71,7 +71,7 @@ public IActionResult UpdateProductStatus()
 
 기능 플래그는 c # 클래스에 직접 삽입할 수도 있습니다. 그림 10-13에서는 기능 플래그 삽입을 보여 줍니다.
 
-```c#
+```csharp
 public class ProductController : Controller
 {
     private readonly IFeatureManager _featureManager;

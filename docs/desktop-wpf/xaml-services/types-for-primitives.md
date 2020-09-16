@@ -15,14 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 3bd486ee66c5f9a32621416638bb7575025f7dee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec0e2a29a191d5057ce66a5f3272d00e92b01bd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "81433057"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540031"
 ---
-# <a name="built-in-types-for-common-xaml-language-primitives"></a>일반적인 XAML 언어 프리미티브에 대한 기본 제공 유형
+# <a name="built-in-types-for-common-xaml-language-primitives"></a>공용 XAML 언어 기본 형식에 대 한 기본 제공 형식
 
 XAML 2009에서는 CLR(공용 언어 런타임) 및 다른 프로그래밍 언어에서 자주 사용되는 기본 형식인 여러 가지 데이터 형식에 대해 XAML 언어 수준 지원을 제공합니다. XAML 2009는 `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`및 `x:Array`같은 기본 형식에 대한 지원을 추가합니다.
 
@@ -54,27 +54,27 @@ CLR 백업의 경우 `x:Object` 기본 형식은 <xref:System.Object>에 해당�
 
 CLR 백업의 경우 `x:Boolean` 기본 형식은 <xref:System.Boolean>에 해당합니다.
 
-XAML은 `x:Boolean` 에 대한 값을 대/소문자 구분 없이 구문 분석합니다. 이때 `x:Bool` 로 대체할 수 없습니다. XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.17 및 5.4.11을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML은 `x:Boolean` 에 대한 값을 대/소문자 구분 없이 구문 분석합니다. 이때 `x:Bool` 로 대체할 수 없습니다. XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.17 및 5.4.11](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xchar"></a>x:Char
 
 CLR 백업의 경우 `x:Char` 기본 형식은 <xref:System.Char>에 해당합니다.
 
-String 및 char 형식은 XML 수준에서 파일의 전체 인코딩과 상호 작용합니다. XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.7 및 5.4.1을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+String 및 char 형식은 XML 수준에서 파일의 전체 인코딩과 상호 작용합니다. XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.7 및 5.4.1](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xstring"></a>x:String
 
 CLR 백업의 경우 `x:String` 기본 형식은 <xref:System.String>에 해당합니다.
 
-String 및 char 형식은 XML 수준에서 파일의 전체 인코딩과 상호 작용합니다. XAML 언어 사양 정의는 [ \[MS-XAML\] 섹션 5.2.6을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+String 및 char 형식은 XML 수준에서 파일의 전체 인코딩과 상호 작용합니다. XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.6 섹션](/previous-versions/msp-n-p/ff650760(v=pandp.10))을 참조 하세요.
 
 ### <a name="xdecimal"></a>x:Decimal
 
 CLR 백업의 경우 `x:Decimal` 기본 형식은 <xref:System.Decimal>에 해당합니다.
 
-XAML 구문 분석은 본질적으로 `en-US` 문화하에서 수행됩니다. `en-US` 문화권에서 10진수의 구성 요소에 올바른 구분 기호는 개발 환경의 문화권 설정이나 런타임에 XAML이 로드되는 최종 클라이언트 대상에 관계없이 항상 마침표(`.`)입니다.
+XAML 구문 분석은 기본적으로 문화권에 따라 수행 됩니다 `en-US` . `en-US` 문화권에서 10진수의 구성 요소에 올바른 구분 기호는 개발 환경의 문화권 설정이나 런타임에 XAML이 로드되는 최종 클라이언트 대상에 관계없이 항상 마침표(`.`)입니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.14 및 5.4.8을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.14 및 5.4.8](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xsingle"></a>x:Single
 
@@ -84,7 +84,7 @@ CLR 백업의 경우 `x:Single` 기본 형식은 <xref:System.Single>에 해당�
 
 텍스트 구문의 첫 번째 문자가`x:Single` 또는 `e` 인 경우 `E`은 과학적 표기법 형식의 값을 지원할 수 있습니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.8 및 5.4.2를](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.8 및 5.4.2](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xdouble"></a>x:Double
 
@@ -94,33 +94,33 @@ CLR 백업의 경우 `x:Double` 기본 형식은 <xref:System.Double>에 해당�
 
 `x:Double` 은 과학적 표기법 형식의 값을 지원할 수 있습니다. `e` 또는 `E` 문자를 사용하여 지수 부분을 나타냅니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.9 및 5.4.3을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.9 및 5.4.3](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xint16"></a>x:Int16
 
 CLR 백업의 경우 `x:Int16` 기본 형식은 <xref:System.Int16> 에 해당하고 `x:Int16` 은 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.11 및 5.4.5를](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.11 및 5.4.5](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xint32"></a>x:Int32
 
 CLR 백업의 경우 `x:Int32` 기본 형식은 <xref:System.Int32>에 해당합니다. `x:Int32` 는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.12 및 5.4.6을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.12 및 5.4.6](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xint64"></a>x:Int64
 
 CLR 백업의 경우 `x:Int64` 기본 형식은 <xref:System.Int64>에 해당합니다. `x:Int64` 는 부호가 있는 것으로 처리됩니다. XAML에서는 텍스트 구문에 더하기(`+`) 부호가 없으면 부호 있는 양수 값을 의미합니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.13 및 5.4.7을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.13 및 5.4.7](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xtimespan"></a>x:TimeSpan
 
 CLR 백업의 경우 `x:TimeSpan` 기본 형식은 <xref:System.TimeSpan>에 해당합니다.
 
-XAML 시간 형식에 대 한 구문 `en-US` 분석 은 본질적으로 문화에서 이루어집니다.
+시간 날짜 형식에 대 한 XAML 구문 분석은 기본적으로 문화권에 따라 수행 됩니다 `en-US` .
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.16 및 5.4.10을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.16 및 5.4.10](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xuri"></a>x:Uri
 
@@ -128,13 +128,13 @@ CLR 백업의 경우 `x:Uri` 기본 형식은 <xref:System.Uri>에 해당합니�
 
 프로토콜 확인은 `x:Uri`에 대한 XAML 정의의 일부가 아닙니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.15 및 5.4.9를](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.15 및 5.4.9](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xbyte"></a>x:Byte
 
-CLR 백업의 경우 `x:Byte` 기본 형식은 <xref:System.Byte>에 해당합니다. A는 <xref:System.Byte>  /  `x:Byte` 서명되지 않은 것으로 처리됩니다.
+CLR 백업의 경우 `x:Byte` 기본 형식은 <xref:System.Byte>에 해당합니다. 는 <xref:System.Byte>  /  `x:Byte` unsigned로 처리 됩니다.
 
-XAML 언어 사양 정의는 [ \[\] MS-XAML 섹션 5.2.10 및 5.4.4를](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.10 및 5.4.4](/previous-versions/msp-n-p/ff650760(v=pandp.10))를 참조 하세요.
 
 ### <a name="xarray"></a>x:Array
 
@@ -142,7 +142,7 @@ CLR 백업의 경우 `x:Array` 기본 형식은 <xref:System.Array>에 해당합
 
 XAML 2006에서는 태그 확장 구문을 사용하여 배열을 정의할 수 있습니다. 그러나 XAML 2009 구문은 태그 확장에 액세스할 필요가 없는 언어로 정의된 기본 형식입니다. XAML 2006 지원에 대한 자세한 내용은 [x:Array Markup Extension](xarray-markup-extension.md)을 참조하세요.
 
-XAML 언어 사양 정의는 [ \[MS-XAML\] 섹션 5.2.18을](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))참조하십시오.
+XAML 언어 사양 정의에 대해서는 [ \[ \] 5.2.18 섹션](/previous-versions/msp-n-p/ff650760(v=pandp.10))을 참조 하세요.
 
 ## <a name="wpf-support"></a>WPF 지원
 

@@ -2,12 +2,12 @@
 title: .NET 네이티브로 시작 속도 개선 측정
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540890"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
 .NET 네이티브 앱의 시작 시간을 크게 향상 시킵니다. 이러한 속도 개선은 휴대용 저전력 디바이스와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "79180993"
  PerfView는 앱에서 모든 종류의 성능 조사를 수행할 수 있도록 ETW 이벤트를 활용합니다. 또한 다양한 이벤트 유형에 대한 로깅을 설정하거나 해제할 수 있도록 구성 GUI도 포함되어 있습니다. PerfView는 무료 도구이며 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=28567)에서 다운로드할 수 있습니다. 자세한 내용은 [PerfView 자습서 비디오](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보세요.  
   
 > [!NOTE]
-> PerfView를 사용하여 ARM 시스템에 대한 이벤트를 수집할 수는 없습니다. ARM 시스템에 대한 이벤트를 수집하려면 WPR(Windows Performance Recorder)를 사용합니다. 자세한 내용은 [Vance Morrison의 블로그 게시물](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)을 참조하세요.  
+> PerfView를 사용하여 ARM 시스템에 대한 이벤트를 수집할 수는 없습니다. ARM 시스템에 대한 이벤트를 수집하려면 WPR(Windows Performance Recorder)를 사용합니다. 자세한 내용은 [Vance Morrison의 블로그 게시물](/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)을 참조하세요.  
   
  명령줄에서 PerfView를 호출할 수도 있습니다. 공급자의 이벤트만 기록하려면 명령 프롬프트 창을 열고 다음 명령을 입력합니다.  
   
@@ -93,8 +93,8 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Ctrl+A를 눌러 왼쪽 창에 나열된 모든 이벤트를 선택하고 **Enter** 키를 누릅니다. 이제 각 이벤트에서 타임스탬프를 확인할 수 있습니다. 이러한 타임스탬프는 추적 시작 시간을 기준으로 하므로 프로세스 시작 시간에서 각 이벤트의 시간을 빼서 시작 이후 경과된 시간을 확인해야 합니다. Ctrl 키를 누른 상태로 두 타임스탬프를 클릭하여 선택하면 해당 타임스탬프 간의 차이가 페이지 아래쪽 상태 표시줄에 표시됩니다. 따라서 표시된 두 이벤트(프로세스 시작 포함) 간에 경과된 시간을 쉽게 확인할 수 있습니다. 뷰의 바로 가기 메뉴를 열고 CSV 파일로 내보내기, Microsoft Excel을 열어 데이터 저장/처리 등의 여러 유용한 옵션 중에서 원하는 항목을 선택할 수 있습니다.  
   
- 원본 앱과 .NET 네이티브 도구 체인을 사용 하 여 빌드한 버전 모두에 대해이 절차를 반복 하면 성능 차이를 비교할 수 있습니다.   .NET 네이티브 앱은 일반적으로 non-.NET 네이티브 앱 보다 빠르게 시작 됩니다. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)을 읽으세요.  
+ 원본 앱과 .NET 네이티브 도구 체인을 사용 하 여 빌드한 버전 모두에 대해이 절차를 반복 하면 성능 차이를 비교할 수 있습니다.   .NET 네이티브 앱은 일반적으로 non-.NET 네이티브 앱 보다 빠르게 시작 됩니다. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)을 읽으세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.Tracing.EventSource>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 4fbb4acabebea54015b11cefdf8a37c7e2dc93f5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cbf7b18d59e468be085f245cc9bb0a595bd41832
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168248"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540929"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트에서 캐싱
 > [!NOTE]
@@ -102,8 +102,8 @@ ms.locfileid: "87168248"
   
  캐시를 업데이트해도 기존 <xref:System.Windows.Automation.AutomationElement> 참조의 속성이 변경되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클라이언트에 대한 UI 자동화 이벤트](ui-automation-events-for-clients.md)
 - [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)
-- [FetchTimer 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [FetchTimer 샘플](/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

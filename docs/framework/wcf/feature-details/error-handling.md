@@ -2,16 +2,16 @@
 title: 오류 처리
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: f6c0d676a37648678b2b726a46a6238ccc1b3331
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9c7d6814a6bf1189fd85de5eb440ec4a6840447e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539985"
 ---
 # <a name="error-handling-in-windows-communication-foundation-wcf"></a>Windows Communication Foundation에서 오류 처리 (WCF)
 
-서비스에서 예기치 않은 예외나 오류가 발생할 경우 여러 가지 방법으로 예외 처리 솔루션을 디자인할 수 있습니다. 단일 "올바른" 또는 "모범 사례" 오류 처리 솔루션은 없지만 하나는 고려해 야 할 유효한 경로가 여러 개 있습니다. 일반적으로 WCF 구현의 복잡성, 예외의 유형 및 빈도, 처리 된 특성과 처리 되지 않은 특성에 따라 아래 목록의 여러 방법을 결합 하는 하이브리드 솔루션을 구현 하는 것이 좋습니다. 예외 및 관련 된 추적, 로깅 또는 정책 요구 사항이 있습니다.
+서비스에서 예기치 않은 예외나 오류가 발생할 경우 여러 가지 방법으로 예외 처리 솔루션을 디자인할 수 있습니다. 단일 "올바른" 또는 "모범 사례" 오류 처리 솔루션은 없지만 하나는 고려해 야 할 유효한 경로가 여러 개 있습니다. 일반적으로 WCF 구현의 복잡성, 예외의 유형 및 빈도, 처리 된 예외 특성 및 관련 된 추적, 로깅 또는 정책 요구 사항에 따라 아래 목록의 여러 방법을 결합 하는 하이브리드 솔루션을 구현 하는 것이 좋습니다.
 
 이 단원의 나머지 부분에서는 이러한 솔루션에 대해 자세히 설명합니다.
 
@@ -21,13 +21,13 @@ Microsoft Enterprise Library 예외 처리 애플리케이션 블록을 사용�
 
 이 라이브러리에는 기본 제공 오류 계약 예외 처리기가 포함되어 있습니다. 이 예외 처리기는 WCF 서비스 경계에서 사용 하도록 설계 되었으며 예외 로부터 새 오류 계약을 생성 합니다.
 
-애플리케이션 블록은 일반적으로 사용되는 모범 사례를 통합하여 애플리케이션 전반의 오류 처리를 위한 공통된 접근 방식을 제공하는 데 목적이 있습니다. 반면 직접 개발한 사용자 지정 오류 처리기 및 오류 계약이 유용한 경우도 있습니다. 예를 들어 사용자 지정 오류 처리기는 모든 예외를 자동으로 FaultExceptions로 승격 하 고 응용 프로그램에 로깅 기능을 추가할 수 있는 좋은 기회를 제공 합니다.
+애플리케이션 블록은 일반적으로 사용되는 모범 사례를 통합하여 애플리케이션 전반의 오류 처리를 위한 공통된 접근 방식을 제공하는 데 목적이 있습니다. 반면 직접 개발한 사용자 지정 오류 처리기 및 오류 계약이 유용한 경우도 있습니다. 예를 들어 사용자 지정 오류 처리기는 모든 예외를 자동으로 FaultExceptions로 승격하는 기능을 제공할 뿐만 아니라 응용 프로그램에 로깅 기능을 추가할 수 있다는 장점도 있습니다.
 
-자세한 내용은 [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10))를 참조 하세요.
+자세한 내용은 [Microsoft Enterprise Library](/previous-versions/msp-n-p/ff632023(v=pandp.10))를 참조 하세요.
 
 ## <a name="dealing-with-expected-exceptions"></a>예상 되는 예외 처리
 
-적절 한 작업 과정은 모든 작업 또는 관련 확장성 지점에서 예상 된 예외를 catch 하 고,이를 복구할 수 있는지 여부를 결정 하 고, T >\<FaultException에 적절 한 사용자 지정 오류를 반환 하는 것입니다.
+적절 한 작업 과정은 모든 작업 또는 관련 확장성 지점에서 예상 되는 예외를 catch 하 고,이를 복구할 수 있는지 여부를 결정 하 고, FaultException에서 적절 한 사용자 지정 오류를 반환 하는 것입니다 \<T> .
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>IErrorHandler를 사용 하 여 예기치 않은 예외 처리
 
@@ -35,7 +35,7 @@ Microsoft Enterprise Library 예외 처리 애플리케이션 블록을 사용�
 
 일반적으로 "예기치 않은 예외"는 복구할 수 없는 예외 또는 처리 예외도 아닙니다. 대신 예기치 않은 사용자 예외입니다. 복구할 수 없는 예외 (예: 메모리 부족 예외)-일반적으로 [서비스 모델 예외 처리기](xref:System.ServiceModel.Dispatcher.ExceptionHandler) 에서 자동으로 처리 되 고, 일반적으로 정상적으로 처리 될 수 없으며, 이러한 예외를 처리 하는 유일한 이유가 추가 로깅을 수행 하거나 표준 예외를 클라이언트에 반환 하는 것입니다. 처리 예외는 메시지 처리 중 serialization, 인코더 또는 포맷터 수준에서 발생하며 일반적으로 IErrorHandler로는 처리될 수 없습니다. 이는 예외 발생 시점에 오류 처리기가 개입하기에는 너무 이르거나 늦기 때문입니다. 마찬가지로 전송 예외도 IErrorHandler로 처리될 수 없습니다.
 
-IErrorHandler를 사용하면 예외가 throw될 때의 애플리케이션 동작을 명시적으로 제어할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
+IErrorHandler를 사용하면 예외가 throw될 때의 애플리케이션 동작을 명시적으로 제어할 수 있습니다. 방법은 다음과 같습니다.  
 
 1. 클라이언트에 오류를 보낼지 여부를 결정 합니다.
 
@@ -73,6 +73,6 @@ WebGet 및 WebInvoke 특성을 사용하면 요청 주소의 구성 요소를 �
 
 오류 처리기를 설치하여 다른 디스패치 오류 유형과 동일한 방법으로 형식 변환 디스패치 오류를 검사할 수 있습니다. 서비스 수준 예외를 처리하기 위해 IErrorHandler 확장성 지점이 호출됩니다. 이때 호출자에게 전송될 응답을 선택하고 사용자 지정 작업 및 보고를 수행할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 WCF 프로그래밍](../basic-wcf-programming.md)
