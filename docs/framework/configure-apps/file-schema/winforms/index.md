@@ -2,12 +2,12 @@
 title: Windows Forms 구성 섹션
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546910"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms 구성 섹션
 Windows Forms 구성 설정을 통해 Windows Forms 앱에서 다중 모니터 지원, 높은 DPI 지원 및 기타 사용자 정의된 구성 설정 등의 사용자 지정된 애플리케이션 설정에 대한 정보를 저장하고 검색할 수 있습니다.
@@ -53,4 +53,4 @@ Windows Forms 애플리케이션 구성 설정은 애플리케이션 구성 파�
 ## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](../index.md)
-- [Windows Forms의 높은 DPI 지원](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Windows Forms의 높은 DPI 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

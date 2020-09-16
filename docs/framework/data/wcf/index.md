@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247754"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549681"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -76,7 +76,7 @@ LINQ를 사용 하려고 합니다.
 
 추가 정보가 필요 합니다.
 
-- [WCF Data Services 팀 블로그](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [WCF Data Services 팀 블로그](/archive/blogs/astoriateam/)
 
 - [리소스](wcf-data-services-resources.md)
 
@@ -86,7 +86,7 @@ LINQ를 사용 하려고 합니다.
 
 WCF Data Services에서 사용 가능한 기능에 대 한 개요를 제공 합니다.
 
-[WCF Data Services 5.0의 새로운 기능](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[WCF Data Services 5.0의 새로운 기능](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
 WCF Data Services의 새로운 기능 및 새로운 OData 기능에 대 한 지원을 설명 합니다.
 
@@ -102,6 +102,6 @@ OData 피드를 노출 하는 데이터 서비스를 만들고 구성 하는 방
 
 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 OData 피드를 사용 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [REST(Representational State Transfer)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

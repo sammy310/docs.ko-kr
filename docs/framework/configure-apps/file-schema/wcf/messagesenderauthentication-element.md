@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> 요소
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: bab0e50d7feba3ea55d505be07cfa41427a5cbbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3693b2b4c6b6cbc3705a25967aedc88e36291407
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397784"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547013"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication> 요소
 피어 투 피어 메시지 발신자에 대한 인증 옵션을 지정합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "70397784"
   
 |값|Description|  
 |-----------|-----------------|  
-|문자열|선택 사항입니다. 형식 이름 및 어셈블리와 형식을 찾는 데 사용되는 기타 데이터를 지정합니다. 적어도 네임스페이스 및 형식 이름이 필요합니다. 선택적 정보로는 어셈블리 이름, 버전 번호, 문화권 및 공개 키 토큰이 있습니다.|  
+|String|선택 사항입니다. 형식 이름 및 어셈블리와 형식을 찾는 데 사용되는 기타 데이터를 지정합니다. 적어도 네임스페이스 및 형식 이름이 필요합니다. 선택적 정보로는 어셈블리 이름, 버전 번호, 문화권 및 공개 키 토큰이 있습니다.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 특성  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70397784"
 </behaviors>
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
@@ -109,6 +109,6 @@ ms.locfileid: "70397784"
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [인증서 사용](../../../wcf/feature-details/working-with-certificates.md)
 - [피어 투 피어 네트워킹](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Peer Channel Message Authentication](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Peer Channel Custom Authentication](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [피어 채널 애플리케이션 보안](../../../wcf/feature-details/securing-peer-channel-applications.md)

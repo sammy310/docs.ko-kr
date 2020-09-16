@@ -10,12 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 71aa482cc2268da17f1376d8c305dd6a818d92d0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213168"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546974"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -24,7 +24,7 @@ ms.locfileid: "83213168"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[GetActiveReJitRequestILCode 메서드](icordebugfunction3-getactiverejitrequestilcode-method.md)|활성 ReJIT 요청에서 IL을 포함 하는 [ICorDebugILCode](icordebugilcode-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.|  
   
@@ -39,8 +39,8 @@ ms.locfileid: "83213168"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)
-- [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: 방법 가이드](/archive/blogs/davbr/rejit-a-how-to-guide)

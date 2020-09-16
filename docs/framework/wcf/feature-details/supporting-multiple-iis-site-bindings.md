@@ -3,12 +3,12 @@ title: 여러 IIS 사이트 바인딩 지원
 description: IIS에서 WCF 서비스를 호스팅할 때 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6af4d885c7fc3d4dcc12ffb4bf6670f1a9b3d78c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244870"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546200"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>여러 IIS 사이트 바인딩 지원
 인터넷 정보 서비스 (IIS) 7.0에서 WCF (Windows Communication Foundation) 서비스를 호스팅하는 경우 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공할 수 있습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. 이는 및에서 수신 대기 하는 서비스를 호스트 하려는 경우에 유용 합니다 `http://www.contoso.com` `http://contoso.com` . 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 예: `http://internal.contoso.com` 및 `http://www.contoso.com`  
@@ -23,7 +23,7 @@ ms.locfileid: "85244870"
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
 ```  
   
- Iis에서 WCF 서비스를 호스팅하는 경우 IIS는 응용 프로그램이 포함 된 가상 디렉터리에 대 한 URI를 기반으로 한 기본 주소를 만듭니다. 인터넷 정보 서비스 관리자를 사용하여 웹 사이트에 하나 이상의 바인딩을 추가하여 동일한 프로토콜을 사용하는 기본 주소를 추가할 수 있습니다. 각 바인딩에 대해 프로토콜(HTTP 또는 HTTPS), IP 주소, 포트 및 호스트 이름을 지정합니다. 인터넷 정보 서비스 Manager를 사용 하는 방법에 대 한 자세한 내용은 [Iis 관리자 (iis 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753842(v=ws.10))를 참조 하세요. 사이트에 바인딩을 추가 하는 방법에 대 한 자세한 내용은 [웹 사이트 만들기 (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772350(v=ws.10)) 를 참조 하세요.  
+ Iis에서 WCF 서비스를 호스팅하는 경우 IIS는 응용 프로그램이 포함 된 가상 디렉터리에 대 한 URI를 기반으로 한 기본 주소를 만듭니다. 인터넷 정보 서비스 관리자를 사용하여 웹 사이트에 하나 이상의 바인딩을 추가하여 동일한 프로토콜을 사용하는 기본 주소를 추가할 수 있습니다. 각 바인딩에 대해 프로토콜(HTTP 또는 HTTPS), IP 주소, 포트 및 호스트 이름을 지정합니다. 인터넷 정보 서비스 Manager를 사용 하는 방법에 대 한 자세한 내용은 [Iis 관리자 (iis 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753842(v=ws.10))를 참조 하세요. 사이트에 바인딩을 추가 하는 방법에 대 한 자세한 내용은 [웹 사이트 만들기 (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772350(v=ws.10)) 를 참조 하세요.  
   
  동일한 사이트에 대해 여러 기본 주소를 지정 하면 WCF 도움말 페이지의 내용, 스키마 가져오기 및 서비스에서 생성 된 WSDL/MEX 정보에 영향을 줍니다. WCF 도움말 페이지에는 서비스와 통신할 수 있는 WCF 클라이언트를 생성 하는 데 사용할 명령줄이 표시 됩니다. 이 명령줄에는 웹 사이트에 대한 IIS 바인딩에 지정된 첫 번째 주소만 포함됩니다. 마찬가지로 스키마를 가져올 때도 IIS 바인딩에 지정된 첫 번째 기본 주소만 사용됩니다. WSDL 및 MEX 데이터에는 IIS 바인딩에 지정된 모든 기본 주소가 포함됩니다.  
   

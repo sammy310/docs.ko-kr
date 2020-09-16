@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 9590088272a630b50d953d1832200bacf3fc13fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 11b8eb446395b4d35b9b7b689e30549b2b00f94a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396819"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548041"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>방법: ActiveX 컨트롤을 사용하여 작업(Visual Basic)
 ActiveX 컨트롤은 웹 페이지 또는 다른 응용 프로그램에 삽입 하 여 다른 사용자가 프로그래밍 한 패키지 된 기능을 다시 사용할 수 있는 COM 구성 요소 또는 개체입니다. Visual Basic 6.0 및 이전 버전용으로 개발 된 ActiveX 컨트롤을 사용 하 여 Visual Studio의 **도구 상자** 에 기능을 추가할 수 있습니다.  
@@ -28,12 +28,12 @@ ActiveX 컨트롤은 웹 페이지 또는 다른 응용 프로그램에 삽입 �
      새 컨트롤이 **도구 상자**의 다른 도구와 함께 표시 됩니다.  
   
     > [!NOTE]
-    > Aximp.exe 유틸리티를 사용 하 여 ActiveX 컨트롤에 대 한 interop 어셈블리를 수동으로 만들 수 있습니다. 자세한 내용은 [aximp.exe (ActiveX 컨트롤 가져오기 Windows Forms)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)를 참조 하세요.  
+    > Aximp.exe 유틸리티를 사용 하 여 ActiveX 컨트롤에 대 한 interop 어셈블리를 수동으로 만들 수 있습니다. 자세한 내용은 [Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [COM Interop](index.md)
-- [방법: Windows Forms에 ActiveX 컨트롤 추가](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [방법: Windows Forms에 ActiveX 컨트롤 추가](/dotnet/desktop/winforms/controls/how-to-add-activex-controls-to-windows-forms)
 - [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
+- [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](/dotnet/desktop/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form)
 - [상호 운용성 문제 해결](troubleshooting-interoperability.md)

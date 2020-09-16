@@ -2,21 +2,21 @@
 title: '방법: EdmGen.exe를 사용하여 개체 계층 코드 생성'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: 1dbd2e25d5f9795af4f80e079c6a0b807666743d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a73a803d310ebd847e49f4bd71609f8ef9f2944
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150560"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546642"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>방법: EdmGen.exe를 사용하여 개체 계층 코드 생성
-이 항목에서는 [EDM 생성기(EdmGen.exe)](edm-generator-edmgen-exe.md) 도구를 사용하여 .csdl 파일을 기반으로 개체 계층 코드를 생성하는 방법을 보여 주며 있습니다.  
+이 항목에서는 [EDM 생성기 (EdmGen.exe)](edm-generator-edmgen-exe.md) 도구를 사용 하 여 csdl 파일을 기반으로 개체 계층 코드를 생성 하는 방법을 보여 줍니다.  
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>EdmGen.exe를 사용하여 Visual Basic 프로젝트용 School 모델의 개체 계층 코드를 생성하려면  
   
-1. School 데이터베이스를 만듭니다. 자세한 내용은 [학교 샘플 데이터베이스 만들기를](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))참조하십시오.  
+1. School 데이터베이스를 만듭니다. 자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.  
   
-2. School 모델을 생성하거나 School.csdl 파일을 가져옵니다. 자세한 내용은 [EdmGen.exe를 사용하여 모델 및 매핑 파일을 생성하는 방법을](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)참조하십시오.  
+2. School 모델을 생성하거나 School.csdl 파일을 가져옵니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 참조 하세요.  
   
 3. 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.  
   
@@ -27,9 +27,9 @@ ms.locfileid: "79150560"
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-c-project-using-edmgenexe"></a>EdmGen.exe를 사용하여 C# 프로젝트용 School 모델의 개체 계층 코드를 생성하려면  
   
-1. School 데이터베이스를 만듭니다. 자세한 내용은 [학교 샘플 데이터베이스 만들기를](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))참조하십시오.  
+1. School 데이터베이스를 만듭니다. 자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.  
   
-2. School 모델을 생성하거나 School.csdl 파일을 가져옵니다. 자세한 내용은 [EdmGen.exe를 사용하여 모델 및 매핑 파일을 생성하는 방법을](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)참조하십시오.  
+2. School 모델을 생성하거나 School.csdl 파일을 가져옵니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)을 참조 하세요.  
   
 3. 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "79150560"
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.cs /language:CSharp  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [모델링 및 매핑](modeling-and-mapping.md)
-- [방법: 수동으로 Entity Framework 프로젝트 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [방법: 뷰를 미리 생성하여 쿼리 성능 향상](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [방법: EdmGen.exe를 사용하여 모델 생성 및 파일 매핑](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [방법: 수동으로 Entity Framework 프로젝트 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [방법: 뷰를 미리 생성하여 쿼리 성능 향상](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

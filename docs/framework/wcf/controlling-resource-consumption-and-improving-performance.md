@@ -2,12 +2,12 @@
 title: 리소스 사용 제어 및 성능 향상
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802262"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543071"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>리소스 사용 제어 및 성능 향상
 이 항목에서는 리소스 사용을 제어 하 고 성능 메트릭에 영향을 주는 WCF (Windows Communication Foundation) 아키텍처의 여러 영역에 있는 다양 한 속성에 대해 설명 합니다.
@@ -41,11 +41,11 @@ ms.locfileid: "74802262"
 > [!NOTE]
 > 미리 생성된 serialization 코드는 서비스가 아닌 클라이언트 애플리케이션에서만 사용될 수 있습니다.
 
- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 는 응용 프로그램에 대해 컴파일된 어셈블리에서 필요한 serialization 코드를 생성 하 여 이러한 응용 프로그램의 시작 성능을 향상 시킬 수 있습니다. 자세한 내용은 [방법: XmlSerializer를 사용 하 여 WCF 클라이언트 응용 프로그램의 시작 시간 향상](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)을 참조 하세요.
+ [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 는 응용 프로그램에 대해 컴파일된 어셈블리에서 필요한 serialization 코드를 생성 하 여 이러한 응용 프로그램의 시작 성능을 향상 시킬 수 있습니다. 자세한 내용은 [방법: XmlSerializer를 사용 하 여 WCF 클라이언트 응용 프로그램의 시작 시간 향상](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)을 참조 하세요.
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF 서비스를 ASP.NET 호스팅할 때의 성능 문제
 
-WCF 서비스를 IIS 및 ASP.NET에 호스팅하는 경우 IIS 및 ASP.NET의 구성 설정이 WCF 서비스의 처리량 및 메모리 사용 공간에 영향을 줄 수 있습니다.  ASP.NET 성능에 대 한 자세한 내용은 [ASP.NET 성능 향상](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10))을 참조 하세요. 예상치 않은 결과를 일으킬 수 있는 설정 중 하나는 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>의 속성인 <xref:System.Web.Configuration.ProcessModelSection>입니다. 애플리케이션의 클라이언트 수가 고정되어 있거나 적은 경우 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>를 2로 설정하면 다중 프로세서 컴퓨터에서 처리량이 크게 높아져 CPU 사용률이 100%에 가깝게 됩니다. 이러한 성능 증가는 비용을 초래합니다. 또한 메모리 사용량도 증가하여 확장성이 저하됩니다.
+WCF 서비스를 IIS 및 ASP.NET에 호스팅하는 경우 IIS 및 ASP.NET의 구성 설정이 WCF 서비스의 처리량 및 메모리 사용 공간에 영향을 줄 수 있습니다.  ASP.NET 성능에 대 한 자세한 내용은 [ASP.NET 성능 향상](/previous-versions/msp-n-p/ff647787(v=pandp.10))을 참조 하세요. 예상치 않은 결과를 일으킬 수 있는 설정 중 하나는 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>의 속성인 <xref:System.Web.Configuration.ProcessModelSection>입니다. 애플리케이션의 클라이언트 수가 고정되어 있거나 적은 경우 <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>를 2로 설정하면 다중 프로세서 컴퓨터에서 처리량이 크게 높아져 CPU 사용률이 100%에 가깝게 됩니다. 이러한 성능 증가는 비용을 초래합니다. 또한 메모리 사용량도 증가하여 확장성이 저하됩니다.
 
 ## <a name="see-also"></a>참조
 

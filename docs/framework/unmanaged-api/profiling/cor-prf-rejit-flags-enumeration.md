@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b1d6ad5d465d746f4c1a9400c43613591373322
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177092"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546948"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 열거형
-[ICorProfilerInfo10:::RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API가 어떻게 작동해야 하는지 나타내는 값을 포함합니다.  
+[ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API가 동작 하는 방법을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,22 +35,22 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|Description|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted 메서드는 다른 메서드에서 인라인되는 것을 차단합니다. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| ReJITted에 요청된 메서드를 인라인으로 하는 메서드에 대한 콜백을 받습니다. `GetFunctionParameters` |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted 메서드는 다른 메서드에서 인라인 되지 않도록 차단 됩니다. |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| `GetFunctionParameters`ReJITted 하도록 요청 된 메서드를 인라인 하는 메서드에 대 한 콜백을 수신 합니다. |  
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [.NET Core 지원 운영 체제를](../../../core/install/dependencies.md?pivots=os-windows)참조하십시오.  
+ **플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/windows.md?pivots=os-windows)를 참조 하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](profiling-enumerations.md)

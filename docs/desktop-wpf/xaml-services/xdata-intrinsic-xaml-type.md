@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: b7f0954158988db107feb4a6c51ba81d5db11dcb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: d78c2fd63192dc499b119e5b038b92555511a695
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432793"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544806"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 내장 XAML 형식
-XAML 프로덕션 내에서 XML 데이터 섬을 배치할 수 있습니다. XAML `x:XData` 프로세서 내의 XML 요소는 작동 기본 XAML 네임스페이스 또는 다른 XAML 네임스페이스의 일부인 것처럼 처리해서는 안 됩니다. `x:XData`임의의 잘 형성된 XML을 포함할 수 있습니다.
+XAML 프로덕션 내에서 XML 데이터 아일랜드를 배치할 수 있습니다. 내의 XML 요소는 `x:XData` 기본 xaml 네임 스페이스 또는 다른 xaml 네임 스페이스의 일부인 것 처럼 XAML 프로세서에서 처리 되어서는 안 됩니다. `x:XData` 올바른 형식의 모든 XML을 포함할 수 있습니다.
 
 ## <a name="xaml-object-element-usage"></a>XAML 개체 요소 사용
 
@@ -34,25 +34,25 @@ XAML 프로덕션 내에서 XML 데이터 섬을 배치할 수 있습니다. XAM
 
 |||
 |-|-|
-|`elementDataRoot`|둘러싸인 데이터 섬의 단일 루트 요소입니다. 대부분의 최종 소비자의 경우 단일 루트가 없는 XML은 유효하지 않은 것으로 간주됩니다. 특히 WPF또는 데이터 바인딩을 `x:XData` 위해 XML 원본을 사용하는 다른 많은 기술에 대한 XML 데이터 원본으로 의도된 경우 단일 루트가 필요합니다.|
-|`[elementData]`|(선택 사항) XML 데이터를 나타내는 XML입니다. 요소 데이터로 포함할 수 있는 요소 수와 중첩된 요소가 다른 요소에 포함될 수 있습니다. 그러나 XML의 일반 규칙이 적용됩니다.|
+|`elementDataRoot`|포함 된 데이터 아일랜드의 단일 루트 요소입니다. 대부분의 최종 소비자의 경우 단일 루트를 포함 하지 않는 XML은 잘못 된 것으로 간주 됩니다. 특히 `x:XData` 데이터 바인딩에 xml 원본을 사용 하는 WPF 또는 다른 여러 기술에 대 한 xml 데이터 소스로 사용 하는 경우 단일 루트가 필요 합니다.|
+|`[elementData]`|선택 사항입니다. XML 데이터를 나타내는 XML입니다. 요소 수에 관계 없이 요소 데이터와 중첩 된 요소가 다른 요소에 포함 될 수 있습니다. 그러나 XML의 일반 규칙이 적용 됩니다.|
 
 ## <a name="remarks"></a>설명
 
-개체 내의 `x:XData` XML 요소는 데이터 내에 포함된 XMLDOM의 가능한 모든 네임스페이스 및 접두사를 다시 선언할 수 있습니다.
+개체 내의 XML 요소는 `x:XData` 데이터 내에 포함 된 XMLDOM의 모든 가능한 네임 스페이스와 접두사를 다시 선언할 수 있습니다.
 
-XML 데이터와 `x:XData` 본질적인 XAML 형식에 대한 프로그래밍 방식으로 클래스를 <xref:System.Windows.Markup.XData> 통해 .NET XAML 서비스에서 가능합니다.
+`x:XData`클래스를 통해 .NET Xaml 서비스에서 XML 데이터 및 내장 XAML 형식에 프로그래밍 방식으로 액세스할 수 있습니다 <xref:System.Windows.Markup.XData> .
 
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보
 
-개체는 `x:XData` 주로 <xref:System.Windows.Data.XmlDataProvider>속성의 자식 개체(XAML에서 일반적으로 속성 요소 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 구문으로 표현)의 자식 개체또는 또는 다른 방법으로 사용됩니다.
+`x:XData`개체는 주로의 자식 개체 <xref:System.Windows.Data.XmlDataProvider> 또는 속성의 자식 개체로 사용 됩니다 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> (XAML에서이는 일반적으로 속성 요소 구문으로 표현 됨).
 
-데이터는 일반적으로 데이터 섬 내의 기본 XML 네임스페이스를 빈 문자열로 설정된 새 기본 XML 네임스페이스로 재정의해야 합니다. 데이터를 참조하고 바인딩하는 데 <xref:System.Windows.Data.Binding.XPath%2A> 사용되는 식은 접두사를 포함하지 않아도 되므로 간단한 데이터 제도에 가장 적합합니다. 더 복잡한 데이터 제도는 데이터에 대한 여러 접두사를 정의하고 루트의 XML 네임스페이스에 대한 특정 접두사를 사용할 수 있습니다. 이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 표현식 참조에는 적절한 네임스페이스 매핑접두사가 포함되어야 합니다. 자세한 내용은 [데이터 바인딩 개요를](../data/data-binding-overview.md)참조하십시오.
+데이터는 일반적으로 데이터 아일랜드 내의 기본 XML 네임 스페이스를 새 기본 XML 네임 스페이스 (빈 문자열로 설정)로 다시 정의 해야 합니다. 이는 <xref:System.Windows.Data.Binding.XPath%2A> 데이터를 참조 하 고 바인딩하는 데 사용 되는 식이 접두사의 포함을 방지할 수 있기 때문에 단순 데이터 아일랜드에 가장 간편 합니다. 더 복잡 한 데이터 아일랜드는 데이터에 대 한 여러 접두사를 정의 하 고 루트의 XML 네임 스페이스에 대 한 특정 접두사를 사용할 수 있습니다. 이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 식 참조는 적절 한 네임 스페이스 매핑 접두사를 포함 해야 합니다. 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조 하세요.
 
-기술적으로, `x:XData` 형식의 <xref:System.Xml.Serialization.IXmlSerializable>모든 속성의 내용으로 사용할 수 있습니다. 그러나, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 유일한 눈에 띄는 구현이다.
+기술적으로 `x:XData` 는 형식의 모든 속성의 콘텐츠로 사용할 수 있습니다 <xref:System.Xml.Serialization.IXmlSerializable> . 그러나 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 는 유일한 중요 한 구현입니다.
 
 ## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Data.XmlDataProvider>
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
-- [Binding 태그 확장](../../framework/wpf/advanced/binding-markup-extension.md)
+- [바인딩 태그 확장](/dotnet/desktop/wpf/advanced/binding-markup-extension)

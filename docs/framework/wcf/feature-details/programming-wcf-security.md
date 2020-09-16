@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244987"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535900"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 WCF (보안 Windows Communication Foundation) 응용 프로그램을 만드는 데 사용 되는 기본 프로그래밍 작업에 대해 설명 합니다. 이 항목에서는 *전송 보안*이라는 인증, 기밀성 및 무결성만 다룹니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어)에 대해 다루지 않습니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  
   
 > [!NOTE]
-> 특히 WCF와 관련 하 여 보안 개념에 대 한 유용한 정보를 보려면 MSDN의 패턴 및 사례 자습서 (영문)의 [시나리오, 패턴 및 구현 지침 (WSE) 3.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10))을 참조 하십시오.  
+> 특히 WCF와 관련 하 여 보안 개념에 대 한 유용한 정보를 보려면 MSDN의 패턴 및 사례 자습서 (영문)의 [시나리오, 패턴 및 구현 지침 (WSE) 3.0](/previous-versions/msp-n-p/ff648183(v=pandp.10))을 참조 하십시오.  
   
  WCF 보안 프로그래밍은 보안 모드, 클라이언트 자격 증명 형식 및 자격 증명 값을 설정 하는 세 가지 단계를 기반으로 합니다. 코드 또는 구성을 통해 이러한 단계를 수행할 수 있습니다.  
   

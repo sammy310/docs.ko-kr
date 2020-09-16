@@ -2,12 +2,12 @@
 title: SKIP(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 75140384823588b8f6785de00b0ab3cd17314a3f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 68f54dc5118e09d78f98c687e8a44def43b45c7d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319336"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540994"
 ---
 # <a name="skip-entity-sql"></a>SKIP(Entity SQL)
 
@@ -24,7 +24,7 @@ ORDER BY 절의 SKIP 하위 절을 사용하여 물리적 페이징을 수행할
 `n` \
 건너뛸 항목의 개수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 SKIP 식 하위 절이 ORDER BY 절에 있으면 결과는 정렬 지정에 따라 정렬되고 SKIP 식 바로 뒤에 있는 행에서 시작하는 행이 결과 집합에 포함됩니다. 예를 들어, SKIP 5를 사용하면 처음 다섯 개의 행을 건너뛰고 여섯 번째 행부터 반환됩니다.
 
@@ -38,11 +38,11 @@ SKIP 식 하위 절이 ORDER BY 절에 있으면 결과는 정렬 지정에 따�
 > SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L
 > ```
 
-[방법: 쿼리 결과를 통한 페이지](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) 의 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리는 SKIP과 함께 ORDER by 연산자를 사용 하 여 SELECT 문에서 반환 되는 개체에 사용 되는 정렬 순서를 지정 합니다.
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] [방법: 쿼리 결과를 통한 페이지](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) 의 쿼리는 SKIP과 함께 ORDER by 연산자를 사용 하 여 SELECT 문에서 반환 되는 개체에 사용 되는 정렬 순서를 지정 합니다.
 
 ## <a name="see-also"></a>참조
 
 - [ORDER BY](order-by-entity-sql.md)
-- [방법: 쿼리 결과를 통해 페이징](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [방법: 쿼리 결과를 통해 페이징](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [페이징](paging-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [맨 위로](top-entity-sql.md)

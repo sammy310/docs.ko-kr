@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493567"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547833"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 함수
 XML 파일에 저장 된 버전 정보를 사용 하 여 CLR (공용 언어 런타임)을 프로세스로 로드 합니다. XML 파일의 형식은 표준 응용 프로그램 구성 파일 다음에 모델링 됩니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../configure-apps/file-schema/index.md)를 참조하세요.  
   
- 이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다. [프로세스에 공용 언어 런타임 로드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))를 참조 하세요.  
+ 이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다. [프로세스에 공용 언어 런타임 로드](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ HRESULT CorBindToCurrentRuntime (
  진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
- 진행 `IID`요청 하는 인터페이스의입니다. 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
+ 진행 `IID` 요청 하는 인터페이스의입니다. 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
   
  `ppv`  
  제한이 반환 된 인터페이스 포인터입니다.  
@@ -60,11 +60,11 @@ HRESULT CorBindToCurrentRuntime (
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CorBindToRuntime 함수](corbindtoruntime-function.md)
 - [CorBindToRuntimeByCfg 함수](corbindtoruntimebycfg-function.md)

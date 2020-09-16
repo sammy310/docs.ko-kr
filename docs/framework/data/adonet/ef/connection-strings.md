@@ -3,12 +3,12 @@ title: ADO.NET Entity Framework의 연결 문자열
 description: ADO.NET 데이터 공급자에 연결 하 고 모델 및 매핑 파일에 대 한 정보를 포함 하는 Entity Framework의 연결 문자열에 대해 알아봅니다.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36b7724bc8dbb8f427f4bbf748b7b7801adea8db
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286872"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542759"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework의 연결 문자열
 
@@ -16,7 +16,7 @@ ms.locfileid: "84286872"
 
 연결 문자열은 EntityClient 공급자가 모델 및 매핑 메타데이터에 액세스하고 데이터 소스에 연결할 때 사용됩니다. <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>의 <xref:System.Data.EntityClient.EntityConnection> 속성을 통해 연결 문자열에 액세스하거나 설정할 수 있습니다. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 클래스를 사용하여 프로그래밍 방식으로 연결 문자열의 매개 변수를 생성하거나 액세스할 수 있습니다. 자세한 내용은 [방법: EntityConnection 연결 문자열 작성](how-to-build-an-entityconnection-connection-string.md)을 참조 하세요.
 
-[엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) 는 응용 프로그램의 구성 파일에 저장 되는 연결 문자열을 생성 합니다. <xref:System.Data.Objects.ObjectContext>는 개체 쿼리를 만들 때 이 연결 정보를 자동으로 검색합니다. <xref:System.Data.EntityClient.EntityConnection> 인스턴스에서 사용하는 <xref:System.Data.Objects.ObjectContext>은 <xref:System.Data.Objects.ObjectContext.Connection%2A> 속성에서 액세스할 수 있습니다. 자세한 내용은 [연결 및 트랜잭션 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))를 참조 하세요.
+[엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) 는 응용 프로그램의 구성 파일에 저장 되는 연결 문자열을 생성 합니다. <xref:System.Data.Objects.ObjectContext>는 개체 쿼리를 만들 때 이 연결 정보를 자동으로 검색합니다. <xref:System.Data.EntityClient.EntityConnection> 인스턴스에서 사용하는 <xref:System.Data.Objects.ObjectContext>은 <xref:System.Data.Objects.ObjectContext.Connection%2A> 속성에서 액세스할 수 있습니다. 자세한 내용은 [연결 및 트랜잭션 관리](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))를 참조 하세요.
 
 ## <a name="connection-string-syntax"></a>연결 문자열 구문
 
@@ -45,7 +45,7 @@ ms.locfileid: "84286872"
 
 다음 옵션을 사용하여 포함 리소스의 위치를 정의할 수 있습니다.
 
-|옵션|설명|
+|옵션|Description|
 |-|-|
 |`assemblyFullName`|포함 리소스가 있는 어셈블리의 전체 이름입니다. 이 이름에는 다음과 같이 단순한 이름, 버전 이름, 지원되는 문화권 및 공개 키가 포함됩니다.<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 애플리케이션이 액세스할 수 있는 모든 어셈블리에 리소스를 포함할 수 있습니다.<br /><br /> 에 대해 와일드 카드 ()를 지정 하는 경우 \* `assemblyFullName` Entity Framework 런타임은 다음 위치의 리소스를이 순서로 검색 합니다.<br /><br /> 1. 호출 하는 어셈블리입니다.<br />2. 참조 된 어셈블리<br />3. 응용 프로그램의 bin 디렉터리에 있는 어셈블리입니다.<br /><br /> 파일이 이러한 위치 중 하나에 없으면 예외가 throw됩니다. **참고:**  와일드 카드 (*)를 사용 하는 경우 Entity Framework은 올바른 이름의 리소스에 대 한 모든 어셈블리를 확인 해야 합니다. 성능을 향상시키려면 와일드카드 대신 어셈블리 이름을 지정합니다.|
 |`resourceName`|포함 된 리소스의 이름 (예: Adventureworksmodel.edmx)입니다. 메타데이터 서비스는 확장명이 .csdl, .ssdl 또는 .msl 중 하나인 파일 또는 리소스만 찾습니다. `resourceName`을 지정하지 않으면 모든 메타데이터 리소스가 로드됩니다. 리소스 이름은 어셈블리 내에서 고유해야 합니다. 같은 이름을 가진 여러 파일이 어셈블리의 서로 다른 디렉터리에 정의되어 있으면 `resourceName`에서 리소스 이름 앞에 폴더 구조가 포함되어야 합니다(예: FolderName.FileName.csdl).<br /><br /> `resourceName`에 와일드카드(*)를 지정한 경우에는 `assemblyFullName`이 필요하지 않습니다.|
@@ -93,7 +93,7 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>&#124;DataDirectory&#124; 대체 문자열 및 웹 응용 프로그램 루트 연산자 (~) 지원
 
-`DataDirectory`및 ~ 연산자는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 및 키워드의 일부로에서 사용 됩니다 `Metadata` `Provider Connection String` . <xref:System.Data.EntityClient.EntityConnection>은 `DataDirectory` 및 ~ 연산자를 각각 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 및 저장소 공급자에 전달합니다.
+`DataDirectory` 및 ~ 연산자는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 및 키워드의 일부로에서 사용 됩니다 `Metadata` `Provider Connection String` . <xref:System.Data.EntityClient.EntityConnection>은 `DataDirectory` 및 ~ 연산자를 각각 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 및 저장소 공급자에 전달합니다.
 
 |용어|Description|
 |----------|-----------------|
@@ -108,9 +108,9 @@ Metadata=.\
 
 `DataDirectory` 대체 문자열 및 ~ 연산자 확인은 비재귀적입니다. 예를 들어 `DataDirectory`에 `~` 문자가 포함되어 있으면 예외가 발생합니다. 이 동작은 무한 재귀를 방지합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 공급자 작업](working-with-data-providers.md)
 - [배포 고려 사항](deployment-considerations.md)
-- [연결 및 트랜잭션 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [연결 및 트랜잭션 관리](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [연결 문자열](../connection-strings.md)

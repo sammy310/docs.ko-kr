@@ -3,12 +3,12 @@ title: WCF 서비스 게시
 description: WCF 서비스 게시를 사용 하면 테스트 목적으로 응용 프로그램을 프로덕션 환경에 배포할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 99798b75e1dc01c8db361f4d8d1f162c7f7617b1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245676"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544572"
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
 
@@ -22,7 +22,7 @@ WCF 서비스 게시는 WCF 서비스 라이브러리 템플릿 집합에서 만
 
 - 배포 서비스 라이브러리
 
-**파일**  >  **새로 만들기 프로젝트** > [**Visual Basic** 또는 **Visual c #**] > **WCF**를 선택 하 여 이러한 서비스 템플릿을 찾을 수 있습니다. WCF Workflow Service 응용 프로그램 및 WCF 서비스 응용 프로그램을 포함 하 여이 위치에 있는 다른 WCF 템플릿의 경우, [웹 응용 프로그램에 대해 한 번 클릭 게시](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))를 사용 하 여 게시할 수 있습니다.
+**파일**  >  **새로 만들기 프로젝트** > [**Visual Basic** 또는 **Visual c #**] > **WCF**를 선택 하 여 이러한 서비스 템플릿을 찾을 수 있습니다. WCF Workflow Service 응용 프로그램 및 WCF 서비스 응용 프로그램을 포함 하 여이 위치에 있는 다른 WCF 템플릿의 경우, [웹 응용 프로그램에 대해 한 번 클릭 게시](/previous-versions/aspnet/dd465337(v=vs.110))를 사용 하 여 게시할 수 있습니다.
 
 다음과 같은 대상 위치에 서비스를 게시할 수 있습니다.
 
@@ -69,12 +69,12 @@ WCF 서비스 게시는 WCF 서비스 라이브러리 템플릿 집합에서 만
 - `<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>HTTP가 아닌 바인딩을 사용하여 WCF 서비스를 IIS에 게시
- IIS 7.0 이상을 사용 하는 경우 HTTP가 아닌 바인딩을 사용 하 여 WCF 서비스를 IIS에 게시할 수 있습니다. 몇 가지 사전 구성 작업을 수행해야 합니다. 자세한 내용은 [Windows Process Activation Service에서 호스팅](./feature-details/hosting-in-windows-process-activation-service.md)항목을 참조 하세요.
+ IIS 7.0 이상을 사용 하는 경우 HTTP가 아닌 바인딩을 사용 하 여 WCF 서비스를 IIS에 게시할 수 있습니다. 몇 가지 사전 구성 작업을 수행해야 합니다. 자세한 내용은  [Windows Process Activation Service에서 호스팅](./feature-details/hosting-in-windows-process-activation-service.md)항목을 참조 하세요.
 
 ## <a name="security"></a>보안
  IIS는 관리자 계정으로 실행해야 하므로 로컬 IIS에 게시하려면 관리자 권한이 필요합니다. 관리자 권한이 없는 사용자가 WCF 서비스 게시를 열면 IIS를 대상 위치로 사용할 수 없습니다. 파일 시스템 또는 FTP 사이트에 대 한 게시는 관리자 권한 없이 작동 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF Visual Studio 템플릿](wcf-vs-templates.md)
 - [WCF 서비스 호스트(WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

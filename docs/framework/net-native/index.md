@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128383"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543935"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET 네이티브로 앱 컴파일
 
@@ -38,7 +38,7 @@ ms.locfileid: "73128383"
 - 최적화 된 앱 메모리 사용량입니다.
 
 > [!IMPORTANT]
-> 대부분의 앱 및 시나리오에서 .NET 네이티브는 IL 또는 NGEN 이미지로 컴파일된 앱에 비해 훨씬 빠른 시작 시간 및 뛰어난 성능을 제공 합니다. 그러나 결과가 다를 수 있습니다. 앱이 .NET 네이티브의 성능 향상으로 인 한 혜택을 보장 하려면 해당 성능과 앱의 non-.NET 네이티브 버전을 비교 해야 합니다. 자세한 내용은 [성능 세션 개요](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)를 참조 하세요.
+> 대부분의 앱 및 시나리오에서 .NET 네이티브는 IL 또는 NGEN 이미지로 컴파일된 앱에 비해 훨씬 빠른 시작 시간 및 뛰어난 성능을 제공 합니다. 그러나 결과가 다를 수 있습니다. 앱이 .NET 네이티브의 성능 향상으로 인 한 혜택을 보장 하려면 해당 성능과 앱의 non-.NET 네이티브 버전을 비교 해야 합니다. 자세한 내용은 [성능 세션 개요](/visualstudio/profiling/performance-session-overview)를 참조 하세요.
 
 하지만 .NET 네이티브에는 네이티브 코드에 대 한 컴파일 이상의 작업이 포함 됩니다. .NET Framework 앱 빌드 및 실행 방식도 바뀝니다. 특히 다음 사항에 주의하십시오.
 

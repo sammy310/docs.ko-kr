@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595148"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546317"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
 이 섹션의 항목에서는 WCF (Windows Communication Foundation) 보안 기능 및 이러한 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.  
   
- Windows Server AppFabric 및 보안에 대 한 자세한 내용은 [Windows Server Appfabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) 을 참조 하세요.  
+ Windows Server AppFabric 및 보안에 대 한 자세한 내용은 [Windows Server Appfabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10)) 을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [보안 개요](security-overview.md)  
@@ -69,6 +69,6 @@ ms.locfileid: "84595148"
   
  [개념적 개요](../conceptual-overview.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 구성](../diagnostics/configuring-your-application.md)

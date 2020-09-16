@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395907"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541215"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측정 하는 데 도움이 되는 다양 한 성능 카운터 집합을 포함 합니다.  
@@ -33,7 +33,7 @@ WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측�
   
 - Off: ServiceModel* 성능 카운터가 비활성화됩니다.  
   
- 모든 WCF 응용 프로그램에 대해 성능 카운터를 사용 하도록 설정 하려면 machine.config 파일에 구성 설정을 저장 합니다.  컴퓨터에서 성능 카운터에 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래의 **성능 카운터에 대 한 메모리 크기를 늘립니다** . 섹션을 참조 하세요.  
+ 모든 WCF 응용 프로그램에 대해 성능 카운터를 사용 하도록 설정 하려는 경우 Machine.config 파일에 구성 설정을 저장할 수 있습니다.  컴퓨터에서 성능 카운터에 충분 한 메모리를 구성 하는 방법에 대 한 자세한 내용은 아래의 **성능 카운터에 대 한 메모리 크기를 늘립니다** . 섹션을 참조 하세요.  
   
  사용자 지정 작업 호출자와 같은 WCF 확장성 요소를 사용 하는 경우 사용자 고유의 성능 카운터도 내보내야 합니다. 이는 확장성 지점을 구현 하는 경우 WCF가 더 이상 기본 경로에서 표준 성능 카운터 데이터를 내보내지 않을 수 있기 때문입니다. 수동 성능 카운터 지원을 구현하지 않으면 예상하는 성능 카운터 데이터가 표시되지 않을 수 있습니다.  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>성능 데이터 보기  
- 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작**으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에 `perfmon.exe`를 입력 하 여이 도구를 시작할 수 있습니다.  
+ 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작**으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에를 입력 하 여이 도구를 시작할 수 있습니다 `perfmon.exe` .  
   
 > [!NOTE]
 > 엔드포인트 디스패처가 마지막 메시지를 처리하기 이전에 성능 카운터 인스턴스가 해제될 수 있습니다. 그러면 일부 메시지에 대한 성능 데이터가 캡처되지 않습니다.  
@@ -121,14 +121,14 @@ config.Save();
 
 WCF 성능 카운터에 프로그래밍 방식으로 액세스할 수 있도록 여러 파일이 SDK 설치 폴더에 설치 됩니다. 이러한 파일은 다음과 같이 나열 됩니다.
   
-- *\_ServiceModelEndpointPerfCounters vrg*
-- *\_ServiceModelOperationPerfCounters vrg*
-- *\_ServiceModelServicePerfCounters vrg*  
-- *\_SMSvcHostPerfCounters vrg*
-- *\_TransactionBridgePerfCounters vrg*
+- *\_ServiceModelEndpointPerfCounters. vrg*
+- *\_ServiceModelOperationPerfCounters. vrg*
+- *\_ServiceModelServicePerfCounters. vrg*  
+- *\_SMSvcHostPerfCounters. vrg*
+- *\_TransactionBridgePerfCounters. vrg*
   
-프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))를 참조 하세요.
+프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))를 참조 하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리 및 진단](../index.md)

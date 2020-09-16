@@ -2,18 +2,18 @@
 title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5bcd37a654db35ba6e8af1b15d6c132a090b0579
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837690"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547755"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 
 이 항목에서는 프로그래밍 방식과 구성 파일을 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하도록 SQL 워크플로 인스턴스 저장소 기능을 구성하는 방법을 설명합니다.
 
-Windows Server AppFabric은 지속성의 구성 프로세스를 단순화합니다. 자세한 내용은 [App Fabric 지 속성 구성](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10))을 참조 하세요.
+Windows Server AppFabric은 지속성의 구성 프로세스를 단순화합니다. 자세한 내용은 [App Fabric 지 속성 구성](/previous-versions/appfabric/ee790848(v=azure.10))을 참조 하세요.
 
 SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능에서 워크플로 인스턴스를 유지하는 데 사용할 데이터베이스를 만들어야 합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 설치 프로그램에서는 SQL 워크플로 인스턴스 저장소 기능과 관련된 SQL 스크립트 파일을 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 폴더에 복사합니다. SQL 워크플로 인스턴스 저장소에서 워크플로 인스턴스를 유지하는 데 사용할 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 대해 이 스크립트 파일을 실행합니다. SqlWorkflowInstanceStoreSchema.sql 파일을 먼저 실행한 다음 SqlWorkflowInstanceStoreLogic.sql 파일을 실행합니다.
 
@@ -36,7 +36,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>자체 호스팅 워크플로에 지속성을 사용하려면
 
-1. DurableInstancing에 대 한 참조를 추가 합니다.
+1. System.Activities.DurableInstancing.dll에 대 한 참조를 추가 합니다.
 
 2. 소스 파일 맨 위의 기존 "using" 문 뒤에 다음 문을 추가합니다.
 
@@ -126,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 구성 파일을 통해 자체 호스팅 또는 WAS(Windows Process Activation Service) 호스팅 워크플로 서비스에 지속성을 사용할 수 있습니다. WAS 호스팅 워크플로 서비스는 자체 호스팅 워크플로 서비스와 마찬가지로 WorkflowServiceHost를 사용합니다.
 
-`SqlWorkflowInstanceStoreBehavior`는 XML 구성을 통해 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 속성을 편리 하 게 변경할 수 있도록 하는 서비스 동작입니다. WAS 호스팅 워크플로 서비스에는 Web.config 파일을 사용합니다. 다음 구성 예제에서는 구성 파일에서 `sqlWorkflowInstanceStore` 동작 요소를 사용하여 SQL 워크플로 인스턴스 저장소를 구성하는 방법을 보여 줍니다.
+`SqlWorkflowInstanceStoreBehavior`XML 구성을 통해 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 속성을 편리 하 게 변경할 수 있도록 하는 서비스 동작입니다. WAS 호스팅 워크플로 서비스에는 Web.config 파일을 사용합니다. 다음 구성 예제에서는 구성 파일에서 `sqlWorkflowInstanceStore` 동작 요소를 사용하여 SQL 워크플로 인스턴스 저장소를 구성하는 방법을 보여 줍니다.
 
 ```xml
 <serviceBehaviors>
@@ -152,13 +152,13 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> Web.config 파일에는 사용자 이름 및 암호와 같은 중요한 정보를 저장하지 않는 것이 좋습니다. Web.config 파일에 중요한 정보를 저장하는 경우 파일 시스템 ACL(액세스 제어 목록)을 사용하여 Web.config 파일에 대한 액세스를 보호해야 합니다. 또한 [보호 된 구성을 사용 하 여 구성 정보 암호화](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))에 설명 된 대로 구성 파일 내에서 구성 값을 보호할 수도 있습니다.
+> Web.config 파일에는 사용자 이름 및 암호와 같은 중요한 정보를 저장하지 않는 것이 좋습니다. Web.config 파일에 중요한 정보를 저장하는 경우 파일 시스템 ACL(액세스 제어 목록)을 사용하여 Web.config 파일에 대한 액세스를 보호해야 합니다. 또한 [보호 된 구성을 사용 하 여 구성 정보 암호화](/previous-versions/aspnet/53tyfkaw(v=vs.100))에 설명 된 대로 구성 파일 내에서 구성 값을 보호할 수도 있습니다.
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL 워크플로 인스턴스 저장소 기능과 관련된 Machine.config 요소
 
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 설치하면 SQL 워크플로 인스턴스 저장소 기능과 관련된 다음 요소가 Machine.config 파일에 추가됩니다.
 
-- 구성 파일에서 \<sqlWorkflowInstanceStore > 서비스 동작 요소를 사용 하 여 서비스에 대 한 지 속성을 구성할 수 있도록 Machine.config 파일에 다음 동작 확장 요소를 추가 합니다.
+- \<sqlWorkflowInstanceStore>구성 파일의 서비스 동작 요소를 사용 하 여 서비스에 대 한 지 속성을 구성할 수 있도록 Machine.config 파일에 다음 동작 확장 요소를 추가 합니다.
 
     ```xml
     <configuration>

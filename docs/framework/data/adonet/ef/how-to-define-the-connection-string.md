@@ -2,19 +2,19 @@
 title: '방법: 연결 문자열 정의'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: e5b675a50f883825cce97275048447b79b64cc97
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b029644e0d4e4c7467fbe1e1144579e6edb3478
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150573"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536212"
 ---
 # <a name="how-to-define-the-connection-string"></a>방법: 연결 문자열 정의
 
-이 항목에서는 개념적 모델에 연결할 때 사용하는 연결 문자열을 정의하는 방법을 설명합니다. 이 항목은 [어드벤처웍스 세일즈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) 컨셉 모델을 기반으로 합니다. AdventureWorks 영업 모델은 엔터티 프레임워크 설명서의 작업 관련 항목 전체에서 사용됩니다. 이 항목에서는 엔터티 프레임워크를 이미 구성하고 AdventureWorks 영업 모델을 정의했다고 가정합니다. 자세한 내용은 [방법: 모델 및 매핑 파일 수동으로 정의](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))하는 방법을 참조 하십시오. 이 항목의 절차는 [엔터티 프레임워크 프로젝트를 수동으로 구성하는 방법에도](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))포함되어 있습니다.
+이 항목에서는 개념적 모델에 연결할 때 사용하는 연결 문자열을 정의하는 방법을 설명합니다. 이 항목은 [AdventureWorks Sales](/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) 개념적 모델을 기반으로 합니다. AdventureWorks Sales 모델은 Entity Framework 설명서의 작업 관련 항목 전체에서 사용 됩니다. 이 항목에서는 Entity Framework 이미 구성 되었으며 AdventureWorks Sales 모델을 정의한 것으로 가정 합니다. 자세한 내용은 [방법: 수동으로 모델 및 매핑 파일 정의](/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))를 참조 하세요. 이 항목의 절차는 [방법: Entity Framework 프로젝트 수동 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))에도 포함 되어 있습니다.
 
 > [!NOTE]
-> Visual Studio 프로젝트에서 엔터티 데이터 모델 마법사를 사용하는 경우 .edmx 파일이 자동으로 생성되고 엔터티 프레임워크를 사용하도록 프로젝트를 구성합니다. 자세한 내용은 [엔터티 데이터 모델 마법사를 사용하는 방법을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))참조하십시오.
+> Visual Studio 프로젝트에서 엔터티 데이터 모델 마법사를 사용 하는 경우 자동으로 .edmx 파일이 생성 되 고 Entity Framework을 사용 하도록 프로젝트가 구성 됩니다. 자세한 내용은 [방법: 엔터티 데이터 모델 마법사 사용](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))을 참조 하세요.
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Entity Framework 연결 문자열을 정의하려면
 
@@ -30,10 +30,10 @@ ms.locfileid: "79150573"
 </connectionStrings>
 ```
 
-프로젝트에 응용 프로그램 구성 파일이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가를** 선택하고 **일반** 범주를 선택한 다음 응용 프로그램 **구성 파일**을 선택한 다음 **추가를**클릭하여 추가할 수 있습니다.
+프로젝트에 응용 프로그램 구성 파일이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가** 를 선택 하 고 **일반** 범주를 선택한 다음 **응용 프로그램 구성 파일**을 선택 하 고 **추가**를 클릭 하 여 프로젝트를 추가할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [퀵 스타트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [방법: 새 .edmx 파일 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
-- [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [빠른 시작](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
+- [방법: 새 .edmx 파일 만들기](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

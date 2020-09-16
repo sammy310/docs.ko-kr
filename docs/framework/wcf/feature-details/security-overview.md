@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7dd73b755c7aed91a1fd59baaf9d5e090a36768
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600440"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541463"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 보안 개요
 WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼 이며, 클라이언트와 서비스 간의 메시지 보안은 데이터를 보호 하는 데 필요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대해 인식 되는 보안 표준을 기반으로 보안 메시지를 교환 하기 위한 다양 하 고 상호 운용할 수 있는 플랫폼을 제공 합니다.  
@@ -97,7 +97,7 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 ### <a name="auditing"></a>감사  
  *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 내용은 [방법: 보안 이벤트 감사](how-to-audit-wcf-security-events.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [서비스에 보안 설정](../securing-services.md)
@@ -113,4 +113,4 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 - [시스템 제공 바인딩](../system-provided-bindings.md)
 - [엔드포인트 만들기 개요](../endpoint-creation-overview.md)
 - [보안 확장](../extending/extending-security.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

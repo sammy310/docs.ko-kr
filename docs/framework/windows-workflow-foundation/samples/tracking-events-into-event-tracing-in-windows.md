@@ -2,12 +2,12 @@
 title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4350287aedae73a7ca9556de7ae3f597950e32ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144892"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549616"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 
@@ -51,7 +51,7 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 
 4. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트를 엽니다.
 
-    WCF 테스트 클라이언트 (Wcftestclient.exe)는 \<Visual Studio 2010 installation folder> \Common7\IDE\ 폴더에 있습니다.
+    WCF 테스트 클라이언트 (WcfTestClient.exe)는 \Common7\IDE\ 폴더에 있습니다 \<Visual Studio 2010 installation folder> .
 
     기본 Visual Studio 2010 설치 폴더는 C:\Program Files\Microsoft Visual Studio 10.0입니다.
 
@@ -151,6 +151,6 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

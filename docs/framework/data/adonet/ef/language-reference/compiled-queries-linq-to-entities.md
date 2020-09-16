@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207911"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541137"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>컴파일된 쿼리 (LINQ to Entities)
 
@@ -18,7 +18,7 @@ ms.locfileid: "83207911"
   
  .NET Framework 4.5부터 LINQ 쿼리가 자동으로 캐시 됩니다. 그러나, 여전히 컴파일된 LINQ 쿼리를 사용하여 나중에 실행할 때 이러한 비용을 줄일 수 있으며 컴파일된 쿼리는 자동으로 캐시되는 LINQ 쿼리에서보다 효율적으로 작동합니다. 메모리 내 컬렉션에 연산자를 적용 하는 LINQ to Entities 쿼리 `Enumerable.Contains` 는 자동으로 캐시 되지 않습니다. 또한 컴파일된 LINQ 쿼리에서 메모리 내 컬렉션을 매개 변수화 할 수 없습니다.  
   
- <xref:System.Data.Objects.CompiledQuery> 클래스는 쿼리를 재사용할 수 있도록 컴파일하고 캐시합니다. 개념상 이 클래스에는 다수의 오버로드가 있는 <xref:System.Data.Objects.CompiledQuery>의 `Compile` 메서드가 포함됩니다. 이 `Compile` 메서드를 호출하여 컴파일된 쿼리를 나타내는 새 대리자를 만듭니다. `Compile` 및 매개 변수 값과 함께 제공된 <xref:System.Data.Objects.ObjectContext> 메서드는 <xref:System.Linq.IQueryable%601> 인스턴스와 같이 결과를 생성하는 대리자를 반환합니다. 쿼리는 첫 번째 실행 중에만 한 번 컴파일됩니다. 컴파일 시에 쿼리에 대해 설정된 병합 옵션은 나중에 변경할 수 없습니다. 쿼리가 컴파일되면 기본 형식의 매개 변수만 제공할 수 있지만 생성 된 SQL을 변경 하는 쿼리의 일부는 바꿀 수 없습니다. 자세한 내용은 [EF Merge 옵션 및 컴파일된 쿼리](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)를 참조 하세요.
+ <xref:System.Data.Objects.CompiledQuery> 클래스는 쿼리를 재사용할 수 있도록 컴파일하고 캐시합니다. 개념상 이 클래스에는 다수의 오버로드가 있는 <xref:System.Data.Objects.CompiledQuery>의 `Compile` 메서드가 포함됩니다. 이 `Compile` 메서드를 호출하여 컴파일된 쿼리를 나타내는 새 대리자를 만듭니다. `Compile` 및 매개 변수 값과 함께 제공된 <xref:System.Data.Objects.ObjectContext> 메서드는 <xref:System.Linq.IQueryable%601> 인스턴스와 같이 결과를 생성하는 대리자를 반환합니다. 쿼리는 첫 번째 실행 중에만 한 번 컴파일됩니다. 컴파일 시에 쿼리에 대해 설정된 병합 옵션은 나중에 변경할 수 없습니다. 쿼리가 컴파일되면 기본 형식의 매개 변수만 제공할 수 있지만 생성 된 SQL을 변경 하는 쿼리의 일부는 바꿀 수 없습니다. 자세한 내용은 [EF Merge 옵션 및 컴파일된 쿼리](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)를 참조 하세요.
   
  의 메서드가 컴파일하는 LINQ to Entities 쿼리 <xref:System.Data.Objects.CompiledQuery> 식은 `Compile` 와 같은 제네릭 대리자 중 하나로 표시 됩니다 `Func` <xref:System.Func%605> . 쿼리 식은 최대로 `ObjectContext` 매개 변수 1개, 반환 매개 변수 1개 및 쿼리 매개 변수 16개를 캡슐화할 수 있습니다. 쿼리 매개 변수가 17개 이상 필요한 경우 속성으로 쿼리 매개 변수를 나타내는 구조를 만들 수 있습니다. 속성을 설정한 후 쿼리 식에서 구조의 속성을 사용할 수 있습니다.  
   
@@ -69,8 +69,8 @@ ms.locfileid: "83207911"
  [!code-csharp[DP L2E Conceptual Examples - MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples - MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [EF 병합 옵션 및 컴파일된 쿼리](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF 병합 옵션 및 컴파일된 쿼리](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

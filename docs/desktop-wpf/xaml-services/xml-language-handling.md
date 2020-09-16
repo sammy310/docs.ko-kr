@@ -7,16 +7,16 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: b5a06adbb7cb874bc09899118f13b91fbec7a85e
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 92d1eda62ff394df54d9607bab46d9950681e603
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432709"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548210"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML의 xml:lang 처리
 
-특성은 `xml:lang` XML의 요소에 대한 언어 및 문화문화 정보를 선언하는 XML 정의 특성입니다. XAML을 사용해도 특성의 의미가 동일하게 유지되지만, 일부 추가적인 고려 사항이 적용됩니다.
+`xml:lang`특성은 xml의 요소에 대 한 언어 및 문화권 정보를 선언 하는 xml로 정의 된 특성입니다. XAML을 사용해도 특성의 의미가 동일하게 유지되지만, 일부 추가적인 고려 사항이 적용됩니다.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -32,13 +32,13 @@ ms.locfileid: "81432709"
 
 ## <a name="remarks"></a>설명
 
-속성에 `xml:lang` 대한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 정의는 XML에 `xml:lang` 대한 W3C(월드 와이드 웹 컨소시엄)에서 "특수 특성"으로 정의된 것으로부터 파생됩니다. 언어 및 문화권 정보는 구현에 따라 요소에서 다양한 방법으로 처리될 수 있습니다. 하지만 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 특성의 기본 `xml:lang` 처리는 없습니다.
+의 특성에 대 한 정의는 `xml:lang` [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] `xml:lang` W3C (WORLD WIDE WEB 컨소시엄) for XML에서 "특수 특성"으로 정의 된 대로에서 파생 됩니다. 언어 및 문화권 정보는 구현에 따라 요소에서 다양한 방법으로 처리될 수 있습니다. 하지만 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 특성의 기본 `xml:lang` 처리는 없습니다.
 
 `xml:lang` 특성의 기본값은 이 특성 수준의 빈 문자열입니다.
 
 `xml:lang` 특성 효과 및 특성의 값은 일반적으로 `xml:lang` 값에 영향을 주는 시스템에서 해석될 때 자식 요소에 지속됩니다.
 
-.NET XAML 서비스의 XAML 작성자가 `xml:lang` 해석할 <xref:System.Windows.Markup.XmlLanguage> 때 <xref:System.Globalization.CultureInfo> 값은 기본 개체 표현에서 만들거나 개체를 만들 수 있습니다. 그러나 해당 동작은 지정된 `xml:lang` 값이 해당 클래스에 대한 유효한 구성인지 여부에 따라 달라집니다.
+.NET XAML 서비스의 XAML 작성기로 해석 되 면 `xml:lang` 값은 <xref:System.Windows.Markup.XmlLanguage> 또는 개체를 <xref:System.Globalization.CultureInfo> 기본 개체 표현으로 생성할 수 있습니다. 그러나이 동작은에 지정 된 값 `xml:lang` 이 해당 클래스에 대해 유효한 생성 인지에 따라 달라 집니다.
 
 프레임워크는 `xml:lang` 를 속성에 적용하여 프레임워크에서 정의된 속성과 <xref:System.Windows.Markup.XmlLangPropertyAttribute> 의 의미 사이에 연결을 XML 형식으로 만들 수 있습니다.
 
@@ -48,4 +48,4 @@ ms.locfileid: "81432709"
 
 ## <a name="see-also"></a>참조
 
-- [WPF의 전역화](../../framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF의 전역화](/dotnet/desktop/wpf/advanced/globalization-for-wpf)

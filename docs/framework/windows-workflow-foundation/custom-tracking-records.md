@@ -2,12 +2,12 @@
 title: 사용자 지정 추적 레코드
 ms.date: 03/30/2017
 ms.assetid: 24284565-c68b-40bf-b7f1-e148d151a6fc
-ms.openlocfilehash: 986f0350c24414d0ff960474445adf6ac3f39734
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: e0bbb9d57290b072d834f0b8bc0815dfe265e72a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802624"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543903"
 ---
 # <a name="custom-tracking-records"></a>사용자 지정 추적 레코드
 
@@ -31,5 +31,5 @@ protected override void Execute(CodeActivityContext context)
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric을 사용 하 여 응용 프로그램 모니터링](/previous-versions/appfabric/ee677276(v=azure.10))

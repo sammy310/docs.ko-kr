@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 27f2b7d3146199f1c3e9a228202618c992e2a1ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd3156e0fa8ea976d2297ffc0767cd948c9c96b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601363"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550484"
 ---
 # <a name="access-control-mechanisms"></a>Access Control 메커니즘
 WCF (Windows Communication Foundation)를 사용 하 여 여러 방법으로 액세스를 제어할 수 있습니다. 이 항목에서는 여러 메커니즘에 대해 간략하게 설명하고 올바른 메커니즘을 선택하여 사용하도록 각 메커니즘을 사용하는 시기에 대해 설명합니다. 액세스 기술은 복잡성 순서대로 나열되어 있습니다. <xref:System.Security.Permissions.PrincipalPermissionAttribute>가 가장 단순하며 ID 모델이 가장 복잡합니다.  
@@ -46,7 +46,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 여러 방법으로 액
   
  기존 AzMan 설치에 대 한 액세스 권한이 이미 있는 경우 AzMan 및 ASP.NET 역할 공급자를 사용 하 고, AzMan/role 공급자 조합의 기능을 사용 하 여 서비스 사용자에 게 권한을 부여할 수도 있습니다.  
   
- AzMan 및 ASP.NET 역할 공급자에 대 한 자세한 내용은 [How to: Use Authorization Manager (AzMan) with ASP.NET 2.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))을 참조 하십시오. AzMan 및 WCF 서비스의 역할 공급자를 사용 하는 방법에 대 한 자세한 내용은 [방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)을 참조 하세요.  
+ AzMan 및 ASP.NET 역할 공급자에 대 한 자세한 내용은 [How to: Use Authorization Manager (AzMan) with ASP.NET 2.0](/previous-versions/msp-n-p/ff649313(v=pandp.10))을 참조 하십시오. AzMan 및 WCF 서비스의 역할 공급자를 사용 하는 방법에 대 한 자세한 내용은 [방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)을 참조 하세요.  
   
 ## <a name="identity-model"></a>ID 모델  
  ID 모델은 클라이언트에 권한을 부여하는 클레임 및 정책을 관리할 수 있는 API의 집합입니다. ID 모델을 사용하면 호출자가 서비스에서 자신을 인증하고, 클레임을 서비스의 정책 집합과 비교하고, 비교를 바탕으로 액세스 권한을 부여하거나 거부하는 데 사용한 자격 증명에 포함된 모든 클레임을 조사할 수 있습니다.  
@@ -57,7 +57,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 여러 방법으로 액
   
  Id 모델에 대 한 자세한 내용은 [Id 모델을 사용 하 여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)

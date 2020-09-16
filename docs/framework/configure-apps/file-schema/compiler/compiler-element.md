@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 46676f25597f85596598d6f67c98930971cb0447
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0abbe594754cbd70ec4732a1e7ef98e8e88bf167
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088051"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544754"
 ---
 # <a name="compiler-element"></a>\<compiler> 요소
 
@@ -44,7 +44,7 @@ ms.locfileid: "74088051"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`compilerOptions`|선택적 특성입니다.<br /><br /> 컴파일에 사용할 추가 컴파일러 관련 인수를 지정 합니다. 특성 값은 `compilerOptions` 일반적으로 컴파일러에 대 한 컴파일러 옵션 항목에 나열 됩니다.|
 |`extension`|필수 특성입니다.<br /><br /> 언어 공급자의 소스 파일에 사용 되는 파일 이름 확장명을 세미콜론으로 구분한 목록을 제공 합니다. 예를 들어, ".cs"입니다.|
@@ -54,17 +54,17 @@ ms.locfileid: "74088051"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
-|[\<providerOption>요소인](provideroption-element.md)|언어 공급자에 대 한 컴파일러 버전 특성을 지정 합니다.|
+|[\<providerOption> 요소](provideroption-element.md)|언어 공급자에 대 한 컴파일러 버전 특성을 지정 합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
-|[\<configuration>요소인](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
-|[\<system.codedom>요소인](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|
-|[\<compilers>요소인](compilers-element.md)|컴파일러 구성 요소에 대 한 컨테이너입니다. 0 개 이상의 `<compiler>` 요소를 포함 합니다.|
+|[\<configuration> 요소](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
+|[\<system.codedom> 요소](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|
+|[\<compilers> 요소](compilers-element.md)|컴파일러 구성 요소에 대 한 컨테이너입니다. 0 개 이상의 `<compiler>` 요소를 포함 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -105,6 +105,6 @@ ms.locfileid: "74088051"
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [구성 파일 스키마](../index.md)
-- [\<compilers>요소인](compilers-element.md)
+- [\<compilers> 요소](compilers-element.md)
 - [정규화된 형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [compilation 요소의 compilers 요소에 대한 compiler 요소(ASP.NET 설정 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [compilation 요소의 compilers 요소에 대한 compiler 요소(ASP.NET 설정 스키마)](/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

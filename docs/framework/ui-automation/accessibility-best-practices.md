@@ -6,12 +6,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 2980881bbcd34ca82f6cca7723cf976e0890f463
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 1c01cfe8fdfb285ee5cbc586cc0c549365ef72ee
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557088"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543149"
 ---
 # <a name="accessibility-best-practices"></a>접근성 모범 사례
 
@@ -132,8 +132,8 @@ ms.locfileid: "87557088"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>디바이스 독립적 호출을 통해 표준 입력 API 사용  
  장치 독립적 호출을 사용 하면 키보드와 마우스 기능이 동일 하 게 유지 되 고 UI에 대 한 필요한 정보를 보조 기술에 제공 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.Peers>
-- [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
-- [키보드 사용자 인터페이스 디자인에 대한 지침](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+- [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [키보드 사용자 인터페이스 디자인에 대한 지침](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

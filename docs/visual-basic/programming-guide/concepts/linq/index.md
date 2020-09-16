@@ -2,12 +2,12 @@
 title: LINQ(Language-Integrated Query)
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 62b07043bd6148d8ec9aeaaf45ee1adb108d2c6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397598"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549944"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ(Language-Integrated Query)(Visual Basic)
 LINQ는 강력한 쿼리 기능을 Visual Basic 언어 구문으로 확장하는 기능 집합입니다. LINQ는 데이터 쿼리 및 업데이트를 위해 쉽게 배울 수 있는 표준 패턴을 제공하며 모든 종류의 데이터 저장소를 지원하도록 이 기술을 확장할 수 있습니다.  .NET Framework에는 .NET Framework 컬렉션, SQL Server 데이터베이스, ADO.NET 데이터 세트 및 XML 문서와 함께 LINQ를 사용할 수 있게 해주는 LINQ 공급자 어셈블리가 포함됩니다.  
@@ -28,7 +28,7 @@ LINQ는 강력한 쿼리 기능을 Visual Basic 언어 구문으로 확장하는
  [LINQ to Objects(Visual Basic)](linq-to-objects.md)  
  LINQ to Objects를 사용하여 메모리 내 데이터 구조에 액세스하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  
   
- [LINQ to XML(Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML(Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  DOM(문서 개체 모델)의 메모리 내 문서 수정 기능을 제공하고 LINQ 쿼리 식을 지원하는 LINQ to XML을 사용하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  
   
  [LINQ to ADO.NET(포털 페이지)](linq-to-adonet-portal-page.md)  

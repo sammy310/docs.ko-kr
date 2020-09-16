@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 2c3bb599b79575180eb2b0ec89453f01901f94c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 863986e94855e02e9fd04685f7dc3e8e7f7b1cc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396845"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548067"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>방법: Windows API 호출(Visual Basic)
 이 예제에서는 user32.dll에서 함수를 정의 하 고 호출한 `MessageBox` 다음 문자열을 전달 합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "84396845"
   
 - 포함하는 형식은 `CreateType`을 사용하여 이전에 만든 것입니다. (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [플랫폼 호출 자세히 보기](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [플랫폼 호출 예제](../../../framework/interop/platform-invoke-examples.md)
 - [관리되지 않는 DLL 함수 사용](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [리플렉션 내보내기를 사용하여 메서드 정의](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [리플렉션 내보내기를 사용하여 메서드 정의](/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [연습: Windows API 호출](walkthrough-calling-windows-apis.md)
 - [COM Interop](index.md)

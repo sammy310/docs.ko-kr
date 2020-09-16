@@ -3,12 +3,12 @@ title: WCF 서비스 호스트(WcfSvcHost.exe)
 description: WCF 서비스 호스트를 사용 하 여 구현한 서비스를 호스트 하 고 테스트 합니다. WCF 테스트 클라이언트 또는 자체 클라이언트를 사용 하 여 서비스를 테스트할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2ac1d6318d8a82a82c08f38305ee6f92ad3f52a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544598"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 서비스 호스트(WcfSvcHost.exe)
 
@@ -46,13 +46,13 @@ Wcf 서비스 호스트는 wcf 서비스 라이브러리, 순차 워크플로 �
 
 새 WCF 서비스 프로젝트를 만들고 F5 키를 눌러 디버거를 시작 하면 WCF 서비스 호스트는 프로젝트에서 발견 한 모든 서비스를 호스트 하기 시작 합니다. WCF 테스트 클라이언트는 구성 파일에 정의 된 서비스 끝점 목록을 자동으로 열고 표시 합니다. 주 창에서 매개 변수를 테스트하고 서비스를 호출할 수 있습니다.
 
-WCF 테스트 클라이언트가 사용 되는지 확인 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **프로젝트 시작** 을 클릭 하 고 다음이 **명령줄 인수** 대화 상자에 표시 되는지 확인 합니다.
+WCF 테스트 클라이언트가 사용 되는지 확인 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **프로젝트 시작** 을 클릭 하 고 **명령줄 인수** 대화 상자에 다음이 표시 되는지 확인 합니다.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>사용자 지정 클라이언트 사용
 
-사용자 지정 클라이언트를 사용 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. 다음 예제와 같이 **프로젝트 시작** 을 클릭 하 고 `/client` **명령줄 인수** 대화 상자에서 매개 변수를 편집 하 여 사용자 지정 클라이언트를 가리킵니다.
+사용자 지정 클라이언트를 사용 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. 다음 예제에 나와 있는 것 처럼 **프로젝트 시작** 을 클릭 하 고 `/client` **명령줄 인수** 대화 상자에서 매개 변수를 편집 하 여 사용자 지정 클라이언트를 가리킵니다.
 
 `/client:"path/CustomClient.exe"`
 
@@ -68,11 +68,11 @@ F5 키를 눌러 서비스를 다시 시작 하면 디버거를 시작할 때 WC
 
 #### <a name="specifying-no-client"></a>클라이언트 없음 지정
 
-WCF 서비스를 호스팅하는 후 클라이언트를 사용 하지 않도록 지정 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **프로젝트 시작** 을 클릭 하 고 **명령줄 인수** 대화 상자를 비워 둡니다.
+WCF 서비스를 호스팅하는 후에 클라이언트를 사용 하지 않도록 지정 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **프로젝트 시작** 을 클릭 하 고 **명령줄 인수** 대화 상자를 비워 둡니다.
 
 #### <a name="using-a-custom-host"></a>사용자 지정 호스트 사용
 
-사용자 지정 호스트를 사용 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **시작 외부 프로그램** 을 클릭 하 고 사용자 지정 호스트의 전체 경로를 입력 합니다. **명령줄 인수** 대화 상자를 사용 하 여 호스트에 전달할 인수를 지정할 수도 있습니다.
+사용자 지정 호스트를 사용 하려면 Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 **디버그** 탭을 선택 합니다. **시작 외부 프로그램** 을 클릭 하 고 사용자 지정 호스트에 대 한 전체 경로를 입력 합니다. **명령줄 인수** 대화 상자를 사용 하 여 호스트에 전달할 인수를 지정할 수도 있습니다.
 
 ## <a name="wcf-service-host-user-interface"></a>WCF 서비스 호스트 사용자 인터페이스
 
@@ -120,8 +120,8 @@ Visual Studio 내에서 F5 키를 눌러 WCF 서비스 호스트를 처음 호�
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-netsh.exe에 대 한 자세한 내용은 "[Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))"을 참조 하십시오.
+netsh.exe에 대 한 자세한 내용은 "[Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법](/previous-versions/tn-archive/bb490939(v=technet.10))"을 참조 하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 테스트 클라이언트(WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

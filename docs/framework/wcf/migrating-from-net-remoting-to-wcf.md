@@ -3,12 +3,12 @@ title: .NET Remoting에서 WCF로 마이그레이션
 description: .NET Remoting을 사용 하 여 WCF를 사용 하는 응용 프로그램을 마이그레이션하는 방법에 대해 알아봅니다. WCF에서 몇 가지 일반적인 원격 시나리오를 수행할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: f6f526db09806008314980b71233b208d25359fc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542852"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Remoting에서 WCF로 마이그레이션
 이 문서에서는 WCF(Windows Communication Foundation)를 사용하기 위해 .NET Remoting을 사용하는 애플리케이션을 마이그레이션하는 방법을 설명합니다. 이러한 제품 간의 비슷한 개념을 비교한 다음 WCF의 몇 가지 일반적인 Remoting 시나리오를 수행하는 방법을 설명합니다.  
@@ -56,7 +56,7 @@ Console.WriteLine("RemotingServer is running.  Press ENTER to terminate...");
 Console.ReadLine();  
 ```  
   
- Remoting 유형을 서버로 사용 가능하게 하는 방법은 구성 파일 사용을 비롯하여 여러 가지가 있습니다. 이것은 한 가지 예일 뿐입니다.  
+ Remoting 유형을 서버로 사용 가능하게 하는 방법은 구성 파일 사용을 비롯하여 여러 가지가 있습니다. 이는 단지 한 가지 예에 불과합니다.  
   
 #### <a name="creating-a-server-in-wcf"></a>WCF에서 서버 만들기  
  WCF의 해당 단계에서는 두 가지 유형, 즉 공용 "서비스 계약"과 구체적인 구현을 만듭니다. 첫 번째는 [ServiceContract]로 표시된 인터페이스로 선언됩니다. 클라이언트에 사용할 수 있는 메서드는 [OperationContract]로 표시됩니다.  
@@ -269,7 +269,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
  오류 계약에 대한 자세한 내용은 <xref:System.ServiceModel.FaultException>을 참조하세요.  
   
-### <a name="security-considerations"></a>보안 고려사항  
+### <a name="security-considerations"></a>보안 고려 사항  
   
 #### <a name="security-in-net-remoting"></a>.NET Remoting의 보안  
  일부.NET Remoting 채널에서는 채널 계층의 인증 및 암호화(IPC 및 TCP)와 같은 보안 기능을 지원합니다. HTTP 채널은 IIS(인터넷 정보 서비스)를 사용하여 인증과 암호화를 모두 수행합니다. 이와 같은 지원이 있어도, 보안되지 않은 통신 프로토콜에 대해 .NET Remoting을 고려하고 완전히 신뢰할 수 있는 환경에서만 사용해야 합니다. 공용 Remoting 엔드포인트를 인터넷이나 신뢰할 수 없는 클라이언트에 노출하지 마세요.  
@@ -285,7 +285,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Remoting에서 WCF로 마이그레이션하는 이유  
   
-- **.NET Remoting은 레거시 제품입니다.** [.Net Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)에 설명 된 것 처럼 레거시 제품으로 간주 되며 새로운 개발에는 권장 되지 않습니다. 신규 및 기존 애플리케이션에는 WCF 또는 ASP.NET Web API를 사용하는 것이 좋습니다.  
+- **.NET Remoting은 레거시 제품입니다.** [.Net Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))에 설명 된 것 처럼 레거시 제품으로 간주 되며 새로운 개발에는 권장 되지 않습니다. 신규 및 기존 애플리케이션에는 WCF 또는 ASP.NET Web API를 사용하는 것이 좋습니다.  
   
 - **WCF에서는 플랫폼 간 표준을 사용합니다.** WCF는 플랫폼 간 상호 운용성을 염두에 두고 설계되었으며, 많은 업계 표준(SOAP, WS-Security, WS-Trust 등)을 지원합니다. WCF 서비스는 Windows 이외의 운영 체제에서 실행되는 클라이언트와 상호 운용할 수 있습니다. Remoting은 기본적으로 서버 및 클라이언트 응용 프로그램이 Windows 운영 체제에서 .NET Framework를 사용 하 여 실행 되는 환경에 맞게 설계 되었습니다.
   

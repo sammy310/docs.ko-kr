@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244766"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545209"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 인증을 사용하는 전송 보안
 다음 시나리오에서는 Windows 보안에 의해 보호 되는 WCF (Windows Communication Foundation) 클라이언트 및 서비스를 보여 줍니다. 프로그래밍에 대 한 자세한 내용은 [방법: Windows 자격 증명을 사용 하 여 서비스 보호](../how-to-secure-a-service-with-windows-credentials.md)를 참조 하세요.  
@@ -25,8 +25,8 @@ ms.locfileid: "85244766"
 |보안 모드|전송|  
 |상호 운용성|WCF만|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예, Windows 통합 인증을 사용합니다.<br /><br /> 예, Windows 통합 인증을 사용합니다.|  
-|무결성|Yes|  
-|기밀성|Yes|  
+|무결성|예|  
+|기밀성|예|  
 |전송|NET.TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85244766"
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configuration  
+### <a name="configuration"></a>구성  
  다음 구성은 서비스 엔드포인트를 설정하는 데 코드 대신 사용할 수 있습니다.  
   
 ```xml  
@@ -74,7 +74,7 @@ ms.locfileid: "85244766"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>클라이언트  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "85244766"
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configuration  
+### <a name="configuration"></a>구성  
  다음 구성은 클라이언트를 만드는 데 코드 대신 사용할 수 있습니다.  
   
 ```xml  
@@ -118,8 +118,8 @@ ms.locfileid: "85244766"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안 개요](security-overview.md)
 - [방법: Windows 자격 증명을 사용하여 서비스 보호](../how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))
