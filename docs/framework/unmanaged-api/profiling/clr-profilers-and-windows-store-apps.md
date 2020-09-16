@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 6330a4c2733729da264065d1eec8c3c9eaf9f05c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501029"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553358"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -76,7 +76,7 @@ Windows RT 장치는 매우 잠금 상태입니다. 타사 프로파일러는 �
 
 다음 섹션에서 설명 하는 다양 한 시나리오에서 프로파일러 UI 데스크톱 응용 프로그램은 몇 가지 새로운 Windows 런타임 Api를 사용 해야 합니다. 데스크톱 응용 프로그램에서 사용할 수 있는 Windows 런타임 Api와 데스크톱 응용 프로그램 및 Windows 스토어 앱에서 호출 하는 경우 해당 동작이 다른 지를 이해 하려면 설명서를 참조 합니다.
 
-프로파일러 UI를 관리 코드로 작성 하는 경우 이러한 Windows 런타임 Api를 쉽게 사용 하기 위해 수행 해야 하는 몇 가지 단계가 있습니다. 자세한 내용은 [관리 되는 데스크톱 앱 및 Windows 런타임](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) 문서를 참조 하세요.
+프로파일러 UI를 관리 코드로 작성 하는 경우 이러한 Windows 런타임 Api를 쉽게 사용 하기 위해 수행 해야 하는 몇 가지 단계가 있습니다. 자세한 내용은 [관리 되는 데스크톱 앱 및 Windows 런타임](/previous-versions/windows/apps/jj856306(v=win.10)) 문서를 참조 하세요.
 
 ## <a name="loading-the-profiler-dll"></a>프로파일러 DLL 로드
 
@@ -94,11 +94,11 @@ Windows RT 장치는 매우 잠금 상태입니다. 타사 프로파일러는 �
 
 **프로파일러 DLL 서명**
 
-Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 이 작업을 수행하는 방법에는 다음 두 가지가 있습니다.
+Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.
 
 - 프로파일러 DLL이 서명 되었는지 확인 합니다.
 
-- 도구를 사용 하기 전에 Windows 8 컴퓨터에 개발자 라이선스를 설치 해야 한다는 사실을 사용자에 게 알려줍니다. 이 작업은 Visual Studio에서 자동으로 수행 하거나 명령 프롬프트에서 수동으로 수행할 수 있습니다. 자세한 내용은 [개발자 라이선스 가져오기](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))를 참조 하세요.
+- 도구를 사용 하기 전에 Windows 8 컴퓨터에 개발자 라이선스를 설치 해야 한다는 사실을 사용자에 게 알려줍니다. 이 작업은 Visual Studio에서 자동으로 수행 하거나 명령 프롬프트에서 수동으로 수행할 수 있습니다. 자세한 내용은 [개발자 라이선스 가져오기](/previous-versions/windows/apps/hh974578(v=win.10))를 참조 하세요.
 
 **파일 시스템 권한**
 
@@ -122,7 +122,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 먼저 시작할 Windows 스토어 앱을 프로파일러 사용자에 게 요청 하는 것이 좋습니다. 데스크톱 앱의 경우 파일 찾아보기 대화 상자를 표시 하 고 사용자가 .exe 파일을 찾아 선택 합니다. 그러나 Windows 스토어 앱은 서로 다르며 찾아보기 대화 상자를 사용 하는 것은 적합 하지 않습니다. 대신, 해당 사용자가 선택할 수 있도록 설치 된 Windows 스토어 앱 목록을 사용자에 게 표시 하는 것이 좋습니다.
 
-클래스를 사용 <xref:Windows.Management.Deployment.PackageManager> 하 여이 목록을 생성할 수 있습니다. `PackageManager`는 데스크톱 앱에서 사용할 수 있는 Windows 런타임 클래스 이며 실제로 데스크톱 응용 프로그램 *에서만* 사용할 수 있습니다.
+클래스를 사용 <xref:Windows.Management.Deployment.PackageManager> 하 여이 목록을 생성할 수 있습니다. `PackageManager` 는 데스크톱 앱에서 사용할 수 있는 Windows 런타임 클래스 이며 실제로 데스크톱 응용 프로그램 *에서만* 사용할 수 있습니다.
 
 C #에서 데스크톱 응용 프로그램으로 작성 된 가상 프로파일러 UI의 다음 코드 예제는를 사용 하 여 `PackageManager` Windows 앱 목록을 생성 합니다.
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 새 COM 인터페이스인 [Ipackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)를 사용 하면 일부 형식의 진단을 더 쉽게 수행할 수 있도록 Windows 스토어 앱의 실행 동작을 사용자 지정할 수 있습니다. 이러한 메서드 중 하나인 [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)을 사용 하면 자동 프로세스 일시 중단을 사용 하지 않도록 설정 하는 것과 같은 다른 유용한 효과와 함께 환경 블록이 시작 될 때 Windows 스토어 앱에 전달할 수 있습니다. 환경 블록은 `COR_PROFILER` `COR_ENABLE_PROFILING` CLR에서 `COR_PROFILER_PATH)` 프로파일러 DLL을 로드 하는 데 사용 하는 환경 변수 (, 및)를 지정 해야 하기 때문에 중요 합니다.
 
-다음 코드 조각을 참조하십시오.
+다음 코드 조각을 살펴봅니다.
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -147,9 +147,9 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 다음과 같은 몇 가지 항목을 받아야 합니다.
 
-- `packageFullName`패키지를 반복 하 고 가져오는 동안 확인할 수 있습니다 `package.Id.FullName` .
+- `packageFullName` 패키지를 반복 하 고 가져오는 동안 확인할 수 있습니다 `package.Id.FullName` .
 
-- `debuggerCommandLine`는 조금 더 흥미롭습니다. Windows 스토어 앱에 사용자 지정 환경 블록을 전달 하려면 간단 하 고 간단한 더미 디버거를 작성 해야 합니다. Windows에서 Windows 스토어 앱이 일시 중단 된 후 다음 예제와 같이 명령줄을 사용 하 여 디버거를 시작 하 여 디버거를 연결 합니다.
+- `debuggerCommandLine` 는 조금 더 흥미롭습니다. Windows 스토어 앱에 사용자 지정 환경 블록을 전달 하려면 간단 하 고 간단한 더미 디버거를 작성 해야 합니다. Windows에서 Windows 스토어 앱이 일시 중단 된 후 다음 예제와 같이 명령줄을 사용 하 여 디버거를 시작 하 여 디버거를 연결 합니다.
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
@@ -271,7 +271,7 @@ Windows API를 탐색할 때 모든 API는 데스크톱 앱, Windows 스토어 �
 
 ### <a name="reduced-permissions"></a>권한 감소
 
-Windows 스토어 앱 사용 권한이 데스크톱 앱과 다른 모든 방법을 나열 하기 위해이 항목의 범위를 벗어납니다. 그러나 프로파일러 DLL (데스크톱 앱과 비교 하 여 Windows 스토어 응용 프로그램에 로드 될 때)에서 모든 리소스에 액세스 하려고 시도 하는 경우에는 동작이 달라 집니다. 파일 시스템은 가장 일반적인 예입니다. 디스크에는 지정 된 Windows 스토어 앱에서 액세스할 수 있는 몇 가지 위치가 있습니다 ( [파일 액세스 및 사용 권한 (Windows 런타임 앱](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))) 참조). 프로파일러 DLL은 동일한 제한이 적용 됩니다. 코드를 철저히 테스트 합니다.
+Windows 스토어 앱 사용 권한이 데스크톱 앱과 다른 모든 방법을 나열 하기 위해이 항목의 범위를 벗어납니다. 그러나 프로파일러 DLL (데스크톱 앱과 비교 하 여 Windows 스토어 응용 프로그램에 로드 될 때)에서 모든 리소스에 액세스 하려고 시도 하는 경우에는 동작이 달라 집니다. 파일 시스템은 가장 일반적인 예입니다. 디스크에는 지정 된 Windows 스토어 앱에서 액세스할 수 있는 몇 가지 위치가 있습니다 ( [파일 액세스 및 사용 권한 (Windows 런타임 앱](/previous-versions/windows/apps/hh967755(v=win.10))) 참조). 프로파일러 DLL은 동일한 제한이 적용 됩니다. 코드를 철저히 테스트 합니다.
 
 ### <a name="inter-process-communication"></a>프로세스 간 통신
 
@@ -317,7 +317,7 @@ CreateEventEx(
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`는 Windows 스토어 앱의 AppContainer SID입니다. 이 항목의 이전 섹션에서는 현재 사용자에 대해 설치 된 패키지를 반복 하는 방법을 살펴보았습니다. 해당 샘플 코드에서 packageId를 가져올 수 있습니다. 그리고 packageId에서 다음과 유사한 코드를 사용 하 여을 가져올 수 있습니다 `<acSid>` .
+`<acSid>` 는 Windows 스토어 앱의 AppContainer SID입니다. 이 항목의 이전 섹션에서는 현재 사용자에 대해 설치 된 패키지를 반복 하는 방법을 살펴보았습니다. 해당 샘플 코드에서 packageId를 가져올 수 있습니다. 그리고 packageId에서 다음과 유사한 코드를 사용 하 여을 가져올 수 있습니다 `<acSid>` .
 
 ```csharp
 IntPtr acPSID;
@@ -378,11 +378,11 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 메모리 프로 파일링을 수행할 때 프로파일러 DLL은 일반적으로 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 메서드를 호출할 개별 스레드를 만듭니다. 새 항목이 아닙니다. 그러나 Windows 스토어 앱 내에서 가비지 컬렉션을 수행 하는 작업은 스레드를 관리 되는 스레드로 변환할 수 있습니다. 예를 들어 해당 스레드에 대 한 프로 파일링 API ThreadID가 만들어집니다.
 
-이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물에서 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 하는 [이유](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) 를 참조 하세요.
+이에 대 한 결과를 이해 하려면 CLR 프로 파일링 API에서 정의한 동기 호출과 비동기 호출 간의 차이점을 이해 하는 것이 중요 합니다. 이는 Windows 스토어 앱의 비동기 호출 개념과 매우 다릅니다. 자세한 내용은 블로그 게시물에서 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 하는 [이유](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) 를 참조 하세요.
 
 관련 점은 프로파일러에서 만든 스레드에 대해 수행 되는 호출은 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나를 구현 하는 외부에서 수행 되는 경우에도 항상 동기로 간주 됩니다. 이상 사용 되는 경우 이제 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md)를 호출 하 여 CLR에서 프로파일러의 스레드를 관리 되는 스레드로 전환 했으므로 해당 스레드는 더 이상 프로파일러의 스레드로 간주 되지 않습니다. 따라서 CLR은 해당 스레드에 대해 동기로 한정 되는 항목에 대 한 보다 엄격한 정의를 적용 합니다. 즉, 호출이 프로파일러 DLL의 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드 중 하나에서 시작 되어야 동기로 한정 됩니다.
 
-실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) 항목을 참조 하세요.
+실제로는 무엇을 의미 하나요? 대부분의 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드는 동기적으로 호출 되는 것이 안전 하며, 그렇지 않은 경우 즉시 실패 합니다. 따라서 프로파일러 DLL이 일반적으로 프로파일러 생성 스레드에 대해 수행 되는 다른 호출 (예: [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)또는 [Requestrevert](icorprofilerinfo4-requestrevert-method.md))에 대해 [forcegc 메서드](icorprofilerinfo-forcegc-method.md) 스레드를 다시 사용할 경우 문제가 발생할 수 있습니다. [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 와 같은 비동기 안전 함수에도 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. 자세한 내용은 블로그 게시물 [Profiler 스택 탐색: 기본 사항 및 이후](/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) 항목을 참조 하세요.
 
 따라서 프로파일러 DLL이 [Forcegc 메서드](icorprofilerinfo-forcegc-method.md) 를 호출 하는 데 사용 하는 모든 스레드는 gc를 트리거하는 목적 *으로만* 사용 되 고 gc 콜백에 응답 하는 것이 좋습니다. 스택 샘플링 또는 분리와 같은 다른 작업을 수행 하기 위해 프로 파일링 API를 호출 해서는 안 됩니다.
 
@@ -410,8 +410,8 @@ CLR 프로 파일링 API를 사용 하 여 Windows 스토어 응용 프로그램
 
 **Windows 스토어 앱**
 
-- [파일 액세스 및 사용 권한 (Windows 런타임 앱](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
+- [파일 액세스 및 사용 권한 (Windows 런타임 앱](/previous-versions/windows/apps/hh967755(v=win.10))
 
-- [개발자 라이선스 얻기](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
+- [개발자 라이선스 얻기](/previous-versions/windows/apps/hh974578(v=win.10))
 
 - [IPackageDebugSettings 인터페이스](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

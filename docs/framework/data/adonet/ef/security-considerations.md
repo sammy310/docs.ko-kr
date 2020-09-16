@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 90422ebd0f313bfa64b446159d27bcf44024f247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452489"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552273"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 Entity Framework 응용 프로그램 개발, 배포 및 실행과 관련 된 보안 고려 사항에 대해 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../security-overview.md)를 참조하세요.  
@@ -27,7 +27,7 @@ ms.locfileid: "77452489"
  로그온 작업 중에 사용자 암호를 기반으로 하는 정보가 기본 데이터 소스의 네트워크 라이브러리를 통해 서버로 전달됩니다. 악의적인 공급자가 사용자 자격 증명을 도용하거나, 악성 쿼리를 생성하거나, 결과 집합을 조작할 수 있습니다.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>연결을 암호화하여 중요한 데이터를 보호합니다.  
- Entity Framework는 데이터 암호화를 직접 처리 하지 않습니다. 사용자가 공용 네트워크를 통해 데이터에 액세스하는 경우 애플리케이션에서 데이터 소스에 대해 암호화된 연결을 설정하여 보안을 강화해야 합니다. 자세한 내용은 데이터 소스의 보안 관련 설명서를 참조하세요. SQL Server 데이터 원본에 대해서는 [SQL Server에 대 한 연결 암호화](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))를 참조 하세요.  
+ Entity Framework는 데이터 암호화를 직접 처리 하지 않습니다. 사용자가 공용 네트워크를 통해 데이터에 액세스하는 경우 애플리케이션에서 데이터 소스에 대해 암호화된 연결을 설정하여 보안을 강화해야 합니다. 자세한 내용은 데이터 소스의 보안 관련 설명서를 참조하세요. SQL Server 데이터 원본에 대해서는 [SQL Server에 대 한 연결 암호화](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))를 참조 하세요.  
   
 #### <a name="secure-the-connection-string"></a>연결 문자열을 보호합니다.  
  애플리케이션 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않거나 잘못 생성하면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 다음은 연결 문자열을 보호하기 위한 권장 방법입니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "77452489"
   
 - 보호되는 구성을 사용하여 구성 파일 섹션을 암호화합니다.  
   
-     ASP.NET에서는 구성 파일에서 중요한 정보를 암호화할 수 있도록 보호되는 구성이라는 기능을 제공합니다. 보호되는 구성은 원래 ASP.NET용으로 디자인된 것이지만 Windows 애플리케이션의 구성 파일 섹션을 암호화하는 데도 사용할 수 있습니다. 새 보호 된 구성 기능에 대 한 자세한 설명은 [보호 된 구성을 사용 하 여 구성 정보 암호화](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))를 참조 하세요.  
+     ASP.NET에서는 구성 파일에서 중요한 정보를 암호화할 수 있도록 보호되는 구성이라는 기능을 제공합니다. 보호되는 구성은 원래 ASP.NET용으로 디자인된 것이지만 Windows 애플리케이션의 구성 파일 섹션을 암호화하는 데도 사용할 수 있습니다. 새 보호 된 구성 기능에 대 한 자세한 설명은 [보호 된 구성을 사용 하 여 구성 정보 암호화](/previous-versions/aspnet/53tyfkaw(v=vs.100))를 참조 하세요.  
   
 - 보안 구성 파일에 연결 문자열을 저장합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "77452489"
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 인터페이스를 사용하여 예외를 serialize할 수 있는 <xref:System.Runtime.Serialization.ISerializable>  
   
-- 데이터베이스 연결을 열고 데이터베이스에 대해 명령을 실행할 수 있는 권한 (예: SQL Server 데이터베이스에 대 한 <xref:System.Data.SqlClient.SqlClientPermission>)  
+- 데이터베이스 연결을 열고 데이터베이스에 대해 명령을 실행할 수 있는 권한 (예: <xref:System.Data.SqlClient.SqlClientPermission> SQL Server 데이터베이스)  
   
  자세한 내용은 [Code Access Security and ADO.NET](../code-access-security.md)을 참조하세요.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "77452489"
  Entity Framework는 보안 권한을 적용 하지 않으며 신뢰할 수 있는지 여부에 관계 없이 프로세스에서 사용자가 제공한 데이터 개체 코드를 호출 합니다. 클라이언트 인증 및 권한 부여가 데이터 스토리지 및 해당 애플리케이션에서 수행되는지 확인합니다.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>모든 구성 파일에 대한 액세스를 제한합니다.  
- 관리자는 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다. 예를 들어 enterprisesec .config, web.config, machine.config 및 응용 프로그램 구성 파일 *\<응용 프로그램 >* . .config를 포함 합니다.  
+ 관리자는 enterprisesec.config, security.config, 컴퓨터 및.exe.config 응용 프로그램 구성 파일을 포함 하 여 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다 \<*application*> .  
   
  공급자 고정 이름은 app.config에서 수정할 수 있습니다. 클라이언트 응용 프로그램은 강력한 이름을 사용 하 여 표준 공급자 팩터리 모델을 통해 기본 공급자에 액세스 해야 합니다.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "77452489"
   
      쿼리 조건자 및 매개 변수 이름에 사용되는 값에 악성 입력을 제공하여 [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서 SQL 삽입 공격이 수행될 수 있습니다. SQL 삽입 공격의 위험을 방지하려면 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 명령 텍스트와 함께 사용자 입력을 결합하면 안 됩니다.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 해당 리터럴이 허용되는 모든 곳에서 매개 변수를 허용합니다. 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다. [쿼리 작성기 메서드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) 를 사용 하 여 Entity SQL를 안전 하 게 생성 하는 것도 고려해 야 합니다.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 해당 리터럴이 허용되는 모든 곳에서 매개 변수를 허용합니다. 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다. [쿼리 작성기 메서드](/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) 를 사용 하 여 Entity SQL를 안전 하 게 생성 하는 것도 고려해 야 합니다.  
   
 - LINQ to Entities 삽입 공격:  
   
-     쿼리 컴퍼지션은 LINQ to Entities에서 가능 하지만 개체 모델 API를 통해 수행 됩니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리와 달리 LINQ to Entities 쿼리는 문자열 조작 이나 연결을 사용 하 여 구성 되지 않으며 기존 SQL 삽입 공격에 취약 하지 않습니다.  
+     쿼리 컴퍼지션은 LINQ to Entities에서 가능 하지만 개체 모델 API를 통해 수행 됩니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]쿼리와 달리 LINQ to Entities 쿼리는 문자열 조작 이나 연결을 사용 하 여 구성 되지 않으며 기존 SQL 삽입 공격에 취약 하지 않습니다.  
   
 #### <a name="prevent-very-large-result-sets"></a>결과 집합이 너무 커지지 않도록 합니다.  
  결과 집합이 매우 크면 클라이언트에서 결과 집합의 크기에 비례하여 리소스를 사용하는 작업을 수행할 경우 클라이언트 시스템이 종료될 수 있습니다. 결과 집합은 다음 조건에서 매우 커질 수 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "77452489"
   
 - 중첩된 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리  
   
- 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. LINQ to Entities에서 <xref:System.Linq.Queryable.Take%2A> 메서드를 사용 하거나 [!INCLUDE[esql](../../../../../includes/esql-md.md)]의 [LIMIT](./language-reference/limit-entity-sql.md) 연산자를 사용 하 여 결과 집합의 크기를 제한할 수도 있습니다.  
+ 사용자 입력을 허용하는 경우 해당 입력으로 인해 결과 집합이 시스템에서 처리할 수 있는 것보다 더 커지지 않도록 해야 합니다. <xref:System.Linq.Queryable.Take%2A>LINQ to Entities 또는의 [LIMIT](./language-reference/limit-entity-sql.md) 연산자를 사용 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 하 여 결과 집합의 크기를 제한할 수도 있습니다.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>신뢰할 수 없는 호출자에 메서드를 노출할 때 IQueryable 결과를 반환하지 않도록 합니다.  
  다음과 같은 이유로 신뢰할 수 없는 호출자에 노출되는 메서드에서 <xref:System.Linq.IQueryable%601> 형식을 반환하지 않도록 해야 합니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "77452489"
  다음 보안 고려 사항은 엔터티 형식을 생성하고 사용할 때 적용됩니다.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>애플리케이션 도메인에서 ObjectContext를 공유하지 않습니다.  
- 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))합니다.  
+ 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))합니다.  
   
 #### <a name="prevent-type-safety-violations"></a>형식 안전성을 위반하지 않도록 합니다.  
  형식 안전성을 위반 하는 경우 Entity Framework는 개체의 데이터 무결성을 보장할 수 없습니다. 형식 안전성 위반은 신뢰할 수 없는 애플리케이션이 완전 신뢰 코드 액세스 보안을 사용하여 실행될 수 있도록 하는 경우에 발생할 수 있습니다.  
@@ -145,13 +145,13 @@ ms.locfileid: "77452489"
 ASP.NET 응용 프로그램에서 경로를 사용 하는 경우 다음 사항을 고려해 야 합니다.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>호스트에서 경로 검사를 수행하는지 여부를 확인합니다.  
- `|DataDirectory|` (파이프 기호 안에 포함 됨) 대체 문자열이 사용 되는 경우 ADO.NET는 확인 된 경로가 지원 되는지 확인 합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. ASP.NET를 호스팅하는 프로세스에서 웹 응용 프로그램 루트 연산자 (`~`)를 확인 하는 것과 동일한 검사를 수행 합니다. IIS는이 검사를 수행 합니다. 그러나 IIS 이외의 호스트는 확인 된 경로가 지원 되는지 확인할 수 없습니다. Entity Framework 응용 프로그램을 배포 하는 호스트의 동작을 알고 있어야 합니다.  
+ `|DataDirectory|`(파이프 기호 안에 포함 됨) 대체 문자열이 사용 되는 경우 ADO.NET는 확인 된 경로가 지원 되는지 확인 합니다. 예를 들어, ".."은 `DataDirectory` 뒤에 사용할 수 없습니다. 웹 응용 프로그램 루트 연산자 ()를 확인 하는 것과 동일한 검사는 `~` ASP.NET를 호스팅하는 프로세스에 의해 수행 됩니다. IIS는 이 검사를 수행하지만 IIS 이외의 호스트는 확인된 경로가 지원되는지 확인하지 않을 수도 있습니다. Entity Framework 응용 프로그램을 배포 하는 호스트의 동작을 알고 있어야 합니다.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>확인된 경로 이름에 대해 가정하지 않습니다.  
- 루트 연산자 (`~`) 및 `DataDirectory` 대체 문자열 확인이 확인 되는 값은 응용 프로그램의 런타임 중에 일정 하 게 유지 되어야 하지만, Entity Framework 호스트에서 이러한 값을 수정 하는 것을 제한 하지 않습니다.  
+ `~`응용 프로그램의 런타임 중에 루트 연산자 () 및 대체 문자열을 확인 하는 값 `DataDirectory` 이 일정 하 게 유지 되어야 하지만 Entity Framework 호스트에서 이러한 값을 수정 하는 것을 제한 하지 않습니다.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>배포 전에 경로 길이를 확인합니다.  
- Entity Framework 응용 프로그램을 배포 하기 전에 루트 연산자 (~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과 하지 않는지 확인 해야 합니다. ADO.NET 데이터 공급자는 경로 길이가 유효한 제한 범위 내에 있는지 확인 하지 않습니다.  
+ Entity Framework 응용 프로그램을 배포 하기 전에 루트 연산자 (~) 및 대체 문자열의 값이 `DataDirectory` 운영 체제의 경로 길이 제한을 초과 하지 않는지 확인 해야 합니다. ADO.NET 데이터 공급자는 경로 길이가 유효한 제한 범위 내에 있는지 확인 하지 않습니다.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 메타데이터의 보안 고려 사항  
  다음 보안 고려 사항은 모델 및 매핑 파일을 생성하고 사용할 때 적용됩니다.  
@@ -162,7 +162,7 @@ ADO.NET metadata service 구성 요소는 개인 정보를 기록 하지 않습�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>신뢰할 수 없는 소스의 MetadataWorkspace 개체를 허용하지 않습니다.  
  애플리케이션에서 신뢰할 수 없는 소스의 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 클래스 인스턴스를 허용하면 안 됩니다. 대신, 명시적으로 작업 영역을 생성하고 해당 소스에서 채워야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [배포 고려 사항](deployment-considerations.md)

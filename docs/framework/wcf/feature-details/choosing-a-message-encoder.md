@@ -2,12 +2,12 @@
 title: 메시지 인코더 선택
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: dbc5981013fe5e023f1d6d9eaf64b2e1fa18e2df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587341"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559373"
 ---
 # <a name="choose-a-message-encoder"></a>메시지 인코더 선택
 
@@ -31,9 +31,9 @@ ms.locfileid: "84587341"
 ## <a name="how-to-choose-a-message-encoder"></a>메시지 인코더를 선택하는 방법  
  다음 표에서는 메시지 인코더를 선택하는 데 사용하는 일반 요소에 대해 설명합니다. 애플리케이션의 중요한 요소에 우선 순위를 지정한 다음 이러한 요소에 가장 적합한 메시지 인코더를 선택합니다. 이 표에 나열되지 않은 모든 추가 요소 및 애플리케이션에 필요할 수 있는 모든 사용자 지정 메시지 인코더를 고려해야 합니다.  
   
-|요소|Description|이 요소를 지원하는 인코더|  
+|요인|Description|이 요소를 지원하는 인코더|  
 |------------|-----------------|---------------------------------------|  
-|지원되는 문자 집합|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 은 UTF8 및 UTF16 Unicode (*빅 endian* 및 *작은 endian*) 인코딩만 지원 합니다. UTF7 또는 ASCII와 같은 다른 인코딩이 필요한 경우 사용자 지정 인코더를 사용해야 합니다. 샘플 사용자 지정 인코더는 [사용자 지정 메시지 인코더](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder)를 참조 하세요.|텍스트|  
+|지원되는 문자 집합|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 은 UTF8 및 UTF16 Unicode (*빅 endian* 및 *작은 endian*) 인코딩만 지원 합니다. UTF7 또는 ASCII와 같은 다른 인코딩이 필요한 경우 사용자 지정 인코더를 사용해야 합니다. 샘플 사용자 지정 인코더는 [사용자 지정 메시지 인코더](../samples/custom-message-encoder-custom-text-encoder.md)를 참조 하세요.|텍스트|  
 |검사|검사는 전송을 하는 동안 메시지를 검사하는 기능입니다. SOAP의 사용 여부에 관계없이 특수화된 도구를 사용하지 않고도 텍스트 인코딩을 통해 많은 애플리케이션에서 메시지를 검사 및 분석할 수 있습니다. 메시지 또는 전송 수준에서 전송 보안을 사용 하는 것은 메시지를 검사할 수 있는 기능에 영향을 줍니다. 기밀성은 메시지를 검사하지 않도록 보호해주며 무결성은 메시지를 수정하지 않도록 보호해줍니다.|텍스트|  
 |안정성|안정성은 전송 오류에 대한 인코더의 유연성을 말합니다. 안정성을 메시지, 전송 또는 애플리케이션 계층에서 제공할 수도 있습니다. 모든 표준 WCF 인코더는 다른 계층에서 안정성을 제공 한다고 가정 합니다. 인코더에는 전송 오류를 복구하는 기능이 거의 없습니다.|None|  
 |단순함|단순성은 인코딩 사양에 대해 인코더 및 디코더를 쉽게 만들 수 있음을 나타냅니다. 텍스트 인코딩은 특히 단순성을 위해 도움이 되며, POX 텍스트 인코딩은 SOAP 처리에 대한 지원을 필요로 하지 않는다는 추가 이점도 제공합니다.|텍스트(POX)|  
@@ -83,6 +83,6 @@ WCF 4.5부터는 WCF 이진 인코더에서 압축을 추가 지원합니다. �
 
 클라이언트와 서비스는 모두 압축 된 메시지를 보내고 받는 데 동의 해야 하므로 compressionFormat 속성은 클라이언트와 서비스 모두의 binaryMessageEncoding 요소에 구성 되어야 합니다. 서비스 또는 클라이언트에 압축이 구성 되어 있지 않지만 다른 쪽은 인 경우 ProtocolException이 throw 됩니다. 압축 사용은 신중 하 게 고려해 야 합니다. 네트워크 대역폭이 병목인 경우 압축이 가장 유용합니다. CPU가 병목인 경우 압축을 수행하면 처리량이 감소합니다. 이렇게 하는 것이 애플리케이션에 좋은지 알아 보려면 시뮬레이션 환경에서 적절한 테스트를 수행해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [바인딩](bindings.md)
