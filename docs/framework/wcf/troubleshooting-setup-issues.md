@@ -2,16 +2,16 @@
 title: 설치 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 76d8752f8bcfcb94b77a60be60e13a66436e76b8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549655"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720454"
 ---
 # <a name="troubleshoot-setup-issues"></a>설치 문제 해결
 
-이 문서에서는 WCF (Windows Communication Foundation) 설정 문제를 해결 하는 방법을 설명 합니다.  
+이 문서에서는 WCF (Windows Communication Foundation) 설치 문제를 해결 하는 방법을 설명 합니다.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>일부 Windows Communication Foundation 레지스트리 키를 .NET Framework 3.0에서 MSI 복구 작업을 수행하여 복구할 수 없음  
  다음과 같은 레지스트리 키를 삭제한 경우 이 문제가 발생합니다.  
@@ -28,8 +28,9 @@ ms.locfileid: "90549655"
   
  제어판의 [ **프로그램 추가/제거** **]** 에서 시작 된 .NET Framework 3.0 설치 관리자를 사용 하 여 복구를 실행 하는 경우 키가 다시 생성 되지 않습니다. 해당 키를 다시 만들려면 .NET Framework 3.0을 제거하고 다시 설치해야 합니다.  
   
-## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>.NET Framework 3.0 패키지 설치 시 WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않음  
- WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않을 수 있습니다. 설치 시 Windows Communication Foundation 설치 관리자가 mofcomp.exe 구성 요소를 사용하여 WCF .mof 파일을 등록할 수 없습니다. 다음과 같은 증상이 있습니다.  
+## <a name="wmi-service-corruption-blocks-installation-of-the-wmi-provider"></a>Wmi 서비스 손상으로 인해 WMI 공급자 설치 차단
+
+ .NET Framework 3.0 패키지를 설치할 때 WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자 설치가 차단 될 수 있습니다. 설치 하는 동안 Windows Communication Foundation 설치 관리자는 *mofcomp.exe* 구성 요소를 사용 하 여 WCF *.mof* 파일을 등록할 수 없습니다. 다음과 같은 증상이 있습니다.  
   
 1. .NET Framework 3.0 설치를 완료했지만 WCF WMI 공급자가 등록되지 않습니다.  
   
@@ -53,12 +54,13 @@ ms.locfileid: "90549655"
   
  위에 설명한 문제를 해결하려면 다음 단계를 수행해야 합니다.  
   
-1. [WMI Diagnosis Utility](https://www.microsoft.com/download/details.aspx?id=7684) 를 실행 하 여 WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [WMI Diagnosis Utility](/previous-versions/tn-archive/ff404265(v=msdn.10))를 참조 하세요.  
+1. WMI Diagnosis Utility를 실행 하 여 WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [WMI Diagnosis Utility](/previous-versions/tn-archive/ff404265(v%3dmsdn.10))를 참조 하세요.  
   
  **제어판**에 있는 **프로그램 추가/제거** 애플릿을 사용 하 여 .NET Framework 3.0 설치를 복구 하거나 .NET Framework 3.0를 제거/다시 설치 합니다.  
   
-## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 설치 후 .NET Framework 3.0을 복구하면 machine.config에서 .NET Framework 3.5에 의해 추가된 구성 요소가 제거됨  
- .NET Framework 3.5를 설치한 후 .NET Framework 3.0를 복구 하는 경우 machine.config에서 .NET Framework 3.5에 의해 도입 된 구성 요소가 제거 됩니다. 그러나 web.config는 그대로 유지됩니다. 해결 방법은 ARP를 통해이 후 .NET Framework 3.5를 복구 하거나 스위치와 함께 [WFServicesReg.exe (워크플로 서비스 등록 도구)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 사용 하는 것입니다 `/c` .  
+## <a name="repair-net-framework-30-after-net-framework-35-installation"></a>.NET Framework 3.5 설치 후 .NET Framework 3.0 복구
+
+ .NET Framework 3.5를 설치한 후 .NET Framework 3.0를 복구 하는 경우 *machine.config* 에서 .NET Framework 3.5에 의해 도입 된 구성 요소가 제거 됩니다. 그러나 *web.config* 파일은 그대로 유지 됩니다. 해결 방법은 ARP를 통해이 후 .NET Framework 3.5를 복구 하거나 스위치와 함께 [WFServicesReg.exe (워크플로 서비스 등록 도구)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 사용 하는 것입니다 `/c` .  
   
  \Framework\v3.5\ 또는%windir%\Microsoft.NET\framework64\v3.5\에서 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 찾을 수 있습니다.  
   
@@ -67,13 +69,16 @@ ms.locfileid: "90549655"
   
  이 문제를 해결 하려면 해당 스위치와 함께 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 사용 `/c` 하 여 컴퓨터에서 IIS 스크립트 맵을 제대로 구성 합니다. \Framework\v3.5\ 또는%windir%\Microsoft.NET\framework64\v3.5\에서 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 찾을 수 있습니다.  
   
-## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>' System.servicemodel, Version 3.0.0.0, Culture = 중립, PublicKeyToken = b77a5c561934e089 ' 어셈블리에서 ' System.servicemodel ' 형식을 로드할 수 없습니다.  
- 이 오류는 .NET Framework 4가 설치 된 다음 WCF HTTP 활성화를 사용 하도록 설정 된 경우에 발생 합니다. 이 문제를 해결 하려면 Visual Studio 용 개발자 명령 프롬프트 내에서 다음 명령줄을 실행 합니다.  
+## <a name="could-not-load-type-systemservicemodelactivationhttpmodule"></a>' System.servicemodel ' 형식을 로드할 수 없습니다.
+
+**' System.servicemodel, Version 3.0.0.0, Culture = 중립, PublicKeyToken = b77a5c561934e089 ' 어셈블리에서 ' System.servicemodel ' 형식을 로드할 수 없습니다.**
+
+ 이 오류는 .NET Framework 4가 설치 된 다음 WCF HTTP 활성화를 사용 하도록 설정 된 경우에 발생 합니다. 이 문제를 해결 하려면 Visual Studio에 대 한 개발자 명령 프롬프트 내에서 다음 명령을 실행 합니다.  
   
 ```console
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [설치 지침](./samples/set-up-instructions.md)

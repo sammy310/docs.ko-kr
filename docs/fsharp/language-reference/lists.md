@@ -2,12 +2,12 @@
 title: 목록
 description: '동일한 형식의 변경 되지 않은 순서가 지정 된 일련의 요소에 대 한 F # 목록에 대해 알아봅니다.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 16d7195039d25cf63630f5cc3be6563b1bf45c44
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 567731eb57b77d60d3dd847630d5676e8d047d09
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559169"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720350"
 ---
 # <a name="lists"></a>목록
 
@@ -59,12 +59,12 @@ F #의 목록은 단일 연결 된 목록으로 구현 됩니다. 즉, 목록의
 
 목록 형식이 지원하는 속성은 다음과 같습니다.
 
-|속성|Type|Description|
+|속성|유형|Description|
 |--------|----|-----------|
-|[사장](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|첫 번째 요소입니다.|
+|[Head](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|첫 번째 요소입니다.|
 |[비어 있음](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Empty)|`'T list`|해당 형식의 빈 목록을 반환하는 정적 속성입니다.|
 |[IsEmpty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#IsEmpty)|`bool`|목록에 요소가 없으면 `true`입니다.|
-|[항목](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Item)|`'T`|지정한 인덱스에 있는 요소로서 0부터 시작합니다.|
+|[Item](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Item)|`'T`|지정한 인덱스에 있는 요소로서 0부터 시작합니다.|
 |[길이](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Length)|`int`|요소의 수입니다.|
 |[Tail](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Tail)|`'T list`|첫 번째 요소가 없는 목록입니다.|
 
@@ -233,13 +233,13 @@ The first even value is at position 8.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
-출력은 `1.000000`입니다.
+`1.000000`가 출력됩니다.
 
 다음 코드는 `List.averageBy`의 사용법을 보여줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
-출력은 `5.5`입니다.
+`5.5`가 출력됩니다.
 
 ### <a name="lists-and-tuples"></a>목록 및 튜플
 
@@ -265,7 +265,7 @@ The first even value is at position 8.
 
 해당 하는 압축 풀기 버전 (list.unzip3 및 [목록](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3))은 튜플에 있는 튜플 및 반환 목록 목록을 사용 합니다. 여기서 첫 번째 목록에는 각 튜플의 첫 번째 요소를 포함 하 고 두 번째 목록에는 각 튜플의 두 번째 요소가 포함 [됩니다.](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)
 
-다음 코드 예제에서는 [List. 압축](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)해제를 사용 하는 방법을 보여 줍니다.
+다음 코드 예제에서는 [List. 압축](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)해제를 사용 하는 방법을 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
@@ -276,7 +276,7 @@ The first even value is at position 8.
 [1; 3] [2; 4]
 ```
 
-다음 코드 예제에서는 [list.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4)를 사용 하는 방법을 보여 줍니다.
+다음 코드 예제에서는 [list.unzip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3)를 사용 하는 방법을 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 

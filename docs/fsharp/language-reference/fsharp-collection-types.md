@@ -2,24 +2,24 @@
 title: 컬렉션 형식
 description: 'F # 컬렉션 형식 및 컬렉션 형식과 .NET의 차이점에 대해 알아봅니다.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0b5be8f656d6728fe382b1944bda0a410a94d226
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656907"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720337"
 ---
-# <a name="f-collection-types"></a>F# 컬렉션 형식
+# <a name="f-collection-types"></a>F # 컬렉션 형식
 
 이 항목을 검토 하 여 특정 요구에 가장 적합 한 F # 컬렉션 형식을 확인할 수 있습니다. 이러한 컬렉션 형식은 네임 스페이스에 있는 것과 같은 .NET의 컬렉션 형식과 다릅니다 `System.Collections.Generic` . 여기서 F # 컬렉션 형식은 개체 지향 큐브 뷰가 아닌 함수형 프로그래밍 관점에서 디자인 되었습니다. 구체적으로 말하자면 배열 컬렉션에만 변경 가능한 요소가 있습니다. 따라서 컬렉션을 수정 하는 경우 원래 컬렉션을 변경 하는 대신 수정 된 컬렉션의 인스턴스를 만듭니다.
 
 또한 컬렉션 형식은 개체가 저장 되는 데이터 구조의 형식에 따라 다릅니다. 해시 테이블, 연결 된 목록 및 배열과 같은 데이터 구조에는 서로 다른 성능 특성과 사용 가능한 작업 집합이 있습니다.
 
-## <a name="f-collection-types"></a>F# 컬렉션 형식
+## <a name="table-of-collection-types"></a>컬렉션 형식 표
 
 다음 표에서는 F # 컬렉션 형식을 보여 줍니다.
 
-|유형|설명|관련 링크|
+|유형|Description|관련 링크|
 |----|-----------|-------------|
 |[목록](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|동일한 형식의 변경 되지 않은 순서가 지정 된 일련의 요소입니다. 연결 된 목록으로 구현 됩니다.|[목록](lists.md)<br /><br />[List 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
 |[배열](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|동일한 형식의 연속 데이터 요소에 대 한 변경 가능한 고정 크기 컬렉션 (0부터 시작)입니다.|[배열](arrays.md)<br /><br />[Array 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
@@ -29,9 +29,9 @@ ms.locfileid: "88656907"
 
 ### <a name="table-of-functions"></a>함수 테이블
 
-이 섹션에서는 F # 컬렉션 형식에서 사용할 수 있는 함수를 비교 합니다. 함수의 계산 복잡성이 제공 됩니다. 여기서 N은 첫 번째 컬렉션의 크기이 고 M은 두 번째 컬렉션의 크기 (있는 경우)입니다. 대시 (-)는이 함수를 컬렉션에서 사용할 수 없음을 나타냅니다. 시퀀스는 지연 계산 되기 때문에 Seq와 같은 함수는 반환 될 때 시퀀스의 성능에도 영향을 주지만이를 즉시 반환 하기 때문에 O (1) 일 수 있습니다.
+이 섹션에서는 F # 컬렉션 형식에서 사용할 수 있는 함수를 비교 합니다. 함수의 계산 복잡성이 제공 됩니다. 여기서 N은 첫 번째 컬렉션의 크기이 고 M은 두 번째 컬렉션의 크기 (있는 경우)입니다. 대시 (-)는이 함수를 컬렉션에서 사용할 수 없음을 나타냅니다. 시퀀스는 지연 계산 되기 때문에와 같은 함수는 `Seq.distinct` 를 즉시 반환 하기 때문에 O (1)가 될 수 있습니다. 하지만이 함수는 열거 될 때 시퀀스의 성능에 여전히 영향을 줍니다.
 
-|함수|Array|목록|순서|지도|설정|설명|
+|기능|배열|목록|순서|지도|설정|Description|
 |--------|-----|----|--------|---|---|-----------|
 |추가|O (N)|O (N)|O (N)|-|-|첫 번째 컬렉션의 요소와 두 번째 컬렉션의 요소를 포함 하는 새 컬렉션을 반환 합니다.|
 |add|-|-|-|O (log (N))|O (log (N))|요소가 추가 된 새 컬렉션을 반환 합니다.|
@@ -44,9 +44,9 @@ ms.locfileid: "88656907"
 |collect|O (N)|O (N)|O (N)|-|-|지정 된 함수를 컬렉션의 각 요소에 적용 하 고 모든 결과를 연결 하 고 결합 된 목록을 반환 합니다.|
 |Seq.comparewith|-|-|O (N)|-|-|지정 된 비교 함수를 사용 하 여 두 시퀀스를 요소 별로 비교 합니다.|
 |concat|O (N)|O (N)|O (N)|-|-|지정 된 열거형 열거를 연결 된 단일 열거형으로 결합 합니다.|
-|포함|-|-|-|-|O (log (N))|집합에 지정 된 요소가 포함 된 경우 true를 반환 합니다.|
+|contains|-|-|-|-|O (log (N))|집합에 지정 된 요소가 포함 된 경우 true를 반환 합니다.|
 |containsKey|-|-|-|O (log (N))|-|요소가 맵의 도메인에 있는지 여부를 테스트 합니다.|
-|count|-|-|-|-|O (N)|집합에 있는 요소 수를 반환합니다.|
+|개수|-|-|-|-|O (N)|집합에 있는 요소 수를 반환합니다.|
 |Seq.countby|-|-|O (N)|-|-|시퀀스의 각 요소에 키 생성 함수를 적용 하 고 원래 시퀀스에서 고유 키와 해당 항목 수를 생성 하는 시퀀스를 반환 합니다.|
 |copy|O (N)|-|O (N)|-|-|컬렉션을 복사합니다.|
 |create|O (N)|-|-|-|-|지정 된 값을 처음부터 모두 나타내는 전체 요소의 배열을 만듭니다.|
@@ -90,11 +90,11 @@ ms.locfileid: "88656907"
 |list.map3|-|O (N)|-|-|-|지정 된 함수를 세 컬렉션의 해당 요소에 동시에 적용 한 결과로 얻어지는 요소가 포함 된 컬렉션을 빌드합니다.|
 |만들었습니다|O (N)|O (N)|O (N)|-|-|지정 된 함수를 배열의 각 요소에 적용 한 결과인 요소가 포함 된 배열을 빌드합니다. 함수에 전달 된 정수 인덱스는 변환할 요소의 인덱스를 나타냅니다.|
 |array.mapi2|O (N)|O (N)|-|-|-|요소의 인덱스를 전달 하 여 두 컬렉션의 해당 요소에 지정 된 함수를 쌍으로 적용 한 결과인 요소가 포함 된 컬렉션을 빌드합니다. 두 입력 배열의 길이는 같아야 합니다.|
-|max|O (N)|O (N)|O (N)|-|-|[Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 연산자를 사용 하 여 비교 하 여 컬렉션에서 가장 큰 요소를 반환 합니다.|
-|maxBy|O (N)|O (N)|O (N)|-|-|함수 결과에서 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 를 사용 하는 것과 비교 하 여 컬렉션에서 가장 큰 요소를 반환 합니다.|
+|max|O (N)|O (N)|O (N)|-|-|[Max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) 연산자를 사용 하 여 비교 하 여 컬렉션에서 가장 큰 요소를 반환 합니다.|
+|maxBy|O (N)|O (N)|O (N)|-|-|함수 결과에서 [max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) 를 사용 하는 것과 비교 하 여 컬렉션에서 가장 큰 요소를 반환 합니다.|
 |Set.maxelement|-|-|-|-|O (log (N))|집합에 사용 된 순서에 따라 집합의 가장 큰 요소를 반환 합니다.|
-|min|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 연산자를 사용 하 여 비교 하 여 컬렉션의 최소 요소를 반환 합니다.|
-|minBy|O (N)|O (N)|O (N)|-|-|함수 결과에서 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 연산자를 사용 하는 것과 비교 하 여 컬렉션의 최소 요소를 반환 합니다.|
+|분|O (N)|O (N)|O (N)|-|-|[Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) 연산자를 사용 하 여 비교 하 여 컬렉션의 최소 요소를 반환 합니다.|
+|minBy|O (N)|O (N)|O (N)|-|-|함수 결과에서 [min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) 연산자를 사용 하는 것과 비교 하 여 컬렉션의 최소 요소를 반환 합니다.|
 |Set.minelement|-|-|-|-|O (log (N))|집합에 사용 된 순서에 따라 집합의 최하위 요소를 반환 합니다.|
 |List.ofarray|-|O (N)|O(1)|O (N)|O (N)|지정 된 배열과 동일한 요소를 포함 하는 컬렉션을 만듭니다.|
 |Array.oflist|O (N)|-|O(1)|O (N)|O (N)|지정 된 목록과 동일한 요소를 포함 하는 컬렉션을 만듭니다.|
@@ -115,10 +115,10 @@ ms.locfileid: "88656907"
 |set|O(1)|-|-|-|-|배열의 요소를 지정 된 값으로 설정 합니다.|
 |skip|-|-|O (N)|-|-|기본 시퀀스의 N 개 요소를 건너뛴 다음 시퀀스의 나머지 요소를 생성 하는 시퀀스를 반환 합니다.|
 |skipWhile|-|-|O (N)|-|-|반복 될 때 지정 된 조건자가 반환 하는 동안 기본 시퀀스의 요소를 건너뛴 `true` 다음 시퀀스의 나머지 요소를 생성 하는 시퀀스를 반환 합니다.|
-|sort|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|O (N \* 로그 (n))|O (N \* 로그 (n))|-|-|요소 값으로 컬렉션을 정렬 합니다. 요소는 [비교](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)를 사용 하 여 비교 됩니다.|
-|sortBy|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|O (N \* 로그 (n))|O (N \* 로그 (n))|-|-|지정 된 프로젝션이 제공 하는 키를 사용 하 여 지정 된 목록을 정렬 합니다. [비교](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)를 사용 하 여 키를 비교 합니다.|
-|Array.sortinplace|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|-|-|-|-|지정 된 비교 함수를 사용 하 여 배열 요소를 변경 하 여 정렬 합니다. 요소는 [비교](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)를 사용 하 여 비교 됩니다.|
-|Array.sortinplaceby|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|-|-|-|-|현재 위치의 요소를 변경 하 고 해당 키에 대해 지정 된 프로젝션을 사용 하 여 배열의 요소를 정렬 합니다. 요소는 [비교](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)를 사용 하 여 비교 됩니다.|
+|sort|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|O (N \* 로그 (n))|O (N \* 로그 (n))|-|-|요소 값으로 컬렉션을 정렬 합니다. 요소는 [비교](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)를 사용 하 여 비교 됩니다.|
+|sortBy|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|O (N \* 로그 (n))|O (N \* 로그 (n))|-|-|지정 된 프로젝션이 제공 하는 키를 사용 하 여 지정 된 목록을 정렬 합니다. [비교](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)를 사용 하 여 키를 비교 합니다.|
+|Array.sortinplace|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|-|-|-|-|지정 된 비교 함수를 사용 하 여 배열 요소를 변경 하 여 정렬 합니다. 요소는 [비교](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)를 사용 하 여 비교 됩니다.|
+|Array.sortinplaceby|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|-|-|-|-|현재 위치의 요소를 변경 하 고 해당 키에 대해 지정 된 프로젝션을 사용 하 여 배열의 요소를 정렬 합니다. 요소는 [비교](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)를 사용 하 여 비교 됩니다.|
 |Array.sortinplacewith|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|-|-|-|-|지정 된 비교 함수를 순서 대로 사용 하 여 배열의 요소를 정렬 합니다.|
 |Array.sortwith|O (N \* ) 평균<br /><br />O (N ^ 2) 최악의 경우|O (N \* 로그 (n))|-|-|-|지정 된 비교 함수를 순서 대로 사용 하 고 새 컬렉션을 반환 하 여 컬렉션의 요소를 정렬 합니다.|
 |sub|O (N)|-|-|-|-|시작 인덱스 및 길이로 지정 된 지정 된 하위 범위를 포함 하는 배열을 빌드합니다.|
@@ -144,7 +144,7 @@ ms.locfileid: "88656907"
 |zip|O (N)|O (N)|O (N)|-|-|두 컬렉션을 쌍의 목록으로 결합 합니다. 두 목록의 길이는 같아야 합니다.|
 |list.zip3|O (N)|O (N)|O (N)|-|-|세 개의 컬렉션을 삼중 쌍 목록으로 결합 합니다. 목록의 길이는 같아야 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [F# 형식](fsharp-types.md)
 - [F# 언어 참조](index.md)

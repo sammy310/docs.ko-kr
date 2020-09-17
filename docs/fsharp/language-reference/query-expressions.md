@@ -2,12 +2,12 @@
 title: 쿼리 식
 description: 'F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559065"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720480"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
@@ -45,7 +45,7 @@ query1
 
 위의 코드 예제에서 쿼리 식은 중괄호 안에 있습니다. 식에서 코드의 의미는 쿼리 결과에서 데이터베이스의 Customers 테이블에 있는 모든 고객을 반환 하는 것입니다. 쿼리 식은 및를 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> 하므로 예제에서 보여 주는 것 처럼 [Seq 모듈](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) 을 사용 하 여 반복할 수 있습니다.
 
-모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스는 `QueryBuilder` 입니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)를 참조 하세요.
+모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스는 `QueryBuilder` 입니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)를 참조 하세요.
 
 ## <a name="query-operators"></a>쿼리 연산자
 
@@ -564,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>Grouping(그룹화)<br/>
+<td>그룹화<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age

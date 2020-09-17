@@ -2,12 +2,12 @@
 title: 튜플
 description: '서로 다른 형식의 명명 되지 않았지만 정렬 된 값의 그룹인 F # 튜플에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6f4adf7e10e22d8b7a8cf697baee15962adf3630
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173291"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720363"
 ---
 # <a name="tuples"></a>튜플
 
@@ -24,7 +24,7 @@ struct(element, ... ,element )
 
 위의 구문에서 각 *요소* 는 유효한 F # 식일 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 튜플의 예로는 같거나 다른 형식의 쌍, 삼중 쌍 등이 있습니다. 다음 코드에서는 몇 가지 예를 보여 줍니다.
 
@@ -36,7 +36,7 @@ struct(element, ... ,element )
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-바인딩을 통해 식 외부의 패턴 일치를 통해 튜플을 분해할 수도 있습니다 `match` `let` .
+바인딩을 통해 식 외부의 패턴 일치를 통해 튜플을 분해할 수도 있습니다 `match`  `let` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -126,7 +126,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 이 섹션에서는 컴파일될 때 튜플의 형태에 대해 설명 합니다.  .NET Framework 3.5를 대상으로 하지 않는 한이 정보는 읽을 필요가 없습니다.
 
-튜플은 인자 수에서 오버 로드 된 여러 제네릭 형식 중 하나의 개체 `System.Tuple` 또는 형식 매개 변수의 수로 컴파일됩니다. 튜플 형식은 c # 또는 Visual Basic와 같은 다른 언어에서 볼 때 또는 F # 구문을 인식 하지 않는 도구를 사용 하는 경우이 형식으로 표시 됩니다. `Tuple`형식은 .NET Framework 4에서 도입 되었습니다. .NET Framework의 이전 버전을 대상으로 하는 경우 컴파일러는 F # 핵심 라이브러리의 2.0 버전에서 사용 하는 system.string [버전을 사용](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) 합니다. 이 라이브러리의 형식은 .NET Framework의 2.0, 3.0 및 3.5 버전을 대상으로 하는 응용 프로그램에만 사용 됩니다. 형식 전달은 .NET Framework 2.0와 .NET Framework 4 F # 구성 요소 간의 이진 호환성을 보장 하는 데 사용 됩니다.
+튜플은 인자 수에서 오버 로드 된 여러 제네릭 형식 중 하나의 개체 `System.Tuple` 또는 형식 매개 변수의 수로 컴파일됩니다. 튜플 형식은 c # 또는 Visual Basic와 같은 다른 언어에서 볼 때 또는 F # 구문을 인식 하지 않는 도구를 사용 하는 경우이 형식으로 표시 됩니다. `Tuple`형식은 .NET Framework 4에서 도입 되었습니다. .NET Framework의 이전 버전을 대상으로 하는 경우 컴파일러는 `System.Tuple` F # 핵심 라이브러리의 2.0 버전에서 버전을 사용 합니다. 이 라이브러리의 형식은 .NET Framework의 2.0, 3.0 및 3.5 버전을 대상으로 하는 응용 프로그램에만 사용 됩니다. 형식 전달은 .NET Framework 2.0와 .NET Framework 4 F # 구성 요소 간의 이진 호환성을 보장 하는 데 사용 됩니다.
 
 ### <a name="compiled-form-of-struct-tuples"></a>구조체 튜플의 컴파일된 형태
 

@@ -2,12 +2,12 @@
 title: 비동기 워크플로
 description: '다른 작업의 실행을 차단 하지 않고 실행 되는 비동기적 계산을 수행 하기 위한 F # 프로그래밍 언어 지원에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ac727fc630f13db01da964131ab39dc242a12cd1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 14146cc8a643f31831475075212cc06da5f8d6ff
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557713"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720272"
 ---
 # <a name="asynchronous-workflows"></a>비동기 워크플로
 
@@ -44,7 +44,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 단일 비동기 작업을 수행 하 고 결과를 반환 하는 메서드를 *비동기 기본 형식*이라고 하며,이 메서드는에서 사용할 수 있도록 특별히 설계 되었습니다 `let!` . F # 핵심 라이브러리에는 몇 가지 비동기 기본 형식이 정의 되어 있습니다. 웹 응용 프로그램에 대 한 이러한 두 메서드는 및 모듈에서 정의 됩니다. [`FSharp.Control.WebExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html) [`WebRequest.AsyncGetResponse`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncGetResponse) [`WebClient.AsyncDownloadString`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncDownloadString) 두 기본 형식은 URL을 지정 하 여 웹 페이지에서 데이터를 다운로드 합니다. `AsyncGetResponse` 개체를 생성 하 `System.Net.WebResponse` 고 `AsyncDownloadString` 웹 페이지에 대 한 HTML을 나타내는 문자열을 생성 합니다.
 
-비동기 i/o 작업에 대 한 여러 가지 기본 형식이 모듈에 포함 됩니다 [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . 클래스의 이러한 확장 메서드 `System.IO.Stream` 는 [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 및 [`Stream.AsyncWrite`](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) 입니다.
+비동기 i/o 작업에 대 한 여러 가지 기본 형식이 모듈에 포함 됩니다 [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . 클래스의 이러한 확장 메서드 `System.IO.Stream` 는 [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 및 [`Stream.AsyncWrite`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) 입니다.
 
 전체 본문이 비동기 블록으로 묶여 있는 함수를 정의 하 여 고유한 비동기 기본 형식을 작성할 수도 있습니다.
 
@@ -66,4 +66,4 @@ F # 비동기 프로그래밍 모델을 사용 하 여 다른 비동기 모델�
 
 - [F# 언어 참조](index.md)
 - [계산 식](computation-expressions.md)
-- [컨트롤. Async 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [컨트롤. Async 클래스](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html)
