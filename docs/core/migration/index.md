@@ -2,12 +2,12 @@
 title: project.json에서 .NET Core 마이그레이션
 description: project.json을 사용하여 이전 .NET Core 프로젝트를 마이그레이션하는 방법 알아보기
 ms.date: 07/19/2017
-ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77450689"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538252"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json에서 .NET Core 프로젝트 마이그레이션
 
@@ -78,7 +78,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 - `<Project>` 요소에서 XML 네임스페이스(`xmlns`)를 제거합니다.
 - `Sdk` 특성이 없는 경우 `<Project>` 요소에 추가하고 `Microsoft.NET.Sdk` 또는 `Microsoft.NET.Sdk.Web`으로 설정합니다. 이 특성은 프로젝트에서 사용할 SDK를 사용하도록 지정합니다. 웹앱에는 `Microsoft.NET.Sdk.Web`이 사용됩니다.
 - 프로젝트의 맨 위와 맨 아래에서 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 및 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 문을 제거합니다. 이러한 import 문은 SDK에 포함되므로, 프로젝트에 있을 필요가 없습니다.
-- 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](https://aka.ms/sdkimplicitrefs)되어 있습니다.
+- 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](../tools/csproj.md)되어 있습니다.
 - `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `<Project>` 요소의 `Sdk` 특성을 통해 가져옵니다.
 - [SDK에 포함](../project-sdk/overview.md#default-compilation-includes)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
 
@@ -86,6 +86,6 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 
 이전 csproj 형식에서 새 형식으로 마이그레이션하기 전후의 예는 .NET 블로그에서 [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/)(Visual Studio 2017 RC 업데이트 – .NET Core 도구 개선 사항) 문서를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
