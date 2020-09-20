@@ -383,8 +383,6 @@ items:
         href: interop/
       - name: 관리되지 않는 API 참조
         href: unmanaged-api/
-      - name: XAML 서비스
-        href: ../desktop-wpf/xaml-services/
   - name: 도구
     items:
       - name: 개요
