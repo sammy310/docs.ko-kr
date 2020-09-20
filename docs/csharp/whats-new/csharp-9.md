@@ -2,12 +2,12 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495778"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065034"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
@@ -24,6 +24,7 @@ C# 9.0은 다음 기능과 개선 사항을 C# 언어에 추가합니다.
 - 정적 무명 함수
 - 대상으로 형식화된 조건식
 - 공변 반환 형식
+- `foreach` 루프에 대한 확장 `GetEnumerator` 지원
 - 람다 무시 항목 매개 변수
 - 로컬 함수의 특성
 - 모듈 이니셜라이저
@@ -121,7 +122,7 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 init 전용 setter는 파생 클래스에서 기본 클래스 속성을 설정하는 데 유용할 수 있습니다. 기본 클래스의 도우미를 통해 파생 속성을 설정할 수도 있습니다. 위치 레코드는 init 전용 setter를 사용하여 속성을 선언합니다. 해당 setter는 with-expression에 사용됩니다. 정의하는 모든 `class` 또는 `struct`에 대해 Init 전용 setter를 선언할 수 있습니다.
@@ -217,7 +218,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-이 기능의 다른 유용한 용도는 init 전용 속성과 결합하여 새 개체를 초기화하는 것입니다. `new`의 괄호는 선택 사항입니다.
+이 기능의 다른 유용한 용도는 init 전용 속성과 결합하여 새 개체를 초기화하는 것입니다.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ if (e is not null)
 C# 9.0부터 람다 식 또는 무명 메서드에 `static` 한정자를 추가할 수 있습니다. 정적 람다 식은 `static` 로컬 함수와 유사합니다. 정적 람다 또는 무명 함수는 지역 변수나 인스턴스 상태를 캡처할 수 없습니다. `static` 한정자는 실수에 의한 다른 변수 캡처를 방지합니다.
 
 공변 반환 형식은 재정의된 함수의 반환 형식에 대한 유연성을 제공합니다. 재정의된 가상 함수는 기본 클래스 메서드에 선언된 반환 형식에서 파생된 형식을 반환할 수 있습니다. 이 함수는 레코드나 가상 클론 또는 팩터리 메서드를 지원하는 기타 형식에 유용할 수 있습니다.
+
+또한 `foreach` 루프는 `foreach` 패턴을 충족하는 확장 메서드 `GetEnumerator`를 인식하고 사용합니다. 이렇게 변경함으로써 `foreach`는 비동기 패턴과 같은 다른 패턴 기반 생성 및 패턴 기반 분해와 일치하게 됩니다. 실제로 이 변경은 모든 형식에 `foreach` 지원을 추가할 수 있음을 의미합니다. 설계상 개체를 열거하는 것이 적합한 경우로 사용을 제한해야 합니다.
 
 다음으로, 무시 항목을 람다 식에 대한 매개 변수로 사용할 수 있습니다. 이 편리한 기능을 사용하면 인수 이름을 지정할 필요가 없으며, 컴파일러에서 인수를 사용하지 않을 수 있습니다. 모든 인수에 `_`을 사용합니다.
 

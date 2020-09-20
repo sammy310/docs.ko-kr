@@ -4,12 +4,12 @@ description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 �
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810524"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656264"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
 
@@ -26,7 +26,7 @@ ms.locfileid: "88810524"
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework` 속성은 앱의 대상 프레임워크 버전을 지정합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-framework-versions)를 참조하세요.
+`TargetFramework` 속성은 앱의 대상 프레임워크 버전을 지정합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-frameworks)를 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ ms.locfileid: "88810524"
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-앱의 대상 플랫폼을 여러 개 지정하려면 `TargetFrameworks` 속성을 사용합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-framework-versions)를 참조하세요.
+앱의 대상 플랫폼을 여러 개 지정하려면 `TargetFrameworks` 속성을 사용합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-frameworks)를 참조하세요.
 
 > [!NOTE]
 > `TargetFramework`(단수형)이 지정되면 이 속성은 무시됩니다.
@@ -188,9 +188,27 @@ ms.locfileid: "88810524"
 | `5.0` | 최신 규칙을 사용할 수 있는 경우에도 .NET 5.0 릴리스에서 사용된 규칙 세트가 사용됩니다. |
 | `5` | 최신 규칙을 사용할 수 있는 경우에도 .NET 5.0 릴리스에서 사용된 규칙 세트가 사용됩니다. |
 
+### <a name="analysismode"></a>AnalysisMode
+
+.NET 5.0 RC2부터 .NET SDK에는 모든 [“CA” 모드 품질 규칙](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)이 함께 제공됩니다. 기본적으로 [일부 규칙만 빌드 경고로 사용 설정](../../fundamentals/productivity/code-analysis.md#enabled-rules)됩니다. `AnalysisMode` 속성을 사용하면 기본적으로 사용하도록 설정되는 규칙 집합을 사용자 지정할 수 있습니다. 더욱 적극적인(옵트아웃) 분석 모드나 더욱 보수적인(옵트인) 분석 모드로 전환할 수 있습니다. 예를 들어 기본적으로 모든 규칙을 빌드 경고로 사용하도록 설정하려는 경우 값을 `AllEnabledByDefault`로 설정합니다.
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+다음 표에 사용 가능한 옵션이 나와 있습니다.
+
+| 값 | 의미 |
+|-|-|
+| `Default` | 특정 규칙이 빌드 경고로 사용되고, 다른 특정 규칙이 Visual Studio IDE 추천으로 사용되며, 나머지는 사용하지 않도록 설정되는 기본 모드입니다. |
+| `AllEnabledByDefault` | 모든 규칙이 기본적으로 빌드 경고로 사용되는 적극적인(또는 옵트아웃) 모드입니다. 개별 규칙을 선택적으로 [옵트아웃](../../fundamentals/productivity/configure-code-analysis-rules.md)하여 사용하지 않도록 설정할 수 있습니다. |
+| `AllDisabledByDefault` | 모든 규칙이 기본적으로 사용하지 않도록 설정되는 보수적인(또는 옵트인) 모드입니다. 개별 규칙을 선택적으로 [옵트인](../../fundamentals/productivity/configure-code-analysis-rules.md)하여 사용하도록 설정할 수 있습니다. |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors` 속성을 사용하면 코드 분석 경고를 경고로 처리할지 여부를 구성하고 빌드를 중단할 수 있습니다. 프로젝트를 빌드할 때 `-warnaserror` 플래그를 사용하면 [.NET 코드 분석](../../fundamentals/productivity/code-analysis.md) 경고도 오류로 처리됩니다. 컴파일러 경고만 오류로 처리하기 위해 프로젝트 파일에서 `CodeAnalysisTreatWarningsAsErrors` MSBuild 속성을 `false`로 설정할 수 있습니다.
+`CodeAnalysisTreatWarningsAsErrors` 속성을 사용하면 코드 품질 분석 경고(CAxxxx)를 경고로 처리할지 여부를 구성하고 빌드를 중단할 수 있습니다. 프로젝트를 빌드할 때 `-warnaserror` 플래그를 사용하면 [.NET 코드 품질 분석](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) 경고도 오류로 처리됩니다. 코드 품질 분석 경고를 오류로 처리하지 않으려는 경우 프로젝트 파일에서 `CodeAnalysisTreatWarningsAsErrors` MSBuild 속성을 `false`로 설정할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ ms.locfileid: "88810524"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-.Net 5.0 이상을 대상으로 하는 프로젝트의 경우 기본적으로 [.NET 코드 분석](../../fundamentals/productivity/code-analysis.md)이 사용됩니다. `EnableNETAnalyzers` 속성을 true로 설정하여 이전 버전의 .NET을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있습니다. 모든 프로젝트에서 코드 분석을 사용하지 않으려면 해당 속성을 `false`로 설정합니다.
+.NET 5.0 이상을 대상으로 하는 프로젝트의 경우 기본적으로 [.NET 코드 품질 분석](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)이 사용됩니다. `EnableNETAnalyzers` 속성을 `true`로 설정하여 이전 버전의 .NET을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있습니다. 모든 프로젝트에서 코드 분석을 사용하지 않으려면 해당 속성을 `false`로 설정합니다.
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ ms.locfileid: "88810524"
 
 > [!TIP]
 > .Net 5.0 이전 .NET 버전을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있는 또 다른 방법은 [AnalysisLevel](#analysislevel) 속성을 `latest`로 설정하는 것입니다.
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+[.NET 코드 스타일 분석](../../fundamentals/productivity/code-analysis.md#code-style-analysis)은 모든 .NET 프로젝트에 대해 빌드 시 기본적으로 사용하지 않도록 설정됩니다. `EnforceCodeStyleInBuild` 속성을 `true`로 설정하여 .NET 프로젝트에 대해 코드 스타일 분석을 사용하도록 설정할 수 있습니다.
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+경고 또는 오류로 [구성된](../../fundamentals/productivity/code-analysis.md#code-style-analysis) 모든 코드 스타일 규칙은 빌드 및 보고 위반 시 실행됩니다.
 
 ## <a name="run-time-configuration-properties"></a>런타임 구성 속성
 
@@ -327,7 +357,7 @@ ms.locfileid: "88810524"
 
 `AssetTargetFallback` 속성을 사용하여 프로젝트 참조 및 NuGet 패키지에 대해 호환되는 추가 프레임워크 버전을 지정할 수 있습니다. 예를 들어 `PackageReference`를 사용하여 패키지 종속성을 지정하지만 해당 패키지에 프로젝트의 `TargetFramework`와 호환되는 자산이 포함되지 않은 경우 `AssetTargetFallback` 속성이 작동합니다. 참조된 패키지의 호환성은 `AssetTargetFallback`에 지정된 각 대상 프레임워크를 사용하여 다시 확인됩니다.
 
-`AssetTargetFallback` 속성을 하나 이상의 [대상 프레임워크 버전](../../standard/frameworks.md#supported-target-framework-versions)으로 설정할 수 있습니다.
+`AssetTargetFallback` 속성을 하나 이상의 [대상 프레임워크 버전](../../standard/frameworks.md#supported-target-frameworks)으로 설정할 수 있습니다.
 
 ```xml
 <PropertyGroup>

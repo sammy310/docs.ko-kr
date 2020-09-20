@@ -2,15 +2,15 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 08/25/2020
+ms.date: 09/09/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 2af0cc6721b66b1d07b196e4ba330f8425c14752
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957732"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022989"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -76,6 +76,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
 - [미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지](#middleware-database-error-page-marked-as-obsolete)
+- [미들웨어: 처리기를 찾을 수 없는 경우 예외 처리기 미들웨어가 원래 예외를 throw함](#middleware-exception-handler-middleware-throws-original-exception-if-handler-not-found)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult를 Microsoft.AspNetCore.Mvc.Core로 이동](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: 미리 컴파일 도구가 사용되지 않음](#mvc-precompilation-tool-deprecated)
@@ -171,6 +172,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
+
+***
+
+[!INCLUDE[Middleware: Exception Handler Middleware throws original exception if handler not found](~/includes/core-changes/aspnetcore/5.0/middleware-exception-handler-throws-original-exception.md)]
 
 ***
 

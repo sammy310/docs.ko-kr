@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 07/27/2020
+ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174369"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515821"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -33,7 +33,7 @@ ms.locfileid: "86174369"
 
 - 애플리케이션이 다양한 기능을 갖춘 풍부한 사용자 인터페이스를 노출해야 하는 경우
 
-- 팀이 JavaScript 및/또는 TypeScript 개발에 익숙한 경우
+- 팀이 JavaScript, TypeScript 또는 Blazor WebAssembly 개발에 익숙한 경우
 
 - 애플리케이션이 다른(내부 또는 공용) 클라이언트용 API를 이미 노출해야 하는 경우
 
@@ -43,17 +43,17 @@ SPA 접근 방식 덕분에 향상된 사용자 경험을 이러한 고려 사�
 
 ## Blazor
 
-ASP.NET Core 3.0에서는 Blazor라는 풍부하고 구성 가능한 대화형 UI를 빌드하는 새 모델을 제공합니다. Blazor 서버 쪽을 사용하면 개발자가 서버에서 C#과 Razor로 UI를 빌드하고 이를 영구적인 SignalR 연결을 통해 실시간으로 브라우저에 대화형으로 연결할 수 있습니다.
+ASP.NET Core에는 Blazor라는 풍부하고 구성 가능한 대화형 사용자 인터페이스를 빌드하기 위한 모델이 포함됩니다. Blazor 서버 쪽을 사용하면 개발자가 서버에서 C#과 Razor로 UI를 빌드하고 이를 영구적인 SignalR 연결을 통해 실시간으로 브라우저에 대화형으로 연결할 수 있습니다. Blazor WebAssembly는 WebAssembly를 사용하는 브라우저에서 실행할 수 있도록 Blazor 앱을 위한 다른 옵션도 도입했습니다. 실제 .NET이 WebAssembly에서 실행 중이므로 애플리케이션의 서버 쪽 부분에서 코드와 라이브러리를 다시 사용할 수 있습니다.
 
-Blazor WebAssembly는 WebAssembly를 사용하는 브라우저에서 실행할 수 있도록 Blazor 앱을 위한 다른 옵션도 도입했습니다. 실제 .NET이 WebAssembly에서 실행 중이므로 애플리케이션의 서버 쪽 부분에서 코드와 라이브러리를 다시 사용할 수 있습니다.
-
-Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또는 SPA를 빌드할지 여부를 평가할 때 고려할 새로운 세 번째 옵션을 제공합니다. 중대한 JavaScript 개발을 할 필요 없이 Blazor를 사용하여 SPA와 유사한 풍부한 클라이언트 쪽 동작을 빌드할 수 있습니다. Blazor 애플리케이션은 API를 호출하여 데이터를 요청하거나 서버 쪽 작업을 수행할 수 있습니다.
+Blazor는 순수하게 서버에서 렌더링하는 웹 애플리케이션 또는 SPA를 빌드할지 여부를 평가할 때 고려할 새로운 세 번째 옵션을 제공합니다. 많은 JavaScript 개발 작업을 할 필요 없이 Blazor를 사용하여 SPA와 유사한 풍부한 클라이언트 쪽 동작을 빌드할 수 있습니다. Blazor 애플리케이션은 API를 호출하여 데이터를 요청하거나 서버 쪽 작업을 수행할 수 있습니다. 필요한 경우 JavaScript 라이브러리 및 프레임워크를 이용하기 위해 JavaScript와 상호 운용될 수 있습니다.
 
 다음과 같은 경우에는 Blazor를 사용하여 웹 애플리케이션을 빌드하는 것이 좋습니다.
 
 - 애플리케이션이 풍부한 사용자 인터페이스를 노출해야 하는 경우
 
 - 개발 팀이 JavaScript 또는 TypeScript 개발보다 .NET 개발이 더 편안한 경우
+
+.NET Core로 마이그레이션을 고려 중인 기존 Web Forms 애플리케이션이 있는 경우 무료 ebook인 [Web Forms 개발자를 위한 Blazor](../blazor-for-web-forms-developers/index.md)를 검토하여 Blazor로 마이그레이션하는 것이 적절한지 확인할 수 있습니다.
 
 Blazor에 관한 자세한 내용은 [시작Blazor](https://blazor.net/docs/get-started.html)을 참조하세요.
 
@@ -100,7 +100,7 @@ SPA를 작성하려면 JavaScript 및/또는 TypeScript와 클라이언트 쪽 �
 
 다른 클라이언트에서 사용할 웹 API가 이미 지원되는 경우, 서버 쪽 양식의 논리를 재현하는 대신 이러한 API를 활용하는 SPA 구현을 만드는 데 필요한 노력이 줄어들 수 있습니다. SPA는 사용자가 애플리케이션과 상호 작용할 때 웹 API를 광범위하게 사용하여 데이터를 쿼리하고 업데이트합니다.
 
-## <a name="when-to-choose-blazor"></a>Blazor를 선택하는 경우
+## <a name="when-to-choose-no-locblazor"></a>Blazor를 선택하는 경우
 
 다음은 웹앱에 Blazor를 선택하는 경우에 관한 자세한 설명입니다.
 

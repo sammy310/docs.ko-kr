@@ -1,13 +1,13 @@
 ---
 title: 사용자 지정 SQLite 버전
-ms.date: 05/14/2020
+ms.date: 09/04/2020
 description: 네이티브 SQLite 라이브러리의 사용자 지정 버전을 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 15db10db26bc7c5017313ca020a0e1e528ba207a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fbf4b4cd33e6e890ce0c0cfe0b7688487b94b4a3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440839"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516140"
 ---
 # <a name="custom-sqlite-versions"></a>사용자 지정 SQLite 버전
 
@@ -22,6 +22,7 @@ ms.locfileid: "83440839"
 | [SQLitePCLRaw.bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | 모든 플랫폼에서 SQLite의 일관된 버전을 제공합니다. FTS4, FTS5, JSON1 및 R*Tree 확장을 포함합니다. 기본값입니다. |
 | [SQLitePCLRaw.bundle_e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlcipher) | `SQLCipher`의 비공식 오픈 소스 빌드를 제공합니다. |
 | [SQLitePCLRaw.bundle_green](https://www.nuget.org/packages/SQLitePCLRaw.bundle_green) | iOS에서 시스템 SQLite 라이브러리를 사용하는 것을 제외하고 `bundle_e_sqlite3`과 동일합니다. |
+| [SQLitePCLRaw.bundle_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_sqlite3) | 시스템 SQLite 라이브러리를 사용합니다. |
 | [SQLitePCLRaw.bundle_winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_winsqlite3) | Windows 10의 시스템 SQLite 라이브러리인 `winsqlite3.dll`을 사용합니다. |
 | [SQLitePCLRaw.bundle_zetetic](https://www.nuget.org/packages/SQLitePCLRaw.bundle_zetetic) | Zetetic의 공식 `SQLCipher` 빌드를 사용합니다(포함되지 않음). |
 

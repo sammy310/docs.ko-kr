@@ -3,13 +3,16 @@ title: ASP.NET Core 앱에서 데이터 작업
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계 | ASP.NET Core 앱에서 데이터 작업
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987844"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515875"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -93,7 +96,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-위의 예제에서 쿼리가 즉시 실행되도록 ToListAsync에 대한 호출을 추가하는 것이 중요합니다. 그렇지 않으면, 명령문에서 IQueryable\<SelectListItem>을 brandItems에 할당하므로 열거될 때까지 실행되지 않습니다. 메서드에서 IQueryable 결과를 반환할 때의 장점과 단점이 있습니다. 쿼리 EF Core가 추가 수정이 가능하도록 작성되지만, EF Core에서 변환할 수 없는 쿼리에 작업이 추가되면 런타임에만 발생하는 오류가 발생할 수도 있습니다. 일반적으로 데이터 액세스를 수행하는 메서드에 필터를 전달하고 메모리 내 컬렉션(예: List\<T>)을 반환하는 것이 안전합니다.
+위의 예제에서 쿼리가 즉시 실행되도록 ToListAsync에 대한 호출을 추가하는 것이 중요합니다. 그렇지 않으면 명령문에서 IQueryable\<SelectListItem>을 brandItems에 할당하므로 열거될 때까지 실행되지 않습니다. 메서드에서 IQueryable 결과를 반환할 때의 장점과 단점이 있습니다. 쿼리 EF Core가 추가 수정이 가능하도록 작성되지만, EF Core에서 변환할 수 없는 쿼리에 작업이 추가되면 런타임에만 발생하는 오류가 발생할 수도 있습니다. 일반적으로 데이터 액세스를 수행하는 메서드에 필터를 전달하고 메모리 내 컬렉션(예: List\<T>)을 반환하는 것이 안전합니다.
 
 EF Core는 지속성 저장소에서 가져오는 엔터티의 변경 내용을 추적합니다. 추적된 엔터티의 변경 내용을 저장하려면 엔터티를 가져올 때 사용한 것과 동일한 DbContext 인스턴스가 되도록 DbContext에서 SaveChanges 메서드를 호출하면 됩니다. 엔터티 추가 및 제거는 적절한 DbSet 속성에서 직접 수행되며, 마찬가지로 SaveChanges를 호출하여 데이터베이스 명령을 실행합니다. 다음 예제에서는 지속성 저장소에서 엔터티를 추가, 업데이트 및 제거하는 방법을 보여줍니다.
 
@@ -507,6 +510,52 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 캐싱은 반복해서 데이터베이스에서 동일한 값을 요청하는 웹 페이지의 성능을 크게 향상시킬 수 있습니다. 캐싱을 적용하기 전에 데이터 액세스 및 페이지 성능을 측정하고, 개선이 필요한 경우에만 캐싱을 적용해야 합니다. 캐싱은 웹 서버 메모리 리소스를 사용하고 애플리케이션의 복잡성을 증가시키므로 이 기술을 조급하게 활용하지 않는 것이 중요합니다.
+
+## <a name="getting-data-to-no-locblazor-no-locwebassembly-apps"></a>Blazor WebAssembly 앱으로 데이터 가져오기
+
+Blazor 서버를 사용하는 앱을 빌드하는 경우 이 장에서 지금까지 설명한 대로 Entity Framework 및 기타 직접 데이터 액세스 기술을 사용할 수 있습니다. 그러나 다른 SPA 프레임워크처럼 Blazor WebAssembly 앱을 빌드하는 경우 다른 데이터 액세스 전략이 필요합니다. 일반적으로 해당 애플리케이션은 데이터에 액세스하고 웹 API 엔드포인트를 통해 서버와 상호 작용합니다.
+
+수행 중인 데이터 또는 작업이 중요한 경우 [이전 장](develop-asp-net-core-mvc-apps.md)에서 보안 관련 섹션을 검토하고 무단 액세스로부터 API를 보호해야 합니다.
+
+Blazor관리 프로젝트의 [eShopOnWeb 참조 애플리케이션](https://github.com/dotnet-architecture/eShopOnWeb)에서 Blazor WebAssembly 앱의 예를 찾을 수 있습니다. 이 프로젝트는 eShopOnWeb 웹 프로젝트 내에 호스트되며 Administrators 그룹의 사용자가 저장소의 항목을 관리하는 데 사용할 수 있습니다. 그림 8-3에서 애플리케이션의 스크린샷을 볼 수 있습니다.
+
+![eShopOnWeb 카탈로그 관리 스크린샷](./media/image8-3.jpg)
+
+**그림 8-3.** eShopOnWeb 카탈로그 관리 스크린샷
+
+Blazor WebAssembly 앱 내의 웹 API에서 데이터를 가져오는 경우 모든 .NET 애플리케이션에서 사용하는 것처럼 `HttpClient` 인스턴스를 사용합니다. 포함된 기본 단계는 보낼 요청을 만들고(필요시 일반적으로 POST 또는 PUT 요청의 경우), 요청 자체를 기다리고, 상태 코드를 확인하며, 응답을 역직렬화하는 것입니다. 지정된 API 세트에 대한 많은 요청을 만들려는 경우 API를 캡슐화하고 `HttpClient` 기준 주소를 중앙에서 구성하는 것이 좋습니다. 이렇게 하면 환경 간에 해당 설정을 조정해야 하는 경우 한 곳에서만 변경 작업을 수행할 수 있습니다. `Program.Main`에서 해당 서비스 지원을 추가해야 합니다.
+
+```csharp
+builder.Services.AddScoped(sp =>
+    new HttpClient
+    {
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+```
+
+서비스에 안전하게 액세스해야 하는 경우 보안 토큰에 액세스하고 모든 요청에서 해당 토큰을 인증 헤더로 전달하도록 `HttpClient`를 구성해야 합니다.
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization =
+    new AuthenticationHeaderValue("Bearer", token);
+```
+
+`HttpClient`가 `Transient` 수명을 사용하여 애플리케이션 서비스에 추가되지 않은 경우 `HttpClient`가 삽입된 모든 구성 요소에서 해당 작업을 수행할 수 있습니다. 애플리케이션의 `HttpClient`에 대한 모든 참조는 동일한 인스턴스를 참조하므로 한 구성 요소의 변경 내용은 전체 애플리케이션에 적용됩니다. 토큰을 지정하여 해당 인증 검사를 수행할 좋은 위치는 사이트의 주 탐색 같은 공유 구성 요소에 있습니다. [eShopOnWeb 참조 애플리케이션](https://github.com/dotnet-architecture/eShopOnWeb)의 `BlazorAdmin` 프로젝트에서 해당 접근 방식을 자세히 알아봅니다.
+
+기존 JavaScript SPA를 통한 Blazor WebAssembly의 한 가지 이점은 DTO(데이터 전송 개체)의 복사본을 계속 동기화하지 않아도 된다는 것입니다. Blazor WebAssembly 프로젝트와 웹 API 프로젝트는 둘 다 공통 공유 프로젝트에서 동일한 DTO를 공유할 수 있습니다. 이렇게 하면 SPA 개발과 관련된 일부 충돌이 제거됩니다.
+
+API 엔드포인트에서 데이터를 빠르게 가져오는 데는 기본 제공 도우미 메서드인 `GetFromJsonAsync`를 사용할 수 있습니다. POST, PUT 등을 위한 유사한 메서드가 있습니다. 다음은 Blazor WebAssembly 앱에서 구성된 `HttpClient`를 사용하여 API 엔드포인트에서 CatalogItem을 가져오는 방법을 보여 줍니다.
+
+```csharp
+var item = await _httpClient.GetFromJsonAsync<CatalogItem>($"catalog-items/{id}");
+```
+
+필요한 데이터가 있으면 일반적으로 변경 내용을 로컬에서 추적합니다. 백 엔드 데이터 저장소를 업데이트하려는 경우 해당 목적을 위해 추가 웹 API를 호출합니다.
+
+**참조 – Blazor 데이터**
+
+- ASP.NET Core Blazor에서 웹 API 호출
+  <https://docs.microsoft.com/aspnet/core/blazor/call-web-api>
 
 >[!div class="step-by-step"]
 >[이전](develop-asp-net-core-mvc-apps.md)

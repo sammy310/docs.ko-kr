@@ -1,22 +1,24 @@
 ---
 title: Windows Forms 관련 호환성이 손상되는 변경
-description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+description: .NET Core 및 .NET 5용 Windows Forms의 호환성이 손상되는 변경 목록입니다.
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556215"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656345"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
-Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 문서에서는 Windows Forms의 주요 변경 사항이 .NET Core 버전이 도입된 순서대로 표시됩니다. .NET Framework 또는 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다.
+Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 문서에서는 Windows Forms의 호환성이 손상되는 변경을 .NET 버전(해당 변경이 도입된 버전)을 기준으로 나열합니다. .NET Framework 또는 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다.
 
 이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [DataGridView 관련 API가 이제 InvalidOperationException을 throw함](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
+| [WinForms 및 WPF 앱이 Microsoft.NET.Sdk를 사용함](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [상태 표시줄 컨트롤 제거](#removed-status-bar-controls) | 5.0 |
 | [WinForms 메서드는 이제 ArgumentException을 throw함](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms 메서드는 이제 ArgumentNullException을 throw함](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
@@ -36,6 +38,14 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 | [UseLegacyImages 호환성 스위치가 지원되지 않음](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 

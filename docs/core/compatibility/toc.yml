@@ -30,6 +30,8 @@
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
+    - name: 코드 분석
+      href: code-analysis.md
     - name: 핵심 .NET 라이브러리
       href: corefx.md
     - name: 암호화

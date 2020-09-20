@@ -1,19 +1,19 @@
 ---
 title: SDK 스타일 프로젝트의 대상 프레임워크 - .NET
-description: .NET Core 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
-ms.date: 12/03/2019
+description: .NET 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
+ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164302"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065255"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 
-앱 또는 라이브러리에서 프레임워크를 대상으로 지정하면 앱 또는 라이브러리에서 사용할 수 있도록 하려는 API 집합을 지정하는 것입니다. TFM(대상 프레임워크 모니터)을 사용하여 프로젝트 파일에서 대상 프레임워크를 지정합니다.
+앱 또는 라이브러리에서 프레임워크를 대상으로 지정하면 앱 또는 라이브러리에서 사용할 수 있도록 하려는 API 집합을 지정하는 것입니다. TFM(대상 프레임워크 모니커)을 사용하여 프로젝트 파일에서 대상 프레임워크를 지정합니다.
 
 앱 또는 라이브러리는 [.NET Standard](net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현체에서 사용할 수 있는 표준화된 API 집합을 나타냅니다. 예를 들어 .NET Standard 1.6을 대상으로 하는 라이브러리는 동일한 코드 기반의 .NET Core 및 .NET Framework에서 동작하는 API에 액세스할 수 있습니다.
 
@@ -23,24 +23,24 @@ ms.locfileid: "87164302"
 
 패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 내용은 없고 종속성(다른 패키지) 목록만 있는 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
 
-## <a name="latest-target-framework-versions"></a>최신 대상 프레임워크 버전
+## <a name="latest-versions"></a>최신 버전
 
 다음 표에서는 가장 일반적인 대상 프레임워크, 프레임워크가 참조되는 방법 및 프레임워크에서 구현하는 [.NET Standard](net-standard.md)의 버전을 정의합니다. 이러한 대상 프레임워크 버전은 안정적인 최신 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위해 표준화된 토큰 형식입니다.
 
-| 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
-| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET Standard 버전 |
+| :-: | :-: | :-: | :-: |
 | .NET 표준         | 2.1                         | netstandard2.1                 | 해당 없음                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
-## <a name="supported-target-framework-versions"></a>지원되는 대상 프레임워크 버전
+## <a name="supported-target-frameworks"></a>지원되는 대상 프레임워크
 
-대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 동일한 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 동일한 TFM입니다.
+대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 동일한 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 동일한 TFM입니다.
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
+| .NET 5(및 .NET Core)     | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1<br>net5.0* |
 | .NET 표준              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 스토어              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -48,16 +48,35 @@ ms.locfileid: "87164302"
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | 유니버설 Windows 플랫폼 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
+\* .NET 5.0 이상 TFM에 OS별 변형이 포함됩니다. 자세한 내용은 [.NET 5 OS별 TFM](#net-5-os-specific-tfms) 섹션을 참조하세요.
 
-대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 3.0을 대상 프레임워크로 지정하는 방법을 보여 줍니다.
+### <a name="net-5-os-specific-tfms"></a>.NET 5 OS별 TFM
+
+각 .NET 5.0 이상 TFM(예: `net5.0`)에는 OS별 바인딩이 포함된 TFM 변형이 있습니다. 해당 변형은 다음 표에 나와 있습니다.
+
+| OS별 형식 | 예제        |
+|--------------------|----------------|
+| \<base-tfm>-android | net5.0-android |
+| \<base-tfm>-ios     | net5.0-ios     |
+| \<base-tfm>-macos   | net5.0-macos   |
+| \<base-tfm>-tvos    | net5.0-tvos    |
+| \<base-tfm>-watchos | net5.0-watchos |
+| \<base-tfm>-windows | net5.0-windows |
+
+선택 사항인 OS 버전을 지정할 수도 있습니다(예: `net5.0-ios12.0`).
+
+.NET 5 TFM에 대한 자세한 내용은 [Target framework names in .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)(.NET 5의 대상 프레임워크 이름)를 참조하세요.
+
+## <a name="how-to-specify-a-target-framework"></a>대상 프레임워크를 지정하는 방법
+
+대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET 5.0을 대상 프레임워크로 지정하는 방법을 보여 줍니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -65,7 +84,7 @@ ms.locfileid: "87164302"
 
 여러 대상 프레임워크를 지정하는 경우 각 대상 프레임워크에 대한 어셈블리를 조건에 따라 참조할 수 있습니다. 코드에서는 *if-then-else* 로직에 전처리기 기호를 사용하여 해당 어셈블리를 조건에 따라 컴파일할 수 있습니다.
 
-다음 라이브러리 프로젝트 파일은 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리를 두 개의 .NET Framework TFM에 대해 컴파일하려면 `Condition` 특성에 구현체 관련 패키지를 포함합니다.
+다음 라이브러리 프로젝트는 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리가 두 개의 .NET Framework TFM에 대해 컴파일되면 `Condition` 특성에 구현 관련 패키지가 포함됩니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -88,7 +107,7 @@ ms.locfileid: "87164302"
 </Project>
 ```
 
-라이브러리나 앱에서, 조건에 따라 각 대상 프레임워크에 대해 컴파일하는 코드를 작성합니다.
+라이브러리나 앱에서 [전처리기 지시문](../csharp/language-reference/preprocessor-directives/preprocessor-if.md)으로 조건 코드를 작성하여 각 대상 프레임워크에 대해 컴파일합니다.
 
 ```csharp
 public class MyClass
@@ -106,9 +125,9 @@ public class MyClass
 }
 ```
 
-빌드 시스템은 SDK 스타일 프로젝트를 사용할 때 [지원되는 대상 프레임워크 버전](#supported-target-framework-versions) 표에 표시된 대상 프레임워크를 나타내는 전처리기 기호를 인식합니다. .NET Standard 또는 .NET Core TFM을 나타내는 기호를 사용할 경우 점을 밑줄로 바꾸고 소문자를 대문자로 변경합니다. 예를 들어 `netstandard1.4`에 대한 기호는 `NETSTANDARD1_4`입니다.
+빌드 시스템은 SDK 스타일 프로젝트를 사용할 때 [지원되는 대상 프레임워크 버전](#supported-target-frameworks) 표에 표시된 대상 프레임워크를 나타내는 전처리기 기호를 인식합니다. .NET Standard, .NET Core 또는 .NET 5 TFM을 나타내는 기호를 사용할 경우 밑줄로 바꾸고 소문자를 대문자로 변경합니다. 예를 들어 `netstandard1.4`에 대한 기호는 `NETSTANDARD1_4`입니다.
 
-다음은 .NET Core 대상 프레임워크에 대한 전체 전처리기 기호 목록입니다.
+다음은 .NET 대상 프레임워크에 대한 전체 전처리기 기호 목록입니다.
 
 [!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 

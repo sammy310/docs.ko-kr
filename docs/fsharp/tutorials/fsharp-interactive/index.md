@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ae8d68140ddec8e18ee23e9a43b548907e1ab5c4
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867622"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720324"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -120,4 +120,3 @@ F# 대화형에서 DLL을 참조하는 `#r` 구문은 다음 구문을 통해 nu
 |제목|Description|
 |-----|-----------|
 |[F# Interactive 옵션](../../language-reference/fsharp-interactive-options.md)|F# 대화형(fsi.exe)의 명령줄 구문 및 옵션에 대해 설명합니다.|
-|[F# Interactive 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive에서 코드를 실행할 때 사용할 수 있는 라이브러리 기능에 대해 설명합니다.|

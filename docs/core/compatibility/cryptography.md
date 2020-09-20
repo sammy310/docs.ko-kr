@@ -2,12 +2,12 @@
 title: 암호화 관련 호환성이 손상되는 변경
 description: .NET Core의 암호화 관련 호환성이 손상되는 변경 사항을 나열합니다.
 ms.date: 04/22/2020
-ms.openlocfilehash: f7d580938fb7620728b8ff7f67412c9f5bbbb6c3
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 621a3dad28b67ee33056dce3df0379efaeb90776
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558007"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065108"
 ---
 # <a name="cryptography-breaking-changes"></a>암호화 관련 호환성이 손상되는 변경
 
@@ -20,6 +20,7 @@ ms.locfileid: "88558007"
 | [EnvelopedCms를 기본적으로 AES-256 암호화로 설정](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
 | [RSAOpenSsl 키 생성 최소 크기가 증가](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
 | [.NET Core 3.0은 OpenSSL 1.0.x보다 OpenSSL 1.1.x를 권장합니다.](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [CryptoStream.Dispose는 쓰는 경우에만 최종 블록을 변환함](#cryptostreamdispose-transforms-final-block-only-when-writing) | 3.0 |
 | [SignedCms.ComputeSignature의 부울 매개 변수를 적용](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
@@ -43,6 +44,10 @@ ms.locfileid: "88558007"
 ***
 
 [!INCLUDE[.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x](~/includes/core-changes/cryptography/3.0/net-core-3-0-prefers-openssl-1-1-x.md)]
+
+***
+
+[!INCLUDE [CryptoStream.Dispose transforms final block only when writing](~/includes/core-changes/cryptography/3.0/cryptography-cryptostream-dispose-final-block-write.md)]
 
 ***
 

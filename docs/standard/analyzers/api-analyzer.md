@@ -4,12 +4,12 @@ description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156136"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598092"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -54,32 +54,32 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 <xref:System.Net.WebClient>와 같은 사용되지 않는 API가 코드에서 사용되는 경우 API 분석기는 녹색 물결선으로 API를 강조 표시합니다. API 호출을 마우스로 가리키면 다음 예제와 같이 API 사용 중단에 대한 정보가 포함된 전구가 표시됩니다.
 
-![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/green-squiggle.jpg)
+![왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷](media/api-analyzer/green-squiggle.jpg)
 
 다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다.
 
-![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고가 포함된 오류 목록 창입니다.")
+![경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷](media/api-analyzer/warnings-id-and-descriptions.jpg "경고가 포함된 오류 목록 창입니다.")
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
-강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<진단 ID>을(를) 표시하지 않음**을 선택하여 모든 경고를 표시하지 않을 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다.
+강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<diagnostic ID> 제거**를 선택하여 모든 경고를 제거할 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다.
 
 - [로컬로(소스)](#suppress-warnings-locally)
 - [전역으로(비표시 오류(Suppression) 파일)](#suppress-warnings-globally) - 권장됨
 
 ### <a name="suppress-warnings-locally"></a>로컬로 경고 표시 안 함
 
-로컬로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **소스**를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. !["#pragma warning disable로 묶인 코드의 스크린샷"](media/api-analyzer/suppress-in-source.jpg)
+로컬로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **소스**를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. ![#pragma warning disable로 묶인 코드의 스크린샷](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>전역으로 경고 표시 안 함
 
-전역으로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **비표시 오류(Suppression) 파일**을 선택합니다.
+전역으로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **비표시 오류(Suppression) 파일**을 선택합니다.
 
-![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/suppress-in-sup-file.jpg)
+![Visual Studio에서 경고를 제거하는 옵션을 보여 주는 마우스 오른쪽 단추 클릭 메뉴의 스크린샷](media/api-analyzer/suppress-in-sup-file.jpg)
 
 *GlobalSuppressions.cs* 파일이 첫 번째 비표시 오류(Supression) 후에 프로젝트에 추가됩니다. 새 전역 비표시 오류(Supression)가 이 파일에 추가됩니다.
 
-![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/suppression-file.jpg)
+![솔루션 탐색기에 있는 GlobalSuppressions.cs 파일의 스크린샷](media/api-analyzer/suppression-file.jpg)
 
 전역 비표시 오류(Supression)는 여러 프로젝트에서 API 사용의 일관성을 보장하는 권장 방법입니다.
 
@@ -103,7 +103,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 }
 ```
 
-대상 프레임워크/운영 체제별로 조건부로 컴파일할 수도 있지만 현재는 해당 작업을 [수동으로](../frameworks.md#how-to-specify-target-frameworks) 수행해야 합니다.
+대상 프레임워크/운영 체제별로 조건부로 컴파일할 수도 있지만 현재는 해당 작업을 [수동으로](../frameworks.md#how-to-specify-a-target-framework) 수행해야 합니다.
 
 ## <a name="supported-diagnostics"></a>지원되는 진단
 
@@ -111,7 +111,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 - <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
 - .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
-- UWP(PC003)에 존재하지 않는 네이티브 API 사용.
+- UWP(PC003)에 존재하지 않는 네이티브 API 사용
 - Delegate.BeginInvoke 및 EndInvoke API(PC004) 사용.
 - 사용되지 않음(DEXXXX)으로 표시된 API 사용.
 
@@ -123,7 +123,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 사용자는 진단을 처리하는 방법을 경고, 오류, 제안 또는 해제로 결정합니다. 예를 들어 설계자가 호환성 문제를 오류로 처리하도록 결정하면 일부 사용되지 않는 API에 대한 호출은 경고를 생성하지만 다른 API에 대한 호출은 제안만 생성합니다. 이 방법은 진단 ID 및 프로젝트별로 별도로 구성할 수 있습니다. **솔루션 탐색기**에서 이를 수행하려면 프로젝트 아래의 **종속성** 노드로 이동합니다. 노드 **종속성** > **분석** > **Microsoft.DotNet.Analyzers.Compatibility**를 확장합니다. 진단 ID를 마우스 오른쪽 단추로 클릭하고 **규칙 집합 심각도 설정**을 선택하고 원하는 옵션을 선택합니다.
 
-![“진단 및 규칙 집합 심각도가 있는 팝업 대화 상자를 표시하는 솔루션 탐색기의 스크린샷”](media/api-analyzer/disable-notifications.jpg)
+![진단 및 규칙 집합 심각도가 있는 팝업 대화 상자를 보여 주는 솔루션 탐색기의 스크린샷](media/api-analyzer/disable-notifications.jpg)
 
 ## <a name="see-also"></a>참조
 

@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/27/2020
-ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465891"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598165"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ ms.locfileid: "89465891"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [Thread.Abort는 사용되지 않음](#threadabort-is-obsolete) | 5.0 |
 | [ConsoleLoggerOptions에서 사용되지 않는 속성](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [중첩 형식의 경우 하드웨어 내장 IsSupported 검사가 다를 수 있음](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [참조 어셈블리의 매개 변수 이름 변경됨](#parameter-names-changed-in-reference-assemblies) | 5.0 |
@@ -52,6 +53,10 @@ ms.locfileid: "89465891"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
+
+***
 
 [!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
 

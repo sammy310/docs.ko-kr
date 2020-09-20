@@ -13,11 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803508"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656147"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -62,7 +63,7 @@ ms.locfileid: "85803508"
   
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드나 경로로 로드되는 다른 메서드 중 하나를 사용하여 어셈블리를 로드하면 다음과 같은 단점이 있습니다.  
   
-- 같은 ID를 가진 어셈블리가 이미 로드되어 있으면 다른 경로가 지정된 경우에도 <xref:System.Reflection.Assembly.LoadFrom%2A>은 로드된 어셈블리를 반환합니다.  
+- 같은 ID를 가진 어셈블리가 이미 로드 소스 컨텍스트에서 로드되어 있으면 다른 경로가 지정된 경우에도 <xref:System.Reflection.Assembly.LoadFrom%2A>은 로드된 어셈블리를 반환합니다.  
   
 - 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A>을 사용하여 로드되고 나중에 기본 로드 컨텍스트의 어셈블리가 표시 이름으로 같은 어셈블리를 로드하려고 하면 로드 시도가 실패합니다. 어셈블리가 역직렬화되면 이 문제가 발생할 수 있습니다.  
   

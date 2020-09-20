@@ -2,12 +2,12 @@
 title: dotnet-dump - .NET Core
 description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140934"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598107"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(dotnet-dump)
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   메모리 덤프를 수집할 프로세스 ID 번호를 지정합니다.
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  프로세스에서 수집되는 정보의 종류를 결정하는 덤프 형식을 지정합니다. 다음과 같은 두 가지 형식이 있습니다.
+  프로세스에서 수집되는 정보의 종류를 결정하는 덤프 형식을 지정합니다. 다음 세 가지 유형이 있습니다.
 
+  - `Full` - 모듈 이미지를 포함하여 모든 메모리를 포함하는 가장 큰 덤프입니다.
   - `Heap` - 모듈 목록, 스레드 목록, 모든 스택, 예외 정보, 핸들 정보 및 매핑된 이미지를 제외한 모든 메모리를 포함하는 크고 비교적 포괄적인 덤프입니다.
   - `Mini` - 모듈 목록, 스레드 목록, 예외 정보 및 모든 스택을 포함하는 작은 덤프입니다.
 
-  지정하지 않으면 `Heap`이 기본값입니다.
+  지정하지 않으면 `Full`이 기본값입니다.
 
 - **`-o|--output <output_dump_path>`**
 

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241145"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516023"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -115,7 +115,7 @@ F#에는 C# 및 Visual Basic에 있는 메서드-지역 형식 유추보다 더 
 
 LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수 있게 해주는 C# 및 Visual Basic에 대한 강력한 기능 집합입니다. 데이터는 다양한 형식(예: 메모리 내 개체, SQL 데이터베이스 또는 XML 문서)일 수 있지만 작성하는 LINQ 코드는 일반적으로 각 데이터 소스마다 다르게 표시되지 않습니다.
 
-자세히 알아보고 몇 가지 샘플을 확인하려면 [LINQ(Language-Integrated Query)](using-linq.md) 항목을 참조하세요.
+자세히 알아보고 몇 가지 샘플을 확인하려면 [LINQ(Language-Integrated Query) 개요](./linq/index.md) 문서를 참조하세요.
 
 ## <a name="native-interoperability"></a>기본 상호 운용성
 

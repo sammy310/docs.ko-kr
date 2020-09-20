@@ -3,19 +3,19 @@ title: DisposeAsync 메서드 구현
 description: DisposeAsync 및 DisposeAsyncCore 메서드를 구현하여 비동기 리소스 정리를 수행하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 08/25/2020
+ms.date: 09/10/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053180"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022911"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync 메서드 구현
 
@@ -70,6 +70,18 @@ public async ValueTask DisposeAsync()
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
 앞의 예제에서는 <xref:System.Text.Json.Utf8JsonWriter>를 사용합니다. `System.Text.Json`에 대한 자세한 내용은 [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션하는 방법](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)을 참조하세요.
+
+## <a name="implement-both-dispose-and-async-dispose-patterns"></a>삭제 패턴과 비동기 삭제 패턴 둘 다 구현
+
+특히 클래스 범위에 이러한 구현의 인스턴스가 포함된 경우 <xref:System.IDisposable> 인터페이스와 <xref:System.IAsyncDisposable> 인터페이스를 둘 다 구현해야 할 수도 있습니다. 이렇게 하면 정리 호출을 적절히 계단식 배열할 수 있습니다. 다음은 두 인터페이스를 모두 구현하는 예제 클래스이며 정리에 대한 적절한 지침을 보여 줍니다.
+
+:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
+
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType> 구현과 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 구현은 둘 다 간단한 상용구 코드입니다. `Dispose(bool)` 및 `DisposeAsyncCore()` 메서드는 `_disposed`가 `true`인지 확인하여 시작하고 `false`일 때만 실행됩니다.
+
+`Dispose(bool)` 오버로드 메서드에서 <xref:System.IDisposable> 인스턴스는 `null`이 아닌 경우 조건적으로 삭제됩니다. <xref:System.IAsyncDisposable> 인스턴스는 <xref:System.IDisposable>로 캐스팅되며 `null`이 아닌 경우 삭제됩니다. 그런 다음, 두 인스턴스가 모두 `null`에 할당됩니다.
+
+`DisposeAsyncCore()` 메서드를 사용하여 동일한 논리 접근 방식을 따릅니다. <xref:System.IAsyncDisposable> 인스턴스가 `null`이 아닌 경우에는 `DisposeAsync().ConfigureAwait(false)` 호출이 대기됩니다. <xref:System.IDisposable> 인스턴스가 <xref:System.IAsyncDisposable>의 구현이기도 한 경우에도 비동기적으로 삭제됩니다. 그런 다음, 두 인스턴스가 모두 `null`에 할당됩니다.
 
 ## <a name="using-async-disposable"></a>비동기 삭제 가능 사용
 

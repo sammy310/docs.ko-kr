@@ -3,13 +3,16 @@ title: ASP.NET Core MVC 앱 개발
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이션 설계 | ASP.NET Core MVC 앱 개발
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307009"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515980"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -20,7 +23,7 @@ ASP.NET Core는 최신 클라우드에 최적화된 웹 애플리케이션을 �
 
 ## <a name="mvc-and-razor-pages"></a>MVC 및 Razor Pages
 
-ASP.NET Core MVC는 웹 기반 API 및 앱을 빌드하기 위해 유용한 많은 기능을 제공합니다. MVC라는 용어는 사용자 요청에 응답할 책임을 여러 부분으로 분리하는 UI 패턴인 "Model-View-Controller"를 나타냅니다. 이 패턴을 수행하는 것 외에도 ASP.NET Core 앱의 기능을 Razor Pages로 구현할 수도 있습니다. Razor Pages는 ASP.NET Core MVC에 빌드되어 라우팅, 모델 바인딩 등에 대해 동일한 기능을 사용합니다. 그러나 컨트롤러, 보기 등에 대한 별도 폴더 및 파일을 포함하고 특성 기반 라우팅을 사용하는 대신 Razor Pages는 단일 폴더에 배치되고("/Pages"), 이 폴더의 상대 위치에 따라 라우팅하고, 컨트롤러 작업이 아닌 처리기를 사용하여 요청을 처리합니다.
+ASP.NET Core MVC는 웹 기반 API 및 앱을 빌드하기 위해 유용한 많은 기능을 제공합니다. MVC라는 용어는 사용자 요청에 응답할 책임을 여러 부분으로 분리하는 UI 패턴인 "Model-View-Controller"를 나타냅니다. 이 패턴을 수행하는 것 외에도 ASP.NET Core 앱의 기능을 Razor Pages로 구현할 수도 있습니다. Razor Pages는 ASP.NET Core MVC에 빌드되어 라우팅, 모델 바인딩, 필터, 권한 부여 등에 대해 동일한 기능을 사용합니다. 그러나 컨트롤러, 모델, 보기 등에 대한 별도 폴더 및 파일을 포함하고 특성 기반 라우팅을 사용하는 대신 Razor Pages는 단일 폴더에 배치되고(“/Pages”), 이 폴더의 상대 위치에 따라 라우팅되며, 컨트롤러 작업이 아닌 처리기를 사용하여 요청을 처리합니다. 따라서 Razor Pages를 사용하는 경우 필요한 모든 파일 및 클래스는 일반적으로 웹 프로젝트 전체에 분산되지 않고 공동 배치됩니다.
 
 새 ASP.NET Core 앱을 만들려면 빌드하려는 앱의 종류에 유의하여 계획해야 합니다. Visual Studio에서는 여러 템플릿 중에서 선택할 수 있습니다. 세 가지 가장 일반적인 프로젝트 템플릿은 Web API, 웹 애플리케이션 및 웹 애플리케이션(Model-View-Controller)입니다. 프로젝트를 처음 만들 때 이 결정을 내리지만 결정을 번복할 수 있습니다. Web API 프로젝트에서는 표준 Model-View-Controller 컨트롤러를 사용합니다. 기본적으로 Views가 없습니다. 마찬가지로, 기본 웹 애플리케이션 템플릿도 Razor Pages를 사용하므로 Views 폴더가 없습니다. 나중에 이러한 프로젝트에 Views 폴더를 추가하여 보기 기반 동작을 지원할 수 있습니다. Web API 및 Model-View-Controller 프로젝트에는 기본적으로 Pages 폴더가 포함되지 않지만 나중에 추가하여 Razor Pages 기반 동작을 지원할 수 있습니다. 이러한 세 가지 템플릿이 세 가지 종류의 기본 사용자 상호 작용(데이터(웹 API), 페이지 기반 및 보기 기반)을 지원한다고 여길 수 있습니다. 그러나 원하는 경우 단일 프로젝트 내에서 이 중 일부 또는 전체를 혼합하고 일치시킬 수 있습니다.
 
@@ -97,6 +100,72 @@ Razor Pages는 특성 라우팅을 사용하지 않습니다. Razor Pages의 추
 웹 API의 경우 ASP.NET Core MVC는 [_콘텐츠 협상_](/aspnet/core/mvc/models/formatting)을 지원하므로 응답의 형식을 지정하는 방법을 요청할 수 있습니다. 요청에 제공된 헤더에 따라 데이터를 반환하는 작업은 응답을 XML, JSON 또는 지원되는 다른 형식으로 지정합니다. 이 기능을 사용하면 데이터 형식 요구 사항이 서로 다른 여러 클라이언트에서 동일한 API를 사용할 수 있습니다.
 
 Web API 프로젝트는 `[ApiController]` 특성을 사용하는 것이 좋습니다. 해당 항목은 개별 컨트롤러, 기본 컨트롤러 클래스 또는 전체 어셈블리에 적용될 수 있습니다. 이 특성은 자동 모델 유효성 검사를 추가하며, 잘못된 모델을 사용하는 작업은 유효성 검사 오류의 세부 정보를 포함한 BadRequest를 반환하게 됩니다. 해당 특성을 사용하려면 규칙 기반 경로를 사용하기 보다는 모든 작업에 특성 경로가 포함되어야 하고 응답의 자세한 ProblemDetails를 오류에 반환해야 합니다.
+
+### <a name="keeping-controllers-under-control"></a>컨트롤러 크기 유지
+
+페이지 기반 애플리케이션의 경우 Razor Pages는 컨트롤러가 너무 커지지 않게 유지하는 유용한 작업을 수행합니다. 각 개별 페이지에는 해당 처리기에 전용인 자체 파일 및 클래스가 제공됩니다. Razor Pages 도입 전에 많은 보기 중심 애플리케이션에는 다양한 작업 및 보기를 담당하는 많은 컨트롤러 클래스가 있습니다. 해당 클래스는 많은 책임과 종속성을 포함하도록 자연스럽게 증가하므로 유지 관리가 더 어려워집니다. 보기 기반 컨트롤러가 너무 많이 증가하는 경우 Razor Pages를 사용하도록 리팩터링하거나 중재자 같은 패턴을 도입해 보세요.
+
+중재자 디자인 패턴은 클래스 간 통신을 허용하면서 클래스 간 결합을 줄이는 데 사용됩니다. ASP.NET Core MVC 애플리케이션에서 해당 패턴은 작업 메서드의 작업을 수행하는 데 ‘처리기’를 사용하여 컨트롤러를 더 작은 조각으로 분할하기 위해 자주 사용됩니다. 인기 있는 [MediatR NuGet 패키지](https://www.nuget.org/packages/MediatR/)는 종종 해당 작업을 수행하는 데 사용됩니다. 일반적으로 컨트롤러에는 각각 특정 종속성이 필요할 수 있는 다양한 작업 메서드가 포함됩니다. 작업에 필요한 모든 종속성 세트를 컨트롤러 생성자에 전달해야 합니다. 중재자를 사용하는 경우 컨트롤러의 유일한 종속성은 중재자 인스턴스에 있습니다. 이후 각 작업은 중재자 인스턴스를 사용하여 처리기에서 처리되는 메시지를 보냅니다. 처리기는 단일 작업에 특정하므로 해당 작업에 필요한 종속성만 필요합니다. MediatR을 사용하는 컨트롤러의 예는 다음과 같습니다.
+
+```csharp
+public class OrderController : Controller
+{
+    private readonly IMediator _mediator;
+
+    public OrderController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> MyOrders()
+    {
+        var viewModel = await _mediator.Send(new GetMyOrders(User.Identity.Name));
+
+        return View(viewModel);
+    }
+
+    // other actions implemented similarly
+}
+```
+
+`MyOrders` 작업에서 `GetMyOrders` 메시지 `Send`에 대한 호출은 다음 클래스에서 처리됩니다.
+
+```csharp
+public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<OrderViewModel>>
+{
+    private readonly IOrderRepository _orderRepository;
+
+    public GetMyOrdersHandler(IOrderRepository orderRepository)
+    {
+        _orderRepository = orderRepository;
+    }
+
+    public async Task<IEnumerable<OrderViewModel>> Handle(GetMyOrders request, CancellationToken cancellationToken)
+    {
+        var specification = new CustomerOrdersWithItemsSpecification(request.UserName);
+        var orders = await _orderRepository.ListAsync(specification);
+
+        return orders.Select(o => new OrderViewModel
+        {
+            OrderDate = o.OrderDate,
+            OrderItems = o.OrderItems?.Select(oi => new OrderItemViewModel()
+            {
+                PictureUrl = oi.ItemOrdered.PictureUri,
+                ProductId = oi.ItemOrdered.CatalogItemId,
+                ProductName = oi.ItemOrdered.ProductName,
+                UnitPrice = oi.UnitPrice,
+                Units = oi.Units
+            }).ToList(),
+            OrderNumber = o.Id,
+            ShippingAddress = o.ShipToAddress,
+            Total = o.Total()
+        });
+    }
+}
+```
+
+해당 접근 방식의 최종 결과는 컨트롤러가 훨씬 더 작아지고 주로 라우팅 및 모델 바인딩에 집중하는 것이지만 개별 처리기는 지정된 엔드포인트에 필요한 특정 작업을 담당합니다. Razor Pages가 보기 기반 컨트롤러에 제공하는 동일한 이점을 API 컨트롤러에 제공하려고 시도하는 [ApiEndpoints NuGet 패키지](https://www.nuget.org/packages/Ardalis.ApiEndpoints/)를 사용하여 MediatR 없이 이 접근 방식을 수행할 수도 있습니다.
 
 > ### <a name="references--mapping-requests-to-responses"></a>참고 자료 - 요청을 응답에 매핑
 >
@@ -234,6 +303,18 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 또한 ASP.NET Core MVC는 규칙을 사용하여 뷰를 찾습니다. 위의 FeatureConvention에서 제공한 기능 이름을 사용하여 뷰가 사용자의 기능 폴더에 배치되도록 사용자 지정 규칙을 사용하여 이를 재정의할 수 있습니다. [ASP.NET Core MVC용 기능 분할 영역](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) MSDN Magazine 문서에서 이 방법에 대해 자세히 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
+### <a name="apis-and-no-locblazor-applications"></a>API 및 Blazor 애플리케이션
+
+애플리케이션에 보안을 설정해야 하는 웹 API 세트가 포함된 경우 해당 API는 보기 또는 Razor Pages 애플리케이션과 별도의 프로젝트로 구성하는 것이 좋습니다. 서버 쪽 웹 애플리케이션에서 API, 특히 퍼블릭 API를 분리하면 여러 이점이 있습니다. 해당 애플리케이션은 종종 고유한 배포 및 로드 특성을 가집니다. 쿠키 기반 인증을 이용하는 표준 양식 기반 애플리케이션 및 토큰 기반 인증을 사용할 수 있는 API에서 보안을 위해 다양한 메커니즘을 사용할 수도 있습니다.
+
+또한 Blazor 서버 또는 Blazor WebAssembly 사용 여부와 관계없이 Blazor 애플리케이션은 별도 프로젝트로 빌드해야 합니다. 애플리케이션은 보안 모델 및 다양한 런타임 특성을 포함합니다. 서버 쪽 웹 애플리케이션(또는 API 프로젝트)과 공통 형식을 공유할 수 있으며 해당 형식은 공통 공유 프로젝트에서 정의해야 합니다.
+
+eShopOnWeb에 대한 Blazor WebAssembly 관리 인터페이스를 추가하려면 여러 가지 새 프로젝트를 추가해야 했습니다. Blazor WebAssembly 프로젝트 자체인 `BlazorAdmin`이 그중 하나입니다. `BlazorAdmin`에서 사용되고 토큰 기반 인증을 사용하도록 구성된 새 퍼블릭 API 엔드포인트 세트는 `PublicApi` 프로젝트에서 정의합니다. 그리고 이 두 프로젝트 모두에서 사용되는 특정 공유 형식은 새 `BlazorShared` 프로젝트에서 유지됩니다.
+
+`PublicApi`와 `BlazorAdmin` 둘 다에 필요한 형식을 공유하는 데 사용할 수 있는 공통 `ApplicationCore` 프로젝트가 이미 있는 경우 별도 `BlazorShared` 프로젝트를 추가해야 하는 이유가 무엇일지 궁금할 수 있습니다. 해당 프로젝트에는 애플리케이션의 비즈니스 논리가 모두 포함되므로 필요한 것보다 훨씬 더 크고 서버에서 안전하게 유지해야 할 가능성도 훨씬 더 크기 때문입니다. `BlazorAdmin`에서 참조하는 모든 라이브러리는 Blazor 애플리케이션을 로드할 때 사용자 브라우저로 다운로드됩니다.
+
+[BFF(프런트 엔드에 대한 백 엔드) 패턴](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)을 사용 중인지 여부에 따라 Blazor WebAssembly 앱에서 사용하는 API가 해당 형식을 Blazor와 100% 공유하지 않을 수 있습니다. 특히 다양한 클라이언트에서 사용하려는 퍼블릭 API는 클라이언트 특정 공유 프로젝트에서 공유하는 것보다는 자체 요청 및 결과 형식을 정의할 수 있습니다. eShopOnWeb 샘플에서는 `PublicApi` 프로젝트가 실제로 퍼블릭 API를 호스트하는 것으로 가정하므로 일부 요청 및 응답 형식이 `BlazorShared` 프로젝트에서 제공되지 않습니다.
+
 ### <a name="cross-cutting-concerns"></a>교차 편집 문제
 
 애플리케이션이 확장함에 따라 교차 편집 문제를 해결하여 중복을 제거하고 일관성을 유지하는 것이 점점 더 중요해지고 있습니다. ASP.NET Core 애플리케이션의 교차 편집 문제에 대한 몇 가지 예로 인증, 모델 유효성 검사 규칙, 출력 캐싱 및 오류 처리 등이 있습니다. ASP.NET Core MVC [필터](/aspnet/core/mvc/controllers/filters)를 사용하면 요청 처리 파이프라인의 특정 단계 이전 또는 이후에 코드가 실행될 수 있습니다. 예를 들어 필터는 모델 바인딩 전후, 작업 전후, 작업 결과 전후에 실행될 수 있습니다. 또한 권한 필터를 사용하여 나머지 파이프라인에 대한 액세스를 제어할 수도 있습니다. 그림 7-2에서는 요청 실행이 구성된 경우 필터를 통해 진행되는 방식을 보여 줍니다.
@@ -323,7 +404,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 웹 애플리케이션 보안은 많은 고려 사항이 있는 큰 주제입니다. 가장 기본적인 수준에서 보안은 지정된 요청을 발급한 사용자를 확인한 다음, 해당 요청에서 필요한 리소스에만 액세스할 수 있도록 합니다. 인증은 요청과 함께 제공되는 자격 증명을 신뢰할 수 있는 데이터 저장소의 자격 증명과 비교하여 해당 요청을 알려진 엔터티에서 제공하는 것으로 처리해야 하는지 여부를 확인하는 프로세스입니다. 권한 부여는 사용자 ID에 따라 특정 리소스에 대한 액세스를 제한하는 프로세스입니다. 세 번째 보안 문제는 요청을 제3자의 도청으로부터 보호하는 것이며, 이를 위해 적어도 [애플리케이션에서 SSL을 사용](/aspnet/core/security/enforcing-ssl)하도록 설정해야 합니다.
 
-### <a name="authentication"></a>인증
+### <a name="identity"></a>ID
 
 ASP.NET Core Identity는 애플리케이션에 대한 로그인 기능을 지원하는 데 사용할 수 있는 멤버 자격 시스템입니다. 로컬 사용자 계정뿐만 아니라 Microsoft 계정, Twitter, Facebook, Google 등과 같은 공급자의 외부 로그인 공급자도 지원합니다. 애플리케이션에서 ASP.NET Core Identity 외에도 Windows 인증 또는 [IdentityServer](https://github.com/IdentityServer/IdentityServer4)와 같은 타사 ID 공급자를 사용할 수 있습니다.
 
@@ -342,8 +423,8 @@ public void ConfigureServices(IServiceCollection services)
     services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
     services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
     services.AddMvc();
 }
 
@@ -362,6 +443,73 @@ Configure 메서드에서 UseIdentity는 UseMvc 앞에 나타나야 합니다. C
 
 공식 ASP.NET Core 문서에서 [2단계 인증 구성](/aspnet/core/security/authentication/2fa) 및 [외부 로그인 공급자 사용](/aspnet/core/security/authentication/social/)에 대해 자세히 알아볼 수 있습니다.
 
+### <a name="authentication"></a>인증
+
+인증은 시스템에 액세스하는 주체를 확인하는 프로세스입니다. ASP.NET Core Identity와 이전 섹션에 표시된 구성 메서드를 사용하는 경우 애플리케이션에서 일부 인증 기본값이 자동으로 구성됩니다. 하지만 수동으로 이러한 기본값을 구성하거나 AddIdentity로 설정된 기본값을 재정의할 수도 있습니다. ID를 사용하는 경우 쿠키 기반 인증이 기본 ‘체계’로 구성됩니다.
+
+웹 기반 인증에는 일반적으로 시스템의 클라이언트를 인증하는 과정에서 수행될 수 있는 최대 5개 작업이 있습니다. 해당 경고는 다음과 같습니다.
+
+- 인증. 클라이언트에서 제공하는 정보를 사용하여 클라이언트가 애플리케이션 내에서 사용할 ID를 만듭니다.
+- 시도. 클라이언트가 신원을 확인하도록 요구하는 데 사용됩니다.
+- 금지. 작업 수행이 금지되었음을 클라이언트에 알립니다.
+- 로그인. 어떤 방법으로든 기존 클라이언트를 유지합니다.
+- 로그아웃. 지속성에서 클라이언트를 제거합니다.
+
+웹 애플리케이션에서 인증을 수행할 수 있는 여러 공통된 기법이 있습니다. 이러한 기법을 체계라고 합니다. 지정된 체계에 따라 위 옵션 중 일부 또는 전부에 해당하는 작업이 정의됩니다. 어떤 체계는 일부 작업만 지원하므로 지원하지 않는 작업을 수행하려면 별도의 체계가 필요할 수 있습니다. 예를 들어 OIDC(OpenID Connect) 체계는 로그인 또는 로그아웃을 지원하지 않지만 공통적으로 해당 지속성을 위해 쿠키 인증을 사용하도록 구성됩니다.
+
+ASP.NET Core 애플리케이션에서 `DefaultAuthenticateScheme`뿐 아니라 위에 설명한 각 작업의 선택적 특정 체계를 구성할 수 있습니다. 예를 들어 `DefaultChallengeScheme`, `DefaultForbidScheme` 등을 구성할 수 있습니다. [`AddIdentity<TUser,TRole>`](https://github.com/dotnet/aspnetcore/blob/release/3.1/src/Identity/Core/src/IdentityServiceCollectionExtensions.cs#L38-L102)를 호출하면 여러 애플리케이션 측면이 구성되고 필요한 많은 서비스가 추가됩니다. 또한 다음을 호출하여 인증 체계를 구성합니다.
+
+```csharp
+services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+});
+```
+
+이러한 인증 체계는 기본적으로 지속성을 위해 쿠키를 사용하고 인증을 위해 로그인 페이지로의 리디렉션을 사용합니다. 웹 브라우저를 통해 사용자와 상호 작용하는 웹 애플리케이션에 적합하지만 API에는 권장되지 않습니다. 대신, API는 일반적으로 JWT 전달자 토큰과 같은 다른 형식의 인증을 사용합니다.
+
+코드에서는 .NET 애플리케이션의 `HttpClient` 및 기타 프레임워크의 해당하는 형식과 같은 웹 API가 사용됩니다. 해당 클라이언트는 API 호출의 사용 가능한 응답 또는 발생한 문제(있는 경우)를 나타내는 상태 코드를 예상합니다. 해당 클라이언트는 브라우저를 통해 상호 작용하지 않으며 API가 반환할 수 있는 HTML을 렌더링하거나 HTML과 상호 작용하지 않습니다. 따라서 인증되지 않은 경우 API 엔드포인트가 클라이언트를 로그인 페이지로 리디렉션하는 것은 적절하지 않습니다. 다른 체계가 더 적합합니다.
+
+API용 인증을 구성하려면 eShopOnWeb 참조 애플리케이션의 `PublicApi` 프로젝트에서 사용하는 다음과 같은 인증을 설정할 수 있습니다.
+
+```csharp
+services.AddAuthentication(config =>
+{
+    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(config =>
+    {
+        config.RequireHttpsMetadata = false;
+        config.SaveToken = true;
+        config.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+```
+
+단일 프로젝트 내에서 다양한 인증 체계를 구성할 수 있지만 단일 기본 체계를 구성하는 것이 훨씬 더 간단합니다. 이런 이유로, eShopOnWeb 참조 애플리케이션은 애플리케이션 보기 및 Razor Pages를 포함하는 기본 `Web` 프로젝트와는 별도의 자체 프로젝트인 `PublicApi`로 API를 분리합니다.
+
+#### <a name="authentication-in-no-locblazor-apps"></a>Blazor 앱의 인증
+
+Blazor 서버 애플리케이션은 다른 ASP.NET Core 애플리케이션과 동일한 인증 기능을 이용할 수 있습니다. 그러나 Blazor WebAssembly 애플리케이션은 브라우저에서 실행되기 때문에 기본 제공 ID 및 인증 공급자를 사용할 수 없습니다. Blazor WebAssembly 애플리케이션은 사용자 인증 상태를 로컬로 저장할 수 있으며 클레임에 액세스하여 사용자가 수행할 수 있는 작업을 확인할 수 있습니다. 그러나 사용자가 앱을 쉽게 무시하고 API와 직접 상호 작용할 수 있으므로 Blazor WebAssembly 앱 내부에 구현된 논리와 관계없이 모든 인증 및 권한 부여 검사를 서버에서 수행해야 합니다.
+
+> ### <a name="references--authentication"></a>참조 - 인증
+>
+> - **인증 작업 및 기본값**  
+>   <https://stackoverflow.com/a/52493428>
+> - **SPA의 인증 및 권한 부여**
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
+> - **ASP.NET Core Blazor 인증 및 권한 부여**
+>   <https://docs.microsoft.com/aspnet/core/blazor/security/>
+> - **보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여**
+>   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
+
 ### <a name="authorization"></a>권한 부여
 
 가장 간단한 형태의 권한 부여는 익명 사용자에 대한 액세스를 제한하는 것입니다. 이 작업은 특정 컨트롤러 또는 작업에 \[Authorize\] 특성을 적용하기만 하면 수행됩니다. 역할을 사용하는 경우 다음과 같이 특정 역할에 속한 사용자에 대한 액세스를 제한하도록 특성을 추가로 확장할 수 있습니다.
@@ -376,7 +524,7 @@ public class SalaryController : Controller
 
 이 경우 HRManager 또는 Finance 역할(또는 둘 다)에 속한 사용자는 SalaryController에 액세스할 수 있습니다. 사용자가 여러 역할에 속하도록 하려면(여러 역할 중 하나에만 속하는 것이 아님), 특성을 여러 번 적용하고 매번 필요한 역할을 지정합니다.
 
-여러 다른 컨트롤러와 작업에서 특정 역할 집합을 문자열로 지정하면 바람직하지 않은 반복이 발생할 수 있습니다. 권한 부여 규칙을 캡슐화하는 권한 부여 정책을 구성한 다음, \[Authorize\] 특성을 적용할 때 개별 역할 대신 정책을 지정할 수 있습니다.
+여러 다른 컨트롤러와 작업에서 특정 역할 집합을 문자열로 지정하면 바람직하지 않은 반복이 발생할 수 있습니다. 최소한 해당 문자열 리터럴의 상수를 정의하고 문자열을 지정해야 하는 모든 위치에서 상수를 사용합니다. 또한 권한 부여 규칙을 캡슐화하는 권한 부여 정책을 구성한 다음, \[Authorize\] 특성을 적용할 때 개별 역할 대신 정책을 지정할 수 있습니다.
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -407,13 +555,28 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="securing-web-apis"></a>웹 API 보안
 
-대부분의 웹 API는 토큰 기반 인증 시스템을 구현해야 합니다. 토큰 인증은 상태 비저장이며 확장 가능하도록 설계되었습니다. 토큰 기반 인증 시스템에서 클라이언트는 먼저 인증 공급자를 통해 인증받아야 합니다. 성공하면 클라이언트에서 토큰을 발급합니다. 이 토큰은 단순히 암호화 방식으로 의미 있는 문자열입니다. 다음으로, 클라이언트에서 API에 요청을 발급해야 할 때 이 토큰을 헤더로 요청에 추가합니다. 그런 다음 요청을 완료하기 전에 서버에서 요청 헤더에 있는 토큰의 유효성을 검사합니다. 그림 7-4에서는 이 프로세스를 보여 줍니다.
+대부분의 웹 API는 토큰 기반 인증 시스템을 구현해야 합니다. 토큰 인증은 상태 비저장이며 확장 가능하도록 설계되었습니다. 토큰 기반 인증 시스템에서 클라이언트는 먼저 인증 공급자를 통해 인증받아야 합니다. 성공하면 클라이언트에서 토큰을 발급합니다. 이 토큰은 단순히 암호화 방식으로 의미 있는 문자열입니다. 토큰의 가장 일반적인 형식은 JSON Web Token 또는 JWT(종종 “조트”라고 발음함)입니다. 다음으로, 클라이언트에서 API에 요청을 발급해야 할 때 이 토큰을 헤더로 요청에 추가합니다. 그런 다음 요청을 완료하기 전에 서버에서 요청 헤더에 있는 토큰의 유효성을 검사합니다. 그림 7-4에서는 이 프로세스를 보여 줍니다.
 
 ![TokenAuth](./media/image7-4.png)
 
 **그림 7-4** 웹 API에 대한 토큰 기반 인증
 
 사용자 고유의 인증 서비스를 만들거나, Azure AD 및 OAuth와 통합하거나, [IdentityServer](https://github.com/IdentityServer)와 같은 오픈 소스 도구를 사용하는 서비스를 구현할 수 있습니다.
+
+JWT 토큰은 클라이언트 또는 서버에서 읽을 수 있는 사용자에 관한 클레임을 포함할 수 있습니다. [jwt.io](https://jwt.io/) 같은 도구를 사용하여 JWT 토큰의 콘텐츠를 볼 수 있습니다. 콘텐츠를 쉽게 읽을 수 있으므로 암호 또는 키와 같은 중요한 데이터를 JTW 토큰에 저장하지 마세요.
+
+SPA 또는 Blazor WebAssembly 애플리케이션에서 JWT 토큰을 사용하는 경우 클라이언트에 토큰을 저장한 다음, 모든 API 호출에 추가해야 합니다. 해당 작업은 일반적으로 다음 코드와 같이 헤더로 수행됩니다.
+
+```csharp
+// AuthService.cs in BlazorAdmin project of eShopOnWeb
+private async Task SetAuthorizationHeader()
+{
+    var token = await GetToken();
+    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+}
+```
+
+위 메서드를 호출한 후 `_httpClient`로 수행된 요청의 헤더에 토큰이 포함되므로 서버 쪽 API가 요청을 인증하고 권한을 부여할 수 있습니다.
 
 #### <a name="custom-security"></a>사용자 지정 보안
 
@@ -518,8 +681,6 @@ DDD 도메인 모델은 모델 내에서 복잡한 동작을 캡슐화해야 합
 - [리포지토리](https://deviq.com/repository-pattern/) - 지속성 세부 정보를 추상화합니다.
 
 - [팩터리](https://en.wikipedia.org/wiki/Factory_method_pattern) - 지속성 세부 정보를 추출합니다.
-
-- 도메인 이벤트 - 종속 동작과 트리거 동작을 분리합니다.
 
 - [서비스](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/) - 복잡한 동작 및/또는 인프라 구현 세부 정보를 캡슐화합니다.
 

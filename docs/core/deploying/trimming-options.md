@@ -4,16 +4,16 @@ description: 자체 포함 앱의 트리밍을 제어하는 방법을 알아봅�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465418"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515834"
 ---
 # <a name="trimming-options"></a>트리밍 옵션
 
-다음 MSBuild 속성 및 항목은 [트리밍된 자체 포함 배포](trim-self-contained.md)의 동작에 영향을 줍니다. 일부 옵션에는 트리밍을 구현하는 기본 도구의 이름인 `ILLink`가 언급됩니다. `ILLink` 명령줄 도구에 관한 자세한 내용은 [illink 옵션](https://github.com/mono/linker/blob/master/docs/illink-options.md)을 참조하세요.
+다음 MSBuild 속성 및 항목은 [트리밍된 자체 포함 배포](trim-self-contained.md)의 동작에 영향을 줍니다. 일부 옵션에는 트리밍을 구현하는 기본 도구의 이름인 `ILLink`가 언급됩니다. 기본 도구에 대한 자세한 내용은 [링커 설명서](https://github.com/mono/linker/tree/master/docs)에서 찾을 수 있습니다.
 
 ## <a name="enable-trimming"></a>트리밍 사용
 
@@ -129,3 +129,37 @@ SDK는 게시 중에 해당 세트를 계산하고 변경하지 않을 것으로
     포함된 PDB 및 별도 PDB 파일을 포함하여 트리밍된 애플리케이션에서 기호를 제거합니다. 이는 애플리케이션 코드 및 기호와 함께 제공되는 모든 종속성 둘 다에 다 적용됩니다.
 
 SDK를 사용하여 `DebuggerSupport` 속성을 통해 디버거 지원을 사용하지 않도록 설정할 수도 있습니다. 디버거 지원이 사용되지 않으면 트리밍은 기호를 자동으로 제거합니다(`TrimmerRemoveSymbols`가 기본적으로 true로 설정됨).
+
+## <a name="trimming-framework-library-features"></a>프레임워크 라이브러리 기능 트리밍
+
+프레임워크 라이브러리의 여러 기능 영역은 사용할 수 없는 기능의 코드를 제거할 수 있도록 설정하는 링커 지시문과 함께 제공됩니다.
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    더 나은 디버깅 환경을 가능하게 하는 코드를 제거합니다. 이렇게 하면 [기호도 제거](#removing-symbols)됩니다.
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    BinaryFormatter serialization 지원을 제거합니다. 자세한 내용은 [BinaryFormatter serialization 메서드가 사용되지 않음](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)을 참조하세요.
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    안전하지 않은 UTF-7 인코딩 코드를 제거합니다. 자세한 내용은 [UTF-7 코드 경로가 사용되지 않음](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)을 참조하세요.
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    EventSource 관련 코드 또는 논리를 제거합니다.
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    System.Net.Http의 진단 지원과 관련된 코드를 제거합니다.
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    세계화 특정 코드 및 데이터를 제거합니다. 자세한 내용은 [고정 모드](../run-time-config/globalization.md#invariant-mode)를 참조하세요.
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    `System.*` 어셈블리에 대한 예외 메시지를 제거합니다. `System.*` 어셈블리에서 예외가 throw되면 메시지는 전체 메시지가 아니라 단순화된 리소스 ID입니다.
+
+ 해당 속성은 관련 코드가 트리밍되도록 하며 [runtimeconfig](../run-time-config/index.md) 파일을 통해 기능도 사용하지 않도록 설정합니다. 해당 runtimeconfig 옵션을 포함하여 해당 속성에 대한 자세한 내용은 [기능 스위치](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md)를 참조하세요. 일부 SDK에는 해당 속성의 기본값이 있을 수 있습니다.

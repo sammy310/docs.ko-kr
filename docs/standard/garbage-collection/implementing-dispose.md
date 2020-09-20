@@ -1,7 +1,7 @@
 ---
 title: Dispose 메서드 구현
 description: 이 문서에서는 .NET에서 코드에 사용되는 비관리형 리소스를 해제하는 Dispose 메서드를 구현하는 방법을 알아봅니다.
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455729"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022924"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose 메서드 구현
 
@@ -77,7 +77,7 @@ ms.locfileid: "87455729"
 
   - **<xref:System.IDisposable>을 구현하는 관리되는 개체.** 조건부 블록을 사용하여 <xref:System.IDisposable.Dispose%2A> 구현(cascade dispose)을 호출할 수 있습니다. 관리되지 않는 리소스를 래핑하기 위해 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>의 파생 클래스를 사용한 경우 여기에서 <xref:System.Runtime.InteropServices.SafeHandle.Dispose?displayProperty=nameWithType> 구현을 호출해야 합니다.
 
-  - **많은 메모리를 사용하거나 부족한 리소스를 사용하는 관리되는 개체.** 관리되는 큰 개체 참조를 `null`에 할당하여 더 연결할 수 없는 상태로 만듭니다. 이렇게 하면 비결정적으로 회수된 경우보다 빠르게 해제됩니다.
+  - **많은 메모리를 사용하거나 부족한 리소스를 사용하는 관리되는 개체.** 관리되는 큰 개체 참조를 `null`에 할당하여 더 연결할 수 없는 상태로 만듭니다. 이렇게 하면 비결정적으로 회수된 경우보다 빠르게 해제되며, 이러한 과정은 일반적으로 조건부 블록 외부에서 이루어집니다.
 
 메서드 호출이 종료자에서 수행된 경우 관리되지 않는 리소스를 해제하는 코드만 실행되어야 합니다. 구현자는 false 경로가 회수되었을 수 있는 관리되는 개체와 상호 작용하지 않도록 해야 합니다. 이는 종료하는 동안 가비지 수집기가 관리되는 개체를 제거하는 순서가 비결정적이기 때문에 중요합니다.
 
