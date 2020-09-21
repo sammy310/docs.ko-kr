@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 4fde25cac21b2cb32efc9282578f32102a0f607f
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 65f417c06886c32da8057ae612043b95c31a31bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916724"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536420"
 ---
 # <a name="operator-overloading-c-reference"></a>연산자 오버로드(C# 참조)
 
@@ -67,4 +67,4 @@ ms.locfileid: "87916724"
 - [사용자 정의 전환 연산자](user-defined-conversion-operators.md)
 - [디자인 지침 - 연산자 오버 로드](../../../standard/design-guidelines/operator-overloads.md)
 - [디자인 지침 - 같음 연산자](../../../standard/design-guidelines/equality-operators.md)
-- [Why are overloaded operators always static in C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)(오버로드된 연산자가 C#에서 항상 정적인 이유)
+- [Why are overloaded operators always static in C#?](/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)(오버로드된 연산자가 C#에서 항상 정적인 이유)

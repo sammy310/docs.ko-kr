@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662929"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554764"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -107,7 +107,7 @@ ms.locfileid: "84662929"
   
  기본 데이터 형식 외에도 <xref:System> 네임 스페이스에는 100 개 이상의 클래스를 애플리케이션 도메인 및 가비지 수집기와 같은 핵심 런타임 개념을 다루는 클래스에 대 한 예외를 처리 하는 클래스를 포함 합니다. 또한 <xref:System> 네임스페이스에는 2차 네임스페이스도 많이 들어 있습니다.  
   
- 네임스페이스에 대한 자세한 내용은 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api) 를 사용하여 .NET 클래스 라이브러리를 참조하세요. API 참조 설명서는 각 네임스페이스, 해당 유형 및 해당 멤버의 각각에 대한 설명서를 제공합니다.  
+ 네임스페이스에 대한 자세한 내용은 [.NET API 브라우저](../../api/index.md) 를 사용하여 .NET 클래스 라이브러리를 참조하세요. API 참조 설명서는 각 네임스페이스, 해당 유형 및 해당 멤버의 각각에 대한 설명서를 제공합니다.  
   
 ## <a name="see-also"></a>참조
 

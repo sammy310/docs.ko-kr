@@ -8,11 +8,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618755"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557764"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework의 개요
 
@@ -75,9 +76,9 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 - 콘솔 앱. [콘솔 애플리케이션 만들기](../../standard/building-console-apps.md)를 참조하세요.
 
-- Windows GUI 앱(Windows Forms). [Windows Forms](../winforms/index.md)를 참조하세요.
+- Windows GUI 앱(Windows Forms). [Windows Forms](/dotnet/desktop/winforms/)를 참조하세요.
 
-- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](../wpf/index.md)을 참조하세요.
+- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](/dotnet/desktop/wpf/)을 참조하세요.
 
 - ASP.NET 앱. [ASP.NET을 사용하여 개발한 웹 애플리케이션](../develop-web-apps-with-aspnet.md)을 참조하세요.
 

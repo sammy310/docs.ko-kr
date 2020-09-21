@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: 8aadb491c5a8c339b4d8df73202ee717900ef775
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a9a18d5709a1e157d4454362758d4a622880ea72
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447162"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553651"
 ---
 # <a name="for-further-reading-parallel-programming"></a>추가 정보(병렬 프로그래밍)
 
@@ -18,7 +18,7 @@ ms.locfileid: "84447162"
 
 - [병렬 프로그래밍을 위한 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](https://www.microsoft.com/download/details.aspx?id=19222) 문서에서는 일반적인 병렬 패턴과 그러한 패턴을 활용하는 병렬 구성 요소 개발에 대한 모범 사례를 설명합니다.
 
-- [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10))(멀티 코어 아키텍처에서 분해 및 조정을 위한 디자인 패턴) 책에서는 .NET Framework 4에 도입된 병렬 프로그래밍 지원을 사용하는 병렬 프로그래밍용 패턴을 설명합니다.
+- [Design Patterns for Decomposition and Coordination on Multicore Architectures](/previous-versions/msp-n-p/ff963553(v=pandp.10))(멀티 코어 아키텍처에서 분해 및 조정을 위한 디자인 패턴) 책에서는 .NET Framework 4에 도입된 병렬 프로그래밍 지원을 사용하는 병렬 프로그래밍용 패턴을 설명합니다.
 
 - [Parallel Programming with .NET](https://devblogs.microsoft.com/pfxteam/)(.NET을 사용한 병렬 프로그래밍) 블로그에는 .NET에서의 병렬 프로그래밍에 관해 심층적으로 다루는 여러 문서가 포함되어 있습니다.
 
@@ -26,5 +26,5 @@ ms.locfileid: "84447162"
 
 ## <a name="see-also"></a>참조
 
-- [병렬 컴퓨팅 개발자 센터](https://docs.microsoft.com/previous-versions/bb964701(v=msdn.10))
+- [병렬 컴퓨팅 개발자 센터](/previous-versions/bb964701(v=msdn.10))
 - [Visual C++의 병렬 프로그래밍](/cpp/parallel/parallel-programming-in-visual-cpp)

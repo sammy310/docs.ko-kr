@@ -5,11 +5,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621511"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547846"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Interop를 사용하여 데이터 마샬링
 COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개체를 COM에 노출하는 기능을 모두 지원합니다. COM과의 데이터 마샬링 지원은 광범위하며 거의 항상 올바른 마샬링 동작을 제공합니다.  
@@ -29,23 +30,23 @@ COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개�
  보다 안전한 솔루션을 위해 관리되는 DCOM 코드를 WCF로 마이그레이션하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [COM 데이터 형식](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
+ [COM 데이터 형식](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  해당 관리되는 데이터 형식과 관리되지 않는 데이터 형식을 제공합니다.  
   
- [COM 호출 가능 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ [COM 호출 가능 래퍼 사용자 지정](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
  디자인 타임에 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 데이터 형식을 명시적으로 마샬링하는 방법을 설명합니다.  
   
- [런타임 호출 가능 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ [런타임 호출 가능 래퍼 사용자 지정](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  interop 어셈블리에서 형식의 마샬링 동작을 조정하는 방법 및 COM 형식을 수동으로 조정하는 방법을 설명합니다.  
   
- [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ [고급 COM 상호 운용성](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  COM 구성 요소를 .NET Framework 애플리케이션으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.  
   
- [어셈블리와 형식 라이브러리 간 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ [어셈블리와 형식 라이브러리 간 변환 요약](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  어셈블리에서 형식 라이브러리로 내보내기 변환 프로세스를 설명합니다.  
   
- [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ [형식 라이브러리를 어셈블리로 변환 요약](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  형식 라이브러리에서 어셈블리 가져오기 변환 프로세스를 설명합니다.  
   
- [제네릭 형식을 통한 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [제네릭 형식을 통한 상호 운용](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.

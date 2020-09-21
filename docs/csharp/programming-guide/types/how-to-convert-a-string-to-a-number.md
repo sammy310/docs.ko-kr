@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: acaa013c89aff8dcb672a12df0c01911d8e52a1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381972"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556195"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>문자열을 숫자로 변환하는 방법(C# 프로그래밍 가이드)
 
@@ -59,4 +59,4 @@ ms.locfileid: "87381972"
 
 - [형식](./index.md)
 - [문자열이 숫자 값을 나타내는지 확인 방법](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [샘플: .NET Core WinForms 서식 유틸리티(C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)

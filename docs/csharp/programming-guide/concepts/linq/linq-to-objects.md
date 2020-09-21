@@ -3,16 +3,16 @@ title: LINQ to Objects(C#)
 description: 중간 LINQ 공급자 또는 API 없이 모든 IEnumerable 또는 IEnumerable<T> 컬렉션으로 LINQ 쿼리를 사용하는 C#의 LINQ to Objects에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 7b67690ee13f207441bc94155acd91047b63b3df
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557008"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects(C#)
 
-“LINQ to Objects”라는 용어는 중간 LINQ 공급자 또는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md), [LINQ to XML](./linq-to-xml-overview.md) 등의 API를 사용하지 않고 모든 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 LINQ 쿼리를 직접 사용하는 것입니다. LINQ를 사용하면 <xref:System.Collections.Generic.List%601>, <xref:System.Array>, <xref:System.Collections.Generic.Dictionary%602> 등의 모든 열거 가능 컬렉션을 쿼리할 수 있습니다. 컬렉션은 사용자가 정의할 수도 있고 .NET API에서 반환할 수도 있습니다.  
+“LINQ to Objects”라는 용어는 중간 LINQ 공급자 또는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md), [LINQ to XML](../../../../standard/linq/linq-xml-overview.md) 등의 API를 사용하지 않고 모든 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 LINQ 쿼리를 직접 사용하는 것입니다. LINQ를 사용하면 <xref:System.Collections.Generic.List%601>, <xref:System.Array>, <xref:System.Collections.Generic.Dictionary%602> 등의 모든 열거 가능 컬렉션을 쿼리할 수 있습니다. 컬렉션은 사용자가 정의할 수도 있고 .NET API에서 반환할 수도 있습니다.  
   
  기본적으로 LINQ to Objects는 새로운 컬렉션 방식을 나타냅니다. 이전에는 컬렉션에서 데이터를 검색하는 방법을 지정하는 복잡한 `foreach` 루프를 작성해야 했습니다. 그러나 LINQ 방식에서는 검색할 항목을 설명하는 선언적 코드를 작성합니다.  
   

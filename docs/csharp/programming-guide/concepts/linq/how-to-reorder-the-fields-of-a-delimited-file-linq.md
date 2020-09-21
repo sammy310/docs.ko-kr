@@ -3,12 +3,12 @@ title: 구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
 description: C#의 LINQ에서 .csv 파일의 필드를 다시 정렬하는 방법에 대해 알아봅니다. 이 예제에서는 열의 순서를 변경하고, 열을 병합하고, 열 값을 기준으로 행을 정렬합니다.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103403"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547299"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
 쉼표로 구분된 값(CSV) 파일은 스프레드시트 데이터 또는 행과 열로 표현되는 다른 테이블 형식 데이터를 저장하는 데 자주 사용되는 텍스트 파일입니다. <xref:System.String.Split%2A> 메서드를 사용하여 필드를 구분하면 LINQ를 사용하여 쉽게 CSV 파일을 쿼리하고 조작할 수 있습니다. 실제로 동일한 방법을 사용하여 모든 구조적 텍스트 줄의 일부를 다시 정렬할 수 있습니다. CSV 파일로 제한되지 않습니다.  
@@ -83,4 +83,4 @@ System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통�
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)
-- [CSV 파일에서 XML을 생성하는 방법(C#)](./how-to-generate-xml-from-csv-files.md)
+- [CSV 파일에서 XML을 생성하는 방법(C#)](../../../../standard/linq/generate-xml-csv-files.md)

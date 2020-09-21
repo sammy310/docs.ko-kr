@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865257"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556338"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 
@@ -60,7 +60,7 @@ ms.locfileid: "86865257"
 
 명령줄에서 실행 되는 애플리케이션 코드는 완전 신뢰로 실행됩니다. 투명으로 표시되지 않은 한 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 동일한 코드가 부분 신뢰(예: 샌드박스 애플리케이션 도메인에서)로 실행될 때 어셈블리의 신뢰 수준은 보안 중요 코드에 액세스할 수 있는지 여부를 결정합니다. 어셈블리에 강력한 이름이 있고 글로벌 어셈블리 캐시에 설치된 경우, 신뢰할 수 있는 어셈블리이며 보안에 중요한 멤버를 호출할 수 있습니다. 신뢰할 수 없는 경우 투명으로 표시되지 않았어도 투명하게 되며 보안에 중요한 멤버를 액세스할 수 없습니다.
 
-.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.
+.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.
 
 ## <a name="reflection-and-transparency"></a>리플렉션 및 투명도
 
@@ -116,7 +116,7 @@ ms.locfileid: "86865257"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)
 - [형식 정보 보기](viewing-type-information.md)

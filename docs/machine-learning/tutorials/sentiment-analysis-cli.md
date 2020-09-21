@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326022"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554438"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
@@ -199,7 +199,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 그러나 블로그 게시물에 설명된 것보다 훨씬 쉽습니다. 사용자를 위해 보다 단순한 접근법에 노력을 기울였으며 애플리케이션 DI 서비스(종속성 주입 서비스)에서 등록하여 ASP.NET Core 앱 및 서비스에서 쉽게 사용한 다음, 사용자 코드에서 직접 사용할 수 있는 괜찮은 **'.NET Core 통합 패키지'** 를 만들었습니다. 다음 자습서와 수행 예제를 확인하세요.
 
-- [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](../how-to-guides/serve-model-web-api-ml-net.md)
 - [샘플: ASP.NET Core WebAPI의 확장 가능한 ML.NET 모델](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>“최적 품질” 모델을 학습하기 위해 사용한 생성된 C# 코드 검색
@@ -226,7 +226,7 @@ CLI 도구를 통해 생성된 코드와 자습서에서 선택된 알고리즘 
 ## <a name="see-also"></a>참조
 
 - [ML.NET CLI로 모델 학습 자동화](../automate-training-with-cli.md)
-- [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [자습서: ASP.NET Core 웹앱 및 WebAPI에서 ML.NET 모델 실행](../how-to-guides/serve-model-web-api-ml-net.md)
 - [샘플: ASP.NET Core WebAPI의 확장 가능한 ML.NET 모델](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 - [ML.NET CLI auto-train 명령 참조 가이드](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI의 원격 분석](../resources/ml-net-cli-telemetry.md)

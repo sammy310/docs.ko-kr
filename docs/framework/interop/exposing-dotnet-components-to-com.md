@@ -7,11 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: dc808f3e8d6bd89ba979d43e5b4ec9d787bd09b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617460"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545261"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET 구성 요소를 COM에 공개
 
@@ -41,11 +42,11 @@ ms.locfileid: "85617460"
 
      COM 개발자는 현재 사용하는 동일한 도구와 기술을 통해 어셈블리에서 형식을 참조할 수 있습니다.
 
-3. [.NET 개체를 호출합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
+3. [.NET 개체를 호출합니다](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
 
      COM 개발자는 관리되는 형식에서 메서드를 호출하는 동일한 방법으로 .NET 개체에서 메서드를 호출할 수 있습니다. 예를 들어 COM **CoCreateInstance** API는 .NET 개체를 활성화합니다.
 
-4. [COM 액세스를 위해 애플리케이션을 배포합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
+4. [COM 액세스를 위해 애플리케이션을 배포합니다](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
 
      강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있고 게시자의 시그니처가 필요합니다. 강력한 이름이 아닌 어셈블리는 클라이언트의 애플리케이션 디렉터리에 설치해야 합니다.
 

@@ -3,12 +3,12 @@ title: C# 개발자를 위한 버전 및 업데이트 고려 사항
 description: 라이브러리에 새로운 언어 기능을 도입하면 해당 라이브러리를 사용하는 코드에 영향을 줄 수 있습니다.
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268129"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552429"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# 개발자를 위한 버전 및 업데이트 고려 사항
 
@@ -63,4 +63,4 @@ public double CalculateSquare(double value) => value * value;
 public double CalculateSquare(in double value) => value * value;
 ```
 
-[새로운 기능](index.md) 문서에서는 public 선언에 영향을 주는 기능을 도입하는 것이 소스 호환 가능 또는 이진 호환 가능한지 설명합니다.
+[새로운 기능](./csharp-9.md) 문서에서는 public 선언에 영향을 주는 기능을 도입하는 것이 소스 호환 가능 또는 이진 호환 가능한지 설명합니다.

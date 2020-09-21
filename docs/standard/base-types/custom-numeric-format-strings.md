@@ -17,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447240"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541581"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 
@@ -31,7 +31,7 @@ ms.locfileid: "84447240"
 사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](composite-formatting.md)을 통해서도 사용자 지정 숫자 형식 문자열을 사용할 수 있습니다. [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 기능은 사용자 지정 숫자 형식 문자열도 지원합니다.
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 <a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.
 
@@ -292,5 +292,5 @@ ms.locfileid: "84447240"
 - [형식 서식 지정](formatting-types.md)
 - [표준 숫자 형식 문자열](standard-numeric-format-strings.md)
 - [방법: 숫자 앞에 0으로 채우기](how-to-pad-a-number-with-leading-zeros.md)
-- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [샘플: .NET Core WinForms 서식 유틸리티(C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

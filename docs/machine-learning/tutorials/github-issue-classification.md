@@ -4,12 +4,12 @@ description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 G
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282075"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679497"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
@@ -302,7 +302,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-`SaveModelAsFile` 메서드에 다음 코드를 추가합니다. 이 코드에서는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 사용하여 학습된 모델을 직렬화하고 zip 파일로 저장합니다.
+`SaveModelAsFile` 메서드에 다음 코드를 추가합니다. 이 코드에서는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) 메서드를 사용하여 학습된 모델을 직렬화하고 zip 파일로 저장합니다.
 
 [!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 

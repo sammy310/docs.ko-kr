@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: eff414411c47ec83177ae6a09de4a96f47af6313
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063005"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558591"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 
@@ -205,7 +205,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 - [람다 식(Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [람다 식(C#)](../../language-reference/operators/lambda-expressions.md)
 - [COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함](/previous-versions/visualstudio/visual-studio-2013/ee317478(v=vs.120))
 - [연습: 관리되는 어셈블리의 형식 포함](../../../standard/assembly/embed-types-visual-studio.md)
 - [연습: Excel용 첫 VSTO 추가 기능 만들기](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 5d181f5bc9f7e16051f16ca68490744e9c0d3abd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810601"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557920"
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 
@@ -34,19 +34,19 @@ ms.locfileid: "88810601"
 - [동적 개체 만들기 및 사용(C# 및 Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)\
   텍스트 파일의 내용을 동적으로 노출하는 사용자 지정 개체를 만들고 `IronPython` 라이브러리를 사용하는 프로젝트를 만드는 방법을 보여 줍니다.
 
-- [Visual C#을 사용하여 복합 컨트롤 작성](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+- [Visual C#을 사용하여 복합 컨트롤 작성](/dotnet/desktop/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp)\
   간단한 복합 컨트롤을 만들고 상속을 통해 컨트롤 기능을 확장하는 방법을 보여 줍니다.
 
-- [Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)\
+- [Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기](/dotnet/desktop/winforms/controls/creating-a-wf-control-design-time-features)\
   사용자 지정 컨트롤용 사용자 지정 디자이너를 만드는 방법을 보여 줍니다.
 
-- [Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+- [Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](/dotnet/desktop/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp)\
   상속 가능한 간단한 단추 컨트롤을 만드는 방법을 보여 줍니다. 이 단추는 표준 Windows Forms 단추에서 기능을 상속하며 사용자 지정 멤버를 노출합니다.
 
-- [디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+- [디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅](/dotnet/desktop/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)\
   사용자 지정 컨트롤의 디자인 타임 동작을 디버그하는 방법을 설명합니다.
 
-- [연습: 디자이너 작업을 사용하여 일반 작업 수행](../framework/winforms/controls/perform-common-tasks-design-actions.md)\
+- [연습: 디자이너 작업을 사용하여 일반 작업 수행](/dotnet/desktop/winforms/controls/perform-common-tasks-design-actions)\
   `TabControl`에서 탭 추가/제거, 부모 항목에 컨트롤 도킹, `SplitContainer` 컨트롤 방향 변경 등 일반적으로 수행하는 몇 가지 작업을 보여 줍니다.
 
 - [C#에서 쿼리 작성(LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)\

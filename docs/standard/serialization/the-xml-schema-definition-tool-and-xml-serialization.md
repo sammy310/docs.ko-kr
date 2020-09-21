@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: c88770403d4c2abfb5ce99f44ea1bec1f8337545
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6451f3b5f6e8ec2c1454e5cf7ffb95a96b620214
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84279778"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554985"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 스키마 정의 도구 및 XML Serialization
 
@@ -34,4 +34,4 @@ XML 스키마 정의 도구([XML Schema Definition Tool(Xsd.exe)](xml-schema-def
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)
 - [방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성](xml-schema-def-tool-gen.md)
-- [XML 스키마의 바인딩 지원](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))
+- [XML 스키마의 바인딩 지원](/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7312de7d812aa714447a60f5aa04cb48890e40e8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475270"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553729"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 
@@ -57,9 +57,9 @@ Windows 7 이상 버전의 Windows 운영 체제는 .NET Framework 1.1을 지원
 
 애플리케이션의 가능한 주요 변경 사항의 영향을 평가하려면 다음 변경 사항 목록을 검토해야 합니다.
 
-- [.NET Framework 2.0의 주요 변경 내용](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) 문서의 .NET Framework 1.1을 대상으로 하는 애플리케이션에 영향을 줄 수 있는 .NET Framework 2.0 SP1의 변경 내용.
+- [.NET Framework 2.0의 주요 변경 내용](/previous-versions/aa570326(v=msdn.10)) 문서의 .NET Framework 1.1을 대상으로 하는 애플리케이션에 영향을 줄 수 있는 .NET Framework 2.0 SP1의 변경 내용.
 
-- [.NET Framework 3.5 SP1의 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))에서는 .NET Framework 3.5와 .NET Framework 3.5 SP1 사이의 변경 내용을 문서화합니다.
+- [.NET Framework 3.5 SP1의 변경 내용](/previous-versions/dotnet/articles/dd310284(v=msdn.10))에서는 .NET Framework 3.5와 .NET Framework 3.5 SP1 사이의 변경 내용을 문서화합니다.
 
 - [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)에서는 .NET Framework 3.5 SP1과 .NET Framework 4 사이의 변경 내용을 문서화합니다.
 

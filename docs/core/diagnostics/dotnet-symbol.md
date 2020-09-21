@@ -2,12 +2,12 @@
 title: dotnet-symbol - .NET Core
 description: dotnet-symbol 명령줄 도구 설치 및 사용
 ms.date: 08/26/2020
-ms.openlocfilehash: feaa64ad756878f85b829ab0cecf6ea2736014ba
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598303"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679190"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>기호 다운로더(dotnet-symbol)
 
@@ -97,4 +97,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - 기호를 다운로드하는 동안 발생한 404 찾을 수 없음
 
-   기호 다운로드는 [공식 웹 사이트](https://dotnet.microsoft.com/download/dotnet-core)와 같은 공식 채널을 통해 획득한 공식 .NET Core 런타임 버전 및 [dotnet 설치 스크립트의 기본 소스](https://docs.microsoft.com/dotnet/core/tools/dotnet-install-scripts)에서만 지원됩니다. 디버깅 파일을 다운로드하는 동안 404 오류는 로컬로 또는 특정 Linux 배포판용으로 소스에서 빌드되거나 archlinux 같은 커뮤니티 사이트에서 빌드된 덤프와 같이 또 다른 소스에서 .NET Core 런타임을 통해 덤프가 생성되었음을 나타낼 수 있습니다. 이 경우 디버깅에 필요한 파일(dotnet, libcoreclr.so 및 libmscordaccore.so)은 해당 소스에서 복사하거나 덤프 파일이 생성된 환경에서 복사해야 합니다.
+   기호 다운로드는 [공식 웹 사이트](https://dotnet.microsoft.com/download/dotnet-core)와 같은 공식 채널을 통해 획득한 공식 .NET Core 런타임 버전 및 [dotnet 설치 스크립트의 기본 소스](../tools/dotnet-install-script.md)에서만 지원됩니다. 디버깅 파일을 다운로드하는 동안 404 오류는 로컬로 또는 특정 Linux 배포판용으로 소스에서 빌드되거나 archlinux 같은 커뮤니티 사이트에서 빌드된 덤프와 같이 또 다른 소스에서 .NET Core 런타임을 통해 덤프가 생성되었음을 나타낼 수 있습니다. 이 경우 디버깅에 필요한 파일(dotnet, libcoreclr.so 및 libmscordaccore.so)은 해당 소스에서 복사하거나 덤프 파일이 생성된 환경에서 복사해야 합니다.

@@ -4,16 +4,16 @@ description: .NET Core는 Windows, Linux, macOS 앱을 만들기 위한 모듈�
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226584"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538278"
 ---
 # <a name="introduction-to-net-core"></a>.NET Core 소개
 
-[.NET Core](about.md)는 [오픈 소스](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 범용 개발 플랫폼입니다. 여러 프로그래밍 언어를 사용하여 x64, x86, ARM32, ARM64 프로세서의 Windows, macOS 및 Linux용 .NET Core 앱을 만들 수 있습니다. [클라우드](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [클라이언트 UI](../desktop-wpf/overview/index.md) 및 [기계 학습](/dotnet/machine-learning/)용 프레임워크 및 API가 제공됩니다.
+[.NET Core](about.md)는 [오픈 소스](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 범용 개발 플랫폼입니다. 여러 프로그래밍 언어를 사용하여 x64, x86, ARM32, ARM64 프로세서의 Windows, macOS 및 Linux용 .NET Core 앱을 만들 수 있습니다. [클라우드](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [클라이언트 UI](../desktop-wpf/overview/index.md) 및 [기계 학습](../machine-learning/index.yml)용 프레임워크 및 API가 제공됩니다.
 
 [.NET Core SDK를 다운로드](https://dotnet.microsoft.com/download)하여 머신에서 .NET Core를 사용해 보세요. 최신 버전은 [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)입니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "86226584"
 다음 방법으로 .NET Core를 가져올 수 있습니다.
 
 * [Windows 및 macOS용 설치 프로그램](https://dotnet.microsoft.com/download)
-* [Linux 패키지](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Linux 패키지](./install/linux.md)
 * [Docker 컨테이너](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [Zip 및 tarball](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [스크립트 설치](https://dotnet.microsoft.com/download/dotnet-core/scripts)

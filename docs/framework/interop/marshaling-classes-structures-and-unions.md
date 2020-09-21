@@ -19,11 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25de633faabb1424bcf5e618cc5ca129e61c5fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621524"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547872"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 
@@ -35,7 +36,7 @@ ms.locfileid: "85621524"
 |----------|-----------------|------------|
 |값 방식 클래스.|관리되는 사례와 같이 정수 멤버를 In/Out 매개 변수로 사용하여 클래스를 전달합니다.|[SysTime 샘플](#systime-sample)|
 |값 방식 구조체.|구조체를 In 매개 변수로 전달합니다.|[구조체 샘플](#structures-sample)|
-|참조 방식 구조체.|구조체를 In/Out 매개 변수로 전달합니다.|[OSInfo 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|참조 방식 구조체.|구조체를 In/Out 매개 변수로 전달합니다.|[OSInfo 샘플](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |중첩 구조체를 포함하는 구조체(결합).|관리되지 않는 함수에서 중첩 구조체를 포함하는 구조체를 나타내는 클래스를 전달합니다. 관리되는 프로토타입에서는 구조체가 하나의 큰 구조체로 결합됩니다.|[FindFile 샘플](#findfile-sample)|
 |다른 구조체에 대한 포인터를 포함하는 구조체.|두 번째 구조체에 대한 포인터를 멤버로 포함하는 구조체를 전달합니다.|[구조체 샘플](#structures-sample)|
 |값 형식 정수를 포함하는 구조체 배열.|정수만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|[배열 샘플](marshaling-different-types-of-arrays.md)|
@@ -43,7 +44,7 @@ ms.locfileid: "85621524"
 |값 형식을 포함하는 공용 구조체.|값 형식(정수 및 double)을 포함하는 공용 구조체를 전달합니다.|[Unions 샘플](#unions-sample)|
 |혼합된 형식을 포함하는 공용 구조체.|혼합된 형식(정수 및 문자열)을 포함하는 공용 구조체를 전달합니다.|[Unions 샘플](#unions-sample)|
 |플랫폼별 레이아웃을 사용하는 구조체입니다.|네이티브 압축 정의를 사용하여 형식을 전달합니다.|[플랫폼 샘플](#platform-sample)|
-|구조체의 null 값.|값 형식에 대한 참조 대신 null 참조(Visual Basic에서는 **Nothing**)를 전달합니다.|[HandleRef 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|구조체의 null 값.|값 형식에 대한 참조 대신 null 참조(Visual Basic에서는 **Nothing**)를 전달합니다.|[HandleRef 샘플](/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Structures 샘플
 
@@ -133,7 +134,7 @@ typedef struct _MYARRAYSTRUCT
 
 ## <a name="findfile-sample"></a>FindFile 샘플
 
-이 샘플에서는 포함된 두 번째 구조체를 포함하는 구조체를 관리되지 않는 함수에 전달하는 방법을 보여 줍니다. 또한 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 구조체 내에서 고정 길이 배열을 선언하는 방법을 보여 줍니다. 이 샘플에서는 포함된 구조체 요소가 부모 구조체에 추가됩니다. 결합되지 않는 포함된 구조체의 샘플은 [Structures 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))을 참조하세요.
+이 샘플에서는 포함된 두 번째 구조체를 포함하는 구조체를 관리되지 않는 함수에 전달하는 방법을 보여 줍니다. 또한 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 구조체 내에서 고정 길이 배열을 선언하는 방법을 보여 줍니다. 이 샘플에서는 포함된 구조체 요소가 부모 구조체에 추가됩니다. 결합되지 않는 포함된 구조체의 샘플은 [Structures 샘플](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))을 참조하세요.
 
 FindFile 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.
 
@@ -290,7 +291,7 @@ Interop 시나리오에서 네이티브 레이아웃을 적절히 고려하지 �
 
 다음 코드 조각에서는 런타임에 32비트와 64비트 정의 중에서 선택하는 방법의 예를 보여 줍니다.
 
-```CSharp
+```csharp
 if (IntPtr.Size == 8)
 {
     // Use the STRRET_64 definition
@@ -331,7 +332,7 @@ typedef struct _SYSTEMTIME {
 
 이 샘플에서 `SystemTime` 클래스에는 클래스 멤버로 표현된 원래 구조체의 요소가 포함됩니다. <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성이 설정되어 멤버가 표시되는 순서대로 순차적으로 메모리에 정렬되게 합니다.
 
-`NativeMethods` 클래스에는 기본적으로 `SystemTime` 클래스를 In/Out 매개 변수로 전달하는 `GetSystemTime` 메서드의 관리되는 프로토타입이 포함됩니다. 참조 형식인 클래스는 기본적으로 In 매개 변수로 전달되므로 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 통해 매개 변수를 선언해야 합니다. 호출자가 결과를 받으려면 이러한 [방향 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))을 명시적으로 적용해야 합니다. `App` 클래스는 `SystemTime` 클래스의 새 인스턴스를 만들고 해당 데이터 필드에 액세스합니다.
+`NativeMethods` 클래스에는 기본적으로 `SystemTime` 클래스를 In/Out 매개 변수로 전달하는 `GetSystemTime` 메서드의 관리되는 프로토타입이 포함됩니다. 참조 형식인 클래스는 기본적으로 In 매개 변수로 전달되므로 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 통해 매개 변수를 선언해야 합니다. 호출자가 결과를 받으려면 이러한 [방향 특성](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))을 명시적으로 적용해야 합니다. `App` 클래스는 `SystemTime` 클래스의 새 인스턴스를 만들고 해당 데이터 필드에 액세스합니다.
 
 ### <a name="code-samples"></a>코드 샘플
 

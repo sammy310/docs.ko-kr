@@ -3,12 +3,12 @@ title: Windows의 Visual Studio Tools for Docker
 description: Visual Studio 2017 버전 15.7 이상에서 사용할 수 있는 Docker 도구를 알아봅니다.
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 74cffaae5885a7079ec774b1e8c68241cddda99a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915303"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678929"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows에서 Visual Studio의 Docker 도구 사용
 
@@ -84,9 +84,9 @@ _docker-compose.yml_이 이미 있는 경우에는 Visual Studio에서 이 파�
 > [!TIP]
 > 서비스 구현 및 Visual Studio Tools for Docker 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 >
-> 로컬 Docker 컨테이너에서 앱 디버그: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
+> 로컬 Docker 컨테이너에서 앱 디버그: <https://docs.microsoft.com/visualstudio/containers/edit-and-refresh>
 >
-> Visual Studio를 사용하여 컨테이너 레지스트리에 ASP.NET 컨테이너 배포: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+> Visual Studio를 사용하여 컨테이너 레지스트리에 ASP.NET 컨테이너 배포: <https://docs.microsoft.com/visualstudio/containers/hosting-web-apps-in-docker>
 
 > [!div class="step-by-step"]
 > [이전](docker-apps-inner-loop-workflow.md)

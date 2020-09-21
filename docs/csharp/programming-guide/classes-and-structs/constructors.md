@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: e8758d7322d7fde45ccbd9eaf9248a3168980bd3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474906"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555343"
 ---
 # <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
 
@@ -63,4 +63,4 @@ ms.locfileid: "86474906"
 - [클래스 및 구조체](./index.md)
 - [종료자](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [이니셜라이저가 생성자와 반대 순서로 실행되는 이유는 무엇인가요? 1부](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [이니셜라이저가 생성자와 반대 순서로 실행되는 이유는 무엇인가요? 1부](/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

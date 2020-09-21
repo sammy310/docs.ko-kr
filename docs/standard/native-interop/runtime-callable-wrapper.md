@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420489"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535861"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW
 공용 언어 런타임은 RCW(런타임 호출 가능 래퍼)라는 프록시를 통해 COM 개체를 노출합니다. RCW는 .NET 클라이언트에 일반적인 개체인 것처럼 나타나지만 주요 기능이 .NET 클라이언트와 COM 개체 간의 호출을 마샬링하는 것입니다.  
@@ -61,5 +61,5 @@ ms.locfileid: "83420489"
 
 - [COM 래퍼](com-wrappers.md)
 - [COM 호출 가능 래퍼](com-callable-wrapper.md)
-- [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [형식 라이브러리를 어셈블리로 변환 요약](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [형식 라이브러리를 어셈블리로 가져오기](../../framework/interop/importing-a-type-library-as-an-assembly.md)

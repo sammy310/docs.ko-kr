@@ -4,12 +4,12 @@ description: Set Jar 및 spark-submit을 사용하여 Databricks에 Apache Spark
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617771"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557179"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks에 .NET for Apache Spark 작업 제출
 
@@ -36,7 +36,7 @@ Databricks 클러스터에서 .NET for Apache Spark 작업을 실행할 수 있�
 
 ## <a name="deploy-using-set-jar"></a>Set Jar를 사용하여 배포
 
-또는 Databricks 작업 영역에서 [Set Jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job)를 사용하여 Databricks에 .NET for Apache Spark 작업을 제출할 수 있습니다. *Set Jar*를 사용하여 기존 활성 클러스터에 작업을 제출할 수 있습니다.
+또는 Databricks 작업 영역에서 [Set Jar](/azure/databricks/jobs#--create-a-job)를 사용하여 Databricks에 .NET for Apache Spark 작업을 제출할 수 있습니다. *Set Jar*를 사용하여 기존 활성 클러스터에 작업을 제출할 수 있습니다.
 
 ### <a name="one-time-setup"></a>일 회 설정
 
@@ -57,7 +57,7 @@ Databricks 클러스터에서 .NET for Apache Spark 작업을 실행할 수 있�
 
 1. 앱을 게시했고 애플리케이션 코드가 `SparkSession.Stop()`을 사용하지 않는지 확인합니다.
 
-2. [Databricks CLI](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli)를 사용하여 Databricks 클러스터에 애플리케이션을 업로드합니다. 예를 들어 다음 명령을 사용하여 클러스터에 게시된 앱을 업로드합니다.
+2. [Databricks CLI](/azure/databricks/dev-tools/databricks-cli)를 사용하여 Databricks 클러스터에 애플리케이션을 업로드합니다. 예를 들어 다음 명령을 사용하여 클러스터에 게시된 앱을 업로드합니다.
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ Databricks 클러스터에서 .NET for Apache Spark 작업을 실행할 수 있�
 
 * [.NET for Apache Spark 시작](../tutorials/get-started.md)
 * [Databricks에 .NET for Apache Spark 애플리케이션 배포](../tutorials/databricks-deployment.md)
-* [Azure Databricks 설명서](https://docs.microsoft.com/azure/azure-databricks/)
+* [Azure Databricks 설명서](/azure/azure-databricks/)

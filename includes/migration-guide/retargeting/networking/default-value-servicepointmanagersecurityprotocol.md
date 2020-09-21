@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 5c86be598ab6196ecf4da05451c7f22d2be52c12
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8aff4b1aa329d6fdfebf3b62e9279e9dfe5de0a4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614698"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606481"
 ---
 ### <a name="default-value-of-servicepointmanagersecurityprotocol-is-securityprotocoltypesystemdefault"></a>ServicePointManager.SecurityProtocol의 기본값은 SecurityProtocolType.System.Default임
 
 #### <a name="details"></a>설명
 
-.NET Framework 4.7을 대상으로 하는 앱부터 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 속성의 기본값은 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>됩니다. 이 변경으로 SslStream을 기반으로 하는 .NET Framework 네트워킹 API(예: FTP, HTTPS 및 SMTP)가 .NET Framework에서 정의한 하드 코드된 값을 사용하는 대신 운영 체제에서 기본 보안 프로토콜을 상속할 수 있습니다. 기본값은 운영 체제 및 시스템 관리자가 수행하는 사용자 정의 구성에 따라 다릅니다. 각 버전의 Windows 운영 체제에서 기본 SChannel 프로토콜에 대한 자세한 내용은 [TLS/SSL의 프로토콜(Schannel SSP)](https://docs.microsoft.com/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)을 참조하세요.</p>이전 버전의 .NET Framework를 대상으로 하는 애플리케이션의 경우 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 속성의 기본값은 대상으로 하는 .NET Framework의 버전에 따라 달라집니다. 자세한 내용은 [.NET Framework 4.5.2에서 4.6으로 마이그레이션을 위해 대상 변경의 네트워킹 섹션](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking)을 참조하세요.
+.NET Framework 4.7을 대상으로 하는 앱부터 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 속성의 기본값은 <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>됩니다. 이 변경으로 SslStream을 기반으로 하는 .NET Framework 네트워킹 API(예: FTP, HTTPS 및 SMTP)가 .NET Framework에서 정의한 하드 코드된 값을 사용하는 대신 운영 체제에서 기본 보안 프로토콜을 상속할 수 있습니다. 기본값은 운영 체제 및 시스템 관리자가 수행하는 사용자 정의 구성에 따라 다릅니다. 각 버전의 Windows 운영 체제에서 기본 SChannel 프로토콜에 대한 자세한 내용은 [TLS/SSL의 프로토콜(Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)을 참조하세요.</p>이전 버전의 .NET Framework를 대상으로 하는 애플리케이션의 경우 <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> 속성의 기본값은 대상으로 하는 .NET Framework의 버전에 따라 달라집니다. 자세한 내용은 [.NET Framework 4.5.2에서 4.6으로 마이그레이션을 위해 대상 변경의 네트워킹 섹션](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking)을 참조하세요.
 
 #### <a name="suggestion"></a>제안 해결 방법
 

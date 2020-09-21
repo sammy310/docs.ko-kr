@@ -3,23 +3,23 @@ title: Visual Studio에서 식 트리 디버그(C#)
 description: Visual Studio의 DebugView 속성에 대해 알아봅니다. 식 트리의 구조와 콘텐츠를 분석하려면 이 속성을 사용하는 방법을 참조하세요.
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 5d62a5e6fa5ce537a1ea8b316e7322eb976200c0
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: fab378149fb14ccf6a66434c933aa24a8c9c6119
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105641"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555616"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio에서 식 트리 디버그(C#)
 애플리케이션을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조에 대한 간략한 개요를 보려면 [특수 구문](debugview-syntax.md)을 사용하여 식 트리를 나타내는 `DebugView` 속성을 사용합니다. (`DebugView`는 디버그 모드에서만 사용할 수 있습니다.)  
 
 ![VS 디버거 내 식 트리의 DebugView 스크린샷](media/debugging-expression-trees-in-visual-studio/debugview-expression-tree.png)
 
-`DebugView`는 문자열이므로 `DebugView` 레이블 옆의 돋보기 아이콘에서 **텍스트 시각화 도우미**를 선택하여 [기본 제공 텍스트 시각화 도우미](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)를 사용하여 여러 줄에서 볼 수 있습니다.
+`DebugView`는 문자열이므로 `DebugView` 레이블 옆의 돋보기 아이콘에서 **텍스트 시각화 도우미**를 선택하여 [기본 제공 텍스트 시각화 도우미](/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)를 사용하여 여러 줄에서 볼 수 있습니다.
 
  ![DebugView의 결과에 적용되는 텍스트 시각화 도우미 스크린샷](media/debugging-expression-trees-in-visual-studio/string-visualizer-debugview.png)
 
-또는 다음과 같은 식 트리에 [사용자 지정 시각화 도우미](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)를 설치하여 사용할 수 있습니다.
+또는 다음과 같은 식 트리에 [사용자 지정 시각화 도우미](/visualstudio/debugger/create-custom-visualizers-of-data)를 설치하여 사용할 수 있습니다.
 
 - [읽을 수 있는 식](https://github.com/agileobjects/ReadableExpressions)([MIT 라이선스](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md), [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers)에서 사용 가능)은 다양한 렌더링 옵션을 사용하여 식 트리를 테마 지정 가능 C# 코드로 렌더링합니다.
 

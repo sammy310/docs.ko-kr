@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2094da7ec94028c112d6683620ac1146a1544dab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62a5f56bb7fffc453623a2c3202f288a19110158
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446976"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539517"
 ---
 ### <a name="localization-pubternal-apis-removed"></a>지역화: "Pubternal" API가 제거됨
 
-ASP.NET Core의 공용 API 노출 영역을 보다 효율적으로 유지 관리하기 위해 일부 :::no-loc text="\"pubternal\""::: 지역화 API가 제거되었습니다. :::no-loc text="\"pubternal\""::: API는 `public` 액세스 한정자를 포함하고 있으며 [internal](/dotnet/csharp/language-reference/keywords/internal) 의도를 암시하는 네임스페이스에서 정의됩니다.
+ASP.NET Core의 공용 API 노출 영역을 보다 효율적으로 유지 관리하기 위해 일부 :::no-loc text="\"pubternal\""::: 지역화 API가 제거되었습니다. :::no-loc text="\"pubternal\""::: API는 `public` 액세스 한정자를 포함하고 있으며 [internal](../../../../docs/csharp/language-reference/keywords/internal.md) 의도를 암시하는 네임스페이스에서 정의됩니다.
 
 자세한 내용은 [dotnet/aspnetcore#22291](https://github.com/dotnet/aspnetcore/issues/22291)을 참조하세요.
 

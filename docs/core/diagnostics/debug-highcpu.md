@@ -3,18 +3,18 @@ title: 높은 CPU 사용량 디버그 - .NET 코어
 description: .NET Core의 높은 CPU 사용량을 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557804"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538711"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET 코어에서 높은 CPU 사용량 디버그
 
 **이 문서의 적용 대상: ✔️** .NET Core 3.1. SDK 이상 버전
 
-이 자습서에서는 과도한 CPU 사용량 시나리오를 디버그하는 방법을 알아봅니다. 제공된 예제 [ASP.NET Core 웹앱](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 소스 코드 리포지토리를 사용하면 교착 상태를 의도적으로 초래할 수 있습니다. 엔드포인트에서 중단 및 스레드 누적이 발생합니다. 다양한 도구를 사용하여 진단 데이터의 몇 가지 주요 부분으로 이 시나리오를 진단하는 방법을 알아봅니다.
+이 자습서에서는 과도한 CPU 사용량 시나리오를 디버그하는 방법을 알아봅니다. 제공된 예제 [ASP.NET Core 웹앱](/samples/dotnet/samples/diagnostic-scenarios) 소스 코드 리포지토리를 사용하면 교착 상태를 의도적으로 초래할 수 있습니다. 엔드포인트에서 중단 및 스레드 누적이 발생합니다. 다양한 도구를 사용하여 진단 데이터의 몇 가지 주요 부분으로 이 시나리오를 진단하는 방법을 알아봅니다.
 
 이 자습서에서 다음을 수행합니다.
 
@@ -31,13 +31,13 @@ ms.locfileid: "88557804"
 이 자습서에서는 다음을 사용합니다.
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
-- 시나리오를 트리거하는 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios).
+- 시나리오를 트리거하는 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios).
 - 프로세스를 나열하고 프로필을 생성하는 [dotnet-trace](dotnet-trace.md).
 - CPU 사용량을 모니터링하는 [dotnet-counters](dotnet-counters.md).
 
 ## <a name="cpu-counters"></a>CPU 카운터
 
-진단 데이터를 수집하기 전에 높은 CPU 판단 기준을 관찰해야 합니다. 프로젝트 루트 디렉터리에서 다음 명령을 사용하여 [샘플 애플리케이션](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)을 실행합니다.
+진단 데이터를 수집하기 전에 높은 CPU 판단 기준을 관찰해야 합니다. 프로젝트 루트 디렉터리에서 다음 명령을 사용하여 [샘플 애플리케이션](/samples/dotnet/samples/diagnostic-scenarios)을 실행합니다.
 
 ```dotnetcli
 dotnet run
@@ -116,11 +116,11 @@ Press p to pause, r to resume, q to quit.
 
 ### <a name="linux"></a>[Linux](#tab/linux)
 
-`perf` 도구를 사용하여 .NET Core 앱 프로필을 생성할 수 있습니다. [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)의 이전 인스턴스를 종료합니다.
+`perf` 도구를 사용하여 .NET Core 앱 프로필을 생성할 수 있습니다. [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios)의 이전 인스턴스를 종료합니다.
 
 `COMPlus_PerfMapEnabled` 환경 변수를 설정하여 .NET Core 앱이 `/tmp` 디렉터리에 `map` 파일을 만들도록 합니다. 이 `map` 파일은 `perf`에서 CPU 주소를 이름별로 JIT 생성 함수에 매핑하는 데 사용됩니다. 자세한 내용은 [perf 맵 작성](../run-time-config/debugging-profiling.md#write-perf-map)을 참조하세요.
 
-동일한 터미널 세션에서 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)을 실행합니다.
+동일한 터미널 세션에서 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios)을 실행합니다.
 
 ```dotnetcli
 export COMPlus_PerfMapEnabled=1
@@ -152,7 +152,7 @@ sudo perf script | FlameGraph/stackcollapse-perf.pl | FlameGraph/flamegraph.pl >
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows에서는 [dotnet-trace](dotnet-trace.md) 도구를 프로파일러로 사용할 수 있습니다. 이전 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)을 사용하여 높은 CPU 엔드포인트(`https://localhost:5001/api/diagscenario/highcpu/60000`)를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 다음과 같이 `collect` 명령을 사용합니다.
+Windows에서는 [dotnet-trace](dotnet-trace.md) 도구를 프로파일러로 사용할 수 있습니다. 이전 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios)을 사용하여 높은 CPU 엔드포인트(`https://localhost:5001/api/diagscenario/highcpu/60000`)를 다시 실행합니다. 1분 요청 내에서 실행되는 동안 다음과 같이 `collect` 명령을 사용합니다.
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

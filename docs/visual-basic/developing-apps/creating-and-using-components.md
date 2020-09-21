@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4d4fa092363a5e76658f2770c0d655bb225f3f3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330291"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544585"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
 
@@ -63,9 +63,9 @@ ms.locfileid: "74330291"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [컨트롤 및 구성 요소 제작 문제 해결](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [컨트롤 및 구성 요소 제작 문제 해결](/dotnet/desktop/winforms/controls/troubleshooting-control-and-component-authoring)  
  일반적인 문제 해결 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참조
 
-- [방법: Windows Forms에서 디자인 타임 지원 액세스](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [방법: Windows Forms에서 디자인 타임 지원 액세스](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555161"
 ---
 # <a name="common-type-system"></a>CTS(공용 형식 시스템)
 
@@ -306,6 +306,6 @@ ms.locfileid: "84767834"
   
 ## <a name="see-also"></a>참조
 
-- [.NET API 브라우저](/dotnet/api)
+- [.NET API 브라우저](../../../api/index.md)
 - [공용 언어 런타임](../clr.md)
 - [.NET에서 형식 변환](type-conversion.md)

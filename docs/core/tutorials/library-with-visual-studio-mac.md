@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Standard 클래스 라이브러리 만들기
 description: Mac용 Visual Studio를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416003"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537641"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Standard 라이브러리 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "86416003"
 * [Mac용 Visual Studio 버전 8.6 이상을 설치](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)합니다. .NET Core 설치 옵션을 선택합니다. Xamarin의 설치는 .NET Core 개발에서 선택 사항입니다. 자세한 내용은 다음 자료를 참조하세요.
 
   * [자습서: Mac용 Visual Studio](/visualstudio/mac/installation)를 설치합니다.
-  * [지원되는 macOS 버전](../install/dependencies.md?pivots=os-macos).
+  * [지원되는 macOS 버전](../install/macos.md).
   * [Mac용 Visual Studio에서 지원되는 .NET Core 버전](/visualstudio/mac/net-core-support).
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>클래스 라이브러리 프로젝트로 솔루션 만들기

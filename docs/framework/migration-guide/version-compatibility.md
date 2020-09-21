@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558766"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550386"
 ---
 # <a name="version-compatibility"></a>버전 호환성
 
@@ -53,9 +53,9 @@ ms.locfileid: "88558766"
 
 - .NET Framework 3.5 앱이 있는 경우 [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)도 참조하세요.
 
-- .NET Framework 2.0 앱이 있는 경우 [.NET Framework 3.5 SP1의 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))도 참조하세요.
+- .NET Framework 2.0 앱이 있는 경우 [.NET Framework 3.5 SP1의 변경 내용](/previous-versions/dotnet/articles/dd310284(v=msdn.10))도 참조하세요.
 
-- .NET Framework 1.1 앱이 있는 경우 [.NET Framework 2.0의 변경 내용](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))도 참조하세요.
+- .NET Framework 1.1 앱이 있는 경우 [.NET Framework 2.0의 변경 내용](/previous-versions/aa570326(v=msdn.10))도 참조하세요.
 
 - .NET Framework 4.5 또는 해당 포인트 릴리스에서 실행하기 위해 기존 소스 코드를 다시 컴파일하거나 기존 소스 코드 기반의 .NET Framework 4.5 또는 해당 포인트 릴리스를 대상으로 하는 새 버전의 앱 또는 구성 요소를 개발하는 경우 [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)에서 사용되지 않는 형식과 멤버를 확인하고 설명된 해결 방법을 적용합니다. 이전에 컴파일된 코드는 사용되지 않는 것으로 표시된 형식과 멤버에 대해 계속해서 실행됩니다.
 

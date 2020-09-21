@@ -18,11 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555590"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -235,7 +236,7 @@ interface IDemandStubsItf
 - [진입점 지정](specifying-an-entry-point.md)
 - [문자 집합 지정](specifying-a-character-set.md)
 - [플랫폼 호출 예제](platform-invoke-examples.md)
-- [플랫폼 호출 보안 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [플랫폼 호출 보안 고려 사항](/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL 함수 식별](identifying-functions-in-dlls.md)
 - [DLL 함수가 포함된 클래스 만들기](creating-a-class-to-hold-dll-functions.md)
 - [DLL 함수 호출](calling-a-dll-function.md)

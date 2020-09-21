@@ -4,12 +4,12 @@ description: C# nullable 값 형식 및 사용 방법 알아보기
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 8c3a8b997fbb8154f79dff04018cf3ea76f85d7a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537355"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullalbe 값 형식(C# 참조)
 
@@ -135,7 +135,7 @@ Null 허용 값 형식 `T?`의 인스턴스는 다음과 같이 [box](../../prog
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- ['리프트'란 정확히 어떤 의미입니까?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
+- ['리프트'란 정확히 어떤 의미입니까?](/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768861"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555681"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>이벤트 기반 비동기 패턴 개요
 많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 애플리케이션에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 애플리케이션을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 애플리케이션의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 애플리케이션의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
@@ -138,8 +138,8 @@ public class AsyncExample
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [방법: 백그라운드 작업을 사용하는 양식 구현](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [방법: 백그라운드에서 작업 실행](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [방법: 백그라운드 작업을 사용하는 양식 구현](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)
 - [최선의 이벤트 기반 비동기 패턴 구현 방법](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

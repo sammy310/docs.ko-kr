@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502394"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551467"
 ---
 # <a name="internet-protocol-version-6"></a>인터넷 프로토콜 버전 6
 IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한 새로운 표준 프로토콜 도구 모음입니다. IPv6은 주소 고갈, 보안, 자동 구성, 확장성 등에 관련된 현재 버전 인터넷 프로토콜 도구 모음(IPv4라고 함)의 많은 문제를 해결하도록 설계되었습니다. IPv6은 피어 투 피어 및 모바일 애플리케이션을 포함한 새로운 종류의 애플리케이션을 구현하기 위해 인터넷 기능을 확장합니다. 현재 IPv4 프로토콜의 주요 문제는 다음과 같습니다.  
@@ -56,10 +56,10 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
   
 - RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.  
   
- 또한 [IPv6(IP 버전 6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29)에서 IPv6 관련 정보를 찾을 수 있습니다.  
+ 또한 [IPv6(IP 버전 6)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498(v=ws.10))에서 IPv6 관련 정보를 찾을 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 
-- [IPv6 소켓 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
+- [IPv6 소켓 샘플](/previous-versions/dotnet/netframework-3.0/ms180981(v=vs.85))
 - [네트워크 프로그래밍 샘플](network-programming-samples.md)
 - [소켓](sockets.md)

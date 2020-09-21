@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d635135e58c2fd86897b06b20a6aa0c251335e70
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536043"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -253,6 +253,6 @@ ms.locfileid: "89379124"
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 백그라운드에서 작업 실행](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [방법: 백그라운드에서 작업 실행](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)
 - [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)

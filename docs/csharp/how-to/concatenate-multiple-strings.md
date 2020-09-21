@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f2aae14deac967a833fb3510acdb32e0971485b5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663020"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537485"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>여러 문자열 연결 방법(C# 가이드)
 
@@ -41,7 +41,7 @@ ms.locfileid: "84663020"
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
 
-[문자열 연결 또는 `StringBuilder` 클래스를 선택하는 이유](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types)에 대해 자세히 읽을 수 있습니다.
+[문자열 연결 또는 `StringBuilder` 클래스를 선택하는 이유](/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types)에 대해 자세히 읽을 수 있습니다.
 
 컬렉션의 문자열을 조인하는 또 다른 옵션은 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 사용하는 것입니다. 소스 문자열을 구분 기호로 구분해야 하는 경우 <xref:System.String.Join%2A?displayProperty=nameWithType> 메서드를 사용합니다. 다음 코드는 두 메서드 모두를 사용하여 단어 배열을 결합합니다.
 

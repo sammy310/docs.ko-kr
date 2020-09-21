@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662734"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559163"
 ---
 # <a name="observer-design-pattern"></a>관찰자 디자인 패턴
 
@@ -47,7 +47,7 @@ ms.locfileid: "84662734"
 - 공급자가 해당 관찰자에게 전송하는 데이터를 포함하는 개체. 이 개체의 형식은 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스의 제네릭 형식 매개 변수에 해당합니다. 이 개체는 <xref:System.IObservable%601> 구현과 동일할 수도 있지만 일반적으로 별도 형식입니다.
 
 > [!NOTE]
-> 관찰자 디자인 패턴 구현 외에도 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스를 사용하여 빌드된 라이브러리 탐색에 관심이 있을 수 있습니다. 예를 들어 [.NET용 사후 확장(Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))은 비동기 프로그래밍을 지원하기 위해 일련의 확장 메서드와 LINQ 표준 시퀀스 연산자로 구성됩니다.
+> 관찰자 디자인 패턴 구현 외에도 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스를 사용하여 빌드된 라이브러리 탐색에 관심이 있을 수 있습니다. 예를 들어 [.NET용 사후 확장(Rx)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))은 비동기 프로그래밍을 지원하기 위해 일련의 확장 메서드와 LINQ 표준 시퀀스 연산자로 구성됩니다.
 
 ## <a name="implementing-the-pattern"></a>패턴 구현
 

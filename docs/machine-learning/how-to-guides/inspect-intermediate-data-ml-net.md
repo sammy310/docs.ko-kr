@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f168653297594a604e6f381947f31cba5376178
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977096"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679627"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>처리하는 동안 중간 데이터 검사
 
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>IDataView를 IEnumerable로 변환
 
-[`IDataView`](xref:Microsoft.ML.IDataView)를 검사하는 가장 빠른 방법 중 하나는 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하는 것입니다. [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하려면 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용합니다.
+[`IDataView`](xref:Microsoft.ML.IDataView)를 검사하는 가장 빠른 방법 중 하나는 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하는 것입니다. [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하려면 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용합니다.
 
 성능을 최적화하려면 `reuseRowObject`를 `true`로 설정합니다. 이렇게 하면 데이터 세트에서 각각의 행에 대해 새 개체를 만드는 것과는 반대로 평가되고 있는 현재 행의 데이터로 같은 개체를 지연 입력합니다.
 
@@ -81,10 +81,10 @@ foreach (HousingData row in housingDataEnumerable)
 
 ## <a name="accessing-specific-indices-with-ienumerable"></a>IEnumerable을 사용하여 특정 인덱스에 액세스
 
-데이터나 특정 인덱스의 일부에만 액세스해야 할 경우 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)을 사용하고 `reuseRowObject` 매개 변수 값을 `false`로 설정하여 데이터 세트에서 요청된 각 행에 대해 새 개체를 만듭니다. 그런 다음, [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)을 배열 또는 목록으로 변환합니다.
+데이터나 특정 인덱스의 일부에만 액세스해야 할 경우 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)을 사용하고 `reuseRowObject` 매개 변수 값을 `false`로 설정하여 데이터 세트에서 요청된 각 행에 대해 새 개체를 만듭니다. 그런 다음, [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)을 배열 또는 목록으로 변환합니다.
 
 > [!WARNING]
-> [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)의 결과를 배열 또는 목록으로 변환하면 요청된 모든 [`IDataView`](xref:Microsoft.ML.IDataView) 행이 메모리에 로드되어 성능에 영향을 미칠 수 있습니다.
+> [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)의 결과를 배열 또는 목록으로 변환하면 요청된 모든 [`IDataView`](xref:Microsoft.ML.IDataView) 행이 메모리에 로드되어 성능에 영향을 미칠 수 있습니다.
 
 컬렉션을 만든 후에는 데이터에 대해 작업을 수행할 수 있습니다. 아래 코드 조각에서는 데이터 세트의 처음 세 행을 취하여 평균 현재 가격을 계산합니다.
 
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>단일 열의 값 검사
 
-모델 빌드 프로세스 중 어디서나 [`IDataView`](xref:Microsoft.ML.IDataView)의 단일 열에 있는 값은 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 메서드를 사용하여 액세스할 수 있습니다. [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 메서드는 모든 값을 한 열에 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)으로 반환합니다.
+모델 빌드 프로세스 중 어디서나 [`IDataView`](xref:Microsoft.ML.IDataView)의 단일 열에 있는 값은 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) 메서드를 사용하여 액세스할 수 있습니다. [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) 메서드는 모든 값을 한 열에 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)으로 반환합니다.
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
@@ -112,7 +112,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>한 번에 한 행씩 IDataView 값 검사
 
-[`IDataView`](xref:Microsoft.ML.IDataView)는 지연 계산됩니다. 이 문서의 이전 섹션에서 설명한 대로 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하지 않고 [`IDataView`](xref:Microsoft.ML.IDataView) 행에 대해 반복하려면 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 메서드를 사용하여 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)를 만들고 [`IDataView`](xref:Microsoft.ML.IDataView)의 [DataViewSchema](xref:Microsoft.ML.DataViewSchema)를 매개 변수로 전달합니다. 그런 다음, 행에 대해 반복하기 위해 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 커서 메서드를 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 대리자와 함께 사용하여 각 열에서 해당 값을 추출합니다.
+[`IDataView`](xref:Microsoft.ML.IDataView)는 지연 계산됩니다. 이 문서의 이전 섹션에서 설명한 대로 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하지 않고 [`IDataView`](xref:Microsoft.ML.IDataView) 행에 대해 반복하려면 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor%2A) 메서드를 사용하여 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)를 만들고 [`IDataView`](xref:Microsoft.ML.IDataView)의 [DataViewSchema](xref:Microsoft.ML.DataViewSchema)를 매개 변수로 전달합니다. 그런 다음, 행에 대해 반복하기 위해 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext%2A) 커서 메서드를 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 대리자와 함께 사용하여 각 열에서 해당 값을 추출합니다.
 
 > [!IMPORTANT]
 > 성능을 위해 ML.NET에서 사용하는 벡터는 네이티브 컬렉션 형식(즉 `Vector`,`float[]`)이 아닌 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)입니다.
@@ -150,7 +150,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > `Preview`는 디버깅용으로 성능이 저하될 수 있으므로 프로덕션 코드에는 사용할 수 있습니다.
 
-모델 빌드 프로세스는 실험적인 반복 작업입니다. 데이터 하위 집합에 대한 사전 처리나 기계 학습 모델 교육 후 데이터가 어떻게 되는지 미리 보려면 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview)를 반환하는 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) 메서드를 사용합니다. 결과는 `ColumnView` 및 `RowView` 속성이 있는 개체로, 모두 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)이며 특정 열이나 행에 값을 포함합니다. `maxRows` 매개 변수를 통해 변환을 적용할 행 수를 지정합니다.
+모델 빌드 프로세스는 실험적인 반복 작업입니다. 데이터 하위 집합에 대한 사전 처리나 기계 학습 모델 교육 후 데이터가 어떻게 되는지 미리 보려면 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview)를 반환하는 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) 메서드를 사용합니다. 결과는 `ColumnView` 및 `RowView` 속성이 있는 개체로, 모두 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)이며 특정 열이나 행에 값을 포함합니다. `maxRows` 매개 변수를 통해 변환을 적용할 행 수를 지정합니다.
 
 ![데이터 디버거 미리 보기 개체](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 

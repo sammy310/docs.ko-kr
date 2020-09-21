@@ -3,12 +3,12 @@ title: .NET용 Azure 라이브러리의 인증 이해
 description: .NET용 Azure SDK를 사용하여 인증하는 다양한 방법을 설명합니다.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811381"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539179"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>.NET용 Azure SDK를 사용하여 인증
 
@@ -25,7 +25,7 @@ Azure.Identity를 지원하지 않는 라이브러리를 사용하여 인증하�
 
 ## <a name="access-azure-resources"></a>Azure 리소스 액세스
 
-Key Vault에서 비밀을 검색하거나 Storage에 BLOB을 저장하는 등 Azure 리소스와 상호 작용하려면 대부분의 Azure 서비스 라이브러리에 인증을 위한 연결 문자열 또는 키가 있어야 합니다. 예를 들어 SQL Database는 [표준 SQL 연결 문자열](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core)을 사용합니다. 서비스 연결 문자열은 [CosmosDB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache), [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)와 같은 다른 Azure 서비스에서 사용됩니다. Azure Portal, CLI 또는 PowerShell을 사용하여 이러한 문자열을 가져올 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
+Key Vault에서 비밀을 검색하거나 Storage에 BLOB을 저장하는 등 Azure 리소스와 상호 작용하려면 대부분의 Azure 서비스 라이브러리에 인증을 위한 연결 문자열 또는 키가 있어야 합니다. 예를 들어 SQL Database는 [표준 SQL 연결 문자열](/azure/azure-sql/database/connect-query-dotnet-core)을 사용합니다. 서비스 연결 문자열은 [CosmosDB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache), [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)와 같은 다른 Azure 서비스에서 사용됩니다. Azure Portal, CLI 또는 PowerShell을 사용하여 이러한 문자열을 가져올 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
 
 연결 문자열을 사용하는 방법은 제품별로 다릅니다. [Azure 제품에 관한 설명서를 참조하세요](/azure/?product=featured).
 

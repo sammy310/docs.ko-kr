@@ -3,18 +3,18 @@ title: LINQ 및 문자열(C#)
 description: LINQ는 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. LINQ 쿼리와 C# 문자열 함수 및 정규식을 결합할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0500d821335659fa29dd4809513f38dac0a8b193
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165616"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556722"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 및 문자열(C#)
 
 LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. 텍스트 파일의 반구조적 데이터에 특히 유용할 수 있습니다. LINQ 쿼리에 기존의 문자열 함수 및 정규식을 결합할 수 있습니다. 예를 들어 <xref:System.String.Split%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열 배열을 만든 다음 LINQ를 사용하여 쿼리하거나 수정할 수 있습니다. LINQ 쿼리의 `where` 절에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 또한 LINQ를 사용하여 정규식에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 결과를 쿼리하거나 수정할 수 있습니다.
 
-이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [CSV 파일에서 XML을 생성하는 방법](how-to-generate-xml-from-csv-files.md)을 참조하세요.
+이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [CSV 파일에서 XML을 생성하는 방법](../../../../standard/linq/generate-xml-csv-files.md)을 참조하세요.
 
 이 섹션의 예제는 다음 두 가지 범주로 구분됩니다.
 
@@ -76,4 +76,4 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
 ## <a name="see-also"></a>참조
 
 - [LINQ(Language-Integrated Query)(C#)](index.md)
-- [CSV 파일에서 XML을 생성하는 방법](how-to-generate-xml-from-csv-files.md)
+- [CSV 파일에서 XML을 생성하는 방법](../../../../standard/linq/generate-xml-csv-files.md)

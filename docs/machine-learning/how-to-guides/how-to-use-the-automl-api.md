@@ -3,12 +3,12 @@ title: ML.NET 자동화 ML API 사용 방법
 description: ML.NET 자동화 ML API는 모델 빌드 프로세스를 자동화하고 배포 준비된 모델을 생성합니다. 자동화된 기계 학습 작업을 구성하기 위해 사용할 수 있는 옵션에 대해 알아보세요.
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75636564"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540734"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET 자동화 기계 학습 API 사용 방법
 
@@ -70,7 +70,7 @@ using Microsoft.ML.AutoML;
 
 ## <a name="configure-experiment-settings"></a>실험 설정 구성
 
-실험은 구성 기능이 뛰어납니다. 구성 설정 전체 목록은 [AutoML API 문서](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)를 참조하세요.
+실험은 구성 기능이 뛰어납니다. 구성 설정 전체 목록은 [AutoML API 문서](/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)를 참조하세요.
 
 예를 들면 다음과 같습니다.
 

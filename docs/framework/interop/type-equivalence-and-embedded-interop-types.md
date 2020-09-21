@@ -8,12 +8,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-ms.openlocfilehash: 2d572133c42f01af7d50f6f771588f5173853f9a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a096c6bd0703c19c6049ad5ab2532b4b05f6ede0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282010"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558825"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>형식 동등 및 포함된 Interop 형식
 
@@ -55,5 +55,5 @@ ms.locfileid: "86282010"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Type.IsEquivalentTo%2A>
-- [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [관리 코드에서 COM 형식 사용](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)

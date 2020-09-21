@@ -2,12 +2,12 @@
 title: .NET Core 개요
 description: .NET Core의 특성 및 구성을 알아보고 다른 .NET 구현과 비교합니다.
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100732"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539010"
 ---
 # <a name="net-core-overview"></a>.NET Core 개요
 
@@ -39,7 +39,7 @@ ms.locfileid: "86100732"
 
 * [ASP.NET Core](/aspnet/core/)를 사용한 클라우드 앱
 * [Xamarin](/xamarin)을 사용한 모바일 앱
-* [System.Device.GPIO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)를 사용한 IoT 앱
+* [System.Device.GPIO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)를 사용한 IoT 앱
 * [WPF](../desktop-wpf/overview/index.md) 및 Windows Forms를 사용한 Windows 클라이언트 앱
 * 기계 학습 [ML.NET](../machine-learning/index.yml)
 
@@ -64,7 +64,7 @@ ms.locfileid: "86100732"
 
 ### <a name="open-source"></a>오픈 소스
 
-[.NET Core](about.md)는 [오픈 소스](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 범용 개발 플랫폼입니다. x64, x86, ARM32, ARM64 프로세서의 Windows, macOS 및 Linux용 .NET Core 앱을 만들 수 있습니다. [클라우드](/aspnet/core/), [IoT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [클라이언트 UI](../desktop-wpf/overview/index.md) 및 [기계 학습](../machine-learning/index.yml)용 프레임워크 및 API가 제공됩니다.
+[.NET Core](about.md)는 [오픈 소스](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 범용 개발 플랫폼입니다. x64, x86, ARM32, ARM64 프로세서의 Windows, macOS 및 Linux용 .NET Core 앱을 만들 수 있습니다. [클라우드](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [클라이언트 UI](../desktop-wpf/overview/index.md) 및 [기계 학습](../machine-learning/index.yml)용 프레임워크 및 API가 제공됩니다.
 
 ## <a name="support"></a>고객 지원팀
 

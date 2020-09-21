@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302960"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541541"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "87302960"
   
 ## <a name="see-also"></a>참조
 
-- [Interop 성능 향상](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Interop 성능 향상](/previous-versions/msp-n-p/ff647812(v=pandp.10))
 - [Introduction to Interoperability between COM and .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)(COM과 .NET 간 상호 운용성 소개)
 - [Visual Basic의 COM Interop 소개](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [관리 코드와 비관리 코드 간의 마샬링](../../../framework/interop/interop-marshaling.md)

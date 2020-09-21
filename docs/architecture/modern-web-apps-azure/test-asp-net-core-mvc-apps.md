@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465639"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539245"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -257,7 +257,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
 
 테스트는 이 사용자 지정 WebApplicationFactory를 사용할 수 있습니다. 이를 사용하여 클라이언트를 만든 다음, 이 클라이언트 인스턴스를 사용하는 애플리케이션에 요청을 수행합니다. 애플리케이션에는 테스트의 어설션의 일부로 사용할 수 있는 시드된 데이터가 생깁니다. 다음 테스트는 eShopOnWeb 애플리케이션의 홈페이지가 올바르게 로드되고 시드 데이터의 일부로 애플리케이션에 추가된 제품 목록이 포함되어 있는지 확인합니다.
 
-```cs
+```csharp
 using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;

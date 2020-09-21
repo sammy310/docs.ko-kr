@@ -27,12 +27,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474048"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551199"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM 그래프에서 소스 코드 생성 및 컴파일
 <xref:System.CodeDom.Compiler> 네임스페이스는 CodeDOM 개체 그래프에서 소스 코드를 생성하고 지원되는 컴파일러를 통한 컴파일을 관리하기 위한 인터페이스를 제공합니다. 코드 공급자는 CodeDOM 그래프에 따라 특정 프로그래밍 언어로 소스 코드를 생성할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 파생되는 클래스는 일반적으로 공급자가 지원하는 언어의 코드를 생성 및 컴파일하기 위한 메서드를 제공할 수 있습니다.  
@@ -97,4 +97,4 @@ ms.locfileid: "86474048"
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [동적 소스 코드 생성 및 컴파일](dynamic-source-code-generation-and-compilation.md)
-- [CodeDOM 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))
+- [CodeDOM 빠른 참조](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

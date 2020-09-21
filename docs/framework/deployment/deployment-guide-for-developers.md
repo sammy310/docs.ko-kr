@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558831"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558747"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -43,9 +43,9 @@ ms.locfileid: "88558831"
 
 - .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
-- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
+- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
 
-- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
+- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
 
 시스템 관리자가 .NET Framework 및 시스템 종속성을 네트워크에 배포하는 방법에 대한 자세한 내용은 [관리자용 배포 가이드](guide-for-administrators.md)를 참조하세요.
 
@@ -345,11 +345,11 @@ Windows 8부터 제어판의 **Windows 기능 사용/사용 안 함**을 통해 
 |옵션|설명|
 |------------|-----------------|
 |**/CEIPConsent**|기본 동작을 덮어쓰고 향후 배포 환경을 개선하기 위해 Microsoft에 익명으로 피드백을 보냅니다. 이 옵션은 설치 프로그램에서 사용자에게 동의를 요청하고 Microsoft로 익명 피드백을 보낼 수 있는 권한을 사용자가 부여한 경우에만 사용될 수 있습니다.|
-|**/chainingpackage** `packageName`|연결을 수행하는 실행 파일의 이름을 지정합니다. 이 정보는 향후 배포 환경 개선을 지원하기 위해 익명 피드백으로 Microsoft에 보내집니다.<br /><br /> 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Lucerne Publishing"** 과 같이 큰따옴표를 구분자로 사용합니다. 연결 패키지의 예는 [설치 패키지에서 진행 정보 가져오기](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))를 참조하세요.|
+|**/chainingpackage** `packageName`|연결을 수행하는 실행 파일의 이름을 지정합니다. 이 정보는 향후 배포 환경 개선을 지원하기 위해 익명 피드백으로 Microsoft에 보내집니다.<br /><br /> 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Lucerne Publishing"** 과 같이 큰따옴표를 구분자로 사용합니다. 연결 패키지의 예는 [설치 패키지에서 진행 정보 가져오기](/previous-versions/cc825975(v=vs.100))를 참조하세요.|
 |**/LCID**  `LCID`<br /><br /> 여기서 `LCID` 는 로캘 식별자를 지정합니다( [지원되는 언어](#supported-languages)참조).|`LCID` 로 지정된 언어 팩을 설치하고 표시된 UI가 해당 언어로 표시되도록 합니다(자동 모드가 설정되어 있지 않은 경우).<br /><br /> 웹 설치 관리자에 대해 이 옵션을 사용하면 웹을 통해 언어 팩도 함께 설치됩니다. **참고:**  웹 설치 관리자에서만 이 옵션을 사용합니다.|
 |**/log** `file` &#124; `folder`|로그 파일의 위치를 지정합니다. 기본값은 프로세스에 대한 임시 폴더이며 기본 파일 이름은 패키지를 기반으로 합니다. 파일 확장명이 .txt인 경우 텍스트 로그가 생성됩니다. 다른 확장명을 지정하거나 확장명을 지정하지 않는 경우 HTML 로그가 만들어집니다.|
 |**/msioptions**|.msi 및 .msp 항목에 대해 전달될 옵션을 지정합니다(예: `/msioptions "PROPERTY1='Value'"`).|
-|**/norestart**|설치 프로그램이 자동으로 재부팅하지 않도록 합니다. 이 옵션을 사용하는 경우 연결 앱은 반환 코드를 캡처하고 재부팅을 처리해야 합니다([설치 패키지에서 프로세스 진행 정보 가져오기](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)) 참조).|
+|**/norestart**|설치 프로그램이 자동으로 재부팅하지 않도록 합니다. 이 옵션을 사용하는 경우 연결 앱은 반환 코드를 캡처하고 재부팅을 처리해야 합니다([설치 패키지에서 프로세스 진행 정보 가져오기](/previous-versions/cc825975(v=vs.100)) 참조).|
 |**/passive**|Passive 모드를 설정합니다. 설치가 진행 중임을 나타내는 진행률 표시줄을 표시하지만 사용자에게 프롬프트 또는 오류 메시지를 표시하지는 않습니다. 이 모드에서 설치 프로그램에 의해 연결되면 연결 패키지에서 [반환 코드](#return-codes)를 처리해야 합니다.|
 |**/pipe**|연결 패키지를 사용하여 진행하기 위해 통신 채널을 만듭니다.|
 |**/promptrestart**|설치 프로그램을 다시 시작해야 하는 경우 수동 모드에서만 사용자에게 메시지가 표시됩니다. 이 옵션에서는 다시 시작해야 하는 경우 사용자 상호 작용이 필요합니다.|

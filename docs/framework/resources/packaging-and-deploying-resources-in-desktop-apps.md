@@ -27,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 056569f86afcbdf124f9e617e4ad07b09a194681
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166181"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554002"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -51,7 +51,7 @@ ms.locfileid: "87166181"
 
 ## <a name="resource-naming-conventions"></a>리소스 명명 규칙
 
-애플리케이션의 리소스를 패키지할 때는 공용 언어 런타임에서 적용하는 리소스 명명 규칙을 사용하여 이름을 지정해야 합니다. 런타임에서는 문화권 이름으로 리소스를 식별합니다. 각 문화권에는 일반적으로 언어와 관련된 2자의 소문자 문화권 이름과 필요한 경우 국가 또는 지역과 관련된 2자의 대문자 하위 문화권 이름이 조합된 고유한 이름이 지정됩니다. 하위 문화권 이름이 문화권 이름 다음에 추가되고 대시(-)로 구분됩니다. 예를 들어 일본에서 사용되는 일본어는 ja-JP, 미국에서 사용되는 영어는 en-US, 독일에서 사용되는 독일어는 de-DE, 오스트리아에서 사용되는 독일어는 de-AT입니다. [Windows에서 지원하는 언어/지역 이름 목록](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)의 **언어 태그** 열을 참조하세요. 문화권 이름은 [BCP 47](https://tools.ietf.org/html/bcp47)에 정의된 표준을 따릅니다.
+애플리케이션의 리소스를 패키지할 때는 공용 언어 런타임에서 적용하는 리소스 명명 규칙을 사용하여 이름을 지정해야 합니다. 런타임에서는 문화권 이름으로 리소스를 식별합니다. 각 문화권에는 일반적으로 언어와 관련된 2자의 소문자 문화권 이름과 필요한 경우 국가 또는 지역과 관련된 2자의 대문자 하위 문화권 이름이 조합된 고유한 이름이 지정됩니다. 하위 문화권 이름이 문화권 이름 다음에 추가되고 대시(-)로 구분됩니다. 예를 들어 일본에서 사용되는 일본어는 ja-JP, 미국에서 사용되는 영어는 en-US, 독일에서 사용되는 독일어는 de-DE, 오스트리아에서 사용되는 독일어는 de-AT입니다. [Windows에서 지원하는 언어/지역 이름 목록](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)의 **언어 태그** 열을 참조하세요. 문화권 이름은 [BCP 47](https://tools.ietf.org/html/bcp47)에 정의된 표준을 따릅니다.
 
 > [!NOTE]
 > 중국어(간체)의 경우 `zh-Hans`와 같이 두 문자로 된 문화권 이름에 대한 몇 가지 예외가 있습니다.

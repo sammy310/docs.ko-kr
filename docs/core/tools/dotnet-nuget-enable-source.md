@@ -2,12 +2,12 @@
 title: dotnet nuget enable source 명령
 description: dotnet nuget enable source 명령은 NuGet 구성 파일의 기존 소스를 사용하도록 설정합니다.
 ms.date: 03/20/2020
-ms.openlocfilehash: 38fb5917361bd7952fef9c31ed897fb81f005155
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b727844dd7d7cc82476e94a3f0ec4ecc6559d5ed
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463554"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537936"
 ---
 # <a name="dotnet-nuget-enable-source"></a>dotnet nuget enable source
 
@@ -39,7 +39,7 @@ dotnet nuget enable source -h|--help
 
 - **`--configfile <FILE>`**
 
-  NuGet 구성 파일입니다. 지정된 경우 이 파일의 설정만 사용됩니다. 지정되지 않으면 현재 디렉터리의 구성 파일의 계층 구조가 사용됩니다. 자세한 내용은 [일반적인 NuGet 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
+  NuGet 구성 파일입니다. 지정된 경우 이 파일의 설정만 사용됩니다. 지정되지 않으면 현재 디렉터리의 구성 파일의 계층 구조가 사용됩니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
 
 ## <a name="examples"></a>예
 

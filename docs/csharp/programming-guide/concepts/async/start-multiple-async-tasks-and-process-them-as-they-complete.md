@@ -3,12 +3,12 @@ title: 완료되면 비동기 작업 처리
 description: 이 예제에서는 C#에서 Task.WhenAny를 사용하여 여러 작업을 시작하고 해당 결과를 시작한 순서가 아닌 완료될 때 처리하는 방법을 보여줍니다.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812031"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557309"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>완료되면 비동기 작업 처리(C#)
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-LINQ를 통한 [지연된 실행](../linq/deferred-execution-example.md)으로 인해 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 호출하여 각 작업을 시작합니다.
+LINQ를 통한 [지연된 실행](../../../../standard/linq/deferred-execution-example.md)으로 인해 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 호출하여 각 작업을 시작합니다.
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

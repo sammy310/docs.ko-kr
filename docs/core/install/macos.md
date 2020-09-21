@@ -4,12 +4,12 @@ description: .NET Core를 설치할 수 있는 macOS 버전에 대해 알아봅�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f946759a57bf2eedd296ecbd55fd3a5a7560638d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538368"
 ---
 # <a name="install-net-core-on-macos"></a>macOS에 .NET Core 설치
 
@@ -177,7 +177,7 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 
 [dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. `current` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 [SDK](sdk.md)를 설치합니다.
+스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. `current` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 [SDK](./windows.md)를 설치합니다.
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore

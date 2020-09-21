@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291970"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555935"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅
 <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "84291970"
   
  어셈블리에서 증명 정보를 가져오려면 `this.GetType().Assembly.Evidence`를 사용합니다. URI(Uniform Resource Identifier)에서 증명 정보를 가져오려면 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`을 사용합니다.  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))을 참조하세요.  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))을 참조하세요.  
   
  함수는 `msxsl:script` 요소 내에서 선언할 수 있습니다. 다음 표에서는 기본적으로 지원되는 네임스페이스를 보여 줍니다. 나열된 네임스페이스 외부에 있는 클래스는 사용할 수 있지만, 정규화되어야만 사용 가능합니다.  
   

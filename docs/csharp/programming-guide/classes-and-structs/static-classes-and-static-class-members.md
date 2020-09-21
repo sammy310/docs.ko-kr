@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541879"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  모든 클래스 형식과 마찬가지로, 정적 클래스에 대한 형식 정보는 클래스를 참조하는 프로그램이 로드될 때 .NET 런타임에 의해 로드됩니다. 프로그램에서 클래스가 로드되는 시기를 정확하게 지정할 수는 없습니다. 그러나 클래스가 로드되도록 하고, 프로그램에서 클래스를 처음으로 참조하기 전에 해당 필드가 초기화되고 정적 생성자가 호출되도록 합니다. 정적 생성자는 한 번만 호출되며, 프로그램이 있는 애플리케이션 도메인의 수명 동안 정적 클래스가 메모리에 유지됩니다.  
   
 > [!NOTE]
-> 자체 인스턴스 하나만 생성될 수 있도록 하는 비정적 클래스를 만들려면 [C#에서 Singleton 구현](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)을 참조하세요.  
+> 자체 인스턴스 하나만 생성될 수 있도록 하는 비정적 클래스를 만들려면 [C#에서 Singleton 구현](/previous-versions/msp-n-p/ff650316(v=pandp.10))을 참조하세요.  
   
  다음 목록은 정적 클래스의 주요 기능을 제공합니다.  
   

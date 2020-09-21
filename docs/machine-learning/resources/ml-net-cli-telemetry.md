@@ -4,16 +4,16 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 ms.topic: conceptual
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 833ee2ae54cf3a52adaf070837a33e00267d25dc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 753361abdac5a2e979873003f419232a069b2015
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599841"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546434"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
-[ML.NET CLI](https://aka.ms/mlnet-cli)는 Microsoft에서 사용하기 위해 집계한 익명 사용량 현황 데이터를 수집하는 원격 분석 기능을 포함합니다.
+[ML.NET CLI](../automate-training-with-cli.md)는 Microsoft에서 사용하기 위해 집계한 익명 사용량 현황 데이터를 수집하는 원격 분석 기능을 포함합니다.
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft가 데이터를 사용하는 방법
 

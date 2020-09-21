@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558935"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558526"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 
@@ -421,8 +421,8 @@ ms.locfileid: "88558935"
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|호출자는 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 인터페이스를 사용하는 대신 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 클래스에 대해 직접 메서드를 사용해야 합니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속하는 경우에도 여전히 이 인터페이스를 구현해야 하며, 이 경고를 제외하거나 이 메서드도 사용되지 않도록 해야 합니다.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|호출자는 <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> 인터페이스를 사용하는 대신 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 클래스에 대해 직접 메서드를 사용해야 합니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속하는 경우에도 여전히 이 인터페이스를 구현해야 하며, 이 경고를 제외하거나 이 메서드도 사용되지 않도록 해야 합니다.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|호출자는 <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> 인터페이스를 사용하는 대신 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 클래스에 대해 직접 메서드를 사용해야 합니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 상속하는 경우에도 여전히 이 인터페이스를 구현해야 하며, 이 경고를 제외하거나 이 메서드도 사용되지 않도록 해야 합니다.|
-> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 정책은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다. 자세한 내용은 [.NET Framework 4의 보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)을 참조하세요.|
-> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 정책은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다. 자세한 내용은 [.NET Framework 4의 보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)을 참조하세요.|
+> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS 정책은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다. 자세한 내용은 [.NET Framework 4의 보안 변경 내용](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100))을 참조하세요.|
+> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS 정책은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다. 자세한 내용은 [.NET Framework 4의 보안 변경 내용](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100))을 참조하세요.|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|대신 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29>를 사용하세요.|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|대신 <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29>를 사용하세요.|
 > |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|대신 <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29>를 사용하세요.|

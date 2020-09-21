@@ -4,12 +4,12 @@ description: Azure HDInsight의 Jupyter Notebook에 .NET for Apache Spark를 설
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 14babf7a551192b286f309393e3bbff25d4745d5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8110b87991e2f0253257faf19f383dec6cbd3853
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617745"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557205"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark 클러스터의 Jupyter Notebook에 .NET for Apache Spark 설치
 
@@ -17,7 +17,7 @@ ms.locfileid: "85617745"
 
 Azure HDInsight 클러스터에는Jupyter Notebook이 이미 제공되어 있으므로 Jupyter Notebook이 .NET for Apache Spark를 실행하도록 구성하기만 하면 됩니다. Jupyter Notebook에서 .NET for Apache Spark를 사용하려면 C# 코드를 한 줄씩 실행하고 필요한 경우 실행 상태를 유지하기 위해 C# REPL이 필요합니다. [Try .NET](https://github.com/dotnet/try)이 공식 .NET REPL으로 통합되었습니다.
 
-Jupyter Notebook 환경을 통해 .NET for Apache Spark를 사용하도록 설정하려면 [Ambari](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-manage-ambari)를 통해 몇 가지 수동 단계를 수행하고 HDInsight Spark 클러스터에 [스크립트 동작](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)을 제출해야 합니다.
+Jupyter Notebook 환경을 통해 .NET for Apache Spark를 사용하도록 설정하려면 [Ambari](/azure/hdinsight/hdinsight-hadoop-manage-ambari)를 통해 몇 가지 수동 단계를 수행하고 HDInsight Spark 클러스터에 [스크립트 동작](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)을 제출해야 합니다.
 
 > [!NOTE]
 > 이 기능은 *실험적*이며 HDInsight Spark 팀에서 지원을 제공하지 않습니다.
@@ -26,7 +26,7 @@ Jupyter Notebook 환경을 통해 .NET for Apache Spark를 사용하도록 설�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-아직 없는 경우 [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 클러스터를 만듭니다.
+아직 없는 경우 [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 클러스터를 만듭니다.
 
 1. [Azure Portal](https://portal.azure.com)에서 **+ 리소스 만들기**를 선택합니다.
 
@@ -63,9 +63,9 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터**�
 
    로컬 컴퓨터에 **install-interactive-notebook.sh**라는 새 파일을 만들고[install-interactive-notebook.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)의 내용을 붙여넣습니다.
 
-   이 스크립트를 HDInsight 클러스터에서 액세스할 수 있는 [URI](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions)에 업로드합니다. 예: `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`.
+   이 스크립트를 HDInsight 클러스터에서 액세스할 수 있는 [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions)에 업로드합니다. 예: `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`.
 
-2. [HDInsight 스크립트 동작](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)을 사용하여 클러스터에서 `install-interactive-notebook.sh`를 실행합니다.
+2. [HDInsight 스크립트 동작](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)을 사용하여 클러스터에서 `install-interactive-notebook.sh`를 실행합니다.
 
    Azure Portal에서 HDI 클러스터로 돌아가서 왼쪽에 있는 옵션에서 **스크립트 동작**을 선택합니다. HDInsight Spark 클러스터에서 .NET for Apache Spark REPL을 배포하는 스크립트 동작 하나를 제출합니다. 다음 설정을 사용합니다.
 
@@ -158,4 +158,4 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터**�
 ## <a name="next-steps"></a>다음 단계
 
 * [Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포](../tutorials/hdinsight-deployment.md)
-* [HDInsight 설명서](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight 설명서](/azure/hdinsight/)

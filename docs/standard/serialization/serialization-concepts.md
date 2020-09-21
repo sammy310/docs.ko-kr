@@ -3,12 +3,12 @@ title: Serialization 개념
 description: Serialization을 사용하여 복사본을 만들기 위해 개체의 상태를 캡처하거나 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값을 기준으로 개체를 보낼 수 있습니다.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a185855f4b6913c8e1d57bf36fc5c37411123e68
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84291320"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541202"
 ---
 # <a name="serialization-concepts"></a>Serialization 개념
 serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 가지 이유는 이후 단계에서 정확한 복사본을 다시 만들 수 있도록 스토리지 매체에 개체의 상태를 유지하는 것과 개체를 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값으로 전송하는 것입니다. 예를 들어 serialization을 사용하여 세션 상태를 ASP.NET에 저장하고 개체를 Windows Forms의 클립보드로 복사할 수 있습니다. 또한 Remoting에서 이를 사용하여 개체를 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값으로 전달할 수도 있습니다.
@@ -31,7 +31,7 @@ serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 �
  [이진 serialization](binary-serialization.md)  
  공용 언어 런타임에 포함된 이진 serialization 메커니즘을 설명합니다.  
   
- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  .NET Framework에서 원격 통신에 사용할 수 있는 다양한 통신 방법에 대해 설명합니다.  
   
  [XML 및 SOAP serialization](xml-and-soap-serialization.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 4589d7a070a477dcb229fbaea686f6c6ff7d7e08
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 49feb664531db4955a99324851aef5b49032be71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989986"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555512"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "84989986"
   
 - `IntPtr`을 `Int32`로 캐스팅하는 코드.  
   
- 64비트 CLR에서 실행되도록 32비트 애플리케이션을 이식하는 방법에 대한 자세한 내용은 [32비트 관리 코드를 64비트로 마이그레이션](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))을 참조하세요.  
+ 64비트 CLR에서 실행되도록 32비트 애플리케이션을 이식하는 방법에 대한 자세한 내용은 [32비트 관리 코드를 64비트로 마이그레이션](/previous-versions/dotnet/articles/ms973190(v=msdn.10))을 참조하세요.  
   
 ## <a name="general-64-bit-programming-information"></a>일반 64비트 프로그래밍 정보  
  64비트 프로그래밍에 대한 일반적인 정보는 다음 문서를 참조하세요.  

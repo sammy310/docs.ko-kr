@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558961"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679549"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA 알림 이벤트**
 
-Windows 10 Fall Creators Update에 도입된 UIA 알림 이벤트를 사용하면 앱에서 UIA 이벤트를 발생시킬 수 있습니다. 이로 인해 내레이터가 UI에서 해당 컨트롤을 사용할 필요 없이 이벤트와 함께 제공하는 텍스트를 기반으로 간단히 알림을 만듭니다. 일부 시나리오에서는 앱의 액세스 가능성을 크게 개선하는 간단한 방법입니다. 시간이 오래 걸릴 수 있는 일부 프로세스의 진행 상황을 알리는 데도 유용할 수 있습니다. UIA 알림 이벤트에 대한 자세한 내용은 [데스크톱 앱이 새 UI 알림 이벤트를 활용할 수 있나요?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)를 참조하세요.
+Windows 10 Fall Creators Update에 도입된 UIA 알림 이벤트를 사용하면 앱에서 UIA 이벤트를 발생시킬 수 있습니다. 이로 인해 내레이터가 UI에서 해당 컨트롤을 사용할 필요 없이 이벤트와 함께 제공하는 텍스트를 기반으로 간단히 알림을 만듭니다. 일부 시나리오에서는 앱의 액세스 가능성을 크게 개선하는 간단한 방법입니다. 시간이 오래 걸릴 수 있는 일부 프로세스의 진행 상황을 알리는 데도 유용할 수 있습니다. UIA 알림 이벤트에 대한 자세한 내용은 [데스크톱 앱이 새 UI 알림 이벤트를 활용할 수 있나요?](/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)를 참조하세요.
 
 다음 예제에서는 [알림 이벤트](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)를 발생시킵니다.
 
@@ -387,7 +387,7 @@ Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 �
 
 **CheckBox 및 RadioButton 컨트롤에 대한 변경**
 
-.NET Framework 4.7.1 이전 버전에서 WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> 및 <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> 컨트롤에는 일치하지 않는, 그리고 기본 및 고대비 테마에서는 잘못된 포커스 시각적 개체가 있습니다.  이러한 문제는 컨트롤에 아무 콘텐츠 집합도 없는 경우 발생합니다.  이렇게 하면 테마 혼동 및 포커스 시각적 개체 간 전환을 보기 어렵게 할 수 있습니다.
+.NET Framework 4.7.1 이전 버전에서 WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWithType> 및 <xref:System.Windows.Controls.RadioButton?displayProperty=nameWithType> 컨트롤에는 일치하지 않는, 그리고 기본 및 고대비 테마에서는 잘못된 포커스 시각적 개체가 있습니다.  이러한 문제는 컨트롤에 아무 콘텐츠 집합도 없는 경우 발생합니다.  이렇게 하면 테마 혼동 및 포커스 시각적 개체 간 전환을 보기 어렵게 할 수 있습니다.
 
 NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더욱 일관적이고 기본 및 고대비 테마에서 더욱 쉽게 볼 수 있습니다.
 

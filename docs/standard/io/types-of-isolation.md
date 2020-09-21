@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288539"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542036"
 ---
 # <a name="types-of-isolation"></a>격리 유형
 격리된 스토리지에 대한 액세스는 항상 스토리지를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "84288539"
  로밍 저장소를 제외하고 격리된 스토리지는 지정된 컴퓨터에 로컬인 스토리지 시설을 사용하므로 항상 컴퓨터에서 암시적으로 격리됩니다.  
   
 > [!IMPORTANT]
-> Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.  
+> Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>사용자 및 어셈블리별 격리  

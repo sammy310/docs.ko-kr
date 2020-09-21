@@ -14,19 +14,20 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 5920ecfae60274a8a504e4d300e531fd8b512901
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619392"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547911"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>.NET Framework로 클라이언트 애플리케이션 개발
 
 .NET Framework를 사용하여 Windows 기반 애플리케이션을 개발하는 데는 몇 가지 방법이 있습니다. 이러한 도구 및 프레임워크 중 하나를 사용할 수 있습니다.
 
 - [UWP(유니버설 Windows 플랫폼)](/windows/uwp/)
-- [WPF(Windows Presentation Foundation)](./wpf/index.md)
-- [Windows Forms](./winforms/index.md)
+- [WPF(Windows Presentation Foundation)](/dotnet/desktop/wpf/)
+- [Windows Forms](/dotnet/desktop/winforms/)
 
 이 섹션에는 Windows Presentation Foundation 또는 Windows Forms를 사용하여 Windows 기반 애플리케이션을 만드는 방법을 설명하는 문서가 포함되어 있습니다. 그러나 .NET Framework를 사용하여 웹 애플리케이션을 만들고 Microsoft Store를 통해 사용할 수 있는 컴퓨터 또는 디바이스용 클라이언트 애플리케이션(UWP 앱)을 만들 수 있습니다.
 
@@ -35,7 +36,7 @@ ms.locfileid: "85619392"
 [유니버설 Windows 플랫폼](/windows/uwp/)\
 Microsoft Store를 통해 사용자에게 제공할 수 있는 UWP 애플리케이션을 만드는 방법을 설명합니다.
 
-[UWP 앱용 .NET API](/dotnet/api/index?view=dotnet-uwp-10.0)\
+[UWP 앱용 .NET API](../../api/index.md?view=dotnet-uwp-10.0)\
 UWP 앱을 지원하는 .NET 형식에 대한 참조입니다.
   
 [여러 플랫폼용으로 개발](../standard/cross-platform/index.md)\
@@ -44,7 +45,7 @@ UWP 앱을 지원하는 .NET 형식에 대한 참조입니다.
 [ASP.NET 웹 사이트 시작](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
 ASP.NET을 사용하여 웹앱을 개발할 수 있는 방법을 설명합니다.
 
-[Windows Phone Silverlight용 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+[Windows Phone Silverlight용 .NET API](/previous-versions/windows/apps/jj207211\(v=vs.105\))\
 Windows Phone Silverlight로 앱을 빌드하는 데 사용할 수 있는 .NET Framework API를 나열합니다.
 
 ## <a name="see-also"></a>참조

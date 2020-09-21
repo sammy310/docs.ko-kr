@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865127"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559215"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의
 이 항목에서는 두 개의 형식 매개 변수가 있는 간단한 제네릭 형식을 만드는 방법, 형식 매개 변수에 클래스 제약 조건, 인터페이스 제약 조건, 특수 제약 조건을 적용하는 방법, 클래스의 형식 매개 변수를 매개 변수 형식 및 반환 형식으로 사용하는 멤버를 만드는 방법을 보여 줍니다.  
@@ -129,5 +129,5 @@ ms.locfileid: "86865127"
 ## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [리플렉션 내보내기 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [리플렉션 내보내기 동적 어셈블리 시나리오](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))
+- [리플렉션 내보내기 사용](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [리플렉션 내보내기 동적 어셈블리 시나리오](/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

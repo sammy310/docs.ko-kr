@@ -9,11 +9,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622200"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554842"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -175,6 +176,6 @@ COM 애플리케이션과 동일한 디렉터리에 애플리케이션 매니페
 ## <a name="see-also"></a>참조
 
 - [등록이 필요 없는 COM interop](registration-free-com-interop.md)
-- [등록이 필요 없는 COM Interop에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [등록이 필요 없는 COM Interop에 대한 요구 사항](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

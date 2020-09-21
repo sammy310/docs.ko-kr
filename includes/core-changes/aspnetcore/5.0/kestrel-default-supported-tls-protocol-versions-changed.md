@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3244a36808fb687663241e704d08775ea5c96720
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 97870553d4ec66a569ba63cd945639b03bbbd6df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803236"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539503"
 ---
 ### <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨
 
@@ -39,7 +39,7 @@ TLS 1.3 및 향후 TLS 버전을 사용할 수 있게 되면 이를 기본적으
 
 이전 프로토콜을 사용하지 않도록 설정하려면 다음 작업 중 하나를 수행합니다.
 
-* 시스템 전체에서 [Windows 명령](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)을 사용하여 TLS 1.0과 같은 이전 프로토콜을 사용하지 않도록 설정합니다. 현재는 모든 Windows 버전에서 기본적으로 사용하도록 설정되어 있습니다.
+* 시스템 전체에서 [Windows 명령](../../../../docs/framework/network-programming/tls.md#configuring-schannel-protocols-in-the-windows-registry)을 사용하여 TLS 1.0과 같은 이전 프로토콜을 사용하지 않도록 설정합니다. 현재는 모든 Windows 버전에서 기본적으로 사용하도록 설정되어 있습니다.
 * 다음과 같이 코드로 지원할 프로토콜을 수동으로 선택합니다.
 
     ```csharp

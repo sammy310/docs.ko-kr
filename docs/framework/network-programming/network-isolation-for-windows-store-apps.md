@@ -2,12 +2,12 @@
 title: Windows 스토어 앱에 대한 네트워크 격리
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f9288b53b969838cac64c24d3c9861a0f841aca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802171"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558461"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 스토어 앱에 대한 네트워크 격리
 
@@ -25,13 +25,13 @@ ms.locfileid: "74802171"
   
 4. 문제 해결을 위해 제공된 네트워크 격리 도구를 사용하여 테스트하도록 앱을 배포하고 실행합니다.  
   
-네트워크 격리 문제를 해결하는 데 사용한 네트워크 기능과 격리 도구를 구성하는 방법에 대한 자세한 내용은 Windows 8.x 스토어 개발자 문서의 [네트워크 격리 기능 구성 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))을 참조하세요.
+네트워크 격리 문제를 해결하는 데 사용한 네트워크 기능과 격리 도구를 구성하는 방법에 대한 자세한 내용은 Windows 8.x 스토어 개발자 문서의 [네트워크 격리 기능 구성 방법](/previous-versions/windows/apps/hh770532(v=win.10))을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 
-- [웹 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-- [네트워크 격리 지침 및 검사 목록](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [빠른 시작: HttpClient를 사용하여 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
-- [HttpClient 처리기 사용 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
-- [HttpClient 연결 보호 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [웹 서비스에 연결](/previous-versions/windows/apps/hh761504(v=win.10))
+- [네트워크 격리 지침 및 검사 목록](/previous-versions/windows/apps/hh770532(v=win.10))
+- [빠른 시작: HttpClient를 사용하여 연결](/previous-versions/windows/apps/hh781239(v=win.10))
+- [HttpClient 처리기 사용 방법](/previous-versions/windows/apps/hh781241(v=win.10))
+- [HttpClient 연결 보호 방법](/previous-versions/windows/apps/hh781240(v=win.10))
 - [HttpClient 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

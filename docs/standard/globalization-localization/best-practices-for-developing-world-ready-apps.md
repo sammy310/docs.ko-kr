@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555538"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
 
@@ -91,7 +91,7 @@ ms.locfileid: "84279882"
 
 4. ASP.NET 애플리케이션의 다음 세 위치에서 requestEncoding, responseEncoding, fileEncoding, culture 및 uiCulture 특성의 값을 지정합니다.
 
-    - Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 애플리케이션에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))를 참조하세요.
+    - Web.config 파일의 전역화 섹션에서. 이 파일은 ASP.NET 애플리케이션에 대해 외부 파일입니다. 자세한 내용은 [\<globalization> 요소](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))를 참조하세요.
 
     - 페이지 지시문에서. 애플리케이션이 페이지에 있는 경우 파일이 이미 읽혀진 것입니다. 따라서 너무 늦었으므로 fileEncoding 및 requestEncoding을 지정할 수 없습니다. uiCulture, Culture 및 responseEncoding만 페이지 지시문에 지정할 수 있습니다.
 

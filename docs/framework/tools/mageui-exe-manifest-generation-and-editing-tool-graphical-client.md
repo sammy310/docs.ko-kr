@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516725"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557439"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 
@@ -67,7 +67,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 |**새로 만들기**|CA(인증 기관)를 통해 확인할 수 없는 새 .pfx를 생성합니다. ClickOnce 배포에 서명하는 데 사용되는 인증서의 형식에 대한 자세한 설명은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.|  
 |**암호**|이 인증서로 서명하는 데 사용되는 암호를 입력할 수 있는 영역을 제공합니다. 암호를 사용하지 않는 경우에는 이 영역을 비워 둡니다.|  
 |**저장된 인증서로 서명**|컴퓨터의 인증서 저장소에 저장된 디지털 인증서의 목록을 표시하여 디지털 인증서를 선택할 수 있게 합니다.|  
-|**타임스탬프 URI**|디지털 타임스탬프 서비스의 URI(Uniform Resource Locator)를 표시합니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) 및 [ClickOnce 및 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)를 참조하세요.|  
+|**타임스탬프 URI**|디지털 타임스탬프 서비스의 URI(Uniform Resource Locator)를 표시합니다. 매니페스트에 타임스탬프를 적용하면 애플리케이션의 다음 버전을 배포하기 전에 디지털 인증서가 만료되어도 매니페스트에 다시 서명할 필요가 없습니다. 자세한 내용은 [Windows 루트 인증서 프로그램 구성원](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) 및 [ClickOnce 및 Authenticode](/visualstudio/deployment/clickonce-and-authenticode)를 참조하세요.|  
 |**서명 안 함**|디지털 인증서의 서명을 추가하지 않고 매니페스트를 저장할 수 있습니다.|  
   
 ## <a name="tab-and-panel-descriptions"></a>탭 및 패널 설명  
@@ -129,7 +129,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
   
 |UI 요소|설명|  
 |----------------|-----------------|  
-|**권한 집합 형식**|클라이언트에서 실행할 이 애플리케이션에 필요한 최소 권한 집합입니다. 이들 권한 세트 및 권한 세트가 요청하거나 요청하지 않는 권한에 대한 자세한 내용은 [명명된 권한 세트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))를 참조하세요.|  
+|**권한 집합 형식**|클라이언트에서 실행할 이 애플리케이션에 필요한 최소 권한 집합입니다. 이들 권한 세트 및 권한 세트가 요청하거나 요청하지 않는 권한에 대한 자세한 내용은 [명명된 권한 세트](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))를 참조하세요.|  
 |**설명**|애플리케이션 매니페스트에서 권한 집합을 나타내려고 만들어진 XML입니다. 애플리케이션 매니페스트 XML 형식을 잘 알고 있지 않다면 이 XML을 수동으로 편집하면 안 됩니다. 자세한 내용은 [ClickOnce 애플리케이션 매니페스트](/visualstudio/deployment/clickonce-application-manifest)를 참조하세요.|  
   
 ### <a name="deployment-manifest-tab"></a>배포 매니페스트 탭  

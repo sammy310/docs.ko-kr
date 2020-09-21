@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3cc07eef109b9096bc5a5fbcd1ea098a23b2155f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968336"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539605"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: 브라우저 SameSite 변경 내용이 인증에 영향
 
@@ -26,7 +26,7 @@ Google은 이전 버전과 호환되지 않는 새 초안 표준을 제안했습
 
 ASP.NET Core 3.1이 새 `SameSite` 동작을 구현하도록 업데이트되었습니다. 업데이트는 `SameSiteMode.None`의 동작을 재정의하여 `SameSite=None`을 내보내고 새 값 `SameSiteMode.Unspecified`를 추가하여 `SameSite` 특성을 생략합니다. 일부 구성 요소에서 OpenID Connect 상관 관계 및 nonce 쿠키와 같은 특정 시나리오와 관련된 값을 설정하지만 이제 모든 쿠키 API는 `Unspecified`를 기본값으로 설정됩니다.
 
-이 영역에 대한 기타 최근 변경 사항은 [HTTP: 일부 쿠키 SameSite 기본값이 없음으로 변경됨](/dotnet/core/compatibility/2.2-3.0#http-some-cookie-samesite-defaults-changed-to-none)을 참조하세요. ASP.NET Core 3.0에서 대부분의 기본값이 <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType>에서 <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType>(으)로 변경되었지만, 이전 표준은 여전히 사용됩니다.
+이 영역에 대한 기타 최근 변경 사항은 [HTTP: 일부 쿠키 SameSite 기본값이 없음으로 변경됨](../../../../docs/core/compatibility/2.2-3.0.md#http-some-cookie-samesite-defaults-changed-to-none)을 참조하세요. ASP.NET Core 3.0에서 대부분의 기본값이 <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType>에서 <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType>(으)로 변경되었지만, 이전 표준은 여전히 사용됩니다.
 
 #### <a name="reason-for-change"></a>변경 이유
 

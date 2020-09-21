@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024656"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538044"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -131,7 +131,7 @@ dotnet-install.sh --help
 
 - **`-NoCdn|--no-cdn`**
 
-  [Azure CDN(Content Delivery Network)](https://docs.microsoft.com/azure/cdn/cdn-overview)에서 다운로드할 수 없도록 설정하고 캐시되지 않은 피드를 바로 사용합니다.
+  [Azure CDN(Content Delivery Network)](/azure/cdn/cdn-overview)에서 다운로드할 수 없도록 설정하고 캐시되지 않은 피드를 바로 사용합니다.
 
 - **`-NoPath|--no-path`**
 

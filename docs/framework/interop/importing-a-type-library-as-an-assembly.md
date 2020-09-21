@@ -16,11 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bc1b921fea5aff086e21c046369f1d461f553bc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622720"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554686"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 
@@ -30,7 +31,7 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
 
 - 디자인 타임 전용 interop 어셈블리 사용: .NET Framework 4부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.
 
-- interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다. 이 방법을 적용하는데 전용 COM 구성 요소를 사용하지 않을 경우 관리 코드에 통합하려는 COM 구성 요소의 작성자가 게시한 PIA(주 interop 어셈블리)를 항상 참조하세요. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.
+- interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다. 이 방법을 적용하는데 전용 COM 구성 요소를 사용하지 않을 경우 관리 코드에 통합하려는 COM 구성 요소의 작성자가 게시한 PIA(주 interop 어셈블리)를 항상 참조하세요. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.
 
 디자인 타임 전용 interop 어셈블리를 사용할 경우 COM 구성 요소의 작성자가 게시한 주 interop 어셈블리의 형식 정보를 포함할 수 있습니다. 그러나 주 interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다.
 
@@ -66,18 +67,18 @@ COM 형식 라이브러리는 확장명이 .tlb인 독립 실행형 파일일 �
 
   - 형식 라이브러리-어셈블리 변환 규칙에 대한 이해.
 
-  사용자 지정 래퍼를 작성하는 것은 고급 기술입니다. 사용자 지정 래퍼를 생성하는 방법에 대한 자세한 내용은 [표준 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))을 참조하세요.
+  사용자 지정 래퍼를 작성하는 것은 고급 기술입니다. 사용자 지정 래퍼를 생성하는 방법에 대한 자세한 내용은 [표준 래퍼 사용자 지정](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))을 참조하세요.
 
- COM interop 가져오기 프로세스에 대한 자세한 내용은 [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))을 참조하세요.
+ COM interop 가져오기 프로세스에 대한 자세한 내용은 [형식 라이브러리를 어셈블리로 변환 요약](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))을 참조하세요.
 
 ## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
-- [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [형식 라이브러리를 어셈블리로 변환 요약](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe(형식 라이브러리 가져오기)](../tools/tlbimp-exe-type-library-importer.md)
-- [표준 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [표준 래퍼 사용자 지정](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [관리 코드에서 COM 형식 사용](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Interop 프로젝트 컴파일](compiling-an-interop-project.md)
 - [Interop 애플리케이션 배포](deploying-an-interop-application.md)
 - [방법: 형식 라이브러리에 참조 추가](how-to-add-references-to-type-libraries.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 440ad39f1afb54ad517bc73f05d1e60748b7b520
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 408a3064b67cae2d75c80881f918c774e05866e6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517219"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558383"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 .NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 애플리케이션입니다.  
@@ -51,6 +51,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>설명  
  매개 변수 및 어셈블리는 명령줄에 지정되고 (@) 기호에 접두사가 있는 응답 파일에 제공될 수도 있습니다. 응답 파일의 각 줄은 단일 매개 변수 또는 어셈블리 이름을 포함해야 합니다.  
   
- .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) 항목을 참조하세요.  
+ .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) 항목을 참조하세요.  
   
 ## <a name="examples"></a>예

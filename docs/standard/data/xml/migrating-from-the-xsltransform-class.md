@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282391"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550165"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform 클래스에서 마이그레이션
 
@@ -26,7 +26,7 @@ XSLT 아키텍처는 Visual Studio 2005 릴리스에서 다시 디자인되었�
 또한 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 <xref:System.Xml.Xsl.XslTransform> 클래스보다 훨씬 빠르게 작동하도록 최적화되었습니다.
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 전체적인 성능이 <xref:System.Xml.Xsl.XslTransform> 클래스보다 좋지만 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드는 변환에 대해 처음 호출될 때 <xref:System.Xml.Xsl.XslTransform> 클래스의 <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드보다 느리게 수행될 수 있습니다. 이는 XSLT 파일이 로드되기 전에 컴파일되어야 하기 때문입니다. 자세한 내용은 다음 블로그 게시물을 참조하세요. [XslCompiledTransform이 XslTransform보다 느리나요?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
+> <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 전체적인 성능이 <xref:System.Xml.Xsl.XslTransform> 클래스보다 좋지만 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드는 변환에 대해 처음 호출될 때 <xref:System.Xml.Xsl.XslTransform> 클래스의 <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드보다 느리게 수행될 수 있습니다. 이는 XSLT 파일이 로드되기 전에 컴파일되어야 하기 때문입니다. 자세한 내용은 다음 블로그 게시물을 참조하세요. [XslCompiledTransform이 XslTransform보다 느리나요?](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
 
 ## <a name="security"></a>보안
 
@@ -117,11 +117,11 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에 추가된 추가 MSXML 함수를 지원합니다. 다음 목록에서는 새 기능 또는 향상된 기능을 설명합니다
 
-- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform>에서 [node-set 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100))의 인수는 결과 트리 조각이어야 합니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에는 이러한 요구 사항이 없습니다.
+- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform>에서 [node-set 함수](/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100))의 인수는 결과 트리 조각이어야 합니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에는 이러한 요구 사항이 없습니다.
 
 - msxsl:version: 이 함수는 <xref:System.Xml.Xsl.XslCompiledTransform>에서 지원됩니다.
 
-- XPath 확장 함수: [ms:string-compare 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) 및 [ms:format-time 함수](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100))가 이제 지원됩니다.
+- XPath 확장 함수: [ms:string-compare 함수](/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc 함수](/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri 함수](/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name 함수](/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number 함수](/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date 함수](/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) 및 [ms:format-time 함수](/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100))가 이제 지원됩니다.
 
 - 스키마 관련 XPath 확장 함수: 이러한 함수는 기본적으로 <xref:System.Xml.Xsl.XslCompiledTransform>에서 지원되지 않습니다. 그러나 이러한 함수를 확장명 함수로 구현할 수 있습니다.
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 8f0a9e7f2cc55ed649ee9569e945ed99671295fc
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359326"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679444"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -116,7 +116,7 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
 이 자습서에서는 교량 상판 이미지만 사용합니다.
 
-1. [데이터 세트](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/assets.zip)를 다운로드하여 압축을 풉니다.
+1. [데이터 세트](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)를 다운로드하여 압축을 풉니다.
 1. 프로젝트에서 데이터 세트 파일을 저장할 “assets”라는 디렉터리를 만듭니다.
 1. 최근에 압축을 푼 디렉터리의 *CD* 및 *UD* 하위 디렉터리를 *assets* 디렉터리에 복사합니다.
 
@@ -224,19 +224,19 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L22)]
 
-1. [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 메서드를 사용하여[`IDataView`](xref:Microsoft.ML.IDataView)에 이미지를 로드합니다.
+1. [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) 메서드를 사용하여[`IDataView`](xref:Microsoft.ML.IDataView)에 이미지를 로드합니다.
 
     [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L24)]
 
-1. 디렉터리에서 읽어온 순서대로 데이터가 로드됩니다. 데이터의 균형을 조정하려면 [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) 메서드를 사용하여 순서를 섞습니다.
+1. 디렉터리에서 읽어온 순서대로 데이터가 로드됩니다. 데이터의 균형을 조정하려면 [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows%2A) 메서드를 사용하여 순서를 섞습니다.
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L26)]
 
-1. 기계 학습 모델에서는 입력이 숫자 형식이어야 합니다. 따라서 학습 전에 데이터에서 몇 가지 전처리 작업을 수행해야 합니다. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) 및 `LoadRawImageBytes` 변환으로 구성된 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)을 만듭니다. `MapValueToKey` 변환은 `Label` 열의 범주 값을 사용하여 숫자 `KeyType` 값으로 변환하고 `LabelAsKey`라는 새 열에 저장합니다. `LoadImages`는 `ImagePath` 열의 값을 `imageFolder` 매개 변수와 함께 사용하여 학습에 사용할 이미지를 로드합니다.
+1. 기계 학습 모델에서는 입력이 숫자 형식이어야 합니다. 따라서 학습 전에 데이터에서 몇 가지 전처리 작업을 수행해야 합니다. [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 및 `LoadRawImageBytes` 변환으로 구성된 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)을 만듭니다. `MapValueToKey` 변환은 `Label` 열의 범주 값을 사용하여 숫자 `KeyType` 값으로 변환하고 `LabelAsKey`라는 새 열에 저장합니다. `LoadImages`는 `ImagePath` 열의 값을 `imageFolder` 매개 변수와 함께 사용하여 학습에 사용할 이미지를 로드합니다.
 
     [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L28-L34)]
 
-1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 메서드를 사용하여 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)에 데이터를 적용합니다. 그 다음에 오는 [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) 메서드가 전처리된 데이터를 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 반환합니다.
+1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) 메서드를 사용하여 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)에 데이터를 적용합니다. 그 다음에 오는 [`Transform`](xref:Microsoft.ML.Data.TransformerChain%601.Transform%2A) 메서드가 전처리된 데이터를 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 반환합니다.
 
     [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L36-L38)]
 
@@ -276,7 +276,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L60-L61)]
 
-1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 메서드를 사용하여 모델을 학습합니다.
+1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) 메서드를 사용하여 모델을 학습합니다.
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L63)]
 
@@ -303,11 +303,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L74)]
 
-1. 단일 `ModelInput` 인스턴스에 액세스하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용하여 `data` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 첫 번째 관찰을 가져옵니다.
+1. 단일 `ModelInput` 인스턴스에 액세스하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용하여 `data` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 첫 번째 관찰을 가져옵니다.
 
     [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L76)]
 
-1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) 메서드를 사용하여 이미지를 분류합니다.
+1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용하여 이미지를 분류합니다.
 
     [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L78)]
 
@@ -330,11 +330,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
     }
     ```
 
-1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 메서드를 사용하여 예측을 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다. `ClassifyImages` 메서드 내에 다음 코드를 추가합니다.
+1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 예측을 포함하는 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다. `ClassifyImages` 메서드 내에 다음 코드를 추가합니다.
 
     [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L86)]
 
-1. 예측을 반복하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 메서드를 사용하여 `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 처음 10개의 관찰을 가져옵니다.
+1. 예측을 반복하기 위해 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용하여 `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView)를 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)로 변환하고 처음 10개의 관찰을 가져옵니다.
 
     [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L88)]
 

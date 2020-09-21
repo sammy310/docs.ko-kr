@@ -8,11 +8,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559280"
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
 [어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
@@ -45,5 +46,5 @@ ms.locfileid: "85621901"
 
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
 - [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)
-- [.NET 개체 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM 액세스를 위해 애플리케이션 배포](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [.NET 개체 호출](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM 액세스를 위해 애플리케이션 배포](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

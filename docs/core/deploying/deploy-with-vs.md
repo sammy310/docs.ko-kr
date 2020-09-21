@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 1c9aba10e27609bdf8e95d844ead60fd0ec0bd2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656601"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538725"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -24,7 +24,7 @@ ms.locfileid: "88656601"
 - 자체 포함 배포
 - 타사 종속성이 있는 자체 포함 배포
 
-Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/dependencies.md?pivots=os-windows)을 참조하세요.
+Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/windows.md)을 참조하세요.
 
 ## <a name="framework-dependent-deployment"></a>프레임워크 종속 배포
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: 476d8c18f386f889855c664147b1ee20995dc6f9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7a730a828488fd3ca04419588b3f32703dfda1c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865218"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541736"
 ---
 # <a name="using-the-codedom"></a>CodeDOM 사용
 CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는 형식을 제공합니다. 개체 그래프를 어셈블하는 데 CodeDOM 요소를 사용하는 소스 코드 모델을 빌드하는 프로그램을 디자인할 수 있습니다. 이 개체 그래프는 CodeDOM 코드 생성기를 사용하여 지원되는 프로그래밍 언어에 대한 소스 코드로 렌더링할 수 있습니다. CodeDOM은 소스 코드를 이진 어셈블리로 컴파일하는 데도 사용할 수 있습니다.  
@@ -126,4 +126,4 @@ CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는
   
  각 CodeDOM 형식에 대한 문서는 <xref:System.CodeDom> 네임스페이스에 대한 참조 문서를 참조하세요.  
   
- 코드 요소의 특정 형식을 나타내는 CodeDOM 요소를 찾기 위한 빠른 차트는 [CodeDOM 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))를 참조하세요.
+ 코드 요소의 특정 형식을 나타내는 CodeDOM 요소를 찾기 위한 빠른 차트는 [CodeDOM 빠른 참조](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))를 참조하세요.

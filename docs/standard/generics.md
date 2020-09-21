@@ -4,18 +4,18 @@ description: 제네릭이 실제 데이터 형식에 커밋하지 않고 형식�
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 99e3b589cd67c9d7026966d3d48d0e06a91fcc86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5f6e84e23b5bcdcb3dcd742823d83728fb43d195
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287547"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557946"
 ---
 # <a name="generic-types-overview"></a>제네릭 형식 개요
 
 개발자는 암시적이든 명시적이든 .NET에서 항상 제네릭을 사용합니다. .NET에서 LINQ를 사용할 때 <xref:System.Collections.Generic.IEnumerable%601>로 작업하고 있다는 것을 알아차리셨나요? 또는 Entity Framework를 사용하여 데이터베이스에 통신하기 위한 “제네릭 리포지토리”의 온라인 샘플을 본 적이 있다면 대부분의 메서드가 `IQueryable<T>`를 반환하는 것을 보셨습니까? 이러한 예제에서 **T**가 무엇이고 왜 사용되는지 궁금하게 여겼을 수도 있습니다.
 
-.NET Framework 2.0에서 처음 소개된 제네릭은 기본적으로 개발자가 실제 데이터 형식에 커밋하지 않고 [형식이 안전한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) 데이터 구조를 정의할 수 있게 해주는 “코드 템플릿”입니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 `List<int>`, `List<string>` 또는 `List<Person>`과 같은 모든 형식으로 선언하고 사용할 수 있는 [제네릭 컬렉션](xref:System.Collections.Generic)입니다.
+.NET Framework 2.0에서 처음 소개된 제네릭은 기본적으로 개발자가 실제 데이터 형식에 커밋하지 않고 [형식이 안전한](/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) 데이터 구조를 정의할 수 있게 해주는 “코드 템플릿”입니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 `List<int>`, `List<string>` 또는 `List<Person>`과 같은 모든 형식으로 선언하고 사용할 수 있는 [제네릭 컬렉션](xref:System.Collections.Generic)입니다.
 
 제네릭이 유용한 이유를 이해하려면 제네릭을 추가하기 전과 이후의 특정 클래스인 <xref:System.Collections.ArrayList>를 살펴보아야 합니다. .NET Framework 1.0에서 `ArrayList` 요소는 <xref:System.Object> 형식이었습니다. 컬렉션에 추가된 모든 요소가 자동으로 `Object`로 변환되었습니다. 목록에서 요소를 읽을 때 동일한 작업이 수행됩니다. [boxing 및 unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)이라고 하는 이 프로세스는 성능에 영향을 줍니다. 그러나 성능 외에도 컴파일 시간에 목록에 있는 데이터 형식을 결정하는 방법이 없으므로 손상되기 쉬운 일부 코드가 발생합니다. 제네릭은 목록의 각 인스턴스에 포함될 데이터 형식을 정의하여 이 문제를 해결합니다. 예를 들어 `List<int>`에는 정수만 추가하고 `List<Person>`에는 사용자만 추가하면 됩니다.
 

@@ -2,12 +2,12 @@
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271830"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678818"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -65,9 +65,9 @@ ms.locfileid: "89271830"
 
 **그림 8-4**. 형식화된 클라이언트 클래스에 `IHttpClientFactory` 사용
 
-위 이미지의 `ClientService`(컨트롤러 또는 클라이언트 코드에서 사용됨)는 등록된 `IHttpClientFactory`에서 만든 `HttpClient`를 사용합니다. 이 팩터리는 풀의 `HttpMessageHandler`를 `HttpClient`에 할당합니다. 확장 메서드 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>를 사용하여 DI 컨테이너에 `IHttpClientFactory`를 등록할 때 Polly의 정책을 사용하여 `HttpClient`를 구성할 수 있습니다.
+위 이미지의 `ClientService`(컨트롤러 또는 클라이언트 코드에서 사용됨)는 등록된 `IHttpClientFactory`에서 만든 `HttpClient`를 사용합니다. 이 팩터리는 풀의 `HttpMessageHandler`를 `HttpClient`에 할당합니다. 확장 메서드 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A>를 사용하여 DI 컨테이너에 `IHttpClientFactory`를 등록할 때 Polly의 정책을 사용하여 `HttpClient`를 구성할 수 있습니다.
 
-위의 구조를 구성하려면 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>용 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 <xref:System.Net.Http.IHttpClientFactory>를 추가합니다. 이 확장 메서드는 인터페이스 `IHttpClientFactory`에 대한 singleton으로 사용할 내부 `DefaultHttpClientFactory` 클래스를 등록하고 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(<xref:System.Net.Http.HttpMessageHandler> 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
+위의 구조를 구성하려면 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>용 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 <xref:System.Net.Http.IHttpClientFactory>를 추가합니다. 이 확장 메서드는 인터페이스 `IHttpClientFactory`에 대한 singleton으로 사용할 내부 `DefaultHttpClientFactory` 클래스를 등록하고 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(<xref:System.Net.Http.HttpMessageHandler> 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
 
 다음 코드에서는 `AddHttpClient()`를 사용하여 `HttpClient`를 사용해야 하는 형식화된 클라이언트(서비스 에이전트)를 등록하는 방법을 확인할 수 있습니다.
 

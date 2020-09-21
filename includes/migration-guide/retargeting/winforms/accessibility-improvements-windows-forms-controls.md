@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8e1c91f4fee8aa896b6617c815fe2a4b6d22f2a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fa24c664e9f7cf6da78d0703c7ebb52c8ebbec20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614890"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606775"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Windows Forms 콘트롤의 서비스 효율성 개선 사항
 
@@ -40,7 +40,7 @@ Windows Forms는 Windows Forms 고객을 더욱 효과적으로 지원하도록 
 </configuration>
 ```
 
-.NET Framework 4.7.1 이상을 대상으로 하고 레거시 액세스 가능성 동작을 유지하려는 애플리케이션은 이 AppContext 스위치를 `true`로 명확하게 설정하여 레거시 액세스 가능성 기능 사용을 옵트인할 수 있습니다.<p/>UI 자동화 개요는 [UI Automation 개요](~/docs/framework/ui-automation/ui-automation-overview.md)를 참조하세요.<p/>**UI Automation 패턴 및 속성에 대한 추가된 지원**<br/>접근성 클라이언트는 일반적이고 공개적으로 설명된 호출 패턴을 사용하여 새로운 WinForms 접근성 기능을 활용할 수 있습니다. 이러한 패턴은 WinForms에 특정되지 않습니다. 예를 들어 접근성 클라이언트가 IAccessible 인터페이스(MAAS)의 QueryInterface 메서드를 호출하여 IServiceProvider 인터페이스를 가져올 수 있습니다. 이 인터페이스가 지원되면 클라이언트는 QueryService 메서드를 사용하여 IAccessibleEx 인터페이스를 요청할 수 있습니다. 자세한 내용은 [클라이언트에서 IAccessibleEx 사용](https://docs.microsoft.com/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)을 참조하세요. .NET Framework 4.7.1, IServiceProvider 및 [IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/iaccessibleex)(적용 가능한 경우)부터는 WinForms 접근성 개체에 지원됩니다.<p/>.NET Framework 4.7.1은 다음 UI 자동화 패턴 및 속성에 대한 지원을 추가합니다.
+.NET Framework 4.7.1 이상을 대상으로 하고 레거시 액세스 가능성 동작을 유지하려는 애플리케이션은 이 AppContext 스위치를 `true`로 명확하게 설정하여 레거시 액세스 가능성 기능 사용을 옵트인할 수 있습니다.<p/>UI 자동화 개요는 [UI Automation 개요](~/docs/framework/ui-automation/ui-automation-overview.md)를 참조하세요.<p/>**UI Automation 패턴 및 속성에 대한 추가된 지원**<br/>접근성 클라이언트는 일반적이고 공개적으로 설명된 호출 패턴을 사용하여 새로운 WinForms 접근성 기능을 활용할 수 있습니다. 이러한 패턴은 WinForms에 특정되지 않습니다. 예를 들어 접근성 클라이언트가 IAccessible 인터페이스(MAAS)의 QueryInterface 메서드를 호출하여 IServiceProvider 인터페이스를 가져올 수 있습니다. 이 인터페이스가 지원되면 클라이언트는 QueryService 메서드를 사용하여 IAccessibleEx 인터페이스를 요청할 수 있습니다. 자세한 내용은 [클라이언트에서 IAccessibleEx 사용](/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)을 참조하세요. .NET Framework 4.7.1, IServiceProvider 및 [IAccessibleEx](/windows/desktop/WinAuto/iaccessibleex)(적용 가능한 경우)부터는 WinForms 접근성 개체에 지원됩니다.<p/>.NET Framework 4.7.1은 다음 UI 자동화 패턴 및 속성에 대한 지원을 추가합니다.
 
 - <xref:System.Windows.Forms.ToolStripSplitButton> 및 <xref:System.Windows.Forms.ComboBox> 컨트롤은 [확장/축소 패턴](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)을 지원합니다.
 - <xref:System.Windows.Forms.ToolStripMenuItem> 컨트롤에는 [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) 속성 값 <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType>이 있습니다.

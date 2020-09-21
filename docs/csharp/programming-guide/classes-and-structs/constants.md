@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558428"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555356"
 ---
 # <a name="constants-c-programming-guide"></a>상수(C# 프로그래밍 가이드)
 상수는 컴파일 시간에 알려진 변경할 수 없는 값입니다. 프로그램 수명 동안 변경하지 마세요. 상수는 [const](../../language-reference/keywords/const.md) 한정자로 선언됩니다. C# [기본 제공 형식](../../language-reference/builtin-types/built-in-types.md)(<xref:System.Object?displayProperty=nameWithType> 제외)만 `const`로 선언할 수 있습니다. 클래스, 구조체 및 배열을 비롯한 사용자 정의 형식은 `const`가 될 수 없습니다. [readonly](../../language-reference/keywords/readonly.md) 한정자를 사용하여 런타임에 한 번 초기화되고(예: 생성자에서) 이후 변경할 수 없는 클래스, 구조체 또는 배열을 만듭니다.  
@@ -53,4 +53,4 @@ ms.locfileid: "88558428"
 - [속성](./properties.md)
 - [형식](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [C# 파트 1의 불변성: 불변성의 종류](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [C# 파트 1의 불변성: 불변성의 종류](/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

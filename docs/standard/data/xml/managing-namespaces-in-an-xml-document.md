@@ -4,12 +4,12 @@ description: XML 문서에서 네임스페이스를 관리하는 방법을 알�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 500c477eaa98b2858573e1012c62db4bc6c68137
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769264"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548093"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
@@ -65,7 +65,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
  네임스페이스 관리자는 네임스페이스에 대한 유효성 검사를 수행하지 않지만 접두사 및 네임스페이스가 이미 확인되었고 [W3C 네임스페이스](https://www.w3.org/TR/REC-xml-names/) 사양을 따르는 것으로 간주합니다.  
   
 > [!NOTE]
-> [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)의 LINQ TO XML은 <xref:System.Xml.XmlNamespaceManager>를 사용하여 네임스페이스를 관리하지 않습니다. LINQ to XML을 사용할 때 네임스페이스를 관리하는 방법에 대한 내용은 LINQ 설명서에서 [XML 네임스페이스 작업](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) 및 [XML 네임스페이스 작업(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
+> [C#](../../linq/linq-xml-overview.md) 및 [Visual Basic](../../linq/linq-xml-overview.md)의 LINQ TO XML은 <xref:System.Xml.XmlNamespaceManager>를 사용하여 네임스페이스를 관리하지 않습니다. LINQ to XML을 사용할 때 네임스페이스를 관리하는 방법에 대한 내용은 LINQ 설명서에서 [XML 네임스페이스 작업](../../linq/namespaces-overview.md) 및 [XML 네임스페이스 작업(Visual Basic)](../../linq/namespaces-overview.md)을 참조하세요.  
   
  다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예제는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
   

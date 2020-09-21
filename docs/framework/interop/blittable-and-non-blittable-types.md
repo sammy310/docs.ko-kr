@@ -6,11 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621537"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556273"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 대부분의 데이터 형식은 관리되는 메모리와 관리되지 않는 메모리 둘 다에서 공통된 표현을 사용하며 interop 마샬러의 특별한 처리가 필요하지 않습니다. 이러한 형식은 관리 코드와 비관리 코드 간에 전달될 때 변환이 필요하지 않기 때문에 *blittable 형식*이라고 합니다.  
@@ -60,13 +61,13 @@ ms.locfileid: "85621537"
 |비 blittable 형식|설명|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|`true`가 1 또는 -1인 1, 2 또는 4바이트 값으로 변환합니다.|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|유니코드 또는 ANSI 문자로 변환합니다.|  
-|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|클래스 인터페이스로 변환합니다.|  
+|[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|`true`가 1 또는 -1인 1, 2 또는 4바이트 값으로 변환합니다.|  
+|[System.Char](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|유니코드 또는 ANSI 문자로 변환합니다.|  
+|[System.Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|클래스 인터페이스로 변환합니다.|  
 |[System.Object](default-marshaling-for-objects.md)|Variant 또는 인터페이스로 변환합니다.|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
 |[System.String](default-marshaling-for-strings.md)|null 참조로 종료되는 문자열 또는 BSTR로 변환합니다.|  
-|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
+|[System.Valuetype](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|고정된 메모리 레이아웃을 사용하는 구조로 변환합니다.|  
 |[System.Szarray](default-marshaling-for-arrays.md)|C 스타일 배열 또는 `SAFEARRAY`로 변환합니다.|  
   
  클래스 및 개체 형식은 COM interop에서만 지원됩니다. Visual Basic, C# 및 C++의 해당 형식은 [클래스 라이브러리 개요](../../standard/class-library-overview.md)를 참조하세요.  

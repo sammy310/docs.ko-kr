@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 6106f66dfbbe382ee9f61eb8b7bda70ab9b72d0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656692"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538551"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
 
@@ -54,7 +54,7 @@ Hello World!
 | ![동영상에 대한 비디오 카메라 아이콘](./media/video-icon.png "비디오 시청") | Channel 9에서 [Visual Studio Code 및 .NET Core 설치 방법](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)을 시청하세요. |
 | ![동영상에 대한 비디오 카메라 아이콘](./media/video-icon.png "비디오 시청") | YouTube에서 [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) 동영상을 시청하세요. |
 
-지원되는 Windows 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?pivots=os-windows) 문서를 참조하세요.
+지원되는 Windows 버전 목록은 [.NET Core 종속성 및 요구 사항](./install/windows.md) 문서를 참조하세요.
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
@@ -66,7 +66,7 @@ Hello World!
 |---|---|
 | ![동영상에 대한 비디오 카메라 아이콘](./media/video-icon.png "비디오 시청") | [Ubuntu에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 관한 비디오 시청. |
 
-지원되는 Linux 배포판 및 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?pivots=os-linux) 문서를 참조하세요.
+지원되는 Linux 배포판 및 버전 목록은 [.NET Core 종속성 및 요구 사항](./install/linux.md) 문서를 참조하세요.
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
@@ -80,6 +80,6 @@ Hello World!
 |---|---|
 | ![동영상에 대한 비디오 카메라 아이콘](media/video-icon.png "비디오 시청") | [macOS에서 C# 및 .NET Core를 사용하여 Visual Studio Code 시작](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)에 관한 동영상을 시청하세요. |
 
-지원되는 OS X/macOS 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?pivots=os-macos) 문서를 참조하세요.
+지원되는 OS X/macOS 버전 목록은 [.NET Core 종속성 및 요구 사항](./install/macos.md) 문서를 참조하세요.
 
 ---

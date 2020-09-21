@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6531e696a6193bf1b1909c9f1be3f5beb4d7dd69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8dc85bfeaab12d17af4a3e045559e268b228f736
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134369"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536472"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
@@ -60,5 +60,5 @@ C# 7.1부터 애플리케이션 진입점인 [`Main` 메서드](../../programmin
 - [작업 비동기 프로그래밍 모델](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [비동기 프로그래밍](../../async.md)
 - [비동기에 대한 자세한 설명](../../../standard/async-in-depth.md)
-- [연습: async 및 await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [연습: async 및 await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/index.md)
 - [자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용](../../tutorials/generate-consume-asynchronous-stream.md)

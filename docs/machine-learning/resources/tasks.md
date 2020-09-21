@@ -2,12 +2,12 @@
 title: 기계 학습 작업
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 56cdb5f3162614d0bf2fb1e5bd9e774b5548b238
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144450"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679484"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
@@ -229,4 +229,4 @@ ms.locfileid: "84144450"
 
 다음 알고리즘을 사용하여 예측 모델을 학습할 수 있습니다.
 
-<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A>

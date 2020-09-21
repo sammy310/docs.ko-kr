@@ -14,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa03d13036e9e245b8ca3f8c3218ae80a2762a12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594844"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553950"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>방법: 문자열에서 문자 읽기
 다음 코드 예제는 문자열에서 동기식 또는 비동기식으로 문자를 읽는 방법을 보여줍니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "84594844"
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [비동기 파일 I/O](asynchronous-file-i-o.md)  
-- [방법: 디렉터리 목록 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
+- [방법: 디렉터리 목록 만들기](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [방법: 새로 만든 데이터 파일 읽기 및 쓰기](how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [방법: 로그 파일 열기 및 추가](how-to-open-and-append-to-a-log-file.md)  
 - [방법: 파일에서 텍스트 읽기](how-to-read-text-from-a-file.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557374"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 서식 문자열
 
@@ -48,7 +48,7 @@ ms.locfileid: "84447123"
 - 복합 형식 문자열과 비교했을 때 간소화된 구문을 제공하는 C# 및 Visual Basic의 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md).
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 <a name="table"></a> 다음 표에서는 표준 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 표준 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesStandardFormatting) 섹션을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 섹션을 참조하세요.
 
@@ -389,5 +389,5 @@ ms.locfileid: "84447123"
 - [형식 서식 지정](formatting-types.md)
 - [방법: 숫자 앞에 0으로 채우기](how-to-pad-a-number-with-leading-zeros.md)
 - [복합 형식 지정](composite-formatting.md)
-- [샘플: .NET Core WinForms 서식 유틸리티(C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [샘플: .NET Core WinForms 서식 유틸리티(C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [샘플: .NET Core WinForms 서식 유틸리티(Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

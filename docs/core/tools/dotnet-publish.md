@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
-ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
+ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2020
-ms.locfileid: "89501911"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537771"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -240,4 +240,4 @@ dotnet publish -p:PublishProfile=FolderProfile
 - [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)
 - [ASP.NET Core 앱 배포용 Visual Studio 게시 프로필(.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
-- [ILLInk.Tasks](https://aka.ms/dotnet-illink)
+- [ILLInk.Tasks](../deploying/trim-self-contained.md)
