@@ -2,14 +2,17 @@
 title: NameOf 연산자
 description: Visual Basic에서 NameOf 연산자를 사용 하는 방법에 대해 알아봅니다.
 ms.date: 10/27/2019
+f1_keywords:
+- NameOf
+- vb.NameOf
 helpviewer_keywords:
 - NameOf operator [Visual Basic]
-ms.openlocfilehash: e7dd55bfd98b34449b9f1a35375198598f57b46f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e72c4cb0c10113e53067ea4a743ca5ee77bcc95
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347013"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828905"
 ---
 # <a name="nameof-operator---visual-basic"></a>NameOf 연산자-Visual Basic
 
@@ -48,9 +51,9 @@ Public Property Name As String
 End Property
 ```
 
-`NameOf` 연산자는 Visual Basic 14 이상에서 사용할 수 있습니다.
+`NameOf`연산자는 Visual Basic 14 이상에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../index.md)
-- [연산자 (Visual Basic)](index.md)
+- [연산자(Visual Basic)](index.md)
