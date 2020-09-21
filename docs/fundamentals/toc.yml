@@ -696,11 +696,24 @@ items:
   - name: Microsoft 확장명
     items:
       - name: Configuration
-        href: /aspnet/core/fundamentals/configuration/
+        items:
+          - name: 개요
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 구성 공급자
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: 사용자 지정 구성 공급자 구현
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: 종속성 주입
-        href: /aspnet/core/fundamentals/dependency-injection/
+        href: /aspnet/core/fundamentals/dependency-injection
+      - name: 일반 호스트
+        href: /aspnet/core/fundamentals/host/generic-host
       - name: 로깅
-        href: /aspnet/core/fundamentals/logging/
+        href: /aspnet/core/fundamentals/logging
+      - name: 옵션 패턴
+        href: /aspnet/core/fundamentals/configuration/options
   - name: 데이터 액세스
     items:
       - name: LINQ
