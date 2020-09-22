@@ -21,14 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f84b1ef18ef2a924bb2e47da85ecbb51f982873a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373893"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869030"
 ---
 # <a name="derived-math-functions-visual-basic"></a>파생 된 수학 함수 (Visual Basic)
+
 다음 표에서는 개체의 내장 수학 함수에서 파생 될 수 있는 비 내장 수학 함수를 보여 줍니다 <xref:System.Math?displayProperty=nameWithType> . 파일이 나 프로젝트에을 추가 하 여 내장 수학 함수에 액세스할 수 있습니다 `Imports System.Math` .  
   
 |기능|파생 항목|  
@@ -54,6 +55,6 @@ ms.locfileid: "84373893"
 |역 쌍 곡 코시 컨 트 (Acsch (x))|Log ((부호 (x) * Sqrt (x \* x + 1) + 1)/x)|  
 |역 하이퍼볼릭 코탄젠트 (Acoth (x))|Log ((x + 1)/(x – 1))/2|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [수학 함수](../functions/math-functions.md)

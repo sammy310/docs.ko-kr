@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 45c9332237dffc7311daeedaf36035d9e9958415
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 33b60b2212d25737330dc93d7ba2715e4d5865b7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397183"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873705"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>이름 \<membername>은(는) CLS 규격이 아닙니다.
+
 어셈블리가로 표시 되어 `<CLSCompliant(True)>` 있지만 이름이 밑줄 ()로 시작 하는 멤버를 노출 `_` 합니다.  
   
  프로그래밍 요소는 하나 이상의 밑줄을 포함할 수 있지만 [언어 독립성 및 CLS (언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) )를 준수 하려면 밑줄로 시작 하지 않아야 합니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.  
@@ -33,7 +34,7 @@ ms.locfileid: "84397183"
   
 - 멤버 이름이 변경 되지 않은 상태로 유지 되어야 하는 경우 해당 <xref:System.CLSCompliantAttribute> 정의에서를 제거 하거나로 표시 `<CLSCompliant(False)>` 합니다. 여전히 어셈블리를로 표시할 수 있습니다 `<CLSCompliant(True)>` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic 명명 규칙](../../programming-guide/program-structure/naming-conventions.md)

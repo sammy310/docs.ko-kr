@@ -5,17 +5,19 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 8fb245309170d4b9adf7458bb3bcfde3e28c0538
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 006a4b67094b258d440c2046fe3ae02274e1c337
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359834"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869891"
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
+
 Visual Basic를 사용 하면 코드에 LINQ (통합 언어 쿼리) 식을 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Aggregate Clause](aggregate-clause.md)  
  하나 이상의 `Aggregate` 집계 함수를 컬렉션에 적용 하는 절에 대해 설명 합니다.  
   
@@ -58,7 +60,7 @@ Visual Basic를 사용 하면 코드에 LINQ (통합 언어 쿼리) 식을 만�
  [Where 절](where-clause.md)  
  `Where`쿼리에 대 한 필터링 조건을 지정 하는 절에 대해 설명 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ](../../programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)

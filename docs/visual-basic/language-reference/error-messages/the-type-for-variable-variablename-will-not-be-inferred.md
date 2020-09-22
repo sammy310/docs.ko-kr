@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363048"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870476"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>'\<variablename>' 변수가 바깥쪽 범위의 필드에 바인딩되어 있으므로 변수의 형식을 유추할 수 없습니다.
 
@@ -64,6 +64,7 @@ End Class
   ```
 
 ## <a name="example"></a>예제
+
  다음 코드에서는 첫 번째 수정이 적용 된 이전 예제를 보여 줍니다.
 
 ```vb
@@ -82,7 +83,7 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Option Infer 문](../statements/option-infer-statement.md)
 - [For Each...Next 문](../statements/for-each-next-statement.md)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: fd2e425f2dd3f4127cd777d4a1f7ab9809de9d45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 35733fe2e20d46207f6cfdaee32f6559fceed6eb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409631"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874384"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
+
 DLL (동적 연결 라이브러리)은 문의 절에 지정 된 라이브러리입니다 `Lib` `Declare` . 이 오류의 가능한 원인은 다음과 같습니다.  
   
 - 파일이 DLL 실행 파일이 아닙니다.  
@@ -32,6 +33,6 @@ DLL (동적 연결 라이브러리)은 문의 절에 지정 된 라이브러리�
   
 - DLL 또는 참조 DLL이 경로에 지정 된 디렉터리에 없으면 DLL을 참조 된 디렉터리로 이동 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Declare 문](../statements/declare-statement.md)

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2f0b217fb299a9c7c05f211c17d10efd80168ab5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408460"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873321"
 ---
 # <a name="as-clause-visual-basic"></a>As 절(Visual Basic)
+
 `As`제네릭 형식 매개 변수의 선언 문이나 제약 조건 목록에서 데이터 형식을 식별 하는 절을 소개 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  `As` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Aggregate Clause](../queries/aggregate-clause.md)  
@@ -59,11 +61,11 @@ ms.locfileid: "84408460"
   
  [Try ... Catch ... Finally 문](try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 새 변수 만들기](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [데이터 형식](../../programming-guide/language-features/data-types/index.md)
 - [변수 선언](../../programming-guide/language-features/variables/variable-declaration.md)
 - [Type List](type-list.md)
 - [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)

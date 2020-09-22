@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: b03a50365122c17fa311a284bd6995d1af2631c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4e29a27841021b0cf68af01f4535e60eeb38b9a8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401539"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871521"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>루트 네임스페이스 \<namespacename>의 이름 \<fullnamespacename>이(가) CLS 규격이 아닙니다.
+
 어셈블리가로 표시 `<CLSCompliant(True)>` 되지만 루트 네임 스페이스 이름의 요소는 밑줄 ()로 시작 `_` 합니다.  
   
  프로그래밍 요소는 하나 이상의 밑줄을 포함할 수 있지만 [언어 독립성 및 CLS (언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) )를 준수 하려면 밑줄로 시작 하지 않아야 합니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.  
@@ -33,7 +34,7 @@ ms.locfileid: "84401539"
   
 - 네임 스페이스 이름이 변경 되지 않은 상태로 유지 되어야 하는 경우 <xref:System.CLSCompliantAttribute> 어셈블리에서를 제거 하거나로 표시 합니다 `<CLSCompliant(False)>` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Namespace 문](../statements/namespace-statement.md)
 - [Visual Basic의 네임스페이스](../../programming-guide/program-structure/namespaces.md)

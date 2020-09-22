@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: ca16c6604ee071668a5c65d7e9052b233e2313c7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a93dd0a5422ce2a01a01c6fc77224e3ee946910e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403020"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874150"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>'If' 이항 식의 첫 번째 피연산자는 nullable이거나 참조 형식이어야 합니다.
+
 식에는 `If` 두 개 또는 세 개의 인수를 사용할 수 있습니다. 두 개의 인수만 전송 하는 경우 첫 번째 인수는 참조 형식 이거나 nullable 값 형식 이어야 합니다. 첫 번째 인수가 이외의 값으로 계산 되 면 `Nothing` 해당 값이 반환 됩니다. 첫 번째 인수가로 계산 되는 경우 `Nothing` 두 번째 인수가 계산 되어 반환 됩니다.  
   
  예를 들어, 다음 코드에는 세 개의 인수와 두 개의 인수를 사용 하는 식이 포함 되어 있습니다 `If` . 식은 동일한 값을 계산 하 고 반환 합니다.  
@@ -53,7 +54,7 @@ Console.WriteLine(If(choice1 < choice2, 1, 2))
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [If 연산자](../operators/if-operator.md)
 - [If...Then...Else 문](../statements/if-then-else-statement.md)

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: a9b621ff03f833fcf0f07f876fd864ee963bef75
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371183"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873419"
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
+
 함수 람다 식을 정의 하는 매개 변수 및 코드를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -31,13 +32,15 @@ End Function
 |용어|정의|  
 |---|---|  
 |`parameterlist`|선택 사항입니다. 이 프로시저의 매개 변수를 나타내는 지역 변수 이름 목록입니다. 목록이 비어 있는 경우에도 괄호가 있어야 합니다. [매개 변수 목록](../statements/parameter-list.md)을 참조 하세요.|  
-|`expression`|필수 요소. 단일 식입니다. 식의 형식은 함수의 반환 형식입니다.|  
-|`statements`|필수 요소. 문을 사용 하 여 값을 반환 하는 문 목록입니다 `Return` . [Return 문](../statements/return-statement.md)을 참조 하십시오. 반환 되는 값의 형식은 함수의 반환 형식입니다.|  
+|`expression`|필수 사항입니다. 단일 식입니다. 식의 형식은 함수의 반환 형식입니다.|  
+|`statements`|필수 사항입니다. 문을 사용 하 여 값을 반환 하는 문 목록입니다 `Return` . [Return 문](../statements/return-statement.md)을 참조 하십시오. 반환 되는 값의 형식은 함수의 반환 형식입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  *람다 식은* 값을 계산 하 고 반환 하는 이름이 없는 함수입니다. 에 대 한 인수를 제외 하 고 대리자 형식을 사용할 수 있는 모든 위치에서 람다 식을 사용할 수 있습니다 `RemoveHandler` . 대리자에 대 한 자세한 내용과 대리자에 람다 식을 사용 하는 방법에 대 한 자세한 내용은 [Delegate 문](../statements/delegate-statement.md) 및 [완화 된 대리자 변환](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)을 참조 하세요.  
   
 ## <a name="lambda-expression-syntax"></a>람다 식 구문  
+
  람다 식의 구문은 표준 함수의 구문과 유사 합니다. 차이점은 다음과 같습니다.  
   
 - 람다 식에 이름이 없습니다.  
@@ -55,6 +58,7 @@ End Function
 - 제네릭 매개 변수는 허용 되지 않습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 간단한 람다 식을 만드는 두 가지 방법을 보여 줍니다. 첫 번째는를 사용 하 여 `Dim` 함수의 이름을 제공 합니다. 함수를 호출 하려면 매개 변수의 값으로를 보냅니다.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
@@ -62,16 +66,19 @@ End Function
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>예제  
+
  또는 함수를 동시에 선언 하 고 실행할 수 있습니다.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>예제  
+
  다음은 해당 인수를 증가 하 고 값을 반환 하는 람다 식의 예입니다. 이 예제에서는 함수에 대 한 단일 줄 및 여러 줄 람다 식 구문을 보여 줍니다. 더 많은 예제는 [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)을 참조 하세요.  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>예제  
+
  람다 식은 LINQ (통합 언어 쿼리)에서 많은 쿼리 연산자의 기반이 되며 메서드 기반 쿼리에서 명시적으로 사용할 수 있습니다. 다음 예제에서는 일반적인 LINQ 쿼리를 보여 오고 쿼리를 메서드 형식으로 변환 합니다.  
   
 ```vb  
@@ -87,7 +94,7 @@ Dim londonCusts = db.Customers.
   
  쿼리 메서드에 대 한 자세한 내용은 [쿼리](../queries/index.md)를 참조 하세요. 표준 쿼리 연산자에 대 한 자세한 내용은 [표준 쿼리 연산자 개요](../../programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Function 문](../statements/function-statement.md)
 - [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

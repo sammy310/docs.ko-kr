@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: d7826c48629ee919344ec1982d3a698e6df9ef7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3477196230ec5e87b49e94f45c842b90b19102fb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400242"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869423"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 리터럴(Visual Basic)
+
 이 단원의 항목에서는 Visual Basic의 XML 리터럴 구문을 설명 합니다. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -29,6 +30,6 @@ ms.locfileid: "84400242"
 |[XML 주석 리터럴](xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴 구문을 설명합니다.|  
 |[XML 처리 명령 리터럴](xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> 개체를 나타내는 리터럴 구문을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML](../../programming-guide/language-features/xml/index.md)

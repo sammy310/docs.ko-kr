@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: 04c59f5efe190210a2a6b87b7c2a0971b705c1bb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8e2110327d0cc29d9654b6dd223efdd657187066
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409584"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874308"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>이벤트는 반환 형식이 있는 대리자 형식으로 선언할 수 없습니다.
+
 대리자가 함수 프로시저에 대해 지정 되었습니다.  
   
  **오류 ID:** BC31084  

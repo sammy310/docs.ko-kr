@@ -6,14 +6,15 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: c4429d58d2f089b86f5c32c1f3ce8353b02880c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84e5ac5276eeddf399003f72ef72e7117feb011b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373892"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868927"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>디렉터리 및 파일 요약(Visual Basic)
+
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
  기능을 사용 `My` 하면 이러한 멤버를 사용 하는 것 보다 파일 i/o 작업의 생산성 및 성능이 향상 됩니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요.  
@@ -33,9 +34,9 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |파일의 이름 또는 볼륨 레이블을 반환 합니다.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |파일에 대 한 특성 정보를 설정 합니다.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [C++ 키워드](index.md)
+- [키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)
 - [파일에서 읽기](../../developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [파일에 쓰기](../../developing-apps/programming/drives-directories-files/writing-to-files.md)

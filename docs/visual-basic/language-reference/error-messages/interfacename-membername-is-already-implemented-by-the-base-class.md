@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 6525ae08b90cc530a8f6a469d35d9ab8c27fb5e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4056c61bf6556f54276817c1c105ba7a17b6fd5a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402826"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873934"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<interfacename>.\<membername>'은 기본 클래스 '\<baseclassname>'에 의해 이미 구현되어 있습니다. \<type>을 다시 구현하는 것으로 간주합니다.
+
 파생 클래스의 속성, 프로시저 또는 이벤트는 `Implements` 기본 클래스에서 이미 구현 된 인터페이스 멤버를 지정 하는 절을 사용 합니다.  
   
  파생 클래스는 기본 클래스에 의해 구현된 인터페이스 멤버를 다시 구현할 수 있습니다. 이는 기본 클래스 구현 재정의와 다릅니다. 자세한 내용은 [Implements](../statements/implements-clause.md)을 참조하세요.  
@@ -29,6 +30,6 @@ ms.locfileid: "84402826"
   
 - 인터페이스 멤버를 다시 구현하지 않으려는 경우 속성, 프로시저 또는 이벤트 선언에서 `Implements` 절을 제거합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터페이스](../../programming-guide/language-features/interfaces/index.md)

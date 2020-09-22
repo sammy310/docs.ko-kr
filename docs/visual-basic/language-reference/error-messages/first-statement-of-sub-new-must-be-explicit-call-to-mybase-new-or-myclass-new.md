@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 33dd15e3f5f5538963597f2b00f4214895e1f47a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4918ac2e11dfaf682b1c00275f30c171bf241fe3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403007"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874116"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>'\<constructorname>'의 기본 클래스 '\<baseclassname>'에 있는 '\<derivedclassname>'이(가) obsolete로 표시되어 있으므로 이 'Sub New'의 첫 번째 문은 'MyBase.New' 또는 'MyClass.New'에 대한 명시적 호출이어야 합니다. '\<errormessage>'
+
 클래스 생성자는 기본 클래스 생성자를 명시적으로 호출하지 않으며, 암시적 기본 클래스 생성자가 <xref:System.ObsoleteAttribute> 특성 및 지시문으로 표시되어 오류로 처리합니다.  
   
  파생 클래스 생성자가 기본 클래스 생성자를 호출 하지 않는 경우 Visual Basic는 매개 변수가 없는 기본 클래스 생성자에 대 한 암시적 호출을 생성 하려고 시도 합니다. 인수 없이 호출 될 수 있는 기본 클래스에 액세스할 수 있는 생성자가 없는 경우 Visual Basic는 암시적 호출을 생성할 수 없습니다. 이 경우 필요한 생성자는 특성으로 표시 <xref:System.ObsoleteAttribute> 되므로 Visual Basic 호출할 수 없습니다.  
@@ -29,6 +30,6 @@ ms.locfileid: "84403007"
   
 2. `MyBase.New()` 또는 `MyClass.New()` 에 대한 호출을 파생 클래스에 `Sub New` 의 첫 번째 문으로 포함합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [특성 개요](../../programming-guide/concepts/attributes/index.md)

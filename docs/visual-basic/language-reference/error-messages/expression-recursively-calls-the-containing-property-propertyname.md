@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c05a7d9b021192d53a30e49f52abc08d9b153156
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409532"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874254"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 포함하는 속성 '\<propertyname>'을(를) 재귀적으로 호출합니다.
+
 `Set`속성 정의 프로시저의 문은 속성 이름에 값을 저장 합니다.  
   
  속성의 값을 유지 하는 권장 방법은 `Private` 속성의 컨테이너에 변수를 정의 하 고 및 프로시저에서 사용 하는 것입니다 `Get` `Set` . `Set`그런 다음이 프로시저는 들어오는 값을이 변수에 저장 해야 합니다 `Private` .  
@@ -63,7 +64,7 @@ End Class
   
 - 앞의 예제에서 설명한 것 처럼 권장 된 방법을 사용 하도록 속성 정의를 다시 작성 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [속성 프로시저](../../programming-guide/language-features/procedures/property-procedures.md)
 - [Property Statement](../statements/property-statement.md)

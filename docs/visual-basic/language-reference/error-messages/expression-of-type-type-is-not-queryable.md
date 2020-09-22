@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: e61b4dac109f714b5cf25226d1029237ca77032d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78b47601bf0a013d079f638f6dac27511e01aec4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409480"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874216"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>\<type> 형식의 식은 쿼리할 수 없습니다.
+
 형식의 식은 \<type> 쿼리할 수 없습니다. LINQ 공급자에 대 한 어셈블리 참조 및/또는 네임 스페이스 가져오기가 누락 되지 않았는지 확인 합니다.  
   
  쿼리 가능한 형식은 <xref:System.Linq> , <xref:System.Data.Linq> 및 네임 스페이스에 정의 됩니다 <xref:System.Xml.Linq> . LINQ 쿼리를 수행 하려면 이러한 네임 스페이스를 하나 이상 가져와야 합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "84409480"
   
 2. 쿼리의 원본으로 식별 한 형식이 쿼리 가능한 형식 인지 확인 합니다. 즉, 또는을 구현 하는 형식입니다 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - <xref:System.Data.Linq>

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d27039c28cd3f680e441db9182dd415bd8e91ba
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406575"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870261"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>열거형의 내부 형식 \<typename>이(가) CLS 규격이 아닙니다.
+
 이 열거형에 대해 지정 된 데이터 형식이 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS)의 일부가 아닙니다. .NET Framework 및 Visual Basic이 데이터 형식을 지원 하기 때문에이는 구성 요소 내에서 오류가 아닙니다. 그러나 엄격 하 게 CLS 규격 코드로 작성 된 다른 구성 요소는이 데이터 형식을 지원 하지 않을 수 있습니다. 이러한 구성 요소는 구성 요소와 성공적으로 상호 작용 하지 못할 수 있습니다.  
   
  다음 Visual Basic 데이터 형식은 CLS 규격이 아닙니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "84406575"
   
 - Automation 또는 COM 개체와 상호 작용 하는 경우 일부 형식의 데이터 너비가 .NET Framework에 비해 다릅니다. 예를 들어 `uint`는 다른 환경에서 16비트인 경우가 많습니다. 이러한 구성 요소에 16 비트 인수를 전달 하는 경우 `UShort` `UInteger` 관리 되는 Visual Basic 코드에서 대신로 선언 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [리플렉션(Visual Basic)](../../programming-guide/concepts/reflection.md)
 - [리플렉션](../../../framework/reflection-and-codedom/reflection.md)

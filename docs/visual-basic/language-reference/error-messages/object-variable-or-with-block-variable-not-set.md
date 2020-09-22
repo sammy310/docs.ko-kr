@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: d1778e2bb58d32e976f10b3fba1637918278d36e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409285"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873624"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
+
 잘못 된 개체 변수를 참조 하 고 있습니다.   여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.
 
 - 형식을 지정 하지 않고 변수가 선언 되었습니다. 형식을 지정 하지 않고 변수를 선언 하는 경우 기본값은 형식 `Object` 입니다.
@@ -50,7 +51,7 @@ ms.locfileid: "84409285"
 
 5. `With`문 진입점을 실행 하 여 블록이 초기화 되었는지 확인 `With` 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개체 변수 선언](../../programming-guide/language-features/variables/object-variable-declaration.md)
 - [ReDim 문](../statements/redim-statement.md)

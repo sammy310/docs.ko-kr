@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: e572189b958612bf9527c82ce702df3ab929a23f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d8394fb995bb7b009b4ee40dccc41e3435ae7309
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409402"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873690"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>CLS 규격 인터페이스에는 CLS 규격이 아닌 \<membername>을(를) 사용할 수 없습니다.
+
 인터페이스의 속성, 프로시저 또는 이벤트는 `<CLSCompliant(True)>` 인터페이스 자체가로 표시 `<CLSCompliant(False)>` 되거나 표시 되지 않는 경우로 표시 됩니다.  
   
  인터페이스가 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS)를 준수 하도록 하려면 모든 멤버가 규격을 준수 해야 합니다.  
@@ -35,6 +36,6 @@ ms.locfileid: "84409402"
   
 - 이 멤버를 현재 인터페이스 내에 유지 해야 하는 경우 해당 <xref:System.CLSCompliantAttribute> 정의에서를 제거 하거나로 표시 `<CLSCompliant(False)>` 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Interface 문](../statements/interface-statement.md)

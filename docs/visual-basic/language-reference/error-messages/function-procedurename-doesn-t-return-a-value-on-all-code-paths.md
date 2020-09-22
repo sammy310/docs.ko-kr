@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5295775b2541219e611e167e304ca8ef99cf6bd8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374137"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874129"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>'\<procedurename>' 함수가 일부 코드 경로에 대해서만 값을 반환합니다.
+
 ' \<procedurename> ' 함수가 일부 코드 경로에 대해서만 값을 반환 합니다. ' Return ' 문이 있나요?  
   
  `Function`프로시저에 해당 코드를 통해 값을 반환 하지 않는 경로가 하나 이상 있습니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "84374137"
   
      항상 문을 사용 하는 경우 프로시저의 모든 반환에서 값을 반환 하도록 보장 하는 것이 더 쉽습니다 `Return` . 이 작업을 수행 하는 경우 앞의 마지막 문이 문 이어야 합니다 `End Function` `Return` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [함수 프로시저](../../programming-guide/language-features/procedures/function-procedures.md)
 - [Function 문](../statements/function-statement.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 7914bc859966e17f3da41c9a13a01573b31baf91
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: faad25c08a012674e9d5ba569025bead8ffdec90
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409675"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874431"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname>'은(는) 사용되지 않습니다. (Visual Basic 경고)
+
 문에서 경고로 처리하는 <xref:System.ObsoleteAttribute> 특성 및 지시문으로 표시된 프로그래밍 요소에 액세스하려고 합니다.  
   
  프로그래밍 요소에 <xref:System.ObsoleteAttribute> 를 적용하여 더 이상 사용하지 않는 요소로 표시할 수 있습니다. 이렇게 하면 특성의 <xref:System.ObsoleteAttribute.IsError%2A> 속성을 `True` 또는 `False`로 설정할 수 있습니다. `True`로 설정하면 컴파일러가 요소를 사용하려는 시도를 오류로 처리합니다. `False`로 설정하거나 기본값인 `False`로 두면 컴파일러가 요소를 사용하려는 시도가 있을 경우 경고를 발생시킵니다.  
@@ -27,6 +28,6 @@ ms.locfileid: "84409675"
   
 - 소스 코드 참조에서 요소 이름의 철자가 맞는지 확인합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [특성 개요](../../programming-guide/concepts/attributes/index.md)

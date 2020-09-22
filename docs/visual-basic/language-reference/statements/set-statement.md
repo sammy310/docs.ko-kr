@@ -10,14 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 49d4c36805b64d7232a94e818256723a0437b6ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404189"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871751"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
+
 `Set`속성에 값을 할당 하는 데 사용 되는 속성 프로시저를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ End Set
 ```  
   
 ## <a name="parts"></a>부분  
+
  `attributelist`  
  선택 사항입니다. [특성 목록](attribute-list.md)을 참조 하십시오.  
   
@@ -39,14 +41,14 @@ End Set
   
 - [Friend](../modifiers/friend.md)  
   
-- [프라이빗](../modifiers/private.md)  
+- [개인](../modifiers/private.md)  
   
 - `Protected Friend`  
   
  [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.  
   
  `value`  
- 필수 요소. 속성의 새 값을 포함 하는 매개 변수입니다.  
+ 필수 사항입니다. 속성의 새 값을 포함 하는 매개 변수입니다.  
   
  `datatype`  
  필요한 경우 `Option Strict` 는 `On`합니다. 매개 변수의 데이터 형식 `value` 입니다. 지정 된 데이터 형식은이 문이 선언 된 속성의 데이터 형식과 동일 해야 합니다 `Set` .  
@@ -55,9 +57,10 @@ End Set
  선택 사항입니다. 속성 프로시저가 호출 될 때 실행 되는 하나 이상의 문입니다 `Set` .  
   
  `End Set`  
- 필수 요소. 속성 프로시저의 정의를 종료 `Set` 합니다.  
+ 필수 사항입니다. 속성 프로시저의 정의를 종료 `Set` 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  `Set`속성이로 표시 되지 않은 경우 모든 속성에 속성 프로시저가 있어야 합니다 `ReadOnly` . `Set`프로시저는 속성의 값을 설정 하는 데 사용 됩니다.  
   
  `Set`대입문은 속성에 저장 되는 값을 제공 하는 경우 속성의 프로시저를 자동으로 호출 Visual Basic 합니다.  
@@ -78,16 +81,17 @@ End Set
   
 - **속성 프로시저에서 반환** `Set`프로시저가 호출 코드로 반환 될 때 저장 되는 값을 제공 하는 문 다음에 실행이 계속 됩니다.  
   
-     `Set`속성 프로시저는 [Return 문](return-statement.md) 또는 [Exit 문](exit-statement.md)중 하나를 사용 하 여를 반환할 수 있습니다.  
+     `Set` 속성 프로시저는 [Return 문](return-statement.md) 또는 [Exit 문](exit-statement.md)중 하나를 사용 하 여를 반환할 수 있습니다.  
   
      `Exit Property`및 `Return` 문을 실행 하면 속성 프로시저에서 즉시 종료 됩니다. 프로시저의 모든 위치에는 개수와 `Exit Property` `Return` 문이 모두 표시 될 수 있으며 `Exit Property` 문과 문을 혼합할 수 있습니다 `Return` .  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 문을 사용 하 여 `Set` 속성의 값을 설정 합니다.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Get 문](get-statement.md)
 - [Property Statement](property-statement.md)
