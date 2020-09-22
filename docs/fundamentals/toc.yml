@@ -55,8 +55,10 @@ items:
         href: ../standard/components.md
       - name: .NET 클래스 라이브러리
         href: ../standard/class-libraries.md
-      - name: .NET Core 개요
+      - name: .NET Core 소개
         href: ../core/introduction.md
+      - name: .NET Core 개요
+        href: ../core/about.md
       - name: .NET Standard 개요
         href: ../standard/net-standard.md
       - name: .NET 용어
@@ -432,8 +434,12 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: 단일 파일 배포 및 실행 파일
         href: ../core/deploying/single-file.md
-      - name: 자체 포함 배포 및 실행 파일 트리밍
-        href: ../core/deploying/trim-self-contained.md
+      - name: 자체 포함 배포 트리밍
+        items:
+          - name: 개요 및 방법
+            href: ../core/deploying/trim-self-contained.md
+          - name: 옵션
+            href: ../core/deploying/trimming-options.md
       - name: 런타임 패키지 저장소
         href: ../core/deploying/runtime-store.md
       - name: RID(런타임 식별자) 카탈로그
