@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: e927f69b7606866a0a9e8eadd59270f51ffc5e2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86852b8335c05f496ea7325ae3defd35c7532b38
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414221"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875415"
 ---
 # <a name="objects-visual-basic"></a>개체(Visual Basic)
+
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  
   
 ## <a name="visual-basic-run-time-objects"></a>Visual Basic 런타임 개체  
@@ -45,6 +46,6 @@ ms.locfileid: "84414221"
 |[My.WebServices 개체](my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../index.md)

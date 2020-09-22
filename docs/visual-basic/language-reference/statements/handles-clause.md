@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: df786e4b0f0ab3795592ea57f7af17695b086cfa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 347f521267d4fd954ac359ab25ed5810cfd71d34
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404578"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873252"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 절(Visual Basic)
+
 지정된 이벤트를 처리하는 프로시저를 선언합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -24,6 +25,7 @@ proceduredeclaration Handles eventlist
 ```  
   
 ## <a name="parts"></a>부분  
+
  `proceduredeclaration`  
  이벤트를 처리할 프로시저에 대한 `Sub` 프로시저 선언입니다.  
   
@@ -31,6 +33,7 @@ proceduredeclaration Handles eventlist
  처리할 `proceduredeclaration`에 대한 이벤트 목록으로, 쉼표로 구분합니다. 이벤트는 현재 클래스에 대한 기본 클래스 또는 `WithEvents` 키워드를 사용하여 선언된 개체에 의해 발생해야 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  프로시저 선언의 끝에서 `Handles` 키워드를 사용하여 `WithEvents` 키워드로 선언된 개체 변수에 의해 발생된 이벤트를 처리합니다. `Handles` 키워드는 파생 클래스에서 기본 클래스의 이벤트를 처리하는 데도 사용할 수 있습니다.  
   
  `Handles` 키워드와 `AddHandler` 문 모두 특정 프로시저에서 특정 이벤트를 처리하도록 지정하는 데 사용할 수 있지만 차이가 있습니다. 특정 이벤트를 처리하도록 지정하는 프로시저를 정의할 때 `Handles` 키워드를 사용합니다. `AddHandler` 문은 런타임에 프로시저를 이벤트에 연결합니다. 자세한 내용은 [AddHandler 문](addhandler-statement.md)을 참조 하세요.  
@@ -38,6 +41,7 @@ proceduredeclaration Handles eventlist
  사용자 지정 이벤트의 경우 애플리케이션은 이벤트 처리기로 프로시저를 추가할 때 이벤트의 `AddHandler` 접근자를 호출합니다. 사용자 지정 이벤트에 대 한 자세한 내용은 [이벤트 문](event-statement.md)을 참조 하십시오.  
   
 ## <a name="example"></a>예제  
+
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
  다음 예제에서는 파생 클래스가 `Handles` 문을 사용하여 기본 클래스의 이벤트를 처리하는 방법을 보여 줍니다.  
@@ -45,16 +49,18 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에는 **WPF 응용 프로그램** 프로젝트에 대 한 두 개의 단추 이벤트 처리기가 포함 되어 있습니다.  
   
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제는 이전 예제와 동일합니다. `Handles` 절의 `eventlist`에는 두 단추에 대한 이벤트가 포함되어 있습니다.  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WithEvents](../modifiers/withevents.md)
 - [AddHandler 문](addhandler-statement.md)

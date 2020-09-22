@@ -10,14 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396183"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875251"
 ---
 # <a name="from-clause-visual-basic"></a>From 절 (Visual Basic)
+
 하나 이상의 범위 변수와 쿼리할 컬렉션을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,9 +34,10 @@ From element [ As type ] In collection [ _ ]
 |---|---|  
 |`element`|필수 요소. 컬렉션의 요소를 반복 하는 데 사용 되는 *범위 변수* 입니다. 범위 변수는 `collection` 쿼리를 통해가 반복 될 때의 각 멤버를 참조 하는 데 사용 됩니다 `collection` . 는 열거 가능한 형식 이어야 합니다.|  
 |`type`|선택 사항입니다. `element`의 형식입니다. 을 지정 하지 않으면 `type` 의 형식이 `element` 에서 유추 됩니다 `collection` .|  
-|`collection`|필수 요소. 쿼리할 컬렉션을 참조 합니다. 는 열거 가능한 형식 이어야 합니다.|  
+|`collection`|필수 사항입니다. 쿼리할 컬렉션을 참조 합니다. 는 열거 가능한 형식 이어야 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `From`절은 쿼리의 소스 데이터와 소스 컬렉션의 요소를 참조 하는 데 사용 되는 변수를 식별 하는 데 사용 됩니다. 이러한 변수를 *범위 변수*라고 합니다. 절 `From` `Aggregate` 이 집계 된 결과만 반환 하는 쿼리를 식별 하는 데 사용 되는 경우를 제외 하 고는 쿼리에 필요 합니다. 자세한 내용은 [Aggregate 절](aggregate-clause.md)을 참조 하세요.  
   
  쿼리에 여러 절을 지정 `From` 하 여 조인할 여러 컬렉션을 식별할 수 있습니다. 여러 컬렉션을 지정 하는 경우 이러한 컬렉션은 독립적으로 반복 되거나 관련 된 경우 조인할 수 있습니다. `Select`절을 사용 하거나 또는 절을 사용 하 여 명시적으로 컬렉션을 조인할 수 있습니다 `Join` `Group Join` . 또는 여러 범위 변수와 컬렉션을 단일 절에 지정할 수 있으며 `From` , 각 관련 범위 변수와 컬렉션은 쉼표로 구분 됩니다. 다음 코드 예에서는 절의 구문 옵션을 모두 보여 줍니다 `From` .  
@@ -65,11 +67,12 @@ From element [ As type ] In collection [ _ ]
 - ,, 및 절을 사용 하 여 반환할 결과의 일부를 식별 `Skip` `Take` `Skip While` `Take While` 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 쿼리 식에서는 절을 사용 하 여 `From` `cust` 컬렉션의 각 개체에 대해 범위 변수를 선언 합니다 `Customer` `customers` . `Where`절은 범위 변수를 사용 하 여 지정 된 지역의 고객에 대 한 출력을 제한 합니다. `For Each`루프는 쿼리 결과에 있는 각 고객의 회사 이름을 표시 합니다.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [쿼리](index.md)
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)

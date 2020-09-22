@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3c22e6a5199bd52cb9fae66a15a66ac9ce095e81
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386934"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872194"
 ---
 # <a name="type-typename-is-not-defined"></a>'\<typename>' 형식이 정의되지 않았습니다.
+
 문이 정의 되지 않은 형식에 대 한 참조를 만들었습니다. ,, 또는와 같은 선언 문에서 형식을 정의할 수 있습니다 `Enum` `Structure` `Class` `Interface` .  
   
  **오류 ID:** BC30002  
@@ -29,9 +30,9 @@ ms.locfileid: "84386934"
   
 - 형식이 정의 되어 있지만 해당 형식이 정의 된 개체 라이브러리 또는 형식 라이브러리가 Visual Basic에 등록 되지 않은 경우 **프로젝트** 메뉴에서 **참조 추가** 를 클릭 한 다음 적절 한 개체 라이브러리 또는 형식 라이브러리를 선택 합니다.  
   
-- 형식이 대상 .NET Framework 프로필의 일부인 어셈블리에 있는지 확인 합니다. 자세한 내용은 [.NET Framework 대상 지정 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)을 참조 하세요.  
+- 형식이 대상 .NET Framework 프로필의 일부인 어셈블리에 있는지 확인 합니다. 자세한 내용은 [.NET Framework 대상 지정 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 네임스페이스](../../programming-guide/program-structure/namespaces.md)
 - [Enum 문](../statements/enum-statement.md)

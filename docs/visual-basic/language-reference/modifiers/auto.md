@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: b9bdeed55788252c71b8fb1c995c140cbfdf60eb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 799a7320b701384dc5f4b4b46fef8544f6b15b02
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373130"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875507"
 ---
 # <a name="auto-visual-basic"></a>Auto(Visual Basic)
+
 선언 되는 외부 프로시저의 외부 이름을 기반으로 .NET Framework 규칙에 따라 문자열을 마샬링하 Visual Basic 하도록 지정 합니다.  
   
  프로젝트 외부에서 정의 된 프로시저를 호출 하는 경우 Visual Basic 컴파일러는 프로시저를 올바르게 호출 하는 데 필요한 정보에 액세스할 수 없습니다. 이 정보에는 프로시저가 있는 위치, 식별 방법, 호출 시퀀스 및 반환 형식, 사용 하는 문자열 문자 집합이 포함 됩니다. [Declare 문은](../statements/declare-statement.md) 외부 프로시저에 대 한 참조를 만들고이 필요한 정보를 제공 합니다.  
@@ -26,15 +27,17 @@ ms.locfileid: "84373130"
  문자 집합 한정자가 지정 되지 않은 경우 `Ansi` 가 기본값입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `Auto`이 컨텍스트에서는 한정자를 사용할 수 있습니다.  
   
  [Declare 문](../statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+
  이 키워드는 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Ansi](ansi.md)
 - [유니코드](unicode.md)
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)

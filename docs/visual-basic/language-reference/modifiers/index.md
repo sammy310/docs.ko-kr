@@ -2,17 +2,19 @@
 title: 한정자
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372896"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875446"
 ---
 # <a name="modifiers-visual-basic"></a>한정자(Visual Basic)
+
 이 단원의 항목에서는 Visual Basic 런타임 한정자를 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Ansi](ansi.md)  
   
  [어셈블리](assembly.md)  
@@ -29,13 +31,13 @@ ms.locfileid: "84372896"
   
  [Friend](friend.md)  
   
- [진행](in-generic-modifier.md)  
+ [위치](in-generic-modifier.md)  
   
- [반복기](iterator.md)  
+ [Iterator](iterator.md)  
   
- [키](key.md)  
+ [Key](key.md)  
   
- [모듈\<keyword>](module-keyword.md)  
+ [모듈 \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -61,7 +63,7 @@ ms.locfileid: "84372896"
   
  [부분](partial.md)  
   
- [프라이빗](private.md)  
+ [개인](private.md)  
   
  [개인 보호](private-protected.md)  
   
@@ -71,7 +73,7 @@ ms.locfileid: "84372896"
   
  [공용](public.md)  
   
- [ReadOnly](readonly.md)  
+ [읽기 전용](readonly.md)  
   
  [Overloads](shadows.md)  
   
@@ -88,4 +90,5 @@ ms.locfileid: "84372896"
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [Visual Basic 언어 참조](../index.md)  

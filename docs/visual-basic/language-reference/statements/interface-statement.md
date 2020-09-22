@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 02d258084aaaa53dcc559cfaa0dec27556351037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404488"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873230"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 문(Visual Basic)
+
 인터페이스 이름을 선언 하 고 인터페이스에서 구성 하는 멤버의 정의를 소개 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,7 +41,7 @@ End Interface
 |`attributelist`|선택 사항입니다. [특성 목록](attribute-list.md)을 참조 하십시오.|  
 |`accessmodifier`|선택 사항입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공개적](../modifiers/public.md)<br />-   [보호](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [문자](../modifiers/private.md)<br />-  [보호 된 Friend](../modifiers/protected-friend.md)<br/>- [개인 보호](../modifiers/private-protected.md)<br /><br /> [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|  
 |`Shadows`|선택 사항입니다. [그림자](../modifiers/shadows.md)를 참조 하세요.|  
-|`name`|필수 요소. 이 인터페이스의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
+|`name`|필수 사항입니다. 이 인터페이스의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
 |`Of`|선택 사항입니다. 제네릭 인터페이스 임을 지정 합니다.|  
 |`typelist`|[Of](of-clause.md) 키워드를 사용 하는 경우 필수 사항입니다. 이 인터페이스의 형식 매개 변수 목록입니다. 필요에 따라 `In` 및 제네릭 한정자를 사용 하 여 각 형식 매개 변수를 variant로 선언할 수 있습니다 `Out` . [형식 목록](type-list.md)을 참조 하십시오.|  
 |`Inherits`|선택 사항입니다. 이 인터페이스가 다른 인터페이스나 인터페이스의 특성 및 멤버를 상속 함을 나타냅니다. [Inherits 문](inherits-statement.md)을 참조 하세요.|  
@@ -57,6 +58,7 @@ End Interface
 |`End Interface`|정의를 종료 `Interface` 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  *인터페이스* 는 클래스와 구조체에서 구현할 수 있는 속성, 프로시저 등의 멤버 집합을 정의 합니다. 인터페이스는 내부 동작이 아니라 멤버의 서명만 정의 합니다.  
   
  클래스 또는 구조체는 인터페이스에서 정의 된 모든 멤버에 코드를 제공 하 여 인터페이스를 구현 합니다. 마지막으로, 응용 프로그램이 해당 클래스 또는 구조에서 인스턴스를 만들 때 개체가 존재 하 고 메모리에서 실행 됩니다. 자세한 내용은 [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md) 및 [인터페이스](../../programming-guide/language-features/interfaces/index.md)를 참조 하세요.  
@@ -106,13 +108,14 @@ End Interface
 - **수명.** 인터페이스 자체는 수명이 나 해당 멤버를 포함 하지 않습니다. 클래스가 인터페이스를 구현 하 고 해당 클래스의 인스턴스로 개체가 만들어지는 경우 개체는 실행 중인 응용 프로그램 내에서 수명을 가집니다. 자세한 내용은 [클래스 문의](class-statement.md)"수명"을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 문을 사용 하 여 문과 `Interface` 문으로 구현 되어야 하는 이라는 인터페이스를 정의 합니다 `thisInterface` `Property` `Function` .  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  `Property`및 `Function` 문은 `End Property` `End Function` 인터페이스 내에서 및로 끝나는 블록을 제공 하지 않습니다. 인터페이스는 해당 멤버의 서명만 정의 합니다. 전체 `Property` 및 블록은를 `Function` 구현 하는 클래스에 나타납니다 `thisInterface` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터페이스](../../programming-guide/language-features/interfaces/index.md)
 - [Class 문](class-statement.md)
@@ -123,5 +126,5 @@ End Interface
 - [Sub 문](sub-statement.md)
 - [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [진행](../modifiers/in-generic-modifier.md)
+- [위치](../modifiers/in-generic-modifier.md)
 - [제한이](../modifiers/out-generic-modifier.md)

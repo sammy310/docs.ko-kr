@@ -10,22 +10,24 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392173"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875465"
 ---
 # <a name="friend-visual-basic"></a>Friend(Visual Basic)
+
 선언 된 프로그래밍 요소를 해당 선언이 포함 된 어셈블리 내 에서만 액세스할 수 있도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  대부분의 경우 클래스 및 구조체와 같은 프로그래밍 요소를 선언 하는 구성 요소 뿐만 아니라 전체 어셈블리에서 사용 해야 합니다. 그러나 어셈블리 외부의 코드에서 액세스할 수 없도록 하는 것이 좋습니다 (예: 응용 프로그램이 소유 하는 경우). 이러한 방식으로 요소에 대 한 액세스를 제한 하려는 경우 한정자를 사용 하 여 해당 요소를 선언할 수 있습니다 `Friend` .  
   
  동일한 어셈블리로 컴파일되는 다른 클래스, 구조체 및 모듈의 코드 `Friend` 는 해당 어셈블리의 모든 요소에 액세스할 수 있습니다.  
   
- `Friend`액세스는 응용 프로그램의 프로그래밍 요소에 대 한 기본 설정 수준 이며 `Friend` 인터페이스, 모듈, 클래스 또는 구조체의 기본 액세스 수준입니다.  
+ `Friend` 액세스는 응용 프로그램의 프로그래밍 요소에 대 한 기본 설정 수준 이며 `Friend` 인터페이스, 모듈, 클래스 또는 구조체의 기본 액세스 수준입니다.  
   
  `Friend`는 모듈, 인터페이스 또는 네임 스페이스 수준 에서만 사용할 수 있습니다. 따라서 요소의 선언 컨텍스트는 `Friend` 소스 파일, 네임 스페이스, 인터페이스, 모듈, 클래스 또는 구조체 여야 합니다 .이는 프로시저일 수 없습니다.  
 
@@ -38,11 +40,13 @@ ms.locfileid: "84392173"
 > 다른 어셈블리를 friend 어셈블리로 지정 하 여로 표시 된 모든 형식 및 멤버에 액세스할 수 있도록 지정할 수 있습니다 `Friend` . 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조하세요.
 
 ## <a name="example"></a>예제  
+
  다음 클래스는 한정자를 사용 하 여 `Friend` 동일한 어셈블리 내의 다른 프로그래밍 요소가 특정 멤버에 액세스할 수 있도록 합니다.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>사용량  
+
  한정자는 다음 컨텍스트에서 사용할 수 있습니다 `Friend` .  
   
  [Class 문](../statements/class-statement.md)  
@@ -71,12 +75,12 @@ ms.locfileid: "84392173"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [공용](public.md)
 - [보호](protected.md)
-- [프라이빗](private.md)
+- [개인](private.md)
 - [개인 보호](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)

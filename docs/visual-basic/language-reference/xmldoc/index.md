@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: af57fc7d55c5cfda24a2fd9406b17dedee898760
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f877ee3fc9d616dc1e946293489a8aab96ac2e1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400100"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872794"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>문서 주석에 대한 권장 XML 태그(Visual Basic)
+
 Visual Basic 컴파일러는 코드의 문서 주석을 XML 파일로 처리할 수 있습니다. 추가 도구를 사용 하 여 XML 파일을 문서로 처리할 수 있습니다.  
   
  형식 및 형식 멤버와 같은 코드 구문에서 XML 주석을 사용할 수 있습니다. 부분 형식의 경우 해당 멤버를 주석으로 처리 하는 데 제한이 없더라도 형식의 한 부분 에서만 XML 주석을 사용할 수 있습니다.  

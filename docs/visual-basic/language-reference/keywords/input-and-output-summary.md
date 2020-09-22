@@ -6,14 +6,15 @@ helpviewer_keywords:
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 44321d75ce88beead2c631318392e5d630bae74b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f88d68910c3c094b54896e4aa88c8c2be44cba98
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373475"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875608"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>입력 및 출력 요약(Visual Basic)
+
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
 |작업|언어 요소|  
@@ -31,7 +32,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |파일에서 읽기/쓰기 위치를 설정 합니다.|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |파일에 씁니다.|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [C++ 키워드](index.md)
+- [키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)
