@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413003"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869981"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 절 (Visual Basic)
+
 하나 이상의 집계 함수를 컬렉션에 적용 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,11 +36,12 @@ Aggregate element [As type] In collection _
 |---|---|  
 |`element`|필수 요소. 컬렉션의 요소를 반복 하는 데 사용 되는 변수입니다.|  
 |`type`|선택 사항입니다. `element`의 형식입니다. 형식이 지정 되지 않은 경우의 형식은 `element` 에서 유추 됩니다 `collection` .|  
-|`collection`|필수 요소. 작업할 컬렉션을 참조 합니다.|  
+|`collection`|필수 사항입니다. 작업할 컬렉션을 참조 합니다.|  
 |`clause`|선택 사항입니다. `Where`집계 절 또는 절을에 적용 하는 쿼리 결과를 구체화 하는 절과 같은 하나 이상의 쿼리 절입니다.|  
-|`expressionList`|필수 요소. 컬렉션에 적용할 집계 함수를 식별 하는 쉼표로 구분 된 하나 이상의 식입니다. 집계 함수에 별칭을 적용 하 여 쿼리 결과의 멤버 이름을 지정할 수 있습니다. 별칭을 제공 하지 않으면 집계 함수의 이름이 사용 됩니다. 예제는이 항목의 뒷부분에 나오는 집계 함수에 대 한 섹션을 참조 하세요.|  
+|`expressionList`|필수 사항입니다. 컬렉션에 적용할 집계 함수를 식별 하는 쉼표로 구분 된 하나 이상의 식입니다. 집계 함수에 별칭을 적용 하 여 쿼리 결과의 멤버 이름을 지정할 수 있습니다. 별칭을 제공 하지 않으면 집계 함수의 이름이 사용 됩니다. 예제는이 항목의 뒷부분에 나오는 집계 함수에 대 한 섹션을 참조 하세요.|  
   
 ## <a name="remarks"></a>설명  
+
  `Aggregate`절은 쿼리에 집계 함수를 포함 하는 데 사용할 수 있습니다. 집계 함수는 값 집합에 대 한 검사 및 계산을 수행 하 고 단일 값을 반환 합니다. 쿼리 결과 형식의 멤버를 사용 하 여 계산 된 값에 액세스할 수 있습니다. 사용할 수 있는 표준 집계 함수는,,,,,, `All` `Any` `Average` `Count` `LongCount` `Max` `Min` 및 `Sum` 함수입니다. 이러한 함수는 SQL의 집계에 대해 잘 알고 있는 개발자에 게 친숙 합니다. 이러한 내용은이 항목의 다음 섹션에 설명 되어 있습니다.  
   
  집계 함수의 결과는 쿼리 결과 형식의 필드로 쿼리 결과에 포함 됩니다. 집계 함수 결과에 대 한 별칭을 제공 하 여 집계 값을 포함 하는 쿼리 결과 형식의 멤버 이름을 지정할 수 있습니다. 별칭을 제공 하지 않으면 집계 함수의 이름이 사용 됩니다.  
@@ -52,25 +54,25 @@ Aggregate element [As type] In collection _
   
 ### <a name="all"></a>모두
 
-`true`컬렉션의 모든 요소가 지정 된 조건을 만족 하면를 반환 하 고, 그렇지 않으면 `false` 를 반환 합니다. 다음은 이에 대한 예입니다.
+`true`컬렉션의 모든 요소가 지정 된 조건을 만족 하면를 반환 하 고, 그렇지 않으면 `false` 를 반환 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>모두
 
-`true`지정 된 조건을 만족 하는 컬렉션의 요소가 있으면를 반환 하 고, 그렇지 않으면 `false` 를 반환 합니다. 다음은 이에 대한 예입니다.
+`true`지정 된 조건을 만족 하는 컬렉션의 요소가 있으면를 반환 하 고, 그렇지 않으면 `false` 를 반환 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>평균
 
-컬렉션의 모든 요소에 대 한 평균을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 이에 대한 예입니다.
+컬렉션의 모든 요소에 대 한 평균을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>개수
 
-컬렉션의 요소 수를 셉니다. `Boolean`컬렉션에서 조건에 맞는 요소 수만 계산 하는 선택적 식을 제공할 수 있습니다. 다음은 이에 대한 예입니다.
+컬렉션의 요소 수를 셉니다. `Boolean`컬렉션에서 조건에 맞는 요소 수만 계산 하는 선택적 식을 제공할 수 있습니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
@@ -82,21 +84,21 @@ Or 절의 결과로 그룹화 되는 쿼리 결과를 나타냅니다 `Group By`
 
 컬렉션의 요소 수를 셉니다. `Boolean`컬렉션에서 조건에 맞는 요소 수만 계산 하는 선택적 식을 제공할 수 있습니다. 결과를로 반환 합니다 `Long` . 예를 들어 집계 함수를 참조 하세요 `Count` .
 
-### <a name="max"></a>최대값
+### <a name="max"></a>최대
 
-컬렉션에서 최 댓 값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 이에 대한 예입니다.
+컬렉션에서 최 댓 값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>최소값
 
-컬렉션의 최소값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 이에 대한 예입니다.
+컬렉션의 최소값을 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>합계
 
-컬렉션에 있는 모든 요소의 합계를 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 이에 대한 예입니다.
+컬렉션에 있는 모든 요소의 합계를 계산 하거나 컬렉션의 모든 요소에 대해 제공 된 식을 계산 합니다. 다음은 예입니다.
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
@@ -118,7 +120,7 @@ Or 절의 결과로 그룹화 되는 쿼리 결과를 나타냅니다 `Group By`
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](index.md)

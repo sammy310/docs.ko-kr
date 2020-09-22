@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76c1ab4fb5f1f8e4c76a06110f4b0f9026cca201
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397170"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871550"
 ---
 # <a name="name-name-is-not-declared"></a>'\<name>' 이름이 선언되지 않았습니다.
+
 문이 프로그래밍 요소를 참조 하지만 컴파일러가 정확한 이름을 가진 요소를 찾을 수 없습니다.  
   
  **오류 ID:** BC30451  
@@ -31,7 +32,7 @@ ms.locfileid: "84397170"
 
 5. 정규화 된 형식 또는 형식 및 멤버 이름을 사용 하지 않는 경우 (예: 코드가 대신로 속성을 참조 하는 경우 `MethodInfo.Name` `System.Reflection.MethodInfo.Name` ) [Imports 문을](../statements/imports-statement-net-namespace-and-type.md)추가 합니다.
 
-6. SDK 스타일 프로젝트 ( \* 줄로 시작 하는 .vbproj 파일이 있는 프로젝트 `<Project Sdk="Microsoft.NET.Sdk">` )를 컴파일하려고 하 고 오류 메시지가 microsoft.visualbasic 어셈블리의 형식 또는 멤버를 참조 하는 경우에는 Visual Basic 런타임 라이브러리에 대 한 참조를 사용 하 여 컴파일하도록 응용 프로그램을 구성 합니다. 기본적으로 라이브러리의 하위 집합은 SDK 스타일 프로젝트의 어셈블리에 포함 됩니다.
+6. SDK 스타일 프로젝트 ( \* 줄로 시작 하는 .vbproj 파일이 있는 프로젝트)를 컴파일하려고 하 `<Project Sdk="Microsoft.NET.Sdk">` 고 오류 메시지가 Microsoft.VisualBasic.dll 어셈블리의 형식 또는 멤버를 참조 하는 경우 Visual Basic 런타임 라이브러리에 대 한 참조를 사용 하 여 컴파일하도록 응용 프로그램을 구성 합니다. 기본적으로 라이브러리의 하위 집합은 SDK 스타일 프로젝트의 어셈블리에 포함 됩니다.
 
    예를 들어 다음 예제는 메서드를 찾을 수 없기 때문에 컴파일되지 않습니다 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName> . 응용 프로그램에 포함 된 Visual Basic 런타임의 하위 집합에 포함 되지 않습니다.  
 
@@ -41,7 +42,7 @@ ms.locfileid: "84397170"
 
    [!code-xml[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [선언 및 상수 요약](../keywords/declarations-and-constants-summary.md)
 - [Visual Basic 명명 규칙](../../programming-guide/program-structure/naming-conventions.md)

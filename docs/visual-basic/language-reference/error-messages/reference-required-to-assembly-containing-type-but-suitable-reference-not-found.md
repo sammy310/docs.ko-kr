@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 4b9f74f0627268752b0ba3c3816fe9d4cc8a231b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ffc6b3c180c86abe272d56d0ecf3042d8181da59
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404825"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870902"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>'\<assemblyidentity>' 형식을 포함하는 '\<typename>' 어셈블리에 대한 참조가 필요하지만 '\<projectname1>' 프로젝트와 '\<projectname2>' 프로젝트 사이의 모호성 때문에 적합한 참조를 찾을 수 없습니다.
+
 식은 프로젝트 외부에 정의된 클래스, 구조체, 인터페이스, 열거형 또는 대리자와 같은 형식을 사용합니다. 그러나 해당 형식을 정의하는 둘 이상의 어셈블리에 대한 프로젝트 참조가 있습니다.  
   
  인용된 프로젝트는 이름이 동일한 어셈블리를 생성합니다. 따라서 컴파일러에서 사용자가 액세스하려는 형식에 사용할 어셈블리를 확인할 수 없습니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "84404825"
   
 2. 프로젝트 속성에서 사용 중인 형식을 정의하는 어셈블리가 포함된 파일에 대한 참조를 추가합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
 - [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

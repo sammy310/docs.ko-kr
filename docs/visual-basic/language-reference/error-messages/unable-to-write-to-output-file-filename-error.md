@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198196"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870281"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>출력 파일 '\<filename > '에 쓸 수 없습니다. \<오류 >
+# <a name="unable-to-write-to-output-file-filename-error"></a>'\<filename>' 출력 파일에 쓸 수 없습니다. \<error>
+
 파일을 만드는 동안 문제가 발생했습니다.  
   
  출력 파일을 쓰기 위해 열 수 없습니다. 파일 또는 파일이 포함된 폴더가 다른 프로세스에서 단독으로 사용되도록 열려 있거나 읽기 전용 특성이 설정되어 있을 수 있습니다.  

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387259"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871194"
 ---
 # <a name="pathfile-access-error"></a>경로/파일 액세스 오류입니다.
+
 파일 액세스 또는 디스크 액세스 작업 중에 운영 체제에서 경로와 파일 이름 간에 연결을 설정할 수 없습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -24,6 +25,6 @@ ms.locfileid: "84387259"
   
 4. 데이터베이스 또는 문서 내의 Visual Basic 프로젝트를 변경 하지 않았는지 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [오류 유형](../../programming-guide/language-features/error-types.md)
+- [오류 형식](../../programming-guide/language-features/error-types.md)

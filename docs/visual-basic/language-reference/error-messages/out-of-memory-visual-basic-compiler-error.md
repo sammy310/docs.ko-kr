@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 11f5d6b034600ae4f669be86eea927a7ed5cc16f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7ed4330ee4c80768fa19a2edb99fa45096c8b97e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413029"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871379"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>메모리가 부족합니다(Visual Basic 컴파일러 오류).
+
 사용 가능한 것보다 더 많은 메모리가 필요했습니다.  
   
  **오류 ID:** BC2004  
@@ -33,6 +34,6 @@ ms.locfileid: "84413029"
   
 - 메모리가 더 이상 필요 하지 않은 경우 해제 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [오류 유형](../../programming-guide/language-features/error-types.md)
+- [오류 형식](../../programming-guide/language-features/error-types.md)
