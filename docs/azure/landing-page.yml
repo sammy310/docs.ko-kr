@@ -10,12 +10,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
-  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.openlocfilehash: 8d1fb12e3edeb75db7e11316db1063c0bcd63a8e
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86174860"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90539101"
 landingContent:
 - title: Azure에서 .NET 시작
   linkLists:
@@ -214,10 +214,10 @@ landingContent:
   - linkListType: architecture
     links:
     - text: '.NET 마이크로 서비스: 컨테이너화된 .NET 앱의 아키텍처'
-      url: /dotnet/architecture/microservices/
+      url: ../architecture/microservices/index.md
     - text: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
-      url: /dotnet/architecture/modern-web-apps-azure/
+      url: ../architecture/modern-web-apps-azure/index.md
     - text: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
-      url: /dotnet/architecture/containerized-lifecycle/
+      url: ../architecture/containerized-lifecycle/index.md
     - text: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
       url: /dotnet/architecture/modernize-with-azure-containers/
