@@ -26,14 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404280"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872030"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문 (Visual Basic)
+
 배열 변수의 스토리지 공간을 다시 할당합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,10 +48,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |용어|정의|  
 |----------|----------------|  
 |`Preserve`|선택 사항입니다. 마지막 차원의 크기만 변경한 경우 기존 배열의 데이터를 유지하기 위해 사용되는 한정자입니다.|  
-|`name`|필수 요소. 배열 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
-|`boundlist`|필수 요소. 다시 정의된 배열의 각 차원에 대한 범위 목록입니다.|  
+|`name`|필수 사항입니다. 배열 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
+|`boundlist`|필수 사항입니다. 다시 정의된 배열의 각 차원에 대한 범위 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ReDim` 문을 사용하여 이미 선언된 배열의 차원 중 하나 이상의 크기를 변경할 수 있습니다. 큰 배열이 있고 요소가 더 이상 필요하지 않은 경우 `ReDim`은 배열 크기를 줄여서 메모리를 확보할 수 있습니다. 반면에 배열에 요소가 더 필요한 경우 `ReDim`은 요소를 추가할 수 있습니다.  
   
  `ReDim` 문은 배열에만 사용할 수 있으며 스칼라(단일 값만 포함된 변수), 컬렉션 또는 구조체에서는 유효하지 않습니다. 변수를 `Array` 형식으로 선언하는 경우 `ReDim` 문에는 새 배열을 만들 수 있는 충분한 형식 정보가 없습니다.  
@@ -79,13 +81,14 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>동작  
   
-- **배열 바꾸기.** `ReDim`기존 배열을 해제 하 고 동일한 순위로 새 배열을 만듭니다. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
+- **배열 바꾸기.** `ReDim` 기존 배열을 해제 하 고 동일한 순위로 새 배열을 만듭니다. 새 배열은 배열 변수에서 해제된 배열을 대체합니다.  
   
 - **Preserve를 사용하지 않는 초기화.** 을 지정 하지 않으면 `Preserve` `ReDim` 는 해당 데이터 형식에 대 한 기본값을 사용 하 여 새 배열의 요소를 초기화 합니다.  
   
 - **Preserve를 사용하는 초기화.** 을 지정 하는 경우 `Preserve` Visual Basic 기존 배열의 요소를 새 배열에 복사 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 배열의 기존 데이터를 손실하지 않고 동적 배열의 마지막 차원 크기를 늘린 다음 데이터를 부분적으로 손실하며 크기를 줄입니다. 마지막으로 크기를 원래 값으로 다시 줄이고 모든 배열 요소를 다시 초기화합니다.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
@@ -100,11 +103,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  추가 예제는 [배열](../../programming-guide/language-features/arrays/index.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IndexOutOfRangeException>
 - [Const 문](const-statement.md)
 - [Dim 문](dim-statement.md)
 - [Erase 문](erase-statement.md)
-- [Nothing](../nothing.md)
+- [없는지](../nothing.md)
 - [배열](../../programming-guide/language-features/arrays/index.md)

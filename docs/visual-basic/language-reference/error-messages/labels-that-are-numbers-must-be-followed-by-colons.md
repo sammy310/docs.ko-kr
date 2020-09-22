@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: bd3d3ac6c0a56a26b94e8a245253b2450d9c5b71
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 013856e65202405e01fc2c38ac16174517232ee5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397391"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873890"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>숫자 레이블 뒤에는 콜론이 와야 합니다.
+
 줄 번호는 다른 종류의 레이블과 동일한 규칙을 따르고 콜론을 포함 해야 합니다.  
   
  **오류 ID:** BC30801  
@@ -27,6 +28,6 @@ ms.locfileid: "84397391"
     400:    X += 1  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GoTo 문](../statements/goto-statement.md)

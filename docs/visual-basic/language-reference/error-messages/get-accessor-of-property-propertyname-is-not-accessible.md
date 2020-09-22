@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: cb953671e624d5b9170aa0b3a9dd80c7ba8337e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08986cde7151cac5e70083705f38a83837bedb93
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402916"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874045"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>'\<propertyname>' 속성의 'Get' 접근자에 액세스할 수 없습니다.
+
 문이 속성의 프로시저에 대 한 액세스 권한이 없는 경우 속성의 값을 검색 하려고 시도 합니다 `Get` .  
   
  [Get 문이](../statements/get-statement.md) [property 문](../statements/property-statement.md)보다 더 제한적인 액세스 수준으로 표시 되 면 다음과 같은 경우에 속성 값을 읽으려고 할 수 있습니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "84402916"
   
 - 속성을 정의 하는 소스 코드를 제어할 수 없거나 `Get` 프로시저 액세스 수준을 속성 자체 보다 더 제한 해야 하는 경우 속성 값을 읽는 문을 속성에 대 한 액세스를 향상 하는 코드 영역으로 이동 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [속성 프로시저](../../programming-guide/language-features/procedures/property-procedures.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](../../programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

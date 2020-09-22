@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 34718243172d3b1a238a813268e672d62c4eeb6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a60afe0907e974dfb345d20d18762cb5f84127d9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406536"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875036"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>값이 할당되기 전에 '\<variablename>' 변수를 사용했습니다.
+
 값이 \<variablename> 할당 되기 전에 ' ' 변수를 사용 했습니다. 런타임에 null 참조 예외가 발생할 수 있습니다.  
   
  응용 프로그램에는 값이 할당 되기 전에 변수를 읽는 코드를 통해 하나 이상의 가능한 경로가 있습니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "84406536"
   
 - 변수를 항상 유효한 값으로 보장 하는 한 가지 방법은 선언의 일부로 초기화 하는 것입니다. [Dim 문에서](../statements/dim-statement.md)"초기화"를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Dim 문](../statements/dim-statement.md)
 - [변수 선언](../../programming-guide/language-features/variables/variable-declaration.md)

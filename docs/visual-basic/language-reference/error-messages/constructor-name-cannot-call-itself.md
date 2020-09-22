@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 6abb6dde624e129b52fefecf8c51e6cde2567ae1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dce98a4deef8fbb0e8bc024244b815e23d51c790
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409805"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874575"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>'\<name>' 생성자는 자신을 호출할 수 없습니다.
+
 `Sub New`클래스 또는 구조체의 프로시저는 자신을 호출 합니다.  
   
  생성자의 목적은 클래스 또는 구조체를 처음 만들 때이 인스턴스를 초기화 하는 것입니다. 클래스 또는 구조체에는 여러 개의 생성자가 있을 수 있으며,이 경우 모두 매개 변수 목록이 서로 다릅니다. 생성자는 다른 생성자를 호출 하 여 자체와 함께 해당 기능을 수행할 수 있습니다. 그러나 생성자가 자신을 호출 하는 것은 의미가 없으므로 허용 되는 경우 무한 재귀가 발생 합니다.  
@@ -27,6 +28,6 @@ ms.locfileid: "84409805"
   
 2. 다른 생성자를 호출 하지 않으려는 경우 `Sub New` 호출을 완전히 제거 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개체 수명: 개체가 만들어지고 제거되는 방법](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

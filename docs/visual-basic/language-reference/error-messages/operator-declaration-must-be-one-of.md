@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 3fb2cf392611e5ca83818e3bf173513be031085d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c388b1b0762dd7475ca365a8a62228d0b5d59414
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409337"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873614"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>연산자 선언은 +,-, *, \, /, ^, &amp; Like, Mod, And, or, Xor, Not, \<\<, >> 중 하나 여야 합니다.
+
 오버 로드할 수 있는 연산자만 선언할 수 있습니다. 다음 표에서는 선언할 수 있는 연산자를 나열 합니다.  
   
 |Type|연산자|  
 |----------|---------------|  
-|단항 연산자|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
+|단항|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
 |이진|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
 |변환(단항)|`CType`|  
   
@@ -33,7 +34,7 @@ ms.locfileid: "84409337"
   
 2. 직접 오버로드할 수 없는 연산자 오버로드 기능이 필요할 경우 적절한 매개 변수를 사용하고 적절한 값을 반환하는 `Function` 프로시저를 만듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Operator Statement](../statements/operator-statement.md)
 - [연산자 프로시저](../../programming-guide/language-features/procedures/operator-procedures.md)

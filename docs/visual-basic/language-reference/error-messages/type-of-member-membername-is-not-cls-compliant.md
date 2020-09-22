@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12155062f04b7619cae581540abfc4ce1a8ae34f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400307"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875142"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>'\<membername>' 멤버의 형식이 CLS 규격이 아닙니다.
+
 이 멤버에 대해 지정 된 데이터 형식이 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS)의 일부가 아닙니다. .NET Framework 및 Visual Basic이 데이터 형식을 지원 하기 때문에이는 구성 요소 내에서 오류가 아닙니다. 그러나 엄격 하 게 CLS 규격 코드로 작성 된 다른 구성 요소는이 데이터 형식을 지원 하지 않을 수 있습니다. 이러한 구성 요소는 구성 요소와 성공적으로 상호 작용 하지 못할 수 있습니다.  
   
  다음 Visual Basic 데이터 형식은 CLS 규격이 아닙니다.  

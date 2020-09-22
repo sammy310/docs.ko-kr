@@ -9,17 +9,19 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: b5bb943a062ac648f88645fb6de1acb42213071c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a659481b34b8b44f1f387b464d5d9656ed98ab3f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404799"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874956"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
+
 이 항목에서는 다른 형식 내에서 선언할 수 있는 Visual Basic 형식 및 지정 되지 않은 경우 기본적으로 사용 되는 액세스 수준에 대해 설명 합니다.  
   
 ## <a name="declaration-context-levels"></a>선언 컨텍스트 수준  
+
  프로그래밍 요소의 *선언 컨텍스트* 는 선언 된 코드 영역입니다. 이는 일반적으로 *포함 하는 요소*라고 하는 또 다른 프로그래밍 요소입니다.  
   
  선언 컨텍스트의 수준은 다음과 같습니다.  
@@ -42,17 +44,17 @@ ms.locfileid: "84404799"
 |Module ([Module 문](module-statement.md))|`Friend`|허용되지 않음|허용되지 않음|  
 |Interface ([Interface 문](interface-statement.md))|`Friend`|`Public`|허용되지 않음|  
 |프로시저 ([Function 문](function-statement.md), [Sub 문](sub-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
-|외부 참조 ([Declare 문](declare-statement.md))|허용되지 않음|`Public`(에서 허용 되지 않음 `Interface` )|허용되지 않음|  
-|Operator ([Operator 문](operator-statement.md))|허용되지 않음|`Public`(또는에서는 허용 되지 않음 `Interface` `Module` )|허용되지 않음|  
+|외부 참조 ([Declare 문](declare-statement.md))|허용되지 않음|`Public` (에서 허용 되지 않음 `Interface` )|허용되지 않음|  
+|Operator ([Operator 문](operator-statement.md))|허용되지 않음|`Public` (또는에서는 허용 되지 않음 `Interface` `Module` )|허용되지 않음|  
 |Property ([Property 문](property-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
-|Default 속성 ([기본값](../modifiers/default.md))|허용되지 않음|`Public`(에서 허용 되지 않음 `Module` )|허용되지 않음|  
+|Default 속성 ([기본값](../modifiers/default.md))|허용되지 않음|`Public` (에서 허용 되지 않음 `Module` )|허용되지 않음|  
 |이벤트 ([Event Statement](event-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
 |Delegate ([Delegate 문](delegate-statement.md))|`Friend`|`Public`|허용되지 않음|  
   
  자세한 내용은 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Friend](../modifiers/friend.md)
-- [프라이빗](../modifiers/private.md)
+- [개인](../modifiers/private.md)
 - [공용](../modifiers/public.md)

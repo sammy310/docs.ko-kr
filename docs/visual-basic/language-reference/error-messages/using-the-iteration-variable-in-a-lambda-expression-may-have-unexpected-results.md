@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373916"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870251"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>람다 식에 반복 변수를 사용하면 예기치 않은 결과가 발생할 수 있습니다.
+
 람다 식에 반복 변수를 사용 하면 예기치 않은 결과가 발생할 수 있습니다. 대신 루프 내에서 지역 변수를 만들고 반복 변수의 값을 할당 합니다.  
   
  이 경고는 루프 내에서 선언 된 람다 식에서 루프 반복 변수를 사용 하는 경우에 나타납니다. 예를 들어 다음 예제에서는 경고가 표시 되도록 합니다.  
@@ -83,6 +84,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

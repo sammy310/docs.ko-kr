@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0c5a4188fedf9685afdd1cde4c1de93a0b43b919
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88cdeccd7a3411b57a77116bde64d0a2cf8e537d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409787"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874538"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>명시적 대리자 형식 없이 선언된 이벤트에는 'Custom' 한정자를 사용할 수 없습니다.
+
 사용자 지정 이벤트가 아닌 이벤트와 달리 선언에는 이벤트 `Custom Event` `As` 의 대리자 형식을 명시적으로 지정 하는 이벤트 이름 다음에 절이 필요 합니다.  
   
  사용자 지정이 아닌 이벤트는 `As` 절과 명시적 대리자 형식을 사용 하 여 정의 하거나 이벤트 이름 바로 뒤에 매개 변수 목록을 사용 하 여 정의할 수 있습니다.  
@@ -36,11 +37,12 @@ ms.locfileid: "84409787"
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
 ## <a name="example"></a>예제  
+
  이 예제에서는을 선언 `Custom Event` 하 고 `As` 대리자 형식을 사용 하 여 필수 절을 지정 합니다.  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Event 문](../statements/event-statement.md)
 - [Delegate 문](../statements/delegate-statement.md)

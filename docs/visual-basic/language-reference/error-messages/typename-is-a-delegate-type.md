@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4cc0a1221dcf65aa2a16fd7d82568c8544f27fdb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382174"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875080"
 ---
 # <a name="typename-is-a-delegate-type"></a>'\<typename>'은(는) 대리자 형식입니다.
+
 ' \<typename> '은 (는) 대리자 형식입니다. 대리자 생성은 단일 AddressOf 식만 인수 목록으로 허용 합니다. 일반적으로 대리자 생성 대신 AddressOf 식을 사용할 수 있습니다.  
   
  `New`대리자 클래스의 인스턴스를 만드는 절은 대리자 생성자에 잘못 된 인수 목록을 제공 합니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "84382174"
   
 - `AddressOf`절에서 대리자 클래스의 인수 목록에 있는 단일 식을 사용 `New` 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [새 운영자](../operators/new-operator.md)
 - [AddressOf 연산자](../operators/addressof-operator.md)

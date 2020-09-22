@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: eacf5036ebc6fc31dfa0e8de39c4fb574c9072b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 369516fb12b24981eaecfe467bf421dec279aa01
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386960"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875096"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>\<typename>' 형식이 CLS 규격이 아닙니다.
+
 변수, 속성 또는 함수 return이 CLS 규격이 아닌 데이터 형식으로 선언 되었습니다.  
   
  응용 프로그램의 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (cls)를 준수 하려면 cls 규격 형식만 사용 해야 합니다.  

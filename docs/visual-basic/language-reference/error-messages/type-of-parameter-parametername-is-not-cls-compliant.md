@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: edbcadf271c4ccafc11e5b64eb103a0290976179
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a4617d3550cfb48f32a19a4c70809141173c6147
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413016"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875118"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>'\<parametername>' 매개 변수의 형식이 CLS 규격이 아닙니다.
+
 프로시저가로 표시 되어 `<CLSCompliant(True)>` 있지만,로 표시 되어 `<CLSCompliant(False)>` 있거나, 표시 되지 않았거나, 비규격 형식 이므로 자격이 없는 형식의 매개 변수를 선언 합니다.  
   
  프로시저가 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md)(CLS)와 호환되려면 CLS 규격 형식만 사용해야 합니다. 이는 매개 변수 형식, 반환 형식 및 모든 로컬 변수 형식에 적용됩니다.  

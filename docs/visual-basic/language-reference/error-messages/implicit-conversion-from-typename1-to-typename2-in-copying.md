@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 4d0f9aac795f683cf58210ea38b3783e451ccfc3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fced95fe24d42d4af2118706bcaf3337429fea91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402864"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873993"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>ByRef' 매개 변수 '\<typename1>'의 값을 해당 인수에 다시 복사하는 동안 발생하는 '\<typename2>'에서 '\<parametername>'(으)로의 암시적 변환입니다.
+
 해당 매개 변수와 다른 형식의 [ByRef](../modifiers/byref.md) 인수를 사용 하 여 프로시저를 호출 합니다.  
   
  인수를 전달 하는 경우 Visual Basic는 경우 `ByRef` 에 따라 참조를 전달 하는 대신 프로시저의 지역 변수에 인수 값을 복사 합니다. 이 경우 프로시저가 반환 될 때 Visual Basic는 지역 변수 값을 호출 코드의 인수에 다시 복사 해야 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "84402864"
   
 - 매개 변수 형식과 다른 인수 형식을 사용하여 프로시저를 호출해야 하지만 호출 인수에 값을 반환할 필요가 없는 경우 매개 변수를 [ByRef](../modifiers/byval.md) 가 아니라 `ByRef`로 정의합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](../../programming-guide/language-features/procedures/index.md)
 - [프로시저 매개 변수 및 인수](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)

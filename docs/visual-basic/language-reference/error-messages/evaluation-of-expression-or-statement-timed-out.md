@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8de57715c770cdd66f34977d0be12552e635670d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191931"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874342"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>식 또는 문 계산 시간이 초과되었습니다.
+
 식의 계산이 적절 한 시간 내에 완료 되지 않았습니다.  
   
  **오류 ID:** BC30722  

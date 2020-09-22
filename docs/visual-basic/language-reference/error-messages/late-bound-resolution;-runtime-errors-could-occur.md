@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c7b352c7bd61216ecce9901585945e740428ee3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397352"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873856"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>런타임에 바인딩을 확인합니다. 런타임 오류가 발생할 수 있습니다.
+
 개체는 [개체 데이터 형식](../data-types/object-data-type.md)으로 선언 된 변수에 할당 됩니다.  
   
  변수를로 선언 하는 경우 `Object` 컴파일러는 런타임에 *바인딩을*수행 해야 하므로 런타임에 추가 작업이 발생 합니다. 또한 애플리케이션이 잠재적인 런타임 오류에 노출됩니다. 예를 들어를 변수에 할당 한 <xref:System.Windows.Forms.Form> `Object` 다음 속성에 액세스 하려고 하면 <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> <xref:System.MemberAccessException> <xref:System.Windows.Forms.Form> 클래스가 속성을 노출 하지 않기 때문에 런타임이을 throw 합니다 `NameTable` .  
@@ -29,7 +30,7 @@ ms.locfileid: "84397352"
   
 - 가능 하면 변수를 특정 형식으로 선언 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [초기 바인딩 및 런타임에 바인딩](../../programming-guide/language-features/early-late-binding/index.md)
 - [개체 변수 선언](../../programming-guide/language-features/variables/object-variable-declaration.md)

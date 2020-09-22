@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: 69cb2c1da439caba609c34aec8cfe90706bf9f92
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5e0f6dd2da404ed988af15fadadd8ecd4a491189
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402942"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874054"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>' \<functionname> '이 (가) 선언 되지 않았습니다 (스마트 장치/Visual Basic 컴파일러 오류).
+
 <`functionname`> 선언 되지 않았습니다. 파일 I/O 기능은 일반적으로 `Microsoft.VisualBasic` 네임스페이스에서 사용할 수 있지만 대상 버전의 .NET Compact Framework에서 지원하지 않습니다.  
   
  **오류 ID:** BC30766  
@@ -23,7 +24,7 @@ ms.locfileid: "84402942"
   
 - `System.IO` 네임스페이스에 정의된 함수를 사용하여 파일 작업을 수행합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO>
 - [Visual Basic을 사용한 파일 액세스](../../developing-apps/programming/drives-directories-files/file-access.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 52e5391fbcf30a4dada4d64a0e810c900ea85806
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2d3bcdaccfd993da1eebf81ae961f35eb22b294
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409389"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873685"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>이 컨텍스트에서는 nullable 형식을 유추할 수 없습니다.
+
 값 형식과 구조체를 nullable로 선언할 수 있습니다.  
   
 ```vb  
@@ -36,7 +37,7 @@ Dim b As Integer?
   
 - `As`절을 사용 하 여 변수를 nullable 값 형식으로 선언 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Nullable 값 형식](../../programming-guide/language-features/data-types/nullable-value-types.md)
 - [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)

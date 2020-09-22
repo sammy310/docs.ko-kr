@@ -10,14 +10,15 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404293"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872009"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
+
 클래스, 폼 또는 문서 내의 모듈 수준에서 선언 된 이벤트를 트리거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -27,13 +28,15 @@ RaiseEvent eventname[( argumentlist )]
 ```  
   
 ## <a name="parts"></a>부분  
+
  `eventname`  
- 필수 요소. 트리거할 이벤트의 이름입니다.  
+ 필수 사항입니다. 트리거할 이벤트의 이름입니다.  
   
  `argumentlist`  
  선택 사항입니다. 쉼표로 구분 된 변수, 배열 또는 식 목록입니다. `argumentlist`인수는 괄호로 묶어야 합니다. 인수가 없으면 괄호를 생략 해야 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  필수는 `eventname` 모듈 내에서 선언 된 이벤트의 이름입니다. Visual Basic 변수 명명 규칙을 따릅니다.  
   
  이벤트가 발생 하는 모듈 내에서 선언 되지 않은 경우 오류가 발생 합니다. 다음 코드 조각에서는 이벤트 선언 및 이벤트가 발생 하는 프로시저를 보여 줍니다.  
@@ -51,6 +54,7 @@ RaiseEvent eventname[( argumentlist )]
 > 사용자 지정 이벤트를 정의 하 여 이벤트의 기본 동작을 변경할 수 있습니다. 사용자 지정 이벤트의 경우 `RaiseEvent` 문은 이벤트의 접근자를 호출 합니다 `RaiseEvent` . 사용자 지정 이벤트에 대 한 자세한 내용은 [이벤트 문](event-statement.md)을 참조 하십시오.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 이벤트를 사용하여 10초부터 0초까지 카운트 다운합니다. 이 코드는 문을 포함 하 여 몇 가지 이벤트 관련 메서드, 속성 및 문을 보여 줍니다 `RaiseEvent` .  
   
  이벤트를 발생시키는 클래스는 이벤트 소스이고 이벤트를 처리하는 메서드는 이벤트 처리기입니다. 이벤트 소스는 생성되는 이벤트에 대해 여러 개의 처리기를 사용할 수 있습니다. 클래스에서 이벤트를 발생시키면 해당 이벤트는 개체의 해당 인스턴스에 대해 이벤트를 처리하도록 선택한 모든 클래스에서 발생됩니다.  
@@ -66,6 +70,7 @@ RaiseEvent eventname[( argumentlist )]
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>예제  
+
  `Form1`에 대한 코드에 다음 코드를 추가합니다. 또는와 같이 존재할 수 있는 모든 중복 프로시저를 바꿉니다 `Form_Load` `Button_Click` .  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8fc173182d062c80ffde15b1e7210644d37f8f66
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408512"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875109"
 ---
 # <a name="type-typename-has-no-constructors"></a>'\<typename>' 형식에 생성자가 없습니다.
+
 형식이 `Sub New()` 호출을 지원하지 않습니다. 컴파일러 또는 이진 파일이 손상되었기 때문일 수 있습니다.  
   
  **오류 ID:** BC30251  
@@ -29,7 +30,7 @@ ms.locfileid: "84408512"
   
 4. 오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)
 - [의견 보내기](/visualstudio/ide/feedback-options)

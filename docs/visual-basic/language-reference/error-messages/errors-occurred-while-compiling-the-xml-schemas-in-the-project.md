@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17c31301e28c757954e72ba103254f038905671f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409632"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874354"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생했습니다.
+
 프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생 했습니다. 따라서 XML IntelliSense를 사용할 수 없습니다.  
   
  프로젝트에 포함 된 XSD (XML 스키마 정의) 스키마에 오류가 있습니다. 이 오류는 프로젝트에 대 한 기존 XSD 스키마 집합과 충돌 하는 XSD 스키마 (.xsd) 파일을 추가 하는 경우에 발생 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "84409632"
   
 - XSD 스키마에서 오류가 식별 되지 않으면 XML 컴파일러에 자세한 오류 메시지를 제공 하는 데 충분 한 정보가 없을 수 있습니다. 프로젝트에 포함 된 .xsd 파일에 대 한 XML 네임 스페이스가 Visual Studio의 XML 스키마 집합에 대해 식별 된 xml 네임 스페이스와 일치 하는지 확인 하는 경우 자세한 오류 정보를 볼 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [오류 목록 창](/visualstudio/ide/reference/error-list-window)
 - [XML](../../programming-guide/language-features/xml/index.md)

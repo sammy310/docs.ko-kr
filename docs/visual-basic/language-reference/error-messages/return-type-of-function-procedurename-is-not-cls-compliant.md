@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 9cc7e25ef1be21ff2f6a71dcb61bc29ec92da30f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ced0b6e06edadd9aed787aab2e715a2853e73a9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400359"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870840"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>'\<procedurename>' 함수의 반환 형식이 CLS 규격이 아닙니다.
+
 `Function`프로시저는로 표시 `<CLSCompliant(True)>` 되지만로 표시 되었거나 `<CLSCompliant(False)>` , 표시 되지 않았거나, 비규격 형식 이므로 한정 되지 않는 형식을 반환 합니다.  
   
  프로시저가 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md)(CLS)와 호환되려면 CLS 규격 형식만 사용해야 합니다. 이는 매개 변수 형식, 반환 형식 및 모든 로컬 변수 형식에 적용됩니다.  

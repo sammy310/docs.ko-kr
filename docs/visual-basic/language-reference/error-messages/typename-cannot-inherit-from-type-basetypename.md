@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: aa04c558abbcc4259c2821cdcbdc1669b91ffee0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5adb5a74c220c7b2f95ac7370040a7fa2bd34299
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402774"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872066"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename>'은(는) 기본 \<type>의 액세스를 해당 어셈블리 범위 밖으로 확장하므로 \<basetypename> '\<type>'에서 상속할 수 없습니다.
+
 클래스 또는 인터페이스가 기본 클래스 또는 인터페이스에서 상속 되지만 덜 제한적인 액세스 수준을 포함 합니다.  
   
  예를 들어 `Public` 인터페이스는 인터페이스에서 상속 `Friend` 하거나 클래스 `Protected` 에서 상속 `Private` 됩니다. 이는 기본 클래스 또는 인터페이스를 제공 하 여 원하는 수준 이상으로 액세스 합니다.  
@@ -29,7 +30,7 @@ ms.locfileid: "84402774"
   
 - 덜 제한적인 액세스 수준을 필요로 하는 경우 `Inherits` 문을 제거 합니다. 더 제한 된 기본 클래스 또는 인터페이스에서 상속할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Class 문](../statements/class-statement.md)
 - [Interface 문](../statements/interface-statement.md)

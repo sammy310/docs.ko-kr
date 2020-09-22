@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 61c6fe7c33b3292066e653304ded43a863413723
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 421766918c03c2378bbf906f85c5855f44ffbdea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397222"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873747"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>'System.Nullable(Of T)'의 메서드는 'AddressOf' 연산자의 피연산자로 사용할 수 없습니다.
+
 문은 `AddressOf` 구조체의 프로시저를 나타내는 피연산자와 함께 연산자를 사용 합니다 <xref:System.Nullable%601> .  
   
  **오류 ID:** BC32126  
@@ -61,7 +62,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Nullable%601>
 - [AddressOf 연산자](../operators/addressof-operator.md)

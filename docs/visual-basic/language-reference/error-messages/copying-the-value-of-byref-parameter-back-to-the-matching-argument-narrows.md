@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 971110c505800b0ceba73506f2b2702516a7a23a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409753"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874549"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>ByRef' 매개 변수 '\<parametername>'의 값을 해당 인수에 다시 복사하면 '\<typename1>' 형식에서 '\<typename2>' 형식으로 축소 변환됩니다.
+
 해당 매개 변수 형식으로 확대 되는 인수를 사용 하 여 프로시저를 호출 하 고 매개 변수에서 인수로 변환 하는 것은 축소입니다.  
   
  클래스 또는 구조체를 정의하는 경우 해당 클래스 또는 구조체 형식을 다른 형식으로 변환하는 변환 연산자를 하나 이상 정의할 수 있습니다. 다른 형식을 클래스 또는 구조체 형식으로 다시 변환하는 역방향 변환 연산자를 정의할 수도 있습니다. 프로시저 호출에서 클래스 또는 구조체 형식을 사용 하는 경우 이러한 변환 연산자를 사용 하 여 인수 형식을 해당 매개 변수의 형식으로 변환할 수 Visual Basic.  
@@ -33,7 +34,7 @@ ms.locfileid: "84409753"
   
 - 호출 인수에 값을 반환 해야 하는 경우 가능한 경우 역방향 변환 연산자를 [확대](../modifiers/widening.md)로 정의 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](../../programming-guide/language-features/procedures/index.md)
 - [프로시저 매개 변수 및 인수](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
