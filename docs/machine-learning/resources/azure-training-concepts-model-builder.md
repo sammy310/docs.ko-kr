@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1321967cacdd373acc19923f992d30c5453ea869
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924580"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556221"
 ---
 # <a name="model-builder-azure-training-resources"></a>모델 작성기 Azure 학습 리소스
 
@@ -48,7 +48,7 @@ Azure Machine Learning 작업 영역을 만들려면 다음이 필요합니다.
     | Standard_NC12   | 12 | 112 | 680  | 2 | 24 | 48 | 2 |
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
-    GPU 최적화 컴퓨팅 형식에 대한 자세한 내용은 [NC 시리즈 Linux VM 설명서](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json)를 참조하세요.
+    GPU 최적화 컴퓨팅 형식에 대한 자세한 내용은 [NC 시리즈 Linux VM 설명서](/azure/virtual-machines/nc-series?bc=%252fazure%252fvirtual-machines%252flinux%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fvirtual-machines%252flinux%252ftoc.json)를 참조하세요.
 - 컴퓨팅 우선 순위
 
   - 낮은 우선 순위: 실행 시간이 짧은 작업에 적합합니다. 중단 및 가용성 부족의 영향을 받을 수 있습니다. Azure에서 여분의 용량을 활용하므로 일반적으로 비용이 절감됩니다.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289696"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554497"
 ---
 # <a name="binary-serialization"></a>이진 Serialization
 
@@ -350,8 +350,8 @@ serialization은 개체의 상태를 스토리지 매체에 스토리지하는 �
 - [보안 및 Serialization](../../framework/misc/security-and-serialization.md)\
 serialization을 수행하는 코드를 쓸 때 따를 보안 코딩 지침을 설명합니다.
 
-- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 원격 통신을 위해 .NET Framework에서 시작하는 다양한 메서드를 설명합니다.
 
-- [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 ASP.NET을 사용하여 만든 XML Web services를 프로그래밍하는 방법을 설명하는 항목입니다.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614767"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606294"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>이제 CspParameters.ParentWindowHandle에 HWND 값 필요
 
@@ -16,7 +16,7 @@ ms.locfileid: "85614767"
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-이전 버전의 .NET Framework에서 값은 [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 값이 있던 메모리의 위치를 나타내는 <xref:System.IntPtr?displayProperty=fullName>가 있어야 합니다. Windows 7 이전 버전에서 이 속성을 form.Handle로 설정해도 아무 영향이 없지만, Windows 8 이상 버전에서는 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: 매개 변수가 잘못되었습니다.&quot;라는 메시지가 표시됩니다.
+이전 버전의 .NET Framework에서 값은 [HWND](/windows/desktop/WinProg/windows-data-types#HWND) 값이 있던 메모리의 위치를 나타내는 <xref:System.IntPtr?displayProperty=fullName>가 있어야 합니다. Windows 7 이전 버전에서 이 속성을 form.Handle로 설정해도 아무 영향이 없지만, Windows 8 이상 버전에서는 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: 매개 변수가 잘못되었습니다.&quot;라는 메시지가 표시됩니다.
 
 #### <a name="suggestion"></a>제안 해결 방법
 

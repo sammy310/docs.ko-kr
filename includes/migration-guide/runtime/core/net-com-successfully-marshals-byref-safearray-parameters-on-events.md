@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1907c9b82c9685899d328f67da8001c0fa4fb697
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: aadf5eb85c8736c29639d49bc8baf21545d2467c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496136"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606882"
 ---
 ### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a>.NET COM이 이벤트에 대해 ByRef SafeArray 매개 변수를 성공적으로 마샬링
 
 #### <a name="details"></a>설명
 
-.NET Framework 4.7.2 및 이전 버전에서 COM 이벤트에 대한 ByRef [SafeArray](https://docs.microsoft.com/windows/desktop/api/oaidl/ns-oaidl-safearray) 매개 변수가 네이티브 코드로 다시 마샬링하지 못합니다.  이 변경을 통해 이제 [SafeArray](https://docs.microsoft.com/windows/desktop/api/oaidl/ns-oaidl-safearray)가 성공적으로 마샬링되었습니다.<ul><li>[ x ] Quirked</li></ul>
+.NET Framework 4.7.2 및 이전 버전에서 COM 이벤트에 대한 ByRef [SafeArray](/windows/desktop/api/oaidl/ns-oaidl-safearray) 매개 변수가 네이티브 코드로 다시 마샬링하지 못합니다.  이 변경을 통해 이제 [SafeArray](/windows/desktop/api/oaidl/ns-oaidl-safearray)가 성공적으로 마샬링되었습니다.<ul><li>[ x ] Quirked</li></ul>
 
 #### <a name="suggestion"></a>제안 해결 방법
 

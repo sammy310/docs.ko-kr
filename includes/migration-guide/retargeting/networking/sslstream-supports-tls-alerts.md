@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 0024b2a53444319788b8cdd312d537f994070b5e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5b566dd89801caff7a253abc2fb62c5fd79591f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606156"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream이 TLS 경고를 지원
 
 #### <a name="details"></a>설명
 
-TLS 핸드셰이크가 실패하면 첫 번째 I/O 읽기/쓰기 작업에 의해 내부 <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> 예외가 있는 <xref:System.IO.IOException?displayProperty=fullName>이 throw됩니다. <xref:System.ComponentModel.Win32Exception?displayProperty=fullName>의 <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> 코드는 [TLS 및 SSL 경고에 대한 Schannel 오류 코드](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts)를 사용하여 원격 주체에서 TLS 경고로 매핑될 수 있습니다. 자세한 내용은 [RFC 2246: 섹션 7.2.2 오류 경고](https://tools.ietf.org/html/rfc2246#section-7.2.2)를 참조하세요. <br/>.NET Framework 4.6.2 및 이전 버전에서 동작은 상대방이 핸드셰이크를 실패한 후 즉시 연결을 거부한 경우 전송 채널(일반적으로 TCP 연결)이 읽기 또는 쓰기 동안 시간을 초과하게 되는 것입니다.
+TLS 핸드셰이크가 실패하면 첫 번째 I/O 읽기/쓰기 작업에 의해 내부 <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> 예외가 있는 <xref:System.IO.IOException?displayProperty=fullName>이 throw됩니다. <xref:System.ComponentModel.Win32Exception?displayProperty=fullName>의 <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> 코드는 [TLS 및 SSL 경고에 대한 Schannel 오류 코드](/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts)를 사용하여 원격 주체에서 TLS 경고로 매핑될 수 있습니다. 자세한 내용은 [RFC 2246: 섹션 7.2.2 오류 경고](https://tools.ietf.org/html/rfc2246#section-7.2.2)를 참조하세요. <br/>.NET Framework 4.6.2 및 이전 버전에서 동작은 상대방이 핸드셰이크를 실패한 후 즉시 연결을 거부한 경우 전송 채널(일반적으로 TCP 연결)이 읽기 또는 쓰기 동안 시간을 초과하게 되는 것입니다.
 
 #### <a name="suggestion"></a>제안 해결 방법
 

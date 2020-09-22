@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 70b71fc55f76514dd17e5b9ba0e76151a966eebb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702262"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539480"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 및 TextElementEnumerator가 이제 UAX29 규격임
 
@@ -30,7 +30,7 @@ ms.locfileid: "83702262"
 
 다음 C# 코드를 생각해 볼 수 있습니다.
 
-```cs
+```csharp
 using System.Globalization;
 
 static void Main(string[] args)

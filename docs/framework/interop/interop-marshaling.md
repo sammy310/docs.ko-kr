@@ -7,11 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618976"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554894"
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 
@@ -78,7 +79,7 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
     > [!NOTE]
     > C# 클라이언트의 스레드를 STA로 설정한 후 MTA COM 구성 요소를 호출하려면 아파트 간 마샬링이 필요합니다.
 
-아파트 모델을 명시적으로 선택하는 방법에 대한 자세한 내용은 [관리되는 스레딩과 관리되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))을 참조하세요.
+아파트 모델을 명시적으로 선택하는 방법에 대한 자세한 내용은 [관리되는 스레딩과 관리되지 않는 스레딩](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))을 참조하세요.
 
 ## <a name="marshaling-remote-calls"></a>원격 호출 마샬링
 
@@ -124,10 +125,10 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 |[COM Interop를 사용하여 데이터 마샬링](marshaling-data-with-com-interop.md)|COM 래퍼를 사용자 지정하여 마샬링 동작을 변경하는 방법을 설명합니다.|
 |[방법: 관리 코드 DCOM을 WCF로 마이그레이션](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM에서 WCF로 마이그레이션하는 방법을 설명합니다.|
 |[방법: HRESULT 및 예외 매핑](how-to-map-hresults-and-exceptions.md)|사용자 지정 예외를 HRESULT에 매핑하는 방법을 설명하고 각 HRESULT와 .NET Framework에 있는 해당 예외 클래스 간의 전체 매핑을 제공합니다.|
-|[제네릭 형식을 통한 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.|
+|[제네릭 형식을 통한 상호 운용](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 상호 운용성을 위해 제네릭 형식을 사용할 때 지원되는 작업을 설명합니다.|
 |[비관리 코드와의 상호 운용](index.md)|공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.|
-|[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM 구성 요소를 .NET Framework 애플리케이션으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|
-|[상호 운용을 위한 디자인 고려 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.|
+|[고급 COM 상호 운용성](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|COM 구성 요소를 .NET Framework 애플리케이션으로 통합하는 방법에 대한 추가정보 링크를 제공합니다.|
+|[상호 운용을 위한 디자인 고려 사항](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|통합된 COM 구성 요소를 작성하기 위한 팁을 제공합니다.|
 
 ## <a name="reference"></a>참고
 

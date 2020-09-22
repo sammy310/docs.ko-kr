@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616281"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606727"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>.NET 4.8에 대한 Windows Forms 콘트롤의 접근성 개선 사항
 
@@ -21,7 +21,7 @@ Windows Forms Framework는 Windows Forms 고객을 더욱 효과적으로 지원
 **이러한 변경을 옵트인 또는 옵트아웃하는 방법** 이러한 변경의 이점을 활용하려면 애플리케이션은 .NET Framework 4.8에서 실행되어야 합니다. 애플리케이션은 다음과 같은 방법으로 이러한 변경 내용을 옵트인할 수 있습니다.
 
 - .NET Framework 4.8을 대상으로 다시 컴파일됩니다. 이러한 접근성 변경 내용은 .NET Framework 4.8을 대상으로 하는 Windows Forms 애플리케이션에서 기본적으로 활성화됩니다.
-- .NET Framework 4.7.2 이전 버전을 대상으로 하며 다음 예제와 같이 app.config 파일의 `<runtime>` 섹션에 [AppContext 스위치](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)를 추가하고 이를 `false`로 설정하여 레거시 접근성 동작을 옵트아웃합니다.
+- .NET Framework 4.7.2 이전 버전을 대상으로 하며 다음 예제와 같이 app.config 파일의 `<runtime>` 섹션에 [AppContext 스위치](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)를 추가하고 이를 `false`로 설정하여 레거시 접근성 동작을 옵트아웃합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ Windows Forms Framework는 Windows Forms 고객을 더욱 효과적으로 지원
 **향상된 ProgressBar 접근성 지원**
 
 - UI Automation 알림 및 기타 UI Automation 기능을 사용할 수 있는 기능이 있는 <xref:System.Windows.Forms.ProgressBar> 컨트롤에 대한 UI Automation 지원을 사용할 수 있습니다. 개발자는 이제 내레이터가 진행률을 표시하기 위해 알릴 수 있는 UI Automation 알림을 사용할 수 있습니다.
-UI 자동화 알림 이벤트를 비롯하여 UI 자동화 이벤트 개요는 [UI 자동화 이벤트 개요](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview)를 참조하세요.
+UI 자동화 알림 이벤트를 비롯하여 UI 자동화 이벤트 개요는 [UI 자동화 이벤트 개요](/windows/desktop/WinAuto/uiauto-eventsoverview)를 참조하세요.
 
 **향상된 PropertyGrid 접근성 지원**
 
@@ -89,7 +89,7 @@ UI 자동화 알림 이벤트를 비롯하여 UI 자동화 이벤트 개요는 [
 **개선된 시각적 표시**
 
 - 이제 빈 <xref:System.Windows.Forms.CheckedListBox> 컨트롤은 포커스를 수신할 때 포커스 표시기를 표시합니다.
-참고: UI 자동화 지원은 런타임의 컨트롤에 대해 활성화되지만 디자인 타임에는 사용되지 않습니다. UI 자동화 개요는 [UI Automation 개요](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview)를 참조하세요.
+참고: UI 자동화 지원은 런타임의 컨트롤에 대해 활성화되지만 디자인 타임에는 사용되지 않습니다. UI 자동화 개요는 [UI Automation 개요](../../../../docs/framework/ui-automation/ui-automation-overview.md)를 참조하세요.
 
 **키보드를 사용하여 컨트롤의 도구 설명 호출**
 

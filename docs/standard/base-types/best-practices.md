@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802931"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554582"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -64,7 +64,7 @@ ms.locfileid: "85802931"
 .NET의 정규식 개체 모델의 핵심은 정규식 엔진을 나타내는 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스입니다. 정규식 성능에 영향을 주는 가장 중요한 단일 요소는 종종 <xref:System.Text.RegularExpressions.Regex> 엔진의 사용 방식입니다. 정규식을 정의할 때는 정규식 엔진과 정규식 패턴을 긴밀히 연결하는 작업이 포함됩니다. 해당 생성자에 정규식 패턴을 전달하여 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 분석할 문자열과 함께 정규식 패턴을 전달하여 정적 메서드를 호출하든 간에 이러한 연결 프로세스는 필수적으로 비용이 클 수 밖에 없습니다.
 
 > [!NOTE]
-> 해석된 정규식과 컴파일된 정규식을 사용할 때 성능에 미치는 영향을 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부:  효율적인 역추적 사용](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
+> 해석된 정규식과 컴파일된 정규식을 사용할 때 성능에 미치는 영향을 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부:  효율적인 역추적 사용](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
 
 정규식 엔진을 특정 정규식 패턴과 연결하고 엔진을 사용하여 여러 가지 방법으로 일치하는 텍스트를 검색할 수 있습니다.
 
@@ -163,7 +163,7 @@ ms.locfileid: "85802931"
 일반적으로 정규식 엔진은 선형 진행을 통해 입력 문자열 내를 이동하면서 입력 문자열을 정규식 패턴과 비교합니다. 하지만 정규식 패턴에 `*`, `+` 및 `?`와 같은 정해지지 않은 수량자가 사용될 경우 정규식 엔진은 일부 성공한 부분 일치를 포기하고 이전에 저장된 상태로 돌아와서 전체 패턴에 대해 일치하는 항목을 찾을 수 있습니다. 이 프로세스를 역추적이라고 합니다.
 
 > [!NOTE]
-> 역추적에 대한 자세한 내용은 [정규식 동작 정보](details-of-regular-expression-behavior.md) 및 [역추적](backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
+> 역추적에 대한 자세한 내용은 [정규식 동작 정보](details-of-regular-expression-behavior.md) 및 [역추적](backtracking-in-regular-expressions.md)을 참조하세요. 역추적에 대해 자세히 알아보려면 BCL 팀 블로그의 [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking(정규식 성능 최적화, II부: 효율적인 역추적 사용](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)을 참조하세요.
 
 역추적을 지원할 경우 정규식에 성능과 유연성이 제공됩니다. 또한 정규식 개발자에게 정규식 엔진의 작동에 대한 제어 책임을 맡길 수 있습니다. 개발자가 이러한 책임을 인식하지 못하는 경우가 많기 때문에 역추적을 오용하거나 과도하게 사용하여 정규식 성능이 저하되는 경우가 자주 발생합니다. 최악의 시나리오에서는 실행 시간이 입력 문자열에 있는 추가 문자마다 두 배씩 늘어날 수 있습니다. 실제로 역추적을 과도하게 사용할 경우에는 입력이 정규식 패턴과 거의 일치할 경우 프로그래밍 면에서 무한 루프를 만드는 것과 동일한 결과를 가져올 수 있으며 정규식 엔진이 비교적 간단한 입력 문자열이라도 처리하는 데 몇 시간 또는 심지어 며칠이 걸릴 수도 있습니다.
 

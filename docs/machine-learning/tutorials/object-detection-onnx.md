@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803406"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679418"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -492,22 +492,22 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [`IDataView`](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
+    ML.NET 파이프라인은 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) 메서드가 호출될 때 작동할 데이터 스키마를 알아야 합니다. 이 경우 학습과 비슷한 프로세스가 사용됩니다. 그러나 실제 학습이 발생하지 않기 때문에 빈 [`IDataView`](xref:Microsoft.ML.IDataView)를 사용할 수 있습니다. 빈 목록에서 파이프라인의 새로운 [`IDataView`](xref:Microsoft.ML.IDataView)를 만듭니다.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     그런 다음 파이프라인을 정의합니다. 파이프라인은 4개의 변환으로 구성됩니다.
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*)에서는 이미지를 비트맵으로 로드합니다.
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*)는 지정된 크기로 이미지의 크기를 조정합니다(이 경우 `416 x 416`).
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*)는 이미지의 픽셀 표현을 비트맵에서 숫자 벡터로 변경합니다.
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*)는 ONNX 모델을 로드하고 제공된 데이터를 채점하는 데 사용합니다.
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A)에서는 이미지를 비트맵으로 로드합니다.
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A)는 지정된 크기로 이미지의 크기를 조정합니다(이 경우 `416 x 416`).
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A)는 이미지의 픽셀 표현을 비트맵에서 숫자 벡터로 변경합니다.
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A)는 ONNX 모델을 로드하고 제공된 데이터를 채점하는 데 사용합니다.
 
     `data` 변수 아래에 `LoadModel` 메서드의 파이프라인을 정의합니다.
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    이제 채점을 위해 모델을 인스턴스화해야 합니다. 파이프라인에서 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 메서드를 호출하고 추가 처리를 위해 반환합니다.
+    이제 채점을 위해 모델을 인스턴스화해야 합니다. 파이프라인에서 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) 메서드를 호출하고 추가 처리를 위해 반환합니다.
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
@@ -524,7 +524,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-그런 다음 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 메서드를 사용하여 데이터를 채점합니다.
+그런 다음 [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 데이터를 채점합니다.
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -626,11 +626,11 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 메서드를 사용하여 텍스트를 포함하도록 경계 상자 위에 직사각형을 만들어 채웁니다. 그러면 텍스트가 대비되어 가독성을 높이는 데 도움이 됩니다.
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle%2A) 메서드를 사용하여 텍스트를 포함하도록 경계 상자 위에 직사각형을 만들어 채웁니다. 그러면 텍스트가 대비되어 가독성을 높이는 데 도움이 됩니다.
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-그런 다음 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 및 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 메서드를 사용하여 이미지에 텍스트와 경계 상자를 그립니다.
+그런 다음 [`DrawString`](xref:System.Drawing.Graphics.DrawString%2A) 및 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle%2A) 메서드를 사용하여 이미지에 텍스트와 경계 상자를 그립니다.
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 

@@ -3,12 +3,12 @@ title: 그룹화된 조인 수행(C#의 LINQ)
 description: C#의 LINQ를 사용하여 그룹화된 조인을 수행하는 방법을 알아봅니다.
 ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6411479c5fe6cb0ee79a0cd3df6de2f4d42c26a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135752"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542811"
 ---
 # <a name="perform-grouped-joins"></a>그룹화 조인 수행
 
@@ -20,7 +20,7 @@ ms.locfileid: "82135752"
 > 첫 번째 컬렉션의 각 요소는 상관 관계가 지정된 요소가 두 번째 컬렉션에 있는지 여부에 관계없이 그룹 조인의 결과 집합에 표시됩니다. 상관 관계가 지정된 요소가 없는 경우 해당 요소에 대해 상관 관계가 지정된 요소의 시퀀스가 비어 있습니다. 따라서 결과 선택기에서 첫 번째 컬렉션의 모든 요소에 액세스할 수 있습니다. 이는 두 번째 컬렉션에 일치 항목이 없는 첫 번째 컬렉션의 요소에 액세스할 수 없는 비그룹 조인의 결과 선택기와 다릅니다.
 
 > [!WARNING]
-> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType>에는 기존 관계형 데이터베이스 용어에 직접적으로 해당하는 항목이 없습니다. 그러나 이 메서드는 내부 조인 및 왼쪽 우선 외부 조인의 상위 집합을 구현합니다. 이러한 작업은 모두 그룹화된 조인과 관련하여 작성할 수 있습니다. 자세한 내용은 [조인 작업](../programming-guide/concepts/linq/join-operations.md) 및 [Entity Framework Core, GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin)을 참조하세요.
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType>에는 기존 관계형 데이터베이스 용어에 직접적으로 해당하는 항목이 없습니다. 그러나 이 메서드는 내부 조인 및 왼쪽 우선 외부 조인의 상위 집합을 구현합니다. 이러한 작업은 모두 그룹화된 조인과 관련하여 작성할 수 있습니다. 자세한 내용은 [조인 작업](../programming-guide/concepts/linq/join-operations.md) 및 [Entity Framework Core, GroupJoin](/ef/core/querying/complex-query-operators#groupjoin)을 참조하세요.
 
 이 문서의 첫 번째 예제에서는 그룹 조인을 수행하는 방법을 보여 줍니다. 두 번째 예제에서는 그룹 조인을 사용하여 XML 요소를 만드는 방법을 보여 줍니다.
 

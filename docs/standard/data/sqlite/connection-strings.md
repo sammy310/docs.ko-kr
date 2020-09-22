@@ -2,12 +2,12 @@
 title: 연결 문자열
 ms.date: 12/13/2019
 description: 연결 문자열의 지원되는 키워드 및 값입니다.
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555395"
 ---
 # <a name="connection-strings"></a>연결 문자열
 
@@ -92,7 +92,7 @@ e_sqlite3에서와 같이 네이티브 SQLite 라이브러리를 컴파일하는
 
 동시성 향상을 위해 공유 캐시를 사용하는 기본 연결 문자열입니다.
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 암호화된 데이터베이스입니다.
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 앱이 수정할 수 없는 읽기 전용 데이터베이스입니다.
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 전용 메모리 내 데이터베이스입니다.
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,7 +124,7 @@ Data Source=:memory:
 
 이름 *Sharable*로 식별되는 공유 가능한 메모리 내 데이터베이스입니다.
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 

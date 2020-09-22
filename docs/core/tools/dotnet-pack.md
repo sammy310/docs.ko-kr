@@ -2,12 +2,12 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 04/28/2020
-ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442230"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537833"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -186,6 +186,6 @@ dotnet pack -h|--help
 
   `NuspecFile`, `NuspecBasePath` 및 `NuspecProperties`를 사용하는 방법에 관한 자세한 내용은 다음 리소스를 참조하세요.
   
-  - [.nuspec을 사용하여 압축](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
-  - [사용자 지정 패키지를 만들기 위한 고급 확장점](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [전역 속성](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [.nuspec을 사용하여 압축](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [사용자 지정 패키지를 만들기 위한 고급 확장점](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [전역 속성](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

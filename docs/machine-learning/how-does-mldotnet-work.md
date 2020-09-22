@@ -4,12 +4,12 @@ description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607773"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679666"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -262,7 +262,7 @@ ML.NET 기계 학습 파이프라인의 핵심에는 [DataView](xref:Microsoft.M
 
 [Machine Learning 작업](resources/tasks.md) 가이드에서 다른 기계 학습 작업의 출력 열에 대해 더 자세히 알아볼 수 있습니다.
 
-DataView의 중요한 속성은 이들이 **느리게** 평가된다는 점입니다. 데이터 뷰는 모델 학습 및 평가, 데이터 예측 중에만 로드되고 작동됩니다. ML.NET 애플리케이션을 쓰고 테스트하는 동안에는 Visual Studio 디버거를 사용하여 [미리 보기](xref:Microsoft.ML.DebuggerExtensions.Preview*) 메서드를 호출하여 어떠한 데이터 뷰 개체도 살펴볼 수 있습니다.
+DataView의 중요한 속성은 이들이 **느리게** 평가된다는 점입니다. 데이터 뷰는 모델 학습 및 평가, 데이터 예측 중에만 로드되고 작동됩니다. ML.NET 애플리케이션을 쓰고 테스트하는 동안에는 Visual Studio 디버거를 사용하여 [미리 보기](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) 메서드를 호출하여 어떠한 데이터 뷰 개체도 살펴볼 수 있습니다.
 
 ```csharp
     var debug = testPriceDataView.Preview();
@@ -284,4 +284,4 @@ DataView의 중요한 속성은 이들이 **느리게** 평가된다는 점입�
 
 * [방법 가이드](./how-to-guides/index.md)에서 더 자세히 특정 항목에 대해 알아봅니다.
 
-* 만일 관심이 아주 많다면 [API 참조 문서](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)를 바로 참조할 수 있습니다.
+* 만일 관심이 아주 많다면 [API 참조 문서](../../api/index.md?view=ml-dotnet)를 바로 참조할 수 있습니다.

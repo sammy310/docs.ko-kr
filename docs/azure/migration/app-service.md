@@ -3,12 +3,12 @@ title: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 description: .NET 웹앱 또는 서비스를 온-프레미스에서 Azure App Service로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174311"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539088"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 
@@ -37,9 +37,9 @@ WCF의 경우 다음 바인딩이 지원됩니다.
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)을 활성화해야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)을 활성화해야 합니다. |
-| `NetHttpBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
-| `NetHttpsBinding` | [웹 소켓 지원](https://docs.microsoft.com/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
+| `WSDualHttpBinding` | [웹 소켓 지원](/azure/app-service/web-sites-configure)을 활성화해야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)을 활성화해야 합니다. |
+| `NetHttpBinding` | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
+| `NetHttpsBinding` | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. | [웹 소켓 지원](/azure/app-service/web-sites-configure)이 콜백 계약에 대해 활성화되어야 합니다. |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
@@ -62,7 +62,7 @@ IIS5 호환 모드는 지원되지 않습니다. Azure App Service에서 각 웹
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ 스키마 준수
 
-Azure App Service IIS 스키마의 일부 요소와 특성이 정의되지 있지 않습니다. 문제가 발생하는 경우 [XDT 변환](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/) 사용을 고려합니다.
+Azure App Service IIS 스키마의 일부 요소와 특성이 정의되지 있지 않습니다. 문제가 발생하는 경우 [XDT 변환](/azure/app-service/configure-common) 사용을 고려합니다.
 
 #### <a name="single-application-pool-per-site"></a>사이트당 하나의 애플리케이션 풀
 

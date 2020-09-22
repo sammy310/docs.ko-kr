@@ -3,12 +3,12 @@ title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델
 description: C#에서 비동기 프로그래밍에 대한 간소화된 접근 방식인 작업 기반 비동기 프로그래밍을 사용하는 시기 및 방법을 알아봅니다.
 ms.date: 08/19/2020
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 5e85b99025b31e205c66468d4bd886701cbaea17
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1014e38dcb3e2c4f56c8b3f3dade9bdbff3abd27
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812092"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556039"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 
@@ -43,7 +43,7 @@ C#의 [async](../../../language-reference/keywords/async.md) 및 [await](../../.
 
 다음 예제에서는 비동기 메서드를 보여줍니다. 코드의 거의 모든 내용이 익숙할 것입니다.
 
-[async 및 await를 사용한 비동기 프로그래밍(C#)](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs)에서 다운로드 가능한 전체 WPF(Windows Presentation Foundation) 예제를 찾을 수 있습니다.
+[async 및 await를 사용한 비동기 프로그래밍(C#)](/samples/dotnet/samples/async-and-await-cs)에서 다운로드 가능한 전체 WPF(Windows Presentation Foundation) 예제를 찾을 수 있습니다.
 
 :::code language="csharp" source="snippets/access-web/Program.cs" id="ControlFlow":::
 
@@ -121,7 +121,7 @@ string contents = await client.GetStringAsync("https://docs.microsoft.com/dotnet
 
 `GetStringAsync`와 같이 비동기 프로그래밍을 지원하는 메서드를 어디에서 검색해야 할지 궁금했을 것입니다. .NET Framework 4.5 이상 및 .NET Core에는 `async` 및 `await`에 작동하는 많은 멤버가 포함되어 있습니다. 멤버 이름에 붙는 “Async” 접미사와 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식으로 멤버를 인식할 수 있습니다. 예를 들어, `System.IO.Stream` 클래스는 동기 메서드인 <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> 및 <xref:System.IO.Stream.Write%2A>와 함께 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 같은 메서드를 포함합니다.
 
-Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용은 UWP 개발의 경우 [스레딩 및 비동기 프로그래밍](/windows/uwp/threading-async/)을 참조하세요. Windows 런타임 이전 버전을 사용하는 경우 [비동기 프로그래밍(Windows 스토어 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 및 [빠른 시작: C# 또는 Visual Basic에서 비동기 API 호출](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))을 참조하세요.
+Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용은 UWP 개발의 경우 [스레딩 및 비동기 프로그래밍](/windows/uwp/threading-async/)을 참조하세요. Windows 런타임 이전 버전을 사용하는 경우 [비동기 프로그래밍(Windows 스토어 앱)](/previous-versions/windows/apps/hh464924(v=win.10)) 및 [빠른 시작: C# 또는 Visual Basic에서 비동기 API 호출](/previous-versions/windows/apps/hh452713(v=win.10))을 참조하세요.
 
 ## <a name="threads"></a><a name="BKMK_Threads"></a> 스레드
 
@@ -214,7 +214,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 
 | 제목 | 설명 | 예제 |
 |--|--|--|
-| [async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) | 동시에 여러 작업을 시작하는 방법을 보여줍니다. | [비동기 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
+| [async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)](./index.md) | 동시에 여러 작업을 시작하는 방법을 보여줍니다. | [비동기 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
 | [비동기 반환 형식(C#)](async-return-types.md) | 비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다. |  |
 | 신호 메커니즘으로 취소 토큰이 있는 작업을 취소합니다. | 비동기 솔루션에 다음과 같은 기능을 추가하는 방법을 보여줍니다.<br><br> - [작업 목록 취소(C#)](cancel-an-async-task-or-a-list-of-tasks.md)<br>- [일정 기간 이후 작업 취소(C#)](cancel-async-tasks-after-a-period-of-time.md)<br>- [완료되면 비동기 작업 처리(C#)](start-multiple-async-tasks-and-process-them-as-they-complete.md) |  |
 | [파일 액세스에 async 사용(C#)](using-async-for-file-access.md) | async 및 await를 사용하여 파일에 액세스하는 이점을 나열하고 보여줍니다. |  |

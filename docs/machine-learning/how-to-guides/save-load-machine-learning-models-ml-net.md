@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 681a35956a8959e2f1cbb5a7023e0ef29b67097e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977003"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679536"
 ---
 # <a name="save-and-load-trained-models"></a>학습된 모델 저장 및 로드
 
@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. 모델의 [`ITransformer`](xref:Microsoft.ML.ITransformer)
 2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) 예상 입력의 [`ITransformer`](xref:Microsoft.ML.ITransformer)
 
-모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 통해 학습된 모델을 입력 데이터의 `DataViewSchema`를 사용하여 `model.zip` 파일에 저장합니다.
+모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) 메서드를 통해 학습된 모델을 입력 데이터의 `DataViewSchema`를 사용하여 `model.zip` 파일에 저장합니다.
 
 ```csharp
 // Save Trained Model
@@ -80,7 +80,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 로컬로 저장된 모델은 `ASP.NET Core` 및 `Serverless Web Applications`처럼 다른 프로세스나 애플리케이션에서 사용할 수 있습니다. 자세한 정보는 [웹 API에서 ML.NET 사용](./serve-model-web-api-ml-net.md) 및 [ML.NET 서버리스 웹앱 배포](./serve-model-serverless-azure-functions-ml-net.md) 방법 문서를 참조하세요.
 
-별도의 애플리케이션이나 프로세스에서는 파일 경로와 함께 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드를 사용하여 학습된 모델을 애플리케이션에 가져옵니다.
+별도의 애플리케이션이나 프로세스에서는 파일 경로와 함께 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) 메서드를 사용하여 학습된 모델을 애플리케이션에 가져옵니다.
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>원격으로 저장된 모델 로드
 
-원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드에서 파일 경로 대신 [`Stream`](xref:System.IO.Stream)을 사용합니다.
+원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) 메서드에서 파일 경로 대신 [`Stream`](xref:System.IO.Stream)을 사용합니다.
 
 ```csharp
 // Create MLContext

@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159470"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543688"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>방법: .NET Framework와 Windows 런타임 스트림 간의 변환(Windows에만 해당)
 
-UWP 앱용 .NET Framework는 전체 .NET Framework의 하위 집합입니다. UWP 앱에 대한 보안과 기타 요구 사항 때문에, 전체 .NET Framework API 세트를 사용하여 파일을 열고 읽을 수는 없습니다. 자세한 내용은 [UWP 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))를 참조하세요. 그러나 다른 스트림 조작 작업에 대한 .NET Framework API를 사용하고 싶을 수 있습니다. 이러한 스트림을 조작하려면 <xref:System.IO.MemoryStream> 또는 <xref:System.IO.FileStream>과 같은 .NET Framework 스트림 형식과 <xref:Windows.Storage.Streams.IInputStream>,<xref:Windows.Storage.Streams.IOutputStream> 또는 <xref:Windows.Storage.Streams.IRandomAccessStream>과 같은 Windows 런타임 스트림 간에 변환하면 됩니다.
+UWP 앱용 .NET Framework는 전체 .NET Framework의 하위 집합입니다. UWP 앱에 대한 보안과 기타 요구 사항 때문에, 전체 .NET Framework API 세트를 사용하여 파일을 열고 읽을 수는 없습니다. 자세한 내용은 [UWP 앱용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))를 참조하세요. 그러나 다른 스트림 조작 작업에 대한 .NET Framework API를 사용하고 싶을 수 있습니다. 이러한 스트림을 조작하려면 <xref:System.IO.MemoryStream> 또는 <xref:System.IO.FileStream>과 같은 .NET Framework 스트림 형식과 <xref:Windows.Storage.Streams.IInputStream>,<xref:Windows.Storage.Streams.IOutputStream> 또는 <xref:Windows.Storage.Streams.IRandomAccessStream>과 같은 Windows 런타임 스트림 간에 변환하면 됩니다.
 
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 클래스는 이러한 변환을 쉽게 하는 메서드를 포함합니다. 하지만 .NET Framework와 Windows 런타임 스트림의 근본적인 차이점은 이러한 메서드를 사용한 결과에 영향을 미치며, 다음 섹션에 설명되어 있습니다.
 
@@ -69,6 +69,6 @@ Windows 런타임 임의 액세스 스트림에서 .NET Framework 스트림으�
 
 ## <a name="see-also"></a>참조
 
-- [빠른 시작: 파일 읽기 및 쓰기(Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
-- [Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
-- [Windows 스토어용 .NET 앱 API](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  
+- [빠른 시작: 파일 읽기 및 쓰기(Windows)](/previous-versions/windows/apps/hh464978(v=win.10))  
+- [Windows 스토어 앱용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))  
+- [Windows 스토어용 .NET 앱 API](/previous-versions/br230232(v=vs.120))

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104019"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558812"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
 LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. LINQ 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 LINQ 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
@@ -88,7 +88,7 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
 </Root>  
 ```  
   
- 자세한 내용은 [C#에서 XML 트리 만들기(LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md)를 참조하세요.  
+ 자세한 내용은 [C#에서 XML 트리 만들기(LINQ to XML)](../../../../standard/linq/create-xml-trees.md)를 참조하세요.  
   
 ## <a name="performing-operations-on-source-elements"></a>소스 요소에서 작업 수행  
  출력 시퀀스에 소스 시퀀스의 요소 또는 요소 속성이 포함되어 있지 않을 수 있습니다. 대신에 출력이 소스 요소를 입력 인수로 사용하여 계산되는 값 시퀀스일 수 있습니다.
@@ -107,6 +107,6 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
 - [LINQ(Language-Integrated Query)(C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML(C#)](./linq-to-xml-overview.md)
+- [LINQ to XML(C#)](../../../../standard/linq/linq-xml-overview.md)
 - [LINQ 쿼리 식](../../../linq/index.md)
 - [select 절](../../../language-reference/keywords/select-clause.md)

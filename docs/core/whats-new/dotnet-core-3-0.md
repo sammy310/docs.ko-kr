@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608210"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537498"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -136,7 +136,7 @@ dotnet publish -r <rid> -c Release
 
 무엇보다도, 잘라낸 후 앱을 테스트해야 합니다.
 
-IL 링커 도구에 대한 자세한 내용은 [문서](https://aka.ms/dotnet-illink)또는 [mono/linker]( https://github.com/mono/linker) 리포지토리를 참조하세요.
+IL 링커 도구에 대한 자세한 내용은 [문서](../deploying/trim-self-contained.md)또는 [mono/linker]( https://github.com/mono/linker) 리포지토리를 참조하세요.
 
 ### <a name="tiered-compilation"></a>계층화된 컴파일
 
@@ -329,9 +329,9 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 ### <a name="msix-deployment"></a>MSIX 배포
 
-[MSIX](https://docs.microsoft.com/windows/msix/)는 새로운 Windows 애플리케이션 패키지 형식입니다. Windows 10에 .NET Core 3.0 데스크톱 애플리케이션을 배포하는 데 사용할 수 있습니다.
+[MSIX](/windows/msix/)는 새로운 Windows 애플리케이션 패키지 형식입니다. Windows 10에 .NET Core 3.0 데스크톱 애플리케이션을 배포하는 데 사용할 수 있습니다.
 
-Visual Studio 2019에 제공되는 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 사용하면 [자체 포함](../deploying/index.md#publish-self-contained) .NET Core 애플리케이션을 사용하여 MSIX 패키지를 만들 수 있습니다.
+Visual Studio 2019에 제공되는 [Windows 애플리케이션 패키징 프로젝트](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 사용하면 [자체 포함](../deploying/index.md#publish-self-contained) .NET Core 애플리케이션을 사용하여 MSIX 패키지를 만들 수 있습니다.
 
 NET Core 프로젝트 파일은 `<RuntimeIdentifiers>` 속성에 지원되는 런타임을 지정해야 합니다.
 

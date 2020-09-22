@@ -2,12 +2,12 @@
 title: 컨테이너로 실행되는 데이터베이스 서버 사용
 description: 컨테이너로 실행되는 데이터베이스 서버를 개발용으로만 사용하는 중요성을 이해합니다. 절대 프로덕션용이 아닙니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628529"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539401"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -101,7 +101,7 @@ public static int Main(string[] args)
 
 컨테이너를 시작하는 동안 마이그레이션을 적용하고 데이터베이스를 시드할 때 중요한 주의 사항이 있습니다. 어떤 이유로든 데이터베이스 서버를 사용하지 못할 수도 있으므로 서버를 사용할 수 있을 때까지 대기하는 동안 다시 시도를 처리해야 합니다. 이 재시도 논리는 다음 코드와 같이 `MigrateDbContext()` 확장 메서드에 의해 처리됩니다.
 
-```cs
+```csharp
 public static IWebHost MigrateDbContext<TContext>(
     this IWebHost host,
     Action<TContext,

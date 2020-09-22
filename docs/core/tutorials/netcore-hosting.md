@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656178"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537550"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -144,7 +144,7 @@ mscoree.h 호스팅 API(아래에 설명)와 달리 CoreCLRHost.h API는 런타�
 
 또는 `coreclr_execute_assembly` 함수를 사용하여 관리되는 실행 파일을 실행할 수 있습니다. 이 API는 어셈블리 경로 및 인수 배열을 입력매개 변수로 허용합니다. 해당 경로의 어셈블리를 로드하고 기본 메서드를 호출합니다.
 
-```C++
+```c++
 int hr = executeAssembly(
         hostHandle,
         domainId,
@@ -197,7 +197,7 @@ Linux 또는 macOS에서 핵심 런타임 라이브러리는 각각 *libcoreclr.
 
 런타임은 `Start` 함수에 대한 호출로 시작됩니다.
 
-```C++
+```c++
 hr = runtimeHost->Start();
 ```
 
@@ -234,7 +234,7 @@ AppDomain이 실행 중이면 호스트에서 이제 관리 코드를 실행할 
 
 `ExecuteAssembly`가 호스트의 요구 사항을 충족하지 않는 경우 `CreateDelegate`를 사용하여 정적 관리 메서드에 대한 함수 포인터를 만듭니다. 이 경우 호스트에서 호출하는 메서드의 시그니처를 알아야 하지만(함수 포인터 형식을 만들기 위해) 호스트는 어셈블리의 진입점이 아닌 코드를 호출할 수 있습니다. 두 번째 매개 변수에 제공된 어셈블리 이름은 로드할 라이브러리의 [전체 관리형 어셈블리 이름](../../standard/assembly/names.md) 입니다.
 
-```C++
+```c++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
     domainId,

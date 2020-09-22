@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 11ac4277081392b1e7ac79147f621ff67d699fe5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656147"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555304"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -153,7 +153,7 @@ ms.locfileid: "89656147"
  모든 어셈블리를 검색 경로에 포함할 수 없는 경우에는 .NET Framework 추가 기능 모델을 사용하거나 어셈블리를 전역 어셈블리 캐시에 포함하거나 애플리케이션 도메인을 만드는 것과 같은 대체 방법을 고려하세요.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>.NET Framework 추가 기능 모델 사용 고려  
- 일반적으로 애플리케이션 기준 위치에 설치되지 않는 추가 기능을 구현하는 데 로드 소스 컨텍스트를 사용할 경우 .NET Framework 추가 기능 모델을 사용하세요. 이 모델은 애플리케이션 도메인 또는 프로세스 수준에서 격리되므로, 사용자가 애플리케이션 도메인을 직접 관리할 필요가 없습니다. 추가 기능 모델에 대한 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.  
+ 일반적으로 애플리케이션 기준 위치에 설치되지 않는 추가 기능을 구현하는 데 로드 소스 컨텍스트를 사용할 경우 .NET Framework 추가 기능 모델을 사용하세요. 이 모델은 애플리케이션 도메인 또는 프로세스 수준에서 격리되므로, 사용자가 애플리케이션 도메인을 직접 관리할 필요가 없습니다. 추가 기능 모델에 대한 자세한 내용은 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v=vs.100))을 참조하세요.  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>전역 어셈블리 캐시 사용 고려  
  어셈블리를 전역 어셈블리 캐시에 포함하면 기본 로드 컨텍스트의 장점을 잃거나 다른 컨텍스트의 단점을 떠맡지 않고 애플리케이션 기준 위치 외부에 있는 공유 어셈블리 경로를 활용할 수 있습니다.  

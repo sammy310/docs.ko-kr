@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7c4b9faf25853c1c7a546f06c329f6f153eef904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606396"
 ---
 ### <a name="changes-in-path-normalization"></a>경로 정규화의 변경
 
@@ -17,7 +17,7 @@ ms.locfileid: "85614686"
 - 경로의 상대 디렉터리(.) 또는 부모 디렉터리(..) 평가
 - 지정된 문자 자르기
 .NET Framework 4.6.2를 대상으로 하는 앱부터는 경로 정규화의 다음 변경이 기본적으로 사용됩니다.
-  - 런타임은 운영 체제의 [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 함수를 지연시켜 경로를 정규화합니다.
+  - 런타임은 운영 체제의 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 함수를 지연시켜 경로를 정규화합니다.
 - 정규화 중에 더 이상 디렉터리 세그먼트의 끝(예: 디렉터리 이름 끝의 공백)이 잘리지 않습니다.
 - 완전 신뢰의 디바이스 경로 구문(`\\.\` 포함) 지원 및 mscorlib.dll `\\?\`에서 파일 I/O API 지원
 - 런타임에서 디바이스 구문 경로가 유효한지 확인하지 않습니다.

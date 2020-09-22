@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271791"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679601"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 
@@ -43,7 +43,7 @@ ms.locfileid: "89271791"
 > [!IMPORTANT]
 > 마지막 두 경로 간의 차이점에 주목하십시오. 둘 다 선택적 볼륨 지정자(두 경우 모두 `C:`)를 지정하지만 첫 번째 경로는 지정한 볼륨의 루트에서 시작하는 반면, 두 번째 경로는 그러지 않습니다. 따라서 첫 번째 경로는 `C:` 드라이브의 루트 디렉터리에서 시작하는 절대 경로인 반면, 두 번째 경로는 `C:` 드라이브의 현재 디렉터리에서 시작하는 상대 경로입니다. 첫 번째 경로가 의도한 두 번째 양식을 사용하는 것은 Windows 파일 경로를 수반하는 버그의 일반적인 원인입니다.
 
-<xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 메서드를 호출하여 파일 경로가 정규화되는지(즉, 경로가 현재 디렉터리와 독립적이며 현재 디렉터리가 변경되어도 변경되지 않음) 여부를 결정할 수 있습니다. 참고로 그러한 경로는 상대 디렉터리 세그먼트(`.` 및 `..`)를 포함할 수 있으며 확인된 경로가 언제나 같은 위치를 가리키는 경우 여전히 정규화됩니다.
+<xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType> 메서드를 호출하여 파일 경로가 정규화되는지(즉, 경로가 현재 디렉터리와 독립적이며 현재 디렉터리가 변경되어도 변경되지 않음) 여부를 결정할 수 있습니다. 참고로 그러한 경로는 상대 디렉터리 세그먼트(`.` 및 `..`)를 포함할 수 있으며 확인된 경로가 언제나 같은 위치를 가리키는 경우 여전히 정규화됩니다.
 
 다음 예제에서는 절대 경로와 상대 경로 간의 차이점을 보여 줍니다. `D:\FY2018\` 디렉터리가 있고, 예제를 실행하기 전에 명령 프롬프트에서 `D:\`의 현재 디렉터리를 설정하지 않았다고 가정합니다.
 

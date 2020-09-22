@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a885ae042eef939021d3a9b75616505c289bd43c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301920"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558089"
 ---
 # <a name="generic-classes-c-programming-guide"></a>제네릭 클래스(C# 프로그래밍 가이드)
 제네릭 클래스는 특정 데이터 형식과 관련이 없는 작업을 캡슐화합니다. 제네릭 클래스는 연결된 목록, 해시 테이블, 스택, 큐, 트리 등의 컬렉션에 가장 일반적으로 사용됩니다. 컬렉션에서 항목을 추가하고 제거하는 등의 작업은 저장되는 데이터의 형식과 관계없이 기본적으로 동일한 방식으로 수행됩니다.  
@@ -71,5 +71,5 @@ ms.locfileid: "87301920"
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)
 - [제네릭](./index.md)
-- [열거자의 상태 저장](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
-- [상속 퍼즐, 1부](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)
+- [열거자의 상태 저장](/archive/blogs/wesdyer/saving-the-state-of-enumerators)
+- [상속 퍼즐, 1부](/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

@@ -4,12 +4,12 @@ description: Apache Livy 및 spark-submit을 사용하여 Azure HDInsight에 Apa
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557166"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Azure HDInsight에 Apache Spark 작업의 .NET 제출
 
@@ -37,7 +37,7 @@ Apache Spark 작업의 .NET을 HDInsight에 배포하는 방법에는 두 가지
 
 ## <a name="deploy-using-apache-livy"></a>Apache Livy를 사용하여 배포
 
-Apache Spark REST API인 [Apache Livy](https://livy.incubator.apache.org/)를 사용하여 Azure HDInsight Spark 클러스터에 .NET for Apache Spark 작업을 제출할 수 있습니다. 자세한 내용은 [Apache Livy를 사용한 원격 작업](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface)을 참조하세요.
+Apache Spark REST API인 [Apache Livy](https://livy.incubator.apache.org/)를 사용하여 Azure HDInsight Spark 클러스터에 .NET for Apache Spark 작업을 제출할 수 있습니다. 자세한 내용은 [Apache Livy를 사용한 원격 작업](/azure/hdinsight/spark/apache-spark-livy-rest-interface)을 참조하세요.
 
 `curl`을 사용하여 Linux에서 다음 명령을 실행할 수 있습니다.
 
@@ -60,4 +60,4 @@ EOF
 
 * [.NET for Apache Spark 시작](../tutorials/get-started.md)
 * [Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포](../tutorials/hdinsight-deployment.md)
-* [HDInsight 설명서](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight 설명서](/azure/hdinsight/)

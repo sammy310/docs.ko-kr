@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 04/29/2020
-ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537741"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -77,7 +77,7 @@ dotnet test -h|--help
 
 - **`--blame-crash`** (.NET 5.0 미리 보기 SDK 이후 사용 가능)
 
-  테스트를 원인 모드를 실행하고 테스트 호스트가 예기치 않게 종료될 때 크래시 덤프를 수집합니다. 해당 옵션은 Windows에서만 지원됩니다. *procdump.exe* 및 *procdump64.exe*를 포함하는 디렉터리가 PATH 또는 PROCDUMP_PATH 환경 변수에 있어야 합니다. [도구 다운로드](https://docs.microsoft.com/sysinternals/downloads/procdump). `--blame`을 의미합니다.
+  테스트를 원인 모드를 실행하고 테스트 호스트가 예기치 않게 종료될 때 크래시 덤프를 수집합니다. 해당 옵션은 Windows에서만 지원됩니다. *procdump.exe* 및 *procdump64.exe*를 포함하는 디렉터리가 PATH 또는 PROCDUMP_PATH 환경 변수에 있어야 합니다. [도구 다운로드](/sysinternals/downloads/procdump). `--blame`을 의미합니다.
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5.0 미리 보기 SDK 이후 사용 가능)
 

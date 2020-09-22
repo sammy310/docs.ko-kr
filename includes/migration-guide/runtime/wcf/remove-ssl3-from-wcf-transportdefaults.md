@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23987c300ac4fbad401de180b63106cd234f8d27
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a5f4047d70276a90c9d72918a2559fd795feb26e
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496141"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770811"
 ---
 ### <a name="remove-ssl3-from-the-wcf-transportdefaults"></a>WCF TransportDefaults에서 Ssl3 제거
 
@@ -14,13 +14,18 @@ ms.locfileid: "89496141"
 
 #### <a name="suggestion"></a>제안 해결 방법
 
-Ssl3이 필요한 경우 다음 구성 메커니즘 중 하나를 사용하여 협상된 프로토콜 목록에 Ssl3을 추가합니다.<ul><li><xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols></li><li><xref:System.ServiceModel.TcpTransportSecurity.SslProtocols></li><li>[<](~/docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)</li><li>[&lt;sslStreamSecurity&gt; section of &lt;customBinding&gt;]~/docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)</li></ul>
+Ssl3이 필요한 경우 다음 구성 메커니즘 중 하나를 사용하여 협상된 프로토콜 목록에 Ssl3을 추가합니다.
 
-| Name    | 값       |
-|:--------|:------------|
-| Scope   |Microsoft Edge|
-|버전|4.6.2|
-|형식|런타임|
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols>
+- <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols>
+- [\<netTcpBinding>의 \<transport>](../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)
+- [\<sslStreamSecurity>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)
+
+| Name    | 값   |
+|:--------|:--------|
+| Scope   | Microsoft Edge    |
+| 버전 | 4.6.2   |
+| 형식    | 런타임 |
 
 #### <a name="affected-apis"></a>영향을 받는 API
 

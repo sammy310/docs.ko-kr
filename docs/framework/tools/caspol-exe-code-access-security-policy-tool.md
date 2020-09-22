@@ -16,18 +16,18 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 4d29c22c09e42be5596d860d90b182e512ad3b45
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 06639ee5c9dee26e6357402847b6c56f33b5a0b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167333"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553989"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
   
 > [!IMPORTANT]
-> .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.  
+> .NET Framework 4부터는 Caspol.exe가 CAS 정책에 영향을 주려면 [\<legacyCasPolicy> 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)를 `true`로 설정해야 합니다. CasPol.exe에 의해 표시 또는 수정되는 모든 설정은 CAS 정책을 사용하도록 선택하는 애플리케이션에만 영향을 줍니다. 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.  
   
 > [!NOTE]
 > 64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  
@@ -55,7 +55,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> 또는<br /><br /> **-ca**  *path*|이 옵션 다음의 모든 옵션이 컴퓨터 정책, 엔터프라이즈 정책 및 지정된 사용자 지정 사용자 정책에 적용됨을 나타냅니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-cu**[**stomuser**] *path*|현재 Caspol.exe가 실행되고 있는 대상 사용자에 속하지 않는 사용자 지정 사용자 정책의 관리를 허용합니다. *path* 인수를 사용하여 사용자 지정 사용자의 보안 구성 파일에 대한 위치를 지정해야 합니다.|  
 |**-enterprise**<br /><br /> 또는<br /><br /> **-en**|이 옵션 다음의 모든 옵션이 엔터프라이즈 수준 정책에 적용됨을 나타냅니다. 엔터프라이즈 관리자가 아닌 사용자는 엔터프라이즈 정책을 볼 수는 있지만 수정할 수 있는 권한은 없습니다. 비엔터프라이즈 시나리오에서, 이 정책은 기본적으로 컴퓨터 및 사용자 정책과 상충되지 않습니다.|  
-|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.|  
+|**-e**[**xecution**] {**on** &#124; **off**}|코드가 실행되기 전에 권한이 실행되도록 하는 메커니즘을 설정하거나 설정 해제합니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.|  
 |**-f**[**orce**]|도구의 자동 소멸 테스트 기능을 억제하고 해당 정책을 사용자가 지정한 대로 변경합니다. 일반적으로, Caspol.exe가 올바르게 실행되지 못하도록 하는 정책 변경 내용이 있는지 여부를 확인한 다음, 그러한 정책 변경 내용이 있으면 해당 정책 변경 내용을 저장하지 않고 오류 메시지를 인쇄합니다. 이로 인해 Caspol.exe가 실행되지 않더라도 Caspol.exe에서 강제로 정책을 변경하려면 **–force** 옵션을 사용합니다.|  
 |**-h**[**elp**]|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
 |**-l**[**ist**]|지정된 컴퓨터, 사용자, 엔터프라이즈 또는 모든 정책 수준에 대한 코드 그룹 계층 구조와 권한 집합을 표시합니다. Caspol.exe를 사용하여 코드 그룹의 레이블을 먼저 표시한 다음 이름(null이 아닌 경우)을 표시합니다.|  
@@ -74,7 +74,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> 또는<br /><br /> **-rsld**|기본 상태의 보다 제한적인 버전에 정책을 반환하고 이를 디스크에 유지시킵니다. 이전 컴퓨터 정책의 백업을 만들어 `security.config.bac`라는 이름의 파일에 유지시킵니다.  잠긴 정책은 기본 정책과 유사하지만 `Local Intranet`, `Trusted Sites` 및 `Internet` 영역에서 코드에 권한을 부여하지 않으며 해당 코드 그룹에 자식 노드 그룹이 없다는 점에서 다릅니다.|  
 |**-resolvegroup** *assembly_file*<br /><br /> 또는<br /><br /> **-rsg**  *assembly_file*|특정 어셈블리(*assembly_file*)가 속한 코드 그룹을 표시합니다. 기본적으로 이 옵션은 어셈블리가 속한 컴퓨터, 사용자 및 엔터프라이즈 정책 수준을 표시합니다. 하나의 정책 수준만 보려면 **-machine**, **-user** 또는 **-enterprise** 옵션 중 하나와 함께 이 옵션을 사용합니다.|  
 |**-resolveperm** *assembly_file*<br /><br /> 또는<br /><br /> **-rsp** *assembly_file*|해당 어셈블리의 실행이 가능한 경우, 지정된(또는 기본) 보안 정책 수준이 해당 어셈블리에 부여하는 모든 권한을 표시합니다. *assembly_file* 인수는 해당 어셈블리를 지정합니다. **-all** 옵션을 지정하면 Caspol.exe에서 사용자, 컴퓨터 또는 엔터프라이즈 정책에 따라 해당 어셈블리의 권한을 계산합니다. 그렇지 않으면 기본 동작 규칙이 적용됩니다.|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|코드 액세스 보안을 설정하거나 설정 해제합니다. **-s off** 옵션을 지정하면 역할 기반 보안을 사용하도록 설정할 수 있습니다. **참고:**  .NET Framework 4 이상 버전에서는 이 스위치가 제거되었습니다. 자세한 내용은 [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요. **주의:**  코드 액세스 보안을 해제하면 모든 코드 액세스 요청이 성공합니다. 그러나 코드 액세스 보안을 해제하면 시스템이 바이러스나 웜과 같은 악의적 코드를 사용한 공격에 취약해집니다. 보안을 해제하면 성능이 약간 향상되지만 다른 보안 방법을 통해 전반적인 시스템 보안을 유지한 경우에만 보안을 해제해야 합니다. 다른 보안 예방 조치의 예로 공용 네트워크에서 연결을 끊거나 컴퓨터를 물리적으로 보호하는 경우를 들 수 있습니다.|  
 |**-u**[**ser**]|이 옵션 다음의 모든 옵션이 현재 Caspol.exe가 실행되고 있는 대상 사용자의 사용자 수준 정책에 적용됨을 나타냅니다. 관리자가 아닌 사용자의 경우 **-user**가 기본값입니다.|  
 |**-?**|Caspol.exe의 명령 구문 및 옵션을 표시합니다.|  
   
@@ -104,7 +104,7 @@ caspol [options]
 ## <a name="remarks"></a>설명  
  보안 정책은 컴퓨터 정책, 사용자 정책 및 엔터프라이즈 정책의 세 가지 정책 수준으로 표현됩니다. 어셈블리에서 받아들이는 권한 집합은 이러한 세 가지 정책 수준에서 허용하는 권한 집합의 교집합 부분에 의해 결정됩니다. 각 정책 수준은 코드 그룹의 계층 구조로 표시됩니다. 모든 코드 그룹에는 해당 그룹의 멤버가 되는 코드를 결정하는 멤버 자격 조건이 있습니다. 또한 명명된 권한 집합이 각 코드 그룹에 연결됩니다. 이 권한 집합에서는 런타임에서 해당 멤버 자격 조건을 충족하는 코드에 허용할 권한을 지정합니다. 코드 그룹 계층 구조에서는 해당 코드 그룹에 연결된 명명된 권한 집합과 함께 보안 정책의 각 수준을 정의하고 유지합니다. **–user**, **-customuser**, **–machine** 및 **-enterprise** 옵션을 사용하여 보안 정책의 수준을 설정할 수 있습니다.  
   
- 보안 정책 및 런타임에서 코드에 부여할 권한을 결정하는 방법에 대한 자세한 내용은 [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))를 참조하세요.  
+ 보안 정책 및 런타임에서 코드에 부여할 권한을 결정하는 방법에 대한 자세한 내용은 [보안 정책 관리](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))를 참조하세요.  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>코드 그룹 및 권한 집합 참조  
  계층 구조의 코드 그룹을 쉽게 참조하려면 **-list** 옵션을 사용하여 숫자 레이블(예: 1, 1.1, 1.1.1 등)과 함께 들여쓴 코드 그룹 목록을 표시합니다. 코드 그룹을 대상으로 하는 다른 명령줄 작업에서도 숫자 레이블을 사용하여 특정 코드 그룹을 참조합니다.  

@@ -3,12 +3,12 @@ title: ML.NET 알고리즘을 선택하는 방법
 description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하는 방법에 대해 살펴봅니다.
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75739999"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679640"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
 
@@ -34,7 +34,7 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 
 일반적으로 선형 알고리즘은 확장 가능하고 빠르며 학습하기 쉽고 예측이 편리합니다. 기능의 수와 대략적으로 학습 데이터 세트의 크기로 규모가 조정됩니다.
 
-선형 알고리즘은 학습 데이터에 여러 개의 통로를 만듭니다. 데이터 세트가 메모리에 적합할 경우 트레이너를 추가하기 전에 ML.NET 파이프라인에 [캐시 검사점](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*)을 추가하면 학습을 보다 빨리 실행할 수 있습니다.
+선형 알고리즘은 학습 데이터에 여러 개의 통로를 만듭니다. 데이터 세트가 메모리에 적합할 경우 트레이너를 추가하기 전에 ML.NET 파이프라인에 [캐시 검사점](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A)을 추가하면 학습을 보다 빨리 실행할 수 있습니다.
 
 **선형 트레이너**
 

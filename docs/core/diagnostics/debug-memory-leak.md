@@ -3,12 +3,12 @@ title: 메모리 누수 디버그 자습서
 description: .NET Core의 메모리 누수를 디버그하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924892"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538594"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core의 메모리 누수 디버그
 
@@ -34,7 +34,7 @@ ms.locfileid: "86924892"
 - 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md).
 - 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md).
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md).
-- 진단할 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) 앱.
+- 진단할 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/) 앱.
 
 이 자습서에서는 샘플 및 도구가 설치되고 사용할 준비가 되었다고 가정합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "86924892"
 
 이 시나리오의 근본 원인을 해결하는 데 도움이 되도록 진단 데이터 수집을 시작하기 전에 실제로 메모리 누수(메모리 증가)가 발생하는지 확인해야 합니다. [dotnet-counters](dotnet-counters.md) 도구를 사용하여 이를 확인할 수 있습니다.
 
-콘솔 창을 열고 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)을 다운로드하고 압축을 푼 디렉터리로 이동합니다. 대상을 실행합니다.
+콘솔 창을 열고 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/)을 다운로드하고 압축을 푼 디렉터리로 이동합니다. 대상을 실행합니다.
 
 ```dotnetcli
 dotnet run
@@ -116,7 +116,7 @@ Press p to pause, r to resume, q to quit.
 
 가능한 메모리 누수를 분석할 때 앱의 메모리 힙에 액세스해야 합니다. 그런 다음 메모리 내용을 분석할 수 있습니다. 개체 간의 관계를 살펴보면 메모리가 확보되지 않는 이유에 대하여 이론을 만들 수 있습니다. 일반적인 진단 데이터 원본은 Windows의 메모리 덤프 또는 Linux의 해당 코어 덤프입니다. .NET Core 애플리케이션의 덤프를 생성하려면 [dotnet-dump)](dotnet-dump.md) 도구를 사용할 수 있습니다.
 
-이전에 시작된 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)을 사용하여 다음 명령을 실행하고 Linux 코어 덤프를 생성합니다.
+이전에 시작된 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/)을 사용하여 다음 명령을 실행하고 Linux 코어 덤프를 생성합니다.
 
 ```dotnetcli
 dotnet-dump collect -p 4807
@@ -133,7 +133,7 @@ Complete
 
 덤프가 수집되면 실패한 프로세스를 진단하는 데 충분한 정보가 확보될 것입니다. 실패한 프로세스가 프로덕션 서버에서 실행 중이라면 프로세스를 다시 시작하여 단기 수정하기에 가장 적합한 때입니다.
 
-이 자습서에서는 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)이 완료되었으므로 이를 종료할 수 있습니다. 서버를 시작한 터미널로 이동하고 <kbd>Ctrl+C</kbd>를 누릅니다.
+이 자습서에서는 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/)이 완료되었으므로 이를 종료할 수 있습니다. 서버를 시작한 터미널로 이동하고 <kbd>Ctrl+C</kbd>를 누릅니다.
 
 ### <a name="analyze-the-core-dump"></a>코어 덤프 분석
 
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 여기서 `core_20190430_185145`는 분석하려는 코어 덤프의 이름입니다.
 
 > [!NOTE]
-> *libdl.so*를 찾을 수 없다는 오류가 표시되는 경우 *libc6-dev* 패키지를 설치해야 할 수 있습니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../install/dependencies.md?pivots=os-linux)을 참조하세요.
+> *libdl.so*를 찾을 수 없다는 오류가 표시되는 경우 *libc6-dev* 패키지를 설치해야 할 수 있습니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../install/linux.md)을 참조하세요.
 
 SOS 명령을 입력할 수 있는 프롬프트가 표시됩니다. 일반적으로는 관리되는 힙의 전반적인 상태를 확인하는 것이 가장 좋습니다.
 

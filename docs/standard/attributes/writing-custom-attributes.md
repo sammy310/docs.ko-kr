@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768484"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550927"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "84768484"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 생성자를 오버로드하여 값을 다르게 조합하여 사용할 수도 있습니다. 또한 사용자 지정 특성 클래스에 대한 [속성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) 을 정의하면 특성을 초기화 할때 명명된 매개변수와 위치 매개변수를 함께 사용할 수 있습니다. 일반적으로 모든 필수 매개 변수는 positional로 정의하고 모든 선택적 매개 변수는 named로 정의합니다. 이때 필수 매개 변수가 없으면 특성을 초기화할 수 없습니다. 다른 모든 매개 변수는 선택적 요소입니다. Visual Basic에서는 특성 클래스의 생성자가 ParamArray 인수를 사용할 수 없습니다.  
+ 생성자를 오버로드하여 값을 다르게 조합하여 사용할 수도 있습니다. 또한 사용자 지정 특성 클래스에 대한 [속성](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) 을 정의하면 특성을 초기화 할때 명명된 매개변수와 위치 매개변수를 함께 사용할 수 있습니다. 일반적으로 모든 필수 매개 변수는 positional로 정의하고 모든 선택적 매개 변수는 named로 정의합니다. 이때 필수 매개 변수가 없으면 특성을 초기화할 수 없습니다. 다른 모든 매개 변수는 선택적 요소입니다. Visual Basic에서는 특성 클래스의 생성자가 ParamArray 인수를 사용할 수 없습니다.  
   
  다음 코드 예제에서는 앞의 생성자를 사용하는 특성이 선택적 매개 변수와 필수 매개 변수를 사용하여 적용되는 방식을 보여 줍니다. 이 예제에서는 특성에 하나의 필수 부울 값과 하나의 선택적 문자열 속성이 있는 것으로 가정합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "84768484"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>속성 선언  
- 명명된 매개변수를 정의하거나 특성에 의해 저장된 값을 쉽게 반환하려면 [속성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))을 선언합니다. 특성 속성은 반환될 데이터 형식에 대한 설명이 포함된 공용 엔터티로 선언되어야 합니다. 속성 값을 포함할 변수를 정의한 다음 이를 **get** 및 **set** 메서드와 연결합니다. 다음 코드 예제에서는 특성에 간단한 속성을 구현하는 방법을 보여 줍니다.  
+ 명명된 매개변수를 정의하거나 특성에 의해 저장된 값을 쉽게 반환하려면 [속성](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))을 선언합니다. 특성 속성은 반환될 데이터 형식에 대한 설명이 포함된 공용 엔터티로 선언되어야 합니다. 속성 값을 포함할 변수를 정의한 다음 이를 **get** 및 **set** 메서드와 연결합니다. 다음 코드 예제에서는 특성에 간단한 속성을 구현하는 방법을 보여 줍니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

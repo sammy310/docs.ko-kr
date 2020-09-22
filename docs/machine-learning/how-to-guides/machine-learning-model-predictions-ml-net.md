@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8263db289bed50e7437b695134458b8c07e0e5
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977042"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679575"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>학습된 모델로 예측
 
@@ -72,7 +72,7 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-그런 다음, [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) 메서드를 사용하여 입력 데이터를 매개 변수로 전달합니다. [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) 메서드를 사용할 때는 입력이 [`IDataView`](xref:Microsoft.ML.IDataView)가 되지 않아도 됩니다. 이것은 입력 데이터 형식의 개체를 전달할 수 있도록 입력 데이터 형식 조작을 간편하게 내부화하기 때문입니다. 또한 `CurrentPrice`는 새 데이터를 통해 예측하려는 대상 또는 레이블이므로 해당 시점에는 값이 없다고 가정합니다.
+그런 다음, [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) 메서드를 사용하여 입력 데이터를 매개 변수로 전달합니다. [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) 메서드를 사용할 때는 입력이 [`IDataView`](xref:Microsoft.ML.IDataView)가 되지 않아도 됩니다. 이것은 입력 데이터 형식의 개체를 전달할 수 있도록 입력 데이터 형식 조작을 간편하게 내부화하기 때문입니다. 또한 `CurrentPrice`는 새 데이터를 통해 예측하려는 대상 또는 레이블이므로 해당 시점에는 값이 없다고 가정합니다.
 
 ```csharp
 // Input Data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-이제 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 메서드를 사용하여 데이터 변환을 적용하고 예측을 생성합니다.
+이제 [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 데이터 변환을 적용하고 예측을 생성합니다.
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 메서드를 사용하여 예측된 값을 검사합니다.
+[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) 메서드를 사용하여 예측된 값을 검사합니다.
 
 ```csharp
 // Get Predictions

@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: b6775c760ef3f5bf1c9519430b038f149c9cf30f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810549"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538503"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -213,13 +213,13 @@ docker-working
 
 터미널에서 다음 명령을 실행합니다.
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 ```
 
 Docker가 *Dockerfile*에서 각 줄을 처리합니다. `docker build` 명령의 `.`는 *Dockerfile*을 찾는 데 현재 폴더를 사용하도록 Docker에 지시합니다. 이 명령은 이미지를 빌드하고 해당 이미지를 가리키는 **counter-image**라는 로컬 리포지토리를 만듭니다. 이 명령이 완료된 후 `docker images`를 실행하여 설치된 이미지 목록을 확인합니다.
 
-```Docker
+```console
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
@@ -242,7 +242,7 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 
 터미널에서 `docker build -t counter-image -f Dockerfile .`를 실행하고 명령이 완료되면 `docker images`를 실행합니다.
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
@@ -272,14 +272,14 @@ mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        
 
 이제 앱을 포함하는 이미지가 있으므로 컨테이너를 만들 수 있습니다. 두 가지 방법으로 컨테이너를 만들 수 있습니다. 먼저 중지된 새 컨테이너를 만듭니다.
 
-```Docker
+```console
 docker create --name core-counter counter-image
 0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
 위에서 `docker create` 명령은 **counter-image** 이미지를 기반으로 컨테이너를 만듭니다. 해당 명령의 출력은 생성된 컨테이너의 **CONTAINER ID**(사용자에 따라 다름)를 표시합니다. 모든 컨테이너 목록을 보려면 `docker ps -a` 명령을 사용합니다. 
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED           STATUS     PORTS    NAMES
 0f281cb3af99    counter-image    "dotnet NetCore.Dock…"    40 seconds ago    Created             core-counter
@@ -289,7 +289,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED           STA
 
 컨테이너는 특정 이름 `core-counter`를 사용하여 만들어졌으며, 이 이름은 컨테이너를 관리하는 데 사용됩니다. 다음 예제에서는 `docker start` 명령을 사용하여 컨테이너를 시작한 후 `docker ps` 명령을 사용하여 실행 중인 컨테이너만 표시합니다.
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -300,7 +300,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED          STAT
 
 마찬가지로 `docker stop` 명령은 컨테이너를 중지합니다. 다음 예제에서는 `docker stop` 명령을 사용하여 컨테이너를 중지한 다음, `docker ps` 명령을 사용하여 컨테이너가 실행 중이지 않음을 보여 줍니다.
 
-```Docker
+```console
 docker stop core-counter
 core-counter
 
@@ -314,7 +314,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 컨테이너에서 분리한 후 다시 연결하여 계속 실행 및 계산 중인지 확인합니다.
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -335,13 +335,13 @@ Counter: 19
 
 이 문서의 목적이 아무 작업도 수행하지 않는 컨테이너를 만드는 것은 아닙니다. 이전에 만든 컨테이너를 삭제합니다. 컨테이너가 실행 중이면 중지합니다.
 
-```Docker
+```console
 docker stop core-counter
 ```
 
 다음 예제에는 모든 컨테이너가 나와 있습니다. `docker rm` 명령을 사용하여 컨테이너를 삭제한 후 실행 중인 컨테이너가 있는지 다시 확인합니다.
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS                        PORTS    NAMES
 2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    7 minutes ago    Exited (143) 20 seconds ago            core-counter
@@ -357,7 +357,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 Docker는 단일 명령으로 컨테이너를 만들고 실행할 수 있는 `docker run` 명령을 제공합니다. 이 명령을 사용하면 `docker create`를 실행한 후 `docker start`를 실행할 필요가 없습니다. 컨테이너가 중지될 때 컨테이너를 자동으로 삭제하도록 이 명령을 설정할 수도 있습니다. 예를 들어 `docker run -it --rm`을 사용하여 두 가지 작업을 수행합니다. 먼저 현재 터미널을 사용하여 컨테이너에 연결한 후 컨테이너가 완료되면 컨테이너를 제거합니다.
 
-```Docker
+```console
 docker run -it --rm counter-image
 Counter: 1
 Counter: 2
@@ -369,7 +369,7 @@ Counter: 5
 
 또한 컨테이너는 .NET Core 앱의 실행에 매개 변수를 전달합니다. .NET Core 앱에 3까지만 계산하도록 지시하려면 3을 전달합니다.
 
-```Docker
+```console
 docker run -it --rm counter-image 3
 Counter: 1
 Counter: 2
@@ -378,7 +378,7 @@ Counter: 3
 
 `docker run -it`를 사용하면 <kbd>Ctrl+C</kbd> 명령이 컨테이너에서 실행 중인 프로세스를 중지하고, 이에 따라 컨테이너가 중지됩니다. `--rm` 매개 변수가 제공되었으므로 프로세스가 중지되면 컨테이너가 자동으로 삭제됩니다. 컨테이너가 존재하지 않는지 확인합니다.
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
@@ -391,7 +391,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 이 예제에서 `ENTRYPOINT`는 `cmd.exe`로 변경됩니다. <kbd>Ctrl+C</kbd>를 눌러 프로세스를 종료하고 컨테이너를 중지합니다.
 
-```Docker
+```console
 docker run -it --rm --entrypoint "cmd.exe" counter-image
 
 Microsoft Windows [Version 10.0.17763.379]
@@ -450,25 +450,25 @@ Docker에는 컨테이너와 이미지를 만들고, 관리하며, 이와 상호
 
 01. 모든 컨테이너 나열
 
-    ```Docker
+    ```console
     docker ps -a
     ```
 
 02. 이름으로 실행 중인 컨테이너를 중지합니다.
 
-    ```Docker
+    ```console
     docker stop counter-image
     ```
 
 03. 컨테이너 삭제
 
-    ```Docker
+    ```console
     docker rm counter-image
     ```
 
 그런 다음, 머신에서 더 이상 사용하지 않을 이미지를 삭제합니다. *Dockerfile*에서 만든 이미지를 삭제한 후 *Dockerfile*이 기반으로 하는 .NET Core 이미지를 삭제합니다. **IMAGE ID** 또는 **REPOSITORY:TAG** 형식 문자열을 사용할 수 있습니다.
 
-```Docker
+```console
 docker rmi counter-image:latest
 docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```

@@ -3,12 +3,12 @@ title: .NET Core에서 EventCounters를 사용하여 성능 측정
 description: 이 자습서에서는 EventCounters를 사용하여 성능을 측정하는 방법을 알아봅니다.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024972"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538568"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>자습서: .NET Core에서 EventCounters를 사용하여 성능 측정
 
@@ -29,11 +29,11 @@ ms.locfileid: "88024972"
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
 - 이벤트 카운터를 모니터링하기 위한 [dotnet-counters](dotnet-counters.md)
-- 진단할 [샘플 디버그 대상](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 앱.
+- 진단할 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios) 앱.
 
 ## <a name="get-the-source"></a>소스 가져오기
 
-이 애플리케이션 예제는 모니터링의 기준으로 사용됩니다. [샘플 ASP.NET Core 리포지토리](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)는 샘플 브라우저에서 사용할 수 있습니다. zip 파일을 다운로드하고, 다운로드가 끝나면 압축을 풀고, 즐겨 사용하는 IDE에서 엽니다. 애플리케이션을 빌드하고 실행하여 제대로 작동하는지 확인한 다음, 애플리케이션을 중지합니다.
+이 애플리케이션 예제는 모니터링의 기준으로 사용됩니다. [샘플 ASP.NET Core 리포지토리](/samples/dotnet/samples/diagnostic-scenarios)는 샘플 브라우저에서 사용할 수 있습니다. zip 파일을 다운로드하고, 다운로드가 끝나면 압축을 풀고, 즐겨 사용하는 IDE에서 엽니다. 애플리케이션을 빌드하고 실행하여 제대로 작동하는지 확인한 다음, 애플리케이션을 중지합니다.
 
 ## <a name="implement-an-eventsource"></a>EventSource 구현
 

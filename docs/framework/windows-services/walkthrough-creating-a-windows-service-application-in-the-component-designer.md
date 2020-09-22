@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 04f27729b5713c325a73cbdeb1c6c673fe749c00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925633"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544208"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -471,7 +471,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 이제 Windows 서비스를 빌드했으므로 이를 설치할 수 있습니다. Windows 서비스를 설치하려면 설치할 컴퓨터에서 관리자 자격 증명이 있어야 합니다.
 
-1. 관리자 자격 증명을 사용하여 [Visual Studio에 대한 개발자 명령 프롬프트](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)를 엽니다. Windows **시작** 메뉴에서 Visual Studio 폴더에 있는 **VS 2017에 대한 개발자 명령 프롬프트**를 선택한 다음, 바로 가기 메뉴에서 **자세히** > **관리자로 실행**을 선택합니다.
+1. 관리자 자격 증명을 사용하여 [Visual Studio에 대한 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)를 엽니다. Windows **시작** 메뉴에서 Visual Studio 폴더에 있는 **VS 2017에 대한 개발자 명령 프롬프트**를 선택한 다음, 바로 가기 메뉴에서 **자세히** > **관리자로 실행**을 선택합니다.
 
 2. **Visual Studio에 대한 개발자 명령 프롬프트** 창에서 프로젝트의 출력이 포함된 폴더(기본적으로 프로젝트의 *\bin\Debug* 하위 디렉터리)로 이동합니다.
 

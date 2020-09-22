@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a8fd644e6f9132bf93277ae9928788f236a7bd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84287495"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558201"
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 이 문서에서는 serialize될 API를 디자인할 때 고려해야 할 지침을 보여 줍니다.  
@@ -144,6 +144,6 @@ ms.locfileid: "84287495"
 - [데이터 계약 직렬 변환기](../../framework/wcf/feature-details/data-contract-serializer.md)
 - [데이터 계약 직렬 변환기에서 지원하는 형식](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [이진 serialization](binary-serialization.md)
-- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 - [보안 및 Serialization](../../framework/misc/security-and-serialization.md)

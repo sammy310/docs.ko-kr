@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84277962"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535412"
 ---
 # <a name="xml-serialization"></a>XML serialization
 
@@ -39,7 +39,7 @@ serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세
 
  **XmlSerializer** 클래스는 개체를 추가적으로 직렬화하여 인코딩된 SOAP XML 스트림을 생성할 수 있습니다. 생성된 XML은 World Wide Web 컨소시엄 문서 "SOAP(Simple Object Access Protocol) 1.1"의 5단원을 따릅니다. 이 프로세스에 대한 자세한 내용은 [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)를 참조하세요. 생성된 XML을 제어하는 특성의 표를 보려면 [인코딩된 SOAP Serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)을 참조하세요.
 
- **XmlSerializer** 클래스는 XML Web services에 의해 생성되고 XML Web services로 전달되는 SOAP 메시지를 생성합니다. SOAP 메시지를 제어하려면 XML Web services 파일(.asmx)의 클래스, 반환 값, 매개 변수 및 필드에 특성을 적용할 수 있습니다. XML Web services는 리터럴 또는 인코딩된 SOAP 스타일을 사용할 수 있으므로 "XML serialization을 제어하는 특성" 및 "인코딩된 SOAP serialization을 제어하는 특성"에 나열된 두 특성을 모두 사용할 수 있습니다. 특성을 사용하여 XML Web services에서 생성된 XML을 제어하는 방법에 대한 자세한 내용은 [XML Web Services의 XML Serialization](xml-serialization-with-xml-web-services.md)을 참조하세요. SOAP 및 XML Web Services에 대한 자세한 내용은 [SOAP 메시지 형식 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))을 참조하세요.
+ **XmlSerializer** 클래스는 XML Web services에 의해 생성되고 XML Web services로 전달되는 SOAP 메시지를 생성합니다. SOAP 메시지를 제어하려면 XML Web services 파일(.asmx)의 클래스, 반환 값, 매개 변수 및 필드에 특성을 적용할 수 있습니다. XML Web services는 리터럴 또는 인코딩된 SOAP 스타일을 사용할 수 있으므로 "XML serialization을 제어하는 특성" 및 "인코딩된 SOAP serialization을 제어하는 특성"에 나열된 두 특성을 모두 사용할 수 있습니다. 특성을 사용하여 XML Web services에서 생성된 XML을 제어하는 방법에 대한 자세한 내용은 [XML Web Services의 XML Serialization](xml-serialization-with-xml-web-services.md)을 참조하세요. SOAP 및 XML Web Services에 대한 자세한 내용은 [SOAP 메시지 형식 사용자 지정](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))을 참조하세요.
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 애플리케이션에 대한 보안 고려 사항
 

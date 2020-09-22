@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-ms.openlocfilehash: a9c044254423d0f9d266539c728a6604f562e97d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a5f6a26ada321bd351249c5179d050ee571b550c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290008"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679342"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>방법: 간단한 PLINQ 쿼리 만들기 및 실행
 
-이 문서의 예제에서는 소스 시퀀스에 대해 <xref:System.Linq.ParallelEnumerable.AsParallel%2A?displayProperty=nameWithType> 확장 메서드를 사용하여 단순한 병렬 LINQ(Language-Integrated Query) 쿼리를 만들고 <xref:System.Linq.ParallelEnumerable.ForAll%2A?displayProperty=nameWithTyp> 메서드를 사용하여 쿼리를 실행하는 방법을 보여 줍니다.  
+이 문서의 예제에서는 소스 시퀀스에 대해 <xref:System.Linq.ParallelEnumerable.AsParallel%2A?displayProperty=nameWithType> 확장 메서드를 사용하여 단순한 병렬 LINQ(Language-Integrated Query) 쿼리를 만들고 <xref:System.Linq.ParallelEnumerable.ForAll%2A?displayProperty=nameWithType> 메서드를 사용하여 쿼리를 실행하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 > 이 문서에서는 람다 식을 사용하여 PLINQ에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.  

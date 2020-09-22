@@ -12,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865244"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558799"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 .NET Framework에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "86865244"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>동적 어셈블리  
- 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 .NET Framework 4에서 대부분 사용되지 않습니다. [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요. 나머지 오버로드는 신뢰 수준에 관계없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
+ 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 .NET Framework 4에서 대부분 사용되지 않습니다. [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요. 나머지 오버로드는 신뢰 수준에 관계없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
   
 > [!NOTE]
 > 동적 어셈블리를 만든 후에 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 메서드를 사용하여 적용하는 특성은 어셈블리를 디스크에 저장하고 메모리에 다시 로드할 때까지 적용되지 않습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "86865244"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>버전 정보  
- .NET Framework 4부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.  
+ .NET Framework 4부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.  
   
  .NET Framework 2.0 Service Pack 1부터 동적 어셈블리와 동적 메서드를 내보낼 때 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 더 이상 필요하지 않습니다. 이 플래그는 .NET Framework의 모든 이전 버전에서 필요합니다.  
   

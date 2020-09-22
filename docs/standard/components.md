@@ -4,12 +4,12 @@ description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414736"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547677"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -29,14 +29,14 @@ ms.locfileid: "89414736"
 
 - 하나 이상의 런타임. 예: .NET Framework용 CLR과 .NET Core용 CoreCLR, CoreRT.
 - .NET Standard와 추가 API를 구현할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
-- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework 및 .NET Core에 포함됩니다.
+- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) 및 [WPF(Windows Presentation Foundation)](/dotnet/desktop/wpf/)가 .NET Framework 및 .NET Core에 포함됩니다.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본 .NET 구현체는 .NET Core와 .NET Framework, Mono, UWP입니다.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)는 모두 .NET Core에서 실행됩니다.
+.NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) 및 [WPF(Windows Presentation Foundation)](/dotnet/desktop/wpf/)는 모두 .NET Core에서 실행됩니다.
 
 .NET Core의 자세한 내용은 [.NET Core 소개](../core/introduction.md)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
 

@@ -4,12 +4,12 @@ description: Windows에서 .NET for Apache Spark 애플리케이션을 디버그
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557153"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 디버그
 
@@ -61,7 +61,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-디버그하려는 UDF가 포함된 *.cs* 파일로 이동하여 [중단점을 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019)합니다. 작업자가 아직 UDF가 포함된 어셈블리를 로드하지 않았기 때문에 중단점에 `The breakpoint will not currently be hit`가 표시됩니다.
+디버그하려는 UDF가 포함된 *.cs* 파일로 이동하여 [중단점을 설정](/visualstudio/debugger/using-breakpoints?view=vs-2019)합니다. 작업자가 아직 UDF가 포함된 어셈블리를 로드하지 않았기 때문에 중단점에 `The breakpoint will not currently be hit`가 표시됩니다.
 
 `F5`를 눌러 애플리케이션을 계속하면 중단점이 결국 적중됩니다.
 

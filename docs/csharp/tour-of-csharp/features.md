@@ -2,12 +2,12 @@
 title: C#주요 언어 영역 둘러보기
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414905"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558177"
 ---
 # <a name="major-language-areas"></a>주 언어 영역
 
@@ -86,7 +86,7 @@ C# 언어는 개체 상태를 쿼리하고 이 상태에 따라 코드를 실행
 
 ## <a name="async--await"></a>async / await
 
-C#은 두 개의 키워드 `async`와 `await`로 비동기 프로그램을 지원합니다. 메서드를 비동기로 선언하려면 메서드 선언에 `async` 한정자를 추가합니다. `await` 연산자는 컴파일러에 결과가 완료될 때까지 비동기적으로 대기하도록 지시합니다. 제어는 호출자에게 반환되고, 메서드는 비동기 작업의 상태를 관리하는 구조체를 반환합니다. 구조체는 일반적으로 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>이지만, awaiter 패턴을 지원하는 어떤 형식도 될 수 있습니다. 이러한 기능을 사용하면 동기식으로 읽히지만 비동기적으로 실행되는 코드를 작성할 수 있습니다. 예를 들어 다음 코드는 [Microsoft docs](https://docs.microsoft.com)의 홈페이지를 다운로드합니다.
+C#은 두 개의 키워드 `async`와 `await`로 비동기 프로그램을 지원합니다. 메서드를 비동기로 선언하려면 메서드 선언에 `async` 한정자를 추가합니다. `await` 연산자는 컴파일러에 결과가 완료될 때까지 비동기적으로 대기하도록 지시합니다. 제어는 호출자에게 반환되고, 메서드는 비동기 작업의 상태를 관리하는 구조체를 반환합니다. 구조체는 일반적으로 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>이지만, awaiter 패턴을 지원하는 어떤 형식도 될 수 있습니다. 이러한 기능을 사용하면 동기식으로 읽히지만 비동기적으로 실행되는 코드를 작성할 수 있습니다. 예를 들어 다음 코드는 [Microsoft docs](/)의 홈페이지를 다운로드합니다.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

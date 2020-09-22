@@ -4,11 +4,12 @@ description: .NET 단위 테스트에 코드 검사 기능을 사용하는 방�
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853898"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538149"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>유닛 테스트에 코드 검사 사용
 
@@ -18,7 +19,7 @@ ms.locfileid: "85853898"
 
 또한 이 문서에서는 Coverlet 테스트 실행에서 수집된 코드 검사 정보를 사용하여 보고서를 생성하는 방법도 자세히 설명합니다. 보고서 생성은 [GitHub의 또 다른 오픈 소스 프로젝트인 ReportGenerator](https://github.com/danielpalme/ReportGenerator)를 사용하여 가능합니다. ReportGenerator는 무엇보다 Cobertura에서 생성된 검사 보고서를 사람이 읽을 수 있는 다양한 형식의 보고서로 변환합니다.
 
-이 문서는 샘플 브라우저에서 사용할 수 있는 [샘플 소스 코드 프로젝트](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)에 대해 설명합니다.
+이 문서는 샘플 브라우저에서 사용할 수 있는 [샘플 소스 코드 프로젝트](/samples/dotnet/samples/unit-testing-code-coverage-cs)에 대해 설명합니다.
 
 ## <a name="system-under-test"></a>테스트 중인 시스템
 
@@ -301,7 +302,7 @@ reportgenerator
 - [GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)(GitHub - ReportGenerator 리포지토리)
 - [ReportGenerator 프로젝트 사이트](https://danielpalme.github.io/ReportGenerator)
 - [.NET Core CLI 테스트 명령](../tools/dotnet-test.md)
-- [샘플 소스 코드](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
+- [샘플 소스 코드](/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>다음 단계
 

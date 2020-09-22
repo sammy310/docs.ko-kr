@@ -4,12 +4,12 @@ description: .NET Core로 빌드된 .NET Core 런타임, SDK 및 앱을 설치�
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656529"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538304"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향
 
@@ -17,7 +17,7 @@ macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개�
 
 ## <a name="installing-net-core"></a>.NET Core 설치
 
-.NET Core(런타임 및 SDK) 버전 3.1, 3.0, 2.1용 설치 프로그램은 2020년 2월 18일부터 공증되었습니다. 그 전에 릴리스된 버전은 공증되지 않았습니다. 공증되지 않은 버전의 .NET Core는 먼저 설치 프로그램을 다운로드한 다음 `sudo installer` 명령을 사용하여 수동으로 설치할 수 있습니다. 자세한 내용은 [Download and manually install for macOS](sdk.md?pivots=os-macos#download-and-manually-install)(macOS에 대해 다운로드 및 수동 설치)를 참조하세요.
+.NET Core(런타임 및 SDK) 버전 3.1, 3.0, 2.1용 설치 프로그램은 2020년 2월 18일부터 공증되었습니다. 그 전에 릴리스된 버전은 공증되지 않았습니다. 공증되지 않은 버전의 .NET Core는 먼저 설치 프로그램을 다운로드한 다음 `sudo installer` 명령을 사용하여 수동으로 설치할 수 있습니다. 자세한 내용은 [Download and manually install for macOS](./macos.md#download-and-manually-install)(macOS에 대해 다운로드 및 수동 설치)를 참조하세요.
 
 아래의 버전부터는 .NET Core 설치 프로그램이 공증됩니다.
 

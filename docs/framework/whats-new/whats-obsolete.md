@@ -7,12 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 93c2015c873b9de7b6c1b94224fa4033863aecfd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558870"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558500"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 
@@ -76,10 +76,10 @@ ms.locfileid: "88558870"
 
 ## <a name="obsolete-apis-for-previous-versions"></a>이전 버전에서 사용되지 않는 API
 
-- [.NET Framework 4에서 사용되지 않는 형식](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-- [.NET Framework 4에서 사용되지 않는 멤버](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-- [.NET Framework 3.5에서 사용되지 않는 항목 목록](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-- [.NET Framework 2.0에서 사용되지 않는 항목 목록](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
+- [.NET Framework 4에서 사용되지 않는 형식](/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
+- [.NET Framework 4에서 사용되지 않는 멤버](/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
+- [.NET Framework 3.5에서 사용되지 않는 항목 목록](/previous-versions/cc835481(v=msdn.10))
+- [.NET Framework 2.0에서 사용되지 않는 항목 목록](/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>참조
 

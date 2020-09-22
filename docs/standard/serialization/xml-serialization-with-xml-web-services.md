@@ -18,18 +18,18 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: b03c25f745df9aa4afe44075506983cb14ed3da7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8464122d4849271ba76edd6b3400ed09d7429821
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542009"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Services의 XML Serialization
-XML serialization은 XML Web services 아키텍처에 사용되며 <xref:System.Xml.Serialization.XmlSerializer> 클래스에 의해 수행되는 내부 전송 메커니즘입니다. XML Web services로 생성된 XML을 제어하려면 [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md) 및 [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성을 XML Web services(.asmx)를 만드는 데 사용된 파일의 클래스, 반환 값, 매개 변수 및 필드에 적용할 수 있습니다. XML Web services를 만드는 방법에 대한 자세한 내용은 [ASP.NET을 사용하는 XML Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))를 참조하세요.  
+XML serialization은 XML Web services 아키텍처에 사용되며 <xref:System.Xml.Serialization.XmlSerializer> 클래스에 의해 수행되는 내부 전송 메커니즘입니다. XML Web services로 생성된 XML을 제어하려면 [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md) 및 [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성을 XML Web services(.asmx)를 만드는 데 사용된 파일의 클래스, 반환 값, 매개 변수 및 필드에 적용할 수 있습니다. XML Web services를 만드는 방법에 대한 자세한 내용은 [ASP.NET을 사용하는 XML Web Services](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))를 참조하세요.  
   
 ## <a name="literal-and-encoded-styles"></a>리터럴 및 인코딩된 스타일  
- XML Web services에 의해 생성된 XML은 [SOAP 메시지 형식 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))에서 설명하는 것처럼 리터럴 또는 인코딩의 두 방법 중 하나로 형식이 지정될 수 있습니다. 따라서 XML serialization을 제어하는 두 개의 특성 집합이 있습니다. [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)에 나열된 특성은 리터럴 스타일 XML을 제어하도록 설계되었습니다. [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성은 인코드된 스타일을 제어합니다. 이러한 특성을 선택적으로 적용하여 애플리케이션이 두 스타일 중 하나 또는 둘 모두를 반환하도록 조정할 수 있습니다. 또한 이러한 특성을 필요에 따라 반환 값 및 매개 변수에 적용할 수 있습니다.  
+ XML Web services에 의해 생성된 XML은 [SOAP 메시지 형식 사용자 지정](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))에서 설명하는 것처럼 리터럴 또는 인코딩의 두 방법 중 하나로 형식이 지정될 수 있습니다. 따라서 XML serialization을 제어하는 두 개의 특성 집합이 있습니다. [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)에 나열된 특성은 리터럴 스타일 XML을 제어하도록 설계되었습니다. [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성은 인코드된 스타일을 제어합니다. 이러한 특성을 선택적으로 적용하여 애플리케이션이 두 스타일 중 하나 또는 둘 모두를 반환하도록 조정할 수 있습니다. 또한 이러한 특성을 필요에 따라 반환 값 및 매개 변수에 적용할 수 있습니다.  
   
 ### <a name="example-of-using-both-styles"></a>두 스타일 사용 예제  
  XML Web service를 만들 때는 메서드에 두 특성 집합 모두를 사용할 수 있습니다. 다음 코드 예제에서는 `MyService`라는 클래스에 두 개의 XML Web services 메서드인 `MyLiteralMethod` 및 `MyEncodedMethod`가 포함됩니다. 두 메서드 모두 `Order` 클래스의 인스턴스를 반환하는 동일한 기능을 수행합니다. `Order` 클래스에서 <xref:System.Xml.Serialization.XmlTypeAttribute> 및 <xref:System.Xml.Serialization.SoapTypeAttribute> 특성이 둘 다 `OrderID` 필드에 적용되며 두 특성의 `ElementName` 속성은 서로 다르게 설정됩니다.  

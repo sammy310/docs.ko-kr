@@ -4,12 +4,12 @@ description: .NET Core를 설치할 수 있는 Windows 버전에 대해 알아�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308951"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538291"
 ---
 # <a name="install-net-core-on-windows"></a>Windows에 .NET Core 설치
 
@@ -96,7 +96,7 @@ SDK는 .NET Core 앱과 라이브러리를 빌드하고 게시하는 데 사용�
 
 | OS                            | 버전                        | 아키텍처   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows 클라이언트                | 8.1                            | x64, x86        |
+| Windows 클라이언트                | 7 SP1+, 8.1                    | x64, x86        |
 | Windows 10 클라이언트             | 버전 1609+                  | x64, x86        |
 | Windows Server                | 2012 R2+                       | x64, x86        |
 | Nano 서버                   | 버전 1803+                  | x64, ARM32      |
@@ -190,7 +190,7 @@ SDK는 .NET Core 앱과 라이브러리를 빌드하고 게시하는 데 사용�
 
 [dotnet-install 스크립트](../tools/dotnet-install-script.md)는 CI 자동화 및 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. `Channel` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `Runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 [SDK](sdk.md)를 설치합니다.
+스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. `Channel` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `Runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 SDK를 설치합니다.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore

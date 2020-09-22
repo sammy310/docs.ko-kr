@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 description: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 ms.date: 06/02/2020
-ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867661"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537602"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 
@@ -24,7 +24,7 @@ ms.locfileid: "88867661"
 * [Mac용 Visual Studio 버전 8.6 이상](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core 설치 옵션을 선택합니다. Xamarin의 설치는 .NET Core 개발에서 선택 사항입니다. 자세한 내용은 다음 자료를 참조하세요.
 
   * [자습서: Mac용 Visual Studio](/visualstudio/mac/installation)를 설치합니다.
-  * [지원되는 macOS 버전](../install/dependencies.md?pivots=os-macos).
+  * [지원되는 macOS 버전](../install/windows.md).
   * [Mac용 Visual Studio에서 지원되는 .NET Core 버전](/visualstudio/mac/net-core-support).
 
 ## <a name="create-the-app"></a>앱 만들기

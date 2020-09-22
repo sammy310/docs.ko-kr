@@ -3,18 +3,18 @@ title: 디버깅 교착 상태 - .NET Core
 description: .NET Core의 잠금 문제를 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538698"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core의 교착 상태 디버그
 
 **이 문서의 적용 대상: ✔️** .NET Core 3.1. SDK 이상 버전
 
-이 자습서에서는 교착 상태 시나리오를 디버그하는 방법을 알아봅니다. 제공된 예제 [ASP.NET Core 웹앱](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 소스 코드 리포지토리를 사용하면 교착 상태를 의도적으로 초래할 수 있습니다. 엔드포인트에서 중단 및 스레드 누적이 발생합니다. 다양한 도구를 사용하여 코어 덤프, 코어 덤프 분석 및 프로세스 추적과 같은 문제를 분석하는 방법에 대해 알아봅니다.
+이 자습서에서는 교착 상태 시나리오를 디버그하는 방법을 알아봅니다. 제공된 예제 [ASP.NET Core 웹앱](/samples/dotnet/samples/diagnostic-scenarios) 소스 코드 리포지토리를 사용하면 교착 상태를 의도적으로 초래할 수 있습니다. 엔드포인트에서 중단 및 스레드 누적이 발생합니다. 다양한 도구를 사용하여 코어 덤프, 코어 덤프 분석 및 프로세스 추적과 같은 문제를 분석하는 방법에 대해 알아봅니다.
 
 이 자습서에서 다음을 수행합니다.
 
@@ -31,13 +31,13 @@ ms.locfileid: "88557882"
 이 자습서에서는 다음을 사용합니다.
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전
-- 시나리오를 트리거하는 [샘플 디버그 대상 - 웹앱](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)
+- 시나리오를 트리거하는 [샘플 디버그 대상 - 웹앱](/samples/dotnet/samples/diagnostic-scenarios)
 - 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md)
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md)
 
 ## <a name="core-dump-generation"></a>코어 덤프 생성
 
-애플리케이션 무응답 문제를 조사하기 위해 코어 덤프 또는 메모리 덤프를 사용하면 경합 문제가 있을 수 있는 가능한 모든 잠금과 해당 스레드의 상태를 검사할 수 있습니다. 샘플 루트 디렉터리에서 다음 명령을 사용하여 [샘플 디버그](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 애플리케이션을 실행합니다.
+애플리케이션 무응답 문제를 조사하기 위해 코어 덤프 또는 메모리 덤프를 사용하면 경합 문제가 있을 수 있는 가능한 모든 잠금과 해당 스레드의 상태를 검사할 수 있습니다. 샘플 루트 디렉터리에서 다음 명령을 사용하여 [샘플 디버그](/samples/dotnet/samples/diagnostic-scenarios) 애플리케이션을 실행합니다.
 
 ```dotnetcli
 dotnet run

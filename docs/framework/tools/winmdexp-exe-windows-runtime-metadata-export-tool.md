@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 10626e00eb340d84653419da18a0b219ef1d197e
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: dc36533a4f0c48e8e8a5930540746a46ba596751
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517024"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543240"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Framework 모듈을 Windows 런타임 메타데이터가 포함된 파일로 변환합니다. .NET Framework 어셈블리 및 Windows 런타임 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 Windows 런타임 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 Windows 런타임 구성 요소로 전환하는 프로세스를 ‘내보내기’라고 합니다. .NET Framework 4.5 및 .NET Framework 4.5.1에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
@@ -45,13 +45,13 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|옵션이 포함된 지시(.rsp) 파일이나 `winmdmodule`을 지정합니다. `responsefile`의 각 줄은 하나의 인수 또는 옵션을 포함해야 합니다.|  
   
 ## <a name="remarks"></a>설명  
- Winmdexp.exe는 임의의 .NET Framework 어셈블리를 .winmd 파일로 변환할 수 없습니다. `/target:winmdobj` 옵션으로 컴파일된 모듈이 필요하고 추가 제한 사항이 적용됩니다. 이러한 제한 사항 중 가장 중요한 사항은 어셈블리의 API 표면에 공개되는 모든 형식이 Windows 런타임 형식이어야 한다는 것입니다. 자세한 내용은 [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/br230301(v=vs.110)) 문서의 "Windows 런타임 구성 요소에서 형식 선언" 섹션을 참조하세요.
+ Winmdexp.exe는 임의의 .NET Framework 어셈블리를 .winmd 파일로 변환할 수 없습니다. `/target:winmdobj` 옵션으로 컴파일된 모듈이 필요하고 추가 제한 사항이 적용됩니다. 이러한 제한 사항 중 가장 중요한 사항은 어셈블리의 API 표면에 공개되는 모든 형식이 Windows 런타임 형식이어야 한다는 것입니다. 자세한 내용은 [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/previous-versions/br230301(v=vs.110)) 문서의 "Windows 런타임 구성 요소에서 형식 선언" 섹션을 참조하세요.
   
  C# 또는 Visual Basic으로 Windows 8.x 스토어 앱 또는 Windows 런타임 구성 요소를 작성하는 경우, .NET Framework는 Windows 런타임을 사용하여 더 자연스럽게 프로그래밍할 수 있도록 지원합니다. 이 내용은 [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) 문서에서 설명합니다. 이 프로세스에서, 자주 사용되는 몇 가지 Windows 런타임 형식이 .NET Framework 형식에 매핑됩니다. Winmdexp.exe는 이 프로세스를 반대로 하여, 해당 Windows 런타임 형식을 사용하는 API 표면을 생성합니다. 예를 들어, <xref:System.Collections.Generic.IList%601> 인터페이스에서 생성된 형식이 Windows 런타임 <xref:Windows.Foundation.Collections.IVector%601> 인터페이스에서 생성된 형식에 매핑됩니다.  
   
 ## <a name="see-also"></a>참조
 
 - [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
-- [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))
+- [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/previous-versions/br230301(v=vs.110))
 - [Winmdexp.exe 오류 메시지](winmdexp-exe-error-messages.md)
-- [빌드, 배포 및 구성 도구(.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [빌드, 배포 및 구성 도구(.NET Framework)](/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
