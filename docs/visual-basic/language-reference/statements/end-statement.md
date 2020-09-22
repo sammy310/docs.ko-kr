@@ -14,14 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: fe17a82662c4014069c77f2da76723a051ab9084
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0c99b919b50701e93fab7caf5fb5d8b6b976d44b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404708"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90865852"
 ---
 # <a name="end-statement"></a>End 문
+
 실행을 즉시 종료 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -31,7 +32,8 @@ End
 ```  
   
 ## <a name="remarks"></a>설명  
- `End`프로시저의 아무 곳에 나 문을 추가 하 여 전체 응용 프로그램의 실행을 강제로 중단할 수 있습니다. `End`문을 사용 하 여 열린 파일 `Open` 을 닫고 모든 응용 프로그램의 변수를 지웁니다. 응용 프로그램은 해당 개체에 대 한 참조를 보유 하는 다른 프로그램이 없고 해당 코드가 실행 되 고 있지 않은 즉시 닫힙니다.  
+
+ `End`프로시저의 아무 곳에 나 문을 추가 하 여 전체 응용 프로그램의 실행을 강제로 중단할 수 있습니다. `End` 문을 사용 하 여 열린 파일 `Open` 을 닫고 모든 응용 프로그램의 변수를 지웁니다. 응용 프로그램은 해당 개체에 대 한 참조를 보유 하는 다른 프로그램이 없고 해당 코드가 실행 되 고 있지 않은 즉시 닫힙니다.  
   
 > [!NOTE]
 > `End`문은 코드 실행을 갑자기 중지 하 고 `Dispose` 또는 `Finalize` 메서드 또는 다른 Visual Basic 코드를 호출 하지 않습니다. 다른 프로그램에서 보유 하 고 있는 개체 참조는 무효화 됩니다. `End`또는 블록 내에서 문이 발견 되 `Try` 면 `Catch` 컨트롤이 해당 블록에 전달 되지 않습니다 `Finally` .  
@@ -48,14 +50,16 @@ End
  그 다음에 추가 키워드가 나오면 [end \<keyword> 문은](end-keyword-statement.md) 적절 한 프로시저 또는 블록 정의의 끝을 서술 합니다. 예를 들어는 `End Function` 프로시저의 정의를 종료 `Function` 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 문을 사용 하 여 `End` 사용자가 요청 하는 경우 코드 실행을 종료 합니다.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+
  이 문은 지원되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop 문](stop-statement.md)

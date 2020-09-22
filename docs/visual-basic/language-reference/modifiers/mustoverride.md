@@ -15,17 +15,19 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 1b20108a2d42e82c0af7598fde8d60a08fea28ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf73f07b6e13d524281129e3c5d8dceceb90764c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396196"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867948"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
+
 속성 또는 프로시저가이 클래스에서 구현 되지 않고 파생 클래스에서 재정의 되어야 사용할 수 있도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  `MustOverride`속성 또는 프로시저 선언 문에서만를 사용할 수 있습니다. 를 지정 하는 속성 또는 프로시저는 `MustOverride` 클래스의 멤버 여야 하 고 클래스는 [MustInherit](mustinherit.md)로 표시 되어야 합니다.  
   
 ## <a name="rules"></a>규칙  
@@ -46,11 +48,11 @@ ms.locfileid: "84396196"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [NotOverridable](notoverridable.md)
 - [Overrides](overridable.md)
 - [재정의](overrides.md)
 - [MustInherit](mustinherit.md)
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)
 - [Visual Basic에서 숨김](../../programming-guide/language-features/declared-elements/shadowing.md)

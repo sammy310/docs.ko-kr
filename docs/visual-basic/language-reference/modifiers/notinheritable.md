@@ -15,25 +15,27 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: a5b571591a2ec62915c2a112f9a088a12837c9cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a204303a9695a157f598f83e182709a458a62be7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362348"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867892"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable(Visual Basic)
+
 클래스를 기본 클래스로 사용할 수 없도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  **대체 용어**. 상속할 수 없는 클래스를 *봉인* 된 클래스 라고도 합니다.  
   
  `NotInheritable`이 컨텍스트에서는 한정자를 사용할 수 있습니다.  
   
  [Class 문](../statements/class-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Inherits Statement](../statements/inherits-statement.md)
 - [MustInherit](mustinherit.md)
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 8dec28620b0409f05007b2c0b1c1fd4494c2d7c8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404760"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866652"
 ---
 # <a name="delegate-statement"></a>Delegate 문
+
 대리자를 선언 하는 데 사용 됩니다. 대리자는 `Shared` 형식의 메서드 또는 개체의 인스턴스 메서드를 참조 하는 참조 형식입니다. 매개 변수와 반환 형식이 일치 하는 프로시저를 사용 하 여이 대리자 클래스의 인스턴스를 만들 수 있습니다. 그런 다음 나중에 대리자 인스턴스를 통해 프로시저를 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,12 +34,13 @@ ms.locfileid: "84404760"
 |`Shadows`|선택 사항입니다. 이 대리자가 기본 클래스에서 동일 하 게 명명 된 프로그래밍 요소 또는 오버 로드 된 요소 집합을 요소가 하 고 숨기는 것을 나타냅니다. 모든 종류의 선언된 요소를 다른 종류로 섀도잉할 수 있습니다.<br /><br /> 섀도잉된 요소는 섀도잉 요소에 액세스할 수 없는 위치를 제외하고 해당 요소를 섀도잉하는 파생 클래스 내에서 사용할 수 없습니다. 예를 들어 `Private` 요소가 기본 클래스 요소를 숨기는 경우 요소에 액세스할 수 있는 권한이 없는 코드는 `Private` 대신 기본 클래스 요소에 액세스 합니다.|  
 |`Sub`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 는 값을 반환 하지 않는 대리자 프로시저로이 프로시저를 선언 `Sub` 합니다.|  
 |`Function`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 는 `Function` 값을 반환 하는 대리자 프로시저로이 프로시저를 선언 합니다.|  
-|`name`|필수 요소. 대리자 형식의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
+|`name`|필수 사항입니다. 대리자 형식의 이름입니다. 표준 변수 명명 규칙을 따릅니다.|  
 |`typeparamlist`|선택 사항입니다. 이 대리자의 형식 매개 변수 목록입니다. 여러 형식 매개 변수는 쉼표로 구분 됩니다. 필요에 따라 `In` 및 제네릭 한정자를 사용 하 여 각 형식 매개 변수를 variant로 선언할 수 있습니다 `Out` . [형식 목록을](type-list.md) 괄호로 묶고 키워드를 사용 해야 합니다 `Of` .|  
 |`parameterlist`|선택 사항입니다. 프로시저를 호출할 때 프로시저에 전달 되는 매개 변수 목록입니다. [매개 변수 목록을](parameter-list.md) 괄호로 묶어야 합니다.|  
 |`type`|프로시저를 지정 하는 경우 필요 `Function` 합니다. 반환 값의 데이터 형식입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Delegate`문은 대리자 클래스의 매개 변수 및 반환 형식을 정의 합니다. 매개 변수와 반환 형식이 일치 하는 프로시저를 사용 하 여이 대리자 클래스의 인스턴스를 만들 수 있습니다. 그런 다음 대리자의 메서드를 호출 하 여 대리자 인스턴스를 통해 나중에 프로시저를 호출할 수 있습니다 `Invoke` .  
   
  대리자는 네임 스페이스, 모듈, 클래스 또는 구조 수준에서 선언 될 수 있지만 프로시저 내에서 선언할 수 없습니다.  
@@ -60,11 +62,12 @@ ms.locfileid: "84404760"
  대리자에 대한 자세한 내용은 [대리자](../../programming-guide/language-features/delegates/index.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 문을 사용 하 여 `Delegate` 두 개의 숫자에서 작동 하 고 숫자를 반환 하는 대리자를 선언 합니다. `DelegateTest`메서드는이 형식의 대리자 인스턴스를 사용 하 여 숫자 쌍에 대해 작동 하는 데 사용 합니다.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [AddressOf 연산자](../operators/addressof-operator.md)
 - [으로](of-clause.md)
@@ -72,5 +75,5 @@ ms.locfileid: "84404760"
 - [방법: 제네릭 클래스 사용](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
 - [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [진행](../modifiers/in-generic-modifier.md)
+- [위치](../modifiers/in-generic-modifier.md)
 - [제한이](../modifiers/out-generic-modifier.md)

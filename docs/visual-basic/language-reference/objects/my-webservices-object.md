@@ -7,17 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: a52f9f5f5b044273a45da5ef9478e2212def57a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372364"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867208"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
+
 현재 프로젝트에서 참조 하는 각 XML Web services의 단일 인스턴스를 만들고 액세스 하기 위한 속성을 제공 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  `My.WebServices` 개체는 현재 프로젝트에서 참조하는 각 웹 서비스의 인스턴스를 제공합니다. 필요에 따라 각 인스턴스가 인스턴스화됩니다. `My.WebServices` 개체의 속성을 통해 이러한 웹 서비스에 액세스할 수 있습니다. 속성 이름은 속성이 액세스하는 웹 서비스의 이름과 같습니다. <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>에서 상속되는 모든 클래스는 웹 서비스입니다. 프로젝트에 웹 서비스를 추가 하는 방법에 대 한 자세한 내용은 [응용 프로그램 웹 서비스 액세스](../../developing-apps/programming/accessing-application-web-services.md)를 참조 하세요.  
   
  `My.WebServices`개체는 현재 프로젝트와 연결 된 웹 서비스만 노출 합니다. 참조 된 Dll에 선언 된 웹 서비스에 대 한 액세스는 제공 하지 않습니다. DLL이 제공 하는 웹 서비스에 액세스 하려면 웹 서비스의 정규화 된 이름을 *DllName*형식으로 사용 해야 합니다. *Webservicename*. 자세한 내용은 [응용 프로그램 웹 서비스 액세스](../../developing-apps/programming/accessing-application-web-services.md)를 참조 하세요.  
@@ -25,6 +27,7 @@ ms.locfileid: "84372364"
  개체와 해당 속성은 웹 응용 프로그램에 사용할 수 없습니다.  
   
 ## <a name="properties"></a>속성  
+
  개체의 각 속성은 `My.WebServices` 현재 프로젝트에서 참조 하는 웹 서비스의 인스턴스에 대 한 액세스를 제공 합니다. 속성의 이름은 속성이 액세스 하는 웹 서비스의 이름과 동일 하며, 속성 형식이 웹 서비스의 형식과 동일 합니다.  
   
 > [!NOTE]
@@ -40,6 +43,7 @@ ms.locfileid: "84372364"
 > 일반적으로 `Is` 또는 `IsNot` 연산자는 비교를 수행 하기 위해 속성의 값을 읽어야 합니다. 그러나 속성이 현재 저장 된 경우 `Nothing` 속성은 웹 서비스의 새 인스턴스를 만든 다음 해당 인스턴스를 반환 합니다. 그러나 Visual Basic 컴파일러는 개체의 속성을 특수 하 `My.WebServices` 게 처리 하 고 `Is` 또는 연산자가 `IsNot` 해당 값을 변경 하지 않고 속성의 상태를 확인할 수 있도록 허용 합니다.  
   
 ## <a name="example"></a>예제  
+
  이 예제에서는 `FahrenheitToCelsius` XML Web services의 메서드를 호출 `TemperatureConverter` 하 고 결과를 반환 합니다.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  

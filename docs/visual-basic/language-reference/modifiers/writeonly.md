@@ -11,24 +11,27 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: a9fa0a3a23561215d6ff122bc8e609b68ca6fc30
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a1030a423359a3e4122eea98e223a1a02f680c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386636"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867618"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly(Visual Basic)
+
 속성을 쓸 수 있지만 읽을 수 없도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="rules"></a>규칙  
+
  **선언 컨텍스트.** `WriteOnly`는 모듈 수준에서만 사용할 수 있습니다. 즉, 속성에 대 한 선언 컨텍스트는 `WriteOnly` 클래스, 구조체 또는 모듈 이어야 하며 소스 파일, 네임 스페이스 또는 프로시저일 수 없습니다.  
   
  속성은 선언할 수 `WriteOnly` 있지만 변수는 선언할 수 없습니다.  
   
 ## <a name="when-to-use-writeonly"></a>WriteOnly를 사용 하는 경우  
+
  소비 하는 코드에서 값을 설정할 수 있지만 해당 값을 검색 하지 않으려는 경우가 있습니다. 예를 들어 소셜 등록 번호 또는 암호와 같은 중요 한 데이터는 해당 데이터를 설정 하지 않은 구성 요소에의 한 액세스 로부터 보호 해야 합니다. 이 경우 속성을 사용 하 여 값을 설정할 수 있습니다 `WriteOnly` .  
   
 > [!IMPORTANT]
@@ -48,8 +51,8 @@ ms.locfileid: "84386636"
   
  [Property Statement](../statements/property-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ReadOnly](readonly.md)
-- [프라이빗](private.md)
-- [C++ 키워드](../keywords/index.md)
+- [읽기 전용](readonly.md)
+- [개인](private.md)
+- [키워드](../keywords/index.md)

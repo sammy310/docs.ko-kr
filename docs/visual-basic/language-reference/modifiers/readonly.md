@@ -10,14 +10,15 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 405297a25d4b948a6920bd989c7826e8b6f66bb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3ca322da4e5f0edcbe12bf29bded863daabffe3d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398209"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867700"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly(Visual Basic)
+
 변수 또는 속성을 읽을 수 있지만 쓸 수는 없도록 지정 합니다.
 
 ## <a name="remarks"></a>설명
@@ -61,7 +62,7 @@ End Sub
 - [Dim 문](../statements/dim-statement.md)
 - [Property Statement](../statements/property-statement.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WriteOnly](writeonly.md)
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: bdb73772dfe0e6d49d89a4ef006b1bceac14c8ee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397157"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866031"
 ---
 # <a name="class-statement-visual-basic"></a>Class 문(Visual Basic)
+
 클래스의 이름을 선언 하 고 클래스에서 구성 하는 변수, 속성, 이벤트 및 프로시저의 정의를 소개 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,7 +45,7 @@ End Class
 |`MustInherit`|선택 사항입니다. [MustInherit](../modifiers/mustinherit.md)을 참조 하십시오.|  
 |`NotInheritable`|선택 사항입니다. [NotInheritable](../modifiers/notinheritable.md)를 참조 하세요.|  
 |`Partial`|선택 사항입니다. 클래스의 부분 정의를 나타냅니다. [부분](../modifiers/partial.md)을 참조 하세요.|  
-|`name`|필수 요소. 이 클래스의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
+|`name`|필수 사항입니다. 이 클래스의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|  
 |`Of`|선택 사항입니다. 제네릭 클래스 임을 지정 합니다.|  
 |`typelist`|[Of](of-clause.md) 키워드를 사용 하는 경우 필수 사항입니다. 이 클래스에 대 한 형식 매개 변수 목록입니다. [형식 목록](type-list.md)을 참조 하십시오.|  
 |`Inherits`|선택 사항입니다. 이 클래스가 다른 클래스의 멤버를 상속 함을 나타냅니다. [Inherits 문](inherits-statement.md)을 참조 하세요.|  
@@ -52,9 +53,10 @@ End Class
 |`Implements`|선택 사항입니다. 이 클래스가 하나 이상의 인터페이스의 멤버를 구현 함을 나타냅니다. [Implements 문](implements-statement.md)을 참조 하세요.|  
 |`interfacenames`|문을 사용 하는 경우 필요 `Implements` 합니다. 이 클래스가 구현 하는 인터페이스의 이름입니다.|  
 |`statements`|선택 사항입니다. 이 클래스의 멤버를 정의 하는 문입니다.|  
-|`End Class`|필수 요소. 정의를 종료 `Class` 합니다.|  
+|`End Class`|필수 사항입니다. 정의를 종료 `Class` 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Class`문은 새 데이터 형식을 정의 합니다. *클래스* 는 OOP (개체 지향 프로그래밍)의 기본 빌딩 블록입니다. 자세한 내용은 [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)를 참조 하세요.  
   
  는 `Class` 네임 스페이스 또는 모듈 수준 에서만 사용할 수 있습니다. 즉, 클래스의 *선언 컨텍스트* 는 소스 파일, 네임 스페이스, 클래스, 구조체, 모듈 또는 인터페이스 여야 하며 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.  
@@ -94,20 +96,22 @@ End Class
      중첩 된 클래스 내의 코드가 프로그래밍 요소에 대 한 정규화 되지 않은 참조를 만드는 경우, Visual Basic는 중첩 된 클래스에서 먼저 요소를 검색 한 다음 해당 요소를 포함 하는 클래스에서 가장 바깥쪽 포함 요소로 검색 합니다.  
   
 ## <a name="classes-and-modules"></a>클래스 및 모듈  
+
  이러한 요소에는 여러 가지 유사점이 있지만 몇 가지 중요 한 차이점도 있습니다.  
   
-- **기술.** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈*을 각각 호출 합니다.  
+- **용어** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈*을 각각 호출 합니다.  
   
 - **공유 멤버.** 클래스의 멤버가 공유 또는 인스턴스 멤버 인지 여부를 제어할 수 있습니다.  
   
 - **개체 방향입니다.** 클래스는 개체 지향적 이지만 모듈은 그렇지 않습니다. 클래스의 인스턴스를 하나 이상 만들 수 있습니다. 자세한 내용은 [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 문을 사용 하 여 `Class` 클래스와 여러 멤버를 정의 합니다.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)
 - [구조체와 클래스](../../programming-guide/language-features/data-types/structures-and-classes.md)

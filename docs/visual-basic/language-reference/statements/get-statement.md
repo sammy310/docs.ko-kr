@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404604"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866205"
 ---
 # <a name="get-statement"></a>Get 문
+
 `Get`속성의 값을 검색 하는 데 사용 되는 속성 프로시저를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,9 +37,10 @@ End Get
 |`attributelist`|선택 사항입니다. [특성 목록](attribute-list.md)을 참조 하십시오.|  
 |`accessmodifier`|`Get`이 속성의 및 문 중 최대 하나에 대해 선택적입니다 `Set` . 다음 중 하나일 수 있습니다.<br /><br /> -   [보호](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [문자](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|  
 |`statements`|선택 사항입니다. 속성 프로시저가 호출 될 때 실행 되는 하나 이상의 문입니다 `Get` .|  
-|`End Get`|필수 요소. 속성 프로시저의 정의를 종료 `Get` 합니다.|  
+|`End Get`|필수 사항입니다. 속성 프로시저의 정의를 종료 `Get` 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Get`속성이로 표시 되지 않은 경우 모든 속성에 속성 프로시저가 있어야 합니다 `WriteOnly` . `Get`프로시저는 속성의 현재 값을 반환 하는 데 사용 됩니다.  
   
  Visual Basic `Get` 은 식에서 속성의 값을 요청할 때 속성의 프로시저를 자동으로 호출 합니다.  
@@ -61,7 +63,7 @@ End Get
   
 - **프로시저에서 반환** `Get`프로시저가 호출 코드로 반환 되 면 속성 값을 요청한 문 내에서 실행이 계속 됩니다.  
   
-     `Get`속성 프로시저는 [Return 문](return-statement.md) 중 하나를 사용 하거나 반환 값을 속성 이름에 할당 하 여 값을 반환할 수 있습니다. 자세한 내용은 [함수 문의](function-statement.md)"반환 값"을 참조 하세요.  
+     `Get` 속성 프로시저는 [Return 문](return-statement.md) 중 하나를 사용 하거나 반환 값을 속성 이름에 할당 하 여 값을 반환할 수 있습니다. 자세한 내용은 [함수 문의](function-statement.md)"반환 값"을 참조 하세요.  
   
      `Exit Property`및 `Return` 문을 실행 하면 속성 프로시저에서 즉시 종료 됩니다. 프로시저의 모든 위치에는 개수와 `Exit Property` `Return` 문이 모두 표시 될 수 있으며 `Exit Property` 문과 문을 혼합할 수 있습니다 `Return` .  
   
@@ -78,11 +80,12 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 문을 사용 하 여 `Get` 속성의 값을 반환 합니다.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Set 문](set-statement.md)
 - [Property Statement](property-statement.md)

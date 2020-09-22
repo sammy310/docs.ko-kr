@@ -7,17 +7,19 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 3b323d5fb1c4f1357b9f476213793c69d29b7208
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2b7113424969b0b18c981b0c8932aeef3795ca4a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402696"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867673"
 ---
 # <a name="static-visual-basic"></a>Static(Visual Basic)
+
 선언 된 지역 변수를 하나 이상 유지 하 고 선언 된 프로시저가 종료 된 후에 최신 값을 유지 하도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  일반적으로 프로시저의 지역 변수는 프로시저가 중지 되는 즉시 존재 하지 않게 됩니다. 정적 변수는 계속 존재 하며 최신 값을 유지 합니다. 다음에 코드가 프로시저를 호출 하면 변수가 다시 초기화 되지 않고 사용자가 할당 한 최신 값을 유지 합니다. 정적 변수는 정의 된 클래스 또는 모듈의 수명 동안 계속 존재 합니다.  
   
 ## <a name="rules"></a>규칙  
@@ -31,11 +33,13 @@ ms.locfileid: "84402696"
 - **결합된 한정자.** `Static` `ReadOnly` `Shadows` 동일한 선언에서, 또는를 함께 지정할 수 없습니다 `Shared` .  
   
 ## <a name="behavior"></a>동작  
+
  프로시저에서 정적 변수를 선언 하는 경우 `Shared` 전체 응용 프로그램에 대해 정적 변수의 복사본을 하나만 사용할 수 있습니다. 클래스 `Shared` 의 인스턴스를 가리키는 변수가 아니라 클래스 이름을 사용 하 여 프로시저를 호출 합니다.  
   
  프로시저가 아닌 프로시저에서 정적 변수를 선언 하는 경우 `Shared` 클래스의 각 인스턴스에 대해 변수의 복사본을 하나만 사용할 수 있습니다. 클래스의 특정 인스턴스를 가리키는 변수를 사용 하 여 비공유 프로시저를 호출 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 `Static`의 사용법을 보여줍니다.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
@@ -46,7 +50,7 @@ ms.locfileid: "84402696"
   
  [Dim 문](../statements/dim-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Overloads](shadows.md)
 - [공유](shared.md)

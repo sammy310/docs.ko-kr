@@ -7,14 +7,15 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 37644a9c37ffde084120c5f1e1ee8c87a04ffc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371157"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867015"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
+
 지정 된 <xref:System.Type> 형식에 대 한 개체를 반환 합니다. <xref:System.Type>개체는 속성, 메서드 및 이벤트와 같은 형식에 대 한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,7 +31,8 @@ GetType(typename)
 |`typename`|정보를 원하는 형식의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- `GetType`연산자는 지정 된 <xref:System.Type> 에 대 한 개체를 반환 합니다 `typename` . 에서 정의 된 형식의 이름을 전달할 수 있습니다 `typename` . 여기에는 다음이 포함됩니다.  
+
+ `GetType`연산자는 지정 된 <xref:System.Type> 에 대 한 개체를 반환 합니다 `typename` . 에서 정의 된 형식의 이름을 전달할 수 있습니다 `typename` . 여기에는 다음과 같은 사항이 포함됩니다.  
   
 - 또는와 같은 모든 Visual Basic 데이터 형식 `Boolean` `Date` 입니다.  
   
@@ -53,11 +55,12 @@ GetType(typename)
 - 두 개체 참조를 비교 하 여 동일한 형식의 인스턴스를 참조 하는지 여부를 확인 하려고 합니다. 이 경우는 `GetType` 동일한 개체에 대 한 참조를 반환 <xref:System.Type> 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 `GetType` 사용 중인 연산자를 보여 줍니다.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)
 - [기능별 연산자 목록](operators-listed-by-functionality.md)

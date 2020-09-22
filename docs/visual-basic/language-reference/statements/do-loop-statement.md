@@ -20,14 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: a9ec6caccbe161a39b592a642a938b81bae911a6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404786"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90865936"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 문(Visual Basic)
+
 `Boolean`조건이 `True` 이거나 조건이이 될 때까지 문 블록을 반복 `True` 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -61,9 +62,10 @@ Loop { While | Until } condition
 |`statements`|선택 사항입니다. 또는가 인 동안 반복 되는 하나 이상의 문입니다 `condition` `True` .|  
 |`Continue Do`|선택 사항입니다. 루프의 다음 반복으로 제어를 전달 `Do` 합니다.|  
 |`Exit Do`|선택 사항입니다. 루프 외부로 제어를 전달 `Do` 합니다.|  
-|`Loop`|필수 요소. 루프의 정의를 종료 `Do` 합니다.|  
+|`Loop`|필수 사항입니다. 루프의 정의를 종료 `Do` 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Do...Loop`조건을 만족할 때까지 문 집합을 무한 횟수로 반복 하려는 경우 구조를 사용 합니다. 이 문을 설정 된 횟수 만큼 반복 하려면 [For ... 다음 문을](for-next-statement.md) 일반적으로 선택 하는 것이 좋습니다.  
   
  또는 중 하나를 사용 하 여 지정할 수 있습니다 `While` `Until` `condition` .  
@@ -78,35 +80,40 @@ Loop { While | Until } condition
 > `Do...Loop`구조를 사용 하면 보다 유연성이 향상 됩니다 [. End While 문을](while-end-while-statement.md) 사용 하면가 중지 될 때 루프를 종료할 것인지 아니면 처음에가 될 때 루프를 종료할 것인지를 결정할 수 있습니다 `condition` `True` `True` . 또한 `condition` 루프의 시작 또는 끝에서 테스트할 수 있습니다.  
   
 ## <a name="exit-do"></a>종료  
- [Exit Do](exit-statement.md) 문은를 종료 하는 다른 방법을 제공할 수 있습니다 `Do…Loop` . `Exit Do`문 다음에 오는 문으로 제어를 즉시 전달 `Loop` 합니다.  
+
+ [Exit Do](exit-statement.md) 문은를 종료 하는 다른 방법을 제공할 수 있습니다 `Do…Loop` . `Exit Do` 문 다음에 오는 문으로 제어를 즉시 전달 `Loop` 합니다.  
   
- `Exit Do`는 구조체와 같이 일부 조건을 평가한 후에 사용 되는 경우가 많습니다 `If...Then...Else` . 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. 를 사용 하는 한 가지 `Exit Do` 방법은 *무한 루프*를 발생 시킬 수 있는 조건을 테스트 하는 것입니다 .이는 무한 하거나 무한 한 횟수를 실행할 수 있는 루프입니다. 를 사용 하 여 루프를 이스케이프할 수 있습니다 `Exit Do` .  
+ `Exit Do` 는 구조체와 같이 일부 조건을 평가한 후에 사용 되는 경우가 많습니다 `If...Then...Else` . 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. 를 사용 하는 한 가지 `Exit Do` 방법은 *무한 루프*를 발생 시킬 수 있는 조건을 테스트 하는 것입니다 .이는 무한 하거나 무한 한 횟수를 실행할 수 있는 루프입니다. 를 사용 하 여 루프를 이스케이프할 수 있습니다 `Exit Do` .  
   
  에는 임의 개수의 문을 포함할 수 있습니다 `Exit Do` `Do…Loop` .  
   
  중첩 된 루프 내에서 사용 되는 경우 `Do` `Exit Do` 가장 안쪽의 루프와 그 다음으로 높은 중첩 수준으로 제어를 전달 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서 루프의 문은 `index` 변수가 10 보다 클 때까지 계속 실행 됩니다. `Until`절이 루프의 끝에 있습니다.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `While` 절 대신 절을 사용 하 `Until` 고 `condition` 끝이 아닌 루프의 시작 부분에서 테스트 됩니다.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `condition` `index` 변수가 100 보다 큰 경우 루프를 중지 합니다. `If`그러나 루프의 문은 `Exit Do` 인덱스 변수가 10 보다 클 경우 문이 루프를 중지 하도록 합니다.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 텍스트 파일의 모든 줄을 읽습니다. <xref:System.IO.File.OpenText%2A>메서드는 파일을 열고 <xref:System.IO.StreamReader> 문자를 읽는를 반환 합니다. 조건에서 `Do...Loop` <xref:System.IO.StreamReader.Peek%2A> 의 메서드는 `StreamReader` 추가 문자가 있는지 여부를 확인 합니다.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [루프 구조체](../../programming-guide/language-features/control-flow/loop-structures.md)
 - [For...Next 문](for-next-statement.md)

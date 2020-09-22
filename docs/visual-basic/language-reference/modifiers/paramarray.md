@@ -8,18 +8,20 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: e3c24818ea87884a0dd9b42c604e13e16ca6d3d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: baf9303101eea9eed27e8a4eee9e04d255c798e9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84391822"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867824"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray(Visual Basic)
-프로시저 매개 변수가 지정 된 형식의 선택적 요소 배열을 사용 하도록 지정 합니다. `ParamArray`은 매개 변수 목록의 마지막 매개 변수 에서만 사용할 수 있습니다.  
+
+프로시저 매개 변수가 지정 된 형식의 선택적 요소 배열을 사용 하도록 지정 합니다. `ParamArray` 은 매개 변수 목록의 마지막 매개 변수 에서만 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- `ParamArray`임의 개수의 인수를 프로시저에 전달할 수 있습니다. `ParamArray` 매개 변수는 항상 [ByVal](byval.md)을 사용하여 선언됩니다.  
+
+ `ParamArray` 임의 개수의 인수를 프로시저에 전달할 수 있습니다. `ParamArray` 매개 변수는 항상 [ByVal](byval.md)을 사용하여 선언됩니다.  
   
  `ParamArray`적절 한 데이터 형식의 배열이 나 쉼표로 구분 된 값 목록을 전달 하거나 아무 것도 지정 하지 않으면 매개 변수에 하나 이상의 인수를 제공할 수 있습니다. 자세한 내용은 [매개 변수 배열의](../../programming-guide/language-features/procedures/parameter-arrays.md)"ParamArray 호출"을 참조 하십시오.  
   
@@ -36,7 +38,7 @@ ms.locfileid: "84391822"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [C++ 키워드](../keywords/index.md)
+- [키워드](../keywords/index.md)
 - [매개 변수 배열](../../programming-guide/language-features/procedures/parameter-arrays.md)

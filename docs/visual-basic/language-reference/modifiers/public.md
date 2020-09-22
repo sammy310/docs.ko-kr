@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 35332e50227cdef6386362df17c10b5b2cdaa689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415351"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867689"
 ---
 # <a name="public-visual-basic"></a>Public(Visual Basic)
+
 하나 이상의 선언 된 프로그래밍 요소에 액세스 제한이 없도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  클래스 라이브러리와 같은 구성 요소 또는 구성 요소 집합을 게시 하는 경우 일반적으로 어셈블리와 상호 작용 하는 코드에서 프로그래밍 요소에 액세스할 수 있도록 합니다. 요소에 대 한 무제한 액세스를 설정 하려면를 사용 하 여 선언 하면 `Public` 됩니다.  
   
  공용 액세스는 프로그래밍 요소에 대 한 액세스를 제한 하지 않아도 되는 일반적인 수준입니다. 선언 하지 않으면 인터페이스, 모듈, 클래스 또는 구조체 내에서 선언 된 요소의 액세스 수준이 기본적으로로 설정 `Public` 됩니다.  
@@ -65,11 +67,11 @@ ms.locfileid: "84415351"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보호](protected.md)
 - [Friend](friend.md)
-- [프라이빗](private.md)
+- [개인](private.md)
 - [개인 보호](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
