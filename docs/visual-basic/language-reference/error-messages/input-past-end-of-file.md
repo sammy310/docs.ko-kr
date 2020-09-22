@@ -4,23 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
-ms.openlocfilehash: 5da14c7a28ecdcd023fc6439cb6ed64444c1183b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cb0373fb0652e9600ac8651661708414561aca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013792"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873965"
 ---
-# <a name="input-past-end-of-file"></a><span data-ttu-id="4cbc5-102">입력(값)이 파일의 끝을 넘습니다.</span><span class="sxs-lookup"><span data-stu-id="4cbc5-102">Input past end of file</span></span>
-<span data-ttu-id="4cbc5-103">중 하나는 `Input` 문에서 비어 있는 파일 또는 모든 데이터 사용 또는 사용에서 읽고는 `EOF` 함수 파일을 사용 하 여 이진 액세스를 위해 열렸습니다.</span><span class="sxs-lookup"><span data-stu-id="4cbc5-103">Either an `Input` statement is reading from a file that is empty or one in which all the data is used, or you used the `EOF` function with a file opened for binary access.</span></span>  
+# <a name="input-past-end-of-file"></a><span data-ttu-id="02855-102">입력(값)이 파일의 끝을 넘습니다.</span><span class="sxs-lookup"><span data-stu-id="02855-102">Input past end of file</span></span>
+
+<span data-ttu-id="02855-103">`Input`비어 있거나 모든 데이터가 사용 되는 파일에서 문을 읽고 있거나 `EOF` 이진 액세스용으로 열린 파일에 함수를 사용 했습니다.</span><span class="sxs-lookup"><span data-stu-id="02855-103">Either an `Input` statement is reading from a file that is empty or one in which all the data is used, or you used the `EOF` function with a file opened for binary access.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4cbc5-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="4cbc5-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="02855-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="02855-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="4cbc5-105">사용 된 `EOF` 직전 함수를 `Input` 문을 파일의 끝을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="4cbc5-105">Use the `EOF` function immediately before the `Input` statement to detect the end of the file.</span></span>  
+1. <span data-ttu-id="02855-105">`EOF`문 바로 앞에 함수를 사용 `Input` 하 여 파일의 끝을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="02855-105">Use the `EOF` function immediately before the `Input` statement to detect the end of the file.</span></span>  
   
-2. <span data-ttu-id="4cbc5-106">파일을 이진 액세스에 대 한 열을 사용 하 여 `Seek` 고 `Loc`입니다.</span><span class="sxs-lookup"><span data-stu-id="4cbc5-106">If the file is opened for binary access, use `Seek` and `Loc`.</span></span>  
+2. <span data-ttu-id="02855-106">이진 액세스용으로 파일을 연 경우 및를 사용 `Seek` `Loc` 합니다.</span><span class="sxs-lookup"><span data-stu-id="02855-106">If the file is opened for binary access, use `Seek` and `Loc`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cbc5-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="4cbc5-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02855-107">참조</span><span class="sxs-lookup"><span data-stu-id="02855-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileSystem.Input%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.EOF%2A>
