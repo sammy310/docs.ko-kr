@@ -15,15 +15,16 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 92ac5beb70526795eb140bd794e47981cebfea93
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410918"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078374"
 ---
 # <a name="basic-query-operations-visual-basic"></a>기본 쿼리 작업(Visual Basic)
-이 항목에서는 Visual Basic의 LINQ (통합 언어 쿼리) 식 및 쿼리에서 수행 하는 몇 가지 일반적인 작업 종류에 대 한 간략 한 소개를 제공 합니다. 자세한 내용은 다음 항목을 참조하세요.  
+
+이 항목에서는 Visual Basic의 LINQ (통합 언어 쿼리) 식 및 쿼리에서 수행 하는 몇 가지 일반적인 작업 종류에 대 한 간략 한 소개를 제공 합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
  [Visual Basic의 LINQ 소개](../../language-features/linq/introduction-to-linq.md)  
   
@@ -32,6 +33,7 @@ ms.locfileid: "84410918"
  [연습: Visual Basic에서 쿼리 작성](walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>데이터 원본 지정 (원본)  
+
  LINQ 쿼리에서 첫 번째 단계는 쿼리 하려는 데이터 원본을 지정 하는 것입니다. 따라서 `From` 쿼리의 절은 항상 먼저 제공 됩니다. 쿼리 연산자 원본 유형에 따라 결과를 선택 하 고 모양을 합니다.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
@@ -41,6 +43,7 @@ ms.locfileid: "84410918"
  Visual Basic에서 절을 사용 하는 방법에 대 한 자세한 내용은 `From` [from 절](../../../language-reference/queries/from-clause.md)을 참조 하세요.  
   
 ## <a name="filtering-data-where"></a>데이터 필터링 (Where)  
+
  가장 일반적인 쿼리 작업은 부울 식의 형태로 필터를 적용 하는 것입니다. 그런 다음이 쿼리는 식이 true 인 요소만 반환 합니다. `Where`필터링을 수행 하는 데 절이 사용 됩니다. 필터는 결과 시퀀스에 포함할 데이터 소스의 요소를 지정 합니다. 다음 예에서는 런던에 주소가 있는 고객만 포함 되어 있습니다.  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
@@ -60,6 +63,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic에서 절을 사용 하는 방법에 대 한 자세한 내용은 `Where` [where 절](../../../language-reference/queries/where-clause.md)을 참조 하세요.  
   
 ## <a name="ordering-data-order-by"></a>데이터 순서 지정 (Order By)  
+
  반환 된 데이터를 특정 순서로 정렬 하는 것이 편리한 경우가 많습니다. `Order By`절을 지정 하면 반환 된 시퀀스의 요소가 지정 된 필드를 기준으로 정렬 됩니다. 예를 들어 다음 쿼리는 속성을 기반으로 결과를 정렬 합니다 `Name` . `Name`는 문자열 이므로 반환 된 데이터는 a에서 Z로 사전순으로 정렬 됩니다.  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
@@ -69,6 +73,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic에서 절을 사용 하는 방법에 대 한 자세한 내용은 `Order By` [Order by 절](../../../language-reference/queries/order-by-clause.md)을 참조 하십시오.  
   
 ## <a name="selecting-data-select"></a>데이터 선택 (Select)  
+
  `Select`절은 반환 된 요소의 형식 및 내용을 지정 합니다. 예를 들어 결과가 전체 `Customer` 개체, 하나의 `Customer` 속성, 속성의 하위 집합, 다양 한 데이터 원본의 속성 조합 또는 계산을 기반으로 하는 몇 가지 새로운 결과 형식으로 구성 될 지 여부를 지정할 수 있습니다. `Select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션*이라고 합니다.  
   
  전체 개체로 구성 된 컬렉션을 검색 하려면 `Customer` 범위 변수 자체를 선택 합니다.  
@@ -98,6 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic 절을 사용 하는 방법에 대 한 자세한 내용은 `Select` [select 절](../../../language-reference/queries/select-clause.md)을 참조 하세요.  
   
 ## <a name="joining-data-join-and-group-join"></a>데이터 조인 (조인 및 그룹 조인)  
+
  여러 가지 방법으로 절에서 둘 이상의 데이터 소스를 결합할 수 있습니다 `From` . 예를 들어, 다음 코드는 두 개의 데이터 원본을 사용 하 고 결과에서 둘 다의 속성을 암시적으로 결합 합니다. 이 쿼리는 성이 모음으로 시작 하는 학생을 선택 합니다.  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
@@ -109,9 +115,10 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join`SQL의와 마찬가지로 컬렉션을 단일 계층 구조 컬렉션으로 결합 `LEFT JOIN` 합니다. 자세한 내용은 [Join 절](../../../language-reference/queries/join-clause.md) 및 [Group join 절](../../../language-reference/queries/group-join-clause.md)을 참조 하세요.  
+ `Group Join` SQL의와 마찬가지로 컬렉션을 단일 계층 구조 컬렉션으로 결합 `LEFT JOIN` 합니다. 자세한 내용은 [Join 절](../../../language-reference/queries/join-clause.md) 및 [Group join 절](../../../language-reference/queries/group-join-clause.md)을 참조 하세요.  
   
 ## <a name="grouping-data-group-by"></a>데이터 그룹화 (Group By)  
+
  요소에 있는 `Group By` 하나 이상의 필드에 따라 쿼리 결과의 요소를 그룹화 하는 절을 추가할 수 있습니다. 예를 들어, 다음 코드는 year를 기준으로 학생을 그룹화 합니다.  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
@@ -152,7 +159,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  에 대 한 자세한 내용은 `Group By` [Group by 절](../../../language-reference/queries/group-by-clause.md)을 참조 하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)

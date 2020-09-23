@@ -2,14 +2,15 @@
 title: 지정한 레지스트리 키가 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 837e925a-aac5-4745-8eaa-d08bebbcbcd3
-ms.openlocfilehash: e93e1a9c919481bb9a3279a4302d861453e758cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 17f41711c522581f8b5b1019a43e8a4f448d37fd
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661033"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078751"
 ---
 # <a name="specified-registry-key-does-not-exist"></a>지정한 레지스트리 키가 없습니다.
+
 지정된 레지스트리 키가 존재하지 않는 경우  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -18,7 +19,7 @@ ms.locfileid: "64661033"
   
 - 쓰기를 시도하기 전에 레지스트리 키를 만듭니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.Win32.RegistryKey>
-- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [My.computer. Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

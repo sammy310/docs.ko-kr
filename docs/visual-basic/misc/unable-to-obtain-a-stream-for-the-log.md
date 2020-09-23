@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887356fac3abe5c9d28751f7c4d3b1908ed35acb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922540"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078387"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>로그에 대한 스트림을 가져올 수 없습니다.
-로그에 대한 스트림을 가져올 수 없습니다. 에 기반한 파일 이름이 \<이름 >에서 이미 사용 중인 합니다.  
+
+로그에 대한 스트림을 가져올 수 없습니다. 을 기반으로 하는 잠재적인 파일 이름이 \<name> 이미 사용 중입니다.  
   
- 합니다 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 모든 잠재적 로그 파일 이름을 기반으로 하므로 클래스 새 로그 파일을 만들지 못했습니다 \<이름 >에서 이미 사용 중인 합니다.  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>기반으로 하는 모든 잠재적인 로그 파일 이름이 이미 사용 중 이므로 클래스에서 새 로그 파일을 만들 수 없습니다 \<name> .  
   
  로그 파일이 너무 많으면 애플리케이션의 아키텍처 문제를 나타낼 수도 있습니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스에 대한 설명서를 참조하세요.  
   
@@ -24,9 +25,9 @@ ms.locfileid: "61922540"
   
 2. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 개체가 새 로그를 만들 수 있도록 기존 로그를 보관하고 컴퓨터에서 제거합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [내 응용 프로그램 .Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [DirectoryPath.](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
