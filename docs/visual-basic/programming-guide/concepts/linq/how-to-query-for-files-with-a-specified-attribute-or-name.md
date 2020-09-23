@@ -2,17 +2,18 @@
 title: '방법: 지정된 특성 또는 이름이 있는 파일 쿼리'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396417"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059316"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="784ca-102">방법: 지정 된 특성 또는 이름으로 파일 쿼리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="784ca-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="784ca-103">이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="784ca-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="784ca-104">또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="784ca-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="09283-102">방법: 지정 된 특성 또는 이름으로 파일 쿼리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09283-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+
+<span data-ttu-id="09283-103">이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="09283-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="09283-104">또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="09283-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="784ca-105">예제</span><span class="sxs-lookup"><span data-stu-id="784ca-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="09283-105">예제</span><span class="sxs-lookup"><span data-stu-id="09283-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,10 +61,11 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compile-the-code"></a><span data-ttu-id="784ca-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="784ca-106">Compile the code</span></span>  
-<span data-ttu-id="784ca-107">System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="784ca-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="784ca-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="784ca-108">See also</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="09283-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="09283-106">Compile the code</span></span>  
 
-- [<span data-ttu-id="784ca-109">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="784ca-109">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="784ca-110">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="784ca-110">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+<span data-ttu-id="09283-107">System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="09283-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="09283-108">참조</span><span class="sxs-lookup"><span data-stu-id="09283-108">See also</span></span>
+
+- [<span data-ttu-id="09283-109">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09283-109">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="09283-110">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09283-110">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

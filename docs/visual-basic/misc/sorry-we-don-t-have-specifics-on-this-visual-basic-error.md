@@ -3044,35 +3044,36 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357806"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059641"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="52a92-102">죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
-<span data-ttu-id="52a92-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="52a92-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="52a92-105">또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-105">Or, you can ask other developers using one of these forums:</span></span>  
-  
- [<span data-ttu-id="52a92-106">Visual Basic 언어</span><span class="sxs-lookup"><span data-stu-id="52a92-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- <span data-ttu-id="52a92-107">Visual Basic 언어 구문 및 컴파일러와 관련 된 질문과 일반적인 토론을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
-  
- [<span data-ttu-id="52a92-108">Visual Basic Interop 및 업그레이드</span><span class="sxs-lookup"><span data-stu-id="52a92-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- <span data-ttu-id="52a92-109">Visual Basic로 업그레이드 하 고 상호 운용성 기능을 사용 하는 문제와 관련 된 질문에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
-  
- [<span data-ttu-id="52a92-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="52a92-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- <span data-ttu-id="52a92-111">Visual Studio 환경에서 작업 하는 방법에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
-  
- [<span data-ttu-id="52a92-112">Visual Basic 일반</span><span class="sxs-lookup"><span data-stu-id="52a92-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- <span data-ttu-id="52a92-113">다른 포럼에서 다루지 않는 Visual Basic 관련 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
-  
- [<span data-ttu-id="52a92-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="52a92-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
- <span data-ttu-id="52a92-115">Visual Basic와 관련 된 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="52a92-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
-  
- <span data-ttu-id="52a92-116">또한 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="52a92-116">Also see:</span></span>  
- [<span data-ttu-id="52a92-117">Visual Basic 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="52a92-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="52a92-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52a92-118">See also</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="ead7a-102">죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
 
-- [<span data-ttu-id="52a92-119">Visual Basic 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="52a92-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="52a92-120">Visual Basic 참조</span><span class="sxs-lookup"><span data-stu-id="52a92-120">Visual Basic Reference</span></span>](../reference/index.md)
+<span data-ttu-id="ead7a-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="ead7a-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="ead7a-105">또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-105">Or, you can ask other developers using one of these forums:</span></span>  
+  
+ [<span data-ttu-id="ead7a-106">Visual Basic 언어</span><span class="sxs-lookup"><span data-stu-id="ead7a-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
+ <span data-ttu-id="ead7a-107">Visual Basic 언어 구문 및 컴파일러와 관련 된 질문과 일반적인 토론을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
+  
+ [<span data-ttu-id="ead7a-108">Visual Basic Interop 및 업그레이드</span><span class="sxs-lookup"><span data-stu-id="ead7a-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
+ <span data-ttu-id="ead7a-109">Visual Basic로 업그레이드 하 고 상호 운용성 기능을 사용 하는 문제와 관련 된 질문에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
+  
+ [<span data-ttu-id="ead7a-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="ead7a-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
+ <span data-ttu-id="ead7a-111">Visual Studio 환경에서 작업 하는 방법에 대 한 질문을 위한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+  
+ [<span data-ttu-id="ead7a-112">Visual Basic 일반</span><span class="sxs-lookup"><span data-stu-id="ead7a-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
+ <span data-ttu-id="ead7a-113">다른 포럼에서 다루지 않는 Visual Basic 관련 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
+  
+ [<span data-ttu-id="ead7a-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="ead7a-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="ead7a-115">Visual Basic와 관련 된 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ead7a-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
+  
+ <span data-ttu-id="ead7a-116">또한 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ead7a-116">Also see:</span></span>  
+ [<span data-ttu-id="ead7a-117">Visual Basic 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="ead7a-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="ead7a-118">참조</span><span class="sxs-lookup"><span data-stu-id="ead7a-118">See also</span></span>
+
+- [<span data-ttu-id="ead7a-119">Visual Basic 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="ead7a-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="ead7a-120">Visual Basic 참조</span><span class="sxs-lookup"><span data-stu-id="ead7a-120">Visual Basic Reference</span></span>](../reference/index.md)
