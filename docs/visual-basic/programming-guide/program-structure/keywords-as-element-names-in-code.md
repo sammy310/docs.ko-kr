@@ -7,14 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403228"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065751"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
+
 변수, 클래스 또는 멤버와 같은 모든 프로그램 요소는 제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop` . 그러나 제한 된 키워드와 동일한 이름을 사용 하는 버전의를 참조 하려면 `Loop` `[ ]` 다음 예제와 같이 전체 한정 문자열로 앞에 또는 대괄호 ()로 묶어야 합니다.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
@@ -30,8 +31,8 @@ ms.locfileid: "84403228"
 > [!NOTE]
 > 또한 프로그램에는 다른 참조 된 어셈블리에서 제공 하는 요소 이름이 포함 될 수 있습니다. 이러한 이름이 제한 된 키워드와 충돌 하는 경우 대괄호를 사용 하면 Visual Basic 정의 된 요소로 해석 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명명 규칙](naming-conventions.md)
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
-- [C++ 키워드](../../language-reference/keywords/index.md)
+- [키워드](../../language-reference/keywords/index.md)
