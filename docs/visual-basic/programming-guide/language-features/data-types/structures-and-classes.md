@@ -9,14 +9,15 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: d252d9216a9b825ad0663a5779d7ce7f81fa9011
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393574"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086220"
 ---
 # <a name="structures-and-classes-visual-basic"></a>구조체와 클래스(Visual Basic)
+
 Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 엔터티 모두 동일한 기능을 대부분 지원 합니다. 그러나 구조와 클래스 사이에는 중요 한 차이점도 있습니다.  
   
  클래스는 참조 형식이 될 수 있다는 장점이 있습니다. 참조를 전달 하는 것은 구조체 변수를 모든 데이터와 함께 전달 하는 것 보다 효율적입니다. 반면에 구조체는 전역 힙에서 메모리를 할당할 필요가 없습니다.  
@@ -24,6 +25,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
  구조체에서 상속할 수 없으므로 구조체는 확장 하지 않아도 되는 개체에만 사용 해야 합니다. 만들려는 개체의 인스턴스 크기가 작은 경우 구조체를 사용 하 고 클래스와 구조체의 성능 특성을 고려해 야 합니다.  
   
 ## <a name="similarities"></a>비슷하며  
+
  구조체와 클래스는 다음과 같은 점에서 유사 합니다.  
   
 - 둘 다 *컨테이너* 형식입니다. 즉, 다른 형식을 멤버로 포함 합니다.  
@@ -41,6 +43,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
 - 둘 다 이벤트를 선언 하 고 발생 시킬 수 있으며 둘 다 대리자를 선언할 수 있습니다.  
   
 ## <a name="differences"></a>차이점  
+
  구조체와 클래스는 다음 인스턴스와 관련 사항을 다릅니다.  
   
 - 구조체는 *값 형식*입니다. 클래스는 *참조 형식*입니다. 구조체 형식의 변수에는 클래스 형식의 데이터에 대 한 참조를 포함 하는 대신 구조체의 데이터가 포함 됩니다.  
@@ -70,6 +73,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
  모든 구조체에는 매개 변수가 없는 암시적 public 생성자가 있습니다. 이 생성자는 모든 구조체의 데이터 요소를 기본값으로 초기화 합니다. 이 동작은 다시 정의할 수 없습니다.  
   
 ## <a name="instances-and-variables"></a>인스턴스 및 변수  
+
  구조체는 값 형식 이므로 각 구조체 변수는 개별 구조체 인스턴스에 영구적으로 바인딩됩니다. 그러나 클래스는 참조 형식이 며 개체 변수는 다양 한 시간에 다양 한 클래스 인스턴스를 참조할 수 있습니다. 이러한 차이는 다음과 같은 방법으로 구조 및 클래스 사용에 영향을 줍니다.  
   
 - **초기.** 구조체 변수에는 구조체의 매개 변수가 없는 생성자를 사용 하 여 요소를 초기화 하는 작업이 암시적으로 포함 됩니다. 따라서 `Dim s As struct1` 는와 동일 `Dim s As struct1 = New struct1()` 합니다.  
@@ -84,9 +88,9 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
   
      그러나 구조체 요소는 자체 인스턴스 내에서 격리 됩니다. 해당 값에 대 한 변경 내용은 다른 구조체 변수에는 적용 되지 않습니다. 동일한 선언의 다른 인스턴스에서도 마찬가지 `Structure` 입니다.  
   
-- **연산.** 두 구조체의 같음 테스트는 요소 및 요소 테스트를 사용 하 여 수행 해야 합니다. 메서드를 사용 하 여 두 개체 변수를 비교할 수 있습니다 <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A>두 변수가 동일한 인스턴스를 가리키도록 할지 여부를 나타냅니다.  
+- **연산.** 두 구조체의 같음 테스트는 요소 및 요소 테스트를 사용 하 여 수행 해야 합니다. 메서드를 사용 하 여 두 개체 변수를 비교할 수 있습니다 <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A> 두 변수가 동일한 인스턴스를 가리키도록 할지 여부를 나타냅니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 형식](index.md)
 - [복합 데이터 형식](composite-data-types.md)

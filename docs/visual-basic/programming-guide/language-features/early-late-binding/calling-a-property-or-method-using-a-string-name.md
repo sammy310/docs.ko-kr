@@ -12,17 +12,19 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410659"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086090"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>문자열 이름을 사용하여 속성 또는 메서드 호출(Visual Basic)
+
 대부분의 경우 디자인 타임에 개체의 속성 및 메서드를 검색 하 고이를 처리 하는 코드를 작성할 수 있습니다. 그러나 경우에 따라 개체의 속성 및 메서드를 미리 알지 못할 수도 있고, 최종 사용자가 런타임에 속성을 지정 하거나 메서드를 실행할 수 있도록 하는 유연성을 원합니다.  
   
 ## <a name="callbyname-function"></a>CallByName 함수  
+
  예를 들어, COM 구성 요소에 연산자를 전달 하 여 사용자가 입력 한 식을 평가 하는 클라이언트 응용 프로그램을 고려해 야 합니다. 새 연산자가 필요한 구성 요소에 새 함수를 지속적으로 추가 한다고 가정 합니다. 표준 개체 액세스 기술을 사용 하는 경우 새 연산자를 사용 하려면 먼저 클라이언트 응용 프로그램을 다시 컴파일하고 다시 배포 해야 합니다. 이를 방지 하기 위해 함수를 사용 하 여 `CallByName` 응용 프로그램을 변경 하지 않고 새 연산자를 문자열로 전달할 수 있습니다.  
   
  `CallByName`함수를 사용 하면 문자열을 사용 하 여 런타임에 속성이 나 메서드를 지정할 수 있습니다. 함수의 시그니처는 `CallByName` 다음과 같습니다.  
@@ -46,7 +48,7 @@ ms.locfileid: "84410659"
 > [!NOTE]
 > 함수는 `CallByName` 경우에 따라 유용 하 게 사용 되지만,를 사용 하면 `CallByName` 프로시저를 호출 하는 데를 사용 하는 것이 런타임에 바인딩된 호출 보다 약간 느리기 때문에 성능이 저하 될 수 있습니다. 루프 내부와 같이 반복적으로 호출 되는 함수를 호출 하는 경우 `CallByName` 성능에 심각한 영향을 미칠 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [개체 형식 확인](determining-object-type.md)

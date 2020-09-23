@@ -17,19 +17,21 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 4b09284b8282c481e406050d37cbdb2f3c8686bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6e067d72e557b97f8626b148e173e3d1583f92b8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414507"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086272"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>열거형 및 이름 한정(Visual Basic)
+
 일반적으로 열거형의 멤버를 참조할 때는 열거형 이름으로 멤버 이름을 한 정해야 합니다. 예를 들어, `Sunday` 열거형의 멤버를 참조 하려면 `Days` 다음 구문을 사용 합니다.  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
 ## <a name="using-the-imports-statement"></a>Imports 문 사용  
+
  `Imports`다음 예제와 같이 코드의 네임 스페이스 선언 섹션에 문을 추가 하 여 정규화 된 이름을 사용 하지 않을 수 있습니다.  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
@@ -48,7 +50,7 @@ ms.locfileid: "84414507"
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [상수 및 열거형](../../../language-reference/constants-and-enumerations.md)
 - [방법: 열거형 선언](how-to-declare-enumerations.md)

@@ -9,17 +9,19 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410646"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086064"
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
+
 제네릭 개체 변수 (즉,로 선언 하는 변수 `Object` )는 모든 클래스의 개체를 보유할 수 있습니다. 형식의 변수를 사용 하는 경우 `Object` 개체의 클래스에 따라 다른 작업을 수행 해야 할 수 있습니다. 예를 들어 일부 개체는 특정 속성이 나 메서드를 지원 하지 않을 수 있습니다. Visual Basic은 개체 변수에 저장 되는 개체의 형식, 함수 및 연산자를 결정 하는 두 가지 방법을 제공 `TypeName` `TypeOf...Is` 합니다.  
   
 ## <a name="typename-and-typeofis"></a>TypeName 및 TypeOf ... 되었습니다  
+
  `TypeName`함수는 문자열을 반환 하며 다음 코드 조각과 같이 개체의 클래스 이름을 저장 하거나 표시 해야 하는 경우에 가장 적합 합니다.  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
@@ -44,7 +46,7 @@ ms.locfileid: "84410646"
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [문자열 이름을 사용하여 속성 또는 메서드 호출](calling-a-property-or-method-using-a-string-name.md)

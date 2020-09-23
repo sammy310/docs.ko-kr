@@ -6,17 +6,19 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b914d0479f160199744a8f9923c0bebc87321329
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410672"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086077"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>완화된 대리자 변환(Visual Basic)
+
 완화 된 대리자 변환을 사용 하면 시그니처가 동일 하지 않더라도 sub 및 함수를 대리자나 처리기에 할당할 수 있습니다. 따라서 대리자에 대 한 바인딩은 이미 메서드 호출에 대해 허용 되는 바인딩과 일치 합니다.  
   
 ## <a name="parameters-and-return-type"></a>매개 변수 및 반환 형식  
+
  정확히 일치 하는 시그니처 대신, 완화 된 변환을 수행 하려면가로 설정 된 경우 다음 조건이 충족 되어야 합니다 `Option Strict` `On` .  
   
 - 각 대리자 매개 변수의 데이터 형식에서 할당 된 함수 또는의 해당 매개 변수에 대 한 데이터 형식으로 확대 변환이 있어야 합니다 `Sub` . 다음 예제에서 대리자에 `Del1` 는 하나의 매개 변수 ()가 있습니다 `Integer` . `m`할당 된 람다 식의 매개 변수에는 `Integer` 또는와 같은 확대 변환이 있는 데이터 형식이 있어야 합니다 `Long` `Double` .  
@@ -38,6 +40,7 @@ ms.locfileid: "84410672"
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>매개 변수 사양을 생략 합니다.  
+
  완화 된 대리자를 사용 하 여 할당 된 메서드에서 매개 변수 사양을 완전히 생략할 수도 있습니다.  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
@@ -61,6 +64,7 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>AddressOf 예제  
+
  람다 식은 이전 예제에서 형식 관계를 쉽게 볼 수 있도록 하는 데 사용 됩니다. 그러나, 또는를 사용 하는 대리자 할당에는 동일한 relaxation 허용 됩니다 `AddressOf` `Handles` `AddHandler` .  
   
  다음 예제에서는,, `f1` 및 함수 `f2` 를 `f3` `f4` 모두에 할당할 수 있습니다 `Del1` .  
@@ -76,13 +80,14 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>함수 반환 삭제  
+
  완화 된 대리자 변환을 사용 하면 함수를 대리자에 할당 하 여 `Sub` 함수의 반환 값을 효과적으로 무시할 수 있습니다. 그러나를 함수 대리자에 할당할 수는 없습니다 `Sub` . 다음 예제에서는 함수 주소가 `doubler` delegate에 할당 됩니다 `Sub` `Del3` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
   
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [람다 식](../procedures/lambda-expressions.md)
 - [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)

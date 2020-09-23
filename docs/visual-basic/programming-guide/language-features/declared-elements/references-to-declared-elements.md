@@ -6,14 +6,15 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405185"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085882"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
+
 코드가 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러는 참조의 이름을 해당 이름의 적절 한 선언과 일치 시킵니다. 동일한 이름을 사용 하 여 두 개 이상의 요소를 선언 하는 경우 해당 이름을 *정규화* 하 여 참조할 요소를 제어할 수 있습니다.  
   
  컴파일러는 이름 참조를 가장 *좁은 범위의*이름 선언과 일치 시 키 려 고 합니다. 즉, 참조를 만드는 코드에서 시작 하 고 포함 하는 요소의 연속 수준을 통해 외부에서 작업 합니다.  
@@ -42,6 +43,7 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>요소 이름 한정  
+
  이 검색 프로세스를 재정의 하 고 더 광범위 한 범위에서 선언 된 이름을 지정 하려면 광범위 한 범위의 포함 요소로 이름을 *한정* 해야 합니다. 경우에 따라 포함 하는 요소를 한 정해야 할 수도 있습니다.  
   
  이름을 정규화 하면 원본 문의 앞에 target 요소가 정의 된 위치를 식별 하는 정보가 포함 됩니다. 이 정보를 *한정 문자열*이라고 합니다. 하나 이상의 네임 스페이스와 모듈, 클래스 또는 구조를 포함할 수 있습니다.  
@@ -105,6 +107,7 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>다른 포함 하는 요소의 멤버  
+
  다른 클래스 또는 구조체의 비공유 멤버를 사용 하는 경우 먼저 해당 멤버 이름을 클래스 또는 구조체의 인스턴스를 가리키는 변수나 식으로 정규화 해야 합니다. 다음 예제에서 `demoClass` 는 이라는 클래스의 인스턴스입니다 `class1` .  
   
 ```vb  
@@ -150,6 +153,7 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>프로젝트에 대 한 참조  
+
  다른 프로젝트에 정의 된 [공용](../../../language-reference/modifiers/public.md) 요소를 사용 하려면 먼저 해당 프로젝트의 어셈블리 또는 형식 라이브러리에 대 한 *참조* 를 설정 해야 합니다. 참조를 설정 하려면 **프로젝트** 메뉴에서 **참조 추가** 를 클릭 하거나 [-reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) 명령줄 컴파일러 옵션을 사용 합니다.  
   
  예를 들어 .NET Framework의 XML 개체 모델을 사용할 수 있습니다. 네임 스페이스에 대 한 참조를 설정 하는 경우와 <xref:System.Xml> 같은 해당 클래스를 선언 하 고 사용할 수 있습니다 <xref:System.Xml.XmlDocument> . 다음 예에서는 <xref:System.Xml.XmlDocument>를 사용합니다.  
@@ -161,6 +165,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>포함 하는 요소 가져오기  
+
  [Imports 문 (.Net 네임 스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) 을 사용 하 여 사용 하려는 모듈이 나 클래스를 포함 하는 네임 스페이스를 *가져올* 수 있습니다. 이렇게 하면 이름을 정규화 하지 않고 가져온 네임 스페이스에 정의 된 요소를 참조할 수 있습니다. 다음 예제에서는 이전 예제를 다시 작성 하 여 <xref:System.Xml> 네임 스페이스를 가져옵니다.  
   
 ```vb  
@@ -186,14 +191,16 @@ Dim xDoc As xD.XmlDocument
  `Imports`문을 사용 하 여 모듈, 클래스, 구조체 및 열거형을 가져올 수도 있습니다. 그런 다음 이러한 가져온 요소의 멤버를 한정자 없이 사용할 수 있습니다. 그러나 클래스 또는 구조체의 인스턴스로 계산 되는 변수나 식으로 클래스와 구조체의 비공유 멤버를 항상 한정 해야 합니다.  
   
 ## <a name="naming-guidelines"></a>명명 지침  
+
  이름이 같은 프로그래밍 요소를 두 개 이상 정의 하면 컴파일러에서 해당 이름에 대 한 참조를 확인 하려고 할 때 *이름 모호성이* 발생할 수 있습니다. 둘 이상의 정의가 범위에 있거나, 범위에 정의가 없는 경우 참조는 해결할 수 없는입니다. 예제를 보려면이 도움말 페이지의 "정규화 된 참조 예제"를 참조 하십시오.  
   
  모든 요소에 고유한 이름을 지정 하 여 이름 모호성을 방지할 수 있습니다. 그런 다음 네임 스페이스, 모듈 또는 클래스를 사용 하 여 해당 이름을 한정할 필요 없이 모든 요소에 대 한 참조를 만들 수 있습니다. 실수로 잘못 된 요소를 참조할 가능성이 줄어듭니다.  
   
 ## <a name="shadowing"></a>섀도잉  
+
  두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길*수 있습니다. 숨겨진 요소는 참조에 사용할 수 없습니다. 대신, 코드가 숨겨진 요소 이름을 사용 하는 경우 Visual Basic 컴파일러는 숨기는 요소로이를 확인 합니다. 예제에 대 한 자세한 설명은 [Visual Basic에서 숨기기](shadowing.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Declared Element Names](declared-element-names.md)
 - [선언 요소의 특징](declared-element-characteristics.md)

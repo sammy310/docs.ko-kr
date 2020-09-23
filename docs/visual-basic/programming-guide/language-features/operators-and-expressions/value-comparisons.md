@@ -10,14 +10,15 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 01816b5730cf4fda61f1737ce3ce00ab82f57da8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e424dd58cada8cda250554a4a8870e1900d0fa7d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403397"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085973"
 ---
 # <a name="value-comparisons-visual-basic"></a>값 비교(Visual Basic)
+
 비교 연산자를 사용 하 여 숫자 변수의 값을 비교 하는 식을 생성할 수 있습니다. 이러한 식은 `Boolean` 비교가 true 인지 false 인지에 따라 값을 반환 합니다. 이러한 식의 예는 다음과 같습니다.  
   
  `45 > 26`  
@@ -44,7 +45,7 @@ ms.locfileid: "84403397"
   
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [부울 식](boolean-expressions.md)
 - [연산자 및 식](index.md)

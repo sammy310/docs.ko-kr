@@ -5,14 +5,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 36f623068372614ae034a8a7b31bffb7496f98b1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a7a653bbf238b50e3c7339da76df0f68ab9b59f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410697"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085791"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: Visual Basic에서 프로시저에 다른 프로시저 전달
+
 이 예제에서는 대리자를 사용 하 여 프로시저를 다른 프로시저에 전달 하는 방법을 보여 줍니다.  
   
  대리자는 Visual Basic의 다른 형식 처럼 사용할 수 있는 형식입니다. `AddressOf`연산자는 프로시저 이름에 적용 될 때 대리자 개체를 반환 합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "84410697"
   
      `Test`가 호출 되 면 먼저 `AddNumbers` 및에 대 한 작동 결과 `5` `3` (8)를 표시 합니다. 그런 다음 및에 대해 작동 하는 결과가 6 인 것으로 `SubtractNumbers` `9` `3` 표시 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대리자](index.md)
 - [AddressOf 연산자](../../../language-reference/operators/addressof-operator.md)

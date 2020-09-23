@@ -8,20 +8,22 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: dbd24065a954e5611663963371d5a9f4bbbaea68
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393496"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084088"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>구조체 및 기타 프로그래밍 요소(Visual Basic)
+
 구조체는 물론 배열, 개체 및 프로시저와 함께 사용할 수 있습니다. 상호 작용에서는 이러한 요소를 개별적으로 사용 하는 것과 동일한 구문을 사용 합니다.  
   
 > [!NOTE]
 > 구조체 선언에서 구조체 요소를 초기화할 수 없습니다. 구조체 형식으로 선언 된 변수의 요소에만 값을 할당할 수 있습니다.  
   
 ## <a name="structures-and-arrays"></a>구조체 및 배열  
+
  구조체는 배열을 하나 이상의 요소로 포함할 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
@@ -56,6 +58,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>구조체 및 개체  
+
  구조체에는 개체를 하나 이상의 요소로 포함할 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
@@ -69,6 +72,7 @@ End Structure
  이 아닌 선언에서 특정 개체 클래스를 사용 해야 합니다 `Object` .  
   
 ## <a name="structures-and-procedures"></a>구조 및 프로시저  
+
  구조체를 프로시저 인수로 전달할 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
@@ -97,6 +101,7 @@ End Function
 ```  
   
 ## <a name="structures-within-structures"></a>구조체 내 구조  
+
  구조체는 다른 구조체를 포함할 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
@@ -122,7 +127,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  구조체에는 임의의 깊이에 대 한 다른 구조가 포함 될 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 형식](index.md)
 - [기본 데이터 형식](elementary-data-types.md)

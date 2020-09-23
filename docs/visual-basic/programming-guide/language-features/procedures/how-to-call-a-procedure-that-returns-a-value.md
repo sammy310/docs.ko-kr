@@ -7,14 +7,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53589f84c6675d1e7ae2a593341e5dac747132a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388766"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083979"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>방법: 값을 반환하는 프로시저 호출(Visual Basic)
+
 `Function`프로시저는 호출 코드에 값을 반환 합니다. 해당 이름과 인수를 대입문의 오른쪽에 포함 하거나 식에 포함 하 여 호출 합니다.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>식 내에서 함수 프로시저를 호출 하려면  
@@ -40,11 +41,12 @@ ms.locfileid: "84388766"
 4. 프로시저에서 반환 된 값은 대입문의 왼쪽에 있는 변수 또는 속성에 저장 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 Visual Basic를 호출 <xref:Microsoft.VisualBasic.Interaction.Environ%2A> 하 여 운영 체제 환경 변수의 값을 검색 합니다. 첫 번째 줄은 `Environ` 식 내에서를 호출 하 고 두 번째 줄은 대입문에서 호출 합니다. `Environ`변수 이름을 유일한 인수로 사용 합니다. 이 메서드는 호출 코드에 변수의 값을 반환 합니다.  
+
+ 다음 예에서는 Visual Basic를 호출 <xref:Microsoft.VisualBasic.Interaction.Environ%2A> 하 여 운영 체제 환경 변수의 값을 검색 합니다. 첫 번째 줄은 `Environ` 식 내에서를 호출 하 고 두 번째 줄은 대입문에서 호출 합니다. `Environ` 변수 이름을 유일한 인수로 사용 합니다. 이 메서드는 호출 코드에 변수의 값을 반환 합니다.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [함수 프로시저](./function-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
