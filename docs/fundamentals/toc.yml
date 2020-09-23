@@ -715,7 +715,7 @@ items:
       - name: 종속성 주입
         href: /aspnet/core/fundamentals/dependency-injection
       - name: 일반 호스트
-        href: /aspnet/core/fundamentals/host/generic-host
+        href: ../core/extensions/generic-host.md
       - name: 로깅
         href: /aspnet/core/fundamentals/logging
       - name: 옵션 패턴
