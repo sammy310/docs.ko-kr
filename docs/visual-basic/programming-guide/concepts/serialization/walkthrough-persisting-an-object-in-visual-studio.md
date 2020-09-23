@@ -2,14 +2,15 @@
 title: Visual Studio에서 개체 유지
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558604"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086467"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 개체 유지(Visual Basic)
+
 디자인 타임에 개체의 속성을 기본값으로 설정할 수 있지만, 런타임에 입력한 값은 개체가 소멸될 때 손실됩니다. serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ ms.locfileid: "90558604"
 > 표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 클릭합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
   
 ## <a name="creating-the-loan-object"></a>Loan 개체 만들기  
+
  첫 번째 단계는 `Loan` 클래스와 이 클래스를 사용하는 테스트 애플리케이션을 만드는 것입니다.  
   
 ### <a name="to-create-the-loan-class"></a>Loan 클래스를 만들려면  
@@ -123,6 +125,7 @@ ms.locfileid: "90558604"
  현실 세계에서 금리는 주기적으로 변경되지만, 애플리케이션이 실행될 때마다 변경되는 것은 아닙니다. 애플리케이션이 실행될 때마다 사용자가 금리를 업데이트하도록 하는 대신 애플리케이션 인스턴스 간에 가장 최근의 금리를 유지하는 것이 좋습니다. 다음 단계에서는 Loan 클래스에 serialization을 추가하여 이를 수행합니다.  
   
 ## <a name="using-serialization-to-persist-the-object"></a>Serialization을 사용하여 개체 유지  
+
  Loan 클래스의 값을 유지하려면 먼저 클래스를 `Serializable` 속성으로 표시해야 합니다.  
   
 ### <a name="to-mark-a-class-as-serializable"></a>클래스를 serialize로 표시하려면  

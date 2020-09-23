@@ -10,17 +10,19 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 5561812a53e2fe45c3ad4d12d0e18a8a1e948559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411768"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087481"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명된 형식과 익명 형식(Visual Basic)
+
 개체 이니셜라이저를 사용 하면 단일 식을 사용 하 여 복합 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식과 익명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  
   
 ## <a name="declarations"></a>선언  
+
  명명 된 형식과 익명 형식의 인스턴스 선언은 거의 동일 하 게 보일 수 있지만 그 영향은 동일 하지 않습니다. 각 범주에는 자체의 기능 및 제한 사항이 있습니다. 다음 예제에서는 `Customer` 개체 이니셜라이저 목록을 사용 하 여 명명 된 클래스의 인스턴스를 선언 하 고 초기화 하는 편리한 방법을 보여 줍니다. 클래스의 이름은 키워드 뒤에 지정 됩니다 `New` .  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -32,6 +34,7 @@ ms.locfileid: "84411768"
  두 선언의 요구 사항과 결과가 동일 하지 않습니다. 의 경우 `namedCust` `Customer` 속성이 있는 클래스는 `Name` 이미 존재 해야 하며 선언은 해당 클래스의 인스턴스를 만듭니다. 의 경우 `anonymousCust` 컴파일러는 하나의 속성, 라는 문자열이 있는 새 클래스를 정의 하 `Name` 고 해당 클래스의 새 인스턴스를 만듭니다.  
   
 ## <a name="named-types"></a>명명 된 형식  
+
  개체 이니셜라이저는 형식의 생성자를 호출 하는 간단한 방법을 제공 하 고 단일 문에서 일부 또는 모든 속성의 값을 설정 합니다. 컴파일러가 인수를 제공 하지 않는 경우 매개 변수가 없는 생성자 또는 하나 이상의 인수가 전송 될 경우 매개 변수가 있는 생성자를 호출 하 여 문에 대 한 적절 한 생성자를 호출 합니다. 그런 다음 지정 된 속성은 이니셜라이저 목록에 표시 되는 순서 대로 초기화 됩니다.  
   
  이니셜라이저 목록의 각 초기화는 클래스의 멤버에 초기 값을 할당 하는 것으로 구성 됩니다. 멤버의 이름과 데이터 형식은 클래스를 정의할 때 결정 됩니다. 다음 예제에서 클래스는 있어야 하며,에 `Customer` `Name` `City` 는 문자열 값을 사용할 수 있는 및 라는 멤버가 있어야 합니다.  
@@ -57,6 +60,7 @@ ms.locfileid: "84411768"
  그러나 초기화 목록은 비워 둘 수 없습니다. 초기화 되지 않은 속성은 해당 기본값을 유지 합니다.  
   
 ### <a name="type-inference-with-named-types"></a>명명 된 형식을 사용 하는 형식 유추  
+
  `cust1`개체 이니셜라이저 및 로컬 형식 유추를 결합 하 여의 선언에 대 한 코드를 줄일 수 있습니다. 이렇게 하면 `As` 변수 선언에서 절을 생략할 수 있습니다. 변수의 데이터 형식은 할당에 의해 생성 된 개체의 형식에서 유추 됩니다. 다음 예제에서의 형식은입니다 `cust6` `Customer` .  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
@@ -94,6 +98,7 @@ ms.locfileid: "84411768"
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>익명 형식  
+
  무명 형식은 개체 이니셜라이저를 사용 하 여 명시적으로 정의 하지 않고 이름을 지정 하는 새 형식의 인스턴스를 만듭니다. 대신, 컴파일러는 개체 이니셜라이저 목록에서 지정 하는 속성에 따라 형식을 생성 합니다. 형식의 이름을 지정 하지 않았기 때문에 *익명 형식*이라고 합니다. 예를 들어 다음 선언을의 이전 선언과 비교 합니다 `cust6` .  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
@@ -127,11 +132,11 @@ ms.locfileid: "84411768"
   
      무명 형식의 속성을 정의 하는 옵션에 대 한 자세한 내용은 [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [익명 형식](anonymous-types.md)
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [키](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)
 - [방법: 개체 이니셜라이저를 사용하여 개체 선언](how-to-declare-an-object-by-using-an-object-initializer.md)

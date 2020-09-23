@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 4de5d94a94e764d1fc543ffae41b00a9bb729c94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388156"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087455"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: Visual Basic에서 기본 속성 선언 및 호출
+
 *기본 속성* 은 코드에서 지정 하지 않고 액세스할 수 있는 클래스 또는 구조체 속성입니다. 호출 코드에서 클래스 또는 구조체의 이름을 지정할 수 있지만 속성이 아닌 경우, 컨텍스트는 속성에 대 한 액세스를 허용 하 고, Visual Basic는 해당 클래스 또는 구조체의 기본 속성 (있는 경우)에 대 한 액세스를 확인 합니다.  
   
  클래스 또는 구조체에는 최대 하나의 기본 속성만 있을 수 있습니다. 그러나 기본 속성을 오버 로드 하 고 둘 이상의 버전을 가질 수 있습니다.  
@@ -61,11 +62,13 @@ ms.locfileid: "84388156"
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 클래스에 대 한 기본 속성을 선언 합니다.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 클래스에서 기본 속성을 호출 하는 방법을 보여 줍니다 `myProperty` `class1` . 세 개의 대입문은에 값 `myProperty` 을 저장 하 고 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 호출은 값을 읽습니다.  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
@@ -73,6 +76,7 @@ ms.locfileid: "84388156"
  기본 속성의 가장 일반적인 용도는 <xref:Microsoft.VisualBasic.Collection.Item%2A> 다양 한 컬렉션 클래스의 속성입니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  기본 속성은 소스 코드 문자를 조금 줄일 수 있지만 코드를 읽기 어렵게 만들 수 있습니다. 호출 코드가 클래스 또는 구조체를 사용 하는 데 익숙하지 않은 경우 클래스 또는 구조체 이름에 대 한 참조를 만들 때 참조가 클래스나 구조체 자체에 액세스 하는지 아니면 기본 속성에 액세스 하는지 여부를 확신할 수 없습니다. 이로 인해 컴파일러 오류 또는 미묘한 런타임 논리 오류가 발생할 수 있습니다.  
   
  항상 [Option Strict 문을](../../../language-reference/statements/option-strict-statement.md) 사용 하 여 컴파일러 유형 검사를로 설정 하 여 기본 속성 오류의 가능성을 약간 줄일 수 있습니다 `On` .  
@@ -81,7 +85,7 @@ ms.locfileid: "84388156"
   
  이러한 단점 때문에 기본 속성을 정의 하지 않는 것이 좋습니다. 코드 가독성을 위해 기본 속성도 항상 모든 속성을 명시적으로 참조 하는 것도 고려해 야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

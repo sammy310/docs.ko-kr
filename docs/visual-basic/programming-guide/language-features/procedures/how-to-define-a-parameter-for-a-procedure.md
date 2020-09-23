@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: e703346113348556b8a3ea41a7934a55a8008522
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73b53dcf7cd732af1a4f1d23cd0d3b9ef5b5529b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388078"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087442"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저의 매개 변수 정의(Visual Basic)
+
 *매개 변수* 를 사용 하면 호출 코드에서 호출 시 프로시저에 값을 전달할 수 있습니다. 변수를 선언 하는 것과 동일한 방식으로 프로시저에 대 한 각 매개 변수를 선언 하 고 해당 이름 및 데이터 형식을 지정 합니다. 또한 전달 메커니즘과 매개 변수가 선택적인 지 여부를 지정 합니다.  
   
  자세한 내용은 [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)를 참조 하세요.  
@@ -52,7 +53,7 @@ ms.locfileid: "84388078"
   
     - 그러면 코드 실행 속도가 빨라집니다. 한 가지 이유는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않는 경우 Visual Basic 컴파일러에서 해당 형식을 할당 하는 것입니다 `Object` . 컴파일된 코드에서 및 기타 데이터 형식 사이를 변환 해야 하 여 성능이 저하 될 수 있습니다 `Object` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

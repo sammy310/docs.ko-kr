@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-ms.openlocfilehash: 3280953ad04b9673d4eb23d139f8f1dc8606a66c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60c7ffbb1f9abb89d8efa946eee9db6cb70df5be
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413118"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086441"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic 프로그래밍 가이드
+
 모든 최신 프로그래밍 언어와 마찬가지로 Visual Basic는 여러 일반적인 프로그래밍 구문과 언어 요소를 지원 합니다. 이 가이드에서는 Visual Basic 프로그래밍의 모든 주요 요소에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [프로그램 구조 및 코드 규칙](program-structure/program-structure-and-code-conventions.md)  
  명명 규칙, 코드의 주석 및 Visual Basic 내의 제한과 같은 Visual Basic의 기본 구조 및 코드 규칙에 대 한 설명서를 포함 합니다.  
   
@@ -26,7 +28,8 @@ ms.locfileid: "84413118"
  [COM Interop](com-interop/index.md)  
  Visual Basic을 사용하여 COM(구성 요소 개체 모델)을 만들고 사용하는 작업과 관련된 상호 운용성 문제에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [Visual Basic 언어 참조](../language-reference/index.md)  
  Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보를 제공 합니다.  
   
