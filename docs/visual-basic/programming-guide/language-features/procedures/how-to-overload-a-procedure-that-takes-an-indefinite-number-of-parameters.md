@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: ddff8c8cd82593b7d89fb0847e56123c287e364b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 10cd7d11b0efe9fa5eb3ae24269a4cdbe33bc08a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387883"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071549"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드(Visual Basic)
+
 프로시저에 [ParamArray](../../../language-reference/modifiers/paramarray.md) 매개 변수가 있는 경우 매개 변수 배열에 1 차원 배열을 가져오는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)에서 "ParamArray 매개 변수에 대 한 암시적 오버 로드"를 참조 하십시오.  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>가변적인 개수의 매개 변수를 사용 하는 프로시저를 오버 로드 하려면  
@@ -35,6 +36,7 @@ ms.locfileid: "84387883"
 6. 또는 문을 사용 하 여 각 프로시저를 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 [ParamArray](../../../language-reference/modifiers/paramarray.md) 매개 변수를 사용 하 여 정의 된 프로시저와 해당 하는 오버 로드 된 프로시저 집합을 보여 줍니다.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
@@ -48,12 +50,14 @@ ms.locfileid: "84387883"
  오버 로드 된 버전의 코드는 호출 코드에서 매개 변수에 대해 하나 이상의 값을 제공 했는지 여부를 테스트 하지 않아도 `ParamArray` 됩니다. Visual Basic 호출 하는 인수 목록과 일치 하는 버전으로 제어를 전달 합니다.  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  매개 변수가 있는 프로시저는 `ParamArray` 오버 로드 된 버전 집합과 동일 하므로 이러한 암시적 오버 로드에 해당 하는 매개 변수 목록을 사용 하 여 이러한 프로시저를 오버 로드할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)을 참조 하세요.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  무한정 클 수 있는 배열을 처리할 때마다 응용 프로그램의 내부 용량을 overrunning 위험이 있습니다. 매개 변수 배열을 허용 하는 경우, 호출 코드가 전달 된 배열의 길이를 테스트 하 고, 응용 프로그램에 비해 너무 클 경우 적절 한 단계를 수행 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -64,4 +68,4 @@ ms.locfileid: "84387883"
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
 - [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
 - [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [오버 로드 확인](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

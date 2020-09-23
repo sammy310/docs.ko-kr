@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387896"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071562"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: 속성에서 값 가져오기(Visual Basic)
+
 식에 속성 이름을 포함 하 여 속성의 값을 검색 합니다.  
   
  속성의 `Get` 프로시저에서 값을 검색 하지만 이름으로 명시적으로 호출 하지 않습니다. 변수를 사용 하는 것 처럼 속성을 사용 합니다. Visual Basic은 속성의 프로시저에 대 한 호출을 수행 합니다.  
@@ -38,7 +39,7 @@ ms.locfileid: "84387896"
   
  속성의 값은 변수 또는 상수와 마찬가지로 식에 참여 하거나 대입문의 왼쪽에 있는 변수나 속성에 저장 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

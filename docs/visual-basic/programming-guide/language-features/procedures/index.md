@@ -1,5 +1,5 @@
 ---
-title: 절차
+title: 프로시저
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,20 +8,23 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: c0d9921704570c6984b203817aed8f5546b2f936
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 926d2dcc7f29102457d5ed9632e7455f8f0c7b96
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408791"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071328"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
+
 *프로시저* 는 선언문 ( `Function` ,, `Sub` `Operator` , `Get` , `Set` ) 및 일치 하는 `End` 선언으로 묶인 Visual Basic 문 블록입니다. Visual Basic의 모든 실행 문은 일부 프로시저 내에 있어야 합니다.  
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
+
  코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
   
 ## <a name="returning-from-a-procedure"></a>프로시저에서 반환  
+
  프로시저는 실행이 완료되면 호출 코드로 컨트롤을 반환합니다. 이렇게 하려면 [Return 문](../../../language-reference/statements/return-statement.md), 프로시저에 대 한 적절 한 [Exit 문](../../../language-reference/statements/exit-statement.md) 문 또는 프로시저의 [End \<keyword> 문](../../../language-reference/statements/end-keyword-statement.md) 문을 사용할 수 있습니다. 그러면 컨트롤이 호출 코드에서 프로시저 호출 지점 이후로 전달됩니다.  
   
 - `Return` 문과 함께 컨트롤이 즉시 호출 코드로 반환됩니다. `Return` 문 이후의 문은 실행되지 않습니다. 동일한 프로시저에 `Return` 문을 둘 이상 사용할 수 있습니다.  
@@ -31,9 +34,11 @@ ms.locfileid: "84408791"
 - `Return` 또는 `Exit` 문이 없는 경우 프로시저는 프로시저 본문의 마지막 문 이후에 `End Sub`나 `End Function`, `End Get`, 또는 `End Set` 문으로 마무리됩니다. `End` 문은 컨트롤을 호출 코드에 즉시 반환합니다. 프로시저에 `End` 문을 하나만 사용할 수 있습니다.  
   
 ## <a name="parameters-and-arguments"></a>매개 변수 및 인수  
+
  대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수*를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수*입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
   
 ## <a name="types-of-procedures"></a>프로시저 유형  
+
  Visual Basic는 다음과 같은 몇 가지 유형의 프로시저를 사용 합니다.  
   
 - [Sub 프로시저](./sub-procedures.md)는 작업을 수행하지만 호출 코드에 값을 반환하지 않습니다.  
@@ -51,6 +56,7 @@ ms.locfileid: "84408791"
 - 호출 코드가 호출할 때마다 특정 데이터 유형을 전달할 수 있도록, [Visual Basic의 제네릭 프로시저](../data-types/generic-procedures.md)는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수*를 정의합니다.  
   
 ## <a name="procedures-and-structured-code"></a>프로시저 및 구조적 코드  
+
  애플리케이션의 각 실행 코드 줄은 `Main`, `calculate` 또는 `Button1_Click` 등의 프로시저 내부에 있어야 합니다. 큰 프로시저를 더 작은 프로시저로 세분화하면 애플리케이션을 더 쉽게 읽을 수 있습니다.  
   
  프로시저는 자주 사용되는 계산, 텍스트와 컨트롤 조작, 데이터베이스 작업 등의 반복 또는 공유 작업을 수행하는 데 유용합니다. 코드의 여러 위치에서 프로시저를 호출할 수 있으므로 프로시저를 애플리케이션의 빌딩 블록으로 사용할 수 있습니다.  
@@ -61,7 +67,7 @@ ms.locfileid: "84408791"
   
 - 한 프로그램에서 사용하기 위해 프로시저를 개발한 후, 거의 또는 전혀 수정하지 않고 종종 다른 프로그램에서 사용할 수 있습니다. 이를 통해 코드 중복을 방지할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
 - [하위 프로시저](./sub-procedures.md)

@@ -10,17 +10,18 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364372"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071367"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
+
 Visual Basic 컴파일러가 여러 오버 로드 된 버전에 정의 된 프로시저에 대 한 호출을 발견할 경우 컴파일러는 호출할 오버 로드를 결정 해야 합니다. 이렇게 하려면 다음 단계를 수행 합니다.  
   
-1. **내게.** 호출 코드에서 호출할 수 없도록 하는 액세스 수준으로 오버 로드를 제거 합니다.  
+1. **접근성.** 호출 코드에서 호출할 수 없도록 하는 액세스 수준으로 오버 로드를 제거 합니다.  
   
 2. **매개 변수 수입니다.** 호출에 제공 되는 것과 다른 개수의 매개 변수를 정의 하는 오버 로드를 제거 합니다.  
   
@@ -49,6 +50,7 @@ Visual Basic 컴파일러가 여러 오버 로드 된 버전에 정의 된 프�
  두 번째 호출에서 컴파일러는 축소를 기준으로 오버 로드를 제거할 수 없습니다. 첫 번째 호출에서와 같은 이유로 세 번째 오버 로드를 제거 합니다 .이는 두 번째 오버 로드를 사용 하 여 인수 형식의 확대/축소를 줄일 수 있기 때문입니다. 그러나 컴파일러는 첫 번째 및 두 번째 오버 로드 사이를 확인할 수 없습니다. 각각에는 다른의 해당 형식으로 확대 되는 하나의 정의 된 매개 변수 형식이 있습니다 ( `Byte` `Short` 에서로 `Single` `Double` ). 따라서 컴파일러는 오버 로드 확인 오류를 생성 합니다.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>오버 로드 된 선택적 및 ParamArray 인수  
+
  프로시저의 두 오버 로드에 동일한 시그니처가 있는 경우, 즉 마지막 매개 변수가 하나에서 [선택적](../../../language-reference/modifiers/optional.md) 으로 선언 되는 경우를 제외 [하 고,](../../../language-reference/modifiers/paramarray.md) 컴파일러는 다음과 같이 해당 프로시저에 대 한 호출을 확인 합니다.  
   
 |호출에서로 마지막 인수를 제공 하는 경우|컴파일러는 마지막 인수를로 선언 하는 오버 로드에 대 한 호출을 확인 합니다.|  
@@ -58,7 +60,7 @@ Visual Basic 컴파일러가 여러 오버 로드 된 버전에 정의 된 프�
 |쉼표로 구분 된 목록에 있는 두 개 이상의 값|`ParamArray`|  
 |임의의 길이 (빈 배열 포함)의 배열입니다.|`ParamArray`|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [선택적 매개 변수](./optional-parameters.md)
 - [매개 변수 배열](./parameter-arrays.md)

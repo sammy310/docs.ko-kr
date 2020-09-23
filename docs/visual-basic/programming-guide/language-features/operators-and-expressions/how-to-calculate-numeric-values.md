@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403461"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071718"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 계산(Visual Basic)
+
 숫자 식을 사용 하 여 숫자 값을 계산할 수 있습니다. *숫자 식은* 숫자 값을 나타내는 리터럴, 상수 및 변수와 해당 값에 대해 작동 하는 연산자를 포함 하는 식입니다.  
   
 ## <a name="calculating-numeric-values"></a>숫자 값 계산  
@@ -50,6 +51,7 @@ ms.locfileid: "84403461"
      자세한 내용은 [문](../../../language-reference/statements/index.md)을 참조하십시오.  
   
 ## <a name="multiple-operators"></a>여러 연산자  
+
  숫자 식에 여러 개의 연산자가 포함 된 경우 계산 되는 순서는 연산자 우선 순위 규칙에 따라 결정 됩니다. 연산자 우선 순위 규칙을 재정의 하려면 위 예제와 같이 식을 괄호로 묶습니다. 괄호로 묶인 식이 먼저 계산 됩니다.  
   
 #### <a name="to-override-normal-operator-precedence"></a>일반적인 연산자 우선 순위를 재정의 하려면  
@@ -62,7 +64,7 @@ ms.locfileid: "84403461"
   
      자세한 내용은 [Visual Basic 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연산자 및 식](index.md)
 - [값 비교](value-comparisons.md)

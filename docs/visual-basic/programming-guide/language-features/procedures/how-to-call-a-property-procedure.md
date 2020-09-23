@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388701"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071954"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 호출(Visual Basic)
+
 속성에 값을 저장 하거나 값을 검색 하 여 속성 프로시저를 호출 합니다. 변수에 액세스 하는 것과 동일한 방식으로 속성에 액세스 합니다.  
   
  속성의 `Set` 프로시저는 값을 저장 하 고 해당 `Get` 프로시저는 값을 검색 합니다. 그러나 이러한 프로시저를 이름으로 명시적으로 호출 하지는 않습니다. 변수 값을 저장 하거나 검색 하는 것 처럼 대입문 또는 식에서 속성을 사용 합니다. Visual Basic은 속성의 프로시저에 대 한 호출을 수행 합니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "84388701"
   
  대입문의 오른쪽에 생성 된 값은 속성에 저장 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

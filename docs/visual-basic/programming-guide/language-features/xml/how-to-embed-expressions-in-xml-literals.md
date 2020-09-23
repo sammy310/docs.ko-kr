@@ -5,21 +5,22 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 59ba03be6e132203523427d3b7af5a163b6f05ac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ce1386e6a1ff8ffce296f5cea694499633eb011
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071211"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>방법: XML 리터럴에 식 포함(Visual Basic)
+
 XML 리터럴을 포함 된 식과 결합 하 여 런타임에 생성 된 내용이 포함 된 XML 문서, 조각 또는 요소를 만들 수 있습니다. 다음 예제에서는 포함 식을 사용 하 여 런타임에 요소 내용, 특성 및 요소 이름을 채우는 방법을 보여 줍니다.  
   
  포함 식의 구문은 `<%=` `exp` `%>` ASP.NET에서 사용 하는 것과 동일한 구문입니다. 자세한 내용은 [XML의 포함 식](embedded-expressions-in-xml.md)을 참조 하세요.  
   
  Api를 사용 하 여 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체를 만들 수도 있습니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . 자세한 내용은 <xref:System.Xml.Linq.XElement>를 참조하세요.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="to-insert-text-as-element-content"></a>텍스트를 요소 콘텐츠로 삽입 하려면  
   
@@ -57,7 +58,7 @@ XML 리터럴을 포함 된 식과 결합 하 여 런타임에 생성 된 내용
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
-     이 예에서 생성되는 출력은 다음과 같습니다.  
+     이 예제는 다음과 같은 출력을 생성합니다.  
   
     ```xml  
     <contact>  
@@ -65,7 +66,7 @@ XML 리터럴을 포함 된 식과 결합 하 여 런타임에 생성 된 내용
     </contact>  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: XML 리터럴 만들기](how-to-create-xml-literals.md)
 - [XML의 포함 식](embedded-expressions-in-xml.md)

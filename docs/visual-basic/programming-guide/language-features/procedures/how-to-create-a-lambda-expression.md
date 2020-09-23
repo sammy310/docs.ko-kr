@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388389"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071926"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 만들기(Visual Basic)
+
 *람다 식은* 이름이 없는 함수 또는 서브루틴입니다. 람다 식은 대리자 형식이 유효한 모든 위치에서 사용할 수 있습니다.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>한 줄로 된 람다 식 함수를 만들려면  
@@ -96,6 +97,7 @@ ms.locfileid: "84388389"
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>예제  
+
  람다 식의 일반적인 용도는 형식이 인 매개 변수에 대 한 인수로 전달 될 수 있는 함수를 정의 하는 것입니다 `Delegate` . 다음 예제에서 <xref:System.Diagnostics.Process.GetProcesses%2A> 메서드는 로컬 컴퓨터에서 실행 되는 프로세스의 배열을 반환 합니다. <xref:System.Linq.Enumerable.Where%2A>클래스의 메서드는 <xref:System.Linq.Enumerable> 대리자를 인수로 사용 해야 `Boolean` 합니다. 예제의 람다 식이이 목적에 사용 됩니다. `True`스레드를 하나만 포함 하 고에서 선택한 각 프로세스에 대해를 반환 `filteredList` 합니다.  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
@@ -104,7 +106,7 @@ ms.locfileid: "84388389"
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable>
 - [람다 식](./lambda-expressions.md)

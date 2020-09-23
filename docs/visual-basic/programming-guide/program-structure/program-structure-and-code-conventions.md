@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: c8d851afc33e7e898ab16abc941d8680f74145e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398307"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072121"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>프로그램 구조 및 코드 규칙(Visual Basic)
+
 이 섹션에서는 일반적인 Visual Basic 프로그램 구조를 소개 하 고, 간단한 Visual Basic 프로그램인 "Hello, 세계"를 제공 하 고 Visual Basic 코드 규칙을 설명 합니다. 코드 규칙은 프로그램의 논리에 초점을 맞춘 것이 아니라 물리적 구조와 모양에 초점을 맞춘 제안입니다. 이를 통해 코드를 더 쉽게 읽고 이해 하 고 유지 관리할 수 있습니다. 코드 규칙에는 다른 항목을 포함할 수 있습니다.  
   
 - 레이블 및 주석 달기 코드의 표준화 된 형식입니다.  
@@ -32,6 +33,7 @@ ms.locfileid: "84398307"
  다음 항목에서는 Visual Basic 프로그램에 대 한 프로그래밍 지침 집합과 함께 좋은 사용 예를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Visual Basic 프로그램의 구조](structure-of-a-visual-basic-program.md)  
  Visual Basic 프로그램을 구성 하는 요소에 대 한 개요를 제공 합니다.  
   
@@ -77,7 +79,8 @@ ms.locfileid: "84398307"
  [Visual Basic 제한 사항](limitations.md)  
  Visual Basic 내에서 알려진 코딩 제한을 제거 하는 방법을 설명 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [글꼴 표시 및 코드 규칙](../../language-reference/typographic-and-code-conventions.md)  
  Visual Basic에 대 한 표준 코딩 규칙을 제공 합니다.  
   

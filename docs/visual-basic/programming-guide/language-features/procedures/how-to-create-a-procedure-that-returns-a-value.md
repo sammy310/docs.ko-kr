@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 2655aba6ce37be831d8dd4202ffd484cfd3fd5ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3d28162d2a2103477a20b08fc03c937de8b5a475
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388351"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071874"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>방법: 값을 반환하는 프로시저 만들기(Visual Basic)
+
 프로시저를 사용 하 여 `Function` 호출 코드에 값을 반환 합니다.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>값을 반환 하는 프로시저를 만들려면  
@@ -36,7 +37,7 @@ ms.locfileid: "84388351"
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

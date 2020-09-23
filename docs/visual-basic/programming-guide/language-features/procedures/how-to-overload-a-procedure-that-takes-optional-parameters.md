@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ca6b2b95dfd5a7f208e5251f08dfccc5514946
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387844"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071523"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>방법: 선택적 매개 변수를 사용하는 프로시저 오버로드(Visual Basic)
+
 프로시저에 하나 이상의 [선택적](../../../language-reference/modifiers/optional.md) 매개 변수가 있는 경우 해당 암시적 오버 로드와 일치 하는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)에서 "선택적 매개 변수에 대 한 암시적 오버 로드"를 참조 하십시오.  
   
 ## <a name="one-optional-parameter"></a>하나의 선택적 매개 변수  
@@ -45,6 +46,7 @@ ms.locfileid: "84387844"
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>여러 선택적 매개 변수  
+
  둘 이상의 선택적 매개 변수가 있는 프로시저의 경우 일반적으로 두 개 이상의 오버 로드 된 버전이 필요 합니다. 예를 들어 두 개의 선택적 매개 변수가 있고 호출 코드에서 서로 독립적으로 각 매개 변수를 제공 하거나 생략할 수 있는 경우 제공 된 인수의 가능한 각 조합에 대해 하나씩 4 개의 오버 로드 된 버전이 필요 합니다.  
   
  선택적 매개 변수 수가 늘어나면 오버 로드의 복잡성이 증가 합니다. 제공 된 인수의 일부 조합이 허용 되지 않는 한, N 개의 선택적 매개 변수에는 2 ^ N 개의 오버 로드 된 버전이 필요 합니다. 프로시저의 특성에 따라 논리의 명확성은 오버 로드 된 모든 버전을 정의 하는 추가 작업을 정렬 하는 것을 알 수 있습니다.  
@@ -61,7 +63,7 @@ ms.locfileid: "84387844"
   
 5. 또는 문을 사용 하 여 각 프로시저를 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -72,4 +74,4 @@ ms.locfileid: "84387844"
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
 - [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [오버 로드 확인](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

@@ -18,14 +18,15 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 178206ca2ee103bbdb5a4ac03bca0df903c8c5d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406718"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071276"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>프로시저 매개 변수 및 인수(Visual Basic)
+
 대부분의 경우 프로시저에는 호출 된 상황에 대 한 일부 정보가 필요 합니다. 반복 되거나 공유 된 작업을 수행 하는 프로시저는 각 호출에 대해 서로 다른 정보를 사용 합니다. 이 정보는 프로시저를 호출할 때 프로시저에 전달 하는 변수, 상수 및 식으로 구성 됩니다.  
   
  *매개 변수* 는 프로시저에서 호출할 때 제공할 것으로 예상 하는 값을 나타냅니다. 프로시저의 선언에서 매개 변수를 정의 합니다.  
@@ -41,6 +42,7 @@ ms.locfileid: "84406718"
  자세한 내용은 [매개 변수와 인수 간의 차이점](./differences-between-parameters-and-arguments.md)을 참조 하세요.  
   
 ## <a name="parameter-data-type"></a>매개 변수 데이터 형식  
+
  선언에서 절을 사용 하 여 매개 변수의 데이터 형식을 정의 `As` 합니다. 예를 들어 다음 함수는 문자열과 정수를 허용 합니다.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
@@ -56,9 +58,10 @@ ms.locfileid: "84406718"
 - 변환 키워드를 사용 하 여 데이터 형식을 명시적으로 변환 합니다.  
   
 ### <a name="type-parameters"></a>형식 매개 변수  
+
  *제네릭 프로시저* 는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수도* 정의 합니다. 제네릭 프로시저를 사용 하면 호출 코드가 프로시저를 호출할 때마다 서로 다른 데이터 형식을 전달할 수 있으므로 각 개별 호출의 요구 사항에 맞게 데이터 형식을 조정할 수 있습니다. [Generic Procedures in Visual Basic](../data-types/generic-procedures.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

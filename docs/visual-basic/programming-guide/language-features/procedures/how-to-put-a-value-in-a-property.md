@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: c0fb3e137010390097a68aea161efcff93839d94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414339"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071406"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>방법: 속성 값 입력(Visual Basic)
+
 속성 이름을 대입문의 왼쪽에 배치 하 여 속성에 값을 저장 합니다.  
   
  속성 프로시저는 `Set` 값을 저장 하지만 이름으로 명시적으로 호출 하지 않습니다. 변수를 사용 하는 것 처럼 속성을 사용 합니다. Visual Basic은 속성의 프로시저에 대 한 호출을 수행 합니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "84414339"
   
 4. 대입문의 오른쪽에 생성 된 값은 속성에 저장 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [속성 프로시저](./property-procedures.md)

@@ -12,15 +12,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364333"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071861"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
-프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 는 `Optional` 프로시저 정의에서 키워드로 표시 됩니다. 이 때 적용되는 규칙은 다음과 같습니다.  
+
+프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 는 `Optional` 프로시저 정의에서 키워드로 표시 됩니다. 다음 규칙이 적용됩니다.  
   
 - 프로시저 정의의 모든 선택적 매개 변수에는 기본값을 지정해야 합니다.  
   
@@ -35,6 +36,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>선택적 매개 변수가 있는 프로시저 호출  
+
  선택적 매개 변수가 있는 프로시저를 호출하는 경우 해당 인수를 지정할지 여부를 선택할 수 있습니다. 선택하지 않으면 선택적 매개 변수에 대해 선언된 기본값이 사용됩니다.  
   
  인수 목록에서 하나 이상의 선택적 인수를 생략하는 경우 그 자리에 쉼표를 사용하여 생략된 위치를 표시합니다. 다음 호출 샘플에서는 첫 번째와 네 번째 인수가 제공되고 두 번째와 세 번째 인수는 제공되지 않습니다.  
@@ -50,6 +52,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>선택적 인수의 존재 여부 확인  
+
  프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다. 이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다. 다음 절차에서는 선택적 매개 변수 `office` 를 정의 하 고, `QJZ` 호출에서이 값이 생략 되었는지 여부를 확인 하기 위해 기본값을 테스트 합니다.  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
@@ -57,9 +60,10 @@ Sub name(argument 1, , , argument 4)
  선택적 매개 변수가 `String`과 같은 참조 형식일 경우 `Nothing`이 그 인수에 예상된 값이 아니면 이 값을 기본값으로 사용할 수 있습니다.  
   
 ## <a name="optional-parameters-and-overloading"></a>선택적 매개 변수 및 오버로드  
+
  선택적 매개 변수가 있는 프로시저를 정의하는 또 다른 방법은 오버로드를 사용하는 것입니다. 선택적 매개 변수가 하나이면 프로시저의 오버로드된 두 버전을 매개 변수를 사용하는 버전과 매개 변수를 사용하지 않는 버전으로 정의할 수 있습니다. 이러한 방식은 선택적 매개 변수의 개수가 증가할수록 더욱 복잡해지지만 호출 프로그램이 각 선택적 인수를 제공했는지 여부를 확실히 알 수 있다는 장점이 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

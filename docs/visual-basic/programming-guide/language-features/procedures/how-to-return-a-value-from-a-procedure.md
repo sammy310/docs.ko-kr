@@ -6,14 +6,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 917e52b711645fbf94a132216a3fa90b0dfc15b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414326"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071380"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저에서 값 반환(Visual Basic)
+
 `Function`프로시저는 `Return` 문을 실행 하거나 `Exit Function` 또는 문을 실행 하 여 호출 코드에 값을 반환 합니다 `End Function` .  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Return 문을 사용 하 여 값을 반환 하려면  
@@ -44,7 +45,7 @@ ms.locfileid: "84414326"
   
      자세한 내용 및 예제는 [함수 문의](../../../language-reference/statements/function-statement.md)"Return Value"를 참조 하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

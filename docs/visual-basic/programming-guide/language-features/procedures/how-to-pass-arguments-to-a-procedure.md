@@ -11,14 +11,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 903e05facccd1f2afdf4bb51b200531feb64aa79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387779"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071510"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: 프로시저에 인수 전달(Visual Basic)
+
 프로시저를 호출할 때 인수 목록이 있는 프로시저 이름을 괄호 안에 사용 합니다. 프로시저에서 정의 하는 모든 필수 매개 변수에 해당 하는 인수를 제공 하 고 선택적으로 매개 변수에 인수를 제공할 수 있습니다 `Optional` . 호출에 매개 변수를 제공 하지 않는 경우 `Optional` 후속 인수를 제공 하는 경우 인수 목록에 쉼표를 포함 하 여 해당 자리를 표시 해야 합니다.  
   
  와 같이 해당 매개 변수와 다른 데이터 형식의 인수를 전달 하려는 경우 `Byte` `String` 형식 확인 스위치 ([Option Strict 문](../../../language-reference/statements/option-strict-statement.md))를로 설정할 수 있습니다 `Off` . `Option Strict`가 이면 `On` 확대 변환 또는 명시적 변환 키워드 중 하나를 사용 해야 합니다. 자세한 내용은 [확대 및 축소 변환](../data-types/widening-and-narrowing-conversions.md) 및 [형식 변환 함수](../../../language-reference/functions/type-conversion-functions.md)를 참조 하세요.  
@@ -45,7 +46,7 @@ ms.locfileid: "84387779"
   
      인수 목록에서 두 번째 쉼표는 생략 된 두 번째 인수의 자리를 표시 하 고 마지막 문자열은 `MsgBox` 제목 표시줄에 표시 되는 텍스트인의 선택적 세 번째 매개 변수로 전달 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [하위 프로시저](./sub-procedures.md)
 - [함수 프로시저](./function-procedures.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 870a18dbf3a7e28b7d7b612e853beeec6908cf6f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387935"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071640"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>방법: 여러 버전의 프로시저 정의(Visual Basic)
+
 각 버전에 대해 동일한 이름을 사용 하 고 다른 매개 변수 목록을 사용 *하 여 프로시저* 를 여러 버전으로 정의할 수 있습니다. 오버 로드의 목적은 프로시저를 이름으로 구분 하지 않고도 긴밀 하 게 관련 된 여러 버전을 정의 하는 것입니다.  
   
  자세한 내용은 [Procedure Overloading](./procedure-overloading.md)을 참조하세요.  
@@ -31,6 +32,7 @@ ms.locfileid: "84387935"
 4. 또는 문을 사용 하 여 프로시저의 각 버전을 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 `Sub` 고객의 잔액에 대해 트랜잭션을 게시 하는 프로시저를 정의 합니다. 키워드를 사용 하 여 `Overloads` 두 가지 버전의 프로시저를 정의 합니다. 하나는 이름으로 고객을 수락 하 고 다른 하나는 계정 번호로 지정 합니다.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
@@ -40,9 +42,10 @@ ms.locfileid: "84387935"
  이러한 버전의 프로시저를 호출 하는 방법에 대 한 자세한 내용은 `post` [방법: 오버 로드 된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)을 참조 하세요.  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  오버 로드 된 각 버전에 동일한 프로시저 이름이 있지만 다른 매개 변수 목록이 있는지 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -50,4 +53,4 @@ ms.locfileid: "84387935"
 - [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [프로시저 오버로드에서 고려해야 할 사항](./considerations-in-overloading-procedures.md)
-- [오버 로드 확인](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

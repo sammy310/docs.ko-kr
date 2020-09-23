@@ -11,14 +11,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: c1bc6ab863f9de118d59e102d3d5d251d326f497
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 94c2907f05aa9b5b2bc8659cef6f523187f1ef6b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404941"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071796"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 쿼리 결과 정렬(Visual Basic)
+
 LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게 액세스 하 고 쿼리를 실행할 수 있습니다.  
   
  다음 예에서는 SQL Server 데이터베이스에 대해 쿼리를 수행 하는 새 응용 프로그램을 만들고 절을 사용 하 여 여러 필드를 기준으로 결과를 정렬 하는 방법을 보여 줍니다 `Order By` . 각 필드에 대 한 정렬 순서는 오름차순 또는 내림차순 일 수 있습니다. 자세한 내용은 [Order By 절](../../../language-reference/queries/order-by-clause.md)을 참조 하세요.  
@@ -37,7 +38,7 @@ LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL 파일을 포함 하는 프로젝트를 추가 하려면  
   
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭 합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
   
 2. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **LINQ to SQL 클래스** 항목 템플릿을 선택 합니다.  
   
@@ -73,9 +74,9 @@ LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게
   
 4. F5 키를 눌러 프로젝트를 실행 하 고 결과를 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ](index.md)
 - [쿼리](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext 메서드(O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
