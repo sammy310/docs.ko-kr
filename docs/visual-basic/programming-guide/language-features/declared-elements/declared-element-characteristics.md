@@ -13,14 +13,15 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 9d1e327c25689bed1405ea9a627da6232abb707b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 36c55475b4930dc6c3202d52ef742072d5cee3e1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392950"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075280"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
+
 선언 된 요소의 *특징* 은 코드와 상호 작용 하는 방법에 영향을 주는 요소에 대 한 측면입니다. 선언 된 모든 요소에는 다음과 같은 특징이 하나 이상 있습니다.  
   
 - *데이터 형식* -요소에서 보유할 수 있는 값과 해당 값을 저장 하는 방법입니다. 자세한 내용은 [데이터 형식](../../../language-reference/data-types/index.md)을 참조하세요.  
@@ -32,28 +33,29 @@ ms.locfileid: "84392950"
 - *액세스 수준* -요소를 사용 하는 코드에 대 한 권한입니다. 자세한 내용은 [방법: 변수의 가용성 제어](how-to-control-the-availability-of-a-variable.md)를 참조 하세요.  
   
 ## <a name="characteristics-of-the-elements"></a>요소의 특징  
+
  다음 표에서는 선언 된 요소와 각 요소에 적용 되는 특성을 보여 줍니다.  
   
 |요소|데이터 형식|수명|범위 <sup>1</sup>|액세스 수준|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |변수|예|예|예|예|  
-|상수|예|예|예|예|  
-|열거형|예|예|예|예|  
-|구조체|아니요|예|예|예|  
+|상수|예|아니요|예|예|  
+|열거형|예|아니요|예|예|  
+|구조체|아니요|아니요|예|예|  
 |속성|예|예|예|예|  
-|방법|예|예|예|예|  
-|프로시저 ( `Sub` 또는 `Function` )|예|예|예|예|  
-|프로시저 매개 변수|예|예|예|예|  
-|함수 반환|예|예|예|예|  
-|연산자|예|예|예|예|  
-|인터페이스|아니요|예|예|예|  
-|클래스|아니요|예|예|예|  
-|이벤트|아니요|예|예|예|  
-|대리자|아니요|예|예|예|  
+|메서드|아니요|예|예|예|  
+|프로시저 ( `Sub` 또는 `Function` )|아니요|예|예|예|  
+|프로시저 매개 변수|예|예|예|아니요|  
+|함수 반환|예|예|예|아니요|  
+|연산자|예|아니요|예|예|  
+|인터페이스|예|아니요|예|예|  
+|클래스|아니요|아니요|예|예|  
+|이벤트|아니요|아니요|예|예|  
+|대리자|예|아니요|예|예|  
   
  <sup>1</sup> 범위는 *표시 유형*이 라고도 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [선언 된 요소](index.md)
 - [Declared Element Names](declared-element-names.md)

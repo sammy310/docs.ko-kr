@@ -2,21 +2,22 @@
 title: 비동기 애플리케이션 미세 조정
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: e33f86177a3680d41ec04842dbc120713a48f61c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ad4f9a526e0497029ff8ddc3e93637a4f9acb00
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396651"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075436"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>Async 애플리케이션 미세 조정(Visual Basic)
+
 <xref:System.Threading.Tasks.Task> 형식이 제공하는 메서드 및 속성을 사용하여 async 애플리케이션에 정확성 및 유연성을 추가할 수 있습니다. 이 섹션의 항목에서는 <xref:System.Threading.CancellationToken>을 사용하는 예제와 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>과 같은 중요한 `Task` 메서드를 보여 줍니다.  
   
  `WhenAny` 및 `WhenAll`를 사용하면 더 쉽게 여러 작업을 시작하고 단일 작업을 모니터링하여 완료할 때까지 기다릴 수 있습니다.  
   
 - `WhenAny`는 컬렉션의 임의 작업이 완료되면 완료되는 작업을 반환합니다.  
   
-     을 사용 하는 예제를 `WhenAny` 보려면 [남은 비동기 작업 취소 후 남은 비동기 작업 취소 (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)를 참조 하 고 [비동기 작업을 여러 개 시작 하 고 완료 될 때마다 처리 합니다 (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md).  
+     을 사용 하는 예제를 `WhenAny` 보려면  [남은 비동기 작업 취소 후 남은 비동기 작업 취소 (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)를 참조 하 고 [비동기 작업을 여러 개 시작 하 고 완료 될 때마다 처리 합니다 (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md).  
   
 - `WhenAll`은 컬렉션의 모든 작업이 완료되면 완료되는 작업을 반환합니다.  
   
@@ -39,8 +40,8 @@ ms.locfileid: "84396651"
   
  ![취소 단추가 있는 WPF 창](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "시작 및 중지 단추가 있는 대화 상자")  
   
- [Async 샘플: 애플리케이션 세부 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드하여 완료할 수 있습니다.  
+ [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드하여 완료할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)

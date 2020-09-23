@@ -2,14 +2,15 @@
 title: 조인 작업
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 2e299b407712148db92c1c19a32fa318737ccf76
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e69e060447c0103c3c47be0fb34cad90e88c4516
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397547"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077321"
 ---
 # <a name="join-operations-visual-basic"></a>조인 작업 (Visual Basic)
+
 두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.  
   
  서로 간의 관계를 직접 적용할 수 없는 데이터 소스를 대상으로 하는 쿼리에서는 조인이 중요한 작업입니다. 개체 지향 프로그래밍에서 데이터 소스 간의 관계를 직접 적용할 수 없다는 것은 모델링되지 않은 개체 간에 상관 관계가 있음을 의미할 수 있습니다(예: 단방향 관계에서 반대 방향을 사용). 단방향 관계의 예로는 Customer 클래스가 City 형식 속성을 포함하는데 City 클래스는 Customer 개체의 컬렉션인 속성을 포함하지 않는 경우가 있습니다. City 개체 목록이 있는 경우 각 구/군/시의 모든 고객을 찾으려면 조인 작업을 사용하면 됩니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "84397547"
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)
 - [익명 형식](../../language-features/objects-and-classes/anonymous-types.md)
-- [조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [방법: 조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
 - [Join 절](../../../language-reference/queries/join-clause.md)
 - [방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)
 - [방법: 여러 소스로 개체 컬렉션 채우기 (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)

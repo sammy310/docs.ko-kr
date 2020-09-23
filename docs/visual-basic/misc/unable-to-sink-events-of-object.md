@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-ms.openlocfilehash: 1f691c65f73d147263087e049020396ca7357f4b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6351842792e85ada454722d1a493c4b9173e34a2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553443"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075670"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>개체에서 지원하는 최대 개수의 이벤트 수신자로 이벤트를 발생시키고 있으므로 개체의 이벤트를 싱크할 수 없습니다.
+
 개체에서 지원하는 최대 이벤트 수신기 수가 초과되었습니다.  
   
 ### <a name="to-correct-the-error"></a>오류를 수정하려면  

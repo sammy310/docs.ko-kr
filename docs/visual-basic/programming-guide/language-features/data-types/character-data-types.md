@@ -8,20 +8,22 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 33dd4c62776ae8c5ec0ce0a6d0858a7ed0d047fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401994"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077178"
 ---
 # <a name="character-data-types-visual-basic"></a>문자 데이터 형식(Visual Basic)
+
 Visual Basic은 인쇄 가능 하 고 표시할 수 있는 문자를 처리 하는 *문자 데이터 형식을* 제공 합니다. 두 가지 모두 유니코드 문자를 처리 하는 반면에는 단일 문자를 포함 하 고는 `Char` `String` 무한 문자 수를 포함 합니다.  
   
  Visual Basic 데이터 형식에 대 한 병렬 비교를 표시 하는 표는 [데이터 형식](../../../language-reference/data-types/index.md)을 참조 하세요.  
   
 ## <a name="char-type"></a>Char 형식  
- `Char`데이터 형식은 단일 2 바이트 (16 비트) 유니코드 문자입니다. 변수가 항상 정확히 하나의 문자를 저장 하는 경우로 선언 `Char` 합니다. 예를 들면 다음과 같습니다.  
+
+ `Char`데이터 형식은 단일 2 바이트 (16 비트) 유니코드 문자입니다. 변수가 항상 정확히 하나의 문자를 저장 하는 경우로 선언 `Char` 합니다. 다음은 그 예입니다.  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
@@ -33,13 +35,14 @@ Visual Basic은 인쇄 가능 하 고 표시할 수 있는 문자를 처리 하�
  자세한 내용은 [Char 데이터 형식](../../../language-reference/data-types/char-data-type.md)을 참조 하세요.  
   
 ## <a name="string-type"></a>문자열 형식  
- `String`데이터 형식은 0 개 이상의 2 바이트 (16 비트) 유니코드 문자 시퀀스입니다. 변수에 무한 수의 문자가 포함 될 수 있는 경우로 선언 `String` 합니다. 예를 들면 다음과 같습니다.  
+
+ `String`데이터 형식은 0 개 이상의 2 바이트 (16 비트) 유니코드 문자 시퀀스입니다. 변수에 무한 수의 문자가 포함 될 수 있는 경우로 선언 `String` 합니다. 다음은 그 예입니다.  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
  자세한 내용은 [String Data Type](../../../language-reference/data-types/string-data-type.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 데이터 형식](elementary-data-types.md)
 - [복합 데이터 형식](composite-data-types.md)

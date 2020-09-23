@@ -12,14 +12,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 1d20b01200d3f967e3355dc6e9651291003d140e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 375c75c954f3be535272d674d9b786cad46b1a01
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402007"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077191"
 ---
 # <a name="array-conversions-visual-basic"></a>배열 변환(Visual Basic)
+
 다음 조건을 충족 하는 경우 배열 형식을 다른 배열 형식으로 변환할 수 있습니다.  
   
 - **같은 순위입니다.** 두 배열의 순위는 동일 해야 합니다. 즉, 동일한 수의 차수를 가져야 합니다. 그러나 각 차원의 길이는 같을 필요가 없습니다.  
@@ -31,6 +32,7 @@ ms.locfileid: "84402007"
  한 배열 형식을 다른 형식으로 변환 하는 것은 각 요소의 변환이 확대 또는 축소 인지에 따라 확대 또는 축소 됩니다. 자세한 내용은 [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)을 참조하세요.  
   
 ## <a name="conversion-to-an-object-array"></a>개체 배열로 변환  
+
  `Object`배열을 초기화 하지 않고 선언 하는 경우 요소 형식은 초기화 되지 않은 `Object` 상태로 유지 됩니다. 특정 클래스의 배열로 설정 하면 해당 클래스의 형식을 사용 합니다. 그러나 해당 기본 형식은 여전히 이며, `Object` 이후에는 관련 없는 클래스의 다른 배열로 설정할 수 있습니다. 모든 클래스는에서 파생 되므로 모든 `Object` 클래스에서 다른 클래스로 배열의 요소 형식을 변경할 수 있습니다.  
   
  다음 예에서는 형식과 사이에는 변환이 `student` `String` 없지만 둘 다에서 파생 `Object` 되므로 모든 할당이 유효 합니다.  
@@ -47,6 +49,7 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>배열의 내부 형식  
+
  원래 특정 클래스를 사용 하 여 배열을 선언 하는 경우 해당 기본 요소 형식은 해당 클래스입니다. 이후에 다른 클래스의 배열로 설정 하는 경우 두 클래스 사이에 변환이 있어야 합니다.  
   
  다음 예제에서 `students` 는 `student` 배열입니다. 와 사이에 변환이 없기 때문에 `String` `student` 마지막 문이 실패 합니다.  
@@ -59,7 +62,7 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 형식](index.md)
 - [Visual Basic의 형식 변환](type-conversions.md)

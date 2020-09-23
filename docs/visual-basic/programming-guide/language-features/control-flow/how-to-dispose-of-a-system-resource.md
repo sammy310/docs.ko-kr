@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403500"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077204"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: 시스템 리소스 해제(Visual Basic)
+
 블록을 사용 하면 `Using` 코드가 블록을 종료할 때 시스템에서 리소스를 삭제 하는 것을 보장할 수 있습니다. 이는 많은 양의 메모리를 사용 하는 시스템 리소스를 사용 하는 경우 나 다른 구성 요소 에서도를 사용 하려는 경우에 유용 합니다.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>코드가 완료 될 때 데이터베이스 연결을 삭제 하려면  
@@ -44,7 +45,7 @@ ms.locfileid: "84403500"
   
      이 동일한 기술을 파일 핸들, COM 래퍼 등의 시스템 리소스에서 사용할 수 있습니다. `Using`블록을 종료 한 후에 다른 구성 요소에서 리소스를 사용할 수 있도록 하려는 경우 블록을 사용 `Using` 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [제어 흐름](index.md)

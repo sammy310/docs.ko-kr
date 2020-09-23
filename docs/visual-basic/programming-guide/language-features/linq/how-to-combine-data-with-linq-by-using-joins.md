@@ -9,14 +9,15 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: de8c4ec3ab8a0f2335c034231c661380420fd31b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ebda8d3b7fa2e712c337ed2c1fadc580bed7fe61
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405006"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075072"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인을 사용하여 데이터와 LINQ 결합(Visual Basic)
+
 Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 간의 공통 값을 기준으로 여러 컬렉션의 내용을 결합할 수 있습니다. 이러한 값을 *키* 값 이라고 합니다. 관계형 데이터베이스 개념에 익숙한 개발자는 절을 `Join` 내부 조인으로 인식 하 고 `Group Join` 절을 효과적으로 왼쪽 우선 외부 조인으로 인식 합니다.  
   
  이 항목의 예제에서는 `Join` 및 쿼리 절을 사용 하 여 데이터를 결합 하는 몇 가지 방법을 보여 줍니다 `Group Join` .  
@@ -33,6 +34,7 @@ Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 �
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join 절을 사용 하 여 내부 조인 수행  
+
  내부 조인은 두 컬렉션의 데이터를 결합 합니다. 지정 된 키 값이 일치 하는 항목이 포함 됩니다. 다른 컬렉션에 일치 하는 항목이 없는 컬렉션 중 하나의 항목은 제외 됩니다.  
   
  Visual Basic에서 LINQ는 내부 조인을 수행 하기 위한 두 가지 옵션, 즉 암시적 조인과 명시적 조인을 제공 합니다.  
@@ -48,6 +50,7 @@ Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 �
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 절을 사용 하 여 왼쪽 우선 외부 조인을 수행 합니다.  
+
  왼쪽 우선 외부 조인은 조인의 왼쪽 컬렉션에 있는 모든 항목을 포함 하 고 조인의 오른쪽 컬렉션에서 일치 하는 값만 포함 합니다. 왼쪽 컬렉션에 일치 하는 항목이 없는 조인의 오른쪽 컬렉션에 있는 항목은 쿼리 결과에서 제외 됩니다.  
   
  `Group Join`절은 왼쪽 우선 외부 조인을 적용 합니다. 일반적으로 왼쪽 우선 외부 조인 이라고 하는 것과 절이 반환 하는 작업의 차이는 `Group Join` `Group Join` 절이 왼쪽 컬렉션에 있는 각 항목에 대 한 조인의 오른쪽 컬렉션에서 결과를 그룹화 한다는 것입니다. 관계형 데이터베이스에서 왼쪽 우선 외부 조인은 쿼리 결과의 각 항목이 조인에 있는 두 컬렉션의 일치 하는 항목을 포함 하는 그룹화 되지 않은 결과를 반환 합니다. 이 경우 조인의 왼쪽 컬렉션의 항목이 오른쪽 컬렉션에서 일치 하는 각 항목에 대해 반복 됩니다. 다음 절차를 완료 하면이 모양이 표시 됩니다.  
@@ -61,6 +64,7 @@ Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 �
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>복합 키를 사용 하 여 조인 수행  
+
  `And`또는 절에서 키워드를 사용 하 `Join` 여 `Group Join` 조인 되는 컬렉션의 값을 일치 시킬 때 사용할 여러 키 필드를 식별할 수 있습니다. `And`키워드는 지정 된 모든 키 필드가 조인할 항목에 대해 일치 해야 함을 지정 합니다.  
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>복합 키를 사용 하 여 조인을 수행 하려면  
@@ -79,7 +83,7 @@ Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 �
   
 2. F5 키를 눌러 예제를 실행 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ](index.md)
 - [Visual Basic의 LINQ 소개](introduction-to-linq.md)

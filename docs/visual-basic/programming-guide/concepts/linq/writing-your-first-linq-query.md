@@ -6,19 +6,21 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 9d85f9c0390a659e59e372ad949cffdd17715189
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413260"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077282"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
+
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다양 한 유형의 데이터 원본에 대해 다양 한 언어 (예: 관계형 데이터베이스의 경우 SQL, XML 용 XQuery)가 개발 되었습니다. 이를 통해 응용 프로그램 개발자는 지원 되는 데이터 원본 또는 데이터 형식에 따라 새로운 쿼리 언어를 배워야 합니다.  
   
  LINQ (통합 언어 쿼리)는 다양 한 종류의 데이터 원본 및 형식에서 데이터를 사용 하기 위한 일관 된 모델을 제공 하 여 상황을 단순화 합니다. LINQ 쿼리에서는 항상 개체를 사용합니다. 동일한 기본 코딩 패턴을 사용 하 여 XML 문서, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티, .NET Framework 컬렉션 및 LINQ 공급자를 사용할 수 있는 다른 모든 원본 또는 형식에서 데이터를 쿼리하고 변환 합니다. 이 문서에서는 기본 LINQ 쿼리를 만들고 사용 하는 세 가지 단계에 대해 설명 합니다.  
   
 ## <a name="three-stages-of-a-query-operation"></a>쿼리 작업의 세 단계  
+
  LINQ 쿼리 작업은 다음과 같은 세 가지 작업으로 구성 됩니다.  
   
 1. 데이터 소스를 가져옵니다.  
@@ -41,6 +43,7 @@ ms.locfileid: "84413260"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>데이터 소스  
+
  이전 예제의 데이터 소스는 배열 이기 때문에 제네릭 인터페이스를 암시적으로 지원 <xref:System.Collections.Generic.IEnumerable%601> 합니다. 이 사실은 배열을 LINQ 쿼리의 데이터 원본으로 사용할 수 있도록 하는 것입니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
   
  암시적으로 쿼리 가능한 형식이 면 배열을 수정 하거나 특별 한 처리를 수행 하지 않아도 LINQ 데이터 원본으로 사용할 수 있습니다. <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> .NET Framework 클래스 라이브러리의 제네릭, 및 기타 클래스를 포함 하 여를 지 원하는 모든 컬렉션 형식의 경우에도 마찬가지입니다.  
@@ -63,6 +66,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 > <xref:System.Collections.ArrayList>제네릭이 아닌 인터페이스를 지 원하는 등의 형식을 <xref:System.Collections.IEnumerable> LINQ 데이터 원본으로 사용할 수도 있습니다. 를 사용 하는 예제는 <xref:System.Collections.ArrayList> [방법: LINQ를 사용 하 여 ArrayList 쿼리 (Visual Basic)](how-to-query-an-arraylist-with-linq.md)를 참조 하세요.  
   
 ## <a name="the-query"></a>쿼리  
+
  쿼리에서 데이터 원본에서 검색 하려는 정보를 지정 합니다. 또한 정보를 반환 하기 전에 정보를 정렬 하거나 그룹화 하거나 구조화 하는 방법을 지정할 수 있습니다. 쿼리 생성을 사용 하도록 설정 하기 위해 Visual Basic 새 쿼리 구문을 언어로 통합 했습니다.  
   
  실행 될 때 다음 예제의 쿼리는 정수 배열에서 모든 짝수를 반환 `numbers` 합니다.  
@@ -74,9 +78,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  쿼리 변수 자체는 아무 작업도 수행 하지 않으며 데이터를 반환 하지 않는다는 점을 기억해 야 합니다. 쿼리 정의만 저장 합니다. 이전 예제에서는 `For Each` 쿼리를 실행 하는 루프입니다.  
   
 ## <a name="query-execution"></a>쿼리 실행  
+
  쿼리 실행은 쿼리 생성과는 별개입니다. 쿼리를 만들 때 쿼리를 정의 하지만 실행은 다른 메커니즘에 의해 트리거됩니다. 쿼리를 정의 하는 즉시 실행 하거나 (*즉시 실행*) 정의를 저장 하 고 나중에 쿼리를 실행할 수 있습니다 (*지연 된 실행*).  
   
 ### <a name="deferred-execution"></a>지연된 실행  
+
  일반적인 LINQ 쿼리는가 정의 된 이전 예제와 유사 합니다 `evensQuery` . 쿼리를 만들지만 즉시 실행 하지는 않습니다. 대신 쿼리 정의는 쿼리 변수에 저장 됩니다 `evensQuery` . 나중에 쿼리를 실행 합니다. 일반적으로는 `For Each` 루프를 사용 하 여 값의 시퀀스를 반환 하거나 또는와 같은 표준 쿼리 연산자를 적용 하 여 쿼리를 실행 합니다 `Count` `Max` . 이 프로세스를 *지연 된 실행*이라고 합니다.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
@@ -98,6 +104,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>즉시 실행  
+
  쿼리의 지연 된 실행에서 쿼리 정의는 나중에 실행 하기 위해 쿼리 변수에 저장 됩니다. 즉시 실행 시 쿼리는 정의 시 실행 됩니다. 쿼리 결과의 개별 요소에 액세스 해야 하는 메서드를 적용 하는 경우 실행이 트리거됩니다. 즉시 실행은 단일 값을 반환 하는 표준 쿼리 연산자 중 하나를 사용 하 여 강제로 적용 됩니다. 예 `Count` 를 들면,, `Max` `Average` 및 `First` 입니다. 이러한 표준 쿼리 연산자는 단일 결과를 계산 하 고 반환 하기 위해 적용 되는 즉시 쿼리를 실행 합니다. 단일 값을 반환 하는 표준 쿼리 연산자에 대 한 자세한 내용은 [집계 작업](aggregation-operations.md), [요소 작업](element-operations.md)및 [수량자 작업](quantifier-operations.md)을 참조 하세요.  
   
  다음 쿼리는 정수 배열에서 짝수의 수를 반환 합니다. 쿼리 정의는 저장 되지 않으며 `numEvens` 단순 `Integer` 합니다.  
@@ -118,7 +125,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  메서드와 같은 메서드를 사용 하 여 쿼리를 실행할 수도 있습니다 `IEnumerable` <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)
 - [지역 형식 유추](../../language-features/variables/local-type-inference.md)

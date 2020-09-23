@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c66bcc0c525f816fdf5814d70351eb7e8eeda22f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402111"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076138"
 ---
 # <a name="method-methodname-cannot-be-called-with-number-arguments"></a>\<number>개 인수로 ‘\<methodname>’ 메서드를 호출할 수 없습니다.
+
 메서드 호출에 잘못된 인수 개수가 포함되어 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -22,6 +23,6 @@ ms.locfileid: "84402111"
   
 3. 두 수가 일치하지 않는 경우 인수의 수를 조정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

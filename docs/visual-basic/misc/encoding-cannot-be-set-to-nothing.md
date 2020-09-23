@@ -2,14 +2,15 @@
 title: 인코딩은 Nothing으로 설정할 수 없음
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 41565d1aa3b69f6ad92d4bbf2b2f2170014aef87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0356098ca3fb41804ea396b0ff792cf2990b3340
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394481"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077542"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>인코딩은 Nothing으로 설정할 수 없음
+
 `encoding` 매개 변수가 `Nothing` 으로 설정되었지만 유효한 값이 필요하기 때문에 파일에서 읽거나 쓰려는 시도가 실패했습니다.  
   
  <xref:System.Text.Encoding> 은 파일에 쓸 때 사용할 인코딩을 결정하기 위해 사용됩니다. 기본값은 UTF-8입니다.  
@@ -18,7 +19,7 @@ ms.locfileid: "84394481"
   
 - `encoding` 매개 변수에 대한 유효한 값을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [파일 인코딩](../developing-apps/programming/drives-directories-files/file-encodings.md)
 - [파일에서 읽기](../developing-apps/programming/drives-directories-files/reading-from-files.md)

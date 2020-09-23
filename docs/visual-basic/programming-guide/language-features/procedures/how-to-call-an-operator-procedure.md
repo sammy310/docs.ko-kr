@@ -11,14 +11,15 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: fa2bc5417b8b917ff48502a5bd0a4daa21fab67e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e88ff7b36535a709671a1f9b838f2b4488d1d37
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388571"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075189"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 호출(Visual Basic)
+
 식에서 연산자 기호를 사용 하 여 연산자 프로시저를 호출 합니다. 변환 연산자의 경우 [CType 함수](../../../language-reference/functions/ctype-function.md) 를 호출 하 여 값을 한 데이터 형식에서 다른 데이터 형식으로 변환 합니다.  
   
  연산자 프로시저를 명시적으로 호출 하지 않습니다. `CType`일반적으로 연산자를 사용 하는 것과 같은 방법으로 연산자 또는 함수를 대입문 또는 식에 사용 합니다. Visual Basic 연산자 프로시저에 대 한 호출을 수행 합니다.  
@@ -39,9 +40,10 @@ ms.locfileid: "84388571"
   
 2. 피연산자의 데이터 형식이 변환에 적합 하 고 올바른 순서 대로 되어 있어야 합니다.  
   
-3. `CType`변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
+3. `CType` 변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 두 개의 <xref:System.TimeSpan> 구조체를 만들고 함께 추가 하 고 그 결과를 세 번째 구조에 저장 합니다 <xref:System.TimeSpan> . <xref:System.TimeSpan>구조는 여러 표준 연산자를 오버 로드 하는 연산자 프로시저를 정의 합니다.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
@@ -51,9 +53,10 @@ ms.locfileid: "84388571"
  대화 연산자 프로시저를 호출 하는 예제는 [방법: 연산자를 정의 하는 클래스 사용](./how-to-use-a-class-that-defines-operators.md)을 참조 하세요.  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  사용 중인 클래스 또는 구조체에서 사용 하려는 연산자를 정의 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)

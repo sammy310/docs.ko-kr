@@ -6,14 +6,15 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: a9f9529d468a036d81c4e436429cbdb3207efd6e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a9350470836652f65532068402c78375b4c5495c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405159"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077100"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)
+
 한 이벤트 처리기가 후속 이벤트 처리기를 차단 하지 않는 것이 중요 한 여러 가지 상황이 있습니다. 사용자 지정 이벤트를 사용 하면 이벤트에서 이벤트 처리기를 비동기적으로 호출할 수 있습니다.  
   
  기본적으로 이벤트 선언의 백업 저장소 필드는 모든 이벤트 처리기를 순차적으로 결합 하는 멀티 캐스트 대리자입니다. 즉, 한 처리기를 완료 하는 데 시간이 오래 걸리면 다른 처리기가 완료 될 때까지 차단 됩니다. 잘 작동 하는 이벤트 처리기는 긴 작업 또는 잠재적으로 차단 되는 작업을 수행 하지 않아야 합니다.  
@@ -21,6 +22,7 @@ ms.locfileid: "84405159"
  Visual Basic에서 제공 하는 이벤트의 기본 구현을 사용 하는 대신 사용자 지정 이벤트를 사용 하 여 이벤트 처리기를 비동기적으로 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  이 예제에서 접근자는 `AddHandler` 이벤트의 각 처리기에 대 한 대리자를 `Click` <xref:System.Collections.ArrayList> 필드에 저장 된에 추가 합니다 `EventHandlerList` .  
   
  코드가 이벤트를 발생 시키면 `Click` 접근자는 `RaiseEvent` 메서드를 사용 하 여 모든 이벤트 처리기 대리자를 비동기식으로 호출 합니다 <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> . 이 메서드는 작업자 스레드의 각 처리기를 호출 하 고 즉시 반환 하므로 처리기는 서로를 차단할 수 없습니다.  

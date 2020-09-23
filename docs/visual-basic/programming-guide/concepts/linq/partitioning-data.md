@@ -2,14 +2,15 @@
 title: 데이터 분할
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 34749f9d7b137bade66b6103650871246c3cc532
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 07e33c4ce0d062a0f083d8970c0ad01f98923a52
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406848"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075319"
 ---
 # <a name="partitioning-data-visual-basic"></a>데이터 분할 (Visual Basic)
+
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스에 대한 세 가지 분할 작업의 결과를 보여 줍니다. 첫 번째 작업은 시퀀스에서 처음 세 개의 요소를 반환합니다. 두 번째 작업은 처음 세 개의 요소를 건너뛰고 나머지 요소를 반환합니다. 세 번째 작업은 시퀀스에서 처음 두 개의 요소를 건너뛰고 다음 세 개의 요소를 반환합니다.  
@@ -30,26 +31,30 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
   
 ### <a name="skip"></a>건너뛰기  
+
  다음 코드 예제에서는 `Skip` 배열의 나머지 문자열을 반환 하기 전에 Visual Basic의 절을 사용 하 여 문자열 배열에서 처음 네 개의 문자열을 건너뜁니다.  
   
  [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
+
  다음 코드 예제에서는 `Skip While` 문자열의 첫 문자가 "a" 인 동안 Visual Basic의 절을 사용 하 여 배열의 문자열을 건너뜁니다. 배열의 나머지 문자열이 반환 됩니다.  
   
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
+
  다음 코드 예제에서는 Visual Basic의 절을 사용 하 여 `Take` 문자열 배열에서 처음 두 문자열을 반환 합니다.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
+
  다음 코드 예제에서는 `Take While` 문자열의 길이가 5 이하인 동안 Visual Basic의 절을 사용 하 여 배열에서 문자열을 반환 합니다.  
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)

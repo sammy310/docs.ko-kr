@@ -2,14 +2,15 @@
 title: '방법: XML 파일에서 개체 데이터 읽기'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: 7097ec146987aea7855da40dd30f9cd3c17d8ce4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7677b32f76bee3fe579f96715b6c748c08c83a82
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413169"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077243"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>방법: XML 파일에서 개체 데이터 읽기(Visual Basic)
+
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.  
   
 ## <a name="example"></a>예제  
@@ -30,6 +31,7 @@ End Sub
 ```  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  파일 이름 "c:\temp\SerializationOverview.xml"을 serialize된 데이터가 포함된 파일 이름으로 바꿉니다. 데이터를 serialize 하는 방법에 대 한 자세한 내용은 [방법: XML 파일에 개체 데이터 쓰기 (Visual Basic)](how-to-write-object-data-to-an-xml-file.md)를 참조 하세요.  
   
  클래스에는 매개 변수가 없는 public 생성자가 있어야 합니다.  
@@ -37,6 +39,7 @@ End Sub
  public 속성과 필드만 역직렬화됩니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - serialize되는 클래스에 매개 변수가 없는 public 생성자가 없는 경우  
@@ -46,9 +49,10 @@ End Sub
 - 파일이 없는 경우(<xref:System.IO.IOException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  항상 입력을 확인하고, 신뢰할 수 없는 소스의 데이터를 역직렬화하지 마세요. 다시 생성된 개체는 역직렬화한 코드의 사용 권한으로 로컬 컴퓨터에서 실행됩니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.StreamWriter>
 - [방법: XML 파일에 개체 데이터 쓰기(Visual Basic)](how-to-write-object-data-to-an-xml-file.md)

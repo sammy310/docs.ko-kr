@@ -7,14 +7,15 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: b451642a16f36c4f7fd19c853fdfd2282f5bede5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7e5fecf0c4c0d3a561ec7d0c4ac03c9d9ce7f759
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405032"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075137"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 저장 프로시저 호출(Visual Basic)
+
 LINQ (통합 언어 쿼리)를 사용 하면 저장 프로시저와 같은 데이터베이스 개체를 비롯 한 데이터베이스 정보에 쉽게 액세스할 수 있습니다.  
   
  다음 예에서는 SQL Server 데이터베이스의 저장 프로시저를 호출 하는 응용 프로그램을 만드는 방법을 보여 줍니다. 이 샘플에서는 데이터베이스의 서로 다른 두 개의 저장 프로시저를 호출 하는 방법을 보여 줍니다. 각 프로시저는 쿼리 결과를 반환 합니다. 한 프로시저는 입력 매개 변수를 사용 하 고 다른 프로시저는 매개 변수를 사용 하지 않습니다.  
@@ -33,7 +34,7 @@ LINQ (통합 언어 쿼리)를 사용 하면 저장 프로시저와 같은 데�
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL 파일을 포함 하는 프로젝트를 추가 하려면  
   
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭 합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
   
 2. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **LINQ to SQL 클래스** 항목 템플릿을 선택 합니다.  
   
@@ -68,10 +69,10 @@ LINQ (통합 언어 쿼리)를 사용 하면 저장 프로시저와 같은 데�
   
 4. F5 키를 눌러 프로젝트를 실행 하 고 결과를 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ](index.md)
 - [쿼리](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext 메서드(O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [방법: 저장 프로시저를 할당 하 여 업데이트, 삽입 및 삭제 수행 (O/R 디자이너)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

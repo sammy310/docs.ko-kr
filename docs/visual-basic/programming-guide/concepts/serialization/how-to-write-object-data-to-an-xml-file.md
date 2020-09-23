@@ -2,14 +2,15 @@
 title: '방법: XML 파일에 개체 데이터 쓰기'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 9608a48cb8b3fac1c71affa7a0a17e9789f94b18
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af62d10b29e76701668fd3d595b967bd1754a22c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413156"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077230"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>방법: XML 파일에 개체 데이터 쓰기(Visual Basic)
+
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
   
 ## <a name="example"></a>예제  
@@ -38,9 +39,11 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  클래스에는 매개 변수가 없는 public 생성자가 있어야 합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - serialize되는 클래스에 매개 변수가 없는 public 생성자가 없는 경우  
@@ -52,9 +55,10 @@ End Module
 - 디스크가 꽉 찬 경우(<xref:System.IO.IOException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 애플리케이션에서 파일을 만들어야 하는 경우 해당 애플리케이션에 폴더에 대한 `Create` 권한이 있어야 합니다. 파일이 이미 있는 경우 애플리케이션에 더 낮은 권한인 `Write` 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 `Create` 권한 대신 단일 파일에 대해 `Read` 권한만 부여하는 것이 더 안전합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.IO.StreamWriter>
 - [방법: XML 파일에서 개체 데이터 읽기(Visual Basic)](how-to-read-object-data-from-an-xml-file.md)

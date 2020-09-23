@@ -13,14 +13,15 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403474"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077087"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>연산자의 효율적 결합(Visual Basic)
+
 복잡 한 식에는 여러 연산자가 포함 될 수 있습니다. 다음은 이에 대한 예입니다.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
@@ -28,6 +29,7 @@ ms.locfileid: "84403474"
  위의 예에 나와 있는 것과 같은 복잡 한 식을 만들려면 연산자 우선 순위 규칙을 철저 하 게 이해 해야 합니다. 자세한 내용은 [Visual Basic 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
 ## <a name="parenthetical-expressions"></a>괄호 식  
+
  연산자 우선 순위에 따라 결정 되는 것과 다른 순서로 작업을 진행 하려는 경우가 종종 있습니다. 다음 예제를 살펴보십시오.  
   
  `x = z * y + 4`  
@@ -39,13 +41,14 @@ ms.locfileid: "84403474"
  앞의 예제에서는 `y` 및 `4` 를 추가한 다음이 합계를에 곱합니다 `z` .  
   
 ### <a name="nested-parenthetical-expressions"></a>중첩 된 괄호 식  
+
  여러 수준의 괄호에 식을 중첩 하 여 우선 순위를 추가로 재정의할 수 있습니다. 괄호 안의 가장 안쪽에 중첩 된 식은 먼저 계산 된 다음 가장 안쪽에 중첩 된 다음으로 가장 많이 중첩 된 식과 괄호 외부에 있는 식의 순서로 계산 됩니다. 다음은 이에 대한 예입니다.  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
  앞의 예제에서 `z + 2` 는 먼저 계산 된 다음 다른 괄호 식이 계산 됩니다. 더하기 또는 곱하기 보다 우선 순위가 높은 지 수는 다른 식이 괄호로 묶여 있기 때문에이 예제에서는 마지막으로 계산 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 산술 연산자](arithmetic-operators.md)
 - [Comparison Operators in Visual Basic](comparison-operators.md)

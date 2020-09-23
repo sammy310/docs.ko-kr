@@ -7,14 +7,15 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: cf4954059a4b0bf015bed82a74357ecfd5f5987e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404877"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075228"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>방법: 개체 이니셜라이저를 사용하여 개체 선언(Visual Basic)
+
 개체 이니셜라이저를 사용 하면 단일 문에서 클래스의 인스턴스를 선언 하 고 인스턴스화할 수 있습니다. 또한 매개 변수가 있는 생성자를 호출 하지 않고 인스턴스의 멤버를 한 번에 하나 이상 초기화할 수 있습니다.  
   
  개체 이니셜라이저를 사용 하 여 명명 된 형식의 인스턴스를 만드는 경우 클래스에 대 한 매개 변수가 없는 생성자가 호출 된 다음 지정 된 순서로 지정 된 멤버를 초기화 합니다.  
@@ -59,7 +60,7 @@ ms.locfileid: "84404877"
   
      자세한 내용은 [지역 형식 유추](../variables/local-type-inference.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [방법: 항목 목록 만들기](../../concepts/linq/how-to-create-a-list-of-items.md)

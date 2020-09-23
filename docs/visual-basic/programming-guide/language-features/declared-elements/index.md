@@ -2,14 +2,15 @@
 title: 선언 요소
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: f7fedc58ec061ddb133eb94ee3b3b7a7b49083cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9359c8df60d7fdc06e7c8dfa1df82f1b277d7339
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357246"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075163"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic의 선언된 요소
+
 *선언된 요소*는 선언문에 정의된 프로그래밍 요소입니다. 선언된 요소에는 변수, 상수, 열거형, 클래스, 구조체, 모듈, 인터페이스, 프로시저, 프로시저 매개 변수, 함수 반환 값, 외부 프로시저 참조, 연산자, 속성, 이벤트 및 대리자가 포함됩니다.  
   
  선언문에는 다음이 포함됩니다.  
@@ -43,6 +44,7 @@ ms.locfileid: "84357246"
 - [Delegate 문](../../../language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Declared Element Names](declared-element-names.md)  
  요소 이름을 지정하고 알파벳 대/소문자를 사용하는 방법을 설명합니다.  
   
@@ -53,6 +55,7 @@ ms.locfileid: "84357246"
  컴파일러에서 선언에 대한 참조를 일치시키는 방법과 이름을 정규화하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [프로그램 구조 및 코드 규칙](../../program-structure/program-structure-and-code-conventions.md)  
  코드를 쉽게 읽고 이해하고 관리하기 위한 지침을 제공합니다.  
   

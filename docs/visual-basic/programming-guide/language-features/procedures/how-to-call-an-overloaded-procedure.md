@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 68b8a9898cba846b63ed8ce9d8329516f12e90cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388545"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075176"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>방법: 오버로드된 프로시저 호출(Visual Basic)
+
 프로시저 오버 로드의 이점은 호출의 유연성을 제공 합니다. 호출 하는 코드는 프로시저에 전달 하는 데 필요한 정보를 얻은 다음 전달 하는 인수에 관계 없이 단일 프로시저 이름을 호출할 수 있습니다.  
   
 ### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>정의 된 버전이 둘 이상 있는 프로시저를 호출 하려면  
@@ -32,7 +33,7 @@ ms.locfileid: "84388545"
   
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
@@ -42,5 +43,5 @@ ms.locfileid: "84388545"
 - [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [프로시저 오버로드에서 고려해야 할 사항](./considerations-in-overloading-procedures.md)
-- [오버 로드 확인](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)
 - [오버로드](../../../language-reference/modifiers/overloads.md)

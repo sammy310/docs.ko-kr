@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84939a622ab78fd797d27480a3ed612be06d3451
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394598"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076229"
 ---
 # <a name="drive-drivename-not-found"></a>'\<drivename>' 드라이브를 찾을 수 없습니다.
+
 드라이브를 찾을 수 없습니다. 네트워크 연결이 끊어졌거나, 액세스하려는 드라이브가 오프라인 상태이거나 존재하지 않습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -24,6 +25,6 @@ ms.locfileid: "84394598"
   
 4. 네트워크에 다시 연결하여 시도합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [오류 유형](../programming-guide/language-features/error-types.md)
+- [오류 형식](../programming-guide/language-features/error-types.md)

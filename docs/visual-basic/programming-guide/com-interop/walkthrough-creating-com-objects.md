@@ -8,13 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051482"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075618"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용하여 COM 개체 만들기
+
 새 응용 프로그램 또는 구성 요소를 만들 때 .NET Framework 어셈블리를 만드는 것이 가장 좋습니다. 그러나 Visual Basic를 사용 하면 .NET Framework 구성 요소를 COM에 쉽게 노출할 수 있습니다. 이를 통해 COM 구성 요소가 필요한 이전 응용 프로그램 제품군에 대해 새로운 구성 요소를 제공할 수 있습니다. 이 연습에서는 Visual Basic를 사용 하 여 COM 클래스 템플릿을 사용 하거나 사용 하지 않고 .NET Framework 개체를 COM 개체로 노출 하는 방법을 보여 줍니다.  
   
  Com 개체를 노출 하는 가장 쉬운 방법은 COM 클래스 템플릿을 사용 하는 것입니다. 이 템플릿은 새 클래스를 만든 다음 상호 운용성 계층을 사용 하 여 클래스를 COM 개체로 생성 하 고 운영 체제에 등록 하도록 프로젝트를 구성 합니다.  
@@ -39,6 +41,7 @@ ms.locfileid: "86051482"
 6. **빌드** 메뉴에서 **classlibrary1.chainone 빌드** 를 선택 합니다. Visual Basic는 어셈블리를 빌드하고 운영 체제에 COM 개체를 등록 합니다.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>COM 클래스 템플릿을 사용 하지 않고 COM 개체 만들기  
+
  COM 클래스 템플릿을 사용 하는 대신 COM 클래스를 수동으로 만들 수도 있습니다. 이 절차는 명령줄에서 작업 하는 경우 나 COM 개체가 정의 되는 방법을 더 자세히 제어 하려는 경우에 유용 합니다.  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>COM 개체를 생성 하도록 프로젝트를 설정 하려면  

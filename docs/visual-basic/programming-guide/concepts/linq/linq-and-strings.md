@@ -2,14 +2,15 @@
 title: LINQ 및 문자열
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 28c11dcc3c788ea85516e8b3fbafe2677b6d9b54
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549851"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075345"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ 및 문자열(Visual Basic)
+
 LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. 텍스트 파일의 반구조적 데이터에 특히 유용할 수 있습니다. LINQ 쿼리에 기존의 문자열 함수 및 정규식을 결합할 수 있습니다. 예를 들어 <xref:System.String.Split%2A> 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A> 메서드를 사용하여 문자열 배열을 만든 다음 LINQ를 사용하여 쿼리하거나 수정할 수 있습니다. LINQ 쿼리의 `where` 절에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드를 사용할 수 있습니다. 또한 LINQ를 사용하여 정규식에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 결과를 쿼리하거나 수정할 수 있습니다.  
   
  이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [방법: CSV 파일에서 XML 생성](../../../../standard/linq/generate-xml-csv-files.md)을 참조 하세요.  
@@ -17,6 +18,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
  이 섹션의 예제는 다음 두 가지 범주로 구분됩니다.  
   
 ## <a name="querying-a-block-of-text"></a>텍스트 블록 쿼리  
+
  <xref:System.String.Split%2A> 메서드 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A> 메서드를 사용하여 더 작은 문자열의 쿼리 가능 배열로 분할하면 텍스트 블록을 쿼리, 분석, 수정할 수 있습니다. 소스 텍스트를 단어, 문장, 단락, 페이지 또는 기타 기준으로 분할한 다음 쿼리에 필요한 경우 추가 분할을 수행할 수 있습니다.  
   
  [방법: 문자열에서 단어가 나오는 횟수 세기 (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
@@ -33,6 +35,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
  필터링된 쿼리 결과에 대한 복잡한 패턴 일치를 위해 LINQ 쿼리에서 정규식을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="querying-semi-structured-data-in-text-format"></a>텍스트 형식의 반구조적 데이터 쿼리  
+
  다양한 형식의 텍스트 파일은 대체로 탭 또는 쉼표로 구분된 파일 또는 고정 길이 줄과 같은 유사한 형식을 가진 일련의 줄로 이루어져 있습니다. 이러한 텍스트 파일을 메모리로 읽어온 후 LINQ를 사용하여 줄을 쿼리 및/또는 수정할 수 있습니다. 또한 LINQ 쿼리는 여러 소스의 데이터를 결합하는 작업을 간소화합니다.  
   
  [방법: 두 목록 간의 차집합을 설정 찾기 (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  
