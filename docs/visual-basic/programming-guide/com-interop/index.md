@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 2b70a7fa72b09401e0e78f693e4efc9bf0871771
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396793"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083230"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
+
 COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 애플리케이션을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 애플리케이션에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에서는 Visual Basic로 COM 개체를 만들고 사용 하는 것과 관련 된 몇 가지 문제에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [COM Interop 소개](introduction-to-com-interop.md)  
  COM 상호 운용성의 개요를 제공합니다.  
   
@@ -46,7 +48,8 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  [연습: COM 개체를 사용한 상속 구현](walkthrough-implementing-inheritance-with-com-objects.md)  
  기존 COM 개체를 새 개체의 기반으로 사용하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [비관리 코드와의 상호 운용](../../../framework/interop/index.md)  
  공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.  
   

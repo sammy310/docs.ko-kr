@@ -7,25 +7,29 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 863986e94855e02e9fd04685f7dc3e8e7f7b1cc3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 40b40c1a489d514c82cbccdeacda27900d9ec87d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548067"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083360"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>방법: Windows API 호출(Visual Basic)
+
 이 예제에서는 user32.dll에서 함수를 정의 하 고 호출한 `MessageBox` 다음 문자열을 전달 합니다.  
   
 ## <a name="example"></a>예제  
+
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
+
  이 예제에는 다음 사항이 필요합니다.  
   
 - <xref:System> 네임스페이스에 대한 참조  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 메서드가 정적이 아니거나, 추상 이거나, 이전에 정의 되었습니다. 부모 형식이 인터페이스 이거나 *name* 또는 *dllName* 의 길이가 0입니다. (<xref:System.ArgumentException>)  
