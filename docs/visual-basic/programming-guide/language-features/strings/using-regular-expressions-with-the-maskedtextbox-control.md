@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555746"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072433"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
+
 이 예제에서는 간단한 정규식을 컨트롤에서 사용할 수 있도록 변환 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox> .  
   
 ## <a name="description-of-the-masking-language"></a>마스킹 언어 설명  
+
  표준 <xref:System.Windows.Forms.MaskedTextBox> 마스킹 언어는 Visual Basic 6.0의 컨트롤에서 사용 하는 언어를 기반으로 `Masked Edit` 하며 해당 플랫폼에서 마이그레이션하는 사용자에 게 익숙할 것입니다.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>컨트롤의 속성은 <xref:System.Windows.Forms.MaskedTextBox> 사용할 입력 마스크를 지정 합니다. 마스크는 다음 표의 마스킹 요소 중 하나 이상으로 구성 된 문자열 이어야 합니다.  
@@ -44,18 +46,19 @@ ms.locfileid: "90555746"
  소수점 (.), 1/1000 (,), 시간 (:), (/), 날짜 및 통화 ($) 기호 기본 애플리케이션의 문화권에서 정의 된 대로 해당 기호를 표시 합니다. 속성을 사용 하 여 다른 문화권의 기호를 표시 하도록 강제할 수 있습니다 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> .  
   
 ## <a name="regular-expressions-and-masks"></a>정규식 및 마스크  
+
  정규식과 마스크를 사용 하 여 사용자 입력의 유효성을 검사할 수 있지만 완전히 일치 하지는 않습니다. 정규식은 마스크 보다 더 복잡 한 패턴을 표현할 수 있지만 마스크는 간략하게 및 문화권 관련 형식으로 동일한 정보를 표현할 수 있습니다.  
   
  다음 표에서는 정규식 4 개와 각 정규식에 해당 하는 마스크를 비교 합니다.  
   
-|정규식|Mask|참고|  
+|정규식|Mask|메모|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/`마스크의 문자는 논리적 날짜 구분 기호 이며, 사용자에 게 응용 프로그램의 현재 문화권에 적절 한 날짜 구분 기호로 표시 됩니다.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|미국 형식으로 된 날짜 (일, 월 약어 및 연도)로, 세 문자 월 약어가 앞에 대문자를 표시 하 고 두 개의 소문자를 표시 합니다.|  
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|미국 전화 번호, 지역 번호 (선택 사항). 사용자가 선택적 문자를 입력 하지 않으려는 경우 공백을 입력 하거나 처음 0으로 표시 되는 마스크의 위치에 직접 마우스 포인터를 놓을 수 있습니다.|  
 |`$\d{6}.00`|`$999,999.00`|0 ~ 999999 범위의 통화 값입니다. 통화, 1000, 10 진수 문자는 런타임에 해당 하는 문화권 관련 항목으로 바뀝니다.|  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

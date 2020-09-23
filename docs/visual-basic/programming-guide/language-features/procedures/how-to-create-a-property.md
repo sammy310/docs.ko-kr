@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: fa220998d12206e620c242b9b39df3dc1b639d29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388260"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072745"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>방법: 속성 만들기(Visual Basic)
+
 문과 문 사이에 속성 정의를 묶습니다 `Property` `End Property` . 이 정의 내에서 `Get` 프로시저, `Set` 프로시저 또는 둘 다를 정의 합니다. 모든 속성의 코드는 이러한 프로시저 내에 있습니다.  
   
  `Get`프로시저는 속성의 값을 검색 하 고 `Set` 프로시저는 값을 저장 합니다. 속성에 읽기/쓰기 액세스 권한을 지정 하려면 두 프로시저를 모두 정의 해야 합니다. 읽기 전용 속성의 경우만 정의 하 `Get` 고 쓰기 전용 속성의 경우만 정의 `Set` 합니다.  
@@ -52,6 +53,7 @@ ms.locfileid: "84388260"
  `Set`읽기/쓰기 속성 및 쓰기 전용 속성에 대 한 프로시저를 작성 해야 합니다. `Set`읽기 전용 속성에 대 한 프로시저를 정의 하면 안 됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 전체 이름을 두 개의 구성 이름, 이름 및 성으로 저장 하는 읽기/쓰기 속성을 만듭니다. 호출 코드가 읽는 경우 `fullName` `Get` 프로시저는 두 가지 구성 이름을 결합 하 고 전체 이름을 반환 합니다. 호출 코드에서 새 전체 이름을 할당 하면 `Set` 프로시저는 두 개의 구성 된 이름으로 코드를 분리 하려고 시도 합니다. 공백을 찾지 못하면 모두 이름으로 저장 합니다.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
@@ -60,7 +62,7 @@ ms.locfileid: "84388260"
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

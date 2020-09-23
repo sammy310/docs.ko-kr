@@ -6,14 +6,15 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 67c3af8b7bdac3ad1c7e4908f1ac2684df7a87aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bbc8083fcfb6f5ff0f4328c32b83a2e7218ecd6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410479"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072277"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>방법: 두 개체가 동일한지 확인(Visual Basic)
+
 Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 동일한 클래스 인스턴스를 가리키는 경우) 두 변수 참조가 동일한 것으로 간주 됩니다. 예를 들어 Windows Forms 응용 프로그램에서는 현재 인스턴스 ( `Me` )가와 같은 특정 인스턴스와 동일한 지 여부를 확인 하기 위해 비교를 수행할 수 있습니다 `Form2` .  
   
  Visual Basic는 포인터를 비교 하는 두 개의 연산자를 제공 합니다. [Is 연산자](../../../language-reference/operators/is-operator.md) 는 `True` 개체가 동일 하면를 반환 하 고, [IsNot 연산자](../../../language-reference/operators/isnot-operator.md) 는 그렇지 않으면를 반환 합니다 `True` .  
@@ -29,6 +30,7 @@ Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 
      `Is``True`개체가 동일한 클래스 인스턴스를 가리키면를 반환 합니다.  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>두 개체가 동일 하지 않은 경우 확인  
+
  두 개체가 동일 하지 않을 경우 작업을 수행 하려는 경우와 예를 들어 및를 결합 하는 것이 어려울 수 있습니다 `Not` `Is` `If Not obj1 Is obj2` . 이 경우 연산자를 사용할 수 있습니다 `IsNot` .  
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>두 개체가 동일한 지 확인 하려면  
@@ -40,6 +42,7 @@ Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 
      `IsNot``True`개체가 동일한 클래스 인스턴스를 가리키지 않으면를 반환 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 변수 쌍을 테스트 `Object` 하 여 동일한 클래스 인스턴스를 가리켜야 하는지 확인 합니다.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
@@ -50,7 +53,7 @@ Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [개체 변수](object-variables.md)

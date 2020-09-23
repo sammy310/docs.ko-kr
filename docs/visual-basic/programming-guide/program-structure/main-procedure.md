@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: cf6003206566dfe8f70a7f75cd4d7ec7565794a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403176"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072212"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
+
 모든 Visual Basic 응용 프로그램은 라는 프로시저를 포함 해야 합니다 `Main` . 이 절차는 응용 프로그램에 대 한 시작 지점 및 전반적인 제어 역할을 합니다. .NET Framework는 `Main` 응용 프로그램을 로드 하 고 제어를 전달할 준비가 되었을 때 프로시저를 호출 합니다. Windows Forms 응용 프로그램을 만드는 경우를 제외 하 고 자체적으로 `Main` 실행 되는 응용 프로그램에 대 한 프로시저를 작성 해야 합니다.
 
- `Main`먼저 실행 되는 코드를 포함 합니다. 에서는 `Main` 프로그램이 시작 될 때 먼저 로드 되는 폼을 확인 하 고, 응용 프로그램의 복사본이 이미 시스템에서 실행 되 고 있는지 확인 하 고, 응용 프로그램에 대 한 변수 집합을 설정 하거나, 응용 프로그램에 필요한 데이터베이스를 열 수 있습니다.
+ `Main` 먼저 실행 되는 코드를 포함 합니다. 에서는 `Main` 프로그램이 시작 될 때 먼저 로드 되는 폼을 확인 하 고, 응용 프로그램의 복사본이 이미 시스템에서 실행 되 고 있는지 확인 하 고, 응용 프로그램에 대 한 변수 집합을 설정 하거나, 응용 프로그램에 필요한 데이터베이스를 열 수 있습니다.
 
 ## <a name="requirements-for-the-main-procedure"></a>주 절차에 대 한 요구 사항
+
  자체 (일반적으로 확장명 .exe)에서 실행 되는 파일은 프로시저를 포함 해야 합니다 `Main` . 라이브러리 (예: 확장명 .dll)는 자체에서 실행 되지 않으며 프로시저가 필요 하지 않습니다 `Main` . 만들 수 있는 다양 한 프로젝트 형식에 대 한 요구 사항은 다음과 같습니다.
 
 - 콘솔 응용 프로그램은 자체적으로 실행 되며 하나 이상의 프로시저를 제공 해야 합니다 `Main` .
@@ -30,6 +32,7 @@ ms.locfileid: "84403176"
 - 클래스 라이브러리에는 프로시저가 필요 하지 않습니다 `Main` . 여기에는 Windows 컨트롤 라이브러리 및 웹 컨트롤 라이브러리가 포함 됩니다. 웹 응용 프로그램은 클래스 라이브러리로 배포 됩니다.
 
 ## <a name="declaring-the-main-procedure"></a>Main 프로시저 선언
+
  프로시저를 선언 하는 방법에는 네 가지가 있습니다 `Main` . 인수를 사용할 수 있으며 값을 반환할 수 있습니다.
 
 > [!NOTE]
@@ -47,7 +50,7 @@ ms.locfileid: "84403176"
     End Module
     ```
 
-- `Main`는 `Integer` 운영 체제에서 프로그램의 종료 코드로 사용 하는 값을 반환할 수도 있습니다. 다른 프로그램은 Windows ERRORLEVEL 값을 검사 하 여이 코드를 테스트할 수 있습니다. 종료 코드를 반환 하려면를 프로시저 대신 프로시저로 선언 해야 합니다 `Main` `Function` `Sub` .
+- `Main` 는 `Integer` 운영 체제에서 프로그램의 종료 코드로 사용 하는 값을 반환할 수도 있습니다. 다른 프로그램은 Windows ERRORLEVEL 값을 검사 하 여이 코드를 테스트할 수 있습니다. 종료 코드를 반환 하려면를 프로시저 대신 프로시저로 선언 해야 합니다 `Main` `Function` `Sub` .
 
     ```vb
     Module mainModule
@@ -64,7 +67,7 @@ ms.locfileid: "84403176"
     End Module
     ```
 
-- `Main`는 배열을 인수로 사용할 수도 있습니다 `String` . 배열의 각 문자열은 프로그램을 호출 하는 데 사용 되는 명령줄 인수 중 하나를 포함 합니다. 값에 따라 다른 작업을 수행할 수 있습니다.
+- `Main` 는 배열을 인수로 사용할 수도 있습니다 `String` . 배열의 각 문자열은 프로그램을 호출 하는 데 사용 되는 명령줄 인수 중 하나를 포함 합니다. 값에 따라 다른 작업을 수행할 수 있습니다.
 
     ```vb
     Module mainModule
@@ -108,7 +111,7 @@ ms.locfileid: "84403176"
     End Module
     ```
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>

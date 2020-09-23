@@ -10,14 +10,15 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: f0f7aba25888544dfcc093906850ae7ada621182
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78363f7b2fb5b251f7409e53b2802baf83b05810
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388247"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072706"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>방법: 액세스 수준이 혼합된 속성 선언(Visual Basic)
+
 `Get` `Set` 속성의 및 프로시저에 서로 다른 액세스 수준을 설정 하려면 문에 보다 관대 한 수준을 사용 하 `Property` 고 또는 문에서 더 제한적인 수준을 사용할 수 있습니다 `Get` `Set` . 코드의 특정 부분에서 속성 값을 가져올 수 있도록 하 고 코드의 특정 부분에서 값을 변경할 수 있도록 하려면 속성에 대해 혼합 된 액세스 수준을 사용 합니다.  
   
  액세스 수준에 대 한 자세한 내용은 [Visual Basic의 액세스 수준](../declared-elements/access-levels.md)을 참조 하세요.  
@@ -34,7 +35,7 @@ ms.locfileid: "84388247"
   
      위의 예에서는 프로시저에 `Get` `Protected` 액세스 하는 동안 속성 자체와 동일한 액세스 권한을 가집니다 `Set` `Private` . 에서 파생 된 클래스는 `employee` `salary` 값을 읽을 수 있지만 클래스 에서만 값을 `employee` 설정할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

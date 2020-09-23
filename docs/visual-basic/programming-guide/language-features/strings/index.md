@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 302805f8b9a83fceeeaa050332140c157a7a786f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60755b7aa8911f9c13eba80080b388a812f29475
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410556"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072589"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic의 문자열
+
 이 섹션에서는 Visual Basic의 문자열 사용에 대 한 기본 개념을 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Visual Basic의 문자열 소개](introduction-to-strings.md)  
  Visual Basic의 문자열 사용에 대 한 기본 개념을 설명 하는 항목을 나열 합니다.  
   

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 026f5bd833d857ee1db1b0f10abaabee9360b37e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555733"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072420"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
+
 이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법을 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: Visual Basic에서 파일 이름 및 경로 확인](how-to-validate-file-names-and-paths.md)  
  문자열이 파일 이름 또는 경로를 나타내는지 여부를 확인 하는 방법  
   
