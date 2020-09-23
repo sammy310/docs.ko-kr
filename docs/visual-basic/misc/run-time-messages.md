@@ -5,17 +5,18 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 3b8ca626df76d881e26dae49d48217fa8e81951b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357935"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91060706"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 런타임 메시지
+
 이 섹션에는 런타임에 발생 하는 Visual Basic 오류 메시지가 포함 되어 있습니다.  
   
- [\<address>올바른 원격 파일 주소가 아닙니다.](address-is-not-a-valid-remote-file-address.md)  
+ [\<address> 올바른 원격 파일 주소가 아닙니다.](address-is-not-a-valid-remote-file-address.md)  
   
  [구분 기호는 Nothing이나 빈 문자열일 수 없습니다.](a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -269,7 +270,7 @@ ms.locfileid: "84357935"
   
  [내부 오류(Visual Basic)](internal-error.md)  
   
- [에서 내부 오류가 발생 했습니다.\<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
+ [에서 내부 오류가 발생 했습니다. \<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic 런타임에 내부 오류 발생](internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -553,6 +554,6 @@ ms.locfileid: "84357935"
   
  [현재 폴더 또는 하위 폴더 중 하나에 있는 경로를 지정해야 합니다.](you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [오류 메시지](../language-reference/error-messages/index.md)
