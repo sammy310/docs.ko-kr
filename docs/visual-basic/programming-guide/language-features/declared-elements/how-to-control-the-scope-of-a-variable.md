@@ -12,14 +12,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357350"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095435"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
+
 일반적으로 변수는 *범위*내에 있거나 선언 하는 지역 전체에서 참조로 표시 됩니다. 경우에 따라 변수의 *액세스 수준이* 범위에 영향을 줄 수 있습니다.  
   
  자세한 내용은 [Scope in Visual Basic](scope.md)을 참조하세요.  
@@ -39,6 +40,7 @@ ms.locfileid: "84357350"
      프로시저 내에서 프로시저 내에 포함 된 모든 블록을 포함 하 여 변수만 참조할 수 있습니다.  
   
 ## <a name="scope-at-module-or-namespace-level"></a>모듈 또는 네임 스페이스 수준에서의 범위  
+
  편의를 위해 모듈, 클래스 및 구조에는 단일 용어 *모듈 수준이* 동일 하 게 적용 됩니다. 모듈 수준 변수의 액세스 수준에 따라 해당 범위가 결정 됩니다. 모듈, 클래스 또는 구조가 포함 된 네임 스페이스도 범위에 영향을 미칩니다.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>모듈, 클래스 또는 구조 전체에서 변수를 표시 하도록 설정 하려면  
@@ -58,6 +60,7 @@ ms.locfileid: "84357350"
 3. 모듈, 클래스 또는 구조체를 포함 하는 네임 스페이스 내의 어디에서 나 변수를 참조할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 모듈 수준에서 변수를 선언 하 고 모듈 내의 코드에 대 한 표시 여부를 제한 합니다.  
   
 ```vb  
@@ -81,12 +84,14 @@ Public strMsg As String
 ```  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  변수의 범위가 작을수록 동일한 이름의 다른 변수 대신 실수로 참조 하는 기회를 줄일 수 있습니다. 참조 일치 문제를 최소화할 수도 있습니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  변수의 범위가 작을수록 악의적인 코드가이를 부적절 하 게 사용할 수 있는 기회가 줄어듭니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 범위](scope.md)
 - [Visual Basic의 수명](lifetime.md)

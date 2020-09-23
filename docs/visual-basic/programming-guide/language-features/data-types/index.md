@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 928d7fb6a40873641ae3e91e057c272b946a0091
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393716"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095592"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic의 데이터 형식
+
 프로그래밍 요소의 *데이터 형식*은 사용할 수 있는 데이터의 종류 및 데이터를 저장하는 방식을 의미합니다. 데이터 형식은 컴퓨터 메모리에 저장할 수 있거나 식의 계산에 사용되는 모든 값에 적용됩니다. 모든 변수, 리터럴, 상수, 열거형, 속성, 프로시저 매개 변수, 프로시저 인수 및 프로시저 반환 값은 데이터 형식을 가집니다.  
   
 ## <a name="declared-data-types"></a>선언된 데이터 형식  
+
  선언문을 사용하여 프로그래밍 요소를 정의하고 `As` 절을 사용하여 데이터 형식을 지정합니다. 다음 표에서는 다양한 요소를 선언하기 위해 사용하는 문을 보여 줍니다.  
   
 |프로그래밍 요소|데이터 형식 선언|  
@@ -34,7 +36,7 @@ ms.locfileid: "84393716"
   
  Visual Basic 데이터 형식 목록은 [데이터 형식](../../../language-reference/data-types/index.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 문자](type-characters.md)
 - [기본 데이터 형식](elementary-data-types.md)

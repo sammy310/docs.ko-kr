@@ -5,20 +5,22 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 8262cc2742435abef0a05fefd7a40d5be2ec3e88
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414494"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095657"
 ---
 # <a name="enumerations-overview-visual-basic"></a>열거형 개요(Visual Basic)
+
 열거형은 관련 상수 집합을 사용 하는 편리한 방법을 제공 하 고 상수 값을 이름에 연결 하는 편리한 방법을 제공 합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
   
 ## <a name="tasks-involving-enumerations"></a>열거 관련 태스크  
+
  다음 표에서는 열거형과 관련 된 일반적인 작업을 보여 줍니다.  
   
-|원하는 작업|참조|  
+|원하는 작업|참조 항목|  
 |----------------|---------|  
 |미리 정의 된 열거 찾기|[상수 및 열거형](../../../language-reference/constants-and-enumerations.md)|  
 |열거형 선언|[방법: 열거형 선언](how-to-declare-enumerations.md)|  
@@ -28,7 +30,7 @@ ms.locfileid: "84414494"
 |열거형과 연결 된 문자열 확인|[방법: 열거형 값과 연결된 문자열 확인](how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
 |열거형 사용 시기 결정|[열거형을 사용하는 경우](when-to-use-an-enumeration.md)|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [상수 개요](constants-overview.md)
 - [사용자 정의 상수](user-defined-constants.md)
