@@ -2,17 +2,19 @@
 title: 표준 쿼리 연산자의 쿼리 식 구문
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 69bb50007c04bf8d1ee1553a37aca542afbffab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 57a08f6540cbf3e091ee1b2e202e0e181487e3be
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396287"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090250"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
+
 자주 사용 되는 표준 쿼리 연산자 중 일부에는 *쿼리 식*의 일부로 호출할 수 있는 전용 Visual Basic 언어 키워드 구문이 있습니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  
   
 ## <a name="query-expression-syntax-table"></a>쿼리 식 구문 표  
+
  다음 표에는 동등한 쿼리 식 절이 있는 표준 쿼리 연산자가 나열되어 있습니다.  
   
 |메서드|Visual Basic 쿼리 식 구문|  
@@ -42,7 +44,7 @@ ms.locfileid: "84396287"
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`Order By …, … Descending`<br /><br /> 자세한 내용은 [Order By 절](../../../language-reference/queries/order-by-clause.md)을 참조 하세요.|  
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> 자세한 내용은 [Where 절](../../../language-reference/queries/where-clause.md)을 참조 하세요.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

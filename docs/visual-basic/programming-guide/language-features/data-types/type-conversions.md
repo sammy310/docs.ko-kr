@@ -10,17 +10,19 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: be388998da5e88f99c62128e6ad63d5a476153ba
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee8700ea757cee9c20e2598de029f54ae33a7114
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393054"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090159"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic의 형식 변환
+
 한 데이터 형식에서 다른 형식으로 값을 변경 하는 프로세스를 *변환*이라고 합니다. 변환은 관련 형식의 데이터 용량에 따라 *확대* 또는 *축소*됩니다. 또한 소스 코드의 구문에 따라 *암시적* 이거나 *명시적*입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)  
  대상 형식이 데이터를 보유할 수 있는지 여부에 따라 분류 되는 변환을 설명 합니다.  
   
@@ -36,7 +38,8 @@ ms.locfileid: "84393054"
  [배열 규칙](array-conversions.md)  
  서로 다른 데이터 형식의 배열 간에 변환 하는 과정을 단계별로 안내 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [데이터 형식](index.md)  
  Visual Basic 데이터 형식을 소개 하 고이를 사용 하는 방법을 설명 합니다.  
   

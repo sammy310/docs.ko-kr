@@ -36,14 +36,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394054"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090263"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic의 제네릭 형식(Visual Basic)
+
 *제네릭 형식* 은 다양한 데이터 형식에 대해 동일한 기능을 수행하도록 조정되는 단일 프로그래밍 요소입니다. 제네릭 클래스 또는 프로시저를 정의할 때는 해당 기능을 수행하고자 하는 각 데이터 형식마다 별도의 버전을 정의할 필요가 없습니다.  
   
  비유하자면 헤드를 교체할 수 있는 스크루드라이버와 비슷합니다. 즉, 돌려야 하는 나사에 맞는 헤드(일자, 십자, 별 모양)를 선택합니다. 그리고 올바른 헤드를 스크루드라이버 핸들에 삽입하면 스크루드라이버와 정확하게 동일한 기능, 즉 나사를 돌리는 기능을 수행할 수 있습니다.  
@@ -61,6 +62,7 @@ ms.locfileid: "84394054"
  제네릭 형식 사용에 대한 자세한 내용은 [How to: Use a Generic Class](how-to-use-a-generic-class.md)을 참조하세요.  
   
 ## <a name="example-of-a-generic-class"></a>제네릭 클래스의 예  
+
  다음 예에서는 제네릭 클래스의 기본 정의를 보여 줍니다.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -76,11 +78,13 @@ ms.locfileid: "84394054"
  더 자세한 예제는 [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](how-to-define-a-class-that-can-provide-identical-functionality.md)를 참조 하세요.  
   
 ## <a name="eligible-programming-elements"></a>적용 가능한 프로그래밍 요소  
+
  제네릭 클래스, 구조체, 인터페이스, 프로시저 및 대리자를 정의하고 사용할 수 있습니다. .NET Framework은 일반적으로 사용 되는 제네릭 요소를 나타내는 몇 개의 제네릭 클래스, 구조체 및 인터페이스를 정의 합니다. <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스는 사전, 목록, 큐, 스택 등을 제공합니다. 제네릭 요소를 직접 정의하기 전에 <xref:System.Collections.Generic?displayProperty=nameWithType>에 이미 있지 않은지 확인하세요.  
   
  프로시저는 형식이 아니지만 제네릭 프로시저를 정의하고 사용할 수 있습니다. [Generic Procedures in Visual Basic](generic-procedures.md)을 참조하세요.  
   
 ## <a name="advantages-of-generic-types"></a>제네릭 형식의 장점  
+
  제네릭 형식은 각각 특정 데이터 형식에서 작동하는 서로 다른 프로그래밍 요소 여러 개를 선언하는 기초의 역할을 합니다. 제네릭 형식의 대안은 다음과 같습니다.  
   
 1. `Object` 데이터 형식에서 작동하는 단일 형식.  
@@ -104,9 +108,11 @@ ms.locfileid: "84394054"
 - **제네릭 알고리즘.** 형식에 독립적인 추상 알고리즘이 제네릭 형식의 좋은 후보입니다. 예를 들어 <xref:System.IComparable> 인터페이스를 사용하여 항목을 정렬하는 제네릭 프로시저는 <xref:System.IComparable>를 구현하는 모든 데이터 형식에 사용할 수 있습니다.  
   
 ## <a name="constraints"></a>제약 조건  
+
  제네릭 형식 정의의 코드는 가능한 형식에 독립적이어야 하지만 제네릭 형식에 제공되는 모든 데이터 형식의 특정 기능을 요구해야 할 수 있습니다. 예를 들어 정렬을 목적으로 두 항목을 비교하려는 경우에는 해당 데이터 형식이 <xref:System.IComparable> 인터페이스를 구현해야 합니다. 형식 매개 변수에 *제약 조건* 을 추가하여 이 요구 사항을 적용할 수 있습니다.  
   
 ### <a name="example-of-a-constraint"></a>제약 조건의 예  
+
  다음 예에서는 형식 인수가 <xref:System.IComparable>을 구현해야 한다는 제약 조건을 가진 클래스의 기본 정의를 보여 줍니다.  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ ms.locfileid: "84394054"
  이후의 코드에서 `itemManager` 을 구현하지 않는 형식을 제공하여 <xref:System.IComparable>에서 클래스를 생성하려고 시도하면 컴파일러가 오류를 표시합니다.  
   
 ### <a name="types-of-constraints"></a>제약 조건의 형식  
+
  제약 조건은 다음 요구 사항을 원하는 대로 조합하여 지정할 수 있습니다.  
   
 - 형식 인수는 하나 이상의 인터페이스를 구현해야 합니다.  
@@ -129,14 +136,16 @@ ms.locfileid: "84394054"
  제약 조건에 대한 자세한 내용은 [Type List](../../../language-reference/statements/type-list.md)을 참조하세요.  
   
 ### <a name="example-of-multiple-constraints"></a>다중 제약 조건의 예  
+
  다음 예제에서는 형식 매개 변수에 제약 조건 목록이 있는 제네릭 클래스의 기본 정의를 보여 줍니다. 이 클래스의 인스턴스를 만드는 코드에서 형식 인수는 <xref:System.IComparable> 및 <xref:System.IDisposable> 인터페이스를 모두 구현해야 하고, 참조 형식어야 하며, 액세스 가능한 매개 변수 없는 생성자를 노출해야 합니다.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>중요 용어  
+
  제네릭 형식에서는 다음의 용어를 사용합니다.  
   
-- *제네릭 형식*. 선언할 때 최소 하나의 데이터 형식을 제공하는 클래스, 구조체, 인터페이스, 프로시저 또는 대리자의 정의입니다.  
+- *제네릭 형식*입니다. 선언할 때 최소 하나의 데이터 형식을 제공하는 클래스, 구조체, 인터페이스, 프로시저 또는 대리자의 정의입니다.  
   
 - *형식 매개 변수*. 제네릭 형식 정의에서 형식을 선언할 때 제공하는 데이터 형식에 대한 자리 표시자입니다.  
   
@@ -146,7 +155,7 @@ ms.locfileid: "84394054"
   
 - *생성된 형식*. 형식 매개 변수에 대한 형식 인수를 제공하여 제네릭 형식에서 선언된 클래스, 구조체, 인터페이스, 프로시저 또는 대리자입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 형식](index.md)
 - [형식 문자](type-characters.md)
