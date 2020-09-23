@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 29d878afbe3669fc88e62b1fec98b306918c303d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405082"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057912"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리(Visual Basic)
+
 이벤트를 사용 하는 방법을 보여 주는 두 항목 중 두 번째 항목입니다. 첫 번째 항목인 [연습: 이벤트 선언 및 발생](walkthrough-declaring-and-raising-events.md)에서는 이벤트를 선언 하 고 발생 시키는 방법을 보여 줍니다. 이 단원에서는 해당 연습의 폼과 클래스를 사용 하 여 이벤트를 처리 하는 방법을 보여 줍니다.  
   
  `Widget`클래스 예제에서는 기존의 이벤트 처리 문을 사용 합니다. Visual Basic는 이벤트를 사용 하는 다른 기술을 제공 합니다. 연습으로이 예제를 수정 하 여 및 문을 사용할 수 `AddHandler` 있습니다 `Handles` .  
@@ -34,6 +35,7 @@ ms.locfileid: "84405082"
      변수는 `mblnCancel` 메서드를 취소 하는 데 사용 됩니다 `LongTask` .  
   
 ## <a name="writing-code-to-handle-an-event"></a>이벤트를 처리 하는 코드 작성  
+
  를 사용 하 여 변수를 선언 하는 즉시 `WithEvents` 변수 이름이 클래스 **코드 편집기**의 왼쪽 드롭다운 목록에 나타납니다. 를 선택 하면 `mWidget` `Widget` 클래스의 이벤트가 오른쪽 드롭다운 목록에 표시 됩니다. 이벤트를 선택 하면 접두사와 밑줄을 사용 하 여 해당 이벤트 프로시저가 표시 됩니다 `mWidget` . 변수와 연결 된 모든 이벤트 프로시저에는 `WithEvents` 변수 이름이 접두사로 지정 됩니다.  
   
 #### <a name="to-handle-an-event"></a>이벤트를 처리 하려면  
@@ -58,7 +60,8 @@ ms.locfileid: "84405082"
  을 실행 하는 동안 사용자가 **취소** 단추를 클릭 하면 이벤트 `LongTask` `Button2_Click` 처리가 발생 하는 것이 문에 의해 즉시 실행 됩니다 `DoEvents` . 클래스 수준 변수는 `mblnCancel` 로 설정 되 `True` 고, 이벤트는 `mWidget_PercentDone` 이를 테스트 하 고 인수를 `ByRef Cancel` 로 설정 `True` 합니다.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>WithEvents 변수를 개체에 연결  
- `Form1`이제를 설정 하 여 `Widget` 개체의 이벤트를 처리 합니다. 모든 위치를 찾는 것은입니다 `Widget` .  
+
+ `Form1` 이제를 설정 하 여 `Widget` 개체의 이벤트를 처리 합니다. 모든 위치를 찾는 것은입니다 `Widget` .  
   
  디자인 타임에 변수를 선언 하면 `WithEvents` 개체가 연결 되지 않습니다. `WithEvents`변수는 다른 개체 변수와 동일 합니다. 개체를 만들고 변수를 사용 하 여 개체에 대 한 참조를 할당 해야 `WithEvents` 합니다.  
   
@@ -82,7 +85,7 @@ ms.locfileid: "84405082"
   
  메서드를 `LongTask` 호출 하기 전에 완료율을 표시 하는 레이블이 초기화 되어야 하 고 `Boolean` 메서드를 취소 하기 위한 클래스 수준 플래그가로 설정 되어야 합니다 `False` .  
   
- `LongTask`는 작업 기간 12.2 초를 사용 하 여 호출 됩니다. `PercentDone`이벤트는 1 초 마다 한 번씩 발생 합니다. 이벤트가 발생할 때마다 `mWidget_PercentDone` 이벤트 프로시저가 실행 됩니다.  
+ `LongTask` 는 작업 기간 12.2 초를 사용 하 여 호출 됩니다. `PercentDone`이벤트는 1 초 마다 한 번씩 발생 합니다. 이벤트가 발생할 때마다 `mWidget_PercentDone` 이벤트 프로시저가 실행 됩니다.  
   
  이 완료 되 면가 정상적으로 종료 되었는지 여부를 `LongTask` `mblnCancel` 확인 `LongTask` 하거나가로 설정 되어 있기 때문에 중지 된 경우를 테스트 `mblnCancel` `True` 합니다. 완료율은 이전 경우에만 업데이트 됩니다.  
   
@@ -116,7 +119,7 @@ ms.locfileid: "84405082"
 > [!NOTE]
 > `WithEvents`필요한 만큼의 변수를 선언할 수 있지만 `WithEvents` 변수 배열은 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연습: 이벤트 선언 및 발생](walkthrough-declaring-and-raising-events.md)
 - [이벤트](index.md)

@@ -9,17 +9,19 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 3da60014d7ac95189c5d56c3e339ff1b054a40dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405095"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057990"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>연습: 이벤트 선언 및 발생(Visual Basic)
+
 이 연습에서는 라는 클래스에 대 한 이벤트를 선언 하 고 발생 시키는 방법을 보여 줍니다 `Widget` . 단계를 완료 한 후에는 개체의 이벤트를 사용 하 여 응용 프로그램에서 상태 정보를 제공 하는 방법을 보여 주는 [연습: 이벤트 처리](walkthrough-handling-events.md)항목을 읽어 볼 수 있습니다 `Widget` .  
   
 ## <a name="the-widget-class"></a>Widget 클래스  
+
  클래스가 있는 순간을 가정 합니다 `Widget` . 클래스에는 `Widget` 실행 하는 데 시간이 오래 걸릴 수 있는 메서드가 있으며 응용 프로그램에서 일종의 완성 표시기를 배치할 수 있도록 하려고 합니다.  
   
  물론 `Widget` 개체에 완료율 대화 상자를 표시 하 고 클래스를 사용한 모든 프로젝트에서 해당 대화 상자를 사용 하 여 작업을 수행할 수 있습니다 `Widget` . 개체를 사용 하는 응용 프로그램은 폼 이나 대화 상자를 관리 하는 것이 아니라 개체를 사용 하는 응용 프로그램에서 사용자 인터페이스를 처리 하도록 하는 것이 좋습니다.  
@@ -73,7 +75,7 @@ ms.locfileid: "84405095"
   
  이제 `Widget` 클래스가 이벤트를 발생 시킬 수 있으므로 다음 연습으로 이동할 수 있습니다. [연습: 이벤트 처리](walkthrough-handling-events.md) 는를 사용 하 여 이벤트 `WithEvents` 처리기를 이벤트와 연결 하는 방법을 보여 줍니다 `PercentDone` .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402033"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058640"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>연습: Visual Basic에서 IEnumerable (Of T) 구현
+
 <xref:System.Collections.Generic.IEnumerable%601>인터페이스는 한 번에 한 항목의 값 시퀀스를 반환할 수 있는 클래스에 의해 구현 됩니다. 한 번에 하나의 항목으로 데이터를 반환 하는 장점은 전체 데이터 집합을 메모리에 로드 하 여 사용할 필요가 없다는 것입니다. 데이터에서 단일 항목을 로드 하는 데 충분 한 메모리를 사용 해야 합니다. 인터페이스를 구현 하는 클래스 `IEnumerable(T)` 는 `For Each` 루프 또는 LINQ 쿼리와 함께 사용할 수 있습니다.  
   
  예를 들어, 많은 텍스트 파일을 읽고 특정 검색 조건과 일치 하는 파일에서 각 줄을 반환 해야 하는 응용 프로그램이 있다고 가정 합니다. 응용 프로그램은 LINQ 쿼리를 사용 하 여 지정 된 조건과 일치 하는 파일에서 줄을 반환 합니다. LINQ 쿼리를 사용 하 여 파일의 콘텐츠를 쿼리하려면 응용 프로그램에서 파일의 내용을 배열 또는 컬렉션에 로드할 수 있습니다. 그러나 전체 파일을 배열 또는 컬렉션에 로드 하면 필요한 것 보다 훨씬 많은 메모리가 사용 됩니다. LINQ 쿼리에서는 검색 조건과 일치 하는 값만 반환 하 여 열거 가능한 클래스를 사용 하 여 파일 콘텐츠를 쿼리할 수 있습니다. 일치 하는 값을 몇 개만 반환 하는 쿼리는 메모리를 훨씬 적게 소비 합니다.  
@@ -31,7 +32,7 @@ ms.locfileid: "84402033"
 
 1. Visual Basic의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭 합니다.
 
-1. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `StreamReaderEnumerable`을 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 표시 됩니다.
+1. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `StreamReaderEnumerable`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 표시 됩니다.
 
 1. **솔루션 탐색기**에서 Class1 파일을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다. 파일 이름을 `StreamReaderEnumerable.vb`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `StreamReaderEnumerable`으로 바뀝니다. 이 클래스는 `IEnumerable(Of String)` 인터페이스를 구현합니다.
 
@@ -93,7 +94,7 @@ ms.locfileid: "84402033"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
 - [제어 흐름](index.md)

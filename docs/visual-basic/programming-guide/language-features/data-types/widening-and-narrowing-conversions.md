@@ -19,14 +19,15 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 177ff6c6fe15c57563d2f62ed8927f9ee975be48
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393002"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058536"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>확대 변환과 축소 변환(Visual Basic)
+
 형식 변환의 중요 한 고려 사항은 변환 결과가 대상 데이터 형식의 범위 내에 있는지 여부입니다.  
   
  *확대 변환* 에서는 원래 데이터의 가능한 값을 허용할 수 있는 데이터 형식으로 값을 변경 합니다.  확대 변환은 원본 값을 유지 하지만 표시를 변경할 수 있습니다. 이는 정수 계열 형식에서로 변환 하거나에서로 변환 하는 경우에 발생 `Decimal` `Char` `String` 합니다.  
@@ -34,13 +35,14 @@ ms.locfileid: "84393002"
  *축소 변환* 은 가능한 값의 일부를 저장하지 못할 수도 있는 데이터 형식으로 값을 변경합니다. 예를 들어 정수 계열 형식으로 변환 될 때 소수 값이 반올림 되 고 변환 되는 숫자 형식이 `Boolean` 또는로 줄어듭니다 `True` `False` .  
   
 ## <a name="widening-conversions"></a>확대 변환  
+
  다음 표에서는 표준 확대 변환을 보여 줍니다.  
   
 |데이터 형식|데이터 형식 확대 <sup>1</sup>|  
 |---|---|  
 |[SByte](../../../language-reference/data-types/sbyte-data-type.md)|`SByte`, `Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[Byte](../../../language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
-|[간략히](../../../language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
+|[Short](../../../language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[UShort](../../../language-reference/data-types/ushort-data-type.md)|`UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
 |[정수](../../../language-reference/data-types/integer-data-type.md)|`Integer`, `Long` , `Decimal` , `Single` , `Double` <sup>2</sup>|  
 |[UInteger](../../../language-reference/data-types/uinteger-data-type.md)|`UInteger`,,, `Long` `ULong` `Decimal` , `Single` , `Double` <sup>2</sup>|  
@@ -51,11 +53,11 @@ ms.locfileid: "84393002"
 |[double](../../../language-reference/data-types/double-data-type.md)|`Double`|  
 |모든 열거 형식 ([열거형](../../../language-reference/statements/enum-statement.md))|기본 정수 형식 및 기본 형식이 확대 되는 모든 형식입니다.|  
 |[Char](../../../language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` 배열|`Char`배열과`String`|  
-|모든 형식|[개체](../../../language-reference/data-types/object-data-type.md)|  
+|`Char` 배열|`Char` 배열과 `String`|  
+|모든 형식|[Object](../../../language-reference/data-types/object-data-type.md)|  
 |모든 파생 형식|파생 되는 기본 형식 <sup>3</sup>입니다.|  
 |모든 형식|구현 하는 인터페이스입니다.|  
-|[Nothing](../../../language-reference/nothing.md)|모든 데이터 형식 또는 개체 유형입니다.|  
+|[없는지](../../../language-reference/nothing.md)|모든 데이터 형식 또는 개체 유형입니다.|  
   
  <sup>1</sup> 정의에 따라 모든 데이터 형식이 그 자체로 확대 됩니다.  
   
@@ -66,6 +68,7 @@ ms.locfileid: "84393002"
  확대 변환은 런타임에 항상 성공 하며 데이터 손실이 발생 하지 않습니다. [Option Strict 문이](../../../language-reference/statements/option-strict-statement.md) 유형 검사를 또는로 설정 하는지 여부에 관계 없이 항상 암시적으로이를 수행할 수 있습니다 `On` `Off` .  
   
 ## <a name="narrowing-conversions"></a>축소 변환  
+
  표준 축소 변환에는 다음이 포함 됩니다.  
   
 - 위의 표에서 확대 변환의 반대 방향 (모든 형식이 자체로 확대 됨을 제외 하 고)  
@@ -84,18 +87,21 @@ ms.locfileid: "84393002"
 > 컬렉션의 요소에서 루프 제어 변수로의 변환에 대 한 축소 변환 오류는 무시 됩니다 `For Each…Next` . 자세한 내용 및 예제는 각 항목에 대 한 "축소 변환" 섹션을 참조 하세요. [ 다음 문](../../../language-reference/statements/for-each-next-statement.md).  
   
 ### <a name="when-to-use-narrowing-conversions"></a>축소 변환을 사용 하는 경우  
+
  원본 값이 오류 또는 데이터 손실 없이 대상 데이터 형식으로 변환 될 수 있다는 것을 알고 있는 경우 축소 변환을 사용 합니다. 예를 들어 사용자에 게 `String` "True" 또는 "False"가 포함 된 경우 키워드를 사용 하 여 `CBool` 로 변환할 수 있습니다 `Boolean` .  
   
 ## <a name="exceptions-during-conversion"></a>변환 하는 동안 발생 하는 예외  
+
  확대 변환은 항상 성공 하므로 예외를 throw 하지 않습니다. 축소 변환은 실패할 경우 가장 일반적으로 다음과 같은 예외를 throw 합니다.  
   
-- <xref:System.InvalidCastException>-두 형식 간에 변환이 정의 되지 않은 경우  
+- <xref:System.InvalidCastException> -두 형식 간에 변환이 정의 되지 않은 경우  
   
-- <xref:System.OverflowException>-(정수 계열 형식에만 해당) 변환 된 값이 대상 형식에 비해 너무 클 경우  
+- <xref:System.OverflowException> -(정수 계열 형식에만 해당) 변환 된 값이 대상 형식에 비해 너무 클 경우  
   
  클래스 또는 구조체에서 해당 클래스 또는 구조체에 대 한 변환 연산자로 사용할 [CType 함수](../../../language-reference/functions/ctype-function.md) 를 정의 하는 경우 `CType` 적절 한 하다 고 판단 예외를 throw 할 수 있습니다. 또한 `CType` Visual Basic 함수나 .NET Framework 메서드를 호출 하 여 다양 한 예외를 throw 할 수 있습니다.  
   
 ## <a name="changes-during-reference-type-conversions"></a>참조 형식 변환 중 변경  
+
  *참조 형식* 에서의 변환은 포인터만 값에 복사 합니다. 값 자체는 어떠한 방식으로든 복사 되거나 변경 되지 않습니다. 변경할 수 있는 유일한 사항은 포인터를 포함 하는 변수의 데이터 형식입니다. 다음 예제에서는 데이터 형식이 파생 클래스에서 기본 클래스로 변환 되지만 이제 두 변수가 가리키는 개체가 변경 되지 않습니다.  
   
 ```vb  
@@ -107,7 +113,7 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 형식](index.md)
 - [Visual Basic의 형식 변환](type-conversions.md)

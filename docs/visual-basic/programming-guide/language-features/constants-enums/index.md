@@ -11,14 +11,15 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414403"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058692"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic의 상수 및 열거형
+
 상수는 변경되지 않는 값 대신 의미 있는 이름을 사용하는 방법입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 상수를 사용하여 숫자 대신 의미 있는 이름을 제공하여 코드의 가독성을 향상할 수 있습니다.  
   
  열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "84414403"
 |[상수 개요](constants-overview.md)|이 단원의 항목에서는 상수 및 해당 용도를 설명합니다.|  
 |[열거형 개요](enumerations-overview.md)|이 단원의 항목에서는 열거형 및 해당 용도를 설명합니다.|  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
   
 |용어|정의|  
 |---|---|  

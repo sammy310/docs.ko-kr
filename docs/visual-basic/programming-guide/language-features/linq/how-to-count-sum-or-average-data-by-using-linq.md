@@ -15,14 +15,15 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 8be585c3e11bc3637b2dd1cfaf3437620aa2ba09
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405019"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059251"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터 개수, 합 또는 평균 계산(Visual Basic)
+
 LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게 액세스 하 고 쿼리를 실행할 수 있습니다.  
   
  다음 예에서는 SQL Server 데이터베이스에 대해 쿼리를 수행 하는 새 응용 프로그램을 만드는 방법을 보여 줍니다. 이 샘플에서는 and 절을 사용 하 여 결과의 수, 합계 및 평균을 계산 합니다 `Aggregate` `Group By` . 자세한 내용은 [Aggregate 절](../../../language-reference/queries/aggregate-clause.md) 및 [Group By 절](../../../language-reference/queries/group-by-clause.md)을 참조 하세요.  
@@ -41,7 +42,7 @@ LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL 파일을 포함 하는 프로젝트를 추가 하려면  
   
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭 합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 을 프로젝트 형식으로 선택 합니다.  
   
 2. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **LINQ to SQL 클래스** 항목 템플릿을 선택 합니다.  
   
@@ -77,11 +78,11 @@ LINQ (통합 언어 쿼리)를 사용 하면 데이터베이스 정보에 쉽게
   
 4. F5 키를 눌러 프로젝트를 실행 하 고 결과를 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ](index.md)
 - [쿼리](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext 메서드 (O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext 메서드(O/R 디자이너)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Aggregate Clause](../../../language-reference/queries/aggregate-clause.md)
 - [Group By 절](../../../language-reference/queries/group-by-clause.md)

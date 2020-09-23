@@ -7,14 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 7feaf71fa1c59c24aa751f2b9e28328d47ba357c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1add054a6cb6468f4581f92ca3a258c5b0cdc77d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413068"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058861"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>방법: Visual Basic에서 배열 변수 초기화
+
 배열 리터럴을 절에 포함 하 `New` 고 배열의 초기 값을 지정 하 여 배열 변수를 초기화 합니다. 형식을 지정 하거나 배열 리터럴의 값에서 유추 되도록 허용할 수 있습니다. 형식을 유추 하는 방법에 대 한 자세한 내용은 [배열의](index.md)"초기 값으로 배열 채우기"를 참조 하십시오.  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>배열 리터럴을 사용 하 여 배열 변수를 초기화 하려면  
@@ -33,7 +34,7 @@ ms.locfileid: "84413068"
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- 배열 범위를 명시적으로 지정 하거나, 그대로 두고, 컴파일러가 배열 리터럴의 값을 기준으로 배열 범위를 유추 하도록 할 수 있습니다. 상한 및 값을 모두 제공 하는 경우 인덱스 0부터 모든 차원의 상한 사이의 모든 요소에 대 한 값을 포함 해야 합니다. 다음 예제에서는 형식의 요소가 있는 2 차원 배열을 포함 하는 변수를 선언 하 고, 만들고, 초기화 하는 여러 가지 방법을 보여 줍니다.`Short`  
+- 배열 범위를 명시적으로 지정 하거나, 그대로 두고, 컴파일러가 배열 리터럴의 값을 기준으로 배열 범위를 유추 하도록 할 수 있습니다. 상한 및 값을 모두 제공 하는 경우 인덱스 0부터 모든 차원의 상한 사이의 모든 요소에 대 한 값을 포함 해야 합니다. 다음 예제에서는 형식의 요소가 있는 2 차원 배열을 포함 하는 변수를 선언 하 고, 만들고, 초기화 하는 여러 가지 방법을 보여 줍니다. `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
@@ -53,7 +54,7 @@ ms.locfileid: "84413068"
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [배열](index.md)
 - [배열 문제 해결](troubleshooting-arrays.md)

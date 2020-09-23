@@ -23,14 +23,15 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414481"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058848"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: 상수 선언(Visual Basic)
+
 문을 사용 하 여 `Const` 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다. 상수를 선언한 후에는 수정 하거나 새 값을 할당할 수 없습니다.  
   
  프로시저 내에서 상수를 선언 하거나 모듈, 클래스 또는 구조체의 선언 섹션에서 상수를 선언 합니다. 클래스 또는 구조체 수준 상수는 `Private` 기본적으로 이지만 `Public` 적절 한 `Friend` `Protected` `Protected Friend` 수준의 코드 액세스에 대해,, 또는로 선언할 수도 있습니다.  
@@ -65,7 +66,7 @@ ms.locfileid: "84414481"
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Const 문](../../../language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
-ms.openlocfilehash: ef7bb099f7433e92ad2e288338af24531906ffbd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b7317b38e8f9bf99fce48ea76031086ff9d713f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544897"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059498"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>UploadFile의 주소에는 파일 이름이 포함되어야 합니다.
+
 `UploadFile` 메서드를 사용하여 파일을 업로드하는 경우 대상 경로에 파일 이름을 제공해야 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  

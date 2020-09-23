@@ -8,14 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: d4ff9442aa82a3eb46d56500159562174646ea58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410259"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058315"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
+
 포함 식을 사용 하면 런타임에 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함 식의 구문은 이며 `<%=` `expression` `%>` , ASP.NET에 사용 되는 구문과 같습니다.  
   
  예를 들어, 포함 된 식을 리터럴 텍스트 콘텐츠와 결합 하 여 XML 요소 리터럴을 만들 수 있습니다.  
@@ -31,16 +32,17 @@ ms.locfileid: "84410259"
 ```  
   
 ## <a name="embedded-expression-location-and-validation"></a>포함 식 위치 및 유효성 검사  
+
  포함 식은 XML 리터럴 식 내의 특정 위치에만 나타날 수 있습니다. 식 위치는 식에서 반환할 수 있는 형식과를 처리 하는 방법을 제어 합니다 `Nothing` . 다음 표에서는 허용 되는 위치 및 포함 식의 유형에 대해 설명 합니다.  
   
-|리터럴의 위치|식의 형식|처리`Nothing`|  
+|리터럴의 위치|식의 형식|처리 `Nothing`|  
 |---|---|---|  
-|XML 요소 이름|<xref:System.Xml.Linq.XName>|오류|  
-|XML 요소 내용|`Object`또는 배열`Object`|무시됨|  
-|XML 요소 특성 이름|<xref:System.Xml.Linq.XName>|특성 값이 없는 경우 오류가 발생 합니다.`Nothing`|  
+|XML 요소 이름|<xref:System.Xml.Linq.XName>|Error|  
+|XML 요소 내용|`Object` 또는 배열 `Object`|무시됨|  
+|XML 요소 특성 이름|<xref:System.Xml.Linq.XName>|특성 값이 없는 경우 오류가 발생 합니다. `Nothing`|  
 |XML 요소 특성 값|`Object`|특성 선언이 무시 되었습니다.|  
-|XML 요소 특성|<xref:System.Xml.Linq.XAttribute>또는 컬렉션<xref:System.Xml.Linq.XAttribute>|무시됨|  
-|XML 문서 루트 요소|<xref:System.Xml.Linq.XElement>또는 하나의 <xref:System.Xml.Linq.XElement> 개체와 임의의 수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 <xref:System.Xml.Linq.XComment> 개체 컬렉션|무시됨|  
+|XML 요소 특성|<xref:System.Xml.Linq.XAttribute> 또는 컬렉션 <xref:System.Xml.Linq.XAttribute>|무시됨|  
+|XML 문서 루트 요소|<xref:System.Xml.Linq.XElement> 또는 하나의 <xref:System.Xml.Linq.XElement> 개체와 임의의 수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 <xref:System.Xml.Linq.XComment> 개체 컬렉션|무시됨|  
   
 - XML 요소 이름에 포함 된 식의 예:  
   
@@ -73,6 +75,7 @@ ms.locfileid: "84410259"
  특정 형식의 리터럴에 포함 된 식을 사용 하는 방법에 대 한 자세한 내용은 [Xml 문서 리터럴](../../../language-reference/xml-literals/xml-document-literal.md), [xml 요소 리터럴](../../../language-reference/xml-literals/xml-element-literal.md)을 참조 하세요.  
   
 ## <a name="scoping-rules"></a>범위 지정 규칙  
+
  컴파일러는 각 XML 리터럴을 적절 한 리터럴 형식에 대 한 생성자 호출로 변환 합니다. XML 리터럴의 리터럴 콘텐츠 및 포함 식은 생성자에 인수로 전달 됩니다. 즉, XML 리터럴에 사용할 수 있는 모든 Visual Basic 프로그래밍 요소는 포함 된 식에도 사용할 수 있습니다.  
   
  XML 리터럴 내에서 문으로 선언 된 XML 네임 스페이스 접두사에 액세스할 수 있습니다 `Imports` . 특성을 사용 하 여 요소에서 새 XML 네임 스페이스 접두사를 선언 하거나 기존 XML 네임 스페이스 접두사를 숨길 수 있습니다 `xmlns` . 새 네임 스페이스는 해당 요소의 자식 노드에서 사용할 수 있지만 포함 식의 XML 리터럴이 아닙니다.  
@@ -80,7 +83,7 @@ ms.locfileid: "84410259"
 > [!NOTE]
 > 네임 스페이스 특성을 사용 하 여 XML 네임 스페이스 접두사를 선언 하는 경우 `xmlns` 특성 값은 상수 문자열 이어야 합니다. 이와 관련 하 여 특성을 사용 하는 `xmlns` 것은 문을 사용 하 여 `Imports` XML 네임 스페이스를 선언 하는 것과 같습니다. 포함 식을 사용 하 여 XML 네임 스페이스 값을 지정할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 XML 만들기](creating-xml.md)
 - [XML 문서 리터럴](../../../language-reference/xml-literals/xml-document-literal.md)

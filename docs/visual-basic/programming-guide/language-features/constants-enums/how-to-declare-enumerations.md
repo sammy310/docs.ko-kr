@@ -6,17 +6,18 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414455"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058900"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>방법: 열거형 선언(Visual Basic)
+
 `Enum`클래스 또는 모듈의 선언 섹션에 문을 사용 하 여 열거형을 만듭니다. 메서드 내에서 열거형을 선언할 수 없습니다. 적절 한 수준의 액세스를 지정 하려면,, `Private` 또는를 사용 `Protected` `Friend` `Public` 합니다.  
   
- 형식에는 `Enum` 각각 상수를 나타내는 이름, 내부 형식 및 필드 집합이 있습니다. 이름은 올바른 Visual Basic .NET 한정자 여야 합니다. 기본 형식은 정수 형식 (, 또는) 중 하나 여야 `Byte` 합니다 `Short` `Long` `Integer` . `Integer`은 기본 버전입니다. 열거형은 항상 강력한 형식이 며 정수 숫자 형식으로는 사용할 수 없습니다.  
+ 형식에는 `Enum` 각각 상수를 나타내는 이름, 내부 형식 및 필드 집합이 있습니다. 이름은 올바른 Visual Basic .NET 한정자 여야 합니다. 기본 형식은 정수 형식 (, 또는) 중 하나 여야 `Byte` 합니다 `Short` `Long` `Integer` . 기본값은 `Integer`입니다. 열거형은 항상 강력한 형식이 며 정수 숫자 형식으로는 사용할 수 없습니다.  
   
  열거형에는 부동 소수점 값을 사용할 수 없습니다. 열거형에 부동 소수점 값이 할당 된 경우 `Option Strict On` 컴파일러 오류가 발생 합니다. `Option Strict`가 이면 `Off` 값이 자동으로 형식으로 변환 됩니다 `Enum` .  
   
@@ -42,7 +43,7 @@ ms.locfileid: "84414455"
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [열거형 및 이름 한정](enumerations-and-name-qualification.md)
 - [방법: 열거형 멤버 참조](how-to-refer-to-an-enumeration-member.md)

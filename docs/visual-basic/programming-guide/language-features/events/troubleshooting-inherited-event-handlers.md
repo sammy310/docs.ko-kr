@@ -8,17 +8,18 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: 4e7bedd1de5197fcf8b69091f4cc878f41b01cd5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d228e916e45054bc088aa633afd9d591e592210d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405108"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058003"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결
+
 이 항목에서는 상속 된 구성 요소의 이벤트 처리기에서 발생 하는 일반적인 문제를 보여 줍니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>이벤트 처리기의 코드는 모든 호출에 대해 두 번 실행 됩니다.  
   

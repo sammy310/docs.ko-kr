@@ -6,14 +6,15 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 525da9206472afefa9f85b49ceee0775cbd168c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4138759bfbb049b77406fc536219b40d3ed9e2a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414468"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058771"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>방법: 열거형 값과 연결된 문자열 확인(Visual Basic)
+
 <xref:System.Enum.GetValues%2A>및 메서드를 사용 하 여 <xref:System.Enum.GetNames%2A> 열거형 멤버와 연결 된 문자열 및 값을 확인할 수 있습니다.  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>열거형과 연결 된 문자열을 확인 하려면  
@@ -22,7 +23,7 @@ ms.locfileid: "84414468"
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>

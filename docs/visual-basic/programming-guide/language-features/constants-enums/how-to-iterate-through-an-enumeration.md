@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: fb6fbdd45ca0e84ccb9fc55296d78e3867d5fe25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21c170d4708b90987a3f1e9c18969b8803fcdbe0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414429"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058718"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>방법: Visual Basic에서 열거형 반복
+
 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 열거형을 반복 하려면 메서드를 사용 하 여 배열로 이동할 수 있습니다 <xref:System.Enum.GetValues%2A> . `For...Each`또는 메서드를 사용 하 여 <xref:System.Enum.GetNames%2A> <xref:System.Enum.GetValues%2A> 문자열 또는 숫자 값을 추출 하는 문을 사용 하 여 열거형을 반복할 수도 있습니다.  
   
 ### <a name="to-iterate-through-an-enumeration"></a>열거형을 반복 하려면  
@@ -22,7 +23,7 @@ ms.locfileid: "84414429"
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [열거형 개요](enumerations-overview.md)
 - [방법: 열거형 선언](how-to-declare-enumerations.md)

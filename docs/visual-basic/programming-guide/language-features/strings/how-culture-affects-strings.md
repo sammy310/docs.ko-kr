@@ -5,17 +5,19 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9cbd3a5b8685178259b76d97919ea097ae72f6ae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401968"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059218"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic에서 문화권이 문자열에 영향을 주는 방식
+
 이 도움말 페이지에서는 Visual Basic 문화권 정보를 사용 하 여 문자열 변환 및 비교를 수행 하는 방법을 설명 합니다.  
   
 ## <a name="when-to-use-culture-specific-strings"></a>문화권 관련 문자열을 사용 하는 경우  
+
  일반적으로 사용자에 게 제공 되는 모든 데이터에 대해 문화권별 문자열을 사용 하 고 응용 프로그램의 내부 데이터에 대해 문화권 고정 문자열을 사용 해야 합니다.  
   
  예를 들어 응용 프로그램에서 사용자에 게 날짜를 문자열로 입력 하도록 요청 하는 경우 사용자는 문화권에 따라 문자열의 형식을 지정 하 고 응용 프로그램에서 문자열을 적절 하 게 변환 해야 합니다. 그런 다음 응용 프로그램에서 해당 날짜를 사용자 인터페이스에 표시 하는 경우 사용자의 문화권에 해당 날짜를 표시 해야 합니다.  
@@ -23,6 +25,7 @@ ms.locfileid: "84401968"
  그러나 응용 프로그램이 날짜를 중앙 서버에 업로드 하는 경우에는 잠재적으로 서로 다른 날짜 형식 간의 혼동을 방지 하기 위해 하나의 특정 문화권에 따라 문자열의 형식을 지정 해야 합니다.  
   
 ## <a name="culture-sensitive-functions"></a>문화권 구분 함수  
+
  및 함수를 제외 하 고 모든 Visual Basic 문자열 변환 함수는 `Str` 응용 프로그램의 `Val` 문화권 정보를 사용 하 여 변환과 비교가 응용 프로그램 사용자의 문화권에 적합 한지 확인 합니다.  
   
  다른 문화권 설정을 사용 하는 컴퓨터에서 실행 되는 응용 프로그램에서 문자열 변환 함수를 성공적으로 사용 하려면 특정 문화권 설정을 사용 하는 함수를 이해 하 고 현재 문화권 설정을 사용 하는 것이 중요 합니다. 응용 프로그램의 문화권 설정은 기본적으로 운영 체제의 문화권 설정에서 상속 됩니다. 자세한 내용은,,,,,, <xref:Microsoft.VisualBasic.Strings.Asc%2A> <xref:Microsoft.VisualBasic.Strings.AscW%2A> <xref:Microsoft.VisualBasic.Strings.Chr%2A> <xref:Microsoft.VisualBasic.Strings.ChrW%2A> <xref:Microsoft.VisualBasic.Strings.Format%2A> <xref:Microsoft.VisualBasic.Conversion.Hex%2A> <xref:Microsoft.VisualBasic.Conversion.Oct%2A> 및 [형식 변환 함수](../../../language-reference/functions/type-conversion-functions.md)를 참조 하세요.  
@@ -36,6 +39,7 @@ ms.locfileid: "84401968"
  자세한 내용은 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Val%2A>를 참조하세요.  
   
 ## <a name="using-a-specific-culture"></a>특정 문화권 사용  
+
  웹 서비스에 날짜 (문자열로 형식이 지정 됨)를 전송 하는 응용 프로그램을 개발 하 고 있다고 가정 합니다. 이 경우 응용 프로그램은 문자열 변환에 특정 문화권을 사용 해야 합니다. 이유를 설명 하려면 날짜의 메서드를 사용한 결과를 고려해 야 합니다 <xref:System.DateTime.ToString> . 응용 프로그램에서이 메서드를 사용 하 여 날짜를 7 년 7 월 4 2005 일로 지정 하면 미국 영어 (en-us) 문화권을 사용 하 여 실행할 때 "7/4/2005 12:00:00 AM"이 반환 되지만 독일어 (de-de) 문화권을 사용 하 여 실행 하면 "04.07.2005 00:00:00"이 반환 됩니다.  
   
  특정 문화권 형식으로 문자열 변환을 수행 해야 하는 경우 `CultureInfo` .NET Framework에 기본 제공 되는 클래스를 사용 해야 합니다. `CultureInfo`문화권의 이름을 생성자에 전달 하 여 특정 문화권에 대 한 새 개체를 만들 수 있습니다 <xref:System.Globalization.CultureInfo.%23ctor%2A> . 지원 되는 문화권 이름은 클래스 도움말 페이지에 나열 되어 있습니다 <xref:System.Globalization.CultureInfo> .  
@@ -50,6 +54,7 @@ ms.locfileid: "84401968"
 > 날짜 리터럴은 항상 영어 문화권에 따라 해석 됩니다.  
   
 ## <a name="comparing-strings"></a>문자열 비교  
+
  다음과 같은 두 가지 중요 한 상황에서 문자열 비교가 필요 합니다.  
   
 - **사용자에 게 표시할 데이터를 정렬 합니다.** 문자열이 적절 하 게 정렬 되도록 현재 문화권에 따라 작업을 사용 합니다.  
@@ -71,14 +76,15 @@ ms.locfileid: "84401968"
 |인수 값 `comparisonType`|비교 유형|사용 시기|  
 |---|---|---|  
 |`Ordinal`|문자열의 구성 요소 바이트를 기준으로 하는 비교입니다.|비교할 때이 값을 사용 합니다 .이 값은 대/소문자 구분 식별자, 보안 관련 설정 또는 해당 바이트가 정확히 일치 해야 하는 기타 비 언어적 식별자입니다.|  
-|`OrdinalIgnoreCase`|문자열의 구성 요소 바이트를 기준으로 하는 비교입니다.<br /><br /> `OrdinalIgnoreCase`는 고정 문화권 정보를 사용 하 여 두 문자가 대문자 표시의 차이점을 확인 합니다.|대/소문자를 구분 하지 않는 식별자, 보안 관련 설정 및 Windows에 저장 된 데이터를 비교할 때이 값을 사용 합니다.|  
+|`OrdinalIgnoreCase`|문자열의 구성 요소 바이트를 기준으로 하는 비교입니다.<br /><br /> `OrdinalIgnoreCase` 는 고정 문화권 정보를 사용 하 여 두 문자가 대문자 표시의 차이점을 확인 합니다.|대/소문자를 구분 하지 않는 식별자, 보안 관련 설정 및 Windows에 저장 된 데이터를 비교할 때이 값을 사용 합니다.|  
 |`CurrentCulture` 또는 `CurrentCultureIgnoreCase`|현재 문화권의 문자열 해석을 기반으로 하는 비교입니다.|사용자에 게 표시 되는 데이터, 대부분의 사용자 입력 및 언어 해석이 필요한 기타 데이터를 비교할 때 이러한 값을 사용 합니다.|  
 |`InvariantCulture` 또는 `InvariantCultureIgnoreCase`|고정 문화권의 문자열 해석을 기반으로 하는 비교입니다.<br /><br /> `Ordinal` `OrdinalIgnoreCase` 고정 문화권은 허용 된 범위를 벗어난 문자를 동일한 고정 문자로 처리 하기 때문에이는 및와는 다릅니다.|데이터 유지를 비교 하거나 고정 정렬 순서가 필요한 언어적으로 관련 된 데이터를 표시 하는 경우에만 이러한 값을 사용 합니다.|  
   
-### <a name="security-considerations"></a>보안 고려사항  
+### <a name="security-considerations"></a>보안 고려 사항  
+
  애플리케이션에서 비교 또는 대/소문자 변경 작업의 결과에 따라 보안 결정 다음 작업을 사용 해야 합니다 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통과 `Ordinal` 또는 `OrdinalIgnoreCase` 에 대 한는 `comparisonType` 인수입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.CultureInfo>
 - [Visual Basic의 문자열 소개](introduction-to-strings.md)

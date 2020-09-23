@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551043"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059160"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
+
 Microsoft는이 항목의 지침을 따르는 샘플과 설명서를 개발 합니다. 동일한 코딩 규칙을 따르는 경우 다음과 같은 이점을 얻을 수 있습니다.  
   
 - 코드는 일관 된 모양을 가지 므로, 독자가 레이아웃을 통해 콘텐츠를 더 잘 볼 수 있습니다.  
@@ -86,6 +87,7 @@ Microsoft는이 항목의 지침을 따르는 샘플과 설명서를 개발 합�
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>이벤트 처리기의 완화 대리자  
+
  인수 (개체 및 EventArgs)를 이벤트 처리기로 명시적으로 한정 하지 마십시오. 이벤트에 전달 되는 이벤트 인수를 사용 하지 않는 경우 (예: sender as Object, e를 EventArgs로), 완화 된 대리자를 사용 하 고 이벤트 인수를 코드에 남겨 둡니다.  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft는이 항목의 지침을 따르는 샘플과 설명서를 개발 합�
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>With 키워드 사용  
+
  하나의 개체에 대 한 일련의 호출을 수행 하는 경우 키워드를 사용 하는 것이 좋습니다 `With` .  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Try ...를 사용 합니다. 예외 처리를 사용 하는 경우 문 Catch 및 사용  
+
  `On Error Goto`는 사용하지 마세요.  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot 키워드 사용  
+
  `IsNot`대신 키워드를 사용 `Not...Is Nothing` 합니다.  
   
 ### <a name="new-keyword"></a>New 키워드  
@@ -162,9 +167,11 @@ Microsoft는이 항목의 지침을 따르는 샘플과 설명서를 개발 합�
 - `Nothing`메서드를 호출 하기 전에 이벤트가 (null) 인지 여부를 확인 하지 않습니다 `RaiseEvent` . `RaiseEvent``Nothing`이벤트를 발생 시키기 전에를 확인 합니다.  
   
 ### <a name="using-shared-members"></a>공유 멤버 사용  
+
  `Shared`인스턴스 변수가 아니라 클래스 이름을 사용 하 여 멤버를 호출 합니다.  
   
 ### <a name="use-xml-literals"></a>XML 리터럴 사용  
+
  XML 리터럴은 XML로 작업할 때 가장 자주 발생 하는 작업 (예: 로드, 쿼리 및 변환)을 단순화 합니다. XML을 사용 하 여 개발 하는 경우 다음 지침을 따르세요.  
   
 - Xml Api를 직접 호출 하는 대신 xml 리터럴을 사용 하 여 XML 문서 및 조각을 만듭니다.  
