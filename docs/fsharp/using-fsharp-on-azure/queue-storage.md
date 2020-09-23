@@ -3,12 +3,13 @@ title: F#을 사용하여 Azure Queue 스토리지 시작
 description: Azure 큐는 애플리케이션 구성 요소 간에 안정적인 비동기 메시징을 제공합니다. 클라우드 메시징을 사용하면 애플리케이션 구성 요소를 독립적으로 조정할 수 있습니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548366"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100089"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F #을 사용 하 여 Azure Queue storage 시작\#
 
@@ -20,7 +21,7 @@ Azure Queue Storage는 애플리케이션 구성 요소 간에 클라우드 메�
 
 큐 저장소에 대 한 개념적 개요는 [queue storage에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-queues)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/storage-create-storage-account)합니다.
 이 계정에 대 한 저장소 액세스 키도 필요 합니다.

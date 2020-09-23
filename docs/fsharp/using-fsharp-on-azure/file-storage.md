@@ -3,12 +3,13 @@ title: F#을 사용하여 Azure File 스토리지 시작
 description: Azure File Storage를 사용하여 클라우드에 파일 데이터를 저장하고 Azure 가상 머신(VM) 또는 Windows를 실행하는 온-프레미스 애플리케이션에서 클라우드 파일 공유를 탑재합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548464"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100128"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure File storage 시작\#
 
@@ -16,7 +17,7 @@ Azure File storage는 표준 [SMB (서버 메시지 블록) 프로토콜](/windo
 
 파일 저장소에 대 한 개념적 개요는 [파일 저장소에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-files)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/storage-create-storage-account)합니다.
 이 계정에 대 한 저장소 액세스 키도 필요 합니다.

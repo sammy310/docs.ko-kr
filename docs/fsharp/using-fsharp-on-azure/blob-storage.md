@@ -3,12 +3,13 @@ title: F#을 사용하여 Azure Blob 스토리지 시작
 description: Azure Blob storage를 사용 하 여 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548477"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100154"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob storage 시작\#
 
@@ -18,7 +19,7 @@ Azure Blob Storage는 클라우드에 구조화되지 않은 데이터를 개체
 
 Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net 가이드](/azure/storage/blobs/storage-quickstart-blobs-dotnet)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/common/storage-account-create)합니다. 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
 

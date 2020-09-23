@@ -2,14 +2,15 @@
 title: 파일이 현재 읽기용으로 열려 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 7f662a68-021a-4432-947a-6bde48061257
-ms.openlocfilehash: 8796bfebd48336c4142d2b67381484b7c859720f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b31c13061066f3ab620db724bf770fbad83d90b4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552039"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100180"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>파일이 현재 읽기용으로 열려 있습니다.
+
 현재 읽기용으로 열려 있는 파일에 액세스하려고 했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  

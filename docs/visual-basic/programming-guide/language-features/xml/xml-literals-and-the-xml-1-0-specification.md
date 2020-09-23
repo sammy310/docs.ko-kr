@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 1200e9ada45adce267c61f821bc7e2bde211cdc3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a2f4339eab7875b2976e07ed244fac32730be00
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403280"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098997"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 리터럴 및 XML 1.0 사양(Visual Basic)
+
 Visual Basic의 XML 리터럴 구문은 대부분의 XML(Extensible Markup Language) (XML) 1.0 사양을 지원 합니다. XML 1.0 사양에 대 한 자세한 내용은 W3C 웹 사이트의 [XML(Extensible Markup Language) (xml) 1.0](https://www.w3.org/TR/xml) 을 참조 하십시오.  
   
 ## <a name="what-visual-basic-does-not-support"></a>지원 하지 않는 Visual Basic  
@@ -28,7 +29,7 @@ Visual Basic의 XML 리터럴 구문은 대부분의 XML(Extensible Markup Langu
   
 - 문서 및 요소 리터럴에 사용할 수 있는 포함 된 식 구문은 잘못 된 XML입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 XML 만들기](creating-xml.md)
 - [XML 문서 리터럴](../../../language-reference/xml-literals/xml-document-literal.md)

@@ -1,14 +1,15 @@
 ---
-title: Azure 용에서 F# 패키지 관리 사용
-description: Paket 또는 Nuget을 사용 하 F# 여 Azure 종속성 관리
+title: 'Azure 용 F #과 함께 패키지 관리 사용'
+description: 'Paket 또는 Nuget을 사용 하 여 F # Azure 종속성 관리'
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 4aa32ace91f30d0e43b9c40067f5f0f456cc4069
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214220"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100115"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 종속성에 대한 패키지 관리
 
@@ -16,7 +17,7 @@ ms.locfileid: "71214220"
 
 ## <a name="using-paket"></a>Paket 사용
 
-[Paket](https://fsprojects.github.io/Paket/) 를 종속성 관리자로 사용 하는 `paket.exe` 경우 도구를 사용 하 여 Azure 종속성을 추가할 수 있습니다. 예:
+[Paket](https://fsprojects.github.io/Paket/) 를 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `paket.exe` Azure 종속성을 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```console
 > paket add nuget WindowsAzure.Storage
@@ -28,7 +29,7 @@ ms.locfileid: "71214220"
 > mono paket.exe add nuget WindowsAzure.Storage
 ```
 
-이렇게 하면 현재 `WindowsAzure.Storage` 디렉터리에 있는 프로젝트에 대 한 패키지 종속성 집합에 추가 되 고, `paket.dependencies` 파일을 수정 하 고, 패키지를 다운로드 합니다. 이전에 종속성을 설정 했거나 다른 개발자가 종속성을 설정한 프로젝트를 사용 하는 경우 다음과 같이 종속성을 로컬로 해결 하 고 설치할 수 있습니다.
+이렇게 하면 `WindowsAzure.Storage` 현재 디렉터리에 있는 프로젝트에 대 한 패키지 종속성 집합에 추가 되 `paket.dependencies` 고, 파일을 수정 하 고, 패키지를 다운로드 합니다. 이전에 종속성을 설정 했거나 다른 개발자가 종속성을 설정한 프로젝트를 사용 하는 경우 다음과 같이 종속성을 로컬로 해결 하 고 설치할 수 있습니다.
 
 ```console
 > paket install
@@ -54,7 +55,7 @@ ms.locfileid: "71214220"
 
 ## <a name="using-nuget"></a>Nuget 사용
 
-[NuGet](https://www.nuget.org/) 을 종속성 관리자로 사용 하는 `nuget.exe` 경우 도구를 사용 하 여 Azure 종속성을 추가할 수 있습니다. 예:
+[NuGet](https://www.nuget.org/) 을 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `nuget.exe` Azure 종속성을 추가할 수 있습니다. 다음은 그 예입니다.
 
 ```console
 > nuget install WindowsAzure.Storage -ExcludeVersion
@@ -66,7 +67,7 @@ ms.locfileid: "71214220"
 > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 ```
 
-이렇게 하면 현재 `WindowsAzure.Storage` 디렉터리에 있는 프로젝트에 대 한 패키지 종속성 집합에 추가 되 고 패키지가 다운로드 됩니다. 이전에 종속성을 설정 했거나 다른 개발자가 종속성을 설정한 프로젝트를 사용 하는 경우 다음과 같이 종속성을 로컬로 해결 하 고 설치할 수 있습니다.
+이렇게 하면 `WindowsAzure.Storage` 현재 디렉터리에 있는 프로젝트에 대 한 패키지 종속성 집합에 추가 되 고 패키지가 다운로드 됩니다. 이전에 종속성을 설정 했거나 다른 개발자가 종속성을 설정한 프로젝트를 사용 하는 경우 다음과 같이 종속성을 로컬로 해결 하 고 설치할 수 있습니다.
 
 ```console
 > nuget restore
@@ -92,7 +93,7 @@ ms.locfileid: "71214220"
 
 ## <a name="referencing-assemblies"></a>어셈블리 참조
 
-F# 스크립트에서 패키지를 사용 하려면 지시문을 `#r` 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야 합니다. 예:
+F # 스크립트에서 패키지를 사용 하려면 지시문을 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야 합니다 `#r` . 다음은 그 예입니다.
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403189"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097958"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 제한 사항
+
 이전 버전의에서는 변수 이름 길이, 모듈에서 허용 되는 변수 수 및 모듈 크기와 같이 코드에서 경계를 적용 Visual Basic. Visual Basic .NET에서는 이러한 제한이 완화 되어 코드를 작성 하 고 정렬 하는 데 더 많은 자유를 제공 합니다.  
   
  실제 제한은 컴파일 시간 고려 사항 보다 런타임 메모리에 따라 달라 집니다. 신중한 프로그래밍 관행을 사용 하 고 큰 응용 프로그램을 여러 클래스 및 모듈로 나누는 경우 내부 Visual Basic 제한이 발생할 가능성이 거의 없습니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "84403189"
   
 - **환경 문자열 길이입니다.** 명령줄 인수로 사용 되는 환경 문자열에는 최대 32768 자까지 사용할 수 있습니다. 이는 모든 플랫폼에 대 한 제한 사항입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
 - [Visual Basic 명명 규칙](naming-conventions.md)

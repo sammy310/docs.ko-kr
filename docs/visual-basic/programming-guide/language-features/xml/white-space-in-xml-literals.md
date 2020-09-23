@@ -5,17 +5,19 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: b3caf7ac052f3fed3fe5427da0cc96bbdd955ea6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5db8f92117e77d96eab34f28758546393e2afca0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360477"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91099101"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 리터럴의 공백(Visual Basic)
+
 Visual Basic 컴파일러는 개체를 만들 때 XML 리터럴의 유효 공백 문자만을 포함 합니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . 무효 공백 문자는 통합 되지 않습니다.  
   
 ## <a name="significant-and-insignificant-white-space"></a>중요 및 무효 공백  
+
  XML 리터럴의 공백 문자는 다음 세 가지 영역 에서만 의미가 있습니다.  
   
 - 특성 값에 있는 경우  
@@ -32,6 +34,7 @@ Visual Basic 컴파일러는 개체를 만들 때 XML 리터럴의 유효 공백
 > `xml:space`특성이 XML 요소 리터럴에 표시 되는 경우 Visual Basic 컴파일러는 개체에 특성을 포함 <xref:System.Xml.Linq.XElement> 하지만이 특성을 추가 해도 컴파일러에서 공백을 처리 하는 방법은 변경 되지 않습니다.  
   
 ## <a name="examples"></a>예제  
+
  다음 예제에는 외부 및 내부 라는 두 개의 XML 요소가 포함 되어 있습니다. 두 요소 모두 텍스트 내용에 공백을 포함 합니다. 외부 요소의 공백은 공백과 XML 요소만 포함 하기 때문에 중요 하지 않습니다. 내부 요소의 공백은 공백과 텍스트를 포함 하기 때문에 중요 합니다.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
@@ -46,6 +49,6 @@ Visual Basic 컴파일러는 개체를 만들 때 XML 리터럴의 유효 공백
 </outer>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic에서 XML 만들기](creating-xml.md)

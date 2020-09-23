@@ -5,14 +5,15 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: c3eb1eb57b3d76e762ed53edb3b168ad96abec39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403267"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098971"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic의 조건부 컴파일
+
 *조건부 컴파일에서*프로그램의 특정 코드 블록은 선택적으로 컴파일되고 다른 항목은 무시 됩니다.  
   
  예를 들어 서로 다른 방법의 속도와 동일한 프로그래밍 작업을 비교 하는 디버깅 문을 작성 하거나 응용 프로그램에서 여러 언어를 지역화할 수 있습니다. 조건부 컴파일 문은 런타임에 실행 되지 않고 컴파일 시간에 실행 되도록 설계 되었습니다.  
@@ -27,6 +28,7 @@ ms.locfileid: "84403267"
 > 코드를 편집 하 고 코드를 현재 분기에 포함 하지 않는 경우 조건부 컴파일 지시문을 사용 하면 자동 완성이 작동 하지 않습니다.  
   
 ## <a name="declaring-conditional-compilation-constants"></a>조건부 컴파일 상수 선언  
+
  다음 세 가지 방법 중 하나로 조건부 컴파일 상수를 설정할 수 있습니다.  
   
 - **프로젝트 디자이너** 에서  
@@ -40,8 +42,8 @@ ms.locfileid: "84403267"
 |상수 설정 방법|상수 범위|  
 |---|---|  
 |**프로젝트 디자이너**|프로젝트의 모든 파일에 공개|  
-|명령 줄|명령줄 컴파일러에 전달 된 모든 파일에 공용|  
-|`#Const`코드의 문|선언 된 파일 전용|  
+|명령줄|명령줄 컴파일러에 전달 된 모든 파일에 공용|  
+|`#Const` 코드의 문|선언 된 파일 전용|  
   
 |프로젝트 디자이너에서 상수를 설정 하려면|  
 |---|  
@@ -57,11 +59,12 @@ ms.locfileid: "84403267"
   
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|Description|  
+|제목|설명|  
 |---|---|  
 |[프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)|코드를 쉽게 읽고 유지 관리할 수 있는 제안 사항을 제공 합니다.|  
   
 ## <a name="reference"></a>참조  
+
  [#Const 지시문](../../language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else 지시문](../../language-reference/directives/if-then-else-directives.md)  
