@@ -3,14 +3,15 @@ title: LINQ to SQL
 description: LINQ to SQL은 관계형 데이터를 개체로 관리 하기 위한 런타임 인프라를 제공 하는 .NET Framework 구성 요소입니다.
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: d6fadecf17cae21527cec2180b6d6c5b5e85d0cc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 961e0713de714d0e75417f93e84e0ab748fd9a42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158320"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 는 관계형 데이터를 개체로 관리 하는 데 필요한 런타임 인프라를 제공 하는 .NET Framework 버전 3.5의 구성 요소입니다.  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "90551316"
  이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 릴리스에 포함된 설명서에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 애플리케이션을 빌드하는 데 필요한 기본 빌드 블록, 프로세스 및 기술에 대해 설명합니다. 또한 특정 문제에 대 한 Microsoft Docs 검색할 수 있으며, 전문가와 함께 보다 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)에 참여할 수 있습니다. 마지막으로 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) 백서 정보 기술에 대 한 자세한 내용은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic 및 c # 코드 예제를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [시작](getting-started.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 방법에 대한 정보와 함께 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 대한 간략한 개요를 제공합니다.  
   
@@ -35,7 +37,8 @@ ms.locfileid: "90551316"
  [샘플](samples.md)  
  Visual Basic 및 c # 샘플에 대 한 링크를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [LINQ (통합 언어 쿼리)-C #](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  C #의 LINQ 기술에 대 한 개요를 제공 합니다.
 

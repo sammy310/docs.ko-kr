@@ -6,20 +6,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914890"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158086"
 ---
 # <a name="grpc"></a>gRPC
 
-지금까지이 책에서는 [REST 기반](https://docs.microsoft.com/azure/architecture/best-practices/api-design) 통신에 초점을 두었습니다. REST는 엔터티 리소스에 대해 CRUD 기반 작업을 정의 하는 유연한 아키텍처 스타일입니다. 클라이언트는 요청/응답 통신 모델을 사용 하 여 HTTP에서 리소스와 상호 작용 합니다. REST는 널리 구현 되는 반면, 최신 통신 기술인 gRPC는 클라우드 네이티브 커뮤니티에서 엄청난 모멘텀를 얻었습니다.
+지금까지이 책에서는 [REST 기반](/azure/architecture/best-practices/api-design) 통신에 초점을 두었습니다. REST는 엔터티 리소스에 대해 CRUD 기반 작업을 정의 하는 유연한 아키텍처 스타일입니다. 클라이언트는 요청/응답 통신 모델을 사용 하 여 HTTP에서 리소스와 상호 작용 합니다. REST는 널리 구현 되는 반면, 최신 통신 기술인 gRPC는 클라우드 네이티브 커뮤니티에서 엄청난 모멘텀를 얻었습니다.
 
 ## <a name="what-is-grpc"></a>GRPC 란?
 
-gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call) 프로토콜을 진화 하는 현대적인 고성능 프레임 워크입니다. 응용 프로그램 수준에서 gRPC는 클라이언트와 백 엔드 서비스 간의 메시징을 간소화 합니다. Google에서 시작 하 여 gRPC는 오픈 소스 이며 클라우드 기본 제공의 [CNCF (Cloud Native 컴퓨팅 Foundation)](https://www.cncf.io/) 에코 시스템의 일부입니다. CNCF는 gRPC에 [incubating 프로젝트](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)를 고려 합니다. Incubating은 최종 사용자가 프로덕션 응용 프로그램의 기술을 사용 하 고 있고 프로젝트에 참가자 수가 정상 임을 의미 합니다.
+gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call) 프로토콜을 진화 하는 현대적인 고성능 프레임 워크입니다. 응용 프로그램 수준에서 gRPC는 클라이언트와 백 엔드 서비스 간의 메시징을 간소화 합니다. Google에서 시작 하 여 gRPC는 오픈 소스 이며 클라우드 기본 제공의  [CNCF (Cloud Native 컴퓨팅 Foundation)](https://www.cncf.io/) 에코 시스템의 일부입니다. CNCF는 gRPC에 [incubating 프로젝트](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)를 고려 합니다. Incubating은 최종 사용자가 프로덕션 응용 프로그램의 기술을 사용 하 고 있고 프로젝트에 참가자 수가 정상 임을 의미 합니다.
 
 일반적인 gRPC 클라이언트 앱은 비즈니스 작업을 구현 하는 로컬 in-process 함수를 노출 합니다. 내부적으로 해당 로컬 함수는 원격 컴퓨터에서 다른 함수를 호출 합니다. 로컬 호출로 표시 되는 것은 기본적으로 원격 서비스에 대 한 out-of-process 호출로 인해 수행 됩니다. RPC는 지점 간 네트워킹 통신, serialization 및 컴퓨터 간의 실행을 추상화 합니다.
 
@@ -37,7 +37,7 @@ gRPC는 해당 전송 프로토콜에 대해 HTTP/2를 사용 합니다. Http/2�
 - 대량 데이터 집합을 비동기적으로 스트림 하는 요청 및 응답을 설정 하는 기본 제공 스트리밍입니다.
 - 네트워크 사용량을 줄이는 헤더 압축입니다.
 
-gRPC는 간단 하 고 성능이 높습니다. 메시지 60-80% 더 작게 JSON serialization 보다 최대 8 배 더 빠를 수 있습니다. Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) 용어에서 grpc 성능은 매우 최적화 된 [nettcp 바인딩의](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)속도와 효율성을 초과 합니다. Microsoft stack을 중심으로 하는 NetTCP와는 달리 gRPC는 플랫폼 간입니다.
+gRPC는 간단 하 고 성능이 높습니다. 메시지 60-80% 더 작게 JSON serialization 보다 최대 8 배 더 빠를 수 있습니다. Microsoft [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) 용어에서 grpc 성능은 매우 최적화 된 [nettcp 바인딩의](/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)속도와 효율성을 초과 합니다. Microsoft stack을 중심으로 하는 NetTCP와는 달리 gRPC는 플랫폼 간입니다.
 
 ## <a name="protocol-buffers"></a>프로토콜 버퍼
 
@@ -51,7 +51,7 @@ Protobuf 컴파일러 인 프로토콜 파일을 사용 하 여 `protoc` 대상 
 
 런타임에 각 메시지는 표준 Protobuf 표현으로 직렬화 되 고 클라이언트와 원격 서비스 간에 교환 됩니다. JSON 또는 XML과 달리 Protobuf 메시지는 컴파일된 이진 바이트로 serialize 됩니다.
 
-Microsoft 아키텍처 사이트에서 사용할 수 있는 [WCF 개발자를 위한 Grpc](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)는 grpc와 프로토콜 버퍼에 대 한 심층적인 검사를 제공 합니다.
+Microsoft 아키텍처 사이트에서 사용할 수 있는 [WCF 개발자를 위한 Grpc](../grpc-for-wcf-developers/index.md)는 grpc와 프로토콜 버퍼에 대 한 심층적인 검사를 제공 합니다.
 
 ## <a name="grpc-support-in-net"></a>.NET의 gRPC 지원
 
@@ -99,7 +99,7 @@ Microsoft의 마이크로 서비스 참조 아키텍처 인 [컨테이너의 eSh
 
 **그림 4-22**. 컨테이너의 eShop 백 엔드 아키텍처
 
-위의 그림에서 eShop 여러 API 게이트웨이를 노출 하 여 bff ( [프런트 엔드 패턴](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) )를 수용 하는 방법을 확인 합니다. 이 챕터의 앞부분에서 BFF 패턴에 대해 설명 했습니다. 웹 쇼핑 API 게이트웨이와 백 엔드 쇼핑 마이크로 서비스 사이에 있는 집계 마이크로 서비스 (회색)에 주의 하세요. 집계는 클라이언트에서 단일 요청을 수신 하 고, 다양 한 마이크로 서비스에 디스패치 하 고, 결과를 집계 하 고, 요청 클라이언트로 다시 보냅니다. 이러한 작업에는 일반적으로 즉각적인 응답을 생성 하기 위해 동기식 통신이 필요 합니다. EShop에서 집계의 백 엔드 호출은 그림 4-23에 표시 된 것 처럼 gRPC를 사용 하 여 수행 됩니다.
+위의 그림에서 eShop 여러 API 게이트웨이를 노출 하 여 bff ( [프런트 엔드 패턴](/azure/architecture/patterns/backends-for-frontends) )를 수용 하는 방법을 확인 합니다. 이 챕터의 앞부분에서 BFF 패턴에 대해 설명 했습니다. 웹 쇼핑 API 게이트웨이와 백 엔드 쇼핑 마이크로 서비스 사이에 있는 집계 마이크로 서비스 (회색)에 주의 하세요. 집계는 클라이언트에서 단일 요청을 수신 하 고, 다양 한 마이크로 서비스에 디스패치 하 고, 결과를 집계 하 고, 요청 클라이언트로 다시 보냅니다. 이러한 작업에는 일반적으로 즉각적인 응답을 생성 하기 위해 동기식 통신이 필요 합니다. EShop에서 집계의 백 엔드 호출은 그림 4-23에 표시 된 것 처럼 gRPC를 사용 하 여 수행 됩니다.
 
 ![컨테이너의 eShop의 gRPC](./media/grpc-implementation.png)
 

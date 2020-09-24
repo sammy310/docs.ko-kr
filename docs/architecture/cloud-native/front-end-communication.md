@@ -3,18 +3,18 @@ title: 프런트 엔드 클라이언트 통신
 description: 프런트 엔드 클라이언트가 클라우드 네이티브 시스템과 통신 하는 방법 알아보기
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614060"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158112"
 ---
 # <a name="front-end-client-communication"></a>프런트 엔드 클라이언트 통신
 
 클라우드 네이티브 시스템에서 프런트 엔드 클라이언트 (모바일, 웹 및 데스크톱 응용 프로그램)는 독립적인 백 엔드 마이크로 서비스와 상호 작용 하기 위해 통신 채널이 필요 합니다.  
 
-옵션은 무엇 인가요?
+그 옵션은 무엇입니까?
 
 간단히 하기 위해 프런트 엔드 클라이언트는 그림 4-2에 표시 된 백 엔드 마이크로 서비스와 *직접 통신할* 수 있습니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "83614060"
 
 게이트웨이는 내부 서비스 분할 및 리팩터링의 클라이언트를 분리 합니다. 백 엔드 서비스를 변경 하는 경우 클라이언트를 중단 하지 않고 게이트웨이에서 해당 서비스를 수용 합니다. 또한 id, 캐싱, 복원 력, 계량, 제한과 같은 교차 절삭 문제에 대 한 첫 번째 방어선입니다. 이러한 교차 잘라내기 문제는 대부분 백 엔드 핵심 서비스에서 게이트웨이로 오프 로드 되어 백 엔드 서비스를 간소화할 수 있습니다.
 
-API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의를 기울여야 합니다. 일반적으로 비즈니스 논리는 게이트웨이에서 유지 됩니다. 복잡 한 게이트웨이는 병목 상태가 되 고 궁극적으로는 모놀리식가 될 위험이 있습니다. 규모가 큰 시스템은 종종 클라이언트 유형 (모바일, 웹, 데스크톱) 또는 백 엔드 기능을 통해 분할 된 여러 API 게이트웨이를 노출 합니다. [백 엔드 For 프런트 엔드](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) 패턴은 여러 게이트웨이를 구현 하는 방향을 제공 합니다. 이 패턴은 그림 4-4에 나와 있습니다.
+API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의를 기울여야 합니다. 일반적으로 비즈니스 논리는 게이트웨이에서 유지 됩니다. 복잡 한 게이트웨이는 병목 상태가 되 고 궁극적으로는 모놀리식가 될 위험이 있습니다. 규모가 큰 시스템은 종종 클라이언트 유형 (모바일, 웹, 데스크톱) 또는 백 엔드 기능을 통해 분할 된 여러 API 게이트웨이를 노출 합니다. [백 엔드 For 프런트 엔드](/azure/architecture/patterns/backends-for-frontends) 패턴은 여러 게이트웨이를 구현 하는 방향을 제공 합니다. 이 패턴은 그림 4-4에 나와 있습니다.
 
 ![API 게이트웨이 패턴](./media/backend-for-frontend-pattern.png)
 
@@ -75,7 +75,7 @@ Ocelot는 NuGet 패키지로 사용할 수 있습니다. NET Standard 2.0를 대
 
 ## <a name="azure-application-gateway"></a>Azure Application Gateway
 
-간단한 게이트웨이 요구 사항에 대 한 [Azure 애플리케이션 게이트웨이](https://docs.microsoft.com/azure/application-gateway/overview)를 고려할 수 있습니다. Azure [PaaS 서비스로](https://azure.microsoft.com/overview/what-is-paas/)사용할 수 있으며 URL 라우팅, SSL 종료 및 웹 응용 프로그램 방화벽과 같은 기본 게이트웨이 기능을 포함 합니다. 이 서비스는 [계층 7 부하 분산](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) 기능을 지원 합니다. 계층 7을 사용 하면 하위 수준 TCP 네트워크 패킷 뿐만 아니라 HTTP 메시지의 실제 콘텐츠를 기반으로 요청을 라우팅할 수 있습니다.
+간단한 게이트웨이 요구 사항에 대 한 [Azure 애플리케이션 게이트웨이](/azure/application-gateway/overview)를 고려할 수 있습니다. Azure [PaaS 서비스로](https://azure.microsoft.com/overview/what-is-paas/)사용할 수 있으며 URL 라우팅, SSL 종료 및 웹 응용 프로그램 방화벽과 같은 기본 게이트웨이 기능을 포함 합니다. 이 서비스는 [계층 7 부하 분산](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) 기능을 지원 합니다. 계층 7을 사용 하면 하위 수준 TCP 네트워크 패킷 뿐만 아니라 HTTP 메시지의 실제 콘텐츠를 기반으로 요청을 라우팅할 수 있습니다.
 
 이 책 전체에서는 [Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html)에서 클라우드 네이티브 시스템을 전도 합니다. 컨테이너 오 케 스트레이 터 Kubernetes는 컨테이너 화 된 워크 로드의 배포, 크기 조정 및 운영 문제를 자동화 합니다. Azure 애플리케이션 게이트웨이는 [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) 클러스터에 대 한 API 게이트웨이로 구성할 수 있습니다.
 
@@ -99,7 +99,7 @@ Kubernetes에는 [수신](https://kubernetes.io/docs/concepts/services-networkin
 
 개발자를 위한 API Management 서비스, 설명서 및이를 호출 하는 샘플 코드에 대 한 액세스를 제공 하는 개발자 포털을 제공 합니다. 개발자는 Swagger/Open API를 사용 하 여 서비스 끝점을 검사 하 고 사용을 분석할 수 있습니다. 이 서비스는 .NET, Java, Golang 등의 주요 개발 플랫폼에서 작동 합니다.
 
-게시자 포털은 관리자가 Api를 노출 하 고 해당 동작을 관리 하는 관리 대시보드를 제공 합니다. 서비스 액세스를 부여 하 고, 서비스 상태를 모니터링 하 고, 수집 된 서비스 원격 분석을 수행할 수 있습니다. 관리자는 동작에 영향을 주기 위해 각 끝점에 *정책을* 적용 합니다. [정책은](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) 각 서비스 호출에 대해 순차적으로 실행 되는 미리 작성 된 문입니다.  정책은 인바운드 호출 또는 아웃 바운드 호출에 대해 구성 되거나 오류 발생 시 호출 됩니다. 정책을 조합할 때 결정적 정렬을 사용 하도록 설정 하기 위해 다른 서비스 범위에 정책을 적용할 수 있습니다. 제품은 미리 작성 된 많은 수의 [정책과](https://docs.microsoft.com/azure/api-management/api-management-policies)함께 제공 됩니다.
+게시자 포털은 관리자가 Api를 노출 하 고 해당 동작을 관리 하는 관리 대시보드를 제공 합니다. 서비스 액세스를 부여 하 고, 서비스 상태를 모니터링 하 고, 수집 된 서비스 원격 분석을 수행할 수 있습니다. 관리자는 동작에 영향을 주기 위해 각 끝점에 *정책을* 적용 합니다. [정책은](/azure/api-management/api-management-howto-policies) 각 서비스 호출에 대해 순차적으로 실행 되는 미리 작성 된 문입니다.  정책은 인바운드 호출 또는 아웃 바운드 호출에 대해 구성 되거나 오류 발생 시 호출 됩니다. 정책을 조합할 때 결정적 정렬을 사용 하도록 설정 하기 위해 다른 서비스 범위에 정책을 적용할 수 있습니다. 제품은 미리 작성 된 많은 수의 [정책과](/azure/api-management/api-management-policies)함께 제공 됩니다.
 
 정책에서 클라우드 네이티브 서비스의 동작에 영향을 주는 방법에 대 한 예는 다음과 같습니다.  
 
@@ -120,13 +120,13 @@ Azure API Management는 다음과 같은 [네 가지 계층](https://azure.micro
 - Standard
 - Premium
 
-개발자 계층은 비프로덕션 워크 로드 및 평가를 위한 것입니다. 다른 계층은 점차적으로 더 많은 기능을 제공 하 고 Sla (서비스 수준 계약)를 더 많이 제공 합니다. 프리미엄 계층은 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 및 [다중 지역 지원을](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)제공 합니다. 모든 계층에는 시간당 고정 가격이 있습니다.
+개발자 계층은 비프로덕션 워크 로드 및 평가를 위한 것입니다. 다른 계층은 점차적으로 더 많은 기능을 제공 하 고 Sla (서비스 수준 계약)를 더 많이 제공 합니다. 프리미엄 계층은 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) 및 [다중 지역 지원을](/azure/api-management/api-management-howto-deploy-multi-region)제공 합니다. 모든 계층에는 시간당 고정 가격이 있습니다.
 
 Azure 클라우드는 Azure API Management에 대 한 [서버 리스 계층](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) 도 제공 합니다. *소비 가격 책정 계층*이라고 하는 서비스는 서버 리스 컴퓨팅 모델을 중심으로 디자인 된 API Management의 변형입니다. 이전에 표시 된 "미리 할당 된" 가격 책정 계층과 달리 소비 계층은 즉각적인 프로 비전 및 작업별 요금 책정을 제공 합니다.
 
 다음 사용 사례에 대해 API 게이트웨이 기능을 사용 하도록 설정 합니다.
 
-- [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) 및 [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)와 같이 서버를 사용 하지 않는 기술을 사용 하 여 구현 된 마이크로 서비스입니다.
+- [Azure Functions](/azure/azure-functions/functions-overview) 및 [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)와 같이 서버를 사용 하지 않는 기술을 사용 하 여 구현 된 마이크로 서비스입니다.
 - Azure 지원 서비스 리소스 (예: 큐, 항목, Azure storage 및 기타)를 Service Bus 합니다.
 - 트래픽이 크게 급증 하지만 대부분의 시간을 유지 하는 마이크로 서비스
 

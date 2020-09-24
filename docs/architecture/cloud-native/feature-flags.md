@@ -3,12 +3,12 @@ title: 기능 플래그
 description: Azure 앱 구성을 활용 하는 클라우드 네이티브 응용 프로그램에서 기능 플래그 구현
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540467"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158099"
 ---
 # <a name="feature-flags"></a>기능 플래그
 
@@ -43,9 +43,9 @@ if (featureFlag) {
 
 1 장에서는에 대해 설명 했습니다 `Twelve-Factor App` . 응용 프로그램 실행 코드의 외부에서 구성 설정을 유지 하는 것이 좋습니다. 필요한 경우 외부 원본에서 설정을 읽을 수 있습니다. 기능 플래그 구성 값은 해당 코드 베이스와도 독립적 이어야 합니다. 별도의 리포지토리에서 플래그 구성을 구체화 응용 프로그램을 수정 하 고 다시 배포 하지 않고도 플래그 상태를 변경할 수 있습니다.
 
-[Azure 앱 구성은](https://docs.microsoft.com/azure/azure-app-configuration/overview) 기능 플래그에 대 한 중앙 집중식 리포지토리를 제공 합니다. 이를 통해 다양 한 종류의 기능 플래그를 정의 하 고 해당 상태를 빠르고 안전 하 게 조작할 수 있습니다. 앱 구성 클라이언트 라이브러리를 응용 프로그램에 추가 하 여 기능 플래그 기능을 사용 하도록 설정 합니다. 다양 한 프로그래밍 언어 프레임 워크가 지원 됩니다.
+[Azure 앱 구성은](/azure/azure-app-configuration/overview) 기능 플래그에 대 한 중앙 집중식 리포지토리를 제공 합니다. 이를 통해 다양 한 종류의 기능 플래그를 정의 하 고 해당 상태를 빠르고 안전 하 게 조작할 수 있습니다. 앱 구성 클라이언트 라이브러리를 응용 프로그램에 추가 하 여 기능 플래그 기능을 사용 하도록 설정 합니다. 다양 한 프로그래밍 언어 프레임 워크가 지원 됩니다.
 
-기능 플래그는 [ASP.NET Core 서비스](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)에서 쉽게 구현할 수 있습니다. .NET 기능 관리 라이브러리 및 앱 구성 공급자를 설치 하면 코드에 기능 플래그를 선언적으로 추가할 수 있습니다. 이러한 속성을 사용 하면 `FeatureGate` 코드 베이스 전체에서 if 문을 수동으로 작성할 필요가 없습니다.
+기능 플래그는 [ASP.NET Core 서비스](/azure/azure-app-configuration/use-feature-flags-dotnet-core)에서 쉽게 구현할 수 있습니다. .NET 기능 관리 라이브러리 및 앱 구성 공급자를 설치 하면 코드에 기능 플래그를 선언적으로 추가할 수 있습니다. 이러한 속성을 사용 하면 `FeatureGate` 코드 베이스 전체에서 if 문을 수동으로 작성할 필요가 없습니다.
 
 Startup 클래스에서 구성 된 후에는 컨트롤러, 작업 또는 미들웨어 수준에서 기능 플래그 기능을 추가할 수 있습니다. 그림 10-12은 컨트롤러 및 작업 구현을 제공 합니다.
 

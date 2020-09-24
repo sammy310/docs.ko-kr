@@ -5,14 +5,15 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541786"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158775"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 요소
+
 런타임에서 <xref:System.Security.Policy.Publisher> CAS (코드 액세스 보안)에 대 한 증명 정보를 만들지 여부를 지정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,27 +28,29 @@ ms.locfileid: "90541786"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 런타임에서 증명 정보를 만들지 여부를 지정 합니다 <xref:System.Security.Policy.Publisher> .|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Policy.Publisher>증명 정보를 만들지 않습니다.|  
 |`true`|<xref:System.Security.Policy.Publisher>증명 정보를 만듭니다. 이것이 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
@@ -63,9 +66,11 @@ ms.locfileid: "90541786"
 > 서비스에서 요소를 사용 하 여 `<generatePublisherEvidence>` 시작 성능을 향상 시키는 것이 좋습니다.  이 요소를 사용 하면 시간 초과 및 서비스 시작 취소가 발생할 수 있는 지연을 방지할 수도 있습니다.  
   
 ## <a name="configuration-file"></a>구성 파일  
+
  이 요소는 응용 프로그램 구성 파일에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 요소를 사용 하 여 `<generatePublisherEvidence>` 응용 프로그램에 대 한 CAS 게시자 정책 검사를 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -76,7 +81,7 @@ ms.locfileid: "90541786"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

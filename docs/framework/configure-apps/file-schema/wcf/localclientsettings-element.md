@@ -2,14 +2,15 @@
 title: <localClientSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19eaea71fdaad1b945524cca5cf15634e0b0fa14
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400317"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158736"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings> 요소
+
 이 바인딩에 대한 로컬 클라이언트의 보안 설정을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,11 +40,12 @@ ms.locfileid: "70400317"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`cacheCookies`|쿠키 캐싱 활성화 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|  
 |`cookieRenewalThresholdPercentage`|갱신할 수 있는 최대 쿠키 백분율을 지정하는 정수입니다. 이 값은 0 이상 100 이하여야 합니다. 기본값은 90입니다.|  
@@ -58,16 +60,18 @@ ms.locfileid: "70400317"
 |`timestampValidityDuration`|타임스탬프의 유효 기간을 지정하는 <xref:System.TimeSpan>(양수)입니다. 기본값은 "00:15:00"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 설정은 서비스의 보안 정책에서 파생되는 설정이 아니므로 로컬 설정에 속합니다.  
   
 ## <a name="see-also"></a>참고 항목
@@ -77,9 +81,9 @@ ms.locfileid: "70400317"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

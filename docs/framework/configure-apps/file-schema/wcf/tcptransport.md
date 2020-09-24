@@ -2,14 +2,15 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 987dcad5e239b35f5ff367ab668d40526593f970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556462"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158671"
 ---
 # \<tcpTransport>
+
 사용자 지정 바인딩에 대한 메시지를 전송하기 위해 채널이 사용할 수 있는 TCP 전송을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -44,11 +45,12 @@ ms.locfileid: "90556462"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |channelInitializationTimeout|수락할 채널을 초기화하기 위한 시간 제한을 가져오거나 설정합니다.  연결이 끊어지기 전에 채널이 초기화 상태를 유지할 수 있는 최대 시간(초)입니다. 이 할당량에는 TCP 연결이 .NET 메시지 프레이밍 프로토콜을 사용 하 여 자신을 인증 하는 데 사용할 수 있는 시간이 포함 됩니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 기본값은 30초입니다.|  
 |connectionBufferSize|통신 중에 클라이언트나 서비스로부터 serialize된 메시지 청크를 전송할 때 사용되는 버퍼의 크기를 가져오거나 설정합니다.|  
@@ -67,20 +69,22 @@ ms.locfileid: "90556462"
 |connectionPoolSettings|명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 전송은 "net.tcp://hostname:port/path" 형식의 URI를 사용합니다. 다른 URI 구성 요소는 선택적입니다.  
   
  `tcpTransport` 요소는 TCP 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다. 이 전송은 WCF와 WCF 사이의 통신을 위해 최적화됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
@@ -88,7 +92,7 @@ ms.locfileid: "90556462"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

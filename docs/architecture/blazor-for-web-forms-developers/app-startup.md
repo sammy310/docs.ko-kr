@@ -4,12 +4,12 @@ description: 앱에 대 한 시작 논리를 정의 하는 방법을 알아봅�
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267700"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158190"
 ---
 # <a name="app-startup"></a>앱 시작
 
@@ -79,7 +79,7 @@ public class Startup
 
 ASP.NET Core의 나머지와 마찬가지로 Startup 클래스는 종속성 주입 원칙을 사용 하 여 생성 됩니다.  는 `IConfiguration` 구성 중에 나중에 액세스할 수 있도록 공용 속성에서 생성자 및 스 태 시에 제공 됩니다.
 
-`ConfigureServices`ASP.NET Core에 도입 된 메서드를 사용 하면 프레임 워크의 기본 제공 종속성 주입 컨테이너에 대해 다양 한 ASP.NET Core framework 서비스를 구성할 수 있습니다.  다양 한 `services.Add*` 방법으로 인증, razor 페이지, MVC 컨트롤러 라우팅, SignalR 및 Blazor 서버 상호 작용과 같은 기능을 사용할 수 있는 서비스를 추가할 수 있습니다.  이 메서드는 ASPX, ASCX, .ASHX 및 ASMX 파일의 구문 분석과 처리가 web.config 구성 파일에서 ASP.NET를 참조 하 여 정의 되었으므로 web forms에서 필요 하지 않았습니다.  ASP.NET Core의 종속성 주입에 대 한 자세한 내용은 [온라인 설명서](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)에서 확인할 수 있습니다.
+`ConfigureServices`ASP.NET Core에 도입 된 메서드를 사용 하면 프레임 워크의 기본 제공 종속성 주입 컨테이너에 대해 다양 한 ASP.NET Core framework 서비스를 구성할 수 있습니다.  다양 한 `services.Add*` 방법으로 인증, razor 페이지, MVC 컨트롤러 라우팅, SignalR 및 Blazor 서버 상호 작용과 같은 기능을 사용할 수 있는 서비스를 추가할 수 있습니다.  이 메서드는 ASPX, ASCX, .ASHX 및 ASMX 파일의 구문 분석과 처리가 web.config 구성 파일에서 ASP.NET를 참조 하 여 정의 되었으므로 web forms에서 필요 하지 않았습니다.  ASP.NET Core의 종속성 주입에 대 한 자세한 내용은 [온라인 설명서](/aspnet/core/fundamentals/dependency-injection)에서 확인할 수 있습니다.
 
 `Configure`메서드는 ASP.NET Core 하는 HTTP 파이프라인의 개념을 소개 합니다.  이 메서드에서는 응용 프로그램에 전송 된 모든 요청을 처리 하는 [미들웨어](middleware.md) 를 위쪽에서 아래쪽으로 선언 합니다. 기본 구성의 이러한 기능 중 대부분은 web forms 구성 파일에 흩어져 있으며 이제는 쉽게 참조할 수 있도록 한 곳에 있습니다.
 
@@ -103,7 +103,7 @@ Grunt, Gulp 및 WebPack 명령줄 도구와 연결 된 구성은 응용 프로�
 </Target>
 ```
 
-CSS 및 JavaScript 파일을 관리 하기 위한 두 전략에 대 한 자세한 내용은 [ASP.NET Core 설명서의 번들 및 미니 고 정적 자산](https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification) 에서 제공 됩니다.
+CSS 및 JavaScript 파일을 관리 하기 위한 두 전략에 대 한 자세한 내용은 [ASP.NET Core 설명서의 번들 및 미니 고 정적 자산](/aspnet/core/client-side/bundling-and-minification) 에서 제공 됩니다.
 
 >[!div class="step-by-step"]
 >[이전](project-structure.md)

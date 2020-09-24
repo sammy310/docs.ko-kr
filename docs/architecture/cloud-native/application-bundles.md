@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 애플리케이션 번들
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 응용 프로그램 번들
 ms.date: 05/13/2020
-ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7f1fcd448f3299a31043bf269717f7b777329c62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614346"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158125"
 ---
 # <a name="cloud-native-application-bundles"></a>클라우드 네이티브 애플리케이션 번들
 
@@ -81,9 +81,9 @@ CNAB 형식만 유연 하 여 모든 클라우드에 사용할 수 있습니다.
 ## <a name="references"></a>참조
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
-- [Azure 리소스 관리자](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Azure Resource Manager](/azure/azure-resource-manager/management/overview)
 - [Terraform](https://www.terraform.io/)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/)
+- [Azure CLI](/cli/azure/)
 
 >[!div class="step-by-step"]
 >[이전](infrastructure-as-code.md)

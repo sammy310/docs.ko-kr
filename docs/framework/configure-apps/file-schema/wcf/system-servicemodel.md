@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 44966ed9ee3abb3d1babdf09dd44f087376ada55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243960"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158684"
 ---
 # \<system.serviceModel>
+
 이 구성 섹션에는 WCF (Windows Communication Foundation) ServiceModel 구성 요소가 모두 포함 되어 있습니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -56,14 +57,16 @@ ms.locfileid: "85243960"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|이 섹션은 두 자식 컬렉션 `endpointBehaviors` 및 `serviceBehaviors`를 정의합니다.  각 컬렉션은 엔드포인트 및 서비스가 사용하는 동작 요소를 각각 정의합니다. 각 동작 요소는 고유한 `name` 특성으로 식별됩니다.|  
 |[\<bindings>](bindings.md)|이 섹션에는 표준 및 사용자 지정 바인딩 컬렉션이 포함됩니다. 각 항목은 고유한 `name`으로 식별됩니다. 서비스에서는 `name`을 통해 바인딩을 연결하여 바인딩을 사용합니다.|  
@@ -81,11 +84,12 @@ ms.locfileid: "85243960"
 
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |\<configuration>|.NET 구성 파일에 있는 모든 구성 요소의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  WCF는 다른 제품의 구성 섹션에 요소를 추가 하지 않습니다.  
   
  WCF 서비스는 `services` 구성 파일의 섹션에 정의 되어 있습니다. 어셈블리에는 여러 개의 서비스가 포함될 수 있습니다. 서비스별로 해당 `service` 구성 섹션이 있습니다. 해당 단원 및 내용에서는 특정 서비스의 서비스 계약, 동작 및 엔드포인트를 정의합니다.  
@@ -99,6 +103,7 @@ ms.locfileid: "85243960"
  바인딩은 `name` 및 `bindingConfiguration` 특성을 조합하여 엔드포인트에 연결됩니다. `binding` 특성은 바인딩이 정의된 섹션을 정의합니다. `bindingConfiguration` 특성은 바인딩 섹션에서 사용되는 구성된 바인딩을 정의합니다. 바인딩 섹션에서는 여러 개의 구성된 바인딩을 정의할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 WCF 구성 파일의 예제입니다.  
   
 ```xml  
