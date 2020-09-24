@@ -2,14 +2,15 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 4eb79cc91ef489501c4c8bb6311f240d855ed053
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8236e581ee754a39ae32fa97084b8e2bfbaee652
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399630"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153874"
 ---
 # \<serviceDebug>
+
 WCF (Windows Communication Foundation) 서비스에 대 한 디버깅 및 도움말 정보 기능을 지정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,11 +35,12 @@ WCF (Windows Communication Foundation) 서비스에 대 한 디버깅 및 도움
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |httpHelpPageBinding|HTTP를 사용하여 서비스 도움말 페이지에 액세스할 때 사용할 바인딩 형식을 지정하는 문자열 값입니다.<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>을 지원하는 내부 바인딩 요소가 있는 바인딩만 지원됩니다. 또한 바인딩의 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>이어야 합니다.|  
 |httpHelpPageBindingConfiguration|이 바인딩의 추가 구성 정보를 참조하는 `httpHelpPageBinding` 특성에 지정된 바인딩의 이름을 지정하는 문자열입니다. 이와 동일한 이름이 `<bindings>` 섹션에서 정의되어야 합니다.|  
@@ -51,15 +53,17 @@ WCF (Windows Communication Foundation) 서비스에 대 한 디버깅 및 도움
 |includeExceptionDetailInFaults|디버깅 목적으로 클라이언트에 반환되는 SOAP 오류의 세부 정보에 관리되는 예외 정보를 포함할지 여부를 지정하는 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성을 `true`로 설정한 경우 관리되는 예외 정보가 디버깅을 위해 클라이언트로 전달되게 하고, 웹 브라우저에서 서비스를 검색하는 사용자를 위해 HTML 정보 파일을 게시할 수 있습니다. **주의:**  관리 되는 예외 정보를 클라이언트에 반환 하면 보안상 위험할 수 있습니다. 예외 정보가 내부 서비스 구현 정보를 공개하여 권한 없는 클라이언트에서 이를 사용할 수 있기 때문입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  로 설정 하면 `includeExceptionDetailInFaults` `true` 서비스가를 사용 하 여 선언 되지 않은 경우에도 응용 프로그램 코드에 의해 throw 되는 모든 예외가 반환 됩니다 <xref:System.ServiceModel.FaultContractAttribute> . 이 설정은 서버가 예기치 않은 예외를 throw하는 경우를 디버깅할 때 유용합니다. 이 특성을 사용하면 알 수 없는 예외가 serialize된 형태로 반환되어 예외를 보다 자세하게 검토할 수 있습니다.  
   
 > [!CAUTION]

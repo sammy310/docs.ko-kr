@@ -2,14 +2,15 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: c421273d1d08db047a51f1f1e4f9d6c908f12986
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2236361316254d065abd1fb62fd2e509be289a4c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84201778"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153861"
 ---
 # \<serviceMetadata>
+
 서비스 메타데이터 및 관련 정보의 게시를 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ ms.locfileid: "84201778"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |externalMetadataLocation|자동 생성된 WSDL 대신 WSDL 및 MEX 요청에 대한 응답으로 사용자에게 반환되는 WSDL 파일의 위치가 포함되는 URI입니다. 이 특성을 설정하지 않으면 기본 WSDL이 반환됩니다. 기본값은 빈 문자열입니다.|  
 |httpGetBinding|HTTP GET을 통해 메타데이터 검색에 사용할 바인딩 형식을 지정하는 문자열입니다. 이 설정은 선택 사항입니다. 이 설정을 지정하지 않으면 기본 바인딩이 사용됩니다.<br /><br /> <xref:System.ServiceModel.Channels.IReplyChannel>을 지원하는 내부 바인딩 요소가 있는 바인딩만 지원됩니다. 또한 바인딩의 <xref:System.ServiceModel.Channels.MessageVersion> 속성은 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>이어야 합니다.|  
@@ -53,15 +55,17 @@ ms.locfileid: "84201778"
 |policyVersion|사용 중인 WS-Policy 사양의 버전을 지정하는 문자열입니다. 이 특성은 <xref:System.ServiceModel.Description.PolicyVersion> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 구성 요소를 사용하면 서비스의 메타데이터 게시 기능을 제어할 수 있습니다. 잠재적으로 중요 한 서비스 메타 데이터가 실수로 공개 되지 않도록 하기 위해 WCF (Windows Communication Foundation) 서비스의 기본 구성에서는 메타 데이터 게시를 사용 하지 않도록 설정 합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다. 이 구성 요소를 사용하면 서비스에 대해 이 게시 동작을 사용하도록 설정할 수 있습니다.  
   
  이 동작을 구성 하는 자세한 예제는 [메타 데이터 게시 동작](../../../wcf/samples/metadata-publishing-behavior.md)을 참조 하세요.  
@@ -82,6 +86,7 @@ ms.locfileid: "84201778"
 ```  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 요소를 사용 하 여 메타 데이터를 노출 하도록 서비스를 구성 합니다 \<serviceMetadata> . 또한 `IMetadataExchange` 계약을 WS-MetadataExchange(MEX) 프로토콜의 구현으로 노출하도록 엔드포인트를 구성합니다. 예제에서는 `mexHttpBinding`에 해당하는 편의 표준 바인딩인 `wsHttpBinding`을 `None`으로 설정된 보안 모드와 함께 사용합니다. "Mex"의 상대 주소는 끝점에서 사용 됩니다 .이 주소는 서비스 기본 주소에 대해 확인 되 면의 끝점 주소를 반환 합니다 `http://localhost/servicemodelsamples/service.svc/mex` .  
   
 ```xml  

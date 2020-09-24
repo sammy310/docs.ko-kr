@@ -2,14 +2,15 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: e6524c18780c062c3b5b7dfc2509449cb208e270
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0e4cbc50c25d4fa1f67f283f2b52d4b174428cd3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400441"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153926"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
+
 <xref:System.Runtime.Serialization.DataContractSerializer>에 대한 구성 데이터를 포함합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,25 +28,28 @@ ms.locfileid: "70400441"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|엔드포인트가 직렬화되거나 역직렬화될 때 해당 엔드포인트에서 제공하는 데이터를 무시할지 여부를 지정하는 부울 값입니다.|  
 |maxItemsInObjectGraph|직렬화 또는 역직렬화할 항목의 최대 수를 지정하는 정수입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  알려진 형식에 대한 자세한 내용은 <xref:System.Runtime.Serialization.DataContractSerializer> 설명서를 참조하세요.  
   
 > [!CAUTION]

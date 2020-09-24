@@ -2,24 +2,25 @@
 title: 데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 8bcf705ce4415929e685be79f813846bbb40bb36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150846"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153237"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
-XML 스키마 정의 언어(XSD) 스키마에서 **고유** 요소는 요소 또는 특성에 대한 고유 성 제약 조건을 지정합니다. XML 스키마를 관계형 스키마로 변환하는 과정에서, XML 스키마의 요소나 특성에 지정된 UNIQUE 제약 조건은 생성된 해당 <xref:System.Data.DataTable>에 있는 <xref:System.Data.DataSet>의 UNIQUE 제약 조건에 매핑됩니다.  
+
+XSD (XML 스키마 정의 언어) 스키마에서 **unique** 요소는 요소나 특성에 대 한 고유성 제약 조건을 지정 합니다. XML 스키마를 관계형 스키마로 변환하는 과정에서, XML 스키마의 요소나 특성에 지정된 UNIQUE 제약 조건은 생성된 해당 <xref:System.Data.DataTable>에 있는 <xref:System.Data.DataSet>의 UNIQUE 제약 조건에 매핑됩니다.  
   
- 다음 표에서는 **고유한** 요소에서 지정할 수 있는 **msdata** 특성을 간략하게 설명합니다.  
+ 다음 표에서는 **unique** 요소에 지정할 수 있는 **msdata** 특성을 간략하게 설명 합니다.  
   
-|특성 이름|Description|  
+|특성 이름|설명|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않으면 **name** 특성은 제약 조건 이름의 값을 제공합니다.|  
-|**msdata:PrimaryKey**|고유 `PrimaryKey="true"` 요소에 있는 **unique** 경우 **IsPrimaryKey** 속성을 **true로**설정한 고유한 제약 조건이 만들어집니다.|  
+|**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않으면 **name** 특성은 제약 조건 이름의 값을 제공 합니다.|  
+|**msdata:PrimaryKey**|`PrimaryKey="true"`가 **unique** 요소에 있는 경우 **IsPrimaryKey** 속성을 **true**로 설정 하 여 unique 제약 조건이 생성 됩니다.|  
   
- 다음 예제에서는 **고유** 요소를 사용하여 고유 제약 조건을 지정하는 XML 스키마를 보여 주습니다.  
+ 다음 예에서는 **unique** 요소를 사용 하 여 고유성 제약 조건을 지정 하는 XML 스키마를 보여 줍니다.  
   
 ```xml  
 <xs:schema id="SampleDataSet"
@@ -48,13 +49,13 @@ XML 스키마 정의 언어(XSD) 스키마에서 **고유** 요소는 요소 또
 </xs:schema>  
 ```  
   
- 스키마의 **고유한** 요소는 문서 인스턴스의 모든 **Customer** 요소에 대해 **CustomerID** 자식 요소의 값이 고유해야 함을 지정합니다. **DataSet을**빌드할 때 매핑 프로세스는 이 스키마를 읽고 다음 테이블을 생성합니다.  
+ 스키마의 **unique** 요소는 문서 인스턴스의 모든 **Customers** 요소에 대해 **CustomerID** 자식 요소의 값이 고유 하도록 지정 합니다. **데이터 집합**을 빌드할 때 매핑 프로세스는이 스키마를 읽고 다음 테이블을 생성 합니다.  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- 매핑 프로세스는 다음 **DataSet**에 표시된 대로 **CustomerID** 열에 고유한 제약 조건을 만듭니다. 여기에서는 편의를 위해 관련 속성만 보여 줍니다.  
+ 매핑 프로세스에서는 다음 **데이터 집합**에 표시 된 것 처럼 **CustomerID** 열에 unique 제약 조건도 생성 됩니다. 여기에서는 편의를 위해 관련 속성만 보여 줍니다.  
   
 ```text  
       DataSetName: MyDataSet  
@@ -68,11 +69,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- 생성된 **DataSet에서** **IsPrimaryKey** 속성은 고유한 제약 조건에 대해 **False로** 설정됩니다. 열의 **고유** 속성은 **CustomerID** 열 값이 고유해야 함을 나타냅니다(열의 **AllowDBNull** 속성에 의해 지정된 대로 null 참조일 수 있음).  
+ 생성 된 **데이터 집합** 에서 **IsPrimaryKey** 속성은 unique 제약 조건에 대해 **False** 로 설정 됩니다. 열의 **unique** 속성은 **CustomerID** 열 값이 고유 해야 함을 나타내며 열의 **allowdbnull** 속성에 지정 된 대로 null 참조일 수 있습니다.  
   
- 스키마를 수정하고 선택적 **msdata:PrimaryKey** 특성 값을 **True로**설정하면 고유한 제약 조건이 테이블에 만들어집니다. **AllowDBNull** 열 속성은 **false로**설정되고 제약 조건의 **IsPrimaryKey** 속성은 **True로**설정되므로 **CustomerID** 열을 기본 키 열로 만듭니다.  
+ 스키마를 수정 하 고 선택적 **msdata: PrimaryKey** 특성 값을 **True**로 설정 하면 테이블에 unique 제약 조건이 생성 됩니다. **Allowdbnull** 열 속성은 **False**로 설정 되 고 제약 조건의 **IsPrimaryKey** 속성은 **True**로 설정 되므로 **CustomerID** 열을 기본 키 열로 만듭니다.  
   
- XML 스키마의 요소나 특성의 조합에 UNIQUE 제약 조건을 지정할 수 있습니다. 다음 예제에서는 스키마에 다른 **xs:field** 요소를 추가하여 모든 인스턴스의 **모든 고객에** 대해 **CustomerID** 및 **CompanyName** 값의 조합이 고유해야 함을 지정하는 방법을 보여 줍니다.  
+ XML 스키마의 요소나 특성의 조합에 UNIQUE 제약 조건을 지정할 수 있습니다. 다음 예에서는 스키마에 다른 **xs: field** 요소를 추가 하 여 **CustomerID** 와 **CompanyName** 값의 조합이 모든 인스턴스의 모든 **고객** 에 대해 고유 해야 함을 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
       <xs:unique
@@ -84,7 +85,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- 결과 **DataSet에서**생성되는 제약 조건입니다.  
+ 이는 결과 **데이터 집합**에 만들어지는 제약 조건입니다.  
   
 ```text  
 ConstraintName: SomeName  

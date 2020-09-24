@@ -2,14 +2,15 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 10888f26053014ffb1fec49d1dfe87c7fd09ab54
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cec3373dae3127f16bb8a418a91a684554f2b0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399572"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153666"
 ---
 # \<serviceSecurityAudit>
+
 서비스 작업 중에 보안 이벤트의 감사를 사용하도록 하는 설정을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,11 +30,12 @@ ms.locfileid: "70399572"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |auditLogLocation|감사 로그의 위치를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -기본값: 보안 이벤트는 Windows XP의 응용 프로그램 로그와 windows Server 2003 및 Windows Vista의 이벤트 로그에 기록 됩니다.<br />-Application: 감사 이벤트는 응용 프로그램 이벤트 로그에 기록 됩니다.<br />-보안: 감사 이벤트가 보안 이벤트 로그에 기록 됩니다.<br /><br /> 기본값은 Default입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLogLocation>를 참조하세요.|  
 |suppressAuditFailure|감사 로그에 쓰기 실패를 표시하지 않기 위한 동작을 지정하는 부울 값입니다.<br /><br /> 애플리케이션은 감사 로그 쓰기 실패에 대해 알림을 받아야 합니다. 해당 애플리케이션에 감사 실패 처리 기능이 없는 경우 감사 로그에 쓰기 실패를 표시하지 않으려면 이 특성을 사용해야 합니다.<br /><br /> 이 특성이 `true`이면 감사 이벤트 쓰기 시도로 인해 발생한 OutOfMemoryException, StackOverFlowException, ThreadAbortException 및 ArgumentException 이외의 예외는 시스템에 의해 처리되며 애플리케이션으로 전파되지 않습니다. 이 특성이 `false`이면 감사 이벤트 쓰기 시도로 인해 발생한 모든 예외가 애플리케이션까지 전달됩니다.<br /><br /> 기본값은 `true`입니다.|  
@@ -41,15 +43,17 @@ ms.locfileid: "70399572"
 |messageAuthenticationAuditLevel|기록되는 메시지 인증 감사 이벤트 형식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None: 감사 이벤트가 생성 되지 않습니다.<br />-성공: 성공적인 보안만 (메시지 서명 유효성 검사, 암호 및 토큰 유효성 검사를 포함 한 전체 유효성 검사) 이벤트가 기록 됩니다.<br />-실패: 실패 이벤트만 기록 됩니다.<br />-SuccessOrFailure: 성공 및 실패 이벤트가 모두 로깅됩니다.<br /><br /> 기본값은 None입니다. 자세한 내용은 <xref:System.ServiceModel.AuditLevel>를 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 구성 요소는 WCF (Windows Communication Foundation) 인증 이벤트를 감사 하는 데 사용 됩니다. 감사 기능을 사용하도록 설정하면 성공한 인증 시도나 실패한 인증 시도 또는 둘 모두를 감사할 수 있습니다. 이벤트는 운영 체제 버전의 애플리케이션 로그, 보안 로그 또는 기본 로그의 세 가지 이벤트 로그 중 하나에 기록됩니다. 이벤트 로그는 Windows 이벤트 뷰어를 사용하여 볼 수 있습니다.  
   
  이 구성 요소 사용에 대 한 자세한 예제는 [서비스 감사 동작](../../../wcf/samples/service-auditing-behavior.md)을 참조 하세요.  

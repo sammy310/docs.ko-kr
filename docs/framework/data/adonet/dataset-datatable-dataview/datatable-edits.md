@@ -5,25 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fdb19e7fa014bf4a7c924b1fbae53fa44de6e3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151262"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153263"
 ---
 # <a name="datatable-edits"></a>DataTable 편집
-<xref:System.Data.DataRow>에서 열 값을 변경하는 경우, 변경된 값은 현재 상태의 행에 바로 저장됩니다. 그런 <xref:System.Data.DataRowState> 다음 **은 수정됨**으로 설정되고 변경 <xref:System.Data.DataRow.AcceptChanges%2A> 내용은 <xref:System.Data.DataRow.RejectChanges%2A> **DataRow**의 또는 메서드를 사용하여 수락되거나 거부됩니다. **DataRow는** 또한 편집하는 동안 행의 상태를 일시 중단하는 데 사용할 수 있는 세 가지 방법을 제공합니다. 이러한 메서드에는 <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> 및 <xref:System.Data.DataRow.CancelEdit%2A>이 있습니다.  
+
+<xref:System.Data.DataRow>에서 열 값을 변경하는 경우, 변경된 값은 현재 상태의 행에 바로 저장됩니다. <xref:System.Data.DataRowState>그런 다음가 **Modified**로 설정 되 고, <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> **DataRow**의 또는 메서드를 사용 하 여 변경 내용이 허용 되거나 거부 됩니다. 또한 **DataRow** 는 편집 하는 동안 행의 상태를 일시 중단 하는 데 사용할 수 있는 세 가지 메서드를 제공 합니다. 이러한 메서드에는 <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> 및 <xref:System.Data.DataRow.CancelEdit%2A>이 있습니다.  
   
- **DataRow에서** 열 값을 직접 수정하면 **DataRow는** **현재**, **기본값**및 **원래** 행 버전을 사용하여 열 값을 관리합니다. 이러한 행 버전 외에도 **BeginEdit**, **EndEdit**및 **CancelEdit** 메서드는 네 번째 행 버전인 **제안된**버전을 사용합니다. 행 버전에 대한 자세한 내용은 [행 상태 및 행 버전을](row-states-and-row-versions.md)참조하십시오.  
+ **Datarow** 의 열 값을 직접 수정 하는 경우 **datarow** 는 **현재**, **기본**및 **원래** 행 버전을 사용 하 여 열 값을 관리 합니다. 이러한 행 버전 외에도 **BeginEdit**, **EndEdit**및 **CancelEdit** 메서드는 네 번째 행 버전 ( **제안 됨**)을 사용 합니다. 행 버전에 대 한 자세한 내용은 [행 상태 및 행 버전](row-states-and-row-versions.md)을 참조 하세요.  
   
- **제안된** 행 버전은 **BeginEdit를** 호출하여 시작되고 **EndEdit** 또는 **CancelEdit를** 사용하거나 **AcceptChanges** 또는 **RejectChanges**를 호출하여 끝나는 편집 작업 중에 존재합니다.  
+ **제안** 된 행 버전은 **BeginEdit** 를 호출 하 여 시작 하 고 **EndEdit** 또는 **CancelEdit를** 사용 하거나 **AcceptChanges** 또는 **RejectChanges**를 호출 하 여 종료 되는 편집 작업 중에 존재 합니다.  
   
- 편집 작업 중에 **DataTable의** **ColumnChanged** 이벤트에서 **제안값을** 평가하여 개별 열에 유효성 검사 논리를 적용할 수 있습니다. **ColumnChanged** 이벤트에는 변경되는 열과 **제안값에**대한 참조를 유지하는 **DataColumnChangeEventArgs가** 있습니다. 사용자는 제안된 값을 검사한 후 이 값을 수정하거나 편집을 취소할 수 있습니다. 편집이 끝나면 행이 **제안된** 상태 밖으로 이동합니다.  
+ 편집 작업을 수행 하는 동안 **DataTable**의 **Columnchanged** 이벤트에서 **ProposedValue** 를 평가 하 여 개별 열에 유효성 검사 논리를 적용할 수 있습니다. **Columnchanged** 이벤트는를 변경 하는 열과 **ProposedValue**에 대 한 참조를 유지 하는 **DataColumnChangeEventArgs** 을 보유 합니다. 사용자는 제안된 값을 검사한 후 이 값을 수정하거나 편집을 취소할 수 있습니다. 편집이 종료 되 면 행이 **제안** 된 상태에서 제외 됩니다.  
   
- **EndEdit를**호출하여 편집을 확인하거나 **CancelEdit**를 호출하여 편집을 취소할 수 있습니다. **EndEdit는** 편집 내용을 확인하지만 **DataSet은** **AcceptChanges가** 호출될 때까지 변경 내용을 실제로 수락하지 않습니다. 또한 **EndEdit** 또는 **CancelEdit으로**편집을 종료하기 전에 **AcceptChanges를** 호출하면 편집이 종료되고 현재 행 **및** **원래** 행 버전 모두에 대해 **제안된** 행 값이 허용됩니다. 동일한 방식으로 **RejectChanges를** 호출하면 편집이 종료되고 **현재** 및 **제안된** 행 버전이 삭제됩니다. 편집이 이미 종료되어 있기 때문에 **AcceptChanges** 또는 **RejectChanges를** 호출 한 후 **EndEdit** 또는 **CancelEdit를** 호출하면 아무런 효과가 없습니다.  
+ **EndEdit**를 호출 하 여 편집을 확인 하거나 **CancelEdit**를 호출 하 여 편집을 취소할 수 있습니다. **EndEdit** 에서 편집을 확인 하는 동안에는 **AcceptChanges** 가 호출 될 때까지 **데이터 집합이** 실제로 변경 내용을 수락 하지 않습니다. **EndEdit** 또는 **CancelEdit**를 사용 하 여 편집을 종료 하기 전에 **AcceptChanges** 를 호출 하는 경우에는 편집이 종료 되 고 **현재** 행과 **원래** 행 버전 모두에 대해 **제안** 된 행 값이 허용 됩니다. 동일한 방식으로 **RejectChanges** 를 호출 하면 편집이 종료 되 고 **현재** 및 **제안** 된 행 버전이 삭제 됩니다. **AcceptChanges** 또는 **RejectChanges** 를 호출한 후에는 **EndEdit** 또는 **CancelEdit** 를 호출 해도 편집이 이미 종료 되었으므로 효과가 없습니다.  
   
- 다음 예제에서는 **EndEdit** 및 **CancelEdit를**사용하여 **BeginEdit를** 사용하는 방법을 보여 줍니다. 또한 이 예제에서는 **ColumnChanged** 이벤트에서 **제안된 값을** 확인하고 편집을 취소할지 여부를 결정합니다.  
+ 다음 예제에서는 **EndEdit** 및 **CancelEdit**와 함께 **BeginEdit** 를 사용 하는 방법을 보여 줍니다. 또한이 예제에서는 **Columnchanged** 이벤트에서 **ProposedValue** 를 확인 하 고 편집을 취소할지 여부를 결정 합니다.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
