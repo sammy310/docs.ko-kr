@@ -5,17 +5,19 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 7209b6856eb7302dfa2e5e8938509d9238ceff4d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f4b375c350dca58aa1002402806113ec0f91b55
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840360"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098763"
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
+
 이 섹션에서는 Visual Basic 프로그래밍의 다양한 측면에 관한 참조 정보 링크를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Visual Basic 언어 참조](../language-reference/index.md)  
  Visual Basic 언어의 다양한 측면에 관한 참조 정보를 제공합니다.  
   
@@ -29,6 +31,7 @@ ms.locfileid: "85840360"
  언어의 모든 측면에 대한 상세 정보를 포함하는 전체 Visual Basic 언어 사양의 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [일반 사용자 인터페이스 요소(Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Visual Studio에서 사용되는 대화 상자 및 창에 관한 항목이 포함되어 있습니다.  
   

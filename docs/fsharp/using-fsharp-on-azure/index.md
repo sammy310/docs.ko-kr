@@ -3,12 +3,13 @@ title: Azure에서 F# 사용
 description: F#과 함께 Azure 서비스 사용에 대한 가이드
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: 0f516b8a3b4fd60eea8facad83a440e33ffd521c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: c3235db9274065f81e5476d8d0e06b99d7c987a0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548425"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100141"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
