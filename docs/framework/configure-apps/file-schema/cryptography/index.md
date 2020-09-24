@@ -10,14 +10,15 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: c632a15552c8ba5743aac1309098b7d7ef949bbd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0215851f83a13ee48547144f08c5c693ec2d90bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088000"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149532"
 ---
 # <a name="cryptography-settings-schema"></a>암호화 설정 스키마
+
 암호 설정 스키마에는 암호화 알고리즘을 구현하는 클래스에 알고리즘 이름을 매핑하는 방법을 지정하는 요소가 포함되어 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,7 +31,7 @@ ms.locfileid: "74088000"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidEntry>**](oidentry-element.md)
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[**\<cryptoClasses**>](cryptoclasses-element.md)|요소의 이름에 매핑되는 암호화 클래스의 목록을 포함 **\<nameEntry>** 합니다.|  
 |[**\<cryptoClass**>](cryptoclass-element.md)|요소의 이름에 매핑되는 암호화 클래스를 포함 **\<nameEntry>** 합니다.|  

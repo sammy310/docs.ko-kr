@@ -3,14 +3,15 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 56a44fdb62062903ca3ad00f8105a66ccab02cca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d6c86d02e14a38c2a35ba4858c4abfea73268fd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148713"
 ---
 # \<sqlWorkflowInstanceStore>
+
 워크플로 서비스 인스턴스의 상태 정보를 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 유지하도록 지원하는 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 기능을 구성하는 서비스 동작입니다. 이 기능에 대 한 자세한 내용은 [SQL 워크플로 인스턴스 저장소](../../../windows-workflow-foundation/sql-workflow-instance-store.md)를 참조 하세요.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,11 +39,12 @@ ms.locfileid: "79151964"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |connectionString|기본 지속성 데이터베이스에 연결하는 데 사용되는 연결 문자열을 포함하는 문자열입니다.|  
 |connectionStringName|데이터베이스 서버에 대한 명명된 연결 문자열을 포함하는 문자열입니다. 명명된 된 연결 문자열의 예로 "defaultconnectionstring"입니다.|  
@@ -53,13 +55,14 @@ ms.locfileid: "79151964"
 |runnableInstancesDetectionPeriod||  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
-|[\<behavior>으로\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
+|[\<serviceBehaviors>의 \<behavior>](behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 

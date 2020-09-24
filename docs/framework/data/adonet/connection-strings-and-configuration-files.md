@@ -6,21 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2bea3d962998b2778d22e232e7f7062cfda3143
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556553"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148411"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 
 애플리케이션 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](../../tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 애플리케이션의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 애플리케이션을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 애플리케이션 구성 파일에 저장하는 것이 좋습니다.  
   
 ## <a name="working-with-application-configuration-files"></a>애플리케이션 구성 파일 사용  
+
  애플리케이션 구성 파일에는 특정 애플리케이션과 관련된 설정이 들어 있습니다. 예를 들어, ASP.NET 애플리케이션에는 하나 이상의 **web.config** 파일이 있을 수 있고, Windows 애플리케이션에는 **app.config**라는 선택적 파일이 하나 있을 수 있습니다. 구성 파일의 이름과 위치는 애플리케이션 호스트에 따라 다르지만 모든 구성 파일은 다음과 같은 공통 요소를 공유합니다.  
   
 ### <a name="the-connectionstrings-section"></a>connectionStrings 섹션  
+
  연결 문자열은 애플리케이션 구성 파일의 **configuration** 요소 내 **connectionStrings** 섹션에 키/값 쌍으로 저장할 수 있습니다. 자식 요소에는 **add**, **clear** 및 **remove**가 있습니다.  
   
  다음은 연결 문자열을 저장하기 위한 스키마 및 구문이 나와 있는 구성 파일의 일부분입니다. **name** 특성은 연결 문자열을 고유하게 식별하는 기능을 제공하여 연결 문자열이 런타임에 검색될 수 있도록 하는 이름입니다. **providerName**은 machine.config 파일에 등록되어 있는 .NET Framework 데이터 공급자의 고정 이름입니다.  
@@ -41,6 +43,7 @@ ms.locfileid: "90556553"
 > 연결 문자열 일부를 구성 파일에 저장한 후 <xref:System.Data.Common.DbConnectionStringBuilder> 클래스를 사용하여 런타임에 연결 문자열을 완성할 수 있습니다. 이 기능은 사전에 연결 문자열 요소를 정확히 알고 있지 않거나 중요한 정보를 구성 파일에 저장하지 않으려는 경우에 유용합니다. 자세한 내용은 [연결 문자열 작성기](connection-string-builders.md)를 참조하세요.  
   
 ### <a name="using-external-configuration-files"></a>외부 구성 파일 사용  
+
  외부 구성 파일은 단일 섹션으로 구성되며 구성 파일의 한 조각이 포함된 별도의 파일입니다. 외부 구성 파일은 기본 구성 파일에서 참조합니다. **connectionStrings** 섹션을 물리적으로 분리된 파일에 저장하면 애플리케이션 배포 후 연결 문자열이 편집될 수 있는 경우에 유용합니다. 예를 들어, 표준 ASP.NET 동작에서는 구성 파일이 수정되면 애플리케이션 도메인을 다시 시작합니다. 따라서 상태 정보가 손실될 수 있습니다. 하지만 외부 구성 파일은 수정해도 애플리케이션이 다시 시작되지 않습니다. 외부 구성 파일은 ASP.NET뿐만 아니라 Windows 애플리케이션에도 사용될 수 있습니다. 파일 액세스 보안 및 권한을 사용하여 외부 구성 파일에 대한 액세스를 제한할 수도 있습니다. 런타임에 외부 구성 파일을 사용하는 것은 투명하게 수행되므로 특별한 코딩이 필요하지 않습니다.  
   
  연결 문자열을 외부 구성 파일에 저장하려면 **connectionStrings** 섹션만 있는 별도의 파일을 만듭니다. 이외 다른 요소, 섹션 또는 특성은 포함하지 마세요. 다음 예제에서는 외부 구성 파일의 구문을 보여 줍니다.  
@@ -63,12 +66,14 @@ ms.locfileid: "90556553"
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>런타임에 연결 문자열 검색  
+
  .NET Framework 2.0에서는 런타임에 구성 파일에서 연결 문자열을 쉽게 검색할 수 있도록 <xref:System.Configuration> 네임스페이스에 새 클래스가 추가되었습니다. 이름 또는 공급자 이름을 사용하여 프로그래밍 방식으로 연결 문자열을 검색할 수 있습니다.  
   
 > [!NOTE]
 > **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. Windows 응용 프로그램의 **app.config** 파일에서 공급자 이름으로 연결 문자열을 검색 하는 경우 **machine.config** 의 연결 문자열이 먼저 로드 된 다음 **app.config**의 항목이 로드 됩니다. **ConnectionStrings** 요소 바로 뒤에 **clear** 를 추가 하면 메모리의 데이터 구조에서 상속 된 모든 참조가 제거 되어 로컬 **app.config** 파일에 정의 된 연결 문자열만 고려 됩니다.  
   
 ### <a name="working-with-the-configuration-classes"></a>구성 클래스 사용  
+
  .NET Framework 2.0부터는 로컬 컴퓨터의 구성 파일을 사용할 경우 더 이상 사용되지 않는 <xref:System.Configuration.ConfigurationManager> 대신 <xref:System.Configuration.ConfigurationSettings>가 사용됩니다. ASP.NET 구성 파일을 사용하는 경우에는 <xref:System.Web.Configuration.WebConfigurationManager>가 사용됩니다. 이 클래스는 웹 서버의 구성 파일에 사용하도록 디자인되었으며 **system.web**과 같은 구성 파일 섹션에 프로그래밍 방식으로 액세스할 수 있도록 합니다.  
   
 > [!NOTE]
@@ -76,13 +81,14 @@ ms.locfileid: "90556553"
   
  <xref:System.Configuration.ConnectionStringSettingsCollection>을 사용하여 애플리케이션 구성 파일에서 연결 문자열을 검색할 수 있습니다. 이 컬렉션에는 <xref:System.Configuration.ConnectionStringSettings> 개체 컬렉션이 포함되어 있으며, 각 개체는 **connectionStrings** 섹션의 단일 항목을 나타냅니다. 개체 속성은 연결 문자열 특성에 매핑되므로 이름 또는 공급자 이름을 지정하여 연결 문자열을 검색할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|연결 문자열의 이름으로, **name** 특성에 매핑됩니다.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|정규화된 공급자 이름으로, **providerName** 특성에 매핑됩니다.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|연결 문자열입니다. **connectionString** 특성에 매핑됩니다.|  
   
 ### <a name="example-listing-all-connection-strings"></a>예제: 모든 연결 문자열 나열  
+
  이 예제에서는를 반복 <xref:System.Configuration.ConnectionStringSettingsCollection> 하 고 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> 콘솔 창에, 및 속성을 표시 합니다 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> .  
   
 > [!NOTE]
@@ -92,18 +98,21 @@ ms.locfileid: "90556553"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-name"></a>예제: 이름을 사용하여 연결 문자열 검색  
+
  다음 예제에서는 이름을 지정하여 구성 파일에서 연결 문자열을 검색하는 방법을 보여 줍니다. 다음 코드에서는 <xref:System.Configuration.ConnectionStringSettings> 개체를 만들어 사용자가 제공한 입력 매개 변수가 <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> 이름과 일치하는지 확인합니다. 일치하는 이름이 없으면 함수에서 `null`(Visual Basic의 경우 `Nothing`)을 반환합니다.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-provider-name"></a>예제: 공급자 이름을 사용하여 연결 문자열 검색  
+
  다음 예제에서는 공급자 고정 이름을 *System.Data.ProviderName* 형식으로 지정하여 연결 문자열을 검색하는 방법을 보여 줍니다. 코드에서 <xref:System.Configuration.ConnectionStringSettingsCollection>을 반복한 후 일치하는 첫 번째 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>에 대한 연결 문자열을 반환합니다. 공급자 이름이 없으면 이 함수가 `null`(Visual Basic의 경우 `Nothing`)을 반환합니다.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>보호되는 구성을 사용하여 구성 파일 섹션 암호화  
+
  ASP.NET 2.0에서는 *보호되는 구성*이라는 새 기능이 추가되어 구성 파일에서 중요한 정보를 암호화할 수 있습니다. 보호되는 구성은 원래 ASP.NET용으로 디자인된 것이지만 Windows 애플리케이션의 구성 파일 섹션을 암호화하는 데도 사용할 수 있습니다. 보호되는 구성 기능에 대한 자세한 내용은 [보호되는 구성을 사용하여 구성 정보 암호화](/previous-versions/aspnet/53tyfkaw(v=vs.100))를 참조하세요.  
   
  다음 구성 파일 조각에서는 암호화된 후의 **connectionStrings** 섹션을 보여 줍니다. **configProtectionProvider**에는 연결 문자열을 암호화하고 해독하는 데 사용되는 보호되는 구성 공급자가 지정되어 있습니다. **EncryptedData** 섹션에는 암호화 텍스트가 들어 있습니다.  
@@ -121,6 +130,7 @@ ms.locfileid: "90556553"
  암호화된 연결 문자열을 런타임에 검색할 때 .NET Framework에서는 지정된 공급자를 사용하여 **CipherValue**의 암호를 해독하고 애플리케이션에서 해당 문자열을 사용할 수 있도록 합니다. 따라서 암호를 해독하는 데 추가 코드를 작성할 필요가 없습니다.  
   
 ### <a name="protected-configuration-providers"></a>보호되는 구성 공급자  
+
  보호되는 구성 공급자는 로컬 컴퓨터에 있는 **machine.config** 파일의 **configProtectedData** 섹션에 등록됩니다. 다음 단편에서는 .NET Framework와 함께 제공되는 두 개의 보호되는 구성 공급자를 보여 줍니다. 여기 표시된 값은 보기 편하도록 자른 것입니다.  
   
 ```xml  
@@ -144,12 +154,14 @@ ms.locfileid: "90556553"
  두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 <xref:System.Configuration.RsaProtectedConfigurationProvider>를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
   
 ### <a name="using-the-configuration-classes"></a>구성 클래스 사용  
+
  <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 애플리케이션 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 클래스를 사용할 수 있습니다 <xref:System.Web.Configuration.WebConfigurationManager> .이 클래스는에서 제공 하는 것과 같이 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동시에 동일한 기능을 제공 합니다 **\<system.web>** .  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))를 참조하세요.  
   
 ### <a name="appconfig-example"></a>App.config 예제  
+
  이 예제에서는 Windows 애플리케이션의 **app.config** 파일에 있는 **connectionStrings** 섹션의 암호화를 전환하는 방법에 대해 설명합니다. 이 예제의 프로시저에서는 애플리케이션 이름을 인수로 사용합니다(예: "MyApplication.exe"). **app.config** 파일을 암호화한 다음 이름이 "MyApplication.exe.config"인 실행 파일이 들어 있는 폴더로 복사합니다.  
   
 > [!NOTE]
@@ -164,6 +176,7 @@ ms.locfileid: "90556553"
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
 ### <a name="webconfig-example"></a>Web.config 예제  
+
  이 예제에서는 <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A>의 `WebConfigurationManager` 메서드를 사용합니다. 이 경우 물결표를 사용하여 **Web.config** 파일에 대한 상대 경로를 제공할 수 있습니다. 코드에는 `System.Web.Configuration` 클래스에 대한 참조가 있어야 합니다.  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
@@ -171,7 +184,7 @@ ms.locfileid: "90556553"
   
  ASP.NET 응용 프로그램을 보호 하는 방법에 대 한 자세한 내용은 [ASP.NET 웹 사이트 보안](/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [연결 문자열 작성기](connection-string-builders.md)
 - [연결 정보 보호](protecting-connection-information.md)

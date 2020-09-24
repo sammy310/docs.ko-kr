@@ -2,14 +2,15 @@
 title: Windows Forms 구성 섹션
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d518ec03602580f3c5d00ef2901ff7d7ac1d81b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546910"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148505"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms 구성 섹션
+
 Windows Forms 구성 설정을 통해 Windows Forms 앱에서 다중 모니터 지원, 높은 DPI 지원 및 기타 사용자 정의된 구성 설정 등의 사용자 지정된 애플리케이션 설정에 대한 정보를 저장하고 검색할 수 있습니다.
 
 Windows Forms 애플리케이션 구성 설정은 애플리케이션 구성 파일의 `System.Windows.Forms.ApplicationConfigurationSection` 요소에 저장됩니다.
@@ -34,13 +35,13 @@ Windows Forms 애플리케이션 구성 설정은 애플리케이션 구성 파�
 
 ### <a name="child-elements"></a>자식 요소
 
-요소  |Description |
+요소  |설명 |
 ---------|---------|
 [`<add>`](windows-forms-add-configuration-element.md) | 지정된 된 값과 함께 구성 설정 키를 추가합니다. |
 
 ### <a name="parent-elements"></a>부모 요소
 
-요소  |Description |
+요소  |설명 |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | 공용 언어 런타임 및 Windows Forms 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 

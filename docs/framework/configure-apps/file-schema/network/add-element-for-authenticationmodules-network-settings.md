@@ -11,14 +11,15 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f679a43ed1851e9681a2a57ca1639f8aa75aa8b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504643"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149506"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules의 \<add> 요소(네트워크 설정)
+
 응용 프로그램에 인증 모듈을 추가 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,15 +36,17 @@ ms.locfileid: "84504643"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|**특성**|**설명**|  
+|**Attribute**|**설명**|  
 |-------------------|---------------------|  
 |`type`|속성으로 표시 되는 정규화 된 형식 이름 <xref:System.Type.FullName%2A> 및 쉼표로 구분 된 어셈블리 이름 (속성으로 표시 됨 <xref:System.Reflection.Assembly.FullName%2A> )입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -53,14 +56,17 @@ ms.locfileid: "84504643"
 |[authenticationModules](authenticationmodules-element-network-settings.md)|네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `add` 요소는 등록된 인증 모듈 목록의 끝에 인증 모듈을 추가합니다. 인증 모듈은 목록에 추가 된 순서 대로 호출 됩니다.  
   
  특성 값은 `type` 쉼표로 구분 된 유효한 형식 이름 및 해당 어셈블리 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 기본 인증 모듈을 사용 하도록 설정 합니다. Version 및 PublicKeyToken의 값을 지정 된 모듈의 올바른 값으로 바꾸어야 합니다.  
   
 ```xml  

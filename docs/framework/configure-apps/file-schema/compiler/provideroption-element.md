@@ -8,14 +8,15 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544741"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149636"
 ---
 # <a name="provideroption-element"></a>\<providerOption> 요소
+
 언어 공급자에 대 한 컴파일러 버전 특성을 지정 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,16 +35,18 @@ ms.locfileid: "90544741"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`name`|필수 특성입니다.<br /><br /> 옵션의 이름을 지정 합니다. 예를 들면 "찾고 compilerversion"입니다.|  
 |`value`|필수 특성입니다.<br /><br /> 옵션의 값을 지정 합니다. 예를 들면 "v 3.5"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -56,6 +59,7 @@ ms.locfileid: "90544741"
 |[\<compiler> 요소](compiler-element.md)|언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  .NET Framework 버전 3.5에서 CodeDOM (코드 문서 개체 모델) 코드 공급자는 요소를 사용 하 여 공급자별 옵션을 지원할 수 있습니다 `<providerOption>` .  
   
  .NET Framework 3.5에는 업데이트 된 .NET Framework 2.0 어셈블리가 포함 되어 있으며 새 버전 3.5 어셈블리에는 새 형식이 포함 되어 있습니다. Microsoft c # 및 Visual Basic 코드 공급자는 .NET Framework 2.0 어셈블리에 포함 되어 있지만 버전 3.5 컴파일러를 지원 하도록 업데이트 되었습니다. 기본적으로 업데이트 된 코드 공급자는 버전 2.0 컴파일러에 대 한 코드를 생성 합니다. 요소를 사용 `<providerOption>` 하 여 대상 컴파일러 버전을 3.5으로 변경할 수 있습니다. 이렇게 하려면 특성에 대해 "찾고 compilerversion"를 지정 하 `name` 고 특성에는 "v 3.5"를 지정 `value` 합니다. 버전 번호 앞에는 소문자 "v"가와 야 합니다.  
@@ -65,6 +69,7 @@ ms.locfileid: "90544741"
  CodeDOM 코드 공급자 구현자는 형식의 매개 변수를 사용 하는 생성자를 제공 하 여 사용자 지정 옵션을 처리할 수 있습니다 `providerOptions` <xref:System.Collections.Generic.IDictionary%602> .  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 c # 코드 공급자의 버전 3.5을 사용 하도록 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

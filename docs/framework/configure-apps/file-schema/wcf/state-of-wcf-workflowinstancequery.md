@@ -1,15 +1,16 @@
 ---
-title: <state>WCF의<workflowInstanceQuery>
+title: <state> WCF의 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854957"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148895"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<state>WCF의\<workflowInstanceQuery>
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state> WCF의 \<workflowInstanceQuery>
+
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
   
  추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
@@ -51,7 +52,7 @@ ms.locfileid: "70854957"
   
 ### <a name="attributes"></a>특성
 
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`name`|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태를 지정하는 문자열입니다.|  
   
@@ -61,7 +62,7 @@ ms.locfileid: "70854957"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션입니다.|  
   

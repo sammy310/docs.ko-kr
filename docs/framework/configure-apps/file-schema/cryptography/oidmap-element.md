@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6c57810389acbd58e6d2e05277a6f26fa0aac8c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155169"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149519"
 ---
 # <a name="oidmap-element"></a>\<oidMap> 요소
+
 클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,26 +32,29 @@ ms.locfileid: "79155169"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<oidEntry>](oidentry-element.md)|ASN OID를 친숙 한 이름에 매핑합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
 |`mscorlib`|요소를 포함 `cryptographySettings` 합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 요소를 사용 하 여 **\<oidMap>** RIPEMD-160 해시 알고리즘에 대 한 OID 매핑을 해당 해시 알고리즘의 구현에 포함 하는 방법을 보여 줍니다.  
   
 ```xml  

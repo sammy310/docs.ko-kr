@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 927a43f352fd776d9e6ba52ebea6ba2a1ccd4d48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155079"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149493"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>bypasslist의 \<add> 요소(네트워크 설정)
+
 프록시 무시 목록에 IP 주소 또는 DNS 이름을 추가 합니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -35,15 +36,17 @@ ms.locfileid: "79155079"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|**특성**|**설명**|  
+|**Attribute**|**설명**|  
 |-------------------|---------------------|  
 |**address**|IP 주소 또는 DNS 이름을 설명 하는 정규식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -53,6 +56,7 @@ ms.locfileid: "79155079"
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `add`요소는 IP 주소 또는 DNS 서버 이름을 설명 하는 정규식을 프록시 서버를 우회 하는 주소 목록에 삽입 합니다.  
   
  특성의 값은 `address` IP 주소 또는 호스트 이름 집합을 설명 하는 정규식 이어야 합니다.  
@@ -62,9 +66,11 @@ ms.locfileid: "79155079"
  정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 바이패스 목록에 두 개의 주소를 추가 합니다. 첫 번째는 contoso.com 도메인에 있는 모든 서버에 대 한 프록시를 무시 합니다. 두 번째는 IP 주소가 192.168으로 시작 하는 모든 서버에 대해 프록시를 무시 합니다.  
   
 ```xml  

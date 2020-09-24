@@ -2,14 +2,15 @@
 title: FROM(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8affac82fb1813aa0282540b5dc2f47d42234a1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833827"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148059"
 ---
 # <a name="from-entity-sql"></a>FROM(Entity SQL)
+
 [SELECT](select-entity-sql.md) 문에 사용 되는 컬렉션을 지정 합니다.
 
 ## <a name="syntax"></a>구문
@@ -35,7 +36,7 @@ FROM expression [ ,...n ] AS C
 
 ### <a name="simple-from-clause-item"></a>단순 FROM 절 항목
 
-가장 단순한 `FROM` 절 항목은 컬렉션 및 별칭을 식별하는 단일 식입니다. 식은 단순히 엔터티 집합이거나 하위 쿼리 또는 컬렉션 형식인 다른 모든 식일 수 있습니다. 예를 들면 다음과 같습니다.
+가장 단순한 `FROM` 절 항목은 컬렉션 및 별칭을 식별하는 단일 식입니다. 식은 단순히 엔터티 집합이거나 하위 쿼리 또는 컬렉션 형식인 다른 모든 식일 수 있습니다. 다음은 이에 대한 예입니다.
 
 ```sql
 LOB.Customers as c
@@ -51,7 +52,7 @@ LOB.Customers
 
 ### <a name="join-from-clause-item"></a>JOIN FROM 절 항목
 
-`JOIN FROM` 절 항목은 두 `FROM` 절 항목 간의 조인을 나타냅니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 Cross Join, Inner Join, Left Outer Join, Right Outer Join 및 Full Outer Join을 지원합니다. 이러한 모든 조인은 Transact-sql에서 지원 되는 방식과 유사 하 게 지원 됩니다. Transact-sql에서와 같이 `JOIN`과 관련 된 두 개의 `FROM` 절 항목은 독립적 이어야 합니다. 즉, 상호 관련될 수 없습니다. 이러한 경우 `CROSS APPLY` 또는 `OUTER APPLY`를 사용할 수 있습니다.
+`JOIN FROM` 절 항목은 두 `FROM` 절 항목 간의 조인을 나타냅니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 Cross Join, Inner Join, Left Outer Join, Right Outer Join 및 Full Outer Join을 지원합니다. 이러한 모든 조인은 Transact-sql에서 지원 되는 방식과 유사 하 게 지원 됩니다. Transact-sql에서와 같이에 관련 된 두 `FROM` 절 항목은 `JOIN` 독립적 이어야 합니다. 즉, 상호 관련될 수 없습니다. 이러한 경우 `CROSS APPLY` 또는 `OUTER APPLY`를 사용할 수 있습니다.
 
 #### <a name="cross-joins"></a>Cross Join
 
@@ -103,7 +104,7 @@ LOB.Customers
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> Transact-sql에서와 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 명시적 unnest 단계가 필요 하지 않습니다.
+> Transact-sql과는 달리에서 명시적인 unnest 단계가 필요 하지 않습니다 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .
 
 > [!NOTE]
 > `CROSS` 및 `OUTER APPLY` 연산자는 SQL Server 2005에서 도입 되었습니다. 경우에 따라 쿼리 파이프라인에서 `CROSS APPLY` 및/또는 `OUTER APPLY` 연산자가 포함된 Transact-SQL을 생성할 수 있습니다. SQL Server 2005 이전 SQL Server 버전을 비롯 한 일부 백엔드 공급자는 이러한 연산자를 지원 하지 않으므로 이러한 백 엔드 공급자에서는 이러한 쿼리를 실행할 수 없습니다.
@@ -114,7 +115,7 @@ LOB.Customers
 
 `FROM` 절에는 둘 이상의 컬렉션이 쉼표로 구분되어 포함될 수 있습니다. 이 경우 컬렉션은 함께 조인되는 것으로 가정됩니다. 이러한 조인을 N-Way CROSS JOIN으로 간주하세요.
 
-다음 예제에서 `C` 및 `D`은 독립 된 컬렉션 이지만 `c.Names`는 `C`에 종속 됩니다.
+다음 예제에서 및는 `C` `D` 독립 된 컬렉션 이지만 `c.Names` 는에 종속 됩니다 `C` .
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e
@@ -125,6 +126,7 @@ FROM C AS c, D AS d, c.Names AS e
 `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`
 
 ## <a name="left-correlation"></a>왼쪽 상관 관계
+
  `FROM` 절의 항목은 위의 절에서 지정된 항목을 참조할 수 있습니다. 다음 예제에서 `C` 및 `D`는 독립된 컬렉션이지만 `c.Names`는 `C`에 종속됩니다.
 
 ```sql
@@ -149,7 +151,7 @@ from (C as c join D as d) cross apply c.Names as e
 from (C as c join D as d) cross apply c.Names as e
 ```
 
-@No__t-0 (Transact-sql과 달리)에서 `FROM` 절은 범위에 별칭을 도입 합니다. 이러한 컬렉션의 열(속성)에 대한 모든 참조는 해당 별칭으로 정규화해야 합니다.
+에서 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 절은 transact-sql과 달리 `FROM` 범위에 별칭을 도입 합니다. 이러한 컬렉션의 열(속성)에 대한 모든 참조는 해당 별칭으로 정규화해야 합니다.
 
 ## <a name="pulling-up-keys-from-nested-queries"></a>중첩 쿼리에서 키 끌어오기
 
@@ -165,8 +167,8 @@ select c.Orders from Customers as c
 select {1} from {2, 3}
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [쿼리 식](query-expressions-entity-sql.md)
-- [null 허용 구조적 형식](nullable-structured-types-entity-sql.md)
+- [nullable 구조적 형식](nullable-structured-types-entity-sql.md)
