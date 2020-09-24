@@ -4,12 +4,12 @@ description: CentOS에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 6b1bad3a6c967483bb683866de84c9e5077a336f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619509"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538620"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>CentOS에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -63,6 +63,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 ## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
 
 이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="unable-to-find-package"></a>패키지를 찾을 수 없음
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>가져오지 못함
 

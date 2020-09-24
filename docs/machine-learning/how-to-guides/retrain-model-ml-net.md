@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50f35e3511acc344339b1e150b47d7ce6de94254
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976960"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679562"
 ---
 # <a name="re-train-a-model"></a>모델 다시 학습
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>미리 학습된 모델 매개 변수 추출
 
-모델이 로드되면 미리 학습된 모델의 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 속성에 액세스하여 학습된 모델 매개 변수를 추출합니다. 미리 학습된 모델은 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)를 출력하는 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)를 만드는 선형 회귀 모델 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)를 사용하여 학습되었습니다. 이러한 선형 회귀 모델 매개 변수에는 학습된 편차 및 가중치와 모델 계수가 포함됩니다. 이런 값은 다시 학습되는 새 모델의 시작점이 됩니다.
+모델이 로드되면 미리 학습된 모델의 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase%601.Model%2A) 속성에 액세스하여 학습된 모델 매개 변수를 추출합니다. 미리 학습된 모델은 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)를 출력하는 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)를 만드는 선형 회귀 모델 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)를 사용하여 학습되었습니다. 이러한 선형 회귀 모델 매개 변수에는 학습된 편차 및 가중치와 모델 계수가 포함됩니다. 이런 값은 다시 학습되는 새 모델의 시작점이 됩니다.
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>모델 다시 학습
 
-모델을 다시 학습하는 프로세스는 모델 학습과 차이가 없습니다. 유일한 차이점은 데이터와 함께 [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 메서드도 원래 학습한 모델 매개 변수를 입력을 취하고 이를 다시 학습 프로세스의 시작점으로 사용한다는 점입니다.
+모델을 다시 학습하는 프로세스는 모델 학습과 차이가 없습니다. 유일한 차이점은 데이터와 함께 [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer%602.Fit%2A) 메서드도 원래 학습한 모델 매개 변수를 입력을 취하고 이를 다시 학습 프로세스의 시작점으로 사용한다는 점입니다.
 
 ```csharp
 // New Data

@@ -1,7 +1,7 @@
 ---
 description: '?: 연산자 - C# 참조'
 title: '?: 연산자 - C# 참조'
-ms.date: 03/06/2020
+ms.date: 09/17/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 0efa6de2b537fd3af76807938ac2b50a2716561f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122357"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738881"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -29,7 +29,13 @@ condition ? consequent : alternative
 
 `condition` 식은 `true` 또는 `false`로 계산되어야 합니다. `condition`이 `true`로 계산되면 `consequent` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `condition`이 `false`로 계산되면 `alternative` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `consequent` 또는 `alternative`만 계산됩니다.
 
-`consequent` 및 `alternative`의 형식이 동일해야 하거나 한 형식에서 다른 형식으로 암시적 변환이 있어야 합니다.
+C# 9.0부터 조건식은 대상으로 유형화됩니다. 즉, 조건식의 대상 유형을 알고 있는 경우 `consequent` 및 `alternative`의 형식은 다음 예제와 같이 대상 유형으로 암시적으로 변환 가능해야 합니다.
+
+[!code-csharp[target-typed conditional](snippets/shared/ConditionalOperator.cs#TargetTyped)]
+
+조건식의 대상 유형을 모르는 경우(예: [`var`](../keywords/var.md) 키워드 사용) 또는 C# 8.0 이하에서 `consequent` 및 `alternative`의 형식이 같아야 하거나 한 형식에서 다른 형식으로 암시적인 변환이 있어야 합니다.
+
+[!code-csharp[not target-typed conditional](snippets/shared/ConditionalOperator.cs#NotTargetTyped)]
 
 조건부 연산자는 오른쪽 결합성입니다. 즉, 다음 형식의 식을 가정해 보세요.
 
@@ -66,7 +72,7 @@ condition ? ref consequent : ref alternative
 
 원래 조건부 연산자와 마찬가지로 조건부 ref 식은 두 식 중 하나(`consequent` 또는 `alternative`)만 계산합니다.
 
-조건부 ref 식의 경우 `consequent` 및 `alternative`의 형식이 동일해야 합니다.
+조건부 ref 식의 경우 `consequent` 및 `alternative`의 형식이 동일해야 합니다. 조건부 ref 식은 대상으로 유형화되지 않습니다.
 
 다음 예제에서는 조건부 ref 식의 사용법을 보여 줍니다.
 
@@ -86,9 +92,12 @@ condition ? ref consequent : ref alternative
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [조건부 연산자](~/_csharplang/spec/expressions.md#conditional-operator) 섹션을 참조하세요.
 
-조건부 ref 식에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)를 참조하세요.
+C# 7.2 이상에 추가된 기능에 대한 자세한 내용은 다음 기능 제안 노트를 참조하세요.
 
-## <a name="see-also"></a>참조
+- [조건부 ref 식(C# 7.2)](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)
+- [대상으로 유형화된 조건식(C# 9.0)](~/_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md)
+
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자 및 식](index.md)

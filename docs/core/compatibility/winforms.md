@@ -2,12 +2,12 @@
 title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core 및 .NET 5용 Windows Forms의 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/08/2020
-ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656345"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679004"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView 관련 API가 이제 InvalidOperationException을 throw함](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms 및 WPF 앱이 Microsoft.NET.Sdk를 사용함](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [상태 표시줄 컨트롤 제거](#removed-status-bar-controls) | 5.0 |
@@ -38,6 +39,10 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 | [UseLegacyImages 호환성 스위치가 지원되지 않음](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
+
+***
 
 [!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
 

@@ -2,12 +2,12 @@
 title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306913"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738751"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 

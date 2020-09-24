@@ -4,12 +4,12 @@ description: 자체 포함 앱을 트리밍하여 크기를 줄이는 방법을 
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465483"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770457"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>자체 포함 배포 및 실행 파일 트리밍
 
@@ -24,7 +24,7 @@ ms.locfileid: "89465483"
 애플리케이션의 트리밍 모드는 `TrimMode` 설정으로 구성됩니다. 기본값은 `copyused`이며 참조된 어셈블리를 애플리케이션에서 번들로 묶습니다. `link` 값은 Blazor WebAssembly 애플리케이션에서 사용되며 어셈블리 내에서 사용되지 않는 코드를 트리밍합니다. 트리밍 분석 경고는 전체 종속성 분석이 불가능한 코드 패턴에 대한 정보를 제공합니다. 해당 경고는 기본적으로 표시되지 않으며, `SuppressTrimAnalysisWarnings` 플래그를 `false`로 지정하여 켤 수 있습니다. 사용 가능한 트리밍 옵션에 관한 자세한 내용은 [트리밍 옵션](trimming-options.md)을 참조하세요.
 
 > [!NOTE]
-> 트리밍은 .NET Core 3.1, 5.0의 실험적 기능이며 ‘게시된 자체 포함 애플리케이션에만’ 사용할 수 있습니다.
+> 트리밍은 .NET Core 3.1 및 .NET 5.0의 실험적 기능입니다. 트리밍은 ‘게시된 자체 포함 애플리케이션에만’ 사용할 수 있습니다.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>어셈블리가 트리밍되지 않도록 방지
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289514"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557842"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 직렬화 및 역직렬화(마샬링 및 역 마샬링)하는 방법
 
@@ -118,7 +118,7 @@ UTF-8로 직렬화하면 문자열 기반 메서드를 사용할 때보다 약 5
 * 기본적으로 JSON은 축소됩니다. [JSON을 보기 좋게 출력](#serialize-to-formatted-json)할 수 있습니다.
 * 기본적으로 JSON 이름의 대/소문자는 .NET 이름과 일치합니다. [JSON 이름 대/소문자를 사용자 지정](#customize-json-names-and-values)할 수 있습니다.
 * 순환 참조가 감지되고 예외가 throw됩니다.
-* 현재는 필드가 제외됩니다.
+* 현재는 [필드](../../csharp/programming-guide/classes-and-structs/fields.md)가 제외됩니다.
 
 지원되는 형식은 다음과 같습니다.
 

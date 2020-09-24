@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271778"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738777"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -132,7 +132,7 @@ public class OrderStartedDomainEvent : INotification
 
 Udi Dahan은 이벤트를 관리하고 발생시키기 위해 정적 클래스를 사용하도록 원래 제안했습니다(예: [Domain Events – Take 2](https://udidahan.com/2008/08/25/domain-events-take-2/)(도메인 이벤트 – 테이크 2)와 같은 몇 가지 관련 게시물). 여기에는 `DomainEvents.Raise(Event myEvent)`와 같은 구문을 사용하여, 도메인 이벤트가 호출될 때 즉시 발생시키는 DomainEvents라는 정적 클래스가 포함될 수 있습니다. Jimmy Bogard는 유사한 방식을 권장하는 블로그 게시물인 [Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)(도메인: 강화: 도메인 이벤트)를 썼습니다.
 
-하지만 도메인 이벤트 클래스가 정적인 경우 처리기에 즉시 디스패치됩니다. 이로 인해 테스트와 디버깅이 더 어려워지며, 이것은 파생 작업 논리가 있는 이벤트 처리기가 이벤트가 발생한 직후에 실행되기 때문입니다. 테스트 및 디버깅을 수행하는 경우에는 현재 집계 클래스 및 여기서 벌어지는 일에만 집중하는 것이 좋습니다. 다른 집합체나 애플리케이션 논리와 관련된 파생 작업에 대한 다른 이벤트 처리기로 갑자기 리디렉션되는 것은 좋지 않습니다. 이런 이유 때문에 다른 방식이 진화하였으며 이 내용은 다음 섹션에 설명되어 있습니다.
+하지만 도메인 이벤트 클래스가 정적인 경우 처리기에 즉시 디스패치됩니다. 이로 인해 테스트와 디버깅이 더 어려워지며, 이것은 파생 작업 논리가 있는 이벤트 처리기가 이벤트가 발생한 직후에 실행되기 때문입니다. 테스트 및 디버깅을 수행하는 경우에는 현재 집계 클래스 및 여기서 벌어지는 일에만 집중하는 것이 좋습니다. 다른 집합체나 애플리케이션 로직과 관련된 파생 작업에 대한 다른 이벤트 처리기로 갑자기 리디렉션되는 것은 좋지 않습니다. 이런 이유 때문에 다른 방식이 진화하였으며 이 내용은 다음 섹션에 설명되어 있습니다.
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>발생 및 디스패치 이벤트에 대한 지연된 접근 방법
 

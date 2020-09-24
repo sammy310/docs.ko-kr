@@ -1,15 +1,15 @@
 ---
 title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
-description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
-ms.date: 03/11/2020
+description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 연속 범위의 순차적 데이터 세트를 검사하는 데이터를 탐색하는 방법을 살펴봅니다.
+ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156496"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738868"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -60,7 +60,7 @@ string[] words = new string[]
 
 [!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며. 끝 인덱스 `words[^0]`는 포함되지 않습니다. 다음 코드도 추가합니다.
+다음 코드는 “lazy”와 “dog”을 포함하는 범위를 반환합니다. 이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며. 끝 인덱스 `words[^0]`는 포함되지 않습니다. 다음 코드도 추가합니다.
 
 [!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -78,9 +78,16 @@ string[] words = new string[]
 
 ## <a name="type-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 형식 지원
 
-인덱스 및 범위는 시퀀스에서 단일 요소 또는 요소의 하위 범위에 액세스하기 위한 명확하고 간결한 구문을 제공합니다. 인덱스 식은 일반적으로 시퀀스의 요소 형식을 반환합니다. 범위 식은 일반적으로 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
+인덱스 및 범위는 시퀀스에서 단일 요소 또는 요소의 범위에 액세스하기 위한 명확하고 간결한 구문을 제공합니다. 인덱스 식은 일반적으로 시퀀스의 요소 형식을 반환합니다. 범위 식은 일반적으로 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
 <xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 형식은 각각 인덱스 또는 범위를 명시적으로 지원합니다. 단일 <xref:System.Range> 매개 변수를 사용하는 인덱서는 다양한 시퀀스 형식(예: <xref:System.Span%601?displayProperty=nameWithType>)을 반환할 수 있습니다.
+
+> [!IMPORTANT]
+> 범위 연산자를 사용하는 코드의 성능은 시퀀스 피연산자의 형식에 따라 다릅니다.
+>
+> 범위 연산자의 시간 복잡성은 시퀀스 형식에 따라 다릅니다. 예를 들어 시퀀스가 `string` 또는 배열인 경우 결과는 지정된 입력 섹션의 복사본이므로, 시간 복잡성은 *O(N)* 입니다(여기서 N은 범위의 길이입니다.). 반면, 시퀀스가 <xref:System.Span%601?displayProperty=nameWithType> 또는 <xref:System.Memory%601?displayProperty=nameWithType>인 경우 결과는 동일한 백업 저장소를 참조합니다. 다시 말해서, 복사본이 없고 작업은 *O(1)* 이 됩니다.
+>
+> 이로 인해 시간 복잡성 외에도 추가 할당과 복사본이 발생하여 성능에 영향을 미칩니다. 성능에 중요한 코드에서는 시퀀스 형식으로 `Span<T>` 또는 `Memory<T>`를 사용하는 것이 좋습니다. 이에 대해 범위 연산자가 할당되지 않기 때문입니다.
 
 이름이 `Length` 또는 `Count`이고 액세스 가능한 getter 및 반환 형식 `int`를 갖는 속성이 있는 경우 형식은 **countable**입니다. 인덱스 또는 범위를 명시적으로 지원하지 않는 countable 형식은 해당 형식에 대한 암시적 지원을 제공할 수 있습니다. 자세한 내용은 [기능 제한 참고](~/_csharplang/proposals/csharp-8.0/ranges.md)의 [암시적 인덱스 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) 및 [암시적 범위 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) 섹션을 참조하세요. 암시적 범위 지원을 사용하는 범위는 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
@@ -90,8 +97,10 @@ string[] words = new string[]
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
+모든 경우에 <xref:System.Array>의 범위 연산자는 반환된 요소를 저장할 배열을 할당합니다.
+
 ## <a name="scenarios-for-indices-and-ranges"></a>인덱스 및 범위에 대한 시나리오
 
-더 큰 시퀀스의 하위 범위를 분석할 때 자주 범위와 인덱스를 사용하게 됩니다. 새 구문에서는 어떤 하위 범위가 관련되었는지 더 명확히 이해할 수 있습니다. 로컬 함수 `MovingAverage`는 <xref:System.Range>를 인수로 사용합니다. 그러면 메서드가 최솟값, 최댓값, 평균을 계산할 때 이 범위만 열거합니다. 프로젝트에 다음 코드를 시도해 봅니다.
+더 큰 시퀀스의 부분을 분석할 때 자주 범위와 인덱스를 사용하게 됩니다. 새 구문에서는 시퀀스의 어떤 부분이 관련되었는지 더 명확히 이해할 수 있습니다. 로컬 함수 `MovingAverage`는 <xref:System.Range>를 인수로 사용합니다. 그러면 메서드가 최솟값, 최댓값, 평균을 계산할 때 이 범위만 열거합니다. 프로젝트에 다음 코드를 시도해 봅니다.
 
 [!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

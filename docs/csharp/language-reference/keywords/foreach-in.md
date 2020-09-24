@@ -1,7 +1,7 @@
 ---
 description: foreach, in(C# 참조)
 title: C# foreach 문
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142078"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828892"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
 
@@ -25,7 +25,7 @@ ms.locfileid: "89142078"
 
 `foreach` 문은 이러한 형식으로 제한되지 않습니다. 다음 조건을 충족하는 모든 형식의 인스턴스와 함께 사용할 수 있습니다.
 
-- 형식에는 반환 형식이 클래스, 구조체 또는 인터페이스 유형인 public 매개 변수가 없는 `GetEnumerator` 메서드가 포함됩니다.
+- 형식에는 반환 형식이 클래스, 구조체 또는 인터페이스 유형인 public 매개 변수가 없는 `GetEnumerator` 메서드가 포함됩니다. C# 9.0부터는 `GetEnumerator` 메서드가 형식의 [확장 메서드](../../programming-guide/classes-and-structs/extension-methods.md)일 수 있습니다.
 - `GetEnumerator` 메서드의 반환 형식이 public `Current` 속성과 반환 형식이 <xref:System.Boolean>인 public 매개 변수가 없는 `MoveNext` 메서드를 포함합니다.
 
 다음 예제에서는 인터페이스를 구현하지 않는 <xref:System.Span%601?displayProperty=nameWithType> 형식의 인스턴스와 함께 `foreach` 문을 사용합니다.
@@ -67,7 +67,12 @@ foreach (V item in collection) { }
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [foreach 문](~/_csharplang/spec/statements.md#the-foreach-statement) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+C# 8.0 이상에 추가된 기능에 대한 자세한 내용은 다음 기능 제안 노트를 참조하세요.
+
+- [비동기 스트림(C# 8.0)](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [`foreach` 루프에 대한 확장 `GetEnumerator` 지원(C# 9.0)](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
+
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 키워드](index.md)

@@ -4,12 +4,12 @@ description: Debian에 .NET Core SDK와 .NET Core 런타임을 설치하는 다�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: d4a54a8a5354a1430141d2c06d4aa90dbafc3edf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134941"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538546"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Debian에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -98,6 +98,10 @@ sudo apt-get upgrade
 ## <a name="apt-troubleshooting"></a>APT 문제 해결
 
 이 섹션에서는 APT를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="unable-to-find-package"></a>패키지를 찾을 수 없음
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>찾을 수 없음 \\ 일부 패키지를 설치할 수 없음
 

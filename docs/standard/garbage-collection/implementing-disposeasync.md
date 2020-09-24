@@ -3,19 +3,19 @@ title: DisposeAsync 메서드 구현
 description: DisposeAsync 및 DisposeAsyncCore 메서드를 구현하여 비동기 리소스 정리를 수행하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022911"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720285"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync 메서드 구현
 
@@ -77,7 +77,7 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-<xref:System.IDisposable.Dispose?displayProperty=nameWithType> 구현과 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 구현은 둘 다 간단한 상용구 코드입니다. `Dispose(bool)` 및 `DisposeAsyncCore()` 메서드는 `_disposed`가 `true`인지 확인하여 시작하고 `false`일 때만 실행됩니다.
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType> 구현과 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 구현은 둘 다 간단한 상용구 코드입니다.
 
 `Dispose(bool)` 오버로드 메서드에서 <xref:System.IDisposable> 인스턴스는 `null`이 아닌 경우 조건적으로 삭제됩니다. <xref:System.IAsyncDisposable> 인스턴스는 <xref:System.IDisposable>로 캐스팅되며 `null`이 아닌 경우 삭제됩니다. 그런 다음, 두 인스턴스가 모두 `null`에 할당됩니다.
 

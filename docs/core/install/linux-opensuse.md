@@ -4,11 +4,12 @@ description: openSUSE에 .NET Core SDK와 .NET Core 런타임을 설치하는 �
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619470"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539232"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>openSUSE에 .NET Core SDK 또는 .NET Core 런타임 설치
 
@@ -57,6 +58,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
 
 이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="unable-to-find-package"></a>패키지를 찾을 수 없음
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>가져오지 못함
 

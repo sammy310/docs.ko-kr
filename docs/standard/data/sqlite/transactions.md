@@ -1,13 +1,13 @@
 ---
 title: 의
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: 트랜잭션을 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 50c4cd1023eac892cafc3ae4395e9168bd8e9f36
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450383"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678864"
 ---
 # <a name="transactions"></a>의
 
@@ -36,3 +36,12 @@ Microsoft.Data.Sqlite는 <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTrans
 다음 코드는 커밋되지 않은 데이터 읽기를 시뮬레이션합니다. 참고: 연결 문자열에는 `Cache=Shared`가 포함되어야 합니다.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]
+
+## <a name="deferred-transactions"></a>지연된 트랜잭션
+
+Microsoft.Data.Sqlite 버전 5.0부터는 트랜잭션이 지연될 수 있습니다. 이렇게 되면 첫 번째 명령이 실행될 때까지 데이터베이스에서 실제 트랜잭션 생성이 지연됩니다. 또한 해당 명령에서 필요한 경우 트랜잭션이 점진적으로 읽기 트랜잭선에서 쓰기 트랜잭션으로 업그레이드됩니다. 트랜잭션 도중에 데이터베이스에 대한 동시 액세스를 사용하도록 설정하는 데 유용할 수 있습니다.
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DeferredTransactionSample/Program.cs?name=snippet_DeferredTransaction)]
+
+> [!WARNING]
+> 데이터베이스가 잠겨 있는 동안 트랜잭션이 읽기 트랜잭션에서 쓰기 트랜잭션으로 업그레이드되는 경우 지연된 트랜잭션 내의 명령이 실패할 수 있습니다. 이 경우 애플리케이션은 전체 트랜잭션을 다시 시도해야 합니다.

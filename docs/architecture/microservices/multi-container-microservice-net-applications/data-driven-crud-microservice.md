@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 08/14/2020
-ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267960"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679151"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -288,7 +288,7 @@ Azure Key Vault를 사용하면 누군가에게 알리지 않고 애플리케이
 
 - 헤더 버전 관리
 
-쿼리 문자열과 URI 버전 관리가 가장 구현이 간단합니다. 헤더 버전 관리는 좋은 방법입니다. 그러나 헤더 버전 관리는 URI 버전 관리 만큼 명시적이거나 간단하지 않습니다. URL 버전 관리가 가장 간단하고 명시적이므로 eShopOnContainers 애플리케이션 예제에서는 URI 버전 관리를 사용합니다.
+쿼리 문자열과 URI 버전 관리가 가장 구현이 간단합니다. 헤더 버전 관리는 좋은 방법입니다. 그러나 헤더 버전 관리는 URI 버전 관리만큼 명시적이거나 간단하지 않습니다. URL 버전 관리가 가장 간단하고 명시적이므로 eShopOnContainers 애플리케이션 예제에서는 URI 버전 관리를 사용합니다.
 
 EShopOnContainers 애플리케이션 예제에서처럼 URI 버전 관리를 사용하면 Web API를 수정할 때나 리소스 스키마를 변경할 때마다 버전 번호를 각 리소스의 URI에 추가합니다. 기존 URI는 전처럼 작동하고 요청된 버전에 부합하는 스키마에 따른 리소스를 반환하게 됩니다.
 

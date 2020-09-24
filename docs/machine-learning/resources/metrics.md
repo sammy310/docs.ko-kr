@@ -2,12 +2,12 @@
 title: ML.NET 메트릭
 description: ML.NET 모델의 성능을 평가하기 위해 사용한 메트릭 이해
 ms.date: 12/17/2019
-ms.openlocfilehash: 8e823fd8cc344c1b8e0ecd709b527137368cbfa0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397802"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679510"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>메트릭을 사용하여 ML.NET 모델 평가
 
@@ -38,7 +38,7 @@ ML.NET 모델을 평가하는 데 사용되는 메트릭을 파악합니다.
 |-----------|-----------------------|-----------|
 | **Micro-정확도** |  [Micro 평균 정확도](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy)는 모든 클래스의 기여도를 집계하여 평균 메트릭을 컴퓨팅합니다. 정확하게 예측된 인스턴스의 일부분으로서, Micro-평균은 클래스 멤버 자격을 고려하지 않습니다. 기본적으로, 모든 샘플-클래스 쌍은 정확도 메트릭에 동일기하게 기여합니다. | **1.00에 가까울 수록 좋습니다**. 다중 클래스 분류 작업에서는 클래스 불균형이 있을 것으로 의심되는 경우(예: 다른 클래스의 예보다 한 클래스의 예가 훨씬 많을 수 있음) Macro-정확도보다 Micro-정확도가 더 낫습니다.|
 | **Macro-정확도** | [Macro-평균 정확도](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy)는 클래스 수준에서는 평균 정확도입니다. 각 클래스에 대한 정확도가 계산되고 Macro-정확도는 이러한 정확도의 평균입니다. 기본적으로, 모든 클래스는 정확도 메트릭에 동일하게 기여합니다. 소수 클래스는 큰 클래스와 같은 가중치를 부여받습니다. Macro-평균 메트릭은 데이터 세트에 포함된 클래스의 인스턴스 수가 얼마나 많던지 상관없이 각 클래스에 동일한 가중치를 부여합니다. |  **1.00에 가까울 수록 좋습니다**.  각 클래스에 대해 독립적으로 메트릭을 계산한 다음, 평균을 냅니다(따라서 모든 클래스를 동일하게 처리). |
-| **로그 손실**| [로그 손실](http://wiki.fast.ai/index.php/Log_Loss)은 분류 모델의 성과를 측정합니다. 여기에서 예측 입력은 0.00과 1.00 사이의 확률 값입니다. 로그 손실은 예측된 확률이 실제 레이블에서 나뉘면서 증가합니다. | **0.00에 가까울 수록 좋습니다**. 완벽한 모델은 로그 손실이 0.00이 됩니다. 기계 학습 모델의 목표는 이 값을 최소화하는 것입니다.|
+| **로그 손실**| 로그 손실은 분류 모델의 성과를 측정합니다. 여기에서 예측 입력은 0.00과 1.00 사이의 확률 값입니다. 로그 손실은 예측된 확률이 실제 레이블에서 나뉘면서 증가합니다. | **0.00에 가까울 수록 좋습니다**. 완벽한 모델은 로그 손실이 0.00이 됩니다. 기계 학습 모델의 목표는 이 값을 최소화하는 것입니다.|
 | **로그 손실 감소(Log-Loss Reduction)** | [로그 손실 감소](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.LogLossReduction)는 임의 예측에 대한 분류자의 이점으로 해석할 수 있습니다.| **-inf ~1.00의 범위입니다. 여기서 1.00은 완벽한 예측이고 0.00은 평균 예측을 나타냅니다**. 예를 들어 값이 0.20이라면 “정확한 예측의 확률이 임의 추측보다 20% 나음”으로 해석할 수 있습니다.|
 
 Micro-정확도는 일반적으로 ML 예측의 비즈니스 요구 사항과 더 잘 맞습니다. 다중 클래스 분류 작업의 품질을 선택하기 위해 단일 메트릭을 선택하려는 경우 일반적으로 micro-정확도여야 합니다.

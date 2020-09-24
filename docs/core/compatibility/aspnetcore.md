@@ -2,15 +2,15 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 09/09/2020
+ms.date: 09/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2af0cc6721b66b1d07b196e4ba330f8425c14752
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022989"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539601"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -25,6 +25,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 이 페이지에는 ASP.NET Core 3.0, 3.1 및 5.0의 다음과 같은 호환성이 손상되는 변경이 설명되어 있습니다.
 
 - [사용되지 않는 위조 방지, CORS, 진단, MVC 및 라우팅 API가 제거됨](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [인증: AzureAD.UI 및 AzureADB2C.UI API와 패키지는 사용되지 않는 것으로 표시됨](#authentication-azureadui-and-azureadb2cui-apis-and-packages-marked-obsolete)
 - [인증: Google + 사용 중단](#authentication-google-deprecated-and-replaced)
 - [인증: HttpContext.Authentication 인증 속성이 제거됨](#authentication-httpcontextauthentication-property-removed)
 - [인증: Newtonsoft.json 형식이 대체됨](#authentication-newtonsoftjson-types-replaced)
@@ -36,6 +37,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [Azure: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: 컴파일 시간에 구성 요소에서 중요하지 않은 공백을 자름](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 속성이 됨](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor: NuGet 패키지의 대상 프레임워크가 변경됨](#blazor-target-framework-of-nuget-packages-changed)
 - [캐싱: CompactOnMemoryPressure 속성이 제거됨](#caching-compactonmemorypressure-property-removed)
 - [캐싱: Microsoft.Extensions.Caching.SqlServer는 새 SqlClient 패키지를 사용합니다.](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
@@ -104,6 +106,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
 
+[!INCLUDE[Authentication: AzureAD.UI and AzureADB2C.UI APIs and packages marked obsolete](~/includes/core-changes/aspnetcore/5.0/authentication-aad-packages-obsolete.md)]
+
+***
+
 [!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
 
 ***
@@ -117,6 +123,10 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: RenderTreeFrame readonly public fields have become properties](~/includes/core-changes/aspnetcore/5.0/blazor-rendertreeframe-fields-become-properties.md)]
 
 ***
 
