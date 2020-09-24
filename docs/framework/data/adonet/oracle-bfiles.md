@@ -2,36 +2,38 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 40060a7ea8576e08140d972072d086606d640366
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d43dfccd9735ce1ab822d7b14de2abaa0940c77b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149442"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166601"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
+
 .NET Framework Data Provider for Oracle에는 Oracle <xref:System.Data.OracleClient.OracleBFile> 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleType.BFile> 클래스가 포함되어 있습니다.  
   
- Oracle **BFILE** 데이터 형식은 최대 크기 4기가바이트의 이진 데이터에 대한 참조를 포함하는 Oracle **LOB** 데이터 유형입니다. Oracle **BFILE은** 데이터가 서버가 아닌 운영 체제의 실제 파일에 저장된다는 점에서 다른 Oracle **LOB** 데이터 형식과 다릅니다. **BFILE** 데이터 형식은 데이터에 대한 읽기 전용 액세스를 제공합니다.  
+ Oracle **BFILE** 데이터 형식은 최대 크기가 4gb 인 이진 데이터에 대 한 참조를 포함 하는 oracle **LOB** 데이터 형식입니다. Oracle **BFILE** 은 해당 데이터가 서버가 아닌 운영 체제의 물리적 파일에 저장 된다는 점에서 다른 oracle **LOB** 데이터 형식과 다릅니다. **BFILE** 데이터 형식은 데이터에 대 한 읽기 전용 액세스를 제공 합니다.  
   
- **LOB** 데이터 형식과 구별되는 **BFILE** 데이터 형식의 다른 특성은 다음과 같습니다.  
+ **LOB** 데이터 형식과 구별 되는 **BFILE** 데이터 형식의 다른 특성은 다음과 같습니다.  
   
-- 구조화되지 않은 데이터를 포함합니다.  
+- 비구조적 데이터를 포함 합니다.  
   
-- 서버 측 청크를 지원합니다.  
+- 서버 쪽 청크를 지원 합니다.  
   
-- 참조 복사 의미 체계를 사용합니다. 예를 들어 **BFILE에서**복사 작업을 수행하는 경우 **BFILE** 로케이터(파일에 대한 참조)만 복사됩니다. 파일의 데이터는 복사되지 않습니다.  
+- 참조 복사 의미 체계를 사용 합니다. 예를 들어 **bfile**에서 복사 작업을 수행 하는 경우 파일에 대 한 참조 인 **bfile** 로케이터만 복사 됩니다. 파일의 데이터는 복사 되지 않습니다.  
   
- **BFILE** 데이터 형식은 크기가 크므로 데이터베이스에 저장하는 것이 실용적이지 않은 LOB를 참조하는 데 사용해야 합니다. **LOB** 데이터 형식과 비교하여 **BFILE** 데이터 형식을 사용할 때 더 많은 클라이언트, 서버 및 통신 오버헤드가 관련됩니다. 소량의 데이터만 가져와야 하는 경우 **BFILE에** 액세스하는 것이 더 효율적입니다. 반면에 전체 개체를 가져와야 하는 경우에는 데이터베이스 상주 LOB에 액세스 하는 것이 효율적입니다.  
+ **BFILE** 데이터 형식은 크기가 큰 lob를 참조 하는 데 사용 해야 하므로 데이터베이스에 저장 하는 것은 실용적이 지 않습니다. **LOB** 데이터 형식과 비교 하 여 **BFILE** 데이터 형식을 사용 하는 경우 더 많은 클라이언트, 서버 및 통신 오버 헤드가 수반 됩니다. 적은 양의 데이터를 가져와야 하는 경우에는 **BFILE** 에 액세스 하는 것이 더 효율적입니다. 반면에 전체 개체를 가져와야 하는 경우에는 데이터베이스 상주 LOB에 액세스 하는 것이 효율적입니다.  
   
- NULL이 아닌 각 **개체는** 기본 물리적 파일의 위치를 정의하는 두 엔터티와 연결됩니다.  
+ NULL이 아닌 각 **OracleBFile** 개체는 기본 실제 파일의 위치를 정의 하는 두 개의 엔터티와 연결 됩니다.  
   
-1. 오라클 디렉터리 개체( 파일 시스템의 디렉터리에 대한 데이터베이스 별칭) 및  
+1. 파일 시스템의 디렉터리에 대 한 데이터베이스 별칭인 Oracle 디렉터리 개체  
   
-2. DIRECTORY 개체와 연결된 디렉터리에 있는 기본 물리적 파일의 파일 이름입니다.  
+2. 디렉터리 개체와 연결 된 디렉터리에 있는 기본 물리적 파일의 파일 이름입니다.  
   
 ## <a name="example"></a>예제  
- 다음 C# 예제에서는 Oracle 테이블에서 **BFILE을** 만든 다음 **OracleBFile** 개체의 형태로 검색하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Data.OracleClient.OracleDataReader> 개체 및 **OracleBFile** **검색** 및 **읽기** 메서드를 사용 하 여 보여 줍니다. 이 샘플을 사용하려면 먼저 Oracle 서버에서 "c:\\\bfiles"라는 디렉터리와 "MyFile.jpg"라는 파일을 만들어야 합니다.  
+
+ 다음 c # 예제에서는 Oracle 테이블에 **BFILE** 을 만든 다음 **OracleBFile** 개체의 형식으로 검색 하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Data.OracleClient.OracleDataReader> 개체와 **OracleBFile** **Seek** 및 **Read** 메서드를 사용 하는 방법을 보여 줍니다. 이 샘플을 사용 하려면 먼저 \\ Oracle 서버에 "c: \bfiles" 라는 디렉터리와 "MyFile.jpg" 라는 파일을 만들어야 합니다.  
   
 ```csharp  
 using System;  

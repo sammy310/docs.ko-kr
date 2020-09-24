@@ -7,14 +7,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 736b8dc5179a15ec219c1dae06b9ee6b5d6c3ef3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286691"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166627"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
+
 > [!NOTE]
 > <xref:System.Data.OracleClient>의 형식은 사용되지 않습니다. 이 형식은 현재 버전의 .NET Framework에서 계속 지원되지만 향후 릴리스에서 제거될 예정입니다. 타사 Oracle 공급자를 사용하는 것이 좋습니다.  
   
@@ -39,6 +40,7 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [시스템 요구 사항](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Oracle의 .NET Framework Data Provider을 사용 하기 위한 요구 사항에 대해 설명 하 고이를 사용 하는 경우 알아야 할 몇 가지 문제에 대해 설명 합니다.  
   
@@ -63,7 +65,8 @@ csc /r:System.Data.OracleClient.dll
  [Oracle 분산 트랜잭션](oracle-distributed-transactions.md)  
  <xref:System.Data.OracleClient.OracleConnection> 개체에서 트랜잭션이 활성화되어 있다고 판단할 경우 기존 분산 트랜잭션에 자동으로 인리스트먼트하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)  
  ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  
   

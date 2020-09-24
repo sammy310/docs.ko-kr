@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0920acac2c82677cfce37703b7027dedce91a535
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545313"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166809"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 세트 로드
+
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
   
  XML의 데이터로를 채우려면 <xref:System.Data.DataSet> 개체의 **ReadXml** 메서드를 사용 합니다 <xref:System.Data.DataSet> . **ReadXml** 메서드는 파일, 스트림 또는 **XMLREADER**에서 읽고 XML 소스와 선택적 **XmlReadMode** 인수를 인수로 사용 합니다. **XmlReader**에 대 한 자세한 내용은 [XmlTextReader를 사용 하 여 XML 데이터 읽기](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))를 참조 하세요. **ReadXml** 메서드는 XML 스트림이나 문서의 내용을 읽고를 사용 하 여 데이터를 로드 합니다 <xref:System.Data.DataSet> . 또한 <xref:System.Data.DataSet> 관계형 스키마가 이미 있는지 여부에 따라 지정 된 **XmlReadMode** 에 따라의 관계형 스키마를 만듭니다.  
@@ -33,6 +34,7 @@ ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부
 > XML 문서로 배치 된 **ReadXml** 에 **XmlReader** 를 전달 하는 경우 **ReadXml** 는 다음 요소 노드를 읽고이를 루트 요소로 처리 하 여 요소 노드 끝 까지만 읽습니다. **XmlReadMode**를 지정 하는 경우에는 적용 되지 않습니다.  
   
 ## <a name="dtd-entities"></a>DTD 엔터티  
+
  XML이 DTD (문서 종류 정의) 스키마에 정의 된 엔터티를 포함 하는 경우 <xref:System.Data.DataSet> 파일 이름, 스트림 또는 유효성 검사를 수행 하지 않는 **XmlReader** 를 **ReadXml**에 전달 하 여를 로드 하려고 하면 예외가 throw 됩니다. 대신 **Entityhandling** 을 **entityhandling.expandentities**로 설정 하 여 **XmlValidatingReader**를 만들고 **XmlValidatingReader** 를 **ReadXml**에 전달 해야 합니다. **XmlValidatingReader** 는에서 읽기 전에 엔터티를 확장 합니다 <xref:System.Data.DataSet> .  
   
  다음 코드 예제에서는 XML 스트림으로부터 <xref:System.Data.DataSet>을 로드하는 방법을 보여 줍니다. 첫 번째 예제에서는 **ReadXml** 메서드에 전달 되는 파일 이름을 보여 줍니다. 두 번째 예제에서는 <xref:System.IO.StringReader>를 사용하여 로드될 XML이 포함된 문자열을 보여 줍니다.  
@@ -101,7 +103,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> 의 XSD 스키마에 <xref:System.Data.DataSet> **targetNamespace**가 포함 된 경우 데이터를 읽을 수 없으며 **ReadXml** 를 호출 하 여 <xref:System.Data.DataSet> 정규화 된 네임 스페이스가 없는 요소가 포함 된 XML로를 로드 하는 경우 예외가 발생할 수 있습니다. 이 경우 정규화 되지 않은 요소를 읽으려면 XSD 스키마에서 **Elementformdefault** 를 "정규화 된"로 설정 합니다. 예를 들어:  
+> 의 XSD 스키마에 <xref:System.Data.DataSet> **targetNamespace**가 포함 된 경우 데이터를 읽을 수 없으며 **ReadXml** 를 호출 하 여 <xref:System.Data.DataSet> 정규화 된 네임 스페이스가 없는 요소가 포함 된 XML로를 로드 하는 경우 예외가 발생할 수 있습니다. 이 경우 정규화 되지 않은 요소를 읽으려면 XSD 스키마에서 **Elementformdefault** 를 "정규화 된"로 설정 합니다. 다음은 그 예입니다.   
   
 ```xml  
 <xsd:schema id="customDataSet"
@@ -114,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML로부터 데이터 병합  
+
  <xref:System.Data.DataSet>에 데이터가 이미 있으면 XML의 새 데이터는 <xref:System.Data.DataSet>에 이미 있는 데이터에 추가됩니다. **ReadXml** 는 XML에서 기본 키가 일치 하는 행 정보로 병합 되지 않습니다 <xref:System.Data.DataSet> . 기존 행 정보를 XML의 새 정보로 덮어쓰려면 **ReadXml** 를 사용 하 여 새를 만든 <xref:System.Data.DataSet> 다음 새를 기존에 만듭니다 <xref:System.Data.DataSet.Merge%2A> <xref:System.Data.DataSet> <xref:System.Data.DataSet> . **Diffgram** **XmlReadMode** 를 사용 하 여 **ReadXML** 를 사용 하 여 diffgram을 로드 하면 동일한 고유 식별자를 가진 행이 병합 됩니다.  
   
 ## <a name="see-also"></a>참조

@@ -2,14 +2,15 @@
 title: <EnableAmPmParseAdjustment> 요소
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117363"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167231"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> 요소
+
 날짜 및 시간 구문 분석 메서드가 조정 된 규칙 집합을 사용 하 여 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 하는지 여부를 결정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -23,32 +24,35 @@ ms.locfileid: "73117363"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 날짜 및 시간 구문 분석 메서드가 조정 된 규칙 집합을 사용 하 여 일, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석할 지 여부를 지정 합니다.|  
   
 ### <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하는 데 조정 된 규칙을 사용 하지 않습니다.|  
 |1|날짜 및 시간 구문 분석 메서드는 날짜, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하기 위해 조정 된 규칙을 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<EnableAmPmParseAdjustment>`요소는 다음 메서드가 숫자 일과 월을 포함 하는 날짜 문자열과 시간 및 AM/PM 지정자 (예: "4/10 6 AM")를 포함 하는 날짜 문자열을 구문 분석 하는 방법을 제어 합니다.  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
@@ -76,10 +80,10 @@ ms.locfileid: "73117363"
   
 |문화권 이름|enabled = "0"|enabled = "1"|  
 |------------------|------------------|------------------|  
-|en-US|오전 1/5/2017 4:00:00|오전 4/10/2017 6:00:00|  
+|ko-KR|오전 1/5/2017 4:00:00|오전 4/10/2017 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<runtime>요소인](runtime-element.md)
-- [\<configuration>요소인](../configuration-element.md)
+- [\<runtime> 요소](runtime-element.md)
+- [\<configuration> 요소](../configuration-element.md)

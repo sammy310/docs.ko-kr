@@ -2,14 +2,15 @@
 title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 165dbed1b78d00f8d4dd3e482b9fee8a23db60da
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a7043064593fa329618510d15baeb87da432652
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399621"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167103"
 ---
 # \<serviceHostingEnvironment>
+
 이 요소는 특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다. 이 요소가 비어 있으면 기본 형식이 사용됩니다. 이 요소는 애플리케이션이나 컴퓨터 수준 구성 파일에서만 사용할 수 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "70399621"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |aspNetCompatibilityEnabled|현재 애플리케이션에 ASP.NET 호환 모드를 설정했는지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 특성이로 설정 되 면 `true` WCF (Windows Communication Foundation 요청) 서비스가 ASP.NET http 파이프라인을 통해 전달 되 고, http가 아닌 프로토콜을 통한 통신이 허용 되지 않습니다. 자세한 내용은 [WCF 서비스 및 ASP.NET](../../../wcf/feature-details/wcf-services-and-aspnet.md)를 참조 하세요.|  
 |minFreeMemoryPercentageToActivateService|WCF 서비스를 활성화할 수 있습니다 시스템에 사용할 수 있는 사용 가능한 메모리의 최소 크기를 지정 하는 정수입니다. **주의:**  WCF 서비스의 web.config 파일에서 부분 신뢰와 함께이 특성을 지정 하면 <xref:System.Security.SecurityException> 서비스가 실행 될 때이 발생 합니다.|  
@@ -49,7 +51,7 @@ ms.locfileid: "70399621"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|서비스 호스트에서 사용하는 기본 주소에 대한 접두사 필터를 지정하는 구성 요소 컬렉션입니다.|  
 |[\<serviceActivations>](serviceactivations.md)|활성화 설정을 설명하는 구성 섹션입니다.|  
@@ -57,12 +59,13 @@ ms.locfileid: "70399621"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |serviceModel|모든 WCF(Windows Communication Foundation) 구성 요소의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 WCF 서비스는 호스트된 애플리케이션 도메인(AppDomain)에서 ASP.NET과 함께 실행됩니다. 동일한 AppDomain에서 WCF와 ASP.NET을 함께 사용할 수 있더라도 WCF 요청은 기본적으로 ASP.NET HTTP 파이프라인에 의해 처리되지 않습니다. 따라서 ASP.NET 애플리케이션 플랫폼의 여러 요소를 WCF 서비스에 사용할 수 없습니다. 이러한 요소는 다음과 같습니다.  
+
+ 기본적으로 WCF 서비스는 호스트된 애플리케이션 도메인(AppDomain)에서 ASP.NET과 함께 실행됩니다. 동일한 AppDomain에서 WCF와 ASP.NET을 함께 사용할 수 있더라도 WCF 요청은 기본적으로 ASP.NET HTTP 파이프라인에 의해 처리되지 않습니다. 따라서 ASP.NET 애플리케이션 플랫폼의 여러 요소를 WCF 서비스에 사용할 수 없습니다. 여기에는 다음이 포함됩니다.  
   
 - ASP.NET 파일/URL 권한 부여  
   
@@ -85,6 +88,7 @@ ms.locfileid: "70399621"
 - WCF 요청은 ASP.NET 파이프라인에서 처리됩니다. 들어오는 요청에서 동작하도록 구성된 HttpModule에서는 WCF 요청도 처리할 수 있습니다. 여기에는 사용자 지정 타사 모듈뿐만 아니라 <xref:System.Web.SessionState.SessionStateModule>과 같은 ASP.NET 플랫폼 구성 요소가 포함될 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 샘플에서는 ASP 호환 모드를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ## <a name="code"></a>코드  
@@ -93,7 +97,7 @@ ms.locfileid: "70399621"
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
