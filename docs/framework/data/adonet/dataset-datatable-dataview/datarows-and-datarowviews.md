@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151301"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153289"
 ---
-# <a name="datarows-and-datarowviews"></a><span data-ttu-id="5732b-102">DataRow 및 DataRowView</span><span class="sxs-lookup"><span data-stu-id="5732b-102">DataRows and DataRowViews</span></span>
-<span data-ttu-id="5732b-103"><xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다.</span><span class="sxs-lookup"><span data-stu-id="5732b-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="5732b-104">**DataRowView** 개체는 값을 기본 테이블의 열의 이름 또는 서수 참조로 인덱싱되는 개체 배열로 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="5732b-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="5732b-105">DataRowView <xref:System.Data.DataRow> 의 <xref:System.Data.DataRowView.Row%2A> 속성을 사용하여 **DataRowView에** 의해 노출되는 액세스 에 액세스할 수 있습니다. **DataRowView**</span><span class="sxs-lookup"><span data-stu-id="5732b-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
+# <a name="datarows-and-datarowviews"></a><span data-ttu-id="71b76-102">DataRow 및 DataRowView</span><span class="sxs-lookup"><span data-stu-id="71b76-102">DataRows and DataRowViews</span></span>
+
+<span data-ttu-id="71b76-103"><xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다.</span><span class="sxs-lookup"><span data-stu-id="71b76-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="71b76-104">**DataRowView** 개체는 기본 테이블에 있는 열의 이름 또는 서 수 참조로 인덱싱되는 개체 배열로 값을 노출 합니다.</span><span class="sxs-lookup"><span data-stu-id="71b76-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="71b76-105"><xref:System.Data.DataRow>DataRowView의 속성을 사용 하 여 **DataRowView** 에 의해 노출 되는에 액세스할 수 있습니다 <xref:System.Data.DataRowView.Row%2A> . **DataRowView**</span><span class="sxs-lookup"><span data-stu-id="71b76-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
   
- <span data-ttu-id="5732b-106">**DataRowView를**사용하여 값을 볼 때 <xref:System.Data.DataView.RowStateFilter%2A> **DataView의** 속성은 노출된 기본 **DataRow의** 행 버전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="5732b-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="5732b-107">**DataRow를**사용하여 다른 행 버전에 액세스하는 것에 대한 자세한 내용은 [행 상태 및 행 버전을](row-states-and-row-versions.md)참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5732b-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](row-states-and-row-versions.md).</span></span>  
+ <span data-ttu-id="71b76-106">**DataRowView**를 사용 하 여 값을 볼 때 <xref:System.Data.DataView.RowStateFilter%2A> **DataView** 의 속성은 기본 **DataRow** 가 노출 되는 행 버전을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="71b76-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="71b76-107">**DataRow**를 사용 하 여 다른 행 버전에 액세스 하는 방법에 대 한 자세한 내용은 [행 상태 및 행 버전](row-states-and-row-versions.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="71b76-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](row-states-and-row-versions.md).</span></span>  
   
- <span data-ttu-id="5732b-108">다음 코드 예제에서는 테이블의 현재 값과 원래 값을 모두 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="5732b-108">The following code example displays all the current and original values in a table.</span></span>  
+ <span data-ttu-id="71b76-108">다음 코드 예제에서는 테이블의 현재 값과 원래 값을 모두 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="71b76-108">The following code example displays all the current and original values in a table.</span></span>  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  
@@ -59,11 +60,11 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5732b-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5732b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71b76-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="71b76-109">See also</span></span>
 
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="5732b-110">DataView</span><span class="sxs-lookup"><span data-stu-id="5732b-110">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="5732b-111">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="5732b-111">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="71b76-110">데이터 보기</span><span class="sxs-lookup"><span data-stu-id="71b76-110">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="71b76-111">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="71b76-111">ADO.NET Overview</span></span>](../ado-net-overview.md)
