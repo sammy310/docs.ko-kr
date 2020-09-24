@@ -3,12 +3,12 @@ title: 복원력 있는 통신
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 복원 력 있는 통신
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613748"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166042"
 ---
 # <a name="resilient-communications"></a>복원 력 있는 통신
 
@@ -30,7 +30,7 @@ ms.locfileid: "83613748"
 
 ## <a name="service-mesh"></a>서비스 메시
 
-더 나은 방법은 *서비스 메시*의 진화 하는 기술입니다. [서비스 메시](https://www.nginx.com/blog/what-is-a-service-mesh/) 는 서비스 통신 및 위에서 언급 한 기타 과제를 처리 하는 기본 제공 기능이 포함 된 구성 가능한 인프라 계층입니다. 이러한 문제를 서비스 프록시로 이동 하 여 이러한 문제를 분리 합니다. 프록시는 비즈니스 코드에서 격리를 제공 하기 위해 별도의 프로세스 ( [사이드카](https://docs.microsoft.com/azure/architecture/patterns/sidecar)라고 함)에 배포 됩니다. 그러나 사이드카는 서비스에 연결 되며,이를 사용 하 여 생성 되 고 수명 주기를 공유 합니다. 그림 6-7에서는이 시나리오를 보여 줍니다.
+더 나은 방법은 *서비스 메시*의 진화 하는 기술입니다. [서비스 메시](https://www.nginx.com/blog/what-is-a-service-mesh/) 는 서비스 통신 및 위에서 언급 한 기타 과제를 처리 하는 기본 제공 기능이 포함 된 구성 가능한 인프라 계층입니다. 이러한 문제를 서비스 프록시로 이동 하 여 이러한 문제를 분리 합니다. 프록시는 비즈니스 코드에서 격리를 제공 하기 위해 별도의 프로세스 ( [사이드카](/azure/architecture/patterns/sidecar)라고 함)에 배포 됩니다. 그러나 사이드카는 서비스에 연결 되며,이를 사용 하 여 생성 되 고 수명 주기를 공유 합니다. 그림 6-7에서는이 시나리오를 보여 줍니다.
 
 ![측 자동차를 사용 하는 서비스 메시](./media/service-mesh-with-side-car.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "83613748"
 
 ## <a name="istio-and-envoy"></a>Istio 및 엔보이
 
-몇 가지 서비스 메시 옵션이 현재 존재 하지만이 문서를 작성할 당시에는 [Istio](https://istio.io/docs/concepts/what-is-istio/) 가 가장 인기 있는 것입니다. Istio는 IBM, Google 및 Lyft의 공동 공동입니다. 새 배포 응용 프로그램 또는 기존 응용 프로그램에 통합 될 수 있는 오픈 소스 제품입니다. 이 기술은 마이크로 서비스를 보호, 연결 및 모니터링 하기 위한 일관 되 고 완전 한 솔루션을 제공 합니다. 해당 기능에는 다음이 포함 됩니다.
+몇 가지 서비스 메시 옵션이 현재 존재 하지만이 문서를 작성할 당시에는 [Istio](https://istio.io/docs/concepts/what-is-istio/) 가 가장 인기 있는 것입니다. Istio는 IBM, Google 및 Lyft의 공동 공동입니다. 새 배포 응용 프로그램 또는 기존 응용 프로그램에 통합 될 수 있는 오픈 소스 제품입니다. 이 기술은 마이크로 서비스를 보호, 연결 및 모니터링 하기 위한 일관 되 고 완전 한 솔루션을 제공 합니다. 해당 기능은 다음과 같습니다.
 
 - 강력한 id 기반 인증 및 권한 부여를 사용 하 여 클러스터에서 서비스 간 통신을 보호 합니다.
 - HTTP, [Grpc](https://grpc.io/), WEBSOCKET 및 TCP 트래픽에 대 한 자동 부하 분산.
@@ -74,28 +74,28 @@ Istio 구현에 대 한 주요 구성 요소는 [엔보이 프록시](https://ww
 
 Azure cloud는 Istio를 수용 하 고 Azure Kubernetes 서비스 내에서이를 직접 지원 합니다. 다음 링크를 통해 시작할 수 있습니다.
 
-- [AKS에 Istio 설치](https://docs.microsoft.com/azure/aks/istio-install)
-- [AKS 및 Istio 사용](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [AKS에 Istio 설치](/azure/aks/istio-install)
+- [AKS 및 Istio 사용](/azure/aks/istio-scenario-routing)
 
 ### <a name="references"></a>참조
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [다시 시도 패턴](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [다시 시도 패턴](/azure/architecture/patterns/retry)
 
-- [회로 차단기 패턴](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- [회로 차단기 패턴](/azure/architecture/patterns/circuit-breaker)
 
 - [Azure의 복원 력](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [네트워크 대기 시간](https://www.techopedia.com/definition/8553/network-latency)
 
-- [중복](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [중복](/azure/architecture/guide/design-principles/redundancy)
 
-- [지역에서 복제](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [지역에서 복제](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 
-- [자동 크기 조정 지침](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [자동 크기 조정 지침](/azure/architecture/best-practices/auto-scaling)
 
 - [Istio](https://istio.io/docs/concepts/what-is-istio/)
 

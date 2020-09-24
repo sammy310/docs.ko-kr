@@ -3,12 +3,12 @@ title: 서비스 간 통신
 description: 백 엔드 클라우드 네이티브 마이크로 서비스가 다른 백 엔드 마이크로 서비스와 통신 하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539811"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166081"
 ---
 # <a name="service-to-service-communication"></a>서비스 간 통신
 
@@ -54,7 +54,7 @@ ms.locfileid: "90539811"
 
 ### <a name="materialized-view-pattern"></a>구체화된 뷰 패턴
 
-마이크로 서비스 커플링을 제거 하는 널리 사용 되는 옵션은 [구체화 된 뷰 패턴](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)입니다. 이 패턴을 사용 하면 마이크로 서비스는 다른 서비스에서 소유 하는 정규화 된 로컬 데이터 복사본을 저장 합니다. 제품 카탈로그 및 가격 마이크로 서비스를 쿼리 하는 시장 바구니 마이크로 서비스 대신 해당 데이터의 로컬 복사본을 유지 관리 합니다. 이 패턴은 불필요 한 결합을 제거 하 고 안정성 및 응답 시간을 향상 시킵니다. 전체 작업은 단일 프로세스 내에서 실행 됩니다. 5 장에서이 패턴 및 기타 데이터 문제를 살펴봅니다.
+마이크로 서비스 커플링을 제거 하는 널리 사용 되는 옵션은 [구체화 된 뷰 패턴](/azure/architecture/patterns/materialized-view)입니다. 이 패턴을 사용 하면 마이크로 서비스는 다른 서비스에서 소유 하는 정규화 된 로컬 데이터 복사본을 저장 합니다. 제품 카탈로그 및 가격 마이크로 서비스를 쿼리 하는 시장 바구니 마이크로 서비스 대신 해당 데이터의 로컬 복사본을 유지 관리 합니다. 이 패턴은 불필요 한 결합을 제거 하 고 안정성 및 응답 시간을 향상 시킵니다. 전체 작업은 단일 프로세스 내에서 실행 됩니다. 5 장에서이 패턴 및 기타 데이터 문제를 살펴봅니다.
 
 ### <a name="service-aggregator-pattern"></a>서비스 집계 패턴
 
@@ -94,7 +94,7 @@ ms.locfileid: "90539811"
 
 Azure storage 큐는 빠르고 경제적 이며 Azure storage 계정으로 지원 되는 간단한 큐 인프라를 제공 합니다.
 
-[Azure Storage 큐](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction) 는 안정적이 고 지속적인 메시징을 갖춘 REST 기반 큐 메커니즘을 기능 합니다. 최소 기능 집합을 제공 하지만 저렴 하 고 수백만 개의 메시지를 저장 합니다. 용량 범위는 최대 500 TB입니다. 단일 메시지의 크기는 최대 64 KB가 될 수 있습니다.
+[Azure Storage 큐](/azure/storage/queues/storage-queues-introduction) 는 안정적이 고 지속적인 메시징을 갖춘 REST 기반 큐 메커니즘을 기능 합니다. 최소 기능 집합을 제공 하지만 저렴 하 고 수백만 개의 메시지를 저장 합니다. 용량 범위는 최대 500 TB입니다. 단일 메시지의 크기는 최대 64 KB가 될 수 있습니다.
 
 HTTP 또는 HTTPS를 사용 하 여 인증 된 호출을 통해 전 세계 어디에서 나 메시지에 액세스할 수 있습니다. 저장소 큐는 많은 수의 동시 클라이언트로 확장 하 여 트래픽 급증을 처리할 수 있습니다.
 
@@ -122,13 +122,13 @@ Azure Storage 큐는 클라우드 네이티브 응용 프로그램에서 명령 
 
 더 복잡 한 메시징 요구 사항은 큐를 Azure Service Bus 하는 것이 좋습니다.
 
-[Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) 는 강력한 메시지 인프라를 기반으로 하며,이는 조정 된 *메시징 모델*을 지원 합니다. 메시지는 소비자가 받을 때까지 broker (큐)에 안정적으로 저장 됩니다. 큐는 메시지를 큐에 추가 하는 순서에 따라 FIFO (선입 선출) 메시지 배달을 보장 합니다.
+[Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) 는 강력한 메시지 인프라를 기반으로 하며,이는 조정 된 *메시징 모델*을 지원 합니다. 메시지는 소비자가 받을 때까지 broker (큐)에 안정적으로 저장 됩니다. 큐는 메시지를 큐에 추가 하는 순서에 따라 FIFO (선입 선출) 메시지 배달을 보장 합니다.
 
-메시지 크기는 최대 256 KB까지 훨씬 클 수 있습니다. 메시지는 무제한 시간 동안 큐에 유지 됩니다. Service Bus는 HTTP 기반 호출만 지원 하 고 [Amqp 프로토콜](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-amqp-overview)을 완벽 하 게 지원 합니다. AMQP는 이진 프로토콜 및 높은 수준의 안정성을 지 원하는 공급 업체 전체의 오픈 표준입니다.
+메시지 크기는 최대 256 KB까지 훨씬 클 수 있습니다. 메시지는 무제한 시간 동안 큐에 유지 됩니다. Service Bus는 HTTP 기반 호출만 지원 하 고 [Amqp 프로토콜](/azure/service-bus-messaging/service-bus-amqp-overview)을 완벽 하 게 지원 합니다. AMQP는 이진 프로토콜 및 높은 수준의 안정성을 지 원하는 공급 업체 전체의 오픈 표준입니다.
 
-Service Bus은 [트랜잭션 지원](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions) 및 [중복 검색 기능](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection)을 비롯 한 다양 한 기능 집합을 제공 합니다. 큐는 메시지당 "최대 한 번의 배달"을 보장 합니다. 이미 전송 된 메시지를 자동으로 삭제 합니다. 생산자가 확실 하지 않은 경우 동일한 메시지를 다시 보낼 수 있으며, Service Bus 한 개의 복사본만 처리 되도록 보장 됩니다. 중복 검색을 통해 추가 인프라를 구축할 필요가 없습니다.
+Service Bus은 [트랜잭션 지원](/azure/service-bus-messaging/service-bus-transactions) 및 [중복 검색 기능](/azure/service-bus-messaging/duplicate-detection)을 비롯 한 다양 한 기능 집합을 제공 합니다. 큐는 메시지당 "최대 한 번의 배달"을 보장 합니다. 이미 전송 된 메시지를 자동으로 삭제 합니다. 생산자가 확실 하지 않은 경우 동일한 메시지를 다시 보낼 수 있으며, Service Bus 한 개의 복사본만 처리 되도록 보장 됩니다. 중복 검색을 통해 추가 인프라를 구축할 필요가 없습니다.
 
-두 가지 enterprise 기능인 분할 및 세션이 있습니다. 기존 Service Bus 큐는 단일 메시지 브로커에 의해 처리 되 고 단일 메시지 저장소에 저장 됩니다. 그러나 [Service Bus 분할](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) 은 큐를 여러 메시지 브로커 및 메시지 저장소에 분산 합니다. 전체 처리량은 더 이상 단일 메시지 브로커 또는 메시징 저장소의 성능으로 제한 되지 않습니다. 메시징 저장소의 일시적인 중단은 분할 된 큐를 사용할 수 없게 렌더링 하지 않습니다.
+두 가지 enterprise 기능인 분할 및 세션이 있습니다. 기존 Service Bus 큐는 단일 메시지 브로커에 의해 처리 되 고 단일 메시지 저장소에 저장 됩니다. 그러나 [Service Bus 분할](/azure/service-bus-messaging/service-bus-partitioning) 은 큐를 여러 메시지 브로커 및 메시지 저장소에 분산 합니다. 전체 처리량은 더 이상 단일 메시지 브로커 또는 메시징 저장소의 성능으로 제한 되지 않습니다. 메시징 저장소의 일시적인 중단은 분할 된 큐를 사용할 수 없게 렌더링 하지 않습니다.
 
 [Service Bus 세션](https://codingcanvas.com/azure-service-bus-sessions/) 은 관련 메시지를 그룹화 하는 방법을 제공 합니다. 메시지를 함께 처리 하 고 작업을 끝에 완료 해야 하는 워크플로 시나리오를 가정해 보겠습니다. 이를 활용 하려면 큐에 대해 세션을 명시적으로 사용 하도록 설정 해야 하며 관련 된 각 메시지에 동일한 세션 ID가 포함 되어야 합니다.
 
@@ -148,7 +148,7 @@ Service Bus은 [트랜잭션 지원](https://docs.microsoft.com/azure/service-bu
 
 이 시나리오를 해결 하기 위해 이벤트 상호 작용의 세 번째 유형인 *이벤트*로 이동 합니다. 한 마이크로 서비스 작업이 발생 했음을 알립니다. 다른 마이크로 서비스는 관심이 있으면 작업 또는 이벤트에 반응 합니다.
 
-이벤트는 2 단계 프로세스입니다. 지정 된 상태 변경의 경우 마이크로 서비스은 메시지 브로커에 이벤트를 게시 하 여 관심 있는 다른 모든 마이크로 서비스에 사용할 수 있도록 합니다. 관심 있는 마이크로 서비스는 메시지 브로커의 이벤트를 구독 하 여 알림을 받습니다. [게시/구독](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) 패턴을 사용 하 여 [이벤트 기반 통신](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)을 구현 합니다.
+이벤트는 2 단계 프로세스입니다. 지정 된 상태 변경의 경우 마이크로 서비스은 메시지 브로커에 이벤트를 게시 하 여 관심 있는 다른 모든 마이크로 서비스에 사용할 수 있도록 합니다. 관심 있는 마이크로 서비스는 메시지 브로커의 이벤트를 구독 하 여 알림을 받습니다. [게시/구독](/azure/architecture/patterns/publisher-subscriber) 패턴을 사용 하 여 [이벤트 기반 통신](/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)을 구현 합니다.
 
 그림 4-15에는이를 구독 하는 다른 두 마이크로 서비스를 사용 하 여 이벤트를 게시 하는 시장 바구니 마이크로 서비스 나와 있습니다.
 
@@ -158,7 +158,7 @@ Service Bus은 [트랜잭션 지원](https://docs.microsoft.com/azure/service-bu
 
 통신 채널의 중간에 있는 *이벤트 버스* 구성 요소를 확인 합니다. 이 클래스는 메시지 브로커를 캡슐화 하 고 기본 응용 프로그램에서 분리 하는 사용자 지정 클래스입니다. 주문 및 인벤토리 마이크로 서비스는 서로에 대 한 지식 없이 이벤트와 시장 바구니 마이크로 서비스을 독립적으로 작동 합니다. 등록 된 이벤트는 이벤트 버스에 게시 될 때 해당 이벤트에 대해 작동 합니다.
 
-이벤트를 사용 하 여 큐 기술에서 *항목*으로 이동 합니다. [토픽](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) 은 큐와 유사 하지만 일대다 메시징 패턴을 지원 합니다. 한 마이크로 서비스 메시지를 게시 합니다. 여러 구독 마이크로 서비스에서 해당 메시지를 수신 하 고 작업 하도록 선택할 수 있습니다. 그림 4-16에서는 항목 아키텍처를 보여 줍니다.
+이벤트를 사용 하 여 큐 기술에서 *항목*으로 이동 합니다. [토픽](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) 은 큐와 유사 하지만 일대다 메시징 패턴을 지원 합니다. 한 마이크로 서비스 메시지를 게시 합니다. 여러 구독 마이크로 서비스에서 해당 메시지를 수신 하 고 작업 하도록 선택할 수 있습니다. 그림 4-16에서는 항목 아키텍처를 보여 줍니다.
 
 ![토픽 아키텍처](./media/topic-architecture.png)
 
@@ -170,17 +170,17 @@ Azure 클라우드는 Azure Service Bus 토픽 및 Azure EventGrid와 같은 두
 
 ### <a name="azure-service-bus-topics"></a>Azure Service Bus Topics
 
-Azure Service Bus 큐의 동일한 강력한 조정 된 메시지 모델 위에 있는 것은 [Azure Service Bus 토픽](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)입니다. 토픽은 여러 독립 게시자의 메시지를 수신 하 고 최대 2000 구독자에 게 메시지를 보낼 수 있습니다. 시스템을 중지 하거나 토픽을 다시 만들지 않고도 런타임에 구독을 동적으로 추가 하거나 제거할 수 있습니다.
+Azure Service Bus 큐의 동일한 강력한 조정 된 메시지 모델 위에 있는 것은 [Azure Service Bus 토픽](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)입니다. 토픽은 여러 독립 게시자의 메시지를 수신 하 고 최대 2000 구독자에 게 메시지를 보낼 수 있습니다. 시스템을 중지 하거나 토픽을 다시 만들지 않고도 런타임에 구독을 동적으로 추가 하거나 제거할 수 있습니다.
 
-[중복 검색](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) 및 [트랜잭션 지원을](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions)포함 하 여 항목에 대해서도 Azure Service Bus 큐의 많은 고급 기능을 사용할 수 있습니다. 기본적으로 Service Bus 토픽은 단일 메시지 브로커에 의해 처리 되 고 단일 메시지 저장소에 저장 됩니다. 그러나 [Service Bus 분할](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) 은 여러 메시지 브로커 및 메시지 저장소에 분산 하 여 토픽의 크기를 조정 합니다.
+[중복 검색](/azure/service-bus-messaging/duplicate-detection) 및 [트랜잭션 지원을](/azure/service-bus-messaging/service-bus-transactions)포함 하 여 항목에 대해서도 Azure Service Bus 큐의 많은 고급 기능을 사용할 수 있습니다. 기본적으로 Service Bus 토픽은 단일 메시지 브로커에 의해 처리 되 고 단일 메시지 저장소에 저장 됩니다. 그러나 [Service Bus 분할](/azure/service-bus-messaging/service-bus-partitioning) 은 여러 메시지 브로커 및 메시지 저장소에 분산 하 여 토픽의 크기를 조정 합니다.
 
-[예약 된 메시지 배달](https://docs.microsoft.com/azure/service-bus-messaging/message-sequencing) 는 특정 처리 시간을 가진 메시지에 태그를 지정 합니다. 이 메시지는 해당 시간 이전에 항목에 표시 되지 않습니다. [메시지를 지연](https://docs.microsoft.com/azure/service-bus-messaging/message-deferral) 하면 나중에 메시지를 검색 하는 것을 연기할 수 있습니다. 둘 다 작업을 특정 순서로 처리 하는 워크플로 처리 시나리오에서 일반적으로 사용 됩니다. 이전 작업이 완료 될 때까지 받은 메시지의 처리를 연기할 수 있습니다.
+[예약 된 메시지 배달](/azure/service-bus-messaging/message-sequencing) 는 특정 처리 시간을 가진 메시지에 태그를 지정 합니다. 이 메시지는 해당 시간 이전에 항목에 표시 되지 않습니다. [메시지를 지연](/azure/service-bus-messaging/message-deferral) 하면 나중에 메시지를 검색 하는 것을 연기할 수 있습니다. 둘 다 작업을 특정 순서로 처리 하는 워크플로 처리 시나리오에서 일반적으로 사용 됩니다. 이전 작업이 완료 될 때까지 받은 메시지의 처리를 연기할 수 있습니다.
 
 Service Bus 토픽은 클라우드 네이티브 시스템에서 게시/구독 통신을 사용 하도록 설정 하는 강력 하 고 검증 된 기술입니다.
 
 ### <a name="azure-event-grid"></a>Azure Event Grid
 
-Azure Service Bus는 전체 엔터프라이즈 기능 집합을 포함 하는 전투 테스트 된 메시징 브로커 이지만 [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) 는 블록에 대 한 새로운 어린이입니다.
+Azure Service Bus는 전체 엔터프라이즈 기능 집합을 포함 하는 전투 테스트 된 메시징 브로커 이지만 [Azure Event Grid](/azure/event-grid/overview) 는 블록에 대 한 새로운 어린이입니다.
 
 처음에는 Event Grid 다른 토픽 기반 메시징 시스템 처럼 보일 수 있습니다. 그러나 여러 가지 측면에서 다릅니다. 이벤트 기반 워크 로드에 중점을 둔이 기능을 사용 하면 실시간 이벤트 처리, 심층 Azure 통합 및 서버 리스를 사용 하지 않는 인프라의 모든 기능을 사용할 수 있습니다. 최신 클라우드 전용 및 서버 리스 응용 프로그램을 위해 설계 되었습니다.
 
@@ -206,9 +206,9 @@ Event Grid는 완전히 관리 되는 서버 리스 클라우드 서비스입니
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure 클라우드에서 메시지 스트리밍
 
-Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것과 같은 단일 불연속 이벤트를 노출 하는 응용 프로그램에 대 한 뛰어난 지원을 제공 합니다. 그러나 클라우드 네이티브 시스템에서 *관련 이벤트 스트림을*처리 해야 하는 경우는 어떻게 되나요? [이벤트 스트림은](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) 더 복잡 합니다. 일반적으로 시간 순서를 지정 하 고 상호 관련 되며 그룹으로 처리 되어야 합니다.
+Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것과 같은 단일 불연속 이벤트를 노출 하는 응용 프로그램에 대 한 뛰어난 지원을 제공 합니다. 그러나 클라우드 네이티브 시스템에서 *관련 이벤트 스트림을*처리 해야 하는 경우는 어떻게 되나요? [이벤트 스트림은](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) 더 복잡 합니다. 일반적으로 시간 순서를 지정 하 고 상호 관련 되며 그룹으로 처리 되어야 합니다.
 
-[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) 는 이벤트를 수집, 변환 및 저장 하는 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 원격 분석 컨텍스트에서 내보낸 연속 이벤트 알림과 같은 스트리밍 데이터를 캡처하기 위해 미세 하 게 조정 됩니다. 서비스는 확장성이 뛰어나고 [초당 수백만 개의 이벤트](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)를 저장 하 고 처리할 수 있습니다. 그림 4-18에 표시 된 것 처럼 이벤트 파이프라인에 대 한 전방 도어 이며 수집 스트림을 이벤트 사용에서 분리 하는 경우가 많습니다.
+[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) 는 이벤트를 수집, 변환 및 저장 하는 데이터 스트리밍 플랫폼 및 이벤트 수집 서비스입니다. 원격 분석 컨텍스트에서 내보낸 연속 이벤트 알림과 같은 스트리밍 데이터를 캡처하기 위해 미세 하 게 조정 됩니다. 서비스는 확장성이 뛰어나고 [초당 수백만 개의 이벤트](/azure/event-hubs/event-hubs-about)를 저장 하 고 처리할 수 있습니다. 그림 4-18에 표시 된 것 처럼 이벤트 파이프라인에 대 한 전방 도어 이며 수집 스트림을 이벤트 사용에서 분리 하는 경우가 많습니다.
 
 ![Azure Event Hub](./media/azure-event-hub.png)
 
@@ -216,9 +216,9 @@ Azure Service Bus 및 Event Grid는 새 문서를 Cosmos DB에 삽입 하는 것
 
 이벤트 허브는 짧은 대기 시간과 구성 가능한 시간 보존을 지원 합니다. 큐 및 항목과 달리 소비자가 읽은 후 이벤트 데이터를 유지 Event Hubs. 이 기능을 사용 하면 내부 및 외부의 다른 데이터 분석 서비스에서 추가 분석을 위해 데이터를 재생할 수 있습니다. 이벤트 허브에 저장 된 이벤트는 보존 기간이 만료 되는 경우에만 삭제 됩니다. 즉, 기본적으로 1 일 이지만 구성할 수 있습니다.
 
-이벤트 허브는 HTTPS 및 AMQP를 비롯 한 일반적인 이벤트 게시 프로토콜을 지원 합니다. Kafka 1.0도 지원 합니다. [기존 kafka 응용 프로그램](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 은 대량 kafka 클러스터 관리에 대 한 대안을 제공 하는 kafka 프로토콜을 사용 하 여 이벤트 허브와 통신할 수 있습니다. 많은 오픈 소스 클라우드 네이티브 시스템은 Kafka을 수용 합니다.
+이벤트 허브는 HTTPS 및 AMQP를 비롯 한 일반적인 이벤트 게시 프로토콜을 지원 합니다. Kafka 1.0도 지원 합니다. [기존 kafka 응용 프로그램](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 은 대량 kafka 클러스터 관리에 대 한 대안을 제공 하는 kafka 프로토콜을 사용 하 여 이벤트 허브와 통신할 수 있습니다. 많은 오픈 소스 클라우드 네이티브 시스템은 Kafka을 수용 합니다.
 
-Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴에서는 이벤트 처리를 위해 매우 폭넓은 수평 확장이 가능하며, 큐와 항목에서는 사용할 수 없는 기타 스트림 중심 기능이 제공됩니다. 파티션은 Event Hub에서 보유하는 순서가 지정된 이벤트 시퀀스입니다. 최신 이벤트가 도착하면 이 시퀀스의 끝에 추가됩니다.그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
+Event Hubs는 각 소비자가 메시지 스트림의 특정 하위 집합 또는 파티션만 읽는 [분할 된 소비자 모델](/azure/event-hubs/event-hubs-features) 을 통해 메시지 스트리밍을 구현 합니다. 이 패턴에서는 이벤트 처리를 위해 매우 폭넓은 수평 확장이 가능하며, 큐와 항목에서는 사용할 수 없는 기타 스트림 중심 기능이 제공됩니다. 파티션은 Event Hub에서 보유하는 순서가 지정된 이벤트 시퀀스입니다. 최신 이벤트가 도착하면 이 시퀀스의 끝에 추가됩니다.그림 4-19에서는 이벤트 허브의 분할을 보여 줍니다.
 
 ![이벤트 허브 분할](./media/event-hub-partitioning.png)
 

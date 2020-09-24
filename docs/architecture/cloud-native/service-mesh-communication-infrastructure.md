@@ -3,12 +3,12 @@ title: 서비스 메시 통신 인프라
 description: Service 메시 기술이 클라우드 네이티브 마이크로 서비스 통신을 간소화 하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 39dc1ded06eb0b92a2a1b40cfe981d9bd49bf381
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613691"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165951"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>서비스 메시 통신 인프라
 
@@ -18,7 +18,7 @@ ms.locfileid: "83613691"
 
 새롭고 신속 하 게 진화 하는 기술 *서비스 메시*를 중심으로 하는 마이크로 서비스 communication의 최신 접근 방식입니다. 서비스 [메시](https://www.nginx.com/blog/what-is-a-service-mesh/) 는 서비스 간 통신, 복원 력 및 많은 크로스 절삭 문제를 처리 하는 기본 제공 기능이 포함 된 구성 가능한 인프라 계층입니다. 이러한 문제에 대 한 책임을 마이크로 서비스 및 서비스 메시 계층으로 이동 합니다. 통신은 마이크로 서비스에서 벗어나 추상화 됩니다.
 
-서비스 메시의 주요 구성 요소는 프록시입니다. 클라우드 네이티브 응용 프로그램에서 프록시 인스턴스는 일반적으로 각 마이크로 서비스와 공동 배치 됩니다. 별도의 프로세스에서 실행 되는 동안 둘은 밀접 하 게 연결 되 고 동일한 수명 주기를 공유 합니다. [사이드카 패턴](https://docs.microsoft.com/azure/architecture/patterns/sidecar)이라고 하는이 패턴은 그림 4-24에 나와 있습니다.
+서비스 메시의 주요 구성 요소는 프록시입니다. 클라우드 네이티브 응용 프로그램에서 프록시 인스턴스는 일반적으로 각 마이크로 서비스와 공동 배치 됩니다. 별도의 프로세스에서 실행 되는 동안 둘은 밀접 하 게 연결 되 고 동일한 수명 주기를 공유 합니다. [사이드카 패턴](/azure/architecture/patterns/sidecar)이라고 하는이 패턴은 그림 4-24에 나와 있습니다.
 
 ![측 자동차를 사용 하는 서비스 메시](./media/service-mesh-with-side-car.png)
 
@@ -40,13 +40,13 @@ ms.locfileid: "83613691"
 
 클라우드 네이티브 시스템에서 통신을 구현 하는 데 도움이 되는 관리 되는 Azure 서비스에 대 한 특별 한 강조는 다음과 같습니다.
 
-- [Azure 애플리케이션 게이트웨이](https://docs.microsoft.com/azure/application-gateway/overview)
+- [Azure Application Gateway](/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
 - [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
-- [Azure Storage 큐](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
+- [Azure Storage 큐](/azure/storage/queues/storage-queues-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure 이벤트 허브](https://azure.microsoft.com/services/event-hubs/)
 
 이제 클라우드 네이티브 시스템에서 분산 된 데이터로 이동 하 고 그에 따른 이점과 과제가 제공 됩니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "83613691"
 
 - [.NET 마이크로 서비스: 컨테이너 화 된 .NET 응용 프로그램에 대 한 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [마이크로 서비스에 대 한 서비스 간 통신 디자인](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
+- [마이크로 서비스에 대 한 서비스 간 통신 디자인](/azure/architecture/microservices/design/interservice-communication)
 
 - [실시간 기능을 추가 하는 완전히 관리 되는 서비스인 Azure SignalR Service](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
@@ -64,9 +64,9 @@ ms.locfileid: "83613691"
 
 - [gRPC 설명서](https://grpc.io/docs/guides/)
 
-- [WCF 개발자를 위한 gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
+- [WCF 개발자를 위한 gRPC](../grpc-for-wcf-developers/index.md)
 
-- [GRPC 서비스와 HTTP Api 비교](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [GRPC 서비스와 HTTP Api 비교](/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 - [.NET 비디오를 사용 하 여 gRPC 서비스 빌드](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 

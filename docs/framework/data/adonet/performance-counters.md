@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4f645a51996078f8dd80b6c455c420633db36155
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557907"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164603"
 ---
 # <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
+
 ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 애플리케이션 상태와 애플리케이션에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
   
 ## <a name="available-performance-counters"></a>사용 가능한 성능 카운터  
+
  <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient> 에서 사용 가능한 성능 카운터는 현재 14가지가 있으며 다음 표에 설명되어 있습니다. 개별 카운터 이름은 Microsoft .NET Framework의 국가별 버전에서 지역화되어 있지 않습니다.  
   
 |성능 카운터|Description|  
@@ -37,10 +39,13 @@ ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClien
 |`SoftDisconnectsPerSecond`|연결 풀로 반환되는 활성 연결 수입니다. **참고:**  이 성능 카운터는 기본적으로 사용 되지 않습니다. 이 성능 카운터를 사용 하도록 설정 하려면 [기본적으로 활성화 되지 않은 카운터 활성화](#ActivatingOffByDefault)를 참조 하십시오.|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>연결 풀 그룹 및 연결 풀  
+
  Windows 인증(통합 보안)을 사용할 때 `NumberOfActiveConnectionPoolGroups` 및 `NumberOfActiveConnectionPools` 성능 카운터를 모두 모니터링해야 합니다. 이와 같이 해야 하는 이유는 연결 풀 그룹은 고유 연결 문자열에 매핑되기 때문입니다. 통합 보안이 사용되면 연결 풀이 연결 문자열에 매핑되며 개별 Windows ID에 대한 별도의 풀이 추가적으로 만들어집니다. 예를 들어, 동일한 AppDomain 내에서 Fred와 Julie가 모두 연결 문자열 `"Data Source=MySqlServer;Integrated Security=true"`를 사용하는 경우 연결 문자열에 대해 연결 풀 그룹이 만들어지며 Fred와 Julie에 대해 각각 하나씩 두 개의 추가 풀이 만들어집니다. John과 Martha가 동일한 SQL Server 로그인을 사용 하는 연결 문자열을 사용 하는 경우 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` **lowPrivUser** id에 대해 하나의 풀만 만들어집니다.  
   
 <a name="ActivatingOffByDefault"></a>
+
 ### <a name="activating-off-by-default-counters"></a>기본적으로 활성화되지 않은 카운터 활성화  
+
  `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` 및 `SoftConnectsPerSecond` 성능 카운터는 기본적으로 비활성화되어 있습니다. 다음 정보를 애플리케이션의 구성 파일에 추가하여 이러한 성능 카운터를 활성화할 수 있습니다.  
   
 ```xml  
@@ -53,6 +58,7 @@ ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClien
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>성능 카운터 값 검색  
+
  다음 콘솔 애플리케이션에서는 사용자 애플리케이션에서 성능 카운터 값을 검색하는 방법을 보여 줍니다. 모든 ADO.NET 성능 카운터에서 반환되는 정보에 대해 연결이 열려 있고 활성화되어야 합니다.  
   
 > [!NOTE]
@@ -395,11 +401,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 소스에 연결](connecting-to-a-data-source.md)
 - [OLE DB, ODBC 및 Oracle 연결 풀링](ole-db-odbc-and-oracle-connection-pooling.md)
 - [ASP.NET용 성능 카운터](/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [런타임 프로 파일링](../../debug-trace-profile/runtime-profiling.md)
+- [런타임 프로파일링](../../debug-trace-profile/runtime-profiling.md)
 - [성능 임계값 모니터링 소개](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET 개요](ado-net-overview.md)

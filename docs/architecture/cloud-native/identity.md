@@ -2,12 +2,12 @@
 title: ID
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 신분을
 ms.date: 05/13/2020
-ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66ff29947093d7c4fe57b11039190836dc37db08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614021"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163754"
 ---
 # <a name="identity"></a>ID
 
@@ -27,7 +27,7 @@ ms.locfileid: "83614021"
 
 ## <a name="references"></a>참조
 
-- [Microsoft ID 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft ID 플랫폼](/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[이전](azure-monitor.md)

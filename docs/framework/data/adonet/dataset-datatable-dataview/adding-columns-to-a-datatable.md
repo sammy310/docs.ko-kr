@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7f220f5d8cbc4b1c12dec018a4497c6bc492f3c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286949"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164885"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable에 열 추가
+
 에는 <xref:System.Data.DataTable> <xref:System.Data.DataColumn> 테이블의 **Columns** 속성에서 참조 하는 개체의 컬렉션이 포함 되어 있습니다. 이 열 컬렉션과 모든 제약 조건을 함께 사용하여 테이블의 스키마나 구조를 정의합니다.  
   
  **Datacolumn** 생성자를 사용 하거나 테이블의 **Columns** 속성 ()의 **Add** 메서드를 호출 하 여 테이블 내에서 **datacolumn** 개체를 만들 수 있습니다 <xref:System.Data.DataColumnCollection> . **Add** 메서드는 선택적 **ColumnName**, **DataType**및 **Expression** 인수를 받아들이고 컬렉션의 멤버로 새 **DataColumn** 을 만듭니다. 또한 기존 **datacolumn** 개체를 수락 하 여 컬렉션에 추가 하 고 요청 시 추가 된 **datacolumn** 에 대 한 참조를 반환 합니다. **DataTable** 개체는 데이터 원본에 한정 되지 않으므로 **DataColumn**의 데이터 형식을 지정할 때 .NET Framework 형식이 사용 됩니다.  

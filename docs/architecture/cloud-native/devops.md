@@ -2,12 +2,12 @@
 title: DevOps
 description: 클라우드 네이티브 응용 프로그램에 대 한 DevOps 고려 사항
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614121"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164001"
 ---
 # <a name="devops"></a>DevOps
 
@@ -154,7 +154,7 @@ Agile 방법론의 중요 한 부분 중 하나는 일정 한 간격으로 자�
 
 설명 필드는 필요한 표준 스타일 (굵게, 기울임꼴 밑줄 및 취소선)과 이미지 삽입 기능을 지원 합니다. 이렇게 하면 작업 또는 버그를 지정할 때 사용할 수 있는 강력한 도구입니다.
 
-작업을 더 큰 작업 단위를 정의 하는 기능으로 롤업할 수 있습니다. 그러면 기능이 [에픽으로 롤업](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)될 수 있습니다. 이 계층 구조에서 작업을 분류 하면 큰 기능이 롤아웃 되는 방법을 보다 쉽게 이해할 수 있습니다.
+작업을 더 큰 작업 단위를 정의 하는 기능으로 롤업할 수 있습니다. 그러면 기능이 [에픽으로 롤업](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)될 수 있습니다. 이 계층 구조에서 작업을 분류 하면 큰 기능이 롤아웃 되는 방법을 보다 쉽게 이해할 수 있습니다.
 
 ![그림 10-6 기본 프로세스 템플릿에서 기본적으로 구성 된 작업 항목 형식](./media/board-issue-types.png)
 

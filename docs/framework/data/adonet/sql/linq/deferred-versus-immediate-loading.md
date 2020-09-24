@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794132"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164300"
 ---
 # <a name="deferred-versus-immediate-loading"></a>지연된 로드 및 즉시 로드 비교
-개체를 쿼리하는 경우 실제로는 요청한 개체만 검색합니다. 합니다 *관련* 개체는 동시에 자동으로 페치 되지 않습니다. (자세한 내용은 [관계 간 쿼리](querying-across-relationships.md).) 관련 개체에 액세스할 때 검색 요청을 생성하기 때문에 관련 개체가 아직 로드되지 않았다는 사실을 확인할 수 없습니다.  
+
+개체를 쿼리하면 실제로 요청한 개체만 검색 합니다. *관련* 개체는 동시에 자동으로 인출 되지 않습니다. 자세한 내용은 [관계 간 쿼리](querying-across-relationships.md)를 참조 하세요. 관련 개체에 액세스 하려고 시도 하면 해당 개체가 검색 하는 요청을 생성 하기 때문에 관련 개체가 아직 로드 되지 않은 것을 확인할 수 없습니다.  
   
  예를 들어 특정 주문 집합을 쿼리 한 다음 가끔 특정 고객에 게 전자 메일 알림을 보낼 수 있습니다. 처음부터 매 주문마다 모든 고객 데이터를 검색할 필요는 없습니다. 지연된 로드를 사용하여 반드시 검색해야 할 때까지 추가 정보의 검색을 연기할 수 있습니다. 다음 예제를 참조하세요.  
   
@@ -33,6 +34,6 @@ ms.locfileid: "70794132"
   
 - <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드 - 특정 관계에 대해 검색한 개체를 필터링합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [쿼리 개념](query-concepts.md)
