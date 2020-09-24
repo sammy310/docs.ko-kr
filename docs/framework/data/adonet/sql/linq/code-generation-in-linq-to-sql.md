@@ -2,37 +2,41 @@
 title: LINQ to SQL에서 코드 생성
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f58448e0fc0c22795005b55a737b42374a750ec3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247967"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161531"
 ---
-# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="4669b-102">LINQ to SQL에서 코드 생성</span><span class="sxs-lookup"><span data-stu-id="4669b-102">Code Generation in LINQ to SQL</span></span>
-<span data-ttu-id="4669b-103">개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용 하 여 데이터베이스를 나타내는 코드를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-103">You can generate code to represent a database by using either the Object Relational Designer or the SQLMetal command-line tool.</span></span> <span data-ttu-id="4669b-104">두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
+# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="b9c3e-102">LINQ to SQL에서 코드 생성</span><span class="sxs-lookup"><span data-stu-id="b9c3e-102">Code Generation in LINQ to SQL</span></span>
+
+<span data-ttu-id="b9c3e-103">개체 관계형 디자이너 또는 SQLMetal 명령줄 도구를 사용 하 여 데이터베이스를 나타내는 코드를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-103">You can generate code to represent a database by using either the Object Relational Designer or the SQLMetal command-line tool.</span></span> <span data-ttu-id="b9c3e-104">두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
   
-1. <span data-ttu-id="4669b-105">*DBML 추출기* 는 데이터베이스에서 스키마 정보를 추출 하 고 XML 형식의 DBML 파일로 정보를 어셈블합니다 합니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
+1. <span data-ttu-id="b9c3e-105">*DBML 추출기* 는 데이터베이스에서 스키마 정보를 추출 하 고 XML 형식의 DBML 파일로 정보를 어셈블합니다 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
   
-2. <span data-ttu-id="4669b-106">Dbml *유효성 검사기* 에서 dbml 파일을 검사 하 여 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
+2. <span data-ttu-id="b9c3e-106">Dbml *유효성 검사기* 에서 dbml 파일을 검사 하 여 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
   
-3. <span data-ttu-id="4669b-107">유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
+3. <span data-ttu-id="b9c3e-107">유효성 검사 오류가 없으면 파일이 코드 생성기에 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
   
- <span data-ttu-id="4669b-108">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4669b-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="4669b-109">Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 코드를 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-109">Developers using Visual Studio can also use the Object Relational Designer to generate code.</span></span> <span data-ttu-id="4669b-110">[Visual Studio의 LINQ to SQL 도구를](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4669b-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
+ <span data-ttu-id="b9c3e-108">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="b9c3e-109">Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 코드를 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-109">Developers using Visual Studio can also use the Object Relational Designer to generate code.</span></span> <span data-ttu-id="b9c3e-110">[Visual Studio의 LINQ to SQL 도구를](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## <a name="dbml-extractor"></a><span data-ttu-id="4669b-111">DBML 추출기</span><span class="sxs-lookup"><span data-stu-id="4669b-111">DBML Extractor</span></span>  
- <span data-ttu-id="4669b-112">DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
+## <a name="dbml-extractor"></a><span data-ttu-id="b9c3e-111">DBML 추출기</span><span class="sxs-lookup"><span data-stu-id="b9c3e-111">DBML Extractor</span></span>  
+
+ <span data-ttu-id="b9c3e-112">DBML 추출기는 데이터베이스 메타데이터를 입력으로 사용하여 DMBL 파일을 출력하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
   
-## <a name="code-generator"></a><span data-ttu-id="4669b-113">코드 생성기</span><span class="sxs-lookup"><span data-stu-id="4669b-113">Code Generator</span></span>  
- <span data-ttu-id="4669b-114">코드 생성기 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 는 DBML 파일을 Visual Basic, C#또는 XML 매핑 파일로 변환 하는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.</span></span>  
+## <a name="code-generator"></a><span data-ttu-id="b9c3e-113">코드 생성기</span><span class="sxs-lookup"><span data-stu-id="b9c3e-113">Code Generator</span></span>  
+
+ <span data-ttu-id="b9c3e-114">코드 생성기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML 파일을 Visual Basic, c # 또는 XML 매핑 파일로 변환 하는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="4669b-115">XML 스키마 정의 파일</span><span class="sxs-lookup"><span data-stu-id="4669b-115">XML Schema Definition File</span></span>  
- <span data-ttu-id="4669b-116">DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="b9c3e-115">XML 스키마 정의 파일</span><span class="sxs-lookup"><span data-stu-id="b9c3e-115">XML Schema Definition File</span></span>  
+
+ <span data-ttu-id="b9c3e-116">DBML 파일은 다음 XSD 스키마 정의 파일에 대해 유효해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
   
- <span data-ttu-id="4669b-117">이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="4669b-118">자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4669b-118">For more information, see [External Mapping](external-mapping.md)).</span></span>  
+ <span data-ttu-id="b9c3e-117">이 스키마 정의 파일은 외부 매핑 파일의 유효성을 검사하는 데 사용하는 스키마 정의 파일과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="b9c3e-118">자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-118">For more information, see [External Mapping](external-mapping.md)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="4669b-119">또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "DbmlSchema .xsd"로 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-119">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="4669b-120">DBML 파일 [의 유효성을 검사 하는 데 XSD 파일을 제대로 사용 하려면 방법: DBML 및 외부 매핑 파일](how-to-validate-dbml-and-external-mapping-files.md)의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+> <span data-ttu-id="b9c3e-119">또한 Visual Studio 사용자는 XML 스키마 대화 상자에서이 XSD 파일을 "DbmlSchema .xsd"로 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-119">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="b9c3e-120">DBML 파일의 유효성을 검사 하는 데 XSD 파일을 올바르게 사용 하려면 [방법: dbml 및 외부 매핑 파일 유효성 검사](how-to-validate-dbml-and-external-mapping-files.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -242,8 +246,9 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="sample-dbml-file"></a><span data-ttu-id="4669b-121">샘플 DBML 파일</span><span class="sxs-lookup"><span data-stu-id="4669b-121">Sample DBML File</span></span>  
- <span data-ttu-id="4669b-122">다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="4669b-123">**/Xml** 옵션과 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4669b-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="4669b-124">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4669b-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+## <a name="sample-dbml-file"></a><span data-ttu-id="b9c3e-121">샘플 DBML 파일</span><span class="sxs-lookup"><span data-stu-id="b9c3e-121">Sample DBML File</span></span>  
+
+ <span data-ttu-id="b9c3e-122">다음 코드에서는 Northwind 샘플 데이터베이스에서 만든 DBML 파일의 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="b9c3e-123">**/Xml** 옵션과 함께 SQLMetal을 사용 하 여 전체 파일을 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="b9c3e-124">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b9c3e-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -269,10 +274,10 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4669b-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="4669b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9c3e-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b9c3e-125">See also</span></span>
 
-- [<span data-ttu-id="4669b-126">배경 정보</span><span class="sxs-lookup"><span data-stu-id="4669b-126">Background Information</span></span>](background-information.md)
-- [<span data-ttu-id="4669b-127">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="4669b-127">External Mapping</span></span>](external-mapping.md)
-- [<span data-ttu-id="4669b-128">방법: 개체 모델을 외부 파일로 생성</span><span class="sxs-lookup"><span data-stu-id="4669b-128">How to: Generate the Object Model as an External File</span></span>](how-to-generate-the-object-model-as-an-external-file.md)
-- [<span data-ttu-id="4669b-129">샘플 데이터베이스 다운로드</span><span class="sxs-lookup"><span data-stu-id="4669b-129">Downloading Sample Databases</span></span>](downloading-sample-databases.md)
-- [<span data-ttu-id="4669b-130">참조</span><span class="sxs-lookup"><span data-stu-id="4669b-130">Reference</span></span>](reference.md)
+- [<span data-ttu-id="b9c3e-126">배경 정보</span><span class="sxs-lookup"><span data-stu-id="b9c3e-126">Background Information</span></span>](background-information.md)
+- [<span data-ttu-id="b9c3e-127">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="b9c3e-127">External Mapping</span></span>](external-mapping.md)
+- [<span data-ttu-id="b9c3e-128">방법: 외부 파일로 개체 모델 생성</span><span class="sxs-lookup"><span data-stu-id="b9c3e-128">How to: Generate the Object Model as an External File</span></span>](how-to-generate-the-object-model-as-an-external-file.md)
+- [<span data-ttu-id="b9c3e-129">샘플 데이터베이스 다운로드</span><span class="sxs-lookup"><span data-stu-id="b9c3e-129">Downloading Sample Databases</span></span>](downloading-sample-databases.md)
+- [<span data-ttu-id="b9c3e-130">참조</span><span class="sxs-lookup"><span data-stu-id="b9c3e-130">Reference</span></span>](reference.md)
