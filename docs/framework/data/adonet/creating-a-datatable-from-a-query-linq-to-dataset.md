@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 064688f173e375481373e9a33d66c64666e1583f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287014"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148363"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>쿼리에서 DataTable 만들기(LINQ to DataSet)
+
 데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 다음 프로세스를 사용하여 쿼리에서 <xref:System.Data.DataTable>을 만듭니다.  
@@ -38,6 +39,7 @@ ms.locfileid: "84287014"
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>사용자 지정 CopyToDataTable \<T> 메서드 만들기  
+
  기존 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 제네릭 매개 변수 <xref:System.Collections.Generic.IEnumerable%601>가 `T` 형식인 <xref:System.Data.DataRow> 소스에서만 작동합니다. 이 제한은 유용하지만 이로 인해 일련의 스칼라 형식, 익명 형식을 반환하는 쿼리 또는 테이블 조인을 수행하는 쿼리에서 테이블을 만들지 못하게 됩니다. 스칼라 또는 무명 형식의 시퀀스에서 테이블을 로드 하는 두 개의 사용자 지정 메서드를 구현 하는 방법에 대 한 예제는 `CopyToDataTable` [방법: \<T> 제네릭 형식 T가 DataRow가 아닌 CopyToDataTable 구현](implement-copytodatatable-where-type-not-a-datarow.md)을 참조 하세요.  
   
  이 단원의 예제에서는 다음과 같은 사용자 지정 형식을 사용합니다.  
@@ -46,30 +48,35 @@ ms.locfileid: "84287014"
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>예제  
+
  이 예제에서는 `SalesOrderHeader` 및 `SalesOrderDetail` 테이블에 대해 조인을 수행하여 8월의 온라인 주문을 가져오고 해당 쿼리에서 테이블을 만듭니다.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 가격이 9.99달러 이상인 항목의 컬렉션을 쿼리하고 쿼리 결과로부터 테이블을 만듭니다.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 가격이 9.99달러 이상인 항목의 컬렉션을 쿼리하고 결과를 프로젝션합니다. 반환된 일련의 익명 형식은 기존 테이블에 로드됩니다.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 가격이 9.99달러 이상인 항목의 컬렉션을 쿼리하고 결과를 프로젝션합니다. 반환된 일련의 익명 형식은 기존 테이블에 로드됩니다. `Book` 및 `Movies` 형식은 `Item` 형식에서 파생되므로 테이블 스키마는 자동으로 확장됩니다.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 가격이 9.99달러 이상인 항목의 컬렉션을 쿼리하고 새 테이블에 로드되는 일련의 <xref:System.Double>을 반환합니다.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]

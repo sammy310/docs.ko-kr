@@ -3,12 +3,12 @@ title: 클라우드 네이티브 복원력
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 기본 복원 력
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f3aa89e3ae21b13a31f65013b59636b3f931553c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5c4fb261515c151fd666cc33cbb020447716c814
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613774"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163559"
 ---
 # <a name="cloud-native-resiliency"></a>클라우드 네이티브 복원력
 
@@ -26,7 +26,7 @@ ms.locfileid: "83613774"
 
 - 예기치 않은 네트워크 대기 시간-서비스 요청이 수신기로 이동 하는 시간입니다.
 
-- [일시적인 오류](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) -수명이 짧은 네트워크 연결 오류입니다.
+- [일시적인 오류](/azure/architecture/best-practices/transient-faults) -수명이 짧은 네트워크 연결 오류입니다.
 
 - 장기 실행 동기 작업으로 차단을.
 

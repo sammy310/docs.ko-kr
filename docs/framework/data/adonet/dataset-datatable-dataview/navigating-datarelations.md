@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5eb2ee16712be5ccd5e9aa0af4dde22dcaaeea09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040343"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148388"
 ---
 # <a name="navigating-datarelations"></a>DataRelation 탐색
-<xref:System.Data.DataRelation>의 기본 기능 중 하나는 <xref:System.Data.DataTable> 내에서 <xref:System.Data.DataSet>를 하나씩 탐색할 수 있도록 하는 것입니다. 이렇게 하면 관련 **datatable**에서 단일 **DataRow** 가 지정 된 경우 하나의 **DataTable** 에서 관련 된 모든 <xref:System.Data.DataRow> 개체를 검색할 수 있습니다. 예를 들어 고객 테이블과 주문 테이블 간에 **DataRelation** 을 설정한 후에는 **GetChildRows**를 사용 하 여 특정 고객 행의 모든 주문 행을 검색할 수 있습니다.  
+
+<xref:System.Data.DataRelation>의 기본 기능 중 하나는 <xref:System.Data.DataTable> 내에서 <xref:System.Data.DataSet>를 하나씩 탐색할 수 있도록 하는 것입니다. 이렇게 하면 <xref:System.Data.DataRow> 관련 **datatable**에서 단일 **DataRow** 가 지정 된 경우 하나의 **DataTable** 에서 모든 관련 개체를 검색할 수 있습니다. 예를 들어 고객 테이블과 주문 테이블 간에 **DataRelation** 을 설정한 후에는 **GetChildRows**를 사용 하 여 특정 고객 행의 모든 주문 행을 검색할 수 있습니다.  
   
  다음 코드 예에서는 **Customers** 테이블과 **데이터 집합** 의 **orders** 테이블 사이에 **DataRelation** 을 만들고 각 고객에 대 한 모든 주문을 반환 합니다.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "73040343"
   
  또한 확장 된 예제에서는 **OrderDetails** 및 **Products** 테이블의 값을 반환 합니다. **Orders** 테이블은 **OrderID** 를 사용 하 여 각 고객 주문, 주문 된 제품 및 수량을 확인 하는 **OrderDetails** 테이블과 관련이 있습니다. **OrderDetails** 테이블에는 주문 된 제품의 **productid** 만 포함 되어 있으므로 **OrderDetails** 은 **ProductName**을 반환 하기 위해 **productid** 를 사용 하는 **제품과** 관련 됩니다. 이 관계에서 **Products** 테이블은 부모이 고 **Order Details** 테이블은 자식입니다. 결과적으로 **OrderDetails** 테이블을 반복 하는 경우 **GetParentRow** 를 호출 하 여 관련 된 **ProductName** 값을 검색 합니다.  
   
- **Customers** 및 **Orders** 테이블에 대해 **DataRelation** 을 만들 때 **createConstraints** 플래그에 대해 값이 지정 되지 않습니다 (기본값은 **true**임). 여기서는 **Orders** 테이블의 모든 행에 부모 **Customers** 테이블에 있는 **CustomerID** 값이 있다고 가정 합니다. **Customers** 테이블에 존재 하지 않는 **CustomerID** 가 **Orders** 테이블에 있는 경우 <xref:System.Data.ForeignKeyConstraint> 하면 예외가 throw 됩니다.  
+ **Customers** 및 **Orders** 테이블에 대해 **DataRelation** 을 만들 때 **createConstraints** 플래그에 대해 값이 지정 되지 않습니다 (기본값은 **true**임). 여기서는 **Orders** 테이블의 모든 행에 부모 **Customers** 테이블에 있는 **CustomerID** 값이 있다고 가정 합니다. **Customers** 테이블에 존재 하지 않는 **CustomerID** 가 **Orders** 테이블에 있는 경우이 발생 하면 <xref:System.Data.ForeignKeyConstraint> 예외가 throw 됩니다.  
   
  자식 열에 부모 열에 포함 되지 않은 값이 포함 되어 있을 경우 **DataRelation**을 추가할 때 **createConstraints** 플래그를 **false** 로 설정 합니다. 이 예에서는 **Orders** 테이블과 **OrderDetails** 테이블 간의 **DataRelation** 에 대해 **createConstraints** 플래그가 **false** 로 설정 됩니다. 이를 통해 응용 프로그램은 **OrderDetails** 테이블의 모든 레코드를 반환할 수 있으며 런타임 예외를 생성 하지 않고 **Orders** 테이블의 레코드 하위 집합만 반환할 수 있습니다. 확장된 예제는 다음과 같은 형식의 출력을 생성합니다.  
   
@@ -49,7 +50,7 @@ Customer ID: NORTS
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataSets, DataTables 및 DataViews](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

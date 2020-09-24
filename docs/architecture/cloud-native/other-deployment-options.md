@@ -2,12 +2,12 @@
 title: 기타 컨테이너 배포 옵션
 description: Azure를 사용 하는 다른 컨테이너 배포 옵션
 ms.date: 05/13/2020
-ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2eac822b74af636e0ab0ed24b58eb7139526f4a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613761"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163624"
 ---
 # <a name="other-container-deployment-options"></a>기타 컨테이너 배포 옵션
 
@@ -27,13 +27,13 @@ Azure Kubernetes 서비스 (AKS) 외에도 컨테이너 및 Azure Container Inst
 
 ## <a name="how-to-deploy-an-app-to-azure-container-instances"></a>Azure Container Instances에 앱을 배포 하는 방법
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/)에 배포 하려면 AZURE CONTAINER REGISTRY (ACR) 및 액세스를 위한 자격 증명이 필요 합니다. 컨테이너 이미지를 리포지토리에 푸시 하면 ACI로 끌어올 수 있습니다. Azure Portal 또는 명령줄 인터페이스를 사용 하 여 ACI로 작업할 수 있습니다. ACR은 ACI와 긴밀 하 게 통합 됩니다. 그림 3-14에서는 ACR에 개별 컨테이너 이미지를 푸시하는 방법을 보여 줍니다.
+[Azure Container Instances (ACI)](/azure/container-instances/)에 배포 하려면 AZURE CONTAINER REGISTRY (ACR) 및 액세스를 위한 자격 증명이 필요 합니다. 컨테이너 이미지를 리포지토리에 푸시 하면 ACI로 끌어올 수 있습니다. Azure Portal 또는 명령줄 인터페이스를 사용 하 여 ACI로 작업할 수 있습니다. ACR은 ACI와 긴밀 하 게 통합 됩니다. 그림 3-14에서는 ACR에 개별 컨테이너 이미지를 푸시하는 방법을 보여 줍니다.
 
 ![Azure Container Registry 실행 인스턴스](./media/acr-runinstance-contextmenu.png)
 
 **그림 3-14**. Azure Container Registry 실행 인스턴스
 
-ACI에서 인스턴스를 만드는 작업은 신속 하 게 수행할 수 있습니다. 이미지 레지스트리, Azure 리소스 그룹 정보, 할당할 메모리 양 및 수신 대기할 포트를 지정 합니다. 이 [빠른 시작에서는 Azure Portal를 사용 하 여 ACI에 컨테이너 인스턴스를 배포 하는 방법을 보여 줍니다](https://docs.microsoft.com/azure/container-instances/container-instances-quickstart-portal).
+ACI에서 인스턴스를 만드는 작업은 신속 하 게 수행할 수 있습니다. 이미지 레지스트리, Azure 리소스 그룹 정보, 할당할 메모리 양 및 수신 대기할 포트를 지정 합니다. 이 [빠른 시작에서는 Azure Portal를 사용 하 여 ACI에 컨테이너 인스턴스를 배포 하는 방법을 보여 줍니다](/azure/container-instances/container-instances-quickstart-portal).
 
 배포가 완료 되 면 새로 배포 된 컨테이너의 IP 주소를 찾아 지정 된 포트를 통해 통신 합니다.
 
@@ -44,22 +44,22 @@ Azure Container Instances는 Azure에서 간단한 컨테이너 워크 로드를
 - [Kubernetes란?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
 - [Minikube를 사용 하 여 Kubernetes 설치](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 - [MiniKube vs Docker Desktop](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
-- [Docker용 Visual Studio Tools](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
+- [Docker용 Visual Studio Tools](/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
 - [서버 리스 콜드 시작 이해](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
-- [사전 준비 Azure Functions 인스턴스](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)
-- [사용자 지정 이미지를 사용하여 Linux에서 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)
+- [사전 준비 Azure Functions 인스턴스](/azure/azure-functions/functions-premium-plan#pre-warmed-instances)
+- [사용자 지정 이미지를 사용하여 Linux에서 함수 만들기](/azure/azure-functions/functions-create-function-linux-custom-image)
 - [Docker 컨테이너에서 Azure Functions 실행](https://markheath.net/post/azure-functions-docker)
-- [사용자 지정 이미지를 사용하여 Linux에서 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)
-- [Kubernetes 이벤트 기반 자동 크기 조정을 사용 하는 Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)
+- [사용자 지정 이미지를 사용하여 Linux에서 함수 만들기](/azure/azure-functions/functions-create-function-linux-custom-image)
+- [Kubernetes 이벤트 기반 자동 크기 조정을 사용 하는 Azure Functions](/azure/azure-functions/functions-kubernetes-keda)
 - [카나리아 릴리스](https://martinfowler.com/bliki/CanaryRelease.html)
-- [VS Code Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)
-- [Visual Studio를 사용 하 여 Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio)
-- [여러 노드 풀 AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
-- [AKS Cluster Autoscaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [자습서: AKS에서 응용 프로그램 크기 조정](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
-- [Azure Functions 크기 조정 및 호스팅](https://docs.microsoft.com/azure/azure-functions/functions-scale)
-- [문서 Azure Container Instances](https://docs.microsoft.com/azure/container-instances/)
-- [ACR에서 컨테이너 인스턴스 배포](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
+- [VS Code Azure Dev Spaces](/azure/dev-spaces/quickstart-netcore)
+- [Visual Studio를 사용 하 여 Azure Dev Spaces](/azure/dev-spaces/quickstart-netcore-visualstudio)
+- [여러 노드 풀 AKS](/azure/aks/use-multiple-node-pools)
+- [AKS Cluster Autoscaler](/azure/aks/cluster-autoscaler)
+- [자습서: AKS에서 응용 프로그램 크기 조정](/azure/aks/tutorial-kubernetes-scale)
+- [Azure Functions 비율 크기 조정 및 호스팅](/azure/azure-functions/functions-scale)
+- [문서 Azure Container Instances](/azure/container-instances/)
+- [ACR에서 컨테이너 인스턴스 배포](/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
 
 >[!div class="step-by-step"]
 >[이전](scale-containers-serverless.md)

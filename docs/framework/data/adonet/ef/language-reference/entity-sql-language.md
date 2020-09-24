@@ -2,14 +2,15 @@
 title: Entity SQL 언어
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 2600b7626ebc5196c702f2d1e3159fd9549227f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553384"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148116"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 언어
+
 Entity SQL은 SQL과 유사한 스토리지 독립적 쿼리 언어입니다. Entity SQL을 사용하면 엔터티 데이터를 개체 또는 테이블 형식으로 쿼리할 수 있습니다. Entity SQL은 다음의 경우에 사용해야 합니다.  
   
 - 쿼리를 동적으로 런타임에 생성해야 하는 경우. 이 경우에는 런타임에 Entity SQL 쿼리 문자열을 생성하는 대신 <xref:System.Data.Objects.ObjectQuery%601>의 쿼리 작성기 메서드를 사용해야 합니다.  
@@ -21,6 +22,7 @@ Entity SQL은 SQL과 유사한 스토리지 독립적 쿼리 언어입니다. En
 - SQL 기반 쿼리 언어의 전문가에게는 Entity SQL이 가장 편할 수 있습니다.  
   
 ## <a name="using-entity-sql-with-the-entityclient-provider"></a>EntityClient 공급자와 함께 Entity SQL 사용  
+
  EntityClient 공급자와 함께 Entity SQL을 사용하려는 경우 자세한 내용은 다음 항목을 참조하세요.  
   
  [Entity Framework용 EntityClient 공급자](../entityclient-provider-for-the-entity-framework.md)  
@@ -46,6 +48,7 @@ Entity SQL은 SQL과 유사한 스토리지 독립적 쿼리 언어입니다. En
  [방법: 탐색 연산자로 관계 탐색](../how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>개체 쿼리와 함께 Entity SQL 사용  
+
  개체 쿼리와 함께 Entity SQL을 사용하려는 경우 자세한 내용은 다음 항목을 참조하세요.  
   
  [방법: 엔터티 형식 개체를 반환하는 쿼리 실행](/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
@@ -75,11 +78,12 @@ Entity SQL은 SQL과 유사한 스토리지 독립적 쿼리 언어입니다. En
  [방법: 쿼리 결과를 통해 페이징](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Entity SQL 개요](entity-sql-overview.md)  
   
  [엔터티 SQL 참조](entity-sql-reference.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET Entity Framework](../index.md)
 - [언어 참조](index.md)
