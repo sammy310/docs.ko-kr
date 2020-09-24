@@ -4,93 +4,101 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce5323b4ecd7bd0c4337d4632eff209e4d0ebd42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792152"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163988"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a><span data-ttu-id="4ab97-102">연습: 관계 간 쿼리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ab97-102">Walkthrough: Querying Across Relationships (Visual Basic)</span></span>
-<span data-ttu-id="4ab97-103">이 연습에서는 *연결* 을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-103">This walkthrough demonstrates the use of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* to represent foreign-key relationships in the database.</span></span>  
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a><span data-ttu-id="4bb82-102">연습: 관계 간 쿼리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bb82-102">Walkthrough: Querying Across Relationships (Visual Basic)</span></span>
+
+<span data-ttu-id="4bb82-103">이 연습에서는 연결을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-103">This walkthrough demonstrates the use of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* to represent foreign-key relationships in the database.</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- <span data-ttu-id="4ab97-104">이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-104">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
+ <span data-ttu-id="4bb82-104">이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-104">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="4ab97-105">전제 조건</span><span class="sxs-lookup"><span data-stu-id="4ab97-105">Prerequisites</span></span>  
- <span data-ttu-id="4ab97-106">연습을 완료 [해야 합니다. 간단한 개체 모델 및 쿼리 (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md).</span><span class="sxs-lookup"><span data-stu-id="4ab97-106">You must have completed [Walkthrough: Simple Object Model and Query (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md).</span></span> <span data-ttu-id="4ab97-107">이 연습은 c:\linqtest에 있는 northwnd.mdf 파일을 비롯하여 해당 연습의 단순 개체 모델 및 쿼리를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-107">This walkthrough builds on that one, including the presence of the northwnd.mdf file in c:\linqtest.</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="4bb82-105">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="4bb82-105">Prerequisites</span></span>  
+
+ <span data-ttu-id="4bb82-106">[연습: 간단한 개체 모델 및 쿼리 (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)를 완료 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-106">You must have completed [Walkthrough: Simple Object Model and Query (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md).</span></span> <span data-ttu-id="4bb82-107">이 연습은 c:\linqtest에 있는 northwnd.mdf 파일을 비롯하여 해당 연습의 단순 개체 모델 및 쿼리를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-107">This walkthrough builds on that one, including the presence of the northwnd.mdf file in c:\linqtest.</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="4ab97-108">개요</span><span class="sxs-lookup"><span data-stu-id="4ab97-108">Overview</span></span>  
- <span data-ttu-id="4ab97-109">이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-109">This walkthrough consists of three main tasks:</span></span>  
+## <a name="overview"></a><span data-ttu-id="4bb82-108">개요</span><span class="sxs-lookup"><span data-stu-id="4bb82-108">Overview</span></span>  
+
+ <span data-ttu-id="4bb82-109">이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-109">This walkthrough consists of three main tasks:</span></span>  
   
-- <span data-ttu-id="4ab97-110">Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 엔터티 클래스 추가</span><span class="sxs-lookup"><span data-stu-id="4ab97-110">Adding an entity class to represent the Orders table in the sample Northwind database.</span></span>  
+- <span data-ttu-id="4bb82-110">Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 엔터티 클래스 추가</span><span class="sxs-lookup"><span data-stu-id="4bb82-110">Adding an entity class to represent the Orders table in the sample Northwind database.</span></span>  
   
-- <span data-ttu-id="4ab97-111">`Customer` 및 `Customer` 클래스 간의 관계를 향상시키기 위해 `Order` 클래스에 주석 추가</span><span class="sxs-lookup"><span data-stu-id="4ab97-111">Supplementing annotations to the `Customer` class to enhance the relationship between the `Customer` and `Order` classes.</span></span>  
+- <span data-ttu-id="4bb82-111">`Customer` 및 `Customer` 클래스 간의 관계를 향상시키기 위해 `Order` 클래스에 주석 추가</span><span class="sxs-lookup"><span data-stu-id="4bb82-111">Supplementing annotations to the `Customer` class to enhance the relationship between the `Customer` and `Order` classes.</span></span>  
   
-- <span data-ttu-id="4ab97-112">`Order` 클래스를 사용하여 `Customer` 정보를 가져오는 과정을 테스트하는 쿼리 만들기 및 실행</span><span class="sxs-lookup"><span data-stu-id="4ab97-112">Creating and running a query to test the process of obtaining `Order` information by using the `Customer` class.</span></span>  
+- <span data-ttu-id="4bb82-112">`Order` 클래스를 사용하여 `Customer` 정보를 가져오는 과정을 테스트하는 쿼리 만들기 및 실행</span><span class="sxs-lookup"><span data-stu-id="4bb82-112">Creating and running a query to test the process of obtaining `Order` information by using the `Customer` class.</span></span>  
   
-## <a name="mapping-relationships-across-tables"></a><span data-ttu-id="4ab97-113">테이블 간 관계 매핑</span><span class="sxs-lookup"><span data-stu-id="4ab97-113">Mapping Relationships across Tables</span></span>  
- <span data-ttu-id="4ab97-114">`Customer` 클래스 정의 후에 `Order`가 외래 키로 `Orders.Customer`에 관련된다는 것을 나타내는 다음 코드가 포함된 `Customers.CustomerID` 엔터티 클래스 정의를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-114">After the `Customer` class definition, create the `Order` entity class definition that includes the following code, which indicates that `Orders.Customer` relates as a foreign key to `Customers.CustomerID`.</span></span>  
+## <a name="mapping-relationships-across-tables"></a><span data-ttu-id="4bb82-113">테이블 간 관계 매핑</span><span class="sxs-lookup"><span data-stu-id="4bb82-113">Mapping Relationships across Tables</span></span>  
+
+ <span data-ttu-id="4bb82-114">`Customer` 클래스 정의 후에 `Order`가 외래 키로 `Orders.Customer`에 관련된다는 것을 나타내는 다음 코드가 포함된 `Customers.CustomerID` 엔터티 클래스 정의를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-114">After the `Customer` class definition, create the `Order` entity class definition that includes the following code, which indicates that `Orders.Customer` relates as a foreign key to `Customers.CustomerID`.</span></span>  
   
-#### <a name="to-add-the-order-entity-class"></a><span data-ttu-id="4ab97-115">Order 엔터티 클래스를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="4ab97-115">To add the Order entity class</span></span>  
+#### <a name="to-add-the-order-entity-class"></a><span data-ttu-id="4bb82-115">Order 엔터티 클래스를 추가하려면</span><span class="sxs-lookup"><span data-stu-id="4bb82-115">To add the Order entity class</span></span>  
   
-- <span data-ttu-id="4ab97-116">`Customer` 클래스 뒤에 다음 코드를 입력하거나 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-116">Type or paste the following code after the `Customer` class:</span></span>  
+- <span data-ttu-id="4bb82-116">`Customer` 클래스 뒤에 다음 코드를 입력하거나 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-116">Type or paste the following code after the `Customer` class:</span></span>  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
-## <a name="annotating-the-customer-class"></a><span data-ttu-id="4ab97-117">Customer 클래스에 주석 지정</span><span class="sxs-lookup"><span data-stu-id="4ab97-117">Annotating the Customer Class</span></span>  
- <span data-ttu-id="4ab97-118">이 단계에서는 `Customer` 클래스에 대한 관계를 나타내기 위해 `Order` 클래스에 주석을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-118">In this step, you annotate the `Customer` class to indicate its relationship to the `Order` class.</span></span> <span data-ttu-id="4ab97-119">어느 방향으로든 관계를 정의하여 링크를 충분히 만들 수 있으므로 이 추가 작업이 반드시 필요한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-119">(This addition is not strictly necessary, because defining the relationship in either direction is sufficient to create the link.</span></span> <span data-ttu-id="4ab97-120">그러나 이 주석을 추가하면 어느 방향으로나 개체를 쉽게 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-120">But adding this annotation does enable you to easily navigate objects in either direction.)</span></span>  
+## <a name="annotating-the-customer-class"></a><span data-ttu-id="4bb82-117">Customer 클래스에 주석 지정</span><span class="sxs-lookup"><span data-stu-id="4bb82-117">Annotating the Customer Class</span></span>  
+
+ <span data-ttu-id="4bb82-118">이 단계에서는 `Customer` 클래스에 대한 관계를 나타내기 위해 `Order` 클래스에 주석을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-118">In this step, you annotate the `Customer` class to indicate its relationship to the `Order` class.</span></span> <span data-ttu-id="4bb82-119">어느 방향으로든 관계를 정의하여 링크를 충분히 만들 수 있으므로 이 추가 작업이 반드시 필요한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-119">(This addition is not strictly necessary, because defining the relationship in either direction is sufficient to create the link.</span></span> <span data-ttu-id="4bb82-120">그러나 이 주석을 추가하면 어느 방향으로나 개체를 쉽게 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-120">But adding this annotation does enable you to easily navigate objects in either direction.)</span></span>  
   
-#### <a name="to-annotate-the-customer-class"></a><span data-ttu-id="4ab97-121">Customer 클래스에 주석을 달려면</span><span class="sxs-lookup"><span data-stu-id="4ab97-121">To annotate the Customer class</span></span>  
+#### <a name="to-annotate-the-customer-class"></a><span data-ttu-id="4bb82-121">Customer 클래스에 주석을 달려면</span><span class="sxs-lookup"><span data-stu-id="4bb82-121">To annotate the Customer class</span></span>  
   
-- <span data-ttu-id="4ab97-122">`Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-122">Type or paste the following code into the `Customer` class:</span></span>  
+- <span data-ttu-id="4bb82-122">`Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-122">Type or paste the following code into the `Customer` class:</span></span>  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
-## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a><span data-ttu-id="4ab97-123">Customer 및 Order 관계에서 쿼리 만들기 및 실행</span><span class="sxs-lookup"><span data-stu-id="4ab97-123">Creating and Running a Query across the Customer-Order Relationship</span></span>  
- <span data-ttu-id="4ab97-124">이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-124">You can now access `Order` objects directly from the `Customer` objects, or in the opposite order.</span></span> <span data-ttu-id="4ab97-125">고객과 주문 간에 명시적 *조인이* 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-125">You do not need an explicit *join* between customers and orders.</span></span>  
+## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a><span data-ttu-id="4bb82-123">Customer 및 Order 관계에서 쿼리 만들기 및 실행</span><span class="sxs-lookup"><span data-stu-id="4bb82-123">Creating and Running a Query across the Customer-Order Relationship</span></span>  
+
+ <span data-ttu-id="4bb82-124">이제 `Order` 개체에서 `Customer` 개체를 직접 액세스하거나 그 반대 방향으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-124">You can now access `Order` objects directly from the `Customer` objects, or in the opposite order.</span></span> <span data-ttu-id="4bb82-125">고객과 주문 간에 명시적 *조인이* 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-125">You do not need an explicit *join* between customers and orders.</span></span>  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a><span data-ttu-id="4ab97-126">Customer 개체를 사용하여 Order 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="4ab97-126">To access Order objects by using Customer objects</span></span>  
+#### <a name="to-access-order-objects-by-using-customer-objects"></a><span data-ttu-id="4bb82-126">Customer 개체를 사용하여 Order 개체에 액세스하려면</span><span class="sxs-lookup"><span data-stu-id="4bb82-126">To access Order objects by using Customer objects</span></span>  
   
-1. <span data-ttu-id="4ab97-127">다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-127">Modify the `Sub Main` method by typing or pasting the following code into the method:</span></span>  
+1. <span data-ttu-id="4bb82-127">다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-127">Modify the `Sub Main` method by typing or pasting the following code into the method:</span></span>  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2. <span data-ttu-id="4ab97-128">F5 키를 눌러 애플리케이션을 디버깅합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-128">Press F5 to debug your application.</span></span>  
+2. <span data-ttu-id="4bb82-128">F5 키를 눌러 애플리케이션을 디버깅합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-128">Press F5 to debug your application.</span></span>  
   
-     <span data-ttu-id="4ab97-129">두 이름이 메시지 상자에 표시되며 콘솔 창에는 생성된 SQL 코드가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-129">Two names appear in the message box, and the Console window shows the generated SQL code.</span></span>  
+     <span data-ttu-id="4bb82-129">두 이름이 메시지 상자에 표시되며 콘솔 창에는 생성된 SQL 코드가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-129">Two names appear in the message box, and the Console window shows the generated SQL code.</span></span>  
   
-3. <span data-ttu-id="4ab97-130">메시지 상자를 닫아 디버깅을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-130">Close the message box to stop debugging.</span></span>  
+3. <span data-ttu-id="4bb82-130">메시지 상자를 닫아 디버깅을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-130">Close the message box to stop debugging.</span></span>  
   
-## <a name="creating-a-strongly-typed-view-of-your-database"></a><span data-ttu-id="4ab97-131">강력한 형식의 데이터베이스 뷰 만들기</span><span class="sxs-lookup"><span data-stu-id="4ab97-131">Creating a Strongly Typed View of Your Database</span></span>  
- <span data-ttu-id="4ab97-132">강력한 형식의 데이터베이스 뷰로 작업을 시작하는 것이 훨씬 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-132">It is much easier to start with a strongly typed view of your database.</span></span> <span data-ttu-id="4ab97-133"><xref:System.Data.Linq.DataContext> 개체를 강력한 형식으로 설정하면 <xref:System.Data.Linq.DataContext.GetTable%2A> 호출이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-133">By strongly typing the <xref:System.Data.Linq.DataContext> object, you do not need calls to <xref:System.Data.Linq.DataContext.GetTable%2A>.</span></span> <span data-ttu-id="4ab97-134">강력한 형식의 <xref:System.Data.Linq.DataContext> 개체를 사용할 경우 모든 쿼리에서 강력한 형식의 테이블을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-134">You can use strongly typed tables in all your queries when you use the strongly typed <xref:System.Data.Linq.DataContext> object.</span></span>  
+## <a name="creating-a-strongly-typed-view-of-your-database"></a><span data-ttu-id="4bb82-131">강력한 형식의 데이터베이스 뷰 만들기</span><span class="sxs-lookup"><span data-stu-id="4bb82-131">Creating a Strongly Typed View of Your Database</span></span>  
+
+ <span data-ttu-id="4bb82-132">강력한 형식의 데이터베이스 뷰로 작업을 시작하는 것이 훨씬 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-132">It is much easier to start with a strongly typed view of your database.</span></span> <span data-ttu-id="4bb82-133"><xref:System.Data.Linq.DataContext> 개체를 강력한 형식으로 설정하면 <xref:System.Data.Linq.DataContext.GetTable%2A> 호출이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-133">By strongly typing the <xref:System.Data.Linq.DataContext> object, you do not need calls to <xref:System.Data.Linq.DataContext.GetTable%2A>.</span></span> <span data-ttu-id="4bb82-134">강력한 형식의 <xref:System.Data.Linq.DataContext> 개체를 사용할 경우 모든 쿼리에서 강력한 형식의 테이블을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-134">You can use strongly typed tables in all your queries when you use the strongly typed <xref:System.Data.Linq.DataContext> object.</span></span>  
   
- <span data-ttu-id="4ab97-135">다음 단계에서는 `Customers`를 데이터베이스의 Customers 테이블에 매핑되는 강력한 형식의 테이블로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-135">In the following steps, you will create `Customers` as a strongly typed table that maps to the Customers table in the database.</span></span>  
+ <span data-ttu-id="4bb82-135">다음 단계에서는 `Customers`를 데이터베이스의 Customers 테이블에 매핑되는 강력한 형식의 테이블로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-135">In the following steps, you will create `Customers` as a strongly typed table that maps to the Customers table in the database.</span></span>  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a><span data-ttu-id="4ab97-136">DataContext 개체를 강력한 형식으로 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4ab97-136">To strongly type the DataContext object</span></span>  
+#### <a name="to-strongly-type-the-datacontext-object"></a><span data-ttu-id="4bb82-136">DataContext 개체를 강력한 형식으로 설정하려면</span><span class="sxs-lookup"><span data-stu-id="4bb82-136">To strongly type the DataContext object</span></span>  
   
-1. <span data-ttu-id="4ab97-137">`Customer` 클래스 선언 위에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-137">Add the following code above the `Customer` class declaration.</span></span>  
+1. <span data-ttu-id="4bb82-137">`Customer` 클래스 선언 위에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-137">Add the following code above the `Customer` class declaration.</span></span>  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2. <span data-ttu-id="4ab97-138">다음과 같이 강력한 형식의 `Sub Main`를 사용하도록 <xref:System.Data.Linq.DataContext>을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-138">Modify `Sub Main` to use the strongly typed <xref:System.Data.Linq.DataContext> as follows:</span></span>  
+2. <span data-ttu-id="4bb82-138">다음과 같이 강력한 형식의 `Sub Main`를 사용하도록 <xref:System.Data.Linq.DataContext>을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-138">Modify `Sub Main` to use the strongly typed <xref:System.Data.Linq.DataContext> as follows:</span></span>  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3. <span data-ttu-id="4ab97-139">F5 키를 눌러 애플리케이션을 디버깅합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-139">Press F5 to debug your application.</span></span>  
+3. <span data-ttu-id="4bb82-139">F5 키를 눌러 애플리케이션을 디버깅합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-139">Press F5 to debug your application.</span></span>  
   
-     <span data-ttu-id="4ab97-140">콘솔 창 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-140">The Console window output is:</span></span>  
+     <span data-ttu-id="4bb82-140">콘솔 창 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-140">The Console window output is:</span></span>  
   
      `ID=WHITC`  
   
-4. <span data-ttu-id="4ab97-141">콘솔 창에서 Enter 키를 눌러 애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-141">Press Enter in the Console window to close the application.</span></span>  
+4. <span data-ttu-id="4bb82-141">콘솔 창에서 Enter 키를 눌러 애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-141">Press Enter in the Console window to close the application.</span></span>  
   
-5. <span data-ttu-id="4ab97-142">이 응용 프로그램을 저장 하려면 **파일** 메뉴에서 **모두 저장** 을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-142">On the **File** menu, click **Save All** if you want to save this application.</span></span>  
+5. <span data-ttu-id="4bb82-142">이 응용 프로그램을 저장 하려면 **파일** 메뉴에서 **모두 저장** 을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-142">On the **File** menu, click **Save All** if you want to save this application.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="4ab97-143">다음 단계</span><span class="sxs-lookup"><span data-stu-id="4ab97-143">Next Steps</span></span>  
- <span data-ttu-id="4ab97-144">다음 연습 ([연습: 데이터 조작 (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)은 데이터를 조작 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-144">The next walkthrough ([Walkthrough: Manipulating Data (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)) demonstrates how to manipulate data.</span></span> <span data-ttu-id="4ab97-145">다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab97-145">That walkthrough does not require that you save the two walkthroughs in this series that you have already completed.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="4ab97-146">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ab97-146">See also</span></span>
+## <a name="next-steps"></a><span data-ttu-id="4bb82-143">다음 단계</span><span class="sxs-lookup"><span data-stu-id="4bb82-143">Next Steps</span></span>  
 
-- [<span data-ttu-id="4ab97-147">연습으로 학습</span><span class="sxs-lookup"><span data-stu-id="4ab97-147">Learning by Walkthroughs</span></span>](learning-by-walkthroughs.md)
+ <span data-ttu-id="4bb82-144">다음 연습 ([연습: 데이터 조작 (Visual Basic)](walkthrough-manipulating-data-visual-basic.md))에서는 데이터를 조작 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-144">The next walkthrough ([Walkthrough: Manipulating Data (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)) demonstrates how to manipulate data.</span></span> <span data-ttu-id="4bb82-145">다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4bb82-145">That walkthrough does not require that you save the two walkthroughs in this series that you have already completed.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4bb82-146">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4bb82-146">See also</span></span>
+
+- [<span data-ttu-id="4bb82-147">연습으로 학습</span><span class="sxs-lookup"><span data-stu-id="4bb82-147">Learning by Walkthroughs</span></span>](learning-by-walkthroughs.md)
