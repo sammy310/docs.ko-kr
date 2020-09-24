@@ -5,25 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: 40caa07488cb40ca8e9e3eb3a570c325b92de491
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4848ef69914f0520d2365538faea7fa064c1a15c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793299"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155811"
 ---
-# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="05b5c-102">방법: 멤버 충돌 정보 검색</span><span class="sxs-lookup"><span data-stu-id="05b5c-102">How to: Retrieve Member Conflict Information</span></span>
-<span data-ttu-id="05b5c-103"><xref:System.Data.Linq.MemberChangeConflict> 클래스를 사용하여 충돌의 각 멤버에 대한 정보를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05b5c-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="05b5c-104">이와 동일한 컨텍스트에서 멤버의 충돌에 대한 사용자 지정 처리를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="05b5c-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="05b5c-105">자세한 내용은 [낙관적 동시성: 개요](optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="05b5c-105">For more information, see [Optimistic Concurrency: Overview](optimistic-concurrency-overview.md).</span></span>  
+# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="1037b-102">방법: 멤버 충돌 정보 검색</span><span class="sxs-lookup"><span data-stu-id="1037b-102">How to: Retrieve Member Conflict Information</span></span>
+
+<span data-ttu-id="1037b-103"><xref:System.Data.Linq.MemberChangeConflict> 클래스를 사용하여 충돌의 각 멤버에 대한 정보를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1037b-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="1037b-104">이와 동일한 컨텍스트에서 멤버의 충돌에 대한 사용자 지정 처리를 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1037b-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="1037b-105">자세한 내용은 [낙관적 동시성: 개요](optimistic-concurrency-overview.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="1037b-105">For more information, see [Optimistic Concurrency: Overview](optimistic-concurrency-overview.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="05b5c-106">예제</span><span class="sxs-lookup"><span data-stu-id="05b5c-106">Example</span></span>  
- <span data-ttu-id="05b5c-107">다음 코드에서는 <xref:System.Data.Linq.ObjectChangeConflict> 개체를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="05b5c-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="05b5c-108">그런 다음 각 개체에 대해 <xref:System.Data.Linq.MemberChangeConflict> 개체를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="05b5c-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="1037b-106">예제</span><span class="sxs-lookup"><span data-stu-id="1037b-106">Example</span></span>  
+
+ <span data-ttu-id="1037b-107">다음 코드에서는 <xref:System.Data.Linq.ObjectChangeConflict> 개체를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="1037b-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="1037b-108">그런 다음 각 개체에 대해 <xref:System.Data.Linq.MemberChangeConflict> 개체를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="1037b-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="05b5c-109"><xref:System.Reflection> 정보를 제공하려면 <xref:System.Data.Linq.MemberChangeConflict.Member%2A>을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="05b5c-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
+> <span data-ttu-id="1037b-109"><xref:System.Reflection> 정보를 제공하려면 <xref:System.Data.Linq.MemberChangeConflict.Member%2A>을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1037b-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
   
  [!code-csharp[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.memberchangeconflict/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.memberchangeconflict/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="05b5c-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="05b5c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1037b-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1037b-110">See also</span></span>
 
-- [<span data-ttu-id="05b5c-111">방법: 변경 내용 충돌 관리</span><span class="sxs-lookup"><span data-stu-id="05b5c-111">How to: Manage Change Conflicts</span></span>](how-to-manage-change-conflicts.md)
+- [<span data-ttu-id="1037b-111">방법: 변경 충돌 관리</span><span class="sxs-lookup"><span data-stu-id="1037b-111">How to: Manage Change Conflicts</span></span>](how-to-manage-change-conflicts.md)

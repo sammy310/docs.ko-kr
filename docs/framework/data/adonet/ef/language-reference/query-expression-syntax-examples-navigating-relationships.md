@@ -5,47 +5,52 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: a99d7d31ce23629bf7a0f390244c1fe67b4554e3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c09a0458f5b0b7d313da3379b5dda9b969eaf7e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854415"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156799"
 ---
-# <a name="query-expression-syntax-examples-navigating-relationships"></a><span data-ttu-id="6d3ed-102">쿼리 식 구문 예제: 관계 탐색</span><span class="sxs-lookup"><span data-stu-id="6d3ed-102">Query Expression Syntax Examples: Navigating Relationships</span></span>
-<span data-ttu-id="6d3ed-103">Entity Framework의 탐색 속성은 연결의 end에서 엔터티를 찾는 데 사용 되는 바로 가기 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-103">Navigation properties in the Entity Framework are shortcut properties used to locate the entities at the ends of an association.</span></span> <span data-ttu-id="6d3ed-104">탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-104">Navigation properties allow a user to navigate from one entity to another, or from one entity to related entities through an association set.</span></span> <span data-ttu-id="6d3ed-105">이 항목에서는 LINQ to Entities 쿼리의 탐색 속성을 통해 관계를 탐색 하는 방법에 대 한 쿼리 식 구문 예제를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-105">This topic provides examples in query expression syntax of how to navigate relationships through navigation properties in LINQ to Entities queries.</span></span>  
+# <a name="query-expression-syntax-examples-navigating-relationships"></a><span data-ttu-id="28a51-102">쿼리 식 구문 예제: 관계 탐색</span><span class="sxs-lookup"><span data-stu-id="28a51-102">Query Expression Syntax Examples: Navigating Relationships</span></span>
+
+<span data-ttu-id="28a51-103">Entity Framework의 탐색 속성은 연결의 end에서 엔터티를 찾는 데 사용 되는 바로 가기 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-103">Navigation properties in the Entity Framework are shortcut properties used to locate the entities at the ends of an association.</span></span> <span data-ttu-id="28a51-104">탐색 속성을 사용하면 엔터티 간에 탐색하거나 연결 집합을 통해 관련 엔터티 간에 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-104">Navigation properties allow a user to navigate from one entity to another, or from one entity to related entities through an association set.</span></span> <span data-ttu-id="28a51-105">이 항목에서는 LINQ to Entities 쿼리의 탐색 속성을 통해 관계를 탐색 하는 방법에 대 한 쿼리 식 구문 예제를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-105">This topic provides examples in query expression syntax of how to navigate relationships through navigation properties in LINQ to Entities queries.</span></span>  
   
- <span data-ttu-id="6d3ed-106">이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-106">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="28a51-106">이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-106">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="6d3ed-107">이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-107">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="28a51-107">이 항목의 예제에서는 다음 문을 사용 합니다 `using` / `Imports` .</span><span class="sxs-lookup"><span data-stu-id="28a51-107">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="example"></a><span data-ttu-id="6d3ed-108">예제</span><span class="sxs-lookup"><span data-stu-id="6d3ed-108">Example</span></span>  
- <span data-ttu-id="6d3ed-109">다음 예제에서는 <xref:System.Linq.Queryable.Select%2A> 메서드를 사용하여 성이 "Zhou"인 각 연락처에 대한 총 주문 금액의 합계와 연락처 ID를 모두 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-109">The following example uses the <xref:System.Linq.Queryable.Select%2A> method to get all the contact IDs and the sum of the total due for each contact whose last name is "Zhou".</span></span> <span data-ttu-id="6d3ed-110">`Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 `SalesOrderHeader` 개체 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-110">The `Contact.SalesOrderHeader` navigation property is used to get the collection of `SalesOrderHeader` objects for each contact.</span></span> <span data-ttu-id="6d3ed-111">`Sum` 메서드는 `Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 모든 주문에 대한 총 금액을 더합니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-111">The `Sum` method uses the `Contact.SalesOrderHeader` navigation property to sum the total due of all the orders for each contact.</span></span>  
+## <a name="example"></a><span data-ttu-id="28a51-108">예제</span><span class="sxs-lookup"><span data-stu-id="28a51-108">Example</span></span>  
+
+ <span data-ttu-id="28a51-109">다음 예제에서는 <xref:System.Linq.Queryable.Select%2A> 메서드를 사용하여 성이 "Zhou"인 각 연락처에 대한 총 주문 금액의 합계와 연락처 ID를 모두 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-109">The following example uses the <xref:System.Linq.Queryable.Select%2A> method to get all the contact IDs and the sum of the total due for each contact whose last name is "Zhou".</span></span> <span data-ttu-id="28a51-110">`Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 `SalesOrderHeader` 개체 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-110">The `Contact.SalesOrderHeader` navigation property is used to get the collection of `SalesOrderHeader` objects for each contact.</span></span> <span data-ttu-id="28a51-111">`Sum` 메서드는 `Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 모든 주문에 대한 총 금액을 더합니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-111">The `Sum` method uses the `Contact.SalesOrderHeader` navigation property to sum the total due of all the orders for each contact.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders2)]
  [!code-vb[DP L2E Examples#SelectEachContactsOrders2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selecteachcontactsorders2)]  
   
-## <a name="example"></a><span data-ttu-id="6d3ed-112">예제</span><span class="sxs-lookup"><span data-stu-id="6d3ed-112">Example</span></span>  
- <span data-ttu-id="6d3ed-113">다음 예제에서는 성이 "Zhou"인 연락처의 모든 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-113">The following example gets all the orders of the contacts whose last name is "Zhou".</span></span> <span data-ttu-id="6d3ed-114">`Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 `SalesOrderHeader` 개체 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-114">The `Contact.SalesOrderHeader` navigation property is used to get the collection of `SalesOrderHeader` objects for each contact.</span></span> <span data-ttu-id="6d3ed-115">연락처의 이름과 주문은 익명 형식으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-115">The contact's name and orders are returned in an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="28a51-112">예제</span><span class="sxs-lookup"><span data-stu-id="28a51-112">Example</span></span>  
+
+ <span data-ttu-id="28a51-113">다음 예제에서는 성이 "Zhou"인 연락처의 모든 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-113">The following example gets all the orders of the contacts whose last name is "Zhou".</span></span> <span data-ttu-id="28a51-114">`Contact.SalesOrderHeader` 탐색 속성을 사용하여 각 연락처의 `SalesOrderHeader` 개체 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-114">The `Contact.SalesOrderHeader` navigation property is used to get the collection of `SalesOrderHeader` objects for each contact.</span></span> <span data-ttu-id="28a51-115">연락처의 이름과 주문은 익명 형식으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-115">The contact's name and orders are returned in an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders3)]
  [!code-vb[DP L2E Examples#SelectEachContactsOrders3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selecteachcontactsorders3)]  
   
-## <a name="example"></a><span data-ttu-id="6d3ed-116">예제</span><span class="sxs-lookup"><span data-stu-id="6d3ed-116">Example</span></span>  
- <span data-ttu-id="6d3ed-117">다음 예제에서는 `SalesOrderHeader.Address` 및 `SalesOrderHeader.Contact` 탐색 속성을 사용하여 서로 연결된 `Address`와 `Contact` 개체의 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-117">The following example uses the `SalesOrderHeader.Address` and `SalesOrderHeader.Contact` navigation properties get the collection of `Address` and `Contact` objects associated with each order.</span></span> <span data-ttu-id="6d3ed-118">Seattle 시로 가는 각 주문에 대한 연락처의 성, 주소, 판매 주문 번호 및 총 주문 금액이 익명 형식으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-118">The last name of the contact, the street address, the sales order number, and the total due for each order to the city of Seattle are returned in an anonymous type.</span></span>  
+## <a name="example"></a><span data-ttu-id="28a51-116">예제</span><span class="sxs-lookup"><span data-stu-id="28a51-116">Example</span></span>  
+
+ <span data-ttu-id="28a51-117">다음 예제에서는 `SalesOrderHeader.Address` 및 `SalesOrderHeader.Contact` 탐색 속성을 사용하여 서로 연결된 `Address`와 `Contact` 개체의 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-117">The following example uses the `SalesOrderHeader.Address` and `SalesOrderHeader.Contact` navigation properties get the collection of `Address` and `Contact` objects associated with each order.</span></span> <span data-ttu-id="28a51-118">Seattle 시로 가는 각 주문에 대한 연락처의 성, 주소, 판매 주문 번호 및 총 주문 금액이 익명 형식으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-118">The last name of the contact, the street address, the sales order number, and the total due for each order to the city of Seattle are returned in an anonymous type.</span></span>  
   
  [!code-csharp[DP L2E Examples#GetOrderInfoThruRelationships](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#getorderinfothrurelationships)]
  [!code-vb[DP L2E Examples#GetOrderInfoThruRelationships](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#getorderinfothrurelationships)]  
   
-### <a name="example"></a><span data-ttu-id="6d3ed-119">예제</span><span class="sxs-lookup"><span data-stu-id="6d3ed-119">Example</span></span>  
- <span data-ttu-id="6d3ed-120">다음 예제에서는 `Where` 메서드를 사용하여 2003년 12월 1일 이후의 주문을 찾은 다음 `order.SalesOrderDetail` 탐색 속성을 사용하여 각 주문의 세부 사항을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6d3ed-120">The following example uses the `Where` method to find orders that were made after December 1, 2003, and then uses the `order.SalesOrderDetail` navigation property to get the details for each order.</span></span>  
+### <a name="example"></a><span data-ttu-id="28a51-119">예제</span><span class="sxs-lookup"><span data-stu-id="28a51-119">Example</span></span>  
+
+ <span data-ttu-id="28a51-120">다음 예제에서는 `Where` 메서드를 사용하여 2003년 12월 1일 이후의 주문을 찾은 다음 `order.SalesOrderDetail` 탐색 속성을 사용하여 각 주문의 세부 사항을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="28a51-120">The following example uses the `Where` method to find orders that were made after December 1, 2003, and then uses the `order.SalesOrderDetail` navigation property to get the details for each order.</span></span>  
   
  [!code-csharp[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty)]
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
-## <a name="see-also"></a><span data-ttu-id="6d3ed-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="6d3ed-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28a51-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="28a51-121">See also</span></span>
 
-- [<span data-ttu-id="6d3ed-122">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="6d3ed-122">Queries in LINQ to Entities</span></span>](queries-in-linq-to-entities.md)
+- [<span data-ttu-id="28a51-122">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="28a51-122">Queries in LINQ to Entities</span></span>](queries-in-linq-to-entities.md)
