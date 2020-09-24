@@ -3,14 +3,15 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e759f86e7746eaf3fdd72ed923612b24ef9b0c23
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398614"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150819"
 ---
 # \<states>
+
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
   
  추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
@@ -43,24 +44,27 @@ ms.locfileid: "70398614"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<state>](states.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 쿼리입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  반환되는 레코드는 이 컬렉션의 상태를 기준으로 필터링됩니다.  
   
  가능한 상태 값은 다음 표에 설명되어 있습니다.  
@@ -82,6 +86,7 @@ ms.locfileid: "70398614"
 |Unsuspended|워크플로 인스턴스의 일시 중단이 해제됩니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.  
   
 ```xml  

@@ -3,17 +3,19 @@ title: 데이터 검색 및 수정
 description: .NET Framework에서 ADO.NET의 데이터 공급자는 데이터를 읽고 업데이트 하기 위해 응용 프로그램과 데이터 원본 간의 다리 역할을 합니다.
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: f916324dc829526a5e6b0078021b09786755f666
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7620843e77b25606b2dec2bf6eae3a4f40d1b9fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286613"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150676"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
+
 데이터베이스 애플리케이션의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다. ADO.NET의 .NET Framework 데이터 공급자는 응용 프로그램과 데이터 원본 간의 브리지 역할을 하므로 **DataReader** 나 **DataAdapter**를 사용 하 여 데이터를 검색 하는 것 뿐만 아니라 명령을 실행할 수 있습니다. 모든 데이터베이스 애플리케이션의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다. ADO.NET에서는 데이터를 업데이트 하는 경우 **DataAdapter** 와 및 <xref:System.Data.DataSet> **명령** 개체를 사용 하며 트랜잭션 사용도 포함 될 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [데이터 소스에 연결](connecting-to-a-data-source.md)  
  데이터 소스에 대한 연결을 설정하고 연결 이벤트로 작업하는 방법을 설명합니다.  
   

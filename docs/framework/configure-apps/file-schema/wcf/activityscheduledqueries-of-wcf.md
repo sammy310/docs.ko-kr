@@ -1,15 +1,16 @@
 ---
-title: <activityScheduledQueries>WCF의
+title: <activityScheduledQueries> WCF의
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: c2281a9027aabfc5255ef7b09176f60d1725b522
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 86f196437b2230d6541570aa8994d99e7b340f66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850501"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151196"
 ---
-# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries>WCF의
+# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries> WCF의
+
 부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 추적 참가자가 활동 예약 레코드를 구독하려면 쿼리가 필요합니다.  
   
 추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
@@ -49,13 +50,13 @@ ms.locfileid: "70850501"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<activityScheduledQuery>](activityscheduledquery-of-wcf.md)|부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
   

@@ -2,32 +2,34 @@
 title: 모델 정의 함수
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 973d7ff9f7b76650782d62dcdcab60c8cedde18f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 04d27387c30d5fe09d31c1b2cc94741f21ffe8e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735583"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150780"
 ---
 # <a name="model-defined-function"></a>모델 정의 함수
+
 *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 모델 정의 함수의 본문은 함수를 데이터 소스에서 지원 되는 규칙이 나 언어와는 독립적으로 표현할 수 있도록 하는 [Entity SQL](./ef/language-reference/entity-sql-language.md)으로 표현 됩니다.  
   
  모델 정의 함수 정의에는 다음 정보가 들어 있습니다.  
   
-- 함수 이름 (필수)  
+- 함수의 이름입니다. (필수)  
   
-- 반환 값의 형식입니다. 이 매개 변수는 선택 사항입니다.  
+- 반환 값의 형식 (선택 사항)  
   
     > [!NOTE]
     > 반환 형식을 지정하지 않으면 반환 값은 void입니다.  
   
-- 매개 변수 정보 이 매개 변수는 선택 사항입니다.  
+- 매개 변수 정보 (선택 사항)  
   
 - 함수의 본문을 정의 하는 [Entity SQL](./ef/language-reference/entity-sql-language.md) 식입니다.  
   
  모델 정의 함수는 출력 매개 변수를 지원하지 않습니다. 모델 정의 함수를 작성할 수 있도록 이러한 제한이 적용됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다.  
   
  ![게시 된 날짜가 있는 모델을 보여 주는 스크린샷](./media/model-defined-function/model-published-date-three-entity-types.gif)  
@@ -36,7 +38,7 @@ ms.locfileid: "73735583"
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](entity-data-model.md)

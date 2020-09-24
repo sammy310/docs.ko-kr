@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 6b7cea2475a5c11091a04ef3044bbc958e55fc5d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1c8bb8fe757c35f6096b139da6ca939b1ce1c283
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569086"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150624"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>방법: 데이터 서비스 결과의 페이징 사용(WCF Data Services)
+
 WCF Data Services를 사용 하면 데이터 서비스 쿼리에서 반환 되는 엔터티 수를 제한할 수 있습니다. 페이지 제한은 서비스가 초기화될 때 호출되는 메서드에서 정의되며 각 엔터티 집합에 대해 별도로 설정될 수 있습니다.  
   
  페이징을 사용하도록 설정하면 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다. 자세한 내용은 [데이터 서비스 구성](configuring-the-data-service-wcf-data-services.md)합니다.  
@@ -28,7 +29,7 @@ WCF Data Services를 사용 하면 데이터 서비스 쿼리에서 반환 되�
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [지연 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)
-- [방법: 페이지 단위 결과 로드](how-to-load-paged-results-wcf-data-services.md)
+- [방법: 페이징된 결과 로드](how-to-load-paged-results-wcf-data-services.md)

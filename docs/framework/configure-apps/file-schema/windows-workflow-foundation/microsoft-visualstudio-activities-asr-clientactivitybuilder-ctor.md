@@ -9,14 +9,15 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: 99f2eb9447bdf43cb57cfe86f35d2c09044ed470
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4e7595efd3037a525d272dbcd60243db29f2efa6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69947622"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150832"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
+
 [VisualStudio](microsoft-visualstudio-activities-asr-clientactivitybuilder.md) 의 인스턴스를 만듭니다 .이 클래스의 인스턴스를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -28,6 +29,7 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
 ## <a name="parameters"></a>매개 변수  
   
 ## <a name="parameter-values"></a>매개 변수 값  
+
  *operationDescription*  
   
  : 작업 이름, 반환 형식 및 매개 변수 정보를 비롯하여 생성되는 워크플로 활동에서 수행될 작업에 대해 설명합니다. 이 매개 변수 값은 **null**이 아니어야 합니다. 메시지 계약을 사용하고 한 메시지에 인수를 사용하는 동기 작업을 설명해야 합니다. 이러한 조건이 충족되지 않으면 생성자 및 이 클래스의 기타 메서드를 사용한 런타임 결과는 정의되지 않습니다.  

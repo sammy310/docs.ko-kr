@@ -2,14 +2,15 @@
 title: <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-ms.openlocfilehash: 23fe19258e09e9e8a5e05a94ccef0e40ee1cb5fd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7ddb292b8f0ffe38133c7f142be751a87d2be11c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400331"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150910"
 ---
 # \<knownCertificates>
+
 STS(보안 토큰 서비스)에서 발급한 보안 자격 증명을 인증하기 위해 제공된 X.509 인증서 컬렉션을 나타냅니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,24 +34,27 @@ STS(보안 토큰 서비스)에서 발급한 보안 자격 증명을 인증하�
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<add>](add-of-knowncertificates.md)|컬렉션에 X.509 인증서를 추가합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|서비스 자격 증명으로 발급된 토큰을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  발급된 토큰 시나리오에는 3단계가 있습니다. 첫 번째 단계에서는 서비스에 액세스 하려는 클라이언트를 *보안 토큰 서비스*라고 합니다. 보안 토큰 서비스는 클라이언트를 인증한 다음 일반적으로 SAML(Security Assertions Markup Language) 토큰이라는 클라이언트 토큰을 발급합니다. 클라이언트는 토큰을 통해 서비스에 반환됩니다. 서비스는 토큰 및 해당 클라이언트를 인증할 수 있는 데이터의 토큰을 검사합니다. 토큰을 인증하려면 보안 토큰 서비스가 사용하는 인증서를 서비스가 인식해야 합니다.  
   
  [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)요소는 이러한 보안 토큰 서비스 인증서에 대 한 리포지토리입니다. 인증서를 추가 하려면 [ \<knownCertificates> 요소](knowncertificates.md)를 사용 합니다. [\<add>](add-of-knowncertificates.md)다음 예제와 같이 각 인증서에 대해를 삽입 합니다.  

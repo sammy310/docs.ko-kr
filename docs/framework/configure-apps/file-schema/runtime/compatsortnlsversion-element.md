@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 27d532633f08a5a560da61e904917c1faa35126c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154272"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151365"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> 요소
+
 문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,31 +31,34 @@ ms.locfileid: "79154272"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 정렬 순서를 사용할 로캘 ID를 지정합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |4096|대체 정렬 순서를 나타내는 로캘 ID입니다. 이 경우 4096는 .NET Framework 3.5 이전 버전의 정렬 순서를 나타냅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  .NET Framework 4의 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 유니코드 5.1 표준을 준수 하므로 및와 같은 문자열 비교 메서드의 결과는 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 이전 버전의 .NET Framework와 다를 수 있습니다. 응용 프로그램이 레거시 동작에 의존 하는 경우 `<CompatSortNLSVersion>` 응용 프로그램의 구성 파일에 요소를 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -63,6 +67,7 @@ ms.locfileid: "79154272"
  애플리케이션 도메인을 만들 때 &quot;NetFx40_Legacy20SortingBehavior&quot; 문자열을 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 메서드로 전달하여 특정 애플리케이션 도메인에 레거시 문자열 정렬과 비교 규칙을 사용할 수도 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 현재 문화권의 규약을 사용하여 두 가지 <xref:System.String> 개체를 인스턴스화하고 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 호출하여 두 개체를 비교합니다.  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
