@@ -8,79 +8,84 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 27d532633f08a5a560da61e904917c1faa35126c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154272"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151365"
 ---
-# <a name="compatsortnlsversion-element"></a><span data-ttu-id="27b01-102">\<CompatSortNLSVersion> 요소</span><span class="sxs-lookup"><span data-stu-id="27b01-102">\<CompatSortNLSVersion> Element</span></span>
-<span data-ttu-id="27b01-103">문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
+# <a name="compatsortnlsversion-element"></a><span data-ttu-id="fe423-102">\<CompatSortNLSVersion> 요소</span><span class="sxs-lookup"><span data-stu-id="fe423-102">\<CompatSortNLSVersion> Element</span></span>
+
+<span data-ttu-id="fe423-103">문자열 비교를 수행할 때 런타임에서 레거시 정렬 순서를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<CompatSortNLSVersion>**  
   
-## <a name="syntax"></a><span data-ttu-id="27b01-104">구문</span><span class="sxs-lookup"><span data-stu-id="27b01-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe423-104">구문</span><span class="sxs-lookup"><span data-stu-id="fe423-104">Syntax</span></span>  
   
 ```xml  
 <CompatSortNLSVersion
    enabled="4096"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="27b01-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="27b01-105">Attributes and Elements</span></span>  
- <span data-ttu-id="27b01-106">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fe423-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="fe423-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="fe423-106">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="27b01-107">특성</span><span class="sxs-lookup"><span data-stu-id="27b01-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fe423-107">특성</span><span class="sxs-lookup"><span data-stu-id="fe423-107">Attributes</span></span>  
   
-|<span data-ttu-id="27b01-108">attribute</span><span class="sxs-lookup"><span data-stu-id="27b01-108">Attribute</span></span>|<span data-ttu-id="27b01-109">Description</span><span class="sxs-lookup"><span data-stu-id="27b01-109">Description</span></span>|  
+|<span data-ttu-id="fe423-108">attribute</span><span class="sxs-lookup"><span data-stu-id="fe423-108">Attribute</span></span>|<span data-ttu-id="fe423-109">설명</span><span class="sxs-lookup"><span data-stu-id="fe423-109">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="27b01-110">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="27b01-111">정렬 순서를 사용할 로캘 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-111">Specifies the locale ID whose sort order is to be used.</span></span>|  
+|`enabled`|<span data-ttu-id="fe423-110">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="fe423-111">정렬 순서를 사용할 로캘 ID를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-111">Specifies the locale ID whose sort order is to be used.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="27b01-112">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="27b01-112">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="fe423-112">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="fe423-112">enabled Attribute</span></span>  
   
-|<span data-ttu-id="27b01-113">값</span><span class="sxs-lookup"><span data-stu-id="27b01-113">Value</span></span>|<span data-ttu-id="27b01-114">Description</span><span class="sxs-lookup"><span data-stu-id="27b01-114">Description</span></span>|  
+|<span data-ttu-id="fe423-113">Value</span><span class="sxs-lookup"><span data-stu-id="fe423-113">Value</span></span>|<span data-ttu-id="fe423-114">설명</span><span class="sxs-lookup"><span data-stu-id="fe423-114">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="27b01-115">4096</span><span class="sxs-lookup"><span data-stu-id="27b01-115">4096</span></span>|<span data-ttu-id="27b01-116">대체 정렬 순서를 나타내는 로캘 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-116">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="27b01-117">이 경우 4096는 .NET Framework 3.5 이전 버전의 정렬 순서를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-117">In this case, 4096 represents the sort order of the .NET Framework 3.5 and earlier versions.</span></span>|  
+|<span data-ttu-id="fe423-115">4096</span><span class="sxs-lookup"><span data-stu-id="fe423-115">4096</span></span>|<span data-ttu-id="fe423-116">대체 정렬 순서를 나타내는 로캘 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-116">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="fe423-117">이 경우 4096는 .NET Framework 3.5 이전 버전의 정렬 순서를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-117">In this case, 4096 represents the sort order of the .NET Framework 3.5 and earlier versions.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="27b01-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="27b01-118">Child Elements</span></span>  
- <span data-ttu-id="27b01-119">없음</span><span class="sxs-lookup"><span data-stu-id="27b01-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fe423-118">자식 요소</span><span class="sxs-lookup"><span data-stu-id="fe423-118">Child Elements</span></span>  
+
+ <span data-ttu-id="fe423-119">없음</span><span class="sxs-lookup"><span data-stu-id="fe423-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="27b01-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="27b01-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fe423-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="fe423-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="27b01-121">요소</span><span class="sxs-lookup"><span data-stu-id="27b01-121">Element</span></span>|<span data-ttu-id="27b01-122">Description</span><span class="sxs-lookup"><span data-stu-id="27b01-122">Description</span></span>|  
+|<span data-ttu-id="fe423-121">요소</span><span class="sxs-lookup"><span data-stu-id="fe423-121">Element</span></span>|<span data-ttu-id="fe423-122">설명</span><span class="sxs-lookup"><span data-stu-id="fe423-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="27b01-123">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="27b01-124">런타임 초기화 옵션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-124">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="fe423-123">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="fe423-124">런타임 초기화 옵션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-124">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="27b01-125">설명</span><span class="sxs-lookup"><span data-stu-id="27b01-125">Remarks</span></span>  
- <span data-ttu-id="27b01-126">.NET Framework 4의 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 유니코드 5.1 표준을 준수 하므로 및와 같은 문자열 비교 메서드의 결과는 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 이전 버전의 .NET Framework와 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-126">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the .NET Framework 4 conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="27b01-127">응용 프로그램이 레거시 동작에 의존 하는 경우 `<CompatSortNLSVersion>` 응용 프로그램의 구성 파일에 요소를 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-127">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the .NET Framework 3.5 and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe423-125">설명</span><span class="sxs-lookup"><span data-stu-id="fe423-125">Remarks</span></span>  
+
+ <span data-ttu-id="fe423-126">.NET Framework 4의 클래스에서 수행 하는 문자열 비교, 정렬 및 대/소문자 구분 연산은 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 유니코드 5.1 표준을 준수 하므로 및와 같은 문자열 비교 메서드의 결과는 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 이전 버전의 .NET Framework와 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-126">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the .NET Framework 4 conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="fe423-127">응용 프로그램이 레거시 동작에 의존 하는 경우 `<CompatSortNLSVersion>` 응용 프로그램의 구성 파일에 요소를 포함 하 여 .NET Framework 3.5 이전 버전에서 사용 되는 문자열 비교 및 정렬 규칙을 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-127">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the .NET Framework 3.5 and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="27b01-128">레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-128">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
+> <span data-ttu-id="fe423-128">레거시 문자열 비교 복원 및 정렬 규칙을 실행하려면 로컬 시스템에서 sort00001000.dll 동적 링크 라이브러리를 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-128">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
   
- <span data-ttu-id="27b01-129">애플리케이션 도메인을 만들 때 &quot;NetFx40_Legacy20SortingBehavior&quot; 문자열을 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 메서드로 전달하여 특정 애플리케이션 도메인에 레거시 문자열 정렬과 비교 규칙을 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-129">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
+ <span data-ttu-id="fe423-129">애플리케이션 도메인을 만들 때 &quot;NetFx40_Legacy20SortingBehavior&quot; 문자열을 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 메서드로 전달하여 특정 애플리케이션 도메인에 레거시 문자열 정렬과 비교 규칙을 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-129">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="27b01-130">예제</span><span class="sxs-lookup"><span data-stu-id="27b01-130">Example</span></span>  
- <span data-ttu-id="27b01-131">다음 예제에서는 현재 문화권의 규약을 사용하여 두 가지 <xref:System.String> 개체를 인스턴스화하고 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 호출하여 두 개체를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-131">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
+## <a name="example"></a><span data-ttu-id="fe423-130">예제</span><span class="sxs-lookup"><span data-stu-id="fe423-130">Example</span></span>  
+
+ <span data-ttu-id="fe423-131">다음 예제에서는 현재 문화권의 규약을 사용하여 두 가지 <xref:System.String> 개체를 인스턴스화하고 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 호출하여 두 개체를 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-131">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- <span data-ttu-id="27b01-132">.NET Framework 4에서 예제를 실행 하면 다음과 같은 출력이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-132">When you run the example on the .NET Framework 4, it displays the following output:</span></span>
+ <span data-ttu-id="fe423-132">.NET Framework 4에서 예제를 실행 하면 다음과 같은 출력이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-132">When you run the example on the .NET Framework 4, it displays the following output:</span></span>
   
 ```console
 sta follows a in the sort order.  
 ```  
   
- <span data-ttu-id="27b01-133">이는 .NET Framework 3.5에서 예제를 실행할 때 표시 되는 출력과 완전히 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-133">This is completely different from the output that is displayed when you run the example on the .NET Framework 3.5:</span></span>
+ <span data-ttu-id="fe423-133">이는 .NET Framework 3.5에서 예제를 실행할 때 표시 되는 출력과 완전히 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-133">This is completely different from the output that is displayed when you run the example on the .NET Framework 3.5:</span></span>
   
 ```console
 sta equals a in the sort order.  
 ```  
   
- <span data-ttu-id="27b01-134">그러나 다음 구성 파일을 예제 디렉터리에 추가한 다음 .NET Framework 4에서 예제를 실행 하는 경우 출력은 3.5 .NET Framework에서 실행 될 때 예제에 의해 생성 된 것과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="27b01-134">However, if you add the following configuration file to the example's directory and then run the example on the .NET Framework 4, the output is identical to that produced by the example when it is run on the .NET Framework 3.5.</span></span>  
+ <span data-ttu-id="fe423-134">그러나 다음 구성 파일을 예제 디렉터리에 추가한 다음 .NET Framework 4에서 예제를 실행 하는 경우 출력은 3.5 .NET Framework에서 실행 될 때 예제에 의해 생성 된 것과 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="fe423-134">However, if you add the following configuration file to the example's directory and then run the example on the .NET Framework 4, the output is identical to that produced by the example when it is run on the .NET Framework 3.5.</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -91,7 +96,7 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="27b01-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="27b01-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe423-135">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fe423-135">See also</span></span>
 
-- [<span data-ttu-id="27b01-136">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="27b01-136">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="27b01-137">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="27b01-137">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="fe423-136">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="fe423-136">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="fe423-137">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="fe423-137">Configuration File Schema</span></span>](../index.md)
