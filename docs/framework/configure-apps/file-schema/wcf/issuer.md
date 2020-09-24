@@ -2,14 +2,15 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 74f5f2fc1a0fa1ffbbb510e4e700c33a13d02ab3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9e92bbcacf529a97e1ae936e93e38c98eab19cab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397914"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157267"
 ---
 # \<issuer>
+
 보안 토큰을 발급하는 STS(보안 토큰 서비스)를 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,24 +46,25 @@ ms.locfileid: "70397914"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
-|address|필수 문자열 STS의 URL입니다.|  
+|address|필수 문자열입니다. STS의 URL입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<headers>](headers-element.md)|작성기에서 만들 수 있는 엔드포인트의 주소 헤더 컬렉션입니다.|  
 |[\<identity>](identity.md)|발급된 토큰을 사용하는 경우 클라이언트가 서버를 인증할 수 있도록 설정을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<message>](message-element-of-wsfederationhttpbinding.md)|요소에 대 한 메시지 수준 보안 설정을 정의 합니다 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .|  
   

@@ -2,14 +2,15 @@
 title: <synchronousReceive> 요소
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: b3f4860be6b7edac776a1c30611271b2eb36968e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2073d115dd87d513a6e48b8b585fed4b49d5bb32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399505"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157176"
 ---
 # <a name="synchronousreceive-element"></a>\<synchronousReceive> 요소
+
 이 구성 요소는 서비스 또는 클라이언트 애플리케이션에서 메시지 수신을 위한 런타임 동작을 지정하는 데 사용됩니다. 이 구성 요소에는 특성이나 자식 요소가 없습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,21 +27,25 @@ ms.locfileid: "70399505"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  채널 수신기에 기본값(비동기) 대신 동기 수신을 사용하도록 지시하려면 이 동작을 사용합니다. WCF (Windows Communication Foundation)는 수락 된 각 채널에 대해 펌프 하기 위해 새 스레드를 발급 합니다. 채널이 많은 경우 스레드가 부족할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목

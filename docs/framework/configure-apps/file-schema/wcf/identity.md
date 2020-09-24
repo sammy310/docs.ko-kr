@@ -2,14 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855147"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157384"
 ---
 # \<identity>
+
 ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다. 클라이언트와 서비스 간의 핸드셰이크 프로세스에서 WCF (Windows Communication Foundation) 인프라는 예상 되는 서비스의 id가이 요소의 값과 일치 하는지 확인 하므로 인증 될 수 있습니다. 자세한 내용은 [서비스 Id 및 인증](../../../wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,14 +37,16 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |인증서(certificate)|X.509 인증서의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateElement> 형식입니다. 이 요소에는 이 인증서로 인코딩된 값을 지정하는 문자열인 `encodedValue` 특성이 포함되어 있습니다.|  
 |certificateReference|X.509 인증서 유효성 검사의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateReferenceElement> 형식입니다.|  
@@ -54,11 +57,11 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<custom>](custom.md)|netPeerTcpBinding에 대한 사용자 지정 피어 확인자를 지정합니다.|  
 |[\<endpoint>](endpoint-element.md)|서비스 끝점을 구성 합니다.|  
-|[\<endpoint>으로\<client>](endpoint-of-client.md)|채널 끝점을 구성 합니다.|  
+|[\<client>의 \<endpoint>](endpoint-of-client.md)|채널 끝점을 구성 합니다.|  
 |[\<issuer>](issuer.md)|페더레이션 서비스에 대한 STS(보안 토큰 서비스)를 지정합니다.|  
 |[\<issuerMetadata>](issuermetadata.md)|페더레이션 서비스의 STS(보안 토큰 서비스)에 대한 메타데이터 엔드포인트를 지정합니다.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|사용자 지정 바인딩에서 발급된 토큰에 대한 매개 변수를 정의합니다.|  

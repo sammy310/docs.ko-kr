@@ -2,12 +2,12 @@
 title: 서버리스 기능 활용
 description: 클라우드 네이티브 응용 프로그램에서 서버 리스 및 Azure Functions 활용
 ms.date: 05/13/2020
-ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8e5c60d29cd8d635f79f42c232b33f060949e2b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613865"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155369"
 ---
 # <a name="leveraging-serverless-functions"></a>서버리스 기능 활용
 
@@ -40,7 +40,7 @@ ms.locfileid: "83613865"
 
 서버를 사용 하지 않는 경우 트리거에 대 한 응답으로 호출 되는 개별 단기 실행 함수를 노출 합니다. 이렇게 하면 백그라운드 작업을 처리 하는 데 적합 합니다.
 
-응용 프로그램에서 워크플로의 단계로 전자 메일을 보내야 할 수 있습니다. 마이크로 서비스 요청의 일부로 알림을 보내는 대신 메시지 세부 정보를 큐에 저장 합니다. Azure 함수는 메시지를 큐에서 제거 하 고 비동기적으로 전자 메일을 보낼 수 있습니다. 이렇게 하면 마이크로 서비스의 성능 및 확장성을 향상 시킬 수 있습니다. 전자 메일 전송과 관련 된 병목 현상을 방지 하기 위해 [큐 기반 부하 평준화](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling) 를 구현할 수 있습니다. 또한이 독립 실행형 서비스는 여러 응용 프로그램에서 유틸리티로 재사용할 수 있습니다.
+응용 프로그램에서 워크플로의 단계로 전자 메일을 보내야 할 수 있습니다. 마이크로 서비스 요청의 일부로 알림을 보내는 대신 메시지 세부 정보를 큐에 저장 합니다. Azure 함수는 메시지를 큐에서 제거 하 고 비동기적으로 전자 메일을 보낼 수 있습니다. 이렇게 하면 마이크로 서비스의 성능 및 확장성을 향상 시킬 수 있습니다. 전자 메일 전송과 관련 된 병목 현상을 방지 하기 위해 [큐 기반 부하 평준화](/azure/architecture/patterns/queue-based-load-leveling) 를 구현할 수 있습니다. 또한이 독립 실행형 서비스는 여러 응용 프로그램에서 유틸리티로 재사용할 수 있습니다.
 
 큐 및 항목 으로부터의 비동기 메시징은 서버 리스 함수를 트리거하는 일반적인 패턴입니다. 그러나 Azure Functions Azure Blob Storage 변경 같은 다른 이벤트에 의해 트리거될 수 있습니다. 이미지 업로드를 지 원하는 서비스에는 이미지 크기 최적화를 담당 하는 Azure 함수가 있을 수 있습니다. 함수는 Azure Blob Storage에 삽입 하 여 직접 트리거되어 마이크로 서비스 작업에서 복잡성을 유지할 수 있습니다.
 
@@ -55,9 +55,9 @@ ms.locfileid: "83613865"
 ![콜드 및 웜 시작 ](./media/cold-start-warm-start.png)
  **그림 3-10**. 콜드 시작과 웜 시작 비교
 
-콜드 시작을 완전히 방지 하려면 [소비 계획에서 전용 요금제로](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)전환할 수 있습니다. 프리미엄 계획 업그레이드를 사용 하 여 하나 이상의 [사전 준비 인스턴스](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) 를 구성할 수도 있습니다. 이러한 경우 다른 인스턴스를 추가 해야 하는 경우 이미 실행 되 고 있습니다. 이러한 옵션은 서버를 사용 하지 않는 컴퓨팅과 관련 된 콜드 시작 문제를 완화 하는 데 도움이 됩니다.
+콜드 시작을 완전히 방지 하려면 [소비 계획에서 전용 요금제로](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)전환할 수 있습니다. 프리미엄 계획 업그레이드를 사용 하 여 하나 이상의 [사전 준비 인스턴스](/azure/azure-functions/functions-premium-plan#pre-warmed-instances) 를 구성할 수도 있습니다. 이러한 경우 다른 인스턴스를 추가 해야 하는 경우 이미 실행 되 고 있습니다. 이러한 옵션은 서버를 사용 하지 않는 컴퓨팅과 관련 된 콜드 시작 문제를 완화 하는 데 도움이 됩니다.
 
-클라우드 공급자는 계산 실행 시간 및 사용 된 메모리에 따라 서버 리스 서버를 청구 합니다. 장기 실행 작업 또는 높은 메모리 사용 워크 로드가 항상 서버를 사용 하기에 적합 한 것은 아닙니다. 서버를 사용 하지 않는 함수는 신속 하 게 완료할 수 있는 작은 작업 청크를 선호 합니다. 서버를 사용 하지 않는 대부분의 플랫폼에서는 몇 분 내에 개별 함수를 완료 해야 합니다. 기본값은 5 분의 시간 제한 기간으로, 최대 10 분으로 구성할 수 있습니다. Azure Functions Azure Functions 프리미엄 요금제를 사용 하면이 문제를 완화할 수 있으며, 구성할 수 있는 제한 없는 제한이 있는 30 분으로 기본 제한 시간을 설정할 수 있습니다. 계산 시간은 달력 시간이 아닙니다. [Azure Durable Functions 프레임 워크](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) 를 사용 하는 고급 함수는 며칠 동안 실행을 일시 중지할 수 있습니다. 요금은 실제 실행 시간을 기반으로 하며, 함수가 절전 모드를 해제 하 고 처리를 다시 시작 합니다.
+클라우드 공급자는 계산 실행 시간 및 사용 된 메모리에 따라 서버 리스 서버를 청구 합니다. 장기 실행 작업 또는 높은 메모리 사용 워크 로드가 항상 서버를 사용 하기에 적합 한 것은 아닙니다. 서버를 사용 하지 않는 함수는 신속 하 게 완료할 수 있는 작은 작업 청크를 선호 합니다. 서버를 사용 하지 않는 대부분의 플랫폼에서는 몇 분 내에 개별 함수를 완료 해야 합니다. 기본값은 5 분의 시간 제한 기간으로, 최대 10 분으로 구성할 수 있습니다. Azure Functions Azure Functions 프리미엄 요금제를 사용 하면이 문제를 완화할 수 있으며, 구성할 수 있는 제한 없는 제한이 있는 30 분으로 기본 제한 시간을 설정할 수 있습니다. 계산 시간은 달력 시간이 아닙니다. [Azure Durable Functions 프레임 워크](/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) 를 사용 하는 고급 함수는 며칠 동안 실행을 일시 중지할 수 있습니다. 요금은 실제 실행 시간을 기반으로 하며, 함수가 절전 모드를 해제 하 고 처리를 다시 시작 합니다.
 
 마지막으로 응용 프로그램 작업에 대 한 Azure Functions 활용 하면 복잡성이 증가 합니다. 먼저 모듈화 된 느슨하게 연결 된 디자인을 사용 하 여 응용 프로그램을 설계 합니다. 그런 다음 서버를 사용 하지 않는 혜택이 추가 복잡성을 정당화 하는지 확인 합니다.
 

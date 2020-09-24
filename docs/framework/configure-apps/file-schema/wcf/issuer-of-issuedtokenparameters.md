@@ -2,14 +2,15 @@
 title: <issuedTokenParameters>의 <issuer>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: bdd5ad45984fae7b39defe82c4af75845dfda1b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bfe8163d2d6baba1d6e8053f7f6579673d8b4b21
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397938"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157280"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<issuedTokenParameters>의 \<issuer>
+
 보안 토큰을 발급하는 STS(보안 토큰 서비스)를 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,24 +29,25 @@ ms.locfileid: "70397938"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
-|address|필수 문자열 STS의 URL입니다.|  
+|address|필수 문자열입니다. STS의 URL입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<headers>](headers-element.md)|작성기에서 만들 수 있는 엔드포인트의 주소 헤더 컬렉션입니다.|  
 |[\<identity>](identity.md)|발급된 토큰을 사용하는 경우 클라이언트가 서버를 인증할 수 있도록 설정을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|현재 발급된 토큰을 지정합니다.|  
   
@@ -58,9 +60,9 @@ ms.locfileid: "70397938"
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

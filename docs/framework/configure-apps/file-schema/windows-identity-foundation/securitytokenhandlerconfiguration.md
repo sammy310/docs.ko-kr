@@ -3,14 +3,15 @@ title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: e3e65820fa4dc341371d4f67689a288cd3f63951
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4c6affbc24a58424158e466fb732e9a3b3d6f1ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152569"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157020"
 ---
 # \<securityTokenHandlerConfiguration>
+
 토큰 처리기의 컬렉션에 대 한 구성을 제공 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,18 +35,19 @@ ms.locfileid: "79152569"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |saveBootstrapContext|부트스트랩 토큰이 세션 토큰에 포함 되어야 하는지 여부를 지정 합니다. `saveBootstrapContext`요소에 대 한 특성을 설정 하 여 토큰 처리기 컬렉션에서 값을 설정할 수도 있습니다 [\<identityConfiguration>](identityconfiguration.md) . 토큰 처리기 컬렉션에 설정 된 값은 서비스에 설정 된 값을 재정의 합니다.|  
 |maximumClockSkew|<xref:System.TimeSpan>허용 되는 최대 클록 오차를 지정 하는입니다. 로그인 세션이 만료 시간 유효성 검사와 같은 시간에 민감한 작업을 수행할 때 허용 되는 최대 클럭 오차를 제어 합니다. 기본값은 5 분 "00:05:00"입니다. 값을 지정 하는 방법에 대 한 자세한 내용은 <xref:System.TimeSpan> [Timespan 값](../windows-workflow-foundation/index.md)을 참조 하세요. 요소의 특성을 설정 하 여 서비스 수준에서 최대 클록 오차를 설정할 수도 있습니다 `maximumClockSkew` [\<identityConfiguration>](identityconfiguration.md) . 토큰 처리기 컬렉션에 설정 된 값은 서비스에 설정 된 값을 재정의 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<audienceUris>](audienceuris.md)|이 신뢰 당사자의 허용 되는 식별자에 해당 하는 Uri 집합을 지정 합니다. 선택 사항입니다.|  
 |[\<caches>](caches.md)|세션 토큰 및 토큰 재생 검색에 사용 되는 캐시를 등록 합니다. 는 서비스 수준 또는 보안 토큰 처리기 컬렉션에서 지정할 수 있습니다. 선택 사항입니다.|  
@@ -57,11 +59,12 @@ ms.locfileid: "79152569"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|끝점에 등록 된 보안 토큰 처리기의 컬렉션을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 섹션에서는 개체의 속성 값을 제공 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> 합니다. 이 섹션에서 구성 된 설정은 서비스에 구성 된 설정을 재정의 합니다. 이러한 설정 중 일부는 보안 토큰 처리기 컬렉션에 처리기를 추가할 때 지정 된 설정에 의해 재정의 될 수 있습니다.  
   
 ## <a name="example"></a>예제  

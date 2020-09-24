@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6fe047fc672a2b42f886e81dcace91042a552932
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551493"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156318"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
+
 SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식이 도입되었습니다. 새 데이터 형식에는 날짜 및 시간에 대한 별도의 형식, 그리고 더 큰 범위, 전체 자릿수 및 표준 시간대 인식이 포함된 확장된 데이터 형식이 포함됩니다. .NET Framework 버전 3.5 SP(서비스 팩) 1부터는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에 SQL Server 2008 데이터베이스 엔진의 새로운 모든 기능이 완벽하게 지원됩니다. SqlClient에서 이러한 새 기능을 사용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
   
  SQL Server 2008보다 이전의 SQL Server 버전에는 날짜 및 시간 값을 사용하기 위한 두 가지 데이터 형식 `datetime` 및 `smalldatetime`이 있습니다. 두 데이터 형식 모두 날짜 값과 시간 값을 모두 포함하므로 날짜나 시간 값만 가지고 작업하기는 어려웠습니다. 또한 이러한 날짜 형식은 1753년 영국에 양력이 도입된 이후의 날짜만 지원합니다. 또 다른 제한 사항은 이러한 이전 데이터 형식이 표준 시간대를 인식하지 못해 여러 표준 시간대에서 발생하는 데이터로 작업하기가 어렵다는 것입니다.  
@@ -25,9 +26,10 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
 1. [날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008에 도입된 날짜/시간 데이터 형식  
+
  다음 표에서는 새로운 날짜 및 시간 데이터 형식에 대해 설명합니다.  
   
-|SQL Server 데이터 형식|Description|  
+|SQL Server 데이터 형식|설명|  
 |--------------------------|-----------------|  
 |`date`|`date` 데이터 형식은 하루 단위이며 범위는 01년 1월 1일부터 9999년 12월 31일까지입니다. 기본값은 1900년 1월 1일입니다. 스토리지 크기는 3바이트입니다.|  
 |`time`|`time` 데이터 형식은 24시간제를 기준으로 시간 값만 저장합니다. `time` 데이터 형식의 범위는 00:00:00.0000000~23:59:59.9999999이며 정확도는 100나노초입니다. 기본값은 00:00:00.0000000(자정)입니다. `time` 데이터 형식은 소수 자릿수 초 전체 자릿수에 대한 사용자 정의를 지원하며 저장 크기는 지정된 전체 자릿수에 따라 3~6바이트를 사용합니다.|  
@@ -38,6 +40,7 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
 > `Type System Version` 키워드 사용에 관한 자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.  
   
 ## <a name="date-format-and-date-order"></a>날짜 형식 및 날짜 순서  
+
  SQL Server가 날짜 및 시간 값을 구문 분석하는 방법은 형식 시스템 버전 및 서버 버전뿐만 아니라 서버의 기본 언어 및 형식 설정에 따라서도 달라집니다. 다른 언어 및 날짜 형식 설정을 사용하는 연결에 의해 쿼리가 실행되는 경우 한 언어의 날짜 형식에 대해 작동하는 날짜 문자열이 인식되지 않을 수 있습니다.  
   
  Transact-SQL SET LANGUAGE 문은 날짜 부분의 순서를 결정하는 DATEFORMAT를 묵시적으로 설정합니다. 연결에서 SET DATEFORMAT Transact-SQL 문을 사용하여 MDY, DMY, YMD, YDM, MYD 또는 DYM 순서의 날짜 부분을 정렬하여 날짜 값을 명확히 구분할 수 있습니다.  
@@ -50,6 +53,7 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
  날짜 및 시간 데이터를 해석 SQL Server는 방법에 대 한 자세한 내용은 [날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))을 참조 하세요.  
   
 ## <a name="datetime-data-types-and-parameters"></a>날짜/시간 데이터 형식 및 매개 변수  
+
  새 날짜 및 시간 데이터 형식을 지원하기 위해 <xref:System.Data.SqlDbType>에 다음 열거형이 추가되었습니다.  
   
 - `SqlDbType.Date`  
@@ -77,17 +81,18 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
   
 |SQL Server 데이터 형식|.NET Framework 형식|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|날짜|System.DateTime|Date|Date|  
-|time|System.TimeSpan|시간|시간|  
+|date|System.DateTime|날짜|날짜|  
+|time|System.TimeSpan|Time|Time|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |Datetime|System.DateTime|DateTime|DateTime|  
 |smalldatetime|System.DateTime|DateTime|DateTime|  
   
 ### <a name="sqlparameter-properties"></a>SqlParameter 속성  
+
  다음 표에서는 날짜 및 시간 데이터 형식과 관련된 `SqlParameter` 속성을 설명합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|값이 null을 허용하는지 여부를 가져오거나 설정합니다. Null 매개 변수 값을 서버에 보낼 때 `null`(Visual Basic에서는 `Nothing`) 대신 <xref:System.DBNull>을 지정해야 합니다. 데이터베이스 null에 대 한 자세한 내용은 [Null 값 처리](handling-null-values.md)를 참조 하세요.|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|값을 나타내는 데 사용되는 최대 자릿수를 가져오거나 설정합니다. 날짜 및 시간 데이터 형식에 대해서는 이 설정이 무시됩니다.|  
@@ -100,11 +105,13 @@ SQL Server 2008에는 날짜 및 시간 정보를 처리하기 위한 새로운 
 > 0보다 작거나 24시간보다 크거나 같은 시간 값은 <xref:System.ArgumentException>을 throw합니다.  
   
 ### <a name="creating-parameters"></a>매개 변수 만들기  
+
  <xref:System.Data.SqlClient.SqlParameter> 개체는 해당 생성자를 사용하거나, <xref:System.Data.SqlClient.SqlCommand>의 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 메서드를 호출하여 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 컬렉션에 추가하는 방법으로 만들 수 있습니다. `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
   
  이 항목의 다음 섹션에서는 날짜 및 시간 매개 변수를 지정하는 방법에 대한 예제를 제공합니다. 매개 변수 사용에 대 한 추가 예제는 [매개 변수 및 매개 변수 데이터 형식](../configuring-parameters-and-parameter-data-types.md) 및 [DataAdapter 매개 변수](../dataadapter-parameters.md)구성을 참조 하세요.  
   
 ### <a name="date-example"></a>Date 예제  
+
  다음 코드 조각에서는 `date` 매개 변수를 지정하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -122,6 +129,7 @@ parameter.Value = "2007/12/1"
 ```  
   
 ### <a name="time-example"></a>Time 예제  
+
  다음 코드 조각에서는 `time` 매개 변수를 지정하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -139,6 +147,7 @@ parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;
 ```  
   
 ### <a name="datetime2-example"></a>Datetime2 예제  
+
  다음 코드 조각에서는 날짜 및 시간 부분을 모두 사용하여 `datetime2` 매개 변수를 지정하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -156,6 +165,7 @@ parameter.Value = DateTime.Parse("1666-09-02 1:00:00");
 ```  
   
 ### <a name="datetimeoffset-example"></a>DateTimeOffSet 예제  
+
  다음 코드 조각에서는 날짜, 시간 및 표준 시간대 오프셋이 0인 `DateTimeOffSet` 매개 변수를 지정하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -173,6 +183,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
+
  다음 코드 조각과 같이 <xref:System.Data.SqlClient.SqlCommand>의 `AddWithValue` 메서드를 사용하여 매개 변수를 제공할 수도 있습니다. 그러나 `AddWithValue` 메서드에서는 매개 변수에 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 또는 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>를 지정할 수 없습니다.  
   
 ```csharp  
@@ -189,16 +200,17 @@ command.Parameters.AddWithValue( _
   
  다음 표에서는 CLR 형식에서 유추되는 `SqlDbTypes`를 보여 줍니다.  
   
-|CLR 유형|유추된 SqlDbType|  
+|CLR 형식|유추된 SqlDbType|  
 |--------------|------------------------|  
 |DateTime|SqlDbType.DateTime|  
 |TimeSpan|SqlDbType.Time|  
 |DateTimeOffset|SqlDbType.DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>날짜 및 시간 데이터 검색  
+
  다음 표에서는 SQL Server 2008 날짜 및 시간 값을 검색하는 데 사용되는 메서드에 대해 설명합니다.  
   
-|SqlClient 메서드|Description|  
+|SqlClient 메서드|설명|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|지정된 열 값을 <xref:System.DateTime> 구조체로 검색합니다.|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|지정된 열 값을 <xref:System.DateTimeOffset> 구조체로 검색합니다.|  
@@ -218,6 +230,7 @@ command.Parameters.AddWithValue( _
 > SQL Server에서 in-process로 실행되는 코드에는 새로운 날짜 및 시간 `SqlDbTypes`이 지원되지 않습니다. 이러한 형식 중 하나가 서버에 전달되면 예외가 발생합니다.  
   
 ## <a name="specifying-date-and-time-values-as-literals"></a>날짜 및 시간 값을 리터럴로 지정  
+
  날짜 및 시간 데이터 형식은 다양한 리터럴 문자열 형식을 사용하여 지정할 수 있으며, 그러면 SQL Server가 런타임에 해당 형식을 평가하여 내부 날짜/시간 구조체로 변환합니다. SQL Server는 작은따옴표(')로 묶인 날짜 및 시간 데이터를 인식합니다. 다음은 일부 형식의 예입니다.  
   
 - `'October 15, 2006'`과 같은 영문자 날짜 형식.  
@@ -232,15 +245,16 @@ command.Parameters.AddWithValue( _
  0보다 작거나 24시간보다 크거나 같은 시간 값은 <xref:System.ArgumentException>을 throw합니다.  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 내 리소스  
+
  SQL Server에서 날짜 및 시간 값을 사용 하는 방법에 대 한 자세한 내용은 SQL Server 온라인 설명서에서 다음 리소스를 참조 하세요.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|모든 Transact-SQL 날짜 및 시간 데이터 형식 및 함수에 대한 개요를 제공합니다.|  
 |[날짜 및 시간 데이터 사용](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|날짜 및 시간 데이터 형식 및 함수에 관한 정보와 사용 예제를 제공합니다.|  
-|[데이터 형식 (Transact-sql)](/sql/t-sql/data-types/data-types-transact-sql)|SQL Server의 시스템 데이터 형식에 대해 설명 합니다.|  
+|[데이터 형식(Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|SQL Server의 시스템 데이터 형식에 대해 설명 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)

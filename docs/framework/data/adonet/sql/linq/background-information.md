@@ -2,14 +2,15 @@
 title: 배경 정보
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542113"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156097"
 ---
 # <a name="background-information"></a>배경 정보
+
 이 단원의 항목은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용에 대한 개념 및 기본 사용법을 확장하는 절차와 관련되어 있습니다.  
   
  다음 단계를 수행하여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드와 애플리케이션의 추가 예제를 찾습니다.  
@@ -21,6 +22,7 @@ ms.locfileid: "90542113"
 - 기술에 대해 자세히 설명 하 고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic 및 c # 코드 예제를 설명 하는 백서를 학습 합니다. 자세한 내용은 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10))를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ADO.NET 및 LINQ to SQL](ado-net-and-linq-to-sql.md)  
  ADO.NET와의 관계를 설명 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
@@ -81,6 +83,7 @@ ms.locfileid: "90542113"
  [사용자 정의 함수](user-defined-functions.md)  
  디자인 타임에 사용자 정의 함수를 매핑하여 애플리케이션에서 해당 함수를 호출하는 방법에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [프로그래밍 가이드](programming-guide.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 다양한 기능에 대해 설명하는 단원의 링크를 제공합니다.

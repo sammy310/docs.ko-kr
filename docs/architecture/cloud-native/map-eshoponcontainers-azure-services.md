@@ -2,12 +2,12 @@
 title: Azure 서비스에 eShopOnContainers 매핑
 description: EShopOnContainers를 azure Kubernetes Service, API 게이트웨이 및 Azure Service Bus와 같은 Azure 서비스에 매핑합니다.
 ms.date: 05/13/2020
-ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613839"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155265"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Azure 서비스에 eShopOnContainers 매핑
 
@@ -38,7 +38,7 @@ Azure Portal API 스키마를 정의 하 고 다양 한 Api를 제품에 패키�
 
 개발자 포털은 개발자를 위한 기본 리소스로 사용 됩니다. 개발자에 게 API 설명서를 제공 하 고 대화형 테스트 콘솔을 제공 하며 자체 사용에 대 한 보고서를 제공 합니다. 또한 개발자는 포털을 사용 하 여 구독 및 API 키 지원을 포함 하 여 자신의 계정을 만들고 관리 합니다.
 
-APIM을 사용 하 여 응용 프로그램은 각각 특정 프런트 엔드 클라이언트의 백 엔드를 제공 하는 여러 가지 서비스 그룹을 노출할 수 있습니다. APIM은 복잡 한 시나리오에 권장 됩니다. 간단한 요구를 위해 간단한 API 게이트웨이 Ocelot를 사용할 수 있습니다. EShopOnContainers 앱은 응용 프로그램 자체와 동일한 응용 프로그램 환경에 배포할 수 있기 때문에 Ocelot를 사용 합니다. [EShopOnContainers, APIM 및 Ocelot에 대해 자세히 알아보세요.](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern#azure-api-management)
+APIM을 사용 하 여 응용 프로그램은 각각 특정 프런트 엔드 클라이언트의 백 엔드를 제공 하는 여러 가지 서비스 그룹을 노출할 수 있습니다. APIM은 복잡 한 시나리오에 권장 됩니다. 간단한 요구를 위해 간단한 API 게이트웨이 Ocelot를 사용할 수 있습니다. EShopOnContainers 앱은 응용 프로그램 자체와 동일한 응용 프로그램 환경에 배포할 수 있기 때문에 Ocelot를 사용 합니다. [EShopOnContainers, APIM 및 Ocelot에 대해 자세히 알아보세요.](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#azure-api-management)
 
 응용 프로그램이 AKS를 사용 하는 경우 또 다른 옵션은 AKS 클러스터 내에서 pod로 Azure 게이트웨이 수신 컨트롤러를 배포 하는 것입니다. 이렇게 하면 클러스터가 Azure 애플리케이션 게이트웨이와 통합 되어 게이트웨이가 AKS pod에 대 한 트래픽 부하를 분산할 수 있습니다. [AKS에 대 한 Azure 게이트웨이 수신 컨트롤러에 대해 자세히 알아보세요](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
@@ -50,13 +50,13 @@ SQL Server 데이터베이스 지원의 경우 Azure에는 단일 데이터베�
 
 EShopOnContainers 응용 프로그램은 요청 사이에 사용자의 현재 장바구니를 저장 합니다. 이는 Redis 캐시에 데이터를 저장 하는 바구니 마이크로 서비스에서 관리 합니다. 개발 중에이 캐시를 컨테이너에 배포할 수 있지만 프로덕션 환경에서는 Redis 용 Azure Cache를 활용할 수 있습니다. Redis 용 Azure Cache는 Redis 인스턴스 또는 컨테이너를 직접 배포 하 고 관리할 필요 없이 고성능 및 안정성을 제공 하는 완전히 관리 되는 서비스입니다.
 
-위치 마이크로 서비스는 지 속성에 MongoDB NoSQL 데이터베이스를 사용 합니다. 개발 중에는 데이터베이스를 자체 컨테이너에 배포할 수 있지만 프로덕션 환경에서는 서비스에서 [MongoDB에 대 한 Azure Cosmos DB의 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)를 활용할 수 있습니다. Azure Cosmos DB의 이점 중 하나는 MongoDB, Cassandra, Gremlin 및 Azure Table Storage를 포함 하 여 SQL API 및 일반적인 NoSQL Api를 비롯 한 여러 통신 프로토콜을 활용 하는 기능입니다. Azure Cosmos DB는이를 사용 하는 서비스의 요구를 충족 하도록 확장할 수 있는 완전히 관리 되 고 전 세계적으로 분산 된 Database as a Service를 제공 합니다.
+위치 마이크로 서비스는 지 속성에 MongoDB NoSQL 데이터베이스를 사용 합니다. 개발 중에는 데이터베이스를 자체 컨테이너에 배포할 수 있지만 프로덕션 환경에서는 서비스에서 [MongoDB에 대 한 Azure Cosmos DB의 API](/azure/cosmos-db/mongodb-introduction)를 활용할 수 있습니다. Azure Cosmos DB의 이점 중 하나는 MongoDB, Cassandra, Gremlin 및 Azure Table Storage를 포함 하 여 SQL API 및 일반적인 NoSQL Api를 비롯 한 여러 통신 프로토콜을 활용 하는 기능입니다. Azure Cosmos DB는이를 사용 하는 서비스의 요구를 충족 하도록 확장할 수 있는 완전히 관리 되 고 전 세계적으로 분산 된 Database as a Service를 제공 합니다.
 
 클라우드 네이티브 응용 프로그램의 분산 데이터에 대해서는 [5 장에서](distributed-data.md)자세히 설명 합니다.
 
 ## <a name="event-bus"></a>이벤트 버스
 
-응용 프로그램은 이벤트를 사용 하 여 서로 다른 서비스 간의 변경 내용을 전달 합니다. 이 기능은 다양 한 구현을 사용 하 여 구현할 수 있으며 로컬 eShopOnContainers 응용 프로그램은 [RabbitMQ](https://www.rabbitmq.com/)를 사용 합니다. Azure에서 호스트 되는 경우 응용 프로그램은 메시징에 대 한 [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/) 활용 합니다. Azure Service Bus는 완전히 관리 되는 통합 메시지 브로커로, 응용 프로그램과 서비스가 분리 되 고 신뢰할 수 있는 비동기 방식으로 서로 통신할 수 있습니다. Azure Service Bus는 개별 큐를 지원 하며 게시자-구독자 시나리오를 지원 하기 위한 별도의 *항목* 을 지원 합니다. EShopOnContainers 응용 프로그램은 Azure Service Bus와 함께 항목을 활용 하 여 지정 된 메시지에 대응 하는 데 필요한 다른 마이크로 서비스로 메시지를 분산 하는 기능을 지원 합니다.
+응용 프로그램은 이벤트를 사용 하 여 서로 다른 서비스 간의 변경 내용을 전달 합니다. 이 기능은 다양 한 구현을 사용 하 여 구현할 수 있으며 로컬 eShopOnContainers 응용 프로그램은 [RabbitMQ](https://www.rabbitmq.com/)를 사용 합니다. Azure에서 호스트 되는 경우 응용 프로그램은 메시징에 대 한 [Azure Service Bus](/azure/service-bus/) 활용 합니다. Azure Service Bus는 완전히 관리 되는 통합 메시지 브로커로, 응용 프로그램과 서비스가 분리 되 고 신뢰할 수 있는 비동기 방식으로 서로 통신할 수 있습니다. Azure Service Bus는 개별 큐를 지원 하며 게시자-구독자 시나리오를 지원 하기 위한 별도의 *항목* 을 지원 합니다. EShopOnContainers 응용 프로그램은 Azure Service Bus와 함께 항목을 활용 하 여 지정 된 메시지에 대응 하는 데 필요한 다른 마이크로 서비스로 메시지를 분산 하는 기능을 지원 합니다.
 
 ## <a name="resiliency"></a>복원력
 

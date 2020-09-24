@@ -2,14 +2,15 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f3feb11fbe45cbb4b952c70feaa99f9c481dd2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72846867"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157371"
 ---
 # \<issuedToken>
+
 서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ ms.locfileid: "72846867"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`cacheIssuedTokens`|토큰이 캐시되는지 여부를 지정하는 선택적 부울 특성입니다. 기본값은 `true`입니다.|  
 |`defaultKeyEntropyMode`|핸드셰이크 작업에 사용되는 임의의 값(엔트로피)을 지정하는 선택적 문자열 특성입니다. 값에는 `ClientEntropy`, `ServerEntropy` 및 `CombinedEntropy`가 포함되며, 기본값은 `CombinedEntropy`입니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 형식입니다.|  
@@ -48,18 +50,19 @@ ms.locfileid: "72846867"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<localIssuer>](localissuer.md)|엔드포인트와의 통신에 사용되는 토큰 및 바인딩의 로컬 발급자 주소를 지정합니다.|  
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|로컬 발급자에 연결할 때 사용할 엔드포인트 동작을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  발급된 토큰은 사용자 지정 자격 증명 형식으로, 예를 들어 페더레이션 시나리오에서 STS(보안 토큰 서비스)를 사용하여 인증할 때 사용됩니다. 기본적으로 토큰은 SAML 토큰입니다. 자세한 내용은 [페더레이션 및 발급 된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md), [페더레이션 및 발급 된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)을 참조 하세요.  
   
  이 섹션에는 토큰 로컬 발급자를 구성하는 데 사용되는 요소 또는 보안 토큰 서비스에서 사용되는 동작이 포함되어 있습니다. 로컬 발급자를 사용 하도록 클라이언트를 구성 하는 방법에 대 한 지침은 [방법: 로컬 발급자 구성](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)을 참조 하세요.  

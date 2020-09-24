@@ -2,12 +2,12 @@
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
 ms.date: 05/31/2020
-ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155551"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -214,7 +214,7 @@ ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 
 **그림 3-7**. Visual Studio Docker 실행 옵션
 
-로컬 개발 외에도 [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) 는 여러 개발자가 Azure 내에서 고유한 Kubernetes 구성으로 작업할 수 있는 편리한 방법을 제공 합니다. 그림 3-7에서 볼 수 있듯이, Azure Dev Spaces에서 응용 프로그램을 실행할 수도 있습니다.
+로컬 개발 외에도 [Azure Dev Spaces](/azure/dev-spaces/) 는 여러 개발자가 Azure 내에서 고유한 Kubernetes 구성으로 작업할 수 있는 편리한 방법을 제공 합니다. 그림 3-7에서 볼 수 있듯이, Azure Dev Spaces에서 응용 프로그램을 실행할 수도 있습니다.
 
 또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트 **Add**를 마우스 오른쪽 단추로 클릭 하 고  >  **Docker 지원을**추가 합니다.
 

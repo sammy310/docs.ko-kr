@@ -3,14 +3,15 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e909756a58d5008d917fca84af0e478fc4878d2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156812"
 ---
 # \<system.identityModel.services>
+
 WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,21 +27,25 @@ WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입�
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- None  
+
+ 없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfam) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP 모듈을 구성 하는 설정을 포함 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
- None  
+
+ 없음  
   
 ## <a name="remarks"></a>설명  
+
  `<system.identityModel.services>`응용 프로그램의 구성 파일에 섹션을 추가 하 여 SAM 및 WSFAM에 대 한 설정을 제공 합니다.  
   
 > [!IMPORTANT]
@@ -49,6 +54,7 @@ WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입�
  `<system.identityModel.services>`섹션은 클래스로 표현 됩니다 <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> . `<federationConfiguration>`섹션에서 구성 된 자식 요소의 컬렉션은 클래스로 표현 됩니다 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> .  
   
 ## <a name="example"></a>예제  
+
  다음 XML에서는 `<system.identityModel.services>` 구성 파일에 섹션을 추가 하는 방법을 보여 줍니다. 섹션 및 섹션에 대 한 섹션 선언을 먼저 추가 해야 합니다 `<system.identityModel.services>` `<system.identityModel>` . 섹션을 추가할 때 `<system.identityModel.services>` `<system.identityModel>` 필요한 경우 런타임에서 기본 섹션을 만들 수 있도록 섹션에 대 한 선언을 추가 해야 `<identityConfiguration>` 합니다. 섹션 선언이 추가 된 후 요소 아래에서 페더레이션 인증 설정을 구성할 수 있습니다 `<system.identityModel.services>` .  
   
 ```xml  

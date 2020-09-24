@@ -2,12 +2,12 @@
 title: 탄력적 스택으로 로깅
 description: 탄력적 스택, Logstash 태 시 및 Kibana를 사용 하 여 로깅
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811173"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155343"
 ---
 # <a name="logging-with-elastic-stack"></a>탄력적 스택으로 로깅
 
@@ -105,7 +105,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 ## <a name="installing-elastic-stack-on-azure"></a>Azure에서 탄력적 스택 설치
 
-탄력적 스택은 다양 한 방법으로 Azure에 설치할 수 있습니다. 항상으로 [가상 컴퓨터를 프로 비전 하 고 탄력적 스택을 직접 설치할](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)수 있습니다. 이 옵션은 가장 높은 수준의 사용자 지정 가능성를 제공 하므로 숙련 된 사용자가 선호 합니다. 인프라를 서비스로 배포 하는 경우에는 해당 경로를 사용 하 여 컴퓨터를 보호 하 고 패치를 최신 상태로 유지 하는 등의 서비스와 관련 된 모든 작업의 소유권을 유지 하는 데 중요 한 관리 오버 헤드가 발생 합니다.
+탄력적 스택은 다양 한 방법으로 Azure에 설치할 수 있습니다. 항상으로 [가상 컴퓨터를 프로 비전 하 고 탄력적 스택을 직접 설치할](/azure/virtual-machines/linux/tutorial-elasticsearch)수 있습니다. 이 옵션은 가장 높은 수준의 사용자 지정 가능성를 제공 하므로 숙련 된 사용자가 선호 합니다. 인프라를 서비스로 배포 하는 경우에는 해당 경로를 사용 하 여 컴퓨터를 보호 하 고 패치를 최신 상태로 유지 하는 등의 서비스와 관련 된 모든 작업의 소유권을 유지 하는 데 중요 한 관리 오버 헤드가 발생 합니다.
 
 오버 헤드가 감소 하는 옵션은 탄력적 스택이 이미 구성 된 많은 Docker 컨테이너 중 하나를 사용 하는 것입니다. 이러한 컨테이너는 기존 Kubernetes 클러스터로 끌어와 응용 프로그램 코드와 함께 실행할 수 있습니다. [Sebp/elk](https://elk-docker.readthedocs.io/) 컨테이너는 잘 문서화 되 고 테스트 된 탄력적 스택 컨테이너입니다.
 
@@ -113,7 +113,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 ## <a name="references"></a>참조
 
-- [Azure에 탄력적 스택 설치](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [Azure에 탄력적 스택 설치](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[이전](observability-patterns.md)
