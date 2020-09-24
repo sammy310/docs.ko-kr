@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556865"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191647"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>비동기 작업(WCF Data Services)
+
 웹 애플리케이션의 경우 내부 네트워크 내에서 실행되는 애플리케이션보다 클라이언트와 서버 간에 보다 긴 대기 시간을 허용해야 합니다. 응용 프로그램의 성능 및 사용자 환경을 최적화 하려면 <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> 웹을 통해 WCF Data Services 서버에 액세스할 때 및 클래스의 비동기 메서드를 사용 하는 것이 좋습니다.  
   
  WCF Data Services 서버는 HTTP 요청을 비동기적으로 처리 하지만 WCF Data Services 클라이언트 라이브러리의 일부 메서드는 동기식 이며 실행을 계속 하기 전에 전체 요청-응답 교환이 완료 될 때까지 기다립니다. WCF Data Services 클라이언트 라이브러리의 비동기 메서드는이 교환이 완료 될 때까지 기다리지 않고 응용 프로그램에서 응답성이 뛰어난 사용자 인터페이스를 유지 관리할 수 있도록 합니다.  
@@ -34,8 +35,9 @@ ms.locfileid: "90556865"
 |<xref:System.Data.Services.Client.DataServiceContext>에 개체 변경 내용 저장|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>비동기 작업에 대한 스레딩 고려 사항  
+
  다중 스레드 응용 프로그램에서 비동기 작업의 콜백으로 등록 된 대리자는 *Begin* 메서드를 호출 하는 데 사용 된 것과 동일한 스레드에서 호출 하지 않아도 됩니다 .이 대리자는 초기 요청을 만듭니다. 특정 스레드에서 콜백을 호출 해야 하는 응용 프로그램에서는 응답을 처리 하는 *End* 메서드 실행을 명시적으로 원하는 스레드에 마샬링해야 합니다. 예를 들어, WPF(Windows Presentation Foundation) 기반 애플리케이션과 Silverlight 기반 애플리케이션에서는 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 개체의 <xref:System.Windows.Threading.Dispatcher> 메서드를 사용하여 응답을 UI 스레드로 다시 마샬링해야 합니다. 자세한 내용은 [데이터 서비스 쿼리 (WCF Data Services/Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95))를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)

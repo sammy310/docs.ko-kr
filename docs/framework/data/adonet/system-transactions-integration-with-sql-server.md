@@ -5,46 +5,51 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 42007dafbdc9f61b9fc0776e0aaa2987551b704a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5adf40f96854e08736cdef77300d69e452de5eea
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174240"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191686"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
-.NET Framework 버전 2.0은 네임스페이스를 통해 <xref:System.Transactions> 액세스할 수 있는 트랜잭션 프레임워크를 도입했습니다. 이 프레임워크는 ADO.NET 포함하여 .NET Framework에 완전히 통합된 방식으로 트랜잭션을 노출합니다.  
+
+.NET Framework 버전 2.0에는 네임 스페이스를 통해 액세스할 수 있는 트랜잭션 프레임 워크가 도입 <xref:System.Transactions> 되었습니다. 이 프레임 워크는 ADO.NET을 포함 하 여 .NET Framework에 완전히 통합 된 방식으로 트랜잭션을 노출 합니다.  
   
- 프로그래밍 기능 향상 <xref:System.Transactions> 외에도 ADO.NET 함께 작업하여 트랜잭션을 작업할 때 최적화를 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
+ 프로그래밍 기능 향상 외에도 <xref:System.Transactions> ADO.NET를 함께 사용 하 여 트랜잭션을 사용할 때 최적화를 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
   
- ADO.NET 2.0부터 <xref:System.Data.SqlClient> SQL Server로 작업할 때 프로모션 트랜잭션을 지원합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 프로모션 가능한 트랜잭션은 자동으로 수행되며 개발자의 개입이 필요하지 않습니다.  
+ ADO.NET 2.0부터는 <xref:System.Data.SqlClient> SQL Server 작업할 때 승격 가능한 트랜잭션을 지원 합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동으로 수행 되며 개발자의 개입이 필요 하지 않습니다.  
   
- 프로모티프 트랜잭션은 SQL Server(SQL Server)에 대한`SqlClient`.NET 프레임워크 데이터 공급자를 SQL Server(SQL Server)에서 사용하는 경우에만 사용할 수 있습니다.  
+ 승격 가능한 트랜잭션은 SQL Server에서 SQL Server ()에 대 한 .NET Framework Data Provider를 사용 하는 경우에만 사용할 수 있습니다 `SqlClient` .  
   
 ## <a name="creating-promotable-transactions"></a>승격 가능한 트랜잭션 만들기  
- SQL Server용 .NET 프레임워크 공급자는 .NET Framework <xref:System.Transactions> 네임스페이스의 클래스를 통해 처리되는 프로모션 트랜잭션에 대한 지원을 제공합니다. 승격 가능한 트랜잭션은 필요할 때까지 분산 트랜잭션 만들기를 연기하여 분산 트랜잭션을 최적화합니다. 리소스 관리자만 필요할 경우 분산 트랜잭션은 발생하지 않습니다.  
+
+ SQL Server에 대 한 .NET Framework 공급자는 .NET Framework 네임 스페이스의 클래스를 통해 처리 되는 승격 가능한 트랜잭션을 지원 합니다 <xref:System.Transactions> . 승격 가능한 트랜잭션은 필요할 때까지 분산 트랜잭션 만들기를 연기하여 분산 트랜잭션을 최적화합니다. 리소스 관리자만 필요할 경우 분산 트랜잭션은 발생하지 않습니다.  
   
 > [!NOTE]
 > 부분적으로 신뢰할 수 있는 시나리오에서 트랜잭션을 분산 트랜잭션으로 승격시키려면 <xref:System.Transactions.DistributedTransactionPermission> 이 필요합니다.  
   
 ## <a name="promotable-transaction-scenarios"></a>승격 가능한 트랜잭션 시나리오  
- 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 프로모션 가능한 트랜잭션은 작업을 간단한 <xref:System.Transactions> SQL Server 트랜잭션에 효과적으로 위임하는 특별한 형태의 트랜잭션입니다. <xref:System.Transactions>및 <xref:System.Data.SqlClient>SQL Server는 트랜잭션 처리와 관련된 작업을 조정하여 필요에 따라 전체 분산 트랜잭션으로 승격합니다.  
+
+ 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 승격 <xref:System.Transactions> 가능한 트랜잭션은 작업을 간단한 SQL Server 트랜잭션에 효과적으로 위임 하는 특별 한 형태의 트랜잭션입니다. <xref:System.Transactions>, <xref:System.Data.SqlClient> 및 SQL Server 트랜잭션 처리와 관련 된 작업을 조정 하 고 필요에 따라 완전 분산 트랜잭션으로 승격 합니다.  
   
  승격 가능한 트랜잭션을 사용하면 활성 <xref:System.Transactions.TransactionScope> 트랜잭션을 사용하여 연결이 열리고, 다른 연결이 열려 있지 않은 경우 완전 분산 트랜잭션의 추가 오버헤드를 발생시키는 대신 간단한 트랜잭션으로 커밋됩니다.  
   
 ### <a name="connection-string-keywords"></a>연결 문자열 키워드  
+
  <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 속성에서는 `Enlist`에서 트랜잭션 컨텍스트를 찾은 후 분산 트랜잭션에 연결을 자동으로 인리스트먼트할지 여부를 나타내는 키워드인 <xref:System.Data.SqlClient> 를 지원합니다. `Enlist=true`인 경우 연결이 열려 있는 스레드의 현재 트랜잭션 컨텍스트에 자동으로 인리스트먼트됩니다. `Enlist=false`인 경우에는 `SqlClient` 연결이 분산 트랜잭션과 상호 작용하지 않습니다. `Enlist` 의 기본값은 true입니다. 연결 문자열에 `Enlist` 가 지정되지 않으면 연결이 열릴 때 감지된 연결이 분산 트랜잭션에 자동으로 인리스트먼트됩니다.  
   
  `Transaction Binding` 연결 문자열의 <xref:System.Data.SqlClient.SqlConnection> 키워드는 인리스트먼트된 `System.Transactions` 트랜잭션과 연결 사이의 관계를 제어합니다. 이 키워드는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> 의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>속성을 통해서도 사용할 수 있습니다.  
   
  다음 표에서는 사용 가능한 값을 설명합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |Implicit Unbind|기본값입니다. 트랜잭션이 끝나면 자동으로 연결이 끊어지고 자동 커밋 모드로 전환됩니다.|  
 |Explicit Unbind|트랜잭션을 닫을 때까지 트랜잭션에 대한 연결이 유지됩니다. 연결된 트랜잭션이 활성 상태가 아니거나 <xref:System.Transactions.Transaction.Current%2A>와 일치하지 않으면 연결이 실패합니다.|  
   
 ## <a name="using-transactionscope"></a>TransactionScope 사용  
+
  <xref:System.Transactions.TransactionScope> 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. <xref:System.Transactions.TransactionScope.Complete%2A> 메서드는 <xref:System.Transactions.TransactionScope> 블록을 벗어나기 전에 이 블록의 끝 부분에서 호출해야 합니다. 블록을 벗어나면 <xref:System.Transactions.TransactionScope.Dispose%2A> 메서드가 호출됩니다. 예외가 throw되어 코드가 범위를 벗어날 경우 트랜잭션이 중단된 것으로 간주됩니다.  
   
  `using` 블록을 사용하여 해당 블록을 종료할 때 <xref:System.Transactions.TransactionScope.Dispose%2A> 가 <xref:System.Transactions.TransactionScope> 개체에서 호출되도록 하는 것이 좋습니다. 보류 중인 트랜잭션을 커밋하거나 롤백하지 못하면 <xref:System.Transactions.TransactionScope> 의 기본 시간 제한이 1분이므로 성능이 크게 저하될 수 있습니다. `using` 문을 사용하지 않는 경우 `Try` 블록에서 모든 작업을 수행하고 <xref:System.Transactions.TransactionScope.Dispose%2A> 블록에서 명시적으로 `Finally` 메서드를 호출해야 합니다.  
@@ -58,6 +63,7 @@ ms.locfileid: "79174240"
 > 업데이트, 삽입 및 삭제는 데이터베이스 리소스를 많이 사용하므로 분산 트랜잭션에서는 이러한 작업만 수행하는 것이 좋습니다. SELECT 문은 데이터베이스 리소스를 불필요하게 잠글 수 있으며, 경우에 따라서는 선택 시 트랜잭션을 사용해야 할 수도 있습니다. 다른 트랜잭트 리소스 관리자를 사용해야 하는 경우가 아니면 데이터베이스 작업이 아닌 다른 작업은 트랜잭션 범위 밖에서 수행해야 합니다. 트랜잭션 범위에서 예외를 통해 트랜잭션이 커밋되는 것을 금지하고 있지만, <xref:System.Transactions.TransactionScope> 클래스에는 트랜잭션 자체 범위를 벗어난 코드 변경을 롤백할 수 있는 규정이 없습니다. 트랜잭션이 롤백될 때 특별한 조치를 취해야 하는 경우에는 고유한 <xref:System.Transactions.IEnlistmentNotification> 인터페이스 구현을 작성한 후 트랜잭션에 명시적으로 인리스트먼트해야 합니다.  
   
 ## <a name="example"></a>예제  
+
  <xref:System.Transactions> 를 사용하려면 System.Transactions.dll을 참조해야 합니다.  
   
  다음 함수는 서로 다른 두 <xref:System.Data.SqlClient.SqlConnection> 개체( <xref:System.Transactions.TransactionScope> 블록에 래핑됨)로 표현되는 두 개의 서로 다른 SQL Server 인스턴스에 대해 승격 가능한 트랜잭션을 만드는 방법을 보여 줍니다. 이 코드에서는 <xref:System.Transactions.TransactionScope> 문을 사용하여 `using` 블록을 만든 후 첫 번째 연결을 엽니다. 그리고 나면 이 연결은 <xref:System.Transactions.TransactionScope>에 자동으로 참여합니다. 트랜잭션은 처음에 전체 분산 트랜잭션이 아닌 경량 트랜잭션으로 등록됩니다. 두 번째 연결은 첫 번째 연결의 명령이 예외를 throw하지 않을 경우에만 <xref:System.Transactions.TransactionScope> 에 인리스트먼트됩니다. 두 번째 연결이 열리면 트랜잭션이 완전 분산 트랜잭션으로 자동 승격됩니다. 예외가 throw되지 않은 경우에만 트랜잭션을 커밋하는 <xref:System.Transactions.TransactionScope.Complete%2A> 메서드가 호출됩니다. <xref:System.Transactions.TransactionScope> 블록의 한 지점에서 예외가 throw된 경우에는 `Complete` 가 호출되지 않으며 <xref:System.Transactions.TransactionScope> 블록 끝에서 `using` 가 삭제되면 분산 트랜잭션이 롤백됩니다.  

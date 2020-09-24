@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 앱에 대 한 IdentityServer
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: bdf193aac348b54f2ebf5b537beef5d61a1d5a1e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144372"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163832"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램에 대 한 IdentityServer
 
@@ -40,7 +40,7 @@ IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Open
 - 해지 (토큰 해지)
 - 세션 종료 (모든 앱에서 single sign-on 트리거)
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 IdentityServer4은 오픈 소스 이며 무료로 사용할 수 있습니다. NuGet 패키지를 사용 하 여 응용 프로그램에 추가할 수 있습니다. 주 패키지는 400만 번 이상 다운로드 된 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 입니다. 기본 패키지는 사용자 인터페이스 코드를 포함 하지 않고 메모리 구성 에서만 지원 합니다. 데이터베이스와 함께 사용 하려면 Entity Framework Core을 사용 하 여 IdentityServer에 대 한 구성 및 운영 데이터를 저장 하는 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 와 같은 데이터 공급자를 사용 하려고 합니다. 사용자 인터페이스의 경우 IdentityServer 미들웨어를 사용 하 여 로그인 및 로그 아웃에 대 한 지원을 추가 하기 위해 [빠른 시작 UI 리포지토리에서](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) 파일을 ASP.NET Core MVC 응용 프로그램으로 복사할 수 있습니다.
 
@@ -100,7 +100,7 @@ public class Startup
 ## <a name="references"></a>참조
 
 - [IdentityServer 설명서](https://docs.identityserver.io/en/latest/)
-- [애플리케이션 종류](https://docs.microsoft.com/azure/active-directory/develop/app-types)
+- [애플리케이션 형식](/azure/active-directory/develop/app-types)
 - [JavaScript OIDC 클라이언트](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]

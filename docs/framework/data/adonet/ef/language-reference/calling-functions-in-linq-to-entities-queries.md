@@ -3,14 +3,15 @@ title: LINQ to Entities 쿼리에서 함수 호출
 description: 이러한 문서를 사용 하 여 EntityFunctions SqlFunctions 클래스가 Entity Framework의 일부로 정식 함수와 데이터베이스 함수에 액세스를 제공 하는 방법을 확인할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546050"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177490"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 함수 호출
+
 이 단원의 항목에서는 LINQ to Entities 쿼리에서 함수를 호출하는 방법에 대해 설명합니다.  
   
  <xref:System.Data.Objects.EntityFunctions> 및 <xref:System.Data.Objects.SqlClient.SqlFunctions> 클래스를 사용하여 Entity Framework의 일부인 정식 함수와 데이터베이스 함수에 액세스할 수 있습니다. 자세한 내용은 [방법: 정식 함수 호출](how-to-call-canonical-functions.md) 및 [방법: 데이터베이스 함수 호출](how-to-call-database-functions.md)을 참조 하세요.  
@@ -26,6 +27,7 @@ ms.locfileid: "90546050"
  자세한 내용은 이 단원의 해당 항목을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 호출 정식 함수](how-to-call-canonical-functions.md)  
   
  [방법: 데이터베이스 함수 호출](how-to-call-database-functions.md)  
@@ -36,7 +38,7 @@ ms.locfileid: "90546050"
   
  [방법: 개체 메서드로 모델 정의 함수 호출](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)
 - [정식 함수](canonical-functions.md)

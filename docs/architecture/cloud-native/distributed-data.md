@@ -3,12 +3,12 @@ title: 분선 데이터
 description: 모놀리식 및 클라우드 네이티브 응용 프로그램의 데이터 저장소를 대조 합니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144398"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163936"
 ---
 # <a name="distributed-data"></a>분선 데이터
 
@@ -22,7 +22,7 @@ ms.locfileid: "84144398"
 
 숙련 된 개발자는 그림 5-1의 왼쪽에 있는 아키텍처를 쉽게 인식할 수 있습니다. 이 *모놀리식 응용 프로그램*에서 비즈니스 서비스 구성 요소는 단일 관계형 데이터베이스의 데이터를 공유 하는 공유 서비스 계층에서 함께 배치.
 
-여러 가지 측면에서 단일 데이터베이스는 데이터 관리를 간단 하 게 유지 합니다. 여러 테이블에서 데이터를 쿼리 하는 것은 간단 합니다. 데이터 업데이트를 함께 변경 하거나 모두 롤백합니다. [ACID 트랜잭션은](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) 강력 하 고 즉각적인 일관성을 보장 합니다.
+여러 가지 측면에서 단일 데이터베이스는 데이터 관리를 간단 하 게 유지 합니다. 여러 테이블에서 데이터를 쿼리 하는 것은 간단 합니다. 데이터 업데이트를 함께 변경 하거나 모두 롤백합니다. [ACID 트랜잭션은](/windows/desktop/cossdk/acid-properties) 강력 하 고 즉각적인 일관성을 보장 합니다.
 
 클라우드 네이티브를 설계할 때 다른 접근 방법을 사용 합니다. 그림 5-1의 오른쪽에서 비즈니스 기능이 소규모의 독립적인 마이크로 서비스에 분리 하는 방식을 확인 합니다. 각 마이크로 서비스는 특정 비즈니스 기능과 자체 데이터를 캡슐화 합니다. 모놀리식 데이터베이스는 각각 마이크로 서비스를 사용 하 여 여러 개의 작은 데이터베이스를 포함 하는 분산 데이터 모델로 분해. 연기를 지우면 *마이크로 서비스 당 데이터베이스*를 표시 하는 디자인이 제공 됩니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "84144398"
 각 서비스에 대해 별도의 인바운드 및 아웃 바운드 큐를 사용 하 여 요청-회신 패턴을 구현할 수도 있습니다. 그러나이 패턴은 복잡 하 고 요청 및 응답 메시지의 상관 관계를 파악 해야 합니다.
 백엔드 마이크로 서비스 호출을 분리 하는 동안 호출 하는 서비스는 호출이 완료 될 때까지 동기적으로 대기 해야 합니다. 네트워크 정체, 일시적인 오류 또는 오버 로드 된 마이크로 서비스로 인해 장기 실행 및 실패 한 작업이 발생할 수 있습니다.
 
-대신, 교차 서비스 종속성을 제거 하는 데 널리 승인 된 패턴은 그림 5-4에 표시 된 [구체화 된 뷰 패턴](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)입니다.
+대신, 교차 서비스 종속성을 제거 하는 데 널리 승인 된 패턴은 그림 5-4에 표시 된 [구체화 된 뷰 패턴](/azure/architecture/patterns/materialized-view)입니다.
 
 ![구체화 된 뷰 패턴](./media/materialized-view-pattern.png)
 
@@ -92,7 +92,7 @@ ms.locfileid: "84144398"
 
 대신이 분산 트랜잭션을 *프로그래밍 방식으로*구성 해야 합니다.
 
-분산 트랜잭션 지원을 추가 하는 일반적인 패턴은 Saga 패턴입니다. 로컬 트랜잭션을 프로그래밍 방식으로 그룹화 하 고 각 트랜잭션을 순차적으로 호출 하 여 구현 합니다. 로컬 트랜잭션이 실패 하면 Saga는 작업을 중단 하 고 [보정 트랜잭션](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)집합을 호출 합니다. 보정 트랜잭션은 위의 로컬 트랜잭션에의 한 변경 내용을 취소 하 고 데이터 일관성을 복원 합니다. 그림 5-6에서는 Saga 패턴을 사용 하는 실패 한 트랜잭션을 보여 줍니다.
+분산 트랜잭션 지원을 추가 하는 일반적인 패턴은 Saga 패턴입니다. 로컬 트랜잭션을 프로그래밍 방식으로 그룹화 하 고 각 트랜잭션을 순차적으로 호출 하 여 구현 합니다. 로컬 트랜잭션이 실패 하면 Saga는 작업을 중단 하 고 [보정 트랜잭션](/azure/architecture/patterns/compensating-transaction)집합을 호출 합니다. 보정 트랜잭션은 위의 로컬 트랜잭션에의 한 변경 내용을 취소 하 고 데이터 일관성을 복원 합니다. 그림 5-6에서는 Saga 패턴을 사용 하는 실패 한 트랜잭션을 보여 줍니다.
 
 ![Saga 패턴으로 롤백](./media/saga-rollback-operation.png)
 
@@ -108,7 +108,7 @@ Saga 패턴은 일반적으로 일련의 관련 이벤트 또는 오케스트레
 
 ### <a name="cqrs"></a>CQRS
 
-[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs)는 성능, 확장성 및 보안을 최대화 하는 데 도움이 될 수 있는 아키텍처 패턴입니다. 패턴은 데이터를 쓰는 작업에서 데이터를 읽는 작업을 구분 합니다.
+[CQRS](/azure/architecture/patterns/cqrs)는 성능, 확장성 및 보안을 최대화 하는 데 도움이 될 수 있는 아키텍처 패턴입니다. 패턴은 데이터를 쓰는 작업에서 데이터를 읽는 작업을 구분 합니다.
 
 일반적인 *시나리오의 경우 읽기 및* 쓰기 작업에 동일한 엔터티 모델 및 데이터 리포지토리 개체가 사용 됩니다.
 
@@ -124,11 +124,11 @@ Saga 패턴은 일반적으로 일련의 관련 이벤트 또는 오케스트레
 
 이러한 분리를 통해 읽기 및 쓰기가 독립적으로 확장 될 수 있습니다. 읽기 작업은 쿼리에 최적화 된 스키마를 사용 하지만 쓰기는 업데이트에 최적화 된 스키마를 사용 합니다. 읽기 쿼리는 비 정규화 된 데이터를 기반으로 하며, 복잡 한 비즈니스 논리를 쓰기 모델에 적용할 수 있습니다. 또한 읽기를 노출 하는 것 보다 쓰기 작업에 대 한 보안을 강화 하는 것이 좋습니다.
 
-CQRS를 구현 하면 클라우드 네이티브 서비스에 대 한 응용 프로그램 성능을 향상 시킬 수 있습니다. 그러나이로 인해 디자인이 더 복잡해 집니다. 이 원칙을 활용 하는 클라우드 네이티브 응용 프로그램의 해당 섹션에 신중 하 게 적용 합니다. CQRS에 대 한 자세한 내용은 Microsoft book [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns)를 참조 하세요.
+CQRS를 구현 하면 클라우드 네이티브 서비스에 대 한 응용 프로그램 성능을 향상 시킬 수 있습니다. 그러나이로 인해 디자인이 더 복잡해 집니다. 이 원칙을 활용 하는 클라우드 네이티브 응용 프로그램의 해당 섹션에 신중 하 게 적용 합니다. CQRS에 대 한 자세한 내용은 Microsoft book [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](../microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)를 참조 하세요.
 
 ### <a name="event-sourcing"></a>이벤트 소싱
 
-대량 데이터 시나리오를 최적화 하는 또 다른 방법으로는 [이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)이 포함 됩니다.
+대량 데이터 시나리오를 최적화 하는 또 다른 방법으로는 [이벤트 소싱](/azure/architecture/patterns/event-sourcing)이 포함 됩니다.
 
 일반적으로 시스템은 데이터 엔터티의 현재 상태를 저장 합니다. 예를 들어 사용자가 전화 번호를 변경 하는 경우 고객 레코드는 새 숫자로 업데이트 됩니다. 항상 데이터 엔터티의 현재 상태를 알 수 있지만 각 업데이트는 이전 상태를 덮어씁니다.
 

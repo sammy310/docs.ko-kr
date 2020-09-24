@@ -3,14 +3,15 @@ title: SQL Server 기능 및 ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 743e0eb9761cdc58018aab8aaed50a99b197116c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 121381114fadd8b20978d2e932bf3ec8bdcdb193
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552624"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177321"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
+
 이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 애플리케이션을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
   
  자세한 내용은 다음 표에 나타난 대로 현재 사용 중인 SQL Server 버전에 해당하는 SQL Server 온라인 설명서를 참조하세요.  
@@ -20,6 +21,7 @@ ms.locfileid: "90552624"
 1. [개발(데이터베이스 엔진)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [SQL Server의 인스턴스 열거 (ADO.NET)](enumerating-instances-of-sql-server.md)  
  SQL Server의 활성 인스턴스를 열거하는 방법을 설명합니다.  
   
@@ -47,7 +49,7 @@ ms.locfileid: "90552624"
  [LocalDB에 대 한 SqlClient 지원](sqlclient-support-for-localdb.md)  
  LocalDB 데이터베이스를 위한 SqlClient 지원에 대해 설명합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET의 SQL Server 데이터 작업](sql-server-data-operations.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)

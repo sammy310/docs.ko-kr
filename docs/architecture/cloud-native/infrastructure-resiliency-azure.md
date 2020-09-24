@@ -3,12 +3,12 @@ title: Azure 플랫폼 복원 력
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | Azure를 사용 하는 클라우드 인프라 복원 력
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 752f1320d9dfa18e52b078763d221a787da15e8e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88634bc60df15cc93b1769a85879795ae383757a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613982"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163767"
 ---
 # <a name="azure-platform-resiliency"></a>Azure 플랫폼 복원 력
 
@@ -39,7 +39,7 @@ ms.locfileid: "83613982"
 
 오류는 영향 범위에 따라 다릅니다. 하드웨어 오류 (예: 실패 한 디스크)는 클러스터의 단일 노드에 영향을 줄 수 있습니다. 실패 한 네트워크 스위치는 전체 서버 랙에 영향을 줄 수 있습니다. 전력 손실과 같이 일반적이 지 않은 오류는 전체 데이터 센터에 방해가 될 수 있습니다. 드물게 전체 지역을 사용할 수 없게 됩니다.
 
-[중복성](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) 은 응용 프로그램 복원 력을 제공 하는 한 가지 방법입니다. 필요한 정확한 중복성 수준은 비즈니스 요구 사항에 따라 다르며 시스템의 비용과 복잡도에 영향을 줍니다. 예를 들어 다중 지역 배포는 단일 지역 배포 보다 더 비용이 많이 들고 관리가 복잡 합니다. 장애 조치 (failover) 및 장애 복구를 관리 하려면 운영 절차가 필요 합니다. 일부 비즈니스 시나리오에서는 추가 비용 및 복잡성이 정당화 될 수 있지만 다른 비즈니스 시나리오는 그렇지 않습니다.
+[중복성](/azure/architecture/guide/design-principles/redundancy) 은 응용 프로그램 복원 력을 제공 하는 한 가지 방법입니다. 필요한 정확한 중복성 수준은 비즈니스 요구 사항에 따라 다르며 시스템의 비용과 복잡도에 영향을 줍니다. 예를 들어 다중 지역 배포는 단일 지역 배포 보다 더 비용이 많이 들고 관리가 복잡 합니다. 장애 조치 (failover) 및 장애 복구를 관리 하려면 운영 절차가 필요 합니다. 일부 비즈니스 시나리오에서는 추가 비용 및 복잡성이 정당화 될 수 있지만 다른 비즈니스 시나리오는 그렇지 않습니다.
 
 중복성을 설계 하려면 응용 프로그램에서 중요 한 경로를 확인 한 다음 경로의 각 지점에서 중복성이 있는지 확인 해야 합니다. 하위 시스템이 실패 하는 경우 응용 프로그램이 다른 작업으로 장애 조치 (failover) 되나요? 마지막으로, 중복성 요구 사항을 충족 하기 위해 활용할 수 있는 Azure 클라우드 플랫폼에 기본 제공 되는 기능을 명확 하 게 이해 해야 합니다. 중복성 설계에 대 한 권장 사항은 다음과 같습니다.
 
@@ -49,13 +49,13 @@ ms.locfileid: "83613982"
 
 - *다중 지역 배포를 계획 합니다.* 응용 프로그램을 단일 지역에 배포 하는 경우 해당 지역을 사용할 수 없게 되 면 응용 프로그램도 사용할 수 없게 됩니다. 이는 응용 프로그램의 서비스 수준 계약의 조건에서 허용 되지 않을 수 있습니다. 대신 여러 지역에 응용 프로그램 및 서비스를 배포 하는 것이 좋습니다. 예를 들어 AKS (Azure Kubernetes Service) 클러스터는 단일 지역에 배포 됩니다. 지역 장애 로부터 시스템을 보호 하기 위해 응용 프로그램을 여러 지역의 여러 AKS 클러스터에 배포 하 고 [쌍을 이루는 지역](https://buildazure.com/2017/01/06/azure-region-pairs-explained/) 기능을 사용 하 여 플랫폼 업데이트를 조정 하 고 복구 작업의 우선 순위를 정할 수 있습니다.
 
-- *[지역에서 복제](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)를 사용 하도록 설정 합니다.* Azure SQL Database, Cosmos DB 등의 서비스에 대 한 지역에서 복제는 여러 지역에 걸쳐 데이터의 보조 복제본을 만듭니다. 두 서비스 모두 동일한 지역 내에서 데이터를 자동으로 복제 하지만 지역에서 복제는 보조 지역으로 장애 조치 (failover) 할 수 있도록 하 여 지역 가동 중단 으로부터 사용자를 보호 합니다. 컨테이너 이미지를 저장 하는 방법에 대 한 지리적 복제 센터의 또 다른 모범 사례입니다. AKS에 서비스를 배포 하려면 리포지토리에서 이미지를 저장 하 고 가져와야 합니다. Azure Container Registry AKS와 통합 되며 컨테이너 이미지를 안전 하 게 저장할 수 있습니다. 성능 및 가용성을 향상 시키려면 이미지를 AKS 클러스터가 있는 각 지역의 레지스트리에 지리적으로 복제 하는 것이 좋습니다. 그런 다음 그림 6-4에 표시 된 것 처럼 각 AKS 클러스터는 해당 지역의 로컬 컨테이너 레지스트리에서 컨테이너 이미지를 끌어옵니다.
+- *[지역에서 복제](/azure/sql-database/sql-database-active-geo-replication)를 사용 하도록 설정 합니다.* Azure SQL Database, Cosmos DB 등의 서비스에 대 한 지역에서 복제는 여러 지역에 걸쳐 데이터의 보조 복제본을 만듭니다. 두 서비스 모두 동일한 지역 내에서 데이터를 자동으로 복제 하지만 지역에서 복제는 보조 지역으로 장애 조치 (failover) 할 수 있도록 하 여 지역 가동 중단 으로부터 사용자를 보호 합니다. 컨테이너 이미지를 저장 하는 방법에 대 한 지리적 복제 센터의 또 다른 모범 사례입니다. AKS에 서비스를 배포 하려면 리포지토리에서 이미지를 저장 하 고 가져와야 합니다. Azure Container Registry AKS와 통합 되며 컨테이너 이미지를 안전 하 게 저장할 수 있습니다. 성능 및 가용성을 향상 시키려면 이미지를 AKS 클러스터가 있는 각 지역의 레지스트리에 지리적으로 복제 하는 것이 좋습니다. 그런 다음 그림 6-4에 표시 된 것 처럼 각 AKS 클러스터는 해당 지역의 로컬 컨테이너 레지스트리에서 컨테이너 이미지를 끌어옵니다.
 
 ![지역 간 복제 된 리소스](./media/replicated-resources.png)
 
-**그림 6-4**. 지역 간 복제 된 리소스
+**그림 6-4** 지역 간 복제 된 리소스
 
-- *DNS 트래픽 부하 분산 장치를 구현 합니다.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) 는 DNS 수준에서 부하 분산을 통해 중요 한 응용 프로그램에 대 한 고가용성을 제공 합니다. 지리적 위치, 클러스터 응답 시간 및 심지어 응용 프로그램 끝점 상태에 따라 다른 지역으로 트래픽을 라우팅할 수 있습니다. 예를 들어 Azure Traffic Manager는 고객에 게 가장 가까운 AKS 클러스터 및 응용 프로그램 인스턴스로 지시할 수 있습니다. 서로 다른 지역에 여러 AKS 클러스터가 있는 경우 Traffic Manager를 사용 하 여 각 클러스터에서 실행 되는 응용 프로그램에 대 한 트래픽 흐름 방식을 제어 합니다. 그림 6-5에서는이 시나리오를 보여 줍니다.
+- *DNS 트래픽 부하 분산 장치를 구현 합니다.* [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) 는 DNS 수준에서 부하 분산을 통해 중요 한 응용 프로그램에 대 한 고가용성을 제공 합니다. 지리적 위치, 클러스터 응답 시간 및 심지어 응용 프로그램 끝점 상태에 따라 다른 지역으로 트래픽을 라우팅할 수 있습니다. 예를 들어 Azure Traffic Manager는 고객에 게 가장 가까운 AKS 클러스터 및 응용 프로그램 인스턴스로 지시할 수 있습니다. 서로 다른 지역에 여러 AKS 클러스터가 있는 경우 Traffic Manager를 사용 하 여 각 클러스터에서 실행 되는 응용 프로그램에 대 한 트래픽 흐름 방식을 제어 합니다. 그림 6-5에서는이 시나리오를 보여 줍니다.
 
 ![AKS 및 Azure Traffic Manager](./media/aks-traffic-manager.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "83613982"
 
 - *선호도를 피합니다.* 노드가 로컬 선호도를 필요로 하지 않도록 하는 것이 가장 좋은 방법입니다. 일반적으로 *고정 세션이*라고도 합니다. 요청은 임의의 인스턴스로 라우팅할 수 있어야 합니다. 상태를 유지 해야 하는 경우 [Azure Redis cache](https://azure.microsoft.com/services/cache/)와 같은 분산 캐시에 저장 해야 합니다.
 
-- *플랫폼 자동 크기 조정 기능을 활용 합니다.* 사용자 지정 또는 타사 메커니즘이 아닌 가능한 경우 기본 제공 자동 크기 조정 기능을 사용 합니다. 가능 하면 예약 된 크기 조정 규칙을 사용 하 여 시작 지연 없이 리소스를 사용할 수 있도록 하 고, 필요에 따라 규칙에 반응 형 자동 크기 조정을 추가 하 여 예기치 않은 수요 변화를 처리할 수 있습니다. 자세한 내용은 자동 크기 조정 [지침](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)을 참조 하세요.
+- *플랫폼 자동 크기 조정 기능을 활용 합니다.* 사용자 지정 또는 타사 메커니즘이 아닌 가능한 경우 기본 제공 자동 크기 조정 기능을 사용 합니다. 가능 하면 예약 된 크기 조정 규칙을 사용 하 여 시작 지연 없이 리소스를 사용할 수 있도록 하 고, 필요에 따라 규칙에 반응 형 자동 크기 조정을 추가 하 여 예기치 않은 수요 변화를 처리할 수 있습니다. 자세한 내용은 자동 크기 조정 [지침](/azure/architecture/best-practices/auto-scaling)을 참조 하세요.
 
 - *적극적으로 확장 하세요.* 최종 방법은 비즈니스를 잃지 않고 트래픽의 즉각적인 급증을 신속 하 게 충족할 수 있도록 적극적으로 규모를 확장 하는 것입니다. 그리고 시스템을 안정적으로 유지 하기 위해 (즉, 불필요 한 인스턴스 제거)를 확장 합니다. 이를 구현 하는 간단한 방법은 크기 조정 작업 사이에 대기 하는 시간, 리소스를 추가 하는 데 5 분, 인스턴스를 제거 하는 데 최대 15 분이 되는 쿨 다운 기간을 설정 하는 것입니다.
 
@@ -93,7 +93,7 @@ ms.locfileid: "83613982"
 
 - *Azure Service Bus.* Service Bus 클라이언트는 백오프 간격, 다시 시도 횟수 및 작업에 사용할 수 있는 최대 시간을 지정 하는을 사용 하 여 구성할 수 있는 [RetryPolicy 클래스](xref:Microsoft.ServiceBus.RetryPolicy) 를 노출 합니다 <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A> . 기본 정책은 시도 사이에 30 초 간격으로 재시도 하는 최대 9 번의 재시도 백오프.
 
-- *Azure SQL Database.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) 라이브러리를 사용 하는 경우 다시 시도 지원이 제공 됩니다.
+- *Azure SQL Database.* [Entity Framework Core](/ef/core/miscellaneous/connection-resiliency) 라이브러리를 사용 하는 경우 다시 시도 지원이 제공 됩니다.
 
 - *Azure Storage.* 저장소 클라이언트 라이브러리는 다시 시도 작업을 지원 합니다. 전략은 Azure storage 테이블, blob 및 큐에서 다릅니다. 또한 대체 재시도는 지역 중복 기능이 사용 하도록 설정 된 경우 기본 및 보조 저장소 서비스 위치 간에 전환 됩니다.
 

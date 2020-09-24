@@ -3,12 +3,12 @@ title: 클라우드 네이티브 응용 프로그램의 Elasticsearch
 description: 클라우드 네이티브 응용 프로그램에 탄력적 검색 기능을 추가 하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271804"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155382"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>클라우드 네이티브 앱의 Elasticsearch
 
@@ -38,23 +38,23 @@ Microsoft Azure Marketplace에서 개발자는 미리 구성 된 템플릿을 �
 
 ### <a name="references"></a>참조
 
-- [CQRS(명령 및 쿼리 책임 분리) 패턴](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [CQRS(명령 및 쿼리 책임 분리) 패턴](/azure/architecture/patterns/cqrs)
 
-- [이벤트 소싱 패턴](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [이벤트 소싱 패턴](/azure/architecture/patterns/event-sourcing)
 
 - [CAP 정리에서 RDBMS 파티션 사용이 허용 되지 않는 이유는 무엇 인가요?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [구체화된 뷰](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [구체화된 뷰](/azure/architecture/patterns/materialized-view)
 
 - [오픈 소스 데이터베이스에 대해 알고 있어야 합니다.](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [보상 트랜잭션 패턴](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [보상 트랜잭션 패턴](/azure/architecture/patterns/compensating-transaction)
 
 - [Saga 패턴](https://microservices.io/patterns/data/saga.html)
 
 - [Saga 패턴 | 마이크로 서비스를 사용 하 여 비즈니스 트랜잭션을 구현 하는 방법](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [보상 트랜잭션 패턴](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [보상 트랜잭션 패턴](/azure/architecture/patterns/compensating-transaction)
 
 - [9-구슬 가져오기: Cosmos DB 일관성 수준 설명](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

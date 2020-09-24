@@ -2,14 +2,15 @@
 title: <endpoint> 요소
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: befebc090900576b1e0f7ca679e1f5f5cd15af9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855386"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183808"
 ---
 # <a name="endpoint-element"></a>\<endpoint> 요소
+
 서비스 공개에 사용되는 서비스 엔드포인트에 대한 바인딩, 계약 및 주소 속성을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "70855386"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |address|엔드포인트의 주소를 포함하는 문자열입니다. 주소는 절대 주소 또는 상대 주소로 지정할 수 있습니다. 상대 주소가 제공되는 경우 호스트는 바인딩에 사용된 전송 체계에 적합한 기본 주소를 제공합니다. 주소가 구성되지 않으면 해당 엔드포인트의 주소를 기본 주소로 가정합니다.<br /><br /> 기본값은 빈 문자열입니다.|  
 |behaviorConfiguration|엔드포인트에 사용할 동작의 이름을 포함하는 문자열입니다.|  
@@ -52,25 +54,26 @@ ms.locfileid: "70855386"
 |계약|이 엔드포인트가 공개하는 계약을 나타내는 문자열입니다. 어셈블리는 계약 형식을 구현해야 합니다. 서비스 구현에서 단일 계약 형식을 구현하는 경우 이 속성을 생략할 수 있습니다. 기본값은 빈 문자열입니다.|  
 |endpointConfiguration|이 표준 엔드포인트의 추가 구성 정보를 참조하는 `kind` 특성에 의해 설정되는 표준 엔드포인트의 이름을 지정하는 문자열입니다. 이와 동일한 이름이 `<standardEndpoints>` 섹션에서 정의되어야 합니다.|  
 |isSystemEndpoint|엔드포인트가 인프라 엔드포인트인지 여부를 지정하는 부울 값입니다.|  
-|kind|적용되는 표준 엔드포인트의 형식을 지정하는 문자열입니다. 형식은 섹션 또는 machine.config에 등록 되어야 합니다 `<extensions>` . 아무 것도 지정 하지 않으면 일반 서비스 끝점이 만들어집니다.|  
+|kind|적용되는 표준 엔드포인트의 형식을 지정하는 문자열입니다. 형식은 `<extensions>` 섹션 또는 machine.config에 등록해야 합니다. 지정하지 않으면 일반 서비스 엔드포인트가 만들어집니다.|  
 |listenUriMode|서비스에서 수신하도록 제공된 `ListenUri`를 전송에서 처리하는 방법을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -명시적<br />-고유<br /><br /> 기본값은 Explicit입니다.|  
 |listenUri|서비스 엔드포인트가 수신하는 URI를 지정하는 문자열입니다. 기본값은 빈 문자열입니다.|  
 |name|선택적 특성입니다. 서비스 엔드포인트의 이름을 지정하는 문자열입니다. 기본값은 바인딩 이름과 계약 설명 이름을 연결한 값입니다. 서비스에 엔드포인트가 여러 개일 수 있으므로 엔드포인트의 `name` 특성은 서비스 이름과 구분됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<headers>](headers.md)|주소 헤더 컬렉션입니다.|  
 |[\<identity>](identity.md)|한 엔드포인트에서 다른 엔드포인트와 메시지를 교환할 때 상대 엔드포인트를 인증할 수 있도록 하는 ID입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<service>](service.md)|클라이언트가 연결할 수 있는 엔드포인트의 목록을 정의하는 구성 섹션입니다.|  
   
 ## <a name="example"></a>예제  
+
  서비스 엔드포인트 구성의 예제입니다.  
   
 ```xml  

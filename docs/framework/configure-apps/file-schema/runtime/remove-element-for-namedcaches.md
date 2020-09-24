@@ -5,14 +5,15 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 991ad0eb9c04c27ded4d566115107ac7b47a71e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ad5a0ce6d7a3059943b3962b9255385cea6e15
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252347"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183990"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<namedCaches>에 대한 \<remove> 요소
+
 메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,27 +31,32 @@ ms.locfileid: "70252347"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  `None`  
   
 ### <a name="child-elements"></a>자식 요소  
+
  `None`  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|명명 된 인스턴스에 대 한 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `remove`요소는 `namedCache` 메모리 캐시에 대해 명명 된 캐시 컬렉션에서 항목을 제거 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<namedCaches>요소 (캐시 설정)](namedcaches-element-cache-settings.md)
+- [\<namedCaches> 요소 (캐시 설정)](namedcaches-element-cache-settings.md)

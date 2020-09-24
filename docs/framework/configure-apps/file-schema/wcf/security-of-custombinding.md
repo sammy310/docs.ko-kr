@@ -2,14 +2,15 @@
 title: <customBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 454113f66007ddd69f8455bb532e9cbd12fcefb7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb661864e2540a9b9f5f217402d37515043c862a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738705"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170118"
 ---
 # <a name="security-of-custombinding"></a>\<customBinding>의 \<security>
+
 사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,11 +43,12 @@ ms.locfileid: "73738705"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |allowSerializedSigningTokenOnReply|선택 사항입니다. serialize(직렬화)된 토큰을 회신에 사용할 수 있는지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다. 이중 바인딩을 사용하는 경우 설정은 기본적으로 `true`로 지정되며 변경된 설정이 모두 무시됩니다.|  
 |authenticationMode|선택 사항입니다. 게시자와 응답자 간에 인증 모드가 사용되도록 지정합니다. 아래의 모든 값을 참조하세요.<br /><br /> 기본값은 `sspiNegotiated`입니다.|  
@@ -62,13 +64,13 @@ ms.locfileid: "73738705"
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 특성  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |String|`AnonymousForCertificate`<br /><br /> `AnonymousForSslNegotiated`<br /><br /> `CertificateOverTransport`<br /><br /> `IssuedToken`<br /><br /> `IssuedTokenForCertificate`<br /><br /> `IssuedTokenForSslNegotiated`<br /><br /> `IssuedTokenOverTransport`<br /><br /> `Kerberos`<br /><br /> `KerberosOverTransport`<br /><br /> `MutualCertificate`<br /><br /> `MutualCertificateDuplex`<br /><br /> `MutualSslNegotiated`<br /><br /> `SecureConversation`<br /><br /> `SspiNegotiated`<br /><br /> `UserNameForCertificate`<br /><br /> `UserNameForSslNegotiated`<br /><br /> `UserNameOverTransport`<br /><br /> `SspiNegotiatedOverTransport`|  
   
 ## <a name="defaultalgorithm-attribute"></a>defaultAlgorithm 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -89,7 +91,7 @@ ms.locfileid: "73738705"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|현재 발급된 토큰을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement> 형식입니다.|  
 |[\<localClientSettings>](localclientsettings-element.md)|이 바인딩에 대한 로컬 클라이언트의 보안 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement> 형식입니다.|  
@@ -98,14 +100,16 @@ ms.locfileid: "73738705"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 요소를 사용 하는 방법에 대 한 자세한 내용은 [SecurityBindingElement 인증 모드](../../../wcf/feature-details/securitybindingelement-authentication-modes.md) 및 [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 사용자 지정 바인딩을 사용하여 보안을 구성하는 방법을 보여 줍니다. 여기서는 사용자 지정 바인딩을 사용하여 메시지를 안전하게 전송하고 메시지 수준 보안을 가능하게 하는 방법을 보여 줍니다. 이러한 방법은 클라이언트와 서비스 간에 메시지를 전송하는 데 보안 전송이 요구되면서 동시에 메시지가 메시지 수준에서 보호되어야 하는 경우에 유용합니다. 이 구성은 시스템 제공 바인딩에서는 지원되지 않습니다.  
   
  서비스 구성은 TLS/SSL 프로토콜을 사용하여 보호되는 TCP 통신 및 Windows 메시지 보안을 지원하는 사용자 지정 바인딩을 정의합니다. 사용자 지정 바인딩은 서비스 인증서를 사용하여 전송 수준에서 서비스를 인증하고 클라이언트와 서비스 간 전송 시 메시지를 보호합니다. 이는 바인딩 요소에 의해 수행 됩니다 [\<sslStreamSecurity>](sslstreamsecurity.md) . 서비스 인증서는 서비스 동작을 사용하여 구성됩니다.  
@@ -172,9 +176,9 @@ ms.locfileid: "73738705"
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

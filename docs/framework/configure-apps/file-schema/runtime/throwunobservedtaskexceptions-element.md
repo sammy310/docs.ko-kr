@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153817"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183925"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> 요소
+
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,33 +31,36 @@ ms.locfileid: "79153817"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 처리 되지 않은 태스크 예외가 실행 중인 프로세스를 종료할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 기본값입니다.|  
+|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 이것이 기본값입니다.|  
 |`true`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
 |||  
   
 ## <a name="remarks"></a>설명  
+
  와 연결 된 예외가 관찰 되지 않은 경우에는 <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task.Wait%2A> 작업이 없으며, 부모가 연결 되지 않으며, 속성을 읽지 않은 경우 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 태스크 예외가 관찰 되지 않은으로 간주 됩니다.  
   
  .NET Framework 4에서는 기본적으로 <xref:System.Threading.Tasks.Task> 관찰 되지 않은 예외가 있는이 가비지 수집 되는 경우 종료자는 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
@@ -72,6 +76,7 @@ ms.locfileid: "79153817"
 - HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft에서 레지스트리 DWORD 값 ThrowUnobservedTaskExceptions = 1을 설정 합니다 \\ . NETFramework 키입니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 응용 프로그램 구성 파일을 사용 하 여 작업에서 예외를 throw 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -83,6 +88,7 @@ ms.locfileid: "79153817"
 ```  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 작업에서 관찰 되지 않은 예외가 throw 되는 방법을 보여 줍니다. 제대로 작동 하려면 코드가 릴리스 된 프로그램으로 실행 되어야 합니다.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]

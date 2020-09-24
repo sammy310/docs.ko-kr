@@ -2,24 +2,24 @@
 title: 코드 제공 인프라(Infrastructure as code)
 description: 클라우드 네이티브 응용 프로그램을 사용 하 여 IaC (Infrastructure as Code) 수용
 ms.date: 05/13/2020
-ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613956"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163741"
 ---
 # <a name="infrastructure-as-code"></a>코드 제공 인프라(Infrastructure as code)
 
 클라우드 네이티브 시스템은 마이크로 서비스, 컨테이너 및 최신 시스템 디자인을 도입 하 여 속도와 민첩성을 구현 합니다. 일관 되 고 품질 코드를 보장 하는 자동화 된 빌드 및 릴리스 단계를 제공 합니다. 그러나이는 스토리의 일부일 뿐입니다. 이러한 시스템이 실행 되는 클라우드 환경을 프로 비전 하려면 어떻게 해야 하나요?
 
-최신 클라우드 네이티브 응용 프로그램은 인프라를 코드로, 또는 [로](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)널리 승인 된 사례를 수용 합니다 `IaC` .  IaC를 사용 하면 플랫폼 프로 비전을 자동화할 수 있습니다. 기본적으로 DevOps 사례에 테스트 및 버전 관리와 같은 소프트웨어 엔지니어링 사례를 적용 합니다. 인프라 및 배포는 자동화 되 고 일관 되며 반복 가능 합니다. 지속적인 배달과 수동 배포의 기존 모델을 자동화 하는 것 처럼, IaC (Infrastructure as Code)는 응용 프로그램 환경을 관리 하는 방식으로 발전 하 고 있습니다.
+최신 클라우드 네이티브 응용 프로그램은 인프라를 코드로, 또는 [로](/azure/devops/learn/what-is-infrastructure-as-code)널리 승인 된 사례를 수용 합니다 `IaC` .  IaC를 사용 하면 플랫폼 프로 비전을 자동화할 수 있습니다. 기본적으로 DevOps 사례에 테스트 및 버전 관리와 같은 소프트웨어 엔지니어링 사례를 적용 합니다. 인프라 및 배포는 자동화 되 고 일관 되며 반복 가능 합니다. 지속적인 배달과 수동 배포의 기존 모델을 자동화 하는 것 처럼, IaC (Infrastructure as Code)는 응용 프로그램 환경을 관리 하는 방식으로 발전 하 고 있습니다.
 
 ARM (Azure Resource Manager), Terraform 및 Azure CLI (명령줄 인터페이스)와 같은 도구를 사용 하 여 필요한 클라우드 인프라를 선언적으로 스크립팅할 수 있습니다.
 
 ## <a name="azure-resource-manager-templates"></a>Azure 리소스 관리자 템플릿
 
-ARM은 [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)를 나타냅니다. Azure에 기본 제공 되 고 API 서비스로 노출 되는 API 프로 비전 엔진입니다. ARM을 사용 하면 조정 된 단일 작업에서 Azure 리소스 그룹에 포함 된 리소스를 배포, 업데이트, 삭제 및 관리할 수 있습니다. 필요한 리소스와 해당 구성을 지정 하는 JSON 기반 템플릿을 엔진에 제공 합니다. ARM은 종속성의 올바른 순서에 따라 배포를 자동으로 오케스트레이션 합니다. 엔진은 멱 등 성를 확인 합니다. 동일한 구성으로 원하는 리소스가 이미 존재 하는 경우 프로 비전은 무시 됩니다.
+ARM은 [Azure Resource Manager](/azure/azure-resource-manager/management/overview)를 나타냅니다. Azure에 기본 제공 되 고 API 서비스로 노출 되는 API 프로 비전 엔진입니다. ARM을 사용 하면 조정 된 단일 작업에서 Azure 리소스 그룹에 포함 된 리소스를 배포, 업데이트, 삭제 및 관리할 수 있습니다. 필요한 리소스와 해당 구성을 지정 하는 JSON 기반 템플릿을 엔진에 제공 합니다. ARM은 종속성의 올바른 순서에 따라 배포를 자동으로 오케스트레이션 합니다. 엔진은 멱 등 성를 확인 합니다. 동일한 구성으로 원하는 리소스가 이미 존재 하는 경우 프로 비전은 무시 됩니다.
 
 Azure Resource Manager 템플릿은 Azure에서 다양 한 리소스를 정의 하는 데 사용 되는 JSON 기반 언어입니다. 기본 스키마는 그림 10-14와 같습니다.
 
@@ -102,7 +102,7 @@ Terraform도 문제 템플릿에 대 한 직관적인 오류 메시지를 제공
 
 ## <a name="azure-cli-scripts-and-tasks"></a>스크립트 및 작업 Azure CLI
 
-마지막으로 [Azure CLI](https://docs.microsoft.com/cli/azure/) 활용 하 여 클라우드 인프라를 선언적으로 스크립팅할 수 있습니다. 거의 모든 Azure 리소스를 프로 비전 하 고 구성 하기 위해 스크립트를 생성, 검색 및 공유할 수 Azure CLI. CLI는 gentle 학습 곡선으로 간단 하 게 사용할 수 있습니다. 스크립트는 PowerShell 또는 Bash 내에서 실행 됩니다. 특히 ARM 템플릿과 비교할 때 간단 하 게 디버깅할 수 있습니다.
+마지막으로 [Azure CLI](/cli/azure/) 활용 하 여 클라우드 인프라를 선언적으로 스크립팅할 수 있습니다. 거의 모든 Azure 리소스를 프로 비전 하 고 구성 하기 위해 스크립트를 생성, 검색 및 공유할 수 Azure CLI. CLI는 gentle 학습 곡선으로 간단 하 게 사용할 수 있습니다. 스크립트는 PowerShell 또는 Bash 내에서 실행 됩니다. 특히 ARM 템플릿과 비교할 때 간단 하 게 디버깅할 수 있습니다.
 
 Azure CLI 스크립트는 인프라를 분해 하 고 다시 배포 해야 할 때 제대로 작동 합니다. 기존 환경 업데이트는 어려울 수 있습니다. 많은 CLI 명령은 idempotent 되지 않습니다. 즉, 리소스가 이미 있는 경우에도 실행 될 때마다 리소스를 다시 만듭니다. 항상 각 리소스가 있는지 확인 하는 코드를 추가 하 여 만들 수 있습니다. 그러나 이렇게 하면 스크립트가 너무 커지고 관리 하기 어려울 수 있습니다.
 
@@ -124,7 +124,7 @@ Azure CLI 스크립트는 인프라를 분해 하 고 다시 배포 해야 할 �
 
 **그림 10-17** -Azure CLI 스크립트
 
-문서에서 [코드로 서의 인프라 란 무엇](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)이며, 제작자 Sam Guckenheimer는 "IaC를 구현 하는 팀이 안정적인 환경을 신속 하 고 대규모로 제공할 수 있는 방법에 대해 설명 합니다. 팀은 환경을 수동으로 구성 하는 것을 방지 하 고 코드를 통해 환경의 원하는 상태를 표시 하 여 일관성을 적용 합니다. IaC를 사용 하 여 인프라를 배포 하는 것은 반복 가능 하며, 구성 드리프트 또는 누락 종속성으로 인 한 런타임 문제를 방지 DevOps 팀은 통합 된 사례 및 도구 집합과 함께 작업 하 여 응용 프로그램 및 지원 인프라를 신속 하 고 안정적 이며 대규모로 제공할 수 있습니다. "
+문서에서 [코드로 서의 인프라 란 무엇](/azure/devops/learn/what-is-infrastructure-as-code)이며, 제작자 Sam Guckenheimer는 "IaC를 구현 하는 팀이 안정적인 환경을 신속 하 고 대규모로 제공할 수 있는 방법에 대해 설명 합니다. 팀은 환경을 수동으로 구성 하는 것을 방지 하 고 코드를 통해 환경의 원하는 상태를 표시 하 여 일관성을 적용 합니다. IaC를 사용 하 여 인프라를 배포 하는 것은 반복 가능 하며, 구성 드리프트 또는 누락 종속성으로 인 한 런타임 문제를 방지 DevOps 팀은 통합 된 사례 및 도구 집합과 함께 작업 하 여 응용 프로그램 및 지원 인프라를 신속 하 고 안정적 이며 대규모로 제공할 수 있습니다. "
 
 >[!div class="step-by-step"]
 >[이전](feature-flags.md)

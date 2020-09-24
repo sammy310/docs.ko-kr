@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154311"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170183"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<runtime>에 대한 \<assemblyIdentity> 요소
+
 어셈블리에 대 한 식별 정보를 포함 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`name`|필수 특성입니다.<br /><br /> 어셈블리의 이름입니다.|  
 |`culture`|선택적 특성입니다.<br /><br /> 어셈블리의 언어 및 국가/지역을 지정 하는 문자열입니다.|  
@@ -48,7 +50,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |`amd64`|AMD x86-64 아키텍처 전용.|  
 |`ia64`|Intel Itanium 아키텍처에만 해당 합니다.|  
@@ -56,11 +58,12 @@ culture="assembly culture"/>
 |`x86`|64 비트 플랫폼의 기본 또는 WOW (Windows on Windows) 환경에 있는 32 비트 x86 프로세서|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
@@ -68,6 +71,7 @@ culture="assembly culture"/>
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  모든 **\<dependentAssembly>** 요소에는 자식 요소가 하나씩 있어야 합니다 **\<assemblyIdentity>** .  
   
  `processorArchitecture`특성이 있는 경우 `<assemblyIdentity>` 요소는 해당 프로세서 아키텍처를 사용 하는 어셈블리에만 적용 됩니다. 특성이 없는 경우 `processorArchitecture` `<assemblyIdentity>` 요소는 모든 프로세서 아키텍처를 사용 하 여 어셈블리에 적용할 수 있습니다.  
@@ -102,6 +106,7 @@ culture="assembly culture"/>
  구성 파일에 `<assemblyIdentity>` `processorArchitecture` 특성이 없고 플랫폼과 일치 하는 요소가 포함 되지 않은 요소가 포함 된 경우 특성이 없는 요소가 `processorArchitecture` 사용 됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 어셈블리에 대 한 정보를 제공 하는 방법을 보여 줍니다.  
   
 ```xml  

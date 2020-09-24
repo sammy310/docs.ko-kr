@@ -2,14 +2,15 @@
 title: 사용자 정의 함수
 ms.date: 03/30/2017
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-ms.openlocfilehash: 40697da4fe678668f8f7ecda86abebf40da7b973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 061e07ba91a1742c90a594bf42f12e64172b2481
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792296"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164118"
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델에 메서드를 사용하여 사용자 정의 함수를 제공합니다. 필요한 위치에 <xref:System.Data.Linq.Mapping.FunctionAttribute> 특성과 <xref:System.Data.Linq.Mapping.ParameterAttribute> 특성을 적용하여 메서드를 함수로 지정합니다. 자세한 내용은 [LINQ to SQL 개체 모델](the-linq-to-sql-object-model.md)을 참조 하세요.  
   
  <xref:System.InvalidOperationException>을 방지하려면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 사용자 정의 함수는 다음 폼 중 하나에 있어야 합니다.  
@@ -23,6 +24,7 @@ ms.locfileid: "70792296"
  이 단원의 항목에서는 코드를 사용자가 직접 작성하는 경우 애플리케이션에서 이러한 메서드를 만들어 호출하는 방법을 보여 줍니다. Visual Studio를 사용 하는 개발자는 일반적으로 개체 관계형 디자이너를 사용 하 여 사용자 정의 함수를 매핑합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 스칼라 반환 사용자 정의 함수 사용](how-to-use-scalar-valued-user-defined-functions.md)  
  스칼라 값을 반환하는 함수를 구현하는 방법에 대해 설명합니다.  
   

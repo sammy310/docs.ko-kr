@@ -3,12 +3,12 @@ title: 관계형 마이닝 모델과 NoSQL 데이터 비교
 description: 클라우드 네이티브 응용 프로그램의 관계형 및 NoSQL 데이터에 대 한 자세한 정보
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613787"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163637"
 ---
 # <a name="relational-vs-nosql-data"></a>관계형 마이닝 모델과 NoSQL 데이터 비교
 
@@ -53,7 +53,7 @@ NoSQL 데이터베이스에는 특정 사용 사례에 적합 한 데이터에 �
 
 대부분의 관계형 데이터베이스 시스템은 주 데이터베이스의 복사본을 다른 보조 서버 인스턴스에 만들 수 있는 기본 제공 복제 기능을 지원 합니다. 기본 인스턴스에 대 한 쓰기 작업을 수행 하 고 각 보조 복제본에 복제 합니다. 오류가 발생 하면 주 인스턴스는 보조 데이터베이스로 장애 조치 (failover) 하 여 고가용성을 제공할 수 있습니다. 보조는 읽기 작업을 배포 하는 데 사용할 수도 있습니다. 쓰기 작업이 항상 주 복제본에 대해 수행 되는 동안 읽기 작업을 보조 복제본으로 라우트 하 여 시스템 부하를 줄일 수 있습니다.
 
-[분할](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)를 사용 하는 등의 여러 노드에 걸쳐 데이터를 가로로 분할할 수도 있습니다. 그러나 분할는 쉽게 통신할 수 없는 여러 부분에서 데이터를 spitting 하 여 운영 오버 헤드를 크게 늘립니다. 관리 하는 데 비용이 많이 들고 시간이 오래 걸릴 수 있습니다. 성능, 테이블 조인 및 참조 무결성에 영향을 줄 수 있습니다.
+[분할](/azure/sql-database/sql-database-elastic-scale-introduction)를 사용 하는 등의 여러 노드에 걸쳐 데이터를 가로로 분할할 수도 있습니다. 그러나 분할는 쉽게 통신할 수 없는 여러 부분에서 데이터를 spitting 하 여 운영 오버 헤드를 크게 늘립니다. 관리 하는 데 비용이 많이 들고 시간이 오래 걸릴 수 있습니다. 성능, 테이블 조인 및 참조 무결성에 영향을 줄 수 있습니다.
 
 데이터 복제본이 "매우 일관 된" 관계형 데이터베이스 클러스터에서 네트워크 연결을 손실 하는 경우 데이터베이스에 쓸 수 없습니다. 시스템은 다른 데이터 복제본에 변경 내용을 복제할 수 없기 때문에 쓰기 작업을 거부 합니다. 모든 데이터 복제본은 트랜잭션을 완료 하기 전에 업데이트 해야 합니다.
 
@@ -109,15 +109,15 @@ NoSQL 데이터베이스는 일반적으로 고가용성 및 파티션 허용 �
 
 ## <a name="azure-sql-database"></a>Azure SQL Database
 
-Microsoft SQL Server에 대 한 전문 지식이 있는 개발 팀은 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)을 고려해 야 합니다. 이는 Microsoft SQL Server 데이터베이스 엔진을 기반으로 하는 완전히 관리 되는 관계형 DBaaS (As a service)입니다. 서비스는 SQL Server의 온-프레미스 버전에 있는 다양 한 기능을 공유 하 고 안정적인 최신 버전의 SQL Server 데이터베이스 엔진를 실행 합니다.
+Microsoft SQL Server에 대 한 전문 지식이 있는 개발 팀은 [Azure SQL Database](/azure/sql-database/)을 고려해 야 합니다. 이는 Microsoft SQL Server 데이터베이스 엔진을 기반으로 하는 완전히 관리 되는 관계형 DBaaS (As a service)입니다. 서비스는 SQL Server의 온-프레미스 버전에 있는 다양 한 기능을 공유 하 고 안정적인 최신 버전의 SQL Server 데이터베이스 엔진를 실행 합니다.
 
 클라우드 기본 마이크로 서비스 사용 시에는 다음 세 가지 배포 옵션을 사용 하 여 Azure SQL Database를 사용할 수 있습니다.
 
-- Single Database은 Azure 클라우드의 [Azure SQL Database 서버](https://docs.microsoft.com/azure/sql-database/sql-database-servers) 에서 실행 되는 완전히 관리 되는 SQL Database를 나타냅니다. 데이터베이스는 기본 데이터베이스 서버에 대 한 구성 종속성이 없으므로 [*포함*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) 된 것으로 간주 됩니다.
+- Single Database은 Azure 클라우드의 [Azure SQL Database 서버](/azure/sql-database/sql-database-servers) 에서 실행 되는 완전히 관리 되는 SQL Database를 나타냅니다. 데이터베이스는 기본 데이터베이스 서버에 대 한 구성 종속성이 없으므로 [*포함*](/sql/relational-databases/databases/contained-databases) 된 것으로 간주 됩니다.
   
-- [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 은 온-프레미스 SQL Server와 거의 100% 호환성을 제공 하는 완전히 관리 되는 Microsoft SQL Server 데이터베이스 엔진 인스턴스입니다. 이 옵션은 최대 35 TB의 더 큰 데이터베이스를 지원 하 고 더 나은 격리를 위해 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) 에 배치 됩니다.
+- [Managed Instance](/azure/sql-database/sql-database-managed-instance) 은 온-프레미스 SQL Server와 거의 100% 호환성을 제공 하는 완전히 관리 되는 Microsoft SQL Server 데이터베이스 엔진 인스턴스입니다. 이 옵션은 최대 35 TB의 더 큰 데이터베이스를 지원 하 고 더 나은 격리를 위해 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) 에 배치 됩니다.
 
-- [서버](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) 를 사용 하지 않는 Azure SQL Database는 워크 로드 요구 사항에 따라 자동으로 크기를 조정 하는 단일 데이터베이스의 계산 계층입니다. 초당 사용 된 계산의 양에 대해서만 요금을 청구 합니다. 서비스는 일정 하지 않은 간헐적 사용 패턴과 비활성 기간을 포함 하는 워크 로드에 적합 합니다. 서버를 사용 하지 않는 계산 계층은 비활성 기간 동안에도 데이터베이스를 자동으로 일시 중지 하므로 저장소 요금만 청구 됩니다. 작업이 반환 되 면 자동으로 다시 시작 됩니다.
+- [서버](/azure/sql-database/sql-database-serverless) 를 사용 하지 않는 Azure SQL Database는 워크 로드 요구 사항에 따라 자동으로 크기를 조정 하는 단일 데이터베이스의 계산 계층입니다. 초당 사용 된 계산의 양에 대해서만 요금을 청구 합니다. 서비스는 일정 하지 않은 간헐적 사용 패턴과 비활성 기간을 포함 하는 워크 로드에 적합 합니다. 서버를 사용 하지 않는 계산 계층은 비활성 기간 동안에도 데이터베이스를 자동으로 일시 중지 하므로 저장소 요금만 청구 됩니다. 작업이 반환 되 면 자동으로 다시 시작 됩니다.
 
 기존 Microsoft SQL Server stack 외에도 Azure는 세 개의 인기 있는 오픈 소스 데이터베이스의 관리 되는 버전을 제공 합니다.
 
@@ -151,7 +151,7 @@ MariaDB는 강력한 커뮤니티 이며 많은 대기업에서 사용 됩니다
 
 Azure Database for PostgreSQL는 다음과 같은 두 가지 배포 옵션을 사용할 수 있습니다.
 
-- [단일 서버](https://docs.microsoft.com/azure/postgresql/concepts-servers) 배포 옵션은 여러 데이터베이스를 배포할 수 있는 여러 데이터베이스에 대 한 중앙 관리 지점입니다. 가격은 코어 및 저장소에 따라 서버 별로 구성 됩니다.
+- [단일 서버](/azure/postgresql/concepts-servers) 배포 옵션은 여러 데이터베이스를 배포할 수 있는 여러 데이터베이스에 대 한 중앙 관리 지점입니다. 가격은 코어 및 저장소에 따라 서버 별로 구성 됩니다.
 
 - [Citus (Hyperscale) 옵션](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) 은 Citus Data 기술을 기반으로 합니다. 고성능 및 확장성을 제공 하기 위해 수백 개의 노드에서 단일 데이터베이스를 *수평으로 확장* 하 여 성능을 향상 시킬 수 있습니다. 이 옵션을 사용 하면 엔진은 메모리에 더 많은 데이터를 맞추고, 수백 개의 노드에서 쿼리를 병렬화 하 고, 데이터를 더 빠르게 인덱싱할 수 있습니다.
 
@@ -175,7 +175,7 @@ Cosmos 데이터베이스를 지역 또는 전 세계에 분산 하 고, 데이�
 
 Cosmos DB는 전역 수준에서 [능동/능동](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) 클러스터링을 지원 하 여 *쓰기 및 읽기를 모두*지원 하도록 데이터베이스 영역을 구성할 수 있도록 합니다.
 
-[다중 마스터](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits) 프로토콜은 다음과 같은 기능을 가능 하 게 하는 Cosmos DB의 중요 한 기능입니다.
+[다중 마스터](/azure/cosmos-db/multi-master-benefits) 프로토콜은 다음과 같은 기능을 가능 하 게 하는 Cosmos DB의 중요 한 기능입니다.
 
 - 무제한 탄력적 쓰기 및 읽기 확장성.
 
@@ -183,7 +183,7 @@ Cosmos DB는 전역 수준에서 [능동/능동](https://kemptechnologies.com/wh
 
 - 99번째 백분위에서 10밀리초 미만으로 제공되는 보장된 읽기 및 쓰기
 
-Cosmos DB [멀티 호 밍 api](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)를 사용 하면 마이크로 서비스에서 가장 가까운 Azure 지역을 자동으로 인식 하 여 요청을 보냅니다. 가장 가까운 지역은 구성 변경 없이 Cosmos DB로 식별 됩니다. 지역을 사용할 수 없게 되 면 멀티 호 밍 기능이 요청을 사용 가능한 가장 가까운 다음 지역으로 자동으로 라우팅합니다.
+Cosmos DB [멀티 호 밍 api](/azure/cosmos-db/distribute-data-globally)를 사용 하면 마이크로 서비스에서 가장 가까운 Azure 지역을 자동으로 인식 하 여 요청을 보냅니다. 가장 가까운 지역은 구성 변경 없이 Cosmos DB로 식별 됩니다. 지역을 사용할 수 없게 되 면 멀티 호 밍 기능이 요청을 사용 가능한 가장 가까운 다음 지역으로 자동으로 라우팅합니다.
 
 ### <a name="multi-model-support"></a>다중 모델 지원
 
@@ -196,17 +196,17 @@ Cosmos DB [멀티 호 밍 api](https://docs.microsoft.com/azure/cosmos-db/distri
 | Gremlin API | 그래프 기반 노드와에 지 데이터 표현을 사용 하 여 Gremlin API 지원 |
 | Cassandra API | 와이드 열 데이터 표현에 대 한 Casandra API 지원 |  
 | 테이블 API  | 프리미엄 기능을 갖춘 Azure Table Storage 지원 |  
-| etcd API | Azure Kubernetes 서비스 클러스터에 대 한 백업 저장소로 Cosmos DB을 사용 하도록 설정 합니다. |
+| Etcd API | Azure Kubernetes 서비스 클러스터에 대 한 백업 저장소로 Cosmos DB을 사용 하도록 설정 합니다. |
 
 개발 팀은 데이터 나 코드를 최소한으로 변경 하 여 기존 Mongo, Gremlin 또는 Cassandra 데이터베이스를 Cosmos DB로 마이그레이션할 수 있습니다. 새 앱의 경우 개발 팀은 오픈 소스 옵션 또는 기본 제공 SQL API 모델 중에서 선택할 수 있습니다.
 
 > 내부적으로 Cosmos는 데이터를 기본 데이터 형식으로 구성 된 간단한 구조체 형식으로 저장 합니다. 각 요청에 대해 데이터베이스 엔진은 기본 데이터를 선택한 모델 표현으로 변환 합니다.
 
-위의 표에서 [Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) 옵션을 확인 합니다. 이 API는 Azure Table Storage의 진화입니다. 둘 다 동일한 기본 테이블 모델을 공유 하지만 Cosmos DB Table API는 Azure Storage API에서 사용할 수 없는 프리미엄 향상 기능을 추가 합니다. 다음 표에서는 이러한 기능을 대조 합니다.
+위의 표에서 [Table API](/azure/cosmos-db/table-introduction) 옵션을 확인 합니다. 이 API는 Azure Table Storage의 진화입니다. 둘 다 동일한 기본 테이블 모델을 공유 하지만 Cosmos DB Table API는 Azure Storage API에서 사용할 수 없는 프리미엄 향상 기능을 추가 합니다. 다음 표에서는 이러한 기능을 대조 합니다.
 
 |  | Azure Table Storage  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
-| 대기 시간 | Fast | 전 세계 어디에서 든 읽기 및 쓰기에 대 한 1 자리 밀리초 대기 시간 |
+| 대기 시간 | 빠름 | 전 세계 어디에서 든 읽기 및 쓰기에 대 한 1 자리 밀리초 대기 시간 |
 | 처리량 | 테이블당 2만 작업 제한 | 테이블당 1000만 작업 |
 | 글로벌 배포 | 단일 보조 읽기 지역 (선택 사항)이 있는 단일 지역 | 자동 장애 조치 (failover)를 사용 하 여 모든 지역에 턴키 배포 |
 | 인덱싱 | 파티션 및 행 키 속성만 사용할 수 있습니다. | 모든 속성의 자동 인덱싱 |
@@ -220,7 +220,7 @@ Azure 테이블 저장소를 사용 하는 마이크로 서비스는 Cosmos DB T
 
 대부분의 분산 데이터베이스를 통해 개발자는 두 가지 일관성 모델 (강력한 일관성과 최종 일관성) 중에서 선택할 수 있습니다. *강력한 일관성* 은 데이터 프로그래밍의 골드 표준입니다. 모든 데이터베이스 복사본에서 업데이트가 복제 될 때까지 대기 시간이 발생 해야 하는 경우에도 쿼리가 항상 최신 데이터를 반환 하도록 보장 합니다. *최종 일관성* 을 위해 구성 된 데이터베이스는 해당 데이터가 최신 복사본이 아니더라도 데이터를 즉시 반환 합니다. 후자 옵션을 사용 하면 더 높은 가용성, 더 큰 규모 및 향상 된 성능을 제공 합니다.
 
-Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 모델](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 을 제공 합니다.
+Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 모델](/azure/cosmos-db/consistency-levels) 을 제공 합니다.
 
 ![Cosmos DB 일관성 그래프](./media/cosmos-consistency-level-graph.png)
 
@@ -240,7 +240,7 @@ Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 
 
 ### <a name="partitioning"></a>분할
 
-자동 [분할](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) 을 채택 하 여 클라우드 네이티브 서비스의 성능 요구에 맞게 데이터베이스 크기를 조정 하는 Azure Cosmos DB.
+자동 [분할](/azure/cosmos-db/partitioning-overview) 을 채택 하 여 클라우드 네이티브 서비스의 성능 요구에 맞게 데이터베이스 크기를 조정 하는 Azure Cosmos DB.
 
 데이터베이스, 컨테이너 및 항목을 만들어 Cosmos DB 데이터에서 데이터를 관리 합니다.
 
@@ -254,7 +254,7 @@ Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 
 
 위의 그림에서 각 항목에는 ' city ' 또는 ' 공항 '의 파티션 키가 포함 되어 있습니다. 키는 항목의 논리적 파티션을 결정 합니다. 도시 코드가 있는 항목은 왼쪽의 컨테이너에 할당 되 고, 공항 코드를 포함 하는 항목은 오른쪽의 컨테이너에 할당 됩니다. 파티션 키 값을 ID 값과 결합 하면 항목을 고유 하 게 식별 하는 항목의 인덱스가 생성 됩니다.
 
-내부적으로 Cosmos DB는 컨테이너의 확장성 및 성능 요구를 충족 하기 위해 물리적 파티션의 [논리 파티션](https://docs.microsoft.com/azure/cosmos-db/partition-data) 배치를 자동으로 관리 합니다. 응용 프로그램 처리량 및 저장소 요구 사항이 증가 하면 더 많은 서버에서 논리적 파티션을 재배포 Azure Cosmos DB. 재배포 작업은 Cosmos DB에서 관리 되며 중단 또는 가동 중지 시간 없이 호출 됩니다.
+내부적으로 Cosmos DB는 컨테이너의 확장성 및 성능 요구를 충족 하기 위해 물리적 파티션의 [논리 파티션](/azure/cosmos-db/partition-data) 배치를 자동으로 관리 합니다. 응용 프로그램 처리량 및 저장소 요구 사항이 증가 하면 더 많은 서버에서 논리적 파티션을 재배포 Azure Cosmos DB. 재배포 작업은 Cosmos DB에서 관리 되며 중단 또는 가동 중지 시간 없이 호출 됩니다.
 
 ## <a name="newsql-databases"></a>NewSQL 데이터베이스
 
