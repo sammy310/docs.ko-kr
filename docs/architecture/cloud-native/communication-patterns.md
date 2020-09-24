@@ -3,12 +3,12 @@ title: 클라우드 네이티브 통신 패턴
 description: 클라우드 네이티브 응용 프로그램의 주요 서비스 통신 문제에 대 한 자세한 정보
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5ce789924e828865f7bdf717b081b9112203293a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614216"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160920"
 ---
 # <a name="cloud-native-communication-patterns"></a>클라우드 네이티브 통신 패턴
 
@@ -20,11 +20,11 @@ ms.locfileid: "83614216"
 
 클라우드 네이티브 시스템은 수많은 작고 독립적인 마이크로 서비스를 사용 하 여 마이크로 서비스 기반 아키텍처를 구현 합니다. 각 마이크로 서비스는 별도의 프로세스로 실행 되며 일반적으로 *클러스터*에 배포 되는 컨테이너 내에서 실행 됩니다.
 
-클러스터는 가상 머신 풀을 함께 그룹화 하 여 항상 사용 가능한 환경을 형성 합니다. 컨테이너 화 된 마이크로 서비스 배포 및 관리를 담당 하는 오케스트레이션 도구로 관리 됩니다. 그림 4-1에는 완전히 관리 되는 [Azure Kubernetes Services](https://docs.microsoft.com/azure/aks/intro-kubernetes)를 사용 하 여 azure 클라우드에 배포 된 [Kubernetes](https://kubernetes.io) 클러스터가 나와 있습니다.
+클러스터는 가상 머신 풀을 함께 그룹화 하 여 항상 사용 가능한 환경을 형성 합니다. 컨테이너 화 된 마이크로 서비스 배포 및 관리를 담당 하는 오케스트레이션 도구로 관리 됩니다. 그림 4-1에는 완전히 관리 되는 [Azure Kubernetes Services](/azure/aks/intro-kubernetes)를 사용 하 여 azure 클라우드에 배포 된 [Kubernetes](https://kubernetes.io) 클러스터가 나와 있습니다.
 
 ![Azure의 Kubernetes 클러스터](./media/kubernetes-cluster-in-azure.png)
 
-**그림 4-1**. Azure의 Kubernetes 클러스터
+**그림 4-1** Azure의 Kubernetes 클러스터
 
 클러스터 전체에서 마이크로 서비스는 Api 및 메시징 기술을 통해 서로 통신 합니다.
 

@@ -6,14 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 1cc82b14a940465c26377f9181a2e20b46b0783f
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267852"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161297"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>보안: ASP.NET Web Forms 및의 인증 및 권한 부여 Blazor
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여
 
 ASP.NET Web Forms 응용 프로그램에서로 마이그레이션하려면 Blazor 응용 프로그램에 인증이 구성 된 것으로 가정 하 여 인증 및 권한 부여를 수행 하는 방법을 업데이트 해야 합니다. 이 장은 ASP.NET Web Forms 범용 공급자 모델 (멤버 자격, 역할 및 사용자 프로필)에서 마이그레이션하는 방법 및 앱에서 Id를 ASP.NET Core 하는 방법에 대해 설명 합니다 Blazor . 이 장에서는 개략적인 단계 및 고려 사항에 대해 설명 하지만 참조 된 설명서에서 자세한 단계와 스크립트를 찾을 수 있습니다.
 
@@ -21,7 +21,7 @@ ASP.NET Web Forms 응용 프로그램에서로 마이그레이션하려면 Blazo
 
 ASP.NET 2.0부터 ASP.NET Web Forms 플랫폼은 멤버 자격을 포함 하 여 다양 한 기능에 대 한 공급자 모델을 지원 했습니다. 선택적 역할 공급자와 함께 유니버설 멤버 자격 공급자는 ASP.NET Web Forms 응용 프로그램을 사용 하 여 매우 일반적으로 배포 됩니다. 지금까지 잘 작동 하는 인증 및 권한 부여를 관리 하는 강력 하 고 안전한 방법을 제공 합니다. 이러한 범용 공급자의 최신 제공은 NuGet 패키지 ( [Microsoft. n. n. n. n.](https://www.nuget.org/packages/Microsoft.AspNet.Providers)n.)로 제공 됩니다.
 
-Universal Providers는,, 및와 같은 테이블을 포함 하는 SQL database 스키마를 사용 `aspnet_Applications` `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 합니다. [aspnet_regsql.exe 명령을](https://docs.microsoft.com/previous-versions/ms229862(v=vs.140))실행 하 여 구성 하면 공급자는 기본 데이터를 사용 하는 데 필요한 모든 쿼리 및 명령을 제공 하는 테이블 및 저장 프로시저를 설치 합니다. 데이터베이스 스키마와 이러한 저장 프로시저는 새로운 ASP.NET Identity 및 ASP.NET Core Id 시스템과 호환 되지 않으므로 기존 데이터를 새 시스템으로 마이그레이션해야 합니다. 그림 1에서는 유니버설 공급자에 대해 구성 된 예제 테이블 스키마를 보여 줍니다.
+Universal Providers는,, 및와 같은 테이블을 포함 하는 SQL database 스키마를 사용 `aspnet_Applications` `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 합니다. [aspnet_regsql.exe 명령을](/previous-versions/ms229862(v=vs.140))실행 하 여 구성 하면 공급자는 기본 데이터를 사용 하는 데 필요한 모든 쿼리 및 명령을 제공 하는 테이블 및 저장 프로시저를 설치 합니다. 데이터베이스 스키마와 이러한 저장 프로시저는 새로운 ASP.NET Identity 및 ASP.NET Core Id 시스템과 호환 되지 않으므로 기존 데이터를 새 시스템으로 마이그레이션해야 합니다. 그림 1에서는 유니버설 공급자에 대해 구성 된 예제 테이블 스키마를 보여 줍니다.
 
 ![유니버설 공급자 스키마](./media/security/membership-tables.png)
 
@@ -111,7 +111,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core ID
 
-인증 및 권한 부여를 사용 하는 경우에도 ASP.NET Core Id는 유니버설 공급자와 비교할 때 다른 추상화 및 가정 집합을 사용 합니다. 예를 들어 새 Id 모델은 타사 인증을 지원 하므로 사용자는 소셜 미디어 계정 또는 다른 신뢰할 수 있는 인증 공급자를 사용 하 여 인증할 수 있습니다. ASP.NET Core Identity는 로그인, 로그 아웃, 등록 등 일반적으로 필요한 페이지에 대 한 UI를 지원 합니다. 데이터 액세스를 위해 EF Core를 활용 하 고 EF Core 마이그레이션을 사용 하 여 데이터 모델을 지 원하는 데 필요한 스키마를 생성 합니다. [ASP.NET Core의 id 소개](https://docs.microsoft.com/aspnet/core/security/authentication/identity) 에서는 ASP.NET Core id에 포함 된 기능과이를 사용 하 여 작업을 시작 하는 방법에 대 한 개요를 제공 합니다. 응용 프로그램 및 해당 데이터베이스에서 ASP.NET Core Id를 아직 설정 하지 않은 경우 시작 하는 데 도움이 됩니다.
+인증 및 권한 부여를 사용 하는 경우에도 ASP.NET Core Id는 유니버설 공급자와 비교할 때 다른 추상화 및 가정 집합을 사용 합니다. 예를 들어 새 Id 모델은 타사 인증을 지원 하므로 사용자는 소셜 미디어 계정 또는 다른 신뢰할 수 있는 인증 공급자를 사용 하 여 인증할 수 있습니다. ASP.NET Core Identity는 로그인, 로그 아웃, 등록 등 일반적으로 필요한 페이지에 대 한 UI를 지원 합니다. 데이터 액세스를 위해 EF Core를 활용 하 고 EF Core 마이그레이션을 사용 하 여 데이터 모델을 지 원하는 데 필요한 스키마를 생성 합니다. [ASP.NET Core의 id 소개](/aspnet/core/security/authentication/identity) 에서는 ASP.NET Core id에 포함 된 기능과이를 사용 하 여 작업을 시작 하는 방법에 대 한 개요를 제공 합니다. 응용 프로그램 및 해당 데이터베이스에서 ASP.NET Core Id를 아직 설정 하지 않은 경우 시작 하는 데 도움이 됩니다.
 
 ### <a name="roles-claims-and-policies"></a>역할, 클레임 및 정책
 
@@ -130,7 +130,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-[설명서에서 사용자 지정 정책을 만드는 방법에 대해 자세히 알아볼](https://docs.microsoft.com/aspnet/core/security/authorization/policies)수 있습니다.
+[설명서에서 사용자 지정 정책을 만드는 방법에 대해 자세히 알아볼](/aspnet/core/security/authorization/policies)수 있습니다.
 
 정책 또는 역할을 사용 하는 경우에는 응용 프로그램의 특정 페이지에 지시문을 사용 하 여 Blazor 특성을 가진 역할이 나 정책이 필요 하도록 지정할 수 있습니다 `[Authorize]` `@attribute` .
 
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-사용자의 코드에서 사용자의 인증 상태, 역할 또는 클레임에 액세스 해야 하는 경우에는 두 가지 기본 방법으로이를 수행할 수 있습니다. 첫 번째는 인증 상태를 연계 매개 변수로 받는 것입니다. 두 번째는 삽입 된를 사용 하 여 상태에 액세스 하는 것입니다 `AuthenticationStateProvider` . 이러한 각 방법에 대 한 세부 정보는 [ Blazor 보안 설명서](https://docs.microsoft.com/aspnet/core/blazor/security/)에 설명 되어 있습니다.
+사용자의 코드에서 사용자의 인증 상태, 역할 또는 클레임에 액세스 해야 하는 경우에는 두 가지 기본 방법으로이를 수행할 수 있습니다. 첫 번째는 인증 상태를 연계 매개 변수로 받는 것입니다. 두 번째는 삽입 된를 사용 하 여 상태에 액세스 하는 것입니다 `AuthenticationStateProvider` . 이러한 각 방법에 대 한 세부 정보는 [ Blazor 보안 설명서](/aspnet/core/blazor/security/)에 설명 되어 있습니다.
 
 다음 코드에서는를 연계 매개 변수로 수신 하는 방법을 보여 줍니다 `AuthenticationState` .
 
@@ -252,7 +252,7 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-그러면 출력 파일에 SQL 스크립트가 생성 `auth.sql` 되 고 원하는 모든 데이터베이스에 대해 실행 될 수 있습니다. 명령을 실행 하는 데 문제가 있는 경우 `dotnet ef` [EF Core 도구가 시스템에 설치 되어 있는지 확인](https://docs.microsoft.com/ef/core/miscellaneous/cli/dotnet)합니다.
+그러면 출력 파일에 SQL 스크립트가 생성 `auth.sql` 되 고 원하는 모든 데이터베이스에 대해 실행 될 수 있습니다. 명령을 실행 하는 데 문제가 있는 경우 `dotnet ef` [EF Core 도구가 시스템에 설치 되어 있는지 확인](/ef/core/miscellaneous/cli/dotnet)합니다.
 
 원본 테이블에 추가 열이 있는 경우 새 스키마에서 이러한 열에 대해 가장 적합 한 위치를 식별 해야 합니다. 일반적으로 테이블에 있는 열은 `aspnet_Membership` 테이블에 매핑되어야 합니다 `AspNetUsers` . 의 열은 `aspnet_Roles` 에 매핑되어야 `AspNetRoles` 합니다. 테이블의 모든 추가 열이 `aspnet_UsersInRoles` 테이블에 추가 됩니다 `AspNetUserRoles` .
 
@@ -260,9 +260,9 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>유니버설 공급자에서 ASP.NET Core Id로 데이터 마이그레이션
 
-대상 테이블 스키마가 준비 되 면 다음 단계는 사용자 및 역할 레코드를 새 스키마로 마이그레이션하는 것입니다. 새 열에 매핑되는 열을 포함 하 여 스키마 차이점의 전체 목록은 [여기](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)에서 찾을 수 있습니다.
+대상 테이블 스키마가 준비 되 면 다음 단계는 사용자 및 역할 레코드를 새 스키마로 마이그레이션하는 것입니다. 새 열에 매핑되는 열을 포함 하 여 스키마 차이점의 전체 목록은 [여기](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)에서 찾을 수 있습니다.
 
-사용자를 멤버 자격에서 새 id 테이블로 마이그레이션하려면 [설명서에 설명 된 단계를 수행](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)해야 합니다. 이러한 단계를 수행 하 고 스크립트를 제공 하면 사용자가 다음에 로그인 할 때 암호를 변경 해야 합니다.
+사용자를 멤버 자격에서 새 id 테이블로 마이그레이션하려면 [설명서에 설명 된 단계를 수행](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)해야 합니다. 이러한 단계를 수행 하 고 스크립트를 제공 하면 사용자가 다음에 로그인 할 때 암호를 변경 해야 합니다.
 
 사용자 암호를 마이그레이션할 수 있지만 프로세스는 훨씬 더 복잡 합니다. 사용자가 마이그레이션 프로세스의 일부로 암호를 업데이트 하도록 요구 하 고 새로운 고유 암호를 사용 하도록 하는 것은 응용 프로그램의 전반적인 보안을 향상 시킬 수 있습니다.
 
@@ -341,7 +341,7 @@ ASP.NET Web Forms 응용 프로그램에서 익명 사용자에 게 특정 페�
 
 `[Authorize]`특성은 `@page` 라우터를 통해 도달한 구성 요소에 대해서만 작동 Blazor 합니다. 특성은 대신을 사용 해야 하는 자식 구성 요소에서 작동 하지 않습니다 `AuthorizeView` .
 
-특정 사용자에 게 일부 코드를 표시할지 여부를 결정 하기 위한 페이지 태그 내 논리가 있는 경우이를 구성 요소로 바꿀 수 있습니다 `AuthorizeView` . [AuthorizeView 구성 요소](https://docs.microsoft.com/aspnet/core/blazor/security#authorizeview-component) 는 사용자에 게 볼 수 있는 권한이 있는지 여부에 따라 UI를 선택적으로 표시 합니다. 또한 `context` 사용자 정보에 액세스 하는 데 사용할 수 있는 변수를 노출 합니다.
+특정 사용자에 게 일부 코드를 표시할지 여부를 결정 하기 위한 페이지 태그 내 논리가 있는 경우이를 구성 요소로 바꿀 수 있습니다 `AuthorizeView` . [AuthorizeView 구성 요소](/aspnet/core/blazor/security#authorizeview-component) 는 사용자에 게 볼 수 있는 권한이 있는지 여부에 따라 UI를 선택적으로 표시 합니다. 또한 `context` 사용자 정보에 액세스 하는 데 사용할 수 있는 변수를 노출 합니다.
 
 ```razor
 <AuthorizeView>
@@ -416,10 +416,10 @@ Blazor ASP.NET Core와 동일한 보안 모델을 사용 합니다 .이는 ASP.N
 
 ## <a name="references"></a>참조
 
-- [ASP.NET Core의 Id 소개](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
-- [ASP.NET Membership authentication에서 ASP.NET Core 2.0 Id로 마이그레이션](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
-- [ASP.NET Core 인증 및 Id 마이그레이션](https://docs.microsoft.com/aspnet/core/migration/identity)
-- [ASP.NET Core Blazor 인증 및 권한 부여](https://docs.microsoft.com/aspnet/core/blazor/security/)
+- [ASP.NET Core의 Id 소개](/aspnet/core/security/authentication/identity)
+- [ASP.NET Membership authentication에서 ASP.NET Core 2.0 Id로 마이그레이션](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
+- [ASP.NET Core 인증 및 Id 마이그레이션](/aspnet/core/migration/identity)
+- [ASP.NET Core Blazor 인증 및 권한 부여](/aspnet/core/blazor/security/)
 
 >[!div class="step-by-step"]
 >[이전](config.md)

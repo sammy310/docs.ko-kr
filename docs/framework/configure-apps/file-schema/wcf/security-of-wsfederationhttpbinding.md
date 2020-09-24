@@ -2,14 +2,15 @@
 title: <wsFederationHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162240"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding>의 \<security>
+
 의 보안 설정을 정의 합니다 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -80,31 +81,32 @@ ms.locfileid: "73736323"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |Mode|선택 사항입니다. 적용되는 보안 형식을 지정합니다. 기본값은 `Message`입니다. 이 특성은 <xref:System.ServiceModel.WSFederationHttpSecurityMode> 형식입니다.|  
   
 ## <a name="mode-attribute"></a>Mode 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|None|SOAP 메시지의 경우 전송 중에는 안전하지 않습니다.|  
+|없음|SOAP 메시지의 경우 전송 중에는 안전하지 않습니다.|  
 |메시지|SOAP 메시지 보안을 사용하여 무결성, 기밀성, 서버 인증 및 클라이언트 인증을 제공합니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 서비스는 인증서로 구성해야 합니다. 클라이언트 인증은 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
 |TransportWithMessageCredential|HTTPS를 사용하여 무결성, 기밀성 및 서버 인증을 제공합니다. 서비스는 인증서로 구성해야 합니다. 클라이언트 인증은 SOAP 메시지 보안을 통해 제공되며 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<message>](message-element-of-wsfederationhttpbinding.md)|메시지 수준 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|의 모든 바인딩 기능을 정의 [\<wsDualHttpBinding>](wsdualhttpbinding.md) 합니다.|  
   
@@ -117,7 +119,7 @@ ms.locfileid: "73736323"
 - [방법: WSFederationHttpBinding 만들기](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

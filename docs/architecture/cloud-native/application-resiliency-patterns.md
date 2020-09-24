@@ -3,12 +3,12 @@ title: 애플리케이션 복원력 패턴
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 응용 프로그램 복원 력 패턴
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614328"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161154"
 ---
 # <a name="application-resiliency-patterns"></a>애플리케이션 복원력 패턴
 
@@ -18,9 +18,9 @@ ms.locfileid: "83614328"
 
 | 정책 | 환경 |
 | :-------- | :-------- |
-| 다시 시도 | 지정 된 작업에 대 한 재시도 작업을 구성 합니다. |
+| 재시도 | 지정 된 작업에 대 한 재시도 작업을 구성 합니다. |
 | 회로 차단기 | 오류가 구성 된 임계값을 초과 하는 경우 미리 정의 된 기간 동안 요청 된 작업을 차단 합니다. |
-| 시간 제한 | 호출자가 응답을 기다릴 수 있는 기간에 제한을 배치 합니다. |
+| 제한 시간 | 호출자가 응답을 기다릴 수 있는 기간에 제한을 배치 합니다. |
 | 격벽 | 리소스를 swamping 하는 실패 한 호출을 방지 하기 위해 작업을 고정 크기 리소스 풀로 제한 합니다. |
 | 캐시 | 응답을 자동으로 저장 합니다. |
 | 대체 | 실패 시 구조화 된 동작을 정의 합니다. |
@@ -46,7 +46,7 @@ ms.locfileid: "83614328"
 
 분산 클라우드 기본 환경에서 서비스 및 클라우드 리소스에 대 한 호출은 일시적 (단기) 오류로 인해 실패할 수 있습니다. 일반적으로 잠시 후에 자체적으로 해결 됩니다. 재시도 전략을 구현 하면 클라우드 네이티브 서비스에서 이러한 시나리오를 완화할 수 있습니다.
 
-[다시 시도 패턴](https://docs.microsoft.com/azure/architecture/patterns/retry) 을 사용 하면 서비스에서 실패 한 요청 작업 (구성 가능)을 지 수 많은 대기 시간으로 다시 시도할 수 있습니다. 그림 6-2에서는 다시 시도 하는 작업을 보여 줍니다.
+[다시 시도 패턴](/azure/architecture/patterns/retry) 을 사용 하면 서비스에서 실패 한 요청 작업 (구성 가능)을 지 수 많은 대기 시간으로 다시 시도할 수 있습니다. 그림 6-2에서는 다시 시도 하는 작업을 보여 줍니다.
 
 ![재시도 패턴 실행](./media/retry-pattern.png)
 
@@ -70,7 +70,7 @@ ms.locfileid: "83614328"
 
 이러한 경우에는 작업이 즉시 실패 하 고 성공할 가능성이 있는 경우에만 서비스를 호출 하려고 시도 하는 것이 좋습니다.
 
-[회로 차단기 패턴](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) 은 응용 프로그램이 실패할 가능성이 있는 작업을 반복적으로 실행 하는 것을 방지할 수 있습니다. 미리 정의 된 수의 실패 한 호출 후에는 서비스에 대 한 모든 트래픽을 차단 합니다. 정기적으로 평가판 호출을 통해 오류가 해결 되었는지 여부를 확인할 수 있습니다. 그림 6-3은 작동 중인 회로 차단기 패턴을 보여 줍니다.
+[회로 차단기 패턴](/azure/architecture/patterns/circuit-breaker) 은 응용 프로그램이 실패할 가능성이 있는 작업을 반복적으로 실행 하는 것을 방지할 수 있습니다. 미리 정의 된 수의 실패 한 호출 후에는 서비스에 대 한 모든 트래픽을 차단 합니다. 정기적으로 평가판 호출을 통해 오류가 해결 되었는지 여부를 확인할 수 있습니다. 그림 6-3은 작동 중인 회로 차단기 패턴을 보여 줍니다.
 
 ![작동 중인 회로 차단기 패턴](./media/circuit-breaker-pattern.png)
 

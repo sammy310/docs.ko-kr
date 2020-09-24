@@ -2,12 +2,12 @@
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
 ms.date: 05/13/2020
-ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358975"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160998"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
 
@@ -24,7 +24,7 @@ ms.locfileid: "89358975"
 - 이 데이터에 액세스할 수 있는 사용자는 누구 인가요?
 - 개발 및 릴리스 프로세스를 진행 하는 동안 감사 정책이 있나요?
 
-이러한 모든 질문은 [위협 모델링](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool)이라는 프로세스의 일부입니다. 이 프로세스는 시스템에 발생 하는 위협에 대 한 질문과 대답을 시도 합니다 .이는 위협에 대 한 위협 및 잠재적 손상입니다.
+이러한 모든 질문은 [위협 모델링](/azure/security/azure-security-threat-modeling-tool)이라는 프로세스의 일부입니다. 이 프로세스는 시스템에 발생 하는 위협에 대 한 질문과 대답을 시도 합니다 .이는 위협에 대 한 위협 및 잠재적 손상입니다.
 
 위협 목록이 설정 된 후에는 완화 가치가 있는지 여부를 결정 해야 합니다. 경우에 따라 위협은 에너지를 지출 하지 않아도 되는 것이 좋습니다. 예를 들어 일부 상태 수준 행위자는 수백만 개의 장치에서 사용 하는 프로세스 디자인에 변경 내용을 주입할 수 있습니다. 이제 [링 3](https://en.wikipedia.org/wiki/Protection_ring)에서 코드의 특정 부분을 실행 하는 대신 링 0에서 코드를 실행 합니다. 따라서 하이퍼바이저를 우회 하 고 운영 체제 미 설치 컴퓨터에서 공격 코드를 실행 하 여 해당 하드웨어에서 실행 되는 모든 가상 컴퓨터에 대 한 공격을 허용 하는 익스플로잇을 사용할 수 있습니다.
 
@@ -94,11 +94,11 @@ Azure Portal 내에서 [Azure Advisor](https://azure.microsoft.com/services/advi
 
 Azure Kubernetes 클러스터의 노드는 Azure의 기본이 되는 다른 리소스와 마찬가지로 가상 네트워크에 참여할 수 있습니다. 이 기능을 [Azure Container 네트워킹 인터페이스](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md)라고 합니다. 실제로 가상 컴퓨터 및 컨테이너 이미지가 할당 되는 가상 네트워크 내에서 서브넷을 할당 합니다.
 
-최소 권한의 원칙을 설명 하는 경로를 계속 하 고 Virtual Network 내의 모든 리소스가 다른 모든 리소스와 통신 해야 하는 것은 아닙니다. 예를 들어 저장소 계정 및 SQL database에 대해 web API를 제공 하는 응용 프로그램에서 데이터베이스와 저장소 계정이 서로 통신 해야 하는 것은 아닙니다. 이러한 데이터 간의 데이터 공유는 웹 응용 프로그램을 통해 수행 됩니다. 따라서 [NSG (네트워크 보안 그룹)](https://docs.microsoft.com/azure/virtual-network/security-overview) 를 사용 하 여 두 서비스 간의 트래픽을 거부할 수 있습니다.
+최소 권한의 원칙을 설명 하는 경로를 계속 하 고 Virtual Network 내의 모든 리소스가 다른 모든 리소스와 통신 해야 하는 것은 아닙니다. 예를 들어 저장소 계정 및 SQL database에 대해 web API를 제공 하는 응용 프로그램에서 데이터베이스와 저장소 계정이 서로 통신 해야 하는 것은 아닙니다. 이러한 데이터 간의 데이터 공유는 웹 응용 프로그램을 통해 수행 됩니다. 따라서 [NSG (네트워크 보안 그룹)](/azure/virtual-network/security-overview) 를 사용 하 여 두 서비스 간의 트래픽을 거부할 수 있습니다.
 
 리소스 간의 통신을 거부 하는 정책은 특히 트래픽 제한 없이 Azure를 사용 하는 백그라운드에서 구현 하기에 방해가 될 수 있습니다. 일부 다른 클라우드에서는 네트워크 보안 그룹의 개념이 훨씬 더 널리 활용 되 고 있습니다. 예를 들어 AWS에 대 한 기본 정책은 NSG의 규칙에 의해 활성화 될 때까지 리소스가 자신 간에 통신할 수 없다는 것입니다. 이를 개발 하는 데는 느리지만 더 제한적인 환경에서 보다 안전한 기본값을 제공 합니다. 특히 [Azure Resource Manager 또는 Terraform](infrastructure-as-code.md) 을 사용 하 여 사용 권한을 관리 하는 적절 한 devops 방법을 사용 하면 규칙을 보다 쉽게 제어할 수 있습니다.
 
-가상 네트워크는 온-프레미스와 클라우드 리소스 간에 통신을 설정 하는 경우에도 유용할 수 있습니다. 가상 개인 네트워크를 사용 하 여 두 네트워크를 원활 하 게 연결할 수 있습니다. 이렇게 하면 모든 사용자가 사이트에 있는 시나리오에 대해 어떤 종류의 게이트웨이 없이도 가상 네트워크를 실행할 수 있습니다. 이 네트워크를 설정 하는 데 사용할 수 있는 여러 기술이 있습니다. 가장 간단한 방법은 많은 라우터와 Azure 간에 설정할 수 있는 [사이트 간 VPN](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#s2smulti) 을 사용 하는 것입니다. 트래픽은 인터넷을 통해 다른 트래픽과 동일한 요금으로 암호화 되 고 터널링 됩니다. 더 많은 대역폭이 나 더 많은 보안이 필요한 시나리오의 경우 Azure는 온-프레미스 네트워크와 Azure 간에 개인 회로를 사용 하는 [Express Route](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#ExpressRoute) 라는 서비스를 제공 합니다. 비용이 많이 들고 설정 하기가 어렵고 보안도 향상 됩니다.
+가상 네트워크는 온-프레미스와 클라우드 리소스 간에 통신을 설정 하는 경우에도 유용할 수 있습니다. 가상 개인 네트워크를 사용 하 여 두 네트워크를 원활 하 게 연결할 수 있습니다. 이렇게 하면 모든 사용자가 사이트에 있는 시나리오에 대해 어떤 종류의 게이트웨이 없이도 가상 네트워크를 실행할 수 있습니다. 이 네트워크를 설정 하는 데 사용할 수 있는 여러 기술이 있습니다. 가장 간단한 방법은 많은 라우터와 Azure 간에 설정할 수 있는 [사이트 간 VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) 을 사용 하는 것입니다. 트래픽은 인터넷을 통해 다른 트래픽과 동일한 요금으로 암호화 되 고 터널링 됩니다. 더 많은 대역폭이 나 더 많은 보안이 필요한 시나리오의 경우 Azure는 온-프레미스 네트워크와 Azure 간에 개인 회로를 사용 하는 [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) 라는 서비스를 제공 합니다. 비용이 많이 들고 설정 하기가 어렵고 보안도 향상 됩니다.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Azure 리소스에 대 한 액세스를 제한 하는 역할 기반 액세스 제어
 
@@ -129,7 +129,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 또한 Azure에는 소유자, 참가자, 읽기 권한자 및 사용자 계정 관리자와 같은 많은 고급 역할이 있습니다. 소유자 역할을 사용 하 여 보안 주체는 모든 리소스에 액세스 하 고 다른 사용자에 게 사용 권한을 할당할 수 있습니다. 참여자는 모든 리소스에 대해 동일한 수준의 액세스를 갖지만 사용 권한을 할당할 수 없습니다. 판독기는 기존 Azure 리소스만 볼 수 있으며 사용자 계정 관리자는 Azure 리소스에 대 한 액세스를 관리할 수 있습니다.
 
-[DNS 영역 참가자](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#dns-zone-contributor) 와 같은 보다 세부적인 기본 제공 역할에는 단일 서비스로 제한 된 권한이 있습니다. 보안 주체는 원하는 수의 역할을 수행할 수 있습니다.
+[DNS 영역 참가자](/azure/role-based-access-control/built-in-roles#dns-zone-contributor) 와 같은 보다 세부적인 기본 제공 역할에는 단일 서비스로 제한 된 권한이 있습니다. 보안 주체는 원하는 수의 역할을 수행할 수 있습니다.
 
 ## <a name="scopes"></a>범위
 
@@ -139,7 +139,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 보안 주체에 특정 사용 권한이 있는지 테스트할 때 역할 및 범위의 조합이 고려 됩니다. 이 조합은 강력한 권한 부여 메커니즘을 제공 합니다.
 
-## <a name="deny"></a>Deny
+## <a name="deny"></a>거부
 
 이전에는 RBAC에 대해 "허용" 규칙만 허용 되었습니다. 이 동작은 일부 범위를 빌드하기에 복잡 했습니다. 예를 들어 잠재적으로 무한 한 저장소 계정 목록에 명시적 사용 권한을 부여 하는 것을 제외 하 고 모든 저장소 계정에 대 한 보안 주체 액세스를 허용 합니다. 새 저장소 계정을 만들 때마다이 계정 목록에 추가 해야 합니다. 이로 인해 바람직하지 않은 관리 오버 헤드가 발생 했습니다.
 
@@ -147,7 +147,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 
 ## <a name="checking-access"></a>액세스 확인
 
-짐작할 수 있듯이, 많은 수의 역할 및 범위를 사용 하는 경우 서비스 주체의 유효 사용 권한을 파악 하기가 매우 어렵습니다. 누적 거부 규칙을 기반으로 하 여 복잡성을 높이는 역할만 합니다. 다행히 모든 서비스 사용자에 대 한 유효 사용 권한을 표시할 수 있는 [사용 권한 계산기](https://docs.microsoft.com/azure/role-based-access-control/check-access) 가 있습니다. 일반적으로 그림 10-3에 표시 된 것 처럼 포털의 IAM 탭 아래에 있습니다.
+짐작할 수 있듯이, 많은 수의 역할 및 범위를 사용 하는 경우 서비스 주체의 유효 사용 권한을 파악 하기가 매우 어렵습니다. 누적 거부 규칙을 기반으로 하 여 복잡성을 높이는 역할만 합니다. 다행히 모든 서비스 사용자에 대 한 유효 사용 권한을 표시할 수 있는 [사용 권한 계산기](/azure/role-based-access-control/check-access) 가 있습니다. 일반적으로 그림 10-3에 표시 된 것 처럼 포털의 IAM 탭 아래에 있습니다.
 
 ![그림 9-4 app service에 대 한 권한 계산기](./media/check-rbac.png)
 
@@ -227,13 +227,13 @@ Azure SQL 데이터베이스와 같은 서비스도 TLS 암호화를 사용 하 
 
 모든 응용 프로그램에는 데이터를 디스크에 저장 하는 여러 위치가 있습니다. 응용 프로그램 코드 자체는 일부 저장소 메커니즘에서 로드 됩니다. 또한 대부분의 응용 프로그램은 SQL Server, Cosmos DB 또는 놀라울 만큼 가격 효율적인 Table Storage 같은 일종의 데이터베이스를 사용 합니다. 이러한 데이터베이스는 모두 고도로 암호화 된 저장소를 사용 하 여 적절 한 권한을 가진 응용 프로그램이 아닌 다른 사용자가 데이터를 읽을 수 있도록 합니다. 시스템 연산자도 암호화 된 데이터를 읽을 수 없습니다. 따라서 고객은 비밀 정보를 비밀로 유지할 수 있습니다.
 
-### <a name="storage"></a>스토리지
+### <a name="storage"></a>Storage
 
 Azure의 토대 인는 Azure Storage 엔진입니다. 가상 컴퓨터 디스크는 Azure Storage 위에 탑재 됩니다. Azure Kubernetes 서비스는 자체가 Azure Storage에 호스트 되는 가상 머신에서 실행 됩니다. Azure Functions Apps 및 Azure Container Instances와 같은 서버 리스 기술은 Azure Storage의 일부인 디스크를 모두 사용 합니다.
 
-Azure Storage 잘 암호화 된 경우에는 다른 모든 항목을 암호화 하기 위한 기반을 제공 합니다. Azure Storage는 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) 규격 [256 비트 AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)로 [암호화 됩니다](https://docs.microsoft.com/azure/storage/common/storage-service-encryption) . 이는 지난 20 년 동안 광범위 한 교육을 받은 암호화 기술입니다. 현재는 키를 모르는 사람이 AES로 암호화 된 데이터를 읽을 수 있도록 하는 알려진 실제 공격이 없습니다.
+Azure Storage 잘 암호화 된 경우에는 다른 모든 항목을 암호화 하기 위한 기반을 제공 합니다. Azure Storage는 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) 규격 [256 비트 AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)로 [암호화 됩니다](/azure/storage/common/storage-service-encryption) . 이는 지난 20 년 동안 광범위 한 교육을 받은 암호화 기술입니다. 현재는 키를 모르는 사람이 AES로 암호화 된 데이터를 읽을 수 있도록 하는 알려진 실제 공격이 없습니다.
 
-기본적으로 Azure Storage 암호화에 사용 되는 키는 Microsoft에서 관리 합니다. 이러한 키에 대 한 악의적인 액세스를 방지 하기 위해 광범위 하 게 보호 해야 합니다. 그러나 특정 암호화 요구 사항이 있는 사용자는 Azure Key Vault에서 관리 되는 [자체 저장소 키를 제공할](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-powershell) 수도 있습니다. 이러한 키는 언제 든 지 취소할 수 있으며,이 키를 사용 하 여 액세스할 수 없는 저장소 계정의 콘텐츠를 효과적으로 렌더링할 수 있습니다.
+기본적으로 Azure Storage 암호화에 사용 되는 키는 Microsoft에서 관리 합니다. 이러한 키에 대 한 악의적인 액세스를 방지 하기 위해 광범위 하 게 보호 해야 합니다. 그러나 특정 암호화 요구 사항이 있는 사용자는 Azure Key Vault에서 관리 되는 [자체 저장소 키를 제공할](/azure/storage/common/storage-encryption-keys-powershell) 수도 있습니다. 이러한 키는 언제 든 지 취소할 수 있으며,이 키를 사용 하 여 액세스할 수 없는 저장소 계정의 콘텐츠를 효과적으로 렌더링할 수 있습니다.
 
 가상 머신은 암호화 된 저장소를 사용 하지만 Windows의 BitLocker 또는 Linux의 DM-대/소문자와 같은 기술을 사용 하 여 다른 암호화 계층을 제공할 수 있습니다. 이러한 기술을 통해 디스크 이미지가 저장소에서 유출 된 경우에도 읽을 수 있을 때까지 거의 불가능 합니다.
 
@@ -243,7 +243,7 @@ Azure SQL에서 호스트 되는 데이터베이스는 [TDE (투명한 데이터
 
 암호화 매개 변수는 데이터베이스에 저장 되 `master` 고 시작 시 나머지 작업에 대해 메모리로 읽혀집니다. 즉, 데이터베이스는 `master` 암호화 되지 않은 상태로 유지 되어야 합니다. 실제 키는 Microsoft에서 관리 합니다. 그러나 이루기 보안 요구 사항이 있는 사용자는 Azure Storage에 대해 수행 되는 것과 거의 동일한 방식으로 Key Vault의 고유한 키를 제공할 수 있습니다. Key Vault는 키 회전 및 해지와 같은 서비스를 제공 합니다.
 
-TDS의 "투명" 부분은 암호화 된 데이터베이스를 사용 하는 데 필요한 클라이언트 변경이 없다는 사실에서 제공 됩니다. 이 방법은 보안을 위해 제공 되지만, 사용자가 데이터를 해독할 수 있도록 데이터베이스 암호 누수가 충분 합니다. 데이터베이스의 개별 열 또는 테이블을 암호화 하는 또 다른 방법이 있습니다. [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) 는 암호화 된 데이터가 데이터베이스 내에서 일반 텍스트로 표시 되도록 합니다.
+TDS의 "투명" 부분은 암호화 된 데이터베이스를 사용 하는 데 필요한 클라이언트 변경이 없다는 사실에서 제공 됩니다. 이 방법은 보안을 위해 제공 되지만, 사용자가 데이터를 해독할 수 있도록 데이터베이스 암호 누수가 충분 합니다. 데이터베이스의 개별 열 또는 테이블을 암호화 하는 또 다른 방법이 있습니다. [Always Encrypted](/azure/sql-database/sql-database-always-encrypted-azure-key-vault) 는 암호화 된 데이터가 데이터베이스 내에서 일반 텍스트로 표시 되도록 합니다.
 
 이 암호화 계층을 설정 하려면 SQL Server Management Studio의 마법사를 통해 실행 하 여 암호화의 종류를 선택 하 고 Key Vault에서 연결 된 키를 저장 하는 위치를 선택 해야 합니다.
 

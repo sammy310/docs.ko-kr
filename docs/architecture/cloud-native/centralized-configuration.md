@@ -2,12 +2,12 @@
 title: 중앙 집중식 구성
 description: Azure 앱 구성 및 AzureKey Vault를 사용 하 여 클라우드 네이티브 응용 프로그램에 대 한 구성을 중앙 집중화 합니다.
 ms.date: 05/13/2020
-ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614229"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160881"
 ---
 # <a name="centralized-configuration"></a>중앙 집중식 구성
 
@@ -19,7 +19,7 @@ Azure 클라우드는 여러 가지 유용한 옵션을 제공 합니다.
 
 ## <a name="azure-app-configuration"></a>Azure App Configuration
 
-[Azure 앱 구성은](https://docs.microsoft.com/azure/azure-app-configuration/overview) 안전 하 고 중앙 위치에서 비밀 없는 구성 설정을 저장 하는 완전히 관리 되는 Azure 서비스입니다. 저장 된 값은 여러 서비스와 응용 프로그램 간에 공유할 수 있습니다.
+[Azure 앱 구성은](/azure/azure-app-configuration/overview) 안전 하 고 중앙 위치에서 비밀 없는 구성 설정을 저장 하는 완전히 관리 되는 Azure 서비스입니다. 저장 된 값은 여러 서비스와 응용 프로그램 간에 공유할 수 있습니다.
 
 서비스는 간단 하 게 사용할 수 있으며 다음과 같은 몇 가지 이점을 제공 합니다.
 
@@ -39,7 +39,7 @@ Azure 앱 구성은 키-값 설정에 대 한 변경 내용을 7 일 동안 유�
 
 ## <a name="azure-key-vault"></a>Azure Key Vault
 
-Key Vault는 비밀을 안전 하 게 저장 하 고 액세스 하기 위한 관리 되는 서비스입니다. 비밀은 API 키, 암호 또는 인증서 등에 대한 액세스를 엄격하게 제어하려는 항목입니다. 자격 증명 모음은 암호의 논리적 그룹입니다.
+Key Vault는 비밀을 안전 하 게 저장 하 고 액세스 하기 위한 관리 되는 서비스입니다. 비밀은 API 키, 암호 또는 인증서와 같이 액세스를 엄격하게 제어하려는 모든 항목입니다. 자격 증명 모음은 암호의 논리적 그룹입니다.
 
 Key Vault를 사용하면 비밀이 우발적으로 유출될 가능성이 대폭 감소합니다. Key Vault를 사용하면 애플리케이션 개발자가 더 이상 애플리케이션에 보안 정보를 저장할 필요가 없습니다. 이 방법을 통해 코드 내에이 정보를 저장할 필요가 없습니다. 예를 들어 애플리케이션이 데이터베이스에 연결해야 할 수 있습니다. 연결 문자열을 앱 코드에 저장하는 대신 Key Vault에 안전하게 저장할 수 있습니다.
 
@@ -54,16 +54,16 @@ EShopOnContainers 응용 프로그램에는 각 마이크로 서비스를 사용
 ## <a name="references"></a>참조
 
 - [EShopOnContainers 아키텍처](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL Database 개요](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션](../microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+- [Azure API Management](/azure/api-management/api-management-key-concepts)
+- [Azure SQL Database 개요](/azure/sql-database/sql-database-technical-overview)
 - [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
-- [Azure Cosmos DB의 API for MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Monitor 개요](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure Cosmos DB의 MongoDB API](/azure/cosmos-db/mongodb-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Monitor 개요](/azure/azure-monitor/overview)
 - [eShopOnContainers: AKS에서 Kubernetes 클러스터 만들기](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev 공간](https://docs.microsoft.com/azure/dev-spaces/about)
+- [Azure Dev Spaces](/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[이전](deploy-eshoponcontainers-azure.md)

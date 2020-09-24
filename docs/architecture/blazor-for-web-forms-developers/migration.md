@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161206"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms에서로 마이그레이션 Blazor
 
@@ -636,7 +636,7 @@ EShop에는 다음과 같은 EF 관련 변경이 필요 했습니다.
 - CAS(코드 액세스 보안)
 - 보안 투명도
 
-.NET Core에서 실행 하는 데 필요한 변경 내용을 식별 하는 방법에 대 한 자세한 내용은 [.NET Framework에서 .Net core로 코드 이식](/dotnet/core/porting)을 참조 하세요.
+.NET Core에서 실행 하는 데 필요한 변경 내용을 식별 하는 방법에 대 한 자세한 내용은 [.NET Framework에서 .Net core로 코드 이식](../../core/porting/index.md)을 참조 하세요.
 
 ASP.NET Core는 ASP.NET의 다시 발생 한 버전 이며, 처음에는 명확 하지 않을 수 있는 몇 가지 변경 사항이 있습니다. 주요 변경 내용은 다음과 같습니다.
 

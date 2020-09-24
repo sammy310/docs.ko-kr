@@ -2,12 +2,12 @@
 title: Azure에서 컨테이너 배포
 description: Azure Container Registry, Azure Kubernetes Service 및 Azure Dev Spaces를 사용 하 여 Azure에 컨테이너를 배포 합니다.
 ms.date: 04/13/2020
-ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d848a146a2bdb5d8d02543f57f19d6a39c9699e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614151"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160777"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure에서 컨테이너 배포
 
@@ -23,7 +23,7 @@ ms.locfileid: "83614151"
 
 컨테이너 이미지를 만든 후에는 컨테이너 레지스트리에 저장 됩니다. 컨테이너 이미지를 작성, 저장 및 관리할 수 있습니다. 공개 및 개인의 여러 레지스트리를 사용할 수 있습니다. ACR (Azure Container Registry)은 Azure 클라우드의 완전히 관리 되는 컨테이너 레지스트리 서비스입니다. Azure 네트워크 내에 이미지를 유지 하므로 Azure 컨테이너 호스트에 배포 하는 시간을 줄일 수 있습니다. 다른 Azure 리소스에 사용 하는 것과 동일한 보안 및 id 절차를 사용 하 여 보안을 유지할 수도 있습니다.
 
-[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)또는 [PowerShell 도구](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)를 사용 하 여 Azure Container Registry를 만듭니다. Azure에서 레지스트리를 만드는 방법은 간단 합니다. Azure 구독, 리소스 그룹 및 고유한 이름이 필요 합니다. 그림 3-11에서는에서 호스트 되는 레지스트리를 만들기 위한 기본 옵션을 보여 줍니다 `registryname.azurecr.io` .
+[Azure Portal](/azure/container-registry/container-registry-get-started-portal), [Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli)또는 [PowerShell 도구](/azure/container-registry/container-registry-get-started-powershell)를 사용 하 여 Azure Container Registry를 만듭니다. Azure에서 레지스트리를 만드는 방법은 간단 합니다. Azure 구독, 리소스 그룹 및 고유한 이름이 필요 합니다. 그림 3-11에서는에서 호스트 되는 레지스트리를 만들기 위한 기본 옵션을 보여 줍니다 `registryname.azurecr.io` .
 
 ![컨테이너 레지스트리 만들기](./media/create-container-registry.png)
 
@@ -57,7 +57,7 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 
 ## <a name="acr-tasks"></a>ACR 작업
 
-[ACR 작업](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) 은 Azure Container Registry에서 사용할 수 있는 기능 집합입니다. Azure 클라우드에서 컨테이너 이미지를 작성 하 고 관리 하 여 [내부 루프 개발 주기](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) 를 확장 합니다. `docker build`개발 컴퓨터에서 및를 로컬로 호출 하는 대신 `docker push` 클라우드의 ACR 작업에 의해 자동으로 처리 됩니다.
+[ACR 작업](/azure/container-registry/container-registry-tasks-overview) 은 Azure Container Registry에서 사용할 수 있는 기능 집합입니다. Azure 클라우드에서 컨테이너 이미지를 작성 하 고 관리 하 여 [내부 루프 개발 주기](../containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow.md) 를 확장 합니다. `docker build`개발 컴퓨터에서 및를 로컬로 호출 하는 대신 `docker push` 클라우드의 ACR 작업에 의해 자동으로 처리 됩니다.
 
 다음 AZ CLI 명령은 컨테이너 이미지를 빌드하고 ACR로 푸시합니다.
 
@@ -75,7 +75,7 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 
 이 장에서는 Azure Kubernetes Service (AKS)의 길이에 대해 설명 했습니다. 컨테이너 화 된 클라우드 네이티브 응용 프로그램을 관리 하는 사실상 컨테이너 오 케 스트레이 터입니다.
 
-ACR 같은 레지스트리에 이미지를 배포한 후에는 AKS를 자동으로 풀 및 배포 하도록 구성할 수 있습니다. CI/CD 파이프라인이 준비 되 면 업데이트를 신속 하 게 배포할 때 관련 된 위험을 최소화 하기 위해 [카나리아 릴리스](https://martinfowler.com/bliki/CanaryRelease.html) 전략을 구성할 수 있습니다. 새 버전의 앱은 전송 된 트래픽이 없는 프로덕션 환경에서 초기에 구성 됩니다. 그러면 시스템에서 사용자의 일부를 새로 배포 된 버전으로 라우팅합니다. 팀이 새 버전에서 자신감을 얻게 되 면 더 많은 인스턴스를 출시 하 고 이전을 사용 중지할 수 있습니다. AKS는이 스타일의 배포를 쉽게 지원 합니다.
+ACR 같은 레지스트리에 이미지를 배포한 후에는 AKS를 자동으로 풀 및 배포 하도록 구성할 수 있습니다. CI/CD 파이프라인이 준비 되 면 업데이트를 신속 하 게 배포할 때 관련 된 위험을 최소화 하기 위해  [카나리아 릴리스](https://martinfowler.com/bliki/CanaryRelease.html) 전략을 구성할 수 있습니다. 새 버전의 앱은 전송 된 트래픽이 없는 프로덕션 환경에서 초기에 구성 됩니다. 그러면 시스템에서 사용자의 일부를 새로 배포 된 버전으로 라우팅합니다. 팀이 새 버전에서 자신감을 얻게 되 면 더 많은 인스턴스를 출시 하 고 이전을 사용 중지할 수 있습니다. AKS는이 스타일의 배포를 쉽게 지원 합니다.
 
 Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 또는 Terraform 같은 자동화 도구를 사용 하 여 Azure Kubernetes Service 클러스터를 만들 수 있습니다. 새 클러스터를 시작 하려면 다음 정보를 제공 해야 합니다.
 
@@ -96,7 +96,7 @@ Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 
 - 모니터링
 - 태그
 
-이 [빠른 시작은 Azure Portal를 사용 하 여 AKS 클러스터를 배포 하는 과정](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)을 안내 합니다.
+이 [빠른 시작은 Azure Portal를 사용 하 여 AKS 클러스터를 배포 하는 과정](/azure/aks/kubernetes-walkthrough-portal)을 안내 합니다.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
@@ -116,7 +116,7 @@ Azure Dev Spaces 사용 하는 프로세스에는 다음 단계가 포함 됩니
 3. 사용자 고유의 시스템 버전에 대 한 자식 개발 공간을 구성 합니다.
 4. Dev 공간에 연결 합니다.
 
-이러한 모든 단계는 Azure CLI 및 새로운 명령줄 도구를 사용 하 여 수행할 수 있습니다 `azds` . 예를 들어, 지정 된 Kubernetes 클러스터에 대 한 새 Azure Dev 공간을 만들려면 다음과 같은 명령을 사용 합니다.
+이러한 모든 단계는 Azure CLI 및 새로운 명령줄 도구를 사용 하 여 수행할 수 있습니다  `azds` . 예를 들어, 지정 된 Kubernetes 클러스터에 대 한 새 Azure Dev 공간을 만들려면 다음과 같은 명령을 사용 합니다.
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster

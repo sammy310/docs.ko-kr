@@ -2,14 +2,15 @@
 title: LIMIT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 81d135785e567d46a105adcafbf083f48cb4868e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556286"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161765"
 ---
 # <a name="limit-entity-sql"></a>LIMIT(Entity SQL)
+
 ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수행할 수 있습니다. LIMIT 절은 ORDER BY 절과 별도로 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -19,6 +20,7 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `n`  
  선택할 항목의 개수입니다.  
   
@@ -28,6 +30,7 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
 > TOP 한정자와 SKIP 하위 절이 모두 같은 쿼리 식에 있는 경우 Entity SQL 쿼리는 유효하지 않은 것으로 간주됩니다. TOP 식을 변경하여 쿼리를 LIMIT 식에 다시 써야 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 Entity SQL 쿼리는 LIMIT와 함께 ORDER BY 연산자를 사용하여 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1. [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
@@ -36,9 +39,9 @@ ORDER BY 절에서 LIIMIT 하위 절을 사용하여 물리적 페이징을 수�
   
  [!code-sql[DP EntityServices Concepts#LIMIT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#limit)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ORDER BY](order-by-entity-sql.md)
 - [방법: 쿼리 결과를 통해 페이징](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [페이징](paging-entity-sql.md)
-- [맨 위로](top-entity-sql.md)
+- [맨 위로 이동](top-entity-sql.md)

@@ -2,14 +2,15 @@
 title: <ws2007HttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732769"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162051"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding>의 \<transport>
+
 HTTP 전송의 인증 설정을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,15 +29,17 @@ HTTP 전송의 인증 설정을 정의합니다.
            realm="string" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`clientCredentialType`|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpClientCredentialType> 형식입니다.|  
 |`proxyCredentialType`|클라이언트를 도메인 프록시에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpProxyCredentialType> 형식입니다.|  
@@ -44,9 +47,9 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|None|보안이 해제되어 있습니다.|  
+|없음|보안이 해제되어 있습니다.|  
 |Basic|기본 인증을 사용합니다.|  
 |다이제스트|다이제스트 인증을 사용합니다.|  
 |Ntlm|Windows 도메인에 대한 대체(fallback)로 NTLM 인증을 사용합니다.|  
@@ -55,9 +58,9 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|None|보안이 해제되어 있습니다.|  
+|없음|보안이 해제되어 있습니다.|  
 |Basic|기본 인증을 사용합니다.|  
 |다이제스트|다이제스트 인증을 사용합니다.|  
 |Ntlm|Windows 도메인에 대한 대체(fallback)로 NTLM을 사용합니다.|  
@@ -65,11 +68,12 @@ HTTP 전송의 인증 설정을 정의합니다.
 |인증서|X.509 인증서를 사용하여 클라이언트를 인증합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-ws2007httpbinding.md)|요소의 보안 기능을 나타냅니다 [\<ws2007HttpBinding>](ws2007httpbinding.md) .|  
   
@@ -80,7 +84,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

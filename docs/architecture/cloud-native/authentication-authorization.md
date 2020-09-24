@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 앱의 인증 및 권한 부여
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱의 인증 및 권한 부여
 ms.date: 05/13/2020
-ms.openlocfilehash: e5254560ac82662e5e3ea6a25997516cd2b478b0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbd2df110dd7a7dc7363e9c07d87f1fa12f4e464
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614307"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161141"
 ---
 # <a name="authentication-and-authorization-in-cloud-native-apps"></a>클라우드 네이티브 앱의 인증 및 권한 부여
 
@@ -21,8 +21,8 @@ ms.locfileid: "83614307"
 
 ## <a name="references"></a>참조
 
-- [인증 기본 사항](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
-- [액세스 토큰 및 클레임](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+- [인증 기본 사항](/azure/active-directory/develop/authentication-scenarios)
+- [액세스 토큰 및 클레임](/azure/active-directory/develop/access-tokens)
 - [온-프레미스 인증 서비스를 버릴 시간이 걸릴 수 있습니다.](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]

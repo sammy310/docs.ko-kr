@@ -2,14 +2,15 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0a79aa18c74ddb8ec47f02620d16d391b4a36b68
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162298"
 ---
 # \<protocolMapping>
+
 전송 프로토콜 체계(예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의하기 위한 구성 섹션을 나타냅니다. 런타임에 기본 끝점을 만들 때 WCF (Windows Communication Foundation)는 구성 된 매핑을 보고 특정 기반 주소에 사용할 바인딩을 결정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,24 +28,27 @@ ms.locfileid: "70400016"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<filters>](filters-of-routing.md)|전송 프로토콜 체계(예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑을 포함합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|모든 WCF 구성 요소의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 구성 예제는 machine.config 파일의 기본 프로토콜 매핑을 보여 줍니다. machine.config 파일을 수정하여 컴퓨터 수준에서 기본 매핑을 재정의할 수 있습니다. 또는 애플리케이션 범위 내에서 기본 매핑을 재정의하려는 경우 해당 애플리케이션 구성 파일 내에서 이 섹션을 재정의하고 개별 프로토콜 체계에 대한 매핑을 변경할 수 있습니다.  
   
 ```xml  

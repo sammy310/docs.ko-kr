@@ -3,12 +3,12 @@ title: 클라우드 네이티브 용 후보 앱
 description: 클라우드 기본 방법의 이점을 활용 하는 응용 프로그램의 유형 알아보기
 author: robvet
 ms.date: 05/14/2020
-ms.openlocfilehash: b907a17b2351bc4ffe49fd6eb6f5963b209d00db
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614242"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160946"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>클라우드 네이티브 용 후보 앱
 
@@ -40,7 +40,7 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 
 심각 하지 않은 모놀리식 앱은 빠른 리프트 앤 시프트 ([클라우드 인프라 지원](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)) 마이그레이션을 통해 주로 이점을 누릴 수 있습니다. 여기서 온-프레미스 워크 로드는 변경 없이 클라우드 기반 VM에 다시 호스트 됩니다. 이 방법은 [IaaS (Infrastructure as a Service) 모델](https://azure.microsoft.com/overview/what-is-iaas/)을 사용 합니다. Azure에는 [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)및 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) 와 같은 몇 가지 도구를 사용 하 여 이러한 이동을 보다 쉽게 수행할 수 있습니다. 이 전략은 몇 가지 비용 절감 효과를 얻을 수 있지만, 이러한 응용 프로그램은 일반적으로 클라우드 컴퓨팅의 이점을 활용 하기 위해 설계 되지 않았습니다.
 
-비즈니스에 중요 한 모놀리식 앱은 향상 된 리프트 앤 시프트 (*클라우드 최적화*) 마이그레이션을 활용 하는 것이 좋습니다. 이 접근 방식에는 응용 프로그램의 핵심 아키텍처를 변경 하지 않고도 핵심 클라우드 서비스를 사용할 수 있도록 하는 배포 최적화가 포함 됩니다. 예를 들어 응용 프로그램을 [컨테이너 화](https://docs.microsoft.com/virtualization/windowscontainers/about/) 하 고이 책의 뒷부분에서 설명 하는 [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)와 같은 컨테이너 orchestrator에 배포할 수 있습니다. 클라우드에서 응용 프로그램은 데이터베이스, 메시지 큐, 모니터링 및 분산 캐싱과 같은 다른 클라우드 서비스를 사용할 수 있습니다.
+비즈니스에 중요 한 모놀리식 앱은 향상 된 리프트 앤 시프트 (*클라우드 최적화*) 마이그레이션을 활용 하는 것이 좋습니다. 이 접근 방식에는 응용 프로그램의 핵심 아키텍처를 변경 하지 않고도 핵심 클라우드 서비스를 사용할 수 있도록 하는 배포 최적화가 포함 됩니다. 예를 들어 응용 프로그램을 [컨테이너 화](/virtualization/windowscontainers/about/) 하 고이 책의 뒷부분에서 설명 하는 [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)와 같은 컨테이너 orchestrator에 배포할 수 있습니다. 클라우드에서 응용 프로그램은 데이터베이스, 메시지 큐, 모니터링 및 분산 캐싱과 같은 다른 클라우드 서비스를 사용할 수 있습니다.
 
 마지막으로, 전략적 엔터프라이즈 기능을 수행 하는 모놀리식 apps는이 책의 일부인 *클라우드 기본* 접근 방식을 활용 하는 것이 가장 좋습니다. 이 방법은 민첩성과 속도를 제공 합니다. 그러나 코드를 다시 작성 하 고, 다시 작성 하 고, 다시 작성 하는 비용이 듭니다.
 
@@ -74,13 +74,13 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 
 - [.NET 마이크로 서비스: 컨테이너 화 된 .NET 응용 프로그램에 대 한 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존 .NET 응용 프로그램 현대화](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
 - [Cornelia Davis의 클라우드 기본 패턴](https://www.manning.com/books/cloud-native-patterns)
 
 - [12 단계 응용 프로그램 이상](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
-- [코드로 서의 인프라 란?](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
+- [코드로 서의 인프라 란?](/azure/devops/learn/what-is-infrastructure-as-code)
 
 - [Uber 엔지니어링의 마이크로 배포: 안심 하 고 매일 배포](https://eng.uber.com/micro-deploy/)
 

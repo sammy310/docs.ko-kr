@@ -2,12 +2,12 @@
 title: Azure에 eShopOnContainers 배포
 description: Azure Kubernetes Service, 투구 및 DevSpaces를 사용 하 여 eShopOnContainers 응용 프로그램을 배포 합니다.
 ms.date: 05/13/2020
-ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b3871dae2b414709bfe24b6f7bdbf06de1689d12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614099"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160725"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Azure에 eShopOnContainers 배포
 
@@ -62,7 +62,7 @@ spec:
 
 > 투구 버전 3은 공식적으로 Tiller 서버 구성 요소에 대 한 필요성을 제거 합니다. 이 개선 사항에 대 한 자세한 내용은 [여기](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)를 참조 하세요.
 
-## <a name="azure-dev-spaces"></a>Azure Dev 공간
+## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
 클라우드 네이티브 응용 프로그램을 신속 하 게 확장 하 여 큰 계산 리소스를 실행 해야 할 수 있습니다. 이러한 시나리오에서는 전체 응용 프로그램을 개발 컴퓨터 (특히 랩톱)에서 호스팅할 수 없습니다. Azure Dev Spaces AKS를 사용 하 여이 문제를 해결 하도록 설계 되었습니다. 개발자는이를 통해 AKS development 클러스터에 응용 프로그램의 나머지 부분을 호스트 하는 동안 로컬 버전의 서비스를 사용할 수 있습니다.
 
@@ -78,7 +78,7 @@ spec:
 ![eShopOnContainers 아키텍처 ](./media/azure-devspaces-two.png)
  **그림 2-8**. 개발자는 자신의 예약 마이크로 서비스 버전을 배포 하 고 다른 개발자와 충돌 하지 않고 테스트 합니다.
 
-Azure Dev Spaces를 사용 하 여 팀은 변경 내용을 독립적으로 변경, 배포 및 테스트 하는 동시에 AKS를 사용 하 여 직접 작업할 수 있습니다. 이 방법은 모든 개발자가 자신의 AKS 환경을 효과적으로 사용 하기 때문에 별도의 전용 호스팅 환경에 대 한 필요성을 줄입니다. 개발자는 CLI를 사용 하 여 Azure Dev Spaces 작업 하거나 응용 프로그램을 시작 하 여 Visual Studio에서 직접 Azure Dev Spaces 수 있습니다. [Azure Dev Spaces 작동 하 고 구성 되는 방법에 대해 자세히 알아보세요.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
+Azure Dev Spaces를 사용 하 여 팀은 변경 내용을 독립적으로 변경, 배포 및 테스트 하는 동시에 AKS를 사용 하 여 직접 작업할 수 있습니다. 이 방법은 모든 개발자가 자신의 AKS 환경을 효과적으로 사용 하기 때문에 별도의 전용 호스팅 환경에 대 한 필요성을 줄입니다. 개발자는 CLI를 사용 하 여 Azure Dev Spaces 작업 하거나 응용 프로그램을 시작 하 여 Visual Studio에서 직접 Azure Dev Spaces 수 있습니다. [Azure Dev Spaces 작동 하 고 구성 되는 방법에 대해 자세히 알아보세요.](/azure/dev-spaces/how-dev-spaces-works)
 
 ## <a name="azure-functions-and-logic-apps-serverless"></a>Azure Functions 및 Logic Apps (서버 리스)
 

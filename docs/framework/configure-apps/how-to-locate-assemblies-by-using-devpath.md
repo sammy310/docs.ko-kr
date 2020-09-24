@@ -10,14 +10,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 8ae807e46b11d2adb06d6af0c86e1c7297caa0c0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105378"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161986"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>방법: DEVPATH를 사용하여 어셈블리 찾기
+
 개발자는 빌드하는 공유 어셈블리가 여러 응용 프로그램에서 올바르게 작동 하는지 확인 하는 것이 좋습니다. 개발자는 개발 주기 동안 어셈블리를 전역 어셈블리 캐시에 지속적으로 배치 하는 대신 어셈블리의 빌드 출력 디렉터리를 가리키는 DEVPATH 환경 변수를 만들 수 있습니다.  
   
  예를 들어 MySharedAssembly 라는 공유 어셈블리를 빌드하고 출력 디렉터리는 C:\MySharedAssembly\Debug. 라고 가정 합니다. C:\MySharedAssembly\Debug를 DEVPATH 변수에 넣을 수 있습니다. 그런 다음 [\<developmentMode>](./file-schema/runtime/developmentmode-element.md) 컴퓨터 구성 파일에서 요소를 지정 해야 합니다. 이 요소는 공용 언어 런타임에 DEVPATH를 사용 하 여 어셈블리를 찾도록 지시 합니다.  
