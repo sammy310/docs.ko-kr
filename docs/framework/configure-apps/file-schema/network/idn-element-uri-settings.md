@@ -2,12 +2,12 @@
 title: <idn> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698166"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195404"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> 요소(URI 설정)
 
@@ -26,6 +26,7 @@ IDN (다국어 도메인 이름) 구문 분석이 도메인 이름에 적용 되
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -36,7 +37,7 @@ IDN (다국어 도메인 이름) 구문 분석이 도메인 이름에 적용 되
 
 ### <a name="child-elements"></a>자식 요소
 
-None
+없음
   
 ### <a name="parent-elements"></a>부모 요소
 
@@ -50,7 +51,7 @@ None
 
 IRI에 대 한 지원을 사용 하도록 설정 하려면 다음 두 가지 변경이 필요 합니다.
 
-1. Machine.config 파일의 .NET Framework 2.0 디렉터리 아래에 다음 줄을 추가 합니다.
+1. machine.config 파일의 .NET Framework 2.0 디렉터리 아래에 다음 줄을 추가 합니다.
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  

@@ -2,14 +2,15 @@
 title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 0054be3d2002e4ea5247f25d8094386ac7242422
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088384"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195443"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener> 요소(네트워크 설정)
+
 클래스에서 사용 하는 매개 변수를 사용자 지정 <xref:System.Net.HttpListener> 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -25,18 +26,20 @@ ms.locfileid: "74088384"
 />  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |unescapeRequestUrl|<xref:System.Net.HttpListener>인스턴스가 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타내는 부울 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -46,6 +49,7 @@ ms.locfileid: "74088384"
 |[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  **UnescapeRequestUrl** 특성은 <xref:System.Net.HttpListener> 가 백분율 인코딩 값이 변환 되 고 다른 정규화 단계가 수행 되는 변환 된 uri 대신 이스케이프 되지 않은 원시 uri를 사용 하는지 여부를 나타냅니다.  
   
  경우는 <xref:System.Net.HttpListener> 인스턴스를 통해 요청을 수신 합니다 `http.sys` 제공한 URI 문자열의 인스턴스를 만들고 서비스를 `http.sys`,으로 노출를 <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> 속성.  
@@ -82,7 +86,7 @@ ms.locfileid: "74088384"
   
  따라서 `http.sys` 프로세스를 수정 하는 것에 대 한 두 개의 레지스트리 키를 제공 합니다.  
   
-|레지스트리 키|기본값|Description|  
+|레지스트리 키|기본값|설명|  
 |------------------|-------------------|-----------------|  
 |EnableNonUTF8|1|0 이면 `http.sys` u t F-8로 인코딩된 Url만 허용 합니다.<br /><br /> 0이 아닌 경우 `http.sys` 도 요청에서 ANSI로 인코딩된 또는 DBCS 인코딩된 Url을 허용 합니다.|  
 |FavorUTF8|1|0이 아닌 경우 `http.sys` 디코딩할 URL u t F-8로 먼저 해당 변환에 실패 이며 EnableNonUTF8 0이 아닌 경우 항상 시도 차례로 Http.sys을 ANSI 또는 DBCS 디코딩해야 하는 작업을 하려고 합니다.<br /><br /> 0 (그리고 EnableNonUTF8 0이 아닌 경우) `http.sys` 있는지을 ANSI 또는 DBCS; 디코딩 하려고 성공 하면를 u t F-8로 변환 하려고 합니다.|  
@@ -114,6 +118,7 @@ ms.locfileid: "74088384"
  <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>속성을 사용 하 여 적용 가능한 구성 파일에서 **unescapeRequestUrl** 특성의 현재 값을 가져올 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.Net.HttpListener> 에서 `http.sys` 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 하는 요청을 받을 때 클래스를 구성 하는 방법을 보여 줍니다 <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
 ```xml  

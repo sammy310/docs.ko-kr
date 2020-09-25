@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 6a44d61f29fad7fa7d5304deb8b1e329478bc5b4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186680"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
+
 WCF Data Services는 Uri로 주소를 지정할 수 있는 리소스로 데이터를 피드로 노출 하기 위해 OData (Open Data Protocol)를 지원 합니다. 이러한 리소스는 [엔터티 데이터 모델](../adonet/entity-data-model.md)의 엔터티-관계 규칙에 따라 표시 됩니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 애플리케이션 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
   
 ## <a name="addressing-resources"></a>리소스 처리  
+
  OData에서는 URI를 사용 하 여 데이터 모델에 의해 노출 되는 모든 데이터를 처리 합니다. 예를 들어, 다음 URI는 Customer 엔터티 형식의 모든 인스턴스에 대한 항목이 포함된 Customers 엔터티 집합인 피드를 반환합니다.  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
@@ -50,6 +52,7 @@ WCF Data Services는 Uri로 주소를 지정할 수 있는 리소스로 데이�
  자세한 내용은 [OData: URI 규칙](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)을 참조 하세요.
   
 ## <a name="system-query-options"></a>시스템 쿼리 옵션  
+
  OData는 필터링, 정렬 및 페이징과 같은 리소스에 대 한 기존 쿼리 작업을 수행 하는 데 사용할 수 있는 시스템 쿼리 옵션 집합을 정의 합니다. 예를 들어, 다음 URI는 관련 된 엔터티와 함께 모든 엔터티 집합을 반환 합니다 `Order` `Order_Detail` .이의 우편 번호는에서 끝나지 않습니다 `100` .  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity`
@@ -69,6 +72,7 @@ WCF Data Services는 Uri로 주소를 지정할 수 있는 리소스로 데이�
 |`$inlinecount`|피드에 반환되는 엔터티 수가 피드와 함께 포함되도록 요청합니다.|  
   
 ## <a name="addressing-relationships"></a>관계 주소 지정  
+
  OData에서는 엔터티 집합과 엔터티 인스턴스의 주소를 지정 하는 것 외에도 엔터티 간의 관계를 나타내는 연결의 주소를 지정할 수 있습니다. 이 기능은 Northwind 샘플 데이터베이스의 지정된 주문과 관련된 운송업체와 같이 두 엔터티 인스턴스 간의 관계를 만들거나 변경하는 데 필요합니다. OData는 연산자를 지원 `$link` 하 여 엔터티 간 연결의 주소를 구체적으로 만듭니다. 예를 들어, 다음 URI는 HTTP PUT 요청 메시지에 지정되어 지정한 주문의 운송업체를 새 운송업체로 변경합니다.  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper`
@@ -76,6 +80,7 @@ WCF Data Services는 Uri로 주소를 지정할 수 있는 리소스로 데이�
  자세한 내용은 `3.2. Addressing Links between Entries` [ODATA: URI 규칙](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)에서 섹션을 참조 하세요.
   
 ## <a name="consuming-the-returned-feed"></a>반환된 피드 사용  
+
  OData 리소스의 URI를 사용 하면 서비스에서 노출 하는 엔터티 데이터의 주소를 지정할 수 있습니다. 웹 브라우저의 주소 필드에 URI를 입력 하면 요청 된 리소스의 OData 피드 표현이 반환 됩니다. 자세한 내용은 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 참조 하세요. 데이터 서비스 리소스에서 필요한 데이터를 반환하는지 테스트하려면 웹 브라우저가 유용하지만, 데이터를 만들고 업데이트 및 삭제할 수도 있는 프로덕션 데이터 서비스는 일반적으로 웹 페이지의 응용 프로그램 코드나 스크립팅 언어를 통해 액세스됩니다. 자세한 내용은 [클라이언트 응용 프로그램에서 데이터 서비스 사용](using-a-data-service-in-a-client-application-wcf-data-services.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목

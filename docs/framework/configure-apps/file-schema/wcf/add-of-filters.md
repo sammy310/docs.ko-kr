@@ -2,14 +2,15 @@
 title: <filters>의 <add>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850555"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201657"
 ---
 # <a name="add-of-filters"></a>\<filters>의 \<add>
+
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,24 +29,27 @@ ms.locfileid: "70850555"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |filter|XPath 1.0 식에서 정의하는 XML 문서에 대한 쿼리를 지정하는 문자열입니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>를 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<filters>](filters.md)|로깅할 메시지 종류를 제어하는 데 사용되는 XPath 필터 컬렉션을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  필터는 전송 계층에서만 적용됩니다(`logMessagesAtTransportLevel` = `true`). 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.  
   
  컬렉션에 필터를 추가하려면 `add` 키워드를 사용하세요. 하나 이상의 필터가 정의되면 그 중 최소한 하나의 필터와 일치하는 메시지만 로깅됩니다. 정의된 필터가 없으면 모든 메시지가 통과합니다.  
@@ -55,6 +59,7 @@ ms.locfileid: "70850555"
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 SOAP 헤더 섹션이 있는 메시지만 기록하는 필터 구성 방법에 대한 예제입니다.  
   
 ```xml  

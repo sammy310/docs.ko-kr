@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554041"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201709"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 요소
 
@@ -31,7 +31,7 @@ ms.locfileid: "90554041"
 
 ## <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |**version**|선택적 특성입니다.<br /><br /> 애플리케이션이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 특성의 유효한 값 `version` 은 ["런타임 버전" 값](#version) 섹션을 참조 하세요. **참고:**  .NET Framework 3.5를 통해 "*런타임 버전*" 값은 *major*형식을 사용 합니다. *부*. *빌드*. .NET Framework 4부터 주 버전 및 부 버전 번호만 필요 합니다 (즉, "v 4.0.30319" 대신 "v 4.0"). 짧은 문자열이 권장됩니다.|
 |**sku**|선택적 특성입니다.<br /><br /> 이 애플리케이션이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값은 ["sku id" 값](#sku) 섹션을 참조 하세요.|
@@ -55,7 +55,9 @@ ms.locfileid: "90554041"
 실행할 수 있는 모든 .NET Framework 버전을 사용하여 애플리케이션을 테스트하는 것이 좋습니다.
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>"런타임 버전" 값
+
 `runtime`특성은 지정 된 응용 프로그램에 필요한 CLR (공용 언어 런타임) 버전을 지정 합니다. 모든 .NET Framework (v4. x 버전은 CLR을 지정 합니다. `v4.0` 다음 표에서는 특성의 *런타임 버전* 값에 대 한 유효한 값을 보여 줍니다 `version` .
 
 |.NET Framework 버전|`version` 특성|
@@ -108,7 +110,7 @@ ms.locfileid: "90554041"
 
 이 요소는 애플리케이션 구성 파일에 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

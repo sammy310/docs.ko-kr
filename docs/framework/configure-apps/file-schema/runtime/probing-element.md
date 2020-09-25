@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1435ee8ea887b5d7d3e785eef0f25ffed14b1b97
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115859"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195274"
 ---
 # <a name="probing-element"></a>\<probing> 요소
+
 어셈블리를 로드할 때 검색할 공용 언어 런타임에 대 한 응용 프로그램 기본 하위 디렉터리를 지정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ ms.locfileid: "73115859"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`privatePath`|필수 특성입니다.<br /><br /> 어셈블리를 포함할 수 있는 응용 프로그램 기본 디렉터리의 하위 디렉터리를 지정 합니다. 각 하위 디렉터리를 세미콜론으로 구분 합니다.|  
   
@@ -45,13 +47,14 @@ ms.locfileid: "73115859"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 런타임에서 어셈블리를 검색 해야 하는 응용 프로그램 기본 하위 디렉터리를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  

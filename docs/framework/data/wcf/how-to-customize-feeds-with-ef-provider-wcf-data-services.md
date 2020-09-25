@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 887dda9b31d86c4952436316e160f4de7a15b66b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76cc8da052ee51157857418cd81088a523f95ea2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556956"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186595"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)
+
 WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜에 정의 된 사용 하지 않은 요소에 매핑될 수 있도록 데이터 서비스 응답에서 Atom serialization을 사용자 지정할 수 있습니다. 이 항목에서는 Entity Framework 공급자를 사용하여 .edmx 파일에 정의된 데이터 모델의 엔터티 형식에 대한 매핑 특성을 정의하는 방법을 보여 줍니다. 자세한 내용은 [피드 사용자 지정](feed-customization-wcf-data-services.md)을 참조 하세요.  
   
  이 항목에서는 데이터 모델이 포함되어 있고 도구에서 생성된 .edmx 파일을 수동으로 수정합니다. Entity Designer에서 데이터 모델 확장을 지원하지 않으므로 파일을 수동으로 수정해야 합니다. 엔터티 데이터 모델 도구에서 생성 하는 .edmx 파일에 대 한 자세한 내용은 [.Edmx 파일 개요 (Entity Framework)](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))를 참조 하세요. 이 항목의 예제에서는 Northwind 샘플 데이터 서비스 및 자동 생성된 클라이언트 데이터 서비스 클래스를 사용합니다. 이 서비스 및 클라이언트 데이터 클래스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.  
@@ -35,11 +36,12 @@ WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜�
   
 6. 프로젝트를 다시 컴파일합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
+
  이전 예제에서는 URI에 대해 다음 결과를 반환 합니다 `http://myservice/Northwind.svc/Customers('ALFKI')` .  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [Entity Framework 공급자](entity-framework-provider-wcf-data-services.md)
