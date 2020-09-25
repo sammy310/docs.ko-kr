@@ -2,14 +2,15 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: ea889cfbc04e06e3308e31c6e282d8f2359ddeb9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dbe03de44b8ae2a857b923cd9dc74c42ea18f4e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556540"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200942"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
+
 이 항목에서는 Entity Framework 설명서에서 자주 참조 되는 용어를 정의 합니다. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
   
 |용어|정의|  
@@ -75,7 +76,7 @@ ms.locfileid: "90556540"
 |계층당 하나의 테이블|형식 계층 구조를 모델링하는 방법 중 하나로, 계층 구조에 있는 모든 형식의 특성이 하나의 테이블에 포함됩니다.|  
 |형식당 하나의 테이블|데이터베이스의 형식 계층 구조를 모델링하는 방법 중 하나로, 일대일 관계의 여러 테이블을 사용하여 다양한 형식을 모델링합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET Entity Framework](index.md)
 - [Entity Framework 개요](overview.md)
