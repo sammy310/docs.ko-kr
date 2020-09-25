@@ -3,14 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 853dc9817d080e59ac7a792576eda862bd0b1f1d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5f5b432830a61adab324b2b6cd2ebe6eeccca7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252034"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189840"
 ---
 # \<cookieHandler>
+
 <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)에서 쿠키를 읽고 쓰는 데 사용 하는를 구성 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ ms.locfileid: "70252034"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -54,18 +56,19 @@ ms.locfileid: "70252034"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<chunkedCookieHandler>](chunkedcookiehandler.md)|를 구성 <xref:System.IdentityModel.Services.ChunkedCookieHandler> 합니다. `mode` `<cookieHandler>` 요소의 특성이 "Default" 또는 "청크 분할" 인 경우에만이 요소가 있을 수 있습니다.|  
 |[\<customCookieHandler>](customcookiehandler.md)|사용자 지정 쿠키 처리기 형식을 설정 합니다. `mode` `<cookieHandler>` 요소의 특성이 "Custom" 이면이 요소가 있어야 합니다. 특성의 다른 값에 대해서는 사용할 수 없습니다 `mode` . 사용자 지정 형식은 클래스에서 파생 되어야 합니다 <xref:System.IdentityModel.Services.CookieHandler> .|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfam) 및 (SAM)을 구성 하는 설정을 포함 합니다 <xref:System.IdentityModel.Services.SessionAuthenticationModule> .|  
   
 ## <a name="remarks"></a>설명  
+
  는 <xref:System.IdentityModel.Services.CookieHandler> HTTP 프로토콜 수준에서 원시 쿠키를 읽고 쓰는 역할을 담당 합니다. <xref:System.IdentityModel.Services.ChunkedCookieHandler>또는 클래스에서 파생 된 사용자 지정 쿠키 처리기를 구성할 수 있습니다 <xref:System.IdentityModel.Services.CookieHandler> .  
   
  청크 분할 된 쿠키 처리기를 구성 하려면 mode 특성을 "청크 분할" 또는 "기본값"으로 설정 합니다. 기본 청크 크기는 2000 바이트 이지만 선택적으로 자식 요소를 포함 하 여 다른 청크 크기를 지정할 수 있습니다 `<chunkedCookieHandler>` .  
@@ -75,6 +78,7 @@ ms.locfileid: "70252034"
  합니다 `<cookieHandler>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.CookieHandlerElement> 클래스입니다. 구성에 지정 된 쿠키 처리기는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> 속성에 설정 된 개체의 속성에서 사용할 수 있습니다 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> .  
   
 ## <a name="example"></a>예제  
+
  다음 XML에서는 요소를 보여 줍니다 `<cookieHandler>` . 이 예제에서는 특성을 지정 하지 않았기 때문에 `mode` SAM에서 기본 쿠키 처리기를 사용 합니다. 클래스의 인스턴스입니다 <xref:System.IdentityModel.Services.ChunkedCookieHandler> . `<chunkedCookieHandler>`자식 요소가 지정 되지 않았기 때문에 기본 청크 크기가 사용 됩니다. 특성이 설정 되었으므로 HTTPS가 필요 하지 않습니다 `requireSsl` `false` .  
   
 > [!WARNING]

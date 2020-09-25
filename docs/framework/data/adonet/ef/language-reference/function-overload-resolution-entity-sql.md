@@ -2,14 +2,15 @@
 title: 함수 오버로드 확인(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 1aeebc501487a6fc443df00c24beb2bc6aa5fc49
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d37cd9342d1fb3b60d5a2c05d373fb7e71f54b1f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250928"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189398"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>함수 오버로드 확인(Entity SQL)
+
 이 항목에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 함수의 확인 방법에 대해 설명합니다.  
   
  함수의 서명이 고유하다면 함수 두 개 이상을 동일한 이름으로 정의할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "70250928"
   
  사용자 정의 함수의 경우에는 이 함수와 더 잘 일치하는 서명이 있는 모델 정의 함수가 있더라도 인라인 쿼리 함수 정의가 우선적으로 적용됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [Entity SQL 개요](entity-sql-overview.md)

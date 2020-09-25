@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088435"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190373"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> 요소(네트워크 설정)
+
 FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책을 설명 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,17 +33,18 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`policyLevel`|FTP 캐싱 정책을 지정 합니다. 기본값은 `Default`입니다.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |`Default`|리소스가 최신이 고, 콘텐츠 길이가 정확 하며, 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
 |`BypassCache`|서버에서 리소스를 반환 합니다.|  
@@ -54,17 +56,19 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
 |`Revalidate`|캐시된 리소스 복사본의 타임스탬프가 서버에 있는 리소스의 타임스탬프와 동일하면 캐시된 리소스 복사본을 사용하여 요청을 만족시키고, 그렇지 않으면 서버에서 리소스를 다운로드하여 호출자에게 제공한 다음 캐시에 저장합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[requestCaching](requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어 합니다.|  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는의 FTP 캐싱 정책을 지정 하는 방법을 보여 줍니다 `NoCacheNoStore` .  
   
 ```xml  

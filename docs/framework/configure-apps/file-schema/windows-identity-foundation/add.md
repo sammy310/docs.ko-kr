@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544542"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189957"
 ---
 # \<add>
+
 지정 된 보안 토큰 처리기를 토큰 처리기 컬렉션에 추가 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ ms.locfileid: "90544542"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -45,7 +47,7 @@ ms.locfileid: "90544542"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>클래스, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 클래스 또는 이러한 클래스 중 하나의 파생 클래스에 대 한 구성을 제공 합니다.|  
 |[\<sessionTokenRequirement>](sessiontokenrequirement.md)|클래스 또는 파생 클래스에 대 한 구성을 제공 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 합니다.|  
@@ -54,11 +56,12 @@ ms.locfileid: "90544542"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|끝점에 등록 된 보안 토큰 처리기의 컬렉션을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<add>`요소는 토큰 처리기에 대 한 구성을 지정 하는 단일 자식 요소를 사용할 수 있습니다. 이는 요소의 특성을 통해 참조 되는 처리기 클래스가 `type` 이 기능을 지원 하는지 여부에 따라 달라 집니다 `<add>` . 이 기능을 제공 하는 토큰 처리기 클래스는 개체를 사용 하는 생성자를 노출 해야 합니다 <xref:System.Xml.XmlElement> .  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  처리기에 지정 된 설정은 요소 아래의 토큰 처리기 컬렉션에 지정 된 설정이 [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) 며 요소 아래에서 서비스 수준에 지정 된 설정과 동일 하 게 재정의 [\<identityConfiguration>](identityconfiguration.md) 됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 XML에서는 `<add>` 및 요소를 사용 하 여 `<remove>` 기본 세션 토큰 처리기를 사용자 지정 세션 토큰 처리기로 바꾸는 방법을 보여 줍니다. XML은 샘플에서 가져옵니다 `ClaimsAwareWebFarm` .  
   
 ```xml  

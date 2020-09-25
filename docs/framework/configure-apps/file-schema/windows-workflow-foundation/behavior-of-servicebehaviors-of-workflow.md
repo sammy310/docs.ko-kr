@@ -1,16 +1,17 @@
 ---
-title: <behavior>of <serviceBehaviors> 워크플로
+title: <behavior> of <serviceBehaviors> 워크플로
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14c528746963a3078e0ab377d095414d2fca0dbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152322"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189619"
 ---
-# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior>of \<serviceBehaviors> 워크플로
+# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior> of \<serviceBehaviors> 워크플로
+
 **Behavior** 요소는 서비스의 동작에 대 한 설정 컬렉션을 포함 합니다. 각 동작은 **이름**으로 인덱싱됩니다. 서비스는 요소의 **behaviorConfiguration** 특성을 사용 하 여이 이름을 통해 각 동작에 연결할 수 있습니다 [\<endpoint>](../wcf/endpoint-element.md) . 따라서 설정을 다시 정의하지 않고도 엔드포인트에서 일반 동작 구성을 공유할 수 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -52,6 +53,7 @@ ms.locfileid: "79152322"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -62,7 +64,7 @@ ms.locfileid: "79152322"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<bufferReceive>](bufferreceive.md)|서비스에서 버퍼링되는 수신 처리를 사용할 수 있도록 하는 서비스 동작입니다. 이를 통해 워크플로 서비스가 순서가 맞지 않는 메시지를 처리할 수 있습니다.|  
 |[\<routing>](../wcf/routing-of-servicebehavior.md)|서비스가 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 통해 ETW 추적을 사용할 수 있도록 하는 서비스 동작입니다.|  
@@ -74,6 +76,6 @@ ms.locfileid: "79152322"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<serviceBehaviors>](servicebehaviors-of-workflow.md)|서비스 동작 요소의 컬렉션입니다.|

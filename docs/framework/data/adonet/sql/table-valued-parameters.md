@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea063b333ea0680071b880f26753bfd74b71d80f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547449"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188878"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
+
 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장한 다음 Transact-SQL을 사용하여 연산할 수 있습니다.  
   
  테이블 반환 매개 변수의 열 값은 표준 Transact-SQL SELECT 문을 사용하여 액세스할 수 있습니다. 테이블 반환 매개 변수는 강력한 형식이며 해당 구조체의 유효성 검사가 자동으로 수행됩니다. 테이블 반환 매개 변수의 크기는 서버 메모리에 의해서만 제한됩니다.  
@@ -29,6 +30,7 @@ ms.locfileid: "90547449"
 |[사용자 정의 테이블 형식](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>이전 버전의 SQL Server에서 여러 행 전달  
+
  SQL Server 2008에 테이블 반환 매개 변수가 도입되기 전에는 여러 행의 데이터를 저장 프로시저나 매개 변수화된 SQL 명령에 전달하는 옵션이 제한적이었습니다. 개발자는 서버에 여러 행을 전달하기 위해 다음 옵션 중에서 선택할 수 있습니다.  
   
 - 일련의 개별 매개 변수를 사용하여 여러 열과 데이터 행의 값을 나타냅니다. 이 방법을 사용하여 전달할 수 있는 데이터의 양은 허용되는 매개 변수의 개수에 의해 제한됩니다. SQL Server 프로시저에는 매개 변수를 2100개까지 사용할 수 있습니다. 이러한 개별 값을 테이블 변수 또는 처리를 위한 임시 테이블로 조합하는 데 서버 쪽 논리가 필요합니다.  
@@ -40,6 +42,7 @@ ms.locfileid: "90547449"
 - `bcp` 유틸리티 프로그램 또는 <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 사용하여 많은 데이터 행을 테이블에 로드할 수 있습니다. 이 기법은 매우 효율적이지만 데이터를 임시 테이블 또는 테이블 변수에 로드하지 않는 한 서버 쪽 처리를 지원하지 않습니다.  
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
+
  테이블 반환 매개 변수는 Transact-sql CREATE TYPE 문을 사용 하 여 정의 된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 애플리케이션에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식을 만드는 방법에 대 한 자세한 내용은 [사용자 정의 테이블 형식](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))을 참조 하세요.  
   
  다음 문은 CategoryID 및 CategoryName 열로 구성된 CategoryTableType 라는 테이블 형식을 만듭니다.  
@@ -57,6 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ```  
   
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>테이블 반환 매개 변수를 사용하여 데이터 수정(Transact-SQL)  
+
  단일 문을 실행하여 여러 행에 영향을 주는 집합 기반 데이터 수정에 테이블 반환 매개 변수를 사용할 수 있습니다. 예를 들어 테이블 반환 매개 변수에서 모든 행을 선택하여 데이터베이스 테이블에 삽입하거나 테이블 반환 매개 변수를 업데이트하려는 테이블에 조인하여 update 문을 만들 수 있습니다.  
   
  다음 Transact-SQL UPDATE 문은 테이블 반환 매개 변수를 Categories 테이블에 조인하여 사용하는 방법을 보여 줍니다. FROM 절에서 JOIN과 함께 테이블 반환 매개 변수를 사용하는 경우 별칭을 지정해야 합니다. 여기서는 테이블 반환 매개 변수에 대한 별칭을 "ec"로 지정했습니다.  
@@ -76,6 +80,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>테이블 반환 매개 변수의 제한 사항  
+
  테이블 반환 매개 변수에는 다음과 같은 몇 가지 제한 사항이 있습니다.  
   
 - [CLR 사용자 정의 함수](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)에는 테이블 반환 매개 변수를 전달할 수 없습니다.  
@@ -87,6 +92,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - ALTER TABLE 문을 사용하여 테이블 반환 매개 변수의 디자인을 수정할 수 없습니다.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter 예제 구성  
+
  <xref:System.Data.SqlClient>에서는 <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> 또는 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> 개체를 통한 테이블 반환 매개 변수 채우기를 지원합니다. 이 경우 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수에 대한 형식 이름을 지정해야 합니다. `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 다음 코드 조각에서는 <xref:System.Data.SqlClient.SqlParameter>를 구성하여 데이터를 삽입하는 방법을 보여 줍니다.  
 
 다음 예에서 `addedCategories` 변수는 <xref:System.Data.DataTable>을 포함합니다. 변수가 채워지는 방법을 확인하려면 다음 섹션 [저장 프로시저에 테이블 반환 매개 변수 전달](#passing)의 예제를 참조하세요.
@@ -130,6 +136,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> 저장 프로시저에 테이블 반환 매개 변수 전달  
+
  이 예제에서는 테이블 반환 매개 변수 데이터를 저장 프로시저에 전달하는 방법을 보여 줍니다. 이 코드는 <xref:System.Data.DataTable> 메서드를 사용하여 새 <xref:System.Data.DataTable.GetChanges%2A>에 추가된 행을 추출합니다. 그런 다음 코드는 <xref:System.Data.SqlClient.SqlCommand>를 정의하여 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성을 <xref:System.Data.CommandType.StoredProcedure>로 설정합니다. <xref:System.Data.SqlClient.SqlParameter>는 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 메서드를 사용하여 채워지고 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>는 `Structured`로 설정됩니다. 그런 다음 <xref:System.Data.SqlClient.SqlCommand> 메서드를 사용하여 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 실행합니다.  
   
 ```csharp  
@@ -172,6 +179,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>매개 변수화된 SQL 문에 테이블 반환 매개 변수 전달  
+
  다음 예제에서는 테이블 반환 매개 변수를 데이터 원본으로 사용하는 SELECT 하위 쿼리와 함께 INSERT 문을 사용하여 dbo.Categories 테이블에 데이터를 삽입하는 방법을 보여 줍니다. 테이블 반환 매개 변수를 매개 변수가 있는 SQL 문에 전달할 때 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 새 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수의 형식 이름을 지정해야 합니다. 이 `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 이 예제의 코드는 `TypeName` 속성을 사용하여 dbo.CategoryTableType에 정의된 형식 구조를 참조합니다.  
   
 > [!NOTE]
@@ -228,6 +236,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>DataReader를 사용하여 행 스트리밍  
+
  <xref:System.Data.Common.DbDataReader>에서 파생된 개체를 사용하여 데이터 행을 테이블 반환 매개 변수로 스트림할 수도 있습니다. 다음 코드 조각에서는 <xref:System.Data.OracleClient.OracleCommand> 및 <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 Oracle 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 그런 다음 코드에서는 단일 입력 매개 변수를 사용하여 저장 프로시저를 호출하도록 <xref:System.Data.SqlClient.SqlCommand>를 구성합니다. <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성이 `Structured`로 설정됩니다. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>는 `OracleDataReader` 결과 집합을 저장 프로시저에 테이블 반환 매개 변수로 전달합니다.  
   
 ```csharp  
@@ -273,7 +282,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
 - [명령 및 매개 변수](../commands-and-parameters.md)

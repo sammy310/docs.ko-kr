@@ -5,14 +5,15 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551587"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183951"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> 요소
+
 애플리케이션 이식성을 위해 어셈블리를 동일하게 간주하는 기본 동작을 사용하지 않도록 설정함으로써, 애플리케이션이 .NET Framework의 서로 다른 두 구현에서 같은 어셈블리를 참조할 수 있도록 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,14 +33,14 @@ ms.locfileid: "90551587"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |PKT|필수 특성입니다.<br /><br /> 영향을 받는 어셈블리의 공개 키 토큰을 문자열로 지정 합니다.|  
 |사용|선택적 특성입니다.<br /><br /> 지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |true|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정 합니다. 이것이 기본값입니다.|  
 |false|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하지 않도록 설정 합니다. 이렇게 하면 응용 프로그램에서 지정 된 어셈블리의 여러 구현에 대 한 참조를 사용할 수 있습니다.|  
@@ -50,7 +51,7 @@ ms.locfileid: "90551587"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
@@ -80,7 +81,7 @@ ms.locfileid: "90551587"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [-appconfig(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET Framework 어셈블리 통합 개요](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
