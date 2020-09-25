@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854838"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172842"
 ---
 # \<userDefinedType>
+
 서비스 계약에 포함될 UDT(사용자 정의 형식)를 나타냅니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,11 +37,12 @@ ms.locfileid: "70854838"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`name`|읽기 가능한 형식의 이름을 제공하는 문자열이 포함된 선택적 특성입니다. 이 특성은 런타임에서 사용되지 않지만, 판독기에서 형식을 구별할 때 도움이 됩니다.|  
 |`TypeDefID`|등록된 형식 라이브러리에 있는 특정 UDT 형식을 식별하는 GUID 문자열입니다.|  
@@ -48,15 +50,17 @@ ms.locfileid: "70854838"
 |`TypeLibVersion`|: 형식을 정의하는 형식 라이브러리 버전을 식별하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`userDefinedTypes`|`userDefinedType` 요소의 컬렉션입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  COM+ 통합 런타임에서는 형식 라이브러리를 검사하여 서비스를 생성합니다. COM+ 구성 요소에 VARIANT를 전달하는 메서드가 포함될 경우 시스템에서 런타임 전에 전달될 실제 형식을 확인할 수 없습니다. 따라서 VARIANT 내에서 UDT(사용자 정의 형식)를 전달하려고 시도하면 알려진 serialization 형식이 아니므로 실패합니다.  
   
  이 문제를 방지하기 위해 UDT를 구성 파일에 추가함으로써 적절한 서비스 계약에 알려진 형식으로 포함되게 할 수 있습니다. 그러기 위해서는 UDT와 계약, 즉 이를 사용하는 원래 COM 인터페이스를 고유하게 식별해야 합니다.  

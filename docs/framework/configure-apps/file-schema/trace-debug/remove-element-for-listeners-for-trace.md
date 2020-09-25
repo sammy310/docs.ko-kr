@@ -7,14 +7,15 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088839"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173837"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<remove>의에 대 한 요소 \<listeners>\<trace>
+
 **수신기 컬렉션에서** 수신기를 제거 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,20 +31,22 @@ ms.locfileid: "74088839"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |**name**|필수 특성입니다.<br /><br /> **Listeners** 컬렉션에서 제거할 수신기의 이름입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`listeners`|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다. 수신기는 추적 출력을 적절 한 대상으로 보냅니다.|  
@@ -56,6 +59,7 @@ ms.locfileid: "74088839"
 > 컬렉션에서를 제거 하면 <xref:System.Diagnostics.DefaultTraceListener> `Listeners` ,, <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 및 메서드의 동작이 변경 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> 됩니다. 또는 메서드를 호출 하면 `Assert` `Fail` 일반적으로 메시지 상자가 표시 되지만 <xref:System.Diagnostics.DefaultTraceListener> 가 컬렉션에 없으면 메시지 상자가 표시 되지 않습니다 `Listeners` .  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 추적 **수신기** 컬렉션에서 기본 추적 수신기를 제거 하는 방법을 보여 줍니다.  
   
 ```xml  

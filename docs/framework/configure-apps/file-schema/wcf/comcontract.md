@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850034"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173785"
 ---
 # \<comContract>
+
 COM+ 통합 서비스 계약을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,11 +46,12 @@ COM+ 통합 서비스 계약을 지정합니다.
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |계약|계약 형식을 포함하는 문자열입니다.|  
 |name|계약 이름을 포함하는 문자열입니다.|  
@@ -58,7 +60,7 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |persistableTypes|모든 지속 형식입니다.|  
 |userDefinedTypes|서비스 계약에 포함될 UDT(사용자 정의 형식) 컬렉션입니다.|  
@@ -66,11 +68,12 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |comContracts|`comContract` 요소의 컬렉션을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  COM + 통합 서비스 계약은 현재 `http://tempuri.org` 네임 스페이스로 제한 되며, 계약 이름은 지원 COM 인터페이스에서 파생 됩니다. 그러나 구성 파일에서`comContracts` 섹션 및 `comContract` 요소를 사용하여 대안을 지정할 수 있습니다. 예를 들어 다음 구성을 사용하여 포함시킬 네임스페이스, 계약 이름, 사용자 정의 형식 및 서비스 계약의 기타 설정을 지정할 수 있습니다.  
   
 ```xml  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697496"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174071"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime> 요소
 
@@ -38,14 +38,14 @@ safemode="true|false"/>
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`version`|선택적 특성입니다.<br /><br /> 이 응용 프로그램에서 지 원하는 .NET Framework 버전을 지정 하는 문자열 값입니다. 문자열 값은 .NET Framework 설치 루트 아래에 있는 디렉터리 이름과 일치 해야 합니다. 문자열 값의 내용은 구문 분석 되지 않습니다.|
 |`safemode`|선택적 특성입니다.<br /><br /> 런타임 시작 코드가 레지스트리를 검색 하 여 런타임 버전을 확인할 지 여부를 지정 합니다.|
 
 ## <a name="safemode-attribute"></a>안전 안전 특성
 
-|값|Description|
+|Value|설명|
 |-----------|-----------------|
 |`false`|런타임 시작 코드는 레지스트리에서 찾습니다. 이것은 기본값입니다.|
 |`true`|런타임 시작 코드는 레지스트리에 표시 되지 않습니다.|
@@ -56,12 +56,13 @@ safemode="true|false"/>
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`startup`|요소를 포함 `<requiredRuntime>` 합니다.|
 
 ## <a name="remarks"></a>설명
+
  런타임 버전 1.0만 지원 하도록 빌드된 응용 프로그램은 요소를 사용 해야 합니다 `<requiredRuntime>` . 버전 1.1 이상을 사용 하 여 빌드된 응용 프로그램은 요소를 사용 해야 합니다 `<supportedRuntime>` .
 
 > [!NOTE]

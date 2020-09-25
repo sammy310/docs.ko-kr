@@ -2,28 +2,29 @@
 title: 데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 5ebf333b065157fa9497cc1471a45698663638e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150937"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172790"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
-스키마에서 **키** 요소를 사용하여 요소 또는 특성에 대한 키 제약 조건을 지정할 수 있습니다. KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.  
+
+스키마에서 **key** 요소를 사용 하 여 요소 또는 특성에 대 한 키 제약 조건을 지정할 수 있습니다. KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.  
   
  KEY 제약 조건이 정의된 열이 null 값을 가질 수 없다는 것을 제외하면, key 제약 조건은 UNIQUE 제약 조건과 유사합니다.  
   
- 다음 표에서는 **키** 요소에서 지정할 수 있는 **msdata** 특성을 간략하게 설명합니다.  
+ 다음 표에서는 **key** 요소에 지정할 수 있는 **msdata** 특성을 간략하게 설명 합니다.  
   
-|특성 이름|Description|  
+|특성 이름|설명|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않으면 **name** 특성은 제약 조건 이름의 값을 제공합니다.|  
-|**msdata:PrimaryKey**|있는 `PrimaryKey="true"` 경우 **IsPrimaryKey** 제약 조건 속성은 **true로**설정되어 기본 키로 설정됩니다. 기본 키에 null 값을 가질 수 없기 때문에 **AllowDBNull** 열 속성은 **false로**설정됩니다.|  
+|**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않으면 **name** 특성은 제약 조건 이름의 값을 제공 합니다.|  
+|**msdata:PrimaryKey**|`PrimaryKey="true"`이 있으면 **IsPrimaryKey** 제약 조건 속성이 **true**로 설정 되어 기본 키로 설정 됩니다. 기본 키에는 null 값을 사용할 수 없으므로 **Allowdbnull** 열 속성은 **false**로 설정 됩니다.|  
   
- 키 제약 조건이 지정된 스키마를 변환할 때 매핑 프로세스는 **AllowDBNull** 열 속성이 제약 조건의 각 열에 대해 **false로** 설정된 테이블에 고유한 제약 조건을 만듭니다. **키** 요소에 지정하지 `msdata:PrimaryKey="true"` 않은 경우 고유 제약 조건의 **IsPrimaryKey** 속성도 **false로** 설정됩니다. 이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
+ 키 제약 조건이 지정 된 스키마를 변환 하는 동안 매핑 프로세스에서는 제약 조건의 각 열에 대해 **Allowdbnull** column 속성이 **false** 로 설정 된 unique 제약 조건을 테이블에 만듭니다. Key 요소에을 지정 하지 않은 경우 unique 제약 조건의 **IsPrimaryKey** 속성도 **false** 로 설정 됩니다 `msdata:PrimaryKey="true"` . **key** 이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
   
- 다음 스키마 예제에서 **키** 요소는 **CustomerID** 요소의 키 제약 조건을 지정합니다.  
+ 다음 스키마 예제에서 **key** 요소는 **CustomerID** 요소에 대 한 키 제약 조건을 지정 합니다.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +55,13 @@ ms.locfileid: "79150937"
 </xs:schema>
 ```  
   
- **키** 요소는 **Customer** 요소의 **CustomerID** 자식 요소의 값에 고유한 값이 있어야 하며 null 값을 가질 수 없음을 지정합니다. XSD(XML 스키마 정의 언어) 스키마를 변환할 때 매핑 프로세스에서는 다음 테이블을 만듭니다.  
+ **Key** 요소는 **Customers** 요소의 **CustomerID** 자식 요소 값에 고유한 값이 있어야 하 고 null 값을 가질 수 없도록 지정 합니다. XSD(XML 스키마 정의 언어) 스키마를 변환할 때 매핑 프로세스에서는 다음 테이블을 만듭니다.  
   
 ```text  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML 스키마 매핑은 다음과 <xref:System.Data.DataSet>같이 **CustomerID** 열에 **고유 제약 조건을** 만듭니다. 여기에서는 편의를 위해 관련 속성만 보여 줍니다.  
+ XML 스키마 매핑은 다음과 같이 **CustomerID** 열에도 **UniqueConstraint** 를 만듭니다 <xref:System.Data.DataSet> . 여기에서는 편의를 위해 관련 속성만 보여 줍니다.  
   
 ```text  
       DataSetName: MyDataSet  
@@ -74,9 +75,9 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 생성된 **DataSet에서** 스키마가 **키** 요소에 지정하기 `msdata:PrimaryKey="true"` 때문에 **UniqueConstraint의** **IsPrimaryKey** 속성이 **true로** 설정됩니다.  
+ 생성 된 **데이터 집합** 에서 스키마가 키 요소에를 지정 하기 때문에 **UniqueConstraint** 의 **IsPrimaryKey** 속성은 **true** 로 설정 됩니다 `msdata:PrimaryKey="true"` **key** .  
   
- **DataSet에서** **고유 제약 조건의** **ConstraintName** 속성값은 스키마의 **키** 요소에 지정된 **msdata:ConstraintName** 특성의 값입니다.  
+ **데이터 집합** 에 있는 **UniqueConstraint** 의 **ConstraintName** 속성 값은 스키마의 **키** 요소에 지정 된 **msdata: ConstraintName** 특성의 값입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

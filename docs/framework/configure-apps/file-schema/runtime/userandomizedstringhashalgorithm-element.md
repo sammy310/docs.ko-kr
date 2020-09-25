@@ -8,14 +8,15 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 148d55c8b8a63737867c4bfdf3ab118dfdefd6f9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153779"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174097"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 요소
+
 공용 언어 런타임이 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산할지 여부를 결정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,32 +31,35 @@ ms.locfileid: "79153779"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|`0`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산 하는 데 사용 됩니다. 기본값입니다.|  
+|`0`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산 하는 데 사용 됩니다. 이것이 기본값입니다.|  
 |`1`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 합니다. 서로 다른 응용 프로그램 도메인의 동일한 문자열과 다른 프로세스의 해시 코드는 서로 다릅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  기본적으로 <xref:System.StringComparer> 클래스와 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드는 응용 프로그램 도메인 간에 일관 된 해시 코드를 생성 하는 단일 해싱 알고리즘을 사용 합니다. 이는 요소의 특성을로 설정 하는 것과 같습니다 `enabled` `<UseRandomizedStringHashAlgorithm>` `0` . .NET Framework 4에서 사용 되는 해시 알고리즘입니다.  
   
  <xref:System.StringComparer>클래스와 메서드는 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 응용 프로그램 도메인 별로 해시 코드를 계산 하는 다른 해싱 알고리즘을 사용할 수도 있습니다. 따라서 동일한 문자열의 해시 코드는 응용 프로그램 도메인에 따라 달라 집니다. 이 기능은 옵트인 (opt in) 기능입니다. 이를 활용 하려면 요소의 특성을로 설정 해야 합니다 `enabled` `<UseRandomizedStringHashAlgorithm>` `1` .  
@@ -63,6 +67,7 @@ ms.locfileid: "79153779"
  해시 테이블의 문자열 조회는 일반적으로 O (1) 연산입니다. 그러나 많은 수의 충돌이 발생 하면 조회는 O (n<sup>2</sup>) 작업이 될 수 있습니다. 구성 요소를 사용 하 여 `<UseRandomizedStringHashAlgorithm>` 응용 프로그램 도메인당 임의의 해싱 알고리즘을 생성할 수 있습니다 .이는 특히 해시 코드를 계산 하는 키가 사용자의 데이터 입력을 기반으로 하는 경우 잠재적 충돌 수를 제한 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `DisplayString` 전용 문자열 상수를 포함 하는 클래스를 정의 합니다 `s` . 해당 값은 "This is the string"입니다. 메서드를 실행하는 애플리케이션 도메인의 이름과 함께 문자열 값 및 해시 코드를 표시하는 `ShowStringHashCode` 메서드도 포함합니다.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]

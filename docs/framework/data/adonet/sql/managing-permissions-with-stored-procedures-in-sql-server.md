@@ -3,17 +3,19 @@ title: SQL Server에서 저장 프로시저를 사용하여 권한 관리
 description: 저장 프로시저 또는 사용자 정의 함수를 사용 하 여 액세스를 구현 하 여 데이터 및 데이터베이스 개체에 대 한 액세스를 제한 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 44f6a0c3ca6b913c8998c4e5ddb60eab2b64e71b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286290"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172725"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저를 사용하여 권한 관리
+
 데이터베이스 주변을 방어하는 여러 줄을 작성하는 한 가지 방법은 저장 프로시저 또는 사용자 정의 함수를 사용하여 모든 데이터 액세스를 구현하는 것입니다. 테이블과 같은 원본 개체에 대한 모든 권한을 취소하거나 거부하고 저장 프로시저에 EXECUTE 권한을 부여합니다. 그러면 효율적으로 데이터 및 데이터베이스 개체 주변에 보안 경계를 만듭니다.  
   
 ## <a name="stored-procedure-benefits"></a>저장 프로시저의 장점  
+
  저장 프로시저에는 다음과 같은 장점이 있습니다.  
   
 - 데이터 논리 및 비즈니스 규칙을 캡슐화하여 개발자 및 데이터베이스 관리자가 의도하는 방식으로만 사용자가 데이터 및 개체에 액세스할 수 있습니다.  
@@ -31,9 +33,11 @@ ms.locfileid: "84286290"
 - 여러 작업을 하나의 프로시저 호출로 결합하므로 저장 프로시저는 네트워크 트래픽을 줄여 줍니다.  
   
 ## <a name="stored-procedure-execution"></a>저장 프로시저 실행  
+
  저장 프로시저는 소유권 체인의 장점을 활용하여 데이터에 대한 액세스를 제공하므로 사용자는 데이터베이스 개체에 액세스하기 위해 명시적 권한을 가질 필요가 없습니다. 소유권 체인은 순차적으로 서로 액세스하는 개체가 동일한 사용자에 의해 소유될 때 발생합니다. 예를 들어 저장 프로시저가 다른 저장 프로시저를 호출할 수 있으며 여러 테이블에 액세스할 수 있습니다. 실행 체인에 있는 모든 개체의 소유자가 동일한 경우 SQL Server는 호출자의 다른 개체에 대한 권한이 아닌 호출자에 대한 EXECUTE 권한만 확인합니다. 따라서 저장 프로시저에 EXECUTE 권한만 부여해야 하며 원본 테이블에 대한 모든 권한을 취소하거나 거부할 수 있습니다.  
   
 ## <a name="best-practices"></a>모범 사례  
+
  저장 프로시저를 작성하는 것만으로 애플리케이션이 충분히 보호되는 것은 아닙니다. 다음과 같은 잠재적인 보안 허점을 고려해야 합니다.  
   
 - 저장 프로시저에서 데이터에 액세스하려는 데이터베이스 역할에 대해 EXECUTE 권한을 부여합니다.  
@@ -51,9 +55,10 @@ ms.locfileid: "84286290"
 - 동적 SQL은 반드시 필요한 경우에만 사용하세요. 입력 문자열에서 문자열 값을 구분하고 구분 기호가 생기지 않도록 Transact-SQL QUOTENAME() 함수를 사용합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
+
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](/sql/relational-databases/security/sql-injection)|문서에서는 저장 프로시저를 만드는 방법과 SQL 삽입이 작동 하는 방식을 설명 합니다.|  
   

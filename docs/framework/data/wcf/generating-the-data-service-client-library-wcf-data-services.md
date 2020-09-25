@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545809"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172621"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
+
 OData (Open Data Protocol)를 구현 하는 데이터 서비스는 OData 피드에서 노출 하는 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수 있습니다. 자세한 내용은 [OData: 개요](https://www.odata.org/documentation/odata-version-2-0/overview/) 문서의 서비스 메타 데이터 문서 섹션을 참조 하세요. Visual Studio의 **서비스 참조 추가** 대화 상자를 사용 하 여 OData 기반 서비스에 대 한 참조를 추가할 수 있습니다. 이 도구를 사용 하 여 클라이언트 프로젝트의 OData 피드에서 반환 하는 메타 데이터에 대 한 참조를 추가 하는 경우 다음 작업을 수행 합니다.  
   
 - 데이터 서비스에서 서비스 메타데이터 문서를 요청하고 반환된 메타데이터를 해석합니다.  
@@ -32,6 +33,7 @@ OData (Open Data Protocol)를 구현 하는 데이터 서비스는 OData 피드�
  클라이언트 데이터 서비스 클래스는 명령 프롬프트에서 [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) 도구를 사용 하 여 생성할 수도 있습니다. 자세한 내용은 [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)을 참조 하세요.  
   
 ## <a name="client-data-type-mapping"></a>클라이언트 데이터 형식 매핑  
+
  Visual Studio 또는 도구에서 **서비스 참조 추가** 대화 상자를 사용 하 여 `DataSvcUtil.exe` OData 피드를 기반으로 하는 클라이언트 데이터 클래스를 생성 하는 경우 .NET Framework 데이터 형식은 다음과 같이 데이터 모델의 기본 형식에 매핑됩니다.  
   
 |데이터 모델 형식|.NET Framework 데이터 형식|  
@@ -52,7 +54,7 @@ OData (Open Data Protocol)를 구현 하는 데이터 서비스는 OData 피드�
   
  자세한 내용은 [OData: Overview](https://www.odata.org/documentation/odata-version-2-0/overview/) 문서에서 기본 데이터 형식 섹션을 참조 하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
 - [빠른 시작](quickstart-wcf-data-services.md)

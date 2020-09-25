@@ -1,15 +1,16 @@
 ---
-title: <clear>of <claimTypeRequirements> 요소
+title: <clear> of <claimTypeRequirements> 요소
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: 01f101f7d0dd5da6a834a4ffb2c7e09df0e23cd8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa94a012da11bcec6fb5fe270ad9f3574f88e6d7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400522"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172907"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a>\<clear>of \<claimTypeRequirements> 요소
+# <a name="clear-of-claimtyperequirements-element"></a>\<clear> of \<claimTypeRequirements> 요소
+
 페더레이션 자격 증명에서 제거할 모든 클레임의 형식을 지정합니다. 이를 통해 컬렉션이 빈 상태로 시작됩니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,17 +32,20 @@ ms.locfileid: "70400522"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|필요한 클레임 형식의 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.<br /><br /> 페더레이션 시나리오에서 서비스는 들어오는 자격 증명에 대한 요구 사항을 기술합니다. 예를 들어, 들어오는 자격 증명은 특정 집합의 클레임 형식이어야 합니다. 이 컬렉션의 각 요소는 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.|  
   

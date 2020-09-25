@@ -9,14 +9,15 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: eb27716ec7c2936f32a7e4d4c983d1e175c4d044
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6678a8fe7c6f962529f9d946b103b6224d58602
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504526"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174110"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> 요소(네트워크 설정)
+
 네트워크 리소스에 대 한 연결을 구성 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -39,11 +40,12 @@ ms.locfileid: "84504526"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|**특성**|**설명**|  
+|**Attribute**|**설명**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|인증서를 사용 하기 전에 시스템에서 인증서의 이름이 서버 호스트 이름과 일치 하는지 확인 해야 하는지 여부를 지정 합니다. 기본값은 `true`입니다.|  
 |`checkCertificateRevocationList`|인증서를 사용 하기 전에 시스템에서 인증서가 해지 되었는지 여부를 확인 해야 하는지 여부를 지정 합니다. 기본값은 `false`입니다.|  
@@ -54,6 +56,7 @@ ms.locfileid: "84504526"
 |`useNagleAlgorithm`|서비스 지점 관리자에서 제어 하는 연결에 Nagle 알고리즘을 사용할지 여부를 지정 합니다. 기본값은 `true`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -65,6 +68,7 @@ ms.locfileid: "84504526"
 ## <a name="remarks"></a>설명  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목

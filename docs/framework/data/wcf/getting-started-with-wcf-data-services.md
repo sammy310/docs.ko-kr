@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: b5cd3f447ff6121ca276878c163a382e598ce4a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 011d49688a1aa611ab2a3cfb314e03bb0b38b56d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545822"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172608"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services로 시작
+
 이 섹션의 항목에서는 OData (Open Data Protocol) 및 WCF Data Services를 사용 하 여 기본 기술을 설명 하 여 OData 피드를 노출 하 고 사용 하는 방법을 신속 하 게 이해 하는 데 도움이 됩니다. 이 섹션에서는 개념 콘텐츠와 [빠른](quickstart-wcf-data-services.md) 시작 자습서를 모두 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  다음 항목에서는 WCF Data Services를 사용 하 여 데이터 서비스를 만드는 방법을 설명 합니다.  
   
  [서비스로 데이터 공개](exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -35,7 +37,8 @@ ms.locfileid: "90545822"
  [리소스](wcf-data-services-resources.md)  
  WCF Data Services 및 OData 리소스에 대 한 링크를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [WCF Data Services(Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  [시작](../adonet/ef/getting-started.md)

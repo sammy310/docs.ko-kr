@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150783"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173746"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 세트 동기화
-이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예제는 원본 XML 문서의 일부만 일치하는 최소화된 스키마를 사용하여 **DataSet을** 만듭니다. 이 예제에서는 **XmlDataDocument를** 사용하여 원본 XML 문서의 충실도를 유지하여 **데이터 집합을** 사용하여 XML 문서의 하위 집합을 노출할 수 있습니다.  
+
+이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예에서는 소스 XML 문서의 일부에만 일치 하는 최소화 된 스키마를 사용 하 여 **데이터 집합** 을 만듭니다. 이 예에서는 **XmlDataDocument** 를 사용 하 여 원본 xml 문서의 충실도를 유지 합니다 .이를 통해 **데이터 집합** 을 사용 하 여 xml 문서의 하위 집합을 노출할 수 있습니다.  
   
  다음 XML 문서에는 고객 정보, 주문한 품목 및 배송 정보 등 구매 주문과 관련된 모든 정보가 들어 있습니다.  
   
@@ -109,9 +110,9 @@ ms.locfileid: "79150783"
 </PurchaseOrder>  
 ```  
   
- 앞의 XML 문서에 포함된 구매 주문 정보 처리 단계는 회사의 현재 재고품으로 주문을 채우기 위한 것입니다. 회사 창고에서 주문을 채우는 직원은 구매 주문의 전체 내용을 확인할 필요가 없으며, 해당 주문에 대한 제품 정보만 확인하면 됩니다. XML 문서에서 제품 정보만 노출하려면 주문한 제품 및 수량에 매핑되는 XML 스키마 정의 언어(XSD) 스키마로 작성된 스키마를 사용하여 강력하게 입력된 **DataSet을** 만듭니다. 강력하게 입력된 **DataSet** 개체에 대한 자세한 내용은 [입력된 DataSet](typed-datasets.md)을 참조하십시오.  
+ 앞의 XML 문서에 포함된 구매 주문 정보 처리 단계는 회사의 현재 재고품으로 주문을 채우기 위한 것입니다. 회사 창고에서 주문을 채우는 직원은 구매 주문의 전체 내용을 확인할 필요가 없으며, 해당 주문에 대한 제품 정보만 확인하면 됩니다. XML 문서의 제품 정보만 표시 하려면 XSD (XML 스키마 정의 언어) 스키마로 작성 된 스키마를 사용 하 여 주문 된 제품 및 수량에 매핑되는 강력한 형식의 **데이터 집합** 을 만듭니다. 강력한 형식의 **데이터 집합** 개체에 대 한 자세한 내용은 [형식화 된 데이터](typed-datasets.md)집합을 참조 하세요.  
   
- 다음 코드는 이 샘플에 대해 강력하게 입력된 **DataSet이** 생성되는 스키마를 보여 주며, 이 에 대해 강력하게 입력된 데이터 집합을 보여 주며, 이 에 대해  
+ 다음 코드에서는이 샘플에 대해 강력한 형식의 **데이터 집합** 을 생성 하는 스키마를 보여 줍니다.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +158,11 @@ ms.locfileid: "79150783"
 </xs:schema>  
 ```  
   
- 원래 XML 문서의 **OrderDetails** 및 **제품** 요소의 정보만 **DataSet의**스키마에 포함됩니다. **데이터 집합을** **XmlDataDocument와** 동기화하면 **데이터 집합에** 포함되지 않은 요소가 XML 문서와 함께 유지됩니다.  
+ 원래 XML 문서의 **OrderDetails** 및 **Products** 요소에 있는 정보만 **데이터 집합**에 대 한 스키마에 포함 됩니다. **데이터 집합** 을 **XmlDataDocument** 와 동기화 하면 **데이터 집합** 에 포함 되지 않은 요소가 XML 문서와 함께 유지 됩니다.  
   
- XML 스키마에서 생성된 강력한 형식의 데이터 **집합(Northwind.FillOrder의**네임스페이스)을 사용하면 원본 XML 문서의 일부를 원본 XML 문서에서 로드된 **XmlDataDocument와** **데이터 집합을** 동기화하여 노출할 수 있습니다. **DataSet** 스키마에서 생성된 **DataSet에는** 구조체가 포함되어 있지만 데이터는 포함되어 있지 않습니다. **XmlDataDocument에**XML을 로드하면 데이터가 채워져 있습니다. 이미 데이터가 포함된 **DataSet과** 동기화된 **XmlDataDocument를** 로드하려고 하면 예외가 throw됩니다.  
+ XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument **의 네임**스페이스 포함)을 사용 하면 **데이터 집합** 을 원본 xml 문서에서 로드 된 **XmlDataDocument** 와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument**에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
   
- 데이터 **집합(및** **XmlDataDocument)이**업데이트된 후 **XmlDataDocument는** 아래와 같이 **데이터 집합에서** 무시되는 요소를 그대로 사용하여 수정된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
+ **데이터 집합** (및 **XmlDataDocument**)을 업데이트 한 **후에는** 아래와 같이 **데이터 집합** 에서 무시 된 요소가 그대로 남아 있는 수정 된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
   
 ```vb  
 Imports System  
@@ -231,7 +232,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 개요](../ado-net-overview.md)
