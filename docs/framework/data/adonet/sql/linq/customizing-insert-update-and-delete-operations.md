@@ -2,14 +2,15 @@
 title: 삽입, 업데이트 및 삭제 작업을 사용자 지정
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: ed3de95a8224f0b4d8f3d5d913274417a6879942
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4b846d1e1f737cec85ecda75df5e3f66982def62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247607"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177347"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>삽입, 업데이트 및 삭제 작업을 사용자 지정
+
 기본적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 동적 SQL을 생성하여 삽입, 읽기, 업데이트 및 삭제 작업을 수행합니다. 그러나 실제로는 대개 비즈니스 요구에 맞게 애플리케이션을 사용자 지정합니다.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ ms.locfileid: "70247607"
  이 항목의 단원에서는 사용자 애플리케이션에서 삽입, 읽기, 업데이트, 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 기술을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [작업 사용자 지정: 개요](customizing-operations-overview.md)  
  삽입, 읽기, 업데이트 및 삭제 작업을 사용자 지정하도록 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 제공하는 다양한 기술을 설명합니다.  
   

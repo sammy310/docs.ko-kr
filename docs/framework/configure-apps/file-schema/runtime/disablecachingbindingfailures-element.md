@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c9e608bfd54b641564a9095076455e10dd8653fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117493"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176125"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> 요소
+
 검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정할지 여부를 지정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,32 +32,35 @@ ms.locfileid: "73117493"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |사용|필수 특성입니다.<br /><br /> 검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정 하지 마십시오. 이는 .NET Framework 버전 2.0부터 시작 하는 기본 바인딩 동작입니다.|  
 |1|검색을 통해 어셈블리를 찾을 수 없기 때문에 발생 하는 바인딩 실패의 캐싱을 사용 하지 않도록 설정 합니다. 이 설정은 .NET Framework 버전 1.1의 바인딩 동작으로 되돌립니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  .NET Framework 버전 2.0부터 어셈블리를 로드 하는 기본 동작은 모든 바인딩과 로드 오류를 캐시 하는 것입니다. 즉, 어셈블리를 로드 하지 못한 경우 어셈블리를 찾지 않고도 동일한 어셈블리를 로드 하는 후속 요청이 즉시 실패 합니다. 이 요소는 어셈블리를 검색 경로에서 찾을 수 없기 때문에 발생 하는 바인딩 실패에 대 한 기본 동작을 사용 하지 않도록 설정 합니다. 이러한 오류는 throw <xref:System.IO.FileNotFoundException> 됩니다.  
   
  일부 바인딩 및 로드 오류는이 요소의 영향을 받지 않으며 항상 캐시 됩니다. 이러한 오류는 어셈블리를 찾았지만 로드할 수 없기 때문에 발생 합니다. <xref:System.BadImageFormatException>또는를 throw <xref:System.IO.FileLoadException> 합니다. 다음 목록에 이러한 오류의 몇 가지 예가 포함 되어 있습니다.  
@@ -68,6 +72,7 @@ ms.locfileid: "73117493"
 - 로드 하려는 하나 이상의 어셈블리 버전이 검색 경로에 있지만 요청 하는 특정 버전이 검색 경로에 없는 경우 올바른 버전이 검색 경로로 이동 되더라도 이후 버전의 로드 시도는 실패 하 게 됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 어셈블리를 검색 하 여 찾을 수 없기 때문에 발생 하는 어셈블리 바인딩 실패의 캐싱을 사용 하지 않도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  

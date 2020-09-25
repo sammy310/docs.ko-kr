@@ -2,17 +2,19 @@
 title: 시작(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 7ad81e6187351c5c1d5b98766ce69db4755e7a90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ac75677bcb5c23d914993a4487be7649cc49073
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795024"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177438"
 ---
 # <a name="getting-started-linq-to-dataset"></a>시작(LINQ to DataSet)
+
 이 섹션에서는 LINQ to DataSet 프로그래밍에 대 한 소개 정보를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [LINQ to DataSet 개요](linq-to-dataset-overview.md)  
  LINQ to DataSet에 대 한 개념적인 개요를 제공 합니다.  
   
@@ -25,14 +27,15 @@ ms.locfileid: "70795024"
  [방법: Visual Studio에서 LINQ to DataSet 프로젝트 만들기](how-to-create-a-linq-to-dataset-project-in-vs.md)  
  Visual Studio에서 LINQ to DataSet 프로젝트를 만드는 방법에 대 한 정보를 제공 합니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
+
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  
   
  <xref:System.Data.DataTableExtensions>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [LINQ 및 ADO.NET](linq-and-ado-net.md)
 - [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  

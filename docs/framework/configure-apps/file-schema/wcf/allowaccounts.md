@@ -2,14 +2,15 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 74b9d51b7400469c96fc9c8b36e4b0fb1d46969b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3432d33c0cd65af03d2b1ac1302ca2c8ff3e0f43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398412"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201644"
 ---
 # \<allowAccounts>
+
 Windows Communication Foundation (WCF) 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 하는 구성 요소 컬렉션을 포함 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,22 +27,24 @@ Windows Communication Foundation (WCF) 서비스를 호스팅하고 공유 서�
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |[\<add>](add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 추가 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
-|[\<net.pipe>](net-pipe.md)디스크나[\<net.tcp>](net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
+|[\<net.pipe>](net-pipe.md) 또는 [\<net.tcp>](net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 

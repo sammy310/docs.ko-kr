@@ -2,14 +2,15 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738756"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181315"
 ---
 # \<reliableSession>
+
 WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |acknowledgementInterval|채널이 해당 시점까지 받은 메시지에 대한 승인을 보내기 위해 대기하는 최대 시간 간격이 포함된 <xref:System.TimeSpan>입니다. 기본값은 00:00:0.2입니다.|  
 |flowControlEnabled|WS-Reliable Messaging에 대한 Microsoft 고유의 흐름 제어 구현인 고급 흐름 제어를 활성화할지 여부를 나타내는 부울 값입니다. 기본값은 `true`입니다.|  
@@ -49,15 +51,17 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
 |reliableMessagingVersion|사용할 WS-ReliableMessaging 버전을 지정하는 <xref:System.ServiceModel.ReliableMessagingVersion>의 유효한 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  신뢰할 수 있는 세션은 신뢰할 수 있는 메시징 및 세션 기능을 제공합니다. 신뢰할 수 있는 메시징 기능은 실패 시 통신을 다시 시도하고 메시지 차례로 도착과 같은 배달 보증을 지정할 수 있게 합니다. 세션은 호출 간에 클라이언트의 상태를 유지합니다. 이 요소는 메시지를 순서대로 배달하는 기능을 선택적으로도 제공합니다. 이 구현 된 세션은 SOAP 및 전송 중개자를 통과할 수 있습니다.  
   
  각 바인딩 요소는 메시지를 보내거나 받을 때의 처리 단계를 나타냅니다. 런타임에 바인딩 요소는 메시지를 보내고 받는 데 필요한 송신 및 들어오는 채널 스택을 빌드하는 데 필요한 채널 팩터리 및 수신기를 만듭니다. 는 `reliableSession` 끝점 간에 신뢰할 수 있는 세션을 설정 하 고이 세션의 동작을 구성할 수 있는 선택적 계층을 스택에 제공 합니다.  
@@ -65,6 +69,7 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
  자세한 내용은 [신뢰할 수 있는 세션](../../../wcf/feature-details/reliable-sessions.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 다양한 전송 및 메시지 인코딩 요소, 특히 신뢰할 수 있는 세션 사용 등을 통해 사용자 지정 바인딩을 구성하는 방법을 보여 줍니다. 이렇게 하면 클라이언트 상태가 유지되며 차례로 배달 보증이 지정됩니다. 이 기능은 클라이언트 및 서비스의 애플리케이션 구성 파일에서 구성됩니다. 예제에서는 서비스 구성을 보여 줍니다.  
   
 ```xml  
@@ -126,7 +131,7 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
 - [신뢰할 수 있는 세션](../../../wcf/feature-details/reliable-sessions.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
