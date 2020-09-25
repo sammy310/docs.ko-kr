@@ -2,14 +2,15 @@
 title: 속성(property)
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: d1e20a6570c458041ec5d8ececbfa291ca9e4612
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6aeb29c5aa608987466ec858416a4ac141ff1da3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735403"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180922"
 ---
 # <a name="property"></a>속성(property)
+
 *속성* 은 [엔터티 형식](entity-type.md) 및 [복합 형식의](complex-type.md)기본적인 구성 요소입니다. 속성은 엔터티 형식 인스턴스 또는 복합 형식 인스턴스에 포함될 데이터의 모양과 특징을 정의합니다. 개념적 모델의 속성은 클래스에 정의된 속성과 유사합니다. 클래스의 속성이 클래스의 모양을 정의하고 개체에 대한 정보를 전달하는 것과 동일한 방식으로, 개념적 모델의 속성은 엔터티 형식의 모양을 정의하고 엔터티 형식 인스턴스에 대한 정보를 전달합니다.  
   
 > [!NOTE]
@@ -17,11 +18,11 @@ ms.locfileid: "73735403"
   
  속성 정의에는 다음 정보가 들어 있습니다.  
   
-- 속성 이름 (필수)  
+- 속성 이름입니다. (필수)  
   
 - 속성 형식 (필수)  
   
-- [패싯](facet.md)집합입니다. 이 매개 변수는 선택 사항입니다.  
+- [패싯](facet.md)집합입니다. (선택 사항)  
   
  속성에는 기본 데이터(예: 문자열, 정수 또는 부울 값) 또는 구조적 데이터(예: 복합 형식)가 포함될 수 있습니다. 기본 형식인 속성을 스칼라 속성이라고도 합니다. 자세한 내용은 [엔터티 데이터 모델: 기본 데이터 형식](entity-data-model-primitive-data-types.md)을 참조 하세요.  
   
@@ -29,6 +30,7 @@ ms.locfileid: "73735403"
 > 복합 형식 자체에 복합 형식인 속성이 있을 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. 각 속성의 형식 정보는 다이어그램에 표시되지 않지만 각 엔터티 형식에는 여러 속성이 있습니다. [엔터티 키](entity-key.md) 인 속성은 (키)로 표시 됩니다.  
   
  ![세 개의 엔터티 형식이 있는 예제 모델](./media/property/example-model-three-entity-types.gif)  
@@ -41,7 +43,7 @@ ms.locfileid: "73735403"
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](entity-data-model.md)

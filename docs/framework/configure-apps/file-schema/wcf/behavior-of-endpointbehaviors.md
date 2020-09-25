@@ -2,14 +2,15 @@
 title: <endpointBehaviors>의 <behavior>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 489678a5adeae3965acae90a847c4b087478354d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d191b968e1c3fd1db0837ba7e03f210a1b00062d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140805"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201501"
 ---
 # <a name="behavior-of-endpointbehaviors"></a>\<endpointBehaviors>의 \<behavior>
+
 ph x="1" /&gt; 요소는 엔드포인트의 동작에 대한 설정 컬렉션을 포함합니다. 각 동작은 해당 `name`으로 인덱싱됩니다. 엔드포인트는 이 이름을 통해 각 동작에 연결할 수 있습니다. .NET Framework 4부터 바인딩과 동작은 이름을 가질 필요가 없습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ ph x="1" /&gt; 요소는 엔드포인트의 동작에 대한 설정 컬렉션을
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -41,7 +43,7 @@ ph x="1" /&gt; 요소는 엔드포인트의 동작에 대한 설정 컬렉션을
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|클라이언트를 서비스에 인증하는 데 사용되는 자격 증명을 지정합니다.|  
 |[\<callbackDebug>](callbackdebug.md)|WCF (Windows Communication Foundation) 콜백 개체에 대 한 서비스 디버깅을 지정 합니다.|  
@@ -58,6 +60,6 @@ ph x="1" /&gt; 요소는 엔드포인트의 동작에 대한 설정 컬렉션을
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<endpointBehaviors>](endpointbehaviors.md)|엔드포인트 동작 요소의 컬렉션입니다.|

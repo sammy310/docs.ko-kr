@@ -2,17 +2,19 @@
 title: DataTable에서 데이터 조작
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786158"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201332"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable에서 데이터 조작
+
 <xref:System.Data.DataTable>에서 <xref:System.Data.DataSet>을 만든 후에는 데이터베이스에서 테이블을 사용할 때와 동일하게 작업을 수행할 수 있습니다. 테이블에서 데이터를 추가, 확인, 편집 및 삭제하고, 오류 및 이벤트를 모니터링하며, 테이블에서 데이터를 쿼리할 수 있습니다. **DataTable**에서 데이터를 수정 하는 경우 변경 내용이 정확한 지 여부를 확인 하 고 프로그래밍 방식으로 변경 내용을 수락할지 거부할지를 결정할 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [DataTable에 데이터 추가](adding-data-to-a-datatable.md)  
  새 행을 만들어 테이블에 추가하는 방법을 설명합니다.  
   
@@ -37,8 +39,8 @@ ms.locfileid: "70786158"
  [AcceptChanges 및 RejectChanges](acceptchanges-and-rejectchanges.md)  
  행의 변경된 내용을 승인하거나 거부하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [DataTable](datatables.md)
+- [DataTables](datatables.md)
 - [DataTable 이벤트 처리](handling-datatable-events.md)
 - [ADO.NET 개요](../ado-net-overview.md)

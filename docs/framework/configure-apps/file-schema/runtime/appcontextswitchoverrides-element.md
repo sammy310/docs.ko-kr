@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552286"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176151"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 요소
 
@@ -29,38 +29,41 @@ ms.locfileid: "90552286"
 ```
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`value`|필수 특성입니다.<br /><br /> 하나 이상의 스위치 이름 및 연결 된 부울 값을 정의 합니다.|
 
 ### <a name="value-attribute"></a>value 특성
 
-|값|Description|
+|Value|설명|
 |-----------|-----------------|
 |"name = value"|값 (또는)과 함께 미리 정의 된 스위치 이름 `true` `false` 입니다. 여러 스위치 이름/값 쌍은 세미콜론 (";")으로 구분 됩니다. .NET Framework에서 지 원하는 미리 정의 된 스위치 이름 목록은 설명 섹션을 참조 하세요.|
 
 ### <a name="child-elements"></a>자식 요소
+
  없음
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|
 
 ## <a name="remarks"></a>설명
+
  .NET Framework 4.6부터 `<AppContextSwitchOverrides>` 구성 파일의 요소를 사용 하면 API 호출자가 앱이 새로운 기능을 활용 하거나 라이브러리의 이전 버전과의 호환성을 유지할 수 있는지 여부를 확인할 수 있습니다. 예를 들어 두 라이브러리 버전 간에 API의 동작이 변경 된 경우 `<AppContextSwitchOverrides>` 요소를 사용 하면 해당 api의 호출자가 새 기능을 지 원하는 라이브러리 버전에서 새로운 동작을 옵트아웃 (opt out) 할 수 있습니다. .NET Framework에서 Api를 호출 하는 앱의 경우 `<AppContextSwitchOverrides>` 요소는 해당 앱이 해당 기능을 포함 하는 .NET Framework 버전에서 실행 되는 경우 새 기능을 옵트인 하기 위해 앱이 이전 버전의 .NET Framework를 대상으로 하는 호출자를 허용할 수도 있습니다.
 
  `value`요소의 특성은 `<AppContextSwitchOverrides>` 하나 이상의 세미콜론으로 구분 된 이름/값 쌍으로 구성 된 단일 문자열로 구성 됩니다.  각 이름은 호환성 스위치를 식별 하 고 해당 값은 `true` `false` 스위치가 설정 되었는지 여부를 나타내는 부울 (또는)입니다. 기본적으로 스위치는 이며 `false` 라이브러리는 새로운 기능을 제공 합니다. 스위치가 설정 된 경우 (즉, 해당 값이 인 경우)에만 이전 기능을 제공 합니다 `true` . 이렇게 하면 이전 동작에 의존 하는 호출자가 새 기능을 옵트아웃 (opt out) 할 수 있도록 하는 동시에 라이브러리에서 기존 API에 대 한 새로운 동작을 제공할 수 있습니다.
 
 .NET Framework는 다음 스위치를 지원 합니다.
 
-|스위치 이름|Description|도입|
+|스위치 이름|설명|도입|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation에서 컨트롤 레이아웃에 대해 레거시 알고리즘을 사용할지 여부를 제어 합니다. 자세한 내용은 [완화: WPF 레이아웃](../../../migration-guide/mitigation-wpf-layout.md)을 참조하십시오.|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager에서 패키지의 일부에 서명 하는 데 사용 되는 기본 알고리즘이 SHA1 또는 s h a 1 인지 여부를 제어 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
@@ -176,7 +179,7 @@ ms.locfileid: "90552286"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 4.6 이상에서 새로운 동작 완화](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>

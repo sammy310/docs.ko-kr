@@ -5,30 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149546"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194728"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter 이벤트 처리
+
 ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터가 변경되었을 때 응답하는 데 사용할 수 있는 세 가지 이벤트를 제공합니다. 다음 표에서는 `DataAdapter` 이벤트를 보여 줍니다.  
   
-|행사|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |`RowUpdating`|`Update` 메서드 중 하나를 호출하여 행에 대해 UPDATE, INSERT 또는 DELETE 작업을 시작하려고 합니다.|  
 |`RowUpdated`|`Update` 메서드 중 하나를 호출하여 행에 대한 UPDATE, INSERT 또는 DELETE 작업을 완료합니다.|  
 |`FillError`|`Fill` 작업 중에 오류가 발생했습니다.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 및 RowUpdated  
+
  `RowUpdating`은 <xref:System.Data.DataSet>의 행 업데이트가 데이터 소스에서 처리되기 전에 발생합니다. `RowUpdated`는 `DataSet`의 행 업데이트가 데이터 소스에서 처리된 후에 발생합니다. 결과적으로 `RowUpdating`을 사용하면 업데이트가 발생하기 전에 업데이트 동작을 수정하거나, 업데이트가 발생할 경우 추가 처리 방법을 제공하거나, 업데이트된 행에 대한 참조를 유지하거나, 현재 업데이트를 취소하고 일괄 프로세스로 나중에 처리하도록 예약하는 것과 같은 작업을 수행할 수 있습니다. `RowUpdated`는 업데이트 중에 발생하는 오류와 예외에 응답하는 데 유용합니다. 재시도 논리 등은 물론이고 오류 정보도 에 추가할 수 있습니다.  
   
  <xref:System.Data.Common.RowUpdatingEventArgs> 및 <xref:System.Data.Common.RowUpdatedEventArgs> 이벤트로 전달되는 `RowUpdating` 및 `RowUpdated` 인수에는 업데이트를 수행하는 데 사용되는 `Command` 개체를 참조하는 `Command` 속성, 업데이트된 정보가 포함된 `Row` 개체를 참조하는 `DataRow` 속성, 수행되는 업데이트 형식을 나타내는 `StatementType` 속성, `TableMapping` 속성(해당되는 경우) 및 작업의 `Status` 속성이 있습니다.  
   
   속성을 사용하면 작업 중에 오류가 발생했는지 확인하여 필요할 경우 현재 행 및 결과 행에 대한 동작을 제어할 수 있습니다. 이벤트가 발생할 때 `Status` 속성은 `Continue` 또는 `ErrorsOccurred`와 같습니다. 다음 표에서는 업데이트하는 동안 후속 동작을 제어하기 위해 설정할 수 있는  속성 값을 보여 줍니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |`Continue`|업데이트 작업을 계속합니다.|  
 |`ErrorsOccurred`|업데이트 작업을 중단하고 예외를 throw합니다.|  
@@ -39,7 +41,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터�
   
  또한  속성을 사용하여 업데이트된 행의 오류를 처리할 수 있습니다. `DataAdapter.ContinueUpdateOnError`가 `true`인 경우 행을 업데이트한 결과로 예외가 throw되면 예외 텍스트가 특정 행의 `RowError` 정보에 배치되고 예외가 throw되지 않은 상태에서 계속 처리됩니다. 이렇게 하면 오류 발생 시 이에 응답할 수 있도록 하는 와는 달리, 가 완료될 때 오류에 응답할 수 있습니다.  
   
- 다음 코드 샘플에서는 이벤트 처리기를 추가 및 제거하는 방법을 보여 줍니다.  이벤트 처리기는 타임스탬프를 사용하여 삭제된 모든 레코드의 로그를 기록합니다. 이벤트 `RowUpdated` `RowError` 처리기는 `DataSet`에서 행의 속성에 오류 정보를 추가하고 예외를 억제하고 처리를 계속합니다(의 `ContinueUpdateOnError`  =  `true`동작 미러링).  
+ 다음 코드 샘플에서는 이벤트 처리기를 추가 및 제거하는 방법을 보여 줍니다.  이벤트 처리기는 타임스탬프를 사용하여 삭제된 모든 레코드의 로그를 기록합니다. `RowUpdated`이벤트 처리기는에서 행의 속성에 오류 정보를 추가 하 고 예외를 표시 하지 `RowError` `DataSet` 않으며 처리 (의 동작 미러링)를 계속 `ContinueUpdateOnError`  =  `true` 합니다.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -125,13 +127,14 @@ protected static void OnRowUpdated(
 ```  
   
 ## <a name="fillerror"></a>FillError  
+
  는  작업 중에 오류가 발생하면  이벤트를 발생시킵니다. 이런 형식의 오류는 추가 중인 행의 데이터를 정밀도의 손실 없이 .NET Framework 형식으로 변환할 수 없을 때 흔히 발생합니다.  
   
   작업 중에 오류가 발생하면 현재 행이 에 추가되지 않습니다.  이벤트를 사용하여 오류를 해결하고 행을 추가하거나, 제외된 행을 무시하고  작업을 계속할 수 있습니다.  
   
   이벤트에 전달된 에는 오류에 응답하고 오류를 해결할 수 있는 몇 가지 속성이 포함될 수 있습니다. 다음 표에서는  개체의 속성을 보여 줍니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |`Errors`|발생한 `Exception`입니다.|  
 |`DataTable`|오류가 발생했을 때 채워지고 있던 `DataTable` 개체입니다.|  
@@ -188,8 +191,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>참고 항목
 
-- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [DataAdapters 및 DataReaders](dataadapters-and-datareaders.md)
 - [데이터 세트 이벤트 처리](./dataset-datatable-dataview/handling-dataset-events.md)
 - [DataTable 이벤트 처리](./dataset-datatable-dataview/handling-datatable-events.md)
-- [Events](../../../standard/events/index.md)
+- [이벤트](../../../standard/events/index.md)
 - [ADO.NET 개요](ado-net-overview.md)

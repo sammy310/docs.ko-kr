@@ -2,19 +2,21 @@
 title: 데이터 세트에서 XML 사용
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: ca04f524685e080be6af12a4df6eda585a908683
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e133da727887271af3bc5330a5779df4af58a37e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784261"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201189"
 ---
 # <a name="using-xml-in-a-dataset"></a>데이터 세트에서 XML 사용
+
 ADO.NET을 사용하면 XML 스트림이나 문서에서 <xref:System.Data.DataSet>을 채울 수 있습니다. XML 스트림이나 문서를 사용하여 데이터, 스키마 정보 또는 두 가지 모두를 <xref:System.Data.DataSet>에 제공할 수 있습니다. XML 스트림이나 문서에서 제공되는 정보를 <xref:System.Data.DataSet>에 있는 기존 데이터나 스키마 정보와 결합할 수 있습니다.  
   
  또한 ADO.NET을 사용하면 스키마 사용 여부에 관계없이 <xref:System.Data.DataSet>의 XML 표현을 만들어 다른 애플리케이션이나 XML 사용 플랫폼에서 사용할 수 있도록 HTTP를 통해 <xref:System.Data.DataSet>을 전송할 수 있습니다. <xref:System.Data.DataSet>의 XML 표현에서 데이터는 XML로 작성되며, 스키마는 XML 표현의 인라인에 포함되어 있는 경우 XSD(XML 스키마 정의 언어)를 사용하여 작성됩니다. XML 및 XML 스키마에서는 <xref:System.Data.DataSet>의 내용을 원격 클라이언트와 주고 받기에 알맞은 형식을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [DiffGram](diffgrams.md)  
  <xref:System.Data.DataSet>의 내용을 읽거나 쓰는 데 사용하는 XML 형식인 DiffGram에 대해 자세히 설명합니다.  
   
@@ -42,11 +44,12 @@ ADO.NET을 사용하면 XML 스트림이나 문서에서 <xref:System.Data.DataS
  [XML에서 데이터 세트 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)  
  XML 요소에서 유추할 때 만들어지는 <xref:System.Data.DataSet>의 관계형 구조 또는 스키마에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [ADO.NET 개요](../ado-net-overview.md)  
  ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 애플리케이션 데이터를 관리하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [DataSet, DataTable 및 DataView](index.md)
+- [DataSets, DataTables 및 DataViews](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

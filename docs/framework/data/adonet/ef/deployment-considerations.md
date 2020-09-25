@@ -2,14 +2,15 @@
 title: 배포 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542694"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181130"
 ---
 # <a name="deployment-considerations-entity-framework"></a>배포 고려 사항(Entity Framework)
+
 이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 애플리케이션 배포에 대한 정보를 제공합니다. Entity Framework에 대 한 자세한 내용은 [시작](getting-started.md)을 참조 하세요.  
   
  Entity Framework에서는 Visual Studio에서 개발을 용이하게 하는 통합된 도구 집합을 제공합니다. 자세한 내용은 [ADO.NET 엔터티 데이터 모델 Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))를 참조 하세요. 이 항목에서 Entity Framework 기반 애플리케이션을 배포하기 위해 특정 기술을 사용하는 방법을 설명하지는 않습니다.  
@@ -28,7 +29,7 @@ ms.locfileid: "90542694"
   
 - Entity Framework는 .NET Framework의 구성 요소이므로 .NET Framework 사용권 계약에 허용된 대로 애플리케이션과 함께 재배포할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET Entity Framework](index.md)
 - [개발 및 배포 고려 사항](development-and-deployment-considerations.md)
