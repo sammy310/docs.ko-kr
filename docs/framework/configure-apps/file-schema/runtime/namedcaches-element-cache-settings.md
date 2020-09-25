@@ -6,14 +6,15 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153960"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192401"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches> 요소(캐시 설정)
+
 명명 된 인스턴스에 대 한 구성 설정의 컬렉션을 지정 합니다 <xref:System.Runtime.Caching.MemoryCache> . 합니다 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> 하나 이상의 구성 설정의 컬렉션을 참조 하는 속성 `namedCaches` 구성 파일의 요소입니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,15 +30,17 @@ ms.locfileid: "79153960"
 </namedCaches>  
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`cacheMemoryLimitMegabytes`|인스턴스를 확장할 수 있는 최대 허용 크기 (mb)를 지정 하는 정수 값입니다 <xref:System.Runtime.Caching.MemoryCache> . 기본값은 0입니다. 즉, 클래스의 자동 크기 조정 추론은 <xref:System.Runtime.Caching.MemoryCache> 기본적으로 사용 됩니다.|  
 |`name`|캐시의 이름입니다.|  
@@ -46,7 +49,7 @@ ms.locfileid: "79153960"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-namedcaches.md)|메모리 캐시용으로 명명된 캐시를 `namedCaches` 컬렉션에 추가합니다.|  
 |[\<clear>](clear-element-for-namedcaches.md)|메모리 캐시에 대해 `namedCaches` 컬렉션을 지웁니다.|  
@@ -54,13 +57,14 @@ ms.locfileid: "79153960"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|  
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework에 기본 제공 되는 응용 프로그램에서 출력 캐싱을 구현할 수 있는 형식을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  Web.config 파일의 메모리 캐시 구성 섹션에는 `add` `remove` `clear` 컬렉션에 대 한, 및 특성을 포함할 수 있습니다 `namedCaches` . 각 `namedCaches` 항목은 특성에 의해 고유 하 게 식별 됩니다 `name` .  
   
  응용 프로그램 구성 파일의 정보를 참조 하 여 메모리 캐시 항목의 인스턴스를 검색할 수 있습니다. 기본적으로 기본 캐시 인스턴스만 구성 파일에 항목을 포함 합니다. 기본 캐시 인스턴스는 속성에서 반환 되는 인스턴스입니다 <xref:System.Runtime.Caching.MemoryCache.Default%2A> .  
@@ -68,6 +72,7 @@ ms.locfileid: "79153960"
  Name 특성을 "default"로 설정 하는 경우 요소는 기본 메모리 캐시 인스턴스를 사용 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `name` 특성을 "기본값"으로 설정 하 여 캐시 이름을 기본 캐시 항목 이름으로 설정 하는 방법을 보여 줍니다.  
   
  `cacheMemoryLimitMegabytes` 특성 및 `physicalMemoryPercentage` 특성은 0으로 설정됩니다. 이러한 특성을 0으로 설정 하면 클래스의 자동 크기 조정 추론을 사용 하는 것입니다 <xref:System.Runtime.Caching.MemoryCache> . 캐시 구현에서는 현재 메모리 부하가 절대 및 백분율 기반 메모리 제한과 2 분 마다 비교 됩니다.  
@@ -91,4 +96,4 @@ ms.locfileid: "79153960"
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<memoryCache>요소 (캐시 설정)](memorycache-element-cache-settings.md)
+- [\<memoryCache> 요소 (캐시 설정)](memorycache-element-cache-settings.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b7144b0a7004ba32b21cbc98513df574a5a9e1d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153414"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195183"
 ---
 # <a name="listeners-element-for-source"></a>\<source>에 대한 \<listeners> 요소
+
 의 컬렉션에서 수신기를 추가 하거나 제거 <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> 합니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절 한 대상으로 보냅니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -34,14 +35,16 @@ ms.locfileid: "79153414"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|`Listeners` 컬렉션에 수신기를 추가합니다.|  
 |[\<remove>](remove-element-for-listeners-for-source.md)|컬렉션에서 수신기를 제거 합니다 `Listeners` .|  
@@ -49,7 +52,7 @@ ms.locfileid: "79153414"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
@@ -59,9 +62,11 @@ ms.locfileid: "79153414"
 ## <a name="remarks"></a>설명  
   
 ## <a name="configuration-file"></a>구성 파일  
- 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
+
+ 이 요소는 컴퓨터 구성 파일 (Machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 요소를 사용 하 여 `<listeners>` 콘솔 추적 수신기를 소스에 추가 하 `mySource` 고 기본 추적 수신기를 제거 하는 방법을 보여 줍니다.  
   
 ```xml  

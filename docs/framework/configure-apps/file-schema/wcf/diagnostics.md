@@ -2,14 +2,15 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398047"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192271"
 ---
 # \<diagnostics>
+
 `diagnostics` 요소는 관리자가 런타임 검사 및 제어에 사용할 수 있는 설정을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,11 +42,12 @@ ms.locfileid: "70398047"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |etwProviderId|ETW 세션에 이벤트를 기록하는 이벤트 추적 공급자에 대한 식별자를 지정하는 문자열입니다.|  
 |performanceCounters|어셈블리에 대해 성능 카운터를 사용할 수 있는지 여부를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -Off: 성능 카운터를 사용할 수 없습니다.<br />-ServiceOnly:이 서비스와 관련 된 성능 카운터만 사용 됩니다.<br />-All: 성능 카운터를 런타임에 볼 수 있습니다.<br />-기본값: 단일 성능 카운터 인스턴스 _WCF_Admin 생성 됩니다. 이 인스턴스는 인프라에서 사용되는 SQM 데이터 컬렉션을 설정하는 데 사용됩니다. 이 인스턴스의 어떤 카운터 값도 업데이트되지 않으므로 0으로 남게 됩니다. 이것은 WCF에 대한 구성이 없을 경우 기본값입니다.|  
@@ -53,18 +55,19 @@ ms.locfileid: "70398047"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<endToEndTracing>](endtoendtracing.md)|서비스 애플리케이션 실행 중에 엔드투엔드 추적의 다양한 측면을 사용하거나 사용하지 않도록 설정할 수 있는 구성 요소입니다.|  
 |[\<messageLogging>](messagelogging.md)|WCF 메시지 로깅의 설정을 설명합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |serviceModel|모든 WCF 구성 요소의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `diagnostics` 섹션에서는 어셈블리에 있는 모든 서비스의 진단 설정을 정의합니다. 어셈블리에 서비스가 하나만 있는 경우가 아니라면 서비스 수준에서 별도의 진단 설정을 정의할 수 없습니다. 해당 섹션의 요구 사항에 따라 특성이 설정됩니다.  
   
 ## <a name="example"></a>예제  

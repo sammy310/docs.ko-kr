@@ -4,18 +4,19 @@ description: 분산 된 데이터 공유 응용 프로그램을 만들기 위해
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 503977ab2bef6f03ab13fab168319d350aad9471
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194572"
 ---
 # <a name="adonet"></a>ADO.NET
 
 ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다. ADO.NET은 분산된 데이터 공유 애플리케이션을 만들기 위한 다양한 구성 요소를 제공합니다. 또한 관계형, XML 및 애플리케이션 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다. ADO.NET은 애플리케이션, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ADO.NET의 새로운 기능](whats-new.md)  
  ADO.NET에 새로 추가된 기능을 소개합니다.  
   
@@ -46,7 +47,8 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [Oracle 및 ADO.NET](oracle-and-adonet.md)  
  .NET Framework Data Provider for Oracle과 관련된 기능 및 동작을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
+
  [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  C #을 사용 하 여 LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.  
   
@@ -62,7 +64,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [샘플 및 자습서](../../../samples-and-tutorials/index.md)  
  .NET 샘플 및 자습서의 목록을 제공 합니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET 개요](ado-net-overview.md)

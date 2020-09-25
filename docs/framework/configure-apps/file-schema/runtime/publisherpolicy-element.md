@@ -10,14 +10,15 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115853"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195261"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> 요소
+
 런타임이 게시자 정책을 적용할지를 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,17 +34,18 @@ ms.locfileid: "73115853"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`apply`|게시자 정책을 적용할지 여부를 지정 합니다.|  
   
 ## <a name="apply-attribute"></a>특성 적용  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |`yes`|게시자 정책을 적용 합니다. 이 값은 기본 설정입니다.|  
 |`no`|게시자 정책을 적용 하지 않습니다.|  
@@ -54,7 +56,7 @@ ms.locfileid: "73115853"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
@@ -62,6 +64,7 @@ ms.locfileid: "73115853"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  구성 요소 공급 업체에서 새 버전의 어셈블리를 출시 하는 경우 이전 버전을 사용 하는 응용 프로그램이 이제 새 버전을 사용 하도록 공급 업체에 게시자 정책을 포함할 수 있습니다. 특정 어셈블리에 대해 게시자 정책을 적용할지 여부를 지정 하려면 요소를 **\<publisherPolicy>** 요소에 배치 **\<dependentAssembly>** 합니다.  
   
  **Apply** 특성의 기본 설정은 **예**입니다. **Apply** 특성을 **no** 로 설정 하면 어셈블리의 모든 이전 **예** 설정이 무시 됩니다.  
@@ -69,6 +72,7 @@ ms.locfileid: "73115853"
  응용 프로그램 구성 파일의 요소를 사용 하 여 응용 프로그램에서 게시자 정책을 명시적으로 무시 하려면 권한이 필요 [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) 합니다. 에 플래그를 설정 하 여 사용 권한을 부여 합니다 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> . 자세한 내용은 [어셈블리 바인딩 리디렉션 보안 권한](../../assembly-binding-redirection-security-permission.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 어셈블리에 대 한 게시자 정책을 해제 `myAssembly` 합니다.  
   
 ```xml  
