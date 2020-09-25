@@ -3,14 +3,15 @@ title: DataAdapters 및 DataReaders
 description: 데이터베이스에서 데이터를 검색 하는 ADO.NET DataReader와 데이터 원본에서 데이터를 검색 하 고 데이터 집합을 채우는 DataAdapter에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2584f8b382dd90f2f8b4554663dc545b9ccceb62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286975"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177607"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters 및 DataReaders
+
 ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만 이동 가능한 읽기 전용 데이터 스트림을 검색할 수 있습니다. 결과는 쿼리가 실행 될 때 반환 되 고 **DataReader**의 **Read** 메서드를 사용 하 여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장 됩니다. **DataReader** 를 사용 하면 데이터를 사용할 수 있는 즉시 검색 하 고 (기본적으로) 한 번에 한 행만 메모리에 저장 하 여 시스템 오버 헤드를 줄임으로써 응용 프로그램 성능이 향상 될 수 있습니다.  
   
  <xref:System.Data.Common.DataAdapter>는 데이터 소스에서 데이터를 검색하고 <xref:System.Data.DataSet> 내의 테이블을 채우는 데 사용됩니다. `DataAdapter`는 `DataSet`의 변경 내용을 다시 데이터 소스에 적용합니다. `DataAdapter`는 .NET Framework 데이터 공급자의 `Connection` 개체를 사용하여 데이터 소스에 연결하며 `Command` 개체를 사용하여 데이터 소스에서 데이터를 검색하고 변경 내용을 데이터 소스에 적용합니다.  
@@ -18,6 +19,7 @@ ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만
  .NET Framework에 포함된 각 .NET Framework 데이터 공급자에는 <xref:System.Data.Common.DbDataReader> 및 <xref:System.Data.Common.DbDataAdapter> 개체가 있습니다. .NET Framework Data Provider for OLE DB에는 <xref:System.Data.OleDb.OleDbDataReader> 및 <xref:System.Data.OleDb.OleDbDataAdapter> 개체가 있고 .NET Framework Data Provider for SQL Server에는 <xref:System.Data.SqlClient.SqlDataReader> 및 <xref:System.Data.SqlClient.SqlDataAdapter> 개체가 있으며 .NET Framework Data Provider for ODBC에는 <xref:System.Data.Odbc.OdbcDataReader> 및 <xref:System.Data.Odbc.OdbcDataAdapter> 개체가 있고 .NET Framework Data Provider for Oracle에는 <xref:System.Data.OracleClient.OracleDataReader> 및 <xref:System.Data.OracleClient.OracleDataAdapter> 개체가 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [DataReader를 사용하여 데이터 검색](retrieving-data-using-a-datareader.md)  
  ADO.NET **DataReader** 개체와이 개체를 사용 하 여 데이터 소스에서 결과 스트림을 반환 하는 방법에 대해 설명 합니다.  
   

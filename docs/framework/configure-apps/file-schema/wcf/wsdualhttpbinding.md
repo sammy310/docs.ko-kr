@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 3e32539900893297d2bac232138f9940a8ab100b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557647"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177776"
 ---
 # \<wsDualHttpBinding>
+
 이중 서비스 계약 또는 SOAP 중간 매개자를 통한 통신에 사용할 수 있도록 보안이 유지되고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -55,11 +56,12 @@ ms.locfileid: "90557647"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |bypassProxyOnLocal|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|  
 |clientBaseAddress|클라이언트가 서비스로부터의 응답 메시지를 수신할 기본 주소를 설정하는 URI입니다. 이 특성을 지정하면 수신에 이 주소와 채널별 GUID가 사용됩니다. 값을 지정하지 않으면 전송별로 클라이언트 기본 주소가 생성됩니다. 기본값은 `null`입니다.|  
@@ -79,7 +81,7 @@ ms.locfileid: "90557647"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-wsdualhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement> 형식입니다.|  
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
@@ -87,11 +89,12 @@ ms.locfileid: "90557647"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `WSDualHttpBinding`은 `WSHttpBinding`과 동일하게 웹 서비스 프로토콜을 지원하지만 이중 계약에만 사용할 수 있습니다. `WSDualHttpBinding`은 SOAP 보안만 지원하며 신뢰할 수 있는 메시징이 필요합니다. 이 바인딩에서는 서비스의 콜백 엔드포인트를 제공하는 공용 URI가 클라이언트에 있어야 합니다. 이 공용 URI는 `clientBaseAddress` 특성에서 제공됩니다. 이중 바인딩은 클라이언트의 IP 주소를 서비스에 노출합니다. 클라이언트는 보안을 사용하여 신뢰하는 서비스에만 연결해야 합니다.  
   
  이 바인딩을 사용하여 하나 이상의 SOAP 중간 매개자를 통해 안정적으로 통신할 수 있습니다.  
@@ -132,11 +135,11 @@ ms.locfileid: "90557647"
 </configuration>
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

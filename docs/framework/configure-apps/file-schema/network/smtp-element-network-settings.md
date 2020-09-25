@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58f496b4a07f7d5531df897dd54bb6176111f1c4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178322"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp> 요소(네트워크 설정)
+
 전자 메일을 보내기 위한 배달 형식, 배달 방법 및 보낸 사람 주소를 구성 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "84504513"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`deliveryFormat`|보내는 전자 메일의 배달 형식을 지정 합니다. 허용 가능한 값은 SevenBit와 International입니다.|  
 |`deliveryMethod`|전자 메일에 대 한 배달 방법을 지정 합니다. 허용 되는 값은 Network, PickupDirectoryFromIis 및 SpecifiedPickupDirectory입니다.|  
@@ -49,7 +51,7 @@ ms.locfileid: "84504513"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|특성|설명|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 구성 합니다.|  
 |`network`|외부 SMTP 서버에 대 한 네트워크 옵션을 구성 합니다.|  
@@ -58,9 +60,10 @@ ms.locfileid: "84504513"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[\<mailSettings>요소 (네트워크 설정)](mailsettings-element-network-settings.md)|메일 전송 옵션을 구성 합니다.|  
+|[\<mailSettings> 요소(네트워크 설정)](mailsettings-element-network-settings.md)|메일 전송 옵션을 구성 합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 기본 네트워크 자격 증명을 사용 하 여 전자 메일을 보낼 적절 한 SMTP 매개 변수를 지정 합니다.  
   
 ```xml  

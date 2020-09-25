@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8b01ec217fc1b6b91ccf36c8667922b57f26852
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152843"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185589"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web> 요소(웹 설정)
+
 ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법에 대 한 정보를 포함 합니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -38,13 +39,13 @@ ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법�
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet .config 파일의 IIS 응용 프로그램 풀에 대 한 구성 설정을 지정 합니다.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|aspnet.config 파일의 IIS 응용 프로그램 풀에 대 한 구성 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
   
@@ -54,7 +55,7 @@ ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법�
   
 ## <a name="example"></a>예제  
 
-다음 예제에서는 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅될 때 ASP.NET 파일에서 프로세스 차원의 동작을 구성 하는 방법을 보여 줍니다. 이 예제에서는 IIS가 통합 모드로 실행 중이 고 응용 프로그램에서 .NET Framework 3.5 SP1 이상 버전을 사용 하 고 있다고 가정 합니다. 이 동작은 .NET Framework 3.5 s p 1 이전의 .NET Framework 버전에서 발생 하지 않습니다. 이 예제의 값은 기본값입니다.  
+다음 예제에서는 ASP.NET가 IIS 응용 프로그램 풀에서 호스팅될 때 aspnet.config 파일에서 ASP.NET 프로세스 전체 동작을 구성 하는 방법을 보여 줍니다. 이 예제에서는 IIS가 통합 모드로 실행 중이 고 응용 프로그램에서 .NET Framework 3.5 SP1 이상 버전을 사용 하 고 있다고 가정 합니다. 이 동작은 .NET Framework 3.5 s p 1 이전의 .NET Framework 버전에서 발생 하지 않습니다. 이 예제의 값은 기본값입니다.  
   
 ```xml  
 <configuration>  
@@ -78,4 +79,4 @@ ASP.NET 호스팅 계층이 프로세스 전체 동작을 관리 하는 방법�
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<applicationPool>요소 (웹 설정)](applicationpool-element-web-settings.md)
+- [\<applicationPool> 요소 (웹 설정)](applicationpool-element-web-settings.md)

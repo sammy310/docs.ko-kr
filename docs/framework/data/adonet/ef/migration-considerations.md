@@ -2,19 +2,21 @@
 title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: b0274504fb2b83f7961d4444a8f8e601ba375a8d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554972"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175475"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
+
 ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 제공 합니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 애플리케이션에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 애플리케이션을 적절하게 변경하지 않아도 나중에 스토리지 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. Entity Framework 사용의 이점에 대 한 자세한 내용은 [Entity Framework 개요](overview.md) 및 [엔터티 데이터 모델](../entity-data-model.md)를 참조 하세요.  
   
  Entity Framework의 이점을 활용 하기 위해 기존 응용 프로그램을 Entity Framework로 마이그레이션할 수 있습니다. 일부 작업은 마이그레이션되는 모든 애플리케이션에 공통됩니다. 이러한 일반적인 작업에는 버전 3.5 SP1 (서비스 팩 1)부터 .NET Framework 사용 하도록 응용 프로그램을 업그레이드 하 고, 모델 및 매핑을 정의 하 고, Entity Framework를 구성 하는 작업이 포함 됩니다. 응용 프로그램을 Entity Framework로 마이그레이션하면 적용 되는 추가 고려 사항이 있습니다. 이러한 고려 사항은 마이그레이션되는 애플리케이션의 종류와 애플리케이션의 특정 기능에 따라 달라집니다. 이 항목에서는 기존 애플리케이션을 업그레이드할 때 사용할 최상의 방법을 선택하는 데 유용한 정보를 제공합니다.  
   
 ## <a name="general-migration-considerations"></a>일반적인 마이그레이션 고려 사항  
+
  응용 프로그램을 Entity Framework로 마이그레이션할 때는 다음 사항을 고려해 야 합니다.  
   
 - 응용 프로그램에서 사용 하는 데이터 원본에 대 한 데이터 공급자가 Entity Framework를 지 원하는 경우 버전 3.5 s p 1부터 .NET Framework를 사용 하는 모든 응용 프로그램을 Entity Framework로 마이그레이션할 수 있습니다.  
@@ -26,6 +28,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
 - Entity Framework에서 사용 하는 데이터 공급자 연결은 Entity Framework ADO.NET 데이터 공급자를 사용 하 여 데이터 원본에 액세스 하기 때문에 응용 프로그램의 다른 부분과 공유할 수 있습니다. 예를 들어, Entity Framework는 SqlClient 공급자를 사용하여 SQL Server 데이터베이스에 액세스합니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.  
   
 ## <a name="common-migration-tasks"></a>일반적인 마이그레이션 작업  
+
  기존 응용 프로그램을 Entity Framework로 마이그레이션하기 위한 경로는 응용 프로그램 유형과 기존 데이터 액세스 전략 모두에 따라 달라 집니다. 그러나 기존 응용 프로그램을 Entity Framework으로 마이그레이션하는 경우에는 항상 다음 작업을 수행 해야 합니다.  
   
 > [!NOTE]
@@ -53,9 +56,11 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
      Entity Framework 어셈블리와 모델 및 매핑 파일에 대 한 참조는 Visual Studio 프로젝트에 추가 해야 합니다. 이러한 매핑 파일을 프로젝트에 추가하여 연결 문자열에 표시된 위치에 애플리케이션과 함께 배포되도록 할 수 있습니다. 자세한 내용은 [방법: Entity Framework 프로젝트 수동 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))을 참조 하세요.  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>기존 개체가 있는 애플리케이션에 대한 고려 사항  
+
  .NET Framework 4부터 Entity Framework은 지 속성 무시 개체 라고도 하는 "일반 이전" CLR 개체 (POCO)를 지원 합니다. 대부분의 경우 기존 개체는 사소한 변경을 수행 하 여 Entity Framework 사용할 수 있습니다. 자세한 내용은 [POCO 엔터티 작업](/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))을 참조 하세요. 응용 프로그램을 Entity Framework로 마이그레이션하고 Entity Framework 도구에서 생성 된 데이터 클래스를 사용할 수도 있습니다. 자세한 내용은 [방법: 엔터티 데이터 모델 마법사 사용](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))을 참조 하세요.  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET 공급자를 사용하는 애플리케이션에 대한 고려 사항  
+
  SqlClient와 같은 ADO.NET 공급자를 사용 하 여 데이터 원본을 쿼리하여 테이블 형식 데이터를 반환할 수 있습니다. 데이터를 ADO.NET 데이터 집합으로 로드할 수도 있습니다. 다음 목록에서는 기존 ADO.NET 공급자를 사용 하는 응용 프로그램을 업그레이드 하기 위한 고려 사항을 설명 합니다.  
   
 - 데이터 판독기를 사용하여 표 형식 데이터 표시  
@@ -69,6 +74,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   Entity Framework 응용 프로그램에 필요한 데이터 집합의 기능을 제공 하지 않는 경우에도 LINQ to DataSet를 사용 하 여 LINQ 쿼리의 이점을 활용할 수 있습니다. 자세한 내용은 [LINQ to DataSet](../linq-to-dataset.md)을 참조하세요.  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>데이터를 컨트롤에 바인딩하는 애플리케이션에 대한 고려 사항  
+
  .NET Framework를 사용 하면 데이터 집합 또는 ASP.NET 데이터 소스 컨트롤과 같은 데이터 원본의 데이터를 캡슐화 한 다음 사용자 인터페이스 요소를 해당 데이터 컨트롤에 바인딩할 수 있습니다. 다음 목록에서는 컨트롤을 Entity Framework 데이터에 바인딩할 때 고려할 사항에 대해 설명합니다.  
   
 - 컨트롤에 데이터 바인딩  
@@ -84,6 +90,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
   Entity Framework에는 ASP.NET 웹 응용 프로그램에서 데이터 바인딩을 간소화 하도록 디자인 된 데이터 소스 컨트롤이 포함 되어 있습니다. 자세한 내용은 [EntityDataSource 웹 서버 컨트롤 개요](/previous-versions/aspnet/cc488502(v=vs.100))를 참조 하세요.  
   
 ## <a name="other-considerations"></a>기타 고려 사항  
+
  특정 종류의 애플리케이션을 Entity Framework로 마이그레이션할 때 다음 사항을 고려해야 할 수도 있습니다.  
   
 - 데이터 서비스를 노출하는 애플리케이션  
@@ -102,7 +109,7 @@ ADO.NET Entity Framework는 기존 응용 프로그램에 몇 가지 이점을 �
 
   ASP.NET 웹 응용 프로그램은 웹 페이지 또는 사용자 세션의 상태를 유지 해야 하는 경우가 많습니다. 인스턴스의 개체를 <xref:System.Data.Objects.ObjectContext> 클라이언트 뷰 상태나 서버의 세션 상태에 저장 한 다음 나중에 검색 하 여 새 개체 컨텍스트에 다시 연결할 수 있습니다. 자세한 내용은 [개체 연결 및 분리](/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [배포 고려 사항](deployment-considerations.md)
 - [Entity Framework 용어](terminology.md)

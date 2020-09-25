@@ -2,14 +2,15 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: f788849a9b11b81b4542eb2c6f855a8d4db4dd44
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c0d6eee45a897f2148e98f3329edb893856fd5a1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178049"
 ---
 # \<netHttpBinding>
+
 WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수 있는 끝점을 구성 및 노출 하는 데 사용할 수 있는 바인딩을 나타냅니다. 이중 계약과 함께 사용하는 경우 WebSocket이 사용되고, 그렇지 않으면 HTTP가 사용됩니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -54,14 +55,16 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
 ```  
   
 ## <a name="type"></a>형식  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`allowCookies`|클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 속성을 사용할 수 있습니다. 그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.|  
 |`bypassProxyOnLocal`|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 주소가 로컬인 인터넷 리소스는 로컬 리소스입니다. 로컬 주소는 동일한 컴퓨터, 로컬 LAN 또는 인트라넷에 있는 주소 이며 구문적으로 Uri 및에서와 같이 마침표 (.)가 없는 것으로 식별 됩니다. `http://webserver/` `http://localhost/`<br /><br /> 이 특성은 BasicHttpBinding으로 구성된 엔드포인트가 로컬 리소스 액세스 시 프록시 서버를 사용할지 여부를 결정합니다. 이 특성이 `true`이면 로컬 인터넷 리소스에 대한 요청은 프록시 서버를 사용하지 않습니다. 이 특성이 `true`로 설정된 경우 클라이언트가 동일한 시스템의 서비스와 통신할 때 프록시를 통하게 하려면 localhost 대신 호스트 이름을 사용해야 합니다<br /><br /> 이 특성이 `false`이면 모든 인터넷 요청이 프록시 서버를 통해 이루어집니다.|  
@@ -83,23 +86,25 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement> 형식입니다.|  
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  NetHttpBinding은 메시지를 보내기 위한 전송으로 HTTP를 사용합니다. 이중 계약과 함께 사용하는 경우 WebSocket이 사용됩니다.  요청-회신 계약과 함께 사용하는 경우 NetHttpBinding은 이진 인코더를 사용하는 BasicHttpBinding처럼 동작합니다.  
   
  보안은 기본적으로 해제 되어 있지만 자식 요소의 mode 특성을 이외의 값으로 설정 하 여 추가할 수 있습니다 [\<security>](security-of-basichttpbinding.md) `None` . 기본적으로 "텍스트" 메시지 인코딩과 UTF-8 텍스트 인코딩을 사용 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 첫 번째 및 두 번째 세대 웹 서비스와의 HTTP 통신 및 최대 상호 운용성을 제공하는 <xref:System.ServiceModel.NetHttpBinding>의 사용 방법을 보여 줍니다. 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 바인딩 형식은 `binding` 요소의 `<endpoint>` 특성을 사용하여 지정합니다. 기본 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 엔드포인트는 서비스에 대한 다음 구성 코드에 표시된 것처럼 `bindingConfiguration` 요소의 `<endpoint>` 특성을 사용하여 이름으로 바인딩 구성을 참조해야 합니다.  
   
 ```xml  
@@ -137,6 +142,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
 ```  
   
 ## <a name="example"></a>예제  
+
  .NET Framework 4부터 바인딩과 동작은 이름을 가질 필요가 없습니다. 이전 예제의 기능은 끝점 주소에서 bindingConfiguration을 제거 하 고 바인딩에서 이름을 제거 하 여 수행할 수 있습니다.  
   
 ```xml  
@@ -173,13 +179,13 @@ WCF (Windows Communication Foundation) 서비스가 HTTP를 통해 통신할 수
   
  기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

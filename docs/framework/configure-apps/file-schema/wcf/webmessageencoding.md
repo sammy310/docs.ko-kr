@@ -2,14 +2,15 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b250b64e1f073e00e4047ab6931a00d0b93b55b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545456"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177880"
 ---
 # \<webMessageEncoding>
+
 WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍스트 XML, JSON(JavaScript Object Notation) 메시지 인코딩 및 "원시" 이진 콘텐츠를 읽고 쓸 수 있게 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,11 +29,12 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`maxReadPoolSize`|새 판독기를 할당하지 않고 동시에 읽을 수 있는 메시지 수입니다. 풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다. 기본값으로 각 내부 인코더(텍스트, JSON 및 "원시")에 대해 64개의 판독기가 사용됩니다.<br /><br /> 이 값을 늘리면 메모리 사용량이 증가하지만, 판독기를 새로 만들 필요 없이 이미 만들어진 풀의 판독기를 사용할 수 있기 때문에 인코더가 갑자기 많은 메시지가 들어오는 경우에 대비할 수 있습니다.|  
 |`maxWritePoolSize`|새 작성기를 할당하지 않고 동시에 보낼 수 있는 메시지 수입니다. 풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다. 기본값으로 각 내부 인코더(텍스트, JSON 및 "원시")에 대해 16개의 작성기가 사용됩니다.<br /><br /> 이 값을 늘리면 메모리 사용량이 증가하지만, 작성기를 새로 만들 필요 없이 풀에서 이미 만들어진 작성기를 사용할 수 있기 때문에 인코더가 갑자기 많은 메시지가 나가는 경우에 대비할 수 있습니다.|  
@@ -40,17 +42,18 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  인코딩은 메시지를 바이트 시퀀스로 변형하는 프로세스입니다. 디코딩은 역프로세스입니다. 이러한 프로세스에서는 문자 인코딩을 지정해야 합니다.  
   
  `webMessageEncoding` 요소는 일반 텍스트 XML 및 JSON 인코딩과 "원시" 이진 데이터 처리를 일련의 내부 인코더에 위임하는 방식으로 동작하며 이 위임은 복합 메시지 인코더에 의해 수행됩니다.  
@@ -72,7 +75,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
                     textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -80,7 +83,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [메시지 인코딩](message-encoding.md)
 - [메시지 인코더 선택](../../../wcf/feature-details/choosing-a-message-encoder.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

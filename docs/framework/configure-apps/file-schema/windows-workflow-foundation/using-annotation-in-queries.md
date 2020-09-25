@@ -3,17 +3,19 @@ title: 쿼리에 주석 사용
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
-ms.openlocfilehash: 728408e744bc1eca62158fab1a7a17e985fe3b6c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3dd5d19cc303314386ae62ba67f7eec978f6d80b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69947279"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185368"
 ---
 # <a name="using-annotation-in-queries"></a>쿼리에 주석 사용
+
 주석을 사용하여 빌드 시간 후에 구성될 수 있는 값으로 추적 레코드에 임의 태그를 지정할 수 있습니다. 예를 들어 여러 워크플로 간에 여러 추적 레코드를 "Mail Server" = = "Mail Server1"로 태그를 지정 하는 것이 좋습니다. 이렇게 하면 나중에 추적 레코드를 쿼리할 때 이 태그를 사용하여 모든 레코드를 쉽게 찾을 수 있습니다.  
   
 ## <a name="adding-annotations"></a>주석 추가  
+
  다음 예제와 같이 추적 쿼리에 주석을 추가할 수 있습니다.  
   
 ```xml  

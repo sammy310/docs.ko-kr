@@ -2,14 +2,15 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 8d4f55fd5b51ea77839b7fdbb930e937f5700417
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3282871bf8dbd25726ada7003d3066b9a42e2366
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854805"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177984"
 ---
 # \<webHttpEndpoint>
+
 이 구성 요소는 [\<webHttpBinding>](webhttpbinding.md) 동작을 자동으로 추가 하는 고정 바인딩을 사용 하 여 표준 끝점을 정의 [\<webHttp>](webhttp.md) 합니다. REST 서비스를 작성할 때는 이 엔드포인트를 사용합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ ms.locfileid: "70854805"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|자동 서식 선택을 사용하는지 여부를 나타내는 부울 값입니다.<br /><br /> 자동 서식 선택을 사용하면 인프라에서 요청 메시지의 `Accept` 헤더를 구문 분석하여 가장 적합한 응답 형식을 결정합니다. `Accept` 헤더에서 적합한 응답 형식을 지정하지 않는 경우 인프라에서 요청 메시지의 `Content-Type`이나 작업의 기본 응답 형식을 사용합니다.|  
 |defaultOutgoingResponseFormat|나가는 응답의 기본 형식을 지정하는 특성입니다. 이 특성은 <xref:System.ServiceModel.Web.WebMessageFormat> 형식입니다.|  
@@ -45,11 +47,12 @@ ms.locfileid: "70854805"
 |webEndpointType|엔드포인트의 형식을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.|  
   

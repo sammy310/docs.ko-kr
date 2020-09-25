@@ -2,24 +2,26 @@
 title: 데이터베이스 쿼리
 ms.date: 03/30/2017
 ms.assetid: eefb8b0c-ff07-4e86-a3d3-567479523fe9
-ms.openlocfilehash: 6ca402600d43eb84c31c499d3f93aca95d4ea1d9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b4ce48ee3d49769a353bf7371140b1f5a645f34e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184879"
 ---
 # <a name="querying-the-database"></a>데이터베이스 쿼리
+
 이 항목 그룹에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트에서 쿼리를 개발하고 실행하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 정보 쿼리](how-to-query-for-information.md)  
- 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리를 LINQ 쿼리와 동일 하 게 표시 하는 방법을 간략하게 보여 줍니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]일반적으로 쿼리를 LINQ 쿼리와 동일 하 게 만드는 방법을 간략하게 보여 줍니다.  
   
- [방법: 읽기 전용으로 정보 검색](how-to-retrieve-information-as-read-only.md)  
+ [방법: 읽기 전용 정보 검색](how-to-retrieve-information-as-read-only.md)  
  데이터 변경이 예정되어 있지 않은 경우 쿼리 성능을 향상시키는 방법에 대해 설명합니다.  
   
- [방법: 관련 데이터 검색의 양 제어](how-to-control-how-much-related-data-is-retrieved.md)  
+ [방법: 관련 데이터의 검색 양 제어](how-to-control-how-much-related-data-is-retrieved.md)  
  주 대상과 함께 검색되는 관련 데이터를 제어하는 방법에 대해 설명합니다.  
   
  [방법: 관련 데이터 필터링](how-to-filter-related-data.md)  
@@ -40,7 +42,7 @@ ms.locfileid: "75634315"
  [방법: 한 번에 여러 개체 검색](how-to-retrieve-many-objects-at-once.md)  
  <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>를 사용하는 방법을 설명합니다.  
   
- [방법: DataContext 수준에서 필터링](how-to-filter-at-the-datacontext-level.md)  
+ [방법: DataContext 수준 필터링](how-to-filter-at-the-datacontext-level.md)  
  <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>의 다른 사용에 대해 설명합니다.  
   
  [쿼리 예제](query-examples.md)  
