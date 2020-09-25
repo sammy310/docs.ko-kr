@@ -2,14 +2,15 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4582066098feaf50b33b083de56bcb8c3e04df0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736592"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204621"
 ---
 # \<namedPipeTransport>
+
 사용자 지정 바인딩에 포함될 때 채널에서 명명된 파이프를 사용하여 메시지를 전송하도록 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,14 +41,16 @@ ms.locfileid: "73736592"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
 없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |ChannelInitializationTimeout|연결이 끊어지기 전에 채널이 초기화 상태를 유지할 수 있는 최대 시간을 결정하는 <xref:System.TimeSpan>을 가져오거나 설정합니다.|  
 |ConnectionBufferSize|통신 중에 클라이언트나 서비스로부터 serialize된 메시지 청크를 전송할 때 사용되는 버퍼의 크기를 가져오거나 설정합니다.|  
@@ -60,15 +63,16 @@ ms.locfileid: "73736592"
 |maxPendingConnections|서비스에서 디스패치를 대기하는 최대 연결 수를 가져오거나 설정합니다.|  
 |maxReceivedMessageSize|받을 수 있는 최대 메시지 크기 (바이트)를 가져오거나 설정 합니다.|  
 |transferMode|메시지가 연결 지향 전송을 사용하여 버퍼링되는지 아니면 스트리밍되는지를 나타내는 값을 가져오거나 설정합니다.|  
-|[\<connectionPoolSettings>으로\<namedPipeTransport>](connectionpoolsettings.md)|명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.|  
+|[\<namedPipeTransport>의 \<connectionPoolSettings>](connectionpoolsettings.md)|명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
 이 전송은 "net.pipe://hostname/path" 형식의 URI를 사용합니다. 다른 URI 구성 요소는 선택적입니다.  
   
 `namedPipeTransport` 요소는 명명된 파이프 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다. 이 전송은 WCF(Windows Communication Foundation)와 WCF 사이의 컴퓨터 통신에 사용됩니다.  
@@ -81,7 +85,7 @@ ms.locfileid: "73736592"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

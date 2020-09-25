@@ -2,15 +2,16 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 97ed6e06241804bf2f576c910a2235b0cb570bbb
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a117f377b3f03b6a1a12e39426a24f3141aa40ff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833725"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204465"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
-그룹이나 집계에 대한 검색 조건을 지정합니다.  
+
+그룹 또는 집계에 대한 검색 조건을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -19,10 +20,12 @@ ms.locfileid: "71833725"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `search_condition`  
  그룹이나 집계에 대해 충족해야 하는 검색 조건을 지정합니다. HAVING을 GROUP BY ALL과 함께 사용하면 HAVING 절이 ALL을 재정의합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
+
  HAVING 절은 그룹화 결과에 추가 필터링 조건을 지정하는 데 사용됩니다. 쿼리 식에 GROUP BY 절이 지정되지 않으면 암시적인 단일 집합 그룹이 선택됩니다.  
   
 > [!NOTE]
@@ -38,6 +41,7 @@ HAVING SUM(o.Quantity) > 1
  위 예에서는 제품 두 개 이상이 포함된 그룹으로만 제한되었습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 Entity SQL 쿼리에서는 HAVING 및 GROUP BY 연산자를 사용하여 그룹이나 집계에 대한 검색 조건을 지정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1. [방법: PrimitiveType 결과를 반환 하는 쿼리 실행](../how-to-execute-a-query-that-returns-primitivetype-results.md)의 절차를 따릅니다.  

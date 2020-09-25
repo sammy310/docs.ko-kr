@@ -2,14 +2,15 @@
 title: <ws2007HttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 3396f74f76d790759f4c32de2907607486701b1a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0979bd1c74061bb13a240bb46e1a37cd7ea1129c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738951"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204842"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<ws2007HttpBinding>의 \<message>
+
 요소의 메시지 수준 보안 설정을 정의 [\<ws2007HttpBinding>](ws2007httpbinding.md) 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,15 +37,17 @@ ms.locfileid: "73738951"
 </ws2007HttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`algorithmSuite`|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다. 이러한 알고리즘은 보안 정책 언어(WS-SecurityPolicy) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 Basic256입니다.|  
 |`clientCredentialType`|선택 사항입니다. `Message` 또는 `TransportWithMessageCredentials` 보안 모드를 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 다음 표에서 열거형 값을 참조하세요. 기본값은 Windows입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
@@ -53,7 +56,7 @@ ms.locfileid: "73738951"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -74,7 +77,7 @@ ms.locfileid: "73738951"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |`None`|이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다. 서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고 클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.|  
 |`Certificate`|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. `message` 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.|  
@@ -83,11 +86,12 @@ ms.locfileid: "73738951"
 |`Windows`|`Windows` 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다. `negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos(상호 운용 가능 표준)가 수행됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-ws2007httpbinding.md)|에 대 한 보안 설정을 정의 합니다 [\<ws2007HttpBinding>](ws2007httpbinding.md) .|  
   
@@ -98,7 +102,7 @@ ms.locfileid: "73738951"
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

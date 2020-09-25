@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784334"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204530"
 ---
 # <a name="row-states-and-row-versions"></a>행 상태 및 행 버전
+
 ADO.NET에서는 행 상태 및 버전을 사용하여 테이블의 행을 관리합니다. 행 상태는 행의 상태를 나타내며, 행 버전에서는 현재 값, 원래 값 및 기본값 등과 같이 수정될 때 행에 저장된 값을 관리합니다. 예를 들어, 행에서 열을 수정한 경우 이 행의 상태는 `Modified`가 되고 두 개의 행 버전이 존재하게 됩니다. 즉, `Current` 버전에는 현재의 행 값이 포함되고 `Original` 버전에는 열이 수정되기 전의 행 값이 포함됩니다.  
   
  각 <xref:System.Data.DataRow> 개체에는 <xref:System.Data.DataRow.RowState%2A> 속성이 있어서 사용자는 이 속성을 검사하여 행의 현재 상태를 결정합니다. 다음 표에서는 각 `RowState` 열거형 값에 대해 간략하게 설명합니다.  
   
-|RowState 값|Description|  
+|RowState 값|설명|  
 |--------------------|-----------------|  
 |<xref:System.Data.DataRowState.Unchanged>|`AcceptChanges`를 마지막으로 호출한 이후 또는 `DataAdapter.Fill`에 의해서 행이 만들어진 이후로 변경된 내용이 없습니다.|  
 |<xref:System.Data.DataRowState.Added>|테이블에 행이 추가되었지만 `AcceptChanges`가 호출되지 않았습니다.|  
@@ -41,7 +42,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  다음 표에서는 각 `DataRowVersion` 열거형 값에 대해 간략하게 설명합니다.  
   
-|DataRowVersion 값|Description|  
+|DataRowVersion 값|설명|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|행의 현재 값입니다. `RowState`가 `Deleted`인 행에는 이 행 버전이 존재하지 않습니다.|  
 |<xref:System.Data.DataRowVersion.Default>|특정 행에 대한 기본 행 버전입니다. `Added`, `Modified` 또는 `Deleted` 행의 기본 행 버전은 `Current`이고, `Detached` 행의 기본 행 버전은 `Proposed`입니다.|  
@@ -94,9 +95,9 @@ foreach (DataRow delRow in delRows)
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
-- [DataSet, DataTable 및 DataView](index.md)
-- [DataAdapter 및 DataReader](../dataadapters-and-datareaders.md)
+- [DataSets, DataTables 및 DataViews](index.md)
+- [DataAdapters 및 DataReaders](../dataadapters-and-datareaders.md)
 - [ADO.NET 개요](../ado-net-overview.md)

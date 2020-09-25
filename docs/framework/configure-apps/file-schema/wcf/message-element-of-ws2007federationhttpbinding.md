@@ -1,15 +1,16 @@
 ---
-title: <message>의 요소<ws2007FederationHttpBinding>
+title: <message> 의 요소 <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: dde763687dbc62d6fb342a21a4c614208f28d7e8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d71bce5e94568bdad3c52226fa1029a1dd87bfd9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739004"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204920"
 ---
-# <a name="message-element-of-ws2007federationhttpbinding"></a>\<message>의 요소\<ws2007FederationHttpBinding>
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<message> 의 요소 \<ws2007FederationHttpBinding>
+
 요소에 대 한 메시지 수준 보안 설정을 정의 합니다 [\<ws2007FederationHttpBinding>](ws2007federationhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -81,6 +82,7 @@ ms.locfileid: "73739004"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -94,7 +96,7 @@ ms.locfileid: "73739004"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -115,7 +117,7 @@ ms.locfileid: "73739004"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|이 바인딩에 대한 클레임 형식 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.|  
 |[\<issuer>](issuer.md)|보안 토큰을 발급하는 엔드포인트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  
@@ -124,7 +126,7 @@ ms.locfileid: "73739004"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-element-of-ws2007federationhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
   
@@ -135,7 +137,7 @@ ms.locfileid: "73739004"
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

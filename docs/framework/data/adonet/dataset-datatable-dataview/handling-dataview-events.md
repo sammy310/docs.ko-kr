@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2a67cb040c5d438d17ad91d41e97f24f3166262b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151106"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204543"
 ---
 # <a name="handling-dataview-events"></a>DataView 이벤트 처리
-<xref:System.Data.DataView.ListChanged>의 <xref:System.Data.DataView> 이벤트를 사용하여 뷰가 업데이트되었는지 확인할 수 있습니다. 이벤트를 발생시키는 업데이트에는 원본으로 사용하는 테이블에서의 행 추가, 삭제 또는 수정과 원본으로 사용하는 테이블 스키마에서의 열 추가 또는 삭제, 그리고 부모 또는 자식 관계의 변경이 포함됩니다. **또한 ListChanged** 이벤트는 새 정렬 순서 또는 필터의 응용 프로그램으로 인해 보고 있는 행 목록이 크게 변경되었는지 도 지정합니다.  
+
+<xref:System.Data.DataView.ListChanged>의 <xref:System.Data.DataView> 이벤트를 사용하여 뷰가 업데이트되었는지 확인할 수 있습니다. 이벤트를 발생시키는 업데이트에는 원본으로 사용하는 테이블에서의 행 추가, 삭제 또는 수정과 원본으로 사용하는 테이블 스키마에서의 열 추가 또는 삭제, 그리고 부모 또는 자식 관계의 변경이 포함됩니다. 또한 **ListChanged** 이벤트는 새 정렬 순서나 필터의 적용으로 인해 보고 있는 행의 목록이 현저 하 게 변경 되었는지 여부를 알려줍니다.  
   
- **ListChanged** 이벤트는 <xref:System.ComponentModel> 네임스페이스의 **ListChangedEventHandler 대리자를** 구현하고 <xref:System.ComponentModel.ListChangedEventArgs> 개체를 입력으로 사용합니다. <xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs** 개체의 **ListChangedType** 속성에서 열거 값을 사용하여 발생한 변경 유형을 확인할 수 있습니다. 행추가, 삭제 또는 이동과 관련된 변경 사항의 경우 추가되거나 이동된 행의 새 인덱스와 삭제된 행의 이전 인덱스는 **ListChangedEventArgs** 개체의 **NewIndex** 속성을 사용하여 액세스할 수 있습니다. 이동된 행의 경우 **ListChangedEventArgs** 개체의 **OldIndex** 속성을 사용하여 이동된 행의 이전 인덱스에 액세스할 수 있습니다.  
+ **ListChanged** 이벤트는 네임 스페이스의 **Listchangedeventhandler** 대리자를 구현 <xref:System.ComponentModel> 하 고 개체를 입력으로 사용 합니다 <xref:System.ComponentModel.ListChangedEventArgs> . <xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs** 개체의 **listchangedtype** 속성에서 열거형 값을 사용 하 여 발생 하는 변경 유형을 확인할 수 있습니다. 행 추가, 삭제 또는 이동과 관련 된 변경 내용에 대해서는 **ListChangedEventArgs** 개체의 **NewIndex** 속성을 사용 하 여 추가 되거나 이동한 행의 새 인덱스와 삭제 된 행의 이전 인덱스에 액세스할 수 있습니다. 이동 된 행의 경우 이동한 행의 이전 인덱스는 **ListChangedEventArgs** 개체의 **oldindex** 속성을 사용 하 여 액세스할 수 있습니다.  
   
- **DataViewManager는** 또한 테이블이 추가 또는 제거되었는지 또는 기본 **DataSet의** **관계** 컬렉션이 변경된 경우 이를 알리기 위해 **ListChanged** 이벤트를 노출합니다.  
+ 또한 **DataViewManager** 는 테이블이 추가 되거나 제거 된 경우 또는 기본 **데이터 집합**의 **관계** 컬렉션이 변경 된 경우 알리도록 **ListChanged** 이벤트를 노출 합니다.  
   
- 다음 코드 예제에서는 **ListChanged** 이벤트 처리기를 추가 하는 방법을 보여 주며 있습니다.  
+ 다음 코드 예제에서는 **ListChanged** 이벤트 처리기를 추가 하는 방법을 보여 줍니다.  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -55,5 +56,5 @@ protected static void OnListChanged(object sender,
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [DataView](dataviews.md)
+- [데이터 보기](dataviews.md)
 - [ADO.NET 개요](../ado-net-overview.md)

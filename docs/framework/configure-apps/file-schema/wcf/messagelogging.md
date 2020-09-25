@@ -2,14 +2,15 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fd4d678b1e861a47762d8a64f85dcc052a30fe2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855128"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204803"
 ---
 # \<messageLogging>
+
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "70855128"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`logEntireMessage`|전체 메시지(메시지 헤더 및 본문)를 로깅할지 여부를 지정하는 부울 값입니다. 기본값은 `false`로, 메시지 헤더만 로깅됩니다. 이 설정은 모든 메시지 로깅 수준(서비스, 전송 및 잘못된 형식)에 영향을 줍니다.|  
 |`logMalformedMessages`|잘못된 형식의 메시지를 로깅할지 여부를 지정하는 부울 값입니다. 잘못된 형식의 메시지는 `maxMessagesToLog`에 포함되지 않습니다. 기본값은 `false`입니다.|  
@@ -52,17 +54,18 @@ ms.locfileid: "70855128"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |filters|`filters` 요소는 XPath 필터 컬렉션을 보유합니다. `logMessagesAtTransportLevel`이 `true`로 설정되어 전송 메시지 로깅을 사용할 경우 필터와 일치하는 메시지만 로깅됩니다.<br /><br /> 필터는 전송 레이어에서만 적용됩니다. 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.<br /><br /> 이 요소의 유일한 특성인 `filter`는 XpathFilter입니다.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |진단|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  메시지는 스택에서 서비스, 전송 및 잘못된 형식의 3가지 다른 수준에서 로깅됩니다. 각 수준은 별도로 활성화될 수 있습니다.  
   
  XPath 필터를 추가하여 전송 및 서비스 수준에서 특정 메시지를 로깅할 수 있습니다. 정의된 필터가 없으면 모든 메시지가 로깅됩니다. 필터는 메시지의 헤더에만 적용됩니다. 본문은 무시됩니다. WCF는 성능 향상을 위해 메시지 본문을 무시합니다. 본문의 내용을 기반으로 필터링하려면 해당 작업을 수행하는 필터를 갖춘 사용자 지정 수신기를 만듭니다.  

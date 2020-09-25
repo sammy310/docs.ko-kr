@@ -2,14 +2,15 @@
 title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: fae7c9fbc82dafc0f6be58f5404397d751033b45
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6117a2d4323dce8c2772da46096164639b27032a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738861"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204660"
 ---
 # \<msmqTransport>
+
 이 전송이 사용자 지정 바인딩에 포함되면 MSMQ 전송에서 채널이 메시지를 전송하도록 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -46,11 +47,12 @@ ms.locfileid: "73738861"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |customDeadLetterQueue|만료되었거나 애플리케이션에 배달되지 못한 메시지가 전송되는 애플리케이션별 배달 못 한 편지 큐의 위치를 나타내는 URI입니다.<br /><br /> ExactlyOnce 보증이 필요한 즉, `exactlyOnce`가 `true`로 설정된 메시지의 경우 이 특성의 기본값은 MSMQ에서 시스템 차원의 배달 못 한 트랜잭션 큐로 설정됩니다.<br /><br /> 보증이 필요하지 않은 즉, `exactlyOnce`가 `false`로 설정된 메시지의 경우 이 특성의 기본값은 `null`로 설정됩니다.<br /><br /> 값은 net.msmq 체계를 사용해야 합니다. 기본값은 `null`입니다.<br /><br /> `deadLetterQueue`가 `None` 또는 `System`으로 설정되면 이 특성이 `null`로 설정되어야 합니다. 이 특성이 `null`이 아니면 `deadLetterQueue`는 `Custom`으로 설정되어야 합니다.|  
 |deadLetterQueue|사용할 배달 못 한 편지 큐의 형식을 지정합니다.<br /><br /> 유효한 값은 다음과 같습니다.<br /><br /> -Custom: 사용자 지정 배달 못한 편지 큐입니다.<br />-None: 배달 못한 편지 큐를 사용할 수 없습니다.<br />-System: 시스템 배달 못한 편지 큐를 사용 합니다.<br /><br /> 이 특성은 DeadLetterQueue 형식입니다.|  
@@ -72,17 +74,18 @@ ms.locfileid: "73738861"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<msmqTransportSecurity>](msmqtransportsecurity.md)|이 바인딩의 전송 보안 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `msmqTransport` 요소를 사용하여 대기 중 통신 채널 속성을 설정할 수 있습니다. 대기 중 통신 채널에서는 전송에 메시지 큐를 사용합니다.  
   
  이 바인딩 요소는 메시지 큐 표준 바인딩(`netMsmqBinding`)에 사용되는 기본 바인딩 요소입니다.  
@@ -96,7 +99,7 @@ ms.locfileid: "73738861"
 - [WCF의 큐](../../../wcf/feature-details/queues-in-wcf.md)
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

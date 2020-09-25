@@ -2,14 +2,15 @@
 title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: b3558db6018d79f0fad27ff28657bfadb5637467
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14d774ba7711c9ce60fb1db5a2b050c310550ec1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736772"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203893"
 ---
 # \<httpTransport>
+
 사용자 지정 바인딩의 SOAP 메시지 전송을 위한 HTTP 전송을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "73736772"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |allowCookies|클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 특성을 사용할 수 있습니다. 그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.|  
 |authenticationScheme|HTTP 수신기가 처리하는 클라이언트 요청을 인증하는 데 사용되는 프로토콜을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -다이제스트: 다이제스트 인증을 지정 합니다.<br />-Negotiate: 클라이언트와 협상 하 여 인증 체계를 결정 합니다. 클라이언트와 서버 모두 Kerberos를 지원하면 이 인증 체계가 사용되고, 그렇지 않으면 NTLM이 사용됩니다.<br />-Ntlm: NTLM 인증을 지정 합니다.<br />-Basic: 기본 인증을 지정 합니다.<br />-Anonymous: 익명 인증을 지정 합니다.<br /><br /> 기본값은 Anonymous입니다. 이 특성은 <xref:System.Net.AuthenticationSchemes> 형식입니다. 이 특성은 한 번만 설정할 수 있습니다.|  
@@ -57,15 +59,17 @@ ms.locfileid: "73736772"
 |useDefaultWebProxy|사용자별 설정이 아닌 시스템 수준의 프록시 설정을 사용할지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `httpTransport` 요소는 HTTP 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다. HTTP는 상호 운용성을 위해 사용 되는 기본 전송입니다. 이 전송은 wcf (Windows Communication Foundation)에서 지원 되므로 WCF가 아닌 다른 웹 서비스 스택과의 상호 운용성을 보장 합니다.  
   
 ## <a name="see-also"></a>참고 항목
@@ -76,7 +80,7 @@ ms.locfileid: "73736772"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

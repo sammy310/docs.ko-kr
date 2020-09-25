@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bc2b1648ad404ba13920d9f276c299756554b5d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140772"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204673"
 ---
 # \<msmqIntegrationBinding>
+
 MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -49,11 +50,12 @@ MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
 |customDeadLetterQueue|애플리케이션별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 배달하지 못한 메시지가 보관됩니다.<br /><br /> 배달 못 한 편지 큐는 송신 애플리케이션의 큐 관리자에서 관리하는 큐로, 배달하지 못한 만료된 메시지가 보관됩니다.<br /><br /> <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>로 지정된 URI는 net.msmq 체계를 사용해야 합니다.|  
@@ -77,9 +79,9 @@ MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩
   
 ## <a name="serializationformat-attribute"></a>{serializationFormat} 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
-|xml|XML 형식|  
+|Xml|XML 형식|  
 |이진|이진 형식|  
 |ActiveX|ActiveX 형식|  
 |ByteArray|개체를 바이트 배열로 serialize합니다.|  
@@ -87,17 +89,18 @@ MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<security>](security-of-msmqintegrationbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 바인딩 요소는 COM, MSMQ 네이티브 Api 또는 네임 스페이스에 정의 된 형식 중 하나를 사용 하는 기존 MSMQ 응용 프로그램에서 메시지를 보내고 받을 수 있도록 WCF (Windows Communication Foundation) 응용 프로그램을 사용 하도록 설정 하는 데 사용할 수 있습니다 <xref:System.Messaging?displayProperty=nameWithType> .이 구성 요소를 사용 하 여 큐 주소를 지정 하는 방법을 지정 하 고, 메시지를 지속적으로 저장 해야 하는지 여부 및 메시지를 보호 하 자세한 내용은 [방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
@@ -138,7 +141,7 @@ MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
 - [\<binding>](bindings.md)
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [WCF의 큐](../../../wcf/feature-details/queues-in-wcf.md)
