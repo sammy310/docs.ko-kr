@@ -3,14 +3,15 @@ title: 리소스 관리자 구현
 description: .NET에서 리소스 관리자를 구현 합니다. 리소스 관리자는 트랜잭션에 사용 되는 리소스를 관리 합니다. 트랜잭션 관리자는 resource manager 동작을 조정 합니다.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: e6370f6b544255ebdc402f06b7977d4a3a587c32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141851"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182898"
 ---
 # <a name="implementing-a-resource-manager"></a>리소스 관리자 구현
+
 트랜잭션에 사용되는 각 리소스는 리소스 관리자에 의해 관리되고, RM의 작업은 트랜잭션 관리자에 의해 조정됩니다. 리소스 관리자는 트랜잭션 관리자와 함께 작업하여 애플리케이션에 원자성 및 격리를 보장합니다. Microsoft SQL Server, 지속적인 메시지 큐, 메모리 내 해시 테이블 등이 모두 리소스 관리자의 예입니다.  
   
  리소스 관리자는 지속적인 데이터나 일시적인 데이터를 관리합니다. 리소스 관리자의 지속성(또는 일시성)은 리소스 관리자가 오류 복구를 지원하는지 여부를 나타냅니다. 오류 복구를 지원하는 경우 리소스 관리자는 Phase1(준비) 중에 지속적인 스토리지에 데이터를 저장하여 리소스 관리자가 작동하지 않으면 복구 시 트랜잭션에 다시 참여하고 트랜잭션 관리자에서 받은 알림을 기반으로 적절한 작업을 수행할 수 있도록 합니다. 일반적으로 일시적인 리소스 관리자는 메모리 내 데이터 구조(예: 트랜잭션된 메모리 내 해시 테이블) 같은 일시적인 리소스를 관리하고 지속적인 리소스 관리자는 보다 지속적인 백업 저장소(예: 백업 저장소가 디스크인 데이터베이스)가 있는 리소스를 관리합니다.  
@@ -34,6 +35,7 @@ ms.locfileid: "85141851"
  <xref:System.Transactions.Transaction> 클래스는 PSPE(승격 가능한 단일 단계 인리스트먼트)를 참여시키는 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 메서드도 제공합니다. 이 메서드를 사용하면 지속적인 RM(리소스 관리자)이 트랜잭션을 호스팅하고 "소유"할 수 있으며, 필요한 경우 MSDTC에서 관리하도록 나중에 해당 트랜잭션을 에스컬레이션할 수 있습니다. 이에 대 한 자세한 내용은 [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](optimization-spc-and-promotable-spn.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  일반적으로 리소스 관리자가 수행하는 단계에 대해서는 다음 항목에서 간략하게 설명합니다.  
   
  [트랜잭션에서 리소스를 참가자로 등록](enlisting-resources-as-participants-in-a-transaction.md)  

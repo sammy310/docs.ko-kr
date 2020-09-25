@@ -25,14 +25,15 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e40744c9c73e02fe96864d6b1320eb3dde4d1144
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559293"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183457"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
+
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 애플리케이션이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 애플리케이션에서 액세스할 수 있는 보호되는 리소스와 애플리케이션에서 사용할 어셈블리 버전 그리고 원격 애플리케이션과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 애플리케이션을 다시 컴파일할 필요가 없습니다. 이 단원에서는 애플리케이션 구성과 유용성에 대해 설명합니다.  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ ms.locfileid: "90559293"
  이 항목에서는 구성 파일의 구문에 대해 설명하고 컴퓨터, 애플리케이션 및 보안 등 세 가지 유형의 구성 파일에 대한 정보를 제공합니다.  
   
 ## <a name="configuration-file-format"></a>구성 파일 서식  
+
  구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>` *자식 요소로*구성 됩니다 `</runtime>` . 빈 요소는 `<runtime/>` 또는 `<runtime></runtime>`으로 기록됩니다.  
   
  모든 XML 파일에서와 같이 구성 파일의 구문은 대/소문자를 구분합니다.  
@@ -53,6 +55,7 @@ ms.locfileid: "90559293"
 ```  
   
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
+
  컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
  구성 시스템은 먼저 컴퓨터 구성 파일에서 개발자가 정의할 수 있는 [ **\<appSettings>** 요소](./file-schema/appsettings/index.md) 및 다른 구성 섹션을 찾습니다. 그런 다음 애플리케이션 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 애플리케이션 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 애플리케이션이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
@@ -63,6 +66,7 @@ ms.locfileid: "90559293"
  공용 언어 런타임에서 어셈블리 바인딩에 대해 컴퓨터 구성 파일을 사용하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
   
 ## <a name="application-configuration-files"></a>애플리케이션 구성 파일  
+
  애플리케이션 구성 파일은 애플리케이션에 특정한 설정을 포함합니다. 이 파일에는 응용 프로그램에서 읽을 수 있는 설정과 어셈블리 바인딩 정책, 원격 개체 등과 같은 공용 언어 런타임에 읽을 구성 설정이 포함되어 있습니다.  
   
  애플리케이션 구성 파일의 이름과 위치는 애플리케이션의 호스트에 따라 달라지는데 호스트는 다음 중 하나가 될 수 있습니다.  
@@ -88,6 +92,7 @@ ms.locfileid: "90559293"
      이 태그에서 `location`은 구성 파일의 URL 로서, 이것은 App base를 설정합니다. 구성 파일은 응용 프로그램의 웹 사이트와 같은 곳에 위치해야 합니다.  
   
 ## <a name="security-configuration-files"></a>보안 구성 파일  
+
  보안 구성 파일에는 코드 그룹 계층 구조 및 정책 수준과 관련된 사용 권한 집합에 대한 정보가 포함되어 있습니다. 정책 변경에 의해 보안 구성 파일이 손상되지 않도록 [코드 액세스 보안 도구(Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 또는 코드 액세스 보안 정책 도구(Caspol.exe)를 사용하여 보안 정책을 수정하는 것이 좋습니다.  
   
 > [!NOTE]
@@ -102,6 +107,7 @@ ms.locfileid: "90559293"
 - 사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: DEVPATH를 사용하여 어셈블리 찾기](how-to-locate-assemblies-by-using-devpath.md)  
  어셈블리를 검색할 때 런타임에서 DEVPATH 환경 변수를 사용하도록 지정하는 방법에 대해 설명합니다.  
   

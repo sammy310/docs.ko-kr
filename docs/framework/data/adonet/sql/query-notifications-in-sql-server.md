@@ -3,14 +3,15 @@ title: SQL Server에서 쿼리 알림
 description: 예를 들어 응용 프로그램 표시를 새로 고치는 SQL Server 데이터베이스에서 데이터가 변경 된 경우 쿼리 알림을 사용 하 여 응용 프로그램에 알리는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183093"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server에서 쿼리 알림
+
 Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 애플리케이션은 데이터 변경 시 알림을 받을 수 있습니다. 이 기능은 데이터베이스의 정보 캐시를 제공하며 원본 데이터 변경 시 알림을 받아야 하는 애플리케이션(예: 웹 애플리케이션)에 특히 유용합니다.  
   
  ADO.NET를 사용하여 쿼리 알림을 구현하는 방법에는 세 가지가 있습니다.  
@@ -40,6 +41,7 @@ Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 애�
 - [개발자 가이드(Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [쿼리 알림 사용](enabling-query-notifications.md)  
  쿼리 알림을 설정하고 사용하기 위한 요구 사항을 포함하여 쿼리 알림을 사용하는 방법을 설명합니다.  
   
@@ -53,6 +55,7 @@ Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 애�
  쿼리 알림과 함께 작동하도록 <xref:System.Data.SqlClient.SqlCommand> 개체를 구성하는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  <xref:System.Data.Sql.SqlNotificationRequest> 클래스와 모든 해당 멤버에 대해 설명합니다.  
   
@@ -62,7 +65,7 @@ Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 애�
  <xref:System.Web.Caching.SqlCacheDependency>  
  <xref:System.Web.Caching.SqlCacheDependency> 클래스와 모든 해당 멤버에 대해 설명합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 및 ADO.NET](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

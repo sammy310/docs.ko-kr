@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174526"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183132"
 ---
 # <a name="polling-in-console-applications"></a>콘솔 애플리케이션에서 폴링
+
 ADO.NET의 비동기 작업을 사용하면 다른 스레드에서 다른 작업을 수행하는 동안 하나의 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다. 그러나 대부분의 시나리오에서는 데이터베이스 작업이 완료될 때까지 애플리케이션을 계속 실행해서는 안 되는 지점에 도달하게 됩니다. 이러한 경우 비동기 작업을 폴링하여 작업의 완료 여부를 확인하는 것이 유용합니다.  
   
  작업 완료 여부는 <xref:System.IAsyncResult.IsCompleted%2A> 속성으로 확인할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 콘솔 애플리케이션에서는 **AdventureWorks** 샘플 데이터베이스에서 데이터를 비동기적으로 업데이트합니다. 이 예제에서는 장기 실행 프로세스를 에뮬레이트할 수 있도록 명령 텍스트에 WAITFOR 문을 삽입합니다. 일반적으로는 명령이 느리게 실행되도록 하지는 않겠지만 이 경우에는 명령이 비교적 느려야 비동기 동작을 더 쉽게 확인할 수 있습니다.  
   
 ```vb  

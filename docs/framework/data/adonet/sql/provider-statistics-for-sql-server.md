@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183119"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server용 공급자 통계
+
 .NET Framework 버전 2.0부터는 .NET Framework Data Provider for SQL Server에 런타임 통계가 지원됩니다. 유효한 연결 개체를 만든 후 <xref:System.Data.SqlClient.SqlConnection> 개체의 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 속성을 `True`로 설정하여 통계를 사용하도록 설정해야 합니다. 통계를 사용하도록 설정한 후에는 <xref:System.Data.SqlClient.SqlConnection> 개체의 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 메서드를 통해 <xref:System.Collections.IDictionary> 참조를 검색하여 "특정 시점 스냅샷"으로 검토할 수 있습니다. 목록 전체를 이름/값 쌍 사전 항목 집합으로 열거합니다. 이러한 이름/값 쌍은 순서가 지정되지 않습니다. 언제든지 <xref:System.Data.SqlClient.SqlConnection> 개체의 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 메서드를 호출하여 카운터를 초기화할 수 있습니다. 통계 수집을 사용하도록 설정하지 않은 경우 예외가 생성되지 않습니다. 또한 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>를 먼저 호출하지 않고 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>를 호출하는 경우 검색된 값은 각 항목의 초기 값입니다. 통계를 사용하도록 설정하고 잠시 동안 애플리케이션을 실행한 다음 통계를 사용하지 않도록 설정하면 검색된 값에 통계를 사용하지 않도록 설정한 지점까지 수집된 값이 반영됩니다. 모든 통계 값은 연결 단위로 수집됩니다.  
   
 ## <a name="statistical-values-available"></a>사용 가능한 통계 값  
+
  현재 Microsoft SQL Server 공급자에서 사용할 수 있는 항목은 18개입니다. 사용 가능한 항목의 수는 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>에서 반환한 <xref:System.Collections.IDictionary> 인터페이스 참조의 **Count** 속성을 통해 액세스할 수 있습니다. 공급자 통계의 모든 카운터는 64비트 수준의 공용 언어 런타임 <xref:System.Int64> 형식(C#과 Visual Basic의 **long**)을 사용합니다. **int64.MaxValue** 필드에서 정의한 **int64** 데이터 형식의 최댓값은 ((2^63)-1))입니다. 카운터 값이 최댓값에 도달하면 더 이상 정확한 것으로 간주하지 않아야 합니다. 즉, **int64.MaxValue**-1((2^63)-2)는 사실상 모든 통계의 최대 유효 값입니다.  
   
 > [!NOTE]
@@ -23,7 +25,7 @@ ms.locfileid: "79174513"
   
  다음 표에서는 현재 사용 가능한 통계 값에 대해 설명합니다. 개별 값의 키 이름은 Microsoft .NET Framework의 국가별 버전에서 지역화되어 있지 않습니다.  
   
-|키 이름|Description|  
+|키 이름|설명|  
 |--------------|-----------------|  
 |`BuffersReceived`|애플리케이션에서 공급자 사용을 시작하고 통계를 사용하도록 설정한 후 공급자가 SQL Server에서 받은 TDS(Tabular Data Stream) 패킷의 수를 반환합니다.|  
 |`BuffersSent`|통계를 사용하도록 설정한 후 공급자가 SQL Server에 보낸 TDS 패킷 수를 반환합니다. 긴 명령에는 여러 버퍼가 필요할 수 있습니다. 예를 들어 서버에 긴 명령이 전송되고 6개의 패킷이 필요한 경우 `ServerRoundtrips`가 1씩 증가하고 `BuffersSent`가 6씩 증가합니다.|  
@@ -45,6 +47,7 @@ ms.locfileid: "79174513"
 |`UnpreparedExecs`|애플리케이션에서 공급자 사용을 시작하고 통계를 사용하도록 설정한 후 연결을 통해 실행된 준비되지 않은 문의 수를 반환합니다.|  
   
 ### <a name="retrieving-a-value"></a>값 검색  
+
  다음 콘솔 애플리케이션에서는 연결에서 통계를 사용하도록 설정하고, 4개의 개별 통계 값을 검색하고, 콘솔 창에 기록하는 방법을 보여 줍니다.  
   
 > [!NOTE]
@@ -201,6 +204,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>모든 값 검색  
+
  다음 콘솔 애플리케이션에서는 연결에서 통계를 사용하도록 설정하고, 열거자를 사용하여 사용 가능한 모든 통계 값을 검색하고, 콘솔 창에 쓰는 방법을 보여 줍니다.  
   
 > [!NOTE]

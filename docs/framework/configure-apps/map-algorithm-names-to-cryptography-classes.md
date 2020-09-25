@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b67db612496e56a341dab2e5fc4b52c954ff02b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105358"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183392"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>알고리즘 이름을 암호화 클래스에 매핑
+
 개발자가 Windows SDK를 사용 하 여 암호화 개체를 만들 수 있는 네 가지 방법이 있습니다.  
   
 - **New** 연산자를 사용 하 여 개체를 만듭니다.  
@@ -33,6 +34,7 @@ ms.locfileid: "85105358"
  사용 되는 해시 알고리즘에 상관 없이 개발자는 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 해시 변환을 구현 하는 개체를 반환 하는 메서드를 호출할 수 있습니다.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>구성 파일에서 알고리즘 이름 매핑  
+
  기본적으로 런타임은 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 네 가지 시나리오 모두에 대해 개체를 반환 합니다. 그러나 컴퓨터 관리자는 마지막 두 시나리오의 메서드가 반환 하는 개체의 유형을 변경할 수 있습니다. 이렇게 하려면 컴퓨터 구성 파일 (Machine.config)에서 사용 하려는 클래스에 친숙 한 알고리즘 이름을 매핑해야 합니다.  
   
  다음 예제에서는 CryptoConfig, HashAlgorithm, **("SHA1")** 및 **System.Security.Cryptography.HashAlgorithm.Create** 가 개체를 반환 하도록 런타임을 구성 하는 방법을 보여 줍니다 **.이 예제**에서는 개체를 반환 합니다. `MySHA1HashClass`  
