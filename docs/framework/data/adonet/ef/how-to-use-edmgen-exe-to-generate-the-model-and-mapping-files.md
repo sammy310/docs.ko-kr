@@ -2,14 +2,15 @@
 title: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 6b41ce971f14938c7bb04a174dbf6029c564c788
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8837afd05eec0eaf8ef3e909d46b280e8ae05da7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546578"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198186"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성
+
 이 항목에서는 EDM 생성기(EdmGen.exe) 도구를 사용하여 School 데이터베이스를 기반으로 하는 다음 파일을 생성하는 방법을 보여 줍니다.  
   
 - 개념적 모델(.csdl 파일)  
@@ -53,7 +54,7 @@ ms.locfileid: "90546578"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [모델링 및 매핑](modeling-and-mapping.md)
 - [방법: 수동으로 Entity Framework 프로젝트 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))

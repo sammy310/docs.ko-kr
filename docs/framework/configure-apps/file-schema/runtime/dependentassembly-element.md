@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154207"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199005"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly> 요소
+
 각 어셈블리에 대한 바인딩 정책 및 어셈블리 위치를 캡슐화합니다. `dependentAssembly`각 어셈블리에 대해 하나의 요소를 사용 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,14 +33,16 @@ ms.locfileid: "79154207"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`assemblyIdentity`|어셈블리에 대 한 식별 정보를 포함 합니다. 이 요소는 각 요소에 포함 되어야 합니다 `dependentAssembly` .|  
 |`codeBase`|컴퓨터에 설치 되어 있지 않은 경우 런타임이 공유 어셈블리를 찾을 수 있는 위치를 지정 합니다.|  
@@ -48,13 +51,14 @@ ms.locfileid: "79154207"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`assemblyBinding`|어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 두 어셈블리에 대 한 어셈블리 정보를 캡슐화 하는 방법을 보여 줍니다.  
   
 ```xml  

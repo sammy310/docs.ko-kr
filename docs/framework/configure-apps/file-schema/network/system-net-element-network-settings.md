@@ -9,14 +9,15 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201722"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 요소(네트워크 설정)
+
 .NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,9 +31,11 @@ ms.locfileid: "84504487"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -54,9 +57,11 @@ ms.locfileid: "84504487"
 |[구성](../configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [\<system.net>](system-net-element-network-settings.md)요소에는 <xref:System.Net> 및 관련 자식 네임 스페이스의 클래스에 대 한 설정이 포함 되어 있습니다. 설정은 인터넷 호스트에서 정보를 수신 하기 위한 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 요청 모듈을 구성 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 클래스에서 사용 하는 일반적인 구성을 보여 줍니다 <xref:System.Net> .  
   
 ```xml  

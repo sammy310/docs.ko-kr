@@ -2,14 +2,15 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 7ac067e84f2a4d2724e3d8f2d0af9b220fd15538
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b38496b77d80fcb66b1b48485a9eef6abfd72299
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399632"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198823"
 ---
 # \<serviceDiscovery>
+
 서비스 엔드포인트의 검색 기능을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,28 +42,32 @@ ms.locfileid: "70399632"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<announcementEndpoint>](announcementendpoint.md)|알림 엔드포인트의 컬렉션입니다. 이 섹션을 사용하여 알림 메시지를 보내기 위해 사용할 엔드포인트를 지정합니다.|  
 |[\<discoveryEndpoint>](discoveryendpoint.md)|검색 엔드포인트의 컬렉션입니다. 이 섹션을 사용하여 검색 메시지를 수신할 엔드포인트를 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 구성 요소가 서비스의 동작 구성에 추가되는 경우 서비스의 모든 엔드포인트를 검색할 수 있습니다. [\<discoveryEndpoint>](discoveryendpoint.md)또는 자식 요소를 사용 하 여 이러한 끝점의 검색 기능을 추가로 구성할 수 있습니다 [\<announcementEndpoint>](announcementendpoint.md) . [\<announcementEndpoint>](announcementendpoint.md)서비스 알림을 보내는 데 사용할 끝점 구성 (온라인/Hello 및 오프 라인/Bye)을 지정 하 여 알림을 구성 하려면 섹션을 사용 합니다. 섹션을 사용 [\<discoveryEndpoint>](discoveryendpoint.md) 하 여 검색 메시지를 수신할 끝점을 수동으로 지정 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 구성 예제에서는 CalculatorService를 검색할 수 있도록 지정하고 선택적으로 알림 엔드포인트를 사용하도록 지정합니다.  
   
 ```xml  

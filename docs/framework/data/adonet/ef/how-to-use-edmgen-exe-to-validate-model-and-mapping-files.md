@@ -2,14 +2,15 @@
 title: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: a5e3124eb907b8077df7db4d71240f6e6b7bae63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62a3bde9d2431b9e9e86e2a8d8896520f3456590
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198121"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사
+
 이 항목에서는 [EDM 생성기 (EdmGen.exe)](edm-generator-edmgen-exe.md) 도구를 사용 하 여 모델 및 매핑 파일의 유효성을 검사 하는 방법을 보여 줍니다. 자세한 내용은 [엔터티 데이터 모델](../entity-data-model.md)를 참조 하세요.  
   
 ### <a name="to-validate-the-school-model-using-edmgenexe"></a>EdmGen.exe를 사용하여 School 모델의 유효성을 검사하려면  
@@ -24,7 +25,7 @@ ms.locfileid: "90544507"
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:ValidateArtifacts /inssdl:.\School.ssdl /inmsl:.\School.msl /incsdl:.\School.csdl  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 수동으로 Entity Framework 프로젝트 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

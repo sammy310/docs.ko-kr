@@ -2,14 +2,15 @@
 title: 명명된 형식 생성자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f40adce1a9e031ed0b7cd5d03d9c63db255aa610
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c673b58ee5811e3d3b74b3744d3f5291888e2253
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319569"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197783"
 ---
 # <a name="named-type-constructor-entity-sql"></a>명명된 형식 생성자(Entity SQL)
+
 엔터티 형식이나 복합 형식과 같은 개념적 모델 명목 형식의 인스턴스를 만드는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -19,6 +20,7 @@ ms.locfileid: "72319569"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `identifier`  
  단순 식별자 또는 따옴표 붙은 식별자인 값입니다. 자세한 내용은 [식별자](identifiers-entity-sql.md) 를 참조 하세요.  
   
@@ -26,9 +28,11 @@ ms.locfileid: "72319569"
  형식의 특성으로서, 형식 선언에 나타나는 것과 동일한 순서일 것으로 가정됩니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  명명된 복합 형식 및 엔터티 형식의 인스턴스입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
+
  다음 예제에서는 명목 형식 및 복합 형식을 생성하는 방법을 보여 줍니다.  
   
  다음 식은 `Person` 형식의 인스턴스를 만듭니다.  
@@ -50,6 +54,7 @@ ms.locfileid: "72319569"
  다음 예제에서는 복합 형식의 속성을 null로 초기화하는 방법을 보여 줍니다.`MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>예제  
+
  다음 Entity SQL 쿼리에서는 명명된 형식 생성자를 사용하여 개념적 모델 형식의 인스턴스를 만듭니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
 1. [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
@@ -58,7 +63,7 @@ ms.locfileid: "72319569"
   
  [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [형식 생성](constructing-types-entity-sql.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)

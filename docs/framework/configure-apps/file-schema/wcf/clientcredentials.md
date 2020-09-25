@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400504"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201462"
 ---
 # \<clientCredentials>
+
 클라이언트를 서비스에 인증하는 데 사용되는 자격 증명을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,18 +41,19 @@ ms.locfileid: "70400504"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`supportInteractive`|런타임에 클라이언트 자격 증명을 선택할 때 대화형 사용자가 포함될 수 있는지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |`type`|이 구성 요소의 형식을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|클라이언트를 서비스에 인증하는 데 사용되는 인증서를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement> 형식입니다.|  
 |[\<httpDigest>](httpdigest-element.md)|클라이언트를 서비스에 인증하는 데 사용되는 다이제스트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.HttpDigestClientElement> 형식입니다.|  
@@ -62,11 +64,12 @@ ms.locfileid: "70400504"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  클라이언트 자격 증명은 상호 인증이 필요한 경우 서비스에 대해 클라이언트를 인증하는 데 사용됩니다. 또한 이 구성 섹션은 클라이언트가 서비스 인증서를 사용하여 서비스에 대한 메시지 보안을 유지해야 하는 경우 서비스 인증서를 지정하는 데 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목

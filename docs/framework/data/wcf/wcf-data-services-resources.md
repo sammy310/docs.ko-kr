@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9b0534c2d11b723458b52e219ba1ce2de4b3c550
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52de0dc16ea2363c48ed48291883352b02f2015c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541528"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202151"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services 리소스
+
 WCF Data Services 소개 항목은 다음 위치에서 찾을 수 있습니다. 이들 항목 중 상당수에는 자세한 정보가 포함된 관련 항목 링크가 제공됩니다.  
   
  [개요](wcf-data-services-overview.md)  
@@ -27,6 +28,7 @@ WCF Data Services 소개 항목은 다음 위치에서 찾을 수 있습니다. 
  WCF Data Services 및 OData 설명서에 사용 되는 용어를 포함 합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
+
  다음 외부 리소스는 OData 피드를 노출 하 고 사용 하는 WCF Data Services 응용 프로그램을 만들기 위한 추가 정보와 지원을 제공 합니다.  
   
  [WCF Data Services 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
@@ -53,6 +55,6 @@ WCF Data Services 소개 항목은 다음 위치에서 찾을 수 있습니다. 
  [엔터티-관계 모델:](https://dl.acm.org/doi/10.1145/320434.320440) Peter Pin-shan, Massachusetts의 기술을 통해 통합 된 데이터 보기 지향  
  WCF Data Services에서 구현 하는 엔터티 관계형 모델의 기초에 대해 설명 합니다. 1976년에 작성되었으며 컴퓨터 분야에서 가장 흔히 인용되는 논문 중 하나입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작](getting-started-with-wcf-data-services.md)

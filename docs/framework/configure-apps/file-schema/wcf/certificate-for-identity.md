@@ -2,14 +2,15 @@
 title: <identity>의 경우 <certificate>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 1cfd207afc72cc71359d9d262e30b0696ba63d2b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 24c39b5efaee7f8db12088d272efeb3783efab04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850009"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198862"
 ---
 # <a name="certificate-for-identity"></a>\<identity>의 경우 \<certificate>
+
 클라이언트에 서버의 유효성을 검사하는 데 사용되는 X.509 인증서를 지정합니다.  
   
 요소 값을 설정 하는 방법에 대 한 자세한 내용은 [서비스 id 및 인증](../../../wcf/feature-details/service-identity-and-authentication.md)을 참조 하세요.  
@@ -28,24 +29,27 @@ ms.locfileid: "70850009"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |encodedValue|인증서의 Base64 인코딩입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<identity>](identity.md)|클라이언트에서 인증할 서비스의 ID를 지정합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 코드에서는 클라이언트에 서버의 유효성을 검사하는 데 사용되는 인코딩된 인증서 표현을 지정합니다.  
   
 ```xml  

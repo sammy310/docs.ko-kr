@@ -2,14 +2,15 @@
 title: '방법: 모델 및 매핑 파일을 포함 리소스로 만들기'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: aaab2ccc96497cb718b868f7ac63995ad4ba35c8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546681"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198290"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>방법: 모델 및 매핑 파일을 포함 리소스로 만들기
+
 Entity Framework를 사용 하면 모델 및 매핑 파일을 응용 프로그램의 포함 리소스로 배포할 수 있습니다. 포함된 모델 및 매핑 파일이 있는 어셈블리는 엔터티 연결과 동일한 애플리케이션 도메인에 로드해야 합니다. 자세한 내용은 [연결 문자열](connection-strings.md)을 참조하세요. 기본적으로 엔터티 데이터 모델 도구는 모델 및 매핑 파일을 포함 합니다. 모델 및 매핑 파일을 수동으로 정의 하는 경우이 절차를 사용 하 여 파일이 Entity Framework 응용 프로그램과 함께 포함 리소스로 배포 되도록 합니다.  
   
 > [!NOTE]
@@ -34,9 +35,10 @@ Entity Framework를 사용 하면 모델 및 매핑 파일을 응용 프로그�
      자세한 내용은 [연결 문자열](connection-strings.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 연결 문자열은 [AdventureWorks Sales 모델](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에 대 한 포함 된 모델 및 매핑 파일을 참조 합니다. 이 연결 문자열은 프로젝트의 App.config 파일에 저장됩니다.  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [모델링 및 매핑](modeling-and-mapping.md)
 - [방법: 연결 문자열 정의](how-to-define-the-connection-string.md)
