@@ -2,14 +2,15 @@
 title: 정식 함수
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 11e22d527c4266f45ea5d26f2ec95926ebe46332
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854518"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185251"
 ---
 # <a name="canonical-functions"></a>정식 함수
+
 이 단원에서는 모든 데이터 공급자에서 지원되며 모든 쿼리 기술에 사용될 수 있는 정식 함수에 대해 설명합니다. 정식 함수는 공급자에서 확장할 수 없습니다.  
   
  이러한 정식 함수는 공급자에 해당하는 데이터 소스 기능으로 변환됩니다. 그러면 다양한 데이터 소스에서 일반적인 형태로 함수 호출을 표현할 수 있습니다.  
@@ -23,9 +24,11 @@ ms.locfileid: "70854518"
  LINQ 시나리오의 경우 Entity Framework에 대 한 쿼리에서 CLR 메서드를 기본 데이터 소스의 메서드에 매핑합니다. CLR 메서드는 특정 메서드 집합이 데이터 소스에 관계없이 올바르게 매핑되도록 정식 함수에 매핑됩니다.  
   
 ## <a name="canonical-functions-namespace"></a>정식 함수 네임스페이스  
+
  정식 함수의 네임스페이스는 <xref:System.Data.Metadata.Edm>입니다. <xref:System.Data.Metadata.Edm> 네임스페이스는 모든 쿼리에 자동으로 포함됩니다. 하지만, 정식 함수와 이름이 같은 함수가 포함된(<xref:System.Data.Metadata.Edm> 네임스페이스) 다른 네임스페이스를 가져온 경우 네임스페이스를 지정해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [집계 정식 함수](aggregate-canonical-functions.md)  
  집계 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.  
   
@@ -47,7 +50,7 @@ ms.locfileid: "70854518"
  [기타 정식 함수](other-canonical-functions.md)  
  비트, 날짜/시간, 문자열, 수식, 집계 등으로 분류되지 않는 함수에 대해 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Entity SQL 개요](entity-sql-overview.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)

@@ -2,14 +2,15 @@
 title: LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 295be0157c260c05a2e4a7dbbfcd7e5cecbc85de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70f6a6ee91761196b62b34f6dde73d11dbe6b39d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548002"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200604"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 n 계층 또는 다계층 애플리케이션을 만들 수 있습니다. 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 컨텍스트, 엔터티 클래스 및 쿼리 생성 논리는 중간 계층에서 DAL (데이터 액세스 계층)로 배치 됩니다. 비즈니스 논리와 모든 비지속적 데이터는 엔터티와 데이터 컨텍스트의 부분 클래스와 메서드에 완전하게 구현되거나 별도의 클래스에 구현될 수 있습니다.
 
  클라이언트 또는 프레젠테이션 계층에서 중간 계층의 원격 인터페이스에 있는 메서드를 호출하면 중간 계층의 DAL에서는 <xref:System.Data.Linq.DataContext> 메서드에 매핑된 쿼리나 저장 프로시저를 실행합니다. 중간 계층에서는 일반적으로 프록시 개체 또는 엔터티의 XML 표현으로 클라이언트에 데이터를 반환합니다.
@@ -19,6 +20,7 @@ ms.locfileid: "90548002"
  ASP.NET 애플리케이션에서는 이러한 복잡한 작업을 <xref:System.Web.UI.WebControls.LinqDataSource>에서 대부분 처리합니다. 자세한 내용은 [LinqDataSource 웹 서버 컨트롤 개요](/previous-versions/aspnet/bb547113(v=vs.100))를 참조 하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
+
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 n 계층 애플리케이션을 구현하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [ASP.NET을 사용하는 LINQ to SQL N 계층](linq-to-sql-n-tier-with-aspnet.md)
@@ -31,6 +33,6 @@ ms.locfileid: "90548002"
 
  ADO.NET 데이터 집합을 사용 하는 n 계층 응용 프로그램에 대 한 자세한 내용은 [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [배경 정보](background-information.md)

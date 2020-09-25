@@ -2,29 +2,32 @@
 title: REF CURSOR 예제
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b45ef971ccb6b785988cc351d02be9e0844f6e11
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149137"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200539"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 예제
+
 REF CURSOR 예제는 REF CURSOR를 사용하는 다음 세 개의 Microsoft Visual Basic 예제로 구성됩니다.  
   
 |샘플|Description|  
 |------------|-----------------|  
 |[OracleDataReader의 REF CURSOR 매개 변수](ref-cursor-parameters-in-an-oracledatareader.md)|이 예제에서는 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 값을 <xref:System.Data.OracleClient.OracleDataReader>로 읽습니다.|  
-|[OracleDataReader를 사용하여 여러 Multiple REF CURSOR에서 데이터 검색](retrieving-data-from-multiple-ref-cursors.md)|이 예제에서는 두 개의 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 **OracleDataReader**를 사용하여 값을 읽습니다.|  
+|[OracleDataReader를 사용하여 여러 Multiple REF CURSOR에서 데이터 검색](retrieving-data-from-multiple-ref-cursors.md)|이 예에서는 두 개의 REF CURSOR 매개 변수를 반환 하는 PL/SQL 저장 프로시저를 실행 하 고 **OracleDataReader**를 사용 하 여 값을 읽습니다.|  
 |[하나 이상의 REF CURSOR를 사용하여 데이터 세트 필터링](filling-a-dataset-using-one-or-more-ref-cursors.md)|이 예제에서는 두 개의 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하고 반환되는 행으로 <xref:System.Data.DataSet>을 채웁니다.|  
   
  이러한 예제를 사용하려면 Oracle 테이블을 만들거나 PL/SQL 패키지 및 패키지 본문을 만들어야 합니다.  
   
 ## <a name="creating-the-oracle-tables"></a>Oracle 테이블 만들기  
+
  이 예제에서는 Oracle Scott/Tiger 스키마에 정의된 테이블을 사용합니다. Oracle Scott/Tiger 스키마는 대부분의 Oracle 설치와 함께 제공됩니다. 이 스키마가 없으면 {OracleHome}\rdbms\admin\scott.sql에 있는 SQL 명령 파일을 사용하여 이러한 예제에서 사용되는 테이블과 인덱스를 만들 수 있습니다.  
   
 ## <a name="creating-the-oracle-package-and-package-body"></a>Oracle 패키지 및 패키지 본문 만들기  
- 이러한 예제를 사용하려면 서버에 다음 PL/SQL 패키지 및 패키지 본문이 있어야 합니다. Oracle 서버에서 다음 Oracle 패키지를 만듭니다.  
+
+ 이러한 예제를 사용하려면 서버에 다음 PL/SQL 패키지 및 패키지 본문이 있어야 합니다. Oracle 서버에 다음 Oracle 패키지를 만듭니다.  
   
 ```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS
@@ -37,7 +40,7 @@ END CURSPKG;
 /
 ```  
   
- Oracle 서버에서 다음 Oracle 패키지 본문을 만듭니다.  
+ Oracle 서버에 다음 Oracle 패키지 본문을 만듭니다.  
   
 ```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  

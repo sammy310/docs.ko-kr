@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96cef2dff3156e49a93be818230c83370dab5264
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154935"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185863"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist의 \<clear> 요소(네트워크 설정)
+
 프록시 무시 목록을 지웁니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,12 +34,15 @@ ms.locfileid: "79154935"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -48,12 +52,15 @@ ms.locfileid: "79154935"
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `clear`요소는 바이패스 목록에서 모든 항목을 지웁니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 바이패스 목록을 지운 다음 바이패스 목록에 두 개의 주소를 추가 합니다. 첫 번째는 contoso.com 도메인에 있는 모든 서버에 대 한 프록시를 무시 합니다. 두 번째는 IP 주소가 192.168으로 시작 하는 모든 서버에 대해 프록시를 무시 합니다.  
   
 ```xml  

@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8cc8bdcf776befafba967ee2649a6ada789d07c5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569037"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194364"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>방법: 데이터 서비스 메시지 가로채기(WCF Data Services)
-WCF Data Services를 사용 하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 메시지를 가로채는 경우 데이터 서비스에서 특별 한 특성이 지정 된 메서드를 사용 합니다. 자세한 내용은 [인터셉터](interceptors-wcf-data-services.md)를 참조 하세요.  
+
+WCF Data Services를 사용 하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 메시지를 가로채려면 데이터 서비스에서 특별한 특성이 있는 메서드를 사용합니다. 자세한 내용은 [인터셉터](interceptors-wcf-data-services.md)를 참조 하세요.  
   
  이 항목의 예제에서는 Northwind 샘플 데이터 서비스를 사용합니다. 이 서비스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.  
   
@@ -44,18 +45,20 @@ WCF Data Services를 사용 하면 사용자 지정 논리를 작업에 추가�
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `Orders` 엔터티 집합에 대해 람다 식을 반환하는 쿼리 인터셉터 메서드를 정의합니다. 이 식에는 특정 연락처 이름이 있는 관련 `Orders`를 기반으로 요청된 `Customers`를 필터링하는 대리자가 포함되어 있습니다. 이름은 요청하는 사용자를 기반으로 확인됩니다. 이 예제에서는 WCF를 사용하고 인증이 사용하도록 설정된 ASP.NET 웹 애플리케이션 내에 데이터 서비스가 호스트된다고 가정합니다. <xref:System.Web.HttpContext> 클래스는 현재 요청의 사용자를 검색하는 데 사용됩니다.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptor)]
  [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptor)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `Products` 엔터티 집합에 대해 변경 인터셉터 메서드를 정의합니다. 이 메서드는 <xref:System.Data.Services.UpdateOperations.Add> 또는 <xref:System.Data.Services.UpdateOperations.Change> 작업에 대해 서비스 입력의 유효성을 검사하고 판매가 중단된 제품이 변경되는 경우 예외를 발생시킵니다. 또한 제품 삭제를 지원되지 않는 작업으로 차단합니다.  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 서비스 작업 정의](how-to-define-a-service-operation-wcf-data-services.md)
 - [WCF Data Services 정의](defining-wcf-data-services.md)
