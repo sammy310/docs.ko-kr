@@ -2,14 +2,15 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: dc5c00a2204646863ae2570bb97b8d70e22a72d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30fd78d6c56e8b22e0e744a38f18ac076dc70162
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399192"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178036"
 ---
 # \<userNameAuthentication>
+
 사용자 이름 및 암호에 따라 서비스의 자격 증명을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ ms.locfileid: "70399192"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`cacheLogonTokenLifetime`|토큰이 캐시되는 최대 시간 길이를 지정하는 <xref:System.TimeSpan>입니다. 기본값은 00:15:00입니다.|  
 |`cacheLogonTokens`|로그온 토큰 캐시 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.|  
@@ -48,15 +50,17 @@ ms.locfileid: "70399192"
 |`userNamePasswordValidationMode`|사용자 이름 암호의 유효성 검사 방식을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -Windows<br />-MembershipProvider<br />-Custom<br /><br /> 기본값은 Windows입니다. 이 특성은 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<serviceCredentials>](servicecredentials.md)|서비스를 인증하는 데 사용되는 자격 증명 및 클라이언트 자격 증명 확인 관련 설정을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  사용자 이름/암호 기반 인증을 위해 구성된 서비스에서 사용하는 바인딩이 없으면 이 요소의 특성이 무시됩니다. 여기에는,, `customUserNamePasswordValidatorType` 및가 포함 됩니다 `includeWindowsGroups` `membershipProviderName` `userNamePasswordValidationMode` .  
   
  사용자 이름/암호에 대한 Windows 인증을 사용하기 위해 구성된 서비스에서 사용하는 바인딩이 없으면 로그온 토큰의 캐싱과 관련된 설정이 무시됩니다. 이것에는 `cacheLogonTokenLifetime`, `cacheLogonTokens` 및 `maxCacheLogonTokens`가 있습니다.  

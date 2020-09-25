@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732559"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177853"
 ---
 # \<webSocketSettings>
+
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |createNotificationOnConnection|연결 시 알림이 보내지는지 여부를 지정합니다.|  
 |disablePayloadMasking|WebSocket 마스킹을 사용하지 않도록 설정할지 여부를 지정합니다.|  
@@ -54,22 +56,24 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 ## <a name="transportusage-attribute"></a>transportUsage 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |WhenDuplex|이중 계약인 경우 WebSocket 프로토콜을 사용합니다.|  
 |항상|계약과 관계없이 항상 WebSocket 프로토콜을 사용합니다.|  
 |안 함|WebSocket 프로토콜을 사용하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |\<netHttpBinding>|NetHttpBinding을 지정합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 \<webSocketSettings> 요소를 사용하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -93,7 +97,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [바인딩](../../../wcf/bindings.md)
+- [바인딩하](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)
