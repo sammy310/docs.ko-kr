@@ -2,67 +2,73 @@
 title: <schemeSettings> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: c745c90bb61b9ee393687d7f6db4fd11565c7dc7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a146b854239fd516125e66e05312e27b90c73ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154649"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187019"
 ---
-# <a name="schemesettings-element-uri-settings"></a><span data-ttu-id="6df04-102">\<schemeSettings> 요소(URI 설정)</span><span class="sxs-lookup"><span data-stu-id="6df04-102">\<schemeSettings> Element (Uri Settings)</span></span>
-<span data-ttu-id="6df04-103">특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  
+# <a name="schemesettings-element-uri-settings"></a><span data-ttu-id="47e6f-102">\<schemeSettings> 요소(URI 설정)</span><span class="sxs-lookup"><span data-stu-id="47e6f-102">\<schemeSettings> Element (Uri Settings)</span></span>
+
+<span data-ttu-id="47e6f-103">특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<schemeSettings>**  
   
-## <a name="syntax"></a><span data-ttu-id="6df04-104">구문</span><span class="sxs-lookup"><span data-stu-id="6df04-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47e6f-104">구문</span><span class="sxs-lookup"><span data-stu-id="47e6f-104">Syntax</span></span>  
   
 ```xml  
 <schemeSettings>
 </schemeSettings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6df04-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="6df04-105">Attributes and Elements</span></span>  
- <span data-ttu-id="6df04-106">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="47e6f-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="47e6f-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="47e6f-106">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6df04-107">특성</span><span class="sxs-lookup"><span data-stu-id="6df04-107">Attributes</span></span>  
- <span data-ttu-id="6df04-108">None</span><span class="sxs-lookup"><span data-stu-id="6df04-108">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="47e6f-107">특성</span><span class="sxs-lookup"><span data-stu-id="47e6f-107">Attributes</span></span>  
+
+ <span data-ttu-id="47e6f-108">없음</span><span class="sxs-lookup"><span data-stu-id="47e6f-108">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="6df04-109">자식 요소</span><span class="sxs-lookup"><span data-stu-id="6df04-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="47e6f-109">자식 요소</span><span class="sxs-lookup"><span data-stu-id="47e6f-109">Child Elements</span></span>  
   
-|<span data-ttu-id="6df04-110">**요소**</span><span class="sxs-lookup"><span data-stu-id="6df04-110">**Element**</span></span>|<span data-ttu-id="6df04-111">**설명**</span><span class="sxs-lookup"><span data-stu-id="6df04-111">**Description**</span></span>|  
+|<span data-ttu-id="47e6f-110">**요소**</span><span class="sxs-lookup"><span data-stu-id="47e6f-110">**Element**</span></span>|<span data-ttu-id="47e6f-111">**설명**</span><span class="sxs-lookup"><span data-stu-id="47e6f-111">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="6df04-112">추가</span><span class="sxs-lookup"><span data-stu-id="6df04-112">add</span></span>](add-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="6df04-113">구성표 이름에 대 한 구성표 설정을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-113">Adds a scheme setting for a scheme name.</span></span>|  
-|[<span data-ttu-id="6df04-114">해제</span><span class="sxs-lookup"><span data-stu-id="6df04-114">clear</span></span>](clear-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="6df04-115">기존 구성표 설정을 모두 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-115">Clears all existing scheme settings.</span></span>|  
-|[<span data-ttu-id="6df04-116">remove</span><span class="sxs-lookup"><span data-stu-id="6df04-116">remove</span></span>](remove-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="6df04-117">구성표 이름에 대 한 구성표 설정을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-117">Removes a scheme setting for a scheme name.</span></span>|  
+|[<span data-ttu-id="47e6f-112">add</span><span class="sxs-lookup"><span data-stu-id="47e6f-112">add</span></span>](add-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="47e6f-113">구성표 이름에 대 한 구성표 설정을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-113">Adds a scheme setting for a scheme name.</span></span>|  
+|[<span data-ttu-id="47e6f-114">clear</span><span class="sxs-lookup"><span data-stu-id="47e6f-114">clear</span></span>](clear-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="47e6f-115">기존 구성표 설정을 모두 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-115">Clears all existing scheme settings.</span></span>|  
+|[<span data-ttu-id="47e6f-116">remove</span><span class="sxs-lookup"><span data-stu-id="47e6f-116">remove</span></span>](remove-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="47e6f-117">구성표 이름에 대 한 구성표 설정을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-117">Removes a scheme setting for a scheme name.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6df04-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="6df04-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="47e6f-118">부모 요소</span><span class="sxs-lookup"><span data-stu-id="47e6f-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="6df04-119">**요소**</span><span class="sxs-lookup"><span data-stu-id="6df04-119">**Element**</span></span>|<span data-ttu-id="6df04-120">**설명**</span><span class="sxs-lookup"><span data-stu-id="6df04-120">**Description**</span></span>|  
+|<span data-ttu-id="47e6f-119">**요소**</span><span class="sxs-lookup"><span data-stu-id="47e6f-119">**Element**</span></span>|<span data-ttu-id="47e6f-120">**설명**</span><span class="sxs-lookup"><span data-stu-id="47e6f-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="6df04-121">uri</span><span class="sxs-lookup"><span data-stu-id="6df04-121">uri</span></span>](uri-element-uri-settings.md)|<span data-ttu-id="6df04-122">.NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
+|[<span data-ttu-id="47e6f-121">uri</span><span class="sxs-lookup"><span data-stu-id="47e6f-121">uri</span></span>](uri-element-uri-settings.md)|<span data-ttu-id="47e6f-122">.NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6df04-123">설명</span><span class="sxs-lookup"><span data-stu-id="6df04-123">Remarks</span></span>  
- <span data-ttu-id="6df04-124">기본적으로 클래스는 <xref:System.Uri?displayProperty=nameWithType> 경로 압축을 실행 하기 전에 인코딩된 경로 구분 기호 비율을 이스케이프 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-124">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="6df04-125">이는 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-125">This was implemented as a security mechanism against attacks like the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="47e6f-123">설명</span><span class="sxs-lookup"><span data-stu-id="47e6f-123">Remarks</span></span>  
+
+ <span data-ttu-id="47e6f-124">기본적으로 클래스는 <xref:System.Uri?displayProperty=nameWithType> 경로 압축을 실행 하기 전에 인코딩된 경로 구분 기호 비율을 이스케이프 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-124">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="47e6f-125">이는 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-125">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="6df04-126">% 인코딩된 문자를 올바르게 처리 하지 않는 모듈에이 URI가 전달 되 면 서버에서 다음 명령을 실행 하 게 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-126">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
+ <span data-ttu-id="47e6f-126">% 인코딩된 문자를 올바르게 처리 하지 않는 모듈에이 URI가 전달 되 면 서버에서 다음 명령을 실행 하 게 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-126">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- <span data-ttu-id="6df04-127">따라서 <xref:System.Uri?displayProperty=nameWithType> 클래스는 먼저 경로 구분 기호를 이스케이프 해제 한 후 경로 압축을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-127">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="6df04-128">위의 악성 URL을 클래스 생성자에 전달 하면 <xref:System.Uri?displayProperty=nameWithType> 다음 URI가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-128">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
+ <span data-ttu-id="47e6f-127">따라서 <xref:System.Uri?displayProperty=nameWithType> 클래스는 먼저 경로 구분 기호를 이스케이프 해제 한 후 경로 압축을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-127">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="47e6f-128">위의 악성 URL을 클래스 생성자에 전달 하면 <xref:System.Uri?displayProperty=nameWithType> 다음 URI가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-128">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="6df04-129">이 기본 동작은 특정 스키마에 대 한 schemeSettings 구성 옵션을 사용 하 여 인코딩된 경로 구분 기호를 이스케이프 해제 하지 않도록 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-129">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
+ <span data-ttu-id="47e6f-129">이 기본 동작은 특정 스키마에 대 한 schemeSettings 구성 옵션을 사용 하 여 인코딩된 경로 구분 기호를 이스케이프 해제 하지 않도록 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-129">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="6df04-130">구성 파일</span><span class="sxs-lookup"><span data-stu-id="6df04-130">Configuration Files</span></span>  
- <span data-ttu-id="6df04-131">이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="47e6f-130">구성 파일</span><span class="sxs-lookup"><span data-stu-id="47e6f-130">Configuration Files</span></span>  
+
+ <span data-ttu-id="47e6f-131">이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-131">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6df04-132">예제</span><span class="sxs-lookup"><span data-stu-id="6df04-132">Example</span></span>  
- <span data-ttu-id="6df04-133">다음 예제에서는 <xref:System.Uri> http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 클래스에서 사용 하는 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6df04-133">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+## <a name="example"></a><span data-ttu-id="47e6f-132">예제</span><span class="sxs-lookup"><span data-stu-id="47e6f-132">Example</span></span>  
+
+ <span data-ttu-id="47e6f-133">다음 예제에서는 <xref:System.Uri> http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 클래스에서 사용 하는 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="47e6f-133">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,16 +80,16 @@ ms.locfileid: "79154649"
 </configuration>  
 ```  
   
-## <a name="element-information"></a><span data-ttu-id="6df04-134">요소 정보</span><span class="sxs-lookup"><span data-stu-id="6df04-134">Element Information</span></span>  
+## <a name="element-information"></a><span data-ttu-id="47e6f-134">요소 정보</span><span class="sxs-lookup"><span data-stu-id="47e6f-134">Element Information</span></span>  
   
 |||
 |-|-|  
-|<span data-ttu-id="6df04-135">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="6df04-135">Namespace</span></span>|<span data-ttu-id="6df04-136">System</span><span class="sxs-lookup"><span data-stu-id="6df04-136">System</span></span>|  
-|<span data-ttu-id="6df04-137">Schema Name</span><span class="sxs-lookup"><span data-stu-id="6df04-137">Schema Name</span></span>||  
-|<span data-ttu-id="6df04-138">유효성 검사 파일</span><span class="sxs-lookup"><span data-stu-id="6df04-138">Validation File</span></span>||  
-|<span data-ttu-id="6df04-139">비워 둘 수 있음</span><span class="sxs-lookup"><span data-stu-id="6df04-139">Can be Empty</span></span>||  
+|<span data-ttu-id="47e6f-135">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="47e6f-135">Namespace</span></span>|<span data-ttu-id="47e6f-136">시스템</span><span class="sxs-lookup"><span data-stu-id="47e6f-136">System</span></span>|  
+|<span data-ttu-id="47e6f-137">Schema Name</span><span class="sxs-lookup"><span data-stu-id="47e6f-137">Schema Name</span></span>||  
+|<span data-ttu-id="47e6f-138">유효성 검사 파일</span><span class="sxs-lookup"><span data-stu-id="47e6f-138">Validation File</span></span>||  
+|<span data-ttu-id="47e6f-139">비워 둘 수 있음</span><span class="sxs-lookup"><span data-stu-id="47e6f-139">Can be Empty</span></span>||  
   
-## <a name="see-also"></a><span data-ttu-id="6df04-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6df04-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47e6f-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47e6f-140">See also</span></span>
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
@@ -91,4 +97,4 @@ ms.locfileid: "79154649"
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [<span data-ttu-id="6df04-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="6df04-141">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="47e6f-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="47e6f-141">Network Settings Schema</span></span>](index.md)
