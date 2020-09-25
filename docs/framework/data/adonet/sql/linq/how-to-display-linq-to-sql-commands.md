@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e703ea9be3ead50afae9b8f42aaa4f54a292c23c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002930"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169442"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>방법: LINQ to SQL 명령 표시
+
 <xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 콘솔 창에 쿼리로부터의 출력, 생성된 SQL 명령, 명령 형식 및 연결 형식이 차례로 표시됩니다.  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
@@ -48,6 +50,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 지원](debugging-support.md)

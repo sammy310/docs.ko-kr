@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 81f6b9603cc7f8b7863f787272ce6a1af920fa75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169494"
 ---
 # <a name="how-to-display-generated-sql"></a>방법: 생성된 SQL 표시
+
 <xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 쿼리에 대해 생성된 SQL 코드를 보고 프로세스를 변경할 수 있습니다. 이러한 접근 방식은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기능을 이해하고 특정 문제를 디버깅하는 데 유용합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 코드를 실행하기 전에 콘솔 창에 SQL 코드를 표시합니다.  이 속성은 쿼리, 삽입, 업데이트 및 삭제 명령과 함께 사용할 수 있습니다.  
   
  콘솔 창의 줄은 다음에 나오는 Visual Basic 또는 c # 코드를 실행할 때 표시 됩니다.  

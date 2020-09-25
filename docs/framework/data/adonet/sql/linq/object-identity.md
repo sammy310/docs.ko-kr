@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a1617b4fb15a6adf94c0241c3ba577308c51a8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792946"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169429"
 ---
 # <a name="object-identity"></a>개체 ID
+
 런타임의 개체는 고유한 ID를 가집니다. 동일한 개체를 참조하는 두 개의 변수는 실제로 해당 개체의 동일한 인스턴스를 참조합니다. 따라서 하나의 변수를 통해 수행한 변경 내용을 다른 변수를 통해 즉시 볼 수 있습니다.  
   
  관계형 데이터베이스 테이블의 행에는 고유한 ID가 없습니다. 각 행에 고유한 기본 키가 있으므로 두 개 행이 동일한 키 값을 공유하지 않습니다. 그러나 데이터베이스 테이블의 콘텐츠에만 이 제한이 적용됩니다.  
@@ -28,20 +29,22 @@ ms.locfileid: "70792946"
 > [!NOTE]
 > 쿼리에 의해 요청된 개체를 이미 검색된 개체로 쉽게 식별할 수 있는 경우 쿼리가 실행되지 않습니다. ID 테이블은 이전에 검색된 모든 개체의 캐시로 작동합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="object-caching-example-1"></a>개체 캐싱 예제 1  
+
  이 예제에서는 동일한 쿼리를 두 번 실행할 경우 항상 메모리의 동일한 개체에 대한 참조가 수신됩니다.  
   
  [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
  [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
   
 ### <a name="object-caching-example-2"></a>개체 캐싱 예제 2  
+
  이 예제에서는 데이터베이스에서 동일한 행을 반환하는 다른 쿼리를 실행할 경우 항상 메모리의 동일한 개체에 대한 참조가 수신됩니다.  
   
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [배경 정보](background-information.md)
