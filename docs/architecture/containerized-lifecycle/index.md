@@ -2,12 +2,12 @@
 title: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 description: Docker 및 Microsoft 플랫폼과 도구를 사용하여 컨테이너화된 애플리케이션을 개발하고 배포하는 개발 및 배포 프로세스의 대략적인 개요를 확인하세요.
 ms.date: 07/30/2020
-ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160699"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 
@@ -17,7 +17,7 @@ ms.locfileid: "87915162"
 
 이 가이드는 Docker와 Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 ASP.NET Core 애플리케이션을 개발하고 배포하기 위한 일반적인 개요입니다. 이 가이드는 CI/CD 파이프라인을 구현하기 위한 Azure DevOps뿐만 아니라 배포를 위한 ACR(Azure Container Registry) 및 AKS(Azure Kubernetes Service)도 간략하게 소개합니다.
 
-자세한 개발 관련 세부 정보는 [.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션의 아키텍처](https://docs.microsoft.com/dotnet/architecture/microservices/) 가이드 및 IT 관련 참조 애플리케이션 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)를 참조할 수 있습니다.
+자세한 개발 관련 세부 정보는 [.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션의 아키텍처](../microservices/index.md) 가이드 및 IT 관련 참조 애플리케이션 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)를 참조할 수 있습니다.
 
 ## <a name="send-us-your-feedback"></a>피드백을 보내주세요.
 

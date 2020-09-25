@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267474"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158177"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms용 Blazor 개발자
 
@@ -74,7 +74,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 ## <a name="what-this-book-doesnt-cover"></a>이 책에서 다루지 않는 내용
 
-이 책은 Blazor를 소개하지만, 포괄적인 마이그레이션 가이드는 아닙니다. ASP.NET Web Forms에서 Blazor로 프로젝트를 마이그레이션하는 방법에 대한 지침을 포함하고 있지만, 미묘한 차이나 세부 사항은 다루지 않습니다. ASP.NET에서 ASP.NET Core로 마이그레이션하는 방법에 대한 일반적인 지침은 ASP.NET Core 설명서의 [마이그레이션 지침](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/)을 참조하세요.
+이 책은 Blazor를 소개하지만, 포괄적인 마이그레이션 가이드는 아닙니다. ASP.NET Web Forms에서 Blazor로 프로젝트를 마이그레이션하는 방법에 대한 지침을 포함하고 있지만, 미묘한 차이나 세부 사항은 다루지 않습니다. ASP.NET에서 ASP.NET Core로 마이그레이션하는 방법에 대한 일반적인 지침은 ASP.NET Core 설명서의 [마이그레이션 지침](/aspnet/core/migration/proper-to-2x/)을 참조하세요.
 
 ### <a name="additional-resources"></a>추가 자료
 

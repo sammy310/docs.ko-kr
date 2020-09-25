@@ -3,14 +3,15 @@ title: 공변성(Covariance) 및 반공변성(Contravariance)(C#)
 description: 공변성(Covariance) 및 반공변성(Contravariance)과 이 기능이 할당 호환성에 미치는 영향에 대해 알아보세요. 이 둘의 차이점을 보여 주는 코드 예제를 확인하세요.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d0309ec1bb3161412433e1b44e8e35410911b38d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465665"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176333"
 ---
 # <a name="covariance-and-contravariance-c"></a>공변성(Covariance) 및 반공변성(Contravariance)(C#)
+
 C#에서 공변성(Covariance)과 반공변성(Contravariance)은 배열 형식, 대리자 형식 및 제네릭 형식 인수에 대한 암시적 참조 변환을 가능하게 합니다. 공변성(Covariance)은 할당 호환성을 유지하고 반공변성(Contravariance)은 할당 호환성을 유지하지 않습니다.  
   
  다음 코드에서는 할당 호환성, 공변성(Covariance) 및 반공변성(Contravariance) 간의 차이를 보여 줍니다.  

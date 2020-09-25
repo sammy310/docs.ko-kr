@@ -4,12 +4,12 @@ description: 서버를 사용하지 않는 아키텍처에 대한 가이드입�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/22/2020
-ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 867765d29a7c50694a5de7b1de56346d86600a83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135695"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171821"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>서버리스 앱: 아키텍처, 패턴 및 Azure 구현
 
@@ -74,7 +74,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 이 가이드는 서버를 사용하지 않는 애플리케이션의 클라우드 네이티브 개발에 중점을 둡니다. 책은 이점을 강조 표시하고 서버를 사용하지 않는 앱을 개발하는 잠재적인 단점을 노출하고, 서버를 사용하지 않는 아키텍처의 설문 조사를 제공합니다. 서버를 사용하지 않는 방법의 많은 예제는 다양한 서버를 사용하지 않는 디자인 패턴와 함께 설명되어 있습니다.
 
-이 가이드는 Azure 서버를 사용하지 않는 플랫폼의 구성 요소를 설명하고 [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview)를 사용하여 서버를 사용하지 않는 구현에 특별히 중점을 둡니다. 지속 가능한 함수를 사용하는 상태에 따라 달라지는 서버를 사용하지 않는 앱을 구현하는 방법뿐만 아니라 트리거 및 바인딩에 대해 알아봅니다. 마지막으로 비즈니스 예제 및 사례 연구를 통해 서버를 사용하지 않는 것이 프로젝트에 대해 올바른 접근법인지 결정하기 위한 참조의 컨텍스트 및 프레임을 제공하는 데 도움이 됩니다.
+이 가이드는 Azure 서버를 사용하지 않는 플랫폼의 구성 요소를 설명하고 [Azure Functions](/azure/azure-functions/functions-overview)를 사용하여 서버를 사용하지 않는 구현에 특별히 중점을 둡니다. 지속 가능한 함수를 사용하는 상태에 따라 달라지는 서버를 사용하지 않는 앱을 구현하는 방법뿐만 아니라 트리거 및 바인딩에 대해 알아봅니다. 마지막으로 비즈니스 예제 및 사례 연구를 통해 서버를 사용하지 않는 것이 프로젝트에 대해 올바른 접근법인지 결정하기 위한 참조의 컨텍스트 및 프레임을 제공하는 데 도움이 됩니다.
 
 ## <a name="evolution-of-cloud-platforms"></a>클라우드 플랫폼의 진화
 
@@ -116,12 +116,12 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 ## <a name="what-this-guide-doesnt-cover"></a>이 가이드에서 다루지 않는 내용
 
-이 가이드에서는 특별히 아키텍처 접근법 및 디자인 패턴을 강조하지만 Azure Functions, [Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps) 또는 다른 서버를 사용하지 않는 플랫폼의 구현 세부 정보에 대한 심층 분석이 아닙니다. 예를 들어, 이 가이드에서는 CORS(Cross-Origin Resource Sharing)를 구성하거나, 사용자 지정 도메인을 적용하거나, SSL 인증서를 업로드하는 등 Logic Apps 또는 Azure Functions의 기능을 사용하는 고급 워크플로를 다루지 않습니다. 이러한 세부 정보는 온라인 [Azure Functions 설명서](https://docs.microsoft.com/azure/azure-functions/functions-reference)를 통해 사용할 수 있습니다.
+이 가이드에서는 특별히 아키텍처 접근법 및 디자인 패턴을 강조하지만 Azure Functions, [Logic Apps](/azure/logic-apps/logic-apps-what-are-logic-apps) 또는 다른 서버를 사용하지 않는 플랫폼의 구현 세부 정보에 대한 심층 분석이 아닙니다. 예를 들어, 이 가이드에서는 CORS(Cross-Origin Resource Sharing)를 구성하거나, 사용자 지정 도메인을 적용하거나, SSL 인증서를 업로드하는 등 Logic Apps 또는 Azure Functions의 기능을 사용하는 고급 워크플로를 다루지 않습니다. 이러한 세부 정보는 온라인 [Azure Functions 설명서](/azure/azure-functions/functions-reference)를 통해 사용할 수 있습니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
-- [Azure 아키텍처 센터](https://docs.microsoft.com/azure/architecture/)
-- [클라우드 애플리케이션의 모범 사례](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Azure 아키텍처 센터](/azure/architecture/)
+- [클라우드 애플리케이션의 모범 사례](/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>가이드의 대상 사용자
 

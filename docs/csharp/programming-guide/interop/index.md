@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 84cdc16ccda7a5c629a90b0752071a98de81a9b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302973"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178478"
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
 
@@ -22,6 +22,7 @@ ms.locfileid: "87302973"
 .NET에서는 플랫폼 호출 서비스, <xref:System.Runtime.InteropServices> 네임스페이스, C++ 상호 운용성 및 COM 상호 운용성(COM interop)을 통해 비관리 코드와의 상호 운용이 가능합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [상호 운용성 개요](./interoperability-overview.md)  
  C# 관리 코드와 비관리 코드 간에 상호 운용되도록 하는 방법을 설명합니다.  
   
