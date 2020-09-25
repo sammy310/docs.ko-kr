@@ -8,14 +8,15 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9396ca393523dce5593531f332e5c07241987947
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187006"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> 요소(네트워크 설정)
+
 네트워크 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,17 +31,19 @@ ms.locfileid: "79154545"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[추가](add-element-for-webrequestmodules-network-settings.md)|응용 프로그램에 사용자 지정 웹 요청 모듈을 추가 합니다.|  
-|[해제](clear-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거 합니다.|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|응용 프로그램에 사용자 지정 웹 요청 모듈을 추가 합니다.|  
+|[clear](clear-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거 합니다.|  
 |[remove](remove-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 사용자 지정 웹 요청 모듈을 제거 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -50,14 +53,17 @@ ms.locfileid: "79154545"
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `webRequestModules` 요소는 <xref:System.Net.WebRequest> 클래스의 하위 클래스를 등록하여 네트워크 호스트로의 정보 요청을 처리합니다. 웹 요청 모듈은 인터페이스를 구현 해야 합니다 <xref:System.Net.IWebRequestCreate> .  
   
  .NET Framework에는, 및로 시작 하는 Uri에 대 한 웹 요청 모듈이 포함 되어 있습니다 `http://` `https://` `file://` . 구성 파일에서 사용자 지정 모듈을 등록 하 여 기본 모듈만 재정의할 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 기본 HTTP 모듈을 등록 합니다. Version 및 PublicKeyToken의 값을 지정 된 모듈의 올바른 값으로 바꾸어야 합니다.  
   
 ```xml  

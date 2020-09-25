@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785988"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201280"
 ---
 # <a name="nesting-datarelations"></a>DataRelation 중첩
+
 데이터의 관계형 표현에서 각 테이블에는 열이나 열 집합을 사용하여 서로 연결시키는 행이 포함되어 있습니다. ADO.NET <xref:System.Data.DataSet>에서 각 테이블 사이의 관계는 <xref:System.Data.DataRelation>을 사용하여 구현됩니다. **DataRelation**을 만들 때 열의 부모-자식 관계는 관계를 통해서만 관리 됩니다. 테이블과 열은 별개의 엔터티입니다. XML에서 제공하는 데이터의 계층적 표현에서 부모-자식 관계는 중첩된 자식 요소를 포함하는 부모 요소에 의해 표현됩니다.  
   
- **데이터 집합이** 와 <xref:System.Xml.XmlDataDocument> 동기화 되거나 **WriteXml**을 사용 하 여 XML 데이터로 작성 되는 경우 자식 개체의 중첩을 용이 하 게 하기 위해 **DataRelation** 은 **중첩** 된 속성을 노출 합니다. **DataRelation** 의 **Nested** 속성을 **true** 로 설정 하면 XML 데이터로 작성 되거나 **XmlDataDocument**와 동기화 될 때 관계의 자식 행이 부모 열에 중첩 됩니다. **DataRelation** 의 **Nested** 속성은 기본적으로 **false**입니다.  
+ **데이터 집합이** 와 동기화 <xref:System.Xml.XmlDataDocument> 되거나 **WriteXml**을 사용 하 여 XML 데이터로 작성 되는 경우 자식 개체의 중첩을 용이 하 게 하기 위해 **DataRelation** 은 **중첩** 된 속성을 노출 합니다. **DataRelation** 의 **Nested** 속성을 **true** 로 설정 하면 XML 데이터로 작성 되거나 **XmlDataDocument**와 동기화 될 때 관계의 자식 행이 부모 열에 중첩 됩니다. **DataRelation** 의 **Nested** 속성은 기본적으로 **false**입니다.  
   
  예를 들어 다음 **데이터 집합**을 고려 합니다.  
   
@@ -131,9 +132,9 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [데이터 집합에서 XML 사용](using-xml-in-a-dataset.md)
+- [데이터 세트에서 XML 사용](using-xml-in-a-dataset.md)
 - [DataRelation 추가](adding-datarelations.md)
-- [DataSet, DataTable 및 DataView](index.md)
+- [DataSets, DataTables 및 DataViews](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

@@ -5,29 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 69994c546fea842ffef1c8c43d6d6f5bc35e0629
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b084590d7158024227a9f12da759b56ae2031373
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151054"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201345"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML에서 데이터 세트 스키마 정보 로드
-a의 <xref:System.Data.DataSet> 스키마(해당 테이블, 열, 관계식 및 제약 조건)는 프로그래밍 방식으로 정의하거나, **의 Fill** 또는 **FillSchema** 메서드에 <xref:System.Data.Common.DataAdapter>의해 만들어지거나 XML 문서에서 로드될 수 있습니다. XML 문서에서 **DataSet** 스키마 정보를 로드하려면 **ReadXmlSchema** 또는 **DataSet의** **InferXmlSchema** 메서드를 사용할 수 있습니다. **ReadXmlSchema를** 사용하면 XML 스키마 정의 언어(XSD) 스키마또는 인라인 XML 스키마가 포함된 XML 문서가 포함된 문서에서 **DataSet** 스키마 정보를 로드하거나 추론할 수 있습니다. **InferXmlSchema를** 사용하면 지정한 특정 XML 네임스페이스를 무시하면서 XML 문서에서 스키마를 유추할 수 있습니다.  
+
+의 스키마 <xref:System.Data.DataSet> (테이블, 열, 관계 및 제약 조건)는 프로그래밍 방식으로 정의 하거나,의 **Fill** 또는 **FillSchema** 메서드에 의해 만들어지거나 <xref:System.Data.Common.DataAdapter> , XML 문서에서 로드 될 수 있습니다. XML 문서에서 **데이터 집합** 스키마 정보를 로드 하기 위해 **데이터 집합**의 **readxmlschema** 또는 **InferXmlSchema** 메서드를 사용할 수 있습니다. **Readxmlschema** 를 사용 하면 XSD (xml 스키마 정의 언어) 스키마가 포함 된 문서나 인라인 xml 스키마를 사용 하는 xml 문서에서 **데이터 집합** 스키마 정보를 로드 하거나 유추할 수 있습니다. **InferXmlSchema** 를 사용 하면 지정한 특정 xml 네임 스페이스를 무시 하 고 xml 문서에서 스키마를 유추할 수 있습니다.  
   
 > [!NOTE]
-> 웹 서비스 또는 XML 직렬화를 사용하여 XSD 구문(예: 중첩 된 관계)을 사용하여 메모리내로 만든 **DataSet을** 전송하는 경우 **DataSet의** 테이블 순서가 유지되지 않을 수 있습니다. 따라서 **DataSet의** 받는 사람은 이 경우 테이블 순서에 의존해서는 안 됩니다. 그러나 전송중인 **DataSet의** 스키마가 메모리 내로 생성되는 대신 XSD 파일에서 읽은 경우 테이블 순서는 항상 유지됩니다.  
+> 웹 서비스 또는 XML serialization을 사용 하 여 XSD 구문을 사용 하 여 메모리 내에 생성 된 **데이터 집합** 을 전송 하는 경우 (예: 중첩 된 관계) **데이터 집합** 의 테이블 순서가 유지 되지 않을 수 있습니다. 따라서이 경우에는 **데이터 집합** 의 수신자가 테이블 순서에 종속 되지 않아야 합니다. 그러나 전송 중인 **데이터 집합** 의 스키마를 메모리 내에서 만들지 않고 XSD 파일에서 읽는 경우에는 항상 테이블 순서가 유지 됩니다.  
   
 ## <a name="readxmlschema"></a>ReadXmlSchema  
- 데이터를 로드하지 않고 XML 문서에서 **DataSet** 스키마를 로드하려면 **DataSet의** **ReadXmlSchema** 메서드를 사용할 수 있습니다. **ReadXmlSchema는** XML 스키마 정의 언어(XSD) 스키마를 사용하여 정의된 **데이터 집합** 스키마를 만듭니다.  
+
+ 데이터를 로드 하지 않고 XML 문서에서 데이터 **집합** 의 스키마를 로드 하려면 데이터 **집합**의 **readxmlschema** 메서드를 사용할 수 있습니다. **Readxmlschema** 는 XSD (XML 스키마 정의 언어) 스키마를 사용 하 여 정의 된 **데이터 집합** 스키마를 만듭니다.  
   
- **ReadXmlSchema** 메서드는 로드할 XML 문서를 포함하는 파일 이름, 스트림 또는 **XmlReader의** 단일 인수를 사용합니다. XML 문서에는 스키마만 있을 수도 있고 데이터가 포함된 XML 요소를 가진 스키마 인라인이 있을 수도 있습니다. XML 스키마로 인라인 스키마를 작성하는 것에 대한 자세한 내용은 [XML 스키마(XSD)의 데이터 집합 관계형 구조 파생을](deriving-dataset-relational-structure-from-xml-schema-xsd.md)참조하십시오.  
+ **Readxmlschema** 메서드는 로드할 XML 문서가 포함 된 파일 이름, 스트림 또는 **XmlReader** 의 단일 인수를 사용 합니다. XML 문서에는 스키마만 있을 수도 있고 데이터가 포함된 XML 요소를 가진 스키마 인라인이 있을 수도 있습니다. 인라인 스키마를 XML 스키마로 작성 하는 방법에 대 한 자세한 내용은 [Xml 스키마에서 데이터 집합 관계형 구조 파생 (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)을 참조 하세요.  
   
- **ReadXmlSchema에** 전달된 XML 문서에 인라인 스키마 정보가 없는 경우 **ReadXmlSchema는** XML 문서의 요소에서 스키마를 추론합니다. **DataSet에** 스키마가 이미 포함되어 있는 경우 아직 존재하지 않는 경우 새 테이블을 추가하여 현재 스키마가 확장됩니다. 새 열은 기존 테이블에 추가되지 않습니다. 추가중인 열이 **DataSet에** 이미 있지만 XML에 있는 열과 호환되지 않는 형식이 있는 경우 예외가 throw됩니다. **ReadXmlSchema가** XML 문서에서 스키마를 유추하는 방법에 대한 자세한 내용은 [XML의 데이터 집합 관계형 구조 추론을](inferring-dataset-relational-structure-from-xml.md)참조하십시오.  
+ **Readxmlschema** 에 전달 된 xml 문서에 인라인 스키마 정보가 포함 되어 있지 않은 경우 **READXMLSCHEMA** 는 xml 문서의 요소에서 스키마를 유추 합니다. **데이터 집합** 에 이미 스키마가 있으면 새 테이블을 추가 하 여 현재 스키마를 확장 하는 것입니다 (아직 없는 경우). 새 열은 기존 테이블에 추가되지 않습니다. 추가 되는 열이 **DataSet** 에 이미 있지만 XML에 있는 열과 호환 되지 않는 형식을 포함 하는 경우 예외가 throw 됩니다. **Readxmlschema** 에서 xml 문서의 스키마를 유추 하는 방법에 대 한 자세한 내용은 [Xml에서 데이터 집합 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)를 참조 하세요.  
   
- **ReadXmlSchema는** **DataSet의**스키마만 로드하거나 유추하지만 **DataSet의** **ReadXml** 메서드는 스키마와 XML 문서에 포함된 데이터를 로드하거나 유추합니다. 자세한 내용은 [XML에서 데이터 집합 로드를](loading-a-dataset-from-xml.md)참조하십시오.  
+ **Readxmlschema** 는 **데이터 집합**의 스키마만 로드 하거나 유추 하지만 **데이터 집합** 의 **ReadXml** 메서드는 XML 문서에 포함 된 스키마와 데이터를 모두 로드 하거나 유추 합니다. 자세한 내용은 [XML에서 데이터 집합 로드](loading-a-dataset-from-xml.md)를 참조 하세요.  
   
- 다음 코드 예제는 XML 문서 또는 스트림에서 **DataSet** 스키마를 로드하는 방법을 보여 주며 있습니다. 첫 번째 예제에서는 **ReadXmlSchema** 메서드에 전달 되는 XML 스키마 파일 이름을 보여 주다. 두 번째 예제에서는 **System.IO.StreamReader**.  
+ 다음 코드 예제에서는 XML 문서 또는 스트림에서 **데이터 집합** 스키마를 로드 하는 방법을 보여 줍니다. 첫 번째 예에서는 **Readxmlschema** 메서드에 전달 되는 XML 스키마 파일 이름을 보여 줍니다. 두 번째 예제에서는 **system.web**을 보여 줍니다.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -54,7 +56,8 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- **DataSet의** **InferXmlSchema** 메서드를 사용하여 XML 문서에서 해당 스키마를 유추하도록 **데이터 집합에**지시할 수도 있습니다. **InferXmlSchema** 함수는 **InferSchema의** **XmlReadMode(데이터** 로드 및 스키마 추론)를 사용하여 **ReadXml을** 모두 수행하는 것과 동일하며, 읽을 수 있는 문서에 인라인 스키마가 없는 경우 **ReadXmlSchema가** 있습니다. 그러나 **InferXmlSchema는** 스키마가 유추될 때 무시할 특정 XML 네임스페이스를 지정할 수 있는 추가 기능을 제공합니다. **InferXmlSchema는** 파일 이름, 스트림 또는 **XmlReader로**지정된 XML 문서의 위치라는 두 가지 필수 인수를 취합니다. 및 XML 네임스페이스의 문자열 배열은 작업에서 무시할 수 있습니다.  
+
+ 데이터 **집합**의 **InferXmlSchema** 메서드를 사용 하 여 XML 문서에서 스키마를 유추 하도록 **데이터 집합** 에 지시할 수도 있습니다. **InferXmlSchema** 는 **InferSchema** 의 **XmlReadMode** (데이터 로드 및 스키마 유추)를 사용 하 여 두 **ReadXml** 를 모두 수행 하는 것과 동일 하 게 작동 하며 읽을 문서에 인라인 스키마가 없는 경우에는 **readxmlschema** 를 사용 합니다. 그러나 **InferXmlSchema** 는 스키마를 유추할 때 무시할 특정 XML 네임 스페이스를 지정할 수 있는 추가 기능을 제공 합니다. **InferXmlSchema** 은 파일 이름, 스트림 또는 **XmlReader**로 지정 된 XML 문서의 위치를 사용 하 여 두 개의 필수 인수를 사용 합니다. 작업에서 무시할 XML 네임 스페이스의 문자열 배열입니다.  
   
  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
@@ -73,7 +76,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 이전 XML 문서의 요소에 대해 지정된 특성으로 인해 **InferSchema의** **XmlReadMode를** 사용하는 **ReadXml** 메서드와 **ReadXml** 메서드는 **범주,** **범주ID,** **범주 이름,** **설명,** **제품** **ID,** **ReorderLevel**및 **단종**. 자세한 내용은 [XML에서 데이터 집합 관계형 구조 유추를](inferring-dataset-relational-structure-from-xml.md)참조하십시오. 그러나 더 적절한 구조는 **범주** 및 **제품** 테이블만 만든 다음 범주 **테이블에서 CategoryID,** **CategoryName**및 **설명** 열을 만들고 **제품** **테이블에서** **ProductID,** **ReorderLevel**및 **단종** 열을 만드는 것입니다. 추론된 스키마가 XML 요소에 지정된 특성을 무시하도록 하려면 **InferXmlSchema** 메서드를 사용하고 다음 예제와 같이 무시할 **Officedata의** XML 네임스페이스를 지정합니다.  
+ 이전 XML 문서의 요소에 대해 지정 된 특성으로 인해 **Readxmlschema** 메서드와 **XmlReadMode** of **InferSchema** 를 사용 하는 **ReadXml** 메서드는 모두 문서의 모든 요소에 대 한 **테이블을 만듭니다**. **Categories**, **CategoryID**, 범주, **설명**, **제품**, **ProductID**, **ReorderLevel**및 **단종**. 자세한 내용은 [XML에서 데이터 집합 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)를 참조 하세요. 그러나 더 적절 한 구조는 **범주** 및 **Products** 테이블만 만든 다음, categories 테이블에 **CategoryID**, **Categories** 및 **Description** 열을 **CategoryName**만들고 **Products** 테이블에 **ProductID**, **ReorderLevel**및 **단종** 열을 만드는 것입니다. 유추 된 스키마가 XML 요소에 지정 된 특성을 무시 하도록 하려면 다음 예제와 같이 **InferXmlSchema** 메서드를 사용 하 고 삭제할 **데이터** 의 XML 네임 스페이스를 지정 합니다.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -85,7 +88,7 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 세트에서 XML 사용](using-xml-in-a-dataset.md)
 - [XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)

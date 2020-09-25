@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4341b1fcd3762e5aa55f0ba988f7f49d4b5cacd6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71699775"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201774"
 ---
 # <a name="nameentry-element"></a>\<nameEntry> 요소
+
 클래스 이름을 알고리즘 이름에 매핑하며, 이를 통해 하나의 클래스가 여러 이름을 가질 수 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -31,29 +32,33 @@ ms.locfileid: "71699775"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |**name**|필수 특성입니다.<br /><br /> 암호화 클래스가 구현 하는 알고리즘의 이름을 지정 합니다.|  
 |**class**|필수 특성입니다.<br /><br /> 요소의 **name** 특성에 대 한 값을 지정 합니다 [\<cryptoClass>](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.web`|ASP.NET 구성 섹션의 루트 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  **Name** 특성은 네임 스페이스에 있는 추상 클래스 중 하나의 이름일 수 있습니다 <xref:System.Security.Cryptography> . 추상 암호화 클래스에서 **Create** 메서드를 호출 하는 경우 추상 클래스 이름이 메서드에 전달 됩니다 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> . **Createfromname** 은 **클래스** 특성이 나타내는 형식의 인스턴스를 반환 합니다. **이름** 특성이 RSA와 같은 짧은 이름인 경우 **createfromname** 메서드를 호출할 때 해당 이름을 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 요소를 사용 하 여 **\<nameEntry>** 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 "RSA" 문자열을 메서드에 전달 하 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 고 메서드를 사용 하 여 개체를 반환할 수 있습니다 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> `MyCryptoRSAClass` .  
   
 ```xml  

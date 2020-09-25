@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 65e8b1f2088015b86d4f981f07875d236a11a617
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154727"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176190"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules의 \<remove> 요소(네트워크 설정)
+
 응용 프로그램에서 사용자 지정 웹 요청 모듈을 제거 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,15 +35,17 @@ ms.locfileid: "79154727"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|**특성**|**설명**|  
+|**Attribute**|**설명**|  
 |-------------------|---------------------|  
 |`prefix`|이 웹 요청 모듈에서 처리 하는 요청의 URI 접두사입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -52,11 +55,13 @@ ms.locfileid: "79154727"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|네트워크 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `remove`요소는 지정 된 URI 접두사에 대해 등록 된 웹 요청 모듈을 제거 합니다.  
   
  특성의 값은 `prefix` 유효한 URI (예: "" 또는 "")의 선행 문자 여야 합니다 `http` `http://www.contoso.com` .  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  

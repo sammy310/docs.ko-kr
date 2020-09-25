@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: a46c42e917bdab0d32ee594bbcd604ee9e3d26bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b886518d4cff687a18f363c3e3ba43b40631a22f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286419"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194377"
 ---
 # <a name="getting-started"></a>시작하기
+
 를 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 메모리 내 컬렉션에 액세스 하는 것과 마찬가지로 LINQ 기술을 사용 하 여 SQL 데이터베이스에 액세스할 수 있습니다.  
   
  예를 들어 다음 코드에서 `nw` 개체는 `Northwind` 데이터베이스를 나타내기 위해 만든 것으로 `Customers` 테이블을 대상으로 열은 `Customers`에서 `London`가 필터링되고 `CompanyName`에 대한 문자열은 검색용으로 선택됩니다.  
@@ -24,6 +25,7 @@ ms.locfileid: "84286419"
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
   
 ## <a name="next-steps"></a>다음 단계  
+
  삽입 및 업데이트를 비롯 한 몇 가지 추가 예는 [LINQ to SQL에서 수행할 수 있는 작업](what-you-can-do-with-linq-to-sql.md)을 참조 하세요.  
   
  그런 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 실제 경험을 가지는 연습과 자습서를 시도해 보세요. [연습 별 학습](learning-by-walkthroughs.md)을 참조 하세요.  

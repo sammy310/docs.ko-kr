@@ -11,19 +11,20 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ae089e941d75df7ba1cd87b5b92a514a33bfbf85
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69927128"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195196"
 ---
 # <a name="trace-and-debug-settings-schema"></a>추적 및 디버그 설정 스키마
+
 추적 및 디버그 설정은 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  
   
  다음 표는 각 추적 및 디버그 설정 요소의 기능을 설명합니다.  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|추적 소스의 `Listeners` 컬렉션에 수신기를 추가합니다.|  
 |[\<add>](add-element-for-listeners-for-trace.md)|`Listeners` 컬렉션에 수신기를 추가합니다.|  

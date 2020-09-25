@@ -2,14 +2,15 @@
 title: TREAT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558851"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201046"
 ---
 # <a name="treat-entity-sql"></a>TREAT(Entity SQL)
+
 특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `expression`  
  엔터티를 반환하는 모든 유효한 쿼리 식입니다.  
   
@@ -31,10 +33,12 @@ TREAT ( expression as type)
 > [!NOTE]
 > 지정된 식이 지정된 데이터 형식의 하위 형식이어야 하거나, 데이터 형식이 식의 하위 형식이어야 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  지정된 데이터 형식의 값입니다.  
   
 ## <a name="remarks"></a>설명  
+
  TREAT는 관련 클래스 간에 업캐스팅을 수행하는 데 사용됩니다. 예를 들어, `Employee` 가 `Person` 에서 파생되고 p가 `Person`형식인 경우 `TREAT(p AS NamespaceName.Employee)` 는 일반 `Person` 인스턴스를 `Employee`로 업캐스팅합니다. 다시 말해서, p를 `Employee`로 취급할 수 있게 됩니다.  
   
  TREAT는 다음과 같이 쿼리할 수 있는 상속 시나리오에서 사용됩니다.  
@@ -62,11 +66,12 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|예외를 throw합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 TREAT 연산자를 사용하여 Course 형식의 개체를 OnsiteCourse 형식의 개체 컬렉션으로 변환합니다. 쿼리는 [School 모델](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))을 기반으로 합니다.  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [nullable 구조적 형식](nullable-structured-types-entity-sql.md)

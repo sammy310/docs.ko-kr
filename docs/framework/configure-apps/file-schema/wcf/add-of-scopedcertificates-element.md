@@ -1,15 +1,16 @@
 ---
-title: <add>of <scopedCertificates> 요소
+title: <add> of <scopedCertificates> 요소
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 28777ecac130295a8ba82a8e4d67cc519d088d8a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398341"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195144"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<add>of \<scopedCertificates> 요소
+# <a name="add-of-scopedcertificates-element"></a>\<add> of \<scopedCertificates> 요소
+
 범위가 지정된 인증서 컬렉션에 X.509 인증서를 추가합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,52 +34,55 @@ ms.locfileid: "70398341"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
-|targetUri|문자열입니다. 인증서와 연결된 서비스의 URI를 지정합니다.|  
-|findValue|문자열입니다. 검색할 값입니다.|  
+|targetUri|문자열. 인증서와 연결된 서비스의 URI를 지정합니다.|  
+|findValue|문자열. 검색할 값입니다.|  
 |x509FindType|열거형입니다. 검색할 인증서 필드 중 하나입니다.|  
 |storeLocation|열거형입니다. 검색할 두 저장소 위치 중 하나입니다.|  
 |storeName|열거형입니다. 검색할 시스템 저장소 중 하나입니다.|  
   
 ## <a name="findvalue-attribute"></a>findValue 특성  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |String|이 값은 검색 중인 필드(X509FindType 특성으로 지정)에 따라 다릅니다. 예를 들어, 지문을 검색할 경우 이 값은 16진수 문자열이어야 합니다.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |열거형|값에는 FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier가 있습니다.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |열거형|CurrentUser 또는 LocalMachine입니다.|  
   
 ## <a name="storename-attribute"></a>storeName 특성  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |열거형|값에는 AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople 및 TrustedPublisher가 포함됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<scopedCertificates>](scopedcertificates-element.md)|인증에 대해 범위가 지정된 특정 서비스가 제공하는 X.509 인증서 컬렉션을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 요소를 사용하면 클라이언트가 통신할 서비스의 URL을 기반으로 사용할 서비스 인증서를 구성할 수 있습니다. 이는 클라이언트가 여러 서비스 (종료 서비스 및 중간 보안 토큰 서비스)와 통신할 수 있는 발급 된 토큰 시나리오에서 특히 유용 합니다. 인증서 기반 메시지 보안을 사용 하는 바인딩의 경우이 인증서는 서비스에 대 한 메시지를 암호화 하는 데 사용 되며, 클라이언트에 응답을 서명 하는 데 서비스에서 사용 되어야 합니다.  
   
  바인딩을 수행할 때 서비스용 인증서가 필요하고 서비스 URL에 대한 특정 인증서를 ScopedCertificates에서 찾을 수 없는 경우, 기본 인증서가 사용됩니다.  
@@ -86,6 +90,7 @@ ms.locfileid: "70398341"
  자세한 내용은 [방법: 페더레이션된 클라이언트 만들기](../../../wcf/feature-details/how-to-create-a-federated-client.md)의 "범위 인증서" 섹션을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 컬렉션에 X.509 인증서를 추가합니다.  
   
 ```xml  

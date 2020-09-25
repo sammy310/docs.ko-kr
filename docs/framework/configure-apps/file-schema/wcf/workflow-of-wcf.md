@@ -1,15 +1,16 @@
 ---
-title: <workflow>WCF의
+title: <workflow> WCF의
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: c6c9e14a4ad3d9713ae2d35d6ade20690e0c3575
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cada3fca028562312be0272cb2a6021dfd1cf9cb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69932788"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194884"
 ---
-# <a name="workflow-of-wcf"></a>\<workflow>WCF의
+# <a name="workflow-of-wcf"></a>\<workflow> WCF의
+
 런타임에서 내보내지는 추적 레코드를 수신하는 추적 참가자를 직접 구성하고 구성된 방식대로 처리합니다. 여기에는 특정 출력(예: 파일, 콘솔, ETW)에 쓰기, 레코드 처리/집계 또는 필요한 기타 조합이 포함됩니다.  
   
  워크플로 추적 및 추적 참가자에 대 한 자세한 내용은 [워크플로 추적 및](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 추적 및 추적 [참가자](../../../windows-workflow-foundation/tracking-participants.md)를 참조 하세요.  
@@ -32,6 +33,7 @@ ms.locfileid: "69932788"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -40,18 +42,20 @@ ms.locfileid: "69932788"
 |-------------|-----------------|  
 |name|추적 참가자의 이름을 지정하는 문자열입니다.|  
 |profileName|추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.|  
-|type|추적 참가자의 형식을 지정하는 문자열입니다.|  
+|형식|추적 참가자의 형식을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<participants>](../windows-workflow-foundation/participants.md)|추적 참가자의 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  추적 참가자는 워크플로에서 내보내지는 추적 데이터를 가져오고 이 데이터를 다른 미디어에 저장하기 위해 사용됩니다. 마찬가지로 추적 레코드에 대한 모든 사후 처리를 추적 참가자 내에서 수행할 수도 있습니다.  
   
  여러 추적 참가자가 추적 이벤트를 동시에 사용할 수 있습니다. 각 추적 참가자는 서로 다른 추적 프로필과 연결될 수 있습니다.  
@@ -59,6 +63,7 @@ ms.locfileid: "69932788"
  ETW 세션에 추적 레코드를 작성하는 표준 추적 참가자가 제공됩니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 구성 예제에서는 Web.config 파일에서 구성되는 표준 ETW 추적 참가자를 보여 줍니다.  
   
  ETW 추적 참가자에서 ETW에 추적 레코드를 작성하기 위해 사용하는 공급자 ID는 `<diagnostics>` 섹션에서 정의됩니다. 추적 참가자에는 구독하는 추적 레코드를 지정하기 위해 연결된 프로필이 있습니다. 이 프로필은 `profileName` 요소의 `<add>` 특성에서 정의됩니다. 프로필이 정의되면 추적 참가자가 `<etwTracking>` 서비스 동작에 추가됩니다. 이렇게 하면 선택된 추적 참가자가 워크플로 인스턴스의 확장에 추가되어 추적 레코드를 받기 시작합니다.  

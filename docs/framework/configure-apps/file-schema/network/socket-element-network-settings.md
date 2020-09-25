@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089083"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201735"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> 요소(네트워크 설정)
+
 소켓 작업에서 완료 포트를 사용 하는지 여부를 지정 합니다.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,17 +35,19 @@ ms.locfileid: "74089083"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|**특성**|**설명**|  
+|**Attribute**|**설명**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|소켓이 항상 허용 메서드 호출에 대해 완료 포트를 사용 해야 하는지 여부를 나타냅니다. 기본값은 `false`입니다.|  
 |`alwaysUseCompletionPortsForConnect`|소켓이 연결 메서드 호출에 대해 항상 완료 포트를 사용 해야 하는지 여부를 나타냅니다. 기본값은 `false`입니다.|  
 |`ipProtectionLevel`|소켓에 사용할 기본값을 지정 합니다 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> . 기본값은 Windows 버전에 따라 다릅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -54,6 +57,7 @@ ms.locfileid: "74089083"
 |[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `alwaysUseCompletionPortsForAccept` 및 `alwaysUseCompletionPortsForConnect` 특성이 <xref:System.Net.Sockets?displayProperty=nameWithType> 네임스페이스에 있는 클래스에 의해 완료 포트의 사용과 관련된 기본 동작을 지정하는 데 사용됩니다. 고성능 서버 응용 프로그램에는 완료 포트를 권장 합니다.  
   
  및 특성의 기본값은 `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` **false**입니다.  
@@ -84,9 +88,11 @@ ms.locfileid: "74089083"
  <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>속성을 사용 하 여 `ipProtectionLevel` 적용 가능한 구성 파일에서 특성의 현재 값을 가져올 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
+
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 완료 포트를 사용 하도록 지정 하는 방법과 기본값을 제한 하지 않아야 함을 지정 하는 방법을 보여 줍니다 <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> .  
   
 ```xml  
