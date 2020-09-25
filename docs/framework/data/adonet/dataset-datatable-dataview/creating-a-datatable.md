@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 335137eeef02e590539c6d83e46cb39901a1e03f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 75c9bcf0e0b6180030825b4d1e7dd9e1f9686712
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286923"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198641"
 ---
 # <a name="creating-a-datatable"></a>DataTable 만들기
+
 <xref:System.Data.DataTable>은 메모리 내 관계형 데이터가 포함된 하나의 테이블을 나타내며, 독립적으로 만들어 사용하거나 다른 .NET Framework 개체에 의해 사용될 수도 있습니다. 이 경우에는 주로 <xref:System.Data.DataSet>의 멤버로 사용됩니다.  
   
  적절 한 **datatable** 생성자를 사용 하 여 **datatable** 개체를 만들 수 있습니다. **Add** 메서드를 사용 하 여 **데이터 집합** 에 추가 하 여 **DataTable** 개체의 **Tables** 컬렉션에 추가할 수 있습니다.  

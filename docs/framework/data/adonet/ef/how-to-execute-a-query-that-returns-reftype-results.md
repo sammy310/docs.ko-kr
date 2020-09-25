@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 88cdb29d8b2bc56929108da738747f4e21cded4c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d515fa63b62948bcc1b93aeb3a4bb07407b4169
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546785"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198329"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>방법: RefType 결과를 반환하는 쿼리 실행
+
 이 항목에서는 <xref:System.Data.EntityClient.EntityCommand> 개체를 사용하여 개념적 모델에 대해 명령을 실행하는 방법과 <xref:System.Data.Metadata.Edm.RefType>를 사용하여 <xref:System.Data.EntityClient.EntityDataReader> 결과를 검색하는 방법을 보여 줍니다.  
   
 ### <a name="to-run-the-code-in-this-example"></a>이 예제의 코드를 실행하려면  
@@ -25,6 +26,7 @@ ms.locfileid: "90546785"
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>예제  
+
  이 예제에서는 <xref:System.Data.Metadata.Edm.RefType> 결과를 반환하는 쿼리를 실행합니다. 다음 쿼리를 `ExecuteRefTypeQuery` 함수에 인수로 전달하면 이 함수는 엔터티에 대한 참조를 반환합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#REF2](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref2)]  
@@ -36,7 +38,7 @@ ms.locfileid: "90546785"
  [!code-csharp[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlreftypes)]
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](./language-reference/entity-sql-reference.md)
 - [Entity Framework용 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)

@@ -2,14 +2,15 @@
 title: <authorizationPolicies>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: e2597bc51e788c919bfe3ce3422ae2911cc6b33b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39cb89340907743c727a425bb2f140ac34842e3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400695"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181676"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<authorizationPolicies>의 \<add>
+
 클레임 변환에 대한 권한 부여 정책을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,28 +30,32 @@ ms.locfileid: "70400695"
 </authorizationPolicies>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`policyType`|필수 String 특성입니다.<br /><br /> WCF (Windows Communication Foundation) 액세스 제어 모델은 권한 부여 정책 집합을 형식으로 프로 비전 할 수 있도록 지원 합니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변형할 수 있도록 하는 권한 부여 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<authorizationPolicies>](authorizationpolicies.md)|권한 부여 정책 형식 컬렉션을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  각 인증 정책에는 문자열에 해당하는 단일 필수 `policyType` 특성이 포함되어 있습니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변환할 수 있도록 하는 인증 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다. 권한 부여 정책의 작동 방식에 대 한 자세한 내용은 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 및 [권한 부여 정책](../../../wcf/samples/authorization-policy.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목

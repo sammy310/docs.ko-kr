@@ -3,14 +3,15 @@ title: SQL Server에서 인증
 description: Windows 인증 모드 및 혼합 모드를 포함 하 여 ADO.NET에 대 한 SQL Server 인증에 대해 알아봅니다.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286548"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197534"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
+
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
   
 - Windows 인증은 기본 인증이며 흔히 통합 보안이라고 하는데, 그 이유는 이 SQL Server 보안 모델이 Windows와 긴밀하게 통합되기 때문입니다. 특정 Windows 사용자 및 그룹 계정은 SQL Server에 로그인할 수 있습니다. 이미 인증된 Windows 사용자는 추가 자격 증명을 제공할 필요가 없습니다.  
@@ -30,6 +31,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 > 로그인은 데이터베이스 사용자와 구분됩니다. 별도의 작업으로 로그인 또는 Windows 그룹을 데이터베이스 사용자 또는 역할에 매핑해야 합니다. 그런 다음 사용자 또는 역할에 데이터베이스 개체에 액세스할 수 있는 권한을 부여합니다.  
   
 ## <a name="authentication-scenarios"></a>인증 시나리오  
+
  Windows 인증은 일반적으로 다음과 같은 경우에 가장 적합합니다.  
   
 - 도메인 컨트롤러가 있는 경우  
@@ -50,6 +52,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 > Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. 따라서 높은 수준의 권한이 있는 SQL Server 로그인은 ALTER LOGIN DISABLE Transact-SQL 문을 사용하여 비활성화해야 합니다.  
   
 ## <a name="login-types"></a>로그인 유형  
+
  SQL Server에서는 세 가지 유형의 로그인을 지원합니다.  
   
 - 로컬 Windows 사용자 계정 또는 신뢰할 수 있는 도메인 계정. SQL Server는 Windows를 통해 Windows 사용자 계정을 인증합니다.  
@@ -62,6 +65,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 > SQL Server에서는 코드 서명에만 사용되는 인증서 또는 비대칭 키에서 만들어진 로그인을 제공합니다. SQL Server에 연결할 때는 사용할 수 없습니다.  
   
 ## <a name="mixed-mode-authentication"></a>혼합 모드 인증  
+
  불가피하게 혼합 모드 인증을 사용하는 경우 SQL Server 로그인을 만들어야 합니다. 이 로그인은 SQL Server에 저장됩니다. 그런 다음 런타임에 SQL Server 사용자 이름과 암호를 제공해야 합니다.  
   
 > [!IMPORTANT]
@@ -73,11 +77,12 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 > 사용자 입력에서 연결 문자열을 연결하면 연결 문자열 삽입 공격에 취약해질 수 있습니다. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하여 런타임에 구문이 올바른 연결 문자열을 만들 수 있습니다. 자세한 내용은 [연결 문자열 작성기](../connection-string-builders.md)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
+
  자세한 내용은 다음 리소스를 참조하세요.  
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server의 로그인 및 기타 보안 주체에 대해 설명합니다.|  
+|[보안 주체](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server의 로그인 및 기타 보안 주체에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 

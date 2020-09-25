@@ -2,17 +2,19 @@
 title: 안전한 클라이언트 애플리케이션
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 8a946ab9b4cb75f7f890a01f0647f8a719c7bc03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 96b43d28d3e22df66cb7f7010916b5c7f7a86b77
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189008"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 애플리케이션
+
 일반적으로 애플리케이션은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  
   
 ## <a name="validate-user-input"></a>사용자 입력 유효성 검사  
+
  데이터에 액세스하는 애플리케이션을 만들 경우 유효성이 입증되기 전에는 모든 사용자 입력을 악의적인 것으로 간주해야 합니다. 그렇지 않으면 애플리케이션이 공격에 취약해질 수 있습니다. .NET Framework에서는 입력할 수 있는 문자 수를 제한하는 등 입력 컨트롤에 대한 값 범위를 설정할 수 있게 해 주는 클래스가 포함되어 있으며, 값의 유효성을 검사하는 프로시저를 작성하기 위한 이벤트 후크도 제공합니다. 사용자 입력 데이터에 대해 유효성을 검사하고 강력한 형식을 지정함으로써 애플리케이션이 스크립트나 SQL 삽입 공격에 노출되지 않도록 할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -31,6 +33,7 @@ ms.locfileid: "90551545"
  <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 사용자 입력의 유효성을 검사하는 방법에 대해 설명합니다.  
   
 ## <a name="windows-applications"></a>Windows 애플리케이션  
+
  예전에는 일반적으로 Windows 애플리케이션이 모든 권한으로 실행되었습니다. .NET Framework에서는 CAS(코드 액세스 보안)를 사용하여 Windows 애플리케이션에서의 코드 실행을 제한하는 인프라를 제공합니다. 하지만 CAS만으로는 애플리케이션을 보호하기에 부족합니다.  
   
  [Windows Forms 보안](/dotnet/desktop/winforms/windows-forms-security)  
@@ -43,13 +46,14 @@ ms.locfileid: "90551545"
  Windows Forms 애플리케이션에서 `ClickOnce` 배포를 사용하는 방법 및 이와 관련된 보안 문제에 대해 설명합니다.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET 및 XML Web Services  
+
  ASP.NET 애플리케이션은 일반적으로 웹 사이트의 특정 부분에 대한 액세스를 제한하고 데이터 보호 및 사이트 보안을 위한 기타 메커니즘을 제공해야 합니다. 다음 링크에서는 ASP.NET 애플리케이션 보안에 관련된 유용한 정보를 제공합니다.  
   
  XML Web service는 ASP.NET 애플리케이션, Windows Forms 애플리케이션 또는 다른 웹 서비스에서 사용할 수 있는 데이터를 제공합니다. 따라서 클라이언트 애플리케이션의 보안뿐만 아니라 웹 서비스 자체의 보안도 관리해야 합니다.  
   
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[ASP.NET 웹 사이트 보안](/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET 애플리케이션의 보안을 유지하는 방법을 설명합니다.|  
 |[ASP.NET을 사용하여 만든 XML Web services에 보안 설정](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
@@ -57,15 +61,16 @@ ms.locfileid: "90551545"
 |[웹 애플리케이션에 대 한 기본 보안 사례](/previous-versions/aspnet/zdh19h94(v=vs.100))|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
   
 ## <a name="remoting"></a>원격 통신  
+
  .NET Remoting을 사용하면 애플리케이션 구성 요소가 모두 한 컴퓨터에 있는지 또는 전 세계에 분산되어 있는지 여부에 관계없이 다양한 영역에 배포되는 애플리케이션을 쉽게 만들 수 있습니다. 같은 컴퓨터 또는 해당 네트워크를 통해 연결할 수 있는 다른 모든 컴퓨터에 있는 다른 프로세스의 개체를 사용하는 클라이언트 애플리케이션을 빌드할 수 있습니다. 또한 .NET Remoting을 사용하면 동일한 프로세스에 있는 다른 애플리케이션 도메인과 통신할 수도 있습니다.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[원격 응용 프로그램 구성](/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|자주 발생하는 문제를 피할 수 있도록 원격 애플리케이션을 구성하는 방법에 대해 설명합니다.|  
 |[원격 서비스의 보안](/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|인증 및 암호화에 대해 설명하고 원격 통신과 관련한 추가 보안 항목을 제공합니다.|  
 |[보안 및 원격 서비스 고려 사항](../../misc/security-and-remoting-considerations.md)|보호되는 개체 및 애플리케이션 도메인 간의 보안 문제에 대해 설명합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)
 - [데이터 액세스 전략에 대 한 권장 사항](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))

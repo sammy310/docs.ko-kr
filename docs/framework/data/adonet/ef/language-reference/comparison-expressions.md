@@ -1,18 +1,19 @@
 ---
-title: 식 비교
+title: 비교 식
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d92020f353393eee683e578f4306cd4a2f214152
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251165"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197848"
 ---
-# <a name="comparison-expressions"></a>식 비교
+# <a name="comparison-expressions"></a>비교 식
+
 비교 식은 상수 값, 속성 값, 메서드 결과가 다른 값과 같은지, 같지 않은지, 다른 값보다 큰지, 작은지를 확인합니다. LINQ to Entities에 대 한 특정 비교가 유효 하지 않으면 예외가 throw 됩니다. 암시적이든 명시적이든 모든 비교를 수행하려면 데이터 소스의 모든 구성 요소가 비교 가능한 항목이어야 합니다. 비교 식은 쿼리 결과를 제한하기 위해 `Where` 절에서 자주 사용됩니다.  
   
  다음 쿼리 식 구문 예제에서는 판매 주문 번호가 "SO43663"인 경우 결과를 반환하는 쿼리를 보여 줍니다.  
@@ -53,6 +54,6 @@ ms.locfileid: "70251165"
  [!code-csharp[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodasconstantfails)]
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities 쿼리의 식](expressions-in-linq-to-entities-queries.md)

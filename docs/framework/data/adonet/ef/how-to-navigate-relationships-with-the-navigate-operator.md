@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: c51b093c1b74157b957566c4c67712278e50b9e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7d0dbb590555f3e525cd328e4f4b0ad3584f108b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546668"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198251"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>방법: 탐색 연산자로 관계 탐색
+
 이 항목에서는 <xref:System.Data.EntityClient.EntityCommand> 개체를 사용하여 개념적 모델에 대해 명령을 실행하는 방법과 <xref:System.Data.Metadata.Edm.RefType>를 사용하여 <xref:System.Data.EntityClient.EntityDataReader> 결과를 검색하는 방법을 보여 줍니다.  
   
 ### <a name="to-run-the-code-in-this-example"></a>이 예제의 코드를 실행하려면  
@@ -25,12 +26,13 @@ ms.locfileid: "90546668"
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>예제  
+
  다음 예에서는 Navigate 연산자를 사용 하 여에서 관계를 탐색 하는 방법을 보여 줍니다 [!INCLUDE[esql](../../../../../includes/esql-md.md)] . [NAVIGATE](./language-reference/navigate-entity-sql.md) `Navigate`연산자는 엔터티 인스턴스, 관계 형식, 관계 끝 및 관계 시작과 같은 매개 변수를 사용 합니다. 필요에 따라 엔터티의 인스턴스와 관계 유형만 연산자에 전달할 수 있습니다 `Navigate` .  
   
  [!code-csharp[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#navigatewithnavoperatorwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#navigatewithnavoperatorwithentitycommand)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Entity Framework용 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)
 - [Entity SQL 언어](./language-reference/entity-sql-language.md)

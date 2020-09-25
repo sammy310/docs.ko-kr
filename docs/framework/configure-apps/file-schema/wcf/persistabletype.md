@@ -2,14 +2,15 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 328caaefe0cc24da45b460cab0a672dc8a6ccce1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6425b21fe50865beb7bb2876ea478b415fbe3944
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855074"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181520"
 ---
 # \<persistableType>
+
 모든 지속 형식을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,10 +34,12 @@ ms.locfileid: "70855074"
 </comContracts>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>형식  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -47,11 +50,12 @@ ms.locfileid: "70855074"
 |name|지속 형식의 이름을 지정하는 문자열이 포함된 선택적 특성입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None  
+
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<persistableTypes>](persistabletypes.md)|`persistableType` 요소의 컬렉션입니다.|  
   
