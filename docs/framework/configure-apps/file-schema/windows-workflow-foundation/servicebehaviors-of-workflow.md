@@ -1,16 +1,17 @@
 ---
-title: <serviceBehaviors>워크플로
+title: <serviceBehaviors> 워크플로
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 51aba42d-0674-4726-a313-af6ed3aaa8f2
-ms.openlocfilehash: 28b25f05e4f241cc9a959e36b05866cd7791e247
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cf8a9c8782c3e654964ef343dacbd69b6ad19c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398664"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175826"
 ---
-# <a name="servicebehaviors-of-workflow"></a>\<serviceBehaviors>워크플로
+# <a name="servicebehaviors-of-workflow"></a>\<serviceBehaviors> 워크플로
+
 이 구성 섹션은 특정 서비스에 정의된 모든 동작을 나타냅니다.  
 
 [**\<configuration>**](../configuration-element.md)\
