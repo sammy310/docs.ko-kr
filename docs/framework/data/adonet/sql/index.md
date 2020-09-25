@@ -4,14 +4,15 @@ description: 데이터베이스 관련 프로토콜을 캡슐화 하는 SQL Serv
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: eeb0ab69a68dfc2fc0faa1b4e833f80b307fffe5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a517bccd9b60d00f6c6c636c9164d63fb5966de3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286444"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197393"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
+
 이 단원에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 기능 및 동작에 대해 설명합니다.  
   
  <xref:System.Data.SqlClient>는 데이터베이스 관련 프로토콜을 캡슐화하는 SQL Server 버전에 대한 액세스를 제공합니다. 이 데이터 공급자의 기능은 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자와 유사하게 디자인되었습니다. <xref:System.Data.SqlClient>에는 SQL Server와 직접 통신하기 위한 TDS(Tabular Data Stream) 파서가 포함되어 있습니다.  
@@ -20,6 +21,7 @@ ms.locfileid: "84286444"
 > .NET Framework Data Provider for SQL Server를 사용하려면 애플리케이션에서 <xref:System.Data.SqlClient> 네임스페이스를 참조해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [SQL Server 보안](sql-server-security.md)  
  SQL Server 보안 기능에 대해 간략하게 설명하고 SQL Server를 대상으로 하는 안전한 ADO.NET 애플리케이션을 만드는 시나리오를 제공합니다.  
   
