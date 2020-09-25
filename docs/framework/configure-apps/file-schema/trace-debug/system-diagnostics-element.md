@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aff324ac9952c95c78d7ca15572651dba23b79b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153209"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195170"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics> 요소
+
 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -29,14 +30,16 @@ ms.locfileid: "79153209"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
+
  없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<assert>](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.|  
 |[\<performanceCounters>](performancecounters-element.md)|성능 카운터에서 공유하는 전역 메모리의 크기를 지정합니다.|  
@@ -47,11 +50,12 @@ ms.locfileid: "79153209"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 추적 스위치 및 추적 수신기를 요소 내에 포함 하는 방법을 보여 줍니다 **\<system.diagnostics>** . `General`추적 스위치는 수준으로 설정 됩니다 <xref:System.Diagnostics.TraceLevel> . 추적 수신기는 `myListener` 라는 파일을 만들고 `MyListener.log` 출력을 파일에 씁니다.  
   
 > [!NOTE]

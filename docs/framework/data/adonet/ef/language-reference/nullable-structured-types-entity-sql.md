@@ -2,19 +2,21 @@
 title: null 허용 구조적 형식(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fc2230401ef98c005ab52a845de37482c0dcf698
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319481"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202266"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>null 허용 구조적 형식(Entity SQL)
+
 구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다. 이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
   
  이 항목에서는 어떤 형식이 nullable이고 어떤 코드 패턴이 구조적 nullable 형식의 `null` 인스턴스를 생성하는지를 비롯하여 구조적 nullable형식에 대해 설명합니다.  
   
 ## <a name="kinds-of-nullable-structured-types"></a>구조적 Nullable 형식의 종류  
+
  구조적 nullable 형식에는 세 가지 종류가 있습니다.  
   
 - 행 형식  
@@ -24,6 +26,7 @@ ms.locfileid: "72319481"
 - 엔터티 형식  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>구조적 형식의 Null 인스턴스를 생성하는 코드 패턴  
+
  다음 시나리오에서는 `null` 인스턴스를 생성합니다.  
   
 - `null`을 구조적 형식으로 모양 결정:  
@@ -88,6 +91,6 @@ ms.locfileid: "72319481"
     }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Entity SQL 개요](entity-sql-overview.md)
