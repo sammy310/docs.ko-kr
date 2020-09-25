@@ -6,19 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554738"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177805"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
+
 .NET Framework 데이터 공급자는 데이터베이스에 연결 하 고, 명령을 실행 하 고, 결과를 검색 하는 데 사용 됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. 데이터 공급자가 간단 하 고, 데이터 소스와 코드 간에 최소의 계층을 만들고, 기능을 저하 시 키 지 않고 성능을 향상 시킵니다. .NET Framework  
   
  다음 표에서는 .NET Framework에 포함 된 데이터 공급자를 보여 줍니다.  
   
-|.NET Framework 데이터 공급자(.NET Framework data provider)|Description|  
+|.NET Framework 데이터 공급자(.NET Framework data provider)|설명|  
 |-------------------------------------------------------------------------------|-----------------|  
 |.NET Framework Data Provider for SQL Server|Microsoft SQL Server에 대한 데이터 액세스를 제공합니다. <xref:System.Data.SqlClient> 네임스페이스를 사용합니다.|  
 |.NET Framework Data Provider for OLE DB|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.OleDb> 네임스페이스를 사용합니다.|  
@@ -28,9 +29,10 @@ ms.locfileid: "90554738"
 |SQL Server Compact 4.0에 대 한 Data Provider를 .NET Framework 합니다.|Microsoft SQL Server Compact 4.0에 대 한 데이터 액세스를 제공 합니다. [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 네임스페이스를 사용합니다.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 데이터 공급자의 핵심 개체  
+
  다음 표에서는 .NET Framework 데이터 공급자를 구성 하는 네 가지 핵심 개체에 대해 간략하게 설명 합니다.  
   
-|개체|Description|  
+|Object|설명|  
 |------------|-----------------|  
 |`Connection`|특정 데이터 소스에 연결합니다. 모든 `Connection` 개체의 기본 클래스는 <xref:System.Data.Common.DbConnection> 클래스입니다.|  
 |`Command`|데이터 소스에 대해 명령을 실행합니다. `Parameters` 를 노출하고 `Transaction` 의 `Connection`범위 내에서 실행할 수 있습니다. 모든 `Command` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommand> 클래스입니다.|  
@@ -39,7 +41,7 @@ ms.locfileid: "90554738"
   
  이 문서 앞부분의 표에 나와 있는 핵심 클래스 외에도 .NET Framework 데이터 공급자에는 다음 표에 나와 있는 클래스가 포함 되어 있습니다.  
   
-|개체|Description|  
+|Object|설명|  
 |------------|-----------------|  
 |`Transaction`|데이터 소스의 트랜잭션에 명령을 인리스트먼트합니다. 모든 `Transaction` 개체의 기본 클래스는 <xref:System.Data.Common.DbTransaction> 클래스입니다. ADO.NET에서는 <xref:System.Transactions> 네임스페이스에 있는 클래스를 사용하여 트랜잭션에 대한 지원을 제공합니다.|  
 |`CommandBuilder`|`DataAdapter` 의 명령 속성을 자동으로 생성하거나 저장 프로시저에서 매개 변수 정보를 파생하여 `Parameters` 개체의 `Command` 컬렉션을 채우는 도우미 개체입니다. 모든 `CommandBuilder` 개체의 기본 클래스는 <xref:System.Data.Common.DbCommandBuilder> 클래스입니다.|  
@@ -50,6 +52,7 @@ ms.locfileid: "90554738"
 |`ClientPermission`|.NET Framework 데이터 공급자 코드 액세스 보안 특성에 대해 제공 됩니다. 모든 `ClientPermission` 개체의 기본 클래스는 <xref:System.Data.Common.DBDataPermission> 클래스입니다.|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>.NET Framework Data Provider for SQL Server(SqlClient)  
+
  SQL Server에 대 한 .NET Framework Data Provider (SqlClient)는 자체 프로토콜을 사용 하 여 SQL Server와 통신 합니다. OLE DB 또는 ODBC (Open Database Connectivity) 계층을 추가 하지 않고 SQL Server에 직접 액세스 하도록 최적화 되어 있으므로 간단 하 고 성능이 좋습니다. 다음 그림에서는 SQL Server에 대 한 .NET Framework Data Provider를 Data Provider에 대 한 .NET Framework OLE DB 대조 합니다. OLE DB에 대 한 .NET Framework Data Provider는 연결 풀링 및 트랜잭션 서비스를 제공 하는 OLE DB 서비스 구성 요소와 데이터 원본에 대 한 OLE DB 공급자를 통해 OLE DB 데이터 원본으로 통신 합니다.  
   
 > [!NOTE]
@@ -73,6 +76,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
+
  OleDb (OLE DB .NET Framework Data Provider)는 COM interop를 통해 네이티브 OLE DB를 사용 하 여 데이터 액세스를 사용 하도록 설정 합니다. OLE DB에 대 한 .NET Framework Data Provider는 로컬 및 분산 트랜잭션을 모두 지원 합니다. 분산 트랜잭션의 경우 기본적으로 OLE DB에 대 한 .NET Framework Data Provider는 트랜잭션에 자동으로 참여 하 고 Windows 구성 요소 서비스에서 트랜잭션 세부 정보를 가져옵니다. 자세한 내용은 [트랜잭션 및 동시성](transactions-and-concurrency.md)을 참조 하세요.  
   
  다음 표에서는 ADO.NET를 사용 하 여 테스트 한 공급자를 보여 줍니다.  
@@ -101,13 +105,14 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
+
  ODBC (odbc) .NET Framework Data Provider는 네이티브 ODBC DM (드라이버 관리자)을 사용 하 여 데이터 액세스를 사용 하도록 설정 합니다. ODBC 데이터 공급자는 로컬 및 분산 트랜잭션을 모두 지원합니다. 분산 트랜잭션의 경우, 기본적으로 ODBC 데이터 공급자는 트랜잭션에 자동으로 참여하고 Windows Component Services로부터 트랜잭션 세부 정보를 얻습니다. 자세한 내용은 [트랜잭션 및 동시성](transactions-and-concurrency.md)을 참조 하세요.  
   
  다음 표에서는 ADO.NET를 사용 하 여 테스트 한 ODBC 드라이버를 보여 줍니다.  
   
 |드라이버|  
 |------------|  
-|SQL Server|  
+|SQL  Server|  
 |Microsoft ODBC for Oracle|  
 |Microsoft Access Driver(*.mdb)|  
   
@@ -127,6 +132,7 @@ using System.Data.Odbc;
 > ODBC의 .NET Framework Data Provider에는 MDAC 2.6 이상 버전이 필요 하며, MDAC 2.8 s p 1을 사용 하는 것이 좋습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=5793)에서 MDAC 2.8 s p 1을 다운로드할 수 있습니다.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
+
  Oracle의 .NET Framework Data Provider (OracleClient)를 사용 하면 oracle 클라이언트 연결 소프트웨어를 통해 Oracle 데이터 원본에 데이터에 액세스할 수 있습니다. 이 데이터 공급자는 Oracle 클라이언트 소프트웨어 버전 8.1.7 이상을 지원합니다. 또한 로컬 및 분산 트랜잭션을 모두 지원합니다. 자세한 내용은 [트랜잭션 및 동시성](transactions-and-concurrency.md)을 참조 하세요.  
   
  Oracle의 .NET Framework Data Provider에는 oracle 데이터 원본에 연결 하기 전에 시스템에 Oracle 클라이언트 소프트웨어 (버전 8.1.7 이상 버전)가 필요 합니다.  
@@ -146,9 +152,10 @@ using System.Data.OracleClient;
 ```  
   
 ## <a name="choosing-a-net-framework-data-provider"></a>.NET Framework 데이터 공급자 선택  
+
  응용 프로그램의 디자인 및 데이터 소스에 따라 .NET Framework 데이터 공급자를 선택 하면 응용 프로그램의 성능, 기능 및 무결성을 향상 시킬 수 있습니다. 다음 표에서는 각 .NET Framework 데이터 공급자의 장점 및 제한 사항에 대해 설명 합니다.  
   
-|공급자|메모|  
+|공급자|참고|  
 |--------------|-----------|  
 |.NET Framework Data Provider for SQL Server|Microsoft SQL Server를 사용 하는 중간 계층 응용 프로그램에 권장 됩니다.<br /><br /> Microsoft 데이터베이스 엔진 (MSDE) 또는 SQL Server를 사용 하는 단일 계층 응용 프로그램에 권장 됩니다.<br /><br /> OLE DB에 대 한 .NET Framework Data Provider를 사용 하 여 SQLOLEDB (OLE DB provider for SQL Server)를 사용 하는 것이 좋습니다.|  
 |.NET Framework Data Provider for OLE DB|SQL Server의 경우이 공급자 대신 SQL Server에 대 한 .NET Framework Data Provider을 권장 합니다.<br /><br /> Microsoft Access 데이터베이스를 사용하는 단일 계층 애플리케이션에 권장됩니다. 중간 계층 애플리케이션에는 Access 데이터베이스를 사용하지 않는 것이 좋습니다.|  
@@ -156,9 +163,10 @@ using System.Data.OracleClient;
 |.NET Framework Data Provider for Oracle|Oracle 데이터 소스를 사용하는 중간 및 단일 계층 애플리케이션에 권장됩니다.|  
   
 ## <a name="entityclient-provider"></a>EntityClient 공급자  
+
  EntityClient 공급자는 EDM(엔터티 데이터 모델)을 기반으로 데이터에 액세스하는 데 사용됩니다. EntityClient 공급자는 다른 .NET Framework 데이터 공급자와 달리 데이터 소스와 직접 상호 작용하지 않고 대신 Entity SQL을 사용하여 기본 데이터 공급자와 통신합니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](./ef/entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
