@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5a9eb3747a6b4da316bca3f1d450c1ea0f774ada
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382050"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205115"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -64,7 +64,7 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
 
 ## <a name="built-in-types"></a>기본 제공 형식
 
-C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 숫자 형식의 표준 집합을 제공합니다. 이 밖에도 기본 제공 `string` 및 `object` 형식이 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식의 전체 목록은 [기본 제공 형식](../../language-reference/builtin-types/built-in-types.md)을 참조하세요.
+C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 형식의 표준 세트를 제공합니다. 이 밖에도 기본 제공 `string` 및 `object` 형식이 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식의 전체 목록은 [기본 제공 형식](../../language-reference/builtin-types/built-in-types.md)을 참조하세요.
 
 ## <a name="custom-types"></a>사용자 지정 형식
 
