@@ -3,19 +3,20 @@ title: 문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)
 description: 이 예제에서는 텍스트 줄이 포함된 파일을 병합합니다. C#에서 LINQ의 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 7bc2b2fbc6a6ce09305f870275f2f0ea5379d4fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105354"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167602"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="eb8dd-104">문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="eb8dd-104">How to combine and compare string collections (LINQ) (C#)</span></span>
-<span data-ttu-id="eb8dd-105">이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-105">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="eb8dd-106">특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-106">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="0b17b-104">문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="0b17b-104">How to combine and compare string collections (LINQ) (C#)</span></span>
+
+<span data-ttu-id="0b17b-105">이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-105">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="0b17b-106">특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-106">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="eb8dd-107">프로젝트 및 텍스트 파일을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="eb8dd-107">To set up the project and the text files</span></span>  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="0b17b-107">프로젝트 및 텍스트 파일을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="0b17b-107">To set up the project and the text files</span></span>  
   
-1. <span data-ttu-id="eb8dd-108">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-108">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="0b17b-108">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-108">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```text  
     Bankov, Peter  
@@ -30,7 +31,7 @@ ms.locfileid: "87105354"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="eb8dd-109">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-109">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="eb8dd-110">두 파일의 일부 이름에는 공통점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-110">Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="0b17b-109">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-109">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="0b17b-110">두 파일의 일부 이름에는 공통점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-110">Note that the two files have some names in common.</span></span>  
   
     ```text  
     Liu, Jinghao  
@@ -45,7 +46,7 @@ ms.locfileid: "87105354"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="eb8dd-111">예제</span><span class="sxs-lookup"><span data-stu-id="eb8dd-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0b17b-111">예제</span><span class="sxs-lookup"><span data-stu-id="0b17b-111">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -169,10 +170,11 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="eb8dd-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="eb8dd-112">Compiling the Code</span></span>  
- <span data-ttu-id="eb8dd-113">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="eb8dd-113">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="eb8dd-114">참조</span><span class="sxs-lookup"><span data-stu-id="eb8dd-114">See also</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="0b17b-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="0b17b-112">Compiling the Code</span></span>  
 
-- [<span data-ttu-id="eb8dd-115">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="eb8dd-115">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="eb8dd-116">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="eb8dd-116">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+ <span data-ttu-id="0b17b-113">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0b17b-113">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0b17b-114">참조</span><span class="sxs-lookup"><span data-stu-id="0b17b-114">See also</span></span>
+
+- [<span data-ttu-id="0b17b-115">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="0b17b-115">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="0b17b-116">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="0b17b-116">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

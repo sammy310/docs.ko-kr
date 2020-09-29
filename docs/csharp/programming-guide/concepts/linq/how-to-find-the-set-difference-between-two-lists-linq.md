@@ -3,21 +3,22 @@ title: 두 목록 간의 차집합을 구하는 방법(LINQ)(C#)
 description: C#의 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 하나의 목록에 있지만 다른 목록에는 없는 줄만 출력하는 방법을 보여줍니다.
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 01aba16b3489e4bf21a76bc715b6d4d2c9d250dd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105080"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159061"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="5255d-103">두 목록 간의 차집합을 구하는 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="5255d-103">How to find the set difference between two lists (LINQ) (C#)</span></span>
-<span data-ttu-id="5255d-104">이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5255d-104">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="fba58-103">두 목록 간의 차집합을 구하는 방법(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="fba58-103">How to find the set difference between two lists (LINQ) (C#)</span></span>
+
+<span data-ttu-id="fba58-104">이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fba58-104">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="5255d-105">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="5255d-105">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="fba58-105">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="fba58-105">To create the data files</span></span>  
   
-1. <span data-ttu-id="5255d-106">[문자열 컬렉션을 결합 및 비교 방법(LINQ)(C#)](./how-to-combine-and-compare-string-collections-linq.md)에 표시된 대로 names1.txt 및 names2.txt를 솔루션 폴더에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="5255d-106">Copy names1.txt and names2.txt to your solution folder as shown in [How to combine and compare string collections (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="fba58-106">[문자열 컬렉션을 결합 및 비교 방법(LINQ)(C#)](./how-to-combine-and-compare-string-collections-linq.md)에 표시된 대로 names1.txt 및 names2.txt를 솔루션 폴더에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="fba58-106">Copy names1.txt and names2.txt to your solution folder as shown in [How to combine and compare string collections (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5255d-107">예제</span><span class="sxs-lookup"><span data-stu-id="5255d-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fba58-107">예제</span><span class="sxs-lookup"><span data-stu-id="fba58-107">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -53,11 +54,12 @@ class CompareLists
      */  
 ```  
   
- <span data-ttu-id="5255d-108"><xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, <xref:System.Linq.Enumerable.Concat%2A> 등 C#에서 일부 유형의 쿼리 작업은 메서드 기반 구문으로만 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5255d-108">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="fba58-108"><xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, <xref:System.Linq.Enumerable.Concat%2A> 등 C#에서 일부 유형의 쿼리 작업은 메서드 기반 구문으로만 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fba58-108">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5255d-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="5255d-109">Compiling the Code</span></span>  
- <span data-ttu-id="5255d-110">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5255d-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="5255d-111">참조</span><span class="sxs-lookup"><span data-stu-id="5255d-111">See also</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="fba58-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="fba58-109">Compiling the Code</span></span>  
 
-- [<span data-ttu-id="5255d-112">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="5255d-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+ <span data-ttu-id="fba58-110">System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fba58-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fba58-111">참조</span><span class="sxs-lookup"><span data-stu-id="fba58-111">See also</span></span>
+
+- [<span data-ttu-id="fba58-112">LINQ 및 문자열(C#)</span><span class="sxs-lookup"><span data-stu-id="fba58-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

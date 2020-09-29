@@ -3,27 +3,29 @@ title: LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)
 description: 이 예제에서는 LINQ를 사용하여 C#에서 ArrayList를 쿼리합니다. 컬렉션에 있는 개체의 형식을 반영하도록 범위 변수의 형식을 선언해야 합니다.
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 278c05cfc864ee4f53e1215a2acb739efd87f8b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104606"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91154004"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="2bd18-104">LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="2bd18-104">How to query an ArrayList with LINQ (C#)</span></span>
-<span data-ttu-id="2bd18-105">LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-105">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="2bd18-106">예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-106">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../language-reference/keywords/from-clause.md) should look like this:</span></span>  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="e8114-104">LINQ를 사용하여 ArrayList를 쿼리하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="e8114-104">How to query an ArrayList with LINQ (C#)</span></span>
+
+<span data-ttu-id="e8114-105">LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-105">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="e8114-106">예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-106">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../language-reference/keywords/from-clause.md) should look like this:</span></span>  
   
 ```csharp
 var query = from Student s in arrList  
 //...
 ```  
   
- <span data-ttu-id="2bd18-107">범위 변수의 형식을 지정하여 <xref:System.Collections.ArrayList>의 각 항목을 `Student`로 캐스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-107">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
+ <span data-ttu-id="e8114-107">범위 변수의 형식을 지정하여 <xref:System.Collections.ArrayList>의 각 항목을 `Student`로 캐스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-107">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- <span data-ttu-id="2bd18-108">명시적 형식 범위 변수를 쿼리 식에 사용하는 것은 <xref:System.Linq.Enumerable.Cast%2A> 메서드 호출과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-108">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="2bd18-109">지정된 캐스트를 수행할 수 없는 경우 <xref:System.Linq.Enumerable.Cast%2A>에서 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-109"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="2bd18-110"><xref:System.Linq.Enumerable.Cast%2A> 및 <xref:System.Linq.Enumerable.OfType%2A>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 형식에서 작동하는 두 가지 표준 쿼리 연산자 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-110"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="2bd18-111">자세한 내용은 [LINQ 쿼리 작업의 형식 관계](./type-relationships-in-linq-query-operations.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bd18-111">For more information, see [Type Relationships in LINQ Query Operations](./type-relationships-in-linq-query-operations.md).</span></span>  
+ <span data-ttu-id="e8114-108">명시적 형식 범위 변수를 쿼리 식에 사용하는 것은 <xref:System.Linq.Enumerable.Cast%2A> 메서드 호출과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-108">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="e8114-109">지정된 캐스트를 수행할 수 없는 경우 <xref:System.Linq.Enumerable.Cast%2A>에서 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-109"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="e8114-110"><xref:System.Linq.Enumerable.Cast%2A> 및 <xref:System.Linq.Enumerable.OfType%2A>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 형식에서 작동하는 두 가지 표준 쿼리 연산자 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-110"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="e8114-111">자세한 내용은 [LINQ 쿼리 작업의 형식 관계](./type-relationships-in-linq-query-operations.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e8114-111">For more information, see [Type Relationships in LINQ Query Operations](./type-relationships-in-linq-query-operations.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2bd18-112">예제</span><span class="sxs-lookup"><span data-stu-id="2bd18-112">Example</span></span>  
- <span data-ttu-id="2bd18-113">다음 예제에서는 <xref:System.Collections.ArrayList>에 대한 단순 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-113">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="2bd18-114">이 예제에서는 코드가 <xref:System.Collections.ArrayList.Add%2A> 메서드를 호출할 때 개체 이니셜라이저를 사용하지만 요구 사항은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="2bd18-114">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8114-112">예제</span><span class="sxs-lookup"><span data-stu-id="e8114-112">Example</span></span>  
+
+ <span data-ttu-id="e8114-113">다음 예제에서는 <xref:System.Collections.ArrayList>에 대한 단순 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-113">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="e8114-114">이 예제에서는 코드가 <xref:System.Collections.ArrayList.Add%2A> 메서드를 호출할 때 개체 이니셜라이저를 사용하지만 요구 사항은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="e8114-114">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```csharp  
 using System;  
@@ -84,6 +86,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2bd18-115">참조</span><span class="sxs-lookup"><span data-stu-id="2bd18-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8114-115">참조</span><span class="sxs-lookup"><span data-stu-id="e8114-115">See also</span></span>
 
-- [<span data-ttu-id="2bd18-116">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="2bd18-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="e8114-116">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="e8114-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
