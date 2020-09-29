@@ -2,12 +2,12 @@
 title: 클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 ms.date: 04/30/2018
-ms.openlocfilehash: afb7bae7780a766329ca604d192b2d7353e32bf5
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 98ebd29b8ab81c8fff6da546942825133f06f4de
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739171"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172055"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 
@@ -17,9 +17,9 @@ ms.locfileid: "81739171"
 
 Azure DevOps Services는 공식 Azure DevOps Services 배포 작업을 통해 다양한 환경에 대한 다중 컨테이너 애플리케이션의 지속적인 통합과 배포를 지원합니다.
 
-- [Azure Web App for Containers로 배포](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
+- [Azure Web App for Containers로 배포](/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 
-- [Azure Kubernetes Service로 배포](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
+- [Azure Kubernetes Service로 배포](/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
 하지만 사용자는 Azure DevOps Services 스크립트 기반 작업을 사용하여 [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) 또는 DC/OS로 배포할 수도 있습니다.
 

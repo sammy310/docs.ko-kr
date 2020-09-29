@@ -2,12 +2,12 @@
 title: 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 ms.date: 04/30/2018
-ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144254"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172159"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드를 위한 탄력적인 서비스 빌드: 클라우드의 일시적 오류 포용
 
@@ -33,7 +33,7 @@ HTTP 서비스를 사용하는 앱에서도 비슷한 시나리오가 발생할 
 
 HTTP 리소스와 데이터베이스 리소스 모두에서 이러한 기술을 사용할 수 있습니다. 그림 4-9에서는 애플리케이션이 3계층 아키텍처를 기반으로 하므로 서비스 수준(HTTP) 및 데이터 계층 수준(TCP)에서 이러한 기술이 필요합니다. 데이터베이스 이외에 단일 앱 계층만 사용하는 모놀리식 애플리케이션(추가 서비스 또는 마이크로 서비스가 없음)에서는 데이터베이스 연결 수준에서 일시적 실패를 처리하는 것으로 충분할 수 있습니다. 이 시나리오에서는 특정한 데이터베이스 연결 구성만 필요합니다.
 
-데이터베이스에 액세스하는 복원력 있는 통신을 구현하는 경우 이는 사용 중인 .NET 버전에 따라 간단할 수 있습니다. (예를 들어 [Entity Framework 6 이상](/ef/ef6/fundamentals/connection-resiliency/retry-logic)에서는 데이터베이스 연결을 구성하는 문제일 뿐입니다.) 또는 [일시적 실패 처리 애플리케이션 블록](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50))과 같은 추가 라이브러를 사용하거나(이전 버전의 .NET) 심지어 사용자 고유 라이브러리를 구현해야 할 수도 있습니다.
+데이터베이스에 액세스하는 복원력 있는 통신을 구현하는 경우 이는 사용 중인 .NET 버전에 따라 간단할 수 있습니다. (예를 들어 [Entity Framework 6 이상](/ef/ef6/fundamentals/connection-resiliency/retry-logic)에서는 데이터베이스 연결을 구성하는 문제일 뿐입니다.) 또는 [일시적 실패 처리 애플리케이션 블록](/previous-versions/msp-n-p/hh680934(v=pandp.50))과 같은 추가 라이브러를 사용하거나(이전 버전의 .NET) 심지어 사용자 고유 라이브러리를 구현해야 할 수도 있습니다.
 
 HTTP 다시 시도 및 회로 차단기를 구현할 때 .NET 관련 권장 사항은 .NET Core 지원을 포함하는 .NET Framework 4.0, .NET Framework 4.5 및 .NET Standard 1.1을 대상으로 하는 [Polly](https://github.com/App-vNext/Polly) 라이브러리를 사용하는 것입니다.
 

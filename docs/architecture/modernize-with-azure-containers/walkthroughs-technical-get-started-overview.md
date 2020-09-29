@@ -2,12 +2,12 @@
 title: 연습 및 기술 시작 개요
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 연습 및 기술 시작 개요
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516127"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172146"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작 개요
 
@@ -190,7 +190,7 @@ Windows 컨테이너를 온-프레미스 Windows Server 2016 VM에 배포할 수
 
 ### <a name="overview"></a>개요
 
-[ACI(Azure Container Instances)](https://docs.microsoft.com/azure/container-instances/)는 단일 인스턴스의 컨테이너를 배포할 수 있는 컨테이너 개발/테스트/준비 환경을 확보하는 가장 빠른 방법입니다.
+[ACI(Azure Container Instances)](/azure/container-instances/)는 단일 인스턴스의 컨테이너를 배포할 수 있는 컨테이너 개발/테스트/준비 환경을 확보하는 가장 빠른 방법입니다.
 
 ### <a name="goals"></a>목표
 

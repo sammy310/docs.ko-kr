@@ -3,14 +3,15 @@ title: 문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)
 description: 이 예제에서는 텍스트 줄이 포함된 파일을 병합합니다. C#에서 LINQ의 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 7bc2b2fbc6a6ce09305f870275f2f0ea5379d4fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105354"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167602"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)
+
 이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다. 특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>프로젝트 및 텍스트 파일을 설정하려면  
@@ -170,6 +171,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참조

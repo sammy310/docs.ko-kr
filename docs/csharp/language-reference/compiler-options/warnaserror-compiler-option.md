@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9c3b307668968865b401aedc04c79f95d4f32513
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127245"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171340"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror(C# 컴파일러 옵션)
+
 **-warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89127245"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  일반적으로 경고로 보고되는 메시지가 대신 오류로 보고되며, 빌드 프로세스가 중지됩니다(출력 파일이 작성되지 않음).  
   
  기본적으로 **-warnaserror-** 가 적용되며, 경고가 발생해도 출력 파일이 생성됩니다. **-warnaserror+** 와 동일한 **-warnaserror**는 경고가 오류로 처리되도록 합니다.  
@@ -45,6 +47,7 @@ ms.locfileid: "89127245"
  프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  `in.cs`를 컴파일하고 컴파일러에서 경고를 표시하지 않도록 합니다.  
   
 ```console  

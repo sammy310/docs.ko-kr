@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539361"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169299"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -205,7 +205,7 @@ ASP.NET Core MVC 애플리케이션의 사용자 인터페이스 레이어는 �
 
 ![그림 5-14](./media/image5-14.png)
 
-각 인스턴스의 전용 VM을 사용하여 Microsoft Azure에 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)를 사용하여 VM 크기를 쉽게 조정할 수 있습니다. [Azure App Services](https://azure.microsoft.com/services/app-service/)는 VM을 관리하지 않고 모놀리식 애플리케이션을 실행하고 인스턴스 크기를 쉽게 조정할 수 있습니다. Azure App Services는 배포를 단순화할 뿐만 아니라 Docker 컨테이너의 단일 인스턴스를 실행할 수 있습니다. Docker를 사용하면 단일 VM을 Docker 호스트로 배포하고 여러 인스턴스를 실행할 수 있습니다. 그림 5-14처럼 Azure 분산 장치를 사용하여 크기 조정을 관리할 수 있습니다.
+각 인스턴스의 전용 VM을 사용하여 Microsoft Azure에 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/)를 사용하여 VM 크기를 쉽게 조정할 수 있습니다. [Azure App Services](https://azure.microsoft.com/services/app-service/)는 VM을 관리하지 않고 모놀리식 애플리케이션을 실행하고 인스턴스 크기를 쉽게 조정할 수 있습니다. Azure App Services는 배포를 단순화할 뿐만 아니라 Docker 컨테이너의 단일 인스턴스를 실행할 수 있습니다. Docker를 사용하면 단일 VM을 Docker 호스트로 배포하고 여러 인스턴스를 실행할 수 있습니다. 그림 5-14처럼 Azure 분산 장치를 사용하여 크기 조정을 관리할 수 있습니다.
 
 기존의 배포 기술로 다양한 호스트에 대한 배포를 관리할 수 있습니다. Docker 호스트는 **docker run** 같은 명령을 사용하여 수동으로 관리하거나 CD(지속적인 업데이트) 파이프라인 같은 자동화를 통해 관리할 수 있습니다.
 

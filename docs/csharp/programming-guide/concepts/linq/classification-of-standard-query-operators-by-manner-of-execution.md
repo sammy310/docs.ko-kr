@@ -3,33 +3,39 @@ title: 실행 방식에 따라 표준 쿼리 연산자 분류(C#)
 description: C#에서 LINQ to Objects에 대해 표준 쿼리 연산자를 실행하는 방식(즉시, 연기된 스트리밍, 연기된 비스트리밍)에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 23f4eafac39b46072629ee4b6e8ec4ae92f6ab80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159256"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>실행 방식에 따라 표준 쿼리 연산자 분류(C#)
+
 표준 쿼리 연산자 메서드의 LINQ to Objects 구현은 즉시 실행 또는 지연된 실행의 두 가지 기본 방식 중 하나로 실행됩니다. 지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍의 두 가지 범주로 추가로 구분할 수 있습니다. 여러 쿼리 연산자가 어떻게 실행되는지 알고 있으면 제공된 쿼리에서 얻을 결과를 이해하는 데 도움이 될 수 있습니다. 데이터 소스가 변경되거나 다른 쿼리 위에 쿼리를 빌드할 경우 특히 도움이 됩니다. 이 항목에서는 실행 방식에 따라 표준 쿼리 연산자를 분류합니다.  
   
 ## <a name="manners-of-execution"></a>실행 방식  
   
 ### <a name="immediate"></a>직접 실행  
+
  즉시 실행은 코드의 쿼리가 선언되는 지점에서 데이터 소스를 읽고 작업이 수행됨을 의미합니다. 하나의 비열거형 결과를 반환하는 모든 표준 쿼리 연산자는 즉시 실행됩니다.  
   
 ### <a name="deferred"></a>연기됨  
+
  지연된 실행은 코드의 쿼리가 선언되는 지점에서 작업이 수행되지 않음을 의미합니다. 예를 들어 `foreach` 문을 사용하여 쿼리 변수가 열거될 경우에만 작업이 수행됩니다. 즉, 쿼리 실행 결과는 쿼리가 정의될 때가 아니라 쿼리가 실행될 때 데이터 소스의 내용에 따라 달라집니다. 쿼리 변수가 여러 번 열거될 경우 매번 결과가 다를 수 있습니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IOrderedEnumerable%601>인 표준 쿼리 연산자는 대부분 지연 방식으로 실행됩니다.  
   
  지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍으로 추가로 분류할 수 있습니다.  
   
 #### <a name="streaming"></a>스트리밍  
+
  스트리밍 연산자는 요소를 생성하기 전에 모든 소스 데이터를 읽을 필요가 없습니다. 실행 시 스트리밍 연산자는 소스 요소를 읽을 때 각 소스 요소에 대해 작업을 수행하고 해당하는 경우 요소를 생성합니다. 스트리밍 연산자는 결과 요소가 생성될 때까지 소스 요소를 계속 읽습니다. 즉, 두 개 이상의 소스 요소를 읽어 하나의 결과 요소를 생성할 수 있습니다.  
   
 #### <a name="non-streaming"></a>비스트리밍  
+
  비스트리밍 연산자는 결과 요소를 생성하기 전에 모든 소스 데이터를 읽어야 합니다. 정렬 또는 그룹화 등의 작업은 이 범주로 분류됩니다. 실행 시 비스트리밍 쿼리 연산자는 모든 소스 데이터를 읽고, 데이터 구조에 넣고, 작업을 수행하고, 결과 요소를 생성합니다.  
   
 ## <a name="classification-table"></a>분류 표  
+
  다음 표에서는 실행 방법에 따라 각 표준 쿼리 연산자 메서드를 분류합니다.  
   
 > [!NOTE]

@@ -4,12 +4,12 @@ description: Azure Event Grid는 안정적으로 이벤트를 전달하고 이�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 30937bafd8069eb4508dce18351964103421373a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135713"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171886"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -31,7 +31,7 @@ Event Grid는 다양한 시나리오에 적용할 수 있습니다. 이 섹션�
 
 ![작업 자동화](./media/ops-automation.png)
 
-Event Grid는 인프라를 프로비전할 때 [Azure Automation](https://docs.microsoft.com/azure/automation)에 알려 자동화를 가속화하고 정책 적용을 간소화하는 데 도움이 됩니다.
+Event Grid는 인프라를 프로비전할 때 [Azure Automation](/azure/automation)에 알려 자동화를 가속화하고 정책 적용을 간소화하는 데 도움이 됩니다.
 
 ### <a name="application-integration"></a>애플리케이션 통합
 
@@ -47,11 +47,11 @@ Event Grid는 Azure Functions, Logic Apps 또는 사용자 지정 코드를 트�
 
 ## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid 및 기타 Azure 메시징 서비스
 
-Azure는 [Event Hubs](https://docs.microsoft.com/azure/event-hubs) 및 [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)를 비롯한 여러 메시징 서비스를 제공합니다. 각 서비스는 특정 사용 사례 집합을 해결하도록 디자인되었습니다. 다음 다이어그램에서는 서비스 간 차이점에 대한 개략적인 개요를 제공합니다.
+Azure는 [Event Hubs](/azure/event-hubs) 및 [Service Bus](/azure/service-bus-messaging)를 비롯한 여러 메시징 서비스를 제공합니다. 각 서비스는 특정 사용 사례 집합을 해결하도록 디자인되었습니다. 다음 다이어그램에서는 서비스 간 차이점에 대한 개략적인 개요를 제공합니다.
 
 ![Azure 메시징 비교](./media/azure-messaging-services.png)
 
-보다 자세한 비교는 [메시징 서비스 비교](https://docs.microsoft.com/azure/event-grid/compare-messaging-services)를 참조하세요.
+보다 자세한 비교는 [메시징 서비스 비교](/azure/event-grid/compare-messaging-services)를 참조하세요.
 
 ## <a name="performance-targets"></a>성능 목표
 
@@ -110,34 +110,34 @@ Event Grid를 사용하는 주요 이점은 Azure에서 생성되는 자동 메�
 | | Microsoft.Resources.ResourceDeleteFailure | 리소스 삭제 작업이 실패하면 발생합니다. |
 | | Microsoft.Resources.ResourceDeleteCancel | 리소스 삭제 작업이 취소되면 발생합니다. 이 이벤트는 템플릿 배포가 취소될 때 발생합니다. |
 
-자세한 내용은 [Azure Event Grid 이벤트 스키마](https://docs.microsoft.com/azure/event-grid/event-schema)를 참조하세요.
+자세한 내용은 [Azure Event Grid 이벤트 스키마](/azure/event-grid/event-schema)를 참조하세요.
 
 온-프레미스에서 실행되는 애플리케이션도 포함해 모든 종류의 애플리케이션에서 Event Grid에 액세스할 수 있습니다.
 
 ## <a name="conclusion"></a>결론
 
-이 장에서는 Azure Functions, Logic Apps 및 Event Grid로 구성된 Azure 서버리스 플랫폼에 대해 알아보았습니다. 이러한 리소스를 사용하여 온전하게 서버리스 앱 아키텍처를 빌드하거나 다른 클라우드 리소스 및 온-프레미스 서버와 상호 작용하는 하이브리드 솔루션을 만들 수 있습니다. [Azure SQL](https://docs.microsoft.com/azure/sql-database) 또는 [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction) 같은 서버리스 데이터 플랫폼과 결합하여 완전 관리형 클라우드 네이티브 애플리케이션을 빌드할 수 있습니다.
+이 장에서는 Azure Functions, Logic Apps 및 Event Grid로 구성된 Azure 서버리스 플랫폼에 대해 알아보았습니다. 이러한 리소스를 사용하여 온전하게 서버리스 앱 아키텍처를 빌드하거나 다른 클라우드 리소스 및 온-프레미스 서버와 상호 작용하는 하이브리드 솔루션을 만들 수 있습니다. [Azure SQL](/azure/sql-database) 또는 [CosmosDB](/azure/cosmos-db/introduction) 같은 서버리스 데이터 플랫폼과 결합하여 완전 관리형 클라우드 네이티브 애플리케이션을 빌드할 수 있습니다.
 
 ## <a name="recommended-resources"></a>권장되는 리소스
 
-- [App Service 계획](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-- [Application Insights](https://docs.microsoft.com/azure/application-insights)
-- [Application Insights 분석](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [App Service 계획](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](/azure/application-insights)
+- [Application Insights 분석](/azure/application-insights/app-insights-analytics)
 - [Azure: 서버리스 Azure Functions를 사용하여 앱을 클라우드로 전환](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Grid 이벤트 스키마](https://docs.microsoft.com/azure/event-grid/event-schema)
-- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
-- [Azure Functions 설명서](https://docs.microsoft.com/azure/azure-functions) 리소스를 참조하세요.
-- [Azure Functions 트리거 및 바인딩 개념](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Azure 온-프레미스 데이터 게이트웨이를 사용하여 온-프레미스 데이터 원본에 연결](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-- [Azure Portal에서 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-- [Azure CLI를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-- [Visual Studio를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [Functions 지원 언어](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Azure Functions 모니터링](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure Event Grid 이벤트 스키마](/azure/event-grid/event-schema)
+- [Azure Event Hubs](/azure/event-hubs)
+- [Azure Functions 설명서](/azure/azure-functions) 리소스를 참조하세요.
+- [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](/azure/logic-apps)
+- [Azure Service Bus](/azure/service-bus-messaging)
+- [Azure Table Storage](/azure/cosmos-db/table-storage-overview)
+- [Azure 온-프레미스 데이터 게이트웨이를 사용하여 온-프레미스 데이터 원본에 연결](/azure/analysis-services/analysis-services-gateway)
+- [Azure Portal에서 첫 번째 함수 만들기](/azure/azure-functions/functions-create-first-azure-function)
+- [Azure CLI를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Visual Studio를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Functions 지원 언어](/azure/azure-functions/supported-languages)
+- [Azure Functions 모니터링](/azure/azure-functions/functions-monitoring)
 
 >[!div class="step-by-step"]
 >[이전](logic-apps.md)

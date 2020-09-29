@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 7cbaea4dc5381a2ebeb97ce2797ffe850488e126
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299931"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170456"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법(C# 프로그래밍 가이드)
+
 .NET에서 다음 클래스를 사용하여 파일 시스템 정보에 액세스할 수 있습니다.  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -36,11 +37,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO.Directory?displayProperty=nameWithType> 및 <xref:System.IO.File?displayProperty=nameWithType> 클래스는 디렉터리와 파일에 대한 정보를 가져오기 위한 정적 메서드를 제공합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 파일 및 폴더에 대한 정보에 액세스하는 다양한 방법을 보여 줍니다.  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  사용자 지정 경로 문자열을 처리하는 경우 다음 조건에 대한 예외도 처리해야 합니다.  
   
 - 파일 이름 형식이 잘못된 경우. 예를 들어 잘못된 문자를 포함하거나 공백만 포함합니다.  

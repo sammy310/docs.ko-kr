@@ -3,26 +3,31 @@ title: LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
 description: 개체 관계형 디자이너, SQLMetal 도구, LINQ 인식 코드 편집기, 디버거와 같은 LINQ 개발을 지원하는 Visual Studio 기능에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: cd0c936624b4d5329cb2eb0f1cdd5215bbc96f23
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: fd02189f54d8be40181df8bb8a30ee1ac534bc48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302245"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158957"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
+
 Visual Studio IDE(통합 개발 환경)는 LINQ 애플리케이션 개발을 지원하는 다음과 같은 기능을 제공합니다.  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
+
  개체 관계형 디자이너는 기본 데이터베이스의 관계형 데이터를 나타내는 C#의 클래스를 생성하기 위해 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 애플리케이션에서 사용할 수 있는 시각적 디자인 도구입니다. 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조하세요.  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal 명령줄 도구  
+
  SQLMetal은 LINQ to SQL 애플리케이션에서 사용할 기존 데이터베이스로부터 클래스를 생성하기 위해 빌드 프로세스에서 사용할 수 있는 명령줄 도구입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ## <a name="linq-aware-code-editor"></a>LINQ 인식 코드 편집기  
+
  C# 코드 편집기는 IntelliSense 및 서식 지정 기능으로 LINQ를 광범위하게 지원합니다.  
   
 ## <a name="visual-studio-debugger-support"></a>Visual Studio 디버거 지원  
+
  Visual Studio 디버거는 쿼리 식의 디버깅을 지원합니다. 자세한 내용은 [LINQ 디버깅](/visualstudio/debugger/debugging-linq)을 참조하세요.  
   
 ## <a name="see-also"></a>참조

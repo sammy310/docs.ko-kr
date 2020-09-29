@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118522"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160543"
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 
@@ -40,6 +40,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
  `async` 키워드는 메서드, 람다 식 또는 무명 메서드를 수정할 때만 키워드로 사용됩니다. 다른 모든 컨텍스트에서는 식별자로 해석됩니다.
 
 ## <a name="example"></a>예제
+
 다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 웹 페이지의 문자 수입니다. 이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하세요.
 
 Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱으로 실행할 수 있습니다. `StartButton`이라는 Button 컨트롤과 `ResultsTextBox`라는 Textbox 컨트롤이 필요합니다. 다음과 같이 작성되도록 이름과 처리기를 설정해야 합니다.
@@ -68,6 +69,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 > 작업 및 작업 완료를 기다리는 동안 실행되는 코드에 관한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)을 참조하세요. 비슷한 요소를 사용하는 전체 콘솔 예제는 [완료되면 비동기 작업 처리(C#)](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)를 참조하세요.
 
 ## <a name="return-types"></a>반환 형식
+
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
 
 - <xref:System.Threading.Tasks.Task>

@@ -2,12 +2,12 @@
 title: 모놀리식 애플리케이션
 description: 모놀리식 애플리케이션 컨테이너화의 핵심 개념을 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915450"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163546"
 ---
 # <a name="monolithic-applications"></a>모놀리식 애플리케이션
 
@@ -37,7 +37,7 @@ ms.locfileid: "87915450"
 
 마지막으로, 가용성 관점에서 모놀리식 애플리케이션은 한 덩어리로 배포해야 합니다. 즉, *멈췄다가 시작*해야 하는 경우 모든 기능과 모든 사용자가 배포 기간 동안 영향을 받습니다. 특정 상황에서는 Azure 및 컨테이너를 사용하면 이러한 문제를 최소화할 수 있으며, 그림 4-3처럼 애플리케이션의 가동 중지 가능성을 줄일 수 있습니다.
 
-각 인스턴스의 전용 VM을 사용하여 Azure에서 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)를 사용하면 VM 크기를 쉽게 조정할 수 있습니다.
+각 인스턴스의 전용 VM을 사용하여 Azure에서 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure VM Scale Sets](/azure/virtual-machine-scale-sets/)를 사용하면 VM 크기를 쉽게 조정할 수 있습니다.
 
 또한 [Azure App Services](https://azure.microsoft.com/services/app-service/)를 사용하면 VM을 관리할 필요 없이 모놀리식 애플리케이션을 실행하고 인스턴스 크기를 쉽게 조정할 수 있습니다. Azure App Services는 배포를 단순화할 뿐만 아니라 Docker 컨테이너의 단일 인스턴스를 실행할 수 있습니다.
 

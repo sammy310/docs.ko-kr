@@ -4,12 +4,12 @@ description: Azure Functions는 여러 언어(C#, JavaScript, Java) 및 플랫�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135726"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171808"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -19,7 +19,7 @@ Azure 함수는 서버리스 컴퓨팅 환경을 제공합니다. 함수는 *트
 
 현재 런타임 버전 3.0은 플랫폼 간 .NET Core 3.1 애플리케이션을 지원합니다. C# 이외에 JavaScript, F#, Java 같은 언어를 추가로 사용할 수 있습니다. 포털에서 만든 함수는 풍부한 스크립팅 구문을 제공합니다. 독립 실행형 프로젝트로 만들어진 함수는 전체 플랫폼 지원 및 기능을 사용하여 배포할 수 있습니다.
 
-자세한 내용은 [Azure Functions 팩](https://docs.microsoft.com/azure/azure-functions)을 참조하세요.
+자세한 내용은 [Azure Functions 팩](/azure/azure-functions)을 참조하세요.
 
 ## <a name="programming-language-support"></a>프로그래밍 언어 지원
 
@@ -35,15 +35,15 @@ Azure 함수는 서버리스 컴퓨팅 환경을 제공합니다. 함수는 *트
 |**TypeScript**|Node 10 및 12(JavaScript를 통해)|
 |**PowerShell**|PowerShell Core 6|
 
-자세한 내용은 [지원되는 언어](https://docs.microsoft.com/azure/azure-functions/supported-languages)를 참조하세요.
+자세한 내용은 [지원되는 언어](/azure/azure-functions/supported-languages)를 참조하세요.
 
 ## <a name="app-service-plans"></a>App Service 계획
 
 함수는 *App Service 계획*으로 지원됩니다. 계획은 함수 앱에서 사용하는 리소스를 정의합니다. 지역에 계획을 할당하고, 사용되는 가상 머신의 크기 및 수를 결정하고, 가격 책정 계층을 선택할 수 있습니다. 진정한 서버리스 접근 방식을 위해 함수 앱에서 **사용** 계획을 사용할 수 있습니다. 사용 계획은 부하에 따라 자동으로 백 엔드 크기를 조정합니다.
 
-함수 앱에 대한 또 하나의 호스팅 옵션은 [프리미엄 플랜](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan)입니다. 이 플랜은 콜드 부팅을 방지하고 VNet 연결과 같은 고급 기능을 지원하며 프리미엄 하드웨어에서 실행되는 "always on" 인스턴스를 제공합니다.
+함수 앱에 대한 또 하나의 호스팅 옵션은 [프리미엄 플랜](/azure/azure-functions/functions-premium-plan)입니다. 이 플랜은 콜드 부팅을 방지하고 VNet 연결과 같은 고급 기능을 지원하며 프리미엄 하드웨어에서 실행되는 "always on" 인스턴스를 제공합니다.
 
-자세한 내용은 [App Service 계획](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)을 참조하세요.
+자세한 내용은 [App Service 계획](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)을 참조하세요.
 
 ## <a name="create-your-first-function"></a>첫 번째 기능 만들기
 
@@ -53,11 +53,11 @@ Azure 함수는 서버리스 컴퓨팅 환경을 제공합니다. 함수는 *트
 - Azure CLI를 사용하여 필요한 리소스를 만듭니다.
 - 즐겨 사용하는 IDE를 사용하여 함수를 로컬에서 빌드하고 Azure에 게시합니다.
 
-포털에서 스크립팅된 함수를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)를 참조하세요.
+포털에서 스크립팅된 함수를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 첫 번째 함수 만들기](/azure/azure-functions/functions-create-first-azure-function)를 참조하세요.
 
-Azure CLI에서 빌드하려면 [Azure CLI를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)를 참조하세요.
+Azure CLI에서 빌드하려면 [Azure CLI를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-first-azure-function-azure-cli)를 참조하세요.
 
-Visual Studio에서 함수를 만들려면 [Visual Studio를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)를 참조하세요.
+Visual Studio에서 함수를 만들려면 [Visual Studio를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-your-first-function-visual-studio)를 참조하세요.
 
 ## <a name="understand-triggers-and-bindings"></a>트리거 및 바인딩 이해
 
@@ -114,7 +114,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 예제는 수정되었거나 Blob 스토리지에 업로드된 파일의 이름을 사용하고 나중에 처리할 수 있도록 큐에 배치하는 간단한 함수입니다.
 
-트리거 및 바인딩의 전체 목록은 [Azure Functions 트리거 및 바인딩 개념](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
+트리거 및 바인딩의 전체 목록은 [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
 
 >[!div class="step-by-step"]
 >[이전](azure-serverless-platform.md)

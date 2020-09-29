@@ -2,12 +2,12 @@
 title: 분산 데이터 관리를 위한 과제 및 해결 방법
 description: 마이크로 서비스 환경에서 분산 데이터 관리를 위한 과제 및 솔루션은 무엇인지 알아봅니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1439dd5a04c3991a2b3b2ef12763843f9f339a29
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152653"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>분산 데이터 관리를 위한 과제 및 해결 방법
 
@@ -25,7 +25,7 @@ ms.locfileid: "84144320"
 
 **API 게이트웨이.** 서로 다른 데이터베이스를 소유한 여러 마이크로 서비스의 간단한 데이터 집계에 권장되는 방법은 API 게이트웨이라고 하는 집계 마이크로 서비스입니다. 그러나 시스템의 문제 지점(choke point)이 될 수 있고 마이크로 서비스의 자율 원칙을 위반할 수 있으므로 이 패턴을 구현하는 데 주의해야 합니다. 이러한 가능성을 줄이기 위해 각각 시스템의 수직적 "조각" 또는 비즈니스 영역에 집중하는 여러 개의 정교한 API 게이트웨이가 있을 수 있습니다. API 게이트웨이 패턴은 나중에 [API 게이트웨이 섹션](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication)에서 자세히 설명합니다.
 
-**쿼리/읽기 테이블이 포함된 CQRS.** 여러 마이크로 서비스에서 데이터를 집계하는 또 다른 해결 방법은 [구체화된 뷰 패턴](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)입니다. 이 방법에서는 여러 마이크로 서비스에서 소유한 데이터가 있는 읽기 전용 테이블을 미리 생성합니다(실제 쿼리가 수행되기 전에 비정규화된 데이터 준비). 이 테이블에는 클라이언트 앱의 요구 사항에 적합한 형식이 있습니다.
+**쿼리/읽기 테이블이 포함된 CQRS.** 여러 마이크로 서비스에서 데이터를 집계하는 또 다른 해결 방법은 [구체화된 뷰 패턴](/azure/architecture/patterns/materialized-view)입니다. 이 방법에서는 여러 마이크로 서비스에서 소유한 데이터가 있는 읽기 전용 테이블을 미리 생성합니다(실제 쿼리가 수행되기 전에 비정규화된 데이터 준비). 이 테이블에는 클라이언트 앱의 요구 사항에 적합한 형식이 있습니다.
 
 모바일 앱에 대한 화면과 같은 것을 사용하는 것이 좋습니다. 단일 데이터베이스가 있는 경우 여러 테이블과 관련된 복잡한 조인을 수행하는 SQL 쿼리를 사용하여 해당 화면에 대한 데이터를 함께 가져올 수 있습니다. 그러나 여러 데이터베이스가 있고 다른 마이크로 서비스에서 각 데이터베이스를 소유하는 경우 이러한 데이터베이스를 쿼리하고 SQL 조인을 만들 수 없습니다. 복잡한 쿼리가 문제가 됩니다. CQRS 방법을 사용하여 요구 사항을 해결할 수 있습니다. 즉 쿼리에 대해서만 사용되는 다른 데이터베이스에 비정규화된 테이블을 만들 수 있습니다. 이 테이블은 복잡한 쿼리에 필요한 데이터에 맞게 특별히 설계할 수 있으며, 애플리케이션의 화면에 필요한 필드와 쿼리 테이블의 열 사이에 일대일 관계가 있습니다. 또한 보고 목적으로도 사용될 수 있습니다.
 

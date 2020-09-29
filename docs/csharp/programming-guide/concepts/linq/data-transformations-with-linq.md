@@ -11,14 +11,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2fb4166b9dbcecebf06b9dc3a780b02751dd4dc7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558812"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159152"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
+
 LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. LINQ 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 LINQ 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
   
 - 여러 입력 시퀀스를 새 형식을 가진 단일 출력 시퀀스로 병합합니다.  
@@ -32,6 +33,7 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
  이것은 몇 가지 예일 뿐입니다. 물론 같은 쿼리에서 다양한 방법으로 이러한 변환을 결합할 수 있습니다. 또한 한 쿼리의 출력 시퀀스는 새 쿼리에 대한 입력 시퀀스로 사용할 수 있습니다.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>여러 입력을 단일 출력 시퀀스로 결합  
+
  LINQ 쿼리를 사용하여 두 개 이상의 입력 시퀀스에서 생성된 요소가 포함된 출력 시퀀스를 만들 수 있습니다. 다음 예제에서는 두 개의 메모리 내 데이터 구조를 결합하는 방법을 보여 주지만 XML, SQL 또는 DataSet 소스에서 데이터를 결합하는 데는 같은 원칙을 적용할 수 있습니다. 다음 두 가지 클래스 형식을 가정합니다.  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
@@ -43,6 +45,7 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
  자세한 내용은 [join 절](../../../language-reference/keywords/join-clause.md) 및 [select 절](../../../language-reference/keywords/select-clause.md)을 참조하세요.  
   
 ## <a name="selecting-a-subset-of-each-source-element"></a>각 소스 요소의 하위 집합 선택  
+
  소스 시퀀스에서 각 요소의 하위 집합을 선택하는 두 가지 기본 방법은 다음과 같습니다.  
   
 1. 소스 요소의 멤버를 하나만 선택하려면 점 작업을 사용합니다. 다음 예제에서는 `Customer` 개체에 `City` 문자열을 비롯한 여러 public 속성이 포함된다고 가정합니다. 실행될 경우 이 쿼리는 문자열의 출력 시퀀스를 생성합니다.  
@@ -62,6 +65,7 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
  자세한 내용은 [개체 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md) 및 [무명 형식](../../classes-and-structs/anonymous-types.md)을 참조하세요.  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>메모리 내 개체를 XML로 변환  
+
  LINQ 쿼리를 통해 메모리 내 데이터 구조, SQL 데이터베이스, ADO.NET 데이터 세트 및 XML 스트림이나 문서 간에 손쉽게 데이터를 변환할 수 있습니다. 다음 예제에서는 메모리 내 데이터 구조의 개체를 XML 요소로 변환합니다.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
@@ -91,6 +95,7 @@ LINQ(Language-Integrated Query)는 데이터 검색에만 관련된 것이 아�
  자세한 내용은 [C#에서 XML 트리 만들기(LINQ to XML)](../../../../standard/linq/create-xml-trees.md)를 참조하세요.  
   
 ## <a name="performing-operations-on-source-elements"></a>소스 요소에서 작업 수행  
+
  출력 시퀀스에 소스 시퀀스의 요소 또는 요소 속성이 포함되어 있지 않을 수 있습니다. 대신에 출력이 소스 요소를 입력 인수로 사용하여 계산되는 값 시퀀스일 수 있습니다.
 
  다음 쿼리는 원의 반지름을 나타내는 숫자의 시퀀스를 사용하여 각 반지름의 면적을 계산하고, 계산된 면적으로 형식이 지정된 문자열이 포함된 출력 시퀀스를 반환합니다.

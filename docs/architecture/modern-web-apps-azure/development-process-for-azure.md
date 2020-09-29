@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607895"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169039"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -46,9 +46,9 @@ CI/CD를 사용하여 ASP.NET Core 애플리케이션 개발을 시작하려면 
 
 앱에 대한 릴리스 파이프라인을 만들려면 소스 제어에 애플리케이션 코드가 있어야 합니다. 로컬 리포지토리를 설정하고 팀 프로젝트의 원격 리포지토리에 연결합니다. 다음 지침을 따릅니다.
 
-- [Git 및 Visual Studio와 코드 공유](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) 또는
+- [Git 및 Visual Studio와 코드 공유](/azure/devops/git/share-your-code-in-git-vs) 또는
 
-- [TFVC 및 Visual Studio와 코드 공유](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
+- [TFVC 및 Visual Studio와 코드 공유](/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 애플리케이션을 배포할 Azure App Service를 만듭니다. Azure Portal에서 App Services 블레이드로 이동하여 웹앱을 만듭니다. +추가를 클릭하고, 웹앱 템플릿을 선택하고, 만들기를 클릭하고, 이름과 기타 세부 정보를 입력합니다. 웹앱은 {name}.azurewebsites.net에서 액세스할 수 있습니다.
 
@@ -58,13 +58,13 @@ CI/CD를 사용하여 ASP.NET Core 애플리케이션 개발을 시작하려면 
 
 CI 빌드 프로세스는 프로젝트의 소스 제어 리포지토리에 새 코드가 커밋될 때마다 자동화된 빌드를 수행합니다. 이렇게 하면 코드에서 빌드하고(그리고 이상적으로 자동화된 테스트를 전달하고) 잠재적으로 배포할 수 있습니다. 이 CI 빌드는 웹 배포 패키지 아티팩트를 생성하고 CD 프로세스에서 사용할 수 있도록 게시합니다.
 
-[CI 빌드 프로세스 정의](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
+[CI 빌드 프로세스 정의](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 팀원 중 누군가가 새 코드를 커밋할 때마다 시스템이 빌드를 대기열에 추가하도록 연속 통합을 사용해야 합니다. 빌드가 아티팩트 중 하나로 웹 배포 패키지를 생성하는지 빌드를 테스트 및 확인합니다.
 
 빌드에 성공하면 CD 프로세스에서 CI 빌드 결과를 Azure 웹앱에 배포합니다. 이렇게 구성하려면 Azure App Service에 배포하는 *릴리스*를 만들고 구성합니다.
 
-[Azure 웹앱 배포](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
+[Azure 웹앱 배포](/azure/devops/pipelines/targets/webapp)
 
 CI/CD 파이프라인이 구성되면 간단하게 웹앱을 업데이트하고 소스 제어에 커밋하여 배포할 수 있습니다.
 
@@ -82,7 +82,7 @@ Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플
 
 #### <a name="step-2-application-code-repository"></a>2단계. 애플리케이션 코드 리포지토리
 
-코드를 팀과 공유할 준비가 완료되면 로컬 소스 리포지토리의 변경 내용을 팀의 공유 소스 리포지토리에 푸시해야 합니다. 사용자 지정 분기에서 작업한 경우 이 단계에서 일반적으로 코드를 공유 분기에 병합(아마도 [끌어오기 요청](https://docs.microsoft.com/azure/devops/git/pull-requests)을 사용하여)하는 작업이 포함됩니다.
+코드를 팀과 공유할 준비가 완료되면 로컬 소스 리포지토리의 변경 내용을 팀의 공유 소스 리포지토리에 푸시해야 합니다. 사용자 지정 분기에서 작업한 경우 이 단계에서 일반적으로 코드를 공유 분기에 병합(아마도 [끌어오기 요청](/azure/devops/git/pull-requests)을 사용하여)하는 작업이 포함됩니다.
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>3단계. 빌드 서버: 지속적인 통합 빌드, 테스트, 패키지
 

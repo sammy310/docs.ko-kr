@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션을 현대화합니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089632"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172172"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트
 
@@ -69,7 +69,7 @@ Azure Migrate를 통해 비즈니스에 미치는 영향을 최소화하는 가�
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Azure Site Recovery를 사용하여 기존 VM을 Azure VM으로 마이그레이션
 
-엔드투엔드 [Azure Migrate](https://aka.ms/azuremigrate)에 포함된 [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)는 사용자의 웹 애플리케이션을 Azure의 VM으로 간편히 마이그레이션하는 데 사용 가능한 도구입니다. 사용자는 Site Recovery를 사용하여 온-프레미스 VM과 물리 서버를 Azure로 복제하거나 보조 온-프레미스 위치로 복제할 수 있습니다. 또는 지원 대상 Azure VM이나 온-프레미스 *Hyper-V* VM, *VMware* VM, 또는 Windows나 Linux의 물리 서버에서 실행 중인 워크로드를 복제할 수도 있습니다. Azure에 복제하면 보조 데이터 센터를 유지하는 비용과 복잡성을 제거할 수 있습니다.
+엔드투엔드 [Azure Migrate](https://aka.ms/azuremigrate)에 포함된 [Azure Site Recovery](/azure/site-recovery/site-recovery-overview)는 사용자의 웹 애플리케이션을 Azure의 VM으로 간편히 마이그레이션하는 데 사용 가능한 도구입니다. 사용자는 Site Recovery를 사용하여 온-프레미스 VM과 물리 서버를 Azure로 복제하거나 보조 온-프레미스 위치로 복제할 수 있습니다. 또는 지원 대상 Azure VM이나 온-프레미스 *Hyper-V* VM, *VMware* VM, 또는 Windows나 Linux의 물리 서버에서 실행 중인 워크로드를 복제할 수도 있습니다. Azure에 복제하면 보조 데이터 센터를 유지하는 비용과 복잡성을 제거할 수 있습니다.
 
 Site Recovery는 일부분은 온-프레미스로, 일부는 Azure로 구성된 하이브리드 환경에 특히 적합합니다. Site Recovery는 사이트의 작동이 중단된 경우에도 VM 및 온-프레미스 물리 서버에서 실행 중인 앱을 계속 사용할 수 있도록 하여 비즈니스 연속성을 보장하는 데 도움이 됩니다. 그리고 VM 및 물리 서버에서 실행 중인 워크로드를 복제하여 기본 사이트를 사용할 수 없게 될 경우 보조 위치에서 계속 사용할 수 있도록 합니다. 사이트가 복구되어 다시 실행되면 워크로드를 기본 사이트로 복구합니다.
 

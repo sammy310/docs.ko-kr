@@ -3,14 +3,15 @@ title: 생성 작업(C#)
 description: 생성은 값의 새 시퀀스를 만듭니다. C#에서 생성을 수행하는 LINQ의 표준 쿼리 연산자 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 90b7913d60ced82c854f514d3644425f6ddd2571
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 07cb7dfc1cb5f06cc6e7800ec1e5e2dac015045b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165275"
 ---
 # <a name="generation-operations-c"></a>생성 작업(C#)
+
 생성은 값의 새 시퀀스를 만드는 작업을 나타냅니다.  
   
  생성을 수행하는 표준 쿼리 연산자 메서드는 다음 섹션에 나열됩니다.  

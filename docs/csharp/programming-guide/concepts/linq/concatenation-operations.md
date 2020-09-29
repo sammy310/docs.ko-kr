@@ -3,14 +3,15 @@ title: 연결 작업(C#)
 description: C#의 LINQ에서 연결을 수행하는 표준 쿼리 연산자 메서드와 연결에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: aadfd2d9cf8b70130c0f67aa299e42982f144c38
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 2760ba0152ac93ba68a1e28f2e77fb88a7e35946
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105520"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159204"
 ---
 # <a name="concatenation-operations-c"></a>연결 작업(C#)
+
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  
   
  다음 그림은 두 개의 문자 시퀀스에 대한 연결 작업을 보여 줍니다.  

@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515980"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169130"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -241,7 +241,7 @@ ASP.NET Core UI 프로젝트는 모든 UI 수준의 문제를 담당하지만 �
 
 ### <a name="feature-organization"></a>기능 구성
 
-기본적으로 ASP.NET Core 애플리케이션은 Controllers 및 Views를 포함하고, ViewModels를 자주 포함하도록 자체의 폴더 구조를 구성합니다. 이러한 서버 쪽 구조를 지원하는 클라이언트 쪽 코드는 일반적으로 wwwroot 폴더에 별도로 저장됩니다. 그러나 작업 중이거나 지정된 기능이 이러한 폴더 간에 자주 이동해야 하므로 큰 애플리케이션에서 이 기능으로 인해 문제가 발생할 수 있습니다. 이 경우 각 폴더의 파일 및 하위 폴더의 수가 증가함에 따라 점점 더 어려워지고, 이로 인해 솔루션 탐색기를 통해 많은 양의 스크롤이 수행됩니다. 이 문제를 해결하는 한 가지 방법은 애플리케이션 코드를 파일 형식 대신 _기능_으로 구성하는 것입니다. 이 구성 스타일은 일반적으로 기능 폴더 또는 [기능 조각](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)이라고 합니다(또는: [수직 분할 영역](https://deviq.com/vertical-slices/)을 참조하세요).
+기본적으로 ASP.NET Core 애플리케이션은 Controllers 및 Views를 포함하고, ViewModels를 자주 포함하도록 자체의 폴더 구조를 구성합니다. 이러한 서버 쪽 구조를 지원하는 클라이언트 쪽 코드는 일반적으로 wwwroot 폴더에 별도로 저장됩니다. 그러나 작업 중이거나 지정된 기능이 이러한 폴더 간에 자주 이동해야 하므로 큰 애플리케이션에서 이 기능으로 인해 문제가 발생할 수 있습니다. 이 경우 각 폴더의 파일 및 하위 폴더의 수가 증가함에 따라 점점 더 어려워지고, 이로 인해 솔루션 탐색기를 통해 많은 양의 스크롤이 수행됩니다. 이 문제를 해결하는 한 가지 방법은 애플리케이션 코드를 파일 형식 대신 _기능_으로 구성하는 것입니다. 이 구성 스타일은 일반적으로 기능 폴더 또는 [기능 조각](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)이라고 합니다(또는: [수직 분할 영역](https://deviq.com/vertical-slices/)을 참조하세요).
 
 ASP.NET Core MVC는 이러한 용도를 위해 Areas를 지원합니다. Areas를 사용하면 각 Area 폴더에 별도의 Controllers 및 Views 폴더 집합(관련된 모델도 포함)을 만들 수 있습니다. 그림 7-1에서는 Areas를 사용하는 폴더 구조의 예를 보여 줍니다.
 
@@ -301,7 +301,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-또한 ASP.NET Core MVC는 규칙을 사용하여 뷰를 찾습니다. 위의 FeatureConvention에서 제공한 기능 이름을 사용하여 뷰가 사용자의 기능 폴더에 배치되도록 사용자 지정 규칙을 사용하여 이를 재정의할 수 있습니다. [ASP.NET Core MVC용 기능 분할 영역](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) MSDN Magazine 문서에서 이 방법에 대해 자세히 알아보고 작업용 샘플을 다운로드할 수 있습니다.
+또한 ASP.NET Core MVC는 규칙을 사용하여 뷰를 찾습니다. 위의 FeatureConvention에서 제공한 기능 이름을 사용하여 뷰가 사용자의 기능 폴더에 배치되도록 사용자 지정 규칙을 사용하여 이를 재정의할 수 있습니다. [ASP.NET Core MVC용 기능 분할 영역](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) MSDN Magazine 문서에서 이 방법에 대해 자세히 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
 ### <a name="apis-and-no-locblazor-applications"></a>API 및 Blazor 애플리케이션
 
@@ -313,7 +313,7 @@ eShopOnWeb에 대한 Blazor WebAssembly 관리 인터페이스를 추가하려�
 
 `PublicApi`와 `BlazorAdmin` 둘 다에 필요한 형식을 공유하는 데 사용할 수 있는 공통 `ApplicationCore` 프로젝트가 이미 있는 경우 별도 `BlazorShared` 프로젝트를 추가해야 하는 이유가 무엇일지 궁금할 수 있습니다. 해당 프로젝트에는 애플리케이션의 비즈니스 논리가 모두 포함되므로 필요한 것보다 훨씬 더 크고 서버에서 안전하게 유지해야 할 가능성도 훨씬 더 크기 때문입니다. `BlazorAdmin`에서 참조하는 모든 라이브러리는 Blazor 애플리케이션을 로드할 때 사용자 브라우저로 다운로드됩니다.
 
-[BFF(프런트 엔드에 대한 백 엔드) 패턴](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)을 사용 중인지 여부에 따라 Blazor WebAssembly 앱에서 사용하는 API가 해당 형식을 Blazor와 100% 공유하지 않을 수 있습니다. 특히 다양한 클라이언트에서 사용하려는 퍼블릭 API는 클라이언트 특정 공유 프로젝트에서 공유하는 것보다는 자체 요청 및 결과 형식을 정의할 수 있습니다. eShopOnWeb 샘플에서는 `PublicApi` 프로젝트가 실제로 퍼블릭 API를 호스트하는 것으로 가정하므로 일부 요청 및 응답 형식이 `BlazorShared` 프로젝트에서 제공되지 않습니다.
+[BFF(프런트 엔드에 대한 백 엔드) 패턴](/azure/architecture/patterns/backends-for-frontends)을 사용 중인지 여부에 따라 Blazor WebAssembly 앱에서 사용하는 API가 해당 형식을 Blazor와 100% 공유하지 않을 수 있습니다. 특히 다양한 클라이언트에서 사용하려는 퍼블릭 API는 클라이언트 특정 공유 프로젝트에서 공유하는 것보다는 자체 요청 및 결과 형식을 정의할 수 있습니다. eShopOnWeb 샘플에서는 `PublicApi` 프로젝트가 실제로 퍼블릭 API를 호스트하는 것으로 가정하므로 일부 요청 및 응답 형식이 `BlazorShared` 프로젝트에서 제공되지 않습니다.
 
 ### <a name="cross-cutting-concerns"></a>교차 편집 문제
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-[실제 ASP.NET Core MVC 필터](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) MSDN Magazine 문서에서 필터 구현에 대한 자세한 내용을 알아보고 작업용 샘플을 다운로드할 수 있습니다.
+[실제 ASP.NET Core MVC 필터](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) MSDN Magazine 문서에서 필터 구현에 대한 자세한 내용을 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
 > ### <a name="references--structuring-applications"></a>참조 - 애플리케이션 구성
 >

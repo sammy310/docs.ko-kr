@@ -4,12 +4,12 @@ description: 상태 관리 및 영구 저장소에서 크기 조정, 로깅, 추
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: fbbb0c38cea58902124743fb99f9ab31b3d09be9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135674"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171652"
 ---
 # <a name="serverless-architecture-considerations"></a>서버리스 아키텍처 고려 사항
 
@@ -23,7 +23,7 @@ ms.locfileid: "82135674"
 
 - Redis와 같은 임시 데이터 저장소 또는 분산 캐시를 사용
 - SQL 또는 CosmosDB와 같은 데이터베이스에 상태를 저장
-- [지속성 함수](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)와 같은 워크플로 엔진을 통해 상태를 처리합니다.
+- [지속성 함수](/azure/azure-functions/durable/durable-functions-overview)와 같은 워크플로 엔진을 통해 상태를 처리합니다.
 
 중요한 것은 서버리스로 구현하려는 프로세스에서 상태 관리의 필요성이 있는지 알고 있어야 한다는 점입니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "82135674"
 
 ## <a name="monitoring-tracing-and-logging"></a>모니터링, 추적 및 로깅
 
-DevOps에서 자주 간과되는 측면 하나는 배포된 애플리케이션의 모니터링입니다. 서버리스 함수를 모니터링하기 위한 전략을 수립하는 것이 중요합니다. 가장 어려운 문제는 종종 상관 관계, 즉 사용자가 동일한 상호 작용의 일부로 여러 함수를 호출하는 경우를 인식하는 것입니다. 대부분의 서버리스 플랫폼에서는 타사 도구로 가져올 수 있는 콘솔 로깅을 허용합니다. 또한 원격 분석 컬렉션을 자동화하고, 상관 관계 ID를 생성 및 추적하고, 특정 작업을 모니터링하여 자세한 정보를 제공하는 옵션도 있습니다. Azure는 모니터링 및 분석을 위한 고급 [Application Insights 플랫폼](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)을 제공합니다.
+DevOps에서 자주 간과되는 측면 하나는 배포된 애플리케이션의 모니터링입니다. 서버리스 함수를 모니터링하기 위한 전략을 수립하는 것이 중요합니다. 가장 어려운 문제는 종종 상관 관계, 즉 사용자가 동일한 상호 작용의 일부로 여러 함수를 호출하는 경우를 인식하는 것입니다. 대부분의 서버리스 플랫폼에서는 타사 도구로 가져올 수 있는 콘솔 로깅을 허용합니다. 또한 원격 분석 컬렉션을 자동화하고, 상관 관계 ID를 생성 및 추적하고, 특정 작업을 모니터링하여 자세한 정보를 제공하는 옵션도 있습니다. Azure는 모니터링 및 분석을 위한 고급 [Application Insights 플랫폼](/azure/azure-functions/functions-monitoring)을 제공합니다.
 
 ## <a name="inter-service-dependencies"></a>서비스 간 종속성
 

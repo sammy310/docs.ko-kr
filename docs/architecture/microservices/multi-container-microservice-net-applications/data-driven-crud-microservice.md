@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 08/14/2020
-ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679151"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172367"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -27,7 +27,7 @@ ms.locfileid: "90679151"
 
 **그림 6-5** 단순 데이터 기반 CRUD 마이크로 서비스 설계
 
-이전 다이어그램에서는 카탈로그 데이터베이스(동일한 Docker 호스트에 위치하거나 위치하지 않을 수 있음)를 포함하는 논리 카탈로그 마이크로 서비스를 보여줍니다. 프로덕션이 아닌 개발의 경우에는 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다. 이런 종류의 서비스를 개발할 때는 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 및 데이터 액세스 API나 [Entity Framework Core](https://docs.microsoft.com/ef/core/index) 같은 ORM만 있으면 됩니다. [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)을 통해 [Swagger](https://swagger.io/) 메타데이터를 자동으로 생성하여 다음 섹션에서 설명한 대로 서비스가 제공하는 항목의 설명을 제공할 수 있습니다.
+이전 다이어그램에서는 카탈로그 데이터베이스(동일한 Docker 호스트에 위치하거나 위치하지 않을 수 있음)를 포함하는 논리 카탈로그 마이크로 서비스를 보여줍니다. 프로덕션이 아닌 개발의 경우에는 동일한 Docker 호스트에 데이터베이스를 포함하는 것이 좋습니다. 이런 종류의 서비스를 개발할 때는 [ASP.NET Core](/aspnet/core/) 및 데이터 액세스 API나 [Entity Framework Core](/ef/core/index) 같은 ORM만 있으면 됩니다. [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)을 통해 [Swagger](https://swagger.io/) 메타데이터를 자동으로 생성하여 다음 섹션에서 설명한 대로 서비스가 제공하는 항목의 설명을 제공할 수 있습니다.
 
 Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실행하면 클라우드나 온-프레미스에 데이터베이스를 프로비전하지 않고도 모든 종속성을 실행할 수 있기 때문에 개발 환경에 매우 유용합니다. 통합 테스트를 실행할 때는 매우 편리합니다. 그러나 프로덕션 환경의 경우 컨테이너에서 데이터베이스 서버를 실행하는 것은 권장되지 않습니다. 이 방법에서는 일반적으로 가용성이 높지 않기 때문입니다. Azure의 프로덕션 환경에서는 높은 가용성과 확장성을 제공할 수 있는 Azure SQL DB 또는 기타 데이터베이스 기술을 사용하는 것이 좋습니다. 예를 들어 NoSQL 방법의 경우 CosmosDB를 선택할 수 있습니다.
 
@@ -301,7 +301,7 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-이 버전 관리 메커니즘은 간단하며 적합한 엔드포인트에 요청을 전달하는 서버에 따라 달라집니다. 그러나 더 복잡한 버전 관리와, REST를 사용할 때 가장 좋은 방법은 하이퍼미디어를 사용하고 [HATEOAS(Hypertext as the Engine of Application State)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)를 구현하는 것입니다.
+이 버전 관리 메커니즘은 간단하며 적합한 엔드포인트에 요청을 전달하는 서버에 따라 달라집니다. 그러나 더 복잡한 버전 관리와, REST를 사용할 때 가장 좋은 방법은 하이퍼미디어를 사용하고 [HATEOAS(Hypertext as the Engine of Application State)](/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)를 구현하는 것입니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
@@ -336,7 +336,7 @@ API에 대해 Swagger 메타데이터를 생성하는 주된 이유는 다음과
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/)의 [PowerApps 모바일 앱](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/)에서 자동으로 API를 사용할 수 있으며 프로그래밍 기술이 필요하지 않습니다.
 
-- [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). 자동으로 API를 사용하고 [Azure App Service Logic App](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)에 통합할 수 있으며 프로그래밍 기술이 필요하지 않습니다.
+- [Azure App Service Logic Apps](/azure/app-service-logic/app-service-logic-what-are-logic-apps). 자동으로 API를 사용하고 [Azure App Service Logic App](/azure/app-service-logic/app-service-logic-custom-hosted-api)에 통합할 수 있으며 프로그래밍 기술이 필요하지 않습니다.
 
 **API 문서를 자동으로 생성하는 기능**. 복잡한 마이크로 서비스 기반 애플리케이션처럼 대규모 RESTful API를 만들 때는 요청과 응답 페이로드에서 사용되는 다양한 데이터 모델에서 많은 엔드포인트를 처리해야 합니다. Swagger를 통해 얻을 수 있는 적절한 문서와 견고한 API 탐색기는 API 및 개발자의 채택 성공을 위한 핵심입니다.
 

@@ -3,14 +3,15 @@ title: 두 목록 간의 차집합을 구하는 방법(LINQ)(C#)
 description: C#의 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 하나의 목록에 있지만 다른 목록에는 없는 줄만 출력하는 방법을 보여줍니다.
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 01aba16b3489e4bf21a76bc715b6d4d2c9d250dd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105080"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159061"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>두 목록 간의 차집합을 구하는 방법(LINQ)(C#)
+
 이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
@@ -56,6 +57,7 @@ class CompareLists
  <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, <xref:System.Linq.Enumerable.Concat%2A> 등 C#에서 일부 유형의 쿼리 작업은 메서드 기반 구문으로만 표현할 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참조

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca86388b9f5dfe5e63ead1b5f84486ba2181af57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539245"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169078"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -149,7 +149,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>ASP.NET Core 앱 통합 테스트
 
-ASP.NET Core 앱의 통합 테스트는 대부분 인프라 프로젝트에 정의된 서비스 및 다른 구현 형식을 테스트해야 합니다. 예를 들어 인프라 프로젝트에 상주하는 데이터 액세스 클래스에서 [EF Core가 예상되는 데이터를 성공적으로 업데이트하고 검색했는지 테스트](https://docs.microsoft.com/ef/core/miscellaneous/testing/)할 수 있습니다. ASP.NET Core MVC 프로젝트가 올바르게 작동하고 있는지를 테스트하는 가장 좋은 방법은 테스트 호스트에서 실행 중인 앱에서 실행되는 기능 테스트를 사용하는 것입니다.
+ASP.NET Core 앱의 통합 테스트는 대부분 인프라 프로젝트에 정의된 서비스 및 다른 구현 형식을 테스트해야 합니다. 예를 들어 인프라 프로젝트에 상주하는 데이터 액세스 클래스에서 [EF Core가 예상되는 데이터를 성공적으로 업데이트하고 검색했는지 테스트](/ef/core/miscellaneous/testing/)할 수 있습니다. ASP.NET Core MVC 프로젝트가 올바르게 작동하고 있는지를 테스트하는 가장 좋은 방법은 테스트 호스트에서 실행 중인 앱에서 실행되는 기능 테스트를 사용하는 것입니다.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>ASP.NET Core 앱 기능 테스트
 

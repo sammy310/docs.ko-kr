@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 97d7a786c83a8be21f7fd38873061dba0f9278ae
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2788c2589bee149676c5cb2b4212ec7a060a47af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137957"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168519"
 ---
 # <a name="pragma-c-reference"></a>#pragma(C# 참조)
+
 `#pragma`는 이 코드가 표시되는 파일의 컴파일에 대한 특수 명령을 컴파일러에 제공합니다. 컴파일러에서 명령을 지원해야 합니다. 즉, `#pragma`를 사용하여 사용자 지정 전처리 명령을 만들 수 없습니다. Microsoft C# 컴파일러는 다음 두 가지 `#pragma` 명령을 지원합니다.  
   
  [#pragma warning](./preprocessor-pragma-warning.md)  
@@ -28,6 +29,7 @@ ms.locfileid: "89137957"
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pragma-name`  
  인식된 pragma의 이름입니다.  
   

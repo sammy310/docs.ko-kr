@@ -2,12 +2,12 @@
 title: Docker 애플리케이션의 상태 및 데이터
 description: Docker 애플리케이션의 상태 및 데이터 관리. 마이크로 서비스 인스턴스는 소모용(그러나 데이터는 아님)이며 마이크로 서비스로 이를 처리하는 방법입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10271d41dcd0574cd212663c2ee22ae06c2c1269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771436"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152626"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 
@@ -27,7 +27,7 @@ Docker 호스트에서 [Docker 볼륨](https://docs.docker.com/engine/admin/volu
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)는 지역 배포 가능한 스토리지를 제공하여 컨테이너에 대한 장기 지속성 솔루션을 제공합니다.
 
-- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)와 같은 원격 관계형 데이터베이스 또는 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)와 같은 NoSQL 데이터베이스 또는 [Redis](https://redis.io/)와 같은 캐시 서비스입니다.
+- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)와 같은 원격 관계형 데이터베이스 또는 [Azure Cosmos DB](/azure/cosmos-db/introduction)와 같은 NoSQL 데이터베이스 또는 [Redis](https://redis.io/)와 같은 캐시 서비스입니다.
 
 Docker 컨테이너에서:
 

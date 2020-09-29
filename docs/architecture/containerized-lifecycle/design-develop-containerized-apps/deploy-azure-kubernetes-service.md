@@ -2,16 +2,16 @@
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Azure Kubernetes Service를 사용하여 앱을 배포하는 방법을 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: b4deb9906e0fece7fb611b6988df576e8b07fe46
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916106"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163598"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service)에 배포
 
-Azure CLI(Azure 명령줄 인터페이스)가 설치된 기본 클라이언트 운영 체제(Windows, macOS 또는 Linux)를 사용하여 AKS와 상호 작용할 수 있습니다. 자세한 내용은 [Azure CLI 설명서](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest) 및 사용 가능한 환경에 대한 [설치 가이드](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)를 참조하세요.
+Azure CLI(Azure 명령줄 인터페이스)가 설치된 기본 클라이언트 운영 체제(Windows, macOS 또는 Linux)를 사용하여 AKS와 상호 작용할 수 있습니다. 자세한 내용은 [Azure CLI 설명서](/cli/azure/?view=azure-cli-latest) 및 사용 가능한 환경에 대한 [설치 가이드](/cli/azure/install-azure-cli?view=azure-cli-latest)를 참조하세요.
 
 ## <a name="create-the-aks-environment-in-azure"></a>Azure에서 AKS 환경 만들기
 

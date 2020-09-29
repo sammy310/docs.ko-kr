@@ -2,12 +2,12 @@
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
 ms.date: 08/21/2020
-ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1cb7ce04b3ab2f6da25f398e016baf60b863fb6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811121"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169208"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -126,7 +126,7 @@ ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>배경 지식 및 EF Core 1.1을 사용한 기존의 접근 방식
 
-배경지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](https://docs.microsoft.com/ef/core/modeling/shadow-properties )으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
+배경지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](/ef/core/modeling/shadow-properties)으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
 
 eShopOnContainers 초기 버전(.NET Core 1.1)에서, EF Core 인프라에 필요한 숨겨진 ID는 DbContext 수준에서 인프라 프로젝트에 흐름 API를 사용하여 다음과 같은 방식으로 구현되었습니다. 따라서 ID가 보기의 도메인 모델 관점에서 숨겨지더라도 인프라에 계속 존재합니다.
 

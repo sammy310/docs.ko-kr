@@ -12,14 +12,15 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173271"
 ---
 # <a name="-define-c-compiler-options"></a>-define(C# 컴파일러 옵션)
+
 **-define** 옵션은 프로그램의 모든 소스 코드 파일에서 `name`을 기호로 정의합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,17 +30,19 @@ ms.locfileid: "89125880"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `name`, `name2`  
  정의하려는 하나 이상의 기호 이름입니다.  
   
 ## <a name="remarks"></a>설명  
+
  **-define** 옵션은 컴파일러 옵션이 프로젝트의 모든 파일에 적용된다는 점을 제외하고는 [#define](../preprocessor-directives/preprocessor-define.md) 전처리기 지시문을 사용하는 것과 효과가 동일합니다. 소스 파일의 [#undef](../preprocessor-directives/preprocessor-undef.md) 지시문이 정의를 제거할 때까지 기호는 소스 파일에 정의된 상태로 유지됩니다. -define 옵션을 사용하는 경우 한 파일의 `#undef` 지시문이 프로젝트의 다른 소스 코드 파일에는 영향을 주지 않습니다.  
   
  이 옵션으로 만든 기호를 [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), [#endif](../preprocessor-directives/preprocessor-endif.md)와 함께 사용하면 소스 파일을 조건부 컴파일할 수 있습니다.  
   
  **-d**는 **-define**의 약식 형태입니다.  
   
- 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예:  
+ 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```console  
 -define:DEBUG;TUESDAY  

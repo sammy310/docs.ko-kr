@@ -3,14 +3,15 @@ title: 집계 작업(C#)
 description: 집계 작업을 수행하는 방법에 대해 알아봅니다. 집계 작업에서는 값의 컬렉션에서 하나의 값을 계산합니다.
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 3d5a52249520478571db2fcfd7aa5d10fb013565
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: c302667ec7f1d4ed5acb98439ea9f8f80250077d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104299"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159386"
 ---
 # <a name="aggregation-operations-c"></a>집계 작업(C#)
+
 집계 작업에서는 값의 컬렉션에서 하나의 값을 계산합니다. 예를 들어 1달 동안의 일일 온도 값에서 평균 일일 온도를 계산하는 것이 집계 작업입니다.  
   
  다음 그림은 숫자 시퀀스에 대한 두 가지 집계 작업의 결과를 보여 줍니다. 첫 번째 작업은 숫자의 합계를 계산합니다. 두 번째 작업은 시퀀스의 최대 값을 반환합니다.  

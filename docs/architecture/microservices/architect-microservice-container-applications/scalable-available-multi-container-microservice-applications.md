@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 8a67235109bed806caa7d9caa2bc26fd4fe9daca
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988910"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172504"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -68,7 +68,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service) 시작
 
-AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하여 AKS 클러스터를 배포합니다. Azure에서 Kubernetes 클러스터를 배포하는 방법에 대한 자세한 내용은 [Azure Kubernetes Service(AKS) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
+AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하여 AKS 클러스터를 배포합니다. Azure에서 Kubernetes 클러스터를 배포하는 방법에 대한 자세한 내용은 [Azure Kubernetes Service(AKS) 클러스터 배포](/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
 
 기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 
@@ -80,7 +80,7 @@ Kubernetes에 대한 기본 프로덕션 배포 옵션은 다음 섹션에서 �
 
 Helm 차트를 사용하면 가장 복잡한 Kubernetes 애플리케이션도 정의, 버전 지정, 설치, 공유, 업그레이드 또는 롤백할 수 있습니다.
 
-더 나아가, [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)와 같은 Azure의 추가 Kubernetes 환경도 Helm 차트를 기반으로 하기 때문에 Helm 사용이 권장됩니다.
+더 나아가, [Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces)와 같은 Azure의 추가 Kubernetes 환경도 Helm 차트를 기반으로 하기 때문에 Helm 사용이 권장됩니다.
 
 Microsoft, Google, Bitnami 및 Helm 기여자 커뮤니티와 협력하여 [CNCF(Cloud Native Computing Foundation)](https://www.cncf.io/)에서 Helm을 유지 관리합니다.
 
@@ -88,7 +88,7 @@ Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Kubernetes 애플케이션 수명 주기에 Azure Dev Spaces 사용
 
-[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)는 팀을 위해 신속하고 반복적인 Kubernetes 개발 환경을 제공합니다. 최소한의 개발 머신 설치만으로 AKS(Azure Kubernetes Service)에서 직접 컨테이너를 반복적으로 실행하고 디버그할 수 있습니다. Visual Studio, Visual Studio Code 또는 명령줄 같은 친숙한 도구를 사용하여 Windows, Mac 또는 Linux에서 개발합니다.
+[Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces)는 팀을 위해 신속하고 반복적인 Kubernetes 개발 환경을 제공합니다. 최소한의 개발 머신 설치만으로 AKS(Azure Kubernetes Service)에서 직접 컨테이너를 반복적으로 실행하고 디버그할 수 있습니다. Visual Studio, Visual Studio Code 또는 명령줄 같은 친숙한 도구를 사용하여 Windows, Mac 또는 Linux에서 개발합니다.
 
 언급한 바와 같이, Azure Dev Spaces는 컨테이너 기반 애플리케이션을 배포할 때 Helm 차트를 사용합니다.
 
@@ -108,7 +108,7 @@ Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리
 
 구체적인 예제를 살펴보려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)를 참조하세요.
 
-자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)에 대한 문서를 확인하세요.
+자세한 내용은 [Azure Dev Spaces로 팀 개발](/azure/dev-spaces/team-development-netcore)에 대한 문서를 확인하세요.
 
 ## <a name="additional-resources"></a>추가 자료
 

@@ -2,12 +2,12 @@
 title: 마이크로 서비스 아키텍처의 통신
 description: 동기 및 비동기 방식의 의미를 이해하고 마이크로 서비스 간의 다양한 통신 방법을 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401522"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169260"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -35,7 +35,7 @@ ms.locfileid: "79401522"
 
 - 단일 수신기. 각 요청은 정확히 하나의 수신기 또는 서비스에서 처리되어야 합니다. 이 통신의 예는 [명령 패턴](https://en.wikipedia.org/wiki/Command_pattern)입니다.
 
-- 여러 수신기. 각 요청을 처리하는 수신기는 없거나 여러 개일 수 있습니다. 이 유형의 통신은 비동기여야 합니다. [이벤트 기반 아키텍처](https://microservices.io/patterns/data/event-driven-architecture.html)와 같은 패턴에서 사용되는 [게시/구독](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) 메커니즘이 그 예입니다. 이는 데이터 업데이트를 이벤트를 통해 여러 마이크로 서비스 사이에 전파하는 경우 이벤트 버스 인터페이스 또는 메시지 브로커를 기반으로 합니다. 보통 Service Bus 또는 [항목과 구독](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)을 사용하여 [Azure Service Bus](https://azure.microsoft.com/services/service-bus/)와 같은 비슷한 아티팩트를 통해 구현됩니다.
+- 여러 수신기. 각 요청을 처리하는 수신기는 없거나 여러 개일 수 있습니다. 이 유형의 통신은 비동기여야 합니다. [이벤트 기반 아키텍처](https://microservices.io/patterns/data/event-driven-architecture.html)와 같은 패턴에서 사용되는 [게시/구독](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) 메커니즘이 그 예입니다. 이는 데이터 업데이트를 이벤트를 통해 여러 마이크로 서비스 사이에 전파하는 경우 이벤트 버스 인터페이스 또는 메시지 브로커를 기반으로 합니다. 보통 Service Bus 또는 [항목과 구독](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)을 사용하여 [Azure Service Bus](https://azure.microsoft.com/services/service-bus/)와 같은 비슷한 아티팩트를 통해 구현됩니다.
 
 마이크로 서비스 기반 애플리케이션은 이러한 통신 스타일의 조합을 종종 사용합니다. 가장 일반적인 유형은 일반 Web API HTTP 서비스를 호출할 때 HTTP/HTTPS와 같은 동기 프로토콜을 사용하는 단일 수신기 통신입니다. 또한 마이크로 서비스는 마이크로 서비스 간 비동기 통신을 위해 일반적으로 메시징 프로토콜을 사용합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "79401522"
 
 **그림 4-16**. HTTP 요청/응답 통신 사용(동기 또는 비동기)
 
-클라이언트가 요청/응답 통신을 사용하는 경우 응답이 짧은 시간에(일반적으로 1초 미만이거나 최대 수 초) 도착한다고 가정합니다. 지연된 응답의 경우 다음 섹션에서 설명하는 다른 접근 방식인 [메시징 패턴](https://docs.microsoft.com/azure/architecture/patterns/category/messaging) 및 [메시징 기술](https://en.wikipedia.org/wiki/Message-oriented_middleware)을 기반으로 한 비동기 통신을 구현해야 합니다.
+클라이언트가 요청/응답 통신을 사용하는 경우 응답이 짧은 시간에(일반적으로 1초 미만이거나 최대 수 초) 도착한다고 가정합니다. 지연된 응답의 경우 다음 섹션에서 설명하는 다른 접근 방식인 [메시징 패턴](/azure/architecture/patterns/category/messaging) 및 [메시징 기술](https://en.wikipedia.org/wiki/Message-oriented_middleware)을 기반으로 한 비동기 통신을 구현해야 합니다.
 
 요청/응답 통신을 위한 인기 있는 아키텍처 스타일은 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)입니다. 이 방법은 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 프로토콜을 기반으로 하며 밀접하게 결합되어 있으며 GET, POST 및 PUT과 같은 HTTP 동사를 수용합니다. REST는 서비스를 만들 때 가장 흔히 사용되는 아키텍처 통신 방법입니다. ASP.NET Core Web API 서비스를 개발하는 경우 REST 서비스를 구현할 수 있습니다.
 

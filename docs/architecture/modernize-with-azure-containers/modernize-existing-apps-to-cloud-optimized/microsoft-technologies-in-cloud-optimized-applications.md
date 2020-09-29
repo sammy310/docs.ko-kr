@@ -2,12 +2,12 @@
 title: 클라우드 최적화 애플리케이션의 Microsoft 기술
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드 최적화 애플리케이션의 Microsoft 기술
 ms.date: 04/28/2018
-ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: b257497835638dd65c894998e95bd7e9d784b7bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546512"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172016"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드 최적화 애플리케이션의 Microsoft 기술
 
@@ -15,7 +15,7 @@ ms.locfileid: "79546512"
 
 - **클라우드 인프라**: 컴퓨팅 플랫폼, 운영 체제, 네트워크 및 저장소가 제공되는 인프라입니다. Microsoft Azure는 이 수준으로 위치가 지정됩니다.
 
-- **런타임**: 이 계층에서는 애플리케이션 실행을 위한 환경이 제공됩니다. 컨테이너를 사용하는 경우, 이 계층은 일반적으로 Linux 호스트나 Windows 호스트에서 실행되는 [Docker 엔진](https://docs.docker.com/engine/)을 기반으로 합니다. ([Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/)는 Windows Server 2016부터 지원됩니다. Windows 컨테이너는 Windows에서 실행되는 기존 .NET Framework 애플리케이션에 가장 적합한 선택지입니다.
+- **런타임**: 이 계층에서는 애플리케이션 실행을 위한 환경이 제공됩니다. 컨테이너를 사용하는 경우, 이 계층은 일반적으로 Linux 호스트나 Windows 호스트에서 실행되는 [Docker 엔진](https://docs.docker.com/engine/)을 기반으로 합니다. ([Windows 컨테이너](/virtualization/windowscontainers/about/)는 Windows Server 2016부터 지원됩니다. Windows 컨테이너는 Windows에서 실행되는 기존 .NET Framework 애플리케이션에 가장 적합한 선택지입니다.
 
 - **관리형 클라우드**: 관리형 클라우드 옵션을 선택하면 기본 인프라, VM, OS 패치, 네트워킹 구성을 관리 및 지원하는 데 따르는 비용과 복잡성의 문제를 피할 수 있습니다. IaaS를 사용한 마이그레이션을 선택하면 그 모든 작업에 대한 책임은 물론 관련 비용 부담까지 지게 됩니다. 관리형 클라우드 옵션에서는 사용자가 개발하는 애플리케이션과 서비스만 관리하면 됩니다. 그 외의 모든 사항은 일반적으로 클라우드 서비스 공급자가 관리합니다. Azure에서 관리되는 클라우드 서비스의 예로는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/), 그리고 [VM 확장 집합](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/), [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/) 같은 관리형 컴퓨팅 서비스가 포함됩니다.
 

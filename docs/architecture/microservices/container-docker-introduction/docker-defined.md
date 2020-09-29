@@ -2,12 +2,12 @@
 title: Docker란?
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker란?
 ms.date: 08/31/2018
-ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d4b419f46f32fa4acdeb1ac7d5e0c2b2c199fc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337713"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172406"
 ---
 # <a name="what-is-docker"></a>Docker란?
 
@@ -29,7 +29,7 @@ Docker 컨테이너는 고객 데이터 센터의 온-프레미스, 외부 서�
 
 - Hyper-V 컨테이너는 고도로 최적화된 가상 머신에서 각 컨테이너를 실행하여 Windows Server 컨테이너가 제공하는 격리를 확장합니다. 이 구성에서 컨테이너 호스트의 커널은 Hyper-V 컨테이너와 공유되지 않으므로 격리 기능이 향상됩니다.
 
-이러한 컨테이너의 이미지는 동일한 방식으로 생성되어 작동합니다. 차이점은 이미지에서 컨테이너가 생성되는 방식에 있으며, Hyper-V 컨테이너를 실행하려면 추가 매개 변수가 필요합니다. 자세한 내용은 [Hyper-V 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)를 참조하세요.
+이러한 컨테이너의 이미지는 동일한 방식으로 생성되어 작동합니다. 차이점은 이미지에서 컨테이너가 생성되는 방식에 있으며, Hyper-V 컨테이너를 실행하려면 추가 매개 변수가 필요합니다. 자세한 내용은 [Hyper-V 컨테이너](/virtualization/windowscontainers/manage-containers/hyperv-container)를 참조하세요.
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Docker 컨테이너와 가상 머신 비교
 

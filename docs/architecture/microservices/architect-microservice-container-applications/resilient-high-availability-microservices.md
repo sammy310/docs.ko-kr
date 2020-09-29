@@ -2,12 +2,12 @@
 title: 마이크로 서비스의 복원력 및 고가용성
 description: 마이크로 서비스는 고가용성을 달성하기 위해 복원력이 있어야 하므로 일시적인 네트워크 및 종속성 오류를 견디도록 설계되어야 합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988923"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172452"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 
@@ -40,7 +40,7 @@ ms.locfileid: "80988923"
 
 모놀리식 서버 기반 애플리케이션에서는 로그를 디스크의 파일(로그 파일)에 기록한 다음, 모든 도구로 분석할 수 있습니다. 애플리케이션 실행은 고정된 서버 또는 VM으로 제한되므로 일반적으로 이벤트 흐름을 분석하기에는 그다지 복잡하지 않습니다. 그러나 오케스트레이터 클러스터의 여러 노드에서 여러 서비스가 실행되는 분산 애플리케이션에서는 분산된 이벤트를 상호 연결할 수 있습니다.
 
-마이크로 서비스 기반 애플리케이션은 이벤트나 로그 파일의 출력 스트림을 자체적으로 저장하려고 시도해서는 안되며 이벤트 라우팅을 중앙 위치로 관리하려고 시도하지 않아야 합니다. 이 모든 과정은 투명해야 합니다. 즉, 각 프로세스는 실행 중인 실행 환경 인프라에서 수집하는 표준 출력에 해당 이벤트 스트림을 기록해야 합니다. 이러한 이벤트 스트림 라우터의 예로는 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)가 있으며, 여러 소스에서 이벤트 스트림을 수집하여 출력 시스템에 게시합니다. 여기에는 [Azure Monitor](https://azure.microsoft.com/services/monitor//), [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview)와 같은 개발 환경 또는 클라우드 시스템을 위한 간단한 표준 출력이 포함될 수 있습니다. [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)와 같이 실시간으로도 로그를 검색, 경고, 보고 및 모니터링할 수 있는 타사 로그 분석 플랫폼 및 도구도 제공됩니다.
+마이크로 서비스 기반 애플리케이션은 이벤트나 로그 파일의 출력 스트림을 자체적으로 저장하려고 시도해서는 안되며 이벤트 라우팅을 중앙 위치로 관리하려고 시도하지 않아야 합니다. 이 모든 과정은 투명해야 합니다. 즉, 각 프로세스는 실행 중인 실행 환경 인프라에서 수집하는 표준 출력에 해당 이벤트 스트림을 기록해야 합니다. 이러한 이벤트 스트림 라우터의 예로는 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)가 있으며, 여러 소스에서 이벤트 스트림을 수집하여 출력 시스템에 게시합니다. 여기에는 [Azure Monitor](https://azure.microsoft.com/services/monitor//), [Azure Diagnostics](/azure/azure-monitor/platform/diagnostics-extension-overview)와 같은 개발 환경 또는 클라우드 시스템을 위한 간단한 표준 출력이 포함될 수 있습니다. [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)와 같이 실시간으로도 로그를 검색, 경고, 보고 및 모니터링할 수 있는 타사 로그 분석 플랫폼 및 도구도 제공됩니다.
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>상태 및 진단 정보를 관리하는 오케스트레이터
 

@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 826f9003852e47c093193bbbb717fd9e1f2e61c6
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 4668922de8f0efc775acf6e505d56143b7ead8e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678942"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169065"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -209,7 +209,7 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 
 ### <a name="resilient-connections"></a>복원력 있는 연결
 
-SQL 데이터베이스 같은 외부 리소스를 사용할 수 없는 경우가 있습니다. 일시적으로 사용할 수 없는 경우 예외가 발생하지 않도록 하기 위해 애플리케이션에서 재시도 논리를 사용할 수 있습니다. 이 기술을 보통 _연결 복원력_이라고 부릅니다. 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하는 [지수 백오프를 사용하여 다시 시도](https://docs.microsoft.com/azure/architecture/patterns/retry) 기술을 구현할 수 있습니다. 이 기술은 클라우드 리소스가 어떤 이유로든 짧은 시간 동안 일시적으로 사용할 수 없다는 팩트를 포함합니다.
+SQL 데이터베이스 같은 외부 리소스를 사용할 수 없는 경우가 있습니다. 일시적으로 사용할 수 없는 경우 예외가 발생하지 않도록 하기 위해 애플리케이션에서 재시도 논리를 사용할 수 있습니다. 이 기술을 보통 _연결 복원력_이라고 부릅니다. 최대 다시 시도 횟수에 도달할 때까지 대기 시간이 기하급수적으로 증가하면서 다시 시도하는 [지수 백오프를 사용하여 다시 시도](/azure/architecture/patterns/retry) 기술을 구현할 수 있습니다. 이 기술은 클라우드 리소스가 어떤 이유로든 짧은 시간 동안 일시적으로 사용할 수 없다는 팩트를 포함합니다.
 
 Azure SQL DB의 경우, Entity Framework Core는 이미 내부 데이터베이스 연결 복원력과 다시 시도 논리를 제공합니다. 그러나 복원력 있는 EF 코어 연결을 원할 경우 각 DbContext 연결에 대한 Entity Framework 실행 전략을 사용해야 합니다.
 
@@ -285,7 +285,7 @@ await strategy.ExecuteAsync(async () =>
 
 EF Core는 지속성 관리에 매우 유용하고 대부분 애플리케이션 개발자의 데이터베이스 세부 정보를 캡슐화하지만, 유일한 방법은 아닙니다. 또 다른 인기 있는 오픈 소스는 마이크로 ORM이라고도 하는 [Dapper](https://github.com/StackExchange/Dapper)입니다. 마이크로 ORM은 개체를 데이터 구조에 매핑하는 데 사용되며 기능이 약간 적은 도구입니다. Dapper의 디자인 목표는 데이터를 검색하고 업데이트하는 데 사용되는 기본 쿼리를 완전히 캡슐화하는 것이 아니라 성능에 집중하는 것입니다. Dapper는 개발자의 SQL을 추상화하지 않으므로 "금속에 가깝고" 개발자가 특정 데이터 액세스 작업에 사용할 정확한 쿼리를 작성할 수 있습니다.
 
-EF Core에는 Dapper과 구별되지만 성능 오버헤드를 제공하는 두 가지 중요한 기능이 있습니다. 첫 번째는 LINQ 식에서 SQL로의 변환입니다. 이러한 변환은 캐시되지만, 그럼에도 불구하고 처음으로 수행할 때 오버헤드가 있습니다. 두 번째는 엔터티 변경 내용 추적(효율적인 update 문을 생성할 수 있도록)입니다. AsNotTracking 확장을 사용하여 특정 쿼리에 대해 이 동작을 해제할 수 있습니다. 또한 EF 코어는 일반적으로 매우 효율적이고 어떤 경우에도 성능의 관점에서 완벽하게 허용되는 SQL 쿼리를 생성하지만, 실행할 정확한 쿼리를 세부적으로 제어해야 하는 경우 EF Core를 사용하여 사용자 지정 SQL을 전달(또는 저장 프로시저를 실행)할 수 있습니다. 이 경우 Dapper는 여전히 EF Core보다 성능이 우수하지만, 그 차이는 미미합니다. Julie Lerman은 2016년 5월에 작성한 MSDN 문서 [Dapper, Entity Framework 및 하이브리드 앱](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)에서 몇 가지 성능 데이터를 제시했습니다. 다양한 데이터 액세스 방법에 대한 추가 성능 벤치마크 데이터는 [Dapper 사이트](https://github.com/StackExchange/Dapper)에서 찾을 수 있습니다.
+EF Core에는 Dapper과 구별되지만 성능 오버헤드를 제공하는 두 가지 중요한 기능이 있습니다. 첫 번째는 LINQ 식에서 SQL로의 변환입니다. 이러한 변환은 캐시되지만, 그럼에도 불구하고 처음으로 수행할 때 오버헤드가 있습니다. 두 번째는 엔터티 변경 내용 추적(효율적인 update 문을 생성할 수 있도록)입니다. AsNotTracking 확장을 사용하여 특정 쿼리에 대해 이 동작을 해제할 수 있습니다. 또한 EF 코어는 일반적으로 매우 효율적이고 어떤 경우에도 성능의 관점에서 완벽하게 허용되는 SQL 쿼리를 생성하지만, 실행할 정확한 쿼리를 세부적으로 제어해야 하는 경우 EF Core를 사용하여 사용자 지정 SQL을 전달(또는 저장 프로시저를 실행)할 수 있습니다. 이 경우 Dapper는 여전히 EF Core보다 성능이 우수하지만, 그 차이는 미미합니다. Julie Lerman은 2016년 5월에 작성한 MSDN 문서 [Dapper, Entity Framework 및 하이브리드 앱](/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)에서 몇 가지 성능 데이터를 제시했습니다. 다양한 데이터 액세스 방법에 대한 추가 성능 벤치마크 데이터는 [Dapper 사이트](https://github.com/StackExchange/Dapper)에서 찾을 수 있습니다.
 
 Dapper 구문이 EF Core에서 어떻게 달라지는지 살펴보려면 항목의 목록 검색에 사용되는 다음 두 동일한 메서드 버전을 고려해 보세요.
 

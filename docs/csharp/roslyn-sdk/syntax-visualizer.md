@@ -3,12 +3,12 @@ title: Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코
 description: 구문 시각화 도우미는 .NET Compiler Platform SDK에서 코드용으로 생성하는 모델을 탐색할 수 있는 시각적 도구를 제공합니다.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975929"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167576"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코드 탐색
 
@@ -33,9 +33,11 @@ ms.locfileid: "82975929"
 <!-- markdownlint-disable MD025 -->
 
 # <a name="c"></a>[C#](#tab/csharp)
+
 ![C# 구문 트리 시각화](media/syntax-visualizer/visualize-csharp.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
+
 ![Visual Basic 구문 트리 시각화](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---

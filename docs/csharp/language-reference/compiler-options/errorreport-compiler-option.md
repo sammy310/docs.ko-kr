@@ -9,14 +9,15 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6238ac392ff99d18d9cc7ea07e23b08ff235c14f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125724"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173232"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport(C# 컴파일러 옵션)
+
 이 옵션은 C# 내부 컴파일러 오류를 Microsoft에 보고하는 편리한 방법을 제공합니다.
 
 > [!NOTE]
@@ -29,6 +30,7 @@ ms.locfileid: "89125724"
 ```
 
 ## <a name="arguments"></a>인수
+
  **없음**  
  내부 컴파일러 오류에 대한 보고서를 수집하거나 Microsoft로 보내지 않습니다.
 
@@ -39,6 +41,7 @@ ms.locfileid: "89125724"
  **send**는 내부 컴파일러 오류 보고서를 Microsoft에 자동으로 보냅니다. 이 옵션을 사용하려면 먼저 Microsoft 데이터 수집 정책에 동의해야 합니다. 처음으로 컴퓨터에서 **-errorreport:send**를 지정하면 컴파일러 메시지에서 Microsoft 데이터 수집 정책이 포함된 Web 사이트를 참조합니다.
 
 ## <a name="remarks"></a>설명
+
  내부 컴파일러 오류(ICE)는 컴파일러에서 소스 코드 파일을 처리할 수 없을 때 발생합니다. ICE가 발생하면 컴파일러에서 출력 파일 또는 코드를 수정하는 데 사용할 수 있는 유용한 진단을 생성하지 않습니다.
 
  이전 릴리스에서는 ICE를 수신하는 경우 Microsoft 기술 지원 서비스에 문의하여 문제를 보고하도록 했습니다. **-errorreport**를 사용하여 Visual C#팀에 ICE 정보를 제공할 수 있습니다. 오류 보고서는 향후 컴파일러 릴리스를 개선하는 데 도움이 됩니다.

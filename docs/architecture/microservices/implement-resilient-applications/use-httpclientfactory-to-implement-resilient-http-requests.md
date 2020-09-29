@@ -2,12 +2,12 @@
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/31/2020
-ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678818"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152574"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -23,7 +23,7 @@ ms.locfileid: "90678818"
 
 개발자가 겪는 또 다른 문제는 장기 실행 프로세스에서 `HttpClient`의 공유 인스턴스를 사용하는 경우에 발생합니다. HttpClient가 singleton 또는 정적 개체로 인스턴스화되는 상황에서 이 [문제](https://github.com/dotnet/runtime/issues/18348)에서 dotnet/런타임 GitHub 리포지토리에 대해 설명된 대로 DNS 변경 사항을 처리하지 못합니다.
 
-그러나 문제는 `HttpClient` 자체가 아니라 [HttpClient의 기본 생성자](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)에 있습니다. 이 생성자는 위에서 언급한 ‘소켓 소모’ 및 DNS 변경 문제가 있는 새로운 구체적인 <xref:System.Net.Http.HttpMessageHandler> 인스턴스를 만들기 때문입니다. 
+그러나 문제는 `HttpClient` 자체가 아니라 [HttpClient의 기본 생성자](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)에 있습니다. 이 생성자는 위에서 언급한 ‘소켓 소모’ 및 DNS 변경 문제가 있는 새로운 구체적인 <xref:System.Net.Http.HttpMessageHandler> 인스턴스를 만들기 때문입니다. 
 
 위에서 언급한 문제를 해결하고 `HttpClient` 인스턴스를 관리할 수 있게 만들기 위해 .NET Core 2.1에서는 DI(종속성 주입)를 통해 앱에서 `HttpClient` 인스턴스를 구성하고 만드는 데 사용할 수 있는 <xref:System.Net.Http.IHttpClientFactory> 인터페이스를 도입했습니다. 또한 Polly 기반 미들웨어에 대한 확장을 제공하여 HttpClient에서의 처리기 위임을 활용합니다.
 

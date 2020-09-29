@@ -4,12 +4,12 @@ description: 식 트리의 구조를 검사하는 코드를 작성하는 방법�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004649"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173310"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 
@@ -22,6 +22,7 @@ ms.locfileid: "84004649"
 노드 형식에 자식이 있는 경우 자식을 재귀적으로 방문합니다. 각 자식 노드에서 루트 노드에 사용된 프로세스를 반복합니다. 즉, 형식을 확인하고 형식에 자식이 있는 경우 각 자식을 방문합니다.
 
 ## <a name="examining-an-expression-with-no-children"></a>자식이 없는 식 검사
+
 먼저 간단한 식 트리의 각 노드를 방문해 보겠습니다.
 다음은 상수 식을 만든 다음 해당 속성을 검사하는 코드입니다.
 

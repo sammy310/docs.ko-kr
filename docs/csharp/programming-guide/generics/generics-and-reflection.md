@@ -6,14 +6,15 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 6e4387fe7e78cd0e970531ae42f323efa8f181db
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5439412231ab1bf9ed523d6786af67984ab2d0c3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299307"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172972"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>제네릭 및 리플렉션(C# 프로그래밍 가이드)
+
 CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세스할 수 있으므로 제네릭이 아닌 형식에 대한 방법과 동일한 방법으로 리플렉션을 사용하여 제네릭 형식에 대한 정보를 가져올 수 있습니다. 자세한 내용은 [런타임의 제네릭](./generics-in-the-run-time.md)을 참조하세요.  
   
  .NET Framework 2.0에서는 제네릭 형식에 대한 런타임 정보를 사용할 수 있도록 <xref:System.Type> 클래스에 여러 개의 새 멤버가 추가되었습니다. 이러한 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 이러한 클래스에 대한 설명서를 참조하세요. <xref:System.Reflection.Emit> 네임스페이스에도 제네릭을 지원하는 새 멤버가 포함되어 있습니다. [방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)를 참조하세요.  

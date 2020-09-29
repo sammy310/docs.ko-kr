@@ -3,12 +3,12 @@ title: ASP.NET 웹앱을 Azure VM으로 마이그레이션
 description: ASP.NET 웹 애플리케이션을 온-프레미스에서 Azure Virtual Machine으로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174246"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171561"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Azure Virtual Machine으로 ASP.NET 웹 애플리케이션 마이그레이션
 
@@ -60,6 +60,7 @@ Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 시작하려면 [Virtual Network 설명서](/azure/virtual-network/)를 참조하세요.
 
 ### <a name="active-directory"></a>Active Directory
+
 많은 애플리케이션이 인증 및 ID 관리를 위해 Active Directory를 사용합니다.
 
 - Azure AD Connect는 온-프레미스 디렉터리와 Azure Active Directory를 통합하도록 해줍니다. 시작하려면 [Azure Active Directory와 온-프레미스 디렉터리 통합](/azure/active-directory/connect/active-directory-aadconnect)을 참조하세요.
@@ -75,11 +76,13 @@ Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 ### <a name="high-availability-and-scalability"></a>고가용성 및 확장성 
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
+
 애플리케이션의 가용성이 높은지 그리고 확장할 수 있는지 확인하고 VM 이미지를 Azure Virtual Machine Scale Set로 마이그레이션하여 애플리케이션의 가용성과 확장성을 높일 수 있습니다. VM Scale Sets는 이미 구성한 기존 VM을 사용하거나 애플리케이션으로 이미지를 빌드하기 위해 빌드 파이프라인을 설정하는 기능을 제공합니다.
 
 시작하려면 [가상 머신 확장 집합에 애플리케이션 배포](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)를 참조하세요.
 
 #### <a name="centralized-logging"></a>중앙 집중식 로깅
+
 여러 인스턴스에서 애플리케이션을 실행하는 경우 [Azure Storage](/azure/storage/)와 같은 중앙 위치에 로그를 저장하는 것이 좋습니다.
 
 ## <a name="next-steps"></a>다음 단계

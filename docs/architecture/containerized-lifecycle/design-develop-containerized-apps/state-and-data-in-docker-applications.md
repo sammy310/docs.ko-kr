@@ -2,12 +2,12 @@
 title: Docker 애플리케이션의 상태 및 데이터
 description: 컨테이너화된 애플리케이션에서 상태를 저장하는 데 사용할 수 있는 옵션을 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915318"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163468"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 
@@ -27,7 +27,7 @@ Docker 호스트에서 [Docker 볼륨](https://docs.docker.com/engine/admin/volu
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)는 지역 배포 가능한 스토리지를 제공하여 컨테이너에 오래 지속되는 솔루션을 제공합니다.
 
-- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 같은 원격 관계형 데이터베이스 또는 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 같은 NoSQL 데이터베이스 또는 [Redis](https://redis.io/) 같은 캐시 서비스입니다.
+- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 같은 원격 관계형 데이터베이스 또는 [Azure Cosmos DB](/azure/cosmos-db/introduction) 같은 NoSQL 데이터베이스 또는 [Redis](https://redis.io/) 같은 캐시 서비스입니다.
 
 Docker 컨테이너에서:
 

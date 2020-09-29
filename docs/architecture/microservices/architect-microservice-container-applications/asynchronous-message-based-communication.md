@@ -2,12 +2,12 @@
 title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679177"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169247"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -59,7 +59,7 @@ ms.locfileid: "90679177"
 
 비동기 이벤트 기반 통신에서 하나의 마이크로 서비스는 이벤트 버스에 이벤트를 게시하고 여러 마이크로 서비스가 이를 구독하여 알림을 받고 이에 대한 조치를 취할 수 있습니다. 해당 구현은 이벤트 기반 및 메시지 기반 통신을 위해 어떤 프로토콜을 사용할지 결정하게 됩니다. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)는 신뢰할 수 있는 대기 중인 통신을 완수할 수 있게 합니다.
 
-이벤트 버스를 사용할 경우 [RabbitMQ](https://www.rabbitmq.com/) 같은 메시지 브로커 또는 [Azure Service Bus with Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) 같은 서비스 버스로부터 API를 사용하는 코드를 통해 클래스에서 관련 구현에 기반한 추상적 개념 수준(이벤트 버스 인터페이스 같은)을 사용할 수 있습니다. 또는 이벤트 버스와 게시/구독 시스템을 활용하기 위해 NServiceBus, MassTransit, Brighter 같은 더 높은 수준의 서비스 버스를 사용할 수도 있습니다.
+이벤트 버스를 사용할 경우 [RabbitMQ](https://www.rabbitmq.com/) 같은 메시지 브로커 또는 [Azure Service Bus with Topics](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) 같은 서비스 버스로부터 API를 사용하는 코드를 통해 클래스에서 관련 구현에 기반한 추상적 개념 수준(이벤트 버스 인터페이스 같은)을 사용할 수 있습니다. 또는 이벤트 버스와 게시/구독 시스템을 활용하기 위해 NServiceBus, MassTransit, Brighter 같은 더 높은 수준의 서비스 버스를 사용할 수도 있습니다.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>생산 시스템용 메시징 기술에 대한 유의사항
 
@@ -75,7 +75,7 @@ ms.locfileid: "90679177"
 
 - [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining)을 사용합니다.
 
-- 전체 [이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴을 사용합니다.
+- 전체 [이벤트 소싱](/azure/architecture/patterns/event-sourcing) 패턴을 사용합니다.
 
 - [보낼 메일함 패턴](https://www.kamilgrzybek.com/design/the-outbox-pattern/) 사용: 이벤트를 만들고 게시하는 이벤트 생성자 구성 요소의 기본이 되는 메시지 큐로서의 트랜잭션 데이터베이스 테이블입니다.
 

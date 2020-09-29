@@ -4,12 +4,12 @@ description: N 계층 아키텍처에서 서버리스까지 클라우드 기반 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ab84d1f3425c1fda787756b73fd8315fe6d4231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522903"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171977"
 ---
 # <a name="architecture-approaches"></a>아키텍처 접근 방식
 
@@ -21,7 +21,7 @@ ms.locfileid: "72522903"
 
 최신 비즈니스 애플리케이션은 다양한 아키텍처 패턴을 따릅니다. 이 섹션에서는 일반적인 패턴을 알아봅니다. 여기에 나열된 패턴이 모든 모범 사례를 망라한 것은 아니지만 다양한 접근 방식을 보여줍니다.
 
-자세한 내용은 [Azure 애플리케이션 아키텍처 가이드](https://docs.microsoft.com/azure/architecture/guide/)를 참조하세요.
+자세한 내용은 [Azure 애플리케이션 아키텍처 가이드](/azure/architecture/guide/)를 참조하세요.
 
 ## <a name="monoliths"></a>모놀리식
 
@@ -65,7 +65,7 @@ N 계층 접근 방식에는 다음과 같은 몇 가지 이점이 있습니다.
 
 ## <a name="microservices"></a>마이크로 서비스
 
-**[마이크로 서비스](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** 아키텍처에는 다음과 같은 공통 특성이 포함됩니다.
+**[마이크로 서비스](/azure/architecture/guide/architecture-styles/microservices)** 아키텍처에는 다음과 같은 공통 특성이 포함됩니다.
 
 - 애플리케이션이 여러 개의 소규모 서비스로 구성됩니다.
 - 각 서비스는 자체 프로세스에서 실행됩니다.

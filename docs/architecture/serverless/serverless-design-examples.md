@@ -4,12 +4,12 @@ description: 일정 예약 및 이벤트 기반 처리에서 파일 트리거 �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b4e8fda0c1423c881c0807602e11f7c49ff7cfe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9b7951fd8f11a65a64c22443de7041aba7d94
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093550"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171756"
 ---
 # <a name="serverless-design-examples"></a>서버리스 디자인 예제
 
@@ -29,13 +29,13 @@ CQRS를 사용하면 읽기는 데이터가 사용되는 방식으로 데이터�
 
 ![CQRS 예제](./media/cqrs-example.png)
 
-서버리스는 분리된 엔드포인트를 제공하여 CQRS 패턴을 수용할 수 있습니다. 한 서버리스 함수는 쿼리 또는 읽기를 수용하고 다른 서버리스 함수 또는 함수 집합은 업데이트 작업을 처리합니다. 또한 서버리스 함수는 읽기 모델을 최신 상태로 유지하는 역할을 담당하고 데이터베이스의 [변경 피드](https://docs.microsoft.com/azure/cosmos-db/change-feed)에 의해 트리거될 수 있습니다. 프런트 엔드 개발은 필요한 엔드포인트에 연결하는 것으로 간소화되었습니다. 이벤트 처리는 백 엔드에서 처리합니다. 또한 이 모델은 여러 팀이 서로 다른 작업을 수행할 수 있기 때문에 대규모 프로젝트에서 효율적으로 크기 조정됩니다.
+서버리스는 분리된 엔드포인트를 제공하여 CQRS 패턴을 수용할 수 있습니다. 한 서버리스 함수는 쿼리 또는 읽기를 수용하고 다른 서버리스 함수 또는 함수 집합은 업데이트 작업을 처리합니다. 또한 서버리스 함수는 읽기 모델을 최신 상태로 유지하는 역할을 담당하고 데이터베이스의 [변경 피드](/azure/cosmos-db/change-feed)에 의해 트리거될 수 있습니다. 프런트 엔드 개발은 필요한 엔드포인트에 연결하는 것으로 간소화되었습니다. 이벤트 처리는 백 엔드에서 처리합니다. 또한 이 모델은 여러 팀이 서로 다른 작업을 수행할 수 있기 때문에 대규모 프로젝트에서 효율적으로 크기 조정됩니다.
 
 ## <a name="event-based-processing"></a>이벤트 기반 처리
 
-메시지 기반 시스템에서 이벤트는 조치가 필요한 큐 또는 게시자/구독자 토픽으로 수집되는 경우가 많습니다. 이러한 이벤트는 서버리스 함수를 트리거하여 비즈니스 논리를 실행할 수 있습니다. 이벤트 기반 처리의 예로는 이벤트 소싱 시스템이 있습니다. 작업을 완료로 표시하기 위해 "이벤트"가 발생합니다. 이벤트에 의해 트리거된 서버리스 함수가 적절한 데이터베이스 문서를 업데이트합니다. 두 번째 서버리스 함수가 이벤트를 사용하여 시스템의 읽기 모델을 업데이트할 수 있습니다. [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)는 이벤트를 구독자로서의 함수와 통합하는 방법을 제공합니다.
+메시지 기반 시스템에서 이벤트는 조치가 필요한 큐 또는 게시자/구독자 토픽으로 수집되는 경우가 많습니다. 이러한 이벤트는 서버리스 함수를 트리거하여 비즈니스 논리를 실행할 수 있습니다. 이벤트 기반 처리의 예로는 이벤트 소싱 시스템이 있습니다. 작업을 완료로 표시하기 위해 "이벤트"가 발생합니다. 이벤트에 의해 트리거된 서버리스 함수가 적절한 데이터베이스 문서를 업데이트합니다. 두 번째 서버리스 함수가 이벤트를 사용하여 시스템의 읽기 모델을 업데이트할 수 있습니다. [Azure Event Grid](/azure/event-grid/overview)는 이벤트를 구독자로서의 함수와 통합하는 방법을 제공합니다.
 
-> 이벤트는 정보 메시지입니다. 자세한 내용은 [이벤트 소싱 패턴](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)을 참조하세요.
+> 이벤트는 정보 메시지입니다. 자세한 내용은 [이벤트 소싱 패턴](/azure/architecture/patterns/event-sourcing)을 참조하세요.
 
 ## <a name="file-triggers-and-transformations"></a>파일 트리거 및 변환
 
@@ -43,7 +43,7 @@ ETL(추출, 변환 및 로드)은 일반적인 비즈니스 기능입니다. 서
 
 ![서버리스 파일 트리거 및 변환](./media/serverless-file-triggers.png)
 
-다이어그램에서 "쿨 스토리지"는 [Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics)에서 구문 분석되는 데이터를 제공합니다. 데이터 스트림에서 발생하는 모든 문제는 변칙을 해결하기 위해 Azure 함수를 트리거합니다.
+다이어그램에서 "쿨 스토리지"는 [Azure Stream Analytics](/azure/stream-analytics)에서 구문 분석되는 데이터를 제공합니다. 데이터 스트림에서 발생하는 모든 문제는 변칙을 해결하기 위해 Azure 함수를 트리거합니다.
 
 ## <a name="asynchronous-background-processing-and-messaging"></a>비동기 백그라운드 처리 및 메시징
 
@@ -65,7 +65,7 @@ HTTP 호출로 트리거된 서버리스 엔드포인트를 사용하여 API 요
 
 ## <a name="stream-processing"></a>스트림 처리
 
-장치 및 센서는 실시간으로 처리해야 하는 데이터 스트림을 생성하는 경우가 많습니다. [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) 및 [IoT Hub](https://docs.microsoft.com/azure/iot-hub)에서 [Service Bus](https://docs.microsoft.com/azure/service-bus)까지 메시지와 스트림을 캡처할 수 있는 여러 기술이 있습니다. 전송 여부와 관계없이 서버리스는 데이터 및 데이터 스트림을 처리하는 데 적합한 메커니즘입니다. 서버리스는 대량 데이터 수요를 충족하기 위해 신속하게 확장할 수 있습니다. 서버리스 코드는 비즈니스 논리를 적용하여 데이터를 구문 분석하고 작업 및 분석을 위해 구조화된 형식으로 출력할 수 있습니다.
+장치 및 센서는 실시간으로 처리해야 하는 데이터 스트림을 생성하는 경우가 많습니다. [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs) 및 [IoT Hub](/azure/iot-hub)에서 [Service Bus](/azure/service-bus)까지 메시지와 스트림을 캡처할 수 있는 여러 기술이 있습니다. 전송 여부와 관계없이 서버리스는 데이터 및 데이터 스트림을 처리하는 데 적합한 메커니즘입니다. 서버리스는 대량 데이터 수요를 충족하기 위해 신속하게 확장할 수 있습니다. 서버리스 코드는 비즈니스 논리를 적용하여 데이터를 구문 분석하고 작업 및 분석을 위해 구조화된 형식으로 출력할 수 있습니다.
 
 ![서버리스 스트림 처리](./media/serverless-stream-processing.png)
 
@@ -77,16 +77,16 @@ API 게이트웨이는 클라이언트에 대한 단일 진입점을 제공하�
 
 ## <a name="recommended-resources"></a>권장되는 리소스
 
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure IoT Hub](/azure/iot-hub)
 - [분산 데이터 관리의 문제 및 솔루션](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-- [마이크로 서비스 디자인: 마이크로 서비스 경계 식별](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-- [이벤트 소싱 패턴](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [마이크로 서비스 디자인: 마이크로 서비스 경계 식별](/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [이벤트 소싱 패턴](/azure/architecture/patterns/event-sourcing)
 - [회로 차단기 패턴 구현](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Azure Cosmos DB에서 변경 피드 지원 사용](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [IoT Hub](/azure/iot-hub)
+- [Service Bus](/azure/service-bus)
+- [Azure Cosmos DB에서 변경 피드 지원 사용](/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[이전](serverless-architecture-considerations.md)

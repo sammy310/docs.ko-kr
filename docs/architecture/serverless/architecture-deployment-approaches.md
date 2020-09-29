@@ -4,12 +4,12 @@ description: IaaS, PaaS, 컨테이너 및 서버리스 간 비교를 통해 엔�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522733"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173343"
 ---
 # <a name="architecture-deployment-approaches"></a>아키텍처 배포 접근 방식
 
@@ -17,7 +17,7 @@ ms.locfileid: "72522733"
 
 ## <a name="n-tier-applications"></a>N 계층 애플리케이션
 
-[N 계층 아키텍처 패턴](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)은 완성도 높은 아키텍처로, 다양한 논리 계층을 별도의 물리적 계층으로 분리하는 애플리케이션을 지칭합니다. N 계층 아키텍처는 N 레이어 아키텍처의 물리적 구현입니다. 이 아키텍처의 가장 일반적인 구현에는 다음이 포함됩니다.
+[N 계층 아키텍처 패턴](/azure/architecture/guide/architecture-styles/n-tier)은 완성도 높은 아키텍처로, 다양한 논리 계층을 별도의 물리적 계층으로 분리하는 애플리케이션을 지칭합니다. N 계층 아키텍처는 N 레이어 아키텍처의 물리적 구현입니다. 이 아키텍처의 가장 일반적인 구현에는 다음이 포함됩니다.
 
 - 프레젠테이션 계층(예: 웹앱)
 - API 또는 데이터 액세스 계층(예: REST API)
@@ -56,11 +56,11 @@ N 계층 솔루션은 다음과 같은 특징이 있습니다.
 
 "가상 머신"을 통해 하드웨어를 가상화하면 IaaS(Infrastructure as a Service)를 사용할 수 있습니다. 호스트 컴퓨터는 자체 메모리, CPU 및 저장소에 대한 할당을 사용하여 인스턴스에 리소스를 제공하도록 효과적으로 분할됩니다. 팀은 필요한 VM을 프로비전하고 연결된 네트워크와 저장소 액세스를 구성합니다.
 
-자세한 내용은 [가상 머신 N 계층 참조 아키텍처](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)를 참조하세요.
+자세한 내용은 [가상 머신 N 계층 참조 아키텍처](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)를 참조하세요.
 
 가상화 및 IaaS(Infrastructure as a Service)는 많은 문제를 해결하지만 인프라 팀에게 많은 책임도 안깁니다. 팀은 운영 체제 버전을 유지 관리하고, 보안 패치를 적용하고, 대상 컴퓨터에 타사 종속성을 설치합니다. 앱은 프로덕션 컴퓨터에서 테스트 환경과 다르게 동작하는 경우가 자주 있습니다. 다른 종속성 버전 및/또는 OS SKU 수준 때문에 문제가 발생합니다. 많은 조직에서 이러한 대상에 N 계층 애플리케이션을 배포하지만 많은 기업이 [서비스로서의 플랫폼](#platform-as-a-service-paas)과 같은 향상된 수준의 클라우드 네이티브 모델에 배포함으로써 혜택을 얻을 수 있습니다. 마이크로 서비스를 사용하는 아키텍처는 탄력성 및 복원력에 대한 확장 요구 사항 때문에 더 어렵습니다.
 
-자세한 내용은 [가상 머신](https://docs.microsoft.com/azure/virtual-machines/)을 참조하세요.
+자세한 내용은 [가상 머신](/azure/virtual-machines/)을 참조하세요.
 
 ## <a name="platform-as-a-service-paas"></a>PaaS(Platform as a Service)
 
@@ -81,7 +81,7 @@ PaaS는 IaaS에 일반적으로 발생하는 어려운 문제를 해결합니다
 
 SaaS(Software as a Service)는 중앙에서 호스트되고 로컬 설치 또는 프로비전 없이 사용할 수 있습니다. SaaS는 소프트웨어를 배포하기 위한 플랫폼으로 PaaS 위에 호스트되는 경우가 많습니다. SaaS는 기존 소프트웨어를 실행하고 연결하는 서비스를 제공합니다. SaaS는 특정 산업 및 버티컬과 관련되는 경우가 많습니다. SaaS는 흔히 라이선스 방식이고 일반적으로 클라이언트/서버 모델을 제공합니다. 최신 SaaS 제품은 대부분 클라이언트에 웹 기반 앱을 사용합니다. 기업은 일반적으로 SaaS를 라이선스 제품에 대한 비즈니스 솔루션으로 간주합니다. 애플리케이션의 확장성 및 유지 관리에 대한 아키텍처 고려 사항으로 구현되는 경우는 많지 않습니다. 실제로 대부분의 SaaS 솔루션은 IaaS, PaaS 및/또는 서버리스 백 엔드를 기반으로 빌드됩니다.
 
-[샘플 애플리케이션](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)을 통해 SaaS에 대해 자세히 알아보세요.
+[샘플 애플리케이션](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)을 통해 SaaS에 대해 자세히 알아보세요.
 
 ## <a name="containers-and-functions-as-a-service-faas"></a>컨테이너 및 FaaS(Functions as a Service)
 
@@ -105,7 +105,7 @@ Docker 컨테이너에 대한 자세한 내용은 [Docker 정의](../microservic
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-오케스트레이션에 대한 자세한 내용은 [Azure의 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)를 참조하세요.
+오케스트레이션에 대한 자세한 내용은 [Azure의 Kubernetes](/azure/aks/intro-kubernetes)를 참조하세요.
 
 FaaS(Functions as a Service)는 서버리스와 비슷한 특수 컨테이너 서비스입니다. [OpenFaaS](https://github.com/openfaas/faas)라고 하는 FaaS 구현은 서버리스 기능을 제공하기 위해 컨테이너 위에 위치합니다. OpenFaaS는 코드 조각을 실행하는 데 필요한 모든 컨테이너 종속성을 패키지하는 템플릿을 제공합니다. 템플릿을 사용하면 코드를 기능 단위로 배포하는 프로세스가 간단해집니다. OpenFaaS는 기존 인프라를 사용할 수 있기 때문에 이미 컨테이너 및 오케스트레이터를 포함하는 아키텍처를 대상으로 합니다. 서버리스 기능을 제공하지만, 구체적으로 Docker 및 오케스트레이터를 사용해야 합니다.
 
@@ -130,7 +130,7 @@ FaaS(Functions as a Service)는 서버리스와 비슷한 특수 컨테이너 �
 - **즉각적인 크기 조정.** 서버리스는 워크로드에 맞춰 자동으로 신속하게 크기가 조정될 수 있습니다.
 - **보다 신속한 출시.** 개발자는 코드에 집중하고 서버리스 플랫폼에 직접 배포합니다. 구성 요소는 서로 독립적으로 릴리스할 수 있습니다.
 
-서버리스는 컴퓨팅 맥락에서 고려되는 것이 가장 일반적이지만, 데이터에도 적용할 수 있습니다. 예를 들어 [Azure SQL](https://docs.microsoft.com/azure/sql-database) 및 [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)는 모두 호스트 컴퓨터 또는 클러스터를 구성할 필요가 없는 클라우드 데이터베이스를 제공합니다. 이 책에서는 서버리스 컴퓨팅에 초점을 맞춥니다.
+서버리스는 컴퓨팅 맥락에서 고려되는 것이 가장 일반적이지만, 데이터에도 적용할 수 있습니다. 예를 들어 [Azure SQL](/azure/sql-database) 및 [Cosmos DB](/azure/cosmos-db)는 모두 호스트 컴퓨터 또는 클러스터를 구성할 필요가 없는 클라우드 데이터베이스를 제공합니다. 이 책에서는 서버리스 컴퓨팅에 초점을 맞춥니다.
 
 ## <a name="summary"></a>요약
 
@@ -154,16 +154,16 @@ FaaS(Functions as a Service)는 서버리스와 비슷한 특수 컨테이너 �
 
 ## <a name="recommended-resources"></a>권장되는 리소스
 
-- [Azure 애플리케이션 아키텍처 가이드](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-- [N 계층 아키텍처 패턴](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-- [Azure의 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-- [마이크로 서비스](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-- [가상 머신 N 계층 참조 아키텍처](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-- [가상 머신](https://docs.microsoft.com/azure/virtual-machines/)
+- [Azure 애플리케이션 아키텍처 가이드](/azure/architecture/guide/)
+- [Azure Cosmos DB](/azure/cosmos-db)
+- [Azure SQL](/azure/sql-database)
+- [N 계층 아키텍처 패턴](/azure/architecture/guide/architecture-styles/n-tier)
+- [Azure의 Kubernetes](/azure/aks/intro-kubernetes)
+- [마이크로 서비스](/azure/architecture/guide/architecture-styles/microservices)
+- [가상 머신 N 계층 참조 아키텍처](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [가상 머신](/azure/virtual-machines/)
 - [Docker란?](../microservices/container-docker-introduction/docker-defined.md)
-- [Wingtip Tickets SaaS 애플리케이션](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Wingtip Tickets SaaS 애플리케이션](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[이전](architecture-approaches.md)

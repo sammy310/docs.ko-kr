@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164433"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169221"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
 
@@ -54,7 +54,7 @@ Azure App Service Web Apps는 클라우드에 최적화되지 않은 앱 외에�
 
 ![기본 Azure 아키텍처](./media/image1-5.png)
 
-단일 리소스 그룹에 있는 적은 수의 리소스는 일반적으로 이러한 앱을 관리하기에 충분합니다. 일반적으로 여러 개별 프로세스로 구성된 앱이 아닌 단일 단위로 배포되는 앱은 이 [기본 아키텍처 접근 방법](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)에 적절한 후보입니다. 구조적으로 단순하지만 이 방법을 사용하면 여전히 호스팅되는 앱이 수요 증가를 충족하기 위해 확장(노드당 더 많은 리소스)과 축소(더 많은 호스팅된 노드) 모두를 가능하게 합니다. 자동 크기 조정을 통해 노드 간에 수요 및 평균 로드에 따라 앱을 호스팅하는 노드 수를 자동으로 조정하도록 앱을 구성할 수 있습니다.
+단일 리소스 그룹에 있는 적은 수의 리소스는 일반적으로 이러한 앱을 관리하기에 충분합니다. 일반적으로 여러 개별 프로세스로 구성된 앱이 아닌 단일 단위로 배포되는 앱은 이 [기본 아키텍처 접근 방법](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)에 적절한 후보입니다. 구조적으로 단순하지만 이 방법을 사용하면 여전히 호스팅되는 앱이 수요 증가를 충족하기 위해 확장(노드당 더 많은 리소스)과 축소(더 많은 호스팅된 노드) 모두를 가능하게 합니다. 자동 크기 조정을 통해 노드 간에 수요 및 평균 로드에 따라 앱을 호스팅하는 노드 수를 자동으로 조정하도록 앱을 구성할 수 있습니다.
 
 ### <a name="app-service-web-apps-for-containers"></a>컨테이너용 App Service Web Apps
 
@@ -74,7 +74,7 @@ Web Apps for Containers가 가장 적합한 몇 가지 시나리오가 있습니
 
 ![마이크로서비스는 몇 가지 일반 디자인 패턴이 명시된 아키텍처를 샘플링합니다.](./media/image1-10.png)
 
-[마이크로서비스 기반 시스템을 빌드할 때 고려해야 할 디자인 패턴에 대해 자세히 알아봅니다.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[마이크로서비스 기반 시스템을 빌드할 때 고려해야 할 디자인 패턴에 대해 자세히 알아봅니다.](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces:
 - 팀에 필요한 통합 환경 수 줄이기
 - 개발/테스트 시 분산 시스템에서 특정 서비스를 모의해야 하는 필요성 제거
 
-[Azure Dev Spaces에 대해 자세히 알아보기](https://docs.microsoft.com/azure/dev-spaces/about)
+[Azure Dev Spaces에 대해 자세히 알아보기](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 

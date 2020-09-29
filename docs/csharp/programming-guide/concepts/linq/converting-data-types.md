@@ -3,14 +3,15 @@ title: 데이터 형식 변환(C#)
 description: 변환 메서드는 입력 개체의 형식을 변경합니다. Enumerable.AsEnumerable 및 Enumerable.OfType과 같은 C#에서 LINQ 쿼리의 변환 작업을 참조하세요.
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 3291690f9aaee945ca7feb04ebbc676db2612894
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: f9e3b354fd6eeba6564067550ea3821e4946d92f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159139"
 ---
 # <a name="converting-data-types-c"></a>데이터 형식 변환(C#)
+
 변환 메서드는 입력 개체의 형식을 변경합니다.
 
  LINQ 쿼리의 변환 작업은 다양한 애플리케이션에서 유용합니다. 다음은 몇 가지 예제입니다.
@@ -22,6 +23,7 @@ ms.locfileid: "87105484"
 - <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> 메서드는 쿼리가 열거될 때까지 연기하는 대신 강제로 쿼리를 즉시 실행하는 데 사용될 수 있습니다.
 
 ## <a name="methods"></a>메서드
+
  다음 표에는 데이터-형식 변환을 수행하는 표준 쿼리 연산자 메서드가 나와 있습니다.
 
  이 표에서 이름이 "As"로 시작하는 변환 메서드는 소스 컬렉션의 정적 형식을 변경하지만 열거하지는 않습니다. 이름이 "To"로 시작하는 메서드는 소스 컬렉션을 열거하고 항목을 해당하는 컬렉션 형식에 삽입합니다.

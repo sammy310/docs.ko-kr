@@ -2,12 +2,12 @@
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888217"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172211"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -91,17 +91,17 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>이벤트 버스로 게시할 경우 원자성 및 복원력 디자인
 
-이벤트 버스와 같은 분산 메시징 시스템을 통해 통합 이벤트를 게시할 경우 원본 데이터베이스를 업데이트하고 이벤트를 게시하는 데 기본적인 문제가 있습니다(즉, 작업이 모두 완성되거나 모두 완성되지 않음). 예를 들어 위에 나와 있는 간단 예제의 코드는 제품 가격이 변경될 때 데이터베이스에 데이터를 커밋한 다음, ProductPriceChangedIntegrationEvent 메시지를 게시합니다. 초기에는 이러한 두 작업을 하나의 큰 단위로 수행해야만 하는 것처럼 보입니다. 하지만 [MSMQ(Microsoft Message Queuing)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 등의 기존 시스템과 같은 방식으로 데이터베이스 및 메시지 브로커가 포함된 분산 트랜잭션을 사용하는 경우에는 [CAP 공식](https://www.quora.com/What-Is-CAP-Theorem-1)에서 설명하는 이유 때문에 적절하지 않습니다.
+이벤트 버스와 같은 분산 메시징 시스템을 통해 통합 이벤트를 게시할 경우 원본 데이터베이스를 업데이트하고 이벤트를 게시하는 데 기본적인 문제가 있습니다(즉, 작업이 모두 완성되거나 모두 완성되지 않음). 예를 들어 위에 나와 있는 간단 예제의 코드는 제품 가격이 변경될 때 데이터베이스에 데이터를 커밋한 다음, ProductPriceChangedIntegrationEvent 메시지를 게시합니다. 초기에는 이러한 두 작업을 하나의 큰 단위로 수행해야만 하는 것처럼 보입니다. 하지만 [MSMQ(Microsoft Message Queuing)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) 등의 기존 시스템과 같은 방식으로 데이터베이스 및 메시지 브로커가 포함된 분산 트랜잭션을 사용하는 경우에는 [CAP 공식](https://www.quora.com/What-Is-CAP-Theorem-1)에서 설명하는 이유 때문에 적절하지 않습니다.
 
 기본적으로 마이크로 서비스는 확장 가능하고 가용성이 높은 시스템을 빌드하는 데 사용합니다. 간단히 말해, CAP 공식에 따르면 지속적으로 사용 가능하며 일관성이 높고 ‘그리고’ 모든 파티션에 허용되는 분산 데이터베이스(또는 해당 모델을 소유하는 마이크로 서비스)를 빌드할 수 없습니다.  다음과 같은 특성 중 두 가지를 선택해야 합니다.
 
-마이크로 서비스 기반 아키텍처에서는 가용성과 허용을 선택해야 하며 강력한 일관성은 중요하지 않습니다. 따라서 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)와 함께 Windows DTC(Distributed Transaction Coordinator) 기반 [분산 트랜잭션](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))을 구현할 때와 마찬가지로 오늘날 대부분의 마이크로 서비스 기반 애플리케이션에서는 일반적으로 메시징에 분산 트랜잭션을 사용하지 않습니다.
+마이크로 서비스 기반 아키텍처에서는 가용성과 허용을 선택해야 하며 강력한 일관성은 중요하지 않습니다. 따라서 [MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))와 함께 Windows DTC(Distributed Transaction Coordinator) 기반 [분산 트랜잭션](/previous-versions/windows/desktop/ms681205(v=vs.85))을 구현할 때와 마찬가지로 오늘날 대부분의 마이크로 서비스 기반 애플리케이션에서는 일반적으로 메시징에 분산 트랜잭션을 사용하지 않습니다.
 
 처음의 문제와 해당 예를 다시 살펴보겠습니다. 데이터베이스를 업데이트한 후부터(이 경우 `_context.SaveChangesAsync()`가 포함된 코드 라인 직후) 통합 이벤트를 게시하기 전까지 서비스가 충돌하는 경우 전체 시스템이 비일관 상태가 될 수 있습니다. 이 경우 처리하는 특정 비즈니스 작업에 따라 중요 비즈니스 문제가 될 수 있습니다.
 
 앞의 아키텍처 섹션에서 언급했듯이 몇 가지 방식으로 이 문제를 해결할 수 있습니다.
 
-- [전체 이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴 사용.
+- [전체 이벤트 소싱](/azure/architecture/patterns/event-sourcing) 패턴 사용.
 
 - [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
 

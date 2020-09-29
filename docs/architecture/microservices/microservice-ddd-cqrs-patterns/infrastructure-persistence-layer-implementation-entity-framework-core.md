@@ -2,12 +2,12 @@
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: f9d97319d378b6fd3eb681fd2873e5fbeead787f
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172354"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -367,7 +367,7 @@ EF Core 1.1부터 제공되는 이 기능을 사용하면 열을 필드로 직�
 
 ### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>인프라 수준에서 숨겨진 EF Core의 섀도 속성 사용
 
-EF Core의 섀도 속성은 엔터티 클래스 모델에 존재하지 않는 속성입니다. 이러한 속성의 값과 상태는 인프라 수준에서 [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) 클래스에 순수하게 유지됩니다.
+EF Core의 섀도 속성은 엔터티 클래스 모델에 존재하지 않는 속성입니다. 이러한 속성의 값과 상태는 인프라 수준에서 [ChangeTracker](/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) 클래스에 순수하게 유지됩니다.
 
 ## <a name="implement-the-query-specification-pattern"></a>쿼리 사양 패턴 구현
 
