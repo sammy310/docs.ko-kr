@@ -3,14 +3,15 @@ title: 데이터 분할(C#)
 description: LINQ에서 데이터를 분할하는 방법을 알아봅니다. 분할 작업의 결과를 보여 주는 그림을 봅니다.
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 3c85eaec2dc01b683234a27714750354982be440
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 31beacd672addb3eb38ade8f2bf9cfae25f4d27a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302609"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176268"
 ---
 # <a name="partitioning-data-c"></a>데이터 분할(C#)
+
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스에 대한 세 가지 분할 작업의 결과를 보여 줍니다. 첫 번째 작업은 시퀀스에서 처음 세 개의 요소를 반환합니다. 두 번째 작업은 처음 세 개의 요소를 건너뛰고 나머지 요소를 반환합니다. 세 번째 작업은 시퀀스에서 처음 두 개의 요소를 건너뛰고 다음 세 개의 요소를 반환합니다.  

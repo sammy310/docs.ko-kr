@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
 ms.date: 08/17/2020
-ms.openlocfilehash: 72395acafb403a4e34858eb2b982ec83b9f3cee1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173421"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -23,7 +23,7 @@ Application 폴더의 하위 폴더를 보여 주는 Ordering.API 마이크로 �
 
 **그림 7-23**. Ordering.API ASP.NET Core Web API 프로젝트의 애플리케이션 계층
 
-ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내장 IoC 컨테이너](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)(IServiceProvider 인터페이스로 표시됨)가 포함되며, ASP.NET은 DI를 통해 특정 서비스를 사용할 수 있도록 합니다. ASP.NET Core는 DI를 통해 주입될 사용자가 등록하는 모든 형식에 *서비스*라는 용어를 사용합니다. 내장 컨테이너의 서비스는 애플리케이션의 Startup 클래스에 있는 ConfigureServices 메서드에 구성합니다. 종속성은 형식에 필요하며 IoC 컨테이너에 등록하는 서비스에 구현됩니다.
+ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내장 IoC 컨테이너](/aspnet/core/fundamentals/dependency-injection)(IServiceProvider 인터페이스로 표시됨)가 포함되며, ASP.NET은 DI를 통해 특정 서비스를 사용할 수 있도록 합니다. ASP.NET Core는 DI를 통해 주입될 사용자가 등록하는 모든 형식에 *서비스*라는 용어를 사용합니다. 내장 컨테이너의 서비스는 애플리케이션의 Startup 클래스에 있는 ConfigureServices 메서드에 구성합니다. 종속성은 형식에 필요하며 IoC 컨테이너에 등록하는 서비스에 구현됩니다.
 
 일반적으로 인프라 개체를 구현하는 종속성을 주입하려고 합니다. 일반적으로 주입하는 종속성은 리포지토리입니다. 하지만 다른 인프라 종속성을 주입할 수도 있습니다. 간단한 구현을 위해 작업 단위 패턴 개체(EF DbContext 개체)를 직접 주입할 수 있는데, DBContext 역시 인프라 지속성 개체의 구현이기 때문입니다.
 

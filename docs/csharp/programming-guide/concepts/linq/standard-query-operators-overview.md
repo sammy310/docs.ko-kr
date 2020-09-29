@@ -3,14 +3,15 @@ title: 표준 쿼리 연산자 개요(C#)
 description: LINQ 표준 쿼리 연산자는 C#에서 필터링, 프로젝션, 집계, 정렬 등 다양한 쿼리 기능을 제공합니다.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1ff98e47641dbe7a884b7d6c7758c1fe61b95091
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178777"
 ---
 # <a name="standard-query-operators-overview-c"></a>표준 쿼리 연산자 개요(C#)
+
 *표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.  
   
  <xref:System.Collections.Generic.IEnumerable%601> 형식의 개체와 작동하는 연산자와 <xref:System.Linq.IQueryable%601> 형식의 개체와 작동하는 연산자로 두 가지 LINQ 표준 쿼리 연산자 집합이 있습니다. 각 집합을 구성하는 메서드는 각각 <xref:System.Linq.Enumerable> 및 <xref:System.Linq.Queryable> 클래스의 정적 멤버입니다. 작동하는 형식의 *확장 메서드*로 정의됩니다. 확장 메서드는 정적 메서드 구문 또는 인스턴스 메서드 구문을 사용하여 호출할 수 있습니다.  
@@ -68,12 +69,15 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>쿼리 식 구문  
+
  자주 사용되는 표준 쿼리 연산자 중 일부에는 ‘쿼리 식’의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 전용 키워드와 해당 구문이 있는 표준 쿼리 연산자에 대한 자세한 내용은 [표준 쿼리 연산자에 대한 쿼리 식 구문(C#)](./query-expression-syntax-for-standard-query-operators.md)을 참조하세요.  
   
 ## <a name="extending-the-standard-query-operators"></a>표준 쿼리 연산자 확장  
+
  대상 도메인 또는 기술에 적합한 도메인 특정 메서드를 만들어 표준 쿼리 연산자 집합을 강화할 수 있습니다. 또한 원격 평가, 쿼리 변환, 최적화 등의 추가 서비스를 제공하는 고유한 구현으로 표준 쿼리 연산자를 바꿀 수도 있습니다. 예제는 <xref:System.Linq.Enumerable.AsEnumerable%2A>을 참조하세요.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  다음 링크를 누르면 기능에 따라 다양한 표준 쿼리 연산자에 대한 추가 정보를 제공하는 문서로 이동합니다.  
   
  [데이터 정렬(C#)](./sorting-data.md)  

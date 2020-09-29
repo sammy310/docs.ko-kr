@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559150"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176242"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
+
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
   
 ## <a name="create-a-c-project"></a>C# 프로젝트 만들기  
@@ -40,6 +41,7 @@ ms.locfileid: "90559150"
 5. 프로젝트에 System.Core.dll에 대한 참조 및 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문이 있습니다.  
   
 ## <a name="create-an-in-memory-data-source"></a>메모리 내 데이터 소스 만들기  
+
  쿼리의 데이터 소스는 간단한 `Student` 개체 목록입니다. 각 `Student` 레코드에는 이름, 성 및 클래스의 테스트 점수를 나타내는 정수 배열이 있습니다. 프로젝트에 이 코드를 복사합니다. 다음 특성에 주의합니다.  
   
 - `Student` 클래스는 자동으로 구현된 속성으로 구성됩니다.  
@@ -173,6 +175,7 @@ ms.locfileid: "90559150"
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>다음 단계  
+
  C#에서 쿼리 작업의 기본 사항에 익숙해지면 관심이 있는 특정 LINQ 공급자 형식에 대한 설명서와 샘플을 읽을 준비가 된 것입니다.  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

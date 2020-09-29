@@ -3,14 +3,15 @@ title: 프로젝션 작업(C#)
 description: 프로젝션 작업에 대해 알아봅니다. 이러한 작업은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환합니다.
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6128b1bb2e7ba3dbb1b428d475acc307ba931013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299164"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186005"
 ---
 # <a name="projection-operations-c"></a>프로젝션 작업(C#)
+
 프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다. 프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다. 속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다. 원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.  
   
  다음 섹션에는 프로젝션을 수행하는 표준 쿼리 연산자 메서드가 나와 있습니다.  
@@ -25,6 +26,7 @@ ms.locfileid: "87299164"
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
   
 ### <a name="select"></a>선택  
+
  다음 예제에서는 `select` 절을 사용하여 문자열 목록의 각 문자열에서 첫 글자를 프로젝션합니다.  
   
 ```csharp  
@@ -46,6 +48,7 @@ foreach (string s in query)
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
+
  다음 예제에서는 여러 `from` 절을 사용하여 문자열 목록의 각 문자열에서 각 단어를 프로젝션합니다.  
   
 ```csharp  
@@ -72,6 +75,7 @@ foreach (string s in query)
 ```  
   
 ## <a name="select-versus-selectmany"></a>Select 및 SelectMany  
+
  `Select()` 및 `SelectMany()` 둘 다의 작업은 소스 값에서 결과 값을 생성하는 것입니다. `Select()`는 모든 소스 값에 대해 하나의 결과 값을 생성합니다. 따라서 전체 결과는 소스 컬렉션과 동일한 개수의 요소가 들어 있는 컬렉션입니다. 반면, `SelectMany()`는 각 소스 값에서 연결된 하위 컬렉션을 포함하는 하나의 전체 결과를 생성합니다. `SelectMany()`에 대한 인수로 전달되는 변환 함수는 각 소스 값에 대해 열거 가능한 값 시퀀스를 반환해야 합니다. 이러한 열거 가능한 시퀀스는 `SelectMany()`에 의해 연결되어 하나의 큰 시퀀스를 만듭니다.  
   
  다음 두 그림은 이러한 두 메서드의 작업 간에 개념적 차이를 보여 줍니다. 각각의 경우에서 선택기(변환) 함수는 각 소스 값에서 꽃의 배열을 선택한다고 가정합니다.  
@@ -85,6 +89,7 @@ foreach (string s in query)
  ![SelectMany() 작업을 보여주는 그래픽](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>코드 예제  
+
  다음 예제에서는 `Select()` 및 `SelectMany()`의 동작을 비교합니다. 코드는 소스 컬렉션의 각 꽃 이름 목록에서 처음 두 항목을 사용하여 꽃 "부케"를 만듭니다. 이 예제에서 변환 함수 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>가 사용하는 “단일 값”은 값 컬렉션입니다. 이 경우 각 하위 시퀀스의 각 문자열을 열거하기 위해 `foreach` 루프가 추가로 필요합니다.  
   
 ```csharp  

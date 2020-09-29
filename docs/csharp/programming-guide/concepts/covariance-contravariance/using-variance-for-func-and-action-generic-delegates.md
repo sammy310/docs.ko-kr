@@ -3,19 +3,21 @@ title: Func 및 Action 제네릭 대리자에 가변성 사용(C#)
 description: 코드의 유연성을 높이기 위해 Func 및 Action 제네릭 대리자에 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: d7174b0f734d10ab69d0936cb5ca4aa2f4fafdf7
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 613470d7870aa6a917d19904a92e56f0e61f1ed9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105708"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176346"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func 및 Action 제네릭 대리자에 가변성 사용(C#)
+
 이러한 예제는 메서드를 다시 사용하고 코드의 유연성을 높이기 위해 `Func` 및 `Action` 제네릭 대리자에서 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법을 보여 줍니다.  
   
  공변성(covariance) 및 반공변성(contravariance)에 대한 자세한 내용은 [대리자에서의 분산(C#)](./variance-in-delegates.md)을 참조하세요.  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 대리자 사용  
+
  다음 예제는 `Func` 대리자에서 공변성(covariance) 지원의 이점을 보여 줍니다. `FindByTitle` 메서드는 `String` 형식의 매개 변수를 가져오고 `Employee` 형식의 개체를 반환합니다. 그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Func<String, Person>` 대리자에 할당할 수 있습니다.  
   
 ```csharp  
@@ -50,6 +52,7 @@ class Program
 ```  
   
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>반공변 형식 매개 변수가 있는 대리자 사용  
+
  다음 예제에서는 제네릭 `Action` 대리자에서 반공변성(contravariance) 지원의 이점을 보여 줍니다. `AddToContacts` 메서드는 `Person` 형식의 매개 변수를 사용합니다. 그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Action<Employee>` 대리자에 할당할 수 있습니다.  
   
 ```csharp  

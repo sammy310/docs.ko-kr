@@ -6,16 +6,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102049"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178868"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
 ## <a name="reference-types"></a>참조 형식  
+
 [클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 9d927e8517ddbdb1c5a9a8aa8ca3c321bf7e8d9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301985"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178543"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>디렉터리 트리를 반복하는 방법(C# 프로그래밍 가이드)
+
 "디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=nameWithType> 또는 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 개체의 형태로 추가 정보를 검색할 수 있습니다.  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 > NTFS 파일 시스템에는 *재분석 지점*이 *연결 지점*, *기호 링크* 및 *하드 링크* 형태로 포함될 수 있습니다. <xref:System.IO.DirectoryInfo.GetFiles%2A>, <xref:System.IO.DirectoryInfo.GetDirectories%2A> 등의 .NET 메서드는 재분석 지점 아래의 하위 디렉터리를 반환하지 않습니다. 이 동작은 두 재분석 지점이 서로를 가리키는 경우 무한 루프로 전환되는 위험으로부터 보호합니다. 일반적으로 재분석 지점을 다룰 때는 파일이 실수로 수정되거나 삭제되지 않도록 특별히 주의해야 합니다. 재분석 지점을 정밀하게 제어해야 하는 경우 플랫폼 호출 또는 네이티브 코드를 사용하여 적절한 Win32 파일 시스템 메서드를 직접 호출합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 재귀를 사용하여 디렉터리 트리를 탐색하는 방법을 보여 줍니다. 재귀 방식은 세련된 방식이긴 하지만 디렉터리 트리가 크고 깊이 중첩된 경우 스택 오버플로 예외가 발생할 가능성이 있습니다.  
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
@@ -44,6 +46,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 재귀를 사용하지 않고 디렉터리 트리의 파일 및 폴더를 반복하는 방법을 보여 줍니다. 이 기술은 LIFO(후입선출) 스택인 제네릭 <xref:System.Collections.Generic.Stack%601> 컬렉션 형식을 사용합니다.  
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
@@ -55,6 +58,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  디렉터리 트리의 내용을 메모리 내 또는 디스크에 저장해야 하는 경우 최상의 옵션은 각 파일의 <xref:System.IO.FileSystemInfo.FullName%2A> 속성(`string` 형식)만 저장하는 것입니다. 그런 다음 이 문자열을 사용하여 필요에 따라 <xref:System.IO.FileInfo> 또는 <xref:System.IO.DirectoryInfo> 개체를 새로 만들거나, 추가 처리가 필요한 파일을 열 수 있습니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  강력한 파일 반복 코드는 파일 시스템의 여러 복잡성을 고려해야 합니다. Windows 파일 시스템에 대한 자세한 내용은 [NTFS 개요](/windows-server/storage/file-server/ntfs-overview)를 참조하세요.  
   
 ## <a name="see-also"></a>참조

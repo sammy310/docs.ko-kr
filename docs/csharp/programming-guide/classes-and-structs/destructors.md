@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474893"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174305"
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
+
 종료자(**소멸자**라고도 함)는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 최종 정리를 수행하는 데 사용됩니다.  
   
 ## <a name="remarks"></a>설명  
@@ -65,9 +66,11 @@ protected override void Finalize()
  <xref:System.GC.Collect%2A>를 호출하여 강제로 가비지를 수집할 수 있지만 대체로 성능 이슈가 발생할 수 있으므로 이 호출을 피해야 합니다.  
   
 ## <a name="using-finalizers-to-release-resources"></a>종료자를 사용하여 리소스 해제  
+
  일반적으로 C#에서는 개발자 측이 가비지 수집을 사용하는 런타임을 대상으로 하지 않는 언어만큼 많은 메모리 관리를 수행할 필요가 없습니다. 이는 .NET 가비지 수집기에서 개체에 대한 메모리 할당 및 해제를 암시적으로 관리하기 때문입니다. 그러나 애플리케이션에서 창, 파일 및 네트워크 연결 등의 관리되지 않는 리소스를 캡슐화하는 경우 종료자를 사용하여 해당 리소스를 해제해야 합니다. 개체를 종료할 수 있으면 가비지 수집기에서 개체의 `Finalize` 메서드를 실행합니다.
   
 ## <a name="explicit-release-of-resources"></a>리소스의 명시적 해제  
+
  애플리케이션에서 비용이 많이 드는 외부 리소스를 사용하는 경우 가비지 수집기에서 개체를 해제하기 전에 리소스를 명시적으로 해제하는 방법을 제공하는 것이 좋습니다. 해당 리소스를 해제하려면 <xref:System.IDisposable> 인터페이스에서 개체에 필요한 정리를 수행하는 `Dispose` 메서드를 구현합니다. 이렇게 하면 애플리케이션의 성능을 상당히 향상시킬 수 있습니다. 이렇게 리소스를 명시적으로 제어하는 경우에도 종료자는 `Dispose` 메서드 호출에 실패할 경우 리소스를 정리하는 안전한 방법이 됩니다.  
   
  리소스 정리에 대한 자세한 내용은 다음 문서를 참조하세요.  
@@ -79,6 +82,7 @@ protected override void Finalize()
 - [using 문](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 상속 체인을 구성하는 세 가지 클래스를 만듭니다. `First` 클래스는 기본 클래스이고, `Second`는 `First`에서 파생되며, `Third`는 `Second`에서 파생됩니다. 세 클래스 모두 종료자가 있습니다. `Main`에서 최다 파생 클래스의 인스턴스가 만들어집니다. 프로그램이 실행되면 세 클래스에 대한 종료자가 최다 파생부터 최소 파생까지 순서대로 자동으로 호출됩니다.  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  

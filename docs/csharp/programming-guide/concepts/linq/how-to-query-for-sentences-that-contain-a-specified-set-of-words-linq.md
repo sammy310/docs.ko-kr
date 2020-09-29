@@ -3,14 +3,15 @@ title: 지정된 단어 집합이 들어 있는 문장을 쿼리하는 방법(LI
 description: C#에서 LINQ를 사용하여 런타임에 채워질 수 있는 각 단어 집합과 일치하는 항목이 포함된 텍스트 파일에서 문장을 찾는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7c5979fc42b6446948ae974e599807b5cb8db04a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465652"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176281"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>지정된 단어 집합이 들어 있는 문장을 쿼리하는 방법(LINQ)(C#)
+
 이 예제에서는 지정된 각 단어 집합과 일치하는 항목이 포함된 문장을 텍스트 파일에서 찾는 방법을 보여 줍니다. 이 예제에서는 검색어 배열이 하드 코드되어 있지만 런타임에 동적으로 채워질 수도 있습니다. 이 예제에서 쿼리는 "Historically", "data" 및 "integrated" 단어가 포함된 문장을 반환합니다.  
   
 ## <a name="example"></a>예제  
@@ -68,6 +69,7 @@ Historically, the world of data and the world of objects have not been well inte
  <xref:System.String.Split%2A> 호출에서는 문자열의 구분 기호를 제거하기 위해 문장 부호가 구분 기호로 사용되었습니다. 이렇게 하지 않았다면, 예를 들어 `wordsToMatch` 배열의 "Historically"와 일치하지 않는 "Historically," 문자열이 있을 수 있습니다. 소스 텍스트에서 찾은 문장 부호 유형에 따라 추가 구분 기호를 사용해야 할 수도 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
 
 ## <a name="see-also"></a>참조

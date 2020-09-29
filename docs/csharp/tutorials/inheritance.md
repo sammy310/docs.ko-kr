@@ -4,12 +4,12 @@ description: C# 라이브러리 및 애플리케이션에서 상속 사용 방�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063512"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190464"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -277,6 +277,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>추상 기본 클래스 및 파생 클래스 디자인
+
 <a name="abstract"></a>
 
 앞의 예제에서는 파생 클래스에서 코드를 공유할 수 있도록 여러 메서드 구현을 제공하는 기본 클래스를 정의했습니다. 그러나 대부분의 경우 기본 클래스는 구현을 제공할 것으로 예상되지 않습니다. 대신, 기본 클래스는 *추상 메서드*를 선언하는 *추상 클래스*이며, 각 파생 클래스에서 구현해야 하는 멤버를 정의하는 템플릿으로 사용됩니다. 일반적으로 추상 기본 클래스에서 각 파생 형식의 구현은 해당 형식에 고유합니다. 클래스에서 출판물에 공통된 기능의 구현을 제공했지만, `Publication` 개체를 인스턴스화하는 것은 의미가 없으므로 클래스를 abstract 키워드로 표시했습니다.

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 1e29013b1008e1000c23804dc3056014cc7c104b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 93645ef78f1ceb3cc4cf1d20ac73112e86957293
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301959"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178517"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>텍스트 파일을 한 번에 한 줄씩 읽는 방법(C# 프로그래밍 가이드)
+
 이 예제에서는 `StreamReader` 클래스의 `ReadLine` 메서드를 사용하여 텍스트 파일 내용을 한 번에 한 줄씩 문자열로 읽어옵니다. 각 텍스트 줄은 `line` 문자열에 저장되고 화면에 표시됩니다.  
   
 ## <a name="example"></a>예제  
@@ -39,16 +40,19 @@ System.Console.ReadLine();
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  코드를 복사하고 콘솔 애플리케이션의 `Main` 메서드에 붙여넣습니다.  
   
  `"c:\test.txt"`를 실제 파일 이름으로 바꿉니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 파일이 없을 수 있는 경우  
   
 ## <a name="net-security"></a>.NET 보안  
+
  파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  
   
 ## <a name="see-also"></a>참조

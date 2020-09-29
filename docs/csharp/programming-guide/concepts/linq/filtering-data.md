@@ -3,14 +3,15 @@ title: 데이터 필터링(C#)
 description: 선택이라고도 하는 필터링은 조건에 따라 결과를 제한합니다. C#에서 필터링을 수행하는 LINQ의 표준 쿼리 연산자 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 51bf9f930ba67ba07c7c0f357910d5e36014138d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103933"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186044"
 ---
 # <a name="filtering-data-c"></a>데이터 필터링(C#)
+
 필터링은 지정된 조건을 충족하는 요소만 포함하도록 결과 집합을 제한하는 작업을 가리킵니다. 필터링은 선택이라고도 합니다.  
   
  다음 그림에서는 문자 시퀀스를 필터링한 결과를 보여 줍니다. 필터링 작업에 대한 조건자는 문자가 'A'가 되도록 지정합니다.  
@@ -27,6 +28,7 @@ ms.locfileid: "87103933"
 |Where|조건자 함수를 기반으로 하는 값을 선택합니다.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제  
+
  다음 예제에서는 `where` 절을 사용하여 배열에서 특정 길이의 문자열을 필터링합니다.  
   
 ```csharp  

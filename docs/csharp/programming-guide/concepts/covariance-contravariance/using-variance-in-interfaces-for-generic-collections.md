@@ -3,14 +3,15 @@ title: 제네릭 컬렉션용 인터페이스의 가변성 사용(C#)
 description: 제네릭 컬렉션용 공변(covariant) 및 반공변(contravariant) 인터페이스를 사용하는 방법에 대해 알아봅니다. 제네릭 컬렉션을 변환하고 비교하는 예제를 참조하세요.
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a896fe8fda3d9ad08de9a09c6a172f7d75335e7d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105673"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176307"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>제네릭 컬렉션용 인터페이스의 가변성 사용(C#)
+
 공변(covariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변(contravariant) 인터페이스는 메서드가 인터페이스에 지정된 것보다 더 적은 파생된 형식의 매개 변수를 수락하도록 허용합니다.  
   
  .NET Framework 4에서는 몇 가지 기존 인터페이스가 공변(covariant) 및 반공변(contravariant)이 되었습니다. 여기에는 <xref:System.Collections.Generic.IEnumerable%601> 및 <xref:System.IComparable%601>이 포함됩니다. 따라서 파생된 형식의 컬렉션에 대한 기본 형식의 제네릭 컬렉션과 함께 작동하는 메서드를 다시 사용할 수 있습니다.  
@@ -18,6 +19,7 @@ ms.locfileid: "87105673"
  .NET의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md)을 참조하세요.  
   
 ## <a name="converting-generic-collections"></a>제네릭 컬렉션 변환  
+
  다음 예제에서는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 공변성(Covariance) 지원의 이점을 보여 줍니다. `PrintFullName` 메서드는 `IEnumerable<Person>` 형식의 컬렉션을 매개 변수로 수락합니다. 그러나 `Employee`는 `Person`을 상속하므로 `IEnumerable<Employee>` 형식의 컬렉션에 대해 이를 다시 사용할 수 있습니다.  
   
 ```csharp  
@@ -56,6 +58,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>제네릭 컬렉션 비교  
+
  다음 예제에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 반공변성(Contravariance) 지원의 이점을 보여 줍니다. `PersonComparer` 클래스가 `IComparer<Person>` 인터페이스를 구현합니다. 그러나 `Employee`는 `Person`을 상속하므로 `Employee` 형식 개체의 시퀀스를 비교하기 위해 이 클래스를 다시 사용할 수 있습니다.  
   
 ```csharp  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: d70e786446fb198afb4e0311757cacb65b706f47
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: f1845601f2a0237206d05e3cc3cbbca68492020c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864204"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186135"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>인스턴스 생성자(C# 프로그래밍 가이드)
 
@@ -41,11 +41,13 @@ ms.locfileid: "86864204"
  이 예제에서 `Circle` 클래스는 `Circle`이 파생되는 `Shape`에서 제공하는 생성자에 반경과 높이를 나타내는 값을 전달합니다. `Shape` 및 `Circle`을 사용하는 전체 예제는 이 항목에서 예제 3으로 나와 있습니다.  
   
 ## <a name="example-1"></a>예제 1  
+
  다음 예제에서는 인수 없는 클래스 생성자와 두 개의 인수를 사용하는 클래스 생성자가 있는 클래스를 보여 줍니다.  
   
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>예제 2  
+
  이 예제에서 `Person` 클래스에는 생성자가 없으며, 매개 변수 없는 생성자가 자동으로 제공되고 필드는 해당 기본값으로 초기화됩니다.  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
@@ -53,6 +55,7 @@ ms.locfileid: "86864204"
  `age`의 기본값은 `0`이고, `name`의 기본값은 `null`입니다.
   
 ## <a name="example-3"></a>예제 3  
+
  다음 예제에서는 기본 클래스 이니셜라이저를 사용하는 방법을 보여 줍니다. `Circle` 클래스는 제네릭 클래스 `Shape`에서 파생되고, `Cylinder` 클래스는 `Circle` 클래스에서 파생됩니다. 각 파생 클래스의 생성자는 해당 기본 클래스 이니셜라이저를 사용합니다.  
   
  [!code-csharp[csProgGuideObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#9)]  

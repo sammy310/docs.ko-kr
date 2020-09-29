@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 651d9cb98444c0729b97f523cc3d688f0f8d51d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173371"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -342,7 +342,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 언급했듯이, 도메인 이벤트를 사용하여 도메인 내 변경의 파생 작업을 명시적으로 구현합니다. DDD 용어를 사용하려면, 도메인 이벤트를 사용하여 하나 또는 여러 집합체 전반에 파생 작업을 명시적으로 구현합니다. 추가적으로, 데이터베이스 잠금의 확장성을 높이고 영향을 줄이려면 동일한 도메인 내의 집합체 간에 최종 일관성을 사용합니다.
 
-참조 앱은 [MediatR](https://github.com/jbogard/MediatR)을 사용하여 단일 트랜잭션 내에서 여러 집계 간에 도메인 이벤트를 동기적으로 전파합니다. 그러나 [RabbitMQ](https://www.rabbitmq.com/) 또는 [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) 같은 일부 AMQP 구현을 사용하여 최종 일관성을 통해 도메인 이벤트를 비동기적으로 전파할 수 있지만, 위에서 설명한 대로 오류가 발생할 경우 보정 작업에 대한 필요성을 고려해야 합니다.
+참조 앱은 [MediatR](https://github.com/jbogard/MediatR)을 사용하여 단일 트랜잭션 내에서 여러 집계 간에 도메인 이벤트를 동기적으로 전파합니다. 그러나 [RabbitMQ](https://www.rabbitmq.com/) 또는 [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) 같은 일부 AMQP 구현을 사용하여 최종 일관성을 통해 도메인 이벤트를 비동기적으로 전파할 수 있지만, 위에서 설명한 대로 오류가 발생할 경우 보정 작업에 대한 필요성을 고려해야 합니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

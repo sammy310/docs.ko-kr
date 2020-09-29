@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 83dbd2dc497fafaf1922f8ad53208d0ab14f14a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063668"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185901"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>대리자를 선언, 인스턴스화, 사용하는 방법(C# 프로그래밍 가이드)
+
 C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수 있습니다.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -38,6 +39,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
  대리자를 사용하면 서점 데이터베이스와 클라이언트 코드 간에 기능을 효율적으로 구분할 수 있습니다. 클라이언트 코드는 책이 저장되는 방식이나 서점 코드가 문고판 책을 찾는 방식을 알 수 없습니다. 서점 코드는 발견된 문고판 책에 대해 수행되는 처리를 알 수 없습니다.  
   
 ## <a name="example"></a>예제  
+
  [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  

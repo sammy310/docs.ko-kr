@@ -4,12 +4,12 @@ description: 식 트리를 지원하는 프레임워크 형식, 식 트리 만�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 548f5ba6a2de00d9556621791515555b6f6a325c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146088"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180441"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>식 트리를 지원하는 프레임워크 형식
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 이 간단한 예제를 통해 식 트리를 만들고 사용하는 데 많은 형식이 관련됨을 확인할 수 있습니다. 이러한 복잡성은 C# 언어에서 제공하는 풍부한 어휘의 기능을 제공하는 데 필요합니다.
 
 ## <a name="navigating-the-apis"></a>API 탐색
+
 C# 언어의 거의 모든 구문 요소에 매핑되는 식 노드 유형이 있습니다. 각 형식에는 해당 언어 요소 형식에 대한 특정 메서드가 있습니다. 한 번에 기억해야 할 사항이 많습니다. 다음은 모든 사항을 기억하는 대신 식 트리로 작업할 때 사용할 수 있는 기술입니다.
 
 1. `ExpressionType` 열거형의 멤버를 확인하여 검색할 수 있는 노드를 결정합니다. 실제로 식 트리를 트래버스하고 이해하려는 경우에 도움이 됩니다.
