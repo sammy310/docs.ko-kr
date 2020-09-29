@@ -929,6 +929,8 @@ items:
                         href: code-analysis/quality-rules/ca2249.md
               - name: 코드 스타일 규칙
                 href: /visualstudio/ide/editorconfig-language-conventions
+          - name: 플랫폼 호환성 분석기
+            href: ../standard/analyzers/platform-compat-analyzer.md
           - name: API 분석기
             href: ../standard/analyzers/api-analyzer.md
           - name: 이식성 분석기
