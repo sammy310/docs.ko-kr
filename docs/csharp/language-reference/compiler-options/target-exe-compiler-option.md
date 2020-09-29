@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 3cea52fe872fcb407206ee2063b93dc81447a3b2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ae1706f1ecdd396e24711070d19420faa6d34761
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193765"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe(C# 컴파일러 옵션)
+
 **-target:exe** 옵션을 사용하면 컴파일러가 콘솔 애플리케이션 실행 파일(EXE)을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89128506"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  기본적으로 **-target:exe** 옵션이 적용됩니다. 실행 파일은 .exe 확장명으로 생성됩니다.  
   
  [-target:winexe](./target-winexe-compiler-option.md)를 사용하여 Windows 프로그램 실행 파일을 만드세요.  
@@ -47,6 +49,7 @@ ms.locfileid: "89128506"
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 명령줄은 각각 `in.cs`를 컴파일하고 `in.exe`를 만듭니다.  
   
 ```console  

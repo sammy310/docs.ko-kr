@@ -3,14 +3,15 @@ title: 데이터 정렬(C#)
 description: C#의 LINQ 정렬 작업 및 정렬 작업을 수행하는 표준 쿼리 연산자 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0665e5dec95fd2929d24d82568de66597df1c0bd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302336"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195508"
 ---
 # <a name="sorting-data-c"></a>데이터 정렬(C#)
+
 정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다. 첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다. 두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.  
   
  다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다.
@@ -34,6 +35,7 @@ ms.locfileid: "87302336"
 ### <a name="primary-sort-examples"></a>1차 정렬 예제  
   
 #### <a name="primary-ascending-sort"></a>1차 오름차순 정렬  
+
  다음 예제에서는 LINQ 쿼리에 `orderby` 절을 사용하여 배열의 문자열을 문자열 길이의 오름차순으로 정렬하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -57,6 +59,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>1차 내림차순 정렬  
+
  다음 예제에서는 LINQ 쿼리에 `orderby descending` 절을 사용하여 문자열을 첫 글자의 내림차순으로 정렬하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -82,6 +85,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>2차 정렬 예제  
   
 #### <a name="secondary-ascending-sort"></a>2차 오름차순 정렬  
+
  다음 예제에서는 LINQ 쿼리에 `orderby` 절을 사용하여 배열의 문자열에 대해 1차 및 2차 정렬을 수행하는 방법을 보여 줍니다. 문자열은 길이의 오름차순으로 1차 정렬된 다음 문자열 첫 글자의 오름차순으로 2차 정렬됩니다.  
   
 ```csharp  
@@ -105,6 +109,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>2차 내림차순 정렬  
+
  다음 예제에서는 LINQ 쿼리에 `orderby descending` 절을 사용하여 1차 정렬을 오름차순으로 수행한 다음 2차 정렬을 내림차순으로 수행하는 방법을 보여 줍니다. 문자열은 길이순으로 1차 정렬된 다음 문자열 첫 글자순으로 2차 정렬됩니다.  
   
 ```csharp  

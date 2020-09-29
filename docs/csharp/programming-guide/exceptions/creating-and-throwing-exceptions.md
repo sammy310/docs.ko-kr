@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 77a1e8eb4d442e66f8b9ed17a5881661a5990a35
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302050"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195495"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>예외 만들기 및 Throw(C# 프로그래밍 가이드)
+
 예외는 프로그램을 실행하는 동안 오류가 발생했음을 나타내는 데 사용됩니다. 오류를 설명하는 예외 개체가 만들어지고 [throw](../../language-reference/keywords/throw.md) 키워드를 통해 *throw*됩니다. 그런 다음 런타임에 가장 호환성이 높은 예외 처리기를 검색합니다.  
   
  프로그래머는 다음 조건 중 하나 이상에 해당할 경우 예외를 throw해야 합니다.  
@@ -45,6 +46,7 @@ ms.locfileid: "87302050"
  public 및 protected 메서드는 의도한 함수를 완료할 수 없을 때마다 예외를 throw해야 합니다. throw된 예외 클래스는 오류 조건에 맞을 수 있는 가장 구체적인 예외여야 합니다. 이러한 예외는 클래스 기능의 일부로 문서화해야 하고 파생 클래스 또는 원래 클래스의 업데이트는 이전 버전과의 호환성을 위해 같은 동작을 유지해야 합니다.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>예외를 throw할 때 피해야 하는 작업  
+
  다음 목록은 예외를 throw할 때 피해야 할 사례를 나타냅니다.  
   
 - 프로그램 흐름을 일반 예외의 일부로 변경하는 데는 예외를 사용하면 안 됩니다. 오류 조건을 보고하고 처리하는 데만 예외를 사용해야 합니다.  
@@ -56,6 +58,7 @@ ms.locfileid: "87302050"
 - 릴리스 모드가 아닌 디버그 모드에서 throw될 수 있는 예외를 만들지 마세요. 개발 단계에서 런타임 오류를 식별하려면 대신 디버그 어설션을 사용하세요.  
   
 ## <a name="defining-exception-classes"></a>예외 클래스 정의  
+
  프로그램에서는 <xref:System> 네임스페이스의 미리 정의된 예외 클래스를 throw하거나(이전에 언급한 위치 제외) <xref:System.Exception>에서 파생시켜 자체 예외 클래스를 만들 수 있습니다. 파생 클래스는 매개 변수 없는 생성자, 메시지 속성을 설정하는 생성자, <xref:System.Exception.Message%2A> 및 <xref:System.Exception.InnerException%2A> 속성을 설정하는 생성자 두 개를 포함하여 네 개 이상의 생성자를 정의해야 합니다. 네 번째 생성자는 예외를 serialize하는 데 사용됩니다. 새 예외 클래스는 serialize할 수 있어야 합니다. 예를 들어:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  

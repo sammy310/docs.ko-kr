@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125022"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193883"
 ---
 # <a name="-out-c-compiler-options"></a>-out(C# 컴파일러 옵션)
+
 **-out** 옵션은 출력 파일의 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "89125022"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `filename`  
  컴파일러에서 생성된 출력 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
+
  명령줄에서 컴파일에 대해 여러 출력 파일을 지정할 수 있습니다. 컴파일러는 **-out** 옵션 뒤에 하나 이상의 소스 코드 파일이 있을 것으로 예상합니다. 그런 다음 **-out** 옵션으로 지정된 출력 파일에 모든 소스 코드 파일이 컴파일됩니다.  
   
  만들려는 파일의 전체 이름과 확장명을 지정합니다.  
@@ -59,6 +62,7 @@ ms.locfileid: "89125022"
      이 컴파일러 옵션을 프로그래밍 방식으로 설정하려면: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A>은 프로젝트 형식(exe, 라이브러리 등)과 어셈블리 이름의 조합으로 결정되는 읽기 전용 속성입니다. 출력 파일 이름을 설정하려면 이러한 속성 중 하나 또는 둘 다를 수정해야 합니다.  
   
 ## <a name="example"></a>예제  
+
  `t.cs`를 컴파일하고 출력 파일 `t.exe`를 만들 뿐만 아니라 `t2.cs`를 작성하고 모듈 출력 파일 `mymodule.netmodule`을 만듭니다.  
   
 ```console  

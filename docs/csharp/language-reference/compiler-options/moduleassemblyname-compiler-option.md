@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125256"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194091"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
+
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "89125256"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `assembly_name`  
  .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
+
  **-moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
   
 - .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
@@ -47,6 +50,7 @@ ms.locfileid: "89125256"
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
 ## <a name="example"></a>예제  
+
  이 샘플에서는 private 형식을 사용하여 어셈블리를 빌드하므로 friend 어셈블리가 csman_an_assembly라는 어셈블리에 액세스할 수 있습니다.  
   
 ```csharp  
@@ -67,6 +71,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>예제  
+
  이 샘플은 어셈블리 moduleassemblyname_1.dll에 public이 아닌 형식에 액세스하는 .netmodule을 빌드합니다. 이 .netmodule이 csman_an_assembly라는 어셈블리에 빌드될 것임을 알기 때문에 **-moduleassemblyname**을 지정하여 .netmodule이 friend 어셈블리(friend assembly)에 csman_an_assembly에 대한 액세스를 부여한 어셈블리의 public이 아닌 형식에 액세스하도록 할 수 있습니다.  
   
 ```csharp  
@@ -81,6 +86,7 @@ class B {
 ```  
   
 ## <a name="example"></a>예제  
+
  이 코드 샘플에서는 이전에 빌드한 어셈블리와 .netmodule을 참조하여 csman_an_assembly 어셈블리를 빌드합니다.  
   
 ```csharp  

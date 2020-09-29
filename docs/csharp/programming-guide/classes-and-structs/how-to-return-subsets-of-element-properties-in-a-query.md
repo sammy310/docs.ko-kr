@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 882d94bc82527c14bd6c038f4bf574c2211b9089
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 0ef68921b9d45e58024b37d559ee8291d8744af8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864373"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204023"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>쿼리에서 요소 속성의 하위 집합을 반환하는 방법(C# 프로그래밍 가이드)
+
 이러한 조건이 둘 다 적용되는 경우 쿼리 식에서 무명 형식을 사용합니다.  
   
 - 각 소스 요소의 속성 중 일부만 반환하려고 합니다.  
@@ -26,6 +27,7 @@ select student.ID;
 ```  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 무명 형식을 사용하여 지정된 조건과 일치하는 각 소스 요소의 속성 하위 집합만 반환하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  

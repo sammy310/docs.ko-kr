@@ -3,14 +3,15 @@ title: 집합 작업(C#)
 description: C#의 LINQ 집합 작업 및 집합 작업을 수행하는 표준 쿼리 연산자 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: ab2608b267113ad5d47a33e64cd9a5e21496f668
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8679f804adaaeada390206e3e1dd2a0711a2cbf6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302375"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195612"
 ---
 # <a name="set-operations-c"></a>집합 작업(C#)
+
 LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)에 동등한 요소가 있는지 여부에 따라 결과 집합을 생성하는 쿼리 작업을 가리킵니다.  
   
  다음 섹션에는 집합 작업을 수행하는 표준 쿼리 연산자 메서드가 나와 있습니다.  
@@ -27,6 +28,7 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
 ## <a name="comparison-of-set-operations"></a>집합 작업 비교  
   
 ### <a name="distinct"></a>Distinct  
+
  다음 예제에서는 문자 시퀀스에 대한 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 메서드의 동작을 보여줍니다. 반환된 시퀀스에는 입력 시퀀스의 고유한 요소가 포함됩니다.  
   
  ![Distinct()의 동작을 보여주는 그래픽](./media/set-operations/distinct-method-behavior.png)  
@@ -34,6 +36,7 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
  [!code-csharp-interactive[Distinct](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#1)]
   
 ### <a name="except"></a>Except  
+
  다음 예제에서는 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>의 동작을 보여줍니다. 반환된 시퀀스에는 두 번째 입력 시퀀스에 없는 첫 번째 입력 시퀀스의 요소만 포함됩니다.  
   
  ![Except&#40;&#41;의 동작을 보여 주는 그래픽.](./media/set-operations/except-behavior-graphic.png "Except의 동작을 보여 줍니다.")  
@@ -41,6 +44,7 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
 [!code-csharp-interactive[Except](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#2)]
 
 ### <a name="intersect"></a>Intersect  
+
  다음 예제에서는 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>의 동작을 보여줍니다. 반환된 시퀀스에는 입력 시퀀스 둘 다에 공통적으로 있는 요소가 포함됩니다.  
   
  ![두 시퀀스의 교집합을 보여주는 그래픽](./media/set-operations/intersection-two-sequences.png)  
@@ -48,6 +52,7 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
 [!code-csharp-interactive[Intersect](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#3)]
 
 ### <a name="union"></a>Union  
+
  다음 예제에서는 두 개의 문자 시퀀스에 대한 합집합을 보여줍니다. 반환된 시퀀스에는 두 입력 시퀀스의 고유한 요소가 모두 포함됩니다.  
   
  ![두 시퀀스의 결합을 보여주는 그래픽](./media/set-operations/union-operation-two-sequences.png)  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: c220c78a6d2c3109402a20f0de40fe9665d6c730
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 442c788595a01db9c0a1196d9e13b2a98963a38c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140817"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204348"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res(C# 컴파일러 옵션)
+
 **-win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -27,10 +28,12 @@ ms.locfileid: "89140817"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `filename`  
  출력 파일에 추가하려는 리소스 파일입니다.  
   
 ## <a name="remarks"></a>설명  
+
  Win32 리소스 파일은 [리소스 컴파일러](resource-compiler-option.md)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .res 파일이 만들어집니다.  
   
  Win32 리소스는 파일 탐색기에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵 (아이콘) 정보를 포함할 수 있습니다. **-win32res**를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 하여 버전 정보를 생성합니다.  
@@ -46,6 +49,7 @@ ms.locfileid: "89140817"
 3. **리소스 파일** 단추를 클릭한 다음 콤보 상자를 사용하여 파일을 선택합니다.  
   
 ## <a name="example"></a>예제  
+
  `in.cs`를 컴파일하고 Win32 리소스 파일 `rf.res`를 첨부하여 `in.exe`를 생성합니다.  
   
 ```console  

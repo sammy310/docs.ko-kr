@@ -8,14 +8,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8f7e222e194fc4ba96159ecd792765f64b4d1c57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128649"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193756"
 ---
 # <a name="-c-compiler-options"></a>@(C# 컴파일러 옵션)
+
 @ 옵션을 사용하면 컴파일러 옵션과 컴파일할 소스 코드 파일이 포함된 파일을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -25,13 +26,15 @@ ms.locfileid: "89128649"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `response_file`  
  컴파일러 옵션이나 컴파일할 소스 코드 파일이 나열된 파일입니다.  
   
 ## <a name="remarks"></a>설명  
+
  컴파일러 옵션 및 소스 코드 파일은 명령줄에 지정된 것처럼 컴파일러에서 처리됩니다.  
   
- 컴파일에 지시 파일을 둘 이상 지정하려면 여러 지시 파일 옵션을 지정합니다. 예:  
+ 컴파일에 지시 파일을 둘 이상 지정하려면 여러 지시 파일 옵션을 지정합니다. 예를 들면 다음과 같습니다.  
   
 ```console  
 @file1.rsp @file2.rsp  
@@ -48,6 +51,7 @@ ms.locfileid: "89128649"
  Visual Studio 개발 환경에서는 이 컴파일러 옵션을 설정할 수 없으며 프로그래밍 방식으로 변경할 수도 없습니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 샘플 지시 파일의 몇 줄입니다.  
   
 ```console  

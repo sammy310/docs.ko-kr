@@ -8,19 +8,21 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: ccbc6734d4e9bafe059dd45bfdf82af7c84438a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474490"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204036"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>추상 및 봉인 클래스와 클래스 멤버(C# 프로그래밍 가이드)
+
 [abstract](../../language-reference/keywords/abstract.md) 키워드를 사용하면, 불완전하여 파생 클래스에서 구현해야 하는 클래스 및 [클래스](../../language-reference/keywords/class.md) 멤버를 만들 수 있습니다.  
   
  [sealed](../../language-reference/keywords/sealed.md) 키워드를 사용하면, 이전에 [virtual](../../language-reference/keywords/virtual.md)로 표시되었던 클래스나 특정 클래스 멤버의 상속을 방지할 수 있습니다.  
   
 ## <a name="abstract-classes-and-class-members"></a>추상 클래스 및 클래스 멤버  
+
  클래스 정의 앞에 `abstract` 키워드를 배치하여 클래스를 추상으로 선언할 수 있습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideInheritance#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#13)]  
@@ -38,6 +40,7 @@ ms.locfileid: "86474490"
  `virtual` 메서드는 `abstract`로 선언되어도 추상 클래스에서 상속된 모든 클래스에 대해 여전히 가상입니다. 추상 메서드를 상속하는 클래스에서는 메서드의 원본 구현에 액세스할 수 없습니다. 앞의 예제에서 F 클래스의 `DoWork`에서는 D 클래스의 `DoWork`를 호출할 수 없습니다. 따라서 추상 클래스는 파생 클래스에서 가상 메서드에 대한 새 메서드 구현을 반드시 제공하도록 제한할 수 있습니다.  
   
 ## <a name="sealed-classes-and-class-members"></a>봉인 클래스 및 클래스 멤버  
+
  클래스 정의 앞에 `sealed` 키워드를 배치하여 클래스를 [sealed](../../language-reference/keywords/sealed.md)로 선언할 수 있습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  

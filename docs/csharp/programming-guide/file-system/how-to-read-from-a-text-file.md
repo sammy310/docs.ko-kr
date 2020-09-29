@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 80ac6f8412f456b23d05ee87882dca8e16a132c3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 64ac99ec0a72ba7df120f6732edccf160a351738
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301660"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201839"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>텍스트 파일에서 읽는 방법(C# 프로그래밍 가이드)
+
 이 예제에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllText%2A> 및 <xref:System.IO.File.ReadAllLines%2A>를 사용하여 텍스트 파일의 내용을 읽습니다.  
   
 <xref:System.IO.StreamReader>를 사용하는 예제는 [텍스트 파일을 한 번에 한 줄씩 읽는 방법](./how-to-read-a-text-file-one-line-at-a-time.md)을 참조하세요.
@@ -26,19 +27,23 @@ ms.locfileid: "87301660"
 > 이 예제에 사용되는 파일은 [텍스트 파일에 쓰는 방법](./how-to-write-to-a-text-file.md) 항목에서 생성되었습니다.
   
 ## <a name="example"></a>예제  
+
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  코드를 복사하고 C# 콘솔 애플리케이션에 붙여넣습니다.  
   
 [텍스트 파일에 쓰는 방법](./how-to-write-to-a-text-file.md)의 텍스트 파일을 사용하지 않는 경우 `ReadAllText` 및 `ReadAllLines`에 대한 인수를 사용자 컴퓨터의 적절한 경로 및 파일 이름으로 바꿉니다.
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  다음 조건에서 예외가 발생합니다.  
   
 - 파일이 없거나 지정된 위치에 없는 경우. 경로와 파일 이름의 철자를 확인합니다.  
   
 ## <a name="net-security"></a>.NET 보안  
+
  파일 이름을 사용하여 파일 내용을 확인하지 마세요. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  
   
 ## <a name="see-also"></a>참조

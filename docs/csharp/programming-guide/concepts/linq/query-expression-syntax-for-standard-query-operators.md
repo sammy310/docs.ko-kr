@@ -3,17 +3,19 @@ title: 표준 쿼리 연산자의 쿼리 식 구문(C#)
 description: 표준 쿼리 연산자의 쿼리 식 구문에 대해 알아봅니다. 동등한 쿼리 식 절이 있는 표준 쿼리 연산자의 목록을 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f85563de496eaf423ea7a43c6d7100bb93eae5b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299125"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195524"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>표준 쿼리 연산자의 쿼리 식 구문(C#)
+
 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리 식*의 일부로 호출할 수 있는 전용 C# 언어 키워드 구문이 있습니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  
   
 ## <a name="query-expression-syntax-table"></a>쿼리 식 구문 표  
+
  다음 표에는 동등한 쿼리 식 절이 있는 표준 쿼리 연산자가 나열되어 있습니다.  
   
 |메서드|C# 쿼리 식 구문|  

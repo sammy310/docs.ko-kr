@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194104"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource(C# 컴파일러 옵션)
+
 출력 파일에 .NET 리소스에 대한 링크를 만듭니다. 리소스 파일은 출력 파일에 추가되지 않습니다. 이 점에서 출력 파일에 리소스 파일을 포함하는 [-resource](./resource-compiler-option.md) 옵션과 다릅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "89466107"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `filename`  
  어셈블리에서 연결할 .NET 리소스 파일입니다.  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89466107"
  리소스의 접근성으로, public 또는 private입니다. 기본값은 public입니다.  
   
 ## <a name="remarks"></a>설명  
+
  기본적으로 연결된 리소스는 C# 컴파일러로 생성될 때 어셈블리에서 public입니다. 리소스를 private로 만들려면 접근성 한정자로 `private`를 지정합니다. `public` 또는 `private` 이외의 다른 한정자는 허용되지 않습니다.  
   
  **-linkresource**에는 **-target:module** 이외의 [-target](./target-compiler-option.md) 옵션 중 하나가 필요합니다.  
@@ -52,6 +55,7 @@ ms.locfileid: "89466107"
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
 ## <a name="example"></a>예제  
+
  `in.cs`를 컴파일하고 리소스 파일 `rf.resource`에 연결합니다.  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>예제  
+
  `A.cs`를 DLL로 컴파일하고, 네이티브 DLL N.dll에 연결한 다음 출력을 GAC(전역 어셈블리 캐시)에 넣습니다. 이 예제에서는 A.dll과 N.dll이 둘 다 GAC에 있습니다.  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>예제  
+
  이 예제에서는 앞의 예제와 동일한 작업을 수행하지만 어셈블리 링커 옵션을 사용합니다.  
   
 ```console  

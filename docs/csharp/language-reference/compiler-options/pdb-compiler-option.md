@@ -9,14 +9,15 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 0dcafd0fd260488922c74a2330b312e80467e779
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ced1ee1f4f079830a032a628da96a389ba27da90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124918"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193857"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb(C# 컴파일러 옵션)
+
 **-pdb** 컴파일러 옵션은 디버그 기호 파일의 이름 및 위치를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "89124918"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `filename`  
  디버그 기호 파일의 이름 및 위치입니다.  
   
 ## <a name="remarks"></a>설명  
+
  [-debug(C# 컴파일러 옵션)](./debug-compiler-option.md)를 지정하는 경우 컴파일러는 출력 파일(.exe 또는 .dll)을 만들 디렉터리에 출력 파일의 이름과 동일한 파일 이름으로 .pdb 파일을 만듭니다.  
   
  **-pdb**를 사용하면 .pdb 파일에 대해 기본값이 아닌 파일 이름과 위치를 지정할 수 있습니다.  
@@ -37,6 +40,7 @@ ms.locfileid: "89124918"
  Visual Studio 개발 환경에서는 이 컴파일러 옵션을 설정할 수 없으며 프로그래밍 방식으로 변경할 수도 없습니다.  
   
 ## <a name="example"></a>예제  
+
  `t.cs`를 컴파일하고 tt.pdb라는 .pdb 파일을 만듭니다.  
   
 ```console  

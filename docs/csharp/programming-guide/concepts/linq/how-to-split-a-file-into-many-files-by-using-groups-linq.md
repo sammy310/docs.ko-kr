@@ -3,14 +3,15 @@ title: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LIN
 description: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301062"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203932"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
+
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  

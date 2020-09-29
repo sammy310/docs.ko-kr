@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: ab906912bc4bfab40e459c92a823b915240b8d55
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 31a7ee5eacb2e7cd6b24c4a2276ce6e07fcc67e1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194026"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn(C# 컴파일러 옵션)
+
 **-nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "89125087"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `number1`, `number2`  
  컴파일러에서 표시하지 않으려는 경고 번호입니다.  
   
 ## <a name="remarks"></a>설명  
+
  경고 식별자의 숫자 부분만 지정해야 합니다. 예를 들어 CS0028을 표시하지 않으려면 `-nowarn:28`을 지정할 수 있습니다.  
   
  컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `-nowarn`에 전달된 경고 번호를 자동으로 무시합니다. 예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.  

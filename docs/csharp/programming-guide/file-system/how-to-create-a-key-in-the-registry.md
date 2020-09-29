@@ -7,14 +7,15 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 6db076bc22e098c285b74a8c10e8b5f456c2c55e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: c51fa61aa4c501921d5c7ace99a8c5aaf7b29f58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299983"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203919"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>레지스트리에 키를 만드는 방법(C# 프로그래밍 가이드)
+
 이 예제에서는 현재 사용자의 레지스트리, "Names" 키 아래에 "Name" 및 "Isabella" 값 쌍을 추가합니다.  
   
 ## <a name="example"></a>예제  
@@ -35,6 +36,7 @@ key.Close();
 - `Name` 매개 변수를 Names 노드 바로 아래에 있는 값 이름으로 바꿉니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
+
  레지스트리 구조를 검사하여 키에 적합한 위치를 찾습니다. 예를 들어 현재 사용자의 소프트웨어 키를 열고 회사 이름으로 키를 만들 수 있습니다. 그런 다음 회사 키에 레지스트리 값을 추가합니다.  
   
  다음 조건에서 예외가 발생할 수 있습니다.  
@@ -50,6 +52,7 @@ key.Close();
 - 레지스트리 키가 읽기 전용인 경우  
   
 ## <a name="net-security"></a>.NET 보안  
+
  로컬 컴퓨터(`Microsoft.Win32.Registry.LocalMachine`)보다 사용자 폴더(`Microsoft.Win32.Registry.CurrentUser`)에 데이터를 쓰는 것이 더 안전합니다.  
   
  레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 `Overload:Microsoft.Win32.RegistryKey.GetValue` 메서드를 재정의합니다. 키가 아직 없는 경우 null이 반환됩니다.  

@@ -3,12 +3,12 @@ title: LINQ to Objects(C#)
 description: 중간 LINQ 공급자 또는 API 없이 모든 IEnumerable 또는 IEnumerable<T> 컬렉션으로 LINQ 쿼리를 사용하는 C#의 LINQ to Objects에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 575708f14487670a4371d470dcdcf650b03c3175
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557008"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202528"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects(C#)
 
@@ -29,6 +29,7 @@ ms.locfileid: "90557008"
  이 섹션에서는 몇 가지 예제를 통해 LINQ 방식에 대해 설명합니다. 여기서 설명하는 방식 외에도 다양한 방식을 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [LINQ 및 문자열(C#)](./linq-and-strings.md)  
  LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환하는 방법을 설명합니다. 또한 이러한 원칙을 설명하는 문서의 링크도 제공합니다.  
   

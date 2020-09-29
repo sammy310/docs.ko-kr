@@ -13,14 +13,15 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125035"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193987"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize(C# 컴파일러 옵션)
+
 **-optimize** 옵션은 컴파일러에서 더 작지만 빠르고 효율적인 출력 파일을 만들기 위해 수행하는 최적화 기능을 사용하거나 사용하지 않도록 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,6 +31,7 @@ ms.locfileid: "89125035"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  또한 **-optimize**는 런타임에 코드를 최적화하도록 공용 언어 런타임에 알립니다.  
   
  최적화는 기본적으로 사용되지 않습니다. 최적화를 사용하려면 **-optimize+** 를 지정합니다.  
@@ -51,6 +53,7 @@ ms.locfileid: "89125035"
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  `t2.cs`를 컴파일하고 컴파일러 최적화를 사용하도록 설정합니다.  
   
 ```console  

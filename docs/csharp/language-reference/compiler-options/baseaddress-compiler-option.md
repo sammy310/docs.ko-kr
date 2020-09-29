@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76da496f7045f12778bba273947b913be1b94e3e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537251"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196847"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress(C# 컴파일러 옵션)
+
 **-baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "90537251"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `address`  
  DLL의 기준 주소입니다. 이 주소는 10진수, 16진수 또는 8진수 숫자로 지정할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
+
  DLL의 기본 기준 주소는 .NET 공용 언어 런타임에서 설정됩니다.  
   
  이 주소의 하위 단어는 반올림됩니다. 예를 들어 0x11110001을 지정하면 0x11110000으로 반올림됩니다.  

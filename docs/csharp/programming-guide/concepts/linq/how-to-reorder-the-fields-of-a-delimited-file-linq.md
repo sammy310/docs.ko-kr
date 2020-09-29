@@ -3,14 +3,15 @@ title: 구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
 description: C#의 LINQ에서 .csv 파일의 필드를 다시 정렬하는 방법에 대해 알아봅니다. 이 예제에서는 열의 순서를 변경하고, 열을 병합하고, 열 값을 기준으로 행을 정렬합니다.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 674e6a62112e17107eff690d7656f52488cd08c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547299"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203958"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
+
 쉼표로 구분된 값(CSV) 파일은 스프레드시트 데이터 또는 행과 열로 표현되는 다른 테이블 형식 데이터를 저장하는 데 자주 사용되는 텍스트 파일입니다. <xref:System.String.Split%2A> 메서드를 사용하여 필드를 구분하면 LINQ를 사용하여 쉽게 CSV 파일을 쿼리하고 조작할 수 있습니다. 실제로 동일한 방법을 사용하여 모든 구조적 텍스트 줄의 일부를 다시 정렬할 수 있습니다. CSV 파일로 제한되지 않습니다.  
   
  다음 예제에서는 세 개의 열이 학생의 "last name", "first name" 및 "ID"를 나타낸다고 가정합니다. 필드는 학생의 성을 기준으로 알파벳 순서로 나열됩니다. 쿼리는 ID 열이 첫 번째로 표시되고, 학생의 이름과 성을 결합하는 두 번째 열이 뒤에 오는 새 시퀀스를 생성합니다. ID 필드에 따라 줄이 다시 정렬됩니다. 결과는 새 파일에 저장되고 원래 데이터가 수정되지 않습니다.  
@@ -77,6 +78,7 @@ class CSVFiles
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
 ## <a name="see-also"></a>참조

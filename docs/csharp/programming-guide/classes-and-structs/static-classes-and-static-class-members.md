@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541879"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199018"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 
@@ -58,11 +58,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  정적 클래스는 봉인되므로 상속할 수 없습니다. <xref:System.Object>를 제외하고 어떤 클래스에서도 상속할 수 없습니다. 정적 클래스는 인스턴스 생성자를 포함할 수 없습니다. 그러나 정적 생성자는 포함할 수 있습니다. 또한 클래스에 특수한 초기화가 필요한 정적 멤버가 포함된 경우 비정적 클래스에서 정적 생성자도 정의해야 합니다. 자세한 내용은 [정적 생성자](./static-constructors.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  온도를 섭씨에서 화씨로, 화씨에서 섭씨로 변환하는 두 메서드를 포함하는 정적 클래스의 예는 다음과 같습니다.  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>정적 멤버  
+
  비정적 클래스는 정적 메서드, 필드, 속성 또는 이벤트를 포함할 수 있습니다. 정적 멤버는 클래스 인스턴스가 생성되지 않은 경우에도 클래스에 대해 호출할 수 있습니다. 정적 멤버는 항상 인스턴스 이름이 아니라 클래스 이름으로 액세스됩니다. 생성된 클래스 인스턴스 개수에 관계없이 정적 멤버의 복사본 한 개만 있습니다. 정적 메서드 및 속성은 포함하는 형식의 비정적 필드 및 이벤트에 액세스할 수 없으며, 메서드 매개 변수에 명시적으로 전달되지 않은 경우 개체의 인스턴스 변수에 액세스할 수 없습니다.  
   
  전체 클래스를 static으로 선언하는 것보다 일부 정적 멤버가 포함된 비정적 클래스를 선언하는 것이 더 일반적입니다. 정적 필드의 두 가지 일반적인 사용은 인스턴스화된 개체 개수를 유지하거나 모든 인스턴스 간에 공유해야 하는 값을 저장하는 것입니다.  

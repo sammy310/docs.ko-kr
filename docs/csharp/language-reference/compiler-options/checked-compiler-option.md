@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c92ad61b2f482631230e0e6aeb0af5716a4fcb61
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125945"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196834"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked(C# 컴파일러 옵션)
+
 **-checked** 옵션은 데이터 형식 범위를 벗어나고 [checked](../keywords/checked.md) 또는 [unchecked](../keywords/unchecked.md) 키워드의 범위 내에 없는 값을 생성하는 정수 산술 문이 런타임 예외를 일으킬지 여부를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89125945"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  `checked` 또는 `unchecked` 키워드의 범위 내에 있는 정수 산술 문에는 **-checked** 옵션이 영향을 미치지 않습니다.  
   
  `checked` 또는 `unchecked` 키워드의 범위에 없는 정수 산술 문이 데이터 형식 범위를 벗어난 값을 생성하고 **-checked+**(또는 **-checked**)가 컴파일에서 사용될 경우 해당 명령문은 런타임에 예외를 일으킵니다. **-checked-** 가 컴파일에 사용될 경우 해당 문은 런타임에 예외를 일으키지 않습니다.  
@@ -47,6 +49,7 @@ ms.locfileid: "89125945"
  프로그래밍 방식으로 이 컴파일러 옵션에 액세스하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 명령은 `t2.cs`를 컴파일합니다. 명령에서 `-checked`를 사용하면 `checked` 또는 `unchecked` 키워드의 범위에 없고 데이터 형식 범위를 벗어난 값을 생성하는 파일의 정수 산술 문이 런타임에 예외를 일으키도록 지정합니다.  
   
 ```console  

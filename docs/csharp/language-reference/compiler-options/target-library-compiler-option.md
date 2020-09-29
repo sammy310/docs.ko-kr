@@ -9,14 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 0f5b1e1bec8fd601bf111e1c2c64adf22d0a064e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128480"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193727"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library(C# 컴파일러 옵션)
+
 **-target:library** 옵션을 사용하면 컴파일러가 실행 파일(EXE) 대신 DLL(동적 연결 라이브러리)을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89128480"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  DLL은 .dll 확장명으로 생성됩니다.  
   
  [-out](./out-compiler-option.md) 옵션을 사용하여 달리 지정되지 않은 경우 첫 번째 입력 파일의 이름이 출력 파일의 이름으로 사용됩니다.  
@@ -45,6 +47,7 @@ ms.locfileid: "89128480"
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  `in.cs`를 컴파일하고 `in.dll`을 만듭니다.  
   
 ```console  

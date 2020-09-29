@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2c358b2dda400f6077ffb5ba1dfc8e6e1127fa52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125997"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196821"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport(C# 컴파일러 옵션)
+
 나중에 분석하기 위해 파일에 디버그 정보를 포함하도록 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,10 +27,12 @@ ms.locfileid: "89125997"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `file`  
  버그 보고서를 포함하려는 파일의 이름입니다.  
   
 ## <a name="remarks"></a>설명  
+
  **-bugreport** 옵션은 `file`에 다음 정보를 포함하도록 지정합니다:  
   
 - 컴파일에 포함된 모든 소스 코드 파일의 복사본입니다.  

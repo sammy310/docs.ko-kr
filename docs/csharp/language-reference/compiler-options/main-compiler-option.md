@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 61e63de8082a335b448ffee1ae35170d3a1cf6b4
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c27898de2a7cc2f3c01c51f8de1122e81b2233b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125269"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194117"
 ---
 # <a name="-main-c-compiler-options"></a>-main(C# 컴파일러 옵션)
 
@@ -27,6 +27,7 @@ ms.locfileid: "89125269"
 ```
 
 ## <a name="arguments"></a>인수
+
  `class`  
  **Main** 메서드를 포함하는 형식입니다.  
  제공된 클래스 이름은 완전히 정규화되어야 하며, 클래스를 포함하는 전체 네임스페이스와 클래스 이름을 포함해야 합니다. 예를 들어 `Main` 메서드가 `MyApplication.Core` 네임스페이스의 `Program` 클래스 내에 있는 경우 컴파일러 옵션은 `-main:MyApplication.Core.Program`이어야 합니다.

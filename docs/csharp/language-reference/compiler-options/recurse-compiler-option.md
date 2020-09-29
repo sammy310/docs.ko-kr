@@ -9,14 +9,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 3edd7e23358bc0569dae6204d519209df1ade290
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124827"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193805"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse(C# 컴파일러 옵션)
+
 -recurse 옵션을 사용하면 지정된 디렉터리(dir) 또는 프로젝트 디렉터리의 모든 자식 디렉터리에 있는 소스 코드 파일을 컴파일할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89124827"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `dir`(선택 사항)  
  검색을 시작하려는 디렉터리입니다. 지정하지 않으면 프로젝트 디렉터리에서 검색이 시작됩니다.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89124827"
  검색할 파일입니다. 와일드카드 문자가 허용됩니다.  
   
 ## <a name="remarks"></a>설명  
+
  **-recurse** 옵션을 사용하면 지정된 디렉터리(`dir`) 또는 프로젝트 디렉터리의 모든 자식 디렉터리에 있는 소스 코드 파일을 컴파일할 수 있습니다.  
   
  파일 이름에 와일드카드를 사용하면 **-recurse**를 사용하지 않고 프로젝트 디렉터리에서 일치하는 모든 파일을 컴파일할 수 있습니다.  
@@ -40,6 +43,7 @@ ms.locfileid: "89124827"
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
 ## <a name="example"></a>예제  
+
  현재 디렉터리의 모든 C# 파일을 컴파일합니다.  
   
 ```console  

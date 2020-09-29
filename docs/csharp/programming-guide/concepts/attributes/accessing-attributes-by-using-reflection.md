@@ -3,14 +3,15 @@ title: 리플렉션을 사용하여 특성 액세스(C#)
 description: GetCustomAttributes 메서드를 사용하여 C#에서 사용자 지정 특성으로 정의된 정보를 가져오려면 리플렉션을 사용합니다.
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 2ed4e844d1c98bcf265572f201bce6679fd642e9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925100"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202632"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>리플렉션을 사용하여 특성 액세스(C#)
+
 어느 정도 해당 정보를 검색하고 이에 따라 작업을 수행하지 않는다면 사용자 지정 특성을 정의하고 소스 코드에 배치할 수 있다는 사실은 별로 중요하지 않습니다. 리플렉션을 통해 사용자 지정 특성을 사용하여 정의된 정보를 검색할 수 있습니다. 핵심 메서드는 소스 코드 특성에 해당하는 런타임 항목인 개체의 배열을 반환하는 `GetCustomAttributes`입니다. 이 메서드에는 여러 개의 오버로드된 버전이 있습니다. 자세한 내용은 <xref:System.Attribute>를 참조하세요.  
   
  다음과 같은 특성 사양은  
@@ -30,6 +31,7 @@ anonymousAuthorObject.version = 1.1;
  하지만 `SampleClass`에서 특성을 쿼리할 때까지 코드가 실행되지 않습니다. `SampleClass`에서 `GetCustomAttributes`를 호출하면 `Author` 개체가 위와 같이 구성 및 초기화됩니다. 클래스에 다른 특성이 있으면 다른 특성 개체가 비슷하게 구성됩니다. 그런 다음 `GetCustomAttributes`는 `Author` 개체 및 기타 특성 개체를 배열로 반환합니다. 이 배열을 반복하고, 각 배열 요소의 형식에 따라 적용된 특성을 확인하고, 특성 개체에서 정보를 추출할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  아래는 완성된 예제입니다. 사용자 지정 특성이 정의되어 있고 여러 엔터티에 적용되었으며 리플렉션을 통해 검색합니다.  
   
 ```csharp  

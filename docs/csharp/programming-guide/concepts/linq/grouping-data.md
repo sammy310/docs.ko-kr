@@ -3,14 +3,15 @@ title: 데이터 그룹화(C#)
 description: 그룹화는 특성을 공유하는 요소의 그룹에 데이터를 넣는 것입니다. C#에서 데이터 요소를 그룹화하는 LINQ의 표준 쿼리 연산자 메서드에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 584d50fc15dd8b4ce1cfdf4766f3bc8b8383eb12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103676"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202567"
 ---
 # <a name="grouping-data-c"></a>데이터 그룹화(C#)
+
 그룹화는 데이터를 그룹에 넣어 각 그룹의 요소가 공통 특성을 공유하게 하는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스를 그룹화한 결과를 보여 줍니다. 각 그룹에 대한 키는 문자입니다.  
@@ -27,6 +28,7 @@ ms.locfileid: "87103676"
 |ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일대다 사전)에 요소를 삽입합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제  
+
  다음 코드 예제에서는 `group by` 절을 사용하여 짝수 또는 홀수인지에 따라 목록에서 정수를 그룹화합니다.  
   
 ```csharp  

@@ -3,14 +3,15 @@ title: CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 description: 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등 C#의 LINQ를 사용하여 집계 계산을 수행하는 방법을 보여줍니다.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195599"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
+
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
   
 ## <a name="to-create-the-source-file"></a>소스 파일을 만들려면  
@@ -160,6 +161,7 @@ class SumColumns
  쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다. 각 배열 요소는 열을 나타냅니다. 마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다. 탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참조
