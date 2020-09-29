@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c81486243195f7d022bd474ef6db20d069b3a018
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408577"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085154"
 ---
 # <a name="-keyfile"></a>-keyfile
+
 어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,10 +24,12 @@ ms.locfileid: "84408577"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `file`  
  필수 요소. 키를 포함하는 파일입니다. 파일 이름에 공백이 있으면 이름을 따옴표(" ")로 묶습니다.  
   
 ## <a name="remarks"></a>설명  
+
  컴파일러는 공개 키를 어셈블리 매니페스트에 삽입한 다음, 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하려면 명령줄에 `sn -k file`을 입력합니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)를 참조하세요.  
   
  `-target:module`로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [-addmodule](addmodule.md)을 사용하여 어셈블리를 컴파일할 때 생성되는 어셈블리에 통합됩니다.  

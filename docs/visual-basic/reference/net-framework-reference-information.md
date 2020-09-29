@@ -6,17 +6,19 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: ebf9040fc16666d7e40e95981d5ceee97e716acb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3ce3780818a6a07de1c594b9da3f4a5f9e03f37
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352848"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058406"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 참조 정보(Visual Basic)
+
 이 항목에서는 .NET Framework 클래스 라이브러리를 사용하는 방법에 대한 정보 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [시작](../../framework/get-started/index.md)  
  .NET Framework의 포괄적인 개요 및 추가 리소스에 대한 링크를 제공합니다.  
   

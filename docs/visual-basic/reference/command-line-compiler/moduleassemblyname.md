@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9fb9287f9472d4b33eff4cb601aff5eed370b2c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403150"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065569"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
+
 이 모듈이 속할 어셈블리의 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "84403150"
 |`assembly_name`|이 모듈이 속할 어셈블리의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  컴파일러는 `-target:module` 옵션이 지정된 경우에만 `-moduleassemblyname` 옵션을 처리합니다. 이렇게 하면 컴파일러가 모듈을 만듭니다. 컴파일러에서 만든 모듈은 `-moduleassemblyname` 옵션으로 지정된 어셈블리에만 유효합니다. 모듈을 다른 어셈블리에 배치하면 런타임 오류가 발생합니다.  
   
  `-moduleassemblyname` 옵션은 다음 조건이 충족되는 경우에만 필요합니다.  

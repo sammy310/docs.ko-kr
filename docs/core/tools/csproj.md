@@ -3,12 +3,12 @@ title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810887"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078218"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -364,9 +364,11 @@ SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선
 압축된 패키지가 삭제되는 출력 경로를 결정합니다. 기본값은 `$(OutputPath)`입니다.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 이 부울 값은 프로젝트가 압축될 때 패키지에서 추가 기호 패키지를 만들어야 하는지 여부를 나타냅니다. 기호 패키지의 형식은 `SymbolPackageFormat` 속성으로 제어됩니다.
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 기호 패키지의 형식을 지정합니다. “symbols.nupkg”인 경우 레거시 기호 패키지가 PDB, DLL 및 기타 출력 파일이 포함된 *.symbols.nupkg* 확장과 함께 생성됩니다. “snupkg”인 경우 snupkg 기호 패키지가 이식 가능한 PDB가 포함되어 생성됩니다. 기본값은 “symbols.nupkg”입니다.
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선
 리포지토리의 유형을 지정합니다. 기본값은 "git"입니다.
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 리포지토리의 소스 분기 이름을 지정합니다. 프로젝트가 NuGet 패키지에 패키지되면 패키지 메타데이터에 추가됩니다.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 패키지가 빌드된 소스를 나타내는 선택적 리포지토리 커밋 또는 변경 집합입니다. `RepositoryUrl`도 이 속성을 포함하도록 지정해야 합니다. 프로젝트가 NuGet 패키지에 패키지되면 이 커밋 또는 변경 집합이 패키지 메타데이터에 추가됩니다.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis

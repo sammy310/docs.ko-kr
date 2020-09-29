@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 94a8b43a891df9837925869e17fac4536a995264
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c243b05b7e819691165ef20996691c0bd38ae4a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414274"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098867"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror(Visual Basic)
+
 컴파일러가 첫 번째 발생하는 경고를 오류로 처리하도록 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,6 +31,7 @@ ms.locfileid: "84414274"
 |`numberList`|선택 사항입니다. `-warnaserror` 옵션이 적용되는 경고 ID 번호의 쉼표로 구분된 목록입니다. 경고 ID를 지정하지 않으면 `-warnaserror` 옵션이 모든 경고에 적용됩니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `-warnaserror` 옵션은 모든 경고를 오류로 처리합니다. 일반적으로 경고로 보고되는 모든 메시지가 대신 오류로 보고됩니다. 컴파일러는 이후 발생하는 같은 경고를 경고로 보고합니다.  
   
  기본적으로 `-warnaserror-`이 적용되며 경고가 정보 제공용으로만 사용되게 합니다. `-warnaserror+`와 동일한 `-warnaserror` 옵션은 경고가 오류로 처리되도록 합니다.  
@@ -48,6 +50,7 @@ ms.locfileid: "84414274"
 |1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란이 선택 취소되어 있는지 확인합니다.<br />5.  오류로 처리할 경고 옆의 **알림** 열에서 **오류**를 선택합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 코드에서는 `In.vb`를 컴파일하고 컴파일러가 찾는 모든 경고의 첫 번째 발생을 오류로 표시하도록 합니다.  
   
 ```console
@@ -55,6 +58,7 @@ vbc -warnaserror in.vb
 ```  
   
 ## <a name="example"></a>예제  
+
  다음 코드에서는 `T2.vb`를 컴파일하고 사용되지 않는 지역 변수(42024)에 대한 경고만 오류로 처리합니다.  
   
 ```console

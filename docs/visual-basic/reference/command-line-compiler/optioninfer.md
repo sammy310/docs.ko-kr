@@ -8,14 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400580"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098919"
 ---
 # <a name="-optioninfer"></a>-optioninfer
+
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ ms.locfileid: "84400580"
 > `-noconfig` 옵션을 사용하여 vbc.rsp에 지정된 값 대신 컴파일러의 내부 기본값을 유지할 수 있습니다. 이 옵션에 대한 컴파일러 기본값은 `-optioninfer-`입니다.  
   
 ## <a name="remarks"></a>설명  
+
  소스 코드 파일에 [Option Infer 문](../../language-reference/statements/option-infer-statement.md)이 포함되어 있는 경우 해당 명령문이 `-optioninfer` 명령줄 컴파일러 설정을 재정의합니다.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE에서 -optioninfer를 설정하려면 다음을 수행합니다.  
@@ -43,6 +45,7 @@ ms.locfileid: "84400580"
 2. **컴파일** 탭에서 **Option infer** 상자의 값을 수정합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드에서는 지역 형식 유추를 사용하도록 설정한 상태로 `test.vb`를 컴파일합니다.  
   
 ```console

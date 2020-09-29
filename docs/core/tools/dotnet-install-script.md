@@ -1,13 +1,13 @@
 ---
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538044"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078205"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -185,7 +185,6 @@ dotnet-install.sh --help
   특정 빌드 버전을 나타냅니다. 가능한 값은 다음과 같습니다.
 
   - `latest` - 채널의 최신 빌드입니다(`-Channel` 옵션과 함께 사용됨).
-  - `coherent` - 채널의 일관된 최신 빌드로, 안정적인 최신 패키지 조합을 사용합니다(분기 이름 `-Channel` 옵션과 함께 사용됨).
   - 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예를 들어 `2.0.0-preview2-006120`을 참조하십시오.
 
   지정하지 않으면 `-Version`은 기본값인 `latest`로 설정됩니다.

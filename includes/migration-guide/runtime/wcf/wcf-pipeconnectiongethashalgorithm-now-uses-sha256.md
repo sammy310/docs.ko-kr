@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3cf1740565343558a85fdfa68957773468c28231
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: 9f5f238e3d4222af1da3a1713e1b3e65de6e6f49
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770778"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91025266"
 ---
 ### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>WCF PipeConnection.GetHashAlgorithm은 이제 SHA256을 사용
 
@@ -22,16 +22,17 @@ ms.locfileid: "90770778"
     <AppContextSwitchOverrides value="Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true" />
   </runtime>
 </configuration>
+```
 
-| Name    | Value   |
+| Name    | 값   |
 |:--------|:--------|
-| Scope   | Minor   |
-| Version | 4.7.1   |
-| Type    | Runtime |
+| Scope   | 부   |
+| 버전 | 4.7.1   |
+| 형식    | 런타임 |
 
-#### Affected APIs
+#### <a name="affected-apis"></a>영향을 받는 API
 
-Not detectable via API analysis.
+API 분석을 통해 검색할 수 없습니다.
 
 <!--
 

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 405b557568a736de3ddc3b51e265261222613131
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c5bf988d819a8df8aed99588abbb30e19d14b1ac
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403033"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084985"
 ---
 # <a name="-verbose"></a>-verbose
+
 컴파일러가 자세한 상태 및 오류 메시지를 생성하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,16 +24,19 @@ ms.locfileid: "84403033"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `+` &#124; `-`  
  선택 사항입니다. `-verbose`를 지정하는 것은 `-verbose+`를 지정하는 것과 동일하며, 이로 인해 컴파일러가 자세한 정보 메시지를 내보냅니다. 이 옵션의 기본값은 `-verbose-`입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `-verbose` 옵션은 컴파일러에서 발생한 총 오류 수에 대한 정보를 표시하고, 모듈에서 로드되는 어셈블리를 보고하고, 현재 컴파일되는 파일을 표시합니다.  
   
 > [!NOTE]
 > Visual Studio 개발 환경 내에서는 `-verbose` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드는 `In.vb`를 컴파일하고 자세한 상태 정보를 표시하도록 컴파일러에 지시합니다.  
   
 ```console  

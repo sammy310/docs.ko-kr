@@ -9,14 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 43ebb61efa26ed11af573e2c4e73a6fd71ac0902
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c4f753f94aedaf0a4f997a3f9b99fb3f417abf8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403202"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065686"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource(Visual Basic)
+
 관리되는 리소스에 대한 링크를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,6 +33,7 @@ ms.locfileid: "84403202"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `filename`  
  필수 요소. 어셈블리에 연결할 리소스 파일입니다. 파일 이름에 공백이 있으면 이름을 따옴표(" ")로 묶습니다.  
   
@@ -39,6 +41,7 @@ ms.locfileid: "84403202"
  선택 사항입니다. 리소스의 논리적 이름입니다. 리소스를 로드하는 데 사용되는 이름입니다. 기본값은 파일 이름입니다. 필요에 따라 셈블리 매니페스트에서 파일을 퍼블릭 또는 프라이빗으로 지정할 수 있습니다(예: `-linkres:filename.res,myname.res,public`). 기본적으로 `filename`은 어셈블리에서 퍼블릭입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `-linkresource` 옵션은 출력 파일에 리소스 파일을 포함하지 않습니다. 이 작업을 수행하려면 `-resource` 옵션을 사용합니다.  
   
  `-linkresource` 옵션에는 `-target:module` 이외의 `-target` 옵션 중 하나가 필요합니다.  
@@ -53,6 +56,7 @@ ms.locfileid: "84403202"
 > Visual Studio 개발 환경에서는 `-linkresource` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드에서는 `in.vb`를 컴파일하고 리소스 파일 `rf.resource`에 연결합니다.  
   
 ```console  

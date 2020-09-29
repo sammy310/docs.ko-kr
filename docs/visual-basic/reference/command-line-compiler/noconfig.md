@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: ee7cd1b8039a8d9312a8b058cc85c41ca536ed2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d7fc73aa24e3d2e323170f38f0f5d689f9c3abaf
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401942"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065556"
 ---
 # <a name="-noconfig"></a>-noconfig
+
 컴파일러가 일반적으로 사용되는 .NET Framework 어셈블리를 자동으로 참조하지 않도록 하거나 `System` 및 `Microsoft.VisualBasic` 네임스페이스를 가져오지 않도록 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,6 +24,7 @@ ms.locfileid: "84401942"
 ```  
   
 ## <a name="remarks"></a>설명  
+
  `-noconfig` 옵션은 Vbc.exe 파일과 동일한 디렉터리에 있는 Vbc.rsp 파일로 컴파일하지 않도록 컴파일러에 지시합니다. Vbc.rsp 파일은 일반적으로 사용되는 .NET Framework 어셈블리를 참조하고 `System` 및 `Microsoft.VisualBasic` 네임스페이스를 가져옵니다. 컴파일러는 `-nostdlib` 옵션이 지정되지 않는 한 System.dll 어셈블리를 암시적으로 참조합니다. `-nostdlib` 옵션은 Vbc.rsp를 사용하여 컴파일하지 않도록 하거나 System.dll 어셈블리를 자동으로 참조하지 않도록 컴파일러에 지시합니다.  
   
 > [!NOTE]

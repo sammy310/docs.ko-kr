@@ -2,12 +2,12 @@
 title: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices 아키텍처 | 마이크로 서비스 간의 이벤트 기반 통신을 구현하기 위해 통합 이벤트를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539348"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152535"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 
@@ -76,7 +76,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>게시-구독(Pub/Sub) 패턴
 
-[게시/구독 패턴](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))의 목적은 관찰자 패턴과 동일합니다. 특정 이벤트가 발생할 경우 다른 서비스에 알립니다. 하지만 관찰자 패턴과 Pub/Sub 패턴 간에는 중요한 차이가 있습니다. 관찰자 패턴에서는 관찰 가능 객체가 직접 관찰자에게 브로드캐스트를 수행함으로써 서로를 “알게”됩니다. 하지만 Pub/Sub 패턴을 사용할 경우 게시자 및 구독자 모두 알고 있는 브로커 또는 메시지 브로커 또는 이벤트 버스라는 세 번째 구성 요소가 있습니다. 따라서 Pub/Sub 패턴을 사용 하는 경우 게시자와 구독자는 앞서 언급한 이벤트 버스 또는 메시지 브로커 덕분에 정확하게 분리됩니다.
+[게시/구독 패턴](/previous-versions/msp-n-p/ff649664(v=pandp.10))의 목적은 관찰자 패턴과 동일합니다. 특정 이벤트가 발생할 경우 다른 서비스에 알립니다. 하지만 관찰자 패턴과 Pub/Sub 패턴 간에는 중요한 차이가 있습니다. 관찰자 패턴에서는 관찰 가능 객체가 직접 관찰자에게 브로드캐스트를 수행함으로써 서로를 “알게”됩니다. 하지만 Pub/Sub 패턴을 사용할 경우 게시자 및 구독자 모두 알고 있는 브로커 또는 메시지 브로커 또는 이벤트 버스라는 세 번째 구성 요소가 있습니다. 따라서 Pub/Sub 패턴을 사용 하는 경우 게시자와 구독자는 앞서 언급한 이벤트 버스 또는 메시지 브로커 덕분에 정확하게 분리됩니다.
 
 ### <a name="the-middleman-or-event-bus"></a>매개자 또는 이벤트 버스
 

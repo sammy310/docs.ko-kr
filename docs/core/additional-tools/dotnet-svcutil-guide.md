@@ -3,12 +3,12 @@ title: WCF svcutil 도구 개요
 description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, .NET Core 및 ASP.NET Core 프로젝트 기능을 추가하는 Microsoft WCF dotnet-svcutil 도구에 대한 개요입니다.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396213"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078257"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -75,6 +75,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
     편집기에서 `HelloSvcutil.csproj` 프로젝트 파일을 열고, `Project` 요소를 편집하고, 다음 코드를 사용하여 [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구 참조로 추가합니다.
 
     ```xml
@@ -156,6 +157,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 다음과 같은 내용이 출력됩니다. "Hello dotnet-svcutil!"
 
 `dotnet-svcutil` 도구 매개 변수에 대한 자세한 설명을 보려면 다음과 같이 help 매개 변수를 전달하는 도구를 호출합니다.
+
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

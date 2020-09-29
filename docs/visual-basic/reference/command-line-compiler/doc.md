@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408675"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097711"
 ---
 # <a name="-doc"></a>-doc
+
 XML 파일에 대해 문서 주석을 처리합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
 |`file`|`-doc:`를 사용하는 경우 필수입니다. 출력 XML 파일을 지정하며, 이 파일은 컴파일의 소스 코드 파일에 있는 주석으로 채워집니다. 파일 이름에 공백이 있으면 이름을 따옴표(“ ”)로 묶습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `-doc` 옵션은 컴파일러가 문서 주석을 포함하는 XML 파일을 생성하는지 여부를 제어합니다. `-doc:file` 구문을 사용하는 경우 `file` 매개 변수에서 XML 파일 이름을 지정합니다. `-doc` 또는 `-doc+`를 사용하는 경우 컴파일러는 컴파일러가 생성하는 실행 파일 또는 라이브러리에서 XML 파일 이름을 가져옵니다. `-doc-`를 사용하거나 `-doc` 옵션을 지정하지 않는 경우 컴파일러는 XML 파일을 생성하지 않습니다.  
   
  소스 코드 파일에서 문서 주석은 다음 정의보다 앞에 올 수 있습니다.  
@@ -55,6 +57,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
 |1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **XML 문서 파일 생성** 상자에 값을 설정합니다.|  
   
 ## <a name="example"></a>예제  
+
  샘플은 [Documenting Your Code with XML](../../programming-guide/program-structure/documenting-your-code-with-xml.md)(XML과 함께 코드 문서화)을 참조하세요.  
   
 ## <a name="see-also"></a>참조

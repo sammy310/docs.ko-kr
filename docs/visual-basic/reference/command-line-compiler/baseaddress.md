@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c794d1fc1c9d20e22ffa747e3175c846341ad8ad
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357182"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097763"
 ---
 # <a name="-baseaddress"></a>-baseaddress
+
 DLL을 만들 때 기본 기준 주소를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,6 +33,7 @@ DLL을 만들 때 기본 기준 주소를 지정합니다.
 |`address`|필수 요소. DLL의 기준 주소입니다. 이 주소는 16진수 숫자로 지정해야 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  DLL에 대한 기본 기준 주소는 .NET Framework에 의해 설정됩니다.  
   
  이 주소의 하위 단어는 반올림됩니다. 예를 들어 0x11110001을 지정하면 0x11110000으로 반올림됩니다.  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125451"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152444"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib(C# 컴파일러 옵션)
+
 **-lib** 옵션은 [-reference(C# 컴파일러 옵션)](./reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ ms.locfileid: "89125451"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `dir1`  
  참조된 어셈블리를 현재 작업 디렉터리(컴파일러를 호출하는 디렉터리) 또는 공용 언어 런타임의 시스템 디렉터리에서 찾을 수 없는 경우 컴파일러에서 확인할 디렉터리입니다.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89125451"
  어셈블리 참조를 검색할 하나 이상의 추가 디렉터리입니다. 이름 사이에 공백 없이 추가 디렉터리 이름을 쉼표로 구분합니다.  
   
 ## <a name="remarks"></a>설명  
+
  컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.  
   
 1. 현재 작업 디렉터리입니다. 컴파일러가 호출되는 디렉터리입니다.  
@@ -62,6 +65,7 @@ ms.locfileid: "89125451"
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  t2.cs를 컴파일하여 .exe 파일을 만듭니다. 컴파일러는 작업 디렉터리 및 C 드라이브의 루트 디렉터리에서 어셈블리 참조를 찾습니다.  
   
 ```console  

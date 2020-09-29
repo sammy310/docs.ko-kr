@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: ec4722cb7088819dae95ca1b7cbc1469d957a7aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ce1f24f25ea58cb6ddc2f5c582b6103d8f18d922
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400476"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085167"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
+
 정수 연산에 대해 오버플로 오류 검사를 설정하거나 해제합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ ms.locfileid: "84400476"
 |1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 단추를 클릭합니다.<br />4.  **정수 오버플로 검사 해제** 상자의 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 코드는 `Test.vb`를 컴파일하고 정수 오버플로 오류 검사를 해제합니다.  
   
 ```console

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403163"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065621"
 ---
 # <a name="-main"></a>-main
+
 `Sub Main` 프로시저가 포함된 클래스 또는 모듈을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,10 +24,12 @@ ms.locfileid: "84403163"
 ```  
   
 ## <a name="arguments"></a>인수  
+
  `location`  
  필수 요소. 프로그램이 시작할 때 호출될 `Sub Main` 프로시저를 포함하는 클래스 또는 모듈의 이름입니다. **-main:module** 또는 **-main:namespace.module** 형태일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
+
  실행 파일 또는 Windows 실행 프로그램을 만들 때 이 옵션을 사용합니다. **-main** 옵션을 생략하면 컴파일러가 모든 공용 클래스 및 모듈에서 유효한 공유 `Sub Main`을 검색합니다.  
   
  `Main` 프로시저의 다양한 형태에 대한 설명은 [Visual Basic의 Main 프로시저](../../programming-guide/program-structure/main-procedure.md)를 참조하세요.  
@@ -46,6 +49,7 @@ ms.locfileid: "84403163"
 4. **시작 개체** 상자에서 값을 수정합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드는 `Test2` 클래스에서 `Sub Main` 프로시저를 찾을 수 있도록 지정하여 `T2.vb` 및 `T3.vb`를 컴파일합니다.  
   
 ```console

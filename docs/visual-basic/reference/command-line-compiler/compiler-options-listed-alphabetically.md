@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 19e14953c08f90ea1ab245fa3124a462ccba162f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0dbe785edf7a9aa029d4be08a9b854cf1fb2b79
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408740"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085297"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic 컴파일러 옵션 사전순 목록
+
 Visual Basic IDE(통합 개발 환경)에서 프로그램을 컴파일하는 대신 Visual Basic 명령줄 컴파일러를 사용할 수 있습니다. 다음은 사전순으로 정렬된 Visual Basic 명령줄 컴파일러 옵션 목록입니다.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]

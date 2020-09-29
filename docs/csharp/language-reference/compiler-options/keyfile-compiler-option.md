@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5af40da18895d47933cb809d710e31a40f14513b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125490"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152431"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile(C# 컴파일러 옵션)
+
 암호화 키를 포함하는 파일 이름을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,6 +33,7 @@ ms.locfileid: "89125490"
 |`file`|강력한 이름 키를 포함하는 파일의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 옵션을 사용하면 컴파일러는 지정된 파일의 퍼블릭 키를 어셈블리 매니페스트에 삽입한 다음 프라이빗 키를 사용하여 최종 어셈블리에 서명합니다. 키 파일을 생성하려면 명령줄에 sn -k `file`을 입력합니다.  
   
  **-target:module**로 컴파일하는 경우 키 파일의 이름이 모듈에 저장되고, [-addmodule](./addmodule-compiler-option.md)을 사용하여 어셈블리를 컴파일할 때 생성되는 어셈블리에 통합됩니다.  

@@ -2,12 +2,12 @@
 title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738751"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152548"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 또한 새 OrderItem(params) 작업도 Order 집계 루트의 AddOrderItem 메서드에서 제어 및 수행됩니다. 따라서 이 작업과 관련한 대부분의 논리 또는 유효성 검사(특히 다른 자식 엔터티 간의 일관성에 영향을 미치는 모든 항목)는 집계 루트 안의 단일 위치에 있습니다. 이것이 집계 루트 패턴의 최종 목적입니다.
 
-Entity Framework Core 1.1 이상을 사용하면 속성 외에도 [필드에 매핑](https://docs.microsoft.com/ef/core/modeling/backing-field)을 지원하므로 DDD 엔터티가 더 잘 표현될 수 있습니다. 이것은 자식 엔터티 또는 값 개체의 컬렉션을 보호할 때 유용합니다. 이 향상을 통해 속성 대신 간단한 비공개 필드를 사용하고 공개 메서드 안에서 필드 컬렉션에 대한 모든 업데이트를 구현하며 AsReadOnly 메서드를 통해 읽기 전용 액세스를 제공할 수 있습니다.
+Entity Framework Core 1.1 이상을 사용하면 속성 외에도 [필드에 매핑](/ef/core/modeling/backing-field)을 지원하므로 DDD 엔터티가 더 잘 표현될 수 있습니다. 이것은 자식 엔터티 또는 값 개체의 컬렉션을 보호할 때 유용합니다. 이 향상을 통해 속성 대신 간단한 비공개 필드를 사용하고 공개 메서드 안에서 필드 컬렉션에 대한 모든 업데이트를 구현하며 AsReadOnly 메서드를 통해 읽기 전용 액세스를 제공할 수 있습니다.
 
 DDD에서는 데이터의 고정 및 일관성을 제어하기 위해 엔터티(또는 생성자)의 메서드를 통해서만 엔터티를 업데이트하려 하므로 속성은 get 접근자를 통해서만 정의됩니다. 속성은 비공개 필드를 통해 지원됩니다. 비공개 멤버는 클래스 안에서만 액세스할 수 있습니다. 그러나 한 가지 예외가 있습니다. EF Core는 이러한 필드도 설정해야 합니다(따라서 적절한 값으로 개체를 반환할 수 있음).
 
