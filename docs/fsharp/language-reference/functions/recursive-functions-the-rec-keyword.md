@@ -2,12 +2,12 @@
 title: '재귀 함수: rec 키워드'
 description: "' Let ' 키워드와 함께 F # ' rec ' 키워드를 사용 하 여 재귀 함수를 정의 하는 방법을 알아봅니다."
 ms.date: 08/12/2020
-ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558714"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438072"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>재귀 함수: rec 키워드
 
@@ -36,7 +36,7 @@ and function2-nameparameter-list =
 다음 예에서는 수학적 정의를 사용 하 여 *n*<sup>번째</sup> 피보나치 수를 계산 하는 재귀 함수를 보여 줍니다.
 
 ```fsharp
-let fib n =
+let rec fib n =
     match n with
     | 0 | 1 -> 1
     | n -> fib (n-1) + fib (n-2)
@@ -45,7 +45,7 @@ let fib n =
 > [!NOTE]
 > 실제로 이전 샘플과 같은 코드는 이미 계산 된 대해 값을 unecessarily 하기 때문에 이상적이 지 않습니다. 이는이 문서의 뒷부분에서 설명 하는 tail recursive가 아니기 때문입니다.
 
-메서드는 정의 된 형식 내에서 암시적으로 재귀적으로 수행 됩니다. 즉, 키워드를 추가할 필요가 없습니다 `rec` . 예를 들면 다음과 같습니다.
+메서드는 정의 된 형식 내에서 암시적으로 재귀적으로 수행 됩니다. 즉, 키워드를 추가할 필요가 없습니다 `rec` . 다음은 그 예입니다.
 
 ```fsharp
 type MyClass() =
