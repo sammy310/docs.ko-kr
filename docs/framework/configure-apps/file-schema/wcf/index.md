@@ -2,12 +2,12 @@
 title: WCF 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44d5e0acc6f5a9ca43949bce0c7964354ad18270
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165132"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573659"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 구성 스키마
 
@@ -19,12 +19,12 @@ WCF (Windows Communication Foundation) 구성 요소를 사용 하 여 WCF 서�
   
  [구성 설정 잠금](/previous-versions/aspnet/55th21y4(v=vs.100))  
   
- 이 섹션에서는 각 구성 항목의 가능한 모든 값 및 이 값이 다른 WCF 구성 요소와 상호 작용하는 방법에 대해 설명합니다. 다음 맵은 WCF 구성 스키마를 보여 줍니다.  
-  
- ![WCF 구성 스키마를 보여 주는 다이어그램입니다.](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ 이 섹션에서는 각 구성 항목의 가능한 모든 값 및 이 값이 다른 WCF 구성 요소와 상호 작용하는 방법에 대해 설명합니다. 다음 맵은 WCF 구성 스키마를 보여 줍니다.
+
+:::image type="content" source="./media/index/windows-communication-foundation-configuration-schema.gif" alt-text="WCF 구성 스키마를 보여 주는 다이어그램입니다." lightbox="./media/index/windows-communication-foundation-configuration-schema.gif":::
   
 > [!CAUTION]
-> 잠재적 보안 위협을 방지 하려면 적절 한 Access Control 목록 (ACL)을 사용 하 여 응용 프로그램 구성 파일 (app.config)의 WCF 구성 섹션을 보호 해야 합니다.  예를 들어, 적절한 사용자만이 애플리케이션 바인딩의 보안 설정 또는 서비스에 대한 구성 파일의 서비스 모델 섹션에 액세스하거나 이를 수정할 수 있도록 해야 합니다.  
+> 잠재적 보안 위협을 방지 하기 위해 적절 한 Access Control 목록 (ACL)을 사용 하 여 응용 프로그램 구성 파일 (app.config)의 WCF 구성 섹션을 보호 합니다. 예를 들어 적절 한 사용자만 응용 프로그램 바인딩의 보안 설정 또는 서비스에 대 한 구성 파일의 서비스 모델 섹션에 액세스 하거나 수정할 수 있는지 확인 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
