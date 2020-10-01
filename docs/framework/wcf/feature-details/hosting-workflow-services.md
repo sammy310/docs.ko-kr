@@ -2,12 +2,12 @@
 title: 워크플로 서비스 호스팅
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555811"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609462"
 ---
 # <a name="hosting-workflow-services"></a>워크플로 서비스 호스팅
 
@@ -46,7 +46,7 @@ ms.locfileid: "90555811"
  워크플로 서비스를 정의 하는 .xamlx 파일에는 <`Service`> root 요소 또는에서 파생 된 형식을 포함 하는 루트 요소가 포함 되어야 <xref:System.Workflow.ComponentModel.Activity> 합니다. Visual Studio 작업 템플릿을 사용 하는 경우 .xamlx 파일이 만들어집니다. WCF Workflow Service 템플릿을 사용 하는 경우 .xamlx 파일이 만들어집니다.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Windows Server AppFabric에서 워크플로 서비스 호스팅
- Windows Server AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 동일합니다. 유일한 차이점은 Windows Server AppFabric이 설치된다는 것입니다. Windows Server AppFabric은 PowerShell cmdlet뿐만 아니라 인터넷 정보 서비스 관리자에 추가되는 도구도 제공합니다. 이러한 도구를 사용하면 워크플로 서비스와 WCF 서비스의 배포, 관리 및 추적을 간단하게 수행할 수 있습니다.
+ Windows Server AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 동일합니다. 유일한 차이점은 Windows Server AppFabric이 설치된다는 것입니다. Windows Server Fabric은 PowerShell commandlets 뿐만 아니라 인터넷 정보 서비스 Manager에 추가 되는 도구를 제공 합니다. 이러한 도구를 사용하면 워크플로 서비스와 WCF 서비스의 배포, 관리 및 추적을 간단하게 수행할 수 있습니다.
 
 ## <a name="referencing-custom-activities"></a>사용자 지정 작업 참조
  `Assemblies` `System.Web.Compilation` 응용 프로그램 도메인에 로드 되 고 XAML 역직렬 변환기가 형식을 찾을 수 있도록 사용자 지정 활동에 대 한 참조를 <>의 <> 섹션에 추가 해야 합니다. 이러한 설정은 애플리케이션 수준에서 만들거나 컴퓨터의 모든 애플리케이션에 설정을 적용해야 하는 경우 루트 Web.config에서 만들 수 있습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "90555811"
 ## <a name="deployment"></a>배포
  웹 배포 도구는 배포 작업을 보다 쉽게 수행할 수 있도록 하기 위해 만들어졌습니다. 이 도구를 사용하면 IIS 6.0과 IIS 7.0 사이에서 애플리케이션을 마이그레이션하고, 서버 팜을 동기화하고, 웹 애플리케이션을 패키징, 보관 및 배포할 수 있습니다. 자세한 내용은 [MS Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=178690)을 참조 하세요.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
 - [워크플로 서비스 호스트 내부 기능](workflow-service-host-internals.md)
 - [WorkflowServiceHost 구성](configuring-workflowservicehost.md)

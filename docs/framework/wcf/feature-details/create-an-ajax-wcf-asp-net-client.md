@@ -2,14 +2,14 @@
 title: Visual Studio에서 AJAX 사용 WCF 서비스 및 ASP.NET 클라이언트 만들기
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0bfe55c68f68bfef7b7ec2034413b53d41b0c785
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834783"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609358"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: 서비스에 액세스 하는 AJAX 사용 WCF 서비스 및 ASP.NET 클라이언트 만들기
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
 
 이 항목에서는 Visual Studio를 사용 하 여 AJAX 사용 Windows Communication Foundation (WCF) 서비스 및 서비스에 액세스 하는 ASP.NET 클라이언트를 만드는 방법을 보여 줍니다.
 
@@ -17,9 +17,9 @@ ms.locfileid: "71834783"
 
 1. Visual Studio를 엽니다.
 
-1. **파일** 메뉴에서 **새** > **프로젝트** 를 선택 합니다.
+1. **파일** 메뉴에서 **새**  >  **프로젝트** 를 선택 합니다.
 
-1. **새 프로젝트** 대화 상자에서 **설치 된** >   > **비주얼 C#**  **웹** 범주를 확장 한 다음 **ASP.NET 웹 응용 프로그램 (.NET Framework)** 을 선택 합니다.
+1. **새 프로젝트** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **ASP.NET 웹 응용 프로그램 (.NET Framework)** 을 선택 합니다.
 
 1. 프로젝트 이름을 **SandwichServices** 로 확인 하 고 **확인을**클릭 합니다.
 
@@ -29,15 +29,15 @@ ms.locfileid: "71834783"
 
 ## <a name="add-a-web-form"></a>웹 폼 추가
 
-1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 항목** **추가** > 를 선택 합니다.
+1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 항목**추가를 선택 합니다.
 
-1. **새 항목 추가** 대화 상자에서  >  **설치 된** > **비주얼 C#**  **웹** 범주를 확장 한 다음 **Web Form** 템플릿을 선택 합니다.
+1. **새 항목 추가** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **web Form** 템플릿을 선택 합니다.
 
 1. 기본 이름 (**WebForm1**)을 적용 한 다음 **추가**를 선택 합니다.
 
    *WebForm1* 이 **소스** 뷰에서 열립니다.
 
-1. 본문 > 태그 안에  **\<** 다음 태그를 추가 합니다.
+1. 태그 내에 다음 태그를 추가 합니다 **\<body>** .
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -47,9 +47,9 @@ ms.locfileid: "71834783"
 
 ## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX 사용 WCF 서비스 만들기
 
-1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 항목** **추가** > 를 선택 합니다.
+1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 항목**추가를 선택 합니다.
 
-1. **새 항목 추가** 대화 상자  > 에서 **설치 된** > **비주얼 C#**  **웹** 범주를 확장 한 다음 **WCF 서비스 (AJAX 사용)** 템플릿을 선택 합니다.
+1. **새 항목 추가** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **WCF 서비스 (AJAX 사용)** 템플릿을 선택 합니다.
 
    ![Visual Studio의 WCF 서비스 (AJAX 사용) 항목 템플릿](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
@@ -69,13 +69,13 @@ ms.locfileid: "71834783"
 
 ## <a name="configure-the-client-to-access-the-service"></a>서비스에 액세스 하도록 클라이언트 구성
 
-1. *WebForm1.aspx* 파일을 열어 **디자인** 보기를 선택합니다.
+1. *WebForm1 .aspx* 파일을 열고 **디자인** 뷰를 선택 합니다.
 
-2. **뷰** 메뉴에서 **도구 상자**를 선택합니다.
+2. **보기** 메뉴에서 **도구 상자**를 선택 합니다.
 
-3. **AJAX 확장** 노드를 확장하여 **ScriptManager**를 폼에 드래그 앤 드롭하십시오.
+3. **AJAX 확장** 노드를 확장 하 고 **ScriptManager** 를 폼으로 끌어다 놓습니다.
 
-4. **소스** 보기로 돌아가, **\<ScriptManager >** 태그 사이에 다음 코드를 추가하여 WCF 서비스의 경로를 지정하십시오.
+4. **원본** 뷰로 돌아가서 태그 사이에 다음 코드를 추가 하 여 **\<ScriptManager>** WCF 서비스에 대 한 경로를 지정 합니다.
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ ms.locfileid: "71834783"
     </Services>
     ```
 
-5. Javascript 함수 `Calculate()`에 대 한 코드를 추가 합니다. 웹 폼의 **헤드** 섹션에 다음 코드를 추가 합니다.
+5. JavaScript 함수에 대 한 코드를 추가 `Calculate()` 합니다. 웹 폼의 **헤드** 섹션에 다음 코드를 추가 합니다.
 
     ```html
     <script type="text/javascript">

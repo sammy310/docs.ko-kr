@@ -2,12 +2,12 @@
 title: SqlClient 스트리밍 지원
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791405"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609247"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
 
@@ -18,15 +18,15 @@ SQL Server에 대 한 스트리밍 지원을 통해 데이터를 메모리에 �
 또한 스트리밍 지원을 통해 중간 계층 애플리케이션의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.
 
 > [!WARNING]
-> 응용 프로그램에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.
+> 애플리케이션에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.
 >
-> 스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다. 스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.
+> 스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다. 스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리 하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.
 
 ## <a name="streaming-support-from-sql-server"></a>SQL Server에서의 스트리밍 지원
 
-SQL Server에서의 스트리밍 지원은, 및 <xref:System.Data.Common.DbDataReader> <xref:System.IO.Stream> <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Xml.XmlReader> 개체<xref:System.IO.TextReader> 를 가져오고이에 대응할 수 있도록 클래스에서 및의 새로운 기능을 소개 합니다. 이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다. 따라서 SQL Server에서의 스트리밍 지원은 OLTP 시나리오를 해결 하 고 온-프레미스 및 오프-프레미스 환경에 적용 됩니다.
+SQL Server에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> <xref:System.Data.SqlClient.SqlDataReader> , 및 개체를 가져오고이에 대응할 수 있도록 클래스에서 및의 새로운 기능을 소개 <xref:System.IO.Stream> <xref:System.Xml.XmlReader> <xref:System.IO.TextReader> 합니다. 이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다. 따라서 SQL Server에서의 스트리밍 지원은 OLTP 시나리오를 해결 하 고 온-프레미스 및 오프-프레미스 환경에 적용 됩니다.
 
-SQL Server에서의 스트리밍 지원을 사용 <xref:System.Data.SqlClient.SqlDataReader> 하기 위해에 추가 된 멤버는 다음과 같습니다.
+<xref:System.Data.SqlClient.SqlDataReader>SQL Server에서의 스트리밍 지원을 사용 하기 위해에 추가 된 멤버는 다음과 같습니다.
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ SQL Server에서의 스트리밍 지원을 사용 <xref:System.Data.SqlClient.Sq
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-SQL Server에서의 스트리밍 지원을 사용 <xref:System.Data.Common.DbDataReader> 하기 위해에 추가 된 멤버는 다음과 같습니다.
+<xref:System.Data.Common.DbDataReader>SQL Server에서의 스트리밍 지원을 사용 하기 위해에 추가 된 멤버는 다음과 같습니다.
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -50,7 +50,7 @@ SQL Server에서의 스트리밍 지원을 사용 <xref:System.Data.Common.DbDat
 
 ## <a name="streaming-support-to-sql-server"></a>SQL Server에 대 한 스트리밍 지원
 
-SQL Server에 <xref:System.Data.SqlClient.SqlParameter> 대 한 스트리밍 지원은 <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>및 <xref:System.IO.TextReader> 개체를 허용 하 고 대응할 수 있도록 클래스의 새 기능을 도입 합니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.
+SQL Server에 대 한 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> , 및 개체를 허용 하 고 대응할 수 있도록 클래스의 새 기능을 도입 <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> 합니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.
 
 <xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다. 애플리케이션에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.
 
@@ -66,11 +66,11 @@ SQL Server에 <xref:System.Data.SqlClient.SqlParameter> 대 한 스트리밍 지
 
 - **NChar**
 
-- **NVarChar**
+- **Varchar**
 
 - **Xml**
 
-<xref:System.Data.SqlClient.SqlParameter.Value%2A> **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식은 의<xref:System.Xml.XmlReader>를 허용 합니다.
+**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식은의를 허용 합니다 <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.Xml.XmlReader> .
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>는 <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 형식의 값만 받아들일 수 있습니다.
 
@@ -323,9 +323,9 @@ GO
 
 이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.
 
-- 4\.5 .NET Framework에서 SQL Server으로 대량 BLOB을 전송 합니다.
+- 4.5 .NET Framework에서 SQL Server으로 대량 BLOB을 전송 합니다.
 
-- 4\.5 .NET Framework에서 SQL Server에 대 한 많은 텍스트 파일 전송
+- 4.5 .NET Framework에서 SQL Server에 대 한 많은 텍스트 파일 전송
 
 - 새로운 비동기 기능을 사용하여 큰 BLOB를 전송합니다.
 
@@ -522,6 +522,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

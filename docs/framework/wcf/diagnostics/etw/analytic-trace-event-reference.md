@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 1b44e6b0abf0fc48b43ae17cbd24780e46ae518d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4aa8e7a7d22edde02272dc4c3850b5695347b2bb
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798120"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609514"
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
 다음 표에서는 WCF 분석 추적과 관련 된 이벤트 수준, 식별자 및 메시지를 정의 합니다.  
@@ -71,8 +71,8 @@ ms.locfileid: "70798120"
 |[514 - WebHostRequestStop](514-webhostrequeststop.md)|정보|WebHostRequest가 중지됩니다.|WebHost|  
 |[601 - CBAEntryRead](601-cbaentryread.md)|자세히|처리한 ServiceActivation 요소 상대 주소: '%1', 정규화된 상대 주소 '%2'||  
 |[602 - CBAMatchFound](602-cbamatchfound.md)|자세히|들어오는 요청이 주소가 '%1'인 ServiceActivation 요소와 일치합니다.||  
-|[603 - AspNetRoutingService](603-aspnetroutingservice.md)|자세히|들어오는 요청이 주소가 %1인 Asp.Net 경로에 정의된 WCF 서비스와 일치합니다.|RoutingServices|  
-|[604 - AspNetRoute](604-aspnetroute.md)|자세히|serviceType이 '%2'이고 serviceHostFactoryType이 '%3'인 새 Asp.Net 경로 '%1'이(가) 추가되었습니다.|RoutingServices|  
+|[603 - AspNetRoutingService](603-aspnetroutingservice.md)|자세히|들어오는 요청이 주소가 %1 인 ASP.NET 경로에 정의 된 WCF 서비스와 일치 합니다.|RoutingServices|  
+|[604 - AspNetRoute](604-aspnetroute.md)|자세히|ServiceType이 ' %2 '이 고 Servicehostfactorytype이가 ' %3 ' 인 새 ASP.NET 경로 ' %1 '이 (가) 추가 되었습니다.|RoutingServices|  
 |[605 - IncrementBusyCount](605-incrementbusycount.md)|자세히|IncrementBusyCount를 호출했습니다. 원본: %1|WebHost|  
 |[606 - DecrementBusyCount](606-decrementbusycount.md)|자세히|DecrementBusyCount를 호출했습니다. 원본: %1|WebHost|  
 |[701 - ServiceChannelOpenStart](701-servicechannelopenstart.md)|자세히|ServiceChannelOpen이 시작되었습니다.|WebHost|  
@@ -160,7 +160,7 @@ ms.locfileid: "70798120"
 |[3345 - SessionPreambleUnderstood](3345-sessionpreambleunderstood.md)|자세히|'%1'에 대한 세션 프리앰블이 확인되었습니다.|채널|  
 |[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|오류|연결 판독기가 오류 '%1'을(를) 전송하고 있습니다.|채널|  
 |[3347 - SocketAcceptClosed](3347-socketacceptclosed.md)|자세히|소켓 수락이 종료되었습니다.|TCP|  
-|[3348 - ServiceHostFaulted](3348-servicehostfaulted.md)|심각|서비스 호스트에 오류가 발생했습니다.|TCP|  
+|[3348 - ServiceHostFaulted](3348-servicehostfaulted.md)|위험|서비스 호스트에 오류가 발생했습니다.|TCP|  
 |[3349 - ListenerOpenStart](3349-listeneropenstart.md)|자세히|'%1'에 대한 리스너가 열려 있습니다.|채널|  
 |[3350 - ListenerOpenStop](3350-listeneropenstop.md)|자세히|리스너 열기가 완료되었습니다.|채널|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](3351-servermaxpooledconnectionsquotareached.md)|자세히|서버 최대 풀 연결 할당량에 도달했습니다.|할당량|  
@@ -186,7 +186,7 @@ ms.locfileid: "70798120"
 |[3371 - MtomMessageEncodingStart](3371-mtommessageencodingstart.md)|자세히|MtomMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3372 - TextMessageEncodingStart](3372-textmessageencodingstart.md)|자세히|TextMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3373 - BinaryMessageDecodingStart](3373-binarymessagedecodingstart.md)|자세히|BinaryMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
-|[3374 - MtomMessageDecodingStart](3374-mtommessagedecodingstart.md)|자세히|Mtommessageencoder에서에서 메시지를 디코딩하는 작업을 시작 했습니다.|채널|  
+|[3374 - MtomMessageDecodingStart](3374-mtommessagedecodingstart.md)|자세히|MtomMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
 |[3375 - TextMessageDecodingStart](3375-textmessagedecodingstart.md)|자세히|TextMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
 |[3376 - HttpResponseReceiveStart](3376-httpresponsereceivestart.md)|정보|Http 전송에서 메시지 수신이 시작되었습니다.|HTTP|  
 |[3377 - SocketReadStop](3377-socketreadstop.md)|자세히|SocketId:%1이(가) '%3'에서 '%2'바이트를 읽었습니다.|TCP|  
@@ -277,7 +277,7 @@ ms.locfileid: "70798120"
 |[3831 - RoutingServiceHandledException](3831-routingservicehandledexception.md)|자세히|라우팅 서비스가 예외를 처리했습니다.|RoutingServices|  
 |[3832 - RoutingServiceTransmitSucceeded](3832-routingservicetransmitsucceeded.md)|정보|라우팅 서비스가 ID '%1인 메시지[작업 %2]를 '%3'(으)로 전송했습니다.|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](4001-transportlistenersessionsreceived.md)|자세히|'%1'을(를) 통해 전송 리스너 세션이 수신되었습니다.|ActivationServices|  
-|[4002 - FailFastException](4002-failfastexception.md)|심각|FailFastException이 발생했습니다.|ActivationServices|  
+|[4002 - FailFastException](4002-failfastexception.md)|위험|FailFastException이 발생했습니다.|ActivationServices|  
 |[4003 - ServiceStartPipeError](4003-servicestartpipeerror.md)|오류|서비스 시작 파이프 오류가 발생했습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|자세히|세션 디스패치가 시작되었습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|경고|보류 중인 항목이 '%2'개로 보류 중인 세션 큐가 꽉 차서 '%1'에 대한 세션을 디스패치하지 못했습니다.|ActivationServices|  
@@ -300,7 +300,7 @@ ms.locfileid: "70798120"
 |[4029 - PipeTransportListenerListeningStop](4029-pipetransportlistenerlisteningstop.md)|자세히|파이프 전송 리스너 수신이 중지됩니다.|ActivationServices|  
 |[4030 - DispatchSessionSuccess](4030-dispatchsessionsuccess.md)|정보|세션을 디스패치했습니다.|ActivationServices|  
 |[4031 - DispatchSessionFailed](4031-dispatchsessionfailed.md)|오류|세션을 디스패치하지 못했습니다.|ActivationServices|  
-|[4032 - WasConnectionTimedout](4032-wasconnectiontimedout.md)|심각|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
+|[4032 - WasConnectionTimedout](4032-wasconnectiontimedout.md)|위험|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
 |[4033 - RoutingTableLookupStart](4033-routingtablelookupstart.md)|자세히|라우팅 테이블 조회가 시작되었습니다.|ActivationServices|  
 |[4034 - RoutingTableLookupStop](4034-routingtablelookupstop.md)|자세히|라우팅 테이블 조회가 완료되었습니다.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](4035-pendingsessionqueueratio.md)|자세히|보류 중인 세션 큐 비율: %1/%2|할당량|  
@@ -328,8 +328,8 @@ ms.locfileid: "70798120"
 |[4821 - SynchronizationContextSetToNull](4821-synchronizationcontextsettonull.md)|정보|찾기 작업을 시작하기 전에 DiscoveryClientChannel에서 SynchronizationContext가 Null로 설정되었습니다.|검색|  
 |[5001 - DCSerializeWithSurrogateStart](5001-dcserializewithsurrogatestart.md)|자세히|DataContract의 %1 serialize와 함께 서로게이트가 시작됩니다.|Serialization|  
 |[5002 - DCSerializeWithSurrogateStop](5002-dcserializewithsurrogatestop.md)|자세히|DataContract serialize와 함께 서로게이트가 중지됩니다.|Serialization|  
-|[5003 - DCDeserializeWithSurrogateStart](5003-dcdeserializewithsurrogatestart.md)|자세히|DataContract의 %1 deserialize와 함께 서로게이트가 시작됩니다.|Serialization|  
-|[5004 - DCDeserializeWithSurrogateStop](5004-dcdeserializewithsurrogatestop.md)|자세히|DataContract deserialize와 함께 서로게이트가 중지됩니다.|Serialization|  
+|[5003 - DCDeserializeWithSurrogateStart](5003-dcdeserializewithsurrogatestart.md)|자세히|DataContract의 %1 역직렬화와 함께 서로게이트가 시작됩니다.|Serialization|  
+|[5004 - DCDeserializeWithSurrogateStop](5004-dcdeserializewithsurrogatestop.md)|자세히|DataContract 역직렬화와 함께 서로게이트가 중지됩니다.|Serialization|  
 |[5005 - ImportKnownTypesStart](5005-importknowntypesstart.md)|자세히|ImportKnownTypes가 시작됩니다.|Serialization|  
 |[5006 - ImportKnownTypesStop](5006-importknowntypesstop.md)|자세히|ImportKnownTypes가 중지됩니다.|Serialization|  
 |[5007 - DCResolverResolve](5007-dcresolverresolve.md)|자세히|DataContract 확인자 확인 %1이(가) 시작됩니다.|Serialization|  
@@ -362,8 +362,8 @@ ms.locfileid: "70798120"
 |[57394 - HandledException](57394-handledexception.md)|정보|예외를 처리하는 중입니다.|인프라|  
 |[57395 - ShipAssertExceptionMessage](57395-shipassertexceptionmessage.md)|오류|예기치 않은 오류가 발생했습니다. 이 오류는 애플리케이션에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
 |[57396 - ThrowingException](57396-throwingexception.md)|경고|예외를 throw하고 있습니다. 원본: %1.|인프라|  
-|[57397 - UnhandledException](57397-unhandledexception.md)|심각|처리되지 않은 예외가 발생했습니다.|인프라|  
-|[57399 - TraceCodeEventLogCritical](57399-tracecodeeventlogcritical.md)|심각|EventLog에 기록합니다.|인프라|  
+|[57397 - UnhandledException](57397-unhandledexception.md)|위험|처리되지 않은 예외가 발생했습니다.|인프라|  
+|[57399 - TraceCodeEventLogCritical](57399-tracecodeeventlogcritical.md)|위험|EventLog에 기록합니다.|인프라|  
 |[57400 - TraceCodeEventLogError](57400-tracecodeeventlogerror.md)|오류|EventLog에 기록합니다.|인프라|  
 |[57401 - TraceCodeEventLogInfo](57401-tracecodeeventloginfo.md)|정보|EventLog에 기록합니다.|인프라|  
 |[57402 - TraceCodeEventLogVerbose](57402-tracecodeeventlogverbose.md)|자세히|EventLog에 기록합니다.|인프라|  

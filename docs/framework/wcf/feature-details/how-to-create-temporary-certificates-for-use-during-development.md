@@ -6,16 +6,16 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557413"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607774"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>방법: 개발 중에 사용할 임시 인증서 만들기
 
-WCF (Windows Communication Foundation)를 사용 하 여 보안 서비스 또는 클라이언트를 개발 하는 경우 자격 증명으로 사용할 x.509 인증서를 제공 해야 하는 경우가 많습니다. 일반적으로 인증서는 루트 인증 기관이 컴퓨터의 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증서 체인의 일부입니다. 인증서 체인을 사용하면 일반적으로 루트 인증 기관이 조직 또는 비즈니스 사업부에 있는 인증서 집합의 범위를 지정할 수 있습니다. 개발 시 이를 에뮬레이트하려면 보안 요구 사항에 맞는 두 개의 인증서를 만듭니다. 첫 번째 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 자체 서명된 인증서이고, 두 번째 인증서는 첫 번째 인증서에서 만들어지고 로컬 컴퓨터 위치의 개인 저장소나 현재 사용자 위치의 개인 저장소에 있습니다. 이 항목에서는 Powershell [new-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet을 사용 하 여 이러한 두 인증서를 만드는 단계를 안내 합니다.
+WCF (Windows Communication Foundation)를 사용 하 여 보안 서비스 또는 클라이언트를 개발 하는 경우 자격 증명으로 사용할 x.509 인증서를 제공 해야 하는 경우가 많습니다. 일반적으로 인증서는 루트 인증 기관이 컴퓨터의 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증서 체인의 일부입니다. 인증서 체인을 사용하면 일반적으로 루트 인증 기관이 조직 또는 비즈니스 사업부에 있는 인증서 집합의 범위를 지정할 수 있습니다. 개발 시 이를 에뮬레이트하려면 보안 요구 사항에 맞는 두 개의 인증서를 만듭니다. 첫 번째 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 자체 서명된 인증서이고, 두 번째 인증서는 첫 번째 인증서에서 만들어지고 로컬 컴퓨터 위치의 개인 저장소나 현재 사용자 위치의 개인 저장소에 있습니다. 이 항목에서는 PowerShell [new-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet을 사용 하 여 이러한 두 인증서를 만드는 단계를 안내 합니다.
 
 > [!IMPORTANT]
 > New-selfsignedcertificate cmdlet에서 생성 하는 인증서는 테스트 목적 으로만 제공 됩니다. 서비스 또는 클라이언트를 배포할 때는 인증 기관에서 제공하는 적절한 인증서를 사용해야 합니다. 이는 조직 또는 타사의 Windows Server 인증서 서버에 있을 수 있습니다.
