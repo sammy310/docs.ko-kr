@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: 비동기 스트림 생성 및 사용
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: 패턴 일치를 사용하여 데이터 기능 확장
+    - name: 패턴 일치를 통한 데이터 기반 알고리즘 빌드
       href: tutorials/pattern-matching.md
     - name: 콘솔 애플리케이션
       href: tutorials/console-teleprompter.md

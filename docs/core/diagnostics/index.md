@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538529"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438002"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -27,6 +27,10 @@ ms.locfileid: "90538529"
 ## <a name="unit-testing"></a>단위 테스트
 
 [유닛 테스트](../testing/index.md)는 고품질 소프트웨어의 연속 통합 및 배포를 위한 핵심 구성 요소입니다. 단위 테스트는 항목을 중단할 때 조기 경고를 제공하도록 설계되었습니다.
+
+## <a name="collect-diagnostics-in-containers"></a>컨테이너에서 진단 정보 수집
+
+컨테이너화되지 않은 Linux 환경에서 사용되는 것과 동일한 진단 도구를 사용하여 [컨테이너에서 진단 정보를 수집](diagnostics-in-containers.md)할 수도 있습니다. 도구가 Docker 컨테이너에서 작동하는지 확인하는 데 필요한 몇 가지 사용 변경 내용만 있습니다.
 
 ## <a name="debug-linux-dumps"></a>Linux 덤프 디버그
 

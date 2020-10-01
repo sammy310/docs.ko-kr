@@ -2,12 +2,12 @@
 title: C#의 비동기 프로그래밍
 description: async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414983"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438104"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async 및 await를 사용한 비동기 프로그래밍
 
@@ -56,7 +56,7 @@ ms.locfileid: "89414983"
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> 총 경과된 시간은 초기 동기 버전과 거의 같습니다. 이 코드에서는 아직 비동기 프로그래밍의 몇 가지 주요 기능을 활용하지 않았습니다.
+> 총 경과 시간은 초기 동기 버전과 거의 같습니다. 이 코드에서는 아직 비동기 프로그래밍의 몇 가지 주요 기능을 활용하지 않았습니다.
 
 > [!TIP]
 > `FryEggsAsync`, `FryBaconAsync` 및 `ToastBreadAsync`의 메서드 본문은 각각 `Task<Egg>`, `Task<Bacon>` 및 `Task<Toast>`를 반환하도록 모두 업데이트되었습니다. 이 메서드들은 원래 버전에서 “Async” 접미사를 포함하도록 이름이 바뀌었습니다. 해당 구현은 이 문서의 뒷부분에 나오는 [최종 버전](#final-version)의 일부로 표시됩니다.
@@ -123,7 +123,7 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="비동기 아침 식사":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="동기 아침 식사":::
 
 비동기적으로 준비된 아침 식사에는 대략 20분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었기 때문입니다.
 
@@ -184,7 +184,7 @@ while (breakfastTasks.Count > 0)
 변경 내용을 모두 적용한 후 코드의 최종 버전은 다음과 같습니다. <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="모든 비동기 아침 식사의 경우":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="동기 아침 식사":::
 
 비동기적으로 준비된 아침 식사의 최종 버전에는 대략 15분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었고 코드가 여러 작업을 한 번에 모니터링하고 필요한 경우에만 작업을 수행할 수 있었기 때문입니다.
 

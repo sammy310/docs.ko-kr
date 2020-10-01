@@ -331,6 +331,8 @@ items:
             href: ../core/diagnostics/event-counters.md
           - name: 로깅 및 추적
             href: ../core/diagnostics/logging-tracing.md
+          - name: 컨테이너에서 진단 정보 수집
+            href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI 전역 도구
             items:
               - name: dotnet-counters
