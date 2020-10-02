@@ -372,6 +372,10 @@ items:
                     href: code-analysis/code-quality-rule-options.md
                   - name: 미리 정의된 구성
                     href: code-analysis/predefined-configurations.md
+              - name: 코드 스타일 규칙
+                items:
+                  - name: 규칙 옵션
+                    href: code-analysis/code-style-rule-options.md
           - name: 규칙 참조
             items:
               - name: 코드 품질 규칙
@@ -930,7 +934,24 @@ items:
                       - name: CA2249
                         href: code-analysis/quality-rules/ca2249.md
               - name: 코드 스타일 규칙
-                href: /visualstudio/ide/editorconfig-language-conventions
+                items:
+                  - name: 개요
+                    href: code-analysis/style-rules/index.md
+                  - name: 언어 규칙
+                    items:
+                      - name: 개요
+                        displayName: language rules
+                        href: code-analysis/style-rules/language-rules.md
+                  - name: 서식 지정 규칙
+                    items:
+                      - name: 개요
+                        displayName: formatting rules
+                        href: code-analysis/style-rules/formatting-rules.md
+                  - name: 이름 지정 규칙
+                    items:
+                      - name: 개요
+                        displayName: naming rules
+                        href: code-analysis/style-rules/naming-rules.md
           - name: 플랫폼 호환성 분석기
             href: ../standard/analyzers/platform-compat-analyzer.md
           - name: API 분석기
