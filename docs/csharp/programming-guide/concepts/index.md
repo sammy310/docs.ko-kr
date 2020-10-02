@@ -3,12 +3,12 @@ title: 프로그래밍 개념(C#)
 description: 해당 섹션의 리소스를 사용하여 개체 지향 프로그래밍을 비롯한 C# 언어의 프로그래밍 개념을 이해할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 0e11fb3a184cb828be58cd43dde281366ed533d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5594bd93d70a4f9cf0ab6136b011a5cceea7bf3f
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91159334"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609397"
 ---
 # <a name="programming-concepts-c"></a>프로그래밍 개념(C#)
 
@@ -26,7 +26,6 @@ ms.locfileid: "91159334"
 |[식 트리(C#)](./expression-trees/index.md)|식 트리를 사용하여 실행 코드의 동적 수정을 허용하는 방법을 설명합니다.|  
 |[반복기(C#)](./iterators.md)|컬렉션을 단계별로 실행하면서 한 번에 하나씩 요소를 반환하는 데 사용되는 반복기에 대해 설명합니다.|  
 |[LINQ(Language-Integrated Query)(C#)](./linq/index.md)|C#의 언어 구문의 강력한 쿼리 기능과 관계형 데이터베이스, XML 문서, 데이터 세트 및 메모리 내 컬렉션을 쿼리하기 위한 모델에 대해 설명합니다.|  
-|[개체 지향 프로그래밍(C#)](./object-oriented-programming.md)|캡슐화, 상속, 다형성 등의 일반적인 개체 지향 개념에 대해 설명합니다.|  
 |[리플렉션(C#)](./reflection.md)|리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스하는 방법을 설명합니다.|  
 |[Serialization(C#)](./serialization/index.md)|이진, XML 및 SOAP serialization의 주요 개념에 대해 설명합니다.|  
   
