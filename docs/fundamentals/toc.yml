@@ -1028,6 +1028,8 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: 단일 파일 배포 및 실행 파일
         href: ../core/deploying/single-file.md
+      - name: ReadyToRun
+        href: ../core/deploying/ready-to-run.md
       - name: 자체 포함 배포 트리밍
         items:
           - name: 개요 및 방법
