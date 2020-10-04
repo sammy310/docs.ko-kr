@@ -3,12 +3,12 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554569"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609182"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
@@ -52,7 +52,13 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브�
 
 ## <a name="introduction-to-classes"></a>[클래스 소개](introduction-to-classes.md)
 
-이 마지막 자습서는 사용자의 로컬 개발 환경 및 .NET Core를 사용하여 사용자의 머신에서만 실행할 수 있습니다.
+이 자습서는 자체 로컬 개발 환경 및 .NET Core를 사용하여 머신에서만 실행할 수 있습니다.
 콘솔 애플리케이션을 빌드하고 C# 언어의 일부인 기본 개체 지향 기능을 확인합니다.
 
 이 자습서에서는 온라인 소개 자습서를 완료했으며 [.NET Core SDK](https://dotnet.microsoft.com/download) 및 [Visual Studio Code](https://code.visualstudio.com/)를 설치했다고 가정합니다.
+
+## <a name="object-oriented-programming"></a>[개체 지향 프로그래밍](object-oriented-programming.md)
+
+이 자습서에서는 개체 지향 프로그래밍에 사용되는 개념을 설명합니다. C# 예제를 사용하여 *추상화*, *캡슐화*, *상속* 및 *다형성*의 개념을 학습합니다.
+
+이 자습서에서는 온라인 소개 자습서를 완료했으며 개발 머신에 [.NET Core SDK](https://dotnet.microsoft.com/download)와 [Visual Studio Code](https://code.visualstudio.com/) 또는 [Visual Studio](https://visualstudio.com)를 설치했다고 가정합니다.

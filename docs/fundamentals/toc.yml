@@ -366,6 +366,8 @@ items:
             items:
               - name: 일반 옵션
                 href: code-analysis/configuration-options.md
+              - name: 구성 파일
+                href: code-analysis/configuration-files.md
               - name: 코드 품질 규칙
                 items:
                   - name: 규칙 옵션
@@ -1318,9 +1320,17 @@ items:
       - name: 일반 호스트
         href: ../core/extensions/generic-host.md
       - name: 로깅
-        href: /aspnet/core/fundamentals/logging
+        items:
+          - name: 개요
+            href: ../core/extensions/logging.md
+          - name: 로깅 공급자
+            href: ../core/extensions/logging-providers.md
+          - name: 사용자 지정 로깅 공급자 구현
+            href: ../core/extensions/custom-logging-provider.md
+          - name: 고성능 로깅
+            href: ../core/extensions/high-performance-logging.md
       - name: 옵션 패턴
-        href: /aspnet/core/fundamentals/configuration/options
+        href: ../core/extensions/options.md
   - name: 데이터 액세스
     items:
       - name: LINQ
