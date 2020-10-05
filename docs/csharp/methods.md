@@ -4,12 +4,12 @@ description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개�
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495540"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874706"
 ---
 # <a name="methods-in-c"></a>메서드(C#)
 
@@ -121,13 +121,14 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 
 경우에 따라 메서드의 인수 개수를 정확하게 지정하라는 요구 사항은 제한적입니다. `params` 키워드를 사용하여 매개 변수를 매개 변수 배열로 지정하면 가변 개수의 인수로 메서드를 호출할 수 있습니다. `params` 키워드로 태그가 지정된 매개 변수는 배열 형식이어야 하며, 메서드의 매개 변수 목록에서 마지막 매개 변수여야 합니다.
 
-그러면 호출자가 다음 세 가지 방법 중 하나로 메서드를 호출할 수 있습니다.
+그러면 호출자가 다음 네 가지 방법 중 하나로 메서드를 호출할 수 있습니다.
 
 - 원하는 개수의 요소를 포함하는 적절한 형식의 배열 전달
 - 적절한 형식의 개별 인수가 포함된 쉼표로 구분된 목록을 메서드에 전달
+- `null`을 전달
 - 매개 변수 배열에 인수 제공 안 함
 
-다음 예제에서는 매개 변수 배열의 모든 모음을 반환하는 `GetVowels` 메서드를 정의합니다. `Main` 메서드는 해당 메서드를 호출하는 세 가지 방법을 모두 보여 줍니다. 호출자가 `params` 한정자를 포함하는 매개 변수의 인수를 제공할 필요는 없습니다. 이 경우 매개 변수는 `null`입니다.
+다음 예제에서는 매개 변수 배열의 모든 모음을 반환하는 `GetVowels` 메서드를 정의합니다. `Main` 메서드는 해당 메서드를 호출하는 네 가지 방법을 모두 보여 줍니다. 호출자가 `params` 한정자를 포함하는 매개 변수의 인수를 제공할 필요는 없습니다. 이 경우 매개 변수는 빈 배열입니다.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 

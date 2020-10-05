@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240846"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247594"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -109,7 +109,7 @@ namespace AppWithPlugin
 
 이 `ICommand` 인터페이스는 모든 플러그 인이 구현할 인터페이스입니다.
 
-이제 `ICommand` 인터페이스가 정의되어, 애플리케이션 프로젝트를 좀 더 채울 수 있습니다. 루트 폴더에서 `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` 명령을 사용하여 `AppWithPlugin` 프로젝트부터 `PluginBase` 프로젝트까지 참조를 추가합니다.
+이제 `ICommand` 인터페이스가 정의되어, 애플리케이션 프로젝트를 좀 더 채울 수 있습니다. 루트 폴더에서 `dotnet add AppWithPlugin/AppWithPlugin.csproj reference PluginBase/PluginBase.csproj` 명령을 사용하여 `AppWithPlugin` 프로젝트부터 `PluginBase` 프로젝트까지 참조를 추가합니다.
 
 지정된 파일 경로에서 플러그 인을 로드할 수 있도록 `// Load commands from plugins` 주석을 다음 코드 조각으로 바꿉니다.
 
@@ -261,7 +261,7 @@ static Assembly LoadPlugin(string relativePath)
 
 마찬가지로 `PluginBase`가 다른 패키지를 참조하는 경우 `<ExcludeAssets>runtime</ExcludeAssets>` 요소도 중요합니다. 이 설정은 `<Private>false</Private>`와 효과가 동일하지만 `PluginBase` 프로젝트 또는 해당 종속성 중 하나에 포함될 수 있는 패키지 참조에서 작동합니다.
 
-이제 `HelloPlugin` 프로젝트가 완료되었으므로 `HelloPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `AppWithPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`을 `pluginPaths` 배열의 요소로 추가합니다.
+이제 `HelloPlugin` 프로젝트가 완료되었으므로 `HelloPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `AppWithPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`(이 경로는 사용하는 .NET Core 버전에 따라 다를 수 있음)를 `pluginPaths` 배열의 요소로 추가합니다.
 
 ## <a name="plugin-with-library-dependencies"></a>라이브러리 종속성이 있는 플러그 인
 

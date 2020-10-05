@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359222"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180532"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -33,7 +33,7 @@ ms.locfileid: "89359222"
 
 1. **.NET Core 3.1**을 선택합니다. 새 프로젝트의 이름을 "StringLibraryTest"로 지정하고 **만들기**를 선택합니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="프로젝트 이름을 제공하는 Visual Studio Mac 새 프로젝트 대화 상자":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
    Visual Studio는 다음 코드로 클래스 파일을 만듭니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "89359222"
 
 1. **참조** 대화 상자에서 **StringLibrary** 프로젝트를 선택합니다. **확인**을 선택합니다.
 
-      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio Mac 참조 편집 대화 상자":::
+      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 ## <a name="add-and-run-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
 
@@ -102,7 +102,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 1. 메뉴 모음에서 **파일** > **다른 이름으로 저장**을 선택합니다. 대화 상자에서 **인코딩**이 **유니코드(UTF-8)** 로 설정되어 있는지 확인합니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio 다른 이름으로 파일 저장 대화 상자":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 1. 기존 파일을 바꿀지 묻는 메시지가 표시되면 **바꾸기**를 선택합니다.
 
@@ -112,13 +112,13 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 1. 패널을 열어두려면 **고정** 아이콘을 클릭합니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Mac용 Visual Studio 단위 테스트 패널 고정 아이콘":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 1. **모두 실행** 단추를 클릭합니다.
 
    모든 테스트가 통과됩니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Mac용 Visual Studio 테스트 통과 예상됨":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 ## <a name="handle-test-failures"></a>테스트 실패 처리
 
@@ -135,15 +135,9 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
    이때, **테스트 탐색기** 창에 두 가지 테스트는 성공하고 한 가지 테스트는 실패한 것으로 나타납니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="테스트를 실패한 테스트 탐색기 창":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자" 다음에 나오는 배열의 문자열은 테스트되지 않았습니다.
 
-1. <kbd>ctrl</kbd> 키를 누른 채로 실패한 테스트 `TestDoesNotStartWithUpper`를 클릭하고 상황에 맞는 메뉴에서 **결과 패드 표시**를 선택합니다.
-
-   **결과** 패드에 어설션이 생성하는 메시지가 표시됩니다. "Assert.IsFalse가 실패했습니다. 'Error'에 필요한 값: false, 실제: True"가 표시됩니다. 이 오류 때문에 "Error" 다음에 나오는 배열의 문자열은 테스트되지 않았습니다.
-
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="Is False 어설션 실패를 표시하는 테스트 탐색기 창":::
-
-1. 1단계에서 추가한 "Error" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
 
 ## <a name="test-the-release-version-of-the-library"></a>라이브러리의 릴리스 버전 테스트
 
@@ -153,11 +147,11 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
 1. Visual Studio 도구 모음에서 빌드 구성을 **디버그**에서 **릴리스**로 변경합니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="릴리스 빌드가 강조 표시된 Visual Studio 도구 모음":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 1. **솔루션** 패드에서 <kbd>ctrl</kbd> 키를 누른 채로 **StringLibrary** 프로젝트를 클릭하고 상황에 맞는 메뉴에서 **빌드**를 클릭하여 라이브러리를 다시 컴파일합니다.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="빌드 명령이 있는 StringLibrary 상황에 맞는 메뉴":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="테스트 프로젝트를 만드는 Visual Studio Mac 새 프로젝트 대화 상자":::
 
 1. 단위 테스트를 다시 실행합니다.
 
@@ -165,7 +159,9 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
 ## <a name="debug-tests"></a>테스트 디버그
 
-[자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-mac.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하는 코드를 디버그합니다. ShowCase 엡 프로젝트를 시작하는 대신 <kbd>ctrl</kbd> 키를 누른 채로 **StringLibraryTests** 프로젝트를 클릭한 다음 상황에 맞는 메뉴에서 **프로젝트 디버깅 시작**을 선택합니다. Visual Studio에서 디버거를 연결한 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
+Mac용 Visual Studio를 IDE로 사용하는 경우 [자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-mac.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하는 코드를 디버그합니다. *ShowCase* 앱 프로젝트를 시작하는 대신 <kbd>Ctrl</kbd> 키를 누른 채로 **StringLibraryTests** 프로젝트를 클릭한 다음 상황에 맞는 메뉴에서 **프로젝트 디버그 시작**을 선택합니다.
+
+Visual Studio에서 디버거를 연결한 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

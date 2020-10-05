@@ -1,22 +1,22 @@
 ---
 title: Microsoft.NET.Sdk의 MSBuild 속성
-description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
+description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
+ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656264"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91354455"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
+# <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
-이 페이지는 .NET Core 프로젝트를 구성하는 데 사용할 수 있는 MSBuild 속성 및 항목에 대한 참조입니다.
+이 페이지는 .NET 프로젝트를 구성하는 데 사용할 수 있는 MSBuild 속성 및 항목에 대한 참조입니다.
 
 > [!NOTE]
-> 이 페이지는 진행 중인 작업이며 .NET Core SDK의 일부 유용한 MSBuild 속성을 나열하지 않습니다. 일반적인 MSBuild 속성의 목록을 보려면 [일반 MSBuild 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
+> 이 페이지는 진행 중인 작업이며 .NET SDK의 유용한 MSBuild 속성이 모두 나열된 것은 아닙니다. 일반적인 MSBuild 속성의 목록을 보려면 [일반 MSBuild 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
 
 ## <a name="framework-properties"></a>프레임워크 속성
 
@@ -123,7 +123,7 @@ ms.locfileid: "89656264"
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` 속성은 .NET Core SDK 2.1.400 버전에서 도입되었습니다. 배포용으로 네이티브 실행 파일을 만들지 여부를 제어합니다. 자체 포함 배포의 경우 네이티브 실행 파일이 필요합니다.
+`UseAppHost` 속성은 .NET SDK 2.1.400 버전에서 도입되었습니다. 배포용으로 네이티브 실행 파일을 만들지 여부를 제어합니다. 자체 포함 배포의 경우 네이티브 실행 파일이 필요합니다.
 
 .NET Core 3.0 이상 버전에서는 프레임워크 종속 실행 파일이 기본적으로 생성됩니다. `UseAppHost` 속성을 `false`로 설정하여 실행 파일 생성을 사용하지 않도록 설정합니다.
 
@@ -133,7 +133,7 @@ ms.locfileid: "89656264"
 </PropertyGroup>
 ```
 
-배포에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
+배포에 대한 자세한 내용은 [.NET 애플리케이션 배포](../deploying/index.md)를 참조하세요.
 
 ## <a name="compile-properties"></a>컴파일 속성
 
@@ -147,7 +147,7 @@ ms.locfileid: "89656264"
 > [!NOTE]
 > `LogicalName`, `ManifestResourceName` 또는 `DependentUpon` 메타데이터가 `EmbeddedResource` 항목에 대해 지정된 경우 해당 리소스 파일에 대해 생성된 매니페스트 파일 이름은 이러한 메타데이터를 기반으로 합니다.
 
-기본적으로 새 .NET Core 프로젝트에서 이 속성은 `true`로 설정됩니다. 이 속성이 `false`로 설정되고 프로젝트 파일의 `EmbeddedResource` 항목에 대해 `LogicalName`, `ManifestResourceName` 또는 `DependentUpon` 메타데이터가 지정되지 않은 경우 리소스 매니페스트 파일 이름은 프로젝트의 루트 네임스페이스와 *.resx* 파일의 상대 파일 경로를 기반으로 합니다. 자세한 내용은 [리소스 매니페스트 파일 이름이 지정되는 방식](../resources/manifest-file-names.md)을 참조하세요.
+기본적으로 새 .NET 프로젝트에서 이 속성은 `true`로 설정됩니다. 이 속성이 `false`로 설정되고 프로젝트 파일의 `EmbeddedResource` 항목에 대해 `LogicalName`, `ManifestResourceName` 또는 `DependentUpon` 메타데이터가 지정되지 않은 경우 리소스 매니페스트 파일 이름은 프로젝트의 루트 네임스페이스와 *.resx* 파일의 상대 파일 경로를 기반으로 합니다. 자세한 내용은 [리소스 매니페스트 파일 이름이 지정되는 방식](../resources/manifest-file-names.md)을 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ ms.locfileid: "89656264"
 
 ### <a name="analysismode"></a>AnalysisMode
 
-.NET 5.0 RC2부터 .NET SDK에는 모든 [“CA” 모드 품질 규칙](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)이 함께 제공됩니다. 기본적으로 [일부 규칙만 빌드 경고로 사용 설정](../../fundamentals/productivity/code-analysis.md#enabled-rules)됩니다. `AnalysisMode` 속성을 사용하면 기본적으로 사용하도록 설정되는 규칙 집합을 사용자 지정할 수 있습니다. 더욱 적극적인(옵트아웃) 분석 모드나 더욱 보수적인(옵트인) 분석 모드로 전환할 수 있습니다. 예를 들어 기본적으로 모든 규칙을 빌드 경고로 사용하도록 설정하려는 경우 값을 `AllEnabledByDefault`로 설정합니다.
+.NET 5.0 RC2부터 .NET SDK에는 모든 [“CA” 모드 품질 규칙](../../fundamentals/code-analysis/quality-rules/index.md)이 함께 제공됩니다. 기본적으로 [일부 규칙만 빌드 경고로 사용 설정](../../fundamentals/code-analysis/overview.md#enabled-rules)됩니다. `AnalysisMode` 속성을 사용하면 기본적으로 사용하도록 설정되는 규칙 집합을 사용자 지정할 수 있습니다. 더욱 적극적인(옵트아웃) 분석 모드나 더욱 보수적인(옵트인) 분석 모드로 전환할 수 있습니다. 예를 들어 기본적으로 모든 규칙을 빌드 경고로 사용하도록 설정하려는 경우 값을 `AllEnabledByDefault`로 설정합니다.
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ ms.locfileid: "89656264"
 | 값 | 의미 |
 |-|-|
 | `Default` | 특정 규칙이 빌드 경고로 사용되고, 다른 특정 규칙이 Visual Studio IDE 추천으로 사용되며, 나머지는 사용하지 않도록 설정되는 기본 모드입니다. |
-| `AllEnabledByDefault` | 모든 규칙이 기본적으로 빌드 경고로 사용되는 적극적인(또는 옵트아웃) 모드입니다. 개별 규칙을 선택적으로 [옵트아웃](../../fundamentals/productivity/configure-code-analysis-rules.md)하여 사용하지 않도록 설정할 수 있습니다. |
-| `AllDisabledByDefault` | 모든 규칙이 기본적으로 사용하지 않도록 설정되는 보수적인(또는 옵트인) 모드입니다. 개별 규칙을 선택적으로 [옵트인](../../fundamentals/productivity/configure-code-analysis-rules.md)하여 사용하도록 설정할 수 있습니다. |
+| `AllEnabledByDefault` | 모든 규칙이 기본적으로 빌드 경고로 사용되는 적극적인(또는 옵트아웃) 모드입니다. 개별 규칙을 선택적으로 [옵트아웃](../../fundamentals/code-analysis/configuration-options.md)하여 사용하지 않도록 설정할 수 있습니다. |
+| `AllDisabledByDefault` | 모든 규칙이 기본적으로 사용하지 않도록 설정되는 보수적인(또는 옵트인) 모드입니다. 개별 규칙을 선택적으로 [옵트인](../../fundamentals/code-analysis/configuration-options.md)하여 사용하도록 설정할 수 있습니다. |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors` 속성을 사용하면 코드 품질 분석 경고(CAxxxx)를 경고로 처리할지 여부를 구성하고 빌드를 중단할 수 있습니다. 프로젝트를 빌드할 때 `-warnaserror` 플래그를 사용하면 [.NET 코드 품질 분석](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) 경고도 오류로 처리됩니다. 코드 품질 분석 경고를 오류로 처리하지 않으려는 경우 프로젝트 파일에서 `CodeAnalysisTreatWarningsAsErrors` MSBuild 속성을 `false`로 설정할 수 있습니다.
+`CodeAnalysisTreatWarningsAsErrors` 속성을 사용하면 코드 품질 분석 경고(CAxxxx)를 경고로 처리할지 여부를 구성하고 빌드를 중단할 수 있습니다. 프로젝트를 빌드할 때 `-warnaserror` 플래그를 사용하면 [.NET 코드 품질 분석](../../fundamentals/code-analysis/overview.md#code-quality-analysis) 경고도 오류로 처리됩니다. 코드 품질 분석 경고를 오류로 처리하지 않으려는 경우 프로젝트 파일에서 `CodeAnalysisTreatWarningsAsErrors` MSBuild 속성을 `false`로 설정할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ ms.locfileid: "89656264"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-.NET 5.0 이상을 대상으로 하는 프로젝트의 경우 기본적으로 [.NET 코드 품질 분석](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)이 사용됩니다. `EnableNETAnalyzers` 속성을 `true`로 설정하여 이전 버전의 .NET을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있습니다. 모든 프로젝트에서 코드 분석을 사용하지 않으려면 해당 속성을 `false`로 설정합니다.
+.NET 5.0 이상을 대상으로 하는 프로젝트의 경우 기본적으로 [.NET 코드 품질 분석](../../fundamentals/code-analysis/overview.md#code-quality-analysis)이 사용됩니다. `EnableNETAnalyzers` 속성을 `true`로 설정하여 이전 버전의 .NET을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있습니다. 모든 프로젝트에서 코드 분석을 사용하지 않으려면 해당 속성을 `false`로 설정합니다.
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ ms.locfileid: "89656264"
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
-[.NET 코드 스타일 분석](../../fundamentals/productivity/code-analysis.md#code-style-analysis)은 모든 .NET 프로젝트에 대해 빌드 시 기본적으로 사용하지 않도록 설정됩니다. `EnforceCodeStyleInBuild` 속성을 `true`로 설정하여 .NET 프로젝트에 대해 코드 스타일 분석을 사용하도록 설정할 수 있습니다.
+[.NET 코드 스타일 분석](../../fundamentals/code-analysis/overview.md#code-style-analysis)은 모든 .NET 프로젝트에 대해 빌드 시 기본적으로 사용하지 않도록 설정됩니다. `EnforceCodeStyleInBuild` 속성을 `true`로 설정하여 .NET 프로젝트에 대해 코드 스타일 분석을 사용하도록 설정할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ ms.locfileid: "89656264"
 </PropertyGroup>
 ```
 
-경고 또는 오류로 [구성된](../../fundamentals/productivity/code-analysis.md#code-style-analysis) 모든 코드 스타일 규칙은 빌드 및 보고 위반 시 실행됩니다.
+경고 또는 오류로 [구성된](../../fundamentals/code-analysis/overview.md#code-style-analysis) 모든 코드 스타일 규칙은 빌드 및 보고 위반 시 실행됩니다.
 
 ## <a name="run-time-configuration-properties"></a>런타임 구성 속성
 
-앱의 프로젝트 파일에서 MSBuild 속성을 지정하여 몇 가지 런타임 동작을 구성할 수 있습니다. 런타임 동작을 구성하는 다른 방법에 관한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md)을 참조하세요.
+앱의 프로젝트 파일에서 MSBuild 속성을 지정하여 몇 가지 런타임 동작을 구성할 수 있습니다. 런타임 동작을 구성하는 다른 방법에 관한 내용은 [런타임 구성 설정](../run-time-config/index.md)을 참조하세요.
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [InvariantGlobalization](#invariantglobalization)

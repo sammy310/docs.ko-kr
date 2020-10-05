@@ -4,12 +4,12 @@ description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598092"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406247"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -85,6 +85,9 @@ ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보�
 
 ## <a name="discover-cross-platform-issues"></a>플랫폼 간 문제 검색
 
+> [!NOTE]
+> .NET 5.0에서는 이 기능을 대체하는 [플랫폼 호환성 분석기](platform-compat-analyzer.md)를 도입했습니다. 플랫폼 호환성 분석기는 .NET SDK에 포함되어 있으며(별도로 설치할 필요 없음) 기본적으로 켜져 있습니다.
+
 사용되지 않는 API와 비슷하게 분석기는 플랫폼 간이 아닌 모든 API를 식별합니다. 예를 들어 <xref:System.Console.WindowWidth?displayProperty=nameWithType>는 Windows에서 작동하지만 Linux 및 macOS에서는 작동하지 않습니다. 진단 ID는 **오류 목록** 창에 표시됩니다. 마우스 오른쪽 단추를 클릭하고 **빠른 작업 및 리팩터링**을 선택하여 해당 경고를 표시하지 않을 수 있습니다. 예를 들어 두 개의 옵션(사용되지 않는 멤버를 계속 사용하고 경고를 표시하지 않음 또는 전혀 사용하지 않음)이 있는 사용 중단 사례와 달리, 여기서는 특정 플랫폼에 대한 코드만 개발하는 경우 코드를 실행할 계획이 없는 모든 다른 플랫폼에 대한 모든 경고를 표시하지 않을 수 있습니다. 이렇게 하려면 프로젝트 파일을 편집하고 무시할 모든 플랫폼을 나열하는 `PlatformCompatIgnore` 속성을 추가하면 됩니다. 허용되는 값은 `Linux`, `macOS` 및 `Windows`입니다.
 
 ```xml
@@ -129,3 +132,4 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 - [API 분석기 소개](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) 블로그 게시물.
 - YouTube의 [API 분석기](https://youtu.be/eeBEahYXGd0) 데모 동영상.
+- [플랫폼 호환성 분석기](platform-compat-analyzer.md)

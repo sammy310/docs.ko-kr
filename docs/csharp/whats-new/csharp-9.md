@@ -2,21 +2,21 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738725"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247620"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
 C# 9.0은 다음 기능과 개선 사항을 C# 언어에 추가합니다.
 
-- 레코드
-- Init 전용 setter
-- 최상위 문
-- 패턴 일치 개선 사항
+- [레코드](#record-types)
+- [Init 전용 setter](#init-only-setters)
+- [최상위 문](#top-level-statements)
+- [패턴 일치 개선 사항](#pattern-matching-enhancements)
 - 원시 크기 정수
 - 함수 포인터
 - localsinit 플래그 내보내기 무시
@@ -48,7 +48,6 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 - <xref:System.Object.GetHashCode> 재정의
 - 멤버 복사 및 복제
 - `PrintMembers` 및 <xref:System.Object.ToString>
-- `Deconstruct` 메서드
 
 레코드는 상속을 지원합니다. `Person`에서 파생된 새 레코드를 다음과 같이 선언할 수 있습니다.
 
@@ -64,7 +63,6 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 - 레코드의 문자열 표현이 일관성 있게 자동으로 생성됩니다.
 - 레코드에서 복사본 생성을 지원합니다. 올바른 복사본 생성에는 상속 계층 구조와 개발자가 추가한 속성이 포함되어야 합니다.
 - 수정 내용과 함께 레코드를 복사할 수 있습니다. 복사 및 수정 작업에서 비파괴적 변경을 지원합니다.
-- 모든 레코드에서 분해를 지원합니다.
 
 컴파일러는 익숙한 `Equals` 오버로드, `operator ==`, `operator !=` 외에도 새 `EqualityContract` 속성을 합성합니다. 이 속성은 레코드 종류와 일치하는 `Type` 개체를 반환합니다. 기본 형식이 `object`이면 속성은 `virtual`이 됩니다. 기본 형식이 다른 레코드 종류이면 속성은 `override`가 됩니다. 레코드 종류가 `sealed`이면 속성은 `sealed`가 됩니다. 합성된 `GetHashCode`는 기본 형식 및 레코드 종류에 선언된 모든 속성과 필드의 `GetHashCode`를 사용합니다. 해당 합성 메서드는 상속 계층 구조 전체에 값 기반 같음을 적용합니다. 즉, `Student`는 동일한 이름을 가진 `Person`과 같다고 간주하지 않습니다. 레코드 종류 간에 공유되는 모든 속성이 같을 뿐 아니라 두 레코드 종류도 일치해야 합니다.
 
@@ -224,15 +222,15 @@ if (e is not null)
 
 `return new();` 식을 사용하여 기본 생성자에서 만든 인스턴스를 반환할 수 있습니다.
 
-유사한 기능은 조건식의 대상 유형 확인을 개선합니다. 이 변경 내용이 도입되면서 두 식 간에 암시적 변환을 포함할 수는 없지만 두 식에 모두 대상 유형으로의 암시적 변환을 사용할 수 있습니다. 이 변경 내용을 발견하지 못할 수도 있습니다. 이전에 캐스트가 필요했거나 컴파일되지 않던 일부 조건식이 이제 작동할 뿐입니다.
+유사한 기능은 [조건식](../language-reference/operators/conditional-operator.md)의 대상 유형 확인을 개선합니다. 이 변경 내용이 도입되면서 두 식 간에 암시적 변환을 포함할 수는 없지만 두 식에 모두 대상 유형으로의 암시적 변환을 사용할 수 있습니다. 이 변경 내용을 발견하지 못할 수도 있습니다. 이전에 캐스트가 필요했거나 컴파일되지 않던 일부 조건식이 이제 작동할 뿐입니다.
 
-C# 9.0부터 람다 식 또는 무명 메서드에 `static` 한정자를 추가할 수 있습니다. 정적 람다 식은 `static` 로컬 함수와 유사합니다. 정적 람다 또는 무명 함수는 지역 변수나 인스턴스 상태를 캡처할 수 없습니다. `static` 한정자는 실수에 의한 다른 변수 캡처를 방지합니다.
+C# 9.0부터 [람다](../language-reference/operators/lambda-expressions.md) 식 또는 [무명 메서드](../language-reference/operators/delegate-operator.md)에 `static` 한정자를 추가할 수 있습니다. 정적 람다 식은 `static` 로컬 함수와 유사합니다. 정적 람다 또는 무명 메서드는 지역 변수나 인스턴스 상태를 캡처할 수 없습니다. `static` 한정자는 실수에 의한 다른 변수 캡처를 방지합니다.
 
 공변 반환 형식은 재정의된 함수의 반환 형식에 대한 유연성을 제공합니다. 재정의된 가상 함수는 기본 클래스 메서드에 선언된 반환 형식에서 파생된 형식을 반환할 수 있습니다. 이 함수는 레코드나 가상 클론 또는 팩터리 메서드를 지원하는 기타 형식에 유용할 수 있습니다.
 
-또한 `foreach` 루프는 `foreach` 패턴을 충족하는 확장 메서드 `GetEnumerator`를 인식하고 사용합니다. 이렇게 변경함으로써 `foreach`는 비동기 패턴과 같은 다른 패턴 기반 생성 및 패턴 기반 분해와 일치하게 됩니다. 실제로 이 변경은 모든 형식에 `foreach` 지원을 추가할 수 있음을 의미합니다. 설계상 개체를 열거하는 것이 적합한 경우로 사용을 제한해야 합니다.
+또한 [`foreach` 루프](../language-reference/keywords/foreach-in.md)는 `foreach` 패턴을 충족하는 확장 메서드 `GetEnumerator`를 인식하고 사용합니다. 이렇게 변경함으로써 `foreach`는 비동기 패턴과 같은 다른 패턴 기반 생성 및 패턴 기반 분해와 일치하게 됩니다. 실제로 이 변경은 모든 형식에 `foreach` 지원을 추가할 수 있음을 의미합니다. 설계상 개체를 열거하는 것이 적합한 경우로 사용을 제한해야 합니다.
 
-다음으로, 무시 항목을 람다 식에 대한 매개 변수로 사용할 수 있습니다. 이 편리한 기능을 사용하면 인수 이름을 지정할 필요가 없으며, 컴파일러에서 인수를 사용하지 않을 수 있습니다. 모든 인수에 `_`을 사용합니다.
+다음으로, 무시 항목을 람다 식에 대한 매개 변수로 사용할 수 있습니다. 이 편리한 기능을 사용하면 인수 이름을 지정할 필요가 없으며, 컴파일러에서 인수를 사용하지 않을 수 있습니다. 모든 인수에 `_`을 사용합니다. 자세한 내용은 [람다 식](../language-reference/operators/lambda-expressions.md) 문서의 [람다 식 입력 매개 변수](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) 섹션을 참조하세요.
 
 마지막으로, 이제 로컬 함수에 특성을 적용할 수 있습니다. 예를 들어 로컬 함수에 null 허용 특성 주석을 적용할 수 있습니다.
 

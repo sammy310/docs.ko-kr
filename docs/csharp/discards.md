@@ -2,13 +2,13 @@
 title: 무시 항목 - C# 가이드
 description: 할당되지 않은 무시 가능한 변수인 무시 항목에 대한 C#의 지원과 무시 항목을 사용할 수 있는 방법에 관해 설명합니다.
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100632"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869324"
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
 
@@ -20,12 +20,14 @@ C# 7.0부터 C#에서는 애플리케이션 코드에서 의도적으로 사용�
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
+C# 7.0 이상에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
 
 - 튜플 및 개체 [분해](deconstruct.md)
 - [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md)를 사용한 패턴 일치
 - `out` 매개 변수를 사용한 메서드 호출
 - 범위에 `_`이 없는 경우 독립 실행형 `_`
+
+C# 9.0부터 무시 항목을 사용하여 람다 식의 사용하지 않는 입력 매개 변수를 지정할 수 있습니다. 자세한 내용은 [람다 식](language-reference/operators/lambda-expressions.md) 문서의 [람다 식 입력 매개 변수](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) 섹션을 참조하세요.
 
 `_`이 유효한 무시 항목인 경우, 해당 값을 검색하거나 할당 작업에서 사용하려고 하면 “‘\_’ 이름이 현재 컨텍스트에 없습니다.”라는 컴파일러 오류 CS0301이 생성됩니다. 이는 `_`에 값이 할당되어 있지 않고 스토리지 위치도 할당되어 있지 않을 수 있기 때문입니다. 실제 변수인 경우에는 이전 예제에서처럼 2개 이상의 값을 무시할 수 없습니다.
 
@@ -75,7 +77,7 @@ C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니�
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 컴파일러 오류 CS0136, “이름이 ‘\_’인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다.” 예들 들어 다음과 같습니다.
+- 컴파일러 오류 CS0136, “이름이 ‘\_’인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다.” 예를 들면 다음과 같습니다.
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

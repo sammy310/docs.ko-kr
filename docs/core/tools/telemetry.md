@@ -3,18 +3,18 @@ title: .NET Core SDK 원격 분석
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용량 정보를 수집하는 .NET Core SDK 원격 분석 기능을 살펴봅니다.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359235"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206356"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
 [.NET Core SDK](index.md)에는 .NET Core CLI에서 크래시가 발생할 때 사용량 현황 데이터 및 예외 정보를 수집하는 원격 분석 기능이 포함되어 있습니다. .NET Core CLI는 .NET Core SDK와 함께 제공되며 .NET Core 앱을 빌드, 테스트 및 게시하는 데 사용되는 동사 세트입니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 오류에 대한 정보는 팀이 문제를 해결하고 버그를 수정하는 데 도움이 됩니다.
 
-수집된 데이터는 익명이며 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 모두 집계하여 게시됩니다.
+수집된 데이터는 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 모두 집계하여 게시됩니다.
 
 ## <a name="scope"></a>Scope
 
@@ -41,7 +41,7 @@ ms.locfileid: "89359235"
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | 2\.0 이상        | 명령 인수 및 옵션: 알려진 인수 및 옵션만 수집됩니다(임의 문자열이 아님). [수집된 옵션](#collected-options)을 참조하세요. 2\.1.300 이후에 해시됩니다. |
 | 2\.0 이상         | SDK가 컨테이너에서 실행 중인지 여부. |
 | 2\.0 이상         | 2\.1부터 해시된 `TargetFramework` 이벤트의 대상 프레임워크 |
-| 2\.0 이상         | 해시된 MAC(미디어 액세스 제어) 주소: 머신의 암호화된(SHA256) 익명 및 고유 ID |
+| 2\.0 이상         | 해시된 MAC(미디어 액세스 제어) 주소(SHA256). |
 | 2\.0 이상         | 해시된 현재 작업 디렉터리. |
 | 2\.0 이상         | 해시된 설치 관리자 exe 파일 이름을 사용하는 설치 성공 보고서 |
 | 2\.1.300 이상     | 커널 버전 |

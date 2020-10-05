@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359196"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177295"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -186,6 +186,12 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
    > ![빌드 명령이 있는 StringLibrary 상황에 맞는 메뉴](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. 메뉴 모음에서 **테스트 실행** > **모든 테스트**를 선택하여 단위 테스트를 실행합니다. 테스트를 통과합니다.
+
+## <a name="debug-tests"></a>테스트 디버그
+
+Visual Studio를 IDE로 사용하는 경우 [자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하는 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 **StringLibraryTests** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **테스트 디버그**를 선택합니다.
+
+Visual Studio에서 디버거를 연결한 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

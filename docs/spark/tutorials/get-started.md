@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark 시작
 description: Windows, macOS, Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 살펴봅니다.
-ms.date: 06/25/2020
+ms.date: 09/17/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d7297b11a2b5b21420fcb2f0f9ae823cb29b88d1
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.author: luquinta
+author: luisquintanilla
+ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359001"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866049"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -21,13 +23,13 @@ ms.locfileid: "89359001"
 >
 > * .NET for Apache Spark를 위한 환경 준비
 > * 첫 번째 .NET for Apache Spark 애플리케이션 작성
-> * 간단한 .NET for Apache Spark 애플리케이션 빌드 및 실행
+> * .NET for Apache Spark 애플리케이션 빌드 및 실행
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>환경 준비
 
-앱 작성을 시작하기 전에 몇 가지 필수 구성 요소 종속성을 설치해야 합니다. 명령줄 환경에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는 경우 환경은 이미 준비된 것이며 다음 섹션으로 건너뛸 수 있습니다. 임의 또는 모든 명령을 실행할 수 없는 경우 다음 단계를 수행합니다.
+앱 작성을 시작하기 전에 몇 가지 필수 구성 요소 종속성을 설치해야 합니다. 명령줄 환경에서 `dotnet`, `java`, `spark-shell`을 실행할 수 있는 경우 환경은 이미 준비된 것이며 다음 섹션으로 건너뛸 수 있습니다. 임의 또는 모든 명령을 실행할 수 없는 경우 다음 단계를 수행합니다.
 
 ### <a name="1-install-net"></a>1. .NET 설치
 
@@ -73,14 +75,17 @@ Apache Spark 파일의 압축을 풀려면:
 
 ![Spark 설치](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
 
-다음 명령을 실행하여 **Windows**에서 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다.
+다음 명령을 실행하여 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다. Windows에서는 관리자 모드에서 명령 프롬프트를 실행해야 합니다.
+
+#### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
-다음 명령을 실행하여 **macOS** 및 **Ubuntu**에서 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다.
+#### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
 export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
@@ -88,9 +93,13 @@ export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
 
+---
+
 모든 항목을 설치하고 환경 변수를 설정한 후 **새** 명령 프롬프트 또는 터미널을 열고 다음 명령을 실행합니다.
 
-`%SPARK_HOME%\bin\spark-submit --version`
+```text
+spark-submit --version
+```
 
 명령이 실행되고 버전 정보가 출력되면 다음 단계로 이동할 수 있습니다.
 
@@ -98,7 +107,7 @@ source ~/.bashrc
 
 ### <a name="5-install-net-for-apache-spark"></a>5. .NET for Apache Spark 설치
 
-.NET for Apache Spark GitHub에서 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 Windows 머신에서 .NET Core를 사용하려는 경우 [Windows x64 netcoreapp3.1 릴리스를 다운로드](https://github.com/dotnet/spark/releases/download/v0.8.0/Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip)합니다.
+.NET for Apache Spark GitHub에서 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 Windows 머신에서 .NET Core를 사용하려는 경우 [Windows x64 netcoreapp3.1 릴리스를 다운로드](https://github.com/dotnet/spark/releases)합니다.
 
 Microsoft.Spark.Worker 압축을 풀려면:
 
@@ -119,15 +128,23 @@ Microsoft.Spark.Worker 압축을 풀려면:
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. DOTNET_WORKER_DIR 설정 및 종속성 확인
 
-다음 명령 중 하나를 실행하여 .NET 앱에서 .NET for Apache Spark를 찾는 데 사용하는 `DOTNET_WORKER_DIR` 환경 변수를 설정합니다.
+다음 명령 중 하나를 실행하여 .NET 앱에서 .NET for Apache Spark를 찾는 데 사용하는 `DOTNET_WORKER_DIR` 환경 변수를 설정합니다. `<PATH-DOTNET_WORKER_DIR>`을 `Microsoft.Spark.Worker`를 다운로드하여 압축을 푼 디렉터리로 바꿉니다. Windows에서는 관리자 모드에서 명령 프롬프트를 실행해야 합니다.
 
-**Windows**에서 [새 환경 변수](https://www.java.com/en/download/help/path.xml) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: `C:\bin\Microsoft.Spark.Worker\`)를 다운로드하여 추출한 디렉터리로 설정합니다.
+#### <a name="windows"></a>[Windows](#tab/windows)
 
-**macOS**에서 `export DOTNET_WORKER_DIR <your_path>`을 사용하여 새 환경 변수를 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker/* )를 다운로드하여 추출한 디렉터리로 설정합니다.
+```console
+setx /M DOTNET_WORKER_DIR <PATH-DOTNET-WORKER-DIR>
+```
 
-**Ubuntu**에서 [새 환경 변수](https://help.ubuntu.com/community/EnvironmentVariables) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker*)를 다운로드하여 추출한 디렉터리로 설정합니다.
+#### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
-마지막으로, 다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 다시 확인합니다.
+```bash
+export DOTNET_WORKER_DIR=<PATH-DOTNET-WORKER-DIR>
+```
+
+---
+
+마지막으로, 다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `spark-shell`을 실행할 수 있는지 다시 확인합니다.
 
 ## <a name="write-a-net-for-apache-spark-app"></a>.NET for Apache Spark 앱 작성
 
@@ -136,24 +153,30 @@ Microsoft.Spark.Worker 압축을 풀려면:
 명령 프롬프트 또는 터미널에서 다음 명령을 실행하여 새 콘솔 애플리케이션을 만듭니다.
 
 ```dotnetcli
-dotnet new console -o mySparkApp
-cd mySparkApp
+dotnet new console -o MySparkApp
+cd MySparkApp
 ```
 
-`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *mySparkApp*이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd mySparkApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
+`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *MySparkApp*이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd MySparkApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
 
 ### <a name="2-install-nuget-package"></a>2. NuGet 패키지 설치
 
 앱에서 .NET for Apache Spark를 사용하려면 Microsoft.Spark 패키지를 설치합니다. 명령 프롬프트 또는 터미널에서 다음 명령을 실행합니다.
 
-`dotnet add package Microsoft.Spark --version 0.8.0`
+```dotnetcli
+dotnet add package Microsoft.Spark
+```
 
-### <a name="3-code-your-app"></a>3. 앱 코딩
+> [!NOTE]
+> 달리 지정하지 않은 한 이 자습서에서는 `Microsoft.Spark` NuGet 패키지의 최신 버전을 사용합니다.
+
+### <a name="3-write-your-app"></a>3. 앱 작성
 
 Visual Studio Code 또는 텍스트 편집기에서 *Program.cs*를 열고 모든 코드를 다음으로 바꿉니다.
 
 ```csharp
 using Microsoft.Spark.Sql;
+using static Microsoft.Spark.Sql.Functions;
 
 namespace MySparkApp
 {
@@ -161,43 +184,41 @@ namespace MySparkApp
     {
         static void Main(string[] args)
         {
-            // Create a Spark session.
-            SparkSession spark = SparkSession
-                .Builder()
-                .AppName("word_count_sample")
-                .GetOrCreate();
+            // Create Spark session
+            SparkSession spark =
+                SparkSession
+                    .Builder()
+                    .AppName("word_count_sample")
+                    .GetOrCreate();
 
-            // Create initial DataFrame.
-            DataFrame dataFrame = spark.Read().Text("input.txt");
+            // Create initial DataFrame
+            string filePath = args[0];
+            DataFrame dataFrame = spark.Read().Text(filePath);
 
-            // Count words.
-            DataFrame words = dataFrame
-                .Select(Functions.Split(Functions.Col("value"), " ").Alias("words"))
-                .Select(Functions.Explode(Functions.Col("words"))
-                .Alias("word"))
-                .GroupBy("word")
-                .Count()
-                .OrderBy(Functions.Col("count").Desc());
+            //Count words
+            DataFrame words =
+                dataFrame
+                    .Select(Split(Col("value")," ").Alias("words"))
+                    .Select(Explode(Col("words")).Alias("word"))
+                    .GroupBy("word")
+                    .Count()
+                    .OrderBy(Col("count").Desc());
 
-            // Show results.
+            // Display results
             words.Show();
 
-            // Stop Spark session.
+            // Stop Spark session
             spark.Stop();
         }
     }
 }
 ```
 
-### <a name="4-create-and-add-a-data-file"></a>4. 데이터 파일 만들기 및 추가
+[SparkSession](xref:Microsoft.Spark.Sql.SparkSession)은 Apache Spark 애플리케이션의 진입점으로, 애플리케이션의 컨텍스트 및 정보를 관리합니다. [Text](xref:Microsoft.Spark.Sql.DataFrameReader.Text%2A) 메서드를 사용하여 `filePath`에서 지정된 파일의 텍스트 데이터를 [DataFrame](xref:Microsoft.Spark.Sql.DataFrame)으로 읽어옵니다. DataFrame은 명명된 열의 집합으로 데이터를 구성하는 방법입니다. 그런 다음 일련의 변환을 적용하여 파일의 문장을 분할하고, 각 단어를 그룹화하고, 개수를 계산하고, 내림차순으로 정렬합니다. 이러한 작업의 결과는 다른 DataFrame에 저장됩니다. 이 시점에서는 아무 작업도 수행되지 않습니다. .NET for Apache Spark가 데이터를 지연 계산하기 때문입니다. [Show](xref:Microsoft.Spark.Sql.DataFrame.Show%2A) 메서드를 호출하여 콘솔에 `words`로 변환된 DataFrame의 내용을 표시하기 전에는 위의 줄에 정의된 작업이 실행되지 않습니다. Spark 세션이 더 이상 필요하지 않으면 [Stop](xref:Microsoft.Spark.Sql.SparkSession.Stop%2A) 메서드를 사용하여 세션을 중지합니다.
 
-명령 프롬프트 또는 터미널을 열고 앱 폴더로 이동합니다.
+### <a name="4-create-data-file"></a>4. 데이터 파일 만들기
 
-```bash
-cd <your-app-output-directory>
-```
-
-앱은 텍스트 줄이 포함된 파일을 처리합니다. *mySparkApp* 디렉터리에 다음 텍스트를 포함하는 *input.txt* 파일을 만듭니다.
+앱은 텍스트 줄이 포함된 파일을 처리합니다. *MySparkApp* 디렉터리에 다음 텍스트를 포함하는 *input.txt*라는 파일을 만듭니다.
 
 ```text
 Hello World
@@ -205,39 +226,74 @@ This .NET app uses .NET for Apache Spark
 This .NET app counts words with Apache Spark
 ```
 
+변경 내용을 저장하고 파일을 닫습니다.
+
 ## <a name="run-your-net-for-apache-spark-app"></a>.NET for Apache Spark 앱 실행
 
-1. 다음 명령을 실행하여 애플리케이션을 빌드합니다.
+다음 명령을 실행하여 애플리케이션을 빌드합니다.
 
-   ```dotnetcli
-   dotnet build
-   ```
+```dotnetcli
+dotnet build
+```
 
-2. 다음 명령을 실행하여 Apache Spark에서 실행할 애플리케이션을 제출합니다.
+빌드 출력 디렉터리로 이동하고 `spark-submit` 명령을 사용하여 Apache Spark에서 실행할 애플리케이션을 제출합니다. `<version>`을 .NET 작업자의 버전으로 바꾸고 `<path-of-input.txt>`를 *input.txt* 파일이 저장된 경로로 바꿔야 합니다.
 
-   ```console
-   spark-submit \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --master local \
-   microsoft-spark-2.4.x-<version>.jar \
-   dotnet HelloSpark.dll
-   ```
+### <a name="windows"></a>[Windows](#tab/windows)
 
-   > [!NOTE]
-   > 이 명령은 Apache Spark를 다운로드한 후 PATH 환경 변수에 추가했으므로 `spark-submit`를 사용할 수 있다고 전제합니다. 그렇지 않은 경우에는 전체 경로를 사용해야 합니다(예: *C:\bin\apache-spark\bin\spark-submit* 또는 *~/spark/bin/spark-submit*).
+```console
+spark-submit ^
+--class org.apache.spark.deploy.dotnet.DotnetRunner ^
+--master local ^
+microsoft-spark-2.4.x-<version>.jar ^
+dotnet MySparkApp.dll <path-of-input.txt>
+```
 
-3. 앱이 실행되면 *input.txt* 파일의 단어 수 데이터가 콘솔에 기록됩니다.
+### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
+
+```bash
+spark-submit \
+--class org.apache.spark.deploy.dotnet.DotnetRunner \
+--master local \
+microsoft-spark-2.4.x-<version>.jar \
+dotnet MySparkApp.dll <path-of-input.txt>
+```
+
+---
+
+> [!NOTE]
+> 이 명령은 Apache Spark를 다운로드한 후 PATH 환경 변수에 추가했으므로 `spark-submit`를 사용할 수 있다고 전제합니다. 그렇지 않은 경우에는 전체 경로를 사용해야 합니다(예: *C:\bin\apache-spark\bin\spark-submit* 또는 *~/spark/bin/spark-submit*).
+
+앱이 실행되면 *input.txt* 파일의 단어 수 데이터가 콘솔에 기록됩니다.
+
+```console
++------+-----+
+|  word|count|
++------+-----+
+|  .NET|    3|
+|Apache|    2|
+|   app|    2|
+|  This|    2|
+| Spark|    2|
+| World|    1|
+|counts|    1|
+|   for|    1|
+| words|    1|
+|  with|    1|
+| Hello|    1|
+|  uses|    1|
++------+-----+
+```
 
 지금까지 .NET for Apache Spark 앱을 작성하고 실행했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
+이 자습서에서는 다음 작업 방법을 알아보았습니다.
 > [!div class="checklist"]
 >
-> * .NET for Apache Spark를 위한 Windows 환경 준비
+> * .NET for Apache Spark를 위한 환경 준비
 > * 첫 번째 .NET for Apache Spark 애플리케이션 작성
-> * 간단한 .NET for Apache Spark 애플리케이션 빌드 및 실행
+> * .NET for Apache Spark 애플리케이션 빌드 및 실행
 
 위의 단계를 설명하는 동영상을 보려면 [.NET for Apache Spark 101 동영상 시리즈](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App)를 확인하세요.
 

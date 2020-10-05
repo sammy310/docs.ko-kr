@@ -2,12 +2,12 @@
 title: 암호화 관련 호환성이 손상되는 변경
 description: .NET Core의 암호화 관련 호환성이 손상되는 변경 사항을 나열합니다.
 ms.date: 04/22/2020
-ms.openlocfilehash: 621a3dad28b67ee33056dce3df0379efaeb90776
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065108"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406151"
 ---
 # <a name="cryptography-breaking-changes"></a>암호화 관련 호환성이 손상되는 변경
 
@@ -15,6 +15,7 @@ ms.locfileid: "90065108"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [Blazor WebAssembly에서 지원되지 않는 System.Security.Cryptography API](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [System.Security.Cryptography.Oid는 기능상 초기화 전용임](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [Linux에서 더 이상 지원되지 않는 신뢰할 수 있는 인증서 구문 시작](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
 | [EnvelopedCms를 기본적으로 AES-256 암호화로 설정](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
@@ -24,6 +25,10 @@ ms.locfileid: "90065108"
 | [SignedCms.ComputeSignature의 부울 매개 변수를 적용](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
+
+***
 
 [!INCLUDE [cryptography-oid-init-only](../../../includes/core-changes/cryptography/5.0/cryptography-oid-init-only.md)]
 

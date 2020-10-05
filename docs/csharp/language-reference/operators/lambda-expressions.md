@@ -1,7 +1,7 @@
 ---
 title: 람다 식 - C# 참조
 description: 람다 식에 대해 알아봅니다. 식이 본문으로 포함된 식 람다 또는 문 블록이 본문으로 포함된 문 람다가 있습니다.
-ms.date: 07/29/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536446"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247711"
 ---
 # <a name="lambda-expressions-c-reference"></a>람다 식(C# 참조)
 
@@ -50,29 +50,13 @@ ms.locfileid: "90536446"
   
 ## <a name="expression-lambdas"></a>식 람다
 
-`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다. 식 람다는 [식 트리](../../programming-guide/concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
+`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
 
 ```csharp
 (input-parameters) => expression
 ```
 
-괄호는 람다 식에 입력 매개 변수가 하나뿐인 경우에만 생략할 수 있고 그렇지 않으면 생략할 수 없습니다.
-
-입력 매개 변수가 0개이면 다음과 같이 빈 괄호를 지정합니다.  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-둘 이상의 입력 매개 변수는 다음과 같이 괄호로 묶고 쉼표로 구분해야 합니다.
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-컴파일러에서 입력 형식을 유추할 수 없는 경우도 있습니다. 다음 예제와 같이 형식을 명시적으로 지정할 수 있습니다.
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-입력 매개 변수 형식은 모두 명시적이거나 암시적이어야 합니다. 그렇지 않으면 [CS0748](../../misc/cs0748.md) 컴파일러 오류가 발생합니다.
-
-식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 하지만 SQL Server와 같은 .NET 공용 언어 런타임의 컨텍스트 외부에서 평가되는 식 트리를 만드는 경우에는 람다 식에 메서드 호출을 사용하지 않아야 합니다. 이러한 메서드는 .NET 공용 언어 런타임의 컨텍스트 안에서만 의미가 있습니다.
+식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 하지만 SQL Server와 같은 .NET 공용 언어 런타임의 컨텍스트 외부에서 평가되는 [식 트리](../../programming-guide/concepts/expression-trees/index.md)를 만드는 경우에는 람다 식에 메서드 호출을 사용하지 않아야 합니다. 이러한 메서드는 .NET 공용 언어 런타임의 컨텍스트 안에서만 의미가 있습니다.
 
 ## <a name="statement-lambdas"></a>문 람다
 
@@ -84,10 +68,39 @@ ms.locfileid: "90536446"
 
 문 람다의 본문에 지정할 수 있는 문의 개수에는 제한이 없지만 일반적으로 2-3개 정도만 지정합니다.
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatementLambda":::
 
-문 람다는 식 트리를 만드는 데 사용할 수 없습니다.
-  
+문 람다를 사용하여 식 트리를 만들 수는 없습니다.
+
+## <a name="input-parameters-of-a-lambda-expression"></a>람다 식 입력 매개 변수
+
+람다 식의 입력 매개 변수는 괄호로 묶습니다. 입력 매개 변수가 0개이면 다음과 같이 빈 괄호를 지정합니다.  
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetZeroParameters":::
+
+람다 식에 입력 매개 변수가 하나만 있는 경우 괄호는 선택 사항입니다.
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetOneParameter":::
+
+두 개 이상의 입력 매개 변수는 쉼표로 구분합니다.
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetTwoParameters":::
+
+컴파일러가 입력 매개 변수의 형식을 유추할 수 없는 경우도 있습니다. 다음 예제와 같이 형식을 명시적으로 지정할 수 있습니다.
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetExplicitlyTypedParameters":::
+
+입력 매개 변수 형식은 모두 명시적이거나 암시적이어야 합니다. 그렇지 않으면 [CS0748](../../misc/cs0748.md) 컴파일러 오류가 발생합니다.
+
+C# 9.0부터 [무시 항목](../../discards.md)을 사용하여 람다 식에서 사용하지 않는 입력 매개 변수를 두 개 이상 지정할 수 있습니다.
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetDiscards":::
+
+람다 무시 항목 매개 변수는 람다 식을 사용하여 [이벤트 처리기를 제공](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)하는 경우에 유용할 수 있습니다.
+
+> [!NOTE]
+> 이전 버전과의 호환성을 위해 단일 입력 매개 변수만 `_`로 명명된 경우 람다 식 내에서 `_`가 해당 매개 변수의 이름으로 처리됩니다.
+
 ## <a name="async-lambdas"></a>비동기 람다
 
 [async](../keywords/async.md) 및 [await](await.md) 키워드를 사용하여 비동기 처리를 통합하는 람다 식과 문을 쉽게 만들 수 있습니다. 예를 들어 다음 Windows Forms 예제에는 비동기 메서드 `ExampleMethodAsync`를 호출하고 기다리는 이벤트 처리기가 포함되어 있습니다.
@@ -218,15 +231,22 @@ customers.Where(c => c.City == "London");
 
 - 해당 점프 문의 대상이 람다 식 블록을 벗어나는 경우 람다 식에는 [goto](../keywords/goto.md), [break](../keywords/break.md) 또는 [continue](../keywords/continue.md) 문을 포함할 수 없습니다. 대상이 블록 내에 있는 경우 람다 식 블록 외부에 점프 문을 사용해도 오류가 발생합니다.
 
+C# 9.0부터 람다 식에 `static` 한정자를 적용하여 의도치 않게 람다가 지역 변수 또는 인스턴스 상태를 캡처하는 것을 방지할 수 있습니다.
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatic":::
+
+정적 람다는 바깥쪽 범위에서 지역 변수 또는 인스턴스 상태를 캡처할 수 없지만 정적 멤버와 상수 정의를 참조할 수 있습니다.
+
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
 
-## <a name="featured-book-chapter"></a>중요 설명서 장
+C# 9.0에 추가된 기능에 대한 자세한 내용은 다음 기능 제안 노트를 참조하세요.
 
-[대리자, Events, and Lambda Expressions](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) 에 [ C# 3.0 Cookbook, Third Edition: 250 개 이상의 솔루션에 대 한 C# 3.0 프로그래머](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
-  
-## <a name="see-also"></a>참조
+- [람다 무시 항목 매개 변수](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+- [정적 무명 함수](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
+
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자 및 식](index.md)

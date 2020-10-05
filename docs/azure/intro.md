@@ -2,12 +2,12 @@
 title: Azure 및 .NET 시작
 description: Azure 및.NET에 대해 알아야 할 기본 사항을 알아봅니다.
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174324"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171574"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 및 .NET 소개
 
@@ -28,7 +28,7 @@ ms.locfileid: "86174324"
 
 **관리되는 서비스**: Azure는 Azure에 데이터 또는 정보를 제공하는 일부 서비스를 제공하며 Azure의 구현은 적절한 동작을 취합니다. 한 가지 예는 Azure Blob Storage로서, 파일을 제공하고 Azure가 파일의 읽기, 쓰기 및 지속을 처리합니다.
 
-**.NET용 Azure SDK** 경우에 따라 **.NET용 Azure 라이브러리**라고도 하는 이 항목은 Azure 서비스를 통해 다양한 상호 작용과 기능을 제공하는 프로젝트에 설치하는 [NuGet 패키지](https://www.nuget.org/profiles/azure-sdk)를 통칭합니다. 해당 패키지에는 리소스를 프로비저닝 및 관리하는 데 사용하는 관리 라이브러리도 포함됩니다.
+**.NET용 Azure SDK**는 Azure 서비스를 통해 다양한 상호 작용과 기능을 제공하는 프로젝트에 설치하는 [NuGet 패키지](packages.md)를 통칭합니다. 해당 패키지에는 리소스를 프로비저닝 및 관리하는 데 사용하는 관리 라이브러리도 포함됩니다.
 
 ## <a name="choosing-a-hosting-option"></a>호스팅 옵션 선택
 
@@ -77,6 +77,7 @@ Visual Studio를 사용한다면 프로젝트에 특정 Azure 서비스에 대�
 * **REST API**: .NET용 Azure SDK는 [Azure REST API](/rest/api/azure/)에서 빌드된 추상화입니다. 원하는 경우 Azure REST API를 .NET용 Azure SDK와 함께 사용하거나 이 대신 사용할 수 있습니다.
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>클라우드에서 문제 진단
+
 애플리케이션을 Azure에 배포하면, 개발 중에 작동하지만 Azure에서는 실행되지 않는 경우가 있을 수 있습니다. 다음과 같은 문제 진단 시작에 적절한 두 지점이 있습니다.
 
 * **Visual Studio에서의 원격 디버그**: 대부분의 Azure 컴퓨팅 서비스(이 문서에서 설명하는 서비스 포함)는 Visual Studio로 원격 디버깅 및 로그 수집을 지원합니다. 애플리케이션에서 Visual Studio의 기능을 탐색하려면 Visual Studio의 빠른 실행 도구 모음(오른쪽 위 모서리에 있음)에 '클라우드 탐색기'를 입력하여 클라우드 탐색기 도구 창을 연 다음 트리에서 애플리케이션을 찾습니다. 자세한 내용은 [Visual Studio를 사용하여 Azure App Service에서 웹앱 문제 해결](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)을 참조합니다.

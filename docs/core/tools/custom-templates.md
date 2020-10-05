@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538097"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874720"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -63,6 +63,8 @@ dotnet new --list
 | `identity`        | string        | 이 템플릿의 공유한 이름. |
 | `name`            | string        | 사용자에게 표시되어야 하는 템플릿의 이름. |
 | `shortName`       | string        | GUI를 통해 선택하는 것이 아니라 사용자가 템플릿 이름을 지정하는 환경에 적용되는, 템플릿 선택에 사용되는 기본 약식 이름. 예를 들어 명령 프롬프트에서 템플릿과 CLI 명령을 함께 사용할 경우 짧은 이름이 유용합니다. |
+| `sourceName`       | 문자열        | 사용자가 지정하는 이름으로 바꿀 소스 트리의 이름입니다. 템플릿 엔진은 파일 이름 및 파일 내용에서 구성 파일에 언급된 `sourceName` 항목을 찾아 모두 바꿉니다. 템플릿을 실행하는 동안 `-n` 또는 `--name` 옵션을 사용하여 바꿀 값을 지정할 수 있습니다. 이름을 지정하지 않으면 현재 디렉터리가 사용됩니다.|
+| `preferNameDirectory`       | boolean        | 이름이 지정되었지만 출력 디렉터리가 설정되지 않은 경우 현재 디렉터리에서 직접 콘텐츠를 만들지 않고 템플릿용 디렉터리를 만들지 여부를 나타냅니다. 기본값은 false입니다.|
 
 *template.json* 파일에 대한 전체 스키마는 [JSON Schema Store](http://json.schemastore.org/template)(JSON 스키마 저장소)에서 찾을 수 있습니다. *template.json* 파일에 대한 자세한 내용은 [dotnet 템플릿 wiki](https://github.com/dotnet/templating/wiki)를 참조하세요.
 

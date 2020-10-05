@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359170"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180455"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
 
@@ -120,7 +120,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>테스트 실패 처리
@@ -150,14 +150,14 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. 1단계에서 추가한 "Error" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
@@ -173,6 +173,12 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
    ```
 
    테스트를 통과합니다.
+
+## <a name="debug-tests"></a>테스트 디버그
+
+Visual Studio Code를 IDE로 사용하는 경우 [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하여 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 *StringLibraryTest/UnitTest1.cs*를 열고 줄 7과 8 사이에서 **Run All Tests**를 선택합니다. 이를 찾을 수 없는 경우 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 명령 팔레트를 열고 **Reload Window**를 입력합니다.
+
+Visual Studio Code가 디버거와 연결된 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

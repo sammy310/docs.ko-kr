@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721258"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406177"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: 플랫폼 호환성
 
@@ -20,7 +20,7 @@ ms.locfileid: "90721258"
 
 #### <a name="examples"></a>예제
 
-- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> 메서드는 Windows에서만 지원됩니다(`[SupportedOSPlatform("windows")]`으로 데코레이트됨). 다음 코드는 프로젝트가 `net5.0-windows`가 아닌 `net5.0`을 [대상](../../../../docs/standard/frameworks.md)으로 하는 경우 빌드 시 CA1416 경고를 생성합니다. 경고를 방지하기 위해 수행할 수 있는 작업은 [권장 조치](#recommended-action)를 참조하세요.
+- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> 메서드는 Windows에서만 지원되고 `[SupportedOSPlatform("windows")]`으로 데코레이트됩니다. 다음 코드는 프로젝트가 `net5.0-windows`가 아닌 `net5.0`을 [대상](../../../../docs/standard/frameworks.md)으로 하는 경우 빌드 시 CA1416 경고를 생성합니다. 경고를 방지하기 위해 수행할 수 있는 작업은 [권장 조치](#recommended-action)를 참조하세요.
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ ms.locfileid: "90721258"
   }
   ```
 
-- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> 메서드는 브라우저에서 지원되지 않습니다(`[UnsupportedOSPlatform("browser")]`으로 데코레이트됨). 다음 코드는 프로젝트가 Blazor WebAssembly SDK(`<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">`)를 사용하거나 프로젝트 파일에서 지원되는 플랫폼(`<SupportedPlatform Include="browser" />`)으로 `browser`를 포함하는 경우 빌드 시 CA1416 경고를 생성합니다.
+- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> 메서드는 브라우저에서 지원되지 않으며 `[UnsupportedOSPlatform("browser")]`으로 데코레이트됩니다. 다음 코드는 프로젝트가 브라우저 플랫폼을 지원하는 경우 빌드 시 CA1416 경고를 생성합니다.
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ ms.locfileid: "90721258"
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Blazor WebAssembly 프로젝트 및 Razor 클래스 라이브러리 프로젝트에는 브라우저 지원이 자동으로 포함됩니다.
+  > - 프로젝트에 지원되는 플랫폼으로 수동으로 브라우저를 추가하려면 프로젝트 파일에 다음 항목을 추가하세요.
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-API를 플랫폼에 특정한 것으로 표시할 수도 있으며, 이 경우 요구 사항을 검사할 부담은 호출자에 있습니다. 특정 메서드나 유형 또는 전체 어셈블리를 표시할 수 있습니다.
+라이브러리를 제작하는 경우 API를 플랫폼별로 표시할 수 있습니다. 이 경우 요구 사항을 확인하는 것은 호출자의 책임입니다. 특정 메서드나 유형 또는 전체 어셈블리를 표시할 수 있습니다.
 
 ```csharp
 [SupportedOSPlatform("windows")]

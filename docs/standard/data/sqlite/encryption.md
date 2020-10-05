@@ -1,13 +1,13 @@
 ---
 title: 암호화
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: 데이터베이스 파일을 암호화하는 방법을 알아봅니다.
-ms.openlocfilehash: ccdd4b6b8642b3cde1c2667c9ca432a9b0ef21f2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1b33e1510a269aba87caba2cd39faab33791aa55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450485"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203412"
 ---
 # <a name="encryption"></a>암호화
 
@@ -37,13 +37,16 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="specify-the-key"></a>키 지정
 
-암호화를 사용하려면 `Password` 연결 문자열 키워드를 사용하여 키를 지정합니다. <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>를 사용하여 사용자 입력의 값을 추가 또는 업데이트하고 연결 문자열 삽입 공격을 방지합니다.
+새 데이터베이스에서 암호화를 사용하려면 `Password` 연결 문자열 키워드를 사용하여 키를 지정합니다. <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>를 사용하여 사용자 입력의 값을 추가 또는 업데이트하고 연결 문자열 삽입 공격을 방지합니다.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
+> [!TIP]
+> 기존 데이터베이스를 암호화하고 암호를 해독하는 방법은 사용 중인 솔루션에 따라 달라집니다. 예를 들어 SQLCipher에서는 `sqlcipher_export()` 함수를 사용해야 합니다. 자세한 내용은 솔루션 설명서를 참조하세요.
+
 ## <a name="rekeying-the-database"></a>데이터베이스 키 다시 입력
 
-데이터베이스의 암호화 키를 변경하려면 `PRAGMA rekey` 문을 실행합니다. 데이터베이스의 암호를 해독하려면 `NULL`을 지정합니다.
+암호화된 데이터베이스의 키를 변경하려면 `PRAGMA rekey` 문을 실행합니다.
 
 아쉽지만 SQLite는 `PRAGMA` 문에서 매개 변수를 지원하지 않습니다. 대신 `quote()` 함수를 사용하여 SQL 삽입을 방지합니다.
 

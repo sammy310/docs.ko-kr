@@ -1,39 +1,41 @@
 ---
-title: .NET Core 프로젝트 SDK 개요
+title: .NET 프로젝트 SDK 개요
 titleSuffix: ''
-description: .NET Core 프로젝트 SDK에 대해 알아봅니다.
-ms.date: 02/02/2020
+description: .NET 프로젝트 SDK에 대해 알아봅니다.
+ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187923"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247577"
 ---
-# <a name="net-core-project-sdks"></a>.NET Core 프로젝트 SDK
+# <a name="net-project-sdks"></a>.NET 프로젝트 SDK
 
-.NET Core 프로젝트는 SDK(소프트웨어 개발 키트)와 연결됩니다. 각 ‘프로젝트 SDK’는 코드를 컴파일, 압축 및 게시해야 하는 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks) 집합입니다. 프로젝트 SDK를 참조하는 프로젝트를 ‘SDK 스타일 프로젝트’라고도 합니다.
+.NET Core 및 .NET 5.0 이상 프로젝트는 SDK(소프트웨어 개발 키트)와 연결됩니다. 각 ‘프로젝트 SDK’는 코드를 컴파일, 압축 및 게시해야 하는 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks) 집합입니다. 프로젝트 SDK를 참조하는 프로젝트를 ‘SDK 스타일 프로젝트’라고도 합니다.
 
 ## <a name="available-sdks"></a>사용 가능한 SDK
 
-.NET Core에 사용할 수 있는 SDK는 다음과 같습니다.
+다음 SDK를 사용할 수 있습니다.
 
 | ID | 설명 | 리포지토리|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Web` | .NET Core [웹 SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | .NET Core 작업자 서비스 SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms 및 WPF SDK |
+| `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET [웹 SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | .NET 작업자 서비스 SDK |
+| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms 및 WPF SDK\* | <https://github.com/dotnet/winforms> 및 <https://github.com/dotnet/wpf> |
 
-.NET Core SDK는 .NET Core의 기본 SDK입니다. 다른 SDK는 .NET Core SDK를 참조하며 다른 SDK와 연결된 프로젝트는 모든 .NET Core SDK 속성을 사용할 수 있습니다. 예를 들어 웹 SDK는 .NET Core SDK 및 Razor SDK에 종속됩니다.
+.NET SDK는 .NET용 기본 SDK입니다. 다른 SDK는 .NET SDK를 참조하며 다른 SDK와 연결된 프로젝트는 모든 .NET SDK 속성을 사용할 수 있습니다. 예를 들어 웹 SDK는 .NET SDK 및 Razor SDK에 종속됩니다.
 
 NuGet을 통해 배포할 수 있는 고유한 SDK를 작성할 수도 있습니다.
 
+\* .NET 5.0부터 Windows Forms 및 WPF(Windows Presentation Foundation) 프로젝트는 `Microsoft.NET.Sdk.WindowsDesktop`대신 .NET SDK(`Microsoft.NET.Sdk`)를 지정해야 합니다. 이러한 프로젝트의 경우 `TargetFramework`를 `net5.0-windows`로 설정하고 `UseWPF` 또는 `UseWindowsForms`를 `true`로 설정하면 Windows 데스크톱 SDK를 자동으로 가져옵니다. 프로젝트가 .NET 5.0 이상을 대상으로 하고 `Microsoft.NET.Sdk.WindowsDesktop` SDK를 지정하는 경우 빌드 경고 NETSDK1137이 발생합니다.
+
 ## <a name="project-files"></a>프로젝트 파일
 
-.NET Core 프로젝트는 [MSBuild](/visualstudio/msbuild/msbuild) 형식을 기반으로 합니다. *.csproj*(C# 프로젝트) 및 *.fsproj*(F# 프로젝트) 같은 확장명을 가진 프로젝트 파일은 XML 형식입니다. MSBuild 프로젝트 파일의 루트 요소는 [Project](/visualstudio/msbuild/project-element-msbuild) 요소입니다. `Project` 요소에는 사용할 SDK(및 버전)를 지정하는 선택적 `Sdk` 특성이 있습니다. .NET Core 도구를 사용하고 코드를 빌드하려면 `Sdk` 특성을 [사용 가능한 SDK](#available-sdks) 표의 ID 중 하나로 설정합니다.
+.NET 프로젝트는 [MSBuild](/visualstudio/msbuild/msbuild) 형식을 기반으로 합니다. *.csproj*(C# 프로젝트) 및 *.fsproj*(F# 프로젝트) 같은 확장명을 가진 프로젝트 파일은 XML 형식입니다. MSBuild 프로젝트 파일의 루트 요소는 [Project](/visualstudio/msbuild/project-element-msbuild) 요소입니다. `Project` 요소에는 사용할 SDK(및 버전)를 지정하는 선택적 `Sdk` 특성이 있습니다. .NET 도구를 사용하고 코드를 빌드하려면 `Sdk` 특성을 [사용 가능한 SDK](#available-sdks) 표의 ID 중 하나로 설정합니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -58,7 +60,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 </Project>
 ```
 
-해당 방법 중 하나에서 SDK를 참조하면 .NET Core용 프로젝트 파일이 크게 간소화됩니다. 프로젝트를 평가하는 동안 MSBuild는 프로젝트 파일 맨 위에 `Sdk.props`의 암시적 가져오기를 추가하고 맨 아래에 `Sdk.targets`를 추가합니다.
+이러한 방법 중 하나로 SDK를 참조하는 것은 .NET 프로젝트 파일이 크게 간소화됩니다. 프로젝트를 평가하는 동안 MSBuild는 프로젝트 파일 맨 위에 `Sdk.props`의 암시적 가져오기를 추가하고 맨 아래에 `Sdk.targets`를 추가합니다.
 
 ```xml
 <Project>
@@ -85,7 +87,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 컴파일 항목, 포함된 리소스 및 `None` 항목의 기본 포함 및 제외는 SDK에서 정의됩니다. SDK가 아닌 .NET Framework 프로젝트와 달리 기본값은 대부분의 일반적인 사용 사례를 처리하므로 프로젝트 파일에서 해당 항목을 지정할 필요가 없습니다. 그러면 프로젝트 파일이 크기가 줄어들고 더 쉽게 이해하고 필요에 따라 수동으로 편집할 수 있습니다.
 
-다음 표에는 .NET Core SDK에 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다.
+다음 표에는 .NET SDK에 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다.
 
 | 요소           | GLOB 포함                              | GLOB 제외                                                  | GLOB 제거              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -132,11 +134,11 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 ## <a name="customize-the-build"></a>빌드 사용자 지정
 
-다양한 방법으로 [빌드를 사용자 지정](/visualstudio/msbuild/customize-your-build)할 수 있습니다. [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) 또는 [dotnet](../tools/index.md) 명령에 인수로 전달하여 속성을 재정의할 수 있습니다. 또한 프로젝트 파일 또는 *Directory.Build.props* 파일에 속성을 추가할 수 있습니다. .NET Core 프로젝트의 유용한 속성 목록을 보려면 [.NET Core SDK 프로젝트용 MSBuild 참조](msbuild-props.md)를 참조하세요.
+다양한 방법으로 [빌드를 사용자 지정](/visualstudio/msbuild/customize-your-build)할 수 있습니다. [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) 또는 [dotnet](../tools/index.md) 명령에 인수로 전달하여 속성을 재정의할 수 있습니다. 또한 프로젝트 파일 또는 *Directory.Build.props* 파일에 속성을 추가할 수 있습니다. .NET 프로젝트의 유용한 속성 목록을 보려면 [.NET SDK 프로젝트용 MSBuild 참조](msbuild-props.md)를 참조하세요.
 
 ### <a name="custom-targets"></a>사용자 지정 대상
 
-.NET Core 프로젝트는 패키지를 사용하는 프로젝트에서 사용할 사용자 지정 MSBuild 대상 및 속성을 패키지할 수 있습니다. 다음을 수행하려는 경우 이 유형의 확장성을 사용합니다.
+.NET 프로젝트는 패키지를 사용하는 프로젝트에서 사용할 사용자 지정 MSBuild 대상 및 속성을 패키지할 수 있습니다. 다음을 수행하려는 경우 이 유형의 확장성을 사용합니다.
 
 - 빌드 프로세스를 확장합니다.
 - 생성된 파일과 같은 빌드 프로세스의 아티팩트에 액세스합니다.

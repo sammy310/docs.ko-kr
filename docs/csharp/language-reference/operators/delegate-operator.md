@@ -1,16 +1,16 @@
 ---
 description: delegate 연산자 - C# 참조
 title: delegate 연산자 - C# 참조
-ms.date: 07/18/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122253"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247659"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 연산자(C# 참조)
 
@@ -30,6 +30,18 @@ ms.locfileid: "89122253"
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 이 기능은 람다 식에서 지원되지 않는 무명 메서드의 유일한 기능입니다. 다른 모든 경우 인라인 코드를 작성하는 데 람다 식이 선호됩니다.
+
+C# 9.0부터 [무시 항목](../../discards.md)을 사용하여 무명 메서드에서 사용하지 않는 입력 매개 변수를 두 개 이상 지정할 수 있습니다.
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+이전 버전과의 호환성을 위해, 단일 매개 변수만 `_`로 명명된 경우 `_`가 무명 메서드 내에서 해당 매개 변수의 이름으로 처리됩니다.
+
+또한 C# 9.0부터 무명 메서드 선언에 `static` 한정자를 사용할 수 있습니다.
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+정적 무명 메서드는 바깥쪽 범위에서 지역 변수 또는 인스턴스 상태를 캡처할 수 없습니다.
 
 `delegate` 키워드를 사용하여 [대리자 형식](../builtin-types/reference-types.md#the-delegate-type)을 선언할 수도 있습니다.
 
