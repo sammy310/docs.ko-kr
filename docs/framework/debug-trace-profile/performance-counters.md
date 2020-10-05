@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554451"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712632"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 
@@ -130,8 +130,8 @@ ms.locfileid: "90554451"
 |**Connections Established**|프로세스가 시작된 이후 <xref:System.AppDomain> 내에서 연결된 스트림 소켓에 대한 <xref:System.Net.Sockets.Socket> 개체 수의 누적 합계입니다.|  
 |**Datagrams Received**|프로세스가 시작된 이후 <xref:System.AppDomain> 내의 모든 <xref:System.Net.Sockets.Socket> 개체가 받은 데이터그램 패킷 수의 누적 합계입니다.|  
 |**Datagrams Sent**|프로세스가 시작된 이후 <xref:System.AppDomain> 내의 모든 <xref:System.Net.Sockets.Socket> 개체가 보낸 데이터그램 패킷 수의 누적 합계입니다.|  
-|**HttpWebRequest Average Lifetime**|프로세스가 시작된 이후 <xref:System.AppDomain> 내에서 마지막 간격에 끝난 모든 <xref:System.Net.HttpWebRequest> 개체의 평균 완료 시간입니다.|  
-|**HttpWebRequest Average Queue Time**|프로세스가 시작된 이후 <xref:System.AppDomain> 내에서 마지막 간격에 큐에서 제거된 모든 <xref:System.Net.HttpWebRequest> 개체의 평균 큐 대기 시간입니다.|  
+|**Httpwebrequests aborted 평균 수명**|프로세스가 시작된 이후 <xref:System.AppDomain> 내에서 마지막 간격에 끝난 모든 <xref:System.Net.HttpWebRequest> 개체의 평균 완료 시간입니다.|  
+|**Httpwebrequests aborted 평균 큐 시간**|프로세스가 시작된 이후 <xref:System.AppDomain> 내에서 마지막 간격에 큐에서 제거된 모든 <xref:System.Net.HttpWebRequest> 개체의 평균 큐 대기 시간입니다.|  
 |**HttpWebRequests Created/sec**|<xref:System.AppDomain> 내에서 초당 만들어진 <xref:System.Net.HttpWebRequest> 개체 수입니다.|  
 |**HttpWebRequests Queued/sec**|<xref:System.AppDomain> 내에서 초당 큐에 추가된 <xref:System.Net.HttpWebRequest> 개체 수입니다.|  
 |**HttpWebRequests Aborted/sec**|<xref:System.AppDomain> 내에서 초당 애플리케이션이 <xref:System.Net.HttpWebRequest.Abort%2A> 메서드를 호출한 <xref:System.Net.HttpWebRequest> 개체 수입니다.|  
@@ -169,11 +169,11 @@ ms.locfileid: "90554451"
   
  <xref:System.Net.HttpWebRequest> 개체가 전체 수명 주기나 일부만 통과하는 데 소요된 시간을 측정하는 다음 두 개의 기간 카운터가 있습니다.  
   
-- **HttpWebRequest Average Lifetime**  
+- **Httpwebrequests aborted 평균 수명**  
   
-- **HttpWebRequest Average Queue Time**  
+- **Httpwebrequests aborted 평균 큐 시간**  
   
- **HttpWebRequest Average Lifetime** 카운터의 경우 대부분의 <xref:System.Net.HttpWebRequest> 개체 수명은 항상 개체를 만든 시간부터 애플리케이션이 응답 스트림을 닫은 시간까지입니다. 두 가지 특수한 경우는 다음과 같습니다.  
+ **Httpwebrequests aborted Average lifetime** 카운터의 경우 대부분의 <xref:System.Net.HttpWebRequest> 개체 수명은 항상 개체를 만든 시간부터 응용 프로그램에 의해 응답 스트림이 닫힐 때까지 시작 합니다. 두 가지 특수한 경우는 다음과 같습니다.  
   
 - 애플리케이션이 <xref:System.Net.HttpWebRequest.GetResponse%2A> 또는 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 메서드를 호출하지 않는 경우 <xref:System.Net.HttpWebRequest> 개체의 수명은 무시됩니다.  
   
@@ -228,7 +228,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|마지막 런타임 코드 액세스 보안 검사 중 스택의 깊이를 표시합니다. 런타임 코드 액세스 보안 검사는 스택을 따라 수행됩니다. 이 카운터는 평균이 아니라 마지막으로 관찰된 값만 표시합니다.|  
 |**Total Runtime Checks**|애플리케이션이 시작된 이후 수행된 런타임 코드 액세스 보안 검사의 총수를 표시합니다. 런타임 코드 액세스 보안 검사는 호출자가 특정 권한을 요구하는 경우에 수행됩니다. 런타임 검사는 호출자에 의해 각 호출에서 수행되고 호출자의 현재 스레드 스택을 검사합니다. **Stack Walk Depth** 카운터와 함께 사용할 경우 이 카운터는 보안 검사에 대해 발생하는 성능 저하를 나타냅니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [성능 카운터](performance-counters.md)
-- [런타임 프로 파일링](runtime-profiling.md)
+- [런타임 프로파일링](runtime-profiling.md)
