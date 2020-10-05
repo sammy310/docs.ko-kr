@@ -1,7 +1,8 @@
 ---
 title: 명명된 인수와 선택적 인수 - C# 프로그래밍 가이드
 description: C#의 명명된 인수는 위치가 아닌 이름으로 인수를 지정합니다. 선택적 인수는 생략할 수 있습니다.
-ms.date: 07/20/2015
+ms.date: 09/25/2020
+ms.custom: contperfq1
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 4c9c932e3df4035024c90e92e4d80309fffe3ce3
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a0606d6acccb47347c663a9fe3ffb8ab65b0ecec
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406234"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438006"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 

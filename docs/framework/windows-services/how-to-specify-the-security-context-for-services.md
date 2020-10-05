@@ -11,13 +11,12 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-author: ghogen
-ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 06053ee069777f69eea15a7ec3125b510bb34602
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925737"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608428"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스는 로그인한 사용자와 다른 보안 컨텍스트에서 실행됩니다. 서비스는 기본 시스템 계정 `LocalSystem`의 컨텍스트에서 실행되므로, 시스템 리소스에 대해 사용자와는 다른 액세스 권한을 받습니다. 이 동작을 변경하여 서비스를 실행할 다른 사용자 계정을 지정할 수 있습니다.  

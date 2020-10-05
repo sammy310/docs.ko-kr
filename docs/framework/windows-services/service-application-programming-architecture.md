@@ -15,13 +15,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-author: ghogen
-ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925581"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609267"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 애플리케이션 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178868"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607735"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
@@ -103,7 +103,7 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
-- [개체 지향 프로그래밍](../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍](../../tutorials/intro-to-csharp/object-oriented-programming.md)
 - [다형성](polymorphism.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
 - [멤버](members.md)

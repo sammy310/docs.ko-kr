@@ -13,13 +13,12 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-author: ghogen
-ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925750"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608558"
 ---
 # <a name="how-to-log-information-about-services"></a>방법: 서비스에 대한 정보 로깅
 기본적으로 모든 Windows 서비스 프로젝트는 애플리케이션 이벤트 로그와 상호 작용하고 이 로그에 정보 및 예외를 작성할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 사용하여 애플리케이션에서 이 기능을 표시할지 여부를 나타냅니다. 기본적으로, 로깅은 Windows 서비스 프로젝트 템플릿으로 만드는 모든 서비스에 대해 사용 설정됩니다. <xref:System.Diagnostics.EventLog> 클래스의 정적 형식을 사용하면 <xref:System.Diagnostics.EventLog> 구성 요소의 인스턴스를 만들거나 소스를 수동으로 등록하지 않고도 로그에 서비스 정보를 작성할 수 있습니다.  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-author: ghogen
-ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925763"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609735"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 애플리케이션 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 애플리케이션을 디버그할 수 있습니다.  

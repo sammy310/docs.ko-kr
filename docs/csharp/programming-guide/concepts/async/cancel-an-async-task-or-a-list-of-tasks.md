@@ -4,12 +4,12 @@ description: 취소 토큰을 사용하여 작업 목록에 대한 취소 요청
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053095"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654707"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>작업 목록 취소(C#)
 
@@ -159,14 +159,14 @@ foreach (string url in s_urlList)
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
 {
     HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync();
     Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
 
     return content.Length;
 }
 ```
 
-지정된 URL에서 메서드는 제공된 `client` 인스턴스를 사용하여 응답을 `byte[]`로 가져옵니다. <xref:System.Threading.CancellationToken> 인스턴스는 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> 메서드에 전달됩니다. `token`은 요청된 취소를 등록하는 데 사용됩니다. URL 및 길이가 콘솔에 기록된 후 길이가 반환됩니다.
+지정된 URL에서 메서드는 제공된 `client` 인스턴스를 사용하여 응답을 `byte[]`로 가져옵니다. <xref:System.Threading.CancellationToken> 인스턴스는 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync?displayProperty=nameWithType> 메서드에 전달됩니다. `token`은 요청된 취소를 등록하는 데 사용됩니다. URL 및 길이가 콘솔에 기록된 후 길이가 반환됩니다.
 
 ### <a name="example-application-output"></a>예제 애플리케이션 출력
 

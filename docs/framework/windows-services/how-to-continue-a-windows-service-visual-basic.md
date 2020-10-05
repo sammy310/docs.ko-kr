@@ -10,13 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-author: ghogen
-ms.openlocfilehash: 2a04e330ea7dc37552053b2a7915909c011727f8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 9e672a19cec814694eddb35672c5c669efd40eb2
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925789"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608610"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>방법: Windows 서비스 계속(Visual Basic)
 이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 계속합니다.  

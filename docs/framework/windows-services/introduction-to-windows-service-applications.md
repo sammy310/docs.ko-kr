@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-author: ghogen
-ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: b177673d8904a3c40e41cd0f92b1ea7408641186
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925672"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609319"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 서비스 애플리케이션 소개
 과거에 NT 서비스라고 불리던 Microsoft Windows 서비스를 사용하면 고유한 Windows 세션에서 장시간 실행되는 애플리케이션을 만들 수 있습니다. 이러한 서비스는 컴퓨터가 부팅될 때 자동으로 시작될 수 있고, 일시 중지 및 다시 시작할 수 있으며, 사용자 인터페이스를 표시하지 않습니다. 이러한 특징 때문에 서버에서 사용하거나 같은 컴퓨터에서 작업하는 다른 사용자를 방해하지 않는 장기 실행 기능이 필요한 경우 유용합니다. 로그온한 사용자나 기본 컴퓨터 계정과 다른 특정 사용자 계정의 보안 컨텍스트에서 서비스를 실행할 수도 있습니다. 서비스 및 Windows 세션에 대한 자세한 내용은 Windows SDK 설명서를 참조하세요.  
