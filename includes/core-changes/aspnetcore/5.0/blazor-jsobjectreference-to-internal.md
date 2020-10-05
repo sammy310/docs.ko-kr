@@ -1,0 +1,59 @@
+---
+ms.openlocfilehash: 46f6f77a543dfcf2073063d8ec200ef7d71e6b1f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077594"
+---
+### <a name="blazor-jsobjectreference-and-jsinprocessobjectreference-types-changed-to-internal"></a><span data-ttu-id="bb180-101">Blazor: JSObjectReference 및 JSInProcessObjectReference 형식을 internal로 변경함</span><span class="sxs-lookup"><span data-stu-id="bb180-101">Blazor: JSObjectReference and JSInProcessObjectReference types changed to internal</span></span>
+
+<span data-ttu-id="bb180-102">ASP.NET Core 5.0 RC1에서 도입된 새로운 `Microsoft.JSInterop.JSObjectReference` 및 `Microsoft.JSInterop.JSInProcessObjectReference` 형식이 `internal`로 표시되었습니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-102">The new `Microsoft.JSInterop.JSObjectReference` and `Microsoft.JSInterop.JSInProcessObjectReference` types introduced in ASP.NET Core 5.0 RC1 have been marked as `internal`.</span></span>
+
+#### <a name="version-introduced"></a><span data-ttu-id="bb180-103">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="bb180-103">Version introduced</span></span>
+
+<span data-ttu-id="bb180-104">5.0 RC2</span><span class="sxs-lookup"><span data-stu-id="bb180-104">5.0 RC2</span></span>
+
+#### <a name="old-behavior"></a><span data-ttu-id="bb180-105">이전 동작</span><span class="sxs-lookup"><span data-stu-id="bb180-105">Old behavior</span></span>
+
+<span data-ttu-id="bb180-106">`JSObjectReference`는 `IJSRuntime`를 통해 JavaScript interop 호출에서 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-106">A `JSObjectReference` can be obtained from a JavaScript interop call via `IJSRuntime`.</span></span> <span data-ttu-id="bb180-107">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-107">For example:</span></span>
+
+```csharp
+var jsObjectReference = await JSRuntime.InvokeAsync<JSObjectReference>(...);
+```
+
+#### <a name="new-behavior"></a><span data-ttu-id="bb180-108">새 동작</span><span class="sxs-lookup"><span data-stu-id="bb180-108">New behavior</span></span>
+
+<span data-ttu-id="bb180-109">`JSObjectReference`는 [internal](../../../../docs/csharp/language-reference/keywords/internal.md) 액세스 한정자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-109">`JSObjectReference` uses the [internal](../../../../docs/csharp/language-reference/keywords/internal.md) access modifier.</span></span> <span data-ttu-id="bb180-110">대신 `public` `IJSObjectReference` 인터페이스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-110">The `public` `IJSObjectReference` interface must be used instead.</span></span> <span data-ttu-id="bb180-111">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-111">For example:</span></span>
+
+```csharp
+var jsObjectReference = await JSRuntime.InvokeAsync<IJSObjectReference>(...);
+```
+
+<span data-ttu-id="bb180-112">`JSInProcessObjectReference` 또한 `internal`로 표시되었으며 `IJSInProcessObjectReference`로 대체되었습니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-112">`JSInProcessObjectReference` was also marked as `internal` and was replaced by `IJSInProcessObjectReference`.</span></span>
+
+#### <a name="reason-for-change"></a><span data-ttu-id="bb180-113">변경 이유</span><span class="sxs-lookup"><span data-stu-id="bb180-113">Reason for change</span></span>
+
+<span data-ttu-id="bb180-114">이 변경으로 인해 JavaScript interop 기능이 Blazor 내의 다른 패턴과 더 일관되게 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-114">The change makes the JavaScript interop feature more consistent with other patterns within Blazor.</span></span> <span data-ttu-id="bb180-115">`IJSObjectReference`는 유사한 용도로 사용되고 유사한 메서드 및 확장을 포함한다는 점에서 `IJSRuntime`과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-115">`IJSObjectReference` is analogous to `IJSRuntime` in that it serves a similar purpose and has similar methods and extensions.</span></span>
+
+#### <a name="recommended-action"></a><span data-ttu-id="bb180-116">권장 조치</span><span class="sxs-lookup"><span data-stu-id="bb180-116">Recommended action</span></span>
+
+<span data-ttu-id="bb180-117">`JSObjectReference` 및 `JSInProcessObjectReference` 항목을 각각 `IJSObjectReference` 및 `IJSInProcessObjectReference`로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="bb180-117">Replace occurrences of `JSObjectReference` and `JSInProcessObjectReference` with `IJSObjectReference` and `IJSInProcessObjectReference`, respectively.</span></span>
+
+#### <a name="category"></a><span data-ttu-id="bb180-118">범주</span><span class="sxs-lookup"><span data-stu-id="bb180-118">Category</span></span>
+
+<span data-ttu-id="bb180-119">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="bb180-119">ASP.NET Core</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="bb180-120">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="bb180-120">Affected APIs</span></span>
+
+- `Microsoft.JSInterop.JSObjectReference`
+- `Microsoft.JSInterop.JSInProcessObjectReference`
+
+<!--
+
+#### Affected APIs
+
+- `T:Microsoft.JSInterop.JSObjectReference`
+- `T:Microsoft.JSInterop.JSInProcessObjectReference`
+
+-->
