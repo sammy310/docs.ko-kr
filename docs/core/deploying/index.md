@@ -2,12 +2,12 @@
 title: 애플리케이션 게시
 description: .NET Core 애플리케이션을 게시하는 방법을 알아봅니다. .NET Core에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 프레임워크 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720113"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654674"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 애플리케이션 게시 개요
 
@@ -149,6 +149,34 @@ dotnet publish -r osx-x64
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>ReadyToRun 이미지를 사용하여 게시
+
+ReadyToRun 이미지를 사용하여 게시하면 애플리케이션의 크기를 늘리는 데 드는 비용으로 애플리케이션의 시작 시간이 향상됩니다. ReadyToRun을 사용하여 게시하려면 [ReadyToRun](ready-to-run.md)에서 자세한 내용을 참조하세요.
+
+### <a name="advantages"></a>장점
+
+- **시작 시간 향상**\
+애플리케이션은 JIT를 실행하는 데 걸리는 시간을 줄입니다.
+
+### <a name="disadvantages"></a>단점
+
+- **큰 크기**\
+애플리케이션은 디스크에서 더 커집니다.
+
+### <a name="examples"></a>예
+
+자체 포함 및 ReadyToRun 앱을 게시합니다. macOS 64비트 실행 파일이 생성됩니다.
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+자체 포함 및 ReadyToRun 앱을 게시합니다. Windows 64비트 실행 파일이 생성됩니다.
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>참조
