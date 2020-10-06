@@ -4,12 +4,12 @@ description: Azure Blob storage를 사용 하 여 클라우드에 구조화 되�
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100154"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756249"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F #을 사용 하 여 Azure Blob storage 시작\#
 
@@ -19,7 +19,7 @@ Azure Blob Storage는 클라우드에 구조화되지 않은 데이터를 개체
 
 Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net 가이드](/azure/storage/blobs/storage-quickstart-blobs-dotnet)를 참조 하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/common/storage-account-create)합니다. 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
 
@@ -43,7 +43,7 @@ Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net �
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal를 사용 하 여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지 하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
@@ -99,7 +99,7 @@ Azure Blob Storage는 블록 Blob 및 페이지 Blob을 지원합니다. 대부�
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-이름에 경로 정보를 사용 하 여 blob의 이름을 지정할 수도 있습니다. 이렇게 하면 기존 파일 시스템과 같이 구성 및 트래버스할 수 있는 가상 디렉터리 구조를 만듭니다. 디렉터리 구조는 가상만 해당됩니다. Blob Storage에서 사용할 수 있는 리소스만 컨테이너 및 Blob입니다. 그러나 저장소 클라이언트 라이브러리는 `CloudBlobDirectory` 가상 디렉터리를 참조 하는 개체를 제공 하 고 이러한 방식으로 구성 된 blob을 사용 하 여 작업 하는 프로세스를 간소화 합니다.
+이름에 경로 정보를 사용 하 여 blob의 이름을 지정할 수도 있습니다. 이렇게 하면 기존 파일 시스템과 같이 구성 및 트래버스할 수 있는 가상 디렉터리 구조를 만듭니다. 디렉터리 구조는 가상 전용입니다. Blob 저장소에서 사용할 수 있는 리소스는 컨테이너 및 blob 뿐입니다. 그러나 저장소 클라이언트 라이브러리는 `CloudBlobDirectory` 가상 디렉터리를 참조 하는 개체를 제공 하 고 이러한 방식으로 구성 된 blob을 사용 하 여 작업 하는 프로세스를 간소화 합니다.
 
 예를 들어 `photos`컨테이너에 있는 다음 블록 Blob 집합을 고려합니다.
 
@@ -173,7 +173,7 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음 메서드를 호
 
 ## <a name="writing-to-an-append-blob"></a>추가 Blob에 쓰기
 
-추가 Blob은 로깅 등의 추가 작업에 최적화되어 있습니다. 블록 Blob과 마찬가지로 추가 Blob은 블록으로 구성되지만 추가 Blob에 새 블록을 추가할 때 항상 Blob 끝에 추가됩니다. 추가 Blob의 기존 블록을 업데이트하거나 삭제할 수는 없습니다. 블록 Blob과 달리 추가 Blob의 블록 ID는 노출되지 않습니다.
+추가 Blob은 로깅 등의 추가 작업에 최적화되어 있습니다. 블록 blob과 마찬가지로 추가 blob은 블록으로 구성 되지만 추가 blob에 새 블록을 추가 하는 경우 항상 blob의 끝에 추가 됩니다. 추가 Blob의 기존 블록을 업데이트하거나 삭제할 수는 없습니다. 블록 Blob과 달리 추가 Blob의 블록 ID는 노출되지 않습니다.
 
 추가 Blob의 각 블록은 최대 4MB까지 다양한 크기일 수 있으며, 추가 Blob 하나에 최대 50,000개의 블록이 포함될 수 있습니다. 따라서 추가 Blob의 최대 크기는 195GB(4MB X 50,000개 블록)보다 약간 더 큽니다.
 
@@ -189,7 +189,7 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음 메서드를 호
 
 - **Etag** - Blob이나 컨테이너를 다른 프로세스에서 수정했는지 감지할 수 있습니다.
 
-- **임대** - Blob에 대해 일정 기간 동안 단독, 갱신 가능, 쓰기 또는 삭제 권한을 얻을 수 있습니다.
+- **임대** -일정 시간 동안 blob에 대 한 배타적, 갱신, 쓰기 또는 삭제 권한을 얻는 방법을 제공 합니다.
 
 자세한 내용은 [Microsoft Azure Storage에서 동시성 관리](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)를 참조 하세요.
 
@@ -207,7 +207,7 @@ Azure Storage의 모든 Blob은 컨테이너에 있어야 합니다. 컨테이�
 1. 컨테이너 이름의 모든 문자는 소문자여야 합니다.
 1. 컨테이너 이름의 길이는 3자 이상, 63자 이하여야 합니다.
 
-컨테이너의 이름은 항상 소문자여야 합니다. 컨테이너 이름에 대문자를 포함하거나 컨테이너 명명 규칙을 위반하는 경우에 400 오류(잘못된 요청) 메시지를 받을 수 있습니다.
+컨테이너의 이름은 항상 소문자 여야 합니다. 컨테이너 이름에 대문자를 포함하거나 컨테이너 명명 규칙을 위반하는 경우에 400 오류(잘못된 요청) 메시지를 받을 수 있습니다.
 
 ## <a name="managing-security-for-blobs"></a>Blob 보안 관리
 

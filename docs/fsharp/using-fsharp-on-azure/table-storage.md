@@ -4,12 +4,12 @@ description: Azure Table Storage 또는 Azure Cosmos DB를 사용하여 클라�
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100102"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756210"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작\#
 
@@ -33,7 +33,7 @@ Azure Table Storage에 대해 작성된 애플리케이션은 코드를 변경�
 
 이 자습서에서는 테이블 만들기 및 삭제, 테이블 데이터 삽입, 업데이트, 삭제 및 쿼리를 비롯 하 여 Azure Table storage 또는 Azure Cosmos DB Table API를 사용 하 여 몇 가지 일반적인 작업을 수행 하는 F # 코드를 작성 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정](/azure/storage/storage-create-storage-account) 또는 [Azure Cosmos DB 계정을](https://azure.microsoft.com/try/cosmosdb/)만들어야 합니다.
 
@@ -55,13 +55,13 @@ Azure Storage Table service에 연결 하는 경우이 자습서에 대 한 연�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 연결 문자열 가져오기
 
-Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정**  >  **연결 문자열**로 이동 하 고 **복사** 단추를 클릭 하 여 기본 연결 문자열을 복사 합니다.
+Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정**  >  **연결 문자열**로 이동 하 고 **복사** 단추를 선택 하 여 기본 연결 문자열을 복사 합니다.
 
 자습서의 경우 다음 예제와 같이 스크립트에 연결 문자열을 입력 합니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal을 사용 하 여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는이 방법이 **권장 되지 않습니다** . 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상 된 것으로 생각 되는 경우 Azure Portal를 사용 하 여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지 하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
@@ -162,7 +162,7 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 형�
 
 ### <a name="query-a-subset-of-entity-properties"></a>엔터티 속성 하위 집합 쿼리
 
-테이블 쿼리는 엔터티의 일부 속성만 검색할 수 있습니다. 프로젝션 이라고 하는이 기술은 특히 규모가 많은 엔터티의 경우 쿼리 성능을 향상 시킬 수 있습니다. 여기서는 및를 사용 하 여 전자 메일 주소만 반환 `DynamicTableEntity` `EntityResolver` 합니다. 로컬 스토리지 에뮬레이터에서는 프로젝션이 지원되지 않으므로 이 코드는 Table service의 계정을 사용하는 경우에만 실행됩니다.
+테이블 쿼리는 엔터티의 일부 속성만 검색할 수 있습니다. 프로젝션 이라고 하는이 기술은 특히 규모가 많은 엔터티의 경우 쿼리 성능을 향상 시킬 수 있습니다. 여기서는 및를 사용 하 여 전자 메일 주소만 반환 `DynamicTableEntity` `EntityResolver` 합니다. 로컬 저장소 에뮬레이터에서는 프로젝션이 지원 되지 않으므로이 코드는 Table service의 계정을 사용 하는 경우에만 실행 됩니다.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 

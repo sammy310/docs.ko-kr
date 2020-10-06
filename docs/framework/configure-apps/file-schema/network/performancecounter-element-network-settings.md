@@ -1,21 +1,20 @@
 ---
-title: <performanceCounter> 요소(네트워크 설정)
+title: <performanceCounters> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
 helpviewer_keywords:
-- performanceCounter element
-- <performanceCounter> element
+- performanceCounters element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 584bdafbbd60303401cbc6ad96b8654fe11c7077
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190243"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756262"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> 요소(네트워크 설정)
+# <a name="performancecounters-element-network-settings"></a>\<performanceCounters> 요소(네트워크 설정)
 
 네트워킹 성능 카운터를 사용 하거나 사용 하지 않도록 설정 합니다.  
 
@@ -38,7 +37,7 @@ ms.locfileid: "91190243"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`enabled`|네트워킹 성능 카운터의 사용 여부를 지정 합니다. 기본값은 `false`입니다.|  
   
@@ -48,7 +47,7 @@ ms.locfileid: "91190243"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
@@ -62,7 +61,7 @@ ms.locfileid: "91190243"
   
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>속성을 사용 하 여 적용 가능한 구성 파일에서 **활성화** 된 특성의 현재 값을 가져올 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예제:   
 
  다음 예제에서는 <xref:System.Net> 및 관련 네임 스페이스를 구성 하 여 네트워킹 성능 카운터를 사용 하도록 설정 하는 방법을 보여 줍니다.  
   

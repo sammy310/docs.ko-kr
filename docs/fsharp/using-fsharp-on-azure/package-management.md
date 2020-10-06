@@ -1,15 +1,15 @@
 ---
 title: 'Azure 용 F #과 함께 패키지 관리 사용'
-description: 'Paket 또는 Nuget을 사용 하 여 F # Azure 종속성 관리'
+description: 'Paket 또는 NuGet을 사용 하 여 F # Azure 종속성 관리'
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7816c82e87db113a35fef967886c8c3e27959332
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100115"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756236"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 종속성에 대한 패키지 관리
 
@@ -17,7 +17,7 @@ ms.locfileid: "91100115"
 
 ## <a name="using-paket"></a>Paket 사용
 
-[Paket](https://fsprojects.github.io/Paket/) 를 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `paket.exe` Azure 종속성을 추가할 수 있습니다. 다음은 그 예입니다.
+[Paket](https://fsprojects.github.io/Paket/) 를 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `paket.exe` Azure 종속성을 추가할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```console
 > paket add nuget WindowsAzure.Storage
@@ -53,9 +53,9 @@ ms.locfileid: "91100115"
 > mono paket.exe update
 ```
 
-## <a name="using-nuget"></a>Nuget 사용
+## <a name="using-nuget"></a>NuGet 사용
 
-[NuGet](https://www.nuget.org/) 을 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `nuget.exe` Azure 종속성을 추가할 수 있습니다. 다음은 그 예입니다.
+[NuGet](https://www.nuget.org/) 을 종속성 관리자로 사용 하는 경우 도구를 사용 하 여 `nuget.exe` Azure 종속성을 추가할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```console
 > nuget install WindowsAzure.Storage -ExcludeVersion
@@ -93,7 +93,7 @@ ms.locfileid: "91100115"
 
 ## <a name="referencing-assemblies"></a>어셈블리 참조
 
-F # 스크립트에서 패키지를 사용 하려면 지시문을 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야 합니다 `#r` . 다음은 그 예입니다.
+F # 스크립트에서 패키지를 사용 하려면 지시문을 사용 하 여 패키지에 포함 된 어셈블리를 참조 해야 합니다 `#r` . 예를 들면 다음과 같습니다.
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"

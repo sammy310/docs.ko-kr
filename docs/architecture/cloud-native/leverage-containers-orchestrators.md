@@ -2,12 +2,12 @@
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
 ms.date: 05/31/2020
-ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155551"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755911"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -31,7 +31,7 @@ ms.locfileid: "91155551"
 
 모놀리식 응용 프로그램은 전적으로 많은 기능을 필요로 하는 단일 컴퓨터 인스턴스에서 호스팅됩니다. 모놀리식의 어느 부분에서 확장이 필요한 경우에는 다른 컴퓨터에 전체 응용 프로그램의 다른 복사본을 배포 해야 합니다. Monolith를 사용 하면 응용 프로그램 구성 요소를 개별적으로 규모를 조정할 수 없습니다. 크기를 조정 하지 않아도 되는 구성 요소는 비효율적 이며 비용이 많이 드는 리소스 사용량을 초래 합니다.
 
-### <a name="environment"></a>환경
+### <a name="environment"></a>Environment
 
 모놀리식 응용 프로그램은 일반적으로 미리 설치 된 운영 체제, 런타임 및 라이브러리 종속성이 있는 호스팅 환경에 배포 됩니다. 이 환경은 응용 프로그램을 개발 하거나 테스트할 때와 일치 하지 않을 수 있습니다. 응용 프로그램 환경에서의 불일치는 모놀리식 배포에 대 한 문제의 일반적인 원인입니다.
 
@@ -216,7 +216,7 @@ ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 
 로컬 개발 외에도 [Azure Dev Spaces](/azure/dev-spaces/) 는 여러 개발자가 Azure 내에서 고유한 Kubernetes 구성으로 작업할 수 있는 편리한 방법을 제공 합니다. 그림 3-7에서 볼 수 있듯이, Azure Dev Spaces에서 응용 프로그램을 실행할 수도 있습니다.
 
-또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트 **Add**를 마우스 오른쪽 단추로 클릭 하 고  >  **Docker 지원을**추가 합니다.
+또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트를 마우스 **Add**오른쪽 단추로 클릭 하 고  >  **Docker 지원**추가를 선택 합니다.
 
 ![Visual Studio Docker 지원 추가](./media/visual-studio-add-docker-support.png)
 
