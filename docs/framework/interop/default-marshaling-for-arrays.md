@@ -185,7 +185,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *형식* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식은 시그니처로 제공됩니다. 순위는 항상 1이고 하한은 항상 0입니다. 크기는 항상 런타임에 알려집니다.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *형식* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식, 순위, 경계는 시그니처로 제공됩니다. 크기는 항상 런타임에 알려집니다.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>** >**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *형식* **)**<br /><br /> 형식, 순위, 경계 및 크기는 항상 런타임에 알려집니다.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *형식* **)**<br /><br /> 형식, 순위, 경계 및 크기는 항상 런타임에 알려집니다.|  
   
  LPSTR 또는 LPWSTR이 포함된 구조체 배열에 관련된 OLE 자동화에는 제한이 있습니다.  따라서 **String** 필드는 **UnmanagedType.BSTR**로 마샬링되어야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   

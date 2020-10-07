@@ -35,7 +35,7 @@ dotnet-symbol [-h|--help] [options] <FILES>
 
 - **`--microsoft-symbol-server`**
 
-  ‘ http://msdl.microsoft.com/download/symbols ’ 기호 서버 경로를 추가합니다(기본값).
+  'http://msdl.microsoft.com/download/symbols’ 기호 서버 경로를 추가합니다(기본값).
 
 - **`--server-path <symbol server path>`**
 
