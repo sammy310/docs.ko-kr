@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f561550d57e98a515fa3bdf56eea1dc1759b4e69
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024977"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451574"
 ---
 ## <a name="available-counters"></a>사용 가능한 카운터
 
@@ -18,7 +18,7 @@ ms.locfileid: "88024977"
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | 마지막 GC 이후 GC의 시간 비율 |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | 할당률(바이트) |
-| :::no-loc text="CPU Usage"::: (`cpu-usage`) | CPU 사용률(%) |
+| :::no-loc text="CPU Usage"::: (`cpu-usage`) | 프로세스의 CPU 사용률(%) |
 | :::no-loc text="Exception Count"::: (`exception-count`) | 발생한 예외 수 |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType>에 따라 할당된 것으로 간주하는 바이트 수 |
 | :::no-loc text="Gen 0 GC Count"::: (`gen-0-gc-count`) | Gen 0에 대해 GC가 발생한 횟수 |
@@ -28,6 +28,8 @@ ms.locfileid: "88024977"
 | :::no-loc text="Gen 2 GC Count"::: (`gen-2-gc-count`) | Gen 2에 대해 GC가 발생한 횟수 |
 | :::no-loc text="Gen 2 Size"::: (`gen-2-size`) | Gen 2 GC의 바이트 수 |
 | :::no-loc text="LOH Size"::: (`loh-size`) | Gen 3 GC의 바이트 수 |
+| :::no-loc text="POH Size"::: (`poh-size`) | 고정된 개체 힙의 바이트 수(.NET 5 이상 버전에서 사용 가능) |
+| :::no-loc text="GC Fragmentation"::: (`gc-fragmentation`) | GC 힙 조각화(.NET 5 이상 버전에서 사용 가능) |
 | :::no-loc text="Monitor Lock Contention Count"::: (`monitor-lock-contention-count`) | <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType>에 따라 모니터의 잠금을 시도할 때 경합이 발생한 횟수 |
 | :::no-loc text="Number of Active Timers"::: (`active-timer-count`) | <xref:System.Threading.Timer.ActiveCount?displayProperty=nameWithType>에 따라 현재 활성화된 <xref:System.Threading.Timer> 인스턴스 수 |
 | :::no-loc text="Number of Assemblies Loaded"::: (`assembly-count`) | 특정 시점에 프로세스에 로드된 <xref:System.Reflection.Assembly> 인스턴스의 수 |
@@ -35,6 +37,8 @@ ms.locfileid: "88024977"
 | :::no-loc text="ThreadPool Queue Length"::: (`threadpool-queue-length`) | <xref:System.Threading.ThreadPool>에서 현재 처리 대기 중인 작업 항목의 수 |
 | :::no-loc text="ThreadPool Thread Count"::: (`threadpool-thread-count`) | <xref:System.Threading.ThreadPool.ThreadCount?displayProperty=nameWithType>에 따라 현재 <xref:System.Threading.ThreadPool>에 존재하는 스레드 풀 스레드의 수 |
 | :::no-loc text="Working Set"::: (`working-set`) | <xref:System.Environment.WorkingSet?displayProperty=nameWithType>에 따라 특정 시점에 프로세스 컨텍스트에 매핑되는 실제 메모리의 크기 |
+| :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | JIT 컴파일된 IL의 총 크기(바이트)(.NET 5 이상 버전에서 사용 가능). |
+| :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | JIT 컴파일된 메서드 수(.NET 5 이상 버전에서 사용 가능) |
 
 ### <a name="microsoftaspnetcorehosting-counters"></a>“Microsoft.AspNetCore.Hosting” 카운터
 

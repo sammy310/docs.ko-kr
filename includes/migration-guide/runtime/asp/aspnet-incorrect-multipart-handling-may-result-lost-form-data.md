@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: ed669364efe9dd8f57d831a3764dd3fc68cd5e05
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: d61a3b3dd855d783d7bff7cb74e5b84969e60860
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496335"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608052"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET 다중 파트 처리가 잘못되면 양식 데이터가 손실될 수 있습니다.
 
 #### <a name="details"></a>설명
 
-.NET Framework 4.7.2 이하 버전을 대상으로 하는 애플리케이션에서 ASP.Net이 다중 파트 경계 값을 잘못 구문 분석하면 요청을 수행하는 중에 양식 데이터를 사용할 수 없게 될 수 있습니다. .NET Framework 4.8 이상 버전을 대상으로 하는 애플리케이션은 다중 파트 데이터를 올바르게 구문 분석하므로 요청을 실행하는 동안 양식 값을 사용할 수 있습니다.
+.NET Framework 4.7.2 이하 버전을 대상으로 하는 애플리케이션에서 ASP.NET이 다중 파트 경계 값을 잘못 구문 분석하면 요청을 수행하는 중에 양식 데이터를 사용할 수 없게 될 수 있습니다. .NET Framework 4.8 이상 버전을 대상으로 하는 애플리케이션은 다중 파트 데이터를 올바르게 구문 분석하므로 요청을 실행하는 동안 양식 값을 사용할 수 있습니다.
 
 #### <a name="suggestion"></a>제안 해결 방법
 
