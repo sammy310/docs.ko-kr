@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152925"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805215"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
 
@@ -36,7 +36,7 @@ WCF Data Services를 사용 하 여 및 컨트롤과 같은 컨트롤을 `ComboB
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 요소에 데이터 바인딩  
 
- <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속하기 때문에 바인딩에 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스를 사용할 때처럼 WPF(Windows Presentation Foundation) 애플리케이션의 요소 또는 컨트롤에 개체를 바인딩할 수 있습니다. 자세한 내용은 [데이터 바인딩 (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md)을 참조 하세요. 데이터 서비스 데이터를 WPF 컨트롤에 바인딩하는 한 가지 방법은 요소의 `DataContext` 속성을 쿼리 결과가 포함된 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스로 설정하는 것입니다. 이 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성을 사용하여 컨트롤의 개체 소스를 설정합니다. <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 속성을 사용하면 표시할 바인딩된 개체의 속성을 지정할 수 있습니다. 탐색 속성에서 반환된 관련 개체에 요소를 바인딩하는 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성의 정의된 바인딩에 경로를 포함합니다. 이 경로는 부모 컨트롤의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성에 설정된 루트 개체에 상대적입니다. 다음 예제에서는 <xref:System.Windows.FrameworkElement.DataContext%2A> 요소의 <xref:System.Windows.Controls.StackPanel> 속성을 설정하여 부모 컨트롤을 고객 개체의 <xref:System.Data.Services.Client.DataServiceCollection%601>에 바인딩합니다.  
+ <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속하기 때문에 바인딩에 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스를 사용할 때처럼 WPF(Windows Presentation Foundation) 애플리케이션의 요소 또는 컨트롤에 개체를 바인딩할 수 있습니다. 자세한 내용은 [데이터 바인딩 (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview)을 참조 하세요. 데이터 서비스 데이터를 WPF 컨트롤에 바인딩하는 한 가지 방법은 요소의 `DataContext` 속성을 쿼리 결과가 포함된 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스로 설정하는 것입니다. 이 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성을 사용하여 컨트롤의 개체 소스를 설정합니다. <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 속성을 사용하면 표시할 바인딩된 개체의 속성을 지정할 수 있습니다. 탐색 속성에서 반환된 관련 개체에 요소를 바인딩하는 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성의 정의된 바인딩에 경로를 포함합니다. 이 경로는 부모 컨트롤의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성에 설정된 루트 개체에 상대적입니다. 다음 예제에서는 <xref:System.Windows.FrameworkElement.DataContext%2A> 요소의 <xref:System.Windows.Controls.StackPanel> 속성을 설정하여 부모 컨트롤을 고객 개체의 <xref:System.Data.Services.Client.DataServiceCollection%601>에 바인딩합니다.  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
