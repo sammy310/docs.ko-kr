@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: 개요(1주)
     items:
-      - name: .NET 둘러보기
-        href: ../standard/tour.md
+      - name: .NET 소개
+        href: ../core/introduction.md
       - name: .NET 아키텍처 구성 요소
         href: ../standard/components.md
       - name: .NET 클래스 라이브러리
         href: ../standard/class-libraries.md
-      - name: .NET Core 소개
-        href: ../core/introduction.md
-      - name: .NET Core 개요
-        href: ../core/about.md
       - name: .NET Standard 개요
         href: ../standard/net-standard.md
       - name: .NET 용어
