@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3f1ca48ab29b04931961b52743bb6c7fab70b06d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f588d4681ee277ad15b50d5553473b1c9e84d578
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608077"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608766"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API에 모델 배포
 
@@ -19,7 +19,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 또는 Visual Studio 2017 버전 15.6 이상.
-- PowerShell.
+- PowerShell을 사용하여 키 백업 파일 복원
 - 미리 학습된 모델입니다. [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 자체 모델을 빌드하거나 이 [미리 학습된 감정 분석 기계 학습 모델](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) 다운로드
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API 프로젝트 만들기

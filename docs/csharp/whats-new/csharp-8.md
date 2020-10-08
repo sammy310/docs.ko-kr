@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 04/07/2020
-ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414892"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654870"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -322,7 +322,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>정적 로컬 함수
 
-이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421`, “A static local function can't contain a reference to \<variable>”(정적 로컬 함수는 \<variable> 참조를 포함할 수 없습니다.)이(가) 생성됩니다.
+이제 로컬 함수가 바깥쪽 범위의 변수를 캡처(참조)하지 않도록 [로컬 함수](../programming-guide/classes-and-structs/local-functions.md)에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421`, “A static local function can't contain a reference to \<variable>”(정적 로컬 함수는 \<variable> 참조를 포함할 수 없습니다.)이(가) 생성됩니다.
 
 다음과 같은 코드를 생각해 볼 수 있습니다. 여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다. 따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.
 

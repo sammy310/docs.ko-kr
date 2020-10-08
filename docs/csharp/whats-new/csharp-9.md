@@ -2,12 +2,12 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247620"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654909"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
@@ -194,7 +194,7 @@ if (e is not null)
 
 원시 크기 정수, 함수 포인터, `localsinit` 플래그 생략의 세 가지 새로운 기능을 통해 고성능이 필요한 하위 수준 라이브러리 및 네이티브 interop 지원이 향상되었습니다.
 
-원시 크기 정수인 `nint` 및 `nuint`는 정수 형식입니다. 기본 형식 <xref:System.IntPtr?displayProperty=nameWithType> 및 <xref:System.UIntPtr?displayProperty=nameWithType>으로 표현됩니다. 컴파일러는 해당 형식의 추가 변환과 연산을 네이티브 정수 형식으로 표시합니다. `MinValue`가 `0`인 `nuint.MinValue`를 제외하고, 원시 크기 정수에는 `MaxValue` 또는 `MinValue` 상수가 없습니다. 다른 값은 대상 머신의 정수 원시 크기에 따라 달라지므로 상수로 표현할 수 없습니다. 다음 범위에서 `nint`의 상수 값을 사용할 수 있습니다. [`int.MinValue` .. `int.MaxValue`]. 다음 범위에서 `nuint`의 상수 값을 사용할 수 있습니다. [`uint.MinValue` .. `uint.MaxValue`]. 컴파일러는 <xref:System.Int32?displayProperty=nameWithType> 및 <xref:System.UInt32?displayProperty=nameWithType> 형식을 사용하여 모든 단항 및 이진 연산자에 대해 상수 정리를 수행합니다. 결과가 32비트에 맞지 않으면 런타임에 연산이 실행되고 상수로 간주하지 않습니다. 정수 연산이 광범위하게 사용되고 가장 빠른 성능이 필요한 시나리오에서는 원시 크기 정수를 사용하여 성능을 향상할 수 있습니다.
+원시 크기 정수인 `nint` 및 `nuint`는 정수 형식입니다. 기본 형식 <xref:System.IntPtr?displayProperty=nameWithType> 및 <xref:System.UIntPtr?displayProperty=nameWithType>으로 표현됩니다. 컴파일러는 해당 형식의 추가 변환과 연산을 네이티브 정수 형식으로 표시합니다. 원시 크기 정수는 `MaxValue` 또는 `MinValue`의 속성을 정의합니다. 이러한 값은 대상 머신의 정수 원시 크기에 따라 달라지므로 컴파일 시간 상수로 표현할 수 없습니다. 이러한 값은 런타임에 읽기 전용입니다. 다음 범위에서 `nint`의 상수 값을 사용할 수 있습니다. [`int.MinValue` .. `int.MaxValue`]. 다음 범위에서 `nuint`의 상수 값을 사용할 수 있습니다. [`uint.MinValue` .. `uint.MaxValue`]. 컴파일러는 <xref:System.Int32?displayProperty=nameWithType> 및 <xref:System.UInt32?displayProperty=nameWithType> 형식을 사용하여 모든 단항 및 이진 연산자에 대해 상수 정리를 수행합니다. 결과가 32비트에 맞지 않으면 런타임에 연산이 실행되고 상수로 간주하지 않습니다. 정수 연산이 광범위하게 사용되고 가장 빠른 성능이 필요한 시나리오에서는 원시 크기 정수를 사용하여 성능을 향상할 수 있습니다.
 
 함수 포인터는 IL opcode `ldftn` 및 `calli`에 액세스하는 편리한 구문을 제공합니다. 새로운 `delegate*` 구문을 사용하여 함수 포인터를 선언할 수 있습니다. `delegate*` 형식은 포인터 형식입니다. `delegate*` 형식을 호출하면 `Invoke()` 메서드에서 `callvirt`를 사용하는 대리자와는 달리 `calli`가 사용됩니다. 호출 구문은 동일합니다. 함수 포인터 호출은 `managed` 호출 규칙을 사용합니다. `delegate*` 구문 뒤에 `unmanaged` 키워드를 추가하여 `unmanaged` 호출 규칙을 사용하도록 선언합니다. `delegate*` 선언에서 특성을 사용하여 다른 호출 규칙을 지정할 수 있습니다.
 
@@ -204,11 +204,11 @@ if (e is not null)
 
 ## <a name="fit-and-finish-features"></a>기능 마무리
 
-다른 많은 기능을 통해 코드를 보다 효율적으로 작성할 수 있습니다. C# 9.0에서는 생성된 개체의 형식이 이미 알려진 경우 새 식에서 형식을 생략할 수 있습니다. 가장 일반적인 용도는 필드 선언입니다.
+다른 많은 기능을 통해 코드를 보다 효율적으로 작성할 수 있습니다. C# 9.0에서는 만든 개체의 형식을 이미 알고 있는 경우 [`new` 식](../language-reference/operators/new-operator.md)에서 형식을 생략할 수 있습니다. 가장 일반적인 용도는 필드 선언입니다.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-메서드에 매개 변수로 전달할 새 개체를 만들어야 하는 경우 대상 유형 new를 사용할 수도 있습니다. 다음 시그니처를 사용하는 `ForecastFor()` 메서드를 고려해 보세요.
+인수로 메서드에 전달할 새 개체를 만들어야 하는 경우 대상으로 형식화된 `new`를 사용할 수도 있습니다. 다음 시그니처를 사용하는 `ForecastFor()` 메서드를 고려해 보세요.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-`return new();` 식을 사용하여 기본 생성자에서 만든 인스턴스를 반환할 수 있습니다.
+`return new();` 문을 사용하여 기본 생성자가 만든 인스턴스를 반환할 수 있습니다.
 
 유사한 기능은 [조건식](../language-reference/operators/conditional-operator.md)의 대상 유형 확인을 개선합니다. 이 변경 내용이 도입되면서 두 식 간에 암시적 변환을 포함할 수는 없지만 두 식에 모두 대상 유형으로의 암시적 변환을 사용할 수 있습니다. 이 변경 내용을 발견하지 못할 수도 있습니다. 이전에 캐스트가 필요했거나 컴파일되지 않던 일부 조건식이 이제 작동할 뿐입니다.
 

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537498"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654773"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -27,7 +27,13 @@ Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0을 다운로드�
 
 ## <a name="language-improvements-c-80"></a>언어 향상 C# 8.0
 
-[Null 허용 참조 형식](../../csharp/tutorials/nullable-reference-types.md) 기능,[ 비동기 스트림](../../csharp/tutorials/generate-consume-asynchronous-stream.md), [추가 패턴](../../csharp/tutorials/pattern-matching.md) 등을 포함하는 C# 8.0도 이 릴리스의 일부입니다. C# 8.0 기능에 대한 자세한 내용은 [C# 8.0의 새로운 기능](../../csharp/whats-new/csharp-8.md)을 참조하세요.
+[null 허용 참조 형식](../../csharp/language-reference/builtin-types/nullable-reference-types.md) 기능, 비동기 스트림, 추가 패턴 등을 포함하는 C# 8.0도 이 릴리스의 일부입니다. C# 8.0 기능에 대한 자세한 내용은 [C# 8.0의 새로운 기능](../../csharp/whats-new/csharp-8.md)을 참조하세요.
+
+C#8.0 언어 기능과 관련된 자습서:
+
+- [자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현](../../csharp/tutorials/nullable-reference-types.md)
+- [자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [자습서: 패턴 일치를 사용하여 형식 기반 및 데이터 기반 알고리즘 빌드](../../csharp/tutorials/pattern-matching.md)
 
 아래에 설명된 다음 API 기능을 지원하기 위해 언어 향상 기능이 추가되었습니다.
 
@@ -205,6 +211,8 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 - Windows x64를 사용하여 Windows ARM32, ARM64 및 x86 이미지를 컴파일할 수 있습니다.
 - Windows x86을 사용하여 Windows ARM32 이미지를 컴파일할 수 있습니다.
 - Linux X64를 사용하여 Linux ARM32 및 ARM64 이미지를 컴파일할 수 있습니다.
+
+자세한 내용은 [실행 준비](../deploying/ready-to-run.md)를 참조하세요.
 
 ## <a name="runtimesdk"></a>런타임/SDK
 

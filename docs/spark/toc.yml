@@ -32,7 +32,7 @@
     - name: 애플리케이션 디버그
       href: how-to-guides/debug.md
     - name: Azure Synapse Analytics에 작업 제출
-      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
+      href: /azure/synapse-analytics/spark/spark-dotnet
     - name: HDInsight에 작업 제출
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Databricks에 작업 제출

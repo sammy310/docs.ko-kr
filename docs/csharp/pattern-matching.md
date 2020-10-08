@@ -4,12 +4,12 @@ description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: aabd8afe9a94022557275adb313ca3bf95da7548
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438028"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -139,4 +139,4 @@ match 식 중 하나인 `var`이 소개되면서 패턴 일치에 대한 새 규
 
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장](tutorials/pattern-matching.md)
+- [자습서: 패턴 일치를 사용하여 형식 기반 및 데이터 기반 알고리즘 빌드](tutorials/pattern-matching.md)

@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539270"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608363"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 애플리케이션의 특징
 
@@ -76,7 +76,7 @@ Blazor는 ASP.NET Core 3.0 이상에 포함되어 있습니다. Razor, C# 및 AS
 
 서버 쪽 Blazor는 2019년 ASP.NET Core 3.0으로 출시되었습니다. 이름에서 알 수 있듯이 이는 서버에서 실행되고 클라이언트 문서 변경 내용을 네트워크를 통해 브라우저에 다시 렌더링합니다. 서버 쪽 Blazor는 클라이언트 쪽 JavaScript를 요구하거나 각 클라이언트 페이지 상호 작용에 대해 별도의 페이지 로드를 요구하지 않고 풍부한 클라이언트 환경을 제공합니다. 로드된 페이지의 변경 내용은 서버에서 요청되고 처리된 후 SignalR을 사용하여 다시 클라이언트로 전송됩니다.
 
-2020년 5월에 출시된 클라이언트 쪽 Blazor는 서버에서 변경 내용을 렌더링할 필요가 없습니다. 대신, 클라이언트에서 .NET 코드를 실행하는 데 WebAssembly를 활용합니다. 클라이언트는 데이터를 요청하는 데 필요한 경우 서버에 대한 API 호출을 수행할 수 있지만 모든 클라이언트 쪽 동작은 이미 모든 주요 브라우저에서 지원되고 단지 Javascript 라이브러리인 WebAssembly를 통해 클라이언트에서 실행됩니다.
+2020년 5월에 출시된 클라이언트 쪽 Blazor는 서버에서 변경 내용을 렌더링할 필요가 없습니다. 대신, 클라이언트에서 .NET 코드를 실행하는 데 WebAssembly를 활용합니다. 클라이언트는 데이터를 요청하는 데 필요한 경우 서버에 대한 API 호출을 수행할 수 있지만 모든 클라이언트 쪽 동작은 이미 모든 주요 브라우저에서 지원되고 단지 JavaScript 라이브러리인 WebAssembly를 통해 클라이언트에서 실행됩니다.
 
 > ### <a name="references--modern-web-applications"></a>참조 - 최신 웹 애플리케이션
 >

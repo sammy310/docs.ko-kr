@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157793"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654824"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -36,11 +36,11 @@ Docker를 설치하는 방법에 대한 자세한 내용은 [Docker Desktop: Com
 
 Docker에는 [Docker 허브](https://hub.docker.com/)에서 호스트하는, 사용 가능한 공용 레지스트리가 있습니다. [.NET Core 관련 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)는 Docker 허브에 나열됩니다.
 
-MCR(Microsoft 컨테이너 레지스트리)은 Microsoft가 제공하는 컨테이너 이미지의 공식 소스입니다. MCR은 Azure CDN에서 빌드되어 글로벌 복제 이미지를 제공합니다. 그러나 MCR은 공용 웹 사이트가 없으며, Microsoft가 제공하는 컨테이너 이미지에 대해 배우는 기본적인 방법은 [Microsoft Docker 허브 페이지](https://hub.docker.com/_/microsoft-dotnet-core/)를 통하는 것입니다.
+[MCR(Microsoft Container Registry)](/azure/container-registry)은 Microsoft가 제공하는 컨테이너 이미지의 공식 소스입니다. MCR은 Azure CDN에서 빌드되어 글로벌 복제 이미지를 제공합니다. 그러나 MCR은 공용 웹 사이트가 없으며, Microsoft가 제공하는 컨테이너 이미지에 대해 배우는 기본적인 방법은 [Microsoft Docker 허브 페이지](https://hub.docker.com/_/microsoft-dotnet-core/)를 통하는 것입니다.
 
 ### <a name="dockerfile"></a>Dockerfile
 
-**Dockerfile**은 이미지를 생성하는 명령 세트를 정의하는 파일입니다. **Dockerfile**의 각 명령은 이미지에 계층을 생성합니다. 대부분의 경우 이미지를 다시 빌드할 때는 변경된 계층만 다시 빌드됩니다. **Dockerfile**은 다른 사용자에게 배포할 수 있으며, 그러면 생성할 때와 동일한 방식으로 새 이미지를 다시 생성할 수 있습니다. 이 기능을 사용하여 이미지를 생성하는 방법에 대한 ‘명령’을 배포할 수 있지만, 이미지를 배포하는 기본 방법은 레지스트리에 이미지를 게시하는 것입니다. 
+**Dockerfile**은 이미지를 생성하는 명령 세트를 정의하는 파일입니다. **Dockerfile**의 각 명령은 이미지에 계층을 생성합니다. 대부분의 경우 이미지를 다시 빌드할 때는 변경된 계층만 다시 빌드됩니다. **Dockerfile**은 다른 사용자에게 배포할 수 있으며, 그러면 생성할 때와 동일한 방식으로 새 이미지를 다시 생성할 수 있습니다. 이 기능을 사용하여 이미지를 생성하는 방법에 대한 ‘명령’을 배포할 수 있지만, 이미지를 배포하는 기본 방법은 레지스트리에 이미지를 게시하는 것입니다.**
 
 ## <a name="net-core-images"></a>.NET Core 이미지
 

@@ -3,12 +3,12 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 57394ecb02745d69e22f4d9f1dbd4213f290cd5a
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396870"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609052"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
@@ -121,11 +121,11 @@ accountNumberSeed++;
 
 트랜잭션을 나타내는 새 형식을 생성해 보겠습니다. 이는 책임이 없는 단순 형식입니다. 몇 가지 속성이 필요합니다. *Transaction.cs*라는 새 파일을 만듭니다. 파일에 다음 코드를 추가합니다.
 
-[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
+:::code language="csharp" source="./snippets/introduction-to-classes/Transaction.cs":::
 
 이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. *BankAccount.cs* 파일의 생성자 뒤에 다음 선언을 추가합니다.
 
-[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="TransactionDeclaration":::
 
 <xref:System.Collections.Generic.List%601> 클래스를 사용하려면 다른 네임스페이스를 가져와야 합니다. *BankAccount.cs*의 시작 부분에 다음을 추가합니다.
 
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `BankAccount` 클래스에서 `Balance`의 선언을 다음과 같이 수정합니다.
 
-[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="BalanceComputation":::
 
 이 예제에서는 ***속성***의 중요한 측면을 보여 줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
 
@@ -143,13 +143,13 @@ using System.Collections.Generic;
 
 이는 ***예외***의 개념을 소개합니다. 메서드가 작업을 성공적으로 완료할 수 없음을 나타내는 일반적인 방법은 예외를 throw하는 것입니다. 예외 형식 및 관련 메시지는 오류를 설명합니다. 여기에서 `MakeDeposit` 메서드는 인출 금액이 음수인 경우 예외를 throw합니다. 인출 금액이 음수이거나 인출 적용 후 잔액이 음수인 경우 `MakeWithdrawal` 메서드는 예외를 throw합니다. `allTransactions` 목록의 선언 뒤에 다음 코드를 추가합니다.
 
-[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="DepositAndWithdrawal":::
 
 [`throw`](../../language-reference/keywords/throw.md) 문은 예외를 **throw**합니다. 현재 블록의 실행이 종료되고 제어가 호출 스택에 있는 처음 일치하는 `catch` 블록으로 전달됩니다. `catch` 블록을 추가하여 나중에 이 코드를 테스트합니다.
 
 생성자는 잔액을 직접 업데이트하지 않고 초기 트랜잭션을 추가하도록 변경해야 합니다. `MakeDeposit` 메서드를 이미 작성했으므로 생성자에서 호출합니다. 완성된 생성자는 다음과 같아야 합니다.
 
-[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="Constructor":::
 
 <xref:System.DateTime.Now?displayProperty=nameWithType>은 현재 날짜 및 시간을 반환하는 속성입니다. 새 `BankAccount`를 만드는 코드를 따라 `Main` 메서드에서 몇 가지 예금 및 인출을 추가하여 테스트합니다.
 
@@ -196,7 +196,7 @@ catch (InvalidOperationException e)
 
 이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `string`을 생성하는 `GetAccountHistory` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
 
-[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="History":::
 
 <xref:System.Text.StringBuilder> 클래스를 사용하여 각 트랜잭션에 대해 한 줄을 포함하는 문자열의 형식을 지정합니다. 이러한 자습서의 앞부분에서 문자열 형식 지정 코드를 살펴보았습니다. 새 문자는 `\t`입니다. 이 새 문자는 탭을 삽입하여 출력 형식을 지정합니다.
 
@@ -212,4 +212,11 @@ Console.WriteLine(account.GetAccountHistory());
 
 잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/)에서 이 자습서의 소스를 확인할 수 있습니다.
 
-축하합니다. 모든 C# 소개 자습서를 완료했습니다. 더 자세히 학습하려면 추가 [자습서](../index.md)를 확인하세요.
+[개체 지향 프로그래밍](object-oriented-programming.md) 자습서를 계속 진행할 수 있습니다.
+
+다음 문서에서 이러한 개념을 더 자세히 알아볼 수 있습니다.
+
+- [If 및 else 문](../../language-reference/keywords/if-else.md)
+- [While 문](../../language-reference/keywords/while.md)
+- [Do 문](../../language-reference/keywords/do.md)
+- [For 문](../../language-reference/keywords/for.md)

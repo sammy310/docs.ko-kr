@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551714"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756080"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -731,7 +731,7 @@ WCF(Windows Communication Foundation)는 다음과 같은 기능 및 변경 내�
 
 **TLS1.1.1 또는 TLS1.2에 대한 기본 메시지 보안 설정 구성 가능**
 
-.NET Framework 4.7부터 WCF에서 SSL 3.0 및 TSL 1.0 외에도 TSL 1.1 또는 TLS 1.2를 기본 메시지 보안 프로토콜로 구성할 수 있습니다. 이것은 옵트인 설정으로 이 기능을 사용하려면 애플리케이션 구성 파일에 다음 항목을 추가해야 합니다.
+.NET Framework 4.7부터 WCF에서 SSL 3.0 및 TLS 1.0 외에도 TLS 1.1 또는 TLS 1.2를 기본 메시지 보안 프로토콜로 구성할 수 있습니다. 이것은 옵트인 설정으로 이 기능을 사용하려면 애플리케이션 구성 파일에 다음 항목을 추가해야 합니다.
 
 ```xml
 <runtime>
@@ -1431,7 +1431,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     또한 HTTP/2는 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 지원되며 기본적으로 설정되어 있습니다.
 
-    ASP.NET 애플리케이션의 [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 기능 사용 방법을 제공하기 위해 두 개의 오버로드(<xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>)와 함께 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
+    ASP.NET 애플리케이션의 [PUSH_PROMISE](https://httpwg.github.io/http2-spec/#PUSH_PROMISE) 기능 사용 방법을 제공하기 위해 두 개의 오버로드(<xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>)와 함께 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
 
     > [!NOTE]
     > ASP.NET Core는 HTTP/2를 지원하는 반면 PUSH PROMISE 기능에 대한 지원은 아직 추가되지 않았습니다.

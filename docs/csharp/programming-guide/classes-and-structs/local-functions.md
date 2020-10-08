@@ -1,15 +1,15 @@
 ---
 title: 로컬 함수 - C# 프로그래밍 가이드
 description: C#의 로컬 함수는 다른 멤버에 중첩되어 포함된 멤버에서 호출할 수 있는 전용 메서드입니다.
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656187"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654922"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 
@@ -36,17 +36,19 @@ C# 7.0부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 �
 로컬 함수는 포함하는 멤버 내의 중첩 메서드로 정의됩니다. 해당 정의는 다음 구문을 사용합니다.
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-로컬 함수는 [async](../../language-reference/keywords/async.md) 및 [unsafe](../../language-reference/keywords/unsafe.md) 한정자를 사용할 수 있습니다.
+로컬 함수에 다음 한정자를 사용할 수 있습니다.
 
-해당 메서드 매개 변수를 비롯하여 포함하는 멤버에 정의된 모든 지역 변수는 로컬 함수에서 액세스할 수 있습니다.
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md)(C# 8.0 이상). 정적 로컬 함수는 지역 변수 또는 인스턴스 상태를 캡처할 수 없습니다.
+- [`extern`](../../language-reference/keywords/extern.md)(C# 9.0 이상). 외부 로컬 함수는 `static`이어야 합니다.
+
+해당 메서드 매개 변수를 비롯하여 포함하는 멤버에 정의된 모든 지역 변수는 정적이지 않은 로컬 함수에서 액세스할 수 있습니다.
 
 메서드 정의와 달리 로컬 함수 정의에는 멤버 액세스 한정자를 포함할 수 없습니다. 모든 로컬 함수는 private이므로 `private` 키워드 등의 액세스 한정자를 포함하면 컴파일러 오류 CS0106,“이 항목의 ‘private’ 한정자가 유효하지 않습니다.”가 생성됩니다.
-
-> [!NOTE]
-> C# 8.0 이전 버전에서는 로컬 함수에 `static` 한정자를 포함할 수 없습니다. `static` 키워드를 포함하면 “이 항목의 ‘static’ 한정자가 유효하지 않습니다.”라는 컴파일러 오류 CS0106 또는 C# 8.0 이상을 사용해야 한다는 컴파일러 오류가 생성됩니다.
 
 또한 로컬 함수나 해당 매개 변수 및 형식 매개 변수에는 특성을 적용할 수 없습니다.
 

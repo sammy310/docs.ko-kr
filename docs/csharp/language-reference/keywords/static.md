@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247724"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654641"
 ---
 # <a name="static-c-reference"></a>static(C# 참조)
 
 이 페이지에서는 `static` 한정자 키워드를 다룹니다. `static` 키워드는 [`using static`](using-static.md) 지시문의 일부이기도 합니다.
 
 `static` 한정자를 사용하여 특정 개체가 아니라 형식 자체에 속하는 정적 멤버를 선언할 수 있습니다. `static` 한정자를 사용하여 `static` 클래스를 선언할 수 있습니다. 클래스, 인터페이스 및 구조체에서 필드, 메서드, 속성, 연산자, 이벤트 및 생성자에 `static` 한정자를 추가할 수 있습니다. `static` 한정자는 인덱서 또는 종료자와 함께 사용할 수 없습니다. 자세한 내용은 [static 클래스 및 static 클래스 멤버](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.
+
+C# 8.0부터 `static` 한정자를 [로컬 함수](../../programming-guide/classes-and-structs/local-functions.md)에 추가할 수 있습니다. 정적 로컬 함수는 지역 변수 또는 인스턴스 상태를 캡처할 수 없습니다.
 
 C# 9.0부터 [람다 식](../operators/lambda-expressions.md) 또는 [무명 메서드](../operators/delegate-operator.md)에 `static` 한정자를 추가할 수 있습니다. 정적 람다 또는 무명 메서드는 지역 변수 또는 인스턴스 상태를 캡처할 수 없습니다.
 

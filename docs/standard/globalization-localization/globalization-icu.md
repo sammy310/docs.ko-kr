@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 6ea848d4a60069e6702b9d60fd90a55f572fb043
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842514"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654883"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 세계화 및 ICU
 
@@ -152,3 +152,21 @@ install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /
 ```
 LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
 ```
+
+## <a name="icu-on-webassembly"></a>WebAssembly의 ICU
+
+WebAssembly 워크로드 전용인 ICU 버전을 사용할 수 있습니다. 이 버전은 데스크톱 프로필과의 세계화 호환성을 제공합니다. ICU 데이터 파일 크기를 24MB에서 1.4MB(또는 Brotli로 압축된 경우 0.3MB 이하)로 줄이기 위해 이 워크로드에는 몇 가지 제한 사항이 있습니다.
+
+다음 API는 지원되지 않습니다.
+
+- <xref:System.Globalization.CultureInfo.EnglishName?displayProperty=nameWithType>
+- <xref:System.Globalization.CultureInfo.NativeName?displayProperty=nameWithType>
+- <xref:System.Globalization.DateTimeFormatInfo.NativeCalendarName?displayProperty=nameWithType>
+- <xref:System.Globalization.RegionInfo.NativeName?displayProperty=nameWithType>
+
+다음 API는 제한적으로 지원됩니다.
+
+- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> 및 <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType>는 거의 사용되지 않는 <xref:System.Text.NormalizationForm.FormKC> 및 <xref:System.Text.NormalizationForm.FormKD> 형식을 지원하지 않습니다.
+- <xref:System.Globalization.RegionInfo.CurrencyNativeName?displayProperty=nameWithType>는 <xref:System.Globalization.RegionInfo.CurrencyEnglishName?displayProperty=nameWithType>와 동일한 값을 반환합니다.
+
+또한 [dotnet/icu repo](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54)에서 지원되는 로캘 목록을 찾을 수 있습니다.

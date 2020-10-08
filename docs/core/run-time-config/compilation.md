@@ -3,12 +3,12 @@ title: 컴파일 구성 설정
 description: .NET Core 앱에 대해 JIT 컴파일러가 작동하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762008"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654844"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>컴파일을 위한 런타임 구성 옵션
 
@@ -135,7 +135,7 @@ ms.locfileid: "83762008"
 ## <a name="readytorun"></a>ReadyToRun
 
 - .NET Core 런타임이 사용 가능한 ReadyToRun 데이터가 포함된 이미지에 미리 컴파일된 코드를 사용하도록 할지 여부를 구성합니다. 이 옵션을 사용하지 않도록 설정하면 런타임에서 프레임워크 코드를 강제로 JIT 컴파일하게 합니다.
-- 자세한 내용은 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)을 참조하세요.
+- 자세한 내용은 [실행 준비](../deploying/ready-to-run.md)를 참조하세요.
 - 이 설정을 생략하면 .NET은 사용 가능한 경우 ReadyToRun 데이터를 사용합니다. 이는 값을 `1`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 |

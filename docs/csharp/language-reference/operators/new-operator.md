@@ -1,18 +1,18 @@
 ---
 description: new 연산자 - C# 참조
 title: new 연산자 - C# 참조
-ms.date: 06/25/2019
+ms.date: 10/02/2020
 f1_keywords:
 - new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3125f3d2c694dcfc5682ee482f3f76072ac3726d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118275"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609384"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 
@@ -29,6 +29,14 @@ ms.locfileid: "89118275"
 다음 예제와 같이 `new` 연산자와 함께 [개체 또는 컬렉션 이니셜라이저](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)를 사용하여 하나의 명령문에서 개체를 인스턴스화하고 초기화할 수 있습니다.
 
 [!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
+
+C# 9.0부터 생성자 호출식은 대상으로 형식화됩니다. 즉, 식의 대상 형식을 알고 있는 경우 다음 예제와 같이 형식 이름을 생략할 수 있습니다.
+
+:::code language="csharp" source="snippets/shared/NewOperator.cs" id="SnippetTargetTyped":::
+
+앞의 예제에 나온 것처럼 대상으로 형식화된 `new` 식에는 항상 괄호를 사용합니다.
+
+`new` 식의 대상 형식을 알 수 없는 경우(예를 들어 [`var`](../keywords/var.md) 키워드를 사용하는 경우) 형식 이름을 지정해야 합니다.
 
 ## <a name="array-creation"></a>배열 생성
 
@@ -62,7 +70,9 @@ ms.locfileid: "89118275"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [new 연산자](~/_csharplang/spec/expressions.md#the-new-operator) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+대상으로 형식화된 `new` 식에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-9.0/target-typed-new.md)를 참조하세요.
+
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자 및 식](index.md)

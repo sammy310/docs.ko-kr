@@ -4,12 +4,12 @@ description: 단일 파일 애플리케이션이란 무엇이고, 이 애플리�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 795ea98a9fd9d672b199eb2d9b24151340ef8246
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495756"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712640"
 ---
 # <a name="single-file-deployment-and-executable"></a>단일 파일 배포 및 실행 파일
 
@@ -17,9 +17,49 @@ ms.locfileid: "89495756"
 
 단일 파일 배포는 [프레임워크 종속 배포 모델](index.md#publish-framework-dependent)과 [자체 포함 애플리케이션](index.md#publish-self-contained)에 모두 사용할 수 있습니다. 자체 포함 애플리케이션의 단일 파일 크기는 런타임 및 프레임워크 라이브러리를 포함하므로 커집니다. 단일 파일 배포 옵션을 [ReadyToRun](../tools/dotnet-publish.md) 및 [Trim(.NET 5.0의 실험적 기능)](trim-self-contained.md) 게시 옵션과 함께 사용할 수 있습니다.
 
-단일 파일 사용과 관련해서 유의해야 할 몇 가지 사항이 있습니다. 먼저, 경로 정보를 사용하여 애플리케이션 위치를 기준으로 파일을 찾아야 합니다. <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> API는 메모리에서 로드된 어셈블리의 기본 동작인 빈 문자열을 반환합니다. 컴파일러는 빌드 시간에 이 API에 대한 경고를 제공하여 개발자에게 특정 동작을 알립니다. 애플리케이션 디렉터리 경로가 필요한 경우 <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> API는 AppHost(단일 파일 번들 자체)가 있는 디렉터리를 반환합니다. 관리형 C++ 애플리케이션은 단일 파일 배포에 적합하지 않으므로 C#으로 단일 파일 호환 애플리케이션을 작성하는 것이 좋습니다.
+## <a name="api-incompatibility"></a>API 비호환성
+
+일부 API는 단일 파일 배포와 호환되지 않으며, 이러한 API를 사용하는 애플리케이션은 수정이 필요할 수 있습니다. 사용 중인 타사 프레임워크나 패키지에도 이러한 API 중 하나가 사용될 수 있으며, 이 경우 수정이 필요할 수 있습니다. 문제의 가장 일반적인 원인은 애플리케이션과 함께 제공되는 파일 또는 DLL의 파일 경로에 대한 종속성입니다.
+
+아래 표에는 단일 파일 사용을 위한 관련 런타임 라이브러리 API 세부 정보가 나와 있습니다.
+
+| API                            | 참고                                                                   |
+|--------------------------------|------------------------------------------------------------------------|
+| `Assembly.Location`            | 빈 문자열을 반환합니다.                                               |
+| `Module.FullyQualifiedName`    | `<Unknown>` 값이 포함된 문자열을 반환하거나 예외를 throw합니다. |
+| `Module.Name`                  | `<Unknown>` 값이 포함된 문자열을 반환합니다.                        |
+| `Assembly.GetFile`             | <xref:System.IO.IOException>을 버립니다.                                   |
+| `Assembly.GetFiles`            | <xref:System.IO.IOException>을 버립니다.                                   |
+| `Assembly.CodeBase`            | <xref:System.PlatformNotSupportedException>을 버립니다.                    |
+| `Assembly.EscapedCodeBase`     | <xref:System.PlatformNotSupportedException>을 버립니다.                    |
+| `AssemblyName.CodeBase`        | `null`를 반환합니다.                                                        |
+| `AssemblyName.EscapedCodeBase` | `null`를 반환합니다.                                                        |
+
+일반적인 시나리오를 해결하기 위한 몇 가지 권장 사항이 있습니다.
+
+* 실행 파일 옆의 파일에 액세스하려면 <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType>을 사용합니다.
+
+* 실행 파일의 파일 이름을 찾으려면 <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType>의 첫 번째 요소를 사용합니다.
+
+* 느슨한 파일이 제공되는 것을 완전히 방지하려면 [포함 리소스](../../framework/resources/creating-resource-files-for-desktop-apps.md)를 사용하는 것이 좋습니다.
+
+## <a name="attaching-a-debugger"></a>디버거 연결
+
+Linux에서 자체 포함 단일 파일 프로세스나 디버그 크래시 덤프에 연결할 수 있는 유일한 디버거는 [LLDB를 포함한 SOS](../diagnostics/dotnet-sos.md)입니다.
+
+Windows와 Mac에서는 Visual Studio 및 VS Code를 사용하여 크래시 덤프를 디버그할 수 있습니다. 실행 중인 자체 포함 단일 파일 실행 파일에 연결하려면 추가 파일 _mscordbi.{dll,so}_ 가 필요합니다.
+
+이 파일이 없으면 Visual Studio에서 “프로세스에 연결할 수 없습니다. 디버그 구성 요소가 설치되지 않았습니다.” 오류가 발생할 수 있고, VS Code에서는 “프로세스에 연결하지 못했습니다: 알 수 없는 오류: 0x80131c3c” 오류가 발생할 수 있습니다.
+
+이러한 오류를 해결하려면 실행 파일 옆에 _mscordbi_를 복사해야 합니다. _mscordbi_는 기본적으로 애플리케이션의 런타임 ID를 사용하여 하위 디렉터리에 `publish`됩니다. 따라서 예를 들어 `-r win-x64` 매개 변수를 사용하여 Windows용 `dotnet` CLI로 자체 포함 단일 파일 실행 파일을 게시하는 경우 실행 파일은 _bin/Debug/net5.0/win-x64/publish_에 배치됩니다. _mscordbi.dll_ 복사본은 _bin/Debug/net5.0/win-x64_에 있습니다.
+
+## <a name="other-considerations"></a>기타 고려 사항
 
 단일 파일은 기본적으로 네이티브 라이브러리를 묶지 않습니다. Linux에서는 런타임을 번들로 사전 링크하며, 애플리케이션 네이티브 라이브러리만 단일 파일 앱과 동일한 디렉터리에 배포됩니다. Windows에서는 호스팅 코드만 사전 링크하며, 런타임 및 애플리케이션 네이티브 라이브러리가 모두 단일 파일 앱과 동일한 디렉터리에 배포됩니다. 그러면 네이티브 파일을 단일 파일에서 제외해야 하는 좋은 디버깅 환경이 보장됩니다. `IncludeNativeLibrariesForSelfExtract` 플래그를 설정하면 네이티브 라이브러리가 단일 파일 번들에 포함되지만 단일 파일 애플리케이션을 실행할 때 클라이언트 머신의 임시 디렉터리에 파일이 추출됩니다.
+
+단일 파일 애플리케이션에는 관련된 모든 PDB 파일이 함께 포함되며, 기본적으로 함께 제공되지 않습니다. 빌드하는 프로젝트의 어셈블리 내부에 PDB를 포함하려면 [아래](#include-pdb-files-inside-the-bundle) 설명된 대로 `DebugType`을 `embedded`로 설정합니다.
+
+관리형 C++ 구성 요소는 단일 파일 배포에 적합하지 않으므로 단일 파일과 호환되도록 C# 또는 다른 비관리형 C++ 언어로 애플리케이션을 작성하는 것이 좋습니다.
 
 ## <a name="exclude-files-from-being-embedded"></a>파일이 포함되지 않도록 제외
 
@@ -38,6 +78,22 @@ ms.locfileid: "89495756"
     <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
   </Content>
 </ItemGroup>
+```
+
+## <a name="include-pdb-files-inside-the-bundle"></a>번들 내에 PDB 파일 포함
+
+어셈블리의 PDB 파일은 아래 설정을 사용하여 어셈블리 자체(`.dll`)에 포함할 수 있습니다. 기호는 어셈블리의 일부이므로 단일 파일 애플리케이션의 일부가 됩니다.
+
+```xml
+<DebugType>embedded</DebugType>
+```
+
+예를 들어 어셈블리의 프로젝트 파일에 다음 속성을 추가하여 해당 어셈블리에 PDB 파일을 포함합니다.
+
+```xml
+<PropertyGroup>
+  <DebugType>embedded</DebugType>
+</PropertyGroup>
 ```
 
 ## <a name="publish-a-single-file-app---cli"></a>단일 파일 앱 게시 - CLI
@@ -73,7 +129,7 @@ Visual Studio는 애플리케이션의 게시 방식을 제어하는 재사용 �
 
 01. **편집**을 선택합니다.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="편집 단추가 있는 Visual Studio 게시 프로필.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="오른쪽 클릭 메뉴에서 게시 옵션이 강조 표시된 솔루션 탐색기.":::
 
 01. **프로필 설정** 대화 상자에서 다음 옵션을 설정합니다.
 
@@ -83,7 +139,7 @@ Visual Studio는 애플리케이션의 게시 방식을 제어하는 재사용 �
 
     **저장**을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="배포 모드, 대상 런타임, 단일 파일 옵션이 강조 표시된 프로필 설정 대화 상자":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="오른쪽 클릭 메뉴에서 게시 옵션이 강조 표시된 솔루션 탐색기.":::
 
 01. **게시**를 선택하여 앱을 단일 파일로 게시합니다.
 

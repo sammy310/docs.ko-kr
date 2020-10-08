@@ -4,12 +4,12 @@ description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용�
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062797"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872389"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -81,9 +81,9 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 | `minor`       | 지정된 주 버전, 부 버전 및 기능 밴드의 최신 패치 수준을 사용합니다. <br> 최신 패치 수준을 찾을 수 없는 경우 동일한 주/부 버전에 있는 다음 상위 기능 밴드로 롤포워드하고 해당 기능 밴드의 최신 패치 수준을 사용합니다. <br> 최신 패치 수준을 찾을 수 없는 경우 동일한 주 버전에 있는 다음 상위 부 버전 및 기능 밴드로 롤포워드하고 해당 기능 밴드에 대한 최신 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `major`       | 지정된 주 버전, 부 버전 및 기능 밴드의 최신 패치 수준을 사용합니다. <br> 최신 패치 수준을 찾을 수 없는 경우 동일한 주/부 버전에 있는 다음 상위 기능 밴드로 롤포워드하고 해당 기능 밴드의 최신 패치 수준을 사용합니다. <br> 최신 패치 수준을 찾을 수 없는 경우 동일한 주 버전에 있는 다음 상위 부 버전 및 기능 밴드로 롤포워드하고 해당 기능 밴드에 대한 최신 패치 수준을 사용합니다. <br> 최신 패치 수준을 찾을 수 없는 경우 다음 상위 주 버전, 부 버전 및 기능 밴드로 롤포워드하고 해당 기능 밴드의 최신 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `latestPatch` | 요청된 주 버전, 부 버전 및 기능 밴드와 패치 수준이 일치하고 지정된 값과 같거나 큰 최신 설치된 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
-| `latestFeature` | 요청된 주 버전과 부 버전이 지정된 값과 같거나 큰 기능 밴드와 일치하는 설치된 최상위 기능 밴드와 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
-| `latestMinor` | 요청된 주 버전이 지정된 값보다 크거나 같은 부 버전과 일치하는 최상위 부 버전, 기능 밴드 및 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
-| `latestMajor` | 지정된 값보다 크거나 같은 주 버전과 함께 최상위 .Net Core SDK를 사용합니다. <br> 찾을 수 없으면 실패합니다. |
+| `latestFeature` | 요청된 주 버전과 부 버전이 지정된 값보다 크거나 같은 기능 밴드 및 패치 수준과 일치하는 설치된 최상위 기능 밴드와 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
+| `latestMinor` | 요청된 주 버전이 지정된 값보다 크거나 같은 부 버전, 기능 밴드, 패치 수준과 일치하는 설치된 최상위 부 버전, 기능 밴드, 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
+| `latestMajor` | 지정된 값보다 크거나 같은 버전과 함께 설치된 최상위 .Net Core SDK를 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `disable`     | 롤포워드하지 않습니다. 정확하게 일치해야 합니다. |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdk
@@ -175,7 +175,7 @@ dotnet new globaljson --sdk-version 3.0.100
 - SDK 버전을 지정하지 않고 `allowPrerelease` 값을 지정하는 *global.json* 파일을 찾은 경우 설치된 최상위 SDK 버전이 사용됩니다(`rollForward`를 `latestMajor`로 설정하는 것과 같음). 최신 SDK 버전을 릴리스 또는 시험판이 될 수 있는지는 `allowPrerelease` 값에 따라 달라집니다. `true`는 시험판 버전이 고려됨을 나타냅니다. `false`는 릴리스 버전만 고려됨을 나타냅니다.
 - *global.json* 파일을 찾아 SDK 버전을 지정하는 경우 다음과 같습니다.
 
-  - `rollFoward` 값이 설정되지 않은 경우 `latestPatch`를 기본 `rollForward` 정책으로 사용합니다. 그렇지 않으면 [롤포워드](#rollforward) 섹션에서 각 값과 해당 동작을 확인하세요.
+  - `rollForward` 값이 설정되지 않은 경우 `latestPatch`를 기본 `rollForward` 정책으로 사용합니다. 그렇지 않으면 [롤포워드](#rollforward) 섹션에서 각 값과 해당 동작을 확인하세요.
   - 시험판 버전을 고려하는지와 `allowPrerelease`가 설정되지 않은 경우의 기본 동작은 [allowPrerelease](#allowprerelease) 섹션에 설명되어 있습니다.
 
 ## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)

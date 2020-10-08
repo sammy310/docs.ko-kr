@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 0445ac33473c7e2d1916705893b22ba21bb981ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e73b34390143a2ac9b839e1da79b7894232c4b4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536848"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437881"
 ---
 # <a name="partial-type-c-reference"></a>partial 형식(C# 참조)
 
-부분 형식(Partial Type) 정의를 사용하면 클래스, 구조체 또는 인터페이스의 정의를 여러 파일로 분할할 수 있습니다.
+부분 형식(Partial Type) 정의를 사용하면 클래스, 구조체, 인터페이스 또는 레코드의 정의를 여러 파일로 분할할 수 있습니다.
 
 *File1.cs*:
 
