@@ -6,12 +6,12 @@ metadata:
   description: .NET 앱을 설계, 빌드 및 마이그레이션하는 권장 방법을 알아보세요.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: d0fc08eda01497aa07142ddfba3f98a4bf3fce2d
-  ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+  ms.openlocfilehash: 2ddd4c6d0c42f9e0ae4651aedb8fbdd59cd179f2
+  ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/24/2020
-  ms.locfileid: "91169182"
+  ms.lasthandoff: 10/09/2020
+  ms.locfileid: "91877524"
 landingContent:
 - title: ASP.NET Core 앱 개발
   linkLists:
@@ -39,6 +39,10 @@ landingContent:
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
     - text: 클라우드 네이티브 ASP.NET Core 마이크로 서비스 만들기 및 배포
       url: /learn/modules/microservices-aspnet-core
+    - text: GitHub Actions를 사용하여 클라우드 네이티브 ASP.NET Core 마이크로 서비스 배포
+      url: /learn/modules/microservices-devops-aspnet-core
+    - text: 클라우드 네이티브 ASP.NET Core 마이크로 서비스 구현
+      url: /learn/modules/microservices-resiliency-aspnet-core
 - title: .NET 앱을 Azure로 마이그레이션
   linkLists:
   - linkListType: concept
