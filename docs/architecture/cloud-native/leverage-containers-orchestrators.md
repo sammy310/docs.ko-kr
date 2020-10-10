@@ -2,12 +2,12 @@
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755911"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877576"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -25,7 +25,7 @@ ms.locfileid: "91755911"
 
 ### <a name="deployment"></a>배포
 
-모놀리식 응용 프로그램은 약간만 변경 된 경우에도 전체 응용 프로그램을 완전히 배포 해야 합니다. 전체 배포는 비용이 많이 들고 오류가 발생할 수 있습니다. 또한 일시적으로 사용할 수 없는 영향을 주는 응용 프로그램을 다시 시작 해야 합니다.
+또한 응용 프로그램을 다시 시작 해야 합니다 .이 경우 배포 하는 동안 가동 중지 시간이 0 인 기술이 적용 되지 않으면 가용성에 일시적으로 영향을 줄 수 있습니다.
 
 ### <a name="scaling"></a>확장
 
@@ -139,7 +139,7 @@ status:
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>컨테이너와 orchestrator를 사용 하지 않는 경우는 언제 인가요?
 
-12 단계 앱 원칙에 따라 응용 프로그램을 빌드할 수 없는 경우 컨테이너와 orchestrator을 방지 하는 것이 좋습니다. 이러한 경우 VM 기반 호스팅 플랫폼 또는 일부 하이브리드 시스템을 고려해 야 합니다. 이를 통해 항상 특정 기능을 별도의 컨테이너 또는 서버를 사용 하지 않는 함수로 회전할 수 있습니다.
+Twelve-Factor 앱 원칙에 따라 응용 프로그램을 빌드할 수 없는 경우 컨테이너와 orchestrator을 방지 하는 것이 좋습니다. 이러한 경우 VM 기반 호스팅 플랫폼 또는 일부 하이브리드 시스템을 고려해 야 합니다. 이를 통해 항상 특정 기능을 별도의 컨테이너 또는 서버를 사용 하지 않는 함수로 회전할 수 있습니다.
 
 ## <a name="development-resources"></a>개발 리소스
 
