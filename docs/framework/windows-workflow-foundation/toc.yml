@@ -7,8 +7,11 @@
       href: whats-new.md
     - name: .NET 4.5에서 Windows Workflow Foundation의 새로운 기능
       href: whats-new-in-wf-in-dotnet.md
-    - name: Windows Workflow Foundation에서 사용되지 않는 형식
+    - name: 사용되지 않는 형식 및 도구
       href: deprecated-types.md
+      items:
+        - name: wfc.exe Workflow Compiler 도구
+          href: wfc-exe-workflow-compiler-tool.md
     - name: Windows Workflow Foundation 기능 특성
       href: feature-specifics.md
     - name: Windows Workflow 개념적 개요
