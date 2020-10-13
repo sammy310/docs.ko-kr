@@ -3,26 +3,26 @@ title: 완료되면 비동기 작업 처리
 description: 이 예제에서는 C#에서 Task.WhenAny를 사용하여 여러 작업을 시작하고 해당 결과를 시작한 순서가 아닌 완료될 때 처리하는 방법을 보여줍니다.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557309"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805241"
 ---
-# <a name="process-asynchronous-tasks-as-they-complete-c"></a><span data-ttu-id="71a58-103">완료되면 비동기 작업 처리(C#)</span><span class="sxs-lookup"><span data-stu-id="71a58-103">Process asynchronous tasks as they complete (C#)</span></span>
+# <a name="process-asynchronous-tasks-as-they-complete-c"></a><span data-ttu-id="7112a-103">완료되면 비동기 작업 처리(C#)</span><span class="sxs-lookup"><span data-stu-id="7112a-103">Process asynchronous tasks as they complete (C#)</span></span>
 
-<span data-ttu-id="71a58-104"><xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-104">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they're completed rather than process them in the order in which they're started.</span></span>
+<span data-ttu-id="7112a-104"><xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-104">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they're completed rather than process them in the order in which they're started.</span></span>
 
-<span data-ttu-id="71a58-105">다음 예제에서는 쿼리를 사용하여 작업 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-105">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="71a58-106">각 작업은 지정된 웹 사이트의 콘텐츠를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-106">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="71a58-107">while 루프의 각 반복에서 대기된 <xref:System.Threading.Tasks.Task.WhenAny%2A> 호출은 다운로드를 먼저 완료하는 작업 컬렉션의 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-107">In each iteration of a while loop, an awaited call to <xref:System.Threading.Tasks.Task.WhenAny%2A> returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="71a58-108">해당 작업은 컬렉션에서 제거되고 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-108">That task is removed from the collection and processed.</span></span> <span data-ttu-id="71a58-109">컬렉션에 더 이상 작업이 없을 때까지 루프가 반복됩니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-109">The loop repeats until the collection contains no more tasks.</span></span>
+<span data-ttu-id="7112a-105">다음 예제에서는 쿼리를 사용하여 작업 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-105">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="7112a-106">각 작업은 지정된 웹 사이트의 콘텐츠를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-106">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="7112a-107">while 루프의 각 반복에서 대기된 <xref:System.Threading.Tasks.Task.WhenAny%2A> 호출은 다운로드를 먼저 완료하는 작업 컬렉션의 작업을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-107">In each iteration of a while loop, an awaited call to <xref:System.Threading.Tasks.Task.WhenAny%2A> returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="7112a-108">해당 작업은 컬렉션에서 제거되고 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-108">That task is removed from the collection and processed.</span></span> <span data-ttu-id="7112a-109">컬렉션에 더 이상 작업이 없을 때까지 루프가 반복됩니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-109">The loop repeats until the collection contains no more tasks.</span></span>
 
-## <a name="create-example-application"></a><span data-ttu-id="71a58-110">예제 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="71a58-110">Create example application</span></span>
+## <a name="create-example-application"></a><span data-ttu-id="7112a-110">예제 애플리케이션 만들기</span><span class="sxs-lookup"><span data-stu-id="7112a-110">Create example application</span></span>
 
-<span data-ttu-id="71a58-111">새 .NET Core 콘솔 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-111">Create a new .NET Core console application.</span></span> <span data-ttu-id="71a58-112">[dotnet new console](../../../../core/tools/dotnet-new.md#console) 명령 또는 [Visual Studio](/visualstudio/install/install-visual-studio)를 사용하여 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-112">You can create one by using the [dotnet new console](../../../../core/tools/dotnet-new.md#console) command or from [Visual Studio](/visualstudio/install/install-visual-studio).</span></span> <span data-ttu-id="71a58-113">선호하는 코드 편집기에서 *Program.cs* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-113">Open the *Program.cs* file in your favorite code editor.</span></span>
+<span data-ttu-id="7112a-111">새 .NET Core 콘솔 애플리케이션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-111">Create a new .NET Core console application.</span></span> <span data-ttu-id="7112a-112">[dotnet new console](../../../../core/tools/dotnet-new.md#console) 명령 또는 [Visual Studio](/visualstudio/install/install-visual-studio)를 사용하여 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-112">You can create one by using the [dotnet new console](../../../../core/tools/dotnet-new.md#console) command or from [Visual Studio](/visualstudio/install/install-visual-studio).</span></span> <span data-ttu-id="7112a-113">선호하는 코드 편집기에서 *Program.cs* 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-113">Open the *Program.cs* file in your favorite code editor.</span></span>
 
-### <a name="replace-using-statements"></a><span data-ttu-id="71a58-114">using 문 바꾸기</span><span class="sxs-lookup"><span data-stu-id="71a58-114">Replace using statements</span></span>
+### <a name="replace-using-statements"></a><span data-ttu-id="7112a-114">using 문 바꾸기</span><span class="sxs-lookup"><span data-stu-id="7112a-114">Replace using statements</span></span>
 
-<span data-ttu-id="71a58-115">기존 using 문을 다음 선언으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-115">Replace the existing using statements with these declarations:</span></span>
+<span data-ttu-id="7112a-115">기존 using 문을 다음 선언으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-115">Replace the existing using statements with these declarations:</span></span>
 
 ```csharp
 using System;
@@ -33,9 +33,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 ```
 
-## <a name="add-fields"></a><span data-ttu-id="71a58-116">필드 추가하기</span><span class="sxs-lookup"><span data-stu-id="71a58-116">Add fields</span></span>
+## <a name="add-fields"></a><span data-ttu-id="7112a-116">필드 추가하기</span><span class="sxs-lookup"><span data-stu-id="7112a-116">Add fields</span></span>
 
-<span data-ttu-id="71a58-117">`Program` 클래스 정의에 다음 두 개 필드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-117">In the `Program` class definition, add the following two fields:</span></span>
+<span data-ttu-id="7112a-117">`Program` 클래스 정의에 다음 두 개 필드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-117">In the `Program` class definition, add the following two fields:</span></span>
 
 ```csharp
 static readonly HttpClient s_client = new HttpClient
@@ -67,21 +67,21 @@ static readonly IEnumerable<string> s_urlList = new string[]
 };
 ```
 
-<span data-ttu-id="71a58-118">`HttpClient`는 HTTP 요청을 보내고 HTTP 응답을 받는 기능을 공개합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-118">The `HttpClient` exposes the ability to send HTTP requests and receive HTTP responses.</span></span> <span data-ttu-id="71a58-119">`s_urlList`는 애플리케이션이 처리해야 하는 모든 URL을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-119">The `s_urlList` holds all of the URLs that the application plans to process.</span></span>
+<span data-ttu-id="7112a-118">`HttpClient`는 HTTP 요청을 보내고 HTTP 응답을 받는 기능을 공개합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-118">The `HttpClient` exposes the ability to send HTTP requests and receive HTTP responses.</span></span> <span data-ttu-id="7112a-119">`s_urlList`는 애플리케이션이 처리해야 하는 모든 URL을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-119">The `s_urlList` holds all of the URLs that the application plans to process.</span></span>
 
-## <a name="update-application-entry-point"></a><span data-ttu-id="71a58-120">애플리케이션 진입점 업데이트</span><span class="sxs-lookup"><span data-stu-id="71a58-120">Update application entry point</span></span>
+## <a name="update-application-entry-point"></a><span data-ttu-id="7112a-120">애플리케이션 진입점 업데이트</span><span class="sxs-lookup"><span data-stu-id="7112a-120">Update application entry point</span></span>
 
-<span data-ttu-id="71a58-121">콘솔 애플리케이션의 주 진입점은 `Main` 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-121">The main entry point into the console application is the `Main` method.</span></span> <span data-ttu-id="71a58-122">기존 메서드를 다음으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-122">Replace the existing method with the following:</span></span>
+<span data-ttu-id="7112a-121">콘솔 애플리케이션의 주 진입점은 `Main` 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-121">The main entry point into the console application is the `Main` method.</span></span> <span data-ttu-id="7112a-122">기존 메서드를 다음으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-122">Replace the existing method with the following:</span></span>
 
 ```csharp
 static Task Main() => SumPageSizesAsync();
 ```
 
-<span data-ttu-id="71a58-123">업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7-1.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-123">The updated `Main` method is now considered an [Async main](../../../whats-new/csharp-7-1.md#async-main), which allows for an asynchronous entry point into the executable.</span></span> <span data-ttu-id="71a58-124">`SumPageSizesAsync`에 대한 호출로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-124">It is expressed a call to `SumPageSizesAsync`.</span></span>
+<span data-ttu-id="7112a-123">업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-123">The updated `Main` method is now considered an [Async main](../../../whats-new/csharp-7.md#async-main), which allows for an asynchronous entry point into the executable.</span></span> <span data-ttu-id="7112a-124">`SumPageSizesAsync`에 대한 호출로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-124">It is expressed a call to `SumPageSizesAsync`.</span></span>
 
-## <a name="create-the-asynchronous-sum-page-sizes-method"></a><span data-ttu-id="71a58-125">비동기 합계 페이지 크기 메서드 만들기</span><span class="sxs-lookup"><span data-stu-id="71a58-125">Create the asynchronous sum page sizes method</span></span>
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a><span data-ttu-id="7112a-125">비동기 합계 페이지 크기 메서드 만들기</span><span class="sxs-lookup"><span data-stu-id="7112a-125">Create the asynchronous sum page sizes method</span></span>
 
-<span data-ttu-id="71a58-126">`SumPageSizesAsync` 메서드 아래에 `Main` 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-126">Below the `Main` method, add the `SumPageSizesAsync` method:</span></span>
+<span data-ttu-id="7112a-126">`SumPageSizesAsync` 메서드 아래에 `Main` 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-126">Below the `Main` method, add the `SumPageSizesAsync` method:</span></span>
 
 ```csharp
 static async Task SumPageSizesAsync()
@@ -109,7 +109,7 @@ static async Task SumPageSizesAsync()
 }
 ```
 
-<span data-ttu-id="71a58-127"><xref:System.Diagnostics.Stopwatch>를 인스턴스화하고 시작함으로써 메서드가 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-127">The method starts by instantiating and starting a <xref:System.Diagnostics.Stopwatch>.</span></span> <span data-ttu-id="71a58-128">그런 다음, 실행 시 작업 컬렉션을 만드는 쿼리를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-128">It then includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="71a58-129">다음 코드에서는 `ProcessUrlAsync`를 호출할 때마다 <xref:System.Threading.Tasks.Task%601>가 반환됩니다. 여기서 `TResult`는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-129">Each call to `ProcessUrlAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
+<span data-ttu-id="7112a-127"><xref:System.Diagnostics.Stopwatch>를 인스턴스화하고 시작함으로써 메서드가 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-127">The method starts by instantiating and starting a <xref:System.Diagnostics.Stopwatch>.</span></span> <span data-ttu-id="7112a-128">그런 다음, 실행 시 작업 컬렉션을 만드는 쿼리를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-128">It then includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="7112a-129">다음 코드에서는 `ProcessUrlAsync`를 호출할 때마다 <xref:System.Threading.Tasks.Task%601>가 반환됩니다. 여기서 `TResult`는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-129">Each call to `ProcessUrlAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
 
 ```csharp
 IEnumerable<Task<int>> downloadTasksQuery =
@@ -117,35 +117,35 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-<span data-ttu-id="71a58-130">LINQ를 통한 [지연된 실행](../../../../standard/linq/deferred-execution-example.md)으로 인해 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 호출하여 각 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-130">Due to [deferred execution](../../../../standard/linq/deferred-execution-example.md) with the LINQ, you call <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> to start each task.</span></span>
+<span data-ttu-id="7112a-130">LINQ를 통한 [지연된 실행](../../../../standard/linq/deferred-execution-example.md)으로 인해 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 호출하여 각 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-130">Due to [deferred execution](../../../../standard/linq/deferred-execution-example.md) with the LINQ, you call <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> to start each task.</span></span>
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
 ```
 
-<span data-ttu-id="71a58-131">`while` 루프는 컬렉션의 각 작업에서 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-131">The `while` loop performs the following steps for each task in the collection:</span></span>
+<span data-ttu-id="7112a-131">`while` 루프는 컬렉션의 각 작업에서 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-131">The `while` loop performs the following steps for each task in the collection:</span></span>
 
-1. <span data-ttu-id="71a58-132">다운로드를 완료한 컬렉션에서 첫 번째 작업을 식별하기 위해 `WhenAny` 호출을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-132">Awaits a call to `WhenAny` to identify the first task in the collection that has finished its download.</span></span>
+1. <span data-ttu-id="7112a-132">다운로드를 완료한 컬렉션에서 첫 번째 작업을 식별하기 위해 `WhenAny` 호출을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-132">Awaits a call to `WhenAny` to identify the first task in the collection that has finished its download.</span></span>
 
     ```csharp
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
     ```
 
-1. <span data-ttu-id="71a58-133">컬렉션에서 해당 작업을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-133">Removes that task from the collection.</span></span>
+1. <span data-ttu-id="7112a-133">컬렉션에서 해당 작업을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-133">Removes that task from the collection.</span></span>
 
     ```csharp
     downloadTasks.Remove(firstFinishedTask);
     ```
 
-1. <span data-ttu-id="71a58-134">`ProcessUrlAsync` 호출에서 반환된 `finishedTask`를 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-134">Awaits `finishedTask`, which is returned by a call to `ProcessUrlAsync`.</span></span> <span data-ttu-id="71a58-135">`finishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`은 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-135">The `finishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span> <span data-ttu-id="71a58-136">작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-136">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span> <span data-ttu-id="71a58-137">작업에 오류가 발생하는 경우 `await`는 `AggregateException`을 throw하는 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 속성을 읽는 것과 달리 `AggregateException`에 저장된 첫 번째 자식 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-137">If the task is faulted, `await` will throw the first child exception stored in the `AggregateException`, unlike reading the <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> property, which would throw the `AggregateException`.</span></span>
+1. <span data-ttu-id="7112a-134">`ProcessUrlAsync` 호출에서 반환된 `finishedTask`를 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-134">Awaits `finishedTask`, which is returned by a call to `ProcessUrlAsync`.</span></span> <span data-ttu-id="7112a-135">`finishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`은 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-135">The `finishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span> <span data-ttu-id="7112a-136">작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-136">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span> <span data-ttu-id="7112a-137">작업에 오류가 발생하는 경우 `await`는 `AggregateException`을 throw하는 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 속성을 읽는 것과 달리 `AggregateException`에 저장된 첫 번째 자식 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-137">If the task is faulted, `await` will throw the first child exception stored in the `AggregateException`, unlike reading the <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> property, which would throw the `AggregateException`.</span></span>
 
     ```csharp
     total += await finishedTask;
     ```
 
-## <a name="add-process-method"></a><span data-ttu-id="71a58-138">프로세스 메서드 추가</span><span class="sxs-lookup"><span data-stu-id="71a58-138">Add process method</span></span>
+## <a name="add-process-method"></a><span data-ttu-id="7112a-138">프로세스 메서드 추가</span><span class="sxs-lookup"><span data-stu-id="7112a-138">Add process method</span></span>
 
-<span data-ttu-id="71a58-139">`SumPageSizesAsync` 메서드 아래에 다음 `ProcessUrlAsync` 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-139">Add the following `ProcessUrlAsync` method below the `SumPageSizesAsync` method:</span></span>
+<span data-ttu-id="7112a-139">`SumPageSizesAsync` 메서드 아래에 다음 `ProcessUrlAsync` 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-139">Add the following `ProcessUrlAsync` method below the `SumPageSizesAsync` method:</span></span>
 
 ```csharp
 static async Task<int> ProcessUrlAsync(string url, HttpClient client)
@@ -157,20 +157,20 @@ static async Task<int> ProcessUrlAsync(string url, HttpClient client)
 }
 ```
 
-<span data-ttu-id="71a58-140">지정된 URL에서 메서드는 제공된 `client` 인스턴스를 사용하여 응답을 `byte[]`로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-140">For any given URL, the method will use the `client` instance provided to get the response as a `byte[]`.</span></span> <span data-ttu-id="71a58-141">URL 및 길이가 콘솔에 기록된 후 길이가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-141">The length is returned after the URL and length is written to the console.</span></span>
+<span data-ttu-id="7112a-140">지정된 URL에서 메서드는 제공된 `client` 인스턴스를 사용하여 응답을 `byte[]`로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-140">For any given URL, the method will use the `client` instance provided to get the response as a `byte[]`.</span></span> <span data-ttu-id="7112a-141">URL 및 길이가 콘솔에 기록된 후 길이가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-141">The length is returned after the URL and length is written to the console.</span></span>
 
-<span data-ttu-id="71a58-142">프로그램을 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-142">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
+<span data-ttu-id="7112a-142">프로그램을 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-142">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="71a58-143">예제에 설명된 대로 루프에서 `WhenAny`를 사용하는 것은 적은 수의 작업이 필요한 문제 해결에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-143">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="71a58-144">그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-144">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="71a58-145">자세한 내용 및 예제는 [작업이 완료되었을 때 처리 방법](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="71a58-145">For more information and examples, see [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete).</span></span>
+> <span data-ttu-id="7112a-143">예제에 설명된 대로 루프에서 `WhenAny`를 사용하는 것은 적은 수의 작업이 필요한 문제 해결에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-143">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="7112a-144">그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-144">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="7112a-145">자세한 내용 및 예제는 [작업이 완료되었을 때 처리 방법](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7112a-145">For more information and examples, see [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete).</span></span>
 
-## <a name="complete-example"></a><span data-ttu-id="71a58-146">전체 예제</span><span class="sxs-lookup"><span data-stu-id="71a58-146">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="7112a-146">전체 예제</span><span class="sxs-lookup"><span data-stu-id="7112a-146">Complete example</span></span>
 
-<span data-ttu-id="71a58-147">다음 코드는 예제에 관한 *Program.cs* 파일의 전체 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="71a58-147">The following code is the complete text of the *Program.cs* file for the example.</span></span>
+<span data-ttu-id="7112a-147">다음 코드는 예제에 관한 *Program.cs* 파일의 전체 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="7112a-147">The following code is the complete text of the *Program.cs* file for the example.</span></span>
 
 :::code language="csharp" source="snippets/multiple-tasks/Program.cs":::
 
-## <a name="see-also"></a><span data-ttu-id="71a58-148">참고 항목</span><span class="sxs-lookup"><span data-stu-id="71a58-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7112a-148">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7112a-148">See also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [<span data-ttu-id="71a58-149">async 및 await를 사용한 비동기 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="71a58-149">Asynchronous programming with async and await (C#)</span></span>](index.md)
+- [<span data-ttu-id="7112a-149">async 및 await를 사용한 비동기 프로그래밍(C#)</span><span class="sxs-lookup"><span data-stu-id="7112a-149">Asynchronous programming with async and await (C#)</span></span>](index.md)
