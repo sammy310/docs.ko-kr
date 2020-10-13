@@ -2,12 +2,12 @@
 title: ML.NET 메트릭
 description: ML.NET 모델의 성능을 평가하기 위해 사용한 메트릭 이해
 ms.date: 12/17/2019
-ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679510"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804824"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>메트릭을 사용하여 ML.NET 모델 평가
 
@@ -23,7 +23,7 @@ ML.NET 모델을 평가하는 데 사용되는 메트릭을 파악합니다.
 |-----------|-----------------------|-----------|
 | **정확도(Accuracy)** |  [정확도](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification)는 테스트 데이터 세트 사용 시 올바른 예측의 비율입니다. 총 입력 샘플 수 대비 올바른 예측 수의 비율입니다. 각 클래스에 유사한 수의 샘플이 속해 있는 경우에 제대로 작동합니다.| **1.00에 가까울 수록 좋습니다**. 하지만 정확하게 1.00은 문제(일반적으로 레이블/대상 누출, 오버피팅 또는 학습 데이터 테스트)를 나타냅니다. 테스트 데이터의 균형이 맞지 않은 경우(대부분 인스턴스가 클래스 중 하나에 속해 있는 경우) 데이터 세트가 작거나 점수가 0.00 또는 1.00에 근접하면 정확도는 실제로 분류자의 유효성을 포착하지 못하므로 추가 메트릭을 확인해야 합니다. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) 또는 *곡선 아래의 영역*은 진양성 비율과 가양성 비율을 스윕하여 생성된 곡선 아래의 영역을 측정합니다.  |   **1.00에 가까울 수록 좋습니다**. 모델이 허용되려면 그 값이 0.50보다 커야 합니다. AUC가 0.50 이하인 모델은 유용하지 않습니다. |
-| **AUCPR** | [aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) 또는 *정밀도-리콜 곡선의 아래의 영역*: 클래스의 균형이 좋지 않을 때(상당히 기울어진 데이터 세트) 예측 성공에 대한 의미 있는 측정값입니다. |  **1.00에 가까울 수록 좋습니다**. 1\.00에 가까운 고득점은 분류자가 정확한 결과(높은 정밀도)를 반환할 뿐만 아니라 대다수가 모두 긍정 결과(높은 재현율)를 반환하고 있음을 보여줍니다. |
+| **AUCPR** | aucPR 또는 *정밀도-리콜 곡선의 아래의 영역*: 클래스의 균형이 좋지 않을 때(상당히 기울어진 데이터 세트) 예측 성공에 대한 의미 있는 측정값입니다. |  **1.00에 가까울 수록 좋습니다**. 1\.00에 가까운 고득점은 분류자가 정확한 결과(높은 정밀도)를 반환할 뿐만 아니라 대다수가 모두 긍정 결과(높은 재현율)를 반환하고 있음을 보여줍니다. |
 | **F1-점수(F1-score)** | *balanced F-score 또는 F-measure*라고도 하는 [F1 점수](https://en.wikipedia.org/wiki/F1_score)는 정밀도와 재현율의 조화 평균입니다. F1 점수는 정밀도(Precision)와 재현율(Recall) 간 균형을 찾으려고 할 때 유용합니다.| **1.00에 가까울 수록 좋습니다**.  F1 점수에서 가장 높은 값은 1.00이고 가장 낮은 점수는 0.00으로, 분류자의 정밀도를 알려줍니다. |
 
 이진 분류 메트릭에 대한 자세한 내용은 다음 메트릭 문서를 참조하세요.

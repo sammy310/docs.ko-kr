@@ -4,12 +4,12 @@ description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656985"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804896"
 ---
 # <a name="console-app"></a>콘솔 앱
 
@@ -187,7 +187,7 @@ ShowTeleprompter().Wait();
 여기 `Main`에서 코드는 동기적으로 대기합니다. 가능한 경우 동기적으로 대기하는 대신 `await` 연산자를 사용하는 것이 좋습니다. 그러나 콘솔 애플리케이션의 `Main` 메서드에서는 `await` 연산자를 사용할 수 없습니다. 결과적으로 모든 작업을 완료하기 전에 애플리케이션이 종료됩니다.
 
 > [!NOTE]
-> C# 7.1 이상을 사용하는 경우 [`async` `Main` 메서드](../whats-new/csharp-7-1.md#async-main)로 콘솔 애플리케이션을 만들 수 있습니다.
+> C# 7.1 이상을 사용하는 경우 [`async` `Main` 메서드](../whats-new/csharp-7.md#async-main)로 콘솔 애플리케이션을 만들 수 있습니다.
 
 다음에는 콘솔에서 읽는 두 번째 비동기 메서드를 작성하고 '<'(보다 작음), '>'(보다 큼) 및 'X' 또는 'x' 키를 확인해야 합니다. 해당 작업에 대해 추가하는 메서드는 다음과 같습니다.
 

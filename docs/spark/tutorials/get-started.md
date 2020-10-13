@@ -1,17 +1,17 @@
 ---
 title: .NET for Apache Spark 시작
 description: Windows, macOS, Ubuntu에서 .NET Core를 사용하여 .NET for Apache Spark 앱을 실행하는 방법을 살펴봅니다.
-ms.date: 09/17/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866049"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955410"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -24,8 +24,6 @@ ms.locfileid: "90866049"
 > * .NET for Apache Spark를 위한 환경 준비
 > * 첫 번째 .NET for Apache Spark 애플리케이션 작성
 > * .NET for Apache Spark 애플리케이션 빌드 및 실행
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>환경 준비
 

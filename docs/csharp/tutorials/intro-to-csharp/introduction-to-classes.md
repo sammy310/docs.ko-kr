@@ -3,12 +3,12 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 57394ecb02745d69e22f4d9f1dbd4213f290cd5a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 90abe3836292029ce7ebf26ae9be3253c4eface1
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609052"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756054"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
@@ -210,7 +210,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>다음 단계
 
-잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/)에서 이 자습서의 소스를 확인할 수 있습니다.
+잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)에서 이 자습서의 소스를 확인할 수 있습니다.
 
 [개체 지향 프로그래밍](object-oriented-programming.md) 자습서를 계속 진행할 수 있습니다.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 20c1d9786eaa184088500cf1b37d33afc421b5e7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d8fae870bb3a6fdda735a028dc1da20213a68a31
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142026"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756041"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -87,7 +87,7 @@ case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 �
 
 각 case 레이블은 일치 식과 비교할 패턴(이전 예제의 `caseSwitch` 변수)을 지정합니다. 일치하는 경우 제어가 일치하는 **첫 번째** case 레이블을 포함하는 switch 섹션으로 전송됩니다. 일치 식과 일치하는 case 레이블 패턴이 없는 경우 제어가 `default` case 레이블을 포함하는 섹션으로 전송됩니다(있는 경우). `default` case가 없는 경우 switch 섹션의 문이 실행되지 않으며, 제어가 `switch` 문 외부로 전송됩니다.
 
-`switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern-matching with-the-switch-statement) 섹션을 참조하세요.
+`switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern-matching-with-the-switch-statement) 섹션을 참조하세요.
 
 C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다. 따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.
 

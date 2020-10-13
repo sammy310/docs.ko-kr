@@ -3,14 +3,14 @@ title: .NET for Apache Spark 및 ML.NET을 사용한 감정 분석 자습서
 description: 이 자습서에서는 감정 분석을 위해 .NET for Apache Spark와 함께 ML.NET을 사용하는 방법을 알아봅니다.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617584"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954895"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>자습서: .NET for Apache Spark 및 ML.NET을 사용한 감정 분석
 
@@ -24,8 +24,6 @@ ms.locfileid: "85617584"
 > * .NET for Apache Spark 콘솔 앱을 만듭니다.
 > * 사용자 정의 함수를 작성하고 구현합니다.
 > * .NET for Apache Spark 콘솔 앱을 실행합니다.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

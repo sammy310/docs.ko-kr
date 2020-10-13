@@ -1,21 +1,19 @@
 ---
 title: Ubuntu에서 .NET for Apache Spark 애플리케이션 빌드
 description: Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5e06619611ac06c453df0314bcecb30e1b673a2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dfe105bb1549560ebdd2526a8441c4e2c5d141bf
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812200"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955064"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법
 
 이 문서에서는 Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법을 배웁니다.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

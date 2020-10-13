@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872460"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804772"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -120,7 +120,7 @@ public class PrimeWebDefaultRequestShould
     <https://github.com/moq/moq>
 
 - **NUnit**. 공식 사이트입니다. \
-    <https://www.nunit.org/>
+    <https://nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>다중 컨테이너 애플리케이션에서 서비스 테스트 구현
 

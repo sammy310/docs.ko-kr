@@ -1,26 +1,26 @@
 ---
 title: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 description: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하는 방법에 대해 알아봅니다.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617719"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954960"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 
 이 방법은 Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하는 방법에 대한 일반적인 지침을 제공합니다. `spark-submit`를 사용하여 애플리케이션을 시작하는 데 일반적으로 사용되는 매개 변수뿐만 아니라 설정할 환경 변수를 알아봅니다.
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="configurations"></a>구성
+
 구성에는 Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하기 위해 일반적인 환경 변수 및 매개 변수 설정이 표시됩니다.
 
 ### <a name="environment-variables"></a>환경 변수
+
 작업자를 배포하고 UDF를 작성하는 경우 다음과 같은 일반적으로 사용되는 몇 가지 환경 변수를 설정해야 할 수 있습니다.
 
 | 환경 변수         | 설명

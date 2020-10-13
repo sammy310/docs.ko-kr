@@ -4,12 +4,12 @@ description: 취소 토큰을 사용하여 작업 목록에 대한 취소 요청
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654707"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805254"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>작업 목록 취소(C#)
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7-1.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다. 콘솔에 몇 가지 지침 메시지를 기록한 다음, `cancelTask`라는 <xref:System.Threading.Tasks.Task> 인스턴스를 선언합니다. 그러면 콘솔 키 입력이 읽힙니다. <kbd>Enter</kbd> 키를 누르면 <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType>이 호출됩니다. 그러면 취소 신호가 전송됩니다. 다음으로, `sumPageSizesTask` 변수가 `SumPageSizesAsync` 메서드에서 할당됩니다. 두 작업은 모두 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>에 전달되며 해당 항목은 두 작업 중 하나가 완료되면 계속됩니다.
+업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다. 콘솔에 몇 가지 지침 메시지를 기록한 다음, `cancelTask`라는 <xref:System.Threading.Tasks.Task> 인스턴스를 선언합니다. 그러면 콘솔 키 입력이 읽힙니다. <kbd>Enter</kbd> 키를 누르면 <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType>이 호출됩니다. 그러면 취소 신호가 전송됩니다. 다음으로, `sumPageSizesTask` 변수가 `SumPageSizesAsync` 메서드에서 할당됩니다. 두 작업은 모두 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>에 전달되며 해당 항목은 두 작업 중 하나가 완료되면 계속됩니다.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>비동기 합계 페이지 크기 메서드 만들기
 

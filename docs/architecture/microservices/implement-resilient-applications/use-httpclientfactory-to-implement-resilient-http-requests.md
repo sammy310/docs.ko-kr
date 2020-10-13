@@ -2,12 +2,12 @@
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 08/31/2020
-ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152574"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804811"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -194,7 +194,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **`dotnet/extensions` GitHub 리포지토리의 HttpClientFactory 소스 코드**  
-  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
+  <https://github.com/dotnet/extensions/tree/v3.1.8/src/HttpClientFactory>
 
 - **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
   <http://www.thepollyproject.org/>

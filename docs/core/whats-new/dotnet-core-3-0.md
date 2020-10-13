@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654773"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804634"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019에는 .NET Core 3.0 Windows Forms 및 WPF용 **새 프로젝트** 템플릿이 추가됩니다.
 
-기존 .NET Framework 애플리케이션을 포트하는 방법에 대한 자세한 내용은 [WPF 프로젝트 포트](../../desktop-wpf/migration/convert-project-from-net-framework.md) 및 [Windows Forms 프로젝트 포트](../porting/winforms.md)를 참조하세요.
+기존 .NET Framework 애플리케이션을 포트하는 방법에 대한 자세한 내용은 [WPF 프로젝트 포트](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) 및 [Windows Forms 프로젝트 포트](../porting/winforms.md)를 참조하세요.
 
 #### <a name="winforms-high-dpi"></a>WinForms의 높은 DPI
 

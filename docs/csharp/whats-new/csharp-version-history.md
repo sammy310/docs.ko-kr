@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: b5c320e4c55803547fa44793a46e4a3da65bd0cb
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063473"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805091"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -19,11 +19,11 @@ ms.locfileid: "88063473"
 
 C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로 고려합니다. 주요 릴리스 사이에는 이 섹션의 다른 문서에서 상세히 설명한 포인트 릴리스가 있을 수 있습니다. 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다. C# 7.0 이후 세 가지 포인트 릴리스가 있습니다.
 
-- [C# 7.3](csharp-7-3.md):
+- C# 7.3:
   - C# 7.3은 [Visual Studio 2017 버전 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md)부터 사용할 수 있습니다.
-- [C# 7.2](csharp-7-2.md):
+- C# 7.2:
   - C# 7.2는 [Visual Studio 2017 버전 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
-- [C# 7.1](csharp-7-1.md):
+- C# 7.1:
   - C# 7.1은 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
 
 ## <a name="c-version-10"></a>C# 버전 1.0
@@ -157,7 +157,7 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 C# 버전 7.0은 Visual Studio 2017과 함께 릴리스되었습니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
 
 - [외부 변수](./csharp-7.md#out-variables)
-- [튜플 및 분해](./csharp-7.md#tuples)
+- [튜플 및 분해](./csharp-7.md#tuples-and-discards)
 - [패턴 일치](./csharp-7.md#pattern-matching)
 - [로컬 함수](./csharp-7.md#local-functions)
 - [확장된 식 본문 멤버](./csharp-7.md#more-expression-bodied-members)
@@ -165,7 +165,7 @@ C# 버전 7.0은 Visual Studio 2017과 함께 릴리스되었습니다. 이 버�
 
 이러한 기능에는 다음이 포함됩니다.
 
-- [삭제](./csharp-7.md#discards)
+- [삭제](./csharp-7.md#tuples-and-discards)
 - [이진 리터럴 및 자릿수 구분 기호](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Throw 식](./csharp-7.md#throw-expressions)
 
@@ -179,30 +179,30 @@ C#은 C# 7.1과 함께 ‘포인트 릴리스’를 제공하기 시작했습니
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 
-- [`async` `Main` 메서드](./csharp-7-1.md#async-main)
+- [`async` `Main` 메서드](./csharp-7.md#async-main)
   - 애플리케이션에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
-- [`default` 리터럴 식](./csharp-7-1.md#default-literal-expressions)
+- [`default` 리터럴 식](./csharp-7.md#default-literal-expressions)
   - 대상 형식을 유추할 수 있는 경우 기본 값 식에서 기본 리터럴 식을 사용할 수 있습니다.
-- [유추된 튜플 요소 이름](./csharp-7-1.md#inferred-tuple-element-names)
+- [유추된 튜플 요소 이름](./csharp-7.md#tuples-and-discards)
   - 튜플 요소의 이름은 대부분의 경우에 튜플 초기화에서 유추할 수 있습니다.
-- [제네릭 형식 매개 변수의 패턴 일치](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+- [제네릭 형식 매개 변수의 패턴 일치](./csharp-7.md#pattern-matching)
   - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
 
-마지막으로 컴파일러에는 [참조 어셈블리 생성](./csharp-7-1.md#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
+마지막으로 컴파일러에는 [참조 어셈블리 생성](./csharp-7.md#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
 
 ## <a name="c-version-72"></a>C# 버전 7.2
 
 C# 7.2는 몇 가지 작은 언어 기능을 추가했습니다.
 
-- [안전하고 효율적인 코드를 작성하는 방법](./csharp-7-2.md#safe-efficient-code-enhancements)
+- [안전하고 효율적인 코드를 작성하는 방법](./csharp-7.md#enabling-more-efficient-safe-code)
   - 참조 의미 체계를 사용하는 값 유형으로 작동할 수 있는 구문 개선의 조합입니다.
-- [뒤에 오지 않는 명명된 인수](./csharp-7-2.md#non-trailing-named-arguments)
+- [뒤에 오지 않는 명명된 인수](./csharp-7.md#non-trailing-named-arguments)
   - 명명된 인수 뒤에는 위치 인수가 올 수 있습니다.
-- [숫자 리터럴의 선행 밑줄](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+- [숫자 리터럴의 선행 밑줄](./csharp-7.md#numeric-literal-syntax-improvements)
   - 숫자 리터럴은 이제 인쇄된 숫자 앞에 선행 밑줄이 있을 수 있습니다.
-- [`private protected` 액세스 한정자](./csharp-7-2.md#private-protected-access-modifier)
+- [`private protected` 액세스 한정자](./csharp-7.md#private-protected-access-modifier)
   - `private protected` 액세스 한정자는 동일한 어셈블리의 파생된 클래스에 대해 액세스를 사용합니다.
-- [조건부 `ref` 식](./csharp-7-2.md#conditional-ref-expressions)
+- [조건부 `ref` 식](./csharp-7.md#conditional-ref-expressions)
   - 이제 조건식(`?:`)의 결과가 참조일 수 있습니다.
 
 ## <a name="c-version-73"></a>C# 버전 7.3
@@ -211,24 +211,24 @@ C# 7.3 릴리스에는 두 개의 기본 테마가 있습니다. 하나의 테�
 
 다음 새로운 기능은 안전한 코드에 대해 향상된 성능의 테마를 지원합니다.
 
-- [고정하지 않고 고정 필드에 액세스할 수 있습니다.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
-- [`ref` 지역 변수를 다시 할당할 수 있습니다.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
-- [`stackalloc` 배열에서 이니셜라이저를 사용할 수 있습니다.](csharp-7-3.md#stackalloc-arrays-support-initializers)
-- [패턴을 지원하는 모든 형식과 함께 `fixed` 문을 사용할 수 있습니다.](csharp-7-3.md#more-types-support-the-fixed-statement)
-- [추가적인 제네릭 제약 조건을 사용할 수 있습니다.](csharp-7-3.md#enhanced-generic-constraints)
+- [고정하지 않고 고정 필드에 액세스할 수 있습니다.](csharp-7.md#indexing-fixed-fields-does-not-require-pinning)
+- [`ref` 지역 변수를 다시 할당할 수 있습니다.](csharp-7.md#enabling-more-efficient-safe-code)
+- [`stackalloc` 배열에서 이니셜라이저를 사용할 수 있습니다.](csharp-7.md#stackalloc-arrays-support-initializers)
+- [패턴을 지원하는 모든 형식과 함께 `fixed` 문을 사용할 수 있습니다.](csharp-7.md#more-types-support-the-fixed-statement)
+- [추가적인 제네릭 제약 조건을 사용할 수 있습니다.](csharp-7.md#enhanced-generic-constraints)
 
 기존 기능이 다음과 같이 개선되었습니다.
 
-- [튜플 형식으로 `==` 및 `!=`를 테스트할 수 있습니다.](csharp-7-3.md#tuples-support--and-)
-- [더 많은 위치에서 식 변수를 사용할 수 있습니다.](csharp-7-3.md#extend-expression-variables-in-initializers)
-- [자동 구현 속성의 지원 필드에 특성을 연결할 수 있습니다.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
-- [인수에서 `in`만 다른 경우 메서드 해결이 향상되었습니다.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
-- [이제 오버로드 해결에 모호한 사례가 감소했습니다.](csharp-7-3.md#improved-overload-candidates)
+- 튜플 형식으로 `==` 및 `!=`를 테스트할 수 있습니다.
+- 더 많은 위치에서 식 변수를 사용할 수 있습니다.
+- 자동 구현 속성의 지원 필드에 특성을 연결할 수 있습니다.
+- 인수에서 `in`만 다른 경우 메서드 해결이 향상되었습니다.
+- 이제 오버로드 해결에 모호한 사례가 감소했습니다.
 
 새 컴파일러 옵션은 다음과 같습니다.
 
-- [`-publicsign` - OSS(오픈 소스 소프트웨어) 시그니처를 사용하도록 설정합니다.](csharp-7-3.md#public-or-open-source-signing)
-- [`-pathmap` - 소스 디렉터리에 대한 매핑을 제공합니다.](csharp-7-3.md#pathmap)
+- `-publicsign` - OSS(오픈 소스 소프트웨어) 시그니처를 사용하도록 설정합니다.
+- `-pathmap` - 소스 디렉터리에 대한 매핑을 제공합니다.
 
 ## <a name="c-version-80"></a>C# 버전 8.0
 

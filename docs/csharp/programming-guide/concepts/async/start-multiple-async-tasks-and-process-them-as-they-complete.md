@@ -3,12 +3,12 @@ title: 완료되면 비동기 작업 처리
 description: 이 예제에서는 C#에서 Task.WhenAny를 사용하여 여러 작업을 시작하고 해당 결과를 시작한 순서가 아닌 완료될 때 처리하는 방법을 보여줍니다.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557309"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805241"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>완료되면 비동기 작업 처리(C#)
 
@@ -77,7 +77,7 @@ static readonly IEnumerable<string> s_urlList = new string[]
 static Task Main() => SumPageSizesAsync();
 ```
 
-업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7-1.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다. `SumPageSizesAsync`에 대한 호출로 표현됩니다.
+업데이트된 `Main` 메서드는 이제 [Async main](../../../whats-new/csharp-7.md#async-main)으로 간주되어 실행 파일에 대한 비동기 진입점을 허용합니다. `SumPageSizesAsync`에 대한 호출로 표현됩니다.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>비동기 합계 페이지 크기 메서드 만들기
 

@@ -1,21 +1,19 @@
 ---
 title: Windows에서 .NET for Apache Spark 애플리케이션 디버그
 description: Windows에서 .NET for Apache Spark 애플리케이션을 디버그하는 방법을 알아봅니다.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 43531e6b2f9a79658f89b804dfa2bb97d6e9645b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557153"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954986"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 디버그
 
 이 방법은 Windows에서 .NET for Apache Spark 애플리케이션을 디버그하는 단계를 설명합니다.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="debug-your-application"></a>애플리케이션 디버그
 

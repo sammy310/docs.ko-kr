@@ -1,15 +1,15 @@
 ---
 title: Databricks에 .NET for Apache Spark 애플리케이션 배포
 description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 살펴봅니다.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 904aeea4fa8b134c8c36ebb83779dc044154e6f3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552169"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955449"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -23,8 +23,6 @@ ms.locfileid: "90552169"
 > - .NET for Apache Spark 앱 게시
 > - Spark 작업 및 Spark 클러스터 만들기
 > - Spark 클러스터에서 앱 실행
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

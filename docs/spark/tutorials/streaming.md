@@ -3,14 +3,14 @@ title: .NET for Apache Spark를 사용한 구조적 스트리밍 자습서
 description: 이 자습서에서는 Spark 구조적 스트리밍을 위해 .NET for Apache Spark를 사용하는 방법을 알아봅니다.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 5420fe081db1704d7af647e8c88826c1bcf614d9
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617845"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955579"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 구조적 스트리밍
 
@@ -23,8 +23,6 @@ ms.locfileid: "85617845"
 > * .NET for Apache Spark 애플리케이션 만들기 및 실행
 > * netcat을 사용하여 데이터 스트림 만들기
 > * 사용자 정의 함수 및 SparkSQL를 사용하여 스트리밍 데이터 분석
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
