@@ -25,24 +25,46 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: 방법 가이드
   items:
+    - name: 데이터에 연결
+      items:
+        - name: Azure Storage
+          href: how-to-guides/connect-to-azure-storage.md
+        - name: Event Hubs
+          href: how-to-guides/connect-to-event-hub.md
+        - name: MongoDB
+          href: how-to-guides/connect-to-mongo-db.md
+        - name: SQL Server
+          href: how-to-guides/connect-to-sql-server.md
+    - name: 애플리케이션 빌드
+      items:
+        - name: Ubuntu
+          href: how-to-guides/ubuntu-instructions.md
+        - name: Windows
+          href: how-to-guides/windows-instructions.md
+    - name: 원격 작업 제출
+      items:
+        - name: Azure Synapse Analytics에 작업 제출
+          href: /azure/synapse-analytics/spark/spark-dotnet
+        - name: Databricks에 작업 제출
+          href: how-to-guides/databricks-deploy-methods.md
+        - name: HDInsight에 작업 제출
+          href: how-to-guides/hdinsight-deploy-methods.md
+    - name: UDF(사용자 정의 함수)
+      items:
+        - name: UDF 가이드
+          href: how-to-guides/udf-guide.md
+        - name: .NET의 Java UDF
+          href: how-to-guides/java-udf-from-dotnet.md
+        - name: .NET 대화형의 UDF
+          href: how-to-guides/dotnet-interactive-udf-issue.md
+        - name: 작업자 및 UDF 이진 파일 배포
+          href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Jupyter Notebook 사용
+      href: how-to-guides/dotnet-spark-jupyter-notebooks.md
     - name: 브로드캐스트 가이드
       href: how-to-guides/broadcast-guide.md
-    - name: UDF 가이드
-      href: how-to-guides/udf-guide.md
     - name: 애플리케이션 디버그
       href: how-to-guides/debug.md
-    - name: Azure Synapse Analytics에 작업 제출
-      href: /azure/synapse-analytics/spark/spark-dotnet
-    - name: HDInsight에 작업 제출
-      href: how-to-guides/hdinsight-deploy-methods.md
-    - name: Databricks에 작업 제출
-      href: how-to-guides/databricks-deploy-methods.md
-    - name: 작업자 및 UDF 이진 파일 배포
-      href: how-to-guides/deploy-worker-udf-binaries.md
-    - name: Ubuntu에서 애플리케이션 빌드
-      href: how-to-guides/ubuntu-instructions.md
-    - name: Windows에서 애플리케이션 빌드
-      href: how-to-guides/windows-instructions.md
     - name: Azure HDInsight에 대화형 Notebook 설치
       href: how-to-guides/hdinsight-notebook-installation.md
 - name: 참고
@@ -53,7 +75,7 @@
   items:
     - name: 리소스 개요
       href: resources/index.md
-    - name: GitHub
+    - name: .NET for Apache Spark GitHub
       href: 'https://github.com/dotnet/spark'
-    - name: 스택 오버플로
+    - name: Stack Overflow
       href: 'https://stackoverflow.com/questions/tagged/.net-spark'
