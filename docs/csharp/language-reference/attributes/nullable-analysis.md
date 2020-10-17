@@ -2,18 +2,18 @@
 title: 'C# 예약된 특성: null 허용 정적 분석'
 ms.date: 04/14/2020
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656312"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955605"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
 null 허용 컨텍스트에서 컴파일러는 코드의 정적 분석을 수행하여 모든 참조 형식 변수의 null 상태를 확인합니다.
 
-- ‘null이 아님’:  정적 분석에서 변수에 null이 아닌 값이 할당된 것으로 확인되었습니다.
+- ‘null이 아님’: 정적 분석을 통해 변수에 null이 아닌 값이 할당되었는지 확인합니다.
 - ‘null일 수 있음’:  정적 분석에서 변수에 null이 아닌 값이 할당되었는지 확인할 수 없습니다.
 
 API의 의미 체계에 대한 정보를 컴파일러에 제공하는 다양한 특성을 적용할 수 있습니다. 이 정보는 컴파일러에서 정적 분석을 수행하고 변수가 null이 아닌 경우를 확인하는 데 도움이 됩니다. 이 문서에서는 각 특성 및 사용 방법에 대해 간단하게 설명합니다. 모든 예제에서는 C# 8.0 이상을 사용한다고 가정하며 코드는 null 허용 컨텍스트에 있습니다.

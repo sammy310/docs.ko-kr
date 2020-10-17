@@ -2,12 +2,12 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654909"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955169"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
@@ -232,7 +232,7 @@ C# 9.0부터 [람다](../language-reference/operators/lambda-expressions.md) 식
 
 다음으로, 무시 항목을 람다 식에 대한 매개 변수로 사용할 수 있습니다. 이 편리한 기능을 사용하면 인수 이름을 지정할 필요가 없으며, 컴파일러에서 인수를 사용하지 않을 수 있습니다. 모든 인수에 `_`을 사용합니다. 자세한 내용은 [람다 식](../language-reference/operators/lambda-expressions.md) 문서의 [람다 식 입력 매개 변수](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) 섹션을 참조하세요.
 
-마지막으로, 이제 로컬 함수에 특성을 적용할 수 있습니다. 예를 들어 로컬 함수에 null 허용 특성 주석을 적용할 수 있습니다.
+마지막으로, 이제 [로컬 함수](../programming-guide/classes-and-structs/local-functions.md)에 특성을 적용할 수 있습니다. 예를 들어 로컬 함수에 [null 허용 특성 주석](../language-reference/attributes/nullable-analysis.md)을 적용할 수 있습니다.
 
 ## <a name="support-for-code-generators"></a>코드 생성기 지원
 

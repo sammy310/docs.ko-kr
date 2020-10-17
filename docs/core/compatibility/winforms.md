@@ -2,12 +2,12 @@
 title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core 및 .NET 5용 Windows Forms의 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679004"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804865"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [DataGridView에서 더 이상 사용자 지정 셀 스타일의 글꼴을 다시 설정하지 않음](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView 관련 API가 이제 InvalidOperationException을 throw함](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms 및 WPF 앱이 Microsoft.NET.Sdk를 사용함](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 | [UseLegacyImages 호환성 스위치가 지원되지 않음](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 

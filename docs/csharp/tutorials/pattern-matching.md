@@ -1,19 +1,19 @@
 ---
 title: '자습서: 패턴 일치를 사용하여 알고리즘 빌드'
 description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 개별적으로 생성된 데이터 및 알고리즘을 사용하여 기능을 만드는 방법을 보여 줍니다.
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437990"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955631"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>자습서: 패턴 일치를 사용하여 형식 기반 및 데이터 기반 알고리즘 빌드
 
-C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 새로운 식과 패턴을 포함하여 C# 8에서 확장됩니다. 다른 라이브러리에 있을 수 있는 형식을 확장한 것처럼 동작하는 기능을 작성할 수 있습니다. 패턴의 또 다른 용도는 확장되는 형식의 기초 기능이 아닌 애플리케이션에 필요한 기능을 만드는 것입니다.
+C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 새로운 식과 패턴을 포함하여 C# 8 및 C# 9에서 기능을 확장했습니다. 다른 라이브러리에 있을 수 있는 형식을 확장한 것처럼 동작하는 기능을 작성할 수 있습니다. 패턴의 또 다른 용도는 확장되는 형식의 기초 기능이 아닌 애플리케이션에 필요한 기능을 만드는 것입니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -25,7 +25,7 @@ C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
+C# 9 컴파일러를 포함하는 .NET 5를 실행하도록 머신을 설정해야 합니다. C# 9 컴파일러는 [Visual Studio 2019 버전 16.9 미리 보기 1](https://visualstudio.microsoft.com/vs/preview/) 또는 [.NET 5.0 SDK](https://dot.net/get-dotnet5)부터 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -47,7 +47,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설�
 
 ## <a name="pattern-matching-designs"></a>패턴 일치 디자인
 
-이 자습서에서 사용된 시나리오는 패턴 일치가 해결하기에 적합한 종류의 문제를 중점적으로 살펴봅니다.
+이 자습서에서 사용된 시나리오는 패턴 일치를 통해 해결하기에 적합한 종류의 문제를 중점적으로 다룹니다.
 
 - 사용해야 하는 개체는 목표와 일치하는 개체 계층 구조에 없습니다. 관련 없는 시스템에 포함된 클래스를 사용 중일 수 있습니다.
 - 추가할 기능은 이 클래스에 대한 핵심 추상화에 포함되지 않습니다. 차량에 따른 통행료는 차량 형식에 따라 변경되지만 통행료는 차량의 핵심 기능이 아닙니다.
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ namespace toll_calculator
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-앞의 코드는 스위치 암(arm)의 `when` 절을 표시합니다. `when` 절을 사용하여 속성에서 같음 이외의 조건을 테스트합니다. 완료되면 다음과 같은 메서드가 생성됩니다.
+앞의 코드는 스위치 암(arm)의 `when` 절을 표시합니다. `when` 절을 사용하여 속성에서 같음 이외의 조건을 테스트합니다. 작업을 마치면 다음 코드와 같은 메서드가 생성됩니다.
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ public decimal CalculateToll(object vehicle) =>
 
 ## <a name="add-peak-pricing"></a>최대 가격 추가
 
-마지막 기능을 위해 통행료 징수 기관은 시간에 따른 최대 가격을 추가하려고 합니다. 아침 및 저녁 교통 체증 시간 중에 통행료는 2배로 부과됩니다. 해당 규칙은 아침에는 도시로 들어오고 저녁 교통 체증 시간에는 나가는 한 방향의 교통량에만 영향을 줍니다. 평일 중 다른 시간에 통행료는 50% 증가합니다. 늦은 밤과 이른 아침에는 통행료가 25% 감소합니다. 주말에는 시간과 관계없이 정상 요금입니다.
+마지막 기능을 위해 통행료 징수 기관은 시간에 따른 최대 가격을 추가하려고 합니다. 아침 및 저녁 교통 체증 시간 중에 통행료는 2배로 부과됩니다. 해당 규칙은 아침에는 도시로 들어오고 저녁 교통 체증 시간에는 나가는 한 방향의 교통량에만 영향을 줍니다. 평일 중 다른 시간에 통행료는 50% 증가합니다. 늦은 밤과 이른 아침에는 통행료가 25% 감소합니다. 주말에는 시간과 관계없이 정상 요금입니다. 다음 코드를 사용하여 `if` 및 `else` 문으로 표현하는 경우 계열을 사용할 수 있습니다.
 
-이 기능에 대해 패턴 일치를 사용하지만 패턴 일치를 다른 기술과 통합하게 됩니다. 방향, 요일 및 시간의 모든 조합을 설명하는 단일 패턴 일치 식을 빌드할 수 있습니다. 복잡한 식이 생성됩니다. 읽기 힘들고 이해하기 어려운 식입니다. 따라서 식의 정확성을 보장하기 어렵습니다. 대신, 해당 메서드를 결합하여 모든 상태를 간결하게 설명하는 값 튜플을 빌드합니다. 그런 다음, 패턴 일치를 사용하여 통행료의 승수를 계산합니다. 튜플에는 다음 세 가지 불연속 조건이 포함됩니다.
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+위 코드는 정상적으로 실행되지만 읽을 수 없습니다. 모든 입력 사례와 중첩된 `if` 문을 연결하여 코드에 대해 추론해야 합니다. 이 기능을 위해 패턴 일치를 대신 사용하되, 다른 기술과 통합합니다. 방향, 요일 및 시간의 모든 조합을 설명하는 단일 패턴 일치 식을 빌드할 수 있습니다. 복잡한 식이 생성됩니다. 읽기 힘들고 이해하기 어려운 식입니다. 따라서 식의 정확성을 보장하기 어렵습니다. 대신, 해당 메서드를 결합하여 모든 상태를 간결하게 설명하는 값 튜플을 빌드합니다. 그런 다음, 패턴 일치를 사용하여 통행료의 승수를 계산합니다. 튜플에는 다음 세 가지 불연속 조건이 포함됩니다.
 
 - 요일은 주중 또는 주말입니다.
 - 통행료가 징수되는 시간대.
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-해당 메서드는 작동하지만 반복적입니다. 다음 코드와 같이 단순화할 수 있습니다.
+해당 메서드는 올바른 것이지만 반복적입니다. 다음 코드와 같이 단순화할 수 있습니다.
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-이전 메서드는 패턴 일치를 사용하지 않습니다. `if` 문의 친숙한 계단식 배열을 사용하는 것이 더 이해하기 쉽습니다. 개인 `enum`을 추가하여 각 시간 범위를 불연속 값으로 변환합니다.
+프라이빗 `enum`을 추가하여 각 시간 범위를 불연속 값으로 변환합니다. 그러면 `GetTimeBand` 메서드는 ‘관계형 패턴’ 및 ‘or 결합 패턴’을 사용합니다. 두 패턴은 모두 C# 9.0에서 추가된 것입니다.  관계형 패턴을 사용하면 `<`, `>`, `<=` 또는 `>=`로 숫자 값을 테스트할 수 있습니다. `or` 패턴은 식이 하나 이상의 패턴과 일치하는지 테스트합니다. `and` 패턴을 사용하여 식이 두 개의 고유한 패턴과 일치하는지 확인하고, `not` 패턴을 사용하여 식이 패턴과 일치하지 않는지 테스트할 수도 있습니다.
 
 이 메서드를 만든 후 **튜플 패턴**과 함께 다른 `switch` 식을 사용하여 할증 가격을 계산할 수 있습니다. 모든 16개 암(arm)을 사용하여 `switch` 식을 작성할 수 있습니다.
 

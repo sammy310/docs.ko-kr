@@ -3,12 +3,12 @@ title: 플랫폼 호환성 분석기
 description: 플랫폼 간 앱 및 라이브러리에서 플랫폼 호환성 문제를 감지하는 데 도움이 되는 Roslyn 분석기입니다.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406590"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805300"
 ---
 # <a name="platform-compatibility-analyzer"></a>플랫폼 호환성 분석기
 
@@ -25,7 +25,7 @@ ms.locfileid: "91406590"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-플랫폼 호환성 분석기는 Roslyn 코드 품질 분석기 중 하나입니다. .NET 5.0부터 이러한 분석기는 [.NET SDK](../../fundamentals/productivity/code-analysis.md)에 포함되어 있습니다. 플랫폼 호환성 분석기는 `net5.0` 이상 버전을 대상으로 하는 프로젝트에서만 기본으로 사용됩니다. 그러나 다른 프레임워크를 대상으로 하는 프로젝트에도 [사용](/visualstudio/code-quality/ca1416.md#configurability)할 수 있습니다.
+플랫폼 호환성 분석기는 Roslyn 코드 품질 분석기 중 하나입니다. .NET 5.0부터 이러한 분석기는 [.NET SDK](../../fundamentals/code-analysis/overview.md)에 포함되어 있습니다. 플랫폼 호환성 분석기는 `net5.0` 이상 버전을 대상으로 하는 프로젝트에서만 기본으로 사용됩니다. 그러나 다른 프레임워크를 대상으로 하는 프로젝트에도 [사용](/visualstudio/code-quality/ca1416.md#configurability)할 수 있습니다.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>분석기에서 플랫폼 종속성을 확인하는 방법
 
@@ -70,7 +70,7 @@ ms.locfileid: "91406590"
     ```
 
   - **미지원 목록**. 각 OS 플랫폼의 가장 낮은 버전이 `[UnsupportedOSPlatform]` 특성인 경우 API는 나열된 플랫폼에서만 지원되지 않고 다른 모든 플랫폼에서는 지원되는 것으로 간주됩니다. 이 목록에는 동일한 플랫폼의 상위 버전에 `[SupportedOSPlatform]` 특성이 지정될 수 있습니다. 이는 해당 버전부터 API가 지원됨을 나타냅니다.
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -79,16 +79,16 @@ ms.locfileid: "91406590"
     public void ApiSupportedFromWindows8UnsupportFromWindows10();
     ```
 
-  - **불일치 목록**. 일부 플랫폼의 가장 낮은 버전이 `[SupportedOSPlatform]`이고 다른 플랫폼에 대해서 `[UnsupportedOSPlatform]`인 경우 불일치로 간주됩니다(분석기에 대해 지원되지 않음).
+  - **불일치 목록**. 일부 플랫폼은 가장 낮은 버전이 `[SupportedOSPlatform]`이고 다른 플랫폼은 가장 낮은 버전이 `[UnsupportedOSPlatform]`인 경우 불일치로 간주되며 분석기에서 지원되지 않습니다.
   - `[SupportedOSPlatform]` 및 `[UnsupportedOSPlatform]` 특성의 가장 낮은 버전이 동일한 경우 분석기는 해당 플랫폼을 **지원 목록**의 일부로 간주합니다.
-- 플랫폼 특성은 다양한 플랫폼 이름 및/또는 버전을 사용하는 형식, 멤버(메서드, 필드, 속성 및 이벤트) 및 어셈블리에 적용할 수 있습니다.
+- 다양한 플랫폼 이름 또는 버전과 함께 플랫폼 특성을 형식, 멤버(메서드, 필드, 속성, 이벤트), 어셈블리에 적용할 수 있습니다.
   - 최상위 수준 `target`에서 적용된 특성은 모든 멤버 및 형식에 영향을 미칩니다.
-  - 자식 수준 특성은 "자식 주석은 플랫폼 지원 범위를 축소할 수 있지만 확장할 수 없음" 규칙을 준수하는 경우에만 적용됩니다.
-    - 부모에 **지원** 목록만 지정된 경우 자식 멤버 특성은 새 플랫폼 지원을 추가할 수 없습니다(부모 지원 범위를 확장하기 때문). 새 플랫폼 지원은 부모 자체에만 추가할 수 있습니다. 그러나 동일한 플랫폼의 상위 버전에 `Supported` 특성이 지정될 수 있으며 이 경우 지원 범위가 축소됩니다. 동일한 플랫폼에 `Unsupported` 특성도 지정될 수 있고 이러한 경우에도 부모 지원 범위가 축소됩니다.
-    - 부모에 **미지원** 목록이 지정된 경우 자식 멤버 특성은 새 플랫폼 지원을 추가할 수 있지만(부모 지원 범위를 축소하기 때문), 부모와 동일한 플랫폼에 `Supported` 특성이 지정될 수는 없습니다(부모 지원 범위를 확장하기 때문). 동일한 플랫폼에 대한 지원은 원래 `Unsupported` 특성이 적용된 부모 수준에만 추가할 수 있습니다.
-  - 동일한 `platform` 이름의 API에 `[SupportedOSPlatform("platformVersion")]`를 두 번 이상 적용한 경우 분석기는 최소 버전을 사용하는 API만 고려합니다.
-  - 동일한 `platform` 이름의 API에 `[UnsupportedOSPlatform("platformVersion")]`을 세 번 이상 적용한 경우 분석기는 최소 버전을 사용하는 API 두 개만 고려합니다.
-  
+  - 자식 수준 특성은 “자식 주석이 플랫폼 지원 범위를 좁힐 수만 있고 확장할 수는 없음” 규칙을 준수하는 경우에만 적용됩니다.
+    - 부모에 **지원되는 항목만** 목록이 있는 경우 자식 멤버 특성을 통해 새 플랫폼 지원을 추가할 수 없습니다(부모 지원 범위가 확장됨). 새 플랫폼 지원은 부모 자체에만 추가할 수 있습니다. 그러나 자식은 동일한 플랫폼의 이후 버전에 `Supported` 특성을 사용할 수 있습니다(지원 범위가 축소됨). 자식이 동일한 플랫폼에 `Unsupported` 특성을 사용할 수도 있습니다(이 경우에도 부모 지원 범위가 축소됨).
+    - 부모에 **지원되지 않는 항목만** 목록이 있는 경우 자식 멤버 특성을 통해 새 플랫폼 지원을 추가할 수 있습니다(부모 지원 범위가 축소됨). 그러나 자식은 부모와 동일한 플랫폼에 `Supported` 특성을 사용할 수 없습니다(부모 지원 범위가 확장됨). 동일한 플랫폼에 대한 지원은 원래 `Unsupported` 특성이 적용된 부모에만 추가할 수 있습니다.
+  - 동일한 `platform` 이름을 사용하여 API에 `[SupportedOSPlatform("platformVersion")]`을 두 번 이상 적용한 경우 분석기는 최소 버전을 사용한 항목만 고려합니다.
+  - 동일한 `platform` 이름을 사용하여 API에 `[UnsupportedOSPlatform("platformVersion")]`을 세 번 이상 적용한 경우 분석기는 가장 이전 버전을 사용한 두 항목만 고려합니다.
+
   > [!NOTE]
   > 처음에는 지원되었지만 상위 버전에서 지원되지 않는(제거된) API는 이후 버전에서도 다시 지원되지 않습니다.
 
@@ -123,7 +123,7 @@ ms.locfileid: "91406590"
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ ms.locfileid: "91406590"
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ ms.locfileid: "91406590"
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -169,15 +169,15 @@ ms.locfileid: "91406590"
 
 이러한 진단을 처리하는 권장 방법은 적절한 플랫폼에서 실행되는 경우에만 플랫폼별 API를 호출하는 것입니다. 다음은 경고를 해결하는 데 사용할 수 있는 옵션입니다. 상황에 가장 적합한 것을 선택하세요.
 
-- **호출를 보호합니다**. 런타임에 코드를 조건부로 호출하여 이를 달성할 수 있습니다. 플랫폼 검사 방법 중 하나(예: `OperatingSystem.Is<Platform>()` 또는 `OperatingSystem.Is<Platform>VersionAtLeast(int major, int minor = 0, int build = 0, int revision = 0)`)를 사용하여 원하는 `Platform`에서 실행하고 있는지 확인합니다.
+- **호출를 보호합니다**. 런타임에 코드를 조건부로 호출하여 이를 달성할 수 있습니다. 플랫폼 확인 방법 중 하나(예: `OperatingSystem.Is<Platform>()` 또는 `OperatingSystem.Is<Platform>VersionAtLeast(int major, int minor = 0, int build = 0, int revision = 0)`)를 사용하여 원하는 `Platform`에서 실행하고 있는지 확인합니다.
 
 - **호출 사이트를 플랫폼별로 표시합니다**. 사용자 고유의 API를 플랫폼별로 표시하여 요구 사항을 효과적으로 호출자에게 전달할 수도 있습니다. 참조되는 플랫폼 종속 호출과 동일한 특성을 사용하여 포함하는 메서드나 형식 또는 전체 어셈블리를 표시합니다. [예제](#mark-call-site-as-platform-specific).
 
 - **플랫폼 검사를 사용하여 호출 사이트를 어설션합니다**. 런타임에 추가 `if` 문의 오버헤드를 원친 않는 경우 대신 <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType>를 사용합니다. [예제](#assert-the-call-site-with-platform-check).
 
-- **코드를 삭제합니다**. Windows 사용자가 코드를 사용할 때 충실도가 상실되다는 의미이므로 일반적으로 개발자가 원하는 옵션은 아닙니다. 플랫폼 간 대안이 있는 경우 플랫폼별 API를 통해 사용하는 것이 더 좋을 수 있습니다.
+- **코드를 삭제합니다**. Windows 사용자가 코드를 사용할 때 충실도가 상실되다는 의미이므로 일반적으로 개발자가 원하는 옵션은 아닙니다. 플랫폼 간 대안이 있는 경우 플랫폼별 API보다 대안을 사용하는 것이 좋습니다.
 
-- **경고를 표시하지 않습니다**. editor.config 또는 `#pragma warning disable ca1416`를 통해 경고를 표시하지 않을 수도 있습니다. 그러나 플랫폼별 API를 사용하는 경우 이 옵션은 마지막 수단이어야 합니다.
+- **경고를 표시하지 않습니다**. EditorConfig 항목 또는 `#pragma warning disable ca1416`을 통해 경고를 표시하지 않을 수도 있습니다. 그러나 플랫폼별 API를 사용하는 경우 이 옵션은 마지막 수단이어야 합니다.
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>가드 메서드를 사용하여 플랫폼별 API를 보호
 
@@ -231,7 +231,7 @@ ms.locfileid: "91406590"
   }
   ```
 
-- 새 <xref:System.OperatingSystem> API를 사용할 수 없는 netstandard.또는 netcoreapp을 대상으로 하는 코드를 보호해야 하는 경우 <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API를 사용할 수 있으며 분석기에서 이 API가 적용합니다. 하지만 <xref:System.OperatingSystem>에 추가된 새 API만큼 최적화되지는 않았습니다. <xref:System.Runtime.InteropServices.OSPlatform> 구조체에서 플랫폼이 지원되지 않는 경우 <xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType>("platform")을 사용할 수 있습니다(분석기에서도 적용됨).
+- 새 <xref:System.OperatingSystem> API를 사용할 수 없는 `netstandard` 또는 `netcoreapp`을 대상으로 하는 코드를 보호해야 하는 경우 <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API를 사용할 수 있으며 분석기에 반영됩니다. 하지만 <xref:System.OperatingSystem>에 추가된 새 API만큼 최적화되지는 않았습니다. <xref:System.Runtime.InteropServices.OSPlatform> 구조체에서 플랫폼이 지원되지 않는 경우 <xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType>을 호출하고 플랫폼 이름을 전달할 수 있습니다(이 경우에도 분석기에 반영됨).
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ ms.locfileid: "91406590"
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -381,5 +381,5 @@ ms.locfileid: "91406590"
 - [.NET 5의 대상 프레임워크 이름](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [API에 플랫폼별 주석 달기 및 사용 검색](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [API에 특정 플랫폼에서 지원되지 않음 주석 달기](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [CA1416 플랫폼 호환성 분석기](/visualstudio/code-quality/ca1416)
+- [CA1416 플랫폼 호환성 분석기](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API 분석기](../../standard/analyzers/api-analyzer.md)

@@ -133,7 +133,7 @@ items:
             href: ../core/tutorials/index.md
   - name: 새로운 기능
     items:
-      - name: .NET Core에서 .NET 5로의 진화
+      - name: .NET 5의 새로운 기능
         href: ../core/dotnet-five.md
       - name: .NET Core 3.1의 새로운 기능
         href: ../core/whats-new/dotnet-core-3-1.md
@@ -155,6 +155,12 @@ items:
             href: ../core/sdk.md
           - name: 오류 메시지
             items:
+              - name: NETSDK1005 및 NETSDK1047
+                href: ../core/tools/sdk-errors/netsdk1005.md
+              - name: NETSDK1059
+                href: ../core/tools/sdk-errors/netsdk1059.md
+              - name: NETSDK1073
+                href: ../core/tools/sdk-errors/netsdk1073.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
@@ -199,6 +205,8 @@ items:
                     href: ../core/tools/dotnet-nuget-remove-source.md
                   - name: dotnet nuget update source
                     href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet nuget verify
+                    href: ../core/tools/dotnet-nuget-verify.md
               - name: dotnet pack
                 href: ../core/tools/dotnet-pack.md
               - name: dotnet publish
@@ -954,7 +962,9 @@ items:
                         href: code-analysis/style-rules/language-rules.md
                       - name: this 및 Me 기본 설정
                         items:
-                          - name: IDE0003 및 IDE0009
+                          - name: IDE0003
+                            href: code-analysis/style-rules/ide0003-ide0009.md
+                          - name: IDE0009
                             href: code-analysis/style-rules/ide0003-ide0009.md
                       - name: 형식의 언어 키워드 사용
                         items:
@@ -972,6 +982,8 @@ items:
                             href: code-analysis/style-rules/ide0044.md
                           - name: IDE0062
                             href: code-analysis/style-rules/ide0062.md
+                          - name: IDE0064
+                            href: code-analysis/style-rules/ide0064.md
                       - name: 괄호 기본 설정
                         items:
                           - name: IDE0047 및 IDE0048
@@ -980,6 +992,8 @@ items:
                         items:
                           - name: 개요
                             href: code-analysis/style-rules/expression-level-preferences.md
+                          - name: IDE0010
+                            href: code-analysis/style-rules/ide0010.md
                           - name: IDE0017
                             href: code-analysis/style-rules/ide0017.md
                           - name: IDE0018
@@ -1000,16 +1014,28 @@ items:
                             href: code-analysis/style-rules/ide0045.md
                           - name: IDE0046
                             href: code-analysis/style-rules/ide0046.md
+                          - name: IDE0050
+                            href: code-analysis/style-rules/ide0050.md
                           - name: IDE0054
-                            href: code-analysis/style-rules/ide0054.md
+                            href: code-analysis/style-rules/ide0054-ide0074.md
                           - name: IDE0056
                             href: code-analysis/style-rules/ide0056.md
                           - name: IDE0057
                             href: code-analysis/style-rules/ide0057.md
-                          - name: IDE0058
-                            href: code-analysis/style-rules/ide0058.md
-                          - name: IDE0059
-                            href: code-analysis/style-rules/ide0059.md
+                          - name: IDE0070
+                            href: code-analysis/style-rules/ide0070.md
+                          - name: IDE0071
+                            href: code-analysis/style-rules/ide0071.md
+                          - name: IDE0072
+                            href: code-analysis/style-rules/ide0072.md
+                          - name: IDE0074
+                            href: code-analysis/style-rules/ide0054-ide0074.md
+                          - name: IDE0075
+                            href: code-analysis/style-rules/ide0075.md
+                          - name: IDE0082
+                            href: code-analysis/style-rules/ide0082.md
+                          - name: IDE0090
+                            href: code-analysis/style-rules/ide0090.md
                       - name: Null 검사 기본 설정
                         items:
                           - name: 개요
@@ -1017,20 +1043,20 @@ items:
                           - name: IDE0016
                             href: code-analysis/style-rules/ide0016.md
                           - name: IDE0029
-                            href: code-analysis/style-rules/ide0029.md
+                            href: code-analysis/style-rules/ide0029-ide0030.md
+                          - name: IDE0030
+                            href: code-analysis/style-rules/ide0029-ide0030.md
                           - name: IDE0031
                             href: code-analysis/style-rules/ide0031.md
                           - name: IDE0041
                             href: code-analysis/style-rules/ide0041.md
                           - name: IDE1005
                             href: code-analysis/style-rules/ide1005.md
-                      - name: 매개 변수 기본 설정
-                        items:
-                          - name: IDE0060
-                            href: code-analysis/style-rules/ide0060.md
                       - name: var 기본 설정
                         items:
-                          - name: IDE0007 및 IDE0008
+                          - name: IDE0007
+                            href: code-analysis/style-rules/ide0007-ide0008.md
+                          - name: IDE0008
                             href: code-analysis/style-rules/ide0007-ide0008.md
                       - name: 식 본문 멤버
                         items:
@@ -1040,7 +1066,9 @@ items:
                             href: code-analysis/style-rules/ide0021.md
                           - name: IDE0022
                             href: code-analysis/style-rules/ide0022.md
-                          - name: IDE0023 및 IDE0024
+                          - name: IDE0023
+                            href: code-analysis/style-rules/ide0023-ide0024.md
+                          - name: IDE0024
                             href: code-analysis/style-rules/ide0023-ide0024.md
                           - name: IDE0025
                             href: code-analysis/style-rules/ide0025.md
@@ -1059,9 +1087,17 @@ items:
                           - name: IDE0019
                             href: code-analysis/style-rules/ide0019.md
                           - name: IDE0020
-                            href: code-analysis/style-rules/ide0020.md
+                            href: code-analysis/style-rules/ide0020-ide0038.md
+                          - name: IDE0038
+                            href: code-analysis/style-rules/ide0020-ide0038.md
                           - name: IDE0066
                             href: code-analysis/style-rules/ide0066.md
+                          - name: IDE0078
+                            href: code-analysis/style-rules/ide0078.md
+                          - name: IDE0083
+                            href: code-analysis/style-rules/ide0083.md
+                          - name: IDE0084
+                            href: code-analysis/style-rules/ide0084.md
                       - name: 코드 블록 기본 설정
                         items:
                           - name: 개요
@@ -1074,6 +1110,48 @@ items:
                         items:
                           - name: IDE0065
                             href: code-analysis/style-rules/ide0065.md
+                      - name: 파일 헤더 기본 설정
+                        items:
+                          - name: IDE0073
+                            href: code-analysis/style-rules/ide0073.md
+                  - name: 불필요한 코드 규칙
+                    items:
+                      - name: 개요
+                        href: code-analysis/style-rules/unnecessary-code-rules.md
+                      - name: IDE0001
+                        href: code-analysis/style-rules/ide0001.md
+                      - name: IDE0002
+                        href: code-analysis/style-rules/ide0002.md
+                      - name: IDE0004
+                        href: code-analysis/style-rules/ide0004.md
+                      - name: IDE0005
+                        href: code-analysis/style-rules/ide0005.md
+                      - name: IDE0035
+                        href: code-analysis/style-rules/ide0035.md
+                      - name: IDE0051
+                        href: code-analysis/style-rules/ide0051.md
+                      - name: IDE0052
+                        href: code-analysis/style-rules/ide0052.md
+                      - name: IDE0058
+                        href: code-analysis/style-rules/ide0058.md
+                      - name: IDE0059
+                        href: code-analysis/style-rules/ide0059.md
+                      - name: IDE0060
+                        href: code-analysis/style-rules/ide0060.md
+                      - name: IDE0079
+                        href: code-analysis/style-rules/ide0079.md
+                      - name: IDE0080
+                        href: code-analysis/style-rules/ide0080.md
+                      - name: IDE0081
+                        href: code-analysis/style-rules/ide0081.md
+                      - name: IDE0100
+                        href: code-analysis/style-rules/ide0100.md
+                  - name: 기타 규칙
+                    items:
+                      - name: IDE0076
+                        href: code-analysis/style-rules/ide0076.md
+                      - name: IDE0077
+                        href: code-analysis/style-rules/ide0077.md
                   - name: 서식 지정 규칙
                     items:
                       - name: 개요
@@ -1425,44 +1503,42 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: 익명 형식과 튜플 형식 중에서 선택
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-  - name: Microsoft 확장명
+  - name: 종속성 주입
     items:
-      - name: Configuration
-        items:
-          - name: 개요
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: 구성 공급자
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: 사용자 지정 구성 공급자 구현
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: 종속성 주입
-        items:
-          - name: 개요
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: 종속성 주입 사용
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: 종속성 주입 지침
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: 일반 호스트
-        href: ../core/extensions/generic-host.md
-      - name: 로깅
-        items:
-          - name: 개요
-            href: ../core/extensions/logging.md
-          - name: 로깅 공급자
-            href: ../core/extensions/logging-providers.md
-          - name: 사용자 지정 로깅 공급자 구현
-            href: ../core/extensions/custom-logging-provider.md
-          - name: 고성능 로깅
-            href: ../core/extensions/high-performance-logging.md
+      - name: 개요
+        href: ../core/extensions/dependency-injection.md
+        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+      - name: 종속성 주입 사용
+        href: ../core/extensions/dependency-injection-usage.md
+        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+      - name: 종속성 주입 지침
+        href: ../core/extensions/dependency-injection-guidelines.md
+        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+  - name: Configuration
+    items:
+      - name: 개요
+        href: ../core/extensions/configuration.md
+        displayName: 'configuration,config,configuration sources,config sources'
+      - name: 구성 공급자
+        href: ../core/extensions/configuration-providers.md
+        displayName: 'configuration providers,config providers'
+      - name: 사용자 지정 구성 공급자 구현
+        href: ../core/extensions/custom-configuration-provider.md
+        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: 옵션 패턴
         href: ../core/extensions/options.md
+  - name: 로깅
+    items:
+      - name: 개요
+        href: ../core/extensions/logging.md
+      - name: 로깅 공급자
+        href: ../core/extensions/logging-providers.md
+      - name: 사용자 지정 로깅 공급자 구현
+        href: ../core/extensions/custom-logging-provider.md
+      - name: 고성능 로깅
+        href: ../core/extensions/high-performance-logging.md
+  - name: HostBuilder(제네릭 호스트)
+    href: ../core/extensions/generic-host.md
   - name: 데이터 액세스
     items:
       - name: LINQ
@@ -1471,6 +1547,77 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
+  - name: 파일 및 스트림 I/O
+    items:
+      - name: 개요
+        href: ../standard/io/index.md
+      - name: Windows 시스템의 파일 경로 형식
+        href: ../standard/io/file-path-formats.md
+      - name: 공통적인 I/O 작업
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: '방법: 디렉터리 복사'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: '방법: 디렉터리 및 파일 열거'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: '방법: 새로 만든 데이터 파일 읽기 및 쓰기'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: '방법: 로그 파일 열기 및 추가'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: '방법: 파일에 텍스트 쓰기'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: '방법: 파일에서 텍스트 읽기'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: '방법: 문자열에서 문자 읽기'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: '방법: 문자열에 문자 쓰기'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: '방법: 액세스 제어 목록 항목 추가 또는 제거'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: '방법: 파일 압축 및 추출'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: 스트림 작성
+            href: ../standard/io/composing-streams.md
+          - name: '방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: 비동기 파일 I/O
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: I/O 오류 처리
+        href: ../standard/io/handling-io-errors.md
+      - name: 격리된 스토리지
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: 격리 유형
+            href: ../standard/io/types-of-isolation.md
+          - name: '방법: 격리된 스토리지의 저장소 가져오기'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 저장소 열거'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: '방법: 격리된 스토리지에서 저장소 삭제'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 공간 부족 상태 예상'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 만들기'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 읽기 및 쓰기'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 삭제'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: 파이프
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: '방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: 파이프라인
+        href: ../standard/io/pipelines.md
+      - name: 버퍼 작업
+        href: ../standard/io/buffers.md
+      - name: 메모리 매핑된 파일
+        href: ../standard/io/memory-mapped-files.md
   - name: '병렬 처리, 동시성 및 비동기'
     items:
       - name: 개요
@@ -1720,77 +1867,6 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: XML 스키마 정의 도구(Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: 파일 및 스트림 I/O
-    items:
-      - name: 개요
-        href: ../standard/io/index.md
-      - name: Windows 시스템의 파일 경로 형식
-        href: ../standard/io/file-path-formats.md
-      - name: 공통적인 I/O 작업
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: '방법: 디렉터리 복사'
-            href: ../standard/io/how-to-copy-directories.md
-          - name: '방법: 디렉터리 및 파일 열거'
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: '방법: 새로 만든 데이터 파일 읽기 및 쓰기'
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: '방법: 로그 파일 열기 및 추가'
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: '방법: 파일에 텍스트 쓰기'
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: '방법: 파일에서 텍스트 읽기'
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: '방법: 문자열에서 문자 읽기'
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: '방법: 문자열에 문자 쓰기'
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: '방법: 액세스 제어 목록 항목 추가 또는 제거'
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: '방법: 파일 압축 및 추출'
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: 스트림 작성
-            href: ../standard/io/composing-streams.md
-          - name: '방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환'
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: 비동기 파일 I/O
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: I/O 오류 처리
-        href: ../standard/io/handling-io-errors.md
-      - name: 격리된 스토리지
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: 격리 유형
-            href: ../standard/io/types-of-isolation.md
-          - name: '방법: 격리된 스토리지의 저장소 가져오기'
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 저장소 열거'
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: '방법: 격리된 스토리지에서 저장소 삭제'
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 공간 부족 상태 예상'
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 만들기'
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기'
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 파일 읽기 및 쓰기'
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: '방법: 격리된 스토리지의 파일 및 디렉터리 삭제'
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: 파이프
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: '방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용'
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: 파이프라인
-        href: ../standard/io/pipelines.md
-      - name: 버퍼 작업
-        href: ../standard/io/buffers.md
-      - name: 메모리 매핑된 파일
-        href: ../standard/io/memory-mapped-files.md
   - name: 단위 테스트
     displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
     items:
@@ -2086,5 +2162,5 @@ items:
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: 포트 C++/CLI 프로젝트
             href: ../core/porting/cpp-cli.md
-      - name: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
+      - name: 서버 앱에 대해 .NET 5와 .NET Framework 중에서 선택
         href: ../standard/choosing-core-framework-server.md

@@ -3,12 +3,12 @@ title: 구문 분석 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240521"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756158"
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -51,7 +51,7 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 
 구문 트리의 네 가지 기본 구성 요소는 다음과 같습니다.
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 클래스는 전체 구문 분석 트리를 나타내는 인스턴스입니다. <xref:Microsoft.CodeAnalysis.SyntaxTree>은 언어별 파생물을 포함하는 추상 클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>(또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) 클래스의 구문 분석 메서드를 사용하여 C# 또는 Visual Basic 텍스트를 구문 분석합니다.
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 클래스는 전체 구문 분석 트리를 나타내는 인스턴스입니다. <xref:Microsoft.CodeAnalysis.SyntaxTree>은 언어별 파생물을 포함하는 추상 클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>(또는 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) 클래스의 구문 분석 메서드를 사용하여 C#(또는 Visual Basic)에서 텍스트를 구문 분석합니다.
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 클래스는 선언, 명령문, 절 및 식과 같은 구문 구조를 나타내는 인스턴스입니다.
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 구조는 개별 키워드, 식별자, 연산자 또는 문장 부호를 나타냅니다.
 * 마지막으로 <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 구조는 토큰 간의 공백, 전처리 지시문 및 주석 등의 구문상으로 중요하지 않은 정보를 나타냅니다.

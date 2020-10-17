@@ -1,41 +1,61 @@
 ---
-title: .NET 시작
-description: .NET을 시작하는 데 필요한 다양한 문서를 언어 및 플랫폼 측면에서 나열합니다.
-author: cartermp
-ms.date: 01/21/2020
+title: .NET 시작 자습서
+description: .NET 앱 개발 또는 .NET 프로그래밍 언어 중 하나를 학습하기 위한 자습서를 선택합니다.
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438173"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755878"
 ---
-# <a name="get-started"></a>시작
+# <a name="tutorials-for-getting-started-with-net"></a>.NET 시작 자습서
 
-.NET을 시작하는 방법에는 여러 가지가 있습니다. .NET은 광범위한 플랫폼이므로 이 설명서에는 여러 관점에서 각각 .NET을 시작하는 데 도움이 되는 여러 문서가 있습니다.
+다음 단계별 자습서는 Windows, Linux 또는 macOS에서 실행됩니다(별도로 명시된 경우 제외).
 
-## <a name="get-started-using-net-languages"></a>.NET 언어를 사용하여 시작
+## <a name="tutorials-for-creating-apps"></a>앱을 만들기 위한 자습서
 
-C#, Visual Basic 및 F#의 시작 자습서는 다음을 참조하세요.
+* 콘솔 앱 만들기
+  * [Visual Studio Code 사용](../core/tutorials/with-visual-studio-code.md)
+  * [Visual Studio 사용](../core/tutorials/with-visual-studio.md)(Windows)
+  * [Mac용 Visual Studio 사용](../core/tutorials/with-visual-studio-mac.md)(macOS)
+* 웹앱 만들기
+  * [서버 쪽 웹 UI 사용](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [클라이언트 쪽 웹 UI 사용](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [Web API 만들기](/aspnet/core/tutorials/first-web-api)
+* [원격 프로시저 호출 웹앱 만들기](/aspnet/core/tutorials/grpc/grpc-start)
+* [실시간 웹앱 만들기](/aspnet/core/tutorials/signalr)
+* [클라우드에 서버리스 함수 만들기](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* [Android 및 iOS용 모바일 앱 만들기](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro)(Windows)
+* Windows 데스크톱 앱 만들기
+  * [WPF](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [Windows Forms](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [UWP(유니버설 Windows 플랫폼)](/visualstudio/get-started/csharp/tutorial-uwp)
+* [Unity를 사용하여 게임 만들기](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Windows 서비스 만들기](/aspnet/core/host-and-deploy/windows-service)
 
-* [C#으로 시작](../csharp/getting-started/index.md)
-* [C# 자습서](../csharp/tutorials/index.md)
-* [F# 시작 자습서](../fsharp/get-started/index.md)
-* [Visual Basic에서 시작](../visual-basic/getting-started/index.md)
+## <a name="tutorials-for-creating-class-libraries"></a>클래스 라이브러리를 만들기 위한 자습서
 
-## <a name="get-started-using-net-core"></a>.NET Core를 사용하여 시작
+* 클래스 라이브러리 만들기
+  * [Visual Studio Code 사용](../core/tutorials/library-with-visual-studio-code.md)
+  * [Visual Studio 사용](../core/tutorials/library-with-visual-studio.md)(Windows)
+  * [Mac용 Visual Studio 사용](../core/tutorials/library-with-visual-studio-mac.md)(macOS)
 
-.NET Core 관련 지침은 다음을 참조하세요.
+## <a name="resources-for-learning-net-languages"></a>.NET 언어 학습용 리소스
 
-* [.NET Core 시작](../core/get-started.md)
-* [.NET Core 자습서](../core/tutorials/index.md)
+* [C# 시작](../csharp/getting-started/index.md)
+* [F# 시작](../fsharp/get-started/index.md)
+* [Visual Basic 시작](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-standard"></a>.NET Standard를 사용하여 시작
+## <a name="other-get-started-resources"></a>기타 시작하기 리소스
 
-소개 자습서는 [Visual Studio에서 .NET Standard 라이브러리 빌드](../core/tutorials/library-with-visual-studio.md)를 참조하세요.
+다음 리소스는 .NET 앱 개발을 시작하는 데 사용되는, 단계별 자습서 이외의 리소스입니다.
 
-## <a name="get-started-using-net-core-on-docker"></a>Docker에서 .NET Core를 사용하여 시작
+* [IoT(사물 인터넷)](https://dotnet.microsoft.com/apps/iot)
+* [기계 학습](../machine-learning/index.yml)
 
-[.NET 및 Docker 소개](../core/docker/introduction.md)에서는 Windows Docker 컨테이너에서 .NET Core를 사용하는 방법을 보여줍니다.
+## <a name="next-steps"></a>다음 단계
+
+.NET에 대한 자세한 내용은 [.NET 소개](../core/introduction.md)를 참조하세요.

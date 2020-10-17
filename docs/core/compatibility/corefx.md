@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/27/2020
-ms.openlocfilehash: c3207ac7630d794f77c793cc6d1d52e158c0c084
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738825"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955562"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,8 @@ ms.locfileid: "90738825"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [단일 파일 게시 형식에 대한 어셈블리 관련 API 동작 변경](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
+| [Activity.Tags의 태그 순서가 반대로 표시됨](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [RC1에서 매개 변수 이름이 변경됨](#parameter-names-changed-in-rc1) | 5.0 |
 | [OSPlatform 특성이 제거되었거나 특성 이름이 바뀜](#osplatform-attributes-renamed-or-removed) | 5.0 |
 | [Thread.Abort는 사용되지 않음](#threadabort-is-obsolete) | 5.0 |
@@ -55,6 +57,14 @@ ms.locfileid: "90738825"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
+
+[!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
 

@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 nullable 참조 형식을 소개합�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249131"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805182"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
@@ -221,3 +221,6 @@ nullable 참조 형식과 nullable이 아닌 참조 형식 간에 형식 선언�
 nullable 참조 형식을 사용할 수 있도록 기존 애플리케이션을 마이그레이션하여 자세히 알아보세요.
 > [!div class="nextstepaction"]
 > [자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션](upgrade-to-nullable-references.md)
+
+Entity Framework를 사용할 때 nullable 참조 형식을 사용하는 방법을 알아봅니다.
+> [Entity Framework Core 기본 사항: nullable 참조 형식 사용](/ef/core/miscellaneous/nullable-reference-types)

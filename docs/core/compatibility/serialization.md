@@ -2,12 +2,12 @@
 title: Serialization 관련 호환성이 손상되는 변경
 description: .NET Core 및 .NET 5.0 이상에서 serialization 범주의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/30/2020
-ms.openlocfilehash: f635ff2cd233922a0bbb327de23c8bf25d344fa0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 65006e6fb45ed2d54699c9972e0489e3ac5ac8bc
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517413"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955340"
 ---
 # <a name="serialization-breaking-changes"></a>Serialization 관련 호환성이 손상되는 변경
 
@@ -15,9 +15,19 @@ ms.locfileid: "87517413"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | - |
+| [형식 매개 변수가 null인 경우 JsonSerializer.Serialize에서 ArgumentNullException을 throw함](#jsonserializerserialize-throws-argumentnullexception-when-type-parameter-is-null) | 5.0 |
+| [JsonSerializer.Deserialize에는 단일 문자열이 필요함](#jsonserializerdeserialize-requires-single-character-string) | 5.0 |
 | [BinaryFormatter.Deserialize가 SerializationException에서 일부 예외를 다시 래핑](#binaryformatterdeserialize-rewraps-some-exceptions-in-serializationexception) | 5.0 |
 
-## <a name="net-core-50"></a>.NET Core 5.0
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [jsonserializer-serialize-throws-argumentnullexception-for-null-type](../../../includes/core-changes/serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md)]
+
+***
+
+[!INCLUDE [deserializing-json-into-char-requires-single-character](../../../includes/core-changes/serialization/5.0/deserializing-json-into-char-requires-single-character.md)]
+
+***
 
 [!INCLUDE [binaryformatter-deserialize-rewraps-exceptions](../../../includes/core-changes/serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md)]
 

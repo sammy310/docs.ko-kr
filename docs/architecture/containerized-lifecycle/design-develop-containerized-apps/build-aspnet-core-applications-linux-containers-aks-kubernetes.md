@@ -2,12 +2,12 @@
 title: AKS/Kubernetes 클러스터에 Linux 컨테이너로 배포된 ASP.NET Core 애플리케이션 빌드
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 ms.date: 08/06/2020
-ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
+ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916455"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91844565"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes 오케스트레이터에 Linux 컨테이너로 배포된 ASP.NET Core 애플리케이션 빌드
 
@@ -148,7 +148,7 @@ services:
     #...
 ```
 
-이제 이미지 4-42에 나와 있는 것처럼 **F5** 키를 누르거나, **Play** 단추 또는 **Ctrl+F5** 키를 사용하고 docker-compose 프로젝트를 선택하여 애플리케이션을 실행할 수 있습니다.
+이제 이미지 4-42에 나와 있는 것처럼 **F5** 키를 누르거나, **재생** 단추 또는 **Ctrl+F5** 키를 사용하고 docker-compose 프로젝트를 선택하여 애플리케이션을 실행할 수 있습니다.
 
 ![Visual Studio를 사용하여 docker-compose 프로젝트 실행](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
 
@@ -198,6 +198,9 @@ ACR([Azure Container Registry](https://azure.microsoft.com/services/container-re
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
+
+> [!NOTE]
+> 컨테이너 레지스트리 이름(예: `exploredocker`)은 Azure 내에서 고유해야 하며, 5~50자의 영숫자를 포함해야 합니다. 자세한 내용은 [컨테이너 레지스트리 만들기](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)를 참조하세요.
 
 ### <a name="create-the-image-in-release-mode"></a>릴리스 모드에서 이미지 만들기
 
@@ -257,7 +260,7 @@ az acr login --name exploredocker
 docker push <login-server-name>/<image-name>:v1
 ```
 
-이 명령은 이미지를 업로드하는 동안 다소 시간이 걸리지만 프로세스와 관련된 피드백을 제공합니다. 다음 이미지에서는 한 이미지는 완료되고 다른 이미지는 진행 중일 때의 출력을 볼 수 있습니다.
+이 명령은 이미지를 업로드하는 동안 다소 시간이 걸리지만 프로세스와 관련된 피드백을 제공합니다. 다음 이미지에서 한 이미지의 출력은 완료되고 다른 이미지의 출력은 진행 중인 것을 확인할 수 있습니다.
 
 ![docker push 명령의 콘솔 출력입니다.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
 

@@ -2,12 +2,12 @@
 title: .NET Core의 EventCounters
 description: 이 문서에서는 EventCounters의 정의, 구현 방법 및 사용 방법에 대해 알아봅니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062966"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955319"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core의 EventCounters
 
@@ -144,6 +144,16 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 
 ```csharp
 public void AddRequest() => Interlocked.Increment(ref _requestCount);
+```
+
+`long` 필드 `_requestCount`의 읽기 중단(32비트 아키텍처)을 방지하려면 <xref:System.Threading.Interlocked.Read%2A?displayProperty=nameWithType>을 사용합니다.
+
+```csharp
+_requestRateCounter = new IncrementingPollingCounter("request-rate", this, () => Interlocked.Read(ref _requestCount))
+{
+    DisplayName = "Request Rate",
+    DisplayRateTimeScale = TimeSpan.FromSeconds(1)
+};
 ```
 
 ## <a name="consume-eventcounters"></a>EventCounters 사용

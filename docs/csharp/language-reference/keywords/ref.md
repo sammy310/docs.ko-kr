@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d2855738c723ba6d2437257793f18349b18629dc
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137086"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877589"
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -100,7 +100,7 @@ return ref DecimalArray[0];
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-호출된 메서드는 `ref readonly`로 반환 값을 선언하여 참조를 통해 값을 반환하고 호출 코드가 반환된 값을 수정할 수 없도록 합니다. 호출 메서드는 로컬 [ref readonly](#ref-readonly-locals) 변수에 값을 저장하여 반환된 값을 복사하지 않도록 할 수 있습니다.
+호출된 메서드는 `ref readonly`로 반환 값을 선언하여 참조를 통해 값을 반환하고 호출 코드가 반환된 값을 수정할 수 없도록 합니다. 호출 메서드는 로컬 [ref readonly](#ref-readonly-locals) 변수에 값을 저장하여 반환된 값이 복사되지 않도록 할 수 있습니다.
 
 예를 들어 [ref 반환 및 ref 지역 예제](#a-ref-returns-and-ref-locals-example)를 참조하세요.
 
