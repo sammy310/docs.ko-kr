@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: b7c4c9c75de1b3777f34a70470b89f323a5699f9
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250377"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162065"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>' @No__t-1interfacename1 > ' 인터페이스의 상속 된 인터페이스 멤버 ' \<defaultpropertyname > ' 및 ' \<interfacename2 > ' 인터페이스의 ' \<defaultpropertyname > ' 간에 기본 속성 액세스가 모호 합니다.
+# <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: 인터페이스 ' ' \<defaultpropertyname> \<interfacename1> 및 ' \<defaultpropertyname> ' 인터페이스의 상속 된 인터페이스 멤버 ' ' 사이에 기본 속성 액세스가 모호 합니다. \<interfacename2>
 
 인터페이스는 두 인터페이스에서 상속 되며, 각 인터페이스는 이름이 같은 기본 속성을 선언 합니다. 컴파일러가 한정자를 사용 하지 않고이 기본 속성에 대 한 액세스를 확인할 수 없습니다. 다음은 이에 대한 예입니다.
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-@No__t-0을 지정 하면 컴파일러는이를 기본 속성으로 확인 하려고 시도 합니다. 그러나 상속 된 인터페이스 때문에 두 가지 기본 속성을 사용할 수 있으므로 컴파일러에서이 오류를 신호로 보냅니다.
+를 지정 하면 `testObj(1)` 컴파일러에서이를 기본 속성으로 확인 하려고 시도 합니다. 그러나 상속 된 인터페이스 때문에 두 가지 기본 속성을 사용할 수 있으므로 컴파일러에서이 오류를 신호로 보냅니다.
 
 **오류 ID:** BC30686
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- 이름이 같은 멤버는 상속 하지 마십시오. 앞의 예제에서 `testObj`에는의 멤버가 필요 하지 않은 경우 (예: `Iface2`) 다음과 같이 선언 합니다.
+- 이름이 같은 멤버는 상속 하지 마십시오. 앞의 예제에서에는 `testObj` 의 멤버가 필요 하지 않은 경우 다음과 `Iface2` 같이 선언 합니다.
 
   ```vb
   Dim testObj As Iface1
@@ -64,6 +64,6 @@ End Class
   End Class
   ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [인터페이스](../../programming-guide/language-features/interfaces/index.md)

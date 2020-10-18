@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: 28d07f01c0fd467cb68d73749988273eee95edf4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0dde340164f1ba80d0e1d9fbb5d17ba6da0a5bc4
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409428"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160056"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>중첩된 함수에 '\<delegatename>' 대리자와 호환되는 시그니처가 없습니다.
+# <a name="bc36532-nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>BC36532: 중첩 된 함수에 ' ' 대리자와 호환 되는 시그니처가 없습니다. \<delegatename>
 
 호환 되지 않는 시그니처가 있는 대리자에 람다 식이 할당 되었습니다. 예를 들어 다음 코드에서 대리자에는 `Del` 두 개의 정수 매개 변수가 있습니다.
 

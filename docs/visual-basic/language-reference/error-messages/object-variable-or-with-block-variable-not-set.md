@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5eff7622ce2a35cf2846c5141cede98ea033d708
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873624"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159887"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
 
-잘못 된 개체 변수를 참조 하 고 있습니다.   여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.
+잘못 된 개체 변수를 참조 하 고 있습니다. 여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.
 
 - 형식을 지정 하지 않고 변수가 선언 되었습니다. 형식을 지정 하지 않고 변수를 선언 하는 경우 기본값은 형식 `Object` 입니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "90873624"
 - `With...End With`블록이 초기화 되기 전에 블록 내의 코드에 액세스 하려고 합니다.   `With...End With`문 진입점을 실행 하 여 블록을 초기화 해야 합니다 `With` .
 
 > [!NOTE]
-> 이전 버전의 Visual Basic 또는 VBA에서이 오류는 `Set` 대신 키워드 ( `x = "name"` 대신)를 사용 하지 않고 변수에 값을 할당 하 여 트리거됩니다 `Set x = "name"` . `Set`Visual Basic .net에서는 더 이상 키워드를 사용할 수 없습니다.
+> 이전 버전의 Visual Basic 또는 VBA에서는 `Set` 키워드 (대신)를 사용 하지 않고 변수에 값을 할당 하 여이 오류를 발생 시켰습니다 `x = "name"` `Set x = "name"` . `Set`Visual Basic .net에서는 더 이상 키워드를 사용할 수 없습니다.
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
@@ -51,7 +51,7 @@ ms.locfileid: "90873624"
 
 5. `With`문 진입점을 실행 하 여 블록이 초기화 되었는지 확인 `With` 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개체 변수 선언](../../programming-guide/language-features/variables/object-variable-declaration.md)
 - [ReDim 문](../statements/redim-statement.md)

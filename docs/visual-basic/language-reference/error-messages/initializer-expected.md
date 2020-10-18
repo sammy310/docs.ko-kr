@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 2c5a65443dc16a600e25fcf6dfd11c4597b3a086
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cbe77bab3e4f8bf2094c70c1c16d95ee897c729e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873946"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163014"
 ---
-# <a name="initializer-expected"></a>이니셜라이저가 필요합니다.
+# <a name="bc30996-initializer-expected"></a>BC30996: 이니셜라이저가 필요 합니다.
 
-다음 예제와 같이 초기화 목록이 비어 있는 개체 이니셜라이저를 사용 하 여 클래스의 인스턴스를 선언 하려고 했습니다.  
-  
- `' Not valid.`  
-  
- `' Dim aStudent As New Student With {}`  
-  
- 다음 예제와 같이 이니셜라이저 목록에서 하나 이상의 필드 또는 속성을 초기화 해야 합니다.  
-  
- `Dim aStudent As New Student With {.year = "Senior"}`  
-  
- **오류 ID:** BC30996  
-  
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
-  
-1. 이니셜라이저에서 하나 이상의 필드 또는 속성을 초기화 하거나 개체 이니셜라이저를 사용 하지 않습니다.  
-  
-## <a name="see-also"></a>참조
+다음 예제와 같이 초기화 목록이 비어 있는 개체 이니셜라이저를 사용 하 여 클래스의 인스턴스를 선언 하려고 했습니다.
+
+ `' Not valid.`
+
+ `' Dim aStudent As New Student With {}`
+
+ 다음 예제와 같이 이니셜라이저 목록에서 하나 이상의 필드 또는 속성을 초기화 해야 합니다.
+
+ `Dim aStudent As New Student With {.year = "Senior"}`
+
+ **오류 ID:** BC30996
+
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면
+
+- 이니셜라이저에서 하나 이상의 필드 또는 속성을 초기화 하거나 개체 이니셜라이저를 사용 하지 않습니다.
+
+## <a name="see-also"></a>참고 항목
 
 - [개체 이니셜라이저: 명명된 형식 및 무명 형식](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [방법: 개체 이니셜라이저를 사용하여 개체 선언](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

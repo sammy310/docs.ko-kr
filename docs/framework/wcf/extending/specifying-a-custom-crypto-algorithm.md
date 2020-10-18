@@ -2,12 +2,12 @@
 title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 673d177a665e265d77f0221e0a00f4b814c8795c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4690071ac148966601a1c0f50edfd5a9fd52fc
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186483"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163235"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
@@ -97,7 +97,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
            <cryptoClasses>  
               <cryptoClass SHA256CSP="System.Security.Cryptography.SHA256CryptoServiceProvider, System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
            </cryptoClasses>  
-           <nameEntry name="http://constoso.com/CustomAlgorithms/CustomHashAlgorithm"  
+           <nameEntry name="http://contoso.com/CustomAlgorithms/CustomHashAlgorithm"  
               class="SHA256CSP" />  
            </cryptoNameMapping>  
         </cryptographySettings>  
@@ -105,14 +105,14 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <`cryptoClasses`> 요소 아래의 섹션은 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다. <`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`간의 매핑을 만듭니다.  
+ <> 요소 아래에 있는 섹션에서는 `cryptoClasses` 은 sha256cryptoserviceprovider와 별칭 "SHA256CSP" 사이에 매핑을 만듭니다. <`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정 된 URL 간 매핑을 만듭니다 `http://contoso.com/CustomAlgorithms/CustomHashAlgorithm` .  
   
  코드로 사용자 지정 알고리즘을 등록하려면 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 메서드를 사용합니다. 이 메서드는 두 매핑을 모두 만듭니다. 다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
   
 ```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the
 // SHA256CryptoServiceProvider hash algorithm object.  
-CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
+CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://contoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
   
 ## <a name="configure-the-binding"></a>바인딩 구성  
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- 전체 코드 예제는 WCF 보안 샘플의 [암호화 민첩성을](../samples/cryptographic-agility-in-wcf-security.md) 참조하십시오.  
+ 전체 코드 예제를 보려면 [WCF 보안 샘플의 암호화 민첩성](../samples/cryptographic-agility-in-wcf-security.md) 을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Securing Services and Clients](../feature-details/securing-services-and-clients.md)
+- [서비스 및 클라이언트에 보안 설정](../feature-details/securing-services-and-clients.md)
 - [서비스에 보안 설정](../securing-services.md)
 - [보안 개요](../feature-details/security-overview.md)
 - [보안 개념](../feature-details/security-concepts.md)
