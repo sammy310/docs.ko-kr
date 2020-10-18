@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 4500a177c7a4729fe5131af1b007fd38e77afe07
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 090ec6f3bbf56350fda2ab15c974b0bc6b15e3d3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397339"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162520"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>액세스 인스턴스가 인터페이스 형식이므로 런타임에 바인딩 오버로드 확인을 '\<procedurename>'에 적용할 수 없습니다.
+# <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>BC30933: 액세스 하는 \<procedurename> 인스턴스가 인터페이스 형식 이므로 런타임에 바인딩 오버 로드 확인을 ' '에 적용할 수 없습니다.
 
 컴파일러가 오버 로드 된 속성 또는 프로시저에 대 한 참조를 확인 하려고 시도 하지만 인수가 형식이 고 참조 하 `Object` 는 개체에 인터페이스의 데이터 형식이 있으므로 참조가 실패 합니다. 인수를 통해 `Object` 컴파일러가 참조를 런타임에 바인딩된 것으로 확인 합니다.
 
@@ -69,5 +69,5 @@ refer.s1(CType(o1, Double))
 ## <a name="see-also"></a>참고 항목
 
 - [프로시저 오버로딩](../../programming-guide/language-features/procedures/procedure-overloading.md)
-- [오버 로드 확인](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [Overload Resolution](../../programming-guide/language-features/procedures/overload-resolution.md)
 - [CType Function](../functions/ctype-function.md)

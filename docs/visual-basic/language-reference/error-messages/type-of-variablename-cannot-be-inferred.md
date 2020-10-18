@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 74b690ce3dee87e481c629a254e629be4b40f8cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1330cbd6567b69df9bd811ced49c6df2e120a0b2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387012"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161211"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>루프 범위와 단계 변수는 같은 형식으로 변환할 수 없으므로 '\<variablename>' 형식을 확대 변환할 수 없습니다.
+# <a name="bc30982-type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>BC30982: \<variablename> 루프 범위와 단계 변수가 동일한 형식으로 확장 되지 않으므로 ' '의 형식을 유추할 수 없습니다.
 
 `For...Next`다음 조건이 true 이기 때문에 컴파일러가 루프 제어 변수의 데이터 형식을 유추할 수 없는 루프를 작성 했습니다.
 

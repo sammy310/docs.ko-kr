@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c088f273c100b1a7eefcf74047865093f378e970
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197266"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161662"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>어셈블리를 내보낼 수 없습니다. 오류 메시지를 \<
+# <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: 어셈블리를 내보낼 수 없습니다. \<error message>
 
-Visual Basic 컴파일러는 어셈블리 링커 (*al.exe*, Alink 라고도 함)를 호출 하 여 매니페스트를 사용 하 여 어셈블리를 생성 하 고, 링커가 어셈블리 만들기의 내보내기 단계에서 오류를 보고 합니다.
+Visual Basic 컴파일러는 어셈블리 링커*Al.exe*(Alink 라고도 함)를 호출 하 여 매니페스트를 사용 하 여 어셈블리를 생성 하 고, 링커가 어셈블리 만들기의 내보내기 단계에서 오류를 보고 합니다.
 
 **오류 ID:** BC30145
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-1. 따옴표 붙은 오류 메시지를 확인 하 고 [al.exe](../../../framework/tools/al-exe-assembly-linker.md) 항목을 참조 하 여 추가 설명 및 조언을 확인 합니다.
+1. 따옴표 붙은 오류 메시지를 검사 하 고 자세한 설명과 조언을 보려면 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) 항목을 참조 하세요.
 
-2. [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) 또는 [Sn.exe (강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)를 사용 하 여 어셈블리에 수동으로 서명 하세요.
+2. [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) 또는 [Sn.exe (강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)중 하나를 사용 하 여 어셈블리에 수동으로 서명 하세요.
 
 3. 오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.
 
@@ -59,7 +59,7 @@ Visual Basic 컴파일러는 어셈블리 링커 (*al.exe*, Alink 라고도 함)
 
 6. Visual Studio에서 방금 만든 파일에 .NET 어셈블리 참조를 추가 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe(강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)
