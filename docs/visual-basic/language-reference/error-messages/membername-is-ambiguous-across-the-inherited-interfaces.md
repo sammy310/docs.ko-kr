@@ -7,46 +7,46 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 8fb8f84b07c488c817fd85fdd256d9aca7558a77
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f666bf380f8b94c50c2bc5fd865b37d96e92991f
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873795"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162442"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="06950-102">'\<membername>'은(는) 상속된 인터페이스 '\<interfacename1>' 및 '\<interfacename2>'에서 모호합니다.</span><span class="sxs-lookup"><span data-stu-id="06950-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+# <a name="bc30685-membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="9ad0e-102">BC30685: ' '은 (는) \<membername> 상속 된 인터페이스 ' \<interfacename1> ' 및 ' \<interfacename2> '에서 모호 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ad0e-102">BC30685: '\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
 
-<span data-ttu-id="06950-103">인터페이스는 여러 인터페이스에서 이름이 같은 멤버를 두 개 이상 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="06950-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
-  
- <span data-ttu-id="06950-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="06950-104">**Error ID:** BC30685</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="06950-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="06950-105">To correct this error</span></span>  
-  
-- <span data-ttu-id="06950-106">사용 하려는 기본 인터페이스로 값을 캐스팅 합니다. 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="06950-106">Cast the value to the base interface that you want to use; for example:</span></span>  
-  
-    ```vb  
-    Interface Left  
-        Sub MySub()  
-    End Interface  
-  
-    Interface Right  
-        Sub MySub()  
-    End Interface  
-  
-    Interface LeftRight  
-        Inherits Left, Right  
-    End Interface  
-  
-    Module test  
-        Sub Main()  
-            Dim x As LeftRight  
-            ' x.MySub()  'x is ambiguous.  
-            CType(x, Left).MySub() ' Cast to base type.  
-            CType(x, Right).MySub() ' Call the other base type.  
-        End Sub  
-    End Module  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="06950-107">참조</span><span class="sxs-lookup"><span data-stu-id="06950-107">See also</span></span>
+<span data-ttu-id="9ad0e-103">인터페이스는 여러 인터페이스에서 이름이 같은 멤버를 두 개 이상 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ad0e-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>
 
-- [<span data-ttu-id="06950-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="06950-108">Interfaces</span></span>](../../programming-guide/language-features/interfaces/index.md)
+ <span data-ttu-id="9ad0e-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="9ad0e-104">**Error ID:** BC30685</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="9ad0e-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="9ad0e-105">To correct this error</span></span>
+
+- <span data-ttu-id="9ad0e-106">사용 하려는 기본 인터페이스로 값을 캐스팅 합니다. 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="9ad0e-106">Cast the value to the base interface that you want to use; for example:</span></span>
+
+    ```vb
+    Interface Left
+        Sub MySub()
+    End Interface
+
+    Interface Right
+        Sub MySub()
+    End Interface
+
+    Interface LeftRight
+        Inherits Left, Right
+    End Interface
+
+    Module test
+        Sub Main()
+            Dim x As LeftRight
+            ' x.MySub()  'x is ambiguous.
+            CType(x, Left).MySub() ' Cast to base type.
+            CType(x, Right).MySub() ' Call the other base type.
+        End Sub
+    End Module
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="9ad0e-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9ad0e-107">See also</span></span>
+
+- [<span data-ttu-id="9ad0e-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="9ad0e-108">Interfaces</span></span>](../../programming-guide/language-features/interfaces/index.md)

@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: fe67dc70c18297319225c3d2ae97f1ce949603d6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 73cc604f1e3a06687ca93779a01e698512be198b
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871539"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160186"
 ---
-# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="7f7b0-102">'\<name1>' 네임스페이스 또는 형식에서 가져온 '\<name2>'은(는) 모호합니다.</span><span class="sxs-lookup"><span data-stu-id="7f7b0-102">'\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
+# <a name="bc30561-name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="2b195-102">BC30561: ' \<name1> '이 (가) 모호 합니다. ' ' 네임 스페이스 또는 형식에서 가져왔습니다. \<name2></span><span class="sxs-lookup"><span data-stu-id="2b195-102">BC30561: '\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
 
-<span data-ttu-id="7f7b0-103">모호한 이름을 제공했으므로 다른 이름과 충돌합니다.</span><span class="sxs-lookup"><span data-stu-id="7f7b0-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="7f7b0-104">Visual Basic 컴파일러에 충돌 해결 규칙이 없습니다. 이름을 명확 하 게 구분 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f7b0-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
-  
- <span data-ttu-id="7f7b0-105">**오류 ID:** BC30561</span><span class="sxs-lookup"><span data-stu-id="7f7b0-105">**Error ID:** BC30561</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="7f7b0-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="7f7b0-106">To correct this error</span></span>  
-  
-1. <span data-ttu-id="7f7b0-107">네임 스페이스 가져오기를 제거 하 여 이름을 명확 하 게 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f7b0-107">Disambiguate the name by removing namespace imports.</span></span>  
-  
-2. <span data-ttu-id="7f7b0-108">이름을 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="7f7b0-108">Fully qualify the name.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7f7b0-109">참조</span><span class="sxs-lookup"><span data-stu-id="7f7b0-109">See also</span></span>
+<span data-ttu-id="2b195-103">모호한 이름을 제공했으므로 다른 이름과 충돌합니다.</span><span class="sxs-lookup"><span data-stu-id="2b195-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="2b195-104">Visual Basic 컴파일러에 충돌 해결 규칙이 없습니다. 이름을 명확 하 게 구분 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b195-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>
 
-- [<span data-ttu-id="7f7b0-110">Imports 문(.NET 네임스페이스 및 형식)</span><span class="sxs-lookup"><span data-stu-id="7f7b0-110">Imports Statement (.NET Namespace and Type)</span></span>](../statements/imports-statement-net-namespace-and-type.md)
-- [<span data-ttu-id="7f7b0-111">Visual Basic의 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="7f7b0-111">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
-- [<span data-ttu-id="7f7b0-112">Namespace 문</span><span class="sxs-lookup"><span data-stu-id="7f7b0-112">Namespace Statement</span></span>](../statements/namespace-statement.md)
+ <span data-ttu-id="2b195-105">**오류 ID:** BC30561</span><span class="sxs-lookup"><span data-stu-id="2b195-105">**Error ID:** BC30561</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="2b195-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="2b195-106">To correct this error</span></span>
+
+- <span data-ttu-id="2b195-107">네임 스페이스 가져오기를 제거 하 여 이름을 명확 하 게 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b195-107">Disambiguate the name by removing namespace imports.</span></span>
+
+- <span data-ttu-id="2b195-108">이름을 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="2b195-108">Fully qualify the name.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2b195-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2b195-109">See also</span></span>
+
+- [<span data-ttu-id="2b195-110">Imports 문(.NET 네임스페이스 및 형식)</span><span class="sxs-lookup"><span data-stu-id="2b195-110">Imports Statement (.NET Namespace and Type)</span></span>](../statements/imports-statement-net-namespace-and-type.md)
+- [<span data-ttu-id="2b195-111">Visual Basic의 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="2b195-111">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="2b195-112">Namespace 문</span><span class="sxs-lookup"><span data-stu-id="2b195-112">Namespace Statement</span></span>](../statements/namespace-statement.md)
