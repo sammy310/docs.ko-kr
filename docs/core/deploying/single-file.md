@@ -4,18 +4,18 @@ description: 단일 파일 애플리케이션이란 무엇이고, 이 애플리�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712640"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050418"
 ---
 # <a name="single-file-deployment-and-executable"></a>단일 파일 배포 및 실행 파일
 
 모든 애플리케이션 종속 파일을 하나의 이진 파일로 묶으면 애플리케이션 개발자가 애플리케이션을 단일 파일로 배포할 수 있습니다. 이 배포 모델은 .NET Core 3.0부터 사용할 수 있었으며 .NET 5.0에서 향상되었습니다. 이전의 .NET Core 3.0에서는 사용자가 단일 파일 앱을 실행할 때 .NET Core 호스트에서 먼저 모든 파일을 임시 디렉터리로 추출한 후 애플리케이션을 실행했습니다. .NET 5.0에서는 앱에서 파일을 추출할 필요 없이 코드를 직접 실행하여 이 환경을 개선합니다.
 
-단일 파일 배포는 [프레임워크 종속 배포 모델](index.md#publish-framework-dependent)과 [자체 포함 애플리케이션](index.md#publish-self-contained)에 모두 사용할 수 있습니다. 자체 포함 애플리케이션의 단일 파일 크기는 런타임 및 프레임워크 라이브러리를 포함하므로 커집니다. 단일 파일 배포 옵션을 [ReadyToRun](../tools/dotnet-publish.md) 및 [Trim(.NET 5.0의 실험적 기능)](trim-self-contained.md) 게시 옵션과 함께 사용할 수 있습니다.
+단일 파일 배포는 [프레임워크 종속 배포 모델](index.md#publish-framework-dependent)과 [자체 포함 애플리케이션](index.md#publish-self-contained)에 모두 사용할 수 있습니다. 자체 포함 애플리케이션의 단일 파일 크기는 런타임 및 프레임워크 라이브러리를 포함하므로 커집니다. 단일 파일 배포 옵션을 [ReadyToRun](ready-to-run.md) 및 [Trim(.NET 5.0의 실험적 기능)](trim-self-contained.md) 게시 옵션과 함께 사용할 수 있습니다.
 
 ## <a name="api-incompatibility"></a>API 비호환성
 
