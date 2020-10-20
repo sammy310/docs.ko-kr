@@ -3,12 +3,12 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609182"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162156"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
@@ -62,3 +62,7 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브�
 이 자습서에서는 개체 지향 프로그래밍에 사용되는 개념을 설명합니다. C# 예제를 사용하여 *추상화*, *캡슐화*, *상속* 및 *다형성*의 개념을 학습합니다.
 
 이 자습서에서는 온라인 소개 자습서를 완료했으며 개발 머신에 [.NET Core SDK](https://dotnet.microsoft.com/download)와 [Visual Studio Code](https://code.visualstudio.com/) 또는 [Visual Studio](https://visualstudio.com)를 설치했다고 가정합니다.
+
+## <a name="101-linq-samples"></a>[101 LINQ 샘플](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+
+이 샘플을 사용하려면 [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) 전역 도구가 필요합니다. 도구를 설치하고 [try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제한 후에는 대화형으로 실행할 수 있는 101개 샘플의 세트를 통해 LINQ(Language Integrated Query)를 배울 수 있습니다. 데이터 시퀀스를 쿼리, 탐색 및 변환하는 다양한 방법을 탐색할 수 있습니다.

@@ -1,57 +1,53 @@
 ---
-title: 시작 - C# 가이드
-description: '기초 C # 개념을 빨리 배우고 .NET Core 애플리케이션을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요.'
-helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
-ms.date: 04/05/2019
-ms.openlocfilehash: 769098134799800d45a31c22f4390734545ff6ff
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+title: 시작하기 - C# 언어 및 .NET 소개
+description: C# 및 .NET의 기본 사항에 대해 알아봅니다. C# 언어 및 .NET 에코시스템에 대한 개요를 확인합니다.
+ms.date: 10/13/2020
+ms.openlocfilehash: 94d49be28fbdba8f58ca16e959a10643d6467c63
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465249"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160960"
 ---
-# <a name="get-started-with-c"></a>C\# 시작
+# <a name="introduction-to-the-c-language-and-net"></a>C# 언어 및 .NET 소개
 
-이 섹션에서는 C# 및 .NET Core를 사용하여 애플리케이션을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 및 Visual Studio Code의 시작 항목이 있습니다. 이 문서에서는 몇 가지 프로그래밍 환경을 가정합니다. 프로그래밍이 처음인 경우 [C# 소개](../tutorials/intro-to-csharp/index.md) 대화형 자습서를 사용해 보세요.
+C#은 세련되고 형식이 안전한 개체 지향 언어입니다. 개발자는 C#을 사용하면 .NET 에코시스템에서 실행되는 다양한 형식의 안전하고 강력한 애플리케이션을 빌드할 수 있습니다.
 
-다음 항목을 사용할 수 있습니다.
+## <a name="c-language"></a>C# 언어
 
-- [C# 언어 및 .NET 소개](introduction-to-the-csharp-language-and-the-net-framework.md)
+C# 구문은 다양한 표현이 가능하면서도 간편하고 쉽게 배울 수 있습니다. C#의 중괄호 구문은 C, C++, Java 또는 JavaScript에 익숙한 사용자라면 누구나 바로 알아볼 수 있습니다. 이러한 언어에 익숙한 개발자는 일반적으로 짧은 시간 내에 C#으로 생산적인 작업을 수행할 수 있습니다. C#은 nullable 형식, 대리자, 람다 식, 패턴 일치 및 안전한 직접 메모리 액세스와 같은 강력한 기능을 제공합니다. C#은 향상된 형식 안전성과 성능을 제공하는 제네릭 메서드 및 형식을 지원합니다. C#은 컬렉션 클래스의 구현자가 클라이언트 코드에 대한 사용자 지정 동작을 정의하는 데 사용할 수 있는 반복기를 제공합니다. LINQ(Language-Integrated Query) 식은 강력한 형식의 쿼리를 최고의 언어 구문으로 만들어줍니다.
 
-     C# 언어 및 .NET에 대해 간략히 설명합니다.
+개체 지향 언어인 C#은 캡슐화, 상속 및 다형성의 개념을 지원합니다. 클래스는 단일 부모 클래스에서 직접 상속될 수 있지만 원하는 수의 인터페이스를 구현할 수 있습니다. 부모 클래스에서 가상 메서드를 재정의하는 메서드에는 우발적인 재정의를 방지하는 방법으로 `override` 키워드가 필요합니다. C#에서 구조체는 간단한 클래스와 같습니다. 즉, 인터페이스를 구현할 수 있지만 상속을 지원하지 않는 스택 할당 형식입니다. C#은 또한 주로 데이터 값을 저장하는 용도로 사용할 수 있는 클래스 형식인 레코드를 제공합니다.
 
-- [Visual Studio에서 .NET Core를 사용하여 C# Hello World 애플리케이션 만들기](../../core/tutorials/with-visual-studio.md)
+C#은 다음을 포함한 몇 가지 혁신적인 언어 구문을 통해 소프트웨어 구성 요소를 쉽게 개발하도록 지원합니다.
 
-   Visual Studio를 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
+- *대리자*라고 하는 캡슐화된 메서드 시그니처: 형식이 안전한 이벤트 알림을 가능하게 합니다.
+- 속성: 전용 멤버 변수에 대한 접근자 역할을 합니다.
+- 특성: 런타임에 형식에 대한 선언적 메타데이터를 제공합니다.
+- 인라인 XML 문서 주석
+- LINQ(Language-Integrated Query): 다양한 종류의 데이터 소스에 대한 기본 제공 쿼리 기능을 제공합니다.
+- 패턴 일치: 데이터 형식 및 값을 검사하여 제어 흐름을 가능하게 합니다.
 
-   이 항목에서는 간단한 Hello World 애플리케이션을 만들어 실행한 다음, 좀 더 대화형 기능이 강화된 Hello World 애플리케이션을 실행하도록 수정할 수 있습니다. 애플리케이션의 빌드 및 실행이 끝나면 .NET Core에서 지원하는 모든 플랫폼에서 실행할 수 있도록 [디버그](../../core/tutorials/debugging-with-visual-studio.md)하는 방법과 [게시](../../core/tutorials/publishing-with-visual-studio.md)하는 방법을 익힙니다.
+“Interop”이라는 프로세스를 통해 네이티브 구성 요소와 상호 작용합니다. Interop을 사용하면 네이티브 C++ 애플리케이션에서 수행할 수 있는 거의 모든 작업을 C# 프로그램으로 수행할 수 있습니다. C#은 직접 메모리 액세스가 중요한 경우를 위한 "안전하지 않은" 코드 개념 및 포인터까지도 지원합니다.
 
-- [Visual Studio에서 C# 및 .NET Standard를 사용하여 클래스 라이브러리 만들기](../../core/tutorials/library-with-visual-studio.md)
+C# 빌드 프로세스는 C 및 C++과 비교해서 비교적 간단하며 Java의 경우보다 좀 더 유연합니다. 별도 헤더 파일이 없으며, 메서드 및 형식을 특정 순서로 선언할 필요도 없습니다. C# 소스 파일은 원하는 수의 클래스, 구조체, 인터페이스 및 이벤트를 정의할 수 있습니다.
 
-   클래스 라이브러리를 사용하면 다른 애플리케이션에서 호출할 수 있는 형식 및 형식 멤버를 정의할 수 있습니다. 이 항목에서는 문자열이 대문자로 시작되는지 여부를 결정하는 단일 메서드로 클래스 라이브러리를 만들 수 있습니다. 라이브러리 빌드를 마친 후에는 [단위 테스트](../../core/tutorials/testing-library-with-visual-studio.md)를 개발하여 라이브러리가 예상대로 작동하는지 확인하고 [사용하려는 애플리케이션](/nuget/quickstart/install-and-use-a-package-in-visual-studio)에서 사용 가능하게 만들 수 있습니다.
+다음은 추가적인 C# 리소스입니다.
 
-- [C# 및 Visual Studio Code 시작](../../core/tutorials/with-visual-studio-code.md)
+- 이 언어에 대한 일반적인 소개는 [C# 둘러보기](../tour-of-csharp/index.md)를 참조하세요.
+- C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../language-reference/index.md)를 참조하세요.
+- LINQ에 대한 자세한 내용은 [LINQ(Language-Integrated Query)](../programming-guide/concepts/linq/index.md)를 참조하세요.
 
-   Visual Studio Code는 현대적인 웹 및 클라우드 애플리케이션을 빌드 및 디버깅하기 위해 최적화된 강력한 코드 편집기입니다. IntelliSense를 지원하고 Windows, macOS, Linux에 사용할 수 있습니다.
+## <a name="net-platform-architecture"></a>.NET 플랫폼 아키텍처
 
-   이 항목에서는 Visual Studio Code 및 .NET Core를 사용하여 간단한 Hello World 애플리케이션을 만들고 실행하는 방법을 보여 줍니다.
+C# 프로그램은 CLR(공용 언어 런타임)이라는 가상 실행 시스템이며 통합된 클래스 라이브러리 세트인 .NET에서 실행됩니다. CLR은 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상용으로 구현한 것입니다. CLI는 언어와 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기초입니다.
 
-## <a name="related-sections"></a>관련 단원
+C#으로 작성된 소스 코드는 CLI 사양을 준수하는 [IL(중간 언어)](../../standard/managed-code.md)로 컴파일됩니다. IL 코드와 리소스(예: 비트맵 및 문자열)는 일반적으로 .dll 확장명과 함께 어셈블리에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전 및 문화에 대한 정보를 제공하는 매니페스트를 포함합니다.
 
-- [C# 프로그래밍 가이드](../programming-guide/index.md)
+C# 프로그램이 실행되면 어셈블리가 CLR에 로드됩니다. CLR은 JIT(Just-In-Time) 컴파일을 수행하여 IL 코드를 네이티브 기계어 명령으로 변환합니다. CLR은 자동 가비지 수집, 예외 처리 및 리소스 관리와 관련된 다른 서비스도 제공합니다. CLR에서 실행되는 코드는 "관리 코드"라고도 합니다. 즉, 특정 시스템을 대상으로 하는 네이티브 기계어로 컴파일되는 "비관리 코드"와는 반대됩니다.
 
-    C# 프로그래밍 개념에 대한 정보를 제공하고 C#에서 다양한 작업을 수행하는 방법을 설명합니다.
+언어 상호 운용성은 .NET의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)를 따릅니다. C#에서 생성된 IL 코드는 F#의 .NET 버전, Visual Basic, C++ 또는 20개가 넘는 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.
 
-- [C# 참조](../language-reference/index.md)
+런타임 서비스 외에도 .NET에는 광범위한 라이브러리가 포함되어 있습니다. 이러한 라이브러리는 다양한 워크로드를 지원합니다. 이들은 파일 입/출력부터 문자열 조작, XML 구문 분석, 웹 애플리케이션 프레임워크, Windows Forms 컨트롤에 이르기까지 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성됩니다. 전형적인 C# 애플리케이션은 .NET 클래스 라이브러리를 광범위하게 사용하여 일반적인 “배관” 작업을 처리합니다.
 
-    C# 키워드, 연산자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 자세한 참조 정보를 제공합니다.
-
-- [연습](../walkthroughs.md)
-
-    C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
-
-## <a name="see-also"></a>참조
-
-- [Visual Studio를 사용한 C# 개발](/visualstudio/get-started/csharp/)
+.NET에 대한 자세한 내용은 [.NET의 개요](../../core/introduction.md)를 참조하세요.

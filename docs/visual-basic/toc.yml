@@ -153,9 +153,9 @@
         - name: 제네릭 형식
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: '방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의'
+            - name: 다른 형식에 동일한 기능을 제공할 수 있는 클래스 정의
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: '방법: 제네릭 클래스 사용'
+            - name: 제네릭 클래스 사용
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: 제네릭 프로시저
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -875,14 +875,18 @@
         - name: XML 처리 명령 리터럴
           href: language-reference/xml-literals/xml-processing-instruction-literal.md
     - name: 오류 메시지
-      href: language-reference/error-messages/index.md
       items:
+        - name: 개요
+          displayName: 'error messages, compiler errors'
+          href: language-reference/error-messages/index.md
+        - name: BC30663
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: BC32500
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''#ElseIf''는 짝이 되는 ''#If'' 또는 ''#ElseIf'' 뒤에 와야 합니다.'
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
         - name: '''#Region'' 및 ''#End Region'' 문은 메서드 본문(multiline lambdas) 내에서 사용할 수 없습니다.'
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
-        - name: '''GUID ''<attribute>''의 형식이 올바르지 않으므로 ''<number>''을(를) 적용할 수 없습니다.'
-          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''<classname>'' 인터페이스가 CLS 규격이 아니므로 이 인터페이스에서 상속된 ''<interfacename>''은(는) CLS 규격이 아닙니다.'
           href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
         - name: '''<elementname>''은(는) 사용되지 않습니다. (Visual Basic 경고)'
@@ -949,8 +953,6 @@
           href: language-reference/error-messages/bc31043.md
         - name: '''Declare'' 문에서는 ''As Any''가 지원되지 않습니다.'
           href: language-reference/error-messages/bc30828.md
-        - name: '''<attributename>'' 특성을 여러 번 사용할 수 없습니다.'
-          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
         - name: 자동화 오류
           href: language-reference/error-messages/automation-error.md
         - name: 체크섬 값이 잘못되었습니다. 16진수가 아니거나 16진수 값이 홀수입니다.
@@ -1409,7 +1411,7 @@
               href: reference/command-line-compiler/win32manifest.md
             - name: '-win32resource'
               href: reference/command-line-compiler/win32resource.md
-        - name: 컴파일러 옵션 범주별 목록
+        - name: 범주별 컴파일러 옵션
           href: reference/command-line-compiler/compiler-options-listed-by-category.md
     - name: .NET Framework 참조 정보
       href: reference/net-framework-reference-information.md
