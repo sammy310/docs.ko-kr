@@ -1867,8 +1867,8 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: XML 스키마 정의 도구(Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: 단위 테스트
-    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+  - name: 테스트
+    displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:
       - name: 개요
         href: ../core/testing/index.md
