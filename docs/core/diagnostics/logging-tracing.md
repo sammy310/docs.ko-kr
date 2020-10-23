@@ -1,13 +1,13 @@
 ---
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
-ms.date: 08/05/2019
-ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 10/12/2020
+ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714419"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997697"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -78,10 +78,10 @@ ms.locfileid: "75714419"
 
 <xref:Microsoft.Extensions.Logging.ILogger> 인터페이스는 종속성 주입을 통해 로거를 삽입할 수 있는 공용 로깅 인터페이스를 만드는 데 사용되었습니다.
 
-예를 들어 애플리케이션에 가장 적합한 것을 선택할 수 있도록 `ASP.NET`에서 기본 제공 및 타사 프레임워크를 선택할 수 있도록 지원합니다.
+예를 들어 애플리케이션에 가장 적합한 것을 선택할 수 있도록 .NET에서 기본 제공 및 타사 프레임워크를 선택할 수 있도록 지원합니다.
 
-- [ASP.NET 기본 제공 로깅 공급자](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [ASP.NET 타사 로깅 공급자](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [.NET 기본 제공 로깅 공급자](../extensions/logging-providers.md#built-in-logging-providers)
+- [.NET 타사 로깅 공급자](../extensions/logging-providers.md#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>로깅 관련 참고 자료
 
@@ -89,7 +89,7 @@ ms.locfileid: "75714419"
 
 - [방법: 애플리케이션 코드에 Trace 문 추가](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [ASP.NET 로깅](/aspnet/core/fundamentals/logging)은 지원하는 로깅 기술에 대해 간략히 설명합니다.
+- [.NET에서 로깅](../extensions/logging.md)은 지원하는 로깅 기술에 대해 간략히 설명합니다.
 
 - [C# 문자열 보간](../../csharp/language-reference/tokens/interpolated.md)은 로깅 코드 작성을 간소화할 수 있습니다.
 

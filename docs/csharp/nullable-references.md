@@ -3,12 +3,12 @@ title: nullable 참조 형식
 description: 이 문서에서는 C# 8.0에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446674"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160882"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -124,6 +124,84 @@ nullable 경고 컨텍스트는 nullable 주석 컨텍스트와 다릅니다. �
 ## <a name="attributes-describe-apis"></a>API를 설명하는 특성
 
 인수 또는 반환 값이 null일 수 있거나 null이 될 수 없는 경우에 대한 자세한 정보를 컴파일러에 제공하는 API에 특성을 추가합니다. [null 허용 특성](language-reference/attributes/nullable-analysis.md)을 다루는 언어 참조의 문서에서 이러한 특성에 대해 자세히 알아볼 수 있습니다. 이러한 특성은 현재 및 이후 릴리스에서 .NET 라이브러리에 추가됩니다. 가장 일반적으로 사용되는 API가 먼저 업데이트됩니다.
+
+## <a name="known-pitfalls"></a>알려진 문제
+
+참조 유형을 포함하는 배열 및 구조체는 nullable 참조 형식 기능의 알려진 문제입니다.
+
+### <a name="structs"></a>구조체
+
+null을 허용하지 않는 참조 형식을 포함하는 구조에서는 경고 없이 `default`를 할당할 수 있습니다. 다음 예제를 참조하세요.
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+앞의 예제에서 null을 허용하지 않는 참조 형식 `FirstName` 및 `LastName`이 null인 동안 `PrintStudent(default)`에는 경고가 없습니다.
+
+또 다른 일반적인 사례는 일반 구조체를 처리하는 경우입니다. 다음 예제를 참조하세요.
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+앞의 예제에서 `Bar` 속성은 런타임 시 `null`이 되고 경고 없이 null을 허용하지 않는 문자열에 할당됩니다.
+
+### <a name="arrays"></a>배열
+
+배열은 nullable 참조 형식의 알려진 문제가 되기도 합니다. 경고를 생성하지 않는 다음 예제를 고려하세요.
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+앞의 예제에서 배열 선언은 해당 요소가 모두 null로 초기화되는 동안 null을 허용하지 않는 문자열을 보유함을 나타냅니다. 그런 다음, `s` 변수에는 null 값(배열의 첫 번째 요소)이 할당됩니다. 마지막으로 `s` 변수가 역참조되어 런타임 예외가 발생합니다.
 
 ## <a name="see-also"></a>참조
 

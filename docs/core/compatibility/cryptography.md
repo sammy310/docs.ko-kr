@@ -2,12 +2,12 @@
 title: 암호화 관련 호환성이 손상되는 변경
 description: .NET Core의 암호화 관련 호환성이 손상되는 변경 사항을 나열합니다.
 ms.date: 04/22/2020
-ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 6f37e5caacadc276562e63a728162c6b26f2e435
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406151"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159557"
 ---
 # <a name="cryptography-breaking-changes"></a>암호화 관련 호환성이 손상되는 변경
 
@@ -15,6 +15,8 @@ ms.locfileid: "91406151"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [암호화 추상화의 기본 구현 인스턴스화는 지원되지 않습니다.](#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported) | 5.0 |
+| [Linux의 .NET용 기본 TLS 암호 그룹](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [Blazor WebAssembly에서 지원되지 않는 System.Security.Cryptography API](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [System.Security.Cryptography.Oid는 기능상 초기화 전용임](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [Linux에서 더 이상 지원되지 않는 신뢰할 수 있는 인증서 구문 시작](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
@@ -25,6 +27,14 @@ ms.locfileid: "91406151"
 | [SignedCms.ComputeSignature의 부울 매개 변수를 적용](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [instantiating-default-implementations-of-cryptographic-abstractions-not-supported](../../../includes/core-changes/cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)]
+
+***
+
+[!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
+
+***
 
 [!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 

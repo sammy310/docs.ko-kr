@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504656"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162988"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -184,7 +184,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처
 
-[System.Object](xref:System.Object) 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: [String](xref:System.String) 클래스는 `Object` 클래스에서 암시적으로 상속받음)이거나 명시적(예: [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) 클래스는 [ArgumentException](xref:System.ArgumentException) 클래스에서 명시적으로 상속받고, 이 클래스는 다시 [Exception](xref:System.Exception) 클래스에서 명시적으로 상속받음)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.
+[System.Object](xref:System.Object) 형식은 CLS 규격이고 .NET 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET의 상속은 암시적(예: [String](xref:System.String) 클래스는 `Object` 클래스에서 암시적으로 상속받음)이거나 명시적(예: [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) 클래스는 [ArgumentException](xref:System.ArgumentException) 클래스에서 명시적으로 상속받고, 이 클래스는 다시 [Exception](xref:System.Exception) 클래스에서 명시적으로 상속받음)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.
 
 다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여 줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.
 
@@ -319,7 +319,7 @@ CLS 규격 형식 | 설명
 [UInt64](xref:System.UInt64) | 64비트 부호 없는 정수 | [Int64](xref:System.Int64)(오버플로될 수 있음), [BigInteger](xref:System.Numerics.BigInteger) 또는 [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | 부호 없는 포인터 또는 핸들 | [IntPtr](xref:System.IntPtr)
 
-.NET Framework 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다.
+.NET 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다.
 
 * boxed 값 형식. 다음 C# 예제는 이름이 `int*`인 public 속성 `Value` 형식을 가진 클래스를 만듭니다. `int*`는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
 
@@ -2479,7 +2479,7 @@ End Module
 
 ### <a name="attributes"></a>특성
 
-.NET Framework 어셈블리에서 사용자 지정 특성은 확장 가능한 메커니즘을 제공하여 사용자 지정 특성을 저장하고 어셈블리, 형식, 멤버, 메서드 매개 변수 등의 개체 프로그래밍에 대한 메타데이터를 검색할 수 있도록 합니다. 사용자 지정 특성은 [System.Attribute](xref:System.Attribute)에서 파생되거나 `System.Attribute`에서 파생된 형식에서 파생되어야 합니다.
+.NET 어셈블리에서 사용자 지정 특성은 확장 가능한 메커니즘을 제공하여 사용자 지정 특성을 저장하고 어셈블리, 형식, 멤버, 메서드 매개 변수 등의 개체 프로그래밍에 대한 메타데이터를 검색할 수 있도록 합니다. 사용자 지정 특성은 [System.Attribute](xref:System.Attribute)에서 파생되거나 `System.Attribute`에서 파생된 형식에서 파생되어야 합니다.
 
 다음은 이 규칙을 위반하는 예제입니다. 이 예제에서는 `NumericAttribute`에서 파생되지 않은 `System.Attribute` 클래스를 정의합니다. 컴파일러 오류는 클래스를 정의하지 않은 경우가 아닌 CLS 규격이 아닌 특성이 적용되는 경우에만 발생합니다.
 
@@ -2636,7 +2636,7 @@ End Class
 
 구성 요소 개발자는 다음 두 가지 방식으로 `CLSCompliantAttribute` 특성을 사용할 수 있습니다.
 
-* CLS 규격인 구성 요소에서 노출된 공용 인터페이스 부분과 CLS 규격이 아닌 부분을 정의합니다. 특정 프로그램 요소를 CLS 규격으로 표시하도록 특성을 사용하면, 해당 요소는 .NET Framework를 대상으로 하는 모든 언어 및 도구에서 액세스 가능성이 보장됩니다.
+* CLS 규격인 구성 요소에서 노출된 공용 인터페이스 부분과 CLS 규격이 아닌 부분을 정의합니다. 특정 프로그램 요소를 CLS 규격으로 표시하도록 특성을 사용하면, 해당 요소는 .NET을 대상으로 하는 모든 언어 및 도구에서 액세스 가능성이 보장됩니다.
 
 * 구성 요소 라이브러리의 공용 인터페이스에서 CLS 규격인 프로그램 요소만을 노출시키도록 합니다. 요소가 CLS 규격이 아닌 경우, 일반적으로 컴파일러에서 경고가 발생합니다.
 
@@ -2788,7 +2788,7 @@ End Class
 
 ## <a name="cross-language-interoperability"></a>언어 간 상호 운용성
 
-언어 독립성은 여러 가지 의미를 가질 수 있습니다. 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용할 수 있다는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.
+언어 독립성은 여러 가지 의미를 가질 수 있습니다. 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용할 수 있다는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET 어셈블리로 결합하는 것입니다.
 
 다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 `StringUtil.vb`용 소스 코드입니다.
 

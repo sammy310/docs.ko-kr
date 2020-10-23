@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72b371dc2a6475efa2e0353f87dbdfa96c4c7c0e
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802834"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050400"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
-| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
+| .NET Core 및 .NET 5       | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | 해당 없음<sup>3</sup> |
 | Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
 | Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
@@ -21,7 +21,7 @@ ms.locfileid: "74802834"
 
 <sup>2 여기에 나열된 버전은 지정된 .NET Standard 라이브러리를 적용할 수 있는지 여부를 확인하기 위해 NuGet이 사용하는 규칙을 나타냅니다. NuGet에서는 .NET Framework 4.6.1을 .NET Standard 1.5에서 2.0까지 지원하는 것으로 간주하는 반면, .NET Framework 4.6.1에서 해당 버전용으로 빌드된 .NET Standard 라이브러리를 사용하는 데 몇 가지 문제가 있습니다. 이러한 라이브러리를 사용해야 하는 .NET Framework 프로젝트의 경우 .NET Framework 4.7.2 이상을 대상으로 하려면 프로젝트를 업그레이드하는 것이 좋습니다.</sup>
 
-<sup>3 .NET Framework는 .NET Standard 2.1 이상 버전을 지원하지 않습니다. 자세한 내용은 [.NET Standard 2.1의 공지](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/)를 참조하세요.</sup>
+<sup>3 .NET Framework는 .NET Standard 2.1을 지원하지 않습니다. 자세한 내용은 [.NET Standard 2.1의 공지](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/)를 참조하세요.</sup>
 
 - 열은 .NET 표준 버전을 나타냅니다. 각 헤더 셀은 .NET 표준의 해당 버전에 추가된 API를 보여 주는 문서의 링크입니다.
 - 행은 다양한 .NET 구현을 나타냅니다.

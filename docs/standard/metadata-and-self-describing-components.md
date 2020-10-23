@@ -13,18 +13,18 @@ helpviewer_keywords:
 - metadata, about metadata
 - common language runtime, metadata
 - PE files, metadata
-- components [.NET Framework], metadata
+- components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290060"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159354"
 ---
 # <a name="metadata-and-self-describing-components"></a>메타데이터 및 자동 기술 구성 요소
 
-이전에 한 가지 언어로 작성된 소프트웨어 구성 요소(.exe 또는 .dll)는 다른 언어로 작성된 소프트웨어 구성 요소를 쉽게 사용할 수 없었습니다. COM은 이러한 문제를 해결하기 위한 단계를 제공했습니다. .NET Framework는 컴파일러가 모든 모듈과 어셈블리에 추가 선언 정보를 내보낼 수 있도록 하여 구성 요소 상호 운용성을 훨씬 더 쉽게 만듭니다. 메타데이터라고 하는 이 정보는 구성 요소가 아무런 문제 없이 원만하게 상호 작용할 수 있도록 하는 데 도움이 됩니다.
+이전에 한 가지 언어로 작성된 소프트웨어 구성 요소(.exe 또는 .dll)는 다른 언어로 작성된 소프트웨어 구성 요소를 쉽게 사용할 수 없었습니다. COM은 이러한 문제를 해결하기 위한 단계를 제공했습니다. .NET은 컴파일러가 모든 모듈과 어셈블리에 추가 선언 정보를 내보낼 수 있도록 하여 구성 요소 상호 운용성을 훨씬 더 쉽게 만듭니다. 메타데이터라고 하는 이 정보는 구성 요소가 아무런 문제 없이 원만하게 상호 작용할 수 있도록 하는 데 도움이 됩니다.
 
  메타데이터는 프로그램을 기술하는 이진 정보이며 공용 언어 런타임 PE 파일 또는 메모리에 저장됩니다. 코드를 PE 파일로 컴파일하면 메타데이터는 PE 파일의 한 부분에 삽입되고 해당 코드는 MSIL(Microsoft Intermediate Language)로 변환되어 파일의 다른 부분에 삽입됩니다. 모듈 또는 어셈블리에서 정의되고 참조된 모든 형식과 멤버는 메타데이터 내에 기술됩니다. 코드를 실행하면 런타임은 메타데이터를 메모리로 로드한 다음 참조하여 해당 코드의 클래스, 멤버, 상속 등에 대한 정보를 검색합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "84290060"
 
 ## <a name="benefits-of-metadata"></a>메타데이터의 이점
 
-메타데이터는 더욱 간편한 프로그래밍 모델의 주요 요소이며 IDL(인터페이스 정의 언어) 파일, 헤더 파일 또는 구성 요소 참조의 외부 메서드를 사용하지 않아도 되게 합니다. 메타데이터를 사용하면 .NET Framework 언어는 개발자와 사용자 모두 알지 못한 채 언어와 무관하게 자동으로 자신을 기술할 수 있습니다. 또한 특성을 사용하여 메타데이터를 확장할 수 있습니다. 메타데이터는 다음과 같은 중요한 이점을 제공합니다.
+메타데이터는 더욱 간편한 프로그래밍 모델의 주요 요소이며 IDL(인터페이스 정의 언어) 파일, 헤더 파일 또는 구성 요소 참조의 외부 메서드를 사용하지 않아도 되게 합니다. 메타데이터를 사용하면 .NET 언어는 개발자와 사용자 모두 알지 못한 채 언어와 무관하게 자동으로 자신을 기술할 수 있습니다. 또한 특성을 사용하여 메타데이터를 확장할 수 있습니다. 메타데이터는 다음과 같은 중요한 이점을 제공합니다.
 
 - 자동 기술 파일
 
@@ -64,11 +64,11 @@ ms.locfileid: "84290060"
 
 - 특성.
 
-  .NET Framework에서는 특성이라고 하는 특정 종류의 메타데이터를 컴파일된 파일에 선언할 수 있습니다. 특성은 .NET Framework 전체에서 선언할 수 있으며 프로그램이 런타임에 동작하는 방식을 좀 더 자세하게 제어하기 위해 사용됩니다. 또한 사용자 지정 특성을 사용하여 사용자 지정 메타데이터를 .NET Framework 파일로 내보낼 수 있습니다. 자세한 내용은 [특성](attributes/index.md)을 참조하세요.
+  .NET에서는 특성이라고 하는 특정 종류의 메타데이터를 컴파일된 파일에 선언할 수 있습니다. 특성은 .NET 전체에서 선언할 수 있으며 프로그램이 런타임에 동작하는 방식을 좀 더 자세하게 제어하기 위해 사용됩니다. 또한 사용자 지정 특성을 사용하여 사용자 지정 메타데이터를 .NET 파일로 내보낼 수 있습니다. 자세한 내용은 [특성](attributes/index.md)을 참조하세요.
 
 ## <a name="metadata-and-the-pe-file-structure"></a>메타데이터 및 PE 파일 구조
 
-메타데이터는 .NET Framework PE 파일의 한 섹션에 저장되고 MSIL은 PE 파일의 다른 섹션에 저장됩니다. PE 파일의 메타데이터 부분에는 테이블과 힙 데이터 구조가 있으며 MSIL 부분에는 MSIL 및 PE 파일의 메타데이터 부분을 참조하는 메타데이터 토큰이 있습니다. 예를 들어 [MSIL 디스어셈블러(Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) 같은 도구를 사용하여 코드의 MSIL을 보는 경우 메타데이터 토큰을 발견할 수 있습니다.
+메타데이터는 .NET PE(이식 가능) 파일의 한 섹션에 저장되고 MSIL(Microsoft Intermediate Language)은 PE 파일의 다른 섹션에 저장됩니다. PE 파일의 메타데이터 부분에는 테이블과 힙 데이터 구조가 있으며 MSIL 부분에는 MSIL 및 PE 파일의 메타데이터 부분을 참조하는 메타데이터 토큰이 있습니다. 예를 들어 [MSIL 디스어셈블러(Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) 같은 도구를 사용하여 코드의 MSIL을 보는 경우 메타데이터 토큰을 발견할 수 있습니다.
 
 ### <a name="metadata-tables-and-heaps"></a>메타데이터 테이블 및 힙
 
@@ -134,7 +134,7 @@ public class MyApp
 
 코드를 실행하면 런타임은 모듈을 메모리로 로드하고 이 클래스의 메타데이터를 참조합니다. 로드하고 나면 런타임은 메서드의 MSIL 스트림에 대해 광범위한 분석을 수행하여 이를 빠른 네이티브 기계어 명령으로 변환합니다. 런타임은 JIT(Just-In-Time) 컴파일러를 사용하여 MSIL 명령을 네이티브 기계어 코드 명령 메서드로 필요에 따라 한 번에 변환합니다.
 
-다음 예제에서는 이전 코드의 `Main` 함수에서 생성된 MSIL 부분을 보여 줍니다. [MSIL 디스어셈블러(Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 .NET Framework 애플리케이션에서 MSIL 및 메타데이터를 볼 수 있습니다.
+다음 예제에서는 이전 코드의 `Main` 함수에서 생성된 MSIL 부분을 보여 줍니다. [MSIL 디스어셈블러(Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 .NET 애플리케이션에서 MSIL 및 메타데이터를 볼 수 있습니다.
 
 ```console
 .entrypoint

@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 핵심 .NET 라이브러리의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/27/2020
-ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3ecf0e81a3adef097aafb760dc44498d7263f0b6
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955562"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050569"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>핵심 .NET 라이브러리의 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ ms.locfileid: "91955562"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [FrameworkDescription의 값은 .NET Core가 아닌 .NET입니다.](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
 | [단일 파일 게시 형식에 대한 어셈블리 관련 API 동작 변경](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
 | [Activity.Tags의 태그 순서가 반대로 표시됨](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [RC1에서 매개 변수 이름이 변경됨](#parameter-names-changed-in-rc1) | 5.0 |
@@ -57,6 +58,10 @@ ms.locfileid: "91955562"
 | [Process.StartInfo는 코드가 시작하지 않은 프로세스에 대해 InvalidOperationException을 throw함](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+
+***
 
 [!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
 

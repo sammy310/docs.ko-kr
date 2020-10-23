@@ -7,18 +7,18 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - strong-named assemblies, scenarios
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1d87edde97e77011b678662f61500c7acd8293b0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378527"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162715"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 
@@ -46,7 +46,7 @@ ms.locfileid: "83378527"
 
 3. 어셈블리 B는 어셈블리 A의 소비자입니다. 어셈블리 B의 매니페스트에 있는 참조 섹션에는 어셈블리 A의 공개 키를 나타내는 토큰이 있습니다. 토큰은 전체 공개 키의 일부이며, 공간을 절약하기 위해 키 자체 대신 사용됩니다.
 
-4. 어셈블리가 전역 어셈블리 캐시에 있는 경우 공용 언어 런타임은 강력한 이름 서명을 확인합니다. 런타임에 강력한 이름으로 바인딩할 때 공용 언어 런타임은 어셈블리 B의 매니페스트에 저장된 키와 어셈블리 A의 강력한 이름을 생성하는 데 사용된 키를 비교합니다. .NET Framework 보안 검사를 통과하고 바인딩에 성공하면, 어셈블리 B에서 어셈블리 A의 비트가 변조되지 않았고 실제로 어셈블리 A의 개발자가 이러한 비트를 전달했음을 보증합니다.
+4. 어셈블리가 전역 어셈블리 캐시에 있는 경우 공용 언어 런타임은 강력한 이름 서명을 확인합니다. 런타임에 강력한 이름으로 바인딩할 때 공용 언어 런타임은 어셈블리 B의 매니페스트에 저장된 키와 어셈블리 A의 강력한 이름을 생성하는 데 사용된 키를 비교합니다. .NET 보안 검사를 통과하고 바인딩에 성공하면, 어셈블리 B에서 어셈블리 A의 비트가 변조되지 않았고 실제로 어셈블리 A의 개발자가 이러한 비트를 전달했음을 보증합니다.
 
 > [!NOTE]
 > 이 시나리오에서는 신뢰 문제를 다루지 않습니다. 어셈블리에는 강력한 이름 외에도 전체 Microsoft Authenticode 서명이 있을 수 있습니다. Authenticode 서명에는 신뢰 관계를 설정하는 인증서가 포함되어 있습니다. 강력한 이름에는 이런 방식으로 코드에 서명하지 않아도 된다는 점에 유의하는 것이 중요합니다. 강력한 이름은 고유한 ID를 제공할 뿐입니다.

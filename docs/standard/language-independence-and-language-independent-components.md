@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679614"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160843"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
-.NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.
+.NET은 언어 독립적입니다. 즉, 개발자로서 .NET을 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET용으로 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 구성 요소 개발자인 경우 해당 언어와 관계없이 모든 .NET 앱에서 구성 요소에 액세스할 수 있습니다.
 
 > [!NOTE]
 > 이 문서의 첫 부분에서는 언어 독립 구성 요소를 만드는 방법에 대해 설명합니다. 즉, 이러한 구성 요소는 어떠한 언어로 작성된 앱에서도 사용할 수 있습니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#CrossLang)을 참조하세요.
@@ -157,7 +157,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처
 
-<xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.
+<xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.
 
 다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여 줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.
 
@@ -170,7 +170,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 
 - 제네릭 매개 변수에 대한 제약 조건으로 사용되는 모든 형식은 CLS 규격이어야 합니다.
 
-.NET Framework [공용 형식 시스템](base-types/common-type-system.md)은 공용 언어 런타임에 의해 직접 지원되고 어셈블리의 메타데이터에서 특수 인코딩되는 여러 기본 형식을 포함합니다. 이러한 내장 형식 중에서 다음 표에 나열된 형식은 CLS 규격입니다.
+.NET [공용 형식 시스템](base-types/common-type-system.md)은 공용 언어 런타임에 의해 직접 지원되고 어셈블리의 메타데이터에서 특수 인코드되는 여러 기본 형식을 포함합니다. 이러한 내장 형식 중에서 다음 표에 나열된 형식은 CLS 규격입니다.
 
 |CLS 규격 형식|설명|
 |-------------------------|-----------------|
@@ -197,13 +197,13 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 |<xref:System.UInt64>|64비트 부호 없는 정수|<xref:System.Int64>(오버플로될 수 있음), <xref:System.Numerics.BigInteger> 또는 <xref:System.Double>|
 |<xref:System.UIntPtr>|부호 없는 포인터 또는 핸들|<xref:System.IntPtr>|
 
-.NET Framework 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다.
+.NET 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다.
 
 - boxed 값 형식. 다음 C# 예제는 이름이 `int*`인 public 속성 `Value` 형식을 가진 클래스를 만듭니다. `int*`는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
 
   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]
 
-- 형식화된 참조란 개체에 대한 참조 및 형식에 대한 참조를 포함하는 특수 생성자로서, 형식화된 참조는 .NET Framework에서 <xref:System.TypedReference> 클래스에 의해 표시됩니다.
+- 형식화된 참조란 개체에 대한 참조 및 형식에 대한 참조를 포함하는 특수 생성자로서, 형식화된 참조는 .NET에서 <xref:System.TypedReference> 클래스에 의해 표시됩니다.
 
 형식이 CLS 규격이 아닌 경우 <xref:System.CLSCompliantAttribute>의 `isCompliant` 값으로 `false` 특성을 해당 형식에 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute) 섹션을 참조하세요.
 
@@ -487,7 +487,7 @@ CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
 ### <a name="attributes"></a>특성
 
-.NET Framework 어셈블리에서 사용자 지정 특성은 확장 가능한 메커니즘을 제공하여 사용자 지정 특성을 저장하고 어셈블리, 형식, 멤버, 메서드 매개 변수 등의 개체 프로그래밍에 대한 메타데이터를 검색할 수 있도록 합니다. 사용자 지정 특성은 <xref:System.Attribute?displayProperty=nameWithType>에서 파생되거나 <xref:System.Attribute?displayProperty=nameWithType>에서 파생된 형식에서 파생되어야 합니다.
+.NET 어셈블리에서 사용자 지정 특성은 확장 가능한 메커니즘을 제공하여 사용자 지정 특성을 저장하고 어셈블리, 형식, 멤버, 메서드 매개 변수 등의 개체 프로그래밍에 대한 메타데이터를 검색할 수 있도록 합니다. 사용자 지정 특성은 <xref:System.Attribute?displayProperty=nameWithType>에서 파생되거나 <xref:System.Attribute?displayProperty=nameWithType>에서 파생된 형식에서 파생되어야 합니다.
 
 다음은 이 규칙을 위반하는 예제입니다. 이 예제에서는 `NumericAttribute`에서 파생되지 않은 <xref:System.Attribute?displayProperty=nameWithType> 클래스를 정의합니다. 컴파일러 오류는 클래스를 정의하지 않은 경우가 아닌 CLS 규격이 아닌 특성이 적용되는 경우에만 발생합니다.
 
@@ -533,7 +533,7 @@ CLS 규격 특성의 속성 또는 생성자는 다음과 같은 형식만 노�
 
 구성 요소 개발자는 다음 두 가지 방식으로 <xref:System.CLSCompliantAttribute> 특성을 사용할 수 있습니다.
 
-- CLS 규격인 구성 요소에서 노출된 공용 인터페이스 부분과 CLS 규격이 아닌 부분을 정의합니다. 특정 프로그램 요소를 CLS 규격으로 표시하도록 특성을 사용하면, 해당 요소는 .NET Framework를 대상으로 하는 모든 언어 및 도구에서 액세스 가능성이 보장됩니다.
+- CLS 규격인 구성 요소에서 노출된 공용 인터페이스 부분과 CLS 규격이 아닌 부분을 정의합니다. 특정 프로그램 요소를 CLS 규격으로 표시하도록 특성을 사용하면, 해당 요소는 .NET을 대상으로 하는 모든 언어 및 도구에서 액세스 가능성이 보장됩니다.
 
 - 구성 요소 라이브러리의 공용 인터페이스에서 CLS 규격인 프로그램 요소만을 노출시키도록 합니다. 요소가 CLS 규격이 아닌 경우, 일반적으로 컴파일러에서 경고가 발생합니다.
 
@@ -571,7 +571,7 @@ CLS 규격 구성 요소를 만들려면
 
 ## <a name="cross-language-interoperability"></a>언어 간 상호 운용성
 
-언어 독립성은 여러 가지 의미를 가질 수 있습니다. [언어 독립성 및 언어 독립 구성 요소](language-independence-and-language-independent-components.md) 문서에 설명된 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용하는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.
+언어 독립성은 여러 가지 의미를 가질 수 있습니다. [언어 독립성 및 언어 독립 구성 요소](language-independence-and-language-independent-components.md) 문서에 설명된 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용하는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET 어셈블리로 결합하는 것입니다.
 
 다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 StringUtil.vb용 소스 코드입니다.
 

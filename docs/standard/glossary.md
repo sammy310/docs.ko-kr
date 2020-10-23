@@ -1,14 +1,14 @@
 ---
 title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415012"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050346"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -21,6 +21,18 @@ Ahead-Of-Time 컴파일러입니다.
 [JIT](#jit)와 비슷하게 이 컴파일러도 [IL](#il)을 기계어 코드로 변환합니다. JIT 컴파일과는 달리 AOT 컴파일은 애플리케이션이 실행되기 전에 수행되며 일반적으로 다른 컴퓨터에서 수행됩니다. AOT 툴 체인은 런타임에 컴파일되지 않으므로 컴파일 시간을 최소화할 필요가 없습니다. 즉, 더 많은 시간을 최적화하는 데 사용할 수 있습니다. AOT의 컨텍스트는 전체 애플리케이션이므로 AOT 컴파일러는 모듈 간 연결 및 전체 프로그램 분석도 수행합니다. 즉, 모든 참조가 수행되고 단일 실행 파일이 생성된다는 의미입니다.
 
 [CoreRT](#corert)와 [.NET 네이티브](#net-native)를 참조하세요.
+
+## <a name="app-model"></a>앱 모델
+
+[워크로드](#workload)별 API. 몇 가지 예제는 다음과 같습니다.
+
+* ASP.NET
+* ASP.NET Web API
+* EF(Entity Framework)
+* WPF(Windows Presentation Foundation)
+* WCF(Windows Communication Foundation)
+* Windows WF(Workflow Foundation)
+* Windows Forms(WinForms)
 
 ## <a name="aspnet"></a>ASP.NET
 
@@ -291,6 +303,12 @@ Windows와 macOS, Linux, iOS, Android 같은 운영 체제와 해당 운영 체�
 유니버설 Windows 플랫폼입니다.
 
 IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET 5(및 .NET Core) 이상 버전에서 제공됩니다.
+
+## <a name="workload"></a>workload
+
+다른 사람이 빌드 중인 앱의 유형. [앱 모델](#app-model)보다 일반적입니다. 예를 들어 이 문서를 포함하여 모든 .NET 문서 페이지의 맨 위에는 **워크로드**에 대한 드롭다운 목록이 있습니다. 이를 통해 **웹**, **모바일**, **클라우드**, **데스크톱**, **기계 학습 \& 데이터**에 대한 문서로 전환할 수 있습니다.
+
+일부 컨텍스트에서 *워크로드*는 특정 유형의 앱을 지원하기 위해 설치할 수 있는 Visual Studio 기능 컬렉션을 참조합니다. 예를 들어 [워크로드 선택](../core/install/windows.md#select-a-workload)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

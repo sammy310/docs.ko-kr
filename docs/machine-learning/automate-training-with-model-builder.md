@@ -3,12 +3,12 @@ title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679679"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161142"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -54,9 +54,15 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 #### <a name="image-classification"></a>이미지 분류
 
-이미지 분류는 다른 범주의 이미지를 식별하는 데 사용될 수 있습니다. 예를 들어 다른 종류의 지형이나 동물 또는 제조 결함이 있습니다.
+이미지 분류는 다른 범주의 이미지를 식별하는 데 사용됩니다. 예를 들어 다른 종류의 지형이나 동물 또는 제조 결함이 있습니다.
 
 이미지 집합이 있고 이미지를 여러 범주로 분류하려는 경우 이미지 분류 시나리오를 사용할 수 있습니다.
+
+#### <a name="object-detection"></a>개체 감지
+
+개체 검색에서는 이미지에서 엔터티를 찾고 분류하는 데 사용됩니다.  예를 들어 이미지에서 자동차와 사람을 찾고 식별합니다.
+
+이미지에 서로 다른 유형의 개체가 여러 개 포함되어 있는 경우 개체 검색을 사용할 수 있습니다.
 
 #### <a name="recommendation"></a>권장
 
@@ -66,13 +72,15 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 ## <a name="environment"></a>환경
 
-컴퓨터에서 로컬로 또는 Azure 클라우드에서 기계 학습 모델을 학습시킬 수 있습니다.
+시나리오에 따라 머신에서 로컬로 또는 Azure의 클라우드에서 기계 학습 모델을 학습할 수 있습니다.
 
 로컬로 학습시키는 경우 컴퓨터 리소스(CPU, 메모리 및 디스크)의 제약 조건 내에서 작업합니다. 클라우드에서 학습시키는 경우에는 특히 대규모 데이터 집합의 시나리오 요구 사항에 맞게 리소스를 확장할 수 있습니다.
 
-로컬 학습은 모든 시나리오에서 지원됩니다.
+개체 감지를 제외한 모든 시나리오에서 로컬 CPU 교육이 지원됩니다.
 
-Azure 학습은 이미지 분류에 대해 지원됩니다.
+로컬 GPU 학습은 이미지 분류에 대해 지원됩니다.
+
+Azure 학습은 이미지 분류 및 개체 감지에 대해 지원됩니다.
 
 ## <a name="data"></a>데이터
 

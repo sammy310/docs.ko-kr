@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381647"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162728"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>형식에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
 
@@ -32,9 +32,9 @@ ms.locfileid: "87381647"
   
 5. Null이 아닌 값은 Null과 같지 않습니다. 그러나 CLR은 모든 메서드 호출에서 Null을 확인하고 `this` 참조가 Null인 경우 `NullReferenceException`을 throw합니다. 따라서 `x` Null인 경우 `x.Equals(y)`는 예외를 throw합니다. `Equals`에 대한 인수에 따라 규칙 1 또는 2가 위반됩니다.
 
- 정의하는 모든 구조체에는 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 <xref:System.ValueType?displayProperty=nameWithType> 재정의에서 상속하는 값 같음의 기본 구현이 이미 있습니다. 이 구현은 리플렉션을 사용하여 형식의 모든 필드와 속성을 검사합니다. 이 구현은 올바른 결과를 생성하지만 해당 형식에 맞게 작성한 사용자 지정 구현에 비해 비교적 속도가 느립니다.  
+정의하는 모든 구조체에는 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 <xref:System.ValueType?displayProperty=nameWithType> 재정의에서 상속하는 값 같음의 기본 구현이 이미 있습니다. 이 구현은 리플렉션을 사용하여 형식의 모든 필드와 속성을 검사합니다. 이 구현은 올바른 결과를 생성하지만 해당 형식에 맞게 작성한 사용자 지정 구현에 비해 비교적 속도가 느립니다.  
   
- 값 같음에 대한 구현 세부 정보는 클래스 및 구조체에서 서로 다릅니다. 그러나 클래스와 구조체는 둘 다 같음 구현을 위해 동일한 기본 단계가 필요합니다.  
+값 같음에 대한 구현 세부 정보는 클래스 및 구조체에서 서로 다릅니다. 그러나 클래스와 구조체는 둘 다 같음 구현을 위해 동일한 기본 단계가 필요합니다.  
   
 1. [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드를 재정의합니다. 대부분의 경우 `bool Equals( object obj )` 구현에서 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스 구현인 형식별 `Equals` 메서드만 호출하면 됩니다. 2단계를 참조하세요.  
   
@@ -45,29 +45,30 @@ ms.locfileid: "87381647"
 4. 값이 같은 두 개체가 동일한 해시 코드를 생성하도록 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>를 재정의합니다.  
   
 5. 선택 사항: “보다 큼” 또는 “보다 작음”에 대한 정의를 지원하기 위해 형식에 대한 <xref:System.IComparable%601> 인터페이스를 구현하고 [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) 및 [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 연산자도 오버로드합니다.  
-  
- 뒤에 오는 첫 번째 예제에서는 클래스의 구현 방법을 보여 줍니다. 두 번째 예제에서는 구조체의 구현 방법을 보여 줍니다.  
 
-## <a name="example"></a>예제
+> [!NOTE]
+> C# 9.0부터 레코드를 사용하여 불필요한 상용구 코드 없이 값 같음 의미 체계를 가져올 수 있습니다.
 
- 다음 예제에서는 클래스(참조 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.  
-  
- [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
-  
- 클래스(참조 형식)에서 두 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 기본 구현은 값이 같은지 검사하지 않고 참조가 같은지 비교합니다. 구현자가 가상 메서드를 재정의하는 경우 값 같음 의미 체계를 제공하기 위한 것입니다.  
-  
- 클래스에서 재정의하지 않는 경우에도 `==` 및 `!=` 연산자를 클래스와 함께 사용할 수 있습니다. 그러나 기본 동작은 참조가 같은지 검사하는 것입니다. 클래스에서 `Equals` 메서드를 오버로드하는 경우 `==` 및 `!=` 연산자를 오버로드해야 하지만 필수는 아닙니다.  
+## <a name="class-example"></a>클래스 예제
 
-## <a name="example"></a>예제
+다음 예제에서는 클래스(참조 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.
 
- 다음 예제에서는 구조체(값 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.  
+[!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]
+
+클래스(참조 형식)에서 두 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 기본 구현은 값이 같은지 검사하지 않고 참조가 같은지 비교합니다. 구현자가 가상 메서드를 재정의하는 경우 값 같음 의미 체계를 제공하기 위한 것입니다.
+
+클래스에서 재정의하지 않는 경우에도 `==` 및 `!=` 연산자를 클래스와 함께 사용할 수 있습니다. 그러나 기본 동작은 참조가 같은지 검사하는 것입니다. 클래스에서 `Equals` 메서드를 오버로드하는 경우 `==` 및 `!=` 연산자를 오버로드해야 하지만 필수는 아닙니다.
+
+## <a name="struct-example"></a>구조체 예제
+
+다음 예제에서는 구조체(값 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.
+
+[!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]
   
- [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
+구조체의 경우 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 기본 구현(<xref:System.ValueType?displayProperty=nameWithType>의 재정의된 버전)에서 리플렉션을 통해 형식에 있는 모든 필드의 값을 비교하여 값이 같은지 검사합니다. 구현자가 구조체의 가상 `Equals` 메서드를 재정의하는 경우 값이 같은지 검사하는 보다 효율적인 수단을 제공하고 필요에 따라 구조체 필드 또는 속성의 하위 집합을 기준으로 비교하기 위한 것입니다.
   
- 구조체의 경우 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 기본 구현(<xref:System.ValueType?displayProperty=nameWithType>의 재정의된 버전)에서 리플렉션을 통해 형식에 있는 모든 필드의 값을 비교하여 값이 같은지 검사합니다. 구현자가 구조체의 가상 `Equals` 메서드를 재정의하는 경우 값이 같은지 검사하는 보다 효율적인 수단을 제공하고 필요에 따라 구조체 필드 또는 속성의 하위 집합을 기준으로 비교하기 위한 것입니다.  
-  
- [==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자는 구조체에서 명시적으로 오버로드하지 않는 한 구조체에 대해 연산을 수행할 수 없습니다.  
-  
+[==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자는 구조체에서 명시적으로 오버로드하지 않는 한 구조체에 대해 연산을 수행할 수 없습니다.
+
 ## <a name="see-also"></a>참조
 
 - [같음 비교](equality-comparisons.md)

@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 description: C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614664"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997664"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -162,7 +162,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-추가된 메서드는  으로, 파생 클래스에서만 호출할 수 있음을 뜻합니다. 이렇게 선언하면 다른 클라이언트가 메서드를 호출할 수 없습니다. 또한 파생 클래스가 동작을 변경할 수 있도록 `virtual`입니다. 반환 형식은 `Transaction?`입니다. `?` 주석은 메서드가 `null`을 반환할 수 있음을 나타냅니다. 인출 한도를 초과할 때 수수료를 청구하기 위해 `LineOfCreditAccount`에 다음 구현을 추가합니다.
+추가된 메서드는 `protected`로, 파생 클래스에서만 호출할 수 있음을 뜻합니다. 이렇게 선언하면 다른 클라이언트가 메서드를 호출할 수 없습니다. 또한 파생 클래스가 동작을 변경할 수 있도록 `virtual`입니다. 반환 형식은 `Transaction?`입니다. `?` 주석은 메서드가 `null`을 반환할 수 있음을 나타냅니다. 인출 한도를 초과할 때 수수료를 청구하기 위해 `LineOfCreditAccount`에 다음 구현을 추가합니다.
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d21b2e092d460fdfc367d0f490228ed44ad5c6cc
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 47c676122df4f0990949a7bfbcd7af8c6144d870
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365655"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160547"
 ---
 ### <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT의 기본 제공 지원이 .NET에서 제거됨
 
@@ -29,9 +29,13 @@ ms.locfileid: "85365655"
 
 #### <a name="recommended-action"></a>권장 조치
 
-- [Microsoft.Windows.SDK.Contracts 패키지](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)에 대한 참조를 제거하고 [Microsoft.Windows.SDK.NET 패키지](https://www.nuget.org/packages/microsoft.windows.sdk.net)에 대한 참조로 바꿉니다.
+- [Microsoft.Windows.SDK.Contracts 패키지](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)에 대한 참조를 제거합니다.  대신 프로젝트의 `TargetFramework` 속성을 통해 액세스하려는 Windows API의 버전을 지정합니다.  예를 들면 다음과 같습니다.
 
-- .NET 5.0 이상 버전에서 [C# /WinRT](/windows/uwp/csharp-winrt/) 도구 체인을 사용하여 WinRT API 및 형식을 생성하거나 사용자 지정합니다.
+  ```xml
+  <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+  ```
+
+- [C#/WinRT](/windows/uwp/csharp-winrt/) 도구 체인을 사용하여 .NET 5.0 이상 버전용 WinRT API 및 형식을 생성하거나 사용자 지정합니다.
 
 #### <a name="category"></a>범주
 

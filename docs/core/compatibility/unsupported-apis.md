@@ -1,25 +1,25 @@
 ---
-title: .NET Core에서 지원되지 않는 API
+title: .NET Core 및 .NET 5+에서 지원되지 않는 API
 titleSuffix: ''
-description: .NET Core에서 항상 예외를 throw하는 .NET Framework의 API를 알아봅니다.
-ms.date: 12/23/2019
-ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+description: .NET Core 및 .NET 5.0 이상 버전에서 항상 예외를 throw하는 .NET API를 알아봅니다.
+ms.date: 10/13/2020
+ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414437"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159341"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core에서 항상 예외를 throw하는 API
+# <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core 및 .NET 5+에서 항상 예외를 throw하는 API
 
-다음 API는 모든 또는 일부 플랫폼의 .NET Core에서 <xref:System.PlatformNotSupportedException>를 throw합니다.
+다음 API는 플랫폼 전체 또는 하위 집합의 .NET 5.0 이상 버전(.NET Core의 모든 버전 포함)에서 항상 <xref:System.PlatformNotSupportedException>을 throw합니다.
 
-이 문서에서는 네임스페이스별로 영향을 받는 API 멤버를 구성합니다.
+이 문서에서는 네임스페이스별로 영향을 받는 API를 구성합니다.
 
 > [!NOTE]
 >
-> - 이 문서는 작성 중입니다. .NET Core에서 예외를 throw하는 API의 전체 목록이 아닙니다.
-> - 이 문서에는 .NET Core에서 throw하는 이진 Serialization에 대한 명시적 인터페이스 구현이 포함되어 있지 않습니다. 자세한 내용은 [.NET Core의 이진 Serialization](../../standard/serialization/binary-serialization.md#net-core)을 참조하세요.
+> - 이 문서는 작성 중입니다. .NET 5+에서 예외를 throw하는 API의 전체 목록이 아닙니다.
+> - 이 문서에는 .NET 5+에서 throw하는 이진 직렬화에 대한 명시적 인터페이스 구현이 포함되어 있지 않습니다. 자세한 내용은 [.NET Core의 이진 Serialization](../../standard/serialization/binary-serialization.md#net-core)을 참조하세요.
 
 ## <a name="system"></a>시스템
 

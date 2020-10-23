@@ -1,7 +1,7 @@
 ---
 title: C#을 사용하여 JSON을 직렬화 및 역직렬화하는 방법 - .NET
-description: 이 문서에서는 System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 보여 줍니다. 샘플 코드가 포함되어 있습니다.
-ms.date: 05/13/2020
+description: System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 알아봅니다. 샘플 코드가 포함되어 있습니다.
+ms.date: 10/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557842"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997777"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 직렬화 및 역직렬화(마샬링 및 역 마샬링)하는 방법
 
-이 문서에서는 <xref:System.Text.Json> 네임스페이스를 사용하여 JSON(JavaScript Object Notation)으로/에서 직렬화 및 역직렬화하는 방법을 보여줍니다. `Newtonsoft.Json`에서 기존 코드를 이식하는 경우 [`System.Text.Json`으로 마이그레이션 방법](system-text-json-migrate-from-newtonsoft-how-to.md)을 참조하세요.
+이 문서에서는 <xref:System.Text.Json?displayProperty=fullName> 네임스페이스를 사용하여 JSON(JavaScript Object Notation)으로 직렬화와 JSON으로부터 역직렬화하는 방법을 보여줍니다. `Newtonsoft.Json`에서 기존 코드를 이식하는 경우 [`System.Text.Json`으로 마이그레이션 방법](system-text-json-migrate-from-newtonsoft-how-to.md)을 참조하세요.
 
 지침 및 샘플 코드에서는 [ASP.NET Core](/aspnet/core/) 같은 프레임워크를 통하지 않고 직접 라이브러리를 사용합니다.
 
@@ -62,9 +62,12 @@ using System.Text.Json.Serialization;
 
 ### <a name="serialization-example"></a>직렬화 예제
 
-다음은 컬렉션 및 중첩 클래스를 포함하는 클래스 예제입니다.
+다음은 수집 유형 속성과 사용자 정의 형식을 포함하는 예제 클래스입니다.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+
+> [!TIP]
+> "POCO"는 [Plain Old CLR Object](https://en.wikipedia.org/wiki/Plain_old_CLR_object)를 나타냅니다. POCO는 예를 들어 상속 또는 속성을 통해 프레임워크별 형식에 의존하지 않는 .NET 형식입니다.
 
 다음은 이전 형식의 인스턴스를 직렬화하는 JSON 출력의 예입니다. JSON 출력은 기본적으로 축소됩니다.
 
@@ -72,7 +75,7 @@ using System.Text.Json.Serialization;
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-다음 예제에서는 동일한 JSON 형식(공백 및 들여쓰기를 사용하여 보기 좋게 인쇄됨)을 보여줍니다.
+다음 예제에서는 동일한 JSON 형식을 보여주지만 다음과 같은 형식이 지정됩니다(공백 및 들여쓰기를 사용하여 보기 좋게 인쇄됨).
 
 ```json
 {
@@ -123,7 +126,7 @@ UTF-8로 직렬화하면 문자열 기반 메서드를 사용할 때보다 약 5
 지원되는 형식은 다음과 같습니다.
 
 * 숫자 형식, 문자열, 부울 등 JavaScript 기본 형식에 매핑되는 .NET 기본 형식
-* 사용자 정의 [POCO(Plain Old CLR Object)](https://stackoverflow.com/questions/250001/poco-definition)
+* 사용자 정의 [POCO(Plain Old CLR Object)](https://en.wikipedia.org/wiki/Plain_old_CLR_object)
 * 1차원 및 가변 배열(`ArrayName[][]`)
 * `Dictionary<string,TValue>`. 여기서 `TValue`는 `object`, `JsonElement` 또는 POCO입니다.
 * 다음 네임스페이스의 컬렉션.
@@ -137,7 +140,7 @@ UTF-8로 직렬화하면 문자열 기반 메서드를 사용할 때보다 약 5
 
 문자열 또는 파일에서 역직렬화하려면 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 메서드를 호출합니다.
 
-다음 예제에서는 문자열에서 JSON을 읽고, 앞에서 [직렬화 예제](#serialization-example)에서 설명한 `WeatherForecast` 클래스의 인스턴스를 만듭니다.
+다음 예제에서는 문자열에서 JSON을 읽고, 앞에서 [직렬화 예제](#serialization-example)에서 설명한 `WeatherForecastWithPOCOs` 클래스의 인스턴스를 만듭니다.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -159,9 +162,13 @@ UTF-8에서 역직렬화하려면 다음 예제와 같이 `Utf8JsonReader` 또�
 
 ## <a name="deserialization-behavior"></a>역직렬화 동작
 
+JSON을 역직렬화할 때 다음 동작이 적용됩니다.
+
 * 속성 이름 일치 시에 대/소문자를 구분합니다. [대/소문자를 구분 하지 않도록 지정](#case-insensitive-property-matching)할 수 있습니다.
 * JSON에 읽기 전용 속성의 값이 포함되어 있으면 해당 값이 무시되고 예외가 throw되지 않습니다.
-* 매개 변수 없는 생성자가 없는 참조 형식으로의 역직렬화는 지원되지 않습니다.
+* 역직렬화를 위한 생성자:
+  - .NET Core 3.0 및 3.1에서는 공용, 내부 또는 프라이빗의 매개 변수가 없는 생성자가 역직렬화에 사용됩니다.
+  - .NET 5.0 이상에서 비공용 생성자는 직렬 변환기에서 무시됩니다. 그러나 매개 변수가 없는 생성자를 사용할 수 없는 경우 매개 변수가 있는 생성자를 사용할 수 있습니다.
 * 변경할 수 없는 개체 또는 읽기 전용 속성으로의 역직렬화는 지원되지 않습니다.
 * 기본적으로 열거형은 숫자로 지원됩니다. [열거형 이름을 문자열로 직렬화](#enums-as-strings)할 수 있습니다.
 * 필드는 지원되지 않습니다.

@@ -7,15 +7,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework regular expressions, best practices
+- .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 727c3f2b8465c5d69244abe0f441d2a24e84dc5f
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554582"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162923"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -136,7 +136,7 @@ ms.locfileid: "90554582"
 
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>정규식: 어셈블리로 컴파일
 
-.NET에서는 또한 컴파일된 정규식이 포함된 어셈블리를 만들 수 있습니다. 따라서 정규식 컴파일로 인한 성능 문제를 런타임에서 디자인 타임으로 이동할 수 있습니다. 그러나 몇 가지 추가적인 작업도 있습니다. 정규식을 미리 정의하고 이를 어셈블리로 컴파일해야 합니다. 그런 다음 컴파일러는 어셈블리의 정규식을 사용하는 소스 코드를 컴파일할 때 이 어셈블리를 참조할 수 있습니다. 어셈블리로 컴파일되는 각 정규식은 <xref:System.Text.RegularExpressions.Regex>에서 파생되는 클래스로 표현됩니다.
+.NET에서는 또한 컴파일된 정규식이 포함된 어셈블리를 만들 수 있습니다. 따라서 정규식 컴파일로 인한 성능 문제를 런타임에서 디자인 타임으로 이동할 수 있습니다. 그러나 몇 가지 추가적인 작업도 있습니다. 정규식을 미리 정의하고 이를 어셈블리로 컴파일해야 합니다. 그런 다음, 컴파일러는 어셈블리의 정규식을 사용하는 소스 코드를 컴파일할 때 이 어셈블리를 참조할 수 있습니다. 어셈블리로 컴파일되는 각 정규식은 <xref:System.Text.RegularExpressions.Regex>에서 파생되는 클래스로 표현됩니다.
 
 정규식을 어셈블리로 컴파일하려면 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> 메서드를 호출하고 컴파일할 정규식을 나타내는 <xref:System.Text.RegularExpressions.RegexCompilationInfo> 개체 배열과 만들려는 어셈블리에 대한 정보가 포함된 <xref:System.Reflection.AssemblyName> 개체에 메서드 호출을 전달합니다.
 
