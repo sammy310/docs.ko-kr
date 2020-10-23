@@ -3,12 +3,12 @@ title: 관계형 마이닝 모델과 NoSQL 데이터 비교
 description: 클라우드 네이티브 응용 프로그램의 관계형 및 NoSQL 데이터에 대 한 자세한 정보
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163637"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434863"
 ---
 # <a name="relational-vs-nosql-data"></a>관계형 마이닝 모델과 NoSQL 데이터 비교
 
@@ -30,7 +30,7 @@ NoSQL 데이터베이스에는 특정 사용 사례에 적합 한 데이터에 �
 | :-------- | :-------- |
 | 문서 저장소 | 데이터 및 메타 데이터는 데이터베이스 내의 JSON 기반 문서에 계층적으로 저장 됩니다. |
 | 키 값 저장소 | NoSQL 데이터베이스 중 가장 간단한 데이터는 키-값 쌍의 컬렉션으로 표시 됩니다. |
-| 넓은 열 저장소 | 관련 데이터는 단일 열에 중첩 키/값 쌍의 집합으로 저장 됩니다. |
+| Wide-Column 저장소 | 관련 데이터는 단일 열에 중첩 키/값 쌍의 집합으로 저장 됩니다. |
 | 그래프 저장소 | 데이터는 그래프 구조에 노드,에 지 및 데이터 속성으로 저장 됩니다. |
 
 ## <a name="the-cap-theorem"></a>캡 정리
@@ -65,7 +65,7 @@ NoSQL 데이터베이스는 일반적으로 고가용성 및 파티션 허용 �
 
 높은 가용성과 대규모 확장성은 일반적으로 강력한 일관성 보다 비즈니스에 더 중요 합니다. 개발자는 Sagas, CQRS 및 비동기 메시징과 같은 기술과 패턴을 구현 하 여 최종 일관성을 수용할 수 있습니다.
 
-> 오늘날는 CAP 정리 제약 조건을 conidering 때 주의를 기울여야 합니다. NewSQL 이라는 새로운 유형의 데이터베이스가 등장 하 여 NoSQL 시스템의 수평적 확장성과 확장 가능한 성능을 모두 지원 하도록 관계형 데이터베이스 엔진을 확장 합니다.
+> 오늘날 CAP 정리 제약 조건을 고려할 때 주의 해야 합니다. NewSQL 이라는 새로운 유형의 데이터베이스가 등장 하 여 NoSQL 시스템의 수평적 확장성과 확장 가능한 성능을 모두 지원 하도록 관계형 데이터베이스 엔진을 확장 합니다.
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>관계형 및 NoSQL 시스템에 대 한 고려 사항
 
@@ -131,7 +131,7 @@ Microsoft SQL Server에 대 한 전문 지식이 있는 개발 팀은 [Azure SQL
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)   는 오픈 소스 관계형 데이터베이스 이며 [램프 소프트웨어 스택에](https://en.wikipedia.org/wiki/LAMP_(software_bundle))빌드된 응용 프로그램에 대 한 기둥입니다. *읽기* 작업이 많은 워크 로드에 대해 널리 선택 되어 있으며, Facebook, Twitter, YouTube 등 많은 대규모 조직에서 사용 됩니다. Community edition은 무료로 제공 되지만 enterprise edition에는 라이선스 구매가 필요 합니다. 원래 1995에 생성 된 제품은 2008의 Sun Microsystems에서 구매 했습니다. Oracle에서 Sun 및 MySQL 2010을 얻었습니다.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) 은 오픈 소스 관계형 데이터베이스 이며 [램프 소프트웨어 스택에](https://en.wikipedia.org/wiki/LAMP_(software_bundle))빌드된 응용 프로그램에 대 한 기둥입니다. *읽기* 작업이 많은 워크 로드에 대해 널리 선택 되어 있으며, Facebook, Twitter, YouTube 등 많은 대규모 조직에서 사용 됩니다. Community edition은 무료로 제공 되지만 enterprise edition에는 라이선스 구매가 필요 합니다. 원래 1995에 생성 된 제품은 2008의 Sun Microsystems에서 구매 했습니다. Oracle에서 Sun 및 MySQL 2010을 얻었습니다.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) 는 오픈 소스 MySQL 서버 엔진을 기반으로 하는 관리 되는 관계형 데이터베이스 서비스입니다. MySQL Community edition을 사용 합니다. Azure MySQL 서버는 서비스에 대 한 관리 지점입니다. 이는 온-프레미스 배포에 사용 되는 것과 동일한 MySQL 서버 엔진입니다. 엔진은 서버당 단일 데이터베이스 또는 리소스를 공유 하는 서버당 여러 데이터베이스를 만들 수 있습니다. 새 기술에 대해 알아보거나 가상 머신을 관리할 필요 없이 동일한 오픈 소스 도구를 사용 하 여 데이터를 계속 관리할 수 있습니다.
 
@@ -258,7 +258,7 @@ Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 
 
 ## <a name="newsql-databases"></a>NewSQL 데이터베이스
 
-*Newsql*   는 NoSQL의 분산 확장성과 관계형 데이터베이스의 ACID 보증을 결합 하는 새로운 데이터베이스 기술입니다. NewSQL 데이터베이스는 전체 트랜잭션 지원 및 ACID 규정에 따라 분산 된 환경에서 대용량 데이터를 처리 해야 하는 비즈니스 시스템에 중요 합니다. NoSQL 데이터베이스는 대규모 확장성을 제공할 수 있지만 데이터 일관성을 보장 하지는 않습니다. 일관 되지 않은 데이터의 일시적인 문제는 개발 팀에 부담을 수 있습니다. 개발자는 일관성 없는 데이터로 인해 발생 하는 문제를 관리 하기 위해 마이크로 서비스 코드로 보호를 구성 해야 합니다.
+*Newsql* 은 nosql의 분산 확장성과 관계형 데이터베이스의 ACID 보증을 결합 하는 새로운 데이터베이스 기술입니다. NewSQL 데이터베이스는 전체 트랜잭션 지원 및 ACID 규정에 따라 분산 된 환경에서 대용량 데이터를 처리 해야 하는 비즈니스 시스템에 중요 합니다. NoSQL 데이터베이스는 대규모 확장성을 제공할 수 있지만 데이터 일관성을 보장 하지는 않습니다. 일관 되지 않은 데이터의 일시적인 문제는 개발 팀에 부담을 수 있습니다. 개발자는 일관성 없는 데이터로 인해 발생 하는 문제를 관리 하기 위해 마이크로 서비스 코드로 보호를 구성 해야 합니다.
 
 CNCF (Cloud Native 컴퓨팅 Foundation)는 여러 NewSQL 데이터베이스 프로젝트를 제공 합니다.
 
@@ -279,7 +279,7 @@ Kubernetes는 *서비스 구문을* 사용 하 여 클라이언트가 단일 DNS
 
 이 시나리오에서 모든 데이터베이스 인스턴스는 동일 합니다. 기본 또는 보조 관계가 없습니다. CockroachDB에서 발견 된 *합의 복제* 와 같은 기술은 모든 데이터베이스 노드에서 모든 요청을 처리할 수 있도록 합니다. 부하 분산 된 요청을 받는 노드에 로컬에서 필요한 데이터가 있으면 즉시 응답 합니다. 그렇지 않으면 노드가 게이트웨이가 되며 적절 한 노드에 요청을 전달 하 여 올바른 답을 가져옵니다. 클라이언트의 관점에서 보면 모든 데이터베이스 노드는 동일 합니다. 즉, 백그라운드에서 작동 하는 수십 개 또는 수백 개의 노드가 있더라도 단일 컴퓨터 시스템의 일관성을 보장 하는 단일 *논리* 데이터베이스로 표시 됩니다.
 
-NewSQL 데이터베이스의 메커니즘에 대 한 자세한 내용은 [대시: Kubernetes 데이터베이스의 네 가지 속성](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) 문서를 참조 하세요.
+NewSQL 데이터베이스의 메커니즘에 대 한 자세한 내용은 [대시: Kubernetes-Native 데이터베이스의 네 가지 속성](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) 문서를 참조 하세요.
 
 ## <a name="data-migration-to-the-cloud"></a>클라우드로 데이터 마이그레이션
 
