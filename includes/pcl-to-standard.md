@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd5bcc6bd96834d4803e00bd84eff4441abfe9f8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eb0a5c8ac733f0db4e8356dca80f898bc7a72cfb
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641444"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471966"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="97065-101">이식 가능한 클래스 라이브러리 프로젝트는.NET 구현의 매우 구체적인 하위 집합만 대상으로 하기 때문에 강력한 것이 좋습니다 새 응용 프로그램 개발에 사용을 합니다.</span><span class="sxs-lookup"><span data-stu-id="97065-101">Because Portable Class Library projects target only a very specific subset of .NET implementations, we strongly discourage their use in new application development.</span></span> <span data-ttu-id="97065-102">권장 되는 대신.NET Standard 라이브러리를.NET 표준의 특정 버전을 지 원하는 모든.NET 구현을 대상으로 하는 경우</span><span class="sxs-lookup"><span data-stu-id="97065-102">The recommended replacement is a .NET Standard library, which targets all .NET implementations that support a specific version of the .NET Standard.</span></span> <span data-ttu-id="97065-103">자세한 내용은 [.NET 표준](~/docs/standard/net-standard.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="97065-103">For more information, see [.NET Standard](~/docs/standard/net-standard.md).</span></span>
+> <span data-ttu-id="33513-101">새 응용 프로그램 개발에서는 .NET 구현의 매우 구체적인 하위 집합만 대상으로 하기 때문에 이식 가능한 클래스 라이브러리를 사용 하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="33513-101">We strongly discourage the use of portable class libraries in new application development, because they target only a very specific subset of .NET implementations.</span></span> <span data-ttu-id="33513-102">.NET Framework와 다른 .NET 구현 간에 코드를 공유 하는 재사용 가능한 라이브러리를 빌드하는 경우에는 .NET Standard 2.0 라이브러리를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="33513-102">If you're building a reusable library to share code between .NET Framework and other .NET implementations, the recommended replacement is a .NET Standard 2.0 library.</span></span> <span data-ttu-id="33513-103">그렇지 않으면 .NET 5 이상을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="33513-103">Otherwise, use .NET 5 or later.</span></span> <span data-ttu-id="33513-104">자세한 내용은 [.NET 표준](~/docs/standard/net-standard.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="33513-104">For more information, see [.NET Standard](~/docs/standard/net-standard.md).</span></span>
