@@ -149,9 +149,13 @@ items:
         href: ../standard/whats-new/whats-new-in-dotnet-standard.md
   - name: 도구 및 진단
     items:
+      - name: 개요
+        displayName: 'diagnostics,tools,tooling,productivity,instrumentation'
+        href: tools-and-productivity.md
       - name: .NET Core SDK
         items:
           - name: 개요
+            displayName: '.net sdk,software development kit,software dev kit,tool'
             href: ../core/sdk.md
           - name: 오류 메시지
             items:
@@ -166,6 +170,7 @@ items:
       - name: .NET Core CLI
         items:
           - name: 개요
+            displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
           - name: 참고
             items:
@@ -255,23 +260,6 @@ items:
                     href: ../core/tools/dotnet-list-package.md
                   - name: dotnet remove package
                     href: ../core/tools/dotnet-remove-package.md
-          - name: 전역 및 로컬 도구
-            items:
-              - name: 도구 관리
-                href: ../core/tools/global-tools.md
-              - name: 문제 해결 도구
-                href: ../core/tools/troubleshoot-usage-issues.md
-              - name: CLI용 도구 만들기
-                items:
-                  - name: 1 - 도구 만들기
-                    displayName: 'tools, tutorials, cli'
-                    href: ../core/tools/global-tools-how-to-create.md
-                  - name: 2 - 전역 도구 사용
-                    displayName: 'tools, tutorials, cli'
-                    href: ../core/tools/global-tools-how-to-use.md
-                  - name: 3 - 로컬 도구 사용
-                    href: ../core/tools/local-tools-how-to-use.md
-                    displayName: 'tools, tutorials, cli'
           - name: global.json 개요
             href: ../core/tools/global-json.md
           - name: 원격 분석
@@ -297,6 +285,17 @@ items:
               - name: 3 - 템플릿 팩 만들기
                 href: ../core/tutorials/cli-templates-create-template-pack.md
                 displayName: 'tutorials, cli'
+      - name: IDE(통합 개발 환경)
+        items:
+          - name: Visual Studio
+            displayName: 'ide,integrated development environment,vs'
+            href: /visualstudio/windows/
+          - name: Mac용 Visual Studio
+            displayName: 'ide,integrated development environment,vs for mac,macOS,Mac'
+            href: /visualstudio/mac/
+          - name: Visual Studio Code
+            displayName: 'ide,integrated development environment,code,vs code,oss ide,'
+            href: 'https://code.visualstudio.com/docs'
       - name: MSBuild 및 프로젝트 파일
         items:
           - name: 프로젝트 SDK
@@ -317,21 +316,43 @@ items:
             href: ../core/tools/csproj.md
           - name: 종속성 관리
             href: ../core/tools/dependencies.md
-      - name: .NET Core 추가 도구
+      - name: 전역 및 로컬 도구
+        items:
+          - name: 도구 관리
+            displayName: 'global tool,local tool'
+            href: ../core/tools/global-tools.md
+          - name: 문제 해결 도구
+            displayName: 'global tool troubleshooting,local tool troubleshooting,'
+            href: ../core/tools/troubleshoot-usage-issues.md
+          - name: CLI용 도구 만들기
+            items:
+              - name: 1 - 도구 만들기
+                displayName: 'tools,tutorials,cli,create global tool,create local tool'
+                href: ../core/tools/global-tools-how-to-create.md
+              - name: 2 - 전역 도구 사용
+                displayName: 'tools,tutorials,cli,understand global tool'
+                href: ../core/tools/global-tools-how-to-use.md
+              - name: 3 - 로컬 도구 사용
+                href: ../core/tools/local-tools-how-to-use.md
+                displayName: 'tools,tutorials,cli,local tool'
+      - name: 추가 도구
         items:
           - name: 개요
             href: ../core/additional-tools/index.md
-          - name: .NET Core 제거 도구
+          - name: .NET 제거 도구
             href: ../core/additional-tools/uninstall-tool.md
-          - name: WCF Web Service Reference 공급자
+          - name: WCF 웹 서비스 참조 공급자
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
-          - name: dotnet-svcutil
+          - name: WCF 서비스 유틸리티
+            displayName: dotnet-svcutil
             href: ../core/additional-tools/dotnet-svcutil-guide.md
-          - name: dotnet-svcutil.xmlserializer
+          - name: WCF 서비스 XML 직렬 변환기
+            displayName: dotnet-svcutil.xmlserializer
             href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
-          - name: XML Serializer Generator
+          - name: XML 직렬 변환기 생성기
+            displayName: 'sgen,sgen.exe,Microsoft.XmlSerializer.Generator,XmlSerializer'
             href: ../core/additional-tools/xml-serializer-generator.md
-      - name: 진단 도구
+      - name: 진단 및 계측
         items:
           - name: 개요
             href: ../core/diagnostics/index.md
