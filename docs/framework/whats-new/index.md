@@ -1,23 +1,25 @@
 ---
 title: .NET Framework의 새로운 기능
 description: .NET Framework의 다양한 버전에서 제공되는 새로운 기능을 참조하세요. 각 버전의 주요 새로운 기능 및 향상된 기능에 대한 요약을 확인하세요.
-ms.date: 04/18/2019
+ms.date: 10/21/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756080"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471945"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
-이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
+
+이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용을 요약합니다.
 
 - [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
@@ -30,17 +32,17 @@ ms.locfileid: "91756080"
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-이 문서는 각 새로운 기능에 대한 포괄적인 정보를 제공하지 않으며 변경될 수 있습니다. .NET Framework에 대한 일반적인 내용은 [시작](../get-started/index.md)을 참조하십시오. 지원되는 플랫폼은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오. 다운로드 링크와 설치 지침은 [설치 가이드](../install/guide-for-developers.md)를 참조하십시오.
+이 문서는 각 새로운 기능에 대한 포괄적인 정보를 제공하지 않으며 변경될 수 있습니다. .NET Framework에 대한 일반적인 내용은 [시작](../get-started/index.md)을 참조하세요. 지원되는 플랫폼은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오. 다운로드 링크와 설치 지침은 [설치 가이드](../install/guide-for-developers.md)를 참조하십시오.
 
 > [!NOTE]
-> .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](../get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.
+> .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet을 사용하는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](../get-started/the-net-framework-and-out-of-band-releases.md)를 참조하세요.
 > .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://www.nuget.org/profiles/dotnetframework)을 참조하세요.
 
 <a name="v48"></a>
 
 ## <a name="introducing-net-framework-48"></a>.NET Framework 4.8 소개
 
-.NET Framework 4.8은 .NET Framework 4.x의 이전 버전에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 및 여러 가지 새 기능이 추가됩니다.
+.NET Framework 4.8은 .NET Framework 4.x의 이전 버전에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 사항 및 여러 가지 새 기능이 추가됩니다.
 
 ### <a name="download-and-install-net-framework-48"></a>.NET Framework 4.8 다운로드 및 설치
 
@@ -69,7 +71,7 @@ ms.locfileid: "91756080"
 
 #### <a name="base-classes"></a>기본 클래스
 
-**암호화에 대한 FIPS 영향 감소**. 이전 버전의 .NET Framework에서 <xref:System.Security.Cryptography.SHA256Managed>와 같은 관리형 암호화 공급자 클래스는 시스템 암호화 라이브러리가 “FIPS 모드”로 구성될 때 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 암호화 공급자 클래스의 관리형 버전은 시스템 암호화 라이브러리와 달리 FIPS(Federal Information Processing Standard) 140-2 인증을 거치지 않았으므로 이 예외가 throw됩니다. 개발 머신을 FIPS 모드에서 사용하는 개발자는 거의 없으므로 일반적으로 예외는 프로덕션 시스템에서 throw됩니다.
+**암호화에 대한 FIPS 영향 감소** . 이전 버전의 .NET Framework에서 <xref:System.Security.Cryptography.SHA256Managed>와 같은 관리형 암호화 공급자 클래스는 시스템 암호화 라이브러리가 “FIPS 모드”로 구성될 때 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 암호화 공급자 클래스의 관리형 버전은 시스템 암호화 라이브러리와 달리 FIPS(Federal Information Processing Standard) 140-2 인증을 거치지 않았으므로 이 예외가 throw됩니다. 개발 머신을 FIPS 모드에서 사용하는 개발자는 거의 없으므로 일반적으로 예외는 프로덕션 시스템에서 throw됩니다.
 
 기본적으로 .NET Framework 4.8을 대상으로 하는 애플리케이션에서 다음 관리형 암호화 클래스는 더 이상 다음 경우에 <xref:System.Security.Cryptography.CryptographicException>을 throw하지 않습니다.
 
@@ -84,7 +86,7 @@ ms.locfileid: "91756080"
 
 **업데이트된 버전의 ZLib 사용**
 
-.NET Framework 4.5부터 clrcompression.dll 어셈블리는 압축 알고리즘 구현을 제공하기 위해 데이터 압축용 네이티브 외부 라이브러리인 [ZLib](https://www.zlib.net)를 사용합니다. .NET Framework 4.8의 clrcompression.dll은 ZLib 버전 1.2.11을 사용하도록 업데이트되며, 여기에는 몇 가지 주요 개선 사항과 수정 사항이 포함되어 있습니다.
+.NET Framework 4.5부터 clrcompression.dll 어셈블리는 압축 알고리즘 구현을 제공하기 위해 데이터 압축용 네이티브 외부 라이브러리인 [ZLib](https://www.zlib.net)를 사용합니다. .NET Framework 4.8 버전의 clrcompression.dll은 ZLib 버전 1.2.11을 사용하도록 업데이트되며, 여기에는 몇 가지 주요 개선 사항과 수정 사항이 포함되어 있습니다.
 
 <a name="wcf48"></a>
 
@@ -94,7 +96,7 @@ ms.locfileid: "91756080"
 
 상태 엔드포인트는 상태를 기반으로 서비스를 관리하기 위해 오케스트레이션 도구에서 광범위하게 사용됩니다. 또한 상태 검사는 모니터링 도구에서 서비스의 가용성 및 성능에 대한 알림을 추적하고 제공하는 데 사용할 수 있습니다.
 
-**ServiceHealthBehavior**는 <xref:System.ServiceModel.Description.IServiceBehavior>를 확장하는 WCF 서비스 동작입니다.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 컬렉션에 추가될 경우 서비스 동작은 다음과 같습니다.
+**ServiceHealthBehavior** 는 <xref:System.ServiceModel.Description.IServiceBehavior>를 확장하는 WCF 서비스 동작입니다.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 컬렉션에 추가될 경우 서비스 동작은 다음과 같습니다.
 
 - HTTP 응답 코드를 사용하여 서비스 상태를 반환합니다. HTTP/GET 상태 프로브 요청에 대한 HTTP 상태 코드를 쿼리 문자열로 지정할 수 있습니다.
 
@@ -141,6 +143,7 @@ ms.locfileid: "91756080"
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
   [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State)가 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>보다 크면 450 HTTP 응답 상태 코드가 반환됩니다.
+
 쿼리 매개 변수 및 예제:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
@@ -187,11 +190,11 @@ HTML에서 `https://contoso:81/Service1?health` 같은 쿼리 문자열을 지�
 
 .NET Framework 4.8의 런타임은 다음과 같은 변경 내용과 향상된 기능을 포함합니다.
 
-**JIT 컴파일러의 향상된 기능**. .NET Framework 4.8의 JIT(Just-In-Time) 컴파일러는 .NET Core 2.1의 JIT 컴파일러를 기반으로 합니다. .NET Core 2.1 JIT 컴파일러에 적용된 대부분의 최적화 및 모든 버그 수정은 .NET Framework 4.8 JIT 컴파일러에 포함됩니다.
+**JIT 컴파일러의 향상된 기능** . .NET Framework 4.8의 JIT(Just-In-Time) 컴파일러는 .NET Core 2.1의 JIT 컴파일러를 기반으로 합니다. .NET Core 2.1 JIT 컴파일러에 적용된 대부분의 최적화 및 모든 버그 수정은 .NET Framework 4.8 JIT 컴파일러에 포함됩니다.
 
-**NGEN 향상된 기능**. NGEN 이미지에서 매핑된 데이터가 메모리에 상주되지 않도록 런타임은 NGEN([네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)) 이미지의 메모리 관리를 개선했습니다. 실행될 메모리를 수정하여 임의 코드를 실행하려고 시도하는 공격에 사용할 수 있는 노출 영역이 줄어듭니다.
+**NGEN 향상된 기능** . NGEN 이미지에서 매핑된 데이터가 메모리에 상주되지 않도록 런타임은 NGEN([네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)) 이미지의 메모리 관리를 개선했습니다. 실행될 메모리를 수정하여 임의 코드를 실행하려고 시도하는 공격에 사용할 수 있는 노출 영역이 줄어듭니다.
 
-**모든 어셈블리에 대한 맬웨어 방지 검사**. 이전 버전의 .NET Framework에서 런타임은 Windows Defender 또는 타사 맬웨어 방지 프로그램을 사용하여 디스크에서 로드된 모든 어셈블리를 검사합니다. 그러나 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 메서드와 같은 기타 소스에서 로드된 어셈블리는 검사되지 않으며 검색되지 않은 맬웨어를 포함할 수 있습니다. Windows 10에서 실행되는 .NET Framework 4.8부터 런타임은 [AMSI(맬웨어 방지 검사 인터페이스)](/windows/desktop/AMSI/antimalware-scan-interface-portal)를 구현하는 맬웨어 방지 솔루션을 통해 검사를 실행합니다.
+**모든 어셈블리에 대한 맬웨어 방지 검사** . 이전 버전의 .NET Framework에서 런타임은 Windows Defender 또는 타사 맬웨어 방지 프로그램을 사용하여 디스크에서 로드된 모든 어셈블리를 검사합니다. 그러나 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 메서드와 같은 기타 소스에서 로드된 어셈블리는 검사되지 않으며 검색되지 않은 맬웨어를 포함할 수 있습니다. Windows 10에서 실행되는 .NET Framework 4.8부터 런타임은 [AMSI(맬웨어 방지 검사 인터페이스)](/windows/desktop/AMSI/antimalware-scan-interface-portal)를 구현하는 맬웨어 방지 솔루션을 통해 검사를 실행합니다.
 
 <a name="v472"></a>
 
@@ -308,7 +311,7 @@ End Function
 
 **임시 키에 대한 지원**
 
-필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 프라이빗 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 프라이빗 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
+필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 프라이빗 키를 로드할 수 있습니다.  새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 프라이빗 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
 
 - 키가 디스크에 유지되지 않으므로 이 플래그로 로드된 인증서는 X509Store에 추가하기에 적합하지 않습니다.
 
@@ -328,7 +331,7 @@ End Function
 
 **CryptoStream을 삭제한 후 래핑된 스트림이 열려있음**
 
-.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.CryptoStream> 클래스에는 <xref:System.Security.Cryptography.CryptoStream.Dispose%2A>가 래핑된 스트림을 닫지 않도록 허용하는 추가 생성자가 있습니다. <xref:System.Security.Cryptography.CryptoStream> 인스턴스를 삭제한 후 래핑된 스트림을 연 상태로 두려면 새로운 <xref:System.Security.Cryptography.CryptoStream> 생성자를 다음과 같이 호출합니다.
+.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.CryptoStream> 클래스에는 <xref:System.Security.Cryptography.CryptoStream.Dispose%2A>가 래핑된 스트림을 닫지 않도록 허용하는 추가 생성자가 있습니다.  <xref:System.Security.Cryptography.CryptoStream> 인스턴스를 삭제한 후 래핑된 스트림을 연 상태로 두려면 새로운 <xref:System.Security.Cryptography.CryptoStream> 생성자를 다음과 같이 호출합니다.
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -471,15 +474,15 @@ c.SameSite = SameSiteMode.Lax
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -497,13 +500,13 @@ enclave 기반 Always Encrypted의 기본 흐름은 다음과 같습니다.
 
 **원본 제공 ResourceDictionaries 찾기**
 
-.NET Framework 4.7.2부터 진단 도우미는 지정된 소스 URI에서 만든  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>를 찾을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) 사용자는 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미를 사용하면 변경 사항이 실행 중인 애플리케이션에 적용될 수 있도록 ResourceDictionary를 편집할 수 있습니다. 이를 수행하기 위한 한 단계는 실행 중인 애플리케이션이 편집 중인 사전에서 만든 모든 ResourceDictionaries를 찾는 것입니다. 예를 들어 애플리케이션이 지정된 원본 URI에서 해당 콘텐츠가 복사된 ResourceDictionary를 선언할 수 있습니다.
+.NET Framework 4.7.2부터 진단 도우미는 지정된 소스 URI에서 만든 <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>를 찾을 수 있습니다.  (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) 사용자는 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미를 사용하면 변경 사항이 실행 중인 애플리케이션에 적용될 수 있도록 ResourceDictionary를 편집할 수 있습니다. 이를 수행하기 위한 한 단계는 실행 중인 애플리케이션이 편집 중인 사전에서 만든 모든 ResourceDictionaries를 찾는 것입니다. 예를 들어 애플리케이션이 지정된 원본 URI에서 해당 콘텐츠가 복사된 ResourceDictionary를 선언할 수 있습니다.
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml" />
 ```
 
-*MyRD.xaml* 에서 원래 태그를 편집하는 진단 도우미는 새로운 기능을 사용하여 사전을 찾을 수 있습니다. 이 기능은 새 정적 메서드인 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>에서 구현됩니다. 다음 코드에 표시된 것처럼 진단 도우미는 원래 태그를 식별하는 절대 URI를 사용하여 새 메서드를 호출합니다.
+*MyRD.xaml* 에서 원래 태그를 편집하는 진단 도우미는 새로운 기능을 사용하여 사전을 찾을 수 있습니다.  이 기능은 새 정적 메서드인 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>에서 구현됩니다. 다음 코드에 표시된 것처럼 진단 도우미는 원래 태그를 식별하는 절대 URI를 사용하여 새 메서드를 호출합니다.
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -513,11 +516,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-메서드는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
+메서드는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
 
 **ResourceDictionary 소유자 찾기**
 
-.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조를 자동으로 찾습니다.
+.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다.  (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조를 자동으로 찾습니다.
 
 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 처리하기 위해 이를 확장할 수 있습니다. 이 프로세스의 첫 번째 단계는 사전의 소유자를 찾는 것입니다. 즉, `Resources` 속성이 사전을 참조하는 모든 개체를 찾습니다(<xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> 속성을 통해 직접 또는 간접적). `Resources` 속성이 있는 각 기본 형식을 위한 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> 클래스에서 구현된 세 개의 새로운 정적 메서드는 이 단계를 지원합니다.
 
@@ -527,11 +530,11 @@ Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우�
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-이러한 메서드는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
+이러한 메서드는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
 
 **StaticResource 참조 찾기**
 
-이제 진단 도우미는 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
+이제 진단 도우미는 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조가 확인될 때마다 알림을 받을 수 있습니다.  (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
 
 알림은 새로운 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> 이벤트에 의해 구현됩니다.
 
@@ -543,7 +546,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-이 이벤트는 런타임이 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는  <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
+이 이벤트는 런타임이 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는 <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -567,7 +570,7 @@ Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
 End Class
 ```
 
-이벤트는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 발생하지 않고 해당 `add` 접근자는 무시됩니다.
+이벤트는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 발생하지 않습니다(및 해당 `add` 접근자는 무시됨).
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -575,7 +578,7 @@ Windows Forms, WPF(Windows Presentation Foundation) 및 VSTO(Visual Studio Tools
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -685,7 +688,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 .NET Framework 4.7은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialization을 향상합니다.
 
-**ECC(Elliptic Curve 암호화)로 향상된 기능**\*
+**ECC(타원 곡선 암호화)로 향상된 기능** _
 
 .NET Framework 4.7에서는 `ImportParameters(ECParameters)` 메서드가 <xref:System.Security.Cryptography.ECDsa> 및 <xref:System.Security.Cryptography.ECDiffieHellman> 클래스에 추가되어 개체에서 이미 설정된 키를 나타낼 수 있습니다. 또한 명시적 곡선 매개 변수를 사용하여 키를 내보내기 위한 `ExportParameters(Boolean)` 메서드도 추가되었습니다.
 
@@ -693,7 +696,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e)를 참조할 수 있습니다.
 
-**DataContractJsonSerializer를 통한 보다 나은 제어 문자 지원**
+_ *DataContractJsonSerializer를 통한 더욱 나은 제어 문자 지원**
 
 .NET Framework 4.7에서 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 ECMAScript 6 표준에 따라 제어 문자를 serialize합니다. 이 동작은 .NET Framework 4.7을 대상으로 하는 애플리케이션에 대해 기본적으로 사용되도록 설정되며, .NET Framework 4.7에서 실행되지만 이전 버전의 .NET Framework를 대상으로 하는 애플리케이션에 대한 옵트인 기능입니다. 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
 
@@ -703,7 +706,7 @@ GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.co
 
 .NET Framework 4.7에서는 다음과 같은 네트워크 관련 기능을 추가합니다.
 
-**TLS 프로토콜에 대 한 기본 운영 체제 지원**\*
+**TLS 프로토콜에 대한 기본 운영 체제 지원** _
 
 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>및 업스택 구성 요소(예: HTTP, FTP, SMTP)에서 사용되는 TLS 스택을 통해 개발자는 운영 체제에서 지원하는 기본 TLS 프로토콜을 사용할 수 있습니다. 개발자에게 더 이상 하드 코딩 TLS 버전은 필요하지 않습니다.
 
@@ -713,15 +716,15 @@ GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.co
 
 .NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩니다.
 
-**개체 캐시 확장성**
+_ *개체 캐시 확장성**
 
 .NET Framework 4.7부터 ASP.NET에서는 개발자가 메모리 내 개체 캐싱 및 메모리 모니터링을 위한 기본 ASP.NET 구현을 대체할 수 있도록 하는 새로운 API 집합을 추가적으로 제공합니다. 개발자는 이제 ASP.NET 구현이 적절하지 않은 경우 다음 세 가지 구성 요소 중 하나를 바꿀 수 있습니다.
 
-- **개체 캐시 저장소**. 개발자는 새 캐시 공급자 구성 섹션에서 새 **ICacheStoreProvider** 인터페이스를 사용하여 ASP.NET 애플리케이션의 새로운 개체 캐시 구현을 연결할 수 있습니다.
+- **개체 캐시 저장소** . 개발자는 새 캐시 공급자 구성 섹션에서 새 **ICacheStoreProvider** 인터페이스를 사용하여 ASP.NET 애플리케이션의 새로운 개체 캐시 구현을 연결할 수 있습니다.
 
-- **메모리 모니터링**. ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 애플리케이션에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 애플리케이션의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 속성으로 메모리 모니터를 직접 작성해 기본 모니터를 대체할 수 있습니다.
+- **메모리 모니터링** . ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 애플리케이션에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 애플리케이션의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 속성으로 메모리 모니터를 직접 작성해 기본 모니터를 대체할 수 있습니다.
 
-- **메모리 제한 반응**. 기본적으로 ASP.NET은 전용 바이트 제한에 가까워지면 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=nameWithType>를 호출합니다. 일부 애플리케이션의 경우 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 호출 빈도 또는 트리밍되는 캐시 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 애플리케이션의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
+- **메모리 제한 반응** . 기본적으로 ASP.NET은 전용 바이트 제한에 가까워지면 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=nameWithType>를 호출합니다. 일부 애플리케이션의 경우 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 호출 빈도 또는 트리밍되는 캐시 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 애플리케이션의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
 
 <a name="wcf47"></a>
 
@@ -744,7 +747,7 @@ WCF(Windows Communication Foundation)는 다음과 같은 기능 및 변경 내�
 WCF에는 경합 상태를 제거하는 다양한 코드 변경 내용이 포함되어 있으므로 serialization 옵션의 성능과 안정성이 향상됩니다. 여기에는 다음이 포함됩니다.
 
 - **SocketConnection.BeginRead** 및 **SocketConnection.Read** 호출에서 보다 향상된 비동기식 및 동기식 코드 혼합
-- **SharedConnectionListener** 및 **DuplexChannelBinder**와의 연결 중단 시 안정성 향상
+- **SharedConnectionListener** 및 **DuplexChannelBinder** 와의 연결 중단 시 안정성 향상
 - <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType> 메서드를 호출할 때 serialization 작업의 안정성 향상
 - **ChannelSynchronizer.RemoveWaiter** 메서드를 호출하여 waiter를 제거할 때 안정성 개선
 
@@ -756,7 +759,7 @@ WCF에는 경합 상태를 제거하는 다양한 코드 변경 내용이 포함
 
 **높은 DPI 지원**
 
-.NET Framework 4.7을 대상으로 하는 애플리케이션부터, .NET Framework는 Windows Forms 애플리케이션에 대한 높은 DPI 및 동적 DPI 지원을 제공합니다. 높은 DPI 지원은 높은 DPI 모니터에는 폼 및 컨트롤의 모양과 레이아웃을 개선합니다. 동적 DPI는 사용자가 실행 중인 애플리케이션의 DPI 또는 디스플레이 배율을 변경할 때 폼 및 컨트롤의 모양과 레이아웃을 변경합니다.
+.NET Framework 4.7을 대상으로 하는 애플리케이션부터 .NET Framework는 Windows Forms 애플리케이션에 대한 높은 DPI 및 동적 DPI 지원을 제공합니다. 높은 DPI 지원은 높은 DPI 모니터에는 폼 및 컨트롤의 모양과 레이아웃을 개선합니다. 동적 DPI는 사용자가 실행 중인 애플리케이션의 DPI 또는 디스플레이 배율을 변경할 때 폼 및 컨트롤의 모양과 레이아웃을 변경합니다.
 
 높은 DPI 지원은 애플리케이션 구성 파일의 [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) 섹션을 정의하여 구성하는 옵트인 기능입니다. Windows Forms 애플리케이션에 높은 DPI 지원 및 동적 DPI 지원을 추가하는 방법에 대한 자세한 내용은 [Windows Forms의 높은 DPI 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)을 참조하세요.
 
@@ -778,7 +781,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](/previous
 
 ## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2의 새로운 기능
 
-.NET Framework 4.6.2에는 다음과 같은 영역의 새 기능이 포함됩니다.
+.NET Framework 4.6.2에는 다음 영역의 새 기능이 포함됩니다.
 
 - [ASP.NET](#ASPNET462)
 
@@ -806,7 +809,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](/previous
 
 ### <a name="aspnet"></a>ASP.NET
 
-NET Framework 4.6.2에서 ASP.NET에는 다음과 같은 향상된 기능이 포함됩니다.
+.NET Framework 4.6.2에서 ASP.NET에는 다음과 같은 향상된 기능이 포함됩니다.
 
 **데이터 주석 유효성 검사기의 지역화된 오류 메시지에 대한 지원 개선**
 
@@ -816,7 +819,7 @@ NET Framework 4.6.2에서 ASP.NET에는 다음과 같은 향상된 기능이 포
 
 2. 리소스 파일 App_LocalResources 폴더에 저장되어 있는 경우
 
-3. 지역화된 리소스 파일의 이름이 `DataAnnotation.Localization.{`*이름*`}.resx` 형식인 경우(여기서 *이름*은 *languageCode*`-`*country/regionCode* 또는 *languageCode* 형식의 문화권 이름임)
+3. 지역화된 리소스 파일의 이름이 `DataAnnotation.Localization.{`*이름*`}.resx` 형식인 경우(여기서 *이름* 은 *languageCode*`-`*country/regionCode* 또는 *languageCode* 형식의 문화권 이름임)
 
 4. 리소스의 키 이름이 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 특성에 할당된 문자열이고 해당 값이 지역화된 오류 메시지인 경우
 
@@ -869,7 +872,7 @@ End Interface
 
  **출력 캐시 공급자에 대한 비동기 지원**
 
- .NET Framework 4.6.2 이상에서는 태스크 반환 메서드를 출력 캐시 공급자와 함께 사용하여 비동기화의 확장성 이점을 제공할 수 있습니다.  이러한 메서드를 구현하는 공급자는 웹 서버에서 스레드 차단을 줄이고 ASP.NET 서비스의 확장성을 개선합니다.
+ .NET Framework 4.6.2 이상에서는 태스크 반환 메서드를 출력 캐시 공급자와 함께 사용하여 비동기화의 스케일링 성능 이점을 제공할 수 있습니다.  이러한 메서드를 구현하는 공급자는 웹 서버에서 스레드 차단을 줄이고 ASP.NET 서비스의 확장성을 개선합니다.
 
  비동기 출력 캐시 공급자를 지원하기 위해 다음 API를 추가했습니다.
 
@@ -907,7 +910,7 @@ End Interface
 
 .NET Framework 4.6.2에서는 키가 FIPS 186-2 1024비트 제한을 초과하는 DSA(디지털 서명 알고리즘) X509 인증서에 대한 지원을 추가했습니다.
 
-FIPS 186-3의 더 큰 키 크기를 지원할 뿐만 아니라 NET Framework 4.6.2에서는 SHA-4.6.2 해시 알고리즘 패밀리(SHA256, SHA384 및 SHA512)를 통한 컴퓨팅 시그니처를 허용합니다. FIPS 186-3 지원은 새 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 클래스에 의해 제공됩니다.
+FIPS 186-3의 더 큰 키 크기를 지원할 뿐만 아니라 .NET Framework 4.6.2에서는 SHA-4.6.2 해시 알고리즘 패밀리(SHA256, SHA384 및 SHA512)를 통한 컴퓨팅 서명을 허용합니다. FIPS 186-3 지원은 새 <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> 클래스에 의해 제공됩니다.
 
 .NET Framework 4.6의 <xref:System.Security.Cryptography.RSA> 클래스 및 .NET Framework 4.6.1의 <xref:System.Security.Cryptography.ECDsa> 클래스에 대한 최신 변경 내용을 유지하면서 .NET Framework 4.6.2의 <xref:System.Security.Cryptography.DSA> 추상 기본 클래스에는 호출자가 캐스팅하지 않고 이 기능을 사용할 수 있도록 해주는 추가 메서드가 있습니다. 다음 예제와 같이 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 확장 메서드를 호출하여 데이터에 서명할 수 있습니다.
 
@@ -953,12 +956,12 @@ End Function
 
 .NET Framework 3.5에서는 세 가지 KDF(키 파생 함수) 루틴을 가진 타원 곡선 Diffie-Hellman 키 계약에 대한 지원을 추가했습니다. 루틴에 대한 입력과 루틴 자체는 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 개체에 대한 속성을 통해 구성했습니다. 하지만 일부 루틴이 일부 입력 속성을 읽지 않기 때문에 개발자의 과거에 대해 혼동을 일으킬 여지가 충분합니다.
 
-.NET Framework 4.6.2에서 이 문제를 해결하기 위해 이러한 KDF 루틴과 해당 입력을 보다 정확하게 표시하도록 다음 세 가지 메서드를 <xref:System.Security.Cryptography.ECDiffieHellman> 기본 클래스에 추가했습니다.
+.NET Framework 4.6.2에서 이 문제를 해결하기 위해 이러한 KDF 루틴과 해당 입력을 더욱 정확하게 표시하도록 다음 세 가지 메서드를 <xref:System.Security.Cryptography.ECDiffieHellman> 기본 클래스에 추가했습니다.
 
 |ECDiffieHellman 메서드|설명|
 |----------------------------|-----------------|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|수식을 사용하여 키 자료 파생<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 여기서 *x*는 EC Diffie-hellman 알고리즘의 계산된 결과입니다.|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|수식을 사용하여 키 자료 파생<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 여기서 *x*는 EC Diffie-hellman 알고리즘의 계산된 결과입니다.|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|수식을 사용하여 키 자료 파생<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 여기서 *x* 는 EC Diffie-hellman 알고리즘의 계산된 결과입니다.|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|수식을 사용하여 키 자료 파생<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 여기서 *x* 는 EC Diffie-hellman 알고리즘의 계산된 결과입니다.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|TLS PRF(의사 난수 함수) 파생 알고리즘을 사용하여 키 자료 파생|
 
 **지속형 키 대칭 암호화 지원**
@@ -1006,7 +1009,7 @@ End Function
 
 **SHA-2 해시에 대한 SignedXml 지원**
 
-.NET Framework 4.6.2에서는 RSA-SHA256, RSA-SHA384 및 RSA-SHA512 PKCS#1 시그니처 메서드, SHA256, SHA384 및 SHA512 참조 다이제스트 알고리즘에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 클래스 지원을 추가했습니다.
+.NET Framework 4.6.2에서는 RSA-SHA256, RSA-SHA384 및 RSA-SHA512 PKCS#1 서명 메서드, SHA256, SHA384 및 SHA512 참조 다이제스트 알고리즘에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 클래스 지원을 추가했습니다.
 
 URI 상수가 <xref:System.Security.Cryptography.Xml.SignedXml>에 모두 노출됩니다.
 
@@ -1071,7 +1074,7 @@ SQLClient에서는 상시 암호화에 대한 두 가지 향상된 기능을 도
 
 **CNG를 사용하여 저장한 인증서에 대한 WCF 전송 보안 지원**
 
-WCF 전송 보안에서 Windows 암호화 라이브러리(CNG)를 사용하여 저장한 인증서를 지원합니다. .NET Framework 4.6.2에서 이 지원은 지수 길이가 32비트 이하인 공개 키로 인증서를 사용하도록 제한됩니다. 애플리케이션이 .NET Framework 4.6.2를 대상으로 하는 경우 이 기능은 기본적으로 켜집니다.
+WCF 전송 보안에서 Windows 암호화 라이브러리(CNG)를 사용하여 저장한 인증서를 지원합니다. .NET Framework 4.6.2에서 이 지원은 지수 길이가 32비트 이하인 퍼블릭 키로 인증서를 사용하도록 제한됩니다. 애플리케이션이 .NET Framework 4.6.2를 대상으로 하는 경우 이 기능은 기본적으로 켜집니다.
 
 .NET Framework 4.6.1 및 이전 버전을 대상으로 하지만 .NET Framework 4.6.2에서 실행 중인 애플리케이션의 경우 app.config 또는 web.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 이 기능을 사용하도록 설정할 수 있습니다.
 
@@ -1142,7 +1145,7 @@ WCF에는 클라이언트 애플리케이션에서 요청한 항목과 가장 �
 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
 
-.NET Framework 4.6.2에서 Windows Presentation Foundation이 다음과 같은 영역에서 향상되었습니다.
+.NET Framework 4.6.2에서 Windows Presentation Foundation이 다음 영역에서 향상되었습니다.
 
 **그룹 정렬**
 
@@ -1176,7 +1179,7 @@ WCF에는 클라이언트 애플리케이션에서 요청한 항목과 가장 �
 
 **모니터별 DPI**
 
-WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환경을 지원하기 위해 .NET Framework 4.6.2의 WPF에서는 모니터별 인식을 사용하도록 지정합니다. 모니터별 DPI를 인식하도록 WPF 앱을 설정하는 방법에 대한 자세한 내용은 GitHub의 [samples and developer guide](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)(샘플 및 개발자 가이드)를 참조하십시오.
+최근에 확산되는 높은 DPI 및 하이브리드 DPI 환경을 WPF 앱에 지원하기 위해 .NET Framework 4.6.2의 WPF에서는 모니터별 인식을 사용하도록 지정합니다. 모니터별 DPI를 인식하도록 WPF 앱을 설정하는 방법에 대한 자세한 내용은 GitHub의 [samples and developer guide](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)(샘플 및 개발자 가이드)를 참조하십시오.
 
 이전 버전의.NET Framework에서는 WPF 앱은 시스템 DPI를 인식합니다. 즉, 애플리케이션의 UI는 앱이 렌더링되는 모니터의 DPI에 따라 OS에 의해 적절하게 확장됩니다.
 
@@ -1236,7 +1239,7 @@ ClickOnce는 이미 지원되는 1.0 프로토콜 외에 TLS 1.1 및 TLS 1.2를 
 
 ### <a name="debugging-improvements"></a>디버깅 기능 향상
 
-단일 소스 코드 줄에서 `null`인 변수를 확인할 수 있도록 <xref:System.NullReferenceException>이 throw될 때 추가 분석을 수행하도록 .NET Framework 4.6.2에서 *관리되지 않는 디버깅 API*가 개선되었습니다.   이 시나리오를 지원하기 위해 관리되지 않는 디버깅 API에 다음 API를 추가했습니다.
+단일 소스 코드 줄에서 `null`인 변수를 확인할 수 있도록 <xref:System.NullReferenceException>이 throw될 때 추가 분석을 수행하도록 .NET Framework 4.6.2에서 ‘비관리형 디버깅 API’가 개선되었습니다.   이 시나리오를 지원하기 위해 관리되지 않는 디버깅 API에 다음 API를 추가했습니다.
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md) 및 [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 인터페이스: 관리되는 변수의 네이티브 홈을 노출합니다. 이렇게 하면 <xref:System.NullReferenceException>가 발생할 경우 디버거에서 일부 코드 흐름 분석을 수행하고 거꾸로 살펴보면서 네이티브 위치 `null`에 해당하는 관리되는 변수를 결정합니다.
 
@@ -1246,7 +1249,7 @@ ClickOnce는 이미 지원되는 1.0 프로토콜 외에 TLS 1.1 및 TLS 1.2를 
 
 ## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1의 새로운 기능
 
-.NET Framework 4.6.1에는 다음과 같은 영역의 새 기능이 포함됩니다.
+.NET Framework 4.6.1에는 다음 영역의 새 기능이 포함됩니다.
 
 - [암호화](#Crypto)
 
@@ -1300,7 +1303,7 @@ HSM에 저장된 열 마스터 키로 보호된 상시 암호화 데이터에 �
 
 **AlwaysOn의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작 개선**
 
-SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 애플리케이션이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 애플리케이션에서 `"MultisubnetFailover=true"`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 애플리케이션에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 애플리케이션에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
+SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 애플리케이션이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 애플리케이션에서 `"MultisubnetFailover=true"`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 애플리케이션에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 애플리케이션에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다* . Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
 
 <a name="WPF461"></a>
 
@@ -1387,7 +1390,7 @@ WPF에는 DX10 및 Dx11 콘텐츠와 쉽게 상호 운용할 수 있는 <xref:Sy
 
 ### <a name="native-image-generator-ngen-pdbs"></a>NGEN(네이티브 이미지 생성기) PDB
 
-컴퓨터 간 이벤트 추적을 사용하면 고객이 시스템 A에서 프로그램을 프로파일링하고 소스 줄 매핑을 사용하여 시스템 B에서 프로파일링 데이터를 확인할 수 있습니다. 이전 버전의 .NET Framework에서는 사용자가 프로파일링된 시스템의 모든 모듈 및 네이티브 이미지를 IL PDB가 포함된 분석 시스템으로 복사하여 원본-네이티브 매핑을 만들었습니다. 이 프로세스는 휴대폰 애플리케이션 등 비교적 파일이 작은 경우에는 잘 작동하지만 데스크톱 시스템에서는 파일이 매우 커질 수 있으며 복사하는 데 많은 시간이 필요합니다.
+머신 간 이벤트 추적을 사용하면 고객이 머신 A에서 프로그램을 프로파일링하고 소스 줄 매핑을 사용하여 머신 B에서 프로파일링 데이터를 확인할 수 있습니다. 이전 버전의 .NET Framework에서는 사용자가 프로파일링된 머신의 모든 모듈 및 네이티브 이미지를 IL PDB가 포함된 분석 머신으로 복사하여 소스-네이티브 매핑을 만들었습니다. 이 프로세스는 휴대폰 애플리케이션 등 비교적 파일이 작은 경우에는 잘 작동하지만 데스크톱 시스템에서는 파일이 매우 커질 수 있으며 복사하는 데 많은 시간이 필요합니다.
 
 Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티브 매핑이 포함된 PDB를 만들 수 있습니다. 시스템 간 이벤트 추적 시나리오에서는 시스템 A에서 생성된 네이티브 이미지 PDB를 시스템 B로 복사하고 [Debug Interface Access API](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference)를 사용하여 IL PDB의 소스-IL 매핑 및 네이티브 이미지 PDB의 IL-네이티브 매핑을 읽기만 하면 됩니다. 두 매핑을 함께 사용하면 소스-네이티브 매핑이 생성됩니다. 네이티브 이미지 PDB는 모든 모듈 및 네이티브 이미지보다 훨씬 작으므로 시스템 A에서 시스템 B로 복사하는 프로세스가 훨씬 빨라집니다.
 
@@ -1395,7 +1398,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015의 새로운 기능
 
-.NET Framework 2015에서는 .NET Framework 4.6 및 .NET Core가 도입되었습니다. 일부 새로운 기능은 둘 다에 적용되고 기타 기능은 .NET Framework 4.6 또는 .NET Core 중 하나와 관련이 있습니다.
+.NET 2015에서는 .NET Framework 4.6 및 .NET Core가 도입되었습니다. 일부 새로운 기능은 둘 다에 적용되고 기타 기능은 .NET Framework 4.6 또는 .NET Core 중 하나와 관련이 있습니다.
 
 - **ASP.NET Core**
 
@@ -1582,9 +1585,9 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     라이브러리에 의해 노출되는 공식 계약이므로 스위치에 대해 일관된 형식을 사용하는 것이 좋습니다. 다음은 두 가지 명확한 형식입니다.
 
-    - *Switch*.*namespace*.*switchname*
+    - *Switch* . *namespace* . *switchname*
 
-    - *Switch*.*library*.*switchname*
+    - *Switch* . *library* . *switchname*
 
   - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
@@ -1620,7 +1623,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
   - **HDPI 기능 향상**
 
-    이제 WPF의 HDPI 지원이 .NET Framework 4.6에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 .NET Framework 4.6에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인할 수 있습니다.
+    이제 WPF의 HDPI 지원이 .NET Framework 4.6에서 더욱 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 .NET Framework 4.6에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인할 수 있습니다.
 
     ```xml
     <AppContextSwitchOverrides
@@ -1834,13 +1837,13 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
                                           enlistmentOptions As EnlistmentOptions) As Enlistment
   ```
 
-  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션에서 MSDTC 트랜잭션으로 수준을 올리고, 수준을 올릴 수 있는 인리스트먼트를 지속적인 인리스트먼트로 “변환”하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 호출을 처리하는 동안에*만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
+  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션에서 MSDTC 트랜잭션으로 수준을 올리고, 수준을 올릴 수 있는 인리스트먼트를 지속적인 인리스트먼트로 “변환”하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 호출을 처리하는 동안에 *만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
 
 <a name="v451"></a>
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1의 새로운 기능
 
-**2014년 4월 업데이트**:
+**2014년 4월 업데이트** :
 
 - [Visual Studio 2013 업데이트 2](https://go.microsoft.com/fwlink/p/?LinkId=393658)에는 이식 가능한 클래스 라이브러리 템플릿에 대한 업데이트가 포함되어 다음과 같은 시나리오가 지원됩니다.
 
@@ -1860,7 +1863,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 .NET Framework 4.5.1에서 기본 클래스의 새로운 기능 및 향상된 기능은 다음과 같습니다.
 
-- 어셈블리에 대한 자동 바인딩 리디렉션. Visual Studio 2013부터는 .NET Framework 4.5.1을 대상으로 하는 응용 프로그램을 컴파일할 때 응용 프로그램 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 응용 프로그램 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
+- 어셈블리에 대한 자동 바인딩 리디렉션. Visual Studio 2013부터는 .NET Framework 4.5.1을 대상으로 하는 앱을 컴파일할 때 앱 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 앱 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
 
 - 진단 정보를 수집하여 개발자가 서버 및 클라우드 애플리케이션의 성능을 향상시키는 기능. 자세한 내용은 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 클래스의 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 및 <xref:System.Diagnostics.Tracing.EventSource> 메서드를 참조하세요.
 
@@ -1944,7 +1947,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 - 다중 범위
 
-- Windows 8.x 스토어 앱을 만들 때 사용할 수 있는 MEF의 하위 집합. 이 하위 집합은 NuGet 갤러리에서 [다운로드 가능 패키지](https://www.nuget.org/packages/Microsoft.Composition)로 사용할 수 있습니다. 패키지를 설치하려면 Visual Studio에서 프로젝트를 열고 **프로젝트** 메뉴에서 **NuGet 패키지 관리**를 선택한 후 `Microsoft.Composition` 패키지를 온라인으로 검색합니다.
+- Windows 8.x 스토어 앱을 만들 때 사용할 수 있는 MEF의 하위 집합. 이 하위 집합은 NuGet 갤러리에서 [다운로드 가능 패키지](https://www.nuget.org/packages/Microsoft.Composition)로 사용할 수 있습니다. 패키지를 설치하려면 Visual Studio에서 프로젝트를 열고 **프로젝트** 메뉴에서 **NuGet 패키지 관리** 를 선택한 후 `Microsoft.Composition` 패키지를 온라인으로 검색합니다.
 
 자세한 내용은 [MEF(관리되는 확장성 프레임워크 개요)](../mef/index.md)를 참조하십시오.
 
@@ -2064,7 +2067,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows WF(Workflow Foundation)
 
-.NET Framework 4.5의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
+.NET Framework 4.5의 Windows WF(Windows Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
 - 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 .NET Framework 4.5에 대해 업데이트되었습니다.
 
