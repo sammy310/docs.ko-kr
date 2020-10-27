@@ -1,24 +1,23 @@
 ---
 title: .NET Framework 시작
-description: 앱을 관리하는 런타임 실행 환경인 .NET을 시작하세요. CLR(공용 언어 런타임) 및 광범위한 클래스 라이브러리를 포함합니다.
-ms.date: 04/02/2019
+description: 앱을 관리하는 런타임 실행 환경인 .NET Framework를 시작하세요. CLR(공용 언어 런타임) 및 광범위한 클래스 라이브러리를 포함합니다.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414970"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471675"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework 시작
 
 .NET Framework는 .NET Framework를 대상으로 하는 앱을 관리하는 런타임 실행 환경입니다. .NET Framework는 메모리 관리 및 기타 시스템 서비스를 제공하는 공용 언어 런타임과 프로그래머가 모든 주요 앱 개발 영역에서 강력하고 신뢰할 수 있는 코드를 활용할 수 있게 하는 광범위한 클래스 라이브러리로 구성됩니다.
 
-> [!NOTE]
-> .NET Framework는 Windows 시스템에서만 사용할 수 있습니다. [.NET Core](../../core/introduction.md)를 사용하여 Windows, MacOS 및 Linux에서 앱을 개발하고 실행할 수 있습니다.
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="what-is-net-framework"></a>.NET Framework란?
 
@@ -41,7 +40,7 @@ ms.locfileid: "89414970"
 - 멀티 타기팅. 개발자는 [.NET Standard](../../standard/net-standard.md)를 대상으로 지정하여 표준 버전에서 지원하는 여러 .NET Framework 플랫폼에서 작동하는 클래스 라이브러리를 만듭니다. 예를 들어 .NET Framework 4.6.1, .NET Core 2.0 및 UWP 10.0.16299를 대상으로 하는 앱은 .NET Standard 2.0을 대상으로 하는 라이브러리를 사용할 수 있습니다.
 
 <a name="ForUsers"></a>
-## <a name="the-net-framework-for-users"></a>사용자용 .NET Framework
+## <a name="net-framework-for-users"></a>사용자용 .NET Framework
 
 .NET Framework 앱을 개발하지 않고 사용만 하는 경우 .NET Framework 또는 작동에 대한 특정 지식이 필요하지 않습니다. 대부분의 경우 프레임워크는 사용자에게 완전히 투명하게 공개됩니다.
 
@@ -53,7 +52,7 @@ Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터�
 
 - 일부 .NET Framework 버전은 이전 버전에 대한 전체 업데이트입니다. 예를 들어 .NET Framework 3.5는 2.0 버전에 대한 전체 업데이트이며 .NET Framework 4.8은 4~4.7.2 버전에 대한 전체 업데이트입니다. 자세한 내용은 [.NET Framework 버전 및 종속성](../migration-guide/versions-and-dependencies.md)을 참조하십시오.
 
-Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항상 제어판의 **프로그램 및 기능**을 사용하여 제거합니다. .NET Framework 버전을 수동으로 제거해서는 안 됩니다. Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독립적으로 제거할 수 없습니다.
+Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항상 제어판의 **프로그램 및 기능** 을 사용하여 제거합니다. .NET Framework 버전을 수동으로 제거해서는 안 됩니다. Windows 8 이상에서 .NET Framework는 운영 체제 구성 요소이며 독립적으로 제거할 수 없습니다.
 
 컴퓨터 한 대에 여러 버전의 .NET Framework가 동시에 공존할 수 있습니다. 즉, 최신 버전을 설치하기 위해 이전 버전을 제거하지 않아도 됩니다.
 
@@ -76,7 +75,7 @@ Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항
 | 제목 | 설명 |
 | ----- |------------ |
 | [개요](overview.md) | .NET Framework를 대상으로 하는 앱을 빌드하는 개발자를 위한 자세한 정보를 제공합니다. |
-| [설치 가이드](../install/index.md) | .NET Framework 설치에 대한 정보를 제공합니다. |  
+| [설치 가이드](../install/index.md) | .NET Framework 설치에 대한 정보를 제공합니다. |
 | [.NET Framework 및 번외 릴리스](the-net-framework-and-out-of-band-releases.md) | .NET Framework 번외 릴리스 및 이러한 릴리스를 응용 프로그램에서 사용하는 방법에 대해 설명합니다. |
 | [시스템 요구 사항](system-requirements.md) | .NET Framework 실행을 위한 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다. |
 | [.NET Core 및 오픈 소스](net-core-and-open-source.md) | .NET Framework와 관련된 .NET Core 및 오픈 소스 .NET Core 프로젝트에 액세스하는 방법에 대해 설명합니다. |
