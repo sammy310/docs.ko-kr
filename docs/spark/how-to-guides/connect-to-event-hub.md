@@ -1,15 +1,17 @@
 ---
 title: Azure Event Hubs에 .NET for Apache Spark 연결
 description: 로컬 .NET for Apache Spark 인스턴스에서 Azure Event Hubs에 연결하는 방법을 알아봅니다.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4de4836ba2b63429e29ae819afac09c7a3998480
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c8fd10992e63674032af4148e0673a5330d9086c
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954973"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223960"
 ---
 # <a name="connect-net-for-apache-spark-to-azure-event-hubs"></a>Azure Event Hubs에 .NET for Apache Spark 연결
 
@@ -27,7 +29,7 @@ ms.locfileid: "91954973"
 
 1. 나중에 사용할 수 있도록 Event Hubs 연결 문자열 및 FQDN(정규화된 도메인 이름)을 가져옵니다. 자세한 지침은 [Event Hubs 연결 문자열 가져오기](/azure/event-hubs/event-hubs-get-connection-string)를 참조하세요.
 2. 코드에서 네임스페이스의 세부 정보로 다음 구성을 설정하여 Kafka용 Event Hubs에서 읽기를 시작합니다.
-    1. 애플리케이션에서 **BOOTSTRAP_SERVERS** 및 **EH_SASL**을 다음과 같이 업데이트합니다.
+    1. 애플리케이션에서 **BOOTSTRAP_SERVERS** 및 **EH_SASL** 을 다음과 같이 업데이트합니다.
 
     ```csharp
     string BOOTSTRAP_SERVERS = "hostname:9093"; // 9093 is the port used to communicate with Event Hubs, see [troubleshooting guide](https://docs.microsoft.com/azure/event-hubs/troubleshooting-guide)

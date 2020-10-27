@@ -4,16 +4,16 @@ title: 비관리형 형식 - C# 참조
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: b5a689ca3ade36ef77da958549894f76e074986e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4374872af13c94e1a1af6b9f2c431f076c6f7dff
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89143534"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471801"
 ---
 # <a name="unmanaged-types-c-reference"></a>비관리형 형식(C# 참조)
 
-형식이 다음 형식 중 하나인 경우에는 **관리되지 않는 형식**입니다.
+형식이 다음 형식 중 하나인 경우에는 **관리되지 않는 형식** 입니다.
 
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` 또는 `bool`
 - 임의의 [열거형](enum.md) 형식
@@ -24,11 +24,11 @@ C# 7.3부터 [`unmanaged` 제약 조건](../../programming-guide/generics/constr
 
 C# 8.0부터는 다음 예와 같이 관리되지 않는 형식의 필드만 포함하는 *생성된* 구조체 형식도 관리되지 않습니다.
 
-[!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
+[!code-csharp[unmanaged constructed types](snippets/shared/UnmanagedTypes.cs#ProgramExample)]
 
 제네릭 구조체는 관리되는 구조체 및 관리되지 않는 구조체 형식 모두의 원본일 수 있습니다. 위의 예에서는 제네릭 구조체 `Coords<T>`를 정의하고 관리되지 않는 생성 형식의 예를 보여 줍니다. 관리되지 않는 형식이 아닌 예는 `Coords<object>`입니다. 관리되지 않는 `object` 형식의 필드가 있기 때문에 관리되지 않습니다. *모든* 생성 형식을 관리되지 않는 형식으로 하려면 제네릭 구조체의 정의에서 `unmanaged` 제약 조건을 사용합니다.
 
-[!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
+[!code-csharp[unmanaged constraint in type definition](snippets/shared/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

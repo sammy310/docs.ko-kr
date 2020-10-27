@@ -4,11 +4,11 @@ description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397766"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223738"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -30,7 +30,7 @@ ms.locfileid: "79397766"
 
 보정은 이진 및 다중 클래스 분류를 위해 클래스 멤버 자격에 원시 점수를 매핑하는 프로세스입니다. 일부 ML.NET 트레이너에는 `NonCalibrated` 접미사가 있습니다. 이러한 알고리즘은 클래스 확률에 매핑되어야 하는 원시 점수를 생성합니다.
 
-## <a name="catalog"></a>Catalog
+## <a name="catalog"></a>카탈로그
 
 ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수의 컬렉션입니다.
 
@@ -44,7 +44,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 [회귀](#regression)에서 데이터가 모델에 얼마나 잘 맞는지를 나타내는 평가 메트릭입니다. 범위는 0에서 1까지입니다. 값 0은 데이터가 무작위이거나 모델에 맞지 않음을 의미합니다. 값 1은 모델이 데이터와 정확히 일치함을 의미합니다. 이를 r<sup>2</sup>, R<sup> 2</sup> 또는 r 제곱이라고 합니다.
 
-## <a name="data"></a>data
+## <a name="data"></a>데이터
 
 데이터는 모든 기계 애플리케이션의 핵심입니다. ML.NET에서 데이터는 <xref:Microsoft.ML.IDataView> 개체로 표현됩니다. 데이터 뷰 개체:
 
@@ -66,7 +66,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="feature"></a>기능
 
-측정 중인 현상의 측정 가능한 속성입니다(일반적으로 숫자(double) 값). 다양한 기능을 **기능 벡터**라고 하며 일반적으로 `double[]`로 저장됩니다. 기능은 측정 중인 현상의 중요한 특성을 정의합니다. 자세한 내용은 Wikipedia에서 [Feature](https://en.wikipedia.org/wiki/Feature_(machine_learning))(기능) 문서를 참조하세요.
+측정 중인 현상의 측정 가능한 속성입니다(일반적으로 숫자(double) 값). 다양한 기능을 **기능 벡터** 라고 하며 일반적으로 `double[]`로 저장됩니다. 기능은 측정 중인 현상의 중요한 특성을 정의합니다. 자세한 내용은 Wikipedia에서 [Feature](https://en.wikipedia.org/wiki/Feature_(machine_learning))(기능) 문서를 참조하세요.
 
 ## <a name="feature-engineering"></a>기능 엔지니어링
 
@@ -126,7 +126,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 [분류](#classification)에서 클래스의 정밀도는 해당 클래스에 속하는 것으로 올바르게 예측된 항목 수를 클래스에 속하는 것으로 예측된 총 항목 수로 나눈 값입니다.
 
-## <a name="recall"></a>재현율
+## <a name="recall"></a>회차
 
 [분류](#classification)에서 클래스의 재현율은 해당 클래스에 속하는 것으로 올바르게 예측된 항목 수를 실제로 클래스에 속하는 총 항목 수로 나눈 값입니다.
 
@@ -137,7 +137,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 - $L_1$ 정규화는 불충분한 기능에 대해 0 가중치를 적용합니다. 이런 정규화 후에는 저장된 모델의 크기가 더 적을 수 있습니다.
 - $L _2 $ 정규화는 의미 없는 기능에 대한 가중치 범위를 최소화합니다. 이는 보다 일반적인 프로세스이며 이상값에 덜 민감합니다.
 
-## <a name="regression"></a>재발
+## <a name="regression"></a>회귀
 
 출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [회귀](tasks.md#regression) 섹션을 참조하세요.
 
@@ -153,7 +153,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 [회귀](#regression)에서 오차 제곱 평균의 제곱근인 평가 메트릭입니다.
 
-## <a name="scoring"></a>채점
+## <a name="scoring"></a>점수 매기기
 
 채점은 학습된 기계 학습 모델에 새 데이터를 적용하고 예측을 생성하는 프로세스입니다. 채점은 추론이라고도 합니다. 모델 유형에 따라 점수는 원시 값, 확률 또는 범주가 될 수 있습니다.
 
@@ -161,7 +161,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 원하는 모델이 아직 확인되지 않은 데이터에 대한 레이블을 예측하는 기계 학습의 서브클래스입니다. 예로는 분류, 회귀 및 구조화된 예측이 있습니다. 자세한 내용은 Wikipedia에서 [Supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)(감독된 학습) 문서를 참조하세요.
 
-## <a name="training"></a>교육
+## <a name="training"></a>학습
 
 지정된 학습 데이터 집합에 대한 [모델](#model)을 식별하는 프로세스입니다. 선형 모델의 경우 가중치를 찾는 방법입니다. 트리의 경우 분할 지점을 식별하는 작업이 포함됩니다.
 

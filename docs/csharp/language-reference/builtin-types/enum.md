@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739085"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471852"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
-*열거형*(또는 *열거형 형식*)은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버*의 이름을 지정합니다.
+*열거형* (또는 *열거형 형식* )은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버* 의 이름을 지정합니다.
 
 ```csharp
 enum Season
@@ -54,7 +54,7 @@ enum ErrorCode : ushort
 
 열거형 형식으로 선택의 조합을 나타내려면 개별 선택이 비트 필드가 되도록 해당 선택의 열거형 멤버를 정의합니다. 즉, 이러한 멤버의 연결된 값은 제곱이어야 합니다. 그런 다음 [비트 논리 연산자 `|` 또는 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators)를 사용하여 각각 선택을 조합하거나 선택의 조합을 교차할 수 있습니다. 열거형 형식이 비트 필드를 선언한다고 표시하려면 [Flags](xref:System.FlagsAttribute) 특성을 적용합니다. 다음 예제와 같이 열거형 형식의 정의에 몇 가지 일반적인 조합을 포함할 수도 있습니다.
 
-[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/shared/EnumType.cs#Flags)]
 
 자세한 내용과 예제는 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 참조 페이지 및 <xref:System.Enum?displayProperty=nameWithType> API 참조 페이지의 [비독점적 멤버 및 Flags 특성](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) 섹션을 참조하세요.
 
@@ -68,7 +68,7 @@ C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../prog
 
 모든 열거형 형식에는 열거형 형식과 기본 정수 형식 간의 명시적 변환이 있습니다. 열거형 값을 기본 형식에 [캐스트](../operators/type-testing-and-cast.md#cast-expression)하는 경우, 그 결과는 열거형 멤버의 연결된 정수 값입니다.
 
-[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/shared/EnumType.cs#Conversions)]
 
 열거형 형식에 연결된 특정 값이 포함되어 있는지 확인하려면 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 

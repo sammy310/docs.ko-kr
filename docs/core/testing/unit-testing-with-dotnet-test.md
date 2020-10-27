@@ -3,13 +3,13 @@ title: dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테�
 description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656386"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471539"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -48,8 +48,8 @@ ms.locfileid: "88656386"
   ```
 
    [`dotnet new classlib`](../tools/dotnet-new.md) 명령은 *PrimeService* 폴더에 새 클래스 라이브러리 프로젝트를 만듭니다. 새 클래스 라이브러리에는 테스트할 코드가 포함됩니다.
-* *Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다.
-* *PrimeService.cs*의 코드를 다음 코드로 바꿉니다.
+* *Class1.cs* 의 이름을 *PrimeService.cs* 로 바꿉니다.
+* *PrimeService.cs* 의 코드를 다음 코드로 바꿉니다.
   
   ```csharp
   using System;
@@ -122,7 +122,7 @@ dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeServi
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-이전 섹션에 있는 "*PrimeService.cs*의 코드를 다음 코드로 바꾸기" 지침을 따릅니다.
+이전 섹션에 있는 " *PrimeService.cs* 의 코드를 다음 코드로 바꾸기" 지침을 따릅니다.
 
 ## <a name="create-a-test"></a>테스트 만들기
 
@@ -130,9 +130,9 @@ TDD(테스트 기반 개발)에서 널리 사용되는 방식은 대상 코드�
 
 *PrimeService.Tests* 프로젝트 업데이트:
 
-* *PrimeService.Tests/UnitTest1.cs*를 삭제합니다.
+* *PrimeService.Tests/UnitTest1.cs* 를 삭제합니다.
 * *PrimeService.Tests/PrimeService_IsPrimeShould.cs* 파일을 만듭니다.
-* *PrimeService_IsPrimeShould.cs*의 코드를 다음 코드로 바꿉니다.
+* *PrimeService_IsPrimeShould.cs* 의 코드를 다음 코드로 바꿉니다.
 
 ```csharp
 using Xunit;
@@ -142,17 +142,11 @@ namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [Fact]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.False(result, "1 should not be prime");
         }
@@ -182,7 +176,8 @@ public bool IsPrime(int candidate)
 0 및 -1에 대한 소수 테스트를 추가합니다. 이전 테스트를 복사하고 다음 코드를 변경하여 0 및 -1을 사용할 수 있습니다.
 
 ```csharp
-var result = _primeService.IsPrime(1);
+var primeService = new PrimeService();
+bool result = primeService.IsPrime(1);
 
 Assert.False(result, "1 should not be prime");
 ```
@@ -198,7 +193,8 @@ Assert.False(result, "1 should not be prime");
 [Fact]
 public void IsPrime_InputIs1_ReturnFalse()
 {
-    var result = _primeService.IsPrime(1);
+    var primeService = new PrimeService();
+    bool result = primeService.IsPrime(1);
 
     Assert.False(result, "1 should not be prime");
 }

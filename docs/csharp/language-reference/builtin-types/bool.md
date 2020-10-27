@@ -13,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e74fd76fcb19faa5860e48140da0fbd3db4afa47
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126465"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471891"
 ---
 # <a name="bool-c-reference"></a>bool(C# 참조)
 
@@ -32,7 +32,7 @@ ms.locfileid: "89126465"
 
 `true` 및 `false` 리터럴을 사용하여 `bool` 변수를 초기화하거나 `bool` 값을 전달할 수 있습니다.
 
-[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/shared/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>값이 세 개인 부울 논리
 

@@ -1,15 +1,17 @@
 ---
 title: SQL Server에 .NET for Apache Spark 연결
 description: .NET for Apache Spark 애플리케이션에서 SQL Server 인스턴스에 연결하는 방법을 알아봅니다.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 773e743a67c066438cb86d983ebfa34f73692c2d
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878041"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224033"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>SQL Server에 .NET for Apache Spark 연결
 
@@ -37,15 +39,15 @@ ms.locfileid: "91878041"
 
 1. SQL Server용 Microsoft JDBC Driver를 사용하여 해당 애플리케이션을 통해 데이터베이스 연결을 제공합니다([공식 웹 사이트](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)에서 다운로드).
 2. 해당 애플리케이션에서 SQL Server 인스턴스 및 데이터베이스에 연결하려면 다음 구성을 설정합니다.
-    1. **connection_url**: SQL Server 인스턴스/데이터베이스에 연결하는 데 사용되는, 다음 형식의 URL입니다.
+    1. **connection_url** : SQL Server 인스턴스/데이터베이스에 연결하는 데 사용되는, 다음 형식의 URL입니다.
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. **dbtable**: 액세스할 테이블 이름입니다.
-    3. **user**: SQL Server 구성의 1단계에서 설정한 로그인 사용자입니다.
-    4. **password**: SQL Server 구성의 1단계에서 설정한 사용자 암호입니다.
+    2. **dbtable** : 액세스할 테이블 이름입니다.
+    3. **user** : SQL Server 구성의 1단계에서 설정한 로그인 사용자입니다.
+    4. **password** : SQL Server 구성의 1단계에서 설정한 사용자 암호입니다.
 3. 아래와 같이 애플리케이션 코드에 위 구성을 사용하여 테이블에서 데이터를 읽어옵니다.
 
     ```csharp

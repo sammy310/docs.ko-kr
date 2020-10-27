@@ -21,11 +21,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398312"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223518"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
@@ -33,13 +33,13 @@ C#에는 여러 가지 기본 제공 참조 형식이 있습니다. .NET 라이�
 
 ## <a name="the-object-type"></a>개체 유형
 
-`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object?displayProperty=nameWithType>에서 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다. 형식 `object`의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요.
+`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 모든 형식(사전 정의되거나 사용자 정의된 형식, 참조 형식, 값 형식)은 <xref:System.Object?displayProperty=nameWithType>에서 직접 또는 간접적으로 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed* 라고 합니다. 형식 `object`의 변수가 값 형식으로 변환된 경우 *unboxed* 라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요.
 
 ## <a name="the-string-type"></a>문자열 유형
 
 `string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`는 .NET에서 <xref:System.String?displayProperty=nameWithType>의 별칭입니다.
 
-`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예들 들어 다음과 같습니다.
+`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예:
 
 ```csharp-interactive
 string a = "hello";
@@ -60,7 +60,7 @@ string a = "good " + "morning";
 
 이 경우 "good morning"이 포함된 문자열 개체가 생성됩니다.
 
-문자열은 *변경할 수 없습니다*. 구문상 가능한 것처럼 보여도 개체를 만든 후에는 문자열 개체의 내용을 변경할 수 없습니다. 예를 들어 이 코드를 작성하면 컴파일러는 실제로 새 문자 시퀀스를 보유할 새 문자열 개체를 만들고, 새 개체가 `b`에 할당됩니다. `b`에 할당된 메모리(문자열 "h"가 포함된 경우)는 가비지 수집에 적합합니다.
+문자열은 *변경할 수 없습니다* . 구문상 가능한 것처럼 보여도 개체를 만든 후에는 문자열 개체의 내용을 변경할 수 없습니다. 예를 들어 이 코드를 작성하면 컴파일러는 실제로 새 문자 시퀀스를 보유할 새 문자열 개체를 만들고, 새 개체가 `b`에 할당됩니다. `b`에 할당된 메모리(문자열 "h"가 포함된 경우)는 가비지 수집에 적합합니다.
 
 ```csharp
 string b = "h";
@@ -105,13 +105,13 @@ Console.WriteLine(a);
 > [!NOTE]
 > 이스케이프 코드 `\udddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.
 
-[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예들 들어 다음과 같습니다.
+[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예:
 
 ```csharp
 @"good morning"  // a string literal
 ```
 
-축자 문자열의 장점은 이스케이프 시퀀스가 처리되지 *않으므로*, 정규화된 Windows 파일 이름 등을 쉽게 쓸 수 있다는 것입니다.
+축자 문자열의 장점은 이스케이프 시퀀스가 처리되지 *않으므로* , 정규화된 Windows 파일 이름 등을 쉽게 쓸 수 있다는 것입니다.
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 `dynamic` 형식은 대부분의 상황에서 `object` 형식처럼 동작합니다. 특히 null이 아닌 모든 식은 `dynamic` 형식으로 변환될 수 있습니다. `dynamic` 유형의 식을 포함하는 작업은 컴파일러에서 확인되거나 형식이 검사되지 않았다는 점에서 `dynamic` 유형은 `object`와 다릅니다. 컴파일러는 작업에 대한 정보를 패키지하며, 나중에 해당 정보는 런타임에 작업을 평가하는 데 사용됩니다. 이 과정에서 `dynamic` 형식의 변수는 `object` 형식의 변수로 컴파일됩니다. 따라서 `dynamic` 형식은 컴파일 시간에만 존재하고 런타임에는 존재하지 않습니다.
 
-다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `WriteLine` 문의 `dyn` 또는 `obj` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 `dyn`에 대해 **dynamic**을 표시하고 `obj`에 대해 **object**를 표시합니다.
+다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `WriteLine` 문의 `dyn` 또는 `obj` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 `dyn`에 대해 **dynamic** 을 표시하고 `obj`에 대해 **object** 를 표시합니다.
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 

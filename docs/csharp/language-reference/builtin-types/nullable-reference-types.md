@@ -2,12 +2,12 @@
 title: nullable 참조 형식 - C# 참조
 description: C# nullable 참조 형식 및 사용 방법 알아보기
 ms.date: 04/06/2020
-ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102699"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471865"
 ---
 # <a name="nullable-reference-types-c-reference"></a>nullable 참조 형식(C# 참조)
 
@@ -24,7 +24,7 @@ nullable 참조 형식은 ‘nullable 인식 컨텍스트’에 옵트인된 코
 
 null을 허용하지 않는 참조 형식과 `T` nullable 참조 형식 `T?` 간 차이점은 컴파일러의 이전 규칙 해석에 따라 적용됩니다. `T` 형식의 변수 및 `T?` 형식의 변수는 동일한 .NET 형식으로 나타냅니다. 다음 예제에서는 null을 허용하지 않는 문자열 및 nullable 문자열을 선언하고 null 허용 연산자를 사용하여 null을 허용하지 않는 문자열에 값을 할당합니다.
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetCoreSyntax":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetCoreSyntax":::
 
 `notNull` 및 `nullable` 변수는 둘 다 <xref:System.String> 형식으로 나타냅니다. null을 허용하지 않는 형식 및 nullable 형식은 둘 다 같은 형식으로 저장되므로 nullable 참조 형식을 사용할 수 있는 여러 위치가 있습니다. 일반적으로 nullable 참조 형식은 기본 클래스 또는 구현된 인터페이스로 사용할 수 없습니다. nullable 참조 형식은 개체 생성 또는 형식 테스트 식에 사용할 수 없습니다. nullable 참조 형식은 멤버 액세스 식의 형식일 수 없습니다. 다음 예제에서는 다음 구문을 보여 줍니다.
 
@@ -55,11 +55,11 @@ null을 허용하지 않는 참조 형식은 해당 null 상태가 ‘null이 �
 
 nullable 참조 형식은 `null`에 초기화되거나 할당될 수 있습니다. 따라서 정적 분석에서는 역참조되기 전에 변수가 ‘null이 아님’인지 확인해야 합니다.  nullable 참조가 ‘null일 수 있음’으로 확인되면 해당 참조는 null을 허용하지 않는 참조 변수에 할당될 수 없습니다.  다음 클래스는 해당 경고의 예를 보여 줍니다.
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
 
 다음 코드 조각은 이 클래스를 사용하는 경우 컴파일러가 경고를 내보내는 위치를 보여 줍니다.
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
 앞의 예제에서는 참조 변수의 null 상태를 확인하는 컴파일러의 정적 분석을 보여 줍니다. 컴파일러는 null 검사 및 할당에 대한 언어 규칙을 적용하여 분석에 대해 알립니다.  컴파일러는 메서드 또는 속성의 의미 체계를 가정할 수 없습니다. Null 검사를 수행하는 메서드를 호출하는 경우 컴파일러는 해당 메서드가 변수의 null 상태에 영향을 준다는 것을 알 수 없습니다. 컴파일러에 인수 및 반환 값의 의미 체계를 알리는 여러 가지 특성을 API에 추가할 수 있습니다. 해당 특성은 .NET Core 라이브러리의 여러 일반적인 API에 적용되었습니다. 예를 들어 <xref:System.String.IsNullOrEmpty%2A>가 업데이트되었으며 컴파일러는 해당 메서드를 null 검사로 올바르게 해석합니다. Null 상태 정적 분석에 적용되는 특성에 대한 자세한 내용은 [nullable 특성](../attributes/nullable-analysis.md) 문서를 참조하세요.
 

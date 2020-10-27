@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 636e032ac22b48ebc471780ffa85148bf952cdd2
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1cb40759b81a1fcedcf5962b57d79cf3a64df561
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465093"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471878"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
@@ -37,7 +37,7 @@ ms.locfileid: "89465093"
 - 유니코드 이스케이프 시퀀스입니다. 이는 문자 코드의 네 개 기호를 사용하는 16진수 표현이 뒤에 표시되는 `\u`입니다.
 - 16진수 이스케이프 시퀀스입니다. 이는 문자 코드의 16진수 표현이 뒤에 표시되는 `\x`입니다.
 
-[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/shared/CharType.cs#Literals)]
 
 앞의 예제에서 볼 수 있듯이, 문자 코드의 값을 해당하는 `char` 값으로 캐스팅할 수도 있습니다.
 

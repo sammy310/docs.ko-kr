@@ -1,15 +1,17 @@
 ---
 title: MongoDB에 .NET for Apache Spark 연결
 description: .NET for Apache Spark 애플리케이션에서 MongoDB 인스턴스에 연결하는 방법을 알아봅니다.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4cb78998ddb54621a84e9d224a814047e3c40246
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878053"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223972"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>MongoDB에 .NET for Apache Spark 연결
 
@@ -41,17 +43,17 @@ ms.locfileid: "91878053"
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 구성
 
 1. 다음 변수를 설정하여 애플리케이션이 MongoDB 인스턴스와 통신하고 컬렉션에서 읽어오도록 구성합니다.
-    1. **authURI**: “필수 MongoDB 인스턴스에 연결할 수 있는 권한을 애플리케이션에 부여하는 연결 문자열”입니다. 관련 형식은 다음과 같습니다.
+    1. **authURI** : “필수 MongoDB 인스턴스에 연결할 수 있는 권한을 애플리케이션에 부여하는 연결 문자열”입니다. 관련 형식은 다음과 같습니다.
 
         ```
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. **username**: 이전 섹션의 1단계에서 만든 계정의 사용자 이름
-    3. **password**: 만든 사용자 계정의 암호
-    4. **cluster_address**: MongoDB 클러스터의 호스트 이름/주소
-    5. **database**: 연결할 MongoDB 데이터베이스
-    6. **collection**: 읽을 MongoDB 컬렉션. (이 예제에서는 모든 Apache Spark 설치에 제공되는 표준 [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) 예제 파일을 사용합니다.)
+    2. **username** : 이전 섹션의 1단계에서 만든 계정의 사용자 이름
+    3. **password** : 만든 사용자 계정의 암호
+    4. **cluster_address** : MongoDB 클러스터의 호스트 이름/주소
+    5. **database** : 연결할 MongoDB 데이터베이스
+    6. **collection** : 읽을 MongoDB 컬렉션. (이 예제에서는 모든 Apache Spark 설치에 제공되는 표준 [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) 예제 파일을 사용합니다.)
 
 2. 아래의 간단한 코드 조각과 같이 `com.mongodb.spark.sql.DefaultSource` 형식의 `spark.Read()`를 사용합니다.
 

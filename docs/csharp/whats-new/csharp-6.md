@@ -3,11 +3,11 @@ title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398156"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224242"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -17,7 +17,7 @@ C#의 6.0 릴리스에는 개발자의 생산성을 개선하는 많은 기능�
 
 ## <a name="read-only-auto-properties"></a>읽기 전용 auto 속성
 
-*읽기 전용 auto 속성*은 변경할 수 없는 형식을 만드는 더 간결한 구문을 제공합니다. get 접근자만 사용하여 auto 속성을 선언합니다.
+*읽기 전용 auto 속성* 은 변경할 수 없는 형식을 만드는 더 간결한 구문을 제공합니다. get 접근자만 사용하여 auto 속성을 선언합니다.
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
@@ -87,7 +87,7 @@ public class Student
 
 ## <a name="null-conditional-operators"></a>Null 조건 연산자
 
-*null 조건 연산자*를 사용하면 null 확인이 훨씬 더 쉽고 유연합니다. 멤버 액세스 `.`를 `?.`로 바꾸세요.
+*null 조건 연산자* 를 사용하면 null 확인이 훨씬 더 쉽고 유연합니다. 멤버 액세스 `.`를 `?.`로 바꾸세요.
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
@@ -131,7 +131,7 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="exception-filters"></a>예외 필터
 
-*예외 필터*는 지정된 catch 절을 적용해야 하는 경우를 결정하는 절입니다. 예외 필터에 사용된 식이 `true`로 계산되면 catch 절은 예외에 대한 일반적인 처리를 수행합니다. 식이 `false`로 계산되면 `catch` 절을 건너뜁니다. 한 가지 사용 예는 예외에 대한 정보를 검사하여 `catch` 절이 예외를 처리할 수 있는지 결정하는 것입니다.
+*예외 필터* 는 지정된 catch 절을 적용해야 하는 경우를 결정하는 절입니다. 예외 필터에 사용된 식이 `true`로 계산되면 catch 절은 예외에 대한 일반적인 처리를 수행합니다. 식이 `false`로 계산되면 `catch` 절을 건너뜁니다. 한 가지 사용 예는 예외에 대한 정보를 검사하여 `catch` 절이 예외를 처리할 수 있는지 결정하는 것입니다.
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 
@@ -158,7 +158,7 @@ C# 5에는 `await` 식을 배치할 수 있는 위치에 대한 여러 제한 �
 
 ## <a name="initialize-associative-collections-using-indexers"></a>인덱서를 사용하여 연결 컬렉션 초기화
 
-*인덱스 이니셜라이저*는 컬렉션 이니셜라이저를 인덱스 사용과 더 일관되도록 하는 두 가지 기능 중 하나입니다. C#의 이전 릴리스에서는 키 및 값 쌍을 중괄호로 묶어 <xref:System.Collections.Generic.Dictionary%602>를 포함하여 시퀀스 스타일 컬렉션에서 *컬렉션 이니셜라이저*를 사용할 수 있습니다.
+*인덱스 이니셜라이저* 는 컬렉션 이니셜라이저를 인덱스 사용과 더 일관되도록 하는 두 가지 기능 중 하나입니다. C#의 이전 릴리스에서는 키 및 값 쌍을 중괄호로 묶어 <xref:System.Collections.Generic.Dictionary%602>를 포함하여 시퀀스 스타일 컬렉션에서 *컬렉션 이니셜라이저* 를 사용할 수 있습니다.
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5에는 `await` 식을 배치할 수 있는 위치에 대한 여러 제한 �
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>컬렉션 이니셜라이저의 확장 `Add` 메서드
 
-컬렉션을 더 쉽게 초기화하도록 하는 또 다른 기능은 `Add` 메서드에 *확장 메서드*를 사용하는 기능입니다. 이 기능은 Visual Basic의 패리티를 위해 추가되었습니다. 이 기능은 의미상으로 새 항목을 추가하기 위해 다른 이름을 가진 메서드가 포함된 사용자 지정 컬렉션 클래스가 있는 경우 가장 유용합니다.
+컬렉션을 더 쉽게 초기화하도록 하는 또 다른 기능은 `Add` 메서드에 *확장 메서드* 를 사용하는 기능입니다. 이 기능은 Visual Basic의 패리티를 위해 추가되었습니다. 이 기능은 의미상으로 새 항목을 추가하기 위해 다른 이름을 가진 메서드가 포함된 사용자 지정 컬렉션 클래스가 있는 경우 가장 유용합니다.
 
 ## <a name="improved-overload-resolution"></a>향상된 오버로드 확인
 

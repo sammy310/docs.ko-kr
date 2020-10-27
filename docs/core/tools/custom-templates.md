@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874720"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471552"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -25,7 +25,7 @@ NuGet *.nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 �
 
 ### <a name="net-default-templates"></a>.NET 기본 템플릿
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://reactjs.org/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
 
 ```dotnetcli
 dotnet new --list
@@ -36,11 +36,11 @@ dotnet new --list
 템플릿은 다음 파트로 구성되어 있습니다.
 
 - 소스 파일 및 폴더
-- 구성 파일(*template.json*)
+- 구성 파일( *template.json* )
 
 ### <a name="source-files-and-folders"></a>소스 파일 및 폴더
 
-소스 파일 및 폴더에는 `dotnet new <TEMPLATE>` 명령을 실행할 때 템플릿 엔진에서 사용하려는 파일과 폴더가 모두 포함됩니다. 템플릿 엔진은 프로젝트를 생성하는 데 *실행 가능한 프로젝트*를 소스 코드로 사용하도록 디자인되어 있습니다. 여기에는 여러 가지 이점이 있습니다.
+소스 파일 및 폴더에는 `dotnet new <TEMPLATE>` 명령을 실행할 때 템플릿 엔진에서 사용하려는 파일과 폴더가 모두 포함됩니다. 템플릿 엔진은 프로젝트를 생성하는 데 *실행 가능한 프로젝트* 를 소스 코드로 사용하도록 디자인되어 있습니다. 여기에는 여러 가지 이점이 있습니다.
 
 - 템플릿 엔진에서는 특수 토큰을 프로젝트의 소스 코드에 삽입할 필요가 없습니다.
 - 코드 파일은 특수 파일이 아니고 템플릿 엔진 작업을 수행하는 방식으로 수정되지도 않습니다. 따라서 일반적으로 프로젝트 작업을 할 때 사용하는 도구로 템플릿 콘텐츠를 처리할 수 있습니다.
@@ -70,7 +70,7 @@ dotnet new --list
 
 #### <a name="example"></a>예제
 
-예를 들어 아래에는 *console.cs* 및 *readme.txt*라는 두 개의 콘텐츠 파일이 포함된 템플릿 폴더가 있습니다. 또한 *template.json* 파일이 포함된 *.template.config*라는 필수 폴더가 있습니다.
+예를 들어 아래에는 *console.cs* 및 *readme.txt* 라는 두 개의 콘텐츠 파일이 포함된 템플릿 폴더가 있습니다. 또한 *template.json* 파일이 포함된 *.template.config* 라는 필수 폴더가 있습니다.
 
 ```text
 └───mytemplate
@@ -108,15 +108,15 @@ dotnet new --list
 01. `<Title>`, `<Authors>`, `<Description>`, `<PackageTags>` 등의 일반 메타데이터 설정을 지정해야 합니다.
 01. 템플릿 프로세스에서 생성된 이진 파일을 사용하지 않더라도 `<TargetFramework>` 설정을 지정해야 합니다. 아래 예제에서는 `netstandard2.0`으로 설정되었습니다.
 
-*.nupkg* NuGet 패키지 양식의 템플릿 팩은 모든 템플릿이 패키지 내의 *content* 폴더에 저장되어 있어야 합니다. 생성된 *.nupkg*을 템플릿 팩으로 설치할 수 있도록 *.csproj* 파일에 추가해야 하는 몇 가지 설정이 더 있습니다.
+*.nupkg* NuGet 패키지 양식의 템플릿 팩은 모든 템플릿이 패키지 내의 *content* 폴더에 저장되어 있어야 합니다. 생성된 *.nupkg* 을 템플릿 팩으로 설치할 수 있도록 *.csproj* 파일에 추가해야 하는 몇 가지 설정이 더 있습니다.
 
-01. 프로젝트에서 NuGet 패키지의 **content**로 설정하는 모든 파일이 포함되도록 `<IncludeContentInPack>` 설정을 `true`로 지정합니다.
+01. 프로젝트에서 NuGet 패키지의 **content** 로 설정하는 모든 파일이 포함되도록 `<IncludeContentInPack>` 설정을 `true`로 지정합니다.
 01. 컴파일러가 NuGet 패키지에서 생성하는 모든 이진 파일이 제외되도록 `<IncludeBuildOutput>` 설정을 `false`로 지정합니다.
-01. `<ContentTargetFolders>` 설정을 `content`로 지정합니다. 이렇게 하면 **content**로 설정된 파일이 NuGet 패키지의 *content* 폴더에 저장됩니다. NuGet 패키지의 이 폴더는 dotnet 템플릿 시스템에서 구문 분석됩니다.
+01. `<ContentTargetFolders>` 설정을 `content`로 지정합니다. 이렇게 하면 **content** 로 설정된 파일이 NuGet 패키지의 *content* 폴더에 저장됩니다. NuGet 패키지의 이 폴더는 dotnet 템플릿 시스템에서 구문 분석됩니다.
 
 템플릿 프로젝트에서 코드 파일이 컴파일되지 않도록 모두 제외하는 간편한 방법은 프로젝트 파일의 `<ItemGroup>` 요소에 `<Compile Remove="**\*" />` 항목을 사용하는 것입니다.
 
-템플릿 팩을 구성하는 간편한 방법은 모든 템플릿을 개별 폴더에 넣은 다음, *.csproj* 파일과 동일한 디렉터리에 있는 *templates* 폴더에 각 템플릿 폴더를 넣는 것입니다. 이렇게 하면 단일 프로젝트 항목을 사용하여 *templates*에 있는 모든 파일과 폴더를 **content**로 포함할 수 있습니다. `<ItemGroup>` 요소 내부에 `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 항목을 만듭니다.
+템플릿 팩을 구성하는 간편한 방법은 모든 템플릿을 개별 폴더에 넣은 다음, *.csproj* 파일과 동일한 디렉터리에 있는 *templates* 폴더에 각 템플릿 폴더를 넣는 것입니다. 이렇게 하면 단일 프로젝트 항목을 사용하여 *templates* 에 있는 모든 파일과 폴더를 **content** 로 포함할 수 있습니다. `<ItemGroup>` 요소 내부에 `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 항목을 만듭니다.
 
 다음은 위의 모든 지침을 따르는 예제 *.csproj* 파일입니다. *templates* 자식 폴더를 *content* 패키지 폴더에 압축하고, 코드 파일이 컴파일되지 않도록 모두 제외합니다.
 
@@ -146,7 +146,7 @@ dotnet new --list
 </Project>
 ```
 
-아래 예제에서는 *.csproj*를 사용하여 템플릿 팩을 만드는 파일 및 폴더 구조를 보여 줍니다. *MyDotnetTemplates.csproj* 파일과 *templates* 폴더는 모두 *project_folder* 디렉터리의 루트에 있습니다. *templates* 폴더에는 *mytemplate1*과 *mytemplate2*라는 두 개의 템플릿이 들어 있습니다. 각 템플릿에 *template.json* 구성 파일이 포함된 *. template.config* 폴더와 콘텐츠 파일이 있습니다.
+아래 예제에서는 *.csproj* 를 사용하여 템플릿 팩을 만드는 파일 및 폴더 구조를 보여 줍니다. *MyDotnetTemplates.csproj* 파일과 *templates* 폴더는 모두 *project_folder* 디렉터리의 루트에 있습니다. *templates* 폴더에는 *mytemplate1* 과 *mytemplate2* 라는 두 개의 템플릿이 들어 있습니다. 각 템플릿에 *template.json* 구성 파일이 포함된 *. template.config* 폴더와 콘텐츠 파일이 있습니다.
 
 ```text
 project_folder
@@ -189,7 +189,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 ### <a name="to-install-a-template-from-a-file-system-directory"></a>파일 시스템 디렉터리에서 템플릿을 설치하려면
 
-위 예제의 *mytemplate1*과 같은 템플릿 폴더에서 템플릿을 설치할 수 있습니다. *.template.config* 폴더의 폴더 경로를 지정합니다. 템플릿 디렉터리의 경로가 절대 경로여야 하는 것은 아닙니다. 그러나 설치된 템플릿을 폴더에서 제거하려면 절대 경로가 필요합니다.
+위 예제의 *mytemplate1* 과 같은 템플릿 폴더에서 템플릿을 설치할 수 있습니다. *.template.config* 폴더의 폴더 경로를 지정합니다. 템플릿 디렉터리의 경로가 절대 경로여야 하는 것은 아닙니다. 그러나 설치된 템플릿을 폴더에서 제거하려면 절대 경로가 필요합니다.
 
 ```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>

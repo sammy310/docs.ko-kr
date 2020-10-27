@@ -4,12 +4,12 @@ description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개�
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874706"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223670"
 ---
 # <a name="methods-in-c"></a>메서드(C#)
 
@@ -45,11 +45,11 @@ ms.locfileid: "90874706"
 
 ## <a name="method-invocation"></a>메서드 호출
 
-메서드는 *인스턴스* 또는 *정적*일 수 있습니다. 인스턴스 메서드를 호출하려면 개체를 인스턴스화하고 해당 개체에서 메서드를 호출해야 합니다. 인스턴스 메서드는 인스턴스 및 해당 데이터에 대해 작동합니다. 메서드가 속하는 형식의 이름을 참조하여 정적 메서드를 호출합니다. 정적 메서드는 인스턴스 데이터에 대해 작동하지 않습니다. 개체 인스턴스를 통해 정적 메서드를 호출하려고 하면 컴파일러 오류가 생성됩니다.
+메서드는 *인스턴스* 또는 *정적* 일 수 있습니다. 인스턴스 메서드를 호출하려면 개체를 인스턴스화하고 해당 개체에서 메서드를 호출해야 합니다. 인스턴스 메서드는 인스턴스 및 해당 데이터에 대해 작동합니다. 메서드가 속하는 형식의 이름을 참조하여 정적 메서드를 호출합니다. 정적 메서드는 인스턴스 데이터에 대해 작동하지 않습니다. 개체 인스턴스를 통해 정적 메서드를 호출하려고 하면 컴파일러 오류가 생성됩니다.
 
 메서드 호출은 필드 액세스와 비슷합니다. 개체 이름(인스턴스 메서드를 호출하는 경우) 또는 형식 이름(`static` 메서드를 호출하는 경우) 뒤에 마침표, 메서드 이름 및 괄호를 추가합니다. 인수는 괄호 안에 나열되고 쉼표로 구분합니다.
 
-메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출자는 메서드를 호출할 때 각 매개 변수에 대해 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 인수 이름(호출하는 코드에 사용된 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 다음 예제에서는 `Square` 메서드에 *i*라는 `int` 형식의 단일 매개 변수가 포함되어 있습니다. 첫 번째 메서드 호출은 `Square` 메서드에 *num*이라는 `int` 형식의 변수를 전달합니다. 두 번째 호출은 숫자 상수, 세 번째 호출은 식을 전달합니다.
+메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출자는 메서드를 호출할 때 각 매개 변수에 대해 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 인수 이름(호출하는 코드에 사용된 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 다음 예제에서는 `Square` 메서드에 *i* 라는 `int` 형식의 단일 매개 변수가 포함되어 있습니다. 첫 번째 메서드 호출은 `Square` 메서드에 *num* 이라는 `int` 형식의 변수를 전달합니다. 두 번째 호출은 숫자 상수, 세 번째 호출은 식을 전달합니다.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "90874706"
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-메서드를 호출할 때 위치 인수 대신 *명명된 인수*를 사용할 수도 있습니다. 명명된 인수를 사용하는 경우 매개 변수 이름 뒤에 콜론(":")과 인수를 지정합니다. 모든 필수 인수가 있기만 하면 메서드의 인수 순서는 중요하지 않습니다. 다음 예제에서는 명명된 인수를 사용하여 `TestMotorcycle.Drive` 메서드를 호출합니다. 이 예제에서는 명명된 인수가 메서드의 매개 변수 목록과 반대 순서로 전달됩니다.
+메서드를 호출할 때 위치 인수 대신 *명명된 인수* 를 사용할 수도 있습니다. 명명된 인수를 사용하는 경우 매개 변수 이름 뒤에 콜론(":")과 인수를 지정합니다. 모든 필수 인수가 있기만 하면 메서드의 인수 순서는 중요하지 않습니다. 다음 예제에서는 명명된 인수를 사용하여 `TestMotorcycle.Drive` 메서드를 호출합니다. 이 예제에서는 명명된 인수가 메서드의 매개 변수 목록과 반대 순서로 전달됩니다.
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "90874706"
 
 ## <a name="passing-parameters"></a>매개 변수 전달
 
-C#의 형식은 *값 형식* 또는 *참조 형식*입니다. 기본 제공 값 형식의 목록은 [형식](./tour-of-csharp/types.md)을 참조하세요. 기본적으로, 값 형식과 참조 형식은 둘 다 값으로 메서드에 전달됩니다.
+C#의 형식은 *값 형식* 또는 *참조 형식* 입니다. 기본 제공 값 형식의 목록은 [형식](./tour-of-csharp/types.md)을 참조하세요. 기본적으로, 값 형식과 참조 형식은 둘 다 값으로 메서드에 전달됩니다.
 
 <a name="byval"></a>
 
@@ -184,7 +184,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 
 지역 변수(이 경우 `result`)를 사용하여 값을 저장하는 것은 선택 사항입니다. 코드의 가독성에 도움이 될 수 있고 전체 메서드 범위에 대해 인수의 원래 값을 저장해야 할 경우 필요할 수도 있습니다.
 
-메서드에서 둘 이상의 값을 반환하려는 경우도 있습니다. C# 7.0부터 *튜플 형식* 및 *튜플 리터럴*을 사용하면 이 작업을 쉽게 수행할 수 있습니다. 튜플 형식은 튜플 요소의 데이터 형식을 정의합니다. 튜플 리터럴은 반환된 튜플의 실제 값을 제공합니다. 다음 예제에서 `(string, string, string, int)`는 `GetPersonalInfo` 메서드에서 반환되는 튜플 형식을 정의합니다. `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 식은 튜플 리터럴입니다. 메서드는 `PersonInfo` 개체와 함께 이름, 중간 이름 및 성을 반환합니다.
+메서드에서 둘 이상의 값을 반환하려는 경우도 있습니다. C# 7.0부터 *튜플 형식* 및 *튜플 리터럴* 을 사용하면 이 작업을 쉽게 수행할 수 있습니다. 튜플 형식은 튜플 요소의 데이터 형식을 정의합니다. 튜플 리터럴은 반환된 튜플의 실제 값을 제공합니다. 다음 예제에서 `(string, string, string, int)`는 `GetPersonalInfo` 메서드에서 반환되는 튜플 형식을 정의합니다. `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 식은 튜플 리터럴입니다. 메서드는 `PersonInfo` 개체와 함께 이름, 중간 이름 및 성을 반환합니다.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -198,7 +198,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine($"{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 튜플 형식 정의의 튜플 요소에 이름을 할당할 수도 있습니다. 다음 예제에서는 명명된 요소를 사용하는 `GetPersonalInfo` 메서드의 대체 버전을 보여 줍니다.
@@ -215,7 +215,7 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 메서드에 배열이 인수로 전달되고 메서드가 개별 요소의 값을 수정하는 경우 값의 스타일 또는 기능 흐름 개선을 위해 메서드에서 배열을 반환하도록 선택할 수도 있지만 필수는 아닙니다.  이는 C#에서 모든 참조 형식을 값으로 전달하고 배열 참조의 값이 배열에 대한 포인터이기 때문입니다. 다음 예제에서는 `DoubleValues` 메서드에서 수행한 `values` 배열 내용의 변경 사항을 배열에 대한 참조가 있는 모든 코드에서 관찰할 수 있습니다.
