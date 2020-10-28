@@ -2,12 +2,12 @@
 title: 이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449480"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687711"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 
@@ -47,4 +47,4 @@ ms.locfileid: "77449480"
 ## <a name="see-also"></a>참고 항목
 
 - [WCF 클라이언트를 사용하여 서비스 액세스](accessing-services-using-a-wcf-client.md)
-- [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [이식 가능한 클래스 라이브러리](../cross-platform/portable-class-library.md)
