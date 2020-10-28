@@ -725,24 +725,20 @@ items:
         href: misc/using-libraries-from-partially-trusted-code.md
       - name: Assert 메서드 사용
         href: misc/using-the-assert-method.md
-  - name: 콘솔 앱 만들기
-    href: ../standard/building-console-apps.md
-  - name: Web Forms 앱에서 이벤트 사용
-    href: ../standard/events/how-to-consume-events-in-a-web-forms-application.md
-  - name: .NET Framework 코드 분석기
-    href: ../standard/analyzers/framework-analyzer.md
+  - name: 코드 분석
+    href: code-analyzers.md
   - name: 여러 플랫폼용으로 개발
     items:
       - name: 개요
-        href: ../standard/cross-platform/index.md
+        href: cross-platform/index.md
         displayName: cross platform
       - name: 이식 가능한 클래스 라이브러리
-        href: ../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md
+        href: cross-platform/portable-class-library.md
       - name: MVVM과 함께 이식 가능한 클래스 라이브러리 사용
-        href: ../standard/cross-platform/using-portable-class-library-with-model-view-view-model.md
+        href: cross-platform/using-portable-class-library-with-model-view-view-model.md
       - name: 여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
-        href: ../standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+        href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
       - name: Microsoft Store 앱 및 Windows 런타임에 대한 .NET Framework 지원
-        href: ../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+        href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
       - name: Windows 런타임에 URI 전달
-        href: ../standard/cross-platform/passing-a-uri-to-the-windows-runtime.md
+        href: cross-platform/passing-a-uri-to-the-windows-runtime.md

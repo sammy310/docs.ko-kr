@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471945"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687564"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1855,7 +1855,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
   - 이식 가능한 클래스 라이브러리처럼 대상을 다시 Windows 스토어 또는 Windows Phone 스토어 클래스 라이브러리를 변경할 수 있습니다.
 
-  이러한 변경 내용에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)을 참조하십시오.
+  이러한 변경 내용에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리](../cross-platform/portable-class-library.md)을 참조하십시오.
 
 - 이제 Windows 앱 빌드 및 배포를 위한 미리 컴파일 기술인 .NET Native에 대한 설명서가 .NET Framework 콘텐츠 집합에 포함되었습니다. .NET Native는 앱을 중간 언어가 아닌 네이티브 코드로 직접 컴파일하여 더 나은 성능을 제공합니다. 자세한 내용은 [.NET 네이티브로 앱 컴파일](../net-native/index.md)을 참조하십시오.
 
@@ -2125,13 +2125,12 @@ Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windo
 
 ### <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리 <a name="portable"></a>
 
-Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 여러 .NET Framework 플랫폼에서 작동하는 관리되는 어셈블리를 작성하고 빌드할 수 있습니다. 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 대상 플랫폼(예: Windows Phone 및 Windows 8.x 스토어 앱용 .NET)을 선택합니다. 프로젝트에서 사용할 수 있는 형식 및 멤버는 이러한 플랫폼에서 공용 형식 및 멤버로 자동으로 제한됩니다. 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)를 참조하십시오.
+Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 여러 .NET Framework 플랫폼에서 작동하는 관리되는 어셈블리를 작성하고 빌드할 수 있습니다. 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 대상 플랫폼(예: Windows Phone 및 Windows 8.x 스토어 앱용 .NET)을 선택합니다. 프로젝트에서 사용할 수 있는 형식 및 멤버는 이러한 플랫폼에서 공용 형식 및 멤버로 자동으로 제한됩니다. 자세한 내용은 [이식 가능한 클래스 라이브러리](../cross-platform/portable-class-library.md)를 참조하십시오.
 
 ## <a name="see-also"></a>참조
 
 - [.NET Framework 및 번외 릴리스](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework에서 내게 필요한 옵션의 새로운 기능](whats-new-in-accessibility.md)
-- [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio의 새로운 C++ 기능](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
