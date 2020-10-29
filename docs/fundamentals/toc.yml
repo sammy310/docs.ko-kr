@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: 익명 형식과 튜플 형식 중에서 선택
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: 콘솔 앱 개념
+        href: ../standard/building-console-apps.md
   - name: 종속성 주입
     items:
       - name: 개요
