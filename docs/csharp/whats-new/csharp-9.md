@@ -2,12 +2,12 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955169"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526591"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
@@ -30,11 +30,11 @@ C# 9.0은 다음 기능과 개선 사항을 C# 언어에 추가합니다.
 - 모듈 이니셜라이저
 - 부분 메서드에 대한 새로운 기능
 
-C# 9.0은 **.NET 5**에서 지원됩니다. 자세한 내용은 [C# 언어 버전 관리](../language-reference/configure-language-version.md)를 참조하세요.
+C# 9.0은 **.NET 5** 에서 지원됩니다. 자세한 내용은 [C# 언어 버전 관리](../language-reference/configure-language-version.md)를 참조하세요.
 
 ## <a name="record-types"></a>레코드 유형
 
-C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서드를 포함하는 참조 형식인 ***레코드 종류***가 도입되었습니다. 레코드는 기본적으로 변경할 수 없습니다.
+C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서드를 제공하는 참조 형식인 *’레코드 종류’_가 도입되었습니다. 레코드는 기본적으로 변경할 수 없습니다.
 
 레코드 종류를 사용하면 .NET에서 변경할 수 없는 참조 형식을 쉽게 만들 수 있습니다. 지금까지 .NET 형식은 크게 참조 형식(클래스 및 무명 형식 포함)과 값 형식(구조체 및 튜플 포함)으로 분류되었습니다. 변경할 수 없는 값 형식이 권장되지만, 변경 가능한 값 형식을 사용해도 오류가 자주 발생하지는 않습니다. 값 형식 변수에는 값이 포함되므로 값 형식을 메서드에 전달할 때 원래 데이터의 복사본이 변경됩니다.
 
@@ -86,7 +86,7 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-지금까지 살펴본 예제에서는 일반적인 구문을 사용하여 속성을 선언합니다. ***위치 레코드***라는 보다 간결한 형식이 있습니다.  다음은 앞에서 위치 레코드로 정의된 세 가지 레코드 종류입니다.
+지금까지 살펴본 예제에서는 일반적인 구문을 사용하여 속성을 선언합니다. ‘위치 레코드’라는 보다 간결한 형식이 있습니다.  다음은 앞에서 위치 레코드로 정의된 세 가지 레코드 종류입니다.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-마지막으로, 레코드는 ***with-expression***을 지원합니다. ***with-expression***은 컴파일러에 레코드 복사본을 만들지만 *with*에 지정된 속성을 수정하도록 지시합니다.
+마지막으로 레코드는 _*_with-expressions_*_ 를 지원합니다. _*_with-expression_*_ 은 컴파일러에 레코드 복사본을 만들지만 _with*에 지정된 속성을 수정하도록 지시합니다.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -106,9 +106,9 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 
 ## <a name="init-only-setters"></a>Init 전용 setter
 
-***Init 전용 setter***는 개체의 멤버를 초기화하는 일관성 있는 구문을 제공합니다. 속성 이니셜라이저를 사용하면 어떤 값이 어떤 속성을 설정하는지 명확하게 파악할 수 있습니다. 단점은 해당 속성이 설정 가능해야 한다는 것입니다. C# 9.0부터 속성 및 인덱서에 대해 `set` 접근자 대신 `init` 접근자를 만들 수 있습니다. 호출자는 속성 이니셜라이저 구문을 사용하여 생성 식에서 해당 값을 설정할 수 있지만, 생성이 완료되고 나면 readonly 속성이 됩니다. Init 전용 setter는 상태 변경 창을 제공합니다. 이 창은 생성 단계가 끝날 때 닫힙니다. 속성 이니셜라이저 및 with-expression을 비롯한 모든 초기화가 완료되면 생성 단계가 사실상 끝납니다.
+‘ **Init 전용 setter** ’는 개체의 멤버를 초기화하는 일관성 있는 구문을 제공합니다. 속성 이니셜라이저를 사용하면 어떤 값이 어떤 속성을 설정하는지 명확하게 파악할 수 있습니다. 단점은 해당 속성이 설정 가능해야 한다는 것입니다. C# 9.0부터 속성 및 인덱서에 대해 `set` 접근자 대신 `init` 접근자를 만들 수 있습니다. 호출자는 속성 이니셜라이저 구문을 사용하여 생성 식에서 해당 값을 설정할 수 있지만, 생성이 완료되고 나면 readonly 속성이 됩니다. Init 전용 setter는 상태 변경 창을 제공합니다. 이 창은 생성 단계가 끝날 때 닫힙니다. 속성 이니셜라이저 및 with-expression을 비롯한 모든 초기화가 완료되면 생성 단계가 사실상 끝납니다.
 
-위치 레코드에 대한 앞의 예제에서는 init 전용 setter를 사용하여 with expression으로 속성을 설정하는 방법을 보여 줍니다. 작성하는 모든 종류에서 init 전용 setter를 선언할 수 있습니다. 예를 들어 다음 구조체는 기상 관측 구조체를 정의합니다.
+작성하는 모든 형식에서 `init` 전용 setter를 선언할 수 있습니다. 예를 들어 다음 구조체는 기상 관측 구조체를 정의합니다.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="DeclareWeatherObservation":::
 
@@ -127,7 +127,7 @@ init 전용 setter는 파생 클래스에서 기본 클래스 속성을 설정�
 
 ## <a name="top-level-statements"></a>최상위 문
 
-***최상위 문***은 많은 애플리케이션에서 불필요한 공식 절차를 제거합니다. 정식 “Hello World!” 프로그램을 고려해 보세요.
+‘최상위 문’은 많은 애플리케이션에서 불필요한 공식 절차를 제거합니다. 정식 “Hello World!” 프로그램을 고려해 보세요.
 
 ```csharp
 using System;
@@ -164,12 +164,12 @@ System.Console.WriteLine("Hello World!");
 
 C# 9에는 새로운 패턴 일치 개선 사항이 포함되어 있습니다.
 
-- ***형식 패턴***은 변수를 형식과 일치시킵니다.
-- ***괄호로 묶인 패턴***은 패턴 조합의 우선 순위를 적용하거나 강조합니다.
-- ***결합 `and` 패턴***은 두 패턴이 모두 일치해야 합니다.
-- ***분리 `or` 패턴***은 패턴 중 하나가 일치해야 합니다.
-- ***부정 `not` 패턴***은 패턴이 일치하지 않아야 합니다.
-- ***관계형 패턴***은 입력과 지정된 상수 간에 작음, 큼, 작거나 같음, 크거나 같음 또는 같음 관계가 있어야 합니다.
+- ‘형식 패턴’은 변수를 형식과 일치시킵니다.
+- ‘괄호로 묶인 패턴’은 패턴 조합의 우선 순위를 적용하거나 강조합니다.
+- ‘결합’ `and` ‘패턴’에서는 두 패턴이 모두 일치해야 합니다.
+- ‘분리’ `or` ‘패턴’에서는 패턴 중 하나가 일치해야 합니다.
+- ‘부정’ `not` ‘패턴’에서는 패턴이 일치하지 않아야 합니다.
+- ‘관계형 패턴’에서는 입력과 지정된 상수 간에 보다 작음, 보다 큼, 작거나 같음, 크거나 같음 관계가 있어야 합니다.
 
 새로운 패턴은 패턴 구문을 보강합니다. 이 예제를 참조하십시오.
 
@@ -196,7 +196,7 @@ if (e is not null)
 
 원시 크기 정수인 `nint` 및 `nuint`는 정수 형식입니다. 기본 형식 <xref:System.IntPtr?displayProperty=nameWithType> 및 <xref:System.UIntPtr?displayProperty=nameWithType>으로 표현됩니다. 컴파일러는 해당 형식의 추가 변환과 연산을 네이티브 정수 형식으로 표시합니다. 원시 크기 정수는 `MaxValue` 또는 `MinValue`의 속성을 정의합니다. 이러한 값은 대상 머신의 정수 원시 크기에 따라 달라지므로 컴파일 시간 상수로 표현할 수 없습니다. 이러한 값은 런타임에 읽기 전용입니다. 다음 범위에서 `nint`의 상수 값을 사용할 수 있습니다. [`int.MinValue` .. `int.MaxValue`]. 다음 범위에서 `nuint`의 상수 값을 사용할 수 있습니다. [`uint.MinValue` .. `uint.MaxValue`]. 컴파일러는 <xref:System.Int32?displayProperty=nameWithType> 및 <xref:System.UInt32?displayProperty=nameWithType> 형식을 사용하여 모든 단항 및 이진 연산자에 대해 상수 정리를 수행합니다. 결과가 32비트에 맞지 않으면 런타임에 연산이 실행되고 상수로 간주하지 않습니다. 정수 연산이 광범위하게 사용되고 가장 빠른 성능이 필요한 시나리오에서는 원시 크기 정수를 사용하여 성능을 향상할 수 있습니다.
 
-함수 포인터는 IL opcode `ldftn` 및 `calli`에 액세스하는 편리한 구문을 제공합니다. 새로운 `delegate*` 구문을 사용하여 함수 포인터를 선언할 수 있습니다. `delegate*` 형식은 포인터 형식입니다. `delegate*` 형식을 호출하면 `Invoke()` 메서드에서 `callvirt`를 사용하는 대리자와는 달리 `calli`가 사용됩니다. 호출 구문은 동일합니다. 함수 포인터 호출은 `managed` 호출 규칙을 사용합니다. `delegate*` 구문 뒤에 `unmanaged` 키워드를 추가하여 `unmanaged` 호출 규칙을 사용하도록 선언합니다. `delegate*` 선언에서 특성을 사용하여 다른 호출 규칙을 지정할 수 있습니다.
+함수 포인터는 IL opcode `ldftn` 및 `calli`에 액세스하는 편리한 구문을 제공합니다. 새로운 `delegate_` 구문을 사용하여 함수 포인터를 선언할 수 있습니다. `delegate*` 형식은 포인터 형식입니다. `delegate*` 형식을 호출하면 `Invoke()` 메서드에서 `callvirt`를 사용하는 대리자와는 달리 `calli`가 사용됩니다. 호출 구문은 동일합니다. 함수 포인터 호출은 `managed` 호출 규칙을 사용합니다. `delegate*` 구문 뒤에 `unmanaged` 키워드를 추가하여 `unmanaged` 호출 규칙을 사용하도록 선언합니다. `delegate*` 선언에서 특성을 사용하여 다른 호출 규칙을 지정할 수 있습니다.
 
 마지막으로, <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType>을 추가하여 컴파일러에 `localsinit` 플래그를 내보내지 않도록 지시할 수 있습니다. 이 플래그는 모든 지역 변수를 0으로 초기화하도록 CLR에 지시합니다. `localsinit` 플래그는 1.0부터 C#의 기본 동작이었습니다. 그러나 0으로 초기화를 추가로 수행할 경우 일부 시나리오에서 성능에 상당한 영향을 미칠 수 있습니다. 특히, `stackalloc`를 사용하는 경우에 해당합니다. 이 경우에는 <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute>를 추가할 수 있습니다. 단일 메서드 또는 속성이나 `class`, `struct`, `interface` 또는 모듈에 추가할 수도 있습니다. 이 특성은 `abstract` 메서드에는 영향을 주지 않고, 구현과 관련해서 생성된 코드에 적용됩니다.
 
@@ -226,7 +226,7 @@ if (e is not null)
 
 C# 9.0부터 [람다](../language-reference/operators/lambda-expressions.md) 식 또는 [무명 메서드](../language-reference/operators/delegate-operator.md)에 `static` 한정자를 추가할 수 있습니다. 정적 람다 식은 `static` 로컬 함수와 유사합니다. 정적 람다 또는 무명 메서드는 지역 변수나 인스턴스 상태를 캡처할 수 없습니다. `static` 한정자는 실수에 의한 다른 변수 캡처를 방지합니다.
 
-공변 반환 형식은 재정의된 함수의 반환 형식에 대한 유연성을 제공합니다. 재정의된 가상 함수는 기본 클래스 메서드에 선언된 반환 형식에서 파생된 형식을 반환할 수 있습니다. 이 함수는 레코드나 가상 클론 또는 팩터리 메서드를 지원하는 기타 형식에 유용할 수 있습니다.
+공변 반환 형식은 [재정의](../language-reference/keywords/override.md) 메서드의 반환 형식에 유연성을 제공합니다. 재정의 메서드는 재정의된 기본 메서드의 반환 형식에서 파생된 형식을 반환할 수 있습니다. 이 메서드는 레코드나 가상 클론 또는 팩터리 메서드를 지원하는 기타 형식에 유용할 수 있습니다.
 
 또한 [`foreach` 루프](../language-reference/keywords/foreach-in.md)는 `foreach` 패턴을 충족하는 확장 메서드 `GetEnumerator`를 인식하고 사용합니다. 이렇게 변경함으로써 `foreach`는 비동기 패턴과 같은 다른 패턴 기반 생성 및 패턴 기반 분해와 일치하게 됩니다. 실제로 이 변경은 모든 형식에 `foreach` 지원을 추가할 수 있음을 의미합니다. 설계상 개체를 열거하는 것이 적합한 경우로 사용을 제한해야 합니다.
 
@@ -240,9 +240,9 @@ C# 9.0부터 [람다](../language-reference/operators/lambda-expressions.md) 식
 
 코드 생성기는 Roslyn 분석 API를 사용하여 특성이나 다른 코드 요소를 읽습니다. 해당 정보를 통해 컴파일에 새 코드를 추가합니다. 소스 생성기는 코드를 추가할 수만 있고 컴파일의 기존 코드를 수정할 수는 없습니다.
 
-코드 생성기에 대해 추가된 두 가지 기능은 ***부분 메서드 구문*** 확장 및 ***모듈 이니셜라이저***입니다. 먼저 부분 메서드 변경 내용입니다. C# 9.0 이전에는 부분 메서드가 `private`이지만 액세스 한정자를 지정하거나 `void` 반환 또는 `out` 매개 변수를 사용할 수 없습니다. 이 제한 사항 때문에, 메서드 구현을 제공하지 않을 경우 컴파일러에서 부분 메서드 호출을 모두 제거합니다. C# 9.0에서는 해당 제한 사항이 제거되었지만 부분 메서드 선언에 구현이 필요합니다. 코드 생성기에서 이 구현을 제공할 수 있습니다. 호환성이 손상되는 변경을 방지하기 위해 컴파일러에서 액세스 한정자가 없는 부분 메서드는 이전 규칙을 따른다고 간주합니다. 부분 메서드에 `private` 액세스 한정자가 포함되어 있으면 새 규칙에 따라 부분 메서드가 제어됩니다.
+코드 생성기에 대해 추가된 두 가지 기능은 ‘ **부분 메서드 구문** ’에 대한 확장과 ‘모듈 이니셜라이저’입니다. 먼저 부분 메서드 변경 내용입니다. C# 9.0 이전에는 부분 메서드가 `private`이지만 액세스 한정자를 지정하거나 `void` 반환 또는 `out` 매개 변수를 사용할 수 없습니다. 이 제한 사항 때문에, 메서드 구현을 제공하지 않을 경우 컴파일러에서 부분 메서드 호출을 모두 제거합니다. C# 9.0에서는 해당 제한 사항이 제거되었지만 부분 메서드 선언에 구현이 필요합니다. 코드 생성기에서 이 구현을 제공할 수 있습니다. 호환성이 손상되는 변경을 방지하기 위해 컴파일러에서 액세스 한정자가 없는 부분 메서드는 이전 규칙을 따른다고 간주합니다. 부분 메서드에 `private` 액세스 한정자가 포함되어 있으면 새 규칙에 따라 부분 메서드가 제어됩니다.
 
-코드 생성기의 두 번째 새로운 기능은 ***모듈 이니셜라이저***입니다. 모듈 이니셜라이저는 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 특성이 연결된 메서드입니다. 이 메서드는 어셈블리를 로드할 때 런타임에서 호출됩니다. 모듈 이니셜라이저 메서드는 다음과 같아야 합니다.
+코드 생성기의 두 번째 새로운 기능은 _* _모듈 이니셜라이저_ **입니다. 모듈 이니셜라이저는 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 특성이 연결된 메서드입니다. 이 메서드는 어셈블리를 로드할 때 런타임에서 호출됩니다. 모듈 이니셜라이저 메서드는 다음과 같아야 합니다.
 
 - 정적이어야 함
 - 매개 변수가 없어야 함
