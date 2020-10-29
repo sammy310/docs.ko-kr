@@ -4,12 +4,12 @@ description: .NET Core에서 AssemblyLoadContext의 용도와 동작을 이해�
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 4d3f0e50e7c336469bd9af4d1589427388684434
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523608"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332824"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>System.Runtime.Loader.AssemblyLoadContext 이해
 
@@ -52,11 +52,11 @@ ms.locfileid: "80523608"
 
 이 섹션에서는 관련 이벤트 및 함수에 대한 일반 원칙에 대해 설명합니다.
 
-- **반복할 수 있습니다**. 특정 종속성에 대한 쿼리는 항상 동일한 응답을 생성해야 합니다. 로드된 동일한 종속성 인스턴스를 반환해야 합니다. 이 요구 사항은 캐시 일관성을 위한 기본 사항입니다. 특히 관리형 어셈블리의 경우 <xref:System.Reflection.Assembly> 캐시를 만듭니다. 캐시 키는 단순 어셈블리 이름(<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>)입니다.
-- **일반적으로 throw하지 않습니다**.  요청된 종속성을 찾을 수 없는 경우 이러한 함수는 덤프 대신 `null`을 반환해야 합니다. throw하면 검색을 조기에 종료하고 예외를 호출자에 전파합니다. throw는 손상된 어셈블리 또는 메모리 부족 상태와 같은 예기치 않은 오류로 제한해야 합니다.
-- **재귀를 사용하지 않습니다**. 이러한 함수와 처리기는 종속성을 찾기 위한 로드 규칙을 구현합니다. 구현에서 재귀를 트리거하는 API를 호출하지 않아야 합니다. 코드는 일반적으로 특정 경로 또는 메모리 참조 인수가 필요한 **AssemblyLoadContext** 로드 함수를 호출해야 합니다.
-- **올바른 AssemblyLoadContext에 로드합니다**. 로드 종속성을 로드할 위치를 선택하는 것은 애플리케이션마다 다릅니다.  선택은 이러한 이벤트와 함수를 통해 구현됩니다. 코드에서 **AssemblyLoadContext** load-by-path(경로별 로드) 함수를 호출하면 코드를 로드하려는 인스턴스에서 이 함수를 호출합니다. 때로는 `null`을 반환하고 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>에서 로드를 처리할 수 있도록 하는 것이 가장 간단한 옵션일 수 있습니다.
-- **스레드 경합에 주의합니다**. 로딩은 여러 스레드에서 트리거할 수 있습니다. AssemblyLoadContext는 어셈블리를 원자 단위로 캐시에 추가하여 스레드 경합을 처리합니다. 경합 실패자의 인스턴스가 삭제됩니다. 구현 논리에서는 여러 스레드를 올바르게 처리하지 않는 추가 논리를 추가하지 않습니다.
+- **반복할 수 있습니다** . 특정 종속성에 대한 쿼리는 항상 동일한 응답을 생성해야 합니다. 로드된 동일한 종속성 인스턴스를 반환해야 합니다. 이 요구 사항은 캐시 일관성을 위한 기본 사항입니다. 특히 관리형 어셈블리의 경우 <xref:System.Reflection.Assembly> 캐시를 만듭니다. 캐시 키는 단순 어셈블리 이름(<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>)입니다.
+- **일반적으로 throw하지 않습니다** .  요청된 종속성을 찾을 수 없는 경우 이러한 함수는 덤프 대신 `null`을 반환해야 합니다. throw하면 검색을 조기에 종료하고 예외를 호출자에 전파합니다. throw는 손상된 어셈블리 또는 메모리 부족 상태와 같은 예기치 않은 오류로 제한해야 합니다.
+- **재귀를 사용하지 않습니다** . 이러한 함수와 처리기는 종속성을 찾기 위한 로드 규칙을 구현합니다. 구현에서 재귀를 트리거하는 API를 호출하지 않아야 합니다. 코드는 일반적으로 특정 경로 또는 메모리 참조 인수가 필요한 **AssemblyLoadContext** 로드 함수를 호출해야 합니다.
+- **올바른 AssemblyLoadContext에 로드합니다** . 로드 종속성을 로드할 위치를 선택하는 것은 애플리케이션마다 다릅니다.  선택은 이러한 이벤트와 함수를 통해 구현됩니다. 코드에서 **AssemblyLoadContext** load-by-path(경로별 로드) 함수를 호출하면 코드를 로드하려는 인스턴스에서 이 함수를 호출합니다. 때로는 `null`을 반환하고 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>에서 로드를 처리할 수 있도록 하는 것이 가장 간단한 옵션일 수 있습니다.
+- **스레드 경합에 주의합니다** . 로딩은 여러 스레드에서 트리거할 수 있습니다. AssemblyLoadContext는 어셈블리를 원자 단위로 캐시에 추가하여 스레드 경합을 처리합니다. 경합 실패자의 인스턴스가 삭제됩니다. 구현 논리에서는 여러 스레드를 올바르게 처리하지 않는 추가 논리를 추가하지 않습니다.
 
 ## <a name="how-are-dynamic-dependencies-isolated"></a>동적 종속성은 어떻게 격리되나요?
 

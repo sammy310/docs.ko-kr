@@ -2,13 +2,14 @@
 title: .NET Core CLI를 사용하여 라이브러리 개발
 description: .NET Core CLI를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
+ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503501"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223708"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 라이브러리 개발
 
@@ -32,7 +33,7 @@ ms.locfileid: "77503501"
 | 4.0                    | Windows 7 및 .NET Framework 4용 Windows SDK         |
 | 2.0, 3.0 및 3.5      | .NET Framework 3.5 SP1 런타임(또는 Windows 8 이상 버전) |
 
-## <a name="how-to-target-the-net-standard"></a>.NET 표준을 대상으로 지정하는 방법
+## <a name="how-to-target-net-standard"></a>.NET Standard를 대상으로 지정하는 방법
 
 .NET Standard에 익숙하지 않은 경우 자세한 내용은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
 
@@ -96,7 +97,7 @@ ms.locfileid: "77503501"
 </Project>
 ```
 
-이것으로 끝입니다! 이는 .NET Framework 4에 대해서만 컴파일되지만 이후 버전의 .NET Framework에서 라이브러리를 사용할 수 있습니다.
+정말 간단하죠! 이는 .NET Framework 4에 대해서만 컴파일되지만 이후 버전의 .NET Framework에서 라이브러리를 사용할 수 있습니다.
 
 ## <a name="how-to-multitarget"></a>멀티 타기팅 방법
 
@@ -257,7 +258,7 @@ netstandard1.4/
 
 1. `dotnet test` 명령을 실행하여 xUnit가 실행되는지 확인합니다. MSTest를 사용하도록 선택한 경우 MSTest 콘솔 실행기가 대신 실행되어야 합니다.
 
-이것으로 끝입니다! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
+정말 간단하죠! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
 
 1. 라이브러리를 변경합니다.
 1. 명령줄의 테스트 디렉터리에서 `dotnet test` 명령으로 테스트를 실행합니다.
@@ -324,7 +325,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-이제 **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 둘 다의 프로젝트 파일에서 **AwesomeLibrary.Core**를 `ProjectReference` 대상으로 참조합니다.  프로젝트 파일을 검사하고 파일에서 다음을 통해 이를 확인할 수 있습니다.
+이제 **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 둘 다의 프로젝트 파일에서 **AwesomeLibrary.Core** 를 `ProjectReference` 대상으로 참조합니다.  프로젝트 파일을 검사하고 파일에서 다음을 통해 이를 확인할 수 있습니다.
 
 ```xml
 <ItemGroup>

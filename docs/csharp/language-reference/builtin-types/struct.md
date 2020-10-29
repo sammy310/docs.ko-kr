@@ -1,7 +1,7 @@
 ---
-description: C#의 구조체 형식에 관한 자세한 정보
 title: 구조체 형식 - C# 참조
-ms.date: 04/21/2020
+description: C#의 구조체 형식에 관한 자세한 정보
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132731"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526598"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
 ‘구조체 형식’은 데이터와 관련 기능을 캡슐화할 수 있는 [값 형식](value-types.md)입니다.   구조체 형식은 `struct` 키워드를 사용하여 정의합니다.
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
 구조체 형식은 ‘값 의미 체계’를 갖습니다.  즉, 구조체 형식의 변수는 해당 형식의 인스턴스를 포함합니다. 기본적으로 변수 값은 할당 시에, 인수를 메서드에 전달할 때, 그리고 메서드 결과를 반환할 때 복사됩니다. 구조체 형식 변수의 경우, 해당 형식의 인스턴스가 복사됩니다. 자세한 내용은 [값 형식](value-types.md)을 참조하세요.
 
@@ -32,12 +32,12 @@ ms.locfileid: "89132731"
 
 C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 수 없도록 선언합니다.
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 `readonly` 구조체의 모든 데이터 멤버는 다음과 같이 읽기 전용이어야 합니다.
 
 - 모든 필드 선언에는 [`readonly` 한정자](../keywords/readonly.md)가 있어야 합니다.
-- 자동 구현된 속성을 포함하여 모든 속성은 읽기 전용이어야 합니다.
+- 자동 구현된 속성을 포함하여 모든 속성은 읽기 전용이어야 합니다. C# 9.0 이상에서는 속성에 [`init` 접근자](../../whats-new/csharp-9.md#init-only-setters)가 있을 수 있습니다.
 
 이렇게 하면 `readonly` 구조체의 멤버가 구조체의 상태를 수정하지 않습니다. C# 8.0 이상에서는 생성자를 제외한 다른 인스턴스 멤버는 암시적으로 [`readonly`](#readonly-instance-members)임을 의미합니다.
 
@@ -54,20 +54,24 @@ C# 8.0부터 `readonly` 한정자를 사용하여 인스턴스 멤버가 구조�
 
 - 메서드:
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   <xref:System.Object?displayProperty=nameWithType>에 선언된 메서드를 재정의하는 메서드에 `readonly` 한정자를 적용할 수도 있습니다.
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - 속성 및 인덱서:
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   속성 또는 인덱서의 두 접근자에 모두 `readonly` 한정자를 적용해야 하는 경우 속성 또는 인덱서의 선언에 해당 한정자를 적용합니다.
 
   > [!NOTE]
   > 컴파일러는 속성 선언에 `readonly` 한정자가 있는지 여부와 관계없이 [자동 구현 속성](../../programming-guide/classes-and-structs/auto-implemented-properties.md)의 `get` 접근자를 `readonly`로 선언합니다.
+
+  C# 9.0 이상에서는 `init` 접근자를 사용하여 속성 또는 인덱서에 `readonly` 한정자를 적용할 수 있습니다.
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 구조체 형식의 정적 멤버에는 `readonly` 한정자를 적용할 수 없습니다.
 
@@ -95,7 +99,7 @@ C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다
 
 구조체 형식의 모든 인스턴스 필드가 액세스 가능한 경우, `new` 연산자 없이 인스턴스화할 수도 있습니다. 이 경우 인스턴스를 처음 사용하기 전에 모든 인스턴스 필드를 초기화해야 합니다. 다음 예제에서는 해당 작업을 수행하는 방법을 보여줍니다.
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 [기본 제공 값 형식](value-types.md#built-in-value-types)의 경우, 해당 리터럴을 사용하여 해당 형식의 값을 지정합니다.
 
@@ -118,11 +122,11 @@ C# 7.2부터 구조체 형식 선언에 `ref` 한정자를 사용할 수 있습�
 
 일반적으로 `ref` 구조체 형식의 데이터 멤버도 포함하는 형식이 필요한 경우 `ref` 구조체 형식을 정의합니다.
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 `ref` 구조체를 [`readonly`](#readonly-struct)로 선언하려면 형식 선언에서 `readonly` 및 `ref` 한정자를 결합합니다(`readonly` 한정자는 `ref` 한정자 앞에 와야함).
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET에서 `ref` 구조체의 예는 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>입니다.
 

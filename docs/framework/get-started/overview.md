@@ -1,19 +1,19 @@
 ---
 title: .NET Framework의 개요
-description: Windows 앱 및 웹 서비스의 빌드 및 실행을 지원하는 기술인 .NET에 대한 개요를 읽습니다.
-ms.date: 03/30/2017
+description: Windows 앱 및 웹 서비스의 빌드 및 실행을 지원하는 기술인 .NET Framework에 대한 개요를 읽습니다.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75b2e94b93eabdbf8a6a40f38c1b12a8caddd98a
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557764"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471746"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework의 개요
 
@@ -21,18 +21,19 @@ ms.locfileid: "90557764"
 
 - 개체 코드가 로컬로 저장 및 실행되든, 로컬로 실행되지만 웹을 통해 분산되든, 원격으로 실행되든 상관없이 일관된 개체 지향 프로그래밍 환경을 제공합니다.
 
-- 소프트웨어 배포 및 버전 관리 충돌을 최소화하는 코드 실행 환경을 제공합니다.
+- 다음과 같은 코드 실행 환경을 제공합니다.
 
-- 알 수 없거나 일부 신뢰할 수 있는 타사에서 만든 코드를 포함하여 안전하게 코드를 실행할 수 있는 코드 실행 환경을 제공합니다.
+  - 소프트웨어 배포 및 버전 관리 충돌을 최소화합니다.
 
-- 스크립트 또는 해석 환경의 성능 문제를 제거하는 코드 실행 환경을 제공합니다.
+  - 알 수 없거나 일부 신뢰할 수 있는 타사에서 만든 코드를 포함하여 안전하게 코드를 실행할 수 있습니다.
+
+  - 스크립트 또는 해석 환경의 성능 문제를 제거합니다.
 
 - Windows 기반 앱 및 웹 기반 앱 같은 다양한 형식의 앱에서 개발자가 일관된 경험을 가질 수 있도록 합니다.
 
-- .NET Framework를 기반으로 하는 코드가 다른 모든 코드와 통합되도록 모든 통신을 산업 표준을 토대로 빌드합니다.
+- .NET Framework를 기반으로 하는 코드가 다른 모든 코드와 통합되도록 산업 표준을 토대로 모든 통신을 빌드합니다.
 
-> [!NOTE]
-> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](index.md)을 참조하세요.
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 .NET Framework는 CLR(공용 언어 런타임)과 .NET Framework 클래스 라이브러리로 구성되어 있습니다. 공용 언어 런타임은 .NET Framework의 기초입니다. 런타임은 실행 시 코드를 관리하는 에이전트로서, 메모리 관리, 스레드 관리, 원격 서비스 등의 핵심 서비스를 제공하며 동시에 엄격한 형식 안전성 및 다른 형태의 코드 정확성을 유지하므로 보안과 안정성을 강화합니다. 사실, 코드 관리의 개념은 런타임의 기본 원칙입니다. 런타임을 대상으로 하는 코드는 관리 코드라고 하지만, 런타임을 대상으로 하지 않는 코드는 비관리 코드라고 합니다. 클래스 라이브러리는 재사용 가능 형식의 포괄적 개체 지향 컬렉션으로, 기존 명령줄 또는 GUI(그래픽 사용자 인터페이스) 앱에서 ASP.NET이 제공하는 Web Forms 및 XML Web services 같은 최신의 혁신적인 기능을 기반으로 하는 앱에 이르기까지 다양한 앱을 개발하는 데 사용할 수 있습니다.
 

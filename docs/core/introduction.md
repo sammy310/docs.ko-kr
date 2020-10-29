@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877563"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223582"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -153,7 +153,7 @@ SDK 다운로드에는 다음 구성 요소가 포함되어 있습니다.
 
 ### <a name="project-system-and-msbuild"></a>프로젝트 시스템 및 MSBuild
 
-.NET 앱은 [MSBuild](/visualstudio/msbuild/msbuild)를 사용하여 소스 코드에서 빌드됩니다. 프로젝트 파일( *.csproj*, *.fsproj* 또는 *.vbproj*)은 코드를 컴파일, 압축, 게시해야 하는 [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks)을 지정합니다. 표준 대상 및 작업 컬렉션을 참조하는 SDK 식별자가 있습니다. 식별자를 사용하면 프로젝트 파일을 작고 작업하기 쉽게 유지할 수 있습니다. 예를 들어 콘솔 앱의 프로젝트 파일은 다음과 같습니다.
+.NET 앱은 [MSBuild](/visualstudio/msbuild/msbuild)를 사용하여 소스 코드에서 빌드됩니다. 프로젝트 파일( *.csproj* , *.fsproj* 또는 *.vbproj* )은 코드를 컴파일, 압축, 게시해야 하는 [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks)을 지정합니다. 표준 대상 및 작업 컬렉션을 참조하는 SDK 식별자가 있습니다. 식별자를 사용하면 프로젝트 파일을 작고 작업하기 쉽게 유지할 수 있습니다. 예를 들어 콘솔 앱의 프로젝트 파일은 다음과 같습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -344,7 +344,7 @@ LINQ(Language-Integrated Query)를 사용하면 데이터에서 실행할 선언
   | 대상 프레임워크(target framework) | .NET 앱이나 라이브러리에서 사용하는 API 컬렉션입니다. 예: .NET Core 3.1, .NET Standard 2.0 |
   | TFM(대상 프레임워크 모니커)  | TFM은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위한 표준화된 토큰 형식입니다. 예: .NET Framework 4.6.2의 경우 `net462` |
   | 프레임워크 종속 앱 | [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)를 통해 런타임을 설치한 머신에서만 실행할 수 있는 앱입니다. 이때 사용된 “프레임워크”는 .NET 다운로드 페이지에서 다운로드하는 “런타임”과 동일합니다. |
-  
+
 * **SDK**
 
   |Context  | “SDK” 의미 |

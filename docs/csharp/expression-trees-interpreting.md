@@ -4,18 +4,18 @@ description: 식 트리의 구조를 검사하는 코드를 작성하는 방법�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173310"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223673"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 
 [이전 -- 식 실행](expression-trees-execution.md)
 
-이제 *식 트리*의 구조를 검사하는 몇 가지 코드를 작성해 보겠습니다. 식 트리의 모든 노드는 `Expression`에서 파생되는 클래스의 개체입니다.
+이제 *식 트리* 의 구조를 검사하는 몇 가지 코드를 작성해 보겠습니다. 식 트리의 모든 노드는 `Expression`에서 파생되는 클래스의 개체입니다.
 
 해당 디자인은 식 트리의 모든 노드 방문을 비교적 간단한 재귀 작업으로 만듭니다. 일반적인 전략은 루트 노드에서 시작하고 노드의 종류를 확인하는 것입니다.
 
@@ -249,7 +249,7 @@ The expression body is:
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-방문자 알고리즘에서 실행하기 전에 사고 연습을 통해 출력되는 사항을 파악합니다. `+` 연산자는 *이진 연산자*임을 기억하세요. 이 연산자에는 왼쪽과 오른쪽 피연산자를 나타내는 두 개의 자식이 있어야 합니다. 여러 가지 방법으로 올바른 트리를 생성할 수 있습니다.
+방문자 알고리즘에서 실행하기 전에 사고 연습을 통해 출력되는 사항을 파악합니다. `+` 연산자는 *이진 연산자* 임을 기억하세요. 이 연산자에는 왼쪽과 오른쪽 피연산자를 나타내는 두 개의 자식이 있어야 합니다. 여러 가지 방법으로 올바른 트리를 생성할 수 있습니다.
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));

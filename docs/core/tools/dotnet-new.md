@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495475"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526613"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -143,7 +143,7 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 `project`, `item` 및 `other`입니다.
+  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 `project` 및 `item`입니다.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -152,7 +152,7 @@ dotnet new -h|--help
   이 옵션에 대한 매개 변수를 지정하지 않으면 명령은 설치된 템플릿 및 해당 세부 정보를 나열합니다.
 
   > [!NOTE]
-  > `PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
+  > `PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* 는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp* 는 작동하지 않습니다.
   > 템플릿 경로에 마지막 디렉터리 슬래시를 포함하지 마세요.
 
 - **`--update-apply`**
@@ -190,11 +190,11 @@ dotnet new -h|--help
 
   지정할 경우 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.2 SDK부터 사용할 수 있습니다.
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 값: `netcoreapp<version>`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard<version>`(.NET Standard 클래스 라이브러리를 만드는 경우). 기본값은 `netstandard2.0`입니다.
 
@@ -208,11 +208,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
@@ -226,11 +226,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _ *`--langVersion <VERSION_NUMBER>`**
 
   생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다. 예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.
 
@@ -240,27 +240,27 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`--no-restore`**
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. .NET Core 3.0 SDK 이후 사용할 수 있는 옵션입니다.
 
@@ -279,11 +279,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="nunit"></a>nunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.
 
@@ -304,11 +304,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="page"></a>페이지
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   생성된 코드에 대한 네임스페이스입니다. 기본값은 `MyApp.Namespace`입니다.
 
@@ -316,19 +316,19 @@ dotnet new -h|--help
 
   PageModel 없이 페이지를 만듭니다.
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   생성된 코드에 대한 네임스페이스입니다. 기본값은 `MyApp.Namespace`입니다.
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -381,7 +381,7 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`--no-https`**
 
@@ -395,13 +395,13 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
-### <a name="web"></a>웹
+### <a name="web"></a>web
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -423,11 +423,11 @@ dotnet new -h|--help
 
   HTTPS를 해제합니다.
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -480,7 +480,7 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`--no-https`**
 
@@ -513,11 +513,11 @@ dotnet new -h|--help
 
   프로젝트가 디버그 빌드에서 [Razor 런타임 컴파일](/aspnet/core/mvc/views/view-compilation#runtime-compilation)을 사용하도록 구성되어 있는지 확인합니다. .NET Core 3.1.201 SDK 이후 사용할 수 있는 옵션입니다.
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> angular, react
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
   
@@ -528,7 +528,7 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`--no-restore`**
 
@@ -554,13 +554,13 @@ dotnet new -h|--help
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -582,11 +582,11 @@ dotnet new -h|--help
 
   HTTPS를 해제합니다.
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _ *`--no-restore`**
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
@@ -594,11 +594,11 @@ dotnet new -h|--help
 
   이 라이브러리에 구성 요소 외에 기존의 Razor 페이지와 뷰를 추가하는 것을 지원합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-***
+**_
   
 ### <a name="webapi"></a>webapi
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -637,7 +637,7 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
 - **`--no-https`**
 
@@ -663,11 +663,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _ *`--sdk-version <VERSION_NUMBER>`**
 
   *global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.
 
@@ -717,7 +717,7 @@ dotnet new -h|--help
   dotnet new we -l
   ```
 
-- *ng*와 일치하는 템플릿을 호출해 보세요. 단일 일치 항목을 확인할 수 없는 경우 부분적으로 일치하는 템플릿을 나열합니다.
+- *ng* 와 일치하는 템플릿을 호출해 보세요. 단일 일치 항목을 확인할 수 없는 경우 부분적으로 일치하는 템플릿을 나열합니다.
 
   ```dotnetcli
   dotnet new ng
@@ -735,7 +735,7 @@ dotnet new -h|--help
   dotnet new -u
   ```
 
-- SDK 버전을 3.1.101로 설정하여 현재 디렉터리에 *global.json*을 만듭니다.
+- SDK 버전을 3.1.101로 설정하여 현재 디렉터리에 *global.json* 을 만듭니다.
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

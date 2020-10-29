@@ -3,12 +3,12 @@ title: .NET Core로 라이브러리 포팅
 description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164286"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223565"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
@@ -38,12 +38,12 @@ ms.locfileid: "87164286"
 
 ## <a name="retarget-to-net-framework-472"></a>.NET Framework 4.7.2로 대상 변경
 
-코드가 .NET Framework 4.7.2를 대상으로 하지 않는 경우 .NET Framework 4.7.2로 대상을 다시 지정하는 것이 좋습니다. 그러면 .NET 표준에서 기존 API를 지원할 수 없는 경우 최신 API를 대신 사용할 수 있습니다.
+코드가 .NET Framework 4.7.2를 대상으로 하지 않는 경우 .NET Framework 4.7.2로 대상을 다시 지정하는 것이 좋습니다. 그러면 .NET Standard에서 기존 API를 지원하지 않는 경우 최신 API를 대신 사용할 수 있습니다.
 
 이식하려는 각 프로젝트에 대해 Visual Studio에서 다음을 수행합니다.
 
-1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
-1. **대상 프레임워크** 드롭다운에서 **.NET Framework 4.7.2**를 선택합니다.
+1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.
+1. **대상 프레임워크** 드롭다운에서 **.NET Framework 4.7.2** 를 선택합니다.
 1. 프로젝트를 다시 컴파일합니다.
 
 프로젝트가 .NET Framework 4.7.2를 대상으로 하기 때문에 해당 버전의 .NET Framework를 코드 포팅의 기반으로 사용합니다.
@@ -117,10 +117,10 @@ ms.locfileid: "87164286"
 
 ## <a name="recommended-approach"></a>권장 접근 방식
 
-궁극적으로 이식 작업은 .NET Framework 코드가 구성된 방법에 따라 크게 달라집니다. 코드를 이식하는 좋은 방법은 코드의 기본 구성 요소인 라이브러리의 *기본*으로 시작하는 것입니다. 이는 다른 모든 항목에서 직접적으로나 간접적으로 사용하는 데이터 모델이나 일부 다른 기본 클래스 및 메서드가 될 수 있습니다.
+궁극적으로 이식 작업은 .NET Framework 코드가 구성된 방법에 따라 크게 달라집니다. 코드를 이식하는 좋은 방법은 코드의 기본 구성 요소인 라이브러리의 *기본* 으로 시작하는 것입니다. 이는 다른 모든 항목에서 직접적으로나 간접적으로 사용하는 데이터 모델이나 일부 다른 기본 클래스 및 메서드가 될 수 있습니다.
 
 1. 현재 이식하고 있는 라이브러리의 계층을 테스트하는 테스트 프로젝트를 이식합니다.
-1. 라이브러리의 기본을 새 .NET Core 프로젝트에 복사하고 지원하려는 .NET 표준의 버전을 선택합니다.
+1. 라이브러리의 기본을 새 .NET Core 프로젝트에 복사하고 지원하려는 .NET Standard의 버전을 선택합니다.
 1. 코드를 컴파일하는 데 필요한 대로 내용을 변경합니다. 이 작업의 많은 부분에서 NuGet 패키지 종속성을 *csproj* 파일에 추가해야 할 수 있습니다.
 1. 테스트를 실행하고 필요에 따라 조정합니다.
 1. 이식할 다음 코드 계층을 선택하고 이전 단계를 반복합니다.

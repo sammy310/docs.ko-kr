@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050346"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224403"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -52,7 +52,7 @@ Ahead-Of-Time 컴파일러입니다.
 
 애플리케이션이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함할 수 있는 *.dll*/ *.exe* 파일입니다.
 
-어셈블리에는 인터페이스와 클래스, 구조체, 열거형, 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
+어셈블리에는 인터페이스와 클래스, 구조체, 열거형, 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리* 라고도 합니다. [라이브러리](#library)를 참조하세요.
 
 ## <a name="bcl"></a>BCL
 
@@ -213,7 +213,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레
 
 개발자가 [.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)용 .NET 애플리케이션과 라이브러리를 만드는 데 사용할 수 있는 라이브러리 및 도구 집합입니다. .NET Core SDK라고도 합니다.
 
-앱을 빌드하기 위한 [.NET CLI](#net-cli), 앱을 빌드하고 실행하기 위한 .NET 라이브러리 및 런타임, CLI 명령을 실행하고 애플리케이션을 실행하는 dotnet 실행 파일(*dotnet.exe*)을 포함합니다.
+앱을 빌드하기 위한 [.NET CLI](#net-cli), 앱을 빌드하고 실행하기 위한 .NET 라이브러리 및 런타임, CLI 명령을 실행하고 애플리케이션을 실행하는 dotnet 실행 파일( *dotnet.exe* )을 포함합니다.
 
 [.NET SDK 개요](../core/sdk.md)를 참조하세요.
 
@@ -278,7 +278,7 @@ Windows와 macOS, Linux, iOS, Android 같은 운영 체제와 해당 운영 체�
 
 애플리케이션을 만들고 실행하는 데 사용되는 프로그래밍 기술 집합입니다.
 
-“.NET 스택”은 .NET Standard 및 모든 .NET 구현체를 나타냅니다. “.NET 스택”이라는 문구는 하나의 .NET 구현체를 나타냅니다.
+“.NET 스택”은 .NET Standard 및 모든 .NET 구현을 나타냅니다. “.NET 스택”이라는 문구는 하나의 .NET 구현체를 나타냅니다.
 
 ## <a name="target-framework"></a>대상 프레임워크(target framework)
 
@@ -306,9 +306,9 @@ IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이�
 
 ## <a name="workload"></a>workload
 
-다른 사람이 빌드 중인 앱의 유형. [앱 모델](#app-model)보다 일반적입니다. 예를 들어 이 문서를 포함하여 모든 .NET 문서 페이지의 맨 위에는 **워크로드**에 대한 드롭다운 목록이 있습니다. 이를 통해 **웹**, **모바일**, **클라우드**, **데스크톱**, **기계 학습 \& 데이터**에 대한 문서로 전환할 수 있습니다.
+다른 사람이 빌드 중인 앱의 유형. [앱 모델](#app-model)보다 일반적입니다. 예를 들어 이 문서를 포함하여 모든 .NET 문서 페이지의 맨 위에는 **워크로드** 에 대한 드롭다운 목록이 있습니다. 이를 통해 **웹** , **모바일** , **클라우드** , **데스크톱** , **기계 학습 \& 데이터** 에 대한 문서로 전환할 수 있습니다.
 
-일부 컨텍스트에서 *워크로드*는 특정 유형의 앱을 지원하기 위해 설치할 수 있는 Visual Studio 기능 컬렉션을 참조합니다. 예를 들어 [워크로드 선택](../core/install/windows.md#select-a-workload)을 참조하세요.
+일부 컨텍스트에서 *워크로드* 는 특정 유형의 앱을 지원하기 위해 설치할 수 있는 Visual Studio 기능 컬렉션을 참조합니다. 예를 들어 [워크로드 선택](../core/install/windows.md#select-a-workload)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

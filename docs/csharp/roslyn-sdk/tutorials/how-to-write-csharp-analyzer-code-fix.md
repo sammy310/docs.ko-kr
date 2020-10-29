@@ -3,44 +3,24 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381595"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224047"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
-.NET Compiler Platform SDK는 C# 또는 Visual Basic 코드를 대상으로 하는 사용자 지정 경고를 만드는 데 필요한 도구를 제공합니다. **분석기**에는 규칙 위반을 인식하는 코드가 포함됩니다. **코드 수정 사항**에는 위반을 수정하는 코드가 포함됩니다. 구현하는 규칙은 코드 구조에서 코딩 스타일, 명명 규칙 등에 이를 수 있습니다. .NET Compiler Platform은 개발자가 코드를 작성할 때 분석을 실행하기 위한 프레임워크와 코드를 수정하기 위한 모든 Visual Studio UI 기능(편집기에 물결선 표시, Visual Studio 오류 목록 채우기, “전구” 제안 만들기, 제안된 수정 사항의 다양한 미리 보기 표시)을 제공합니다.
+.NET Compiler Platform SDK는 C# 또는 Visual Basic 코드를 대상으로 하는 사용자 지정 경고를 만드는 데 필요한 도구를 제공합니다. **분석기** 에는 규칙 위반을 인식하는 코드가 포함됩니다. **코드 수정 사항** 에는 위반을 수정하는 코드가 포함됩니다. 구현하는 규칙은 코드 구조에서 코딩 스타일, 명명 규칙 등에 이를 수 있습니다. .NET Compiler Platform은 개발자가 코드를 작성할 때 분석을 실행하기 위한 프레임워크와 코드를 수정하기 위한 모든 Visual Studio UI 기능(편집기에 물결선 표시, Visual Studio 오류 목록 채우기, “전구” 제안 만들기, 제안된 수정 사항의 다양한 미리 보기 표시)을 제공합니다.
 
-이 자습서에서는 Roslyn API를 사용하여 **분석기** 및 함께 제공되는 **코드 수정 사항**을 만드는 방법을 살펴봅니다. 분석기는 소스 코드 분석을 수행하고 사용자에게 문제를 보고하는 방법입니다. 필요한 경우 분석기는 사용자의 소스 코드에 대한 수정 사항을 나타내는 코드 수정 사항도 제공할 수 있습니다. 이 자습서에서는 `const` 한정자를 사용하여 선언할 수 있는 지역 변수 선언을 찾는 분석기를 만듭니다. 함께 제공되는 코드 수정 사항은 해당 선언을 수정하여 `const` 한정자를 추가합니다.
+이 자습서에서는 Roslyn API를 사용하여 **분석기** 및 함께 제공되는 **코드 수정 사항** 을 만드는 방법을 살펴봅니다. 분석기는 소스 코드 분석을 수행하고 사용자에게 문제를 보고하는 방법입니다. 필요한 경우 분석기는 사용자의 소스 코드에 대한 수정 사항을 나타내는 코드 수정 사항도 제공할 수 있습니다. 이 자습서에서는 `const` 한정자를 사용하여 선언할 수 있는 지역 변수 선언을 찾는 분석기를 만듭니다. 함께 제공되는 코드 수정 사항은 해당 선언을 수정하여 `const` 한정자를 추가합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-> [!NOTE]
-> 현재 Visual Studio **코드 수정 사항이 포함된 분석기(.NET Standard)** 템플릿에는 알려진 버그가 있으며 Visual Studio 2019 버전 16.7에서 수정되어야 합니다. 다음과 같이 변경되어야 템플릿의 프로젝트가 컴파일됩니다.
->
-> 1. **도구** > **옵션** > **NuGet 패키지 관리자** > **패키지 소스**를 선택합니다.
->    - 더하기 단추를 선택하여 새 소스를 추가합니다.
->    - **소스**를 `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json`으로 설정하고 **업데이트**를 선택합니다.
-> 1. **솔루션 탐색기**에서 **MakeConst.Vsix** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다.
->    - `<AssemblyName>` 노드를 업데이트하여 `.Visx` 접미사를 추가합니다.
->      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
->    - 줄 41의 `<ProjectReference>` 노드를 업데이트하여 `TargetFramework` 값을 변경합니다.
->      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
-> 1. *MakeConst.Test* 프로젝트에서 *MakeConstUnitTests.cs* 파일을 업데이트합니다.
->    - 줄 9를 다음으로 변경하고 네임스페이스 변경을 확인합니다.
->      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
->    - 줄 24를 다음 메서드로 변경합니다.
->      - `await Verify.VerifyAnalyzerAsync(test);`
->    - 줄 62를 다음 메서드로 변경합니다.
->      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
+- [Visual Studio 2019](https://www.visualstudio.com/downloads) 버전 16.7 이상
 
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
-
-Visual Studio 설치 관리자를 통해 **.NET Compiler Platform SDK**를 설치해야 합니다.
+Visual Studio 설치 관리자를 통해 **.NET Compiler Platform SDK** 를 설치해야 합니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -71,8 +51,8 @@ Console.WriteLine(x);
 변수를 상수로 설정할 수 있는지 여부를 판별하기 위한 분석이 포함되며, 변수가 작성되지 않는지 확인하려면 구문 분석, 상수 분석, 이니셜라이저 식의 상수 분석 및 데이터 흐름 분석이 필요합니다. .NET Compiler Platform은 이 분석을 보다 쉽게 수행할 수 있는 API를 제공합니다. 첫 번째 단계는 새로운 C# **코드 수정 사항이 포함된 분석기** 프로젝트는 만드는 것입니다.
 
 - Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택하여 [새 프로젝트] 대화 상자를 표시합니다.
-- **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
-- 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
+- **Visual C# > 확장성** 에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
+- 프로젝트 이름을 “ **MakeConst** ”로 지정하고 [확인]을 클릭합니다.
 
 코드 수정 사항 템플릿이 포함된 분석기는 세 개의 프로젝트를 만듭니다. 하나에는 분석기 및 코드 수정 사항이 포함되고, 두 번째는 단위 테스트 프로젝트이고, 세 번째는 VSIX 프로젝트입니다. 기본 시작 프로젝트는 VSIX 프로젝트입니다. <kbd>F5</kbd> 키를 눌러 VSIX 프로젝트를 시작합니다. 그러면 새 분석기를 로드한 Visual Studio의 두 번째 인스턴스가 시작됩니다.
 
@@ -104,7 +84,7 @@ Console.WriteLine(x);
 1. 작업을 등록합니다. 작업은 코드에서 위반을 검사하기 위해 분석기를 트리거해야 하는 코드 변경을 나타냅니다. Visual Studio는 등록된 작업과 일치하는 코드 편집을 검색하면 분석기의 등록된 메서드를 호출합니다.
 1. 진단을 만듭니다. 분석기는 위반을 검색하면 Visual Studio가 사용자에게 위반 사실을 알리는 데 사용하는 진단 개체를 만듭니다.
 
-<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> 메서드의 재정의에 작업을 등록합니다. 이 자습서에서는 로컬 선언을 검색하는 **구문 노드**를 방문하고 그 중 상수 값이 있는 노드를 확인합니다. 선언이 상수일 수 있으면 분석기는 진단을 만들고 보고합니다.
+<xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> 메서드의 재정의에 작업을 등록합니다. 이 자습서에서는 로컬 선언을 검색하는 **구문 노드** 를 방문하고 그 중 상수 값이 있는 노드를 확인합니다. 선언이 상수일 수 있으면 분석기는 진단을 만들고 보고합니다.
 
 첫 번째 단계는 이러한 상수가 “Make Const” 분석기를 나타내도록 등록 상수 및 `Initialize` 메서드를 업데이트하는 것입니다. 대부분의 문자열 상수는 문자열 리소스 파일에 정의됩니다. 더 쉽게 지역화하려면 해당 사례를 따라야 합니다. **MakeConst** 분석기 프로젝트에 대한 **Resources.resx** 파일을 엽니다. 리소스 편집기가 표시됩니다. 다음과 같이 문자열 리소스를 업데이트합니다.
 
@@ -116,7 +96,7 @@ Console.WriteLine(x);
 
 ![문자열 리소스 업데이트](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
-나머지 변경 내용은 분석기 파일에 있습니다. Visual Studio에서 **MakeConstAnalyzer.cs**를 엽니다. 등록된 작업을 기호에 적용되는 작업에서 구문에 적용되는 작업으로 변경합니다. `MakeConstAnalyzerAnalyzer.Initialize` 메서드에서 기호에 대한 작업을 등록하는 줄을 찾습니다.
+나머지 변경 내용은 분석기 파일에 있습니다. Visual Studio에서 **MakeConstAnalyzer.cs** 를 엽니다. 등록된 작업을 기호에 적용되는 작업에서 구문에 적용되는 작업으로 변경합니다. `MakeConstAnalyzerAnalyzer.Initialize` 메서드에서 기호에 대한 작업을 등록하는 줄을 찾습니다.
 
 ```csharp
 context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
@@ -134,7 +114,7 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-다음 코드에 표시된 대로 **MakeConstAnalyzer.cs**에서 `Category`를 “Usage”(사용법)로 변경합니다.
+다음 코드에 표시된 대로 **MakeConstAnalyzer.cs** 에서 `Category`를 “Usage”(사용법)로 변경합니다.
 
 ```csharp
 private const string Category = "Usage";
@@ -149,7 +129,7 @@ int x = 0;
 Console.WriteLine(x);
 ```
 
-첫 번째 단계는 로컬 선언을 찾는 것입니다. **MakeConstAnalyzer.cs**에서 `AnalyzeNode`에 다음 코드를 추가합니다.
+첫 번째 단계는 로컬 선언을 찾는 것입니다. **MakeConstAnalyzer.cs** 에서 `AnalyzeNode`에 다음 코드를 추가합니다.
 
 ```csharp
 var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
@@ -329,7 +309,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-이러한 두 테스트를 실행하여 성공하는지 확인합니다. Visual Studio에서 **테스트** > **Windows** > **테스트 탐색기**를 선택하여 **테스트 탐색기**를 엽니다. 그런 다음, **모두 실행** 링크를 선택합니다.
+이러한 두 테스트를 실행하여 성공하는지 확인합니다. Visual Studio에서 **테스트** > **Windows** > **테스트 탐색기** 를 선택하여 **테스트 탐색기** 를 엽니다. 그런 다음, **모두 실행** 링크를 선택합니다.
 
 ## <a name="create-tests-for-valid-declarations"></a>유효한 선언에 대한 테스트 만들기
 
@@ -464,7 +444,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 다행히도 위의 버그는 모두 방금 알아본 동일한 기술을 사용하여 해결할 수 있습니다.
 
-첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다.
+첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs** 를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다.
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
@@ -504,7 +484,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-`var` 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs**로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
+`var` 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs** 로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
 
 - 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
 - 유추 형식에 대한 새 형식을 만듭니다.

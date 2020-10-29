@@ -15,26 +15,24 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545705"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687291"
 ---
-# <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
+# <a name="handle-and-raising-events"></a>이벤트 처리 및 발생
 
-.NET의 이벤트는 대리자 모델을 기반으로 합니다. 대리자 모델은 구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 [관찰자 디자인 패턴](observer-design-pattern.md)을 따릅니다. 이벤트 전송자는 이벤트가 발생했음을 알리고, 이벤트 수신자는 해당 알림을 수신하고 그에 대한 응답을 정의합니다. 이 문서에서는 대리자 모델의 주요 구성 요소, 애플리케이션에서 이벤트를 사용하는 방법 및 코드에서 이벤트를 구현하는 방법에 대해 설명합니다.  
-  
- Windows 8.x Store 앱에서의 이벤트 처리에 대한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조하세요.  
+.NET의 이벤트는 대리자 모델을 기반으로 합니다. 대리자 모델은 구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 [관찰자 디자인 패턴](observer-design-pattern.md)을 따릅니다. 이벤트 전송자는 이벤트가 발생했음을 알리고, 이벤트 수신자는 해당 알림을 수신하고 그에 대한 응답을 정의합니다. 이 문서에서는 대리자 모델의 주요 구성 요소, 애플리케이션에서 이벤트를 사용하는 방법 및 코드에서 이벤트를 구현하는 방법에 대해 설명합니다.
   
 ## <a name="events"></a>이벤트
 
-이벤트는 개체에서 작업 실행을 알리기 위해 보내는 메시지입니다. 이 작업은 단추 클릭과 같은 사용자 조작으로 발생하거나, 속성 값 변경 등의 다른 프로그램 논리에서 발생할 수 있습니다. 이벤트를 발생시키는 개체를 *이벤트 전송자*라고 하며 이벤트 전송자는 어떤 개체 또는 메서드가 발생되는 이벤트를 수신(처리)할지 모릅니다. 이벤트는 일반적으로 이벤트 전송자의 멤버입니다. 예를 들어 <xref:System.Web.UI.WebControls.Button.Click> 이벤트는 <xref:System.Web.UI.WebControls.Button> 클래스의 멤버이고, <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 이벤트는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 클래스의 멤버입니다.  
+이벤트는 개체에서 작업 실행을 알리기 위해 보내는 메시지입니다. 이 작업은 단추 클릭과 같은 사용자 조작으로 발생하거나, 속성 값 변경 등의 다른 프로그램 논리에서 발생할 수 있습니다. 이벤트를 발생시키는 개체를 *이벤트 전송자* 라고 하며 이벤트 전송자는 어떤 개체 또는 메서드가 발생되는 이벤트를 수신(처리)할지 모릅니다. 이벤트는 일반적으로 이벤트 전송자의 멤버입니다. 예를 들어 <xref:System.Web.UI.WebControls.Button.Click> 이벤트는 <xref:System.Web.UI.WebControls.Button> 클래스의 멤버이고, <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 이벤트는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 클래스의 멤버입니다.  
   
 이벤트를 정의하려면 C# [`event`](../../csharp/language-reference/keywords/event.md) 또는 Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) 키워드를 이벤트 클래스의 시그니처에서 사용하고 이벤트에 대한 대리자의 형식을 지정합니다. 대리자는 다음 섹션에 설명되어 있습니다.  
   
-일반적으로 이벤트를 발생시키려면 `protected` 및 `virtual`(C#) 또는 `Protected` 및 `Overridable`(Visual Basic)이라고 표시된 메서드를 추가합니다. 이 메서드의 이름을 `On`*EventName*으로 지정합니다(예: `OnDataReceived`). 메서드에서 <xref:System.EventArgs> 형식이나 파생 형식의 개체인 이벤트 데이터 개체를 지정하는 하나의 매개 변수를 사용해야 합니다. 이 메서드를 사용하면 파생된 클래스를 이용해 이벤트를 발생시키는 논리를 재정의할 수 있습니다. 파생된 클래스는 등록된 대리자가 이벤트를 수신할 수 있도록 해주는 기본 클래스의 `On`*EventName* 메서드를 항상 호출해야 합니다.  
+일반적으로 이벤트를 발생시키려면 `protected` 및 `virtual`(C#) 또는 `Protected` 및 `Overridable`(Visual Basic)이라고 표시된 메서드를 추가합니다. 이 메서드의 이름을 `On`*EventName* 으로 지정합니다(예: `OnDataReceived`). 메서드에서 <xref:System.EventArgs> 형식이나 파생 형식의 개체인 이벤트 데이터 개체를 지정하는 하나의 매개 변수를 사용해야 합니다. 이 메서드를 사용하면 파생된 클래스를 이용해 이벤트를 발생시키는 논리를 재정의할 수 있습니다. 파생된 클래스는 등록된 대리자가 이벤트를 수신할 수 있도록 해주는 기본 클래스의 `On`*EventName* 메서드를 항상 호출해야 합니다.  
 
 다음 예제에서는 `ThresholdReached`라는 이벤트를 선언하는 방법을 보여 줍니다. 이 이벤트는 <xref:System.EventHandler> 대리자와 연결되어 있고 `OnThresholdReached`라는 메서드에서 발생합니다.  
   
@@ -82,19 +80,19 @@ ms.locfileid: "90545705"
 
 .NET에서는 구독자가 정적이나 동적으로 이벤트 알림을 등록할 수 있습니다. 고정 이벤트 처리기는 해당 이벤트가 처리되는 클래스의 전체 수명 동안 적용됩니다. 동적 이벤트 처리기는 특정 조건부 프로그램 논리에 대한 응답에서 일반적으로 프로그램을 실행하는 동안 명시적으로 활성화되고 비활성화됩니다. 예를 들어 이벤트 알림이 특정 조건 하에서만 필요하거나 애플리케이션이 여러 이벤트 처리기를 제공하고 런타임 조건에서 사용할 적절한 이벤트 처리기를 정의하는 경우에 사용될 수 있습니다. 이전 섹션의 예제에서는 이벤트 처리기를 동적으로 추가하는 방법을 보여 줍니다. 자세한 내용은 [이벤트](../../visual-basic/programming-guide/language-features/events/index.md)(Visual Basic의 경우) 및 [이벤트](../../csharp/programming-guide/events/index.md)(C#의 경우)를 참조하세요.  
   
-## <a name="raising-multiple-events"></a>여러 이벤트 발생  
+## <a name="raising-multiple-events"></a>여러 이벤트 발생
+
  클래스에서 여러 이벤트를 발생시키는 경우, 컴파일러가 각 이벤트 대리자 인스턴스에 대해 하나의 필드를 생성합니다. 이벤트 수가 큰 경우 대리자당 하나의 필드의 스토리지 공간은 허용되지 않습니다. 이러한 경우를 위해 .NET에서는 이벤트 대리자를 저장하도록 선택한 다른 데이터 구조와 함께 사용할 수 있는 이벤트 속성을 제공합니다.  
   
  이벤트 속성은 이벤트 접근자와 함께 이벤트 선언으로 구성됩니다. 이벤트 접근자는 사용자가 정의하는 메서드로서, 스토리지 데이터 구조에서 이벤트 대리자 인스턴스를 추가하거나 제거할 수 있게 합니다. 각 이벤트 대리자는 호출되기 전에 검색되어야 하기 때문에 이벤트 속성은 이벤트 필드보다 속도가 느립니다. 메모리와 속도 간의 균형을 조정합니다. 클래스가 자주 발생하는 많은 이벤트를 정의하는 경우 이벤트 속성을 구현합니다. 자세한 내용은 [방법: 이벤트 속성을 사용하여 여러 이벤트 처리](how-to-handle-multiple-events-using-event-properties.md)를 참조하세요.  
   
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-articles"></a>관련 문서
   
 |제목|설명|  
 |-----------|-----------------|  
 |[방법: 이벤트 발생 및 사용](how-to-raise-and-consume-events.md)|이벤트의 발생 및 사용에 대한 예제를 포함합니다.|  
 |[방법: 이벤트 속성을 사용하여 여러 이벤트 처리](how-to-handle-multiple-events-using-event-properties.md)|이벤트 속성을 사용하여 여러 이벤트를 처리하는 방법을 보여 줍니다.|  
-|[관찰자 디자인 패턴](observer-design-pattern.md)|구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 디자인 패턴에 대해 설명합니다.|  
-|[방법: Web Forms 애플리케이션에서 이벤트 사용](how-to-consume-events-in-a-web-forms-application.md)|Web Forms 컨트롤에서 발생한 이벤트를 처리하는 방법을 보여 줍니다.|  
+|[관찰자 디자인 패턴](observer-design-pattern.md)|구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 디자인 패턴에 대해 설명합니다.|
   
 ## <a name="see-also"></a>참조
 
@@ -105,3 +103,4 @@ ms.locfileid: "90545705"
 - [이벤트(Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [이벤트(C# 프로그래밍 가이드)](../../csharp/programming-guide/events/index.md)
 - [이벤트 및 라우팅 이벤트 개요(UWP 앱)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Events in Windows Store 8.x apps](/previous-versions/windows/apps/hh758286(v=win.10))(Windows 스토어 8.x 앱의 이벤트)

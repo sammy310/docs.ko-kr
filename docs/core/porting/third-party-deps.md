@@ -3,12 +3,12 @@ title: .NET Core로 코드를 포팅하기 위해 종속성 분석
 description: .NET Framework에서 .NET Core로 프로젝트를 포팅하기 위해 외부 종속성을 분석하는 방법을 알아봅니다.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 430da45052e3953ab49f182b1773fc6d74bd2221
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397922"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223610"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>.NET Core로 코드를 포팅하기 위해 종속성 분석
 
@@ -43,9 +43,9 @@ NuGet 패키지 자체는 플랫폼 관련 어셈블리를 포함하는 폴더 �
 NuGet 패키지 폴더를 검사하는 가장 쉬운 방법은 [NuGet 패키지 탐색기](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) 도구를 사용하는 것입니다. 설치한 후 다음 단계를 사용하여 폴더 이름을 표시합니다.
 
 1. NuGet 패키지 탐색기를 엽니다.
-2. **온라인 피드에서 패키지 열기**를 클릭합니다.
+2. **온라인 피드에서 패키지 열기** 를 클릭합니다.
 3. 패키지의 이름을 검색합니다.
-4. 검색 결과에서 패키지 이름을 선택하고 **열기**를 클릭합니다.
+4. 검색 결과에서 패키지 이름을 선택하고 **열기** 를 클릭합니다.
 5. 오른쪽에서 *lib* 폴더를 확장하고 폴더 이름을 찾습니다.
 
 `netstandardX.Y` 또는 `netcoreappX.Y` 패턴 중 하나를 사용하는 이름을 가진 폴더를 찾습니다.
@@ -83,7 +83,7 @@ Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세�
 종속된 NuGet 패키지가 .NET Core에서 실행되지 않을 경우 수행할 수 있는 몇 가지가 있습니다.
 
 - 프로젝트가 오픈 소스이고 GitHub 같은 곳에 호스트된 경우 개발자가 직접 참여하도록 할 수 있습니다.
-- [nuget.org](https://www.nuget.org/)에서 작성자에게 직접 문의할 수 있습니다. 패키지를 검색하고 패키지 페이지의 왼쪽에서 **연락처 소유자**를 클릭합니다.
+- [nuget.org](https://www.nuget.org/)에서 작성자에게 직접 문의할 수 있습니다. 패키지를 검색하고 패키지 페이지의 왼쪽에서 **연락처 소유자** 를 클릭합니다.
 - 사용하던 패키지와 동일한 작업을 수행하는 .NET Core에서 실행되는 다른 패키지를 찾을 수도 있습니다.
 - 패키지가 수행하고 있는 코드를 직접 작성해볼 수 있습니다.
 - 적어도 패키지의 호환 버전을 사용할 수 있을 때까지는 앱의 기능을 변경하여 패키지에 대한 종속성을 없앨 수 있습니다.

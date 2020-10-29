@@ -2,12 +2,12 @@
 title: .NET Core 2.0의 새로운 기능
 description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅니다.
 ms.date: 08/13/2017
-ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdca38d1584107727fe8e20b80ab2337f4cb05f1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397844"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223722"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -72,7 +72,7 @@ C# 및 F#를 지원할 뿐만 아니라 .NET Core 2.0도 Visual Basic을 지원�
 
 1. `dotnet new console -lang vb` 명령을 입력합니다.
 
-   이 명령은 *Program.vb*라는 Visual Basic 소스 코드와 함께 `.vbproj` 파일 확장인 프로젝트 파일을 만듭니다. 이 파일은 문자열 "Hello World!"를 작성하는 소스 코드를 포함합니다. 콘솔 창에 표시합니다.
+   이 명령은 *Program.vb* 라는 Visual Basic 소스 코드와 함께 `.vbproj` 파일 확장인 프로젝트 파일을 만듭니다. 이 파일은 문자열 "Hello World!"를 작성하는 소스 코드를 포함합니다. 콘솔 창에 표시합니다.
 
 1. `dotnet run` 명령을 입력합니다. [.NET Core CLI](../tools/index.md)는 "Hello World!" 메시지를 표시하는 애플리케이션을 자동으로 컴파일하고 실행합니다. 콘솔 창에 표시합니다.
 
@@ -104,13 +104,13 @@ C# 및 F#를 지원할 뿐만 아니라 .NET Core 2.0도 Visual Basic을 지원�
 
 ### <a name="support-for-net-standard-20"></a>.NET 표준 2.0에 대한 지원
 
-.NET 표준은 해당 버전의 표준에 부합하는 .NET 구현에서 사용할 수 있어야 하는 버전이 지정된 API 집합을 정의합니다. .NET 표준은 라이브러리 개발자에서 대상으로 지정됩니다. 각 .NET 구현에 .NET 표준의 버전을 대상으로 지정하는 라이브러리에 사용할 수 있는 기능을 보장하려고 합니다. .NET Core 1.x는 .NET 표준 버전 1.6을 지원하고 .NET Core 2.0은 최신 버전인 .NET 표준 2.0을 지원합니다. 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
+.NET Standard는 해당 버전의 표준에 부합하는 .NET 구현에서 사용할 수 있어야 하는 버전이 지정된 API 집합을 정의합니다. .NET Standard는 라이브러리 개발자에서 대상으로 지정됩니다. 각 .NET 구현에 .NET Standard의 버전을 대상으로 지정하는 라이브러리에 사용할 수 있는 기능을 보장하려고 합니다. .NET Core 1.x는 .NET Standard 버전 1.6을 지원하고 .NET Core 2.0은 최신 버전인 .NET Standard 2.0을 지원합니다. 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
 
-.NET 표준 2.0에는 .NET 표준 1.6에서 사용할 수 있었던 20,000개가 넘는 API가 포함됩니다. 이 확장된 노출 영역 중 상당 부분은 .NET Framework 및 Xamarin에 공통되는 API를 .NET 표준에 통합한 결과입니다.
+.NET Standard 2.0에는 .NET Standard 1.6에서 사용할 수 있었던 20,000개가 넘는 API가 포함됩니다. 이 확장된 노출 영역 중 상당 부분은 .NET Framework 및 Xamarin에 공통되는 API를 .NET 표준에 통합한 결과입니다.
 
-.NET 표준 2.0 클래스 라이브러리는 .NET Framework 클래스 라이브러리를 참조할 수도 있고 .NET 표준 2.0에서 표시되는 API를 호출하도록 제공됩니다. .NET Framework 라이브러리를 다시 컴파일하지 않아도 됩니다.
+.NET Standard 2.0 클래스 라이브러리는 .NET Framework 클래스 라이브러리를 참조할 수도 있고 .NET Standard 2.0에 표시되는 API를 호출하도록 제공됩니다. .NET Framework 라이브러리를 다시 컴파일하지 않아도 됩니다.
 
-마지막 버전인 .NET 표준 1.6 이후 .NET 표준에 추가된 API 목록은 [.NET 표준 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
+마지막 버전인 .NET Standard 1.6 이후 .NET Standard에 추가된 API 목록은 [.NET Standard 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
 
 ### <a name="expanded-surface-area"></a>확장된 노출 영역
 
@@ -130,7 +130,7 @@ Visual Studio 2017 버전 15.3 및 경우에 따라 Mac용 Visual Studio는 .NET
 
 .NET Core 2.0 SDK가 설치되는 경우 .NET Core 1.x 프로젝트를 .NET Core 2.0으로, .NET 표준 1.x 라이브러리를 .NET 표준 2.0으로 대상을 변경할 수 있습니다.
 
-Visual Studio에서 프로젝트의 대상을 변경하려면 프로젝트 속성 대화 상자의 **애플리케이션** 탭을 열고 **대상 프레임 워크** 값을 **.NET Core 2.0** 또는 **.NET 표준 2.0**으로 변경합니다. 또한 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\*.csproj 파일 편집** 옵션을 선택하여 변경할 수 있습니다. 자세한 내용은 이 항목 앞 부분의 [도구](#tooling) 섹션을 참조하세요.
+Visual Studio에서 프로젝트의 대상을 변경하려면 프로젝트 속성 대화 상자의 **애플리케이션** 탭을 열고 **대상 프레임 워크** 값을 **.NET Core 2.0** 또는 **.NET 표준 2.0** 으로 변경합니다. 또한 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\*.csproj 파일 편집** 옵션을 선택하여 변경할 수 있습니다. 자세한 내용은 이 항목 앞 부분의 [도구](#tooling) 섹션을 참조하세요.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core에 대한 Live Unit Testing 지원
 

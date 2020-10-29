@@ -1,15 +1,17 @@
 ---
 title: .NET for Apache Spark에서 UDF(사용자 정의 함수) 만들기
 description: .NET for Apache Spark 애플리케이션에서 UDF(사용자 정의 함수)를 구현하는 방법을 알아봅니다.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955038"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224184"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>.NET for Apache Spark에서 UDF(사용자 정의 함수) 만들기
 
@@ -184,6 +186,12 @@ public class C
 
 * UDF에 null 값을 사용하면 예외를 throw할 수 있습니다. 해당 예외는 개발자가 처리해야 합니다.
 * UDF는 Spark의 기본 제공 함수에서 제공하는 최적화를 사용하지 않으므로 가능한 한 기본 제공 함수를 사용하는 것이 좋습니다.
+
+## <a name="faqs"></a>FAQ
+
+**`ArrayType`, `MapType`, `ArrayList` 또는 `HashTable`을 인수 또는 반환 형식으로 사용하여 UDF를 호출하려고 할 때 `System.NotImplementedException: The method or operation is not implemented.` 또는 `System.InvalidCastException: Unable to cast object of type 'System.Collections.Hashtable' to type 'System.Collections.Generic.IDictionary` 오류가 발생하는 이유는 무엇인가요?**  
+`ArrayType` 및 `MapType`에 대한 지원은 [v1.0](https://github.com/dotnet/spark/releases/tag/v1.0.0)까지 제공되지 않으므로 이전 버전의 Apache Spark용 .NET을 사용하고 이러한 형식을 인수나 반환 형식으로 UDF에 전달하려고 하면 이러한 오류가 발생합니다.
+`ArrayList` 및 `HashTable` 형식은 제네릭이 아닌 컬렉션이기 때문에 UDF의 반환 형식으로 지원될 수 없으므로 요소 형식 정의를 Spark에 제공할 수 없습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

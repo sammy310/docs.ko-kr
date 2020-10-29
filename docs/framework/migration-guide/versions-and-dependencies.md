@@ -5,18 +5,20 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f807a9d9a7ccebf2ae71d47e01fbfba7338b1799
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557673"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471999"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 문서에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.
 
 새 .NET Framework 버전은 각각 새 기능을 추가하지만 이전 버전의 기능을 유지합니다.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호는 각 릴리스마다 증가하지만 CLR 버전은 매번 증가하지는 않습니다. 예를 들어 .NET Framework 4, 4.5 및 이후 릴리스에는 CLR 4가 포함되지만 .NET Framework 2.0, 3.0 및 3.5에는 CLR 2.0이 포함됩니다. CLR 버전 3이 포함된 .NET Framework 버전은 없습니다.
 
@@ -32,7 +34,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 
 - 확인 표시 아이콘(➕)은 .NET Framework가 기본적으로 설치되어 있는 OS 버전을 나타냅니다.
 - 더하기 기호 아이콘(➕)은 .NET Framework가 미리 설치되지 않았지만 설치할 수 있는 OS 버전을 나타냅니다.
-- 별표 **\*** 는 .NET Framework가(사전 설치되어 있는지와 관계없이) [제어판에서](../install/dotnet-35-windows-10.md) 또는 Windows의 Server의 경우 서버 관리자를 통해 사용하도록 설정되어야 하는 OS 버전을 나타냅니다.
+- 별표 * *\** _은 사전 설치 여부와 관계없이 [제어판](../install/dotnet-35-windows-10.md)이나 서버 관리자(Windows Server의 경우)를 통해 .NET Framework를 사용하도록 설정해야 하는 OS 버전을 나타냅니다.
 
 | | |
 | - | - |
@@ -49,7 +51,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 
 |||
 |-|-|
-|**CLR 버전**|4|
+|_ *CLR 버전**|4|
 |**Windows 버전**|✔️ 10 2019년 5월 업데이트<br/>➕ 10 2018년 10월 업데이트(버전 1809)<br/>➕ 10 2018년 4월 업데이트(버전 1803)<br/>➕ 10 Fall Creators Update(버전 1709)<br/>➕ 10 Creators Update(버전 1703)<br/>➕ 10 1주년 업데이트(버전 1607)<br/>➕ 8.1<br/>➕7|
 |**Windows Server 버전**|➕ Windows Server 2019<br/>➕ Windows Server, 버전 1809<br/>➕ Windows Server, 버전 1803<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**설치된 .NET 버전 확인 방법**|`Release` DWORD 사용:<br/>- 528040(Windows 10 2019년 5월 업데이트)<br/>- 528049(다른 모든 OS 버전)<br/>([지침](how-to-determine-which-versions-are-installed.md) 참조)|
@@ -68,7 +70,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |**Windows Server 버전**|✔️ Windows Server 2019<br/>✔️ Windows Server, 버전 1809<br/>✔️ Windows Server, 버전 1803<br/>➕ Windows Server, 버전 1709<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**설치된 .NET 버전 확인 방법**|`Release` DWORD 사용:<br/>- 461814(Windows 10 2018년 10월 업데이트)<br/>- 461808(Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803)<br/>- 461814(다른 모든 OS 버전)<br/>([지침](how-to-determine-which-versions-are-installed.md) 참조)|
 
-<sup>1</sup> **.NET 데스크톱 개발**, **ASP.NET 및 웹 개발**, **Azure 개발**, **Office/SharePoint 개발**, **.NET을 사용한 모바일 개발** 또는 **.NET Core 플랫폼 간 개발** 워크로드를 설치해야 합니다.
+<sup>1</sup> **.NET 데스크톱 개발** , **ASP.NET 및 웹 개발** , **Azure 개발** , **Office/SharePoint 개발** , **.NET을 사용한 모바일 개발** 또는 **.NET Core 플랫폼 간 개발** 워크로드를 설치해야 합니다.
 
 ### <a name="net-framework-471"></a>.NET Framework 4.7.1
 
@@ -120,7 +122,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |**Windows Server 버전**|➕ 2012 R2<br />➕ 2012<br />➕ 2008 R2 SP1|
 |**설치된 .NET 버전 확인 방법**|`Release` DWORD 사용:<br /><br/>- 394254(Windows 10 11월 업데이트)<br />- 394271(다른 모든 OS 버전)<br /><br/>([지침](how-to-determine-which-versions-are-installed.md) 참조)|
 
-<sup>1</sup> **.NET 데스크톱 개발**, **ASP.NET 및 웹 개발**, **Azure 개발**, **Office/SharePoint 개발**, **.NET을 사용한 모바일 개발** 또는 **.NET Core 플랫폼 간 개발** 워크로드를 설치해야 합니다.
+<sup>1</sup> **.NET 데스크톱 개발** , **ASP.NET 및 웹 개발** , **Azure 개발** , **Office/SharePoint 개발** , **.NET을 사용한 모바일 개발** 또는 **.NET Core 플랫폼 간 개발** 워크로드를 설치해야 합니다.
 
 ### <a name="net-framework-46"></a>.NET Framework 4.6
 
