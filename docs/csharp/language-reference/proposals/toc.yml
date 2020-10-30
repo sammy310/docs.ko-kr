@@ -116,3 +116,5 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
         - name: localsinit 플래그 내보내기 무시
           href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
+        - name: 무제한 형식 매개 변수 주석
+          href: ../../../../_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md
