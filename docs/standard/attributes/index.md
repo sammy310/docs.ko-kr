@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: 5678e904afae4d348fbb56b189c95cd59b8e7a4d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 9a83c0e8ee3476f43ccc2e88c21ccbbc0661bd19
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162845"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889220"
 ---
 # <a name="extend-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장
 
@@ -33,7 +33,7 @@ ms.locfileid: "92162845"
 |[특성 적용](applying-attributes.md)|코드의 요소에 특성을 적용하는 방법을 설명합니다.|
 |[사용자 지정 특성 작성](writing-custom-attributes.md)|사용자 지정 특성 클래스를 디자인하는 방법을 설명합니다.|
 |[특성에 저장된 정보 검색](retrieving-information-stored-in-attributes.md)|실행 컨텍스트에 로드된 코드에 대한 사용자 지정 특성을 검색하는 방법을 설명합니다.|
-|[메타데이터 및 자동 기술 구성 요소](../metadata-and-self-describing-components.md)|메타데이터를 개괄적으로 설명하고 .NET Framework PE(이식 가능한 실행) 파일에서 구현하는 방법을 설명합니다.|
+|[메타데이터 및 자동 기술 구성 요소](../metadata-and-self-describing-components.md)|메타데이터를 개괄적으로 설명하고 .NET PE(이식 가능한 실행) 파일에서 구현하는 방법을 설명합니다.|
 |[방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|리플렉션 전용 컨텍스트에서 사용자 지정 특성 정보를 검색하는 방법을 설명합니다.|
 
 ## <a name="reference"></a>참고

@@ -1560,6 +1560,8 @@ items:
         href: ../core/extensions/custom-logging-provider.md
       - name: 고성능 로깅
         href: ../core/extensions/high-performance-logging.md
+      - name: 콘솔 로그 서식 지정
+        href: ../core/extensions/console-log-formatter.md
   - name: HostBuilder(제네릭 호스트)
     href: ../core/extensions/generic-host.md
   - name: 데이터 액세스
