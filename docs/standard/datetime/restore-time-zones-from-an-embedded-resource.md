@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], deserializing
-- time zones [.NET Framework], restoring
+- time zones [.NET], deserializing
+- time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: b1cece13c88b3a49c9c4c90045a07dd009d4282d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1dd3dff2441ac5e21f3ebf97d58919a7c65d42c5
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281325"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063432"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>방법: 포함 리소스에서 표준 시간대 복원
 
@@ -26,7 +26,7 @@ ms.locfileid: "84281325"
 
 2. 포함 된 <xref:System.Resources.ResourceManager> 리소스 파일의 정규화 된 이름과 리소스 파일을 포함 하는 어셈블리에 대 한 참조를 전달 하 여 개체를 인스턴스화합니다.
 
-   포함 된 리소스 파일의 정규화 된 이름을 확인할 수 없으면 [ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하 여 어셈블리의 매니페스트를 검사 합니다. `.mresource`항목은 리소스를 식별 합니다. 이 예제에서 리소스의 정규화 된 이름은 `SerializeTimeZoneData.SerializedTimeZones` 입니다.
+   포함 된 리소스 파일의 정규화 된 이름을 확인할 수 없는 경우 [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하 여 어셈블리의 매니페스트를 검사 합니다. `.mresource`항목은 리소스를 식별 합니다. 이 예제에서 리소스의 정규화 된 이름은 `SerializeTimeZoneData.SerializedTimeZones` 입니다.
 
    리소스 파일이 표준 시간대 인스턴스화 코드를 포함 하는 동일한 어셈블리에 포함 된 경우 `static` ( `Shared` Visual Basic) 메서드를 호출 하 여 해당 파일에 대 한 참조를 검색할 수 있습니다 <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> .
 
@@ -49,14 +49,14 @@ ms.locfileid: "84281325"
 
 이 예제에는 다음 사항이 필요합니다.
 
-- 이 프로젝트에는 System.object와 System.object에 대 한 참조가 추가 됩니다.
+- System.Windows.Forms.dll에 대 한 참조가 프로젝트에 추가 System.Core.dll.
 
 - 다음 네임 스페이스를 가져옵니다.
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [표준 시간대 개요](time-zone-overview.md)

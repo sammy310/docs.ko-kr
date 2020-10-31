@@ -3,18 +3,18 @@ title: 날짜, 시간 및 표준 시간대
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zone objects [.NET Framework]
-- date and time data [.NET Framework]
-- time zones [.NET Framework]
-- times [.NET Framework], time zones
-- time [.NET Framework], time zones
+- time zone objects [.NET]
+- date and time data [.NET]
+- time zones [.NET]
+- times [.NET], time zones
+- time [.NET], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: 86602cd6e662b1b1057832247babc558ef67b79f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1200f7edc3ac40a67ecfa2f554c5c721877e755a
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276935"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063679"
 ---
 # <a name="dates-times-and-time-zones"></a>날짜, 시간 및 표준 시간대
 
@@ -34,7 +34,7 @@ ms.locfileid: "84276935"
 
 설명서의 이 섹션에서는 표준 시간대로 작업하고 날짜 및 시간 한 시간 표준 시간대에서 다른 표준 시간대로 변환할 수 있는 표준 시간대 인식 애플리케이션을 만들기 위해 필요한 정보를 제공합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [표준 시간대 개요](time-zone-overview.md) 표준 시간대 인식 애플리케이션을 만드는 데 관련된 용어, 개념 및 문제에 관해 설명합니다.
 
@@ -72,6 +72,6 @@ ms.locfileid: "84276935"
 
 [방법: 사용자의 모호한 시간 확인 작업 허용](let-users-resolve-ambiguous-times.md) 사용자가 모호한 현지 시간과 협정 세계시 간의 매핑을 확인하도록 하는 방법을 설명합니다.
 
-## <a name="reference"></a>참고
+## <a name="reference"></a>참조
 
 <xref:System.TimeZoneInfo?displayProperty=nameWithType>

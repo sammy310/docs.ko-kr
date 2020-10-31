@@ -7,22 +7,22 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - restoring time zones
-- deserialization [.NET Framework], time zones
-- serialization [.NET Framework], time zones
-- time zone objects [.NET Framework], restoring
+- deserialization [.NET], time zones
+- serialization [.NET], time zones
+- time zone objects [.NET], restoring
 - saving time zones
-- time zone objects [.NET Framework], deserializing
-- time zones [.NET Framework], saving
-- time zones [.NET Framework], restoring
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zone objects [.NET], deserializing
+- time zones [.NET], saving
+- time zones [.NET], restoring
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-ms.openlocfilehash: 8da26988d2e141ac704f0d3756cd8a50602cb3fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6a05bf4ce062a3f4e539e9b89779cb468b9782a6
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281052"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063393"
 ---
 # <a name="saving-and-restoring-time-zones"></a>표준 시간대 저장 및 복원
 
@@ -72,6 +72,6 @@ ms.locfileid: "84281052"
 
 포함 된 리소스를 사용 하 여 serialize 된 표준 시간대 데이터를 저장 하는 예제는 [방법: 포함 리소스에 표준 시간대 저장](save-time-zones-to-an-embedded-resource.md) 및 [방법: 포함 리소스에서 표준 시간대 복원](restore-time-zones-from-an-embedded-resource.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)

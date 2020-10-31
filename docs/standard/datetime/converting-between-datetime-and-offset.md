@@ -8,28 +8,28 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - DateTime structure, converting
-- time zones [.NET Framework], conversions
+- time zones [.NET], conversions
 - UTC times, converting
 - DateTimeOffset structure, converting
 - converting DateTimeOffset and DateTime values
-- dates [.NET Framework], converting
+- dates [.NET], converting
 - converting times
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924905"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063848"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime과 DateTimeOffset 간 변환
 
 구조는 <xref:System.DateTimeOffset> 구조 보다 더 높은 수준의 표준 시간대 인식을 제공 하지만 <xref:System.DateTime> <xref:System.DateTime> 매개 변수는 메서드 호출에서 보다 일반적으로 사용 됩니다. 따라서 <xref:System.DateTimeOffset> 값을 값으로 변환 하거나 그 반대로 변환 하는 기능은 매우 <xref:System.DateTime> 중요 합니다. 이 항목에서는 표준 시간대 정보를 최대한 많이 보존 하는 방식으로 이러한 변환을 수행 하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> <xref:System.DateTime> <xref:System.DateTimeOffset> 표준 시간대의 시간을 나타낼 때와 형식에는 몇 가지 제한 사항이 있습니다. 속성을 사용 하 여 <xref:System.DateTime.Kind%2A> <xref:System.DateTime> 은 Utc (협정 세계시)와 시스템의 현지 표준 시간대만 반영할 수 있습니다. <xref:System.DateTimeOffset>UTC에서의 시간 오프셋을 반영 하지만 해당 오프셋이 속한 실제 표준 시간대를 반영 하지는 않습니다. 표준 시간대에 대 한 시간 값 및 지원에 대 한 자세한 내용은 [DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중에서 선택](choosing-between-datetime.md)을 참조 하세요.
+> <xref:System.DateTime> <xref:System.DateTimeOffset> 표준 시간대의 시간을 나타낼 때와 형식에는 몇 가지 제한 사항이 있습니다. 속성을 사용 하 여 <xref:System.DateTime.Kind%2A> <xref:System.DateTime> 은 Utc (협정 세계시)와 시스템의 현지 표준 시간대만 반영할 수 있습니다. <xref:System.DateTimeOffset> UTC에서의 시간 오프셋을 반영 하지만 해당 오프셋이 속한 실제 표준 시간대를 반영 하지는 않습니다. 표준 시간대에 대 한 시간 값 및 지원에 대 한 자세한 내용은 [DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중에서 선택](choosing-between-datetime.md)을 참조 하세요.
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTime에서 DateTimeOffset으로 변환
 

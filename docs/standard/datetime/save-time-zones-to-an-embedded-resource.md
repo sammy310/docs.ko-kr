@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], saving
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zones [.NET], saving
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: c8084cb8edff64b9d598f4fd0a62a362491c7aa7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281247"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063406"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 리소스에 표준 시간대 저장
 
@@ -23,9 +23,9 @@ ms.locfileid: "84281247"
 
 일반적으로 개체 직렬화는 <xref:System.TimeZoneInfo> 표준 시간대 인식 응용 프로그램과는 차이가 있습니다. 직렬화 된 개체를 저장 하는 데 사용 되는 데이터 저장소에 따라 <xref:System.TimeZoneInfo> 표준 시간대 데이터는 설치 또는 설치 루틴 (예: 데이터가 레지스트리의 응용 프로그램 키에 저장 된 경우) 또는 최종 응용 프로그램이 컴파일되기 전에 실행 되는 유틸리티 루틴의 일부로 serialize 될 수 있습니다 (예: serialize 된 데이터가 .NET XML 리소스 (.resx) 파일에 저장 된 경우).
 
-응용 프로그램을 사용 하 여 컴파일되는 리소스 파일 외에도 여러 다른 데이터 저장소를 표준 시간대 정보에 사용할 수 있습니다. 이러한 요구 사항은 다음과 같습니다.
+응용 프로그램을 사용 하 여 컴파일되는 리소스 파일 외에도 여러 다른 데이터 저장소를 표준 시간대 정보에 사용할 수 있습니다. 여기에는 다음이 포함됩니다.
 
-- 레지스트리. 응용 프로그램은 자체 응용 프로그램 키의 하위 키를 사용 하 여 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 영역의 하위 키를 사용 하는 대신 사용자 지정 표준 시간대 데이터를 저장 해야 합니다.
+- 레지스트리. 응용 프로그램은 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones 하위 키를 사용 하는 대신 자체 응용 프로그램 키의 하위 키를 사용 하 여 사용자 지정 표준 시간대 데이터를 저장 해야 합니다.
 
 - 구성 파일.
 
@@ -55,7 +55,7 @@ ms.locfileid: "84281247"
 
 9. 생성 된 .resx 파일을 응용 프로그램의 Visual Studio 프로젝트에 추가 합니다.
 
-10. Visual Studio의 **속성** 창을 사용 하 여 .resx 파일의 **빌드 작업** 속성이 **포함 리소스**로 설정 되었는지 확인 합니다.
+10. Visual Studio의 **속성** 창을 사용 하 여 .resx 파일의 **빌드 작업** 속성이 **포함 리소스** 로 설정 되었는지 확인 합니다.
 
 ## <a name="example"></a>예제
 
@@ -68,20 +68,20 @@ ms.locfileid: "84281247"
 
 메서드는 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> .NET XML 리소스 파일에 전체 헤더 정보를 추가 하므로 기존 파일에 리소스를 추가 하는 데 사용할 수 없습니다. 이 예제에서는 SerializedTimeZones 파일을 확인 하 고, 있는 경우 두 개의 serialize 된 표준 시간대 이외의 모든 리소스를 제네릭 개체에 저장 하 여이를 처리 합니다 <xref:System.Collections.Generic.Dictionary%602> . 그러면 기존 파일이 삭제 되 고 기존 리소스가 새 SerializedTimeZones 파일에 추가 됩니다. Serialize 된 표준 시간대 데이터도이 파일에 추가 됩니다.
 
-리소스의 키 (또는 **이름**) 필드에는 공백이 포함 되 면 안 됩니다. <xref:System.String.Replace%28System.String%2CSystem.String%29>메서드를 호출 하 여 리소스 파일에 할당 되기 전에 표준 시간대 식별자의 포함 된 모든 공백을 제거 합니다.
+리소스의 키 (또는 **이름** ) 필드에는 공백이 포함 되 면 안 됩니다. <xref:System.String.Replace%28System.String%2CSystem.String%29>메서드를 호출 하 여 리소스 파일에 할당 되기 전에 표준 시간대 식별자의 포함 된 모든 공백을 제거 합니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
 이 예제에는 다음 사항이 필요합니다.
 
-- 이 프로젝트에는 System.object와 System.object에 대 한 참조가 추가 됩니다.
+- System.Windows.Forms.dll에 대 한 참조가 프로젝트에 추가 System.Core.dll.
 
 - 다음 네임 스페이스를 가져옵니다.
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [표준 시간대 개요](time-zone-overview.md)

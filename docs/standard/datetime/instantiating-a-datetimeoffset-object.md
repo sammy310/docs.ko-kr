@@ -8,16 +8,16 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - instantiating time zone objects
-- time zone objects [.NET Framework], instantiation
+- time zone objects [.NET], instantiation
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: c2b71a2a98353a4ec9ed249acf18939dd4740e99
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4158a3d3bbd7ada87dd0c773cf9a0f5e001ad918
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768900"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063627"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>DateTimeOffset 개체 인스턴스화
 
@@ -39,7 +39,7 @@ ms.locfileid: "84768900"
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
 
-<xref:System.DateTimeOffset>리터럴을 지 원하는 언어를 사용 하는 경우 날짜 및 시간 리터럴을 사용 하 여 값을 초기화할 수도 있습니다 <xref:System.DateTime> . 예를 들어 다음 Visual Basic 코드는 개체를 만듭니다 <xref:System.DateTimeOffset> .
+<xref:System.DateTimeOffset> 리터럴을 지 원하는 언어를 사용 하는 경우 날짜 및 시간 리터럴을 사용 하 여 값을 초기화할 수도 있습니다 <xref:System.DateTime> . 예를 들어 다음 Visual Basic 코드는 개체를 만듭니다 <xref:System.DateTimeOffset> .
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
 
@@ -93,6 +93,6 @@ ms.locfileid: "84768900"
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)

@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], enumerating
-- enumerating time zones [.NET Framework]
+- time zones [.NET], enumerating
+- enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 8f1cc9d58bc0f169d458854eac6568caaa4481c7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a51e9d0c51968d57e0d79dd80d8619ab11cdbf93
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286134"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063770"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대 열거
 
@@ -25,7 +25,7 @@ ms.locfileid: "84286134"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>로컬 시스템에 있는 표준 시간대를 열거하려면
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 개체의 제네릭 컬렉션을 반환 합니다 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> . 컬렉션의 항목은 해당 속성을 기준으로 정렬 됩니다 <xref:System.TimeZoneInfo.DisplayName%2A> . 예:
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 개체의 제네릭 컬렉션을 반환 합니다 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> . 컬렉션의 항목은 해당 속성을 기준으로 정렬 됩니다 <xref:System.TimeZoneInfo.DisplayName%2A> . 다음은 그 예입니다.
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -63,11 +63,11 @@ ms.locfileid: "84286134"
 
 - 다음 네임 스페이스를 가져옵니다.
 
-  <xref:System>(c # 코드)
+  <xref:System> (c # 코드)
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [방법: 포함 리소스에 표준 시간대 저장](save-time-zones-to-an-embedded-resource.md)

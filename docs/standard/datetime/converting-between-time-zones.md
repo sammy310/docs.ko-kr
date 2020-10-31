@@ -7,18 +7,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], converting
-- time zones [.NET Framework], conversions
+- times [.NET], converting
+- time zones [.NET], conversions
 - UTC times, converting
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547332"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063835"
 ---
 # <a name="converting-times-between-time-zones"></a>표준 시간대 간 시간 변환
 
@@ -26,7 +26,7 @@ ms.locfileid: "90547332"
 
 ## <a name="converting-to-coordinated-universal-time"></a>UTC로 변환
 
-UTC(협정 세계시)는 고정밀 원자 시간 표준입니다. 전세계의 표준 시간대가 UTC의 양 또는 음 오프셋으로 표시됩니다. 따라서 UTC는 어느 정도 표준 시간대에서 자유롭거나 중립적인 시간을 제공합니다. 컴퓨터 간에 날짜 및 시간의 이식성이 중요한 경우 UTC 시간을 사용하는 것이 좋습니다. 날짜 및 시간을 사용 하는 세부 정보 및 기타 모범 사례 [는 .NET Framework에서 DateTime을 사용 하 여 최선의 코딩 방법](/previous-versions/dotnet/articles/ms973825(v=msdn.10))을 참조 하세요.) 개별 표준 시간대를 UTC로 변환 하면 시간을 보다 쉽게 비교할 수 있습니다.
+UTC(협정 세계시)는 고정밀 원자 시간 표준입니다. 세계 표준 시간대는 UTC에서 양수 또는 음수 오프셋으로 표현 됩니다. 따라서 UTC는 어느 정도 표준 시간대에서 자유롭거나 중립적인 시간을 제공합니다. 컴퓨터 간에 날짜 및 시간의 이식성이 중요한 경우 UTC 시간을 사용하는 것이 좋습니다. 날짜 및 시간을 사용 하는 세부 정보 및 기타 모범 사례 [는 .NET Framework에서 DateTime을 사용 하 여 최선의 코딩 방법](/previous-versions/dotnet/articles/ms973825(v=msdn.10))을 참조 하세요.) 개별 표준 시간대를 UTC로 변환 하면 시간을 보다 쉽게 비교할 수 있습니다.
 
 > [!NOTE]
 > 구조체를 serialize 하 여 <xref:System.DateTimeOffset> 단일 시점을 명확 하 게 나타낼 수도 있습니다. <xref:System.DateTimeOffset>개체는 날짜 및 시간 값을 utc의 오프셋과 함께 저장 하므로 항상 utc와의 관계에 있는 특정 시점을 나타냅니다.
@@ -119,7 +119,7 @@ UTC보다 다섯 시간 이른 표준 시간대의 날짜 및 시간을 나타�
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.TimeZoneInfo>
 - [날짜, 시간 및 표준 시간대](index.md)

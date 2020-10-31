@@ -3,20 +3,20 @@ title: 로컬 시스템에 정의된 표준 시간대 찾기
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zones [.NET Framework], local
-- time zones [.NET Framework], finding local system time zones
-- time zone identifiers [.NET Framework]
+- time zones [.NET], local
+- time zones [.NET], finding local system time zones
+- time zone identifiers [.NET]
 - local time zone access
-- time zones [.NET Framework], retrieving
+- time zones [.NET], retrieving
 - UTC times, finding local system time zones
-- time zones [.NET Framework], UTC
+- time zones [.NET], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-ms.openlocfilehash: d313bbed3cc525a74b90537dd4f1742c09c62cd4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c968c7891a4fc9b77ed6224a9fc5f8f6d8f5d80b
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277026"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063692"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>로컬 시스템에 정의된 표준 시간대 찾기
 
@@ -35,7 +35,7 @@ ms.locfileid: "84277026"
 
 표준 시간대 식별자는 표준 시간대를 고유하게 식별하는 키 필드입니다. 대부분 키는 비교적 짧지만 표준 시간대 식별자는 비교적 깁니다. 대부분 경우에 해당 값은 표준 시간대의 표준 시간 이름을 제공하는 데 사용되는 <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> 속성에 해당합니다. 그러나 예외 사항이 있습니다. 올바른 식별자를 제공하는지 확인하는 가장 좋은 방법은 시스템에서 사용 가능한 표준 시간대를 열거하고 관련 식별자를 확인하는 것입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스](access-utc-and-local.md)
