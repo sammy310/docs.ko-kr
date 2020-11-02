@@ -4,16 +4,17 @@ description: .NET 어셈블리의 위치에 따라 CLR에서 해당 어셈블리
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
-- assemblies [.NET Framework], location
+- assemblies [.NET], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-ms.openlocfilehash: 7ab3804b14b586e1430d654f4da32a310bcb6cc9
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1fa1c486c0cddce4ddcfae7f2df27e2e85c88e66
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379901"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687600"
 ---
 # <a name="assembly-location"></a>어셈블리 위치
+
 어셈블리 위치에 따라 공용 언어 런타임이 참조 시 해당 위치를 찾을 수 있는지 여부가 결정되고 어셈블리를 다른 어셈블리와 공유할 수 있는지 여부도 결정될 수 있습니다. 다음 위치에 어셈블리를 배포할 수 있습니다.
 
 - 애플리케이션의 디렉터리 또는 하위 디렉터리.

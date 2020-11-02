@@ -5,16 +5,16 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
 - version numbers, assemblies
-- assemblies [.NET Framework], versioning
+- assemblies [.NET], versioning
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c94e0c74b8beed29537b53d7476715e2cacb7b80
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380077"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687646"
 ---
 # <a name="assembly-versioning"></a>어셈블리 버전 관리
 
@@ -51,7 +51,7 @@ ms.locfileid: "83380077"
 
 각 어셈블리는 ID의 일부로 버전 정보를 갖습니다. 따라서, 런타임에서는 두 개 어셈블리의 버전 번호가 다르면 이들 어셈블리가 서로 완전히 다른 것으로 간주합니다. 이 버전 번호는 다음과 같은 네 부분의 문자열로 구성됩니다.  
   
-\<*주 버전*>.\<*부 버전*>.\<*빌드 번호*>.\<*수정*>  
+\<*major version*>.\<*minor version*>.\<*build number*>.\<*revision*>  
   
 예를 들어, 버전 1.5.1254.0에서 1은 주 버전, 5는 부 버전, 1254는 빌드 번호 그리고 0은 수정 번호를 나타냅니다.  
   

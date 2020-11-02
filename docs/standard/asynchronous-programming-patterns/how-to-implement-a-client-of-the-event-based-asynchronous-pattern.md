@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-ms.openlocfilehash: d0253745d4d2ee90f355364ed1b1b0d9b74d0fc1
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: 95997f219a08c131905cfc86b78e94c36f3ec851
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379189"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888817"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴의 클라이언트 구현
 다음 코드 예제는 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 준수하는 구성 요소를 사용하는 방법을 보여줍니다. 이 예제의 양식은 [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)에 설명된 `PrimeNumberCalculator` 구성 요소를 사용합니다.  
   
- 이 예제를 사용하는 프로젝트를 실행하는 경우 그리드와 2개의 단추 즉, **새 작업 시작** 및 **취소** 단추가 있는 “소수 계산기” 양식이 표시됩니다. **새 작업 시작** 단추를 연속으로 여러 번 클릭할 수 있습니다. 클릭할 때마다 비동기 작업이 무작위로 생성된 테스트 숫자가 소수인지 여부를 확인하기 위해 계산을 시작합니다. 양식은 진행률 및 증분 결과를 주기적으로 표시합니다. 각 작업에는 고유한 작업 ID가 할당됩니다. 계산의 결과는 **결과** 열에 표시됩니다. 테스트 숫자가 소수가 아닌 경우 **합성수**로 레이블이 지정되며 첫 번째 약수가 표시됩니다.  
+ 이 예제를 사용하는 프로젝트를 실행하는 경우 그리드와 2개의 단추 즉, **새 작업 시작** 및 **취소** 단추가 있는 “소수 계산기” 양식이 표시됩니다. **새 작업 시작** 단추를 연속으로 여러 번 클릭할 수 있습니다. 클릭할 때마다 비동기 작업이 무작위로 생성된 테스트 숫자가 소수인지 여부를 확인하기 위해 계산을 시작합니다. 양식은 진행률 및 증분 결과를 주기적으로 표시합니다. 각 작업에는 고유한 작업 ID가 할당됩니다. 계산의 결과는 **결과** 열에 표시됩니다. 테스트 숫자가 소수가 아닌 경우 **합성수** 로 레이블이 지정되며 첫 번째 약수가 표시됩니다.  
   
  보류 중인 작업은 **취소** 단추로 취소할 수 있습니다. 여러 번 선택할 수 있습니다.  
   

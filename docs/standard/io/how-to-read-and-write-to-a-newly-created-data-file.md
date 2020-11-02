@@ -10,24 +10,25 @@ dev_langs:
 helpviewer_keywords:
 - streams, reading and writing data
 - BinaryReader class, examples
-- I/O [.NET Framework], reading data
-- I/O [.NET Framework], writing data
+- I/O [.NET], reading data
+- I/O [.NET], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 236d50260efa66f21db6d0abba6cc5c258a74d8d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769160"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188733"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>방법: 새로 만든 데이터 파일 읽기 및 쓰기
+
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType>와 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 클래스는 문자열이 아닌 데이터를 쓰고 읽는 데 사용됩니다. 다음 예제에서는 빈 파일 스트림을 만들어서 여기에 데이터를 쓰고 데이터를 읽는 방법을 보여줍니다.
 
-이 예제는 현재 디렉터리에 *Test.data*라는 데이터 파일을 만들고, 연결된 <xref:System.IO.BinaryWriter> 및 <xref:System.IO.BinaryReader> 개체를 만들고, <xref:System.IO.BinaryWriter> 개체를 사용하여 *Test.data*에 0부터 10까지 정수를 씁니다. 이렇게 하면 파일 포인터가 파일 끝에 옵니다. <xref:System.IO.BinaryReader> 개체는 파일 포인터를 다시 원점으로 설정하고, 지정된 내용을 읽습니다.  
+이 예제는 현재 디렉터리에 *Test.data* 라는 데이터 파일을 만들고, 연결된 <xref:System.IO.BinaryWriter> 및 <xref:System.IO.BinaryReader> 개체를 만들고, <xref:System.IO.BinaryWriter> 개체를 사용하여 *Test.data* 에 0부터 10까지 정수를 씁니다. 이렇게 하면 파일 포인터가 파일 끝에 옵니다. <xref:System.IO.BinaryReader> 개체는 파일 포인터를 다시 원점으로 설정하고, 지정된 내용을 읽습니다.  
   
 > [!NOTE]
-> 현재 디렉터리에 *Test.data*가 이미 있는 경우, <xref:System.IO.IOException> 예외가 throw됩니다. 예외를 throw하지 않고 항상 새 파일을 만들려면 <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType>보다는 <xref:System.IO.FileMode.Create?displayProperty=nameWithType> 파일 모드 옵션을 사용합니다.  
+> 현재 디렉터리에 *Test.data* 가 이미 있는 경우, <xref:System.IO.IOException> 예외가 throw됩니다. 예외를 throw하지 않고 항상 새 파일을 만들려면 <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType>보다는 <xref:System.IO.FileMode.Create?displayProperty=nameWithType> 파일 모드 옵션을 사용합니다.  
   
 ## <a name="example"></a>예제  
  [!code-csharp[System.IO.BinaryReaderWriter#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CS/source6.cs#7)]

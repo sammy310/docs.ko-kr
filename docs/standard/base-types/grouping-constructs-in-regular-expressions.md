@@ -10,16 +10,16 @@ helpviewer_keywords:
 - lookbehinds
 - regular expressions, grouping constructs
 - lookaheads
-- .NET Framework regular expressions, grouping constructs
+- .NET regular expressions, grouping constructs
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662630"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888510"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "84662630"
   
  캡처된 그룹에는 다음과 같은 4가지 방법으로 액세스할 수 있습니다.  
   
-- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
+- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number* 구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
   
 - 정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처링 그룹의 이름) 또는 `\k<`*number*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처링 그룹의 서수)을 통해 동일한 정규식에서 참조됩니다. 캡처링 그룹은 해당 서수와 같은 기본 이름을 갖고 있습니다. 자세한 내용은 이 항목 뒷부분의 [명명된 일치하는 하위 식](#named_matched_subexpression) 을 참조하세요.  
   
-- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
   
 - 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "84662630"
   
 - 정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처된 하위 식의 이름입니다.  
   
-- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
+- 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number* 구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
   
-- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name* 은 캡처된 하위 식의 이름입니다.  
   
-- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다.  
   
 - 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "84662630"
   
 `(?'name1-name2' subexpression)`
   
- 여기서 *name1* 은 현재 그룹이고(선택 사항), *name2* 는 이전에 정의된 그룹이며, *subexpression* 은 임의의 유효한 정규식 패턴입니다. 균형 조정 그룹 정의는 *name2* 의 정의를 삭제하고 *name1* 에 *name2* 와 *name1*간의 간격을 저장합니다. *name2* 그룹이 정의되어 있지 않으면 일치에서 역추적합니다. *name2* 의 마지막 정의를 삭제하면 *name2*의 이전 정의가 표시되므로 이 구문을 통해 그룹 *name2* 에 대한 캡처 스택을 괄호 또는 여는 대괄호 및 닫는 대괄호와 같은 중첩된 구문을 추적하기 위한 카운터로 사용할 수 있습니다.  
+ 여기서 *name1* 은 현재 그룹이고(선택 사항), *name2* 는 이전에 정의된 그룹이며, *subexpression* 은 임의의 유효한 정규식 패턴입니다. 균형 조정 그룹 정의는 *name2* 의 정의를 삭제하고 *name1* 에 *name2* 와 *name1* 간의 간격을 저장합니다. *name2* 그룹이 정의되어 있지 않으면 일치에서 역추적합니다. *name2* 의 마지막 정의를 삭제하면 *name2* 의 이전 정의가 표시되므로 이 구문을 통해 그룹 *name2* 에 대한 캡처 스택을 괄호 또는 여는 대괄호 및 닫는 대괄호와 같은 중첩된 구문을 추적하기 위한 카운터로 사용할 수 있습니다.  
   
- 균형 조정 그룹 정의에서는 *name2* 를 스택으로 사용합니다. 각 중첩된 구문의 시작 문자는 그룹 및 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 배치됩니다. 닫는 문자가 일치하면 해당 여는 문자가 그룹에서 제거되고 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션이 하나 감소합니다. 모든 중첩된 구문의 여는 문자와 닫는 문자가 일치하고 나면 *name2*가 비어 있습니다.  
+ 균형 조정 그룹 정의에서는 *name2* 를 스택으로 사용합니다. 각 중첩된 구문의 시작 문자는 그룹 및 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 배치됩니다. 닫는 문자가 일치하면 해당 여는 문자가 그룹에서 제거되고 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션이 하나 감소합니다. 모든 중첩된 구문의 여는 문자와 닫는 문자가 일치하고 나면 *name2* 가 비어 있습니다.  
   
 > [!NOTE]
 > 다음 예제에서 중첩된 구문의 적절한 여는 문자와 닫는 문자를 사용하도록 정규식을 수정하고 나면 이러한 정규식을 사용하여 가장 많이 중첩된 구문(예: 여러 중첩 메서드 호출을 포함하는 프로그램 코드 줄 또는 수학식)을 처리할 수 있습니다.  
@@ -291,7 +291,7 @@ ms.locfileid: "84662630"
   
  `(?=` *subexpression* `)`  
   
- 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 부분 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression*의 정규식 패턴과 일치해야 합니다. 너비가 0인 긍정 lookahead 어설션은 역추적하지 않습니다.  
+ 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 부분 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression* 의 정규식 패턴과 일치해야 합니다. 너비가 0인 긍정 lookahead 어설션은 역추적하지 않습니다.  
   
  일반적으로 너비가 0인 긍정 lookahead 어설션은 정규식 패턴의 끝 부분에서 찾을 수 있으며, 일치가 발생하도록 문자열의 끝 부분에 있어야 하지만 일치에 포함되어서는 안 되는 부분 문자열을 정의합니다. 또한 이 어설션은 과도한 역추적을 방지하는 데 유용합니다. 너비가 0인 긍정 lookahead 어설션을 사용하여, 특정 캡처된 그룹이 해당 캡처된 그룹에 대해 정의된 패턴의 하위 집합과 일치하는 텍스트로 시작하도록 할 수 있습니다. 예를 들어, 캡처링 그룹이 연속 단어 문자와 일치하는 경우 너비가 0인 긍정 lookahead 어설션을 사용하여 첫 번째 문자가 대문자 영문자가 되도록 할 수 있습니다.  
   
@@ -314,7 +314,7 @@ ms.locfileid: "84662630"
   
  `(?!` *subexpression* `)`  
   
- 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression*의 정규식 패턴과 일치해서는 안 됩니다.  
+ 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression* 의 정규식 패턴과 일치해서는 안 됩니다.  
   
  너비가 0인 부정 lookahead 어설션은 일반적으로 정규식의 시작 부분이나 끝 부분에 사용됩니다. 정규식의 시작 부분에서 이 어설션은 정규식의 시작 부분이 유사하지만 더 일반적인 찾으려는 패턴을 정의할 때 일치해서는 안 되는 특정 패턴을 정의할 수 있습니다. 이 경우 이 어설션은 흔히 역추적을 제한하는 데 사용됩니다. 정규식의 끝 부분에서 이 어설션은 일치의 끝 부분에서 발생할 수 없는 하위 식을 정의할 수 있습니다.  
   
@@ -352,7 +352,7 @@ ms.locfileid: "84662630"
   
  `(?<=` *subexpression* `)`  
   
- 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 `subexpression`이 일치 결과에 포함되지 않더라도 *subexpression*이 입력 문자열에서 현재 위치의 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
+ 여기서 *subexpression* 은 임의의 정규식 패턴입니다. 찾기가 성공하려면 `subexpression`이 일치 결과에 포함되지 않더라도 *subexpression* 이 입력 문자열에서 현재 위치의 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
   
  너비가 0인 긍정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 이 패턴이 일치 결과에 포함되지 않더라도 일치에 대한 사전 조건입니다.  
   

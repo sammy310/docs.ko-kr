@@ -3,19 +3,20 @@ title: EventWaitHandle
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], EventWaitHandle class
+- threading [.NET], EventWaitHandle class
 - EventWaitHandle class
-- event wait handles [.NET Framework]
-- threading [.NET Framework], cross-process synchronization
+- event wait handles [.NET]
+- threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c4745af9c5336d013dc0ca7ef1030b208c8b68
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138071"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188343"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
+
 <xref:System.Threading.EventWaitHandle> 클래스를 사용하면 여러 스레드가 신호를 보내고 신호를 대기하여 서로 통신할 수 있습니다. 이벤트 대기 핸들(단순히 이벤트라고도 함)은 하나 이상의 대기 스레드를 해제하기 위해 신호를 보낼 수 있는 대기 핸들입니다. 신호를 받은 후 이벤트 대기 핸들은 수동으로 또는 자동으로 다시 설정됩니다. <xref:System.Threading.EventWaitHandle> 클래스는 로컬 이벤트 대기 핸들(로컬 이벤트) 또는 명명된 시스템 이벤트 대기 핸들(모든 프로세스에 표시되는 명명된 이벤트 또는 시스템 이벤트)을 나타낼 수 있습니다.  
   
 > [!NOTE]

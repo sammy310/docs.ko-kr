@@ -8,17 +8,17 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- event properties [.NET Framework]
-- multiple events [.NET Framework]
-- event handling [.NET Framework], with multiple events
-- events [.NET Framework], multiple
+- event properties [.NET]
+- multiple events [.NET]
+- event handling [.NET], with multiple events
+- events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769017"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064238"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>방법: 이벤트 속성을 사용하여 여러 이벤트 처리
 이벤트 속성을 사용하려면 이벤트를 발생시키는 클래스에서 이벤트 속성을 정의한 다음 이벤트를 처리하는 클래스에서 이벤트 속성의 대리자를 설정합니다. 클래스에서 여러 이벤트 속성을 구현하려면 클래스가 각 이벤트에 대해 정의된 대리자를 내부적으로 저장 및 유지 관리해야 합니다. 일반적인 방법은 이벤트 키로 인덱싱된 대리자 컬렉션을 구현하는 것입니다.  

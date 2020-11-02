@@ -7,14 +7,14 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], enumerating directories and files
+- I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7a757fc97fd934f02592264c3a495c3efc435fd5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662578"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187894"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>방법: 디렉터리 및 파일 열거
 열거 가능한 컬렉션은 대규모의 디렉터리 및 파일 컬렉션으로 작업할 때 배열보다 나은 성능을 제공합니다. 디렉터리 및 파일을 열거하려면 디렉터리, 파일 이름이나 해당 <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> 또는 <xref:System.IO.FileSystemInfo> 개체의 열거할 수 있는 컬렉션을 반환하는 메서드를 사용합니다.  

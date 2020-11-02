@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: c41a695226068615efca5132985e50503060148b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 51394a49f12e8611ac6dba7eb93a6c9a9fae0cd0
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555668"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888804"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용
 많은 구성 요소가 비동기적으로 작업을 수행하는 옵션을 제공합니다. 예를 들어 <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 기본 스레드가 중단 없이 계속 실행되는 동안 사운드 및 이미지를 “배경”으로 로드할 수 있습니다.  

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 3b657ac6c88a1ee846f7f1d2156a18fd34621808
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b5eca8c294349fada9cfb1cb3ed8e2012edd8bda
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803952"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889415"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>정규식 예제: 날짜 형식 변경
 다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 사용하여 *mm*/*dd*/*yy* 형식의 날짜를 *dd*-*mm*-*yy* 형식의 날짜로 바꿉니다.  

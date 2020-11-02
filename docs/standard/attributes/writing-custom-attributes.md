@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550927"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889194"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "90550927"
   
 - 특성 클래스는 공용 클래스로 선언되어야 합니다.  
   
-- 특성 클래스의 이름은 규칙에 따라 **Attribute**로 끝납니다. 이 규칙을 반드시 적용할 필요는 없지만 가독성을 향상시키기 위해 사용하는 것이 좋습니다. 특성이 적용될 때 Attribute라는 단어를 포함시키지 않을 수도 있습니다.  
+- 특성 클래스의 이름은 규칙에 따라 **Attribute** 로 끝납니다. 이 규칙을 반드시 적용할 필요는 없지만 가독성을 향상시키기 위해 사용하는 것이 좋습니다. 특성이 적용될 때 Attribute라는 단어를 포함시키지 않을 수도 있습니다.  
   
 - 모든 특성 클래스는 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 상속해야 합니다.  
   

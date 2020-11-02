@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - format strings
 - custom numeric format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6e99191ecfb59e73656b98b8fb5185114194ab09
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541581"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888700"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 
@@ -31,7 +31,7 @@ ms.locfileid: "90541581"
 사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](composite-formatting.md)을 통해서도 사용자 지정 숫자 형식 문자열을 사용할 수 있습니다. [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 기능은 사용자 지정 숫자 형식 문자열도 지원합니다.
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티** 를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 <a name="table"></a> 다음 표에서는 사용자 지정 숫자 서식 지정자 및 각 서식 지정자로 생성되는 샘플 출력을 보여 줍니다. 사용자 지정 숫자 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#NotesCustomFormatting) 단원을 참조하고, 이러한 사용 방법을 자세히 보여 주는 예제를 보려면 [예제](#example) 단원을 참조하세요.
 
@@ -45,7 +45,7 @@ ms.locfileid: "90541581"
 |"‰"|천분율 자리 표시자|숫자에 1000을 곱하고 결과 문자열에 지역화된 천분율 기호를 삽입합니다.<br /><br /> 추가 정보: ["‰" 사용자 지정 지정자](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|지수 표기법|적어도 하나의 0이 뒤에 오면 지수 표기법을 사용하여 결과의 서식을 지정합니다. "E" 또는 "e" 문자는 결과 문자열에 표시되는 지수 기호의 대/소문자를 나타냅니다. "E" 또는 "e" 문자 뒤에 오는 0의 수에 따라 지수의 최소 자릿수가 결정됩니다. 더하기 기호(+)는 기호 문자가 항상 지수 앞에 온다는 것을 나타냅니다. 빼기 기호(-)는 기호 문자가 음의 지수 앞에만 온다는 것을 나타냅니다.<br /><br /> 추가 정보: ["E" 및 "e" 사용자 지정 지정자](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|이스케이프 문자|뒤에 오는 문자가 사용자 지정 형식 지정자가 아닌 리터럴로 해석되도록 합니다.<br /><br /> 추가 정보: ["\\"이스케이프 문자](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
-|'*string*'<br /><br /> "*string*"|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.<br/><br/>추가 정보: [문자 리터럴](#character-literals).|68 (“# ‘degrees’”) -> 68 degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|
+|' *string* '<br /><br /> " *string* "|리터럴 문자열 구분 기호|괄호로 묶인 문자가 변경되지 않은 상태로 결과 문자열에 복사되어야 함을 나타냅니다.<br/><br/>추가 정보: [문자 리터럴](#character-literals).|68 (“# ‘degrees’”) -> 68 degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|
 |;|섹션 구분 기호|양수, 음수 및 0에 따라 별도의 서식 문자열을 사용하여 섹션을 정의합니다.<br /><br /> 추가 정보: [";" 섹션 구분 기호](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
 |기타|다른 모든 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.<br/><br/>추가 정보: [문자 리터럴](#character-literals).|68 ("# °") -> 68 °|
 

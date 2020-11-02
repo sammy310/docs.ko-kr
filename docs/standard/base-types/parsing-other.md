@@ -8,17 +8,17 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - Char data type, parsing strings
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: a3503e0e499c6010fcc3d8669fa5c1eaf2dbf570
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5a8afde40dddd69a9648439be5c0f232db23b37b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277546"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889012"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET에서 기타 문자열 구문 분석
 숫자 및 <xref:System.DateTime> 문자열 외에도 <xref:System.Char>, <xref:System.Boolean> 및 <xref:System.Enum> 형식을 나타내는 문자열을 데이터 형식으로 구문 분석할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "84277546"
 ## <a name="enumeration"></a>열거형  
  고정 **Parse** 메서드를 사용하여 문자열 값에 대한 열거형 형식을 초기화할 수 있습니다. 이 메서드는 구문 분석하는 열거형 형식, 구문 분석할 문자열 및 구문 분석이 대/소문자를 구분하는지 여부를 나타내는 선택적 부울 플래그를 허용합니다. 구문 분석하는 문자열은 쉼표로 구분된 여러 값을 포함할 수 있으며 앞이나 뒤에는 하나 이상의 빈 공간(공백이라고도 함)이 있을 수 있습니다. 문자열에 여러 값이 포함된 경우 반환된 개체의 값은 비트 OR 연산과 함께 결합된 모든 지정된 값과 같습니다.  
   
- 다음 예제에서는 **Parse** 메서드를 사용하여 문자열 표현을 열거형 값으로 변환합니다. <xref:System.DayOfWeek> 열거형은 문자열에서 **목요일**로 초기화됩니다.  
+ 다음 예제에서는 **Parse** 메서드를 사용하여 문자열 표현을 열거형 값으로 변환합니다. <xref:System.DayOfWeek> 열거형은 문자열에서 **목요일** 로 초기화됩니다.  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]

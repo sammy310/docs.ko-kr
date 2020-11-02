@@ -11,16 +11,16 @@ helpviewer_keywords:
 - searching with regular expressions, language elements
 - pattern-matching with regular expressions, language elements
 - regular expressions, language elements
-- regular expressions [.NET Framework]
+- regular expressions [.NET]
 - cheat sheet
-- .NET Framework regular expressions, language elements
+- .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556802"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889311"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 
@@ -47,10 +47,10 @@ ms.locfileid: "87556802"
 |`\f`|용지 공급 문자인 \u000C를 찾습니다.|`[\f]{2,}`|`"\f\f\f"`의 `"\f\f\f"`|
 |`\n`|줄 바꿈 문자인 \u000A를 찾습니다.|`\r\n(\w+)`|`"\r\nThese are\ntwo lines."`의 `"\r\nThese"`|
 |`\e`|이스케이프 문자인 \u001B를 찾습니다.|`\e`|`"\x001B"`의 `"\x001B"`|
-|`\` *nnn*|8진수 표현을 사용하여 문자를 지정합니다. (*nnn*은 두 자리 또는 세 자리로 구성됩니다.)|`\w\040\w`|`"a bc d"`의 `"a b"`, `"c d"`|
-|`\x` *nn*|16진수 표현을 사용하여 문자를 지정합니다. (*nn*은 정확히 두 자리로 구성됩니다.)|`\w\x20\w`|`"a bc d"`의 `"a b"`, `"c d"`|
-|`\c` *X*<br /><br /> `\c` *x*|*X* 또는 *x*로 지정한 ASCII 제어 문자를 찾습니다. 여기서 *X* 또는 *x*는 제어 문자를 나타내는 문자입니다.|`\cC`|`"\x0003"`의 `"\x0003"`(Ctrl-C)|
-|`\u` *nnnn*|16진수 표현(정확히 네 자리로 구성되는 *nnnn*)을 사용하여 유니코드 문자를 찾습니다.|`\w\u0020\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\` *nnn*|8진수 표현을 사용하여 문자를 지정합니다. ( *nnn* 은 두 자리 또는 세 자리로 구성됩니다.)|`\w\040\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\x` *nn*|16진수 표현을 사용하여 문자를 지정합니다. ( *nn* 은 정확히 두 자리로 구성됩니다.)|`\w\x20\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\c` *X*<br /><br /> `\c` *x*|*X* 또는 *x* 로 지정한 ASCII 제어 문자를 찾습니다. 여기서 *X* 또는 *x* 는 제어 문자를 나타내는 문자입니다.|`\cC`|`"\x0003"`의 `"\x0003"`(Ctrl-C)|
+|`\u` *nnnn*|16진수 표현(정확히 네 자리로 구성되는 *nnnn* )을 사용하여 유니코드 문자를 찾습니다.|`\w\u0020\w`|`"a bc d"`의 `"a b"`, `"c d"`|
 |`\`|이 표나 이 항목의 다른 표에 있는 이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어, `\*`는 `\x2A`와 같고 `\.`는 `\x2E`와 같습니다. 이를 통해 정규식 엔진이 언어 요소(예: \* 또는 ?)와 `\*` 또는 `\?`로 표현되는 문자 리터럴을 구분할 수 있습니다.|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"`의 `"2+2"` 및 `"3*9"`|
 
 ## <a name="character-classes"></a>문자 클래스
@@ -59,12 +59,12 @@ ms.locfileid: "87556802"
 
 |문자 클래스|설명|무늬|일치 항목|
 |---------------------|-----------------|-------------|-------------|
-|`[` *character_group* `]`|*character_group*에서 단일 문자를 찾습니다. 기본적으로 일치 항목 찾기에서는 대/소문자를 구분합니다.|`[ae]`|`"gray"`의 `"a"`<br /><br /> `"lane"`의 `"a"`, `"e"`|
-|`[^` *character_group* `]`|부정: *character_group*에 없는 모든 단일 문자를 찾습니다. 기본적으로 *character_group*의 문자는 대/소문자를 구분합니다.|`[^aei]`|`"reign"`의 `"r"`, `"g"`, `"n"`|
-|`[` *first* `-` *last* `]`|문자 범위: *first*에서 *last* 사이에 있는 모든 단일 문자를 찾습니다.|`[A-Z]`|`"AB123"`의 `"A"`, `"B"`|
+|`[` *character_group* `]`|*character_group* 에서 단일 문자를 찾습니다. 기본적으로 일치 항목 찾기에서는 대/소문자를 구분합니다.|`[ae]`|`"gray"`의 `"a"`<br /><br /> `"lane"`의 `"a"`, `"e"`|
+|`[^` *character_group* `]`|부정: *character_group* 에 없는 모든 단일 문자를 찾습니다. 기본적으로 *character_group* 의 문자는 대/소문자를 구분합니다.|`[^aei]`|`"reign"`의 `"r"`, `"g"`, `"n"`|
+|`[` *first* `-` *last* `]`|문자 범위: *first* 에서 *last* 사이에 있는 모든 단일 문자를 찾습니다.|`[A-Z]`|`"AB123"`의 `"A"`, `"B"`|
 |`.`|와일드카드: \n 이외의 모든 단일 문자를 찾습니다.<br /><br /> 리터럴 마침표 문자(. 또는 `\u002E`)를 찾으려면 마침표 문자 앞에 이스케이프 문자를 추가해야 합니다(`\.`).|`a.e`|`"nave"`의 `"ave"`<br /><br /> `"water"`의 `"ate"`|
-|`\p{` *name* `}`|유니코드 일반 범주나 *name*으로 지정된 명명된 블록에 있는 모든 단일 문자를 찾습니다.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"City Lights"`의 `"C"`, `"L"`<br /><br /> `"ДЖem"`의 `"Д"`, `"Ж"`|
-|`\P{` *name* `}`|유니코드 일반 범주나 *name*으로 지정된 명명된 블록에 없는 모든 단일 문자를 찾습니다.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"City"`의 `"i"`, `"t"`, `"y"`<br /><br /> `"ДЖem"`의 `"e"`, `"m"`|
+|`\p{` *name* `}`|유니코드 일반 범주나 *name* 으로 지정된 명명된 블록에 있는 모든 단일 문자를 찾습니다.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"City Lights"`의 `"C"`, `"L"`<br /><br /> `"ДЖem"`의 `"Д"`, `"Ж"`|
+|`\P{` *name* `}`|유니코드 일반 범주나 *name* 으로 지정된 명명된 블록에 없는 모든 단일 문자를 찾습니다.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"City"`의 `"i"`, `"t"`, `"y"`<br /><br /> `"ДЖem"`의 `"e"`, `"m"`|
 |`\w`|단어 문자를 찾습니다.|`\w`|`"ID A1.3"`의 `"I"`, `"D"`, `"A"`, `"1"`, `"3"`|
 |`\W`|비단어 문자를 찾습니다.|`\W`|`"ID A1.3"`의 `" "`, `"."`|
 |`\s`|공백 문자를 나타냅니다.|`\w\s`|`"ID A1.3"`의 `"D "`|
@@ -139,8 +139,8 @@ ms.locfileid: "87556802"
 |교체 구문|설명|무늬|일치 항목|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|세로 막대(<code>&#124;</code>)로 구분된 한 가지 요소와 일치합니다.|<code>th(e&#124;is&#124;at)</code>|`"this is the day."`의 `"the"`, `"this"`|
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|*expression* 으로 지정한 정규식 패턴이 일치하면 *yes*와 일치합니다. 그렇지 않으면 선택 사항 *no* 부분과 일치합니다. *expression*은 너비가 0인 어설션으로 해석됩니다.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"`의 `"A10"`, `"910"`|
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|명명되거나 번호가 매겨진 캡처링 그룹인 *name*에 일치하는 항목이 있으면 *yes*와 일치합니다. 그렇지 않으면 선택 사항 *no*와 일치합니다.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""`의 `"Dogs.jpg "`, `"\"Yiska playing.jpg\""`|
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|*expression* 으로 지정한 정규식 패턴이 일치하면 *yes* 와 일치합니다. 그렇지 않으면 선택 사항 *no* 부분과 일치합니다. *expression* 은 너비가 0인 어설션으로 해석됩니다.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"`의 `"A10"`, `"910"`|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|명명되거나 번호가 매겨진 캡처링 그룹인 *name* 에 일치하는 항목이 있으면 *yes* 와 일치합니다. 그렇지 않으면 선택 사항 *no* 와 일치합니다.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""`의 `"Dogs.jpg "`, `"\"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>대체
 
@@ -148,8 +148,8 @@ ms.locfileid: "87556802"
 
 |문자|설명|무늬|바꾸기 패턴|입력 문자열|결과 문자열|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *number*|그룹 *number*와 일치하는 부분 문자열을 대체합니다.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
-|`${` *name* `}`|명명된 그룹 *name*과 일치하는 부분 문자열을 대체합니다.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
+|`$` *number*|그룹 *number* 와 일치하는 부분 문자열을 대체합니다.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`${` *name* `}`|명명된 그룹 *name* 과 일치하는 부분 문자열을 대체합니다.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|"$" 리터럴을 대체합니다.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|일치하는 전체 문자열의 복사본을 대체합니다.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|
 |``$` ``|일치하는 문자열 앞에 있는 입력 문자열의 모든 텍스트를 대체합니다.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|

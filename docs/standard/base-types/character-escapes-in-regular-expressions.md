@@ -12,15 +12,15 @@ helpviewer_keywords:
 - characters, escapes
 - regular expressions, character escapes
 - escape characters
-- .NET Framework regular expressions, character escapes
+- .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 4491b83db195a8d0f5bbf4f4326d92ed9ebd24e7
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 927fb32163a7b44561c19fdb35e38b488fc50fb7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050444"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889519"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
@@ -46,10 +46,10 @@ ms.locfileid: "92050444"
 |`\f`|용지 공급 문자인 `\u000C`를 찾습니다.|  
 |`\n`|줄 바꿈 문자인 `\u000A`를 찾습니다.|  
 |`\e`|이스케이프 문자인 `\u001B`를 찾습니다.|  
-|`\` *nnn*|ASCII 문자를 찾습니다. 여기서 *nnn*은 8진수 문자 코드를 나타내는 두 자리 또는 세 자리 숫자로 구성됩니다. 예를 들어 `\040`은 공백 문자를 나타냅니다. 이 생성자가 한 개의 숫자만 포함하거나(예: `\2`) 캡처링 그룹의 수와 일치하는 경우에는 역참조로 해석됩니다. [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하세요.|  
-|`\x` *nn*|ASCII 문자를 찾습니다. 여기서 *nn*은 두 자리 16진수 문자 코드입니다.|  
+|`\` *nnn*|ASCII 문자를 찾습니다. 여기서 *nnn* 은 8진수 문자 코드를 나타내는 두 자리 또는 세 자리 숫자로 구성됩니다. 예를 들어 `\040`은 공백 문자를 나타냅니다. 이 생성자가 한 개의 숫자만 포함하거나(예: `\2`) 캡처링 그룹의 수와 일치하는 경우에는 역참조로 해석됩니다. [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하세요.|  
+|`\x` *nn*|ASCII 문자를 찾습니다. 여기서 *nn* 은 두 자리 16진수 문자 코드입니다.|  
 |`\c` *X*|ASCII 제어 문자를 찾습니다. 여기서 X는 제어 문자를 나타내는 문자입니다. 예를 들어, `\cC`는 CTRL-C입니다.|  
-|`\u` *nnnn*|단위 값이 *nnnn* 16진수인 UTF-16 코드 단위를 찾습니다. **참고:**  유니코드를 지정하는 데 사용되는 Perl 5 문자 이스케이프는 .NET에서 지원되지 않습니다. Perl 5 문자 이스케이프는 `\x{` *####* `…}` 형식입니다. 여기서 *####* `…`는 일련의 16진수입니다. 대신에 `\u`*nnnn*을 사용합니다.|  
+|`\u` *nnnn*|단위 값이 *nnnn* 16진수인 UTF-16 코드 단위를 찾습니다. **참고:**  유니코드를 지정하는 데 사용되는 Perl 5 문자 이스케이프는 .NET에서 지원되지 않습니다. Perl 5 문자 이스케이프는 `\x{` *####* `…}` 형식입니다. 여기서 *####* `…`는 일련의 16진수입니다. 대신에 `\u`*nnnn* 을 사용합니다.|  
 |`\`|이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어 `\*`는 별표(*)와 일치하고 `\x2A`와 같습니다.|  
   
 ## <a name="an-example"></a>예제  

@@ -8,27 +8,27 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541671"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888713"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
 날짜 및 시간 형식 문자열은 형식 지정 작업에서 생성되는 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 또한 문자열을 날짜 및 시간으로 성공적으로 변환하기 위해 구문 분석 작업에 필요한 날짜 및 시간 값의 표현을 정의할 수 있습니다. 사용자 지정 형식 문자열은 하나 이상의 사용자 지정 날짜 및 시간 형식 지정자로 구성됩니다. [표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md)이 아닌 문자열은 사용자 지정 날짜 및 시간 형식 문자열로 해석됩니다.
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티**를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
+> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티** 를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "90541671"
 | "zzz" | UTC에서의 시간 및 분 오프셋입니다.<br /><br /> 추가 정보: [“zzz” 사용자 지정 형식 지정자](#zzzSpecifier). | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | 시간 구분 기호입니다.<br /><br /> 추가 정보: [“:” 사용자 지정 형식 지정자](#timeSeparator). | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | 날짜 구분 기호입니다.<br /><br /> 추가 정보: [“/” 사용자 지정 형식 지정자](#dateSeparator). | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| "*string*"<br /><br /> '*string*' | 리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
+| " *string* "<br /><br /> ' *string* ' | 리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
 | % | 뒤에 오는 문자를 사용자 지정 형식 지정자로 정의합니다.<br /><br /> 추가 정보: [단일 사용자 지정 형식 지정자 사용](#UsingSingleSpecifiers) | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | 이스케이프 문자입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals) 및 [이스케이프 문자 사용](#escape). | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | 기타 문자 | 문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals). | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |

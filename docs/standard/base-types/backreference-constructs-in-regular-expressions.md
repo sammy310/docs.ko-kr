@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - backreferences
 - constructs, backreference
-- .NET Framework regular expressions, backreference constructs
+- .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290606"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889155"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>정규식의 역참조 구문
 
@@ -34,7 +34,7 @@ ms.locfileid: "84290606"
 
 `\` *number*
 
-여기서 *number*는 정규식에서 캡처링 그룹의 서수 위치입니다. 예를 들어 `\4`는 네 번째 캡처링 그룹의 내용을 찾습니다. *number*가 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다. 예를 들어 `\b(\w+)\s\1` 정규식은 `(\w+)`가 식의 첫 번째이자 유일한 캡처링 그룹이기 때문에 유효합니다. 반면에 `\b(\w+)\s\2`는 `\2`로 번호가 매겨진 캡처링 그룹이 없기 때문에 유효하지 않으며 인수 예외를 throw합니다. 또한 *번호*가 특정 서수 위치에서 캡처링 그룹을 식별하지만 해당 캡처링 그룹이 서수 위치가 아닌 다른 숫자 이름을 할당받은 경우 정규식 파서는 <xref:System.ArgumentException>을 throw합니다.
+여기서 *number* 는 정규식에서 캡처링 그룹의 서수 위치입니다. 예를 들어 `\4`는 네 번째 캡처링 그룹의 내용을 찾습니다. *number* 가 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다. 예를 들어 `\b(\w+)\s\1` 정규식은 `(\w+)`가 식의 첫 번째이자 유일한 캡처링 그룹이기 때문에 유효합니다. 반면에 `\b(\w+)\s\2`는 `\2`로 번호가 매겨진 캡처링 그룹이 없기 때문에 유효하지 않으며 인수 예외를 throw합니다. 또한 *번호* 가 특정 서수 위치에서 캡처링 그룹을 식별하지만 해당 캡처링 그룹이 서수 위치가 아닌 다른 숫자 이름을 할당받은 경우 정규식 파서는 <xref:System.ArgumentException>을 throw합니다.
 
 8진수 이스케이프 코드(예: `\16`)와 동일한 표기법을 사용하는 `\`*number* 역참조 간의 모호성에 유의하세요. 이러한 모호성은 다음과 같이 해결됩니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "84290606"
 
 `\k'` *name* `'`
 
-여기서 *name*은 정규식 패턴에 정의된 캡처링 그룹의 이름입니다. *name*이 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다.
+여기서 *name* 은 정규식 패턴에 정의된 캡처링 그룹의 이름입니다. *name* 이 정규식 패턴에서 정의되지 않은 경우 구문 분석 오류가 발생하고 정규식 엔진이 <xref:System.ArgumentException>을 throw합니다.
 
 다음 예제에서는 문자열에서 2배 워드 문자를 찾습니다. 다음과 같은 요소로 구성된 `(?<char>\w)\k<char>` 정규식을 정의합니다.
 
@@ -82,17 +82,17 @@ ms.locfileid: "84290606"
 
 ## <a name="named-numeric-backreferences"></a>명명된 숫자 역참조
 
-`\k`를 사용하는 명명된 역참조에서 *이름*은 숫자의 문자열 표현일 수도 있습니다. 예를 들어 다음 예제에서는 `(?<2>\w)\k<2>` 정규식을 사용하여 문자열에서 2배 워드 문자를 찾습니다. 이 경우에 예제에서는 명시적으로 "2"라고 명명된 캡처링 그룹을 정의하고 따라서 역참조는 "2"라고 명명됩니다.
+`\k`를 사용하는 명명된 역참조에서 *이름* 은 숫자의 문자열 표현일 수도 있습니다. 예를 들어 다음 예제에서는 `(?<2>\w)\k<2>` 정규식을 사용하여 문자열에서 2배 워드 문자를 찾습니다. 이 경우에 예제에서는 명시적으로 "2"라고 명명된 캡처링 그룹을 정의하고 따라서 역참조는 "2"라고 명명됩니다.
 
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-*이름*이 숫자의 문자열 표현이고 해당 이름을 가 진 캡처링 그룹이 없는 경우 `\k<`*이름*`>`은 역참조 `\` *숫자*와 같습니다. 여기서 *번호*는 캡처의 서수 위치입니다. 다음 예제에는 `char`라는 단일 캡처링 그룹이 있습니다. 역참조 구문은 `\k<1>`로 참조합니다. 예제의 출력이 표시한 대로 `char`가 첫 번째 캡처링 그룹이기 때문에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>에 대한 호출이 성공합니다.
+*이름* 이 숫자의 문자열 표현이고 해당 이름을 가 진 캡처링 그룹이 없는 경우 `\k<`*이름*`>`은 역참조 `\` *숫자* 와 같습니다. 여기서 *번호* 는 캡처의 서수 위치입니다. 다음 예제에는 `char`라는 단일 캡처링 그룹이 있습니다. 역참조 구문은 `\k<1>`로 참조합니다. 예제의 출력이 표시한 대로 `char`가 첫 번째 캡처링 그룹이기 때문에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>에 대한 호출이 성공합니다.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-그러나 경우 *이름*이 숫자의 문자열 표현이고 해당 위치에 있는 캡처링 그룹이 명시적으로 숫자 이름을 할당받지 않은 경우 정규식 파서는 서수 위치를 기준으로 캡처링 그룹을 식별할 수 없습니다. 대신 <xref:System.ArgumentException>을 throw합니다. 다음 예제의 캡처링 그룹만이 “2”라고 명명됩니다. `\k` 구문을 사용하여 "1"이라는 역참조를 정의하기 때문에 정규식 파서는 첫 번째 캡처링 그룹을 식별할 수 없고 예외를 throw합니다.
+그러나 경우 *이름* 이 숫자의 문자열 표현이고 해당 위치에 있는 캡처링 그룹이 명시적으로 숫자 이름을 할당받지 않은 경우 정규식 파서는 서수 위치를 기준으로 캡처링 그룹을 식별할 수 없습니다. 대신 <xref:System.ArgumentException>을 throw합니다. 다음 예제의 캡처링 그룹만이 “2”라고 명명됩니다. `\k` 구문을 사용하여 "1"이라는 역참조를 정의하기 때문에 정규식 파서는 첫 번째 캡처링 그룹을 식별할 수 없고 예외를 throw합니다.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]

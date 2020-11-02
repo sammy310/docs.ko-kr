@@ -3,19 +3,19 @@ title: COM 상호 운용성을 위한 .NET 형식의 정규화
 description: 이 문서에서는 COM interop을 위해 COM 애플리케이션에 .NET 어셈블리의 형식을 노출하는 데 도움이 되는 지침을 제공합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
-- exposing .NET Framework components to COM
+- exposing .NET components to COM
 - COM interop, qualifying .NET types
 - qualifying .NET types for interoperation
 - interoperation with unmanaged code, qualifying .NET types
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3fa9f0d5d8dd4d532fc510a1d946eddf32016748
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285965"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187764"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM 상호 운용성을 위한 .NET 형식의 정규화
 어셈블리에서 형식을 COM 애플리케이션으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  

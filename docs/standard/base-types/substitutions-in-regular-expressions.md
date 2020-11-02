@@ -10,25 +10,26 @@ helpviewer_keywords:
 - regular expressions, substitutions
 - replacement patterns
 - metacharacters, substitutions
-- .NET Framework regular expressions, substitutions
+- .NET regular expressions, substitutions
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768107"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888934"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
+
 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다. 정규식 패턴을 사용하여 입력 문자열에서 일치하는 텍스트를 바꿀 텍스트의 전부 또는 일부를 정의합니다. 바꾸기 패턴은 리터럴 문자와 하나 이상의 대체로 구성될 수 있습니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 매개 변수가 포함된 `replacement` 메서드의 오버로드와 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 대해 바꾸기 패턴이 제공됩니다. 해당 메서드는 일치하는 패턴을 `replacement` 매개 변수에 정의된 패턴으로 바꿉니다.  
   
- .NET Framework에서 다음 표에 나와 있는 대체 요소를 정의합니다.  
+ .NET은 다음 테이블에 나와 있는 대체 요소를 정의합니다.  
   
 |대체|설명|  
 |------------------|-----------------|  
-|$ *number*|*number*(여기서 *number* 는 10진수 값)로 식별되는 캡처 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [번호 매겨진 그룹 대체](#substituting-a-numbered-group)를 참조하십시오.|  
+|$ *number*|*number* (여기서 *number* 는 10진수 값)로 식별되는 캡처 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [번호 매겨진 그룹 대체](#substituting-a-numbered-group)를 참조하십시오.|  
 |${ *name* }|`(?<`*name*`> )` 에서 지정한 명명된 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [명명된 그룹 대체](#substituting-a-named-group)를 참조하십시오.|  
 |$$|대체 문자열에 한 개의 "$" 리터럴을 포함합니다. 자세한 내용은 ["$" 기호 대체](#substituting-a--character)를 참조하십시오.|  
 |$&|대체 문자열에 일치하는 전체 문자열의 복사본을 포함합니다. 자세한 내용은 [일치하는 전체 문자열 대체](#substituting-the-entire-match)를 참조하십시오.|  
@@ -141,11 +142,11 @@ ms.locfileid: "84768107"
   
 |일치|위치|일치하는 문자열 앞에 있는 문자열|결과 문자열|  
 |-----------|--------------|-------------------------|-------------------|  
-|1|2|aa|aa**aa**bb2cc3dd4ee5|  
-|2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
-|3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
-|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
+|1|2|aa|aa **aa** bb2cc3dd4ee5|  
+|2|5|aa1bb|aaaabb **aa1bb** cc3dd4ee5|  
+|3|8|aa1bb2cc|aaaabbaa1bbcc **aa1bb2cc** dd4ee5|  
+|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd **aa1bb2cc3dd** ee5|  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>일치하는 문자열 뒤에 있는 텍스트 대체  
  `$'` 대체는 일치하는 문자열을 일치하는 문자열 뒤의 전체 입력 문자열로 바꿉니다. 즉, 일치하는 텍스트를 제거하는 동안 일치하는 문자열 뒤의 입력 문자열을 복제합니다. 일치하는 텍스트 앞에 나오는 텍스트는 결과 문자열에서 변경되지 않습니다. 일치하는 부분이 없으면  `$'` 대체가 아무 효과가 없습니다.  
@@ -159,10 +160,10 @@ ms.locfileid: "84768107"
   
 |일치|위치|일치하는 문자열 뒤에 있는 문자열|결과 문자열|  
 |-----------|--------------|------------------------|-------------------|  
-|1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
-|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
-|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
-|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
+|1|2|bb2cc3dd4ee5|aa **bb2cc3dd4ee5** bb2cc3dd4ee5|  
+|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb **cc3dd4ee5** cc3dd4ee5|  
+|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc **dd4ee5** dd4ee5|  
+|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd **ee5** ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>캡처된 마지막 그룹 대체  
@@ -195,8 +196,8 @@ ms.locfileid: "84768107"
   
 |일치|위치|일치|결과 문자열|  
 |-----------|--------------|-----------|-------------------|  
-|1|3|123|ABC**ABC123DEF456**DEF456|  
-|2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
+|1|3|123|ABC **ABC123DEF456** DEF456|  
+|2|5|456|ABCABC123DEF456DEF **ABC123DEF456**|  
   
 ## <a name="see-also"></a>참조
 

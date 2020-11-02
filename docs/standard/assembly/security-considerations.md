@@ -3,32 +3,33 @@ title: 어셈블리 보안 고려 사항
 description: .NET 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 이 문서에서는 강력한 이름의 어셈블리 및 서명 도구에 대해 설명합니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], security
+- assemblies [.NET], security
 - signcodes
-- names [.NET Framework], assemblies
+- names [.NET], assemblies
 - strong-named assemblies, security considerations
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - granting permissions, assemblies
-- assemblies [.NET Framework], strong-named
-- names [.NET Framework], strong names
-- permissions [.NET Framework], assemblies
-- security [.NET Framework], assemblies
+- assemblies [.NET], strong-named
+- names [.NET], strong names
+- permissions [.NET], assemblies
+- security [.NET], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91ea206abf80da275651854b9f13aa0116b7a1c5
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290021"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687258"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
+
 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
   
  증명 정보를 사용하는 두 가지 방법은 다음과 같습니다.  
   
-- 먼저 입력된 증명 정보를 로더에 의해 수집된 증명 정보와 결합하여 정책 결정에 사용할 최종 증명 정보를 만듭니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load**, **Assembly.LoadFrom** 및 **Activator.CreateInstance**가 있습니다.  
+- 먼저 입력된 증명 정보를 로더에 의해 수집된 증명 정보와 결합하여 정책 결정에 사용할 최종 증명 정보를 만듭니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load** , **Assembly.LoadFrom** 및 **Activator.CreateInstance** 가 있습니다.  
   
 - 또 다른 방법은 입력된 증명 정보를 바꾸지 않고 정책 결정을 위한 최종 증명 정보로 사용하는 것입니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load(byte[])** 및 **AppDomain.DefineDynamicAssembly()** 가 있습니다.  
   

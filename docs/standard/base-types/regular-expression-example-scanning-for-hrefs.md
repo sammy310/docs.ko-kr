@@ -10,16 +10,16 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802856"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889402"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  

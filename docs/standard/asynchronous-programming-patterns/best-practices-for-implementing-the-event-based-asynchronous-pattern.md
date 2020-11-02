@@ -6,32 +6,36 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289943"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888921"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
+
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
   
  개요를 보려면 [이벤트 기반 비동기 패턴 구현](implementing-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
-## <a name="required-behavioral-guarantees"></a>필요한 동작 보장  
+## <a name="required-behavioral-guarantees"></a>필요한 동작 보장
+
  이벤트 기반 비동기 패턴을 구현하는 경우 클래스가 올바르게 동작하고 클래스의 클라이언트가 해당 동작을 사용할 수 있도록 보장하는 다양한 보장을 제공해야 합니다.  
   
-### <a name="completion"></a>완료  
+### <a name="completion"></a>완료
+
  성공적인 완료, 오류 또는 취소가 있는 경우 항상 <em>MethodName</em>**Completed** 이벤트 처리기를 호출합니다. 애플리케이션이 유휴 상태로 유지되고 절대 완료되지 않는 상황이 애플리케이션에 발생해서는 안 됩니다. 이 규칙에 대한 한 가지 예외는 비동기 작업 자체가 절대 완료되지 않도록 디자인된 경우입니다.  
   
-### <a name="completed-event-and-eventargs"></a>완료된 이벤트 및 EventArgs  
- 별개의 각 <em>MethodName</em>**Async** 메서드의 경우 다음 디자인 요구 사항을 적용합니다.  
+### <a name="completed-event-and-eventargs"></a>완료된 이벤트 및 EventArgs
+
+별개의 각 <em>MethodName</em>**Async** 메서드의 경우 다음 디자인 요구 사항을 적용합니다.  
   
 - 동일한 클래스에서 <em>MethodName</em>**Completed** 이벤트를 메서드로 정의합니다.  
   
@@ -75,7 +79,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 클래스가 개체 반환 상태 매개 변수 또는 작업 ID를 사용하는 <em>MethodName</em>**Async** 오버로드를 정의하는 경우 해당 작업 ID로 작업의 수명을 추적해야 하며, 해당 작업 ID를 완료 처리기에 다시 제공해야 합니다. 도움이 되는 도우미 클래스가 있습니다. 동시성 관리에 대한 자세한 내용은 [방법: 이벤트 기반 비동기 패턴을 지 원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
-- 클래스가 상태 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 정의하고 클래스가 여러 동시 호출을 지원하지 않는 경우 이전 <em>MethodName</em>**Async** 호출이 완료되기 전에 <em>MethodName</em>**Async**를 호출하려는 시도에서 <xref:System.InvalidOperationException>이 발생하도록 합니다.  
+- 클래스가 상태 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 정의하고 클래스가 여러 동시 호출을 지원하지 않는 경우 이전 <em>MethodName</em>**Async** 호출이 완료되기 전에 <em>MethodName</em>**Async** 를 호출하려는 시도에서 <xref:System.InvalidOperationException>이 발생하도록 합니다.  
   
 - 일반적으로 처리 중인 작업이 여러 개 있도록 `userSuppliedState` 매개 변수 없이 <em>MethodName</em>**Async** 메서드를 여러 번 호출한 경우 예외를 발생시키지 마세요. 클래스가 명시적으로 해당 상황을 처리할 수 없는 경우 예외를 발생시킬 수 있지만 개발자가 구분할 수 없는 이러한 여러 콜백을 처리할 수 있다고 가정합니다.  
   
@@ -117,7 +121,8 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 비동기 작업에서 발생하는 모든 예외를 catch하고 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 속성 값을 해당 예외로 설정합니다.  
   
-### <a name="threading-and-contexts"></a>스레딩 및 컨텍스트  
+### <a name="threading-and-contexts"></a>스레딩 및 컨텍스트
+
  클래스가 올바로 작동하도록 하려면 ASP.NET 및 Windows Forms 애플리케이션을 비롯한 지정된 애플리케이션 모델에 대해 올바른 스레드 또는 컨텍스트에서 클라이언트의 이벤트 처리기가 호출되도록 해야 합니다. 모든 애플리케이션 모델에서 비동기 클래스가 올바르게 동작하도록 하기 위해 두 개의 중요한 도우미 클래스인 <xref:System.ComponentModel.AsyncOperation> 및 <xref:System.ComponentModel.AsyncOperationManager>가 제공됩니다.  
   
  <xref:System.ComponentModel.AsyncOperationManager>는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 반환하는 하나의 메서드 <xref:System.ComponentModel.AsyncOperation>을 제공합니다. <em>MethodName</em>**Async** 메서드는 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>을 호출하고 클래스는 반환된 <xref:System.ComponentModel.AsyncOperation>을 사용하여 비동기 작업의 수명을 추적합니다.  

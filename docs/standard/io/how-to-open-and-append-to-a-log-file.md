@@ -10,16 +10,17 @@ helpviewer_keywords:
 - log files, opening
 - streams, opening and appending to log file
 - log files, appending to
-- I/O [.NET Framework], log files
+- I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769173"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188174"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>방법: 열기 및 로그 파일에 추가
+
 <xref:System.IO.StreamWriter> 및 <xref:System.IO.StreamReader>는 스트림에서 문자를 쓰고 문자를 읽습니다. 다음 코드 예제는 입력을 위해 *log.txt* 파일을 열거나, 파일이 존재하지 않는 경우 파일을 만들고 파일의 끝에 로그 정보를 추가합니다. 이 예제는 파일의 콘텐츠를 디스플레이의 표준 출력에 씁니다.
 
 이 예제의 대안으로, 정보를 단일 문자열 또는 문자열 배열로 저장하고, <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> 또는 <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> 메서드를 사용하여 동일한 기능을 수행할 수도 있습니다.  

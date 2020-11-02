@@ -7,17 +7,18 @@ helpviewer_keywords:
 - dynamic assemblies, assembly manifest
 - metadata, assembly manifest
 - culture, assembly manifest
-- assemblies [.NET Framework], metadata
+- assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4f4d09f559ac66e1f3bc38af0781f7e01e7461d5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380165"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687595"
 ---
 # <a name="assembly-manifest"></a>어셈블리 매니페스트
-정적 또는 동적 어셈블리인지 여부에 상관 없이 모든 어셈블리는 어셈블리의 요소가 서로 어떻게 연관되는지를 설명하는 데이터 컬렉션을 포함합니다. 이러한 어셈블리 메타데이터는 어셈블리 매니페스트에 들어 있습니다. 어셈블리 매니페스트는 어셈블리의 버전 요구 사항과 보안 ID를 지정하는 데 필요한 모든 메타데이터와 어셈블리의 범위를 정의하고 리소스나 클래스에 대한 참조를 확인하는 데 필요한 모든 메타데이터를 포함합니다. 어셈블리 매니페스트는 MSIL(Microsoft Intermediate Language) 코드가 있는 PE 파일( *.exe* 또는 *.dll*)에 저장되거나 어셈블리 매니페스트 정보만 포함하는 독립 실행형 PE 파일에 저장됩니다.  
+
+정적 또는 동적 어셈블리인지 여부에 상관 없이 모든 어셈블리는 어셈블리의 요소가 서로 어떻게 연관되는지를 설명하는 데이터 컬렉션을 포함합니다. 이러한 어셈블리 메타데이터는 어셈블리 매니페스트에 들어 있습니다. 어셈블리 매니페스트는 어셈블리의 버전 요구 사항과 보안 ID를 지정하는 데 필요한 모든 메타데이터와 어셈블리의 범위를 정의하고 리소스나 클래스에 대한 참조를 확인하는 데 필요한 모든 메타데이터를 포함합니다. 어셈블리 매니페스트는 MSIL(Microsoft Intermediate Language) 코드가 있는 PE 파일( *.exe* 또는 *.dll* )에 저장되거나 어셈블리 매니페스트 정보만 포함하는 독립 실행형 PE 파일에 저장됩니다.  
   
  다음 예제에서는 매니페스트를 저장하는 여러 가지 방법을 보여 줍니다.  
   

@@ -3,24 +3,25 @@ title: 어셈블리 로드 해결
 description: 이 문서에서는 .NET AppDomain.AssemblyResolve 이벤트에 대해 설명합니다. 어셈블리 로드를 제어해야 하는 애플리케이션에 이 이벤트를 사용합니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], resolving loads
+- assemblies [.NET], resolving loads
 - application domains, loading assemblies
 - resolving assembly loads
-- assemblies [.NET Framework], loading
+- assemblies [.NET], loading
 - application domains, resolving assembly loads
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 36f36b60a3a113c6b020cc1042c786c4091e567b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378673"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687273"
 ---
 # <a name="resolve-assembly-loads"></a>어셈블리 로드 해결
+
 .NET에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 애플리케이션에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다. 이 이벤트를 처리하면 애플리케이션이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다. 이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.  
   
 > [!NOTE]

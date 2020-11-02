@@ -10,19 +10,19 @@ helpviewer_keywords:
 - regular expressions, examples
 - cleaning input
 - user input, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - Regex.Replace method
 - stripping invalid characters
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: 5e0cd423df7fce03cdefb3da7bc192f3045e8f9c
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1573724d4fa28380d7267f425547a23566bf4b4a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803991"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889298"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>방법: 문자열에서 유효하지 않은 문자 제거
 다음 예제에서는 정적 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 잘못된 문자를 제거합니다.  

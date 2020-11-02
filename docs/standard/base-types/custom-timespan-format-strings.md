@@ -9,17 +9,17 @@ dev_langs:
 helpviewer_keywords:
 - format specifiers, custom time interval
 - format strings
-- formatting [.NET Framework], time interval
+- formatting [.NET], time interval
 - custom time interval format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: 54079975b9b73844f598a7c7a7fea1a64bd6450c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768562"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888687"
 ---
 # <a name="custom-timespan-format-strings"></a>사용자 지정 TimeSpan 형식 문자열
 
@@ -66,7 +66,7 @@ ms.locfileid: "84768562"
 |"FFFFF"|시간 간격의 1/100000초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다.<br /><br /> 추가 정보: [“FFFFF” 사용자 지정 형식 지정자](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|시간 간격의 1/1000000초입니다. 뒤에 오는 소수 자릿수 0은 표시되지 않습니다.<br /><br /> 추가 정보: [“FFFFFF” 사용자 지정 형식 지정자](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|시간 간격의 1/10000000초입니다. 뒤에 오는 소수 자릿수 0이나 연속 일곱 자리 0은 표시되지 않습니다.<br /><br /> 추가 정보: [“FFFFFFF” 사용자 지정 형식 지정자](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|'*string*'|리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [기타 문자](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|' *string* '|리터럴 문자열 구분 기호입니다.<br /><br /> 추가 정보: [기타 문자](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|이스케이프 문자입니다.<br /><br /> 추가 정보: [기타 문자](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |기타 문자|이스케이프되지 않은 다른 모든 문자는 사용자 지정 형식 지정자로 해석됩니다.<br /><br /> 추가 정보: [기타 문자](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 

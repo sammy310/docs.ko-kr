@@ -9,23 +9,24 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2294379d37d4cd9e7fae494a6548561258743d74
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536043"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888882"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
+
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
   
  이 연습에서는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 보여줍니다. ASP.NET, 콘솔 애플리케이션 및 Windows Forms 애플리케이션을 포함한 모든 애플리케이션 모델에서 구성 요소가 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다. 이 구성 요소도 <xref:System.Windows.Forms.PropertyGrid> 컨트롤과 고유한 사용자 지정 디자이너를 사용하여 디자인할 수 있습니다.  

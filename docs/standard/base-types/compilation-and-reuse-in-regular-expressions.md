@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing text with regular expressions, compilation
 - searching with regular expressions, compilation
-- .NET Framework regular expressions, engines
-- .NET Framework regular expressions, compilation
+- .NET regular expressions, engines
+- .NET regular expressions, compilation
 - regular expressions, compilation
 - compilation, regular expressions
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: 54f14a4f31bef00dd222686cc523935b2d9dd5fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbf10c7f3b4ebf4db97b18b2a2ef165226a48027
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279040"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889480"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>정규식의 컴파일 및 다시 사용
 정규식 엔진이 식을 컴파일하는 방법과 정규식이 캐시되는 방식을 이해하면 정규식을 광범위하게 사용하는 애플리케이션의 성능을 최적화할 수 있습니다. 이 항목에서는 컴파일과 캐시 둘 다에 대해 설명합니다.  

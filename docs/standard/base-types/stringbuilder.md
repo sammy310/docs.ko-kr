@@ -9,20 +9,20 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - Remove method
-- strings [.NET Framework], capacities
+- strings [.NET], capacities
 - StringBuilder object
 - Replace method
 - AppendFormat method
 - Append method
 - Insert method
-- strings [.NET Framework], StringBuilder object
+- strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803220"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888960"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -54,23 +54,23 @@ ms.locfileid: "84803220"
  [!code-csharp[Conceptual.StringBuilder#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#3)]
  [!code-vb[Conceptual.StringBuilder#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#3)]  
   
- <xref:System.Text.StringBuilder.EnsureCapacity%2A> 메서드를 사용하여 현재 **StringBuilder**의 용량을 확인할 수 있습니다. 용량이 전달된 값보다 크면 변경되지 않고, 용량이 전달된 값보다 작으면 현재 용량이 전달된 값과 일치하도록 변경됩니다.  
+ <xref:System.Text.StringBuilder.EnsureCapacity%2A> 메서드를 사용하여 현재 **StringBuilder** 의 용량을 확인할 수 있습니다. 용량이 전달된 값보다 크면 변경되지 않고, 용량이 전달된 값보다 작으면 현재 용량이 전달된 값과 일치하도록 변경됩니다.  
   
  <xref:System.Text.StringBuilder.Length%2A> 속성을 보거나 설정할 수도 있습니다. **Length** 속성을 **Capacity** 속성보다 큰 값으로 설정하면 **Capacity** 속성이 **Length** 속성과 동일한 값으로 자동으로 변경됩니다. **Length** 속성을 현재 **StringBuilder** 내의 문자열 길이보다 작은 값으로 설정하면 문자열이 단축됩니다.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>StringBuilder 문자열 수정  
- 다음 표에서는 **StringBuilder**의 내용을 수정하는 데 사용할 수 있는 메서드를 보여 줍니다.  
+ 다음 표에서는 **StringBuilder** 의 내용을 수정하는 데 사용할 수 있는 메서드를 보여 줍니다.  
   
 |메서드 이름|기능|  
 |-----------------|---------|  
-|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|현재 **StringBuilder**의 끝에 정보를 추가합니다.|  
+|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|현재 **StringBuilder** 의 끝에 정보를 추가합니다.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|문자열에 전달된 서식 지정자를 서식 있는 텍스트로 바꿉니다.|  
-|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|현재 **StringBuilder**의 지정된 인덱스에 문자열 또는 개체를 삽입합니다.|  
-|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|현재 **StringBuilder**에서 지정된 수의 문자를 제거합니다.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|현재 **StringBuilder**에서 발견되는 지정된 문자 또는 문자열을 지정된 다른 문자 또는 문자열로 모두 바꿉니다.|  
+|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|현재 **StringBuilder** 의 지정된 인덱스에 문자열 또는 개체를 삽입합니다.|  
+|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|현재 **StringBuilder** 에서 지정된 수의 문자를 제거합니다.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|현재 **StringBuilder** 에서 발견되는 지정된 문자 또는 문자열을 지정된 다른 문자 또는 문자열로 모두 바꿉니다.|  
   
 ### <a name="append"></a>추가  
- **Append** 메서드를 사용하여 현재 **StringBuilder**에 표시되는 문자열의 끝에 개체의 문자열 표현이나 텍스트를 추가할 수 있습니다. 다음 예에서는 **StringBuilder**를 "Hello World"로 초기화한 다음 개체의 끝에 일부 텍스트를 추가합니다. 필요한 경우 공간이 자동으로 할당됩니다.  
+ **Append** 메서드를 사용하여 현재 **StringBuilder** 에 표시되는 문자열의 끝에 개체의 문자열 표현이나 텍스트를 추가할 수 있습니다. 다음 예에서는 **StringBuilder** 를 "Hello World"로 초기화한 다음 개체의 끝에 일부 텍스트를 추가합니다. 필요한 경우 공간이 자동으로 할당됩니다.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
  [!code-csharp[Conceptual.StringBuilder#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#4)]

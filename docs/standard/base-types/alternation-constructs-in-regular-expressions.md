@@ -13,14 +13,14 @@ helpviewer_keywords:
 - alternation constructs
 - optional matching patterns
 - constructs, alternation
-- .NET Framework regular expressions, alternation constructs
+- .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495436"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889181"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 
@@ -49,7 +49,7 @@ ms.locfileid: "89495436"
 |<code>(a&#124;e)</code>|"a" 또는 "e"를 찾습니다.|  
 |`y\b`|단어 경계에서 "y"를 찾습니다.|  
 
-`|` 문자를 사용하여 문자 리터럴과 정규식 언어 요소의 조합을 포함할 수 있는 여러 문자나 하위 식을 통해 either/or 일치 항목을 찾을 수도 있습니다. 문자 클래스는 이 기능을 제공하지 않습니다. 다음 예제에서는 `|` 문자를 사용하여 미국 SSN(사회 보장 번호)(*ddd*-*dd*-*dddd* 형식의 9자리 숫자) 또는 미국 EIN(고용주 식별 번호)(*dd*-*ddddddd* 형식의 9자리 숫자)을 추출합니다.
+`|` 문자를 사용하여 문자 리터럴과 정규식 언어 요소의 조합을 포함할 수 있는 여러 문자나 하위 식을 통해 either/or 일치 항목을 찾을 수도 있습니다. 문자 클래스는 이 기능을 제공하지 않습니다. 다음 예제에서는 `|` 문자를 사용하여 미국 SSN(사회 보장 번호)( *ddd*-*dd*-*dddd* 형식의 9자리 숫자) 또는 미국 EIN(고용주 식별 번호)( *dd*-*ddddddd* 형식의 9자리 숫자)을 추출합니다.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -69,14 +69,14 @@ ms.locfileid: "89495436"
 
 `(?(` *expression* `)` *yes* `|` *no* `)`
 
-여기서 *expression* 은 일치 항목을 찾을 초기 패턴이고, *yes* 는 *expression* 과 일치할 경우 일치 항목을 찾을 패턴이고, *no* 는 *expression* 이 일치하지 않을 경우 일치 항목을 찾을 선택적 패턴입니다. 정규식 엔진은 *expression* 을 너비가 0인 어설션으로 처리합니다. 즉, 정규식 엔진은 *expression*을 계산한 후 입력 스트림에서 앞으로 이동하지 않습니다. 따라서 이 구문은 다음 구문과 같습니다.
+여기서 *expression* 은 일치 항목을 찾을 초기 패턴이고, *yes* 는 *expression* 과 일치할 경우 일치 항목을 찾을 패턴이고, *no* 는 *expression* 이 일치하지 않을 경우 일치 항목을 찾을 선택적 패턴입니다. 정규식 엔진은 *expression* 을 너비가 0인 어설션으로 처리합니다. 즉, 정규식 엔진은 *expression* 을 계산한 후 입력 스트림에서 앞으로 이동하지 않습니다. 따라서 이 구문은 다음 구문과 같습니다.
 
 `(?(?=` *expression* `)` *yes* `|` *no* `)`
 
-여기서 `(?=`*expression*`)`은 너비가 0인 어설션 구문입니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요. 정규식 엔진이 *expression*을 앵커(너비가 0인 어설션)로 해석하기 때문에 *expression*은 너비가 0인 어설션(자세한 내용은 [앵커](anchors-in-regular-expressions.md) 참조) 또는 *yes*에도 포함되는 하위 식이어야 합니다. 그러지 않으면, *yes* 패턴을 찾을 수 없습니다.  
+여기서 `(?=`*expression*`)`은 너비가 0인 어설션 구문입니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요. 정규식 엔진이 *expression* 을 앵커(너비가 0인 어설션)로 해석하기 때문에 *expression* 은 너비가 0인 어설션(자세한 내용은 [앵커](anchors-in-regular-expressions.md) 참조) 또는 *yes* 에도 포함되는 하위 식이어야 합니다. 그러지 않으면, *yes* 패턴을 찾을 수 없습니다.  
   
 > [!NOTE]
-> *expression*이 이름이나 숫자가 지정된 캡처링 그룹인 경우 교체 구문은 캡처 테스트로 해석됩니다. 자세한 내용은 다음 섹션인 [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)를 참조하세요. 즉, 정규식 엔진은 캡처된 하위 문자열을 찾으려고 하지 않지만, 대신 그룹의 존재 여부를 테스트합니다.  
+> *expression* 이 이름이나 숫자가 지정된 캡처링 그룹인 경우 교체 구문은 캡처 테스트로 해석됩니다. 자세한 내용은 다음 섹션인 [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)를 참조하세요. 즉, 정규식 엔진은 캡처된 하위 문자열을 찾으려고 하지 않지만, 대신 그룹의 존재 여부를 테스트합니다.  
   
 다음 예제는 [&#124;를 사용한 Either/Or 패턴 일치](#Either_Or) 섹션에 나타나는 예제의 변형입니다. 조건부 일치를 사용하여 단어 경계 뒤의 처음 문자 3개가 숫자 2개, 하이픈 순의 문자열인지를 확인합니다. 해당 문자열이면 미국 EIN(고용주 식별 번호)을 찾으려고 합니다. 그러지 않으면 미국 SSN(사회 보장 번호)을 찾으려고 합니다.
 

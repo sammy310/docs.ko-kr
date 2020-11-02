@@ -8,8 +8,8 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - data storage using isolated storage, deleting files and directories
-- directories [.NET Framework], isolated storage
-- files [.NET Framework], isolated storage
+- directories [.NET], isolated storage
+- files [.NET], isolated storage
 - isolated storage, deleting files and directories
 - data stores, deleting files and directories
 - stores, creating files and directories
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-ms.openlocfilehash: dc84fefbde1177993b17e9ec687a1ef759b74735
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7797f319ca3b143bac6a4e68eaf820e966f1560e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291905"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187946"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>방법: 격리된 스토리지의 파일 및 디렉터리 삭제
 격리된 스토리지 파일 내에서 디렉터리 및 파일을 삭제할 수 있습니다. 저장소 내에서 파일 및 디렉터리 이름은 운영 체제에 종속적이며 가상 파일 시스템의 루트와 관련하여 지정됩니다. Windows 운영 체제에서는 대/소문자를 구분하지 않습니다.  

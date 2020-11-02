@@ -7,15 +7,15 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- assemblies [.NET Framework], attributes
-- attributes [.NET Framework], applying
+- assemblies [.NET], attributes
+- attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 76591de6a4305b21b89d348f9ffe53f4e67e7334
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162832"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889233"
 ---
 # <a name="apply-attributes"></a>특성 적용
 
@@ -33,11 +33,11 @@ ms.locfileid: "92162832"
 
  특성은 코드를 컴파일할 때 메타데이터로 내보내지며, 공용 언어 런타임과 사용자 지정 도구 또는 애플리케이션에서 런타임 리플렉션 서비스를 통해 사용할 수 있습니다.
 
- 모든 특성 이름은 규칙에 따라 "Attribute"로 끝납니다. 하지만 런타임을 목적으로 하는 일부 언어(예: Visual Basic 및 C#)에서는 특성의 전체 이름을 지정할 필요가 없습니다. 예를 들어 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>를 초기화하려는 경우 **Obsolete**로만 참조해야 합니다.
+ 모든 특성 이름은 규칙에 따라 "Attribute"로 끝납니다. 하지만 런타임을 목적으로 하는 일부 언어(예: Visual Basic 및 C#)에서는 특성의 전체 이름을 지정할 필요가 없습니다. 예를 들어 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>를 초기화하려는 경우 **Obsolete** 로만 참조해야 합니다.
 
 ## <a name="apply-an-attribute-to-a-method"></a>메서드에 특성 적용
 
- 다음 코드 예제에서는 코드를 오래된 것으로 표시하는 **System.ObsoleteAttribute**를 사용하는 방법을 보여줍니다. `"Will be removed in next version"` 문자열이 특성에 전달됩니다. 이 특성이 설명하는 코드가 호출되면 이 특성으로 인해 전달된 문자열을 표시하는 컴파일러 경고가 발생합니다.
+ 다음 코드 예제에서는 코드를 오래된 것으로 표시하는 **System.ObsoleteAttribute** 를 사용하는 방법을 보여줍니다. `"Will be removed in next version"` 문자열이 특성에 전달됩니다. 이 특성이 설명하는 코드가 호출되면 이 특성으로 인해 전달된 문자열을 표시하는 컴파일러 경고가 발생합니다.
 
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
@@ -45,7 +45,7 @@ ms.locfileid: "92162832"
 
 ## <a name="apply-attributes-at-the-assembly-level"></a>어셈블리 수준에서 특성 적용
 
- 어셈블리 수준에서 특성을 적용하려면 `assembly`(Visual Basic에서는 `Assembly`) 키워드를 사용합니다. 다음 코드에서는 어셈블리 수준에서 적용된 **AssemblyTitleAttribute**를 보여 줍니다.
+ 어셈블리 수준에서 특성을 적용하려면 `assembly`(Visual Basic에서는 `Assembly`) 키워드를 사용합니다. 다음 코드에서는 어셈블리 수준에서 적용된 **AssemblyTitleAttribute** 를 보여 줍니다.
 
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
