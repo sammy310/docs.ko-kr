@@ -9,40 +9,41 @@ helpviewer_keywords:
 - data streams, writing characters to string
 - writing characters to strings
 - streams, writing characters to strings
-- I/O [.NET Framework], writing characters to strings
+- I/O [.NET], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: 04fc21c452258a88292a886d952353ac55573121
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5b0e20b911237739c143576d9a7be660f5da58c0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288253"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189227"
 ---
-# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="0a9c5-102">방법: 문자열에 문자 쓰기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-102">How to: Write characters to a string</span></span>
-<span data-ttu-id="0a9c5-103">다음 코드 예제는 동기식 또는 비동기식으로 문자 배열에서 문자열로 문자를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="0a9c5-103">The following code examples write characters synchronously or asynchronously from a character array into a string.</span></span>  
+# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="26511-102">방법: 문자열에 문자 쓰기</span><span class="sxs-lookup"><span data-stu-id="26511-102">How to: Write characters to a string</span></span>
+
+<span data-ttu-id="26511-103">다음 코드 예제는 동기식 또는 비동기식으로 문자 배열에서 문자열로 문자를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="26511-103">The following code examples write characters synchronously or asynchronously from a character array into a string.</span></span>  
   
-## <a name="example-write-characters-synchronously-in-a-console-app"></a><span data-ttu-id="0a9c5-104">예: 콘솔 앱에서 동기식으로 문자 쓰기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-104">Example: Write characters synchronously in a console app</span></span>  
- <span data-ttu-id="0a9c5-105">다음 예제에서는 <xref:System.IO.StringWriter>를 사용하여 동기식으로 <xref:System.Text.StringBuilder> 개체에 문자 5개를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="0a9c5-105">The following example uses a <xref:System.IO.StringWriter> to write five characters synchronously to a <xref:System.Text.StringBuilder> object.</span></span>
+## <a name="example-write-characters-synchronously-in-a-console-app"></a><span data-ttu-id="26511-104">예: 콘솔 앱에서 동기식으로 문자 쓰기</span><span class="sxs-lookup"><span data-stu-id="26511-104">Example: Write characters synchronously in a console app</span></span>  
+ <span data-ttu-id="26511-105">다음 예제에서는 <xref:System.IO.StringWriter>를 사용하여 동기식으로 <xref:System.Text.StringBuilder> 개체에 문자 5개를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="26511-105">The following example uses a <xref:System.IO.StringWriter> to write five characters synchronously to a <xref:System.Text.StringBuilder> object.</span></span>
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a><span data-ttu-id="0a9c5-106">예: WPF 앱에서 문자를 비동기식으로 쓰기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-106">Example: Write characters asynchronously in a WPF app</span></span>
- <span data-ttu-id="0a9c5-107">다음 예제는 WPF 앱의 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="0a9c5-107">The next example is the code behind a WPF app.</span></span> <span data-ttu-id="0a9c5-108">창 로드 시, 이 예제는 <xref:System.Windows.Controls.TextBox> 컨트롤에서 모든 문자를 비동기식으로 읽고 배열에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="0a9c5-108">On window load, the example asynchronously reads all characters from a <xref:System.Windows.Controls.TextBox> control and stores them in an array.</span></span> <span data-ttu-id="0a9c5-109">그런 다음, 각 문자 또는 공백 문자를 <xref:System.Windows.Controls.TextBlock> 컨트롤의 별도 라인에 비동기식으로 씁니다.</span><span class="sxs-lookup"><span data-stu-id="0a9c5-109">It then asynchronously writes each letter or white-space character to a separate line of a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a><span data-ttu-id="26511-106">예: WPF 앱에서 문자를 비동기식으로 쓰기</span><span class="sxs-lookup"><span data-stu-id="26511-106">Example: Write characters asynchronously in a WPF app</span></span>
+ <span data-ttu-id="26511-107">다음 예제는 WPF 앱의 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="26511-107">The next example is the code behind a WPF app.</span></span> <span data-ttu-id="26511-108">창 로드 시, 이 예제는 <xref:System.Windows.Controls.TextBox> 컨트롤에서 모든 문자를 비동기식으로 읽고 배열에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="26511-108">On window load, the example asynchronously reads all characters from a <xref:System.Windows.Controls.TextBox> control and stores them in an array.</span></span> <span data-ttu-id="26511-109">그런 다음, 각 문자 또는 공백 문자를 <xref:System.Windows.Controls.TextBlock> 컨트롤의 별도 라인에 비동기식으로 씁니다.</span><span class="sxs-lookup"><span data-stu-id="26511-109">It then asynchronously writes each letter or white-space character to a separate line of a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[StreamReaderWriter](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="0a9c5-110">참조</span><span class="sxs-lookup"><span data-stu-id="0a9c5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26511-110">참조</span><span class="sxs-lookup"><span data-stu-id="26511-110">See also</span></span>
 
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
 - <xref:System.Text.StringBuilder>  
-- [<span data-ttu-id="0a9c5-111">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="0a9c5-111">File and stream I/O</span></span>](index.md)  
-- [<span data-ttu-id="0a9c5-112">비동기 파일 I/O</span><span class="sxs-lookup"><span data-stu-id="0a9c5-112">Asynchronous file I/O</span></span>](asynchronous-file-i-o.md)  
-- [<span data-ttu-id="0a9c5-113">방법: 디렉터리 및 파일 열거</span><span class="sxs-lookup"><span data-stu-id="0a9c5-113">How to: Enumerate directories and files</span></span>](how-to-enumerate-directories-and-files.md)  
-- [<span data-ttu-id="0a9c5-114">방법: 새로 만든 데이터 파일 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-114">How to: Read and write to a newly created data file</span></span>](how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [<span data-ttu-id="0a9c5-115">방법: 로그 파일 열기 및 추가</span><span class="sxs-lookup"><span data-stu-id="0a9c5-115">How to: Open and append to a log file</span></span>](how-to-open-and-append-to-a-log-file.md)  
-- [<span data-ttu-id="0a9c5-116">방법: 파일에서 텍스트 읽기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-116">How to: Read text from a file</span></span>](how-to-read-text-from-a-file.md)  
-- [<span data-ttu-id="0a9c5-117">방법: 파일에 텍스트 쓰기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-117">How to: Write text to a file</span></span>](how-to-write-text-to-a-file.md)  
-- [<span data-ttu-id="0a9c5-118">방법: 문자열에서 문자 읽기</span><span class="sxs-lookup"><span data-stu-id="0a9c5-118">How to: Read characters from a string</span></span>](how-to-read-characters-from-a-string.md)
+- [<span data-ttu-id="26511-111">파일 및 스트림 I/O</span><span class="sxs-lookup"><span data-stu-id="26511-111">File and stream I/O</span></span>](index.md)  
+- [<span data-ttu-id="26511-112">비동기 파일 I/O</span><span class="sxs-lookup"><span data-stu-id="26511-112">Asynchronous file I/O</span></span>](asynchronous-file-i-o.md)  
+- [<span data-ttu-id="26511-113">방법: 디렉터리 및 파일 열거</span><span class="sxs-lookup"><span data-stu-id="26511-113">How to: Enumerate directories and files</span></span>](how-to-enumerate-directories-and-files.md)  
+- [<span data-ttu-id="26511-114">방법: 새로 만든 데이터 파일 읽기 및 쓰기</span><span class="sxs-lookup"><span data-stu-id="26511-114">How to: Read and write to a newly created data file</span></span>](how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="26511-115">방법: 로그 파일 열기 및 추가</span><span class="sxs-lookup"><span data-stu-id="26511-115">How to: Open and append to a log file</span></span>](how-to-open-and-append-to-a-log-file.md)  
+- [<span data-ttu-id="26511-116">방법: 파일에서 텍스트 읽기</span><span class="sxs-lookup"><span data-stu-id="26511-116">How to: Read text from a file</span></span>](how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="26511-117">방법: 파일에 텍스트 쓰기</span><span class="sxs-lookup"><span data-stu-id="26511-117">How to: Write text to a file</span></span>](how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="26511-118">방법: 문자열에서 문자 읽기</span><span class="sxs-lookup"><span data-stu-id="26511-118">How to: Read characters from a string</span></span>](how-to-read-characters-from-a-string.md)
