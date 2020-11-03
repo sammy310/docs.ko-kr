@@ -6,19 +6,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 - Semaphore class, about Semaphore class
 - SemaphoreSlim class, about SemaphoreSlim class
-- threading [.NET Framework], Semaphore class
+- threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600453"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188941"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
+
 로컬 또는 명명된(시스템 전체) 세마포를 나타내는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. Win32 세마포는 리소스 풀에 대한 액세스를 제어하는 데 사용할 수 있는 가산 세마포입니다.  
   
  <xref:System.Threading.SemaphoreSlim> 클래스는 대기 시간이 매우 짧을 것으로 예상될 때 단일 프로세스 내에서 대기하는 데 사용할 수 있는 간단하고 빠른 세마포를 나타냅니다. <xref:System.Threading.SemaphoreSlim>은 CLR(공용 언어 런타임)에서 제공하는 동기화 기본 형식을 최대한 활용합니다. 그러나 필요에 따라 여러 세마포에 대해 대기를 지원할 수 있도록 지연 초기화된 커널 기반 대기 핸들도 제공합니다. 또한 <xref:System.Threading.SemaphoreSlim>은 취소 토큰 사용도 지원하지만 명명된 세마포 또는 동기화용 대기 핸들 사용은 지원하지 않습니다.  

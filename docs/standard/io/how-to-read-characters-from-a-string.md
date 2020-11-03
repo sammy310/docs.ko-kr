@@ -10,18 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - reading characters from strings
 - data streams, reading characters from string
-- I/O [.NET Framework], reading characters from strings
+- I/O [.NET], reading characters from strings
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: fa03d13036e9e245b8ca3f8c3218ae80a2762a12
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c613f8170655601b72b87de4a20c295b1054bd1a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553950"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189344"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>방법: 문자열에서 문자 읽기
+
 다음 코드 예제는 문자열에서 동기식 또는 비동기식으로 문자를 읽는 방법을 보여줍니다.  
   
 ## <a name="example-read-characters-synchronously"></a>예: 동기식으로 문자 읽기

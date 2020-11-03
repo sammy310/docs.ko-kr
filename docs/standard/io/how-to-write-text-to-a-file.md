@@ -8,18 +8,19 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - writing text to files
-- I/O [.NET Framework], writing text to files
+- I/O [.NET], writing text to files
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447214"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189240"
 ---
 # <a name="how-to-write-text-to-a-file"></a>방법: 파일에 텍스트 쓰기
+
 이 항목에서는 .NET 앱의 파일에 텍스트를 작성하는 다양한 방법을 보여줍니다.
 
 파일에 텍스트를 쓸 때는 일반적으로 다음 클래스 및 메서드가 사용됩니다.  

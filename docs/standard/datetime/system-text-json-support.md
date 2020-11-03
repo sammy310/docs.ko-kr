@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 1c573712f458d3e22cd59112b9e79e85391270c1
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854895"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188759"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
@@ -55,7 +55,7 @@ ms.locfileid: "87854895"
 
 [!code-csharp[example-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/writing-with-utf8jsonwriter/Program.cs)]
 
-<xref:System.Text.Json.Utf8JsonReader>구문 분석 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 데이터:
+<xref:System.Text.Json.Utf8JsonReader> 구문 분석 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 데이터:
 
 [!code-csharp[example-reading-with-utf8jsonreader-valid](~/samples/snippets/standard/datetime/json/csharp/reading-with-utf8jsonreader-valid/Program.cs)]
 
@@ -65,7 +65,7 @@ ms.locfileid: "87854895"
 
 ## <a name="custom-support-for-xrefsystemdatetime-and-xrefsystemdatetimeoffset"></a>및에 대 한 사용자 지정 지원 <xref:System.DateTime><xref:System.DateTimeOffset>
 
-### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>사용 하는 경우<xref:System.Text.Json.JsonSerializer>
+### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>사용 하는 경우 <xref:System.Text.Json.JsonSerializer>
 
 Serializer에서 사용자 지정 구문 분석 또는 서식 지정을 수행 하려는 경우 [사용자 지정 변환기](xref:System.Text.Json.Serialization.JsonConverter%601)를 구현할 수 있습니다.
 다음은 몇 가지 예입니다.
@@ -103,7 +103,7 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
 
 [!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3/Program.cs)]
 
-### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>을 사용 하 여 작성 하는 경우<xref:System.Text.Json.Utf8JsonWriter>
+### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>을 사용 하 여 작성 하는 경우 <xref:System.Text.Json.Utf8JsonWriter>
 
 를 사용 하 여 사용자 지정 <xref:System.DateTime> 또는 텍스트 표현을 작성 하려는 경우 <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonWriter> 사용자 지정 표현의 형식을,, 또는로 <xref:System.String> `ReadOnlySpan<Byte>` `ReadOnlySpan<Char>` <xref:System.Text.Json.JsonEncodedText> 지정한 다음 해당 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> 또는 메서드에 전달할 <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> 수 있습니다.
 
@@ -111,7 +111,7 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
 
 [!code-csharp[example-custom-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/custom-writing-with-utf8jsonwriter/Program.cs)]
 
-### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>읽을 때<xref:System.Text.Json.Utf8JsonReader>
+### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>읽을 때 <xref:System.Text.Json.Utf8JsonReader>
 
 를 사용 하 여 사용자 지정 <xref:System.DateTime> 또는 텍스트 표현을 읽으려면를 사용 하 여 <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonReader> 현재 JSON 토큰의 값을 가져온 <xref:System.String> <xref:System.Text.Json.Utf8JsonReader.GetString> 다음 사용자 지정 논리를 사용 하 여 값을 구문 분석할 수 있습니다.
 
@@ -125,14 +125,14 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
 
 에 구현 된 확장 ISO 8601-1:2019 프로필은 <xref:System.Text.Json> 날짜 및 시간 표현에 대해 다음과 같은 구성 요소를 정의 합니다. 이러한 구성 요소는 구문 분석 및 형식 지정 및 표현을 할 때 지원 되는 다양 한 수준의 세분성을 정의 하는 데 사용 됩니다 <xref:System.DateTime> <xref:System.DateTimeOffset> .
 
-| 구성 요소       | 서식                      | 설명                                                                     |
+| 구성 요소       | 서식                      | Description                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Year            | "yyyy"                      | 0001-9999                                                                       |
-| 월           | "MM"                        | 01-12                                                                           |
+| Month           | "MM"                        | 01-12                                                                           |
 | 일             | "dd"                        | 월/연도를 기준으로 하는 01-28, 01-29, 01-30, 01-31                                  |
 | 시간            | "HH"                        | 00-23                                                                           |
 | Minute          | "mm"                        | 00-59                                                                           |
-| 초          | "ss"                        | 00-59                                                                           |
+| Second          | "ss"                        | 00-59                                                                           |
 | 초 분수 | "FFFFFFF"                   | 최소 1 자리 숫자, 최대 16 자리                                      |
 | 시간 오프셋     | "K"                         | "Z" 또는 "(' + '/'-') HH ': ' mm"                                                |
 | 부분 시간    | "HH ': ' mm ': ' ss [FFFFFFF]"     | UTC 오프셋 정보가 없는 시간                                             |
@@ -164,7 +164,13 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
     3. "yyyy'-'mm'-'dd't'hh-'MM'-% n n e t ': ' mm ': ' ss (' + '/'-') HH ': ' mm '
     4. "yyyy'-'mm'-'dd't'hh-'MM'-% n이 (가): ' MM ': ' ss '. ' FFFFFFF (' + '/'-') HH ': ' mm '
 
-초에 소수 자릿수가 있으면 숫자가 하나 이상 있어야 합니다. `2019-07-26T00:00:00.`허용 되지 않습니다.
+    이 세분성 수준은 interchanging 날짜 및 시간 정보에 사용 되는 ISO 8601의 널리 채택 된 프로필 인 [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)을 준수 합니다. 그러나 구현 시 System.Text.Js에는 몇 가지 제한 사항이 있습니다.
+
+    - RFC 3339는 최대 소수 자릿수 초의 자릿수를 지정 하지 않지만 소수 두 번째 섹션이 있는 경우 하나 이상의 숫자가 마침표 뒤에와 야 함을 지정 합니다. System.Text.Js의 구현은 다른 프로그래밍 언어 및 프레임 워크와의 상호 운용성을 지원 하기 위해 최대 16 자리 숫자를 허용 하지만 처음 7 개만 구문 분석 합니다. <xref:System.Text.Json.JsonException>및 인스턴스를 읽을 때 소수 자릿수 초의 소수 자릿수가 16 개를 초과 하는 경우이 throw 됩니다 `DateTime` `DateTimeOffset` .
+    - RFC 3339에서는 "T" 및 "Z" 문자를 각각 "t" 또는 "z"로 지정할 수 있지만 응용 프로그램에서 대/소문자 변형 으로만 지원을 제한할 수 있습니다. System.Text.Js에서 구현 하려면 "T" 및 "Z" 여야 합니다. <xref:System.Text.Json.JsonException>및 인스턴스를 읽을 때 입력 페이로드에 "t" 또는 "z"가 포함 된 경우이 throw 됩니다 `DateTime` `DateTimeOffset` .
+    - RFC 3339는 날짜 및 시간 섹션이 "T"로 구분 되도록 지정 하지만 응용 프로그램에서이를 공백 ("")으로 구분할 수 있도록 합니다. System.Text.Js의 경우 날짜 및 시간 섹션이 "T"로 구분 되어야 합니다. <xref:System.Text.Json.JsonException>및 인스턴스를 읽을 때 입력 페이로드에 공백 ("")이 포함 된 경우이 throw 됩니다 `DateTime` `DateTimeOffset` .
+
+초에 소수 자릿수가 있으면 숫자가 하나 이상 있어야 합니다. `2019-07-26T00:00:00.` 허용 되지 않습니다.
 최대 16 개의 소수 자릿수가 허용 되지만 처음 7 개만 구문 분석 됩니다. 그 외의 모든 항목은 0으로 간주 됩니다.
 예를 들어 `2019-07-26T00:00:00.1234567890` 는 인 것 처럼 구문 분석 됩니다 `2019-07-26T00:00:00.1234567` .
 이는 <xref:System.DateTime> 이 해상도로 제한 되는 구현과의 호환성을 유지 하기 위한 것입니다.
@@ -200,6 +206,8 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
     4. "yyyy'-'mm'-'dd't'hh-'MM'-% n이 (가): ' MM ': ' ss '. ' FFFFFFF (' + '/'-') HH ': ' mm '
 
         <xref:System.DateTime> <xref:System.DateTimeOffset> 현지 오프셋으로 또는 소수 자릿수 초를 사용 하 여의 형식을 지정 하는 데 사용 됩니다.
+
+    이 세분성 수준은 [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)을 준수 합니다.
 
 또는 인스턴스의 [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현에 <xref:System.DateTime> <xref:System.DateTimeOffset> 소수 자릿수 초에 후행 0이 있으면 <xref:System.Text.Json.JsonSerializer> 및 <xref:System.Text.Json.Utf8JsonWriter> 는 후행 0 없이 인스턴스 표현의 형식을 지정 합니다.
 예를 들어 <xref:System.DateTime> [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현이 인 인스턴스는 `2019-04-24T14:50:17.1010000Z` 및에서로 형식이 지정 됩니다 `2019-04-24T14:50:17.101Z` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> .

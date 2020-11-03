@@ -9,16 +9,17 @@ helpviewer_keywords:
 - data streams, writing characters to string
 - writing characters to strings
 - streams, writing characters to strings
-- I/O [.NET Framework], writing characters to strings
+- I/O [.NET], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: 04fc21c452258a88292a886d952353ac55573121
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5b0e20b911237739c143576d9a7be660f5da58c0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288253"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189227"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>방법: 문자열에 문자 쓰기
+
 다음 코드 예제는 동기식 또는 비동기식으로 문자 배열에서 문자열로 문자를 씁니다.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>예: 콘솔 앱에서 동기식으로 문자 쓰기  

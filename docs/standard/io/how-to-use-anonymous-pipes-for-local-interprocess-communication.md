@@ -8,20 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- anonymous pipes [.NET Framework]
-- parent-child communication [.NET Framework]
-- pipes [.NET Framework]
-- one-way communication [.NET Framework]
-- local computer communication [.NET Framework], pipes
+- anonymous pipes [.NET]
+- parent-child communication [.NET]
+- pipes [.NET]
+- one-way communication [.NET]
+- local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c9d223d975dc7ab251717a66de0bc845845dc9d7
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594805"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189357"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>방법: 로컬 프로세스 간 통신에 익명 파이프 사용
+
 익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다. 명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다. 익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다. 네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.  
   
  익명 파이프를 구현하려면, <xref:System.IO.Pipes.AnonymousPipeServerStream> 및 <xref:System.IO.Pipes.AnonymousPipeClientStream> 클래스를 사용합니다.  
