@@ -17,12 +17,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557062"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282052"
 ---
 # <a name="how-to-use-data-protection"></a>방법: 데이터 보호 사용
 
@@ -35,7 +35,7 @@ ms.locfileid: "87557062"
   
 <xref:System.Security.Cryptography.ProtectedData> 클래스를 사용하여 바이트 배열 복사본을 암호화합니다. 이 기능은 .NET Framework, .NET Core 및 .NET 5에서 사용할 수 있습니다.  현재 사용자 계정에서 암호화된 데이터가 동일한 사용자 계정에 의해서만 암호 해독될 수 있도록 지정하거나, 현재 사용자 계정에서 암호화된 데이터가 컴퓨터의 모든 계정에 의해 암호 해독될 수 있도록 지정할 수 있습니다.  <xref:System.Security.Cryptography.ProtectedData> 옵션에 대한 자세한 내용은 <xref:System.Security.Cryptography.DataProtectionScope> 열거형을 참조하세요.  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>데이터 보호를 사용하여 파일 또는 스트림에 데이터를 암호화하려면  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>데이터 보호를 사용 하 여 파일 또는 스트림으로 데이터 암호화  
   
 1. 임의 엔트로피를 만듭니다.  
   
