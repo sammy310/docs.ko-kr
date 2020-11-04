@@ -7,20 +7,20 @@ helpviewer_keywords:
 - IO namespace
 - files, I/O
 - System.IO namespace
-- I/O [.NET Framework]
+- I/O [.NET]
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558942"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189201"
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 
-파일 및 스트림 I/O(입/출력)는 스토리지 매체로 데이터를 전송하거나 스토리지 매체로부터 데이터를 전송 받습니다. .NET Framework에서 `System.IO` 네임스페이스는 데이터 스트림과 파일에서 읽기 및 쓰기를 동기적 및 비동기적으로 사용하는 형식을 포함합니다. 이러한 네임스페이스는 파일의 압축 및 압축 풀기 기능을 수행하는 형식 및 파이프 및 직렬 포트를 통한 통신을 가능하도록 하는 형식을 포함합니다.
+파일 및 스트림 I/O(입/출력)는 스토리지 매체로 데이터를 전송하거나 스토리지 매체로부터 데이터를 전송 받습니다. .NET에서 `System.IO` 네임스페이스는 데이터 스트림과 파일에서 읽기 및 쓰기를 동기적 및 비동기적으로 사용하는 형식을 포함합니다. 이러한 네임스페이스는 파일의 압축 및 압축 풀기 기능을 수행하는 형식 및 파이프 및 직렬 포트를 통한 통신을 가능하도록 하는 형식을 포함합니다.
 
 파일은 정돈되고 이름이 지정된 컬렉션의 바이트이며, 이 컬렉션에는 영구 스토리지가 있습니다. 사용자가 파일을 사용할 때, 디렉터리 경로, 디스크 스토리지 및 파일과 디렉터리 이름을 다룹니다. 반대로, 스트림은 여러 가지 스토리지 매체 중 하나인 백업 저장소(예를 들어, 디스크 또는 메모리)에서 읽고 쓸 수 있는 바이트 시퀀스입니다. 디스크 외에 여러 백업 저장소가 존재하듯이, 파이프 스트림 외에 여러 종류의 스트림, 예를 들어 네트워크, 메모리, 파일 스트림도 존재합니다.
 
@@ -142,7 +142,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="io-operations-in-windows-store-apps"></a>Windows 스토어 앱에서 I/O 작업
 
-Windows 8.x 스토어 앱용 .NET에는 스트림에서 읽고 스트림에 쓰기 위한 다양한 형식이 포함됩니다. 하지만, 이 세트에 모든 .NET Framework I/O 형식이 포함되는 것은 아닙니다.
+Windows 8.x 스토어 앱용 .NET에는 스트림에서 읽고 스트림에 쓰기 위한 다양한 형식이 포함되어 있습니다. 하지만, 이 세트에 모든 .NET I/O 형식이 포함되는 것은 아닙니다.
 
 다음은 Windows 8.x 스토어 앱에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.
 
@@ -162,7 +162,7 @@ Windows 8.x 스토어 앱에서의 I/O 작업에 대한 자세한 내용은 [빠
 
 <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: 액세스 제어 목록 항목 추가 또는 제거](how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.
 
-기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 스토리지](isolated-storage.md)를 사용하거나 Windows 8.x 스토어 앱의 경우 [애플리케이션 데이터](/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
+기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일에 액세스하지 못하도록 합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신 .NET 애플리케이션에는 [격리된 스토리지](isolated-storage.md)를 사용합니다.
 
 스트림이 생성될 때만 보안 검사가 수행됩니다. 따라서 스트림을 열지 말고, 이것을 신뢰할 수 없는 코드 또는 애플리케이션 도메인으로 전달합니다.
 
@@ -178,7 +178,7 @@ Windows 8.x 스토어 앱에서의 I/O 작업에 대한 자세한 내용은 [빠
 코드와 저장된 데이터를 연결하는 표준화된 방법을 정의하여 격리와 안전을 제공하는 데이터 스토리지 메커니즘에 대해 설명합니다.
 
 - [파이프](pipe-operations.md)\
-.NET Framework에서 익명 사용자와 명명된 파이프 작업에 대해 설명합니다.
+.NET의 익명 및 명명된 파이프 작업에 대해 설명합니다.
 
 - [메모리 매핑된 파일](memory-mapped-files.md)\
 가상 메모리의 디스크에 있는 파일의 내용을 포함하는 메모리 매핑된 파일에 대해 설명합니다. 메모리 매핑된 파일을 사용하면 매우 큰 파일을 편집하고 프로세스 간 통신을 위한 공유 메모리를 만들 수 있습니다.
