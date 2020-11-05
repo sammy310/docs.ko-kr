@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 770ac24feababcfc840ae26196ba8b6180d378a0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282013"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342685"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -86,11 +86,12 @@ dotnet fsi Script.fsx
 [1; 9; 25; 49; 81]
 ```
 
-F# 스크립팅은 기본적으로 [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md) 및 [Mac용 Visual Studio](../../get-started/get-started-visual-studio-for-mac.md)에서 지원됩니다.
+F# 스크립팅은 기본적으로 [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md) 및 [Mac용 Visual Studio](../../get-started/get-started-with-visual-studio-for-mac.md)에서 지원됩니다.
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# 대화형에서 패키지 참조
 
-> [!NOTE] 패키지 관리는 F# 5 기능이며 현재 최신 .NET 5 SDK로 사용할 수 있습니다.
+> [!NOTE]
+> 패키지 관리는 F# 5 기능이며 현재 최신 .NET 5 SDK로 사용할 수 있습니다.
 
 F# 대화형에서는 `#r "nuget:"` 구문 및 특정 버전으로 NuGet 패키지를 참조할 수 있습니다.
 
@@ -223,7 +224,7 @@ F# Interactive에서 파일 또는 경로를 지정할 때는 문자열 리터�
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>대화형 및 컴파일된 전처리기 지시문
 
-F# 대화형에서 코드를 컴파일할 때는 대화형으로 실행하든 스크립트를 실행하든 관계없이 **INTERACTIVE** 기호가 정의됩니다. 컴파일러에서 코드를 컴파일할 때는 **COMPILED** 기호가 정의됩니다. 따라서 컴파일된 모드와 대화형 모드에서 코드가 달라야 하는 경우 이러한 조건부 컴파일용 전처리기 지시문을 통해 사용할 코드를 결정할 수 있습니다. 다음은 그 예입니다.
+F# 대화형에서 코드를 컴파일할 때는 대화형으로 실행하든 스크립트를 실행하든 관계없이 **INTERACTIVE** 기호가 정의됩니다. 컴파일러에서 코드를 컴파일할 때는 **COMPILED** 기호가 정의됩니다. 따라서 컴파일된 모드와 대화형 모드에서 코드가 달라야 하는 경우 이러한 조건부 컴파일용 전처리기 지시문을 통해 사용할 코드를 결정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 #if INTERACTIVE
