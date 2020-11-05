@@ -2,12 +2,12 @@
 title: Azure 서비스에 eShopOnContainers 매핑
 description: EShopOnContainers를 azure Kubernetes Service, API 게이트웨이 및 Azure Service Bus와 같은 Azure 서비스에 매핑합니다.
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155265"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400450"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Azure 서비스에 eShopOnContainers 매핑
 
@@ -24,7 +24,7 @@ ms.locfileid: "91155265"
 
 응용 프로그램의 컨테이너 호스팅 서비스는 ASP.NET Core MVC 앱에서 개별 카탈로그로 그리고 마이크로 서비스를 정렬 하 여 AKS (Azure Kubernetes Service)에서 호스트 하 고 관리할 수 있습니다. 응용 프로그램은 Docker 및 Kubernetes에서 로컬로 실행할 수 있으며, AKS에서 호스트 되는 스테이징 및 프로덕션 환경에 동일한 컨테이너를 배포할 수 있습니다. 이 프로세스는 다음 섹션에서 볼 수 있듯이 자동화할 수 있습니다.
 
-AKS는 컨테이너의 개별 클러스터에 대 한 관리 서비스를 제공 합니다. 응용 프로그램은 위의 아키텍처 다이어그램에 표시 된 각 마이크로 서비스에 대해 별도의 AKS 클러스터를 배포 합니다. 이 접근 방식을 사용 하면 각 개별 서비스를 리소스 요구에 따라 독립적으로 확장할 수 있습니다. 각 마이크로 서비스를 독립적으로 배포할 수 있으며, 이러한 배포에는 시스템 가동 중지 시간이 0이 발생 해야 합니다.
+AKS는 컨테이너의 개별 클러스터에 대 한 관리 서비스를 제공 합니다. 응용 프로그램은 위의 아키텍처 다이어그램에 표시 된 것 처럼 AKS 클러스터의 각 마이크로 서비스에 대해 별도의 컨테이너를 배포 합니다. 이 접근 방식을 사용 하면 각 개별 서비스를 리소스 요구에 따라 독립적으로 확장할 수 있습니다. 각 마이크로 서비스를 독립적으로 배포할 수 있으며, 이러한 배포에는 시스템 가동 중지 시간이 0이 발생 해야 합니다.
 
 ## <a name="api-gateway"></a>API Gateway
 
