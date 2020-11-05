@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: b6f2af7af77398d5e902aae995590b5dde4cf76a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 56f5d27eb9be2f8eb3e335c5ec161dba1bcfdb1e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602683"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93135972"
 ---
 
-### <a name="install-the-sdk"></a><span data-ttu-id="7905e-101">SDK 설치</span><span class="sxs-lookup"><span data-stu-id="7905e-101">Install the SDK</span></span>
+### <a name="install-the-sdk"></a><span data-ttu-id="38e90-101">SDK 설치</span><span class="sxs-lookup"><span data-stu-id="38e90-101">Install the SDK</span></span>
 
-<span data-ttu-id="7905e-102">.NET Core SDK를 사용하면 .NET Core로 앱을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-102">.NET Core SDK allows you to develop apps with .NET Core.</span></span> <span data-ttu-id="7905e-103">.NET Core SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-103">If you install .NET Core SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="7905e-104">.NET Core SDK를 설치하려면 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-104">To install .NET Core SDK, run the following commands:</span></span>
+<span data-ttu-id="38e90-102">.NET Core SDK를 사용하면 .NET Core로 앱을 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-102">.NET Core SDK allows you to develop apps with .NET Core.</span></span> <span data-ttu-id="38e90-103">.NET Core SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-103">If you install .NET Core SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="38e90-104">.NET Core SDK를 설치하려면 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-104">To install .NET Core SDK, run the following commands:</span></span>
 
 ```bash
 sudo apt-get update; \
@@ -19,11 +19,11 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="7905e-105">**패키지 dotnet-sdk-3.1을 찾을 수 없습니다**와 같은 오류 메시지가 표시되는 경우 [APT 문제 해결](#apt-troubleshooting) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7905e-105">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [APT troubleshooting](#apt-troubleshooting) section.</span></span>
+> <span data-ttu-id="38e90-105">**패키지 dotnet-sdk-3.1을 찾을 수 없습니다** 와 같은 오류 메시지가 표시되는 경우 [APT 문제 해결](#apt-troubleshooting) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="38e90-105">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1** , see the [APT troubleshooting](#apt-troubleshooting) section.</span></span>
 
-### <a name="install-the-runtime"></a><span data-ttu-id="7905e-106">런타임 설치</span><span class="sxs-lookup"><span data-stu-id="7905e-106">Install the runtime</span></span>
+### <a name="install-the-runtime"></a><span data-ttu-id="38e90-106">런타임 설치</span><span class="sxs-lookup"><span data-stu-id="38e90-106">Install the runtime</span></span>
 
-<span data-ttu-id="7905e-107">.NET Core 런타임을 사용하면 런타임을 포함하지 않았던 .NET Core로 만든 앱을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-107">The .NET Core Runtime allows you to run apps that were made with .NET Core that didn't include the runtime.</span></span> <span data-ttu-id="7905e-108">아래 명령은 ASP.NET Core 런타임을 설치하며 이는 .NET Core에 대해 가장 호환성이 높은 런타임입니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-108">The commands below install the ASP.NET Core Runtime, which is the most compatible runtime for .NET Core.</span></span> <span data-ttu-id="7905e-109">터미널에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-109">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="38e90-107">.NET Core 런타임을 사용하면 런타임을 포함하지 않았던 .NET Core로 만든 앱을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-107">The .NET Core Runtime allows you to run apps that were made with .NET Core that didn't include the runtime.</span></span> <span data-ttu-id="38e90-108">다음 명령을 실행하면 .NET Core에 대해 가장 호환성이 높은 ASP.NET Core 런타임이 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-108">The following commands install the ASP.NET Core Runtime, which is the most compatible runtime for .NET Core.</span></span> <span data-ttu-id="38e90-109">터미널에서 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-109">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update; \
@@ -33,9 +33,9 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="7905e-110">**패키지 aspnetcore-runtime-3.1을 찾을 수 없습니다**와 같은 오류 메시지가 표시되는 경우 [APT 문제 해결](#apt-troubleshooting) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7905e-110">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [APT troubleshooting](#apt-troubleshooting) section.</span></span>
+> <span data-ttu-id="38e90-110">**패키지 aspnetcore-runtime-3.1을 찾을 수 없습니다** 와 같은 오류 메시지가 표시되는 경우 [APT 문제 해결](#apt-troubleshooting) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="38e90-110">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1** , see the [APT troubleshooting](#apt-troubleshooting) section.</span></span>
 
-<span data-ttu-id="7905e-111">ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 위 명령에서 `aspnetcore-runtime-3.1`을 `dotnet-runtime-3.1`로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7905e-111">As an alternative to the ASP.NET Core Runtime, you can install the .NET Core Runtime that doesn't include ASP.NET Core support: replace `aspnetcore-runtime-3.1` in the command above with `dotnet-runtime-3.1`.</span></span>
+<span data-ttu-id="38e90-111">ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 이전 명령에서 `aspnetcore-runtime-3.1`을 `dotnet-runtime-3.1`로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="38e90-111">As an alternative to the ASP.NET Core Runtime, you can install the .NET Core Runtime that doesn't include ASP.NET Core support: replace `aspnetcore-runtime-3.1` in the previous command with `dotnet-runtime-3.1`.</span></span>
 
 ```bash
 sudo apt-get install -y dotnet-runtime-3.1
