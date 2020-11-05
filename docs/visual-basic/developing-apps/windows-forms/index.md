@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557021"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282163"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 애플리케이션 기초(Visual Basic)
 
@@ -28,9 +28,9 @@ Visual Studio를 사용하여 Windows Forms 및 Windows 서비스 애플리케�
 
 ## <a name="building-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드
 
-Windows Forms는 파일 시스템 읽기 및 쓰기와 같은 일반적인 애플리케이션 작업을 지원하는 관리형 라이브러리 세트인 .NET Framework의 스마트 클라이언트 구성 요소입니다. Visual Studio와 같은 개발 환경을 사용하면 정보를 표시하고, 사용자 입력을 요청하고, 네트워크를 통해 원격 컴퓨터와 통신하는 Windows Forms 애플리케이션을 만들 수 있습니다.
+Windows Forms는 .NET Framework 및 .NET Core(.NET Core 3.0 이상)의 스마트 클라이언트 구성 요소입니다. 또한 파일 시스템 읽기 및 쓰기와 같은 일반적인 애플리케이션 작업을 지원하는 관리형 라이브러리 세트입니다. Visual Studio와 같은 개발 환경을 사용하면 정보를 표시하고, 사용자 입력을 요청하고, 네트워크를 통해 원격 컴퓨터와 통신하는 Windows Forms 애플리케이션을 만들 수 있습니다.
 
-Windows Forms에서 양식은 사용자에게 정보를 표시하는 시각적 표면입니다. 일반적으로 양식에 컨트롤을 배치하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 애플리케이션을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.
+Windows Forms에서 양식은 사용자에게 정보를 표시하는 시각적 표면입니다. 일반적으로 양식에 컨트롤을 배치하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 애플리케이션을 빌드합니다. *컨트롤* 은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.
 
 ### <a name="events"></a>이벤트
 
@@ -97,7 +97,7 @@ ClickOnce에 대한 전체 개요는 [ClickOnce 보안 및 배포](/visualstudio
 
 ## <a name="other-controls-and-features"></a>기타 컨트롤 및 기능
 
-Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는 .NET Framework의 강력한 보안 시스템을 사용하여 더 안전한 애플리케이션을 고객에게 릴리스할 수 있습니다.
+Windows Forms에는 대화 상자 만들기, 인쇄, 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는 .NET의 강력한 보안 시스템을 사용하여 더 안전한 애플리케이션을 고객에게 릴리스할 수 있습니다.
 
 해당 기능을 사용하는 방법에 관한 단계별 정보는 다음 도움말 항목을 참조하세요.
 

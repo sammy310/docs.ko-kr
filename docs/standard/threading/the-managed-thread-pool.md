@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223789"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188694"
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 
@@ -40,7 +40,7 @@ ms.locfileid: "92223789"
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>스레드 풀 스레드의 최대 개수
 
-스레드 풀에 대기할 수 있는 작업 수가 사용 가능한 메모리에 의해 제한됩니다. 그러나 스레드 풀이 동시에 프로세스에서 활성화될 수 있는 스레드 수를 제한합니다. 모든 스레드 풀 스레드가 사용 중이면 스레드가 실행하는 데 사용 가능할 때까지 추가 작업 항목은 대기됩니다. .NET Framework 4부터 프로세스에 대한 스레드 풀의 기본 크기는 가상 주소 공간의 크기와 같은 여러 요인에 따라 달라집니다. 프로세스에서 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 메서드를 호출하여 스레드 수를 확인할 수 있습니다.  
+스레드 풀에 대기할 수 있는 작업 수가 사용 가능한 메모리에 의해 제한됩니다. 그러나 스레드 풀이 동시에 프로세스에서 활성화될 수 있는 스레드 수를 제한합니다. 모든 스레드 풀 스레드가 사용 중이면 스레드가 실행하는 데 사용 가능할 때까지 추가 작업 항목은 대기됩니다. 프로세스에 대한 스레드 풀의 기본 크기는 가상 주소 공간의 크기와 같은 여러 요인에 따라 달라집니다. 프로세스에서 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 메서드를 호출하여 스레드 수를 확인할 수 있습니다.  
   
 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 및 <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> 메서드를 사용하여 최대 스레드 수를 제어할 수 있습니다.  
 
@@ -54,14 +54,14 @@ ms.locfileid: "92223789"
 > [!NOTE]
 > 요구가 적을 때는 실제 스레드 풀 스레드 수가 최소값보다 작을 수 있습니다.  
   
-최소값에 도달하면 스레드 풀이 추가 스레드를 만들거나 일부 작업이 완료될 때까지 기다릴 수 있습니다. .NET Framework 4부터는 스레드 풀이 시간 단위당 완료되는 작업 수로 정의된 처리량을 최적화하기 위해 작업자 스레드를 만들고 삭제합니다. 스레드가 너무 적으면 사용 가능한 리소스가 효율적으로 사용되지 않는 반면, 너무 많으면 리소스 경합이 증가할 수 있습니다.  
+최소값에 도달하면 스레드 풀이 추가 스레드를 만들거나 일부 작업이 완료될 때까지 기다릴 수 있습니다. 스레드 풀이 시간 단위당 완료되는 작업 수로 정의된 처리량을 최적화하기 위해 작업자 스레드를 만들고 소멸시킵니다. 스레드가 너무 적으면 사용 가능한 리소스가 효율적으로 사용되지 않는 반면, 너무 많으면 리소스 경합이 증가할 수 있습니다.  
   
 > [!CAUTION]
 > <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> 메서드를 사용하여 유휴 상태 스레드의 최소 개수를 늘릴 수 있습니다. 그러나 이러한 값을 불필요하게 늘리면 성능 문제가 발생할 수 있습니다. 너무 많은 작업이 동시에 시작되는 경우 모두 속도가 느린 것처럼 나타날 수 있습니다. 대부분의 경우 스레드 풀은 고유한 스레드 할당 알고리즘에서 성능이 향상됩니다.  
 
 ## <a name="using-the-thread-pool"></a>스레드 풀 사용
 
-.NET Framework 4부터 스레드 풀을 사용하는 가장 쉬운 방법은 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md)을 사용하는 것입니다. 기본적으로 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>과 같은 TPL 형식은 스레드 풀 스레드를 사용하여 작업을 실행합니다.
+스레드 풀을 사용하는 가장 쉬운 방법은 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md)을 사용하는 것입니다. 기본적으로 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>과 같은 TPL 형식은 스레드 풀 스레드를 사용하여 작업을 실행합니다.
 
 관리 코드에서 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>(또는 비관리 코드에서 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md))을 호출하고 작업을 수행하는 메서드를 나타내는 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 대리자를 전달하여 스레드 풀을 사용할 수도 있습니다.
 

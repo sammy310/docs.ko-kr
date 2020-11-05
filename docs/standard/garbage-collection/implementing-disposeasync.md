@@ -3,19 +3,19 @@ title: DisposeAsync 메서드 구현
 description: DisposeAsync 및 DisposeAsyncCore 메서드를 구현하여 비동기 리소스 정리를 수행하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720285"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687721"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync 메서드 구현
 
@@ -102,9 +102,34 @@ public async ValueTask DisposeAsync()
 
 ## <a name="stacked-usings"></a>스택형 using
 
-<xref:System.IAsyncDisposable>을 구현하는 여러 개체를 만들고 사용하는 상황에서는 잘못된 조건에서 `using` 문을 스택하면 <xref:System.IAsyncDisposable.DisposeAsync> 호출을 방지할 수 있습니다. 잠재적 문제를 방지하기 위해 스택하는 대신 다음 예제 패턴을 따라야 합니다.
+<xref:System.IAsyncDisposable>을 구현하는 여러 개체를 만들고 사용하는 상황에서는 <xref:System.Threading.Tasks.ValueTask.ConfigureAwait%2A>를 사용하여 `await using` 문을 스택하면 잘못된 조건에서 <xref:System.IAsyncDisposable.DisposeAsync> 호출을 방지할 수 있습니다. <xref:System.IAsyncDisposable.DisposeAsync>가 항상 호출되게 하려면 스택을 방지해야 합니다. 다음 세 가지 코드 예제는 대신 사용할 수 있는 패턴을 보여 줍니다.
 
-:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+### <a name="acceptable-pattern-one"></a>허용 가능한 패턴 1
+
+:::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+앞의 예제에서 각 비동기 정리 작업은 `await using` 블록에서 명시적으로 범위가 지정됩니다. 외부 범위는 `objOne`이 `objTwo`를 둘러싸는 중괄호를 설정하는 방법으로 정의되므로 `objTwo`가 먼저 삭제된 후 `objOne`이 삭제됩니다. `IAsyncDisposable` 인스턴스는 둘 다 <xref:System.IAsyncDisposable.DisposeAsync> 메서드를 대기시키므로 비동기 정리 작업을 수행합니다. 호출은 스택되지 않고 중첩됩니다.
+
+### <a name="acceptable-pattern-two"></a>허용 가능한 패턴 2
+
+:::code language="csharp" id="two" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+앞의 예제에서 각 비동기 정리 작업은 `await using` 블록에서 명시적으로 범위가 지정됩니다. 각 블록의 끝에서 해당 `IAsyncDisposable` 인스턴스는 <xref:System.IAsyncDisposable.DisposeAsync> 메서드를 대기시키므로 비동기 정리 작업을 수행합니다. 호출은 스택되지 않고 순차적입니다. 이 시나리오에서는 `objOne`이 먼저 삭제된 후 `objTwo`가 삭제됩니다.
+
+### <a name="acceptable-pattern-three"></a>허용 가능한 패턴 3
+
+:::code language="csharp" id="three" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+앞의 예제에서 각 비동기 정리 작업은 포함하는 메서드 본문에서 암시적으로 범위가 지정됩니다. 바깥쪽 블록의 끝에서 `IAsyncDisposable` 인스턴스는 비동기 정리 작업을 수행합니다. 이는 선언된 순서의 역순으로 실행됩니다. 즉, `objOne` 전에 `objTwo`가 삭제됩니다.
+
+### <a name="unacceptable-pattern"></a>허용되지 않는 패턴
+
+`AnotherAsyncDisposable` 생성자에서 예외가 throw되면 `objOne`이 제대로 삭제되지 않습니다.
+
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+> [!TIP]
+> 예기치 않은 동작이 발생할 수 있으므로 이 패턴을 사용하지 마세요.
 
 ## <a name="see-also"></a>참조
 

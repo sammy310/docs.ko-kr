@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662851"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062973"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -24,7 +24,7 @@ ms.locfileid: "84662851"
 
 ### <a name="memory-performance-counters"></a>메모리 성능 카운터
 
-성능 카운터를 사용하여 성능 데이터를 수집할 수 있습니다. 자세한 내용은 [런타임 프로파일링](../../framework/debug-trace-profile/runtime-profiling.md)을 참조하세요. [.NET Framework의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)에 설명된 대로 성능 카운터의 .NET CLR 메모리 범주는 가비지 수집기에 대한 정보를 제공합니다.
+성능 카운터를 사용하여 성능 데이터를 수집할 수 있습니다. 자세한 내용은 [런타임 프로파일링](../../framework/debug-trace-profile/runtime-profiling.md)을 참조하세요. [.NET의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)에 설명된 대로 성능 카운터의 .NET CLR 메모리 범주는 가비지 수집기에 대한 정보를 제공합니다.
 
 ### <a name="debugging-with-sos"></a>SOS를 사용한 디버깅
 
@@ -34,7 +34,7 @@ WinDbg를 설치하려면 [Debugging Tools for Windows 다운로드](/windows-ha
 
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 
-ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. .NET Framework 4부터 [가비지 수집 ETW 이벤트](../../framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.
+ETW(Windows용 이벤트 추적)는 .NET에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. .NET Framework 4부터 [가비지 수집 ETW 이벤트](../../framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.
 
 - 수집되는 개체 세대
 
@@ -182,7 +182,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 가비지 수집 중 CPU 사용량이 너무 많습니다. 상당한 양의 처리 시간이 가비지 수집에 소요되는 경우 수집 횟수가 너무 빈번하거나 수집이 너무 오래 지속되는 것입니다. 관리되는 힙에서 개체의 할당 비율이 증가하면 가비지 수집이 더 자주 발생합니다. 할당 비율을 낮추면 가비지 수집 빈도가 감소합니다.
 
-`Allocated Bytes/second` 성능 카운터를 사용하여 할당 비율을 모니터링할 수 있습니다. 자세한 내용은 [.NET Framework의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)를 참조하세요.
+`Allocated Bytes/second` 성능 카운터를 사용하여 할당 비율을 모니터링할 수 있습니다. 자세한 내용은 [.NET의 성능 카운터](../../framework/debug-trace-profile/performance-counters.md)를 참조하세요.
 
 컬렉션 기간은 주로 할당 후 남아 있는 개체 수의 비율입니다. 수집할 많은 개체가 남아 있으면 가비지 수집기가 많은 양의 메모리를 처리해야 합니다. 남은 개체를 압축하는 작업은 오랜 시간이 소요됩니다. 수집 중 처리된 개체 수를 확인하려면 디버거에서 지정된 세대에 대한 가비지 수집의 끝에 중단점을 설정합니다.
 
@@ -226,11 +226,11 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**
 
-  여기서 **GcCondemnedGeneration**은 원하는 세대로 설정됩니다. 이 명령에는 전용 기호가 필요합니다.
+  여기서 **GcCondemnedGeneration** 은 원하는 세대로 설정됩니다. 이 명령에는 전용 기호가 필요합니다.
 
-  이 명령은 가비지 컬렉션을 위해 2세대 개체가 회수된 후 **RestartEE**가 실행되는 경우 강제로 중단합니다.
+  이 명령은 가비지 컬렉션을 위해 2세대 개체가 회수된 후 **RestartEE** 가 실행되는 경우 강제로 중단합니다.
 
-  서버 가비지 컬렉션에서는 하나의 스레드만 **RestartEE**를 호출하므로 2세대 가비지 컬렉션 중 한 번만 중단점이 발생합니다.
+  서버 가비지 컬렉션에서는 하나의 스레드만 **RestartEE** 를 호출하므로 2세대 가비지 컬렉션 중 한 번만 중단점이 발생합니다.
 
 ## <a name="performance-check-procedures"></a>성능 검사 절차
 
@@ -282,7 +282,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>메모리 부족 예외가 관리되는지 여부를 확인하려면
 
-1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 예외 인쇄(**pe**) 명령을 입력합니다.
+1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 예외 인쇄( **pe** ) 명령을 입력합니다.
 
     **!pe**
 
@@ -352,9 +352,9 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 1. Windows 작업 관리자를 시작합니다.
 
-2. **성능** 탭에서 커밋된 값을 확인합니다. Windows 7에서는 **시스템 그룹**의 **커밋(KB)** 을 확인합니다.
+2. **성능** 탭에서 커밋된 값을 확인합니다. Windows 7에서는 **시스템 그룹** 의 **커밋(KB)** 을 확인합니다.
 
-    **합계**가 **제한**에 가까우면 실제 메모리가 부족한 것입니다.
+    **합계** 가 **제한** 에 가까우면 실제 메모리가 부족한 것입니다.
 
 <a name="ManagedHeapCommit"></a>
 
@@ -422,7 +422,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   **!dumpheap –stat**
 
-  관리되는 힙이 크면 **dumpheap**을 완료하는 데 오랜 시간이 걸릴 수 있습니다.
+  관리되는 힙이 크면 **dumpheap** 을 완료하는 데 오랜 시간이 걸릴 수 있습니다.
 
   가장 많은 공간을 사용하는 개체를 나열하는 출력의 마지막 몇 줄에서 분석을 시작하는 것이 좋습니다. 예를 들어:
 
@@ -486,7 +486,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
   Scan Thread 6 OSTHread 484
   ```
 
-  **gcroot** 명령을 완료하는 데 오랜 시간이 걸릴 수 있습니다. 가비지 컬렉션에 의해 회수되지 않은 개체는 모두 라이브 개체입니다. 이는 일부 루트가 직접 또는 간접적으로 개체에 연결되어 있으므로 **gcroot**에서 개체의 경로 정보가 반환되어야 함을 의미합니다. 반환된 그래프를 검사하고 이러한 개체가 여전히 참조되는 이유를 확인해야 합니다.
+  **gcroot** 명령을 완료하는 데 오랜 시간이 걸릴 수 있습니다. 가비지 컬렉션에 의해 회수되지 않은 개체는 모두 라이브 개체입니다. 이는 일부 루트가 직접 또는 간접적으로 개체에 연결되어 있으므로 **gcroot** 에서 개체의 경로 정보가 반환되어야 함을 의미합니다. 반환된 그래프를 검사하고 이러한 개체가 여전히 참조되는 이유를 확인해야 합니다.
 
 <a name="Induce"></a>
 

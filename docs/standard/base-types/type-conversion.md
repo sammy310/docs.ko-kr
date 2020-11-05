@@ -1,5 +1,5 @@
 ---
-title: .NET Framework의 형식 변환
+title: .NET에서 형식 변환
 description: 이전 형식의 값에 해당하는 새로운 형식의 값을 만들지만 원본의 ID는 유지할 수 없는 .NET의 형식 변환에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Convert class
 - implicit conversions
 - Implicit operator
-- data types [.NET Framework], converting
+- data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4f7e4400aa15532b04fd4e39219775af34068685
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769225"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687532"
 ---
-# <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
+# <a name="type-conversion-in-net"></a>.NET에서 형식 변환
+
 모든 값에는 연결된 형식이 있으며, 이러한 형식은 값에 할당되는 공간, 포함할 수 있는 값의 범위, 값을 통해 사용할 수 있는 멤버 등의 특성을 정의합니다. 대부분의 값들은 하나 이상의 형식으로 표현될 수 있습니다. 예를 들어, 4라는 값은 정수 값 또는 부동 소수점 값으로 표현될 수 있습니다. 형식 변환을 수행하면 이전 형식과 동일한 값을 가지는 새 형식이 만들어지지만, 원래 개체의 ID(또는 실제 값)가 항상 동일하게 유지되지는 않습니다.  
   
- .NET Framework는 다음과 같은 변환을 자동으로 지원합니다.  
+.NET는 다음과 같은 변환을 자동으로 지원합니다.  
   
 - 파생 클래스에서 기본 클래스로 변환. 예를 들어, 클래스 또는 구조체 인스턴스가 <xref:System.Object> 인스턴스로 변환될 수 있다는 의미입니다.  이러한 변환에는 캐스팅 또는 변환 연산자가 필요하지 않습니다.  
   
@@ -45,20 +46,21 @@ ms.locfileid: "84769225"
   
 - 인터페이스 개체에서 그 인터페이스를 구현하는 원래 형식으로 다시 변환.  C#에서는 이러한 변환에 캐스팅 연산자가 필요합니다. Visual Basic에서는 `Option Strict`가 on이면 `CType` 연산자가 필요합니다.  
   
- 이러한 자동 변환 외에 .NET Framework는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
+이러한 자동 변환 외에 .NET는 사용자 지정 형식 변환을 지원하는 몇 가지 기능을 제공합니다. 이러한 요구 사항은 다음과 같습니다.  
   
 - 사용 가능한 형식 간 확대 변환을 정의하는 `Implicit` 연산자. 자세한 내용은 [암시적 연산자를 사용한 암시적 변환](#implicit-conversion-with-the-implicit-operator) 섹션을 참조하세요.  
   
 - 사용 가능한 형식 간 축소 변환을 정의하는 `Explicit` 연산자. 자세한 내용은 [명시적 연산자를 사용한 명시적 변환](#explicit-conversion-with-the-explicit-operator) 섹션을 참조하세요.  
   
-- 기본 .NET Framework 데이터 형식 각각에 대한 변환을 정의하는 <xref:System.IConvertible> 인터페이스. 자세한 내용은 [IConvertible 인터페이스](#the-iconvertible-interface) 섹션을 참조하세요.  
+- 기본 .NET 데이터 형식 각각에 대한 변환을 정의하는 <xref:System.IConvertible> 인터페이스. 자세한 내용은 [IConvertible 인터페이스](#the-iconvertible-interface) 섹션을 참조하세요.  
   
 - <xref:System.Convert> 인터페이스의 메서드를 구현하는 메서드 집합을 제공하는 <xref:System.IConvertible> 클래스. 자세한 내용은 [Convert 클래스](#the-convert-class) 섹션을 참조하세요.  
   
 - 지정된 형식을 임의의 형식으로 변환하는 작업을 지원하도록 확장될 수 있는 기본 클래스인 <xref:System.ComponentModel.TypeConverter> 클래스. 자세한 내용은 [TypeConverter 클래스](#the-typeconverter-class) 섹션을 참조하세요.  
 
-## <a name="implicit-conversion-with-the-implicit-operator"></a>암시적 연산자를 사용한 암시적 변환  
- 확대 변환에는 대상 형식보다 제한적인 범위나 제한적인 멤버 목록이 있는 기존 형식의 값에서 새 값을 만드는 작업이 포함됩니다. 확대 변환을 수행하면 정밀도 손실은 발생할 수 있어도 데이터 손실은 발생할 수 없습니다. 데이터 손실이 발생할 수 없기 때문에 컴파일러에서 명시적 변환 메서드나 캐스팅 연산자를 사용할 필요 없이 변환을 암시적이나 투명하게 처리할 수 있습니다.  
+## <a name="implicit-conversion-with-the-implicit-operator"></a>암시적 연산자를 사용한 암시적 변환
+
+확대 변환에는 대상 형식보다 제한적인 범위나 제한적인 멤버 목록이 있는 기존 형식의 값에서 새 값을 만드는 작업이 포함됩니다. 확대 변환을 수행하면 정밀도 손실은 발생할 수 있어도 데이터 손실은 발생할 수 없습니다. 데이터 손실이 발생할 수 없기 때문에 컴파일러에서 명시적 변환 메서드나 캐스팅 연산자를 사용할 필요 없이 변환을 암시적이나 투명하게 처리할 수 있습니다.  
   
 > [!NOTE]
 > 암시적 변환을 수행하는 코드에서 변환 메서드를 호출하거나 캐스팅 연산자를 사용할 수 있지만 암시적 변환을 지원하는 컴파일러에서는 이렇게 할 필요가 없습니다.  
@@ -78,8 +80,9 @@ ms.locfileid: "84769225"
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
 
-## <a name="explicit-conversion-with-the-explicit-operator"></a>명시적 연산자를 사용한 명시적 변환  
- 축소 변환에는 대상 형식보다 큰 범위나 큰 멤버 목록이 있는 기존 형식의 값에서 새 값을 만드는 작업이 포함됩니다. 축소 변환을 수행하면 데이터 손실이 발생할 수 있기 때문에 컴파일러에서 변환 메서드 호출이나 캐스팅 연산자를 통해 명시적으로 변환을 수행하도록 요구하는 경우가 많습니다. 즉, 개발자 코드에서 변환이 명시적으로 처리되어야 합니다.  
+## <a name="explicit-conversion-with-the-explicit-operator"></a>명시적 연산자를 사용한 명시적 변환
+
+축소 변환에는 대상 형식보다 큰 범위나 큰 멤버 목록이 있는 기존 형식의 값에서 새 값을 만드는 작업이 포함됩니다. 축소 변환을 수행하면 데이터 손실이 발생할 수 있기 때문에 컴파일러에서 변환 메서드 호출이나 캐스팅 연산자를 통해 명시적으로 변환을 수행하도록 요구하는 경우가 많습니다. 즉, 개발자 코드에서 변환이 명시적으로 처리되어야 합니다.  
   
 > [!NOTE]
 > 축소 변환에 변환 메서드나 캐스팅 연산자를 요구하는 주요 목적은 개발자가 데이터 손실이나 <xref:System.OverflowException>의 가능성을 인식하여 코드에서 처리할 수 있게 하는 것입니다. 그러나 일부 컴파일러에서는 이 요구 사항을 완화할 수 있습니다. 예를 들어, Visual Basic에서 `Option Strict`가 해제(기본 설정)되면 Visual Basic 컴파일러에서 축소 변환을 암시적으로 수행하려고 합니다.  
@@ -92,12 +95,12 @@ ms.locfileid: "84769225"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>가 <xref:System.Int32.MaxValue?displayProperty=nameWithType>보다 큰 경우|  
   
- 이러한 축소 변환을 처리하기 위해 .NET Framework에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. (<xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#the-convert-class)를 참조하세요.) 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
+ 이러한 축소 변환을 처리하기 위해 .NET에서는 형식에서 `Explicit` 연산자를 정의할 수 있게 합니다. 그러면 개별 언어 컴파일러에서 고유 구문을 사용하여 이 연산자를 구현할 수 있거나 변환을 수행하기 위해 <xref:System.Convert> 클래스의 멤버가 호출될 수 있습니다. (<xref:System.Convert> 클래스에 대한 자세한 내용은 이 항목의 뒷부분에서 [Convert 클래스](#the-convert-class)를 참조하세요.) 다음 예제에서는 언어 기능을 사용하여 범위를 벗어날 수 있는 이러한 정수 값을 <xref:System.Int32> 값으로 명시적으로 변환하는 작업을 처리하는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
   
- 명시적 변환의 결과는 언어마다 다를 수 있으며 해당 <xref:System.Convert> 메서드에서 반환하는 값에 따라서도 다를 수 있습니다. 예를 들어, <xref:System.Double> 값 12.63251이 <xref:System.Int32>로 변환되면 Visual Basic `CInt` 메서드와 .NET Framework <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> 메서드는 <xref:System.Double>을 반올림하여 값 13을 반환하지만 C# `(int)` 연산자는 <xref:System.Double>을 잘라 값 12를 반환합니다. 마찬가지로 C# `(int)` 연산자는 부울을 정수로 변환하는 것을 지원하지만 Visual Basic `CInt` 메서드는 값 `true`를 -1로 변환합니다. 반면에 <xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> 메서드는 값 `true`를 1로 변환합니다.  
+ 명시적 변환의 결과는 언어마다 다를 수 있으며 해당 <xref:System.Convert> 메서드에서 반환하는 값에 따라서도 다를 수 있습니다. 예를 들어 <xref:System.Double> 값 12.63251이 <xref:System.Int32>로 변환되면 Visual Basic `CInt` 메서드와 .NET <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> 메서드는 <xref:System.Double>을 반올림하여 값 13을 반환하지만 C# `(int)` 연산자는 <xref:System.Double>을 잘라 값 12를 반환합니다. 마찬가지로 C# `(int)` 연산자는 부울을 정수로 변환하는 것을 지원하지만 Visual Basic `CInt` 메서드는 값 `true`를 -1로 변환합니다. 반면에 <xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> 메서드는 값 `true`를 1로 변환합니다.  
   
  대부분의 컴파일러에서는 검사 변환 방식이나 비검사 변환 방식으로 명시적 변환을 수행할 수 있습니다. 검사 변환을 수행하는 경우 변환할 형식의 값이 대상 형식의 범위를 벗어나면 <xref:System.OverflowException>이 throw됩니다. 같은 조건에서 비검사 변환을 수행하면 예외가 throw되지는 않지만 정확한 동작이 정의되지 않으며 잘못된 결과 값이 생성될 수 있습니다.  
   
@@ -118,8 +121,9 @@ ms.locfileid: "84769225"
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
 
-## <a name="the-iconvertible-interface"></a>IConvertible 인터페이스  
- 형식을 공용 언어 런타임 기본 형식으로 변환하는 작업을 지원하기 위해 .NET Framework에서는 <xref:System.IConvertible> 인터페이스를 제공합니다. 구현하는 형식은 다음을 제공해야 합니다.  
+## <a name="the-iconvertible-interface"></a>IConvertible 인터페이스
+
+형식을 공용 언어 런타임 기본 형식으로 변환하는 작업을 지원하기 위해 .NET에서는 <xref:System.IConvertible> 인터페이스를 제공합니다. 구현하는 형식은 다음을 제공해야 합니다.  
   
 - 구현하는 형식의 <xref:System.TypeCode>를 반환하는 메서드  
   
@@ -135,20 +139,22 @@ ms.locfileid: "84769225"
  구현하는 형식이 아니라 인터페이스에 대해 변환 메서드를 호출해야 하기 때문에 명시적 인터페이스 구현 비용이 비교적 높아집니다. 따라서 공용 언어 런타임 기본 형식 간에 변환하려면 이 방법 대신 <xref:System.Convert> 클래스의 적절한 멤버를 호출하는 것이 좋습니다. 자세한 내용은 다음에 나오는 [Convert 클래스](#the-convert-class) 섹션을 참조하세요.  
   
 > [!NOTE]
-> .NET Framework에서 제공하는 <xref:System.Convert> 클래스와 <xref:System.IConvertible> 인터페이스 외에도 개별 언어에서 변환을 수행하는 방법을 제공할 수 있습니다. 예를 들어, C#에서는 캐스팅 연산자가 사용되고, Visual Basic에서는 `CType`, `CInt` 및 `DirectCast` 등의 컴파일러 구현 변환 함수가 사용됩니다.  
+> .NET에서 제공하는 <xref:System.Convert> 클래스와 <xref:System.IConvertible> 인터페이스 외에도 개별 언어에서 변환을 수행하는 방법을 제공할 수 있습니다. 예를 들어, C#에서는 캐스팅 연산자가 사용되고, Visual Basic에서는 `CType`, `CInt` 및 `DirectCast` 등의 컴파일러 구현 변환 함수가 사용됩니다.  
   
- 대부분의 경우 <xref:System.IConvertible> 인터페이스는 .NET Framework에서 기본 형식 간의 변환을 지원하도록 설계되었습니다. 그러나 사용자 지정 형식에서도 이 인터페이스를 구현하여 해당 사용자 지정 형식을 다른 사용자 지정 형식으로 변환하는 작업을 지원할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [ChangeType 메서드를 사용한 사용자 지정 변환](#custom-conversions-with-the-changetype-method) 섹션을 참조하세요.
+ 대부분의 경우 <xref:System.IConvertible> 인터페이스는 .NET에서 기본 형식 간의 변환을 지원하도록 설계되었습니다. 그러나 사용자 지정 형식에서도 이 인터페이스를 구현하여 해당 사용자 지정 형식을 다른 사용자 지정 형식으로 변환하는 작업을 지원할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [ChangeType 메서드를 사용한 사용자 지정 변환](#custom-conversions-with-the-changetype-method) 섹션을 참조하세요.
 
 ## <a name="the-convert-class"></a>Convert 클래스
- 각 기본 형식의 <xref:System.IConvertible> 인터페이스 구현을 호출하여 형식 변환을 수행할 수 있지만 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 호출하는 것이 한 기본 형식에서 다른 형식으로 변환하는 데 권장되는 언어와 무관한 방법입니다. 또한 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 사용하여 지정된 사용자 지정 형식을 다른 형식으로 변환할 수 있습니다.  
+
+각 기본 형식의 <xref:System.IConvertible> 인터페이스 구현을 호출하여 형식 변환을 수행할 수 있지만 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 호출하는 것이 한 기본 형식에서 다른 형식으로 변환하는 데 권장되는 언어와 무관한 방법입니다. 또한 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드를 사용하여 지정된 사용자 지정 형식을 다른 형식으로 변환할 수 있습니다.  
   
-### <a name="conversions-between-base-types"></a>기본 형식 간 변환  
- <xref:System.Convert> 클래스를 사용하여 언어와 무관하게 기본 형식 간의 변환을 수행할 수 있으므로 공용 언어 런타임을 대상으로 하는 모든 언어에서 이 클래스를 사용할 수 있습니다. 이 클래스는 확대 및 축소 변환을 위한 전체 메서드 집합을 제공하며 지원되지 않는 변환(<xref:System.InvalidCastException> 값을 정수 값으로 변환하는 등)의 경우 <xref:System.DateTime>을 throw합니다. 축소 변환은 checked 컨텍스트에서 수행되며 변환이 실패하는 경우 <xref:System.OverflowException>이 throw됩니다.  
+### <a name="conversions-between-base-types"></a>기본 형식 간 변환
+
+<xref:System.Convert> 클래스를 사용하여 언어와 무관하게 기본 형식 간의 변환을 수행할 수 있으므로 공용 언어 런타임을 대상으로 하는 모든 언어에서 이 클래스를 사용할 수 있습니다. 이 클래스는 확대 및 축소 변환을 위한 전체 메서드 집합을 제공하며 지원되지 않는 변환(<xref:System.InvalidCastException> 값을 정수 값으로 변환하는 등)의 경우 <xref:System.DateTime>을 throw합니다. 축소 변환은 checked 컨텍스트에서 수행되며 변환이 실패하는 경우 <xref:System.OverflowException>이 throw됩니다.  
   
 > [!IMPORTANT]
 > <xref:System.Convert> 클래스에 각 기본 형식으로 변환하거나 각 기본 형식에서 변환하는 메서드가 포함되어 있기 때문에 각 기본 형식의 <xref:System.IConvertible> 명시적 인터페이스 구현을 호출할 필요가 없습니다.  
   
- 다음 예제에서는 <xref:System.Convert?displayProperty=nameWithType> 클래스를 사용하여 .NET Framework 기본 형식 간의 몇 가지 축소 및 확대 변환을 수행하는 방법을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Convert?displayProperty=nameWithType> 클래스를 사용하여 .NET 기본 형식 간의 몇 가지 확대 및 축소 변환을 수행하는 방법을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Conversion#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#8)]
  [!code-vb[Conceptual.Conversion#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#8)]  
@@ -160,8 +166,9 @@ ms.locfileid: "84769225"
   
  <xref:System.Convert> 클래스에서 지원하는 확대 및 축소 변환의 목록이 포함된 표는 [형식 변환표](conversion-tables.md)를 참조하세요.  
 
-### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType 메서드를 사용한 사용자 지정 변환  
- 각 기본 형식에 대한 변환을 지원하는 것 외에도 <xref:System.Convert> 클래스를 사용하여 사용자 지정 형식을 하나 이상의 미리 정의된 형식으로 변환할 수 있습니다. 이 변환은 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드로 수행됩니다. 이 메서드는 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 매개 변수의 `value` 메서드에 대한 호출을 래핑합니다. 즉, `value` 매개 변수가 나타내는 개체가 <xref:System.IConvertible> 인터페이스의 구현을 제공해야 합니다.  
+### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType 메서드를 사용한 사용자 지정 변환
+
+각 기본 형식에 대한 변환을 지원하는 것 외에도 <xref:System.Convert> 클래스를 사용하여 사용자 지정 형식을 하나 이상의 미리 정의된 형식으로 변환할 수 있습니다. 이 변환은 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드로 수행됩니다. 이 메서드는 <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> 매개 변수의 `value` 메서드에 대한 호출을 래핑합니다. 즉, `value` 매개 변수가 나타내는 개체가 <xref:System.IConvertible> 인터페이스의 구현을 제공해야 합니다.  
   
 > [!NOTE]
 > <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> 및 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드는 <xref:System.Type> 개체를 사용하여 `value`가 변환되는 대상 값을 지정하기 때문에, 이런 메서드를 사용하여 컴파일 타임에 형식을 알 수 없는 개체로 동적 변환을 수행할 수 있습니다. 하지만, <xref:System.IConvertible>의 `value` 구현에서는 이 변환을 계속 지원해야 합니다.  
@@ -176,8 +183,9 @@ ms.locfileid: "84769225"
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
 
-## <a name="the-typeconverter-class"></a>TypeConverter 클래스  
- .NET Framework에서는 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> 클래스를 확장하고 <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 특성을 통해 형식 변환기를 해당 형식과 연결하여 사용자 지정 형식에 대한 형식 변환기를 정의할 수 있습니다. 다음 표에는 이 방법과 사용자 지정 형식에 대한 <xref:System.IConvertible> 인터페이스를 구현하는 방법의 차이점이 나와 있습니다.  
+## <a name="the-typeconverter-class"></a>TypeConverter 클래스
+
+.NET에서는 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> 클래스를 확장하고 <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> 특성을 통해 형식 변환기를 해당 형식과 연결하여 사용자 지정 형식에 대한 형식 변환기를 정의할 수 있습니다. 다음 표에는 이 방법과 사용자 지정 형식에 대한 <xref:System.IConvertible> 인터페이스를 구현하는 방법의 차이점이 나와 있습니다.  
   
 > [!NOTE]
 > 사용자 지정 형식에 대해 형식 변환기가 정의되어 있는 경우에만 사용자 지정 형식에 디자인 타임 지원이 제공될 수 있습니다.  

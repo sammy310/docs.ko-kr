@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599804"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188044"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET에서 I/O 오류 처리
 
@@ -46,7 +46,7 @@ ms.locfileid: "84599804"
 
 이러한 운영 체제 사용 때문에 예제의 디렉터리를 찾을 수 없음 오류와 같은 동일한 예외 조건에서 I/O 메서드가 I/O 예외의 전체 클래스 중 하나를 임의로 throw할 수 있습니다. 따라서 I/O API를 호출할 때 다음 표와 같이 이러한 예외를 대부분 또는 모두 처리할 수 있도록 코드를 준비해야 합니다.
 
-| 예외 형식 | .NET Core | .NET Framework |
+| 예외 형식 | .NET Core/.NET 5 이상 | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | 예 | 예 |
 | <xref:System.IO.FileNotFoundException> | 예 | 예 |

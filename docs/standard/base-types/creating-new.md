@@ -11,18 +11,19 @@ helpviewer_keywords:
 - Join method
 - Format method
 - Concat method
-- strings [.NET Framework], creating
+- strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596450"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889441"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET에서 새 문자열 만들기
-.NET Framework에서는 간단한 할당을 사용하여 문자열을 만들 수 있으며, 클래스 생성자를 오버로드하여 여러 다양한 매개 변수를 사용한 문자열 생성도 지원합니다. 또한 .NET Framework에서는 여러 문자열, 문자열 배열 또는 개체를 결합하여 새 문자열 개체를 만드는 여러 메서드를 <xref:System.String?displayProperty=nameWithType> 클래스에서 제공합니다.  
+
+.NET에서는 단순한 할당을 사용하여 문자열을 만들 수 있으며 다양한 매개 변수를 사용한 문자열 생성을 지원하기 위해 클래스 생성자도 오버로드됩니다. 또한 .NET에서는 여러 문자열, 문자열 배열 또는 개체를 결합하여 새 문자열 개체를 만드는 여러 메서드를 <xref:System.String?displayProperty=nameWithType> 클래스에서 제공합니다.  
   
 ## <a name="creating-strings-using-assignment"></a>할당을 사용하여 문자열 만들기  
  새 <xref:System.String> 개체를 만드는 가장 쉬운 방법은 간단히 <xref:System.String> 개체에 문자열 리터럴을 할당하는 것입니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "84596450"
  이 예제에서 <xref:System.DateTime.Now%2A?displayProperty=nameWithType>는 현재 스레드와 연결된 문화권에서 지정된 방식으로 현재 날짜와 시간을 표시합니다.  
   
 ### <a name="concat"></a>Concat  
- **String.Concat** 메서드를 사용하여 둘 이상의 기존 개체에서 새 문자열 개체를 쉽게 만들 수 있습니다. 문자열을 연결하는 언어 독립적인 방법을 제공합니다. 이 메서드는 **System.Object**에서 파생된 모든 클래스를 허용합니다. 다음 예제에서는 두 개의 기존 문자열 개체와 구분 문자에서 문자열을 만듭니다.  
+ **String.Concat** 메서드를 사용하여 둘 이상의 기존 개체에서 새 문자열 개체를 쉽게 만들 수 있습니다. 문자열을 연결하는 언어 독립적인 방법을 제공합니다. 이 메서드는 **System.Object** 에서 파생된 모든 클래스를 허용합니다. 다음 예제에서는 두 개의 기존 문자열 개체와 구분 문자에서 문자열을 만듭니다.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  

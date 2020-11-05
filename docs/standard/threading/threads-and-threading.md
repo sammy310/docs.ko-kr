@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583403"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188135"
 ---
 # <a name="threads-and-threading"></a>스레드 및 스레딩
 
@@ -21,10 +21,10 @@ ms.locfileid: "84583403"
 
 ## <a name="processes-and-threads"></a>프로세스 및 스레드
 
-*프로세스*는 실행 중인 프로그램입니다. 운영 체제는 프로세스를 사용하여 실행 중인 애플리케이션을 분리합니다. *스레드*는 운영 체제가 프로세서 시간을 할당하는 기본 단위입니다. 각 스레드에는 [예약 우선 순위](scheduling-threads.md)가 있어서 스레드 실행이 일시 중지될 때 스레드 컨텍스트를 저장하는 데 시스템에서 사용하는 일련의 구조를 유지 관리합니다. 스레드 컨텍스트에는 스레드의 CPU 레지스터 및 스택 세트를 포함하여 스레드가 실행을 원활하게 재개하는 데 필요한 모든 정보가 포함됩니다. 다중 스레드는 프로세스의 컨텍스트에서 실행될 수 있습니다. 프로세스의 모든 스레드는 해당 가상 주소 공간을 공유합니다. 스레드는 다른 스레드에 의해 현재 실행 중인 부분을 포함한 프로그램 코드의 일부를 실행할 수 있습니다.
+*프로세스* 는 실행 중인 프로그램입니다. 운영 체제는 프로세스를 사용하여 실행 중인 애플리케이션을 분리합니다. *스레드* 는 운영 체제가 프로세서 시간을 할당하는 기본 단위입니다. 각 스레드에는 [예약 우선 순위](scheduling-threads.md)가 있어서 스레드 실행이 일시 중지될 때 스레드 컨텍스트를 저장하는 데 시스템에서 사용하는 일련의 구조를 유지 관리합니다. 스레드 컨텍스트에는 스레드의 CPU 레지스터 및 스택 세트를 포함하여 스레드가 실행을 원활하게 재개하는 데 필요한 모든 정보가 포함됩니다. 다중 스레드는 프로세스의 컨텍스트에서 실행될 수 있습니다. 프로세스의 모든 스레드는 해당 가상 주소 공간을 공유합니다. 스레드는 다른 스레드에 의해 현재 실행 중인 부분을 포함한 프로그램 코드의 일부를 실행할 수 있습니다.
 
 > [!NOTE]
-> .NET Framework에서는 *애플리케이션 도메인*을 사용하여 프로세스 내에서 애플리케이션을 격리하는 방법을 제공합니다. (애플리케이션 도메인은 .NET Core에서 사용할 수 없습니다.) 자세한 내용은 [애플리케이션 도메인](../../framework/app-domains/application-domains.md) 문서의 [애플리케이션 도메인 및 스레드](../../framework/app-domains/application-domains.md#application-domains-and-threads) 섹션을 참조하세요.
+> .NET Framework에서는 ‘애플리케이션 도메인’을 사용하여 프로세스 내에서 애플리케이션을 격리하는 방법을 제공합니다. (애플리케이션 도메인은 .NET Core에서 사용할 수 없습니다.) 자세한 내용은 [애플리케이션 도메인](../../framework/app-domains/application-domains.md) 문서의 [애플리케이션 도메인 및 스레드](../../framework/app-domains/application-domains.md#application-domains-and-threads) 섹션을 참조하세요.
 
 기본적으로 .NET 프로그램은 *주* 스레드라고도 하는 단일 스레드에서 시작됩니다. 그러나 추가 스레드를 만들어서 기본 스레드에서 병렬로 또는 동시에 코드를 실행할 수 있습니다. 이러한 스레드를 일반적으로 *작업자* 스레드라고 합니다.
 

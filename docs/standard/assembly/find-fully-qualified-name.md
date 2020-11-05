@@ -1,22 +1,22 @@
 ---
 title: '방법: 어셈블리의 정규화된 이름 찾기'
-description: 이 문서에서는 .NET Framework 어셈블리 또는 .NET Core 어셈블리의 정규화된 이름을 가져오는 방법을 보여 줍니다.
+description: 이 문서에서는 .NET 어셈블리의 정규화된 이름을 가져오는 방법을 보여 줍니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- names [.NET Framework], fully qualified type names
-- names [.NET Framework], assemblies
-- assemblies [.NET Framework], names
+- names [.NET], fully qualified type names
+- names [.NET], assemblies
+- assemblies [.NET], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 346d50dc7f279ce46c9803ad60479d3111739c25
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 223def7d992f5fae64c95aa6886f20980184eddc
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378939"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687614"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>방법: 어셈블리의 정규화된 이름 찾기
 

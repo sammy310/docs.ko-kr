@@ -5,25 +5,25 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
-- threading [.NET Framework], multiple threads
-- threading [.NET Framework], about threading
+- threading [.NET], multiple threads
+- threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769095"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189136"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 
-이 섹션의 처음 5개 항목은 관리형 스레딩을 사용할 시기를 결정하는 데 도움을 주고 몇 가지 기본 기능을 설명하도록 설계되었습니다. 추가 기능을 제공하는 클래스에 대한 내용은 [스레딩 개체 및 기능](threading-objects-and-features.md) 및 [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
+이 섹션의 처음 5개 문서는 관리형 스레딩을 사용할 시기를 결정하는 데 도움을 주고 몇 가지 기본 기능을 설명하도록 설계되었습니다. 추가 기능을 제공하는 클래스에 대한 내용은 [스레딩 개체 및 기능](threading-objects-and-features.md) 및 [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
   
- 이 섹션의 나머지 항목에서는 Windows 운영 체제와 관리되는 스레딩의 상호 작용을 비롯한 고급 주제를 다룹니다.  
+ 나머지 문서에서는 Windows 운영 체제와 관리형 스레딩의 상호 작용을 비롯한 고급 주제를 다룹니다.  
   
 > [!NOTE]
-> .NET Framework 4에서 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
+> .NET Framework 4부터 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그램에서 작업 및 데이터 병렬 처리를 위한 API를 제공합니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>단원 내용
 
@@ -31,7 +31,7 @@ ms.locfileid: "84769095"
  다중 스레드의 장단점에 대해 설명하고 스레드를 만들거나 스레드 풀 스레드를 사용할 수 있는 시나리오를 간략하게 설명합니다.  
   
  [관리되는 스레드의 예외](exceptions-in-managed-threads.md)  
- .NET Framework의 여러 버전에 대해 스레드의 처리되지 않은 예외의 동작(특히 애플리케이션 종료를 발생시키는 상황에서)에 대해 설명합니다.  
+ .NET의 여러 버전에 대해 스레드의 처리되지 않은 예외의 동작(특히 애플리케이션 종료를 발생시키는 상황에서)에 대해 설명합니다.  
   
  [다중 스레딩을 위한 데이터 동기화](synchronizing-data-for-multithreading.md)  
  다중 스레드에서 사용할 클래스의 데이터를 동기화하기 위한 전략에 대해 설명합니다.  
@@ -62,4 +62,4 @@ ms.locfileid: "84769095"
  문제를 피할 수 있도록 다중 스레딩 및 전략에 대한 일반적인 문제를 설명합니다.  
   
  [병렬 프로그래밍](../parallel-programming/index.md)  
- 비동기 및 다중 스레드 .NET Framework 애플리케이션을 만드는 작업을 크게 간소화하는 작업 병렬 라이브러리 및 PLINQ에 대해 설명합니다.
+ 비동기 및 다중 스레드 .NET 애플리케이션을 만드는 작업을 크게 간소화하는 작업 병렬 라이브러리 및 PLINQ에 대해 설명합니다.

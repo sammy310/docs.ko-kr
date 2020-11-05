@@ -5,20 +5,21 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: f9c130b73044440f24b7b8bbebe9527490a165c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288526"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925326"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
-.NET Framework 버전 4에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 새로운 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 애플리케이션 코드와 함께 사용할 수 있습니다.  
+
+.NET에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 애플리케이션 코드와 함께 사용할 수 있습니다.  
   
 ## <a name="concurrent-collection-classes"></a>동시 컬렉션 클래스  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스는 가능한 경우 항상 잠금을 방지하고 잠금이 필요한 경우 세분화된 잠금을 사용하는 스레드로부터 안전한 추가 및 제거 작업을 제공합니다. .NET Framework 버전 1.0 및 2.0에 도입된 컬렉션과 달리 동시 컬렉션 클래스에는 항목에 액세스할 때 잠금을 획득하기 위한 사용자 코드가 필요하지 않습니다. 동시 컬렉션 클래스는 여러 스레드가 컬렉션에서 항목을 추가하고 제거하는 시나리오에서 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>(사용자가 구현한 잠금 사용)와 같은 형식보다 성능을 크게 개선할 수 있습니다.  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스는 가능한 경우 항상 잠금을 방지하고 잠금이 필요한 경우 세분화된 잠금을 사용하는 스레드로부터 안전한 추가 및 제거 작업을 제공합니다. 동시 컬렉션 클래스는 항목에 액세스할 때 사용자 코드가 잠금을 수행하도록 요구하지 않습니다. 동시 컬렉션 클래스는 여러 스레드가 컬렉션에서 항목을 추가하고 제거하는 시나리오에서 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>(사용자가 구현한 잠금 사용)와 같은 형식보다 성능을 크게 개선할 수 있습니다.  
   
- 다음 표에는 새로운 동시 컬렉션 클래스가 나와 있습니다.  
+ 다음 표에는 동시 컬렉션 클래스가 나와 있습니다.  
   
 |형식|설명|  
 |----------|-----------------|  
@@ -31,17 +32,17 @@ ms.locfileid: "84288526"
  자세한 내용은 [스레드로부터 안전한 컬렉션](../collections/thread-safe/index.md)을 참조하세요.  
   
 ## <a name="synchronization-primitives"></a>동기화 기본 형식  
- <xref:System.Threading?displayProperty=nameWithType> 네임스페이스의 새 동기화 기본 형식은 레거시 다중 스레딩 코드에 있는 비용이 많이 드는 잠금 메커니즘을 방지하여 세분화된 동시성과 더 빠른 성능을 제공할 수 있습니다. <xref:System.Threading.Barrier?displayProperty=nameWithType> 및 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>와 같은 일부 새로운 형식은 이전 릴리스의 .NET Framework에는 해당하는 항목이 없습니다.  
+ <xref:System.Threading?displayProperty=nameWithType> 네임스페이스의 동기화 기본 형식은 레거시 다중 스레딩 코드에 있는 비용이 많이 드는 잠금 메커니즘을 방지하여 세분화된 동시성과 더 빠른 성능을 제공할 수 있습니다.
   
- 다음 표에는 새 동기화 형식이 나와 있습니다.  
+ 다음 표에는 동기화 형식이 나와 있습니다.  
   
-|형식|설명|  
+|유형|Description|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|각 작업이 도착에 대한 신호를 보낸 다음, 일부 또는 모든 작업이 도착할 때까지 차단될 수 있는 지점을 제공하여 여러 스레드가 하나의 알고리즘에서 병렬로 작동하도록 합니다. 자세한 내용은 [Barrier](../threading/barrier.md)를 참조하세요.|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|쉽게 랑데부 메커니즘을 제공하여 포크 및 조인 시나리오를 간소화합니다. 자세한 내용은 [CountdownEvent](../threading/countdownevent.md)를 참조하세요.|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>와 유사한 동기화 기본 형식입니다. <xref:System.Threading.ManualResetEventSlim>은 더 간단하지만 프로세스 간 통신에만 사용할 수 있습니다.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|리소스 또는 리소스 풀에 동시에 액세스할 수 있는 스레드 수를 제한하는 동기화 기본 형식입니다. 자세한 내용은 [세마포 및 SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md)을 참조하세요.|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|퀀텀을 일시 중단하기 전에 일정 시간 동안 잠금을 획득하려고 시도 중인 스레드가 루프 또는 ‘스핀’에서 대기하도록 하는 상호 배제 잠금 기본 형식입니다.  잠금 대기가 짧아야 하는 시나리오에서 <xref:System.Threading.SpinLock>은 다른 형태의 잠금보다 향상된 성능을 제공합니다. 자세한 내용은 [SpinLock](../threading/spinlock.md)을 참조하세요.|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|퀀텀을 일시 중단하기 전에 일정 시간 동안 잠금을 획득하려고 시도 중인 스레드가 루프 또는 ‘스핀’에서 대기하도록 하는 상호 배제 잠금 기본 형식입니다. 잠금 대기가 짧아야 하는 시나리오에서 <xref:System.Threading.SpinLock>은 다른 형태의 잠금보다 향상된 성능을 제공합니다. 자세한 내용은 [SpinLock](../threading/spinlock.md)을 참조하세요.|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|지정된 시간 동안 스핀하고 스핀 수를 초과하는 경우 결국 스레드를 대기 상태로 전환하는 작고 간단한 형식입니다.  자세한 내용은 [SpinWait](../threading/spinwait.md)을 참조하세요.|  
   
  자세한 내용은 다음을 참조하십시오.  
@@ -55,7 +56,7 @@ ms.locfileid: "84288526"
   
  다음 표에는 초기화 지연 형식이 나와 있습니다.  
   
-|형식|설명|  
+|유형|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|간단하고 스레드로부터 안전한 초기화 지연을 제공합니다.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|각 스레드가 초기화 함수 호출을 지연시켜 스레드별 기준으로 초기화가 지연된 값을 제공합니다.|  
@@ -66,7 +67,7 @@ ms.locfileid: "84288526"
 ## <a name="aggregate-exceptions"></a>집계 예외  
  <xref:System.AggregateException?displayProperty=nameWithType> 형식은 개별 스레드에서 동시에 throw되는 여러 예외를 캡처하고 조인 스레드에 단일 예외로 반환하는 데 사용할 수 있습니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 형식과 PLINQ는 이 용도로 <xref:System.AggregateException>을 광범위하게 사용합니다. 자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md) 및 [방법: PLINQ 쿼리의 예외 처리](how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - <xref:System.Threading?displayProperty=nameWithType>

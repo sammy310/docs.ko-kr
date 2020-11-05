@@ -6,18 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289358"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888778"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 구현
 TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있습니다. 즉 Visual Studio에서 C# 또는 Visual Basic 컴파일러를 사용하여 구현하거나, 수동으로 구현하거나, 컴파일러와 수동 방식을 함께 사용하여 구현할 수 있습니다. 다음 섹션에서는 각 방법에 대해 자세히 설명합니다. TAP 패턴을 사용하면 컴퓨팅 바운드 및 I/O 바운드 비동기 작업을 모두 구현할 수 있습니다. 각 작업 유형에 대해서는 [워크로드](#workloads) 섹션에서 설명합니다.
@@ -34,7 +33,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>혼합 방식
- TAP 패턴은 수동으로 구현하되 구현의 핵심 논리를 컴파일러에 위임하면 유용할 수 있습니다. 예를 들어 예외가 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 통해 노출되는 대신 메서드의 직접 호출자로 이스케이프될 수 있도록 컴파일러 생성 비동기 메서드 외부에서 인수를 확인하려는 경우 혼합 방식을 사용할 수 있습니다.
+ TAP 패턴은 수동으로 구현하되 구현의 핵심 논리를 컴파일러에 위임하면 유용할 수 있습니다. 예를 들어 예외가 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 통해 공개되는 대신 메서드의 직접 호출자로 이스케이프될 수 있도록 컴파일러 생성 비동기 메서드 외부에서 인수를 확인하려는 경우 혼합 방식을 사용하는 것이 좋습니다.
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
  [!code-vb[Conceptual.TAP_Patterns#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#2)]
@@ -49,9 +48,9 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 
 다음과 같은 방법으로 컴퓨팅 바인딩 작업을 생성할 수 있습니다.
 
-- .NET Framework 4에서 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 사용합니다. 이 메서드는 비동기식으로 실행할 대리자(일반적으로 <xref:System.Action%601> 또는 <xref:System.Func%601>)를 수락합니다. <xref:System.Action%601> 대리자를 제공하는 경우 메서드는 해당 대리자의 비동기 실행을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 반환합니다. <xref:System.Func%601> 대리자를 제공하는 경우 메서드는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환합니다. <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 메서드의 오버로드는 취소 토큰(<xref:System.Threading.CancellationToken>), 작업 만들기 옵션(<xref:System.Threading.Tasks.TaskCreationOptions>) 및 작업 스케줄러(<xref:System.Threading.Tasks.TaskScheduler>)를 수락합니다. 이러한 모든 항목은 작업 예약과 실행에 대한 세분화된 제어 기능을 제공합니다. 현재 작업 스케줄러를 대상으로 하는 팩터리 인스턴스는 <xref:System.Threading.Tasks.Task.Factory%2A> 클래스의 정적 속성(<xref:System.Threading.Tasks.Task>)으로 사용 가능합니다. 예를 들면 `Task.Factory.StartNew(…)`와 같습니다.
+- .NET Framework 4.5 이상 버전(.NET Core 및 .NET 5 이상 포함)에서는 정적 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드를 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>의 바로 가기로 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A>을 사용하여 스레드 풀을 대상으로 하는 컴퓨트 바운드 작업을 쉽게 시작할 수 있습니다. 기본적으로 이 메커니즘을 통해 컴퓨팅 바인딩된 작업을 시작합니다. 작업에 대해 더욱 세분화된 제어가 필요할 때만 `StartNew`를 직접 사용합니다.
 
-- .NET Framework 4.5 이상 버전(.NET Core 및 .NET Standard 포함)에서는 정적 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드를 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>의 바로 가기로 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A>을 사용하여 스레드 풀을 대상으로 하는 컴퓨트 바운드 작업을 쉽게 시작할 수 있습니다. .NET Framework 4.5 이상 버전에서는 기본적으로 이 메커니즘을 통해 컴퓨팅 바운드 작업을 시작합니다. 작업에 대해 더욱 세분화된 제어가 필요할 때만 `StartNew`를 직접 사용합니다.
+- .NET Framework 4에서 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 사용합니다. 이 메서드는 비동기식으로 실행할 대리자(일반적으로 <xref:System.Action%601> 또는 <xref:System.Func%601>)를 수락합니다. <xref:System.Action%601> 대리자를 제공하는 경우 메서드는 해당 대리자의 비동기 실행을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 반환합니다. <xref:System.Func%601> 대리자를 제공하는 경우 메서드는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환합니다. <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 메서드의 오버로드는 취소 토큰(<xref:System.Threading.CancellationToken>), 작업 만들기 옵션(<xref:System.Threading.Tasks.TaskCreationOptions>) 및 작업 스케줄러(<xref:System.Threading.Tasks.TaskScheduler>)를 수락합니다. 이러한 모든 항목은 작업 예약과 실행에 대한 세분화된 제어 기능을 제공합니다. 현재 작업 스케줄러를 대상으로 하는 팩터리 인스턴스는 <xref:System.Threading.Tasks.Task.Factory%2A> 클래스의 정적 속성(<xref:System.Threading.Tasks.Task>)으로 사용 가능합니다. 예를 들면 `Task.Factory.StartNew(…)`와 같습니다.
 
 - 작업을 개별적으로 생성하고 예약하려는 경우 `Task` 형식 또는 `Start` 메서드의 생성자를 사용합니다. 공용 메서드는 이미 시작된 작업만 반환해야 합니다.
 
@@ -82,7 +81,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-.NET Framework 4.5부터는 이러한 용도로 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 메서드가 제공되며, 예를 들어 다른 비동기 메서드 내에서 해당 메서드를 사용하여 비동기 폴링 루프를 구현할 수 있습니다.
+해당 용도로 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 메서드가 제공되며, 예를 들어 다른 비동기 메서드 내에서 해당 메서드를 사용하여 비동기 폴링 루프를 구현할 수 있습니다.
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]

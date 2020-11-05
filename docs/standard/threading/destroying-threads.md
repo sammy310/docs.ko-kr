@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - destroying threads
-- threading [.NET Framework], destroying threads
+- threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768510"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188369"
 ---
 # <a name="destroying-threads"></a>스레드 제거
 
-스레드의 실행을 종료하려면 일반적으로 [협조적 취소 모델](cancellation-in-managed-threads.md)을 사용합니다. 경우에 따라 스레드의 협조적 중지가 불가할 수 있는데, 이는 협조적 취소를 위해 설계되지 않은 타사 코드를 실행하기 때문입니다. .NET Framework의 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 사용하여 관리되는 스레드를 강제로 종료할 수 있습니다. <xref:System.Threading.Thread.Abort%2A>를 호출할 때 공용 언어 런타임이 대상 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw하며, 대상 스레드가 이를 catch할 수 있습니다. 자세한 내용은 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 참조하세요. .NET Core는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 지원하지 않습니다. .NET Core에서 강제로 타사 코드 실행을 종료해야 하는 경우 별도의 프로세스에서 실행하고 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>를 사용합니다.
+스레드의 실행을 종료하려면 일반적으로 [협조적 취소 모델](cancellation-in-managed-threads.md)을 사용합니다. 경우에 따라 스레드의 협조적 중지가 불가할 수 있는데, 이는 협조적 취소를 위해 설계되지 않은 타사 코드를 실행하기 때문입니다. .NET Framework의 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 사용하여 관리되는 스레드를 강제로 종료할 수 있습니다. <xref:System.Threading.Thread.Abort%2A>를 호출할 때 공용 언어 런타임이 대상 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw하며, 대상 스레드가 이를 catch할 수 있습니다. 자세한 내용은 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 참조하세요. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드는 .NET Core를 포함하여 .Net 5 이상 버전에서 지원되지 않습니다. .NET 5 이상에서 강제로 타사 코드 실행을 종료해야 하는 경우 별도의 프로세스에서 실행하고 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>을 사용합니다.
 
 > [!NOTE]
 > <xref:System.Threading.Thread.Abort%2A> 메서드가 호출될 때 스레드가 비관리 코드를 실행하는 경우 런타임은 이를 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>로 표시합니다. 스레드가 관리 코드로 돌아오면 예외가 throw됩니다.  

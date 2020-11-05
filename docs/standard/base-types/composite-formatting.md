@@ -8,25 +8,25 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - parameter specifiers
-- strings [.NET Framework], alignment
+- strings [.NET], alignment
 - format specifiers, composite formatting
-- strings [.NET Framework], composite
+- strings [.NET], composite
 - composite formatting
-- objects [.NET Framework], formatting multiple objects
+- objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447266"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889467"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
 .NET의 복합 형식 지정 기능에는 개체 목록과 복합 형식 문자열이 입력으로 사용됩니다. 합성 서식 문자열은 고정 텍스트와 목록의 개체에 해당하는 인덱싱된 자리 표시자(서식 항목이라고 함)가 결합된 형태로 구성됩니다. 서식 지정 작업을 통해 원래의 고정 텍스트와 목록에 있는 개체의 문자열 표현이 결합된 형태의 결과 문자열을 얻을 수 있습니다.  
   
 > [!IMPORTANT]
-> 복합 형식 문자열을 사용하는 대신 사용 중인 언어 및 언어 버전에서 지원하는 경우 *보간된 문자열*을 사용할 수 있습니다. 보간된 문자열은 *보간된 식*이 포함된 문자열입니다. 각 보간된 표현식은 표현식의 값으로 해석되고 문자열이 할당될 때 결과 문자열에 포함됩니다. 자세한 내용은 [문자열 보간(C# 참조)](../../csharp/language-reference/tokens/interpolated.md) 및 [문자열 보간(Visual Basic 참조)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)을 참조하세요.
+> 복합 형식 문자열을 사용하는 대신 사용 중인 언어 및 언어 버전에서 지원하는 경우 *보간된 문자열* 을 사용할 수 있습니다. 보간된 문자열은 *보간된 식* 이 포함된 문자열입니다. 각 보간된 표현식은 표현식의 값으로 해석되고 문자열이 할당될 때 결과 문자열에 포함됩니다. 자세한 내용은 [문자열 보간(C# 참조)](../../csharp/language-reference/tokens/interpolated.md) 및 [문자열 보간(Visual Basic 참조)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)을 참조하세요.
 
 다음과 같은 메서드에서 합성 형식 지정 기능을 지원합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84447266"
 ## <a name="format-item-syntax"></a>서식 항목 구문  
  각 서식 항목의 형태와 구성 요소는 다음과 같습니다.  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{` *index* [`,`*alignment* ][`:`*formatString* ]`}`  
   
  여기서 중괄호("{"와 "}")의 짝이 반드시 맞아야 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84447266"
  각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다. 예를 들어, 세 개의 개체가 있을 경우 “{1} {0} {2}”와 같이 복합 형식 문자열을 지정하여 둘째, 첫째, 셋째 개체의 서식을 지정할 수 있습니다. 서식 항목에서 참조하지 않는 개체는 무시됩니다. 매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.  
   
 ### <a name="alignment-component"></a>Alignment 구성 요소  
- 선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다. *alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment*는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다. *alignment*가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment*가 음수이면 왼쪽 맞춤됩니다. 채우기가 필요하면 공백이 사용됩니다. *alignment*를 지정하는 경우 쉼표가 필요합니다.  
+ 선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다. *alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment* 는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다. *alignment* 가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment* 가 음수이면 왼쪽 맞춤됩니다. 채우기가 필요하면 공백이 사용됩니다. *alignment* 를 지정하는 경우 쉼표가 필요합니다.  
   
  다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과 2주 동안의 작업 시간을 포함하는 배열을 정의합니다. 복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다. 소수 1자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "84447266"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String 구성 요소  
- 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](enumeration-format-strings.md)을 지정합니다. *formatString*을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString*을 지정하는 경우 콜론이 필요합니다.  
+ 선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](enumeration-format-strings.md)을 지정합니다. *formatString* 을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString* 을 지정하는 경우 콜론이 필요합니다.  
   
- 다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET Framework 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 애플리케이션 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
+ 다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 애플리케이션 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
   
 |형식 또는 형식 범주|참조 항목|  
 |---------------------------|---------|  

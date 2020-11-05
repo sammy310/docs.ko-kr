@@ -7,18 +7,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - regular expressions, behavior
-- .NET Framework regular expressions, behavior
+- .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 802c84bf93b3821459ab652e69a12fcc50280b9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290554"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888674"
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 
-.NET Framework 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET Framework의 정규식을 구현하는 이유를 설명합니다.
+.NET 정규식 엔진은 Perl, Python, Emacs 및 Tcl에서 사용하는 것과 같은 기존의 NFA(Nondeterministic Finite Automaton) 엔진을 통합하는 역추적 정규식 일치 도구입니다. 이를 통해 해당 awk, egrep 또는 lex와 같은 빠르지만 제한적인 순수 정규식 DFA(Deterministic Finite Automaton) 엔진과 구분합니다. 또한 표준화되지만 느린 POSIX NFA과도 구분합니다. 다음 섹션에서는 세 가지 유형의 정규식 엔진을 설명하고 기존 NFA 엔진을 사용하여 .NET의 정규식을 구현하는 이유를 설명합니다.
 
 ## <a name="benefits-of-the-nfa-engine"></a>NFA 엔진의 이점
 
@@ -33,11 +33,11 @@ ms.locfileid: "84290554"
 > [!NOTE]
 > 과도한 역추적으로 인해 발생한 성능 저하 및 이를 해결하는 정규식을 만드는 방법에 대한 자세한 내용은 [역추적](backtracking-in-regular-expressions.md)을 참조하세요.
 
-## <a name="net-framework-engine-capabilities"></a>.NET Framework 엔진 기능
+## <a name="net-engine-capabilities"></a>.NET 엔진 기능
 
- 기존 NFA 엔진의 이점을 누리려면 .NET Framework 정규식 엔진에는 프로그래머가 역추적 엔진을 조정할 수 있는 일련의 구문이 포함되어 있습니다. 이러한 구문을 사용하여 일치 항목을 빠르게 찾거나 다른 일치 항목에 대한 특정 확장을 우선할 수 있습니다.
+ 기존 NFA 엔진의 이점을 누리려면 .NET 정규식 엔진에는 프로그래머가 역추적 엔진을 조정할 수 있는 일련의 구문이 포함되어 있습니다. 이러한 구문을 사용하여 일치 항목을 빠르게 찾거나 다른 일치 항목에 대한 특정 확장을 우선할 수 있습니다.
 
- .NET Framework 정규식 엔진의 다른 기능은 다음과 같습니다.
+ .NET 정규식 엔진의 다른 기능은 다음과 같습니다.
 
 - 게으른 수량자: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?` 이러한 구문은 역추적 엔진이 최소 반복 횟수를 먼저 검색하도록 지시합니다. 반면, 일반적인 탐욕적 수량자는 먼저 최대 반복 횟수를 찾으려고 합니다. 다음 예제에서는 둘 사이의 차이점을 보여 줍니다. 정규식은 숫자로 끝나는 문장을 찾고 캡처링 그룹은 해당 숫자를 추출하려고 합니다. 정규식 `.+(\d+)\.`은 탐욕적 수량자 `.+`를 포함하며 이로 인해 정규식 엔진은 번호의 마지막 숫자만 캡처하게 됩니다. 반대로 정규식 `.+?(\d+)\.`은 게으른 수량자 `.+?`를 포함하며 이로 인해 정규식 엔진은 전체 번호를 캡처하게 됩니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "84290554"
 
      부정 lookahead 어설션에 대한 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
-- 조건부 평가: `(?(`*expression*`)`*yes*`|`*no*`)` 및 `(?(`*name*`)`*yes*`|`*no*`)`. 여기서 *expression*은 일치시킬 하위 식이고, *name*은 캡처 그룹의 이름이고, *yes*는 *expression*이 일치하거나 *name*이 올바른 비어 있지 않은 캡처된 그룹인 경우 일치시킬 문자열이고, *no*는 *expression*이 일치하지 않거나 *name*이 유효하고 비어 있지 않은 캡처된 그룹이 아닌 경우 일치시킬 하위 식입니다. 엔진은 이 기능을 통해 이전 하위 식이 일치 결과 및 너비 0인 어설션 결과에 따라 둘 이상의 대체 패턴을 사용하여 검색할 수 있습니다. 따라서 이전 하위 식이 일치하는지 여부에 따라 하위 식을 찾도록 허용하는 더 강력한 형식의 역참조가 가능합니다. 다음 예제의 정규식은 공용으로 사용하고 내부적으로 사용하려는 단락을 모두 찾습니다. 내부적으로 사용하려는 단락은 `<PRIVATE>` 태그로 시작합니다. 정규식 패턴 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$`은 조건부 평가를 사용하여 공용으로 사용하고 내부적으로 사용하려는 단락의 콘텐츠를 별도의 캡처링 그룹에 할당합니다. 이러한 단락은 다르게 처리될 수 있습니다.
+- 조건부 평가: `(?(`*expression*`)`*yes*`|`*no*`)` 및 `(?(`*name*`)`*yes*`|`*no*`)`. 여기서 *expression* 은 일치시킬 하위 식이고, *name* 은 캡처 그룹의 이름이고, *yes* 는 *expression* 이 일치하거나 *name* 이 올바른 비어 있지 않은 캡처된 그룹인 경우 일치시킬 문자열이고, *no* 는 *expression* 이 일치하지 않거나 *name* 이 유효하고 비어 있지 않은 캡처된 그룹이 아닌 경우 일치시킬 하위 식입니다. 엔진은 이 기능을 통해 이전 하위 식이 일치 결과 및 너비 0인 어설션 결과에 따라 둘 이상의 대체 패턴을 사용하여 검색할 수 있습니다. 따라서 이전 하위 식이 일치하는지 여부에 따라 하위 식을 찾도록 허용하는 더 강력한 형식의 역참조가 가능합니다. 다음 예제의 정규식은 공용으로 사용하고 내부적으로 사용하려는 단락을 모두 찾습니다. 내부적으로 사용하려는 단락은 `<PRIVATE>` 태그로 시작합니다. 정규식 패턴 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$`은 조건부 평가를 사용하여 공용으로 사용하고 내부적으로 사용하려는 단락의 콘텐츠를 별도의 캡처링 그룹에 할당합니다. 이러한 단락은 다르게 처리될 수 있습니다.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -149,7 +149,7 @@ ms.locfileid: "84290554"
 |[역추적](backtracking-in-regular-expressions.md)|대체 일치 항목을 찾는 정규식 역추적 분기에 대한 정보를 제공합니다.|
 |[컴파일 및 다시 사용](compilation-and-reuse-in-regular-expressions.md)|성능 향상을 위해 정규식을 컴파일하고 다시 사용하는 방법에 대한 정보를 제공합니다.|
 |[스레드로부터의 안전성](thread-safety-in-regular-expressions.md)|정규식 스레드로부터의 안전성에 대한 정보를 제공하고 정규식 개체에 대한 액세스를 동기화해야 하는 경우를 설명합니다.|
-|[.NET Framework 정규식](regular-expressions.md)|정규식의 프로그래밍 언어 측면에 대한 개요를 제공합니다.|
+|[.NET 정규식](regular-expressions.md)|정규식의 프로그래밍 언어 측면에 대한 개요를 제공합니다.|
 |[정규식 개체 모델](the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여 주는 코드 예제 및 정보를 제공합니다.|
 |[정규식 언어 - 빠른 참조](regular-expression-language-quick-reference.md)|정규식을 정의하는 데 사용할 수 있는 문자, 연산자 및 생성자 집합에 대한 정보를 제공합니다.|
 

@@ -4,21 +4,21 @@ description: 해시 테이블, 쿼리, 스택, 모음, 사전, 목록과 같이 
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- objects [.NET Framework], grouping in collections
-- generics [.NET Framework], collections
+- collections [.NET], generic
+- objects [.NET], grouping in collections
+- generics [.NET], collections
 - IList interface, grouping data in collections
 - IDictionary interface, grouping data in collections
 - grouping data in collections, generic collection types
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600843"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889389"
 ---
 # <a name="commonly-used-collection-types"></a>일반적으로 사용되는 컬렉션 형식
 컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "84600843"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[컬렉션 및 데이터 구조](index.md)|스택, 큐, 목록, 배열 및 사전을 포함하여 .NET Framework에서 사용 가능한 다양한 컬렉션 형식을 설명합니다.|  
+|[컬렉션 및 데이터 구조](index.md)|스택, 큐, 목록, 배열, 사전을 비롯하여 .NET에서 사용 가능한 다양한 컬렉션 형식에 대해 설명합니다.|  
 |[Hashtable 및 Dictionary 컬렉션 형식](hashtable-and-dictionary-collection-types.md)|제네릭 및 제네릭이 아닌 해시 기반 사전 형식의 기능을 설명합니다.|  
 |[Sorted 컬렉션 형식](sorted-collection-types.md)|목록 및 집합용 정렬 기능을 제공하는 클래스에 대해 설명합니다.|  
-|[제네릭](../generics/index.md)|.NET Framework에서 제공하는 제네릭 컬렉션, 대리자 및 인터페이스를 비롯한 제네릭 기능을 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
+|[제네릭](../generics/index.md)|.NET에서 제공하는 제네릭 컬렉션, 대리자, 인터페이스를 비롯한 제네릭 기능에 대해 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
   
 ## <a name="reference"></a>참고  
  <xref:System.Collections?displayProperty=nameWithType>  

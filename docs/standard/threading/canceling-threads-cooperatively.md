@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - threads, cancellation
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
-ms.openlocfilehash: 1d1433ecf39974bf9e68fe07b9d0818ac16fb544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36de18e976401dd0cde878852c064aa982b8acde
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138131"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188499"
 ---
 # <a name="canceling-threads-cooperatively"></a>스레드 함께 취소
 
-.NET Framework 4 이전에는 .NET Framework에서 시작된 스레드를 동시에 취소하는 기본 제공 방법이 없었습니다. 그러나 .NET Framework 4부터는 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>를 사용하여 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체 또는 PLINQ 쿼리를 취소하는 것처럼 스레드를 취소할 수 있습니다. <xref:System.Threading.Thread?displayProperty=nameWithType> 클래스는 취소 토큰에 대한 기본 제공 지원을 제공하지 않지만 <xref:System.Threading.Thread> 대리자를 받아들이는 <xref:System.Threading.ParameterizedThreadStart> 생성자를 사용하여 스레드 프로시저에 토큰을 전달할 수 있습니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.  
+.NET Framework 4 이전에 .NET은 시작된 후 스레드를 협조적으로 취소하는 기본 제공 방법을 제공하지 않았습니다. 그러나 .NET Framework 4부터는 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체 또는 PLINQ 쿼리를 취소하는 것처럼 스레드를 취소할 수 있습니다. <xref:System.Threading.Thread?displayProperty=nameWithType> 클래스는 취소 토큰에 대한 기본 제공 지원을 제공하지 않지만 <xref:System.Threading.Thread> 대리자를 받아들이는 <xref:System.Threading.ParameterizedThreadStart> 생성자를 사용하여 스레드 프로시저에 토큰을 전달할 수 있습니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  

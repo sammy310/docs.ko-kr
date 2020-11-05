@@ -9,8 +9,8 @@ dev_langs:
 helpviewer_keywords:
 - storing data using isolated storage, accessing isolated storage
 - storing data using isolated storage, isolation types
-- authentication [.NET Framework], isolated storage
-- assemblies [.NET Framework], identity
+- authentication [.NET], isolated storage
+- assemblies [.NET], identity
 - isolated storage, accessing
 - data storage using isolated storage, isolation types
 - data storage using isolated storage, accessing isolated storage
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a1d64f0dfe8a457ae551792a852bd816941f2777
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542036"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189034"
 ---
 # <a name="types-of-isolation"></a>격리 유형
+
 격리된 스토리지에 대한 액세스는 항상 스토리지를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
   
  격리된 스토리지에 대한 액세스는 애플리케이션의 도메인 및 어셈블리에 연결되거나 어셈블리에만 연결된 ID에 따라 제한됩니다. 런타임은 다음과 같은 방법으로 이러한 ID를 얻습니다.  

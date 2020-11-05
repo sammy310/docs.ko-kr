@@ -2,16 +2,16 @@
 title: 형식 마샬링 - .NET
 description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방법을 알아봅니다.
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706268"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188395"
 ---
 # <a name="type-marshaling"></a>형식 마샬링
 
-**마샬링**은 관리 코드와 네이티브 코드 간에 변환해야 하는 경우 형식을 변환하는 프로세스입니다.
+**마샬링** 은 관리 코드와 네이티브 코드 간에 변환해야 하는 경우 형식을 변환하는 프로세스입니다.
 
 관리 코드와 비관리 코드의 형식이 서로 다르기 때문에 마샬링이 필요합니다. 예를 들어 관리 코드에서는 `String`을 사용하지만 관리되지 않는 환경에서는 문자열이 유니코드(“와이드”), 비유니코드, null 종료, ASCII 등일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은 이 문서에 설명된 기본 동작에 따라 올바른 작업을 수행하려고 합니다. 그러나 추가 제어가 필요한 경우 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
 
@@ -87,7 +87,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| 대리자 형식 | .NET Framework의 `_Delegate*`. .NET Core에서는 허용되지 않습니다. |
+| 대리자 형식 | .NET Framework의 `_Delegate*`. .NET Core 및 .NET 5 이상에서는 허용 되지 않습니다. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET 배열 | `SAFEARRAY`                   |
 | `string[]` | `BSTR`의 `SAFEARRAY`        |

@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], creating
-- threading [.NET Framework], passing data to threads
-- threading [.NET Framework], retrieving data from threads
+- threading [.NET], creating
+- threading [.NET], passing data to threads
+- threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661916"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188382"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>스레드 만들기 및 시작할 때 데이터 전달
 
@@ -40,9 +40,9 @@ ms.locfileid: "84661916"
   
 ## <a name="passing-data-to-threads"></a>스레드에 데이터 전달
 
- .NET Framework 버전 2.0에서 <xref:System.Threading.ParameterizedThreadStart> 대리자는 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드 오버로드를 호출할 때 데이터를 포함하는 개체를 스레드에 전달하는 간편한 방법을 제공합니다. 코드 예는 <xref:System.Threading.ParameterizedThreadStart>를 참조하십시오.  
+<xref:System.Threading.ParameterizedThreadStart> 대리자는 <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType>를 호출할 때 데이터를 포함하는 개체를 스레드에 전달하는 간편한 방법을 제공합니다. 코드 예는 <xref:System.Threading.ParameterizedThreadStart>를 참조하십시오.
   
- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드 오버로드가 모든 개체를 허용하므로 <xref:System.Threading.ParameterizedThreadStart> 대리자 사용은 형식이 안전한 데이터 전달 방법이 아닙니다. 대체 방법은 도우미 클래스로 스레드 프로시저 및 데이터를 캡슐화하고 <xref:System.Threading.ThreadStart> 대리자를 사용하여 스레드 프로시저를 실행하는 것입니다. 다음 예제에서는 이 기술을 설명합니다.
+ <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> 메서드가 모든 개체를 허용하므로 <xref:System.Threading.ParameterizedThreadStart> 대리자 사용은 형식이 안전한 데이터 전달 방법이 아닙니다. 대체 방법은 도우미 클래스로 스레드 프로시저 및 데이터를 캡슐화하고 <xref:System.Threading.ThreadStart> 대리자를 사용하여 스레드 프로시저를 실행하는 것입니다. 다음 예제에서는 이 기술을 설명합니다.
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

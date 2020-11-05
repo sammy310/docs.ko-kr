@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d5ae0fe5813952742950582a4282cd1c6ab6a870
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739377"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188980"
 ---
 # <a name="overview-of-synchronization-primitives"></a>동기화 기본 형식 개요
 
@@ -34,11 +34,11 @@ ms.locfileid: "81739377"
 
 .NET Framework에서 <xref:System.Threading.WaitHandle>은 <xref:System.MarshalByRefObject?displayProperty=nameWithType>에서 파생되므로 대기 핸들을 사용하여 애플리케이션 도메인 경계에 걸쳐 스레드 활동을 동기화할 수 있습니다.
 
-.NET Framework 및 .NET Core에서 이러한 형식 중 일부는 운영 체제 전체에 표시되고 프로세스 간 동기화에 사용할 수 있는 명명된 시스템 동기화 핸들을 나타낼 수 있습니다.
+.NET Framework, .NET Core, .NET 5 이상에서 관련 형식 중 일부는 운영 체제 전체에 표시되고 프로세스 간 동기화에 사용할 수 있는 명명된 시스템 동기화 핸들을 나타낼 수 있습니다.
 
-- <xref:System.Threading.Mutex>(.NET Framework 및 .NET Core),
-- <xref:System.Threading.Semaphore>(Windows의 .NET Framework 및 .NET Core),
-- <xref:System.Threading.EventWaitHandle>(Windows의 .NET Framework 및 .NET Core).
+- <xref:System.Threading.Mutex>
+- <xref:System.Threading.Semaphore>(Windows)
+- <xref:System.Threading.EventWaitHandle>(Windows)
 
 자세한 내용은 <xref:System.Threading.WaitHandle> API 참조를 참조하세요.
 

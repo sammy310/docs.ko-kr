@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: abf31ea69af6a85140efb783959a9a586ef6a59e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278001"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925378"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>방법: PLINQ를 사용하여 파일 디렉터리 반복
 
@@ -35,7 +35,7 @@ ms.locfileid: "84278001"
   
  <xref:System.IO.Directory.GetFiles%2A>를 사용할 경우 트리의 모든 디렉터리에 충분한 권한이 있는지 확인하세요. 그렇지 않으면 예외가 throw되고 결과가 반환되지 않습니다. PLINQ 쿼리에서 <xref:System.IO.Directory.EnumerateDirectories%2A>를 사용할 경우 반복을 계속할 수 있는 정상적인 방법으로 I/O 예외를 처리하는 것이 어렵습니다. 코드에서 I/O 또는 인증되지 않은 액세스 예외를 처리해야 하는 경우에는 [방법: 병렬 클래스를 사용하여 파일 디렉터리 반복](how-to-iterate-file-directories-with-the-parallel-class.md)에 설명된 방법을 고려해야 합니다.  
   
- 예를 들어 I/O 지연이 네트워크를 통한 파일 I/O와 관련된 문제인 경우 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](tpl-and-traditional-async-programming.md) 및 이 [블로그 게시물](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)에 설명된 비동기 I/O 기술 중 하나를 사용하는 것이 좋습니다.  
+ 예를 들어 I/O 지연이 네트워크를 통한 파일 I/O와 관련된 문제인 경우 [TPL 및 일반적인 .NET 비동기 프로그래밍](tpl-and-traditional-async-programming.md) 및 이 [블로그 게시물](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)에 설명된 비동기 I/O 기법 중 하나를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참조
 

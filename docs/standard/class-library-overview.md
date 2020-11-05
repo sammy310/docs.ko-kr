@@ -1,55 +1,53 @@
 ---
 title: .NET 클래스 라이브러리 개요
-description: .NET 클래스 라이브러리에 대해 자세히 알아봅니다. .NET 구현에는 시스템 기능에 대한 액세스를 제공하는 클래스, 인터페이스, 대리자, 값 형식이 포함됩니다.
+description: .NET 클래스 라이브러리에 대해 자세히 알아봅니다. .NET API에는 시스템 기능에 액세스할 수 있는 클래스, 인터페이스, 대리자, 값 형식이 포함됩니다.
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- classes [.NET Framework], library overview
-- classes [.NET Core], library overview
+- classes [.NET], library overview
 - .NET, library overview
 - class objects value type
-- naming conventions [.NET Framework]
-- types, .NET Framework
+- naming conventions [.NET]
+- types, .NET
 - user-defined types
 - Visual Basic, data types
-- data types [.NET Framework], C++
+- data types [.NET], C++
 - Visual C#, data types
-- libraries, .NET Framework class library
-- data types [.NET Framework], F#
+- libraries, .NET
+- data types [.NET], F#
 - System namespace
 - F#, data types
-- .NET Framework, class library
-- type system [.NET Framework]
-- data types [.NET Framework]
+- .NET, class library
+- type system [.NET]
+- data types [.NET]
 - value types
-- data types [.NET Framework], Visual Basic
+- data types [.NET], Visual Basic
 - Common Language Specification
-- namespaces [.NET Framework]
+- namespaces [.NET]
 - floating point value type
-- class library [.NET Framework]
+- class library [.NET]
 - CLS
 - logical value type
-- .NET Framework class library, about
 - built-in types
-- namespaces [.NET Framework], about namespaces
+- namespaces [.NET], about namespaces
 - Visual C++, data types
-- members [.NET Framework], type
-- data types [.NET Framework], C#
+- members [.NET], type
+- data types [.NET], C#
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554764"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687526"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
-.NET 구현에는 개발 과정을 지원 및 최적화하고 시스템 기능에 대한 액세스를 제공하는 클래스, 인터페이스, 대리자 및 값 형식이 포함되어 있습니다. 언어 간의 원활한 상호 운용성을 위해 대부분의 .NET 형식은 CLS(공용 언어 사양) 규격을 따르므로 CLS 규격 컴파일러를 사용하는 모든 프로그래밍 언어에서 사용될 수 있습니다.  
+.NET API에는 개발 과정을 지원하고 최적화하며 시스템 기능에 액세스할 수 있는 클래스, 인터페이스, 대리자, 값 형식이 포함되어 있습니다. 언어 간의 원활한 상호 운용성을 위해 대부분의 .NET 형식은 CLS(공용 언어 사양) 규격을 따르므로 CLS 규격 컴파일러를 사용하는 모든 프로그래밍 언어에서 사용될 수 있습니다.  
   
- .NET 형식은 .NET 애플리케이션, 구성 요소 및 컨트롤 빌드의 기초가 됩니다. .NET 구현에는 다음과 같은 기능을 수행하는 형식이 포함되어 있습니다.  
+.NET 형식은 .NET 애플리케이션, 구성 요소 및 컨트롤 빌드의 기초가 됩니다. .NET에는 다음과 같은 기능을 수행하는 형식이 포함되어 있습니다.  
   
 - 기본 데이터 형식 및 예외를 나타냅니다.  
   
@@ -59,19 +57,19 @@ ms.locfileid: "90554764"
   
 - 로드된 형식에 대한 정보에 액세스합니다.  
   
-- .NET Framework 보안 검사를 호출합니다.  
+- .NET 보안 검사를 호출합니다.  
   
 - 데이터 액세스, 리치 클라이언트 쪽 GUI, 서버에서 제어 가능한 클라이언트 쪽 GUI를 제공합니다.  
   
- .NET에서는 강력한 인터페이스 집합뿐만 아니라 추상 및 구체(비추상) 클래스도 제공합니다. 구체 클래스를 있는 그대로 사용할 수도 있고 여러 가지 경우에 구체 클래스에서 직접 클래스를 파생시켜 사용할 수도 있습니다. 인터페이스의 기능을 사용하려면 해당 인터페이스를 구현하는 클래스를 만들거나 해당 인터페이스를 구현하는 .NET 클래스 중 하나에서 클래스를 파생시킵니다.  
+.NET에서는 강력한 인터페이스 집합뿐만 아니라 추상 및 구체(비추상) 클래스도 제공합니다. 구체적 클래스를 있는 그대로 사용할 수도 있고 대부분의 경우 구체적 클래스에서 고유한 클래스를 파생시켜 사용할 수도 있습니다. 인터페이스의 기능을 사용하려면 해당 인터페이스를 구현하는 클래스를 만들거나 해당 인터페이스를 구현하는 .NET 클래스 중 하나에서 클래스를 파생시킵니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙
 
  .NET 형식에서는 계층 구조를 의미하는 스키마의 이름을 지정하는데 점 구문을 사용합니다. 이 방법을 사용하면 관련 형식을 네임스페이스로 그룹화하여 보다 쉽게 검색하고 참조할 수 있습니다. 전체 이름에서 첫 번째 부분(가장 오른쪽 점의 오른쪽 부분)은 해당 네임스페이스의 이름이고, 마지막 부분은 형식 이름입니다. 예를 들어 `System.Collections.Generic.List<T>`는 `System.Collections.Generic` 네임스페이스에 속하는 `List<T>` 형식을 나타냅니다. <xref:System.Collections.Generic>의 형식은 제네릭 컬렉션에 대한 작업에 사용할 수 있습니다.  
   
- 이 이름 지정 체계를 사용하면 .NET Framework를 확장하는 라이브러리 개발자가 손쉽게 계층 구조의 그룹 형식을 만들고 일관되고 이해하기 쉬운 이름을 그룹에 지정할 수 있습니다. 또한 형식을 전체 이름, 즉 네임스페이스와 형식 이름별로 명확하게 식별할 수 있으므로 형식 이름 간의 충돌을 방지할 수 있습니다. 라이브러리 개발자는 다음과 같은 규칙을 사용하여 네임스페이스의 이름을 만듭니다.  
+ 이 명명 체계를 사용하면 .NET을 확장하는 라이브러리 개발자가 손쉽게 계층 구조의 그룹 형식을 만들고 일관되고 이해하기 쉬운 이름을 그룹에 지정할 수 있습니다. 또한 형식을 전체 이름, 즉 네임스페이스와 형식 이름별로 명확하게 식별할 수 있으므로 형식 이름 간의 충돌을 방지할 수 있습니다. 라이브러리 개발자는 다음과 같은 규칙을 사용하여 네임스페이스의 이름을 만듭니다.  
   
- *CompanyName*.*TechnologyName*  
+ *CompanyName*. *TechnologyName*  
   
  예를 들어, 네임스페이스 `Microsoft.Word`는 이 지침을 따릅니다.  
   
@@ -81,7 +79,7 @@ ms.locfileid: "90554764"
   
 ## <a name="system-namespace"></a>System 네임스페이스
 
- <xref:System> 네임스페이스는 .NET의 기본 형식에 대한 루트 네임스페이스입니다. 이 네임스페이스에는 모든 애플리케이션에서 사용하는 <xref:System.Object>(상속 계층 구조의 루트), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> 등의 기본 데이터 형식을 나타내는 클래스가 포함됩니다. 이 형식의 대부분은 프로그래밍 언어에서 사용하는 기본 데이터 형식에 해당합니다. .NET Framework 형식을 사용하여 코드를 작성할 때 .NET Framework의 기본 데이터 형식이 필요하면 사용 중인 프로그래밍 언어의 해당 키워드를 사용할 수 있습니다.  
+ <xref:System> 네임스페이스는 .NET의 기본 형식에 대한 루트 네임스페이스입니다. 이 네임스페이스에는 모든 애플리케이션에서 사용하는 <xref:System.Object>(상속 계층 구조의 루트), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> 등의 기본 데이터 형식을 나타내는 클래스가 포함됩니다. 이 형식의 대부분은 프로그래밍 언어에서 사용하는 기본 데이터 형식에 해당합니다. .NET 형식을 사용하여 코드를 작성할 때 .NET 기본 데이터 형식이 필요하면 사용 중인 프로그래밍 언어의 해당 키워드를 사용할 수 있습니다.  
   
  다음 표에서는 .NET에서 제공하는 기본 형식 목록을 보여 주며 각 형식에 대해 간단히 설명한 다음 Visual Basic, C#, C++ 및 F#의 해당 형식을 나타냅니다.  
   

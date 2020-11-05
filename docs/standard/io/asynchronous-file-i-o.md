@@ -11,19 +11,19 @@ helpviewer_keywords:
 - asynchronous I/O
 - synchronous I/O
 - streams, asynchronous streams
-- I/O [.NET Framework], asynchronous I/O
+- I/O [.NET], asynchronous I/O
 - Stream class, synchronous I/O
 - data streams, asynchronous streams
 - Stream class, asynchronous I/O
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: 9506a366b6f1e363ec13550e5ed68c7176dd4d0a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598621"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188603"
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 
@@ -31,7 +31,7 @@ ms.locfileid: "84598621"
 
 .NET Framework 4.5부터 I/O 형식은 비동기 메서드를 포함하여 비동기 작업을 단순화합니다. 비동기 메서드의 이름에는 `Async` 가 포함합니다(예: <xref:System.IO.Stream.ReadAsync%2A>, <xref:System.IO.Stream.WriteAsync%2A>, <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.TextReader.ReadLineAsync%2A>및 <xref:System.IO.TextReader.ReadToEndAsync%2A>). 이러한 비동기 메서드는 스트림 클래스(예: <xref:System.IO.Stream>, <xref:System.IO.FileStream>및 <xref:System.IO.MemoryStream>)에 구현되거나, 스트림에서 읽거나 스트림에 쓰는 데 사용되는 클래스(예: <xref:System.IO.TextReader> 및 <xref:System.IO.TextWriter>)에 구현됩니다.
 
-.NET Framework 4 및 이전 버전에서 비동기 I/O 작업을 구현하려면 <xref:System.IO.Stream.BeginRead%2A> 및 <xref:System.IO.Stream.EndRead%2A>와 같은 메서드를 사용해야 합니다. 이러한 메서드는 여전히 .NET Framework 4.5에서 사용하여 레거시 코드를 지원할 수 있지만, 비동기 메서드는 비동기 I/O 작업을 보다 쉽게 구현하도록 도와줍니다.
+.NET Framework 4 이하 버전에서 비동기 I/O 작업을 구현하려면 <xref:System.IO.Stream.BeginRead%2A> 및 <xref:System.IO.Stream.EndRead%2A>와 같은 메서드를 사용해야 합니다. 관련 메서드는 여전히 현재 .NET 버전에서 사용하여 레거시 코드를 지원할 수 있지만, 비동기 메서드는 비동기 I/O 작업을 더욱 쉽게 구현하도록 도와줍니다.
 
 C# 및 Visual Basic에는 각각 비동기 프로그래밍을 위한 다음 두 개의 키워드가 있습니다.
 

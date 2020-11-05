@@ -16,21 +16,21 @@ helpviewer_keywords:
 - WaitHandle class, code examples
 - asynchronous programming, status polling
 - polling asynchronous operation status
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 - waiting for asynchronous calls
-- status information [.NET Framework], asynchronous operations
+- status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d518e5f64096fde5c9b14222dc4fe0634e6bb7b1
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662643"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888895"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 
-.NET Framework에서는 모든 메서드를 비동기 방식으로 호출할 수 있습니다. 이렇게 하려면 호출하려는 메서드와 같은 시그니처를 사용하여 대리자를 정의합니다. 그러면 공용 언어 런타임은 이 대리자에 대해 `BeginInvoke` 및 `EndInvoke` 메서드를 해당 시그니처와 함께 자동으로 정의합니다.
+.NET에서는 모든 메서드를 비동기 방식으로 호출할 수 있습니다. 해당 작업을 수행하려면 호출하려는 메서드와 동일한 시그니처를 사용하여 대리자를 정의합니다. 공용 언어 런타임은 적절한 시그니처를 사용하여 이 대리자에 대한 `BeginInvoke` 및 `EndInvoke` 메서드를 자동으로 정의합니다.
 
 > [!NOTE]
 > 특히 `BeginInvoke` 및 `EndInvoke` 메서드와 같은 비동기 대리자는 .NET Compact Framework에서 호출할 수 없습니다.

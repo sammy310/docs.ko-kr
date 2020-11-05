@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 0fdf1b3ec1141dd637f817115bd1d2351c8af7a0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507418"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687731"
 ---
 # <a name="numerics-in-net"></a>.NET의 숫자
 
@@ -88,8 +88,9 @@ ms.locfileid: "82507418"
 - <xref:System.Numerics.Quaternion> 형식은 3차원 물리적 회전을 인코드하는 데 사용되는 벡터를 나타냅니다.
 
 - <xref:System.Numerics.Vector%601> 형식은 지정된 숫자 형식의 벡터를 나타내고 SIMD 지원을 활용하는 광범위한 연산자 집합을 제공합니다. <xref:System.Numerics.Vector%601> 인스턴스 개수는 고정되지만 해당 <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> 값은 코드가 실행되는 머신의 CPU에 따라 다릅니다.
+
   > [!NOTE]
-  > <xref:System.Numerics.Vector%601> 형식은 .NET Framework에 포함되지 않습니다. 이 형식에 액세스하려면 [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet 패키지를 설치해야 합니다.
+  > <xref:System.Numerics.Vector%601> 형식은 .NET Core 및 .NET 5 이상에 포함되지만 .NET Framework에는 포함되지 않습니다. .NET Framework를 사용하는 경우 [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet 패키지를 설치하여 이 형식에 대한 액세스 권한을 얻습니다.
   
 SIMD 사용 형식은 SIMD 미사용 하드웨어 또는 JIT 컴파일러와 함께 사용할 수 있는 방식으로 구현됩니다. SIMD 지침을 활용하려면 .NET Core 및 .NET Framework 4.6 이상 버전에 포함된 RyuJIT 컴파일러를 사용하는 런타임을 통해 64비트 앱을 실행해야 합니다. 64비트 프로세서를 대상으로 지정할 때 SIMD 지원을 추가합니다.
 

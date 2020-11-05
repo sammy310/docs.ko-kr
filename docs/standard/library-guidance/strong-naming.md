@@ -2,12 +2,12 @@
 title: 강력한 이름 지정 및 .NET 라이브러리
 description: .NET 라이브러리에 강력한 이름을 지정하는 모범 사례 권장 사항입니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6f9533d768331964a8e640243536b12ddde158e5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654562"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189214"
 ---
 # <a name="strong-naming"></a>강력한 이름 지정
 
@@ -28,7 +28,7 @@ ms.locfileid: "91654562"
 </configuration>
 ```
 
-.NET 개발자가 강력한 이름 지정에 대해 불만을 제기하는 경우 일반적으로 엄격한 어셈블리 로드와 관련이 있습니다. 다행히, 이 문제는 .NET Framework에만 한정됩니다. .NET Core, Xamarin, UWP 및 대부분의 다른 .NET 구현에서는 엄격한 어셈블리 로드가 필요하지 않으며 강력한 이름 지정의 주요 단점이 제거됩니다.
+.NET 개발자가 강력한 이름 지정에 대해 불만을 제기하는 경우 일반적으로 엄격한 어셈블리 로드와 관련이 있습니다. 다행히, 이 문제는 .NET Framework에만 한정됩니다. .NET 5 이상, .NET Core, Xamarin, UWP, 대부분의 다른 .NET 구현에는 엄격한 어셈블리 로딩이 없으며 이는 강력한 이름 지정의 주요 단점입니다.
 
 강력한 이름 지정의 한 가지 중요한 측면은 바이럴이란 것입니다. 강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리만 참조할 수 있습니다. 라이브러리에 강력한 이름을 지정하지 않은 경우, 강력한 이름 지정이 필요한 애플리케이션 또는 라이브러리를 빌드하는 개발자는 해당 라이브러리를 사용할 수 없게 됩니다.
 

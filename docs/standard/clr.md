@@ -1,7 +1,8 @@
 ---
-title: CLR(공용 언어 런타임) 개요 - .NET Framework
+title: CLR(공용 언어 런타임) 개요 - .NET
+titleSuffix: ''
 description: .NET 런타임 환경인 CLR(공용 언어 런타임)로 시작합니다. CLR은 코드를 실행하고 개발 프로세스를 용이하게 하는 서비스를 제공합니다.
-ms.date: 04/02/2019
+ms.date: 10/22/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - runtime
 - common language runtime
 - metadata, runtime functionality
-- .NET Framework, common language runtime
+- .NET, common language runtime
 - language compilers
 - managed code
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769212"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687509"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 
-.NET Framework에서는 공용 언어 런타임이라고 하는 런타임 환경을 제공하는데, 여기에서는 코드를 실행하며 개발 과정을 더 쉽게 해 주는 서비스를 제공합니다.
+.NET에서는 공용 언어 런타임이라고 하는 런타임 환경을 제공하는데, 여기에서는 코드를 실행하며 개발 과정을 더 쉽게 해 주는 서비스를 제공합니다.
 
-컴파일러와 도구는 공용 언어 런타임의 기능을 노출하며 관리되는 이 실행 환경을 활용하는 코드를 작성할 수 있게 해줍니다. 런타임을 대상으로 하는 언어 컴파일러를 사용하여 개발한 코드를 관리 코드라고 합니다. 이 코드에서는 언어 간 통합, 언어 간 예외 처리, 향상된 보안, 버전 관리 및 배포 지원, 구성 요소 상호 작용을 위한 간단한 모델, 디버깅 및 프로파일링 서비스 등의 기능을 이용합니다.
+컴파일러와 도구는 공용 언어 런타임의 기능을 노출하며 관리되는 이 실행 환경을 활용하는 코드를 작성할 수 있게 해줍니다. 런타임을 대상으로 하는 언어 컴파일러를 사용하여 개발하는 코드를 관리 코드라고 합니다. 관리 코드는 언어 간 통합, 언어 간 예외 처리, 강화된 보안, 버전 관리 및 배포 지원, 구성 요소 상호 작용을 위한 간단한 모델, 디버깅 및 프로파일링 서비스 등의 다양한 기능을 활용합니다.
 
 > [!NOTE]
-> 형식 시스템, 메타데이터의 형식 및 런타임 환경(가상 실행 시스템)은 모두 공용 표준인 ECMA Common Language Infrastructure 사양으로 정의하기 때문에 컴파일러 및 도구에서 공용 언어 런타임이 사용할 수 있는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 참조하세요.
+> 형식 시스템, 메타데이터 형식, 런타임 환경(가상 실행 시스템)이 모두 공용 표준인 ECMA 공용 언어 인프라 사양에 따라 정의되므로 컴파일러 및 도구에서 공용 언어 런타임이 이용하는 출력을 생성할 수 있습니다. 자세한 내용은 [ECMA C# 및 공용 언어 인프라 사양](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)을 참조하세요.
 
 런타임에서 관리 코드에 서비스를 제공할 수 있게 하려면 언어 컴파일러에서 사용자 코드의 형식, 멤버 및 참조를 설명하는 메타데이터를 내보내야 합니다. 메타데이터는 코드와 함께 저장되며 로드 가능한 모든 공용 언어 런타임 PE(이식 가능한 실행) 파일에는 메타데이터가 포함되어 있습니다. 런타임에서는 메타데이터를 사용하여 클래스를 찾고 로드하며, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.
 
-런타임에서는 자동으로 개체 레이아웃을 처리하고 개체에 대한 참조를 관리하며, 이들이 더 이상 사용되지 않을 때는 해제합니다. 수명을 이런 식으로 관리하는 개체를 관리되는 데이터라고 합니다. 가비지 수집을 통해 메모리 누수뿐만 아니라 기타 몇 가지 일반적인 프로그래밍 오류도 제거됩니다. 코드를 관리할 경우 관리되는 데이터, 관리되지 않는 데이터 또는 관리되는 데이터와 관리되지 않는 데이터 모두를 .NET Framework 애플리케이션에서 사용할 수 있습니다. 언어 컴파일러에서는 자체 형식(예: 기본 형식)을 제공하기 때문에 데이터가 관리되고 있는지 항상 알 수 없으며 알 필요도 없습니다.
+런타임에서는 자동으로 개체 레이아웃을 처리하고 개체에 대한 참조를 관리하며, 이들이 더 이상 사용되지 않을 때는 해제합니다. 수명을 이런 식으로 관리하는 개체를 관리되는 데이터라고 합니다. 가비지 수집을 통해 메모리 누수뿐만 아니라 기타 몇 가지 일반적인 프로그래밍 오류도 제거됩니다. 코드가 관리되는 경우 .NET 애플리케이션에서 관리되는 데이터와 관리되지 않는 데이터 중 하나 또는 둘 다를 사용할 수 있습니다. 언어 컴파일러에서는 자체 형식(예: 기본 형식)을 제공하기 때문에 데이터가 관리되고 있는지 항상 알 수 없으며 알 필요도 없습니다.
 
 공용 언어 런타임을 사용하면 구성 요소 및 애플리케이션에 속한 개체가 여러 언어를 통해 상호 작용하는 경우 이를 쉽게 디자인할 수 있습니다. 다른 언어로 작성된 개체들이 서로 통신할 수 있고 해당 동작들이 완벽하게 통합될 수 있습니다. 예를 들어, 클래스를 정의한 다음 다른 언어를 사용하여 원본 클래스에서 클래스를 파생시키거나 원본 클래스의 메서드를 호출할 수 있습니다. 또한 클래스의 인스턴스를 다른 언어로 작성된 클래스의 메서드로 전달할 수 있습니다. 런타임을 대상으로 하는 언어 컴파일러 및 도구에서 런타임에서 정의한 공용 형식 시스템을 사용하고, 형식의 생성, 사용, 유지 및 바인딩 뿐만 아니라 새 형식을 정의할 때도 런타임 규칙을 따르기 때문에 이러한 언어 간 통합이 가능합니다.
 
@@ -63,7 +64,9 @@ ms.locfileid: "84769212"
 
 ## <a name="clr-versions"></a>CLR 버전
 
-.NET Framework 버전 번호는 포함하는 CLR 버전 번호와 반드시 일치하지는 않습니다. .NET Framework 버전 및 해당 CLR 버전 목록은 [.NET Framework 버전 및 종속성](../framework/migration-guide/versions-and-dependencies.md)을 참조하세요. .NET Core 릴리스는 단일 제품 버전을 포함합니다. 즉, 별도의 CLR 버전이 없습니다. .NET Core 버전 목록은 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)를 참조하세요.
+.NET Core 및 .NET 5 이상 릴리스는 단일 제품 버전을 포함합니다. 즉, 별도의 CLR 버전이 없습니다. .NET Core 버전 목록은 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)를 참조하세요.
+
+그러나 .NET Framework 버전 번호는 포함하는 CLR 버전 번호와 반드시 일치하지는 않습니다. .NET Framework 버전 및 해당 CLR 버전 목록은 [.NET Framework 버전 및 종속성](../framework/migration-guide/versions-and-dependencies.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -71,5 +74,5 @@ ms.locfileid: "84769212"
 |-----------|-----------------|
 |[관리되는 실행 프로세스](managed-execution-process.md)|공용 언어 런타임을 사용하는 데 필요한 단계에 대해 설명합니다.|
 |[자동 메모리 관리](automatic-memory-management.md)|가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.|
-|[.NET Framework의 개요](../framework/get-started/overview.md)|공용 형식 시스템, 언어 간 상호 운용성, 관리되는 실행, 애플리케이션 도메인, 어셈블리 등과 같은 .NET Framework의 주요 개념에 대해 설명합니다.|
+|[.NET Framework의 개요](../framework/get-started/overview.md)|공용 형식 시스템, 언어 간 상호 운용성, 관리형 실행, 애플리케이션 도메인, 어셈블리와 같은 .NET Framework의 주요 개념에 관해 설명합니다.|
 |[공용 형식 시스템](./base-types/common-type-system.md)|언어 간 통합을 지원하면서 런타임에서 형식을 선언, 사용, 관리하는 방법에 대해 설명합니다.|

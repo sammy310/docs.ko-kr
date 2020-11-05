@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555922"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188564"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
 
@@ -59,7 +59,7 @@ ms.locfileid: "90555922"
 
 관리자는 해당 신뢰 수준에 따라 애플리케이션 또는 사용자가 가질 수 있는 격리된 스토리지 양을 제한할 수 있습니다. 또한 사용자의 지속된 데이터를 모두 제거할 수도 있습니다. 격리된 스토리지를 만들거나 액세스하려면 코드에 적절한 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 권한이 부여되어야 합니다.
 
-격리된 스토리지에 액세스하려면 필요한 네이티브 플랫폼 운영 체제 권한이 모두 코드에 있어야 합니다. 파일 시스템을 사용할 수 있는 권한을 가진 사용자를 제어하는 ACL(액세스 제어 목록)이 충족되어야 합니다. .NET Framework 애플리케이션은 특정 플랫폼 관련 가장을 수행하는 경우를 제외하고는 격리된 스토리지에 액세스할 수 있는 운영 체제 권한을 이미 가지고 있습니다. 이런 경우 애플리케이션은 가장된 사용자 ID가 격리된 스토리지에 액세스할 수 있는 적절한 운영 체제 권한을 가지고 있는지 확인해야 합니다. 이 액세스 권한은 웹에서 실행되거나 다운로드된 코드에 특정 사용자와 관련된 스토리지 영역에서 읽고 쓸 수 있는 편리한 방법을 제공합니다.
+격리된 스토리지에 액세스하려면 필요한 네이티브 플랫폼 운영 체제 권한이 모두 코드에 있어야 합니다. 파일 시스템을 사용할 수 있는 권한을 가진 사용자를 제어하는 ACL(액세스 제어 목록)이 충족되어야 합니다. .NET 애플리케이션은 특정 플랫폼 관련 가장을 수행하는 경우를 제외하고는 격리된 스토리지에 액세스할 수 있는 운영 체제 권한을 이미 가지고 있습니다. 이런 경우 애플리케이션은 가장된 사용자 ID가 격리된 스토리지에 액세스할 수 있는 적절한 운영 체제 권한을 가지고 있는지 확인해야 합니다. 이 액세스 권한은 웹에서 실행되거나 다운로드된 코드에 특정 사용자와 관련된 스토리지 영역에서 읽고 쓸 수 있는 편리한 방법을 제공합니다.
 
 격리된 스토리지에 대한 액세스를 제어하기 위해 공용 언어 런타임은 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 개체를 사용합니다. 각 개체에는 다음과 같은 값을 지정하는 속성이 있습니다.
 
@@ -134,7 +134,7 @@ storeadm.exe /machine [any-other-switches]
 
 앞의 경로는 사용 중인 Windows 버전에 따라 다를 수 있습니다.
 
-이제 두 명의 등록된 사용자 _Mallory_ 및 _Bob_이 있는 다중 사용자 시스템을 살펴봅니다. Mallory는 자신의 사용자 프로필 디렉터리 `C:\Users\Mallory\`에 액세스할 수 있고 공유 머신 전체 스토리지 위치 `C:\ProgramData\IsolatedStorage\`에 액세스할 수 있습니다. Bob의 사용자 프로필 디렉터리 `C:\Users\Bob\`에는 액세스할 수 없습니다.
+이제 두 명의 등록된 사용자 _Mallory_ 및 _Bob_ 이 있는 다중 사용자 시스템을 살펴봅니다. Mallory는 자신의 사용자 프로필 디렉터리 `C:\Users\Mallory\`에 액세스할 수 있고 공유 머신 전체 스토리지 위치 `C:\ProgramData\IsolatedStorage\`에 액세스할 수 있습니다. Bob의 사용자 프로필 디렉터리 `C:\Users\Bob\`에는 액세스할 수 없습니다.
 
 Mallory가 Bob을 공격하려는 경우 머신 전체 스토리지 위치에 데이터를 쓴 다음 Bob이 머신 전체 저장소에서 읽도록 영향을 주려고 할 수 있습니다. Bob이 이 저장소에서 읽는 앱을 실행하면 해당 앱은 Mallory가 여기에 저장한 데이터를 사용하지만 Bob의 사용자 계정 컨텍스트 내에서 작동합니다. 이 문서의 나머지 부분에서는 다양한 공격 벡터와 이러한 공격의 위험을 최소화하기 위해 앱에서 수행할 수 있는 단계를 고려합니다.
 
@@ -164,7 +164,7 @@ __서비스 거부__ 공격은 Bob의 앱이 Mallory의 파일을 읽고 크래�
 
 #### <a name="information-disclosure"></a>정보 공개
 
-__정보 공개__ 공격은 Mallory가 Bob을 속여 정상적으로는 액세스할 수 없는 파일의 콘텐츠를 공개하도록 할 수 있는 경우 발생합니다. Bob의 비밀 파일 *C:\Users\Bob\secret.txt*를 Mallory가 읽고 싶어한다고 가정해 보겠습니다. Mallory는 파일의 경로는 알지만 Windows에서 Bob의 사용자 프로필 디렉터리에 액세스하지 못하게 하므로 파일을 읽을 수 없습니다.
+__정보 공개__ 공격은 Mallory가 Bob을 속여 정상적으로는 액세스할 수 없는 파일의 콘텐츠를 공개하도록 할 수 있는 경우 발생합니다. Bob의 비밀 파일 *C:\Users\Bob\secret.txt* 를 Mallory가 읽고 싶어한다고 가정해 보겠습니다. Mallory는 파일의 경로는 알지만 Windows에서 Bob의 사용자 프로필 디렉터리에 액세스하지 못하게 하므로 파일을 읽을 수 없습니다.
 
 대신, Mallory는 하드 링크를 머신 전체 저장소에 배치합니다. 이 특수한 종류의 파일은 자체에 콘텐츠를 포함하지는 않고 디스크의 다른 파일을 가리킵니다. 하드 링크 파일을 읽으려고 하면 대신 링크의 대상으로 지정된 파일의 콘텐츠를 읽습니다. 하드 링크를 만든 후에도 Mallory는 링크의 대상(`C:\Users\Bob\secret.txt`)에 액세스할 수 없으므로 파일 콘텐츠를 읽을 수 없습니다. 그러나 Bob은 이 파일에 액세스할 수 ‘있습니다’.
 
@@ -195,7 +195,7 @@ __중요:__ 환경에 상호 신뢰할 수 없는 사용자가 여러 명 있는
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>격리된 스토리지 만들기, 열거 및 삭제
 
-.NET Framework에서는 <xref:System.IO.IsolatedStorage> 네임스페이스의 세 가지 클래스를 제공해 격리된 스토리지와 관련된 작업을 수행할 수 있도록 해줍니다.
+.NET에서는 <xref:System.IO.IsolatedStorage> 네임스페이스의 세 가지 클래스를 제공해 격리된 스토리지와 관련된 작업을 수행할 수 있도록 해줍니다.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>에서 파생되는 <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> 은 저장된 어셈블리 및 애플리케이션 파일의 기본 관리를 제공합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스 인스턴스는 파일 시스템에 있는 단일 저장소를 나타냅니다.
 

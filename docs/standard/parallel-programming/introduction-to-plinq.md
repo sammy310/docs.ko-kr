@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662461"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925352"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 
@@ -109,7 +109,7 @@ PLINQ 쿼리가 병렬로 실행되는 경우 각 작업자 스레드의 해당 
 
 ## <a name="cancellation"></a>취소
 
-PLINQ는 .NET Framework 4에서 취소 유형과 통합됩니다. (자세한 내용은 [관리되는 스레드의 취소](../threading/cancellation-in-managed-threads.md)를 참조하세요.) 따라서 순차적 LINQ to Objects 쿼리와 달리 PLINQ 쿼리는 취소할 수 있습니다. 취소 가능한 PLINQ 쿼리를 만들려면 쿼리에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 연산자를 사용하고 인수로 <xref:System.Threading.CancellationToken> 인스턴스를 제공합니다. 토큰에서 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true로 설정된 경우 PLINQ는 이를 감지하고 모든 스레드에서 처리를 중지하고 <xref:System.OperationCanceledException>을 throw합니다.
+PLINQ는 .NET에서 취소 유형과 통합됩니다. (자세한 내용은 [관리되는 스레드의 취소](../threading/cancellation-in-managed-threads.md)를 참조하세요.) 따라서 순차적 LINQ to Objects 쿼리와 달리 PLINQ 쿼리는 취소할 수 있습니다. 취소 가능한 PLINQ 쿼리를 만들려면 쿼리에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 연산자를 사용하고 인수로 <xref:System.Threading.CancellationToken> 인스턴스를 제공합니다. 토큰에서 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true로 설정된 경우 PLINQ는 이를 감지하고 모든 스레드에서 처리를 중지하고 <xref:System.OperationCanceledException>을 throw합니다.
 
 PLINQ 쿼리는 취소 토큰이 설정된 후 몇 가지 요소를 계속해서 처리할 수 있습니다.
 

@@ -6,7 +6,7 @@ helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
 - MSIL Disassembler
-- assemblies [.NET Framework], viewing contents
+- assemblies [.NET], viewing contents
 - viewing assembly information
 - MSIL
 - viewing MSIL information
@@ -15,18 +15,18 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380060"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687499"
 ---
 # <a name="how-to-view-assembly-contents"></a>방법: 어셈블리 콘텐츠 보기
 
 [Ildasm.exe(IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 파일의 MSIL(Microsoft Intermediate Language) 정보를 볼 수 있습니다. 검사되는 파일이 어셈블리이면 이 정보에 어셈블리의 특성과 다른 모듈 및 어셈블리에 대한 참조가 포함될 수 있습니다. 이 정보는 파일이 어셈블리 또는 어셈블리의 일부인지 여부 및 파일이 다른 모듈 또는 어셈블리에 대한 참조를 포함하는지 여부를 확인하는 데 유용할 수 있습니다.
 
-*Ildasm.exe*를 사용하여 어셈블리의 콘텐츠를 표시하려면 명령 프롬프트에서 **ildasm \<어셈블리 이름>** 을 입력합니다. 예를 들어 다음 명령은 *Hello.exe* 어셈블리를 디스어셈블합니다.
+*Ildasm.exe* 를 사용하여 어셈블리의 콘텐츠를 표시하려면 명령 프롬프트에서 **ildasm \<assembly name>** 을 입력합니다. 예를 들어 다음 명령은 *Hello.exe* 어셈블리를 디스어셈블합니다.
 
 ```cmd
 ildasm Hello.exe
@@ -36,7 +36,7 @@ ildasm Hello.exe
 
 ## <a name="example"></a>예제
 
-다음 예제는 기본 "Hello World" 프로그램으로 시작합니다. 프로그램을 컴파일한 후 *Ildasm.exe*를 사용하여 *Hello.exe* 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.
+다음 예제는 기본 "Hello World" 프로그램으로 시작합니다. 프로그램을 컴파일한 후 *Ildasm.exe* 를 사용하여 *Hello.exe* 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.
 
 ```cpp
 using namespace System;

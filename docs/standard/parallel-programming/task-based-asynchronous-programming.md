@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720165"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925248"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 
-TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하며 비동기 작업을 나타냅니다. 몇 가지 점에서 작업은 스레드 또는 <xref:System.Threading.ThreadPool> 작업 항목과 비슷하지만 추상화 수준은 더 높습니다. *작업 병렬 처리*는 동시에 실행되는 하나 이상의 독립적인 작업을 의미합니다. 작업을 사용할 때의 주된 이점 두 가지는 다음과 같습니다.
+TPL(작업 병렬 라이브러리)은 *작업* 이란 개념을 기반으로 하며 비동기 작업을 나타냅니다. 몇 가지 점에서 작업은 스레드 또는 <xref:System.Threading.ThreadPool> 작업 항목과 비슷하지만 추상화 수준은 더 높습니다. *작업 병렬 처리* 는 동시에 실행되는 하나 이상의 독립적인 작업을 의미합니다. 작업을 사용할 때의 주된 이점 두 가지는 다음과 같습니다.
 
 - 시스템 리소스를 더 효율적이고 확장 가능한 방식으로 사용할 수 있습니다.
 
@@ -28,7 +28,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 
      작업과 작업을 기반으로 만들어진 프레임워크는 대기, 취소, 연속, 강력한 예외 처리, 세부 상태, 사용자 지정 예약 등을 지원하는 강력한 API 집합을 제공합니다.
 
-이 두 가지 이유 때문에 .NET Framework에서는 다중 스레드, 비동기 및 병렬 코드를 작성하는 API로 TPL이 선호됩니다.
+이 두 가지 이유 때문에 .NET에서는 다중 스레드, 비동기, 병렬 코드를 작성하는 API로 TPL이 선호됩니다.
 
 ## <a name="creating-and-running-tasks-implicitly"></a>암시적으로 작업 만들기 및 실행
 
@@ -94,39 +94,27 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 
 ## <a name="task-creation-options"></a>작업 생성 옵션
 
-작업을 만드는 대부분의 API는 <xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수를 사용하는 오버로드를 제공합니다. 이러한 옵션 중 하나를 지정하여 스레드 풀에서 작업을 예약하는 방법을 작업 스케줄러에 지시할 수 있습니다. 다음 표에서는 다양한 작업 생성 옵션을 보여 줍니다.
+작업을 만드는 대부분의 API는 <xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수를 사용하는 오버로드를 제공합니다. 관련 옵션 중 하나 이상을 지정하여 스레드 풀에서 작업을 예약하는 방법을 작업 스케줄러에 지시할 수 있습니다. 옵션과 비트 **OR** 연산을 함께 사용할 수 있습니다.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> 매개 변수 값|설명|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-|<xref:System.Threading.Tasks.TaskCreationOptions.None>|옵션을 지정하지 않을 경우의 기본값입니다. 스케줄러에서는 스케줄러의 기본 휴리스틱을 사용하여 작업을 예약합니다.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|먼저 만들어진 작업은 먼저 실행될 가능성이 높고 나중에 만들어진 작업은 나중에 실행될 가능성이 높게 작업이 예약되도록 지정합니다.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|작업이 장기 실행 작업을 나타냄을 지정합니다.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|작업을 현재 작업(있는 경우)의 연결된 자식 작업으로 만들어야 함을 지정합니다. 자세한 내용은 [연결된 자식 작업과 분리된 자식 작업](attached-and-detached-child-tasks.md)을 참조하세요.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|내부 작업이 `AttachedToParent` 옵션을 지정할 경우 해당 작업이 연결된 자식 작업이 되지 않도록 지정합니다.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|특정 작업 내에서 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 같은 메서드를 호출하여 만든 작업을 위한 작업 스케줄러가 이 작업이 실행 중인 스케줄러 대신 기본 스케줄러임을 지정합니다.|
-
-이러한 옵션과 비트 **OR** 연산을 함께 사용할 수 있습니다. 다음 예제에서는 <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> 및 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> 옵션이 있는 작업을 보여 줍니다.
+다음 예제에서는 <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> 및 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> 옵션이 있는 작업을 보여 줍니다.
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
 ## <a name="tasks-threads-and-culture"></a>작업, 스레드 및 문화권
 
-각 스레드에는 각각 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성으로 정의된 관련 문화권 및 UI 문화권이 있습니다. 스레드의 문화권은 형식 지정, 구문 분석, 정렬 및 문자열 비교와 같은 작업에서 사용됩니다. 스레드의 UI 문화권은 리소스 조회에서 사용됩니다. 일반적으로, <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용하여 애플리케이션 도메인의 모든 스레드에 대한 기본 문화권을 지정하지 않는 한 스레드의 기본 문화권 및 UI 문화권은 시스템 문화권에 의해 정의됩니다. 스레드의 문화권을 명시적으로 설정하고 새 스레드를 시작하는 경우 새 스레드는 호출 스레드의 문화권을 상속하지 않습니다. 대신, 해당 문화권은 기본 시스템 문화권입니다. .NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하는 앱에 대한 작업 기반 프로그래밍 모델은 이 관행을 준수합니다.
+각 스레드에는 각각 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성으로 정의된 관련 문화권 및 UI 문화권이 있습니다. 스레드의 문화권은 형식 지정, 구문 분석, 정렬 및 문자열 비교와 같은 작업에서 사용됩니다. 스레드의 UI 문화권은 리소스 조회에서 사용됩니다.
 
-> [!IMPORTANT]
-> 작업 컨텍스트의 일부인 호출 스레드의 문화권은 .NET Framework 4.6 *아래에서 실행*되는 앱이 아니라 .NET Framework 4.6을 *대상으로 하는* 앱에 적용됩니다. Visual Studio에서 **새 프로젝트** 대화 상자 위쪽의 드롭다운 목록에서 버전을 선택하여 프로젝트를 만들 때 특정 버전의 .NET Framework를 대상으로 지정할 수 있으며, Visual Studio 외부에서는 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용할 수 있습니다. .NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하는 앱의 경우 작업의 문화권은 작업이 실행되는 스레드의 문화권에 의해 계속 결정됩니다.
+<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용하여 애플리케이션 도메인의 모든 스레드에 대한 기본 문화권을 지정하지 않는 한 스레드의 기본 문화권 및 UI 문화권은 시스템 문화권에 의해 정의됩니다. 스레드의 문화권을 명시적으로 설정하고 새 스레드를 시작하는 경우 새 스레드는 호출 스레드의 문화권을 상속하지 않습니다. 대신, 해당 문화권은 기본 시스템 문화권입니다. 그러나 작업 기반 프로그래밍에서 작업은 다른 스레드에서 비동기적으로 실행되는 경우에도 호출 스레드의 문화권을 사용합니다.
 
-.NET Framework 4.6을 대상으로 하는 앱부터 작업이 스레드 풀 스레드에서 비동기적으로 실행되는 경우에도 호출 스레드의 문화권이 각 작업에 상속됩니다.
+다음 예제에서는 간단한 설명을 제공합니다. 앱의 현재 문화권을 프랑스어(프랑스)로 변경하거나 프랑스어(프랑스)가 이미 현재 문화권인 경우 영어(미국)로 변경합니다. 그런 다음 새 문화권의 통화 값으로 형식이 지정된 일부 숫자를 반환하는 `formatDelegate`라는 대리자를 호출합니다. 대리자가 작업에서 동기적으로 또는 비동기적으로 호출되는지와 관계없이 작업은 호출 스레드의 문화권을 사용합니다.
 
-다음 예제에서는 간단한 설명을 제공합니다. <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 사용하여 .NET Framework 4.6을를 대상으로 지정하고 앱의 현재 문화권을 프랑스어(프랑스) 또는 프랑스어(프랑스)가 이미 현재 문화권인 경우 영어(미국)로 변경합니다. 그런 다음 새 문화권의 통화 값으로 형식이 지정된 일부 숫자를 반환하는 `formatDelegate`라는 대리자를 호출합니다. 호출 스레드의 문화권이 비동기 작업에 상속되므로 작업으로서 대리자가 동기적 또는 비동기적인지에 관계없이 예상 결과를 반환합니다.
+:::code language="csharp" source="snippets/cs/asyncculture1.cs" id="1":::
 
-[!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
-[!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
+:::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
-Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 생략하고 **새 프로젝트** 대화 상자에서 프로젝트를 만들 때 대신 .NET Framework 4.6을 대상으로 선택할 수 있습니다.
-
-.NET Framework 4.6 이전의 .NET Framework 버전을 대상으로 하는 앱의 동작을 반영하는 출력의 경우 소스 코드에서 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 특성을 제거합니다. 출력은 호출 스레드의 문화권이 아닌 기본 시스템 문화권의 형식 지정 규칙을 반영합니다.
+> [!NOTE]
+> .NET Framework 4.6 이전의 .NET Framework 버전에서 작업의 문화권은 ‘호출 스레드’의 문화권이 아니라 ‘실행’하는 스레드의 문화권에 의해 결정됩니다.  비동기 작업의 경우 작업에서 사용하는 문화권이 호출 스레드의 문화권과 다를 수 있습니다.
 
 비동기 작업 및 문화권에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo> 항목의 "문화권 및 비동기 작업 기반 작업" 섹션을 참조하세요.
 
@@ -150,7 +138,7 @@ Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFramewor
 
 ## <a name="creating-detached-child-tasks"></a>분리된 자식 작업 만들기
 
-작업에서 실행되는 사용자 코드를 통해 새 작업이 만들어지지만 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션은 지정되지 않을 경우 새 작업은 어떤 특수한 방법으로도 부모 작업과 동기화되지 않습니다. 이 유형의 동기화되지 않은 작업을 *분리된 중첩 작업* 또는 *분리된 자식 작업*이라고 부릅니다. 다음 예제에서는 분리된 상태의 자식 작업을 하나 만드는 작업을 보여 줍니다.
+작업에서 실행되는 사용자 코드를 통해 새 작업이 만들어지지만 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션은 지정되지 않을 경우 새 작업은 어떤 특수한 방법으로도 부모 작업과 동기화되지 않습니다. 이 유형의 동기화되지 않은 작업을 *분리된 중첩 작업* 또는 *분리된 자식 작업* 이라고 부릅니다. 다음 예제에서는 분리된 상태의 자식 작업을 하나 만드는 작업을 보여 줍니다.
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]

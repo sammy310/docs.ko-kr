@@ -2,12 +2,12 @@
 title: .NET 라이브러리에 대한 플랫폼 간 대상 지정
 description: 플랫폼 간 .NET 라이브러리를 만드는 모범 사례 권장 사항입니다.
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223341"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189253"
 ---
 # <a name="cross-platform-targeting"></a>플랫폼 간 대상 지정
 
@@ -33,7 +33,7 @@ ms.locfileid: "92223341"
 
 ❌`netstandard1.x` 대상을 포함하지 않습니다.
 
-> .NET Standard 1.x는 세분화된 NuGet 패키지 집합으로 배포되어 큰 패키지 종속성 그래프를 만들기 때문에 개발자가 빌드 시 많은 패키지를 다운로드해야 합니다. .NET Framework 4.6.1, UWP 및 Xamarin을 포함한 최신 .NET 플랫폼은 모두 .NET Standard 2.0을 지원합니다. 특별히 이전 플랫폼을 대상으로 지정해야 하는 경우에만 .NET Standard 1.x를 대상으로 지정해야 합니다.
+> .NET Standard 1.x는 세분화된 NuGet 패키지 집합으로 배포되어 큰 패키지 종속성 그래프를 만들기 때문에 개발자가 빌드 시 많은 패키지를 다운로드해야 합니다. 최신 .NET 구현은 .NET Standard 2.0을 지원합니다. 특별히 이전 플랫폼을 대상으로 지정해야 하는 경우에만 .NET Standard 1.x를 대상으로 지정해야 합니다.
 
 ✔️ `netstandard1.x` 대상이 필요한 경우 `netstandard2.0` 대상을 포함합니다.
 

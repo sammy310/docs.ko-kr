@@ -3,30 +3,29 @@ title: 공용 언어 런타임의 형식 전달
 description: 형식 전달을 사용하면 원본 어셈블리를 사용하는 애플리케이션을 다시 컴파일하지 않고도 형식을 다른 .NET 어셈블리로 이동할 수 있습니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], type forwarding
+- assemblies [.NET], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: f0be61bd4ce88569e22a350a9ea9490d67e74ff3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cd166068993fb5d1a5164615de3926a06dda8098
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378593"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687671"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>공용 언어 런타임의 형식 전달
+
 형식 전달을 사용하면 원본 어셈블리를 사용하는 애플리케이션을 다시 컴파일하지 않고도 형식을 다른 어셈블리로 이동할 수 있습니다.  
   
- 예를 들어 애플리케이션이 *Utility.dll*이라는 어셈블리에서 `Example` 클래스를 사용한다고 가정해 보세요. *Utility.dll* 개발자는 어셈블리를 리팩터링하고 이 과정에서 `Example` 클래스를 다른 어셈블리로 이동할 수 있습니다. 이전 버전의 *Utility.dll*이 새 버전의 *Utility.dll*과 관련 어셈블리로 바뀌는 경우 `Example` 클래스를 사용하는 애플리케이션은 새 버전의 *Utility.dll*에서 `Example` 클래스를 찾을 수 없기 때문에 실패합니다.  
+ 예를 들어 애플리케이션이 *Utility.dll* 이라는 어셈블리에서 `Example` 클래스를 사용한다고 가정해 보세요. *Utility.dll* 개발자는 어셈블리를 리팩터링하고 이 과정에서 `Example` 클래스를 다른 어셈블리로 이동할 수 있습니다. 이전 버전의 *Utility.dll* 이 새 버전의 *Utility.dll* 과 관련 어셈블리로 바뀌는 경우 `Example` 클래스를 사용하는 애플리케이션은 새 버전의 *Utility.dll* 에서 `Example` 클래스를 찾을 수 없기 때문에 실패합니다.  
   
- *Utility.dll* 개발자는 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> 특성을 사용하여 `Example` 클래스에 대한 요청을 전달하여 이를 방지할 수 있습니다. 새 버전의 *Utility.dll*에 이 특성이 적용된 경우 `Example` 클래스에 대한 요청은 현재 해당 클래스가 들어 있는 어셈블리로 전달됩니다. 기존 애플리케이션은 다시 컴파일하지 않고도 정상적으로 작동합니다.  
-  
-> [!NOTE]
-> .NET Framework 버전 2.0에서는 Visual Basic으로 작성된 어셈블리의 형식을 전달할 수 없습니다. 그러나 Visual Basic으로 작성된 애플리케이션에서 전달된 형식을 사용할 수는 있습니다. 즉, 애플리케이션에서 C# 또는 C++로 코딩된 어셈블리를 사용하며 해당 어셈블리의 형식이 다른 어셈블리로 전달된 경우 Visual Basic 애플리케이션에서 전달된 형식을 사용할 수 있습니다.  
-  
-## <a name="forward-types"></a>형식 전달  
+ *Utility.dll* 개발자는 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> 특성을 사용하여 `Example` 클래스에 대한 요청을 전달하여 이를 방지할 수 있습니다. 새 버전의 *Utility.dll* 에 이 특성이 적용된 경우 `Example` 클래스에 대한 요청은 현재 해당 클래스가 들어 있는 어셈블리로 전달됩니다. 기존 애플리케이션은 다시 컴파일하지 않고도 정상적으로 작동합니다.
+
+## <a name="forward-a-type"></a>형식 전달
+
  다음 네 단계를 통해 형식을 전달할 수 있습니다.  
   
 1. 형식의 소스 코드를 원본 어셈블리에서 대상 어셈블리로 이동합니다.  

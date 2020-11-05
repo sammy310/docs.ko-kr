@@ -3,20 +3,21 @@ title: '스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], local storage
-- threading [.NET Framework], thread-relative static fields
+- threading [.NET], local storage
+- threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291086"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188161"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯
-관리되는 TLS(스레드 로컬 스토리지)를 사용하여 스레드 및 애플리케이션 도메인에 고유한 데이터를 저장할 수 있습니다. .NET Framework는 관리되는 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  
+
+관리형 TLS(스레드 로컬 스토리지)를 사용하여 스레드 및 애플리케이션 도메인에 고유한 데이터를 저장할 수 있습니다. .NET은 관리형 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  
   
 - 컴파일 시간에 정확한 요구 사항을 예상할 수 있는 경우에는 스레드 관련 정적 필드(Visual Basic의 스레드 관련 `Shared` 필드)를 사용합니다. 스레드 관련 정적 필드는 최고의 성능을 제공합니다. 또한 컴파일 시간 형식 검사의 이점을 제공합니다.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "84291086"
   
  관리되지 않는 C++에서 `TlsAlloc`를 사용하여 슬롯을 동적으로 할당하고 `__declspec(thread)`를 사용하여 변수가 스레드 관련 스토리지에서 할당되어야 함을 선언합니다. 스레드 관련 정적 필드 및 데이터 슬롯은 이 동작의 관리되는 버전을 제공합니다.  
   
- .NET Framework 4에서 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 개체가 처음 사용될 때 초기화가 지연되는 스레드 로컬 개체를 만들 수 있습니다. 자세한 내용은 [초기화 지연](../../framework/performance/lazy-initialization.md)을 참조하세요.  
+<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 개체가 처음 사용될 때 초기화가 지연되는 스레드 로컬 개체를 만들 수 있습니다. 자세한 내용은 [초기화 지연](../../framework/performance/lazy-initialization.md)을 참조하세요.  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>관리되는 TLS의 데이터 고유성  
  스레드 관련 정적 필드 또는 데이터 슬롯을 사용할지 여부에 관계없이 관리되는 TLS의 데이터는 스레드 및 애플리케이션 도메인의 조합에 고유합니다.  
@@ -45,7 +46,8 @@ ms.locfileid: "84291086"
  모든 클래스 생성자 코드는 필드에 액세스하는 첫 번째 컨텍스트의 첫 번째 스레드에서 실행됩니다. 동일한 애플리케이션 도메인의 다른 모든 스레드 또는 컨텍스트에서 필드는 참조 형식인 경우 `null`(Visual Basic의 `Nothing`)로 초기화되고 값 형식인 경우 해당 기본값으로 초기화됩니다. 따라서 스레드 관련 정적 필드를 초기화할 때 클래스 생성자를 사용하면 안 됩니다. 대신 스레드 관련 정적 필드를 초기화하지 않고 해당 필드가 `null`(`Nothing`) 또는 기본값으로 초기화된다고 가정합니다.  
   
 ## <a name="data-slots"></a>데이터 슬롯  
- .NET Framework는 스레드 및 애플리케이션 도메인의 조합에 고유한 동적 데이터 슬롯을 제공합니다. 두 가지 형식의 데이터 슬롯인 명명된 슬롯 및 명명되지 않은 슬롯이 있습니다. 둘 다 <xref:System.LocalDataStoreSlot> 구조체를 사용하여 구현됩니다.  
+
+.NET은 스레드 및 애플리케이션 도메인의 조합에 고유한 동적 데이터 슬롯을 제공합니다. 두 가지 형식의 데이터 슬롯인 명명된 슬롯 및 명명되지 않은 슬롯이 있습니다. 둘 다 <xref:System.LocalDataStoreSlot> 구조체를 사용하여 구현됩니다.  
   
 - 명명된 데이터 슬롯을 만들려면 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 메서드를 사용합니다. 기존 명명된 슬롯에 대한 참조를 가져오려면 해당 이름을 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 메서드에 전달합니다.  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db89539982c1afe0df374027d54826f3265f0fee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 36f1ee26def82d426b6637ae96f382fc89791a2f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602773"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93135840"
 ---
 
 ### <a name="install-the-sdk"></a>SDK 설치
@@ -17,13 +17,13 @@ sudo zypper install dotnet-sdk-3.1
 
 ### <a name="install-the-runtime"></a>런타임 설치
 
-.NET Core 런타임을 사용하면 런타임을 포함하지 않았던 .NET Core로 만든 앱을 실행할 수 있습니다. 아래 명령은 ASP.NET Core 런타임을 설치하며 이는 .NET Core에 대해 가장 호환성이 높은 런타임입니다. 터미널에서 다음 명령을 실행합니다.
+.NET Core 런타임을 사용하면 런타임을 포함하지 않았던 .NET Core로 만든 앱을 실행할 수 있습니다. 다음 명령을 실행하면 .NET Core에 대해 가장 호환성이 높은 ASP.NET Core 런타임이 설치됩니다. 터미널에서 다음 명령을 실행합니다.
 
 ```bash
 sudo zypper install aspnetcore-runtime-3.1
 ```
 
-ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 위 명령에서 `aspnetcore-runtime-2.1`을 `dotnet-runtime-3.1`로 바꿉니다.
+ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 이전 명령에서 `aspnetcore-runtime-2.1`을 `dotnet-runtime-3.1`로 바꿉니다.
 
 ```bash
 sudo zypper install dotnet-runtime-3.1

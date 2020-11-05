@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292100"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888726"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 
@@ -48,7 +48,7 @@ ms.locfileid: "84292100"
  .NET에서는 한 문자 클래스에서 다른 문자 클래스를 제외한 결과로 문자 집합을 정의하는 데 사용할 수 있는 문자 클래스 빼기 식을 지원합니다. 자세한 내용은 [문자 클래스 빼기](#CharacterClassSubtraction)를 참조하세요.  
   
 > [!NOTE]
-> 일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다.  .NET Framework 4.6.2부터, 문자 범주는 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기준으로 합니다. .NET Framework 4에서 .NET Framework 4.6.1까지는 [유니코드 표준, 버전 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)을 기반으로 합니다.  
+> 일치하는 단어 문자를 검색하는 [\w](#WordCharacter) 또는 일치하는 유니코드 범주를 검색하는 [\p{}](#CategoryOrBlock)와 같이 범주별로 일치하는 문자를 검색하는 문자 클래스는 <xref:System.Globalization.CharUnicodeInfo> 클래스를 활용하여 문자 범주에 대한 정보를 제공합니다. .NET Framework 4.6.2 이상 버전에서 문자 범주는 [유니코드 표준 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기반으로 합니다.
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>긍정 문자 그룹: [ ]  
@@ -58,20 +58,20 @@ ms.locfileid: "84292100"
 
 `[*character_group*]`
 
- 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 있는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
+ 여기서 *character_group* 은 일치가 성공하기 위해 입력 문자열에 나타날 수 있는 개별 문자 목록입니다. *character_group* 은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
   
 `[firstCharacter-lastCharacter]`  
   
- 여기서 *firstCharacter*는 범위를 시작하는 문자이고 *lastCharacter*는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter*는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter*는 높은 코드 포인트를 가진 문자여야 합니다.
+ 여기서 *firstCharacter* 는 범위를 시작하는 문자이고 *lastCharacter* 는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter* 는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter* 는 높은 코드 포인트를 가진 문자여야 합니다.
 
 > [!NOTE]
 > 양수 문자 그룹에는 문자 세트와 문자 범위가 모두 포함될 수 있기 때문에, 하이픈 문자(`-`)는 그룹의 첫 번째 또는 마지막 문자가 아닌 한 항상 범위 구분 기호로 해석됩니다.
 
 긍정 문자 클래스가 포함된 몇 가지 일반적인 정규식 패턴은 다음과 같습니다.  
   
-|무늬|설명|  
+|무늬|Description|  
 |-------------|-----------------|  
 |`[aeiou]`|모든 모음을 찾습니다.|  
 |`[\p{P}\d]`|모든 문장 부호 및 10진수 문자를 찾습니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "84292100"
   
  `gr[ae]y\s\S+?[\s|\p{P}]` 정규식은 다음과 같이 정의됩니다.  
   
-|무늬|설명|  
+|무늬|Description|  
 |-------------|-----------------|  
 |`gr`|리터럴 문자 "gr"을 찾습니다.|  
 |`[ae]`|"a" 또는 "e"를 찾습니다.|  
@@ -114,13 +114,13 @@ ms.locfileid: "84292100"
 
 `[*^character_group*]`
 
- 여기서 *character_group*은 일치가 성공하기 위해 입력 문자열에 나타날 수 없는 개별 문자 목록입니다. *character_group*은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
+ 여기서 *character_group* 은 일치가 성공하기 위해 입력 문자열에 나타날 수 없는 개별 문자 목록입니다. *character_group* 은 하나 이상의 리터럴 문자, [이스케이프 문자](character-escapes-in-regular-expressions.md) 또는 문자 클래스로 이루어진 조합으로 구성될 수 있습니다.  
   
  문자의 범위를 지정하는 구문은 다음과 같습니다.  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-여기서 *firstCharacter*는 범위를 시작하는 문자이고 *lastCharacter*는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter*는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter*는 높은 코드 포인트를 가진 문자여야 합니다.
+여기서 *firstCharacter* 는 범위를 시작하는 문자이고 *lastCharacter* 는 범위를 끝내는 문자입니다. 문자 범위는 일련의 문자로서, 문자 범위를 정의하려면 연속된 문자 중 첫 번째 문자와 마지막 문자를 하이픈(-)으로 연결하여 지정합니다. 두 문자의 유니코드 코드 포인트가 연속되면 이 두 문자는 연속된 문자입니다. *firstCharacter* 는 낮은 코드 포인트를 가진 문자여야 하며 *lastCharacter* 는 높은 코드 포인트를 가진 문자여야 합니다.
 
 > [!NOTE]
 > 음수 문자 그룹에는 문자 세트와 문자 범위가 모두 포함될 수 있기 때문에, 하이픈 문자(`-`)는 그룹의 첫 번째 또는 마지막 문자가 아닌 한 항상 범위 구분 기호로 해석됩니다.
@@ -134,7 +134,7 @@ ms.locfileid: "84292100"
   
  부정 문자 그룹이 포함된 몇 가지 일반적인 정규식 패턴은 다음과 같습니다.  
   
-|무늬|설명|  
+|무늬|Description|  
 |-------------|-----------------|  
 |`[^aeiou]`|모음을 제외한 모든 문자를 찾습니다.|  
 |`[^\p{P}\d]`|문장 부호 및 10진수 문자를 제외한 모든 문자를 찾습니다.|  
@@ -184,7 +184,7 @@ ms.locfileid: "84292100"
   
  `\p{` *name* `}`  
   
- 유니코드 일반 범주 또는 명명된 블록에 속하는 모든 문자를 찾습니다. 여기서 *name*은 범주 약어 또는 명명된 블록 이름입니다. 범주 약어 목록은 이 항목의 뒷부분에 있는 [지원되는 유니코드 일반 범주](#SupportedUnicodeGeneralCategories) 섹션을 참조하세요. 명명된 블록 목록은 이 항목의 뒷부분에 있는 [지원되는 명명된 블록](#SupportedNamedBlocks) 섹션을 참조하세요.  
+ 유니코드 일반 범주 또는 명명된 블록에 속하는 모든 문자를 찾습니다. 여기서 *name* 은 범주 약어 또는 명명된 블록 이름입니다. 범주 약어 목록은 이 항목의 뒷부분에 있는 [지원되는 유니코드 일반 범주](#SupportedUnicodeGeneralCategories) 섹션을 참조하세요. 명명된 블록 목록은 이 항목의 뒷부분에 있는 [지원되는 명명된 블록](#SupportedNamedBlocks) 섹션을 참조하세요.  
   
  다음 예제에서는 `\p{`*name*`}` 구문을 사용하여 유니코드 일반 범주(이 경우 `Pd` 또는 문장 부호, 대시 범주) 및 명명된 블록(명명된 블록 `IsGreek` 및 `IsBasicLatin`)을 모두 찾습니다.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "84292100"
   
  `\P{` *name* `}`  
   
- 유니코드 일반 범주 또는 명명된 블록에 속하지 않는 모든 문자를 찾습니다. 여기서 *name*은 범주 약어 또는 명명된 블록 이름입니다. 범주 약어 목록은 이 항목의 뒷부분에 있는 [지원되는 유니코드 일반 범주](#SupportedUnicodeGeneralCategories) 섹션을 참조하세요. 명명된 블록 목록은 이 항목의 뒷부분에 있는 [지원되는 명명된 블록](#SupportedNamedBlocks) 섹션을 참조하세요.  
+ 유니코드 일반 범주 또는 명명된 블록에 속하지 않는 모든 문자를 찾습니다. 여기서 *name* 은 범주 약어 또는 명명된 블록 이름입니다. 범주 약어 목록은 이 항목의 뒷부분에 있는 [지원되는 유니코드 일반 범주](#SupportedUnicodeGeneralCategories) 섹션을 참조하세요. 명명된 블록 목록은 이 항목의 뒷부분에 있는 [지원되는 명명된 블록](#SupportedNamedBlocks) 섹션을 참조하세요.  
   
  다음 예제에서는 `\P{`*name*`}` 구문을 사용하여 숫자 문자열에서 모든 통화 기호(이 경우, `Sc` 또는 기호, 통화 범주)를 제거합니다.  
   
@@ -226,10 +226,10 @@ ms.locfileid: "84292100"
 ## <a name="word-character-w"></a>단어 문자: \w  
  `\w`는 단어 문자를 찾습니다. 단어 문자는 다음 표에 나열된 유니코드 범주의 멤버입니다.  
   
-|범주|설명|  
+|Category|Description|  
 |--------------|-----------------|  
 |Ll|문자, 소문자|  
-|Lu|문자, 대문자|  
+|루어|문자, 대문자|  
 |Lt|문자, 제목 스타일|  
 |Lo|문자, 기타|  
 |Lm|문자, 한정자|  
@@ -244,7 +244,7 @@ ms.locfileid: "84292100"
   
  다음 예제에서는 `\w` 언어 요소를 사용하여 단어의 중복 문자를 찾습니다. 예제는 다음과 같이 해석될 수 있는 정규식 패턴 `(\w)\1`을 정의합니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |(\w)|단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
 |\1|첫 번째 캡처의 값을 찾습니다.|  
@@ -260,10 +260,10 @@ ms.locfileid: "84292100"
   
  즉, 다음 표에 나열된 유니코드 범주의 문자를 제외한 모든 문자를 찾습니다.  
   
-|범주|설명|  
+|Category|Description|  
 |--------------|-----------------|  
 |Ll|문자, 소문자|  
-|Lu|문자, 대문자|  
+|루어|문자, 대문자|  
 |Lt|문자, 제목 스타일|  
 |Lo|문자, 기타|  
 |Lm|문자, 한정자|  
@@ -278,7 +278,7 @@ ms.locfileid: "84292100"
   
  다음 예제에서는 `\W` 문자 클래스를 보여 줍니다.  공백 또는 문장 부호와 같은 한두 개의 비단어 문자가 따라오는 단어와 일치하는 정규식 패턴 `\b(\w+)(\W){1,2}`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |\b|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |(\w+)|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
@@ -293,7 +293,7 @@ ms.locfileid: "84292100"
 ## <a name="whitespace-character-s"></a>공백 문자: \s  
  `\s`는 공백 문자를 찾습니다. 다음 표에 나열된 이스케이프 시퀀스 및 유니코드 범주와 동일합니다.  
   
-|범주|설명|  
+|Category|Description|  
 |--------------|-----------------|  
 |`\f`|용지 공급 문자, \u000C.|  
 |`\n`|줄 바꿈 문자, \u000A.|  
@@ -307,7 +307,7 @@ ms.locfileid: "84292100"
   
  다음 예제에서는 `\s` 문자 클래스를 보여 줍니다. "s" 또는 "es"로 끝나고 그 뒤에 공백 문자나 입력 문자열의 끝이 있는 단어와 일치하는 정규식 패턴 `\b\w+(e)?s(\s|$)`를 정의합니다. 정규식은 다음 표와 같이 해석됩니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |\b|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |\w+|하나 이상의 단어 문자를 찾습니다.|  
@@ -380,7 +380,7 @@ ms.locfileid: "84292100"
 ## <a name="supported-unicode-general-categories"></a>지원되는 유니코드 일반 범주  
  유니코드는 다음 표에 나와 있는 일반 범주를 정의합니다. 자세한 내용은 [유니코드 문자 데이터베이스](https://www.unicode.org/reports/tr44/)의 하위 항목인 "UCD 파일 형식"과 "일반 범주 값"을 참조하세요.  
   
-|범주|설명|  
+|Category|Description|  
 |--------------|-----------------|  
 |`Lu`|문자, 대문자|  
 |`Ll`|문자, 소문자|  
@@ -439,7 +439,7 @@ ms.locfileid: "84292100"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> 또는<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -또는-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ ms.locfileid: "84292100"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> 또는<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -또는-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -546,7 +546,7 @@ ms.locfileid: "84292100"
   
  `[` *base_group* `-[` *excluded_group* `]]`  
   
- 대괄호(`[]`)와 하이픈(`-`)은 필수 요소입니다. *base_group*은 [긍정 문자 그룹](#PositiveGroup) 또는 [부정 문자 그룹](#NegativeGroup)입니다. *excluded_group* 구성 요소는 다른 긍정 또는 부정 문자 그룹이거나 다른 문자 클래스 빼기 식입니다. 즉, 문자 클래스 빼기 식을 중첩할 수 있습니다.  
+ 대괄호(`[]`)와 하이픈(`-`)은 필수 요소입니다. *base_group* 은 [긍정 문자 그룹](#PositiveGroup) 또는 [부정 문자 그룹](#NegativeGroup)입니다. *excluded_group* 구성 요소는 다른 긍정 또는 부정 문자 그룹이거나 다른 문자 클래스 빼기 식입니다. 즉, 문자 클래스 빼기 식을 중첩할 수 있습니다.  
   
  예를 들어, "a"부터 "z"까지의 문자 범위로 구성된 기본 그룹이 있다고 가정합니다. 문자 "m"을 제외한 기본 그룹으로 구성된 문자 집합을 정의하려면 `[a-z-[m]]`을 사용합니다. 문자 "d", "j" 및 "p"를 제외한 기본 그룹으로 구성된 문자 집합을 정의하려면 `[a-z-[djp]]`를 사용합니다. "m"부터 "p"까지의 문자 범위를 제외한 기본 그룹으로 구성된 문자 집합을 정의하려면 `[a-z-[m-p]]`를 사용합니다.  
   
@@ -558,7 +558,7 @@ ms.locfileid: "84292100"
   
  다음 예제에서는 입력 문자열에서 0과 홀수를 찾는 정규식 `^[0-9-[2468]]+$`를 정의합니다.  정규식은 다음 표와 같이 해석됩니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |^|입력 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |`[0-9-[2468]]+`|모든 문자 0에서 9까지 2, 4, 6 및 8을 제외한 하나 이상의 항목을 일치하세요. 즉, 한 번 이상 나오는 0 또는 홀수와 일치합니다.|  

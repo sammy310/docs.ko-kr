@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559098"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888791"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 
@@ -65,7 +65,7 @@ ms.locfileid: "90559098"
 
 ## <a name="naming-asynchronous-methods"></a>비동기 메서드 명명
 
-비동기 메서드를 제공하려는 각 동기 메서드 *MethodName*에 대해 다음을 수행합니다.
+비동기 메서드를 제공하려는 각 동기 메서드 *MethodName* 에 대해 다음을 수행합니다.
 
 다음 작업을 수행하는 _MethodName_**Async** 메서드를 정의합니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "90559098"
 
 - 여러 호출을 허용합니다.
 
-필요에 따라 _MethodName_**Async**와 동일하지만 `userState`라는 추가 개체 값 매개 변수가 있는 _MethodName_**Async** 오버로드를 정의합니다. 메서드의 여러 동시 호출을 관리할 준비가 되었으면 이 작업을 수행합니다. 그러면 메서드 호출을 구분하기 위해 모든 이벤트 처리기에 `userState` 값이 다시 전달됩니다. 나중에 검색할 수 있게 사용자 상태를 저장하기 위한 장소로 이 작업을 수행하도록 선택할 수도 있습니다.
+필요에 따라 _MethodName_**Async** 와 동일하지만 `userState`라는 추가 개체 값 매개 변수가 있는 _MethodName_**Async** 오버로드를 정의합니다. 메서드의 여러 동시 호출을 관리할 준비가 되었으면 이 작업을 수행합니다. 그러면 메서드 호출을 구분하기 위해 모든 이벤트 처리기에 `userState` 값이 다시 전달됩니다. 나중에 검색할 수 있게 사용자 상태를 저장하기 위한 장소로 이 작업을 수행하도록 선택할 수도 있습니다.
 
 별개의 각 _MethodName_**Async** 메서드 시그니처에 대해 다음을 수행합니다.
 
@@ -145,7 +145,7 @@ ms.locfileid: "90559098"
 
 `CancelAsync(object userState)` 메서드를 정의하는 경우 클라이언트는 단일 비동기 메서드의 모든 호출 간에서 뿐만 아니라 개체에 대해 호출된 모든 비동기 메서드 간을 구분할 수 있도록 하는 상태 값을 선택할 때 주의해야 합니다.
 
-Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보다 쉽게 검색할 수 있도록 하기 위해 단일 비동기 작업 버전을 _MethodName_**AsyncCancel**로 명명하고 있습니다. 이렇게 하면 관련된 멤버가 그룹화되고 비동기 기능과 관련이 없는 다른 멤버에서 구분될 수 있습니다. 후속 버전에 추가되는 비동기 작업이 있을 수 있다고 예상될 경우 `CancelAsync`를 정의하는 것이 더 바람직합니다.
+Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보다 쉽게 검색할 수 있도록 하기 위해 단일 비동기 작업 버전을 _MethodName_**AsyncCancel** 로 명명하고 있습니다. 이렇게 하면 관련된 멤버가 그룹화되고 비동기 기능과 관련이 없는 다른 멤버에서 구분될 수 있습니다. 후속 버전에 추가되는 비동기 작업이 있을 수 있다고 예상될 경우 `CancelAsync`를 정의하는 것이 더 바람직합니다.
 
 위 표의 여러 메서드를 같은 클래스에는 정의하지 마세요. 그렇게 하는 것은 의미가 없으며 메서드가 증가하면 클래스 인터페이스만 복잡해집니다.
 
@@ -169,7 +169,7 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
   - `ProgressChanged`: 클래스에 비동기 작업이 여러 개 있는 경우(또는 이후 버전에서 여러 비동기 작업을 포함하도록 확장될 예정임)
 
-  - _MethodName_**ProgressChanged**: 클래스에 비동기 작업이 하나만 있는 경우.
+  - _MethodName_**ProgressChanged** : 클래스에 비동기 작업이 하나만 있는 경우.
 
   이 명명 옵션은 선택적으로 취소 지원 섹션에 설명된 대로 취소 메서드의 경우와 비슷합니다.
 
@@ -213,13 +213,13 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>메서드의 Out 및 Ref 매개 변수 처리
 
-일반적으로 `out` 및 `ref`의 사용이 .NET Framework에서는 권장되지 않지만 이러한 매개 변수가 있을 때 따라야 하는 규칙은 다음과 같습니다.
+일반적으로 .NET에서는 `out` 및 `ref` 매개 변수를 사용하지 않는 것이 좋지만 이러한 매개 변수가 있을 때는 다음 규칙을 따라야 합니다.
 
-동기 메서드를 *MethodName*으로 명명한 경우:
+동기 메서드를 *MethodName* 으로 명명한 경우:
 
-- *MethodName*에 대한 `out` 매개 변수는 _MethodName_**Async**에 속하지 않아야 합니다. 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.
+- *MethodName* 에 대한 `out` 매개 변수는 _MethodName_**Async** 에 속하지 않아야 합니다. 좀 더 적절한 이름이 없는 경우 *MethodName* 의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs** 에 속해야 합니다.
 
-- *MethodName*에 대한 `ref` 매개 변수가 _MethodName_**Async**에 속해야 하고 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.
+- *MethodName* 에 대한 `ref` 매개 변수가 _MethodName_**Async** 에 속해야 하고 좀 더 적절한 이름이 없는 경우 *MethodName* 의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs** 에 속해야 합니다.
 
 예를 들어 다음이 지정될 경우
 

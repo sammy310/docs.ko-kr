@@ -3,12 +3,12 @@ title: 네트워크 구성 설정
 description: .NET Core 앱의 네트워킹을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: d43b68206cc82f4a41df02bd5998702b4f5d0590
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bda608e83bb1b093d7d9b860de9607f6734720aa
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538135"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188304"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>네트워킹을 위한 런타임 구성 옵션
 
@@ -16,9 +16,11 @@ ms.locfileid: "90538135"
 
 - HTTP/2 프로토콜 지원을 사용할지 여부를 구성합니다.
 
-- 이 설정을 생략하면 HTTP/2 프로토콜에 대한 지원을 사용할 수 없습니다. 이는 값을 `false`로 설정하는 것과 같습니다.
-
 - .NET Core 3.0에서 도입되었습니다.
+
+- .NET Core 3.0만 해당: 이 설정을 생략하면 HTTP/2 프로토콜에 대한 지원을 사용할 수 없습니다. 이는 값을 `false`로 설정하는 것과 같습니다.
+
+- .NET Core 3.1 및 .NET 5 이상: 이 설정을 생략하면 HTTP/2 프로토콜에 대한 지원을 사용할 수 있습니다. 이는 값을 `true`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 |
 | - | - | - |
@@ -43,3 +45,17 @@ ms.locfileid: "90538135"
 
 > [!NOTE]
 > .NET 5부터 `System.Net.Http.UseSocketsHttpHandler` 설정을 더 이상 사용할 수 없습니다.
+
+## <a name="latin1-headers-net-core-31-only"></a>Latin1 헤더(.NET Core 3.1만 해당)
+
+- 이 스위치를 사용하면 HTTP 헤더 유효성 검사를 완화할 수 있으므로 <xref:System.Net.Http.SocketsHttpHandler>가 헤더에서 ISO-8859-1(Latin-1)로 인코딩된 문자를 보낼 수 있습니다.
+
+- 이 설정을 생략하면 ASCII가 아닌 문자를 보내려고 하면 <xref:System.Net.Http.HttpRequestException>이 발생합니다. 이는 값을 `false`로 설정하는 것과 같습니다.
+
+| | 설정 이름 | 값 |
+| - | - | - |
+| **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.AllowLatin1Headers` | `false` - 사용 안 함<br/>`true` - 사용 |
+| **환경 변수** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_ALLOWLATIN1HEADERS` | `0` - 사용 안 함<br/>`1` - 사용 |
+
+> [!NOTE]
+> 이 옵션은 이전 또는 이후 버전이 아니라 버전 3.1.9 이후 .NET Core 3.1에서만 사용할 수 있습니다. .NET 5에서는 <xref:System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector>를 사용하는 것이 좋습니다.

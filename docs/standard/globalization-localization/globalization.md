@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291918"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064173"
 ---
 # <a name="globalization"></a>전역화
 
@@ -102,7 +102,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체로 정의되며, 이것은 각 문화권의 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드 오버로드를 사용하는 문화권 구분 문자열 비교는 <xref:System.Globalization.CompareInfo> 개체도 사용합니다.
 
-.NET에서는 테이블을 사용하여 문자열 데이터에 대해 문화권 구분 정렬을 수행합니다. 이러한 테이블의 내용에는 정렬 가중치 및 문자열 정규화에 대한 데이터가 포함되며, 이것은 특정한 .NET 버전에서 구현되는 유니코드 표준 버전에 의해 결정됩니다. 다음 테이블에는 지정된 .NET Framework 버전 및 .NET Core로 구현되는 유니코드 버전이 나열되어 있습니다. 지원되는 유니코드 버전 목록은 문자 비교 및 정렬에만 적용되며 범주에 따른 유니코드 문자의 분류에는 적용되지 않습니다. 자세한 내용은 <xref:System.String> 항목의 “문자열과 유니코드 표준” 섹션을 참조하세요.
+.NET에서는 테이블을 사용하여 문자열 데이터에 대해 문화권 구분 정렬을 수행합니다. 이러한 테이블의 내용에는 정렬 가중치 및 문자열 정규화에 대한 데이터가 포함되며, 이것은 특정한 .NET 버전에서 구현되는 유니코드 표준 버전에 의해 결정됩니다. 다음 테이블에는 지정된 .NET 버전으로 구현되는 유니코드 버전이 나열되어 있습니다. 지원되는 유니코드 버전 목록은 문자 비교 및 정렬에만 적용되며 범주에 따른 유니코드 문자의 분류에는 적용되지 않습니다. 자세한 내용은 <xref:System.String> 항목의 “문자열과 유니코드 표준” 섹션을 참조하세요.
 
 |.NET Framework 버전|운영 체제|유니코드 버전|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 |.NET Framework 4|모든 운영 체제|Unicode 5.0|
 |Windows 7의 .NET Framework 4.5 이상|Unicode 5.0|
 |Windows 8 이상 운영 체제의 .NET Framework 4.5 이상|유니코드 6.3.0|
-|.NET Core(모든 버전)|기본 운영 체제에서 지원되는 유니코드 표준의 버전에 따라 달라집니다.|
+|.NET Core 및 .NET 5 이상|기본 운영 체제에서 지원되는 유니코드 표준의 버전에 따라 달라집니다.|
 
-.NET Framework 4.5 이상 및 모든 버전의 .NET Core에서 문자열 비교 및 정렬은 운영 체제에 따라 달라집니다. Windows 7에서 실행되는 .NET Framework 4.5 이상은 Unicode 5.0을 구현하는 자체 테이블의 데이터를 검색합니다. Windows 8 이상에서 실행되는 .NET Framework 4.5 이상은 Unicode 6.3을 구현하는 운영 체제 테이블의 데이터를 검색합니다. .NET Core에서 지원되는 유니코드의 버전은 기본 운영 체제에 따라 달라집니다. 문화권 구분 정렬 데이터를 직렬화하면 <xref:System.Globalization.SortVersion> 클래스를 사용하여 직렬화된 데이터가 .NET 및 운영 체제의 정렬 순서와 일치하도록 정렬되어야 하는 시기를 결정할 수 있습니다. 예제는 <xref:System.Globalization.SortVersion> 클래스 항목을 참조하세요.
+.NET Framework 4.5부터 모든 버전의 .NET Core 및 .NET 5 이상에서 문자열 비교와 정렬은 운영 체제에 따라 달라집니다. Windows 7에서 실행되는 .NET Framework 4.5 이상은 유니코드 5.0을 구현하는 자체 테이블의 데이터를 검색합니다. Windows 8 이상에서 실행되는 .NET Framework 4.5 이상은 유니코드 6.3을 구현하는 운영 체제 테이블의 데이터를 검색합니다. .NET Core 및 .NET 5 이상에서 지원되는 유니코드의 버전은 기본 운영 체제에 따라 달라집니다. 문화권 구분 정렬 데이터를 직렬화하면 <xref:System.Globalization.SortVersion> 클래스를 사용하여 직렬화된 데이터가 .NET 및 운영 체제의 정렬 순서와 일치하도록 정렬되어야 하는 시기를 결정할 수 있습니다. 예제는 <xref:System.Globalization.SortVersion> 클래스 항목을 참조하세요.
 
 앱에서 문자열 데이터의 광범위한 문화권별 정렬을 수행하는 경우, <xref:System.Globalization.SortKey> 클래스를 사용하여 문자열을 비교합니다. 정렬 키는 알파벳, 대/소문자, 특정 문자열의 분음 부호 가중치를 비롯한 문화권별 정렬 가중치를 반영합니다. 정렬 키를 사용한 비교는 이진이기 때문에 암시적 또는 명시적으로 <xref:System.Globalization.CompareInfo> 개체를 사용하는 비교보다 빠릅니다. 문자열을 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> 메서드에 전달하여 특정 문자열에 대한 문화권별 정렬 키를 만듭니다.
 

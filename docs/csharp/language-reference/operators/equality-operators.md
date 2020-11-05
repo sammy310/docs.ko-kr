@@ -1,7 +1,7 @@
 ---
 title: 같음 연산자 - C# 참조
 description: C# 같음 비교 연산자 및 C# 형식 같음에 대해 알아봅니다.
-ms.date: 06/26/2019
+ms.date: 10/30/2020
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063096"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063217"
 ---
 # <a name="equality-operators-c-reference"></a>같음 연산자(C# 참조)
 
@@ -47,11 +47,19 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../builtin-types/value-tu
 
 ### <a name="reference-types-equality"></a>참조 형식 같음
 
-기본적으로 두 개의 참조 형식 피연산자는 동일한 개체를 참조하는 경우 동일합니다.
+기본적으로 두 개의 레코드가 아닌 참조 형식 피연산자는 동일한 개체를 참조하는 경우 같습니다.
 
 [!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 이 예제에서 표시한 대로 사용자 지정 참조 형식은 기본적으로 `==` 연산자를 지원합니다. 그러나 참조 형식은 `==` 연산자를 오버로드할 수 있습니다. 참조 형식이 `==` 연산자를 오버로드하는 경우 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 메서드를 사용하여 해당 형식의 두 참조가 동일한 개체를 참조하는지 확인합니다.
+
+### <a name="record-types-equality"></a>레코드 형식 같음
+
+C# 9.0 이상에서 사용할 수 있는 [레코드 형식](../../whats-new/csharp-9.md#record-types)은 기본적으로 값 같음 의미 체계를 제공하는 `==` 및 `!=` 연산자를 지원합니다. 즉, 두 개의 레코드 피연산자는 둘 다 `null`이거나 모든 필드와 자동 구현 속성의 해당 값이 같은 경우에 같습니다.
+
+:::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
+
+앞의 예제처럼 레코드가 아닌 참조 형식 멤버의 경우 참조되는 인스턴스가 아니라 해당 참조 값이 비교됩니다.
 
 ### <a name="string-equality"></a>문자열 같음
 
@@ -85,9 +93,17 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../builtin-types/value-tu
 
 사용자 정의 형식은 `==` 및 `!=` 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 형식이 두 연산자 중 하나를 오버로드하는 경우 나머지 연산자도 오버로드해야 합니다.
 
+레코드 형식은 `==` 및 `!=` 연산자를 명시적으로 오버로드할 수 없습니다. 레코드 형식 `T`에 대한 `==` 및 `!=` 연산자의 동작을 변경해야 하는 경우 다음 시그니처를 사용하여 <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> 메서드를 구현합니다.
+
+```csharp
+public virtual bool Equals(T? other);
+```
+
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [관계형 및 형식 테스트 연산자](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) 섹션을 참조하세요.
+
+레코드 형식 같음에 관한 자세한 내용은 [레코드 기능 제안 노트](~/_csharplang/proposals/csharp-9.0/records.md)의 [같음 멤버](~/_csharplang/proposals/csharp-9.0/records.md#equality-members) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

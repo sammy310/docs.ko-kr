@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
-- assemblies [.NET Framework], signing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], signing
+- assemblies [.NET], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378613"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687655"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 
@@ -38,13 +38,13 @@ ms.locfileid: "83378613"
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio를 사용하여 강력한 이름으로 어셈블리를 만들고 서명  
   
-1. **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+1. **솔루션 탐색기** 에서 프로젝트의 바로 가기 메뉴를 열고 **속성** 을 선택합니다.  
   
 2. **서명** 탭을 선택합니다.  
   
 3. **어셈블리 서명** 상자를 선택합니다.  
   
-4. **강력한 이름 키 파일 선택** 상자에서 **찾아보기**를 선택한 다음 키 파일로 이동합니다. 새 키 파일을 만들려면 **새로 만들기**를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
+4. **강력한 이름 키 파일 선택** 상자에서 **찾아보기** 를 선택한 다음 키 파일로 이동합니다. 새 키 파일을 만들려면 **새로 만들기** 를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
   
 > [!NOTE]
 > [어셈블리를 지연 서명](delay-sign.md)하기 위해 공개 키 파일을 선택합니다.  
@@ -53,17 +53,17 @@ ms.locfileid: "83378613"
   
 [Visual Studio용 개발자 명령 프롬프트](../../framework/tools/developer-command-prompt-for-vs.md)에서 다음 명령을 입력합니다.  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
 여기서  
 
-- *assemblyName*은 어셈블리 링커가 내보낼 강력하게 서명된 어셈블리( *.dll* 또는 *.exe* 파일)의 이름입니다.  
+- *assemblyName* 은 어셈블리 링커가 내보낼 강력하게 서명된 어셈블리( *.dll* 또는 *.exe* 파일)의 이름입니다.  
   
-- *moduleName*은 하나 이상의 형식을 포함하는 .NET Framework 코드 모듈( *.netmodule* 파일)의 이름입니다. C# 또는 Visual Basic에서 `/target:module` 스위치로 코드를 컴파일하여 *.netmodule* 파일을 만들 수 있습니다.
+- *moduleName* 은 하나 이상의 형식을 포함하는 .NET Framework 코드 모듈( *.netmodule* 파일)의 이름입니다. C# 또는 Visual Basic에서 `/target:module` 스위치로 코드를 컴파일하여 *.netmodule* 파일을 만들 수 있습니다.
   
-- *keyfileName*은 키 쌍을 포함하는 컨테이너 또는 파일의 이름입니다. 어셈블리 링커는 현재 디렉터리를 기준으로 상대 경로를 해석합니다.  
+- *keyfileName* 은 키 쌍을 포함하는 컨테이너 또는 파일의 이름입니다. 어셈블리 링커는 현재 디렉터리를 기준으로 상대 경로를 해석합니다.  
 
-다음 예제에서는 키 쌍 파일 *sgKey.snk*를 사용하여 강력한 이름으로 *MyAssembly.dll* 어셈블리에 서명합니다.  
+다음 예제에서는 키 쌍 파일 *sgKey.snk* 를 사용하여 강력한 이름으로 *MyAssembly.dll* 어셈블리에 서명합니다.  
 
 ```console
 al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk  
@@ -80,7 +80,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
    > [!NOTE]
    > C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
 
-다음 예제에서는 어셈블리가 컴파일된 디렉터리에 있는 *keyfile.snk*라는 키 파일과 함께 <xref:System.Reflection.AssemblyKeyFileAttribute> 특성을 사용합니다.  
+다음 예제에서는 어셈블리가 컴파일된 디렉터리에 있는 *keyfile.snk* 라는 키 파일과 함께 <xref:System.Reflection.AssemblyKeyFileAttribute> 특성을 사용합니다.  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];
@@ -102,7 +102,7 @@ C# 및 Visual Basic 컴파일러에서 `/keyfile` 또는 `/delaysign` 컴파일�
 
 지연 서명에 대한 자세한 내용은 [어셈블리 지연 서명](delay-sign.md)을 참조하세요.  
 
-다음 예제에서는 C# 컴파일러를 사용하고 키 파일 *sgKey.snk*를 사용하여 강력한 이름으로 *UtilityLibrary.dll* 어셈블리에 서명합니다.  
+다음 예제에서는 C# 컴파일러를 사용하고 키 파일 *sgKey.snk* 를 사용하여 강력한 이름으로 *UtilityLibrary.dll* 어셈블리에 서명합니다.  
 
 ```cmd
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  

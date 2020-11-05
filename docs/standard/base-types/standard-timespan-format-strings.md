@@ -12,18 +12,18 @@ helpviewer_keywords:
 - standard time interval format strings
 - standard format strings, time intervals
 - format specifiers, time intervals
-- time intervals [.NET Framework], formatting
-- time [.NET Framework], formatting
-- formatting [.NET Framework], time
+- time intervals [.NET], formatting
+- time [.NET], formatting
+- formatting [.NET], time
 - standard TimeSpan format strings
-- formatting [.NET Framework], time intervals
+- formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768120"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888947"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 
@@ -50,7 +50,7 @@ ms.locfileid: "84768120"
 ## <a name="the-constant-c-format-specifier"></a>상수("c") 형식 지정자  
  "c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.  
   
- [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
+ [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 마침표(.)와 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "84768120"
 |*ss*|"0"부터 "59" 범위의 초입니다.|  
 |*fffffff*|선택적인 초의 소수 부분입니다.  값 범위는 "0000001"(틱 1개 또는 1천만 분의 1초)에서 "9999999"(9,999,999천만 분의 1초 또는 1초-틱 1개)까지입니다.|  
   
- "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전의 모든 .NET Framework 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan> 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
+ "g" 및 "G" 형식 지정자와 달리 "c" 형식 지정자는 문화권을 구분하지 않으며, .NET Framework 4 이전 버전에 공통적으로 적용되는 고정된 <xref:System.TimeSpan> 값의 문자열 표현을 생성합니다. “c”는 기본 <xref:System.TimeSpan> 형식 문자열입니다. 즉, <xref:System.TimeSpan.ToString?displayProperty=nameWithType> 메서드는 “c” 형식 문자열을 사용하여 시간 간격 값의 서식을 지정합니다.  
   
 > [!NOTE]
 > <xref:System.TimeSpan>은 "c" 표준 형식 문자열과 동작이 동일한 "t" 및 "T" 표준 형식 문자열도 지원합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "84768120"
 ## <a name="the-general-short-g-format-specifier"></a>일반 약식("g") 형식 지정자  
  "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 이 형식 지정자의 형식은 다음과 같습니다.  
   
- [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
+ [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "84768120"
 ## <a name="the-general-long-g-format-specifier"></a>일반 긴("G") 형식 지정자  
  "G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다. "G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.  
   
- [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   

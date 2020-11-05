@@ -6,24 +6,25 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
 - custom numeric format strings
-- numbers [.NET Framework], custom numeric format strings
+- numbers [.NET], custom numeric format strings
 - displaying date and time data
-- format providers [.NET Framework]
+- format providers [.NET]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c1890684bd89b2bc4719637209569f01bd17a2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290515"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888484"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
-.NET Framework에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
+
+.NET에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
   
 - 숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](standard-numeric-format-strings.md)을 참조하세요.  
   
@@ -31,9 +32,9 @@ ms.locfileid: "84290515"
   
 - 숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체입니다. `provider` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Int32.ToString%2A>)와 함께 사용할 수 있습니다. 일반적으로 `provider` 매개 변수는 문화권별 서식 지정에 사용됩니다.  
   
- 애플리케이션에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다. .NET Framework에서는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체가 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방법을 결정할 수도 있습니다. 이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.  
+ 애플리케이션에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다. .NET에서는 <xref:System.Globalization.CultureInfo> 및 <xref:System.Globalization.NumberFormatInfo> 개체가 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방법을 결정할 수도 있습니다. 이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.  
   
-### <a name="to-define-a-custom-format-provider"></a>사용자 지정 형식 공급자를 정의하려면  
+## <a name="define-a-custom-format-provider"></a>사용자 지정 형식 공급자 정의  
   
 1. <xref:System.IFormatProvider> 및 <xref:System.ICustomFormatter> 인터페이스를 구현하는 클래스를 정의합니다.  
   
@@ -55,13 +56,14 @@ ms.locfileid: "84290515"
   
     4. `arg` 매개 변수의 문자열 표현을 반환합니다.  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>사용자 지정 숫자 형식 지정 개체를 사용하려면  
+## <a name="use-a-custom-numeric-formatting-object"></a>사용자 지정 숫자 형식 지정 개체 사용  
   
 1. 사용자 지정 형식 지정 클래스의 새 인스턴스를 만듭니다.  
   
 2. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 서식 지정 메서드를 호출하여 사용자 지정 서식 지정 개체, 형식 지정자(또는 지정자를 사용하지 않는 경우 <xref:System.String.Empty?displayProperty=nameWithType>) 및 서식을 지정할 숫자 값을 전달합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예제
+
  다음 예제에서는 미국 전화 번호를 나타내는 숫자를 NANP 또는 E.123 형식으로 변환하는 `TelephoneFormatter`라는 사용자 지정 숫자 형식 공급자를 정의합니다. 메서드는 두 가지 형식 지정자 "N"(NANP 형식 출력)과 "I"(국제 E.123 형식 출력)를 처리합니다.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]

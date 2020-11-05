@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
 - compile-time assembly referencing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379871"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687688"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>방법: 강력한 이름의 어셈블리 참조
 강력한 이름의 어셈블리에서 형식이나 리소스를 참조하는 프로세스는 일반적으로 투명합니다. 컴파일 시간(초기 바인딩) 또는 런타임에 참조를 만들 수 있습니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "83379871"
 
 명령 프롬프트에서 다음 명령을 입력합니다.  
 
-\<*compiler command*>  **/reference:** \<*assembly name*>  
+\<*compiler command*> **/reference:** \<*assembly name*>  
 
-이 명령에서 *compiler command*는 사용되는 언어의 컴파일러 명령이고, *assembly name*은 참조되는 어셈블리의 강력한 이름입니다. 라이브러리 어셈블리를 만들기 위해 **/t:library** 옵션과 같은 다른 컴파일러 옵션을 사용할 수도 있습니다.  
+이 명령에서 *compiler command* 는 사용되는 언어의 컴파일러 명령이고, *assembly name* 은 참조되는 어셈블리의 강력한 이름입니다. 라이브러리 어셈블리를 만들기 위해 **/t:library** 옵션과 같은 다른 컴파일러 옵션을 사용할 수도 있습니다.  
 
-다음 예제에서는 *myLibAssembly.dll*이라는 강력한 이름의 어셈블리를 참조하는 *myAssembly.dll*이라는 어셈블리를 *myAssembly.cs*라는 코드 모듈에서 만듭니다.  
+다음 예제에서는 *myLibAssembly.dll* 이라는 강력한 이름의 어셈블리를 참조하는 *myAssembly.dll* 이라는 어셈블리를 *myAssembly.cs* 라는 코드 모듈에서 만듭니다.  
 
 ```cmd
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
@@ -45,7 +45,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 강력한 이름의 어셈블리에 대한 런타임 참조를 만드는 경우(예: <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 메서드 사용), 참조되는 강력한 이름의 어셈블리의 표시 이름을 사용해야 합니다. 표시 이름의 구문은 다음과 같습니다.  
 
-\<*어셈블리 이름*> **,** \<*버전 번호*> **,** \<*문화권*> **,** \<*공개 키 토큰*>  
+\<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
 
 예를 들어:  
 
@@ -74,11 +74,11 @@ Dim myDll As Assembly = _
 
 다음 [강력한 이름(Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 특정 어셈블리에 대한 공개 키와 공개 키 토큰의 16진수 형식을 인쇄할 수 있습니다.  
 
-**sn -Tp \<** *어셈블리* **>**  
+**sn -Tp \<** *assembly* **>**  
 
 공개 키 파일이 있는 경우 다음 명령을 대신 사용할 수 있습니다(명령줄 옵션의 대/소문자 차이 확인).  
 
-**sn -tp \<** *공개 키 파일* **>**  
+**sn -tp \<** *public key file* **>**  
 
 ## <a name="see-also"></a>참조
 

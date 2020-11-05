@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
-- threading [.NET Framework], Mutex class
+- threading [.NET], Mutex class
 - Mutex class, about Mutex class
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291177"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188993"
 ---
 # <a name="mutexes"></a>뮤텍스
+
 <xref:System.Threading.Mutex> 개체를 사용하여 리소스에 대한 전용 액세스를 제공할 수 있습니다. <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.Monitor> 클래스보다 많은 시스템 리소스를 사용하지만 애플리케이션 도메인 경계를 넘어 마샬링될 수 있으며 여러 대기와 함께 사용될 수 있고 서로 다른 프로세스에서 스레드를 동기화하는 데 사용될 수 있습니다. 관리되는 동기화 메커니즘의 비교는 [동기화 기본 형식 개요](overview-of-synchronization-primitives.md)를 참조하세요.  
   
  코드 예제는 <xref:System.Threading.Mutex.%23ctor%2A> 생성자에 대한 참조 설명서를 참조하세요.  
@@ -30,10 +31,7 @@ ms.locfileid: "84291177"
  스레드가 <xref:System.Threading.Mutex>를 소유하는 경우 해당 스레드는 해당 실행을 차단하지 않고 반복되는 대기 요청 호출에서 동일한 <xref:System.Threading.Mutex>를 지정할 수 있지만 소유권을 해제하는 횟수만큼 <xref:System.Threading.Mutex>를 해제해야 합니다.  
   
 ## <a name="abandoned-mutexes"></a>중단된 뮤텍스  
- 스레드가 <xref:System.Threading.Mutex>를 해제하지 않고 종료하는 경우 뮤텍스는 중단되도록 명령됩니다. 뮤텍스가 보호하는 리소스가 일관성 없는 상태로 남을 수도 있으므로 이는 종종 심각한 프로그래밍 오류를 나타냅니다. .NET Framework 버전 2.0에서 <xref:System.Threading.AbandonedMutexException>은 뮤텍스를 획득하는 다음 스레드에서 throw됩니다.  
-  
-> [!NOTE]
-> .NET Framework 버전 1.0 및 1.1에서 중단된 <xref:System.Threading.Mutex>는 신호 받음 상태로 설정되고 다음 대기 스레드는 소유권을 가져옵니다. 대기 중인 스레드가 없는 경우 <xref:System.Threading.Mutex>는 신호 받음 상태로 유지됩니다. 예외가 throw되지 않습니다.  
+ 스레드가 <xref:System.Threading.Mutex>를 해제하지 않고 종료하는 경우 뮤텍스는 중단되도록 명령됩니다. 뮤텍스가 보호하는 리소스가 일관성 없는 상태로 남을 수도 있으므로 이는 종종 심각한 프로그래밍 오류를 나타냅니다. <xref:System.Threading.AbandonedMutexException>은 뮤텍스를 획득하는 다음 스레드에서 throw됩니다.
   
  시스템 차원 뮤텍스의 경우 중단된 뮤텍스는 애플리케이션이 갑자기 종료되었음을 나타낼 수 있습니다(예: Windows 작업 관리자를 사용하여).  
   
@@ -43,7 +41,8 @@ ms.locfileid: "84291177"
  로컬 뮤텍스는 프로세스 내에만 존재합니다. 로컬 <xref:System.Threading.Mutex> 개체에 대한 참조가 있는 프로세스의 모든 스레드에서 사용할 수 있습니다. 각 <xref:System.Threading.Mutex> 개체는 별도 로컬 뮤텍스입니다.  
   
 ### <a name="access-control-security-for-system-mutexes"></a>시스템 뮤텍스에 대한 액세스 제어 보안  
- .NET Framework 버전 2.0은 명명된 시스템 개체에 대해 Windows 액세스 제어 보안을 쿼리 및 설정하는 기능을 제공합니다. 시스템 개체는 전역적이며 따라서 코드에서 잠글 수 있으므로 생성 순간부터 시스템 뮤텍스를 보호하는 것이 좋습니다.  
+
+.NET은 명명된 시스템 개체에 대해 Windows 액세스 제어 보안을 쿼리하고 설정하는 기능을 제공합니다. 시스템 개체는 전역적이며 따라서 코드에서 잠글 수 있으므로 생성 순간부터 시스템 뮤텍스를 보호하는 것이 좋습니다.  
   
  뮤텍스의 액세스 제어 보안에 대한 자세한 내용은 <xref:System.Security.AccessControl.MutexSecurity> 및 <xref:System.Security.AccessControl.MutexAccessRule> 클래스, <xref:System.Security.AccessControl.MutexRights> 열거형, <xref:System.Threading.Mutex> 클래스의 <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> 및 <xref:System.Threading.Mutex.OpenExisting%2A> 메서드, <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 생성자를 참조하세요.  
   

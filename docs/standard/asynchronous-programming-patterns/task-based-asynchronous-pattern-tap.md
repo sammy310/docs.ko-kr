@@ -7,18 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 21675d26fa2f11d93801e2ba4ffec96b238b97b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325078"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889246"
 ---
 # <a name="task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴
 
@@ -26,7 +25,7 @@ TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 �
   
 ## <a name="naming-parameters-and-return-types"></a>이름 지정, 매개 변수 및 반환 형식
 
-TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 나타냅니다. 이는 APM(비동기 프로그래밍 모델 또는 `IAsyncResult`) 패턴 및 EAP(이벤트 기반 비동기 패턴)와 대조됩니다. APM에는 `Begin` 및 `End` 메서드가 필요합니다. EAP에는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg`에서 파생된 형식도 필요합니다. TAP의 비동기 메서드는 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 및 <xref:System.Threading.Tasks.ValueTask%601>와 같은 대기할 수 있는 형식을 반환하는 메서드의 작업 이름 뒤에 `Async` 접미사를 포함합니다. 예를 들어 `Task<String>`을 반환하는 비동기 `Get` 작업은 명명된 `GetAsync`일 수 있습니다. 접미사가 `Async`인 EAP 메서드 이름이 이미 포함되어 있는 클래스에 TAP 메서드를 추가하는 경우 대신 `TaskAsync` 접미사를 사용합니다. 예를 들어, 클래스에 `GetAsync` 메서드가 이미 있는 경우 이름으로 `GetTaskAsync`를 사용합니다. 메서드가 비동기 작업을 시작하지만 대기할 수 있는 형식을 반환하지 않는 경우 이 메서드가 작업 결과를 반환하거나 throw하지 않도록 제안하려면 해당 이름은 `Begin`, `Start` 또는 일부 다른 동사로 시작해야 합니다.  
+TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 나타냅니다. 이는 APM(비동기 프로그래밍 모델 또는 `IAsyncResult`) 패턴 및 EAP(이벤트 기반 비동기 패턴)와 대조됩니다. APM에는 `Begin` 및 `End` 메서드가 필요합니다. EAP에는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg`에서 파생된 형식도 필요합니다. TAP의 비동기 메서드는 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 및 <xref:System.Threading.Tasks.ValueTask%601>와 같은 대기할 수 있는 형식을 반환하는 메서드의 작업 이름 뒤에 `Async` 접미사를 포함합니다. 예를 들어 `Task<String>`을 반환하는 비동기 `Get` 작업은 명명된 `GetAsync`일 수 있습니다. 접미사가 `Async`인 EAP 메서드 이름이 이미 포함되어 있는 클래스에 TAP 메서드를 추가하는 경우 대신 `TaskAsync` 접미사를 사용합니다. 예를 들어, 클래스에 `GetAsync` 메서드가 이미 있는 경우 이름으로 `GetTaskAsync`를 사용합니다. 메서드가 비동기 작업을 시작하지만 대기할 수 있는 형식을 반환하지 않는 경우 이 메서드가 작업 결과를 반환하거나 throw하지 않도록 제안하려면 해당 이름은 `Begin`, `Start` 또는 일부 다른 동사로 시작해야 합니다.  
   
  TAP 메서드는 해당 동기 메서드가 void를 반환하는지 또는 `TResult` 형식을 반환하는지에 따라 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환합니다.  
   
@@ -95,7 +94,7 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
  TAP 구현이 `progress` 매개 변수를 허용하는 오버로드를 제공하는 경우 인수가 `null`일 수 있어야 하며, null인 경우 진행률이 보고되지 않습니다. TAP 구현에서는 진행률을 <xref:System.Progress%601> 개체에 동기적으로 보고해야 하므로, 비동기 메서드를 통해 진행률을 빠르게 제공합니다. 또한 진행률의 소비자가 정보를 처리하는 최선의 방법과 위치를 결정할 수 있습니다. 예를 들어, 진행률 인스턴스에서 콜백 마샬링을 선택할 수 있으며, 캡처된 동기화 컨텍스트에 이벤트를 발생시킬 수 있습니다.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 구현  
- .NET Framework 4.5는 단일 <xref:System.IProgress%601> 구현인 <xref:System.Progress%601>를 제공합니다. <xref:System.Progress%601> 클래스는 다음과 같이 선언됩니다.  
+.NET은 <xref:System.IProgress%601>을 구현하는 <xref:System.Progress%601> 클래스를 제공합니다. <xref:System.Progress%601> 클래스는 다음과 같이 선언됩니다.  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -103,18 +102,9 @@ public class Progress<T> : IProgress<T>
     public Progress();  
     public Progress(Action<T> handler);  
     protected virtual void OnReport(T value);  
-    public event EventHandler<T> ProgressChanged;  
+    public event EventHandler<T>? ProgressChanged;  
 }  
-```  
-  
-```vb  
-Public Class Progress(Of T) : Inherits IProgress(Of T)  
-    Public Sub New()  
-    Public Sub New(handler As Action(Of T))  
-    Protected Overridable Sub OnReport(value As T)  
-    Public Event ProgressChanged As EventHandler(Of T>  
-End Class  
-```  
+```
   
  <xref:System.Progress%601>의 인스턴스는 비동기 작업이 진행률 업데이트를 보고할 때마다 발생하는 <xref:System.Progress%601.ProgressChanged> 이벤트를 노출합니다. <xref:System.Progress%601.ProgressChanged> 이벤트는 <xref:System.Threading.SynchronizationContext> 인스턴스를 인스턴스화할 때 캡처된 <xref:System.Progress%601> 개체에서 발생합니다. 동기화 컨텍스트를 사용할 수 없는 경우 스레드 풀을 대상으로 하는 기본 컨텍스트가 사용됩니다. 처리기가 이 이벤트에 등록될 수 있습니다. 또한 편의를 위해 단일 처리기가 <xref:System.Progress%601> 생성자에 제공될 수 있으며 <xref:System.Progress%601.ProgressChanged> 이벤트의 이벤트 처리기와 같이 동작합니다. 진행률 업데이트는 이벤트 처리기를 실행하는 동안 비동기 작업이 지연되지 않도록 비동기적으로 발생합니다. 다른 <xref:System.IProgress%601> 구현에서 다른 의미 체계를 적용하도록 선택할 수 있습니다.  
   

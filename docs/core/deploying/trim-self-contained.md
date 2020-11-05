@@ -4,12 +4,12 @@ description: 자체 포함 앱을 트리밍하여 크기를 줄이는 방법을 
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770457"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925287"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>자체 포함 배포 및 실행 파일 트리밍
 
@@ -36,6 +36,39 @@ ms.locfileid: "90770457"
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>SSL 인증서 지원
+
+ASP.NET Core 앱에서처럼 앱이 SSL 인증서를 로드하는 경우 트리밍할 때 SSL 인증서 로드에 도움이 되는 어셈블리가 트리밍되지 않게 하려고 합니다.
+
+ASP.NET Core 3.1에 다음을 포함하도록 프로젝트 파일을 업데이트할 수 있습니다.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+.Net 5.0을 사용하는 경우 다음을 포함하도록 프로젝트 파일을 업데이트할 수 있습니다.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>앱 트리밍 - CLI
@@ -77,21 +110,21 @@ Visual Studio는 애플리케이션의 게시 방식을 제어하는 재사용 �
 
     기존 게시 프로필이 없는 경우 지침에 따라 게시 프로필을 만들고 **폴더** 대상 유형을 선택합니다.
 
-01. **편집**을 선택합니다.
+01. **편집** 을 선택합니다.
 
     :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="편집 단추가 있는 Visual Studio 게시 프로필.":::
 
 01. **프로필 설정** 대화 상자에서 다음 옵션을 설정합니다.
 
-    - **배포 모드**를 **자체 포함**으로 설정합니다.
-    - **대상 런타임**을 게시할 플랫폼으로 설정합니다.
+    - **배포 모드** 를 **자체 포함** 으로 설정합니다.
+    - **대상 런타임** 을 게시할 플랫폼으로 설정합니다.
     - **사용하지 않는 어셈블리 트리밍(미리 보기)** 을 선택합니다.
 
-    **저장**을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.
+    **저장** 을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.
 
     :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="배포 모드, 대상 런타임 및 사용하지 않는 어셈블리 트리밍 옵션이 강조 표시된 프로필 설정 대화 상자.":::
 
-01. **게시**를 선택하여 트리밍된 앱을 게시합니다.
+01. **게시** 를 선택하여 트리밍된 앱을 게시합니다.
 
 자세한 내용은 [Visual Studio를 사용하여 .NET Core 앱 게시](deploy-with-vs.md)를 참조하세요.
 
