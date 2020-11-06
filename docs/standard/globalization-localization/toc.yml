@@ -12,16 +12,15 @@
     - name: 문화권을 구분하지 않는 문자열 작업
       href: culture-insensitive-string-operations.md
       items:
-        - name: 문화권의 영향을 받지 않는 문자열 작업 수행
+        - name: 개요
           href: performing-culture-insensitive-string-operations.md
-          items:
-            - name: 문자열 비교
-              href: performing-culture-insensitive-string-comparisons.md
-            - name: 대/소문자 변경 내용
-              href: performing-culture-insensitive-case-changes.md
-            - name: 컬렉션의 문자열 작업
-              href: performing-culture-insensitive-string-operations-in-collections.md
-            - name: 배열의 문자열 작업
-              href: performing-culture-insensitive-string-operations-in-arrays.md
+        - name: 문자열 비교
+          href: performing-culture-insensitive-string-comparisons.md
+        - name: 대/소문자 변경 내용
+          href: performing-culture-insensitive-case-changes.md
+        - name: 컬렉션의 문자열 작업
+          href: performing-culture-insensitive-string-operations-in-collections.md
+        - name: 배열의 문자열 작업
+          href: performing-culture-insensitive-string-operations-in-arrays.md
     - name: 지역화 대비 앱 개발을 위한 모범 사례
       href: best-practices-for-developing-world-ready-apps.md
