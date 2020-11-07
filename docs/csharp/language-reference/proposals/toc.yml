@@ -63,7 +63,7 @@
         - name: Nullable 참조 형식 - 제안
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
         - name: Nullable 참조 형식 - 사양
-          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: 재귀 패턴 일치
           href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
         - name: 기본 인터페이스 메서드
@@ -88,6 +88,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/records.md
         - name: 최상위 문
           href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: Nullable 참조 형식 - 사양
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: 패턴 일치 개선 사항
           href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
         - name: Init 전용 setter
