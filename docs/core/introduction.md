@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223582"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329796"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -23,7 +23,7 @@ ms.locfileid: "92223582"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP(유니버설 Windows 플랫폼)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [게임](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [게임](https://dotnet.microsoft.com/apps/games)
 * [IoT(사물 인터넷)](https://dotnet.microsoft.com/apps/iot)
 * [기계 학습](../machine-learning/index.yml)
 * [콘솔 앱](tutorials/with-visual-studio-code.md)

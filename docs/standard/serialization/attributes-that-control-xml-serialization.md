@@ -6,16 +6,16 @@ helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
 - XML serialization, attributes
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84276701"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281983"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serialization을 제어하는 특성
 다음 표의 특성을 클래스 및 클래스 멤버에 적용하여 <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어할 수 있습니다. 이러한 특성이 XML serialization을 제어하는 방법을 이해하려면 [특성을 사용하여 XML Serialization 제어](controlling-xml-serialization-using-attributes.md)를 참조하세요.  
@@ -40,7 +40,7 @@ ms.locfileid: "84276701"
 |<xref:System.Xml.Serialization.XmlTextAttribute>|public 속성 및 필드입니다.|속성 또는 필드는 XML 텍스트로 serialize되어야 합니다.|  
 |<xref:System.Xml.Serialization.XmlTypeAttribute>|public 클래스 선언입니다.|XML 형식의 이름 및 네임스페이스입니다.|  
   
- 모두 <xref:System.Xml.Serialization> 네임스페이스에서 찾을 수 있는 이러한 특성 이외에 <xref:System.ComponentModel.DefaultValueAttribute> 특성도 필드에 적용할 수 있습니다. **DefaultValueAttribute**는 지정된 값이 없는 경우 멤버에 자동으로 할당될 값을 설정합니다.  
+ 모두 <xref:System.Xml.Serialization> 네임스페이스에서 찾을 수 있는 이러한 특성 이외에 <xref:System.ComponentModel.DefaultValueAttribute> 특성도 필드에 적용할 수 있습니다. **DefaultValueAttribute** 는 지정된 값이 없는 경우 멤버에 자동으로 할당될 값을 설정합니다.  
   
  인코드된 SOAP XML serialization을 제어하려면 [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)을 참조하세요.  
   

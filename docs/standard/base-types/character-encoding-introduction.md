@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812122"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282311"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-각 문자는 단일 `char` 값으로 표현됩니다. 이 패턴은 대부분의 세계 언어에 적용됩니다. 예를 들어 다음은 *nǐ hǎo*로 발음되고 *Hello*를 의미하는 중국어 문자 2자의 출력입니다.
+각 문자는 단일 `char` 값으로 표현됩니다. 이 패턴은 대부분의 세계 언어에 적용됩니다. 예를 들어 다음은 *nǐ hǎo* 로 발음되고 *Hello* 를 의미하는 중국어 문자 2자의 출력입니다.
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-그러나 일부 언어와 일부 기호 및 이모지에서는 `char` 인스턴스 2개를 사용하여 단일 문자를 나타냅니다. 예를 들어 오세이지족 언어에서 *Osage*를 의미하는 단어의 문자와 `char` 인스턴스를 비교해 보겠습니다.
+그러나 일부 언어와 일부 기호 및 이모지에서는 `char` 인스턴스 2개를 사용하여 단일 문자를 나타냅니다. 예를 들어 오세이지족 언어에서 *Osage* 를 의미하는 단어의 문자와 `char` 인스턴스를 비교해 보겠습니다.
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -110,7 +110,7 @@ s[1] = '�' ('\udc02')
 |Decimal|Hex       |예제|설명|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |N/A| [줄 바꿈](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | a | [라틴 소문자 A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|97     | `U+0061` | a | [라틴 소문자 A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [장음 기호를 사용하는 라틴어 대문자 Y](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68,675 | `U+10C43`| 𐱃 | [고대 튀르크 문자 ORKHON AT](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127,801| `U+1F339`| 🌹 | [장미 이모지](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -120,7 +120,7 @@ s[1] = '�' ('\udc02')
 코드 포인트의 전체 범위 내에 두 가지 하위 범위가 있습니다.
 
 * **BMP(기본 다국어 평면)** 는 `U+0000..U+FFFF` 범위에 있습니다. 이 16비트 범위는 전 세계 쓰기 시스템을 대부분 포괄하는 데 충분한 65,536개 코드 포인트를 제공합니다.
-* **보조 코드 포인트**는 `U+10000..U+10FFFF` 범위에 있습니다. 이 21비트 범위는 덜 알려진 언어와 이모지 같은 다른 용도로 사용할 수 있는 백만 개 이상의 추가 코드 포인트를 제공합니다.
+* **보조 코드 포인트** 는 `U+10000..U+10FFFF` 범위에 있습니다. 이 21비트 범위는 덜 알려진 언어와 이모지 같은 다른 용도로 사용할 수 있는 백만 개 이상의 추가 코드 포인트를 제공합니다.
 
 다음 다이어그램에서는 BMP와 보조 코드 포인트의 관계를 보여 줍니다.
 
@@ -134,7 +134,7 @@ s[1] = '�' ('\udc02')
 
 ## <a name="surrogate-pairs"></a>서로게이트 쌍
 
-두 개의 16비트 값을 단일 21비트 값으로 변환하는 과정은 `U+D800`부터 `U+DFFF`까지(10진수 55.296부터 57,343까지)의 특수 범위인 *서로게이트 코드 포인트*를 통해 간단해집니다.
+두 개의 16비트 값을 단일 21비트 값으로 변환하는 과정은 `U+D800`부터 `U+DFFF`까지(10진수 55.296부터 57,343까지)의 특수 범위인 *서로게이트 코드 포인트* 를 통해 간단해집니다.
 
 다음 다이어그램에서는 BMP와 서로게이트 코드 포인트의 관계를 보여 줍니다.
 
@@ -266,7 +266,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 ### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>예: count char, Rune 및 텍스트 요소 인스턴스
 
-.NET API에서는 문자소 클러스터를 *텍스트 요소*라고 합니다. 다음 메서드는 `string`에서 `char`, `Rune` 및 텍스트 요소 인스턴스 간의 차이점을 보여 줍니다.
+.NET API에서는 문자소 클러스터를 *텍스트 요소* 라고 합니다. 다음 메서드는 `string`에서 `char`, `Rune` 및 텍스트 요소 인스턴스 간의 차이점을 보여 줍니다.
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCountMethod":::
 

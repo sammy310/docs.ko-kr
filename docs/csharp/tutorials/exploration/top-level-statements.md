@@ -2,12 +2,12 @@
 title: 최상위 문 - C# 자습서
 description: 이 자습서에서는 아이디어를 탐색하는 동안 최상위 문을 사용하여 개념을 실험하고 증명하는 방법을 보여 줍니다.
 ms.date: 10/28/2020
-ms.openlocfilehash: 210fbd83bf4677061cab303089d0b27f1a4a7d01
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189369"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282260"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>자습서: 배우는 동안 최상위 문을 사용하여 코드를 빌드하는 아이디어 탐색
 
@@ -210,7 +210,7 @@ static async Task ShowConsoleAnimation()
 
 마지막으로, 애니메이션 코드를 정리하여 일부 중복을 제거할 수 있습니다.
 
-:::code language="csharp" source="snippets/top-level-statements/Utiliities.cs" ID="Animation":::
+:::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
 이제 전체 애플리케이션이 있으며 나중에 사용할 수 있도록 재사용 가능한 부분을 리팩터링했습니다.
 

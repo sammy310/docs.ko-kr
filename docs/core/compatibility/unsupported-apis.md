@@ -3,12 +3,12 @@ title: .NET Core 및 .NET 5+에서 지원되지 않는 API
 titleSuffix: ''
 description: .NET Core 및 .NET 5.0 이상 버전에서 항상 예외를 throw하는 .NET API를 알아봅니다.
 ms.date: 10/13/2020
-ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159341"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329783"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core 및 .NET 5+에서 항상 예외를 throw하는 API
 
@@ -223,7 +223,7 @@ ms.locfileid: "92159341"
 
 | 멤버 | throw되는 플랫폼 |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | 모두 |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 모두 |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | 모두 |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 모두 |

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2be9c4e12d6a613e7f1062ec7492b0b99203f39d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550386"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400698"
 ---
 # <a name="version-compatibility"></a>버전 호환성
 
@@ -61,7 +61,7 @@ ms.locfileid: "90550386"
 
 - .NET Framework 4.5가 변경되어 앱이 깨지는 것으로 확인된 경우 [런타임 설정 스키마](../configure-apps/file-schema/runtime/index.md)와 특히 [\<AppContextSwitchOverrides> Element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)에서 앱 구성 파일의 런타임 설정을 사용하여 이전 동작을 복원할 수 있는지 여부를 확인합니다.
 
-- 문서화되지 않은 문제가 발생하는 경우 [.NET용 개발자 커뮤니티 사이트](https://developercommunity.visualstudio.com/spaces/61/index.html)에서 문제를 열거나 [Microsoft/dotnet GitHub 리포지토리](https://github.com/microsoft/dotnet/issues)에서 문제를 엽니다.
+- 문서화되지 않은 문제가 발생하는 경우 [.NET용 개발자 커뮤니티 사이트](https://aka.ms/feedback/report?space=61)에서 문제를 열거나 [Microsoft/dotnet GitHub 리포지토리](https://github.com/microsoft/dotnet/issues)에서 문제를 엽니다.
 
 ## <a name="side-by-side-execution"></a>Side-by-Side 실행
 

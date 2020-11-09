@@ -2,18 +2,18 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537667"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281625"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>속성
 
 `dotnet` - .NET Core CLI에 대한 일반 드라이버입니다.
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   기본 위치에 설치되어 있지 않은 경우 .NET Core 런타임의 위치를 지정합니다. Windows에서 기본 위치는 `C:\Program Files\dotnet`입니다. Linux 및 macOS에서 기본 위치는 `/usr/share/dotnet`입니다. 이 환경 변수는 생성된 실행 파일(apphost)을 통해 앱을 실행할 때만 사용됩니다. 64비트 OS에서 32비트 실행 파일을 실행할 때는 대신 `DOTNET_ROOT(x86)`가 사용됩니다.
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   글로벌 패키지 폴더입니다. 설정하지 않으면 기본적으로 Unix에서는 `~/.nuget/packages`, Windows에서는 `%userprofile%\.nuget\packages`로 지정됩니다.
 

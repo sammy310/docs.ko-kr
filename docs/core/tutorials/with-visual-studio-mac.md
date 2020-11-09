@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 description: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 ms.date: 06/02/2020
-ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537602"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400528"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
 
@@ -16,8 +16,8 @@ ms.locfileid: "90537602"
 > [!NOTE]
 > 사용자 의견은 매우 중요합니다. Mac용 Visual Studio의 개발 팀에 다음 두 가지 방법으로 의견을 제공할 수 있습니다.
 >
-> * Mac용 Visual Studio의 메뉴에서 **도움말** > **문제 보고**를 선택하거나 시작 화면에서 **문제 보고**를 선택하면 버그 보고서를 작성하기 위한 창이 열립니다. [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html)(개발자 커뮤니티) 포털에서 의견을 추적할 수 있습니다.
-> * 제안하려면 메뉴에서 **도움말** > **제안하기**를 선택하거나 시작 화면에서 **제안하기**를 선택합니다. 그러면 [Mac용 Visual Studio Developer Community 웹 페이지](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)로 이동됩니다.
+> * Mac용 Visual Studio의 메뉴에서 **도움말** > **문제 보고** 를 선택하거나 시작 화면에서 **문제 보고** 를 선택하면 버그 보고서를 작성하기 위한 창이 열립니다. [Developer Community](https://aka.ms/feedback/report?space=41)(개발자 커뮤니티) 포털에서 의견을 추적할 수 있습니다.
+> * 제안하려면 메뉴에서 **도움말** > **제안하기** 를 선택하거나 시작 화면에서 **제안하기** 를 선택합니다. 그러면 [Mac용 Visual Studio Developer Community 웹 페이지](https://aka.ms/feedback/suggest?space=41)로 이동됩니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -33,19 +33,19 @@ ms.locfileid: "90537602"
 
 1. Mac용 Visual Studio를 시작합니다.
 
-1. 시작 창에서 **새로 만들기**를 선택합니다.
+1. 시작 창에서 **새로 만들기** 를 선택합니다.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Mac용 Visual Studio 시작 화면의 새로 만들기 버튼":::
 
-1. **새 프로젝트** 대화 상자에서 **웹 및 콘솔** 노드 아래에서 **앱**을 선택합니다. **콘솔 애플리케이션** 템플릿을 선택하고 **다음**을 선택합니다.
+1. **새 프로젝트** 대화 상자에서 **웹 및 콘솔** 노드 아래에서 **앱** 을 선택합니다. **콘솔 애플리케이션** 템플릿을 선택하고 **다음** 을 선택합니다.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="새 프로젝트 템플릿 목록":::
 
-1. **새 콘솔 애플리케이션 구성** 대화 상자의 **대상 프레임워크** 드롭다운에서 **.NET Core 3.1**을 선택하고 **다음**을 선택합니다.
+1. **새 콘솔 애플리케이션 구성** 대화 상자의 **대상 프레임워크** 드롭다운에서 **.NET Core 3.1** 을 선택하고 **다음** 을 선택합니다.
 
    :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="대상 프레임워크 선택":::
 
-1. **프로젝트 이름**으로 "HelloWorld"를 입력하고 **만들기**를 선택합니다.
+1. **프로젝트 이름** 으로 "HelloWorld"를 입력하고 **만들기** 를 선택합니다.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-options.png" alt-text="새 콘솔 애플리케이션 대화 상자 구성":::
 
@@ -82,7 +82,7 @@ namespace HelloWorld
 
 사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다.
 
-1. *Program.cs*에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
+1. *Program.cs* 에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 

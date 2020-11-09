@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: ea645e33c67bf1d39b477d8e4ce82b7a69a177fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398235"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400619"
 ---
 # <a name="additional-resources"></a>추가 자료
 
@@ -51,7 +51,7 @@ ms.locfileid: "84398235"
 |URL|설명|
 |----------|----------------|
 |[Microsoft 지원](https://support.microsoft.com)|KB(기술 자료) 문서, 다운로드 및 업데이트, 지원 웹캐스트와 기타 서비스에 액세스할 수 있습니다.|
-|[Visual Studio 질문](https://developercommunity.visualstudio.com)|.NET 및 Visual Studio에 대한 버그를 보고하거나 제안을 Microsoft에 제출할 수 있습니다. Visual Studio에서 **도움말** > **사용자 의견 보내기** > **문제 보고**를 선택하여 버그를 보고할 수도 있습니다.|
+|[Visual Studio 질문](https://aka.ms/feedback/report?space=61)|.NET 및 Visual Studio에 대한 버그를 보고하거나 제안을 Microsoft에 제출할 수 있습니다. Visual Studio에서 **도움말** > **사용자 의견 보내기** > **문제 보고** 를 선택하여 버그를 보고할 수도 있습니다.|
 
 ## <a name="third-party-resources"></a>타사 리소스
 
