@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342685"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400868"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -17,7 +17,7 @@ F# 대화형(dotnet fsi)은 콘솔에서 F# 코드를 대화형으로 실행하�
 
 콘솔에서 F# 대화형을 실행하려면 `dotnet fsi`를 실행합니다. 모든 .NET SDK에서 `dotnet fsi`를 찾을 수 있습니다.
 
-사용 가능한 명령줄 옵션에 대한 정보는 [F# Interactive Options](../../language-reference/fsharp-interactive-options.md)(F# Interactive 옵션)를 참조하세요.
+사용 가능한 명령줄 옵션에 대한 정보는 [F# 대화형 옵션](../../language-reference/fsharp-interactive-options.md)을 참조하세요.
 
 ## <a name="executing-code-directly-in-f-interactive"></a>F# 대화형에서 직접 코드 실행
 
@@ -152,7 +152,7 @@ dotnet fsi Script.fsx
 
 ## <a name="loading-other-scripts"></a>다른 스크립트 로드
 
-스크립팅할 때 작업마다 다른 스크립트를 사용하는 것이 유용할 수 있습니다. 다른 스크립트에서 코드를 다시 사용하고자 할 수 있습니다. 콘텐츠를 복사하여 파일에 붙여 넣는 대신 `#load`를 사용하여 쉽게 로드하고 평가할 수 있습니다.
+스크립팅할 때 작업마다 다른 스크립트를 사용하는 것이 유용할 수 있습니다. 경우에 따라 다른 스크립트에서 코드를 다시 사용하는 것이 좋습니다. 콘텐츠를 복사하여 파일에 붙여 넣는 대신 `#load`를 사용하여 쉽게 로드하고 평가할 수 있습니다.
 
 다음 `Script1.fsx`를 고려합니다.
 
@@ -212,7 +212,7 @@ fsi
 
 |지시문|설명|
 |---------|-----------|
-|`#r "nuget:..."`|Nuget에서 패키지를 참조합니다.|
+|`#r "nuget:..."`|NuGet에서 패키지를 참조합니다.|
 |`#r "assembly-name.dll"`|디스크에서 어셈블리를 참조합니다.|
 |`#load "file-name.fsx"`|소스 파일을 읽고 컴파일한 다음 실행합니다.|
 |`#help`|사용 가능한 지시문에 대한 정보를 표시합니다.|
@@ -245,7 +245,7 @@ F# Interactive가 코드 컴파일을 시도하며, 컴파일이 성공하면 �
 
 F# Interactive는 Visual Studio에서 실행할 때 프로젝트와 독립적으로 실행되므로 예를 들어 함수의 코드를 대화형 창에 복사하지 않으면 프로젝트에 정의한 구문을 F# Interactive에서 사용할 수 없습니다.
 
-설정을 조정하여 F# Interactive 명령줄 인수(옵션)를 제어할 수 있습니다. 이렇게 하려면 **도구** 메뉴에서 **옵션...** 을 선택하고 **F# 도구** 를 확장합니다. 변경 가능한 두 가지 설정은 F# Interactive 옵션과 **64비트 F# Interactive** 설정(F# Interactive를 64비트 컴퓨터에서 실행하는 경우만 해당)입니다. 이 설정은 전용 64비트 버전의 **fsi.exe** 또는 **fsianycpu.exe** (컴퓨터 아키텍처를 사용하여 32비트 또는 64비트 프로세스로 실행할지 여부를 결정)를 실행할지 여부를 결정합니다.
+설정을 조정하여 F# 대화형 명령줄 인수(옵션)를 제어할 수 있습니다. 이렇게 하려면 **도구** 메뉴에서 **옵션...** 을 선택하고 **F# 도구** 를 확장합니다. 변경 가능한 두 가지 설정은 F# Interactive 옵션과 **64비트 F# Interactive** 설정(F# Interactive를 64비트 컴퓨터에서 실행하는 경우만 해당)입니다. 이 설정은 전용 64비트 버전의 **fsi.exe** 또는 **fsianycpu.exe** (컴퓨터 아키텍처를 사용하여 32비트 또는 64비트 프로세스로 실행할지 여부를 결정)를 실행할지 여부를 결정합니다.
 
 ## <a name="related-articles"></a>관련 문서
 
