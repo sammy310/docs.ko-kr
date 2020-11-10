@@ -48,6 +48,8 @@
               href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: 최상위 문 탐색
       href: tutorials/exploration/top-level-statements.md
+    - name: 개체 패턴 탐색
+      href: tutorials/exploration/patterns-objects.md
     - name: C# 6 탐색
       href: tutorials/exploration/csharp-6.yml
     - name: 문자열 보간 탐색 - 대화형 자습서
@@ -224,7 +226,7 @@
     - name: 문서 인덱스
       displayName: how to's
       href: how-to/index.md
-    - name: '`String.Split`을 사용하여 문자열 구문 분석'
+    - name: 문자열을 부분 문자열로 분할
       href: how-to/parse-strings-using-split.md
     - name: 문자열 연결
       href: how-to/concatenate-multiple-strings.md
@@ -234,7 +236,7 @@
       href: how-to/modify-string-contents.md
     - name: 문자열 비교
       href: how-to/compare-strings.md
-    - name: 패턴 일치(is 및 as 연산자)를 사용하여 안전하게 캐스트
+    - name: 패턴 일치 및 is/as 연산자를 사용하여 안전하게 캐스팅
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: .NET Compiler Platform SDK(Roslyn API)
   items:
