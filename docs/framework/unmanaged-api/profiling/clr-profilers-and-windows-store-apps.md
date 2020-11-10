@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553358"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440082"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -25,7 +25,7 @@ ms.locfileid: "90553358"
 
 ## <a name="introduction"></a>소개
 
-소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들어:
+소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들면 다음과 같습니다.
 
 - Windows 스토어 앱은 심각 하 게 감소 된 권한으로 컨텍스트에서 실행 됩니다.
 
@@ -94,7 +94,7 @@ Windows RT 장치는 매우 잠금 상태입니다. 타사 프로파일러는 �
 
 **프로파일러 DLL 서명**
 
-Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.
+Windows에서 프로파일러 DLL을 로드 하려고 하면 프로파일러 DLL이 올바르게 서명 되었는지 확인 합니다. 그렇지 않은 경우 기본적으로 로드에 실패 합니다. 여기에는 두 가지 방법이 있습니다.
 
 - 프로파일러 DLL이 서명 되었는지 확인 합니다.
 
@@ -302,7 +302,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 프로파일러 UI와 프로파일러 DLL 간에 간단한 신호 의미 체계가 필요한 경우 Windows 스토어 앱 및 데스크톱 앱 내에서 이벤트를 사용할 수 있습니다.
 
-프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들어:
+프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -356,7 +356,7 @@ CLR이 염려 하는 한 모든 WinMD 파일은 모듈입니다. 따라서 CLR �
 
 ### <a name="reading-metadata-from-winmds"></a>Winmd에서 메타 데이터 읽기
 
-일반 모듈과 같은 WinMD 파일은 [메타 데이터 api](../metadata/index.md)를 통해 읽을 수 있는 메타 데이터를 포함 합니다. 그러나 관리 코드에서 프로그램을 실행 하 고 WinMD 파일을 사용 하는 개발자가 보다 자연 스러운 프로그래밍 환경을 사용할 수 있도록 CLR은 WinMD 파일을 읽을 때 Windows 런타임 형식을 .NET Framework 형식에 매핑합니다. 이러한 매핑의 몇 가지 예는 [Windows 스토어 앱 및 Windows 런타임에 대 한 .NET Framework 지원](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조 하세요.
+일반 모듈과 같은 WinMD 파일은 [메타 데이터 api](../metadata/index.md)를 통해 읽을 수 있는 메타 데이터를 포함 합니다. 그러나 관리 코드에서 프로그램을 실행 하 고 WinMD 파일을 사용 하는 개발자가 보다 자연 스러운 프로그래밍 환경을 사용할 수 있도록 CLR은 WinMD 파일을 읽을 때 Windows 런타임 형식을 .NET Framework 형식에 매핑합니다. 이러한 매핑의 몇 가지 예는 [Windows 스토어 앱 및 Windows 런타임에 대 한 .NET Framework 지원](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)을 참조 하세요.
 
 따라서 메타 데이터 Api를 사용할 때 프로파일러가 가져오는 뷰 (raw Windows 런타임 뷰 또는 매핑된 .NET Framework 뷰)  대답은 사용자에 게 있습니다.
 
@@ -388,7 +388,7 @@ Winmd의 메타 데이터 수정은 지원 되지 않습니다. WinMD 파일에 
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4.5부터 프로파일러에 *종속 핸들*에 대 한 자세한 정보를 제공 하는 새로운 GC 콜백 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)이 있습니다. 이러한 핸들은 GC 수명 관리를 위해 소스 개체에서 대상 개체에 대 한 참조를 효과적으로 추가 합니다. 종속 핸들은 새로운 항목이 아닙니다. 관리 코드에서 프로그래밍 하는 개발자는 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 및 .NET Framework 4.5 이전에도 클래스를 사용 하 여 고유한 종속 핸들을 만들 수 있었습니다.
+.NET Framework 4.5부터 프로파일러에 *종속 핸들* 에 대 한 자세한 정보를 제공 하는 새로운 GC 콜백 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)이 있습니다. 이러한 핸들은 GC 수명 관리를 위해 소스 개체에서 대상 개체에 대 한 참조를 효과적으로 추가 합니다. 종속 핸들은 새로운 항목이 아닙니다. 관리 코드에서 프로그래밍 하는 개발자는 <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 및 .NET Framework 4.5 이전에도 클래스를 사용 하 여 고유한 종속 핸들을 만들 수 있었습니다.
 
 그러나 관리 되는 XAML Windows 스토어 앱은 이제 종속 핸들을 많이 사용 합니다. 특히 CLR은 관리 되는 개체와 관리 되지 않는 Windows 런타임 개체 간의 참조 주기 관리를 지원 하기 위해이를 사용 합니다. 즉, 힙 그래프의 나머지 가장자리와 함께 시각화할 수 있도록 메모리 프로파일러에서 이러한 종속 핸들에 대 한 정보를 얻는 것 보다 더 중요 합니다. 프로파일러 DLL은 [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)및 [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) 를 함께 사용 하 여 힙 그래프의 전체 뷰를 구성 해야 합니다.
 
@@ -406,7 +406,7 @@ CLR 프로 파일링 API를 사용 하 여 Windows 스토어 응용 프로그램
 
 **CLR의 Windows 런타임 상호 작용**
 
-- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Windows 스토어 앱**
 

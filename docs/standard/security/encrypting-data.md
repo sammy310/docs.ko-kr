@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 8a8b5988a13ab571284b08c7aaece3542467aa71
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556971"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440974"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 
@@ -25,7 +25,7 @@ ms.locfileid: "87556971"
   
 ## <a name="symmetric-encryption"></a>대칭 암호화  
 
-관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다. **CryptoStream** 클래스는 관리 되는 스트림 클래스, 인터페이스를 구현 하는 클래스 <xref:System.Security.Cryptography.ICryptoTransform> (암호화 알고리즘을 구현 하는 클래스에서 만들어짐) 및 <xref:System.Security.Cryptography.CryptoStreamMode> **CryptoStream**에 허용 되는 액세스 형식을 설명 하는 열거형을 사용 하 여 초기화 됩니다. , 및를 포함 하 여 클래스에서 파생 된 클래스를 사용 하 여 **CryptoStream** 클래스를 초기화할 수 있습니다 <xref:System.IO.Stream> <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> . 이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.  
+관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다. **CryptoStream** 클래스는 관리 되는 스트림 클래스, 인터페이스를 구현 하는 클래스 <xref:System.Security.Cryptography.ICryptoTransform> (암호화 알고리즘을 구현 하는 클래스에서 만들어짐) 및 <xref:System.Security.Cryptography.CryptoStreamMode> **CryptoStream** 에 허용 되는 액세스 형식을 설명 하는 열거형을 사용 하 여 초기화 됩니다. , 및를 포함 하 여 클래스에서 파생 된 클래스를 사용 하 여 **CryptoStream** 클래스를 초기화할 수 있습니다 <xref:System.IO.Stream> <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> . 이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.  
   
 다음 예제에서는 알고리즘에 대 한 기본 구현 클래스의 새 인스턴스를 만드는 방법을 보여 줍니다 <xref:System.Security.Cryptography.Aes> . 인스턴스는 **CryptoStream** 클래스에서 암호화를 수행 하는 데 사용 됩니다. 이 예제에서 **CryptoStream** 은 임의 형식의 관리되는 스트림일 수 있는 `myStream` 이라는 스트림 개체를 사용하여 초기화됩니다. **Aes** 클래스의 **createencryptor** 메서드에는 암호화에 사용 되는 키와 IV가 전달 됩니다. 이 경우 `aes` 에서 생성되는 기본 키 및 IV가 사용됩니다.
   
@@ -41,23 +41,23 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateEncryptor(key, i
   
 이 코드를 실행 한 후 **CryptoStream** 개체에 기록 된 모든 데이터는 AES 알고리즘을 사용 하 여 암호화 됩니다.  
   
-다음 예제에서는 스트림을 만들고, 스트림을 암호화하고, 스트림에 쓰고, 스트림을 닫는 전체 프로세스를 보여 줍니다. 이 예제에서는 **CryptoStream** 클래스와 **Aes** 클래스를 사용 하 여 암호화 되는 파일 스트림을 만듭니다. <xref:System.IO.StreamWriter> 클래스를 사용하여 암호화된 스트림에 메시지가 기록됩니다.
+다음 예제에서는 스트림을 만들고, 스트림을 암호화하고, 스트림에 쓰고, 스트림을 닫는 전체 프로세스를 보여 줍니다. 이 예제에서는 **CryptoStream** 클래스와 **Aes** 클래스를 사용 하 여 암호화 되는 파일 스트림을 만듭니다. 생성 된 IV는의 시작 부분에 기록 <xref:System.IO.FileStream> 되므로 암호 해독에 대해 읽고 사용할 수 있습니다. 그런 다음 클래스를 사용 하 여 암호화 된 스트림에 메시지를 씁니다 <xref:System.IO.StreamWriter> . 동일한 키를 여러 번 사용 하 여 데이터를 암호화 하 고 암호 해독 하는 동안 매번 새 임의 IV를 생성 하는 것이 좋습니다. 이러한 방식으로 일반 텍스트가 동일한 경우에도 암호화 된 데이터가 항상 다릅니다.
   
 :::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs":::
 :::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb":::
 
-이 코드는 AES 대칭 알고리즘을 사용 하 여 스트림을 암호화 하 고 "Hello World!"를 작성 합니다. 씁니다. 코드가 성공적으로 실행 되 면 *TestData.txt* 이라는 암호화 된 파일을 만들고 다음 텍스트를 콘솔에 표시 합니다.  
+이 코드는 AES 대칭 알고리즘을 사용 하 여 스트림을 암호화 하 고 IV를 쓴 다음 "Hello World!"을 (를) 암호화 합니다. 씁니다. 코드가 성공적으로 실행 되 면 *TestData.txt* 이라는 암호화 된 파일을 만들고 다음 텍스트를 콘솔에 표시 합니다.
   
 ```console  
-The text was encrypted.  
+The text was encrypted.
 ```  
 
-[데이터 암호 해독](decrypting-data.md)의 대칭 암호 해독 예제를 사용 하 여 파일의 암호를 해독할 수 있습니다. 이 예에서는 동일한 키와 IV를 지정 합니다.
+[데이터 암호 해독](decrypting-data.md)의 대칭 암호 해독 예제를 사용 하 여 파일의 암호를 해독할 수 있습니다. 이 예에서는 동일한 키를 지정 합니다.
 
-그러나 예외가 발생 하는 경우 코드는 콘솔에 다음 텍스트를 표시 합니다.  
+그러나 예외가 발생 하는 경우 코드는 콘솔에 다음 텍스트를 표시 합니다.
   
 ```console  
-The encryption failed.  
+The encryption failed.
 ```
 
 ## <a name="asymmetric-encryption"></a>비대칭 암호화
@@ -153,7 +153,7 @@ class Class1
 }
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
 - [데이터 해독](decrypting-data.md)

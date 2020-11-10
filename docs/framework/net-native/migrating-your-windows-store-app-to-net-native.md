@@ -2,12 +2,12 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556930"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440896"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>.NET 네이티브로 Windows 스토어 앱 마이그레이션
 
@@ -208,7 +208,9 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 - 응답의 `SetCookie2` 헤더는 사용되지 않는 항목으로 간주되어 무시됩니다.
 
 <a name="Interop"></a>
+
 ### <a name="interop-differences"></a>interop 차이점
+
  **사용되지 않는 API**
 
  관리되는 코드와의 상호 운용성을 위해 제공되었던 사용 빈도가 낮은 여러 API가 더 이상 사용되지 않습니다. .NET 네이티브와 함께 사용 하는 경우 이러한 Api는 <xref:System.NotImplementedException> 또는 <xref:System.PlatformNotSupportedException> 예외를 throw 하거나 컴파일러 오류가 발생할 수 있습니다. Windows 스토어 앱용 .NET에서는 이러한 API가 사용되지 않는 것으로 표시되지만 호출해도 컴파일러 오류가 아닌 컴파일러 경고가 생성됩니다.
@@ -666,4 +668,4 @@ Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리�
 - [시작](getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows 스토어 앱 용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))
-- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
