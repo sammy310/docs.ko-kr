@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687564"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441111"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -71,7 +71,7 @@ ms.locfileid: "92687564"
 
 #### <a name="base-classes"></a>기본 클래스
 
-**암호화에 대한 FIPS 영향 감소** . 이전 버전의 .NET Framework에서 <xref:System.Security.Cryptography.SHA256Managed>와 같은 관리형 암호화 공급자 클래스는 시스템 암호화 라이브러리가 “FIPS 모드”로 구성될 때 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 암호화 공급자 클래스의 관리형 버전은 시스템 암호화 라이브러리와 달리 FIPS(Federal Information Processing Standard) 140-2 인증을 거치지 않았으므로 이 예외가 throw됩니다. 개발 머신을 FIPS 모드에서 사용하는 개발자는 거의 없으므로 일반적으로 예외는 프로덕션 시스템에서 throw됩니다.
+**암호화에 대한 FIPS 영향 감소**. 이전 버전의 .NET Framework에서 <xref:System.Security.Cryptography.SHA256Managed>와 같은 관리형 암호화 공급자 클래스는 시스템 암호화 라이브러리가 “FIPS 모드”로 구성될 때 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 암호화 공급자 클래스의 관리형 버전은 시스템 암호화 라이브러리와 달리 FIPS(Federal Information Processing Standard) 140-2 인증을 거치지 않았으므로 이 예외가 throw됩니다. 개발 머신을 FIPS 모드에서 사용하는 개발자는 거의 없으므로 일반적으로 예외는 프로덕션 시스템에서 throw됩니다.
 
 기본적으로 .NET Framework 4.8을 대상으로 하는 애플리케이션에서 다음 관리형 암호화 클래스는 더 이상 다음 경우에 <xref:System.Security.Cryptography.CryptographicException>을 throw하지 않습니다.
 
@@ -190,11 +190,11 @@ HTML에서 `https://contoso:81/Service1?health` 같은 쿼리 문자열을 지�
 
 .NET Framework 4.8의 런타임은 다음과 같은 변경 내용과 향상된 기능을 포함합니다.
 
-**JIT 컴파일러의 향상된 기능** . .NET Framework 4.8의 JIT(Just-In-Time) 컴파일러는 .NET Core 2.1의 JIT 컴파일러를 기반으로 합니다. .NET Core 2.1 JIT 컴파일러에 적용된 대부분의 최적화 및 모든 버그 수정은 .NET Framework 4.8 JIT 컴파일러에 포함됩니다.
+**JIT 컴파일러의 향상된 기능**. .NET Framework 4.8의 JIT(Just-In-Time) 컴파일러는 .NET Core 2.1의 JIT 컴파일러를 기반으로 합니다. .NET Core 2.1 JIT 컴파일러에 적용된 대부분의 최적화 및 모든 버그 수정은 .NET Framework 4.8 JIT 컴파일러에 포함됩니다.
 
-**NGEN 향상된 기능** . NGEN 이미지에서 매핑된 데이터가 메모리에 상주되지 않도록 런타임은 NGEN([네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)) 이미지의 메모리 관리를 개선했습니다. 실행될 메모리를 수정하여 임의 코드를 실행하려고 시도하는 공격에 사용할 수 있는 노출 영역이 줄어듭니다.
+**NGEN 향상된 기능**. NGEN 이미지에서 매핑된 데이터가 메모리에 상주되지 않도록 런타임은 NGEN([네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)) 이미지의 메모리 관리를 개선했습니다. 실행될 메모리를 수정하여 임의 코드를 실행하려고 시도하는 공격에 사용할 수 있는 노출 영역이 줄어듭니다.
 
-**모든 어셈블리에 대한 맬웨어 방지 검사** . 이전 버전의 .NET Framework에서 런타임은 Windows Defender 또는 타사 맬웨어 방지 프로그램을 사용하여 디스크에서 로드된 모든 어셈블리를 검사합니다. 그러나 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 메서드와 같은 기타 소스에서 로드된 어셈블리는 검사되지 않으며 검색되지 않은 맬웨어를 포함할 수 있습니다. Windows 10에서 실행되는 .NET Framework 4.8부터 런타임은 [AMSI(맬웨어 방지 검사 인터페이스)](/windows/desktop/AMSI/antimalware-scan-interface-portal)를 구현하는 맬웨어 방지 솔루션을 통해 검사를 실행합니다.
+**모든 어셈블리에 대한 맬웨어 방지 검사**. 이전 버전의 .NET Framework에서 런타임은 Windows Defender 또는 타사 맬웨어 방지 프로그램을 사용하여 디스크에서 로드된 모든 어셈블리를 검사합니다. 그러나 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 메서드와 같은 기타 소스에서 로드된 어셈블리는 검사되지 않으며 검색되지 않은 맬웨어를 포함할 수 있습니다. Windows 10에서 실행되는 .NET Framework 4.8부터 런타임은 [AMSI(맬웨어 방지 검사 인터페이스)](/windows/desktop/AMSI/antimalware-scan-interface-portal)를 구현하는 맬웨어 방지 솔루션을 통해 검사를 실행합니다.
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *개체 캐시 확장성**
 
 .NET Framework 4.7부터 ASP.NET에서는 개발자가 메모리 내 개체 캐싱 및 메모리 모니터링을 위한 기본 ASP.NET 구현을 대체할 수 있도록 하는 새로운 API 집합을 추가적으로 제공합니다. 개발자는 이제 ASP.NET 구현이 적절하지 않은 경우 다음 세 가지 구성 요소 중 하나를 바꿀 수 있습니다.
 
-- **개체 캐시 저장소** . 개발자는 새 캐시 공급자 구성 섹션에서 새 **ICacheStoreProvider** 인터페이스를 사용하여 ASP.NET 애플리케이션의 새로운 개체 캐시 구현을 연결할 수 있습니다.
+- **개체 캐시 저장소**. 개발자는 새 캐시 공급자 구성 섹션에서 새 **ICacheStoreProvider** 인터페이스를 사용하여 ASP.NET 애플리케이션의 새로운 개체 캐시 구현을 연결할 수 있습니다.
 
-- **메모리 모니터링** . ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 애플리케이션에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 애플리케이션의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 속성으로 메모리 모니터를 직접 작성해 기본 모니터를 대체할 수 있습니다.
+- **메모리 모니터링**. ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 애플리케이션에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 애플리케이션의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> 속성으로 메모리 모니터를 직접 작성해 기본 모니터를 대체할 수 있습니다.
 
-- **메모리 제한 반응** . 기본적으로 ASP.NET은 전용 바이트 제한에 가까워지면 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=nameWithType>를 호출합니다. 일부 애플리케이션의 경우 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 호출 빈도 또는 트리밍되는 캐시 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 애플리케이션의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
+- **메모리 제한 반응**. 기본적으로 ASP.NET은 전용 바이트 제한에 가까워지면 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=nameWithType>를 호출합니다. 일부 애플리케이션의 경우 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 호출 빈도 또는 트리밍되는 캐시 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 애플리케이션의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
 
 <a name="wcf47"></a>
 
@@ -1303,7 +1303,7 @@ HSM에 저장된 열 마스터 키로 보호된 상시 암호화 데이터에 �
 
 **AlwaysOn의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작 개선**
 
-SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 애플리케이션이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 애플리케이션에서 `"MultisubnetFailover=true"`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 애플리케이션에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 애플리케이션에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다* . Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
+SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 애플리케이션이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 애플리케이션에서 `"MultisubnetFailover=true"`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 애플리케이션에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 애플리케이션에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
 
 <a name="WPF461"></a>
 
@@ -1585,9 +1585,9 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     라이브러리에 의해 노출되는 공식 계약이므로 스위치에 대해 일관된 형식을 사용하는 것이 좋습니다. 다음은 두 가지 명확한 형식입니다.
 
-    - *Switch* . *namespace* . *switchname*
+    - *Switch*. *namespace*. *switchname*
 
-    - *Switch* . *library* . *switchname*
+    - *Switch*. *library*. *switchname*
 
   - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
@@ -1758,7 +1758,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **오픈 소스 .NET Framework 패키지**
 
-  이제 .NET Core 패키지(예: 변경할 수 없는 컬렉션, [SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)) 및 네트워킹 API(예: <xref:System.Net.Http> 네임스페이스에 있는 API)를 [GitHub](https://github.com/)에서 오픈 소스 패키지로 사용할 수 있습니다. 코드 액세스 방법은 [GitHub의 .NET](https://github.com/dotnet/runtime)을 참조하십시오. 자세한 내용과 이러한 패키지에 기여하는 방법은 [.NET Core 및 오픈 소스](../get-started/net-core-and-open-source.md), [GitHub의 .NET 홈페이지](https://github.com/dotnet/home)를 참조하십시오.
+  이제 .NET Core 패키지(예: 변경할 수 없는 컬렉션, [SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)) 및 네트워킹 API(예: <xref:System.Net.Http> 네임스페이스에 있는 API)를 [GitHub](https://github.com/)에서 오픈 소스 패키지로 사용할 수 있습니다. 코드 액세스 방법은 [GitHub의 .NET](https://github.com/dotnet/runtime)을 참조하십시오. 자세한 내용과 이러한 패키지에 기여하는 방법은 [.NET 소개](../../core/introduction.md), [GitHub의 .NET 홈페이지](https://github.com/dotnet/home)를 참조하세요.
 
 <a name="v452"></a>
 

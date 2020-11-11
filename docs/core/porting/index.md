@@ -3,12 +3,12 @@ title: .NET Framework에서 .NET Core로 이식
 description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063243"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439744"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 개요
 
@@ -119,4 +119,4 @@ ms.locfileid: "93063243"
 
 - [ASP.NET에서 ASP.NET Core로 마이그레이션](/aspnet/core/migration/proper-to-2x)
 - [WPF 앱을 .NET Core로 마이그레이션](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
-- [Windows Forms 앱을 .NET Core로 마이그레이션](winforms.md)
+- [.NET Framework Windows Forms 앱을 .NET으로 마이그레이션](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

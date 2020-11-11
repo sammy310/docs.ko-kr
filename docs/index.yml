@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 10/9/2020
-  ms.openlocfilehash: 0a173d85f5e7969831a2ace6aa860b6fde8cf579
-  ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+  ms.openlocfilehash: 65e2dbf0613a9bdd63bd8695f06b8c931e28268d
+  ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/30/2020
-  ms.locfileid: "93064186"
+  ms.lasthandoff: 11/10/2020
+  ms.locfileid: "94441049"
 highlightedContent:
   items:
   - title: .NET 다운로드
@@ -228,14 +228,14 @@ additionalContent:
         text: Apache Spark용 .NET
     - title: IoT(사물 인터넷)
       links:
-      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
-        text: '.NET: .NET Core의 IoT 지원에 대한 자세한 정보'
-      - url: /archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
-        text: .NET Core 3.0을 사용한 플랫폼 간 IoT 프로그래밍
-      - url: https://github.com/dotnet/iot
-        text: .NET Core IoT 라이브러리
-      - url: https://www.nuget.org/packages/System.Device.Gpio
-        text: System.Device.Gpio NuGet 패키지
+      - url: /dotnet/iot/
+        text: .NET IoT 라이브러리
+      - url: /dotnet/iot/quickstarts/sensehat
+        text: 5분 만에 시작
+      - url: /dotnet/iot/tutorials/blink-led
+        text: LED 깜박이기
+      - url: https://aka.ms/IoTNet101
+        text: .NET IoT 101 동영상 시리즈
   - title: API 및 언어 참조
     summary: .NET API 및 언어 참조 문서를 검색합니다.
     items:
