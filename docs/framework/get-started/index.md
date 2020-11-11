@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3ab1c502508dd042940a6c5d2a73a5b71af6a9f4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471675"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440844"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework 시작
 
@@ -40,6 +40,7 @@ ms.locfileid: "92471675"
 - 멀티 타기팅. 개발자는 [.NET Standard](../../standard/net-standard.md)를 대상으로 지정하여 표준 버전에서 지원하는 여러 .NET Framework 플랫폼에서 작동하는 클래스 라이브러리를 만듭니다. 예를 들어 .NET Framework 4.6.1, .NET Core 2.0 및 UWP 10.0.16299를 대상으로 하는 앱은 .NET Standard 2.0을 대상으로 하는 라이브러리를 사용할 수 있습니다.
 
 <a name="ForUsers"></a>
+
 ## <a name="net-framework-for-users"></a>사용자용 .NET Framework
 
 .NET Framework 앱을 개발하지 않고 사용만 하는 경우 .NET Framework 또는 작동에 대한 특정 지식이 필요하지 않습니다. 대부분의 경우 프레임워크는 사용자에게 완전히 투명하게 공개됩니다.
@@ -78,7 +79,6 @@ Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항
 | [설치 가이드](../install/index.md) | .NET Framework 설치에 대한 정보를 제공합니다. |
 | [.NET Framework 및 번외 릴리스](the-net-framework-and-out-of-band-releases.md) | .NET Framework 번외 릴리스 및 이러한 릴리스를 응용 프로그램에서 사용하는 방법에 대해 설명합니다. |
 | [시스템 요구 사항](system-requirements.md) | .NET Framework 실행을 위한 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다. |
-| [.NET Core 및 오픈 소스](net-core-and-open-source.md) | .NET Framework와 관련된 .NET Core 및 오픈 소스 .NET Core 프로젝트에 액세스하는 방법에 대해 설명합니다. |
 | [.NET Core 설명서](../../core/introduction.md) | .NET Core에 대한 개념 및 API 참조 설명서를 제공합니다. |
 | [.NET Standard](../../standard/net-standard.md) | 여러 플랫폼에서 일관된 API 세트를 사용할 수 있도록 지원하는, 개별 .NET 구현에서 지원하는 버전 사양인 .NET Standard를 설명합니다.
 
