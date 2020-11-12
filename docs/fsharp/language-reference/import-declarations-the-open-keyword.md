@@ -2,12 +2,12 @@
 title: '선언 가져오기: open 키워드'
 description: 'F # 가져오기 선언과 정규화 된 이름을 사용 하지 않고 참조할 수 있는 요소를 포함 하는 모듈 또는 네임 스페이스를 지정 하는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557609"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557183"
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언: `open` 키워드
 
@@ -17,6 +17,7 @@ ms.locfileid: "88557609"
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
 ## <a name="remarks"></a>설명
@@ -42,6 +43,31 @@ printfn "%A" empty
 ```
 
 따라서 같은 이름을 가진 멤버를 포함 하는 또는 같은 모듈 또는 네임 스페이스를 열 때는 주의 해야 `List` `Seq` 합니다. 대신 정규화 된 이름을 사용 하는 것이 좋습니다. 코드가 가져오기 선언의 순서에 따라 달라 지는 상황을 피해 야 합니다.
+
+## <a name="open-type-declarations"></a>개방형 형식 선언
+
+F # `open` 은 다음과 같은 형식에서를 지원 합니다.
+
+```fsharp
+open type System.Math
+PI
+```
+
+그러면 해당 형식에 대 한 액세스 가능한 모든 정적 필드와 멤버가 노출 됩니다.
+
+`open`F #으로 정의 된 [레코드](records.md) 및 구분 된 [공용 구조체](discriminated-unions.md) 형식을 정적 멤버를 노출 시킬 수도 있습니다. 구별 된 공용 구조체의 경우 공용 구조체 케이스를 노출할 수도 있습니다. 이렇게 하면 다음과 같이 열지 않을 수 있는 모듈 내에서 선언 된 형식의 공용 구조체 케이스에 액세스할 때 유용 합니다.
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
 
 ## <a name="namespaces-that-are-open-by-default"></a>기본적으로 열리는 네임 스페이스
 

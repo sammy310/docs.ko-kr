@@ -2,12 +2,12 @@
 title: 인터페이스
 description: 'F # 인터페이스가 다른 클래스에서 구현 하는 관련 멤버의 집합을 지정 하는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558129"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557053"
 ---
 # <a name="interfaces"></a>인터페이스
 
@@ -100,6 +100,67 @@ type INumeric2 =
 인터페이스는 하나 이상의 기본 인터페이스에서 상속할 수 있습니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>기본 구현을 사용 하 여 인터페이스 구현
+
+C #은 다음과 같이 기본 구현으로 인터페이스를 정의 합니다.
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+F #에서 직접 사용할 수 있습니다.
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+가상 멤버 재정의와 같이를 사용 하 여 기본 구현을 재정의할 수 있습니다 `override` .
+
+기본 구현이 없는 인터페이스의 멤버는 여전히 명시적으로 구현 되어야 합니다.
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>서로 다른 제네릭 인스턴스화에 동일한 인터페이스 구현
+
+F #에서는 다음과 같이 서로 다른 제네릭 인스턴스화에 동일한 인터페이스를 구현할 수 있습니다.
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>참고 항목
 

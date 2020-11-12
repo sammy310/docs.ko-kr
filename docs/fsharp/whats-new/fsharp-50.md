@@ -2,16 +2,18 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445845"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557144"
 ---
-# <a name="whats-new-in-f-50"></a>F # 5.0의 새로운 기능
+# <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
 F # 5.0은 F # 언어 및 F# 대화형에 몇 가지 향상 된 기능을 추가 합니다. **.Net 5** 와 함께 출시 됩니다.
+
+최신 .NET SDK는 [.net 다운로드 페이지](https://dotnet.microsoft.com/download)에서 다운로드할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 형식 매개 변수의 이름을 사용 하려면 약간 다른 구문이 필요 합니다.
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ F # 5.0은 기본 제공 3D 및 4D 배열 형식의 고정 인덱스를 사용 �
 이를 설명 하기 위해 다음 3D 배열을 고려 합니다.
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 배열에서 조각을 추출 하려면 어떻게 해야 `[| 4; 5 |]` 하나요? 이제 매우 간단 합니다.
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>F # 인용의 향상 된 기능
+
+이제 F # [코드 인용구](../language-reference/code-quotations.md) 에 형식 제약 조건 정보를 유지 하는 기능이 있습니다. 다음 예제를 참조하세요.
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+함수에서 생성 된 제약 조건은 `inline` 코드 qutoation 유지 됩니다. `negate`이제 함수의 quotated 폼을 평가할 수 있습니다.
 
 ## <a name="applicative-computation-expressions"></a>Applicative 계산 식
 

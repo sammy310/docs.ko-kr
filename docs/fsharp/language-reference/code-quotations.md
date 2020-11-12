@@ -2,16 +2,16 @@
 title: 코드 인용
 description: '프로그래밍 방식으로 F # 코드 식을 생성 하 고 사용할 수 있도록 하는 언어 기능인 F # 코드 인용에 대해 알아봅니다.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558337"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557196"
 ---
 # <a name="code-quotations"></a>코드 인용
 
-이 문서에서는 F # 코드 식을 프로그래밍 방식으로 생성 하 고 사용할 수 있도록 하는 언어 기능인 *코드 인용*을 설명 합니다. 이 기능을 사용 하면 F # 코드를 나타내는 추상 구문 트리를 생성할 수 있습니다. 그런 다음 응용 프로그램의 필요에 따라 추상 구문 트리를 트래버스 하 고 처리할 수 있습니다. 예를 들어, 트리를 사용 하 여 F # 코드를 생성 하거나 다른 언어로 코드를 생성할 수 있습니다.
+이 문서에서는 F # 코드 식을 프로그래밍 방식으로 생성 하 고 사용할 수 있도록 하는 언어 기능인 *코드 인용* 을 설명 합니다. 이 기능을 사용 하면 F # 코드를 나타내는 추상 구문 트리를 생성할 수 있습니다. 그런 다음 응용 프로그램의 필요에 따라 추상 구문 트리를 트래버스 하 고 처리할 수 있습니다. 예를 들어, 트리를 사용 하 여 F # 코드를 생성 하거나 다른 언어로 코드를 생성할 수 있습니다.
 
 ## <a name="quoted-expressions"></a>따옴표 붙은 식
 
@@ -37,6 +37,21 @@ ms.locfileid: "88558337"
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
 F # 따옴표를 계산 하려면 [f # 따옴표 계산기](https://github.com/fsprojects/FSharp.Quotations.Evaluator)를 사용 해야 합니다. F # 식 개체를 평가 하 고 실행 하는 기능을 지원 합니다.
+
+또한 F # 인용구는 형식 제약 조건 정보를 유지 합니다. 다음 예제를 참조하세요.
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+함수에서 생성 된 제약 조건은 `inline` 코드 qutoation 유지 됩니다. `negate`이제 함수의 quotated 폼을 평가할 수 있습니다.
 
 ## <a name="expr-type"></a>Expr 형식
 
@@ -95,6 +110,6 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 1 + Module1.mul(2,Module1.mul(3,4))
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [F# 언어 참조](index.md)

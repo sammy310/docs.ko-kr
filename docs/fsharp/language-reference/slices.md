@@ -2,12 +2,12 @@
 title: 조각
 description: '기존 F # 데이터 형식에 대 한 조각을 사용 하는 방법 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법을 알아봅니다.'
 ms.date: 12/23/2019
-ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559013"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557079"
 ---
 # <a name="slices"></a>조각
 
@@ -149,6 +149,62 @@ let xs = [1 .. 10]
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="built-in-f-empty-slices"></a>기본 제공 F # 빈 조각
+
+구문에서 존재 하지 않는 조각을 생성할 수 있는 경우 F # 목록, 배열, 시퀀스, 문자열, 2D 배열, 3D 배열 및 4D 배열이 모두 빈 조각을 생성 합니다.
+
+다음을 살펴보세요.
+
+```fsharp
+let l = [ 1..10 ]
+let a = [| 1..10 |]
+let s = "hello!"
+
+let emptyList = l.[-2..(-1)]
+let emptyArray = a.[-2..(-1)]
+let emptyString = s.[-2..(-1)]
+```
+
+C # 개발자는 빈 조각을 생성 하는 대신 예외를 throw 하는 것으로 예측할 수 있습니다. 이는 빈 컬렉션이 F #에서 작성 한다는 사실을 기반으로 하는 디자인 결정입니다. 빈 F # 목록을 다른 F # 목록으로 구성 하거나, 빈 문자열을 기존 문자열에 추가할 수 있습니다. 매개 변수로 전달 된 값을 기반으로 조각을 가져오고, F # 코드의 compositional 특성과 일치 하는 빈 컬렉션을 생성 하 여 범위를 벗어나는 것을 허용 하는 것이 일반적 일 수 있습니다.
+
+## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>3D 및 4D 배열의 고정 인덱스 조각
+
+F # 3D 및 4D 배열의 경우 특정 인덱스를 "수정" 하 고 해당 인덱스가 고정 된 다른 차원을 분할할 수 있습니다.
+
+이를 설명 하기 위해 다음 3D 배열을 고려 합니다.
+
+*z = 0*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
+
+*z = 1*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
+
+배열에서 조각을 추출 하려면 `[| 4; 5 |]` 고정 인덱스 조각을 사용 합니다.
+
+```fsharp
+let dim = 2
+let m = Array3D.zeroCreate<int> dim dim dim
+
+let mutable count = 0
+
+for z in 0..dim-1 do
+    for y in 0..dim-1 do
+        for x in 0..dim-1 do
+            m.[x,y,z] <- count
+            count <- count + 1
+
+// Now let's get the [4;5] slice!
+m.[*, 0, 1]
+```
+
+마지막 줄은 `y` `z` 3d 배열의 및 인덱스를 수정 하 고 `x` 행렬에 해당 하는 값의 나머지를 가져옵니다.
+
+## <a name="see-also"></a>참조
 
 - [인덱싱된 속성](./members/indexed-properties.md)
