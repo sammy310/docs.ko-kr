@@ -1270,6 +1270,9 @@
           displayName: 'switch, pattern matching, patterns'
         - name: true 및 false 연산자
           href: language-reference/operators/true-false-operators.md
+        - name: with 식
+          href: language-reference/operators/with-expression.md
+          displayName: 'records, copy'
         - name: 연산자 오버로드
           href: language-reference/operators/operator-overloading.md
     - name: 특수 문자
