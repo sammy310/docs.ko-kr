@@ -14,6 +14,8 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: 자릿수 구분 기호
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+        - name: 비동기 작업 유형
+          href: ../../../../_csharplang/proposals/csharp-7.0/task-types.md
     - name: C# 7.1 사양 제안
       items:
         - name: 비동기 Main 메서드

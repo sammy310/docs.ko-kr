@@ -1,0 +1,26 @@
+- name: .NET IoT 라이브러리 설명서
+  href: index.yml
+- name: 개요
+  href: intro.md
+- name: 빠른 시작(Sense HAT)
+  href: quickstarts/sensehat.md
+- name: 자습서
+  expanded: true
+  items:
+    - name: LED 깜박이기
+      href: tutorials/blink-led.md
+    - name: 센서에서 환경 조건 읽기
+      href: tutorials/temp-sensor.md
+    - name: LCD에 텍스트 표시
+      href: tutorials/lcd-display.md
+    - name: 아날로그에서 디지털로의 변환기에서 값 읽기
+      href: tutorials/adc.md
+- name: 방법 가이드
+  expanded: true
+  items:
+    - name: 배포
+      href: deployment.md
+    - name: 디버깅
+      href: debugging.md
+- name: API 참조
+  href: /dotnet/api?view=iot-dotnet-1.1
