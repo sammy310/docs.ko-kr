@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 87d0103e90d46ae83b23c9cc05e9efcaa51c831f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063991"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400881"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 세계화 및 ICU
 
@@ -33,34 +33,34 @@ ms.locfileid: "93063991"
 
 ## <a name="icu-on-windows"></a>Windows의 ICU
 
-Windows 10 2019년 5월 업데이트 이상 버전에는 OS의 일부로 [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-)이 포함되어 있으며, .NET 5.0 이상 버전에서는 기본적으로 ICU를 사용합니다. Windows에서 실행하는 경우 .NET 5.0 이상 버전은 `icu.dll`을 로드하려 시도하고 사용 가능하면 세계화 구현에 사용합니다.  이전 버전의 Windows에서 실행하는 경우처럼 해당 라이브러리를 찾을 수 없거나 로드할 수 없다면 .NET 5.0 이상 버전은 NLS 기반 구현으로 대체합니다.
+Windows 10 2019년 5월 업데이트 이상 버전에는 OS의 일부로 [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-)이 포함되어 있으며, .NET 5.0 이상 버전에서는 기본적으로 ICU를 사용합니다. Windows에서 실행하는 경우 .NET 5.0 이상 버전은 `icu.dll`을 로드하려 시도하고, 사용 가능하면 세계화 구현에 사용합니다. 이전 버전의 Windows에서 실행하는 경우처럼 ICU 라이브러리를 찾을 수 없거나 로드할 수 없다면 .NET 5.0 이상 버전은 NLS 기반 구현으로 대체됩니다.
 
 > [!NOTE]
 > ICU를 사용하는 경우에도 `CurrentCulture`, `CurrentUICulture`, `CurrentRegion` 멤버는 여전히 Windows 운영 체제 API를 사용하여 사용자 설정을 적용합니다.
 
-### <a name="using-nls-instead-of-icu"></a>ICU 대신 NLS 사용
+### <a name="use-nls-instead-of-icu"></a>ICU 대신 NLS 사용
 
 NLS 대신 ICU를 사용하면 일부 세계화 관련 작업에서 동작 차이가 발생할 수 있습니다. 개발자는 NLS 사용으로 되돌리기 위해 ICU 구현을 옵트아웃할 수 있습니다. 애플리케이션은 다음 방법으로 NLS 모드를 사용하도록 설정할 수 있습니다.
 
 - 프로젝트 파일에서:
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+  </ItemGroup>
+  ```
 
 - 파일 `runtimeconfig.json`에서:
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.UseNls": true
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.UseNls": true
+        }
+    }
   }
-}
-```
+  ```
 
 - 환경 변수 `DOTNET_SYSTEM_GLOBALIZATION_USENLS`를 `true` 또는 `1`로 설정.
 
@@ -71,35 +71,35 @@ NLS 대신 ICU를 사용하면 일부 세계화 관련 작업에서 동작 차�
 
 ## <a name="app-local-icu"></a>앱 로컬 ICU
 
-각 ICU 릴리스는 버그 수정뿐 아니라 세계 언어를 설명하는 업데이트된 CLDR(Common Locale Data Repository) 데이터를 제공할 수 있습니다. ICU 버전 간 이동은 세계화 관련 작업과 관련하여 앱 동작에 미묘한 영향을 줄 수 있습니다.  애플리케이션 개발자가 모든 배포에서 일관성을 유지할 수 있도록 .NET 5.0 이상 버전에서는 Windows 및 Unix의 앱이 자체 ICU 복사본을 갖고 사용할 수 있습니다.
+각 ICU 릴리스는 버그 수정뿐 아니라 세계 언어를 설명하는 업데이트된 CLDR(Common Locale Data Repository) 데이터를 제공할 수 있습니다. ICU 버전 간 이동은 세계화 관련 작업과 관련하여 앱 동작에 미묘한 영향을 줄 수 있습니다. 애플리케이션 개발자가 모든 배포에서 일관성을 유지할 수 있도록 .NET 5.0 이상 버전에서는 Windows 및 Unix의 앱이 자체 ICU 복사본을 갖고 사용할 수 있습니다.
 
 애플리케이션은 다음 방법으로 앱 로컬 ICU 구현 모드를 옵트인할 수 있습니다.
 
 - 프로젝트 파일에서:
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
+  </ItemGroup>
+  ```
 
 - 파일 `runtimeconfig.json`에서:
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
+       }
+    }
   }
-}
-```
+  ```
 
 - 환경 변수 `DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU`를 `<suffix>:<version>` 또는 `<version>`으로 설정.
 
-`<suffix>`: 공용 ICU 패키징 규칙에 따라 길이가 36자 미만인 선택적 접미사입니다. 사용자 지정 ICU를 빌드할 때 lib 이름을 생성하고 내보낸 기호 이름이 접미사를 포함하도록(예: `libicuucmyapp`, 여기서 `myapp`은 접미사) 사용자 지정할 수 있습니다.
+  `<suffix>`: 공용 ICU 패키징 규칙에 따라 길이가 36자 미만인 선택적 접미사입니다. 사용자 지정 ICU를 빌드할 때 lib 이름을 생성하고 내보낸 기호 이름이 접미사를 포함하도록(예: `libicuucmyapp`, 여기서 `myapp`은 접미사) 사용자 지정할 수 있습니다.
 
-`<version>`: 유효한 ICU 버전입니다(예: 67.1). 이 버전은 이진 파일을 로드하고 내보낸 기호를 가져오는 데 사용됩니다.
+  `<version>`: 유효한 ICU 버전입니다(예: 67.1). 이 버전은 이진 파일을 로드하고 내보낸 기호를 가져오는 데 사용됩니다.
 
 앱 로컬 스위치가 설정된 경우 ICU를 로드하기 위해 .NET은 여러 경로를 검색하는 <xref:System.Runtime.InteropServices.NativeLibrary.TryLoad%2A?displayProperty=nameWithType> 메서드를 사용합니다. 메서드는 먼저 `NATIVE_DLL_SEARCH_DIRECTORIES` 속성에서 라이브러리를 찾으려고 시도합니다. 이 라이브러리는 앱의 `deps.json` 파일에 기반한 dotnet 호스트에서 만들어집니다. 자세한 내용은 [기본 검색](../../core/dependency-loading/default-probing.md)을 참조하세요.
 
@@ -120,7 +120,7 @@ ICU가 로컬 빌드에서 사용되는 프레임워크 종속 앱(자체 포함
 
 ### <a name="macos-behavior"></a>macOS 동작
 
-`macOS`에는 Linux 로더와는 다른, `match-o` 파일에 지정된 load 명령에서 종속 동적 라이브러리를 확인하는 동작이 있습니다. Linux 로더에서 .NET은 ICU 종속성 그래프를 충족하기 위해 `libicudata`, `libicuuc`, `libicui18n`을 (이 순서로) 시도할 수 있습니다. 하지만 macOS에서는 이것이 작동하지 않습니다. macOS에서 ICU를 빌드하는 경우 기본적으로 `libicuuc`에서 이러한 load 명령을 사용하여 동적 라이브러리를 가져옵니다. 예를 들어:
+`macOS`에는 Linux 로더와는 다른, `match-o` 파일에 지정된 load 명령에서 종속 동적 라이브러리를 확인하는 동작이 있습니다. Linux 로더에서 .NET은 ICU 종속성 그래프를 충족하기 위해 `libicudata`, `libicuuc`, `libicui18n`을 (이 순서로) 시도할 수 있습니다. 하지만 macOS에서는 이것이 작동하지 않습니다. macOS에서 ICU를 빌드하는 경우 기본적으로 `libicuuc`에서 이러한 load 명령을 사용하여 동적 라이브러리를 가져옵니다. 다음 코드 조각은 예제를 보여 줍니다.
 
 ```sh
 ~/ % otool -L /Users/santifdezm/repos/icu-build/icu/install/lib/libicuuc.67.1.dylib
@@ -139,19 +139,19 @@ ICU가 로컬 빌드에서 사용되는 프레임워크 종속 앱(자체 포함
 
   다음 명령을 실행합니다.
 
-```bash
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
-install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
-```
+  ```bash
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
+  install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
+  ```
 
 - `@loader_path`로 설치 이름을 생성하도록 ICU 패치
 
   autoconf(`./runConfigureICU`)를 실행하기 전에 [이 줄](https://github.com/unicode-org/icu/blob/ef91cc3673d69a5e00407cda94f39fcda3131451/icu4c/source/config/mh-darwin#L32-L37)을 다음으로 변경합니다.
 
-```
-LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
-```
+  ```
+  LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
+  ```
 
 ## <a name="icu-on-webassembly"></a>WebAssembly의 ICU
 

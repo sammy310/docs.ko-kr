@@ -3,12 +3,12 @@ title: XML Serializer 생성기 도구(Sgen.exe)
 description: XML Serializer Generator는 특정 어셈블리의 형식에 대한 XML serialization 어셈블리를 만들어 XmlSerializer의 시작 성능을 향상시킵니다.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288942"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282351"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer 생성기 도구(Sgen.exe)
 
@@ -23,16 +23,16 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework 도구가 제대로 작동하려면 `Path`, `Include` 및 `Lib` 환경 변수를 올바르게 설정해야 합니다. \<SDK>\v2.0\Bin 디렉터리에 저장된 SDKVars.bat를 실행하여 이러한 환경 변수를 설정합니다. SDKVars.bat를 모든 명령 셸에서 실행해야 합니다.
+> .NET Framework 도구가 제대로 작동하려면 `Path`, `Include` 및 `Lib` 환경 변수를 올바르게 설정해야 합니다. \<SDK>\\\<version>\Bin 디렉터리에 있는 SDKVars.bat를 실행하여 이러한 환경 변수를 설정합니다. SDKVars.bat를 모든 명령 셸에서 실행해야 합니다.
   
 ## <a name="parameters"></a>매개 변수  
   
 |옵션|설명|  
 |------------|-----------------|  
-|**/a\[ssembly\]:** _filename_|*filename*에서 지정한 어셈블리 또는 실행 파일에 있는 모든 형식에 대해 serialization 코드를 생성합니다. 파일 이름은 하나만 제공할 수 있습니다. 이 인수가 반복되면 마지막 파일 이름이 사용됩니다.|  
+|**/a\[ssembly\]:** _filename_|*filename* 에서 지정한 어셈블리 또는 실행 파일에 있는 모든 형식에 대해 serialization 코드를 생성합니다. 파일 이름은 하나만 제공할 수 있습니다. 이 인수가 반복되면 마지막 파일 이름이 사용됩니다.|  
 |**/c\[ompiler\]:** _options_|C# 컴파일러로 전달될 옵션을 지정합니다. 모든 csc.exe 옵션이 컴파일러로 전달되어 지원됩니다. 이 옵션은 어셈블리에서 서명되도록 지정할 때와 키 파일을 지정할 때 사용할 수 있습니다.|  
 |**/d\[ebug\]**|디버거에서 사용할 수 있는 이미지를 생성합니다.|  
-|**/f\[orce\]**|이름이 같은 기존 어셈블리를 덮어쓰게 합니다. 기본값은 **false**입니다.|  
+|**/f\[orce\]**|이름이 같은 기존 어셈블리를 덮어쓰게 합니다. 기본값은 **false** 입니다.|  
 |**/help 또는 /?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |**/k\[eep\]**|생성된 소스 파일 및 기타 임시 파일이 serialization 어셈블리로 컴파일된 후에는 이 파일을 삭제하지 않습니다. 이 도구에서 특정 형식에 대해 serialization 코드를 생성하는지 여부를 확인하는 데 사용할 수 있습니다.|  
 |**/n\[ologo\]**|Microsoft 시작 배너를 표시하지 않습니다.|  

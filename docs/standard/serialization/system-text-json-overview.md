@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380134"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282404"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET의 JSON 직렬화 및 역직렬화(마샬링 및 역 마샬링) - 개요
 
@@ -27,8 +27,9 @@ ms.locfileid: "83380134"
 
 ## <a name="how-to-get-the-library"></a>라이브러리를 가져오는 방법
 
-* 라이브러리는 [.NET Core 3.0](https://aka.ms/netcore3download) 공유 프레임워크의 일부로 기본 제공됩니다.
-* 다른 대상 프레임워크의 경우 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치합니다. 패키지는 다음을 지원합니다.
+* 라이브러리는 .NET Core 3.0 이상 버전에서 공유 프레임워크의 일부로 기본 제공됩니다.
+* 이전 프레임워크 버전의 경우 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치하세요. 패키지는 다음을 지원합니다.
+
   * .NET Standard 2.0 이상 버전
   * .NET Framework 4.7.2 이상 버전
   * .NET Core 2.0, 2.1 및 2.2

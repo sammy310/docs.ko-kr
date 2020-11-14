@@ -6,12 +6,12 @@ metadata:
   description: 프로그래밍 C# 알아보기 - 초보 개발자, C#을 처음 사용하는 개발자, 숙련된 C# / .NET 개발자용
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 7a9818ea24af237242ddd55afb53d691400ce008
-  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+  ms.openlocfilehash: f31d24add06b958f6c5bc00baf4c09601616604e
+  ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/15/2020
-  ms.locfileid: "90537381"
+  ms.lasthandoff: 11/12/2020
+  ms.locfileid: "94556819"
 landingContent:
 - title: C#의 프로그램에 대해 알아보기
   linkLists:
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: .NET Core SDK 다운로드
+    - text: .NET SDK 다운로드
       url: https://dotnet.microsoft.com/download
 - title: C# 기초
   linkLists:

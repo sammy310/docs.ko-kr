@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML Serializer Generator는 지정된 어셈블리의 형식에 대한 XML serialization 어셈블리를 만들어 XmlSerializer의 시작 성능을 향상시킵니다.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288981"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281747"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> .NET Framework 도구가 제대로 작동하려면 `Path`, `Include` 및 `Lib` 환경 변수를 올바르게 설정해야 합니다. \<SDK>\v2.0\Bin 디렉터리에 저장된 SDKVars.bat를 실행하여 이러한 환경 변수를 설정합니다. SDKVars.bat를 모든 명령 셸에서 실행해야 합니다.
+> .NET Framework 도구가 제대로 작동하려면 `Path`, `Include` 및 `Lib` 환경 변수를 올바르게 설정해야 합니다. \<SDK>\\\<version>\Bin 디렉터리에 있는 SDKVars.bat를 실행하여 이러한 환경 변수를 설정합니다. SDKVars.bat를 모든 명령 셸에서 실행해야 합니다.
 
 ## <a name="argument"></a>인수
 
@@ -76,7 +76,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 |옵션|설명|
 |------------|-----------------|
-|**/t\[ype\]:** _typename_|스키마를 생성할 대상 형식의 이름을 지정합니다. 여러 개의 형식 인수를 지정할 수도 있습니다. *typename*에서 네임스페이스를 지정하지 않으면 Xsd.exe는 해당 어셈블리의 모든 형식과 지정된 형식을 일치시킵니다. *typename*에서 네임스페이스를 지정하면 지정한 형식만 일치됩니다. *typename*이 별표(\*)로 끝나는 경우에는 \* 앞의 문자열로 시작하는 모든 형식이 일치됩니다. `/type` 옵션을 생략하면 Xsd.exe는 해당 어셈블리의 모든 형식에 대해 스키마가 생성됩니다.|
+|**/t\[ype\]:** _typename_|스키마를 생성할 대상 형식의 이름을 지정합니다. 여러 개의 형식 인수를 지정할 수도 있습니다. *typename* 에서 네임스페이스를 지정하지 않으면 Xsd.exe는 해당 어셈블리의 모든 형식과 지정된 형식을 일치시킵니다. *typename* 에서 네임스페이스를 지정하면 지정한 형식만 일치됩니다. *typename* 이 별표(\*)로 끝나는 경우에는 \* 앞의 문자열로 시작하는 모든 형식이 일치됩니다. `/type` 옵션을 생략하면 Xsd.exe는 해당 어셈블리의 모든 형식에 대해 스키마가 생성됩니다.|
 
 ## <a name="remarks"></a>설명
 

@@ -4,13 +4,13 @@ description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET C
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/01/2020
-ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.date: 09/04/2020
+ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526613"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400593"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -78,7 +78,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor 서버 앱                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly 앱                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| Blazor WebAssembly 앱                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core 비어 있음                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
 | ASP.NET Core 웹앱(모델-뷰-컨트롤러) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core 웹앱                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
@@ -394,6 +394,110 @@ dotnet new -h|--help
 - **`--no-restore`**
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
+
+**_
+
+### <a name="blazorwasm"></a>blazorwasm
+
+- _ *`-f|--framework <FRAMEWORK>`**
+
+  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.
+
+  다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.
+
+  | SDK 버전 | 기본값   |
+  |-------------|-----------------|
+  | 5.0         | `net5.0`        |
+  | 3.1         | `netcoreapp3.1` |
+
+- **`--no-restore`**
+
+  프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
+
+- **`-ho|--hosted`**
+
+  Blazor WebAssembly 앱의 ASP.NET Core 호스트를 포함합니다.
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
+
+  - `None` - 인증하지 않습니다(기본값).
+  - `Individual` - 개별 인증입니다.
+  - `IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.
+  - `SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.
+
+- **`--authority <AUTHORITY>`**
+
+  OIDC 공급자의 권한입니다. `Individual` 인증과 함께 사용합니다. 기본값은 `https://login.microsoftonline.com/`입니다.
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  연결할 Azure Active Directory B2C 인스턴스입니다. `IndividualB2C` 인증과 함께 사용합니다. 기본값은 `https://aadB2CInstance.b2clogin.com/`입니다.
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  이 프로젝트에 대한 로그인 및 등록 정책 ID입니다. `IndividualB2C` 인증과 함께 사용합니다.
+
+- **`--aad-instance <INSTANCE>`**
+
+  연결할 Azure Active Directory 인스턴스입니다. `SingleOrg` 인증과 함께 사용합니다. 기본값은 `https://login.microsoftonline.com/`입니다.
+
+- **`--client-id <ID>`**
+
+  이 프로젝트의 클라이언트 ID입니다. `IndividualB2C`, `SingleOrg` 또는 독립 실행형 시나리오의 경우 `Individual` 인증과 함께 사용합니다. 기본값은 `33333333-3333-3333-33333333333333333`입니다.
+
+- **`--domain <DOMAIN>`**
+
+  디렉터리 테넌트의 도메인입니다. `SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다. 기본값은 `qualified.domain.name`입니다.
+
+- **`--app-id-uri <URI>`**
+
+  호출하려는 서버 API의 앱 ID URI입니다. `SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다. 기본값은 `api.id.uri`입니다.
+
+- **`--api-client-id <ID>`**
+
+  서버가 호스트하는 API의 클라이언트 ID입니다. `SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다. 기본값은 `11111111-1111-1111-11111111111111111`입니다.
+
+- **`-s|--default-scope <SCOPE>`**
+
+  클라이언트가 액세스 토큰 프로비전을 요청하는 데 필요한 API 범위입니다. `SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다. 기본값은 `user_impersonation`입니다.
+
+- **`--tenant-id <ID>`**
+
+  연결할 디렉터리의 TenantId ID입니다. `SingleOrg` 인증과 함께 사용합니다. 기본값은 `22222222-2222-2222-2222-222222222222`입니다.
+
+- **`-r|--org-read-access`**
+
+  디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다. `SingleOrg` 인증에만 적용됩니다.
+
+- **`--exclude-launch-settings`**
+
+  생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
+
+- **`-p|--pwa`**
+
+  프로그레시브 웹 애플리케이션(PWA)을 생성하여 설치 및 오프라인 사용을 지원합니다.
+
+- **`--no-https`**
+
+  HTTPS를 해제합니다. 이 옵션은 `--auth`에 `Individual`, `IndividualB2C` 또는 `SingleOrg`를 사용하지 않는 경우에만 적용됩니다.
+
+- **`-uld|--use-local-db`**
+
+  SQLite 대신 LocalDB를 사용하도록 지정합니다. `Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.
+
+- **`--called-api-url <URL>`**
+
+  웹앱에서 호출할 API의 URL입니다. ASP.NET Core 호스트가 지정되지 않은 `SingleOrg` 또는 `IndividualB2C` 인증에만 적용됩니다. 기본값은 `https://graph.microsoft.com/v1.0/me`입니다.
+
+- **`--calls-graph`**
+
+  웹앱이 Microsoft Graph를 호출하는지 여부를 지정합니다. `SingleOrg` 인증에만 적용됩니다.
+
+- **`--called-api-scopes <SCOPES>`**
+
+  웹앱에서 API를 호출하기 위해 요청할 범위입니다. ASP.NET Core 호스트가 지정되지 않은 `SingleOrg` 또는 `IndividualB2C` 인증에만 적용됩니다. 기본값은 `user.read`입니다.
 
 **_
 

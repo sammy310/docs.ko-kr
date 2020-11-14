@@ -1,7 +1,7 @@
 ---
 title: 표준 날짜 및 시간 서식 문자열
-description: 이 문서에서는 .NET에서 표준 날짜 및 시간 서식 문자열을 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다.
-ms.date: 03/30/2017
+description: 표준 날짜 및 시간 서식 문자열을 사용하여 .NET에서 날짜 및 시간 값의 텍스트 표현을 정의하는 방법을 알아봅니다.
+ms.date: 11/05/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,48 +14,48 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
-ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.custom: contperfq2
+ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888635"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329757"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 서식 문자열
 
-표준 날짜 및 시간 서식 문자열은 단일 서식 지정자를 사용하여 날짜 및 시간 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 날짜 및 시간 서식 문자열은 사용자 지정 날짜 및 시간 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md)을 참조하세요. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.
+표준 날짜 및 시간 서식 문자열은 단일 문자를 서식 지정자로 사용하여 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자를 둘 이상 포함하는 날짜 및 시간 서식은 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md)로 해석됩니다. 표준 또는 사용자 지정 서식 문자열은 다음 두 가지 방법으로 사용할 수 있습니다.
 
 - 서식 지정 작업의 결과로 생성되는 문자열을 정의합니다.
 
 - 구문 분석 작업을 통해 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값으로 변환할 수 있는 날짜 및 시간 값의 텍스트 표현을 정의합니다.
 
 > [!TIP]
-> 서식 문자열을 숫자 또는 날짜 및 시간 값에 적용할 수 있도록 지원하고 결과 문자열을 표시하는 .NET Core Windows Forms 애플리케이션인 **서식 유틸리티** 를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
-
-표준 날짜 및 시간 서식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.
+> 숫자 또는 날짜 및 시간 값에 서식 문자열을 적용하고 결과 문자열을 표시할 수 있는 .NET Windows Forms 애플리케이션인 **Formatting Utility** 를 다운로드할 수 있습니다. [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 및 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)의 소스 코드를 사용할 수 있습니다.
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a> 다음 표에서는 표준 날짜 및 시간 서식 지정자에 대해 설명합니다. 다른 설명이 없는 한 특정 표준 날짜 및 시간 서식 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다. 표준 날짜 및 시간 서식 문자열을 사용하는 방법에 대한 자세한 내용은 [참고](#Notes) 섹션을 참조하세요.
+## <a name="table-of-format-specifiers"></a>서식 지정자 테이블
+
+<a name="table"></a> 다음 표에서는 표준 날짜 및 시간 서식 지정자에 대해 설명합니다. 다른 설명이 없는 한 특정 표준 날짜 및 시간 서식 지정자는 <xref:System.DateTime> 값에 사용할 때와 <xref:System.DateTimeOffset> 값에 사용할 때 동일한 문자열을 생성합니다. 표준 날짜 및 시간 서식 문자열에 대한 자세한 내용은 [제어판 설정](#control-panel-settings)과 [DateTimeFormatInfo 속성](#datetimeformatinfo-properties)을 참조하세요.
 
 |형식 지정자|설명|예제|
 |----------------------|-----------------|--------------|
-|"d"|간단한 날짜 패턴입니다.<br /><br /> 추가 정보: [간단한 날짜("d") 서식 지정자](#ShortDate)|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
-|"D"|자세한 날짜 패턴입니다.<br /><br /> 추가 정보: [자세한 날짜("D") 서식 지정자](#LongDate)|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
-|"f"|전체 날짜/시간 패턴(간단한 시간)입니다.<br /><br /> 추가 정보: [전체 날짜, 간단한 시간("f") 서식 지정자](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
-|"F"|전체 날짜/시간 패턴(자세한 시간)<br /><br /> 추가 정보: [전체 날짜, 자세한 시간("F") 서식 지정자](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
-|"g"|일반 날짜/시간 패턴(간단한 시간)<br /><br /> 추가 정보: [일반 날짜, 간단한 시간("g") 서식 지정자](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|
-|"G"|일반 날짜/시간 패턴(자세한 시간)입니다.<br /><br /> 추가 정보: [일반 날짜, 자세한 시간("G") 서식 지정자](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|
+|"d"|간단한 날짜 패턴입니다.<br /><br /> 추가 정보:[간단한 날짜("d") 서식 지정자](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
+|"D"|자세한 날짜 패턴입니다.<br /><br /> 추가 정보:[자세한 날짜("D") 서식 지정자](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
+|"f"|전체 날짜/시간 패턴(간단한 시간)입니다.<br /><br /> 추가 정보: [전체 날짜 간단한 시간("f") 서식 지정자](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
+|"F"|전체 날짜/시간 패턴(자세한 시간)<br /><br /> 추가 정보: [전체 날짜 자세한 시간("F") 서식 지정자](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
+|"g"|일반 날짜/시간 패턴(간단한 시간)<br /><br /> 추가 정보: [일반 날짜 간단한 시간("g") 서식 지정자](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|
+|"G"|일반 날짜/시간 패턴(자세한 시간)입니다.<br /><br /> 추가 정보: [일반 날짜 자세한 시간("G") 서식 지정자](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|
 |"M", "m"|월/일 패턴입니다.<br /><br /> 추가 정보: [월("M", "m") 서식 지정자](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|
-|"O", "o"|라운드트립 날짜/시간 패턴입니다.<br /><br /> 추가 정보: [라운드트립("O", "o") 서식 지정자](#Roundtrip).|<xref:System.DateTime> 값:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> 값:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|
+|"O", "o"|왕복 날짜/시간 패턴입니다.<br /><br /> 추가 정보: [왕복("O", "o") 서식 지정자](#Roundtrip).|<xref:System.DateTime> 값:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> 값:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|
 |"R", "r"|RFC1123 패턴입니다.<br /><br /> 추가 정보: [RFC1123("R", "r") 서식 지정자](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|
 |"s"|정렬 가능한 날짜/시간 패턴입니다.<br /><br /> 추가 정보: [정렬 가능한("s") 서식 지정자](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|
 |"t"|간단한 시간 패턴입니다.<br /><br /> 추가 정보: [간단한 시간("t") 서식 지정자](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|
 |"T"|자세한 시간 패턴<br /><br /> 추가 정보: [자세한 시간("T") 서식 지정자](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|정렬 가능한 유니버설 날짜/시간 패턴<br /><br /> 추가 정보: [정렬 가능한 유니버설("u") 서식 지정자](#UniversalSortable).|<xref:System.DateTime> 값 사용: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> 값 사용: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|유니버설 전체 날짜/시간 패턴입니다.<br /><br /> 추가 정보: [유니버설 전체("U") 서식 지정자](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|연도 월 패턴<br /><br /> 추가 정보: [연도 월("Y", "y") 서식 지정자](#YearMonth).|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y", "y"|연도 월 패턴<br /><br /> 추가 정보: [연도 월("Y") 서식 지정자](#YearMonth).|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |기타 모든 단일 문자|알 수 없는 지정자입니다.|런타임 <xref:System.FormatException>을 throw합니다.|
 
 ## <a name="how-standard-format-strings-work"></a>표준 서식 문자열의 작동 방법
@@ -98,9 +98,16 @@ ms.locfileid: "92888635"
 
 다음 단원에서는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값에 대한 표준 서식 지정자에 대해 설명합니다.
 
+## <a name="date-formats"></a>날짜 서식
+
+이 그룹에는 다음 서식이 포함됩니다.
+
+- [간단한 날짜("d") 서식 지정자](#the-short-date-d-format-specifier)
+- [자세한 날짜("D") 서식 지정자](#the-long-date-d-format-specifier)
+
 <a name="ShortDate"></a>
 
-## <a name="the-short-date-d-format-specifier"></a>간단한 날짜("d") 서식 지정자
+### <a name="the-short-date-d-format-specifier"></a>간단한 날짜("d") 서식 지정자
 
 "d" 표준 서식 지정자는 특정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> 속성이 반환하는 사용자 지정 서식 문자열은 "MM/dd/yyyy"입니다.
 
@@ -120,7 +127,7 @@ ms.locfileid: "92888635"
 
 <a name="LongDate"></a>
 
-## <a name="the-long-date-d-format-specifier"></a>자세한 날짜("D") 서식 지정자
+### <a name="the-long-date-d-format-specifier"></a>자세한 날짜("D") 서식 지정자
 
 "D" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "dddd, dd MMMM yyyy"입니다.
 
@@ -139,9 +146,23 @@ ms.locfileid: "92888635"
 
 [표로 이동](#table)
 
+## <a name="date-and-time-formats"></a>날짜 및 시간 형식
+
+이 그룹에는 다음 서식이 포함됩니다.
+
+- [전체 날짜 간단한 시간("f") 서식 지정자](#the-full-date-short-time-f-format-specifier)
+- [전체 날짜 자세한 시간("F") 서식 지정자](#the-full-date-long-time-f-format-specifier)
+- [일반 날짜 간단한 시간("g") 서식 지정자](#the-general-date-short-time-g-format-specifier)
+- [일반 날짜 자세한 시간("G") 서식 지정자](#the-general-date-long-time-g-format-specifier)
+- [왕복("O", "o") 서식 지정자](#the-round-trip-o-o-format-specifier)
+- [RFC1123("R", "r") 서식 지정자](#the-rfc1123-r-r-format-specifier)
+- [정렬 가능한("s") 서식 지정자](#the-sortable-s-format-specifier)
+- [정렬 가능한 유니버설("u") 서식 지정자](#the-universal-sortable-u-format-specifier)
+- [유니버설 전체("U") 서식 지정자](#the-universal-full-u-format-specifier)
+
 <a name="FullDateShortTime"></a>
 
-## <a name="the-full-date-short-time-f-format-specifier"></a>전체 날짜, 간단한 시간("f") 서식 지정자
+### <a name="the-full-date-short-time-f-format-specifier"></a>전체 날짜,간단한 시간("f") 서식 지정자
 
 "f" 표준 서식 지정자는 공백으로 구분된 자세한 날짜("D")와 간단한 시간("t") 패턴의 조합입니다.
 
@@ -166,7 +187,7 @@ ms.locfileid: "92888635"
 
 <a name="FullDateLongTime"></a>
 
-## <a name="the-full-date-long-time-f-format-specifier"></a>전체 날짜, 자세한 시간("F") 서식 지정자
+### <a name="the-full-date-long-time-f-format-specifier"></a>전체 날짜, 자세한 시간("F") 서식 지정자
 
 "F" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "dddd, dd MMMM yyyy HH:mm:ss"입니다.
 
@@ -190,7 +211,7 @@ ms.locfileid: "92888635"
 
 <a name="GeneralDateShortTime"></a>
 
-## <a name="the-general-date-short-time-g-format-specifier"></a>일반 날짜, 간단한 시간("g") 서식 지정자
+### <a name="the-general-date-short-time-g-format-specifier"></a>일반 날짜, 간단한 시간("g") 서식 지정자
 
 "g" 표준 서식 지정자는 공백으로 구분된 간단한 날짜("d")와 간단한 시간("t") 패턴의 조합입니다.
 
@@ -214,7 +235,7 @@ ms.locfileid: "92888635"
 
 <a name="GeneralDateLongTime"></a>
 
-## <a name="the-general-date-long-time-g-format-specifier"></a>일반 날짜, 자세한 시간("G") 서식 지정자
+### <a name="the-general-date-long-time-g-format-specifier"></a>일반 날짜, 자세한 시간("G") 서식 지정자
 
 "G" 표준 서식 지정자는 공백으로 구분된 간단한 날짜("d")와 자세한 시간("T") 패턴의 조합입니다.
 
@@ -236,29 +257,9 @@ ms.locfileid: "92888635"
 
 [표로 이동](#table)
 
-<a name="MonthDay"></a>
-
-## <a name="the-month-m-m-format-specifier"></a>월("M", "m") 서식 지정자
-
-"M" 또는 "m" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "MMMM dd"입니다.
-
-다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
-
-|속성|설명|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|결과 문자열에 나타날 수 있는 지역화된 월 이름을 정의합니다.|
-
-다음 예제에서는 "m" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
-
-[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
-[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
-
-[표로 이동](#table)
-
 <a name="Roundtrip"></a>
 
-## <a name="the-round-trip-o-o-format-specifier"></a>라운드트립("O", "o") 서식 지정자
+### <a name="the-round-trip-o-o-format-specifier"></a>라운드트립("O", "o") 서식 지정자
 
 "O" 또는 "o" 표준 서식 지정자는 표준 시간대 정보를 유지하는 패턴을 사용하여 사용자 지정 날짜 및 시간 서식 문자열을 나타내고 ISO 8601을 준수하는 결과 문자열을 생략합니다. <xref:System.DateTime> 값의 경우 이 서식 지정자는 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성과 함께 날짜 및 시간 값을 텍스트로 유지합니다. 서식이 지정된 문자열은 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 매개 변수가 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>로 설정된 경우 `styles` 또는 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 메서드를 사용하여 다시 구문 분석할 수 있습니다.
 
@@ -290,7 +291,7 @@ ms.locfileid: "92888635"
 
 <a name="RFC1123"></a>
 
-## <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123("R", "r") 서식 지정자
+### <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123("R", "r") 서식 지정자
 
 "R" 또는 "r" 표준 서식 지정자는 <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 이 패턴은 정의된 표준을 반영하며 해당 속성은 읽기 전용입니다. 따라서 이 패턴은 사용된 문화권이나 제공된 서식 공급자에 관계없이 항상 같습니다. 사용자 지정 서식 문자열은 "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'"입니다. 이 표준 서식 지정자를 사용할 경우 서식 지정 또는 구문 분석 작업에서 항상 고정 문화권이 사용됩니다.
 
@@ -313,7 +314,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 <a name="Sortable"></a>
 
-## <a name="the-sortable-s-format-specifier"></a>정렬 가능한("s") 서식 지정자
+### <a name="the-sortable-s-format-specifier"></a>정렬 가능한("s") 서식 지정자
 
 "s" 표준 서식 지정자는 <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 이 패턴은 정의된 표준(ISO 8601)을 반영하며 해당 속성은 읽기 전용입니다. 따라서 이 패턴은 사용된 문화권이나 제공된 서식 공급자에 관계없이 항상 같습니다. 사용자 지정 서식 문자열은 "yyyy'-'MM'-'dd'T'HH':'mm':'ss"입니다.
 
@@ -328,53 +329,9 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 [표로 이동](#table)
 
-<a name="ShortTime"></a>
-
-## <a name="the-short-time-t-format-specifier"></a>간단한 시간("t") 서식 지정자
-
-"t" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm"입니다.
-
-결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
-
-|속성|설명|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12시간 서식으로 자정부터 정오까지의 시간을 나타내는 문자열을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12시간 서식으로 정오부터 자정까지의 시간을 나타내는 문자열을 정의합니다.|
-
-다음 예제에서는 "t" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
-
-[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
-[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
-
-[표로 이동](#table)
-
-<a name="LongTime"></a>
-
-## <a name="the-long-time-t-format-specifier"></a>자세한 시간("T") 서식 지정자
-
-"T" 표준 서식 지정자는 특정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm:ss"입니다.
-
-다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
-
-|속성|설명|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12시간 서식으로 자정부터 정오까지의 시간을 나타내는 문자열을 정의합니다.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12시간 서식으로 정오부터 자정까지의 시간을 나타내는 문자열을 정의합니다.|
-
-다음 예제에서는 "T" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
-
-[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
-[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
-
-[표로 이동](#table)
-
 <a name="UniversalSortable"></a>
 
-## <a name="the-universal-sortable-u-format-specifier"></a>정렬 가능한 유니버설("u") 서식 지정자
+### <a name="the-universal-sortable-u-format-specifier"></a>정렬 가능한 유니버설("u") 서식 지정자
 
 "u" 표준 서식 지정자는 <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 이 패턴은 정의된 표준을 반영하며 해당 속성은 읽기 전용입니다. 따라서 이 패턴은 사용된 문화권이나 제공된 서식 공급자에 관계없이 항상 같습니다. 사용자 지정 서식 문자열은 "yyyy'-'MM'-'dd HH':'mm':'ss'Z"입니다. 이 표준 서식 지정자를 사용할 경우 서식 지정 또는 구문 분석 작업에서 항상 고정 문화권이 사용됩니다.
 
@@ -389,7 +346,7 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 <a name="UniversalFull"></a>
 
-## <a name="the-universal-full-u-format-specifier"></a>유니버설 전체("U") 서식 지정자
+### <a name="the-universal-full-u-format-specifier"></a>유니버설 전체("U") 서식 지정자
 
 "U" 표준 서식 지정자는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 이 패턴은 "F" 패턴과 동일합니다. 그러나 서식 지정 작업을 수행하기 전에 <xref:System.DateTime> 값이 자동으로 UTC로 변환됩니다.
 
@@ -413,9 +370,87 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 [표로 이동](#table)
 
+## <a name="time-formats"></a>시간 형식
+
+이 그룹에는 다음 서식이 포함됩니다.
+
+- [간단한 시간("t") 서식 지정자](#the-short-time-t-format-specifier)
+- [자세한 시간("T") 서식 지정자](#the-long-time-t-format-specifier)
+
+<a name="ShortTime"></a>
+
+### <a name="the-short-time-t-format-specifier"></a>간단한 시간("t") 서식 지정자
+
+"t" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm"입니다.
+
+결과 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 개체의 서식 지정 정보에 영향을 받습니다. 다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
+
+|속성|설명|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12시간 서식으로 자정부터 정오까지의 시간을 나타내는 문자열을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12시간 서식으로 정오부터 자정까지의 시간을 나타내는 문자열을 정의합니다.|
+
+다음 예제에서는 "t" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
+
+[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
+
+[표로 이동](#table)
+
+<a name="LongTime"></a>
+
+### <a name="the-long-time-t-format-specifier"></a>자세한 시간("T") 서식 지정자
+
+"T" 표준 서식 지정자는 특정 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "HH:mm:ss"입니다.
+
+다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체 속성을 보여 줍니다. 일부 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 속성에서 반환하는 사용자 지정 서식 지정자는 일부 속성을 사용하지 못할 수 있습니다.
+
+|속성|설명|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|결과 문자열의 시간 구성 요소 서식을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|시간의 시, 분 및 초 구성 요소를 구분하는 문자열을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12시간 서식으로 자정부터 정오까지의 시간을 나타내는 문자열을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12시간 서식으로 정오부터 자정까지의 시간을 나타내는 문자열을 정의합니다.|
+
+다음 예제에서는 "T" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
+
+[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
+
+[표로 이동](#table)
+
+## <a name="partial-date-formats"></a>부분적 날짜 서식
+
+이 그룹에는 다음 서식이 포함됩니다.
+
+- [월("M", "m") 서식 지정자](#the-month-m-m-format-specifier)
+- [연도 월("Y", "y") 서식 지정자](#the-year-month-y-y-format-specifier)
+
+<a name="MonthDay"></a>
+
+### <a name="the-month-m-m-format-specifier"></a>월("M", "m") 서식 지정자
+
+"M" 또는 "m" 표준 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "MMMM dd"입니다.
+
+다음 표에서는 반환된 문자열의 서식을 제어하는 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성을 보여 줍니다.
+
+|속성|설명|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|결과 문자열의 전체 서식을 정의합니다.|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|결과 문자열에 나타날 수 있는 지역화된 월 이름을 정의합니다.|
+
+다음 예제에서는 "m" 서식 지정자를 사용하여 날짜 및 시간 값을 표시합니다.
+
+[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
+
+[표로 이동](#table)
+
 <a name="YearMonth"></a>
 
-## <a name="the-year-month-y-y-format-specifier"></a>년 월("Y", "y") 서식 지정자
+### <a name="the-year-month-y-y-format-specifier"></a>년 월("Y", "y") 서식 지정자
 
 "Y" 또는 "y" 표준 서식 지정자는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> 속성에 의해 정의되는 사용자 지정 날짜 및 시간 서식 문자열을 나타냅니다. 예를 들어, 고정 문화권에 대한 사용자 지정 서식 문자열은 "yyyy MMMM"입니다.
 
@@ -435,15 +470,13 @@ RFC 1123 표준에 따라 시간이 UTC(Coordinated Universal Time)로 표시되
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>참고
+## <a name="control-panel-settings"></a>제어판 설정
 
-### <a name="control-panel-settings"></a>제어판 설정
-
-제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 형식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.DateTimeFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.
+Windows에서 제어판의 **국가 및 언어 옵션** 항목은 서식 지정 작업에서 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 형식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.DateTimeFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.
 
 또한 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 생성자를 사용하여 현재 시스템 문화권과 동일한 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.
 
-### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 속성
+## <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 속성
 
 형식은 현재 스레드 문화권에 의해 암시적으로 제공되거나 형식 지정 작업을 호출하는 메서드의 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수에 의해 명시적으로 제공되는 현재 <xref:System.IFormatProvider> 개체의 속성에 따라 영향을 받습니다. <xref:System.IFormatProvider> 매개 변수에 대해 애플리케이션에서는 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 지정하거나 특정 문화권의 날짜 및 시간 서식 지정 규칙을 나타내는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정해야 합니다. 대부분의 표준 날짜 및 시간 서식 지정자는 현재 <xref:System.Globalization.DateTimeFormatInfo> 개체의 속성으로 정의된 서식 지정 패턴의 별칭입니다. 따라서 애플리케이션에서는 해당 <xref:System.Globalization.DateTimeFormatInfo> 속성의 날짜 및 시간 서식 패턴을 변경하여 일부 표준 날짜 및 시간 서식 지정자로 생성되는 결과를 변경할 수 있습니다.
 

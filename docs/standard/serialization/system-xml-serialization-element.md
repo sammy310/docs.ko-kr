@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6291799aadc429e943996f2256d773ac36dd370f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289488"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282393"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 요소
 
@@ -41,7 +41,7 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 |요소|설명|
 |-------------|-----------------|
 |[\<dateTimeSerialization> 요소](datetimeserialization-element.md)|<xref:System.DateTime> 개체의 serialization 모드를 결정합니다.|
-|[\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용되는 형식을 포함합니다.|
+|[\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET 형식에 매핑하는 데 사용되는 형식을 포함합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
@@ -51,7 +51,7 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 <xref:System.DateTime> 개체의 serialization 모드를 지정하는 방법과 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑할 때 사용되는 형식을 추가하는 방법을 보여 줍니다.
+다음 코드 예제는 <xref:System.DateTime> 개체의 직렬화 모드를 지정하는 방법과 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET 형식에 매핑할 때 사용되는 형식을 추가하는 방법을 보여 줍니다.
 
 ```xml
 <system.xml.serialization>

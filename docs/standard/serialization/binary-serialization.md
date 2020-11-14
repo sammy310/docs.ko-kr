@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb504862232345db07bdc92993069fc87afdbeb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554497"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282091"
 ---
 # <a name="binary-serialization"></a>이진 Serialization
 
@@ -25,7 +25,7 @@ serialization은 개체의 상태를 스토리지 매체에 스토리지하는 �
 개체 지향적 환경에서 serialization 메커니즘을 구현할 때는 사용 편의성과 유연성 사이에서 균형을 조정해야 합니다. 프로세스를 충분히 제어할 수 있으면 프로세스의 많은 부분을 자동화할 수 있습니다. 예를 들어 단순한 이진 serialization로 충분하지 않거나 클래스의 필드를 serialize해야 하는 것으로 결정할 특별한 이유가 있는 상황이 발생할 수 있습니다. 다음 섹션에서는 .NET에서 제공하는 강력한 serialization 메커니즘을 살펴보고 프로세스를 필요에 따라 사용자 지정할 수 있는 몇 가지 중요한 기능을 강조합니다.
 
 > [!NOTE]
-> UTF-8 또는 UTF-7로 인코딩된 개체가 서로 다른 .NET Framework 버전을 사용하여 직렬화되고 역직렬화될 경우 해당 개체의 상태는 유지되지 않습니다.
+> UTF-8 또는 UTF-7로 인코딩된 개체가 서로 다른 .NET 버전을 사용하여 직렬화되고 역직렬화될 경우 해당 개체의 상태는 유지되지 않습니다.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -351,7 +351,7 @@ serialization은 개체의 상태를 스토리지 매체에 스토리지하는 �
 serialization을 수행하는 코드를 쓸 때 따를 보안 코딩 지침을 설명합니다.
 
 - [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-원격 통신을 위해 .NET Framework에서 시작하는 다양한 메서드를 설명합니다.
+.NET Framework에서 원격 통신에 사용할 수 있는 다양한 메서드를 설명합니다.
 
 - [ASP.NET 및 XML Web Service 클라이언트를 사용하여 만든 XML Web Services](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 ASP.NET을 사용하여 만든 XML Web services를 프로그래밍하는 방법을 설명하는 항목입니다.

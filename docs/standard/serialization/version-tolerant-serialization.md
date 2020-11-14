@@ -1,6 +1,6 @@
 ---
 title: 버전 독립적 Serialization
-description: .NET Framework 2.0에는 직렬화 가능 형식을 보다 쉽게 수정할 수 있는 기능 집합인 버전 독립적 Serialization이 도입되었습니다.
+description: 직렬화 가능 형식을 보다 쉽게 수정할 수 있는 기능 집합인 버전 독립적 직렬화에 대해 알아봅니다.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762593"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282411"
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 
-.NET Framework의 버전 1.0과 1.1에서는 버전이 다른 애플리케이션에서 재사용할 수 있는 serialize 가능한 형식을 만드는 작업에 문제가 있었습니다. 추가 필드를 추가하여 형식을 수정하면 다음 문제가 발생합니다.
+.NET Framework의 이전 버전에서는 버전이 다른 애플리케이션에서 재사용할 수 있는 직렬화 가능 형식을 만드는 작업에 문제가 있었습니다. 추가 필드를 추가하여 형식을 수정하면 다음 문제가 발생합니다.
 
 - 이전 형식의 새 버전을 역직렬화하도록 요청하면 애플리케이션의 이전 버전이 예외를 throw합니다.
 - 데이터가 누락된 형식의 이전 버전을 역직렬화할 때 애플리케이션의 새 버전이 예외를 throw합니다.
 
-VTS(버전 독립적 Serialization)는 .NET Framework 2.0에 추가된 기능 집합으로, serialize 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 줍니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다. 작동하는 애플리케이션 예제는 [버전 독립적 serialization 기술 샘플](basic-serialization-technology-sample.md)을 참조하세요.
+VTS(버전 독립적 직렬화)는 직렬화 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 주는 기능 집합입니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다. 작동하는 애플리케이션 예제는 [버전 독립적 serialization 기술 샘플](basic-serialization-technology-sample.md)을 참조하세요.
 
 VTS 기능은 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 사용할 때 활성화됩니다. 또한 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>를 사용할 때 잘못 사용된 데이터 허용 범위를 제외한 모든 기능도 활성화됩니다. serialization에 이러한 클래스를 사용하는 방법에 대한 자세한 내용은 [이진 serialization](binary-serialization.md)을 참조하세요.
 
@@ -188,9 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>VersionAdded 속성
 
-**OptionalFieldAttribute**에는 **VersionAdded** 속성이 있습니다. .NET Framework의 버전 2.0에서는 이 속성이 사용되지 않습니다. 하지만 형식이 미래의 serialization 엔진과 호환되도록 이 속성을 올바르게 설정하는 것이 중요합니다.
-
-속성은 해당 필드가 추가된 형식의 버전을 나타냅니다. 다음 예제처럼 형식이 수정될 때마다 1씩(2부터 시작) 증가되어야 합니다.
+**OptionalFieldAttribute** 에는 **VersionAdded** 속성이 있습니다. 속성은 해당 필드가 추가된 형식의 버전을 나타냅니다. 다음 예제처럼 형식이 수정될 때마다 1씩(2부터 시작) 증가되어야 합니다.
 
 ```csharp
 // Version 1.0
@@ -274,7 +272,7 @@ End Class
 - serialize된 필드의 이름이나 형식을 변경하지 마십시오.
 - 새 직렬화된 필드를 추가할 때 **OptionalFieldAttribute** 특성을 적용합니다.
 - **NonSerializedAttribute** 특성을 필드에서 제거할 때(이전 버전에서는 직렬화할 수 없었음) **OptionalFieldAttribute** 특성을 적용합니다.
-- 모든 선택적 필드에 대해 0 또는 **null**을 기본값으로 사용할 수 있는 경우 이외에는 serialization 콜백을 사용하여 의미 있는 기본값을 설정합니다.
+- 모든 선택적 필드에 대해 0 또는 **null** 을 기본값으로 사용할 수 있는 경우 이외에는 serialization 콜백을 사용하여 의미 있는 기본값을 설정합니다.
 
 형식이 미래의 serialization 엔진과 호환되도록 이 속성을 올바르게 설정하는 것이 중요합니다.
 

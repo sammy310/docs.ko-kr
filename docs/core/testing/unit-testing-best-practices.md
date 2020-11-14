@@ -4,12 +4,12 @@ description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223485"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281651"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -47,11 +47,11 @@ ms.locfileid: "92223485"
 
 ## <a name="characteristics-of-a-good-unit-test"></a>좋은 단위 테스트의 특징
 
-- **Fast** . 완성도 높은 프로젝트에서 수천 개의 단위 테스트를 수행하는 것은 드문 일이 아닙니다. 단위 테스트는 실행하는 데 시간이 거의 걸리지 않습니다. 밀리초.
-- **Isolated** . 독립형 단위 테스트는 독립적으로 실행될 수 있으며, 파일 시스템 또는 데이터베이스와 같은 외부 요인에 종속되지 않습니다.
-- **반복 가능** . 단위 테스트를 실행하는 것은 해당 결과와 일치해야 합니다. 즉, 실행 사이에 아무 것도 변경하지 않으면 항상 동일한 결과를 반환합니다.
-- **자체 검사** . 테스트는 사람의 개입 없이 통과했는지 여부를 자동으로 검색할 수 있어야 합니다.
-- **Timely** . 단위 테스트는 테스트 중인 코드에 비해 작성하는 데 불균형적으로 긴 시간이 걸리지 않아야 합니다. 코드를 작성하는 데 비해 많은 시간이 걸리는 코드를 테스트하는 경우 더 많은 테스트가 가능한 디자인을 고려해 보세요.
+- **Fast**. 완성도 높은 프로젝트에서 수천 개의 단위 테스트를 수행하는 것은 드문 일이 아닙니다. 단위 테스트는 실행하는 데 시간이 거의 걸리지 않습니다. 밀리초.
+- **Isolated**. 독립형 단위 테스트는 독립적으로 실행될 수 있으며, 파일 시스템 또는 데이터베이스와 같은 외부 요인에 종속되지 않습니다.
+- **반복 가능**. 단위 테스트를 실행하는 것은 해당 결과와 일치해야 합니다. 즉, 실행 사이에 아무 것도 변경하지 않으면 항상 동일한 결과를 반환합니다.
+- **자체 검사**. 테스트는 사람의 개입 없이 통과했는지 여부를 자동으로 검색할 수 있어야 합니다.
+- **Timely**. 단위 테스트는 테스트 중인 코드에 비해 작성하는 데 불균형적으로 긴 시간이 걸리지 않아야 합니다. 코드를 작성하는 데 비해 많은 시간이 걸리는 코드를 테스트하는 경우 더 많은 테스트가 가능한 디자인을 고려해 보세요.
 
 ## <a name="code-coverage"></a>코드 검사
 
@@ -227,7 +227,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>설정 및 해제할 도우미 방법 선호
 
-테스트에 비슷한 개체나 상태가 필요한 경우 Setup 및 Teardown 특성이 있는 경우보다 도우미 메서드를 선호합니다.
+테스트에 비슷한 개체나 상태가 필요한 경우 `Setup` 및 `Teardown` 특성(있는 경우)을 활용하는 것보다 도우미 메서드가 선호됩니다.
 
 #### <a name="why"></a>이유
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2b75ba6875b2a4430b6776c27dead72476884fff
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378419"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282072"
 ---
 # <a name="basic-serialization"></a>기본 serialization
 
@@ -59,9 +59,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-위에서 사용된 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>는 매우 효율적이며 작은 크기의 바이트 스트림을 생성합니다. 이 포맷터로 직렬화된 모든 개체는 해당 포맷터로 역직렬화할 수 있기 때문에 .NET Framework에서 역직렬화될 개체의 직렬화에 이상적인 도구입니다. 개체가 역직렬화될 때 생성자가 호출되지 않습니다. 이러한 제약 조건은 성능상의 이유로 deserialization에 적용되었습니다. 하지만 이는 런타임과 개체 작성자 간의 일부 계약에 위배되며, 개발자는 개체를 serialize 가능으로 표시할 때 결과를 잘 이해해야 합니다.  
+위에서 사용된 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>는 매우 효율적이며 작은 크기의 바이트 스트림을 생성합니다. 이 포맷터로 직렬화된 모든 개체는 해당 포맷터로 역직렬화할 수 있기 때문에 .NET에서 역직렬화될 개체의 직렬화에 이상적인 도구입니다. 개체가 역직렬화될 때 생성자가 호출되지 않습니다. 이러한 제약 조건은 성능상의 이유로 deserialization에 적용되었습니다. 하지만 이는 런타임과 개체 작성자 간의 일부 계약에 위배되며, 개발자는 개체를 serialize 가능으로 표시할 때 결과를 잘 이해해야 합니다.  
   
-이식성이 필요한 경우에는 대신 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>를 사용하세요. 위의 코드에서 **BinaryFormatter**를 **SoapFormatter**로 바꾸고 이전처럼 **직렬화** 및 **역직렬화**를 호출합니다. 이 포맷터는 위에서 사용된 예제에 대해 다음 출력을 생성합니다.  
+이식성이 필요한 경우에는 대신 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>를 사용하세요. 위의 코드에서 **BinaryFormatter** 를 **SoapFormatter** 로 바꾸고 이전처럼 **직렬화** 및 **역직렬화** 를 호출합니다. 이 포맷터는 위에서 사용된 예제에 대해 다음 출력을 생성합니다.  
   
 ```xml  
 <SOAP-ENV:Envelope  

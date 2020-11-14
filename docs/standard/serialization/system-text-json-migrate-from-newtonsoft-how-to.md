@@ -1,36 +1,36 @@
 ---
 title: Newtonsoft.Json에서 System.Text.Json으로 마이그레이션 - .NET
+description: Newtonsoft.Json에서 System.Text.Json으로 마이그레이션하는 방법을 알아봅니다. 샘플 코드가 포함되어 있습니다.
 author: tdykstra
 ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 01/10/2020
+ms.date: 11/05/2020
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: cd40b6f6daac267342f54631075e4640f9a77d94
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811056"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329770"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
 
 이 문서에서는 [Newtonsoft.Json](https://www.newtonsoft.com/json)에서 <xref:System.Text.Json>로 마이그레이션하는 방법을 보여줍니다.
 
-`System.Text.Json` 네임스페이스는 JSON(JavaScript Object Notation)에서 직렬화 및 역직렬화하는 기능을 제공합니다. `System.Text.Json` 라이브러리는 [.NET Core 3.0](https://aka.ms/netcore3download) 공유 프레임워크에 포함되어 있습니다. 다른 대상 프레임워크의 경우 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치합니다. 패키지는 다음을 지원합니다.
+`System.Text.Json` 네임스페이스는 JSON(JavaScript Object Notation)에서 직렬화 및 역직렬화하는 기능을 제공합니다. `System.Text.Json` 라이브러리는 [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) 이상 버전의 런타임에 포함되어 있습니다. 다른 대상 프레임워크의 경우 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치합니다. 패키지는 다음을 지원합니다.
 
 * .NET Standard 2.0 이상 버전
 * .NET Framework 4.7.2 이상 버전
 * .NET Core 2.0, 2.1, 2.2
 
 `System.Text.Json`은 성능, 보안 및 표준 규정 준수에 중점을 둡니다. 기본 동작에서 몇 가지 큰 차이가 있으며 `Newtonsoft.Json`과의 기능 패리티를 목표로 하지 않습니다. 일부 시나리오에서는 `System.Text.Json`에 기본 기능이 없지만, 권장 해결 방법이 있습니다. 그 외의 시나리오에서는 해결 방법이 실용적이지 않습니다. 애플리케이션에서 사용하는 기능이 없는 경우 [이슈를 제출](https://github.com/dotnet/runtime/issues/new)하여 해당 시나리오에 대한 지원을 추가할 수 있는지 알아보세요.
-
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
 이 문서의 대부분은 <xref:System.Text.Json.JsonSerializer> API 사용 방법에 대한 내용이지만, <xref:System.Text.Json.JsonDocument>(DOM(문서 개체 모델)을 나타냄), <xref:System.Text.Json.Utf8JsonReader> 및 <xref:System.Text.Json.Utf8JsonWriter> 형식을 사용하는 방법에 대한 지침도 포함되어 있습니다.
 
@@ -42,34 +42,76 @@ ms.locfileid: "88811056"
 * 지원되지 않으며, 해결이 가능합니다. 해결 방법은 [사용자 지정 변환기](system-text-json-converters-how-to.md)이며, 사용자 지정 변환기는 `Newtonsoft.Json` 기능과의 완전한 패리티를 제공하지 않을 수 있습니다. 그 중 일부는 샘플 코드가 예제로 제공됩니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 마이그레이션을 수행하려면 .NET 개체 모델 또는 기타 코드 변경 내용을 수정해야 합니다.
 * 지원되지 않으며, 해결 방법이 실용적이지 않거나 가능하지 않습니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 중요한 변경 없이는 마이그레이션을 수행할 수 없습니다.
 
+::: zone pivot="dotnet-5-0"
 | Newtonsoft.Json 기능                               | System.Text.Json 해당 항목 |
 |-------------------------------------------------------|-----------------------------|
 | 기본적으로 대/소문자를 구분하지 않는 역직렬화           | ✔️ [PropertyNameCaseInsensitive 글로벌 설정](#case-insensitive-deserialization) |
 | 카멜식 대/소문자 속성 이름                             | ✔️ [PropertyNamingPolicy 글로벌 설정](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
 | 최소 문자 이스케이프                            | ✔️ [엄격한 문자 이스케이프, 구성 가능](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` 글로벌 설정             | ✔️ [IgnoreNullValues 글로벌 옵션](system-text-json-how-to.md#exclude-all-null-value-properties) |
+| `NullValueHandling.Ignore` 글로벌 설정             | ✔️ [DefaultIgnoreCondition 전역 옵션](system-text-json-how-to.md#ignore-all-null-value-properties) |[조건부로 속성 무시](#conditionally-ignore-a-property)
+| 주석 허용                                        | ✔️ [ReadCommentHandling 글로벌 설정](#comments) |
+| 후행 쉼표 허용                                 | ✔️ [AllowTrailingCommas 글로벌 설정](#trailing-commas) |
+| 사용자 지정 변환기 등록                         | ✔️ [우선 순위가 다름](#converter-registration-precedence) |
+| 기본적으로 최대 깊이 없음                           | ✔️ [기본 최대 깊이는 64, 구성 가능](#maximum-depth) |
+| `PreserveReferencesHandling` 글로벌 설정           | ✔️ [ReferenceHandling 전역 설정](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling` 글로벌 설정                | ✔️ [ReferenceHandling 전역 설정](#preserve-object-references-and-handle-loops) |
+| 따옴표 안의 숫자를 직렬화하거나 역직렬화            | ✔️ [NumberHandling 전역 설정, [JsonNumberHandling] 특성](#allow-or-write-numbers-in-quotes) |
+| 변경할 수 없는 클래스 및 구조체로 역직렬화          | ✔️ [JsonConstructor, C# 9 레코드](#deserialize-to-immutable-classes-and-structs) |
+| 필드에 대한 지원                                    | ✔️ [IncludeFields 전역 설정, [JsonInclude] 특성](#public-and-non-public-fields) |
+| `DefaultValueHandling` 글로벌 설정                 | ✔️ [DefaultIgnoreCondition 전역 설정](#conditionally-ignore-a-property) |
+| `[JsonProperty]`에서의 `NullValueHandling` 설정       | ✔️ [JsonIgnore 특성](#conditionally-ignore-a-property)  |
+| `[JsonProperty]`에서의 `DefaultValueHandling` 설정    | ✔️ [JsonIgnore 특성](#conditionally-ignore-a-property)  |
+| 문자열이 아닌 키로 `Dictionary` 역직렬화          | ✔️ [지원됨](#dictionary-with-non-string-key) |
+| public이 아닌 속성 setter 및 getter 지원   | ✔️ [JsonInclude 특성](#non-public-property-setters-and-getters) |
+| `[JsonConstructor]` 특성                         | ✔️ [JsonConstructor 특성](#specify-constructor-to-use-when-deserializing) |
+| 광범위한 형식 지원                    | ⚠️ [일부 형식은 사용자 지정 변환기 필요](#types-without-built-in-support) |
+| 다형 직렬화                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-serialization) |
+| 다형 역직렬화                           | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-deserialization) |
+| 유추 형식을 `object` 속성으로 역직렬화      | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialization-of-object-properties) |
+| JSON `null` 리터럴을 null을 허용하지 않는 값 형식으로 역직렬화 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialize-null-to-non-nullable-type) |
+| `[JsonProperty]` 특성에 대한 `Required` 설정        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#required-properties) |
+| 속성을 무시하는 `DefaultContractResolver`       | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
+| `DateTimeZoneHandling`, `DateFormatString` 설정   | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-date-format) |
+| 콜백                                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#callbacks) |
+| `JsonConvert.PopulateObject` 메서드                   | ⚠️ [지원되지 않음, 해결 가능](#populate-existing-objects) |
+| `ObjectCreationHandling` 글로벌 설정               | ⚠️ [지원되지 않음, 해결 가능](#reuse-rather-than-replace-properties) |
+| setter 없이 컬렉션에 추가                    | ⚠️ [지원되지 않음, 해결 가능](#add-to-collections-without-setters) |
+| `System.Runtime.Serialization` 특성 지원 | ❌ [지원되지 않음](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling` 글로벌 설정                | ❌ [지원되지 않음](#missingmemberhandling) |
+| 따옴표 없는 속성 이름 허용                   | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
+| 문자열 값 주변에 작은따옴표 허용              | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
+| 문자열 속성에 문자열이 아닌 JSON 값 허용    | ❌ [지원되지 않음](#non-string-values-for-string-properties) |
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+| Newtonsoft.Json 기능                               | System.Text.Json 해당 항목 |
+|-------------------------------------------------------|-----------------------------|
+| 기본적으로 대/소문자를 구분하지 않는 역직렬화           | ✔️ [PropertyNameCaseInsensitive 글로벌 설정](#case-insensitive-deserialization) |
+| 카멜식 대/소문자 속성 이름                             | ✔️ [PropertyNamingPolicy 글로벌 설정](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| 최소 문자 이스케이프                            | ✔️ [엄격한 문자 이스케이프, 구성 가능](#minimal-character-escaping) |
+| `NullValueHandling.Ignore` 글로벌 설정             | ✔️ [IgnoreNullValues 글로벌 옵션](system-text-json-how-to.md#ignore-all-null-value-properties) |
 | 주석 허용                                        | ✔️ [ReadCommentHandling 글로벌 설정](#comments) |
 | 후행 쉼표 허용                                 | ✔️ [AllowTrailingCommas 글로벌 설정](#trailing-commas) |
 | 사용자 지정 변환기 등록                         | ✔️ [우선 순위가 다름](#converter-registration-precedence) |
 | 기본적으로 최대 깊이 없음                           | ✔️ [기본 최대 깊이는 64, 구성 가능](#maximum-depth) |
 | 광범위한 형식 지원                    | ⚠️ [일부 형식은 사용자 지정 변환기 필요](#types-without-built-in-support) |
-| 문자열을 숫자로 역직렬화                        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#quoted-numbers) |
+| 문자열을 숫자로 역직렬화                        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#allow-or-write-numbers-in-quotes) |
 | 문자열이 아닌 키로 `Dictionary` 역직렬화          | ⚠️ [지원되지 않음, 해결 가능, 샘플](#dictionary-with-non-string-key) |
 | 다형 직렬화                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-serialization) |
 | 다형 역직렬화                           | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-deserialization) |
 | 유추 형식을 `object` 속성으로 역직렬화      | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialization-of-object-properties) |
 | JSON `null` 리터럴을 null을 허용하지 않는 값 형식으로 역직렬화 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialize-null-to-non-nullable-type) |
 | 변경할 수 없는 클래스 및 구조체로 역직렬화          | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialize-to-immutable-classes-and-structs) |
-| `[JsonConstructor]` 특성                         | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-constructor-to-use) |
+| `[JsonConstructor]` 특성                         | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-constructor-to-use-when-deserializing) |
 | `[JsonProperty]` 특성에 대한 `Required` 설정        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#required-properties) |
 | `[JsonProperty]` 특성에 대한 `NullValueHandling` 설정 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property)  |
 | `[JsonProperty]` 특성에 대한 `DefaultValueHandling` 설정 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property)  |
 | `DefaultValueHandling` 글로벌 설정                 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
-| 속성을 제외하는 `DefaultContractResolver`       | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
+| 속성을 무시하는 `DefaultContractResolver`       | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
 | `DateTimeZoneHandling`, `DateFormatString` 설정   | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-date-format) |
 | 콜백                                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#callbacks) |
 | public 및 비-public 필드 지원              | ⚠️ [지원되지 않음, 해결 가능](#public-and-non-public-fields) |
-| internal/private 속성 setter 및 getter 지원 | ⚠️ [지원되지 않음, 해결 가능](#internal-and-private-property-setters-and-getters) |
+| public이 아닌 속성 setter 및 getter 지원   | ⚠️ [지원되지 않음, 해결 가능](#non-public-property-setters-and-getters) |
 | `JsonConvert.PopulateObject` 메서드                   | ⚠️ [지원되지 않음, 해결 가능](#populate-existing-objects) |
 | `ObjectCreationHandling` 글로벌 설정               | ⚠️ [지원되지 않음, 해결 가능](#reuse-rather-than-replace-properties) |
 | setter 없이 컬렉션에 추가                    | ⚠️ [지원되지 않음, 해결 가능](#add-to-collections-without-setters) |
@@ -80,8 +122,9 @@ ms.locfileid: "88811056"
 | 따옴표 없는 속성 이름 허용                   | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
 | 문자열 값 주변에 작은따옴표 허용              | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
 | 문자열 속성에 문자열이 아닌 JSON 값 허용    | ❌ [지원되지 않음](#non-string-values-for-string-properties) |
+::: zone-end
 
-이 목록은 `Newtonsoft.Json` 기능의 전체 목록이 아닙니다. 이 목록에는 [GitHub 이슈](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에 요청된 여러 시나리오가 포함되어 있습니다. 여기에 나열된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대한 해결 방법을 구현하셨으며 그 방법을 공유하려는 분들은 이 페이지 하단의 **피드백** 섹션에서 **이 페이지**를 선택하세요. 그러면 이 설명서의 GitHub 리포지토리에 이슈가 작성되고 이 페이지의 **피드백** 섹션에도 이슈가 나열됩니다.
+이 목록은 `Newtonsoft.Json` 기능의 전체 목록이 아닙니다. 이 목록에는 [GitHub 이슈](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에 요청된 여러 시나리오가 포함되어 있습니다. 여기에 나열된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대한 해결 방법을 구현하셨으며 그 방법을 공유하려는 분들은 이 페이지 하단의 **피드백** 섹션에서 **이 페이지** 를 선택하세요. 그러면 이 설명서의 GitHub 리포지토리에 이슈가 작성되고 이 페이지의 **피드백** 섹션에도 이슈가 나열됩니다.
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>기본 JsonSerializer와 Newtonsoft.Json의 동작 차이
 
@@ -91,7 +134,11 @@ ms.locfileid: "88811056"
 
 역직렬화를 수행하는 동안 `Newtonsoft.Json`은 기본적으로 대/소문자를 구분하지 않는 속성 이름을 매칭합니다. <xref:System.Text.Json>은 기본적으로 대/소문자를 구분하며, 이 방법은 매칭을 정확히 수행하기 때문에 보다 나은 성능을 제공합니다. 대/소문자를 구분하지 않는 매칭 방법에 대한 자세한 내용은 [대/소문자를 구분하지 않는 속성 매칭](system-text-json-how-to.md#case-insensitive-property-matching)을 참조하세요.
 
-ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 경우 `Newtonsoft.Json`과 같은 동작을 얻기 위해 아무것도 할 필요가 없습니다. ASP.NET Core는 `System.Text.Json`을 사용할 때 [카멜식 대/소문자 구분 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분하지 않는 매칭에 대한 설정을 지정합니다. 기본값은 [JsonOptions 클래스](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)에 설정됩니다.
+ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 경우 `Newtonsoft.Json`과 같은 동작을 얻기 위해 아무것도 할 필요가 없습니다. ASP.NET Core는 `System.Text.Json`을 사용할 때 [카멜식 대/소문자 구분 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분하지 않는 매칭에 대한 설정을 지정합니다.
+
+::: zone pivot="dotnet-5-0"
+ASP.NET Core에서는 기본적으로 [따옴표 붙은 숫자](#allow-or-write-numbers-in-quotes)의 역직렬화도 가능합니다.
+::: zone-end
 
 ### <a name="minimal-character-escaping"></a>최소 문자 이스케이프
 
@@ -178,9 +225,156 @@ public class ExampleClass
 The JSON value could not be converted to System.String.
 ```
 
-## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>해결 방법이 필요한 JsonSerializer를 사용하는 시나리오
+## <a name="scenarios-using-jsonserializer"></a>JsonSerializer를 사용하는 시나리오
 
-다음 시나리오는 기본 제공 기능에서 지원되지 않지만, 해결이 가능합니다. 해결 방법은 [사용자 지정 변환기](system-text-json-converters-how-to.md)이며, 사용자 지정 변환기는 `Newtonsoft.Json` 기능과의 완전한 패리티를 제공하지 않을 수 있습니다. 그 중 일부는 샘플 코드가 예제로 제공됩니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 마이그레이션을 수행하려면 .NET 개체 모델 또는 기타 코드 변경 내용을 수정해야 합니다.
+다음 시나리오는 기본 제공 기능에서 지원되지 않지만 해결이 가능합니다. 해결 방법은 [사용자 지정 변환기](system-text-json-converters-how-to.md)이며, 사용자 지정 변환기는 `Newtonsoft.Json` 기능과의 완전한 패리티를 제공하지 않을 수 있습니다. 그 중 일부는 샘플 코드가 예제로 제공됩니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 마이그레이션을 수행하려면 .NET 개체 모델 또는 기타 코드 변경 내용을 수정해야 합니다.
+
+다음 몇몇 시나리오는 해결 방법이 실용적이지 않거나 가능하지 않습니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 중요한 변경 없이는 마이그레이션을 수행할 수 없습니다.
+
+### <a name="allow-or-write-numbers-in-quotes"></a>따옴표 안에 숫자를 허용하거나 씁니다.
+
+::: zone pivot="dotnet-5-0"
+`Newtonsoft.Json`은 JSON 문자열로 표시되는(따옴표로 묶은) 숫자를 직렬화 또는 역직렬화할 수 있습니다. 예를 들어 `{"DegreesCelsius":23}` 대신 `{"DegreesCelsius":"23"}`을 허용할 수 있습니다. <xref:System.Text.Json>에서 이 동작을 사용하도록 설정하려면 <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType>을 <xref:System.Text.Json.Serialization.JsonNumberHandling.WriteAsString> 또는 <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString>으로 설정하거나 [JsonNumberHandling](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) 특성을 사용합니다.
+
+ASP.NET Core를 사용하여 간접적으로 `System.Text.Json`을 사용하는 경우 `Newtonsoft.Json`과 같은 동작을 얻기 위해 아무것도 할 필요가 없습니다. ASP.NET Core는 `System.Text.Json`을 사용할 때 [웹 기본값](system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)을 지정하고, 웹 기본값은 따옴표 붙은 숫자를 허용합니다.
+
+자세한 내용은 [따옴표 안의 숫자 허용 또는 쓰기](system-text-json-how-to.md#allow-or-write-numbers-in-quotes)를 참조하세요.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json`은 JSON 문자열로 표시되는(따옴표로 묶은) 숫자를 직렬화 또는 역직렬화할 수 있습니다. 예를 들어 `{"DegreesCelsius":23}` 대신 `{"DegreesCelsius":"23"}`을 허용할 수 있습니다. .NET Core 3.1의 <xref:System.Text.Json>에서 해당 동작을 사용하도록 설정하려면 다음 예제와 같이 사용자 지정 변환기를 구현합니다. 이 변환기는 다음과 같이 `long`으로 정의된 속성을 처리합니다.
+
+* 속성을 JSON 문자열로 직렬화합니다.
+* 역직렬화할 때 JSON 숫자 및 따옴표 안의 숫자를 허용합니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
+
+개별 `long` 속성에 대한 [특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
+::: zone-end
+
+### <a name="specify-constructor-to-use-when-deserializing"></a>역직렬화할 때 사용할 생성자 지정
+
+`Newtonsoft.Json` `[JsonConstructor]` 특성을 사용하면 POCO로 역직렬화할 때 호출할 생성자를 지정할 수 있습니다.
+
+::: zone pivot="dotnet-5-0"
+`System.Text.Json`에는 [JsonConstructor](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 특성도 있습니다. 자세한 내용은 [변경 불가능한 형식 및 레코드](system-text-json-how-to.md#immutable-types-and-records)를 참조하세요.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1에서 <xref:System.Text.Json>은 매개 변수 없는 생성자만 지원합니다. 사용자 지정 변환기에서 필요한 생성자를 호출하여 문제를 해결할 수 있습니다. 예제는 [변경할 수 없는 클래스 및 구조체로 역직렬화](#deserialize-to-immutable-classes-and-structs)를 참조하세요.
+::: zone-end
+
+### <a name="conditionally-ignore-a-property"></a>조건부로 속성 무시
+
+`Newtonsoft.Json`은 직렬화 또는 역직렬화에서 속성을 조건부로 무시하는 여러 가지 방법이 있습니다.
+
+* `DefaultContractResolver`를 사용하면 임의의 조건에 따라 포함하거나 무시할 속성을 선택할 수 있습니다.
+* `JsonSerializerSettings`의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용하면 모든 Null 값 또는 기본값 속성을 무시하도록 지정할 수 있습니다.
+* `[JsonProperty]` 특성의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용하면 Null 또는 기본값으로 설정된 경우에 무시할 개별 속성을 지정할 수 있습니다.
+
+::: zone pivot="dotnet-5-0"
+
+<xref:System.Text.Json>은 직렬화하는 동안 다음과 같은 방법으로 속성이나 필드를 무시할 수 있습니다.
+
+* 속성의 [[JsonIgnore]](system-text-json-how-to.md#ignore-individual-properties) 특성은 직렬화하는 동안 JSON에서 속성을 생략하게 합니다.
+* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) 전역 옵션을 사용하면 모든 읽기 전용 속성을 무시할 수 있습니다.
+* [필드를 포함](system-text-json-how-to.md#include-fields)하는 경우 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> 전역 옵션을 통해 모든 읽기 전용 필드를 무시할 수 있습니다.
+* `DefaultIgnoreCondition` 전역 옵션을 사용하면 [기본값이 있는 모든 값 형식 속성을 무시](system-text-json-how-to.md#ignore-all-default-value-properties)하거나 [null 값이 있는 모든 참조 형식 속성을 무시](system-text-json-how-to.md#ignore-all-null-value-properties)할 수 있습니다.
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+.NET Core 3.1에서 <xref:System.Text.Json>은 직렬화하는 동안 다음과 같은 방법으로 속성을 무시할 수 있습니다.
+
+* 속성의 [[JsonIgnore]](system-text-json-how-to.md#ignore-individual-properties) 특성은 직렬화하는 동안 JSON에서 속성을 생략하게 합니다.
+* [IgnoreNullValues](system-text-json-how-to.md#ignore-all-null-value-properties) 전역 옵션을 사용하면 모든 Null 값 속성을 무시할 수 있습니다.
+* [IgnoreReadOnlyProperties](system-text-json-how-to.md#ignore-all-read-only-properties) 전역 옵션을 사용하면 모든 읽기 전용 속성을 무시할 수 있습니다.
+::: zone-end
+
+이러한 옵션은 다음 기능이 **없습니다**.
+
+::: zone pivot="dotnet-5-0"
+
+* 런타임에 평가되는 임의의 조건을 기준으로 선택한 속성을 무시합니다.
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* 형식의 기본값이 있는 모든 속성을 무시합니다.
+* 형식의 기본값이 있는 속성 중 선택한 일부를 무시합니다.
+* 선택한 속성의 값이 Null이면 해당 속성을 무시합니다.
+* 런타임에 평가되는 임의의 조건을 기준으로 선택한 속성을 무시합니다.
+
+::: zone-end
+
+이 기능을 사용하려면 사용자 지정 변환기를 작성하면 됩니다. 다음은 이 방법을 보여주는 샘플 POCO 및 사용자 지정 변환기입니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
+
+`Summary` 속성의 값이 Null, 빈 문자열 또는 "N/A"이면 이 변환기는 직렬화에서 이 속성을 생략합니다.
+
+[클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
+
+이 방법은 다음과 같은 경우에 추가 논리가 필요합니다.
+
+* POCO에 복합 속성이 포함됩니다.
+* `[JsonIgnore]`, 옵션(예: 사용자 지정 인코더) 같은 특성을 처리해야 합니다.
+
+### <a name="public-and-non-public-fields"></a>public 및 비-public 필드
+
+`Newtonsoft.Json`은 속성뿐 아니라 필드까지 직렬화 및 역직렬화할 수 있습니다.
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json>에서 <xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType> 전역 설정 또는 [JsonInclude](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 특성을 사용하여 직렬화 또는 역직렬화할 때 public 필드를 포함합니다. 예제는 [필드 포함](system-text-json-how-to.md#include-fields)을 참조하세요.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1에서 <xref:System.Text.Json>은 public 속성에서만 작동합니다. 사용자 지정 변환기는 이 기능을 제공할 수 있습니다.
+::: zone-end
+
+### <a name="preserve-object-references-and-handle-loops"></a>개체 참조 유지 및 루프 처리
+
+기본적으로 `Newtonsoft.Json`은 값으로 직렬화합니다. 예를 들어 개체에 두 개의 속성이 있고 두 속성은 동일한 `Person` 개체에 대한 참조를 포함하는 경우 해당 `Person` 개체의 속성 값이 JSON에서 중복됩니다.
+
+`Newtonsoft.Json`에는 참조로 직렬화할 수 있는 `JsonSerializerSettings`에 대한 `PreserveReferencesHandling` 설정이 있습니다.
+
+* 첫 번째 `Person` 개체에 대해 만든 JSON에 식별자 메타데이터가 추가됩니다.
+* 두 번째 `Person` 개체에 대해 만든 JSON에는 속성 값 대신 해당 식별자에 대한 참조가 포함됩니다.
+
+`Newtonsoft.Json`에는 예외를 throw하는 대신 순환 참조를 무시할 수 있는 `ReferenceLoopHandling` 설정도 있습니다.
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json>에서 참조를 보존하고 순환 참조를 처리하려면 <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler%2A?displayProperty=nameWithType>을 <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A>로 설정합니다. `ReferenceHandler.Preserve` 설정은 `Newtonsoft.Json`의 `PreserveReferencesHandling` = `PreserveReferencesHandling.All`과 동일합니다.
+
+Newtonsoft.Json [ReferenceResolver](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializer_ReferenceResolver.htm)와 마찬가지로 <xref:System.Text.Json.Serialization.ReferenceResolver?displayProperty=fullName> 클래스는 직렬화 및 역직렬화 시 참조를 보존하는 동작을 정의합니다. 파생 클래스를 만들어 사용자 지정 동작을 지정합니다. 예제는 [GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs)를 참조하세요.
+
+일부 관련 `Newtonsoft.Json` 기능은 지원되지 않습니다.
+
+* [JsonPropertyAttribute.IsReference](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_IsReference.htm)
+* [JsonPropertyAttribute.ReferenceLoopHandling](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_ReferenceLoopHandling.htm)
+
+자세한 내용은 [참조 보존 및 순환 참조 처리](system-text-json-how-to.md#preserve-references-and-handle-circular-references)를 참조하세요.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1의 <xref:System.Text.Json>은 값을 사용하는 직렬화만 지원하며 순환 참조에 대한 예외를 throw합니다.
+::: zone-end
+
+### <a name="dictionary-with-non-string-key"></a>키가 문자열이 아닌 사전
+
+::: zone pivot="dotnet-5-0"
+`Newtonsoft.Json` 및 `System.Text.Json`은 모두 `Dictionary<TKey, TValue>` 형식의 컬렉션을 지원합니다.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json`은 `Dictionary<TKey, TValue>` 형식의 컬렉션을 지원합니다. .NET Core 3.1에서 <xref:System.Text.Json>의 사전 컬렉션에 대한 기본 지원은 `Dictionary<string, TValue>`로 제한됩니다. 즉, 키는 문자열이어야 합니다.
+
+.NET Core 3.1에서 정수 또는 다른 형식의 키를 사용하는 사전을 지원하려면 [사용자 지정 변환기를 작성하는 방법](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)의 예제와 같은 변환기를 만듭니다.
+::: zone-end
 
 ### <a name="types-without-built-in-support"></a>기본적으로 지원되지 않는 형식
 
@@ -198,23 +392,6 @@ The JSON value could not be converted to System.String.
 
 기본적으로 지원되지 않는 형식에 대한 사용자 지정 변환기를 구현할 수 있습니다.
 
-### <a name="quoted-numbers"></a>따옴표 붙은 숫자
-
-`Newtonsoft.Json`은 JSON 문자열로 표시되는(따옴표로 묶은) 숫자를 직렬화 또는 역직렬화할 수 있습니다. 예를 들어 `{"DegreesCelsius":23}` 대신 `{"DegreesCelsius":"23"}`을 허용할 수 있습니다. <xref:System.Text.Json>에서 해당 동작을 사용하도록 설정하려면 다음 예제와 같이 사용자 지정 변환기를 구현합니다. 이 변환기는 다음과 같이 `long`으로 정의된 속성을 처리합니다.
-
-* 속성을 JSON 문자열로 직렬화합니다.
-* 역직렬화할 때 JSON 숫자 및 따옴표 안의 숫자를 허용합니다.
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
-
-개별 `long` 속성에 대한 [특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
-
-### <a name="dictionary-with-non-string-key"></a>키가 문자열이 아닌 사전
-
-`Newtonsoft.Json`은 `Dictionary<TKey, TValue>` 형식의 컬렉션을 지원합니다. <xref:System.Text.Json>의 사전 컬렉션에 대한 기본 지원은 `Dictionary<string, TValue>`로 제한됩니다. 즉, 키는 문자열이어야 합니다.
-
-정수 또는 다른 형식의 키를 사용하는 사전을 지원하려면 [사용자 지정 변환기를 작성하는 방법](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)의 예제와 같은 변환기를 만듭니다.
-
 ### <a name="polymorphic-serialization"></a>다형 직렬화
 
 `Newtonsoft.Json`은 다형 직렬화를 자동으로 수행합니다. <xref:System.Text.Json>의 제한 다형 직렬화 기능에 대한 자세한 내용은 [파생 클래스의 속성 직렬화](system-text-json-how-to.md#serialize-properties-of-derived-classes)를 참조하세요.
@@ -231,8 +408,8 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json`은 <xref:System.Object>로 역직렬화할 때 다음을 수행합니다.
 
-* JSON 페이로드의 기본 값 형식(`null` 제외)을 유추하고 저장된 `string`, `long`, `double`, `boolean` 또는 `DateTime`을 boxed 개체로 반환합니다. *기본 값*은 JSON 숫자, 문자열, `true`, `false`, `null` 등의 단일 JSON 값입니다.
-* JSON 페이로드의 복합 값에 대한 `JObject` 또는 `JArray`를 반환합니다. *복합 값*은 중괄호(`{}`) 안에 있는 JSON 키-값 쌍 컬렉션 또는 대괄호(`[]`) 안에 있는 값 목록입니다. 중괄호 또는 대괄호 안에 있는 속성과 값이 추가 속성 또는 값을 가질 수 있습니다.
+* JSON 페이로드의 기본 값 형식(`null` 제외)을 유추하고 저장된 `string`, `long`, `double`, `boolean` 또는 `DateTime`을 boxed 개체로 반환합니다. *기본 값* 은 JSON 숫자, 문자열, `true`, `false`, `null` 등의 단일 JSON 값입니다.
+* JSON 페이로드의 복합 값에 대한 `JObject` 또는 `JArray`를 반환합니다. *복합 값* 은 중괄호(`{}`) 안에 있는 JSON 키-값 쌍 컬렉션 또는 대괄호(`[]`) 안에 있는 값 목록입니다. 중괄호 또는 대괄호 안에 있는 속성과 값이 추가 속성 또는 값을 가질 수 있습니다.
 * 페이로드에 `null` JSON 리터럴이 있으면 null 참조를 반환합니다.
 
 <xref:System.Text.Json>은 <xref:System.Object>로 역직렬화할 때마다 기본 값과 복합 값 모두에 대한 boxed `JsonElement`를 저장하며, 다음은 그 예입니다.
@@ -253,7 +430,7 @@ The JSON value could not be converted to System.String.
 * `NullValueHandling`이 `Ignore`로 설정된 경우
 * 역직렬화를 수행하는 동안 JSON은 null을 허용하지 않는 값 형식에 대해 Null 값을 포함합니다.
 
-동일한 시나리오에서 <xref:System.Text.Json>은 예외를 throw합니다. (해당하는 null 처리 설정은 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>입니다.)
+동일한 시나리오에서 <xref:System.Text.Json>은 예외를 throw합니다. (`System.Text.Json`에서 해당하는 null 처리 설정은 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> = `true`입니다.)
 
 대상 형식을 소유하고 있는 경우 가장 좋은 해결 방법은 문제가 되는 속성을 null 허용으로 만드는 것입니다(예를 들어 `int`를 `int?`로 변경).
 
@@ -263,7 +440,7 @@ The JSON value could not be converted to System.String.
 
 [속성에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
-**참고:** 위의 변환기는 기본값을 지정하는 POCO를 `Newtonsoft.Json`이 처리하는 방법과는 **다르게 Null 값을 처리**합니다. 예를 들어 다음 코드가 대상 개체를 보여준다고 가정하겠습니다.
+**참고:** 위의 변환기는 기본값을 지정하는 POCO를 `Newtonsoft.Json`이 처리하는 방법과는 **다르게 Null 값을 처리** 합니다. 예를 들어 다음 코드가 대상 개체를 보여준다고 가정하겠습니다.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
@@ -281,7 +458,14 @@ The JSON value could not be converted to System.String.
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>변경할 수 없는 클래스 및 구조체로 역직렬화
 
-`Newtonsoft.Json`은 매개 변수가 있는 생성자를 사용할 수 있기 때문에 변경 불가능한 클래스 및 구조체로 역직렬화할 수 있습니다. <xref:System.Text.Json>은 매개 변수 없는 public 생성자만 지원합니다. 사용자 지정 변환기에서 매개 변수가 있는 생성자를 호출하여 문제를 해결할 수 있습니다.
+`Newtonsoft.Json`은 매개 변수가 있는 생성자를 사용할 수 있기 때문에 변경 불가능한 클래스 및 구조체로 역직렬화할 수 있습니다.
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json>에서 [JsonConstructor](xref:System.Text.Json.Serialization.JsonConstructorAttribute) 특성을 사용하여 매개 변수가 있는 생성자의 사용을 지정합니다. C# 9의 레코드도 변경할 수 없으며, 역직렬화 대상으로 지원됩니다. 자세한 내용은 [변경 불가능한 형식 및 레코드](system-text-json-how-to.md#immutable-types-and-records)를 참조하세요.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1에서 <xref:System.Text.Json>은 매개 변수 없는 public 생성자만 지원합니다. 사용자 지정 변환기에서 매개 변수가 있는 생성자를 호출하여 문제를 해결할 수 있습니다.
 
 다음은 여러 생성자 매개 변수가 있는 변경할 수 없는 구조체입니다.
 
@@ -294,10 +478,7 @@ The JSON value could not be converted to System.String.
 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
 개방형 제네릭 속성을 처리하는 비슷한 변환기의 예제는 [키-값 쌍에 사용되는 기본 제공 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs)를 참조하세요.
-
-### <a name="specify-constructor-to-use"></a>사용할 변환기 지정
-
-`Newtonsoft.Json` `[JsonConstructor]` 특성을 사용하면 POCO로 역직렬화할 때 호출할 생성자를 지정할 수 있습니다. <xref:System.Text.Json>은 매개 변수 없는 생성자만 지원합니다. 사용자 지정 변환기에서 필요한 생성자를 호출하여 문제를 해결할 수 있습니다. 예제는 [변경할 수 없는 클래스 및 구조체로 역직렬화](#deserialize-to-immutable-classes-and-structs)를 참조하세요.
+::: zone-end
 
 ### <a name="required-properties"></a>필수 속성
 
@@ -346,42 +527,6 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 * null을 허용하지 않는 형식의 속성은 JSON에 있지만, 값은 형식에 대한 기본값입니다(`int`는 0).
 * null 허용 값 형식의 속성이 JSON에 있지만, 값은 Null입니다.
 
-### <a name="conditionally-ignore-a-property"></a>조건부로 속성 무시
-
-`Newtonsoft.Json`은 직렬화 또는 역직렬화에서 속성을 조건부로 무시하는 여러 가지 방법이 있습니다.
-
-* `DefaultContractResolver`를 사용하면 임의의 조건에 따라 포함하거나 제외할 속성을 선택할 수 있습니다.
-* `JsonSerializerSettings`의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용하면 모든 Null 값 또는 기본값 속성을 무시하도록 지정할 수 있습니다.
-* `[JsonProperty]` 특성의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용하면 Null 또는 기본값으로 설정된 경우에 무시할 개별 속성을 지정할 수 있습니다.
-
-<xref:System.Text.Json>은 직렬화하는 동안 다음과 같은 방법으로 속성을 생략할 수 있습니다.
-
-* 속성의 [[JsonIgnore]](system-text-json-how-to.md#exclude-individual-properties) 특성은 직렬화하는 동안 JSON에서 속성을 생략하게 합니다.
-* [IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) 글로벌 옵션을 사용하면 모든 Null 값 속성을 제외할 수 있습니다.
-* [IgnoreReadOnlyProperties](system-text-json-how-to.md#exclude-all-read-only-properties) 글로벌 옵션을 사용하면 모든 읽기 전용 속성을 제외할 수 있습니다.
-
-이러한 옵션은 다음 기능이 **없습니다**.
-
-* 형식의 기본값이 있는 모든 속성을 무시합니다.
-* 형식의 기본값이 있는 속성 중 선택한 일부를 무시합니다.
-* 선택한 속성의 값이 Null이면 해당 속성을 무시합니다.
-* 런타임에 평가되는 임의의 조건을 기준으로 선택한 속성을 무시합니다.
-
-이 기능을 사용하려면 사용자 지정 변환기를 작성하면 됩니다. 다음은 이 방법을 보여주는 샘플 POCO 및 사용자 지정 변환기입니다.
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
-
-`Summary` 속성의 값이 Null, 빈 문자열 또는 "N/A"이면 이 변환기는 직렬화에서 이 속성을 생략합니다.
-
-[클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
-
-이 방법은 다음과 같은 경우에 추가 논리가 필요합니다.
-
-* POCO에 복합 속성이 포함됩니다.
-* `[JsonIgnore]`, 옵션(예: 사용자 지정 인코더) 같은 특성을 처리해야 합니다.
-
 ### <a name="specify-date-format"></a>날짜 형식 지정
 
 `Newtonsoft.Json`은 `DateTime` 및 `DateTimeOffset` 형식의 속성 직렬화 및 역직렬화 방식을 여러 가지 방법으로 제어할 수 있습니다.
@@ -413,13 +558,17 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 
 `Serialize` 또는 `Deserialize`를 재귀적으로 호출하는 사용자 지정 변환기에 대한 자세한 내용은 이 문서의 앞부분에 나오는 [필수 속성](#required-properties) 섹션을 참조하세요.
 
-### <a name="public-and-non-public-fields"></a>public 및 비-public 필드
+### <a name="non-public-property-setters-and-getters"></a>public이 아닌 속성 setter 및 getter
 
-`Newtonsoft.Json`은 속성뿐 아니라 필드까지 직렬화 및 역직렬화할 수 있습니다. <xref:System.Text.Json>은 public 속성에서만 작동합니다. 사용자 지정 변환기는 이 기능을 제공할 수 있습니다.
+`Newtonsoft.Json`은 `JsonProperty` 특성을 통해 private/internal 속성 setter 및 getter를 사용할 수 있습니다.
 
-### <a name="internal-and-private-property-setters-and-getters"></a>Internal/private 속성 setter 및 getter
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json>은 [JsonInclude](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 특성을 통해 private 및 internal 속성 setter 및 getter를 지원합니다. 샘플 코드는 [public이 아닌 속성 접근자](system-text-json-how-to.md#non-public-property-accessors)를 참조하세요.
+::: zone-end
 
-`Newtonsoft.Json`은 `JsonProperty` 특성을 통해 private/internal 속성 setter 및 getter를 사용할 수 있습니다. <xref:System.Text.Json>은 public setter만 지원합니다. 사용자 지정 변환기는 이 기능을 제공할 수 있습니다.
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1에서 <xref:System.Text.Json>은 public setter만 지원합니다. 사용자 지정 변환기는 이 기능을 제공할 수 있습니다.
+::: zone-end
 
 ### <a name="populate-existing-objects"></a>기존 개체 채우기
 
@@ -432,23 +581,6 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 ### <a name="add-to-collections-without-setters"></a>setter 없이 컬렉션에 추가
 
 역직렬화를 수행하는 동안 `Newtonsoft.Json`은 속성에 setter가 없는 경우에도 개체를 컬렉션에 추가합니다. <xref:System.Text.Json>은 setter가 없는 속성을 무시합니다. 사용자 지정 변환기는 이 기능을 제공할 수 있습니다.
-
-## <a name="scenarios-that-jsonserializer-currently-doesnt-support"></a>JsonSerializer가 현재 지원하지 않는 시나리오
-
-다음 시나리오는 해결 방법이 실용적이지 않거나 가능하지 않습니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 중요한 변경 없이는 마이그레이션을 수행할 수 없습니다.
-
-### <a name="preserve-object-references-and-handle-loops"></a>개체 참조 유지 및 루프 처리
-
-기본적으로 `Newtonsoft.Json`은 값으로 직렬화합니다. 예를 들어 개체에 두 개의 속성이 있고 두 속성은 동일한 `Person` 개체에 대한 참조를 포함하는 경우 해당 `Person` 개체의 속성 값이 JSON에서 중복됩니다.
-
-`Newtonsoft.Json`에는 참조로 직렬화할 수 있는 `JsonSerializerSettings`에 대한 `PreserveReferencesHandling` 설정이 있습니다.
-
-* 첫 번째 `Person` 개체에 대해 만든 JSON에 식별자 메타데이터가 추가됩니다.
-* 두 번째 `Person` 개체에 대해 만든 JSON에는 속성 값 대신 해당 식별자에 대한 참조가 포함됩니다.
-
-`Newtonsoft.Json`에는 예외를 throw하는 대신 순환 참조를 무시할 수 있는 `ReferenceLoopHandling` 설정도 있습니다.
-
-<xref:System.Text.Json>은 값을 사용하는 직렬화만 지원하며 순환 참조에 대한 예외를 throw합니다.
 
 ### <a name="systemruntimeserialization-attributes"></a>System.Runtime.Serialization 특성
 
@@ -530,7 +662,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader는 ref struct
 
-`Utf8JsonReader` 형식은 *ref struct*이므로 [특정 제한](../../csharp/language-reference/builtin-types/struct.md#ref-struct)이 있습니다. 예를 들어 ref struct가 아닌 클래스 또는 구조체에 필드로 저장할 수 없습니다. 고성능을 얻으려면 출력 [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601)를 캐시해야 하는데 그 자체가 ref struct이므로 이 형식은 `ref struct`여야 합니다. 또한 이 형식은 상태를 유지하기 때문에 변경 가능합니다. 따라서 값이 아닌 **ref로 전달**해야 합니다. 값으로 전달하면 구조체 복사본이 생성되고 상태 변경 내용이 호출자에게 표시되지 않습니다. `Newtonsoft.Json` `JsonTextReader`는 클래스이므로 `Newtonsoft.Json`과는 다릅니다. ref struct 사용 방법에 대한 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../csharp/write-safe-efficient-code.md)을 참조하세요.
+`Utf8JsonReader` 형식은 *ref struct* 이므로 [특정 제한](../../csharp/language-reference/builtin-types/struct.md#ref-struct)이 있습니다. 예를 들어 ref struct가 아닌 클래스 또는 구조체에 필드로 저장할 수 없습니다. 고성능을 얻으려면 출력 [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601)를 캐시해야 하는데 그 자체가 ref struct이므로 이 형식은 `ref struct`여야 합니다. 또한 이 형식은 상태를 유지하기 때문에 변경 가능합니다. 따라서 값이 아닌 **ref로 전달** 해야 합니다. 값으로 전달하면 구조체 복사본이 생성되고 상태 변경 내용이 호출자에게 표시되지 않습니다. `Newtonsoft.Json` `JsonTextReader`는 클래스이므로 `Newtonsoft.Json`과는 다릅니다. ref struct 사용 방법에 대한 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../csharp/write-safe-efficient-code.md)을 참조하세요.
 
 ### <a name="read-utf-8-text"></a>UTF-8 텍스트 읽기
 

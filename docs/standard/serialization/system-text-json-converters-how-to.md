@@ -1,37 +1,49 @@
 ---
 title: JSON serialization용 사용자 지정 변환기를 작성하는 방법 - .NET
+description: System.Text.Json 네임스페이스에 제공된 JSON 직렬화 클래스의 사용자 지정 변환기를 만드는 방법을 알아봅니다.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811069"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329809"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization(마샬링)용 사용자 지정 변환기를 작성하는 방법
 
 이 문서에서는 <xref:System.Text.Json> 네임스페이스에 제공된 JSON serialization 클래스에 대한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `System.Text.Json`에 대한 소개는 [.NET에서 JSON을 직렬화 및 역직렬화하는 방법](system-text-json-how-to.md)을 참조하세요.
 
-*변환기*는 개체 또는 값을 JSON으로 변환하는 클래스입니다. `System.Text.Json` 네임스페이스에는 JavaScript 기본 형식에 매핑되는 기본 형식 대부분에 대한 기본 제공 변환기가 있습니다. 다음과 같은 용도로 사용자 지정 변환기를 작성할 수 있습니다.
+*변환기* 는 개체 또는 값을 JSON으로 변환하는 클래스입니다. `System.Text.Json` 네임스페이스에는 JavaScript 기본 형식에 매핑되는 기본 형식 대부분에 대한 기본 제공 변환기가 있습니다. 다음과 같은 용도로 사용자 지정 변환기를 작성할 수 있습니다.
 
 * 기본 제공 변환기의 기본 동작을 재정의합니다. 예를 들어 `DateTime` 값을 기본 ISO 8601-1:2019 형식 대신 mm/dd/yyyy 형식으로 표시하도록 할 수 있습니다.
 * 사용자 지정 값 형식을 지원합니다. 예를 들어 `PhoneNumber` 구조체입니다.
 
 현재 릴리스에 포함되지 않은 기능을 사용하여 `System.Text.Json`를 사용자 지정하거나 확장하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 다음과 같은 시나리오에 대해 설명합니다.
 
+::: zone pivot="dotnet-5-0"
+
+* [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
+* [다형 deserialization 지원](#support-polymorphic-deserialization)
+* [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
 * [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)
 * [다형 deserialization 지원](#support-polymorphic-deserialization)
 * [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>사용자 지정 변환기 패턴
 
@@ -103,7 +115,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="register-a-custom-converter"></a>사용자 지정 변환기 등록
 
-`Serialize` 및 `Deserialize` 메서드가 사용할 수 있도록 사용자 지정 변환기를 *등록*합니다. 다음 방법 중 하나를 선택합니다.
+`Serialize` 및 `Deserialize` 메서드가 사용할 수 있도록 사용자 지정 변환기를 *등록* 합니다. 다음 방법 중 하나를 선택합니다.
 
 * <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 변환기 클래스의 인스턴스를 추가합니다.
 * [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 특성을 사용자 지정 변환기가 필요한 속성에 적용합니다.
@@ -177,10 +189,20 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 
 다음 섹션에서는 기본 제공 기능이 처리하지 않는 몇 가지 일반적인 시나리오를 해결하는 변환기 샘플을 제공합니다.
 
+::: zone pivot="dotnet-5-0"
+
+* [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
+* [다형 deserialization 지원](#support-polymorphic-deserialization)
+* [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
 * [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)
 * [다형 deserialization 지원](#support-polymorphic-deserialization)
 * [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>유추된 형식을 개체 속성으로 역직렬화
 
@@ -221,6 +243,8 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 
 `System.Text.Json.Serialization` 네임스페이스의 [unit tests 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)에는 `object` 속성에 대한 deserialization을 처리하는 사용자 지정 변환기의 더 많은 예제가 있습니다.
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>문자열이 아닌 키를 사용하는 사전 지원
 
 사전 컬렉션에 대한 기본 제공 지원은 `Dictionary<string, TValue>`입니다. 즉, 키가 문자열이어야 합니다. 정수 또는 다른 형식을 키로 사용하는 사전을 지원하려면 사용자 지정 변환기가 필요합니다.
@@ -252,6 +276,7 @@ Serialization의 JSON 출력은 다음 예제와 같습니다.
 ```
 
 `System.Text.Json.Serialization` 네임스페이스의 [unit tests 폴더](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)에는 비 문자열 키 사전을 처리하는 사용자 지정 변환기의 더 많은 예제가 있습니다.
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>다형 deserialization 지원
 
@@ -307,6 +332,29 @@ JSON 문자열을 <xref:System.Collections.Generic.Stack%601> 개체로 역직�
 다음 코드는 변환기를 등록합니다.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>Null 값 처리
+
+기본적으로 직렬 변환기는 null 값을 다음과 같이 처리합니다.
+
+* 참조 형식 및 `Nullable<T>` 형식:
+
+  * 직렬화 시 사용자 지정 변환기에 `null`을 전달하지 않습니다.
+  * 역직렬화 시 사용자 지정 변환기에 `JsonTokenType.Null`을 전달하지 않습니다.
+  * 역직렬화 시 `null` 인스턴스를 반환합니다.
+  * 직렬화 시 기록기로 직접 `null`을 씁니다.
+
+* null을 허용하지 않는 값 형식:
+
+  * 역직렬화 시 사용자 지정 변환기에 `JsonTokenType.Null`을 전달합니다. (사용자 지정 변환기를 사용할 수 없는 경우 형식의 내부 변환기에서 `JsonException` 예외가 throw됩니다.)
+
+이 null 처리 동작은 주로 변환기에 대한 추가 호출을 건너뛰어 성능을 최적화하기 위한 것입니다. 또한 nullable 형식의 변환기가 모든 `Read` 및 `Write` 메서드 재정의가 시작될 때 강제로 `null`을 확인하지 않도록 합니다.
+
+::: zone pivot="dotnet-5-0"
+사용자 지정 변환기가 참조 또는 값 형식의 `null`을 처리할 수 있게 하려면 다음 예제와 같이 `true`를 반환하도록 <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType>을 재정의하세요.
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>기타 사용자 지정 변환기 샘플
 

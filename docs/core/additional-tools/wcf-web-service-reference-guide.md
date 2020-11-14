@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715679"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400606"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
 
@@ -39,7 +39,7 @@ ms.locfileid: "75715679"
 
     ![.NET Core용 Visual Studio 연결된 서비스 탭](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
-2. **연결된 서비스** 페이지에서 **Microsoft WCF Web Service Reference Provider**를 클릭합니다. 그러면 **WCF Web Service Reference 구성** 마법사가 나타납니다.
+2. **연결된 서비스** 페이지에서 **Microsoft WCF Web Service Reference Provider** 를 클릭합니다. 그러면 **WCF Web Service Reference 구성** 마법사가 나타납니다.
 
     ![.NET Core용 Visual Studio 서비스 엔드포인트 탭](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
@@ -64,12 +64,12 @@ ms.locfileid: "75715679"
 
     프로젝트 종속성 및 기타 시스템 성능 요소의 수에 따라 형식 정보가 로드되는 동안 지연이 있을 수 있습니다. **참조된 어셈블리의 형식 재사용** 확인란을 선택 하면 로드 중에 **마침** 단추가 비활성화됩니다.
 
-5. 완료했으면 **마침**을 클릭합니다.
+5. 완료했으면 **마침** 을 클릭합니다.
 
 진행률을 표시하면서 도구가 다음을 수행합니다.
 
 - WCF 서비스에서 메타데이터를 다운로드합니다.
-- *reference.cs*라는 파일에 서비스 참조 코드를 생성하고 **연결된 서비스** 노드 아래의 프로젝트에 추가합니다.
+- *reference.cs* 라는 파일에 서비스 참조 코드를 생성하고 **연결된 서비스** 노드 아래의 프로젝트에 추가합니다.
 - 대상 플랫폼에서 컴파일 및 실행하는 데 필요한 NuGet 패키지 참조로 프로젝트 파일(.csproj)을 업데이트합니다.
 
 ![Visual Studio 진행률 창](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
@@ -84,7 +84,7 @@ ms.locfileid: "75715679"
 
 ## <a name="feedback--questions"></a>사용자 의견 및 질문
 
-질문이나 피드백이 있는 경우 [문제 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) 도구를 사용하여 [개발자 커뮤니티](https://developercommunity.visualstudio.com/)에 보고하세요.
+제품 피드백이 있는 경우 [문제 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) 도구를 사용하여 [개발자 커뮤니티](https://aka.ms/feedback/report?space=61)에 보고하세요.
 
 ## <a name="release-notes"></a>릴리스 정보
 

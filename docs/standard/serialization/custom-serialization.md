@@ -18,23 +18,25 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289657"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281791"
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
+
 사용자 지정 serialization은 형식의 serialization 및 deserialization을 제어하는 프로세스입니다. serialization을 제어하면 형식의 핵심 기능에 영향을 주지 않고 다양한 형식 사이에 직렬화 및 역직렬화할 수 있는 기능인 직렬화 호환성을 유지할 수 있습니다. 예를 들어 첫 번째 버전의 형식에는 두 개의 필드만 있을 수 있습니다. 다음 버전의 형식에는 몇 개의 필드가 더 추가될 수 있습니다. 하지만 애플리케이션의 두 번째 버전에서는 여전히 두 형식을 모두 직렬화 및 역직렬화할 수 있어야 합니다. 다음 단원에서는 serialization을 제어하는 방법에 대해 설명합니다.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
-> .NET Framework 4.0 이전 버전에서는 부분적으로 신뢰할 수 있는 어셈블리의 사용자 지정 사용자 데이터를 serialization하는 데 GetObjectData가 사용되었습니다. 버전 4.0부터 이 메서드는 부분적으로 신뢰할 수 있는 어셈블리에서 실행하지 못하도록 하는 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시됩니다. 이 문제를 해결하려면 <xref:System.Runtime.Serialization.ISafeSerializationData> 인터페이스를 구현합니다.  
+> .NET Framework 4.0 이전 버전에서는 부분적으로 신뢰할 수 있는 어셈블리의 사용자 지정 사용자 데이터를 직렬화하는 데 `GetObjectData`가 사용되었습니다. 버전 4.0부터 이 메서드는 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시되어 부분적으로 신뢰할 수 있는 어셈블리에서 실행할 수 없습니다. 이 문제를 해결하려면 <xref:System.Runtime.Serialization.ISafeSerializationData> 인터페이스를 구현합니다.  
   
-## <a name="running-custom-methods-during-and-after-serialization"></a>serialization 도중 및 이후에 사용자 지정 메서드 실행  
- 가장 효과적이고 쉬운 방법(.NET Framework의 버전 2.0에서 소개된 방법)은 serialization 도중과 이후에 데이터를 수정하는 데 사용되는 메서드에 다음 특성을 적용하는 것입니다.  
+## <a name="running-custom-methods-during-and-after-serialization"></a>serialization 도중 및 이후에 사용자 지정 메서드 실행
+
+권장되는 방법은 직렬화 도중과 이후에 사용자 지정 메서드를 실행하여 직렬화 도중과 이후에 데이터를 수정하는 데 사용되는 메서드에 다음 특성을 적용하는 것입니다.  
   
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -110,13 +112,13 @@ Public Class MyObject
 End Class
 ```  
   
- serialization 도중 **GetObjectData**가 호출될 때는 메서드 호출과 함께 제공된 <xref:System.Runtime.Serialization.SerializationInfo>를 채워야 합니다. 이름 및 값 쌍으로 serialize될 변수를 추가합니다. 모든 텍스트를 이름으로 사용할 수 있습니다. deserialization 도중 개체를 복원하기 위한 충분한 데이터가 serialize된 경우 <xref:System.Runtime.Serialization.SerializationInfo>에 추가되는 멤버 변수를 자유롭게 결정할 수 있습니다. 이 멤버 변수가 <xref:System.Runtime.Serialization.ISerializable>을 구현하는 경우 파생 클래스는 기본 개체의 **GetObjectData** 메서드를 호출해야 합니다.  
+ serialization 도중 **GetObjectData** 가 호출될 때는 메서드 호출과 함께 제공된 <xref:System.Runtime.Serialization.SerializationInfo>를 채워야 합니다. 이름 및 값 쌍으로 serialize될 변수를 추가합니다. 모든 텍스트를 이름으로 사용할 수 있습니다. deserialization 도중 개체를 복원하기 위한 충분한 데이터가 serialize된 경우 <xref:System.Runtime.Serialization.SerializationInfo>에 추가되는 멤버 변수를 자유롭게 결정할 수 있습니다. 이 멤버 변수가 <xref:System.Runtime.Serialization.ISerializable>을 구현하는 경우 파생 클래스는 기본 개체의 **GetObjectData** 메서드를 호출해야 합니다.  
   
  serialization을 통해 다른 코드가 일반적으로 액세스할 수 없는 개체 인스턴스 데이터를 보거나 수정할 수 있습니다. 따라서 serialization을 수행하는 코드에는 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 플래그가 지정된 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)이 필요합니다. 기본 정책에 따라 이 권한은 인터넷에서 다운로드한 코드나 인트라넷 코드에는 부여되지 않고 로컬 컴퓨터에 있는 코드에만 부여됩니다. <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter> 플래그가 지정된 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)을 요청하거나 전용 데이터 보호에 특별히 도움이 되는 다른 권한을 요청하여 **GetObjectData** 메서드를 명시적으로 보호해야 합니다.  
   
- 전용 필드에 민감한 정보가 저장된 경우 데이터를 보호하려면 **GetObjectData**에 대한 적절한 권한을 요청해야 합니다. **SerializationFormatter** 플래그가 지정된 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)이 부여된 코드는 전용 필드에 저장된 데이터를 보고 수정할 수 있습니다. 이 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)이 부여된 악의적 호출자가 숨겨진 디렉터리 위치나 부여된 권한 등의 데이터를 볼 수 있으며 데이터를 사용하여 컴퓨터의 보안 취약성을 악용할 수 있습니다. 지정할 수 있는 보안 권한 플래그의 전체 목록은 [SecurityPermissionFlag 열거형](xref:System.Security.Permissions.SecurityPermissionFlag)을 참조하세요.  
+ 전용 필드에 민감한 정보가 저장된 경우 데이터를 보호하려면 **GetObjectData** 에 대한 적절한 권한을 요청해야 합니다. **SerializationFormatter** 플래그가 지정된 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)이 부여된 코드는 전용 필드에 저장된 데이터를 보고 수정할 수 있습니다. 이 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute)이 부여된 악의적 호출자가 숨겨진 디렉터리 위치나 부여된 권한 등의 데이터를 볼 수 있으며 데이터를 사용하여 컴퓨터의 보안 취약성을 악용할 수 있습니다. 지정할 수 있는 보안 권한 플래그의 전체 목록은 [SecurityPermissionFlag 열거형](xref:System.Security.Permissions.SecurityPermissionFlag)을 참조하세요.  
   
- <xref:System.Runtime.Serialization.ISerializable>을 클래스에 추가한 경우 **GetObjectData** 및 특수 생성자를 모두 구현해야 합니다. **GetObjectData**가 누락되면 컴파일러가 이를 경고합니다. 하지만 생성자의 구현을 강제할 수 없기 때문에 생성자가 없는 경우에는 경고가 제공되지 않으며 생성자 없이 클래스를 역직렬화하려고 하면 예외가 throw됩니다.  
+ <xref:System.Runtime.Serialization.ISerializable>을 클래스에 추가한 경우 **GetObjectData** 및 특수 생성자를 모두 구현해야 합니다. **GetObjectData** 가 누락되면 컴파일러가 이를 경고합니다. 하지만 생성자의 구현을 강제할 수 없기 때문에 생성자가 없는 경우에는 경고가 제공되지 않으며 생성자 없이 클래스를 역직렬화하려고 하면 예외가 throw됩니다.  
   
  잠재적 보안 문제와 버전 관리 문제를 해결하기 위해 <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> 메서드 대신 현재 디자인을 사용하는 것이 좋습니다. 예를 들어 `SetObjectData` 메서드는 인터페이스의 일부로 정의된 경우 public이어야 합니다. 따라서 사용자는 **SetObjectData** 메서드가 여러 번 호출되는 것을 막기 위한 코드를 작성해야 합니다. 그러지 않으면 작업을 실행하는 프로세스에서 개체에 대해 **SetObjectData** 메서드를 호출하는 악의적 애플리케이션으로 인해 문제가 발생할 수 있습니다.  
   

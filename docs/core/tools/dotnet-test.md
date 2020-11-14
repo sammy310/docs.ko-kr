@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537741"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281612"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -69,7 +69,7 @@ dotnet test -h|--help
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
-  추가 테스트 어댑터를 검색할 디렉터리의 경로입니다. 접미사가 `.TestAdapter.dll`인 *.dll* 파일만 검사됩니다. 지정하지 않으면 테스트 *.dll*의 디렉터리가 검색됩니다.
+  추가 테스트 어댑터를 검색할 디렉터리의 경로입니다. 접미사가 `.TestAdapter.dll`인 *.dll* 파일만 검사됩니다. 지정하지 않으면 테스트 *.dll* 의 디렉터리가 검색됩니다.
 
 - **`--blame`**
 
@@ -77,7 +77,13 @@ dotnet test -h|--help
 
 - **`--blame-crash`** (.NET 5.0 미리 보기 SDK 이후 사용 가능)
 
-  테스트를 원인 모드를 실행하고 테스트 호스트가 예기치 않게 종료될 때 크래시 덤프를 수집합니다. 해당 옵션은 Windows에서만 지원됩니다. *procdump.exe* 및 *procdump64.exe*를 포함하는 디렉터리가 PATH 또는 PROCDUMP_PATH 환경 변수에 있어야 합니다. [도구 다운로드](/sysinternals/downloads/procdump). `--blame`을 의미합니다.
+  테스트를 원인 모드를 실행하고 테스트 호스트가 예기치 않게 종료될 때 크래시 덤프를 수집합니다. 이 옵션은 사용되는 .NET 버전, 오류 유형, 운영 체제에 따라 달라집니다.
+  
+  관리 코드의 예외에 대한 덤프는 .NET 5.0 이상 버전에서 자동으로 수집됩니다. testhost 또는 .NET 5.0에서 실행되고 충돌한 자식 프로세스에 대한 덤프가 생성됩니다. 네이티브 코드의 충돌에서는 덤프가 생성되지 않습니다. 이 옵션은 Windows, macOS, Linux에서 작동합니다.
+  
+  네이티브 코드의 크래시 덤프 또는 .NET Core 3.1 이전 버전을 사용하는 경우의 크래시 덤프는 Procdump를 사용해야만 Windows에서 수집할 수 있습니다. *procdump.exe* 및 *procdump64.exe* 를 포함하는 디렉터리가 PATH 또는 PROCDUMP_PATH 환경 변수에 있어야 합니다. [도구 다운로드](/sysinternals/downloads/procdump). `--blame`을 의미합니다.
+  
+  .NET 5.0 이상에서 실행되는 네이티브 애플리케이션에서 크래시 덤프를 수집하려면 `VSTEST_DUMP_FORCEPROCDUMP` 환경 변수를 `1`로 설정하여 Precdump 사용을 강제 적용할 수 있습니다.
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5.0 미리 보기 SDK 이후 사용 가능)
 
@@ -97,14 +103,14 @@ dotnet test -h|--help
 
 - **`--blame-hang-timeout <TIMESPAN>`** (.NET 5.0 미리 보기 SDK 이후 사용 가능)
 
-  중단 덤프가 트리거되고 테스트 호스트 프로세스가 종료되는 테스트별 시간 제한입니다. 시간 제한 값은 다음 형식 중 하나로 지정됩니다.
+  중단 덤프가 트리거되고 테스트 호스트 프로세스와 모든 해당 자식 프로세스가 덤프되고 종료되는 테스트별 시간 제한입니다. 시간 제한 값은 다음 형식 중 하나로 지정됩니다.
   
-  - 1.5h
-  - 90m
-  - 5400s
-  - 5400000ms
+  - 1.5h, 1.5hour, 1.5hours
+  - 90m, 90min, 90minute, 90minutes
+  - 5400s, 5400sec, 5400second, 5400seconds
+  - 5400000ms, 5400000mil, 5400000millisecond, 5400000milliseconds
 
-  단위를 사용하지 않으면(예: 5400000) 값은 밀리초 단위로 간주합니다. 데이터 기반 테스트와 함께 사용되는 경우 시간 제한 동작은 사용되는 테스트 어댑터에 따라 다릅니다. xUnit 및 NUnit의 경우 모든 테스트 사례 후에 시간 제한이 갱신됩니다. MSTest의 경우 모든 테스트 사례에 시간 제한이 사용됩니다. 이 옵션은 현재 netcoreapp2.1 이상이 사용되는 Windows와 netcoreapp3.1 이상이 사용되는 Linux에서 지원됩니다. macOS는 지원되지 않습니다.
+  단위를 사용하지 않으면(예: 5400000) 값은 밀리초 단위로 간주합니다. 데이터 기반 테스트와 함께 사용되는 경우 시간 제한 동작은 사용되는 테스트 어댑터에 따라 다릅니다. xUnit 및 NUnit의 경우 모든 테스트 사례 후에 시간 제한이 갱신됩니다. MSTest의 경우 모든 테스트 사례에 시간 제한이 사용됩니다. 이 옵션은 netcoreapp2.1 이상이 사용되는 Windows, netcoreapp3.1 이상이 사용되는 Linux, net5.0 이상이 사용되는 macOS에서 지원됩니다. `--blame` 및 `--blame-hang`을 의미합니다.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -124,7 +130,7 @@ dotnet test -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  테스트 이진 파일에 `dotnet` 또는 .NET Framework 테스트 호스트를 사용하도록 합니다. 이 옵션은 사용할 호스트 유형만 결정합니다. 사용할 실제 프레임워크 버전은 테스트 프로젝트의 *runtimeconfig.json*에 의해 결정됩니다. 지정하지 않으면 [TargetFramework 어셈블리 특성](/dotnet/api/system.runtime.versioning.targetframeworkattribute)이 사용되어 호스트 유형이 결정됩니다. 해당 특성이 *.dll*에서 제거되면 .NET Framework 호스트가 사용됩니다.
+  테스트 이진 파일에 `dotnet` 또는 .NET Framework 테스트 호스트를 사용하도록 합니다. 이 옵션은 사용할 호스트 유형만 결정합니다. 사용할 실제 프레임워크 버전은 테스트 프로젝트의 *runtimeconfig.json* 에 의해 결정됩니다. 지정하지 않으면 [TargetFramework 어셈블리 특성](/dotnet/api/system.runtime.versioning.targetframeworkattribute)이 사용되어 호스트 유형이 결정됩니다. 해당 특성이 *.dll* 에서 제거되면 .NET Framework 호스트가 사용됩니다.
 
 - **`--filter <EXPRESSION>`**
 
@@ -168,7 +174,7 @@ dotnet test -h|--help
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  테스트 실행에 사용할 `.runsettings` 파일입니다. `TargetPlatform` 요소(x86|x64)는 `dotnet test`에 영향을 주지 않습니다. X86을 대상으로 하는 테스트를 실행하려면 x86 버전의 .NET Core를 설치합니다. 경로에 있는 *dotnet.exe*의 비트 수는 테스트를 실행하는 데 사용됩니다. 자세한 내용은 다음 자료를 참조하세요.
+  테스트 실행에 사용할 `.runsettings` 파일입니다. `TargetPlatform` 요소(x86|x64)는 `dotnet test`에 영향을 주지 않습니다. X86을 대상으로 하는 테스트를 실행하려면 x86 버전의 .NET Core를 설치합니다. 경로에 있는 *dotnet.exe* 의 비트 수는 테스트를 실행하는 데 사용됩니다. 자세한 내용은 다음 자료를 참조하세요.
 
   - [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [테스트 실행 구성](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -264,7 +270,7 @@ dotnet test -h|--help
 
 | 연산자            | 기능 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 또는       |
+| <code>&#124;</code> | 또는       |
 | `&`                 | AND      |
 
 조건부 연산자를 사용 하는 경우 식을 괄호로 묶을 수 있습니다(예: `(Name~TestMethod1) | (Name~TestMethod2)`).

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398255"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282213"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84398255"
 
 4. 디버거에서 애플리케이션을 실행합니다.
 
-5. **Button1**을 누릅니다.
+5. **Button1** 을 누릅니다.
 
      애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.
 
@@ -74,17 +74,17 @@ ms.locfileid: "84398255"
 
 #### <a name="to-log-only-activity-tracing-events"></a>작업 추적 이벤트만 기록하려면
 
-1. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
      또는
 
      app.config 파일이 없는 경우
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
 2. 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.
 
@@ -125,7 +125,7 @@ ms.locfileid: "84398255"
 
 6. 디버거에서 애플리케이션을 실행합니다.
 
-7. **Button1**을 누릅니다.
+7. **Button1** 을 누릅니다.
 
      애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "84398255"
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.
 
     > [!NOTE]
-    > `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.
+    > `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. .NET <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스의 동작은 변경되지 않습니다.
 
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링
 
@@ -150,19 +150,19 @@ ms.locfileid: "84398255"
 
 #### <a name="to-log-only-activity-tracing-events"></a>동작 추적 이벤트만 기록하려면
 
-1. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
      \-또는-
 
      app.config 파일이 없는 경우
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
-2. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기**를 선택합니다.
+2. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기** 를 선택합니다.
 
 3. `<sources>` 섹션 아래에서 `name` 특성이 "DefaultSource"인 `<source>` 섹션에서 `<listeners>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있습니다.
 
@@ -235,7 +235,7 @@ ms.locfileid: "84398255"
 
 8. 디버거에서 애플리케이션을 실행합니다.
 
-9. **Button1**을 누릅니다.
+9. **Button1** 을 누릅니다.
 
      애플리케이션이 다음 정보를 애플리케이션의 로그 파일에 기록합니다.
 

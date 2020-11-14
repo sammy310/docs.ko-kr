@@ -2,12 +2,12 @@
 title: 지역화된 IntelliSense 파일 설치
 description: Visual Studio에서 .NET 5 이상 프로젝트(.NET Core 포함)에 대해 지역화된 IntelliSense 파일을 사용하도록 개발 머신을 설정하는 방법을 알아봅니다.
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439822"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506768"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET에 대해 지역화된 IntelliSense 파일을 설치하는 방법
 
@@ -43,7 +43,7 @@ ms.locfileid: "94439822"
       | Windows Desktop       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET 표준         | *NETStandard.Library.Ref*          |
 
-   1. 지역화된 IntelliSense를 설치하려는 버전으로 이동합니다. 예: *3.1.0*.
+   1. 지역화된 IntelliSense를 설치하려는 버전으로 이동합니다. 예: *5.0.0*
    1. *ref* 폴더를 엽니다.
    1. 모니커 폴더를 엽니다. 예를 들어 *NET 5.0* 이 있습니다.
 
