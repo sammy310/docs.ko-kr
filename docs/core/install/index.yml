@@ -1,17 +1,17 @@
 ### YamlMime:Landing
-title: Windows, Linux 및 macOS에 .NET Core 설치
-summary: Windows, Linux 및 macOS 버전에 .NET을 설치하는 방법을 알아봅니다. .NET Core 앱을 개발, 배포 및 실행하는 데 필요한 종속성을 검색합니다.
+title: Windows, Linux, macOS에 .NET 설치
+summary: Windows, Linux 및 macOS 버전에 .NET을 설치하는 방법을 알아봅니다. .NET 앱을 개발, 배포, 실행하는 데 필요한 종속성을 검색합니다.
 metadata:
-  title: Windows, Linux 및 macOS에 .NET Core 설치
-  description: Windows, Linux 및 macOS 버전에 .NET Core를 다운로드하고 설치하는 위치를 알아봅니다. .NET Core 앱을 개발, 배포 및 실행하는 데 필요한 종속성을 검색합니다.
+  title: Windows, Linux, macOS에 .NET 설치
+  description: Windows, Linux, macOS 버전에 .NET을 다운로드하고 설치하는 위치를 알아봅니다. .NET 앱을 개발, 배포, 실행하는 데 필요한 종속성을 검색합니다.
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
-  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.openlocfilehash: 53c4485b986abf58bdff45d78342c110b15d7824
+  ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85804440"
+  ms.lasthandoff: 11/11/2020
+  ms.locfileid: "94507204"
 landingContent:
 - title: Windows
   linkLists:
