@@ -1,19 +1,21 @@
 ---
 title: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 description: Docker 및 Microsoft 플랫폼과 도구를 사용하여 컨테이너화된 애플리케이션을 개발하고 배포하는 개발 및 배포 프로세스의 대략적인 개요를 확인하세요.
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160699"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506664"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 
 ![책 표지](./media/devops-book-cover-large-we.png)
 
 **EDITION v3.1** - ASP.NET Core 3.1로 업데이트되었습니다
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/DockerLifecycleEbookChangelog)를 참조하세요.
 
 이 가이드는 Docker와 Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 ASP.NET Core 애플리케이션을 개발하고 배포하기 위한 일반적인 개요입니다. 이 가이드는 CI/CD 파이프라인을 구현하기 위한 Azure DevOps뿐만 아니라 배포를 위한 ACR(Azure Container Registry) 및 AKS(Azure Kubernetes Service)도 간략하게 소개합니다.
 
@@ -27,7 +29,7 @@ ms.locfileid: "91160699"
 
 만든 이:
 
-> **Cesar de la Torre**, 선임 PM, .NET 제품 팀, Microsoft Corp.
+> **Cesar de la Torre** , 선임 PM, .NET 제품 팀, Microsoft Corp.
 
 위임 편집자:
 
@@ -35,9 +37,9 @@ ms.locfileid: "91160699"
 
 개발 편집자:
 
-> **Bob Russell**, 솔루션 전문가, Microsoft
+> **Bob Russell** , 솔루션 전문가, Microsoft
 >
-> [**Octal Publishing, Inc.** ](http://www.octalpub.com/)
+> [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
 편집 프로덕션:
 
@@ -47,15 +49,15 @@ ms.locfileid: "91160699"
 
 교열 편집자:
 
-> **Bob Russell**, 솔루션 전문가, Microsoft
+> **Bob Russell** , 솔루션 전문가, Microsoft
 
 참가자 및 검토자:
 
-> **Nish Anil**, 선임 프로그램 관리자, .NET 팀, Microsoft
+> **Nish Anil** , 선임 프로그램 관리자, .NET 팀, Microsoft
 >
-> **Miguel Veloso**, 소프트웨어 개발 엔지니어, Plain Concepts
+> **Miguel Veloso** , 소프트웨어 개발 엔지니어, Plain Concepts
 >
-> **Sumit Ghosh**, 주임 컨설턴트, Neudesic
+> **Sumit Ghosh** , 주임 컨설턴트, Neudesic
 
 ## <a name="copyright"></a>Copyright
 

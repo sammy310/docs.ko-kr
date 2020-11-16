@@ -43,7 +43,7 @@ items:
             href: ../core/install/templates.md
           - name: macOS 공증 문제
             href: ../core/install/macos-notarization-issues.md
-          - name: .NET Core 버전 확인 방법
+          - name: .NET 버전 확인 방법
             href: ../core/install/how-to-detect-installed-versions.md
           - name: 지역화된 IntelliSense 설치
             href: ../core/install/localized-intellisense.md
@@ -1412,6 +1412,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
   - name: 런타임 라이브러리.
     items:
+      - name: 개요
+        href: ../standard/runtime-libraries-overview.md
       - name: '숫자, 날짜, 기타 형식'
         items:
           - name: 개요
@@ -1446,7 +1448,7 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: 그레고리오력이 아닌 달력으로 날짜 표시
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: 문자열
+      - name: 문자열 작업
         items:
           - name: .NET의 문자 인코딩
             href: ../standard/base-types/character-encoding-introduction.md
@@ -1481,109 +1483,71 @@ items:
                 href: ../standard/base-types/stringbuilder.md
               - name: '방법: 기본적인 문자열 조작 수행'
                 href: ../standard/base-types/basic-manipulations.md
-          - name: .NET에서의 정규식
+          - name: 문자열 구문 분석(변환)
             items:
               - name: 개요
-                href: ../standard/base-types/regular-expressions.md
-                displayName: regular expressions
-              - name: 언어 참조
-                items:
-                  - name: 개요
-                    href: ../standard/base-types/regular-expression-language-quick-reference.md
-                  - name: 문자 이스케이프
-                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
-                  - name: 문자 클래스
-                    href: ../standard/base-types/character-classes-in-regular-expressions.md
-                  - name: 앵커
-                    href: ../standard/base-types/anchors-in-regular-expressions.md
-                  - name: 그룹화 구문
-                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
-                  - name: 수량자
-                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
-                  - name: 역참조 구문
-                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
-                  - name: 교체 구문
-                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
-                  - name: 대체
-                    href: ../standard/base-types/substitutions-in-regular-expressions.md
-                  - name: 정규식 옵션
-                    href: ../standard/base-types/regular-expression-options.md
-                  - name: 기타 구문
-                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
-              - name: 정규식에 대한 모범 사례
-                href: ../standard/base-types/best-practices.md
-              - name: 정규식 개체 모델
-                href: ../standard/base-types/the-regular-expression-object-model.md
-              - name: 정규식 동작
-                items:
-                  - name: 개요
-                    href: ../standard/base-types/details-of-regular-expression-behavior.md
-                  - name: 역추적
-                    href: ../standard/base-types/backtracking-in-regular-expressions.md
-                  - name: 컴파일 및 다시 사용
-                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
-                  - name: 스레드로부터의 안전성
-                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: 예
-                items:
-                  - name: HREF 검색
-                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
-                  - name: 날짜 형식 변경
-                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: URL에서 프로토콜 및 포트 번호 추출
-                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
-                  - name: 문자열에서 유효하지 않은 문자 제거
-                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
-                  - name: 문자열이 유효한 전자 메일 형식인지 확인
-                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: 문자열 구문 분석(변환)
+                href: ../standard/base-types/parsing-strings.md
+              - name: 숫자 문자열 구문 분석
+                href: ../standard/base-types/parsing-numeric.md
+              - name: 날짜 및 시간 문자열 구문 분석
+                href: ../standard/base-types/parsing-datetime.md
+              - name: 기타 문자열 구문 분석
+                href: ../standard/base-types/parsing-other.md
+      - name: 정규식
         items:
           - name: 개요
-            href: ../standard/base-types/parsing-strings.md
-          - name: 숫자 문자열 구문 분석
-            href: ../standard/base-types/parsing-numeric.md
-          - name: 날짜 및 시간 문자열 구문 분석
-            href: ../standard/base-types/parsing-datetime.md
-          - name: 기타 문자열 구문 분석
-            href: ../standard/base-types/parsing-other.md
-      - name: 종속성 주입
-        items:
-          - name: 개요
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: 종속성 주입 사용
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: 종속성 주입 지침
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Configuration
-        items:
-          - name: 개요
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: 구성 공급자
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: 사용자 지정 구성 공급자 구현
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-          - name: 옵션 패턴
-            href: ../core/extensions/options.md
-      - name: 로깅
-        items:
-          - name: 개요
-            href: ../core/extensions/logging.md
-          - name: 로깅 공급자
-            href: ../core/extensions/logging-providers.md
-          - name: 사용자 지정 로깅 공급자 구현
-            href: ../core/extensions/custom-logging-provider.md
-          - name: 고성능 로깅
-            href: ../core/extensions/high-performance-logging.md
-          - name: 콘솔 로그 서식 지정
-            href: ../core/extensions/console-log-formatter.md
-      - name: HostBuilder(제네릭 호스트)
-        href: ../core/extensions/generic-host.md
+            href: ../standard/base-types/regular-expressions.md
+            displayName: regular expressions
+          - name: 언어 참조
+            items:
+              - name: 개요
+                href: ../standard/base-types/regular-expression-language-quick-reference.md
+              - name: 문자 이스케이프
+                href: ../standard/base-types/character-escapes-in-regular-expressions.md
+              - name: 문자 클래스
+                href: ../standard/base-types/character-classes-in-regular-expressions.md
+              - name: 앵커
+                href: ../standard/base-types/anchors-in-regular-expressions.md
+              - name: 그룹화 구문
+                href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+              - name: 수량자
+                href: ../standard/base-types/quantifiers-in-regular-expressions.md
+              - name: 역참조 구문
+                href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+              - name: 교체 구문
+                href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+              - name: 대체
+                href: ../standard/base-types/substitutions-in-regular-expressions.md
+              - name: 정규식 옵션
+                href: ../standard/base-types/regular-expression-options.md
+              - name: 기타 구문
+                href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+          - name: 정규식에 대한 모범 사례
+            href: ../standard/base-types/best-practices.md
+          - name: 정규식 개체 모델
+            href: ../standard/base-types/the-regular-expression-object-model.md
+          - name: 정규식 동작
+            items:
+              - name: 개요
+                href: ../standard/base-types/details-of-regular-expression-behavior.md
+              - name: 역추적
+                href: ../standard/base-types/backtracking-in-regular-expressions.md
+              - name: 컴파일 및 다시 사용
+                href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+              - name: 스레드로부터의 안전성
+                href: ../standard/base-types/thread-safety-in-regular-expressions.md
+          - name: 예
+            items:
+              - name: HREF 검색
+                href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+              - name: 날짜 형식 변경
+                href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+              - name: URL에서 프로토콜 및 포트 번호 추출
+                href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+              - name: 문자열에서 유효하지 않은 문자 제거
+                href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+              - name: 문자열이 유효한 전자 메일 형식인지 확인
+                href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
       - name: Serialization
         items:
           - name: 개요
@@ -1753,6 +1717,44 @@ items:
             href: ../standard/io/memory-mapped-files.md
       - name: System.Console 클래스
         href: ../standard/building-console-apps.md
+      - name: 종속성 주입
+        items:
+          - name: 개요
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: 종속성 주입 사용
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: 종속성 주입 지침
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Configuration
+        items:
+          - name: 개요
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 구성 공급자
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: 사용자 지정 구성 공급자 구현
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: 옵션 패턴
+            href: ../core/extensions/options.md
+      - name: 로깅
+        items:
+          - name: 개요
+            href: ../core/extensions/logging.md
+          - name: 로깅 공급자
+            href: ../core/extensions/logging-providers.md
+          - name: 사용자 지정 로깅 공급자 구현
+            href: ../core/extensions/custom-logging-provider.md
+          - name: 고성능 로깅
+            href: ../core/extensions/high-performance-logging.md
+          - name: 콘솔 로그 서식 지정
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder(제네릭 호스트)
+        href: ../core/extensions/generic-host.md
   - name: 데이터 액세스
     items:
       - name: LINQ

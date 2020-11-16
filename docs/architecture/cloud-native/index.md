@@ -2,19 +2,21 @@
 title: Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기능을 활용하여 클라우드 네이티브 애플리케이션을 빌드하는 방법을 보여 주는 가이드입니다.
 author: ardalis
-ms.date: 05/13/2020
-ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.date: 11/10/2020
+ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051508"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506651"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 
 ![표지 이미지](./media/cover.png)
 
-**버전 1.0**
+**버전 v1.0**
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/cn-ebook-changelog)를 참조하세요.
 
 게시자:
 
@@ -44,23 +46,23 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 작성자:
 
-> **Rob Vettor**, 수석 클라우드 시스템 설계자/IP 설계자 - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
+> **Rob Vettor** , 수석 클라우드 시스템 설계자/IP 설계자 - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
-> **Steve "ardalis" Smith**, 소프트웨어 설계자이자 강사 - [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** , 소프트웨어 설계자이자 강사 - [Ardalis.com](https://ardalis.com)
 
 참가자 및 검토자:
 
-> **Cesar De la torre**, 수석 프로그램 관리자, .NET 팀, Microsoft
+> **Cesar De la torre** , 수석 프로그램 관리자, .NET 팀, Microsoft
 >
-> **Nish Anil**, 선임 프로그램 관리자, .NET 팀, Microsoft
+> **Nish Anil** , 선임 프로그램 관리자, .NET 팀, Microsoft
 >
-> **Jeremy Likness**, 선임 프로그램 관리자, .NET 팀, Microsoft
+> **Jeremy Likness** , 선임 프로그램 관리자, .NET 팀, Microsoft
 >
-> **Cecil Phillip**, 선임 Cloud Advocate, Microsoft
+> **Cecil Phillip** , 선임 Cloud Advocate, Microsoft
 
 편집자:
 
-> **Maira Wenzel**, 프로그램 관리자, .NET 팀, Microsoft
+> **Maira Wenzel** , 프로그램 관리자, .NET 팀, Microsoft
 
 ## <a name="version"></a>버전
 
