@@ -1,13 +1,13 @@
 ---
 title: 패턴 일치
 description: 'F #에서 패턴을 사용 하 여 데이터를 논리적 구조와 비교 하거나 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 하는 방법을 알아봅니다.'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811511"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687807"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -29,7 +29,7 @@ match expression with
 
 다음 표에서는 지원 되는 패턴을 보여 줍니다. 런타임에 입력은 테이블에 나열 된 순서 대로 다음 각 패턴에 대해 테스트 되 고 패턴은 코드에 표시 되는 첫 번째부터 마지막으로, 각 줄의 패턴에 대해 왼쪽에서 오른쪽으로 적용 됩니다.
 
-|Name|Description|예제|
+|Name|설명|예제|
 |----|-----------|-------|
 |상수 패턴|모든 숫자, 문자 또는 문자열 리터럴, 열거형 상수 또는 정의 된 리터럴 식별자|`1.0`, `"test"`, `30`, `Color.Red`|
 |식별자 패턴|구분 된 공용 구조체, 예외 레이블 또는 활성 패턴 사례의 case 값|`Some(x)`<br /><br />`Failure(msg)`|
@@ -47,6 +47,7 @@ match expression with
 |형식 주석과 함께 패턴|*패턴* : *형식*|`a : int`|
 |형식 테스트 패턴|:? *유형* [as *식별자* ]|`:? System.DateTime as dt`|
 |Null 패턴|null|`null`|
+|패턴의 name|*expr의 name*|`nameof str`|
 
 ## <a name="constant-patterns"></a>상수 패턴
 
@@ -139,7 +140,7 @@ match shape with
 
 ## <a name="cons-pattern"></a>단점 패턴
 
-단점 패턴은 목록을 첫 번째 요소, *헤드*및 나머지 요소 ( *tail*)가 포함 된 목록으로 분해 하는 데 사용 됩니다.
+단점 패턴은 목록을 첫 번째 요소, *헤드* 및 나머지 요소 ( *tail*)가 포함 된 목록으로 분해 하는 데 사용 됩니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -215,7 +216,23 @@ Null 패턴은 null 값을 허용 하는 형식으로 작업할 때 나타날 �
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>추가 정보
+## <a name="nameof-pattern"></a>패턴의 name
+
+`nameof`패턴은 해당 값이 키워드 뒤에 오는 식과 같을 때 문자열에 대해 일치 합니다 `nameof` . 예:
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+이름을 사용할 [`nameof`](nameof.md) 수 있는 항목에 대 한 자세한 내용은 연산자를 참조 하십시오.
+
+## <a name="see-also"></a>참조
 
 - [일치 식](match-expressions.md)
 - [활성 패턴](active-patterns.md)

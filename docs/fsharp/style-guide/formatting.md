@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359287"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688256"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -29,7 +29,7 @@ F #은 기본적으로 유효 공백을 사용 합니다. 다음 지침은이에
 
 **들여쓰기 당 4 개의 공백을 권장 합니다.**
 
-즉, 프로그램의 들여쓰기는 주관적인 문제입니다. 변형이 양호 하지만 따라야 하는 첫 번째 규칙은 *들여쓰기의 일관성*입니다. 일반적으로 허용 되는 들여쓰기 스타일을 선택 하 고 코드 베이스 전체에서 체계적으로 사용 합니다.
+즉, 프로그램의 들여쓰기는 주관적인 문제입니다. 변형이 양호 하지만 따라야 하는 첫 번째 규칙은 *들여쓰기의 일관성* 입니다. 일반적으로 허용 되는 들여쓰기 스타일을 선택 하 고 코드 베이스 전체에서 체계적으로 사용 합니다.
 
 ## <a name="formatting-white-space"></a>공백 서식 지정
 
@@ -642,21 +642,17 @@ let daysOfWeek' includeWeekend =
 
 ## <a name="formatting-if-expressions"></a>If 식 서식 지정
 
-조건 들여쓰기는 구성 하는 식의 크기에 따라 달라 집니다. `cond` `e1` 및 `e2` 가 짧으면 한 줄에 작성 하면 됩니다.
+조건 들여쓰기는이를 구성 하는 식의 크기와 복잡성에 따라 달라 집니다.
+다음과 같은 경우 한 줄에 작성 하면 됩니다.
+
+- `cond`, `e1` 및 `e2` 가 짧습니다.
+- `e1` 및 `e2` 는 `if/then/else` 식이 아닙니다.
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-또는 중 `cond` 하나 `e1` 이상이 `e2` 긴 하지만 여러 줄이 아닌 경우:
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-식이 여러 줄 인 경우:
+식이 여러 줄 또는 `if/then/else` 식인 경우
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-및를 사용 하는 여러 `elif` `else` 조건이와 동일한 범위에서 들여쓰기 됩니다 `if` .
+및를 사용 하는 여러 `elif` `else` 조건이 `if` 단일 선 식의 규칙을 따르는 경우와 동일한 범위에서 들여쓰기 됩니다 `if/then/else` .
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+조건 또는 식이 여러 줄 인 경우 전체 `if/then/else` 식은 여러 줄로 되어 있습니다.
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>패턴 일치 구문
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>형식 지정 생성자, 정적 멤버 및 멤버 호출
+
+식이 짧으면 공백을 사용 하 여 인수를 구분 하 고 한 줄에 유지 합니다.
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+식이 긴 경우에는 줄바꿈을 사용 하 여 대괄호에 들여쓰기가 아닌 범위 하나를 들여씁니다.
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>서식 특성
