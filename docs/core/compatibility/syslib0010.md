@@ -3,12 +3,12 @@ title: SYSLIB0010 경고
 description: 컴파일 시간 경고 SYSLIB0010을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: dcd331aa5c68381ea29848bc54ee4b1a5e75330d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 824423d58802d4a286bfed98422341097985990f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333111"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440610"
 ---
 # <a name="syslib0010-unsupported-remoting-apis"></a>SYSLIB0010: 지원되지 않는 원격 API
 
@@ -17,9 +17,11 @@ ms.locfileid: "92333111"
 - <xref:System.MarshalByRefObject.GetLifetimeService?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject.InitializeLifetimeService?displayProperty=nameWithType>
 
-## <a name="workaround"></a>해결 방법
+## <a name="workarounds"></a>해결 방법
 
 WCF 또는 HTTP 기반 REST 서비스를 사용하여 다른 애플리케이션이나 머신에서 개체와 통신하는 것이 좋습니다. 자세한 내용은 [.NET Core에서 사용할 수 없는 .NET Framework 기술](../porting/net-framework-tech-unavailable.md)을 참조하세요.
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>추가 정보
 

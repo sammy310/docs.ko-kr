@@ -1,17 +1,18 @@
 ---
 ms.custom: updateeachrelease
-ms.openlocfilehash: d30d6ee2dae332895697b2fd1b931b7ec47d14bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 20d4434bc25fbd55cf2bbb309558395dd980d398
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656212"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634503"
 ---
 | 값                     | 의미                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
 | `preview`                 | 컴파일러가 최신 미리 보기 버전의 유효한 언어 구문을 모두 허용합니다.                         |
 | `latest`                  | 컴파일러가 최신 릴리스 버전(부 버전 포함)의 구문을 허용합니다. |
 | `latestMajor` (`default`) | 컴파일러가 최신 릴리스 주 버전의 구문을 허용합니다.                     |
+| `9.0`                     | 컴파일러는 C# 9.0 이하에 포함된 구문만 허용합니다.                                   |
 | `8.0`                     | 컴파일러는 C# 8.0 이하에 포함된 구문만 허용합니다.                                   |
 | `7.3`                     | 컴파일러는 C# 7.3 이하에 포함된 구문만 허용합니다.                                   |
 | `7.2`                     | 컴파일러는 C# 7.2 이하에 포함된 구문만 허용합니다.                                   |

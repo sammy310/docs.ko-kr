@@ -3,12 +3,12 @@ title: SYSLIB0012 경고
 description: 컴파일 시간 경고 SYSLIB0012를 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 2ed93b6eefbaa861faca319f0cc9bf19ac741f3b
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: dc139d5c5cb6d6a34d161147b350b3324d15117e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333107"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440584"
 ---
 # <a name="syslib0012-assemblycodebase-and-assemblyescapedcodebase-are-obsolete"></a>SYSLIB0012: Assembly.CodeBase 및 Assembly.EscapedCodeBase가 사용되지 않음
 
@@ -17,6 +17,8 @@ ms.locfileid: "92333107"
 - <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType>
 
-해결 방법
+## <a name="workarounds"></a>해결 방법
 
 대신 <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType>를 사용하세요.
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]

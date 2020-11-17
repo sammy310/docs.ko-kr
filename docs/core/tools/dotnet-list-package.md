@@ -1,13 +1,13 @@
 ---
 title: dotnet list package 명령
 description: ‘dotnet list package’ 명령은 프로젝트 또는 솔루션에 대한 패키지 참조를 나열하는 편리한 옵션을 제공합니다.
-ms.date: 02/14/2020
-ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.date: 11/11/2020
+ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164758"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556890"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -24,7 +24,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
     [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
-    [--outdated] [--source <SOURCE>]
+    [--outdated] [--source <SOURCE>] [-v|--verbosity <LEVEL>]
 
 dotnet list package -h|--help
 ```
@@ -118,6 +118,10 @@ Project 'HelloPlugin' has the following package references
 - **`-s|--source <SOURCE>`**
 
   최신 패키지를 검색할 때 사용할 NuGet 소스입니다. `--outdated` 또는 `--deprecated` 옵션이 필요합니다.
+
+- **`-v|--verbosity <LEVEL>`**
+
+  MSBuild의 자세한 정도 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`입니다.
 
 ## <a name="examples"></a>예
 

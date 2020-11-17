@@ -2,12 +2,12 @@
 title: 형식 마샬링 - .NET
 description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방법을 알아봅니다.
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188395"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441000"
 ---
 # <a name="type-marshaling"></a>형식 마샬링
 
@@ -65,7 +65,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.ArgIterator` | `va_list` | 허용되지 않음 |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | 허용되지 않음 |
 | `System.Collections.IEnumerable` | `IDispatch*` | 허용되지 않음 |
-| `System.DateTimeOffset` | 1601년 1월 1일 자정 이후의 틱 수를 나타내는 `int64_t` || 1601년 1월 1일 자정 이후의 틱 수를 나타내는 `int64_t` |
+| `System.DateTimeOffset` | 1601년 1월 1일 자정 이후의 틱 수를 나타내는 `int64_t` | 1601년 1월 1일 자정 이후의 틱 수를 나타내는 `int64_t` |
 
 일부 형식은 필드가 아닌 매개 변수로만 마샬링할 수 있습니다. 해당 형식은 다음 표에 나와 있습니다.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e8d3a95b58cd2cabc41be31b7a4b66b1a79317d6
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547911"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439432"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>.NET Framework로 클라이언트 애플리케이션 개발
 
@@ -39,7 +39,7 @@ Microsoft Store를 통해 사용자에게 제공할 수 있는 UWP 애플리케�
 [UWP 앱용 .NET API](../../api/index.md?view=dotnet-uwp-10.0)\
 UWP 앱을 지원하는 .NET 형식에 대한 참조입니다.
   
-[여러 플랫폼용으로 개발](../standard/cross-platform/index.md)\
+[여러 플랫폼용으로 개발](./cross-platform/index.md)\
 .NET Framework를 사용하여 여러 클라이언트 앱 형식을 대상으로 지정할 수 있는 다양한 방법을 설명합니다.
 
 [ASP.NET 웹 사이트 시작](https://dotnet.microsoft.com/apps/aspnet/web-apps)\

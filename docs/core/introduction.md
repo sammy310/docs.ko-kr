@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329796"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506742"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -24,7 +24,7 @@ ms.locfileid: "94329796"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [UWP(유니버설 Windows 플랫폼)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [게임](https://dotnet.microsoft.com/apps/games)
-* [IoT(사물 인터넷)](https://dotnet.microsoft.com/apps/iot)
+* [IoT(사물 인터넷)](/dotnet/iot)
 * [기계 학습](../machine-learning/index.yml)
 * [콘솔 앱](tutorials/with-visual-studio-code.md)
 * [Windows 서비스](/aspnet/core/host-and-deploy/windows-service)
@@ -153,7 +153,7 @@ SDK 다운로드에는 다음 구성 요소가 포함되어 있습니다.
 
 ### <a name="project-system-and-msbuild"></a>프로젝트 시스템 및 MSBuild
 
-.NET 앱은 [MSBuild](/visualstudio/msbuild/msbuild)를 사용하여 소스 코드에서 빌드됩니다. 프로젝트 파일( *.csproj* , *.fsproj* 또는 *.vbproj* )은 코드를 컴파일, 압축, 게시해야 하는 [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks)을 지정합니다. 표준 대상 및 작업 컬렉션을 참조하는 SDK 식별자가 있습니다. 식별자를 사용하면 프로젝트 파일을 작고 작업하기 쉽게 유지할 수 있습니다. 예를 들어 콘솔 앱의 프로젝트 파일은 다음과 같습니다.
+.NET 앱은 [MSBuild](/visualstudio/msbuild/msbuild)를 사용하여 소스 코드에서 빌드됩니다. 프로젝트 파일( *.csproj*, *.fsproj* 또는 *.vbproj*)은 코드를 컴파일, 압축, 게시해야 하는 [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks)을 지정합니다. 표준 대상 및 작업 컬렉션을 참조하는 SDK 식별자가 있습니다. 식별자를 사용하면 프로젝트 파일을 작고 작업하기 쉽게 유지할 수 있습니다. 예를 들어 콘솔 앱의 프로젝트 파일은 다음과 같습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

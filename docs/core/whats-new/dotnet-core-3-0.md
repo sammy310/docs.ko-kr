@@ -6,18 +6,18 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050282"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439731"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
 이 문서에서는 .NET Core 3.0의 새로운 기능을 설명합니다. 가장 중요한 개선 사항 중 하나는 Windows 데스크톱 애플리케이션에 대한 지원(Windows만 해당)입니다. .NET Core 3.0 SDK 구성 요소 Windows 데스크톱을 사용하여 Windows Forms 및 Windows Presentation Foundation(WPF) 애플리케이션을 포트할 수 있습니다. 분명히 말하지만, Windows 데스크톱 구성 요소는 Windows에서만 지원되고 포함됩니다. 자세한 내용은 이 문서 후반부의 [Windows 데스크톱](#windows-desktop) 섹션을 참조하세요.
 
-.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상, [Mac용 Visual Studio 8.3](/visualstudio/mac/install-preview) 이상 또는 [Visual Studio Code](https://code.visualstudio.com/)를 최신 **C# 확장**과 함께 사용하는 것이 좋습니다.
+.NET Core 3.0에서는 C# 8.0에 대한 지원이 추가되었습니다. [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상, [Mac용 Visual Studio 8.3](/visualstudio/mac/install-preview) 이상 또는 [Visual Studio Code](https://code.visualstudio.com/)를 최신 **C# 확장** 과 함께 사용하는 것이 좋습니다.
 
 Windows, macOS 또는 Linux에서 지금 바로 [.NET Core 3.0을 다운로드하여 시작](https://aka.ms/netcore3download)하세요.
 
@@ -42,7 +42,7 @@ C#8.0 언어 기능과 관련된 자습서:
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET Core 3.0에서는 **.NET Standard 2.1**을 구현합니다. 하지만 기본 `dotnet new classlib` 템플릿은 여전히 **.NET Standard 2.0**을 대상으로 하는 프로젝트를 생성합니다. **.NET 표준 2.1**을 대상으로 지정하려면 프로젝트 파일을 편집하고 `TargetFramework` 속성을 `netstandard2.1`로 변경하세요.
+.NET Core 3.0에서는 **.NET Standard 2.1** 을 구현합니다. 하지만 기본 `dotnet new classlib` 템플릿은 여전히 **.NET Standard 2.0** 을 대상으로 하는 프로젝트를 생성합니다. **.NET 표준 2.1** 을 대상으로 지정하려면 프로젝트 파일을 편집하고 `TargetFramework` 속성을 `netstandard2.1`로 변경하세요.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,7 +54,7 @@ C#8.0 언어 기능과 관련된 자습서:
 </Project>
 ```
 
-Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standard 2.1** 또는 **.NET Core 3.0**을 지원하지 않으므로 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)가 필요합니다.
+Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standard 2.1** 또는 **.NET Core 3.0** 을 지원하지 않으므로 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)가 필요합니다.
 
 ## <a name="compiledeploy"></a>컴파일/배포
 
@@ -154,7 +154,7 @@ TC를 사용하도록 설정하면 앱이 시작될 때 메서드 컴파일에 �
 
 - 메서드에 Ahead Of Time 컴파일 코드([ReadyToRun](#readytorun-images))가 있는 경우 사전 생성된 코드가 사용됩니다.
 - 그렇지 않으면 메서드가 JIT 컴파일됩니다. 일반적으로 이 메서드는 값 형식의 제네릭입니다.
-  - *빠른 JIT*은 품질이 더 낮거나 덜 최적화된 코드를 더욱 빠르게 생성합니다. .NET Core 3.0에서 빠른 JIT는 루프를 포함하지 않은 메서드에 기본적으로 사용하도록 설정되며, 시작하는 동안 사용하는 것이 좋습니다.
+  - *빠른 JIT* 은 품질이 더 낮거나 덜 최적화된 코드를 더욱 빠르게 생성합니다. .NET Core 3.0에서 빠른 JIT는 루프를 포함하지 않은 메서드에 기본적으로 사용하도록 설정되며, 시작하는 동안 사용하는 것이 좋습니다.
   - 완전히 최적화된 JIT는 품질이 더 높거나 더 최적화된 코드를 더욱 느리게 생성합니다. 빠른 JIT를 사용하지 않는 메서드의 경우(예: 메서드가 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>으로 특성이 지정된 경우) 완전히 최적화된 JIT가 사용됩니다.
 
 자주 호출되는 메서드의 경우 Just-In-Time 컴파일러는 결과적으로 백그라운드에서 완전히 최적화된 코드를 만듭니다. 그런 다음, 최적화된 코드는 해당 메서드에 대해 미리 컴파일된 코드를 대체합니다.
@@ -225,7 +225,7 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 - 환경 변수: `DOTNET_ROLL_FORWARD`
 - 명령줄 인수: `--roll-forward`
 
-다음 값 하나를 지정해야 합니다. 설정을 생략하면 **Minor**가 기본값입니다.
+다음 값 하나를 지정해야 합니다. 설정을 생략하면 **Minor** 가 기본값입니다.
 
 - **LatestPatch**\
 가장 높은 패치 버전으로 롤포워드합니다. 부 버전 롤포워드를 사용하지 않도록 설정합니다.
@@ -288,7 +288,7 @@ Large Page(또는 Linux Huge Page)는 운영 체제가 이러한 큰 페이지�
 
 ### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. 이제 SDK 설치 관리자는 준비된 SDK 기반 밴드 릴리스를 하려고 합니다. 기능 밴드는 번호 버전의 *패치* 섹션에서 *수백 개*의 그룹에 정의되어 있습니다. 예를 들어, **3.0._101_** 및 **3.0._201_** 은 두 가지 기능 밴드의 버전이며, **3.0._101_** 및 **3.0._199_** 는 동일한 기능 밴드에 있습니다. 그리고 .NET Core SDK **3.0._101_** 이 설치되어 있는 경우 .NET Core SDK**3.0._100_** 은 머신에서 제거됩니다. .NET Core SDK **3.0._200_** 이 동일한 머신에 설치되어 있는 경우 .NET Core SDK **3.0._101_** 은 제거되지 않습니다.
+Windows용 MSI 설치 관리자는 .NET Core 3.0부터 변경되었습니다. 이제 SDK 설치 관리자는 준비된 SDK 기반 밴드 릴리스를 하려고 합니다. 기능 밴드는 번호 버전의 *패치* 섹션에서 *수백 개* 의 그룹에 정의되어 있습니다. 예를 들어, **3.0._101_** 및 **3.0._201_** 은 두 가지 기능 밴드의 버전이며, **3.0._101_** 및 **3.0._199_** 는 동일한 기능 밴드에 있습니다. 그리고 .NET Core SDK **3.0._101_** 이 설치되어 있는 경우 .NET Core SDK **3.0._100_** 은 머신에서 제거됩니다. .NET Core SDK **3.0._200_** 이 동일한 머신에 설치되어 있는 경우 .NET Core SDK **3.0._101_** 은 제거되지 않습니다.
 
 버전 관리에 대한 자세한 내용은 [.NET Core의 버전 관리 방법](../versions/index.md)을 참조하세요.
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019에는 .NET Core 3.0 Windows Forms 및 WPF용 **새 프로젝트** 템플릿이 추가됩니다.
 
-기존 .NET Framework 애플리케이션을 포트하는 방법에 대한 자세한 내용은 [WPF 프로젝트 포트](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) 및 [Windows Forms 프로젝트 포트](../porting/winforms.md)를 참조하세요.
+기존 .NET Framework 애플리케이션을 포트하는 방법에 대한 자세한 내용은 [WPF 프로젝트 포트](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) 및 [Windows Forms 프로젝트 포트](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)를 참조하세요.
 
 #### <a name="winforms-high-dpi"></a>WinForms의 높은 DPI
 
@@ -327,13 +327,13 @@ Visual Studio 2019에는 .NET Core 3.0 Windows Forms 및 WPF용 **새 프로젝�
 
 Windows에서 이제는 COM 호출 가능 관리형 구성 요소를 생성할 수 있습니다. 이 기능은 COM 추가 기능 모델을 통해 .NET Core를 사용할 뿐만 아니라 .NET Framework에 패리티를 제공하는 데 중요합니다.
 
-*mscoree.dll*이 COM 서버처럼 사용되는 .NET Framework와는 달리, .NET Core는 COM 구성 요소 빌드 시 네이티브 시작 관리자 dll을 *bin* 디렉터리에 추가합니다.
+*mscoree.dll* 이 COM 서버처럼 사용되는 .NET Framework와는 달리, .NET Core는 COM 구성 요소 빌드 시 네이티브 시작 관리자 dll을 *bin* 디렉터리에 추가합니다.
 
 COM 구성 요소를 만들고 사용하는 방법에 대한 예는 [COM 데모](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)를 참조하세요.
 
 ### <a name="windows-native-interop"></a>Windows 네이티브 Interop
 
-Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API를 제공합니다. .NET Core에서는 **P/Invoke**를 지원하지만, .NET Core 3.0은 **CoCreate COM API** 및 **Activate WinRT API**에 대한 기능을 추가합니다. 코드 예제는 [Excel 데모](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)를 참조하세요.
+Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API를 제공합니다. .NET Core에서는 **P/Invoke** 를 지원하지만, .NET Core 3.0은 **CoCreate COM API** 및 **Activate WinRT API** 에 대한 기능을 추가합니다. 코드 예제는 [Excel 데모](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)를 참조하세요.
 
 ### <a name="msix-deployment"></a>MSIX 배포
 
@@ -372,7 +372,7 @@ GPIO 프로그래밍에 사용할 수 있는 두 개의 패키지가 NuGet에 �
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPIO 패키지에는 *GPIO*, *SPI*, *I2C* 및 *PWM*디바이스용 API가 포함됩니다. IoT 바인딩 패키지에 디바이스 바인딩이 포함되어 있습니다. 자세한 내용은 [디바이스 GitHub 리포지토리](https://github.com/dotnet/iot/blob/master/src/devices/)를 참조하세요.
+GPIO 패키지에는 *GPIO*, *SPI*, *I2C* 및 *PWM* 디바이스용 API가 포함됩니다. IoT 바인딩 패키지에 디바이스 바인딩이 포함되어 있습니다. 자세한 내용은 [디바이스 GitHub 리포지토리](https://github.com/dotnet/iot/blob/master/src/devices/)를 참조하세요.
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux 지원
 
@@ -392,10 +392,10 @@ GPIO 패키지에는 *GPIO*, *SPI*, *I2C* 및 *PWM*디바이스용 API가 포함
 - 클라이언트와 서버 간에 필요한 왕복 횟수가 감소하여 연결 시간이 향상됩니다.
 - 더 이상 사용하지 않고 안전하지 않은 암호화 알고리즘을 제거하므로 보안이 향상됩니다.
 
-사용 가능한 경우 .NET Core 3.0은 Linux 시스템에서 **OpenSSL 1.1.1**, **OpenSSL 1.1.0** 또는 **OpenSSL 1.0.2**를 사용합니다. **OpenSSL 1.1.1**이 사용 가능한 경우 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 형식은 **TLS 1.3**을 사용합니다(클라이언트와 서버 둘 다 **TLS 1.3**을 지원한다고 가정).
+사용 가능한 경우 .NET Core 3.0은 Linux 시스템에서 **OpenSSL 1.1.1**, **OpenSSL 1.1.0** 또는 **OpenSSL 1.0.2** 를 사용합니다. **OpenSSL 1.1.1** 이 사용 가능한 경우 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 및 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 형식은 **TLS 1.3** 을 사용합니다(클라이언트와 서버 둘 다 **TLS 1.3** 을 지원한다고 가정).
 
 > [!IMPORTANT]
-> Windows 및 macOS에서는 아직 **TLS 1.3**을 지원하지 않습니다.
+> Windows 및 macOS에서는 아직 **TLS 1.3** 을 지원하지 않습니다.
 
 다음 C# 8.0 예제는 <https://www.cloudflare.com>에 연결하는 Ubuntu 18.10의 .NET Core 3.0을 보여 줍니다.
 

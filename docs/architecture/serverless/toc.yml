@@ -24,7 +24,7 @@
           href: logic-apps.md
         - name: Azure Event Grid
           href: event-grid.md
-    - name: 지속 가능한 Azure Functions
+    - name: 지속형 Azure Functions
       href: durable-azure-functions.md
       items:
         - name: 오케스트레이션 패턴

@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI
+title: .NET CLI
 titleSuffix: ''
-description: .NET Core CLI 및 해당 기능에 대한 개요입니다.
+description: .NET CLI 및 해당 기능에 대한 개요입니다.
 ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6a12e2d16afe36092c10e14a7465fa3bdbb23f32
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062693"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633858"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI 개요
+# <a name="net-cli-overview"></a>.NET CLI 개요
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-.NET Core CLI(명령줄 인터페이스)는 .NET Core 애플리케이션의 개발, 빌드, 실행 및 게시에 사용되는 플랫폼 간 도구 체인입니다.
+.NET CLI(명령줄 인터페이스)는 .NET 애플리케이션의 개발, 빌드, 실행, 게시에 사용되는 플랫폼 간 도구 체인입니다.
 
-.NET Core CLI는 [.NET Core SDK](../sdk.md)에 포함되어 있습니다. .NET Core SDK를 설치하는 방법에 대한 자세한 내용은 [.NET Core 설치](../install/windows.md)를 참조하세요.
+.NET CLI는 [.NET SDK](../sdk.md)에 포함되어 있습니다. .NET SDK를 설치하는 방법에 대한 자세한 내용은 [.NET Core 설치](../install/windows.md)를 참조하세요.
 
 ## <a name="cli-commands"></a>CLI 명령
 
@@ -64,7 +64,7 @@ ms.locfileid: "88062693"
 - [`tool run`](global-tools.md#invoke-a-local-tool) .NET Core SDK 3.0부터 사용할 수 있습니다.
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET Core 도구 개요](global-tools.md)를 참조하세요.
+도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET 도구 개요](global-tools.md)를 참조하세요.
 
 ## <a name="command-structure"></a>명령 구조
 
@@ -80,7 +80,7 @@ dotnet /build_output/my_app.dll
 
 이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../deploying/index.md)을 실행하거나 명령을 실행합니다.
 
-예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다. 특정 버전의 .NET Core 런타임을 사용하려면 `--fx-version <VERSION>` 옵션을 사용합니다([dotnet 명령](dotnet.md) 참조).
+예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다. 특정 버전의 .NET 런타임을 사용하려면 `--fx-version <VERSION>` 옵션을 사용합니다([dotnet 명령](dotnet.md) 참조).
 
 드라이버에 명령을 제공하면 `dotnet.exe`가 CLI 명령 실행 프로세스를 시작합니다. 예를 들어:
 
@@ -105,4 +105,4 @@ dotnet build
 ## <a name="see-also"></a>참조
 
 - [dotnet/sdk GitHub 리포지토리](https://github.com/dotnet/sdk/)
-- [.NET Core 설치 가이드](../install/windows.md)
+- [.NET 설치 가이드](../install/windows.md)

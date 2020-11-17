@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547886"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440857"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 
@@ -52,7 +52,7 @@ ms.locfileid: "90547886"
  [디버깅, 추적 및 프로파일링](./debug-trace-profile/index.md)  
  .NET Framework 앱 및 앱 환경을 테스트하고 최적화하며 프로파일링하는 방법에 대해 설명합니다. 이 단원은 관리자와 개발자 모두가 참조할 수 있습니다.  
   
- [여러 플랫폼을 대상으로 개발](../standard/cross-platform/index.md)  
+ [여러 플랫폼을 대상으로 개발](./cross-platform/index.md)  
  .NET Framework 를 사용하여 여러 플랫폼과 휴대폰, 데스크톱 및 웹 등 여러 디바이스 간에 공유할 수 있는 어셈블리를 빌드하는 방법에 대한 정보를 제공합니다.  
   
  [배포](./deployment/index.md)  
@@ -62,10 +62,12 @@ ms.locfileid: "90547886"
  캐싱, 초기화 지연, 안정성 및 ETW 이벤트에 대한 정보를 제공합니다.  
 
 ## <a name="reference"></a>참고  
+
  [.NET Framework 클래스 라이브러리](../../api/index.md?view=netframework-4.7)  
  .NET Framework 네임스페이스에 포함된 각 클래스에 대한 구문, 코드 예제 및 사용 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [시작](./get-started/index.md)  
  .NET Framework의 포괄적인 개요 및 추가 리소스에 대한 링크를 제공합니다.  
   

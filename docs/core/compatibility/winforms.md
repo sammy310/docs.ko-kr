@@ -2,12 +2,12 @@
 title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core 및 .NET 5용 Windows Forms의 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/08/2020
-ms.openlocfilehash: 01810a690227bbcab2103f00767315dbc5d5fae3
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: c79fd28b5c3b81ae7ddf1ef3f470601108b87705
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400647"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440792"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
@@ -136,4 +136,4 @@ _**
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core에 Windows Forms 앱 포팅](../porting/winforms.md)
+- [.NET Core에 Windows Forms 앱 포팅](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)

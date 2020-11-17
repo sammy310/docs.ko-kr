@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172556"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594595"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -77,19 +77,19 @@ Visual Studio에서 자동으로 배포하든 아니면 Docker CLI(docker run �
 
 Dockerfile은 애플리케이션 또는 서비스의 루트 폴더에 배치됩니다. 컨테이너의 애플리케이션 또는 서비스를 설정하고 실행하는 방법을 Docker에 알려주는 명령을 포함하고 있습니다. 코드를 사용하여 수동으로 Dockerfile을 만들어서 .NET 종속성과 함께 프로젝트에 추가할 수 있습니다.
 
-Visual Studio와 Docker용 도구를 사용하면 마우스 클릭 몇 번으로 이 작업을 처리할 수 있습니다. Visual Studio 2019에서 새 프로젝트를 만들 때 그림 5-3에서 표시된 대로 **Docker 지원 사용**이라는 옵션이 있습니다.
+Visual Studio와 Docker용 도구를 사용하면 마우스 클릭 몇 번으로 이 작업을 처리할 수 있습니다. Visual Studio 2019에서 새 프로젝트를 만들 때 그림 5-3에서 표시된 대로 **Docker 지원 사용** 이라는 옵션이 있습니다.
 
 ![Docker 지원 사용 확인란을 보여 주는 스크린샷](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
 **그림 5-3**. Visual Studio 2019에서 새 ASP.NET Core 프로젝트를 만들 때 Docker 지원 활성화
 
-그림 5-4에 표시된 대로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가** > **Docker 지원...** 을 선택하여 기존 ASP.NET Core 웹앱 프로젝트에서 Docker 지원을 사용할 수도 있습니다.
+그림 5-4에 표시된 대로 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가** > **Docker 지원...** 을 선택하여 기존 ASP.NET Core 웹앱 프로젝트에서 Docker 지원을 사용할 수도 있습니다.
 
 ![추가 메뉴의 Docker 지원 옵션을 보여 주는 스크린샷](./media/docker-app-development-workflow/add-docker-support-option.png)
 
 **그림 5-4**. 기존 Visual Studio 2019 프로젝트에서 Docker 지원을 사용하도록 설정
 
-이 작업은 필수 구성을 포함한 프로젝트에 *Dockerfile*을 추가하고 ASP.NET Core 프로젝트에서만 사용할 수 있습니다.
+이 작업은 필수 구성을 포함한 프로젝트에 *Dockerfile* 을 추가하고 ASP.NET Core 프로젝트에서만 사용할 수 있습니다.
 
 마찬가지로 Visual Studio는 **추가 > 컨테이너 오케스트레이터 지원...** 옵션을 사용하여 전체 솔루션용 `docker-compose.yml` 파일을 추가할 수도 있습니다. 4단계에서 이 옵션을 더 자세히 살펴보겠습니다.
 
@@ -206,13 +206,13 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 
 이를 한 줄씩 자세히 설명하면 다음과 같습니다.
 
-- **줄 #1:** "작은" 런타임 전용 기본 이미지로 단계를 시작하고 참조를 위해 이를 **base**라고 명명합니다.
+- **줄 #1:** "작은" 런타임 전용 기본 이미지로 단계를 시작하고 참조를 위해 이를 **base** 라고 명명합니다.
 
 - **줄 #2:** 이미지에 **/app** 디렉터리를 만듭니다.
 
-- **줄 #3:** 포트 **80**을 공개합니다.
+- **줄 #3:** 포트 **80** 을 공개합니다.
 
-- **줄 #5:** 빌드/게시를 위해 "큰" 이미지를 사용하여 새 단계를 시작합니다. 참조를 위해 이를 **build**라고 명명합니다.
+- **줄 #5:** 빌드/게시를 위해 "큰" 이미지를 사용하여 새 단계를 시작합니다. 참조를 위해 이를 **build** 라고 명명합니다.
 
 - **줄 #6:** 이미지에 **/src** 디렉터리를 만듭니다.
 
@@ -226,13 +226,13 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 
 - **줄 #20:** 프로젝트(및 기타 프로젝트 종속성)를 빌드하고 이미지의 **/app** 디렉터리에 출력합니다.
 
-- **줄 #22:** build에서 이어지는 새 단계를 시작합니다. 참조를 위해 이를 **publish**라고 명명합니다.
+- **줄 #22:** build에서 이어지는 새 단계를 시작합니다. 참조를 위해 이를 **publish** 라고 명명합니다.
 
 - **줄 #23:** 프로젝트(및 종속성)를 게시하고 이미지의 **/app** 디렉터리에 출력합니다.
 
-- **줄 #25:** **base**에서 이어지는 새 단계를 시작하고 이를 **final**이라고 명명합니다.
+- **줄 #25:** **base** 에서 이어지는 새 단계를 시작하고 이를 **final** 이라고 명명합니다.
 
-- **줄 #26:** 현재 디렉터리를 **/app**으로 변경합니다.
+- **줄 #26:** 현재 디렉터리를 **/app** 으로 변경합니다.
 
 - **줄 #27:** **publish** 단계에서 현재 디렉터리로 **/app** 디렉터리를 복사합니다.
 
@@ -264,7 +264,7 @@ RUN dotnet restore
 
 하지만 `dotnet restore`는 폴더에 단일 프로젝트나 솔루션 파일이 있을 경우에만 실행되므로 이 방법은 약간 복잡하며 너무 세세한 부분까지 접근하지 않고 이 작업을 처리하는 방법은 다음과 같습니다.
 
-1. **.dockerignore**에 다음 줄을 추가합니다.
+1. **.dockerignore** 에 다음 줄을 추가합니다.
 
    - `*.sln` - 기본 폴더 트리의 모든 솔루션 파일 무시
 
@@ -290,7 +290,7 @@ RUN dotnet restore
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
@@ -457,7 +457,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 #### <a name="using-visual-studio"></a>Visual Studio 사용
 
-컨테이너 오케스트레이터 지원을 추가하지 않은 경우 Visual Studio에서 **Ctrl-F5**를 눌러 단일 컨테이너 앱을 실행할 수도 있고, **F5** 키를 사용하여 컨테이너 내에서 애플리케이션을 디버깅할 수도 있습니다. 컨테이너는 docker run을 사용하여 로컬로 실행됩니다.
+컨테이너 오케스트레이터 지원을 추가하지 않은 경우 Visual Studio에서 **Ctrl-F5** 를 눌러 단일 컨테이너 앱을 실행할 수도 있고, **F5** 키를 사용하여 컨테이너 내에서 애플리케이션을 디버깅할 수도 있습니다. 컨테이너는 docker run을 사용하여 로컬로 실행됩니다.
 
 ### <a name="option-b-running-a-multi-container-application"></a>옵션 B: 다중 컨테이너 애플리케이션 실행
 
@@ -479,7 +479,7 @@ docker-compose up 명령을 실행하면 그림 5-10에 나와 있는 것처럼 
 
 #### <a name="using-visual-studio"></a>Visual Studio 사용
 
-Visual Studio 2019를 사용하여 다중 컨테이너 애플리케이션을 실행하는 방법이 더 이상 간단할 수 없습니다. 평상시처럼 **Ctrl-F5**를 눌러 실행하거나 **F5** 키를 눌러 디버깅하여 **docker-compose** 프로젝트를 시작 프로젝트로 설정하기만 하면 됩니다.  Visual Studio가 필요한 모든 설정을 처리하므로 평상시처럼 중단점을 만들고 최종적으로 “원격 서버”에서 실행되는 독립 프로세스를 마찬가지로 디버거가 이미 연결된 상태에서 디버그할 수 있습니다.
+Visual Studio 2019를 사용하여 다중 컨테이너 애플리케이션을 실행하는 방법이 더 이상 간단할 수 없습니다. 평상시처럼 **Ctrl-F5** 를 눌러 실행하거나 **F5** 키를 눌러 디버깅하여 **docker-compose** 프로젝트를 시작 프로젝트로 설정하기만 하면 됩니다.  Visual Studio가 필요한 모든 설정을 처리하므로 평상시처럼 중단점을 만들고 최종적으로 “원격 서버”에서 실행되는 독립 프로세스를 마찬가지로 디버거가 이미 연결된 상태에서 디버그할 수 있습니다.
 
 앞서 언급했듯이, 솔루션 내의 프로젝트에 Docker 솔루션 지원을 추가할 때마다 해당 프로젝트가 전역(솔루션 수준) docker-compose.yml 파일에서 구성되며, 따라서 전체 솔루션을 한꺼번에 실행 또는 디버그할 수 있습니다. Visual Studio는 Docker 솔루션 지원이 사용되는 각 프로젝트에 대해 하나의 컨테이너를 시작하고, 모든 내부 단계(dotnet 게시, dotnet 빌드 등)를 자동으로 수행합니다.
 

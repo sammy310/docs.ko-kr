@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495734"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557105"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -23,6 +23,8 @@ ms.locfileid: "89495734"
 
 Visual Basic 16.0/Visual Studio 2019 버전 16.0\
 새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
+
+[.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
 ## <a name="previous-versions"></a>이전 버전
 
@@ -154,7 +156,7 @@ Dim number As Integer = &H_C305_F860
 
 **추가 컴파일러 스위치**
 
-이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout**는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly**는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
+이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout** 는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly** 는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 

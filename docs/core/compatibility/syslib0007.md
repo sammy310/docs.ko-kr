@@ -3,12 +3,12 @@ title: SYSLIB0007 경고
 description: 컴파일 시간 경고 SYSLIB0007을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d5410a3b3d33515e2ee6f578cad2f4deaec9c25d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333124"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439944"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: 암호화 알고리즘의 기본 구현이 지원되지 않음
 
@@ -20,7 +20,7 @@ ms.locfileid: "92333124"
 - <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=fullName>
 
-## <a name="workaround"></a>해결 방법
+## <a name="workarounds"></a>해결 방법
 
 - 권장되는 조치 과정은 현재 사용되지 않는 API에 대한 호출을 특정 알고리즘(예: <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType>)에 대한 팩터리 메소드 호출로 대체하는 것입니다. 이렇게 하면 인스턴스화되는 알고리즘을 완전히 제어할 수 있습니다.
 
@@ -33,6 +33,8 @@ ms.locfileid: "92333124"
   | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | 대부분의 최신 애플리케이션에서는 HMACSHA1 알고리즘이 권장되지 않습니다. 가능하면 더 강력한 알고리즘을 사용하는 것이 좋습니다. 자세한 지침은 보안 관리자에게 문의하세요. |
   | <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | 대부분의 최신 애플리케이션에서는 HMACSHA1 알고리즘이 권장되지 않습니다. 가능하면 더 강력한 알고리즘을 사용하는 것이 좋습니다. 자세한 지침은 보안 관리자에게 문의하세요. |
   | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> |
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>추가 정보
 

@@ -3,12 +3,12 @@ title: SYSLIB0006 경고
 description: 컴파일 시간 경고 SYSLIB0006을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 45d2d8ec6ad99996f8b8f46d0c2e0ac2e02cf450
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 222b669a8a0260713e85721e6031144bb7bda5cc
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333147"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440662"
 ---
 # <a name="syslib0006-threadabort-is-not-supported"></a>SYSLIB0006: Thread.Abort가 지원되지 않음
 
@@ -17,7 +17,7 @@ ms.locfileid: "92333147"
 - <xref:System.Threading.Thread.Abort?displayProperty=nameWithType>
 - <xref:System.Threading.Thread.Abort(System.Object)?displayProperty=nameWithType>
 
-## <a name="workaround"></a>해결 방법
+## <a name="workarounds"></a>해결 방법
 
 <xref:System.Threading.CancellationToken>을 사용하여 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 호출하는 대신 작업 단위 처리를 중단합니다. 다음 예제에서는 <xref:System.Threading.CancellationToken>합니다.
 
@@ -35,6 +35,8 @@ void ProcessPendingWorkItemsNew(CancellationToken cancellationToken)
     }
 }
 ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>추가 정보
 

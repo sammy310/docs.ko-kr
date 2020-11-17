@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: 38263c5ce4d1686777f33f5a9742d530eafa9d89
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955695"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441065"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Jupyter Notebook에서 .NET for Apache Spark 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "91955695"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- [.NET Core 3.1 SDK](https://docs.microsoft.com/dotnet/core/install/)
+- [.NET Core 3.1 SDK](../../core/install/index.yml)
 - [Apache Spark](https://spark.apache.org/downloads.html)
 - [Apache Spark .NET Worker](https://github.com/dotnet/spark/releases)
 
@@ -43,8 +43,8 @@ Jupyter Notebook을 사용하려면 두 가지 항목이 필요합니다.
         > [!IMPORTANT]
         > 기본적으로 최신 버전의 패키지가 다운로드됩니다. **다운로드한 버전이 Apache Spark .NET Worker와 동일한지 확인합니다.**
 
-    1. **정보** 창에서 **패키지 다운로드**를 선택하여 최신 버전의 패키지를 다운로드합니다. 패키지 이름은 *microsoft.spark.[PACKAGE-VERSION].nupkg*와 유사합니다.
-    1. 다운로드한 패키지의 압축을 풉니다. 압축을 푼 디렉터리에 *jars*라는 하위 디렉터리가 있습니다. 나중에 사용되므로 경로를 기록해 둡니다.
+    1. **정보** 창에서 **패키지 다운로드** 를 선택하여 최신 버전의 패키지를 다운로드합니다. 패키지 이름은 *microsoft.spark.[PACKAGE-VERSION].nupkg* 와 유사합니다.
+    1. 다운로드한 패키지의 압축을 풉니다. 압축을 푼 디렉터리에 *jars* 라는 하위 디렉터리가 있습니다. 나중에 사용되므로 경로를 기록해 둡니다.
 
 ## <a name="start-net-for-apache-spark"></a>.NET for Apache Spark 시작
 

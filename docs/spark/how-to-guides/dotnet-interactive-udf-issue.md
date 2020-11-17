@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224138"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441078"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>.NET for Apache Spark 대화형 환경에서 UDF 작성 및 호출
 
@@ -49,7 +49,7 @@ ms.locfileid: "92224138"
 
 위에 강조 표시된 오류는 먼저 UDF 어셈블리를 컴파일하고 작업자에게 제공해야 DataFrame에서 호출할 수 있기 때문입니다.
 
-이상으로 .NET for Apache Spark 대화형 환경(예: [Azure Synapse Notebooks](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks))에서 UDF를 구현하는 동안 유의해야 할 몇 가지 중요한 사항을 살펴보았습니다.
+이상으로 .NET for Apache Spark 대화형 환경(예: [Azure Synapse Notebooks](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks))에서 UDF를 구현하는 동안 유의해야 할 몇 가지 중요한 사항을 살펴보았습니다.
 
 ## <a name="faqs"></a>FAQ
 
@@ -61,7 +61,7 @@ ms.locfileid: "92224138"
 
     `udf2_fails`의 경우에서 확인할 수 있듯이, `Submission#7` 유형이 serializable로 표시되지 않는다는 오류 메시지가 나타납니다. 이 오류는 .NET Interactive가 셀에 정의된 모든 개체를 해당 `Submission#` 클래스로 래핑하므로 개체가 즉석에서 생성되어 `Serializable`로 표시되지 않기 때문입니다.
 
-    따라서 **사용자 지정 개체를 참조하는 UDF가 해당 개체와 동일한 셀에서 정의되어야 합니다** .
+    따라서 **사용자 지정 개체를 참조하는 UDF가 해당 개체와 동일한 셀에서 정의되어야 합니다**.
 
 2. **브로드캐스트 변수가 .NET Interactive에서 작동하지 않는 이유는 무엇인가요?**
     앞서 설명한 이유로 브로드캐스트 변수는 .NET Interactive에서 작동하지 않습니다. [브로드캐스트 변수 관련 가이드](broadcast-guide.md)에서 브로드캐스트 변수란 무엇인지와 브로드캐스트 변수를 사용하는 방법을 자세히 살펴보는 것이 좋습니다. 브로드캐스트 변수가 대화형 시나리오에서 작동하지 않는 이유는 셀에 정의된 각 개체를 해당 셀 제출 클래스와 함께 추가하는 .NET interactive의 디자인에 따라 개체가 serializable로 표시되지 않으므로 앞서 확인한 것과 동일한 예외가 발생하여 실패하기 때문입니다.

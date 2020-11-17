@@ -3,12 +3,12 @@ title: SYSLIB0003 경고
 description: 컴파일 시간 경고 SYSLIB0003을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333135"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439965"
 ---
 # <a name="syslib0003-code-access-security-is-not-supported"></a>SYSLIB0003: 코드 액세스 보안이 지원되지 않음
 
@@ -209,6 +209,8 @@ ms.locfileid: "92333135"
   ```
 
 - <xref:System.Security.Permissions.PrincipalPermission>을 요청하려면 [SYSLIB0002: PrincipalPermissionAttribute가 사용되지 않음](syslib0002.md#workarounds)에 대한 지침을 참조하세요. 이 지침은 <xref:System.Security.Permissions.PrincipalPermission>과 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 모두에 적용됩니다.
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>추가 정보
 

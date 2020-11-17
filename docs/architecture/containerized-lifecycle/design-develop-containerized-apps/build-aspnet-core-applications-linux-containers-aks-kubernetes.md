@@ -2,12 +2,12 @@
 title: AKS/Kubernetes 클러스터에 Linux 컨테이너로 배포된 ASP.NET Core 애플리케이션 빌드
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844565"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440831"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes 오케스트레이터에 Linux 컨테이너로 배포된 ASP.NET Core 애플리케이션 빌드
 
@@ -33,7 +33,7 @@ ASP.NET Core는 Microsoft 및 GitHub의 .NET 커뮤니티에서 유지 관리하
 
 **그림 4-35**. Visual Studio 2019에서 ASP.NET Core 웹 애플리케이션 만들기.
 
-Visual Studio에서 샘플 프로젝트를 만들려면 **파일** > **새로 만들기** > **프로젝트**를 선택하고 **웹** 프로젝트 형식을 선택한 후 **ASP.NET Core 웹 애플리케이션** 템플릿을 선택합니다. 필요한 경우 템플릿을 검색할 수도 있습니다.
+Visual Studio에서 샘플 프로젝트를 만들려면 **파일** > **새로 만들기** > **프로젝트** 를 선택하고 **웹** 프로젝트 형식을 선택한 후 **ASP.NET Core 웹 애플리케이션** 템플릿을 선택합니다. 필요한 경우 템플릿을 검색할 수도 있습니다.
 
 다음 이미지에 표시된 것처럼 애플리케이션 이름 및 위치를 입력합니다.
 
@@ -51,13 +51,13 @@ ASP.NET Core 3.1을 프레임워크로 선택했는지 확인합니다. .NET Cor
 
 이전 버전의 .NET Core가 있는 경우 <https://dotnet.microsoft.com/download>에서 3.1 버전을 다운로드하여 설치할 수 있습니다.
 
-언제든지 프로젝트를 “Docker화”할 수 있는지 확인하기 위해 지금 Docker 지원을 추가합니다. 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **Docker 지원**을 선택합니다.
+언제든지 프로젝트를 “Docker화”할 수 있는지 확인하기 위해 지금 Docker 지원을 추가합니다. 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **Docker 지원** 을 선택합니다.
 
 ![기존 프로젝트에 Docker 지원을 추가하는 바로 가기 메뉴 옵션: (프로젝트에서) 마우스 오른쪽 단추를 클릭하고 추가 > Docker 지원을 클릭합니다.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
 **그림 4-38**. 기존 프로젝트에 Docker 지원 추가
 
-Docker 지원 추가를 완료하려면 Windows 또는 Linux를 선택할 수 있습니다. 이 경우 **Linux**를 선택합니다.
+Docker 지원 추가를 완료하려면 Windows 또는 Linux를 선택할 수 있습니다. 이 경우 **Linux** 를 선택합니다.
 
 ![Dockerfile에 대한 대상 OS를 선택하는 옵션 대화 상자](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
@@ -193,18 +193,18 @@ ACR([Azure Container Registry](https://azure.microsoft.com/services/container-re
 
 ### <a name="create-an-acr-instance"></a>ACR 인스턴스 만들기
 
-**az cli**에서 다음 명령을 실행합니다.
+**az cli** 에서 다음 명령을 실행합니다.
 
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
 > [!NOTE]
-> 컨테이너 레지스트리 이름(예: `exploredocker`)은 Azure 내에서 고유해야 하며, 5~50자의 영숫자를 포함해야 합니다. 자세한 내용은 [컨테이너 레지스트리 만들기](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)를 참조하세요.
+> 컨테이너 레지스트리 이름(예: `exploredocker`)은 Azure 내에서 고유해야 하며, 5~50자의 영숫자를 포함해야 합니다. 자세한 내용은 [컨테이너 레지스트리 만들기](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)를 참조하세요.
 
 ### <a name="create-the-image-in-release-mode"></a>릴리스 모드에서 이미지 만들기
 
-이제 그림 4-46과 같이 **릴리스**로 변경하고 이전과 같은 방법으로 애플리케이션을 실행하여 **릴리스** 모드에서 (프로덕션 준비가 완료된) 이미지를 만듭니다.
+이제 그림 4-46과 같이 **릴리스** 로 변경하고 이전과 같은 방법으로 애플리케이션을 실행하여 **릴리스** 모드에서 (프로덕션 준비가 완료된) 이미지를 만듭니다.
 
 ![릴리스 모드에서 빌드하기 위한 VS의 도구 모음 옵션](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
@@ -230,7 +230,7 @@ az acr list --resource-group <resource-group-name> --query "[].{acrLoginServer:l
 
 ![위 명령의 콘솔 출력](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/az-cli-loginServer-name.png)
 
-**그림 4-48**. **az cli**를 사용하여 레지스트리의 이름 가져오기
+**그림 4-48**. **az cli** 를 사용하여 레지스트리의 이름 가져오기
 
 두 경우 모두 이름을 가져옵니다. 이 예제의 경우 이름은 `exploredocker.azurecr.io`입니다.
 
@@ -371,7 +371,7 @@ spec:
 > [!TIP]
 > 이 가이드의 [**AKS(Azure Kubernetes Service)에 배포**](deploy-azure-kubernetes-service.md) 섹션에서 이 샘플에 대한 AKS 클러스터를 만드는 방법을 확인할 수 있습니다.
 
-이제 **kubectl**을 사용하여 배포할 준비가 거의 완료되었지만 먼저 이 명령을 사용하여 AKS 클러스터에서 자격 증명을 가져와야 합니다.
+이제 **kubectl** 을 사용하여 배포할 준비가 거의 완료되었지만 먼저 이 명령을 사용하여 AKS 클러스터에서 자격 증명을 가져와야 합니다.
 
 ```console
 az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
