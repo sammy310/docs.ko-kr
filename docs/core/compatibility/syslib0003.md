@@ -3,20 +3,20 @@ title: SYSLIB0003 경고
 description: 컴파일 시간 경고 SYSLIB0003을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333135"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439965"
 ---
-# <a name="syslib0003-code-access-security-is-not-supported"></a><span data-ttu-id="c0d33-103">SYSLIB0003: 코드 액세스 보안이 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="c0d33-103">SYSLIB0003: Code access security is not supported</span></span>
+# <a name="syslib0003-code-access-security-is-not-supported"></a><span data-ttu-id="518cf-103">SYSLIB0003: 코드 액세스 보안이 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="518cf-103">SYSLIB0003: Code access security is not supported</span></span>
 
-<span data-ttu-id="c0d33-104">[CAS(코드 액세스 보안)](../../framework/data/adonet/code-access-security.md)는 지원되지 않는 레거시 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-104">[Code access security (CAS)](../../framework/data/adonet/code-access-security.md) is an unsupported, legacy technology.</span></span> <span data-ttu-id="c0d33-105">CAS를 사용하도록 설정하는 인프라는 .NET Framework 2.x - 4.x에만 있고 사용되지 않으며 서비스 또는 보안 수정을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-105">The infrastructure to enable CAS, which exists only in .NET Framework 2.x - 4.x, is deprecated and not receiving servicing or security fixes.</span></span>
+<span data-ttu-id="518cf-104">[CAS(코드 액세스 보안)](../../framework/data/adonet/code-access-security.md)는 지원되지 않는 레거시 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-104">[Code access security (CAS)](../../framework/data/adonet/code-access-security.md) is an unsupported, legacy technology.</span></span> <span data-ttu-id="518cf-105">CAS를 사용하도록 설정하는 인프라는 .NET Framework 2.x - 4.x에만 있고 사용되지 않으며 서비스 또는 보안 수정을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-105">The infrastructure to enable CAS, which exists only in .NET Framework 2.x - 4.x, is deprecated and not receiving servicing or security fixes.</span></span>
 
-<span data-ttu-id="c0d33-106">따라서 .NET의 CAS(코드 액세스 보안) 관련 형식은 대부분 .NET 5.0부터 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-106">As a result, most code access security (CAS)-related types in .NET are obsolete, starting in .NET 5.0.</span></span> <span data-ttu-id="c0d33-107">여기에는 <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS 권한 개체(예: <xref:System.Net.SocketPermission>), <xref:System.Security.Policy.EvidenceBase> 파생 형식 및 기타 지원되는 API와 같은 CAX 특성이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-107">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span> <span data-ttu-id="c0d33-108">이러한 API를 사용하면 컴파일 시간에 `SYSLIB0003` 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-108">Using these APIs generates warning `SYSLIB0003` at compile time.</span></span>
+<span data-ttu-id="518cf-106">따라서 .NET의 CAS(코드 액세스 보안) 관련 형식은 대부분 .NET 5.0부터 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-106">As a result, most code access security (CAS)-related types in .NET are obsolete, starting in .NET 5.0.</span></span> <span data-ttu-id="518cf-107">여기에는 <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS 권한 개체(예: <xref:System.Net.SocketPermission>), <xref:System.Security.Policy.EvidenceBase> 파생 형식 및 기타 지원되는 API와 같은 CAX 특성이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-107">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span> <span data-ttu-id="518cf-108">이러한 API를 사용하면 컴파일 시간에 `SYSLIB0003` 경고가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-108">Using these APIs generates warning `SYSLIB0003` at compile time.</span></span>
 
-<span data-ttu-id="c0d33-109">사용되지 않는 CAS API의 전체 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-109">The complete list of obsolete CAS APIs is as follows:</span></span>
+<span data-ttu-id="518cf-109">사용되지 않는 CAS API의 전체 목록은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-109">The complete list of obsolete CAS APIs is as follows:</span></span>
 
 - <xref:System.AppDomain.PermissionSet?displayProperty=fullName>
 - <xref:System.Configuration.ConfigurationPermission?displayProperty=fullName>
@@ -135,7 +135,7 @@ ms.locfileid: "92333135"
 - <xref:System.Security.Permissions.WebBrowserPermissionLevel?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermission?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermissionAttribute?displayProperty=fullName>
-- [<span data-ttu-id="c0d33-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span><span class="sxs-lookup"><span data-stu-id="c0d33-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
+- [<span data-ttu-id="518cf-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span><span class="sxs-lookup"><span data-stu-id="518cf-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
 - <xref:System.Security.Policy.ApplicationTrust.FullTrustAssemblies?displayProperty=fullName>
 - <xref:System.Security.Policy.FileCodeGroup?displayProperty=fullName>
 - <xref:System.Security.Policy.GacInstalled?displayProperty=fullName>
@@ -161,9 +161,9 @@ ms.locfileid: "92333135"
 - <xref:System.Web.AspNetHostingPermissionAttribute?displayProperty=fullName>
 - <xref:System.Xaml.Permissions.XamlLoadPermission?displayProperty=fullName>
 
-## <a name="workarounds"></a><span data-ttu-id="c0d33-111">해결 방법</span><span class="sxs-lookup"><span data-stu-id="c0d33-111">Workarounds</span></span>
+## <a name="workarounds"></a><span data-ttu-id="518cf-111">해결 방법</span><span class="sxs-lookup"><span data-stu-id="518cf-111">Workarounds</span></span>
 
-- <span data-ttu-id="c0d33-112">보안 권한을 어설션하려면 사용 권한을 어설션하는 호출이나 특성을 제거하세요.</span><span class="sxs-lookup"><span data-stu-id="c0d33-112">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
+- <span data-ttu-id="518cf-112">보안 권한을 어설션하려면 사용 권한을 어설션하는 호출이나 특성을 제거하세요.</span><span class="sxs-lookup"><span data-stu-id="518cf-112">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
 
   ```csharp
   // REMOVE the attribute below.
@@ -178,7 +178,7 @@ ms.locfileid: "92333135"
   }
   ```
 
-- <span data-ttu-id="c0d33-113">`PermitOnly`를 통해 사용 권한을 거부하거나 제한하려면 보안 관리자에게 문의하세요.</span><span class="sxs-lookup"><span data-stu-id="c0d33-113">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="c0d33-114">CAS 특성은 .NET 5.0+ 런타임에 적용되지 않기 때문에 CAS 인프라를 잘못 사용하여 이러한 메서드에 대한 액세스를 제한하는 경우 애플리케이션에서 보안 허점이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-114">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
+- <span data-ttu-id="518cf-113">`PermitOnly`를 통해 사용 권한을 거부하거나 제한하려면 보안 관리자에게 문의하세요.</span><span class="sxs-lookup"><span data-stu-id="518cf-113">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="518cf-114">CAS 특성은 .NET 5.0+ 런타임에 적용되지 않기 때문에 CAS 인프라를 잘못 사용하여 이러한 메서드에 대한 액세스를 제한하는 경우 애플리케이션에서 보안 허점이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-114">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
 
   ```csharp
   // REVIEW the attribute below; could indicate security vulnerability.
@@ -193,7 +193,7 @@ ms.locfileid: "92333135"
   }
   ```
 
-- <span data-ttu-id="c0d33-115"><xref:System.Security.Permissions.PrincipalPermission>을 제외한 모든 사용 권한을 요청하려면 요청을 제거하세요.</span><span class="sxs-lookup"><span data-stu-id="c0d33-115">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="c0d33-116">모든 요청은 런타임에 성공합니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-116">All demands will succeed at run time.</span></span>
+- <span data-ttu-id="518cf-115"><xref:System.Security.Permissions.PrincipalPermission>을 제외한 모든 사용 권한을 요청하려면 요청을 제거하세요.</span><span class="sxs-lookup"><span data-stu-id="518cf-115">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="518cf-116">모든 요청은 런타임에 성공합니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-116">All demands will succeed at run time.</span></span>
 
   ```csharp
   // REMOVE the attribute below; it will always succeed.
@@ -208,8 +208,10 @@ ms.locfileid: "92333135"
   }
   ```
 
-- <span data-ttu-id="c0d33-117"><xref:System.Security.Permissions.PrincipalPermission>을 요청하려면 [SYSLIB0002: PrincipalPermissionAttribute가 사용되지 않음](syslib0002.md#workarounds)에 대한 지침을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c0d33-117">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [SYSLIB0002: PrincipalPermissionAttribute is obsolete](syslib0002.md#workarounds).</span></span> <span data-ttu-id="c0d33-118">이 지침은 <xref:System.Security.Permissions.PrincipalPermission>과 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 모두에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0d33-118">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
+- <span data-ttu-id="518cf-117"><xref:System.Security.Permissions.PrincipalPermission>을 요청하려면 [SYSLIB0002: PrincipalPermissionAttribute가 사용되지 않음](syslib0002.md#workarounds)에 대한 지침을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="518cf-117">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [SYSLIB0002: PrincipalPermissionAttribute is obsolete](syslib0002.md#workarounds).</span></span> <span data-ttu-id="518cf-118">이 지침은 <xref:System.Security.Permissions.PrincipalPermission>과 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 모두에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="518cf-118">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c0d33-119">추가 정보</span><span class="sxs-lookup"><span data-stu-id="c0d33-119">See also</span></span>
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-- [<span data-ttu-id="c0d33-120">SYSLIB0002: PrincipalPermissionAttribute가 사용되지 않음</span><span class="sxs-lookup"><span data-stu-id="c0d33-120">SYSLIB0002: PrincipalPermissionAttribute is obsolete</span></span>](syslib0002.md)
+## <a name="see-also"></a><span data-ttu-id="518cf-119">추가 정보</span><span class="sxs-lookup"><span data-stu-id="518cf-119">See also</span></span>
+
+- [<span data-ttu-id="518cf-120">SYSLIB0002: PrincipalPermissionAttribute가 사용되지 않음</span><span class="sxs-lookup"><span data-stu-id="518cf-120">SYSLIB0002: PrincipalPermissionAttribute is obsolete</span></span>](syslib0002.md)

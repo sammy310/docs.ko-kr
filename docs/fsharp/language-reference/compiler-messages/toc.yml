@@ -13,3 +13,5 @@
       href: ./fs0008.md
     - name: FS0009 - 비안정형 코드일 수 있음
       href: ./fs0009.md
+    - name: FS0025 - 불완전한 패턴 일치
+      href: ./fs0025.md
