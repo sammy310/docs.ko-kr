@@ -2,19 +2,18 @@
 title: 어셈블리 및 DLL의 이름
 description: 어셈블리 및 Dll (동적 연결 라이브러리)의 이름을 지정 하는 방법에 대 한 지침을 알아봅니다. 어셈블리는 하나 이상의 파일에 걸쳐 있을 수 있지만 일반적으로 하나 이상의 파일에 매핑할 수 있습니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d1484889eb7db537de970c31109f26a6d61ad8d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594480"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830053"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>어셈블리 및 DLL의 이름
 어셈블리는 관리 코드 프로그램에 대 한 배포 및 id의 단위입니다. 어셈블리는 하나 이상의 파일에 걸쳐 있을 수 있지만 일반적으로 어셈블리는 어셈블리를 사용 하 여 일대일로 매핑됩니다. 따라서이 섹션에서는 DLL 명명 규칙에 대해서만 설명 하며,이 규칙을 어셈블리 명명 규칙에 매핑할 수 있습니다.

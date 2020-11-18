@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688256"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830521"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>긴 정의를 위해 새 줄에 매개 변수를 추가 합니다.
 
-함수 정의가 매우 긴 경우 새 줄에 매개 변수를 추가 하 고 다음 매개 변수의 들여쓰기 수준에 맞게 들여씁니다.
+Long 함수 정의가 있는 경우 새 줄에 매개 변수를 추가 하 고 다음 매개 변수의 들여쓰기 수준에 맞게 들여씁니다.
 
 ```fsharp
 module M =
@@ -643,7 +643,7 @@ let daysOfWeek' includeWeekend =
 ## <a name="formatting-if-expressions"></a>If 식 서식 지정
 
 조건 들여쓰기는이를 구성 하는 식의 크기와 복잡성에 따라 달라 집니다.
-다음과 같은 경우 한 줄에 작성 하면 됩니다.
+다음과 같은 경우 한 줄에 작성 합니다.
 
 - `cond`, `e1` 및 `e2` 가 짧습니다.
 - `e1` 및 `e2` 는 `if/then/else` 식이 아닙니다.
@@ -992,7 +992,7 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 
 ## <a name="formatting-computation-expression-operations"></a>계산 식 작업 서식 지정
 
-[계산 식](../language-reference/computation-expressions.md) 에 대 한 사용자 지정 작업을 만들 때 camelCase 명명을 사용 하는 것이 좋습니다.
+[계산 식](../language-reference/computation-expressions.md)에 대 한 사용자 지정 작업을 만들 때 camelCase 명명을 사용 하는 것이 좋습니다.
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-사용 되는 명명 규칙은 궁극적으로 모델링 되는 도메인에 의해 결정 됩니다.
+모델링 되는 도메인은 궁극적으로 명명 규칙을 구동 해야 합니다.
 다른 규칙을 사용 하는 자연 스러운 경우에는 해당 규칙을 대신 사용 해야 합니다.

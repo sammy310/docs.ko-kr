@@ -2,7 +2,6 @@
 title: .NET 암호화 모델
 description: .NET에서 일반적인 암호화 알고리즘의 구현을 검토 합니다. 개체 상속, 스트림 디자인 & 구성의 확장 가능한 암호화 모델에 대해 알아봅니다.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281586"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831119"
 ---
 # <a name="net-cryptography-model"></a>.NET 암호화 모델
 

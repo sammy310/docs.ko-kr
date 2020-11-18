@@ -2,7 +2,6 @@
 title: 데이터 해독
 description: 대칭 알고리즘 또는 비대칭 알고리즘을 사용 하 여 .NET에서 데이터의 암호를 해독 하는 방법에 대해 알아봅니다.
 ms.date: 07/16/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 7e8fe5a8b7ed7c217a31a8ee91a5d111257fed45
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: cf286eeca8a9372c6532c56701e4775d5e09d786
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440987"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831106"
 ---
 # <a name="decrypting-data"></a>데이터 해독
 
@@ -78,7 +77,7 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
 - [데이터 암호화](encrypting-data.md)

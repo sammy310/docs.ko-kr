@@ -2,7 +2,6 @@
 title: '연습: 암호화 애플리케이션 만들기'
 description: 암호화 응용 프로그램을 만드는 과정을 안내 합니다. Windows Forms 응용 프로그램에서 콘텐츠를 암호화 하 고 암호 해독 하는 방법을 알아봅니다.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557192"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830560"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 애플리케이션 만들기
 
@@ -38,7 +37,7 @@ ms.locfileid: "87557192"
   
  다음 표에는 이 항목의 암호화 작업이 요약되어 있습니다.  
   
-|Task|Description|  
+|Task|설명|  
 |----------|-----------------|  
 |Windows Forms 애플리케이션 만들기|애플리케이션을 실행하는 데 필요한 컨트롤을 나열합니다.|  
 |전역 개체 선언|<xref:System.Windows.Forms.Form> 클래스의 전역 컨텍스트를 사용하도록 문자열 경로 변수, <xref:System.Security.Cryptography.CspParameters> 및 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 선언합니다.|  

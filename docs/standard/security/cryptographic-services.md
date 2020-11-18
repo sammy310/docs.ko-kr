@@ -2,7 +2,6 @@
 title: 암호화 서비스
 description: .NET에서 지원 되는 암호화 방법 및 방법에 대 한 개요입니다.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281726"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829910"
 ---
 # <a name="cryptographic-services"></a>암호화 서비스
 
@@ -56,7 +55,7 @@ ms.locfileid: "93281726"
 
 이러한 목표를 달성하기 위해 암호화 기본이라고 알려진 알고리즘과 방법을 결합하여 암호화 체계를 만들 수 있습니다. 다음 표는 암호화 기본 및 해당 기능 목록을 보여 줍니다.
 
-|암호화 기본|기능|
+|암호화 기본|용도|
 |-----------------------------|---------|
 |비밀 키 암호화(대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 공유된 하나의 비밀 키를 사용하여 데이터를 암호화하고 해독합니다.|
 |공개 키 암호화(비대칭 암호화)|데이터에서 변환을 수행하여 제3자가 읽지 못하게 합니다. 이 유형의 암호화는 퍼블릭/프라이빗 키 쌍을 사용하여 데이터를 암호화하고 해독합니다.|
