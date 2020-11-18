@@ -2,19 +2,18 @@
 title: 보안 및 빠른 코드 생성
 description: 더 높은 신뢰 수준에서 실행 되는 더 낮은 신뢰 코드를 대신 하 여 코드를 생성 하는 것은 특히 호출자가 코드 생성에 영향을 줄 수 있는 경우 보안 문제입니다.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - code security, on-the-fly code generation
 - on-the-fly code generation
 - security [.NET], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: a3fc51c346feffa85537d95ccdbd23d943827edf
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c94da31f464a5272dd3f3c9f767a40ba7ad88a47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555697"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824150"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>보안 및 빠른 코드 생성
 

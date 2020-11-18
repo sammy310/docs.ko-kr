@@ -2,19 +2,18 @@
 title: 상태 데이터 보안
 description: 상태 데이터를 private 또는 internal 변수로 선언 하 여 액세스를 제한 합니다. 이러한 데이터는 리플렉션, serialization 및 디버깅을 통해 여전히 액세스할 수 있습니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 849ed993befaceda1b04becbb7fb2530c5c62a77
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557127"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824163"
 ---
 # <a name="securing-state-data"></a>상태 데이터 보안
 

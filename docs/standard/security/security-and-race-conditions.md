@@ -2,7 +2,6 @@
 title: 보안 및 경합 상태
 'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: a667bf69ba72cbe203bd2603c4c6b7a1e58a6d43
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 870dc0ac956bad045cb87b9c0968b4a8e9733812
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555112"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824124"
 ---
 # <a name="security-and-race-conditions"></a>보안 및 경합 상태
 
@@ -47,7 +46,7 @@ void Dispose()
 }  
 ```  
   
-이 **Dispose** 구현은 동기화 되지 않기 때문에 `Cleanup` 첫 번째 스레드에서를 호출한 다음 `_myObj` 가 **null**로 설정 되기 전에 두 번째 스레드가 호출 될 수 있습니다. 보안상 문제가 되는지 여부는 코드가 실행 될 때 발생 하는 상황에 따라 달라 집니다 `Cleanup` . 동기화 되지 않은 **Dispose** 구현과 관련 된 주요 문제는 파일 등의 리소스 핸들을 사용 하는 것입니다. 잘못 된 삭제로 인해 잘못 된 핸들이 사용 될 수 있으며,이로 인해 보안 취약성이 발생 하기도 합니다.  
+이 **Dispose** 구현은 동기화 되지 않기 때문에 `Cleanup` 첫 번째 스레드에서를 호출한 다음 `_myObj` 가 **null** 로 설정 되기 전에 두 번째 스레드가 호출 될 수 있습니다. 보안상 문제가 되는지 여부는 코드가 실행 될 때 발생 하는 상황에 따라 달라 집니다 `Cleanup` . 동기화 되지 않은 **Dispose** 구현과 관련 된 주요 문제는 파일 등의 리소스 핸들을 사용 하는 것입니다. 잘못 된 삭제로 인해 잘못 된 핸들이 사용 될 수 있으며,이로 인해 보안 취약성이 발생 하기도 합니다.  
   
 ## <a name="race-conditions-in-constructors"></a>생성자의 경합 상태
 

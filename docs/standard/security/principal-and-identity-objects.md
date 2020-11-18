@@ -2,7 +2,6 @@
 title: Principal 개체 및 Identity 개체
 description: .NET의 사용자를 나타내는 id 개체에 대해 읽어 보세요. 또한 역할 & id 개체를 모두 캡슐화 하는 보안 주체 개체에 대해 읽어 보십시오.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: 79caeed6ed64a07238e398af1e12f51640b88b62
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda506fc29e9a86e97b3c99faf2d4155c894f03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555256"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824241"
 ---
 # <a name="principal-and-identity-objects"></a>Principal 개체 및 Identity 개체
 
@@ -41,7 +40,7 @@ Principal 개체는 코드가 실행되는 보안 컨텍스트를 나타냅니�
   
 <xref:System.Security.Principal.IPrincipal>인터페이스는 연결 된 **id** 개체에 액세스 하기 위한 속성을 정의 하 고 **보안 주체** 개체에 의해 식별 된 사용자가 지정 된 역할의 멤버 인지 여부를 확인 하는 메서드를 정의 합니다. 모든 **Principal** 클래스는 **IPrincipal** 인터페이스와 필요한 추가 속성 및 메서드를 모두 구현합니다. 예를 들어, 공용 언어 런타임에서는 Windows NT 또는 Windows 2000 그룹 멤버를 역할에 매핑하기 위한 추가 기능을 구현하는 **WindowsPrincipal** 클래스를 제공합니다.  
   
-**Principal** 개체는 <xref:System.Runtime.Remoting.Messaging.CallContext> 응용 프로그램 도메인 () 내의 호출 컨텍스트 () 개체에 바인딩됩니다 <xref:System.AppDomain> . 기본 호출 컨텍스트는 항상 각각의 새로운 **AppDomain**을 사용하여 만들어지므로 **Principal** 개체를 허용하는 데 사용할 수 있는 호출 컨텍스트가 항상 있습니다. 새로운 스레드가 만들어지면 해당 스레드에 대한 **CallContext** 개체도 만들어집니다. **Principal** 개체 참조는 만드는 스레드에서 새로운 스레드의 **CallContext**로 자동 복사됩니다. 런타임에서 어떤 **Principal** 개체가 해당 스레드의 작성자에 속하는지 확인할 수 없는 경우에는 **Principal** 및 **Identity** 개체 작성을 위한 기본 정책을 따릅니다.  
+**Principal** 개체는 <xref:System.Runtime.Remoting.Messaging.CallContext> 응용 프로그램 도메인 () 내의 호출 컨텍스트 () 개체에 바인딩됩니다 <xref:System.AppDomain> . 기본 호출 컨텍스트는 항상 각각의 새로운 **AppDomain** 을 사용하여 만들어지므로 **Principal** 개체를 허용하는 데 사용할 수 있는 호출 컨텍스트가 항상 있습니다. 새로운 스레드가 만들어지면 해당 스레드에 대한 **CallContext** 개체도 만들어집니다. **Principal** 개체 참조는 만드는 스레드에서 새로운 스레드의 **CallContext** 로 자동 복사됩니다. 런타임에서 어떤 **Principal** 개체가 해당 스레드의 작성자에 속하는지 확인할 수 없는 경우에는 **Principal** 및 **Identity** 개체 작성을 위한 기본 정책을 따릅니다.  
   
 구성 가능한 애플리케이션의 도메인 관련 정책을 사용하여 새 애플리케이션 도메인과 연결할 **Principal** 개체의 형식을 결정하기 위한 규칙을 정의할 수 있습니다. 보안 정책이 허용하는 경우 런타임에서 현재 실행 스레드와 관련된 운영 체제 시스템 토큰을 반영하는 **Principal** 개체 및 **Identity** 개체를 만들 수 있습니다. 기본적으로 런타임에서는 인증되지 않은 사용자를 나타내는 **Principal** 및 **Identity** 개체를 사용하며, 코드에서 기본 **Principal** 및 **Identity** 개체에 액세스하려고 시도할 때까지는 이러한 개체들을 만들지 않습니다.  
   
