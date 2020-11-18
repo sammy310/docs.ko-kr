@@ -2,7 +2,6 @@
 title: 열거형 디자인
 description: 특수 한 종류의 값 형식인 열거형을 디자인 합니다. 단순 열거형은 작고 폐쇄형 선택 항목 집합을 보유 합니다. 플래그 열거형은 열거형 값에 대 한 비트 연산을 지원 합니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
 - simple enumerations
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a2e19197b114daa2a0956a6fc87231a6a81de916
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768539"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821361"
 ---
 # <a name="enum-design"></a>열거형 디자인
 
@@ -29,17 +28,17 @@ ms.locfileid: "84768539"
 
 정적 상수 대신 열거형을 사용 하 여 ✔️ 합니다.
 
-❌개방형 집합 (예: 운영 체제 버전, 친구 이름 등)에는 열거형을 사용 하지 마세요.
+❌ 개방형 집합 (예: 운영 체제 버전, 친구 이름 등)에는 열거형을 사용 하지 마세요.
 
-❌나중에 사용 하기 위해 예약 된 열거형 값을 제공 하지 마십시오.
+❌ 나중에 사용 하기 위해 예약 된 열거형 값을 제공 하지 마십시오.
 
 이후 단계에서 항상 기존 열거형에 값을 추가할 수 있습니다. 열거형에 값을 추가 하는 방법에 대 한 자세한 내용은 [열거형에 값 추가](#add_value) 를 참조 하세요. 예약 된 값은 실제 값의 집합만 pollute 사용자 오류가 발생 하는 경향이 있습니다.
 
-❌값이 하나만 있는 열거형은 공개적으로 노출 하지 마십시오.
+❌ 값이 하나만 있는 열거형은 공개적으로 노출 하지 마십시오.
 
 이후 C Api의 확장성을 보장 하는 일반적인 방법은 메서드 시그니처에 예약 된 매개 변수를 추가 하는 것입니다. 이러한 예약 된 매개 변수는 단일 기본값을 포함 하는 열거형으로 표현 될 수 있습니다. 이는 관리 되는 Api에서 수행 하면 안 됩니다. 메서드 오버 로드를 사용 하면 이후 릴리스에서 매개 변수를 추가할 수 있습니다.
 
-❌열거형에는 센티널 값을 포함 하지 않습니다.
+❌ 열거형에는 센티널 값을 포함 하지 않습니다.
 
 개발자는 프레임 워크 개발자에 게 유용 하지만 센티널 값은 프레임 워크의 사용자에 게 혼동을 주는 경우가 많습니다. 열거형이 나타내는 집합의 값 중 하나가 아니라 열거형의 상태를 추적 하는 데 사용 됩니다.
 
@@ -65,9 +64,9 @@ ms.locfileid: "84768539"
 
 ✔️ DO name은 복수 명사 또는 명사구를 사용 하는 열거형과 단일 명사 또는 명사구를 사용 하는 단순 열거형을 플래그 지정 합니다.
 
-❌직접 확장 하지 마십시오 <xref:System.Enum?displayProperty=nameWithType> .
+❌ 직접 확장 하지 마십시오 <xref:System.Enum?displayProperty=nameWithType> .
 
-<xref:System.Enum?displayProperty=nameWithType>는 CLR에서 사용자 정의 열거형을 만드는 데 사용 하는 특수 한 형식입니다. 대부분의 프로그래밍 언어는이 기능에 대 한 액세스를 제공 하는 프로그래밍 요소를 제공 합니다. 예를 들어 c #에서 `enum` 키워드는 열거형을 정의 하는 데 사용 됩니다.
+<xref:System.Enum?displayProperty=nameWithType> 는 CLR에서 사용자 정의 열거형을 만드는 데 사용 하는 특수 한 형식입니다. 대부분의 프로그래밍 언어는이 기능에 대 한 액세스를 제공 하는 프로그래밍 요소를 제공 합니다. 예를 들어 c #에서 `enum` 키워드는 열거형을 정의 하는 데 사용 됩니다.
 
 <a name="design"></a>
 
@@ -79,11 +78,11 @@ ms.locfileid: "84768539"
 
 일반적으로 사용 되는 플래그 조합에 특수 한 열거형 값을 제공 하는 것이 좋습니다 ✔️.
 
-비트 연산은 고급 개념 이므로 간단한 작업에는 필요 하지 않습니다. <xref:System.IO.FileAccess.ReadWrite>는 이러한 특수 값의 예입니다.
+비트 연산은 고급 개념 이므로 간단한 작업에는 필요 하지 않습니다. <xref:System.IO.FileAccess.ReadWrite> 는 이러한 특수 값의 예입니다.
 
-❌값의 특정 조합이 유효 하지 않은 경우 플래그 열거형을 만들지 마십시오.
+❌ 값의 특정 조합이 유효 하지 않은 경우 플래그 열거형을 만들지 마십시오.
 
-❌다음 지침에서 설명한 대로 값이 "모든 플래그를 지우고, 적절 하 게 이름이 지정 된 경우를 제외 하 고 플래그 열거형 값을 0으로 사용 하지 않습니다.
+❌ 다음 지침에서 설명한 대로 값이 "모든 플래그를 지우고, 적절 하 게 이름이 지정 된 경우를 제외 하 고 플래그 열거형 값을 0으로 사용 하지 않습니다.
 
 플래그 열거형의 값을 0으로 지정 ✔️ 합니다 `None` . 플래그 열거형의 경우 값은 항상 "모든 플래그가 지워졌습니다."을 의미 해야 합니다.
 

@@ -1,7 +1,6 @@
 ---
 title: '방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - time zones [.NET], retrieving
 - time zones [.NET], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-ms.openlocfilehash: 598cd631fab1ddc115bc6153580351b1dc14d5bf
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b92ac812ed0bd0e80bb3a6ab03b52746eb15db97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063887"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818110"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스
 
@@ -51,7 +50,7 @@ ms.locfileid: "93063887"
 
 - <xref:System>문을 사용 하 여 네임 스페이스를 가져옵니다 `using` (c # 코드에 필요).
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [로컬 시스템에 정의된 표준 시간대 찾기](finding-the-time-zones-on-local-system.md)

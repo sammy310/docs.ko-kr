@@ -1,7 +1,6 @@
 ---
 title: '방법: 모호한 시간 확인'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - time zones [.NET], ambiguous time
 - ambiguous time [.NET]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-ms.openlocfilehash: 467153ad1217e529f52bf90262c4264de069ff00
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 29a549d519bd3b6c10fef8205b30a07a71f01d1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063523"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817759"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>방법: 모호한 시간 확인
 
@@ -53,7 +52,7 @@ ms.locfileid: "93063523"
 
 - <xref:System>문을 사용 하 여 네임 스페이스를 가져옵니다 `using` (c # 코드에 필요).
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [방법: 사용자에게 모호한 시간 확인 작업 허용](let-users-resolve-ambiguous-times.md)

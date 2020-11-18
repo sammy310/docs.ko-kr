@@ -2,7 +2,6 @@
 title: '방법: 키 컨테이너에 비대칭 키 저장'
 description: .NET의 키 컨테이너에 비대칭 키를 저장 하는 방법에 대해 알아봅니다. 비대칭 키를 만들어 키 컨테이너에 저장 하 고 키를 검색 및 삭제 하는 방법을 참조 하세요.
 ms.date: 05/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 946657f0c96aa80705575d8203ff158c63a72780
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554412"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820152"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>키 컨테이너에 비대칭 키 저장
 
@@ -245,7 +244,7 @@ Key added to container:
 Key deleted.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 모델](cryptography-model.md)
 - [암호화 서비스](cryptographic-services.md)

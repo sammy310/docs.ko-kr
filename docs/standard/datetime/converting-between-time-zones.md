@@ -2,7 +2,6 @@
 title: 표준 시간대 간 시간 변환
 description: .NET에서 한 표준 시간대에서 다른 표준 시간대로 시간을 변환 하는 방법에 대해 알아봅니다. 또한 표준 시간대 인식이 제한 된 DateTimeOffset 값을 변환 하는 방법을 알아봅니다.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b42b4c07b9b5f376c34a70d7400218c50296f324
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063835"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818032"
 ---
 # <a name="converting-times-between-time-zones"></a>표준 시간대 간 시간 변환
 
@@ -119,7 +118,7 @@ UTC보다 다섯 시간 이른 표준 시간대의 날짜 및 시간을 나타�
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.TimeZoneInfo>
 - [날짜, 시간 및 표준 시간대](index.md)

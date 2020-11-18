@@ -2,7 +2,6 @@
 title: 클래스와 구조체 간의 선택
 description: 형식을 클래스로 디자인 하거나 형식을 구조체로 디자인 하는지 여부를 결정 하는 방법에 대해 알아봅니다. .NET에서 참조 형식 및 값 형식이 어떻게 다른 지 이해 합니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
 - class library design guidelines [.NET Framework], classes
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662604"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821478"
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
 모든 프레임 워크 디자이너에 대 한 기본 설계 결정 사항 중 하나는 형식을 클래스 (참조 형식)로 디자인할 것인지 아니면 구조체 (값 형식)로 디자인할 것인지를 결정 하는 것입니다. 참조 형식 및 값 형식의 동작의 차이점을 이해 하는 것은이를 선택 하는 데 매우 중요 합니다.
@@ -37,7 +36,7 @@ ms.locfileid: "84662604"
 
  형식의 인스턴스가 작고 일반적으로 수명이 짧고 다른 개체에 일반적으로 포함 되는 경우 클래스 대신 구조체를 정의 하는 것이 좋습니다. ✔️
 
- ❌형식에 다음과 같은 특징이 모두 없는 경우에는 구조체를 정의 하지 마십시오.
+ ❌ 형식에 다음과 같은 특징이 모두 없는 경우에는 구조체를 정의 하지 마십시오.
 
 - 이는 기본 형식 (, 등)과 비슷한 단일 값을 논리적으로 나타냅니다. `int` `double`
 

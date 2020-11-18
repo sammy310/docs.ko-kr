@@ -1,7 +1,6 @@
 ---
 title: '방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - arithmetic operations [.NET], dates and times
 - dates [.NET], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-ms.openlocfilehash: cb1abbcab10d52f9ba898e2f4e2468b04cfcff1f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ca7e9e1fbd73eafa80c444ba2d5ddaa84a6d7f5e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064264"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817486"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용
 
@@ -60,7 +59,7 @@ ms.locfileid: "93064264"
 
 - <xref:System>문을 사용 하 여 네임 스페이스를 가져옵니다 `using` (c # 코드에 필요).
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [날짜 및 시간으로 산술 연산 수행](performing-arithmetic-operations.md)

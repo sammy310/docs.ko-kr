@@ -1,18 +1,17 @@
 ---
 title: 인터페이스 디자인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], design guidelines
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: f589d47d5b945179430275598996b2fb77e92848
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289033"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821010"
 ---
 # <a name="interface-design"></a>인터페이스 디자인
 대부분의 Api는 클래스 및 구조체를 사용 하 여 모델링 하는 것이 좋지만 인터페이스가 더 적합 하거나 유일한 옵션입니다.
@@ -25,7 +24,7 @@ ms.locfileid: "84289033"
 
  다른 형식에서 이미 상속 된 형식에 대해 해당 기능을 지원 해야 하는 경우 인터페이스를 정의 하는 것이 좋습니다. ✔️
 
- ❌마커 인터페이스 (멤버가 없는 인터페이스)를 사용 하지 마십시오.
+ ❌ 마커 인터페이스 (멤버가 없는 인터페이스)를 사용 하지 마십시오.
 
  클래스를 특정 특성 (표식)으로 표시 해야 하는 경우 일반적으로 인터페이스가 아닌 사용자 지정 특성을 사용 합니다.
 
@@ -37,7 +36,7 @@ ms.locfileid: "84289033"
 
  이렇게 하면 인터페이스 디자인의 유효성을 검사 하는 데 도움이 됩니다. 예를 들어는 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 인터페이스를 사용 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 합니다.
 
- ❌이전에 제공 된 인터페이스에 멤버를 추가 하지 않습니다.
+ ❌ 이전에 제공 된 인터페이스에 멤버를 추가 하지 않습니다.
 
  이렇게 하면 인터페이스의 구현이 중단 됩니다. 버전 관리 문제를 방지 하기 위해 새 인터페이스를 만들어야 합니다.
 

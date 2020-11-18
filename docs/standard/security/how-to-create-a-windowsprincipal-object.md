@@ -1,7 +1,6 @@
 ---
 title: '방법: WindowsPrincipal 개체 만들기'
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d4140470308a09774e5e4eee429c1e91b559d063
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556208"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819034"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>방법: WindowsPrincipal 개체 만들기
 
@@ -81,7 +80,7 @@ ms.locfileid: "90556208"
   
 3. 보안 주체 개체가 생성되면 여러 메서드 중 하나를 사용하여 유효성을 검사할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Principal 개체 및 Identity 개체](principal-and-identity-objects.md)
 - [ASP.NET Core 보안](/aspnet/core/security/)

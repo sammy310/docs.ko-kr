@@ -1,7 +1,6 @@
 ---
 title: 생성자 디자인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, constructors
 - constructors, design guidelines
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27fb73aa01adf31117d1b82724873db3a03fd269
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280350"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821400"
 ---
 # <a name="constructor-design"></a>생성자 디자인
 
@@ -55,11 +54,11 @@ ms.locfileid: "84280350"
 
 매개 변수가 있는 생성자를 클래스에 추가 하면 컴파일러가 매개 변수가 없는 생성자를 추가 하지 않습니다. 이로 인해 실수로 인 한 변경 사항이 발생할 수도 있습니다.
 
-❌구조체에서 매개 변수가 없는 생성자를 명시적으로 정의 하지 마십시오.
+❌ 구조체에서 매개 변수가 없는 생성자를 명시적으로 정의 하지 마십시오.
 
 이렇게 하면 매개 변수가 없는 생성자가 정의 되지 않은 경우 배열의 모든 슬롯에서 실행할 필요가 없기 때문에 배열을 더 빠르게 만들 수 있습니다. C #을 비롯 한 많은 컴파일러에서는 이러한 이유로 구조체에 매개 변수가 없는 생성자를 포함할 수 없습니다.
 
-❌생성자 내에서 개체에 대 한 가상 멤버를 호출 하지 마세요.
+❌ 생성자 내에서 개체에 대 한 가상 멤버를 호출 하지 마세요.
 
 가장 많이 파생 된 형식의 생성자가 아직 완전히 실행 되지 않은 경우에도 가상 멤버를 호출 하면 가장 많이 파생 된 재정의가 호출 됩니다.
 
@@ -69,7 +68,7 @@ ms.locfileid: "84280350"
 
 클래스 생성자 라고도 하는 정적 생성자는 형식을 초기화 하는 데 사용 됩니다. CLR에서는 형식의 첫 번째 인스턴스가 만들어지거나 해당 형식의 정적 멤버가 호출 되기 전에 정적 생성자를 호출 합니다. 사용자는 정적 생성자가 호출 되는 시기를 제어할 수 없습니다. Static 생성자가 private이 아니면 CLR 이외의 코드에서 호출 될 수 있습니다. 생성자에서 수행 되는 작업에 따라 예기치 않은 동작이 발생할 수 있습니다. C # 컴파일러는 정적 생성자를 private로 강제로 적용 합니다.
 
-❌정적 생성자에서 예외를 throw 하지 않습니다.
+❌ 정적 생성자에서 예외를 throw 하지 않습니다.
 
 형식 생성자에서 예외가 throw 되는 경우 현재 응용 프로그램 도메인에서 형식을 사용할 수 없습니다.
 

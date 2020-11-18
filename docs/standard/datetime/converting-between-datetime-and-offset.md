@@ -2,7 +2,6 @@
 title: DateTime과 DateTimeOffset 간 변환
 description: .NET에서 DateTimeOffset 값과 DateTime 값을 변환 합니다. DateTimeOffset 구조체는 DateTime 구조체 보다 더 많은 표준 시간대 인식을 제공 합니다.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af75a467c344e299037dc6c2077e4a6ef6df2df9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063848"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818084"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime과 DateTimeOffset 간 변환
 
@@ -128,6 +127,6 @@ UTC 및 지역 값의 경우 <xref:System.DateTime> <xref:System.DateTimeOffset.
 
 - 현지 표준 시간대 오프셋과 동일한 오프셋의 날짜와 시간이 현지 표준 시간대를 나타낸다고 가정합니다. 그러나 날짜 및 시간 값이 원래 표준 시간대와 관련이 없기 때문에 이와 다른 경우가 있을 수 있습니다. 날짜와 시간은 동일한 오프셋을 사용하는 다른 표준 시간대에서 가져올 수 있습니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)

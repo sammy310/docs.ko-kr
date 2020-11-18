@@ -2,7 +2,6 @@
 title: DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 비교
 description: .NET에서 날짜 및 시간 정보를 나타내기 위해 DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 형식 간의 차이점에 대해 알아봅니다.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5d6173642e88165bb52d5d9cfc85c8889ce763a5
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23c846dfd634e476b60ffd867519a60a0ae6b6cf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063874"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818097"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중에서 선택
 
@@ -119,6 +118,6 @@ ms.locfileid: "93063874"
 
 .NET에서 표준 시간대 지원을 활용 하려면 해당 날짜 및 시간 개체가 인스턴스화될 때 날짜 및 시간 값이 속하는 표준 시간대를 알아야 합니다. 특히 웹 또는 네트워크 앱에서 표준 시간대를 알 수 없는 경우가 많습니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)

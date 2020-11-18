@@ -2,7 +2,6 @@
 title: 대/소문자 표기법
 description: 식별자, 복합 단어 및 일반적인 용어에 대 한 대/소문자 규칙을 적용 합니다. .NET에서 대/소문자 구분이 작동 하는 방식을 이해 합니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - camel-case names [.NET Framework]
 - class library design guidelines [.NET Framework], capitalization
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767795"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821530"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 이 장의 지침은 일관 되 게 적용 될 때 형식, 멤버 및 매개 변수에 대 한 식별자를 쉽게 읽을 수 있도록 하는 사례를 사용 하는 간단한 방법을 설명 합니다.
@@ -53,7 +52,7 @@ ms.locfileid: "84767795"
 |네임스페이스|파스칼식|`namespace System.Security { ... }`|
 |Type|파스칼식|`public class StreamReader { ... }`|
 |인터페이스|파스칼식|`public interface IEnumerable { ... }`|
-|방법|파스칼식|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|메서드|파스칼식|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |속성|파스칼식|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
 |이벤트|파스칼식|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |필드|파스칼식|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
@@ -63,11 +62,11 @@ ms.locfileid: "84767795"
 ## <a name="capitalizing-compound-words-and-common-terms"></a>복합 단어 및 일반적인 단어를 대문자로
  대부분의 복합 용어는 대문자 표시를 위해 단일 단어로 취급 됩니다.
 
- ❌닫힌 형태의 복합 단어에서 각 단어를 대문자로 표기 하지 마십시오.
+ ❌ 닫힌 형태의 복합 단어에서 각 단어를 대문자로 표기 하지 마십시오.
 
  이러한 단어는 끝점과 같이 단일 단어로 작성 된 복합 단어입니다. 대/소문자를 구분 하기 위해 폐쇄형 형식의 복합 단어를 단일 단어로 처리 합니다. 현재 사전을 사용 하 여 복합 단어가 닫힌 형태로 작성 되었는지 확인 합니다.
 
-|파스칼식|Camel|Not|
+|파스칼식|Camel|not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -98,7 +97,7 @@ ms.locfileid: "84767795"
 ## <a name="case-sensitivity"></a>대/소문자 구분
  CLR에서 실행할 수 있는 언어는 대/소문자 구분을 지 원하는 데 필요 하지 않습니다. 언어가 지 원하는 경우에도 프레임 워크에 액세스할 수 있는 다른 언어는 그렇지 않습니다. 따라서 외부에서 액세스할 수 있는 모든 Api는 사례를 단독으로 사용 하 여 동일한 컨텍스트에서 두 이름을 구분할 수 없습니다.
 
- ❌모든 프로그래밍 언어가 대/소문자를 구분 한다고 가정 하지 마십시오. 그러나 동일하지 않습니다. 이름은 대/소문자만 다를 수 있습니다.
+ ❌ 모든 프로그래밍 언어가 대/소문자를 구분 한다고 가정 하지 마십시오. 그러나 동일하지 않습니다. 이름은 대/소문자만 다를 수 있습니다.
 
  *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 

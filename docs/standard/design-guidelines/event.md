@@ -1,7 +1,6 @@
 ---
 title: 이벤트 디자인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289826"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821335"
 ---
 # <a name="event-design"></a>이벤트 디자인
-이벤트는 가장 일반적으로 사용 되는 콜백 형태입니다 (프레임 워크가 사용자 코드를 호출할 수 있도록 하는 구문). 다른 콜백 메커니즘에는 대리자, 가상 멤버 및 인터페이스 기반 플러그 인을 사용 하는 멤버가 포함 되어 있습니다. 유용성 연구의 데이터는 대부분의 개발자가 다른 콜백 메커니즘을 사용 하는 것 보다 이벤트를 사용 하는 것이 더 편안 하다는 것을 의미 합니다. 이벤트는 Visual Studio 및 많은 언어와 잘 통합 됩니다.
+이벤트는 가장 일반적으로 사용 되는 콜백 형태입니다 (프레임 워크가 사용자 코드를 호출할 수 있도록 하는 구문). 다른 콜백 메커니즘에는 대리자, 가상 멤버 및 인터페이스 기반 플러그 인을 가져오는 멤버가 포함 됩니다. 유용성 연구의 데이터는 대부분의 개발자가 다른 콜백 메커니즘을 사용 하는 것 보다 이벤트를 사용 하는 것이 더 편안 함을 의미 합니다. 이벤트는 Visual Studio 및 많은 언어와 잘 통합 됩니다.
 
  이벤트의 두 그룹에는 이벤트의 상태를 변경 하기 전에 발생 하는 이벤트, 사전 이벤트 라는 이벤트, 상태 변경 후 발생 한 이벤트 (사후 이벤트)가 있습니다. 사전 이벤트의 예로는 `Form.Closing` 폼을 닫기 전에 발생 하는가 있습니다. 사후 이벤트의 예로는 `Form.Closed` 폼이 닫힌 후에 발생 하는가 있습니다.
 
@@ -40,11 +39,11 @@ ms.locfileid: "84289826"
 
  매개 변수는로 명명 되어야 `e` 하며 이벤트 인수 클래스로 형식화 되어야 합니다.
 
- ❌비정적 이벤트를 발생 시킬 때 보낸 사람으로 null을 전달 하지 마십시오.
+ ❌ 비정적 이벤트를 발생 시킬 때 보낸 사람으로 null을 전달 하지 마십시오.
 
  ✔️는 정적 이벤트를 발생 시킬 때 보낸 사람으로 null을 전달 합니다.
 
- ❌이벤트를 발생 시킬 때 null을 이벤트 데이터 매개 변수로 전달 하지 마십시오.
+ ❌ 이벤트를 발생 시킬 때 null을 이벤트 데이터 매개 변수로 전달 하지 마십시오.
 
  `EventArgs.Empty`이벤트 처리 메서드에 데이터를 전달 하지 않으려는 경우를 전달 해야 합니다. 개발자는이 매개 변수가 null이 아닌 것으로 간주 합니다.
 
@@ -63,7 +62,7 @@ ms.locfileid: "84289826"
 
  <xref:System.EventArgs?displayProperty=nameWithType>또는 해당 하위 클래스를 이벤트 처리기의 두 번째 매개 변수 형식으로 사용 ✔️ 하 고이를 호출 `e` 합니다.
 
- ❌이벤트 처리기에는 매개 변수를 세 개 이상 사용할 수 없습니다.
+ ❌ 이벤트 처리기에는 매개 변수를 세 개 이상 사용할 수 없습니다.
 
  *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 

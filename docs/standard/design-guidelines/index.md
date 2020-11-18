@@ -3,18 +3,17 @@ title: 프레임워크 디자인 지침
 description: API 일관성과 사용 편의성을 보장 하기 위해 .NET을 확장 하 고 상호 작용 하는 라이브러리를 디자인 하기 위한 프레임 워크 디자인 지침을 참조 하세요.
 titleSuffix: ''
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 17998adb1d18579f6763a80a82944e742e284e4e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 9dc764492e1ac565c51d49d07e6566295bb76bc1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769069"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821036"
 ---
 # <a name="framework-design-guidelines"></a>프레임워크 디자인 지침
 이 섹션에서는 .NET Framework를 확장 하 고 상호 작용 하는 라이브러리를 디자인 하기 위한 지침을 제공 합니다. 개발에 사용 되는 프로그래밍 언어와 독립적인 통합 프로그래밍 모델을 제공 하 여 라이브러리 디자이너가 API 일관성과 사용 편의성을 보장할 수 있도록 돕는 것이 목표입니다. .NET Framework를 확장 하는 클래스 및 구성 요소를 개발 하는 경우 이러한 디자인 지침을 따르는 것이 좋습니다. 일관 되지 않은 라이브러리 디자인은 개발자 생산성에 영향을 주지 않고 채택을 유지 하지 않습니다.  

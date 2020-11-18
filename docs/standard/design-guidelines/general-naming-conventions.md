@@ -2,7 +2,6 @@
 title: 일반 명명 규칙
 description: 단어 선택, 약어 및 머리글자어 사용에 대 한 지침, 언어별 이름을 사용 하지 않는 방법에 대 한 지침과 관련 된 일반적인 명명 규칙을 사용 합니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - type names, conflicts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769082"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821101"
 ---
 # <a name="general-naming-conventions"></a>일반 명명 규칙
 
@@ -35,22 +34,22 @@ ms.locfileid: "84769082"
 
  속성 이름이 `CanScrollHorizontally` `ScrollableX` (X 축에 대 한 모호한 참조) 보다 좋습니다.
 
- ❌밑줄, 하이픈 또는 다른 영숫자가 아닌 문자를 사용 하지 마십시오.
+ ❌ 밑줄, 하이픈 또는 다른 영숫자가 아닌 문자를 사용 하지 마십시오.
 
- ❌헝가리어 표기법은 사용 하지 마십시오.
+ ❌ 헝가리어 표기법은 사용 하지 마십시오.
 
- ❌널리 사용 되는 프로그래밍 언어의 키워드와 충돌 하는 식별자를 사용 하지 마십시오.
+ ❌ 널리 사용 되는 프로그래밍 언어의 키워드와 충돌 하는 식별자를 사용 하지 마십시오.
 
  CLS (공용 언어 사양)의 규칙 4에 따라 모든 규격 언어는 해당 언어의 키워드를 식별자로 사용 하는 명명 된 항목에 대 한 액세스를 허용 하는 메커니즘을 제공 해야 합니다. 예를 들어 c #에서는이 경우 이스케이프 메커니즘으로 @ 기호를 사용 합니다. 그러나 이스케이프 시퀀스가 없는 메서드를 사용 하는 것은 훨씬 더 어렵기 때문에 일반적인 키워드를 사용 하지 않는 것이 좋습니다.
 
 ## <a name="using-abbreviations-and-acronyms"></a>약어 및 머리글자어 사용
- ❌식별자 이름의 일부로 약어 또는 축약를 사용 하지 마십시오.
+ ❌ 식별자 이름의 일부로 약어 또는 축약를 사용 하지 마십시오.
 
  예를 들어 대신를 사용 `GetWindow` `GetWin` 합니다.
 
- ❌광범위 하 게 허용 되지 않는 머리글자어를 사용 하 고, 필요한 경우에만 사용 하지 마십시오.
+ ❌ 광범위 하 게 허용 되지 않는 머리글자어를 사용 하 고, 필요한 경우에만 사용 하지 마십시오.
 
-## <a name="avoiding-language-specific-names"></a>언어별 이름 방지
+## <a name="avoiding-language-specific-names"></a>Language-Specific 이름 방지
  ✔️ 형식 이름에 대해 언어별 키워드 대신 의미 있는 이름을 사용 합니다.
 
  예를 들어 `GetLength` 는 보다 더 나은 이름입니다 `GetInt` .
@@ -62,10 +61,10 @@ ms.locfileid: "84769082"
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**바이트**|**Byte**|**unsigned char**|**Byte**|
-|**short**|**간략히**|**short**|**Int16**|
+|**byte**|**Byte**|**unsigned char**|**Byte**|
+|**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**정수**|**int**|**Int32**|
+|**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
@@ -74,7 +73,7 @@ ms.locfileid: "84769082"
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**String**|**String**|**String**|
-|**object**|**Object**|**Object**|**Object**|
+|**object**|**개체**|**개체**|**개체**|
 
  `value` `item` 드문 경우 이지만 식별자에 의미 체계가 없고 매개 변수의 형식이 중요 하지 않은 경우에는 형식 이름을 반복 하는 대신 또는와 같은 일반 이름을 사용 ✔️ 합니다.
 
@@ -91,7 +90,7 @@ ms.locfileid: "84769082"
 
  기존 API의 새 버전을 나타내기 위해 숫자 접미사를 사용 합니다. 특히 API의 기존 이름이 적절 한 이름 (예: 업계 표준) 인 경우에는 의미 있는 접미사를 추가 하거나 이름을 변경 하는 것이 적절 한 옵션이 아닌 경우에 ✔️ 합니다.
 
- ❌식별자에 대해 "Ex" (또는 이와 유사한) 접미사를 사용 하 여 동일한 API의 이전 버전과 구별 하지 마십시오.
+ ❌ 식별자에 대해 "Ex" (또는 이와 유사한) 접미사를 사용 하 여 동일한 API의 이전 버전과 구별 하지 마십시오.
 
  ✔️ 32 비트 정수 대신 64 비트 정수 (long 정수)에서 작동 하는 Api 버전을 도입할 때 "64" 접미사를 사용 합니다. 기존 32 비트 API가 있는 경우에만이 방법을 사용 해야 합니다. 64 비트 버전만 사용 하는 새로운 Api에 대해서는이 작업을 수행 하지 마세요.
 

@@ -2,7 +2,6 @@
 title: '방법: 디지털 서명으로 XML 문서 서명'
 description: 디지털 서명으로 XML 문서에 서명 하는 방법에 대해 알아봅니다. .NET의 System.Security.Cryptography.Xml 네임 스페이스에 있는 클래스를 사용 합니다.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: e1457fd659ab63489bd4cfafd7731a4b098a2791
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557075"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820165"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>방법: 디지털 서명으로 XML 문서 서명
 

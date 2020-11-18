@@ -1,7 +1,6 @@
 ---
 title: 추상 클래스 디자인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, abstract classes
 - abstract classes, design guidelines
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-ms.openlocfilehash: e6a5923f293ed536fb272f6fe6c805067aede0ab
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6903e10c8695376d8ac5961461796c5413307f90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280779"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821647"
 ---
 # <a name="abstract-class-design"></a>추상 클래스 디자인
 
-❌추상 형식에서 public 또는 protected 내부 생성자를 정의 하지 마십시오.
+❌ 추상 형식에서 public 또는 protected 내부 생성자를 정의 하지 마십시오.
 
  생성자는 사용자가 형식의 인스턴스를 만들어야 하는 경우에만 public 이어야 합니다. 추상 형식의 인스턴스를 만들 수 없기 때문에 public 생성자가 포함 된 추상 형식이 잘못 디자인 되 고 사용자의 잘못 된 형식이 됩니다.
 
@@ -31,7 +30,7 @@ ms.locfileid: "84280779"
 
  제공 하는 각 추상 클래스에서 상속 되는 하나 이상의 구체적 형식을 제공 ✔️ 합니다.
 
- 이렇게 하면 추상 클래스 디자인의 유효성을 검사 하는 데 도움이 됩니다. 예를 들어 <xref:System.IO.FileStream?displayProperty=nameWithType> 는 추상 클래스의 구현입니다 <xref:System.IO.Stream?displayProperty=nameWithType> .
+ 이렇게 하면 추상 클래스 디자인의 유효성을 검사 하는 데 도움이 됩니다. 예를 들어  <xref:System.IO.FileStream?displayProperty=nameWithType> 는 추상 클래스의 구현입니다 <xref:System.IO.Stream?displayProperty=nameWithType> .
 
  *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 

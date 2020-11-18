@@ -1,7 +1,6 @@
 ---
 title: System.Text.Json의 DateTime 및 DateTimeOffset 지원
 description: 라이브러리의 System.Text.JsDateTime 및 DateTimeOffset 형식이 지원 되는 방법에 대 한 개요입니다.
-ms.technology: dotnet-standard
 author: layomia
 ms.author: laakinri
 ms.date: 07/22/2019
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f8161c40f21428a4a22bef09582754069f3a2b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188759"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817538"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
@@ -125,10 +124,10 @@ Serialize를 위해 `DateTime(Offset).ToString` 변환기 쓰기 논리에서 �
 
 에 구현 된 확장 ISO 8601-1:2019 프로필은 <xref:System.Text.Json> 날짜 및 시간 표현에 대해 다음과 같은 구성 요소를 정의 합니다. 이러한 구성 요소는 구문 분석 및 형식 지정 및 표현을 할 때 지원 되는 다양 한 수준의 세분성을 정의 하는 데 사용 됩니다 <xref:System.DateTime> <xref:System.DateTimeOffset> .
 
-| 구성 요소       | 서식                      | Description                                                                     |
+| 구성 요소       | 서식                      | 설명                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Year            | "yyyy"                      | 0001-9999                                                                       |
-| Month           | "MM"                        | 01-12                                                                           |
+| 월           | "MM"                        | 01-12                                                                           |
 | 일             | "dd"                        | 월/연도를 기준으로 하는 01-28, 01-29, 01-30, 01-31                                  |
 | 시간            | "HH"                        | 00-23                                                                           |
 | Minute          | "mm"                        | 00-59                                                                           |

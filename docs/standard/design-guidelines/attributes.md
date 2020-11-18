@@ -1,20 +1,19 @@
 ---
 title: 특성
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617563"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821621"
 ---
 # <a name="attributes"></a>특성
-<xref:System.Attribute?displayProperty=nameWithType>는 사용자 지정 특성을 정의 하는 데 사용 되는 기본 클래스입니다.
+<xref:System.Attribute?displayProperty=nameWithType> 는 사용자 지정 특성을 정의 하는 데 사용 되는 기본 클래스입니다.
 
  특성은 어셈블리, 형식, 멤버 및 매개 변수와 같은 프로그래밍 요소에 추가할 수 있는 주석입니다. 어셈블리의 메타 데이터에 저장 되 고 리플렉션 Api를 사용 하 여 런타임에 액세스할 수 있습니다. 예를 들어 프레임 워크는 형식 또는 멤버가 <xref:System.ObsoleteAttribute> 더 이상 사용 되지 않음을 나타내기 위해 형식 또는 멤버에 적용 될 수 있는를 정의 합니다.
 
@@ -34,11 +33,11 @@ ms.locfileid: "85617563"
 
  생성자 매개 변수를 제공 하 여 필수 인수에 해당 하는 속성을 초기화 ✔️ 합니다. 각 매개 변수는 해당 속성으로 동일한 이름 (다른 대/소문자 구분)을 사용 해야 합니다.
 
- ❌선택적 인수에 해당 하는 속성을 초기화 하는 생성자 매개 변수를 제공 하지 마십시오.
+ ❌ 선택적 인수에 해당 하는 속성을 초기화 하는 생성자 매개 변수를 제공 하지 마십시오.
 
  즉, 생성자와 setter를 모두 사용 하 여 설정할 수 있는 속성은 없습니다. 이 지침을 사용 하면 선택적 인수를 매우 명확 하 게 사용할 수 있으며, 두 가지 방법으로 동일한 작업을 수행 하지 않아도 됩니다.
 
- ❌사용자 지정 특성 생성자를 오버 로드 하지 않습니다.
+ ❌ 사용자 지정 특성 생성자를 오버 로드 하지 않습니다.
 
  생성자가 하나뿐인 경우 필요한 인수와 선택적 인수를 사용자에 게 명확 하 게 전달 합니다.
 

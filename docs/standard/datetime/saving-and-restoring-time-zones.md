@@ -1,7 +1,6 @@
 ---
 title: 표준 시간대 저장 및 복원
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-ms.openlocfilehash: 6a05bf4ce062a3f4e539e9b89779cb468b9782a6
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 0658bad6da078b6e44695a92b6cb2b22576f6424
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063393"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817577"
 ---
 # <a name="saving-and-restoring-time-zones"></a>표준 시간대 저장 및 복원
 
@@ -72,6 +71,6 @@ ms.locfileid: "93063393"
 
 포함 된 리소스를 사용 하 여 serialize 된 표준 시간대 데이터를 저장 하는 예제는 [방법: 포함 리소스에 표준 시간대 저장](save-time-zones-to-an-embedded-resource.md) 및 [방법: 포함 리소스에서 표준 시간대 복원](restore-time-zones-from-an-embedded-resource.md)을 참조 하세요.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)

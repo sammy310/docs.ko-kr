@@ -2,17 +2,16 @@
 title: 매개 변수 이름 지정
 description: 매개 변수의 이름을 지정 하는 방법에 대 한 지침을 알아봅니다. 예를 들어 카멜식 대/소문자 & 설명 매개 변수 이름을 사용 하 & 형식 대신 의미에 따라 이름을 지정 하는 것이 좋습니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583520"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820841"
 ---
 # <a name="naming-parameters"></a>매개 변수 이름 지정
 시각적 디자인 도구에서 Intellisense 및 클래스 검색 기능을 제공 하는 경우 매개 변수가 설명서 및 디자이너에 표시 되기 때문에 가독성을 명확 하 게 이해 하는 것은 매개 변수 이름에 대 한 지침을 따르는 것이 중요 합니다.
@@ -30,7 +29,7 @@ ms.locfileid: "84583520"
 
  연산자 오버 로드 매개 변수에 대 한 의미 있는 이름을 고려 ✔️ 합니다. 이렇게 하면 중요 한 값이 추가 됩니다.
 
- ❌연산자 오버 로드 매개 변수 이름에 약어 또는 숫자 인덱스를 사용 하지 마십시오.
+ ❌ 연산자 오버 로드 매개 변수 이름에 약어 또는 숫자 인덱스를 사용 하지 마십시오.
 
  *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 

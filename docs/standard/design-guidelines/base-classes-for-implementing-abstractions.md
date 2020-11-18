@@ -1,17 +1,16 @@
 ---
 title: 추상화 구현을 위한 기본 클래스
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280571"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821595"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
 엄격 하 게 말하면 클래스에서 다른 클래스가 파생 될 때 클래스는 기본 클래스가 됩니다. 그러나이 섹션의 목적을 위해 기본 클래스는 주로 일반적인 추상화를 제공 하거나 상속을 통해 일부 기본 구현을 다시 사용 하기 위해 다른 클래스에 대해 디자인 된 클래스입니다. 일반적으로 기본 클래스는 계층 구조의 루트에 있는 추상화와 아래쪽의 여러 사용자 지정 구현 사이에서 상속 계층의 중간에 있습니다.
@@ -26,7 +25,7 @@ ms.locfileid: "84280571"
 
  기본 클래스를 주요 시나리오 형식과 다른 네임 스페이스에 배치 하는 것이 좋습니다 ✔️. 정의에 따라 기본 클래스는 고급 확장성 시나리오를 위한 것 이므로 대부분의 사용자에 게는 유용 하지 않습니다.
 
- ❌클래스가 공용 Api에서 사용 되는 경우 "Base" 접미사를 사용 하 여 기본 클래스의 이름을 지정 하지 마십시오.
+ ❌ 클래스가 공용 Api에서 사용 되는 경우 "Base" 접미사를 사용 하 여 기본 클래스의 이름을 지정 하지 마십시오.
 
  *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
 

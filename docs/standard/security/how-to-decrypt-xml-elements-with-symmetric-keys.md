@@ -1,7 +1,6 @@
 ---
 title: '방법: 대칭 키를 사용하여 XML 요소 해독'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 8c9f75442e04b76369b5b2c5c1b266ce2a511a63
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555749"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820308"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 해독
 

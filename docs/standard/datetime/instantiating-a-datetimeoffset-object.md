@@ -2,7 +2,6 @@
 title: DateTimeOffset 개체 인스턴스화
 description: .NET에서 DateTimeOffset 개체를 인스턴스화하는 방법 (인스턴스를 만드는 방법)을 참조 하세요. 날짜 & 시간 리터럴, 생성자, 암시적 형식 변환 & 자세히 알아보세요.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: 4158a3d3bbd7ada87dd0c773cf9a0f5e001ad918
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b0eae79e9c39694bdc87622a4c442083791c6109
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063627"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817811"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>DateTimeOffset 개체 인스턴스화
 
@@ -93,6 +92,6 @@ ms.locfileid: "93063627"
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)

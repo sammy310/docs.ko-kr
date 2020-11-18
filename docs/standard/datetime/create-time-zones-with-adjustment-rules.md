@@ -1,7 +1,6 @@
 ---
 title: '방법: 조정 규칙을 사용하여 표준 시간대 만들기'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], and adjustment rules
 - adjustment rule [.NET]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-ms.openlocfilehash: 28ab7c8ceabcfd64a6797cf5a85869c469963983
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 9dbb78c489fd6c2463bff747a275d5f72aa502b1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063822"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818006"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>방법: 조정 규칙을 사용하여 표준 시간대 만들기
 
@@ -89,7 +88,7 @@ ms.locfileid: "93063822"
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [표준 시간대 개요](time-zone-overview.md)

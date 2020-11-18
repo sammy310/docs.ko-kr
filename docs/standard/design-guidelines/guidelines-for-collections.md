@@ -1,25 +1,24 @@
 ---
 title: 컬렉션에 대한 지침
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: cc853be2310cf72c4eb559f625c6a37a44ed7db8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276051"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821088"
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
 몇 가지 공통적인 특징이 있는 개체 그룹을 조작 하도록 특별히 디자인 된 모든 형식은 컬렉션으로 간주할 수 있습니다. 이러한 형식이 또는를 구현 하는 경우에는 거의 항상 적절 <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> 합니다. 따라서이 섹션에서는 해당 인터페이스 중 하나 또는 둘 다를 구현 하는 형식만 컬렉션으로 간주 합니다.
 
- ❌공용 Api에서 약하게 형식화 된 컬렉션을 사용 하지 마세요.
+ ❌ 공용 Api에서 약하게 형식화 된 컬렉션을 사용 하지 마세요.
 
  컬렉션 항목을 나타내는 모든 반환 값 및 매개 변수의 형식은 기본 형식이 아닌 정확한 항목 형식 이어야 합니다 .이는 컬렉션의 public 멤버에만 적용 됩니다.
 
  ❌<xref:System.Collections.ArrayList> <xref:System.Collections.Generic.List%601> 공용 api에서 또는를 사용 하지 마세요.
 
- 이러한 형식은 공용 Api가 아닌 내부 구현에서 사용 하도록 디자인 된 데이터 구조입니다. `List<T>`는 Api 및 유연성의 정리 비용으로 성능 및 기능에 최적화 되어 있습니다. 예를 들어를 반환 하는 경우 `List<T>` 클라이언트 코드에서 컬렉션을 수정할 때 알림을 받을 수 없습니다. 또한는 `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> 많은 시나리오에서 유용 하지 않거나 적용 되지 않는 등의 많은 멤버를 노출 합니다. 다음 두 섹션에서는 공용 Api에서 사용 하기 위해 특별히 설계 된 형식 (추상화)을 설명 합니다.
+ 이러한 형식은 공용 Api가 아닌 내부 구현에서 사용 하도록 디자인 된 데이터 구조입니다. `List<T>` 는 Api 및 유연성의 정리 비용으로 성능 및 기능에 최적화 되어 있습니다. 예를 들어를 반환 하는 경우 `List<T>` 클라이언트 코드에서 컬렉션을 수정할 때 알림을 받을 수 없습니다. 또한는 `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> 많은 시나리오에서 유용 하지 않거나 적용 되지 않는 등의 많은 멤버를 노출 합니다. 다음 두 섹션에서는 공용 Api에서 사용 하기 위해 특별히 설계 된 형식 (추상화)을 설명 합니다.
 
  ❌`Hashtable` `Dictionary<TKey,TValue>` 공용 api에서 또는를 사용 하지 마세요.
 
@@ -34,12 +33,12 @@ ms.locfileid: "84276051"
 ## <a name="collection-parameters"></a>컬렉션 매개 변수
  ✔️ 매개 변수 형식으로 사용할 수 있는 최소 특수화 된 형식을 사용 합니다. 컬렉션을 매개 변수로 사용 하는 대부분의 멤버는 인터페이스를 사용 `IEnumerable<T>` 합니다.
 
- ❌속성에 <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> 액세스 하기 위해 또는를 매개 변수로 사용 하지 마십시오 `Count` .
+ ❌ 속성에 <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> 액세스 하기 위해 또는를 매개 변수로 사용 하지 마십시오 `Count` .
 
  대신 `IEnumerable<T>` 또는를 사용 하 `IEnumerable` 고 개체가 또는를 구현 하는지 여부를 동적으로 확인 하는 것이 좋습니다 `ICollection<T>` `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>컬렉션 속성 및 반환 값
- ❌설정 가능한 컬렉션 속성을 제공 하지 마십시오.
+ ❌ 설정 가능한 컬렉션 속성을 제공 하지 마십시오.
 
  사용자는 컬렉션을 먼저 지운 다음 새 내용을 추가 하 여 컬렉션의 콘텐츠를 바꿀 수 있습니다. 전체 컬렉션을 바꾸는 것이 일반적인 시나리오 인 경우 컬렉션에 메서드를 제공 하는 것이 좋습니다 `AddRange` .
 
@@ -65,14 +64,14 @@ ms.locfileid: "84276051"
 
  키 컬렉션은 일반적으로 더 큰 메모리 차지을 가지 며, 메모리 오버 헤드가 키가 있는 이점 보다 큰 경우에는 사용 하지 않아야 합니다.
 
- ❌컬렉션 속성 또는 컬렉션을 반환 하는 메서드에서는 null 값을 반환 하지 않습니다. 대신 빈 컬렉션이 나 빈 배열을 반환 합니다.
+ ❌ 컬렉션 속성 또는 컬렉션을 반환 하는 메서드에서는 null 값을 반환 하지 않습니다. 대신 빈 컬렉션이 나 빈 배열을 반환 합니다.
 
  일반 규칙은 null 및 비어 있는 (0 개 항목) 컬렉션 또는 배열을 동일 하 게 처리 해야 한다는 것입니다.
 
 ### <a name="snapshots-versus-live-collections"></a>스냅숏과 라이브 컬렉션 비교
  특정 시점의 상태를 나타내는 컬렉션을 스냅숏 컬렉션 이라고 합니다. 예를 들어 데이터베이스 쿼리에서 반환 된 행을 포함 하는 컬렉션은 스냅숏이 됩니다. 항상 현재 상태를 나타내는 컬렉션을 라이브 컬렉션 이라고 합니다. 예를 들어 항목 컬렉션은 `ComboBox` 라이브 컬렉션입니다.
 
- ❌속성에서 스냅숏 컬렉션을 반환 하지 않습니다. 속성은 라이브 컬렉션을 반환 해야 합니다.
+ ❌ 속성에서 스냅숏 컬렉션을 반환 하지 않습니다. 속성은 라이브 컬렉션을 반환 해야 합니다.
 
  Getter 속성은 매우 간단한 작업 이어야 합니다. 스냅숏을 반환 하려면 O (n) 작업에서 내부 컬렉션의 복사본을 만들어야 합니다.
 
@@ -91,7 +90,7 @@ ms.locfileid: "84276051"
 
  ✔️ 바이트 컬렉션 대신 바이트 배열을 사용 합니다.
 
- ❌속성 getter가 호출 될 때마다 속성이 새 배열 (예: 내부 배열 복사본)을 반환 해야 하는 경우에는 속성에 배열을 사용 하지 마세요.
+ ❌ 속성 getter가 호출 될 때마다 속성이 새 배열 (예: 내부 배열 복사본)을 반환 해야 하는 경우에는 속성에 배열을 사용 하지 마세요.
 
 ## <a name="implementing-custom-collections"></a>사용자 지정 컬렉션 구현
  `Collection<T>` `ReadOnlyCollection<T>` 새 컬렉션을 디자인할 때, 또는에서 상속 하는 것을 고려 ✔️ `KeyedCollection<TKey,TItem>` .
@@ -102,12 +101,12 @@ ms.locfileid: "84276051"
 
  제네릭이 아닌 컬렉션 인터페이스 (및)를 구현 하는 것이 좋습니다 `IList` `ICollection` . 컬렉션은 이러한 인터페이스를 입력으로 가져오는 api에 자주 전달 됩니다. ✔️
 
- ❌컬렉션의 개념과 관련이 없는 복잡 한 Api를 사용 하 여 형식에 컬렉션 인터페이스를 구현 하지 마십시오.
+ ❌ 컬렉션의 개념과 관련이 없는 복잡 한 Api를 사용 하 여 형식에 컬렉션 인터페이스를 구현 하지 마십시오.
 
- ❌과 같은 제네릭이 아닌 기본 컬렉션에서 상속 하지 마십시오 `CollectionBase` . 대신 `Collection<T>`, `ReadOnlyCollection<T>` 및 `KeyedCollection<TKey,TItem>`를 사용해야 합니다.
+ ❌ 과 같은 제네릭이 아닌 기본 컬렉션에서 상속 하지 마십시오 `CollectionBase` . 대신 `Collection<T>`, `ReadOnlyCollection<T>` 및 `KeyedCollection<TKey,TItem>`를 사용해야 합니다.
 
 ### <a name="naming-custom-collections"></a>사용자 지정 컬렉션 이름 지정
- 컬렉션 (를 구현 하는 형식 `IEnumerable` )은 주로 (1) 구조 관련 작업을 포함 하는 새 데이터 구조를 만들고 기존 데이터 구조 (예:,, <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) 및 (2) 특정 항목 집합을 포함 하는 특수 한 컬렉션을 만들기 <xref:System.Collections.Specialized.StringCollection> (예:) 하는 데 사용 됩니다. 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 주로 사용 됩니다. 특수 컬렉션은 주로 Api (속성 및 매개 변수 형식)로 노출 됩니다.
+ 컬렉션 (를 구현 하는 형식 `IEnumerable` )은 주로 (1) 구조 관련 작업을 포함 하는 새 데이터 구조를 만들고 기존 데이터 구조 (예:,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) 및 (2) 특정 항목 집합을 포함 하는 특수 한 컬렉션을 만들기  <xref:System.Collections.Specialized.StringCollection> (예:) 하는 데 사용 됩니다. 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 주로 사용 됩니다. 특수 컬렉션은 주로 Api (속성 및 매개 변수 형식)로 노출 됩니다.
 
  ✔️은 또는을 구현 하는 추상화 이름에 "Dictionary" 접미사를 사용 `IDictionary` `IDictionary<TKey,TValue>` 합니다.
 
@@ -115,7 +114,7 @@ ms.locfileid: "84276051"
 
  사용자 지정 데이터 구조에 적합 한 데이터 구조 이름을 사용 ✔️ 합니다.
 
- ❌컬렉션 추상화 이름에 "System.collections.generic.linkedlist" 또는 "Hashtable"와 같은 접미사의 특정 구현을 사용 하지 마십시오.
+ ❌ 컬렉션 추상화 이름에 "System.collections.generic.linkedlist" 또는 "Hashtable"와 같은 접미사의 특정 구현을 사용 하지 마십시오.
 
  컬렉션 이름에 항목 형식의 이름을 접두사로 사용 하는 것이 좋습니다 ✔️. 예를 들어 (구현) 형식의 항목을 저장 하는 컬렉션의 `Address` `IEnumerable<Address>` 이름을로 지정 해야 합니다 `AddressCollection` . 항목 형식이 인터페이스 이면 항목 형식의 "I" 접두사를 생략할 수 있습니다. 따라서 항목의 컬렉션을 <xref:System.IDisposable> 호출할 수 있습니다 `DisposableCollection` .
 

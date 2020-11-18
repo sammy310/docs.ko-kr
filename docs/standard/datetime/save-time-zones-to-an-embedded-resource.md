@@ -1,7 +1,6 @@
 ---
 title: '방법: 포함 리소스에 표준 시간대 저장'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063406"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817603"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 리소스에 표준 시간대 저장
 
@@ -68,7 +67,7 @@ ms.locfileid: "93063406"
 
 메서드는 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> .NET XML 리소스 파일에 전체 헤더 정보를 추가 하므로 기존 파일에 리소스를 추가 하는 데 사용할 수 없습니다. 이 예제에서는 SerializedTimeZones 파일을 확인 하 고, 있는 경우 두 개의 serialize 된 표준 시간대 이외의 모든 리소스를 제네릭 개체에 저장 하 여이를 처리 합니다 <xref:System.Collections.Generic.Dictionary%602> . 그러면 기존 파일이 삭제 되 고 기존 리소스가 새 SerializedTimeZones 파일에 추가 됩니다. Serialize 된 표준 시간대 데이터도이 파일에 추가 됩니다.
 
-리소스의 키 (또는 **이름** ) 필드에는 공백이 포함 되 면 안 됩니다. <xref:System.String.Replace%28System.String%2CSystem.String%29>메서드를 호출 하 여 리소스 파일에 할당 되기 전에 표준 시간대 식별자의 포함 된 모든 공백을 제거 합니다.
+리소스의 키 (또는 **이름**) 필드에는 공백이 포함 되 면 안 됩니다. <xref:System.String.Replace%28System.String%2CSystem.String%29>메서드를 호출 하 여 리소스 파일에 할당 되기 전에 표준 시간대 식별자의 포함 된 모든 공백을 제거 합니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
@@ -81,7 +80,7 @@ ms.locfileid: "93063406"
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
 - [표준 시간대 개요](time-zone-overview.md)

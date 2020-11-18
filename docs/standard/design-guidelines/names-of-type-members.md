@@ -2,7 +2,6 @@
 title: 형식 멤버의 이름
 description: 메서드, 속성, 이벤트 및 필드와 같은 .NET의 형식 멤버를 명명 하는 방법에 대 한 지침을 알아봅니다.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820915"
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.
@@ -41,7 +40,7 @@ public class String {
 
  명사, 명사구 또는 형용사를 사용 하 여 이름 속성을 ✔️ 합니다.
 
- ❌다음 예제와 같이 "Get" 메서드의 이름과 일치 하는 속성이 없습니다.
+ ❌ 다음 예제와 같이 "Get" 메서드의 이름과 일치 하는 속성이 없습니다.
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  예를 들어 창이 닫히기 전에 발생하는 닫기 이벤트는 `Closing`이라고 하고 창이 닫힌 후에 발생하는 닫기 이벤트는 `Closed`라고 합니다.
 
- ❌사전 및 사후 이벤트를 나타내려면 "Before" 또는 "After" 접두사 또는 postfixes를 사용 하지 마십시오. 위에서 설명한 대로 현재 및 과거 시제를 사용합니다.
+ ❌ 사전 및 사후 이벤트를 나타내려면 "Before" 또는 "After" 접두사 또는 postfixes를 사용 하지 마십시오. 위에서 설명한 대로 현재 및 과거 시제를 사용합니다.
 
  다음 예제에 표시 된 것 처럼 "EventHandler" 접미사를 사용 하 여 이벤트 처리기 (이벤트 유형으로 사용 되는 대리자)의 이름을 ✔️ 합니다.
 
@@ -92,7 +91,7 @@ public class Control {
 
  명사, 명사구 또는 형용사를 사용 하 여 이름 필드를 ✔️ 합니다.
 
- ❌필드 이름에는 접두사를 사용 하지 마십시오.
+ ❌ 필드 이름에는 접두사를 사용 하지 마십시오.
 
  예를 들어 "g_" 또는 "s_"를 사용하여 고정 필드를 나타내지 마십시오.
 

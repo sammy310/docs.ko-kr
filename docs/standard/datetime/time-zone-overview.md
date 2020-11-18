@@ -1,7 +1,6 @@
 ---
 title: 표준 시간대 개요
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], about time zones
 - transition time [.NET]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - adjustment rule [.NET]
 - time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 0f0fdbe4b63ddc9d55f7397fa71198d72e60e669
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1e876fd608b088b02385467367948440549e96e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064108"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817512"
 ---
 # <a name="time-zone-overview"></a>표준 시간대 개요
 
@@ -71,6 +70,6 @@ ms.locfileid: "93064108"
 
 표준 시간대 간의 시간 변환에 대한 세부 정보는 [표준 시간대 간의 시간 변환](converting-between-time-zones.md)을 참조하세요.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](index.md)
