@@ -99,6 +99,8 @@
       href: language-reference/unit-type.md
     - name: 문자열
       href: language-reference/strings.md
+    - name: 보간된 문자열
+      href: language-reference/interpolated-strings.md
     - name: 튜플
       href: language-reference/tuples.md
     - name: F# 컬렉션 형식
@@ -248,6 +250,8 @@
       href: language-reference/byrefs.md
     - name: 참조 셀
       href: language-reference/reference-cells.md
+    - name: nameof
+      href: language-reference/nameof.md
     - name: 컴파일러 지시문
       href: language-reference/compiler-directives.md
     - name: 컴파일러 옵션
