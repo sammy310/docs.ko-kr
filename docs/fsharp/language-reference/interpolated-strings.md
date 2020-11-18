@@ -2,12 +2,12 @@
 title: 보간된 문자열
 description: 'F # 식을 직접 포함할 수 있는 특수 한 형식의 문자열에 대해 알아봅니다.'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688629"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829689"
 ---
 # <a name="interpolated-strings"></a>보간된 문자열
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>형식화 된 보간된 문자열
 
-보간된 문자열에는 safey 형식을 적용 하는 F # 형식 지정 자가 있을 수도 있습니다.
+보간된 문자열에는 형식 안전성을 적용 하기 위해 F # 형식 지정자도 있을 수 있습니다.
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>보간된 문자열에서 식 맞춤
 
-를 사용 하 여 보간된 문자열 내에 식을 왼쪽으로 맞추거나 오른쪽에 맞추고, 공백 수를 지정할 수 있습니다 `|` . 다음 보간된 문자열은 왼쪽 및 오른쪽 식을 각각 7 개의 공백으로 정렬 합니다.
+를 사용 하 여 보간된 문자열 내에 식을 왼쪽으로 맞추거나 오른쪽에 맞추고, 공백 수를 지정할 수 있습니다 `|` . 다음 보간된 문자열은 왼쪽 및 오른쪽 식을 각각 일곱 개의 공백으로 맞춥니다.
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-또한 보간된 문자열은 형식 주석을 통해로 typechecked 될 수도 있습니다 <xref:System.FormattableString> .
+또한 보간된 문자열은 형식 주석을 통해로 확인할 수도 있습니다 <xref:System.FormattableString> .
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

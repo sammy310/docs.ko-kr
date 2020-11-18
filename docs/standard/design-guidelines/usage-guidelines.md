@@ -1,16 +1,15 @@
 ---
 title: 사용 지침
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-ms.openlocfilehash: 03eaba3e52cb25619f65637efb4f414c22770440
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6ea7c7b9ada95e3d0c425aaea18be6cdbb4ce35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291346"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828506"
 ---
 # <a name="usage-guidelines"></a>사용 지침
 
@@ -21,13 +20,13 @@ ms.locfileid: "84291346"
 > [!NOTE]
 > 일반적인 기본 제공 .NET Framework 형식에 대 한 지침 및 추가 정보는,,,,,,,에 대 한 참조 항목을 참조 하세요. <xref:System.DateTime?displayProperty=nameWithType> <xref:System.DateTimeOffset?displayProperty=nameWithType> <xref:System.ICloneable?displayProperty=nameWithType> <xref:System.IComparable%601?displayProperty=nameWithType> <xref:System.IEquatable%601?displayProperty=nameWithType> <xref:System.Nullable%601?displayProperty=nameWithType> <xref:System.Object?displayProperty=nameWithType> <xref:System.Uri?displayProperty=nameWithType>
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [배열](arrays.md)  
 [특성](attributes.md)  
 [컬렉션](guidelines-for-collections.md)  
 [serialization](serialization.md)  
-[System.xml 사용](system-xml-usage.md)  
+[System.Xml 사용](system-xml-usage.md)  
 [같음 연산자](equality-operators.md)  
 
 *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*

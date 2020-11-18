@@ -1,7 +1,6 @@
 ---
 title: 보호된 멤버
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - members [.NET Framework], protected
 - protected members
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cc2ab3e605cfb5382f107dead0c95495858fc6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286121"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828727"
 ---
 # <a name="protected-members"></a>보호된 멤버
 보호 된 멤버 자체는 확장성을 제공 하지 않지만 하위 클래스를 보다 강력 하 게 확장할 수 있습니다. 이러한 옵션을 사용 하 여 기본 public 인터페이스를 불필요 하 게 복잡 하 게 하지 않고 고급 사용자 지정 옵션을 노출할 수 있습니다.

@@ -1,19 +1,18 @@
 ---
 title: System.Xml 사용법
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: 07828219f2e17be925d060fa3bb33a9209ecb62b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a01799bd130de0222d4d66dee4955375c1a1911f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291671"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828597"
 ---
 # <a name="systemxml-usage"></a>System.Xml 사용법
 이 섹션에서는 <xref:System.Xml?displayProperty=nameWithType> XML 데이터를 나타내는 데 사용할 수 있는 네임 스페이스에 있는 여러 형식의 사용에 대해 설명 합니다.
 
- ❌<xref:System.Xml.XmlNode> <xref:System.Xml.XmlDocument> XML 데이터를 표시 하는 데 또는를 사용 하지 마십시오. <xref:System.Xml.XPath.IXPathNavigable>대신,, 또는 하위 형식의 인스턴스를 사용 <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> <xref:System.Xml.Linq.XNode> 합니다. `XmlNode`및 `XmlDocument` 는 공용 api에서 노출 하도록 설계 되지 않았습니다.
+ ❌<xref:System.Xml.XmlNode> <xref:System.Xml.XmlDocument> XML 데이터를 표시 하는 데 또는를 사용 하지 마십시오. <xref:System.Xml.XPath.IXPathNavigable>대신,, 또는 하위 형식의 인스턴스를 사용 <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> <xref:System.Xml.Linq.XNode> 합니다. `XmlNode` 및 `XmlDocument` 는 공용 api에서 노출 하도록 설계 되지 않았습니다.
 
  ✔️는 `XmlReader` , `IXPathNavigable` 또는의 하위 형식을 `XNode` XML을 허용 하거나 반환 하는 멤버의 입력 또는 출력으로 사용 합니다.
 

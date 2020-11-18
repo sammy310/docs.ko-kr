@@ -1,18 +1,17 @@
 ---
 title: 가상 멤버
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620770"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828402"
 ---
 # <a name="virtual-members"></a>가상 멤버
 가상 멤버를 재정의할 수 있으므로 하위 클래스의 동작을 변경할 수 있습니다. 이러한 항목은 제공 하는 확장성 측면에서 콜백과 매우 유사 하지만 실행 성능과 메모리 사용 측면에서 더 효율적입니다. 또한 가상 멤버는 특수 한 종류의 기존 형식 (특수화)을 만들어야 하는 시나리오에서 보다 자연스럽 게 느껴질 수 있습니다.
@@ -23,7 +22,7 @@ ms.locfileid: "85620770"
 
  가상 멤버에 대 한 모든 호출은 예측할 수 없는 방식으로 재정의 될 수 있고 임의의 코드를 실행할 수 있기 때문에 콜백과 같은 가상 멤버는 디자인, 테스트 및 유지 관리 비용이 많이 듭니다. 또한 일반적으로 가상 멤버의 계약을 명확 하 게 정의 하는 데 더 많은 노력을 기울여야 하므로 이러한 작업을 디자인 하 고 문서화 하는 비용이 더 높습니다.
 
- ❌이 작업을 수행 하는 데 적합 한 이유가 없는 한 구성원을 가상으로 만들지 마세요. 가상 멤버의 디자인, 테스트 및 유지 관리와 관련 된 모든 비용을 파악 해야 합니다.
+ ❌ 이 작업을 수행 하는 데 적합 한 이유가 없는 한 구성원을 가상으로 만들지 마세요. 가상 멤버의 디자인, 테스트 및 유지 관리와 관련 된 모든 비용을 파악 해야 합니다.
 
  가상 멤버는 호환성을 손상 시 키 지 않고 변경 내용을 적용할 수 있는 측면에서 더 낮습니다. 또한 가상 멤버에 대 한 호출은 인라인 되지 않으므로 가상 멤버가 아닌 멤버 보다 속도가 느립니다.
 

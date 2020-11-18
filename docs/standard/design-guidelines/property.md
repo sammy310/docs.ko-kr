@@ -1,17 +1,16 @@
 ---
 title: 속성 디자인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291944"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828740"
 ---
 # <a name="property-design"></a>속성 디자인
 속성은 기술적으로 메서드와 매우 유사 하지만 사용 시나리오 측면에서 상당히 다릅니다. 스마트 필드로 표시 되어야 합니다. 여기에는 필드의 호출 구문과 메서드의 유연성이 있습니다.
@@ -20,7 +19,7 @@ ms.locfileid: "84291944"
 
  속성의 형식이 변경 가능한 참조 형식이 면 속성이 get 전용 이더라도 속성 값을 변경할 수 있습니다.
 
- ❌Getter 보다 접근성이 더 많은 setter를 사용 하 여 설정 전용 속성 또는 속성을 제공 하지 마십시오.
+ ❌ Getter 보다 접근성이 더 많은 setter를 사용 하 여 설정 전용 속성 또는 속성을 제공 하지 마십시오.
 
  예를 들어 public setter와 protected getter에는 속성을 사용 하지 마십시오.
 
@@ -34,7 +33,7 @@ ms.locfileid: "84291944"
 
  속성 setter가 예외를 throw 하는 경우 이전 값을 유지 ✔️.
 
- ❌속성 getter에서 예외가 throw 되지 않도록 합니다.
+ ❌ 속성 getter에서 예외가 throw 되지 않도록 합니다.
 
  Getter 속성은 단순 작업 이어야 하며 사전 조건이 없어야 합니다. Getter가 예외를 throw 할 수 있는 경우에는 메서드로 다시 디자인 해야 합니다. 이 규칙은 인수 유효성 검사의 결과로 예외가 발생할 것으로 간주 되는 인덱서에는 적용 되지 않습니다.
 
@@ -47,7 +46,7 @@ ms.locfileid: "84291944"
 
  항목의 컬렉션을 나타내는 형식에 인덱서를 제공 하는 것이 좋습니다 ✔️.
 
- ❌두 개 이상의 매개 변수가 있는 인덱싱된 속성을 사용 하지 마십시오.
+ ❌ 두 개 이상의 매개 변수가 있는 인덱싱된 속성을 사용 하지 마십시오.
 
  디자인에 여러 매개 변수가 필요한 경우 속성이 실질적으로 논리적 컬렉션에 대 한 접근자를 나타내는지 여부를 고려해 야 합니다. 그렇지 않은 경우 메서드를 대신 사용 합니다. 또는를 사용 하 여 메서드 이름을 시작 하는 것이 좋습니다 `Get` `Set` .
 
@@ -59,13 +58,13 @@ ms.locfileid: "84291944"
 
  C #에서 인덱서는 기본적으로 명명 된 항목입니다. 을 <xref:System.Runtime.CompilerServices.IndexerNameAttribute> 사용 하 여이 이름을 사용자 지정할 수 있습니다.
 
- ❌구문적으로 동일한 인덱서와 메서드를 모두 제공 하지 마십시오.
+ ❌ 구문적으로 동일한 인덱서와 메서드를 모두 제공 하지 마십시오.
 
- ❌한 형식에서 오버 로드 된 인덱서의 패밀리를 두 개 이상 제공 하지 마십시오.
+ ❌ 한 형식에서 오버 로드 된 인덱서의 패밀리를 두 개 이상 제공 하지 마십시오.
 
  이는 c # 컴파일러에 의해 적용 됩니다.
 
- ❌기본이 아닌 인덱싱된 속성을 사용 하지 마십시오.
+ ❌ 기본이 아닌 인덱싱된 속성을 사용 하지 마십시오.
 
  이는 c # 컴파일러에 의해 적용 됩니다.
 

@@ -1,14 +1,13 @@
 ---
 title: Serialization
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: d07549da371e403adca089c601ee5b028b268086
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291684"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828675"
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식으로 변환 하는 프로세스입니다. 예를 들어 개체를 serialize 하 고, HTTP를 사용 하 여 인터넷을 통해 전송 하 고, 대상 컴퓨터에서 deserialize 할 수 있습니다.
@@ -32,7 +31,7 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
 
  형식의 인스턴스가 .NET Remoting 경계 간에 이동 해야 하는 경우 런타임 Serialization을 지 원하는 것이 좋습니다. ✔️
 
- ❌일반적인 지 속성 이유에 대해서만 런타임 Serialization 또는 XML Serialization을 지원 하지 않습니다. 대신 데이터 계약 Serialization을 사용 하는 것이 좋습니다.
+ ❌ 일반적인 지 속성 이유에 대해서만 런타임 Serialization 또는 XML Serialization을 지원 하지 않습니다. 대신 데이터 계약 Serialization을 사용 하는 것이 좋습니다.
 
 ## <a name="supporting-data-contract-serialization"></a>데이터 계약 Serialization 지원
  형식은 형식에를 적용 하 <xref:System.Runtime.Serialization.DataContractAttribute> 고 <xref:System.Runtime.Serialization.DataMemberAttribute> 형식의 멤버 (필드 및 속성)에를 적용 하 여 데이터 계약 Serialization을 지원할 수 있습니다.
@@ -47,7 +46,7 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
 
  개체가 역직렬화될 때는 생성자가 호출되지 않습니다. 규칙에 대 한 예외가 있습니다. Deserialization 중에로 표시 된 컬렉션의 생성자 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 가 호출 됩니다. 따라서 일반 생성 중에 실행 되는 모든 논리는 serialization 콜백 중 하나로 구현 되어야 합니다.
 
- `OnDeserializedAttribute`가장 일반적으로 사용 되는 콜백 특성입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.
+ `OnDeserializedAttribute` 가장 일반적으로 사용 되는 콜백 특성입니다. 패밀리의 다른 특성으로는 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute>가 있습니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.
 
  ✔️ <xref:System.Runtime.Serialization.KnownTypeAttribute> 복잡 한 개체 그래프를 deserialize 할 때 사용 해야 하는 구체적인 형식을 나타내는 데 사용 하는 것이 좋습니다.
 
@@ -66,7 +65,7 @@ Serialization은 개체를 쉽게 유지 하거나 전송할 수 있는 형식�
 ## <a name="supporting-xml-serialization"></a>XML Serialization 지원
  데이터 계약 Serialization은 .NET Framework의 기본 serialization 기술 이지만 데이터 계약 Serialization에서 지원 하지 않는 serialization 시나리오가 있습니다. 예를 들어 serializer에서 생성하거나 사용하는 XML의 모양을 완전히 제어할 수 있는 권한이 없습니다. 이러한 세밀 한 제어가 필요한 경우 XML Serialization을 사용 해야 하며이 serialization 기술을 지원 하도록 형식을 디자인 해야 합니다.
 
- ❌생성 된 XML의 모양을 제어 하는 매우 강력한 이유가 없다면 XML 직렬화를 위해 특별히 형식을 디자인 하지 마십시오. 이 serialization 기술은 앞의 섹션에서 설명한 데이터 계약 Serialization으로 대체되었습니다.
+ ❌ 생성 된 XML의 모양을 제어 하는 매우 강력한 이유가 없다면 XML 직렬화를 위해 특별히 형식을 디자인 하지 마십시오. 이 serialization 기술은 앞의 섹션에서 설명한 데이터 계약 Serialization으로 대체되었습니다.
 
  <xref:System.Xml.Serialization.IXmlSerializable>Xml Serialization 특성을 적용 하 여 제공 되는 것 보다 serialize 된 XML의 셰이프를 더 많이 제어 하려는 경우 인터페이스를 구현 하는 것이 좋습니다. ✔️ 인터페이스의 두 메서드인 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 및 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>을 사용하면 직렬화된 XML 스트림을 완전히 제어할 수 있습니다. 를 적용 하 여 형식에 대해 생성 되는 XML 스키마를 제어할 수도 있습니다 `XmlSchemaProviderAttribute` .
 

@@ -1,26 +1,25 @@
 ---
 title: 봉인
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - limiting extensibility
 - classes [.NET Framework], sealing
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: a54c68efb4ac114fe0e5a5712eca877bef35c103
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290112"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828688"
 ---
 # <a name="sealing"></a>봉인
 개체 지향 프레임 워크의 기능 중 하나는 개발자가 프레임 워크 디자이너에서 예기치 않은 방식으로 확장 하 고 사용자 지정할 수 있다는 것입니다. 이는 확장 가능한 디자인의 기능과 위험입니다. 프레임 워크를 설계할 때, 원하는 경우 확장성을 신중 하 게 디자인 하 고, 위험에 따라 확장성을 제한 하는 것이 매우 중요 합니다.
 
  확장성을 방지 하는 강력한 메커니즘입니다. 클래스 또는 개별 멤버를 봉인할 수 있습니다. 클래스를 봉인 하면 사용자가 클래스에서 상속 하지 않습니다. 멤버를 봉인 하면 사용자가 특정 멤버를 재정의할 수 없습니다.
 
- ❌적절 한 이유가 없는 클래스를 봉인 하지 마십시오.
+ ❌ 적절 한 이유가 없는 클래스를 봉인 하지 마십시오.
 
  확장성 시나리오를 고려할 수 없기 때문에 클래스를 봉인 하는 것은 좋은 이유가 아닙니다. 편리한 멤버를 추가 하는 등의 다양 한 이유로 클래스에서 상속 하는 것과 같은 프레임 워크 사용자입니다. 사용자가 형식에서 상속 하려는 명백한 이유의 예는 봉인 되지 않은 [클래스](unsealed-classes.md) 를 참조 하세요.
 
@@ -34,7 +33,7 @@ ms.locfileid: "84290112"
 
 - 클래스는 매우 빠른 런타임 조회를 필요로 하는 특성입니다. 봉인 된 특성의 성능 수준은 봉인 되지 않은 특성 보다 약간 높습니다. [특성](attributes.md)을 참조 하세요.
 
- ❌Protected 또는 virtual 멤버를 sealed 형식으로 선언 하지 마세요.
+ ❌ Protected 또는 virtual 멤버를 sealed 형식으로 선언 하지 마세요.
 
  정의에 따라 sealed 형식은에서 상속 될 수 없습니다. 이는 sealed 형식의 보호 된 멤버를 호출할 수 없고 sealed 형식의 가상 메서드를 재정의할 수 없음을 의미 합니다.
 
