@@ -46,6 +46,8 @@
               href: tutorials/intro-to-csharp/introduction-to-classes.md
             - name: 개체 지향 프로그래밍
               href: tutorials/intro-to-csharp/object-oriented-programming.md
+    - name: 레코드 종류 탐색
+      href: tutorials/exploration/records.md
     - name: 최상위 문 탐색
       href: tutorials/exploration/top-level-statements.md
     - name: 개체 패턴 탐색
