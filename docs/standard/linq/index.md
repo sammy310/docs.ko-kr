@@ -4,24 +4,23 @@ description: LINQ(Language-Integrated Query)는 표현력 있는 선언형 코�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554998"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825834"
 ---
-# <a name="linq-overview"></a><span data-ttu-id="90223-103">LINQ 개요</span><span class="sxs-lookup"><span data-stu-id="90223-103">LINQ overview</span></span>
+# <a name="linq-overview"></a><span data-ttu-id="08cf5-103">LINQ 개요</span><span class="sxs-lookup"><span data-stu-id="08cf5-103">LINQ overview</span></span>
 
-<span data-ttu-id="90223-104">LINQ(Language-Integrated Query)는 표현력 있는 선언형 코드를 작성하는 데 사용할 수 있는 C# 및 Visual Basic에 [고차 함수](https://en.wikipedia.org/wiki/Higher-order_function) API와 언어 수준의 쿼리 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-104">Language-Integrated Query (LINQ) provides language-level querying capabilities, and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and Visual Basic, that enable you to write expressive declarative code.</span></span>
+<span data-ttu-id="08cf5-104">LINQ(Language-Integrated Query)는 표현력 있는 선언형 코드를 작성하는 데 사용할 수 있는 C# 및 Visual Basic에 [고차 함수](https://en.wikipedia.org/wiki/Higher-order_function) API와 언어 수준의 쿼리 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-104">Language-Integrated Query (LINQ) provides language-level querying capabilities, and a [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) API to C# and Visual Basic, that enable you to write expressive declarative code.</span></span>
 
-## <a name="language-level-query-syntax"></a><span data-ttu-id="90223-105">언어 수준 쿼리 구문</span><span class="sxs-lookup"><span data-stu-id="90223-105">Language-level query syntax</span></span>
+## <a name="language-level-query-syntax"></a><span data-ttu-id="08cf5-105">언어 수준 쿼리 구문</span><span class="sxs-lookup"><span data-stu-id="08cf5-105">Language-level query syntax</span></span>
 
-<span data-ttu-id="90223-106">다음은 언어 수준의 쿼리 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-106">This is the language-level query syntax:</span></span>
+<span data-ttu-id="08cf5-106">다음은 언어 수준의 쿼리 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-106">This is the language-level query syntax:</span></span>
 
 ```csharp
 var linqExperts = from p in programmers
@@ -35,7 +34,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-<span data-ttu-id="90223-107">다음은 `IEnumerable<T>` API를 사용하는 동일한 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-107">This is the same example using the `IEnumerable<T>` API:</span></span>
+<span data-ttu-id="08cf5-107">다음은 `IEnumerable<T>` API를 사용하는 동일한 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-107">This is the same example using the `IEnumerable<T>` API:</span></span>
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -47,11 +46,11 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
                              Select(Function(p) New LINQExpert(p))
 ```
 
-## <a name="linq-is-expressive"></a><span data-ttu-id="90223-108">LINQ의 뛰어난 표현력</span><span class="sxs-lookup"><span data-stu-id="90223-108">LINQ is expressive</span></span>
+## <a name="linq-is-expressive"></a><span data-ttu-id="08cf5-108">LINQ의 뛰어난 표현력</span><span class="sxs-lookup"><span data-stu-id="08cf5-108">LINQ is expressive</span></span>
 
-<span data-ttu-id="90223-109">애완 동물 목록이 있고, 해당 `RFID` 값으로 애완 동물에 직접 액세스할 수 있는 사전으로 이 목록을 변환하려 한다고 가정해봅시다.</span><span class="sxs-lookup"><span data-stu-id="90223-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
+<span data-ttu-id="08cf5-109">애완 동물 목록이 있고, 해당 `RFID` 값으로 애완 동물에 직접 액세스할 수 있는 사전으로 이 목록을 변환하려 한다고 가정해봅시다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-109">Imagine you have a list of pets, but want to convert it into a dictionary where you can access a pet directly by its `RFID` value.</span></span>
 
-<span data-ttu-id="90223-110">다음은 기존의 명령형 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-110">This is traditional imperative code:</span></span>
+<span data-ttu-id="08cf5-110">다음은 기존의 명령형 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-110">This is traditional imperative code:</span></span>
 
 ```csharp
 var petLookup = new Dictionary<int, Pet>();
@@ -70,9 +69,9 @@ For Each pet in pets
 Next
 ```
 
-<span data-ttu-id="90223-111">코드의 숨은 의도는 새 `Dictionary<int, Pet>`을 만들고 루프를 통해 이 사전에 추가하는 것이 아니라 기존 목록을 사전으로 변환하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-111">The intention behind the code isn't to create a new `Dictionary<int, Pet>` and add to it via a loop, it's to convert an existing list into a dictionary!</span></span> <span data-ttu-id="90223-112">LINQ는 의도를 유지하지만 명령형 코드는 의도를 유지하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-112">LINQ preserves the intention whereas the imperative code doesn't.</span></span>
+<span data-ttu-id="08cf5-111">코드의 숨은 의도는 새 `Dictionary<int, Pet>`을 만들고 루프를 통해 이 사전에 추가하는 것이 아니라 기존 목록을 사전으로 변환하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-111">The intention behind the code isn't to create a new `Dictionary<int, Pet>` and add to it via a loop, it's to convert an existing list into a dictionary!</span></span> <span data-ttu-id="08cf5-112">LINQ는 의도를 유지하지만 명령형 코드는 의도를 유지하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-112">LINQ preserves the intention whereas the imperative code doesn't.</span></span>
 
-<span data-ttu-id="90223-113">다음은 동일한 LINQ 식입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-113">This is the equivalent LINQ expression:</span></span>
+<span data-ttu-id="08cf5-113">다음은 동일한 LINQ 식입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-113">This is the equivalent LINQ expression:</span></span>
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
@@ -82,13 +81,13 @@ var petLookup = pets.ToDictionary(pet => pet.RFID);
 Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
-<span data-ttu-id="90223-114">LINQ를 사용하는 코드는 프로그래머로 추론할 때 의도와 코드를 일치시키기 때문에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="90223-115">그 외에도 코드가 간소화되는 이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-115">Another bonus is code brevity.</span></span> <span data-ttu-id="90223-116">위와 같이 코드베이스의 상당 부분이 1/3만큼 줄어든다고 상상해 보세요.</span><span class="sxs-lookup"><span data-stu-id="90223-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="90223-117">멋지지 않나요?</span><span class="sxs-lookup"><span data-stu-id="90223-117">Sweet deal, right?</span></span>
+<span data-ttu-id="08cf5-114">LINQ를 사용하는 코드는 프로그래머로 추론할 때 의도와 코드를 일치시키기 때문에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-114">The code using LINQ is valuable because it evens the playing field between intent and code when reasoning as a programmer.</span></span> <span data-ttu-id="08cf5-115">그 외에도 코드가 간소화되는 이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-115">Another bonus is code brevity.</span></span> <span data-ttu-id="08cf5-116">위와 같이 코드베이스의 상당 부분이 1/3만큼 줄어든다고 상상해 보세요.</span><span class="sxs-lookup"><span data-stu-id="08cf5-116">Imagine reducing large portions of a codebase by 1/3 as done above.</span></span> <span data-ttu-id="08cf5-117">멋지지 않나요?</span><span class="sxs-lookup"><span data-stu-id="08cf5-117">Sweet deal, right?</span></span>
 
-## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="90223-118">데이터 액세스를 간소화하는 LINQ 공급자</span><span class="sxs-lookup"><span data-stu-id="90223-118">LINQ providers simplify data access</span></span>
+## <a name="linq-providers-simplify-data-access"></a><span data-ttu-id="08cf5-118">데이터 액세스를 간소화하는 LINQ 공급자</span><span class="sxs-lookup"><span data-stu-id="08cf5-118">LINQ providers simplify data access</span></span>
 
-<span data-ttu-id="90223-119">실제 작업에서 소프트웨어의 상당 부분은 일부 소스(데이터베이스, JSON, XML 등)의 데이터를 처리하는 것이 핵심입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, and so on).</span></span> <span data-ttu-id="90223-120">이 과정에서 각 데이터 소스에 대한 새로운 API를 학습해야 하며, 이는 꽤 번거로울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="90223-121">LINQ는 선택한 데이터 소스와 관계없이 동일하게 표시되는 쿼리 구문으로 데이터 액세스의 공통 요소를 추상화하여 이 과정을 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-121">LINQ simplifies this by abstracting common elements of data access into a query syntax that looks the same no matter which data source you pick.</span></span>
+<span data-ttu-id="08cf5-119">실제 작업에서 소프트웨어의 상당 부분은 일부 소스(데이터베이스, JSON, XML 등)의 데이터를 처리하는 것이 핵심입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-119">For a significant chunk of software out in the wild, everything revolves around dealing with data from some source (Databases, JSON, XML, and so on).</span></span> <span data-ttu-id="08cf5-120">이 과정에서 각 데이터 소스에 대한 새로운 API를 학습해야 하며, 이는 꽤 번거로울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-120">Often this involves learning a new API for each data source, which can be annoying.</span></span> <span data-ttu-id="08cf5-121">LINQ는 선택한 데이터 소스와 관계없이 동일하게 표시되는 쿼리 구문으로 데이터 액세스의 공통 요소를 추상화하여 이 과정을 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-121">LINQ simplifies this by abstracting common elements of data access into a query syntax that looks the same no matter which data source you pick.</span></span>
 
-<span data-ttu-id="90223-122">다음은 특정 특성 값이 있는 모든 XML 요소를 찾는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-122">This finds all XML elements with a specific attribute value:</span></span>
+<span data-ttu-id="08cf5-122">다음은 특정 특성 값이 있는 모든 XML 요소를 찾는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-122">This finds all XML elements with a specific attribute value:</span></span>
 
 ```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
@@ -109,13 +108,13 @@ Public Shared Function FindAllElementsWithAttribute(documentRoot As XElement, el
 End Function
 ```
 
-<span data-ttu-id="90223-123">이 작업을 수행하기 위해 XML 문서를 수동으로 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-123">Writing code to manually traverse the XML document to do this task would be far more challenging.</span></span>
+<span data-ttu-id="08cf5-123">이 작업을 수행하기 위해 XML 문서를 수동으로 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-123">Writing code to manually traverse the XML document to do this task would be far more challenging.</span></span>
 
-<span data-ttu-id="90223-124">XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="90223-124">Interacting with XML isn't the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="90223-125">[LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-125">[Linq to SQL](../../framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="90223-126">[JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="90223-127">또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-127">Furthermore, if there isn't a library that does what you need, you can also [write your own LINQ Provider](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
+<span data-ttu-id="08cf5-124">XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-124">Interacting with XML isn't the only thing you can do with LINQ Providers.</span></span> <span data-ttu-id="08cf5-125">[LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-125">[Linq to SQL](../../framework/data/adonet/sql/linq/index.md) is a fairly bare-bones Object-Relational Mapper (ORM) for an MSSQL Server Database.</span></span> <span data-ttu-id="08cf5-126">[JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-126">The [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) library provides efficient JSON Document traversal via LINQ.</span></span> <span data-ttu-id="08cf5-127">또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-127">Furthermore, if there isn't a library that does what you need, you can also [write your own LINQ Provider](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!</span></span>
 
-## <a name="reasons-to-use-the-query-syntax"></a><span data-ttu-id="90223-128">쿼리 구문을 사용하는 이유</span><span class="sxs-lookup"><span data-stu-id="90223-128">Reasons to use the query syntax</span></span>
+## <a name="reasons-to-use-the-query-syntax"></a><span data-ttu-id="08cf5-128">쿼리 구문을 사용하는 이유</span><span class="sxs-lookup"><span data-stu-id="08cf5-128">Reasons to use the query syntax</span></span>
 
-<span data-ttu-id="90223-129">왜 쿼리 구문을 사용하나요?</span><span class="sxs-lookup"><span data-stu-id="90223-129">Why use query syntax?</span></span> <span data-ttu-id="90223-130">이는 자주 하는 질문입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-130">This is a question that often comes up.</span></span> <span data-ttu-id="90223-131">결국 다음 코드가</span><span class="sxs-lookup"><span data-stu-id="90223-131">After all, the following code:</span></span>
+<span data-ttu-id="08cf5-129">왜 쿼리 구문을 사용하나요?</span><span class="sxs-lookup"><span data-stu-id="08cf5-129">Why use query syntax?</span></span> <span data-ttu-id="08cf5-130">이는 자주 하는 질문입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-130">This is a question that often comes up.</span></span> <span data-ttu-id="08cf5-131">결국 다음 코드가</span><span class="sxs-lookup"><span data-stu-id="08cf5-131">After all, the following code:</span></span>
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
@@ -125,7 +124,7 @@ var filteredItems = myItems.Where(item => item.Foo);
 Dim filteredItems = myItems.Where(Function(item) item.Foo)
 ```
 
-<span data-ttu-id="90223-132">아래 코드보다 훨씬 더 간결합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-132">is a lot more concise than this:</span></span>
+<span data-ttu-id="08cf5-132">아래 코드보다 훨씬 더 간결합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-132">is a lot more concise than this:</span></span>
 
 ```csharp
 var filteredItems = from item in myItems
@@ -139,31 +138,31 @@ Dim filteredItems = From item In myItems
                     Select item
 ```
 
-<span data-ttu-id="90223-133">API 구문이 쿼리 구문을 수행하는 더 간결한 방법이 아닌가요?</span><span class="sxs-lookup"><span data-stu-id="90223-133">Isn't the API syntax just a more concise way to do the query syntax?</span></span>
+<span data-ttu-id="08cf5-133">API 구문이 쿼리 구문을 수행하는 더 간결한 방법이 아닌가요?</span><span class="sxs-lookup"><span data-stu-id="08cf5-133">Isn't the API syntax just a more concise way to do the query syntax?</span></span>
 
-<span data-ttu-id="90223-134">아닙니다.</span><span class="sxs-lookup"><span data-stu-id="90223-134">No.</span></span> <span data-ttu-id="90223-135">쿼리 구문에서는 **let** 절을 사용할 수 있습니다. 이 절을 통해 식 범위 내에서 변수를 도입 및 바인딩하고 식의 후속 부분에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-135">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="90223-136">API 구문만 사용하여 같은 코드를 재현할 수 있지만 읽기 어려운 코드가 될 가능성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="90223-136">Reproducing the same code with only the API syntax can be done, but will most likely lead to code that's hard to read.</span></span>
+<span data-ttu-id="08cf5-134">아닙니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-134">No.</span></span> <span data-ttu-id="08cf5-135">쿼리 구문에서는 **let** 절을 사용할 수 있습니다. 이 절을 통해 식 범위 내에서 변수를 도입 및 바인딩하고 식의 후속 부분에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-135">The query syntax allows for the use of the **let** clause, which allows you to introduce and bind a variable within the scope of the expression, using it in subsequent pieces of the expression.</span></span> <span data-ttu-id="08cf5-136">API 구문만 사용하여 같은 코드를 재현할 수 있지만 읽기 어려운 코드가 될 가능성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-136">Reproducing the same code with only the API syntax can be done, but will most likely lead to code that's hard to read.</span></span>
 
-<span data-ttu-id="90223-137">따라서 **쿼리 구문을 사용해야 하나요?** 란 질문을 하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="90223-137">So this begs the question, **should you just use the query syntax?**</span></span>
+<span data-ttu-id="08cf5-137">따라서 **쿼리 구문을 사용해야 하나요?** 란 질문을 하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-137">So this begs the question, **should you just use the query syntax?**</span></span>
 
-<span data-ttu-id="90223-138">다음과 같은 경우 이 질문에 대한 대답은 **예**입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-138">The answer to this question is **yes** if:</span></span>
+<span data-ttu-id="08cf5-138">다음과 같은 경우 이 질문에 대한 대답은 **예** 입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-138">The answer to this question is **yes** if:</span></span>
 
-- <span data-ttu-id="90223-139">기존 코드베이스에서 이미 쿼리 구문을 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-139">Your existing codebase already uses the query syntax.</span></span>
-- <span data-ttu-id="90223-140">복잡성으로 인해 쿼리 내에서 변수 범위를 지정해야 하는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-140">You need to scope variables within your queries because of complexity.</span></span>
-- <span data-ttu-id="90223-141">쿼리 구문을 선호하며 이 구문이 코드베이스에 방해가 되지 않는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-141">You prefer the query syntax and it won't distract from your codebase.</span></span>
+- <span data-ttu-id="08cf5-139">기존 코드베이스에서 이미 쿼리 구문을 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-139">Your existing codebase already uses the query syntax.</span></span>
+- <span data-ttu-id="08cf5-140">복잡성으로 인해 쿼리 내에서 변수 범위를 지정해야 하는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-140">You need to scope variables within your queries because of complexity.</span></span>
+- <span data-ttu-id="08cf5-141">쿼리 구문을 선호하며 이 구문이 코드베이스에 방해가 되지 않는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-141">You prefer the query syntax and it won't distract from your codebase.</span></span>
 
-<span data-ttu-id="90223-142">다음과 같은 경우 이 질문에 대한 대답은 **아니요**입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-142">The answer to this question is **no** if...</span></span>
+<span data-ttu-id="08cf5-142">다음과 같은 경우 이 질문에 대한 대답은 **아니요** 입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-142">The answer to this question is **no** if...</span></span>
 
-- <span data-ttu-id="90223-143">기존 코드베이스에서 이미 API 구문을 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-143">Your existing codebase already uses the API syntax</span></span>
-- <span data-ttu-id="90223-144">쿼리 내에서 변수 범위를 지정할 필요가 없는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-144">You have no need to scope variables within your queries</span></span>
-- <span data-ttu-id="90223-145">API 구문을 선호하며 이 구문이 코드베이스에 방해가 되지 않는 경우</span><span class="sxs-lookup"><span data-stu-id="90223-145">You prefer the API syntax and it won't distract from your codebase</span></span>
+- <span data-ttu-id="08cf5-143">기존 코드베이스에서 이미 API 구문을 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-143">Your existing codebase already uses the API syntax</span></span>
+- <span data-ttu-id="08cf5-144">쿼리 내에서 변수 범위를 지정할 필요가 없는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-144">You have no need to scope variables within your queries</span></span>
+- <span data-ttu-id="08cf5-145">API 구문을 선호하며 이 구문이 코드베이스에 방해가 되지 않는 경우</span><span class="sxs-lookup"><span data-stu-id="08cf5-145">You prefer the API syntax and it won't distract from your codebase</span></span>
 
-## <a name="essential-linq"></a><span data-ttu-id="90223-146">필수 LINQ</span><span class="sxs-lookup"><span data-stu-id="90223-146">Essential LINQ</span></span>
+## <a name="essential-linq"></a><span data-ttu-id="08cf5-146">필수 LINQ</span><span class="sxs-lookup"><span data-stu-id="08cf5-146">Essential LINQ</span></span>
 
-<span data-ttu-id="90223-147">LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](/samples/dotnet/try-samples/101-linq-samples/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="90223-147">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](/samples/dotnet/try-samples/101-linq-samples/).</span></span>
+<span data-ttu-id="08cf5-147">LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](/samples/dotnet/try-samples/101-linq-samples/)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="08cf5-147">For a truly comprehensive list of LINQ samples, visit [101 LINQ Samples](/samples/dotnet/try-samples/101-linq-samples/).</span></span>
 
-<span data-ttu-id="90223-148">다음 예제는 LINQ의 일부 필수 요소를 간단하게 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90223-148">The following examples are a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="90223-149">LINQ는 여기에 소개된 것보다 더 많은 기능을 제공하므로 모든 기능을 포괄한다고 볼 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-149">This is in no way comprehensive, as LINQ provides more functionality than what is showcased here.</span></span>
+<span data-ttu-id="08cf5-148">다음 예제는 LINQ의 일부 필수 요소를 간단하게 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-148">The following examples are a quick demonstration of some of the essential pieces of LINQ.</span></span> <span data-ttu-id="08cf5-149">LINQ는 여기에 소개된 것보다 더 많은 기능을 제공하므로 모든 기능을 포괄한다고 볼 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-149">This is in no way comprehensive, as LINQ provides more functionality than what is showcased here.</span></span>
 
-### <a name="the-bread-and-butter---where-select-and-aggregate"></a><span data-ttu-id="90223-150">필수 요소 - `Where`, `Select` 및 `Aggregate`</span><span class="sxs-lookup"><span data-stu-id="90223-150">The bread and butter - `Where`, `Select`, and `Aggregate`</span></span>
+### <a name="the-bread-and-butter---where-select-and-aggregate"></a><span data-ttu-id="08cf5-150">필수 요소 - `Where`, `Select` 및 `Aggregate`</span><span class="sxs-lookup"><span data-stu-id="08cf5-150">The bread and butter - `Where`, `Select`, and `Aggregate`</span></span>
 
 ```csharp
 // Filtering a list.
@@ -207,7 +206,7 @@ Dim seed As Integer = 0
 Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
 ```
 
-### <a name="flattening-a-list-of-lists"></a><span data-ttu-id="90223-151">목록의 목록 평면화</span><span class="sxs-lookup"><span data-stu-id="90223-151">Flattening a list of lists</span></span>
+### <a name="flattening-a-list-of-lists"></a><span data-ttu-id="08cf5-151">목록의 목록 평면화</span><span class="sxs-lookup"><span data-stu-id="08cf5-151">Flattening a list of lists</span></span>
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
@@ -219,7 +218,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
 ```
 
-### <a name="union-between-two-sets-with-custom-comparator"></a><span data-ttu-id="90223-152">두 집합 간의 합집합(사용자 지정 비교 연산자 사용)</span><span class="sxs-lookup"><span data-stu-id="90223-152">Union between two sets (with custom comparator)</span></span>
+### <a name="union-between-two-sets-with-custom-comparator"></a><span data-ttu-id="08cf5-152">두 집합 간의 합집합(사용자 지정 비교 연산자 사용)</span><span class="sxs-lookup"><span data-stu-id="08cf5-152">Union between two sets (with custom comparator)</span></span>
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -280,7 +279,7 @@ End Class
 Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
 ```
 
-### <a name="intersection-between-two-sets"></a><span data-ttu-id="90223-153">두 집합 간의 교집합</span><span class="sxs-lookup"><span data-stu-id="90223-153">Intersection between two sets</span></span>
+### <a name="intersection-between-two-sets"></a><span data-ttu-id="08cf5-153">두 집합 간의 교집합</span><span class="sxs-lookup"><span data-stu-id="08cf5-153">Intersection between two sets</span></span>
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -294,7 +293,7 @@ Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      New VolunteerTimeComparer())
 ```
 
-### <a name="ordering"></a><span data-ttu-id="90223-154">순서 지정</span><span class="sxs-lookup"><span data-stu-id="90223-154">Ordering</span></span>
+### <a name="ordering"></a><span data-ttu-id="08cf5-154">순서 지정</span><span class="sxs-lookup"><span data-stu-id="08cf5-154">Ordering</span></span>
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -310,9 +309,9 @@ Dim results = DirectionsProcessor.GetDirections(start, end).
                 ThenBy(Function(direction) direction.EstimatedTime)
 ```
 
-### <a name="equality-of-instance-properties"></a><span data-ttu-id="90223-155">인스턴스 속성의 같음</span><span class="sxs-lookup"><span data-stu-id="90223-155">Equality of instance properties</span></span>
+### <a name="equality-of-instance-properties"></a><span data-ttu-id="08cf5-155">인스턴스 속성의 같음</span><span class="sxs-lookup"><span data-stu-id="08cf5-155">Equality of instance properties</span></span>
 
-<span data-ttu-id="90223-156">마지막으로, 고급 샘플: 동일한 형식을 가진 두 인스턴스의 속성 값이 같은지 확인([이 StackOverflow 게시물](https://stackoverflow.com/a/844855)에서 가져와 수정함):</span><span class="sxs-lookup"><span data-stu-id="90223-156">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
+<span data-ttu-id="08cf5-156">마지막으로, 고급 샘플: 동일한 형식을 가진 두 인스턴스의 속성 값이 같은지 확인([이 StackOverflow 게시물](https://stackoverflow.com/a/844855)에서 가져와 수정함):</span><span class="sxs-lookup"><span data-stu-id="08cf5-156">Finally, a more advanced sample: determining if the values of the properties of two instances of the same type are equal (Borrowed and modified from [this StackOverflow post](https://stackoverflow.com/a/844855)):</span></span>
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -350,11 +349,11 @@ Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As 
 End Function
 ```
 
-## <a name="plinq"></a><span data-ttu-id="90223-157">PLINQ</span><span class="sxs-lookup"><span data-stu-id="90223-157">PLINQ</span></span>
+## <a name="plinq"></a><span data-ttu-id="08cf5-157">PLINQ</span><span class="sxs-lookup"><span data-stu-id="08cf5-157">PLINQ</span></span>
 
-<span data-ttu-id="90223-158">PLINQ 또는 병렬 LINQ는 LINQ 식에 대한 병렬 실행 엔진입니다.</span><span class="sxs-lookup"><span data-stu-id="90223-158">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="90223-159">즉, 여러 스레드 간에 LINQ 정규식을 일반적으로 병렬 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-159">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="90223-160">이 작업은 식 앞의 `AsParallel()` 호출을 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="90223-160">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
+<span data-ttu-id="08cf5-158">PLINQ 또는 병렬 LINQ는 LINQ 식에 대한 병렬 실행 엔진입니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-158">PLINQ, or Parallel LINQ, is a parallel execution engine for LINQ expressions.</span></span> <span data-ttu-id="08cf5-159">즉, 여러 스레드 간에 LINQ 정규식을 일반적으로 병렬 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-159">In other words, a regular LINQ expression can be trivially parallelized across any number of threads.</span></span> <span data-ttu-id="08cf5-160">이 작업은 식 앞의 `AsParallel()` 호출을 통해 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-160">This is accomplished via a call to `AsParallel()` preceding the expression.</span></span>
 
-<span data-ttu-id="90223-161">다음을 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="90223-161">Consider the following:</span></span>
+<span data-ttu-id="08cf5-161">다음을 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="08cf5-161">Consider the following:</span></span>
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -384,16 +383,16 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-<span data-ttu-id="90223-162">이 코드는 필요에 따라 시스템 스레드 간에 `facebookUsers`를 분할하고, 각 스레드의 총계를 병렬로 합산한 다음, 각 스레드에서 계산된 결과를 합산하고 그 결과를 멋진 문자열로 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-162">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
+<span data-ttu-id="08cf5-162">이 코드는 필요에 따라 시스템 스레드 간에 `facebookUsers`를 분할하고, 각 스레드의 총계를 병렬로 합산한 다음, 각 스레드에서 계산된 결과를 합산하고 그 결과를 멋진 문자열로 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-162">This code will partition `facebookUsers` across system threads as necessary, sum up the total likes on each thread in parallel, sum the results computed by each thread, and project that result into a nice string.</span></span>
 
-<span data-ttu-id="90223-163">다이어그램 형식:</span><span class="sxs-lookup"><span data-stu-id="90223-163">In diagram form:</span></span>
+<span data-ttu-id="08cf5-163">다이어그램 형식:</span><span class="sxs-lookup"><span data-stu-id="08cf5-163">In diagram form:</span></span>
 
 ![PLINQ 다이어그램](media/index/plinq-diagram.png)
 
-<span data-ttu-id="90223-165">LINQ를 통해 쉽게 표현할 수 있는 병렬 처리 가능한 CPU 바인딩된 작업(즉, 순수 함수이며 부작용 없음)은 PLINQ에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="90223-165">Parallelizable CPU-bound jobs that can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="90223-166">부작용이 _있는_ 작업의 경우 [작업 병렬 라이브러리](../parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="90223-166">For jobs that _do_ have a side effect, consider using the [Task Parallel Library](../parallel-programming/task-parallel-library-tpl.md).</span></span>
+<span data-ttu-id="08cf5-165">LINQ를 통해 쉽게 표현할 수 있는 병렬 처리 가능한 CPU 바인딩된 작업(즉, 순수 함수이며 부작용 없음)은 PLINQ에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-165">Parallelizable CPU-bound jobs that can be easily expressed via LINQ (in other words, are pure functions and have no side effects) are a great candidate for PLINQ.</span></span> <span data-ttu-id="08cf5-166">부작용이 _있는_ 작업의 경우 [작업 병렬 라이브러리](../parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="08cf5-166">For jobs that _do_ have a side effect, consider using the [Task Parallel Library](../parallel-programming/task-parallel-library-tpl.md).</span></span>
 
-## <a name="more-resources"></a><span data-ttu-id="90223-167">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="90223-167">More resources</span></span>
+## <a name="more-resources"></a><span data-ttu-id="08cf5-167">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="08cf5-167">More resources</span></span>
 
-* [<span data-ttu-id="90223-168">101 LINQ 샘플</span><span class="sxs-lookup"><span data-stu-id="90223-168">101 LINQ Samples</span></span>](/samples/dotnet/try-samples/101-linq-samples/)
-* <span data-ttu-id="90223-169">[Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/Visual Basic에 대한 데이터베이스 쿼리 엔진</span><span class="sxs-lookup"><span data-stu-id="90223-169">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/Visual Basic</span></span>
-* <span data-ttu-id="90223-170">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 eBook</span><span class="sxs-lookup"><span data-stu-id="90223-170">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>
+* [<span data-ttu-id="08cf5-168">101 LINQ 샘플</span><span class="sxs-lookup"><span data-stu-id="08cf5-168">101 LINQ Samples</span></span>](/samples/dotnet/try-samples/101-linq-samples/)
+* <span data-ttu-id="08cf5-169">[Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/Visual Basic에 대한 데이터베이스 쿼리 엔진</span><span class="sxs-lookup"><span data-stu-id="08cf5-169">[Linqpad](https://www.linqpad.net/), a playground environment and Database querying engine for C#/F#/Visual Basic</span></span>
+* <span data-ttu-id="08cf5-170">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 eBook</span><span class="sxs-lookup"><span data-stu-id="08cf5-170">[EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), an e-book for learning how LINQ-to-objects is implemented</span></span>
