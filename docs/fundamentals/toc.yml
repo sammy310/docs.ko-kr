@@ -372,6 +372,8 @@ items:
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
+          - name: EventPipe
+            href: ../core/diagnostics/eventpipe.md
           - name: 로깅 및 추적
             href: ../core/diagnostics/logging-tracing.md
           - name: 컨테이너에서 진단 정보 수집
