@@ -2,7 +2,6 @@
 title: 특성을 사용하여 메타데이터 확장
 description: .NET에서 특성을 사용하여 메타데이터를 확장하는 방법을 알아보세요. 특성은 형식, 필드 등의 프로그래밍 요소에 주석을 추가하기 위한, 키워드 방식의 설명적 선언입니다.
 ms.date: 10/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - metadata, extending
 - attributes [.NET], metadata
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: 9a83c0e8ee3476f43ccc2e88c21ccbbc0661bd19
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e41299b83ae451117ab6829eee928b0d2306be19
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889220"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829078"
 ---
 # <a name="extend-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장
 

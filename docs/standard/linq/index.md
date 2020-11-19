@@ -4,16 +4,15 @@ description: LINQ(Language-Integrated Query)는 표현력 있는 선언형 코�
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554998"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825834"
 ---
 # <a name="linq-overview"></a>LINQ 개요
 
@@ -145,13 +144,13 @@ API 구문이 쿼리 구문을 수행하는 더 간결한 방법이 아닌가요
 
 따라서 **쿼리 구문을 사용해야 하나요?** 란 질문을 하게 됩니다.
 
-다음과 같은 경우 이 질문에 대한 대답은 **예**입니다.
+다음과 같은 경우 이 질문에 대한 대답은 **예** 입니다.
 
 - 기존 코드베이스에서 이미 쿼리 구문을 사용하는 경우
 - 복잡성으로 인해 쿼리 내에서 변수 범위를 지정해야 하는 경우
 - 쿼리 구문을 선호하며 이 구문이 코드베이스에 방해가 되지 않는 경우
 
-다음과 같은 경우 이 질문에 대한 대답은 **아니요**입니다.
+다음과 같은 경우 이 질문에 대한 대답은 **아니요** 입니다.
 
 - 기존 코드베이스에서 이미 API 구문을 사용하는 경우
 - 쿼리 내에서 변수 범위를 지정할 필요가 없는 경우

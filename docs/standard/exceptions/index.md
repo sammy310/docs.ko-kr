@@ -2,7 +2,6 @@
 title: .NET의 예외 처리 및 Throw
 description: .NET의 예외 처리 및 throw 방법에 대해 알아보세요. 예외는 .NET 작업이 애플리케이션에 대한 오류를 나타내는 방법입니다.
 ms.date: 06/19/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET], handling
 - runtime, exceptions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: c18482335947c8d24ba7ed6552bb78c70a0a054f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662773"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827999"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET의 예외 처리 및 Throw
 

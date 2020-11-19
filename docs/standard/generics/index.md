@@ -2,7 +2,6 @@
 title: .NET의 제네릭
 description: .NET의 제네릭에 대해 알아보세요. 제네릭을 정의하고 사용하며, 제네릭의 이점과 단점을 알아보고, 클래스 라이브러리 및 언어 지원 등을 파악하세요.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063158"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827258"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -56,9 +55,9 @@ ms.locfileid: "93063158"
   
 - *제네릭 형식 정의* 는 포함하거나 사용할 수 있는 형식에 대한 자리 표시자를 포함하며 템플릿으로 작동하는 클래스, 구조체 또는 인터페이스 선언입니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 키와 값의 두 형식을 포함할 수 있습니다. 제네릭 형식 정의는 템플릿일 뿐이므로 제네릭 형식 정의인 클래스, 구조체 또는 인터페이스의 인스턴스를 만들 수는 없습니다.  
   
-- *제네릭 형식 매개 변수* ( *형식 매개 변수* )는 제네릭 형식 또는 메서드 정의의 자리 표시자입니다. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 제네릭 형식에는 키와 값의 형식을 나타내는 두 형식 매개 변수 `TKey` 및 `TValue`가 포함되어 있습니다.  
+- *제네릭 형식 매개 변수*( *형식 매개 변수*)는 제네릭 형식 또는 메서드 정의의 자리 표시자입니다. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 제네릭 형식에는 키와 값의 형식을 나타내는 두 형식 매개 변수 `TKey` 및 `TValue`가 포함되어 있습니다.  
   
-- *생성된 제네릭 형식* ( *생성된 형식* )은 제네릭 형식 정의의 제네릭 형식 매개 변수에 대한 형식을 지정한 결과로 생성된 형식입니다.  
+- *생성된 제네릭 형식*( *생성된 형식*)은 제네릭 형식 정의의 제네릭 형식 매개 변수에 대한 형식을 지정한 결과로 생성된 형식입니다.  
   
 - *제네릭 형식 인수* 는 제네릭 형식 매개 변수에 대해 대체되는 모든 형식입니다.  
   

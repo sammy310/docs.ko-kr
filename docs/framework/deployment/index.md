@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 9948d5313c5168965f3ff991b26a4bc913f7d7ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803504"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817031"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
 
@@ -59,7 +59,7 @@ ms.locfileid: "85803504"
 
 - .NET Framework 배포(OEM 및 관리자용):
 
-  - [Windows ADK(평가 및 배포 키트)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [Windows ADK(평가 및 배포 키트)](/windows-hardware/get-started/adk-install)
 
   - [관리자 가이드](guide-for-administrators.md)
 

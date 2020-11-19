@@ -2,7 +2,6 @@
 title: 컬렉션 및 데이터 구조
 description: .NET에서 컬렉션 및 데이터 구조를 사용하는 방법에 대해 알아보세요. 스레드로부터 안전한 작업에서 제네릭 컬렉션 및 제네릭이 아닌 컬렉션을 사용합니다.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
 - objects [.NET], grouping in collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889350"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823851"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 
@@ -53,7 +52,7 @@ ms.locfileid: "92889350"
 
     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.
 
-- **여러 스레드로부터의 액세스를 위한 동기화** (<xref:System.Collections> 클래스에만 해당됨).
+- **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).
 
     <xref:System.Collections> 네임스페이스의 제네릭이 아닌 컬렉션 형식은 동기화와 관련하여 어느 정도의 스레드 보안을 제공합니다(일반적으로 <xref:System.Collections.ICollection.SyncRoot%2A> 및 <xref:System.Collections.ICollection.IsSynchronized%2A> 멤버를 통해 노출됨). 이러한 컬렉션은 기본적으로 스레드로부터 안전하지 않습니다. 확장 가능하며 효율적인 다중 스레드 방식으로 컬렉션에 액세스해야 하는 경우에는 <xref:System.Collections.Concurrent> 네임스페이스의 클래스 중 하나를 사용하거나 변경할 수 없는 컬렉션을 사용하는 것이 좋습니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](thread-safe/index.md)을 참조하세요.
 

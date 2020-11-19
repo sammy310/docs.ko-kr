@@ -4,12 +4,12 @@ description: 이 문서에서는 .NET에서 테스트하기 위한 테스트 개
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223470"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824859"
 ---
 # <a name="testing-in-net"></a>.NET에서 테스트
 
@@ -21,17 +21,17 @@ ms.locfileid: "92223470"
 
 ### <a name="unit-tests"></a>단위 테스트
 
-*단위 테스트*는 "작업 단위"라고도 하는 개별 소프트웨어 구성 요소 또는 메서드를 실행하는 테스트입니다. 단위 테스트는 개발자의 제어 내에서만 코드를 테스트해야 합니다. 인프라 문제를 테스트하지 않습니다. 인프라 문제에는 데이터베이스, 파일 시스템 및 네트워크 리소스와의 상호 작용이 포함됩니다.
+*단위 테스트* 는 "작업 단위"라고도 하는 개별 소프트웨어 구성 요소 또는 메서드를 실행하는 테스트입니다. 단위 테스트는 개발자의 제어 내에서만 코드를 테스트해야 합니다. 인프라 문제를 테스트하지 않습니다. 인프라 문제에는 데이터베이스, 파일 시스템 및 네트워크 리소스와의 상호 작용이 포함됩니다.
 
 단위 테스트를 만드는 방법에 대한 자세한 내용은 [테스트 도구](#testing-tools)를 참조하세요.
 
 ### <a name="integration-tests"></a>통합 테스트
 
-*통합 테스트*는 "통합"이라고도 하는 둘 이상의 소프트웨어 구성 요소가 함께 작동하는 기능을 실행한다는 점에서 단위 테스트와 다릅니다. 이러한 테스트는 테스트 중인 시스템의 광범위한 스펙트럼에서 작동하는 반면 단위 테스트는 개별 구성 요소에 중점을 둡니다. 종종 통합 테스트에는 인프라 문제가 포함됩니다.
+*통합 테스트* 는 "통합"이라고도 하는 둘 이상의 소프트웨어 구성 요소가 함께 작동하는 기능을 실행한다는 점에서 단위 테스트와 다릅니다. 이러한 테스트는 테스트 중인 시스템의 광범위한 스펙트럼에서 작동하는 반면 단위 테스트는 개별 구성 요소에 중점을 둡니다. 종종 통합 테스트에는 인프라 문제가 포함됩니다.
 
 ### <a name="load-tests"></a>부하 테스트
 
-*부하 테스트*는 시스템에서 지정된 부하를 처리할 수 있는지 여부(예: 애플리케이션을 사용하는 동시 사용자 수와 상호 작용 반응을 처리하는 앱의 기능)를 결정하는 것을 목표로 합니다. 웹 애플리케이션의 부하 테스트에 대한 자세한 내용은 [ASP.NET Core 부하/스트레스 테스트](/aspnet/core/test/load-tests)를 참조하세요.
+*부하 테스트* 는 시스템에서 지정된 부하를 처리할 수 있는지 여부(예: 애플리케이션을 사용하는 동시 사용자 수와 상호 작용 반응을 처리하는 앱의 기능)를 결정하는 것을 목표로 합니다. 웹 애플리케이션의 부하 테스트에 대한 자세한 내용은 [ASP.NET Core 부하/스트레스 테스트](/aspnet/core/test/load-tests)를 참조하세요.
 
 ## <a name="test-considerations"></a>테스트 고려 사항
 
@@ -43,7 +43,7 @@ ms.locfileid: "92223470"
 
 ### <a name="xunit"></a>xUnit
 
-[xUnit](https://xunit.net)은 무료로 제공되는 .NET용 오픈 소스 커뮤니티 중심 유닛 테스트 도구입니다. NUnit v2의 원본 발명가가 작성한 xUnit.net은 .NET 앱을 단위 테스트하기 위한 최신 기술입니다. xUnit.net은 ReSharper, CodeRush, TestDriven.NET 및 [Xamarin](/apps/xamarin)에서 작동합니다. [.NET Foundation](https://dotnetfoundation.org)의 프로젝트이며, 해당 사용 규정에 따라 작동합니다.
+[xUnit](https://xunit.net)은 무료로 제공되는 .NET용 오픈 소스 커뮤니티 중심 유닛 테스트 도구입니다. NUnit v2의 원본 발명가가 작성한 xUnit.net은 .NET 앱을 단위 테스트하기 위한 최신 기술입니다. xUnit.net은 ReSharper, CodeRush, TestDriven.NET 및 [Xamarin](https://dotnet.microsoft.com/apps/xamarin)에서 작동합니다. [.NET Foundation](https://dotnetfoundation.org)의 프로젝트이며, 해당 사용 규정에 따라 작동합니다.
 
 자세한 내용은 다음 자료를 참조하세요.
 

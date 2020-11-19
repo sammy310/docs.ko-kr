@@ -2,17 +2,16 @@
 title: 관리형 스레딩
 description: 기본 사항, 모범 사례, 스레딩 개체 및 기능, 참조 페이지 등을 다루는 .NET의 관리형 스레딩에 대한 문서 링크를 참조하세요.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 15af6268c8e5de853ead0817c85f4261c7fc9692
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189175"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826341"
 ---
 # <a name="managed-threading"></a>관리되는 스레딩
 

@@ -2,7 +2,6 @@
 title: 이벤트 처리 및 발생
 description: 대리자 모델을 기반으로 한 .NET 이벤트를 처리하고 발생시키는 방법을 알아봅니다. 이 모델은 구독자가 공급자를 등록하거나 공급자의 알림을 수신할 수 있도록 합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064095"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828272"
 ---
 # <a name="handle-and-raising-events"></a>이벤트 처리 및 발생
 
