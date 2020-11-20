@@ -1,13 +1,13 @@
 ---
 title: dotnet tool install 명령
-description: dotnet tool install 명령은 컴퓨터에 지정된 .NET Core 도구를 설치합니다.
+description: dotnet tool install 명령은 머신에 지정된 .NET 도구를 설치합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702818"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634326"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702818"
 
 ## <a name="name"></a>이름
 
-`dotnet tool install` - 컴퓨터에 지정된 [.NET Core 도구](global-tools.md)를 설치합니다.
+`dotnet tool install` - 머신에 지정된 [.NET 도구](global-tools.md)를 설치합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet tool install` 명령은 컴퓨터에서 .NET Core 도구를 설치하는 방법을 제공합니다. 이 명령을 사용하려면 다음 설치 옵션 중 하나를 지정합니다.
+`dotnet tool install` 명령은 머신에 .NET 도구를 설치하는 방법을 제공합니다. 이 명령을 사용하려면 다음 설치 옵션 중 하나를 지정합니다.
 
 * 전역 도구를 기본 위치에 설치하려면 `--global` 옵션을 사용합니다.
 * 전역 도구를 사용자 지정 위치에 설치하려면 `--tool-path` 옵션을 사용합니다.
@@ -67,7 +67,7 @@ dotnet new tool-manifest
 
 - **`PACKAGE_NAME`**
 
-  설치할 .NET Core 도구를 포함하는 NuGet 패키지의 이름/ID입니다.
+  설치할 .NET 도구를 포함하는 NuGet 패키지의 이름/ID입니다.
 
 ## <a name="options"></a>옵션
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`framework <FRAMEWORK>`**
 
-  도구를 설치할 [대상 프레임워크](../../standard/frameworks.md)를 지정합니다. 기본적으로 .NET Core SDK는 가장 적합한 대상 프레임워크를 선택하도록 시도합니다.
+  도구를 설치할 [대상 프레임워크](../../standard/frameworks.md)를 지정합니다. 기본적으로 .NET SDK는 가장 적합한 대상 프레임워크를 선택하려고 합니다.
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ dotnet new tool-manifest
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 도구](global-tools.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)
+- [.NET 도구](global-tools.md)
+- [자습서: .NET CLI를 사용하여 .NET 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

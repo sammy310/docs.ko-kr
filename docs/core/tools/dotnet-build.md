@@ -2,12 +2,12 @@
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251168"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634483"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -31,15 +31,15 @@ dotnet build -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet build` 명령은 이진 파일 집합으로 프로젝트와 해당 종속성을 빌드합니다. 이진 파일에는 확장명이 *.dll*인 IL(중간 언어) 파일의 프로젝트 코드가 포함됩니다.  프로젝트 형식 및 설정에 따라 다음과 같은 다른 파일이 포함될 수도 있습니다.
+`dotnet build` 명령은 이진 파일 집합으로 프로젝트와 해당 종속성을 빌드합니다. 이진 파일에는 확장명이 *.dll* 인 IL(중간 언어) 파일의 프로젝트 코드가 포함됩니다.  프로젝트 형식 및 설정에 따라 다음과 같은 다른 파일이 포함될 수도 있습니다.
 
 - 프로젝트 형식이 .NET Core 3.0 이상을 대상으로 하는 실행 파일인 경우 애플리케이션을 실행하는 데 사용할 수 있는 실행 파일
-- 확장명이 *.pdb*인 디버깅에 사용되는 기호 파일
+- 확장명이 *.pdb* 인 디버깅에 사용되는 기호 파일
 - 애플리케이션 또는 라이브러리의 종속성을 나열하는 *.deps.json* 파일
 - 애플리케이션의 공유 런타임 및 해당 버전을 지정하는 *.runtimeconfig.json* 파일
 - 프로젝트 참조 또는 NuGet 패키지 참조를 통해 프로젝트가 종속된 다른 라이브러리
 
-.NET Core 3.0 이전 버전을 대상으로 하는 실행 가능 프로젝트의 경우 NuGet의 라이브러리 종속성은 일반적으로 출력 폴더에 복사되지 않습니다.  런타임에 NuGet 전역 패키지 폴더에서 확인됩니다. 따라서 `dotnet build`의 제품을 실행하기 위해 다른 컴퓨터로 전송할 준비가 되지 않았습니다. 배포할 수 있는 애플리케이션 버전을 만들려면 [dotnet publish](dotnet-publish.md) 명령 등을 사용하여 애플리케이션을 게시해야 합니다. 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
+.NET Core 3.0 이전 버전을 대상으로 하는 실행 가능 프로젝트의 경우 NuGet의 라이브러리 종속성은 일반적으로 출력 폴더에 복사되지 않습니다.  런타임에 NuGet 전역 패키지 폴더에서 확인됩니다. 따라서 `dotnet build`의 제품을 실행하기 위해 다른 컴퓨터로 전송할 준비가 되지 않았습니다. 배포할 수 있는 애플리케이션 버전을 만들려면 [dotnet publish](dotnet-publish.md) 명령 등을 사용하여 애플리케이션을 게시해야 합니다. 자세한 내용은 [.NET 애플리케이션 배포](../deploying/index.md)를 참조하세요.
 
 .NET Core 3.0 이상을 대상으로 하는 실행 가능 프로젝트의 경우 라이브러리 종속성이 출력 폴더에 복사됩니다. 따라서 웹 프로젝트 등에 다른 게시 특정 논리가 없는 경우 빌드 출력을 배포할 수 있습니다.
 
@@ -73,7 +73,7 @@ dotnet build -h|--help
 
 `PROJECT | SOLUTION`
 
-빌드할 프로젝트 또는 솔루션 파일입니다. 프로젝트 또는 솔루션 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj* 또는 *sln*으로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
+빌드할 프로젝트 또는 솔루션 파일입니다. 프로젝트 또는 솔루션 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj* 또는 *sln* 으로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
 
 ## <a name="options"></a>옵션
 
@@ -153,7 +153,7 @@ dotnet build -h|--help
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- 프로젝트를 빌드하고 복원 작업 중 지정된 NuGet 패키지 소스를 사용합니다(.NET Core 2.0 SDK 이상 버전).
+- 프로젝트를 빌드하고 복원 작업 중에 지정된 NuGet 패키지 소스를 사용합니다.
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages

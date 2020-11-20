@@ -6,18 +6,18 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 8fa8d33ce9ece20a18c5c1542bc44cf569e9fa2e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607735"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440408"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
 ## <a name="reference-types"></a>참조 형식  
 
-[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식* 입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -27,7 +27,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-개체가 만들어지면 해당 특정 개체에 대해 관리되는 힙에 충분한 메모리가 할당되고 변수에는 개체 위치에 대한 참조만 포함됩니다. 관리되는 힙의 형식은 할당될 때, 그리고 *가비지 수집*이라는 CLR의 자동 메모리 관리 기능에 의해 회수될 때 오버헤드가 필요합니다. 그러나 가비지 수집은 고도로 최적화되고 대부분 시나리오에서 성능 문제를 일으키지 않습니다. 가비지 수집에 대한 자세한 내용은 [자동 메모리 관리 및 가비지 수집](../../../standard/garbage-collection/fundamentals.md)을 참조하세요.  
+개체가 만들어지면 해당 특정 개체에 대해 관리되는 힙에 충분한 메모리가 할당되고 변수에는 개체 위치에 대한 참조만 포함됩니다. 관리되는 힙의 형식은 할당될 때, 그리고 *가비지 수집* 이라는 CLR의 자동 메모리 관리 기능에 의해 회수될 때 오버헤드가 필요합니다. 그러나 가비지 수집은 고도로 최적화되고 대부분 시나리오에서 성능 문제를 일으키지 않습니다. 가비지 수집에 대한 자세한 내용은 [자동 메모리 관리 및 가비지 수집](../../../standard/garbage-collection/fundamentals.md)을 참조하세요.  
   
 ## <a name="declaring-classes"></a>클래스 선언
 
@@ -41,7 +41,7 @@ MyClass mc2 = mc;
  }
 ```
 
- `class` 키워드는 액세스 수준 뒤에 옵니다. 이 경우 [public](../../language-reference/keywords/public.md)이 사용되므로 누구나 이 클래스의 인스턴스를 만들 수 있습니다. 클래스 이름은 `class` 키워드 뒤에 옵니다. 클래스의 이름은 유효한 C# [식별자 이름](../inside-a-program/identifier-names.md)이어야 합니다. 정의의 나머지 부분은 동작과 데이터가 정의되는 클래스 본문입니다. 클래스의 필드, 속성, 메서드 및 이벤트를 모두 *클래스 멤버*라고 합니다.  
+ `class` 키워드는 액세스 수준 뒤에 옵니다. 이 경우 [public](../../language-reference/keywords/public.md)이 사용되므로 누구나 이 클래스의 인스턴스를 만들 수 있습니다. 클래스 이름은 `class` 키워드 뒤에 옵니다. 클래스의 이름은 유효한 C# [식별자 이름](../inside-a-program/identifier-names.md)이어야 합니다. 정의의 나머지 부분은 동작과 데이터가 정의되는 클래스 본문입니다. 클래스의 필드, 속성, 메서드 및 이벤트를 모두 *클래스 멤버* 라고 합니다.  
   
 ## <a name="creating-objects"></a>개체 만들기
 
@@ -59,7 +59,7 @@ MyClass mc2 = mc;
  Customer object2;
 ```
 
- 런타임에는 참조를 통한 개체 액세스 시도에 실패하므로 개체를 참조하지 않는 이와 같은 개체 참조는 만들지 않는 것이 좋습니다. 그러나 새 개체를 만들거나 다음과 같이 기존 개체에 개체를 할당하여 개체를 참조하는 참조를 만들 수 있습니다.  
+ 런타임에는 참조를 통한 개체 액세스 시도에 실패하므로 개체를 참조하지 않는 이와 같은 개체 참조는 만들지 않는 것이 좋습니다. 그러나 새 개체를 만들거나 다음과 같이 기존 개체를 할당하여 개체를 참조하는 참조를 만들 수 있습니다.  
 
  ```csharp
  Customer object3 = new Customer();
@@ -70,9 +70,9 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>클래스 상속  
 
-클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다. 클래스를 만들 때 [sealed](../../language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다.
+클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다. 클래스를 만들 때 [sealed](../../language-reference/keywords/sealed.md)로 정의되지 않은 다른 클래스에서 상속될 수 있으며 다른 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다. 또한 하나 이상의 인터페이스를 구현할 수 있습니다.
 
-상속은 *파생*을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스*를 사용하여 선언됩니다. 다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.  
+상속은 *파생* 을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스* 를 사용하여 선언됩니다. 다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.  
 
  ```csharp
  public class Manager : Employee
@@ -84,7 +84,7 @@ MyClass mc2 = mc;
 
 기본 클래스를 선언하는 클래스는 생성자를 제외하고 기본 클래스의 모든 멤버를 상속합니다. 자세한 내용은 [상속](inheritance.md)을 참조하세요.
   
-C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상속될 수 있습니다. 그러나 기본 클래스 자체는 다른 클래스에서 상속될 수 있으므로 클래스는 여러 기본 클래스를 간접적으로 상속할 수 있습니다. 게다가 클래스는 두 개 이상의 인터페이스를 직접 구현할 수 있습니다. 자세한 내용은 [인터페이스](../interfaces/index.md)를 참조하세요.  
+C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상속될 수 있습니다. 그러나 기본 클래스 자체는 다른 클래스에서 상속될 수 있으므로 클래스는 여러 기본 클래스를 간접적으로 상속할 수 있습니다. 또한 클래스는 하나 이상의 인터페이스를 직접 구현할 수 있습니다. 자세한 내용은 [인터페이스](../interfaces/index.md)를 참조하세요.  
   
 클래스는 [abstract](../../language-reference/keywords/abstract.md)로 선언될 수 있습니다. 추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다. 추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다. 이와 달리 [sealed](../../language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   

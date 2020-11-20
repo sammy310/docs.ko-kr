@@ -1,19 +1,19 @@
 ---
-title: CentOS에 .NET Core 설치 - .NET Core
-description: CentOS에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양한 방법을 보여줍니다.
+title: CentOS에 .NET 설치 - .NET
+description: CentOS에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방법을 보여 줍니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538620"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594634"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>CentOS에 .NET Core SDK 또는 .NET Core 런타임 설치
+# <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS에 .NET SDK 또는 .NET 런타임 설치
 
-.NET Core는 CentOS에서 지원됩니다. 이 문서에서는 CentOS에 .NET Core를 설치하는 방법을 설명합니다.
+.NET은 CentOS에서 지원됩니다. 이 문서에서는 CentOS에 .NET을 설치하는 방법을 설명합니다.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,18 +21,18 @@ ms.locfileid: "90538620"
 
 ## <a name="supported-distributions"></a>지원되는 배포
 
-다음 표는 CentOS 7과 CentOS 8에서 현재 지원되는 .NET Core 릴리스의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 CentOS 버전이 더 이상 지원되지 않을 때까지 지원됩니다.
+다음 표는 CentOS 7과 CentOS 8에서 현재 지원되는 .NET 릴리스의 목록입니다. 이러한 버전은 [.NET 버전이 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 CentOS 버전이 더 이상 지원되지 않을 때까지 계속 지원됩니다.
 
-- ✔️는 CentOS 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
-- ❌는 CentOS 또는 .NET Core 버전이 해당 CentOS 릴리스에서 지원되지 않음을 나타냅니다.
-- CentOS 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
+- ✔️는 CentOS 또는 .NET 버전이 계속 지원됨을 나타냅니다.
+- ❌는 CentOS 또는 .NET 버전이 해당 CentOS 릴리스에서 지원되지 않음을 나타냅니다.
+- CentOS 버전과 .NET 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 미리 보기(수동 설치만 해당) |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#centos-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
-| ✔️ [7](#centos-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [8](#centos-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#centos-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-다음 .NET Core 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
+다음 .NET 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
 
 - 3.0
 - 2.2
@@ -46,9 +46,16 @@ ms.locfileid: "90538620"
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-.NET Core 3.1은 CentOS 8의 기본 패키지 리포지토리에서 사용할 수 있습니다.
+> [!TIP]
+> .NET 5.0은 기본 패키지 리포지토리에서 아직 사용할 수 없지만 .NET Core 3.1은 사용할 수 있습니다. .NET Core 3.1을 설치하려면 `aspnetcore-runtime-3.1` 또는 `dotnet-sdk-3.1`과 같은 적절한 패키지에서 `dnf install` 명령을 사용합니다. 다음은 .NET 5.0에 대한 지침입니다.
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="centos-7-"></a>CentOS 7 ✔️
 
@@ -58,11 +65,11 @@ ms.locfileid: "90538620"
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-[!INCLUDE [linux-yum-install-31](includes/linux-install-31-yum.md)]
+[!INCLUDE [linux-yum-install-50](includes/linux-install-50-yum.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
 
-이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+이 섹션에서는 패키지 관리자를 사용하여 .NET을 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
 
 ### <a name="unable-to-find-package"></a>패키지를 찾을 수 없음
 
@@ -90,4 +97,4 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: Visual Studio Code](../tutorials/with-visual-studio-code.md)를 사용하는 .NET Core SDK로 콘솔 애플리케이션 만들기
+- [자습서: Visual Studio Code를 사용하여 .NET SDK에서 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)

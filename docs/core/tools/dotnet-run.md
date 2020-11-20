@@ -2,12 +2,12 @@
 title: dotnet run 명령
 description: dotnet run 명령은 소스 코드에서 애플리케이션을 실행하는 편리한 옵션을 제공합니다.
 ms.date: 02/19/2020
-ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c80f290c75e3bac65ae73fe8edada53db4ce86f8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102772"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634418"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -43,7 +43,7 @@ dotnet run -h|--help
 dotnet myapp.dll
 ```
 
-`dotnet` 드라이버에 대한 자세한 내용은 [.NET Core 명령줄 도구(CLI)](index.md) 항목을 참조하세요.
+`dotnet` 드라이버에 대한 자세한 내용은 [.NET 명령줄 도구(CLI)](index.md) 항목을 참조하세요.
 
 애플리케이션을 실행하기 위해 `dotnet run` 명령은 NuGet 캐시에서 공유 런타임의 외부에 있는 애플리케이션의 종속성을 확인합니다. 캐시된 종속성을 사용하기 때문에 프로덕션 환경에서 애플리케이션을 실행하는 데 `dotnet run`을 사용하는 것은 바람직하지 않습니다. 대신, [`dotnet publish`](dotnet-publish.md) 명령을 사용하여 [배포를 만들고](../deploying/index.md) 게시된 출력을 배포합니다.
 
@@ -91,7 +91,7 @@ dotnet myapp.dll
 
 - **`--no-launch-profile`**
 
-  애플리케이션을 구성하는 데 *launchSettings.json*을 사용하지 않습니다.
+  애플리케이션을 구성하는 데 *launchSettings.json* 을 사용하지 않습니다.
 
 - **`--no-restore`**
 
@@ -129,7 +129,7 @@ dotnet myapp.dll
   dotnet run --configuration Release -- --help
   ```
 
-- 최소 출력만을 표시하는 현재 디렉터리에 프로젝트에 대한 종속성 및 도구를 저장한 다음, 프로젝트를 실행합니다(.NET Core SDK 2.0 이상 버전).
+- 최소 출력만 표시하는 현재 디렉터리의 프로젝트에 대한 종속성 및 도구를 복원한 다음, 프로젝트를 실행합니다.
 
   ```dotnetcli
   dotnet run --verbosity m

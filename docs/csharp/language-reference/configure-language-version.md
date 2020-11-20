@@ -3,12 +3,12 @@ title: C# 언어 버전 관리 - C# 가이드
 description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495462"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634513"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -80,7 +80,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 ## <a name="c-language-version-reference"></a>C# 언어 버전 참조
 
-모든 표는 현재 C# 언어 버전을 보여줍니다. 컴파일러가 오래된 것이라면 일부 값을 파악하지 못할 수 있습니다. .NET Core 3.0 이상을 설치하면 나열된 모든 항목에 액세스할 수 있습니다.
+모든 표는 현재 C# 언어 버전을 보여줍니다. 컴파일러가 오래된 것이라면 일부 값을 파악하지 못할 수 있습니다. 최신 .NET SDK를 설치하는 경우 나열된 모든 항목에 액세스할 수 있습니다.
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

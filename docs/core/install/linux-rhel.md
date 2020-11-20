@@ -1,40 +1,40 @@
 ---
-title: RHEL에 .NET Core 설치 - .NET Core
-description: RHEL에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양한 방법을 보여줍니다.
+title: RHEL에 .NET 설치 - .NET
+description: RHEL에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방법을 보여 줍니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619452"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594584"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>RHEL에 .NET Core SDK 또는 .NET Core 런타임 설치
+# <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL에 .NET SDK 또는 .NET 런타임 설치
 
-.NET Core는 RHEL에서 지원됩니다. 이 문서에서는 RHEL에 .NET Core를 설치하는 방법을 설명합니다.
+.NET은 RHEL에서 지원됩니다. 이 문서에서는 RHEL에 .NET을 설치하는 방법을 설명합니다.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>Red Hat 구독 등록
 
-RHEL의 Red Hat에서 .NET Core를 설치하려면 먼저 Red Hat 구독 관리자를 사용하여 등록해야 합니다. 아직 시스템에서 등록하지 않았거나 등록 여부가 확실하지 않다면 [.NET Core용 Red Hat 제품 설명서](https://access.redhat.com/documentation/net_core/)를 참조하세요.
+RHEL의 Red Hat에서 .NET을 설치하려면 먼저 Red Hat 구독 관리자를 사용하여 등록해야 합니다. 아직 시스템에서 등록하지 않았거나 등록 여부가 확실하지 않다면 [.NET용 Red Hat 제품 설명서](https://access.redhat.com/documentation/net/5.0/)를 참조하세요.
 
 ## <a name="supported-distributions"></a>지원되는 배포
 
-다음 표는 RHEL 7과 RHEL 8에서 현재 지원되는 .NET Core 릴리스의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 RHEL 버전이 더 이상 지원되지 않을 때까지 지원됩니다.
+다음 표는 RHEL 7과 RHEL 8에서 현재 지원되는 .NET 릴리스의 목록입니다. 이러한 버전은 [.NET 버전이 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 RHEL 버전이 더 이상 지원되지 않을 때까지 계속 지원됩니다.
 
-- ✔️는 RHEL 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
-- ❌는 RHEL 또는 .NET Core 버전이 해당 RHEL 릴리스에서 지원되지 않음을 나타냅니다.
-- RHEL 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
+- ✔️는 RHEL 또는 .NET 버전이 계속 지원됨을 나타냅니다.
+- ❌는 RHEL 또는 .NET 버전이 해당 RHEL 릴리스에서 지원되지 않음을 나타냅니다.
+- RHEL 버전과 .NET 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 미리 보기(수동 설치만 해당) |
+| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
-| ✔️ [7](#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [8](#rhel-8-)        | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#rhel-7--net-50) | ✔️ 2.1        | ✔️ [3.1](#rhel-7--net-core-31)        | ✔️ [5.0](#rhel-7--net-50) |
 
-다음 .NET Core 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
+다음 .NET 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
 
 - 3.0
 - 2.2
@@ -42,15 +42,34 @@ RHEL의 Red Hat에서 .NET Core를 설치하려면 먼저 Red Hat 구독 관리�
 
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
-.NET Core의 다른 릴리스를 설치하는 데 필요한 단계에 대해서는 [.NET Core 관련 Red Hat 문서](https://access.redhat.com/documentation/net_core/)를 참조하세요.
+.NET의 다른 릴리스를 설치하는 데 필요한 단계에 대해서는 [.NET용 Red Hat 설명서](https://access.redhat.com/documentation/net/5.0/)를 참조하세요.
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET Core는 RHEL 8의 AppStream 리포지토리에 포함되어 있습니다.
+> [!TIP]
+> .NET 5.0은 AppStream 리포지토리에서 아직 사용할 수 없지만 .NET Core 3.1은 사용할 수 있습니다. .NET Core 3.1을 설치하려면 `aspnetcore-runtime-3.1` 또는 `dotnet-sdk-3.1`과 같은 적절한 패키지에서 `dnf install` 명령을 사용합니다. 다음은 .NET 5.0에 대한 지침입니다.
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
-## <a name="rhel-7-"></a>RHEL 7 ✔️
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
+
+## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+
+## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -112,4 +131,4 @@ ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: Visual Studio Code](../tutorials/with-visual-studio-code.md)를 사용하는 .NET Core SDK로 콘솔 애플리케이션 만들기
+- [자습서: Visual Studio Code를 사용하여 .NET SDK에서 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)

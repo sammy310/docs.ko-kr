@@ -1,21 +1,21 @@
 ---
-title: .NET Core 도구
-description: .NET Core 도구를 설치, 사용, 업데이트 및 제거하는 방법을 설명합니다. 전역 도구, 도구 경로 도구 및 로컬 도구를 다룹니다.
+title: .NET 도구
+description: .NET 도구를 설치, 사용, 업데이트 및 제거하는 방법입니다. 전역 도구, 도구 경로 도구 및 로컬 도구를 다룹니다.
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598124"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556903"
 ---
-# <a name="how-to-manage-net-core-tools"></a>.NET Core 도구를 관리하는 방법
+# <a name="how-to-manage-net-tools"></a>.NET 도구를 관리하는 방법
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-.NET Core 도구는 콘솔 애플리케이션을 포함하는 특별한 NuGet 패키지입니다. 다음과 같은 방법으로 컴퓨터에 도구를 설치할 수 있습니다.
+.NET 도구는 콘솔 애플리케이션을 포함하는 특별한 NuGet 패키지입니다. 다음과 같은 방법으로 컴퓨터에 도구를 설치할 수 있습니다.
 
 * 전역 도구로
 
@@ -29,24 +29,25 @@ ms.locfileid: "89598124"
 
   도구 이진 파일이 기본 디렉터리에 설치됩니다. 설치 디렉터리 또는 하위 디렉터리에서 도구를 호출합니다. 디렉터리마다 동일한 도구의 다른 버전을 사용할 수 있습니다.
   
-  .NET CLI는 매니페스트 파일을 사용하여 디렉터리에 로컬로 설치되는 도구를 추적합니다. 매니페스트 파일을 소스 코드 리포지토리의 루트 디렉터리에 저장하면 참가자가 리포지토리를 복제하고 매니페스트 파일에 나열된 모든 도구를 설치하는 단일 .NET Core CLI 명령을 호출할 수 있습니다.
+  .NET CLI는 매니페스트 파일을 사용하여 디렉터리에 로컬로 설치되는 도구를 추적합니다. 매니페스트 파일을 소스 코드 리포지토리의 루트 디렉터리에 저장하면 기여자가 리포지토리를 복제하고 매니페스트 파일에 나열된 모든 도구를 설치하는 단일 .NET Core CLI 명령을 호출할 수 있습니다.
 
 > [!IMPORTANT]
-> .NET Core 도구는 완전 신뢰로 실행됩니다. 작성자를 신뢰하지 않는 한 .NET Core 도구를 설치하지 마세요.
+> .NET 도구는 완전 신뢰로 실행됩니다. 작성자를 신뢰하지 않는 한 .NET 도구를 설치하지 마세요.
 
 ## <a name="find-a-tool"></a>도구 찾기
 
-현재 .NET Core에는 도구 검색 기능이 없습니다. 다음은 도구를 찾는 몇 가지 방법입니다.
+다음은 도구를 찾는 몇 가지 방법입니다.
 
+* [dotnet tool search](dotnet-tool-search.md) 명령을 사용하여 NuGet.org에 게시되는 도구를 찾습니다.
 * ".NET 도구" 패키지 유형 필터를 사용하여 [NuGet](https://www.nuget.org) 웹 사이트를 검색합니다. 자세한 내용은 [패키지 찾기 및 선택](/nuget/consume-packages/finding-and-choosing-packages)을 참조하세요.
 * [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 목록을 확인합니다.
 * [ToolGet](https://www.toolget.net/)을 사용하여 .NET 도구를 검색합니다.
 * [dotnet/aspnetcore GitHub 리포지토리의 Tools 디렉터리](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)에서 ASP.NET Core 팀이 만든 도구의 소스 코드를 참조합니다.
-* [.NET Core dotnet 진단 도구](../diagnostics/index.md#net-core-diagnostic-global-tools)에서 진단 도구에 대해 자세히 알아보세요.
+* [.NET 진단 도구](../diagnostics/index.md#net-core-diagnostic-global-tools)에서 진단 도구에 대해 알아보세요.
 
 ## <a name="check-the-author-and-statistics"></a>작성자 및 통계 확인
 
-.NET Core 도구는 완전 신뢰로 실행되고 전역 도구는 PATH 환경 변수에 추가되므로 매우 강력할 수 있습니다. 신뢰할 수 없는 사용자의 도구를 다운로드하지 마세요.
+.NET 도구는 완전 신뢰로 실행되고 전역 도구는 PATH 환경 변수에 추가되므로 매우 강력할 수 있습니다. 신뢰할 수 없는 사용자의 도구를 다운로드하지 마세요.
 
 도구가 NuGet에서 호스팅되는 경우 도구를 검색하여 작성자 및 통계를 확인할 수 있습니다.
 
@@ -92,7 +93,7 @@ Linux 또는 macOS에서:
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-.NET Core SDK는 이 위치를 PATH 환경 변수에 자동으로 추가하지 않습니다. [도구 경로 도구를 호출](#invoke-a-tool-path-tool)하려면 다음 방법 중 하나를 사용하여 명령을 사용할 수 있도록 해야 합니다.
+.NET SDK는 이 위치를 PATH 환경 변수에 자동으로 추가하지 않습니다. [도구 경로 도구를 호출](#invoke-a-tool-path-tool)하려면 다음 방법 중 하나를 사용하여 명령을 사용할 수 있도록 해야 합니다.
 
 * PATH 환경 변수에 설치 디렉터리를 추가합니다.
 * 도구를 호출할 때 전체 경로를 지정합니다.
@@ -108,7 +109,7 @@ dotnet tool install dotnetsay --tool-path ~/bin
 dotnet new tool-manifest
 ```
 
-이 명령은 *.config* 디렉터리 아래에 *dotnet-tools.json*이라는 매니페스트 파일을 만듭니다. 매니페스트 파일에 로컬 도구를 추가하려면 다음 예제와 같이 [dotnet tool install](dotnet-tool-install.md) 명령을 사용하고 `--global` 및 `--tool-path` 옵션을 **생략**합니다.
+이 명령은 *.config* 디렉터리 아래에 *dotnet-tools.json* 이라는 매니페스트 파일을 만듭니다. 매니페스트 파일에 로컬 도구를 추가하려면 다음 예제와 같이 [dotnet tool install](dotnet-tool-install.md) 명령을 사용하고 `--global` 및 `--tool-path` 옵션을 **생략** 합니다.
 
 ```dotnetcli
 dotnet tool install dotnetsay
@@ -273,10 +274,10 @@ dotnet tool --help
 dotnet <command> --help
 ```
 
-도구를 설치하거나 실행하지 못하는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
+도구를 설치하거나 실행하지 못하는 경우 [.NET 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 
-- [자습서: .NET Core CLI를 사용하여 .NET Core 도구 만들기](global-tools-how-to-create.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)
+- [자습서: .NET CLI를 사용하여 .NET 도구 만들기](global-tools-how-to-create.md)
+- [자습서: .NET CLI를 사용하여 .NET 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

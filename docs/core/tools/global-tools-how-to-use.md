@@ -1,16 +1,16 @@
 ---
-title: '자습서: .NET Core 전역 도구 설치 및 사용'
+title: '자습서: .NET 전역 도구 설치 및 사용'
 description: .NET 도구를 전역 도구로 설치하고 사용하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 01b773516da92fb16fb0f67fc6617e0c70d17c9d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062771"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633897"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용
+# <a name="tutorial-install-and-use-a-net-global-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 전역 도구 설치 및 사용
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
@@ -28,9 +28,9 @@ ms.locfileid: "88062771"
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global` 매개 변수는 PATH 환경 변수에 자동으로 추가되는 기본 위치에 도구 이진 파일을 설치하도록 .NET Core CLI에 지시합니다.
+   `--global` 매개 변수는 PATH 환경 변수에 자동으로 추가되는 기본 위치에 도구 이진 파일을 설치하도록 .NET CLI에 지시합니다.
 
-   `--add-source` 매개 변수는 NuGet 패키지의 추가 소스 피드로 *./nupkg* 폴더를 임시로 사용하도록 .NET Core CLI에 지시합니다. 패키지에 고유한 이름을 지정하여 Nuget.org 사이트가 아니라 */nupkg* 디렉터리에서만 찾을 수 있는지 확인합니다.
+   `--add-source` 매개 변수는 NuGet 패키지의 추가 소스 피드로 *./nupkg* 디렉터리를 임시로 사용하도록 .NET CLI에 지시합니다. 패키지에 고유한 이름을 지정하여 Nuget.org 사이트가 아니라 */nupkg* 디렉터리에서만 찾을 수 있는지 확인합니다.
 
    출력에서는 설치된 도구 및 버전을 호출하는 데 사용되는 명령을 보여 줍니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "88062771"
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path` 매개 변수는 지정된 위치에 도구 이진 파일을 설치하도록 .NET Core CLI에 지시합니다. 디렉터리가 없는 경우 만들어집니다. 이 디렉터리는 PATH 환경 변수에 자동으로 추가되지 않습니다.
+   `--tool-path` 매개 변수는 지정된 위치에 도구 이진 파일을 설치하도록 .NET CLI에 지시합니다. 디렉터리가 없는 경우 만들어집니다. 이 디렉터리는 PATH 환경 변수에 자동으로 추가되지 않습니다.
 
    출력에서는 설치된 도구 및 버전을 호출하는 데 사용되는 명령을 보여 줍니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "88062771"
 
 ## <a name="troubleshoot"></a>문제 해결
 
-자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
+자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e77b7bd73c09e061a94a29703cf5286814d1ebb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602689"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506903"
 ---
 
 [.NET Core는 Snap 스토어에서 제공됩니다.](https://snapcraft.io/dotnet-sdk)
@@ -15,18 +15,18 @@ Snap은 다양한 Linux 배포판에서 수정하지 않고도 작동하는 앱�
 
 ### <a name="install-the-sdk"></a>SDK 설치
 
-.NET Core SDK에 대한 맞춤 패키지는 모두 동일한 식별자인 `dotnet-sdk`로 게시됩니다. 특정 버전의 SDK는 채널을 지정하여 설치할 수 있습니다. SDK에는 해당 런타임이 포함됩니다. 다음 표에는 채널이 나와 있습니다.
+.NET SDK용 스냅 패키지는 모두 동일한 식별자 `dotnet-sdk`로 게시됩니다. 특정 버전의 SDK는 채널을 지정하여 설치할 수 있습니다. SDK에는 해당 런타임이 포함됩니다. 다음 표에는 채널이 나와 있습니다.
 
-| .NET Core 버전 | 맞춤 패키지             |
-|-------------------|--------------------------|
-| 3.1(LTS)         | `3.1` 또는 `latest/stable` |
-| 2.1(LTS)         | `2.1`                    |
-| .NET 5.0 미리보기  | `5.0/beta`               |
+| .NET 버전 | 맞춤 패키지             |
+|--------------|--------------------------|
+| 5.0          | `5.0` 또는 `latest/stable` |
+| 3.1(LTS)    | `3.1` 또는 `lts/stable`    |
+| 2.1(LTS)    | `2.1`                    |
 
-`snap install` 명령을 사용하여 .NET Core SDK 맞춤 패키지를 설치합니다. `--channel` 매개 변수를 사용하여 설치할 버전을 지정합니다. 이 매개 변수를 생략하면 `latest/stable`이 사용됩니다. 이 예에서는 `3.1`이 지정되었습니다.
+`snap install` 명령을 사용하여 .NET SDK 스냅 패키지를 설치합니다. `--channel` 매개 변수를 사용하여 설치할 버전을 지정합니다. 이 매개 변수를 생략하면 `latest/stable`이 사용됩니다. 이 예에서는 `5.0`이 지정되었습니다.
 
 ```bash
-sudo snap install dotnet-sdk --classic --channel=3.1
+sudo snap install dotnet-sdk --classic --channel=5.0
 ```
 
 다음으로 `snap alias` 명령을 사용하여 시스템에 `dotnet` 명령을 등록합니다.
@@ -35,32 +35,33 @@ sudo snap install dotnet-sdk --classic --channel=3.1
 sudo snap alias dotnet-sdk.dotnet dotnet
 ```
 
-이 명령의 형식은 `sudo snap alias {package}.{command} {alias}`로 지정됩니다. 원하는 `{alias}` 이름을 선택할 수 있습니다. 예를 들어, Snap으로 설치한 특정 버전 뒤에 명령 이름을 지정할 수 있습니다(예: `sudo snap alias dotnet-sdk.dotnet dotnet31`). `dotnet31` 명령을 사용할 경우 이 특정 버전의 .NET를 호출합니다. 그러나, 이는 `dotnet` 명령에서 기대하는 바와 같이 대부분의 자습서와 예시에서는 호환되지 않습니다.
+이 명령의 형식은 `sudo snap alias {package}.{command} {alias}`로 지정됩니다. 원하는 `{alias}` 이름을 선택할 수 있습니다. 예를 들어, Snap으로 설치한 특정 버전 뒤에 명령 이름을 지정할 수 있습니다(예: `sudo snap alias dotnet-sdk.dotnet dotnet50`). `dotnet50` 명령을 사용할 경우 이 특정 버전의 .NET를 호출합니다. 그러나, 이는 `dotnet` 명령에서 기대하는 바와 같이 대부분의 자습서와 예시에서는 호환되지 않습니다.
 
 ### <a name="install-the-runtime"></a>런타임 설치
 
 .NET Core 런타임에 대한 맞춤 패키지는 각각 자체 패키지 식별자에 따라 게시됩니다. 다음 표에는 패키지 식별자가 나열되어 있습니다.
 
-| .NET Core 버전 | 맞춤 패키지        |
+| .NET 버전      | 맞춤 패키지        |
 |-------------------|---------------------|
+| 5.0               | `dotnet-runtime-50` |
 | 3.1(LTS)         | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
 | 2.2               | `dotnet-runtime-22` |
 | 2.1(LTS)         | `dotnet-runtime-21` |
 
-`snap install` 명령을 사용하여 .NET Core 런타임 맞춤 패키지를 설치합니다. 이 예에서는 .NET Core 3.1이 설치되어 있습니다.
+`snap install` 명령을 사용하여 .NET 런타임 스냅 패키지를 설치합니다. 이 예제에서는 .NET 5.0이 설치됩니다.
 
 ```bash
-sudo snap install dotnet-runtime-31 --classic
+sudo snap install dotnet-runtime-50 --classic
 ```
 
 다음으로 `snap alias` 명령을 사용하여 시스템에 `dotnet` 명령을 등록합니다.
 
 ```bash
-sudo snap alias dotnet-runtime-31.dotnet dotnet
+sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
-이 명령의 형식은 `sudo snap alias {package}.{command} {alias}`로 지정됩니다. 원하는 `{alias}` 이름을 선택할 수 있습니다. 예를 들어, Snap으로 설치한 특정 버전 뒤에 명령 이름을 지정할 수 있습니다(예: `sudo snap alias dotnet-runtime-31.dotnet dotnet31`). `dotnet31` 명령을 사용할 경우 이 특정 버전의 .NET를 호출합니다. 그러나, 이는 `dotnet` 명령에서 기대하는 바와 같이 대부분의 자습서와 예시에서는 호환되지 않습니다.
+이 명령의 형식은 `sudo snap alias {package}.{command} {alias}`로 지정됩니다. 원하는 `{alias}` 이름을 선택할 수 있습니다. 예를 들어, Snap으로 설치한 특정 버전 뒤에 명령 이름을 지정할 수 있습니다(예: `sudo snap alias dotnet-runtime-50.dotnet dotnet50`). `dotnet50` 명령을 사용할 경우 이 특정 버전의 .NET를 호출합니다. 그러나, 이는 `dotnet` 명령에서 기대하는 바와 같이 대부분의 자습서와 예시에서는 호환되지 않습니다.
 
 ### <a name="ssl-certificate-errors"></a>SSL 인증서 오류
 

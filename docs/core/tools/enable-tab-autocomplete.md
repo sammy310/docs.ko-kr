@@ -1,24 +1,24 @@
 ---
 title: 탭 완성 기능 사용
-description: 이 문서에서는 PowerShell, Bash 및 zsh용 .NET Core CLI에 대한 탭 완성 기능을 사용하는 방법을 설명합니다.
+description: 이 문서에서는 PowerShell, Bash, zsh용 .NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법을 설명합니다.
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: cd46305b8cd82825671a3a1568e8b93de1bbab26
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062810"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634014"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI에 대한 탭 완성 기능을 사용하는 방법
+# <a name="how-to-enable-tab-completion-for-the-net-cli"></a>.NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
 이 문서에서는 세 개의 셸, PowerShell, Bash 및 zsh에 대한 탭 완성 기능을 구성하는 방법을 설명합니다. 그 밖의 셸은 해당 셸의 설명서에서 탭 완성 기능을 구현하는 방법을 확인하세요.
 
-설정되면 셸에서 `dotnet` 명령을 입력하고 TAB 키를 누르면 .NET Core CLI의 탭 완성 기능이 트리거됩니다. 현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다. `dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다. 예를 들어:
+설정되면 셸에 `dotnet` 명령을 입력하고 Tab 키를 누르면 .NET CLI의 탭 완성 기능이 트리거됩니다. 현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다. `dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다. 예를 들어:
 
 ```console
 > dotnet complete "dotnet a"
@@ -29,7 +29,7 @@ migrate
 pack
 ```
 
-해당 명령이 작동하지 않는 경우 .NET Core 2.0 SDK 이상이 설치되었는지 확인합니다. 설치되었지만 해당 명령이 여전히 작동하지 않는 경우 `dotnet` 명령이 .NET Core 2.0 SDK 이상 버전으로 확인되는지 확인합니다. `dotnet --version` 명령을 사용하여 현재 경로가 확인되는 `dotnet`의 버전을 확인합니다. 자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md)을 참조하세요.
+해당 명령이 작동하지 않는 경우 .NET Core 2.0 SDK 이상이 설치되었는지 확인합니다. 설치되었지만 해당 명령이 여전히 작동하지 않는 경우 `dotnet` 명령이 .NET Core 2.0 SDK 이상 버전으로 확인되는지 확인합니다. `dotnet --version` 명령을 사용하여 현재 경로가 확인되는 `dotnet`의 버전을 확인합니다. 자세한 내용은 [사용할 .NET 버전 선택](../versions/selection.md)을 참조하세요.
 
 ### <a name="examples"></a>예
 
@@ -45,7 +45,7 @@ pack
 
 ## <a name="powershell"></a>PowerShell
 
-.NET Core CLI에 대한 **PowerShell**에 탭 완성 기능을 추가하려면 변수 `$PROFILE`에 저장된 프로필을 만들거나 편집합니다. 자세한 내용은 [프로필을 만드는 방법](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) 및 [프로필 및 실행 정책](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)을 참조하세요.
+.NET CLI용 **PowerShell** 에 탭 완성 기능을 추가하려면 `$PROFILE` 변수에 저장된 프로필을 만들거나 편집합니다. 자세한 내용은 [프로필을 만드는 방법](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) 및 [프로필 및 실행 정책](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)을 참조하세요.
 
 프로필에 다음 코드를 추가합니다.
 
@@ -61,7 +61,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 ## <a name="bash"></a>bash
 
-.NET Core CLI에 대한 **bash** 셸에 탭 완성 기능을 추가하려면 `.bashrc` 파일에 다음 코드를 추가합니다.
+.NET CLI용 **bash** 셸에 탭 완성 기능을 추가하려면 `.bashrc` 파일에 다음 코드를 추가합니다.
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -84,7 +84,7 @@ complete -f -F _dotnet_bash_complete dotnet
 
 ## <a name="zsh"></a>zsh
 
-.NET Core CLI에 대한 **zsh** 셸에 탭 완성 기능을 추가하려면 `.zshrc` 파일에 다음 코드를 추가합니다.
+.NET CLI용 **zsh** 셸에 탭 완성 기능을 추가하려면 `.zshrc` 파일에 다음 코드를 추가합니다.
 
 ```zsh
 # zsh parameter completion for the dotnet CLI

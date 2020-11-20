@@ -1,20 +1,20 @@
 ---
-title: '자습서: .NET Core 도구 만들기'
-description: .NET Core 도구를 만드는 방법을 알아봅니다. 도구는 .NET Core CLI를 사용하여 설치되는 콘솔 애플리케이션입니다.
+title: '자습서: .NET 도구 만들기'
+description: .NET 도구를 만드는 방법을 알아봅니다. 도구는 .NET CLI를 사용하여 설치되는 콘솔 애플리케이션입니다.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062784"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633780"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 도구 만들기
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 도구 만들기
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-이 자습서에서는 .NET Core 도구를 만들고 패키지하는 방법을 설명합니다. .NET Core CLI를 사용하면 콘솔 애플리케이션을 도구로 만들 수 있으며 다른 사용자가 설치하고 실행할 수 있습니다. .NET Core 도구는 .NET Core CLI에서 설치되는 NuGet 패키지입니다. 도구에 대한 자세한 내용은 [.NET Core 도구 개요](global-tools.md)를 참조하세요.
+이 자습서에서는 .NET 도구를 만들고 패키지하는 방법을 설명합니다. .NET CLI를 사용하면 콘솔 애플리케이션을 도구로 만들어 다른 사용자가 설치하고 실행할 수 있습니다. .NET 도구는 .NET CLI에서 설치되는 NuGet 패키지입니다. 도구에 대한 자세한 내용은 [.NET 도구 개요](global-tools.md)를 참조하세요.
 
 만들 도구는 메시지를 입력으로 사용하고 로봇 이미지를 만드는 텍스트 줄과 함께 메시지를 표시하는 콘솔 애플리케이션입니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "88062784"
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
-1. 명령 프롬프트를 열고 *repository*라는 폴더를 만듭니다.
+1. 명령 프롬프트를 열고 *repository* 라는 폴더를 만듭니다.
 
 1. *repository* 폴더로 이동하여 다음 명령을 입력합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "88062784"
    dotnet new console -n microsoft.botsay
    ```
 
-   이 명령은 *repository* 폴더 아래에 *microsoft.botsay*라는 새 폴더를 만듭니다.
+   이 명령은 *repository* 폴더 아래에 *microsoft.botsay* 라는 새 폴더를 만듭니다.
 
 1. *microsoft.botsay* 폴더로 이동합니다.
 
@@ -191,7 +191,7 @@ dotnet run -- Hello from the bot
 
 ## <a name="troubleshoot"></a>문제 해결
 
-자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
+자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

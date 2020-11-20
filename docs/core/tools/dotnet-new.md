@@ -1,16 +1,16 @@
 ---
 title: dotnet new 명령
-description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
+description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET 프로젝트를 만듭니다.
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400593"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634457"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet new` 명령은 템플릿을 기반으로 .NET Core 프로젝트 또는 다른 아티팩트를 만듭니다.
+`dotnet new` 명령은 템플릿을 기반으로 .NET 프로젝트 또는 다른 아티팩트를 만듭니다.
 
 이 명령은 [템플릿 엔진](https://github.com/dotnet/templating)을 호출하여 지정된 템플릿 및 옵션을 기반으로 디스크에 아티팩트를 만듭니다.
 
@@ -56,7 +56,7 @@ dotnet new -h|--help
   - `dotnet new`를 호출할 때 CLI가 템플릿 일치 또는 부분 일치조차 찾을 수 없는 경우.
   - 최신 버전의 템플릿을 사용할 수 있는 경우. 이 경우 프로젝트 또는 아티팩트가 만들어지지만 CLI는 업데이트된 템플릿 버전에 대해 경고합니다.
 
-  다음 표에는 .NET Core SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
+  다음 표에는 .NET SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
 
 | 템플릿                                    | 짧은 이름                      | 언어     | Tags                                  | 도입 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ dotnet new -h|--help
 
 - **`--nuget-source <SOURCE>`**
 
-  설치 중 사용할 NuGet 소스를 지정합니다. .NET Core 2.1 SDK부터 사용할 수 있습니다.
+  설치 중 사용할 NuGet 소스를 지정합니다.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 값: `netcoreapp<version>`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard<version>`(.NET Standard 클래스 라이브러리를 만드는 경우). 기본값은 `netstandard2.0`입니다.
+  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 값: `net5.0`, `netcoreapp<version>`(.NET 클래스 라이브러리를 만드는 경우) 또는 `netstandard<version>`(.NET Standard 클래스 라이브러리를 만드는 경우). .NET 5.0 SDK의 기본값은 `net5.0`입니다.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ dotnet new -h|--help
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
+  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `net5.0`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ dotnet new -h|--help
 
   | SDK 버전 | 기본값   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ dotnet new -h|--help
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  *global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.
+  *global.json* 파일에서 사용할 .NET SDK 버전을 지정합니다.
 
 ***
 

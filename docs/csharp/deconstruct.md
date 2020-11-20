@@ -4,12 +4,12 @@ description: 튜플 및 기타 형식을 분해하는 방법을 알아봅니다.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174168"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439705"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해
 
@@ -76,7 +76,7 @@ C#은 튜플이 아닌 형식의 분해에 대해 기본 제공 지원을 제공
 다음 예제에서는 `Deconstruct` 메서드를 오버로드하여 `Person` 개체의 속성을 다양한 조합으로 반환합니다. 개별 오버로드는 다음을 반환합니다.
 
 - 이름 및 성
-- 이름, 성 및 중간 이름
+- 성, 중간 이름, 성
 - 이름, 성, 도시 이름 및 주 이름
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]

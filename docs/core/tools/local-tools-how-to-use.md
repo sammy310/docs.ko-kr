@@ -1,16 +1,16 @@
 ---
-title: '자습서: .NET Core 로컬 도구 설치 및 사용'
+title: '자습서: .NET 로컬 도구 설치 및 사용'
 description: .NET 도구를 로컬 도구로 설치하고 사용하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062678"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633883"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
 
@@ -201,7 +201,7 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>문제 해결
 
-자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
+자습서를 수행하는 동안 오류 메시지가 표시되는 경우 [.NET 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

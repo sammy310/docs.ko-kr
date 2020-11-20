@@ -2,12 +2,12 @@
 title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053033"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634372"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -15,7 +15,7 @@ ms.locfileid: "89053033"
 
 ## <a name="name"></a>이름
 
-`dotnet sln` - .NET Core 솔루션 파일의 프로젝트를 나열하거나 수정합니다.
+`dotnet sln` - .NET 솔루션 파일의 프로젝트를 나열하거나 수정합니다.
 
 ## <a name="synopsis"></a>개요
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400881"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439471"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 세계화 및 ICU
 
@@ -37,6 +37,29 @@ Windows 10 2019년 5월 업데이트 이상 버전에는 OS의 일부로 [icu.dl
 
 > [!NOTE]
 > ICU를 사용하는 경우에도 `CurrentCulture`, `CurrentUICulture`, `CurrentRegion` 멤버는 여전히 Windows 운영 체제 API를 사용하여 사용자 설정을 적용합니다.
+
+### <a name="behavioral-differences"></a>동작의 차이
+
+앱을 업그레이드하여 .NET 5를 대상으로 지정하면 세계화 기능을 사용 중임을 인식하지 못하는 경우에도 앱에 변경 내용이 표시될 수 있습니다. 이 섹션에는 표시될 수 있는 동작 변경 중 하나가 나열되어 있지만 다른 변경도 있습니다.
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+<xref:System.String.IndexOf(System.String)?displayProperty=nameWithType>을 호출하여 문자열에서 줄 바꿈 문자의 인덱스를 찾는 다음 코드를 사용하는 것이 좋습니다.
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- Windows의 .NET 이전 버전에서는 코드 조각이 `6`을 인쇄합니다.
+- Windows 10 2019년 5월 업데이트 이상 버전의 .NET 5.0 이상 버전에서는 코드 조각이 `-1`을 출력합니다.
+
+문화권을 구분하는 검색 대신 서수 검색을 수행하여 이 코드를 수정하려면 <xref:System.String.IndexOf(System.String,System.StringComparison)> 오버로드를 호출하고 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>을 인수로 전달합니다.
+
+코드 분석 규칙 [CA1307: 명확성을 위해 StringComparison 지정](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) 및 [CA1309: 서수 StringComparison 사용](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md)을 실행하여 코드에서 이러한 호출 사이트를 찾을 수 있습니다.
+
+자세한 내용은 [.NET 5+에서 문자열 비교 시 동작 변경](../base-types/string-comparison-net-5-plus.md)을 참조하세요.
 
 ### <a name="use-nls-instead-of-icu"></a>ICU 대신 NLS 사용
 
@@ -62,7 +85,7 @@ NLS 대신 ICU를 사용하면 일부 세계화 관련 작업에서 동작 차�
   }
   ```
 
-- 환경 변수 `DOTNET_SYSTEM_GLOBALIZATION_USENLS`를 `true` 또는 `1`로 설정.
+- 환경 변수 `DOTNET_SYSTEM_GLOBALIZATION_USENLS`를 `true` 또는 `1`으로 설정.
 
 > [!NOTE]
 > 프로젝트 또는 `runtimeconfig.json` 파일에 설정된 값은 환경 변수보다 우선적으로 적용됩니다.

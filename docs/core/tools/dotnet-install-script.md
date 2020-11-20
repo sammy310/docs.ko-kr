@@ -1,19 +1,19 @@
 ---
 title: dotnet 설치 스크립트
-description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
+description: .NET SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078205"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634444"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
 ## <a name="name"></a>이름
 
-`dotnet-install.ps1` | `dotnet-install.sh` - .NET Core SDK 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
+`dotnet-install.ps1` | `dotnet-install.sh` - .NET SDK 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -48,7 +48,7 @@ dotnet-install.sh --help
 
 ## <a name="description"></a>설명
 
-`dotnet-install` 스크립트는 .NET Core CLI 및 공유 런타임을 포함하는 .NET Core SDK의 비관리자 설치를 수행합니다. 다음과 같은 두 가지 스크립트가 있습니다.
+`dotnet-install` 스크립트는 .NET CLI 및 공유 런타임을 포함하는 .NET SDK의 비관리자 설치를 수행합니다. 다음과 같은 두 가지 스크립트가 있습니다.
 
 * Windows에서 작동하는 PowerShell 스크립트
 * Linux/macOS에서 작동하는 bash 스크립트
@@ -86,13 +86,13 @@ dotnet-install.sh --help
 
 `-Version|--version` 인수를 사용하여 특정 버전을 설치할 수 있습니다. 버전은 `2.1.0`과 같이 세 부분으로 구성된 버전 번호로 지정해야 합니다. 버전을 지정하지 않은 경우 스크립트는 `latest` 버전을 설치합니다.
 
-설치 스크립트는 Windows에서 레지스트리를 업데이트하지 않습니다. 단지 압축된 이진 파일을 다운로드하여 폴더에 복사합니다. 레지스트리 키 값을 업데이트하려면 .NET Core 설치 관리자를 사용합니다.
+설치 스크립트는 Windows에서 레지스트리를 업데이트하지 않습니다. 단지 압축된 이진 파일을 다운로드하여 폴더에 복사합니다. 레지스트리 키 값을 업데이트하려면 .NET 설치 관리자를 사용합니다.
 
 ## <a name="options"></a>옵션
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  설치할 .NET Core 바이너리의 아키텍처입니다. 가능한 값은 `<auto>`, `amd64`, `x64`, `x86`, `arm64` 및 `arm`입니다. 기본값은 현재 실행 중인 OS 아키텍처를 나타내는 `<auto>`입니다.
+  설치할 .NET 이진 파일의 아키텍처입니다. 가능한 값은 `<auto>`, `amd64`, `x64`, `x86`, `arm64` 및 `arm`입니다. 기본값은 현재 실행 중인 OS 아키텍처를 나타내는 `<auto>`입니다.
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ dotnet-install.sh --help
 
 - **`-DryRun|--dry-run`**
 
-  설정하면 스크립트에서 설치를 수행하지는 않지만, 대신 현재 요청된 버전의 .NET Core CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
+  설정하면 스크립트에서 설치를 수행하지는 않지만, 대신 현재 요청된 버전의 .NET CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -135,7 +135,7 @@ dotnet-install.sh --help
 
 - **`-NoPath|--no-path`**
 
-  설정하면 설치 폴더를 현재 세션의 경로로 내보내지 않습니다. 기본적으로 스크립트는 경로를 수정하므로 설치 후 .NET Core CLI를 즉시 사용할 수 있습니다.
+  설정하면 설치 폴더를 현재 세션의 경로로 내보내지 않습니다. 기본적으로 스크립트는 PATH를 수정하므로 설치 후 바로 .NET CLI를 사용할 수 있습니다.
 
 - **`-ProxyAddress`**
 
@@ -170,7 +170,7 @@ dotnet-install.sh --help
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  *dotnet.exe*와 같은 버전이 없는 파일이 있을 경우 해당 파일의 설치를 건너뜁니다.
+  *dotnet.exe* 와 같은 버전이 없는 파일이 있을 경우 해당 파일의 설치를 건너뜁니다.
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -240,7 +240,7 @@ dotnet-install.sh --help
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- 스크립트 가져와서 .NET Core CLI one-liner 예제를 설치합니다.
+- 스크립트 가져와서 .NET CLI one-liner 예제를 설치합니다.
 
   Windows:
 
@@ -257,5 +257,5 @@ dotnet-install.sh --help
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 릴리스](https://github.com/dotnet/core/releases)
-- [.NET Core 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET 릴리스](https://github.com/dotnet/core/releases)
+- [.NET 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

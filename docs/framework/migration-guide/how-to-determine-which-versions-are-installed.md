@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955592"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440147"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -40,7 +40,7 @@ ms.locfileid: "91955592"
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>.NET Framework 4.5 이상 버전 검색
 
-컴퓨터에 설치된 .NET Framework 버전(4.5 이상)은 레지스트리에서 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**에 나와 있습니다. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
+컴퓨터에 설치된 .NET Framework 버전(4.5 이상)은 레지스트리에서 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** 에 나와 있습니다. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
 
 > [!NOTE]
 > 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’.
@@ -64,9 +64,7 @@ ms.locfileid: "91955592"
 
 ### <a name="minimum-version"></a>최소 버전
 
-‘최소’ 버전의 .NET Framework가 있는지 확인하려면 이전 표에서 해당 버전의 가장 작은 **Release** REG_DWORD 값을 사용합니다.
-
-예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040과 같거나 이보다 큰 **Release** REG_DWORD 값을 테스트합니다.
+.NET Framework의 ‘최소’ 버전이 있는지 확인하려면 다음 표에 나열된 해당 값보다 크거나 같은 **Release** REG_DWORD 값을 확인합니다. 예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040보다 ‘크거나 같은’ **Release** REG_DWORD 값을 테스트합니다.
 
 | .NET Framework 버전 | 최소값 |
 | ---------------------- | ------------- |
@@ -83,13 +81,13 @@ ms.locfileid: "91955592"
 
 ### <a name="use-registry-editor"></a>레지스트리 편집기 사용
 
-01. **시작** 메뉴에서 **실행**을 선택하고 *regedit*을 입력한 다음, **OK**를 선택합니다.
+01. **시작** 메뉴에서 **실행** 을 선택하고 *regedit* 을 입력한 다음, **OK** 를 선택합니다.
 
    (regedit를 실행하려면 관리자 자격 증명이 있어야 합니다.)
 
 01. 레지스트리 편집기에서 다음 하위 키를 엽니다. **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
 
-01. **Release**라는 REG_DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 항목 값은 특정 .NET Framework 버전에 해당합니다. 예를 들어 다음 그림에서**Release** 항목의 값은 528040으로, 이것은 .NET Framework 4.8의 릴리스 키입니다.
+01. **Release** 라는 REG_DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 항목 값은 특정 .NET Framework 버전에 해당합니다. 예를 들어 다음 그림에서 **Release** 항목의 값은 528040으로, 이것은 .NET Framework 4.8의 릴리스 키입니다.
 
    ![.NET Framework 4.5의 레지스트리 항목](./media/clr-installdir.png )
 
@@ -108,7 +106,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 01. <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> 및 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows 레지스트리의 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** 하위 키에 액세스합니다.
 
     > [!IMPORTANT]
-    > 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 4.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**입니다.
+    > 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 4.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** 입니다.
 
 01. **Release** REG_DWORD 값을 확인하여 설치된 버전을 확인합니다. 이후 버전과의 호환성을 유지하려는 경우 버전의 값이 [.NET Framework 버전 표](#version_table)에 나와 있는 값 이상인지를 확인하면 됩니다.
 
@@ -126,12 +124,12 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 
 이 예제에서는 버전을 확인하기 위한 권장된 방법을 수행합니다.
 
-- **릴리스**항목의 값이 알려진 릴리스 키의 값보다 *크거나 같은지* 확인합니다.
+- **릴리스** 항목의 값이 알려진 릴리스 키의 값보다 *크거나 같은지* 확인합니다.
 - 최신 버전에서 가장 오래된 버전 순서대로 확인합니다.
 
 ## <a name="detect-net-framework-10-through-40"></a>.NET Framework 1.0~4.0 검색
 
-1\.1에서 4.0까지의 각 .NET Framework 버전은 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP**의 하위 키로 표시됩니다. 다음 표에서는 각 .NET Framework 버전의 경로를 에 나열합니다. 대부분의 버전에서 **Install** REG_DWORD 값은 `1`로 설정되어 해당 버전이 설치되었음을 나타냅니다. 이러한 하위 키에는 버전 문자열을 포함하는 **Version** REG_SZ 값도 있습니다.
+1\.1에서 4.0까지의 각 .NET Framework 버전은 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP** 의 하위 키로 표시됩니다. 다음 표에서는 각 .NET Framework 버전의 경로를 에 나열합니다. 대부분의 버전에서 **Install** REG_DWORD 값은 `1`로 설정되어 해당 버전이 설치되었음을 나타냅니다. 이러한 하위 키에는 버전 문자열을 포함하는 **Version** REG_SZ 값도 있습니다.
 
 > [!NOTE]
 > 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’.
@@ -147,13 +145,13 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 | 4.0 전체 프로필   | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**    | **Install** REG_DWORD가 `1`과 같음 |
 
 > [!IMPORTANT]
-> 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 3.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5**입니다.
+> 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 3.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5** 입니다.
 
 .NET Framework 1.0 하위 키의 레지스트리 경로는 다른 하위 키와 다릅니다.
 
 ### <a name="use-registry-editor-older-framework-versions"></a>레지스트리 편집기 사용(이전 프레임워크 버전)
 
-01. **시작** 메뉴에서 **실행**을 선택하고 *regedit*을 입력한 다음, **OK**를 선택합니다.
+01. **시작** 메뉴에서 **실행** 을 선택하고 *regedit* 을 입력한 다음, **OK** 를 선택합니다.
 
     regedit을 실행하려면 관리자 자격 증명이 있어야 합니다.
 
@@ -165,10 +163,10 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 
 ### <a name="query-the-registry-using-code-older-framework-versions"></a>코드를 사용한 레지스트리 쿼리(이전 프레임워크 버전)
 
-<xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스를 사용하여 Windows 레지스트리의**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP** 하위 키에 액세스합니다.
+<xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> 클래스를 사용하여 Windows 레지스트리의 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP** 하위 키에 액세스합니다.
 
 > [!IMPORTANT]
-> 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 3.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5**입니다.
+> 실행 중인 앱이 32비트이고 64비트 Windows에서 실행되는 경우 레지스트리 경로는 이전에 나열된 것과 다릅니다. 64비트 레지스트리는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** 하위 키에서 사용할 수 있습니다. 예를 들어 .NET Framework 3.5의 레지스트리 하위 키는 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5** 입니다.
 
 다음 예제에서는 설치된 .NET Framework 1-4 버전을 찾습니다.
 
@@ -219,7 +217,7 @@ v4.0
 
      - 부 릴리스 식별자(예:버전 4.0의 경우 *0*)는 <xref:System.Version.Minor%2A?displayProperty=nameWithType>속성을 사용합니다.
 
-     - 전체 버전 문자열(예를 들어*4.0.30319.18010*)에는 <xref:System.Version.ToString%2A?displayProperty=nameWithType>메서드를 사용합니다. 메서드는 코드를 실행 하는 런타임 버전을 반영하는 단일 값을 반환합니다. 이는 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
+     - 전체 버전 문자열(예를 들어 *4.0.30319.18010*)에는 <xref:System.Version.ToString%2A?displayProperty=nameWithType>메서드를 사용합니다. 메서드는 코드를 실행 하는 런타임 버전을 반영하는 단일 값을 반환합니다. 이는 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
 
   다음 예제에서는 <xref:System.Environment.Version%2A?displayProperty=nameWithType>속성을 사용하여 CLR 버전 정보를 검색합니다.
 

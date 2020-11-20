@@ -1,13 +1,13 @@
 ---
 title: dotnet pack 명령
-description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
+description: dotnet pack 명령은 .NET 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537833"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634235"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -188,4 +188,4 @@ dotnet pack -h|--help
   
   - [.nuspec을 사용하여 압축](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [사용자 지정 패키지를 만들기 위한 고급 확장점](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [전역 속성](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [전역 속성](/visualstudio/msbuild/msbuild-properties#global-properties)

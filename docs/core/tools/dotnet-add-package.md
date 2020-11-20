@@ -1,13 +1,13 @@
 ---
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
-ms.date: 02/14/2020
-ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/11/2020
+ms.openlocfilehash: 10373b3b69c669323674b192d54cd277a5828f24
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538070"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556877"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -23,7 +23,7 @@ ms.locfileid: "90538070"
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
     [-f|--framework <FRAMEWORK>] [--interactive]
     [-n|--no-restore] [--package-directory <PACKAGE_DIRECTORY>]
-    [-s|--source <SOURCE>] [-v|--version <VERSION>]
+    [--prerelease] [-s|--source <SOURCE>] [-v|--version <VERSION>]
 
 dotnet add package -h|--help
 ```
@@ -32,7 +32,7 @@ dotnet add package -h|--help
 
 `dotnet add package` 명령은 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 패키지가 프로젝트의 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다. 검사를 통과하면 `<PackageReference>` 요소가 프로젝트 파일에 추가되고 [dotnet restore](dotnet-restore.md)가 실행됩니다.
 
-예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
+예를 들어 `Newtonsoft.Json`를 *ToDo.csproj* 에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
 
 ```console
 Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
@@ -88,6 +88,10 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
   패키지를 복원할 디렉터리입니다. 기본 패키지 복원 위치는 Windows에서는 `%userprofile%\.nuget\packages`이고, macOS 및 Linux에서는 `~/.nuget/packages`입니다. 자세한 내용은 [NuGet에서 글로벌 패키지, 캐시 및 임시 폴더 관리](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)를 참조하세요.
+
+- **`--prerelease`**
+
+  시험판 패키지를 설치할 수 있습니다.
 
 - **`-s|--source <SOURCE>`**
 

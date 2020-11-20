@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925478"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634405"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,18 +46,18 @@ dotnet restore -h|--help
 
 ### <a name="specify-feeds"></a>피드 지정
 
-종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *nuget.config* 구성 파일을 통해 제공됩니다. .NET Core SDK가 설치될 때 기본 구성 파일이 제공됩니다. 추가 피드를 지정하려면 다음 중 하나를 수행합니다.
+종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *nuget.config* 구성 파일을 통해 제공됩니다. 기본 구성 파일은 .NET SDK가 설치될 때 제공됩니다. 추가 피드를 지정하려면 다음 중 하나를 수행합니다.
 
 - 프로젝트 디렉터리에 고유한 *nuget.config* 파일을 만듭니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior) 및 [nuget.config 차이점](#nugetconfig-differences)을 참조하세요.
 - [`dotnet nuget add source`](dotnet-nuget-add-source.md)와 같은 `dotnet nuget` 명령을 사용합니다.
 
-`-s` 옵션을 사용하여 *nuget.config*를 재정할 수 있습니다.
+`-s` 옵션을 사용하여 *nuget.config* 를 재정할 수 있습니다.
 
 인증된 피드를 사용하는 방법에 대한 자세한 내용은 [인증된 피드의 패키지 사용](/nuget/consume-packages/consuming-packages-authenticated-feeds)을 참조하세요.
 
 ### <a name="global-packages-folder"></a>글로벌 패키지 폴더
 
-종속성의 경우 복원 작업 중 `--packages` 인수를 사용하여 복원된 패키지가 배치될 위치를 지정할 수 있습니다. 지정하지 않으면 모든 운영 체제에서 사용자의 홈 디렉터리의 `.nuget/packages` 디렉터리에 있는 기본 NuGet 패키지 캐시가 사용됩니다. 예를 들어 Linux의 경우 */home/user1* 또는 Windows의 경우 *C:\Users\user1*입니다.
+종속성의 경우 복원 작업 중 `--packages` 인수를 사용하여 복원된 패키지가 배치될 위치를 지정할 수 있습니다. 지정하지 않으면 모든 운영 체제에서 사용자의 홈 디렉터리의 `.nuget/packages` 디렉터리에 있는 기본 NuGet 패키지 캐시가 사용됩니다. 예를 들어 Linux의 경우 */home/user1* 또는 Windows의 경우 *C:\Users\user1* 입니다.
 
 ### <a name="project-specific-tooling"></a>프로젝트별 도구
 
@@ -65,17 +65,17 @@ dotnet restore -h|--help
 
 ### <a name="nugetconfig-differences"></a>nuget 구성 차이점
 
-`dotnet restore` 명령의 동작은 있는 경우 *nuget.config* 파일에 있는 일부 설정의 영향을 받습니다. 예를 들어 *nuget.config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [nuget.config 참조](/nuget/schema/nuget-config-file)를 참조하세요.
+`dotnet restore` 명령의 동작은 있는 경우 *nuget.config* 파일에 있는 일부 설정의 영향을 받습니다. 예를 들어 *nuget.config* 의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [nuget.config 참조](/nuget/schema/nuget-config-file)를 참조하세요.
 
 `dotnet restore`에서 무시하는 3가지 특정 설정은 다음과 같습니다.
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  바인딩 리디렉션은 `<PackageReference>` 요소에서 작동하지 않으며 .NET Core에서는 NuGet 패키지의 `<PackageReference>` 요소만 지원합니다.
+  바인딩 리디렉션은 `<PackageReference>` 요소에서 작동하지 않으며 .NET에서는 NuGet 패키지의 `<PackageReference>` 요소만 지원합니다.
 
 - [솔루션](/nuget/schema/nuget-config-file#solution-section)
 
-  이 설정은 Visual Studio에만 적용되며 .NET Core에는 적용되지 않습니다. .NET Core에서는 `packages.config` 파일을 사용하지 않고, 대신 NuGet 패키지의 `<PackageReference>` 요소를 사용합니다.
+  이 설정은 Visual Studio에만 적용되며 .NET에는 적용되지 않습니다. .NET에서는 `packages.config` 파일을 사용하지 않고, 대신 NuGet 패키지의 `<PackageReference>` 요소를 사용합니다.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
@@ -119,7 +119,7 @@ dotnet restore -h|--help
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  프로젝트 잠금 파일이 작성되는 출력 위치입니다. 기본적으로 *PROJECT_ROOT\packages.lock.json*입니다.
+  프로젝트 잠금 파일이 작성되는 출력 위치입니다. 기본적으로 *PROJECT_ROOT\packages.lock.json* 입니다.
 
 - **`--locked-mode`**
 

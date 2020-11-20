@@ -1,21 +1,21 @@
 ---
 title: dotnet 명령
-description: dotnet 명령(.NET Core CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
-ms.date: 02/13/2020
-ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+description: dotnet 명령(.NET CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
+ms.date: 11/11/2020
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281625"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634027"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="name"></a>속성
+## <a name="name"></a>이름
 
-`dotnet` - .NET Core CLI에 대한 일반 드라이버입니다.
+`dotnet` - .NET CLI의 일반 드라이버입니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -52,13 +52,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `dotnet` 명령에는 두 가지 기능이 있습니다.
 
-- .NET Core 프로젝트 작업을 위한 명령을 제공합니다.
+- .NET 프로젝트 작업을 위한 명령을 제공합니다.
 
   예를 들어 [`dotnet build`](dotnet-build.md)는 프로젝트를 빌드합니다. 각 명령은 자체 옵션과 인수를 정의합니다. 모든 명령은 명령을 사용하는 방법에 대해 간략한 설명서를 출력하는 `--help` 옵션을 지원합니다.
 
-- .NET Core 애플리케이션을 실행합니다.
+- .NET 애플리케이션을 실행합니다.
 
-  애플리케이션을 실행할 애플리케이션 `.dll` 파일의 경로를 지정합니다.  애플리케이션을 실행하는 것은 진입점을 찾아서 실행하는 것이며 콘솔 앱의 경우에는 `Main` 메서드입니다. 예를 들어 `dotnet myapp.dll`은 `myapp` 애플리케이션을 실행합니다. 배포 옵션에 대해 자세히 알아보려면 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
+  애플리케이션을 실행할 애플리케이션 `.dll` 파일의 경로를 지정합니다.  애플리케이션을 실행하는 것은 진입점을 찾아서 실행하는 것이며 콘솔 앱의 경우에는 `Main` 메서드입니다. 예를 들어 `dotnet myapp.dll`은 `myapp` 애플리케이션을 실행합니다. 배포 옵션에 대해 자세히 알아보려면 [.NET 애플리케이션 배포](../deploying/index.md)를 참조하세요.
 
 ## <a name="options"></a>옵션
 
@@ -66,23 +66,23 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="options-for-dotnet-by-itself"></a>dotnet 자체에 대한 옵션
 
-`dotnet` 자체에 대한 옵션은 다음과 같습니다. `dotnet --info`)을 입력합니다. 환경에 대한 정보를 출력합니다.
+`dotnet` 자체에 대한 옵션은 다음과 같습니다. 예: `dotnet --info`. 환경에 대한 정보를 출력합니다.
 
 - **`--info`**
 
-  .NET Core 설치 및 머신 환경(예: 현재 운영 체제)에 대한 자세한 정보를 인쇄하고 .NET Core 버전의 SHA를 커밋합니다.
+  .NET 설치 및 머신 환경(예: 현재 운영 체제)에 대한 자세한 정보를 출력하고 .NET 버전의 SHA를 커밋합니다.
 
 - **`--version`**
 
-  사용 중인 .NET Core SDK 버전을 출력합니다.
+  사용 중인 .NET SDK 버전을 출력합니다.
 
 - **`--list-runtimes`**
 
-  설치된 .NET Core 런타임의 목록을 출력합니다. x86 버전 SDK는 x86 런타임만 나열하며 x64 버전 SDK는 x64 런타임만 나열합니다.
+  설치된 .NET 런타임의 목록을 출력합니다. x86 버전 SDK는 x86 런타임만 나열하며 x64 버전 SDK는 x64 런타임만 나열합니다.
 
 - **`--list-sdks`**
 
-  설치된 .NET Core SDK의 목록을 출력합니다.
+  설치된 .NET SDK의 목록을 출력합니다.
 
 - **`-h|--help`**
 
@@ -90,7 +90,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="sdk-options-for-running-a-command"></a>명령을 실행하기 위한 SDK 옵션
 
-명령과 함께 사용하는 `dotnet`의 옵션은 다음과 같습니다. `dotnet build --help`)을 입력합니다.
+명령과 함께 사용하는 `dotnet`의 옵션은 다음과 같습니다. 예: `dotnet build --help`.
 
 - **`-d|--diagnostics`**
 
@@ -110,7 +110,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="runtime-options"></a>런타임 옵션
 
-`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. `dotnet myapp.dll --roll-forward Major`)을 입력합니다.
+`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. 예: `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -122,11 +122,11 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  *deps.json* 파일의 경로입니다. *deps.json* 파일은 애플리케이션을 실행하는 데 필요한 종속성에 대한 정보를 포함하는 구성 파일입니다. 이 파일은 .NET Core SDK에 의해 생성됩니다.
+  *deps.json* 파일의 경로입니다. *deps.json* 파일은 애플리케이션을 실행하는 데 필요한 종속성에 대한 정보를 포함하는 구성 파일입니다. 이 파일은 .NET SDK에서 생성됩니다.
 
 - **`--runtimeconfig`**
 
-  *runtimeconfig.json* 파일의 경로입니다. *runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
+  *runtimeconfig.json* 파일의 경로입니다. *runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 - **`--roll-forward <SETTING>`** **.NET Core SDK 3.0부터 사용할 수 있습니다.**
 
@@ -148,7 +148,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
   필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
 
   - `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
-  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 기본 동작입니다.
+  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
   - `2` - 부 버전과 주 버전에서 롤포워드합니다.
 
   자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
@@ -157,7 +157,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--fx-version <VERSION>`**
 
-  애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
+  애플리케이션 실행에 사용할 .NET 런타임의 버전입니다.
 
   이 옵션은 애플리케이션의 `.runtimeconfig.json` 파일에 있는 첫 번째 프레임워크 참조의 버전을 재정의합니다. 그러므로 프레임워크 참조가 하나만 있는 경우에만 예상대로 작동합니다. 애플리케이션에 둘 이상의 프레임워크 참조가 있는 경우 이 옵션을 사용하면 오류가 발생할 수 있습니다.
 
@@ -165,9 +165,9 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="general"></a>일반
 
-| 명령                                       | 함수                                                            |
+| 명령                                       | 기능                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | .NET Core 애플리케이션을 빌드합니다.                                     |
+| [dotnet build](dotnet-build.md)               | .NET 애플리케이션을 빌드합니다.                                     |
 | [dotnet build-server](dotnet-build-server.md) | 빌드에서 시작된 서버와 상호 작용합니다.                          |
 | [dotnet clean](dotnet-clean.md)               | 빌드 출력을 정리합니다.                                                |
 | [dotnet help](dotnet-help.md)                 | 명령에 대한 자세한 온라인 설명서를 표시합니다.           |
@@ -184,7 +184,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="project-references"></a>프로젝트 참조
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 프로젝트 참조를 추가합니다.
 [dotnet list reference](dotnet-list-reference.md) | 프로젝트 참조를 나열합니다.
@@ -192,14 +192,14 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="nuget-packages"></a>NuGet 패키지
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet add package](dotnet-add-package.md) | NuGet 패키지를 추가합니다.
 [dotnet remove package](dotnet-remove-package.md) | NuGet 패키지를 제거합니다.
 
 ### <a name="nuget-commands"></a>NuGet 명령
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
 [dotnet nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
@@ -213,20 +213,21 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>전역, 도구 경로 및 로컬 도구 명령
 
-도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET Core 도구 개요](global-tools.md)를 참조하세요. 전역 및 도구 경로 도구는 .NET Core SDK 2.1부터 사용할 수 있습니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.
+도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET 도구 개요](global-tools.md)를 참조하세요. 전역 및 도구 경로 도구는 .NET Core SDK 2.1부터 사용할 수 있습니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 도구를 설치합니다.
 [dotnet tool list](dotnet-tool-list.md) | 컴퓨터에 현재 설치되어 있는 모든 전역, 도구 경로 또는 로컬 도구를 나열합니다.
+[dotnet tool search](dotnet-tool-list.md) | NuGet.org에서 지정된 검색 용어가 이름 또는 메타데이터에 포함된 도구를 검색합니다.
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | 컴퓨터에서 도구를 제거합니다.
 [dotnet tool update](dotnet-tool-update.md) | 컴퓨터에 설치된 도구를 업데이트합니다.
 
 ### <a name="additional-tools"></a>추가 도구
 
-.NET Core SDK 2.1.300부터는 `DotnetCliToolReference`을 사용하여 프로젝트별로만 사용할 수 있었던 여러 도구를 .NET Core SDK의 일부로 사용할 수 있습니다. 이러한 도구는 다음 표에 나열되어 있습니다.
+.NET Core SDK 2.1.300부터는 `DotnetCliToolReference`를 사용하여 프로젝트별로만 사용할 수 있었던 여러 도구를 .NET SDK의 일부로 사용할 수 있습니다. 이러한 도구는 다음 표에 나열되어 있습니다.
 
-| 도구                                              | 함수                                                     |
+| 도구                                              | 기능                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 개발 인증서를 만들고 관리합니다.                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 명령줄 도구입니다.                    |
@@ -238,7 +239,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ## <a name="examples"></a>예
 
-새 .NET Core 콘솔 애플리케이션을 만듭니다.
+새 .NET 콘솔 애플리케이션 만들기
 
 ```dotnetcli
 dotnet new console
@@ -260,7 +261,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  기본 위치에 설치되어 있지 않은 경우 .NET Core 런타임의 위치를 지정합니다. Windows에서 기본 위치는 `C:\Program Files\dotnet`입니다. Linux 및 macOS에서 기본 위치는 `/usr/share/dotnet`입니다. 이 환경 변수는 생성된 실행 파일(apphost)을 통해 앱을 실행할 때만 사용됩니다. 64비트 OS에서 32비트 실행 파일을 실행할 때는 대신 `DOTNET_ROOT(x86)`가 사용됩니다.
+  기본 위치에 설치되지 않은 경우 .NET 런타임의 위치를 지정합니다. Windows에서 기본 위치는 `C:\Program Files\dotnet`입니다. Linux 및 macOS에서 기본 위치는 `/usr/share/dotnet`입니다. 이 환경 변수는 생성된 실행 파일(apphost)을 통해 앱을 실행할 때만 사용됩니다. 64비트 OS에서 32비트 실행 파일을 실행할 때는 대신 `DOTNET_ROOT(x86)`가 사용됩니다.
 
 - `NUGET_PACKAGES`
 
@@ -272,15 +273,15 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  처음 실행할 때 .NET Core 시작 및 원격 분석 메시지를 표시할지 여부를 지정합니다. 이러한 메시지를 음소거하려면 `true`로 설정하고(`true`, `1` 또는 `yes` 값 사용) 허용하려면 `false`로 설정합니다(`false`, `0` 또는 `no` 값 사용). 설정되지 않은 경우 기본값은 `false`이고 처음 실행될 때 메시지가 표시됩니다. 이 플래그는 원격 분석에는 영향을 주지 않습니다(원격 분석 보내기를 옵트아웃하는 경우 `DOTNET_CLI_TELEMETRY_OPTOUT` 참조).
+  처음 실행할 때 .NET 시작 및 원격 분석 메시지를 표시할지 여부를 지정합니다. 이러한 메시지를 음소거하려면 `true`로 설정하고(`true`, `1` 또는 `yes` 값 사용) 허용하려면 `false`로 설정합니다(`false`, `0` 또는 `no` 값 사용). 설정되지 않은 경우 기본값은 `false`이고 처음 실행될 때 메시지가 표시됩니다. 이 플래그는 원격 분석에는 영향을 주지 않습니다(원격 분석 보내기를 옵트아웃하는 경우 `DOTNET_CLI_TELEMETRY_OPTOUT` 참조).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
+  .NET 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  전역 위치에서 .NET Core 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 1(논리적 `true`)입니다. 전역 위치에서 확인하지 않고 격리된 .NET Core 설치를 사용하려면 0(논리적 `false`)으로 설정합니다. 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
+  전역 위치에서 .NET 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 1(논리적 `true`)입니다. 전역 위치에서 확인하지 않고 격리된 .NET 설치를 사용하려면 0(논리적 `false`)으로 설정합니다. 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
 
 - `DOTNET_ROLL_FORWARD` **.NET Core 3.x부터 사용할 수 있습니다.**
 
@@ -288,7 +289,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **.NET Core 3.x부터 사용할 수 있습니다.**
 
-  `1`(사용)로 설정된 경우 릴리스 버전에서 시험판 버전으로 롤포워드를 사용하도록 설정합니다. 기본적으로(`0` - 사용 안 함), .NET Core 런타임의 릴리스 버전이 요청되면 롤포워드는 설치된 릴리스 버전만 고려합니다.
+  `1`(사용)로 설정된 경우 릴리스 버전에서 시험판 버전으로 롤포워드를 사용하도록 설정합니다. 기본적으로(`0` - 사용 안 함) .NET 런타임의 릴리스 버전이 요청되면 롤포워드는 설치된 릴리스 버전만 고려합니다.
 
   자세한 내용은 [롤포워드](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)를 참조하세요.
 
@@ -300,7 +301,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  `en-us`와 같은 로캘 값을 사용하여 CLI UI의 언어를 설정합니다. 지원되는 값은 Visual Studio의 경우와 동일합니다. 자세한 내용은 [Visual Studio 설치 설명서](/visualstudio/install/install-visual-studio?view=vs-2019)에서 설치 프로그램 언어 변경에 대한 섹션을 참조하세요. .NET 리소스 관리자 규칙이 적용되므로, 정확한 일치를 선택할 필요가 없습니다. `CultureInfo` 트리에서 하위 항목을 선택할 수도 있습니다. 예를 들어 `fr-CA`로 설정하면 CLI에서 `fr` 번역을 찾아 사용합니다. 지원되지 않는 언어로 설정하면 CLI는 영어로 대체됩니다.
+  `en-us`와 같은 로캘 값을 사용하여 CLI UI의 언어를 설정합니다. 지원되는 값은 Visual Studio의 경우와 동일합니다. 자세한 내용은 [Visual Studio 설치 설명서](/visualstudio/install/install-visual-studio)에서 설치 프로그램 언어 변경에 대한 섹션을 참조하세요. .NET 리소스 관리자 규칙이 적용되므로, 정확한 일치를 선택할 필요가 없습니다. `CultureInfo` 트리에서 하위 항목을 선택할 수도 있습니다. 예를 들어 `fr-CA`로 설정하면 CLI에서 `fr` 번역을 찾아 사용합니다. 지원되지 않는 언어로 설정하면 CLI는 영어로 대체됩니다.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -345,4 +346,4 @@ dotnet myapp.dll
 ## <a name="see-also"></a>참조
 
 - [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
-- [.NET Core 런타임 구성 설정](../run-time-config/index.md)
+- [.NET 런타임 구성 설정](../run-time-config/index.md)

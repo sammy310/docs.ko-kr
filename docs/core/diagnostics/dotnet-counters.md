@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter 명령줄 도구를 설치하고 사용하는 방법에 대해 알아봅니다.
 ms.date: 02/26/2020
-ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062901"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507256"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -57,7 +57,7 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>옵션
@@ -70,9 +70,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   표시된 카운터 업데이트 사이의 지연 시간(초)입니다.
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  공백으로 구분된 카운터의 목록입니다. 카운터는 `provider_name[:counter_name]`을 지정할 수 있습니다. 한정된 `counter_name` 없이 `provider_name`을 사용하면 모든 카운터가 표시됩니다. 공급자 및 카운터 이름을 검색하려면 [dotnet-counters 목록](#dotnet-counters-list) 명령을 사용합니다.
+  쉼표로 구분된 카운터 목록입니다. 카운터는 `provider_name[:counter_name]`을 지정할 수 있습니다. 적격 카운터 목록 없이 `provider_name`이 사용되는 경우 공급자의 모든 카운터가 표시됩니다. 공급자 및 카운터 이름을 검색하려면 [dotnet-counters 목록](#dotnet-counters-list) 명령을 사용합니다.
 
 - **`--format <csv|json>`**
 
@@ -81,6 +81,13 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - **`-o|--output <output>`**
 
   출력 파일의 이름입니다.
+
+- **`-- <command>`(.NET 5.0 이상을 실행하는 대상 애플리케이션만 해당)**
+
+  사용자는 컬렉션 구성 매개 변수 다음에 `--`와 명령을 차례로 추가하여 5.0 런타임 이상에서 .NET 애플리케이션을 시작할 수 있습니다. `dotnet-counters`는 제공된 명령을 사용하여 프로세스를 시작하고 요청된 메트릭을 수집합니다. 이 옵션은 애플리케이션의 시작 경로에 대한 메트릭을 수집하는 데 유용하며, 주요 진입점 이전이나 바로 다음에 발생하는 문제를 진단하거나 모니터링하는 데 사용할 수 있습니다.
+
+> [!NOTE]
+> 이 옵션을 사용하면 도구에 다시 전달되는 첫 번째 .NET 5.0 프로세스가 모니터링됩니다. 즉, 명령에서 여러 .NET 애플리케이션을 시작하는 경우 첫 번째 앱만 수집합니다. 따라서 자체 포함 애플리케이션에서 이 옵션을 사용하거나 `dotnet exec <app.dll>` 옵션을 사용하는 것이 좋습니다.
 
 ### <a name="examples"></a>예
 
@@ -91,6 +98,14 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   counter_list is unspecified. Monitoring all counters by default.
   Starting a counter session. Press Q to quit.
+  ```
+
+- `dotnet mvc.dll`을 자식 프로세스로 시작하고 시작에서 런타임 카운터 및 ASP.NET Core 호스팅 카운터 수집을 시작하여 JSON 출력으로 저장합니다.
+
+  ```console
+  > dotnet-counters collect --format json --counters System.Runtime,Microsoft.AspNetCore.Hosting -- dotnet mvc.dll
+  Starting a counter session. Press Q to quit.
+  File saved to counter.json
   ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters 목록
@@ -147,7 +162,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>옵션
@@ -160,35 +175,61 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   표시된 카운터 업데이트 사이의 지연 시간(초)입니다.
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  공백으로 구분된 카운터의 목록입니다. 카운터는 `provider_name[:counter_name]`을 지정할 수 있습니다. 한정된 `counter_name` 없이 `provider_name`을 사용하면 모든 카운터가 표시됩니다. 공급자 및 카운터 이름을 검색하려면 [dotnet-counters 목록](#dotnet-counters-list) 명령을 사용합니다.
+  쉼표로 구분된 카운터 목록입니다. 카운터는 `provider_name[:counter_name]`을 지정할 수 있습니다. 적격 카운터 목록 없이 `provider_name`이 사용되는 경우 공급자의 모든 카운터가 표시됩니다. 공급자 및 카운터 이름을 검색하려면 [dotnet-counters 목록](#dotnet-counters-list) 명령을 사용합니다.
+
+ **`-- <command>`(.NET 5.0 이상을 실행하는 대상 애플리케이션만 해당)**
+
+  사용자는 컬렉션 구성 매개 변수 다음에 `--`와 명령을 차례로 추가하여 5.0 런타임 이상에서 .NET 애플리케이션을 시작할 수 있습니다. `dotnet-counters`는 제공된 명령을 사용하여 프로세스를 시작하고 요청된 메트릭을 모니터링합니다. 이 옵션은 애플리케이션의 시작 경로에 대한 메트릭을 수집하는 데 유용하며, 주요 진입점 이전이나 바로 다음에 발생하는 문제를 진단하거나 모니터링하는 데 사용할 수 있습니다.
+
+  > [!NOTE]
+  > 이 옵션을 사용하면 도구에 다시 전달되는 첫 번째 .NET 5.0 프로세스가 모니터링됩니다. 즉, 명령에서 여러 .NET 애플리케이션을 시작하는 경우 첫 번째 앱만 수집합니다. 따라서 자체 포함 애플리케이션에서 이 옵션을 사용하거나 `dotnet exec <app.dll>` 옵션을 사용하는 것이 좋습니다.
 
 ### <a name="examples"></a>예
 
 - 3초의 새로 고침 간격으로 `System.Runtime`의 모든 카운터를 모니터링합니다.
 
   ```console
-  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
-
+  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 --counters System.Runtime
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
-      CPU Usage (%)                                 24
-      Working Set (MB)                            1982
-      GC Heap Size (MB)                            811
-      Gen 0 GC / second                             20
-      Gen 1 GC / second                              4
-      Gen 2 GC / second                              1
-      Number of Exceptions / sec                     4
+      Status: Running
+
+  [System.Runtime]
+      % Time in GC since last GC (%)                                 0
+      Allocation Rate (B / 1 sec)                                5,376
+      CPU Usage (%)                                                  0
+      Exception Count (Count / 1 sec)                                0
+      GC Fragmentation (%)                                          48.467
+      GC Heap Size (MB)                                              0
+      Gen 0 GC Count (Count / 1 sec)                                 1
+      Gen 0 Size (B)                                                24
+      Gen 1 GC Count (Count / 1 sec)                                 1
+      Gen 1 Size (B)                                                24
+      Gen 2 GC Count (Count / 1 sec)                                 1
+      Gen 2 Size (B)                                           272,000
+      IL Bytes Jitted (B)                                       19,449
+      LOH Size (B)                                              19,640
+      Monitor Lock Contention Count (Count / 1 sec)                  0
+      Number of Active Timers                                        0
+      Number of Assemblies Loaded                                    7
+      Number of Methods Jitted                                     166
+      POH (Pinned Object Heap) Size (B)                             24
+      ThreadPool Completed Work Item Count (Count / 1 sec)           0
+      ThreadPool Queue Length                                        0
+      ThreadPool Thread Count                                        2
+      Working Set (MB)                                              19
   ```
 
 - `System.Runtime`에서 CPU 사용량 및 GC 힙 크기만 모니터링합니다.
 
   ```console
-  > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
+  > dotnet-counters monitor --process-id 1902 --counters System.Runtime[cpu-usage,gc-heap-size]
 
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
+    Status: Running
+
+  [System.Runtime]
       CPU Usage (%)                                 24
       GC Heap Size (MB)                            811
   ```
@@ -196,12 +237,43 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - 사용자 정의 `EventSource`에서 `EventCounter` 값을 모니터링합니다. 자세한 내용은 [자습서: .NET Core에서 EventCounters를 사용하여 성능 측정](event-counter-perf.md)을 참조하세요.
 
   ```console
-  > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
+  > dotnet-counters monitor --process-id 1902 --counters Samples-EventCounterDemos-Minimal
 
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+
+- `my-aspnet-server.exe`를 시작하고 시작에서 로드된 어셈블리 수를 모니터링합니다(.NET 5.0 이상만 해당).
+
+  참고:  .NET 5.0 이상을 실행하는 앱에만 적용됩니다.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
+
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      Number of Assemblies Loaded                   24
+  ```
   
+- `arg1` 및 `arg2`를 명령줄 인수로 사용하여 `my-aspnet-server.exe`를 시작하고 시작에서 작업 집합 및 GC 힙 크기를 모니터링합니다(.NET 5.0 이상만 해당).
+
+  참고:  .NET 5.0 이상을 실행하는 앱에만 적용됩니다.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2
+  ```
+
+  ```console
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      GC Heap Size (MB)                                 39
+      Working Set (MB)                                  59
+  ```
+
 ## <a name="dotnet-counters-ps"></a>dotnet-counters ps
 
 모니터링할 수 있는 dotnet 프로세스의 목록을 표시합니다.

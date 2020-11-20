@@ -1,27 +1,27 @@
 ---
 title: global.json 개요
-description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET Core SDK 버전을 설정하는 방법에 대해 알아보세요.
+description: .NET CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET SDK 버전을 설정하는 방법을 알아봅니다.
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281547"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634001"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.0 SDK 이상 버전
 
-*global.json* 파일을 사용하면 .NET Core CLI 명령을 실행할 때 어떤 .NET Core SDK 버전을 사용할지 정의할 수 있습니다. .NET Core SDK를 선택하는 것은 프로젝트가 대상으로 하는 런타임을 지정하는 것과는 별개입니다. .NET Core SDK 버전은 사용된 .NET Core CLI 버전을 나타냅니다.
+*global.json* 파일을 사용하면 .NET CLI 명령을 실행할 때 어떤 .NET SDK 버전을 사용할지 정의할 수 있습니다. .NET SDK를 선택하는 것은 프로젝트가 대상으로 하는 런타임을 지정하는 것과는 별개입니다. .NET SDK 버전은 사용된 .NET CLI 버전을 나타냅니다.
 
 일반적으로 최신 버전의 SDK Tools를 사용하려고 하기 때문에 *global.json* 파일이 필요하지 않습니다. 일부 고급 시나리오에서는 SDK Tools의 버전을 컨트롤하는 것이 좋습니다. 이 문서에서는 해당 방법을 설명합니다.
 
 대신 런타임 지정에 대한 자세한 내용은 [대상 프레임워크](../../standard/frameworks.md)를 참조하세요.
 
-.NET Core SDK는 현재 작업 디렉터리(반드시 프로젝트 디렉터리와 동일하지는 않음) 또는 상위 디렉터리 중 하나에서 *global.json* 파일을 찾습니다.
+.NET SDK는 현재 작업 디렉터리(반드시 프로젝트 디렉터리와 동일하지는 않음) 또는 부모 디렉터리 중 하나에서 *global.json* 파일을 찾습니다.
 
 ## <a name="globaljson-schema"></a>global.json 스키마
 
@@ -29,7 +29,7 @@ ms.locfileid: "93281547"
 
 형식: `object`
 
-선택할 .NET Core SDK에 대한 정보를 지정합니다.
+선택할 .NET SDK에 대한 정보를 지정합니다.
 
 #### <a name="version"></a>버전
 
@@ -37,7 +37,7 @@ ms.locfileid: "93281547"
 
 - .NET Core 1.0 SDK부터 사용할 수 있습니다.
 
-사용할 .NET Core SDK의 버전입니다.
+사용할 .NET SDK의 버전입니다.
 
 이 필드:
 
@@ -55,7 +55,7 @@ ms.locfileid: "93281547"
 이 값을 명시적으로 설정하지 않은 경우 Visual Studio에서 실행하고 있는지에 따라 기본값이 달라집니다.
 
 - Visual Studio에서 실행하지 **않는** 경우 기본값은 `true`입니다.
-- Visual Studio에서 실행하는 경우 요청된 시험판 상태를 사용합니다. 즉, Visual Studio의 미리 보기 버전을 사용하거나 **.NET Core SDK 미리 보기 사용** 옵션( **도구** > **옵션** > **환경** > **미리 보기 기능** )을 설정하는 경우 기본값은 `true`이고, 그렇지 않으면 `false`입니다.
+- Visual Studio에서 실행하는 경우 요청된 시험판 상태를 사용합니다. 즉, Visual Studio의 미리 보기 버전을 사용하거나 **.NET Core SDK 미리 보기 사용** 옵션(**도구** > **옵션** > **환경** > **미리 보기 기능**)을 설정하는 경우 기본값은 `true`이고, 그렇지 않으면 `false`입니다.
 
 #### <a name="rollforward"></a>롤포워드
 
@@ -84,7 +84,7 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 | `latestPatch` | 요청된 주 버전, 부 버전 및 기능 밴드와 패치 수준이 일치하고 지정된 값과 같거나 큰 최신 설치된 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `latestFeature` | 요청된 주 버전과 부 버전이 지정된 값보다 크거나 같은 기능 밴드 및 패치 수준과 일치하는 설치된 최상위 기능 밴드와 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `latestMinor` | 요청된 주 버전이 지정된 값보다 크거나 같은 부 버전, 기능 밴드, 패치 수준과 일치하는 설치된 최상위 부 버전, 기능 밴드, 패치 수준을 사용합니다. <br> 찾을 수 없으면 실패합니다. |
-| `latestMajor` | 지정된 값보다 크거나 같은 버전과 함께 설치된 최상위 .Net Core SDK를 사용합니다. <br> 찾을 수 없으면 실패합니다. |
+| `latestMajor` | 지정한 값보다 크거나 같은 버전과 함께 설치된 최상위 .NET SDK를 사용합니다. <br> 찾을 수 없으면 실패합니다. |
 | `disable`     | 롤포워드하지 않습니다. 정확하게 일치해야 합니다. |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdk
@@ -149,11 +149,11 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.json 및 .NET Core CLI
+## <a name="globaljson-and-the-net-cli"></a>global.json 및 .NET CLI
 
-*global json* 파일에 버전을 설정하기 위해서는 컴퓨터에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET Core가 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
+*global json* 파일에 버전을 설정하기 위해서는 컴퓨터에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET이 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
 
-컴퓨터에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
+머신에 추가 .NET SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>일치 규칙
 
 > [!NOTE]
-> 일치 규칙은 설치된 모든 .NET Core 설치 런타임에서 공통으로 사용되는 `dotnet.exe` 진입점에 의해 관리됩니다. 여러 개의 런타임이 나란히 설치되어 있거나 *global.json* 파일을 사용 중인 경우 설치된 .NET Core Runtime 최신 버전의 일치 규칙이 사용됩니다.
+> 일치 규칙에는 설치된 모든 .NET 설치 런타임에서 공통으로 사용되는 `dotnet.exe` 진입점이 적용됩니다. 여러 런타임이 함께 설치되어 있거나 *global.json* 파일을 사용 중인 경우 설치된 최신 버전의 .NET 런타임에 대한 일치 규칙이 사용됩니다.
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
@@ -172,7 +172,7 @@ dotnet new globaljson --sdk-version 3.0.100
 
 - *global. json* 파일을 찾을 수 없거나 *global.json* 이 SDK 버전 또는 `allowPrerelease` 값을 지정하지 않은 경우 설치된 최상위 SDK 버전이 사용됩니다(`rollForward`을 `latestMajor`로 설정하는 것과 같음). 시험판 SDK 버전을 고려하는지는 `dotnet`을 호출하는 방법에 따라 달라집니다.
   - Visual Studio에서 실행하지 **않는** 경우 시험판 버전이 고려됩니다.
-  - Visual Studio에서 실행하는 경우 요청된 시험판 상태를 사용합니다. 즉, Visual Studio의 미리 보기 버전을 사용하거나 **.NET Core SDK의 미리 보기 사용** 옵션( **도구** > **옵션** > **환경** > **미리 보기 기능** )을 설정하는 경우 시험판 버전이 고려됩니다. 그렇지 않으면 릴리스 버전만 고려됩니다.
+  - Visual Studio에서 실행하는 경우 요청된 시험판 상태를 사용합니다. 즉, Visual Studio의 미리 보기 버전을 사용하거나 **.NET Core SDK의 미리 보기 사용** 옵션(**도구** > **옵션** > **환경** > **미리 보기 기능**)을 설정하는 경우 시험판 버전이 고려됩니다. 그렇지 않으면 릴리스 버전만 고려됩니다.
 - SDK 버전을 지정하지 않고 `allowPrerelease` 값을 지정하는 *global.json* 파일을 찾은 경우 설치된 최상위 SDK 버전이 사용됩니다(`rollForward`를 `latestMajor`로 설정하는 것과 같음). 최신 SDK 버전을 릴리스 또는 시험판이 될 수 있는지는 `allowPrerelease` 값에 따라 달라집니다. `true`는 시험판 버전이 고려됨을 나타냅니다. `false`는 릴리스 버전만 고려됨을 나타냅니다.
 - *global.json* 파일을 찾아 SDK 버전을 지정하는 경우 다음과 같습니다.
 

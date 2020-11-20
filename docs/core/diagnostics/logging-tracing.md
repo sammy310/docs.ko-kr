@@ -2,12 +2,12 @@
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997697"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439926"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -53,11 +53,12 @@ ms.locfileid: "91997697"
   - EventSource는 기본 루트 .NET Core 추적 API입니다.
   - 모든 .NET Standard 버전에서 사용할 수 있습니다.
   - 직렬화할 수 있는 개체만 추적할 수 있습니다.
-  - 연결된 [이벤트 수신기](xref:System.Diagnostics.Tracing.EventListener)에 씁니다.
-  - .NET Core에서 제공하는 수신기는 다음과 같습니다.
+  - EventSource를 이용하도록 구성된 [EventListener](xref:System.Diagnostics.Tracing.EventListener) 인스턴스를 통해 in-process로 이용할 수 있습니다.
+  - 다음을 통해 out-of-process로 이용할 수 있습니다.
     - 모든 플랫폼에서 .NET Core의 EventPipe
     - [ETW(Windows용 이벤트 추적)](/windows/win32/etw/event-tracing-portal)
     - [Linux용 LTTng 추적 프레임워크](https://lttng.org/)
+      - 연습: [PerfCollect를 사용하여 LTTng 추적 수집](trace-perfcollect-lttng.md)
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - .NET Core 및 .NET Framework용 [NuGet 패키지](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)에 포함되어 있습니다.

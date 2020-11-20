@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 68b55eb40d86ac3c92853acbb17ad622704b1336
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8315b4f86dddfbb68534bc9ad3ad74907daa03d0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93135651"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507049"
 ---
 
 ### <a name="install-the-sdk"></a>SDK 설치
@@ -23,7 +23,7 @@ sudo dnf install dotnet-sdk-3.0
 sudo dnf install aspnetcore-runtime-3.0
 ```
 
-ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 이전 명령에서 `aspnetcore-runtime-3.0`을 `dotnet-runtime-3.0`으로 바꿉니다.
+ASP.NET Core 런타임 대신 ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 이전 명령에서 `aspnetcore-runtime-3.0`을 `dotnet-runtime-3.0`으로 바꿉니다.
 
 ```bash
 sudo dnf install dotnet-runtime-3.0

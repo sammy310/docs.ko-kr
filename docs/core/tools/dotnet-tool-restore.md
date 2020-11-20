@@ -1,13 +1,13 @@
 ---
 title: dotnet tool restore 명령
-description: dotnet tool restore 명령은 현재 디렉터리에 대한 범위에 있는 .NET Core 로컬 도구를 컴퓨터에 설치합니다.
+description: dotnet tool restore 명령은 현재 디렉터리의 범위에 포함된 .NET 로컬 도구를 머신에 설치합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302674"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634274"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "87302674"
 
 ## <a name="name"></a>이름
 
-`dotnet tool restore` - 현재 디렉터리에 대한 범위에 있는 .NET Core 로컬 도구를 컴퓨터에 설치합니다.
+`dotnet tool restore` - 현재 디렉터리의 범위에 포함된 .NET 로컬 도구를 머신에 설치합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -79,5 +79,5 @@ dotnet tool restore -h|--help
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 도구](global-tools.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)
+- [.NET 도구](global-tools.md)
+- [자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

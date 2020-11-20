@@ -1,17 +1,17 @@
 ---
-title: 지속 가능한 Azure Functions - 서버리스 앱
-description: 지속 가능한 Azure Functions는 코드에서 상태 저장 워크플로를 사용하도록 Azure Functions 런타임을 확장합니다.
+title: 지속형 Azure Functions - 서버리스 앱
+description: 지속형 Azure Functions는 코드에서 상태 저장 워크플로를 사용하도록 Azure Functions 런타임을 확장합니다.
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171795"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557157"
 ---
-# <a name="durable-azure-functions"></a>지속 가능한 Azure Functions
+# <a name="durable-azure-functions"></a>지속형 Azure Functions
 
 Azure Functions를 사용하여 서버리스 애플리케이션을 만드는 경우 일반적으로 작업은 상태 비저장 방식으로 실행되도록 디자인됩니다. 이 디자인을 선택하는 이유는 플랫폼이 크기 조정될 때 코드가 실행되는 서버를 파악하기 어렵기 때문입니다. 또한 지정된 지점에서 활성 상태인 인스턴스 수를 파악하기 어렵습니다. 그러나 프로세스의 현재 상태를 알고 있어야 하는 애플리케이션의 클래스가 있습니다. 온라인 상점에 주문을 제출하는 프로세스를 가정해 보겠습니다. 체크 아웃 작업은 프로세스의 상태를 알고 있어야 하는 여러 작업으로 구성된 워크플로일 수 있습니다. 이러한 정보에는 제품 인벤토리, 고객이 계정에 크레딧을 보유하고 있는지 여부, 또한 신용 카드 처리 결과가 포함될 수 있습니다. 이러한 작업은 자체 내부 워크플로 또는 타사 시스템의 서비스일 수도 있습니다.
 

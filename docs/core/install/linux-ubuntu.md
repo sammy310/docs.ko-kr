@@ -1,19 +1,19 @@
 ---
-title: Ubuntu에 .NET Core 설치 - .NET Core
-description: Ubuntu에 .NET Core SDK와 .NET Core 런타임을 설치하는 다양한 방법을 보여줍니다.
+title: Ubuntu에 .NET 설치 - .NET
+description: Ubuntu에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방법을 보여 줍니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538458"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507030"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu에 .NET Core SDK 또는 .NET Core 런타임 설치
+# <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu에 .NET SDK 또는 .NET 런타임 설치
 
-.NET Core는 Ubuntu에서 지원됩니다. 이 문서에서는 Ubuntu에 .NET Core를 설치하는 방법을 설명합니다. Ubuntu 버전의 지원이 종료되면 해당 버전에서는 .NET Core도 더 이상 지원되지 않습니다. 그러나, 이러한 지침은 지원되지 않는 버전에서 .NET Core를 실행하는 데 도움이 될 수 있습니다.
+.NET은 Ubuntu에서 지원됩니다. 이 문서에서는 Ubuntu에 .NET을 설치하는 방법을 설명합니다. Ubuntu 버전의 지원이 종료되면 해당 버전에서는 .NET도 더 이상 지원되지 않습니다. 그러나 이러한 지침은 지원되지 않더라도 해당 버전에서 .NET을 실행하는 데 도움이 될 수 있습니다.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,25 +21,26 @@ ms.locfileid: "90538458"
 
 ## <a name="supported-distributions"></a>지원되는 배포
 
-다음 표는 현재 지원되는 .NET Core 릴리스와 지원되는 Ubuntu 버전의 목록입니다. 이러한 버전은 각 버전의 [.NET Core가 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 [Ubuntu 버전이 지원 종료에 도달](https://wiki.ubuntu.com/Releases)할 때까지 지원됩니다.
+다음 표는 현재 지원되는 .NET 릴리스와 해당 릴리스가 지원되는 Ubuntu 버전의 목록입니다. 이러한 버전은 [.NET 버전이 지원 종료에 도달](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)하거나 [Ubuntu 버전이 지원 종료에 도달](https://wiki.ubuntu.com/Releases)할 때까지 계속 지원됩니다.
 
-- ✔️는 Ubuntu 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
-- ❌는 Ubuntu 또는 .NET Core 버전이 해당 Ubuntu 릴리스에서 지원되지 않음을 나타냅니다.
-- Ubuntu 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
+- ✔️는 Ubuntu 또는 .NET 버전이 계속 지원됨을 나타냅니다.
+- ❌는 Ubuntu 또는 .NET 버전이 해당 Ubuntu 릴리스에서 지원되지 않음을 나타냅니다.
+- Ubuntu 버전과 .NET 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
 
-| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 미리 보기(수동 설치만 해당) |
+| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [20.04(LTS)](#2004-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
-| ❌ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
-| ❌ [19.04](#1904-)       | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 미리 보기 |
-| ❌ [18.10](#1810-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
-| ✔️ [18.04(LTS)](#1804-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
-| ❌ [17.10](#1710-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
-| ❌ [17.04](#1704-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
-| ❌ [16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 미리 보기 |
-| ✔️ [16.04(LTS)](#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 미리 보기 |
+| ✔️ [20.10](#2010-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [20.04(LTS)](#2004-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [19.10](#1910-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [19.04](#1904-)       | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ [18.10](#1810-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ✔️ [18.04(LTS)](#1804-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [17.10](#1710-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ [17.04](#1704-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ [16.10](#1610-)       | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ✔️ [16.04(LTS)](#1604-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-다음 .NET Core 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
+다음 .NET 버전은 더 이상 지원되지 않습니다. 이러한 버전의 다운로드는 여전히 게시된 상태로 유지됩니다.
 
 - 3.0
 - 2.2
@@ -48,6 +49,12 @@ ms.locfileid: "90538458"
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="2010-"></a>20.10 ✔️
+
+Ubuntu 20.10용 .NET 5 및 .NET Core 3.1 패키지 피드에는 현재 문제가 있습니다. 문제에 대한 자세한 내용은 [GitHub issue dotnet/core#5549](https://github.com/dotnet/core/issues/5549)(GitHub 문제 dotnet/core#5549)를 참조하세요. 이 문서는 문제가 해결될 때 업데이트됩니다.
+
+Ubuntu 20.10에 .NET 5 또는 .NET Core 3.1을 설치하려면 [20.04](#2004-)에 대한 지침을 따르세요.
 
 ## <a name="2004-"></a>20.04 ✔️
 
@@ -58,7 +65,7 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1910-"></a>19.10 ❌
 
@@ -108,7 +115,7 @@ wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1710-"></a>17.10 ❌
 
@@ -158,11 +165,11 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT 업데이트 SDK 또는 런타임
 
-.NET Core에 대한 새로운 패치 릴리스가 출시될 경우 다음 명령을 사용하면 APT를 통해 간단하게 업그레이드할 수 있습니다.
+.NET에 대한 새로운 패치 릴리스가 출시되면 다음 명령을 사용하여 APT를 통해 간단하게 업그레이드할 수 있습니다.
 
 ```bash
 sudo apt-get update
@@ -171,7 +178,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT 문제 해결
 
-이 섹션에서는 APT를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+이 섹션에서는 APT를 사용하여 .NET을 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
 
 ### <a name="unable-to-find-package"></a>패키지를 찾을 수 없음
 
@@ -205,7 +212,7 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>종속성
 
-패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나, .NET Core를 수동으로 설치하거나 자체 포함된 앱을 게시할 경우 라이브러리가 설치되어 있는지 확인해야 합니다.
+패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나 .NET을 수동으로 설치하거나 자체 포함 앱을 게시할 경우 이러한 라이브러리가 설치되어 있는지 확인해야 합니다.
 
 - libc6
 - libgcc1
@@ -219,12 +226,12 @@ sudo apt-get update; \
 - libstdc++6
 - zlib1g
 
-*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 앱의 경우 다음과 같은 종속성도 필요합니다.
+*System.Drawing.Common* 어셈블리를 사용하는 .NET 앱의 경우 다음과 같은 종속성도 필요합니다.
 
 - libgdiplus(버전 6.0.1 이상)
 
   > [!WARNING]
-  > 시스템에 Mono 리포지토리를 추가하여 최신 버전의 *libgdiplus*를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
+  > 시스템에 Mono 리포지토리를 추가하여 최신 버전의 *libgdiplus* 를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ## <a name="scripted-install"></a>스크립팅된 설치
 
@@ -236,4 +243,4 @@ sudo apt-get update; \
 
 ## <a name="next-steps"></a>다음 단계
 
-- [자습서: Visual Studio Code](../tutorials/with-visual-studio-code.md)를 사용하는 .NET Core SDK로 콘솔 애플리케이션 만들기
+- [자습서: Visual Studio Code를 사용하여 .NET SDK에서 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)

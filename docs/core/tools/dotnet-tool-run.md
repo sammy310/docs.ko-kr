@@ -2,12 +2,12 @@
 title: dotnet tool run 명령
 description: dotnet tool run 명령은 로컬 도구를 호출합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: f79c239363e8b3abbd55c54dd1912443e6777fb7
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 116ecb61748a0ca70ed385b279b11b939748f4a8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463321"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634157"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -49,5 +49,5 @@ dotnet tool run -h|--help
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 도구](global-tools.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)
+- [.NET 도구](global-tools.md)
+- [자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

@@ -2,12 +2,12 @@
 title: dotnet store 명령
 description: "'dotnet store' 명령은 지정된 어셈블리를 런타임 패키지 저장소에 저장합니다."
 ms.date: 02/14/2020
-ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8efb11c6bf648bc7787d5627e02b180abb8a0afd
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463392"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634339"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -41,7 +41,7 @@ dotnet store -h|--help
 
 - **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  *패키지 저장소 매니페스트 파일*은 저장할 패키지 목록이 포함된 XML 파일입니다. 매니페스트 파일 형식은 SDK 스타일 프로젝트 형식과 호환됩니다. 따라서 원하는 패키지를 참조하는 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다. 여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다. 예: `--manifest packages1.csproj --manifest packages2.csproj`
+  *패키지 저장소 매니페스트 파일* 은 저장할 패키지 목록이 포함된 XML 파일입니다. 매니페스트 파일 형식은 SDK 스타일 프로젝트 형식과 호환됩니다. 따라서 원하는 패키지를 참조하는 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다. 여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다. 예: `--manifest packages1.csproj --manifest packages2.csproj`
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -51,7 +51,7 @@ dotnet store -h|--help
 
 - **`--framework-version <FRAMEWORK_VERSION>`**
 
-  .NET Core SDK 버전을 지정합니다. 이 옵션을 사용하여 `-f|--framework` 옵션을 통해 지정된 프레임워크가 아닌 특정 프레임워크 버전을 선택할 수 있습니다.
+  .NET SDK 버전을 지정합니다. 이 옵션을 사용하여 `-f|--framework` 옵션을 통해 지정된 프레임워크가 아닌 특정 프레임워크 버전을 선택할 수 있습니다.
 
 - **`-h|--help`**
 
@@ -59,7 +59,7 @@ dotnet store -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  런타임 패키지 저장소의 경로를 지정합니다. 지정하지 않으면 기본적으로 사용자 프로필 .NET Core 설치 디렉터리의 *store* 하위 디렉터리가 사용됩니다.
+  런타임 패키지 저장소의 경로를 지정합니다. 지정하지 않으면 기본적으로 사용자 프로필 .NET 설치 디렉터리의 *store* 하위 디렉터리로 지정됩니다.
 
 - **`--skip-optimization`**
 
@@ -85,7 +85,7 @@ dotnet store -h|--help
   dotnet store --manifest packages.csproj --framework-version 2.0.0
   ```
 
-- 지정된 패키지를 최적화 없이 *packages.csproj*에 저장합니다.
+- 지정된 패키지를 최적화 없이 *packages.csproj* 에 저장합니다.
 
   ```dotnetcli
   dotnet store --manifest packages.csproj --skip-optimization

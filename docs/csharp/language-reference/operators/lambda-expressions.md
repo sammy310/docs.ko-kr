@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247711"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556844"
 ---
 # <a name="lambda-expressions-c-reference"></a>람다 식(C# 참조)
 
-*람다 식*은 다음 두 형식의 식입니다.
+*람다 식* 은 다음 두 형식의 식입니다.
 
 - 식이 본문으로 포함된 [식 람다](#expression-lambdas):
 
@@ -56,7 +56,7 @@ ms.locfileid: "91247711"
 (input-parameters) => expression
 ```
 
-식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 하지만 SQL Server와 같은 .NET 공용 언어 런타임의 컨텍스트 외부에서 평가되는 [식 트리](../../programming-guide/concepts/expression-trees/index.md)를 만드는 경우에는 람다 식에 메서드 호출을 사용하지 않아야 합니다. 이러한 메서드는 .NET 공용 언어 런타임의 컨텍스트 안에서만 의미가 있습니다.
+식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 하지만 SQL Server에서처럼 .NET CLR(공용 언어 런타임)의 컨텍스트 외부에서 평가되는 [식 트리](../../programming-guide/concepts/expression-trees/index.md)를 만드는 경우에는 람다 식에서 메서드 호출을 사용하면 안 됩니다. 메서드는 .NET CLR(공용 언어 런타임)의 컨텍스트 내에서만 의미가 있습니다.
 
 ## <a name="statement-lambdas"></a>문 람다
 
@@ -215,7 +215,7 @@ customers.Where(c => c.City == "London");
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>람다 식에서 외부 변수 및 변수 범위 캡처
 
-람다는 *외부 변수*를 참조할 수 있습니다. 이러한 변수는 람다 식을 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 변수입니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.
+람다는 *외부 변수* 를 참조할 수 있습니다. 이러한 변수는 람다 식을 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 변수입니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.
 
 [!code-csharp[variable scope](snippets/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 

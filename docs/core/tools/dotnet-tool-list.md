@@ -1,13 +1,13 @@
 ---
 title: dotnet tool list 명령
-description: dotnet tool list 명령은 컴퓨터에 설치된 .NET Core 도구를 나열합니다.
+description: dotnet tool list 명령은 머신에 설치된 .NET 도구를 나열합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d884f2c41834dd9704de3a8ca15417ba368fde4b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925464"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634287"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -15,7 +15,7 @@ ms.locfileid: "86925464"
 
 ## <a name="name"></a>이름
 
-`dotnet tool list` - 컴퓨터에 현재 설치되어 있는 지정된 유형의 모든 [.NET Core 도구](global-tools.md)를 나열합니다.
+`dotnet tool list` - 머신에 현재 설치되어 있는 지정된 유형의 모든 [.NET 도구](global-tools.md)를 나열합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -33,7 +33,7 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet tool list` 명령을 사용하면 머신에 설치된 모든 .NET Core 전역, 도구 경로 또는 로컬 도구를 나열할 수 있습니다. 이 명령은 패키지 이름, 설치된 버전 및 도구 명령을 나열합니다.  이 명령을 사용하려면 다음 중 하나를 지정합니다.
+`dotnet tool list` 명령은 머신에 설치된 모든 .NET 전역, 도구 경로 또는 로컬 도구를 나열하는 방법을 제공합니다. 이 명령은 패키지 이름, 설치된 버전 및 도구 명령을 나열합니다.  이 명령을 사용하려면 다음 중 하나를 지정합니다.
 
 * 기본 위치에 설치된 전역 도구를 나열하려면 `--global` 옵션을 사용합니다.
 * 사용자 지정 위치에 설치된 전역 도구를 나열하려면 `--tool-path` 옵션을 사용합니다.
@@ -79,6 +79,6 @@ dotnet tool list -h|--help
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 도구](global-tools.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
-- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)
+- [.NET 도구](global-tools.md)
+- [자습서: .NET CLI를 사용하여 .NET 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

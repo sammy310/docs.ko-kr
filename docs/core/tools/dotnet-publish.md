@@ -1,13 +1,13 @@
 ---
 title: dotnet publish 명령
-description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
-ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+description: dotnet publish 명령은 .NET 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654896"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634431"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,11 +41,11 @@ dotnet publish -h|--help
 - 런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)과 애플리케이션에서 예상하는 공유 런타임을 지정하는 *.runtimeconfig.json* 파일
 - 애플리케이션의 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.
 
-`dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다. 이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다. 자세한 내용은 [.NET Core CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)를 참조하세요.
+`dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다. 이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에서 .NET 공유 런타임을 설치하거나 설치하지 않을 수 있습니다. 자세한 내용은 [.NET CLI를 사용하여 .NET 앱 게시](../deploying/deploy-with-cli.md)를 참조하세요.
 
 ### <a name="implicit-restore"></a>암시적 복원
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -125,7 +125,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   
   지정하지 않으면 프레임워크 종속 실행 파일과 플랫폼 간 이진 파일에 대해 *[project_file_folder]/bin/[configuration]/[framework]/publish/* 로 기본 설정되고, 자체 포함 실행 파일에 대해 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
 
-  웹 프로젝트에서 출력 폴더가 프로젝트 폴더에 있는 경우 연속 `dotnet publish` 명령에서는 중첩된 출력 폴더가 생성됩니다. 예를 들어 프로젝트 폴더가 *myproject*이고 게시 출력 폴더가 *myproject/publish*일 때 `dotnet publish`를 두 번 실행하면 두 번째 실행에서는 *.config* 및 *.json* 파일과 같은 콘텐츠 파일이 *myproject/publish/publish*에 삽입됩니다. 게시 폴더가 중첩되지 않게 하려면 프로젝트 폴더 **바로** 아래에 있지 않은 게시 폴더를 지정하거나 프로젝트에서 게시 폴더를 제외합니다. *publishoutput*이라는 게시 폴더를 제외하려면 *.csproj* 파일의 `PropertyGroup` 요소에 다음 요소를 추가합니다.
+  웹 프로젝트에서 출력 폴더가 프로젝트 폴더에 있는 경우 연속 `dotnet publish` 명령에서는 중첩된 출력 폴더가 생성됩니다. 예를 들어 프로젝트 폴더가 *myproject* 이고 게시 출력 폴더가 *myproject/publish* 일 때 `dotnet publish`를 두 번 실행하면 두 번째 실행에서는 *.config* 및 *.json* 파일과 같은 콘텐츠 파일이 *myproject/publish/publish* 에 삽입됩니다. 게시 폴더가 중첩되지 않게 하려면 프로젝트 폴더 **바로** 아래에 있지 않은 게시 폴더를 지정하거나 프로젝트에서 게시 폴더를 제외합니다. *publishoutput* 이라는 게시 폴더를 제외하려면 *.csproj* 파일의 `PropertyGroup` 요소에 다음 요소를 추가합니다.
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
@@ -165,7 +165,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`--self-contained [true|false]`**
 
-  대상 컴퓨터에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다. 런타임 식별자가 지정되고 프로젝트가 라이브러리 프로젝트가 아니라 실행 가능 프로젝트인 경우 기본값은 `true`입니다. 자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.
+  애플리케이션과 함께 .NET 런타임을 게시하여 대상 머신에 런타임을 설치할 필요가 없습니다. 런타임 식별자가 지정되고 프로젝트가 라이브러리 프로젝트가 아니라 실행 가능 프로젝트인 경우 기본값은 `true`입니다. 자세한 내용은 [.NET 애플리케이션 게시](../deploying/index.md) 및 [.NET CLI를 사용하여 .NET 앱 게시](../deploying/deploy-with-cli.md)를 참조하세요.
 
   `true` 또는 `false`를 지정하지 않고 이 옵션을 사용하는 경우 기본값은 `true`입니다. 이 경우 솔루션 또는 프로젝트 인수를 `--self-contained` 바로 뒤에 배치하지 마세요. 이 위치에 `true` 또는 `false`가 필요하기 때문입니다.
 
@@ -175,7 +175,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  지정된 런타임에 대한 애플리케이션을 게시합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.
+  지정된 런타임에 대한 애플리케이션을 게시합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 자세한 내용은 [.NET 애플리케이션 게시](../deploying/index.md) 및 [.NET CLI를 사용하여 .NET 앱 게시](../deploying/deploy-with-cli.md)를 참조하세요.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core application publishing overview](../deploying/index.md)(.NET Core 애플리케이션 게시 개요)
-- [.NET Core CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)
+- [.NET 애플리케이션 게시 개요](../deploying/index.md)
+- [.NET CLI를 사용하여 .NET 앱 게시](../deploying/deploy-with-cli.md)
 - [대상 프레임워크](../../standard/frameworks.md)
 - [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 - [macOS Catalina 공증 관련 사항](../install/macos-notarization-issues.md)
