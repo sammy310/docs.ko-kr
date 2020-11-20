@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197471"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982520"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  또한 `DataRow.["columnName"]` null 할당 인스턴스에 다음 규칙이 적용됩니다.  
   
-1. 강력한 형식의 null 값이 적절한 강력한 형식의 null 열을 제외한 모든 열에서 기본 *default* 값은 `DbNull.Value`입니다.  
+1. 강력한 *default* 형식의 `DbNull.Value` null 열을 제외한 모든 값에 대 한 기본값은 적절 한 강력한 형식의 null 값입니다.  
   
 2. "xsi:nil"에서처럼 XML 파일로 직렬화하는 동안에는 null 값이 작성되지 않습니다.  
   

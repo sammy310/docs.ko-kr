@@ -1,13 +1,13 @@
 ---
 title: 요약
-description: Azure에 대 한 클라우드 기본 .NET 앱 가이드/e-서적에서 핵심 결론을 요약 한 것입니다.
+description: Azure에 대 한 .NET 앱 개발 가이드/e-서적에서 핵심 결론의 요약을 Cloud-Native.
 ms.date: 05/13/2020
-ms.openlocfilehash: b1a195c0c081565c57f5aac2e234411bb904ca08
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e0325b1bb6961c865e904779496950031db8db0b
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613657"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982357"
 ---
 # <a name="summary"></a>요약
 
@@ -17,7 +17,7 @@ ms.locfileid: "83613657"
 
 - **Cncf ( [Cloud Native 컴퓨팅 Foundation](https://www.cncf.io/) )** 는 300 주요 기업 이상에서의 영향력 있는 오픈 소스 컨소시엄입니다. 이는 기술 및 클라우드 스택에서 클라우드 기본 컴퓨팅을 채택 하는 일을 담당 합니다.
 
-- **Cncf 지침** : 클라우드 네이티브 응용 프로그램은 그림 11-1에 표시 된 것 처럼 6 개의 중요 한 핵심 요소를 수용 하는 것이 좋습니다.
+- **Cncf 지침** -클라우드 네이티브 응용 프로그램은 그림 11-1에 표시 된 것 처럼 6 개의 중요 한 핵심 요소를 수용 하는 것이 좋습니다.
 
   ![클라우드 네이티브 기본 핵심 요소](./media/cloud-native-foundational-pillars.png)
 

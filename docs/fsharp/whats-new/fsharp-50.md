@@ -2,20 +2,20 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557144"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982468"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
 F # 5.0은 F # 언어 및 F# 대화형에 몇 가지 향상 된 기능을 추가 합니다. **.Net 5** 와 함께 출시 됩니다.
 
-최신 .NET SDK는 [.net 다운로드 페이지](https://dotnet.microsoft.com/download)에서 다운로드할 수 있습니다.
+[.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 F # 5.0은 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다. 자세한 내용은 [F # 시작](../get-started/index.md) 을 참조 하세요.
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-패키지 참조에 대 한 자세한 내용은 [F# 대화형](../tutorials/fsharp-interactive/index.md) 자습서를 참조 하십시오.
+이 기능은 [F # 도구 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)을 구현 합니다. 패키지 참조에 대 한 자세한 내용은 [F# 대화형](../tutorials/fsharp-interactive/index.md) 자습서를 참조 하십시오.
 
 ## <a name="string-interpolation"></a>문자열 보간
 
@@ -102,6 +102,8 @@ let str =
 ```
 
 실제로는이 작업을 수행 하지 않는 것이 좋습니다.
+
+이 기능은 [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)을 구현 합니다.
 
 ## <a name="support-for-nameof"></a>Nameof에 대 한 지원
 
@@ -176,6 +178,8 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 이전 코드는 일치 식에서 문자열 리터럴 대신 ' nameof '를 사용 합니다.
 
+이 기능은 [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)을 구현 합니다.
+
 ## <a name="open-type-declarations"></a>개방형 형식 선언
 
 또한 F # 5는 개방형 형식 선언에 대 한 지원을 추가 합니다. 개방형 형식 선언은 F # 의미 체계에 적합 한 몇 가지 다른 구문과 약간 다른 동작을 제외 하 고 c #에서 정적 클래스를 여는 것과 같습니다.
@@ -200,6 +204,8 @@ printfn "%A" A
 
 C #과 달리 `open type` 동일한 이름의 멤버를 노출 하는 두 가지 형식을 사용 하는 경우 마지막 형식의 멤버가 `open` 다른 이름을 숨깁니다. 이미 존재 하는 숨김과 관련 된 F # 의미 체계와 일치 합니다.
 
+이 기능은 [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)을 구현 합니다.
+
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>기본 제공 데이터 형식에 대 한 일관적인 조각화 동작
 
 `FSharp.Core`F # 5 이전에 일관 되지 않은 상태로 사용 되는 기본 제공 데이터 형식 (배열, 목록, 문자열, 2d 배열, 3d 배열, 4d 배열)의 조각화에 대 한 동작입니다. 일부 edge-case 동작에서 예외를 throw 했 고 일부는 그렇지 않습니다. F # 5에서 모든 기본 제공 형식은 이제 생성 하지 못하는 조각에 대 한 빈 조각을 반환 합니다.
@@ -221,6 +227,8 @@ let emptyArray = a.[-2..(-1)]
 // F# 5: returns empty string
 let emptyString = s.[-2..(-1)]
 ```
+
+이 기능은 [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)을 구현 합니다.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>Fsharp.core에서 3D 및 4D 배열의 고정 인덱스 조각
 
@@ -260,6 +268,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
+이 기능은 [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)를 구현 합니다.
+
 ## <a name="f-quotations-improvements"></a>F # 인용의 향상 된 기능
 
 이제 F # [코드 인용구](../language-reference/code-quotations.md) 에 형식 제약 조건 정보를 유지 하는 기능이 있습니다. 다음 예제를 참조하세요.
@@ -276,6 +286,8 @@ let inline negate x = -x
 ```
 
 함수에서 생성 된 제약 조건은 `inline` 코드 qutoation 유지 됩니다. `negate`이제 함수의 quotated 폼을 평가할 수 있습니다.
+
+이 기능은 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)을 구현 합니다.
 
 ## <a name="applicative-computation-expressions"></a>Applicative 계산 식
 
@@ -326,6 +338,8 @@ let printApplicatives () =
 
 현재 라이브러리에서 CEs를 노출 하는 라이브러리 작성자 인 경우 주의 해야 할 몇 가지 추가 고려 사항이 있습니다.
 
+이 기능은 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)을 구현 합니다.
+
 ## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>인터페이스는 서로 다른 제네릭 인스턴스화에 implemeneted 수 있습니다.
 
 이제 서로 다른 제네릭 인스턴스화에 동일한 인터페이스를 구현할 수 있습니다.
@@ -347,6 +361,8 @@ let iaString = mc :> IA<string>
 iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
+
+이 기능은 [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)을 구현 합니다.
 
 ## <a name="default-interface-member-consumption"></a>기본 인터페이스 멤버 사용
 
@@ -387,6 +403,8 @@ printfn "DIM from C# but via Object Expression: %d" md'.Z
 
 이를 통해 사용자가 기본 구현을 사용할 수 있도록 하는 최신 c #으로 작성 된 c # 코드 및 .NET 구성 요소를 안전 하 게 활용할 수 있습니다.
 
+이 기능은 [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)을 구현 합니다.
+
 ## <a name="simplified-interop-with-nullable-value-types"></a>Nullable 값 형식을 사용한 간소화 된 interop
 
 [Nullable](https://docs.microsoft.com/dotnet/api/system.nullable-1) 형식 (현재는 nullable 형식 이라고 함)은 F #에서 오래 된 것 이지만 일반적으로 이러한 형식으로 상호 작용 하는 것은 `Nullable` `Nullable<SomeType>` 값을 전달할 때마다 또는 래퍼를 생성 해야 하기 때문에 일반적으로 약간의 어려움입니다. 이제 컴파일러는 `Nullable<ThatValueType>` 대상 형식이와 일치 하는 경우 값 형식을로 암시적으로 변환 합니다. 이제 다음 코드를 사용할 수 있습니다.
@@ -404,6 +422,8 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 // The previous line is now equivalent to this line
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
+
+이 기능은 [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)을 구현 합니다.
 
 ## <a name="preview-reverse-indexes"></a>미리 보기: 인덱스 반전
 
@@ -463,6 +483,8 @@ let run () =
 
 run() // Prints the same thing twice
 ```
+
+이 기능은 [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)을 구현 합니다.
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>미리 보기: 계산 식의 사용자 지정 키워드 오버 로드
 
@@ -535,3 +557,5 @@ let password =
 ```
 
 이러한 변경을 수행 하기 전에 `InputBuilder` 형식을 형식으로 작성할 수 있지만 예제에서 사용 하는 방식으로는 사용할 수 없습니다. 오버 로드, 선택적 매개 변수 및 현재 `System.ParamArray` 형식이 허용 되므로 모든 항목은 예상한 대로 작동 합니다.
+
+이 기능은 [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)을 구현 합니다.
