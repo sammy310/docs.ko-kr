@@ -2,12 +2,12 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982468"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098699"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
@@ -285,13 +285,13 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-함수에서 생성 된 제약 조건은 `inline` 코드 qutoation 유지 됩니다. `negate`이제 함수의 quotated 폼을 평가할 수 있습니다.
+함수에서 생성 된 제약 조건은 `inline` 코드 따옴표로 유지 됩니다. `negate`함수의 따옴표 붙은 형식을 이제 평가할 수 있습니다.
 
 이 기능은 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)을 구현 합니다.
 
 ## <a name="applicative-computation-expressions"></a>Applicative 계산 식
 
-[CEs (계산 식)](../language-reference/computation-expressions.md) 는 오늘날 "상황별 계산"을 모델링 하는 데 사용 되거나 더 함수형 프로그래밍의 친숙 한 용어 monadic 계산을 모델링 하는 데 사용 됩니다.
+[CEs (계산 식)](../language-reference/computation-expressions.md) 는 오늘날 "상황별 계산"을 모델링 하는 데 사용 되거나 더 함수형 프로그래밍에 익숙한 용어 monadic 계산에 사용 됩니다.
 
 F # 5는 다른 계산 모델을 제공 하는 applicative CEs를 소개 합니다. Applicative CEs를 사용 하면 모든 계산이 독립적이 고 그 결과가 끝에 누적 되어 제공 되는 보다 효율적인 계산을 수행할 수 있습니다. 계산도 서로 독립적 이면 일반적으로 병렬화 되어 CE 작성자가 보다 효율적인 라이브러리를 작성할 수 있습니다. 이 혜택은 제한에서 제공 되지만 이전에 계산 된 값에 의존 하는 계산은 허용 되지 않습니다.
 
@@ -340,7 +340,7 @@ let printApplicatives () =
 
 이 기능은 [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)을 구현 합니다.
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>인터페이스는 서로 다른 제네릭 인스턴스화에 implemeneted 수 있습니다.
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>다른 제네릭 인스턴스화에 인터페이스를 구현할 수 있습니다.
 
 이제 서로 다른 제네릭 인스턴스화에 동일한 인터페이스를 구현할 수 있습니다.
 
@@ -490,7 +490,7 @@ run() // Prints the same thing twice
 
 계산 식은 라이브러리 및 프레임 워크 작성자를 위한 강력한 기능입니다. 잘 알려진 멤버를 정의 하 고 작업 중인 도메인에 대해 DSL을 구성 하 여 구성 요소의 표현을을 크게 향상 시킬 수 있습니다.
 
-F # 5는 계산 식에서 사용자 지정 작업을 오버 로드 하기 위한 미리 보기 지원을 추가 합니다. 다음 코드를 쓰여진 하 고 사용할 수 있습니다.
+F # 5는 계산 식에서 사용자 지정 작업을 오버 로드 하기 위한 미리 보기 지원을 추가 합니다. 다음 코드를 작성 하 고 사용할 수 있습니다.
 
 ```fsharp
 open System
