@@ -8,12 +8,12 @@ metadata:
   author: cartermp
   ms.author: phcart
   ms.date: 08/29/2020
-  ms.openlocfilehash: 09276206df31b239c49a8fc3ec8e15927d674e37
-  ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+  ms.openlocfilehash: 12ae202d3618a35ecb19cad85452f5af98640152
+  ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/10/2020
-  ms.locfileid: "94440922"
+  ms.lasthandoff: 11/21/2020
+  ms.locfileid: "95099363"
 landingContent:
 - title: F#에서 프로그래밍하는 방법 알아보기
   linkLists:
@@ -79,6 +79,12 @@ landingContent:
       url: language-reference/functions/index.md
     - text: F# 형식
       url: language-reference/fsharp-types.md
+- title: F# 도구
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: F# Interactive
+      url: tools/fsharp-interactive/index.md
 - title: F# 주요 라이브러리 참조
   linkLists:
   - linkListType: reference
