@@ -37,8 +37,6 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: 형식 공급자 문제 해결
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: F# Interactive
-      href: tutorials/fsharp-interactive/index.md
 - name: F#의 새로운 기능
   items:
     - name: F# 5.0
@@ -266,6 +264,10 @@
       href: language-reference/verbose-syntax.md
     - name: 컴파일러 오류 및 경고
       href: language-reference/compiler-messages/index.md
+- name: F# 도구
+  items:
+    - name: F# Interactive
+      href: tools/fsharp-interactive/index.md
 - name: F# 스타일 가이드
   href: style-guide/index.md
   items:
