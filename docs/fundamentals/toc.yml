@@ -376,6 +376,26 @@ items:
             href: ../core/diagnostics/eventpipe.md
           - name: 로깅 및 추적
             href: ../core/diagnostics/logging-tracing.md
+          - name: 런타임 이벤트
+            items:
+              - name: 개요
+                href: ../fundamentals/diagnostics/runtime-events.md
+              - name: 경합 이벤트
+                href: ../fundamentals/diagnostics/runtime-contention-events.md
+              - name: 예외 이벤트
+                href: ../fundamentals/diagnostics/runtime-exception-events.md
+              - name: 가비지 수집 이벤트
+                href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
+              - name: Interop 이벤트
+                href: ../fundamentals/diagnostics/runtime-interop-events.md
+              - name: 로더 및 바인더 이벤트
+                href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
+              - name: 메서드 이벤트
+                href: ../fundamentals/diagnostics/runtime-method-events.md
+              - name: ThreadPool 이벤트
+                href: ../fundamentals/diagnostics/runtime-thread-events.md
+              - name: 형식 시스템 이벤트
+                href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: 컨테이너에서 진단 정보 수집
             href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI 전역 도구
@@ -1592,8 +1612,6 @@ items:
                 href: ../standard/serialization/how-to-chunk-serialized-data.md
               - name: '방법: .NET 표준 개체가 직렬화 가능한지 확인'
                 href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-              - name: 예제
-                href: ../standard/serialization/basic-serialization-technology-sample.md
           - name: XML 및 SOAP serialization
             items:
               - name: 개요
