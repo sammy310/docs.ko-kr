@@ -414,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: .NET Core 진단 자습서
             items:
+              - name: PerfCollect를 사용하여 Linux에서 성능 추적 수집
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: EventCounters를 사용하여 성능 메트릭 가져오기
                 href: ../core/diagnostics/event-counter-perf.md
               - name: 메모리 누수 디버그
