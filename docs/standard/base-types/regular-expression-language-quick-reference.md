@@ -2,7 +2,6 @@
 title: 정규식 언어 - 빠른 참조
 description: 이 빠른 참조에서는 정규식 패턴을 사용하여 입력 텍스트와 일치시키는 방법을 알아봅니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문을 포함합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 f1_keywords:
 - VS.RegularExpressionBuilder
 helpviewer_keywords:
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 1b261211997837e8664ea60e9210a7f0517f7a9f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889311"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818806"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 
@@ -47,10 +46,10 @@ ms.locfileid: "92889311"
 |`\f`|용지 공급 문자인 \u000C를 찾습니다.|`[\f]{2,}`|`"\f\f\f"`의 `"\f\f\f"`|
 |`\n`|줄 바꿈 문자인 \u000A를 찾습니다.|`\r\n(\w+)`|`"\r\nThese are\ntwo lines."`의 `"\r\nThese"`|
 |`\e`|이스케이프 문자인 \u001B를 찾습니다.|`\e`|`"\x001B"`의 `"\x001B"`|
-|`\` *nnn*|8진수 표현을 사용하여 문자를 지정합니다. ( *nnn* 은 두 자리 또는 세 자리로 구성됩니다.)|`\w\040\w`|`"a bc d"`의 `"a b"`, `"c d"`|
-|`\x` *nn*|16진수 표현을 사용하여 문자를 지정합니다. ( *nn* 은 정확히 두 자리로 구성됩니다.)|`\w\x20\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\` *nnn*|8진수 표현을 사용하여 문자를 지정합니다. (*nnn* 은 두 자리 또는 세 자리로 구성됩니다.)|`\w\040\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\x` *nn*|16진수 표현을 사용하여 문자를 지정합니다. (*nn* 은 정확히 두 자리로 구성됩니다.)|`\w\x20\w`|`"a bc d"`의 `"a b"`, `"c d"`|
 |`\c` *X*<br /><br /> `\c` *x*|*X* 또는 *x* 로 지정한 ASCII 제어 문자를 찾습니다. 여기서 *X* 또는 *x* 는 제어 문자를 나타내는 문자입니다.|`\cC`|`"\x0003"`의 `"\x0003"`(Ctrl-C)|
-|`\u` *nnnn*|16진수 표현(정확히 네 자리로 구성되는 *nnnn* )을 사용하여 유니코드 문자를 찾습니다.|`\w\u0020\w`|`"a bc d"`의 `"a b"`, `"c d"`|
+|`\u` *nnnn*|16진수 표현(정확히 네 자리로 구성되는 *nnnn*)을 사용하여 유니코드 문자를 찾습니다.|`\w\u0020\w`|`"a bc d"`의 `"a b"`, `"c d"`|
 |`\`|이 표나 이 항목의 다른 표에 있는 이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어, `\*`는 `\x2A`와 같고 `\.`는 `\x2E`와 같습니다. 이를 통해 정규식 엔진이 언어 요소(예: \* 또는 ?)와 `\*` 또는 `\?`로 표현되는 문자 리터럴을 구분할 수 있습니다.|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"`의 `"2+2"` 및 `"3*9"`|
 
 ## <a name="character-classes"></a>문자 클래스

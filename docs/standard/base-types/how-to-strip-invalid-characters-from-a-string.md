@@ -2,7 +2,6 @@
 title: '방법: 문자열에서 유효하지 않은 문자 제거'
 description: 정적 Regex.Replace 메서드를 사용하여 문자열에서 잠재적으로 유해한 문자를 제거하는 방법을 보여 주는 예제를 참조하세요.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: 1573724d4fa28380d7267f425547a23566bf4b4a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3d89a4697b58222cb218c11fe713a87c9b0fbdb8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889298"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823045"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>방법: 문자열에서 유효하지 않은 문자 제거
 다음 예제에서는 정적 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 잘못된 문자를 제거합니다.  

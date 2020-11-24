@@ -1,14 +1,13 @@
 ---
 title: XML DOM(문서 개체 모델) 계층 구조
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-ms.openlocfilehash: a6099b6c5e30fbf2e4d5d4ed046369bc8f884845
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2a8bbd4f7cb3feb2a555af9862632a2fa493be32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291437"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819255"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML DOM(문서 개체 모델) 계층 구조
 다음 그림은 관련 위치에 클래스 이름과 함께 괄호 안에 W3C(World Wide Web 컨소시엄) 이름을 표시하여 XML DOM(문서 개체 모델)에 대한 클래스 계층 구조를 보여 줍니다.  
@@ -16,7 +15,7 @@ ms.locfileid: "84291437"
  ![XML DOM(문서 개체 모델) 계층 구조](media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 XML DOM(문서 개체 모델) 계층 구조  
   
- 다음 클래스는 **XmlNode**에서 상속하지 않습니다.  
+ 다음 클래스는 **XmlNode** 에서 상속하지 않습니다.  
   
 - **XmlImplementation**  
   
@@ -32,9 +31,9 @@ XML DOM(문서 개체 모델) 계층 구조
   
  **XmlNodeList** 클래스는 정렬된 노드 목록을 처리합니다. 자세한 내용은 [인덱스를 사용한 정렬된 노드 검색](ordered-node-retrieval-by-index.md)을 참조하세요.  
   
- **XmlNodeChangedEventArgs** 클래스는 **XmlDocument**에 등록된 이벤트 처리기를 처리합니다. 자세한 내용은 [XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리](event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)를 참조하세요.  
+ **XmlNodeChangedEventArgs** 클래스는 **XmlDocument** 에 등록된 이벤트 처리기를 처리합니다. 자세한 내용은 [XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리](event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)를 참조하세요.  
   
- **XmlLinkedNode** 클래스는 **XmlNode**에서 상속합니다. 이 클래스의 용도는 **XmlNode**의 **PreviousSibling** 및 **NextSibling** 메서드를 재정의하는 것입니다. 그런 다음, 이처럼 재정의된 메서드를 서로 계층 구조를 이루는 형제 클래스인 **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** 및 **XmlProcessingInstruction**에서 상속하여 사용합니다.  
+ **XmlLinkedNode** 클래스는 **XmlNode** 에서 상속합니다. 이 클래스의 용도는 **XmlNode** 의 **PreviousSibling** 및 **NextSibling** 메서드를 재정의하는 것입니다. 그런 다음, 이처럼 재정의된 메서드를 서로 계층 구조를 이루는 형제 클래스인 **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** 및 **XmlProcessingInstruction** 에서 상속하여 사용합니다.  
   
 ## <a name="see-also"></a>참조
 

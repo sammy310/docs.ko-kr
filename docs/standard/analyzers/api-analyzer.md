@@ -3,13 +3,12 @@ title: .NET API 분석기
 description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다.
 author: oliag
 ms.date: 02/20/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 47ef2368692aee56ebd3db7803cbde7368d38049
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756197"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819606"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -40,12 +39,12 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 1. Visual Studio를 엽니다.
 2. 분석기를 실행하려는 프로젝트를 엽니다.
-3. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. (이 옵션은 **프로젝트** 메뉴에서도 사용 가능합니다.)
+3. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다. (이 옵션은 **프로젝트** 메뉴에서도 사용 가능합니다.)
 4. NuGet 패키지 관리자 탭에서
    1. 패키지 원본으로 "nuget.org"를 선택합니다.
    2. **찾아보기** 탭으로 이동합니다.
-   3. **시험판 포함**을 선택합니다.
-   4. **Microsoft.DotNet.Analyzers.Compatibility**를 검색합니다.
+   3. **시험판 포함** 을 선택합니다.
+   4. **Microsoft.DotNet.Analyzers.Compatibility** 를 검색합니다.
    5. 목록에서 해당 패키지를 선택합니다.
    6. **설치** 단추를 선택합니다.
    7. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
@@ -62,18 +61,18 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
-강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<diagnostic ID> 제거**를 선택하여 모든 경고를 제거할 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다.
+강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<diagnostic ID> 제거** 를 선택하여 모든 경고를 제거할 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다.
 
 - [로컬로(소스)](#suppress-warnings-locally)
 - [전역으로(비표시 오류(Suppression) 파일)](#suppress-warnings-globally) - 권장됨
 
 ### <a name="suppress-warnings-locally"></a>로컬로 경고 표시 안 함
 
-로컬로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **소스**를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. ![#pragma warning disable로 묶인 코드의 스크린샷](media/api-analyzer/suppress-in-source.jpg)
+로컬로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **소스** 를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. ![#pragma warning disable로 묶인 코드의 스크린샷](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>전역으로 경고 표시 안 함
 
-전역으로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **비표시 오류(Suppression) 파일**을 선택합니다.
+전역으로 경고를 제거하려면 경고를 제거할 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’\<diagnostic ID> 제거** > **비표시 오류(Suppression) 파일** 을 선택합니다.
 
 ![Visual Studio에서 경고를 제거하는 옵션을 보여 주는 마우스 오른쪽 단추 클릭 메뉴의 스크린샷](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -88,7 +87,7 @@ ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보�
 > [!NOTE]
 > .NET 5.0에서는 이 기능을 대체하는 [플랫폼 호환성 분석기](platform-compat-analyzer.md)를 도입했습니다. 플랫폼 호환성 분석기는 .NET SDK에 포함되어 있으며(별도로 설치할 필요 없음) 기본적으로 켜져 있습니다.
 
-사용되지 않는 API와 비슷하게 분석기는 플랫폼 간이 아닌 모든 API를 식별합니다. 예를 들어 <xref:System.Console.WindowWidth?displayProperty=nameWithType>는 Windows에서 작동하지만 Linux 및 macOS에서는 작동하지 않습니다. 진단 ID는 **오류 목록** 창에 표시됩니다. 마우스 오른쪽 단추를 클릭하고 **빠른 작업 및 리팩터링**을 선택하여 해당 경고를 표시하지 않을 수 있습니다. 예를 들어 두 개의 옵션(사용되지 않는 멤버를 계속 사용하고 경고를 표시하지 않음 또는 전혀 사용하지 않음)이 있는 사용 중단 사례와 달리, 여기서는 특정 플랫폼에 대한 코드만 개발하는 경우 코드를 실행할 계획이 없는 모든 다른 플랫폼에 대한 모든 경고를 표시하지 않을 수 있습니다. 이렇게 하려면 프로젝트 파일을 편집하고 무시할 모든 플랫폼을 나열하는 `PlatformCompatIgnore` 속성을 추가하면 됩니다. 허용되는 값은 `Linux`, `macOS` 및 `Windows`입니다.
+사용되지 않는 API와 비슷하게 분석기는 플랫폼 간이 아닌 모든 API를 식별합니다. 예를 들어 <xref:System.Console.WindowWidth?displayProperty=nameWithType>는 Windows에서 작동하지만 Linux 및 macOS에서는 작동하지 않습니다. 진단 ID는 **오류 목록** 창에 표시됩니다. 마우스 오른쪽 단추를 클릭하고 **빠른 작업 및 리팩터링** 을 선택하여 해당 경고를 표시하지 않을 수 있습니다. 예를 들어 두 개의 옵션(사용되지 않는 멤버를 계속 사용하고 경고를 표시하지 않음 또는 전혀 사용하지 않음)이 있는 사용 중단 사례와 달리, 여기서는 특정 플랫폼에 대한 코드만 개발하는 경우 코드를 실행할 계획이 없는 모든 다른 플랫폼에 대한 모든 경고를 표시하지 않을 수 있습니다. 이렇게 하려면 프로젝트 파일을 편집하고 무시할 모든 플랫폼을 나열하는 `PlatformCompatIgnore` 속성을 추가하면 됩니다. 허용되는 값은 `Linux`, `macOS` 및 `Windows`입니다.
 
 ```xml
 <PropertyGroup>
@@ -124,7 +123,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="configuration"></a>Configuration
 
-사용자는 진단을 처리하는 방법을 경고, 오류, 제안 또는 해제로 결정합니다. 예를 들어 설계자가 호환성 문제를 오류로 처리하도록 결정하면 일부 사용되지 않는 API에 대한 호출은 경고를 생성하지만 다른 API에 대한 호출은 제안만 생성합니다. 이 방법은 진단 ID 및 프로젝트별로 별도로 구성할 수 있습니다. **솔루션 탐색기**에서 이를 수행하려면 프로젝트 아래의 **종속성** 노드로 이동합니다. 노드 **종속성** > **분석** > **Microsoft.DotNet.Analyzers.Compatibility**를 확장합니다. 진단 ID를 마우스 오른쪽 단추로 클릭하고 **규칙 집합 심각도 설정**을 선택한 다음, 원하는 옵션을 선택합니다.
+사용자는 진단을 처리하는 방법을 경고, 오류, 제안 또는 해제로 결정합니다. 예를 들어 설계자가 호환성 문제를 오류로 처리하도록 결정하면 일부 사용되지 않는 API에 대한 호출은 경고를 생성하지만 다른 API에 대한 호출은 제안만 생성합니다. 이 방법은 진단 ID 및 프로젝트별로 별도로 구성할 수 있습니다. **솔루션 탐색기** 에서 이를 수행하려면 프로젝트 아래의 **종속성** 노드로 이동합니다. 노드 **종속성** > **분석** > **Microsoft.DotNet.Analyzers.Compatibility** 를 확장합니다. 진단 ID를 마우스 오른쪽 단추로 클릭하고 **규칙 집합 심각도 설정** 을 선택한 다음, 원하는 옵션을 선택합니다.
 
 ![진단 및 규칙 집합 심각도가 있는 팝업 대화 상자를 보여 주는 솔루션 탐색기의 스크린샷](media/api-analyzer/disable-notifications.jpg)
 

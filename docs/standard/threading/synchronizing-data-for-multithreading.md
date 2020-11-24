@@ -2,18 +2,17 @@
 title: 다중 스레딩을 위한 데이터 동기화
 description: .NET에서 다중 스레딩을 위해 데이터를 동기화하는 방법을 알아봅니다. 동기화된 코드 영역, 수동 동기화 또는 동기화된 컨텍스트와 같은 전략을 선택합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188590"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819645"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 

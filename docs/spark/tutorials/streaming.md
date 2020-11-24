@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955579"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688022"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 구조적 스트리밍
 
@@ -37,7 +37,7 @@ ms.locfileid: "91955579"
    cd mySparkStreamingApp
    ```
 
-   `dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *mySparkStreamingApp*이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd mySparkStreamingApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
+   `dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *mySparkStreamingApp* 이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd mySparkStreamingApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
 
 1. 앱에서 .NET for Apache Spark를 사용하려면 Microsoft.Spark 패키지를 설치합니다. 콘솔에서 다음 명령을 실행합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "91955579"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>데이터 스트림 설정 및 연결
 
-스트림 처리를 테스트하는 일반적인 방법 중 하나는 **netcat**을 사용하는 것입니다. netcat(*nc*라고도 함)를 사용하여 네트워크 연결에서 읽고 쓸 수 있습니다. 터미널 창에서 netcat을 사용하여 네트워크 연결을 설정합니다.
+스트림 처리를 테스트하는 일반적인 방법 중 하나는 **netcat** 을 사용하는 것입니다. netcat(*nc* 라고도 함)를 사용하여 네트워크 연결에서 읽고 쓸 수 있습니다. 터미널 창에서 netcat을 사용하여 네트워크 연결을 설정합니다.
 
 ### <a name="create-a-data-stream-with-netcat"></a>netcat을 사용하여 데이터 스트림 만들기
 
@@ -71,7 +71,7 @@ ms.locfileid: "91955579"
 
 ### <a name="create-a-sparksession"></a>SparkSession 만들기
 
-1. 다음 추가 `using` 문을 *mySparkStreamingApp*에서 *Program.cs* 파일의 맨 위에 추가합니다.
+1. 다음 추가 `using` 문을 *mySparkStreamingApp* 에서 *Program.cs* 파일의 맨 위에 추가합니다.
 
    ```csharp
    using System;
@@ -106,7 +106,7 @@ DataFrame lines = spark
 
 ## <a name="register-a-user-defined-function"></a>사용자 정의 함수 등록
 
-Spark 애플리케이션에서 *사용자 정의 함수*인 UDF를 사용하여 데이터에 대한 계산 및 분석을 수행할 수 있습니다.
+Spark 애플리케이션에서 *사용자 정의 함수* 인 UDF를 사용하여 데이터에 대한 계산 및 분석을 수행할 수 있습니다.
 
 `Main` 메서드에 다음 코드를 추가하여 `udfArray`라는 UDF를 등록합니다.
 
@@ -115,9 +115,9 @@ Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-이 UDF는 netcat 터미널에서 수신하는 각 문자열을 처리하여 원래 문자열(*str*에 포함됨)과 원래 문자열의 길이가 연결된 원래 문자열을 포함하는 배열을 생성합니다.
+이 UDF는 netcat 터미널에서 수신하는 각 문자열을 처리하여 원래 문자열(*str* 에 포함됨)과 원래 문자열의 길이가 연결된 원래 문자열을 포함하는 배열을 생성합니다.
 
-예를 들어 netcat 터미널에 *Hello world*를 입력하면 다음과 같은 배열이 생성됩니다.
+예를 들어 netcat 터미널에 *Hello world* 를 입력하면 다음과 같은 배열이 생성됩니다.
 
 * 배열\[0] = Hello world
 * 배열\[1] = Hello world 11
@@ -130,7 +130,7 @@ SparkSQL을 사용하여 데이터 프레임에 저장된 데이터에 대해 �
 DataFrame arrayDF = lines.Select(Explode(udfArray(lines["value"])));
 ```
 
-이 코드 조각은 netcat 터미널에서 읽은 각 문자열을 나타내는 데이터 프레임의 각 값에 *udfArray*를 적용합니다. SparkSQL 메서드 <xref:Microsoft.Spark.Sql.Functions.Explode%2A>를 적용하여 배열의 각 항목을 자체 행에 배치합니다. 마지막으로 <xref:Microsoft.Spark.Sql.DataFrame.Select%2A>를 사용하여 새 데이터 프레임 *arrayDF*에 생성한 열을 배치합니다.
+이 코드 조각은 netcat 터미널에서 읽은 각 문자열을 나타내는 데이터 프레임의 각 값에 *udfArray* 를 적용합니다. SparkSQL 메서드 <xref:Microsoft.Spark.Sql.Functions.Explode%2A>를 적용하여 배열의 각 항목을 자체 행에 배치합니다. 마지막으로 <xref:Microsoft.Spark.Sql.DataFrame.Select%2A>를 사용하여 새 데이터 프레임 *arrayDF* 에 생성한 열을 배치합니다.
 
 ## <a name="display-your-stream"></a>스트림 표시
 
@@ -145,14 +145,14 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>코드 실행
 
-Spark의 구조적 스트리밍은 일련의 소규모 **일괄 처리**를 통해 데이터를 처리합니다.  프로그램을 실행할 때 netcat 연결을 설정하는 명령 프롬프트로 입력을 시작할 수 있습니다. 해당 명령 프롬프트에서 데이터를 입력한 후 Enter 키를 누를 때마다 Spark는 항목을 일괄 처리로 간주하고 UDF를 실행합니다.
+Spark의 구조적 스트리밍은 일련의 소규모 **일괄 처리** 를 통해 데이터를 처리합니다.  프로그램을 실행할 때 netcat 연결을 설정하는 명령 프롬프트로 입력을 시작할 수 있습니다. 해당 명령 프롬프트에서 데이터를 입력한 후 Enter 키를 누를 때마다 Spark는 항목을 일괄 처리로 간주하고 UDF를 실행합니다.
 
 ### <a name="use-spark-submit-to-run-your-app"></a>spark-submit을 사용하여 앱 실행
 
 새 netcat 세션을 시작한 후 새 터미널을 열고 다음 명령과 유사한 `spark-submit` 명령을 실행합니다.
 
 ```powershell
-spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
+spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]

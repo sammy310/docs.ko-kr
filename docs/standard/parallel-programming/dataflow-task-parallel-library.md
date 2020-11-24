@@ -2,7 +2,6 @@
 title: 데이터 흐름(작업 병렬 라이브러리)
 description: TPL(작업 병렬 라이브러리)에서 데이터 흐름 구성 요소를 사용하여 동시성 사용 애플리케이션을 더 견고하게 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662552"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817642"
 ---
 # <a name="dataflow-task-parallel-library"></a>데이터 흐름(작업 병렬 라이브러리)
-TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리*라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인*을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
+TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견고성을 높이는 데 도움이 되는 데이터 흐름 구성 요소를 제공합니다. 이러한 데이터 흐름 구성 요소를 통칭하여 *TPL 데이터 흐름 라이브러리* 라고 합니다. 이 데이터 흐름 모델은 정교하지 않은 데이터 흐름 및 파이프라인 작업을 위해 in-process 메시지 전달을 제공하여 행위자 기반 프로그래밍을 촉진합니다. 데이터 흐름 구성 요소는 TPL의 형식 및 예약 인프라를 바탕으로 빌드되며 비동기 프로그래밍에 대한 C#, Visual Basic 및 F# 언어 지원과 통합됩니다. 이러한 데이터 흐름 구성 요소는 비동기적으로 서로 통신해야 하는 여러 작업이 있는 경우나 데이터를 사용할 수 있게 될 때 해당 데이터를 처리하려는 경우에 유용합니다. 예를 들어 웹 카메라에서 이미지 데이터를 처리하는 애플리케이션의 경우, 데이터 흐름 모델을 사용함으로써 애플리케이션은 이미지 프레임을 사용할 수 있게 될 때 해당 이미지 프레임을 처리할 수 있습니다. 애플리케이션이 명도를 보정하거나 적목 현상을 줄이는 등의 작업을 수행하여 이미지 프레임을 개선하는 경우 데이터 흐름 구성 요소의 *파이프라인* 을 만들 수 있습니다. 파이프라인의 각 단계에서는 TPL이 제공하는 기능과 같은 좀더 정교하지 않은 병렬 처리 기능을 사용하여 이미지를 변환할 수도 있습니다.  
   
  이 문서에서는 TPL 데이터 흐름 라이브러리에 대한 개요를 제공합니다. 여기에서는 프로그래밍 모델, 미리 정의된 데이터 흐름 블록 형식 및 애플리케이션의 특정 요구 사항을 충족하도록 데이터 흐름 블록을 구성하는 방법을 설명합니다.  
 
@@ -28,12 +27,12 @@ TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견
  TPL 데이터 흐름 라이브러리는 처리량이 많고 대기 시간이 짧으며 CPU 및 I/O를 많이 사용하는 애플리케이션의 메시지 전달 및 병렬화를 위한 기반을 제공합니다. 또한 데이터가 버퍼링되고 시스템에서 이동하는 방식을 명시적으로 제어할 수 있도록 합니다. 데이터 흐름 프로그래밍 모델을 보다 정확히 이해하려면 디스크에서 이미지를 비동기적으로 로드하고 해당 이미지의 합성을 만드는 애플리케이션을 고려해 보십시오. 기존의 프로그래밍 모델에서는 대개 콜백과 동기화 개체(예: 잠금)를 사용하여 작업을 조정하고 공유 데이터에 액세스해야 합니다. 데이터 흐름 프로그래밍 모델을 사용하면 디스크에서 이미지를 읽을 때 해당 이미지를 처리하는 데이터 흐름 개체를 만들 수 있습니다. 데이터 흐름 모델에서는 데이터를 사용할 수 있게 될 때 데이터가 처리되는 방법과 데이터 간의 종속성도 선언합니다. 런타임에서 데이터 간의 종속성을 관리하기 때문에 대개 공유 데이터에 대한 액세스를 동기화할 필요가 없습니다. 또한 런타임에서 데이터의 비동기 도착을 기준으로 작업을 예약하기 때문에 데이터 흐름은 내부 스레드를 효율적으로 관리하여 응답성과 처리량을 개선할 수 있습니다. 데이터 흐름 프로그래밍 모델을 사용하여 Windows Forms 애플리케이션에서 이미지 처리를 구현하는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 ### <a name="sources-and-targets"></a>소스 및 대상  
- TPL 데이터 흐름 라이브러리는 데이터를 버퍼링하고 처리하는 데이터 구조인 *데이터 흐름 블록*으로 구성되어 있습니다. TPL은 세 가지 데이터 흐름 블록인 *소스 블록*, *대상 블록* 및 *전파자 블록*을 정의합니다. 소스 블록은 데이터의 소스 역할을 하며 읽을 수 있습니다. 대상 블록은 데이터의 수신자 역할을 하며 쓸 수 있습니다. 전파자 블록은 소스 블록과 대상 블록 역할을 하며 읽고 쓸 수 있습니다. TPL은 소스를 나타내는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 인터페이스, 대상을 나타내는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 및 전파자를 나타내는 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType>을 정의합니다. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두에서 상속합니다.  
+ TPL 데이터 흐름 라이브러리는 데이터를 버퍼링하고 처리하는 데이터 구조인 *데이터 흐름 블록* 으로 구성되어 있습니다. TPL은 세 가지 데이터 흐름 블록인 *소스 블록*, *대상 블록* 및 *전파자 블록* 을 정의합니다. 소스 블록은 데이터의 소스 역할을 하며 읽을 수 있습니다. 대상 블록은 데이터의 수신자 역할을 하며 쓸 수 있습니다. 전파자 블록은 소스 블록과 대상 블록 역할을 하며 읽고 쓸 수 있습니다. TPL은 소스를 나타내는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> 인터페이스, 대상을 나타내는 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> 및 전파자를 나타내는 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602?displayProperty=nameWithType>을 정의합니다. <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두에서 상속합니다.  
   
  TPL 데이터 흐름 라이브러리는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> 인터페이스를 구현하는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 데이터 흐름 블록 형식은 이 문서의 [미리 정의된 데이터 흐름 블록 형식](#predefined-dataflow-block-types) 섹션에 설명되어 있습니다.  
   
 ### <a name="connecting-blocks"></a>블록 연결  
- 데이터 흐름 블록의 선형 시퀀스인 *파이프라인*이나 데이터 흐름 블록의 그래프인 *네트워크*를 만들기 위해 데이터 흐름 블록을 연결할 수 있습니다. 파이프라인은 네트워크의 한 형태입니다. 파이프라인 또는 네트워크에서 소스는 데이터를 사용할 수 있게 되면 대상에 데이터를 비동기적으로 전파합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드는 소스 데이터 흐름 블록을 대상 블록에 연결합니다. 소스는 0개 이상의 대상에 연결될 수 있으며, 대상은 0개 이상의 소스에서 연결될 수 있습니다. 파이프라인 또는 네트워크에서 데이터 흐름 블록을 동시에 추가하거나 제거할 수 있습니다. 미리 정의된 데이터 흐름 블록 형식은 연결 및 연결 해제의 모든 스레드로부터의 안전성 측면을 처리합니다.  
+ 데이터 흐름 블록의 선형 시퀀스인 *파이프라인* 이나 데이터 흐름 블록의 그래프인 *네트워크* 를 만들기 위해 데이터 흐름 블록을 연결할 수 있습니다. 파이프라인은 네트워크의 한 형태입니다. 파이프라인 또는 네트워크에서 소스는 데이터를 사용할 수 있게 되면 대상에 데이터를 비동기적으로 전파합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> 메서드는 소스 데이터 흐름 블록을 대상 블록에 연결합니다. 소스는 0개 이상의 대상에 연결될 수 있으며, 대상은 0개 이상의 소스에서 연결될 수 있습니다. 파이프라인 또는 네트워크에서 데이터 흐름 블록을 동시에 추가하거나 제거할 수 있습니다. 미리 정의된 데이터 흐름 블록 형식은 연결 및 연결 해제의 모든 스레드로부터의 안전성 측면을 처리합니다.  
   
  데이터 흐름 블록을 연결하여 기본 파이프라인을 만드는 예제는 [연습: 데이터 흐름 파이프라인 만들기](walkthrough-creating-a-dataflow-pipeline.md)를 참조하세요. 데이터 흐름 블록을 연결하여 보다 복잡한 네트워크를 만드는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요. 소스가 대상에 메시지를 제공한 후 소스에서 대상의 연결을 해제하는 예제는 [방법: 데이터 흐름 블록 링크 끊기](how-to-unlink-dataflow-blocks.md)를 참조하세요.  
   
@@ -51,7 +50,7 @@ TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견
  대상 블록이 나중에 사용할 수 있도록 메시지를 연기하면 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 메서드가 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>를 반환합니다. 메시지를 연기하는 대상 블록은 나중에 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 메서드를 호출하여 제공된 메시지를 예약하려고 시도할 수 있습니다. 이 시점에서 해당 메시지는 여전히 사용 가능하여 대상 블록이 사용할 수 있거나, 다른 대상이 사용하고 있는 상태입니다. 대상 블록은 나중에 메시지가 필요하거나 더 이상 필요하지 않은 경우 각각 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 메서드를 호출합니다. 메시지 예약은 non-greedy 모드에서 작동하는 데이터 흐름 블록 형식에서 주로 사용됩니다. non-greedy 모드는 이 문서의 뒷부분에 설명되어 있습니다. 연기된 메시지를 예약하는 대신 대상 블록은 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 메서드를 사용하여 연기된 메시지를 직접 사용하려고 시도할 수도 있습니다.  
   
 ### <a name="dataflow-block-completion"></a>데이터 흐름 블록 완료  
- 데이터 흐름 블록은 *완료* 개념도 지원합니다. 완료된 상태에 있는 데이터 흐름 블록은 더 이상 작업을 수행하지 않습니다. 각 데이터 흐름 블록에는 블록의 완료 상태를 나타내는 *완료 작업*이라고 하는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체가 연결되어 있습니다. 완료 작업을 사용하여 <xref:System.Threading.Tasks.Task> 개체가 완료될 때까지 기다릴 수 있기 때문에 데이터 흐름 네트워크의 터미널 노드 중 하나 이상이 완료될 때까지 기다릴 수 있습니다. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스는 데이터 흐름 블록에 완료 요청을 알리는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드와 데이터 흐름 블록에 대한 완료 작업을 반환하는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 속성을 정의합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스를 상속합니다.  
+ 데이터 흐름 블록은 *완료* 개념도 지원합니다. 완료된 상태에 있는 데이터 흐름 블록은 더 이상 작업을 수행하지 않습니다. 각 데이터 흐름 블록에는 블록의 완료 상태를 나타내는 *완료 작업* 이라고 하는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체가 연결되어 있습니다. 완료 작업을 사용하여 <xref:System.Threading.Tasks.Task> 개체가 완료될 때까지 기다릴 수 있기 때문에 데이터 흐름 네트워크의 터미널 노드 중 하나 이상이 완료될 때까지 기다릴 수 있습니다. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스는 데이터 흐름 블록에 완료 요청을 알리는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 메서드와 데이터 흐름 블록에 대한 완료 작업을 반환하는 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 속성을 정의합니다. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 모두 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스를 상속합니다.  
   
  데이터 흐름 블록이 오류 없이 완료되었는지, 하나 이상의 오류가 발생했는지, 아니면 취소되었는지를 확인하는 두 가지 방법이 있습니다. 첫 번째 방법은 `try`-`catch`(Visual Basic에서는 `Try`-`Catch`) 블록에서 완료 작업에 대해 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출하는 것입니다. 다음 예제에서는 입력 값이 0보다 작은 경우 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>을 throw하는 <xref:System.ArgumentOutOfRangeException> 개체를 만듭니다. 이 예제에서 완료 작업에 대해 <xref:System.AggregateException>를 호출할 때 <xref:System.Threading.Tasks.Task.Wait%2A>이 throw됩니다. <xref:System.ArgumentOutOfRangeException>은 <xref:System.AggregateException.InnerExceptions%2A> 개체의 <xref:System.AggregateException> 속성을 통해 액세스됩니다.  
   
@@ -70,7 +69,7 @@ TPL(작업 병렬 라이브러리)은 동시성 사용 애플리케이션의 견
  연속 작업의 본문에서 <xref:System.Threading.Tasks.Task.IsCanceled%2A>와 같은 속성을 사용하여 데이터 흐름 블록의 완료 상태에 대한 추가 정보를 확인할 수도 있습니다. 연속 작업과 연속 작업의 취소 및 오류 처리와 관련된 방법에 대한 자세한 내용은 [연속 작업을 사용하여 작업 연결](chaining-tasks-by-using-continuation-tasks.md), [작업 취소](task-cancellation.md) 및 [예외 처리](exception-handling-task-parallel-library.md)를 참조하세요.  
 
 ## <a name="predefined-dataflow-block-types"></a>미리 정의된 데이터 흐름 블록 형식  
- TPL 데이터 흐름 라이브러리는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 형식은 *버퍼링 블록*, *실행 블록* 및 *그룹 블록*이라는 세 가지 범주로 나뉩니다. 다음 단원에서는 이러한 범주를 구성하는 블록 형식에 대해 설명합니다.  
+ TPL 데이터 흐름 라이브러리는 몇 가지 미리 정의된 데이터 흐름 블록 형식을 제공합니다. 이러한 형식은 *버퍼링 블록*, *실행 블록* 및 *그룹 블록* 이라는 세 가지 범주로 나뉩니다. 다음 단원에서는 이러한 범주를 구성하는 블록 형식에 대해 설명합니다.  
   
 ### <a name="buffering-blocks"></a>버퍼링 블록  
  버퍼링 블록은 데이터 소비자가 사용할 데이터를 포함합니다. TPL 데이터 흐름 라이브러리는 세 가지 버퍼링 블록 형식인 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601?displayProperty=nameWithType>을 제공합니다.  

@@ -2,7 +2,6 @@
 title: 표준 숫자 서식 문자열
 description: 이 문서에서는 .NET에서 표준 숫자 서식 문자열을 사용하여 일반적인 숫자 형식을 텍스트 표현으로 서식 지정하는 방법을 알아봅니다.
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888973"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818767"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 서식 문자열
 

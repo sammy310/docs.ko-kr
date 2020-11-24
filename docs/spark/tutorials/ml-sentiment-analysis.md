@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954895"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688243"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>자습서: .NET for Apache Spark 및 ML.NET을 사용한 감정 분석
 
@@ -48,21 +48,21 @@ Yelp 리뷰 데이터 세트는 다양한 서비스에 대한 온라인 Yelp 리
 
 ## <a name="build-your-machine-learning-model"></a>기계 학습 모델 빌드
 
-1. Visual Studio를 열고 새 C# 콘솔 앱(.NET Core)을 만듭니다. 프로젝트 이름을 *MLSparkModel*로 지정합니다.
+1. Visual Studio를 열고 새 C# 콘솔 앱(.NET Core)을 만듭니다. 프로젝트 이름을 *MLSparkModel* 로 지정합니다.
 
-1. **솔루션 탐색기**에서 *MLSparkModel* 프로젝트를 마우스 오른쪽 단추로 클릭합니다. 그런 다음 **추가 > Machine Learning**을 선택합니다.
+1. **솔루션 탐색기** 에서 *MLSparkModel* 프로젝트를 마우스 오른쪽 단추로 클릭합니다. 그런 다음 **추가 > Machine Learning** 을 선택합니다.
 
 1. ML.NET 모델 작성기에서 **감정 분석** 시나리오 타일을 선택합니다.
 
 1. **데이터 추가** 페이지에서 *yelptrain.csv* 데이터 세트를 업로드합니다.
 
-1. **예측할 열** 드롭다운에서 *감정*을 선택합니다.
+1. **예측할 열** 드롭다운에서 *감정* 을 선택합니다.
 
-1. **학습** 페이지에서 학습 시간을 *60초*로 설정하고 **학습 시작**을 선택합니다. **진행률**에서 학습 상태를 확인합니다.
+1. **학습** 페이지에서 학습 시간을 *60초* 로 설정하고 **학습 시작** 을 선택합니다. **진행률** 에서 학습 상태를 확인합니다.
 
-1. 모델 작성기가 학습을 완료하면 학습 결과를 **평가**합니다. **모델 테스트** 아래 텍스트 상자에 구를 입력하고 **예측**을 선택하여 출력을 볼 수 있습니다.
+1. 모델 작성기가 학습을 완료하면 학습 결과를 **평가** 합니다. **모델 테스트** 아래 텍스트 상자에 구를 입력하고 **예측** 을 선택하여 출력을 볼 수 있습니다.
 
-1. **코드**를 선택한 다음 **프로젝트 추가**를 선택하여 ML 모델을 솔루션에 추가합니다.
+1. **코드** 를 선택한 다음 **프로젝트 추가** 를 선택하여 ML 모델을 솔루션에 추가합니다.
 
 1. 다음 두 프로젝트가 솔루션에 추가됩니다. **MLSparkModelML.ConsoleApp** 및 **MLSparkModelML.Model**.
 
@@ -78,15 +78,15 @@ Yelp 리뷰 데이터 세트는 다양한 서비스에 대한 온라인 Yelp 리
 
 모델 작성기는 콘솔 앱을 자동으로 만듭니다.
 
-1. 솔루션 탐색기에서 **MLSparkModelML**을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+1. 솔루션 탐색기에서 **MLSparkModelML** 을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
 
-1. **Microsoft.Spark**를 검색하여 패키지를 설치합니다. **Microsoft.ML**은 모델 작성기에 의해 자동으로 설치됩니다.
+1. **Microsoft.Spark** 를 검색하여 패키지를 설치합니다. **Microsoft.ML** 은 모델 작성기에 의해 자동으로 설치됩니다.
 
 ### <a name="create-a-sparksession"></a>SparkSession 만들기
 
-1. **MLSparkModelML.ConsoleApp**에 대한 *Program.cs* 파일을 엽니다. 이 파일은 모델 작성기가 자동으로 생성한 것입니다. `using` 문, Main() 메서드의 내용 및 `CreateSingleDataSample` 영역을 삭제합니다.
+1. **MLSparkModelML.ConsoleApp** 에 대한 *Program.cs* 파일을 엽니다. 이 파일은 모델 작성기가 자동으로 생성한 것입니다. `using` 문, Main() 메서드의 내용 및 `CreateSingleDataSample` 영역을 삭제합니다.
 
-1. *Program.cs*의 맨 위에 다음 `using` 문을 추가합니다.
+1. *Program.cs* 의 맨 위에 다음 `using` 문을 추가합니다.
 
    ```csharp
    using System;
@@ -97,7 +97,7 @@ Yelp 리뷰 데이터 세트는 다양한 서비스에 대한 온라인 Yelp 리
    using MLSparkModelML.Model;
    ```
 
-1. `DATA_FILEPATH`를 *yelptest.csv*의 경로로 변경합니다.
+1. `DATA_FILEPATH`를 *yelptest.csv* 의 경로로 변경합니다.
 
 1. `Main` 메서드에 다음 코드를 추가하여 새 `SparkSession`을 만듭니다. Spark 세션은 Dataset 및 DataFrame API를 사용하여 Spark를 프로그래밍하기 위한 진입점입니다.
 
@@ -112,7 +112,7 @@ Yelp 리뷰 데이터 세트는 다양한 서비스에 대한 온라인 Yelp 리
 
 ### <a name="create-a-dataframe-and-print-to-console"></a>데이터 프레임을 만들고 콘솔에 인쇄
 
-*yelptest.csv* 파일에서 `DataFrame`으로 Yelp 리뷰 데이터를 읽습니다. `header` 및 `inferSchema` 옵션을 포함시킵니다. `header` 옵션은 *yelptest.csv*의 첫 번째 줄을 데이터가 아니라 열 이름으로 읽습니다. `inferSchema` 옵션은 데이터를 기반으로 열 형식을 유추합니다.
+*yelptest.csv* 파일에서 `DataFrame`으로 Yelp 리뷰 데이터를 읽습니다. `header` 및 `inferSchema` 옵션을 포함시킵니다. `header` 옵션은 *yelptest.csv* 의 첫 번째 줄을 데이터가 아니라 열 이름으로 읽습니다. `inferSchema` 옵션은 데이터를 기반으로 열 형식을 유추합니다.
 
 ```csharp
 DataFrame df = spark
@@ -157,7 +157,7 @@ spark.Stop();
 
 ### <a name="create-predict-method"></a>predict() 메서드 만들기
 
-`Main()` 메서드 앞에 다음 코드를 추가합니다. 이 코드는 *ConsumeModel.cs*에서 모델 작성기에 의해 생성된 코드와 비슷합니다. 이 메서드를 콘솔로 이동하면 앱을 실행할 때마다 모델을 로드합니다.
+`Main()` 메서드 앞에 다음 코드를 추가합니다. 이 코드는 *ConsumeModel.cs* 에서 모델 작성기에 의해 생성된 코드와 비슷합니다. 이 메서드를 콘솔로 이동하면 앱을 실행할 때마다 모델을 로드합니다.
 
 ```csharp
 private static readonly PredictionEngine<ModelInput, ModelOutput> _predictionEngine;
@@ -182,7 +182,7 @@ static bool predict(string text)
 
 ## <a name="add-the-model-to-your-console-app"></a>콘솔 앱에 모델 추가
 
-솔루션 탐색기에서 **MLSparkModelML.Model** 프로젝트의 *MLModel.zip* 파일을 복사하여 **MLSparkModelML.ConsoleApp** 프로젝트에 붙여넣습니다. *MLSparkModelML.ConsoleApp.csproj*에 참조가 자동으로 추가됩니다.
+솔루션 탐색기에서 **MLSparkModelML.Model** 프로젝트의 *MLModel.zip* 파일을 복사하여 **MLSparkModelML.ConsoleApp** 프로젝트에 붙여넣습니다. *MLSparkModelML.ConsoleApp.csproj* 에 참조가 자동으로 추가됩니다.
 
 ## <a name="run-your-code"></a>코드 실행
 
@@ -198,7 +198,7 @@ dotnet publish
 그런 다음 콘솔 앱의 게시 폴더로 이동하고 다음 `spark-submit` 명령을 실행합니다. 이 명령을 Microsoft Spark jar 파일의 실제 경로로 업데이트해야 합니다.
 
 ```dotnetcli
-%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2.4.x-0.10.0.jar dotnet MLSparkModelML.ConsoleApp.dll
+%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2-4_2.11-1.0.0.jar dotnet MLSparkModelML.ConsoleApp.dll
 ```
 
 ## <a name="get-the-code"></a>코드 가져오기

@@ -3,13 +3,13 @@ title: .NET Standard의 새로운 기능
 description: 이 문서에는 .NET Standard의 각 새 버전에 있는 새로운 기능과 향상된 기능이 요약되어 있습니다.
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
-ms.technology: dotnet-standard
-ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.prod: dotnet-whatsnew
+ms.openlocfilehash: 299477a7375381fa7f8064562e2a68e221944a05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557274"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817176"
 ---
 # <a name="whats-new-in-net-standard"></a>.NET Standard의 새로운 기능
 

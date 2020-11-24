@@ -2,7 +2,6 @@
 title: 세마포 및 SemaphoreSlim
 description: 세마포 및 SemaphoreSlim에 대해 알아봅니다. Semaphore 클래스는 Win32 세마포 개체를 묶는 씬 래퍼입니다. SemaphoreSlim 클래스는 빠른 경량 세마포입니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: bda88012fde60481d8870f701e98924acdeeb5a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188941"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817147"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>세마포 및 SemaphoreSlim
 

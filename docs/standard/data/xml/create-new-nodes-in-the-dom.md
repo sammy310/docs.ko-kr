@@ -1,14 +1,13 @@
 ---
 title: DOM에서 새 노드 만들기
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: d99a3c68c7554ab266d71a4cbf2e676bc6db8cbc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289579"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822752"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM에서 새 노드 만들기
 <xref:System.Xml.XmlDocument>에는 모든 노드 형식에 대한 create 메서드가 있습니다. 필요에 따라 메서드에 이름을 제공하고, 텍스트 노드처럼 내용이 있는 노드에 대한 내용이나 기타 매개 변수를 지정하면 노드가 생성됩니다. 다음은 적합한 노드를 만들기 위해 이름 및 몇 개의 매개 변수를 제공해야 하는 메서드입니다.  

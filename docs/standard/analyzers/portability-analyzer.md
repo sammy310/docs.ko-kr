@@ -2,14 +2,13 @@
 title: .NET 이식성 분석기 - .NET
 description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
 ms.date: 09/13/2019
-ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414801"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819710"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -27,7 +26,7 @@ ms.locfileid: "89414801"
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET 이식성 분석기를 사용하는 방법
 
-Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. **분석** > **이식성 분석기 설정**을 통해 Visual Studio에서 구성하고 대상 플랫폼을 선택합니다. 이 플랫폼은 현재 어셈블리가 빌드된 플랫폼/버전과 비교하여 이식성 간격을 평가하려는 .NET 플랫폼/버전입니다.
+Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. **분석** > **이식성 분석기 설정** 을 통해 Visual Studio에서 구성하고 대상 플랫폼을 선택합니다. 이 플랫폼은 현재 어셈블리가 빌드된 플랫폼/버전과 비교하여 이식성 간격을 평가하려는 .NET 플랫폼/버전입니다.
 
 ![이식성 분석기의 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
@@ -48,7 +47,7 @@ Visual Studio에서 열면 다음과 같은 결과가 나타납니다.
 ![DGML 분석의 스크린샷](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>이식성 분석
-Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
+Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석** 을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석** 을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
 
 ![솔루션 탐색기에서 이식성 분석기의 스크린샷](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -75,7 +74,7 @@ Visual Studio에서 분석을 실행한 후 .NET 이식성 보고서 파일 링�
 
 ![이식성 세부 정보의 스크린샷](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-보고서의 **세부 정보** 섹션에는 선택된 **대상 플랫폼**에서 누락된 API가 나열되어 있습니다.
+보고서의 **세부 정보** 섹션에는 선택된 **대상 플랫폼** 에서 누락된 API가 나열되어 있습니다.
 
 - 대상 유형: 형식에는 대상 플랫폼에서 API가 누락되어 있습니다.
 - 대상 멤버: 메서드가 대상 플랫폼에서 누락되었습니다.

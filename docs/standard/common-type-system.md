@@ -2,14 +2,13 @@
 title: 공용 형식 시스템 및 공용 언어 사양
 description: CTS(공용 형식 시스템) 및 CLS(공용 언어 사양)를 사용하여 .NET이 여러 언어를 지원할 수 있도록 하는 방법을 알아봅니다.
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e60205450e2f156407deb7be6b9c497d090b6f7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187674"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822882"
 ---
 # <a name="common-type-system--common-language-specification"></a>공용 형식 시스템 및 공용 언어 사양
 
@@ -17,7 +16,7 @@ ms.locfileid: "79187674"
 
 ## <a name="common-type-system"></a>공용 형식 시스템
 
-먼저 .NET 구현이 _언어 독립적_임에 유의하세요. 단순히 프로그래머가 IL로 컴파일할 수 있는 모든 언어로 코드를 작성할 수 있다는 의미는 아닙니다. 이는 프로그래머가 .NET 구현에서 사용할 수 있는 다른 언어로 작성된 코드를 조작할 수 있어야 함을 의미합니다.
+먼저 .NET 구현이 _언어 독립적_ 임에 유의하세요. 단순히 프로그래머가 IL로 컴파일할 수 있는 모든 언어로 코드를 작성할 수 있다는 의미는 아닙니다. 이는 프로그래머가 .NET 구현에서 사용할 수 있는 다른 언어로 작성된 코드를 조작할 수 있어야 함을 의미합니다.
 
 이 작업을 투명하게 수행하려면 지원되는 모든 형식을 설명하는 일반적인 방법이 있어야 합니다. 이 역할을 담당하는 것이 CTS(공용 형식 시스템)입니다. CTS는 다음과 같은 몇 가지 작업을 수행하도록 작성되었습니다.
 
@@ -46,7 +45,7 @@ CTS는 액세스 한정자, 유효한 형식 멤버, 상속 및 오버로드 작
 
 완전한 상호 운용성 시나리오를 사용하려면 코드로 만든 모든 개체가 이 개체(및 해당 _호출자_)를 사용하는 언어에서 몇 가지 공통점을 가지고 있어야 합니다. 다양한 언어가 있으므로 .NET 구현은 CLS(**공용 언어 사양**)에서 이러한 공통점을 지정했습니다. CLS는 일반적인 여러 애플리케이션에 필요한 기능 집합을 정의합니다. 또한 .NET 구현을 기반으로 하여 구현된 모든 언어에서 지원해야 하는 사항에 대한 정보를 제공합니다.
 
-CLS는 CTS의 하위 집합입니다. 즉, CLS 규칙이 더 엄격한 경우가 아니면 CTS의 모든 규칙이 CLS에도 적용됩니다. CLS의 규칙만 사용하여 구성 요소가 빌드된 경우 해당 API에 CLS 기능만 표시되며 **CLS 규격**이라고 합니다. 예를 들어 `<framework-librares>`는 .NET 구현에서 지원되는 모든 언어에서 작동해야 하므로 정확히 CLS 규격입니다.
+CLS는 CTS의 하위 집합입니다. 즉, CLS 규칙이 더 엄격한 경우가 아니면 CTS의 모든 규칙이 CLS에도 적용됩니다. CLS의 규칙만 사용하여 구성 요소가 빌드된 경우 해당 API에 CLS 기능만 표시되며 **CLS 규격** 이라고 합니다. 예를 들어 `<framework-librares>`는 .NET 구현에서 지원되는 모든 언어에서 작동해야 하므로 정확히 CLS 규격입니다.
 
 아래 [추가 리소스](#more-resources) 섹션의 문서를 통해 CLS의 모든 기능에 대한 개요를 확인할 수 있습니다.
 

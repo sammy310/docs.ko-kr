@@ -2,7 +2,6 @@
 title: 문자열을 DateTime으로 변환
 description: 날짜 및 시간을 나타내는 문자열을 구문 분석하여 날짜 및 시간 문자열에서 DateTime을 만드는 기술을 알아봅니다.
 ms.date: 02/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889038"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821925"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 

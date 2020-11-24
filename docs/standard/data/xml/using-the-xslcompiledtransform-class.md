@@ -1,14 +1,13 @@
 ---
 title: XslCompiledTransform 클래스 사용
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
-ms.openlocfilehash: b9d14a79347610abcd2f770488acb53218ce3e46
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f2eae6f10cc2adf4628a0c2626617ef9a027c598
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556774"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821764"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스 사용
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 Microsoft .NET Framework XSLT 프로세서입니다. 이 클래스를 사용하여 스타일시트를 컴파일하고 XSLT 변형을 실행할 수 있습니다.  

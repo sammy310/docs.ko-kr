@@ -2,7 +2,6 @@
 title: '방법: 특정 날짜의 요일 추출'
 description: .NET에서 특정 날짜가 일주일 중 몇 번째 날인지 확인하는 방법을 알아봅니다. 특정 날짜에 대해 지역화된 요일 이름을 표시하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: f7a18a3ab414a07fa4908c67c5ec9334ce63953f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 329a099411651310cf77fa94e9a66b6ac113fdc2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888523"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822076"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>방법: 특정 날짜의 요일 추출
 

@@ -3,13 +3,12 @@ title: .NET 아키텍처 구성 요소
 description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NET 아키텍처 구성 요소에 대해 설명합니다.
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224392"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819424"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -89,7 +88,7 @@ UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케
 모든 .NET 구현체에서 동작하는 다양한 도구와 인프라 구성 요소를 사용할 수 있습니다. 이러한 도구 및 구성 요소는 다음과 같습니다.
 
 - .NET 언어 및 해당 컴파일러
-- .NET 프로젝트 시스템( *.csproj* , *.vbproj* 및 *.fsproj* 파일 기반)
+- .NET 프로젝트 시스템( *.csproj*, *.vbproj* 및 *.fsproj* 파일 기반)
 - 프로젝트를 빌드하는 데 사용하는 빌드 엔진 [MSBuild](/visualstudio/msbuild/msbuild)
 - .NET에 대한 Microsoft의 패키지 관리자 [NuGet](/nuget/)
 - [CAKE](https://cakebuild.net/) 및 [FAKE](https://fake.build/) 등의 오픈 소스 빌드 오케스트레이션 도구
@@ -108,13 +107,13 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](h
 
 - **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **CLI(공용 언어 인프라)** : [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 형식으로 제공됩니다.
-- **파티션 IV XML 파일에서 파생된 정보** : [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 형식으로 제공됩니다.
+- **파티션 IV XML 파일에서 파생된 정보**: [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 형식으로 제공됩니다.
 
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.
 
 - **정보 기술 - 프로그래밍 언어- C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **정보 기술 - CLI(공용 언어 인프라) 파티션 I ~ VI** : [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **정보 기술 - CLI (공용 언어 인프라) - 파티션 IV XML 파일에서 파생된 정보에 대한 기술 보고서** : [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **정보 기술 - CLI(공용 언어 인프라) 파티션 I ~ VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **정보 기술 - CLI (공용 언어 인프라) - 파티션 IV XML 파일에서 파생된 정보에 대한 기술 보고서**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>참조
 

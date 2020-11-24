@@ -1,19 +1,18 @@
 ---
 title: PLINQ에서 순서 유지
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290657"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820776"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
@@ -102,7 +101,7 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|순서가 지정된 비교|순서가 지정되지 않은 비교|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|해당 없음|해당 없음|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|해당 없음|해당 없음|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|처음 *n*개 요소를 건너뜀|임의 *n*개 요소를 건너뜀|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|처음 *n* 개 요소를 건너뜀|임의 *n* 개 요소를 건너뜀|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|순서가 지정된 결과.|비결정적. 현재 임의 순서로 SkipWhile 수행|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|비연관 또는 비누적 작업에 대한 비결정적 출력|비연관 또는 비누적 작업에 대한 비결정적 출력|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|처음 `n`개 요소 사용|임의 `n`개 요소 사용|  

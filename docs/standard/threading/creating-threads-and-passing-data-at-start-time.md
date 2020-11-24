@@ -2,7 +2,6 @@
 title: 스레드 만들기 및 시작할 때 데이터 전달
 description: .NET에서 스레드를 만들고 운영 체제 프로세스 시작 시간에 데이터를 전달하는 방법을 이해합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET], passing data to threads
 - threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f44eb9dabc9145cd0e6ec9bfd3d484c9079e803
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188382"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819931"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>스레드 만들기 및 시작할 때 데이터 전달
 

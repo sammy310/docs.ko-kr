@@ -1,14 +1,13 @@
 ---
 title: XML SOM(스키마 개체 모델)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: 1de9fdf9950ba3ae356779ca802afb71f24a345e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290320"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818403"
 ---
 # <a name="xml-schema-object-model-som"></a>XML SOM(스키마 개체 모델)
 XML 스키마는 표준 XML 문서의 구조를 만들고 유효성을 검사할 수 있는 강력한 복합 도구입니다. 관계형 데이터베이스의 데이터 모델링과 마찬가지로 스키마는 문서에 사용할 수 있는 요소와 특정 스키마에서 유효한 해당 요소의 구조 및 형식을 지정함으로써 XML 문서의 구조를 정의하는 방법을 제공합니다.  

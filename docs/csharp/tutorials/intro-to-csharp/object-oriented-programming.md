@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 description: C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471597"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687996"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -50,7 +50,7 @@ public class GiftCardAccount : BankAccount
 
 이러한 각 클래스는 공유 기본 클래스인 `BankAccount` 클래스에서 공유 동작을 상속합니다. 파생 클래스 각각에 새롭고 다양한 기능의 구현을 작성합니다.  이러한 파생 클래스에는 이미 `BankAccount` 클래스에 정의된 동작이 모두 있습니다.
 
-각각의 새 클래스는 서로 다른 소스 파일에 만드는 것이 좋습니다. [Visual Studio](https://visualstudio.com)에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 클래스 추가를 선택하여 새 파일에 새 클래스를 추가할 수 있습니다. [Visual Studio Code](https://code.visualstudio.com)에서는 파일을 선택한 다음 새로 만들기를 선택하여 새 원본 파일을 만듭니다. 어느 도구에서나 클래스와 일치하도록 파일 이름을 지정합니다. *InterestEarningAccount.cs* , *LineOfCreditAccount.cs* , *GiftCardAccount.cs* .
+각각의 새 클래스는 서로 다른 소스 파일에 만드는 것이 좋습니다. [Visual Studio](https://visualstudio.com)에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 클래스 추가를 선택하여 새 파일에 새 클래스를 추가할 수 있습니다. [Visual Studio Code](https://code.visualstudio.com)에서는 파일을 선택한 다음 새로 만들기를 선택하여 새 원본 파일을 만듭니다. 어느 도구에서나 클래스와 일치하도록 파일 이름을 지정합니다. *InterestEarningAccount.cs*, *LineOfCreditAccount.cs*, *GiftCardAccount.cs*.
 
 위의 샘플에 나온 것처럼 클래스를 만들면 파생 클래스가 컴파일되지 않는 것을 확인할 수 있습니다. 생성자는 개체를 초기화합니다. 파생 클래스 생성자는 파생 클래스를 초기화하고 파생 클래스에 포함된 기본 클래스 개체를 초기화하는 방법에 대한 지침을 제공해야 합니다. 적절한 초기화는 일반적으로 추가 코드 없이 발생합니다. `BankAccount` 클래스는 다음 서명을 사용하여 하나의 공용 생성자를 선언합니다.
 
@@ -173,6 +173,8 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 프로그램을 실행하고 결과를 확인합니다.
 
 ## <a name="summary"></a>요약
+
+잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)에서 이 자습서의 소스를 확인할 수 있습니다.
 
 이 자습서에서 개체 지향 프로그래밍에 사용되는 다양한 방법을 살펴봤습니다.
 

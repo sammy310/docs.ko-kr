@@ -2,7 +2,6 @@
 title: .NET에서 문자열 채우기
 description: .NET에서 문자열을 패딩하는 방법을 알아봅니다. String.PadLeft 및 String.PadRight 메서드를 사용하여 선행 또는 후행 문자를 추가해 지정된 총 길이를 달성합니다.
 ms.date: 03/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889051"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822947"
 ---
 # <a name="padding-strings-in-net"></a>.NET에서 문자열 채우기
 

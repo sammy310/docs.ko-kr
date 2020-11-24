@@ -3,18 +3,17 @@ title: .NET 어셈블리 파일 형식
 description: .NET 앱 및 라이브러리를 설명하고 포함하는 데 사용되는 .NET 어셈블리 파일 형식에 대해 알아봅니다.
 author: richlander
 ms.date: 08/20/2019
-ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822193"
 ---
 # <a name="net-assembly-file-format"></a>.NET 어셈블리 파일 형식
 
-.NET은 .NET 프로그램을 완벽하게 설명하고 포함하는 데 사용되는 이진 파일 형식인 *어셈블리*를 정의합니다. 어셈블리는 프로그램 자체와 모든 종속 라이브러리에 사용됩니다. 적절한 .NET 구현 외에 다른 필수 아티팩트 없이 하나 이상의 어셈블리로 .NET 프로그램을 실행할 수 있습니다. 운영 체제 API를 비롯한 기본 종속성은 별도의 문제이며, .NET 어셈블리 형식으로 설명되는 경우도 있지만(예: WinRT) 이 형식에 포함되지 않습니다.
+.NET은 .NET 프로그램을 완벽하게 설명하고 포함하는 데 사용되는 이진 파일 형식인 *어셈블리* 를 정의합니다. 어셈블리는 프로그램 자체와 모든 종속 라이브러리에 사용됩니다. 적절한 .NET 구현 외에 다른 필수 아티팩트 없이 하나 이상의 어셈블리로 .NET 프로그램을 실행할 수 있습니다. 운영 체제 API를 비롯한 기본 종속성은 별도의 문제이며, .NET 어셈블리 형식으로 설명되는 경우도 있지만(예: WinRT) 이 형식에 포함되지 않습니다.
 
 > 각 CLI 구성 요소는 해당 구성 요소와 관련된 선언, 구현 및 참조에 대한 메타데이터를 전달합니다. 따라서 구성 요소 관련 메타데이터는 구성 요소별 메타데이터라고 하며 결과 구성 요소는 자기 설명적입니다(ECMA 335 I.9.1, Components and assemblies).
 

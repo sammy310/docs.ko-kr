@@ -2,7 +2,6 @@
 title: '방법: 숫자 앞에 0으로 채우기'
 description: 숫자 앞에 0으로 채우는 방법을 알아봅니다. 특정 전체 길이 또는 앞에 오는 0의 특정 수가 될 때까지 정수나 숫자 값 앞에 0을 추가합니다.
 ms.date: 02/25/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET]
 - numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 911d6059d3594ca35eb1c1c3e2d29a5684bce738
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888458"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822050"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>방법: 숫자 앞에 0으로 채우기
 
@@ -29,9 +28,9 @@ ms.locfileid: "92888458"
 
 1. 정수를 10진수 값으로 표시할지 아니면 16진수 값으로 표시할지를 결정합니다.
 
-    - 정수를 10진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "D *n* "을 `format` 매개 변수의 값으로 전달합니다. 여기서 *n* 은 문자열의 최소 길이를 나타냅니다.
+    - 정수를 10진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "D *n*"을 `format` 매개 변수의 값으로 전달합니다. 여기서 *n* 은 문자열의 최소 길이를 나타냅니다.
 
-    - 정수를 16진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "X *n* "을 서식 매개 변수의 값으로 전달합니다. 여기서 *n* 은 문자열의 최소 길이를 나타냅니다.
+    - 정수를 16진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "X *n*"을 서식 매개 변수의 값으로 전달합니다. 여기서 *n* 은 문자열의 최소 길이를 나타냅니다.
 
 [C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 모두의 보간된 문자열에서 형식 문자열을 사용할 수도 있습니다. 또는 [복합 서식 지정](composite-formatting.md)을 사용하는 <xref:System.String.Format%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>과 같은 메서드를 호출할 수 있습니다.
 
@@ -54,7 +53,7 @@ ms.locfileid: "92888458"
 
 1. 서식이 지정된 문자열에 포함할 앞에 오는 0의 수를 채워지지 않은 숫자 문자열의 길이에 추가합니다. 앞에 오는 0의 개수를 추가하면 채워진 문자열의 전체 길이를 정의합니다.
 
-1. 정수 값의 `ToString(String)` 메서드를 호출하고, 10진수 문자열의 경우 문자열 "D *n* "을 전달하고 16진수 문자열의 경우 "X *n* "을 전달합니다. 여기서 *n* 은 채워진 문자열의 전체 길이를 나타냅니다. 또한 합성 서식 지정을 지원하는 메서드에 "D *n* " 또는 "X *n* " 서식 문자열을 사용할 수 있습니다.
+1. 정수 값의 `ToString(String)` 메서드를 호출하고, 10진수 문자열의 경우 문자열 "D *n*"을 전달하고 16진수 문자열의 경우 "X *n*"을 전달합니다. 여기서 *n* 은 채워진 문자열의 전체 길이를 나타냅니다. 또한 합성 서식 지정을 지원하는 메서드에 "D *n*" 또는 "X *n*" 서식 문자열을 사용할 수 있습니다.
 
 다음 예제에서는 5개의 앞에 오는 0으로 정수 값을 채웁니다.
 

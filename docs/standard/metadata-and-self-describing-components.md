@@ -1,7 +1,6 @@
 ---
 title: 메타데이터 및 자동 기술 구성 요소
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159354"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822349"
 ---
 # <a name="metadata-and-self-describing-components"></a>메타데이터 및 자동 기술 구성 요소
 
@@ -163,7 +162,7 @@ JIT 컴파일러는 전체 메서드에 대한 MSIL을 읽고 이를 자세히 �
 |2|0x00002058|IL<br /><br /> 관리|Public<br /><br /> 정적<br /><br /> ReuseSlot|주|String|
 |3|0x0000208c|IL<br /><br /> 관리|Public<br /><br /> 정적<br /><br /> ReuseSlot|추가|int, int, int|
 
-테이블의 각 열에는 코드에 대한 중요한 정보가 있습니다. **RVA**열을 사용하여 런타임은 이 메서드를 정의하는 MSIL의 시작 메모리 주소를 계산할 수 있습니다. **ImplFlags** 및 **Flags** 열은 메서드를 나타내는 비트마스크(예: 해당 메서드가 공용인지 아니면 전용인지를 나타냄)를 포함합니다. **Name** 열은 문자열 힙에서 메서드의 이름을 인덱싱하고 **Signature** 열은 blob 힙에서 메서드의 시그니처 정의를 인덱싱합니다.
+테이블의 각 열에는 코드에 대한 중요한 정보가 있습니다. **RVA** 열을 사용하여 런타임은 이 메서드를 정의하는 MSIL의 시작 메모리 주소를 계산할 수 있습니다. **ImplFlags** 및 **Flags** 열은 메서드를 나타내는 비트마스크(예: 해당 메서드가 공용인지 아니면 전용인지를 나타냄)를 포함합니다. **Name** 열은 문자열 힙에서 메서드의 이름을 인덱싱하고 **Signature** 열은 blob 힙에서 메서드의 시그니처 정의를 인덱싱합니다.
 
 런타임은 셋째 행의 **RVA** 열을 사용하여 원하는 오프셋 주소를 계산하고 이 주소를 JIT 컴파일러에 반환한 다음 새 주소로 계속합니다. JIT 컴파일러는 다른 메타데이터 토큰을 발견할 때까지 새 주소에서 MSIL을 계속 처리하며 프로세스를 반복합니다.
 

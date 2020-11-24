@@ -1,18 +1,17 @@
 ---
 title: 언어 독립성 및 언어 독립적 구성 요소
 description: C#, C++/CLI, F#, IronPython, VB, Visual COBOL, PowerShell 등 .NET에서 지원되는 많은 언어 중 하나로 개발할 수 있는 방법을 알아봅니다.
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162988"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819086"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -1600,7 +1599,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-제네릭 형식 이름을 *name*'*n* 형식으로 인코드합니다. 여기서 *name*은 형식 이름, *`* 은 문자 리터럴, *n*은 이 형식에서 선언된 매개 변수 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.
+제네릭 형식 이름을 *name*'*n* 형식으로 인코드합니다. 여기서 *name* 은 형식 이름, *`* 은 문자 리터럴, *n* 은 이 형식에서 선언된 매개 변수 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.
 
 제약 조건이 제네릭 형식에 적용될 경우 제약 조건으로 사용되는 모든 형식도 CLS 규격이어야 합니다. 다음 예제에서는 CLS 규격 및 `BaseClass` 제네릭 클래스가 아닌 이름이 `BaseCollection`인 클래스를 정의합니다. 해당 형식 매개 변수는 `BaseClass`에서 파생되어야 합니다. 하지만 `BaseClass`는 CLS 규격이 아니므로 컴파일러에서 경고를 발생시킵니다.
 
@@ -2032,7 +2031,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
-* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(getter의 이름은 `get`\_*propertyname*이고, setter의 이름은 `set`\_*propertyname*임)로 나타납니다. C# 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙을 적용합니다.
+* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(getter의 이름은 `get`\_*propertyname* 이고, setter의 이름은 `set`\_*propertyname* 임)로 나타납니다. C# 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙을 적용합니다.
 
 * 속성의 형식은 속성 getter의 반환 형식이며 setter의 마지막 인수입니다. 이러한 형식은 CLS 규격이어야 하며 인수는 참조로 속성에 할당할 수 없습니다. 즉, 관리되는 포인터일 수 없습니다.
 
@@ -2042,9 +2041,9 @@ CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
 이벤트는 이름 및 해당 형식으로 정의됩니다. 이벤트 유형은 이벤트를 나타내는 데 사용되는 대리자입니다. 예를 들어 `DbConnection.StateChange` 이벤트는 `StateChangeEventHandler` 형식입니다. 해당 이벤트에 추가로 이 이벤트 이름을 기반으로 한 이름의 다음 세 가지 메서드가 이벤트를 구현하고 어셈블리의 메타데이터에 `SpecialName`으로 표시됩니다.
 
-* 이벤트 처리기를 추가하는 `add`_*EventName* 메서드. 예를 들어 `DbConnection.StateChange` 이벤트의 이벤트 구독 메서드 이름은 `add_StateChange`입니다.
+* 이벤트 처리기를 추가하는 `add`_ *EventName* 메서드. 예를 들어 `DbConnection.StateChange` 이벤트의 이벤트 구독 메서드 이름은 `add_StateChange`입니다.
 
-* 이벤트 처리기를 제거하는 `remove`_*EventName* 메서드. 예를 들어 `DbConnection.StateChange` 이벤트의 제거 메서드 이름은 `remove_StateChange`입니다.
+* 이벤트 처리기를 제거하는 `remove`_ *EventName* 메서드. 예를 들어 `DbConnection.StateChange` 이벤트의 제거 메서드 이름은 `remove_StateChange`입니다.
 
 * 이벤트가 발생했음을 나타내는 `raise`\_*EventName* 메서드.
 
@@ -2630,7 +2629,7 @@ End Class
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 특성
 
-[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 *isCompliant*가 포함되어 있습니다.
+[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)` 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 *isCompliant* 가 포함되어 있습니다.
 
 컴파일 타임에 컴파일러는 CLS 규격으로 우선 간주되었던 비규격 요소를 검색하고 경고를 발생시킵니다. 컴파일러는 비규격으로 명시적 선언된 형식 또는 멤버에 대해서는 경고를 발생시키지 않습니다.
 

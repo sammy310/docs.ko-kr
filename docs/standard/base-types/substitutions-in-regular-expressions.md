@@ -2,7 +2,6 @@
 title: 정규식의 대체
 description: .NET에서 정규식을 사용하여 일치하는 텍스트를 대체를 통해 바꿉니다. 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888934"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818819"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 
@@ -29,7 +28,7 @@ ms.locfileid: "92888934"
   
 |대체|설명|  
 |------------------|-----------------|  
-|$ *number*|*number* (여기서 *number* 는 10진수 값)로 식별되는 캡처 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [번호 매겨진 그룹 대체](#substituting-a-numbered-group)를 참조하십시오.|  
+|$ *number*|*number*(여기서 *number* 는 10진수 값)로 식별되는 캡처 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [번호 매겨진 그룹 대체](#substituting-a-numbered-group)를 참조하십시오.|  
 |${ *name* }|`(?<`*name*`> )` 에서 지정한 명명된 그룹과 일치하는 마지막 부분 문자열을 바꾸기 문자열에 포함합니다. 자세한 내용은 [명명된 그룹 대체](#substituting-a-named-group)를 참조하십시오.|  
 |$$|대체 문자열에 한 개의 "$" 리터럴을 포함합니다. 자세한 내용은 ["$" 기호 대체](#substituting-a--character)를 참조하십시오.|  
 |$&|대체 문자열에 일치하는 전체 문자열의 복사본을 포함합니다. 자세한 내용은 [일치하는 전체 문자열 대체](#substituting-the-entire-match)를 참조하십시오.|  

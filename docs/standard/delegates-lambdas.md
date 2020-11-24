@@ -4,14 +4,13 @@ description: 특정 메서드 시그니처를 지정하는 형식을 정의하�
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9be4fcdc29eac433dc7416578acbc664ac2e431c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063746"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821686"
 ---
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
@@ -108,7 +107,7 @@ public class Program
 
 보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐입니다. 별도의 정의가 아니라 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 메서드 호출에서 ‘임시로’ 도입되었습니다.
 
-그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 *람다 식*이 유용합니다. 람다 식 또는 줄여서 “람다”는 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 람다 식은 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 오른쪽 항으로 또는 다양한 LINQ 절과 메서드에서 직접 할당할 수 있습니다.
+그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 *람다 식* 이 유용합니다. 람다 식 또는 줄여서 “람다”는 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 람다 식은 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 오른쪽 항으로 또는 다양한 LINQ 절과 메서드에서 직접 할당할 수 있습니다.
 
 람다 식은 대리자를 지정하는 또 다른 방법이므로 익명 대리자 대신 람다 식을 사용하도록 위의 샘플을 다시 작성할 수 있어야 합니다.
 

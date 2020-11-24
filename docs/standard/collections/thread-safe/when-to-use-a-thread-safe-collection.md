@@ -2,16 +2,15 @@
 title: 스레드로부터 안전한 컬렉션 사용 시기
 description: .NET에서 스레드로부터 안전한 컬렉션 사용 시기를 알아봅니다. 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 설계된 5개의 컬렉션 형식이 있습니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326042"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819463"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
 

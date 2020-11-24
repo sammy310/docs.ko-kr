@@ -2,19 +2,18 @@
 title: '방법: 작업 및 해당 자식 취소'
 description: .NET에서 작업 및 해당 자식 항목을 취소하는 방법의 예제를 참조하세요. 예제에서는 취소 가능한 작업 만들기, 작업이 취소되었다는 알림 등 다양한 단계에 대해 설명합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662682"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817265"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>방법: 작업 및 해당 자식 취소
 이 예제는 다음 작업을 수행하는 방법을 보여줍니다.  

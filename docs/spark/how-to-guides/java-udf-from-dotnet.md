@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: edf525102bf5503dcb51247b5fa590aa0d42b369
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224122"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688269"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션에서 Java UDF 호출
 
@@ -71,7 +71,7 @@ ms.locfileid: "92224122"
 4. `spark-submit`를 사용하고 이전에 컴파일된 Java UDF jar를 `--jars` 옵션으로 전달하여 애플리케이션을 제출합니다.
 
     ```bash
-    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-3.0.x-0.12.1.jar InterRuntimeUDFs.exe
+    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-2-4_2.11-1.0.0.jar InterRuntimeUDFs.exe
     ```
 
     결과로 생성된 `dfUdf` DataFrame에서 `JavaUdf`를 통해 정의된 입력 열의 각 행에는 숫자 5가 추가되었습니다.

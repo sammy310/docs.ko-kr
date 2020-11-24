@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223972"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687605"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>MongoDB에 .NET for Apache Spark 연결
 
@@ -43,17 +43,17 @@ ms.locfileid: "92223972"
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 구성
 
 1. 다음 변수를 설정하여 애플리케이션이 MongoDB 인스턴스와 통신하고 컬렉션에서 읽어오도록 구성합니다.
-    1. **authURI** : “필수 MongoDB 인스턴스에 연결할 수 있는 권한을 애플리케이션에 부여하는 연결 문자열”입니다. 관련 형식은 다음과 같습니다.
+    1. **authURI**: “필수 MongoDB 인스턴스에 연결할 수 있는 권한을 애플리케이션에 부여하는 연결 문자열”입니다. 관련 형식은 다음과 같습니다.
 
         ```
         "mongodb+srv://<username>:<password>@<cluster_address>/<database>.<collection>"
         ```
 
-    2. **username** : 이전 섹션의 1단계에서 만든 계정의 사용자 이름
-    3. **password** : 만든 사용자 계정의 암호
-    4. **cluster_address** : MongoDB 클러스터의 호스트 이름/주소
-    5. **database** : 연결할 MongoDB 데이터베이스
-    6. **collection** : 읽을 MongoDB 컬렉션. (이 예제에서는 모든 Apache Spark 설치에 제공되는 표준 [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) 예제 파일을 사용합니다.)
+    2. **username**: 이전 섹션의 1단계에서 만든 계정의 사용자 이름
+    3. **password**: 만든 사용자 계정의 암호
+    4. **cluster_address**: MongoDB 클러스터의 호스트 이름/주소
+    5. **database**: 연결할 MongoDB 데이터베이스
+    6. **collection**: 읽을 MongoDB 컬렉션. (이 예제에서는 모든 Apache Spark 설치에 제공되는 표준 [`people.json`](https://github.com/apache/spark/blob/master/examples/src/main/resources/people.json) 예제 파일을 사용합니다.)
 
 2. 아래의 간단한 코드 조각과 같이 `com.mongodb.spark.sql.DefaultSource` 형식의 `spark.Read()`를 사용합니다.
 
@@ -82,7 +82,7 @@ ms.locfileid: "92223972"
 .NET for Apache Spark 애플리케이션을 실행하려면 sbt 프로젝트의 `build.sbt`에 있는 `libraryDependency`를 사용하여 Spark 프로젝트 빌드 정의의 일부로 `mongo-spark-connector` 모듈을 정의해야 합니다. `spark-submit`(또는 `spark-shell`)와 같은 Spark 환경에서는 `--packages` 명령줄 옵션을 다음과 같이 사용해야 합니다.
 
 ```bash
-spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<version>.jar yourApp.exe
+spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
 ```
 
 > [!NOTE]

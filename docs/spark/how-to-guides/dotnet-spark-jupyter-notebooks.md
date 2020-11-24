@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441065"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688178"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Jupyter Notebook에서 .NET for Apache Spark 사용
 
@@ -48,7 +48,7 @@ Jupyter Notebook을 사용하려면 두 가지 항목이 필요합니다.
 
 ## <a name="start-net-for-apache-spark"></a>.NET for Apache Spark 시작
 
-다음 명령을 실행하여 .NET for Apache Spark를 디버그 모드로 시작합니다. `spark-submit` 명령은 프로세스를 시작하고 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession)의 연결을 기다립니다. 사용 중인 .NET for Apache Spark 버전에 해당하는 `microsoft-spark-<version>.jar` 경로를 입력해야 합니다.
+다음 명령을 실행하여 .NET for Apache Spark를 디버그 모드로 시작합니다. `spark-submit` 명령은 프로세스를 시작하고 [SparkSession](xref:Microsoft.Spark.Sql.SparkSession)의 연결을 기다립니다. 사용 중인 .NET for Apache Spark 버전에 해당하는 `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` 경로를 입력해야 합니다.
 
 **Ubuntu**
 

@@ -2,19 +2,18 @@
 title: .NET의 파이프 작업
 description: .NET의 파이프 작업에 대해 알아봅니다. 파이프는 프로세스 간 통신을 위한 수단을 제공합니다. 파이프에는 익명 파이프와 명명된 파이프의 두 종류가 있습니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pipes [.NET]
 - pipe operations [.NET]
 - interprocess communication [.NET], pipes
 - I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 8d954d55e07a7cbb2b09843afe7f45b1ff5abcc7
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3ec4ee61bfd3a0a82eb0a0884b89c19a9300b078
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188863"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819099"
 ---
 # <a name="pipe-operations-in-net"></a>.NET의 파이프 작업
 파이프는 프로세스 간 통신을 위한 수단을 제공합니다. 파이프에는 다음과 같이 두 가지 유형이 있습니다.  

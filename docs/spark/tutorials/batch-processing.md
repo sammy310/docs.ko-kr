@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955397"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688230"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 일괄 처리
 
@@ -46,7 +46,7 @@ ms.locfileid: "91955397"
    cd mySparkBatchApp
    ```
 
-   `dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *mySparkBatchApp*이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd mySparkBatchApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
+   `dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *mySparkBatchApp* 이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd mySparkBatchApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
 
 1. 앱에서 .NET for Apache Spark를 사용하려면 Microsoft.Spark 패키지를 설치합니다. 콘솔에서 다음 명령을 실행합니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "91955397"
 
 ## <a name="create-a-sparksession"></a>SparkSession 만들기
 
-1. 다음 추가 `using` 문을 *mySparkBatchApp*에서 *Program.cs* 파일의 맨 위에 추가합니다.
+1. 다음 추가 `using` 문을 *mySparkBatchApp* 에서 *Program.cs* 파일의 맨 위에 추가합니다.
 
    ```csharp
    using System;
@@ -64,7 +64,7 @@ ms.locfileid: "91955397"
    using static Microsoft.Spark.Sql.Functions;
    ```
 
-1. 프로젝트 네임스페이스에 다음 코드를 추가합니다. *s_referenceData*는 나중에 프로그램에서 날짜를 기준으로 필터링하는 데 사용됩니다.
+1. 프로젝트 네임스페이스에 다음 코드를 추가합니다. *s_referenceData* 는 나중에 프로그램에서 날짜를 기준으로 필터링하는 데 사용됩니다.
 
    ```csharp
    static readonly DateTime s_referenceDate = new DateTime(2015, 10, 20);
@@ -131,7 +131,7 @@ Spark SQL을 사용하면 데이터에 대한 SQL 호출을 수행할 수 있습
    groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
-1. 다음 코드 블록은 최근 프로젝트가 어떻게 업데이트되었는지 보여줍니다. *MyUDF*라는 새 사용자 정의 함수를 등록하고 자습서의 시작 부분에 선언된 날짜인 *s_referenceDate*와 비교합니다. 각 프로젝트의 날짜가 참조 날짜와 비교됩니다. 그런 다음 Spark SQL을 사용하여 데이터의 각 행에서 UDF를 호출하고 데이터 세트의 각 프로젝트를 분석합니다.
+1. 다음 코드 블록은 최근 프로젝트가 어떻게 업데이트되었는지 보여줍니다. *MyUDF* 라는 새 사용자 정의 함수를 등록하고 자습서의 시작 부분에 선언된 날짜인 *s_referenceDate* 와 비교합니다. 각 프로젝트의 날짜가 참조 날짜와 비교됩니다. 그런 다음 Spark SQL을 사용하여 데이터의 각 행에서 UDF를 호출하고 데이터 세트의 각 프로젝트를 분석합니다.
 
    ```csharp
    spark.Udf().Register<string, bool>(
@@ -158,7 +158,7 @@ Spark SQL을 사용하면 데이터에 대한 SQL 호출을 수행할 수 있습
 1. `spark-submit`을 사용하여 앱을 실행합니다. 다음 명령을 Microsoft Spark jar 파일의 실제 경로로 업데이트해야 합니다.
 
    ```console
-   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<version>.jar dotnet /<path>/to/netcoreapp<version>/GitHubProjects.dll
+   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar dotnet /<path>/to/netcoreapp<version>/mySparkBatchApp.dll
    ```
 
 ## <a name="get-the-code"></a>코드 가져오기

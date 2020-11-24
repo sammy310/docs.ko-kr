@@ -1,14 +1,13 @@
 ---
 title: 문서에 포함된 스타일시트 지시문
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 25946fd14a82428ae4367cd33511df68e9929203
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710156"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818572"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>문서에 포함된 스타일시트 지시문
 
@@ -23,7 +22,7 @@ ms.locfileid: "75710156"
 </root>
 ```
 
-이는 `<?xml:stylesheet?>`가 DOM에 대해 유효하지 않은 **ProcessingInstruction**으로 간주되기 때문입니다. XML 사양의 네임스페이스에 따라 **ProcessingInstruction**은 정규화된 이름(QName)이 아닌 콜론이 없는 이름(NCName)만 될 수 있습니다.
+이는 `<?xml:stylesheet?>`가 DOM에 대해 유효하지 않은 **ProcessingInstruction** 으로 간주되기 때문입니다. XML 사양의 네임스페이스에 따라 **ProcessingInstruction** 은 정규화된 이름(QName)이 아닌 콜론이 없는 이름(NCName)만 될 수 있습니다.
 
 XML 사양의 네임스페이스에 대해 다룬 6단원의 내용에 따르면, 이 사양에 따라 **Load** 및 **LoadXml** 메서드를 구현할 경우 문서에 다음과 같은 효과가 발생합니다.
 

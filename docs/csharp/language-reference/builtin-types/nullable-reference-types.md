@@ -2,12 +2,12 @@
 title: nullable 참조 형식 - C# 참조
 description: C# nullable 참조 형식 및 사용 방법 알아보기
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471865"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822427"
 ---
 # <a name="nullable-reference-types-c-reference"></a>nullable 참조 형식(C# 참조)
 
@@ -72,7 +72,7 @@ nullable 참조 형식은 `null`에 초기화되거나 할당될 수 있습니�
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 다음 제안을 참조하세요.
 
 - [nullable 참조 형식](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>참조
 

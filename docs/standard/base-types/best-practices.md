@@ -2,7 +2,6 @@
 title: .NET의 정규식에 대한 모범 사례
 description: .NET에서 효율적이고 효과적인 정규식을 만드는 방법을 알아봅니다.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 727c3f2b8465c5d69244abe0f441d2a24e84dc5f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: ae74d263034de4d402520d751fe97af9e33a2a48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162923"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820594"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 

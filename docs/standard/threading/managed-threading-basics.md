@@ -2,19 +2,18 @@
 title: 관리되는 스레딩 기본 사항
 description: 예외, 데이터 동기화, 포그라운드 및 백그라운드 스레드, 로컬 스토리지 등의 항목을 다루는 다른 관리형 스레딩 문서에 대한 링크를 참조하세요.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189136"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819671"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 

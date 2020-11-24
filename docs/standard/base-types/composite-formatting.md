@@ -2,7 +2,6 @@
 title: 복합 형식 지정
 description: 입력으로 개체 목록을 사용하는 .NET 복합 서식 지정과 인덱싱된 자리 표시자를 사용하는 고정 텍스트가 포함된 복합 서식 문자열에 대해 알아봅니다.
 ms.date: 10/26/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 588efff637359586630554decf57072597365d32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889467"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823097"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -56,7 +55,7 @@ ms.locfileid: "92889467"
 ## <a name="format-item-syntax"></a>서식 항목 구문  
  각 서식 항목의 형태와 구성 요소는 다음과 같습니다.  
   
- `{` *index* [`,`*alignment* ][`:`*formatString* ]`}`  
+ `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
   
  여기서 중괄호("{"와 "}")의 짝이 반드시 맞아야 합니다.  
   
