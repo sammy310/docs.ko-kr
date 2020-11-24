@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 00aff9ab4edbbebe4b924d335fa12f92e9840737
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421217"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693699"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 메서드
+
 현재 위치에서 시작 하 여 현재 프로세스에 있는 지정 된 수의 응용 프로그램 도메인을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `celt`  
  진행 검색할 요소의 수입니다.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  제한이 실제로 반환 된 응용 프로그램 도메인의 수에 대 한 포인터입니다. 이 일 경우이 값은 null 일 수 있습니다 `celt` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
@@ -55,6 +58,6 @@ HRESULT Next (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorPublishAppDomainEnum 인터페이스](icorpublishappdomainenum-interface.md)
