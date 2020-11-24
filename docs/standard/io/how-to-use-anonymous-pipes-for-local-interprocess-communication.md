@@ -2,7 +2,6 @@
 title: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
 description: 로컬 컴퓨터로 .NET에서 로컬 프로세스 간 통신에 익명 파이프를 사용하는 방법을 알아봅니다. 익명 파이프에는 명명된 파이프보다 적은 오버헤드가 필요합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,25 +13,25 @@ helpviewer_keywords:
 - one-way communication [.NET]
 - local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: c9d223d975dc7ab251717a66de0bc845845dc9d7
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: ba2604680b8f69a9ad5909db51d04ddef81c8c13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189357"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829754"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a><span data-ttu-id="45802-104">방법: 로컬 프로세스 간 통신에 익명 파이프 사용</span><span class="sxs-lookup"><span data-stu-id="45802-104">How to: Use Anonymous Pipes for Local Interprocess Communication</span></span>
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a><span data-ttu-id="9fd8f-104">방법: 로컬 프로세스 간 통신에 익명 파이프 사용</span><span class="sxs-lookup"><span data-stu-id="9fd8f-104">How to: Use Anonymous Pipes for Local Interprocess Communication</span></span>
 
-<span data-ttu-id="45802-105">익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-105">Anonymous pipes provide interprocess communication on a local computer.</span></span> <span data-ttu-id="45802-106">명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-106">They offer less functionality than named pipes, but also require less overhead.</span></span> <span data-ttu-id="45802-107">익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45802-107">You can use anonymous pipes to make interprocess communication on a local computer easier.</span></span> <span data-ttu-id="45802-108">네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="45802-108">You cannot use anonymous pipes for communication over a network.</span></span>  
+<span data-ttu-id="9fd8f-105">익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-105">Anonymous pipes provide interprocess communication on a local computer.</span></span> <span data-ttu-id="9fd8f-106">명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-106">They offer less functionality than named pipes, but also require less overhead.</span></span> <span data-ttu-id="9fd8f-107">익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-107">You can use anonymous pipes to make interprocess communication on a local computer easier.</span></span> <span data-ttu-id="9fd8f-108">네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-108">You cannot use anonymous pipes for communication over a network.</span></span>  
   
- <span data-ttu-id="45802-109">익명 파이프를 구현하려면, <xref:System.IO.Pipes.AnonymousPipeServerStream> 및 <xref:System.IO.Pipes.AnonymousPipeClientStream> 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-109">To implement anonymous pipes, use the <xref:System.IO.Pipes.AnonymousPipeServerStream> and <xref:System.IO.Pipes.AnonymousPipeClientStream> classes.</span></span>  
+ <span data-ttu-id="9fd8f-109">익명 파이프를 구현하려면, <xref:System.IO.Pipes.AnonymousPipeServerStream> 및 <xref:System.IO.Pipes.AnonymousPipeClientStream> 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-109">To implement anonymous pipes, use the <xref:System.IO.Pipes.AnonymousPipeServerStream> and <xref:System.IO.Pipes.AnonymousPipeClientStream> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45802-110">예제</span><span class="sxs-lookup"><span data-stu-id="45802-110">Example</span></span>  
- <span data-ttu-id="45802-111">다음 예제는 익명 파이프를 사용하여 부모 프로세스에서 자식 프로세스로 문자열을 보내는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="45802-111">The following example demonstrates a way to send a string from a parent process to a child process using anonymous pipes.</span></span> <span data-ttu-id="45802-112">이 예제는 <xref:System.IO.Pipes.PipeDirection.Out>의 <xref:System.IO.Pipes.PipeDirection> 값을 사용하여 부모 프로세스에서 <xref:System.IO.Pipes.AnonymousPipeServerStream> 개체를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-112">This example creates an <xref:System.IO.Pipes.AnonymousPipeServerStream> object in a parent process with a <xref:System.IO.Pipes.PipeDirection> value of <xref:System.IO.Pipes.PipeDirection.Out>.</span></span> <span data-ttu-id="45802-113">그런 다음, 부모 프로세스는 클라이언트 핸들을 사용하여 <xref:System.IO.Pipes.AnonymousPipeClientStream> 개체를 생성함으로써 자식 프로세스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="45802-113">The parent process then creates a child process by using a client handle to create an <xref:System.IO.Pipes.AnonymousPipeClientStream> object.</span></span> <span data-ttu-id="45802-114">자식 프로세스에는 <xref:System.IO.Pipes.PipeDirection.In>의 <xref:System.IO.Pipes.PipeDirection> 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45802-114">The child process has a <xref:System.IO.Pipes.PipeDirection> value of <xref:System.IO.Pipes.PipeDirection.In>.</span></span>  
+## <a name="example"></a><span data-ttu-id="9fd8f-110">예제</span><span class="sxs-lookup"><span data-stu-id="9fd8f-110">Example</span></span>  
+ <span data-ttu-id="9fd8f-111">다음 예제는 익명 파이프를 사용하여 부모 프로세스에서 자식 프로세스로 문자열을 보내는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-111">The following example demonstrates a way to send a string from a parent process to a child process using anonymous pipes.</span></span> <span data-ttu-id="9fd8f-112">이 예제는 <xref:System.IO.Pipes.PipeDirection.Out>의 <xref:System.IO.Pipes.PipeDirection> 값을 사용하여 부모 프로세스에서 <xref:System.IO.Pipes.AnonymousPipeServerStream> 개체를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-112">This example creates an <xref:System.IO.Pipes.AnonymousPipeServerStream> object in a parent process with a <xref:System.IO.Pipes.PipeDirection> value of <xref:System.IO.Pipes.PipeDirection.Out>.</span></span> <span data-ttu-id="9fd8f-113">그런 다음, 부모 프로세스는 클라이언트 핸들을 사용하여 <xref:System.IO.Pipes.AnonymousPipeClientStream> 개체를 생성함으로써 자식 프로세스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-113">The parent process then creates a child process by using a client handle to create an <xref:System.IO.Pipes.AnonymousPipeClientStream> object.</span></span> <span data-ttu-id="9fd8f-114">자식 프로세스에는 <xref:System.IO.Pipes.PipeDirection.In>의 <xref:System.IO.Pipes.PipeDirection> 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-114">The child process has a <xref:System.IO.Pipes.PipeDirection> value of <xref:System.IO.Pipes.PipeDirection.In>.</span></span>  
   
- <span data-ttu-id="45802-115">그런 다음, 부모 프로세스는 사용자가 제공한 문자열을 자식 프로세스로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="45802-115">The parent process then sends a user-supplied string to the child process.</span></span> <span data-ttu-id="45802-116">문자열이 자식 프로세스의 콘솔에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="45802-116">The string is displayed to the console in the child process.</span></span>  
+ <span data-ttu-id="9fd8f-115">그런 다음, 부모 프로세스는 사용자가 제공한 문자열을 자식 프로세스로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-115">The parent process then sends a user-supplied string to the child process.</span></span> <span data-ttu-id="9fd8f-116">문자열이 자식 프로세스의 콘솔에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-116">The string is displayed to the console in the child process.</span></span>  
   
- <span data-ttu-id="45802-117">다음 예제는 서버 프로세스를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="45802-117">The following example shows the server process.</span></span>  
+ <span data-ttu-id="9fd8f-117">다음 예제는 서버 프로세스를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-117">The following example shows the server process.</span></span>  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
@@ -40,14 +39,14 @@ ms.locfileid: "93189357"
 
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
-## <a name="example"></a><span data-ttu-id="45802-118">예제</span><span class="sxs-lookup"><span data-stu-id="45802-118">Example</span></span>  
- <span data-ttu-id="45802-119">다음 예제는 클라이언트 프로세스를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="45802-119">The following example shows the client process.</span></span> <span data-ttu-id="45802-120">서버 프로세스는 클라이언트 프로세스를 시작하고 해당 프로세스에 클라이언트 핸들을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-120">The server process starts the client process and gives that process a client handle.</span></span> <span data-ttu-id="45802-121">클라이언트 코드의 결과 실행 파일 이름은 `pipeClient.exe`이어야 하며 서버 프로세스를 실행하기 전에 서버 실행 파일과 동일한 디렉터리로 복사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="45802-121">The resulting executable from the client code should be named `pipeClient.exe` and be copied to the same directory as the server executable before running the server process.</span></span>  
+## <a name="example"></a><span data-ttu-id="9fd8f-118">예제</span><span class="sxs-lookup"><span data-stu-id="9fd8f-118">Example</span></span>  
+ <span data-ttu-id="9fd8f-119">다음 예제는 클라이언트 프로세스를 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-119">The following example shows the client process.</span></span> <span data-ttu-id="9fd8f-120">서버 프로세스는 클라이언트 프로세스를 시작하고 해당 프로세스에 클라이언트 핸들을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-120">The server process starts the client process and gives that process a client handle.</span></span> <span data-ttu-id="9fd8f-121">클라이언트 코드의 결과 실행 파일 이름은 `pipeClient.exe`이어야 하며 서버 프로세스를 실행하기 전에 서버 실행 파일과 동일한 디렉터리로 복사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9fd8f-121">The resulting executable from the client code should be named `pipeClient.exe` and be copied to the same directory as the server executable before running the server process.</span></span>  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/vb/program.vb#01)]  
   
-## <a name="see-also"></a><span data-ttu-id="45802-122">참조</span><span class="sxs-lookup"><span data-stu-id="45802-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fd8f-122">참조</span><span class="sxs-lookup"><span data-stu-id="9fd8f-122">See also</span></span>
 
-- [<span data-ttu-id="45802-123">파이프</span><span class="sxs-lookup"><span data-stu-id="45802-123">Pipes</span></span>](pipe-operations.md)
-- [<span data-ttu-id="45802-124">방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용</span><span class="sxs-lookup"><span data-stu-id="45802-124">How to: Use Named Pipes for Network Interprocess Communication</span></span>](how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [<span data-ttu-id="9fd8f-123">파이프</span><span class="sxs-lookup"><span data-stu-id="9fd8f-123">Pipes</span></span>](pipe-operations.md)
+- [<span data-ttu-id="9fd8f-124">방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용</span><span class="sxs-lookup"><span data-stu-id="9fd8f-124">How to: Use Named Pipes for Network Interprocess Communication</span></span>](how-to-use-named-pipes-for-network-interprocess-communication.md)
