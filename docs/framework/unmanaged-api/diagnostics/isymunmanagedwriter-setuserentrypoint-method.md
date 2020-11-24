@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4dcc575-3ac8-4453-9be1-2b24f47363d7
 topic_type:
 - apiref
-ms.openlocfilehash: 8b51a9dc3a968c6bd2f5f9b149f13f88dc6a1e05
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a1c3506758221c3a2b578d93488a4377c1b86a21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683500"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 메서드
+
 이 모듈의 진입점인 사용자 정의 메서드를 지정 합니다. 예를 들어이 진입점은 main 이전의 컴파일러 생성 스텁이 아닌 사용자의 main 메서드 일 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,15 +34,18 @@ HRESULT SetUserEntryPoint(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `entryMethod`  
  진행 사용자 진입점인 메서드의 메타 데이터 토큰입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-ms.openlocfilehash: 0e54027806cef07fad4740c3bf5226fd26c72570
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7e3696121475885f5061bd96eb6905d7ccae734
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683175"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 함수
+
 지정 된 [IAssemblyName](iassemblyname-interface.md)를 사용 하 여 어셈블리의 개체를 열거할 수 있는 [iassemblyenum](iassemblyenum-interface.md) 인스턴스에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,32 +40,35 @@ HRESULT CreateAssemblyEnum (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pEnum`  
- 제한이 요청 된 `IAssemblyEnum` 포인터를 포함 하는 메모리 위치에 대 한 포인터입니다.  
+ 제한이 요청 된 포인터를 포함 하는 메모리 위치에 대 한 포인터 `IAssemblyEnum` 입니다.  
   
  `pUnkReserved`  
- 진행 향후 확장성을 위해 예약 되었습니다. `pUnkReserved`은 null 참조 여야 합니다.  
+ 진행 향후 확장성을 위해 예약 되었습니다. `pUnkReserved` 는 null 참조 여야 합니다.  
   
  `pName`  
- 진행 요청 된 어셈블리의 `IAssemblyName`입니다. 이 이름은 열거형을 필터링 하는 데 사용 됩니다. 전역 어셈블리 캐시의 모든 어셈블리를 열거 하는 것은 null 일 수 있습니다.  
+ 진행 `IAssemblyName` 요청 된 어셈블리의입니다. 이 이름은 열거형을 필터링 하는 데 사용 됩니다. 전역 어셈블리 캐시의 모든 어셈블리를 열거 하는 것은 null 일 수 있습니다.  
   
  `dwFlags`  
- 진행 열거자의 동작을 수정 하기 위한 플래그입니다. 이 매개 변수는 [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) 열거형에서 정확히 한 비트를 포함 합니다.  
+ 진행 열거자의 동작을 수정 하기 위한 플래그입니다. 이 매개 변수는 [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) 열거형에서 정확히 1 비트를 포함 합니다.  
   
  `pvReserved`  
- 진행 향후 확장성을 위해 예약 되었습니다. `pvReserved`은 null 참조 여야 합니다.  
+ 진행 향후 확장성을 위해 예약 되었습니다. `pvReserved` 는 null 참조 여야 합니다.  
   
-## <a name="remarks"></a>주의  
- `dwFlags` 매개 변수는 `ASM_CACHE_FLAGS` 열거에서 정확히 1 비트를 포함 합니다.  
+## <a name="remarks"></a>설명  
+
+ `dwFlags`매개 변수는 열거형에서 정확히 1 비트를 포함 합니다 `ASM_CACHE_FLAGS` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

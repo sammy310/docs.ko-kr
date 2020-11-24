@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-ms.openlocfilehash: 878a57514af34730049864f17f4853c1237904c2
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1cb9729f175a2e82e88386b0694467c6fe05636a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684462"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass 메서드
+
 인스턴스화되지 않은 제네릭 형식을 나타내는 ICorDebugClass에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,13 +35,16 @@ HRESULT GetClass (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppClass`  
- 제한이 `ICorDebugClass`인스턴스화되지 않은 제네릭 형식을 나타내는 인터페이스의 주소에 대 한 포인터입니다.  
+ 제한이 `ICorDebugClass` 인스턴스화되지 않은 제네릭 형식을 나타내는 인터페이스의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetClass`특정 조건 에서만 호출할 수 있습니다. 를 호출 하기 전에 [ICorDebugType:: GetType](icordebugtype-gettype-method.md) `GetClass` 을 호출 합니다. `ICorDebugType::GetType`가 ELEMENT_TYPE_CLASS 또는 ELEMENT_TYPE_VALUETYPE 인 CorElementType 값을 반환 하는 경우를 `GetClass` 호출 하 여 제네릭 형식에 대 한 인스턴스화되지 않은 형식을 가져올 수 있습니다.  
+
+ `GetClass` 특정 조건 에서만 호출할 수 있습니다. 를 호출 하기 전에 [ICorDebugType:: GetType](icordebugtype-gettype-method.md) `GetClass` 을 호출 합니다. `ICorDebugType::GetType`가 ELEMENT_TYPE_CLASS 또는 ELEMENT_TYPE_VALUETYPE 인 CorElementType 값을 반환 하는 경우를 `GetClass` 호출 하 여 제네릭 형식에 대 한 인스턴스화되지 않은 형식을 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

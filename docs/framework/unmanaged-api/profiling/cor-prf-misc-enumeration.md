@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 7b8f2845589a8372f62c95ef1a82eae3ed602c1f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a3c820b52ae9376d769ea9956edc0b8553a1f88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682174"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC 열거형
+
 특수 식별자를 지정하는 상수 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,6 +44,7 @@ typedef enum {
 |`PROFILER_GLOBAL_MODULE`|모듈에 속하지 않는 전역 개체에 대 한 기본 모듈 식별자입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -51,6 +53,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](profiling-enumerations.md)

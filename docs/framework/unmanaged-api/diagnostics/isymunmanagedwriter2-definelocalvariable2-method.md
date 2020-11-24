@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cdbb09d25f51e479a8a8ddfc23348305ba7c0a71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614697"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683422"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 메서드
+
 현재 어휘 범위에 단일 변수를 정의합니다. 이 메서드는 범위 전체의 여러 홈이 있는 동일한 이름의 변수에 대해 여러 번 호출할 수 있습니다. 그러나이 경우 `startOffset` 및 `endOffset` 매개 변수의 값이 겹치지 않아야 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,6 +42,7 @@ HRESULT DefineLocalVariable2(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `name`  
  진행 지역 변수 이름입니다.  
   
@@ -68,13 +70,15 @@ HRESULT DefineLocalVariable2(
  `endOffset`  
  진행 변수의 끝 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter2 인터페이스](isymunmanagedwriter2-interface.md)
 - [DefineLocalVariable 메서드](isymunmanagedwriter-definelocalvariable-method.md)

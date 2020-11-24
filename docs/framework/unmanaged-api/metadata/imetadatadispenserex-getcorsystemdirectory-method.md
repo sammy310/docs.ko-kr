@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: a76c17e663fdf6555ed878cca1b86b6a9395730e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ea0e6f96028afc201f498119976eb87aa762a6eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681693"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
+
 현재 CLR (공용 언어 런타임)을 보유 하 고 있는 디렉터리를 가져옵니다. 이 메서드는 in-process 디버거가 사용할 때만 지원 됩니다. 다른 구성 요소에서 호출 되는 경우 E_NOTIMPL 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT GetCORSystemDirectory (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szBuffer`  
  제한이 디렉터리 이름을 받을 버퍼입니다.  
   
@@ -46,15 +48,16 @@ HRESULT GetCORSystemDirectory (
  제한이 에서 실제로 반환 된 바이트 수입니다 `szBuffer` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)

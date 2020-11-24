@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-ms.openlocfilehash: 86bc320c28a5fbf122d234a4a1f15b674628c0b5
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6b2f57c7147cc8ff2abff848bd1e4661c2f5e728
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803391"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682886"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 메서드
+
 동기화에 대 한 회전 수를 사용 하 여 임계 영역 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT CreateCrstWithSpinCount (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwSpinCount`  
  진행 임계 영역 개체의 회전 수를 지정 합니다.  
   
@@ -43,9 +45,9 @@ HRESULT CreateCrstWithSpinCount (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount`성공적으로 반환 되었습니다.|  
+|S_OK|`CreateCrstWithSpinCount` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -54,18 +56,20 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|요청한 임계 영역을 만드는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 스핀 수는 다중 프로세서 시스템 에서만 사용 됩니다. 스핀 카운트는 사용할 수 없는 임계 영역에 연결 된 세마포에서 대기 작업을 수행 하기 전에 호출 스레드를 회전 해야 하는 횟수를 지정 합니다. Spin 작업 중에 임계 영역을 사용할 수 없게 되 면 호출 스레드가 대기 작업을 방지 합니다. `CreateCrstWithSpinCount`Win32 함수를 미러링합니다 `InitializeCriticalSectionAndSpinCount` .  
+
+ 스핀 수는 다중 프로세서 시스템 에서만 사용 됩니다. 스핀 카운트는 사용할 수 없는 임계 영역에 연결 된 세마포에서 대기 작업을 수행 하기 전에 호출 스레드를 회전 해야 하는 횟수를 지정 합니다. Spin 작업 중에 임계 영역을 사용할 수 없게 되 면 호출 스레드가 대기 작업을 방지 합니다. `CreateCrstWithSpinCount` Win32 함수를 미러링합니다 `InitializeCriticalSectionAndSpinCount` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostSemaphore 인터페이스](ihostsemaphore-interface.md)

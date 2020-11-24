@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 5ef5d9ae3da4dff13a461162f0ba3466d3d8192c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682392"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 메서드
+
 매핑된 파일의 메모리 영역 및 매핑 유형을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT GetFileMapping (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppvData`  
  제한이 매핑된 파일의 시작에 대 한 포인터입니다.  
   
@@ -54,6 +56,7 @@ HRESULT GetFileMapping (
 |`COR_E_NOTSUPPORTED`|CLR 구현은 메모리 영역에 대 한 정보를 제공할 수 없습니다. 이 문제는 다음과 같은 이유로 발생할 수 있습니다.<br /><br /> -메타 데이터 범위가 또는 플래그를 사용 하 여 열렸습니다 `ofWrite` `ofCopyMemory` .<br />-메타 데이터 범위가 플래그 없이 열렸습니다 `ofReadOnly` .<br />- [IMetaDataDispenser:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) 메서드는 파일의 메타 데이터 부분만 여는 데 사용 되었습니다.<br />-파일이 PE (이식 가능한 실행 파일) 파일이 아닙니다. **참고:**  이러한 조건은 CLR 구현에 따라 달라 지 며 CLR의 이후 버전에서 약화 될 가능성이 높습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  가 가리키는 메모리는 `ppvData` 기본 메타 데이터 범위가 열려 있는 동안에만 유효 합니다.  
   
  이 메서드가 작동 하려면 [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) 메서드를 호출 하 여 디스크에 있는 파일의 메타 데이터를 메모리에 매핑하면 플래그를 지정 해야 `ofReadOnly` 하며 또는 플래그를 지정 하지 않아야 합니다 `ofWrite` `ofCopyMemory` .  
@@ -63,15 +66,16 @@ HRESULT GetFileMapping (
  세 매개 변수 중 하나에 대해 NULL을 전달 하는 것은 지원 되지 않습니다. 메서드는 `E_INVALIDARG` 를 반환 하 고 출력은 채워지지 않습니다. 매핑 형식이 나 영역의 크기를 무시 하면 비정상적인 프로그램이 종료 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataInfo 인터페이스](imetadatainfo-interface.md)
 - [CorFileMapping 열거형](corfilemapping-enumeration.md)

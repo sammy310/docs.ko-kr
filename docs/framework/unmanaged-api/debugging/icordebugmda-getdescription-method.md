@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: 522e992e6d7e9a64f7590bbec0e9106e0e1f8f47
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb1e0f2bc597b48496dc362c9d7a364421c68a87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681849"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription 메서드
+
 [ICorDebugMDA](icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)에 대 한 설명을 포함 하는 문자열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetDescription (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cchName`  
  진행 설명을 저장 하는 문자열 버퍼의 크기입니다.  
   
@@ -47,9 +49,11 @@ HRESULT GetDescription (
  제한이 MDA에 대 한 설명을 포함 하는 문자열 버퍼입니다.  
   
 ## <a name="remarks"></a>설명  
+
  문자열의 길이는 0 일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -58,7 +62,7 @@ HRESULT GetDescription (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugMDA 인터페이스](icordebugmda-interface.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

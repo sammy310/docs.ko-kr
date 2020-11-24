@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: 12e7faa8d9fee7698de9d9734f522d818f225c84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7d9e187d4aede772b7a002359cd3bdd350aaec77
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500821"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682148"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS 열거형
+
 모듈의 속성을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,7 +45,7 @@ typedef enum
 |멤버|설명|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|모듈이 디스크에서 로드 되었습니다.|  
-|COR_PRF_MODULE_NGEN|네이티브 이미지 생성기 (Ngen.exe)에서 모듈을 생성 했습니다.|  
+|COR_PRF_MODULE_NGEN|모듈은 네이티브 이미지 생성기 (Ngen.exe)에 의해 생성 되었습니다.|  
 |COR_PRF_MODULE_DYNAMIC|모듈은 네임 스페이스의 메서드에 의해 만들어졌습니다 <xref:System.Reflection.Emit?displayProperty=nameWithType> .|  
 |COR_PRF_MODULE_COLLECTIBLE|모듈의 수명은 가비지 수집기에 의해 관리 됩니다.|  
 |COR_PRF_MODULE_RESOURCE|모듈은 메타 데이터를 포함 하지 않으며 리소스로 엄격히 사용 됩니다. 이 비트의 관리 되는 값은 <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> 메서드입니다.|  
@@ -52,9 +53,11 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows 런타임 콘텐츠 형식 플래그는이 모듈의 어셈블리에 대 한 메타 데이터에 설정 됩니다. 이는 모든 Windows 메타 데이터 (winmd) 모듈의 경우입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  COR_PRF_MODULE_FLAGS의 비트는 `pdwModuleFlags` [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) 메서드의 output 매개 변수에서 프로파일러로 반환 됩니다. 둘 이상의 플래그를 조합 하 여 사용할 수 있지만 모든 조합을 사용할 수 있는 것은 아닙니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -63,6 +66,6 @@ typedef enum
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](profiling-enumerations.md)

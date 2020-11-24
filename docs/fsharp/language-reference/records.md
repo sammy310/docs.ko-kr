@@ -2,12 +2,12 @@
 title: 레코드
 description: 'F # 레코드가 선택적으로 멤버와 함께 명명 된 값의 단순 집계를 나타내는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682031"
 ---
 # <a name="records"></a>레코드
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>설명
 
-위의 구문에서 *typename* 은 레코드 형식의 이름이 고, *label1* 및 *label2* 는 값의 이름이 며, *이름 이라고 하*고, *type1* 및 *type2* 는 이러한 값의 형식입니다. *멤버 목록은* 해당 형식에 대 한 멤버의 선택적 목록입니다.  특성을 사용 하 여 `[<Struct>]` 참조 형식인 레코드가 아닌 구조체 레코드를 만들 수 있습니다.
+위의 구문에서 *typename* 은 레코드 형식의 이름이 고, *label1* 및 *label2* 는 값의 이름이 며, *이름 이라고 하* 고, *type1* 및 *type2* 는 이러한 값의 형식입니다. *멤버 목록은* 해당 형식에 대 한 멤버의 선택적 목록입니다.  특성을 사용 하 여 `[<Struct>]` 참조 형식인 레코드가 아닌 구조체 레코드를 만들 수 있습니다.
 
 다음은 몇 가지 예입니다.
 
@@ -34,7 +34,7 @@ type [accessibility-modifier] typename =
 
 각 레이블이 별도의 줄에 있으면 세미콜론은 선택 사항입니다.
 
-*레코드 식*이라고 하는 식에서 값을 설정할 수 있습니다. 컴파일러는 사용 되는 레이블에서 형식을 유추 합니다 (레이블이 다른 레코드 형식과 충분히 다른 경우). 중괄호 ({})는 레코드 식을 묶습니다. 다음 코드에서는 레이블이 인 세 개의 float 요소와로 레코드를 초기화 하는 레코드 식을 보여 줍니다 `x` `y` `z` .
+*레코드 식* 이라고 하는 식에서 값을 설정할 수 있습니다. 컴파일러는 사용 되는 레이블에서 형식을 유추 합니다 (레이블이 다른 레코드 형식과 충분히 다른 경우). 중괄호 ({})는 레코드 식을 묶습니다. 다음 코드에서는 레이블이 인 세 개의 float 요소와로 레코드를 초기화 하는 레코드 식을 보여 줍니다 `x` `y` `z` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -50,7 +50,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="creating-records-by-using-record-expressions"></a>레코드 식을 사용 하 여 레코드 만들기
 
-레코드에 정의 된 레이블을 사용 하 여 레코드를 초기화할 수 있습니다. 이를 수행 하는 식을 *레코드 식*이라고 합니다. 중괄호를 사용 하 여 레코드 식을 묶고 세미콜론을 구분 기호로 사용 합니다.
+레코드에 정의 된 레이블을 사용 하 여 레코드를 초기화할 수 있습니다. 이를 수행 하는 식을 *레코드 식* 이라고 합니다. 중괄호를 사용 하 여 레코드 식을 묶고 세미콜론을 구분 기호로 사용 합니다.
 
 다음 예제에서는 레코드를 만드는 방법을 보여 줍니다.
 
@@ -68,7 +68,7 @@ type [accessibility-modifier] typename =
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-레코드 식의 이러한 형태를 *복사 및 업데이트 레코드 식*이라고 합니다.
+레코드 식의 이러한 형태를 *복사 및 업데이트 레코드 식* 이라고 합니다.
 
 기본적으로 레코드를 변경할 수 없습니다. 그러나 복사 및 업데이트 식을 사용 하 여 수정 된 레코드를 쉽게 만들 수 있습니다. 변경할 수 있는 필드를 명시적으로 지정할 수도 있습니다.
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -179,7 +179,7 @@ The records are equal.
 
 레코드에 대 한 참조 일치가 필요한 경우에는 레코드 위에 특성을 추가 합니다 `[<ReferenceEquality>]` .
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
 - [F# 형식](fsharp-types.md)
 - [클래스](classes.md)

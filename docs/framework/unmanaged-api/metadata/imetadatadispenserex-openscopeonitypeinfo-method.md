@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6056a64b354f69ce39692173da01892870fba9e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540864"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682850"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 메서드
+
 이 메서드가 구현되지 않은 경우 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pITI`  
  진행 범위를 열 수 있는 형식 정보를 제공 하는 [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) 인터페이스에 대 한 포인터입니다.  
   
@@ -50,6 +52,7 @@ HRESULT OpenScopeOnITypeInfo (
  제한이 반환 된 인터페이스에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  

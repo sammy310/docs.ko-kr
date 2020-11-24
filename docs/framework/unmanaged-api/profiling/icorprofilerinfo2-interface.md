@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 4480fefa51eec2f2751bd71910db87b72a1c32cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681584"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 인터페이스
+
 코드 프로파일러가 CLR (공용 언어 런타임)과 통신 하 여 이벤트 모니터링 및 요청 정보를 제어 하는 데 사용 하는 메서드를 제공 합니다. `ICorProfilerInfo2`인터페이스는 [ICorProfilerInfo](icorprofilerinfo-interface.md) 인터페이스의 확장입니다. 즉, .NET Framework 버전 2.0 이상 버전에서 지원 되는 새 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[DoStackSnapshot 메서드](icorprofilerinfo2-dostacksnapshot-method.md)|관리 되는 호출 프레임을 프로파일러에 보고 하는 지정 된 스레드의 스택을 안내 합니다.|  
 |[EnumModuleFrozenObjects 메서드](icorprofilerinfo2-enummodulefrozenobjects-method.md)|지정 된 모듈의 고정 된 개체를 반복할 수 있는 열거자를 가져옵니다.|  
@@ -51,6 +52,7 @@ ms.locfileid: "84496730"
 |[SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|관리 되는 함수의 "enter", "leave" 및 "tailcall" 후크에 대해 호출 될 프로파일러 구현 함수를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  프로파일러에서는 인터페이스의 메서드를 호출 `ICorProfilerInfo2` 하 여 CLR과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 합니다.  
   
  인터페이스의 메서드는 `ICorProfilerInfo2` 자유 스레드된 모델을 사용 하 여 CLR에 의해 구현 됩니다. 각 메서드가 HRESULT를 반환하여 성공 또는 실패를 나타냅니다. 가능한 반환 코드 목록은 CorError.h 파일을 참조하세요.  
@@ -58,6 +60,7 @@ ms.locfileid: "84496730"
  CLR은 `ICorProfilerInfo2` [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)의 프로파일러 구현을 사용 하 여 초기화 하는 동안 각 코드 프로파일러에 인터페이스를 전달 합니다. 그런 다음 코드 프로파일러는 인터페이스의 메서드를 호출 `ICorProfilerInfo2` 하 여 CLR의 컨트롤에서 실행 되는 관리 코드에 대 한 정보를 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -66,7 +69,7 @@ ms.locfileid: "84496730"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

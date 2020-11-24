@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684072"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 인터페이스
+
 프로파일러가 구독할 이벤트를 발생 시킬 때 CLR (공용 언어 런타임)에서 코드 프로파일러에 알리는 데 사용 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[AppDomainCreationFinished 메서드](icorprofilercallback-appdomaincreationfinished-method.md)|응용 프로그램 도메인이 생성 되었음을 프로파일러에 알립니다.|  
 |[AppDomainCreationStarted 메서드](icorprofilercallback-appdomaincreationstarted-method.md)|응용 프로그램 도메인이 생성 중임을 프로파일러에 알립니다.|  
@@ -60,8 +61,8 @@ ms.locfileid: "84500093"
 |[ExceptionUnwindFunctionLeave 메서드](icorprofilercallback-exceptionunwindfunctionleave-method.md)|예외 처리의 해제 단계에서 함수 해제가 완료 되었음을 프로파일러에 알립니다.|  
 |[FunctionUnloadStarted 메서드](icorprofilercallback-functionunloadstarted-method.md)|런타임이 함수 언로드를 시작 했음을 프로파일러에 알립니다.|  
 |[Initialize 메서드](icorprofilercallback-initialize-method.md)|새 CLR 응용 프로그램이 시작 될 때마다 프로파일러를 초기화 하기 위해 호출 됩니다.|  
-|[JITCachedFunctionSearchFinished 메서드](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Ngen.exe를 사용 하 여 이전에 컴파일된 함수에 대해 검색이 완료 되었음을 프로파일러에 알립니다.|  
-|[JITCachedFunctionSearchStarted 메서드](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Ngen.exe를 사용 하 여 이전에 컴파일된 함수에 대해 검색이 시작 되었음을 프로파일러에 알립니다.|  
+|[JITCachedFunctionSearchFinished 메서드](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|NGen.exe를 사용 하 여 이전에 컴파일된 함수에 대해 검색이 완료 되었음을 프로파일러에 알립니다.|  
+|[JITCachedFunctionSearchStarted 메서드](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|NGen.exe를 사용 하 여 이전에 컴파일된 함수에 대해 검색이 시작 되었음을 프로파일러에 알립니다.|  
 |[JITCompilationFinished 메서드](icorprofilercallback-jitcompilationfinished-method.md)|JIT 컴파일러가 함수 컴파일을 완료 했음을 프로파일러에 알립니다.|  
 |[JITCompilationStarted 메서드](icorprofilercallback-jitcompilationstarted-method.md)|JIT (just-in-time) 컴파일러가 함수 컴파일을 시작 했음을 프로파일러에 알립니다.|  
 |[JITFunctionPitched 메서드](icorprofilercallback-jitfunctionpitched-method.md)|JIT 컴파일된 함수가 메모리에서 제거 되었음을 프로파일러에 알립니다.|  
@@ -99,6 +100,7 @@ ms.locfileid: "84500093"
 |[UnmanagedToManagedTransition 메서드](icorprofilercallback-unmanagedtomanagedtransition-method.md)|비관리 코드에서 관리 코드로의 전환이 발생 했음을 프로파일러에 알립니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR은 `ICorProfilerCallback` (또는 [ICorProfilerCallback2](icorprofilercallback2-interface.md)) 인터페이스의 메서드를 호출 하 여 프로파일러가 구독 한 이벤트가 발생할 때 프로파일러에 알립니다. 이 인터페이스는 CLR이 코드 프로파일러와 통신 하는 데 사용 하는 기본 콜백 인터페이스입니다.  
   
  코드 프로파일러는 인터페이스의 메서드를 구현 해야 합니다 `ICorProfilerCallback` . .NET Framework 버전 2.0 이상에서는 프로파일러가 메서드도 구현 해야 합니다 `ICorProfilerCallback2` . 각 메서드 구현은 성공 시 S_OK 값이 있거나 실패할 경우 E_FAIL HRESULT를 반환 해야 합니다. 현재 CLR은 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)를 제외 하 고 각 콜백에서 반환 되는 HRESULT를 무시 합니다.  
@@ -109,6 +111,7 @@ ms.locfileid: "84500093"
 > 프로파일러는 단일 COM 개체를 등록 합니다. 프로파일러가 .NET Framework 버전 1.0 또는 1.1를 대상으로 하는 경우 해당 COM 개체는의 메서드만 구현 해야 `ICorProfilerCallback` 합니다. .NET Framework 버전 2.0 이상을 대상으로 하는 경우에는 COM 개체도의 메서드를 구현 해야 합니다 `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -117,7 +120,7 @@ ms.locfileid: "84500093"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)
