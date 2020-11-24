@@ -1,14 +1,13 @@
 ---
 title: XslTransform 클래스에서 임의 동작 구현
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7617970ead6c2d75b7ca9749578ba66efec311bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710806"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829416"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 클래스에서 임의 동작 구현
 

@@ -2,18 +2,17 @@
 title: 문자열을 부분 문자열로 분리
 description: String.Split, 정규식, String.Substring 등 문자열의 일부를 추출하는 다양한 방법에 대해 알아봅니다.
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403483"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829651"
 ---
 # <a name="extract-substrings-from-a-string"></a>문자열에서 부분 문자열 추출
 

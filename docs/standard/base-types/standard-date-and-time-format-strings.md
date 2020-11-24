@@ -2,7 +2,6 @@
 title: 표준 날짜 및 시간 서식 문자열
 description: 표준 날짜 및 시간 서식 문자열을 사용하여 .NET에서 날짜 및 시간 값의 텍스트 표현을 정의하는 방법을 알아봅니다.
 ms.date: 11/05/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.custom: contperfq2
-ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329757"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831327"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 서식 문자열
 

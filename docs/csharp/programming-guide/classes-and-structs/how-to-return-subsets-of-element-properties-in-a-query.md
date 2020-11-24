@@ -4,13 +4,15 @@ description: C#에서 쿼리 표현식의 익명 형식을 사용하여 각 원�
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 0ef68921b9d45e58024b37d559ee8291d8744af8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3e30793ed16204943e2398984ed200b93db7f86f
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204023"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098856"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>쿼리에서 요소 속성의 하위 집합을 반환하는 방법(C# 프로그래밍 가이드)
 

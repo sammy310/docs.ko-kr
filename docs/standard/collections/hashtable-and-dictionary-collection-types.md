@@ -1,8 +1,7 @@
 ---
 title: Hashtable 및 Dictionary 컬렉션 형식
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
-helpviewer_keywords:
+'\helpviewer_keywords':
 - Hashtable class, grouping data in collections
 - Hashtable collection type
 - hash tables
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: 83bc5e8f3f1a55e2c4d1b9853c4974cfe86218f4
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889363"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831223"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  

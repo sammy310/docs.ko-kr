@@ -2,7 +2,6 @@
 title: .NET에서 서식 지정 형식
 description: .NET에서 형식의 서식을 지정하는 방법을 알아봅니다. ToString 메서드를 사용하거나 재정의하는 방법을 알아봅니다. 문화권 구분, 복합 및 사용자 지정 서식 지정에 대해 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -26,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET]
 - strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a23df3ecfd3042927636813cdb94eecbb71438f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888497"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828961"
 ---
 # <a name="format-types-in-net"></a>.NET의 형식 유형
 

@@ -1,14 +1,13 @@
 ---
 title: XML 형식 지원 구현 참고 사항
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-ms.openlocfilehash: 91a685f122ff846217ea7a8677b29df430b65363
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5087562753d20e5662522a57b22e2d7f3cc43613
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290281"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828792"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 형식 지원 구현 참고 사항
 이 항목에서는 자세히 알아야 할 몇 가지 구현 정보에 대해 설명합니다.  

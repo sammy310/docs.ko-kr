@@ -2,7 +2,6 @@
 title: 이벤트 기반 비동기 패턴 구현
 description: .NET에서 EAP(이벤트 기반 비동기 패턴)를 구현하는 방법을 알아봅니다. EAP는 비동기 기능을 포함하는 클래스를 패키징하는 표준 방법입니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3f48f5d4f03928f8c9a2db2724e542be2b38fc63
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888791"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830352"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 
@@ -169,7 +168,7 @@ Visual Studio의 IntelliSense와 같은 디자인 환경에서 메서드를 보�
 
   - `ProgressChanged`: 클래스에 비동기 작업이 여러 개 있는 경우(또는 이후 버전에서 여러 비동기 작업을 포함하도록 확장될 예정임)
 
-  - _MethodName_**ProgressChanged** : 클래스에 비동기 작업이 하나만 있는 경우.
+  - _MethodName_**ProgressChanged**: 클래스에 비동기 작업이 하나만 있는 경우.
 
   이 명명 옵션은 선택적으로 취소 지원 섹션에 설명된 대로 취소 메서드의 경우와 비슷합니다.
 

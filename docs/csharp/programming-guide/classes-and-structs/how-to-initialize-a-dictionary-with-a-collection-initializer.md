@@ -4,13 +4,15 @@ description: Add 메서드 또는 인덱스 이니셜라이저를 사용하여 C
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 2f33240b02785c5c886a1ebebb8984d29c9f7795
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 667b39076f01ab59eb64cf31d7c1dbb921500135
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865049"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099346"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>컬렉션 이니셜라이저를 사용하여 사전을 초기화하는 방법(C# 프로그래밍 가이드)
 

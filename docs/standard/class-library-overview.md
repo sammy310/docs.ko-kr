@@ -2,7 +2,6 @@
 title: .NET 클래스 라이브러리 개요
 description: .NET 클래스 라이브러리에 대해 자세히 알아봅니다. .NET API에는 시스템 기능에 액세스할 수 있는 클래스, 인터페이스, 대리자, 값 형식이 포함됩니다.
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687526"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831262"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -69,7 +68,7 @@ ms.locfileid: "92687526"
   
  이 명명 체계를 사용하면 .NET을 확장하는 라이브러리 개발자가 손쉽게 계층 구조의 그룹 형식을 만들고 일관되고 이해하기 쉬운 이름을 그룹에 지정할 수 있습니다. 또한 형식을 전체 이름, 즉 네임스페이스와 형식 이름별로 명확하게 식별할 수 있으므로 형식 이름 간의 충돌을 방지할 수 있습니다. 라이브러리 개발자는 다음과 같은 규칙을 사용하여 네임스페이스의 이름을 만듭니다.  
   
- *CompanyName*. *TechnologyName*  
+ *CompanyName*.*TechnologyName*  
   
  예를 들어, 네임스페이스 `Microsoft.Word`는 이 지침을 따릅니다.  
   

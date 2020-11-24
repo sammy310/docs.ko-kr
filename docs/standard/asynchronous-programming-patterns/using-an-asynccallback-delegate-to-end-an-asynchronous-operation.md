@@ -1,7 +1,6 @@
 ---
 title: AsyncCallback 대리자를 사용하여 비동기 작업 종료
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - AsyncCallback delegate
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
-ms.openlocfilehash: 8766e64c52688e820d0eb6a259e39926555d97bd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 55cc78bbfdda97a4d5ec8a2028fb3b0d7a9659e5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276351"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829130"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>AsyncCallback 대리자를 사용하여 비동기 작업 종료
 비동기 작업의 결과를 기다리는 동안 다른 작업을 수행할 수 있는 애플리케이션은 작업이 완료될 때까지 차단되면 안 됩니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 명령을 계속 실행합니다.  

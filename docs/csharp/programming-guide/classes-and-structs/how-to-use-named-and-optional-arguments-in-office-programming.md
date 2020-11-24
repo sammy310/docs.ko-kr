@@ -6,13 +6,15 @@ helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864347"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099050"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법(C# 프로그래밍 가이드)
 
@@ -28,31 +30,31 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
 1. Visual Studio를 시작합니다.
 
-2. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
+2. **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트** 를 클릭합니다.
 
-3. **템플릿 범주** 창에서 **Visual C#** 을 확장한 다음 **Windows**를 클릭합니다.
+3. **템플릿 범주** 창에서 **Visual C#** 을 확장한 다음 **Windows** 를 클릭합니다.
 
-4. **템플릿** 창의 맨 위에서 **.NET Framework 4**가 **대상 프레임워크** 상자에 표시되는지 확인합니다.
+4. **템플릿** 창의 맨 위에서 **.NET Framework 4** 가 **대상 프레임워크** 상자에 표시되는지 확인합니다.
 
-5. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.
+5. **템플릿** 창에서 **콘솔 애플리케이션** 을 클릭합니다.
 
 6. **이름** 필드에 프로젝트의 이름을 입력합니다.
 
-7. **확인**을 클릭합니다.
+7. **확인** 을 클릭합니다.
 
-     **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+     **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 ## <a name="to-add-a-reference"></a>참조를 추가하려면
 
-1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.
+1. **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.
 
-2. **.NET** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word**를 선택합니다.
+2. **.NET** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word** 를 선택합니다.
 
-3. **확인**을 클릭합니다.
+3. **확인** 을 클릭합니다.
 
 ## <a name="to-add-necessary-using-directives"></a>필요한 using 지시문을 추가하려면
 
-1. **솔루션 탐색기**에서 *Program.cs* 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.
+1. **솔루션 탐색기** 에서 *Program.cs* 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기** 를 클릭합니다.
 
 2. 다음 `using` 지시문을 코드 파일의 맨 위에 추가합니다.
 
@@ -60,7 +62,7 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
 ## <a name="to-display-text-in-a-word-document"></a>Word 문서에 텍스트를 표시하려면
 
-1. *Program.cs*의 `Program` 클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
+1. *Program.cs* 의 `Program` 클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 

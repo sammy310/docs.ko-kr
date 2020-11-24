@@ -2,19 +2,18 @@
 title: PLINQ 소개
 description: .NET에서 PLINQ를 사용하여 병렬로 쿼리하는 방법을 알아봅니다. PLINQ는 병렬 LINQ(Language-Integrated Query)를 나타냅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 9a6401e8955c51ea72db3ca203365147b00db64f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925352"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830651"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 

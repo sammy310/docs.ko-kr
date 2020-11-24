@@ -2,7 +2,6 @@
 title: .NET 정규식
 description: .NET에서 정규식을 사용하여 특정 문자 패턴을 찾고, 텍스트의 유효성을 검사하고, 텍스트 부분 문자열로 작업하고, 추출된 문자열을 컬렉션에 추가합니다.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - .NET regular expressions
 - strings [.NET], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 6704ab4a99789e2e0bb4c4336f8c73aa8a89671d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6fa791005aa9fa9956a3169f8f9ddecfa201bcda
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888986"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831340"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
 

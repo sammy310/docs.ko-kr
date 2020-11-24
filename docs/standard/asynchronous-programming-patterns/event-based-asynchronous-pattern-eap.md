@@ -2,18 +2,17 @@
 title: 이벤트 기반 비동기 패턴(EAP)
 description: 구현, 모범 사례, EAP 클라이언트 구현 등과 같은 .NET의 EAP(이벤트 기반 비동기 패턴)에 대한 문서의 링크를 참조하세요.
 ms.date: 07/23/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 16aabeb55a56c63449a865d00044c463657de740
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c15bb6c9ec6ea737e6f240376e12bf8de3aa61bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888843"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830404"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>이벤트 기반 비동기 패턴(EAP)
 

@@ -2,19 +2,18 @@
 title: I/O 파이프라인 - .NET
 description: .NET에서 I/O 파이프라인을 효율적으로 사용하고 코드에서 문제를 방지하는 방법에 대해 알아봅니다.
 ms.date: 08/27/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
 - Pipelines I/O
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 508ae0e2b854f81ee639a63063a8f6d73ae84863
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271986"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830638"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
@@ -203,7 +202,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 메시지 끝
 * 메시지를 찾을 수 없는 경우 받은 버퍼의 끝
 
-단일 메시지 사례에서 오류가 발생할 가능성이 가장 높습니다. *검사됨*으로 잘못된 값을 전달하면 메모리 부족 예외 또는 무한 루프가 발생할 수 있습니다. 자세한 내용은 이 문서의 [PipeReader의 일반적인 문제](#gotchas) 섹션을 참조하세요.
+단일 메시지 사례에서 오류가 발생할 가능성이 가장 높습니다. *검사됨* 으로 잘못된 값을 전달하면 메모리 부족 예외 또는 무한 루프가 발생할 수 있습니다. 자세한 내용은 이 문서의 [PipeReader의 일반적인 문제](#gotchas) 섹션을 참조하세요.
 
 ### <a name="reading-multiple-messages"></a>여러 메시지 읽기
 

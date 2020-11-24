@@ -2,7 +2,6 @@
 title: '정규식 예제: HREF 스캐닝'
 description: .NET의 정규식 예제를 참조하세요. 예제에서는 입력 문자열을 검색하고 모든 href 특성 값과 해당 위치를 보여 줍니다.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889402"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830287"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
 다음 예제는 입력 문자열을 검색하고 모든 href="…" 값과 문자열에서의 해당 위치를 보여 줍니다.  

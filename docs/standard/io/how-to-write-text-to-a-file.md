@@ -2,7 +2,6 @@
 title: '방법: 파일에 텍스트 쓰기'
 description: .NET 앱에서 텍스트를 쓰거나 파일에 추가하는 방법을 알아봅니다. StreamWriter 또는 File 클래스의 메서드를 사용하여 동기 또는 비동기적으로 텍스트를 씁니다.
 ms.date: 01/04/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: bd9abc2aac4b02f71e41f71e518a76b2477420da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189240"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829715"
 ---
 # <a name="how-to-write-text-to-a-file"></a>방법: 파일에 텍스트 쓰기
 

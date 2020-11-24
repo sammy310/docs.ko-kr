@@ -1,21 +1,20 @@
 ---
 title: 대기 모드
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2e7b30a50e2513c567abf2116ab5495e717a8e22
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286017"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831197"
 ---
 # <a name="latency-modes"></a>대기 시간 모드
 
-개체를 회수하려면, 가비지 수집기(GC)가 애플리케이션의 실행 스레드를 모두 중지해야 합니다. 가비지 수집기가 활성 상태인 기간을 *대기 시간*이라고 합니다.
+개체를 회수하려면, 가비지 수집기(GC)가 애플리케이션의 실행 스레드를 모두 중지해야 합니다. 가비지 수집기가 활성 상태인 기간을 *대기 시간* 이라고 합니다.
 
 애플리케이션이 데이터를 검색하거나 콘텐츠를 표시하는 경우와 같은 일부 상황에서는 전체 가비지 컬렉션이 중요한 시간에 발생하여 성능이 저하될 수 있습니다. <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 속성을 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 값 중 하나로 설정하여 가비지 수집기의 개입을 조정할 수 있습니다.
 

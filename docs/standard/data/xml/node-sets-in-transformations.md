@@ -1,14 +1,13 @@
 ---
 title: 변환 과정에서 노드 집합의 역할
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 33cbae05cf35904903189ce767090d3d3cca8e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288747"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830118"
 ---
 # <a name="node-sets-in-transformations"></a>변환 과정에서 노드 집합의 역할
 노드 집합은 XPath(XML Path Language) 식에서 반환된 네 가지 기본 데이터 형식 중 하나입니다. 문서 순서로 만들어진 중복되지 않은 노드의 정렬되지 않은 컬렉션에 해당하는 노드 집합은 스타일시트의 변수에 할당될 수 있습니다.  

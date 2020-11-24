@@ -2,7 +2,6 @@
 title: Windows 시스템의 파일 경로 형식
 description: 이 문서에서는 기존 DOS 경로, DOS 디바이스 경로 및 UNC(범용 명명 규칙) 경로와 같은 Windows 시스템의 파일 경로 서식에 대해 알아봅니다.
 ms.date: 06/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 378fe56bcd54469bc82d762868636daec6eb286e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188057"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831171"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
 

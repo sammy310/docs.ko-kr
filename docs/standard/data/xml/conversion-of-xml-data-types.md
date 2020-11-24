@@ -1,17 +1,16 @@
 ---
 title: XML 데이터 형식 변환
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282417"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830976"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 데이터 형식 변환
 **XmlConvert** 클래스에 있는 대부분의 메서드는 문자열과 강력한 형식의 서식 간에 데이터를 변환하는 데 사용됩니다. 메서드는 로캘과 무관합니다. 즉, 변환을 수행하는 경우 메서드는 로캘 설정을 고려하지 않습니다.  
@@ -42,7 +41,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>문자열을 형식으로 쓰기  
- 다음 샘플에서는 **Int32**를 읽고 문자열로 변환합니다.  
+ 다음 샘플에서는 **Int32** 를 읽고 문자열로 변환합니다.  
   
  다음과 같은 XML 입력을 가정합니다.  
   
@@ -52,7 +51,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- 이 코드는 다음과 같이 **Int32**를 **String**으로 변환합니다.  
+ 이 코드는 다음과 같이 **Int32** 를 **String** 으로 변환합니다.  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

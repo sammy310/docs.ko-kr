@@ -2,7 +2,6 @@
 title: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
 description: 로컬 컴퓨터로 .NET에서 로컬 프로세스 간 통신에 익명 파이프를 사용하는 방법을 알아봅니다. 익명 파이프에는 명명된 파이프보다 적은 오버헤드가 필요합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET]
 - local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: c9d223d975dc7ab251717a66de0bc845845dc9d7
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: ba2604680b8f69a9ad5909db51d04ddef81c8c13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189357"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829754"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>방법: 로컬 프로세스 간 통신에 익명 파이프 사용
 

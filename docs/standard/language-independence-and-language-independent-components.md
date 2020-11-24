@@ -1,7 +1,6 @@
 ---
 title: 언어 독립성 및 언어 독립적 구성 요소
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: aeaf58276537fab72fdcde81b0465acbbdb23140
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160843"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831158"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -381,7 +380,7 @@ CLS 규격 열거형은 다음 규칙을 따라야 합니다.
 [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
 [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]
 
-제네릭 형식 이름을 *name\`n* 형식으로 인코딩합니다. 여기서 *name*은 형식 이름, \`는 문자 리터럴, *n*은 이 형식에서 선언된 매개 변수의 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수의 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.
+제네릭 형식 이름을 *name\`n* 형식으로 인코딩합니다. 여기서 *name* 은 형식 이름, \`는 문자 리터럴, *n* 은 이 형식에서 선언된 매개 변수의 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수의 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다.
 
 제약 조건이 제네릭 형식에 적용될 경우 제약 조건으로 사용되는 모든 형식도 CLS 규격이어야 합니다. 다음 예제에서는 CLS 규격 및 `BaseClass` 제네릭 클래스가 아닌 이름이 `BaseCollection`인 클래스를 정의합니다. 해당 형식 매개 변수는 `BaseClass`에서 파생되어야 합니다. 하지만 `BaseClass`는 CLS 규격이 아니므로 컴파일러에서 경고를 발생시킵니다.
 
@@ -426,7 +425,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
-- 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(이름이 getter는 `get_`*propertyname*, setter는 `set_`*propertyname*임)로 나타납니다. C# 및 Visual Basic 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙이 적용됩니다.
+- 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(이름이 getter는 `get_`*propertyname*, setter는 `set_`*propertyname* 임)로 나타납니다. C# 및 Visual Basic 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙이 적용됩니다.
 
 - 속성의 형식은 속성 getter의 반환 형식이며 setter의 마지막 인수입니다. 이러한 형식은 CLS 규격이어야 하며 인수는 참조로 속성에 할당할 수 없습니다. 즉, 관리되는 포인터일 수 없습니다.
 
@@ -614,7 +613,7 @@ Visual Basic 코드를 컴파일하려면 다음 명령을 사용합니다.
 vbc example.vb /r:UtilityLib.dll
 ```
 
-C#으로 컴파일하려면 **vbc**에서 **csc**로 컴파일러의 이름을 변경하고 .vb에서 .cs로 파일 확장명을 변경합니다.
+C#으로 컴파일하려면 **vbc** 에서 **csc** 로 컴파일러의 이름을 변경하고 .vb에서 .cs로 파일 확장명을 변경합니다.
 
 ```console
 csc example.cs /r:UtilityLib.dll

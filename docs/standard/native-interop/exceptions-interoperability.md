@@ -1,18 +1,17 @@
 ---
 title: 예외 상호 운용성
 ms.date: 01/16/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - unmanaged code, exceptions
 - exceptions, unmanaged code
 - interop, exceptions
 - exceptions, interop
-ms.openlocfilehash: 90774b5d1b64feb34e01f48708d94f8f841a7c9d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: db7c9943c298607aa91a4bd08ddc12bbafc872be
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550874"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830625"
 ---
 # <a name="working-with-interop-exceptions-in-unmanaged-code"></a>비관리 코드에서 Interop 예외 사용
 

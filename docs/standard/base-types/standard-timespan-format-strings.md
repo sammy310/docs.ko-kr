@@ -2,7 +2,6 @@
 title: 표준 TimeSpan 서식 문자열
 description: .NET에서 단일 서식 지정자를 사용하여 TimeSpan 값의 텍스트 표현을 정의하는 표준 TimeSpan 서식 문자열을 검토합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888947"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831314"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 
@@ -50,7 +49,7 @@ ms.locfileid: "92888947"
 ## <a name="the-constant-c-format-specifier"></a>상수("c") 형식 지정자  
  "c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.  
   
- [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 마침표(.)와 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "92888947"
 ## <a name="the-general-short-g-format-specifier"></a>일반 약식("g") 형식 지정자  
  "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 이 형식 지정자의 형식은 다음과 같습니다.  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "92888947"
 ## <a name="the-general-long-g-format-specifier"></a>일반 긴("G") 형식 지정자  
  "G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다. "G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.  
   
- [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
+ [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
   
  대괄호 ([ 및 ]) 안의 요소는 선택적 요소입니다. 콜론(:)은 리터럴 기호입니다. 다음 표에서는 나머지 요소에 대해 설명합니다.  
   

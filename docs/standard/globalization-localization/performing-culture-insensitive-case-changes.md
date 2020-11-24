@@ -1,7 +1,6 @@
 ---
 title: Culture를 구분하지 않는 대/소문자 변경 수행
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 777904654eceb0c6b0a7ca0a82cea98dd81b3010
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276818"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829819"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Culture를 구분하지 않는 대/소문자 변경 수행
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 메서드는 매개 변수를 허용하지 않는 오버로드를 제공합니다. 기본적으로 매개 변수가 없는 이러한 오버로드는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>의 값에 따라 대/소문자 변경을 수행합니다. 이렇게 하면 문화권에 따라 달라질 수 있는 대/소문자 구분 결과가 생성됩니다. 대/소문자 변경에 문화권을 구분할지 또는 문화권을 구분하지 않을지 명확하게 하려면 `culture` 매개 변수를 명시적으로 지정하도록 요구하는 이러한 메서드의 오버로드를 사용해야 합니다. 문화권을 구분하는 대/소문자 변경의 경우 `culture` 매개 변수에 대해 `CultureInfo.CurrentCulture`를 지정합니다. 문화권을 구분하지 않는 대/소문자 변경의 경우 `culture` 매개 변수에 대해 `CultureInfo.InvariantCulture`를 지정합니다.  

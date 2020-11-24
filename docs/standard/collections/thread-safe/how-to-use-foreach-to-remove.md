@@ -1,23 +1,22 @@
 ---
 title: ForEach를 사용하여 BlockingCollection의 항목 제거
 ms.date: 05/04/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: 46638d2cd8078fefebc0eacc4b8f7798ffe178ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9346ead4bf0aef91a224e0ab11ffd30a7c205294
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288903"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831002"
 ---
 # <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>ForEach를 사용하여 BlockingCollection의 항목 제거
 
-<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드를 사용하여 <xref:System.Collections.Concurrent.BlockingCollection%601>에서 항목을 가져오는 것 외에도, 추가가 완료되고 컬렉션이 빈 상태가 될 때까지 [ForEach](../../../csharp/language-reference/keywords/foreach-in.md)(Visual Basic의 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md))를 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType>과(와) 함께 사용하여 항목을 제거할 수 있습니다. 일반적인 `foreach`(`For Each`) 루프와 달리 이 열거자는 항목을 제거하여 소스 컬렉션을 수정하기 때문에 이 방식을 *열거형 변경* 또는 *열거형 소비*라고 합니다.
+<xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드를 사용하여 <xref:System.Collections.Concurrent.BlockingCollection%601>에서 항목을 가져오는 것 외에도, 추가가 완료되고 컬렉션이 빈 상태가 될 때까지 [ForEach](../../../csharp/language-reference/keywords/foreach-in.md)(Visual Basic의 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md))를 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType>과(와) 함께 사용하여 항목을 제거할 수 있습니다. 일반적인 `foreach`(`For Each`) 루프와 달리 이 열거자는 항목을 제거하여 소스 컬렉션을 수정하기 때문에 이 방식을 *열거형 변경* 또는 *열거형 소비* 라고 합니다.
 
 ## <a name="example"></a>예제
 

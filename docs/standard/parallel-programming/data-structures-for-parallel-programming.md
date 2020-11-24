@@ -1,16 +1,15 @@
 ---
 title: 병렬 프로그래밍을 위한 데이터 구조
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925326"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829533"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
 

@@ -2,7 +2,6 @@
 title: Regular Expression 개체 모델
 description: .NET의 정규식 개체 모델을 검토합니다. 일치, 그룹화, 캡처와 관련된 정규식 엔진과 개체 및 컬렉션으로 작업합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888648"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831288"
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
 <a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  

@@ -1,7 +1,6 @@
 ---
 title: '방법: 격리된 스토리지의 공간 부족 상태 예상'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -22,12 +21,12 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c8052030cdc385fc54852bb8ec48c783f2ee5bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288591"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830846"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>방법: 격리된 스토리지의 공간 부족 상태 예상
 

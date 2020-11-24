@@ -1,20 +1,19 @@
 ---
 title: XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287781"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829559"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
-**XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
+**XmlNodeChangedEventArgs** 는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
   
 |이벤트|발생 시기|  
 |-----------|-----------|  
@@ -26,7 +25,7 @@ ms.locfileid: "84287781"
 |<xref:System.Xml.XmlDocument.NodeChanged>|노드 값이 변경된 직후|  
   
 > [!NOTE]
-> **XmlDataDocument** 메모리 사용이 **DataSet** 스토리지를 사용하도록 완전히 최적화된 경우 기본 **DataSet**이 변경될 때 **XmlDataDocument**에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument**를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
+> **XmlDataDocument** 메모리 사용이 **DataSet** 스토리지를 사용하도록 완전히 최적화된 경우 기본 **DataSet** 이 변경될 때 **XmlDataDocument** 에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument** 를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
   
  다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.  
   
@@ -71,7 +70,7 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- 일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다. 예를 들어 **AppendChild**는 추가되는 노드를 이전 부모에서 제거해야 할 수도 있습니다. 이 경우 먼저 **NodeRemoved** 이벤트가 발생한 다음, **NodeInserted** 이벤트가 발생합니다. **InnerXml**을 설정하는 것과 같은 작업으로 여러 이벤트가 발생할 수 있습니다.  
+ 일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다. 예를 들어 **AppendChild** 는 추가되는 노드를 이전 부모에서 제거해야 할 수도 있습니다. 이 경우 먼저 **NodeRemoved** 이벤트가 발생한 다음, **NodeInserted** 이벤트가 발생합니다. **InnerXml** 을 설정하는 것과 같은 작업으로 여러 이벤트가 발생할 수 있습니다.  
   
  다음 코드 예제에서는 이벤트 처리기를 만드는 방법과 **NodeInserted** 이벤트를 처리하는 방법을 보여줍니다.  
   

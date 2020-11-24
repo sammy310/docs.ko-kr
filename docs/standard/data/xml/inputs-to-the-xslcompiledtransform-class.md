@@ -1,17 +1,16 @@
 ---
 title: XslCompiledTransform 클래스에 대한 입력
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 1452bc19940a33aeebaccf3041857a07c976964d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287651"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830222"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스에 대한 입력
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드는 소스 문서에 대한 세 가지 입력 형식을 허용합니다. 즉, <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하는 개체, 소스 문서를 읽는 <xref:System.Xml.XmlReader> 개체 또는 문자열 URI를 허용합니다.  

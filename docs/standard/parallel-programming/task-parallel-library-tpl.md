@@ -2,18 +2,17 @@
 title: TPL(작업 병렬 라이브러리)
 description: .NET에서 애플리케이션에 병렬 처리 및 동시성을 추가하는 프로세스를 단순화하는 공용 형식 및 API의 세트인 TPL(작업 병렬 라이브러리)을 살펴봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 596671b267484561a8697546caa5a4764242ebd3
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 5c26799338b46f5f0420c3b082e7d84fade27a26
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925235"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830001"
 ---
 # <a name="task-parallel-library-tpl"></a>TPL(작업 병렬 라이브러리)
 

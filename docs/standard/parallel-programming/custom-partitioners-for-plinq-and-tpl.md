@@ -1,19 +1,18 @@
 ---
 title: PLINQ 및 TPL에 대한 사용자 지정 파티셔너
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2268df2eb5cae4dcd7adde491b42c86c546aa1fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829234"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 및 TPL에 대한 사용자 지정 파티셔너
 
@@ -117,7 +116,7 @@ ms.locfileid: "84276727"
 
   - `KeysOrderedInEachPartition`: 각 파티션이 키 인덱스가 증가하는 요소를 반환합니다.
 
-  - `KeysOrderedAcrossPartitions`: 반환되는 모든 파티션에서 파티션의 키 인덱스 *i*는 파티션의 키 인덱스 *i*-1보다 큽니다.
+  - `KeysOrderedAcrossPartitions`: 반환되는 모든 파티션에서 파티션의 키 인덱스 *i* 는 파티션의 키 인덱스 *i*-1보다 큽니다.
 
   - `KeysNormalized`: 모든 키 인덱스는 0부터 시작하여 공백 없이 순차적으로 증가합니다.
 

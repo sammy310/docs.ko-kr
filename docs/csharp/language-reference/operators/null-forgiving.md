@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516153"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830586"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) 연산자(C# 참조)
 
@@ -51,7 +51,7 @@ null-forgiving 연산자가 없으면 컴파일러가 `p.Name` 코드에 대해 
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)의 [null-forgiving 연산자](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md) 섹션을 참조하세요.
+자세한 내용은 [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator)의 [null-forgiving 연산자](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

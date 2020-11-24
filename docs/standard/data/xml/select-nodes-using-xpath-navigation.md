@@ -2,17 +2,16 @@
 title: XPath 탐색을 사용하여 노드 선택
 description: .NET에서 XML 노드를 선택하는 방법을 알아봅니다. XPath(XML 경로 언어) 탐색을 사용하여 DOM 정보를 쿼리할 수 있는 DOM(문서 개체 모델) 메서드를 사용합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829247"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath 탐색을 사용하여 노드 선택
 XML DOM(문서 개체 모델)에는 XPath(XML Path Language) 탐색을 사용하여 DOM의 정보를 쿼리할 수 있는 메서드가 있습니다. XPath를 사용하여 단일 노드를 찾거나 특정 기준과 일치하는 모든 노드를 찾을 수 있습니다.  

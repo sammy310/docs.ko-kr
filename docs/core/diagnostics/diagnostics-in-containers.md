@@ -2,12 +2,12 @@
 title: 컨테이너에서 진단 정보 수집
 description: 이 문서에서는 Docker 컨테이너에서 .NET Core 진단 도구를 사용하는 방법에 대해 알아봅니다.
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91450838"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916211"
 ---
 # <a name="collect-diagnostics-in-containers"></a>컨테이너에서 진단 정보 수집
 
@@ -23,17 +23,17 @@ ms.locfileid: "91450838"
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 또는 CLI 도구를 설치하기 위해 필요한 경우 컨테이너에 .NET Core SDK를 설치할 수 있습니다. .NET Core SDK를 설치하면 .NET Core 런타임을 다시 설치해야 하는 부작용이 있습니다. 따라서 컨테이너에 있는 런타임과 일치하는 SDK 버전을 설치해야 합니다.
@@ -49,7 +49,7 @@ COPY --from=build /tools .
 
 **이 도구의 적용 대상: ✔️** .NET Core 2.1 이상 버전
 
-[`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md) 스크립트는 성능 추적을 수집하는 데 유용하며, .NET Core 3.0 이전에 추적을 수집하는 데 권장되는 도구입니다. 컨테이너에서 `PerfCollect`를 사용하는 경우 다음 요구 사항을 염두에 두세요.
+[`PerfCollect`](./trace-perfcollect-lttng.md) 스크립트는 성능 추적을 수집하는 데 유용하며, .NET Core 3.0 이전에 추적을 수집하는 데 권장되는 도구입니다. 컨테이너에서 `PerfCollect`를 사용하는 경우 다음 요구 사항을 염두에 두세요.
 
 1. `PerfCollect`는 `perf` 도구를 실행하기 위해 [`SYS_ADMIN` 기능](https://man7.org/linux/man-pages/man7/capabilities.7.html)이 필요하므로 컨테이너가 [해당 기능으로 시작](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)해야 합니다.
 2. `PerfCollect`는 프로파일링하는 앱이 시작하기 전에 일부 환경 변수를 설정해야 합니다. 이러한 변수는 [Dockerfile](https://docs.docker.com/engine/reference/builder/#env)에서 또는 [컨테이너를 시작](https://docs.docker.com/engine/reference/run/#env-environment-variables)할 때 설정할 수 있습니다. 이러한 변수는 일반적인 프로덕션 환경에서 설정하면 안 되므로 프로파일링될 컨테이너를 시작할 때 추가하는 것이 일반적입니다. PerfCollect에 필요한 두 변수는 다음과 같습니다.

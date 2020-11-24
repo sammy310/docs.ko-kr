@@ -2,7 +2,6 @@
 title: 작업 취소
 description: .NET에서 취소 토큰을 사용하여 Task 및 Task<TResult> 클래스에서 지원되는 작업 취소를 이해합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: deea3eaaa1e652d44a71e953975d776d4898a9b3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925300"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830014"
 ---
 # <a name="task-cancellation"></a>작업 취소
 

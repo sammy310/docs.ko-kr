@@ -1,7 +1,6 @@
 ---
 title: '방법: 격리된 스토리지의 저장소 가져오기'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: a08563b67239c679e3bc88876781508fd78bea75
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3803f50c99b8c31030c6afe756e209c9350137f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291840"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830742"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>방법: 격리된 스토리지의 저장소 가져오기
 격리된 저장소는 데이터 구획 내에서 가상 파일 시스템을 노출합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스는 격리된 저장소와 상호 작용하는 데 필요한 여러 가지 메서드를 제공합니다. 저장소를 만들고 검색하기 위해 <xref:System.IO.IsolatedStorage.IsolatedStorageFile>은 세 가지 정적 메서드를 제공합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "84291840"
 ## <a name="example"></a>예제  
  다음 코드에서는 사용자 및 어셈블리별로 격리된 저장소를 가져오는 클래스의 간단한 예제를 제공합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> 메서드가 전달하는 인수에 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>을 추가하면 사용자, 도메인 및 어셈블리별로 격리된 저장소를 검색하도록 코드를 변경할 수 있습니다.  
   
- 코드를 실행한 후 명령줄에 **StoreAdm /LIST**를 입력하여 저장소가 생성되었는지 확인할 수 있습니다. 이렇게 하면 [격리된 스토리지 도구(Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md)가 실행되어 사용자에 대해 현재 격리된 저장소가 모두 나열됩니다.  
+ 코드를 실행한 후 명령줄에 **StoreAdm /LIST** 를 입력하여 저장소가 생성되었는지 확인할 수 있습니다. 이렇게 하면 [격리된 스토리지 도구(Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md)가 실행되어 사용자에 대해 현재 격리된 저장소가 모두 나열됩니다.  
   
  [!code-cpp[Conceptual.IsolatedStorage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source6.cpp#7)]
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]

@@ -2,23 +2,22 @@
 title: 연속 작업을 사용하여 작업 연결
 description: .NET에서 연속 작업을 사용하여 작업을 연결하는 방법을 알아봅니다. 연속 작업은 다른 작업에서 호출하는 비동기 작업입니다.
 ms.date: 07/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063837"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830612"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>연속 작업을 사용하여 작업 연결
 
-비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하는 것이 일반적입니다. 연속 작업을 사용하면 후행 작업이 첫 번째 작업의 결과를 사용할 수 있습니다. 일반적으로 연속 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 _연속 작업_이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이라고도 하는 다른 작업이 완료 시 호출하는 비동기 작업입니다.
+비동기 프로그래밍에서는 한 비동기 작업이 완료 시 두 번째 작업을 호출하는 것이 일반적입니다. 연속 작업을 사용하면 후행 작업이 첫 번째 작업의 결과를 사용할 수 있습니다. 일반적으로 연속 작업은 콜백 메서드를 통해 수행되었습니다. 작업 병렬 라이브러리에서는 _연속 작업_ 이 동일한 기능을 제공합니다. 연속 작업(연속이라고도 함)은 선행 작업이라고도 하는 다른 작업이 완료 시 호출하는 비동기 작업입니다.
 
 연속은 비교적 사용이 용이하지만 강력하고 유연합니다. 예를 들어 다음 작업을 할 수 있습니다.
 
