@@ -2,7 +2,6 @@
 title: '방법: 관찰자 구현'
 description: .NET에서 관찰자를 구현합니다. 관찰자 디자인 패턴에서는 알림에 등록하는 관찰자와 공급자 간에 구분이 필요합니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064212"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828337"
 ---
 # <a name="how-to-implement-an-observer"></a>방법: 관찰자 구현
 관찰자 디자인 패턴은 알림에 등록하는 관찰자와 데이터를 모니터링하고 하나 이상의 관찰자에게 알림을 보내는 공급자 간에 구분이 필요합니다. 이 항목에서는 관찰자를 만드는 방법을 설명합니다. 관련 항목인 [방법: 공급자 구현](how-to-implement-a-provider.md)에서는 공급자를 만드는 방법을 설명합니다.  

@@ -2,14 +2,15 @@
 title: SDK 스타일 프로젝트의 대상 프레임워크 - .NET
 description: .NET 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
 ms.date: 11/06/2020
+ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a37634bc9f4cbee5f7901fcb085d3801a7452573
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441044"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827921"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 

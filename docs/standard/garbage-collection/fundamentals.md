@@ -2,7 +2,6 @@
 title: 가비지 수집 기본 사항
 description: 가비지 수집기의 작동 원리와 최적 성능으로 구성하는 방법에 대해 알아봅니다.
 ms.date: 11/15/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
 - garbage collection, background
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1536aaf936eb8d55aa56b80b50639541e89c9d2c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441013"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827817"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 

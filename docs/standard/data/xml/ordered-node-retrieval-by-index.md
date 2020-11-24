@@ -1,20 +1,19 @@
 ---
 title: 인덱스별로 정렬된 노드 검색
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288721"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823747"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>인덱스별로 정렬된 노드 검색
-W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNamedNodeMap**으로 처리되는 정렬되지 않은 집합과 반대되는 정렬된 노드 목록을 처리할 수 있는 NodeList에 대해서도 설명합니다. Microsoft .NET Framework에서는 NodeList를 **XmlNodeList**라고 합니다. **XmlNodeList**를 반환하는 메서드와 속성은 다음과 같습니다.  
+W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNamedNodeMap** 으로 처리되는 정렬되지 않은 집합과 반대되는 정렬된 노드 목록을 처리할 수 있는 NodeList에 대해서도 설명합니다. Microsoft .NET Framework에서는 NodeList를 **XmlNodeList** 라고 합니다. **XmlNodeList** 를 반환하는 메서드와 속성은 다음과 같습니다.  
   
 - XmlNode.ChildNodes  
   
@@ -24,7 +23,7 @@ W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNam
   
 - XmlNode.SelectNodes  
   
- **XmlNodeList**에는 다음 코드 샘플과 같이 **XmlNodeList**의 노드를 반복하는 루프를 작성하는 데 사용할 수 있는 **Count** 속성이 있습니다.  
+ **XmlNodeList** 에는 다음 코드 샘플과 같이 **XmlNodeList** 의 노드를 반복하는 루프를 작성하는 데 사용할 수 있는 **Count** 속성이 있습니다.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -53,7 +52,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- **Count** 속성과 더불어 **XmlNodeList**의 노드 컬렉션에 대한 `foreach` 스타일 반복을 제공하는 **GetEnumerator** 메서드가 있습니다. 다음 코드 예제에서는 `foreach` 문을 사용하는 방법을 보여 줍니다.  
+ **Count** 속성과 더불어 **XmlNodeList** 의 노드 컬렉션에 대한 `foreach` 스타일 반복을 제공하는 **GetEnumerator** 메서드가 있습니다. 다음 코드 예제에서는 `foreach` 문을 사용하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -90,7 +89,7 @@ End While
   }  
 ```  
   
- **XmlNodeList**에서 사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:System.Xml.XmlNodeList>를 참조하세요.  
+ **XmlNodeList** 에서 사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:System.Xml.XmlNodeList>를 참조하세요.  
   
 ## <a name="see-also"></a>참조
 

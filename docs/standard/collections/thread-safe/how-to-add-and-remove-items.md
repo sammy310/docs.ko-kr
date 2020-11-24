@@ -2,19 +2,18 @@
 title: ConcurrentDictionary에서 항목 추가 및 제거
 description: .NET의 ConcurrentDictionary<TKey,TValue> 컬렉션 클래스에서 항목을 추가, 검색, 업데이트 및 제거하는 방법에 대한 예제를 알아봅니다.
 ms.date: 05/04/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 17d820aba564d467152c52c7a0352bbc860f548b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325967"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823812"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>ConcurrentDictionary에서 항목을 추가 및 제거하는 방법
 
@@ -39,13 +38,13 @@ ms.locfileid: "85325967"
 
 또한 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>의 모든 메서드가 스레드로부터 안전하지만 모든 메서드, 특히 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>가 원자성 메서드인 것은 아닙니다. 알 수 없는 코드에서 모든 스레드를 차단하는 것을 방지하기 위해 이러한 메서드에 전달되는 사용자 대리자는 사전의 내부 잠금 밖에서 호출됩니다. 따라서 다음과 같은 이벤트 시퀀스가 발생할 수 있습니다.
 
-1. _threadA_에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>를 호출하고, 항목을 찾지 못하면 `valueFactory` 대리자를 호출하여 추가할 새 항목을 만듭니다.
+1. _threadA_ 에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>를 호출하고, 항목을 찾지 못하면 `valueFactory` 대리자를 호출하여 추가할 새 항목을 만듭니다.
 
-1. _threadB_에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>를 동시에 호출하고, 해당 `valueFactory` 대리자가 호출된 다음 _threadA_보다 먼저 내부 잠금에 도달하여 새 키-값 쌍이 사전에 추가됩니다.
+1. _threadB_ 에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>를 동시에 호출하고, 해당 `valueFactory` 대리자가 호출된 다음 _threadA_ 보다 먼저 내부 잠금에 도달하여 새 키-값 쌍이 사전에 추가됩니다.
 
-1. _threadA_의 사용자 대리자가 완료되고 스레드가 잠금에 도달하지만 이제는 해당 항목이 이미 존재하는 것으로 표시됩니다.
+1. _threadA_ 의 사용자 대리자가 완료되고 스레드가 잠금에 도달하지만 이제는 해당 항목이 이미 존재하는 것으로 표시됩니다.
 
-1. _threadA_에서 “Get”을 수행하고 이전에 _threadB_에서 추가한 데이터를 반환합니다.
+1. _threadA_ 에서 “Get”을 수행하고 이전에 _threadB_ 에서 추가한 데이터를 반환합니다.
 
 따라서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>에서 반환한 데이터가 스레드의 `valueFactory`에서 만든 것과 동일한 데이터라는 보장은 없습니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>를 호출할 때에도 비슷한 이벤트 시퀀스가 발생할 수 있습니다.
 

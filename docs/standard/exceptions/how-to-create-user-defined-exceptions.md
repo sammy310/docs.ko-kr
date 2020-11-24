@@ -2,7 +2,6 @@
 title: '방법: 사용자 정의 예외 만들기'
 description: .NET의 Exception 기본 클래스에서 파생된 예외 클래스의 계층 구조의 대안인 사용자 정의 예외를 만드는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-ms.openlocfilehash: 14eb6246ba4347f33766f7dff36463f2bf996330
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b0a8549c9bacf322a0685c7b505185ab1d1101f6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662799"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828129"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
 

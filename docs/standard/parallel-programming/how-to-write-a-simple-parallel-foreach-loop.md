@@ -2,7 +2,6 @@
 title: Parallel.ForEach를 사용하여 단순 병렬 프로그램 작성
 description: 이 문서에서는 .NET에서 데이터 병렬 처리를 사용하도록 설정하는 방법을 알아봅니다. IEnumerable 또는 IEnumerable<T> 데이터 소스에 대한 Parallel.ForEach 루프를 작성합니다.
 ms.date: 02/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4f67f6fbe5a79e925ecd6aaec3f833704cda38c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825418"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>방법: 간단한 Parallel.ForEach 루프 작성
 
@@ -26,7 +25,7 @@ ms.locfileid: "84447201"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 *C:\Users\Public\Pictures\Sample Pictures* 폴더에 여러 .jpg 파일이 있다고 가정하고 *Modified*라는 새 하위 폴더를 만듭니다. 예제를 실행할 때 *Sample Pictures*의 각 .jpg 이미지를 회전시키고 *Modified*에 저장합니다. 필요에 따라 두 경로를 수정할 수 있습니다.
+이 예제에서는 *C:\Users\Public\Pictures\Sample Pictures* 폴더에 여러 .jpg 파일이 있다고 가정하고 *Modified* 라는 새 하위 폴더를 만듭니다. 예제를 실행할 때 *Sample Pictures* 의 각 .jpg 이미지를 회전시키고 *Modified* 에 저장합니다. 필요에 따라 두 경로를 수정할 수 있습니다.
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]

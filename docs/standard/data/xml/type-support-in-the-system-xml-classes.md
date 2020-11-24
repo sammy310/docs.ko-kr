@@ -1,14 +1,13 @@
 ---
 title: System.Xml 클래스의 형식 지원
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 8ceda15cb8463db3e81260529ebb1e3a67a0c1af
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e4ef15980f488c473129f4f7c02be1778bcafea
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283301"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824625"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml 클래스의 형식 지원
 .NET Framework 버전 2.0에서는 형식 지원 기능을 포함하도록 핵심 XML 클래스가 향상되었습니다. <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> 및 <xref:System.Xml.XPath.XPathNavigator> 클래스에는 XML 스키마 형식과 CLR(공용 언어 런타임) 형식 간의 변환 기능을 비롯한 형식 지원 기능이 들어 있습니다.  
@@ -17,7 +16,7 @@ ms.locfileid: "84283301"
   
 - <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XPath.XPathNavigator> 클래스는 각각 노드에서 스키마 정보를 반환하는 **SchemaInfo** 속성을 포함하고 있습니다.  
   
-- **ReadContentAs**와 **ReadElementContentAs** 및 <xref:System.Xml.XmlReader> 클래스의 메서드는 텍스트 값을 읽어온 후 단일 메서드 호출에서 CLR 값으로 변환합니다.  
+- **ReadContentAs** 와 **ReadElementContentAs** 및 <xref:System.Xml.XmlReader> 클래스의 메서드는 텍스트 값을 읽어온 후 단일 메서드 호출에서 CLR 값으로 변환합니다.  
   
 - <xref:System.Xml.XmlWriter.WriteValue%2A> 클래스의 <xref:System.Xml.XmlWriter> 메서드는 XML을 작성할 때 CLR 형식을 XML 스키마 형식으로 변환합니다.  
   

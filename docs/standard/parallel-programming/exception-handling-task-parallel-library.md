@@ -2,19 +2,18 @@
 title: 예외 처리(작업 병렬 라이브러리)
 description: .NET에서 TPL(작업 병렬 라이브러리)을 사용한 예외 처리를 살펴봅니다. 중첩 집계 예외, 내부 예외, 관찰되지 않은 작업 예외 등을 참조하세요.
 ms.date: 04/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: fd16fd4263c092f8678589e1a8dd9544955e798a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662539"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827336"
 ---
 # <a name="exception-handling-task-parallel-library"></a>예외 처리(작업 병렬 라이브러리)
 
@@ -39,7 +38,7 @@ ms.locfileid: "84662539"
 예외가 가입된 스레드로 다시 버블 업될 수 있는 경우 예외가 발생한 후에도 작업에서 일부 항목을 계속 처리할 수 있습니다.
 
 > [!NOTE]
-> “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 이러한 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 맨 처음 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반** 을 차례로 선택하고 **내 코드만 사용**확인란의 선택을 취소하기만 하면 됩니다.
+> “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 이러한 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 맨 처음 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반** 을 차례로 선택하고 **내 코드만 사용** 확인란의 선택을 취소하기만 하면 됩니다.
 
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>연결된 자식 작업 및 중첩된 AggregateExceptions
 

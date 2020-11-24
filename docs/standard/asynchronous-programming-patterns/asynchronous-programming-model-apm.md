@@ -2,7 +2,6 @@
 title: APM(비동기 프로그래밍 모델)
 description: .NET의 APM(비동기 프로그래밍 모델)에 대해 알아봅니다. 비동기 작업을 시작하고 종료하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - ending asynchronous operations
 - starting asynchronous operations
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769186"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824443"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
-<xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName*을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
+<xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName* 을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
   
 > [!NOTE]
 > .NET Framework 4부터는 작업 병렬 라이브러리에서 비동기 및 병렬 프로그래밍을 위한 새로운 모델을 제공합니다. 자세한 내용은 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md) 및 [TAP(작업 기반 비동기 패턴)](task-based-asynchronous-pattern-tap.md)을 참조하세요.  
@@ -28,7 +27,7 @@ ms.locfileid: "84769186"
  `BeginOperationName`을 호출한 후에는 비동기 작업이 다른 스레드에서 발생되는 동안 애플리케이션에서 호출 스레드에 대한 명령을 계속 실행할 수 있습니다. `BeginOperationName`에 대한 각 호출에 대해 애플리케이션도 `EndOperationName`을 호출하여 작업 결과를 가져와야 합니다.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>비동기 작업 시작  
- `BeginOperationName` 메서드는 비동기 작업 *OperationName*을 시작하고 <xref:System.IAsyncResult> 인터페이스를 구현하는 개체를 반환합니다. <xref:System.IAsyncResult> 개체는 비동기 작업에 대한 정보를 저장합니다. 다음 표에서는 비동기 작업에 대한 정보를 보여 줍니다.  
+ `BeginOperationName` 메서드는 비동기 작업 *OperationName* 을 시작하고 <xref:System.IAsyncResult> 인터페이스를 구현하는 개체를 반환합니다. <xref:System.IAsyncResult> 개체는 비동기 작업에 대한 정보를 저장합니다. 다음 표에서는 비동기 작업에 대한 정보를 보여 줍니다.  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "84769186"
  `BeginOperationName`은 호출 스레드에 대한 컨트롤을 즉시 반환합니다. `BeginOperationName` 메서드가 예외를 throw하면 이 예외는 이 비동기 작업이 시작되기 전에 throw됩니다. `BeginOperationName` 메서드가 예외를 throw하면 콜백 메서드는 호출되지 않습니다.  
   
 ## <a name="ending-an-asynchronous-operation"></a>비동기 작업 끝내기  
- `EndOperationName` 메서드는 비동기 작업 *OperationName*을 종료합니다. `EndOperationName` 메서드의 반환 값은 이에 상응하는 동기 항목의 반환 값과 같은 유형으로서 비동기 작업에 대해서만 사용됩니다. 예를 들어 <xref:System.IO.FileStream.EndRead%2A> 메서드는 <xref:System.IO.FileStream> 에서 읽은 바이트 수를 반환하고 <xref:System.Net.Dns.EndGetHostByName%2A> 메서드는 호스트 컴퓨터에 대한 정보를 포함하는 <xref:System.Net.IPHostEntry> 개체를 반환합니다. `EndOperationName` 메서드는 동기 버전의 메서드 시그니처에 선언된 out 또는 ref 매개 변수를 사용합니다. `EndOperationName` 메서드에는 동기 메서드의 매개 변수와 함께 <xref:System.IAsyncResult> 매개 변수도 포함되어 있습니다. 호출자는 `BeginOperationName`에 대한 해당 호출로 반환된 인스턴스를 전달해야 합니다.  
+ `EndOperationName` 메서드는 비동기 작업 *OperationName* 을 종료합니다. `EndOperationName` 메서드의 반환 값은 이에 상응하는 동기 항목의 반환 값과 같은 유형으로서 비동기 작업에 대해서만 사용됩니다. 예를 들어 <xref:System.IO.FileStream.EndRead%2A> 메서드는 <xref:System.IO.FileStream> 에서 읽은 바이트 수를 반환하고 <xref:System.Net.Dns.EndGetHostByName%2A> 메서드는 호스트 컴퓨터에 대한 정보를 포함하는 <xref:System.Net.IPHostEntry> 개체를 반환합니다. `EndOperationName` 메서드는 동기 버전의 메서드 시그니처에 선언된 out 또는 ref 매개 변수를 사용합니다. `EndOperationName` 메서드에는 동기 메서드의 매개 변수와 함께 <xref:System.IAsyncResult> 매개 변수도 포함되어 있습니다. 호출자는 `BeginOperationName`에 대한 해당 호출로 반환된 인스턴스를 전달해야 합니다.  
   
  `EndOperationName`이 호출되었을 때 <xref:System.IAsyncResult> 개체에 표시되는 비동기 작업이 완료되지 않은 경우에는 `EndOperationName`에서 비동기 작업이 완료될 때까지 해당 호출 스레드를 차단합니다. 비동기 작업이 throw한 예외는 `EndOperationName` 메서드에서 throw됩니다. 같은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 여러 번 호출한 데 따른 효과는 정의되어 있지 않습니다. 마찬가지로 관련된 Begin 메서드에서 반환하지 않은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 호출하는 경우도 정의되어 있지 않습니다.  
   

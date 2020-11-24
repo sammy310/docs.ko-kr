@@ -1,7 +1,6 @@
 ---
 title: 스트림 작성
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,17 +12,17 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 93295c1d70f510ef563abc3a191d6690b1174fa8
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: c50a372ee3434fcd7f72ad707ca82c5c9ad8a5c8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188577"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823383"
 ---
 # <a name="compose-streams"></a>스트림 작성
-백업 저장소( *backing store* )는 디스크 또는 메모리와 같은 스토리지 매체입니다. 다양한 각 백업 저장소는 <xref:System.IO.Stream> 클래스의 구현으로 고유한 스트림을 구현합니다.
+백업 저장소(*backing store*)는 디스크 또는 메모리와 같은 스토리지 매체입니다. 다양한 각 백업 저장소는 <xref:System.IO.Stream> 클래스의 구현으로 고유한 스트림을 구현합니다.
 
-각 스트림 유형은 지정된 백업 저장소에 유입 또는 유출되는 바이트를 읽고 씁니다. 백업 저장소에 연결되는 스트림을 기본 스트림( *base stream* )이라고 합니다. 기본 스트림에는 스트림을 백업 저장소에 연결하는 데 필요한 매개 변수가 포함된 생성자가 있습니다. 예를 들어 <xref:System.IO.FileStream>에는 프로세스가 경로 매개 변수를 지정하는 생성자가 있으며, 이것은 프로세스가 파일을 공유하는 방법을 지정합니다.  
+각 스트림 유형은 지정된 백업 저장소에 유입 또는 유출되는 바이트를 읽고 씁니다. 백업 저장소에 연결되는 스트림을 기본 스트림(*base stream*)이라고 합니다. 기본 스트림에는 스트림을 백업 저장소에 연결하는 데 필요한 매개 변수가 포함된 생성자가 있습니다. 예를 들어 <xref:System.IO.FileStream>에는 프로세스가 경로 매개 변수를 지정하는 생성자가 있으며, 이것은 프로세스가 파일을 공유하는 방법을 지정합니다.  
 
 <xref:System.IO> 클래스 디자인은 간소화된 스트림 컴퍼지션을 제공합니다. 원하는 기능을 제공하는 하나 이상의 통과 스트림에 기본 스트림을 연결할 수 있습니다. 체인 끝에 reader 또는 writer를 연결할 수 있기 때문에 기본 형식을 쉽게 읽거나 쓸 수 있습니다.  
 

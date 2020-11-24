@@ -2,7 +2,6 @@
 title: 예외에 대한 모범 사례 - .NET
 description: Try/catch/finally 사용, 예외 없이 일반적인 조건 처리 및 미리 정의된 .NET 예외 형식 사용과 같은 예외에 대한 모범 사례를 알아봅니다.
 ms.date: 12/05/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 815dcc81cf41465bffd1515d366a66ff558304fa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447097"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828233"
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
 
@@ -23,7 +22,7 @@ ms.locfileid: "84447097"
 
 ## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Try/catch/finally 블록을 사용하여 오류를 복구하거나 리소스를 해제합니다.
 
-잠재적으로 예외를 생성***하고*** 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `try`/`catch` 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
+잠재적으로 예외를 생성 ***하고*** 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `try`/`catch` 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
 
 `using` 문 또는 `finally` 블록으로 할당된 리소스를 정리하세요. 예외가 throw될 때 리소스를 자동으로 정리하려면 `using` 문을 사용하는 것이 좋습니다. `finally` 블록을 사용하여 <xref:System.IDisposable>을 구현하지 않는 리소스를 정리합니다. `finally` 절의 코드는 예외가 throw되더라도 거의 항상 실행됩니다.
 

@@ -2,7 +2,6 @@
 title: .NET 정규식의 역참조 구문
 description: 정규식의 역참조 구문을 사용하여 반복되는 텍스트 요소를 식별하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 79702f266e7233c96fef6b6aa32a7e756589f49c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889155"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825262"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>정규식의 역참조 구문
 

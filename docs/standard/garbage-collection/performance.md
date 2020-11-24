@@ -2,17 +2,16 @@
 title: 가비지 컬렉션 및 성능
 description: 가비지 수집 및 메모리 사용량과 관련된 문제에 대해 알아봅니다. 가비지 수집이 애플리케이션에 미치는 영향을 최소화하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062973"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827544"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 
@@ -282,7 +281,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>메모리 부족 예외가 관리되는지 여부를 확인하려면
 
-1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 예외 인쇄( **pe** ) 명령을 입력합니다.
+1. SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 예외 인쇄(**pe**) 명령을 입력합니다.
 
     **!pe**
 

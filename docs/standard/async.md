@@ -4,14 +4,13 @@ description: 비동기 프로그래밍이 다중 코어에서 차단 I/O 및 동
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159730"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824807"
 ---
 # <a name="async-overview"></a>비동기 개요
 
@@ -33,7 +32,7 @@ ms.locfileid: "78159730"
 - 대부분의 최신 .NET API는 비동기입니다.
 - .NET에서 비동기 코드를 작성하는 것은 쉽습니다.
 
-## <a name="whats-next"></a>새로운 기능
+## <a name="whats-next"></a>다음 작업
 
 자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 항목을 참조하세요.
 

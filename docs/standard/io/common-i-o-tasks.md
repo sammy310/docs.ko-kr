@@ -2,16 +2,15 @@
 title: 공통적인 I/O 작업
 description: .NET의 System.IO 네임스페이스에 있는 클래스와 메서드를 사용하여 공통적인 파일 작업 및 공통적인 디렉터리 작업을 수행하는 방법을 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598608"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823396"
 ---
 # <a name="common-io-tasks"></a>공통적인 I/O 작업
 <xref:System.IO> 네임스페이스에는 파일, 디렉터리 및 스트림에 대해 읽기, 쓰기 등의 다양한 작업을 수행할 수 있게 해 주는 여러 클래스가 있습니다. 자세한 내용은 [파일 및 스트림 I/O](index.md)를 참조하세요.  

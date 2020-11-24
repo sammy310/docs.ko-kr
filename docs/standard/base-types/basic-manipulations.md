@@ -2,19 +2,18 @@
 title: .NET의 기본적인 문자열 조작
 description: 여러 문자열 메서드를 호출하는 예제를 참조하세요.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.openlocfilehash: 659f01cc1d7ae03e12e83329e4fd2446b7512475
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: e3e969520e068bde234c13d45ad790b76ecf8fdb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342620"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825159"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>방법: .NET에서 기본적인 문자열 조작 수행
 

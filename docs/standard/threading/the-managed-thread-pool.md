@@ -2,19 +2,18 @@
 title: 관리되는 스레드 풀
 description: 백그라운드 작업자 스레드를 제공하는 .NET 스레드 풀에 대해 알아보기
 ms.date: 08/02/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread pooling [.NET]
 - thread pools [.NET]
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 9bc90acd6d7e1bef81e767ce8c257fed78322554
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826185"
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 

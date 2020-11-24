@@ -2,7 +2,6 @@
 title: 컬렉션 내에서 비교 및 정렬
 description: .NET에서 System.Collections 클래스를 사용하여 비교 및 정렬을 수행합니다. 이를 통해 제거할 요소를 찾거나 키-값 쌍의 값을 반환할 수 있습니다.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 40a59809723298ddda21e642098ec8ae74a1828b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889376"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823864"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
 

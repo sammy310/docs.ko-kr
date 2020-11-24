@@ -4,18 +4,17 @@ description: DisposeAsync 및 DisposeAsyncCore 메서드를 구현하여 비동�
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687721"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827804"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync 메서드 구현
 

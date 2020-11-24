@@ -1,7 +1,6 @@
 ---
 title: '방법: 데이터 흐름 블록의 작업 Scheduler 지정'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 76c9e75f787c28657af143b46bb22d08039e2dc4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288136"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826907"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>방법: 데이터 흐름 블록의 작업 Scheduler 지정
 이 문서에서는 애플리케이션에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다. 예제에서는 Windows Forms 애플리케이션에서 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 클래스를 사용하여 판독기 작업이 활성화된 경우와 작성기 작업이 활성화된 경우를 표시합니다. 또한 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 흐름 블록이 사용자 인터페이스 스레드에서 실행될 수 있도록 합니다.
@@ -26,7 +25,7 @@ ms.locfileid: "84288136"
   
 1. Visual C# 또는 Visual Basic **Windows Forms 애플리케이션** 프로젝트를 만듭니다. 다음 단계에서 프로젝트의 이름은 `WriterReadersWinForms`입니다.  
   
-2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 `checkBox1`의 경우 **Reader 1**, `checkBox2`의 경우 **Reader 2**, `checkBox3`의 경우 **Reader 3**, `checkBox4`의 경우 **Writer**로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
+2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 `checkBox1`의 경우 **Reader 1**, `checkBox2`의 경우 **Reader 2**, `checkBox3`의 경우 **Reader 3**, `checkBox4`의 경우 **Writer** 로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
   
 3. 폼에 <xref:System.Windows.Forms.Timer> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성을 `2500`으로 설정합니다.  
   

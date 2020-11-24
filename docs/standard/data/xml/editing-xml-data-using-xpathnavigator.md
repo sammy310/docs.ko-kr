@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator를 사용하여 XML 데이터 편집
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-ms.openlocfilehash: 11395c52e399068e5242a1e041ebd9ed94bc2881
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 812e8dbd0fce70459e9dd38c8b3889e1c1a88074
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292074"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826009"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 편집
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XmlDocument> 개체에 포함된 XML 문서에서 노드와 값을 삽입하거나 수정 및 제거하는 메서드를 제공합니다. 이러한 메서드를 사용하여 노드와 값을 삽입하거나 수정 및 제거하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 true여야 합니다.  

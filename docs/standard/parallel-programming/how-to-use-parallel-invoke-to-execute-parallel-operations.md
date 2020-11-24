@@ -2,7 +2,6 @@
 title: '방법: Parallel.Invoke를 사용하여 병렬 작업 실행'
 description: TPL(작업 병렬 라이브러리)에서 .NET의 공유 데이터 소스에 대해 병렬 작업을 수행하는 Parallel.Invoke 메서드를 사용하는 방법을 참조하세요.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6ec8f03216cc6225e909f5dc3128469047826166
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596347"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825483"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: Parallel.Invoke를 사용하여 병렬 작업 실행
 

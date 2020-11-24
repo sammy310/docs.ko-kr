@@ -1,7 +1,6 @@
 ---
 title: '방법: 공급자 구현'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: b57b595a40494ba0cf6c38b6a13688dece602584
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064225"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828350"
 ---
 # <a name="how-to-implement-a-provider"></a>방법: 공급자 구현
 관찰자 디자인 패턴은 데이터를 모니터링하고 알림을 보내는 공급자와 해당 공급자로부터 알림(콜백)을 받는 하나 이상의 관찰자 간에 구분이 필요합니다. 이 항목에서는 공급자를 만드는 방법을 설명합니다. 관련 항목인 [방법: 관찰자 구현](how-to-implement-an-observer.md)에서는 관찰자를 만드는 방법을 설명합니다.  

@@ -3,7 +3,6 @@ title: CLR(공용 언어 런타임) 개요 - .NET
 titleSuffix: ''
 description: .NET 런타임 환경인 CLR(공용 언어 런타임)로 시작합니다. CLR은 코드를 실행하고 개발 프로세스를 용이하게 하는 서비스를 제공합니다.
 ms.date: 10/22/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
 - code, execution
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687509"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823877"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 

@@ -2,7 +2,6 @@
 title: 제네릭의 공 분산과 반공 분산
 description: .NET 제네릭에서 파생된 형식을 더 많이 사용할 수 있는 공변성(Covariance) 및 파생된 형식을 더 적게 사용할 수 있는 반공변성(Contravariance)에 대해 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1606238b22bd355b997b54cf94e0c28d16ec5cac
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063178"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827414"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공변성(Covariance) 및 반공변성(Contravariance)
 

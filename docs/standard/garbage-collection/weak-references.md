@@ -2,19 +2,18 @@
 title: 약한 참조
 description: 애플리케이션에서 개체에 계속 액세스할 수 있는 동안 .NET 가비지 수집기에서 개체를 수집할 수 있도록 하는 약한 참조에 대해 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - weak references, short
 - weak references, using
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827362"
 ---
 # <a name="weak-references"></a>약한 참조
 애플리케이션의 코드가 해당 개체에 연결될 수 있는 반면 가비지 수집기는 애플리케이션에서 사용 중인 개체를 수집할 수 없습니다. 애플리케이션은 개체에 대한 강력한 참조를 가진다고 합니다.  

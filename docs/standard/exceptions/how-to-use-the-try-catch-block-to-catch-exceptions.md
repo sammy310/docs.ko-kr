@@ -2,7 +2,6 @@
 title: '방법: Try-Catch 블록을 사용하여 예외 catch'
 description: 예외를 발생시키거나 throw할 수 있는 문을 포함한 Try 블록을 사용합니다. 예외를 처리하는 문을 하나 이상의 catch 블록에 배치합니다.
 ms.date: 02/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,18 +11,18 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: cfe5b2b304cdb9efe7f0d91059fe1c279b4fa2dd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768913"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828012"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>try/catch 블록을 사용하여 예외를 catch하는 방법
 
 예외를 발생시키거나 throw할 수 있는 모든 코드 문을 `try` 블록에 배치하고, 예외를 처리하는 데 사용되는 명령문을 `try` 블록 아래에 있는 하나 이상의 `catch` 블록에 배치합니다. 각 `catch` 블록은 예외 형식을 포함하고 해당 예외 형식을 처리하는 데 필요한 추가 명령문을 포함할 수 있습니다.
 
-다음 예제에서 <xref:System.IO.StreamReader>는 *data.txt*라는 파일을 열고 해당 파일에서 줄을 검색합니다. 코드는 세 가지 예외 중 하나를 throw할 수 있으므로 `try` 블록에 위치합니다. 세 개 `catch` 블록이 예외를 catch하고 콘솔에 결과를 표시하여 예외를 처리합니다.
+다음 예제에서 <xref:System.IO.StreamReader>는 *data.txt* 라는 파일을 열고 해당 파일에서 줄을 검색합니다. 코드는 세 가지 예외 중 하나를 throw할 수 있으므로 `try` 블록에 위치합니다. 세 개 `catch` 블록이 예외를 catch하고 콘솔에 결과를 표시하여 예외를 처리합니다.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
 [!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]

@@ -1,19 +1,18 @@
 ---
 title: '방법: 병렬 클래스를 사용하여 파일 디렉터리 열거'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925261"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825704"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>방법: 병렬 클래스를 사용하여 파일 디렉터리 열거
 대부분의 경우 파일 반복은 쉽게 병렬 처리할 수 있는 작업입니다. [방법: PLINQ를 사용하여 파일 디렉터리 반복](how-to-iterate-file-directories-with-plinq.md) 항목은 많은 시나리오에서 이 작업을 수행하는 가장 쉬운 방법을 보여줍니다. 그러나 코드가 파일 시스템에 액세스할 때 발생할 수 있는 많은 예외 형식을 처리해야 할 경우 복잡해질 수 있습니다. 다음 예제는 문제에 대한 하나의 접근 방법을 보여줍니다. 이 방법은 스택 기반 반복을 사용하여 지정된 디렉터리에서 모든 파일과 폴더를 트래버스하고 코드에서 다양한 예외를 catch하여 처리할 수 있습니다. 물론 예외를 처리하는 방법은 사용자가 결정합니다.  

@@ -3,13 +3,12 @@ title: .NET 시작 자습서
 description: .NET 앱 개발 또는 .NET 프로그래밍 언어 중 하나를 학습하기 위한 자습서를 선택합니다.
 author: tdykstra
 ms.date: 09/30/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755878"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827180"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>.NET 시작 자습서
 

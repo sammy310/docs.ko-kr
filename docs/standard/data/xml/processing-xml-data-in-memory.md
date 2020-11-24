@@ -1,14 +1,13 @@
 ---
 title: 메모리 내 XML 데이터 처리
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 0f64b53588e08520d38c05ec6060f9aef58bd7d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556488"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824695"
 ---
 # <a name="processing-xml-data-in-memory"></a>메모리 내 XML 데이터 처리
 Microsoft .NET Framework에는 <xref:System.Xml.XmlDocument> 클래스, <xref:System.Xml.XPath.XPathDocument> 클래스 및 [LINQ to XML(C#)](../../linq/linq-xml-overview.md)과 [LINQ to XML(Visual Basic)](../../linq/linq-xml-overview.md)이라는 XML 데이터를 처리할 수 있는 세 가지 모델이 포함되어 있습니다.  

@@ -2,7 +2,6 @@
 title: 비동기 파일 I/O
 description: .NET의 비동기 파일 I/O에 대해 알아봅니다. ReadAsync, WriteAsync 등의 비동기 작업을 간소화하는 비동기 메서드를 알아봅니다.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: aaf722c4af1598b639ffc56e30639e93dbc8a514
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188603"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823461"
 ---
 # <a name="asynchronous-file-io"></a>비동기 파일 I/O
 

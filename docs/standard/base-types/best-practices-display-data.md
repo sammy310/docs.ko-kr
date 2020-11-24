@@ -2,16 +2,15 @@
 title: .NET에서 형식이 지정된 데이터 표시 및 유지 모범 사례
 description: .NET 애플리케이션에서 숫자 및 날짜 데이터를 효율적으로 표시하고 유지하는 방법을 알아봅니다.
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 83a491f6c843225c6242a343fe4132c2ce7caa74
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 1748363089a80538a19e91b1955fe9257de39a4e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403479"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825145"
 ---
 # <a name="best-practices-for-displaying-and-persisting-formatted-data"></a>형식이 지정된 데이터 표시 및 유지 모범 사례
 

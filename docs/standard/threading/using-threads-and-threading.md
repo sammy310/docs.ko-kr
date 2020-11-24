@@ -2,17 +2,16 @@
 title: 스레드 및 스레딩 사용
 description: 여러 작업을 동시에 수행(다중 스레딩)하는 애플리케이션을 작성할 수 있도록 .NET에서 스레드와 스레딩을 사용하는 방법에 대해 알아봅니다.
 ms.date: 08/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 85968cfb1a228826429876e525f0c8452f97cfc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188707"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826094"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
 

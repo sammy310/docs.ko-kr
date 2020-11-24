@@ -2,7 +2,6 @@
 title: 관리되지 않는 리소스 정리
 description: 파일, 창, 네트워크나 데이터베이스 연결과 같이 .NET 가비지 수집기에서 처리하지 않는 비관리형 리소스를 정리하는 방법을 참조하세요.
 ms.date: 05/13/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 07a8d754f1fc2612ae53407fa1b12a1eab7e38f2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edfb01411df3d974073a397a20f58acdcd8521f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599836"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827505"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>관리되지 않는 리소스 정리
 

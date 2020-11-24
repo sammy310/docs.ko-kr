@@ -1,14 +1,13 @@
 ---
 title: 외부 XSLT 스타일시트 및 문서 확인
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 8e7f66d67f2520b47c30307a98ed2f3fb08455df
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291476"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823591"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  

@@ -1,14 +1,13 @@
 ---
 title: 변형의 결과 트리 조각
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e5ca285c0b5d6c32d15647508c611a47ed97ee03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156363"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823565"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>변형의 결과 트리 조각
 

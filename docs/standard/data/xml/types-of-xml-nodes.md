@@ -1,14 +1,13 @@
 ---
 title: XML 노드 형식
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 5e11d61e16659ac1a8ca1b0b2c0d493ffdad5621
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97458fc26b3c63dd6d7882c180192aef63109e1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282066"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824599"
 ---
 # <a name="types-of-xml-nodes"></a>XML 노드 형식
 XML 문서를 노드 트리로 메모리에 읽어올 경우 노드의 형식은 노드가 만들어질 때 결정됩니다. XML DOM(문서 개체 모델)에는 다양한 노드 형식이 있습니다. 이러한 노드 형식은 W3C(World Wide Web 컨소시엄)에서 결정하며 1.1.1단원 The DOM Structure Model에 목록이 제공됩니다. 다음 표에서는 노드 형식, 해당 노드 형식에 지정된 개체 및 각각에 대한 간략한 설명의 목록을 보여 줍니다.  
@@ -37,8 +36,8 @@ XML 문서를 노드 트리로 메모리에 읽어올 경우 노드의 형식은
 |<xref:System.Xml.XmlDeclaration>|`<?xml version="1.0"…>` 선언 노드를 나타냅니다.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|혼합 내용의 공백인 유효 공백을 나타냅니다.|  
 |<xref:System.Xml.XmlWhitespace>|요소 내용의 공백을 나타냅니다.|  
-|EndElement|**XmlReader**가 요소의 끝에 도달하면 반환됩니다.<br /><br /> XML 예: **\</item>**<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNodeType>를 참조하세요.|  
-|EndEntity|<xref:System.Xml.XmlReader.ResolveEntity%2A> 호출의 결과로 **XmlReader**가 엔터티 대체의 끝에 도달하면 반환됩니다. 자세한 내용은 <xref:System.Xml.XmlNodeType>를 참조하세요.|  
+|EndElement|**XmlReader** 가 요소의 끝에 도달하면 반환됩니다.<br /><br /> XML 예: **\</item>**<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNodeType>를 참조하세요.|  
+|EndEntity|<xref:System.Xml.XmlReader.ResolveEntity%2A> 호출의 결과로 **XmlReader** 가 엔터티 대체의 끝에 도달하면 반환됩니다. 자세한 내용은 <xref:System.Xml.XmlNodeType>를 참조하세요.|  
   
  XML을 읽고 노드 형식에 case 구문을 사용하여 노드와 해당 내용에 대한 정보를 출력하는 코드 예제를 보려면 <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>을 참조하세요.  
   
