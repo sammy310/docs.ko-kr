@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1c005e58f18b03a7da5f3836f719b95c41bca95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684943"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 메서드
+
 최종 매니페스트를 내보냅니다. 다른 모든 파일을 가져온 후이 메서드를 호출 하 고 모든 옵션을 설정 합니다. 바인딩되지 않은 모듈에 대해이 메서드를 호출 하지 마십시오.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT EmitManifest(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
@@ -46,12 +48,14 @@ HRESULT EmitManifest(
  선택적으로 어셈블리 매니페스트 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

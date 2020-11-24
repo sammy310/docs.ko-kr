@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45adda6551e1cec994f59acbb0e8d2b5c56c4df6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684813"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 메서드
+
 중첩 된 형식의 형식 전달자를 지정 된 어셈블리의 형식 테이블에 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT ExportNestedTypeForwarder(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  내보낼 어셈블리의 ID입니다.  
   
@@ -55,18 +57,20 @@ HRESULT ExportNestedTypeForwarder(
  내보낼 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다.  
+ `ComType` 또는와 같은 `tdPublic` 플래그 `tdNested` 입니다.  
   
  `pType`  
  내보내기 유형의 토큰을 받습니다. 중첩 된 형식을 내보내는 경우에만 필요 합니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink 필요  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

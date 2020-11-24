@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8db08b22765bac0ed2fe058db49d6882b8d22df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684800"
 ---
 # <a name="exporttype-method"></a>ExportType 메서드
+
 형식을 내보낼 수 있도록 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT ExportType(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  내보낼 어셈블리의 ID입니다.  
   
@@ -51,18 +53,20 @@ HRESULT ExportType(
  내보낼 수 있는 정규화 된 형식 이름입니다.  
   
  `dwFlags`  
- `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다. 이 매개 변수는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
+ `ComType` 또는와 같은 `tdPublic` 플래그 `tdNested` 입니다. 이 매개 변수는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
  `pType`  
  내보낸 형식에 대 한 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink 필요  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

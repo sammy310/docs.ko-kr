@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42935813579d7f1d55a9f1daf9d8c6c1241f85be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426053"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684709"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 메서드
+
 ALink에서 할당 된 토큰과는 반대로 메타 데이터에 사용 되는 실제 FileDef 토큰을 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT GetFileDef(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
@@ -45,12 +47,14 @@ HRESULT GetFileDef(
  FileDef 토큰을 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink 필요  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)
