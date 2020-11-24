@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
-ms.openlocfilehash: 7cd25a24533b04dc45ee734f9e9639391311405a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 388814d1c63f048c0aa231a1d0058a390cba9493
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099738"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674062"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 함수
+
 Authenticode XrML 라이선스의 유효성을 확인합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,6 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pLicenseBlob`  
  [in] 확인할 Authenticode XrML 라이선스입니다.  
   
@@ -61,6 +63,7 @@ HRESULT CertVerifyAuthenticodeLicense (
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조체](axl-authenticode-timestamper-info-structure.md)를 참조 하세요.  
   
 ## <a name="return-value"></a>반환 값  
+
  성공하는 경우 `S_OK`가 반환됩니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
 ## <a name="see-also"></a>참조

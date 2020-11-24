@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: d821413e67b36392d936499cd22f2e065f1556ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cef817b52718acfbc4360e9d3742a5a78abd3afe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503850"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675050"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 메서드
+
 [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md)에 대 한 이전 호출로 정의 된 지정 된 멤버가 [IMetaDataEmit::D Efin def](imetadataemit-definetypedef-method.md)의 이전 호출에 정의 된 대로 지정 된 형식의 멤버 임을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,22 +36,24 @@ HRESULT SetParent (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `mr`  
- 진행 `mdMemberRef`새 부모를 받을 토큰입니다.  
+ 진행 `mdMemberRef` 새 부모를 받을 토큰입니다.  
   
  `tk`  
- 진행 `mdToken`새 부모에 대 한입니다.  
+ 진행 `mdToken` 새 부모에 대 한입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-ms.openlocfilehash: 366a48e5f6abd92f0c6f796f40bdd263181da4a8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 40b944f6a1204bfe506ed64408be30f68adf3170
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213480"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675258"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 메서드
+
 런타임이 해당 이미지를 현재 프로세스에 로드 하기 위해 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT SetDesiredNGENCompilerFlags (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pdwFlags`  
  진행 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 되는 컴파일러 플래그를 지정 하는 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 값입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `SetDesiredNGENCompilerFlags`메서드는 런타임이이 프로세스에 이미지를 로드 하도록 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 지정 합니다. 이 메서드에 의해 설정 된 플래그는 올바른 미리 컴파일된 이미지를 선택 하는 데만 사용 됩니다. 이러한 이미지가 없는 경우 런타임은 MSIL (Microsoft 중간 언어) 이미지 및 JIT (just-in-time) 컴파일러를 대신 로드 합니다. 이 경우 디버거는 [ICorDebugModule2:: SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md) 메서드를 사용 하 여 JIT 컴파일에 필요한 만큼 플래그를 설정 해야 합니다.  
   
  이미지가 로드 되었지만 해당 이미지에 대 한 JIT 컴파일 (이미지에 제네릭을 포함 하는 경우)이 발생 해야 하는 경우 메서드에 의해 지정 된 컴파일러 플래그가 `SetDesiredNGENCompilerFlags` 추가 JIT 컴파일에 적용 됩니다.  
@@ -45,6 +48,7 @@ HRESULT SetDesiredNGENCompilerFlags (
  `SetDesiredNGENCompilerFlags` [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) 콜백 중에 메서드를 호출 해야 합니다. 나중에 메서드를 호출 하려고 하면 `SetDesiredNGENCompilerFlags` 실패 합니다. 또한 열거형에 정의 되어 있지 않거나 지정 된 프로세스에 유효 하지 않은 플래그를 설정 하려고 하면 `CorDebugJITCompilerFlags` 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -53,7 +57,7 @@ HRESULT SetDesiredNGENCompilerFlags (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebug 인터페이스](icordebug-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

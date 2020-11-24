@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-ms.openlocfilehash: 969d74933e908674225684a2e77d5c4804b86122
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 33927cc0e3a3cdaad70d437f9dd5ca5dfdcdc46b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615646"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673563"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException 메서드
+
 호출 스레드의 현재 예외에 대 한 Watson 버킷을 가져옵니다.  
   
  *버킷은* 동일한 코드 오류와 관련 된 오류 데이터의 컬렉션입니다. *Watson* 은 예외와 관련 된 데이터를 수집 및 분석 하기 위한 일련의 기술을 나타냅니다.  
@@ -36,18 +37,20 @@ HRESULT GetBucketParametersForCurrentException(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pParams`  
  제한이 예외에 대 한 오류 데이터를 포함 하는 [BucketParameters](bucketparameters-structure.md) 구조체에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)

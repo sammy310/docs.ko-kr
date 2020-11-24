@@ -2,14 +2,15 @@
 title: AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조
 ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
-ms.openlocfilehash: 036397928703aea6199a59ae9c1e66153c30ec7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6852519da6cf4e12669aa2efa24862053adbc03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674244"
 ---
 # <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조
+
 Authenticode 타임스탬퍼 정보를 정의합니다.  
   
 ## <a name="syntax"></a>구문  

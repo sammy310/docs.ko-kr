@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: ae65c60440a90959006cd8db94dda479e80613d4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675310"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 열거형
+
 인터페이스, 특정 .NET Framework 버전 또는 인터페이스가 적용된 .NET Framework 버전을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -130,7 +131,8 @@ typedef enum CorDebugInterfaceVersion {
 } CorDebugInterfaceVersion;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
+
  다음 테이블에는 각 열거형 값에서 해당 인터페이스의 링크와 인터페이스가 지원되는 첫 번째.NET Framework 버전이 나와 있습니다.  
   
 |멤버|설명|.NET Framework 버전|  
@@ -140,7 +142,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugVersion_1_1`|모든 서비스 팩을 포함한 .NET Framework 버전이 1.1입니다.|1.1|  
 |`CorDebugVersion_2_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 2.0입니다.|2.0|  
 |`CorDebugVersion_4_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 4입니다.|4|  
-|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5.|  
+|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1.0|  
@@ -213,16 +215,18 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 인터페이스](icordebugheapvalue3-interface.md)|4|  
 |`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum 인터페이스](icordebugblockingobjectenum-interface.md)|4|  
 |`ver_ICorDebugValue3`|[ICorDebugValue3](icordebugvalue3-interface.md)|4|  
-|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5.|  
-|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5.|  
-|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5.|  
-|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5.|  
+|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5|  
+|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5|  
+|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5|  
+|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5|  
 |`CorDebugLatestVersion`|모든 서비스 팩을 포함한 .NET Framework 버전이 최신 버전입니다.|-|  
   
 ## <a name="remarks"></a>설명  
- 디버거는 CreateDebuggingInterfaceFromVersion 함수에서 `CorDebugInterfaceVersion` 열거형을 사용 [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) 하 여 디버거가 지 원하는 .NET Framework의 가장 높은 버전을 지정할 수 있습니다.  
+
+ 디버거는 `CorDebugInterfaceVersion` [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) 함수에서 열거형을 사용 하 여 디버거가 지 원하는 .NET Framework의 가장 높은 버전을 지정할 수 있습니다.  
   
 ## <a name="interface-names"></a>인터페이스 이름  
+
  디버깅 API에서 인터페이스 이름 끝에 표시되는 숫자(예: `ICorDebugThread3`의 경우 "3")는 .NET Framework의 버전이 아닌 인터페이스의 버전을 지정합니다. .NET Framework 버전 1에 처음 도입된 인터페이스를 제외하면 디버깅 API의 모든 인터페이스 이름에는 버전 번호가 포함됩니다. 인터페이스 버전 번호와 .NET Framework 버전 번호가 일치하는 경우 단순히 우연적인 일입니다.  
   
 - .NET Framework 버전 1.0에 도입된 인터페이스의 경우 모두 암시적으로 버전 1이므로 번호를 포함하지 않습니다.  
@@ -233,9 +237,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework 버전 3.0 및 3.5는 기존 .NET Framework 2.0 인터페이스를 사용하며 새로운 인터페이스는 제공하지 않습니다.  
   
-- .NET Framework 4는 인터페이스 버전을 혼합 해 서 소개 합니다. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. .NET Framework 4에는 `ICorDebugStackWalk` 인터페이스의 첫 번째 버전과 두 번째 버전의 `ICorDebugNativeFrame` 인터페이스 (`ICorDebugNativeFrame2`)도 도입 되었습니다.  
+- .NET Framework 4는 인터페이스 버전을 혼합 해 서 소개 합니다. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. .NET Framework 4에는 인터페이스의 첫 번째 버전과 `ICorDebugStackWalk` 두 번째 버전의 `ICorDebugNativeFrame` 인터페이스 ()도 도입 `ICorDebugNativeFrame2` 되었습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -244,6 +249,6 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

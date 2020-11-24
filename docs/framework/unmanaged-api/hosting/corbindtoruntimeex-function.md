@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 55fbf0c37861029940422a10bd62f5ecfebf2b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493502"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673744"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 함수
+
 관리 되지 않는 호스트에서 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다. [CorBindToRuntime](corbindtoruntime-function.md) 및 `CorBindToRuntimeEx` 함수는 동일한 작업을 수행 하지만 함수를 `CorBindToRuntimeEx` 사용 하 여 CLR의 동작을 지정 하는 플래그를 설정할 수 있습니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -56,12 +57,13 @@ HRESULT CorBindToRuntimeEx (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwszVersion`  
  진행 로드 하려는 CLR의 버전을 설명 하는 문자열입니다.  
   
  .NET Framework의 버전 번호는 마침표로 구분 된 네 부분으로 구성 되어 있습니다. 주 버전. 부 버전. *빌드. 수정 버전*. 로 전달 된 문자열은 `pwszVersion` "v" 문자 뒤에 버전 번호의 처음 세 부분 (예: "v 1.0.1529")을 사용 하 여 시작 해야 합니다.  
   
- CLR의 이전 버전과의 호환성을 지정 하는 정책 문과 함께 일부 CLR 버전이 설치 됩니다. 기본적으로 시작 shim은 `pwszVersion` 정책 문에 대해 평가 하 고 요청 되는 버전과 호환 되는 최신 버전의 런타임을 로드 합니다. 호스트는 `pwszVersion` `STARTUP_LOADER_SAFEMODE` 아래에 `startupFlags` 설명 된 대로 매개 변수에 대 한 값을 전달 하 여 shim이 정책 평가를 건너뛰고에 지정 된 정확한 버전을 로드 하도록 강제 설정할 수 있습니다.  
+ CLR의 이전 버전과의 호환성을 지정 하는 정책 문과 함께 일부 CLR 버전이 설치 됩니다. 기본적으로 시작 shim은 `pwszVersion` 정책 문에 대해 평가 하 고 요청 되는 버전과 호환 되는 최신 버전의 런타임을 로드 합니다. 호스트는 `pwszVersion`  `STARTUP_LOADER_SAFEMODE` 아래에 `startupFlags` 설명 된 대로 매개 변수에 대 한 값을 전달 하 여 shim이 정책 평가를 건너뛰고에 지정 된 정확한 버전을 로드 하도록 강제 설정할 수 있습니다.  
   
  호출자가에 대해 null을 지정 하는 경우는 `pwszVersion` `CorBindToRuntimeEx` 버전 번호가 .NET Framework 4 런타임 보다 낮은 설치 된 런타임 집합을 식별 하 고 해당 집합에서 최신 버전의 런타임을 로드 합니다. .NET Framework 4 이상을 로드 하지 않으며, 이전 버전이 설치 되어 있지 않으면 실패 합니다. Null을 전달 하면 로드 되는 런타임 버전을 호스트에서 제어할 수 없습니다. 이 방법은 일부 시나리오에서 적합할 수 있지만 호스트에서 로드할 특정 버전을 제공 하는 것이 좋습니다.  
   
@@ -105,15 +107,17 @@ HRESULT CorBindToRuntimeEx (
  진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
- 진행 `IID`에서 요청 된 인터페이스의입니다 `rclsid` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
+ 진행 `IID` 에서 요청 된 인터페이스의입니다 `rclsid` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
   
  `ppv`  
  제한이 에 대해 반환 된 인터페이스 포인터 `riid` 입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `pwszVersion`가 존재 하지 않는 런타임 버전을 지정 하는 경우 `CorBindToRuntimeEx` CLR_E_SHIM_RUNTIMELOAD HRESULT 값을 반환 합니다.  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Windows Id의 실행 컨텍스트 및 흐름  
+
  CLR 버전 1에서 <xref:System.Security.Principal.WindowsIdentity> 개체는 새 스레드, 스레드 풀 또는 타이머 콜백과 같은 비동기 요소를 통해 전달 되지 않습니다. CLR 버전 2.0에서 <xref:System.Threading.ExecutionContext> 개체는 현재 실행 중인 스레드에 대 한 일부 정보를 래핑하고 응용 프로그램 도메인 경계를 넘어 전달 합니다. 마찬가지로, <xref:System.Security.Principal.WindowsIdentity> 개체도 모든 비동기 지점에서 흐릅니다. 따라서 스레드의 현재 가장 (있는 경우)는 흐름이 너무 많습니다.  
   
  흐름은 다음 두 가지 방법으로 변경할 수 있습니다.  
@@ -129,15 +133,16 @@ HRESULT CorBindToRuntimeEx (
      버전 1 호환성 모드는 전체 프로세스와 프로세스의 모든 응용 프로그램 도메인에 적용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CorBindToCurrentRuntime 함수](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 함수](corbindtoruntime-function.md)

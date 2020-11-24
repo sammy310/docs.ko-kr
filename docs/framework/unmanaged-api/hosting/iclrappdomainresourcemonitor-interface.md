@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72fa83a1-8997-41d7-b355-ab177a24a303
 topic_type:
 - apiref
-ms.openlocfilehash: 08dc0f0891d960cb7b402b30455e606aaff7bcea
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 84c53f0666d0e04b898e28c1d8e146eab566ca1b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674699"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor 인터페이스
+
 응용 프로그램 도메인의 메모리 및 CPU 사용량을 검사 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -33,6 +34,7 @@ ms.locfileid: "83616010"
 |[GetCurrentCpuTime 메서드](iclrappdomainresourcemonitor-getcurrentcputime-method.md)|응용 프로그램 도메인이 만들어진 후 현재 응용 프로그램 도메인에서 실행 되는 동안 모든 스레드에서 사용 된 총 프로세서 시간을 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICLRAppDomainResourceMonitor`인터페이스는 다음과 같은 관리 되는 속성과 비슷한 기능을 제공 합니다.  
   
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
@@ -46,15 +48,16 @@ ms.locfileid: "83616010"
 - <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [\<appDomainResourceMonitoring> 요소](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [응용 프로그램 도메인 리소스 모니터링](../../../standard/garbage-collection/app-domain-resource-monitoring.md)

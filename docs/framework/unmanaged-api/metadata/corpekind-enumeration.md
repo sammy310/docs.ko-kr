@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 001be0c5e8897bacf76d2a044fb9400768473052
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007561"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673529"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 열거형
+
 [IMetaDataImport2:: GetPEKind](imetadataimport2-getpekind-method.md)호출에서 반환 된 PE (이식 가능한 실행) 파일을 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -51,15 +52,17 @@ typedef enum CorPEKind {
 |pe32BitPreferred|이 PE 파일이 플랫폼 중립적 이며 32 비트 환경에서 로드 되는 것을 선호 함을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이러한 값은 비트 조합에서 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

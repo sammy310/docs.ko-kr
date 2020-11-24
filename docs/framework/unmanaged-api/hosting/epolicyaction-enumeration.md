@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674751"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 열거형
+
 [EClrOperation](eclroperation-enumeration.md) 및 [EClrFailure](eclrfailure-enumeration.md)에서 설명 하는 오류에 설명 된 작업에 대해 호스트가 설정할 수 있는 정책 작업에 대해 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -57,18 +58,20 @@ typedef enum {
 |`eUnloadAppDomain`|을 언로드하기 위해 지정 합니다 <xref:System.AppDomain> . CLR에서 종료자를 실행 하려고 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  호스트는 [ICLRPolicyManager](iclrpolicymanager-interface.md) 인터페이스의 메서드를 호출 하 여 정책 작업을 설정 합니다. 강제 및 정상적인 중단에 대 한 자세한 내용은 [EClrOperation](eclroperation-enumeration.md) 열거형을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [ICLRPolicyManager 인터페이스](iclrpolicymanager-interface.md)

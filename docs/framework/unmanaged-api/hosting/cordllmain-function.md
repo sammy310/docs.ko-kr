@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: 3b2322f708afed08172f87e843c225aa9c60d9d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1b3ebcabc66ee7ca29245bb02d958be311bc65fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673698"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain 함수
 
@@ -36,6 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hInst`  
  진행 로드 된 모듈의 인스턴스 핸들입니다.  
   
@@ -45,10 +46,12 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  `lpReserved`  
  진행 사용 되지 않는.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드 `true` 는 성공에 대해를 반환 하 고 `false` 오류가 발생 하면를 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  이 함수는 DLL 어셈블리에 대 한 운영 체제 로더에 의해 호출 됩니다. 실행 어셈블리의 경우 로더가 대신 [ \_ CorExeMain](corexemain-function.md) 함수를 호출 합니다.  
   
  운영 체제 로더는 DLL 파일에 지정 된 진입점에 관계 없이이 메서드를 호출 합니다.  
@@ -63,10 +66,10 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

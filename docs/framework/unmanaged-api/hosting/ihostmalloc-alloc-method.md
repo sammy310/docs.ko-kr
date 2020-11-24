@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 6f58e2290afa166d48306c0bbb50edd1df36888b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 5858b03676db0839621b121131ded4da9950ce88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804639"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675128"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc 메서드
+
 호스트가 힙에서 지정 된 양의 메모리를 할당 하도록 요청 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT Alloc (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cbSize`  
  진행 현재 메모리 할당 요청의 크기 (바이트)입니다.  
   
@@ -47,9 +49,9 @@ HRESULT Alloc (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Alloc`성공적으로 반환 되었습니다.|  
+|S_OK|`Alloc` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -58,18 +60,20 @@ HRESULT Alloc (
 |E_OUTOFMEMORY|할당 요청을 완료 하는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR은 `IHostMalloc` [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md) 메서드를 호출 하 여 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)

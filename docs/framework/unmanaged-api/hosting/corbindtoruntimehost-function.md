@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7ba35823ccb670ad0201d1950687dc83cc9ba64a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673747"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 함수
+
 호스트에서 지정 된 버전의 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -42,6 +43,7 @@ HRESULT CorBindToRuntimeHost (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwszVersion`  
  진행 로드 하려는 CLR의 버전을 설명 하는 문자열입니다.  
   
@@ -72,21 +74,22 @@ HRESULT CorBindToRuntimeHost (
  진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
- 진행 `IID`요청 하는 인터페이스의입니다. 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
+ 진행 `IID` 요청 하는 인터페이스의입니다. 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
   
  `ppv`  
  제한이 로드 된 런타임 버전에 대 한 인터페이스 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CorBindToCurrentRuntime 함수](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 함수](corbindtoruntime-function.md)

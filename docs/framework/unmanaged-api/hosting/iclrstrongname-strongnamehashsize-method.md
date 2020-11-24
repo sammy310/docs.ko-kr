@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 0f4fdcbdfb9db7664920a42b9406a58f9c2de0b8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 6ee87fdbf75d4a07a7337a1c9fdc58a06191b992
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674817"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize 메서드
+
 지정된 해시 알고리즘을 사용하여 해시에 필요한 버퍼 크기를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,21 +36,24 @@ HRESULT StrongNameHashSize (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ulHashAlg`  
  진행 버퍼 크기를 계산 하는 데 사용 되는 해시 알고리즘입니다.  
   
  `pcbSize`  
  제한이 반환 된 버퍼 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>Return Value  
- `S_OK`메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
+## <a name="return-value"></a>반환 값  
+
+ `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

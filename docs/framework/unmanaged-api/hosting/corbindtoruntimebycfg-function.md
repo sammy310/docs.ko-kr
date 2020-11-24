@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673789"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 함수
+
 XML 파일에서 읽은 버전 정보를 사용 하 여 CLR (공용 언어 런타임)을 프로세스로 로드 합니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -40,6 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pCfgStream`  
  진행 XML 파일을 읽는 개체에 대 한 포인터 `IStream` 입니다.  
   
@@ -53,24 +55,26 @@ HRESULT CorBindToRuntimeByCfg (
  진행 [ICorRuntimeHost](icorruntimehost-interface.md) 또는 [ICLRRuntimeHost](iclrruntimehost-interface.md) 인터페이스를 구현 하는 coclass 의 `CLSID`입니다. 지원 되는 값은 CLSID_CorRuntimeHost 또는 CLSID_CLRRuntimeHost입니다.  
   
  `riid`  
- 진행 `IID`또는 인터페이스의입니다 `ICorRuntimeHost` `ICLRRuntimeHost` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
+ 진행 `IID` 또는 인터페이스의입니다 `ICorRuntimeHost` `ICLRRuntimeHost` . 지원 되는 값은 IID_ICorRuntimeHost 또는 IID_ICLRRuntimeHost입니다.  
   
  `ppv`  
  제한이 반환 된 인터페이스의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  XML 파일의 형식은 표준 응용 프로그램 구성 파일 다음에 모델링 됩니다. XML 파일에 대 한 자세한 내용은 [구성 파일 스키마](../../configure-apps/file-schema/index.md)를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CorBindToCurrentRuntime 함수](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 함수](corbindtoruntime-function.md)
