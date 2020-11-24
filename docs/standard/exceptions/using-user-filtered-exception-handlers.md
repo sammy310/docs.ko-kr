@@ -1,25 +1,24 @@
 ---
 title: 사용자 필터 예외 처리기 사용
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: 5537404178b746310f720c5b0c075c77287dda4c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708455"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827986"
 ---
-# <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="e91d4-102">사용자 필터 예외 처리기 사용</span><span class="sxs-lookup"><span data-stu-id="e91d4-102">Using User-Filtered Exception Handlers</span></span>
+# <a name="using-user-filtered-exception-handlers"></a><span data-ttu-id="47951-102">사용자 필터 예외 처리기 사용</span><span class="sxs-lookup"><span data-stu-id="47951-102">Using User-Filtered Exception Handlers</span></span>
 
-<span data-ttu-id="e91d4-103">현재 Visual Basic에서는 사용자 필터 예외를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="e91d4-104">사용자 필터 예외 처리기는 예외에 대해 정의한 요구 사항을 기반으로 하여 예외를 catch하고 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="e91d4-105">이러한 처리기는 **Catch** 문을 **When** 키워드와 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  
+<span data-ttu-id="47951-103">현재 Visual Basic에서는 사용자 필터 예외를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-103">Currently, Visual Basic supports user-filtered exceptions.</span></span> <span data-ttu-id="47951-104">사용자 필터 예외 처리기는 예외에 대해 정의한 요구 사항을 기반으로 하여 예외를 catch하고 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-104">User-filtered exception handlers catch and handle exceptions based on requirements you define for the exception.</span></span> <span data-ttu-id="47951-105">이러한 처리기는 **Catch** 문을 **When** 키워드와 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-105">These handlers use the **Catch** statement with the **When** keyword.</span></span>  
   
- <span data-ttu-id="e91d4-106">이 기법은 특정 예외 개체가 여러 오류에 해당하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-106">This technique is useful when a particular exception object corresponds to multiple errors.</span></span> <span data-ttu-id="e91d4-107">이 경우 개체는 일반적으로 오류와 관련된 특정 오류 코드를 포함하는 속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-107">In this case, the object typically has a property that contains the specific error code associated with the error.</span></span> <span data-ttu-id="e91d4-108">식에서 해당 오류 코드 속성을 사용하여 **Catch** 절에서 처리하려는 특정 오류만 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-108">You can use the error code property in the expression to select only the particular error you want to handle in that **Catch** clause.</span></span>  
+ <span data-ttu-id="47951-106">이 기법은 특정 예외 개체가 여러 오류에 해당하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-106">This technique is useful when a particular exception object corresponds to multiple errors.</span></span> <span data-ttu-id="47951-107">이 경우 개체는 일반적으로 오류와 관련된 특정 오류 코드를 포함하는 속성을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-107">In this case, the object typically has a property that contains the specific error code associated with the error.</span></span> <span data-ttu-id="47951-108">식에서 해당 오류 코드 속성을 사용하여 **Catch** 절에서 처리하려는 특정 오류만 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-108">You can use the error code property in the expression to select only the particular error you want to handle in that **Catch** clause.</span></span>  
   
- <span data-ttu-id="e91d4-109">다음 Visual Basic 예제에서는 **Catch/When** 문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-109">The following Visual Basic example illustrates the **Catch/When** statement.</span></span>  
+ <span data-ttu-id="47951-109">다음 Visual Basic 예제에서는 **Catch/When** 문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="47951-109">The following Visual Basic example illustrates the **Catch/When** statement.</span></span>  
   
 ```vb
 Try  
@@ -29,12 +28,12 @@ Try
 End Try  
 ```  
   
- <span data-ttu-id="e91d4-110">사용자 필터 절의 식에는 어떤 제한도 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-110">The expression of the user-filtered clause is not restricted in any way.</span></span> <span data-ttu-id="e91d4-111">사용자 필터 식을 실행하는 중에 예외가 발생하면 예외는 무시되고 필터 식이 false로 계산된 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-111">If an exception occurs during execution of the user-filtered expression, that exception is discarded and the filter expression is considered to have evaluated to false.</span></span> <span data-ttu-id="e91d4-112">이 경우 공용 언어 런타임은 현재 예외에 대한 처리기를 계속 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-112">In this case, the common language runtime continues the search for a handler for the current exception.</span></span>  
+ <span data-ttu-id="47951-110">사용자 필터 절의 식에는 어떤 제한도 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-110">The expression of the user-filtered clause is not restricted in any way.</span></span> <span data-ttu-id="47951-111">사용자 필터 식을 실행하는 중에 예외가 발생하면 예외는 무시되고 필터 식이 false로 계산된 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="47951-111">If an exception occurs during execution of the user-filtered expression, that exception is discarded and the filter expression is considered to have evaluated to false.</span></span> <span data-ttu-id="47951-112">이 경우 공용 언어 런타임은 현재 예외에 대한 처리기를 계속 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-112">In this case, the common language runtime continues the search for a handler for the current exception.</span></span>  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a><span data-ttu-id="e91d4-113">특정 예외 및 사용자 필터 절 조합</span><span class="sxs-lookup"><span data-stu-id="e91d4-113">Combining the Specific Exception and the User-Filtered Clauses</span></span>  
- <span data-ttu-id="e91d4-114">Catch 문은 특정 예외와 사용자 필터 절을 모두 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-114">A catch statement can contain both the specific exception and the user-filtered clauses.</span></span> <span data-ttu-id="e91d4-115">런타임은 특정 예외를 먼저 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-115">The runtime tests the specific exception first.</span></span> <span data-ttu-id="e91d4-116">특정 예외가 성공하면 런타임은 사용자 필터를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-116">If the specific exception succeeds, the runtime executes the user filter.</span></span> <span data-ttu-id="e91d4-117">일반 필터에는 클래스 필터에 선언된 변수에 대한 참조가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-117">The generic filter can contain a reference to the variable declared in the class filter.</span></span> <span data-ttu-id="e91d4-118">두 필터 절의 순서는 바꿀 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-118">Note that the order of the two filter clauses cannot be reversed.</span></span>  
+## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a><span data-ttu-id="47951-113">특정 예외 및 사용자 필터 절 조합</span><span class="sxs-lookup"><span data-stu-id="47951-113">Combining the Specific Exception and the User-Filtered Clauses</span></span>  
+ <span data-ttu-id="47951-114">Catch 문은 특정 예외와 사용자 필터 절을 모두 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-114">A catch statement can contain both the specific exception and the user-filtered clauses.</span></span> <span data-ttu-id="47951-115">런타임은 특정 예외를 먼저 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-115">The runtime tests the specific exception first.</span></span> <span data-ttu-id="47951-116">특정 예외가 성공하면 런타임은 사용자 필터를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="47951-116">If the specific exception succeeds, the runtime executes the user filter.</span></span> <span data-ttu-id="47951-117">일반 필터에는 클래스 필터에 선언된 변수에 대한 참조가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-117">The generic filter can contain a reference to the variable declared in the class filter.</span></span> <span data-ttu-id="47951-118">두 필터 절의 순서는 바꿀 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="47951-118">Note that the order of the two filter clauses cannot be reversed.</span></span>  
   
- <span data-ttu-id="e91d4-119">다음 Visual Basic 예제에서는 **When** 키워드를 사용하는 사용자 필터 절 뿐만 아니라 **Catch** 문의 특정 예외 `ClassLoadException`을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e91d4-119">The following Visual Basic example shows the specific exception `ClassLoadException` in the **Catch** statement as well as the user-filtered clause using the **When** keyword.</span></span>  
+ <span data-ttu-id="47951-119">다음 Visual Basic 예제에서는 **When** 키워드를 사용하는 사용자 필터 절 뿐만 아니라 **Catch** 문의 특정 예외 `ClassLoadException`을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="47951-119">The following Visual Basic example shows the specific exception `ClassLoadException` in the **Catch** statement as well as the user-filtered clause using the **When** keyword.</span></span>  
   
 ```vb
 Try  
@@ -44,6 +43,6 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="e91d4-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e91d4-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47951-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47951-120">See also</span></span>
 
-- [<span data-ttu-id="e91d4-121">예외</span><span class="sxs-lookup"><span data-stu-id="e91d4-121">Exceptions</span></span>](index.md)
+- [<span data-ttu-id="47951-121">예외</span><span class="sxs-lookup"><span data-stu-id="47951-121">Exceptions</span></span>](index.md)
