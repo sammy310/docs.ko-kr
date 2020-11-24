@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438002"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982311"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -62,6 +62,10 @@ ms.locfileid: "91438002"
 
 [dotnet-sos](dotnet-sos.md)는 Linux 또는 MacOS(또는 이전 디버깅 도구를 사용할 경우 Windows)에 [SOS 디버깅 확장](../../framework/tools/sos-dll-sos-debugging-extension.md)을 설치하는 데 사용됩니다.
 
+### <a name="perfcollect"></a>PerfCollect
+
+[PerfCollect](trace-perfcollect-lttng.md)는 `perf` 및 `LTTng`로 추적을 수집하는 데 사용할 수 있는 bash 스크립트로, Linux 배포판에서 실행되는 .NET 앱에 대한 보다 자세한 성능 분석을 위해 사용할 수 있습니다.
+
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 진단 자습서
 
 ### <a name="debug-a-memory-leak"></a>메모리 누수 디버그
@@ -75,3 +79,7 @@ ms.locfileid: "91438002"
 ### <a name="debug-deadlock"></a>교착 상태 디버그
 
 [자습서: 교착 상태 디버그](debug-deadlock.md)는 [dotnet-dump](dotnet-dump.md) 도구를 사용하여 스레드와 잠금을 조사하는 방법을 안내합니다.
+
+### <a name="measure-performance-using-eventcounters"></a>EventCounters를 사용하여 성능 측정
+
+[자습서: .NET에서 EventCounters를 사용하여 성능 측정](event-counter-perf.md)에서 <xref:System.Diagnostics.Tracing.EventCounter> API를 사용하여 .NET 앱에서 성능을 측정하는 방법을 확인할 수 있습니다.

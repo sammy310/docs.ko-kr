@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827258"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098816"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
-제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값에 허용되는 형식을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
+제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
 
 ## <a name="defining-and-using-generics"></a>제네릭 정의 및 사용
  제네릭은 저장하거나 사용하는 하나 이상의 형식에 대한 자리 표시자(형식 매개 변수)를 포함하는 클래스, 구조체, 인터페이스 및 메서드입니다. 제네릭 컬렉션 클래스는 저장하는 개체 형식에 대해 형식 매개 변수를 자리 표시자로 사용할 수 있습니다. 형식 매개 변수는 필드의 형식과 메서드의 매개 변수 형식으로 표시됩니다. 제네릭 메서드는 형식 매개 변수를 반환 값의 형식 또는 정식 매개 변수 중 하나의 형식으로 사용할 수 있습니다. 다음 코드에서는 간단한 제네릭 클래스 정의를 보여 줍니다.  
