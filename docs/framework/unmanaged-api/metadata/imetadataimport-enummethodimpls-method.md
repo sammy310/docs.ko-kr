@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690518"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 메서드
+
 지정한 형식의 메서드를 나타내는 MethodBody 및 MethodDeclaration 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
@@ -52,7 +54,7 @@ HRESULT EnumMethodImpls (
  제한이 MethodDeclaration 토큰을 저장할 배열입니다.  
   
  `cMax`  
- 진행 `rMethodBody`및 배열의 최대 크기 `rMethodDecl` 입니다.  
+ 진행 `rMethodBody` 및 배열의 최대 크기 `rMethodDecl` 입니다.  
   
  `pcTokens`  
  진행 및에서 반환 된 실제 메서드 수 `rMethodBody` 입니다 `rMethodDecl` .  
@@ -61,19 +63,20 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumMethodImpls` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 메서드 토큰이 없습니다. 이 경우는 `pcTokens` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

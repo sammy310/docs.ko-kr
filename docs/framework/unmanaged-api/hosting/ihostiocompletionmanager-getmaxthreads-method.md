@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e7a6cadc-2433-4472-a701-58891abcde45
 topic_type:
 - apiref
-ms.openlocfilehash: a97a7abf4f561a5aba41d8019f2ba5bd8e879acd
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 0b16305bc88854f1ab2ab89ab6b0d4d3e6881cf1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689473"
 ---
 # <a name="ihostiocompletionmanagergetmaxthreads-method"></a>IHostIoCompletionManager::GetMaxThreads 메서드
+
 호스트가 i/o 요청을 처리 하기 위해 할당할 수 있는 최대 스레드 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT GetMaxThreads (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pdwMaxIoCompletionThreads`  
  제한이 호스트에서 i/o 요청을 처리 하기 위해 할당할 수 있는 스레드 풀의 최대 스레드 수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads`성공적으로 반환 되었습니다.|  
+|S_OK|`GetMaxThreads` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,18 +52,20 @@ HRESULT GetMaxThreads (
 |E_NOTIMPL|호스트는의 구현을 제공 하지 않습니다 `GetMaxThreads` .|  
   
 ## <a name="remarks"></a>설명  
+
  호스트는 구현, 성능 또는 확장성과 같은 이유로 i/o 요청을 처리 하기 위해 할당할 수 있는 스레드 수에 대 한 배타적 제어를 원할 수 있습니다. 따라서 호스트는를 구현할 필요가 없습니다 `GetMaxThreads` . 이 경우 호스트는이 메서드에서 E_NOTIMPL을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager 인터페이스](ihostiocompletionmanager-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: eef2c733f96d74e3353a940cc90f1a631cf48a36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690527"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 메서드
+
 지정한 메타데이터 범위의 개체에 대한 권한을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT EnumPermissionSets
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
@@ -46,7 +48,7 @@ HRESULT EnumPermissionSets
  진행 검색 범위를 제한 하는 메타 데이터 토큰 또는 가능한 가장 넓은 범위를 검색 하는 NULL입니다.  
   
  `dwActions`  
- 진행 <xref:System.Security.Permissions.SecurityAction>에 포함할 값을 나타내는 플래그 `rPermission` 또는 모든 동작을 반환 하는 0입니다.  
+ 진행 <xref:System.Security.Permissions.SecurityAction> 에 포함할 값을 나타내는 플래그 `rPermission` 또는 모든 동작을 반환 하는 0입니다.  
   
  `rPermission`  
  제한이 사용 권한 토큰을 저장 하는 데 사용 되는 배열입니다.  
@@ -61,19 +63,20 @@ HRESULT EnumPermissionSets
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumPermissionSets` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 토큰이 없습니다. 이 경우는 `pcTokens` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

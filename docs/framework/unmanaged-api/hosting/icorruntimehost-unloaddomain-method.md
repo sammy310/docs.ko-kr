@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-ms.openlocfilehash: 558b6e4c6ac369e33be3d45b7241e8b11db8bfae
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 94c84d876e19ec2ff7baba5a5a7420eec68d58c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690111"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain 메서드
+
 현재 프로세스에서 지정 된 응용 프로그램 도메인을 언로드합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,12 +35,13 @@ HRESULT UnloadDomain (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAppDomain`  
- 진행 <xref:System._AppDomain?displayProperty=nameWithType>언로드할 도메인을 나타내는 형식의 포인터입니다.  
+ 진행 <xref:System._AppDomain?displayProperty=nameWithType> 언로드할 도메인을 나타내는 형식의 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
@@ -47,11 +49,12 @@ HRESULT UnloadDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** 1.0, 1.1  
   

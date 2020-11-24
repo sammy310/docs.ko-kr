@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: 612463bca18c23fac0b086adde2d208a0fbc5ae5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ba53ff30f0b6d0ae7fed7db422b7c0a242204a2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689435"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef 메서드
+
 이 어셈블리가 참조하는 어셈블리에 대한 메타데이터를 포함하는 `AssemblyRef` 구조를 만들고 연결된 메타데이터 토큰을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,6 +42,7 @@ HRESULT DefineAssemblyRef (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pbPublicKeyOrToken`  
  진행 참조 된 어셈블리의 게시자에 대 한 공개 키입니다. 도우미 함수 [StrongNameTokenFromAssembly](../strong-naming/strongnametokenfromassembly-function.md) 를 사용 하 여이 매개 변수로 전달할 공개 키의 해시를 가져올 수 있습니다.  
   
@@ -54,7 +56,7 @@ HRESULT DefineAssemblyRef (
  진행 참조 된 어셈블리의 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스입니다.  
   
  `pbHashValue`  
- 진행 참조 된 어셈블리와 연결 된 해시 데이터입니다. (선택 사항)  
+ 진행 참조 된 어셈블리와 연결 된 해시 데이터입니다. 선택 사항입니다.  
   
  `cbHashValue`  
  진행 의 크기 (바이트) `pbHashValue` 입니다.  
@@ -66,19 +68,21 @@ HRESULT DefineAssemblyRef (
  제한이 반환 된 메타 데이터 토큰에 대 한 포인터 `AssemblyRef` 입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `AssemblyRef`이 어셈블리가 참조 하는 각 어셈블리에 대해 하나의 메타 데이터 구조를 정의 해야 합니다.  
   
  런타임에 참조 된 어셈블리의 세부 정보는 "빌드" 정보를 나타내는 것으로 어셈블리 확인자에 전달 됩니다. 그런 다음 어셈블리 확인자는 정책을 적용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

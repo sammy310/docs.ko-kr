@@ -14,14 +14,15 @@ helpviewer_keywords:
 - encryption [.NET], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 085a0ea387e3415e6e916bcdf9055ffaa6753fef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7f5e1d54efa3a5ccf28f2e0863a9bc9ccb80f894
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689747"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>해시 코드를 사용하여 데이터 무결성 보장
+
 해시 값을 데이터를 고유하게 식별하는 고정 길이 숫자 값입니다. 해시 값은 대용량 데이터를 훨씬 더 작은 숫자 값으로 나타내므로 디지털 서명과 함께 사용됩니다. 해시 값에 서명하는 것이 더 큰 값에 서명하는 것보다 더 효율적입니다. 해시 값은 안전하지 않은 채널을 통해 전송된 데이터의 무결성을 확인하는 데도 유용합니다. 수신된 데이터의 해시 값을 전송된 데이터의 해시 값과 비교하여 데이터가 변경되었는지 확인할 수 있습니다.  
   
 이 항목에서는 <xref:System.Security.Cryptography> 네임스페이스의 클래스를 사용하여 해시 코드를 생성하고 확인하는 방법을 설명합니다.  
@@ -58,7 +59,7 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [암호화 모델](cryptography-model.md)
 - [암호화 서비스](cryptographic-services.md)

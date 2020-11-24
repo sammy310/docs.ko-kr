@@ -2,14 +2,15 @@
 title: ICorDebugProcess6::DecodeEvent 메서드
 ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
-ms.openlocfilehash: 7c163311f9ce8f3d98ce72f45165a5e517c6c0aa
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ed75b3c5657fed805f187285a576b81598be331c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205510"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690280"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>ICorDebugProcess6::DecodeEvent 메서드
+
 특수하게 작성된 네이티브 예외 디버그 이벤트의 페이로드에서 캡슐화된 관리되는 디버그 이벤트를 디코딩합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ HRESULT DecodeEvent(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pRecord`  
  [in] 관리되는 디버그 이벤트에 대한 정보를 포함하는 네이티브 예외 디버그 이벤트의 바이트 배열에 대한 포인터입니다.  
   
@@ -50,6 +52,7 @@ HRESULT DecodeEvent(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -58,7 +61,7 @@ HRESULT DecodeEvent(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

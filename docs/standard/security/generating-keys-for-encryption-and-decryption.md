@@ -14,17 +14,19 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2af54cef4f233b7bcae5c476f1aa49fdbf7ef2fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689721"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>암호화 및 해독용 키 생성
+
 키 만들기 및 관리는 암호화 프로세스의 중요한 부분입니다. 대칭 알고리즘을 사용할 때는 키와 IV(Initialization Vector)를 만들어야 합니다. 키는 데이터를 암호 해독해서는 안 되는 사람이 알 수 없도록 해야 합니다. IV는 기밀이어야 할 필요는 없지만 각 세션에서 변경되어야 합니다. 비대칭 알고리즘에서는 퍼블릭 키와 프라이빗 키를 만들어야 합니다. 퍼블릭 키는 모든 사용자에게 퍼블릭될 수 있는 반면, 프라이빗 키는 퍼블릭 키로 암호화된 데이터를 암호 해독하는 당사자만 알고 있어야 합니다. 이 섹션에서는 대칭 및 비대칭 알고리즘에 대한 키를 생성 및 관리하는 방법을 설명합니다.  
   
 ## <a name="symmetric-keys"></a>대칭 키  
+
  .NET에서 제공 하는 대칭 암호화 클래스에는 데이터를 암호화 하 고 해독 하기 위해 키와 새 IV (초기화 벡터)가 필요 합니다. 매개 변수가 없는 메서드를 사용 하 여 관리 되는 대칭 암호화 클래스 중 하나의 새 인스턴스를 만들 때마다 `Create()` 새 키와 IV가 자동으로 만들어집니다. 데이터를 암호 해독할 수 있도록 허용하는 모든 사용자는 동일한 키와 IV를 소유하고 동일한 알고리즘을 사용해야 합니다. 일반적으로 새 키와 IV는 각 세션에 대해 생성되어야 하며, 이후 세션을 위해 키와 IV를 저장하면 안 됩니다.  
   
  대칭 키와 IV를 위치상 떨어져 있는 사용자에게 전달하려면 대개 비대칭 암호화를 사용하여 대칭 키를 암호화합니다. 이 키를 암호화하지 않은 상태로 보안되지 않은 네트워크를 통해 보내면 다른 사람이 이 키 및 IV를 가로채어 데이터를 암호 해독할 수 있기 때문에 안전하지 않습니다.  
@@ -91,7 +93,7 @@ RSA rsa = RSA.Create();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 암호화](encrypting-data.md)
 - [데이터 해독](decrypting-data.md)
