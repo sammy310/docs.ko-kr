@@ -1,22 +1,21 @@
 ---
 title: 변형 과정에서 XPathNodeIterator의 역할
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: 88b8f4acbb9fa92d71659ee006ee544275353954
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282755"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818435"
 ---
-# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="e0fce-102">변형 과정에서 XPathNodeIterator의 역할</span><span class="sxs-lookup"><span data-stu-id="e0fce-102">XPathNodeIterator in Transformations</span></span>
-<span data-ttu-id="e0fce-103"><xref:System.Xml.XPath.XPathNodeIterator>는 XPath(XML Path Language) 쿼리의 결과로 만들어진 노드 집합이나 노드 집합 메서드를 사용하여 노드 집합으로 변환된 결과 트리 조각을 반복하기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="e0fce-104"><xref:System.Xml.XPath.XPathNodeIterator>를 사용하면 해당 노드 집합 내의 노드를 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="e0fce-105">노드 집합을 검색한 후 <xref:System.Xml.XPath.XPathNodeIterator> 클래스는 선택한 노드 집합에 대해 앞으로만 이동 가능한 읽기 전용 커서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="e0fce-106">노드 집합은 문서 순서에 따라 만들어지므로 이 메서드를 호출하면 문서 순서에서 다음 노드로 이동하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="e0fce-107"><xref:System.Xml.XPath.XPathNodeIterator>는 집합에 속하는 모든 노드의 노드 트리를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="e0fce-108">대신 트리에서 이동하는 것을 나타내는 원본으로 사용하는 노드를 노출하는 데이터에 대한 단일 노드 창을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="e0fce-109"><xref:System.Xml.XPath.XPathNodeIterator> 클래스에서 사용할 수 있는 메서드 및 속성을 통해 현재 노드에서 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="e0fce-110">사용 가능한 메서드 및 속성 목록을 보려면 <xref:System.Windows.Forms.ToolBar>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e0fce-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
+# <a name="xpathnodeiterator-in-transformations"></a><span data-ttu-id="90670-102">변형 과정에서 XPathNodeIterator의 역할</span><span class="sxs-lookup"><span data-stu-id="90670-102">XPathNodeIterator in Transformations</span></span>
+<span data-ttu-id="90670-103"><xref:System.Xml.XPath.XPathNodeIterator>는 XPath(XML Path Language) 쿼리의 결과로 만들어진 노드 집합이나 노드 집합 메서드를 사용하여 노드 집합으로 변환된 결과 트리 조각을 반복하기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="90670-103">The <xref:System.Xml.XPath.XPathNodeIterator> provides methods to iterate over a set of nodes created as the result of an XML Path Language (XPath) query or a result tree fragment converted to a node set by use of the node-set method.</span></span> <span data-ttu-id="90670-104"><xref:System.Xml.XPath.XPathNodeIterator>를 사용하면 해당 노드 집합 내의 노드를 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90670-104">The <xref:System.Xml.XPath.XPathNodeIterator> enables you to iterate over the nodes within that node set.</span></span> <span data-ttu-id="90670-105">노드 집합을 검색한 후 <xref:System.Xml.XPath.XPathNodeIterator> 클래스는 선택한 노드 집합에 대해 앞으로만 이동 가능한 읽기 전용 커서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="90670-105">Once a node set is retrieved, the <xref:System.Xml.XPath.XPathNodeIterator> class provides a read-only, forward-only cursor to the selected set of nodes.</span></span> <span data-ttu-id="90670-106">노드 집합은 문서 순서에 따라 만들어지므로 이 메서드를 호출하면 문서 순서에서 다음 노드로 이동하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="90670-106">The node set is created in document order, so calling this method moves to the next node in document order.</span></span> <span data-ttu-id="90670-107"><xref:System.Xml.XPath.XPathNodeIterator>는 집합에 속하는 모든 노드의 노드 트리를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="90670-107"><xref:System.Xml.XPath.XPathNodeIterator> does not build a node tree of all the nodes in the set.</span></span> <span data-ttu-id="90670-108">대신 트리에서 이동하는 것을 나타내는 원본으로 사용하는 노드를 노출하는 데이터에 대한 단일 노드 창을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="90670-108">Instead, it provides a single node window into the data, exposing the underlying node it points to as you move around in the tree.</span></span> <span data-ttu-id="90670-109"><xref:System.Xml.XPath.XPathNodeIterator> 클래스에서 사용할 수 있는 메서드 및 속성을 통해 현재 노드에서 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90670-109">The methods and properties available from the <xref:System.Xml.XPath.XPathNodeIterator> class enable you to get information from the current node.</span></span> <span data-ttu-id="90670-110">사용 가능한 메서드 및 속성 목록을 보려면 <xref:System.Windows.Forms.ToolBar>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="90670-110">For a list of the available methods and properties, see <xref:System.Windows.Forms.ToolBar>.</span></span>  
   
- <span data-ttu-id="e0fce-111"><xref:System.Xml.XPath.XPathNodeIterator>는 XPath 쿼리에서 만든 노드 집합에서 앞으로만 이동하기 때문에 이동 방법은 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 메서드를 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="e0fce-112">이 메서드의 반환 형식은 `Boolean`이며 선택된 다음 노드로 이동할 경우 `true`를, 더 이상 선택된 노드가 없는 경우에는 `false`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="e0fce-113">다음은 `true`가 반환되는 경우에 사용할 수 있는 속성 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-113">If it returns `true`, the following list shows the properties available:</span></span>  
+ <span data-ttu-id="90670-111"><xref:System.Xml.XPath.XPathNodeIterator>는 XPath 쿼리에서 만든 노드 집합에서 앞으로만 이동하기 때문에 이동 방법은 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 메서드를 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="90670-111">Since an <xref:System.Xml.XPath.XPathNodeIterator> moves over a set of nodes created from an XPath query and moves forward only, the way to move is by using the <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> method.</span></span> <span data-ttu-id="90670-112">이 메서드의 반환 형식은 `Boolean`이며 선택된 다음 노드로 이동할 경우 `true`를, 더 이상 선택된 노드가 없는 경우에는 `false`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="90670-112">The return type of this method is `Boolean`, returning `true` if it moves to the next selected node, and `false` if there are no more selected nodes.</span></span> <span data-ttu-id="90670-113">다음은 `true`가 반환되는 경우에 사용할 수 있는 속성 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="90670-113">If it returns `true`, the following list shows the properties available:</span></span>  
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -24,9 +23,9 @@ ms.locfileid: "84282755"
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- <span data-ttu-id="e0fce-114">노드 집합을 처음 확인하는 경우에는 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>를 호출하여 <xref:System.Xml.XPath.XPathNodeIterator>를 선택된 집합의 첫 번째 노드에 배치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="e0fce-115">그러면 while 루프를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-115">This allows a while loop to be written.</span></span>  
+ <span data-ttu-id="90670-114">노드 집합을 처음 확인하는 경우에는 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>를 호출하여 <xref:System.Xml.XPath.XPathNodeIterator>를 선택된 집합의 첫 번째 노드에 배치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="90670-114">When you are looking at a node set for the first time, a call to <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> must be made to position the <xref:System.Xml.XPath.XPathNodeIterator> on the first node of the selected set.</span></span> <span data-ttu-id="90670-115">그러면 while 루프를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="90670-115">This allows a while loop to be written.</span></span>  
   
- <span data-ttu-id="e0fce-116">다음 코드 예제에서는 <xref:System.Xml.XPath.XPathNodeIterator>를 <xref:System.Xml.Xsl.XslTransform>의 매개 변수로 <xref:System.Xml.Xsl.XsltArgumentList>에 전달하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="e0fce-117">코드의 입력은 **books.xml**이고 스타일시트는 **text.xsl**입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="e0fce-118">**test.xml** 파일은 <xref:System.Xml.XPath.XPathDocument>입니다.</span><span class="sxs-lookup"><span data-stu-id="e0fce-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
+ <span data-ttu-id="90670-116">다음 코드 예제에서는 <xref:System.Xml.XPath.XPathNodeIterator>를 <xref:System.Xml.Xsl.XslTransform>의 매개 변수로 <xref:System.Xml.Xsl.XsltArgumentList>에 전달하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="90670-116">The following code example shows how to pass an <xref:System.Xml.XPath.XPathNodeIterator> to an <xref:System.Xml.Xsl.XslTransform> as a parameter in the <xref:System.Xml.Xsl.XsltArgumentList>.</span></span> <span data-ttu-id="90670-117">코드의 입력은 **books.xml** 이고 스타일시트는 **text.xsl** 입니다.</span><span class="sxs-lookup"><span data-stu-id="90670-117">The input to the code is **books.xml**, and the style sheet is **text.xsl**.</span></span> <span data-ttu-id="90670-118">**test.xml** 파일은 <xref:System.Xml.XPath.XPathDocument>입니다.</span><span class="sxs-lookup"><span data-stu-id="90670-118">The file **test.xml** is the <xref:System.Xml.XPath.XPathDocument>.</span></span>  
   
 ```vb  
 Imports System  
@@ -87,7 +86,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a><span data-ttu-id="e0fce-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="e0fce-119">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="90670-119">books.xml</span><span class="sxs-lookup"><span data-stu-id="90670-119">books.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -120,7 +119,7 @@ public class sample
 </bookstore>  
 ```  
   
-## <a name="testxsl"></a><span data-ttu-id="e0fce-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="e0fce-120">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="90670-120">test.xsl</span><span class="sxs-lookup"><span data-stu-id="90670-120">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -140,13 +139,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="e0fce-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="e0fce-121">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="90670-121">test.xml</span><span class="sxs-lookup"><span data-stu-id="90670-121">test.xml</span></span>  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a><span data-ttu-id="e0fce-122">출력(out.xml)</span><span class="sxs-lookup"><span data-stu-id="e0fce-122">Output (out.xml)</span></span>  
+## <a name="output-outxml"></a><span data-ttu-id="90670-122">출력(out.xml)</span><span class="sxs-lookup"><span data-stu-id="90670-122">Output (out.xml)</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -156,6 +155,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e0fce-123">참조</span><span class="sxs-lookup"><span data-stu-id="e0fce-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90670-123">참조</span><span class="sxs-lookup"><span data-stu-id="90670-123">See also</span></span>
 
-- [<span data-ttu-id="e0fce-124">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="e0fce-124">XslTransform Class Implements the XSLT Processor</span></span>](xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="90670-124">XslTransform 클래스의 XSLT 프로세서 구현</span><span class="sxs-lookup"><span data-stu-id="90670-124">XslTransform Class Implements the XSLT Processor</span></span>](xsltransform-class-implements-the-xslt-processor.md)
