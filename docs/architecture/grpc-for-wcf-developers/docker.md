@@ -2,12 +2,12 @@
 title: WCF 개발자를 위한 Docker gRPC
 description: ASP.NET Core gRPC 응용 프로그램에 대 한 Docker 이미지 만들기
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152717"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688447"
 ---
 # <a name="create-docker-images"></a>Docker 이미지 만들기
 
@@ -22,12 +22,12 @@ Microsoft는 .NET Core 응용 프로그램 빌드 및 실행을 위한 다양 �
 
 | 이미지 | 설명 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 로 응용 프로그램을 빌드하는 데 사용 `docker build` 됩니다. 프로덕션에서는 사용 하지 않습니다. |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 런타임 및 ASP.NET Core 종속성을 포함 합니다. 프로덕션의 경우. |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | 로 응용 프로그램을 빌드하는 데 사용 `docker build` 됩니다. 프로덕션에서는 사용 하지 않습니다. |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | 런타임 및 ASP.NET Core 종속성을 포함 합니다. 프로덕션의 경우. |
 
 각 이미지에는 다른 Linux 배포판을 기반으로 하는 네 가지 변형이 있습니다 (태그로 구분).
 
-| 이미지 태그 | Linux | 참고 |
+| 이미지 태그 | Linux | 메모 |
 | --------- | ----- | ----- |
 | 3.0-buster, 3.0 | Debian 10 | OS 변형이 지정 되지 않은 경우 기본 이미지입니다. |
 | 3.0-알파인 | 알파인 3.9 | 알파인 기본 이미지는 Debian 또는 Ubuntu 1 보다 훨씬 작습니다. |
@@ -41,11 +41,11 @@ Microsoft는 .NET Core 응용 프로그램 빌드 및 실행을 위한 다양 �
 
 ## <a name="create-a-docker-image"></a>Docker 이미지 만들기
 
-Docker 이미지는 *Dockerfile*에 의해 정의 됩니다. 응용 프로그램을 빌드하고 응용 프로그램을 빌드하거나 실행 하는 데 필요한 모든 종속성을 설치 하는 데 필요한 모든 명령을 포함 하는 텍스트 파일입니다. 다음 예제에서는 ASP.NET Core 3.0 응용 프로그램에 대 한 가장 간단한 Dockerfile을 보여 줍니다.
+Docker 이미지는 *Dockerfile* 에 의해 정의 됩니다. 응용 프로그램을 빌드하고 응용 프로그램을 빌드하거나 실행 하는 데 필요한 모든 종속성을 설치 하는 데 필요한 모든 명령을 포함 하는 텍스트 파일입니다. 다음 예제에서는 ASP.NET Core 3.0 응용 프로그램에 대 한 가장 간단한 Dockerfile을 보여 줍니다.
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -95,7 +95,7 @@ Docker 용 Microsoft 기본 이미지 `ASPNETCORE_URLS` 환경 변수를로 설�
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 976673a0caab4e041cc80e5536544c195fcf692a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7529ecd215d74eb0eedbec8b90eba367ed20d56f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805172"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687745"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 인터페이스
+
 가비지 컬렉션 시스템에 대 한 정보를 가져오고 가비지 수집의 일부 측면을 제어 하기 위한 메서드를 제공 합니다.  
   
 > [!NOTE]
@@ -29,20 +30,21 @@ ms.locfileid: "83805172"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[SetGCStartupLimitsEx 메서드](igchost2-setgcstartuplimitsex-method.md)|0 세대의 세그먼트 크기와 최대 크기를 설정 합니다. 0 세대 및 세그먼트 크기를 보다 크게 설정 `DWORD` 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** GCHost, GCHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [CLR 호스팅 인터페이스](clr-hosting-interfaces.md)

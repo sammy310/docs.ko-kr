@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687549"
 ---
 # <a name="key-security-concepts"></a>주요 보안 개념
 
@@ -49,6 +49,7 @@ JIT(Just-In-Time) 컴파일 중에 선택적 검증 프로세스는 네이티브
 자세한 내용은 [Principal 개체 및 Identity 개체](principal-and-identity-objects.md)를 참조하세요.  
   
 ## <a name="authentication"></a>인증  
+
 인증은 사용자 자격 증명을 검사하고 일부 권한에 대해 해당 자격 증명의 유효성을 검사하여 보안 주체의 ID를 찾고 확인하는 프로세스입니다. 인증 중에 얻은 정보를 코드에서 직접 사용할 수 있습니다. .NET 역할 기반 보안을 사용 하 여 현재 사용자를 인증 하 고 해당 보안 주체가 코드에 액세스 하도록 허용할지 여부를 결정할 수도 있습니다. 특정 역할에 대해 보안 주체를 인증하는 방법의 예는 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 메서드 오버로드를 참조하세요. 예를 들어 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 오버로드를 사용하여 현재 사용자가 Administrators 그룹의 멤버인지 확인할 수 있습니다.  
   
 현재 다양 한 인증 메커니즘이 사용 되며, 대부분은 .NET 역할 기반 보안과 함께 사용할 수 있습니다. 가장 일반적으로 사용되는 메커니즘 중 일부는 기본, 다이제스트, Passport, 운영 체제(예: NTLM 또는 Kerberos) 또는 애플리케이션 정의 메커니즘입니다.  
@@ -74,6 +75,6 @@ JIT(Just-In-Time) 컴파일 중에 선택적 검증 프로세스는 네이티브
 
 권한 부여는 보안 주체가 요청된 작업을 수행할 수 있는지 여부를 확인하는 프로세스입니다. 권한 부여는 인증 후 발생하며 보안 주체의 ID 및 역할에 대한 정보를 사용하여 보안 주체가 액세스할 수 있는 리소스를 확인합니다. .NET 역할 기반 보안을 사용 하 여 권한 부여를 구현할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET Core 보안](/aspnet/core/security/)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-ms.openlocfilehash: 90ba690897abced2d4f6282eedef91712d8ceeca
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 7293528bb119c23f6ef39405a82180252b336735
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687244"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount 메서드
+
 열거형의 항목 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pcelt`  
  제한이 열거형의 항목 수에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 95bbb0cc2f223cfa96e1314ed28f46016c81a2fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007639"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687699"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 열거형
+
 관리되지 않는 네이티브 형식을 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -89,8 +90,8 @@ typedef enum CorNativeType {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|더 이상 사용되지 않습니다.|  
-|`NATIVE_TYPE_VOID`|더 이상 사용되지 않습니다.|  
+|`NATIVE_TYPE_END`|사용되지 않습니다.|  
+|`NATIVE_TYPE_VOID`|사용되지 않습니다.|  
 |`NATIVE_TYPE_BOOLEAN`|4 바이트 부울 값입니다. 여기서 TRUE는 0이 아니고 FALSE는 0입니다.|  
 |`NATIVE_TYPE_I1`|부호 있는 8 비트 정수 값입니다.|  
 |`NATIVE_TYPE_U1`|부호 없는 8 비트 정수 값입니다.|  
@@ -102,18 +103,18 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_U8`|부호 없는 64 비트 정수 값입니다.|  
 |`NATIVE_TYPE_R4`|4 바이트 부동 소수점 숫자 값입니다.|  
 |`NATIVE_TYPE_R8`|8 바이트 부동 소수점 숫자 값입니다.|  
-|`NATIVE_TYPE_SYSCHAR`|더 이상 사용되지 않습니다.|  
-|`NATIVE_TYPE_VARIANT`|더 이상 사용되지 않습니다.|  
+|`NATIVE_TYPE_SYSCHAR`|사용되지 않습니다.|  
+|`NATIVE_TYPE_VARIANT`|사용되지 않습니다.|  
 |`NATIVE_TYPE_CURRENCY`|관리 되는 형식에 해당 하는 숫자 COM 형식 <xref:System.Decimal> 입니다.|  
-|`NATIVE_TYPE_PTR`|더 이상 사용되지 않습니다.|  
-|`NATIVE_TYPE_DECIMAL`|더 이상 사용되지 않습니다.|  
-|`NATIVE_TYPE_DATE`|더 이상 사용되지 않습니다.|  
+|`NATIVE_TYPE_PTR`|사용되지 않습니다.|  
+|`NATIVE_TYPE_DECIMAL`|사용되지 않습니다.|  
+|`NATIVE_TYPE_DATE`|사용되지 않습니다.|  
 |`NATIVE_TYPE_BSTR`|COM Interop를 참조하세요.|  
 |`NATIVE_TYPE_LPSTR`|LPSTR 문자열 값입니다.|  
 |`NATIVE_TYPE_LPWSTR`|LPWSTR 문자열 값입니다.|  
 |`NATIVE_TYPE_LPTSTR`|LPTSTR 문자열 값입니다.|  
 |`NATIVE_TYPE_FIXEDSYSSTRING`|수정 된 시스템 정의 문자열 값입니다.|  
-|`NATIVE_TYPE_OBJECTREF`|더 이상 사용되지 않습니다.|  
+|`NATIVE_TYPE_OBJECTREF`|사용되지 않습니다.|  
 |`NATIVE_TYPE_IUNKNOWN`|COM Interop를 참조하세요.|  
 |`NATIVE_TYPE_IDISPATCH`|COM Interop를 참조하세요.|  
 |`NATIVE_TYPE_STRUCT`|네이티브 구조체 값입니다.|  
@@ -122,7 +123,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_FIXEDARRAY`|고정 길이 배열 값입니다.|  
 |`NATIVE_TYPE_INT`|네이티브 16 비트 부호 있는 정수 값입니다.|  
 |`NATIVE_TYPE_UINT`|네이티브 16 비트 부호 없는 정수 값입니다.|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|더 이상 사용되지 않습니다.<br /><br /> NATIVE_TYPE_STRUCT를 사용 합니다.|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|사용되지 않습니다.<br /><br /> NATIVE_TYPE_STRUCT를 사용 합니다.|  
 |`NATIVE_TYPE_BYVALSTR`|COM Interop를 참조하세요.|  
 |`NATIVE_TYPE_ANSIBSTR`|COM Interop를 참조하세요.|  
 |`NATIVE_TYPE_TBSTR`|COM Interop를 참조하세요.<br /><br /> 플랫폼에 따라 BSTR 또는 ANSIBSTR를 선택 합니다.|  
@@ -138,13 +139,14 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_MAX`|잘못된 값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [메타데이터 열거형](metadata-enumerations.md)

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688746"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion 전역 정적 함수
+
 이 섹션에서는 fusion API에서 사용 하는 관리 되지 않는 전역 정적 함수에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
+
  [ClearDownloadCache 함수](cleardownloadcache-function.md)  
  다운로드 한 어셈블리의 전역 어셈블리 캐시를 지웁니다.  
   
@@ -45,7 +47,7 @@ ms.locfileid: "73108264"
  응용 프로그램 id 및 참조에 대 한 키를 관리 하는 [Iappidauthority](iappidauthority-interface.md) 인스턴스에 대 한 포인터를 가져옵니다.  
   
  [GetAssemblyIdentityFromFile 함수](getassemblyidentityfromfile-function.md)  
- 어셈블리에서 지정 된 파일 경로의 지정 된 `IID`를 사용 하 여 `IUnknown` 개체에 대 한 포인터를 가져옵니다.  
+ `IUnknown`어셈블리에서 지정 된 파일 경로의 지정 된을 사용 하 여 개체에 대 한 포인터를 가져옵니다 `IID` .  
   
  [GetCachePath 함수](getcachepath-function.md)  
  지정 된 플래그를 사용 하 여 캐시 된 어셈블리에 대 한 경로를 가져옵니다.  
@@ -66,6 +68,7 @@ ms.locfileid: "73108264"
  어셈블리의 정책 후 표시 이름을 가져옵니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [Fusion 인터페이스](fusion-interfaces.md)  
   
  [Fusion 열거형](fusion-enumerations.md)  

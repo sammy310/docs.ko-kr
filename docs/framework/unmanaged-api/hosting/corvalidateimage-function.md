@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687979"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 함수
+
 관리 되는 모듈 이미지의 유효성을 검사 하 고, 운영 체제 로더가 로드 된 후이를 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ STDAPI _CorValidateImage (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ImageBase`  
  진행 관리 코드로 유효성을 검사할 이미지의 시작 위치에 대 한 포인터입니다. 이미지가 이미 메모리에 로드 되어 있어야 합니다.  
   
@@ -41,6 +43,7 @@ STDAPI _CorValidateImage (
  진행 이미지의 파일 이름입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  이 함수는 `E_INVALIDARG` `E_OUTOFMEMORY` `E_UNEXPECTED` 다음 값 뿐만 아니라 표준 값,, 및를 반환 합니다 `E_FAIL` .  
   
 |반환 값|설명|  
@@ -49,7 +52,8 @@ STDAPI _CorValidateImage (
 |`STATUS_SUCCESS`|이미지가 올바릅니다. 이 값에는 HRESULT 0x00000000L이 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- Windows XP 이상 버전에서 운영 체제 로더는 COFF (common object file format) 헤더의 COM 설명자 디렉터리 비트를 검사 하 여 관리 되는 모듈을 확인 합니다. 설정 비트는 관리 되는 모듈을 나타냅니다. 로더가 관리 되는 모듈을 감지 하면 Mscoree.dll을 로드 하 고를 호출 하 여 `_CorValidateImage` 다음 작업을 수행 합니다.  
+
+ Windows XP 이상 버전에서 운영 체제 로더는 COFF (common object file format) 헤더의 COM 설명자 디렉터리 비트를 검사 하 여 관리 되는 모듈을 확인 합니다. 설정 비트는 관리 되는 모듈을 나타냅니다. 로더가 관리 되는 모듈을 검색 하는 경우 MsCorEE.dll를 로드 하 고를 호출 하 여 `_CorValidateImage` 다음 작업을 수행 합니다.  
   
 - 이미지가 올바른 관리 되는 모듈 인지 확인 합니다.  
   
@@ -61,7 +65,7 @@ STDAPI _CorValidateImage (
   
  실행 가능 이미지의 경우 운영 체제 로더에서 실행 파일에 지정 된 진입점에 관계 없이 [_CorExeMain](corexemain-function.md) 함수를 호출 합니다. DLL 어셈블리 이미지의 경우 로더는 [_CorDllMain](cordllmain-function.md) 함수를 호출 합니다.  
   
- `_CorExeMain`또는 `_CorDllMain` 에서는 다음 작업을 수행 합니다.  
+ `_CorExeMain` 또는 `_CorDllMain` 에서는 다음 작업을 수행 합니다.  
   
 - CLR을 초기화 합니다.  
   
@@ -72,14 +76,15 @@ STDAPI _CorValidateImage (
  로더는 관리 되는 모듈 이미지가 언로드될 때 [_CorImageUnloading](corimageunloading-function.md) 함수를 호출 합니다. 그러나이 함수는 아무 작업도 수행 하지 않습니다. 만 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)
