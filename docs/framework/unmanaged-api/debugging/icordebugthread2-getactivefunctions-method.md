@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-ms.openlocfilehash: e064a7db131a671adc4d0b6df522f3456e3a31d5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2d5674d6b5962ca539de02cda1e5658daed83622
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678755"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions 메서드
+
 이 스레드의 각 프레임에서 활성 함수에 대 한 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetActiveFunctions (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cFunctions`  
  [in] `pFunctions` 배열의 크기입니다.  
   
@@ -49,11 +51,13 @@ HRESULT GetActiveFunctions (
  첫 번째 요소는 리프 프레임에 사용 되며, 따라서 스택의 루트로 다시 사용 됩니다.  
   
 ## <a name="remarks"></a>설명  
+
  `pFunctions`입력 시가 null 이면는 `GetActiveFunctions` 스택에 있는 함수 수만 반환 합니다. 즉, `pFunctions` 입력 시가 null 인 경우 `GetActiveFunctions` 에만 값을 반환 `pcFunctions` 합니다.  
   
  `GetActiveFunctions`메서드는 스택 추적의 프레임에서 동일한 정보를 가져오는 것 보다 최적화 된 것 이며 전체 스택 추적에 ICorDebugILFrame 개체가 있는 프레임만 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

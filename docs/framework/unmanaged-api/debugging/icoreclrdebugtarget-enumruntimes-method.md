@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397181"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679275"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
+
 원격 컴퓨터에서 실행 중인 지정된 프로세스의 CLR(공용 언어 런타임)을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT EnumRuntimes (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwInternalProcessID`  
  [in] 런타임을 열거하려는 프로세스의 내부 프로세스 ID입니다. 이는 `m_dwInternalID` 해당 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)에서 가져온 것입니다.  
   
@@ -48,8 +50,9 @@ HRESULT EnumRuntimes (
  제한이 원격 대상 프로세스에 로드 된 런타임을 나타내는 [CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md) 구조체의 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  S_OK  
- 성공.  
+ 성공했습니다.  
   
  S_FALSE  
  `dwInternalProcessID`가 컴퓨터에서 실행 중인 프로세스와 일치하지 않습니다. 프로세스가 종료된 것 같습니다. `pcRuntimes` 및 `ppRuntimes`가 null이 됩니다.  
@@ -61,14 +64,16 @@ HRESULT EnumRuntimes (
  기타 실패  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드에 의해 할당 된 메모리를 해제 하려면 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) 메서드를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces  
   
- **라이브러리:** mscordbi_macx86 .dll  
+ **라이브러리:** mscordbi_macx86.dll  
   
  **.NET Framework 버전:** 3.5 SP1  
   

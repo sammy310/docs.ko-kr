@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679704"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback 인터페이스
+
 디버거 콜백을 처리하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -36,7 +37,7 @@ ms.locfileid: "83212752"
 |[CreateProcess 메서드](icordebugmanagedcallback-createprocess-method.md)|프로세스가 처음으로 연결 되거나 시작 된 경우 디버거에 알립니다.|  
 |[CreateThread 메서드](icordebugmanagedcallback-createthread-method.md)|스레드가 관리 코드 실행을 시작 했음을 디버거에 알립니다.|  
 |[DebuggerError 메서드](icordebugmanagedcallback-debuggererror-method.md)|CLR에서 이벤트를 처리 하려고 시도 하는 동안 오류가 발생 했음을 디버거에 알립니다.|  
-|[EditAndContinueRemap 메서드](icordebugmanagedcallback-editandcontinueremap-method.md)|사용되지 않습니다. 다시 매핑 이벤트가 IDE에 전송 되었음을 디버거에 알립니다.|  
+|[EditAndContinueRemap 메서드](icordebugmanagedcallback-editandcontinueremap-method.md)|더 이상 사용되지 않습니다. 다시 매핑 이벤트가 IDE에 전송 되었음을 디버거에 알립니다.|  
 |[EvalComplete 메서드](icordebugmanagedcallback-evalcomplete-method.md)|평가가 완료 되었음을 디버거에 알립니다.|  
 |[EvalException 메서드](icordebugmanagedcallback-evalexception-method.md)|처리 되지 않은 예외를 사용 하 여 평가가 종료 되었음을 디버거에 알립니다.|  
 |[Exception 메서드](icordebugmanagedcallback-exception-method.md)|관리 코드에서 예외가 throw 되었음을 디버거에 알립니다.|  
@@ -56,6 +57,7 @@ ms.locfileid: "83212752"
 |[UpdateModuleSymbols 메서드](icordebugmanagedcallback-updatemodulesymbols-method.md)|CLR 모듈의 기호가 변경 되었음을 디버거에 알립니다.|  
   
 ## <a name="remarks"></a>설명  
+
  모든 콜백은 동일한 스레드에서 호출 되며 동기화 된 상태의 프로세스와 함께 호출 됩니다.  
   
  각 콜백 구현에서는 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 를 호출 하 여 실행을 다시 시작 해야 합니다. `ICorDebugController::Continue`콜백이 반환 되기 전에가 호출 되지 않으면 프로세스가 중지 된 상태로 유지 되 고가 호출 될 때까지 이벤트 콜백이 더 이상 발생 하지 않습니다 `ICorDebugController::Continue` .  
@@ -66,6 +68,7 @@ ms.locfileid: "83212752"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -74,7 +77,7 @@ ms.locfileid: "83212752"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebug 인터페이스](icordebug-interface.md)
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)

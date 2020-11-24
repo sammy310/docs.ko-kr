@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4ef4ed19033b0857b9970ee8103bbd92f383898c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396498"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679535"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next 메서드
+
 함수의 지역 변수 및 인수에 대 한 정보를 포함 하는 지정 된 수의 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `celt`  
  [in] 검색할 개체 수입니다.  
   
@@ -46,17 +48,20 @@ HRESULT Next(
  제한이 개체에서 실제로 반환 되는 인스턴스 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드는 다음 값을 반환 합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |`S_OK`|메서드가 완료되었습니다.|  
 |`S_FALSE`|에 반영 된 대로 검색 된 인스턴스의 실제 수가 `pceltFetched` 요청 된 인스턴스 수보다 작은 경우|  
   
 ## <a name="remarks"></a>설명  
+
  [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) 메서드는 `celt` 열거자의 현재 위치에서 시작 하 여 개체의 최대값을 검색 합니다. 메서드가 반환 될 때 `pceltFetched` 검색 된 개체의 실제 수를 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

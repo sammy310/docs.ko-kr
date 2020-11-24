@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c34e79be-a7fb-479e-8dec-d126a4c330e5
 topic_type:
 - apiref
-ms.openlocfilehash: bb7eee0997a6c8671693accf2c95e6e06e0a4f2e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 11cc6e4108a2064a8a9fcefa760bf3c3411d63fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976579"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679860"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 메서드
+
 프로세스에서 관리 코드를 실행 하는 모든 스레드에서 협조적 중지를 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,18 +35,21 @@ HRESULT Stop (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwTimeoutIgnored`  
  사용되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- `Stop`프로세스에서 관리 코드를 실행 하는 모든 스레드에서 협조적 중지를 수행 합니다. 관리 전용 디버깅 세션 중에는 관리 되지 않는 스레드가 계속 실행 될 수 있지만 관리 코드를 호출 하려고 하면 차단 됩니다. Interop 디버깅 세션 중에는 관리 되지 않는 스레드도 중지 됩니다. 값 `dwTimeoutIgnored` 은 현재 무시 되 고 무한 (-1)으로 처리 됩니다. 교착 상태가 발생 하 여 협조적 중지가 실패 하면 모든 스레드가 일시 중단 되 고 E_TIMEOUT 반환 됩니다.  
+
+ `Stop` 프로세스에서 관리 코드를 실행 하는 모든 스레드에서 협조적 중지를 수행 합니다. 관리 전용 디버깅 세션 중에는 관리 되지 않는 스레드가 계속 실행 될 수 있지만 관리 코드를 호출 하려고 하면 차단 됩니다. Interop 디버깅 세션 중에는 관리 되지 않는 스레드도 중지 됩니다. `dwTimeoutIgnored`값은 현재 무시 되 고 무한 (-1)으로 처리 됩니다. 교착 상태가 발생 하 여 협조적 중지가 실패 하면 모든 스레드가 일시 중단 되 고 E_TIMEOUT 반환 됩니다.  
   
 > [!NOTE]
-> `Stop`는 디버깅 API의 유일한 동기 메서드입니다. 에서 `Stop` S_OK를 반환할 때 프로세스가 중지 됩니다. 수신기에 중지를 알리기 위한 콜백이 제공 되지 않습니다. 디버거는 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 를 호출 하 여 프로세스를 다시 시작할 수 있도록 해야 합니다.  
+> `Stop` 는 디버깅 API의 유일한 동기 메서드입니다. `Stop`에서 S_OK를 반환할 때 프로세스가 중지 됩니다. 수신기에 중지를 알리기 위한 콜백이 제공 되지 않습니다. 디버거는 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 를 호출 하 여 프로세스를 다시 시작할 수 있도록 해야 합니다.  
   
- 디버거는 중지 카운터를 유지 관리 합니다. 카운터가 0으로 이동 하면 컨트롤러가 다시 시작 됩니다. 또는 디스패치 된 `Stop` 각 콜백에 대 한 각 호출은 카운터를 증가 시킵니다. 를 `ICorDebugController::Continue` 호출할 때마다 카운터가 감소 합니다.  
+ 디버거는 중지 카운터를 유지 관리 합니다. 카운터가 0으로 이동 하면 컨트롤러가 다시 시작 됩니다. `Stop`또는 디스패치 된 각 콜백에 대 한 각 호출은 카운터를 증가 시킵니다. 를 호출할 때마다 `ICorDebugController::Continue` 카운터가 감소 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -54,4 +58,4 @@ HRESULT Stop (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조

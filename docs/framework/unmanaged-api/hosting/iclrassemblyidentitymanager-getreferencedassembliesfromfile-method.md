@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eed63d31-d977-4c7d-9443-f9d37a2a7d81
 topic_type:
 - apiref
-ms.openlocfilehash: 3c4f673d88594e86004c6d51a4d58a0ac4642875
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6b67ba9d022d94f51d7cc6a4645855f6b6ac3e19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615945"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679323"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromfile-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 메서드
+
 지정 된 파일 경로에서 어셈블리가 참조 하는 어셈블리의 목록을 포함 하는 [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) 인스턴스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetReferencedAssembliesFromFile (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzFilePath`  
  진행 평가할 어셈블리의 경로입니다.  
   
@@ -49,7 +51,7 @@ HRESULT GetReferencedAssembliesFromFile (
  `ppReferenceEnum`  
  제한이 에서 나타내는 어셈블리를 제외 하 고에서 `ICLRReferenceAssemblyEnum` 어셈블리에 의해 참조 되는 어셈블리에 대 한 어셈블리 id 데이터를 포함 하는 개체의 주소에 대 한 포인터입니다 `pwzFilePath` `pExcludeAssembliesList` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -61,18 +63,20 @@ HRESULT GetReferencedAssembliesFromFile (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="remarks"></a>설명  
+
  호출자는 반환 된 목록에서 알려진 어셈블리 참조 집합을 제외 하도록 선택할 수 있습니다. 이 집합은 매개 변수에 의해 정의 됩니다 `pExcludeAssembliesList` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)

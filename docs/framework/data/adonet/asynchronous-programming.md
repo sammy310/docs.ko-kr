@@ -3,12 +3,12 @@ title: 비동기 프로그래밍
 description: .NET Framework 4.5에 도입 된 향상 된 기능을 포함 하 여 SQL Server에 대 한 .NET Framework Data Provider의 비동기 프로그래밍에 대해 알아봅니다.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9065aea02dc3f021ed485a4eb6e56cfcece44fac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677949"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -39,9 +39,9 @@ ms.locfileid: "90558474"
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (1 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [.NET Framework 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (1 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [.NET 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (2 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [.NET Framework 4.5에서 SqlDataReader의 새로운 비동기 메서드 사용 (2 부)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 사용자 인터페이스가 응답하지 않거나 서버가 확장되지 않을 경우 코드를 좀 더 비동기화해야 할 수 있습니다. 기존에는 비동기 코드를 작성하려면 비동기 작업이 완료될 때 발생하는 논리를 표현하기 위한 콜백 설치 과정(연속이라고도 함)이 필요했습니다. 이로 인해 비동기 코드의 구조는 동기 코드에 비해 복잡했습니다.
 
@@ -451,7 +451,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          AsyncSqlBulkCopyMARS().Wait();
       }
 
-      // 3.1.1 Synchronous bulk copy in .NET 4.5
+      // 3.1.1 Synchronous bulk copy in .NET Framework 4.5
       private static void SynchronousSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             conn.Open();
@@ -473,7 +473,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
       }
 
-      // 3.1.2 Asynchronous bulk copy in .NET 4.5
+      // 3.1.2 Asynchronous bulk copy in .NET Framework 4.5
       private static async Task AsyncSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -564,7 +564,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.5 Copying data from SQL Server to SQL Azure in .NET 4.5
+      // 3.5 Copying data from SQL Server to SQL Azure in .NET Framework 4.5
       //private static async Task AsyncSqlBulkCopySqlServerToSqlAzure() {
       //   using (SqlConnection srcConn = new SqlConnection(connectionString))
       //   using (SqlConnection destConn = new SqlConnection(azureConnectionString)) {
@@ -714,7 +714,7 @@ class Class1 {
 
 MARS를 사용하면 둘 이상의 보류 중인 작업을 포함하는 읽기 작업 및 DML(데이터 조작 언어) 작업 모두에 하나의 연결을 사용할 수 있습니다. 이 기능을 사용하면 애플리케이션에서 연결 사용 오류를 처리할 필요가 없습니다. 또한 MARS는 일반적으로 더 많은 리소스를 사용하는 서버 쪽 커서의 사용자를 대체할 수 있습니다. 마지막으로 여러 작업이 단일 연결에서 실행될 수 있으므로 동일한 트랜잭션 컨텍스트를 공유하여 **sp_getbindtoken** 및 **sp_bindsession** 시스템 저장 프로시저를 사용할 필요가 없습니다.
 
-다음 콘솔 애플리케이션에서는 MARS가 설정된 상태에서 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체와 단일 <xref:System.Data.SqlClient.SqlConnection> 개체와 함께 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체를 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 특정 공급업체의 모든 제품을 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에 로드합니다. 두 번째 <xref:System.Data.SqlClient.SqlDataReader>는 각 제품 레코드를 방문합니다. 또한 새로운 **OnOrderQty**를 확인하기 위한 계산을 수행합니다. 그런 다음 세 번째 명령 개체를 사용하여 **ProductVendor** 테이블을 새 값으로 업데이트합니다. 이 전체 프로세스는 단일 트랜잭션 내에서 발생하며 마지막에는 롤백됩니다.
+다음 콘솔 애플리케이션에서는 MARS가 설정된 상태에서 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체와 단일 <xref:System.Data.SqlClient.SqlConnection> 개체와 함께 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체를 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 특정 공급업체의 모든 제품을 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에 로드합니다. 두 번째 <xref:System.Data.SqlClient.SqlDataReader>는 각 제품 레코드를 방문합니다. 또한 새로운 **OnOrderQty** 를 확인하기 위한 계산을 수행합니다. 그런 다음 세 번째 명령 개체를 사용하여 **ProductVendor** 테이블을 새 값으로 업데이트합니다. 이 전체 프로세스는 단일 트랜잭션 내에서 발생하며 마지막에는 롤백됩니다.
 
 > [!NOTE]
 > 다음 예제에서는 SQL Server에 포함된 샘플 **AdventureWorks** 데이터베이스를 사용합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되어 있고 사용 가능한 것으로 가정합니다. 사용자 환경에 필요한 경우 연결 문자열을 수정합니다.

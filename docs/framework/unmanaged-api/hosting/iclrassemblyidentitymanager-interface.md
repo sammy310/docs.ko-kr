@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-ms.openlocfilehash: 3611de471001d31c40984e71d49ce376bb3e4607
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41d049c931091d2cc0b41bd1e9d74b3c15d7878d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504292"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679262"
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager 인터페이스
+
 호스트와 어셈블리에 대 한 CLR (공용 언어 런타임) 간의 통신을 지 원하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetBindingIdentityFromFile 메서드](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|지정 된 파일 경로에서 어셈블리의 어셈블리 id 바인딩 데이터를 가져옵니다.|  
 |[GetBindingIdentityFromStream 메서드](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|지정 된 스트림의 어셈블리에 대 한 정식 어셈블리 id 데이터를 가져옵니다.|  
@@ -37,18 +38,20 @@ ms.locfileid: "84504292"
 |[IsStronglyNamed 메서드](iclrassemblyidentitymanager-isstronglynamed-method.md)|지정 된 어셈블리에 강력한 이름이 지정 되었는지 여부를 나타내는 값을 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  를 사용 `ICLRAssemblyIdentityManager` 하 여 인스턴스를 가져오고 `ICLRAssemblyReferenceList` 어셈블리 id를 열거 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
 - [ICLRProbingAssemblyEnum 인터페이스](iclrprobingassemblyenum-interface.md)

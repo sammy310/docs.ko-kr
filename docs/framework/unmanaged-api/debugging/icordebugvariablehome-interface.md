@@ -16,19 +16,20 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679548"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome 인터페이스
+
 함수의 지역 변수 또는 인수를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetArgumentIndex 메서드](icordebugvariablehome-getargumentindex-method.md)|함수 인수의 인덱스를 가져옵니다.|  
 |[GetCode 메서드](icordebugvariablehome-getcode-method.md)|이 개체를 포함 하는 "ICorDebugCode" 인스턴스를 가져옵니다 `ICorDebugVariableHome` .|  
@@ -39,6 +40,7 @@ ms.locfileid: "83396546"
 |[GetSlotIndex 메서드](icordebugvariablehome-getslotindex-method.md)|지역 변수의 관리 되는 슬롯 인덱스를 가져옵니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 코드 조각에서는 라는 [ICorDebugCode4](icordebugcode4-interface.md) 개체를 사용 합니다 `pCode4` .  
   
 ```cpp  
@@ -81,6 +83,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

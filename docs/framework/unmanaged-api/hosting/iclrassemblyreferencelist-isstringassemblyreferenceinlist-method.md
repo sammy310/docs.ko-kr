@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-ms.openlocfilehash: 91f174cab4986882df795eb531baedfc0dd43962
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 74d47b3f55c10f65d47f726a2b96ba5e0b18b749
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679145"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList 메서드
+
 제공 된 이름이 목록의 어셈블리 이름과 일치 하는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,11 @@ HRESULT IsStringAssemblyReferenceInList (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzAssemblyName`  
  진행 검색할 어셈블리의 이름입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -46,15 +48,16 @@ HRESULT IsStringAssemblyReferenceInList (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 공용 언어 런타임을 더 이상 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
