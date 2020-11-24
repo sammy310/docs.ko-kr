@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dea34b81-8d2b-4cc3-8696-0ad4291d8a92
 topic_type:
 - apiref
-ms.openlocfilehash: 29a2fc5652badcc00378192debccba0356f5339e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 64ea9fdd477ec005b089f451101b742278ab4266
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672411"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads 메서드
+
 호스트에서 i/o 완료에 대해 할당할 최소 스레드 수를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT SetMinThreads (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwMinIoCompletionThreads`  
  진행 호스트에서 만들어야 하는 i/o 완료 스레드의 최소 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`성공적으로 반환 되었습니다.|  
+|S_OK|`SetMinThreads` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,18 +52,20 @@ HRESULT SetMinThreads (
 |E_NOTIMPL|호스트는의 구현을 제공 하지 않습니다 `SetMinThreads` .|  
   
 ## <a name="remarks"></a>설명  
+
  호스트는 구현, 성능 또는 확장성과 같은 이유로 i/o 요청을 처리 하기 위해 할당할 수 있는 스레드 수에 대 한 배타적 제어를 원할 수 있습니다. 따라서 호스트는를 구현할 필요가 없습니다 `SetMinThreads` . 이 경우 호스트는이 메서드에서 E_NOTIMPL을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [SetMaxThreads 메서드](ihostiocompletionmanager-setmaxthreads-method.md)

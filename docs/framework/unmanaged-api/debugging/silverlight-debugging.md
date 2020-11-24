@@ -5,17 +5,19 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-ms.openlocfilehash: 91f311818b615ea8f166bb3362ec52d39fcd0297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 49f026b8e1a3dd78a62091e77a5aba0c9a2e09d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790320"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671839"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 디버깅
+
 이 섹션의 항목에서는 CLR(공용 언어 런타임)이 Windows 운영 체제나 Macintosh 플랫폼에서 실행 중인 Silverlight 기반 애플리케이션 디버그를 지원하기 위해 제공하는 환경 및 인터페이스를 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [EnumerateCLRs 함수](enumerateclrs-function.md)  
  프로세스의 CLR을 열거하기 위한 메커니즘을 제공합니다.  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: 4d29bb3886ffb51e1dfb9654f4d70ef7c568fd43
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: dfb34595530a47b74762610f5824b68ea00a8a69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671943"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 열거형
+
 디버깅/추적 스위치에 대해 수행된 작업을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,6 +44,7 @@ typedef enum LogSwitchCallReason {
 |`SWITCH_DELETE`|디버깅/추적 스위치가 삭제 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -51,6 +53,6 @@ typedef enum LogSwitchCallReason {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

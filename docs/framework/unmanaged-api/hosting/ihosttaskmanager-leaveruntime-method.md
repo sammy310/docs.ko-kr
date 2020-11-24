@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: deaebbce3b9b8a26bf9668b826a6818dba94dcc3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 855f8a5d3582bbad59301a344d8a51198c40a051
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673048"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 메서드
+
 현재 실행 중인 태스크가 CLR (공용 언어 런타임)을 유지 하 고 비관리 코드를 입력 하려고 함을 호스트에 알립니다.  
   
 > [!IMPORTANT]
@@ -37,6 +38,7 @@ HRESULT LeaveRuntime (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `target`  
  진행 호출할 관리 되지 않는 함수의 매핑된 이식 가능한 실행 파일 내 주소입니다.  
   
@@ -44,7 +46,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`성공적으로 반환 되었습니다.|  
+|S_OK|`LeaveRuntime` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -53,6 +55,7 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청 된 할당을 완료할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  비관리 코드와의 호출 시퀀스는 중첩 될 수 있습니다. 예를 들어 아래 목록은 `LeaveRuntime` , [IHostTaskManager:: ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)에 대 한 호출 시퀀스를 사용 하 여 `IHostTaskManager::EnterRuntime` 호스트에서 중첩 된 레이어를 식별할 수 있도록 하는 가상의 상황을 설명 합니다.  
   
 |작업|해당 메서드 호출|  
@@ -65,15 +68,16 @@ HRESULT LeaveRuntime (
 |첫 번째 관리 되지 않는 함수는 Visual Basic 프로그램으로 실행을 반환 합니다.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

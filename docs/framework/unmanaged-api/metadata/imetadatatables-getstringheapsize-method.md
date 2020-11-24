@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed8f6335-81f5-4c09-81a9-2a909fc530c9
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa7853602c1aaf484ef89d9c4fb06464e135f80
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e3f6afaa79b7b299fa374c8220f5c2c3ad545ac9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501173"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672565"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize 메서드
+
 문자열 힙의 크기 (바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,19 +35,21 @@ HRESULT GetStringHeapSize (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pcbStrings`  
  제한이 문자열 힙의 크기 (바이트)에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataTables 인터페이스](imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](imetadatatables2-interface.md)

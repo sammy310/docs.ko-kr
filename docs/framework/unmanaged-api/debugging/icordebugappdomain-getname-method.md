@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 3db37576f5da7b26e7bd9d3343f8bb8b97f2ba82
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 501a4543940437bfe2a6cb0952aed8184107150c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895239"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672164"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 메서드
+
 응용 프로그램 도메인의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,19 +38,22 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cchName`  
  [in] `szName` 배열의 크기입니다. 이 메서드를 쿼리 모드로 전환 하려면이 값을 0으로 설정 합니다.  
   
  `pcchName`  
- 제한이 에서 `szName`실제로 반환 된 이름의 크기나 문자 수에 대 한 포인터입니다. 쿼리 모드에서이 값은 호출자가 이름에 할당할 버퍼의 크기를 알 수 있도록 합니다.  
+ 제한이 에서 실제로 반환 된 이름의 크기나 문자 수에 대 한 포인터입니다 `szName` . 쿼리 모드에서이 값은 호출자가 이름에 할당할 버퍼의 크기를 알 수 있도록 합니다.  
   
  `szName`  
  제한이 응용 프로그램 도메인의 이름을 저장 하는 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- 디버거는 메서드를 `GetName` 한 번 호출 하 여 이름에 필요한 버퍼 크기를 가져옵니다. 디버거는 버퍼를 할당 한 다음 메서드를 두 번 호출 하 여 버퍼를 채웁니다. 이름 크기를 가져오기 위한 첫 번째 호출은 *쿼리 모드*라고 합니다.  
+
+ 디버거는 메서드를 `GetName` 한 번 호출 하 여 이름에 필요한 버퍼 크기를 가져옵니다. 디버거는 버퍼를 할당 한 다음 메서드를 두 번 호출 하 여 버퍼를 채웁니다. 이름 크기를 가져오기 위한 첫 번째 호출은 *쿼리 모드* 라고 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

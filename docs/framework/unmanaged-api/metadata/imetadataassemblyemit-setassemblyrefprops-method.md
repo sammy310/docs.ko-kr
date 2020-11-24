@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e28659f3c6912489775dd09951610f19e4400942
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008094"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672750"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 메서드
+
 지정된 `AssemblyRef` 메타데이터 구조를 수정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,6 +42,7 @@ HRESULT SetAssemblyRefProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ar`  
  진행 수정할 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다 `AssemblyRef` .  
   
@@ -66,17 +68,19 @@ HRESULT SetAssemblyRefProps (
  진행 참조 된 어셈블리의 특성을 지정 하는 [Assemblyrefflags](assemblyrefflags-enumeration.md) 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `AssemblyRef`메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssemblyRef](imetadataassemblyemit-defineassemblyref-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

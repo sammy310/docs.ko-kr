@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
-ms.openlocfilehash: 25faad4f4bc67b57c339bc63d1a18ab4d275cd71
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ff1f39be3d3db43f70cfa4a0711a3f42c180bc1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672086"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider 인터페이스
+
 디버그 기호 정보를 검색하는 데 사용할 수 있는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -34,6 +35,7 @@ ms.locfileid: "83379347"
 > 이 인터페이스는 .NET 네이티브에서만 사용할 수 있습니다. .NET 네이티브 외부의 ICorDebug 시나리오에 대해 이 인터페이스를 구현하는 경우 공용 언어 런타임에서 이 인터페이스를 무시합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -42,7 +44,7 @@ ms.locfileid: "83379347"
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

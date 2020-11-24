@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 4d947388afb8d7f8f935ae3b8e8aff81efaf2ee4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489598"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672883"
 ---
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
+
 이 섹션에서는 .NET Framework 형식, 메서드, 필드 등이 노출하는 메타데이터에 대한 액세스를 제공하는 관리되지 않는 인터페이스를 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ICeeGen 인터페이스](iceegen-interface.md)  
  동적 코드 컴파일에 대한 메서드를 제공합니다.  
   
@@ -72,6 +74,7 @@ ms.locfileid: "84489598"
  메타데이터 서명의 유효성을 검사하는 데 사용할 메서드를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [메타데이터 전역 정적 함수](metadata-global-static-functions.md)  
   
  [메타데이터 열거형](metadata-enumerations.md)  

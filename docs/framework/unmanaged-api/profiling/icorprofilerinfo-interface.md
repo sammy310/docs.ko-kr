@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671189"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 인터페이스
+
 코드 프로파일러가 CLR (공용 언어 런타임)과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 하는 데 사용할 수 있는 메서드를 제공 합니다.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ ms.locfileid: "84497753"
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[BeginInprocDebugging 메서드](icorprofilerinfo-begininprocdebugging-method.md)|In-process 디버깅 지원 기능을 초기화 합니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.|  
 |[EndInprocDebugging 메서드](icorprofilerinfo-endinprocdebugging-method.md)|In-process 디버깅 세션을 종료 합니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.|  
@@ -66,6 +67,7 @@ ms.locfileid: "84497753"
 |[SetILInstrumentedCodeMap 메서드](icorprofilerinfo-setilinstrumentedcodemap-method.md)|지정 된 함수의 원래 MSIL 오프셋이 함수의 프로파일러 수정 MSIL의 새 오프셋에 매핑되는 방법을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  프로파일러에서는 인터페이스의 메서드를 호출 `ICorProfilerInfo` 하 여 CLR과 통신 하 여 이벤트 모니터링과 요청 정보를 제어 합니다.  
   
  인터페이스의 메서드는 `ICorProfilerInfo` 자유 스레드된 모델을 사용 하 여 CLR에 의해 구현 됩니다. 각 메서드가 HRESULT를 반환하여 성공 또는 실패를 나타냅니다. 가능한 반환 코드 목록은 CorError .h를 참조 하세요.  
@@ -73,6 +75,7 @@ ms.locfileid: "84497753"
  CLR은 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)의 프로파일러 구현을 통해 `ICorProfilerInfo` 초기화 하는 동안 각 코드 프로파일러에 대 한 인터페이스를 전달 합니다. 그런 다음 코드 프로파일러는 인터페이스의 메서드를 호출 `ICorProfilerInfo` 하 여 CLR의 컨트롤에서 실행 되는 관리 코드에 대 한 정보를 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -81,7 +84,7 @@ ms.locfileid: "84497753"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

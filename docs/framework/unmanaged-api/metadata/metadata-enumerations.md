@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: 2409998c53aee8cb76e66cbc9a6cd92ad9fb6cd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672905"
 ---
 # <a name="metadata-enumerations"></a>메타데이터 열거형
+
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [AssemblyFlags 열거형](assemblyflags-enumeration.md)  
  어셈블리의 런타임 기능을 설명하는 값을 포함합니다.  
   
@@ -156,6 +158,7 @@ ms.locfileid: "84489623"
  공용 언어 런타임을 초기화할 때 [CoUninitializeEE](../hosting/couninitializeee-function.md) 에서 사용 하는 상수를 지정 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [메타데이터 인터페이스](metadata-interfaces.md)  
   
  [메타데이터 전역 정적 함수](metadata-global-static-functions.md)  

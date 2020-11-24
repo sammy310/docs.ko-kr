@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 079164d15141983711e976e0209cc22c818d9cd9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 598c46d50d7b4a67c1b2c0d844c9b12deb12a428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671371"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain 메서드
+
 열거형의 다음 도메인에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,15 +36,16 @@ HRESULT NextDomain (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hEnum`  
  진행 [Enumdomains](icorruntimehost-enumdomains-method.md)호출을 통해 가져온 열거자입니다.  
   
  `pAppDomain`  
- 제한이 <xref:System._AppDomain?displayProperty=nameWithType>열거형의 다음 도메인을 나타내는 형식에 대 한 인터페이스 포인터 이거나, 더 이상 도메인이 없는 경우 null입니다.  
+ 제한이 <xref:System._AppDomain?displayProperty=nameWithType> 열거형의 다음 도메인을 나타내는 형식에 대 한 인터페이스 포인터 이거나, 더 이상 도메인이 없는 경우 null입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했거나 열거에 도메인이 더 이상 없습니다.|  
@@ -51,11 +53,12 @@ HRESULT NextDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** 1.0, 1.1  
   

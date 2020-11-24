@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672333"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
+
 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ int FormatFromRawValue (
 `dwFormat`\
 진행 원시 성능 데이터를 변환할 대상 형식입니다. 다음 값 중 하나일 수 있습니다.
 
-|상수  |값  |Description |
+|상수  |값  |설명 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 계산 된 값을 배정밀도 부동 소수점 값으로 반환 합니다. |
 | `PDH_FMT_LARGE` | 0x00000400 | 계산 된 값을 64 비트 정수로 반환 합니다. |
@@ -55,7 +56,7 @@ int FormatFromRawValue (
 
 이전 값 중 하나는 다음 크기 조정 플래그 중 하나를 사용 하 여 ORed 수 있습니다.
 
-|상수  |값  |Description |
+|상수  |값  |설명 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | 카운터의 배율 인수를 적용 하지 마십시오. |
 | `PDH_FMT_1000` | 0x00002000 | 최종 값을 1000에 곱합니다. |
@@ -76,7 +77,7 @@ int FormatFromRawValue (
 
 이 함수에서 반환 되는 값은 다음과 같습니다.
 
-|상수  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 함수 호출이 성공 했습니다. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 필요한 인수가 없거나 잘못 되었습니다. |
