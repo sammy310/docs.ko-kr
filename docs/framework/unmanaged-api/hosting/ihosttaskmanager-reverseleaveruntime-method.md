@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e0981415c03120cc30e6349daced51e79216938
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554803"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669967"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime 메서드
+
 컨트롤이 CLR (공용 언어 런타임)을 유지 하 고 관리 코드에서 호출 된 관리 되지 않는 함수를 시작 했음을 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,9 +45,11 @@ HRESULT ReverseLeaveRuntime ();
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청 된 리소스 할당을 완료할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR은 `ReverseLeaveRuntime` 현재 실행 중인 작업이 플랫폼 호출을 통해 관리 코드에서 호출 된 관리 되지 않는 함수로 제어를 반환 함을 호스트에 알리기 위해를 호출 합니다. 에 대 한 각 호출은 `ReverseLeaveRuntime` [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)에 대 한 해당 호출과 일치 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
