@@ -2,14 +2,15 @@
 title: System.Xml 사용법
 ms.date: 10/22/2008
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: a01799bd130de0222d4d66dee4955375c1a1911f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 46282afa6548c731b04c40d8de91a1fed997c57c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677572"
 ---
 # <a name="systemxml-usage"></a>System.Xml 사용법
+
 이 섹션에서는 <xref:System.Xml?displayProperty=nameWithType> XML 데이터를 나타내는 데 사용할 수 있는 네임 스페이스에 있는 여러 형식의 사용에 대해 설명 합니다.
 
  ❌<xref:System.Xml.XmlNode> <xref:System.Xml.XmlDocument> XML 데이터를 표시 하는 데 또는를 사용 하지 마십시오. <xref:System.Xml.XPath.IXPathNavigable>대신,, 또는 하위 형식의 인스턴스를 사용 <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> <xref:System.Xml.Linq.XNode> 합니다. `XmlNode` 및 `XmlDocument` 는 공용 api에서 노출 하도록 설계 되지 않았습니다.
@@ -24,7 +25,7 @@ ms.locfileid: "94828597"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [사용 지침](usage-guidelines.md)

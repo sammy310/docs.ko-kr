@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677026"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 열거형
+
 메서드의 기능을 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -92,12 +93,13 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|메서드가 보안 코드를 포함 하는 다른 메서드를 호출 하도록 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

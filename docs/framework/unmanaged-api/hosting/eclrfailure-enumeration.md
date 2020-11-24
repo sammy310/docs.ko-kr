@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675765"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 열거형
+
 호스트에서 정책 작업을 설정할 수 있는 오류 집합을 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -51,18 +52,20 @@ typedef enum {
 |`FAIL_CodeContract`|코드 계약 오류가 발생 했습니다. [코드 계약](../../debug-trace-profile/code-contracts.md)을 참조 하세요.|  
   
 ## <a name="remarks"></a>설명  
+
  호스트에서 오류 조건에 대 한 정책 작업을 지정 하는 데 사용할 수 있는 [EPolicyAction](epolicyaction-enumeration.md) 값 목록은 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) 메서드를 참조 하세요. 중요 하 고 중요 하지 않은 코드 영역에 대 한 자세한 내용은 [EClrOperation](eclroperation-enumeration.md)를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRPolicyManager 인터페이스](iclrpolicymanager-interface.md)
 - [SetActionOnFailure 메서드](iclrpolicymanager-setactiononfailure-method.md)

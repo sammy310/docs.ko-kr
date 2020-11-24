@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: 42f7020212dd2db793b7c7d20a15c129157e7261
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4c088b7e1096f8b4cad11a3e27b4045e233989ae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676220"
 ---
-# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 함수
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN \_ GetManagedObjectFieldInfo 함수
+
 제공된 개체 포인터와 필드 이름을 사용하여 개체 시작부터 필드 및 필드 값까지의 오프셋을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `Client`  
  진행 디버그 클라이언트에 대 한 포인터입니다.  
   
@@ -50,20 +52,22 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  제한이 필드 값입니다. 이 매개 변수는 null일 수 있습니다.  
   
  `pOffset`  
- 제한이 에서 `objAddr` 필드로의 오프셋입니다. 이 매개 변수는 null일 수 있습니다.  
+ 제한이 에서 필드로의 오프셋 `objAddr` 입니다. 이 매개 변수는 null일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
+
  오프셋이 0 이면 오프셋이 기록 되지 않습니다.  
   
  현재 컨텍스트에 있는 스레드에 관리 코드가 없는 경우 함수는 기능 값 0xa0 및 0x1000 오류 코드를 사용 하 여 HRESULT SOS_E_NOMANAGEDCODE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** SOS_Stacktrace. h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 전역 정적 함수](debugging-global-static-functions.md)

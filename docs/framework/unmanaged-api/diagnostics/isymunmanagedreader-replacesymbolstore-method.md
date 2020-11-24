@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-ms.openlocfilehash: db2137146ded5200e05bbf88e23ae599f3eb7dec
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3fa94094ad066496cc8a1fc4dd2ccb0ee16b5aac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675843"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 메서드
+
 기존 기호 저장소를 델타 기호 저장소로 바꿉니다. 이 메서드는 지정 된 델타가 업데이트가 아닌 완전 한 대체 역할을 한다는 점을 제외 하 고 [UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md) 메서드와 비슷합니다.  
   
 > [!NOTE]
@@ -37,18 +38,21 @@ HRESULT ReplaceSymbolStore (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `filename`  
  진행 기호 저장소를 포함 하는 파일의 이름입니다.  
   
  `pIStream`  
  진행 매개 변수의 대 안으로 사용 되는 파일 스트림입니다 `filename` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

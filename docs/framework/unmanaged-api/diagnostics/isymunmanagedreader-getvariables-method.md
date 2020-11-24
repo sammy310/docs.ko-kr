@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: 637e1aed003e211654141ab397c9c0b4724753c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c4341a5ffe557694473ae505590b57d39a27a721
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615490"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675895"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables 메서드
+
 부모 및 이름이 지정 된 경우 지역 변수가 아닌 변수를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetVariables (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `parent`  
  진행 변수의 부모입니다.  
   
@@ -49,12 +51,14 @@ HRESULT GetVariables (
  `pVars`  
  제한이 변수를 받는 변수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

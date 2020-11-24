@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 157e6bc6cb9603fa9558ad6d39f0b086849fc7b0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0fc84a15d3250d5103c1dbc6486960f0ea780a2b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499898"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676818"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 메서드
+
 프로세스에서 원격 메서드 호출 또는 활성화 요청을 받았음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT RemotingClientSendingMessage(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pCookie`  
  진행 다음 조건에서 [ICorProfilerCallback:: Remo Clientsendingmessage](icorprofilercallback-remotingclientsendingmessage-method.md) 에 제공 된 값에 해당 하는 값입니다.  
   
@@ -46,12 +48,14 @@ HRESULT RemotingClientSendingMessage(
  이렇게 하면 원격 호출을 쉽게 페어링 하 고 논리 호출 스택을 만들 수 있습니다.  
   
  `fIsAsync`  
- 진행 `true`호출이 비동기 이면이 고, 그렇지 않으면 인 값입니다 `false` .  
+ 진행 `true` 호출이 비동기 이면이 고, 그렇지 않으면 인 값입니다 `false` .  
   
 ## <a name="remarks"></a>설명  
+
  메시지 요청이 비동기 인 경우 임의의 스레드에서 요청을 처리할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -60,6 +64,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

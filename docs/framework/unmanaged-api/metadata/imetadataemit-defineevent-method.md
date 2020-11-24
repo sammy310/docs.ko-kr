@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 7babd0a90b9882acb03b6360753f55c57a399b9e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c03497f48b8199da545d796637e5f8a5c532362
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675700"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 메서드
+
 지정 된 메타 데이터 시그니처를 사용 하 여 이벤트에 대 한 정의를 만들고 해당 이벤트 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,6 +43,7 @@ HRESULT DefineEvent (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `td`  
  진행 대상 클래스 또는 인터페이스에 대 한 토큰입니다. 이는 `mdTypeDef` 또는 토큰입니다 `mdTypeDefNil` .  
   
@@ -70,15 +72,16 @@ HRESULT DefineEvent (
  제한이 이벤트에 할당 된 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

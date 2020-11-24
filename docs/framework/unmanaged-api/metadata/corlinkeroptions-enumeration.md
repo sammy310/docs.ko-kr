@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-ms.openlocfilehash: fe5ffbab93df7168015e2a31d6e32ec45dce0960
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 188301d31b2fcfaf7b1c6139111e8f1296ccf7e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677247"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 열거형
+
 메타데이터 링커 옵션을 선택하는 플래그를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,12 +42,13 @@ typedef enum CorLinkerOptions {
 |`MDNetModule`|Private 형식 및 전역 함수는 유지 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

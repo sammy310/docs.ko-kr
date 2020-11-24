@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676103"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 함수
+
 프로세스의 CLR을 열거하기 위한 메커니즘을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT EnumerateCLRs (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `debuggeePID`  
  [in] 로드된 CLR이 열거되는 소스 프로세스의 프로세스 식별자입니다.  
   
@@ -50,7 +52,8 @@ HRESULT EnumerateCLRs (
  `pdwArrayLengthOut`  
  [out] 크기가 같은 `ppHandleArrayOut` 및 `pdwArrayLengthOut`의 길이가 포함된 DWORD에 대한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  S_OK  
  프로세스의 CLR 수가 성공적으로 확인되었으며 해당 핸들 및 경로 배열이 제대로 채워졌습니다.  
   
@@ -64,6 +67,7 @@ HRESULT EnumerateCLRs (
  로드된 CLR을 열거할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
+
  `debuggeePID`로 식별되는 대상 프로세스의 경우 함수에서는 프로세스에 로드된 CLR의 경로 배열 `ppStringArrayOut`, 같은 인덱스에서 CLR에 대한 계속-시작 이벤트가 포함될 수 있는 이벤트 핸들 배열 `ppHandleArrayOut`, 로드된 CLR 수를 지정하는 배열 크기 `pdwArrayLengthOut`을 반환합니다.  
   
  Windows 운영 체제에서 `debuggeePID`는 OS 프로세스 식별자에 매핑됩니다.  
@@ -73,6 +77,7 @@ HRESULT EnumerateCLRs (
  대상 프로세스의 CLR 개수를 반환하려면 null로 설정된 두 배열 매개 변수와 함께 이 함수를 호출하면 됩니다. 이 개수에서 호출자는 만들어질 버퍼 크기를 유추할 수 있습니다. `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** dbgshim.dll  

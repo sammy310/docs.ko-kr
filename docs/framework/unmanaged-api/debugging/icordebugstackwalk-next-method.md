@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: b89e968e9b12943c8192af3b280f8bd321a02110
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 497dda473e6510cfa31405b2066c63b1a70dd5e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378784"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677325"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 메서드
+
 [ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체를 다음 프레임으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,6 +33,7 @@ HRESULT Next();
 ```  
   
 ## <a name="return-value"></a>Return Value  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -44,9 +46,11 @@ HRESULT Next();
 ## <a name="exceptions"></a>예외  
   
 ## <a name="remarks"></a>설명  
+
  `Next`메서드는 `ICorDebugStackWalk` 런타임에서 현재 프레임을 해제할 수 있는 경우에만 개체를 호출 프레임으로 이동 합니다. 그렇지 않으면 개체는 런타임에서 해제할 수 있는 다음 프레임으로 이동 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -55,7 +59,7 @@ HRESULT Next();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugStackWalk 인터페이스](icordebugstackwalk-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

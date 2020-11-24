@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: aa906e314c408b7653e611b07d7ad21d4519b715
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616985"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677767"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 메서드
+
 지정 된 세대에 대 한 가비지 수집을 강제로 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT Collect (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `Generation`  
  진행 수집할 세대입니다. 값-1은 모든 세대의 컬렉션을 강제 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Collect`성공적으로 반환 되었습니다.|  
+|S_OK|`Collect` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -49,18 +51,20 @@ HRESULT Collect (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Collect`메서드는 현재 상태에 관계 없이 CLR의 가비지 수집기가 컬렉션을 수행 하도록 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)
 - [가비지 수집](../../../standard/garbage-collection/index.md)

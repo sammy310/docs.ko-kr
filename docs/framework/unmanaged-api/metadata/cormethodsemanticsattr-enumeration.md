@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 347b323951b0125ffa5f82626b2d9b235079492c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676948"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 열거형
+
 메서드와 관련 속성 또는 이벤트 간의 관계를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -51,12 +52,13 @@ typedef enum CorMethodSemanticsAttr {
 |`msFire`|메서드가 이벤트를 발생 하도록 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

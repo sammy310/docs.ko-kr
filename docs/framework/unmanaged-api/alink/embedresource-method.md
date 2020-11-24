@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-ms.openlocfilehash: 24279870e7406de649df56e8aad31252513e95c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34439b7c01dee7d7789d989b58e8944c6282b71b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446541"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676389"
 ---
 # <a name="embedresource-method"></a>EmbedResource 메서드
+
 포함 리소스를 선언 합니다. 이 메서드는 실제로 리소스를 포함 하지 않습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT EmbedResource(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
@@ -51,15 +53,17 @@ HRESULT EmbedResource(
  RVA에서 리소스의 오프셋입니다.  
   
  `dwFlags`  
- `mrPublic` 및 `mrPrivate`와 같은 내게 필요한 옵션 플래그입니다. 이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
+ 및와 같은 내게 필요한 옵션 플래그 `mrPublic` `mrPrivate` 입니다. 이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

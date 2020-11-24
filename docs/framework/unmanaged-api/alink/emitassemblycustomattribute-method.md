@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676363"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 메서드
+
 을 호출 하 여 어셈블리 수준 사용자 지정 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,11 +41,12 @@ HRESULT EmitAssemblyCustomAttribute(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
  `FileToken`  
- 특성의 파일을 제거 하는 파일입니다. `AssemblyID`에서 바인딩되지 않은 .netmodule을 나타내지 않는 경우 NULL 일 수 있습니다.  
+ 특성의 파일을 제거 하는 파일입니다. `AssemblyID`가 바인딩되지 않은 .netmodule을 나타내지 않는 경우 NULL 일 수 있습니다.  
   
  `tkType`  
  사용자 지정 특성의 형식입니다.  
@@ -62,12 +64,14 @@ HRESULT EmitAssemblyCustomAttribute(
  여러 특성을 내보내야 하는 경우 TRUE입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink 필요  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

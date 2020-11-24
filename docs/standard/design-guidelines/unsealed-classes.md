@@ -6,14 +6,15 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: b2e14b435aa567f231230da34307014210d46ccb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e380f533cfc290e952281c6a04f19978fa92aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677507"
 ---
 # <a name="unsealed-classes"></a>봉인되지 않은 클래스
+
 Sealed 클래스는에서 상속 될 수 없으며 확장성을 방지 합니다. 반면에서 상속할 수 있는 클래스는 봉인 되지 않은 클래스 라고 합니다.
 
  더 저렴 한 방법으로 프레임 워크에 대 한 저렴 한 확장성을 제공 하는 좋은 방법으로 추가 된 가상 또는 보호 된 구성원이 없는 봉인 되지 않은 클래스 사용을 고려 ✔️.
@@ -26,7 +27,7 @@ Sealed 클래스는에서 상속 될 수 없으며 확장성을 방지 합니다
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [확장성을 위한 디자인](designing-for-extensibility.md)

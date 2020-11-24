@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: b372021fcda39d9973d96a9c39e93e38617887a6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675869"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader 인터페이스
-기호 저장소 내의 문서, 메서드 및 변수에 대 한 액세스를 제공 하는 기호 판독기를 나타냅니다.  
+
+기호 저장소 내의 문서, 메서드 및 변수에 대한 액세스를 제공하는 기호 판독기를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -47,9 +48,10 @@ ms.locfileid: "83615464"
 |[UpdateSymbolStore 메서드](isymunmanagedreader-updatesymbolstore-method.md)|기존 기호 저장소를 델타 기호 저장소로 업데이트합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

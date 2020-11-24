@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ef9b177bee0651b6b8ea994610315ce93524e8e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676935"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags 열거형
+
 네이티브 코드를 연결할 때 링커에서 사용하는 플래그 값을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -46,14 +47,15 @@ typedef enum
 |`nlfMaxValue`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

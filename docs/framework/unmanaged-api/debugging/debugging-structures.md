@@ -6,18 +6,19 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: a18094fb2621478dbdb4bbf672df436234112ed0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676272"
 ---
 # <a name="debugging-structures"></a>디버깅 구조체
 
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
+
  [CLRDATA_ADDRESS_RANGE 구조체](clrdata-address-range-structure.md) 주소 범위를 정의 합니다.
 
  [CLRDATA_IL_ADDRESS_MAP 구조체](clrdata-il-address-map-structure.md) 매핑을 처리할 IL을 정의 합니다.
@@ -68,9 +69,9 @@ ms.locfileid: "76793749"
 
  [DacpReJitData 구조체](dacprejitdata-structure.md) 지정 된 프로파일러 계측 된 메서드에 대 한 기본 정보를 정의 합니다.
 
- [StackTrace_SimpleContext 구조체](stacktrace-simplecontext-structure.md) 전체 `CONTEXT` 구조 대신 사용할 수 있는 간단한 컨텍스트를 제공 합니다.
+ [StackTrace_SimpleContext 구조체](stacktrace-simplecontext-structure.md) 전체 구조 대신 사용할 수 있는 간단한 컨텍스트를 제공 `CONTEXT` 합니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
 
  [디버깅 Coclass](debugging-coclasses.md)
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-ms.openlocfilehash: 9f0fda803ba3a1ce35017d85e84b3bf6f567eda0
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 28e0cded33b49e3aadc0564bae3a60bee76c4396
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976371"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677390"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone 메서드
+
 이 ICorDebugEnum 개체의 복사본을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppEnum`  
- 제한이 이 `ICorDebugEnum` `ICorDebugEnum` 개체의 복사본 인 개체의 주소에 대 한 포인터입니다.  
+ 제한이 `ICorDebugEnum` 이 개체의 복사본 인 개체의 주소에 대 한 포인터입니다 `ICorDebugEnum` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
