@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-ms.openlocfilehash: 7baabafc61e14d127ff3f0cdb7453be6f1a2abeb
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f07958a1a21bb3e93e4ca8202a65407b39188af4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804965"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680783"
 ---
 # <a name="ihostautoeventwait-method"></a>IHostAutoEvent::Wait 메서드
+
 현재 [IHostAutoEvent](ihostautoevent-interface.md) 인스턴스가 소유 될 때까지 또는 지정 된 시간이 경과할 때까지 대기 하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,17 +36,18 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwMilliseconds`  
- 진행 `IHostAutoEvent`스레드 또는 파이버가 소유권을 취하지 않는 경우 현재 인스턴스가 반환 될 때까지 대기 해야 하는 시간 (밀리초)입니다.  
+ 진행 `IHostAutoEvent` 스레드 또는 파이버가 소유권을 취하지 않는 경우 현재 인스턴스가 반환 될 때까지 대기 해야 하는 시간 (밀리초)입니다.  
   
  `option`  
  진행 이 작업이 차단 되는 경우 호스트에서 수행할 작업을 지정 하는 [WAIT_OPTION](wait-option-enumeration.md) 값 중 하나입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Wait`성공적으로 반환 되었습니다.|  
+|S_OK|`Wait` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -54,15 +56,16 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|호스트가 대기 간격 중에 교착 상태를 감지 하 고 현재 인스턴스가 나타내는 이벤트를 `IHostAutoEvent` 교착 상태가 발생 한 것으로 선택 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5510ec098b2c1aa3b768830b812328287fd31a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62055a98197f5f8bd4cfc02e99891b83ef6341e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503031"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680302"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo 메서드
+
 애플리케이션 도메인 ID를 수락합니다. 애플리케이션 도메인 이름 및 해당 이름을 포함하는 프로세스 ID를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT GetAppDomainInfo(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `appDomainId`  
  [in] 애플리케이션 도메인의 ID입니다.  
   
@@ -54,11 +56,13 @@ HRESULT GetAppDomainInfo(
  [out] 애플리케이션 도메인을 포함하는 프로세스 ID에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드가 반환된 후 `szName` 버퍼가 모듈의 애플리케이션 도메인의 전체 이름을 포함하기에 충분히 큰지 확인해야 합니다. 이렇게 하려면 `pcchName`가 가리키는 값을 `cchName` 매개 변수의 값과 비교합니다. `pcchName`이 `cchName`보다 큰 값을 가리키는 경우 더 큰 `szName` 버퍼를 할당하고 `cchName`을 더 큰 새 크기로 업데이트한 후 `GetAppDomainInfo`를 다시 호출합니다.  
   
  또는 길이가 0인 `szName` 버퍼로 `GetAppDomainInfo`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcchName`에 반환된 값으로 설정하고 `GetAppDomainInfo`을 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -67,7 +71,7 @@ HRESULT GetAppDomainInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

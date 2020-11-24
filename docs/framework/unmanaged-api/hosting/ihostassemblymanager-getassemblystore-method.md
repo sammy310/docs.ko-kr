@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 587861529c340fad9fd817b904e4d3651b236e8d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681186"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore 메서드
+
 호스트에서 로드 한 어셈블리 목록을 나타내는 [IHostAssemblyStore](ihostassemblystore-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT GetAssemblyStore (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppAssemblyStore`  
  제한이 인스턴스에 대 한 함수 포인터 `IHostAssemblyStore` 이거나, 호스트에서을 구현 하지 않는 경우 null `IHostAssemblyStore` 입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore`성공적으로 반환 되었습니다.|  
+|S_OK|`GetAssemblyStore` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,21 +52,23 @@ HRESULT GetAssemblyStore (
 |E_NOINTERFACE|호스트는의 구현을 제공 하지 않습니다 `IHostAssemblyStore` .|  
   
 ## <a name="remarks"></a>설명  
- `IHostAssemblyStore`호스트가 CLR과는 독립적으로 어셈블리 및 모듈에 바인딩할 수 있도록 하는 메서드를 제공 합니다. 호스트는 일반적으로 어셈블리 저장소를 제공 하 여 파일 시스템 이외의 형식에서 어셈블리를 로드할 수 있도록 합니다.  
+
+ `IHostAssemblyStore` 호스트가 CLR과는 독립적으로 어셈블리 및 모듈에 바인딩할 수 있도록 하는 메서드를 제공 합니다. 호스트는 일반적으로 어셈블리 저장소를 제공 하 여 파일 시스템 이외의 형식에서 어셈블리를 로드할 수 있도록 합니다.  
   
 > [!NOTE]
 > 호스트에서을 구현 하지 않는 경우는 `IHostAssemblyStore` `GetAssemblyStore` E_NOINTERFACE HRESULT 값을 반환 해야 하며을 null로 설정 해야 합니다 `ppAssemblyStore` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IHostAssemblyManager 인터페이스](ihostassemblymanager-interface.md)
 - [IHostAssemblyStore 인터페이스](ihostassemblystore-interface.md)
