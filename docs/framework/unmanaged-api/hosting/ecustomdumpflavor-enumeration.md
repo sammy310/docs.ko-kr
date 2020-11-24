@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b39b3320-fac7-41f1-9a03-ab6fb0cd89c7
 topic_type:
 - apiref
-ms.openlocfilehash: 9b4c1187945b4c243375a3096c3a8a3b22599aef
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 1b8440ed6e878aac3dd08d9f8ed528c93739a724
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686321"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 열거형
+
 오류를 보고할 때 힙 덤프의 사용자 지정 하위 집합에 포함할 항목을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,18 +42,20 @@ typedef enum {
 |`DUMP_FLAVOR_NonHeapCLRState`|사용자 지정 힙 덤프가 동적으로 할당 되지 않은 모든 런타임 상태 데이터를 수집 하도록 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  형식의 매개 변수는 `ECustomDumpFlavor` [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) 메서드에 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ECustomDumpItemKind 열거형](ecustomdumpitemkind-enumeration.md)
 - [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)

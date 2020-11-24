@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: 615637813b08629aaea74b23fa2737f52d61bafb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d2ba7d8e66472f771a932a2dfb05bb9e1ee96290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616920"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685879"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo 구조체
+
 참조 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,18 +46,20 @@ typedef struct _AssemblyBindInfo {
 |`ePolicyLevel`|참조 된 어셈블리에 적용 해야 하는 버전 관리 정책 (있는 경우)을 나타내는 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  호스트는 `dwAppDomainId` CLR (공용 언어 런타임)에 고유 식별자를 제공 합니다. 에 대 한 호출이 `IHostAssemblyStore::ProvideAssembly` 반환 된 후 런타임은 식별자를 사용 하 여의 내용이 매핑 되었는지 여부를 확인 합니다 `IStream` . 이 경우 런타임은 스트림을 다시 매핑하지 않고 기존 복사본을 로드 합니다. 또한 런타임은 [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md)에 대 한 호출에서 반환 되는 스트림의 조회 키로이 식별자를 사용 합니다. 따라서 식별자는 모듈 요청 및 어셈블리 요청에 대해 고유 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](hosting-structures.md)
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)

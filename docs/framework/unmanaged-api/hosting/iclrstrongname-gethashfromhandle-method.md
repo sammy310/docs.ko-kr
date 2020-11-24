@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: e2d71f7c61b02273bdcaf182f6f79ca3c2a2c75f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 68bfdb2f66147b54c75b8f577a01278016e248b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762083"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685736"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle 메서드
+
 지정 된 해시 알고리즘을 사용 하 여 지정 된 파일 핸들이 있는 파일의 내용에 대 한 해시를 생성 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hFile`  
  진행 해시할 파일의 핸들입니다.  
   
@@ -54,15 +56,17 @@ HRESULT GetHashFromHandle (
  `pchHash`  
  제한이 반환 된의 크기 (바이트)입니다 `pbHash` .  
   
-## <a name="return-value"></a>Return Value  
- `S_OK`메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
+## <a name="return-value"></a>반환 값  
+
+ `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

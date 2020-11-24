@@ -14,22 +14,23 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 78de6f91cc5c9de41426ac2e3c200fe14b32ae96
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617011"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685749"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
+
 네이티브 PE (이식 가능한 실행) 파일을 만드는 기능을 제공 합니다. 일반적으로이 인터페이스는 컴파일러에서 컴파일된 출력 실행 파일을 생성 하는 데 사용 됩니다.  
   
 > [!NOTE]
-> `ICeeFileGen`는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+> `ICeeFileGen` 는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
  이 인터페이스는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 class ICeeFileGen {  
@@ -235,12 +236,13 @@ public:
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ICeeFileGen  
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)

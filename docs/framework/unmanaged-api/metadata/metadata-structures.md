@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-ms.openlocfilehash: fbb9727523aa175f10a05b3ba4f54ac64b790f8e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 591699e2d3e58f7efc1c72d2c47f2f956198fcf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685476"
 ---
 # <a name="metadata-structures"></a>메타데이터 구조체
+
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  ASSEMBLYMETADATA  
  나중에 사용할 어셈블리 메타데이터를 저장합니다.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "84489550"
  운영 체제에 대한 정보를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [메타데이터 인터페이스](metadata-interfaces.md)  
   
  [메타데이터 전역 정적 함수](metadata-global-static-functions.md)  

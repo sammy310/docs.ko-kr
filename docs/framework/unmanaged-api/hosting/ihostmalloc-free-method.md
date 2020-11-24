@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d4c9048c89d55ed048a55a771572823905a056df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804614"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687140"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 메서드
+
 [Alloc](ihostmalloc-alloc-method.md) 함수를 사용 하 여 할당 된 메모리를 해제 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT Free (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pMem`  
  진행 해제할 메모리에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`Free`성공적으로 반환 되었습니다.|  
+|S_OK|`Free` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,18 +52,20 @@ HRESULT Free (
 |HOST_E_INVALIDOPERATION|호스트를 통해 할당 되지 않은 메모리를 해제 하려고 했습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `pMem`매개 변수가에 대 한 호출을 사용 하 여 할당 되지 않은 메모리 영역을 참조 하는 경우 `Alloc` 호스트는 HOST_E_INVALIDOPERATION을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)

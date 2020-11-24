@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686464"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 열거형
+
 사용자 코드에서 처리 되지 않은 예외를 관리 하는 데 사용할 수 있는 옵션을 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,18 +42,20 @@ typedef enum {
 |`eHostDeterminedPolicy`|CLR (공용 언어 런타임)이 처리 되지 않은 예외를 무시 하 고 호스트에서 추가 작업을 확인할 수 있도록 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR이 이전 버전과 동일 하 게 동작 하도록 지정 하려면 멤버를 사용 `eHostDeterminedPolicy` 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [EClrOperation 열거형](eclroperation-enumeration.md)

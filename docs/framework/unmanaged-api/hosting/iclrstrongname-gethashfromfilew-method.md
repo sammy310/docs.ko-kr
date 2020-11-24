@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: 6dbb3360132186c38c007fb5fa12a3724ca145aa
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: eda78976f175230cc2405b9cb151993e63697e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762099"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685762"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW 메서드
+
 유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT GetHashFromFileW (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `wszFilePath`  
  진행 해시할 파일의 유니코드 이름입니다.  
   
@@ -53,18 +55,21 @@ HRESULT GetHashFromFileW (
  `pchHash`  
  제한이 의 크기 (바이트)입니다 `pbHash` .  
   
-## <a name="return-value"></a>Return Value  
- `S_OK`메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
+## <a name="return-value"></a>반환 값  
+
+ `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드는 [ICLRStrongName:: GetHashFromFile](iclrstrongname-gethashfromfile-method.md) 메서드와 동일 합니다. 단, 파일 이름 사양은 ANSI 대신 유니코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
