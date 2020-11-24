@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-ms.openlocfilehash: 95a4ef3ab77b33c67c63be2c22647075f2f95ce8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b0defd0a9c4197cf91fde1625794ff0d77c83ea0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693140"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID 메서드
+
 이 프로세스에 대 한 운영 체제 식별자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetProcessID (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pid`  
  제한이 이 [ICorPublishProcess](icorpublishprocess-interface.md) 개체가 나타내는 프로세스의 식별자에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
@@ -46,6 +49,6 @@ HRESULT GetProcessID (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorPublishProcess 인터페이스](icorpublishprocess-interface.md)

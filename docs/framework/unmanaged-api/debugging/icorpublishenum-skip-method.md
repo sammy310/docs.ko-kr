@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: b68a9ec1e8fee4fdecd2114af28c75c4a236cb3a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 888cc40c194cb86b0f898f5556ea14b8897e08c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421150"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693309"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip 메서드
+
 지정 된 항목 수 만큼 열거에서 커서를 앞으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT Skip (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `celt`  
  진행 커서를 앞으로 이동 하는 기준이 되는 항목의 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
@@ -46,6 +49,6 @@ HRESULT Skip (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorPublishEnum 인터페이스](icorpublishenum-interface.md)

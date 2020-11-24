@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: b3bb1857075f857f62ec92ac6a2876a49655c70e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9965a468f788efead0477bb7574ef3bf156fd869
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692477"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next 메서드
+
 현재 커서 위치에서 시작 하 여 컬렉션에서 지정 된 수의 프로세스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `celt`  
  진행 검색할 프로세스의 수입니다.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  제한이 실제로 반환 된 프로세스 수에 대 한 포인터입니다. 이 일 경우이 값은 null 일 수 있습니다 `celt` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
@@ -55,6 +58,6 @@ HRESULT Next (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorPublishProcessEnum 인터페이스](icorpublishprocessenum-interface.md)

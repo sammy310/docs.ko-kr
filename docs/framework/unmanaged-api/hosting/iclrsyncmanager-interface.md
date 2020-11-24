@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-ms.openlocfilehash: b0b9c0b7d178557806a9ab2893bff2d34dc408ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5bfab21a36becf943b1813f266cf70c4b5e5b1d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557738"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690995"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 인터페이스
+
 호스트에서 요청 된 작업에 대 한 정보를 가져오고 해당 동기화 구현에서 교착 상태를 검색할 수 있도록 하는 메서드를 정의 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[CreateRWLockOwnerIterator 메서드](iclrsyncmanager-createrwlockowneriterator-method.md)|CLR (공용 언어 런타임)이 판독기-작성기 잠금을 기다리는 작업 집합을 결정 하는 데 사용할 반복기를 호스트에 만들도록 요청 합니다.|  
 |[DeleteRWLockOwnerIterator 메서드](iclrsyncmanager-deleterwlockowneriterator-method.md)|을 호출 하 여 만든 반복기를 CLR에서 삭제 하도록 요청 `CreateRWLockOwnerIterator` 합니다.|  
@@ -34,6 +35,7 @@ ms.locfileid: "90557738"
 |[GetRWLockOwnerNext 메서드](iclrsyncmanager-getrwlockownernext-method.md)|현재 판독기-작성기 잠금을 기다리는 다음 작업을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  

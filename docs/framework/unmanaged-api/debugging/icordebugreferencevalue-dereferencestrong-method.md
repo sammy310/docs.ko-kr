@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-ms.openlocfilehash: e96d7c6fcb25a05deb7301e36b76b528a7982760
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a492c444eecbbf9b4b669741ec6a30197bd1f5fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691216"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>ICorDebugReferenceValue::DereferenceStrong 메서드
-`DereferenceStrong`가 구현 되지 않았습니다. 이 메서드를 호출 하지 마십시오.  
+
+`DereferenceStrong` 가 구현 되지 않았습니다. 이 메서드를 호출 하지 마십시오.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT DereferenceStrong (  
@@ -34,6 +35,7 @@ HRESULT DereferenceStrong (
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
