@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734402"
 ---
 # <a name="exception-throwing"></a>예외 Throw
+
 이 섹션에서 설명 하는 예외를 throw 하는 지침에는 실행 실패의 의미를 올바르게 정의 해야 합니다. 멤버가 수행 하도록 디자인 된 작업 (멤버 이름에서 의미 함)을 수행할 수 없을 때마다 실행 실패가 발생 합니다. 예를 들어 `OpenFile` 메서드가 열린 파일 핸들을 호출자에 게 반환할 수 없는 경우 실행 실패로 간주 됩니다.
 
  대부분의 개발자는 0 또는 null 참조로 나누기와 같은 사용 오류에 대 한 예외를 사용 하는 데 익숙해질 수 있습니다. 프레임 워크에서 예외는 실행 오류를 포함 하 여 모든 오류 조건에 사용 됩니다.
@@ -62,7 +63,7 @@ ms.locfileid: "94821270"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [예외 디자인 지침](exceptions.md)

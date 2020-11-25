@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734428"
 ---
 # <a name="equality-operators"></a>같음 연산자
+
 이 섹션에서는 같음 연산자를 오버 로드 하 고 같음 연산자를 참조 하는 방법을 설명 `operator==` `operator!=` 합니다.
 
  ❌ 같음 연산자 중 하나를 오버 로드 하지 않고 다른 연산자를 오버 로드 하지 않습니다.
@@ -29,11 +30,13 @@ ms.locfileid: "94821348"
  예를 들어 인수 중 하나가 null이 아닌 null 이면 false를 반환 `NullReferenceException` 합니다.
 
 ## <a name="equality-operators-on-value-types"></a>값 형식에 대 한 같음 연산자
+
  같음 값이 의미 하는 경우 값 형식에 대 한 같음 연산자를 오버 로드 ✔️ 합니다.
 
  대부분의 프로그래밍 언어에는 `operator==` 값 형식에 대 한 기본 구현이 없습니다.
 
 ## <a name="equality-operators-on-reference-types"></a>참조 형식에 대 한 같음 연산자
+
  ❌ 변경 가능한 참조 형식에 대해 같음 연산자를 오버 로드 하지 마십시오.
 
  많은 언어에는 참조 형식에 대 한 같음 연산자가 기본 제공 됩니다. 기본 제공 연산자는 일반적으로 참조 같음을 구현 하며, 대부분의 개발자는 기본 동작이 값 같음으로 변경 될 때 많은 개발자를 대상으로 합니다.
@@ -46,7 +49,7 @@ ms.locfileid: "94821348"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [사용 지침](usage-guidelines.md)

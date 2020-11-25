@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733947"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 인터페이스
+
 스레드 풀에 액세스 하기 위한 메서드를 제공 합니다.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ ms.locfileid: "83805344"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[CorRegisterWaitForSingleObject 메서드](icorthreadpool-corregisterwaitforsingleobject-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
 |[CorUnregisterWait 메서드](icorthreadpool-corunregisterwait-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
@@ -44,14 +45,15 @@ ms.locfileid: "83805344"
 |[CorGetAvailableThreads 메서드](icorthreadpool-corgetavailablethreads-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)

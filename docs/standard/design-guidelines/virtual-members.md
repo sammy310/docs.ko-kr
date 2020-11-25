@@ -6,14 +6,15 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7727ea7fcfdbbecf2e53ddd7a44b4cf907211f80
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734350"
 ---
 # <a name="virtual-members"></a>가상 멤버
+
 가상 멤버를 재정의할 수 있으므로 하위 클래스의 동작을 변경할 수 있습니다. 이러한 항목은 제공 하는 확장성 측면에서 콜백과 매우 유사 하지만 실행 성능과 메모리 사용 측면에서 더 효율적입니다. 또한 가상 멤버는 특수 한 종류의 기존 형식 (특수화)을 만들어야 하는 시나리오에서 보다 자연스럽 게 느껴질 수 있습니다.
 
  가상 멤버는 콜백과 이벤트 보다 성능이 우수 하지만 비가상 메서드 보다는 성능이 더 우수 하지 않습니다.
@@ -36,7 +37,7 @@ ms.locfileid: "94828402"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [확장성을 위한 디자인](designing-for-extensibility.md)

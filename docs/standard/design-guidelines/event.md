@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734415"
 ---
 # <a name="event-design"></a>이벤트 디자인
+
 이벤트는 가장 일반적으로 사용 되는 콜백 형태입니다 (프레임 워크가 사용자 코드를 호출할 수 있도록 하는 구문). 다른 콜백 메커니즘에는 대리자, 가상 멤버 및 인터페이스 기반 플러그 인을 가져오는 멤버가 포함 됩니다. 유용성 연구의 데이터는 대부분의 개발자가 다른 콜백 메커니즘을 사용 하는 것 보다 이벤트를 사용 하는 것이 더 편안 함을 의미 합니다. 이벤트는 Visual Studio 및 많은 언어와 잘 통합 됩니다.
 
  이벤트의 두 그룹에는 이벤트의 상태를 변경 하기 전에 발생 하는 이벤트, 사전 이벤트 라는 이벤트, 상태 변경 후 발생 한 이벤트 (사후 이벤트)가 있습니다. 사전 이벤트의 예로는 `Form.Closing` 폼을 닫기 전에 발생 하는가 있습니다. 사후 이벤트의 예로는 `Form.Closed` 폼이 닫힌 후에 발생 하는가 있습니다.
@@ -52,6 +53,7 @@ ms.locfileid: "94821335"
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>또는 해당 하위 클래스를 이벤트 인수로 사용 하 여 최종 사용자가 이벤트를 취소할 수 있도록 합니다.
 
 ### <a name="custom-event-handler-design"></a>사용자 지정 이벤트 처리기 디자인
+
  `EventHandler<T>`프레임 워크에서 제네릭을 지원 하지 않는 이전 버전의 CLR과 함께 작업 해야 하는 경우와 같이를 사용할 수 없는 경우가 있습니다. 이러한 경우 사용자 지정 이벤트 처리기 대리자를 디자인 하 고 개발 해야 할 수 있습니다.
 
  ✔️는 이벤트 처리기에 void의 반환 형식을 사용 합니다.
@@ -68,7 +70,7 @@ ms.locfileid: "94821335"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](member.md)
 - [프레임 워크 디자인 지침](index.md)

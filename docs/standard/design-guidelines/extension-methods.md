@@ -2,14 +2,15 @@
 title: 확장 메서드
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: d48651e9621beecd3c9a0665ca4be26894b50c45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734714"
 ---
 # <a name="extension-methods"></a>확장 메서드
+
 확장 메서드는 인스턴스 메서드 호출 구문을 사용 하 여 정적 메서드를 호출할 수 있도록 하는 언어 기능입니다. 이러한 메서드는 메서드가 작동 하는 인스턴스를 나타내는 매개 변수를 하나 이상 사용 해야 합니다.
 
  이러한 확장 메서드를 정의 하는 클래스를 "스폰서" 클래스 라고 하며 정적으로 선언 해야 합니다. 확장 메서드를 사용 하려면 스폰서 클래스를 정의 하는 네임 스페이스를 가져와야 합니다.
@@ -44,7 +45,7 @@ ms.locfileid: "94821140"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](member.md)
 - [프레임 워크 디자인 지침](index.md)
