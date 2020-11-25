@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8c91296bd4185fd98962d49f611a3cdcb5f0ad28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976098"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729662"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 메서드
+
 매개 변수가 있는 새 형식 개체를 인스턴스화하고 개체의 생성자 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT NewParameterizedObject (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pConstructor`  
  진행 인스턴스화할 개체의 생성자를 나타내는 ICorDebugFunction 개체에 대 한 포인터입니다.  
   
@@ -54,9 +56,11 @@ HRESULT NewParameterizedObject (
  진행 각각 생성자에 전달 되는 인수 값을 나타내는 ICorDebugValue 개체를 가리키는 포인터의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- 개체의 생성자는 매개 변수 <xref:System.Type> 를 사용할 수 있습니다.  
+
+ 개체의 생성자는 매개 변수를 사용할 수 있습니다 <xref:System.Type> .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

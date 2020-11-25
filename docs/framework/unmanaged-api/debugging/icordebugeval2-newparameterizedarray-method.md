@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976111"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729667"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 메서드
+
 지정 된 요소 형식 및 차원의 새 배열을 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT NewParameterizedArray(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pElementType`  
  진행 배열에 저장 된 요소의 형식을 나타내는 ICorDebugType 개체에 대 한 포인터입니다.  
   
@@ -50,9 +52,11 @@ HRESULT NewParameterizedArray(
  [in] 선택적 항목으로, 배열의 각 차원에 대 한 하 한입니다. 이 값을 생략 하면 각 차원에 대해 하 한이 0이 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 배열의 요소는 제네릭 형식의 인스턴스인 것일 수 있습니다. 배열은 항상 스레드가 현재 실행 중인 응용 프로그램 도메인에 만들어집니다. .NET Framework 2.0에서 값 `rank` 은 1 이어야 합니다.  
+
+ 배열의 요소는 제네릭 형식의 인스턴스인 것일 수 있습니다. 배열은 항상 스레드가 현재 실행 중인 응용 프로그램 도메인에 만들어집니다. .NET Framework 2.0에서 값은 1 이어야 합니다 `rank` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

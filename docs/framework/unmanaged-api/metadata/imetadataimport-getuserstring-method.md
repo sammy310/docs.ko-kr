@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af3de5454ce3d4a763c216de6e8efdb39407457b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503508"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729137"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 메서드
+
 지정한 메타데이터 토큰이 나타내는 리터럴 문자열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetUserString (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `stk`  
  진행 연결 된 문자열을 반환할 문자열 토큰입니다.  
   
@@ -50,15 +52,16 @@ HRESULT GetUserString (
  제한이 반환 된의 와이드 문자 크기입니다 `szString` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

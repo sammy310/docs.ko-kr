@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729267"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 메서드
+
 지정한 ParamDef 토큰이 참조하는 매개 변수에 대한 메타데이터 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `tk`  
  진행 메타 데이터를 반환할 매개 변수를 나타내는 ParamDef 토큰입니다.  
   
@@ -71,22 +73,23 @@ HRESULT GetParamProps (
  제한이 매개 변수에서 반환 하는 상수 문자열에 대 한 포인터입니다.  
   
  `pcchValue`  
- 제한이 `ppValue`와이드 문자 단위의 크기 이거나, `ppValue` 가 문자열을 포함 하지 않는 경우 0입니다.  
+ 제한이 `ppValue` 와이드 문자 단위의 크기 이거나, `ppValue` 가 문자열을 포함 하지 않는 경우 0입니다.  
   
 ## <a name="remarks"></a>설명
 
 매개 변수의 시퀀스 값은 `pulSequence` 1로 시작 합니다. 반환 값의 시퀀스 번호는 0입니다.
 
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729111"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 열거형
+
 가로챌 수 있는(즉, 한 단계씩 실행할 수 있는) 코드 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,7 +39,7 @@ typedef enum CorDebugIntercept {
 } CorDebugIntercept;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -51,9 +52,11 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_ALL`|모든 코드를 가로챌 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) 메서드를 사용 하 여 가로챌 수 있는 코드의 형식을 설정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -62,6 +65,6 @@ typedef enum CorDebugIntercept {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

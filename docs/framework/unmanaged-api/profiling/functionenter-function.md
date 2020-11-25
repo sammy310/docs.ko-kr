@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 52870c7446987817ff00b90db26c3265bccdd096
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9bc88d7dd5b00213da634dc9f511cfe0d39b42f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729839"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 함수
+
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionEnter (
   \[in] 컨트롤이 전달 되는 함수의 식별자입니다.
 
 ## <a name="remarks"></a>설명  
+
  `FunctionEnter`함수는 콜백입니다. 함수를 구현 해야 합니다. 구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.  
   
  실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
@@ -55,6 +57,7 @@ void __stdcall FunctionEnter (
  또한 함수는 관리 `FunctionEnter` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
@@ -63,7 +66,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

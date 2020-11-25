@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729319"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread 인터페이스
+
 프로세스의 스레드를 나타냅니다. `ICorDebugThread` 인스턴스의 수명은 이 인스턴스가 나타내는 스레드의 수명과 같습니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ClearCurrentException 메서드](icordebugthread-clearcurrentexception-method.md)|이 메서드가 구현되지 않았습니다. 이 메서드를 사용하지 마십시오.|  
+|[ClearCurrentException 메서드](icordebugthread-clearcurrentexception-method.md)|이 메서드가 구현되지 않은 경우 이 메서드를 사용하지 마십시오.|  
 |[CreateEval 메서드](icordebugthread-createeval-method.md)|이에 대해 작동 하는 ICorDebugEval 개체를 만듭니다 `ICorDebugThread` .|  
 |[CreateStepper 메서드](icordebugthread-createstepper-method.md)|이에서 활성 프레임을 단계별로 실행할 수 있도록 하는 ICorDebugStepper 개체를 만듭니다 `ICorDebugThread` .|  
 |[EnumerateChains 메서드](icordebugthread-enumeratechains-method.md)|이의 모든 스택 체인을 포함 하는 ICorDebugChainEnum 열거자에 대 한 인터페이스 포인터를 가져옵니다 `ICorDebugThread` .|  
@@ -51,6 +52,7 @@ ms.locfileid: "83379814"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -59,6 +61,6 @@ ms.locfileid: "83379814"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

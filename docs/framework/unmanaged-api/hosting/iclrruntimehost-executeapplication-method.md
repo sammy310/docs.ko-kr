@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 924d032c42dca95b253acea167d55dd6e2b811e5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ef043dd2308c4b76e975bd2ad1f68725579e8fc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728913"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 메서드
+
 매니페스트 기반 ClickOnce 배포 시나리오에서 새 도메인에 활성화 될 응용 프로그램을 지정 하는 데 사용 됩니다. 이러한 시나리오에 대 한 자세한 내용은 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT ExecuteApplication(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzAppFullName`  
  진행 에 대해 정의 된 응용 프로그램의 전체 이름 <xref:System.ApplicationIdentity> 입니다.  
   
@@ -57,11 +59,11 @@ HRESULT ExecuteApplication(
  `pReturnValue`  
  제한이 응용 프로그램의 진입점에서 반환 된 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`성공적으로 반환 되었습니다.|  
+|S_OK|`ExecuteApplication` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -69,7 +71,8 @@ HRESULT ExecuteApplication(
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `ExecuteApplication`는 새로 만든 응용 프로그램 도메인에서 ClickOnce 응용 프로그램을 활성화 하는 데 사용 됩니다.  
+
+ `ExecuteApplication` 는 새로 만든 응용 프로그램 도메인에서 ClickOnce 응용 프로그램을 활성화 하는 데 사용 됩니다.  
   
  `pReturnValue`출력 매개 변수는 응용 프로그램에서 반환 된 값으로 설정 됩니다. 에 null 값을 제공 하는 경우 `pReturnValue` `ExecuteApplication` 는 실패 하지 않지만는 값을 반환 하지 않습니다.  
   
@@ -77,15 +80,16 @@ HRESULT ExecuteApplication(
 > 매니페스트 기반 응용 프로그램을 활성화 하기 위해 메서드를 호출 하기 전에 [Start 메서드](iclrruntimehost-start-method.md) 메서드를 호출 하지 마세요 `ExecuteApplication` . 메서드를 `Start` 먼저 호출 하면 `ExecuteApplication` 메서드 호출이 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ActivationContext>
 - <xref:System.AppDomainManager>

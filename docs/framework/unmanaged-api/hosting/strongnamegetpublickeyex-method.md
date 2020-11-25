@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 1904a98f254a988ce035847a4cdeede182aa07bf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8cc28d9ccd40c65d225a96b269562c9d3dfa2124
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006378"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729891"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 메서드
+
 공개/개인 키 쌍에서 공개 키를 가져오고 해시 알고리즘과 서명 알고리즘을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,6 +41,7 @@ HRESULT StrongNameGetPublicKey (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzKeyContainer`  
  진행 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다. 가 null 인 경우는 `pbKeyBlob` `szKeyContainer` CSP (암호화 서비스 공급자) 내에 올바른 컨테이너를 지정 해야 합니다. 이 경우 `StrongNameGetPublicKeyEx` 메서드는 컨테이너에 저장 된 키 쌍에서 공개 키를 추출 합니다.  
   
@@ -66,32 +68,36 @@ HRESULT StrongNameGetPublicKey (
  진행 나중에 사용 하도록 예약 되어 있습니다. 기본값은 null입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `S_OK`메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
+
+ `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
 ## <a name="remarks"></a>설명  
+
  공개 키가 [PublicKeyBlob](../strong-naming/publickeyblob-structure.md) 구조에 포함 되어 있습니다.  
   
 ## <a name="remarks"></a>설명  
+
  다음 표에서는 매개 변수에 대해 허용 되는 값 집합을 보여 줍니다 `uHashAlgId` .  
   
 |Name|값|  
 |----------|-----------|  
-|없음|0|  
+|None|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [StrongNameTokenFromPublicKey 메서드](iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob 구조체](../strong-naming/publickeyblob-structure.md)

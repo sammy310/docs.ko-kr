@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41e13e20a1cf5a7000907b1cc7d8d2af5174ceba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728977"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 메서드
+
 지정 된 작업에 대 한 시간 제한 값을 설정 하 고, 작업이 발생할 때 CLR (공용 언어 런타임)이 수행 해야 하는 정책 동작을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT SetTimeoutAndAction (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `operation`  
  진행 제한 시간 및 `action` 정책을 설정할 작업을 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다. 지원되는 값은 다음과 같습니다.  
   
@@ -57,7 +59,7 @@ HRESULT SetTimeoutAndAction (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`성공적으로 반환 되었습니다.|  
+|S_OK|`SetTimeoutAndAction` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -66,21 +68,23 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|지정 된에 대 한 제한 시간을 설정할 수 `operation` 없거나에 잘못 된 값이 제공 `action` 된 경우|  
   
 ## <a name="remarks"></a>설명  
- `SetTimeoutAndAction`는 [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) 및 [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 메서드의 기능을 캡슐화 하며 이러한 두 메서드에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
+
+ `SetTimeoutAndAction` 는 [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) 및 [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 메서드의 기능을 캡슐화 하며 이러한 두 메서드에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
   
 > [!IMPORTANT]
 > 모든 정책 동작 값을 CLR 작업의 시간 제한 동작으로 지정할 수 있는 것은 아닙니다. 유효한 값은 이러한 두 메서드에 대 한 항목의 설명 섹션을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrOperation 열거형](eclroperation-enumeration.md)
 - [EPolicyAction 열거형](epolicyaction-enumeration.md)

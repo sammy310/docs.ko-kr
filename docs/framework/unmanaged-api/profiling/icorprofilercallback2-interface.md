@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: 3b0e60602d2f36552c3e0e85ec51205b4128486b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 597a3dfecd42e206c98974093fa2417eba570f6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729467"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 인터페이스
+
 프로파일러가 구독할 이벤트를 발생 시킬 때 CLR (공용 언어 런타임)에서 코드 프로파일러에 알리는 데 사용 하는 메서드를 제공 합니다. `ICorProfilerCallback2`인터페이스는 [ICorProfilerCallback](icorprofilercallback-interface.md) 인터페이스의 확장입니다. 즉, .NET Framework 버전 2.0에 도입 된 새 콜백을 제공 합니다.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ ms.locfileid: "84499768"
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[FinalizeableObjectQueued 메서드](icorprofilercallback2-finalizeableobjectqueued-method.md)|종료자를 사용 하는 개체가 해당 메서드를 실행 하기 위해 종료자 스레드에 대기 되었음을 코드 프로파일러에 알립니다 `Finalize` .|  
 |[GarbageCollectionFinished 메서드](icorprofilercallback2-garbagecollectionfinished-method.md)|가비지 수집이 완료 되었으며이에 대해 모든 가비지 수집 콜백이 실행 되었음을 프로파일러에 알립니다.|  
@@ -41,6 +42,7 @@ ms.locfileid: "84499768"
 |[ThreadNameChanged 메서드](icorprofilercallback2-threadnamechanged-method.md)|스레드의 이름이 변경 되었음을 코드 프로파일러에 알립니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR은 `ICorProfilerCallback` (또는) 인터페이스의 메서드를 호출 `ICorProfilerCallback2` 하 여 프로파일러가 구독 한 이벤트가 발생할 때 프로파일러에 알립니다. 이 인터페이스는 CLR이 코드 프로파일러와 통신 하는 데 사용 하는 기본 콜백 인터페이스입니다.  
   
  코드 프로파일러는 인터페이스의 메서드를 구현 해야 합니다 `ICorProfilerCallback` . .NET Framework 2.0 이상 버전의 경우 프로파일러는 메서드도 구현 해야 합니다 `ICorProfilerCallback2` . 각 메서드 구현은 성공 시 S_OK 값을 가진 HRESULT를 반환 해야 합니다. 그렇지 않으면 실패 시 E_FAIL. 현재 CLR은 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)를 제외 하 고 각 콜백에서 반환 되는 HRESULT를 무시 합니다.  
@@ -51,6 +53,7 @@ ms.locfileid: "84499768"
 > 프로파일러는 단일 COM 개체를 등록 합니다. 프로파일러가 .NET Framework 버전 1.0 또는 1.1를 대상으로 하는 경우 해당 COM 개체는의 메서드만 구현 하면 `ICorProfilerCallback` 됩니다. .NET Framework 버전 2.0 이상을 대상으로 하는 경우에는 COM 개체도의 메서드를 구현 해야 합니다 `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -59,7 +62,7 @@ ms.locfileid: "84499768"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

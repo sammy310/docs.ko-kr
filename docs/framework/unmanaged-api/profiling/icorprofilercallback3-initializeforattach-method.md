@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c85bba9a5d913820b69cbc214275b733a53197ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729449"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 메서드
+
 프로파일러가 연결 작업 후 상태를 초기화할 수 있도록 CLR(공용 언어 런타임)에 의해 호출됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT InitializeForAttach(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pCorProfilerInfoUnk`  
  [in] `ICorProfilerInfo*` 인터페이스에 대한 인터페이스 포인터입니다.  
   
@@ -45,9 +47,11 @@ HRESULT InitializeForAttach(
  [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
   
 ## <a name="remarks"></a>설명  
+
  CLR은 프로파일러가 콜백을 요청할 수 있도록 `InitializeForAttach`를 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -56,7 +60,7 @@ HRESULT InitializeForAttach(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
