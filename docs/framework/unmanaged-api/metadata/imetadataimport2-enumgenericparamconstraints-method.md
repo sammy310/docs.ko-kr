@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-ms.openlocfilehash: af226f9317b67b23e03d06614ed5b9c956939c22
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27c3ec349cf6c83f6783e252e6c5af5e99fa4b37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702838"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 메서드
+
 지정 된 토큰이 나타내는 제네릭 매개 변수와 연결 된 제네릭 매개 변수 제약 조건의 배열에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT EnumGenericParamConstraints (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다.  
   
@@ -57,19 +59,20 @@ HRESULT EnumGenericParamConstraints (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints`성공적으로 반환 되었습니다.|  
-|`S_FALSE`|`phEnum`에는 멤버 요소가 없습니다. 이 경우 `pcGenericParameterConstraints` 은 0 (영)으로 설정 됩니다.|  
+|`S_OK`|`EnumGenericParameterConstraints` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|`phEnum` 에는 멤버 요소가 없습니다. 이 경우 `pcGenericParameterConstraints` 은 0 (영)으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)

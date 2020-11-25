@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 2e6e3a6432d6568532a5f5b9676b5f130eb83d0b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2b9bf1a9f40764f6d0544bafb91f967905eb40c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502892"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703917"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds 메서드
+
 다양한 가비지 컬렉션 세대를 구성하는 힙 세그먼트인 메모리 영역을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT GetGenerationBounds(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cObjectRanges`  
  [in] `ranges` 배열에 대해 호출자가 할당한 요소 수입니다.  
   
@@ -45,15 +47,17 @@ HRESULT GetGenerationBounds(
  제한이 각각 가비지 수집 중인 세대 내의 메모리 범위 (즉, 블록)를 설명 하는 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 구조체의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
+
  가비지 컬렉션이 진행되고 있지 않으면 모든 프로파일러 콜백에서 `GetGenerationBounds` 메서드를 호출할 수 있습니다.
 
  대부분의 세대 이동은 가비지 수집 중에 발생합니다. 컬렉션 간에 세대가 증가할 수 있지만 일반적으로 이동하지는 않습니다. 따라서 가장 흥미로운 `GetGenerationBounds` 호출 위치는 `ICorProfilerCallback2::GarbageCollectionStarted` 및 `ICorProfilerCallback2::GarbageCollectionFinished`입니다.  
   
- 프로그램 시작 중에 일부 개체는 CLR(공용 언어 런타임)에 의해 일반적으로 3세대 및 0세대에서 할당됩니다. 따라서 관리 코드 실행이 시작되는 시간에는 이러한 세대에 이미 개체가 포함되어 있습니다. 1세대와 2세대는 가비지 수집기에서 생성되는 더미 개체를 제외하고 일반적으로 비어 있습니다. 더미 개체의 크기는 CLR의 32 비트 구현에서 12 바이트이 고, 64 비트 구현에서는 크기가 더 큽니다. 네이티브 이미지 생성기 (Ngen.exe)에서 생성 된 모듈 내에 있는 2 세대 범위가 표시 될 수도 있습니다. 이 경우 2 세대의 개체는 *고정 개체*입니다 .이 개체는 가비지 수집기가 아닌 ngen.exe가 실행 될 때 할당 됩니다.  
+ 프로그램 시작 중에 일부 개체는 CLR(공용 언어 런타임)에 의해 일반적으로 3세대 및 0세대에서 할당됩니다. 따라서 관리 코드 실행이 시작되는 시간에는 이러한 세대에 이미 개체가 포함되어 있습니다. 1세대와 2세대는 가비지 수집기에서 생성되는 더미 개체를 제외하고 일반적으로 비어 있습니다. 더미 개체의 크기는 CLR의 32 비트 구현에서 12 바이트이 고, 64 비트 구현에서는 크기가 더 큽니다. 네이티브 이미지 생성기 (NGen.exe)에서 생성 된 모듈 내에 있는 2 세대 범위가 표시 될 수도 있습니다. 이 경우 2 세대의 개체는 *고정 개체* 입니다 .이 개체는 가비지 수집기가 아닌 NGen.exe 실행 될 때 할당 됩니다.  
   
  이 함수는 호출자 할당 버퍼를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -62,7 +66,7 @@ HRESULT GetGenerationBounds(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

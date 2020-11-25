@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 26b345567699c5780827ed835cff13069ea8f609
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490720"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702747"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 메서드
+
 지정 된 MethodDef 또는 MemberRef 토큰과 연결 된 MethodSpec 토큰 배열의 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT EnumMethodSpecs (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터 `rMethodSpecs` 입니다.  
   
@@ -57,19 +59,20 @@ HRESULT EnumMethodSpecs (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`성공적으로 반환 되었습니다.|  
-|`S_FALSE`|`phEnum`에는 멤버 요소가 없습니다. 이 경우 `pcMethodSpecs` 은 0 (영)으로 설정 됩니다.|  
+|`S_OK`|`EnumMethodSpecs` 성공적으로 반환 되었습니다.|  
+|`S_FALSE`|`phEnum` 에는 멤버 요소가 없습니다. 이 경우 `pcMethodSpecs` 은 0 (영)으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)

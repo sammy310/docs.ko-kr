@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca427439f03d92b20e7714b9724d90b240e9cecb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616556"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704073"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 함수
+
 지정 된 매니페스트 및 기타 응용 프로그램 데이터를 사용 하 여 지정 된 네트워크 경로에서 응용 프로그램을 시작 합니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -42,6 +43,7 @@ HRESULT CorLaunchApplication (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwClickOnceHost`  
  진행 응용 프로그램을 시작 하는 호스트의 유형을 지정 하는 [HOST_TYPE](host-type-enumeration.md) 열거형의 값입니다.  
   
@@ -64,14 +66,15 @@ HRESULT CorLaunchApplication (
  제한이 응용 프로그램이 로드 된 프로세스에 대 한 정보에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e81816ce2194c2c1862cb997ad2c6e5baf301231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704005"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 메서드
+
 <xref:System.Type>지정 된 메서드를 구현 하는 및 해당 메서드를 선언 하는 인터페이스에 대 한 메타 데이터 토큰에 대 한 포인터를 가져옵니다.
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT GetInterfaceImplProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `iiImpl`  
  진행 클래스 및 인터페이스 토큰을 반환할 메서드를 나타내는 메타 데이터 토큰입니다.  
   
@@ -70,18 +72,19 @@ HRESULT GetInterfaceImplProps (
 - 하위 3 바이트는 행 번호 또는 RID를 보유 합니다.
 - 상위 바이트는 토큰 유형 – 0x09를 보유 `mdtInterfaceImpl` 합니다.
 
-`GetInterfaceImplProps`인수에 제공 하는 토큰을 포함 하는 행에 저장 된 정보를 반환 합니다 `iImpl` .
+`GetInterfaceImplProps` 인수에 제공 하는 토큰을 포함 하는 행에 저장 된 정보를 반환 합니다 `iImpl` .
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

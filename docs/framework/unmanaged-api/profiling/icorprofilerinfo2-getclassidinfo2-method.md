@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-ms.openlocfilehash: a33e51969dc0579d976f08470ebc6e2bcca04dd7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4b018a329396e0be684c999a33d4ef7c3518cb1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497168"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703908"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 메서드
+
 지정 된 클래스의 개방형 제네릭 정의, `ClassID` 부모 클래스의 및 `ClassID` 클래스의 각 형식 인수 (있는 경우)에 대 한 부모 모듈 및 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT GetClassIDInfo2(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `classId`  
  [in] 정보가 검색되는 클래스의 ID입니다.  
   
@@ -61,6 +63,7 @@ HRESULT GetClassIDInfo2(
  [out] 각각 클래스의 형식 인수 ID를 나타내는 `ClassID` 값의 배열입니다. 메서드가 반환되면 `typeArgs`에 사용 가능한 `ClassID` 값이 일부 또는 모두 포함됩니다.  
   
 ## <a name="remarks"></a>설명  
+
  `GetClassIDInfo2`메서드는 [ICorProfilerInfo:: GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) 메서드와 유사 하지만 `GetClassIDInfo2` 제네릭 형식에 대 한 추가 정보를 가져옵니다.  
   
  프로파일러 코드는 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) 를 호출 하 여 지정 된 모듈에 대 한 [메타 데이터](../metadata/index.md) 인터페이스를 가져올 수 있습니다. 그런 다음 `pTypeDefToken`에서 참조된 위치로 반환되는 메타데이터 토큰을 사용하여 클래스에 대한 메타데이터에 액세스할 수 있습니다.  
@@ -70,6 +73,7 @@ HRESULT GetClassIDInfo2(
  또는 길이가 0인 `typeArgs` 버퍼로 `GetClassIDInfo2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 `typeArgs` 버퍼 크기를 `pcNumTypeArgs`에 반환된 값으로 설정하고 `GetClassIDInfo2`를 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -78,7 +82,7 @@ HRESULT GetClassIDInfo2(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

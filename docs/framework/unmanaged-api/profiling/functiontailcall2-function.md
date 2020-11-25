@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500574"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703982"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 함수
+
 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 스택 프레임에 대 한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -51,6 +52,7 @@ void __stdcall FunctionTailcall2 (
   프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.
 
 ## <a name="remarks"></a>설명  
+
  마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, 마무리 호출의 대상인 함수에 대해 [FunctionLeave2](functionleave2-function.md) 콜백이 실행 되지 않습니다.  
   
  `func` `FunctionTailcall2` 값이 변경 되거나 제거 될 수 있으므로 함수가 반환 된 후에는 매개 변수 값이 유효 하지 않습니다.  
@@ -68,6 +70,7 @@ void __stdcall FunctionTailcall2 (
  또한 함수는 관리 `FunctionTailcall2` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
@@ -76,7 +79,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

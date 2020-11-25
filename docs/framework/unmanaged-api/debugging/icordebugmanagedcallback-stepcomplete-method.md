@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: 89b010706222ad44bccabd94191c42a888584944
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8de0858abe7db9ae1225f449083e417e13507b3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212661"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703044"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete 메서드
+
 단계가 완료 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT StepComplete (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAppDomain`  
  진행 단계가 완료 된 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
@@ -50,9 +52,11 @@ HRESULT StepComplete (
  진행 개별 단계의 결과를 나타내는 CorDebugStepReason 열거형의 값입니다.  
   
 ## <a name="remarks"></a>설명  
+
  디버깅이 종료 되는 경우를 제외 하 고 원하는 경우 스텝 퍼를 사용 하 여 단계별 실행을 계속할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -61,6 +65,6 @@ HRESULT StepComplete (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

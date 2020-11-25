@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: bc7f1740d666211b63cd93e6f1c0e6955f61ec5d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 52c35b3bd726d4c83c6745bf99940faa44ea7338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702852"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum 메서드
+
 지정한 열거자를 지정한 위치로 다시 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT ResetEnum (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hEnum`  
  진행 다시 설정할 열거자입니다.  
   
@@ -42,15 +44,16 @@ HRESULT ResetEnum (
  진행 열거자를 배치할 새 위치입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

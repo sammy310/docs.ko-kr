@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 4c867a9e263f022fc6f8d90a883562e2560ad1b2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0777797870a707c0d0f00bc0b4c986448118231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702396"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount 메서드
+
 컬렉션에 있는 고정 된 개체의 총 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,12 +35,14 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pcelt`  
  제한이 컬렉션의 고정 된 개체 수에 대 한 포인터입니다.  
   
  이 메서드는 .NET Framework 버전 3.5 SP1 (서비스 팩 1) 이상 버전에서 항상 0을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -48,6 +51,6 @@ HRESULT GetCount (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerObjectEnum 인터페이스](icorprofilerobjectenum-interface.md)
