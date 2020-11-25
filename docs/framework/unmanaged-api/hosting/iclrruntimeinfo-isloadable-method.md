@@ -15,51 +15,56 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: a1cd169fc4be5b1dd3ab1a83f4ad143ba2e2442b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2236e815211168d8e7105375b75f30128f7f209a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714973"
 ---
-# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="65636-102">ICLRRuntimeInfo::IsLoadable 메서드</span><span class="sxs-lookup"><span data-stu-id="65636-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
-<span data-ttu-id="65636-103">프로세스에 이미 로드 되어 있을 수 있는 다른 런타임을 고려 하 여이 인터페이스와 연결 된 런타임을 현재 프로세스에 로드할 수 있는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="65636-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
+# <a name="iclrruntimeinfoisloadable-method"></a><span data-ttu-id="7efe1-102">ICLRRuntimeInfo::IsLoadable 메서드</span><span class="sxs-lookup"><span data-stu-id="7efe1-102">ICLRRuntimeInfo::IsLoadable Method</span></span>
+
+<span data-ttu-id="7efe1-103">프로세스에 이미 로드 되어 있을 수 있는 다른 런타임을 고려 하 여이 인터페이스와 연결 된 런타임을 현재 프로세스에 로드할 수 있는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-103">Indicates whether the runtime associated with this interface can be loaded into the current process, taking into account other runtimes that might already be loaded into the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65636-104">구문</span><span class="sxs-lookup"><span data-stu-id="65636-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7efe1-104">구문</span><span class="sxs-lookup"><span data-stu-id="7efe1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsLoadable(  
         [out, retval] BOOL *pbLoadable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="65636-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="65636-105">Parameters</span></span>  
- `pbLoadable`  
- <span data-ttu-id="65636-106">[out] `true` 이 런타임을 현재 프로세스로 로드할 수 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.</span><span class="sxs-lookup"><span data-stu-id="65636-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="65636-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="65636-107">Return Value</span></span>  
- <span data-ttu-id="65636-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="65636-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
-  
-|<span data-ttu-id="65636-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="65636-109">HRESULT</span></span>|<span data-ttu-id="65636-110">Description</span><span class="sxs-lookup"><span data-stu-id="65636-110">Description</span></span>|  
-|-------------|-----------------|  
-|<span data-ttu-id="65636-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="65636-111">S_OK</span></span>|<span data-ttu-id="65636-112">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="65636-112">The method completed successfully.</span></span>|  
-|<span data-ttu-id="65636-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="65636-113">E_POINTER</span></span>|<span data-ttu-id="65636-114">`pbLoadable`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="65636-114">`pbLoadable` is null.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="65636-115">설명</span><span class="sxs-lookup"><span data-stu-id="65636-115">Remarks</span></span>  
- <span data-ttu-id="65636-116">다른 런타임이 이미 프로세스에 로드 되었으며이 인터페이스와 연결 된 런타임을 in-process side-by-side 실행에 대해 로드할 수 있는 경우는을 `pbLoadable` 반환 `true` 합니다.</span><span class="sxs-lookup"><span data-stu-id="65636-116">If another runtime is already loaded into the process, and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="65636-117">두 런타임을 함께 실행할 수 없는 경우는를 `pbLoadable` 반환 `false` 합니다.</span><span class="sxs-lookup"><span data-stu-id="65636-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="65636-118">예를 들어 clr (공용 언어 런타임) 버전 4는 CLR 버전 2.0 또는 CLR 버전 1.1과 동일한 프로세스에서 함께 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65636-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="65636-119">그러나 CLR 버전 1.1 및 CLR 버전 2.0는 side-by-side로 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="65636-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
-  
- <span data-ttu-id="65636-120">프로세스에 로드 된 런타임이 없으면이 메서드는 항상를 반환 `true` 합니다.</span><span class="sxs-lookup"><span data-stu-id="65636-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="65636-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="65636-121">Requirements</span></span>  
- <span data-ttu-id="65636-122">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="65636-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="65636-123">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="65636-123">**Header:** MetaHost.h</span></span>  
-  
- <span data-ttu-id="65636-124">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="65636-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="65636-125">**.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65636-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="65636-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="65636-126">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="7efe1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7efe1-105">Parameters</span></span>  
 
-- [<span data-ttu-id="65636-127">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="65636-127">ICLRRuntimeInfo Interface</span></span>](iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="65636-128">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="65636-128">Hosting Interfaces</span></span>](hosting-interfaces.md)
-- [<span data-ttu-id="65636-129">호스팅</span><span class="sxs-lookup"><span data-stu-id="65636-129">Hosting</span></span>](index.md)
+ `pbLoadable`  
+ <span data-ttu-id="7efe1-106">[out] `true` 이 런타임을 현재 프로세스로 로드할 수 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-106">[out] `true` if this runtime could be loaded into the current process; otherwise, `false`.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="7efe1-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="7efe1-107">Return Value</span></span>  
+
+ <span data-ttu-id="7efe1-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+  
+|<span data-ttu-id="7efe1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7efe1-109">HRESULT</span></span>|<span data-ttu-id="7efe1-110">설명</span><span class="sxs-lookup"><span data-stu-id="7efe1-110">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="7efe1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7efe1-111">S_OK</span></span>|<span data-ttu-id="7efe1-112">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-112">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7efe1-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="7efe1-113">E_POINTER</span></span>|<span data-ttu-id="7efe1-114">`pbLoadable`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-114">`pbLoadable` is null.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="7efe1-115">설명</span><span class="sxs-lookup"><span data-stu-id="7efe1-115">Remarks</span></span>  
+
+ <span data-ttu-id="7efe1-116">다른 런타임이 이미 프로세스에 로드 되었으며이 인터페이스와 연결 된 런타임을 in-process side-by-side 실행에 대해 로드할 수 있는 경우는을 `pbLoadable` 반환 `true` 합니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-116">If another runtime is already loaded into the process, and the runtime associated with this interface can be loaded for in-process side-by-side execution, `pbLoadable` returns `true`.</span></span> <span data-ttu-id="7efe1-117">두 런타임을 함께 실행할 수 없는 경우는를 `pbLoadable` 반환 `false` 합니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-117">If the two runtimes cannot run side-by-side in-process, `pbLoadable` returns `false`.</span></span> <span data-ttu-id="7efe1-118">예를 들어 clr (공용 언어 런타임) 버전 4는 CLR 버전 2.0 또는 CLR 버전 1.1과 동일한 프로세스에서 함께 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-118">For example, the common language runtime (CLR) version 4 can run side-by-side in the same process with CLR version 2.0 or CLR version 1.1.</span></span> <span data-ttu-id="7efe1-119">그러나 CLR 버전 1.1 및 CLR 버전 2.0는 side-by-side로 실행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-119">However, CLR version 1.1 and CLR version 2.0 cannot run side-by-side in-process.</span></span>  
+  
+ <span data-ttu-id="7efe1-120">프로세스에 로드 된 런타임이 없으면이 메서드는 항상를 반환 `true` 합니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-120">If no runtimes are loaded into the process, this method always returns `true`.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="7efe1-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7efe1-121">Requirements</span></span>  
+
+ <span data-ttu-id="7efe1-122">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7efe1-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="7efe1-123">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="7efe1-123">**Header:** MetaHost.h</span></span>  
+  
+ <span data-ttu-id="7efe1-124">**라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7efe1-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="7efe1-125">**.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7efe1-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7efe1-126">참조</span><span class="sxs-lookup"><span data-stu-id="7efe1-126">See also</span></span>
+
+- [<span data-ttu-id="7efe1-127">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7efe1-127">ICLRRuntimeInfo Interface</span></span>](iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="7efe1-128">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7efe1-128">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="7efe1-129">호스팅</span><span class="sxs-lookup"><span data-stu-id="7efe1-129">Hosting</span></span>](index.md)
