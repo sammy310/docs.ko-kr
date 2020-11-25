@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 9dc764492e1ac565c51d49d07e6566295bb76bc1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 03fa44c1fed219b50cf1a8d22b2c9f79947f4976
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821036"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706660"
 ---
 # <a name="framework-design-guidelines"></a>프레임워크 디자인 지침
+
 이 섹션에서는 .NET Framework를 확장 하 고 상호 작용 하는 라이브러리를 디자인 하기 위한 지침을 제공 합니다. 개발에 사용 되는 프로그래밍 언어와 독립적인 통합 프로그래밍 모델을 제공 하 여 라이브러리 디자이너가 API 일관성과 사용 편의성을 보장할 수 있도록 돕는 것이 목표입니다. .NET Framework를 확장 하는 클래스 및 구성 요소를 개발 하는 경우 이러한 디자인 지침을 따르는 것이 좋습니다. 일관 되지 않은 라이브러리 디자인은 개발자 생산성에 영향을 주지 않고 채택을 유지 하지 않습니다.  
   
  지침은,, 및 라는 용어가 접두사로 추가 된 간단한 권장 사항으로 구성 됩니다 `Do` `Consider` `Avoid` `Do not` . 이러한 지침은 클래스 라이브러리 디자이너가 서로 다른 솔루션 간의 장단점을 이해 하는 데 도움을 주기 위해 작성 되었습니다. 적절 한 라이브러리 디자인에서 이러한 디자인 지침을 위반 해야 하는 경우가 있을 수 있습니다. 이러한 경우는 드물게 발생 하 고 결정에 대 한 분명 하 고 매력적인 이유가 있어야 합니다.  
@@ -23,6 +24,7 @@ ms.locfileid: "94821036"
  이러한 지침은 설명서 *프레임 워크 디자인 지침에서 발췌 한 것. 다시 사용할 수 있는 .Net 라이브러리에 대 한 규칙, 관용구, 패턴*, Krzysztof Cwalina 및 Brad abrams 성, 두 번째 버전입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [명명 지침](naming-guidelines.md)  
  클래스 라이브러리에서 어셈블리, 네임 스페이스, 형식 및 멤버의 이름을 지정 하는 방법에 대 한 지침을 제공 합니다.  
   

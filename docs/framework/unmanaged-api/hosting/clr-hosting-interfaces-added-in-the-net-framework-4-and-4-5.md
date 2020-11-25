@@ -6,14 +6,15 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: a524c0b0e01fbde95ce2341874511960b3e5738e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6ee3b8cdf348a5eade3903e2d26b4f9b93886305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706816"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
+
 이 섹션에서는 관리 되지 않는 호스트가 .NET Framework 4, .NET Framework 4.5 이상 버전의 CLR (공용 언어 런타임)을 해당 응용 프로그램에 통합 하는 데 사용할 수 있는 인터페이스에 대해 설명 합니다. 이러한 인터페이스는 호스트에서 런타임을 구성 하 고 프로세스로 로드 하는 메서드를 제공 합니다.  
   
  .NET Framework 4부터 모든 호스팅 인터페이스에는 다음과 같은 특징이 있습니다.  
@@ -25,6 +26,7 @@ ms.locfileid: "83616855"
 - [CoCreateInstance 함수](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)를 사용 하는 아파트 모델, 집계 또는 레지스트리 활성화는 없습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ICLRAppDomainResourceMonitor 인터페이스](iclrappdomainresourcemonitor-interface.md)  
  응용 프로그램 도메인의 메모리 및 CPU 사용량을 검사 하는 메서드를 제공 합니다.  
   
@@ -53,6 +55,7 @@ ms.locfileid: "83616855"
  는 [ICLRTask 인터페이스](iclrtask-interface.md)의 모든 기능을 제공 합니다. 또한는 현재 스레드에서 스레드 중단이 지연 될 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1과 함께 제공 되는 호스팅 인터페이스에 대해 설명 합니다.  
   

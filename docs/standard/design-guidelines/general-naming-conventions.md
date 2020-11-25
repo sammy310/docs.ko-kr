@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706712"
 ---
 # <a name="general-naming-conventions"></a>일반 명명 규칙
 
 이 섹션에서는 단어 선택, 약어 및 머리글자어 사용에 대 한 지침, 언어별 이름 사용을 방지 하는 방법에 대 한 권장 사항을 설명 하는 일반적인 명명 규칙을 설명 합니다.
 
 ## <a name="word-choice"></a>단어 선택
+
  쉽게 읽을 수 있는 식별자 이름을 선택 ✔️ 합니다.
 
  예를 들어 라는 속성 `HorizontalAlignment` 은 보다 영어에서 읽을 수 `AlignmentHorizontal` 있습니다.
@@ -43,6 +44,7 @@ ms.locfileid: "94821101"
  CLS (공용 언어 사양)의 규칙 4에 따라 모든 규격 언어는 해당 언어의 키워드를 식별자로 사용 하는 명명 된 항목에 대 한 액세스를 허용 하는 메커니즘을 제공 해야 합니다. 예를 들어 c #에서는이 경우 이스케이프 메커니즘으로 @ 기호를 사용 합니다. 그러나 이스케이프 시퀀스가 없는 메서드를 사용 하는 것은 훨씬 더 어렵기 때문에 일반적인 키워드를 사용 하지 않는 것이 좋습니다.
 
 ## <a name="using-abbreviations-and-acronyms"></a>약어 및 머리글자어 사용
+
  ❌ 식별자 이름의 일부로 약어 또는 축약를 사용 하지 마십시오.
 
  예를 들어 대신를 사용 `GetWindow` `GetWin` 합니다.
@@ -50,6 +52,7 @@ ms.locfileid: "94821101"
  ❌ 광범위 하 게 허용 되지 않는 머리글자어를 사용 하 고, 필요한 경우에만 사용 하지 마십시오.
 
 ## <a name="avoiding-language-specific-names"></a>Language-Specific 이름 방지
+
  ✔️ 형식 이름에 대해 언어별 키워드 대신 의미 있는 이름을 사용 합니다.
 
  예를 들어 `GetLength` 는 보다 더 나은 이름입니다 `GetInt` .
@@ -78,6 +81,7 @@ ms.locfileid: "94821101"
  `value` `item` 드문 경우 이지만 식별자에 의미 체계가 없고 매개 변수의 형식이 중요 하지 않은 경우에는 형식 이름을 반복 하는 대신 또는와 같은 일반 이름을 사용 ✔️ 합니다.
 
 ## <a name="naming-new-versions-of-existing-apis"></a>새 버전의 기존 Api 이름 지정
+
  기존 api의 새 버전을 만들 때 이전 API와 유사한 이름을 사용 ✔️ 합니다.
 
  이렇게 하면 Api 간의 관계를 강조 표시 하는 데 도움이 됩니다.
@@ -98,7 +102,7 @@ ms.locfileid: "94821101"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임워크 디자인 지침](index.md)
 - [명명 지침](naming-guidelines.md)

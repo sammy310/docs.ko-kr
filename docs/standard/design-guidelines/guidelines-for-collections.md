@@ -2,14 +2,15 @@
 title: 컬렉션에 대한 지침
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821088"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706673"
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
+
 몇 가지 공통적인 특징이 있는 개체 그룹을 조작 하도록 특별히 디자인 된 모든 형식은 컬렉션으로 간주할 수 있습니다. 이러한 형식이 또는를 구현 하는 경우에는 거의 항상 적절 <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> 합니다. 따라서이 섹션에서는 해당 인터페이스 중 하나 또는 둘 다를 구현 하는 형식만 컬렉션으로 간주 합니다.
 
  ❌ 공용 Api에서 약하게 형식화 된 컬렉션을 사용 하지 마세요.
@@ -31,6 +32,7 @@ ms.locfileid: "94821088"
  ❌`IEnumerator<T>`같은 형식에서 및를 둘 다 구현 하지 마십시오 `IEnumerable<T>` . 이는 제네릭이 아닌 인터페이스 및에도 적용 됩니다 `IEnumerator` `IEnumerable` .
 
 ## <a name="collection-parameters"></a>컬렉션 매개 변수
+
  ✔️ 매개 변수 형식으로 사용할 수 있는 최소 특수화 된 형식을 사용 합니다. 컬렉션을 매개 변수로 사용 하는 대부분의 멤버는 인터페이스를 사용 `IEnumerable<T>` 합니다.
 
  ❌ 속성에 <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> 액세스 하기 위해 또는를 매개 변수로 사용 하지 마십시오 `Count` .
@@ -38,6 +40,7 @@ ms.locfileid: "94821088"
  대신 `IEnumerable<T>` 또는를 사용 하 `IEnumerable` 고 개체가 또는를 구현 하는지 여부를 동적으로 확인 하는 것이 좋습니다 `ICollection<T>` `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>컬렉션 속성 및 반환 값
+
  ❌ 설정 가능한 컬렉션 속성을 제공 하지 마십시오.
 
  사용자는 컬렉션을 먼저 지운 다음 새 내용을 추가 하 여 컬렉션의 콘텐츠를 바꿀 수 있습니다. 전체 컬렉션을 바꾸는 것이 일반적인 시나리오 인 경우 컬렉션에 메서드를 제공 하는 것이 좋습니다 `AddRange` .
@@ -69,6 +72,7 @@ ms.locfileid: "94821088"
  일반 규칙은 null 및 비어 있는 (0 개 항목) 컬렉션 또는 배열을 동일 하 게 처리 해야 한다는 것입니다.
 
 ### <a name="snapshots-versus-live-collections"></a>스냅숏과 라이브 컬렉션 비교
+
  특정 시점의 상태를 나타내는 컬렉션을 스냅숏 컬렉션 이라고 합니다. 예를 들어 데이터베이스 쿼리에서 반환 된 행을 포함 하는 컬렉션은 스냅숏이 됩니다. 항상 현재 상태를 나타내는 컬렉션을 라이브 컬렉션 이라고 합니다. 예를 들어 항목 컬렉션은 `ComboBox` 라이브 컬렉션입니다.
 
  ❌ 속성에서 스냅숏 컬렉션을 반환 하지 않습니다. 속성은 라이브 컬렉션을 반환 해야 합니다.
@@ -80,6 +84,7 @@ ms.locfileid: "94821088"
  일반적으로 공유 리소스를 나타내는 모든 컬렉션 (예: 디렉터리의 파일)은 일시적입니다. 구현이 단순히 전방 전용 열거자 인 경우를 제외 하 고 이러한 컬렉션을 라이브 컬렉션으로 구현 하는 것은 매우 어렵거나 불가능 합니다.
 
 ## <a name="choosing-between-arrays-and-collections"></a>배열 및 컬렉션 중에서 선택
+
  ✔️ 배열에 대 한 컬렉션을 선호 합니다.
 
  컬렉션은 내용에 대 한 제어를 강화 하 고, 시간이 지남에 따라 진화 하 고, 더 사용할 수 있습니다. 또한 읽기 전용 시나리오에 배열을 사용 하지 않는 것이 좋습니다. 배열을 복제 하는 비용이 너무 높을 수 있기 때문입니다. 유용성 연구에서는 일부 개발자가 컬렉션 기반 Api를 사용 하는 것이 더 편안 하다는 것을 보여 줍니다.
@@ -93,6 +98,7 @@ ms.locfileid: "94821088"
  ❌ 속성 getter가 호출 될 때마다 속성이 새 배열 (예: 내부 배열 복사본)을 반환 해야 하는 경우에는 속성에 배열을 사용 하지 마세요.
 
 ## <a name="implementing-custom-collections"></a>사용자 지정 컬렉션 구현
+
  `Collection<T>` `ReadOnlyCollection<T>` 새 컬렉션을 디자인할 때, 또는에서 상속 하는 것을 고려 ✔️ `KeyedCollection<TKey,TItem>` .
 
  `IEnumerable<T>`새 컬렉션을 디자인할 때 ✔️ 구현 합니다. 구현을 고려 `ICollection<T>` 하거나 `IList<T>` 적합 한 위치에도 고려 합니다.
@@ -106,6 +112,7 @@ ms.locfileid: "94821088"
  ❌ 과 같은 제네릭이 아닌 기본 컬렉션에서 상속 하지 마십시오 `CollectionBase` . 대신 `Collection<T>`, `ReadOnlyCollection<T>` 및 `KeyedCollection<TKey,TItem>`를 사용해야 합니다.
 
 ### <a name="naming-custom-collections"></a>사용자 지정 컬렉션 이름 지정
+
  컬렉션 (를 구현 하는 형식 `IEnumerable` )은 주로 (1) 구조 관련 작업을 포함 하는 새 데이터 구조를 만들고 기존 데이터 구조 (예:,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) 및 (2) 특정 항목 집합을 포함 하는 특수 한 컬렉션을 만들기  <xref:System.Collections.Specialized.StringCollection> (예:) 하는 데 사용 됩니다. 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 주로 사용 됩니다. 특수 컬렉션은 주로 Api (속성 및 매개 변수 형식)로 노출 됩니다.
 
  ✔️은 또는을 구현 하는 추상화 이름에 "Dictionary" 접미사를 사용 `IDictionary` `IDictionary<TKey,TValue>` 합니다.
@@ -126,7 +133,7 @@ ms.locfileid: "94821088"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [사용 지침](usage-guidelines.md)

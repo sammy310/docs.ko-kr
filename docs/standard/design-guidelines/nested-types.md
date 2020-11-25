@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820815"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706400"
 ---
 # <a name="nested-types"></a>중첩 형식
+
 중첩 형식은 바깥쪽 형식 이라고 하는 다른 형식의 범위 내에 정의 된 형식입니다. 중첩 형식에는 바깥쪽 형식의 모든 멤버에 대 한 액세스 권한이 있습니다. 예를 들어 바깥쪽 형식에 정의 된 private 필드와 바깥쪽 형식의 모든 상위 항목에 정의 된 보호 된 필드에 액세스할 수 있습니다.
 
  일반적으로 중첩 형식은 자주 사용 해야 합니다. 여기에는 여러 가지 이유가 있습니다. 일부 개발자는 이러한 개념을 완벽 하 게 알지 못합니다. 예를 들어 이러한 개발자는 중첩 형식의 변수를 선언 하는 구문에 문제가 있을 수 있습니다. 중첩 형식은 바깥쪽 형식과 매우 긴밀 하 게 결합 되어 있으므로 범용 형식에 적합 하지 않습니다.
@@ -43,7 +44,7 @@ ms.locfileid: "94820815"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 디자인 지침](type.md)
 - [프레임 워크 디자인 지침](index.md)

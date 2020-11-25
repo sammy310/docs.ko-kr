@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706868"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant 인터페이스
+
 관리 되지 않는 상수에 대 한 액세스를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -33,8 +34,9 @@ ms.locfileid: "83441416"
 |[GetValue 메서드](isymunmanagedconstant-getvalue-method.md)| 상수의 값을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

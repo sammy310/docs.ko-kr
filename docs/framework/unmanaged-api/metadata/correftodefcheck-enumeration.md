@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-ms.openlocfilehash: ce6f5993b9c1aeb63e121b3567ee468cea1c9318
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e7ce604acddb88d5a15844cbce2622b21e364cc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007522"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706114"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 열거형
+
 코드를 최적화하기 위해 해당 정의로 변환되는 참조된 항목을 제어하는 플래그를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,12 +48,13 @@ typedef enum CorRefToDefCheck {
 |`MDMemberRefToDef`|멤버 참조만 정의로 변환 하도록 지정 합니다. 즉, 멤버 참조는 메서드 정의 또는 필드 정의 중 하나로 변환 되어야 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

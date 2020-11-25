@@ -8,14 +8,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: 16e84f06ec388fe7e3c221f35c3e970b9b483ba5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe8bf23a04e6684564d3d7e287c2a009e0817732
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820971"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706634"
 ---
 # <a name="member-overloading"></a>멤버 오버로드
+
 멤버 오버 로드는 매개 변수의 개수나 형식만 다르고 이름이 동일한 동일한 형식으로 둘 이상의 멤버를 만드는 것을 의미 합니다. 예를 들어, 다음에서 메서드는 `WriteLine` 오버 로드 됩니다.
 
 ```csharp
@@ -55,7 +56,7 @@ public static class Console {
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](member.md)
 - [프레임 워크 디자인 지침](index.md)

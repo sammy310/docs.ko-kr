@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706140"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 열거형
+
 PInvoke 호출에 대 한 옵션을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -78,9 +79,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|예약되어 있습니다.|  
 |`pmThrowOnUnmappableCharEnabled`|Interop 마샬러에서 매핑할 때 매핑할 문자가 없으면 예외를 throw 합니다.|  
 |`pmThrowOnUnmappableCharDisabled`|Interop 마샬러가 매핑할 수 없는 문자를 발견 한 경우 예외를 throw 하지 않습니다.|  
-|`pmThrowOnUnmappableCharMask`|Reserved|  
+|`pmThrowOnUnmappableCharMask`|예약됨|  
 |`pmSupportsLastError`|특성화 된 메서드에서 반환 하기 전에 호출 수신자가 Win32 함수를 호출할 수 있도록 허용 `SetLastError` 합니다.|  
-|`pmCallConvMask`|Reserved|  
+|`pmCallConvMask`|예약됨|  
 |`pmCallConvWinapi`|기본 플랫폼 호출 규칙을 사용 합니다. 예를 들어 Windows에서 기본값은이 `StdCall` 고 Windows CE .net의 경우입니다 `Cdecl` .|  
 |`pmCallConvCdecl`|`Cdecl`호출 규칙을 사용 합니다. 이 경우 호출자는 스택을 정리 합니다. 이를 통해 함수를 호출할 수 있습니다 `varargs` . 즉, 매개 변수 수를 사용 하는 함수입니다.|  
 |`pmCallConvStdcall`|`StdCall`호출 규칙을 사용 합니다. 이 경우 호출 수신자는 스택을 정리 합니다. 이는 플랫폼 호출을 사용하여 관리되지 않는 함수를 호출하는 기본 규칙입니다.|  
@@ -89,12 +90,13 @@ typedef enum  CorPinvokeMap {
 |`pmMaxValue`|예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)
