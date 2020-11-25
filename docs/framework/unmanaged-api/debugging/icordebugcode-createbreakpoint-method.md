@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-ms.openlocfilehash: 40582b1289875d5151ea96e3153c6e4760737e84
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ade428ce001a6b40e2fed67f4f23b12cef5ea30f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717658"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint 메서드
+
 이 코드 세그먼트에서 지정 된 오프셋에 중단점을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `offset`  
  진행 중단점을 만들 오프셋입니다.  
   
@@ -42,11 +44,13 @@ HRESULT CreateBreakpoint (
  제한이 중단점을 나타내는 "ICorDebugFunctionBreakpoint" 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  중단점이 활성화 되기 전에 프로세스 개체에 추가 되어야 합니다.  
   
  이 코드가 MSIL (Microsoft 중간 언어) 코드이 고 JIT (just-in-time) 컴파일된 네이티브 버전의 코드가 있는 경우, 중단점이 JIT 컴파일된 코드에도 적용 됩니다. 코드는 나중에 JIT로 컴파일되는 경우에도 마찬가지입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

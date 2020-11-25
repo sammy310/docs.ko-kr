@@ -14,30 +14,32 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22fcdb834f84bb3a9304e22a4b45ebb340f3590f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719881"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum 인터페이스
-`IAssemblyName` 개체의 배열에 대 한 열거자를 나타냅니다.  
+
+개체의 배열에 대 한 열거자를 나타냅니다 `IAssemblyName` .  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Clone 메서드](iassemblyenum-clone-method.md)|이 `IAssemblyEnum` 개체의 단순 복사본을 만듭니다.|  
-|[GetNextAssembly 메서드](iassemblyenum-getnextassembly-method.md)|이 `IAssemblyEnum` 개체에 포함 된 다음 `IAssemblyName`에 대 한 포인터를 가져옵니다.|  
+|[Clone 메서드](iassemblyenum-clone-method.md)|이 개체의 단순 복사본을 만듭니다 `IAssemblyEnum` .|  
+|[GetNextAssembly 메서드](iassemblyenum-getnextassembly-method.md)|`IAssemblyName`이 개체에 포함 된 다음에 대 한 포인터를 가져옵니다 `IAssemblyEnum` .|  
 |[Reset 메서드](iassemblyenum-reset-method.md)|이 `IAssemblyEnum` 개체를 시작 위치로 다시 설정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

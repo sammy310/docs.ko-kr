@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c796e3782a498c798c9b47f028ef05c2de00f54d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893794"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717671"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress 메서드
+
 이 "ICorDebugCode" 인터페이스가 나타내는 코드 세그먼트의 RVA (상대 가상 주소)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pStart`  
  제한이 코드 세그먼트의 RVA에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

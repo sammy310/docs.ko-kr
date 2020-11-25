@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007925"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718971"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
+
 특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -80,17 +81,19 @@ typedef enum CorAttributeTargets
 |`catClassMembers`|클래스의 멤버에 특성을 적용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `CorAttributeTargets`열거형 값을 비트 or 연산으로 결합 하 여 기본 조합을 가져올 수 있습니다.  
   
  는 `CorAttributeTargets` 관리 되는 열거형과 유사 합니다 <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

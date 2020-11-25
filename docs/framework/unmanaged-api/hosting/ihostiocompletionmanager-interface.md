@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719595"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 인터페이스
+
 CLR (공용 언어 런타임)이 호스트에서 제공 하는 i/o 완료 포트와 상호 작용할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[Bind 메서드](ihostiocompletionmanager-bind-method.md)|I/o 완료 포트에 핸들을 바인딩합니다.|  
 |[CloseIoCompletionPort 메서드](ihostiocompletionmanager-closeiocompletionport-method.md)|에 대 한 이전 호출을 통해 만든 포트를 닫습니다 `CreateIoCompletionPort` .|  
@@ -41,17 +42,19 @@ CLR (공용 언어 런타임)이 호스트에서 제공 하는 i/o 완료 포트
 |[SetMinThreads 메서드](ihostiocompletionmanager-setminthreads-method.md)|호스트에서 i/o 완료에 대해 할당할 최소 스레드 수를 설정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `IHostIoCompletionManager``ICLRIoCompletionManager`는 CLR에서 구현 하는 인터페이스에 해당 합니다. CLR은의 메서드를 호출 `IHostIoCompletionManager` 하 여 호스트에서 제공 하는 포트에 핸들을 바인딩하고 호스트는의 메서드를 호출 하 여 `ICLRIoCompletionManager` i/o 요청 완료를 보고 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)

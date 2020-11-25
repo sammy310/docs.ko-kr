@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-ms.openlocfilehash: a308017dc80dd973cbf108ba9df824193775f5ff
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3058229a3c2b3c529136dad70fea35a23708a33
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718659"
 ---
 # <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE 열거형
+
 코드에서 방금 시작되거나 끝난 예외 절 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,6 +46,7 @@ typedef enum {
 |`COR_PRF_CLAUSE_FINALLY`|Exception 절은 `finally` 문입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -53,6 +55,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](profiling-enumerations.md)

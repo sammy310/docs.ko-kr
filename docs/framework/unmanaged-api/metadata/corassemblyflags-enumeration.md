@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 615c4ac95ab777e8081e630cafb6671e64dea78a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718997"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 열거형
+
 어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -77,12 +78,13 @@ typedef enum CorAssemblyFlags {
 |`afContentType_WindowsRuntime`|Windows 런타임 내용 유형을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

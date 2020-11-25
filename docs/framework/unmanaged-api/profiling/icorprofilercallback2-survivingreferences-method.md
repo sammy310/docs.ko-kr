@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: 3681106bca94f1fefb2f24a1aa4254eb2b1b0531
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b2b0af36f84bd6623792fe0a987eaf40f2717f46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718191"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences 메서드
+
 비압축 가비지 수집의 결과로 힙에 있는 개체의 레이아웃을 보고합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT SurvivingReferences(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cSurvivingObjectIDRanges`  
  [in] 비압축 가비지 수집 후에 유지된 연속 개체 블록 수입니다. 즉, `cSurvivingObjectIDRanges` 값은 각 개체 블록의 `ObjectID` 및 길이를 각각 저장하는 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 크기입니다.  
   
@@ -61,7 +63,7 @@ HRESULT SurvivingReferences(
   
  `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
   
- 0 <=`i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  비압축 가비지 컬렉션은 "데드" 개체가 사용한 메모리를 회수하지만 확보된 공간을 압축하지는 않습니다. 따라서 메모리가 힙에 반환되지만 "라이브" 개체는 이동되지 않습니다.  
   
@@ -70,6 +72,7 @@ HRESULT SurvivingReferences(
  제한된 내부 버퍼링, 서버 가비지 컬렉션 시 여러 스레드 보고 및 기타 이유로 인해 특정 가비지 컬렉션 중 `SurvivingReferences` 콜백을 여러 개 받을 수도 있습니다. 가비지 컬렉션 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences` 콜백에 보고된 모든 참조가 가비지 컬렉션 후에 유지됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -78,7 +81,7 @@ HRESULT SurvivingReferences(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

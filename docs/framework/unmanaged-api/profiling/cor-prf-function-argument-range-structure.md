@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 028395b1c8677d07d4a6481740ecdc7ebb48c180
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718529"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 구조체
+
 왼쪽에서 오른쪽 순서로 연속적으로 메모리에 저장한 함수 인수 블록을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,6 +42,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 |`length`|연속 블록의 길이입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
@@ -49,6 +51,6 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 구조체](profiling-structures.md)

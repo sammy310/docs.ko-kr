@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb108ed20d0fd1287cb82eb4d552206aeae15d4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8398febd17c7e77f2ad281ebeafc138fca4a47d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499729"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718035"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged 메서드
+
 스레드의 이름이 변경 되었음을 코드 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT ThreadNameChanged(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `threadId`  
  진행 스레드의 ID입니다.  
   
@@ -45,6 +47,7 @@ HRESULT ThreadNameChanged(
  진행 스레드의 새 이름입니다. 이름이 null로 종료 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -53,7 +56,7 @@ HRESULT ThreadNameChanged(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

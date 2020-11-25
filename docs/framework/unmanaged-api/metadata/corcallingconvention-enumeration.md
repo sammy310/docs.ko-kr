@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c9b20500a4a9e4649a938e00e3b059d1395da1d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007910"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718932"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 열거형
+
 관리 코드에서 수행된 호출 규칙의 형식을 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -67,12 +68,13 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|명시적 개수의 형식 인수가 있는 제네릭 메서드 시그니처를 나타냅니다. 이는 일반 매개 변수 개수 앞에 나옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

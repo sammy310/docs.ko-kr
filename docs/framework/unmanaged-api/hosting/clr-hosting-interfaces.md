@@ -6,19 +6,21 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: e6913e18a4ff6e616f357a4ef43fb8b892264943
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616842"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719049"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 호스팅 인터페이스
+
 이 섹션에서는 관리 되지 않는 호스트가 CLR (공용 언어 런타임)을 응용 프로그램에 통합 하는 데 사용할 수 있는 인터페이스에 대해 설명 합니다. 이 정보는 .NET Framework 버전 2.0 이상 버전과 관련이 있습니다. 이러한 인터페이스를 통해 호스트는 버전 1.0 및 1.1에서 제공 되는 것 보다 많은 버전의 런타임을 제어할 수 있으며 CLR과 호스트의 실행 모델 간에 훨씬 긴밀 한 통합을 제공 합니다.  
   
  .NET Framework 버전 1.0 및 1.1에서 호스팅 모델은 관리 되지 않는 호스트에서 CLR을 프로세스로 로드 하 여 특정 설정을 구성 하 고 이벤트 알림을 수신 하도록 설정 했습니다. 그러나 일반적으로 호스트와 CLR은 해당 프로세스에서 독립적으로 실행 됩니다. .NET Framework 버전 2.0 이상 버전에서는 새 추상화 계층이 호스트에서 Win32 어셈블리의 형식으로 현재 제공 된 많은 리소스를 제공 하 고 호스트가 구성할 수 있는 기능 집합을 확장할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [IActionOnCLREvent 인터페이스](iactiononclrevent-interface.md)  
  등록 된 이벤트에 대해 콜백을 수행 하는 메서드를 제공 합니다.  
   
@@ -185,6 +187,7 @@ ms.locfileid: "83616842"
  PE (이식 가능한 실행) 이미지를 확인 하 고 유효성 검사 오류를 보고 하는 메서드를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1에 제공 된 호스팅 인터페이스를 설명 하는 항목을 포함 합니다.  
   

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-ms.openlocfilehash: 40dbfc60f8bde1198fd56a4a8aeed1dd6879d1ae
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5996393fd1a0504f9c3d3f9f07aa0e3d886a0787
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795627"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719699"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 구조체
+
 원격 컴퓨터에서 실행되는 프로세스를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,7 +37,7 @@ struct  CoreClrDebugProcInfo {
 };  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -45,10 +46,11 @@ struct  CoreClrDebugProcInfo {
 |`m_wszName`|프로세스의 명령줄입니다. 이 멤버는 잘릴 수 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces  
   
- **라이브러리:** mscordbi_macx86 .dll  
+ **라이브러리:** mscordbi_macx86.dll  
   
  **.NET Framework 버전:** 3.5 SP1

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 622fdfa37c93e406950e73941775828ae4b112fa
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379430"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718295"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 인터페이스
+
 디버거에서 수행하는 코드 실행 단계를 나타내며, 명령의 실행/완료를 구분하는 식별자로 사용되고, 단계를 취소하는 방법을 제공합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -38,6 +39,7 @@ ms.locfileid: "83379430"
 |[StepRange 메서드](icordebugstepper-steprange-method.md)|이 `ICorDebugStepper` 를 통해 포함 하는 스레드를 한 단계씩 실행 하 고 지정 된 범위를 벗어난 코드에 도달 하면를 반환 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugStepper`인터페이스는 다음과 같은 용도로 사용 됩니다.  
   
 - 실행 되는 단계 명령과 해당 명령의 완료 사이에 식별자 역할을 합니다.  
@@ -54,6 +56,7 @@ ms.locfileid: "83379430"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -62,6 +65,6 @@ ms.locfileid: "83379430"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
