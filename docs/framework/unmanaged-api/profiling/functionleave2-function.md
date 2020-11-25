@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500665"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722286"
 ---
-# <a name="functionleave2-function"></a><span data-ttu-id="7ad0f-102">FunctionLeave2 함수</span><span class="sxs-lookup"><span data-stu-id="7ad0f-102">FunctionLeave2 Function</span></span>
-<span data-ttu-id="7ad0f-103">함수가 호출자에 게 반환 될 것을 프로파일러에 알리고 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
+# <a name="functionleave2-function"></a><span data-ttu-id="6d9a0-102">FunctionLeave2 함수</span><span class="sxs-lookup"><span data-stu-id="6d9a0-102">FunctionLeave2 Function</span></span>
+
+<span data-ttu-id="6d9a0-103">함수가 호출자에 게 반환 될 것을 프로파일러에 알리고 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ad0f-104">구문</span><span class="sxs-lookup"><span data-stu-id="7ad0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d9a0-104">구문</span><span class="sxs-lookup"><span data-stu-id="6d9a0-104">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionLeave2 (  
@@ -35,55 +36,57 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7ad0f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7ad0f-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="6d9a0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6d9a0-105">Parameters</span></span>
 
 - `funcId`
 
-  <span data-ttu-id="7ad0f-106">\[in] 반환 되는 함수의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-106">\[in] The identifier of the function that is returning.</span></span>
+  <span data-ttu-id="6d9a0-106">\[in] 반환 되는 함수의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-106">\[in] The identifier of the function that is returning.</span></span>
 
 - `clientData`
 
-  <span data-ttu-id="7ad0f-107">\[in] 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 통해 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-107">\[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](functionidmapper-function.md) function.</span></span>
+  <span data-ttu-id="6d9a0-107">\[in] 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 통해 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-107">\[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](functionidmapper-function.md) function.</span></span>
 
 - `func`
 
-  <span data-ttu-id="7ad0f-108">\[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-108">\[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>
+  <span data-ttu-id="6d9a0-108">\[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-108">\[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>
 
-  <span data-ttu-id="7ad0f-109">프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+  <span data-ttu-id="6d9a0-109">프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
 - `retvalRange`
 
-  <span data-ttu-id="7ad0f-110">\[in] 함수 반환 값의 메모리 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-110">\[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>
+  <span data-ttu-id="6d9a0-110">\[in] 함수 반환 값의 메모리 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-110">\[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>
 
-  <span data-ttu-id="7ad0f-111">반환 값 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="7ad0f-112">프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-112">The profiler can use the [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>
+  <span data-ttu-id="6d9a0-111">반환 값 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="6d9a0-112">프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-112">The profiler can use the [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7ad0f-113">설명</span><span class="sxs-lookup"><span data-stu-id="7ad0f-113">Remarks</span></span>  
- <span data-ttu-id="7ad0f-114">`func` `retvalRange` `FunctionLeave2` 값이 변경 되거나 제거 될 수 있으므로 함수에서를 반환한 후에는 및 매개 변수의 값이 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
-  
- <span data-ttu-id="7ad0f-115">`FunctionLeave2`함수는 콜백입니다. 함수를 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="7ad0f-116">구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
-  
- <span data-ttu-id="7ad0f-117">실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-117">The execution engine does not save any registers before calling this function.</span></span>  
-  
-- <span data-ttu-id="7ad0f-118">항목에서 FPU (부동 소수점 단위)의 항목을 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
-  
-- <span data-ttu-id="7ad0f-119">종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
-  
- <span data-ttu-id="7ad0f-120">의 구현은 `FunctionLeave2` 가비지 수집을 지연 하므로 차단 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="7ad0f-121">스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="7ad0f-122">가비지 수집을 시도 하면 런타임이 반환 될 때까지 차단 됩니다 `FunctionLeave2` .</span><span class="sxs-lookup"><span data-stu-id="7ad0f-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
-  
- <span data-ttu-id="7ad0f-123">또한 함수는 관리 `FunctionLeave2` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="7ad0f-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7ad0f-124">Requirements</span></span>  
- <span data-ttu-id="7ad0f-125">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7ad0f-125">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="7ad0f-126">**헤더:** Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="7ad0f-126">**Header:** CorProf.idl</span></span>  
-  
- <span data-ttu-id="7ad0f-127">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ad0f-127">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="7ad0f-128">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ad0f-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7ad0f-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7ad0f-129">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="6d9a0-113">설명</span><span class="sxs-lookup"><span data-stu-id="6d9a0-113">Remarks</span></span>  
 
-- [<span data-ttu-id="7ad0f-130">FunctionEnter2 함수</span><span class="sxs-lookup"><span data-stu-id="7ad0f-130">FunctionEnter2 Function</span></span>](functionenter2-function.md)
-- [<span data-ttu-id="7ad0f-131">FunctionTailcall2 함수</span><span class="sxs-lookup"><span data-stu-id="7ad0f-131">FunctionTailcall2 Function</span></span>](functiontailcall2-function.md)
-- [<span data-ttu-id="7ad0f-132">SetEnterLeaveFunctionHooks2 메서드</span><span class="sxs-lookup"><span data-stu-id="7ad0f-132">SetEnterLeaveFunctionHooks2 Method</span></span>](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="7ad0f-133">프로파일링 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="7ad0f-133">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)
+ <span data-ttu-id="6d9a0-114">`func` `retvalRange` `FunctionLeave2` 값이 변경 되거나 제거 될 수 있으므로 함수에서를 반환한 후에는 및 매개 변수의 값이 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
+  
+ <span data-ttu-id="6d9a0-115">`FunctionLeave2`함수는 콜백입니다. 함수를 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="6d9a0-116">구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+  
+ <span data-ttu-id="6d9a0-117">실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-117">The execution engine does not save any registers before calling this function.</span></span>  
+  
+- <span data-ttu-id="6d9a0-118">항목에서 FPU (부동 소수점 단위)의 항목을 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+  
+- <span data-ttu-id="6d9a0-119">종료 시 호출자에 의해 푸시되는 모든 매개 변수를 팝 하 여 스택을 복원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+  
+ <span data-ttu-id="6d9a0-120">의 구현은 `FunctionLeave2` 가비지 수집을 지연 하므로 차단 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="6d9a0-121">스택이 가비지 컬렉션에 대 한 상태에 있지 않을 수 있기 때문에 구현에서 가비지 수집을 시도 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="6d9a0-122">가비지 수집을 시도 하면 런타임이 반환 될 때까지 차단 됩니다 `FunctionLeave2` .</span><span class="sxs-lookup"><span data-stu-id="6d9a0-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
+  
+ <span data-ttu-id="6d9a0-123">또한 함수는 관리 `FunctionLeave2` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="6d9a0-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6d9a0-124">Requirements</span></span>  
+
+ <span data-ttu-id="6d9a0-125">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6d9a0-125">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="6d9a0-126">**헤더:** Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="6d9a0-126">**Header:** CorProf.idl</span></span>  
+  
+ <span data-ttu-id="6d9a0-127">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6d9a0-127">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="6d9a0-128">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d9a0-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="6d9a0-129">참조</span><span class="sxs-lookup"><span data-stu-id="6d9a0-129">See also</span></span>
+
+- [<span data-ttu-id="6d9a0-130">FunctionEnter2 함수</span><span class="sxs-lookup"><span data-stu-id="6d9a0-130">FunctionEnter2 Function</span></span>](functionenter2-function.md)
+- [<span data-ttu-id="6d9a0-131">FunctionTailcall2 함수</span><span class="sxs-lookup"><span data-stu-id="6d9a0-131">FunctionTailcall2 Function</span></span>](functiontailcall2-function.md)
+- [<span data-ttu-id="6d9a0-132">SetEnterLeaveFunctionHooks2 메서드</span><span class="sxs-lookup"><span data-stu-id="6d9a0-132">SetEnterLeaveFunctionHooks2 Method</span></span>](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="6d9a0-133">프로파일링 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="6d9a0-133">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)
