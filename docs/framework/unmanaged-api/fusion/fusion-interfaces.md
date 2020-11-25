@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 59e34a39bada1dcf5e66a0c5b92a7fcbfb41d884
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711691"
 ---
 # <a name="fusion-interfaces"></a>Fusion 인터페이스
+
 이 섹션에서는 fusion API에서 응용 프로그램 리소스의 속성에 액세스 하 고 응용 프로그램에 대해 해당 리소스의 올바른 버전을 찾는 데 사용 하는 관리 되지 않는 인터페이스에 대해 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
+
  [IAppIdAuthority 인터페이스](iappidauthority-interface.md)  
  응용 프로그램 id 및 참조에 대 한 키를 생성 하 고 비교 하는 메서드를 제공 합니다.  
   
@@ -27,7 +29,7 @@ ms.locfileid: "73108190"
  전역 어셈블리 캐시의 단일 어셈블리를 나타냅니다.  
   
  [IAssemblyEnum 인터페이스](iassemblyenum-interface.md)  
- `IAssemblyName` 개체의 배열에 대 한 열거자를 나타냅니다.  
+ 개체의 배열에 대 한 열거자를 나타냅니다 `IAssemblyName` .  
   
  [IAssemblyName 인터페이스](iassemblyname-interface.md)  
  어셈블리의 고유 id를 설명 하 고 작업 하는 메서드를 제공 합니다.  
@@ -39,13 +41,13 @@ ms.locfileid: "73108190"
  현재 범위에서 응용 프로그램을 정의 하는 코드의 고유 서명을 나타냅니다.  
   
  [IEnumDefinitionIdentity 인터페이스](ienumdefinitionidentity-interface.md)  
- `IDefinitionIdentity` 개체의 컬렉션에 대 한 열거자 역할을 합니다.  
+ 개체의 컬렉션에 대 한 열거자 역할을 `IDefinitionIdentity` 합니다.  
   
  [IEnumIDENTITY_ATTRIBUTE 인터페이스](ienumidentity-attribute-interface.md)  
  현재 범위에 있는 코드 개체의 특성에 대 한 열거자 역할을 합니다.  
   
  [IEnumReferenceIdentity 인터페이스](ienumreferenceidentity-interface.md)  
- `IReferenceIdentity` 개체의 컬렉션에 대 한 열거자 역할을 합니다.  
+ 개체의 컬렉션에 대 한 열거자 역할을 `IReferenceIdentity` 합니다.  
   
  [IIdentityAuthority 인터페이스](iidentityauthority-interface.md)  
  코드 개체에 대 한 id 키를 관리 합니다.  
@@ -63,11 +65,13 @@ ms.locfileid: "73108190"
  코드 개체의 고유 서명에 대 한 참조를 나타냅니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [Fusion 전역 정적 함수](fusion-global-static-functions.md)  
   
  [Fusion 열거형](fusion-enumerations.md)  

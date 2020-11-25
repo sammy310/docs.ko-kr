@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 189a276b4228038ab1d70620ce3a4a0f4342b245
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795870"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712523"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 열거형
+
 관리되는 힙에 대한 메모리 영역 생성을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,7 +36,7 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -47,6 +48,7 @@ typedef enum CorDebugGenerationTypes {
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -55,6 +57,6 @@ typedef enum CorDebugGenerationTypes {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

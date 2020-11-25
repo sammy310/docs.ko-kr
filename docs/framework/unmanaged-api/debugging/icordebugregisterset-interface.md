@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 7c60fa775b82372b50d1eb3891f107b97df3e73a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 940810288b72be0d4dfc5366176663c22c369ebb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378265"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712380"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet 인터페이스
+
 현재 코드를 실행 중인 컴퓨터에서 사용할 수 있는 레지스터 집합을 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
@@ -35,12 +36,14 @@ ms.locfileid: "83378265"
 |[SetThreadContext 메서드](icordebugregisterset-setthreadcontext-method.md)|.NET Framework 2.0에 대해 구현 되지 않았습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugRegisterSet`인터페이스는 32 비트 레지스터만 지원 합니다. 추가 레지스터가 필요한 IA-64와 같은 플랫폼에서 [ICorDebugRegisterSet2](icordebugregisterset2-interface.md) 인터페이스를 사용 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -49,7 +52,7 @@ ms.locfileid: "83378265"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)

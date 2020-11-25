@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711925"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 인터페이스
+
 기본 또는 복합 형식 (즉, 사용자 정의)을 나타냅니다. 형식이 제네릭이면 `ICorDebugType`는 인스턴스화된 제네릭 형식을 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[EnumerateTypeParameters 메서드](icordebugtype-enumeratetypeparameters-method.md)|<xref:System.Type>이에서 참조 하는 클래스의 제네릭 매개 변수를 참조 하는 ICorDebugTypeEnum에 대 한 인터페이스 포인터를 가져옵니다 `ICorDebugType` .|  
 |[GetBase 메서드](icordebugtype-getbase-method.md)|`ICorDebugType`이가 참조 하는 클래스의 기본 클래스 (있는 경우)를 참조 하는에 대 한 인터페이스 포인터를 가져옵니다 `ICorDebugType` .|  
@@ -37,7 +38,8 @@ ms.locfileid: "83396699"
 |[GetType 메서드](icordebugtype-gettype-method.md)|이에서 참조 하는 공용 언어 런타임의 네이티브 형식을 설명 하는 CorElementType 값을 가져옵니다 <xref:System.Type> `ICorDebugType` .|  
   
 ## <a name="remarks"></a>설명  
- 형식이 제네릭인 경우는 인스턴스화되지 않은 `ICorDebugClass` 형식을 나타냅니다. `ICorDebugType`인터페이스는 인스턴스화된 제네릭 형식을 나타냅니다. 예를 들어 해시 테이블 \< K, V>는에 의해 표현 되는 `ICorDebugClass` 반면 해시 테이블 \< Int32, 문자열>는로 `ICorDebugType` 표시 됩니다.  
+
+ 형식이 제네릭인 경우는 인스턴스화되지 않은 `ICorDebugClass` 형식을 나타냅니다. `ICorDebugType`인터페이스는 인스턴스화된 제네릭 형식을 나타냅니다. 예를 들어 해시 테이블은로 \<K, V> 표현 되는 반면 hashtable은로 표현 됩니다 `ICorDebugClass` \<Int32, String> `ICorDebugType` .  
   
  제네릭이 아닌 형식은 및로 표시 됩니다 `ICorDebugClass` `ICorDebugType` . 후자 인터페이스는 형식 인스턴스화를 처리 하기 위해 .NET Framework 버전 2.0에서 도입 되었습니다.  
   
@@ -45,6 +47,7 @@ ms.locfileid: "83396699"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

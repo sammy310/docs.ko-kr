@@ -15,20 +15,21 @@ helpviewer_keywords:
 ms.assetid: 73afa930-32cb-4c40-81f8-83e8e6fbe213
 topic_type:
 - apiref
-ms.openlocfilehash: 63ddce2f299133fcfe0da17897eaf0c6a9509a55
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 66e8cf3f73e92f58765b1fa98b3eef11b976094c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378236"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712276"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext 메서드
-`SetThreadContext`는 .NET Framework 버전 2.0에 구현 되어 있지 않습니다. 이 메서드를 호출 하지 마십시오.  
+
+`SetThreadContext` 는 .NET Framework 버전 2.0에 구현 되어 있지 않습니다. 이 메서드를 호출 하지 마십시오.  
   
 > [!NOTE]
 > 더 높은 수준의 작업 [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md) 를 사용 하 여 스레드의 컨텍스트를 설정 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetThreadContext (  
@@ -39,6 +40,7 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -47,7 +49,7 @@ HRESULT SetThreadContext (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)

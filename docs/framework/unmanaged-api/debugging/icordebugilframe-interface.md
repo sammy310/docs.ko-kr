@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4f34fdf9a0eeb47e027cc874afee5bd04f5bd9bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712393"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 인터페이스
 
@@ -40,12 +40,14 @@ MSIL (Microsoft 중간 언어) 코드의 스택 프레임을 나타냅니다. �
 |[SetIP 메서드](icordebugilframe-setip-method.md)|MSIL 코드에서 지정 된 오프셋 위치에 대 한 명령 포인터를 설정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugILFrame`인터페이스는 특수 한 ICorDebugFrame 인터페이스입니다. MSIL 코드 프레임 또는 JIT (just-in-time) 컴파일된 프레임에 사용 됩니다. JIT 컴파일된 프레임은 `ICorDebugILFrame` 인터페이스와 ICorDebugNativeFrame 인터페이스를 둘 다 구현 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -54,6 +56,6 @@ MSIL (Microsoft 중간 언어) 코드의 스택 프레임을 나타냅니다. �
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

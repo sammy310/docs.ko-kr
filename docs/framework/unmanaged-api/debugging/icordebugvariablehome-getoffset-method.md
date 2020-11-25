@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c5d491b66e4ec64dffa4e19dabff876c9c473036
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711795"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome:: GetOffset 메서드
+
 변수에 대 한 기본 레지스터에서 오프셋을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,18 +35,21 @@ HRESULT GetOffset(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pOffset`  
  제한이 기본 레지스터의 오프셋입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드는 다음 값을 반환 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |`S_OK`|변수가 등록 관련 메모리 위치에 있습니다.|  
 |`E_FAIL`|변수가 등록 관련 메모리 위치에 없습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

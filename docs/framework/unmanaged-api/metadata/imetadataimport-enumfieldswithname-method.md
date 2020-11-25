@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: 68261b165847a5c3ee29adbc4908451fb00c5443
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0a254587282dea43a3507fbbeca35bd7aa9604f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711574"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 메서드
+
 지정한 이름을 가진 지정한 형식의 FieldDef 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT EnumFieldsWithName (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다.  
   
@@ -58,25 +60,27 @@ HRESULT EnumFieldsWithName (
  제한이 에서 반환 되는 실제 FieldDef 토큰 수입니다 `rFields` .  
   
 ## <a name="remarks"></a>설명  
+
  [IMetaDataImport:: EnumFields](imetadataimport-enumfields-method.md)와 달리는 `EnumFieldsWithName` 지정 된 이름이 없는 필드 토큰을 모두 삭제 합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumFieldsWithName` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 필드가 없습니다. 이 경우는 `pcTokens` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: b7a38d28b55842e9358bd9c7019b84c529526613
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6c16b02a5ae323ba80d44937f322810022dfa9f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617167"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711639"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 함수
+
 지정 된 응용 프로그램에서 요청 하는 CLR (공용 언어 런타임)의 버전 번호를 가져옵니다. 해당 버전이 설치 되지 않은 경우는 요청 된 버전 보다 먼저 설치 된 최신 버전을 가져옵니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -39,6 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pExe`  
  진행 응용 프로그램의 이름입니다.  
   
@@ -51,25 +53,27 @@ HRESULT GetRequestedRuntimeVersion (
  `pdwLength`  
  제한이 버전 번호 문자열의 길이에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |ERROR_INSUFFICIENT_BUFFER|버전 버퍼의 크기가 작아서 버전 문자열을 저장할 수 없습니다.|  
-|E_POINTER|`pdwLength`가 null인 경우|  
+|E_POINTER|`pdwLength`가 null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetRequestedRuntimeInfo 함수](getrequestedruntimeinfo-function.md)
 - [GetVersionFromProcess 함수](getversionfromprocess-function.md)

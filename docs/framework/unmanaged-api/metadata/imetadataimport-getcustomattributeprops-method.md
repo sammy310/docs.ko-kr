@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: 320cfae93f8aae94f9315e8e20ed6cf7f9cced7c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b92e9ab714e2d8d2c66ed5546deba16352e8e390
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711145"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps 메서드
+
 해당 메타데이터 토큰이 지정된 경우 사용자 지정 특성의 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT GetCustomAttributeProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cv`  
  [in] 검색할 사용자 지정 특성을 나타내는 메타데이터 토큰입니다.  
   
@@ -54,18 +56,20 @@ HRESULT GetCustomAttributeProps (
  [out, optional] *`ppBlob`에 반환된 데이터의 크기(바이트)입니다.  
   
 ## <a name="remarks"></a>설명  
+
  사용자 지정 특성은 메타데이터 엔진에서 인식할 수 있는 형식인 데이터 배열로 저장됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

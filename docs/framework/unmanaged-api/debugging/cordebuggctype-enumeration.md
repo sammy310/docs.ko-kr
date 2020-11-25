@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 8dd070d2c895a94ac996be81e672bd67f59b83b7
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795900"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712614"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 열거형
+
 가비지 수집기가 실행되고 있는 위치(워크스테이션 또는 서버)를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,7 +36,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="parameters"></a>매개 변수  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -45,6 +46,7 @@ typedef enum CorDebugGCType {
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -53,6 +55,6 @@ typedef enum CorDebugGCType {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)
