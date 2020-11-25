@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-ms.openlocfilehash: 7b8a726cffcc00d7371675192a209b2d8e9db94d
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8797f77388bf4992dfb69191ce8a844a9b7fdb8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795783"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696442"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated 열거형
-이 열거형은 사용 되지 않습니다. 대신 CorDebugJITCompilerFlags `CORDEBUG_JIT_DEFAULT` 열거형의 멤버 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 를 사용 합니다.  
+
+이 열거형은 사용 되지 않습니다. `CORDEBUG_JIT_DEFAULT`대신 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 멤버를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,13 +33,14 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|대신 `CORDEBUG_JIT_DEFAULT`를 사용하세요.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -47,6 +49,6 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

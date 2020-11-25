@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 55f219b5b834f365b87440e69bfa7d2c4e519235
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213194"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696096"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 메서드
+
 내 코드만 단계별 실행을 위해이 ICorDebugFunction2가 나타내는 함수를 표시 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `bIsJustMyCode`  
  진행 함수를 `true` 사용자 코드로 표시 하려면로 설정 하 고 그렇지 않으면로 설정 `false` 합니다.  
   
@@ -45,9 +47,11 @@ HRESULT SetJMCStatus (
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|디버깅할 수 없으므로 함수를 사용자 코드로 표시할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  내 코드만 스텝 퍼는 사용자가 아닌 코드를 건너뜁니다. 사용자 코드는 디버깅 가능한 코드의 하위 집합 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-ms.openlocfilehash: 55888786fdd8ff2b1d5610a74ee729db0d4fcfde
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 41db6ac00d8646651d0e8433d076c37af6020071
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696156"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 메서드
+
 초기 값이 0 또는 null 인 지정 된 형식의 값을 만듭니다.  
   
  이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorDebugEval2:: CreateValueForType](icordebugeval2-createvaluefortype-method.md) 을 사용 하십시오.  
@@ -38,6 +39,7 @@ HRESULT CreateValue (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `elementType`  
  진행 값의 형식을 지정 하는 [Corelementtype](../metadata/corelementtype-enumeration.md) 열거형의 값입니다.  
   
@@ -48,13 +50,15 @@ HRESULT CreateValue (
  제한이 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `CreateValue`함수 실행 `ICorDebugValue` 에서 사용 하는 용도로만 지정 된 형식의 개체를 만듭니다. 이 값 개체를 사용 하 여 사용자 상수를 매개 변수로 전달할 수 있습니다.  
+
+ `CreateValue``ICorDebugValue`함수 실행에서 사용 하는 용도로만 지정 된 형식의 개체를 만듭니다. 이 값 개체를 사용 하 여 사용자 상수를 매개 변수로 전달할 수 있습니다.  
   
  값의 형식이 기본 형식이 면 해당 초기 값은 0 또는 null입니다. [ICorDebugGenericValue:: SetValue](icordebuggenericvalue-setvalue-method.md) 를 사용 하 여 기본 형식 값을 설정 합니다.  
   
- 의 `elementType` 값이 ELEMENT_TYPE_CLASS 이면 null 개체 참조를 나타내는 "ICorDebugReferenceValue" (에서 `ppValue`반환 됨)을 가져옵니다. 이 개체를 사용 하 여 개체 참조 매개 변수가 있는 함수 실행에 null을 전달할 수 있습니다. 를 모든 항목으로 `ICorDebugValue` 설정할 수는 없습니다. 항상 null로 유지 됩니다.  
+ 의 값 `elementType` 이 ELEMENT_TYPE_CLASS 이면 null 개체 참조를 나타내는 "ICorDebugReferenceValue" (에서 반환 됨)을 가져옵니다 `ppValue` . 이 개체를 사용 하 여 개체 참조 매개 변수가 있는 함수 실행에 null을 전달할 수 있습니다. 는로 설정할 수 없습니다. `ICorDebugValue` 항상 null로 유지 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -63,7 +67,7 @@ HRESULT CreateValue (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [CreateValueForType 메서드](icordebugeval2-createvaluefortype-method.md)
 - [ICorDebugEval 인터페이스](icordebugeval-interface.md)

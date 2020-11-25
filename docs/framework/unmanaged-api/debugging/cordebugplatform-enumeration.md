@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: fdb03b9244d3cb351735f5f2214248a08a399188
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696403"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform 열거형
+
 [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) 메서드에서 사용 하는 대상 플랫폼 값을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,7 +40,7 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -52,6 +53,7 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_MAC_AMD64|대상 플랫폼은 AMD64 하드웨어에서 실행 되는 Macintosh 운영 체제입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -62,6 +64,6 @@ typedef enum CorDebugPlatform
   
  `CORDB_PLATFORM_WINDOWS_ARM` 및 `CORDB_PLATFORM_MAC_AMD64` 멤버는 .NET Framework 4.5.2 이상 버전에서 사용 가능합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

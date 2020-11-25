@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: d9e2236b944137de82bb056820f81014febfcc5f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 821eae8ea5b4147408e9fe60d1e5b70c7936959e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894903"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696247"
 ---
 # <a name="icordebugassembly-interface"></a>ICorDebugAssembly 인터페이스
 
@@ -30,7 +30,7 @@ ms.locfileid: "82894903"
 |메서드|설명|  
 |------------|-----------------|  
 |[EnumerateModules 메서드](icordebugassembly-enumeratemodules-method.md)|어셈블리에 포함 된 모듈의 열거자를 가져옵니다.|  
-|[GetAppDomain 메서드](icordebugassembly-getappdomain-method.md)|이 `ICorDebugAssembly` 인스턴스를 포함 하는 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetAppDomain 메서드](icordebugassembly-getappdomain-method.md)|이 인스턴스를 포함 하는 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다 `ICorDebugAssembly` .|  
 |[GetCodeBase 메서드](icordebugassembly-getcodebase-method.md)|현재 버전의 .NET Framework에서 구현 되지 않았습니다.|  
 |[GetName 메서드](icordebugassembly-getname-method.md)|어셈블리의 이름을 가져옵니다.|  
 |[GetProcess 메서드](icordebugassembly-getprocess-method.md)|어셈블리가 실행 되는 ICorDebugProcess 인스턴스를 가져옵니다.|  
@@ -41,6 +41,7 @@ ms.locfileid: "82894903"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

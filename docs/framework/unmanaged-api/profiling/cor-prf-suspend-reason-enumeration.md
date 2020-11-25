@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: fdbcbb2da8f449b9275d820763c2a94cca86cd1e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f7d76c72ed5db95425f5b1fa2db5e4346983daa4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696676"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 열거형
+
 런타임이 일시 중단 된 이유를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -52,9 +53,11 @@ typedef enum {
 |`COR_PRF_SUSPEND_FOR_REJIT`|JIT 재컴파일에 대해 런타임이 일시 중단 됩니다.|  
   
 ## <a name="remarks"></a>설명  
+
  비관리 코드에 있는 모든 런타임 스레드는 런타임을 다시 시작할 때까지 계속 실행 되도록 허용 되며, 런타임이 다시 시작 될 때까지 일시 중단 됩니다. 이는 런타임에 입력 하는 새 스레드에도 적용 됩니다. 런타임 내의 모든 스레드는 중단 될 수 있는 코드에 있는 경우 즉시 일시 중단 되 고, 인터럽트 가능 코드에 도달 하면 일시 중단을 요청 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -63,6 +66,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 열거형](profiling-enumerations.md)

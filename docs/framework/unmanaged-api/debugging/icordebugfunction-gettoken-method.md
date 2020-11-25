@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-ms.openlocfilehash: e542145e888049231a6c5e4cccbb4ee96c62f98b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9aee95c554afad5b2ea3cf157fc9e62c9b7e40e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696117"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken 메서드
+
 이 함수에 대 한 메타 데이터 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pMethodDef`  
- 제한이 `mdMethodDef`이 함수에 대 한 메타 데이터를 참조 하는 토큰에 대 한 포인터입니다.  
+ 제한이 `mdMethodDef` 이 함수에 대 한 메타 데이터를 참조 하는 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
