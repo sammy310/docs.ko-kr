@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ffd0f708-0d21-4fae-a395-63b6c45828fa
 topic_type:
 - apiref
-ms.openlocfilehash: 5d7e83c6aa494f2363698d0220bbfe724b54e612
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2d1846acae51f416471404389dd1dbcfb2383760
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209450"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728175"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>ICorDebugFunction::CreateBreakpoint 메서드
+
 이 함수의 시작 부분에 중단점을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppBreakpoint`  
  제한이 함수의 새 중단점을 나타내는 ICorDebugFunctionBreakpoint 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

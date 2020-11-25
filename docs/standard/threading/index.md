@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728448"
 ---
 # <a name="managed-threading"></a>관리되는 스레딩
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826341"
 > .NET Framework 4부터는 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스, [PLINQ(병렬 LINQ)](../parallel-programming/introduction-to-plinq.md), <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 동시 컬렉션 클래스, 스레드가 아닌 작업 개념을 기반으로 하는 프로그래밍 모델로 인해 다중 스레드 프로그래밍이 매우 간소화되었습니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [관리되는 스레딩 기본 사항](managed-threading-basics.md)  
  관리형 스레딩의 개요를 제공하고 다중 스레드를 사용해야 하는 경우를 설명합니다.  
   
@@ -34,6 +35,7 @@ ms.locfileid: "94826341"
  스레드 작업과 다른 스레드에서 액세스되는 개체 데이터를 동기화하는 데 사용할 수 있는 관리형 클래스에 대해 설명하고 스레드 풀 스레드에 대해 대략적으로 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.Threading>  
  관리형 스레드를 사용하고 동기화하기 위한 클래스를 포함합니다.  
   
@@ -44,6 +46,7 @@ ms.locfileid: "94826341"
  동시 처리 작업을 만들고 예약하기 위한 클래스를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [애플리케이션 도메인](../../framework/app-domains/application-domains.md)  
  애플리케이션 도메인과 공용 언어 인프라에서 이를 사용하는 방법에 대한 개요를 제공합니다.  
   

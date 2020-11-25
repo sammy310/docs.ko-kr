@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-ms.openlocfilehash: fe7350e6d8e400ae37b5b8b7854a56f3c5c53ea7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 788fd1815415bf8bcfa20d431a5451679d2025bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728279"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs 메서드
+
 가져온 모듈을 나타내는 ModuleRef 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT EnumModuleRefs (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
@@ -53,19 +55,20 @@ HRESULT EnumModuleRefs (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumModuleRefs` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 토큰이 없습니다. 이 경우는 `pcModuleRefs` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

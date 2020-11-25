@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123064"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728565"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 함수
+
 지정 된 어셈블리가 관리 되는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzAssemblyReference`  
  진행 확인할 어셈블리의 이름입니다.  
   
@@ -48,15 +50,17 @@ HRESULT IsFrameworkAssembly (
  `pccSize`  
  [in] `pwzFrameworkAssemblyIdentity`의 크기입니다.  
   
-## <a name="remarks"></a>주의  
- `pwzAssemblyReference` 매개 변수는 어셈블리 이름을 포함 하는 문자열에 대 한 포인터입니다.  
+## <a name="remarks"></a>설명  
+
+ `pwzAssemblyReference`매개 변수는 어셈블리 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- 이 어셈블리가 .NET Framework의 일부인 경우 `pbIsFrameworkAssembly` 매개 변수에 `true`부울 값이 포함 됩니다.  
+ 이 어셈블리가 .NET Framework의 일부인 경우 `pbIsFrameworkAssembly` 매개 변수에 부울 값이 포함 됩니다 `true` .  
   
- 명명 된 어셈블리가 .NET Framework의 일부가 아니거나 `pwzAssemblyReference` 매개 변수가 어셈블리의 이름을 지정 하지 않으면 `pbIsFrameworkAssembly`에 부울 값 `false`포함 됩니다.  
+ 명명 된 어셈블리가 .NET Framework의 일부가 아니거나 `pwzAssemblyReference` 매개 변수가 어셈블리의 이름을 지정 하지 않는 경우에는 `pbIsFrameworkAssembly` 부울 값이 포함 됩니다 `false` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참조
 

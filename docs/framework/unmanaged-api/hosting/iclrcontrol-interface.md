@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a24fd905-1fa6-45a0-ad65-e9e2ee58861e
 topic_type:
 - apiref
-ms.openlocfilehash: 54748fdeaf911591c21f4495335e54c777878f04
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: acf449014f5bf5683d5488f8ed2ead963676fe6b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728344"
 ---
 # <a name="iclrcontrol-interface"></a>ICLRControl 인터페이스
+
 호스트가 CLR (공용 언어 런타임)에 대 한 참조를 가져오고의 측면을 구성 하는 데 사용할 수 있는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -32,15 +33,16 @@ ms.locfileid: "83615841"
 |[SetAppDomainManagerType 메서드](iclrcontrol-setappdomainmanagertype-method.md)|에서 파생 된 형식을 <xref:System.AppDomainManager> 응용 프로그램 도메인 관리자의 형식으로 설정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRDebugManager 인터페이스](iclrdebugmanager-interface.md)

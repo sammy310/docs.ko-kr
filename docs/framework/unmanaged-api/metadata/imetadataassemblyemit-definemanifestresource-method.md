@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 026f5efe195cdb34999b65c5f47de6f68d30e11a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3729f06097fa4dce6de009307183d5e97c24479b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008133"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728305"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource 메서드
+
 지정된 매니페스트 리소스에 대한 메타데이터를 포함하는 `ManifestResource` 구조를 만들고 연결된 메타데이터 토큰을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT DefineManifestResource (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szName`  
  진행 리소스의 이름입니다.  
   
@@ -54,17 +56,19 @@ HRESULT DefineManifestResource (
  제한이 반환 된 메타 데이터 토큰에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `ManifestResource`각 어셈블리 파일에서 구현 되는 각 리소스에 대해 하나의 메타 데이터 구조를 정의 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

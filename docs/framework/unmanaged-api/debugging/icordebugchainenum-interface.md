@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd2507bb66e036dfbb1f4e8cc262f01d926adca1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728227"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum 인터페이스
 
@@ -29,7 +29,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugChain 배열을 열거 합니
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](icordebugchainenum-next-method.md)|현재 위치에서 시작 하 `ICorDebugChain` 여 열거형에서 지정 된 수의 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugchainenum-next-method.md)|`ICorDebugChain`현재 위치에서 시작 하 여 열거형에서 지정 된 수의 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -37,6 +37,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugChain 배열을 열거 합니
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

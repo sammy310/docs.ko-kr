@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: 04cb45cd021532b6cb3d74a195cbd62e1ab8d31d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18b3a5c06ac0d3a86f7823f3b140c76c6c9a746
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728357"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 메서드
+
 호스트가 CLR (공용 언어 런타임)을 구성 하는 데 사용할 수 있는 관리자 형식의 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,8 +36,9 @@ HRESULT GetCLRManager (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `riid`  
- 진행 `IID`반환할 관리자 형식의입니다. `IID`지원 되는 값은 다음과 같습니다.  
+ 진행 `IID` 반환할 관리자 형식의입니다. `IID`지원 되는 값은 다음과 같습니다.  
   
 - IID_ICLRDebugManager:를 `ppObject` [ICLRDebugManager](iclrdebugmanager-interface.md)형식으로 지정 합니다.  
   
@@ -55,7 +57,7 @@ HRESULT GetCLRManager (
  `ppObject`  
  제한이 요청 된 관리자에 대 한 인터페이스 포인터 이거나, 잘못 된 관리자 형식이 요청 된 경우 null입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,15 +70,16 @@ HRESULT GetCLRManager (
 |E_NOINTERFACE|인터페이스 유형이 지원 되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)
 - [IHostControl 인터페이스](ihostcontrol-interface.md)
