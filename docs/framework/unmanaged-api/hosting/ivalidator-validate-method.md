@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c59114f78af1aa8705318af093e47d4f03a82ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008549"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699146"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 메서드
+
 지정 된 PE (이식 가능한 실행 파일) 또는 MSIL (Microsoft 중간 언어) 파일의 유효성을 검사 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,8 +42,9 @@ HRESULT Validate (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `veh`  
- 진행 `IVEHandler`유효성 검사 오류를 처리 하는 인스턴스에 대 한 포인터입니다.  
+ 진행 `IVEHandler` 유효성 검사 오류를 처리 하는 인스턴스에 대 한 포인터입니다.  
   
  `pAppDomain`  
  진행 파일이 로드 되는 응용 프로그램 도메인에 대 한 포인터입니다.  
@@ -66,10 +68,11 @@ HRESULT Validate (
  진행 유효성을 검사할 파일의 크기 (바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** IValidator, IValidator. h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

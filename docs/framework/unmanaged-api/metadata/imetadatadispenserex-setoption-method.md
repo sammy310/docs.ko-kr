@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4216658eb562c5c57b75c3c257cd8e53a7a34221
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700589"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
+
 지정 된 옵션을 현재 메타 데이터 범위의 지정 된 값으로 설정 합니다. 옵션은 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT SetOption (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `optionId`  
  진행 설정할 옵션을 지정 하는 GUID에 대 한 포인터입니다.  
   
@@ -42,9 +44,10 @@ HRESULT SetOption (
  진행 옵션을 설정 하는 데 사용할 값입니다. 이 값의 형식은 지정 된 옵션 형식의 variant 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  다음 표에서는 매개 변수가 가리키는 사용 가능한 Guid `optionId` 와 매개 변수에 해당 하는 유효한 값을 보여 줍니다 `pValue` .  
   
-|GUID|설명|`pValue`변수에|  
+|GUID|설명|`pValue` 매개 변수|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|중복 항목을 검사할 항목을 제어 합니다. 새 항목을 만드는 [IMetaDataEmit](imetadataemit-interface.md) 메서드를 호출할 때마다 해당 항목이 현재 범위에 이미 있는지 여부를 메서드에 요청할 수 있습니다. 예를 들어 항목이 있는지 확인할 수 있습니다 `mdMethodDef` .이 경우 [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md)를 호출 하면 메서드가 현재 범위에 아직 없는지 확인 합니다. 이 검사에서는 지정 된 메서드를 고유 하 게 식별 하는 키 인 부모 유형, 이름 및 시그니처를 사용 합니다.|은 UI4 형식의 variant 여야 하며 [CorCheckDuplicatesFor](corcheckduplicatesfor-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
 |MetaDataRefToDefCheck|정의로 변환 되는 참조 된 항목을 제어 합니다. 기본적으로 메타 데이터 엔진은 참조 된 항목이 현재 범위에서 실제로 정의 된 경우 참조 된 항목을 해당 정의로 변환 하 여 코드를 최적화 합니다.|은 UI4 형식의 variant 여야 하며 [Correftodefcheck](correftodefcheck-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
@@ -56,20 +59,21 @@ HRESULT SetOption (
 |MetaDataGenerateTCEAdapters|형식 라이브러리 가져오기에서 COM 연결 지점 컨테이너에 대해 긴밀 하 게 결합 된 이벤트 (TCE) 어댑터를 생성할지 여부를 제어 합니다.|BOOL 형식의 variant 여야 합니다. `pValue`가로 설정 된 경우 `true` 형식 라이브러리 가져오기에서 TCE 어댑터를 생성 합니다.|  
 |MetaDataTypeLibImportNamespace|가져오는 형식 라이브러리의 기본이 아닌 네임 스페이스를 지정 합니다.|는 null 값 또는 BSTR 형식의 variant 여야 합니다. `pValue`가 null 값인 경우에는 현재 네임 스페이스가 null로 설정 되 고, 그렇지 않으면 현재 네임 스페이스가 variant의 BSTR 형식에 저장 된 문자열로 설정 됩니다.|  
 |MetaDataLinkerOptions|링커가 어셈블리 또는 .NET Framework 모듈 파일을 생성 해야 하는지 여부를 제어 합니다.|은 UI4 형식의 variant 여야 하며 [Corlinkeroptions](corlinkeroptions-enumeration.md) 열거형 값의 조합을 포함 해야 합니다.|  
-|MetaDataRuntimeVersion|이 이미지가 빌드된 대상 공용 언어 런타임의 버전을 지정 합니다. 버전은 "v v1.0.3705"와 같은 문자열로 저장 됩니다.|는 null 값, VT_EMPTY 값 또는 BSTR 형식의 variant 여야 합니다. `pValue`가 null 이면 런타임 버전이 null로 설정 됩니다. `pValue`가 VT_EMPTY 경우 버전은 메타 데이터 코드가 실행 되는 mscorwks.dll 버전에서 가져온 기본값으로 설정 됩니다. 그렇지 않으면 런타임 버전이 variant의 BSTR 형식에 저장 된 문자열로 설정 됩니다.|  
+|MetaDataRuntimeVersion|이 이미지가 빌드된 대상 공용 언어 런타임의 버전을 지정 합니다. 버전은 "v v1.0.3705"와 같은 문자열로 저장 됩니다.|는 null 값, VT_EMPTY 값 또는 BSTR 형식의 variant 여야 합니다. `pValue`가 null 이면 런타임 버전이 null로 설정 됩니다. `pValue`가 VT_EMPTY 경우 버전은 메타 데이터 코드가 실행 되 고 있는 Mscorwks.dll 버전에서 가져온 기본값으로 설정 됩니다. 그렇지 않으면 런타임 버전이 variant의 BSTR 형식에 저장 된 문자열로 설정 됩니다.|  
 |MetaDataMergerOptions|메타 데이터 병합 옵션을 지정 합니다.|는 UI4 형식의 변형 이어야 하며, `MergeFlags` CorHdr .h 파일에 설명 된 열거형 값의 조합을 포함 해야 합니다.|  
 |MetaDataPreserveLocalRefs|정의에 대 한 로컬 참조 최적화를 사용 하지 않습니다.|[Corlocalrefpreservation](corlocalrefpreservation-enumeration.md) 열거 된 값의 조합을 포함 해야 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)

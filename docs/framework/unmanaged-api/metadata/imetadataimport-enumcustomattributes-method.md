@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3b12200dae23a7b6a2f6e1654e46fdf74dc90968
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492332"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700537"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 메서드
+
 지정 된 형식 또는 멤버와 연결 된 사용자 지정 특성 정의 토큰을 열거 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT EnumCustomAttributes (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 반환 된 열거자에 대 한 포인터입니다.  
   
@@ -61,19 +63,20 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumCustomAttributes` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 사용자 지정 특성이 없습니다. 이 경우는 `pcCustomAttributes` 0입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976332"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698795"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum 인터페이스
 
@@ -27,7 +27,7 @@ ms.locfileid: "82976332"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[Clone 메서드](icordebugenum-clone-method.md)|이 `ICorDebugEnum` 개체의 복사본을 만듭니다.|  
 |[GetCount 메서드](icordebugenum-getcount-method.md)|열거형의 항목 수를 가져옵니다.|  
@@ -35,7 +35,8 @@ ms.locfileid: "82976332"
 |[Skip 메서드](icordebugenum-skip-method.md)|지정 된 항목 수 만큼 열거에서 커서를 앞으로 이동 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 다음 열거자는에서 `ICorDebugEnum`파생 됩니다.  
+
+ 다음 열거자는에서 파생 됩니다 `ICorDebugEnum` .  
   
 - ICorDebugAppDomainEnum  
   
@@ -83,6 +84,7 @@ ms.locfileid: "82976332"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -91,6 +93,6 @@ ms.locfileid: "82976332"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

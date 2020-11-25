@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cf2784ce0ac6e614e75a341660808b9fe03ada0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615165"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699445"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 메서드
+
 이 메서드 내에서 지정 된 오프셋을 둘러싸는 가장 바깥쪽 어휘 범위를 가져옵니다. 이를 사용 하 여 지역 변수 검색을 시작할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,18 +35,21 @@ HRESULT GetScopeFromOffset(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `offset`  
- 진행 `ULONG`오프셋을 포함 하는입니다.  
+ 진행 `ULONG` 오프셋을 포함 하는입니다.  
   
  `pRetVal`  
  제한이 반환 된 [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface로 설정 된 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedMethod 인터페이스](isymunmanagedmethod-interface.md)

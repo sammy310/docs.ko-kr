@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 88e81779fc9c20c506f3b0aa11ac2da3958dfe86
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 25a90965dc5466b7cf1a07140705424cf2ba4cd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699237"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS 구조체
+
 가비지 수집과 관련 된 스레드별 통계를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,18 +42,20 @@ typedef struct _COR_GC_THREAD_STATS {
 |`Flags`|최신 가비지 수집에서 더 높은 세대로 승격 된 바이트 수입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [ICLRTask:: GetMemStats](iclrtask-getmemstats-method.md) 는 형식의 출력 매개 변수를 사용 `COR_GC_THREAD_STATS` 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** GCHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](hosting-structures.md)
 - [IHostTask 인터페이스](ihosttask-interface.md)

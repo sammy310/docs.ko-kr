@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 7730c2dddaca98e4cb06cdb381e8a46ff23c97f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699211"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale 메서드
+
 CLR (공용 언어 런타임)이 현재 실행 중인 작업에 대해 로캘 또는 문화권을 변경 했음을 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `lcid`  
  진행 새로 할당 된 지리적 문화권과 언어에 매핑되는 로캘 식별자 값입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetLocale`성공적으로 반환 되었습니다.|  
+|S_OK|`SetLocale` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,18 +52,20 @@ HRESULT SetLocale (
 |E_NOTIMPL|호스트에서 관리 되는 사용자 코드를 사용 하 여 로캘을 수정할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `SetLocale` <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 관리 코드에 의해 속성 값이 변경 되 면 런타임에서를 호출 합니다. 이 메서드는 호스트가 로캘 동기화에 대 한 메커니즘을 실행할 수 있는 기회를 제공 합니다. 호스트가 관리 코드에서 로캘을 변경할 수 없도록 허용 하지 않거나 로캘을 동기화 하는 메커니즘을 구현 하지 않는 경우이 메서드에서 E_NOTIMPL을 반환 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

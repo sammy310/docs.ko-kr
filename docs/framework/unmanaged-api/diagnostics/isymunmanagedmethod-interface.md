@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-ms.openlocfilehash: 7a98a0c40f68cef9bab1ea2de0850208aaef77a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b72a77fecd15a43efbddd9dfd4618897c3372f88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615126"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699276"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 인터페이스
+
 기호 저장소 내의 메서드를 나타냅니다. 이 인터페이스는 형식 관련 특성이 아닌 메서드의 기호 관련 특성에 대 한 액세스를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -40,8 +41,9 @@ ms.locfileid: "83615126"
 |[GetToken 메서드](isymunmanagedmethod-gettoken-method.md)|이 메서드에 대한 메타데이터 토큰을 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

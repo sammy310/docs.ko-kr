@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-ms.openlocfilehash: 4f4d53b086453adce38902518f2de3dde1f2812f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 894084978f976bcee71138d35534a80b5f9cda5f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699978"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 메서드
+
 `catch`예외에 대 한 블록이 CLR (공용 언어 런타임) 내에서 발견 될 때 호출 됩니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -40,7 +42,7 @@ HRESULT ExceptionCLRCatcherFound();
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ExceptionCLRCatcherExecute 메서드](icorprofilercallback-exceptionclrcatcherexecute-method.md)

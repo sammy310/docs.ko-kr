@@ -1,17 +1,17 @@
 ---
 title: 자동 생성 바인딩 리디렉션 사용 또는 사용 안 함
-description: 자동 바인딩 리디렉션을 사용 하거나 사용 하지 않도록 설정 하는 방법을 참조 하세요. 이 기능은 .NET 4.5.1 이상을 대상으로 하는 데스크톱 앱 및 웹 앱에 영향을 줍니다.
+description: 자동 바인딩 리디렉션을 사용 하거나 사용 하지 않도록 설정 하는 방법을 참조 하세요. 이 기능은 .NET Framework 4.5.1 이상을 대상으로 하는 데스크톱 앱 및 웹 앱에 영향을 줍니다.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b099ab4958b1cf41b76884243e252e19a7a951b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105393"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698834"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
 
@@ -25,7 +25,7 @@ ms.locfileid: "85105393"
 
 Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 페이지에서 자동 생성 된 바인딩 리디렉션을 쉽게 사용 하지 않도록 설정할 수 있습니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.
 
 2. **응용 프로그램** 페이지에서 **바인딩 리디렉션 자동 생성** 옵션을 선택 취소 합니다.
 
@@ -35,8 +35,8 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 1. 다음 방법 중 하나를 사용 하 여 프로젝트 파일을 편집용으로 엽니다.
 
-   - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 선택한 다음 바로 가기 메뉴에서 **파일 탐색기에서 폴더 열기** 를 선택 합니다. 파일 탐색기에서 프로젝트 (.csproj 또는 .vbproj) 파일을 찾아서 메모장에서 엽니다.
-   - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 언로드된 프로젝트를 다시 마우스 오른쪽 단추로 클릭 한 다음 **편집 [projectname. .csproj]** 을 선택 합니다.
+   - Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 선택한 다음 바로 가기 메뉴에서 **파일 탐색기에서 폴더 열기** 를 선택 합니다. 파일 탐색기에서 프로젝트 (.csproj 또는 .vbproj) 파일을 찾아서 메모장에서 엽니다.
+   - Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드** 를 선택 합니다. 언로드된 프로젝트를 다시 마우스 오른쪽 단추로 클릭 한 다음 **편집 [projectname. .csproj]** 을 선택 합니다.
 
 2. 프로젝트 파일에서 다음 속성 항목을 찾습니다.
 
@@ -56,8 +56,8 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 1. 다음 방법 중 하나를 사용 하 여 프로젝트 파일을 편집용으로 엽니다.
 
-   - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 선택한 다음 바로 가기 메뉴에서 **파일 탐색기에서 폴더 열기** 를 선택 합니다. 파일 탐색기에서 프로젝트 (.csproj 또는 .vbproj) 파일을 찾아서 메모장에서 엽니다.
-   - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 언로드된 프로젝트를 다시 마우스 오른쪽 단추로 클릭 한 다음 **편집 [projectname. .csproj]** 을 선택 합니다.
+   - Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 선택한 다음 바로 가기 메뉴에서 **파일 탐색기에서 폴더 열기** 를 선택 합니다. 파일 탐색기에서 프로젝트 (.csproj 또는 .vbproj) 파일을 찾아서 메모장에서 엽니다.
+   - Visual Studio의 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드** 를 선택 합니다. 언로드된 프로젝트를 다시 마우스 오른쪽 단추로 클릭 한 다음 **편집 [projectname. .csproj]** 을 선택 합니다.
 
 2. 다음 요소를 첫 번째 구성 속성 그룹 (태그 아래)에 추가 합니다 \<PropertyGroup> .
 
@@ -94,7 +94,7 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
    ![어셈블리 참고 충돌에 대한 빌드 경고](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter **키를**누릅니다.
+2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter **키를** 누릅니다.
 
    필요한 바인딩 리디렉션을 소스 **web.config** 파일에 자동으로 추가할 수 있는 대화 상자가 나타납니다.
 

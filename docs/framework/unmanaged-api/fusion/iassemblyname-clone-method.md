@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b345e08-5e16-4e3d-a044-4e19d0892943
 topic_type:
 - apiref
-ms.openlocfilehash: 1236a574a85c01e3e1be5df9644bd04bbf0753ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca528bdbd9662db373d1beeece803d6c43728f2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698613"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone 메서드
+
 이 [IAssemblyName](iassemblyname-interface.md) 개체의 단순 복사본을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,17 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pName`  
- 제한이 이 `IAssemblyName` 개체의 반환 된 복사본입니다.  
+ 제한이 이 개체의 반환 된 복사본 `IAssemblyName` 입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

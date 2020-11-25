@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 50ce4e5e6125eae493bb62032d5c6bd8887c1afb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008965"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699094"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 열거형
+
 형식 메타데이터를 나타내는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -112,12 +113,13 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|형식에 연결 된 보안이 있음을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

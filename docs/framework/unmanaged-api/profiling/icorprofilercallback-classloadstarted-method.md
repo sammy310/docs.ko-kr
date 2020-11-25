@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 9a9fdc80c8f63dd5b004953266a5d7399655bc71
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fbdc9345c8364f33ac69da452dd91155fd5eede9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700277"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted 메서드
+
 클래스를 로드 하는 중임을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,9 +40,11 @@ HRESULT ClassLoadStarted(
   \[in] 로드 되는 클래스를 식별 합니다.
 
 ## <a name="remarks"></a>설명  
+
  `classId` [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) 메서드가 호출 될 때까지 정보 요청에 대 한 값이 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -50,6 +53,6 @@ HRESULT ClassLoadStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

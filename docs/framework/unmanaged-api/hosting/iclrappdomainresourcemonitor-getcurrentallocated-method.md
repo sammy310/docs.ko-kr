@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 685d303b31b8f8c20cbbdb8aec6fc127650aa32a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d3bd948dfe4a5cf97e3e3e430f551e7bc6404690
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616049"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700797"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated 메서드
+
 가비지 수집 된 메모리를 빼서 응용 프로그램 도메인이 만들어진 후에 적용 된 모든 메모리 할당의 총 크기 (바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,13 +34,15 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwAppDomainId`  
  진행 요청 된 응용 프로그램 도메인의 ID입니다.  
   
  `pBytesAllocated`  
  제한이 모든 메모리 할당의 총 크기에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -48,18 +51,20 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|응용 프로그램 도메인이 언로드 되었거나 존재 하지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드는 관리 되는 속성에 해당 하는 관리 되지 않는 <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 속성입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAppDomainResourceMonitor 인터페이스](iclrappdomainresourcemonitor-interface.md)
 - [응용 프로그램 도메인 리소스 모니터링](../../../standard/garbage-collection/app-domain-resource-monitoring.md)

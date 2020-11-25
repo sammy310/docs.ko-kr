@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5198efc14a57bf0a496a9c78569af45595d0b4a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698431"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 인터페이스
+
 카탈로그 서비스에 대 한 메서드를 제공 합니다.  
   
  이 인터페이스는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -33,6 +34,6 @@ ms.locfileid: "83617037"
 |[Autodone 메서드](icatalogservices-autodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
 |[NotAutodone 메서드](icatalogservices-notautodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)
