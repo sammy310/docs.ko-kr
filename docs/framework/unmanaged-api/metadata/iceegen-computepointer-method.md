@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 41a3b9c77fc766b2fa39b406dedbb3203cc97ad9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008874"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715474"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 메서드
+
 지정 된 코드 섹션의 버퍼를 확인 합니다.  
   
  이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
@@ -38,6 +39,7 @@ HRESULT ComputePointer (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `section`  
  진행 버퍼를 반환할 코드 섹션입니다.  
   
@@ -48,14 +50,15 @@ HRESULT ComputePointer (
  제한이 반환 된 버퍼에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICeeGen 인터페이스](iceegen-interface.md)

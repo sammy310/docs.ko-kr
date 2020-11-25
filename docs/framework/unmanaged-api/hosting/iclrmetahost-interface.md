@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-ms.openlocfilehash: bb7c3659930f308328cba121c06a88cb6a95eb26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75c8d550e572795a291f4639f9f28bd5214ff188
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714018"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 인터페이스
+
 버전 번호에 따라 특정 버전의 CLR (공용 언어 런타임)을 반환 하 고, 모든 설치 된 Clr을 나열 하 고, 지정 된 프로세스에서 로드 되는 모든 런타임을 나열 하 고, 어셈블리를 컴파일하는 데 사용 되는 CLR 버전을 검색 하 고, 정리 된 런타임 종료를 사용 하 여 프로세스를 끝내 고, 레거시 API 바인딩을 쿼리 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[EnumerateInstalledRuntimes 메서드](iclrmetahost-enumerateinstalledruntimes-method.md)|컴퓨터에 설치 된 각 CLR 버전에 대 한 유효한 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스 포인터를 포함 하는 열거형을 반환 합니다.|  
 |[EnumerateLoadedRuntimes 메서드](iclrmetahost-enumerateloadedruntimes-method.md)|지정 된 프로세스에 로드 된 각 CLR에 대해 유효한 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스 포인터를 포함 하는 열거형을 반환 합니다. 이 메서드는 [Getversionfromprocess](getversionfromprocess-function.md)를 대체 합니다.|  
@@ -37,6 +38,7 @@ ms.locfileid: "84504162"
 |[RequestRuntimeLoadedNotification 메서드](iclrmetahost-requestruntimeloadednotification-method.md)|CLR 버전이 처음 로드 되었지만 아직 시작 되지 않은 경우 지정 된 함수 포인터에 대 한 콜백을 보장 합니다. 이 메서드는 [Lockclrversion](lockclrversion-function.md) 을 대체 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 인터페이스의 인스턴스를 가져오는 유일한 방법은 다음과 같이 [Clrcreateinstance](clrcreateinstance-function.md) 함수를 호출 하는 것입니다.  
   
 ```cpp  
@@ -46,15 +48,16 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [호스팅](index.md)

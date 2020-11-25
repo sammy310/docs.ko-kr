@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-ms.openlocfilehash: 71e2c7f6790f29872c051bb5cea50755068057e9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9f485728ddb050abf815bf8ba26c69be9c909785
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504045"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714978"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 인터페이스
+
 버전, 디렉터리 및 로드 상태를 포함 하 여 특정 CLR (공용 언어 런타임)에 대 한 정보를 반환 하는 메서드를 제공 합니다. 또한이 인터페이스는 런타임을 초기화 하지 않고 런타임 관련 기능을 제공 합니다. 이 메서드에는 [Getinterface](iclrruntimeinfo-getinterface-method.md) 메서드를 통해 런타임 관련 [LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) 메서드, 런타임 모듈 관련 [GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) 메서드 및 런타임 제공 인터페이스가 포함 됩니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[BindAsLegacyV2Runtime 메서드](iclrruntimeinfo-bindaslegacyv2runtime-method.md)|모든 레거시 CLR 버전 2 활성화 정책 결정에 대해이 런타임을 바인딩합니다.|  
 |[GetDefaultStartupFlags 메서드](iclrruntimeinfo-getdefaultstartupflags-method.md)|CLR 시작 플래그 및 호스트 구성 파일을 가져옵니다.|  
@@ -42,15 +43,16 @@ ms.locfileid: "84504045"
 |[SetDefaultStartupFlags 메서드](iclrruntimeinfo-setdefaultstartupflags-method.md)|CLR 시작 플래그 및 호스트 구성 파일을 설정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [호스팅](index.md)

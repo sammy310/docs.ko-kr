@@ -13,14 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 85a7adddf395e07297c8fb6ceab4aa81e0aaf012
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1dfeb6101a6b8e33ab2fe35f318087d7f1834b6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714889"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted 메서드
+
 런타임이 시작 되었는지 여부를 나타냅니다. 즉, [ICLRRuntimeHost:: Start 메서드가](iclrruntimehost-start-method.md) 호출 되었고 성공 했는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,29 +33,33 @@ HRESULT IsStarted(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pbStarted`  
  [out] `true` 이 런타임이 시작 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
  `pdwStartupFlags`  
  제한이 런타임을 시작 하는 데 사용 된 플래그를 반환 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_NOTIMPL|CLR (공용 언어 런타임) 버전은 .NET Framework 4의 CLR 버전 보다 이전 버전입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드는 .NET Framework 4의 CLR 버전 이전 CLR 버전에서는 작동 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

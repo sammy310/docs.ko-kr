@@ -2,14 +2,15 @@
 title: ICorDebugDebugEvent::GetThread 메서드
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-ms.openlocfilehash: acce18517c105739417fc734b49ff004ca9546dc
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: ca6aba7897d9e97743d29db49bd058e140f84e6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976381"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713589"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread 메서드
+
 이벤트가 발생한 스레드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,6 +22,7 @@ HRESULT GetThread(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  ppThread  
  [out] 이벤트가 발생한 스레드를 나타내는 ICorDebugThread 개체의 주소에 대한 포인터입니다.  
   
@@ -30,6 +32,7 @@ HRESULT GetThread(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -38,7 +41,7 @@ HRESULT GetThread(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugDebugEvent 인터페이스](icordebugdebugevent-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

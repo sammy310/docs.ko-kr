@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 49de0398dd32970bd8ceb0fd24178e75df5d14b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493294"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713497"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 메서드
+
 호스트가 힙에서 지정 된 양의 메모리를 할당 하도록 요청 하 고 추가적으로 메모리가 할당 된 위치를 추적 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT DebugAlloc (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cbSize`  
  진행 현재 메모리 할당 요청의 크기 (바이트)입니다.  
   
@@ -57,7 +59,7 @@ HRESULT DebugAlloc (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`성공적으로 반환 되었습니다.|  
+|S_OK|`DebugAlloc` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -66,18 +68,20 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|할당 요청을 완료 하는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
- CLR은 [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md) 메서드를 호출 하 여 [IHostMalloc](ihostmalloc-interface.md) 인스턴스에 대 한 인터페이스 포인터를 가져옵니다. `DebugAlloc`런타임에 디버깅 중에 사용할 코드 파일 정보를 가져올 수 있도록 합니다.  
+
+ CLR은 [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md) 메서드를 호출 하 여 [IHostMalloc](ihostmalloc-interface.md) 인스턴스에 대 한 인터페이스 포인터를 가져옵니다. `DebugAlloc` 런타임에 디버깅 중에 사용할 코드 파일 정보를 가져올 수 있도록 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)

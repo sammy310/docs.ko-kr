@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-ms.openlocfilehash: 89be29c770098d92ce3c47f7c45b1bb8580f2edb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b18289af460f64085fedd7b32387ebcb8c51715
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713550"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID 메서드
+
 지정 된 식별자를 가진 태스크가 실행 중인 스레드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT GetThreadForTaskID (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `taskid`  
  진행 태스크의 식별자입니다.  
   
@@ -42,9 +44,11 @@ HRESULT GetThreadForTaskID (
  제한이 검색할 스레드를 나타내는 ICorDebugThread2 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  호스트는 [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md) 메서드를 사용 하 여 작업 식별자를 설정할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
