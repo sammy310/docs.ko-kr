@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0847e64f-fdbe-4c96-8168-da20fdc84d80
 topic_type:
 - apiref
-ms.openlocfilehash: 7b98302985d9d54599ea8ea2e01dc2503c468d58
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b8e6048dd6b8df71ac3dddcc4397f6d512127c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210230"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695883"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 인터페이스
 
@@ -41,6 +41,7 @@ ICorDebugModule 인터페이스에 대 한 논리적 확장으로 사용 됩니�
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -49,6 +50,6 @@ ICorDebugModule 인터페이스에 대 한 논리적 확장으로 사용 됩니�
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: b88b3907eb555050de93f35411629b2bd30c7375
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 21af3980de9b5a768b6af9a8aca74b693c7ac528
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212947"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695493"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize 메서드
+
 X86 운영 체제의 스택에 있는 매개 변수의 누적 크기를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,25 +33,29 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pSize`  
  제한이 스택에 있는 매개 변수의 누적 크기에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|스택 크기가 성공적으로 반환 되었습니다.|  
-|S_FALSE|`GetStackParameterSize`가 x86 이외의 플랫폼에서 호출 된 경우|  
+|S_FALSE|`GetStackParameterSize` 가 x86 이외의 플랫폼에서 호출 된 경우|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize`는 `null` 입니다.|  
+|E_INVALIDARG|`pSize` 는 `null` 입니다.|  
   
 ## <a name="exceptions"></a>예외  
   
 ## <a name="remarks"></a>설명  
+
  [ICorDebugStackWalk](icordebugstackwalk-interface.md) 메서드는 스택에 푸시되는 매개 변수에 대 한 스택 포인터를 조정 하지 않습니다. 대신에서 반환 하는 값을 사용 하 여 `GetStackParameterSize` 스택 포인터를 조정 하 여 매개 변수에 대해 조정 하는 네이티브 해제기 초기값으로 지정할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -59,7 +64,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

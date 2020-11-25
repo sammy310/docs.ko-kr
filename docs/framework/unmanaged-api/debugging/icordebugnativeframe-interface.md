@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: dd87745a29514a2f9f05aa142baae4e05d4b4a7b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206604"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695545"
 ---
 # <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame 인터페이스
 
@@ -45,6 +45,7 @@ ms.locfileid: "83206604"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -53,6 +54,6 @@ ms.locfileid: "83206604"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
