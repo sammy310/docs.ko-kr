@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: d711f36b4e2071dac9458a023e1d3cf4743e77b3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c4ff28ff1019b5314902a4e71f6d02b5a2fd8d70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710846"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA 인터페이스
+
 MDA(관리 디버깅 도우미) 메시지를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
@@ -40,6 +41,7 @@ MDA(관리 디버깅 도우미) 메시지를 나타냅니다.
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -48,7 +50,7 @@ MDA(관리 디버깅 도우미) 메시지를 나타냅니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
