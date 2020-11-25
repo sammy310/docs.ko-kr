@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a197d260c55d24f906da7d7f2768bb7ba1ad751f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 97a4a464d3dfb7b333f44ac4206bd880fd171e16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723417"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler 메서드
+
 관리 되는 이벤트에 대 한 이벤트 처리기 개체를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,18 @@ HRESULT SetManagedHandler (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pCallback`  
  진행 이벤트 처리기 개체인 [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) 개체에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `SetManagedHandler`만들 때를 호출 해야 합니다.  
+
+ `SetManagedHandler` 만들 때를 호출 해야 합니다.  
   
- `ICorDebugManagedCallback` 구현에 디버깅 중인 응용 프로그램에 대 한 디버깅 이벤트를 처리 하기에 충분 한 인터페이스가 포함 되지 `SetManagedHandler` 않은 경우 E_NOINTERFACE의 HRESULT를 반환 합니다.  
+ 구현에 디버깅 `ICorDebugManagedCallback` 중인 응용 프로그램에 대 한 디버깅 이벤트를 처리 하기에 충분 한 인터페이스가 포함 되지 않은 경우 `SetManagedHandler` E_NOINTERFACE의 HRESULT를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

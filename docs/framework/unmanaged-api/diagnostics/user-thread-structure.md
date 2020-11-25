@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-ms.openlocfilehash: 5144feab742bc5dac36563d701d81a699d0bb2f3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 409651aa69e957418ad46f61e1bd57add0eb10a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722897"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD 구조체
+
 스레드에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) 메서드를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
@@ -44,9 +45,10 @@ typedef struct tagUSER_THREAD
 |`dwTid`|스레드 ID입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [SetNotifyFilter 메서드](inotifysource2-setnotifyfilter-method.md)
 - [진단 기호 저장소 구조체](diagnostics-symbol-store-structures.md)

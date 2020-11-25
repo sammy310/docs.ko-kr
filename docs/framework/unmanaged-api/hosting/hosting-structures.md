@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616088"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721792"
 ---
 # <a name="hosting-structures"></a>호스팅 구조체
+
 이 섹션에서는 호스팅 API가 사용 하는 관리 되지 않는 구조체에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [AssemblyBindInfo 구조체](assemblybindinfo-structure.md)  
  참조 된 어셈블리에 대 한 자세한 정보를 제공 합니다.  
   
@@ -42,6 +44,7 @@ ms.locfileid: "83616088"
  발생 한 오버플로 형식과 오버플로로 인해 throw 된 예외에 대 한 정보를 저장 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [호스팅 Coclass](hosting-coclasses.md)  
   
  [호스팅 인터페이스](hosting-interfaces.md)  

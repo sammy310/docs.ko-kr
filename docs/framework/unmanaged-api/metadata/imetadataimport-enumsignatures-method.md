@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 652ebf1be6a58e08da27aaed5b2e84a8f2aee98a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721974"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures 메서드
+
 현재 범위의 독립 실행형 서명을 나타내는 Signature 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT EnumSignatures (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `phEnum`  
  [in, out] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에서는 NULL 이어야 합니다.  
   
@@ -53,22 +55,24 @@ HRESULT EnumSignatures (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures`성공적으로 반환 되었습니다.|  
+|`S_OK`|`EnumSignatures` 성공적으로 반환 되었습니다.|  
 |`S_FALSE`|열거할 토큰이 없습니다. 이 경우는 `pcSignatures` 0입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  서명 토큰은 [IMetaDataEmit:: GetTokenFromSig](imetadataemit-gettokenfromsig-method.md) 메서드를 통해 생성 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

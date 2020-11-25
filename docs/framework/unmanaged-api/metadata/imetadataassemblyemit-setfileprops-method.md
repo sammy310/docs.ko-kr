@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 9990daea1b097532de53684921d3f10c520a3b1a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9cf5f3d926c1e742dd9134e7bf292df53e1a4909
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008068"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720180"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps 메서드
+
 지정된 `File` 메타데이터 구조를 수정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT SetFileProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `file`  
  진행 수정할 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다 `File` .  
   
@@ -50,17 +52,19 @@ HRESULT SetFileProps (
  진행 파일의 다양 한 특성을 지정 하는 [Corfileflags](corfileflags-enumeration.md) 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `File`메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineFile](imetadataassemblyemit-definefile-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

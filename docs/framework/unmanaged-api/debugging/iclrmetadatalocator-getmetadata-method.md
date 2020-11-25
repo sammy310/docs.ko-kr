@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f0ba2342e9704ba06dd1d3612f699298c734a5eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859882"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723521"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 메서드
+
 이미지의 메타 데이터를 검색 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,6 +44,7 @@ HRESULT GetMetadata(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `imagePath`  
  진행 이미지 파일의 경로를 지정 하는 문자열입니다.  
   
@@ -71,9 +73,11 @@ HRESULT GetMetadata(
  제한이 반환 되는 메타 데이터의 크기입니다.  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl, ClrData .h  
@@ -82,6 +86,6 @@ HRESULT GetMetadata(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRMetadataLocator 인터페이스](iclrmetadatalocator-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-ms.openlocfilehash: f81ef3f5959e279b3fbbd94d6c5e8a2d86a38e7f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9049cd42e9c10cdcff62b005094b56c9df9ce975
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719998"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit 메서드
+
 호출을 종료할 때 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT OnSyncCallExit
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `in_CallID`  
  진행 종료 되는 호출의 ID입니다. [CALL_ID 구조체](call-id-structure.md)를 참조 하세요.  
   
@@ -46,13 +48,15 @@ HRESULT OnSyncCallExit
  `out_pBufferSize`  
  제한이 호출 버퍼의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [INotifySink2 인터페이스](inotifysink2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

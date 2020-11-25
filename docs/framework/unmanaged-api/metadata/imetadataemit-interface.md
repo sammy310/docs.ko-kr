@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-ms.openlocfilehash: a2c2512abc28f0140fc261c5136c7e1255db96de
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f5495c170abf3e991a6e28016687f8ae77f0b423
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722026"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 인터페이스
+
 현재 정의 된 범위에서 어셈블리에 대 한 메타 데이터를 만들고, 수정 하 고, 저장 하는 메서드를 제공 합니다. 메타 데이터는 메모리에 저장 되거나 디스크에 저장 될 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[ApplyEditAndContinue 메서드](imetadataemit-applyeditandcontinue-method.md)|지정 된의 변경 내용을 사용 하 여 현재 어셈블리 범위를 업데이트 합니다 `pImport` .|  
 |[DefineCustomAttribute 메서드](imetadataemit-definecustomattribute-method.md)|지정 된 메타 데이터 시그니처를 사용 하 여 지정 된 개체에 연결 되는 사용자 지정 특성에 대 한 정의를 만들고 해당 사용자 지정 특성 정의에 대 한 토큰을 가져옵니다.|  
@@ -79,15 +80,16 @@ ms.locfileid: "84009216"
 |[TranslateSigWithScope 메서드](imetadataemit-translatesigwithscope-method.md)|어셈블리를 현재 범위로 가져오고 병합 된 범위에 대 한 새 메타 데이터 서명을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 인터페이스](metadata-interfaces.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

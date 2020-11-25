@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: cce0efa925683b5361a5422112db3f8231e2dfb4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b611dcabc1e5cc36f5c6342f0a832cc81de8c1d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720739"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 인터페이스
 
@@ -29,7 +29,7 @@ ms.locfileid: "82893272"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](icordebugcodeenum-next-method.md)|현재 위치에서 시작 하 `ICorDebugCode` 여 열거형에서 지정 된 수의 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugcodeenum-next-method.md)|`ICorDebugCode`현재 위치에서 시작 하 여 열거형에서 지정 된 수의 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -37,6 +37,7 @@ ms.locfileid: "82893272"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

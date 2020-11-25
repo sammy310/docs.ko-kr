@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 70f07c9e-0614-4bee-ac34-09fe6c51c5a9
 topic_type:
 - apiref
-ms.openlocfilehash: 6f66e4a903be2e9b12a573f74638a62c58005689
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 609cd557db71fac53aadf613534a23e988b14bde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720760"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 인터페이스
+
 관리 되는 반환 값에 대 한 정보를 제공 하기 위해 "ICorDebugCode" 및 "ICorDebugCode2"를 확장 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -36,6 +37,7 @@ ms.locfileid: "82893461"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 907b1343ddbfa28b97ac2210e28b99cd38aa6fd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721831"
 ---
 # <a name="hosting-enumerations"></a>호스팅 열거형
+
 이 섹션에서는 호스팅 API가 사용 하는 관리 되지 않는 열거형에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [CLSID_RESOLUTION_FLAGS 열거형](clsid-resolution-flags-enumeration.md)  
  CLR (공용 언어 런타임)에서를 확인 하는 방법을 나타내는 값을 포함 합니다 `CLSID` .  
   
@@ -108,6 +110,7 @@ ms.locfileid: "84504305"
  CLR에서 요청 하는 작업이 실행 되는 경우 호스트에서 수행할 동작을 나타냅니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [호스팅 Coclass](hosting-coclasses.md)  
   
  [호스팅 인터페이스](hosting-interfaces.md)  

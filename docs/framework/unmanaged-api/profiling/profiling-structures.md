@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: c3bbc66079e05abf494ad112b8aa0ac68e3c3e2f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3f832850fac918a568d02e9ef2f1e5b140ffc04f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868111"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722754"
 ---
 # <a name="profiling-structures"></a>프로파일링 구조체
+
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조체](cor-prf-assembly-reference-info-structure.md)  
  어셈블리 참조 closure 워커를 수행할 때 고려해야 하는 참조 어셈블리에 대한 정보를 공용 언어 런타임에 제공합니다.  
   
@@ -38,7 +40,8 @@ ms.locfileid: "76868111"
  [COR_PRF_GC_GENERATION_RANGE 구조체](cor-prf-gc-generation-range-structure.md)  
  가비지 수집이 진행 중인 메모리 범위(블록)를 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
+
  COR_DEBUG_IL_TO_NATIVE_MAP  
   
  COR_IL_MAP  

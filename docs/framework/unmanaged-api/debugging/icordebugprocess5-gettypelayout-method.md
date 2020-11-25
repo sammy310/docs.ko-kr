@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-ms.openlocfilehash: 861af4ba9c6f4d4bdb16abb9d4e1fd79debac59b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 32277e8adcd4bb08c8d0480eb3b4e7e4b5949479
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723131"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout 메서드
+
 형식 식별자를 기반으로 메모리에 있는 개체의 레이아웃에 대 한 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,6 +33,7 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `id`  
  진행 레이아웃이 필요한 형식을 지정 하는 [COR_TYPEID](cor-typeid-structure.md) 토큰입니다.  
   
@@ -39,9 +41,11 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
  제한이 메모리에 있는 개체의 레이아웃에 대 한 정보를 포함 하는 [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 구조체에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugProcess5::GetTypeLayout`메서드는 다양 한 [ICorDebugProcess5](icordebugprocess5-interface.md) 메서드에서 반환 하는 [COR_TYPEID](cor-typeid-structure.md)에 따라 개체에 대 한 정보를 제공 합니다. 이 정보는 메서드에 의해 채워지는 [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 구조에 의해 제공 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -50,7 +54,7 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [COR_TYPE_LAYOUT 구조체](cor-type-layout-structure.md)
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)

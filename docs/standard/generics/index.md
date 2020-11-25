@@ -26,18 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f361e0e250368694d7afa078183b1e5cb7ef1464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098816"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707869"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
 제네릭을 사용하면 메서드, 클래스, 구조체 또는 인터페이스를 사용 대상인 정확한 데이터 형식에 맞게 조정할 수 있습니다. 예를 들어 모든 형식의 키와 값을 허용하는 <xref:System.Collections.Hashtable> 클래스를 사용하는 대신 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스를 사용하고 키에 허용되는 형식과 값을 지정할 수 있습니다. 제네릭의 이점으로는 향상된 코드 다시 사용 가능성과 형식 안전성 등이 있습니다.  
 
 ## <a name="defining-and-using-generics"></a>제네릭 정의 및 사용
+
  제네릭은 저장하거나 사용하는 하나 이상의 형식에 대한 자리 표시자(형식 매개 변수)를 포함하는 클래스, 구조체, 인터페이스 및 메서드입니다. 제네릭 컬렉션 클래스는 저장하는 개체 형식에 대해 형식 매개 변수를 자리 표시자로 사용할 수 있습니다. 형식 매개 변수는 필드의 형식과 메서드의 매개 변수 형식으로 표시됩니다. 제네릭 메서드는 형식 매개 변수를 반환 값의 형식 또는 정식 매개 변수 중 하나의 형식으로 사용할 수 있습니다. 다음 코드에서는 간단한 제네릭 클래스 정의를 보여 줍니다.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -51,6 +52,7 @@ ms.locfileid: "95098816"
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
 
 ### <a name="generics-terminology"></a>제네릭 관련 용어  
+
  .NET에서 제네릭을 설명하는 데 사용되는 용어는 다음과 같습니다.  
   
 - *제네릭 형식 정의* 는 포함하거나 사용할 수 있는 형식에 대한 자리 표시자를 포함하며 템플릿으로 작동하는 클래스, 구조체 또는 인터페이스 선언입니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 키와 값의 두 형식을 포함할 수 있습니다. 제네릭 형식 정의는 템플릿일 뿐이므로 제네릭 형식 정의인 클래스, 구조체 또는 인터페이스의 인스턴스를 만들 수는 없습니다.  
@@ -80,6 +82,7 @@ ms.locfileid: "95098816"
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
 ## <a name="advantages-and-disadvantages-of-generics"></a>제네릭의 장점 및 단점
+
  제네릭 컬렉션과 대리자를 사용하는 경우의 장점은 다음과 같습니다.  
   
 - 형식 안전성. 제네릭을 사용하면 컴파일러에서 형식 안전성을 보장해야 하는 부담이 없어집니다. 컴파일 타임에 올바른 데이터 형식이 적용되므로 코드를 작성하여 데이터 형식을 테스트할 필요가 없습니다. 형식 캐스팅의 필요성과 런타임 오류 발생 가능성도 감소합니다.  
@@ -112,6 +115,7 @@ ms.locfileid: "95098816"
      자세한 내용은 <xref:System.Type.MakeGenericType%2A>의 "중첩 형식"을 참조하세요.  
 
 ## <a name="class-library-and-language-support"></a>클래스 라이브러리 및 언어 지원  
+
  .NET에서는 다음 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다.  
   
 - <xref:System.Collections.Generic> 네임스페이스에는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 같이 .NET에서 제공하는 대부분의 제네릭 컬렉션 형식이 포함되어 있습니다.  
@@ -127,6 +131,7 @@ ms.locfileid: "95098816"
  Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요.
 
 ## <a name="nested-types-and-generics"></a>중첩 형식 및 제네릭  
+
  제네릭 형식에 중첩된 형식은 바깥쪽 제네릭 형식의 형식 매개 변수에 따라 달라질 수 있습니다. 공용 언어 런타임은 고유한 제네릭 형식 매개 변수를 포함하지 않는 중첩 형식도 제네릭으로 간주합니다. 중첩 형식의 인스턴스를 만들 때는 모든 바깥쪽 제네릭 형식에 대해 형식 인수를 지정해야 합니다.  
 
 ## <a name="related-topics"></a>관련 항목  
@@ -145,6 +150,7 @@ ms.locfileid: "95098816"
 |[Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)|제네릭과 템플릿 간의 차이점을 비롯하여 C++ 사용자를 위한 제네릭 기능에 대해 설명합니다.|  
 
 ## <a name="reference"></a>참고  
+
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

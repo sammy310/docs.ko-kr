@@ -6,22 +6,24 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdd4b60d068677ae2a0874b589294ba220f0d854
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723001"
 ---
 # <a name="debugging-enumerations"></a>디버깅 열거형
+
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [CLR_DEBUGGING_PROCESS_FLAGS 열거형](clr-debugging-process-flags-enumeration.md)  
- [ICLR디버깅::OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) 메서드에서 사용되는 값을 제공합니다.  
+ [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) 메서드에서 사용 하는 값을 제공 합니다.  
   
  [CLRDataEnumMemoryFlags 열거형](clrdataenummemoryflags-enumeration.md)  
- [ICLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) 메서드에 대 한 호출을 포함 해야 하는 메모리 영역을 나타냅니다.  
+ [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) 메서드에 대 한 호출에 포함 되어야 하는 메모리 영역을 나타냅니다.  
   
  [COR_PUB_ENUMPROCESS 열거형](cor-pub-enumprocess-enumeration.md)  
  열거할 프로세스 형식을 식별합니다.  
@@ -39,16 +41,16 @@ ms.locfileid: "79179134"
  내보낸 함수가 관리 코드를 호출하는 이유를 설명합니다.  
   
  CorDebugCreateProcessFlags  
- [ICorDebug:CreateProcess](icordebug-createprocess-method.md) 메서드를 호출할 때 사용할 수 있는 추가 디버깅 옵션을 제공합니다.  
+ [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) 메서드 호출에 사용할 수 있는 추가 디버깅 옵션을 제공 합니다.  
   
  [CorDebugDebugEventKind 열거형](cordebugdebugeventkind-enumeration.md)  
- [디코딩Event](icordebugprocess6-decodeevent-method.md) 메서드에 의해 정보가 디코딩되는 이벤트 유형을 나타냅니다.  
+ [DecodeEvent](icordebugprocess6-decodeevent-method.md) 메서드가 정보를 디코딩하는 이벤트의 유형을 나타냅니다.  
   
  [CorDebugDecodeEventFlagsWindows 열거형](cordebugdecodeeventflagswindows-enumeration.md)  
  Windows 플랫폼에서 디버그 이벤트에 대한 추가 정보를 제공합니다.  
   
  CorDebugExceptionCallbackType  
- [ICorDebugManagedCallback2:예외](icordebugmanagedcallback2-exception-method.md) 이벤트에서 만든 콜백 유형을 나타냅니다.  
+ [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) 이벤트에서 생성 된 콜백의 형식을 나타냅니다.  
   
  [CorDebugExceptionFlags 열거형](cordebugexceptionflags-enumeration.md)  
  예외에 대한 추가 정보를 제공합니다.  
@@ -81,7 +83,7 @@ ms.locfileid: "79179134"
  관리되는 JIT(Just-In-Time) 컴파일러의 동작에 영향을 주는 값을 포함합니다.  
   
  [CorDebugJITCompilerFlagsDeprecated 열거형](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 더 이상 사용되지 않습니다. 대신 `CORDEBUG_JIT_DEFAULT` [CorDebugJIT컴파일러 플래그](cordebugjitcompilerflags-enumeration.md) 열거형의 멤버를 사용합니다.  
+ 사용되지 않습니다. `CORDEBUG_JIT_DEFAULT`대신 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 멤버를 사용 합니다.  
   
  CorDebugMappingResult  
  IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.  
@@ -93,7 +95,7 @@ ms.locfileid: "79179134"
  디버거가 네이티브 이미지 캐시에서 네이티브(NGen) 이미지를 로드하는지 여부를 결정하는 값을 제공합니다.  
   
  [CorDebugPlatform 열거형](cordebugplatform-enumeration.md)  
- [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) 메서드에서 사용되는 대상 플랫폼 값을 제공합니다.  
+ [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) 메서드에서 사용 하는 대상 플랫폼 값을 제공 합니다.  
   
  [CorDebugRecordFormat 열거형](cordebugrecordformat-enumeration.md)  
  네이티브 예외 디버그 이벤트에 대한 정보가 포함된 바이트 배열의 데이터 형식을 설명합니다.  
@@ -113,7 +115,7 @@ ms.locfileid: "79179134"
  CorDebugThreadState  
  디버깅을 위한 스레드 상태를 지정합니다.  
   
- \>코르데버그운맵드스탑  
+ \>CorDebugUnmappedStop  
  스텝퍼에 의해 코드 실행에서 중지를 트리거할 수 있는 매핑되지 않은 코드 형식을 지정합니다.  
   
  CorDebugUserState  
@@ -137,9 +139,10 @@ ms.locfileid: "79179134"
  [WriteableMetadataUpdateMode 열거형](writeablemetadataupdatemode-enumeration.md)  
  메타데이터에 대한 메모리 내 업데이트가 디버거에 표시되는지 여부를 지정하는 값을 제공합니다.
 
- [ClrDataSource유형 열거형](clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP 구조에서 사용되는 값을 제공합니다.
+ [ClrDataSourceType 열거형](clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP 구조체에서 사용 되는 값을 제공 합니다.
 
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
+
  [디버깅 Coclass](debugging-coclasses.md)  
   
  [디버깅 인터페이스](debugging-interfaces.md)  

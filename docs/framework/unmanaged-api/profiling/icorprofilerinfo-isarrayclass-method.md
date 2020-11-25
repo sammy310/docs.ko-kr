@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 2a3f5bb0c54935e524cc955a5e11aac75b0c0923
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2608f91a7c5baa935e48fbe58ad4d14aaaad1f0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497558"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722507"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 메서드
+
 지정 된 클래스가 배열 클래스 인지 여부를 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT IsArrayClass(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `classId`  
  진행 검사할 클래스의 ID입니다.  
   
@@ -49,9 +51,11 @@ HRESULT IsArrayClass(
  제한이 배열의 차수 (차원 수)를 나타내는 정수에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  지정 된 클래스가 배열 클래스인 경우 메서드는 null이 `IsArrayClass` 아닌 모든 출력 매개 변수에 대 한 S_OK HRESULT 및 값을 반환 합니다. 그렇지 않으면 S_FALSE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -60,6 +64,6 @@ HRESULT IsArrayClass(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

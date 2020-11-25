@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ac40e203cf7d32c1fe30c9915bac3171139403e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723287"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 메서드
+
 CLR (공용 언어 런타임) 버전이 처음 로드 되었지만 아직 시작 되지 않은 경우 호출 되도록 보장 되는 콜백 함수를 제공 합니다. 이 메서드는 [Lockclrversion](lockclrversion-function.md) 함수를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,18 +34,21 @@ HRESULT RequestRuntimeLoadedNotification (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pCallbackFunction`  
  진행 새 런타임이 로드 될 때 호출 되는 콜백 함수입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pCallbackFunction`가 null인 경우|  
+|E_POINTER|`pCallbackFunction`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  콜백은 다음과 같은 방식으로 작동 합니다.  
   
 - 콜백은 처음으로 런타임에 로드 된 경우에만 호출 됩니다.  
@@ -78,25 +82,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  호스트가 로드 되거나 재진입 방식으로 다른 런타임을 로드 하려는 경우 `pfnCallbackThreadSet` `pfnCallbackThreadUnset` 콜백 함수에 제공 된 및 매개 변수를 다음과 같은 방식으로 사용 해야 합니다.  
   
-- `pfnCallbackThreadSet`는 이러한 로드를 시도 하기 전에 런타임 로드를 발생 시킬 수 있는 스레드에서 호출 해야 합니다.  
+- `pfnCallbackThreadSet` 는 이러한 로드를 시도 하기 전에 런타임 로드를 발생 시킬 수 있는 스레드에서 호출 해야 합니다.  
   
-- `pfnCallbackThreadUnset`스레드가 더 이상 이러한 런타임 로드를 발생 시 키 게 하지 않고 초기 콜백에서 반환 되기 전에를 호출 해야 합니다.  
+- `pfnCallbackThreadUnset` 스레드가 더 이상 이러한 런타임 로드를 발생 시 키 게 하지 않고 초기 콜백에서 반환 되기 전에를 호출 해야 합니다.  
   
-- `pfnCallbackThreadSet`및 `pfnCallbackThreadUnset` 는 모두 재진입 성이 아닙니다.  
+- `pfnCallbackThreadSet` 및 `pfnCallbackThreadUnset` 는 모두 재진입 성이 아닙니다.  
   
 > [!NOTE]
 > 호스트 응용 프로그램은 `pfnCallbackThreadSet` 매개 변수 범위 밖에 서를 호출 해서는 안 `pfnCallbackThreadUnset` `pCallbackFunction` 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [호스팅](index.md)

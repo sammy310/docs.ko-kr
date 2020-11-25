@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 42ea497bdcab71518bec08514b827d76f0317d57
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 02bc6f4bbb6754bd160fe2694f27563908f3a759
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722221"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
+
 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알립니다.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionTailcall (
   \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
 
 ## <a name="remarks"></a>설명  
+
  마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, tail 호출의 대상인 함수에 대해 [Functionleave](functionleave-function.md) 콜백이 실행 되지 않습니다.  
   
  `FunctionTailcall`함수는 콜백입니다. 함수를 구현 해야 합니다. 구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.  
@@ -57,6 +59,7 @@ void __stdcall FunctionTailcall (
  또한 함수는 관리 `FunctionTailcall` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
@@ -65,7 +68,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

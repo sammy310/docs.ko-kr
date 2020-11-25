@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 590647c5-499f-44c3-b56c-0e1945088d3a
 topic_type:
 - apiref
-ms.openlocfilehash: e9c6cba3f06ebaa061679dbf1f8b49534bda153c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bb79802c58094d139551c95b8eaa73d08585d0a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721415"
 ---
 # <a name="icordebugeditandcontinueerrorinfogettoken-method"></a>ICorDebugEditAndContinueErrorInfo::GetToken 메서드
-`GetToken`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
+
+`GetToken`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
   
 ## <a name="see-also"></a>참조
 

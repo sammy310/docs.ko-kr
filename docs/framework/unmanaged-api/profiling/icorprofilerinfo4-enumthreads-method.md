@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: d42c86a458661d3559f99235a6d5b208c82d1963
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: df0e66c8563404d7de4f1e11f41483f2f61f519c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502810"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721558"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads 메서드
+
 프로 파일링 된 프로세스에서 모든 관리 되는 스레드의 컬렉션을 순차적으로 반복 하는 메서드를 제공 하는 열거자를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,12 +34,14 @@ HRESULT EnumThreads([out]
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppEnum`  
  제한이 [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -47,7 +50,7 @@ HRESULT EnumThreads([out]
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerThreadEnum 인터페이스](icorprofilerthreadenum-interface.md)
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)

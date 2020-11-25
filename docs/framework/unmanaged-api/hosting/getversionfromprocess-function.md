@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: fbaf45da0902ded8a2f7bf0d470aaed3b5f531aa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: da0d159da6eef7745c1fa7f7320d5e1355f6e413
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617128"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721883"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
+
 지정 된 프로세스 핸들과 연결 된 CLR (공용 언어 런타임)의 버전 번호를 가져옵니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -39,6 +40,7 @@ HRESULT GetVersionFromProcess (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hProcess`  
  진행 프로세스에 대 한 핸들입니다.  
   
@@ -51,26 +53,28 @@ HRESULT GetVersionFromProcess (
  `pdwLength`  
  제한이 버전 번호 문자열의 길이에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`pVersion`가 null이 고 `cchBuffer` 가 null이 아니거나 그 반대의 경우도 마찬가지입니다.<br /><br /> 또는<br /><br /> `hProcess`는 프로세스에 대 한 유효한 핸들이 아닙니다.<br /><br /> 또는<br /><br /> CLR이 로드 되지 않았습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`가 null 이거나 버전 문자열의 길이 보다 작은 경우|  
+|E_INVALIDARG|`pVersion` 가 null이 고 `cchBuffer` 가 null이 아니거나 그 반대의 경우도 마찬가지입니다.<br /><br /> -또는-<br /><br /> `hProcess` 는 프로세스에 대 한 유효한 핸들이 아닙니다.<br /><br /> -또는-<br /><br /> CLR이 로드 되지 않았습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 가 null 이거나 버전 문자열의 길이 보다 작은 경우|  
 |E_NOTIMPL|이 방법은 Microsoft windows 95, Microsoft Windows 98 또는 Microsoft Windows Millennium Edition 운영 체제에서 사용할 수 없습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetRequestedRuntimeInfo 함수](getrequestedruntimeinfo-function.md)
 - [GetRequestedRuntimeVersion 함수](getrequestedruntimeversion-function.md)

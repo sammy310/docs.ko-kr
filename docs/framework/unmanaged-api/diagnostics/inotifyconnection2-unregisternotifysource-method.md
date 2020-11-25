@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2fc6c715-646f-41fd-9c12-c59b40575269
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0fcdcd4fe1561f7565586e3327c6d3d7e0fe0a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 90220c2bfea683ff0472473e180c9e11ea568672
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442048"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720037"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource 메서드
+
 지정 된 알림 소스 개체를 연결에서 제거 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,16 +36,19 @@ HRESULT UnregisterNotifySource
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `in_pNotifySource`  
  진행 등록을 취소할 알림 개체입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

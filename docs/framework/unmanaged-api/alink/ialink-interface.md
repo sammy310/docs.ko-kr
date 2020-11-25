@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441825"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720323"
 ---
 # <a name="ialink-interface"></a>IALink 인터페이스
+
 .NET Framework 어셈블리를 생성 하는 데 도움이 됩니다. 무엇 보다도 인터페이스에는 다중 모듈 어셈블리에 대 한 어셈블리 매니페스트 작성, 강력한 이름으로 어셈블리 서명, .netmodules 만들기를 지 원하는 메서드가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [AddFile 메서드](addfile-method.md)  
   
  [AddImport 메서드](addimport-method.md)  
@@ -73,7 +75,7 @@ ms.locfileid: "74441825"
   
  [SetNonAssemblyFlags 메서드](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ALink API](index.md)
 - [IALink2 인터페이스](ialink2-interface.md)

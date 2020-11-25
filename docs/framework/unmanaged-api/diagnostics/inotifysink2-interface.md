@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 255fe51f86157842a5807145bf7c58ae1ff5ba8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720024"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 인터페이스
+
 싱크 알림에 대 한 메서드를 선언 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -34,9 +35,10 @@ ms.locfileid: "83442061"
 |[OnSyncCallReturn 메서드](inotifysink2-onsynccallreturn-method.md)|호출이 반환 될 때 호출 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

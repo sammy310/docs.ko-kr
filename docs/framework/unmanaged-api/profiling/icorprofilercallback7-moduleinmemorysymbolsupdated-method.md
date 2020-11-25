@@ -9,14 +9,15 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: c7e53816c2f571fe6ff68b517ed827459a0f1562
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 248d2f749ddcbd772313558af2b2721f4d1c0f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723092"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: Moduleinmemory기호 및 날짜 메서드
+
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  
   
  메모리 내 모듈과 연관 된 기호 스트림이 업데이트 될 때마다 프로파일러에 알립니다.  
@@ -30,10 +31,12 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  [in] `moduleId`  
  기호 스트림이 업데이트 되는 메모리 내 모듈의 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
+
  이 콜백은 [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) 메서드를 호출할 때 [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md) 이벤트 마스크 플래그를 설정 하 여 제어 됩니다.  
   
 > [!NOTE]
@@ -42,6 +45,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
  어셈블리에 대 한 기호를 지정 하기 위해 인수를 포함 하는 관리 되는 메서드의 오버 로드 중 하나를 호출 하는 즉시 기호가 제공 되는 경우에도 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> `rawSymbolStore` 런타임은 [moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md) 콜백이 발생 했을 때까지 기호 데이터를 모듈에 실제로 연결 하지 않을 수 있습니다. 이 이벤트는 나중에 이러한 모듈의 기호를 수집할 수 있는 기회를 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -50,7 +54,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ModuleLoadFinished 메서드](icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2 메서드](icorprofilerinfo5-seteventmask2-method.md)

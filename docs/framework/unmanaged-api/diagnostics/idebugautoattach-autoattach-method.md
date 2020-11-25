@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 64dd653bb0d4e383075a999e0803e4acfd0fae3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442126"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720102"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
+
 서버에서 호출 하는 디버거 자동 연결을 수행 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT AutoAttach
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `guidPort`  
  진행 항상로 설정 `GUID_NULL` 합니다.  
   
@@ -54,12 +56,14 @@ HRESULT AutoAttach
  `pszSessionId`  
  진행 디버그 동사에 의해 전달 된 문자열입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** DbgAutoAttach  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IDebugAutoAttach 인터페이스](idebugautoattach-interface.md)

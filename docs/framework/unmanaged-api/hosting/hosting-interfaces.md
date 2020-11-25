@@ -6,14 +6,15 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: b1459bf78276abe0daefd7a7ee814841f3c65dfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f82301da1813b8d50deebf4452d8c07809c186c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550666"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721805"
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
+
 이 섹션에서는 관리 되지 않는 호스트가 CLR (공용 언어 런타임)을 응용 프로그램에 통합 하는 데 사용할 수 있는 인터페이스에 대해 설명 합니다.  
   
  .NET Framework 버전 2.0 호스팅 인터페이스는 .NET Framework 버전 1.0 및 1.1 인터페이스를 대체 합니다. 두 인터페이스 집합 간에는 상당한 차이가 있습니다. 이러한 항목을 혼합 하면 예기치 않은 동작이 발생할 수 있으므로 권장 되지 않습니다.  
@@ -23,6 +24,7 @@ ms.locfileid: "90550666"
  .NET Framework 4 호스팅 인터페이스는 .NET Framework 2.0 인터페이스를 대체 합니다.
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1에 도입 된 호스팅 인터페이스에 대해 설명 합니다.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "90550666"
  .NET Framework 4에서 도입 된 호스팅 인터페이스에 대해 설명 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [호스팅 Coclass](hosting-coclasses.md)  
   
  [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)  

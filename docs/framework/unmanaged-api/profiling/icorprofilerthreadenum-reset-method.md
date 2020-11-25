@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: 81d7c86f-d062-4eed-8df3-448091ce8c49
 topic_type:
 - apiref
-ms.openlocfilehash: 19f3a4ecb6680d9951cd09525ec079b85fc5839c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 59285ad106b975ded63c43c78dfa081fdbdb3327
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721194"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset 메서드
+
 열거자의 커서를 시퀀스의 시작 위치로 이동합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -40,7 +42,7 @@ HRESULT Reset();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerThreadEnum 인터페이스](icorprofilerthreadenum-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

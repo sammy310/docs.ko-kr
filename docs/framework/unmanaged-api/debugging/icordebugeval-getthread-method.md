@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-ms.openlocfilehash: b985ada09e0e1914c5e60da61a45398fc6098b33
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 0680c47e4390e876c5df99ee7eb200e7d187f0ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976281"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722195"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread 메서드
+
 이 계산이 실행 되거나 실행 될 스레드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetThread (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppThread`  
  제한이 스레드를 나타내는 ICorDebugThread 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

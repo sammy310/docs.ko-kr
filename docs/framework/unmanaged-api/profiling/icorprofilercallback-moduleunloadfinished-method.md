@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: fd35f47c004d1ffb235cefe1cd2a1eb2c1fffaef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 514c20455b95ecf74ffaecd349982fd8f8f49816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723235"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished 메서드
+
 모듈의 언로드가 완료 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT ModuleUnloadFinished(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleId`  
  진행 언로드된 모듈의 ID입니다.  
   
@@ -41,11 +43,13 @@ HRESULT ModuleUnloadFinished(
  진행 모듈이 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `moduleId` [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md) 메서드가 반환 된 후에는 값이 정보 요청에 적합 하지 않습니다.  
   
  클래스를 언로드하는 일부 부분은 콜백 후에도 계속 될 수 있습니다 `ModuleUnloadFinished` . 의 오류 HRESULT는 `hrStatus` 오류를 나타냅니다. 그러나의 성공 HRESULT는 `hrStatus` 모듈 언로드의 첫 번째 부분만 성공 했다는 것을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -54,6 +58,6 @@ HRESULT ModuleUnloadFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

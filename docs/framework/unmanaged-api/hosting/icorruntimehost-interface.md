@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546023"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720622"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 인터페이스
+
 호스트에서 CLR (공용 언어 런타임)을 명시적으로 시작 및 중지 하 고, 응용 프로그램 도메인을 만들고 구성 하 고, 기본 도메인에 액세스 하 고, 프로세스에서 실행 되는 모든 도메인을 열거 하는 데 사용할 수 있는 메서드를 제공 합니다.  
   
  .NET Framework 버전 2.0에서이 인터페이스는 [ICLRRuntimeHost](iclrruntimehost-interface.md)에 의해 대체 됩니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[CloseEnum 메서드](icorruntimehost-closeenum-method.md)|도메인 열거자를 도메인 목록의 시작 부분으로 다시 설정 합니다.|  
 |[CreateDomain 메서드](icorruntimehost-createdomain-method.md)|응용 프로그램 도메인을 만듭니다. 호출자는 형식의 인스턴스에 대 한 인터페이스 포인터 <xref:System._AppDomain> 를 받습니다 <xref:System.AppDomain?displayProperty=nameWithType> .|  
@@ -51,6 +52,7 @@ ms.locfileid: "90546023"
 |[UnloadDomain 메서드](icorruntimehost-unloaddomain-method.md)|현재 프로세스에서 지정 된 응용 프로그램 도메인을 언로드합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  

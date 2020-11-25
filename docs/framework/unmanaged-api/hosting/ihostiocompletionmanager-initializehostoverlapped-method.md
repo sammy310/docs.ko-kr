@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-ms.openlocfilehash: cf257ab86d27946c861c89dff5e6f09a42013e58
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 397dbbeb0b85cb549a8b5917f977ecb13b3d6539
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804707"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720219"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 메서드
+
 호스트에 `OVERLAPPED` 비동기 i/o 요청에 사용 되는 Win32 구조에 추가할 사용자 지정 데이터를 초기화할 수 있는 기회를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,14 +35,15 @@ HRESULT InitializeHostOverlapped (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pvOverlapped`  
  진행 I/o 요청에 포함 될 Win32 구조체에 대 한 포인터 `OVERLAPPED` 입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped`성공적으로 반환 되었습니다.|  
+|S_OK|`InitializeHostOverlapped` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -50,6 +52,7 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|요청한 리소스를 할당 하는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  Windows 플랫폼 함수는 구조체를 사용 `OVERLAPPED` 하 여 비동기 i/o 요청에 대 한 상태를 저장 합니다. CLR은 메서드를 호출 `InitializeHostOverlapped` 하 여 호스트에 사용자 지정 데이터를 인스턴스에 추가할 수 있는 기회를 제공 합니다 `OVERLAPPED` .  
   
 > [!IMPORTANT]
@@ -58,15 +61,16 @@ HRESULT InitializeHostOverlapped (
  E_OUTOFMEMORY의 반환 값은 호스트가 사용자 지정 데이터를 초기화 하지 못했음을 나타냅니다. 이 경우 CLR은 오류를 보고 하 고 호출에 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [GetHostOverlappedSize 메서드](ihostiocompletionmanager-gethostoverlappedsize-method.md)

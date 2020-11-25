@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 25aefff46f7557f89f27d1eccab58c9c70d2d13e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722117"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 메서드
+
 지정 된 메타 데이터 시그니처를 사용 하는 어셈블리 참조의 속성 집합을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,8 +44,9 @@ HRESULT GetAssemblyRefProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `mdar`  
- 진행 `mdAssemblyRef`속성을 가져올 어셈블리 참조를 나타내는 메타 데이터 토큰입니다.  
+ 진행 `mdAssemblyRef` 속성을 가져올 어셈블리 참조를 나타내는 메타 데이터 토큰입니다.  
   
  `ppbPublicKeyOrToken`  
  제한이 공개 키 또는 메타 데이터 토큰에 대 한 포인터입니다.  
@@ -74,17 +76,19 @@ HRESULT GetAssemblyRefProps (
  제한이 어셈블리에 적용 된 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. Flags 값은 하나 이상의 [Corassemblyflags](corassemblyflags-enumeration.md) 값의 조합입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  성공 하면이 메서드는 S_OK를 반환 합니다. 그렇지 않으면 Winerror.h 헤더 파일에 정의 된 오류 코드 중 하나를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5a8cece5ad72588b564890c8f21dabb6792a5641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720063"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
+
 연결 알림 소스를 등록 및 등록 취소 하는 메서드를 선언 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -32,9 +33,10 @@ ms.locfileid: "83442087"
 |[UnregisterNotifySource 메서드](inotifyconnection2-unregisternotifysource-method.md)|지정 된 알림 소스 개체를 연결에서 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [INotifySink2 인터페이스](inotifysink2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

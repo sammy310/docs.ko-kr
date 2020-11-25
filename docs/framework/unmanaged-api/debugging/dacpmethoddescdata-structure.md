@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860810"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723066"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 구조체
 
@@ -52,16 +52,16 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>구성원
+## <a name="members"></a>멤버
 
-| 멤버                       | Description                                                                                     |
+| 멤버                       | 설명                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | 런타임에 메서드의 지정 된 인스턴스화에 사용할 수 있는 네이티브 코드가 있는지 여부를 나타냅니다. |
 | `bIsDynamic`                 | 경량 코드 생성을 통해 메서드가 동적으로 생성 되는지 여부를 나타냅니다.           |
 | `wSlotNumber`                | 메서드 테이블의 메서드 슬롯 번호입니다.                                                   |
 | `NativeCodeAddr`             | 메서드의 초기 네이티브 주소입니다.                                                            |
 | `data`                       | 런타임에서 내부적으로 사용 하는 버퍼에 대 한 포인터입니다.                                             |
-| `MethodDescPtr`              | 런타임에 대 `MethodDesc` 한 포인터입니다.                                                     |
+| `MethodDescPtr`              | 런타임에 대 한 포인터 `MethodDesc` 입니다.                                                     |
 | `nativeCodeInfo`             | 런타임에서 메서드를 추적 하기 위해 내부적으로 사용 하는 버퍼에 대 한 포인터입니다.                            |
 | `moduleInfo`                 | 모듈 정보에 대 한 런타임에서 내부적으로 사용 하는 버퍼에 대 한 포인터입니다.                      |
 | `MDToken`                    | 지정 된 메서드와 연결 된 토큰입니다.                                                         |
@@ -78,12 +78,13 @@ struct DacpMethodDescData
 이 구조체는 런타임 내에 있으며 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 이를 사용 하려면 위에 지정 된 대로 구조를 정의 합니다.
 
 ## <a name="requirements"></a>요구 사항
+
 **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅](index.md)
 - [디버깅 구조체](debugging-structures.md)

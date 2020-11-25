@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 63c92e3f34527f895552f45d43f332f778470b13
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860430"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723599"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID 메서드
+
 CLR(공용 언어 런타임) 데이터 액세스 서비스에 의해 호출되어 예외를 throw한 스레드의 ID를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -31,21 +32,25 @@ HRESULT GetExceptionThreadID(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `threadID`  
  [out] 예외를 throw한 스레드의 ID입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다. `HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |`S_OK`|메서드가 정상적으로 실행되었습니다.|  
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|예외의 유효한 스레드 ID를 찾을 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl, ClrData .h  
@@ -54,7 +59,7 @@ HRESULT GetExceptionThreadID(
   
  **.NET Framework 버전:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRDataTarget3 인터페이스](iclrdatatarget3-interface.md)
 - [GetExceptionContextRecord 메서드](iclrdatatarget3-getexceptioncontextrecord-method.md)

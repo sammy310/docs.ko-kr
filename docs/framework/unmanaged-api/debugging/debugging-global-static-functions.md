@@ -6,17 +6,19 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-ms.openlocfilehash: c20d8719b63cb40074dc740506ae4a3c0fc3a251
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04906322e311b580abddeca7744cf3e75d471e05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793777"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722988"
 ---
 # <a name="debugging-global-static-functions"></a>디버깅 전역 정적 함수
+
 이 섹션에서는 디버깅 API에서 사용하는 관리되지 않는 전역 정적 함수에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [_EFN_GetManagedExcepStack 함수](efn-getmanagedexcepstack-function.md)  
  관리되는 예외 개체 주소를 제공하면 내부에 포함된 스택 추적의 문자열 버전을 반환합니다.  
   
@@ -35,7 +37,8 @@ ms.locfileid: "76793777"
  [PFN_CLRDataCreateInstance 함수 포인터](pfn-clrdatacreateinstance-function-pointer.md)  
  지정된 대상 프로세스에 대한 지정된 인터페이스 개체를 만들려고 CLR 데이터 액세스 서비스에 의해 호출되는 함수를 가리킵니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
+
  [디버깅 Coclass](debugging-coclasses.md)  
   
  [디버깅 인터페이스](debugging-interfaces.md)  
