@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-ms.openlocfilehash: 1ca3adf30ad633fcfb10a4b43a435698d2899597
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1f6c6ae3b7cb45b049d0fb0d88bbf89121bccfd7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710417"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>ICorDebugModule::EnableClassLoadCallbacks 메서드
+
 이 모듈에 대해 [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) 및 [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) 콜백이 호출 되는지 여부를 제어 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,18 @@ HRESULT EnableClassLoadCallbacks(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `bClassLoadCallbacks`  
  진행 `true` `ICorDebugManagedCallback::LoadClass` 연결 된 이벤트가 발생할 때 CLR (공용 언어 런타임)에서 및 메서드를 호출할 수 있도록 하려면이 값을로 설정 `ICorDebugManagedCallback::UnloadClass` 합니다.  
   
  동적이 아닌 모듈의 경우 기본값은입니다 `false` . 동적 모듈의 경우이 값은 항상 이며 `true` 변경할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugManagedCallback::LoadClass`및 `ICorDebugManagedCallback::UnloadClass` 콜백은 동적 모듈에 대해 항상 사용할 수 있으며 비활성화할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -51,4 +55,4 @@ HRESULT EnableClassLoadCallbacks(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
