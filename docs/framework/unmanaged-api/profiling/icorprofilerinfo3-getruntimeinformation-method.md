@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fdb2b1601e0164de19bcc1e8f60856346aeaacb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496401"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698015"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 메서드
+
 프로 파일링 되 고 있는 CLR (공용 언어 런타임)에 대 한 버전 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,6 +43,7 @@ HRESULT GetRuntimeInformation(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pClrInstanceId`  
  제한이 프로세스에서 실행 중인 CLR 인스턴스의 담당자 ID입니다. 이는 `ClrInstanceID` ETW (Windows 용 이벤트 추적) 시작 이벤트에서 보고 하는와 동일 합니다.  
   
@@ -70,9 +72,11 @@ HRESULT GetRuntimeInformation(
  제한이 CLR 버전 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
+
  모든 매개 변수에 대해 null을 전달할 수 있습니다. 그러나 `pcchVersionString` 가 null이 아닌 경우는 null 일 수 없습니다 `szVersionString` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -81,7 +85,7 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

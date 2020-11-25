@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-ms.openlocfilehash: c39c047cce97db7c98f1fad403bd16d0e6a2c0fe
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: facea5cd7f0b0e0e6c0b1049e87a2355f1d3965a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697170"
 ---
 # <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum 인터페이스
+
 ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -36,6 +37,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합�
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합�
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

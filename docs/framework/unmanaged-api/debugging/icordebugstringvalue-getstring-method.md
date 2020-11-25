@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 9051fa612bef3fbd817ff7bdadbd52c96ade5b7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379661"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697105"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString 메서드
+
 이 ICorDebugStringValue에서 참조 하는 문자열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cchString`  
  [in] `szString` 배열의 크기입니다.  
   
@@ -47,6 +49,7 @@ HRESULT GetString (
  제한이 검색 된 문자열을 저장 하는 배열입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

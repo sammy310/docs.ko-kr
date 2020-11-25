@@ -2,14 +2,15 @@
 title: ICorDebugExceptionDebugEvent::GetStackPointer 메서드
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-ms.openlocfilehash: 4f84183dfc23ebc0d0fee9feeb21329c217b9cca
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 46906e7d3ce7f257eb776e50dc6097946eb77d1f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976020"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697404"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetStackPointer 메서드
+
 이 예외 디버그 이벤트에 대한 스택 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,10 +22,12 @@ HRESULT GetStackPointer(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pStackPointer`  
- [out] 이 예외 디버그 이벤트의 스택 포인터에 대한 포인터입니다. 자세한 내용은 주의 섹션을 참조하십시오.  
+ [out] 이 예외 디버그 이벤트의 스택 포인터에 대한 포인터입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
+
  이 스택 포인터의 의미는 다음 표와 같이 이벤트 유형에 따라 달라집니다.  
   
 |이벤트 유형|`pStackPointer` 값의 의미|  
@@ -32,7 +35,7 @@ HRESULT GetStackPointer(
 |[MANAGED_EXCEPTION_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|예외를 throw한 프레임에 대한 스택 포인터입니다.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](cordebugrecordformat-enumeration.md)|예외가 throw된 지점과 가장 가까운 사용자 코드 프레임에 대한 스택 포인터입니다.|  
 |[MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](cordebugrecordformat-enumeration.md)|catch 처리기가 포함된 프레임에 대한 스택 포인터입니다.|  
-|[MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)|`pStackPointer`이 **null**인 경우|  
+|[MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)|`pStackPointer`가 **null** 인 경우|  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
@@ -40,6 +43,7 @@ HRESULT GetStackPointer(
  이벤트 유형은 [ICorDebugDebugEvent:: GetEventKind](icordebugdebugevent-geteventkind-method.md) 메서드에서 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -48,7 +52,7 @@ HRESULT GetStackPointer(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugExceptionDebugEvent 인터페이스](icordebugexceptiondebugevent-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

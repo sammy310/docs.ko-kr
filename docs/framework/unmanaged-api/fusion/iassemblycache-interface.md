@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4f0ba018b55202c22cb90b22b927a9c426c4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696858"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache 인터페이스
+
 Fusion 기술에서 사용할 전역 어셈블리 캐시를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
@@ -35,11 +36,12 @@ Fusion 기술에서 사용할 전역 어셈블리 캐시를 나타냅니다.
 |[UninstallAssembly 메서드](iassemblycache-uninstallassembly-method.md)|전역 어셈블리 캐시에서 지정 된 어셈블리를 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Fusion. h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d8f2788d63f27aac30cf239b410eecea31f09212
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496336"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697885"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 메서드
+
 지정된 스레드 및 애플리케이션 도메인의 범위에 있는 지정된 Thread 정적 필드의 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetThreadStaticAddress2(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `classId`  
  진행 요청 된 스레드 정적 필드를 포함 하는 클래스의 ID입니다.  
   
@@ -53,6 +55,7 @@ HRESULT GetThreadStaticAddress2(
  제한이 지정 된 스레드 내의 정적 필드 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `GetThreadStaticAddress2`메서드는 다음 중 하나를 반환할 수 있습니다.  
   
 - 지정 된 컨텍스트에서 지정 된 정적 필드에 주소가 할당 되지 않은 경우 HRESULT CORPROF_E_DATAINCOMPLETE입니다.  
@@ -64,6 +67,7 @@ HRESULT GetThreadStaticAddress2(
  [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) 메서드는 `GetThreadStaticAddress2` 메서드와 유사 하지만 응용 프로그램 도메인 인수를 허용 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -72,7 +76,7 @@ HRESULT GetThreadStaticAddress2(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

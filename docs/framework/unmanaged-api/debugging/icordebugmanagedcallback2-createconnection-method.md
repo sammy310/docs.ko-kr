@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a4ebf65dfaaa487e87f3fd78e54c468c7e24a89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501926"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697248"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 메서드
+
 새 연결이 생성 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT CreateConnection (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pProcess`  
  진행 연결이 생성 된 프로세스를 나타내는 "ICorDebugProcess" 개체에 대 한 포인터입니다.  
   
@@ -46,6 +48,7 @@ HRESULT CreateConnection (
  진행 새 연결의 이름에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `CreateConnection`콜백은 다음 중 한 가지 경우에 발생 합니다.  
   
 - 디버거가 연결을 포함 하는 프로세스에 연결 하는 경우 이 경우 런타임은 `CreateConnection` 프로세스의 각 연결에 대해 이벤트 및 [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) 이벤트를 생성 하 고 디스패치합니다.  
@@ -53,6 +56,7 @@ HRESULT CreateConnection (
 - 호스트가 [호스팅 API](../hosting/index.md)에서 [ICLRDebugManager:: beginconnection](../hosting/iclrdebugmanager-beginconnection-method.md) 을 호출 하는 경우  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -61,7 +65,7 @@ HRESULT CreateConnection (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

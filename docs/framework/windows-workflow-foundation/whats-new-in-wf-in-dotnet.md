@@ -1,21 +1,21 @@
 ---
-title: .NET 4.5에서 Windows Workflow Foundation의 새로운 기능
+title: .NET Framework 4.5에 Windows Workflow Foundation의 새로운 기능
 description: .NET Framework 4.5의 Windows Workflow Foundation에는 새로운 작업, 디자이너 기능, 워크플로 개발 모델 등의 많은 새로운 기능이 도입 되었습니다.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556618"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697911"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5에서 Windows Workflow Foundation의 새로운 기능
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>.NET Framework 4.5에 Windows Workflow Foundation의 새로운 기능
 
-.NET Framework 4.5의 WF (Windows Workflow Foundation)에는 새로운 작업, 디자이너 기능, 워크플로 개발 모델 등의 많은 새로운 기능이 도입 되었습니다. .NET Framework 4.5에 도입 된 새로운 워크플로 기능 중 상당수는 다시 호스트 된 workflow designer에서 지원 됩니다. 지원 되는 새로운 기능에 대 한 자세한 내용은 [Rehosted 워크플로 디자이너의 새로운 Workflow Foundation 4.5 기능 지원](wf-features-in-the-rehosted-workflow-designer.md)을 참조 하세요. 최신 버전을 사용 하도록 .NET 3.0 및 .NET 3.5 워크플로 응용 프로그램을 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션 지침](migration-guidance.md)을 참조 하세요. 이 항목에서는 .NET Framework 4.5에 도입 된 새 워크플로 기능에 대 한 개요를 제공 합니다.
+.NET Framework 4.5의 WF (Windows Workflow Foundation)에는 새로운 작업, 디자이너 기능, 워크플로 개발 모델 등의 많은 새로운 기능이 도입 되었습니다. .NET Framework 4.5에 도입 된 새로운 워크플로 기능 중 상당수는 다시 호스트 된 workflow designer에서 지원 됩니다. 지원 되는 새로운 기능에 대 한 자세한 내용은 [Rehosted 워크플로 디자이너의 새로운 Workflow Foundation 4.5 기능 지원](wf-features-in-the-rehosted-workflow-designer.md)을 참조 하세요. 최신 버전을 사용 하도록 .NET Framework 3.0 및 .NET Framework 3.5 워크플로 응용 프로그램을 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션 지침](migration-guidance.md)을 참조 하세요. 이 문서에서는 .NET Framework 4.5에 도입 된 새로운 워크플로 기능에 대 한 개요를 제공 합니다.
 
 > [!WARNING]
-> 이전 버전의 프레임 워크를 대상으로 하는 프로젝트에서는 4.5 .NET Framework에 도입 된 새로운 Windows Workflow Foundation 기능을 사용할 수 없습니다. .NET Framework 4.5를 대상으로 하는 프로젝트가 이전 버전의 프레임 워크를 대상으로 하는 경우 몇 가지 문제가 발생할 수 있습니다.
+> 이전 버전의 프레임 워크를 대상으로 하는 프로젝트에서는 4.5 .NET Framework에 도입 된 새로운 Windows Workflow Foundation 기능을 사용할 수 없습니다. .NET Framework 4.5를 대상으로 하는 프로젝트가 이전 버전의 Framework로 대상이 변경 되는 경우 여러 가지 문제가 발생할 수 있습니다.
 >
 > - C # 식은 디자이너에서 메시지 **값이 XAML로 설정 되었습니다**.로 대체 됩니다.
 > - 다음 오류를 포함하여 여러 빌드 오류가 발생합니다.
@@ -89,9 +89,9 @@ ms.locfileid: "90556618"
 
 이제 대규모 워크플로를 보다 효율적으로 관리하기 위해 워크플로를 키워드로 검색할 수 있습니다. 이 기능은 Visual Studio 에서만 사용할 수 있습니다. 이 기능은 재 호스트 된 디자이너에서 사용할 수 없습니다. 사용 가능한 검색 종류는 다음 두 가지입니다.
 
-- 빠른 찾기- **Ctrl + F** 나 **편집**, **찾기 및 바꾸기**, **빠른 찾기**를 사용 하 여 시작 합니다.
+- 빠른 찾기- **Ctrl + F** 나 **편집**, **찾기 및 바꾸기**, **빠른 찾기** 를 사용 하 여 시작 합니다.
 
-- 파일에서 찾기- **Ctrl + Shift + F** 나 **편집**, **찾기 및 바꾸기**, **파일에서 찾기**로 시작 합니다.
+- 파일에서 찾기- **Ctrl + Shift + F** 나 **편집**, **찾기 및 바꾸기**, **파일에서 찾기** 로 시작 합니다.
 
 바꾸기는 지원되지 않습니다.
 
@@ -101,11 +101,11 @@ ms.locfileid: "90556618"
 
 - <xref:System.Activities.Activity> 개체, <xref:System.Activities.Statements.FlowNode> 개체, <xref:System.Activities.Statements.State> 개체, <xref:System.Activities.Statements.Transition> 개체 및 기타 사용자 지정 흐름 제어 항목의 속성
 
-- variables
+- 변수
 
 - 인수
 
-- 표현식
+- 식
 
 빠른 찾기는 디자이너의 <xref:System.Activities.Presentation.Model.ModelItem> 트리에서 수행됩니다. 워크플로 정의로 가져온 네임스페이스는 빠른 찾기로 찾을 수 없습니다.
 
@@ -151,7 +151,7 @@ ms.locfileid: "90556618"
 
 ### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a> 워크플로 항목의 개요 보기
 
-계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 뷰가 **문서 개요** 보기에 표시 됩니다. 이 보기를 열려면 맨 위 메뉴에서 **보기**, **다른 창**, **문서 개요**를 차례로 선택 하거나 ctrl + W, U를 누릅니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다.
+계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 뷰가 **문서 개요** 보기에 표시 됩니다. 이 보기를 열려면 맨 위 메뉴에서 **보기**, **다른 창**, **문서 개요** 를 차례로 선택 하거나 ctrl + W, U를 누릅니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다.
 
 [시작 자습서](getting-started-tutorial.md) 에서 완료 된 워크플로의 다음 스크린샷은 순차 워크플로를 사용 하는 개요 보기를 보여 줍니다.
 

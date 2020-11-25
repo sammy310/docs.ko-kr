@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-ms.openlocfilehash: 82f282630a2e31b8c67d43fa0f0b30431a0d6ee4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cd45c6d515648819a83d4e9944eb20d5cd20dd86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895053"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698223"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount 메서드
+
 배열에 있는 요소의 총 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,10 +35,12 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pnCount`  
  제한이 배열에 있는 요소의 총 수에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

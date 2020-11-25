@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a268496-ee51-4d84-8700-ee56fd0c499d
 topic_type:
 - apiref
-ms.openlocfilehash: 51d5b2f2ee17cc177e3b0ddc7d2e0b82fd70063d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dc4df7e7cb93f137013d0a0e4d805c7563d4fe1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496375"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697898"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 메서드
+
 문자열 개체의 레이아웃 정보를 가져옵니다. 이 메서드는 [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md) 메서드를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,16 +35,19 @@ HRESULT GetStringLayout2(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pStringLengthOffset`  
- 제한이 `ObjectID`문자열 자체의 길이를 저장 하는 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 저장 됩니다 `DWORD` .  
+ 제한이 `ObjectID` 문자열 자체의 길이를 저장 하는 포인터를 기준으로 하는 위치의 오프셋에 대 한 포인터입니다. 길이는로 저장 됩니다 `DWORD` .  
   
  `pBufferOffset`  
  제한이 와이드 문자 문자열을 저장 하는 포인터를 기준으로 하는 버퍼의 오프셋에 대 한 포인터 `ObjectID` 입니다.  
   
 ## <a name="remarks"></a>설명  
+
  문자열이 null로 종료 될 수도 있고 그렇지 않을 수도 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -52,7 +56,7 @@ HRESULT GetStringLayout2(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-ms.openlocfilehash: 9a6ee58cda5e0b673b3ff1378240f89323e30194
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37d6b6d5112089df18fb138086db5e138a69629c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496063"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697755"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 메서드
+
 지정된 함수의 JIT 다시 컴파일된 버전에 포함된 코드에 대한 MSIL(Microsoft Intermediate Language) 오프셋과 네이티브 오프셋 간의 맵을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT GetILToNativeMapping(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `functionId`  
  [in] 코드를 포함하는 함수의 ID입니다.  
   
@@ -54,7 +56,8 @@ HRESULT GetILToNativeMapping(
  [out] 각각 오프셋을 지정하는 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체의 배열입니다. `GetILToNativeMapping2` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.  
   
 ## <a name="remarks"></a>설명  
- `GetILToNativeMapping2`는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드와 유사 합니다. 단, 프로파일러는 이후 릴리스에서 다시 컴파일된 함수의 ID를 지정할 수 있습니다.  
+
+ `GetILToNativeMapping2` 는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드와 유사 합니다. 단, 프로파일러는 이후 릴리스에서 다시 컴파일된 함수의 ID를 지정할 수 있습니다.  
   
 > [!NOTE]
 > [ICorProfilerFunctionControl:: SetILInstrumentedCodeMap](icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) 메서드는 .NET Framework 4.5에서 구현 되지 않으므로 JIT 다시 컴파일된 함수는 원래 컴파일된 함수와 다른 IL-네이티브 매핑을 포함할 수 없습니다. 따라서 `GetILToNativeMapping2` .NET Framework 4.5에서 0이 아닌 JIT 다시 컴파일된 ID를 사용 하 여를 호출할 수 없습니다.  
@@ -66,6 +69,7 @@ HRESULT GetILToNativeMapping(
  또는 길이가 0인 `map` 버퍼로 `GetILToNativeMapping2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcMap`에 반환된 값으로 설정하고 `GetILToNativeMapping2`을 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -74,7 +78,7 @@ HRESULT GetILToNativeMapping(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetILToNativeMapping 메서드](icorprofilerinfo-getiltonativemapping-method.md)
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)
