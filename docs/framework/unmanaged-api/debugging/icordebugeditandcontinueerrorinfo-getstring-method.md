@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 542b33c82834ccd30c79c78bdcc759cf0c34d36c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3251aa3b2bbb15e9a9da8c54745184a28c8e60ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783330"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721428"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="966c0-102">ICorDebugEditAndContinueErrorInfo::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="966c0-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="966c0-103">`GetString`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="966c0-103">`GetString` is obsolete.</span></span> <span data-ttu-id="966c0-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="966c0-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="966c0-105">참조</span><span class="sxs-lookup"><span data-stu-id="966c0-105">See also</span></span>
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="c882b-102">ICorDebugEditAndContinueErrorInfo::GetString 메서드</span><span class="sxs-lookup"><span data-stu-id="c882b-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
 
-- [<span data-ttu-id="966c0-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="966c0-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="c882b-103">`GetString`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c882b-103">`GetString` is obsolete.</span></span> <span data-ttu-id="c882b-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="c882b-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c882b-105">참조</span><span class="sxs-lookup"><span data-stu-id="c882b-105">See also</span></span>
+
+- [<span data-ttu-id="c882b-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c882b-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
