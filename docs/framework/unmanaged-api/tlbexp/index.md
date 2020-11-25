@@ -7,17 +7,19 @@ helpviewer_keywords:
 - Tlbexp.exe
 - Type Library Exporter
 ms.assetid: 5c0a3d14-5f26-4267-94a9-82c30f8db09a
-ms.openlocfilehash: cbde2af9c8a03e6c41f571120027030713f1b8d5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9386918f3574720d90bda7e8da592fa0c91160e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708246"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Tlbexp 도우미 함수(관리되지 않는 API 참조)
+
 [형식 라이브러리 내보내기 도구](../../tools/tlbexp-exe-type-library-exporter.md)(Tlbexp.exe)는 TlbRef.dll이라는 동적 링크 라이브러리를 로드합니다. 이 DLL에는 어셈블리-형식 라이브러리 전환 프로세스 중 내보내기 도구에서 사용하는 인터페이스 하나와 도우미 함수 두 개가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [GetTypeLibInfo 함수](gettypelibinfo-function.md)  
  형식 라이브러리에 대한 지역화 및 운영 체제 정보를 제공합니다.  
   

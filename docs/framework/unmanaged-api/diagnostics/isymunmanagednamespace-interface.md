@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 3bcb642ac62fb00780a4fda7aaeebaabb386db33
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d9b295060426acd7f925bcf19c05ba216fdc2a4d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707900"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 인터페이스
+
 네임스페이스를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
@@ -33,8 +34,9 @@ ms.locfileid: "83615074"
 |[GetVariables 메서드](isymunmanagednamespace-getvariables-method.md)|이 네임 스페이스의 전역 범위에 정의 된 모든 변수를 반환 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

@@ -1,6 +1,6 @@
 ---
-title: 시작 열거 함수(관리되지 않는 API 참조)
-description: BeginEnumeration 함수는 열거형의 시작 부분으로 열거기를 재설정합니다.
+title: BeginEnumeration 함수 (관리 되지 않는 API 참조)
+description: BeginEnumeration 함수는 열거자를 열거형의 시작 부분으로 다시 설정 합니다.
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: eac23916bd78ec3970a87566e2d2f4d79b379824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6057526ddbe2efed65f8569e829c35524829e43e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708220"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
-열거체를 열거시작부분으로 재설정합니다.  
+
+열거자를 열거형의 시작 부분으로 다시 설정 합니다.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,69 +40,70 @@ HRESULT BeginEnumeration (
 ## <a name="parameters"></a>매개 변수
 
 `vFunc`\
-【인】 이 매개 변수는 사용되지 않습니다.
+진행 이 매개 변수는 사용 되지 않습니다.
 
 `ptr`\
-【인】 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스에 대한 포인터입니다.
+진행 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스에 대 한 포인터입니다.
 
 `lEnumFlags`\
-【인】 설명 [섹션에](#remarks) 설명된 플래그 또는 값의 비트 조합으로 열거형에 포함된 속성을 제어합니다.
+진행 [설명](#remarks) 섹션에서 설명 하는 플래그 또는 값의 비트 조합으로, 열거형에 포함 된 속성을 제어 합니다.
 
 ## <a name="return-value"></a>반환 값
 
-이 함수에서 반환되는 다음 값은 *WbemCli.h* 헤더 파일에 정의되거나 코드에서 상수로 정의할 수 있습니다.
+이 함수에서 반환 되는 다음 값은 *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.
 
-|지속적임  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 의 `lEnumFlags` 플래그 조합이 잘못되었거나 잘못된 인수가 지정되었습니다. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | 에 대한 `BeginEnumeration` 두 번째 호출은 에 [`EndEnumeration`](endenumeration.md)대한 중간 호출 없이 이루어졌습니다. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 새 열거를 시작하기에 사용할 수 있는 메모리가 부족합니다. |
-|`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공했습니다.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 에서 플래그 조합이 `lEnumFlags` 잘못 되었거나 잘못 된 인수가 지정 되었습니다. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | 를 호출 하지 않고에 대 한 두 번째 호출을 `BeginEnumeration` 수행 했습니다 [`EndEnumeration`](endenumeration.md) . |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 새 열거를 시작할 수 없습니다. |
+|`WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
 
-이 함수는 [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 메서드에 대한 호출을 래핑합니다.
+이 함수는 [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 메서드에 대 한 호출을 래핑합니다.
 
-`lEnumFlags` 인수로 전달할 수 있는 플래그는 *WbemCli.h* 헤더 파일에 정의되거나 코드에서 상수로 정의할 수 있습니다.  각 그룹의 한 플래그를 다른 그룹의 모든 플래그와 결합할 수 있습니다. 그러나 동일한 그룹의 플래그는 상호 배타적입니다.
+인수로 전달 될 수 있는 플래그는 `lEnumFlags` *WbemCli* 헤더 파일에 정의 되어 있거나 코드에서 상수로 정의할 수 있습니다.  각 그룹의 플래그 하나를 다른 모든 그룹의 플래그와 결합할 수 있습니다. 그러나 같은 그룹의 플래그는 함께 사용할 수 없습니다.
 
 **그룹 1**
 
-|지속적임  |값  |Description  |
+|상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | 키만 을 구성하는 속성을 포함합니다. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | 개체 참조인 속성만 포함합니다. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | 키만 구성 하는 속성을 포함 합니다. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | 개체 참조에만 해당 하는 속성을 포함 합니다. |
 
 **그룹 2**
 
-지속적임  |값  |Description  |
+상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 열거형은 시스템 속성으로만 제한합니다. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 로컬 및 전파 속성을 포함하지만 열거형에서 시스템 속성을 제외합니다. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 열거를 시스템 속성 으로만 제한 합니다. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 로컬 및 전파 된 속성을 포함 하지만 시스템 속성은 열거에서 제외 합니다. |
 
-수업의 경우:
+클래스:
 
-지속적임  |값  |Description  |
+상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 열거형이 클래스 정의에서 재정의된 속성으로 제한합니다. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 열거형 속성을 현재 클래스 정의에서 재정의하고 클래스에 정의된 새 속성으로 제한합니다. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | 플래그가 아닌 `lEnumFlags` 마스크로 값에 적용하여 둘 중 `WBEM_FLAG_CLASS_OVERRIDES_ONLY` `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` 하나 또는 설정된지 확인합니다. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 열거형은 클래스 자체에서 정의되거나 수정된 속성으로 제한합니다. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 열거형은 기본 클래스에서 상속되는 속성으로 제한합니다. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 열거를 클래스 정의에서 재정의 된 속성으로 제한 합니다. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 열거를 현재 클래스 정의에 재정의 된 속성 및 클래스에 정의 된 새 속성으로 제한 합니다. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | `lEnumFlags` `WBEM_FLAG_CLASS_OVERRIDES_ONLY` 또는가 설정 되었는지 여부를 확인 하기 위해 값에 적용할 마스크 (플래그 아님)입니다 `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` . |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 클래스 자체에서 정의 되거나 수정 된 속성으로 열거를 제한 합니다. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 기본 클래스에서 상속 되는 속성으로 열거를 제한 합니다. |
 
 인스턴스의 경우:
 
-지속적임  |값  |Description  |
+상수  |값  |설명  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 열거형은 클래스 자체에서 정의되거나 수정된 속성으로 제한합니다. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 열거형은 기본 클래스에서 상속되는 속성으로 제한합니다. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 클래스 자체에서 정의 되거나 수정 된 속성으로 열거를 제한 합니다. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 기본 클래스에서 상속 되는 속성으로 열거를 제한 합니다. |
 
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** WMINet_Utils.idl  
+ **헤더:** WMINet_Utils idl  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

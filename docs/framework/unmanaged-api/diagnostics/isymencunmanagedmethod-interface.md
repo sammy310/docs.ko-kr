@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: acb8d48ed6314756e2c1a10fff314a303799fb24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707284"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod 인터페이스
+
 편집 하며 계속 하기 기능에 대 한 정보를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -35,8 +36,9 @@ ms.locfileid: "83441879"
 |[GetSourceExtentInDocument 메서드](isymencunmanagedmethod-getsourceextentindocument-method.md)|특정 문서에서 메서드의 가장 작은 시작 줄과 가장 큰 끝 줄을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

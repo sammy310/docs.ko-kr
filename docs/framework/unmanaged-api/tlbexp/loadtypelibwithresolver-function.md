@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540507"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708233"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
+
 형식 라이브러리를 로드 하 고 제공 된 [ITypeLibResolver 인터페이스](itypelibresolver-interface.md) 를 사용 하 여 내부적으로 참조 되는 형식 라이브러리를 확인 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szFile`  
  진행 형식 라이브러리의 파일 경로입니다.  
   
@@ -53,12 +55,13 @@ HRESULT LoadTypeLibWithResolver(
  `pptlib`  
  제한이 로드 되 고 있는 형식 라이브러리에 대 한 참조입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  다음 표에 나열 된 HRESULT 값 중 하나입니다.  
   
 |반환 값|의미|  
 |------------------|-------------|  
-|`S_OK`|성공.|  
+|`S_OK`|성공했습니다.|  
 |`E_OUTOFMEMORY`|메모리가 부족합니다.|  
 |`E_POINTER`|하나 이상의 포인터가 잘못 되었습니다.|  
 |`E_INVALIDARG`|하나 이상의 인수가 잘못되었습니다.|  
@@ -68,6 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|형식 라이브러리 또는 DLL을 로드할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [Tlbexp.exe (형식 라이브러리 내보내기)](../../tools/tlbexp-exe-type-library-exporter.md) 는 어셈블리에서 `LoadTypeLibWithResolver` 형식 라이브러리로의 변환 프로세스 중에 함수를 호출 합니다.  
   
  이 함수는 레지스트리에 대 한 최소 액세스 권한으로 지정 된 형식 라이브러리를 로드 합니다. 그런 다음 함수는 내부적으로 참조 되는 형식 라이브러리에 대 한 형식 라이브러리를 검사 합니다. 각 라이브러리는 로드 되어 부모 형식 라이브러리에 추가 되어야 합니다.  
@@ -83,6 +87,7 @@ HRESULT LoadTypeLibWithResolver(
  `LoadTypeLibWithResolver`을 직접 호출 하는 경우 고유한 [ITypeLibResolver 인터페이스](itypelibresolver-interface.md) 구현을 제공 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** TlbRef  

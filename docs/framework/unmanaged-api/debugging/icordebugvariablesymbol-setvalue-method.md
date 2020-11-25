@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::SetValue 메서드
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397071"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707843"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue 메서드
+
 바이트 배열의 값을 변수에 할당합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ HRESULT SetValue(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `offset`  
  [in] 값을 설정할 변수의 시작 오프셋입니다. 이 매개 변수는 개체의 멤버 필드에 쓸 때 사용됩니다.  
   
@@ -50,6 +52,7 @@ HRESULT SetValue(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
