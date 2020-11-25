@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e676547d20dc9535241150d24b65e1fbaf9e89ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556351"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725107"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 열거형
+
 매니페스트 파일을 열 때 메타데이터 동작을 제어하는 플래그 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -48,7 +49,7 @@ typedef enum CorOpenFlags
   
 ## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |`ofRead`|파일을 읽기 전용으로 열어야 함을 나타냅니다.|  
 |`ofWrite`|쓸 수 있도록 파일을 열어야 함을 나타냅니다.<br /><br /> .winmd 파일을 열 때 `ofWrite` 플래그를 사용하는 경우에는 `ofNoTransform` 플래그도 전달해야 합니다.|  
@@ -65,6 +66,7 @@ typedef enum CorOpenFlags
 |`ofReserved`|내부용으로 예약된 속성입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  

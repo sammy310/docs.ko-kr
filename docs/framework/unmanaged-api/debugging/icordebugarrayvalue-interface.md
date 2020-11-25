@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725053"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 인터페이스
 
@@ -39,12 +39,14 @@ ms.locfileid: "82894962"
 |[HasBaseIndicies 메서드](icordebugarrayvalue-hasbaseindicies-method.md)|배열에 기본 인덱스가 있는지 여부를 확인 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `ICorDebugArrayValue`는 1 차원 배열 및 다차원 배열을 모두 지원 합니다.  
+
+ `ICorDebugArrayValue` 는 1 차원 배열 및 다차원 배열을 모두 지원 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

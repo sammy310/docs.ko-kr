@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: d0b1c31d45efea4892182c43c801112530361994
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7d0f3661c7941c5f2f85fa5b0b67af213de75f05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724951"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 인터페이스
+
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
   
  IL(중간 언어) 코드의 스택 프레임에서 로컬 변수 및 코드에 액세스하는 데 사용할 수 있는 메서드를 제공합니다. 디버거가 프로파일러 ReJIT 계측에 추가된 변수와 코드에 액세스할 수 있는지는 매개 변수를 통해 지정됩니다.  
@@ -31,9 +32,11 @@ ms.locfileid: "83213704"
 |[GetLocalVariableEx 메서드](icordebugilframe4-getlocalvariableex-method.md)|IL 프레임의 로컬 변수 값을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이러한 메서드는 [Enumeratelocalvariables](icordebugilframe-enumeratelocalvariables-method.md), [Getcode](icordebugframe-getcode-method.md)및 [getlocalvariable](icordebugilframe-getlocalvariable-method.md) 메서드에서 제공 하는 기능 외에도 기능을 제공 합니다. 각 메서드는 프로파일러 ReJIT 요청에 의해 정의된 추가 로컬 변수나 코드가 표시되는지 여부를 지정하는 `flags` 매개 변수를 포함합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -42,7 +45,7 @@ ms.locfileid: "83213704"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

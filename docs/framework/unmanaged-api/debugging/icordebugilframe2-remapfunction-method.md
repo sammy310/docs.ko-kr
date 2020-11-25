@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-ms.openlocfilehash: 43f585417ed52b92c23087c0f02fd188ee09ea7e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5eb6299526d69624056961cfb7f0387ff8f873cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210217"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725029"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction 메서드
+
 새 MSIL (Microsoft 중간 언어) 오프셋을 지정 하 여 편집 된 함수를 다시 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,12 +35,14 @@ HRESULT RemapFunction (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `newILOffset`  
  진행 명령 포인터가 배치 되어야 하는 스택 프레임의 새 MSIL 오프셋입니다. 이 값은 시퀀스 위치 여야 합니다.  
   
  이 값의 유효성을 확인 하는 것은 호출자의 책임입니다. 예를 들어 MSIL 오프셋은 함수 범위 밖에 있을 경우 유효 하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
+
  프레임의 함수가 편집 된 경우 디버거는 메서드를 호출 `RemapFunction` 하 여 최신 버전의 프레임 함수를 교환 하 여 실행할 수 있습니다. 지정 된 MSIL 오프셋에서 코드 실행이 시작 됩니다.  
   
 > [!NOTE]
@@ -52,6 +55,7 @@ HRESULT RemapFunction (
 - 이 프레임에 대 한 [ICorDebugManagedCallback:: EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md) 이벤트로 인해 코드 실행이 중지 되었습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

@@ -10,15 +10,16 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: 59221b09cc1c5d2d01c1007b649a4bb01de57f04
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: dab5329086971b9349deaf84535fa251744f3cf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724990"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 인터페이스
-함수의 반환 값을 캡슐화하는 메서드를 제공합니다. `ICorDebugILFrame3`는 ICorDebugILFrame 및 ICorDebugILFrame2 인터페이스의 논리적 확장입니다.  
+
+함수의 반환 값을 캡슐화하는 메서드를 제공합니다. `ICorDebugILFrame3` 는 ICorDebugILFrame 및 ICorDebugILFrame2 인터페이스의 논리적 확장입니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -32,6 +33,7 @@ ms.locfileid: "83213766"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -40,7 +42,7 @@ ms.locfileid: "83213766"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugCode3 인터페이스](icordebugcode3-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725237"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
+
 메모리 주소의 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -58,8 +59,9 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|첫 번째 주소는 섹션이 고 두 번째 주소는 오프셋 임을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

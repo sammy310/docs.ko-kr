@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4d5bc66cdc292d390cb4ea187277fda8b8a071fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724210"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 열거형
+
 공용 언어 런타임을 초기화할 때 [CoInitializeCor](../hosting/coinitializecor-function.md) 에서 사용 하는 상수를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,14 +41,15 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|기본 초기화 모드를 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

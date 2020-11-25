@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-ms.openlocfilehash: aa1ce70311cd4ef0204c1c31efee8bd7b313c81d
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1be7eee5c2591f26c33572446080a4fa4b3b929d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762333"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723898"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 메서드
-인스턴스에 IAppDomainSetup 형식의 인터페이스 포인터를 가져옵니다 <xref:System.AppDomainSetup?displayProperty=nameWithType> . `IAppDomainSetup`응용 프로그램 도메인을 만들기 전에 요소를 구성 하는 메서드를 제공 합니다.  
+
+인스턴스에 IAppDomainSetup 형식의 인터페이스 포인터를 가져옵니다 <xref:System.AppDomainSetup?displayProperty=nameWithType> . `IAppDomainSetup` 응용 프로그램 도메인을 만들기 전에 요소를 구성 하는 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,12 +35,13 @@ HRESULT CreateDomainSetup (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAppDomainSetup`  
  제한이 인스턴스에 대 한 인터페이스 포인터 <xref:System.AppDomainSetup?displayProperty=nameWithType> 입니다. 이 매개 변수는로 형식화 `IUnknown` 되므로 호출자는 일반적으로 `QueryInterface` 이 포인터에서를 호출 하 여 형식의 인터페이스 포인터를 가져와야 합니다 `IAppDomainSetup` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
@@ -47,14 +49,16 @@ HRESULT CreateDomainSetup (
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드에서 반환 된 포인터는 일반적으로 [Createdomainex](icorruntimehost-createdomainex-method.md) 메서드에 매개 변수로 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** 1.0, 1.1  
   

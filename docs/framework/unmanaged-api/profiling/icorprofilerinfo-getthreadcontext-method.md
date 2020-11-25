@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 79446216-4b8b-484c-8fe3-e87dbf9df2fd
 topic_type:
 - apiref
-ms.openlocfilehash: 45ae164e79f077549a1d685aa060484240546a10
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2e24d72c8be1ace10b2feb15101ed8f83db386c2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497961"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724093"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext 메서드
+
 지정 된 스레드와 현재 연결 된 컨텍스트 id를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT GetThreadContext(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `threadId`  
  진행 스레드의 ID입니다.  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadContext(
  제한이 지정 된 스레드와 현재 연결 된 컨텍스트 ID에 대 한 포인터입니다. 스레드에 현재 연결 된 컨텍스트가 없으면이 함수는 CORPROF_E_DATAINCOMPLETE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -49,6 +52,6 @@ HRESULT GetThreadContext(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

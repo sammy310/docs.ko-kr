@@ -9,17 +9,19 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725185"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>진단 기호 저장소 인터페이스
+
 이 항목에서는 컴파일러가 디버거에서 사용할 기호 정보를 생성할 수 있도록 하는 관리 되지 않는 인터페이스에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [IBindingDisplay 인터페이스](ibindingdisplay-interface.md)  
  실행 중인 응용 프로그램에 대 한 현재 바인딩 정보를 표시 하는 메서드를 제공 합니다.  
   
@@ -45,7 +47,7 @@ ms.locfileid: "84504474"
  메서드 기호 당 선택적 비동기 메서드 정보를 정의할 수 있습니다. 는 열린 메서드와 함께 사용 해야 합니다. 즉, [Openmethod 메서드와](isymunmanagedwriter-openmethod-method.md) [closemethod 메서드](isymunmanagedwriter-closemethod-method.md)호출 사이에는를 사용 해야 합니다.  
   
  [ISymUnmanagedBinder 인터페이스](isymunmanagedbinder-interface.md)  
- 비관리 코드에 대 한 기호 바인더를 나타냅니다.  
+ 비관리 코드의 기호 바인더를 나타냅니다.  
   
  [ISymUnmanagedBinder2 인터페이스](isymunmanagedbinder2-interface.md)  
  비관리 코드에 대 한 기호 바인더를 나타내고 인터페이스를 확장 `ISymUnmanagedBinder` 합니다.  
@@ -75,7 +77,7 @@ ms.locfileid: "84504474"
  네임스페이스를 나타냅니다.  
   
  [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)  
- 기호 저장소 내의 문서, 메서드 및 변수에 대 한 액세스를 제공 하는 기호 판독기를 나타냅니다.  
+ 기호 저장소 내의 문서, 메서드 및 변수에 대한 액세스를 제공하는 기호 판독기를 나타냅니다.  
   
  [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)  
  메서드 토큰과 편집 및 복사 버전 번호를 지정 하 여 기호 판독기 메서드를 가져옵니다.  
@@ -99,13 +101,13 @@ ms.locfileid: "84504474"
  매개 변수, 지역 변수 또는 필드와 같은 변수를 나타냅니다.  
   
  [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)  
- 기호 작성기를 나타내며 문서, 시퀀스 위치, 어휘 범위 및 변수를 정의 하는 메서드를 제공 합니다.  
+ 기호 작성기를 나타내며 문서, 시퀀스 포인트, 어휘 범위 및 변수를 정의하는 메서드를 제공합니다.  
   
  [ISymUnmanagedWriter2 인터페이스](isymunmanagedwriter2-interface.md)  
- 기호 작성기를 나타내며 문서, 시퀀스 위치, 어휘 범위 및 변수를 정의 하는 메서드를 제공 합니다. 인터페이스를 확장 `ISymUnmanagedWriter` 합니다.  
+ 기호 작성기를 나타내며 문서, 시퀀스 포인트, 어휘 범위 및 변수를 정의하는 메서드를 제공합니다. 인터페이스를 확장 `ISymUnmanagedWriter` 합니다.  
   
  [ISymUnmanagedWriter3 인터페이스](isymunmanagedwriter3-interface.md)  
- 기호 작성기를 나타내며 문서, 시퀀스 위치, 어휘 범위 및 변수를 정의 하는 메서드를 제공 합니다. 인터페이스를 확장 `ISymUnmanagedWriter` 합니다.  
+ 기호 작성기를 나타내며 문서, 시퀀스 포인트, 어휘 범위 및 변수를 정의하는 메서드를 제공합니다. 인터페이스를 확장 `ISymUnmanagedWriter` 합니다.  
   
  [ISymUnmanagedWriter4 인터페이스](isymunmanagedwriter4-interface.md)  
  ISymUnmanagedWriter4 인터페이스입니다.  
@@ -114,6 +116,7 @@ ms.locfileid: "84504474"
  ISymUnmanagedWriter5 인터페이스입니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)  
   
  [진단 기호 저장소 구조체](diagnostics-symbol-store-structures.md)  

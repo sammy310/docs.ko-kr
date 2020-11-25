@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-ms.openlocfilehash: 0b8e7dfbe377e60b548003af10fb11392b514030
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3ddd78ea35d5709abb30af085b2212a09b28c2ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703458"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725562"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout 메서드
+
 지정 된 작업의 제한 시간이 초과 될 때 CLR (공용 언어 런타임)이 수행 해야 하는 정책 동작을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,8 +36,9 @@ HRESULT SetActionOnTimeout (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `operation`  
- 진행 시간 제한 작업을 지정할 작업을 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다. 다음 값이 지원 됩니다.  
+ 진행 시간 제한 작업을 지정할 작업을 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다. 지원되는 값은 다음과 같습니다.  
   
 - OPR_AppDomainUnload  
   
@@ -49,11 +51,11 @@ HRESULT SetActionOnTimeout (
  `action`  
  진행 작업 시간이 초과 될 때 수행할 정책 작업을 나타내는 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnTimeout`성공적으로 반환 되었습니다.|  
+|S_OK|`SetActionOnTimeout` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -62,26 +64,28 @@ HRESULT SetActionOnTimeout (
 |E_INVALIDARG|지정 된에 대 한 제한 시간을 설정할 수 `operation` 없거나에 잘못 된 값이 제공 `operation` 된 경우|  
   
 ## <a name="remarks"></a>설명  
+
  시간 제한 값은 CLR에서 설정 된 기본 시간 제한 이거나 [ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md) 메서드 호출에서 호스트에서 지정한 값이 될 수 있습니다.  
   
- 모든 정책 동작 값을 CLR 작업의 시간 제한 동작으로 지정할 수 있는 것은 아닙니다. `SetActionOnTimeout`는 일반적으로 동작을 에스컬레이션 하는 데만 사용 됩니다. 예를 들어 호스트는 스레드 중단이 강제 스레드 중단으로 전환 되도록 지정할 수 있지만 반대의 경우에는 지정할 수 없습니다. 다음 표에서는 `action` 유효한 값에 대 한 유효한 값을 설명 합니다 `operation` .  
+ 모든 정책 동작 값을 CLR 작업의 시간 제한 동작으로 지정할 수 있는 것은 아닙니다. `SetActionOnTimeout` 는 일반적으로 동작을 에스컬레이션 하는 데만 사용 됩니다. 예를 들어 호스트는 스레드 중단이 강제 스레드 중단으로 전환 되도록 지정할 수 있지만 반대의 경우에는 지정할 수 없습니다. 다음 표에서는 `action` 유효한 값에 대 한 유효한 값을 설명 합니다 `operation` .  
   
-|값`operation`|유효한 값`action`|  
+|값 `operation`|유효한 값 `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|- eRudeAbortThread<br />- eUnloadAppDomain<br />- eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />- eDisableRuntime|  
 |OPR_AppDomainUnload|- eUnloadAppDomain<br />- eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />- eDisableRuntime|  
 |OPR_ProcessExit|-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />- eDisableRuntime|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrOperation 열거형](eclroperation-enumeration.md)
 - [EPolicyAction 열거형](epolicyaction-enumeration.md)

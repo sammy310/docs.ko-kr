@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c834aa1-f2db-408a-b230-c7bec093d364
 topic_type:
 - apiref
-ms.openlocfilehash: 631301a10aee96bb00aeda6b0b8695f0aea186a8
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 7092a1c792fee7f6173dcde211b8e807f6ab02a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703480"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725588"
 ---
 # <a name="iclrpolicymanager-interface"></a>ICLRPolicyManager 인터페이스
+
 호스트에서 오류 및 시간 제한이 발생 하는 경우 수행할 정책 작업을 지정할 수 있도록 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -36,15 +37,16 @@ ms.locfileid: "83703480"
 |[SetUnhandledExceptionPolicy 메서드](iclrpolicymanager-setunhandledexceptionpolicy-method.md)|처리 되지 않은 예외가 발생할 때 CLR의 동작을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [EClrOperation 열거형](eclroperation-enumeration.md)

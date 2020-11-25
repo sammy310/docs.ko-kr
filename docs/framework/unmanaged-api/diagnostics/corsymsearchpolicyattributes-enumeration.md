@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501874"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725224"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 열거형
+
 기호 판독기를 검색할 때 사용할 정책을 지정 합니다. 이러한 상수는 [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) 및 [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) 메서드에서 사용 됩니다.  
   
 > [!IMPORTANT]
@@ -49,8 +50,9 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowReferencePathAccess`|.Exe 파일이 인 위치에서 PDB를 검색 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

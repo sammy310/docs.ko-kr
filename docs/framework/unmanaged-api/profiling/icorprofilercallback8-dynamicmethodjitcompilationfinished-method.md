@@ -8,14 +8,15 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 554cc93de934061e87322c7557e05545e5e7bc62
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6354667e754da42692cc0de2dc5330c56f951aa1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725445"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished 메서드
+
 [.NET Framework 4.7 이상 버전에서 지원 됨]  
   
 동적 메서드의 JIT 컴파일이 완료 될 때마다 프로파일러에 알립니다.  
@@ -31,6 +32,7 @@ HRESULT DynamicMethodJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
 [in] `functionId`  
 JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
 
@@ -44,9 +46,10 @@ JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
 이 콜백은 동적 메서드의 JIT 컴파일이 완료 될 때마다 트리거됩니다. 여기에는 다양 한 IL 스텁 및 LCG 메서드가 포함 됩니다. 이는 사용자에 게 컴파일된 메서드를 식별 하는 데 충분 한 정보를 제공 하는 프로파일러 작성기를 제공 하는 것입니다.
 
 > [!NOTE]
-> `functionId`동적 메서드에 메타 데이터가 없으므로 값을 사용 하 여 메타 데이터 토큰을 확인할 수 없습니다.
+> `functionId` 동적 메서드에 메타 데이터가 없으므로 값을 사용 하 여 메타 데이터 토큰을 확인할 수 없습니다.
 
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -55,7 +58,7 @@ JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 인터페이스](icorprofilercallback8-interface.md)

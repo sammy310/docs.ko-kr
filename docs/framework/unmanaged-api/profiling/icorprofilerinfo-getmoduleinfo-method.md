@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a90d16f-7929-4987-8f83-a631becf564d
 topic_type:
 - apiref
-ms.openlocfilehash: 751f2ac44e543fed76c7031791bb57d75ed0fd48
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 863fa1bf50830bb46e5c2939c99fe1e15897ac3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498104"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724132"
 ---
 # <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo 메서드
+
 모듈 ID가 지정된 경우 모듈의 파일 이름 및 모듈의 부모 어셈블리 ID를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT GetModuleInfo(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleId`  
  [in] 정보가 검색되는 모듈의 ID입니다.  
   
@@ -58,6 +60,7 @@ HRESULT GetModuleInfo(
  [out] 모듈의 부모 어셈블리 ID에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  동적 모듈의 경우 `szName` 매개 변수는 빈 문자열이고 기본 주소는 0입니다.  
   
  `GetModuleInfo`모듈 id가 존재 하는 즉시 메서드를 호출할 수 있지만, 프로파일러가 [ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) 콜백을 받을 때까지 부모 어셈블리의 id를 사용할 수 없습니다.  
@@ -67,6 +70,7 @@ HRESULT GetModuleInfo(
  또는 길이가 0인 `szName` 버퍼로 `GetModuleInfo`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 버퍼 크기를 `pcchName`에 반환된 값으로 설정하고 `GetModuleInfo`을 다시 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -75,7 +79,7 @@ HRESULT GetModuleInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

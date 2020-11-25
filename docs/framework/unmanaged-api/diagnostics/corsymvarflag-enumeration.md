@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ed08d9f818f6fc180dbd655243488bf8a527ae11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420593"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725289"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 열거형
+
 변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,8 +41,9 @@ typedef enum CorSymVarFlag
 |`VAR_IS_COMP_GEN`|지정 된 변수가 컴파일러에서 생성 되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

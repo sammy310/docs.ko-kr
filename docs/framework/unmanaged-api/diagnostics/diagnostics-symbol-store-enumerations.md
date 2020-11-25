@@ -7,17 +7,19 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-ms.openlocfilehash: c1715341726c0ee33bfcaecc7e02b452db6a1fd7
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b2a30bdb4af2dc9f4e9ed8741805bf3bc0495b65
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725211"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>진단 기호 저장소 열거형
+
 이 항목에서는 진단 기호 저장소 API에서 사용 하는 관리 되지 않는 열거형에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [CorSymAddrKind 열거형](corsymaddrkind-enumeration.md)  
  메모리 주소의 유형을 나타냅니다.  
   
@@ -31,6 +33,7 @@ ms.locfileid: "83420567"
  디버거 함수의 콜백을 식별 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)  
   
  [진단 기호 저장소 구조체](diagnostics-symbol-store-structures.md)  
