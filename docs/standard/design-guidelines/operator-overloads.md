@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830040"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734818"
 ---
 # <a name="operator-overloads"></a>연산자 오버로드
+
 연산자 오버 로드를 사용 하면 프레임 워크 형식이 기본 제공 언어 기본 형식인 것 처럼 표시 됩니다.
 
  일부 경우에는 허용 되 고 유용 하지만 연산자 오버 로드는 신중 하 게 사용 해야 합니다. 프레임 워크 디자이너에서 간단한 메서드로 사용 해야 하는 작업에 대해 연산자를 사용 하기 시작 하는 경우와 같이 연산자 오버 로드가 악용 되는 경우가 많습니다. 다음 지침은 연산자 오버 로드를 사용 하는 시기 및 방법을 결정 하는 데 도움이 됩니다.
@@ -85,9 +86,11 @@ ms.locfileid: "94830040"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>오버 로드 연산자 = =
+
  오버 로드 `operator ==` 는 매우 복잡 합니다. 연산자의 의미 체계는와 같은 다른 여러 멤버와 호환 되어야 합니다 <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>변환 연산자
+
  변환 연산자는 한 형식에서 다른 형식으로의 변환을 허용 하는 단항 연산자입니다. 연산자는 피연산자 또는 반환 형식에서 정적 멤버로 정의 되어야 합니다. 변환 연산자에는 암시적 및 명시적 이라는 두 가지 유형이 있습니다.
 
  ❌ 최종 사용자가 이러한 변환을 명확 하 게 예상 하지 않을 경우 변환 연산자를 제공 하지 마십시오.
@@ -110,7 +113,7 @@ ms.locfileid: "94830040"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](member.md)
 - [프레임 워크 디자인 지침](index.md)
