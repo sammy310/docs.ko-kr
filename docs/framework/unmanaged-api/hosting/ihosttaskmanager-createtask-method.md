@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7fdf25d44bdf630e306cf0f5dcb3387a3b0f7c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731685"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask 메서드
+
 호스트에서 새 작업을 만들도록 요청 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT CreateTask (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `stacksize`  
  진행 요청 된 스택의 요청 된 크기 (바이트) 이거나, 기본 크기의 경우 0입니다.  
   
@@ -53,7 +55,7 @@ HRESULT CreateTask (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`CreateTask`성공적으로 반환 되었습니다.|  
+|S_OK|`CreateTask` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -62,18 +64,20 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청한 작업을 만들 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  CLR에서 `CreateTask` 를 호출 하 여 호스트가 새 작업을 만들도록 요청 합니다. 호스트는 인스턴스에 대 한 인터페이스 포인터를 반환 합니다 `IHostTask` . 반환 된 작업은에 대 한 호출에 의해 명시적으로 시작 될 때까지 일시 중단 된 상태로 유지 되어야 합니다 `IHostTask::Start` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

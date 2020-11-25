@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731204"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule 메서드
+
 지정된 모듈이 로드된 애플리케이션 도메인의 식별자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetAppDomainsContainingModule(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleId`  
  [in] 로드된 모듈의 ID입니다.  
   
@@ -50,9 +52,11 @@ HRESULT GetAppDomainsContainingModule(
  [out] 애플리케이션 도메인 ID 값의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
+
  메서드는 호출자 할당 버퍼를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -61,7 +65,7 @@ HRESULT GetAppDomainsContainingModule(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerFunctionEnum 인터페이스](icorprofilerfunctionenum-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)

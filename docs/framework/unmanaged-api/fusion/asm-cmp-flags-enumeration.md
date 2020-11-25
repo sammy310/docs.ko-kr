@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea06a3e6d06aeff56ba7e20e8e64f0a6feb5e69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731061"
 ---
 # <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS 열거형
-[IAssemblyName::IsEqual](iassemblyname-isequal-method.md) 메서드에서 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.  
+
+[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) 메서드와 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -66,15 +67,16 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 퓨전.h  
+ **헤더:** Fusion. h  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IAssemblyName 인터페이스](iassemblyname-interface.md)
 - [Fusion 열거형](fusion-enumerations.md)

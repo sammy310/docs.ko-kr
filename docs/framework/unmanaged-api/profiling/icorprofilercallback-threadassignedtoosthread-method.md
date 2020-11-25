@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 182a82300183046ccb4a93a79af0dd8f23848c20
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d6f34d88dd79fe350f1c018e3afa55e5b180c46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503180"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732010"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread 메서드
+
 특정 운영 체제 스레드를 사용 하 여 관리 되는 스레드가 구현 중임을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT ThreadAssignedToOSThread(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `managedThreadId`  
  진행 관리 되는 스레드의 식별자입니다.  
   
@@ -41,9 +43,11 @@ HRESULT ThreadAssignedToOSThread(
  진행 운영 체제 스레드의 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `ThreadAssignedToOSThread`콜백은 프로파일러가 운영 체제 스레드의 파이버에서 관리 되는 스레드에 대 한 정확한 매핑을 유지할 수 있도록 존재 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -52,6 +56,6 @@ HRESULT ThreadAssignedToOSThread(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

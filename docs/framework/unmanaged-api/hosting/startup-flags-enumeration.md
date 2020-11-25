@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c3f4d644bd7073655d2d77fe7f65a3a46cfea24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729909"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 열거형
+
 CLR (공용 언어 런타임)의 시작 동작을 나타내는 값을 포함 합니다. 기본적으로 가비지 수집은 비 동시 이며 기본 클래스 라이브러리만 도메인 중립적 영역에 로드 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -73,14 +74,15 @@ typedef enum {
 |`STARTUP_ARM`|응용 프로그램 도메인 리소스 모니터링을 사용 하도록 지정 합니다. <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>속성 및 [ \<appDomainResourceMonitoring> 요소](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)를 참조 하세요.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](hosting-enumerations.md)

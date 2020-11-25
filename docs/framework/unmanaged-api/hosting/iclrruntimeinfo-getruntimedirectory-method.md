@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-ms.openlocfilehash: d744abf5c502e9b9510cf9fd6479149b6c2177cc
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 24679118e4255282f7da3ff8be2ce9c08250e181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732049"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory 메서드
+
 이 인터페이스와 연결 된 CLR (공용 언어 런타임)의 설치 디렉터리를 가져옵니다.  
   
  이 메서드는 .NET Framework 버전 2.0, 3.0 및 3.5에 제공 된 [GetCORSystemDirectory](getcorsystemdirectory-function.md) 함수를 대체 합니다.  
@@ -36,28 +37,31 @@ HRESULT GetRuntimeDirectory(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzBuffer`  
  제한이 CLR 설치 디렉터리를 반환 합니다. 설치 경로가 정규화 되어 있습니다. 예를 들면 "c:\windows\microsoft.net\framework\v1.0.3705 \\ "입니다.  
   
  `pchBuffer`  
- [in, out] `pwzBuffer`버퍼 오버런을 방지 하기 위해의 크기를 지정 합니다. 가 null 인 경우에는 `pwzBuffer` `pchBuffer` 의 필수 크기를 반환 합니다 `pwzBuffer` .  
+ [in, out] `pwzBuffer` 버퍼 오버런을 방지 하기 위해의 크기를 지정 합니다. 가 null 인 경우에는 `pwzBuffer` `pchBuffer` 의 필수 크기를 반환 합니다 `pwzBuffer` .  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzBuffer` 또는 `pchBuffer` 이 null입니다.|  
+|E_POINTER|`pwzBuffer` 또는 `pchBuffer`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

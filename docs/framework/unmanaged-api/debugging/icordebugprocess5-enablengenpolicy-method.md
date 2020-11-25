@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e3dfd3cae83c7891d246ff3a81427c161cc0e2d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731391"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 메서드
+
 응용 프로그램에서 관리 되는 디버거를 실행 하는 동안 네이티브 이미지를 로드 하는 방법을 결정 하는 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,18 @@ HRESULT EnableNGENPolicy(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ePolicy`  
  진행 응용 프로그램이 관리 되는 디버거에서 실행 되는 동안 네이티브 이미지를 로드 하는 방법을 결정 하는 [Cordebugngenpolicy](cordebugngenpolicy-enumeration.md) 상수입니다.  
   
 ## <a name="remarks"></a>설명  
+
  정책이 성공적으로 설정 되 면이 메서드는를 반환 `S_OK` 합니다. `ePolicy`가 [Cordebugngenpolicy](cordebugngenpolicy-enumeration.md)에서 정의한 열거형 값의 범위를 벗어나면 메서드가 반환 되 `E_INVALIDARG` 고 메서드 호출이 영향을 받지 않습니다. 네이티브 이미지 생성기 (Ngen.exe)의 정책을 업데이트할 수 없는 경우이 메서드는를 반환 `E_FAIL` 합니다.  
   
  `ICorDebugProcess5::EnableNGenPolicy`프로세스 수명 중에 언제 든 지 메서드를 호출할 수 있습니다. 정책은 정책이 설정 된 후에 로드 되는 모든 모듈에 적용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -51,7 +55,7 @@ HRESULT EnableNGENPolicy(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

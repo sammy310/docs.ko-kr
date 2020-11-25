@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aec05744-e8d4-44c6-b4a8-e583229ac34e
 topic_type:
 - apiref
-ms.openlocfilehash: 21ebd0c64d6c8bbdac327258ad4c7ffec83a1ce9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 263058131e63205aa37f81847ed647944fef7540
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731399"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 메서드
+
 지정 된 id 형식을 사용 하 여 어셈블리에서 참조 하는 어셈블리 id의 [ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md) 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT GetProbingAssembliesFromReference (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `dwMachineType`  
  진행 Winnt.exe에 정의 된 대로 프로세서 아키텍처를 지정 하는 유효한 값입니다.  
   
@@ -47,7 +49,7 @@ HRESULT GetProbingAssembliesFromReference (
  진행 일반적으로 [ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) 또는 [ICLRAssemblyIdentityManager:: GetBindingIdentityFromStream](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) 메서드 호출에서 반환 되는 불투명 어셈블리 바인딩 id입니다.  
   
  `ppProbingAssemblyEnum`  
- 제한이 `ICLRProbingAssemblyEnum`로 식별 되는 어셈블리에서 참조 하는 어셈블리에 대 한 참조를 포함 하는 열거자에 대 한 인터페이스 포인터입니다 `pwzReferenceIdentity` .  
+ 제한이 `ICLRProbingAssemblyEnum` 로 식별 되는 어셈블리에서 참조 하는 어셈블리에 대 한 참조를 포함 하는 열거자에 대 한 인터페이스 포인터입니다 `pwzReferenceIdentity` .  
   
 ## <a name="return-value"></a>반환 값  
   
@@ -61,15 +63,16 @@ HRESULT GetProbingAssembliesFromReference (
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)

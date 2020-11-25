@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: a3cd62384ad87d072cd715d23d0e9ee9dac23270
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 06f403f0b653866428a41240f99833ec1180eb86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731081"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType 메서드
+
 이 "ICorDebugValue" 개체의 기본 형식을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,18 @@ HRESULT GetType (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pType`  
  제한이 값의 형식을 나타내는 "CorElementType" 열거형의 값에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  개체가 복잡 한 런타임 형식이 면 해당 형식은 인터페이스의 적절 한 서브 클래스를 통해 검사할 수 있습니다 `ICorDebugValue` . 예를 들어,에서 상속 되는 "ICorDebugObjectValue" `ICorDebugValue` 은 복합 형식을 나타냅니다.  
   
  `GetType`및 [ICorDebugObjectValue:: getclass](icordebugobjectvalue-getclass-method.md) 메서드는 각각 값의 형식에 대 한 정보를 반환 합니다. 둘 다 제네릭 인식 [ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md) 메서드로 대체 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

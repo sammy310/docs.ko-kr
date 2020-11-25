@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: 2d0461709accf1a9300c072b62bd58734cb33fb8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 05fed13a556cbcc3b8362e41d73c2b659b1e5eeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731789"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 메서드
+
 관리 코드에서 예외가 throw 되었음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAppDomain`  
  진행 예외가 throw 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
@@ -46,9 +48,11 @@ HRESULT Exception (
  진행 이 값이 이면 `false` 응용 프로그램에서 예외를 아직 처리 하지 않은 것이 고, 그렇지 않으면 예외가 처리 되지 않고 프로세스를 종료 합니다.  
   
 ## <a name="remarks"></a>설명  
+
  특정 예외는 스레드 개체에서 검색할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -57,6 +61,6 @@ HRESULT Exception (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

@@ -14,28 +14,31 @@ helpviewer_keywords:
 ms.assetid: 39dffa18-c71b-48c4-b11d-e814631ab1e9
 topic_type:
 - apiref
-ms.openlocfilehash: e6dd951b0f432d455d95bb60f4c42df64d5bee24
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 1c45faecdb8b95af8d9e981962151c2c5d071a4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731893"
 ---
 # <a name="icordebugexceptionobjectcallstackenum-interface"></a>ICorDebugExceptionObjectCallStackEnum 인터페이스
+
 예외 개체에 포함된 호출 스택 정보에 대한 열거자를 제공합니다. 이 인터페이스는 ICorDebugEnum 인터페이스의 서브클래스입니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[ICorDebugExceptionObjectCallStackEnum:: Next](icordebugexceptionobjectcallstackenum-next-method.md)|예외 개체의 호출 스택에 대 한 정보를 포함 하는 지정 된 수의 [Cordebugexceptionobjectstackframe](cordebugexceptionobjectstackframe-structure.md) 개체를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- 인터페이스 `ICorDebugExceptionObjectCallStackEnum` 는 ICorDebugEnum 인터페이스를 구현 합니다.  
+
+ `ICorDebugExceptionObjectCallStackEnum`인터페이스는 ICorDebugEnum 인터페이스를 구현 합니다.  
   
- `ICorDebugExceptionObjectCallStackEnum` [ICorDebugExceptionObjectValue:: enumerateexceptioncallstack](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md) 메서드를 호출 하 여 인스턴스가 [Cordebugexceptionobjectstackframe](cordebugexceptionobjectstackframe-structure.md) 개체로 채워집니다. [ICorDebugExceptionObjectCallStackEnum:: Next](icordebugexceptionobjectcallstackenum-next-method.md) 메서드를 호출 하 여 컬렉션의 호출 스택 항목을 열거할 수 있습니다.  
+ `ICorDebugExceptionObjectCallStackEnum` [ICorDebugExceptionObjectValue:: EnumerateExceptionCallStack](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md) 메서드를 호출 하 여 인스턴스가 [Cordebugexceptionobjectstackframe](cordebugexceptionobjectstackframe-structure.md) 개체로 채워집니다. [ICorDebugExceptionObjectCallStackEnum:: Next](icordebugexceptionobjectcallstackenum-next-method.md) 메서드를 호출 하 여 컬렉션의 호출 스택 항목을 열거할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -44,7 +47,7 @@ ms.locfileid: "82975994"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: da831d1477b451131bb27372d65ad7229fcf3f77
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7bb7e63004df2eb7541ba8d4f1118ea2272db126
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730905"
 ---
 # <a name="struct-design"></a>구조체 디자인
+
 일반적으로 일반 용도의 값 형식을 구조체, c # 키워드 라고 합니다. 이 단원에서는 일반적인 구조체 디자인에 대 한 지침을 제공 합니다.
 
  ❌ 구조체에 대해 매개 변수가 없는 생성자를 제공 하지 마십시오.
@@ -44,7 +45,7 @@ ms.locfileid: "94828623"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 디자인 지침](type.md)
 - [프레임 워크 디자인 지침](index.md)

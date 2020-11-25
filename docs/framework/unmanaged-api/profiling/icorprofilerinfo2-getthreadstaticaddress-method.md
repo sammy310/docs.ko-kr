@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 3df6e4decf1c4641116dee5fab3ca83189b427c0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496765"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731230"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 메서드
+
 지정 된 스레드의 범위에 있는 지정 된 스레드 정적 필드의 주소를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT GetThreadStaticAddress(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `classId`  
  진행 요청 된 스레드 정적 필드를 포함 하는 클래스의 ID입니다.  
   
@@ -49,6 +51,7 @@ HRESULT GetThreadStaticAddress(
  제한이 지정 된 스레드 내의 정적 필드 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `GetThreadStaticAddress`메서드는 다음 중 하나를 반환할 수 있습니다.  
   
 - 지정 된 컨텍스트에서 지정 된 정적 필드에 주소가 할당 되지 않은 경우 HRESULT CORPROF_E_DATAINCOMPLETE입니다.  
@@ -58,6 +61,7 @@ HRESULT GetThreadStaticAddress(
  클래스의 클래스 생성자가 완료 되기 전에는 `GetThreadStaticAddress` 모든 정적 필드에 대 한 CORPROF_E_DATAINCOMPLETE를 반환 하지만, 일부 정적 필드는 이미 초기화 되 고 가비지 수집 개체를 루 팅 하 고 있을 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -66,7 +70,7 @@ HRESULT GetThreadStaticAddress(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: de41b5e0aaf835ee2d4e4f32696fe104d5830b57
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731282"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc 메서드
+
 해당 Win32 함수에 대 한 논리 래퍼로 사용 됩니다. 의 Win32 구현은 `VirtualAlloc` 호출 프로세스의 가상 주소 공간에서 페이지 영역을 예약 하거나 커밋합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,6 +40,7 @@ HRESULT VirtualAlloc (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAddress`  
  진행 할당할 영역의 시작 주소에 대 한 포인터입니다.  
   
@@ -59,9 +61,9 @@ HRESULT VirtualAlloc (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc`성공적으로 반환 되었습니다.|  
+|S_OK|`VirtualAlloc` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -70,19 +72,21 @@ HRESULT VirtualAlloc (
 |E_OUTOFMEMORY|할당 요청을 완료 하는 데 사용할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  를 호출 하 여 프로세스의 주소 공간에서 영역을 예약 `VirtualAlloc` 합니다. `pAddress`매개 변수에는 원하는 메모리 블록의 시작 주소가 포함 됩니다. 이 매개 변수는 일반적으로 null로 설정 됩니다. 운영 체제는 프로세스에 사용할 수 있는 무료 주소 범위에 대 한 레코드를 유지 합니다. `pAddress`Null 값은 시스템이 적합 한 위치에 있는 영역을 예약 하도록 지시 합니다. 또는 메모리 블록에 대 한 특정 시작 주소를 제공할 수 있습니다. 두 경우 모두 출력 매개 변수는 `ppMem` 할당 된 메모리에 대 한 포인터로 반환 됩니다. 함수 자체는 HRESULT 값을 반환 합니다.  
   
  Win32 함수에는 `VirtualAlloc` `ppMem` 매개 변수가 없으며 대신 할당 된 메모리에 대 한 포인터를 반환 합니다. 자세한 내용은 Windows 플랫폼 설명서를 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: 8f3697f8b193319ebb7b155ad79b8ec25a0a2266
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: eb95bf779e54742cd2cc4b688c24a49e6d85a40d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731906"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError 메서드
+
 CLR (공용 언어 런타임)에서 이벤트를 처리 하려고 시도 하는 동안 오류가 발생 했음을 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT DebuggerError (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pProcess`  
  진행 이벤트가 발생 한 프로세스를 나타내는 "ICorDebugProcess" 개체에 대 한 포인터입니다.  
   
@@ -46,11 +48,13 @@ HRESULT DebuggerError (
  진행 CLR 오류를 지정 하는 정수입니다.  
   
 ## <a name="remarks"></a>설명  
+
  오류 특성에 따라 프로세스를 통과 모드로 전환할 수 있습니다.  
   
  콜백은 오류가 발생 하 여 디버깅 서비스를 사용할 수 없도록 `DebugError` 설정 했으므로 디버거가 사용자에 게 오류 메시지를 사용할 수 있도록 해야 합니다. [ICorDebugProcess:: GetID](icordebugprocess-getid-method.md) 는 호출 해도 안전 하지만 [ICorDebug:: Terminate](icordebug-terminate-method.md)를 비롯 한 다른 모든 메서드는 호출 하면 안 됩니다. 디버거는 프로세스를 종료 하는 운영 체제 기능을 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -59,6 +63,6 @@ HRESULT DebuggerError (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

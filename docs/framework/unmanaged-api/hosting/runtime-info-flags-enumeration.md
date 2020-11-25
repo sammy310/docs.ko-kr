@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f4fbb40053628d60ba7f094fcb5d50a94d63e1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006560"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729943"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS 열거형
+
 반환 해야 하는 CLR (공용 언어 런타임)에 대 한 정보를 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -55,6 +56,7 @@ typedef enum {
 |`RUNTIME_INFO_UPGRADE_VERSION`|버전 업그레이드 정보를 포함 해야 함을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
+
  다음 플랫폼 아키텍처 플래그는 한 번에 하나만 지정할 수 있으며 결합할 수 없습니다.  
   
 - RUNTIME_INFO_REQUEST_IA64  
@@ -64,14 +66,15 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](hosting-enumerations.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 76b52cedd1e2e64805e2ad47e582d07ca70415cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731555"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -73,7 +73,7 @@ HTTPS에서 엔드포인트 노출을 단순화하기 위해 HTTPS 프로토콜 
 
 ## <a name="websocket-support"></a>WebSocket 지원
 
-WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding> 및 <xref:System.ServiceModel.NetHttpsBinding> 자세한 내용은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.
+WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.
 
 ## <a name="new-transport-default-values"></a>새 전송 기본값
 
@@ -93,7 +93,7 @@ WCF 서비스의 기존 및 새 개발자들이 서비스를 구성하는 데 �
 
 ## <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
 
-WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 클래스를 통해 <xref:System.ServiceModel.ServiceHost> ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](configuring-wcf-services-in-code.md)을 참조 하세요.
+WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다. 구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 클래스를 통해 <xref:System.ServiceModel.ServiceHost> ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET Framework 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에 더 쉽게 구성 하는 방법을 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](configuring-wcf-services-in-code.md)을 참조 하세요.
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱
 

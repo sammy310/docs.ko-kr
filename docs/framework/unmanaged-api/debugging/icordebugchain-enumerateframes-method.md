@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-ms.openlocfilehash: c8a62d8b4a4db0f36d991c32dbfc5bad68780f1b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ae6d81e6fdab0f8e3346d8a08a3b5ebc329a542a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730151"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames 메서드
+
 최신 프레임에서 시작 하 여 체인의 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,18 @@ HRESULT EnumerateFrames (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppFrames`  
  제한이 스택 프레임의 열거자 인 ICorDebugFrameEnum 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  체인은 스레드에 대 한 물리적 호출 스택을 나타냅니다.  
   
- 메서드 `EnumerateFrames` 는 관리 되는 체인에 대해서만 호출 해야 합니다. 디버깅 API는 관리 되지 않는 체인에 포함 된 프레임을 얻기 위한 메서드를 제공 하지 않습니다. 디버거는이 정보를 얻기 위해 다른 수단을 사용 해야 합니다.  
+ `EnumerateFrames`메서드는 관리 되는 체인에 대해서만 호출 해야 합니다. 디버깅 API는 관리 되지 않는 체인에 포함 된 프레임을 얻기 위한 메서드를 제공 하지 않습니다. 디버거는이 정보를 얻기 위해 다른 수단을 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

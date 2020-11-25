@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828740"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730970"
 ---
 # <a name="property-design"></a>속성 디자인
+
 속성은 기술적으로 메서드와 매우 유사 하지만 사용 시나리오 측면에서 상당히 다릅니다. 스마트 필드로 표시 되어야 합니다. 여기에는 필드의 호출 구문과 메서드의 유연성이 있습니다.
 
  호출자가 속성의 값을 변경할 수 없어야 하는 경우에는 get 전용 속성을 만드는 ✔️ 합니다.
@@ -38,6 +39,7 @@ ms.locfileid: "94828740"
  Getter 속성은 단순 작업 이어야 하며 사전 조건이 없어야 합니다. Getter가 예외를 throw 할 수 있는 경우에는 메서드로 다시 디자인 해야 합니다. 이 규칙은 인수 유효성 검사의 결과로 예외가 발생할 것으로 간주 되는 인덱서에는 적용 되지 않습니다.
 
 ### <a name="indexed-property-design"></a>인덱싱된 속성 디자인
+
  인덱싱된 속성은 매개 변수를 가질 수 있으며 배열 인덱싱과 유사한 특수 구문을 사용 하 여 호출할 수 있는 특수 속성입니다.
 
  인덱싱된 속성을 일반적으로 인덱서 라고 합니다. 인덱서는 논리적 컬렉션의 항목에 대 한 액세스를 제공 하는 Api 에서만 사용 해야 합니다. 예를 들어 문자열은 문자 컬렉션 이며,의 인덱서는 <xref:System.String?displayProperty=nameWithType> 문자를 액세스 하기 위해 추가 되었습니다.
@@ -69,6 +71,7 @@ ms.locfileid: "94828740"
  이는 c # 컴파일러에 의해 적용 됩니다.
 
 ### <a name="property-change-notification-events"></a>속성 변경 알림 이벤트
+
  속성 값의 변경 내용을 사용자에 게 알리는 이벤트를 제공 하는 것이 유용한 경우도 있습니다. 예를 들어는 `System.Windows.Forms.Control` `TextChanged` 해당 속성 값이 변경 된 후에 이벤트를 발생 시킵니다 `Text` .
 
  상위 수준 Api (일반적으로 디자이너 구성 요소)의 속성 값이 수정 될 때 변경 알림 이벤트를 발생 시키는 것이 좋습니다. ✔️
@@ -85,7 +88,7 @@ ms.locfileid: "94828740"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [멤버 디자인 지침](member.md)
 - [프레임 워크 디자인 지침](index.md)

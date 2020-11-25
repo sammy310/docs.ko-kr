@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-ms.openlocfilehash: 1591a055200618f3e4951b5f6cf860dd3e71b44b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11515bbb5717222a0030c1953b4eab4eb1b83bb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731646"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 메서드
+
 플랫폼 호출 메서드와 같은 관리 되지 않는 메서드에 대 한 호출이 CLR (공용 언어 런타임)에 실행 제어를 반환 한다는 사실을 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,12 +45,14 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청 된 할당을 완료할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `EnterRuntime` 는 [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md) 메서드에 대 한 이전 호출이 수행 되었고 실행이 완료 되었으며 런타임에 실행 제어를 반환 하는 관리 되지 않는 함수를 호스트에 알리기 위해 호출 됩니다.  
   
 > [!NOTE]
 > [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md) 는 이전에를 호출 하는 관리 되지 않는 함수가 `LeaveRuntime` 관리 코드를 호출 하 고 있음을 호스트에 알리기 위해 호출 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  

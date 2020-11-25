@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 488069f3ea16352cb7bb5e81b9a726637a7a65f8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499365"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730242"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 메서드
+
 JIT (just-in-time) 컴파일러에서 재컴파일을 처리할 때 오류가 발생 했음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,11 +37,12 @@ HRESULT ReJITError(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleID`  
- 진행 `ModuleID`실패 한 재컴파일을 시도한입니다.  
+ 진행 `ModuleID` 실패 한 재컴파일을 시도한입니다.  
   
  `methodId`  
- 진행 `MethodDef`실패 한 재컴파일을 시도한 메서드의입니다.  
+ 진행 `MethodDef` 실패 한 재컴파일을 시도한 메서드의입니다.  
   
  `functionId`  
  진행 다시 컴파일하거나 다시 컴파일하도록 표시 되는 함수 인스턴스입니다. 이 값 `NULL` 은 오류가 발생 하는 경우 (예: 프로파일러에서 다시 컴파일할 메서드에 대해 잘못 된 메타 데이터 토큰을 지정 하는 경우)와 같은 방법으로 오류가 발생 한 경우에 해당 합니다.  
@@ -49,6 +51,7 @@ HRESULT ReJITError(
  진행 오류의 특성을 나타내는 HRESULT입니다. 값 목록은 상태 HRESULT 섹션을 참조 하세요.  
   
 ## <a name="return-value"></a>반환 값  
+
  이 콜백의 반환 값은 무시됩니다.  
   
 ## <a name="status-hresults"></a>상태 HRESULTS  
@@ -63,6 +66,7 @@ HRESULT ReJITError(
 |기타|운영 체제가 CLR의 제어 범위를 벗어난 오류를 반환했습니다. 예를 들어 메모리 페이지의 액세스 보호를 변경 하는 시스템 호출이 실패 하면 운영 체제 오류가 표시 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -71,7 +75,7 @@ HRESULT ReJITError(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](icorprofilercallback4-interface.md)

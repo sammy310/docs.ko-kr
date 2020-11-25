@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-ms.openlocfilehash: d8e62499a813419ecc30924624da553ca9f2c7b2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7cf966f407572cc681f641b63791906a5c015f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731867"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 메서드
+
 중단점에 도달 하면 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT Breakpoint (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pAppDomain`  
  진행 중단점이 포함 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
@@ -46,6 +48,7 @@ HRESULT Breakpoint (
  진행 중단점을 나타내는 ICorDebugBreakpoint 개체에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -54,6 +57,6 @@ HRESULT Breakpoint (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

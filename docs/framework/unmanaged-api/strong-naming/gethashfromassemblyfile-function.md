@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 751ed69f-b7ab-4e07-80de-e17ca9319b0c
 topic_type:
 - apiref
-ms.openlocfilehash: 866b34acae333f043d8e13f4d0ebd55f32046334
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: caefc9773b0d208f8b20847b664f7bc017d2c076
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140724"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730996"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 함수
+
 지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.  
   
  이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) 메서드를 사용 합니다.  
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFile (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szFilePath`  
  진행 해시할 파일의 경로입니다.  
   
@@ -49,19 +51,20 @@ HRESULT GetHashFromAssemblyFile (
  제한이 반환 된 해시 버퍼입니다.  
   
  `cchHash`  
- 진행 `pbHash`요청 된 최대 크기입니다.  
+ 진행 요청 된 최대 크기 `pbHash` 입니다.  
   
  `pchHash`  
- 제한이 반환 되는 `pbHash`크기 (바이트)입니다.  
+ 제한이 반환 된 크기 (바이트)입니다 `pbHash` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** StrongName  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

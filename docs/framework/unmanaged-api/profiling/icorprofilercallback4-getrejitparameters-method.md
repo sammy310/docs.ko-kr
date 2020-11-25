@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 527e48d02d5267d6ae41214686c2e8c997d85dca
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2cee763674da7472ca48355e7eaba3b7dfb7adbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730307"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters 메서드
+
 코드 프로파일러가 다시 컴파일된 새 메서드 본문에 대 한 대체 코드 생성 플래그를 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,19 +33,22 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleID`  
  진행 CLR에서 JIT 재컴파일 매개 변수를 필요로 하는 메서드가 포함 된 모듈입니다.  
   
  `methodId`  
- 진행 `MethodDef`CLR에서 JIT 재컴파일 매개 변수를 필요로 하는 메서드의입니다.  
+ 진행 `MethodDef` CLR에서 JIT 재컴파일 매개 변수를 필요로 하는 메서드의입니다.  
   
  `pFunctionControl`  
  진행 프로파일러가 다시 컴파일하는 메서드에 대 한 JIT 재컴파일 정보를 제공 하는 데 사용할 수 있는 [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `GetReJITParameters`프로파일러가 지정 된 메서드를 다시 컴파일하는 매개 변수를 지정할 수 있도록 CLR은 콜백을 실행 합니다. `GetReJITParameters`콜백은 함수 마다 한 번만 실행 됩니다. 프로파일러에서 제공 하는 매개 변수는 해당 함수의 모든 인스턴스에 적용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -53,7 +57,7 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](icorprofilercallback4-interface.md)

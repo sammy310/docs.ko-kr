@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-ms.openlocfilehash: 1263467fc5db92d4dd21c4f09a98af309e2c4d55
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9d077d5c5a414568b5643cad0171e101d7bb06f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731711"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor 함수
+
 `CoInitializeCor`는 사용되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,11 +35,13 @@ STDAPI CoInitializeCor (
 ```  
   
 ## <a name="remarks"></a>설명  
+
  공용 언어 런타임을 초기화 하려면 [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 또는 [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)중 하나를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** Cor  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

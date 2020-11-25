@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 63a9ef45-01a6-46da-b958-5c6dc2dc232c
 topic_type:
 - apiref
-ms.openlocfilehash: 1986d5f91a3dcfa31a43f729ee1f50129e083f5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5e3c2ecd1bdd5c1181223c7500eb7473e20fa5d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731347"
 ---
 # <a name="isymunmanagedencupdate-interface"></a>ISymUnmanagedENCUpdate 인터페이스
+
 편집 하며 계속 하기 기능을 위한 함수를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetLocalVariableCount 메서드](isymunmanagedencupdate-getlocalvariablecount-method.md)|지역 변수 수를 가져옵니다.|  
 |[GetLocalVariables 메서드](isymunmanagedencupdate-getlocalvariables-method.md)|지역 변수를 가져옵니다.|  
@@ -35,8 +36,9 @@ ms.locfileid: "84501744"
 |[UpdateSymbolStore2 메서드](isymunmanagedencupdate-updatesymbolstore2-method.md)|줄 정보가 요구 사항을 충족 하는 경우 컴파일러가 PDB (프로그램 데이터베이스) 스트림에서 수정 되지 않은 함수를 생략할 수 있도록 허용 합니다. 올바른 줄 정보는 이전 PDB 줄 정보와 함수의 모든 줄에 대해 델타 하나를 사용 하 여 확인할 수 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

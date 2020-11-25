@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: 1643d91f373ff233540026440ee21aa4c146f3e3
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f20ae6977504f958b7bfa8e2f073b7db6e8b822b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731477"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 인터페이스
 
@@ -38,6 +38,7 @@ ms.locfileid: "82895131"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

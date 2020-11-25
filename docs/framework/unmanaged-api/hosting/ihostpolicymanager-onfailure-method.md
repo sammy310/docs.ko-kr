@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 77d3f31e-9a53-4349-9c02-610a71736d42
 topic_type:
 - apiref
-ms.openlocfilehash: 8ad4943aa9bf1b66b34bcd83a5422a977b16518d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: efa7b9d49ea9807af2164bb6ee54422dd72b14e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730424"
 ---
 # <a name="ihostpolicymanageronfailure-method"></a>IHostPolicyManager::OnFailure 메서드
+
 리소스 할당 또는 재사용 실패에 대 한 응답으로 CLR (공용 언어 런타임)이 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md) 메서드 호출에 지정 된 작업을 수행 하려고 함을 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT OnFailure(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `failure`  
  진행 CLR이 응답 하는 오류 종류를 나타내는 [EClrFailure](eclrfailure-enumeration.md) 값 중 하나입니다.  
   
@@ -43,9 +45,9 @@ HRESULT OnFailure(
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`OnFailure`성공적으로 반환 되었습니다.|  
+|S_OK|`OnFailure` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
@@ -53,15 +55,16 @@ HRESULT OnFailure(
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [EPolicyAction 열거형](epolicyaction-enumeration.md)

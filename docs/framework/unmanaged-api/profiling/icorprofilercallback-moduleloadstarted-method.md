@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cd2fe75-408a-400f-a6b1-9979624a2fe2
 topic_type:
 - apiref
-ms.openlocfilehash: a04f72fff9a88c8689821131b08b35500c23b3d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6fbd009b5785c5dc78df81e4411fbdf8e8eadf71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730336"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted 메서드
+
 모듈이 로드 되 고 있음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,13 +34,16 @@ HRESULT ModuleLoadStarted(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleId`  
  진행 로드 되는 모듈의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
+
  `moduleId` [ICorProfilerCallback:: ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) 메서드가 호출 될 때까지 정보 요청에 대 한 값이 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -48,6 +52,6 @@ HRESULT ModuleLoadStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

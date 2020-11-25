@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4d66d09e02b907281f64400b0c605a7b5c44d476
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396578"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731048"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome:: GetLiveRange 메서드
+
 이 변수가 활성 상태인 기본 범위를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT GetLiveRange(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pStartOffset`  
  제한이 변수가 첫 번째 라이브 오프셋입니다.  
   
@@ -42,6 +44,7 @@ HRESULT GetLiveRange(
  제한이 변수가 마지막으로 지속 된 지점 바로 다음의 논리적 오프셋입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

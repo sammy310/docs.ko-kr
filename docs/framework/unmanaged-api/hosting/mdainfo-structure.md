@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503863"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730021"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 구조체
+
 `Event_MDAFired`MDA (관리 디버깅 도우미) 만들기를 트리거하는 이벤트에 대 한 세부 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,6 +42,7 @@ typedef struct _MDAInfo {
 |`lpMDAMessage`|현재 MDA에서 제공 하는 출력 메시지입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  Mda (관리 디버깅 도우미)는 CLR (공용 언어 런타임)과 함께 작동 하 여 런타임 실행 엔진에서 잘못 된 조건을 식별 하거나 엔진 상태에 대 한 추가 정보를 덤프 하는 등의 작업을 수행 하는 디버깅 보조 기능입니다. Mda는 트래핑 하기 어려운 이벤트에 대 한 XML 메시지를 생성 합니다. 이러한 코드는 관리 코드와 비관리 코드 간의 전환을 디버깅 하는 데 특히 유용 합니다.  
   
  MDA 생성을 트리거하는 이벤트가 발생 하면 런타임에서 다음 단계를 수행 합니다.  
@@ -52,15 +54,16 @@ typedef struct _MDAInfo {
  호스트는 mda를 활성화 하 고 MDA가 활성화 될 때 알리도록 선택할 수 있습니다. 이렇게 하면 호스트에서 기본 동작을 재정의 하 고 이벤트를 발생 시킨 관리 되는 스레드를 중단 하 여 프로세스 상태가 손상 되지 않도록 할 수 있습니다. Mda를 사용 하는 방법에 대 한 자세한 내용은 [관리 디버깅 도우미를 사용 하 여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](hosting-structures.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

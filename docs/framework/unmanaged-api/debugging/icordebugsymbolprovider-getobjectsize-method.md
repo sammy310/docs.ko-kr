@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetObjectSize 메서드
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: 64324df49ad0b5dfa3c25455950bddc3d687b178
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4937ff1be7736f98be9efb9b01bdb322bf33e037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730810"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize 메서드
+
 typespec 서명을 기준으로 개체의 개체 크기를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,6 +24,7 @@ HRESULT GetObjectSize(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cbSignature`  
  [in] typespec 서명의 바이트 수입니다.  
   
@@ -38,6 +40,7 @@ HRESULT GetObjectSize(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -46,7 +49,7 @@ HRESULT GetObjectSize(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: 31be0525c637e50c1161129277d651b56dadfaa3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 505015877985492edab4b761b379f33f1e5c6660
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729982"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 구조체
+
 참조 된 모듈 및이 모듈을 포함 하는 어셈블리에 대 한 자세한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,18 +44,20 @@ typedef struct _ModuleBindInfo {
 |`lpModuleName`|참조 된 모듈의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- `ModuleBindInfo`는에 대 한 매개 변수로 전달 됩니다 `IHostAssemblyStore::ProvideModule` . 호스트는 `dwAppDomainId` CLR (공용 언어 런타임)에 고유 식별자를 제공 합니다. [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) 메서드에 대 한 호출이 반환 된 후 런타임은 식별자를 사용 하 여의 내용이 매핑 되었는지 여부를 확인 합니다 `IStream` . 이 경우 런타임은 스트림을 다시 매핑하지 않고 기존 복사본을 로드 합니다. 또한 런타임은 메서드 호출에서 반환 되는 스트림의 조회 키로이 식별자를 사용 합니다 `IHostAssemblyStore::ProvideAssembly` . 따라서 식별자는 어셈블리 요청 뿐만 아니라 모듈 요청에 대해서만 고유 해야 합니다.  
+
+ `ModuleBindInfo` 는에 대 한 매개 변수로 전달 됩니다 `IHostAssemblyStore::ProvideModule` . 호스트는 `dwAppDomainId` CLR (공용 언어 런타임)에 고유 식별자를 제공 합니다. [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) 메서드에 대 한 호출이 반환 된 후 런타임은 식별자를 사용 하 여의 내용이 매핑 되었는지 여부를 확인 합니다 `IStream` . 이 경우 런타임은 스트림을 다시 매핑하지 않고 기존 복사본을 로드 합니다. 또한 런타임은 메서드 호출에서 반환 되는 스트림의 조회 키로이 식별자를 사용 합니다 `IHostAssemblyStore::ProvideAssembly` . 따라서 식별자는 어셈블리 요청 뿐만 아니라 모듈 요청에 대해서만 고유 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 구조체](hosting-structures.md)
 - [AssemblyBindInfo 구조체](assemblybindinfo-structure.md)
