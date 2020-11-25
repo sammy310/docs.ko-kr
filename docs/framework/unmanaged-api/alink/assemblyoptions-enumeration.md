@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 352e1acd1fdd8297754e18b2e8c6448ea723a557
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446595"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717033"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 열거형
+
 어셈블리 옵션을 열거 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum _AssemblyOptions {  
@@ -78,10 +79,11 @@ typedef enum _AssemblyOptions {
 |optLastAssemOption|요소 수의 카운터입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** alink. h  
   
- **라이브러리**: alink .dll  
+ **라이브러리**: alink.dll  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

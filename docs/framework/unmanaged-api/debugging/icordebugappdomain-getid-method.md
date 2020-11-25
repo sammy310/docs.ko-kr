@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 88866d75cc97d40c827359450e8e7bdbe13ef3ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715890"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId 메서드
+
 응용 프로그램 도메인의 고유 식별자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pId`  
  제한이 응용 프로그램 도메인의 고유 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
+
  응용 프로그램 도메인에 대 한 식별자는 포함 하는 프로세스 내에서 고유 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

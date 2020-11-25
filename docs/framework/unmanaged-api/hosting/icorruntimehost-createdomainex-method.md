@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bdde382-f8ba-4cc8-94b2-d1ac919c585e
 topic_type:
 - apiref
-ms.openlocfilehash: 4e5856fbcda83c1dd30559c6f59f63495faea78d
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d6d9e06b6ed40bb0e5a65fd64f8bca7abe3afa84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715682"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 메서드
+
 응용 프로그램 도메인을 만듭니다. 호출자는 형식의 인스턴스에 대 한 형식의 인터페이스 포인터를 수신 합니다 <xref:System._AppDomain> <xref:System.AppDomain?displayProperty=nameWithType> . 이 메서드를 사용 하면 호출자가 IAppDomainSetup 인스턴스를 전달 하 여 반환 된 인스턴스의 추가 기능을 구성할 수 있습니다 <xref:System._AppDomain> .  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT CreateDomainEx (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pwzFriendlyName`  
  진행 도메인에 친숙 한 이름을 지정 하는 데 사용 되는 선택적 매개 변수입니다. 이 이름은 디버거와 같은 사용자 인터페이스에 표시 되어 도메인을 식별할 수 있습니다.  
   
@@ -44,14 +46,14 @@ HRESULT CreateDomainEx (
  진행 `IAppDomainSetup` [ICorRuntimeHost:: CreateDomainSetup](icorruntimehost-createdomainsetup-method.md) 메서드를 호출 하 여 얻은 형식의 선택적 인터페이스 포인터입니다.  
   
  `pIdentityArray`  
- 진행 `IIdentity`권한 집합을 설정 하기 위해 보안 정책을 통해 매핑된 증명 정보를 나타내는 인스턴스에 대 한 포인터의 선택적 배열입니다. `IIdentity` [Createevidence](icorruntimehost-createevidence-method.md) 메서드를 호출 하 여 개체를 가져올 수 있습니다.  
+ 진행 `IIdentity` 권한 집합을 설정 하기 위해 보안 정책을 통해 매핑된 증명 정보를 나타내는 인스턴스에 대 한 포인터의 선택적 배열입니다. `IIdentity` [Createevidence](icorruntimehost-createevidence-method.md) 메서드를 호출 하 여 개체를 가져올 수 있습니다.  
   
  `pAppDomain`  
  제한이 <xref:System._AppDomain> <xref:System.AppDomain?displayProperty=nameWithType> 도메인을 추가로 제어 하는 데 사용할 수 있는 인스턴스에 대 한 형식의 인터페이스 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
@@ -59,14 +61,16 @@ HRESULT CreateDomainEx (
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CreateDomainEx`호출자가 응용 프로그램 도메인을 구성 하기 위해 속성 값으로 인스턴스를 전달 하도록 허용 하 여 [Createdomain](icorruntimehost-createdomain-method.md) 의 기능을 확장 합니다 `IAppDomainSetup` .  
+
+ `CreateDomainEx` 호출자가 응용 프로그램 도메인을 구성 하기 위해 속성 값으로 인스턴스를 전달 하도록 허용 하 여 [Createdomain](icorruntimehost-createdomain-method.md) 의 기능을 확장 합니다 `IAppDomainSetup` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** 1.0, 1.1  
   

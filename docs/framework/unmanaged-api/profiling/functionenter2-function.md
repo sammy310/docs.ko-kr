@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8466970a1c137276e842b37f0305fdfd9169be6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500717"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717267"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 함수
+
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고 스택 프레임 및 함수 인수에 대 한 정보를 제공 합니다. 이 함수는 [Functionenter](functionenter-function.md) 함수를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -58,6 +59,7 @@ void __stdcall FunctionEnter2 (
   인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.
 
 ## <a name="remarks"></a>설명  
+
  `func` `argumentInfo` `FunctionEnter2` 값이 변경 되거나 제거 될 수 있으므로 함수에서를 반환한 후에는 및 매개 변수의 값이 유효 하지 않습니다.  
   
  `FunctionEnter2`함수는 콜백입니다. 함수를 구현 해야 합니다. 구현은 `__declspec` ( `naked` ) 저장소 클래스 특성을 사용 해야 합니다.  
@@ -73,6 +75,7 @@ void __stdcall FunctionEnter2 (
  또한 함수는 관리 `FunctionEnter2` 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Corprof.idl  
@@ -81,7 +84,7 @@ void __stdcall FunctionEnter2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionLeave2 함수](functionleave2-function.md)
 - [FunctionTailcall2 함수](functiontailcall2-function.md)

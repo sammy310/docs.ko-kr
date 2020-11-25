@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717476"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -72,6 +72,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT는 .NET Framework 버전 2.0에서 �
  자세한 내용은 CLR 프로 파일링 API 블로그에서 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE 된 이유](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) 항목을 참조 하세요.  
   
 ## <a name="triggering-garbage-collections"></a>가비지 컬렉션 트리거  
+
  이 시나리오는 가비지 수집을 금지 하는 콜백 메서드 (예: 메서드 중 하나) 내에서 실행 되는 프로파일러를 포함 `ICorProfilerCallback` 합니다. 프로파일러가 가비지 수집을 트리거할 수 있는 정보 메서드 (예: 인터페이스의 메서드)를 호출 하려고 시도 하는 경우 `ICorProfilerInfo` 정보 메서드는 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT를 사용 하 여 실패 합니다.  
   
  다음 표에서는 가비지 수집을 금지 하는 콜백 메서드와 가비지 수집을 트리거할 수 있는 정보 메서드를 보여 줍니다. 프로파일러가 나열 된 콜백 메서드 중 하나를 실행 하 고 나열 된 정보 메서드 중 하나를 호출 하는 경우 해당 정보 메서드는 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT를 사용 하 여 실패 합니다.  
@@ -80,7 +81,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT는 .NET Framework 버전 2.0에서 �
 |------------------------------------------------------|------------------------------------------------------------|  
 |[ThreadAssignedToOSThread](icorprofilercallback-threadassignedtoosthread-method.md)<br /><br /> [ExceptionUnwindFunctionEnter](icorprofilercallback-exceptionunwindfunctionenter-method.md)<br /><br /> [ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)<br /><br /> [ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)<br /><br /> [ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)<br /><br /> [ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md)<br /><br /> [RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md)<br /><br /> [RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)<br /><br /> [RuntimeSuspendAborted](icorprofilercallback-runtimesuspendaborted-method.md)<br /><br /> [RuntimeThreadSuspended](icorprofilercallback-runtimethreadsuspended-method.md)<br /><br /> [RuntimeThreadResumed](icorprofilercallback-runtimethreadresumed-method.md)<br /><br /> [MovedReferences](icorprofilercallback-movedreferences-method.md)<br /><br /> [ObjectReferences](icorprofilercallback-objectreferences-method.md)<br /><br /> [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md)<br /><br /> [RootReferences2](icorprofilercallback-rootreferences-method.md)<br /><br /> [HandleCreated](icorprofilercallback2-handlecreated-method.md)<br /><br /> [HandleDestroyed](icorprofilercallback2-handledestroyed-method.md)<br /><br /> [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)<br /><br /> [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)|[GetILFunctionBodyAllocator](icorprofilerinfo-getilfunctionbodyallocator-method.md)<br /><br /> [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)<br /><br /> [SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md)<br /><br /> [ForceGC](icorprofilerinfo-forcegc-method.md)<br /><br /> [GetClassFromToken](icorprofilerinfo-getclassfromtoken-method.md)<br /><br /> [GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)<br /><br /> [GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)<br /><br /> [GetAppDomainInfo](icorprofilerinfo-getappdomaininfo-method.md)<br /><br /> [EnumModules](icorprofilerinfo3-enummodules-method.md)<br /><br /> [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)<br /><br /> [GetAppDomainsContainingModule](icorprofilerinfo3-getappdomainscontainingmodule-method.md)|  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 6168c5b27868a261871b292e17ca02b04ae89917
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716358"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 열거형
+
 프로파일러에서 [StackSnapshotCallback](stacksnapshotcallback-function.md) 함수를 호출할 때마다 스택 스냅숏으로 다시 전달할 데이터의 양을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,9 +44,11 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|더 간단한 다른 스택 탐색 알고리즘이 사용 됨을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
+
  열거형에서 제공 되는 값 `COR_PRF_SNAPSHOT_INFO` 은 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 메서드에 매개 변수로 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -54,7 +57,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [DoStackSnapshot 메서드](icorprofilerinfo2-dostacksnapshot-method.md)
 - [프로파일링 열거형](profiling-enumerations.md)

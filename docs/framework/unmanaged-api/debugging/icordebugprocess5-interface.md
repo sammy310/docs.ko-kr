@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717580"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 인터페이스
+
 관리 되는 힙에 대 한 액세스를 지원 하 고, 관리 되는 개체의 가비지 수집에 대 한 정보를 제공 하 고, 디버거가 응용 프로그램 로컬 네이티브 이미지 캐시에서 이미지를 로드 하는지 여부를 확인 하기 위해 ICorDebugProcess 인터페이스를 확장 합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -42,12 +43,14 @@ ms.locfileid: "83205527"
 |[GetTypeLayout 메서드](icordebugprocess5-gettypelayout-method.md)|형식 식별자를 기반으로 메모리에 있는 개체의 레이아웃에 대 한 정보를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 인터페이스는 ICorDebugProcess, ICorDebugProcess2 및 [ICorDebugProcess3](icordebugprocess3-interface.md) 인터페이스를 논리적으로 확장 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 다른 컴퓨터 또는 다른 프로세스에서 원격으로 호출 되는 것을 지원 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -56,7 +59,7 @@ ms.locfileid: "83205527"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

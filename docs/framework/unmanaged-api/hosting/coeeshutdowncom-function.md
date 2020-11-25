@@ -18,14 +18,15 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb8bffee9d30a89c39a900e600ebf171456b9f3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 774704698f92d546d6bafa61c65d18d083c65f89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716761"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
+
 CLR (공용 언어 런타임)에서 RCW (런타임 호출 가능 래퍼) 내에 포함 된 모든 인터페이스 포인터를 해제 하도록 합니다. 이는 모든 RCW 캐시를 해제 하는 효과가 있습니다. 이 전역 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다. 대신 특정 런타임에 대 한 진입점을 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>설명  
+
  함수는 먼저 모든 컨텍스트와 모든 캐시에서 모든 `CoEEShutDownCOM` rcw를 해제 한 다음 설치 프로그램에서 기존에 존재 하는 모든 중단 알림을 제거 합니다. DLL 언로드가 발생 하지 않습니다.  
   
 > [!CAUTION]
@@ -43,14 +45,15 @@ void CoEEShutDownCOM ();
  .NET Framework 4부터 영향을 원하는 특정 런타임에이 함수에 대 한 진입점을 호출 합니다. 진입점을 가져오려면 [ICLRRuntimeInfo:: GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) 메서드를 호출 하 고 "CoEEShutDownCOM"를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

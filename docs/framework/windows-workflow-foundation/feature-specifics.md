@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 기능 특성
 description: 이 문서에서는 .NET Framework 4에서 Windows Workflow Foundation에 추가 하 고 기능이 유용할 수 있는 시나리오에 대해 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716293"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -22,7 +22,7 @@ ms.locfileid: "90554608"
 
 - Visual Studio 2012에서 WCF 워크플로 서비스 응용 프로그램 프로젝트를 만듭니다. <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 쌍이 캔버스에 배치됩니다.
 
-- 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **서비스 참조 추가**를 선택 합니다. 기존 웹 서비스 WSDL을 가리키고 **확인**을 클릭 합니다. 프로젝트를 빌드하여 도구 상자에 생성 된 작업 (및를 사용 하 여 구현 됨)을 표시 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 합니다.
+- 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **서비스 참조 추가** 를 선택 합니다. 기존 웹 서비스 WSDL을 가리키고 **확인** 을 클릭 합니다. 프로젝트를 빌드하여 도구 상자에 생성 된 작업 (및를 사용 하 여 구현 됨)을 표시 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 합니다.
 
 - [워크플로 서비스 설명서](../wcf/feature-details/workflow-services.md)
 
@@ -114,7 +114,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ## <a name="data-contract-resolver"></a>데이터 계약 확인자
 
-.NET 3.5의 알려진 형식 디자인에는 몇 가지 제한이 있었습니다.
+.NET Framework 3.5에서 알려진 형식 디자인에는 몇 가지 제한 사항이 있습니다.
 
 - serialization 및 deserialization 중에 알려진 형식을 동적으로 추가할 수 없었습니다.
 
@@ -122,7 +122,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - 사용자가 회선의 serialization 인스턴스 크기를 더 작게 만들기 위해 회선에 표시할 xsi:type을 지정할 수 없었습니다.
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md) 는 .net 4.5에서 이러한 문제를 해결 합니다.
+[DataContractResolver](../wcf/samples/datacontractresolver.md) .NET Framework 4.5에서 이러한 문제를 해결 합니다.
 
 ### <a name="getting-started"></a>시작하기
 
@@ -142,9 +142,9 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 - XML blob의 크기를 줄입니다.
 
-## <a name="flowchart"></a>순서도
+## <a name="flowchart"></a>Flowchart
 
-순서도는 도메인 문제를 시각적으로 나타내는 잘 알려진 패러다임입니다. .NET 4에서 도입 하는 새로운 제어 흐름 스타일입니다. 순서도의 핵심 특성은 주어진 시간에 항상 작업 한 개만 실행된다는 것입니다. 순서도는 루프 및 대체 결과를 표현할 수 있지만 여러 노드의 동시 실행은 기본적으로 표현할 수 없습니다.
+순서도는 도메인 문제를 시각적으로 나타내는 잘 알려진 패러다임입니다. .NET Framework 4에서 도입 하는 새로운 제어 흐름 스타일입니다. 순서도의 핵심 특성은 주어진 시간에 항상 작업 한 개만 실행된다는 것입니다. 순서도는 루프 및 대체 결과를 표현할 수 있지만 여러 노드의 동시 실행은 기본적으로 표현할 수 없습니다.
 
 ### <a name="getting-started"></a>시작하기
 
@@ -264,7 +264,7 @@ WCF 구성 스키마는 복잡 하며 사용자에 게 다양 한 기능을 찾�
 
 ## <a name="wcf-routing-service"></a>WCF 라우팅 서비스
 
-라우팅 서비스는 클라이언트와 서비스 간에 WCF 메시지가 전달 되는 방식을 제어할 수 있는 일반 소프트웨어 라우터로 설계 되었습니다. 라우팅 서비스를 사용 하면 서비스에서 클라이언트를 분리할 수 있습니다. 그러면 지원할 수 있는 구성과 서비스를 호스트 하는 방법을 고려할 때 유연성을 제공 합니다. .NET 3.5에서 클라이언트와 서비스는 긴밀 하 게 결합 되어 있습니다. 클라이언트는 통신 하는 데 필요한 모든 서비스와 해당 위치에 대해 알고 있어야 합니다. 또한 .NET Framework 3.5의 WCF에는 다음과 같은 제한 사항이 있습니다.
+라우팅 서비스는 클라이언트와 서비스 간에 WCF 메시지가 전달 되는 방식을 제어할 수 있는 일반 소프트웨어 라우터로 설계 되었습니다. 라우팅 서비스를 사용 하면 서비스에서 클라이언트를 분리할 수 있습니다. 그러면 지원할 수 있는 구성과 서비스를 호스트 하는 방법을 고려할 때 유연성을 제공 합니다. .NET Framework 3.5에서 클라이언트와 서비스는 긴밀 하 게 결합 되어 있습니다. 클라이언트는 통신 하는 데 필요한 모든 서비스와 해당 위치에 대해 알고 있어야 합니다. 또한 .NET Framework 3.5의 WCF에는 다음과 같은 제한 사항이 있습니다.
 
 - 이 논리를 클라이언트 프로그램에 하드 코딩해야 했으므로 오류 처리가 복잡했습니다.
 
@@ -338,7 +338,7 @@ WCF Discovery는 응용 프로그램 인프라에 검색 메커니즘을 통합 
 
     1. 기본 프로필이 사용됩니다.
 
-    2. 이벤트 뷰어를 열고 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용**프로그램 노드에서 분석 채널을 사용 하도록 설정 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
+    2. 이벤트 뷰어를 열고 **이벤트 뷰어**, **응용 프로그램 및 서비스 로그**, **Microsoft**, **Windows**, **응용 프로그램 서버-응용** 프로그램 노드에서 분석 채널을 사용 하도록 설정 합니다. **분석** 을 마우스 오른쪽 단추로 클릭 하 고 **로그 사용** 을 선택 합니다.
 
     3. 워크플로 서비스를 실행합니다.
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-ms.openlocfilehash: a5a86df3ac1f50ca624490ad80a6fed903433436
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d3748621474373fee8248496d48414ff67c699d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715698"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum 메서드
+
 도메인 열거자를 도메인 목록의 시작 부분으로 다시 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,12 +35,13 @@ HRESULT CloseEnum (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `hEnum`  
  진행 다시 설정할 열거자입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
-|HRESULT|Description|  
+|HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
@@ -47,11 +49,12 @@ HRESULT CloseEnum (
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:** 1.0, 1.1  
   

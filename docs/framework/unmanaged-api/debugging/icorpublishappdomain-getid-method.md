@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716865"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID 메서드
+
 이 [ICorPublishAppDomain](icorpublishappdomain-interface.md)에 대 한 고유 식별자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `puId`  
  제한이 응용 프로그램 도메인의 식별자에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  식별자는 포함 하는 프로세스의 범위 에서만 고유 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
