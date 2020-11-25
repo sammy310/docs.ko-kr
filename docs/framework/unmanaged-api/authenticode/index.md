@@ -2,17 +2,19 @@
 title: Authenticode(관리되지 않는 API 참조)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b3e1585278bda82dedf7542e866a551867b9c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674049"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode(관리되지 않는 API 참조)
+
 Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [_AxlGetIssuerPublicKeyHash 함수](axlgetissuerpublickeyhash-function.md)  
  지정한 인증서에 서명하는 데 사용되는 프라이빗 키에 연결된 퍼블릭 키의 SHA-1 해시를 검색합니다.  
   
@@ -34,12 +36,12 @@ Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.
  [CertVerifyAuthenticodeLicense 함수](certverifyauthenticodelicense-function.md)  
  Authenticode XrML 라이선스의 유효성을 확인합니다.  
   
- [AXL_AUTHENTICODE_SIGNER_INFO 구조체](axl-authenticode-signer-info-structure.md)  
+ [AXL_AUTHENTICODE_SIGNER_INFO 구조](axl-authenticode-signer-info-structure.md)  
  Authenticode 서명자 정보를 정의합니다.  
   
- [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조체](axl-authenticode-timestamper-info-structure.md)  
+ [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조](axl-authenticode-timestamper-info-structure.md)  
  Authenticode 타임스탬퍼 정보를 정의합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되지 않는 API 참조](../index.md)
