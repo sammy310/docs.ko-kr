@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 50903b3737c0fc63eda2b1190e4c3d961ce3ae7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795705"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726043"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 열거형
+
 개별 단계의 결과를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,7 +39,7 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -51,6 +52,7 @@ typedef enum CorDebugStepReason {
 |`STEP_EXIT`|단계가 완료 되기 전에 스레드가 종료 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -59,7 +61,7 @@ typedef enum CorDebugStepReason {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [StepComplete 메서드](icordebugmanagedcallback-stepcomplete-method.md)
 - [디버깅 열거형](debugging-enumerations.md)

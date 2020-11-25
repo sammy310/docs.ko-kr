@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f2a85bafc3e2f25b2ed6116a46a9938d869dbaae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726082"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 메서드
+
 기존 디스크에 있는 기존 파일을 열고 해당 메타 데이터를 메모리에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT OpenScope (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szScope`  
  진행 열 파일의 이름입니다. 이 파일은 CLR (공용 언어 런타임) 메타 데이터를 포함 해야 합니다.  
   
@@ -52,6 +54,7 @@ HRESULT OpenScope (
  제한이 반환 된 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  메타 데이터의 메모리 내 복사본은 "가져오기" 인터페이스 중 하나에서 메서드를 사용 하 여 쿼리하거나 "내보내기" 인터페이스 중 하나에서 메서드를 사용 하 여 추가할 수 있습니다.  
   
  대상 파일에 CLR 메타 데이터가 없는 경우이 메서드는 `OpenScope` 실패 합니다.  
@@ -61,15 +64,16 @@ HRESULT OpenScope (
  .NET Framework 버전 2.0에서는 ofRead로 설정 된 상태에서 열린 범위가 `dwOpenFlags` 더 이상 공유 되지 않습니다. OfReadOnly 값을 사용 하 여 범위를 공유할 수 있습니다. 범위가 공유 되 면 "읽기/쓰기" 메타 데이터 인터페이스를 사용 하는 쿼리는 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)

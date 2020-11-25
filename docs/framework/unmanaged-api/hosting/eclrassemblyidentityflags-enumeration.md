@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: 8056750e3d0107e27339a85c8cf814632dcece47
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c3fed9166d95c0ca71ac44f5447b95eee97af310
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726836"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags 열거형
+
 어셈블리 id의 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,12 +40,13 @@ typedef enum _CLRAssemblyIdentityFlags {
 |`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|Id는 정형화 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](hosting-enumerations.md)

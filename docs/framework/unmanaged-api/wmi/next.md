@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 587e085f6fe9f6c19d3605c673cd3bd6f68162f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c2a7fae32e82caae40a95bfdad10fa78082988ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726789"
 ---
 # <a name="next-function"></a>Next 함수
+
 [Beginenumeration](beginenumeration.md)호출로 시작 하는 열거형의 다음 속성을 검색 합니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -52,16 +53,16 @@ HRESULT Next (
 [in] 예약되어 있습니다. 이 매개 변수는 0 이어야 합니다.
 
 `pstrName`\
-제한이 속성 이름을 포함 하는 새 `BSTR`입니다. 이름이 필요 하지 않은 경우이 매개 변수를 `null`로 설정할 수 있습니다.
+제한이 `BSTR` 속성 이름을 포함 하는 새입니다. 이름이 필요 하지 않은 경우이 매개 변수를로 설정할 수 있습니다 `null` .
 
 `pVal`\
-제한이 속성 값으로 채워진 `VARIANT`입니다. 값이 필요 하지 않은 경우이 매개 변수를 `null`로 설정할 수 있습니다. 함수에서 오류 코드를 반환 하는 경우 `pVal`에 전달 된 `VARIANT`는 수정 되지 않은 상태로 유지 됩니다.
+제한이 `VARIANT` 속성의 값을 사용 하 여 채워진입니다. `null`값이 필요 하지 않은 경우이 매개 변수를로 설정할 수 있습니다. 함수에서 오류 코드를 반환 하는 경우 `VARIANT` 에 전달 된는 `pVal` 수정 되지 않은 상태로 유지 됩니다.
 
 `pvtType`\
-제한이 `CIMTYPE` 변수 (속성의 형식이 배치 되는 `LONG`)에 대 한 포인터입니다. 이 속성의 값은 `VT_NULL_VARIANT`일 수 있으며,이 경우 속성의 실제 형식을 확인 해야 합니다. 이 매개 변수는 `null`수도 있습니다.
+제한이 `CIMTYPE` `LONG` 속성의 형식이 배치 되는 변수에 대 한 포인터입니다. 이 속성의 값은 일 수 있으며 `VT_NULL_VARIANT` ,이 경우 속성의 실제 형식을 확인 해야 합니다. 이 매개 변수는 일 수도 있습니다 `null` .
 
 `plFlavor`\
-[out] `null`속성의 출처에 대 한 정보를 수신 하는 값 또는입니다. 가능한 값은 [설명] 단원을 참조 하십시오.
+[out] `null` 속성의 출처에 대 한 정보를 받는 값입니다. 가능한 값은 [설명] 단원을 참조 하십시오.
 
 ## <a name="return-value"></a>반환 값
 
@@ -71,21 +72,21 @@ HRESULT Next (
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생 했습니다. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | [`BeginEnumeration`](beginenumeration.md) 함수에 대 한 호출이 없습니다. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 함수를 호출 하지 않았습니다 [`BeginEnumeration`](beginenumeration.md) . |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 새 열거를 시작할 수 없습니다. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스와 Windows Management 간의 원격 프로시저 호출에 실패 했습니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출에 성공 했습니다.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | 열거형에 속성이 더 이상 없습니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 함수는 [IWbemClassObject:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) 메서드에 대 한 호출을 래핑합니다.
 
 또한이 메서드는 시스템 속성을 반환 합니다.
 
-속성의 기본 형식이 개체 경로, 날짜 또는 시간 또는 다른 특수 형식인 경우 반환 된 형식에는 충분 한 정보가 포함 되지 않습니다. 호출자는 지정 된 속성에 대 한 `CIMTYPE`를 검사 하 여 속성이 개체 참조, 날짜 또는 시간 또는 다른 특수 형식 인지 확인 해야 합니다.
+속성의 기본 형식이 개체 경로, 날짜 또는 시간 또는 다른 특수 형식인 경우 반환 된 형식에는 충분 한 정보가 포함 되지 않습니다. 호출자는 `CIMTYPE` 지정 된 속성에 대 한를 검사 하 여 속성이 개체 참조, 날짜 또는 시간 또는 다른 특수 형식 인지 확인 해야 합니다.
 
-`plFlavor` `null`되지 않은 경우 `LONG` 값은 다음과 같이 속성의 출처에 대 한 정보를 수신 합니다.
+`plFlavor`가이 아니면 `null` 값은 다음과 `LONG` 같이 속성의 원본에 대 한 정보를 수신 합니다.
 
 |상수  |값  |설명  |
 |---------|---------|---------|
@@ -95,12 +96,12 @@ HRESULT Next (
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
-**헤더:** WMINet_Utils
+**헤더:** WMINet_Utils idl
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>참조
 
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

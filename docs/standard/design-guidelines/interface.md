@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f8cbb757ffb42f63903b212fee33cdcbba7ecb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727681"
 ---
 # <a name="interface-design"></a>인터페이스 디자인
+
 대부분의 Api는 클래스 및 구조체를 사용 하 여 모델링 하는 것이 좋지만 인터페이스가 더 적합 하거나 유일한 옵션입니다.
 
  CLR은 다중 상속을 지원 하지 않습니다. 즉, CLR 클래스는 둘 이상의 기본 클래스에서 상속할 수 없지만 기본 클래스에서 상속 하는 것 외에도 형식이 하나 이상의 인터페이스를 구현할 수 있습니다. 따라서 여러 상속의 영향을 얻기 위해 인터페이스가 종종 사용 됩니다. 예를 들어 <xref:System.IDisposable> 는 형식이 참여 하려는 다른 상속 계층 구조와 독립적으로 disposability을 지원할 수 있도록 하는 인터페이스입니다.
@@ -46,7 +47,7 @@ ms.locfileid: "94821010"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 디자인 지침](type.md)
 - [프레임 워크 디자인 지침](index.md)

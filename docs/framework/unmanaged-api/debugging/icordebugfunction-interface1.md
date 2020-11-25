@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213246"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726300"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 인터페이스
 
@@ -39,6 +39,7 @@ ms.locfileid: "83213246"
 |[GetToken 메서드](icordebugfunction-gettoken-method.md)|이 함수에 대 한 메타 데이터 토큰을 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICorDebugFunction`인터페이스가 제네릭 형식 매개 변수가 있는 함수를 나타내지 않습니다. 예를 `ICorDebugFunction` 들어 인스턴스는를 나타내지만는 `Func<T>` 그렇지 않습니다 `Func<string>` . [ICorDebugILFrame2:: Enumerat 매개 변수](icordebugilframe2-enumeratetypeparameters-method.md) 를 호출 하 여 제네릭 형식 매개 변수를 가져옵니다.  
   
  메서드의 메타 데이터 토큰, `mdMethodDef` 및 메서드의 개체 간 관계는 `ICorDebugFunction` 함수에서 편집 하며 계속 하기가 허용 되는지 여부에 따라 달라 집니다.  
@@ -51,6 +52,7 @@ ms.locfileid: "83213246"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -59,6 +61,6 @@ ms.locfileid: "83213246"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

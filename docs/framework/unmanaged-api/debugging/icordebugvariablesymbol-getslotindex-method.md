@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetSlotIndex 메서드
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: 251a978e96ff396d0d9d9282ded7f8a25ae0ba0b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725991"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 메서드
+
 지역 변수의 관리되는 슬롯 인덱스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,19 +22,23 @@ HRESULT GetSlotIndex(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pSlotIndex`  
  [out] 지역 변수의 슬롯 인덱스에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  성공하는 경우 `S_OK`입니다. 변수가 함수 인수인 경우 `E_FAIL`입니다.  
   
 ## <a name="remarks"></a>설명  
+
  지역 변수의 관리되는 슬롯 인덱스를 사용하여 변수의 메타데이터 정보를 검색할 수 있습니다.  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

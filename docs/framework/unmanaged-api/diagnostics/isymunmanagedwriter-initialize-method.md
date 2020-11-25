@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614775"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726863"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 메서드
+
 이 작성기를 연결할 메타 데이터 내보내기 인터페이스를 설정 하 고 디버깅 기호를 쓸 출력 파일 이름을 설정 합니다.  
   
  이 메서드는 한 번만 호출할 수 있으며 다른 작성기 메서드 보다 먼저 호출 해야 합니다. 일부 작성기에는 파일 이름이 필요할 수 있습니다. 그러나 파일 이름을 사용 하지 않는 작성기에는 부정적인 영향을 주지 않으면 서 항상이 메서드에 파일 이름을 전달할 수 있습니다.  
@@ -38,6 +39,7 @@ HRESULT Initialize(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `emitter`  
  진행 메타 데이터 내보내기 인터페이스에 대 한 포인터입니다.  
   
@@ -48,15 +50,17 @@ HRESULT Initialize(
  진행 이 매개 변수를 지정 하면 기호 작성기가 <xref:System.Runtime.InteropServices.ComTypes.IStream> 매개 변수에 지정 된 파일 대신 지정 된에 기호를 내보냅니다 `filename` . `pIStream` 매개 변수는 선택 사항입니다.  
   
  `fFullBuild`  
- [in] `true` 전체 다시 작성 인 경우 `false`증분 컴파일 인 경우입니다.  
+ [in] `true` 전체 다시 작성 인 경우 `false` 증분 컴파일 인 경우입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)
 - [Initialize2 메서드](isymunmanagedwriter-initialize2-method.md)

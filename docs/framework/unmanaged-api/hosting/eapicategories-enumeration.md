@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: d31b0190ef9a697fb27c849db080bec6c57618ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f90e08373c0497201816bc7eead89b83b84be255
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616387"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726875"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 열거형
+
 호스트에서 부분적으로 신뢰할 수 있는 코드에서 실행 되지 못하도록 차단할 수 있는 기능의 범주를 설명 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -59,20 +60,22 @@ typedef enum {
 |`eUI`|사용자 상호 작용을 허용 하거나 필요로 하는 관리 되는 클래스 및 멤버를 부분적으로 신뢰할 수 있는 코드에서 실행 하지 못하도록 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [ICLRHostProtectionManager:: SetProtectedCategories](iclrhostprotectionmanager-setprotectedcategories-method.md) 메서드는 형식의 매개 변수를 사용 합니다 `EApiCategories` .  
   
  `EApiCategories`열거형 및 메서드는 `SetProtectedCategories` 관리 되는 클래스와 직접적으로 관련이 <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> 있습니다. 관리 되는 클래스는 값에 직접 해당 하는 값을 가진 열거형과 함께 사용 되어 <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> `EApiCategories` 에서 설명 하는 범주에 해당 하는 기능을 노출 하는 관리 되는 형식 및 멤버를 표시 합니다 `EApiCategories` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICLRHostProtectionManager 인터페이스](iclrhostprotectionmanager-interface.md)
 - [호스팅 열거형](hosting-enumerations.md)

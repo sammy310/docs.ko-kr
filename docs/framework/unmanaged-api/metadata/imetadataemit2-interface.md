@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 866dc96b-bbfc-4c0f-80c2-38ce93072106
 topic_type:
 - apiref
-ms.openlocfilehash: 5a232f30da8812c6f3bd94647d74151312a8593b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b8ad159dace734c343297b256092162f17ab829b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726485"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 인터페이스
+
 [IMetaDataEmit](imetadataemit-interface.md) 인터페이스를 주로 확장 하 여 제네릭 형식으로 작업 하는 기능을 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[DefineGenericParam 메서드](imetadataemit2-definegenericparam-method.md)|제네릭 형식 매개 변수에 대 한 정의를 만들고 해당 제네릭 형식 매개 변수에 대 한 토큰을 가져옵니다.|  
 |[DefineMethodSpec 메서드](imetadataemit2-definemethodspec-method.md)|메서드의 제네릭 인스턴스를 만들고 해당 정의에 대 한 토큰을 가져옵니다.|  
@@ -38,15 +39,16 @@ ms.locfileid: "84493043"
 |[SetGenericParamProps 메서드](imetadataemit2-setgenericparamprops-method.md)|지정 된 토큰이 참조 하는 제네릭 매개 변수 정의에 대 한 속성 값을 설정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 인터페이스](metadata-interfaces.md)
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)

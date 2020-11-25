@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727538"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
+
 HRESULT 값을 지정 된 문화권에 대 한 적절 한 오류 메시지로 변환 합니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -40,6 +41,7 @@ HRESULT LoadStringRCEx (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `lcid`  
  진행 문화권 식별자입니다. 에 대해-1 `lcid` 을 전달 하 여 기본 문화권을 사용 합니다.  
   
@@ -59,26 +61,29 @@ HRESULT LoadStringRCEx (
  제한이 오류 메시지의 길이에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM 오류 코드를 반환 합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`szBuffer`가 null 이거나 `iMax` 가 0입니다.|  
+|E_INVALIDARG|`szBuffer` 가 null 이거나 `iMax` 가 0입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  메서드가 성공적으로 완료 되지 않으면에 `szBuffer` 빈 문자열이 포함 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [LoadStringRC 함수](loadstringrc-function.md)

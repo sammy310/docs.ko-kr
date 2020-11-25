@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6f3e109f92ad44eeeb1b1dec05e53015992a6
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5c108420772be9e6d0932f3759f18da9446f99d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727941"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 인터페이스
+
 스레드 차단 정보를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -33,12 +34,14 @@ ms.locfileid: "83378356"
 |[GetCurrentCustomDebuggerNotification 메서드](icordebugthread4-getcurrentcustomdebuggernotification-method.md)|현재 스레드의 현재 [ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md) 개체를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 인터페이스는 ICorDebugThread, ICorDebugThread2 및 [ICorDebugThread3](icordebugthread3-interface.md) 인터페이스를 논리적으로 확장 한 것입니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -47,7 +50,7 @@ ms.locfileid: "83378356"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

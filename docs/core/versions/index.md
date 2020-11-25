@@ -2,12 +2,12 @@
 title: .NET Core 런타임 및 SDK의 버전 관리 방법
 description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
 ms.date: 06/24/2020
-ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726706"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -41,7 +41,7 @@ SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전
 
 ## <a name="semantic-versioning"></a>유의적 버전
 
-.NET Core *런타임*은 [유의적 버전(SemVer)](https://semver.org/)을 대략적으로 준수하며, `MAJOR.MINOR.PATCH` 버전 관리를 사용하고, 버전 번호의 다양한 부분으로 변경의 수준 및 종류를 설명합니다.
+.NET Core *런타임* 은 [유의적 버전(SemVer)](https://semver.org/)을 대략적으로 준수하며, `MAJOR.MINOR.PATCH` 버전 관리를 사용하고, 버전 번호의 다양한 부분으로 변경의 수준 및 종류를 설명합니다.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -113,4 +113,4 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 - [.NET Core 배포 패키징](../distribution-packaging.md)
 - [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)(.NET Core 지원 수명 주기 팩트 시트)
 - [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)
-- [.NET Core용 Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [.NET Core용 Docker 이미지](https://hub.docker.com/_/microsoft-dotnet/)

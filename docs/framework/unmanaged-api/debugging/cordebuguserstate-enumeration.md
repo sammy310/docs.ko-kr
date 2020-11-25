@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726953"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 열거형
+
 스레드의 사용자 상태를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,7 +41,7 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -55,11 +56,13 @@ typedef enum CorDebugUserState {
 |`USER_THREADPOOL`|스레드가 스레드 풀에서 가져온 경우|  
   
 ## <a name="remarks"></a>설명  
+
  스레드의 사용자 상태는 디버거에서 해당 스레드를 검사할 때 스레드에 포함 된 상태입니다. 스레드에는 사용자 상태의 조합이 있을 수 있습니다.  
   
  [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) 메서드를 사용 하 여 스레드의 사용자 상태를 검색 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -68,6 +71,6 @@ typedef enum CorDebugUserState {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

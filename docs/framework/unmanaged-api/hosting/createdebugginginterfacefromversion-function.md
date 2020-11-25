@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f5eec282aec6a2757664023ce8031410e316f10
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b68fbc713374642c9f55d49ee51a88c5785cf4b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727876"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 함수
+
 지정 된 버전 정보를 기반으로 [ICorDebug](../debugging/icordebug-interface.md) 개체를 만듭니다.  
   
  이 함수는 .NET Framework 4에서 사용 되지 않습니다. 대신 CLR (공용 언어 런타임) 2.0에 대 한 인터페이스를 가져오려면 [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) 메서드를 사용 하 고 클래스 식별자 CLSID_CLRDebuggingLegacy 및 인터페이스 식별자 IID_ICorDebug를 지정 합니다. CLR 4 이상에 대 한 인터페이스를 가져오려면 [Clrcreateinstance](clrcreateinstance-function.md) 함수를 호출 하 고 클래스 식별자 CLSID_CLRDebugging 및 인터페이스 식별자 IID_ICLRDebugging를 지정 합니다.  
@@ -38,6 +39,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `iDebuggerVersion`  
  진행 디버거에 필요한의 버전입니다 `ICorDebug` . 올바른 값은 [Cordebuginterfaceversion](../debugging/cordebuginterfaceversion-enumeration.md) 열거형을 참조 하세요.  
   
@@ -48,25 +50,28 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  제한이 개체에 대 한 포인터를 수신 하는 위치입니다 `ICorDebug` .  
   
 ## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음 값 외에도 Winerror.h 파일에 정의 된 표준 COM 오류 코드를 반환 합니다.  
   
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`szDebuggeeVersion`또는 `ppCordb` 이 null 이거나 버전 문자열이 잘못 되었습니다.|  
+|E_INVALIDARG|`szDebuggeeVersion` 또는 `ppCordb` 이 null 이거나 버전 문자열이 잘못 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- `szDebuggeeVersion`매개 변수는 해당 버전의 mscordbi.dll에 매핑됩니다.  
+
+ `szDebuggeeVersion`매개 변수는 해당 하는 버전의 MSCorDbi.dll에 매핑됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

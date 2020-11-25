@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: d33c8b31473e389e07fb24076dc32272e9dde387
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132394"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727434"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 구조체
 
@@ -38,20 +38,22 @@ typedef struct _CodeChunkInfo {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`startAddr`|청크의 시작 주소를 지정 하는 `CORDB_ADDRESS` 값입니다.|  
+|`startAddr`|`CORDB_ADDRESS`청크의 시작 주소를 지정 하는 값입니다.|  
 |`length`|청크의 크기 (바이트)입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
+
  코드의 단일 청크는 함수와 같은 코드 개체의 일부인 네이티브 코드의 영역입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug .idl  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

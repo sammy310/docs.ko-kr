@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727239"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 메서드
+
 스택에서 관리 되는 프레임을 지정 된 스레드에 대해 보여 주고 콜백을 통해 프로파일러에 정보를 보냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT DoStackSnapshot(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `thread`  
  진행 대상 스레드의 ID입니다.  
   
@@ -65,6 +67,7 @@ HRESULT DoStackSnapshot(
  진행 `CONTEXT` 매개 변수에서 참조 하는 구조체의 크기입니다 `context` .  
   
 ## <a name="remarks"></a>설명  
+
  에 null을 전달 하면 `thread` 현재 스레드의 스냅숏이 생성 됩니다. 대상 스레드가 현재 일시 중단 된 경우에만 다른 스레드에 대 한 스냅숏을 만들 수 있습니다.  
   
  프로파일러가 스택을 탐색 하려는 경우를 호출 `DoStackSnapshot` 합니다. CLR이 해당 호출에서 반환 되기 전에 `StackSnapshotCallback` 스택에서 각 관리 되는 프레임 (또는 관리 되지 않는 프레임의 실행)에 대해 한 번씩 여러 번 호출 합니다. 관리 되지 않는 프레임이 발견 되 면 직접 탐색 해야 합니다.  
@@ -76,11 +79,13 @@ HRESULT DoStackSnapshot(
  다음 섹션에서 설명 하는 것 처럼 스택 워크는 동기식 또는 비동기식 일 수 있습니다.  
   
 ## <a name="synchronous-stack-walk"></a>동기 스택 워크  
+
  동기 스택 워크에는 콜백에 대 한 응답으로 현재 스레드의 스택을 탐색 하는 작업이 포함 됩니다. 시드 또는 일시 중단은 필요 하지 않습니다.  
   
  프로파일러가 프로파일러 [ICorProfilerCallback](icorprofilercallback-interface.md) (또는 [ICorProfilerCallback2](icorprofilercallback2-interface.md)) 메서드 중 하나를 호출 하는 경우를 호출 `DoStackSnapshot` 하 여 현재 스레드의 스택을 탐색 하는 경우 동기식 호출을 수행 합니다. 이는 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)된 것과 같은 알림에서 스택이 어떻게 표시 되는지 확인 하려는 경우에 유용 합니다. 메서드 내에서를 호출 하 여 `DoStackSnapshot` `ICorProfilerCallback` 및 매개 변수에 null을 전달 하기만 하면 `context` `thread` 됩니다.  
   
 ## <a name="asynchronous-stack-walk"></a>비동기 스택 워크  
+
  비동기 스택 워크는 다른 스레드의 스택을 탐색 하거나 콜백에 대 한 응답으로는 아니지만 현재 스레드의 명령 포인터를 하이재킹 하 여 현재 스레드의 스택을 탐색 합니다. 스택의 맨 위에는 플랫폼 호출 (PInvoke) 또는 COM 호출의 일부가 아니지만 CLR 자체의 도우미 코드는 관리 되지 않는 코드를 사용 하는 경우 비동기 워크에 시드가 필요 합니다. 예를 들어 JIT (just-in-time) 컴파일 또는 가비지 수집을 수행 하는 코드는 도우미 코드입니다.  
   
  관리 되는 최상위 프레임을 찾을 때까지 대상 스레드를 직접 일시 중단 하 고 해당 스택을 직접 탐색 하 여 초기값을 얻을 수 있습니다. 대상 스레드를 일시 중단 한 후 대상 스레드의 현재 등록 컨텍스트를 가져옵니다. 그런 다음 [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) 를 호출 하 여 등록 컨텍스트가 비관리 코드를 가리키는지 여부를 확인 합니다 .이 값이 0을 반환 하면 `FunctionID` 프레임은 비관리 코드입니다. 이제 첫 번째 관리 되는 프레임에 도달할 때까지 스택을 탐색 한 다음 해당 프레임에 대 한 등록 컨텍스트를 기준으로 초기값 컨텍스트를 계산 합니다.  
@@ -98,6 +103,7 @@ HRESULT DoStackSnapshot(
  프로파일러에서 만든 스레드에서를 호출 하 여 `DoStackSnapshot` 별도의 대상 스레드의 스택을 탐색할 수 있는 경우 교착 상태가 발생할 수도 있습니다. 만든 스레드가 특정 메서드 (를 포함 하 여)에 처음으로 들어가면 `ICorProfilerInfo*` `DoStackSnapshot` clr은 해당 스레드에서 스레드별, clr 관련 초기화를 수행 합니다. 프로파일러가 실행 하려는 스택 대상 스레드를 일시 중단 하 고 해당 대상 스레드가이 스레드 단위 초기화를 수행 하는 데 필요한 잠금을 소유 하 고 있는 경우 교착 상태가 발생 합니다. 이 교착 상태를 방지 하려면 프로파일러에서 만든 스레드에서에 대 한 초기 호출을 수행 `DoStackSnapshot` 하 여 별도의 대상 스레드를 탐색 하 고 대상 스레드를 먼저 일시 중단 하지 마십시오. 이 초기 호출을 통해 스레드 단위 초기화가 교착 상태 없이 완료 될 수 있도록 합니다. `DoStackSnapshot`가 성공 하 고 하나 이상의 프레임을 보고 하는 경우 해당 시점 이후에 프로파일러에서 만든 스레드가 대상 스레드를 일시 중단 하 고를 호출 하 여 `DoStackSnapshot` 대상 스레드의 스택을 탐색 하는 것이 안전 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  

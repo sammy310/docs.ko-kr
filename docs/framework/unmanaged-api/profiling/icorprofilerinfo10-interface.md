@@ -3,12 +3,12 @@ title: ICorProfilerInfo10 인터페이스
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7e483bae9b7898e25c376fa92d0449fc49c6f9ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a99fa8410bbd0dedeaeb9e1713107a3dcc9ada6b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548688"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727226"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 인터페이스
 
@@ -16,7 +16,7 @@ ms.locfileid: "90548688"
 
 ## <a name="methods"></a>메서드  
 
-| 메서드|Description|  
+| 메서드|설명|  
 | ------------|-----------------|  
 |[EnumerateObjectReferences 메서드](icorprofilerinfo10-enumerateobjectreferences-method.md)|ObjectID, callback 및 clientData가 지정 된 경우 각 개체 참조를 열거 합니다 (있는 경우). |
 |[IsFrozenObject 메서드](icorprofilerinfo10-isfrozenobject-method.md)|ObjectID가 지정 된 경우 개체가 읽기 전용 세그먼트에 있는지 여부를 확인 합니다. |
@@ -26,6 +26,7 @@ ms.locfileid: "90548688"
 |[ResumeRuntime 메서드](icorprofilerinfo10-resumeruntime-method.md)| GC를 수행 하지 않고 런타임을 다시 시작 합니다. |
 
 ## <a name="requirements"></a>요구 사항  
+
 **플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/windows.md?pivots=os-windows)를 참조 하세요.  
 **헤더:** CorProf.idl, CorProf.h  
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]

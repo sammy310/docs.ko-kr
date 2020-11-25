@@ -3,12 +3,12 @@ title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726069"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
@@ -18,7 +18,7 @@ ms.locfileid: "90679457"
 * .NET Core 이상
 * .NET 5.0 이상
 
-[DataSet](/dotnet/api/system.data.dataset) 및 [DataTable](/dotnet/api/system.data.datatable) 형식은 데이터 집합을 관리 되는 개체로 표현할 수 있도록 하는 레거시 .net 구성 요소입니다. 이러한 구성 요소는 원래 [ADO.NET 인프라](./index.md)의 일부로 .net 1.0에서 도입 되었습니다. 이러한 목표는 관계형 데이터 집합에 대 한 관리 되는 뷰를 제공 하 여 데이터의 기본 원본이 XML, SQL 또는 다른 기술 인지 여부를 추상화 하는 것 이었습니다.
+[DataSet](/dotnet/api/system.data.dataset) 및 [DataTable](/dotnet/api/system.data.datatable) 형식은 데이터 집합을 관리 되는 개체로 표현할 수 있도록 하는 레거시 .net 구성 요소입니다. 이러한 구성 요소는 .NET Framework 1.0에서 원래 [ADO.NET 인프라](./index.md)의 일부로 도입 되었습니다. 이러한 목표는 관계형 데이터 집합에 대 한 관리 되는 뷰를 제공 하 여 데이터의 기본 원본이 XML, SQL 또는 다른 기술 인지 여부를 추상화 하는 것 이었습니다.
 
 최신 데이터 뷰 패러다임을 비롯 한 ADO.NET에 대 한 자세한 내용은 [ADO.NET 설명서](../index.md)를 참조 하세요.
 
@@ -34,13 +34,9 @@ ms.locfileid: "90679457"
 
 들어오는 XML 데이터에이 목록에 없는 형식의 개체가 포함 된 경우:
 
-* 다음 메시지 및 스택 추적을 사용 하 여 예외가 throw 됩니다.  
-오류 메시지:  
-InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> '는 여기에서 사용할 수 없습니다. [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)자세한 내용은을 참조 하세요.  
-스택 추적:  
-at TypeLimiter. EnsureTypeIsAllowed (Type type, TypeLimiter capturedLimiter)  
-at UpdateColumnType (형식 형식, StorageType typeCode)  
-at System.web. set_DataType (유형 값)  
+* 다음 메시지 및 스택 추적을 사용 하 여 예외가 throw 됩니다.
+오류 메시지: InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> '는 여기에서 사용할 수 없습니다. [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)자세한 내용은을 참조 하세요.
+스택 추적: System.Data.DataColumn.set_DataType (유형 값)에서 EnsureTypeIsAllowed (type 유형, StorageType typeCode)의 TypeLimiter (형식 유형, TypeLimiter capturedLimiter)
 
 * Deserialization 작업이 실패 합니다.
 
@@ -134,7 +130,7 @@ string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName
 
 #### <a name="extend-programmatically-net-framework-net-core-net-50"></a>프로그래밍 방식으로 확장 (.NET Framework, .NET Core, .NET 5.0 이상)
 
-다음 코드에 표시 된 것 처럼 잘 _알려진 키를_사용 하는 경우에는 [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) 를 사용 하 여 허용 되는 형식 목록을 프로그래밍 방식으로 확장할 수도 있습니다.
+다음 코드에 표시 된 것 처럼 잘 _알려진 키를_ 사용 하는 경우에는 [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) 를 사용 하 여 허용 되는 형식 목록을 프로그래밍 방식으로 확장할 수도 있습니다.
 
 ```csharp
 Type[] extraAllowedTypes = new Type[]
@@ -157,7 +153,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 > [!WARNING]
 > "감사 모드"에서 응용 프로그램을 실행 하는 것은 테스트에 사용 되는 임시 측정값이 되어야 합니다. 감사 모드를 사용 하도록 설정 하 `DataSet` 고 `DataTable` 형식 제한을 적용 하지 않습니다 .이 경우 앱 내부에 보안 허점이 발생할 수 있습니다. 자세한 내용은 [신뢰할 수 없는 입력과 관련 하 여](#swr) [모든 형식 제한](#ratr) 및 안전 제거 섹션을 참조 하세요.
 
-_App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니다.
+_App.config_ 를 통해 감사 모드를 사용 하도록 설정할 수 있습니다.
 
 * 요소에 대 한 적절 한 값에 대 한 자세한 내용은이 문서의 [구성으로 확장](#etc) 섹션을 참조 하세요 `<configSections>` .
 * `<allowedTypes auditOnly="true">`다음 태그와 같이를 사용 하 여 감사 모드를 사용 하도록 설정 합니다.
@@ -178,7 +174,7 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 </configuration>
 ```
 
-감사 모드를 사용 하는 경우 _App.config_ 를 사용 하 여 기본 제공 `TraceListener` `DataSet` `TraceSource.` 추적 소스의 _System.Data.DataSet_이름을 system.string으로 기본 제공 합니다. 다음 샘플에서는 콘솔 _및_ 디스크의 로그 파일에 추적 이벤트를 쓰는 방법을 보여 줍니다.
+감사 모드를 사용 하는 경우 _App.config_ 를 사용 하 여 기본 제공 `TraceListener` `DataSet` `TraceSource.` 추적 소스의 _System.Data.DataSet_ 이름을 system.string으로 기본 제공 합니다. 다음 샘플에서는 콘솔 _및_ 디스크의 로그 파일에 추적 이벤트를 쓰는 방법을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -224,7 +220,7 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 
 `AppContext`스위치를 `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` 로 설정 하면 `true` 및에서 모든 형식 제한 제한이 제거 됩니다 `DataSet` `DataTable` .
 
-.NET Framework에서 다음 구성에 표시 된 것 처럼 _App.config_를 통해이 스위치를 사용 하도록 설정할 수 있습니다.
+.NET Framework에서 다음 구성에 표시 된 것 처럼 _App.config_ 를 통해이 스위치를 사용 하도록 설정할 수 있습니다.
 
 ```xml
 <configuration>
@@ -235,7 +231,7 @@ _App.config_를 통해 감사 모드를 사용 하도록 설정할 수 있습니
 </configuration>
 ```
 
-ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니다. 대신 다음 구성에 표시 된 것 처럼 _Web.config_를 통해 스위치를 사용 하도록 설정할 수 있습니다.
+ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니다. 대신 다음 구성에 표시 된 것 처럼 _Web.config_ 를 통해 스위치를 사용 하도록 설정할 수 있습니다.
 
 ```xml
 <configuration>
@@ -248,7 +244,7 @@ ASP.NET에서는 요소를 `<AppContextSwitchOverrides>` 사용할 수 없습니
 
 자세한 내용은 요소를 참조 하세요 [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) .
 
-.NET Core, .NET 5 및 ASP.NET Core에서이 설정은 다음 JSON에 표시 된 것 처럼 _runtimeconfig.js에_의해 제어 됩니다.
+.NET Core, .NET 5 및 ASP.NET Core에서이 설정은 다음 JSON에 표시 된 것 처럼 _runtimeconfig.js에_ 의해 제어 됩니다.
 
 ```json
 {
@@ -278,7 +274,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 * 관리자가 레지스트리를 구성 해야 합니다.
 * 레지스트리를 사용 하는 것은 시스템 전체에서 변경 되며 컴퓨터에서 실행 되는 _모든_ 앱에 영향을 줍니다.
 
-| 유형  |  값 |
+| Type  |  값 |
 |---|---|
 | **레지스트리 키** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **값 이름** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -293,7 +289,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>신뢰할 수 없는 입력과 관련 된 안전
 
-`DataSet`및는 `DataTable` XML 페이로드를 deserialize 하는 동안 나타날 수 있는 형식에 대 한 기본 제한 사항을 적용 하며, 신뢰할 수 없는 __ `DataSet` `DataTable` 입력으로 채워질 때 일반적으로 안전 하지 않습니다.__ 다음은 `DataSet` 또는 `DataTable` 인스턴스가 신뢰할 수 없는 입력을 읽을 수 있는 방법에 대 한 완전 하지 않은 목록입니다.
+`DataSet`및는 `DataTable` XML 페이로드를 deserialize 하는 동안 나타날 수 있는 형식에 대 한 기본 제한 사항을 적용 하며, 신뢰할 수 없는 __`DataSet` `DataTable` 입력으로 채워질 때 일반적으로 안전 하지 않습니다.__ 다음은 `DataSet` 또는 `DataTable` 인스턴스가 신뢰할 수 없는 입력을 읽을 수 있는 방법에 대 한 완전 하지 않은 목록입니다.
 
 * 는 `DataAdapter` 데이터베이스를 참조 하 고 `DataAdapter.Fill` 메서드는를 `DataSet` 데이터베이스 쿼리의 내용으로 채우는 데 사용 됩니다.
 * `DataSet.ReadXml`또는 `DataTable.ReadXml` 메서드는 열 및 행 정보를 포함 하는 XML 파일을 읽는 데 사용 됩니다.
@@ -475,13 +471,13 @@ public class MyClass
 `DataSet` `DataTable` 트러스트 되지 않은 JSON blob에서 또는를이 방식으로 deserialize 하는 것은 안전 하지 않습니다. 이 패턴은 서비스 거부 공격에 취약 합니다. 이러한 공격으로 인해 앱이 중단 되거나 응답 하지 않을 수 있습니다.
 
 > [!NOTE]
-> Microsoft는 _Newtonsoft.Js_와 같은 타사 라이브러리의 구현을 보증 하거나 지원 하지 않습니다. 이 정보는 완전성을 위해 제공 되며이 정보를 작성 하는 시간을 정확 하 게 제공 합니다.
+> Microsoft는 _Newtonsoft.Js_ 와 같은 타사 라이브러리의 구현을 보증 하거나 지원 하지 않습니다. 이 정보는 완전성을 위해 제공 되며이 정보를 작성 하는 시간을 정확 하 게 제공 합니다.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter를 통해 데이터 집합 또는 DataTable Deserialize
 
-개발자 `BinaryFormatter` `NetDataContractSerializer` 는,, `SoapFormatter` 또는 관련 된 ***unsafe*** 포맷터를 사용 하 여 `DataSet` `DataTable` 신뢰할 수 없는 페이로드에서 또는 인스턴스를 deserialize 해서는 안 됩니다.
+개발자 `BinaryFormatter` `NetDataContractSerializer` 는,, `SoapFormatter` 또는 관련 ***unsafe** _ 포맷터를 사용 하 여 `DataSet` `DataTable` 신뢰할 수 없는 페이로드에서 또는 인스턴스를 deserialize 해서는 안 됩니다.
 
-* 이는 전체 원격 코드 실행 공격에 취약 합니다.
+_이는 전체 원격 코드 실행 공격에 취약 합니다.
 * `SerializationBinder`이러한 공격을 방지 하기 위해 사용자 지정을 사용 하는 것 만으로는 충분 하지 않습니다.
 
 ## <a name="safe-replacements"></a>안전한 대체

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9594a7e-cb0c-4c48-accb-29f762aa0c21
 topic_type:
 - apiref
-ms.openlocfilehash: 08337a118a80d213f16e2a16f744b96f5dde2e7f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b0d94f5004da85caf0460e8f1d1b2d964944b045
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497005"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727070"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo 메서드
+
 `catch` / `finally` / `filter` 실행 되거나 방금 실행 된 예외 절 ()에 대 한 기본 주소 및 프레임 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,15 +34,18 @@ HRESULT GetNotifiedExceptionClauseInfo(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pinfo`  
  제한이 현재 예외 절 인스턴스와 관련 프레임을 설명 하는 [COR_PRF_EX_CLAUSE_INFO](cor-prf-ex-clause-info-structure.md) 구조체에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  예외 알림이 수신 되 면는 `GetNotifiedExceptionClauseInfo` 실행 될 예외 절 ()에 대 한 기본 주소 및 프레임 정보를 가져오는 데 사용할 수 있습니다 `catch` / `finally` / `filter` ([ICorProfilerCallback:: ExceptionCatcherEnter](icorprofilercallback-exceptioncatcherenter-method.md), [ICorProfilerCallback:: ExceptionUnwindFinallyEnter](icorprofilercallback-exceptionunwindfinallyenter-method.md)또는 [ICorProfilerCallback:: exceptionsearchfilterenter](icorprofilercallback-exceptionsearchfilterenter-method.md) 콜백을 프로파일러에서 수신 했거나, 실행 된 직후 ([ICorProfilerCallback:: ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md), [ICorProfilerCallback:: ExceptionUnwindFinallyLeave](icorprofilercallback-exceptionunwindfinallyleave-method.md)또는 [ICorProfilerCallback:: exceptionsearchfilterenter](icorprofilercallback-exceptionsearchfilterleave-method.md) 콜백을 프로파일러에서 수신 했습니다.)  
   
  이 호출은 일치 하는 Leave 콜백이 수신 되거나 현재 절에서 중첩 된 예외가 throw 될 때까지 위의 Enter 콜백 중 하나를 실행 한 후 언제 든 지 수행할 수 있습니다 .이 경우에는 해당 절에 대 한 Leave 알림이 없습니다. Throw 된 예외가 예외 절을 이스케이프 하는 것은 불가능 `filter` 하므로이 경우 항상 Leave 알림이 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -50,7 +54,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)
