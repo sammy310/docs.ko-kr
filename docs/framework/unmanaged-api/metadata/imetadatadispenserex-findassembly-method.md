@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-ms.openlocfilehash: 50aebb09924b93a622e5b7d84e65e41ee91f6018
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c11a4498610c3e82590a0ff9be1247173e70be76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713394"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly 메서드
-이 메서드가 구현되지 않았습니다. 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.  
+
+이 메서드가 구현되지 않은 경우 이 메서드를 호출 하면 E_NOTIMPL 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,6 +41,7 @@ HRESULT FindAssembly(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szAppBase`  
  진행 사용 되지 않습니다.  
   
@@ -62,15 +64,16 @@ HRESULT FindAssembly(
  제한이 에서 실제로 반환 되는 문자 수입니다 `szName` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)
