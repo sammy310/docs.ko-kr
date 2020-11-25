@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c682f744-996e-43c7-a9ea-c57cbc755398
 topic_type:
 - apiref
-ms.openlocfilehash: bbf84ffbee7d504f7fc6a902285b43857f0ac4d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 67e5e66ae88cfcc777d631268ed555bcb4eb31b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008633"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728747"
 ---
-# <a name="itypenamefactorygettypenamebuilder-method"></a><span data-ttu-id="30a88-102">ITypeNameFactory::GetTypeNameBuilder 메서드</span><span class="sxs-lookup"><span data-stu-id="30a88-102">ITypeNameFactory::GetTypeNameBuilder Method</span></span>
-<span data-ttu-id="30a88-103">이 메서드는 .NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="30a88-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamefactorygettypenamebuilder-method"></a><span data-ttu-id="46652-102">ITypeNameFactory::GetTypeNameBuilder 메서드</span><span class="sxs-lookup"><span data-stu-id="46652-102">ITypeNameFactory::GetTypeNameBuilder Method</span></span>
+
+<span data-ttu-id="46652-103">이 메서드는 .NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="46652-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30a88-104">구문</span><span class="sxs-lookup"><span data-stu-id="30a88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46652-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="46652-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeNameBuilder (  
@@ -33,15 +34,16 @@ HRESULT GetTypeNameBuilder (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="30a88-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="30a88-105">Requirements</span></span>  
- <span data-ttu-id="30a88-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="30a88-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="30a88-107">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="30a88-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="30a88-108">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="30a88-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="30a88-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30a88-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="30a88-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="30a88-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="46652-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="46652-105">Requirements</span></span>  
 
-- [<span data-ttu-id="30a88-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="30a88-111">Hosting Interfaces</span></span>](hosting-interfaces.md)
+ <span data-ttu-id="46652-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="46652-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="46652-107">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="46652-107">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="46652-108">**라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="46652-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="46652-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46652-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="46652-110">참조</span><span class="sxs-lookup"><span data-stu-id="46652-110">See also</span></span>
+
+- [<span data-ttu-id="46652-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="46652-111">Hosting Interfaces</span></span>](hosting-interfaces.md)
