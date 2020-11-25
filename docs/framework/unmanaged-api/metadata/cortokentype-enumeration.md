@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007496"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705477"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
+
 메타 데이터 토큰의 형식을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -91,15 +92,17 @@ typedef enum CorTokenType {
 |`mdtBaseType`|사용되지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  각 값은 해당 하는 메타 데이터 토큰에서 최상위 바이트의 값과 같습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617180"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705490"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 함수
+
 응용 프로그램에서 요청 하는 CLR (공용 언어 런타임)에 대 한 버전 및 디렉터리 정보를 가져옵니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -46,6 +47,7 @@ HRESULT GetRequestedRuntimeInfo (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pExe`  
  진행 응용 프로그램의 이름입니다.  
   
@@ -79,7 +81,8 @@ HRESULT GetRequestedRuntimeInfo (
  `dwlength`  
  제한이 버전 문자열의 길이에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
 |반환 코드|설명|  
@@ -88,6 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |ERROR_INSUFFICIENT_BUFFER|디렉터리 버퍼가 디렉터리 경로를 저장할 만큼 크지 않습니다.<br /><br /> 또는<br /><br /> 버전 버퍼의 크기가 작아서 버전 문자열을 저장할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `GetRequestedRuntimeInfo`메서드는 프로세스에 로드 된 버전에 대 한 런타임 정보를 반환 합니다 .이 정보는 컴퓨터에 최신 버전이 설치 되어 있지 않아도 됩니다.  
   
  .NET Framework 버전 2.0에서는 다음과 같이 메서드를 사용 하 여 설치 된 최신 버전에 대 한 정보를 가져올 수 있습니다 `GetRequestedRuntimeInfo` .  
@@ -113,15 +117,16 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetRequestedRuntimeVersion 함수](getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess 함수](getversionfromprocess-function.md)

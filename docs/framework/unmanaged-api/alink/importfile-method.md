@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f30307884a268008fd4d1a8de31ec5a49b6ab92d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446999"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705243"
 ---
 # <a name="importfile-method"></a>ImportFile 메서드
+
 어셈블리 및 바인딩되지 않은 모듈을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,6 +39,7 @@ HRESULT ImportFile(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pszFilename`  
  가져올 파일의 정규화 된 이름입니다.  
   
@@ -57,12 +59,14 @@ HRESULT ImportFile(
  가져온 파일 및/또는 범위 수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink 필요  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

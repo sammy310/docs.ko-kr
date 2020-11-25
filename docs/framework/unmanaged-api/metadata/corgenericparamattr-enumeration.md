@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: ea84b742c901ba58a3bb730f1f5033a0d90610ce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ea50430c3ae6cef9b47880bcb8ad969f62ce9c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704918"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 열거형
+
 <xref:System.Type> [IMetaDataEmit2::D efineGenericParam](imetadataemit2-definegenericparam-method.md)호출에 사용 되는 제네릭 형식에 대 한 매개 변수를 설명 하는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -58,12 +59,13 @@ typedef enum CorGenericParamAttr {
 |`gpDefaultConstructorConstraint`|매개 변수를 <xref:System.Type> 사용 하지 않는 기본 public 생성자가 매개 변수에 있어야 함을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 열거형](metadata-enumerations.md)

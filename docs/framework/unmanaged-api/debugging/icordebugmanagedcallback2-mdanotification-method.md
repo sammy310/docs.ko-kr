@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 09a410f54ddf07c9a5f6bb7dd34f2aaf266e0734
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704580"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
+
 코드 실행이 디버깅 중인 응용 프로그램에서 MDA (관리 디버깅 도우미)를 발견 한 알림을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT MDANotification(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pController`  
  진행 MDA가 발생 한 프로세스 또는 응용 프로그램 도메인을 노출 하는 ICorDebugController 인터페이스에 대 한 포인터입니다.  
   
@@ -52,6 +54,7 @@ HRESULT MDANotification(
  진행 MDA 정보를 노출 하는 [ICorDebugMDA](icordebugmda-interface.md) 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  MDA는 추론 경고 이며, 디버깅 중인 응용 프로그램의 실행을 계속 하기 위해 [ICorDebugController::](icordebugcontroller-continue-method.md) 를 호출 하는 경우를 제외 하 고 명시적 디버거 작업이 필요 하지 않습니다.  
   
  CLR (공용 언어 런타임)은 언제 든 지 어떤 mda가 발생 하는지, 어느 시점에서 어떤 데이터가 지정 된 MDA에 있는지를 확인할 수 있습니다. 따라서 디버거는 특정 MDA 패턴이 필요한 기능을 빌드하지 않아야 합니다.  
@@ -61,6 +64,7 @@ HRESULT MDANotification(
  디버거는 콜백에서 반환 된 직후 인스턴스에 대 한 참조를 해제 `ICorDebugMDA` 하 여 `MDANotification` CLR이 MDA에서 사용 하는 메모리를 재활용할 수 있도록 해야 합니다. 인스턴스를 해제 하면 많은 Mda가 발생 하는 경우 성능이 향상 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -69,7 +73,7 @@ HRESULT MDANotification(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)

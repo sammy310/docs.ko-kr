@@ -6,21 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - IALink3 interface
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
-ms.openlocfilehash: b9d727348f9706ad0b2127feab466df299ec2314
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1d2da9d1d4c6029c3763f652a8ef30aa612dc2ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441789"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705256"
 ---
 # <a name="ialink3-interface"></a>IALink3 인터페이스
-는 어셈블리를 만들 때 링커가 사용할 매니페스트 파일을 지정 하거나 다시 설정 하는 데 사용할 수 있는 `SetManifestFile`단일 메서드를 제공 합니다.  
+
+는 `SetManifestFile` 어셈블리를 만들 때 링커가 사용할 매니페스트 파일을 지정 하거나 다시 설정 하는 데 사용할 수 있는 단일 메서드인를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [SetManifestFile 메서드](setmanifestfile-method.md)  
  링커가 어셈블리를 만들 때 사용 하는 매니페스트 파일을 지정 하거나 다시 설정할 수 있습니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
+
  [ALink API](index.md)  
  .NET Framework 어셈블리 및 바인딩되지 않은 모듈 만들기를 지원합니다.  
   

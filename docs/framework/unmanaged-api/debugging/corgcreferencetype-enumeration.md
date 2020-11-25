@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860923"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704996"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 열거형
+
 가비지가 수집될 개체의 소스를 식별합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -46,9 +47,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
-|멤버 이름|Description|  
+|멤버 이름|설명|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|개체 참조 테이블의 강력한 참조에 대한 핸들입니다.|  
 |`CorHandleStrongPinning`|개체 핸들 테이블에서 고정 된 강한 참조에 대 한 핸들입니다.|  
@@ -65,13 +66,15 @@ typedef enum {
 |`CorHandleAll`|핸들 테이블의 모든 참조를 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `CorGCReferenceType` 열거형은 다음과 같이 사용 됩니다.  
+
+ 열거형은 다음과 `CorGCReferenceType` 같이 사용 됩니다.  
   
 - `type` [COR_GC_REFERENCE](cor-gc-reference-structure.md) 구조체의 필드 값으로 참조 또는 핸들의 원본을 나타냅니다.  
   
-- `types` [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
+- `types` [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -80,6 +83,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

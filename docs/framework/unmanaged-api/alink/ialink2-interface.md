@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink2 interface
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
-ms.openlocfilehash: 57998f8841ed952c8876fa6d36f090cf58866a8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53701a34e1466e03e91d99c27e5a2b345edf6556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705269"
 ---
 # <a name="ialink2-interface"></a>IALink2 인터페이스
+
 [IMetaDataEmit2 인터페이스](../metadata/imetadataemit2-interface.md)와 같이 최신 메타 데이터 인터페이스에서 작동 하는 메서드를 선언 하 여 [ialink 인터페이스](ialink-interface.md) 를 보완 합니다. 또한 IALink2는 원래 IALink 인터페이스에 대 한 추가 사용 유연성을 제공 하는 메서드를 선언 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [AddFile2 메서드](addfile2-method.md)  
   
  [EmitAssembly 메서드](emitassembly-method.md)  
@@ -39,7 +41,7 @@ ms.locfileid: "74431363"
   
  [SetPEKind 메서드](setpekind-method.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ALink API](index.md)
 - [IALink 인터페이스](ialink-interface.md)

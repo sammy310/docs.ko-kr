@@ -4,12 +4,12 @@ description: '제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812161"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705308"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -17,14 +17,14 @@ F #의 계산 식은 제어 흐름 구문 및 바인딩을 사용 하 여 시퀀
 
 ## <a name="overview"></a>개요
 
-계산은 많은 형태를 사용할 수 있습니다. 가장 일반적인 계산 형태는 단일 스레드 실행 이며 이해 하 고 수정 하기 쉽습니다. 그러나 일부 계산 형태는 단일 스레드 실행 만큼 간단 하지 않습니다. 일부 사례:
+계산은 많은 형태를 사용할 수 있습니다. 가장 일반적인 계산 형태는 단일 스레드 실행 이며 이해 하 고 수정 하기 쉽습니다. 그러나 일부 계산 형태는 단일 스레드 실행 만큼 간단 하지 않습니다. 예를 들면 다음과 같습니다.
 
 - 비결 정적 계산
 - 비동기 계산
 - Effectful 계산
 - 인기 계산
 
-일반적으로 응용 프로그램의 특정 부분에서 수행 해야 하는 *상황* 에 맞는 계산이 있습니다. 컨텍스트를 구분 하는 코드를 작성 하는 것이 더 어려울 수 있습니다 .이 작업을 수행 하는 것을 방지 하기 위해 추상화 없이 지정 된 컨텍스트 외부에서 계산을 "누수" 하는 것이 이러한 추상화는 직접 작성 하기 어려운 경우가 많으므로 F #에서 **계산 식**이라고 하는 일반화 된 방법이 있습니다.
+일반적으로 응용 프로그램의 특정 부분에서 수행 해야 하는 *상황* 에 맞는 계산이 있습니다. 컨텍스트를 구분 하는 코드를 작성 하는 것이 더 어려울 수 있습니다 .이 작업을 수행 하는 것을 방지 하기 위해 추상화 없이 지정 된 컨텍스트 외부에서 계산을 "누수" 하는 것이 이러한 추상화는 직접 작성 하기 어려운 경우가 많으므로 F #에서 **계산 식** 이라고 하는 일반화 된 방법이 있습니다.
 
 계산 식은 상황에 맞는 계산을 인코딩하기 위한 일관 된 구문 및 추상화 모델을 제공 합니다.
 
@@ -181,7 +181,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 `return`키워드는 계산 식에 해당 하는 형식의 값을 래핑합니다. 를 사용 하는 계산 식 외에도 `yield` 계산 식을 "완료" 하는 데 사용 됩니다.
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 `return!`키워드는 계산 식의 값을 인식 하 고 해당 결과를 계산 식에 해당 하는 형식으로 래핑합니다.
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }
@@ -410,7 +410,7 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-계산 식에는 식이 반환 하는 기본 형식이 있습니다. 기본 형식은 계산 된 결과 또는 수행 될 수 있는 지연 계산을 나타내거나 일부 형식의 컬렉션을 반복 하는 방법을 제공할 수 있습니다. 이전 예제에서는 기본 형식이 **결국**였습니다. 시퀀스 식의 경우 기본 형식은 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 입니다. 쿼리 식의 경우 기본 형식은 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 입니다. 비동기 워크플로의 경우 기본 형식은 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 입니다. `Async`개체는 결과를 계산 하기 위해 수행할 작업을 나타냅니다. 예를 들어를 호출 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 하 여 계산을 실행 하 고 결과를 반환 합니다.
+계산 식에는 식이 반환 하는 기본 형식이 있습니다. 기본 형식은 계산 된 결과 또는 수행 될 수 있는 지연 계산을 나타내거나 일부 형식의 컬렉션을 반복 하는 방법을 제공할 수 있습니다. 이전 예제에서는 기본 형식이 **결국** 였습니다. 시퀀스 식의 경우 기본 형식은 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 입니다. 쿼리 식의 경우 기본 형식은 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 입니다. 비동기 워크플로의 경우 기본 형식은 [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) 입니다. `Async`개체는 결과를 계산 하기 위해 수행할 작업을 나타냅니다. 예를 들어를 호출 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) 하 여 계산을 실행 하 고 결과를 반환 합니다.
 
 ## <a name="custom-operations"></a>사용자 지정 작업
 
