@@ -1,17 +1,17 @@
 ---
 title: 코드 액세스 보안 정책 호환성 및 마이그레이션
-description: 요약을 읽고 .NET 4에서 코드 액세스 보안 정책 호환성 및 마이그레이션에 대 한 링크를 참조 하세요.
+description: 요약을 읽고 .NET Framework 4에서 코드 액세스 보안 정책 호환성 및 마이그레이션에 대 한 링크를 참조 하세요.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281734"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733388"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>코드 액세스 보안 정책 호환성 및 마이그레이션
 
@@ -27,7 +27,7 @@ CAS (코드 액세스 보안)의 정책 부분은 .NET Framework 4에서 더 이
 
 - [ \<NetFx40_LegacySecurityPolicy> 구성 요소](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) 를 사용 하 여 레거시 CAS 정책 동작을 옵트인 (opt in) 합니다.
 
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
+이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
 - [명시적 사용](#explicit_use)
 
@@ -73,7 +73,7 @@ CAS (코드 액세스 보안)의 정책 부분은 .NET Framework 4에서 더 이
 
 어셈블리 로드 오버로드가 여러 개이면 CAS 정책의 암시적 사용 때문에 오류가 생성됩니다. 이러한 오버로드는 CAS 정책을 확인하고 어셈블리에 대한 권한 부여 집합을 제공하는 데 사용되는 <xref:System.Security.Policy.Evidence> 매개 변수를 받습니다.
 
-다음은 몇 가지 예제입니다. 사용되지 않는 오버로드는 <xref:System.Security.Policy.Evidence>를 매개 변수로 받는 오버로드입니다.
+예를 들면 다음과 같습니다. 사용되지 않는 오버로드는 <xref:System.Security.Policy.Evidence>를 매개 변수로 받는 오버로드입니다.
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -154,7 +154,7 @@ CAS 정책은 대체로 어셈블리 또는 애플리케이션 도메인의 권�
 </configuration>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

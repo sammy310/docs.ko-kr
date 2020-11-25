@@ -2,14 +2,15 @@
 title: ICorDebugProcess6::MarkDebuggerAttached 메서드
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: c83d6e892b89e6e50779abf9a71a2cbe9093af2c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c6543a89a375d4a2887dbe8cff56d66a15650811
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732595"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached 메서드
+
 .NET Framework 클래스 라이브러리의 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> 메서드가 `true`를 반환하도록 디버기의 내부 상태를 변경합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,10 +22,12 @@ HRESULT MarkDebuggerAttached(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `fIsAttached`  
  `true` 메서드가 디버거가 연결되어 있음을 나타내야 하는 경우 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>이고, 그러지 않으면 `false`입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음 표에 나와 있는 값을 반환할 수 있습니다.  
   
 |반환 값|설명|  
@@ -39,6 +42,7 @@ HRESULT MarkDebuggerAttached(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -47,7 +51,7 @@ HRESULT MarkDebuggerAttached(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

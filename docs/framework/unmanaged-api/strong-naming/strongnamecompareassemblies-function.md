@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: adde52dddb63b83dcd7ff10703a43928d9601c92
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732309"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
+
 두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.  
   
  이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) 메서드를 사용 합니다.  
@@ -37,6 +38,7 @@ BOOLEAN StrongNameCompareAssemblies (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `wszAssembly1`  
  진행 첫 번째 어셈블리의 경로입니다.  
   
@@ -53,21 +55,24 @@ BOOLEAN StrongNameCompareAssemblies (
 - `SN_CMP_SIGONLY` (2)-어셈블리가 시그니처와 체크섬만 다른 것으로 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공적으로 완료 되 면 `true` 합니다. 그렇지 않으면 `false`합니다.  
+
+ `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** StrongName  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
+
  어셈블리의 강력한 이름 서명은 어셈블리의 텍스트 이름, 버전, 문화권 및 공개 키 토큰으로 구성 됩니다.  
   
- `StrongNameCompareAssemblies` 함수가 성공적으로 완료 되지 않으면 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 함수를 호출하여 마지막으로 생성된 오류를 검색합니다.  
+ `StrongNameCompareAssemblies`함수가 성공적으로 완료되지 않으면 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 함수를 호출하여 마지막으로 생성된 오류를 검색합니다.  
   
 ## <a name="see-also"></a>참조
 

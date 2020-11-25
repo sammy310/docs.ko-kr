@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a912787-f139-43ca-a841-8bbda3107ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 1db4c4ab7e47e223a492e08297ac3cedcb3a27eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45eed17b91f70d4188d1d89fc91a41455f3e845b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445598"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732647"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 메서드
+
 빌드할 어셈블리의 이름을 할당 합니다. 바인딩되지 않은 모듈을 생성할 때 사용할 수 없습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT SetAssemblyFile(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pszFilename`  
  매니페스트 파일의 정규화 된 이름입니다.  
   
@@ -49,12 +51,14 @@ HRESULT SetAssemblyFile(
  결과 어셈블리의 ID에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

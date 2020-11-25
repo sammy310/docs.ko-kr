@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501653"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733635"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
+
 강력한 이름을 사용 하 여 어셈블리에 서명 하는 데 사용할 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드는 표준 COM hresult를 반환 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|설명|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetHashFromAssemblyFile 메서드](iclrstrongname-gethashfromassemblyfile-method.md)|지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.|  
 |[GetHashFromAssemblyFileW 메서드](iclrstrongname-gethashfromassemblyfilew-method.md)|지정된 해시 알고리즘을 사용하여 유니코드 문자열로 지정된 어셈블리 파일의 해시를 가져옵니다.|  
@@ -55,18 +56,20 @@ ms.locfileid: "84501653"
 |[StrongNameTokenFromPublicKey 메서드](iclrstrongname-strongnametokenfrompublickey-method.md)|공개 키를 나타내는 토큰을 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `ICLRStrongName`및를 매개 변수로 사용 하 여 [ICLRRuntimeInfo:: getinterface](iclrruntimeinfo-getinterface-method.md) 메서드를 호출 하 여의 인스턴스를 가져올 수 있습니다 `CLSID_CLRStrongName` `IID_ICLRStrongName` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [호스팅](index.md)

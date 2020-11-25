@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496011"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733869"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 메서드
+
 지정 된 개체의 크기를 반환 합니다. 에서 표현할 수 있는 것 보다 큰 개체의 크기를 보고 하 여 [ICorProfilerInfo:: GetObjectSize](icorprofilerinfo-getobjectsize-method.md) 메서드를 대체 `ULONG` 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,6 +35,7 @@ HRESULT GetObjectSize2(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `objectId`  
  진행 개체의 ID입니다.  
   
@@ -41,9 +43,11 @@ HRESULT GetObjectSize2(
  제한이 개체의 크기 (바이트)에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
+
  동일한 유형의 개체 마다 크기가 같은 경우가 많습니다. 그러나 배열 또는 문자열과 같은 일부 형식에는 각 개체에 대해 다른 크기를 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -52,6 +56,6 @@ HRESULT GetObjectSize2(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)

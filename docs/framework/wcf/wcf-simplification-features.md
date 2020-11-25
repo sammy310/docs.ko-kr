@@ -2,12 +2,12 @@
 title: WCF 단순화 기능
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732920"
 ---
 # <a name="wcf-simplification-features"></a>WCF 단순화 기능
 
@@ -88,7 +88,7 @@ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 
 
 - 비동기 스트리밍 지원이 WCF에 새로 추가되었습니다. 비동기 스트리밍을 사용하려면 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 엔드포인트 동작을 서비스 호스트에 추가하고 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 속성을 `true`로 설정합니다. 따라서 서비스에서 읽는 속도가 느린 여러 클라이언트에 스트리밍된 메시지를 보낼 때 확장성이 개선될 수 있습니다. WCF는 더 이상 클라이언트당 하나의 스레드를 차단하지 않으며 다른 클라이언트에 서비스를 제공하기 위해 스레드를 개방합니다.
 
-- 서비스가 IIS에서 호스팅되는 경우 메시지 버퍼링과 관련된 제한이 제거되었습니다. 이전 버전의 WCF에서는 스트리밍 메시지 전송을 사용한 IIS 호스팅 서비스 메시지를 수신할 때 ASP.NET에서 전체 메시지를 버퍼링한 후 WCF로 보냈습니다. 이 경우 메모리 소비가 매우 커집니다. .NET 4.5에서는 이 버퍼링이 제거되어 이제 IIS에서 호스팅되는 WCF 서비스는 전체 메시지가 수신되기 전에 들어오는 스트림의 처리를 시작할 수 있으므로 진정한 의미의 스트리밍이 가능합니다. 이에 따라 WCF가 메시지에 즉시 응답할 수 있어 성능이 개선됩니다. 또한 들어오는 요청에 대한 ASP.NET 크기 제한인 `maxRequestLength` 값을 지정할 필요가 없습니다. 이 속성은 설정해도 무시됩니다. 에 대 한 자세한 `maxRequestLength` 내용은 [ \<httpRuntime> 구성 요소](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))를 참조 하세요. MaxAllowedContentLength를 구성 해야 합니다. 자세한 내용은 [IIS 요청 제한](/previous-versions/iis/settings-schema/ms689462(v=vs.90))을 참조 하세요.
+- 서비스가 IIS에서 호스팅되는 경우 메시지 버퍼링과 관련된 제한이 제거되었습니다. 이전 버전의 WCF에서는 스트리밍 메시지 전송을 사용한 IIS 호스팅 서비스 메시지를 수신할 때 ASP.NET에서 전체 메시지를 버퍼링한 후 WCF로 보냈습니다. 이 경우 메모리 소비가 매우 커집니다. 이 버퍼링은 .NET Framework 4.5에서 제거 되었으므로 이제 IIS에서 호스팅되는 WCF 서비스는 전체 메시지를 받기 전에 들어오는 스트림 처리를 시작할 수 있으므로 진정한 스트리밍이 가능 합니다. 이에 따라 WCF가 메시지에 즉시 응답할 수 있어 성능이 개선됩니다. 또한 들어오는 요청에 대한 ASP.NET 크기 제한인 `maxRequestLength` 값을 지정할 필요가 없습니다. 이 속성은 설정해도 무시됩니다. 에 대 한 자세한 `maxRequestLength` 내용은 [ \<httpRuntime> 구성 요소](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))를 참조 하세요. MaxAllowedContentLength를 구성 해야 합니다. 자세한 내용은 [IIS 요청 제한](/previous-versions/iis/settings-schema/ms689462(v=vs.90))을 참조 하세요.
 
 ## <a name="new-transport-default-values"></a>새 전송 기본값
 
@@ -109,7 +109,7 @@ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 
 
 <xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. 메모리 소비를 제한해서 복잡한 `MaxReceivedMessageSize`를 처리하지 않아도 되도록 <xref:System.Xml.XmlDictionaryReaderQuotas> 할당량은 변경되지 않았습니다. 다음 표에는 할당량, 새 기본값 및 각 할당량의 용도에 대한 간략한 설명이 나와 있습니다.
 
-|할당량 이름|기본값|Description|
+|할당량 이름|기본값|설명|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|허용 되는 최대 배열 길이를 가져오거나 설정 합니다. 이 할당량은 바이트 배열을 포함하여 XML 판독기가 반환하는 기본 형식 배열의 최대 크기를 제한합니다. 이 할당량은 XML 판독기 자체의 메모리 소비량은 제한하지 않지만 판독기를 사용하는 모든 구성 요소의 메모리 소비량을 제한합니다. 예를 들어, <xref:System.Runtime.Serialization.DataContractSerializer> 가 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>로 보안이 설정된 판독기를 사용하는 경우에는 이 할당량보다 큰 바이트 배열을 역직렬화하지 않습니다.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|각 읽기에 대해 반환 되는 최대 허용 바이트를 가져오거나 설정 합니다. 이 할당량은 요소 시작 태그와 해당 특성을 읽을 때 단일 읽기 작업에서 읽는 바이트 수를 제한합니다. 비스트리밍 작업의 경우 요소 이름 자체는 할당량 계산에서 제외됩니다. XML 특성이 너무 많으면 특성 이름의 고유성을 확인해야 하기 때문에 처리 시간이 과도하게 오래 걸릴 수 있습니다. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 는 이 위협을 완화합니다.|

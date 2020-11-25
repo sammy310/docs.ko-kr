@@ -2,14 +2,15 @@
 title: ICorDebugProcess6 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
-ms.openlocfilehash: 4ad350e36ee15d7c1781e03698fbee3fd40c4c12
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ba70bab28eeddad6e3cf3c2b82b196a69ce68647
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212869"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732608"
 ---
 # <a name="icordebugprocess6-interface"></a>ICorDebugProcess6 인터페이스
+
 네이티브 예외 디버그 이벤트에서 인코딩되는 관리되는 디버그 이벤트 디코딩, 가상 모듈 분할 등의 기능을 사용할 수 있도록 ICorDebugProcess 인터페이스를 논리적으로 확장합니다.  
   
 ## <a name="methods"></a>메서드  
@@ -29,6 +30,7 @@ ms.locfileid: "83212869"
 > 이 인터페이스는 .NET 네이티브에서만 사용할 수 있습니다. .NET 네이티브 외부의 ICorDebug 시나리오에 대해 `QueryInterface`를 호출하여 인터페이스 포인터를 검색하려고 하면 `E_NOINTERFACE`가 반환됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -37,7 +39,7 @@ ms.locfileid: "83212869"
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

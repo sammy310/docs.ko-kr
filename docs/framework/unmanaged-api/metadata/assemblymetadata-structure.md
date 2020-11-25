@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-ms.openlocfilehash: 5c7211fc2523b70313a1e4d4d9d2da0dcecd1d32
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8071c3f43775975de37e3255582b6fc8f13f7de3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009433"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732790"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
+
 참조 된 어셈블리에 대 한 버전 및 로캘, 프로세서 및 운영 체제에 대 한 지원 수준을 포함 하 여 참조 되는 어셈블리에 대 한 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -57,15 +58,16 @@ typedef struct {
 |`ulOS`|`rOS` 배열의 길이입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 구조체](metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

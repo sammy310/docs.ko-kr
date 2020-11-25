@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732751"
 ---
 # <a name="unmanaged-api-reference"></a>관리되지 않는 API 참조
+
 이 섹션에는 런타임 호스트, 컴파일러, 디스어셈블러, 난독 처리기, 디버거, 프로파일러 등의 관리 코드 관련 애플리케이션에서 사용할 수 있는 관리되지 않는 API에 대한 정보가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [공통 데이터 형식](common-data-types-unmanaged-api-reference.md)  
  특히 관리되지 않는 프로파일링 및 디버깅 API에서 사용되는 공통 데이터 형식에 대해 소개합니다.  
   
@@ -61,4 +63,5 @@ ms.locfileid: "90559306"
  어셈블리에서 형식 라이브러리로의 변환 프로세스 중 형식 라이브러리 내보내기(Tlbexp.exe)에서 사용하는 두 도우미 함수 및 인터페이스에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [개발 가이드](../development-guide.md)

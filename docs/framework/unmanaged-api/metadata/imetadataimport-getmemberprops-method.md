@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f01d65a339c77e6af3e768c620f17ef0190c1e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733224"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 메서드
+
 지정 된 <xref:System.Type> 메타 데이터 토큰에서 참조 하는 멤버의 이름, 이진 서명 및 상대 가상 주소를 포함 하 여, 지정 된 멤버 정의에 대 한 메타 데이터에 저장 된 정보를 가져옵니다. 이는 간단한 도우미 메서드입니다. *mb* 가 MethodDef 인 경우 **getmethodprops** 이 호출 됩니다. *mb* 가 FieldDef 인 경우 **getfieldprops** 가 호출 됩니다. 자세한 내용은 다음 방법을 참조 하세요.
   
 ## <a name="syntax"></a>구문  
@@ -46,6 +47,7 @@ HRESULT GetMemberProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `mb`  
  진행 연결 된 메타 데이터를 가져올 멤버를 참조 하는 토큰입니다.  
   
@@ -86,15 +88,16 @@ HRESULT GetMemberProps (
  제한이 의 문자 크기 `ppValue` 이거나, `ppValue` 가 문자열을 포함 하지 않는 경우 0입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

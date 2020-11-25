@@ -10,14 +10,15 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: 6732457220d795bbf8ae54277ef9f5c07cf96359
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6917900b7494550992dfa82f45ed0140f95e68cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495361"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733622"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
+
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  
   
  메모리 내 기호 스트림에서 바이트를 읽습니다.  
@@ -35,6 +36,7 @@ HRESULT ReadInMemorySymbols(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `moduleId`  
  진행 메모리 내 스트림을 포함 하는 모듈의 식별자입니다.  
   
@@ -51,17 +53,20 @@ HRESULT ReadInMemorySymbols(
  제한이 메서드가 반환 될 때 읽은 실제 바이트 수를 포함 합니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  `S_OK`0이 아닌 바이트 수를 읽은 경우입니다.  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`를 사용 하 여 모듈을 만든 경우 <xref:System.Reflection.Emit> 입니다.  
   
 ## <a name="remarks"></a>설명  
- `ReadInMemorySymbols`메서드는 `countSymbolBytes` `symbolsReadOffset` 메모리 내 스트림 내의 오프셋에서 시작 하는 데이터를 읽으려고 시도 합니다. 데이터가에 복사 됩니다 `pSymbolBytes` .이는 `countSymbolBytes` 사용 가능한 공간이 있어야 합니다.     `pCountSymbolsBytesRead`읽은 실제 바이트 수를 포함 합니다. 스트림의 끝에 도달 하는 경우 보다 적을 수 있습니다 `countSymbolBytes` .  
+
+ `ReadInMemorySymbols`메서드는 `countSymbolBytes` `symbolsReadOffset` 메모리 내 스트림 내의 오프셋에서 시작 하는 데이터를 읽으려고 시도 합니다. 데이터가에 복사 됩니다 `pSymbolBytes` .이는 `countSymbolBytes` 사용 가능한 공간이 있어야 합니다.     `pCountSymbolsBytesRead` 읽은 실제 바이트 수를 포함 합니다. 스트림의 끝에 도달 하는 경우 보다 적을 수 있습니다 `countSymbolBytes` .  
   
 > [!NOTE]
 > 현재 구현에서는 리플렉션 내보내기를 지원 하지 않습니다. 리플렉션을 사용 하 여 모듈을 만든 경우이 메서드는를 반환 합니다 `CORPROF_E_MODULE_IS_DYNAMIC` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -70,6 +75,6 @@ HRESULT ReadInMemorySymbols(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo7 인터페이스](icorprofilerinfo7-interface.md)

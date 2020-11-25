@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733245"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 함수
+
 지정 된 버퍼를 사용 하 여 지정 된 파일의 CLR (공용 언어 런타임) 버전 정보를 가져옵니다.  
   
  이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
@@ -38,6 +39,7 @@ HRESULT GetFileVersion (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `szFilename`  
  진행 검사할 파일의 경로입니다.  
   
@@ -51,12 +53,13 @@ HRESULT GetFileVersion (
  제한이 반환 된의 크기 (바이트)입니다 `szBuffer` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

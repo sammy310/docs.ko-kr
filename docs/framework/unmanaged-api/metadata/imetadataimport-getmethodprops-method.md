@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-ms.openlocfilehash: 3c7c3525f2f8753241c9a206e4cf5e552bf06efe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0eb4e9d713581cf32cec18bb02a6bd13542e517a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503629"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733187"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 메서드
+
 지정한 MethodDef 토큰이 참조하는 메서드와 연결된 메타데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,6 +44,7 @@ HRESULT GetMethodProps (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `mb`  
  진행 메타 데이터를 반환할 메서드를 나타내는 MethodDef 토큰입니다.  
   
@@ -74,15 +76,16 @@ HRESULT GetMethodProps (
  제한이 메서드에 대 한 구현 플래그에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

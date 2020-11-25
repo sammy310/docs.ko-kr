@@ -2,14 +2,15 @@
 title: ICorDebugProcess6::GetExportStepInfo 메서드
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: 9d195c61d95f084c7b6b40d2c81623fd81cd94cf
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e2c04672e51ffb16043b14735cd5375073194c27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206349"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732621"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo 메서드
+
 관리 코드를 단계별로 실행할 수 있도록 런타임에 내보낸 함수에 대한 정보를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -22,6 +23,7 @@ HRESULT GetExportStepInfo(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  pszExportName  
  [in] PE 내보내기 테이블에 기록된 런타임 내보내기 함수의 이름입니다.  
   
@@ -31,13 +33,14 @@ HRESULT GetExportStepInfo(
  invokePurpose  
  제한이 내보낸 함수가 관리 코드를 호출 하는 이유를 설명 하는 [CorDebugCodeInvokePurpose](cordebugcodeinvokepurpose-enumeration.md) 열거형의 멤버에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음 표에 나와 있는 값을 반환할 수 있습니다.  
   
 |반환 값|설명|  
 |------------------|-----------------|  
 |`S_OK`|메서드 호출이 성공했습니다.|  
-|`E_POINTER`|`pInvokeKind`또는 `pInvokePurpose` 가 **null**입니다.|  
+|`E_POINTER`|`pInvokeKind` 또는 `pInvokePurpose` 가 **null** 입니다.|  
 |기타 오류 `HRESULT` 값입니다.|상황에 따라 적절하게 설정됩니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -46,6 +49,7 @@ HRESULT GetExportStepInfo(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -54,7 +58,7 @@ HRESULT GetExportStepInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

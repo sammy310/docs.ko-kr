@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-ms.openlocfilehash: 2e59d02093b9c2e2bda72c45de25975cbbdb7a29
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cb65663ec1c1562009d0281c2e176b628b6366b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732179"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 열거형
+
 내보낸 함수가 관리 코드를 호출하는 이유를 설명합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,7 +33,7 @@ typedef enum CorDebugCodeInvokePurpose
 } CorDebugCodeInvokePurpose;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -42,12 +43,14 @@ typedef enum CorDebugCodeInvokePurpose
 |`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|관리 코드가 호출된 일부 인터페이스 메서드에 대한 구현을 실행합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  이 열거형은 [ICorDebugProcess6:: GetExportStepInfo](icordebugprocess6-getexportstepinfo-method.md) 메서드에서 관리 코드를 단계별로 실행 하는 방법에 대 한 정보를 제공 하는 데 사용 됩니다.  
   
 > [!NOTE]
 > 이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -56,7 +59,7 @@ typedef enum CorDebugCodeInvokePurpose
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [디버깅](index.md)

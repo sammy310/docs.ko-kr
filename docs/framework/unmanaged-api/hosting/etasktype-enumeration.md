@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493320"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733700"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 열거형
+
 [ICLRTask](iclrtask-interface.md) 또는 [IHostTask](ihosttask-interface.md) 인터페이스로 표시 되는 작업의 유형을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -59,14 +60,15 @@ typedef enum ETaskType {
 |`TT_USER`|인터페이스는 사용자 작업을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](hosting-enumerations.md)

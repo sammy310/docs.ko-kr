@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-ms.openlocfilehash: d05d4451e8fb75829b22e0a1b9c9afcb0607eb8b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93e1f8eb17f06e42ddb243f88c593979fcb28030
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610173"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733284"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable 인터페이스
+
 매개 변수, 지역 변수 또는 필드와 같은 변수를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
@@ -39,8 +40,9 @@ ms.locfileid: "83610173"
 |[GetStartOffset 메서드](isymunmanagedvariable-getstartoffset-method.md)|부모 내에서이 변수의 시작 오프셋을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

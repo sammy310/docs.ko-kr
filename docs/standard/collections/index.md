@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733518"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823851"
 .NET Framework 4부터 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다. <xref:System.Collections.Immutable> 네임스페이스에서 사용되는 변경할 수 없는 컬렉션 클래스([NuGet 패키지](https://www.nuget.org/packages/System.Collections.Immutable))는 기본적으로 스레드로부터 안전합니다. 작업이 원본 컬렉션의 복사본에 대해 수행되며 원본 컬렉션은 수정할 수 없기 때문입니다.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>일반 컬렉션 기능
 
 모든 컬렉션에서는 컬렉션의 항목을 추가, 제거 또는 찾는 방법을 제공합니다. 또한 직접/간접적으로 <xref:System.Collections.ICollection> 인터페이스 또는 <xref:System.Collections.Generic.ICollection%601> 인터페이스 공유를 구현하는 모든 컬렉션은 다음 기능을 공유합니다.
@@ -57,6 +58,7 @@ ms.locfileid: "94823851"
     <xref:System.Collections> 네임스페이스의 제네릭이 아닌 컬렉션 형식은 동기화와 관련하여 어느 정도의 스레드 보안을 제공합니다(일반적으로 <xref:System.Collections.ICollection.SyncRoot%2A> 및 <xref:System.Collections.ICollection.IsSynchronized%2A> 멤버를 통해 노출됨). 이러한 컬렉션은 기본적으로 스레드로부터 안전하지 않습니다. 확장 가능하며 효율적인 다중 스레드 방식으로 컬렉션에 액세스해야 하는 경우에는 <xref:System.Collections.Concurrent> 네임스페이스의 클래스 중 하나를 사용하거나 변경할 수 없는 컬렉션을 사용하는 것이 좋습니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](thread-safe/index.md)을 참조하세요.
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>컬렉션 선택
 
 일반적으로는 제네릭 컬렉션을 사용해야 합니다. 다음 표에는 몇 가지 일반적인 컬렉션 시나리오와 이러한 시나리오에서 사용할 수 있는 컬렉션 클래스에 대해 설명합니다. 제네릭 컬렉션을 처음 사용하는 경우 이 표의 내용을 참조하여 작업에 가장 적합한 제네릭 컬렉션을 선택할 수 있습니다.
@@ -94,6 +96,7 @@ ms.locfileid: "94823851"
 또한 `SortedSet<T>`는 `ImmutableSortedSet<T>`와 복잡성이 같습니다. 둘 다 이진 트리를 사용하기 때문입니다. 물론 중요한 차이점은 `ImmutableSortedSet<T>`는 변경 불가능한 이진 트리를 사용한다는 것입니다. `ImmutableSortedSet<T>`는 변경을 허용하는 <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> 클래스도 제공하므로 불변성과 성능을 모두 얻을 수 있습니다.
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>관련 항목
 
 |제목|설명|
@@ -108,7 +111,9 @@ ms.locfileid: "94823851"
 |System.Collections.Immutable|변경 불가능은 컬렉션을 소개하고 컬렉션 형식에 대한 링크를 제공합니다.|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>참고
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

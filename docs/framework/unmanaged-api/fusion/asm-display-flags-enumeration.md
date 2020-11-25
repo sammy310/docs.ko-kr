@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176606"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732140"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 열거형
-[IAssemblyName::GetDisplayName](iassemblyname-getdisplayname-method.md) 메서드에 의해 검색되는 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.  
+
+표시 이름이 [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) 메서드에 의해 검색 되는 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,18 +51,20 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>설명  
- `ASM_DISPLAYF_FULL`는 [IAssemblyName](iassemblyname-interface.md) 개체 버전에 대한 변경 내용을 반영합니다. 반환된 값이 변경할 수 없다고 가정하지 마십시오.  
+
+ `ASM_DISPLAYF_FULL`[IAssemblyName](iassemblyname-interface.md) 개체의 버전에 대 한 변경 내용을 반영 합니다. 반환 된 값을 변경할 수 없는 것으로 가정 하지 마십시오.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 퓨전.h  
+ **헤더:** Fusion. h  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IAssemblyName 인터페이스](iassemblyname-interface.md)
 - [Fusion 열거형](fusion-enumerations.md)

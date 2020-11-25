@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-ms.openlocfilehash: c0e4c43ac18b5e214d38dd7a57452a3871e4b43d
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: f6f589656a3063fc89bd276b32d0ed751fd8d2d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796030"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733401"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags 열거형
+
 [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) 메서드 호출에 사용할 수 있는 추가 디버깅 옵션을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -32,13 +33,14 @@ typedef enum CorDebugCreateProcessFlags {
 } CorDebugCreateProcessFlags;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
 |`DEBUG_NO_SPECIAL_OPTIONS`|특별 한 옵션은 설정 되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -47,6 +49,6 @@ typedef enum CorDebugCreateProcessFlags {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 열거형](debugging-enumerations.md)

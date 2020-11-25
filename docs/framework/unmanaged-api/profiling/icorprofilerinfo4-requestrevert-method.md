@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b85a7893cf5271c65bc842bb6ea598c825225376
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733817"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 메서드
+
 지정된 함수의 모든 인스턴스를 원래 버전으로 되돌립니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT RequestRevert (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cFunctions`  
  [in] 되돌릴 함수 개수입니다.  
   
@@ -49,6 +51,7 @@ HRESULT RequestRevert (
  [out] 이 항목의 뒷부분에 있는 "상태 HRESULT" 섹션에 나열된 HRESULT 배열입니다. 각 HRESULT는 병렬 배열 `moduleIds` 및 `methodIds`에 지정된 각 함수의 되돌리기 성공 또는 실패를 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
+
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -71,9 +74,11 @@ HRESULT RequestRevert (
 |기타|운영 체제가 CLR의 제어 범위를 벗어난 오류를 반환했습니다. 예를 들어 메모리 페이지의 액세스 보호를 변경하려는 시스템 호출이 실패하면 운영 체제 오류가 표시됩니다.|  
   
 ## <a name="remarks"></a>설명  
+
  되돌려진 함수 인스턴스 중 하나를 다음에 호출하면 함수의 원래 버전이 실행됩니다. 함수가 이미 실행되고 있으면 실행 중인 버전의 실행을 완료합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
@@ -82,7 +87,7 @@ HRESULT RequestRevert (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

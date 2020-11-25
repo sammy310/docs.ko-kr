@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: 36a485413490045ca49b99fca4fe5d43edc37114
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213012"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733323"
 ---
 # <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue 인터페이스
 
@@ -38,6 +38,7 @@ CLR (공용 언어 런타임) 가비지 수집기에 의해 수집 된 개체를
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -46,6 +47,6 @@ CLR (공용 언어 런타임) 가비지 수집기에 의해 수집 된 개체를
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [디버깅 인터페이스](debugging-interfaces.md)

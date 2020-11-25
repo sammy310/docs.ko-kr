@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-ms.openlocfilehash: 2f83bc5b114b746958f936c311efa823d88441d1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 056d41df328de5796eec9f04589205d18b408f1f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503889"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732803"
 ---
 # <a name="wait_option-enumeration"></a>WAIT_OPTION 열거형
+
 CLR (공용 언어 런타임) 블록에서 요청 된 작업을 수행할 때 호스트가 수행할 동작을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,17 +44,19 @@ typedef enum {
 |`WAIT_NOTINDEADLOCK`|호스트에서 지정 된 동기화 요청을 나눌 수 없음을 호스트에 알립니다. 즉, 호스트에서을 반환할 수 없습니다 `HOST_E_DEADLOCK` .|  
   
 ## <a name="remarks"></a>설명  
+
  [IHostTaskManager:: Sleep](ihosttaskmanager-sleep-method.md) 및 [IHostTaskManager:: switchtotask](ihosttaskmanager-switchtotask-method.md) 메서드는 모두이 형식의 매개 변수를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
- **라이브러리:** Mscoree.dll  
+ **라이브러리:** MSCorEE.dll  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [호스팅 열거형](hosting-enumerations.md)

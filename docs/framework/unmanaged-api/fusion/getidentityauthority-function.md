@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-ms.openlocfilehash: acb80f3cc199d4d9f774cb3898335d26fe44b807
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9631211993afbfe968c7122828251746f15c3f6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732128"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 함수
+
 코드 개체에 대 한 키를 관리 하는 [IIdentityAuthority](iidentityauthority-interface.md) 인스턴스에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,15 +35,17 @@ HRESULT GetIdentityAuthority (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `ppIIdentityAuthority`  
  제한이 반환 된 `IIdentityAuthority` 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** 격리. h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 
