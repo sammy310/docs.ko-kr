@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea06a3e6d06aeff56ba7e20e8e64f0a6feb5e69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731061"
 ---
-# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="8ae1f-102">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="8ae1f-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="8ae1f-103">[IAssemblyName::IsEqual](iassemblyname-isequal-method.md) 메서드에서 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="8ae1f-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="96ff8-102">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="96ff8-102">ASM_CMP_FLAGS Enumeration</span></span>
+
+<span data-ttu-id="96ff8-103">[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) 메서드와 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="96ff8-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ae1f-104">구문</span><span class="sxs-lookup"><span data-stu-id="8ae1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96ff8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="96ff8-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -65,16 +66,17 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8ae1f-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8ae1f-105">Requirements</span></span>  
- <span data-ttu-id="8ae1f-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8ae1f-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8ae1f-107">**헤더:** 퓨전.h</span><span class="sxs-lookup"><span data-stu-id="8ae1f-107">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="8ae1f-108">**라이브러리:** MsCorEE.dll의 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8ae1f-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="8ae1f-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ae1f-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8ae1f-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8ae1f-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="96ff8-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="96ff8-105">Requirements</span></span>  
 
-- [<span data-ttu-id="8ae1f-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8ae1f-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="8ae1f-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="8ae1f-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+ <span data-ttu-id="96ff8-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="96ff8-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="96ff8-107">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="96ff8-107">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="96ff8-108">**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="96ff8-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="96ff8-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96ff8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="96ff8-110">참조</span><span class="sxs-lookup"><span data-stu-id="96ff8-110">See also</span></span>
+
+- [<span data-ttu-id="96ff8-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="96ff8-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="96ff8-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="96ff8-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
