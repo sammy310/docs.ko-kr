@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716865"
 ---
-# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="ebd71-102">ICorPublishAppDomain::GetID 메서드</span><span class="sxs-lookup"><span data-stu-id="ebd71-102">ICorPublishAppDomain::GetID Method</span></span>
-<span data-ttu-id="ebd71-103">이 [ICorPublishAppDomain](icorpublishappdomain-interface.md)에 대 한 고유 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ebd71-103">Gets the unique identifier for this [ICorPublishAppDomain](icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="efb79-102">ICorPublishAppDomain::GetID 메서드</span><span class="sxs-lookup"><span data-stu-id="efb79-102">ICorPublishAppDomain::GetID Method</span></span>
+
+<span data-ttu-id="efb79-103">이 [ICorPublishAppDomain](icorpublishappdomain-interface.md)에 대 한 고유 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="efb79-103">Gets the unique identifier for this [ICorPublishAppDomain](icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ebd71-104">구문</span><span class="sxs-lookup"><span data-stu-id="ebd71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efb79-104">구문</span><span class="sxs-lookup"><span data-stu-id="efb79-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetID (  
@@ -33,22 +34,25 @@ HRESULT GetID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ebd71-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ebd71-105">Parameters</span></span>  
- `puId`  
- <span data-ttu-id="ebd71-106">제한이 응용 프로그램 도메인의 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ebd71-106">[out] A pointer to the identifier of the application domain.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="ebd71-107">설명</span><span class="sxs-lookup"><span data-stu-id="ebd71-107">Remarks</span></span>  
- <span data-ttu-id="ebd71-108">식별자는 포함 하는 프로세스의 범위 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebd71-108">The identifier is unique only in the scope of the containing process.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="ebd71-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ebd71-109">Requirements</span></span>  
- <span data-ttu-id="ebd71-110">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ebd71-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="ebd71-111">**헤더:** CorPub .idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="ebd71-111">**Header:** CorPub.idl, CorPub.h</span></span>  
-  
- <span data-ttu-id="ebd71-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ebd71-112">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="ebd71-113">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ebd71-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ebd71-114">참조</span><span class="sxs-lookup"><span data-stu-id="ebd71-114">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="efb79-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="efb79-105">Parameters</span></span>  
 
-- [<span data-ttu-id="ebd71-115">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ebd71-115">ICorPublishAppDomain Interface</span></span>](icorpublishappdomain-interface.md)
+ `puId`  
+ <span data-ttu-id="efb79-106">제한이 응용 프로그램 도메인의 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="efb79-106">[out] A pointer to the identifier of the application domain.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="efb79-107">설명</span><span class="sxs-lookup"><span data-stu-id="efb79-107">Remarks</span></span>  
+
+ <span data-ttu-id="efb79-108">식별자는 포함 하는 프로세스의 범위 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="efb79-108">The identifier is unique only in the scope of the containing process.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="efb79-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="efb79-109">Requirements</span></span>  
+
+ <span data-ttu-id="efb79-110">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="efb79-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="efb79-111">**헤더:** CorPub .idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="efb79-111">**Header:** CorPub.idl, CorPub.h</span></span>  
+  
+ <span data-ttu-id="efb79-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efb79-112">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="efb79-113">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efb79-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="efb79-114">참조</span><span class="sxs-lookup"><span data-stu-id="efb79-114">See also</span></span>
+
+- [<span data-ttu-id="efb79-115">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="efb79-115">ICorPublishAppDomain Interface</span></span>](icorpublishappdomain-interface.md)
