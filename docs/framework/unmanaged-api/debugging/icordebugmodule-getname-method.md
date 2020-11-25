@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710042"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 메서드
+
 모듈의 파일 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cchname`  
  [in] `szName` 배열의 크기입니다.  
   
@@ -46,9 +48,11 @@ HRESULT GetName(
  제한이 반환 된 이름을 저장 하는 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetName`모듈의 파일 이름이 디스크의 이름과 일치 하는 경우 메서드는 S_OK HRESULT를 반환 합니다. `GetName`동적 또는 메모리 내 모듈의 경우와 같이 이름을 구성한 경우에는 S_FALSE HRESULT를 반환 합니다.  
+
+ `GetName`모듈의 파일 이름이 디스크의 이름과 일치 하는 경우 메서드는 S_OK HRESULT를 반환 합니다. `GetName` 동적 또는 메모리 내 모듈의 경우와 같이 이름을 구성한 경우에는 S_FALSE HRESULT를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -57,4 +61,4 @@ HRESULT GetName(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조

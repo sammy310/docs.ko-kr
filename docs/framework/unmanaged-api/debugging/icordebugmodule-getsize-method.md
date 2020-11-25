@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-ms.openlocfilehash: 4f9818137016dc3e0522ed516c52df2550ffdfca
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0cfc31839b263c2e8cf44d15439b44ffacccf5bf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709903"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize 메서드
+
 모듈의 크기 (바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,12 +35,14 @@ HRESULT GetSize(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pcBytes`  
  제한이 모듈의 크기 (바이트)입니다.  
   
- 모듈이 네이티브 이미지 생성기 (Ngen.exe)에서 생성 된 경우 모듈의 크기는 0이 됩니다.  
+ 모듈이 네이티브 이미지 생성기 (NGen.exe)에서 생성 된 경우 모듈의 크기는 0이 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

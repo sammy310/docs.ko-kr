@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709572"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 메서드
+
 동적 모듈에 대 한 디버그 기호 판독기를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,13 +35,15 @@ HRESULT CreateReaderForInMemorySymbols (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  riid  
  진행 반환할 COM 인터페이스의 IID입니다. 일반적으로이 인터페이스는 [ISymUnmanagedReader 인터페이스](../diagnostics/isymunmanagedreader-interface.md)입니다.  
   
  ppObj  
  제한이 반환 된 인터페이스에 대 한 포인터에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  S_OK  
  판독기를 만들었습니다.  
   
@@ -54,6 +57,7 @@ HRESULT CreateReaderForInMemorySymbols (
  판독기를 만들 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
+
  이 메서드를 사용 하 여 메모리 내 (동적이 아닌) 모듈에 대 한 기호 판독기 개체를 만들 수도 있습니다. 단, 기호를 처음 사용할 수 있는 경우에만 ( [UpdateModuleSymbols 메서드](icordebugmanagedcallback-updatemodulesymbols-method.md) 콜백에서 표시).  
   
  이 메서드는 호출 될 때마다 새 판독기 인스턴스를 반환 합니다 (예 [: Ccomptrbase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). 따라서 디버거는 기본 데이터가 변경 되었을 수 있는 경우 (즉, [LoadClass 메서드](icordebugmanagedcallback-loadclass-method.md) 콜백이 수신 될 때)에만 결과를 캐시 하 고 새 인스턴스를 요청 해야 합니다.  
@@ -61,6 +65,7 @@ HRESULT CreateReaderForInMemorySymbols (
  동적 모듈에는 첫 번째 형식이 로드 될 때까지 사용할 수 있는 기호가 없습니다 ( [LoadClass 메서드](icordebugmanagedcallback-loadclass-method.md) 콜백에 표시 됨).  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -69,7 +74,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

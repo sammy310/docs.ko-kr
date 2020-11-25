@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212245"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709845"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule 인터페이스
 
@@ -35,7 +35,7 @@ ms.locfileid: "83212245"
 |[GetAssembly 메서드](icordebugmodule-getassembly-method.md)|이 모듈에 대 한 포함 어셈블리를 가져옵니다.|  
 |[GetBaseAddress 메서드](icordebugmodule-getbaseaddress-method.md)|모듈의 기본 주소를 가져옵니다.|  
 |[GetClassFromToken 메서드](icordebugmodule-getclassfromtoken-method.md)|메타 데이터에서 ICorDebugClass을 가져옵니다.|  
-|[GetEditAndContinueSnapshot 메서드](icordebugmodule-geteditandcontinuesnapshot-method.md)|사용되지 않습니다.|  
+|[GetEditAndContinueSnapshot 메서드](icordebugmodule-geteditandcontinuesnapshot-method.md)|더 이상 사용되지 않습니다.|  
 |[GetFunctionFromRVA 메서드](icordebugmodule-getfunctionfromrva-method.md)|구현되지 않았습니다.|  
 |[GetFunctionFromToken 메서드](icordebugmodule-getfunctionfromtoken-method.md)|메타 데이터 토큰에 의해 지정 된 함수를 가져옵니다.|  
 |[GetGlobalVariableValue 메서드](icordebugmodule-getglobalvariablevalue-method.md)|지정 된 전역 변수에 대 한 값 개체를 가져옵니다.|  
@@ -53,6 +53,7 @@ ms.locfileid: "83212245"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -61,7 +62,7 @@ ms.locfileid: "83212245"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebug 인터페이스](icordebug-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

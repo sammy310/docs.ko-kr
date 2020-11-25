@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-ms.openlocfilehash: d5109043a8601d7997f52e88ea472644f1b9ca03
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa6df7a812559f05a4c57381a5007c9c90238e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208787"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709650"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus 메서드
+
 이 ICorDebugModule2에 있는 모든 클래스의 모든 메서드에 대 한 모든 메서드의 JMC (내 코드만) 상태를 지정 된 값으로 설정 합니다. 단, `pTokens` 배열의 값은 반대 값으로 설정 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,6 +37,7 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `bIsJustMycode`  
  진행 코드를 디버깅 하려면로 설정 하 고 그렇지 않으면로 설정 `true` `false` 합니다.  
   
@@ -43,9 +45,10 @@ HRESULT SetJMCStatus (
  [in] `pTokens` 배열의 크기입니다.  
   
  `pTokens`  
- 진행 `mdToken`각각 JMC 상태를!로 설정 하는 메서드를 참조 하는 값의 배열입니다 `bIsJustMycode` .  
+ 진행 `mdToken` 각각 JMC 상태를!로 설정 하는 메서드를 참조 하는 값의 배열입니다 `bIsJustMycode` .  
   
 ## <a name="remarks"></a>설명  
+
  배열에 지정 된 각 메서드의 JMC 상태는 `pTokens` 값의 반대로 설정 됩니다 `bIsJustMycode` . 이 모듈의 다른 모든 메서드 상태는 값으로 설정 됩니다 `bIsJustMycode` .  
   
  `SetJMCStatus`메서드는이 모듈의 모든 이전 JMC 설정을 지웁니다.  
@@ -53,6 +56,7 @@ HRESULT SetJMCStatus (
  `SetJMCStatus`모든 함수가 성공적으로 설정 된 경우 메서드는 S_OK HRESULT를 반환 합니다. 표시 된 일부 함수를 디버깅할 수 없는 경우 CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT를 반환 합니다 `true` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

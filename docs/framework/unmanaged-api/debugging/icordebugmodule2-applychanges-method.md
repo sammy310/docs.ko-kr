@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: 99824e9a7fd759fb30bfa377156fc28eb934a2b4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709702"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges 메서드
+
 메타 데이터의 변경 내용과 MSIL (Microsoft 중간 언어) 코드의 변경 내용을 실행 중인 프로세스에 적용 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,6 +38,7 @@ HRESULT ApplyChanges (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `cbMetadata`  
  진행 델타 메타 데이터의 크기 (바이트)입니다.  
   
@@ -52,7 +54,8 @@ HRESULT ApplyChanges (
  진행 업데이트 된 MSIL 코드를 포함 하는 버퍼입니다.  
   
 ## <a name="remarks"></a>설명  
- `pbMetadata`매개 변수는 특수 한 델타 메타 데이터 형식 ( [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)에서 출력)입니다. `pbMetadata`이전 메타 데이터를 기본으로 사용 하 고 해당 기준에 적용할 개별 변경 내용을 설명 합니다.  
+
+ `pbMetadata`매개 변수는 특수 한 델타 메타 데이터 형식 ( [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)에서 출력)입니다. `pbMetadata` 이전 메타 데이터를 기본으로 사용 하 고 해당 기준에 적용할 개별 변경 내용을 설명 합니다.  
   
  이와 대조적으로, `pbIL[` ] 매개 변수는 업데이트 된 메서드에 대 한 새 msil을 포함 하며 해당 메서드에 대 한 이전 msil을 완전히 대체 하는 것을 의미 합니다.  
   
@@ -63,6 +66,7 @@ HRESULT ApplyChanges (
  `ApplyChanges`메서드가 실패 하면 디버그 세션이 잘못 된 상태 이므로 다시 시작 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

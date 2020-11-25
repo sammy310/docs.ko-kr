@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-ms.openlocfilehash: d4c5ff46d37b1292059b18920abd8042c18bbf31
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f34be833d3ccb5c636d2c5f18ccb6e216ef2c49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709078"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 인터페이스
-기호 저장소 내의 문서, 메서드 및 변수에 대 한 액세스를 제공 하는 기호 판독기를 나타냅니다. 이 인터페이스는 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 확장 합니다.  
+
+기호 저장소 내의 문서, 메서드 및 변수에 대한 액세스를 제공하는 기호 판독기를 나타냅니다. 이 인터페이스는 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 확장 합니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -33,9 +34,10 @@ ms.locfileid: "83615399"
 |[GetSymAttributePreRemap 메서드](isymunmanagedreader2-getsymattributepreremap-method.md)|이름에 따라 사용자 지정 특성을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
+
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

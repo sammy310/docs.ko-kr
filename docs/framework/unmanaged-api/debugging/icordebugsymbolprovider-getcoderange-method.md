@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetCodeRange 메서드
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: a9c1a4a625196d7430e365916cc7c2b67bf94127
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f61a98dbd5a65207a46e033d54f9d5f60adac201
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376085"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709130"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 메서드
+
 메서드의 RVA(상대 가상 주소)가 지정된 경우 메서드 시작 주소와 크기를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,6 +24,7 @@ HRESULT GetCodeRange(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `codeRva`  
  [in] 메서드의 RVA(상대 가상 주소)입니다.  
   
@@ -38,6 +40,7 @@ HRESULT GetCodeRange(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
@@ -46,7 +49,7 @@ HRESULT GetCodeRange(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
