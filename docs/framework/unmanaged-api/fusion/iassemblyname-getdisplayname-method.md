@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-ms.openlocfilehash: 5dbb5dc483bc5a08c59606654d55b5a62266e509
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13d71a9da2539c45076e5eb92e153e37c1df4b47
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727915"
 ---
-# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="2329a-102">IAssemblyName::GetDisplayName 메서드</span><span class="sxs-lookup"><span data-stu-id="2329a-102">IAssemblyName::GetDisplayName Method</span></span>
-<span data-ttu-id="2329a-103">이 [IAssemblyName](iassemblyname-interface.md) 개체가 참조 하는 어셈블리의 사람이 읽을 수 있는 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2329a-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="ad557-102">IAssemblyName::GetDisplayName 메서드</span><span class="sxs-lookup"><span data-stu-id="ad557-102">IAssemblyName::GetDisplayName Method</span></span>
+
+<span data-ttu-id="ad557-103">이 [IAssemblyName](iassemblyname-interface.md) 개체가 참조 하는 어셈블리의 사람이 읽을 수 있는 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ad557-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2329a-104">구문</span><span class="sxs-lookup"><span data-stu-id="2329a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad557-104">구문</span><span class="sxs-lookup"><span data-stu-id="ad557-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDisplayName (  
@@ -35,24 +36,26 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2329a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2329a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ad557-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ad557-105">Parameters</span></span>  
+
  `szDisplayName`  
- <span data-ttu-id="2329a-106">제한이 참조 된 어셈블리의 이름을 포함 하는 문자열 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="2329a-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="ad557-106">제한이 참조 된 어셈블리의 이름을 포함 하는 문자열 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ad557-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
   
  `pccDisplayName`  
- <span data-ttu-id="2329a-107">[in, out] Null 종결자 문자를 포함 하 여 와이드 문자 `szDisplayName` 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="2329a-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
+ <span data-ttu-id="ad557-107">[in, out] `szDisplayName` Null 종결자 문자를 포함 하는 와이드 문자 단위의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ad557-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
   
  `dwDisplayFlags`  
- <span data-ttu-id="2329a-108">진행 `szDisplayName`의 기능에 영향을 주는 [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) 값의 비트 조합입니다.</span><span class="sxs-lookup"><span data-stu-id="2329a-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
+ <span data-ttu-id="ad557-108">진행 의 기능에 영향을 주는 [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) 값의 비트 조합입니다 `szDisplayName` .</span><span class="sxs-lookup"><span data-stu-id="ad557-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2329a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2329a-109">Requirements</span></span>  
- <span data-ttu-id="2329a-110">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2329a-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2329a-111">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="2329a-111">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="2329a-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2329a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2329a-113">참조</span><span class="sxs-lookup"><span data-stu-id="2329a-113">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="ad557-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ad557-109">Requirements</span></span>  
 
-- [<span data-ttu-id="2329a-114">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2329a-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="2329a-115">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="2329a-115">Fusion Enumerations</span></span>](fusion-enumerations.md)
+ <span data-ttu-id="ad557-110">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ad557-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ad557-111">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="ad557-111">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="ad557-112">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad557-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ad557-113">참조</span><span class="sxs-lookup"><span data-stu-id="ad557-113">See also</span></span>
+
+- [<span data-ttu-id="ad557-114">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ad557-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="ad557-115">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="ad557-115">Fusion Enumerations</span></span>](fusion-enumerations.md)
