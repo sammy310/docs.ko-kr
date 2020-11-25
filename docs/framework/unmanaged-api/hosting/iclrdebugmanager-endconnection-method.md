@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: d3d081e389e29833f24063ba75289f3db8c5504a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d6f22d6185f4063078463043a6ffd46e56289267
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719855"
 ---
-# <a name="iclrdebugmanagerendconnection-method"></a><span data-ttu-id="bad4f-102">ICLRDebugManager::EndConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="bad4f-102">ICLRDebugManager::EndConnection Method</span></span>
-<span data-ttu-id="bad4f-103">작업 목록과 식별자 및 이름 간의 연결을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-103">Removes the association between a list of tasks and an identifier and a friendly name.</span></span>  
+# <a name="iclrdebugmanagerendconnection-method"></a><span data-ttu-id="8c194-102">ICLRDebugManager::EndConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="8c194-102">ICLRDebugManager::EndConnection Method</span></span>
+
+<span data-ttu-id="8c194-103">작업 목록과 식별자 및 이름 간의 연결을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-103">Removes the association between a list of tasks and an identifier and a friendly name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bad4f-104">구문</span><span class="sxs-lookup"><span data-stu-id="bad4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c194-104">구문</span><span class="sxs-lookup"><span data-stu-id="8c194-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EndConnection (  
@@ -33,41 +34,44 @@ HRESULT EndConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bad4f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bad4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8c194-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8c194-105">Parameters</span></span>  
+
  `dwConnectionId`  
- <span data-ttu-id="bad4f-106">진행 연결에 대 한 호스트 관련 식별자와 관련 된 CLR (공용 언어 런타임) 작업 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-106">[in] The host-specific identifier for the connection and the associated list of common language runtime (CLR) tasks.</span></span>  
+ <span data-ttu-id="8c194-106">진행 연결에 대 한 호스트 관련 식별자와 관련 된 CLR (공용 언어 런타임) 작업 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-106">[in] The host-specific identifier for the connection and the associated list of common language runtime (CLR) tasks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bad4f-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="bad4f-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8c194-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="8c194-107">Return Value</span></span>  
   
-|<span data-ttu-id="bad4f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bad4f-108">HRESULT</span></span>|<span data-ttu-id="bad4f-109">설명</span><span class="sxs-lookup"><span data-stu-id="bad4f-109">Description</span></span>|  
+|<span data-ttu-id="8c194-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8c194-108">HRESULT</span></span>|<span data-ttu-id="8c194-109">설명</span><span class="sxs-lookup"><span data-stu-id="8c194-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="bad4f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bad4f-110">S_OK</span></span>|<span data-ttu-id="bad4f-111">`EndConnection`성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-111">`EndConnection` returned successfully.</span></span>|  
-|<span data-ttu-id="bad4f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bad4f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bad4f-113">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="bad4f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bad4f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bad4f-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-115">The call timed out.</span></span>|  
-|<span data-ttu-id="bad4f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bad4f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bad4f-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="bad4f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bad4f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bad4f-119">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="bad4f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bad4f-120">E_FAIL</span></span>|<span data-ttu-id="bad4f-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bad4f-122">메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bad4f-123">호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="bad4f-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="bad4f-124">E_INVALIDARG</span></span>|<span data-ttu-id="bad4f-125">[Beginconnection](iclrdebugmanager-beginconnection-method.md) 이를 사용 하 여 호출 되지 `dwConnectionId` 않았거나 `dwConnectionId` 가 0입니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-125">[BeginConnection](iclrdebugmanager-beginconnection-method.md) was never called using `dwConnectionId`, or `dwConnectionId` was zero.</span></span>|  
+|<span data-ttu-id="8c194-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="8c194-110">S_OK</span></span>|<span data-ttu-id="8c194-111">`EndConnection` 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-111">`EndConnection` returned successfully.</span></span>|  
+|<span data-ttu-id="8c194-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8c194-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8c194-113">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="8c194-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8c194-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8c194-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-115">The call timed out.</span></span>|  
+|<span data-ttu-id="8c194-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8c194-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8c194-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="8c194-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8c194-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8c194-119">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="8c194-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8c194-120">E_FAIL</span></span>|<span data-ttu-id="8c194-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8c194-122">메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8c194-123">호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="8c194-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="8c194-124">E_INVALIDARG</span></span>|<span data-ttu-id="8c194-125">[Beginconnection](iclrdebugmanager-beginconnection-method.md) 이를 사용 하 여 호출 되지 `dwConnectionId` 않았거나 `dwConnectionId` 가 0입니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-125">[BeginConnection](iclrdebugmanager-beginconnection-method.md) was never called using `dwConnectionId`, or `dwConnectionId` was zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bad4f-126">설명</span><span class="sxs-lookup"><span data-stu-id="bad4f-126">Remarks</span></span>  
- <span data-ttu-id="bad4f-127">[ICLRDebugManager](iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드인, `BeginConnection` [setconnectiontasks](iclrdebugmanager-setconnectiontasks-method.md)및 `EndConnection` 를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-127">[ICLRDebugManager](iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md), and `EndConnection`, for associating task lists with identifiers and friendly names.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c194-126">설명</span><span class="sxs-lookup"><span data-stu-id="8c194-126">Remarks</span></span>  
+
+ <span data-ttu-id="8c194-127">[ICLRDebugManager](iclrdebugmanager-interface.md) 는 작업 목록과 식별자를 연결 하는 데 사용 되는 세 가지 메서드인, `BeginConnection` [setconnectiontasks](iclrdebugmanager-setconnectiontasks-method.md)및 `EndConnection` 를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-127">[ICLRDebugManager](iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md), and `EndConnection`, for associating task lists with identifiers and friendly names.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="bad4f-128">이러한 세 메서드는 각 작업 집합에 대해 특정 순서로 호출 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-128">These three methods must be called in a specific order for each set of tasks.</span></span> <span data-ttu-id="bad4f-129">`BeginConnection`새 연결을 설정 하기 위해가 먼저 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-129">`BeginConnection` is called first to establish a new connection.</span></span> <span data-ttu-id="bad4f-130">`SetConnectionTasks`는 해당 연결과 관련 된 태스크 집합을 제공 하기 위해 다음에 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-130">`SetConnectionTasks` is called next to provide the set of tasks to be associated with that connection.</span></span> <span data-ttu-id="bad4f-131">`EndConnection`작업 목록과 식별자와 이름 간의 연결을 제거 하기 위해 마지막으로 호출 됩니다. 그러나 다른 연결에 대 한 호출은 중첩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-131">`EndConnection` is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
+> <span data-ttu-id="8c194-128">이러한 세 메서드는 각 작업 집합에 대해 특정 순서로 호출 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-128">These three methods must be called in a specific order for each set of tasks.</span></span> <span data-ttu-id="8c194-129">`BeginConnection` 새 연결을 설정 하기 위해가 먼저 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-129">`BeginConnection` is called first to establish a new connection.</span></span> <span data-ttu-id="8c194-130">`SetConnectionTasks` 는 해당 연결과 관련 된 태스크 집합을 제공 하기 위해 다음에 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-130">`SetConnectionTasks` is called next to provide the set of tasks to be associated with that connection.</span></span> <span data-ttu-id="8c194-131">`EndConnection` 작업 목록과 식별자와 이름 간의 연결을 제거 하기 위해 마지막으로 호출 됩니다. 그러나 다른 연결에 대 한 호출은 중첩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-131">`EndConnection` is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bad4f-132">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bad4f-132">Requirements</span></span>  
- <span data-ttu-id="bad4f-133">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bad4f-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="bad4f-134">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="bad4f-134">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="bad4f-135">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bad4f-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="bad4f-136">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bad4f-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="bad4f-137">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bad4f-137">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="8c194-132">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8c194-132">Requirements</span></span>  
 
-- [<span data-ttu-id="bad4f-138">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bad4f-138">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
-- [<span data-ttu-id="bad4f-139">ICLRDebugManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bad4f-139">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
-- [<span data-ttu-id="bad4f-140">BeginConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="bad4f-140">BeginConnection Method</span></span>](iclrdebugmanager-beginconnection-method.md)
-- [<span data-ttu-id="bad4f-141">SetConnectionTasks 메서드</span><span class="sxs-lookup"><span data-stu-id="bad4f-141">SetConnectionTasks Method</span></span>](iclrdebugmanager-setconnectiontasks-method.md)
-- [<span data-ttu-id="bad4f-142">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bad4f-142">IHostControl Interface</span></span>](ihostcontrol-interface.md)
+ <span data-ttu-id="8c194-133">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8c194-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="8c194-134">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="8c194-134">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="8c194-135">**라이브러리:** MSCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8c194-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="8c194-136">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c194-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="8c194-137">참조</span><span class="sxs-lookup"><span data-stu-id="8c194-137">See also</span></span>
+
+- [<span data-ttu-id="8c194-138">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c194-138">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
+- [<span data-ttu-id="8c194-139">ICLRDebugManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c194-139">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
+- [<span data-ttu-id="8c194-140">BeginConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="8c194-140">BeginConnection Method</span></span>](iclrdebugmanager-beginconnection-method.md)
+- [<span data-ttu-id="8c194-141">SetConnectionTasks 메서드</span><span class="sxs-lookup"><span data-stu-id="8c194-141">SetConnectionTasks Method</span></span>](iclrdebugmanager-setconnectiontasks-method.md)
+- [<span data-ttu-id="8c194-142">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8c194-142">IHostControl Interface</span></span>](ihostcontrol-interface.md)
