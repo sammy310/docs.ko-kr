@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::GetValue 메서드
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: f217f7226d53a27363f66eb90a340fd3604a0217
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0a57b1a31e1ef4b0db317012b25bc65ecbbaf011
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396512"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725965"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue 메서드
+
 변수의 값을 바이트 배열로 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,6 +27,7 @@ HRESULT GetValue(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `offset`  
  [in] 값을 읽을 변수의 시작 오프셋입니다. 이 매개 변수는 개체의 멤버 필드를 읽을 때 사용됩니다.  
   
@@ -50,6 +52,7 @@ HRESULT GetValue(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  

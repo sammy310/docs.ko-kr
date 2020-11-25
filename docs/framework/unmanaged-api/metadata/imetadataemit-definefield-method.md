@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2bc2b983171dc41d5ac37eda0359f1aaee4ebd6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725757"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 메서드
+
 지정 된 메타 데이터 시그니처를 사용 하 여 필드에 대 한 정의를 만들고 해당 필드 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,8 +43,9 @@ HRESULT DefineField (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `td`  
- 진행 `mdTypeDef`바깥쪽 클래스 또는 인터페이스에 대 한 토큰입니다.  
+ 진행 `mdTypeDef` 바깥쪽 클래스 또는 인터페이스에 대 한 토큰입니다.  
   
  `szName`  
  진행 유니코드의 필드 이름입니다.  
@@ -67,18 +69,19 @@ HRESULT DefineField (
  진행 의 (유니코드) 문자 크기입니다 `pValue` .  
   
  `pmd`  
- 제한이 `mdFieldDef`할당 된 토큰입니다.  
+ 제한이 `mdFieldDef` 할당 된 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)
