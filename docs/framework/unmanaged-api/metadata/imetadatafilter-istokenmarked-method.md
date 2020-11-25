@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: eb0ebab0f4e05d81730d5beb2b5345e319e8e274
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ce7292003872805c9390ce3d9c59b39497a83ed1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701837"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 메서드
+
 지정 된 메타 데이터 토큰이 처리 된 것으로 표시 되었는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,6 +36,7 @@ HRESULT IsTokenMarked (
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `tk`  
  진행 처리 표시를 검사할 토큰입니다.  
   
@@ -42,14 +44,15 @@ HRESULT IsTokenMarked (
  제한이 이 처리 되었으면이 `true` `tk` 고, 그렇지 않으면 인 값입니다 `false` .  
   
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.  
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [IMetaDataFilter 인터페이스](imetadatafilter-interface.md)

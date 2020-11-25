@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701369"
 ---
 # <a name="attributes"></a>특성
+
 <xref:System.Attribute?displayProperty=nameWithType> 는 사용자 지정 특성을 정의 하는 데 사용 되는 기본 클래스입니다.
 
  특성은 어셈블리, 형식, 멤버 및 매개 변수와 같은 프로그래밍 요소에 추가할 수 있는 주석입니다. 어셈블리의 메타 데이터에 저장 되 고 리플렉션 Api를 사용 하 여 런타임에 액세스할 수 있습니다. 예를 들어 프레임 워크는 형식 또는 멤버가 <xref:System.ObsoleteAttribute> 더 이상 사용 되지 않음을 나타내기 위해 형식 또는 멤버에 적용 될 수 있는를 정의 합니다.
@@ -47,7 +48,7 @@ ms.locfileid: "94821621"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [사용 지침](usage-guidelines.md)

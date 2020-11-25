@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821634"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701408"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>추상화(추상 형식 및 인터페이스)
+
 추상화는 계약을 설명 하지만 계약의 전체 구현을 제공 하지 않는 형식입니다. 일반적으로 추상화는 추상 클래스 또는 인터페이스로 구현 되며, 계약을 구현 하는 형식의 필요한 의미 체계를 설명 하는 잘 정의 된 참조 설명서 집합을 제공 합니다. .NET Framework에서 가장 중요 한 추상화 중 일부에는 <xref:System.IO.Stream> , 및가 포함 됩니다 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Object> .
 
  추상화의 계약을 지 원하는 구체적인 형식을 구현 하 고 추상화를 사용 하는 프레임 워크 Api (운영)에서이 구체적인 형식을 사용 하 여 프레임 워크를 확장할 수 있습니다.
@@ -35,7 +36,7 @@ ms.locfileid: "94821634"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [확장성을 위한 디자인](designing-for-extensibility.md)

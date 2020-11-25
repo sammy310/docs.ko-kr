@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821530"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701265"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
+
 이 장의 지침은 일관 되 게 적용 될 때 형식, 멤버 및 매개 변수에 대 한 식별자를 쉽게 읽을 수 있도록 하는 사례를 사용 하는 간단한 방법을 설명 합니다.
 
 ## <a name="capitalization-rules-for-identifiers"></a>식별자에 대 한 대/소문자 규칙
+
  식별자에서 단어를 구분 하려면 식별자에서 각 단어의 첫 글자를 대문자로 바꿉니다. 밑줄을 사용 하 여 단어를 구분 하거나 식별자의 어디에서 나 해당 문제를 구분 하지 마십시오. 식별자를 사용 하는 방법에 따라 두 가지 적절 한 방법으로 식별자를 대문자를 사용할 수 있습니다.
 
 - 대/소문자 구분
@@ -60,6 +62,7 @@ ms.locfileid: "94821530"
 |매개 변수|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>복합 단어 및 일반적인 단어를 대문자로
+
  대부분의 복합 용어는 대문자 표시를 위해 단일 단어로 취급 됩니다.
 
  ❌ 닫힌 형태의 복합 단어에서 각 단어를 대문자로 표기 하지 마십시오.
@@ -95,6 +98,7 @@ ms.locfileid: "94821530"
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>대/소문자 구분
+
  CLR에서 실행할 수 있는 언어는 대/소문자 구분을 지 원하는 데 필요 하지 않습니다. 언어가 지 원하는 경우에도 프레임 워크에 액세스할 수 있는 다른 언어는 그렇지 않습니다. 따라서 외부에서 액세스할 수 있는 모든 Api는 사례를 단독으로 사용 하 여 동일한 컨텍스트에서 두 이름을 구분할 수 없습니다.
 
  ❌ 모든 프로그래밍 언어가 대/소문자를 구분 한다고 가정 하지 마십시오. 그러나 동일하지 않습니다. 이름은 대/소문자만 다를 수 있습니다.
@@ -103,7 +107,7 @@ ms.locfileid: "94821530"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [명명 지침](naming-guidelines.md)

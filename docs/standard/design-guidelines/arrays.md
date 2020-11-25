@@ -6,14 +6,15 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: c3545c609b6544e6528bbae08889d0ef20473802
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 11c1d23af4cf599ba632144634947520a1647ae7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701395"
 ---
 # <a name="arrays"></a>배열
+
 공용 Api에서 배열에 대 한 컬렉션을 사용 하는 것이 좋습니다 ✔️. 컬렉션 [섹션에서는](guidelines-for-collections.md) 컬렉션과 배열 중에서 선택 하는 방법에 대 한 세부 정보를 제공 합니다.
 
  ❌ 읽기 전용 배열 필드는 사용 하지 마십시오. 필드 자체는 읽기 전용 이며 변경할 수 없지만 배열의 요소는 변경할 수 있습니다.
@@ -26,7 +27,7 @@ ms.locfileid: "94821608"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Array>
 - [프레임 워크 디자인 지침](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-ms.openlocfilehash: e84639c1d63e6935b9b363f01c12bf0fbd3390e3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c384fe6c4357c63bc56f9f9b1cc907dea64fddf7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615620"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700940"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 메서드
+
 포함 리소스의 길이(바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,12 +34,14 @@ HRESULT GetSourceLength(
 ```  
   
 ## <a name="parameters"></a>매개 변수  
+
  `pRetVal`  
  제한이 포함 된 소스의 길이 (바이트)를 나타내는 변수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
+
  메서드가 성공 하면 S_OK 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ISymUnmanagedDocument 인터페이스](isymunmanageddocument-interface.md)

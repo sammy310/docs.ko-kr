@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821478"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701252"
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
+
 모든 프레임 워크 디자이너에 대 한 기본 설계 결정 사항 중 하나는 형식을 클래스 (참조 형식)로 디자인할 것인지 아니면 구조체 (값 형식)로 디자인할 것인지를 결정 하는 것입니다. 참조 형식 및 값 형식의 동작의 차이점을 이해 하는 것은이를 선택 하는 데 매우 중요 합니다.
 
  참조 형식 및 값 형식 간의 첫 번째 차이점은 참조 형식이 힙에 할당 되 고 가비지 수집 된다는 것입니다. 반면 값 형식은 스택에 할당 되 고 가비지 수집 됩니다. 반면에 값 형식은 스택에 할당 되거나 포함 하는 형식에서 인라인으로 할당 되며, 스택이 해제 되거나 포함 하는 형식이 할당 취소 될 때 할당 취소 됩니다. 따라서 값 형식의 할당 및 할당 취소는 참조 형식의 할당 및 할당 취소 보다 일반적으로 비용이 저렴 합니다.
@@ -52,7 +53,7 @@ ms.locfileid: "94821478"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [형식 디자인 지침](type.md)
 - [프레임 워크 디자인 지침](index.md)

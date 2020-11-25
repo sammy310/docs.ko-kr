@@ -6,17 +6,19 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: 1a9781fa1b4b608152faa7d5edc80bd4866f0c81
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8956a09cf76aa54452e8c020239e650e55d8a0d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701616"
 ---
 # <a name="profiling-enumerations"></a>프로파일링 열거형
+
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [COR_PRF_CLAUSE_TYPE 열거형](cor-prf-clause-type-enumeration.md)  
  코드에서 방금 시작되거나 끝난 예외 절 형식을 나타냅니다.  
   
@@ -68,7 +70,8 @@ ms.locfileid: "76868137"
  [COR_PRF_TRANSITION_REASON 열거형](cor-prf-transition-reason-enumeration.md)  
  관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
+
  [프로파일링 개요](profiling-overview.md)  
   
  [프로파일링 인터페이스](profiling-interfaces.md)  

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821595"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701317"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
+
 엄격 하 게 말하면 클래스에서 다른 클래스가 파생 될 때 클래스는 기본 클래스가 됩니다. 그러나이 섹션의 목적을 위해 기본 클래스는 주로 일반적인 추상화를 제공 하거나 상속을 통해 일부 기본 구현을 다시 사용 하기 위해 다른 클래스에 대해 디자인 된 클래스입니다. 일반적으로 기본 클래스는 계층 구조의 루트에 있는 추상화와 아래쪽의 여러 사용자 지정 구현 사이에서 상속 계층의 중간에 있습니다.
 
  이는 추상화 구현을 위한 구현 도우미 역할을 합니다. 예를 들어 정렬 된 항목 컬렉션에 대 한 프레임 워크의 추상화 중 하나는 <xref:System.Collections.Generic.IList%601> 인터페이스입니다. 구현은 <xref:System.Collections.Generic.IList%601> 간단 하지 않으므로 프레임 워크는 <xref:System.Collections.ObjectModel.Collection%601> <xref:System.Collections.ObjectModel.KeyedCollection%602> 사용자 지정 컬렉션을 구현 하기 위한 도우미 역할을 하는 및와 같은 여러 기본 클래스를 제공 합니다.
@@ -31,7 +32,7 @@ ms.locfileid: "94821595"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임 워크 디자인 지침](index.md)
 - [확장성을 위한 디자인](designing-for-extensibility.md)
