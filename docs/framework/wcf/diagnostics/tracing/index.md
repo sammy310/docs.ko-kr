@@ -2,14 +2,15 @@
 title: 추적
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 10b9be028710cdda378aeef0ca235a00aa451e08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243913"
 ---
 # <a name="tracing"></a>추적
+
 WCF (Windows Communication Foundation)는 오류 모니터링과 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공 합니다. 애플리케이션의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 엔드투엔드 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
   
  WCF는 진단 추적에 대해 다음 데이터를 출력 합니다.  
@@ -19,6 +20,7 @@ WCF (Windows Communication Foundation)는 오류 모니터링과 분석을 위�
 - 추적 기능 오작동 시 Windows 오류 이벤트.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [추적 구성](configuring-tracing.md)  
   
  이 항목에서는 특정 요구를 충족하기 위해 여러 수준에서 추적을 구성할 수 있는 방법에 대해 설명합니다.  

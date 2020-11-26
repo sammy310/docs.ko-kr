@@ -5,14 +5,15 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 103d68d4ccb4cc243d28037260c1f9f380485ff6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a03902c9a0d36ebd6e2c38f4a827737cacec447
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600311"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245034"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>방법: 서명을 확인하는 데 사용되는 인증 기관 인증서 체인 지정(WCF)
+
 Windows Communication Foundation (WCF)는 x.509 인증서를 사용 하 여 서명 된 SOAP 메시지를 수신 하는 경우 기본적으로 신뢰할 수 있는 인증 기관에서 x.509 인증서를 발급 했는지 확인 합니다. 이렇게 하려면 인증서 저장소를 찾고 해당 인증 기관의 인증서가 신뢰할 수 있는 것으로 지정되었는지 확인합니다. WCF가 이러한 결정을 내릴 수 있도록 하려면 올바른 인증서 저장소에 인증 기관 인증서 체인을 설치 해야 합니다.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>인증 기관 인증서 체인을 설치하려면  
@@ -25,11 +26,11 @@ Windows Communication Foundation (WCF)는 x.509 인증서를 사용 하 여 서�
   
     1. 인증 기관 인증서 체인을 내보냅니다.  
   
-         이 작업을 수행하는 방법은 인증 기관에 따라 다릅니다. 인증 기관에서 Microsoft 인증서 서비스를 실행 하는 경우 **ca 인증서, 인증서 체인 또는 CRL 다운로드**를 선택한 다음 **ca 인증서 다운로드**를 선택 합니다.  
+         이 작업을 수행하는 방법은 인증 기관에 따라 다릅니다. 인증 기관에서 Microsoft 인증서 서비스를 실행 하는 경우 **ca 인증서, 인증서 체인 또는 CRL 다운로드** 를 선택한 다음 **ca 인증서 다운로드** 를 선택 합니다.  
   
     2. 인증 기관 인증서 체인을 가져옵니다.  
   
-         MMC(Microsoft Management Console)에서 인증서 스냅인을 엽니다. WCF가 x.509 인증서를 검색 하도록 구성 된 인증서 저장소에 대해 **신뢰할 수 있는 루트** **인증 기관** 폴더를 선택 합니다. **신뢰할 수 있는 루트 인증 기관** 폴더에서 **인증서** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업**을 가리킨 다음 **가져오기**를 클릭 합니다. a 단계에서 내보낸 파일을 제공합니다.  
+         MMC(Microsoft Management Console)에서 인증서 스냅인을 엽니다. WCF가 x.509 인증서를 검색 하도록 구성 된 인증서 저장소에 대해 **신뢰할 수 있는 루트** **인증 기관** 폴더를 선택 합니다. **신뢰할 수 있는 루트 인증 기관** 폴더에서 **인증서** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업** 을 가리킨 다음 **가져오기** 를 클릭 합니다. a 단계에서 내보낸 파일을 제공합니다.  
   
          MMC에서 인증서 스냅인을 사용 하는 방법에 대 한 자세한 내용은 [방법: Mmc 스냅인을 사용 하 여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)를 참조 하세요.  
   

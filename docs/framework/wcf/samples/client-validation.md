@@ -2,14 +2,15 @@
 title: Client Validation
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 6678ef7232b115f2bcb80b5f64621866f82b1f29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dee57e039d4510673b7205fd44fa300b24ac1df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243315"
 ---
 # <a name="client-validation"></a>Client Validation
+
 서비스는 메타데이터를 자주 게시하여 클라이언트 프록시 형식의 자동 생성 및 구성을 활성화합니다. 서비스를 신뢰할 수 없으면 클라이언트 애플리케이션에서 메타데이터가 보안, 트랜잭션, 서비스 계약 형식 등에 대한 클라이언트 애플리케이션의 정책을 준수하는지 확인해야 합니다. 다음 샘플에서는 서비스 엔드포인트를 안전하게 사용할 수 있도록 서비스 엔드포인트의 유효성을 검사하는 클라이언트 엔드포인트 동작 기록 방법을 보여 줍니다.  
   
  서비스는 네 개의 서비스 엔드포인트를 노출합니다. 첫 번째 엔드포인트는 WSDualHttpBinding을, 두 번째 엔드포인트는 NTLM 인증을, 세 번째 엔드포인트는 트랜잭션 흐름을, 네 번째 엔드포인트는 인증서 기반 인증을 사용합니다.  
@@ -63,6 +64,6 @@ ms.locfileid: "90553534"
     > [!NOTE]
     > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` 명령을 사용합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 사용](../feature-details/using-metadata.md)

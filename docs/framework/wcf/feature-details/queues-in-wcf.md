@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d63b03e519484ad6ec90b4267a49b77738593e45
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244654"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation의 큐
+
 이 단원의 항목에서는 큐에 대 한 WCF (Windows Communication Foundation) 지원에 대해 설명 합니다. WCF는 Microsoft 메시지 큐 (이전에는 MSMQ 라고 함)를 전송으로 활용 하 여 큐에 대 한 지원을 제공 하 고 다음과 같은 시나리오를 가능 하 게 합니다.  
   
 - 느슨하게 결합된 애플리케이션. 송신 애플리케이션은 수신 애플리케이션이 메시지를 처리할 수 있는지 여부를 확인할 필요 없이 큐에 메시지를 보낼 수 있습니다. 큐는 수신 애플리케이션이 메시지를 처리할 수 있는 속도에 따라 변경되지 않는 일정한 속도로 송신 애플리케이션이 메시지를 큐에 보낼 수 있는 독립적인 프로세스를 제공합니다. 큐에 메시지를 보내는 작업이 메시지 처리 작업과 밀접하게 연결되지 않을 경우 전반적인 시스템 가용성이 증가합니다.  
@@ -25,6 +26,7 @@ ms.locfileid: "84596736"
  WCF 응용 프로그램에서 큐 기능을 사용 하려면 표준 바인딩 중 하나를 사용 하거나 표준 바인딩 중 하나가 요구 사항을 충족 하지 않는 경우 사용자 지정 바인딩을 만들 수 있습니다. 관련 표준 바인딩과이 바인딩에 대 한 자세한 내용은 [방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)을 참조 하세요. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [사용자 지정 바인딩](../extending/custom-bindings.md)을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [큐 개요](queues-overview.md)  
  메시지 큐 개념의 개요.  
   

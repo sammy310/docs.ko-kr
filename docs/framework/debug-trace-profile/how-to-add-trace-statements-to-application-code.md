@@ -14,23 +14,24 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 6beecf39d4372a194a9110ed8942b998443934d4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415890"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244212"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>방법: 애플리케이션 코드에 추적 문 추가
+
 추적에 가장 자주 사용되는 메서드는 **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, **Fail** 등 수신기로 출력을 작성하는 메서드입니다. 이러한 메서드는 두 범주로 나눌 수 있습니다. 즉, **Write**, **WriteLine** 및 **Fail** 메서드는 모두 조건 없이 출력을 내보내지만, **WriteIf**, **WriteLineIf** 및 **Assert** 메서드는 부울 조건을 테스트하고 조건의 값에 따라 기록하거나 기록하지 않습니다. **WriteIf** 및 **WriteLineIf** 메서드는 조건이 `true`인 경우 출력을 내보내며 **Assert** 메서드는 조건이 `false`인 경우 출력을 내보냅니다.  
   
- 추적 및 디버깅 전략을 디자인할 때 원하는 출력 모양을 고려해야 합니다. 관련 없는 정보로 채워진 여러 **Write** 문은 읽기 어려운 로그를 생성합니다. 다른 한편으로는 **WriteLine**을 사용하여 별도의 줄에 관련된 문을 넣으면 함께 속한 정보를 구분하기 어렵게 될 수도 있습니다. 일반적으로 여러 소스의 정보를 결합하여 단일 정보 메시지를 생성하려는 경우 여러 **Write** 문을 사용하고, 완전한 단일 메시지를 생성하려는 경우 **WriteLine** 문을 사용합니다.  
+ 추적 및 디버깅 전략을 디자인할 때 원하는 출력 모양을 고려해야 합니다. 관련이 없는 정보로 채워진 여러 **Write** 문은 읽기 어려운 로그를 만듭니다. 반면에 **WriteLine** 을 사용 하 여 별도의 줄에 관련 된 문을 넣으면 함께 속한 정보를 구분 하기가 어려울 수 있습니다. 일반적으로 여러 소스의 정보를 결합 하 여 단일 정보 메시지를 생성 하려는 경우 여러 **Write** 문을 사용 하 고, 완전 한 단일 메시지를 생성 하려는 경우 **WriteLine** 문을 사용 합니다.  
   
 ### <a name="to-write-a-complete-line"></a>완전한 줄을 작성하려면  
   
 1. <xref:System.Diagnostics.Trace.WriteLine%2A> 또는 <xref:System.Diagnostics.Trace.WriteLineIf%2A> 메서드를 호출합니다.  
   
-     이 메서드가 반환하는 메시지의 끝에 캐리지 리턴을 추가합니다. 그러면 **Write**, **WriteIf**, **WriteLine** 또는 **WriteLineIf**에서 반환한 다음 메시지가 다음 줄에서 시작됩니다.  
+     이 메서드가 반환하는 메시지의 끝에 캐리지 리턴을 추가합니다. 그러면 **Write**, **WriteIf**, **WriteLine** 또는 **WriteLineIf** 에서 반환한 다음 메시지가 다음 줄에서 시작됩니다.  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -49,7 +50,7 @@ ms.locfileid: "85415890"
   
 1. <xref:System.Diagnostics.Trace.Write%2A> 또는 <xref:System.Diagnostics.Trace.WriteIf%2A> 메서드를 호출합니다.  
   
-     **Write**, **WriteIf**, **WriteLine** 또는 **WriteLineIf**에서 출력하는 다음 메시지는 **Write** 또는 **WriteIf** 문에서 출력하는 메시지와 동일한 줄에서 시작됩니다.  
+     **Write**, **WriteIf**, **WriteLine** 또는 **WriteLineIf** 에서 출력하는 다음 메시지는 **Write** 또는 **WriteIf** 문에서 출력하는 메시지와 동일한 줄에서 시작됩니다.  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -81,9 +82,9 @@ ms.locfileid: "85415890"
     ```  
   
     > [!NOTE]
-    > 추적과 디버깅 둘 다에 **Assert**를 사용할 수 있습니다. 이 예제에서는 **수신기** 컬렉션의 수신기로 호출 스택을 출력합니다. 자세한 내용은 [관리 코드의 어설션](/visualstudio/debugger/assertions-in-managed-code) 및 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>를 참조하세요.  
+    > 추적과 디버깅 둘 다에 **Assert** 를 사용할 수 있습니다. 이 예제에서는 **수신기** 컬렉션의 수신기로 호출 스택을 출력합니다. 자세한 내용은 [관리 코드의 어설션](/visualstudio/debugger/assertions-in-managed-code) 및 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>를 참조하세요.  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>

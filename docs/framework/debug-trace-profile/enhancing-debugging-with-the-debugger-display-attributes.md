@@ -14,12 +14,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 2e556358490409a0fa7b345c4454eb43cf607e32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244368"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>디버거 표시 특성을 사용하여 디버깅 향상
 
@@ -42,11 +42,12 @@ class MyHashtable
 예를 들어 C# 개체에 재정의된 `ToString()`이 있는 경우 디버거는 이 재정의를 호출하여 표준 `{<typeName>}.` 대신 재정의의 결과를 보여 줍니다. 따라서 `ToString()` 메서드를 재정의한 경우 <xref:System.Diagnostics.DebuggerDisplayAttribute>를 사용할 필요가 없습니다. 둘 모두 사용하는 경우에는 <xref:System.Diagnostics.DebuggerDisplayAttribute> 특성이 `ToString()` 재정의보다 우선합니다.
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute 사용
+
  필드 또는 속성에 <xref:System.Diagnostics.DebuggerBrowsableAttribute>를 적용하여 필드나 속성이 디버거 창에 표시되는 방식을 지정합니다. 이 특성에 대한 생성자는 다음 상태 중 하나를 지정하는 <xref:System.Diagnostics.DebuggerBrowsableState> 열거형 값 중 하나를 사용합니다.
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never>는 멤버가 데이터 창에 표시되지 않음을 나타냅니다.  예를 들어 필드에서 <xref:System.Diagnostics.DebuggerBrowsableAttribute>에 이 값을 사용하면 계층 구조에서 필드가 제거됩니다. 형식 인스턴스에 대한 더하기 기호(+)를 클릭하여 바깥쪽 형식을 확장하면 필드가 표시되지 않습니다.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>는 멤버가 표시되지만 기본적으로 확장되지 않음을 나타냅니다.  이것은 기본적인 동작입니다.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>는 멤버가 표시되지만 기본적으로 확장되지 않음을 나타냅니다.  기본 동작입니다.
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>은 멤버 자체가 표시되지 않지만 배열이나 컬렉션인 경우 해당 요소 개체가 표시됨을 나타냅니다.
 
@@ -61,6 +62,7 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>DebuggerTypeProxy 사용
+
  형식의 디버깅 뷰를 완전히 변경하지만 형식 자체는 변경하지 않아야 할 경우 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성을 사용합니다. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성은 개발자가 형식에 맞게 뷰를 조정할 수 있도록 형식에 대한 표시 프록시를 지정하는 데 사용됩니다.  <xref:System.Diagnostics.DebuggerDisplayAttribute>처럼 이 특성은 어셈블리 수준에서 사용될 수 있습니다. 이 경우 <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> 속성은 프록시가 사용될 형식을 지정합니다. 이 특성을 사용하여 특성이 적용되는 형식 내에서 발생하는 전용 중첩 형식을 지정하는 것이 좋습니다.  형식 뷰어를 지원하는 식 평가기는 형식이 표시될 때 이 특성을 확인합니다. 특성이 발견된 경우 식 평가기는 특성이 적용되는 형식을 표시 프록시 형식으로 대체합니다.
 
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute>가 있는 경우 디버거 변수 창에는 프록시 형식의 공용 멤버만 표시됩니다. 프라이빗 멤버는 표시되지 않습니다. 데이터 창의 동작은 특성이 향상된 뷰를 통해 변경되지 않습니다.
@@ -94,7 +96,7 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>예제
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 다음 코드 예제는 Visual Studio에서 볼 수 있으며 <xref:System.Diagnostics.DebuggerDisplayAttribute> , 및 특성을 적용 한 결과를 볼 수 있습니다 <xref:System.Diagnostics.DebuggerBrowsableAttribute> <xref:System.Diagnostics.DebuggerTypeProxyAttribute> .
 

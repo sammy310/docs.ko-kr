@@ -2,14 +2,15 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eb2f14db8b58fd182bbe711bf559055659a02652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553033"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243692"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
+
 이 샘플에서는 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하 여 웹 서비스를 Microsoft Office Visual Basic for Applications (Office VBA) 또는 Visual Basic 6.0와 같은 COM 기반 개발 환경에 통합 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
   
 > [!NOTE]
@@ -50,6 +51,7 @@ public interface ICalculator
 - 메타데이터 교환 계약 - 계약이 MEX(메타데이터 교환) 엔드포인트에서 런타임에 검색됩니다.  
   
 ## <a name="typed-contract"></a>형식화된 계약  
+
  형식화된 계약 사용과 함께 모니커를 사용하려면 서비스 계약에 대한 적절한 특성 사용 형식을 COM에 등록해야 합니다. 먼저 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 클라이언트를 생성 해야 합니다. 클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.  
   
 ```console  
@@ -103,6 +105,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이는 형식화 된 모니커를 사용 하 여 COM 호출을 수행 하 여 WCF 서비스와 통신 하는 COM 클라이언트를 보여 줍니다. 클라이언트 애플리케이션에서 COM이 사용되지만 서비스와의 통신은 웹 서비스 호출로만 구성됩니다.  
   
 ## <a name="wsdl-contract"></a>WSDL 계약  
+
  WSDL 계약과 함께 모니커를 사용하려면 클라이언트 라이브러리 등록이 필요하지 않지만 브라우저를 사용하여 서비스의 WSDL 엔드포인트에 액세스하는 것처럼 out-of-band 메커니즘을 통해 서비스에 대한 WSDL 계약을 검색해야 합니다. 그런 다음 모니커는 실행 시에 해당 계약에 액세스할 수 있습니다.  
   
  ComCalcClient.vbs 클라이언트 애플리케이션은 `FileSystemObject`를 사용하여 로컬로 저장된 WSDL 파일에 액세스한 다음 `GetObject` 함수를 다시 사용하여 서비스에 대한 프록시를 생성합니다.  
@@ -148,6 +151,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
  샘플을 실행할 경우 작업 응답이 Windows 스크립트 호스트 메시지 상자 창에 표시됩니다. 이는 WCF 서비스와 통신 하기 위해 WSDL 계약이 포함 된 모니커를 사용 하 여 COM 호출을 수행 하는 COM 클라이언트를 보여 줍니다.  
   
 ## <a name="metadata-exchange-contract"></a>메타데이터 교환 계약  
+
  MEX 계약과 함께 모니커를 사용하려면 WSDL 계약과 마찬가지로 클라이언트 등록이 필요하지 않습니다. 서비스에 대한 계약은 메타데이터 교환의 내부 사용을 통해 실행 시에 검색됩니다.  
   
  ComCalcClient.vbs 클라이언트 애플리케이션은 `GetObject` 함수를 다시 사용하여 서비스에 대한 프록시를 생성합니다.  

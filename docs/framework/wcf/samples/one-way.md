@@ -2,14 +2,15 @@
 title: 단방향
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 07fc4ecf981acbad577758c943aa22405f528a52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7732b63cccb98ac54d99a0430dbaf0c8abfdaaa5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245044"
 ---
 # <a name="one-way"></a>단방향
+
 이 샘플에서는 단방향 서비스 작업이 있는 서비스 계약을 보여 줍니다. 클라이언트는 양방향 서비스 작업에서처럼 서비스 작업이 완료될 때까지 대기하지 않습니다. 이 샘플은 [시작](getting-started-sample.md) 을 기반으로 하며 바인딩을 사용 합니다 `wsHttpBinding` . 이 샘플의 서비스는 자체적으로 호스팅되는 콘솔 애플리케이션으로서 이를 통해 요청을 수신하고 처리하는 서비스를 볼 수 있습니다. 클라이언트 역시 콘솔 애플리케이션입니다.  
   
 > [!NOTE]

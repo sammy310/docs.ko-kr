@@ -2,17 +2,19 @@
 title: JSON 및 기타 데이터 전송 형식에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
-ms.openlocfilehash: 168bd9a76b0ff6ff8e6625acc93a5409d43a817c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5f625c4ac6f2fa65df4d5a046b747c58f7a725b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594766"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246305"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON 및 기타 데이터 전송 형식에 대한 지원
+
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX(Asynchronous JavaScript and XML) 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [독립 실행형 JSON Serialization](stand-alone-json-serialization.md)  
  독립 실행형 JSON serialization에 대해 설명합니다.  
   

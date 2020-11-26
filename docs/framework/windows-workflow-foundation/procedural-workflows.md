@@ -3,18 +3,20 @@ title: 절차적 워크플로
 description: Workflow Foundation에서 절차적 워크플로는 절차적 언어에서와 비슷한 흐름 제어 방법을 사용 합니다.
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 97664c1352928e7d05c2ed15fc118dd21474cfc3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 13d1b5e55b84687e2a78db1a94317b8b1e33328c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421438"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246032"
 ---
 # <a name="procedural-workflows"></a>절차적 워크플로
+
 절차적 워크플로에서는 절차적 언어에서 사용되는 것과 비슷한 흐름 제어 메서드를 사용합니다. 이러한 구조에는 `While` 및 `If`가 포함됩니다. <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence>와 같은 다른 흐름 제어 활동을 사용하여 이러한 워크플로를 자유롭게 구성할 수 있습니다.  
   
 ## <a name="controlling-execution-flow"></a>실행 흐름 제어  
- 워크플로 활동 라이브러리에는 절차적 언어에서 사용되는 대부분의 흐름 제어 메서드를 모델링하기 위한 활동이 있습니다. 내용은 다음과 같습니다.  
+
+ 워크플로 활동 라이브러리에는 절차적 언어에서 사용되는 대부분의 흐름 제어 메서드를 모델링하기 위한 활동이 있습니다. 여기에는 다음이 포함됩니다.  
   
 - <xref:System.Activities.Statements.While>  
   

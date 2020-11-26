@@ -3,20 +3,22 @@ title: 여러 IIS 사이트 바인딩 지원
 description: IIS에서 WCF 서비스를 호스팅할 때 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 6af4d885c7fc3d4dcc12ffb4bf6670f1a9b3d78c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7b9118a7a507939aab6276716722be8d6d02628c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546200"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246292"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>여러 IIS 사이트 바인딩 지원
+
 인터넷 정보 서비스 (IIS) 7.0에서 WCF (Windows Communication Foundation) 서비스를 호스팅하는 경우 동일한 사이트에서 동일한 프로토콜을 사용 하는 여러 기본 주소를 제공할 수 있습니다. 이렇게 하면 동일한 서비스에서 여러 다른 URI에 응답할 수 있습니다. 이는 및에서 수신 대기 하는 서비스를 호스트 하려는 경우에 유용 합니다 `http://www.contoso.com` `http://contoso.com` . 내부 사용자에 대한 기본 주소와 외부 사용자에 대한 별도의 기본 주소가 있는 서비스를 만들려는 경우에 유용합니다. 예: `http://internal.contoso.com` 및 `http://www.contoso.com`  
   
 > [!NOTE]
 > 이 기능은 HTTP 프로토콜을 통해서만 사용할 수 있습니다.  
   
 ## <a name="multiple-base-addresses"></a>여러 기본 주소  
+
  이 기능은 IIS에서 호스팅되는 WCF 서비스에만 사용할 수 있습니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 이 기능을 사용 하려면 `multipleSiteBindingsEnabled` `serviceHostingEnvironment` `true` 다음 예제와 같이 Web.config 파일의 <> 요소에 특성을 추가 하 고로 설정 해야 합니다.  
   
 ```xml  

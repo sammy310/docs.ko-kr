@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420762"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245356"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess 인터페이스
 
@@ -30,8 +30,9 @@ ms.locfileid: "83420762"
 
 ## <a name="methods"></a>메서드
 
-| 메서드                                                                                                                                               | 설명                                                                                     |
+| 메서드                                                                                                                                               | Description                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | 지정 된 주소에 대 한 이름을 가져옵니다.                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`프로세스의 고유 id로를 가져옵니다.                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | 프로세스의 모듈을 열거 하는 핸들을 제공 합니다.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | 이 프로세스의 모듈을 열거 합니다.                                                         |

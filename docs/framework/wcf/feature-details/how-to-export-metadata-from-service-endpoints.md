@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 58e86e5566775048e081bfb4ac217a7747b98a35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c253358b68cf18a23bab4d12d4ad760874103bff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579412"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246409"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 엔드포인트에서 메타데이터 내보내기
+
 이 항목에서는 서비스 엔드포인트로부터 메타데이터를 내보내는 방법에 대해 설명합니다.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>서비스 엔드포인트에서 메타데이터를 내보내려면  
@@ -47,12 +48,14 @@ ms.locfileid: "84579412"
 7. 이제 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 메서드를 호출하여 파일에 쓰는 등의 방식으로 메타데이터를 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[S_UEWsdlExporter#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#0)]
  [!code-vb[S_UEWsdlExporter#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#0)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  Program.cs를 컴파일할 때에는 System.ServiceModel.dll을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목

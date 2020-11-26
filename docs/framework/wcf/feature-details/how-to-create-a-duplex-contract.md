@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 9320e5b36b8faba3602fbe1df1b95c05dcc7fa7e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: cce1784865a1599e69c3f604c288ef62c9c43652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247093"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243718"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>방법: 이중 계약 만들기
+
 이 항목에서는 이중(양방향) 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이중 계약을 사용하면 클라이언트와 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 이중 계약은 WCF (Windows Communication Foundation) 서비스에서 사용할 수 있는 세 가지 메시지 패턴 중 하나입니다. 다른 두 메시지 패턴은 단방향 및 요청-회신입니다. 이중 계약은 클라이언트와 서버 간 두 개의 단방향 계약으로 구성되며, 메서드 호출을 상호 관련시키지 않아도 됩니다. 서비스가 클라이언트에 세부 정보를 쿼리하거나 클라이언트에서 이벤트를 명시적으로 발생시킬 때 이러한 종류의 계약을 사용합니다. 이중 계약에 대 한 클라이언트 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 [방법: 이중 계약을 사용 하 여 서비스 액세스](how-to-access-services-with-a-duplex-contract.md)를 참조 하세요. 작업 샘플은 [이중](../samples/duplex.md) 샘플을 참조 하세요.  
   
 ### <a name="to-create-a-duplex-contract"></a>이중 계약을 만들려면  
@@ -57,6 +58,7 @@ ms.locfileid: "85247093"
 3. 콜백 인터페이스에서 정의한 메서드를 호출합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 이중 통신을 수행하는 방법을 보여 줍니다. 서비스의 계약에는 앞뒤로 이동하기 위한 서비스 작업이 포함됩니다. 클라이언트의 계약에는 해당 위치를 보고하는 서비스 작업이 포함됩니다.  
   
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]

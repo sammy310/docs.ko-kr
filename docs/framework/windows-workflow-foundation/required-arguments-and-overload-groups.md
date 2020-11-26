@@ -2,17 +2,19 @@
 title: 필수 인수 및 오버로드 그룹
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 452285b1f5b73ecf75fc50f59365aa2633f26e42
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142942"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245876"
 ---
 # <a name="required-arguments-and-overload-groups"></a>필수 인수 및 오버로드 그룹
+
 활동을 실행하기 위해 특정 인수를 바인딩하도록 활동을 구성할 수 있습니다. `RequiredArgument` 특성은 활동의 특정 인수가 필수 인수임을 나타내고 `OverloadGroup` 특성은 필수 인수 범주를 그룹화하는 데 사용됩니다. 활동 작성자는 특성을 사용하여 단순 활동 유효성 검사 구성 또는 복합 활동 유효성 검사 구성을 제공할 수 있습니다.  
   
 ## <a name="using-required-arguments"></a>필수 인수 사용  
+
  활동에서 `RequiredArgument` 특성을 사용하려면 <xref:System.Activities.RequiredArgumentAttribute>를 사용하여 원하는 인수를 나타냅니다. 이 예제에서는 두 필수 인수를 가진 `Add` 활동을 정의합니다.  
   
 ```csharp  
@@ -63,11 +65,11 @@ public sealed class Add : CodeActivity<int>
   
  **필수 작업 인수 'Operand1'의 값을 제공하지 않았습니다.**  
 > [!NOTE]
-> 유효성 검사 오류 및 경고 확인 및 처리에 대한 자세한 내용은 [활동 유효성 검사 호출을](invoking-activity-validation.md)참조하십시오.  
+> 유효성 검사 오류 및 경고를 확인 하 고 처리 하는 방법에 대 한 자세한 내용은 [활동 유효성 검사 호출](invoking-activity-validation.md)을 참조 하세요.  
   
 ## <a name="using-overload-groups"></a>오버로드 그룹 사용
 
-오버로드 그룹은 활동에서 유효한 인수 조합을 나타내는 메서드를 제공합니다. 인수는 <xref:System.Activities.OverloadGroupAttribute>를 사용하여 그룹화됩니다. 각 그룹에는 <xref:System.Activities.OverloadGroupAttribute>에 의해 지정된 이름이 지정됩니다. 이 활동은 오버로드 그룹의 인수 집합이 하나만 바인딩된 경우 유효합니다. 다음 예제에서는 `CreateLocation` 클래스를 정의합니다.  
+오버로드 그룹은 활동에서 유효한 인수 조합을 나타내는 메서드를 제공합니다. 인수는 <xref:System.Activities.OverloadGroupAttribute>를 사용하여 그룹화됩니다. 각 그룹에는에 지정 된 이름이 지정 됩니다 <xref:System.Activities.OverloadGroupAttribute> . 오버 로드 그룹에서 하나의 인수 집합만 바인딩되는 경우 활동이 유효 합니다. 다음 예제에서는 `CreateLocation` 클래스를 정의합니다.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,7 +108,7 @@ class CreateLocation: Activity
   
  이 활동의 목적은 미국 내 위치를 지정하는 데 있습니다. 활동 사용자는 세 인수 그룹 중 하나를 사용하여 위치를 지정할 수 있습니다. 유효한 인수 조합을 지정하기 위해 세 가지 오버로드 그룹이 정의됩니다. `G1`에는 `Latitude` 및 `Longitude` 인수가 포함됩니다. `G2`에는 `Street`, `City` 및 `State`가 포함됩니다. `G3`에는 `Street` 및 `Zip`이 포함됩니다. `Name`도 필수 인수이지만 오버로드 그룹에 속하지는 않습니다. 이 활동이 유효하려면 `Name`을 한 오버로드 그룹의 모든 인수와 함께 바인딩해야 합니다.  
   
- 다음 예제에서는 [데이터베이스 액세스 활동](./samples/database-access-activities.md) 샘플에서 가져온 두 개의 `ConnectionString` 오버로드 그룹이 있습니다. `ConfigFileSectionName` 이 활동이 유효하려면 `ProviderName`과 `ConnectionString` 인수가 바인딩되어 있거나 `ConfigName` 인수가 바인딩되어 있어야 하지만 둘 다가 바인딩되어서는 안 됩니다.  
+ [데이터베이스 액세스 활동](./samples/database-access-activities.md) 샘플에서 가져온 다음 예제에서는 두 개의 오버 로드 그룹인 및가 있습니다. `ConnectionString` `ConfigFileSectionName` 이 활동이 유효하려면 `ProviderName`과 `ConnectionString` 인수가 바인딩되어 있거나 `ConfigName` 인수가 바인딩되어 있어야 하지만 둘 다가 바인딩되어서는 안 됩니다.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  

@@ -2,14 +2,15 @@
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: a503878f1cbb60090b648da8dfec741edbf02d1b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 65330e77622920f02b12bd69348aa635529e030e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602325"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244433"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
+
 사용자 정의 형식을 지정된 통신 형식으로 직렬화하거나 통신 형식을 사용자 정의 형식으로 다시 역직렬화할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘은 [How to: Serialize and Deserialize JSON Data](../feature-details/how-to-serialize-and-deserialize-json-data.md)(방법: JSON 데이터 직렬화 및 역직렬화) 항목에 설명된 대로 JSON(JavaScript Object Notation) 개체로 작업하는 경우에도 적용됩니다.  
   
  일부 시나리오에서는 Windows Communication Foundation (WCF) 서비스 또는 클라이언트가 개발자의 제어를 벗어난 서비스 또는 클라이언트에 의해 생성 된 JSON 개체에 액세스 해야 합니다. 웹 서비스는 JSON Api를 공개적으로 노출 하므로 WCF 개발자가 임의의 JSON 개체를 deserialize 하는 로컬 사용자 정의 형식을 생성 하는 것은 실용적이 지 않을 수 있습니다. 이 샘플에서는 WCF 개발자가 사용자 정의 형식을 만들지 않고 deserialize 된 임의의 JSON 개체로 작업할 수 있도록 하는 메커니즘을 제공 합니다. 컴파일할 때에는 JSON 개체가 역직렬화되는 형식을 알 수 없기 때문에 JSON 개체의 *약한 형식의 serialization* 이라고 합니다.  
@@ -58,7 +59,7 @@ ms.locfileid: "84602325"
   
  이 과정이 부담이 될 수 있으며, 클라이언트에서 두 개 이상의 JSON 개체를 처리해야 하는 경우 특히 그렇습니다.  
   
- 이 샘플에서 제공하는 `JsonObject` 형식은 역직렬화된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject`는 JSON 개체와 .NET Framework 사전 간의 자연 매핑 및 JSON 배열과 .NET Framework 배열 간의 매핑에 의존 합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
+ 이 샘플에서 제공하는 `JsonObject` 형식은 역직렬화된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject` 는 JSON 개체와 .NET Framework 사전 간의 자연 매핑 및 JSON 배열과 .NET Framework 배열 간의 매핑에 의존 합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  

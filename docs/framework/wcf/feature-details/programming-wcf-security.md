@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244771"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
-이 항목에서는 WCF (보안 Windows Communication Foundation) 응용 프로그램을 만드는 데 사용 되는 기본 프로그래밍 작업에 대해 설명 합니다. 이 항목에서는 *전송 보안*이라는 인증, 기밀성 및 무결성만 다룹니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어)에 대해 다루지 않습니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  
+
+이 항목에서는 WCF (보안 Windows Communication Foundation) 응용 프로그램을 만드는 데 사용 되는 기본 프로그래밍 작업에 대해 설명 합니다. 이 항목에서는 *전송 보안* 이라는 인증, 기밀성 및 무결성만 다룹니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어)에 대해 다루지 않습니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  
   
 > [!NOTE]
 > 특히 WCF와 관련 하 여 보안 개념에 대 한 유용한 정보를 보려면 MSDN의 패턴 및 사례 자습서 (영문)의 [시나리오, 패턴 및 구현 지침 (WSE) 3.0](/previous-versions/msp-n-p/ff648183(v=pandp.10))을 참조 하십시오.  
@@ -24,6 +25,7 @@ ms.locfileid: "90535900"
  WCF 보안 프로그래밍은 보안 모드, 클라이언트 자격 증명 형식 및 자격 증명 값을 설정 하는 세 가지 단계를 기반으로 합니다. 코드 또는 구성을 통해 이러한 단계를 수행할 수 있습니다.  
   
 ## <a name="setting-the-security-mode"></a>보안 모드 설정  
+
  다음은 WCF에서 보안 모드를 사용 하 여 프로그래밍 하는 일반적인 단계를 설명 합니다.  
   
 1. 애플리케이션 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록에 대해서는 [시스템 제공 바인딩](../system-provided-bindings.md)을 참조 하세요. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외는 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (구성 사용,)입니다 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) .  
@@ -55,6 +57,7 @@ ms.locfileid: "90535900"
      클라이언트와 서비스에서 대칭 키를 사용하여 채널을 만들 때(클라이언트와 서버가 대화 상자가 닫힐 때까지 대화 기간 동안 동일한 키를 사용), 보안 세션이 발생합니다.  
   
 ## <a name="setting-the-client-credential-type"></a>클라이언트 자격 증명 형식 설정  
+
  클라이언트 자격 증명 형식을 적절하게 선택합니다. 자세한 내용은 [자격 증명 유형 선택](selecting-a-credential-type.md)을 참조 하세요. 다음과 같은 클라이언트 자격 증명 형식을 사용할 수 있습니다.  
   
 - `Windows`  
@@ -92,12 +95,14 @@ ms.locfileid: "90535900"
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>서비스 자격 증명 값 설정  
+
  클라이언트 자격 증명 형식을 선택한 경우 사용할 서비스 및 클라이언트에 대한 실제 자격 증명을 설정해야 합니다. 서비스에서 자격 증명은 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스를 사용하여 설정하고 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 클래스의 <xref:System.ServiceModel.ServiceHostBase> 속성에 의해 반환됩니다. 사용 중인 바인딩은 서비스 자격 증명 형식, 선택한 보안 모드 및 클라이언트 자격 증명 형식을 함축합니다. 다음 코드에서는 서비스 자격 증명에 대한 인증서를 설정합니다.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>클라이언트 자격 증명 값 설정  
+
  클라이언트에서 클라이언트 자격 증명 값은 <xref:System.ServiceModel.Description.ClientCredentials> 클래스를 사용하여 설정하고 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 클래스의 <xref:System.ServiceModel.ClientBase%601> 속성에 의해 반환됩니다. 다음 코드에서는 TCP 프로토콜을 사용하여 인증서를 클라이언트에 대한 자격 증명으로 설정합니다.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

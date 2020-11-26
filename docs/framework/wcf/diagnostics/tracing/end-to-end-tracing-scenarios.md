@@ -2,14 +2,15 @@
 title: 엔드투엔드 추적 시나리오
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: d881a8396e21d31b2303d1bb270bed52823c8d49
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cd9be9a39ba1ebb331060231bdb481fd21a3ae6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589255"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243965"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>엔드투엔드 추적 시나리오
+
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  
   
  다음을 사용하여 회신/응답, 단방향 및 이중 시나리오에 대한 활동 추적을 구현합니다.  

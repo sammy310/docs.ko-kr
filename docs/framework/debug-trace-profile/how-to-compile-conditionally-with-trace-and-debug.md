@@ -11,16 +11,18 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244173"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
+
 개발 중에 애플리케이션을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 애플리케이션에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 애플리케이션을 컴파일해야 합니다. 이렇게 하면 추적 코드를 애플리케이션의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
   
- 추적 및 디버깅 메서드에는 연결된 조건부 특성이 포함됩니다. 예를 들어 추적에 대한 조건부 특성이 **true**이면 모든 trace 문이 어셈블리(컴파일된 .exe 파일 또는 .dll) 내에 포함되고, **Trace** 조건부 특성이 **false**이면 trace 문이 포함되지 않습니다.  
+ 추적 및 디버깅 메서드에는 연결된 조건부 특성이 포함됩니다. 예를 들어 추적에 대한 조건부 특성이 **true** 이면 모든 trace 문이 어셈블리(컴파일된 .exe 파일 또는 .dll) 내에 포함되고, **Trace** 조건부 특성이 **false** 이면 trace 문이 포함되지 않습니다.  
   
  빌드에 대해 **Trace** 또는 **Debug** 조건부 특성의 하나를 설정하거나, 둘 다 설정하거나, 아무것도 설정하지 않을 수 있습니다. 따라서 **디버그**, **추적**, 둘 다 또는 아무것도 설정하지 않는 네 가지 빌드 형식이 있습니다. 프로덕션 배포의 일부 릴리스 빌드에는 아무것도 포함되지 않을 수 있습니다. 대부분 디버깅 빌드에는 둘 다 포함됩니다.  
   
@@ -34,9 +36,9 @@ ms.locfileid: "86051222"
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>속성 페이지 대화 상자에서 컴파일 설정을 변경하려면  
   
-1. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
-2. 바로 가기 메뉴에서 **속성**을 선택합니다.  
+2. 바로 가기 메뉴에서 **속성** 을 선택합니다.  
   
     - Visual Basic에서 속성 페이지의 왼쪽 창에 있는 **컴파일** 탭을 클릭하고 **고급 컴파일 옵션** 단추를 클릭하여 **고급 컴파일러 설정** 대화 상자를 표시합니다. 사용하도록 설정할 컴파일러 설정의 확인란을 선택합니다. 사용하지 않도록 설정할 설정의 확인란을 선택 취소합니다.  
   
@@ -71,7 +73,7 @@ ms.locfileid: "86051222"
   
 1. 소스 코드 파일의 위쪽에서 프로그래밍 언어에 대한 적절한 문을 입력합니다.  
   
-    |언어|인수를 제거합니다.|결과|  
+    |언어|문|결과|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|추적 사용|  
     ||**#CONST TRACE = false**|추적 사용 안 함|  
@@ -91,14 +93,14 @@ ms.locfileid: "86051222"
 컴파일러 지시문을 주석으로 처리합니다.  
   
 > [!NOTE]
-> 컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:** 을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
+> 컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드** 를 선택하거나, **d:** 을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)
 - [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
 - [추적 스위치](trace-switches.md)
 - [추적 수신기](trace-listeners.md)
-- [방법: 애플리케이션 코드에 추적 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
 - [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [방법: 명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

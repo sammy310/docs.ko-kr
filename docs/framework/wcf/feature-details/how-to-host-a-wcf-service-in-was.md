@@ -2,14 +2,15 @@
 title: '방법: WAS에서 WCF 서비스 호스팅'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 8049b7961169c6ec7a8d80fb0e8747e99992247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 640cfdd7525fb9877c6f3551a1456fed29c99b8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244407"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>방법: WAS에서 WCF 서비스 호스팅
+
 이 항목에서는 WAS (Windows Process Activation service)에서 호스팅된 WCF (Windows Communication Foundation) 서비스를 만드는 데 필요한 기본 단계에 대해 간략하게 설명 합니다. WAS는 HTTP가 아닌 전송 프로토콜에서 사용하는 IIS(Internet Information Services) 기능의 일반화인 새 프로세스 활성화 서비스입니다. WCF는 수신기 어댑터 인터페이스를 사용 하 여 WCF (예: TCP, 명명 된 파이프 및 메시지 큐)에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 전달 합니다.  
   
  이 호스팅 옵션을 사용하려면 WAS 활성화 구성 요소를 적절히 설치하여 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WAS를 설치 및 구성 하는 방법에 대 한 자세한 내용은 [방법: WCF 정품 인증 구성 요소 설치 및 구성](how-to-install-and-configure-wcf-activation-components.md)을 참조 하세요.  
@@ -98,7 +99,7 @@ ms.locfileid: "90555974"
   
 6. 클라이언트를 컴파일하고 실행합니다.  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [TCP 활성화](../samples/tcp-activation.md)
 - [Windows Server App Fabric 호스팅 기능](/previous-versions/appfabric/ee677189(v=azure.10))

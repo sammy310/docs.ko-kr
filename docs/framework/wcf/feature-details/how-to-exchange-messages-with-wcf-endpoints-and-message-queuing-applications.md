@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 0775de90903aed27a8d0006614a4b6f2d857eee3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8f8baf345059c01b0fef3b61ef85556151269118
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597100"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246422"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환
+
 Msmq 통합 바인딩을 사용 하 여 기존 메시지 큐 (MSMQ) 응용 프로그램을 wcf (Windows Communication Foundation) 응용 프로그램과 통합 하 여 msmq 메시지를 WCF 메시지와 상호 변환할 수 있습니다. 이렇게 하면 WCF 클라이언트에서 MSMQ 수신자 응용 프로그램을 호출할 수 있을 뿐 아니라 MSMQ 발신자 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다.  
   
  이 섹션에서는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> (1) WCF 클라이언트와 (2) msmq 응용 프로그램 클라이언트 및 wcf 서비스를 사용 하 여 작성 된 msmq 응용 프로그램 서비스 간의 대기 중인 통신에를 사용 하는 방법을 설명 합니다.  

@@ -2,14 +2,15 @@
 title: 큐 및 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: af45fd86f673d0cc296f6593d9d5709d3e2b616e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: db47838db1608dac4e0fe22252795b6dd33a0b6e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596749"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244693"
 ---
 # <a name="queues-and-reliable-sessions"></a>큐 및 신뢰할 수 있는 세션
+
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 WCF (Windows Communication Foundation) 기능입니다. 이 섹션에 포함 된 항목에서는 WCF 신뢰할 수 있는 메시징 기능에 대해 설명 합니다.  
   
  신뢰할 수 있는 메시징이란 신뢰할 수 있는 메시징 소스(소스라고 함)에서 신뢰할 수 있는 메시징 대상(대상이라고 함)으로 메시지를 안전하게 전송하는 방법입니다.  
@@ -27,11 +28,13 @@ ms.locfileid: "84596749"
 - 원본 및 대상 간의 분리 된 전송 및 분리를 모두 제공 하는 [WCF의 큐](queues-in-wcf.md)입니다.  
   
 ## <a name="reliable-sessions"></a>신뢰할 수 있는 세션  
+
  신뢰할 수 있는 세션에서는 메시징 엔드포인트(소스와 대상)를 분리하는 매개자의 형식이나 개수에 상관없이, WS-ReliableMessaging 프로토콜을 사용하여 소스와 대상 간의 안전한 엔드투엔드 메시지 전송을 제공합니다. 여기에는 엔드포인트 간의 메시지 흐름에 필요한, SOAP를 사용하지 않는 전송 매개자(예: HTTP 프록시) 또는 SOAP를 사용하는 매개자(예: SOAP 기반 라우터나 브리지)가 포함됩니다. 전송에 실패한 경우 신뢰할 수 있는 세션은 메모리 내 전송 창을 사용하여 SOAP 메시지 수준 오류를 마스킹하고 다시 연결합니다.  
   
  신뢰할 수 있는 세션은 대기 시간이 짧은 안전한 메시지 전송을 제공하며, TCP가 IP 브리지를 통해 패킷을 지원하는 것과 같이, 프록시나 매개자를 통해 SOAP 메시지를 지원합니다. 신뢰할 수 있는 세션에 대 한 자세한 내용은 [신뢰할 수 있는 세션](reliable-sessions.md)을 참조 하세요.  
   
 ## <a name="queues"></a>큐  
+
  WCF의 큐는 메시지를 안정적으로 전송 하 고, 원본과 대상 간의 분리를 제공 하 여 대기 시간이 깁니다. WCF 대기 중인 통신은 메시지 큐 (MSMQ 라고도 함)를 기반으로 빌드됩니다.  
   
  MSMQ는 NT 서비스로 실행되는 Windows의 옵션으로 제공됩니다. 소스 대신 전송 큐에서 전송할 메시지를 캡처하여 대상 큐로 배달합니다. 대상 큐는 대상을 대신해 메시지를 수락하고 나중에 대상에서 메시지를 요청할 때 배달합니다. MSMQ 큐 관리자는 전송 중에 메시지가 손실되지 않도록 신뢰할 수 있는 메시지 전송 프로토콜을 구현합니다. 이러한 프로토콜에는 네이티브 프로토콜 또는 SRMP(SOAP Reliable Messaging Protocol)와 같은 SOAP 기반 프로토콜이 해당됩니다.  

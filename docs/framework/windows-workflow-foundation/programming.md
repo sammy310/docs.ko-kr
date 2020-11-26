@@ -7,17 +7,19 @@ helpviewer_keywords:
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-ms.openlocfilehash: 33c656ed453a1a2df6916c691245e01bbf7c6f33
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bf2aa8d755303acab168f306cead1b496c87eff1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421451"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246084"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 프로그래밍
+
 이 섹션에는 WF (숙련 된 Windows Workflow Foundation) 프로그래머가 되기 위해 이해 해야 하는 입문 항목의 집합이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [워크플로 디자인](designing-workflows.md)  
  워크플로 개발에 사용되는 흐름 제어 패러다임을 설명합니다.  
   
