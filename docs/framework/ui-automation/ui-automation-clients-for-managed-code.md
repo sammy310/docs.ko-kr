@@ -8,30 +8,33 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163925"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241982"
 ---
-# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="c88ed-103">관리 코드에 대한 UI 자동화 클라이언트</span><span class="sxs-lookup"><span data-stu-id="c88ed-103">UI Automation Clients for Managed Code</span></span>
+# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="9362f-103">관리 코드에 대한 UI 자동화 클라이언트</span><span class="sxs-lookup"><span data-stu-id="9362f-103">UI Automation Clients for Managed Code</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="c88ed-104">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c88ed-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c88ed-105">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c88ed-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="9362f-104">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9362f-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9362f-105">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9362f-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="c88ed-106">이 섹션에는 UI 자동화 클라이언트 개발에 도움이 되는 개요 및 방법이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c88ed-106">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
+ <span data-ttu-id="9362f-106">이 섹션에는 UI 자동화 클라이언트 개발에 도움이 되는 개요 및 방법이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9362f-106">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c88ed-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c88ed-107">In This Section</span></span>  
- [<span data-ttu-id="c88ed-108">UI 자동화 및 화면 크기 조정</span><span class="sxs-lookup"><span data-stu-id="c88ed-108">UI Automation and Screen Scaling</span></span>](ui-automation-and-screen-scaling.md)  
- [<span data-ttu-id="c88ed-109">표준 컨트롤에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="c88ed-109">UI Automation Support for Standard Controls</span></span>](ui-automation-support-for-standard-controls.md)  
- [<span data-ttu-id="c88ed-110">클라이언트에 대한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="c88ed-110">UI Automation Events for Clients</span></span>](ui-automation-events-for-clients.md)  
- [<span data-ttu-id="c88ed-111">UI 자동화 클라이언트에서 캐싱</span><span class="sxs-lookup"><span data-stu-id="c88ed-111">Caching in UI Automation Clients</span></span>](caching-in-ui-automation-clients.md)  
- [<span data-ttu-id="c88ed-112">클라이언트에 대한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="c88ed-112">UI Automation Properties for Clients</span></span>](ui-automation-properties-for-clients.md)  
- [<span data-ttu-id="c88ed-113">UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑</span><span class="sxs-lookup"><span data-stu-id="c88ed-113">Control Pattern Mapping for UI Automation Clients</span></span>](control-pattern-mapping-for-ui-automation-clients.md)  
- [<span data-ttu-id="c88ed-114">클라이언트용 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="c88ed-114">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)  
- [<span data-ttu-id="c88ed-115">UI 자동화 요소 가져오기</span><span class="sxs-lookup"><span data-stu-id="c88ed-115">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)  
- [<span data-ttu-id="c88ed-116">UI 자동화 스레딩 문제</span><span class="sxs-lookup"><span data-stu-id="c88ed-116">UI Automation Threading Issues</span></span>](ui-automation-threading-issues.md)  
- [<span data-ttu-id="c88ed-117">방법 항목</span><span class="sxs-lookup"><span data-stu-id="c88ed-117">How-to Topics</span></span>](ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9362f-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9362f-107">In This Section</span></span>  
+
+ [<span data-ttu-id="9362f-108">UI 자동화 및 화면 크기 조정</span><span class="sxs-lookup"><span data-stu-id="9362f-108">UI Automation and Screen Scaling</span></span>](ui-automation-and-screen-scaling.md)  
+ [<span data-ttu-id="9362f-109">표준 컨트롤에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="9362f-109">UI Automation Support for Standard Controls</span></span>](ui-automation-support-for-standard-controls.md)  
+ [<span data-ttu-id="9362f-110">클라이언트에 대한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="9362f-110">UI Automation Events for Clients</span></span>](ui-automation-events-for-clients.md)  
+ [<span data-ttu-id="9362f-111">UI 자동화 클라이언트에서 캐싱</span><span class="sxs-lookup"><span data-stu-id="9362f-111">Caching in UI Automation Clients</span></span>](caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="9362f-112">클라이언트에 대한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="9362f-112">UI Automation Properties for Clients</span></span>](ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="9362f-113">UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑</span><span class="sxs-lookup"><span data-stu-id="9362f-113">Control Pattern Mapping for UI Automation Clients</span></span>](control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="9362f-114">클라이언트용 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="9362f-114">UI Automation Control Patterns for Clients</span></span>](ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="9362f-115">UI 자동화 요소 가져오기</span><span class="sxs-lookup"><span data-stu-id="9362f-115">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)  
+ [<span data-ttu-id="9362f-116">UI 자동화 스레딩 문제</span><span class="sxs-lookup"><span data-stu-id="9362f-116">UI Automation Threading Issues</span></span>](ui-automation-threading-issues.md)  
+ [<span data-ttu-id="9362f-117">방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="9362f-117">How-to Topics</span></span>](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c88ed-118">참조</span><span class="sxs-lookup"><span data-stu-id="c88ed-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9362f-118">참조</span><span class="sxs-lookup"><span data-stu-id="9362f-118">Reference</span></span>  
+
  <xref:System.Windows.Automation>

@@ -2,27 +2,30 @@
 title: 1419 - MaxPendingConnectionsExceeded
 ms.date: 03/30/2017
 ms.assetid: e48e438e-f4c1-4f4f-85d6-c6c820a81df9
-ms.openlocfilehash: 41cf2f344ac051cdad43aa1c4f6db66dd2e98ec0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51996ca825d1aa810c8121110a1b893f6bfde420
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782228"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241332"
 ---
-# <a name="1419---maxpendingconnectionsexceeded"></a><span data-ttu-id="47fcd-102">1419 - MaxPendingConnectionsExceeded</span><span class="sxs-lookup"><span data-stu-id="47fcd-102">1419 - MaxPendingConnectionsExceeded</span></span>
-## <a name="properties"></a><span data-ttu-id="47fcd-103">속성</span><span class="sxs-lookup"><span data-stu-id="47fcd-103">Properties</span></span>  
+# <a name="1419---maxpendingconnectionsexceeded"></a><span data-ttu-id="bc85d-102">1419 - MaxPendingConnectionsExceeded</span><span class="sxs-lookup"><span data-stu-id="bc85d-102">1419 - MaxPendingConnectionsExceeded</span></span>
+
+## <a name="properties"></a><span data-ttu-id="bc85d-103">속성</span><span class="sxs-lookup"><span data-stu-id="bc85d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="47fcd-104">ID</span><span class="sxs-lookup"><span data-stu-id="47fcd-104">ID</span></span>|<span data-ttu-id="47fcd-105">1419</span><span class="sxs-lookup"><span data-stu-id="47fcd-105">1419</span></span>|  
-|<span data-ttu-id="47fcd-106">키워드</span><span class="sxs-lookup"><span data-stu-id="47fcd-106">Keywords</span></span>|<span data-ttu-id="47fcd-107">할당량</span><span class="sxs-lookup"><span data-stu-id="47fcd-107">Quota</span></span>|  
-|<span data-ttu-id="47fcd-108">수준</span><span class="sxs-lookup"><span data-stu-id="47fcd-108">Level</span></span>|<span data-ttu-id="47fcd-109">정보</span><span class="sxs-lookup"><span data-stu-id="47fcd-109">Information</span></span>|  
-|<span data-ttu-id="47fcd-110">채널</span><span class="sxs-lookup"><span data-stu-id="47fcd-110">Channel</span></span>|<span data-ttu-id="47fcd-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="47fcd-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="bc85d-104">ID</span><span class="sxs-lookup"><span data-stu-id="bc85d-104">ID</span></span>|<span data-ttu-id="bc85d-105">1419</span><span class="sxs-lookup"><span data-stu-id="bc85d-105">1419</span></span>|  
+|<span data-ttu-id="bc85d-106">키워드</span><span class="sxs-lookup"><span data-stu-id="bc85d-106">Keywords</span></span>|<span data-ttu-id="bc85d-107">할당량</span><span class="sxs-lookup"><span data-stu-id="bc85d-107">Quota</span></span>|  
+|<span data-ttu-id="bc85d-108">Level</span><span class="sxs-lookup"><span data-stu-id="bc85d-108">Level</span></span>|<span data-ttu-id="bc85d-109">정보</span><span class="sxs-lookup"><span data-stu-id="bc85d-109">Information</span></span>|  
+|<span data-ttu-id="bc85d-110">채널</span><span class="sxs-lookup"><span data-stu-id="bc85d-110">Channel</span></span>|<span data-ttu-id="bc85d-111">Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그</span><span class="sxs-lookup"><span data-stu-id="bc85d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="47fcd-112">설명</span><span class="sxs-lookup"><span data-stu-id="47fcd-112">Description</span></span>  
- <span data-ttu-id="47fcd-113">이 이벤트는 보류 중인 최대 연결 수를 초과할 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="47fcd-113">This event is emitted when maximum pending connections are exceeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="bc85d-112">Description</span><span class="sxs-lookup"><span data-stu-id="bc85d-112">Description</span></span>  
+
+ <span data-ttu-id="bc85d-113">이 이벤트는 보류 중인 최대 연결 수를 초과할 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="bc85d-113">This event is emitted when maximum pending connections are exceeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="47fcd-114">메시지</span><span class="sxs-lookup"><span data-stu-id="47fcd-114">Message</span></span>  
- <span data-ttu-id="47fcd-115">1%</span><span class="sxs-lookup"><span data-stu-id="47fcd-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="bc85d-114">메시지</span><span class="sxs-lookup"><span data-stu-id="bc85d-114">Message</span></span>  
+
+ <span data-ttu-id="bc85d-115">1%</span><span class="sxs-lookup"><span data-stu-id="bc85d-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="47fcd-116">설명</span><span class="sxs-lookup"><span data-stu-id="47fcd-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="bc85d-116">세부 정보</span><span class="sxs-lookup"><span data-stu-id="bc85d-116">Details</span></span>
