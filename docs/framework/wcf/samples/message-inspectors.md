@@ -3,14 +3,15 @@ title: 메시지 검사자
 description: 메시지 유효성 검사 메커니즘을 제공 하는 WCF 클라이언트 및 서비스 메시지 검사기를 구현 하 고 구성 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 20abb655a58f9dce4a967ade9b51db90eed2375b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 4b2f7b97d0895e3cb7550217f64a2b0b14545abf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246210"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240708"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
+
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
   
  메시지 검사자는 서비스 모델의 클라이언트 런타임 및 디스패치 런타임에서 프로그래밍 방식으로나 구성을 통해 사용할 수 있으며, 메시지를 받은 후나 보내기 전에 해당 메시지를 검사하고 변경할 수 있는 확장성 개체입니다.  
@@ -18,6 +19,7 @@ ms.locfileid: "85246210"
  이 샘플에서는 구성 가능한 XML 스키마 문서 집합에 대해 들어오는 메시지의 유효성을 검사하는 기본 클라이언트 및 서비스 메시지 유효성 검사 메커니즘을 구현합니다. 이 샘플에서는 각 작업에 대해 메시지의 유효성을 검사하지 않습니다. 이는 의도적으로 작업을 단순화하기 위한 것입니다.  
   
 ## <a name="message-inspector"></a>메시지 검사기  
+
  클라이언트 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 인터페이스를 구현하고 서비스 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 인터페이스를 구현합니다. 이러한 구현을 단일 클래스로 결합하여 양쪽에서 작동하는 메시지 검사자를 구성할 수 있습니다. 이 샘플에서는 이렇게 결합된 메시지 검사자를 구현합니다. 검사자는 들어오는 메시지와 나가는 메시지의 유효성을 검사하는 스키마 집합에 전달되어 구성되며, 이 검사자를 통해 개발자는 들어오는 메시지나 나가는 메시지의 유효성을 검사할지 여부와 검사자가 디스패치 모드에 있는지 클라이언트 모드에 있는지를 지정합니다. 이는 이 항목의 뒷부분에서 설명하는 오류 처리에 영향을 줄 수 있습니다.  
   
 ```csharp
@@ -203,7 +205,8 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>동작  
- 메시지 검사자는 클라이언트 런타임이나 디스패치 런타임의 확장입니다. 이러한 확장은 *동작*을 사용 하 여 구성 됩니다. 동작은 기본 구성을 변경하거나 메시지 검사자와 같은 확장을 기본 구성에 추가하여 서비스 모델 런타임의 동작을 변경하는 클래스입니다.  
+
+ 메시지 검사자는 클라이언트 런타임이나 디스패치 런타임의 확장입니다. 이러한 확장은 *동작* 을 사용 하 여 구성 됩니다. 동작은 기본 구성을 변경하거나 메시지 검사자와 같은 확장을 기본 구성에 추가하여 서비스 모델 런타임의 동작을 변경하는 클래스입니다.  
   
  다음 `SchemaValidationBehavior` 클래스는 클라이언트 런타임이나 디스패치 런타임에 이 샘플의 메시지 검사자를 추가하는 데 사용된 동작입니다. 두 경우 모두 기본 구현에 해당됩니다. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 및 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>에서는 메시지 검사자를 만들어 해당 런타임의 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 컬렉션에 추가합니다.  
   
@@ -260,6 +263,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > 이 특정 동작은 특성을 겸용하지 않으므로 서비스 유형의 계약 형식에 선언적으로 추가할 수 없습니다. 이 동작은 특성 선언에서 스키마 컬렉션을 로드할 수 없기 때문에 디자인에 따라 결정되며 이 특성의 추가 구성 위치(예: 애플리케이션 설정)를 참조하는 것은 나머지 서비스 모델 구성과 일치하지 않는 구성 요소를 만든다는 의미입니다. 따라서 이 동작은 코드와 서비스 모델 구성 확장을 통해 명령적으로만 추가할 수 있습니다.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>구성을 통해 메시지 검사자 추가  
+
  응용 프로그램 구성 파일에서 끝점에 대 한 사용자 지정 동작을 구성 하려면 서비스 모델에서 구현자를 통해에서 파생 된 클래스로 표현 되는 구성 *확장 요소* 를 만들어야 합니다 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> . 그런 다음 이 섹션에 설명된 다음 확장에 대해 표시된 대로 확장에 대한 서비스 모델의 구성 섹션에 이 확장을 추가해야 합니다.  
   
 ```xml  
@@ -368,6 +372,7 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>명령으로 메시지 검사자 추가  
+
  앞에서 설명한 이유로 인해 이 샘플에서 지원되지 않는 특성 및 구성이 아닌 동작은 명령 코드를 사용하여 클라이언트 및 서비스 런타임에 매우 쉽게 추가할 수 있습니다. 이 샘플에서는 클라이언트 애플리케이션에서 이 작업을 수행하여 클라이언트 메시지 검사자를 테스트합니다. ph x="1" /&gt; 클래스는 엔드포인트 구성을 사용자 코드에 노출하는 <xref:System.ServiceModel.ClientBase%601>에서 파생됩니다. 예를 들어, 다음 코드와 같이 동작을 추가하면 클라이언트를 암시적으로 열기 전에 엔드포인트 구성을 변경할 수 있습니다. 서비스에서 동작을 추가하는 작업은 여기에 표시된 클라이언트 기술과 거의 동일하며 서비스 호스트를 열기 전에 수행해야 합니다.  
   
 ```csharp  

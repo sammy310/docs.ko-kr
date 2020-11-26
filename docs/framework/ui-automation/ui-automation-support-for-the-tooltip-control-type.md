@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: af9c9e0c67026ab339d08876bc5133fa42d1a5b7
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8c4f66de95acd3f18148887b4eb18713cb30fa87
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163171"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240188"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>ToolTip 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,19 +26,23 @@ ms.locfileid: "87163171"
  다음 섹션에서는 ToolTip 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 도구 설명 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 도구 설명 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
-|도구 설명<br /><br /> -Text (0 개 이상)<br />-Image (0 개 이상)|도구 설명|  
+|ToolTip<br /><br /> -Text (0 개 이상)<br />-Image (0 개 이상)|ToolTip|  
   
  도구 설명 컨트롤은 키보드 포커스를 받을 수 있는 경우 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에만 나타납니다. 그렇지 않으면, 도구 설명이 참조하는 `HelpTextProperty` 요소의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 모든 도구 설명의 정보를 사용할 수 있습니다.  
   
  도구 설명은 정보가 참조하는 컨트롤 아래에 나타납니다. 클라이언트는 `ToolTipOpenedEvent` 를 수신 대기해야 도구 설명에 포함된 정보를 지속적으로 가져올 수 있습니다.  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 도구 설명 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|  
@@ -48,27 +53,31 @@ ms.locfileid: "87163171"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|도구 설명 컨트롤의 이름은 도구 설명 내에 표시되는 텍스트입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|도구 설명 컨트롤은 콘텐츠에 의해 항상 자체적으로 레이블이 지정됩니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|도구 설명|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tool tip"|ToolTip 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|개체|도구 설명 컨트롤이 키보드 포커스를 받을 수 있는 경우 트리의 콘텐츠 뷰에 있어야 합니다. 텍스트만 있는 경우에는 해당 컨트롤에서 HelpTextProperty로 사용할 수 있습니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|도구 설명 컨트롤이 항상 컨트롤이어야 합니다.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
+
  다음 표에서는 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|참고|  
+|컨트롤 패턴|지원|메모|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|개체|UI 항목을 클릭하여 닫을 수 있는 도구 설명은 WindowPattern을 지원해야 자동으로 닫을 수 있습니다.|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|개체|접근성 향상을 위해, 도구 설명은 Text 컨트롤 패턴을 지원할 수 있지만 반드시 필요한 것은 아닙니다. Text 컨트롤 패턴은 텍스트에 다양한 스타일과 특성(예: 색, 굵은 글꼴, 기울임꼴)이 있을 때 유용합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  도구 설명 컨트롤이 화면에 표시되면 `ToolTipOpenedEvent` 가 발생해야 합니다. 이 이벤트에는 도구 설명 자체의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에 대한 참조가 포함됩니다.  
   
  다음 표에서는 모든 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|개체|없음|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|개체|없음|  

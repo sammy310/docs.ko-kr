@@ -7,18 +7,19 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 84b176e53f16ba0676e933efe9ed679bf425abc0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 50c811a4b9b3b191abc35c5b3eb1220fec4ba3bd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240500"
 ---
 # <a name="ui-automation-overview"></a>UI 자동화 개요
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]는를 지 원하는 모든 운영 체제에서 사용할 수 있는 Microsoft Windows의 새로운 접근성 프레임 워크입니다 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] .  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 는를 지 원하는 모든 운영 체제에서 사용할 수 있는 Microsoft Windows의 새로운 접근성 프레임 워크입니다 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] .  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 데스크톱에 있는 대부분의 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소에 대해 프로그래밍 방식의 액세스 권한을 제공하여, 화면 읽기 프로그램과 같은 보조 기술 제품에서 최종 사용자에게 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에 관련 정보를 제공하고 표준 입력 이외의 방법으로 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 을 조작하도록 할 수 있습니다. 또한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 자동화된 테스트 스크립트가 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]와 상호 작용할 수 있도록 합니다.  
   
@@ -32,7 +33,9 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
  UI 자동화 공급자는 기본 제공 브리징 서비스를 통해 Microsoft Active Accessibility 클라이언트 응용 프로그램에 대 한 일부 지원을 제공 합니다.  
   
 <a name="Providers_and_Clients"></a>
+
 ## <a name="providers-and-clients"></a>공급자 및 클라이언트  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에는 다음 표에서와 같이 4개의 주요 구성 요소가 있습니다.  
   
 |구성 요소|Description|  
@@ -46,12 +49,12 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
   
 |섹션|실무|사용자|  
 |-------------|--------------------|--------------|  
-|[UI 자동화 기본 사항](index.md) (이 섹션)|개념에 대한 광범위한 개요입니다.|모두|  
+|[UI 자동화 기본 사항](index.md) (이 섹션)|개념에 대한 광범위한 개요입니다.|모두.|  
 |[관리 코드에 대한 UI 자동화 공급자](ui-automation-providers-for-managed-code.md)|공급자 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|컨트롤 개발자입니다.|  
 |[관리 코드에 대한 UI 자동화 클라이언트](ui-automation-clients-for-managed-code.md)|클라이언트 API 사용에 도움을 주는 개념 및 방법에 대한 항목입니다.|클라이언트 애플리케이션 개발자.|  
-|[UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)|공급자가 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두|  
-|[UI 자동화 텍스트 패턴](ui-automation-text-pattern.md)|공급자가 Text 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두|  
-|[UI 자동화 컨트롤 형식](ui-automation-control-types.md)|다른 컨트롤 형식에서 지원하는 속성 및 컨트롤 패턴에 대한 정보입니다.|모두|  
+|[UI 자동화 컨트롤 패턴](ui-automation-control-patterns.md)|공급자가 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
+|[UI 자동화 텍스트 패턴](ui-automation-text-pattern.md)|공급자가 Text 컨트롤 패턴을 구현하는 방법 및 클라이언트에 사용 가능한 기능에 대한 정보입니다.|모두.|  
+|[UI 자동화 컨트롤 형식](ui-automation-control-types.md)|다른 컨트롤 형식에서 지원하는 속성 및 컨트롤 패턴에 대한 정보입니다.|모두.|  
   
  다음 표에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스, 네임스페이스를 포함하는 DLL, 네임스페이스를 사용하는 대상을 나열하여 보여줍니다.  
   
@@ -63,7 +66,9 @@ UI 자동화는 .NET Framework를 실행 하는 지원 되는 Windows 운영 체
 |<xref:System.Windows.Automation.Peers>|PresentationFramework|[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]의 UI 자동화 공급자 개발자.|  
   
 <a name="UI_Automation_Model"></a>
+
 ## <a name="ui-automation-model"></a>UI 자동화 모델  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 항목을 <xref:System.Windows.Automation.AutomationElement>로 클라이언트 애플리케이션에 노출합니다. 요소는 루트 요소로 데스크톱과 함께 트리 구조에 포함됩니다. 클라이언트는 트리의 Raw 보기를 컨트롤 뷰 또는 콘텐츠 뷰로 필터링할 수 있습니다. 애플리케이션은 사용자 지정 뷰를 만들 수도 있습니다.  
   
  <xref:System.Windows.Automation.AutomationElement> 개체는 이 개체가 나타내는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소의 공용 속성을 노출합니다. 이러한 속성 중 하나는 인식할 수 있는 단일 엔터티로 기본 모양과 기능을 정의하는 컨트롤 형식입니다(예: 단추 또는 확인란).  

@@ -2,14 +2,15 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: b9a517d0f8ada3680d49cd5ab0b13fa9e4d85402
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a3362ee33e6d3813d6715646ecb7d066f1930c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600064"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240916"
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
+
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
   
  이 샘플에서는 클라이언트와 서비스 모두가 콘솔 프로그램(.exe)입니다. 클라이언트와 서비스 모두 사용자 지정 바인딩 요소 및 관련 런타임 개체를 포함하는 공용 라이브러리(.dll)를 사용합니다.  
@@ -37,9 +38,11 @@ ms.locfileid: "84600064"
 4. 새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
   
 ## <a name="channel-shapes"></a>채널 셰이프  
+
  사용자 지정 계층화된 채널을 작성하는 첫 번째 단계는 채널에 필요한 셰이프를 결정하는 것입니다. 메시지 검사자를 위해 아래의 계층이 지원하는 모든 셰이프를 지원합니다. 예를 들어, 아래의 계층이 <xref:System.ServiceModel.Channels.IOutputChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 빌드할 수 있는 경우 <xref:System.ServiceModel.Channels.IOutputChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>도 노출합니다.  
   
 ## <a name="channel-factory-and-listener-factory"></a>채널 팩터리 및 수신기 팩터리  
+
  사용자 지정 계층화된 채널을 작성하는 두 번째 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory> 구현 및 서비스 채널을 위한 <xref:System.ServiceModel.Channels.IChannelListener> 구현을 만드는 것입니다.  
   
  이 클래스는 내부 팩터리 및 수신기를 받고 `OnCreateChannel` 및 `OnAcceptChannel` 호출을 제외한 모두를 내부 팩터리 및 수신기에 위임합니다.  
@@ -57,7 +60,8 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
- 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement`는를 `ChannelMessageInterceptor` 입력으로 사용 하 고이를 `ChannelMessageInterceptor` 통해 전달 되는 메시지를 조작 합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널 모두 public 런타임 인터페이스의 내부 구현이 될 수 있습니다.  
+
+ 이 샘플에서는 사용자 지정 바인딩 요소인 `InterceptingBindingElement`를 정의합니다. `InterceptingBindingElement` 는를 `ChannelMessageInterceptor` 입력으로 사용 하 고이를 `ChannelMessageInterceptor` 통해 전달 되는 메시지를 조작 합니다. 이는 public이어야 하는 유일한 클래스입니다. 팩터리, 수신기 및 채널 모두 public 런타임 인터페이스의 내부 구현이 될 수 있습니다.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -66,6 +70,7 @@ public class InterceptingBindingElement : BindingElement
 ```  
   
 ## <a name="adding-configuration-support"></a>구성 지원 추가  
+
  바인딩 구성과 통합하기 위해 라이브러리에서는 구성 섹션 처리기를 바인딩 요소 확장 섹션으로 정의합니다. 클라이언트 및 서버 구성 파일은 구성 시스템에 바인딩 요소 확장을 등록해야 합니다. 구성 시스템에 바인딩 요소를 노출하려는 구현자는 이 클래스에서 파생할 수 있습니다.  
   
 ```csharp
@@ -76,9 +81,11 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>정책 추가  
+
  정책 시스템과 통합하기 위해 `InterceptingBindingElement`는 IPolicyExportExtension을 구현하여 정책 생성에 참여해야 함을 나타냅니다. 생성된 클라이언트에 정책을 가져오는 것을 지원하기 위해 사용자는 `InterceptingBindingElementImporter`의 파생 클래스를 등록하고 해당 정책을 사용하는 `CreateMessageInterceptor` 클래스를 생성하도록 `ChannelMessageInterceptor`()를 재정의할 수 있습니다.  
   
 ## <a name="example-droppable-message-inspector"></a>예제: 삭제 가능한 메시지 검사자  
+
  메시지를 삭제하는 `ChannelMessageInspector`의 구현 예제가 샘플에 포함되어 있습니다.  
   
 ```csharp

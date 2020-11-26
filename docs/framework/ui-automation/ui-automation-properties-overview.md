@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95729c1d26a9ae7fdec4fa4215f9478251612242
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240396"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87163205"
 - [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>
+
 ## <a name="property-identifiers"></a>속성 식별자  
+
  모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 Id를 사용 하 여 들어오는 속성 요청을 식별 합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
   
  특정 속성을 나타내는<xref:System.Windows.Automation.AutomationProperty> 개체는 다양한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
@@ -53,7 +56,9 @@ ms.locfileid: "87163205"
 |창의 기능 및 상태|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>
+
 ## <a name="properties-by-category"></a>항목별 속성  
+
  다음 표에서는 및에서 Id를 찾을 수 있는 속성을 분류 합니다 <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> . 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
   
  **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)을 참조하세요.  
@@ -81,7 +86,7 @@ ms.locfileid: "87163205"
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### <a name="identification"></a>식별  
+### <a name="identification"></a>Identification  
   
 |속성 식별자|속성 액세스|  
 |-------------------------|---------------------|  
@@ -94,7 +99,7 @@ ms.locfileid: "87163205"
 |<xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty>|<xref:System.Windows.Automation.AutomationElement.GetRuntimeId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle%2A>|  
   
-### <a name="interaction"></a>상호 작용  
+### <a name="interaction"></a>조작  
   
 |속성 식별자|속성 액세스|  
 |-------------------------|---------------------|  
@@ -137,7 +142,9 @@ ms.locfileid: "87163205"
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>
+
 ## <a name="localization"></a>지역화  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 운영 체제의 언어에 다음과 같은 속성을 제공해야 합니다.  
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
@@ -151,7 +158,9 @@ ms.locfileid: "87163205"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>
+
 ## <a name="properties-and-events"></a>속성 및 이벤트  
+
  의 속성을 사용한 밀접한 관계는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 변경 이벤트의 개념입니다. 동적 속성의 경우, 클라이언트 애플리케이션에서는 속성 값이 변경되었는지 확인하는 방법이 필요합니다. 그에 따라 정보 캐시를 업데이트하거나 다른 방법으로 새로운 정보에 대응할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에 변경이 수행되면 공급자가 이벤트를 발생시킵니다. 예를 들어, 확인란이 선택되거나 선택 취소되면 공급자의 Toggle 패턴 구현에서 속성 변경 이벤트가 발생합니다. 공급자는 클라이언트가 이벤트 또는 특정 이벤트를 수신 대기하는지에 따라 선택적으로 이벤트를 발생시킬 수 있습니다.  

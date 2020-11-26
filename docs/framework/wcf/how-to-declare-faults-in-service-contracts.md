@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 2de14a76fd2ce8ad656c2b64f5f9e5b17d81eebc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 06262d5f698f8898e162e92dad272a7188897af0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216869"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240058"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>방법: 서비스 계약에서 오류 선언
 
@@ -18,7 +18,7 @@ ms.locfileid: "71216869"
 
 ## <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>SOAP 오류를 지정하는 서비스 계약 만들기
 
-1. 작업을 하나 이상 포함하는 서비스 계약을 만듭니다. 예는 [방법: 서비스 계약](how-to-define-a-wcf-service-contract.md)을 정의 합니다.
+1. 작업을 하나 이상 포함하는 서비스 계약을 만듭니다. 예제는 [방법: 서비스 계약 정의](how-to-define-a-wcf-service-contract.md)를 참조 하세요.
 
 2. 클라이언트가 알림을 받을 수 있는 오류 조건을 지정할 수 있는 작업을 선택합니다. 클라이언트에 SOAP 오류를 반환 하는 오류 조건을 결정 하려면 [계약 및 서비스에서 오류 지정 및 처리](specifying-and-handling-faults-in-contracts-and-services.md)를 참조 하세요.
 
@@ -30,6 +30,7 @@ ms.locfileid: "71216869"
 4. 오류 조건을 클라이언트에 전달하는 계약의 모든 작업에 대해 2단계와 3단계를 반복합니다.
 
 ## <a name="implementing-an-operation-to-return-a-specified-soap-fault"></a>지정한 SOAP 오류를 반환하는 작업 구현
+
  앞의 절차와 같이 특정 SOAP 오류를 반환하여 오류 조건을 호출 애플리케이션에 전달할 수 있도록 작업에서 지정하고 나면 다음 단계로 해당 사양을 구현합니다.
 
 ### <a name="throw-the-specified-soap-fault-in-the-operation"></a>작업에서 지정한 SOAP 오류 throw

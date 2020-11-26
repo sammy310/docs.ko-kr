@@ -2,14 +2,15 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 9123167e0f97592592765f7b4a4aa768064fc173
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e095221e1f17cdf4a63c2fe86d5ba050e354e471
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596606"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240695"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
+
 `CustomChannelsTester`는 미리 정의된 서비스 계약 집합에 대해 사용자 지정 채널 구현을 테스트하는 데 사용할 수 있는 도구입니다. 서비스 계약 집합을 선택한 다음 XML 파일을 사용하여 이 도구에 전달할 수 있습니다. 그러면 이 도구는 메시지 교환 중에 사용자 지정 채널 구현을 연습하는 서비스와 클라이언트를 생성합니다.  
   
 ### <a name="to-build-the-tool"></a>도구를 빌드하려면  
@@ -28,7 +29,7 @@ ms.locfileid: "84596606"
   
      `/binding` 옵션은 필수적 요소입니다.  
   
-     `/dll`"바인딩"이 Windows Communication Foundation (WCF)에서 제공 하는 시스템 제공 바인딩이 아닌 경우 필요 합니다.  
+     `/dll` "바인딩"이 Windows Communication Foundation (WCF)에서 제공 하는 시스템 제공 바인딩이 아닌 경우 필요 합니다.  
   
      `/testspec`는 선택 사항입니다.  
   

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9b5bfd571b078b7aeab149f5371004ac832fadcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164076"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239564"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI 자동화 RangeValue 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87164076"
  <xref:System.Windows.Automation.RangeValuePattern> 컨트롤 패턴은 범위 내의 값으로 설정할 수 있는 컨트롤을 지원하는 데 사용됩니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Range Value 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - 컨트롤을 통해 로캘 또는 사용자 기본 설정에 따라 지원되는 속성을 보정할 수 있습니다. 이러한 예로 온도가 화씨 또는 섭씨로 표시되도록 설정할 수 있는 온도계 컨트롤이 있습니다.  
@@ -34,6 +37,7 @@ ms.locfileid: "87164076"
 이 예로는 값이 정수 유형인 진행률 표시줄이며 최소 및 최대 속성 값이 각각 0과 100으로 정규화됩니다.  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
+
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider에 필요한 멤버  
   
 |필요한 멤버|멤버 형식|참고|  
@@ -49,7 +53,9 @@ ms.locfileid: "87164076"
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
 |예외 종류|조건|  

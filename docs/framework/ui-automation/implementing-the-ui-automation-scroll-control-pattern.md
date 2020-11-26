@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 830d65286f27302dcad109384b8df187ed4af1a5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 4069772530d8b4db817aa1b7a9be86a3ee83881e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239265"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI 자동화 Scroll 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -28,7 +29,9 @@ ms.locfileid: "87166986"
  이 컨트롤을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Scroll 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - 이 컨트롤의 자식 항목은 <xref:System.Windows.Automation.Provider.IScrollItemProvider>를 구현해야 합니다.  
@@ -44,7 +47,9 @@ ms.locfileid: "87166986"
 - <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 는 로캘과 관련됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
   
 <a name="Required_Members_for_IScrollProvider"></a>
+
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider에 필요한 멤버  
+
  <xref:System.Windows.Automation.Provider.IScrollProvider>를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
 |필요한 멤버|멤버 형식|참고|  
@@ -61,7 +66,9 @@ ms.locfileid: "87166986"
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
 |예외 유형|조건|  
@@ -71,7 +78,7 @@ ms.locfileid: "87166986"
 |<xref:System.ArgumentOutOfRangeException>|100보다 크거나 0보다 작은 값이 전달되는 경우(<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 에 해당하는 -1 제외) <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>가 이 예외를 발생시킵니다.|  
 |<xref:System.InvalidOperationException>|지원되지 않는 방향으로 스크롤이 시도되면 <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 및 <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 둘 다 이 예외를 발생시킵니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)

@@ -6,22 +6,24 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240591"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
+
 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
   
  모든 로더 이벤트는 `LoaderKeyword` (0x8) 키워드에서 발생합니다. `DCStart` 및 `DCEnd` 이벤트는 `StartRundown`/`EndRundown`이 사용되는 `LoaderRundownKeyword`(0x8)에서 발생합니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
 
 ## <a name="application-domain-events"></a>애플리케이션 도메인 이벤트
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 및 `AppDomainUnLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|정보(4)|  
@@ -29,7 +31,7 @@ ms.locfileid: "86474360"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (모든 애플리케이션 도메인에 대해 기록됨)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
 |`AppDomainUnLoad_V1`|157|프로세스 수명 중에 애플리케이션 도메인이 삭제될 때마다 발생합니다.|  
@@ -47,9 +49,10 @@ ms.locfileid: "86474360"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
 
 ## <a name="clr-loader-assembly-events"></a>CLR 로더 어셈블리 이벤트  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 및 `AssemblyUnload`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|정보(4)|  
@@ -57,7 +60,7 @@ ms.locfileid: "86474360"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|어셈블리가 로드될 때 발생합니다.|  
 |`AssemblyUnload_V1`|155|어셈블리가 언로드될 때 발생합니다.|  
@@ -76,9 +79,10 @@ ms.locfileid: "86474360"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|
 
 ## <a name="module-events"></a>모듈 이벤트
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 및 `ModuleUnload_V2`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|정보(4)|  
@@ -87,7 +91,7 @@ ms.locfileid: "86474360"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|프로세스 수명 중에 모듈이 로드될 때 발생합니다.|  
 |`ModuleUnload_V2`|153|프로세스 수명 중에 모듈이 언로드될 때 발생합니다.|  
@@ -121,9 +125,10 @@ ms.locfileid: "86474360"
 - "NativePdb"로 시작하는 필드 이름은 `NGEN createPDB`를 호출하여 생성된 NGen PDB를 나타냅니다. 이 PDB는 네이티브 PDB 형식을 사용하고 원래 관리되는 소스 코드의 요소(예: 파일, 줄 번호 및 기호 이름)를 NGen 모듈로 컴파일된 네이티브 요소에 매핑하는 방법을 설명합니다.  
 
 ## <a name="clr-domain-module-events"></a>CLR 도메인 모듈 이벤트
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|정보(4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|정보(4)|  
@@ -131,7 +136,7 @@ ms.locfileid: "86474360"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|애플리케이션 도메인에 대한 모듈이 로드될 때 발생합니다.|  
 |`DomainModuleDCStart_V1`|151|시작 런다운 중에 애플리케이션 도메인에 대해 로드된 모듈을 열거하고 모든 애플리케이션 도메인에 대해 기록됩니다.|  
@@ -151,9 +156,10 @@ ms.locfileid: "86474360"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
 
 ## <a name="module-range-events"></a>모듈 범위 이벤트
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|이벤트|수준|  
+|이벤트를 발생시키기 위한 키워드|이벤트|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|정보(4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|정보(4)|  
@@ -161,7 +167,7 @@ ms.locfileid: "86474360"
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|이 이벤트는 로드된 네이티브 이미지 생성기(NGen) 이미지가 IBC로 최적화된 경우 존재하고 NGen 이미지의 핫 섹션에 대한 정보를 포함합니다.|  
 |`ModuleRangeDCStart`|160|런다운 시작 시 발생한 `ModuleRange` 이벤트입니다.|  
@@ -180,6 +186,7 @@ ms.locfileid: "86474360"
 |RangeBegin2|win:UnicodeString||  
   
 ### <a name="remarks"></a>설명  
+
  .NET Framework 프로세스에서 로드된 NGen 이미지가 IBC로 최적화된 경우 NGen 이미지의 핫 범위를 포함하는 `ModuleRange` 이벤트가 `moduleID` 및 `ClrInstanceID`와 함께 기록됩니다.  NGen 이미지가 IBC로 최적화되지 않으면 이 이벤트가 기록되지 않습니다. 모듈 이름을 확인하려면 이 이벤트를 모듈 로드 ETW 이벤트와 대조해야 합니다.  
   
  이 이벤트의 페이로드 크기는 변수이고, `Count` 필드는 이벤트에 포함된 범위 오프셋 수를 나타냅니다.  실제 범위를 확인하려면 이 이벤트를 Windows `IStart` 이벤트와 대조해야 합니다. Windows 이미지 로드 이벤트는 이미지가 로드될 때마다 기록되고 로드된 이미지의 가상 주소를 포함합니다.  

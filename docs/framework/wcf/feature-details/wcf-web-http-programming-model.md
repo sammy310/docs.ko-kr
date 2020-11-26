@@ -6,17 +6,19 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239005"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF 웹 HTTP 프로그래밍 모델
+
 개발자는 WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델을 사용 하 여 WCF 서비스 작업을 비 SOAP 끝점에 노출할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [WCF 웹 HTTP 프로그래밍 모델 개요](wcf-web-http-programming-model-overview.md)  
  WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델에 대 한 개요를 제공 합니다.  
   

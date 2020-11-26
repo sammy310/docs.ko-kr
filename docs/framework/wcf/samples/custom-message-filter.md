@@ -2,14 +2,15 @@
 title: 사용자 지정 메시지 필터
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 0e4da0f2283fd537afe3cacdddfb36c327cfd3b4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 24dab723a06c128337c1d956a98a1aa85a258e33
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600046"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240929"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
+
 이 샘플에서는 WCF (Windows Communication Foundation)에서 메시지를 끝점으로 디스패치할 때 사용 하는 메시지 필터를 대체 하는 방법을 보여 줍니다.  
   
 > [!NOTE]

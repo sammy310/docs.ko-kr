@@ -2,20 +2,22 @@
 title: Custom Secure Metadata Endpoint
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555564"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240903"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Custom Secure Metadata Endpoint
+
 이 샘플에서는 비 메타 데이터 교환 바인딩 중 하나를 사용 하는 보안 메타 데이터 끝점을 사용 하 여 서비스를 구현 하는 방법과 이러한 메타 데이터 끝점에서 메타 데이터를 인출 하도록 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 또는 클라이언트를 구성 하는 방법을 보여 줍니다. 메타데이터 엔드포인트를 노출하는 데 시스템에서 제공한 두 가지 바인딩, mexHttpBinding 및 mexHttpsBinding을 사용할 수 있습니다. mexHttpBinding은 HTTP를 통해 비보안 방식으로 메타데이터 엔드포인트를 노출하는 데 사용되고, mexHttpsBinding은 HTTPS를 통해 보안 방식으로 메타데이터 엔드포인트를 노출하는 데 사용됩니다. 이 샘플에서는 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 보안 메타데이터 엔드포인트를 노출하는 방법을 보여 줍니다. 바인딩의 보안 설정을 변경하려고 하지만 HTTPS를 사용하지 않으려는 경우 이 방법을 사용할 수 있습니다. mexHttpsBinding을 사용하면 메타데이터 엔드포인트가 보안되지만 바인딩 설정은 수정할 수 없습니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="service"></a>서비스  
+
  이 샘플의 서비스에는 두 개의 엔드포인트가 있습니다. 애플리케이션 엔드포인트에서는 인증서를 통한 `ICalculator` 보안 및 `WSHttpBinding`이 설정된 `ReliableSession`에서 `Message` 계약을 처리합니다. 메타데이터 엔드포인트에서는 보안 설정은 동일하지만 `WSHttpBinding`이 없는 `ReliableSession`을 사용합니다. 관련 구성은 다음과 같습니다.  
   
 ```xml  
@@ -57,6 +59,7 @@ ms.locfileid: "90555564"
  두 번째 클라이언트는 `MetadataResolver`를 사용하여 알려진 계약에 대한 메타데이터를 동적으로 페치한 다음 동적으로 생성된 클라이언트에서 작업을 호출합니다.  
   
 ## <a name="svcutil-client"></a>Svcutil 클라이언트  
+
  ph x="1" /&gt; 엔드포인트를 호스팅하기 위해 기본 바인딩을 사용할 경우 해당 엔드포인트의 주소와 함께 Svcutil.exe를 실행할 수 있습니다.  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  선행 ". \\ " 이 디렉터리에 있는 Svcutil.exe의 복사본 (해당 Svcutil.exe.config를 포함 하는)이 실행 되는지 확인 합니다.  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 클라이언트  
+
  클라이언트는 계약을 알고 있고 디자인 타임에 메타데이터에 통신하는 방법을 알고 있는 경우 `MetadataResolver`를 사용하여 애플리케이션 엔드포인트의 바인딩과 주소를 동적으로 찾을 수 있습니다. 이 작업을 보여 주기 위해 이 샘플 클라이언트에서는 `MetadataResolver`를 만들고 구성하여 `MetadataExchangeClient`에 사용되는 바인딩과 자격 증명을 구성하는 방법을 제공합니다.  
   
  Svcutil.exe.config에 표시된 것과 동일한 바인딩 및 인증서 정보를 `MetadataExchangeClient`에서 명령 형식으로 지정할 수 있습니다.  
@@ -175,7 +179,7 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
 - 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
-    > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다. 예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    > 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다. 예를 들면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`과 다음과 같습니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

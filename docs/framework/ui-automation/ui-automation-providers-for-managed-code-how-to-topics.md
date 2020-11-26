@@ -9,20 +9,22 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ed296daf24b6a3f8e8ced5c843151cc8478ead9d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 6ed4994d6e1f0f1a59d0fa36ffd5d8e17673cc7e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240357"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>관리 코드 방법 항목의 UI 자동화 공급자
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 섹션에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소에 대 한 공급자를 작성 하는 작업을 보여 주는 코드 예제가 포함 되어 있습니다 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [서버 쪽 UI 자동화 공급자 노출](expose-a-server-side-ui-automation-provider.md)  
  [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)  
  [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)  

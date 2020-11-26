@@ -7,14 +7,15 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 0d65d57637891fcb1307f5ee83a417941ff323fb
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7e64a696e8dc96123631853b06ea3ccee434d2f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239435"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI 자동화 MultipleView 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87168230"
  여러 뷰를 표시할 수 있는 컨트롤의 예로는 목록 뷰가 있습니다. 여기에는 해당 내용이 축소판 그림으로 표시 될 수 있습니다. 타일, 아이콘 또는 세부 정보), Microsoft Excel 차트 (원형, 꺾은선형, 가로 막대형, 수식이 있는 셀 값), Microsoft Word 문서 (보통, 웹 레이아웃, 인쇄 레이아웃, 읽기 레이아웃, 개요), Microsoft Outlook 일정 (연도, 월, 주, 일) 및 Microsoft Windows Media Player 스킨이 있습니다. 지원되는 뷰는 컨트롤 개발자가 결정하며 컨트롤마다 다릅니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Multiple View 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - <xref:System.Windows.Automation.Provider.IMultipleViewProvider> 가 현재 보기를 제공하는 컨트롤과 다를 경우 현재 보기를 관리하는 컨테이너에도 구현해야 합니다. 예를 들어, 컨트롤의 뷰가 Windows 탐색기 애플리케이션에서 관리되는 동안 Windows 탐색기에는 현재 폴더 내용에 대한 목록 컨트롤이 포함됩니다.  
@@ -37,7 +40,9 @@ ms.locfileid: "87168230"
 - 뷰 이름은 텍스트 읽어주기, 브라유 점자 및 기타 사람이 읽을 수 있는 애플리케이션에서 사용하기 적합해야 합니다.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>
+
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider에 필요한 멤버  
+
  IMultipleViewProvider를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
 |필요한 멤버|멤버 형식|참고|  
@@ -50,7 +55,9 @@ ms.locfileid: "87168230"
  이 컨트롤 패턴과 관련된 이벤트가 없습니다.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 발생해야 합니다.  
   
 |예외 종류|조건|  
