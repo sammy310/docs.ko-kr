@@ -2,14 +2,15 @@
 title: 사용자 지정 찾기 조건
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 3bafe89f5c114106eece02c41599cf485591c1cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9271ae1ec4bbd555fe93df24c7d38f0f345a03ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241813"
 ---
 # <a name="custom-find-criteria"></a>사용자 지정 찾기 조건
+
 이 샘플에서는 논리를 사용하여 사용자 지정 범위 일치를 만드는 방법과 사용자 지정 검색 서비스를 구현하는 방법을 보여 줍니다. 클라이언트에서는 사용자 지정 범위 일치 기능을 사용하여 WCF 검색의 시스템 제공 찾기 기능을 구체화하고 보다 세부적으로 빌드합니다. 이 샘플에서 다루는 시나리오는 다음과 같습니다.  
   
 1. 클라이언트에서 계산기 서비스를 찾습니다.  
@@ -24,8 +25,9 @@ ms.locfileid: "79183856"
   
 - 알고리즘에 따른 사용자 지정 범위 일치 구현  
   
-## <a name="discussion"></a>토론  
- 클라이언트가 "OR" 형식 일치 기준을 찾고 있습니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 서비스가 다시 응답합니다. 이 경우 클라이언트는 다음 목록의 범위가 있는 계산기 서비스를 찾습니다.  
+## <a name="discussion"></a>토론(Discussion)  
+
+ 클라이언트에서 "OR" 형식 일치 조건을 찾고 있습니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 서비스가 다시 응답합니다. 이 경우 클라이언트는 다음 목록의 범위가 있는 계산기 서비스를 찾습니다.  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +41,13 @@ ms.locfileid: "79183856"
   
  서비스 프로젝트를 엽니다. 다음 세 개의 파일은 사용자 지정 검색 서비스를 구현하는 데 사용됩니다.  
   
-1. **AsyncResult.cs**: 검색 메서드에 `AsyncResult` 필요한 구현입니다.  
+1. **AsyncResult.cs**: 검색 방법에 필요한의 구현입니다 `AsyncResult` .  
   
-2. **CustomDiscoveryService.cs**: 이 파일은 사용자 지정 검색 서비스를 구현합니다. 이 구현에서는 <xref:System.ServiceModel.Discovery.DiscoveryService> 클래스를 확장하고 필요한 메서드를 재정의합니다. <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 메서드의 구현에 주의하십시오. 이 메서드는 클라이언트에서 규칙에 따른 사용자 지정 범위 일치를 지정했는지 여부를 확인합니다. 이는 클라이언트에서 이전에 지정한 사용자 지정 URI와 동일합니다. 사용자 지정 규칙을 지정하면 "OR" 일치 논리를 구현하는 코드 경로가 따릅니다.  
+2. **CustomDiscoveryService.cs**:이 파일은 사용자 지정 검색 서비스를 구현 합니다. 이 구현에서는 <xref:System.ServiceModel.Discovery.DiscoveryService> 클래스를 확장하고 필요한 메서드를 재정의합니다. <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 메서드의 구현에 주의하십시오. 이 메서드는 클라이언트에서 규칙에 따른 사용자 지정 범위 일치를 지정했는지 여부를 확인합니다. 이는 클라이언트에서 이전에 지정한 사용자 지정 URI와 동일합니다. 사용자 지정 규칙을 지정 하는 경우 "OR" 일치 논리를 구현 하는 코드 경로를 따릅니다.  
   
      이 사용자 지정 논리는 서비스에 있는 각 엔드포인트의 모든 범위에 적용됩니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 검색 서비스에서는 클라이언트로 다시 보내는 응답에 해당 엔드포인트를 추가합니다.  
   
-3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현하는 마지막 단계는 사용자 지정 검색 서비스의 이 구현을 서비스 호스트에 연결하는 것입니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints`는 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>에 추가된 모든 애플리케이션 엔드포인트를 포함하는 <xref:System.ServiceModel.ServiceHost>입니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
+3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현 하는 마지막 단계는이 사용자 지정 검색 서비스의 구현을 서비스 호스트에 연결 하는 것입니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints`는 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>에 추가된 모든 애플리케이션 엔드포인트를 포함하는 <xref:System.ServiceModel.ServiceHost>입니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
   
  마지막으로 Program.cs를 엽니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>와 `CustomDiscoveryExtension`이 모두 호스트에 추가되어 있습니다. 이 작업이 수행되고 호스트에 검색 메시지를 받는 데 사용할 엔드포인트가 있으면 애플리케이션에서 사용자 지정 검색 서비스를 사용할 수 있습니다.  
   
@@ -66,6 +68,6 @@ ms.locfileid: "79183856"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

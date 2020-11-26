@@ -2,17 +2,19 @@
 title: 변수 및 인수 추적
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552494"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242905"
 ---
 # <a name="variable-and-argument-tracking"></a>변수 및 인수 추적
+
 워크플로 실행을 추적할 때 데이터를 추출하는 것이 유용할 때가 많습니다. 이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 추적을 통해 워크플로의 활동 범위 내에서 표시 변수 또는 인수를 추출할 수 있습니다. 추적 프로필을 사용하여 데이터를 쉽게 추출할 수 있습니다.  
   
 ## <a name="variables-and-arguments"></a>변수 및 인수  
+
  변수 및 인수는 활동에서 ActivityStateRecord를 내보낼 때 추출됩니다.  변수는 활동 범위 내에 있는 경우에만 추출할 수 있습니다. 활동 내에서 추출할 변수는 다음과 같은 방식으로 지정합니다.  
   
 - 변수 이름으로 변수를 지정할 경우 추적을 실행하면 추적 중인 현재 활동과 부모 활동에서 변수를 찾습니다. 즉, 현재 활동 범위와 부모 범위에서 변수를 검색합니다.  
@@ -38,6 +40,7 @@ ms.locfileid: "90552494"
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>변수 및 인수에 저장된 정보 보호  
+
  추적된 변수 또는 인수는 기본적으로 WF 런타임에 의해 표시됩니다. 워크플로 개발자는 다음 단계를 수행하여 해당 변수 또는 인수에 액세스하지 못하게 할 수 있습니다.  
   
 1. 변수 값을 암호화합니다.  
@@ -46,7 +49,7 @@ ms.locfileid: "90552494"
   
 3. 사용자 지정 추적 참가자는 변수 또는 인수에 저장된 중요한 정보가 WF 코드를 통해 공개되지 않도록 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](/previous-versions/appfabric/ee677276(v=azure.10))

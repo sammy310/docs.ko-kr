@@ -2,14 +2,15 @@
 title: '방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241904"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
+
 이 항목에서는 기본 ASP.NET AJAX 서비스를 해당 하는 AJAX 사용 Windows Communication Foundation (WCF) 서비스로 마이그레이션하는 절차를 간략하게 설명 합니다. ASP.NET AJAX 서비스의 기능적으로 동일한 WCF 버전을 만드는 방법을 보여 줍니다. 그런 다음 두 서비스를 함께 사용할 수 있습니다. 또는 WCF 서비스를 사용 하 여 ASP.NET AJAX 서비스를 대체할 수 있습니다.
 
  기존 ASP.NET AJAX 서비스를 WCF AJAX 서비스로 마이그레이션하면 다음과 같은 이점이 제공 됩니다.
@@ -28,15 +29,15 @@ ms.locfileid: "84597009"
 
 1. Visual Studio 2012을 엽니다.
 
-2. **파일** 메뉴에서 **새로 만들기**, **프로젝트**, **웹**을 차례로 선택한 다음 **ASP.NET 웹 서비스 응용 프로그램**을 선택 합니다.
+2. **파일** 메뉴에서 **새로 만들기**, **프로젝트**, **웹** 을 차례로 선택한 다음 **ASP.NET 웹 서비스 응용 프로그램** 을 선택 합니다.
 
-3. 프로젝트 이름을로 `ASPHello` 확인 하 고 **확인을**클릭 합니다.
+3. 프로젝트 이름을로 `ASPHello` 확인 하 고 **확인을** 클릭 합니다.
 
 4. 이 서비스에서 AJAX를 사용하려면 Service1.asmx.cs 파일에서 `System.Web.Script.Services.ScriptService]`가 포함된 행의 주석 처리를 제거합니다.
 
-5. **빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.
+5. **빌드** 메뉴에서 **솔루션 빌드** 를 선택 합니다.
 
-6. **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택합니다.
+6. ‘디버그’ 메뉴에서 ‘디버그하지 않고 시작’을 선택합니다.
 
 7. 생성된 웹 페이지에서 `HelloWorld` 작업을 선택합니다.
 
@@ -53,9 +54,9 @@ ms.locfileid: "84597009"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>동등한 WCF AJAX 서비스 애플리케이션을 만들려면
 
-1. 기능 **hello** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**, **AJAX 사용 WCF 서비스**를 차례로 선택 합니다.
+1. 기능 **hello** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**, **AJAX 사용 WCF 서비스** 를 차례로 선택 합니다.
 
-2. 서비스 이름을로 `WCFHello` , **추가**를 클릭 합니다.
+2. 서비스 이름을로 `WCFHello` , **추가** 를 클릭 합니다.
 
 3. WCFHello.svc.cs 파일을 엽니다.
 
@@ -98,9 +99,9 @@ ms.locfileid: "84597009"
     }
     ```
 
-8. **빌드** 메뉴에서 **솔루션 빌드**를 선택 합니다.
+8. **빌드** 메뉴에서 **솔루션 빌드** 를 선택 합니다.
 
-9. Wcfhello.svc 파일을 열고 **디버그** 메뉴에서 **디버깅 하지 않고 시작**을 선택 합니다.
+9. Wcfhello.svc 파일을 열고 **디버그** 메뉴에서 **디버깅 하지 않고 시작** 을 선택 합니다.
 
 10. 이제 서비스는 `WCFHello.svc/HelloWorld` HTTP POST 요청에 응답 하는 끝점을 노출 합니다. HTTP POST 요청은 브라우저에서 테스트할 수 없지만 엔드포인트는 다음과 같은 XML을 반환합니다.
 
@@ -111,6 +112,7 @@ ms.locfileid: "84597009"
 11. `WCFHello.svc/HelloWorld`및 끝점은 `Service1.aspx/HelloWorld` 이제 기능적으로 동일 합니다.
 
 ## <a name="example"></a>예제
+
  이 항목에서 간략히 설명된 절차에서 얻어진 코드는 다음 예제에 나와 있습니다.
 
 ```csharp
@@ -195,7 +197,7 @@ d.Add("two", 2);
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 의한 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
 
-- ASP.NET AJAX의 {"one": 1, "two": 2}<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- ASP.NET AJAX의 {"one": 1, "two": 2} <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 있다는 점에서 훨씬 강력합니다. 반면 <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 없습니다. 그러나 후자가 JSON에 더 적합합니다.
 
@@ -204,7 +206,7 @@ d.Add("two", 2);
 |차이의 범주|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |빈 버퍼(새 바이트[0])를 <xref:System.Object> 또는 <xref:System.Uri> 또는 다른 클래스로 역직렬화함|SerializationException|null|
-|<xref:System.DBNull.Value>의 serialization|{}(또는 {"__type": "#System"})|Null|
+|<xref:System.DBNull.Value>의 serialization|{} (또는 {"__type": "#System"})|Null|
 |[Serializable] 형식의 private 멤버 serialization|serialize됨|serialize되지 않음|
 |<xref:System.Runtime.Serialization.ISerializable> 형식의 .public 속성 serialization|serialize되지 않음|serialize됨|
 |JSON "확장명"|개체 멤버 이름({"a":"hello"})에 따옴표를 사용해야 하는 JSON 사양 준수|따옴표가 없는 개체 멤버 이름({a:"hello"}) 지원|

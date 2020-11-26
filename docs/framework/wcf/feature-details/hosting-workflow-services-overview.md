@@ -2,17 +2,19 @@
 title: 워크플로 서비스 호스팅 개요
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 10ea35fc1988e1b3e6ceb44aca098e63bfc7d7e4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 150cb98ab3cef8231489219a16709344cbd19bd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242970"
 ---
 # <a name="hosting-workflow-services-overview"></a>워크플로 서비스 호스팅 개요
+
 워크플로 서비스를 실행하려면 호스팅해야 합니다. <xref:System.ServiceModel.WorkflowServiceHost>는 여러 인스턴스, 구성 및 WCF 메시징(워크플로가 호스팅되기 위해 메시징을 사용할 필요는 없지만)을 지원하는 즉시 사용 가능한 워크플로 호스트로,  서비스 동작의 집합을 통해 지속성, 추적 및 인스턴스 제어와 통합됩니다.  WCF의 <xref:System.ServiceModel.ServiceHost>와 마찬가지로 <xref:System.ServiceModel.WorkflowServiceHost>는 모든 관리되는 .NET 애플리케이션에서 자체 호스팅되거나 IIS/WAS에서 .xamlx 파일로 웹 호스팅될 수 있습니다.  이 단원의 항목에서는 워크플로 서비스를 호스팅하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [워크플로 서비스 호스팅](hosting-workflow-services.md)  
  워크플로 서비스 호스팅에 대해 설명합니다.  
   
@@ -32,6 +34,7 @@ ms.locfileid: "84597295"
  지속성, 추적, 유휴 상태 및 처리되지 않은 예외 동작을 제어하는 방법에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
  <xref:System.ServiceModel.Activities.WorkflowService>  
@@ -43,4 +46,5 @@ ms.locfileid: "84597295"
  <xref:System.ServiceModel.Activation.WorkflowServiceHostFactory>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [워크플로 서비스](workflow-services.md)

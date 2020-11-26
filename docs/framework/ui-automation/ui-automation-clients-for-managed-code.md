@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163925"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241982"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>관리 코드에 대한 UI 자동화 클라이언트
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 섹션에는 UI 자동화 클라이언트 개발에 도움이 되는 개요 및 방법이 설명되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [UI 자동화 및 화면 크기 조정](ui-automation-and-screen-scaling.md)  
  [표준 컨트롤에 대한 UI 자동화 지원](ui-automation-support-for-standard-controls.md)  
  [클라이언트에 대한 UI 자동화 이벤트](ui-automation-events-for-clients.md)  
@@ -31,7 +33,8 @@ ms.locfileid: "87163925"
  [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)  
  [UI 자동화 요소 가져오기](obtaining-ui-automation-elements.md)  
  [UI 자동화 스레딩 문제](ui-automation-threading-issues.md)  
- [방법 항목](ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [방법 도움말 항목](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
+
  <xref:System.Windows.Automation>

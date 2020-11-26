@@ -8,31 +8,38 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 79545c292cf0f04620a78105833a2f2c76dc5f78
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242008"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 자동화 및 Microsoft Active Accessibility
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
- Microsoft Active Accessibility는 응용 프로그램에 액세스할 수 있도록 하기 위한 이전 솔루션 이었습니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]는 Microsoft Windows에 대 한 새로운 접근성 모델로 서 보조 기술 제품 및 자동화 된 테스트 도구의 요구를 해결 하기 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]는 Active Accessibility에 비해 많은 향상 된 기능을 제공 합니다.  
+ Microsoft Active Accessibility는 응용 프로그램에 액세스할 수 있도록 하기 위한 이전 솔루션 이었습니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 는 Microsoft Windows에 대 한 새로운 접근성 모델로 서 보조 기술 제품 및 자동화 된 테스트 도구의 요구를 해결 하기 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 는 Active Accessibility에 비해 많은 향상 된 기능을 제공 합니다.  
   
  이 항목에서는의 주요 기능에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 대해 설명 하며 이러한 기능이 Active Accessibility와 어떻게 다른 지 설명 합니다.  
   
 <a name="Programming_Languages_compare"></a>
+
 ## <a name="programming-languages"></a>프로그래밍 언어  
-Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요소 개체 모델)을 기반으로 하므로 C/c + +, Microsoft Visual Basic 6.0 및 스크립팅 언어에서 프로그래밍 가능 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](표준 컨트롤에 대 한 클라이언트 쪽 공급자 라이브러리 포함)는 관리 코드로 작성 되며, UI 자동화 클라이언트 응용 프로그램은 c # 또는 Visual Basic .NET을 사용 하 여 가장 쉽게 프로그래밍할 수 있습니다. 인터페이스 구현인 UI 자동화 공급자는 관리되는 코드 또는 C/C++로 작성할 수 있습니다.  
+
+Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요소 개체 모델)을 기반으로 하므로 C/c + +, Microsoft Visual Basic 6.0 및 스크립팅 언어에서 프로그래밍 가능 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (표준 컨트롤에 대 한 클라이언트 쪽 공급자 라이브러리 포함)는 관리 코드로 작성 되며, UI 자동화 클라이언트 응용 프로그램은 c # 또는 Visual Basic .NET을 사용 하 여 가장 쉽게 프로그래밍할 수 있습니다. 인터페이스 구현인 UI 자동화 공급자는 관리되는 코드 또는 C/C++로 작성할 수 있습니다.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>
+
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation에서의 지원  
+
  WPF (Windows Presentation Foundation)는 사용자 인터페이스를 만들기 위한 새 모델입니다. WPF 요소는 Active Accessibility에 대 한 기본 지원을 포함 하지 않습니다. 그러나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Active Accessibility 클라이언트에 대 한 브리징 지원이 포함 된을 지원 합니다. 에 대해 특별히 작성 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 된 클라이언트만 텍스트에 대 한 다양 한 지원과 같은 WPF의 내게 필요한 옵션 기능을 최대한 활용할 수 있습니다.  
   
 <a name="Servers_and_Clients_compare"></a>
+
 ## <a name="servers-and-clients"></a>서버 및 클라이언트  
+
  Active Accessibility 서버와 클라이언트는 대부분의 서버 구현을 통해 직접 통신 `IAccessible` 합니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 핵심 서비스는 서버(공급자라고 함)와 클라이언트 사이에 있습니다. 핵심 서비스 공급자는 공급자가 구현한 인터페이스를 호출하고, 요소에 대한 고유한 런타임 식별자 생성 등과 같은 추가적인 서비스를 제공합니다. 클라이언트 애플리케이션은  라이브러리 함수를 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 서비스를 호출합니다.  
@@ -40,13 +47,17 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
  UI 자동화 공급자는 Active Accessibility 클라이언트에 대 한 정보를 제공할 수 있으며 Active Accessibility 서버는 UI 자동화 클라이언트 응용 프로그램에 정보를 제공할 수 있습니다. 그러나 Active Accessibility는 만큼 많은 정보를 노출 하지 않기 때문에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 두 모델이 완전히 호환 되지 않습니다.  
   
 <a name="UI_Elements_compare"></a>
+
 ## <a name="ui-elements"></a>UI 요소  
+
  Active Accessibility [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 는 요소를 `IAccessible` 인터페이스 또는 자식 식별자로 표시 합니다. 두 `IAccessible` 포인터를 비교하여 동일한 요소를 참조하는지 확인하기는 어렵습니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 모든 요소는 <xref:System.Windows.Automation.AutomationElement> 개체로 표시됩니다. 요소의 고유한 런타임 식별자를 비교하는 같음 연산자 또는 <xref:System.Windows.Automation.AutomationElement.Equals%2A> 메서드를 사용하여 비교합니다.  
   
 <a name="Tree_Views_and_Navigation_compare"></a>
+
 ## <a name="tree-views-and-navigation"></a>트리 뷰 및 탐색  
+
  화면의 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소는 데스크톱이 루트, 애플리케이션 창이 직계 자식, 애플리케이션 내의 요소가 추가적인 하위 항목인 트리 구조로 표시될 수 있습니다.  
   
  Active Accessibility 최종 사용자와 관련이 없는 많은 자동화 요소가 트리에 노출 됩니다. 클라이언트 애플리케이션은 모든 요소를 확인하여 의미 있는 요소를 파악해야 합니다.  
@@ -60,7 +71,9 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
  에서의 탐색 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 Active Accessibility 보다 더 일관적입니다. 드롭다운 목록 및 팝업 창과 같은 일부 요소는 Active Accessibility 트리에 두 번 나타나며, 이러한 요소를 탐색 하면 예기치 않은 결과가 발생할 수 있습니다. 크기 조정 컨트롤에 대 한 Active Accessibility를 올바르게 구현 하는 것은 실제로 불가능 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 사용하면 부모 재지정 및 위치 변경이 가능하므로, 창 소유권에 의해 계층 구조가 적용되더라도 트리에서 요소를 원하는 위치에 배치할 수 있습니다.  
   
 <a name="Roles_and_Control_Types"></a>
+
 ## <a name="roles-and-control-types"></a>역할 및 컨트롤 형식  
+
  Active Accessibility는 속성 ()을 사용 하 여 `accRole` `IAccessible::get_actRole` [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ROLE_SYSTEM_SLIDER 또는 ROLE_SYSTEM_MENUITEM와 같은에서 요소의 역할에 대 한 설명을 검색 합니다. 요소의 역할을 통해 사용 가능한 기능을 알 수 있습니다. `IAccessible::accSelect` 및 `IAccessible::accDoDefaultAction`과 같은 고정 메서드를 사용하여 컨트롤과 상호 작용할 수 있습니다. 클라이언트 애플리케이션과 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 간의 상호 작용은 `IAccessible`을 통해서 수행할 수 있는 작업으로 제한됩니다.  
   
  한편, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 주로 예상 기능에서 요소의 컨트롤 형식( <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 속성으로 설명됨)을 분리합니다. 기능은 특수화된 인터페이스의 구현을 통해 공급자가 지원하는 컨트롤 패턴에 의해 결정됩니다. 컨트롤 패턴을 조합하여 특정 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소가 지원하는 전체 기능 집합을 설명할 수 있습니다. 일부 공급자는 특정 컨트롤 패턴을 지원하는 데 필요합니다. 예를 들어, 확인란에 대한 공급자는 Toggle 컨트롤 패턴을 지원해야 합니다. 기타 공급자는 하나 이상의 컨트롤 패턴 집합을 지원하는 데 필요합니다. 예를 들어, 단추는 Toggle 또는 Invoke를 지원해야 합니다. 컨트롤 패턴을 지원하지 않는 공급자도 있습니다. 예를 들어 이동, 크기 조정 또는 도킹할 수 없는 창에는 컨트롤 패턴이 없습니다.  
@@ -72,7 +85,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |Active Accessibility 역할|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 형식|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|단추|  
-|ROLE_SYSTEM_CLIENT|일정|  
+|ROLE_SYSTEM_CLIENT|달력|  
 |ROLE_SYSTEM_CHECKBUTTON|확인란|  
 |ROLE_SYSTEM_COMBOBOX|콤보 상자|  
 |ROLE_SYSTEM_CLIENT|사용자 지정|  
@@ -80,7 +93,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |ROLE_SYSTEM_LISTITEM|데이터 항목|  
 |ROLE_SYSTEM_DOCUMENT|문서|  
 |ROLE_SYSTEM_TEXT|편집|  
-|ROLE_SYSTEM_GROUPING|그룹화|  
+|ROLE_SYSTEM_GROUPING|그룹|  
 |ROLE_SYSTEM_LIST|헤더|  
 |ROLE_SYSTEM_COLUMNHEADER|헤더 항목|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
@@ -106,7 +119,7 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |ROLE_SYSTEM_INDICATOR|Thumb|  
 |ROLE_SYSTEM_TITLEBAR|제목 표시줄|  
 |ROLE_SYSTEM_TOOLBAR|도구 모음|  
-|ROLE_SYSTEM_TOOLTIP|도구 설명|  
+|ROLE_SYSTEM_TOOLTIP|ToolTip|  
 |ROLE_SYSTEM_OUTLINE|트리|  
 |ROLE_SYSTEM_OUTLINEITEM|트리 항목|  
 |ROLE_SYSTEM_WINDOW|시간 범위|  
@@ -114,10 +127,12 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
  다른 컨트롤 형식에 대한 자세한 내용은 [UI Automation Control Types](ui-automation-control-types.md)을 참조하세요.  
   
 <a name="States_and_Properties"></a>
+
 ## <a name="states-and-properties"></a>상태 및 속성  
+
  Active Accessibility에서 요소는 일반적인 속성 집합을 지원 하며,와 같은 일부 속성은 `accState` 요소의 역할에 따라 매우 다른 작업을 설명 해야 합니다. 서버는 요소와 관련이 없더라도 속성을 반환하는 `IAccessible` 의 모든 메서드를 구현해야 합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]은 더 많은 속성을 정의 하며, 그 중 일부는 Active Accessibility의 상태에 해당 합니다. 일부 속성은 모든 요소에 공통되지만 컨트롤 형식과 컨트롤 패턴에만 관련된 속성도 있습니다. 속성은 고유한 식별자로 구분되며, 대부분의 속성은 단일 메서드 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 또는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>를 사용하여 검색할 수 있습니다. <xref:System.Windows.Automation.AutomationElement.Current%2A> 및 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 접근자에서 다양한 속성을 쉽게 검색할 수도 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 더 많은 속성을 정의 하며, 그 중 일부는 Active Accessibility의 상태에 해당 합니다. 일부 속성은 모든 요소에 공통되지만 컨트롤 형식과 컨트롤 패턴에만 관련된 속성도 있습니다. 속성은 고유한 식별자로 구분되며, 대부분의 속성은 단일 메서드 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 또는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>를 사용하여 검색할 수 있습니다. <xref:System.Windows.Automation.AutomationElement.Current%2A> 및 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 접근자에서 다양한 속성을 쉽게 검색할 수도 있습니다.  
   
  UI 자동화 공급자는 관련이 없는 속성을 구현할 필요가 없지만 지원하지 않는 속성에 대해 `null` 값을 반환할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 핵심 서비스는 기본 창 공급자에서 일부 속성을 가져올 수 있으며, 이러한 속성은 공급자가 명시적으로 구현하는 속성과 병합됩니다.  
   
@@ -180,7 +195,9 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
  속성 식별자의 전체 목록은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 속성 개요](ui-automation-properties-overview.md)를 참조 하세요.  
   
 <a name="uiautomation_events_compare"></a>
+
 ## <a name="events"></a>이벤트  
+
  Active Accessibility와 달리의 이벤트 메커니즘은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Windows 이벤트 라우팅 (창 핸들과 밀접 하 게 연결)을 사용 하지 않으며 후크를 설정 하는 데 클라이언트 응용 프로그램이 필요 하지 않습니다. 이벤트에 대한 구독은 특정 이벤트뿐만 아니라 트리의 특정 부분에 대해서도 미세하게 조정할 수 있습니다. 공급자는 이벤트가 수신 대기하고 있는 사항을 추적하여 이벤트 발생을 미세 조정할 수 있습니다.  
   
  요소가 이벤트 콜백에 직접 전달되므로 클라이언트는 이벤트를 발생하는 요소를 쉽게 검색할 수 있습니다. 클라이언트가 이벤트를 구독할 때 캐시 요청이 활성화되어 있으면 요소의 속성이 자동으로 프리페치됩니다.  
@@ -245,11 +262,13 @@ Active Accessibility는 이중 인터페이스를 지 원하는 COM (구성 요�
 |동일한 요소 없음|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
+
 ## <a name="security"></a>보안  
+
  일부 `IAccessible` 사용자 지정 시나리오에서는 기본 `IAccessible` 의 줄바꿈과 이를 호출해야 합니다. 부분적으로 신뢰할 수 있는 구성 요소는 코드 경로에 중간자로 사용할 수 없기 때문에 보안에 영향을 줍니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 모델에서는 다른 공급자 코드를 통해 호출하는 데 공급자가 필요하지 않습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 핵심 서비스는 필요한 모든 집계를 수행합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 기본 사항](index.md)

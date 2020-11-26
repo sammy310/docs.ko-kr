@@ -2,17 +2,19 @@
 title: 기본 활동을 사용하는 사용자 지정 복합
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: bf2b8123619df8977b0687c72663c6b482e35654
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82cfd8605d66e2cb489326c40f6ae3e960123788
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200869"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242242"
 ---
 # <a name="custom-composite-using-native-activity"></a>기본 활동을 사용하는 사용자 지정 복합
+
 이 샘플에서는 다른 <xref:System.Activities.NativeActivity> 개체가 워크플로 실행 흐름을 제어하도록 예약하는 <xref:System.Activities.Activity>를 작성하는 방법을 보여 줍니다. 이 샘플에서는 두 개의 일반적인 제어 흐름인 Sequence와 While을 사용하여 이러한 작업 수행 방법을 보여 줍니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
+
  `MySequence`는 <xref:System.Activities.NativeActivity>에서 파생되며, <xref:System.Activities.NativeActivity>는 <xref:System.Activities.Activity> 메서드에 전달된 <xref:System.Activities.NativeActivityContext>를 통해 전체 워크플로 런타임을 노출하는 `Execute` 개체입니다.
 
  `MySequence`는 워크플로 작성자가 채우는 <xref:System.Activities.Activity> 개체의 공용 컬렉션을 노출합니다. 워크플로가 실행되기 전에 워크플로 런타임은 워크플로의 각 활동에 대해 <xref:System.Activities.Activity.CacheMetadata%2A> 메서드를 호출합니다. 이 프로세스가 진행되는 중에 런타임은 데이터 범위 지정 및 수명 주기 관리를 위해 부모-자식 관계를 설정합니다. 메서드의 기본 구현은 <xref:System.Activities.Activity.CacheMetadata%2A> <xref:System.ComponentModel.TypeDescriptor> 활동에 인스턴스 클래스를 사용 하 여 `MySequence` 형식의 public 속성을 <xref:System.Activities.Activity> <xref:System.Collections.IEnumerable> \<<xref:System.Activities.Activity> 활동의 자식으로 추가 하거나> 합니다 `MySequence` .
@@ -25,7 +27,7 @@ ms.locfileid: "84200869"
 
  자식 활동이 완료되면 <xref:System.Activities.CompletionCallback>이 실행됩니다. 루프가 맨 위부터 계속됩니다. `Execute`와 마찬가지로 <xref:System.Activities.CompletionCallback>도 <xref:System.Activities.NativeActivityContext>를 사용하여 구현자에게 런타임에 대한 액세스 권한을 제공합니다.
 
- `MyWhile`은 `MySequence` 단일 개체를 반복적으로 예약 하 <xref:System.Activities.Activity> 고 라는<bool을 사용 하 여 <xref:System.Activities.Activity%601> \> `Condition` 이 예약이 발생 해야 하는지 여부를 결정 한다는 점에서와 다릅니다. `MySequence`와 마찬가지로 `MyWhile`도 `InternalExecute` 메서드를 사용하여 예약 논리를 중앙 집중화합니다. `Condition` <xref:System.Activities.Activity> 명명 된를 사용 하 여<bool을 예약 합니다 \> <xref:System.Activities.CompletionCallback%601> \<bool> `OnEvaluationCompleted` . 실행이 `Condition` 완료 되 면이를 통해 <xref:System.Activities.CompletionCallback> 라는 강력한 형식의 매개 변수에서 해당 결과를 사용할 수 있게 됩니다 `result` . `true`이면 `MyWhile`이 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>을 호출하여 `Body`<xref:System.Activities.Activity> 개체와 `InternalExecute`를 <xref:System.Activities.CompletionCallback>으로 전달합니다. `Body`의 실행이 완료되면 `Condition`에서 `InternalExecute`이 다시 예약되어 루프가 다시 시작됩니다. `Condition`에서 `false`를 반환하면 `MyWhile`의 인스턴스는 `Body`를 예약하지 않고 런타임에 제어 권한을 다시 제공하며 런타임은 <xref:System.Activities.ActivityInstanceState.Closed> 상태로 이동됩니다.
+ `MyWhile` 은 `MySequence` 단일 개체를 반복적으로 예약 하 <xref:System.Activities.Activity> 고 라는<bool을 사용 하 여 <xref:System.Activities.Activity%601> \> `Condition` 이 예약이 발생 해야 하는지 여부를 결정 한다는 점에서와 다릅니다. `MySequence`와 마찬가지로 `MyWhile`도 `InternalExecute` 메서드를 사용하여 예약 논리를 중앙 집중화합니다. `Condition` <xref:System.Activities.Activity> 명명 된를 사용 하 여<bool을 예약 합니다 \> <xref:System.Activities.CompletionCallback%601> \<bool> `OnEvaluationCompleted` . 실행이 `Condition` 완료 되 면이를 통해 <xref:System.Activities.CompletionCallback> 라는 강력한 형식의 매개 변수에서 해당 결과를 사용할 수 있게 됩니다 `result` . `true`이면 `MyWhile`이 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>을 호출하여 `Body`<xref:System.Activities.Activity> 개체와 `InternalExecute`를 <xref:System.Activities.CompletionCallback>으로 전달합니다. `Body`의 실행이 완료되면 `Condition`에서 `InternalExecute`이 다시 예약되어 루프가 다시 시작됩니다. `Condition`에서 `false`를 반환하면 `MyWhile`의 인스턴스는 `Body`를 예약하지 않고 런타임에 제어 권한을 다시 제공하며 런타임은 <xref:System.Activities.ActivityInstanceState.Closed> 상태로 이동됩니다.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
