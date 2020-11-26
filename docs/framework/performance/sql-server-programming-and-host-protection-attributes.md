@@ -13,17 +13,19 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-ms.openlocfilehash: 33db32897d2f49d2c10f94dc73aeae728c17db73
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3ded0a9ac95d56e000ef7870ec19721764c96a66
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236236"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 프로그래밍 및 호스트 보호 특성
+
 SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 액세스 보안과 호스트 리소스 보호 둘 다를 위해 호스트의 요구 사항을 충족해야 합니다.  코드 액세스 보안 요구 사항은 세 가지 SQL Server 권한 집합인 SAFE, EXTERNAL-ACCESS, UNSAFE 중 하나로 지정됩니다. SAFE 또는 EXTERNAL-ACCESS 권한 집합 내에서 코드를 실행하는 경우 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용된 특정 형식이나 멤버를 사용하면 안 됩니다. <xref:System.Security.Permissions.HostProtectionAttribute>는 호스트에서 허용되지 않을 수 있는 형식이나 메서드인 특정 코드 구문을 식별한다는 점에서 보안 권한이 아니라 안정성 보장입니다.  <xref:System.Security.Permissions.HostProtectionAttribute>를 사용하면 호스트의 안정성을 보호하도록 돕는 프로그래밍 모델이 적용됩니다.  
   
 ## <a name="host-protection-attributes"></a>호스트 보호 특성  
+
  호스트 보호 특성은 호스트 프로그래밍 모델에 맞지 않는 형식이나 멤버를 식별하고 다음과 같은 증가하는 안정성 위협 수준을 나타냅니다.  
   
 - 심각하지 않습니다.  
@@ -35,6 +37,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
  SQL Server에서는 <xref:System.Security.Permissions.HostProtectionResource> 값 <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 또는 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>를 지정하는 <xref:System.Security.Permissions.HostProtectionAttribute>가 있는 형식 또는 멤버의 사용을 허용하지 않습니다. 이 때문에 어셈블리에서 공유 상태를 사용하도록 설정하거나, 동기화를 수행하거나, 종료 시 리소스 누수가 발생할 수 있거나, SQL Server 프로세스의 무결성에 영향을 주는 멤버를 호출할 수 없습니다.  
   
 ### <a name="disallowed-types-and-members"></a>허용되지 않는 유형 및 멤버  
+
  다음 표에서는 <xref:System.Security.Permissions.HostProtectionResource> 값이 SQL Server에서 허용되지 않는 형식 및 멤버를 식별합니다.  
   
 |네임스페이스|형식 또는 멤버|  
@@ -52,6 +55,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
 |`System.Windows.Forms`|<xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType> 속성|  
   
 ## <a name="sql-server-permission-sets"></a>SQL Server 권한 집합  
+
  SQL Server에서는 사용자가 데이터베이스에 배포되는 코드에 대한 안정성 요구 사항을 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드할 때 어셈블리 작성자가 해당 어셈블리에 대해 세 가지 권한 집합(SAFE, EXTERNAL-ACCESS 또는 UNSAFE) 중 하나를 지정할 수 있습니다.  
   
 |권한 집합|SAFE|EXTERNAL-ACCESS|UNSAFE|  
@@ -59,7 +63,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
 |프로그래밍 모델 제한 사항|예|예|제한 없음|  
 |안정성 요구 사항|예|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|예|예|  
+|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
   
  SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 코드에는 높은 안정성 및 보안 기능이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
   
@@ -70,6 +74,7 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
  SQL Server는 호스트 수준의 코드 액세스 보안 정책 계층을 사용하여 SQL Server 카탈로그에 저장된 권한 집합에 따라 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내부에서 실행되는 관리 코드에는 항상 이러한 코드 액세스 권한 집합 중 하나가 부여됩니다.  
   
 ## <a name="programming-model-restrictions"></a>프로그래밍 모델 제한 사항  
+
  SQL Server의 관리 코드에 대한 프로그래밍 모델에는 여러 호출 간에 유지되는 상태를 사용하거나 여러 사용자 세션 간에 상태를 공유할 필요가 없는 함수, 프로시저 및 형식이 필요합니다. 또한 앞서 설명한 것과 같이 공유된 상태가 있으면 해당 애플리케이션의 확장성과 안정성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
   
  이러한 점을 고려하여 SQL Server에서는 정적 변수와 정적 데이터 멤버의 사용을 허용하지 않습니다. SAFE 및 EXTERNAL-ACCESS 어셈블리의 경우 SQL Server에서 CREATE ASSEMBLY 시간에 어셈블리의 메타데이터를 검사하고, 정적 데이터 멤버와 변수 사용을 발견할 경우 해당 어셈블리를 만들지 못합니다.  

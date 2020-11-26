@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: e5e1dff98121985a598579d83043de838e21e5f1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f9a56c631d841fe60923c05a19bdec9db989ac60
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244506"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236574"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>방법: 코드에서 클라이언트 바인딩 지정
+
 이 예제에서는 계산기 서비스를 사용할 클라이언트를 만들고 해당 클라이언트에 대한 바인딩을 코드를 사용하여 명령적으로 지정합니다. 클라이언트는 `CalculatorService` 인터페이스를 구현하는 `ICalculator`에 액세스하고, 서비스 및 클라이언트 모두 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용합니다.  
   
  이 절차에서는 계산기 서비스를 실행 중인 것으로 가정합니다. 서비스 빌드에 대 한 자세한 내용은 [방법: 구성에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-configuration.md)을 참조 하세요. 또한에서 제공 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)WINDOWS COMMUNICATION FOUNDATION (WCF)를 사용 하 여 클라이언트 구성 요소를 자동으로 생성 합니다. 이 도구는 서비스에 액세스하기 위한 클라이언트 코드를 생성합니다.  

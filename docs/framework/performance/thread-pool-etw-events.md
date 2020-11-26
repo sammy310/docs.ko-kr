@@ -6,14 +6,15 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 8b00c20e82ee1b1efa6a8a123e66a4cfc239143b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236171"
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
+
 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
   
  스레드 풀 이벤트에는 다음과 같은 두 그룹이 있습니다.  
@@ -23,12 +24,14 @@ ms.locfileid: "86475205"
 - [I/O 스레드 풀 이벤트](#io-thread-events). 이러한 스레드 풀 이벤트는 스레드 풀에서 생성되거나, 만료되거나, 만료되지 않거나, 종료된 I/O 스레드에 대한 정보를 제공합니다.  
 
 ## <a name="worker-thread-pool-events"></a>작업자 스레드 풀 이벤트
+
  이러한 이벤트는 런타임의 작업자 스레드 풀과 관련이 있으며, 스레드 이벤트에 대한 알림을 제공합니다(예: 스레드가 만들어지거나 중지될 때). 작업자 스레드 풀은 동시성 제어를 위해 측정된 처리량을 기준으로 스레드 수가 계산되는 자동 선택 알고리즘을 사용합니다. 작업자 스레드 풀 이벤트는 애플리케이션이 스레드 풀을 사용하는 방법 그리고 특정 작업 부하가 동시성 제어에 미칠 수 있는 영향을 이해하는 데 사용할 수 있습니다.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 및 ThreadPoolWorkerThreadStop  
+
  다음 표에서는 이러한 이벤트의 키워드 및 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
@@ -50,18 +53,20 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
+
  이러한 스레드 풀 이벤트는 스레드 삽입(동시성 제어) 알고리즘의 동작을 이해하고 디버깅하기 위한 정보를 제공합니다. 이 정보는 작업자 스레드 풀에서 내부적으로 사용합니다.  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|한 샘플의 정보 컬렉션을 나타냅니다. 즉, 특정 시점에 특정 동시성 수준으로 처리량을 측정한 것입니다.|  
   
@@ -73,15 +78,16 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|스레드 삽입(언덕 오르기) 알고리즘이 동시성 수준에서 변화를 감지할 때 제어의 변경을 기록합니다.|  
   
@@ -95,15 +101,16 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|이벤트|이벤트 ID|설명|  
+|이벤트|이벤트 ID|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|스레드 풀의 데이터를 수집합니다.|  
   
@@ -111,7 +118,7 @@ ms.locfileid: "86475205"
   
 |필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
-|Duration|win:Double|이러한 통계가 수집된 시간(초)입니다.|  
+|기간|win:Double|이러한 통계가 수집된 시간(초)입니다.|  
 |처리량|win:Double|이 간격 동안의 초당 평균 완료 수입니다.|  
 |ThreadWave|win:Double|내부용으로 예약된 속성입니다.|  
 |ThroughputWave|win:Double|내부용으로 예약된 속성입니다.|  
@@ -124,12 +131,14 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
 
 ## <a name="io-thread-events"></a>I/O 스레드 이벤트  
+
  이러한 스레드 풀 이벤트는 비동기적인 I/O 스레드 풀(완료 포트)에서 스레드에 대해 발생합니다.  
   
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
@@ -148,9 +157,10 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
@@ -169,9 +179,10 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
@@ -190,9 +201,10 @@ ms.locfileid: "86475205"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   

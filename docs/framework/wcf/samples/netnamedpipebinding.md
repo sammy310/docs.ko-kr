@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: b8a852345572e172d7c5400dca535bb8c098ec4f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 46365c8dbfee66d719b114947f6b04069e0f8870
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235301"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
+
 이 샘플에서는 동일한 시스템에서 프로세스 간 통신을 제공하는 `netNamedPipeBinding` 바인딩을 보여 줍니다. 이름이 지정된 파이프는 시스템 간에 작동하지 않습니다. 이 샘플은 [시작](getting-started-sample.md) 계산기 서비스를 기반으로 합니다.  
   
  이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트 모두 콘솔 애플리케이션입니다.  

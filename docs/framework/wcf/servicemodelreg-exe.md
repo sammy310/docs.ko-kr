@@ -3,14 +3,15 @@ title: ServiceModel 등록 도구(ServiceModelReg.exe)
 description: 서비스 활성화에 문제가 발생 하는 경우이 명령줄 도구를 사용 하 여 단일 컴퓨터에서 WCF 및 WF 구성 요소를 등록 하는 작업을 관리할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 347b1b8071abe7d8eb7e16ffd879c1fdb9825bc7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d8d5bc4dc3de021e2110fb953dbc4d6c7d7972d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245897"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235924"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel 등록 도구(ServiceModelReg.exe)
+
 이 명령줄 도구는 단일 컴퓨터에서 WCF 및 WF 구성 요소 등록을 관리하는 기능을 제공합니다. 일반적인 경우에는 설치 시 WCF 및 WF 구성 요소가 구성되므로 이 도구를 사용할 필요가 없습니다. 하지만 서비스 활성화 문제가 있는 경우 이 도구를 사용하여 구성 요소를 등록해 볼 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -20,12 +21,13 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 ```  
   
 ## <a name="remarks"></a>설명  
+
  이 도구는 다음 위치에 있습니다.  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> ServiceModel 등록 도구가 Windows Vista에서 실행 되는 경우 **Windows 기능** 대화 상자에 **Microsoft .NET Framework 3.0** 의 **Windows Communication Foundation HTTP 활성화** 옵션이 설정 되어 있지 않을 수 있습니다. **시작**을 클릭 하 고 **실행** 을 클릭 한 다음 **OptionalFeatures**를 입력 하 여 **Windows 기능** 대화 상자에 액세스할 수 있습니다.  
+> ServiceModel 등록 도구가 Windows Vista에서 실행 되는 경우 **Windows 기능** 대화 상자에 **Microsoft .NET Framework 3.0** 의 **Windows Communication Foundation HTTP 활성화** 옵션이 설정 되어 있지 않을 수 있습니다. **시작** 을 클릭 하 고 **실행** 을 클릭 한 다음 **OptionalFeatures** 를 입력 하 여 **Windows 기능** 대화 상자에 액세스할 수 있습니다.  
   
  다음 표에서는 ServiceModelReg.exe와 함께 사용할 수 있는 옵션을 보여 줍니다.  
   
@@ -43,6 +45,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|도움말 텍스트 표시|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>FileLoadException 오류 수정  
+
  컴퓨터에 이전 버전의 WCF를 설치한 경우 `FileLoadFoundException` servicemodelreg.exe 도구를 실행 하 여 새 설치를 등록할 때 오류가 발생할 수 있습니다. 이전 설치에서 파일을 수동으로 제거했지만 machine.config 설정이 그대로 남아 있으면 이 오류가 발생할 수 있습니다.  
   
  다음과 유사한 오류 메시지가 표시됩니다.  
@@ -68,7 +71,8 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
   
  이 파일에서 "System.servicemodel, Version = 2.0.0.0"을 참조 하는 XML 노드를 찾아 삭제 하 고 자식 노드를 삭제 합니다. 파일을 저장하고 ServiceModelReg.exe를 다시 실행하면 이 문제가 해결됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
+
  다음 예제에서는 ServiceModelReg.exe 도구의 가장 일반적인 옵션을 사용하는 방법을 보여 줍니다.  
   
 ```console  

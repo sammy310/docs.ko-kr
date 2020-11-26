@@ -10,14 +10,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 031d9c90318eec59ad2b77d611e0ed0d5a3ae719
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 30b41e3a3d47802eb4a3e761c4282b3e937156f2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516972"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235781"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI 자동화를 사용하여 포함 개체에 액세스
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -32,6 +33,7 @@ ms.locfileid: "87516972"
 텍스트 콘텐츠가 포함 된 샘플 문서 ("알고 계십니까?") ...) 코드 예제에 대 한 대상으로 사용 되는 두 개의 포함 된 개체 (고래 및 텍스트 하이퍼링크 그림)입니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 공급자에서 포함된 개체의 컬렉션을 검색하는 방법을 보여줍니다. 소개 부분에 제공된 샘플 문서의 경우 두 개의 개체가 반환됩니다(이미지 요소 및 텍스트 요소).  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ ms.locfileid: "87516972"
 [!code-vb[FindText#GetChildren](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#getchildren)]  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 공급자 내에 포함된 개체에서 텍스트 범위를 가져오는 방법을 보여줍니다. 검색된 텍스트 범위는 빈 범위로서 시작되는 엔드포인트 앞에 "… ocean.(space)"가 오고 끝나는 엔드포인트 뒤에 닫는 "."가 와서 포함된 하이퍼링크를 나타냅니다(소개 부분에 제공된 이미지 참조). 검색된 범위가 비어 있는 범위라 해도, 0이 아닌 범위이기 때문에 중복 제거 범위로 간주되지 않습니다.  
   
 > [!NOTE]
@@ -53,7 +56,7 @@ ms.locfileid: "87516972"
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 TextPattern 개요](ui-automation-textpattern-overview.md)
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)

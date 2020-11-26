@@ -2,36 +2,42 @@
 title: 동작 ID 전파
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-ms.openlocfilehash: 642d4da49f90d3fc6f2b0dfc9896d724acb075b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0f0478b16bf2ca0975ae0290a8855756ecfc383e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236106"
 ---
 # <a name="activity-id-propagation"></a>동작 ID 전파
+
 ServiceModel 동작 추적을 사용하면 ServiceModel 동작을 통해 전파가 발생하고, ServiceModel 동작 추적을 사용하지 않으면 사용자 간에 전파가 발생합니다.  
   
 ## <a name="servicemodel-activity-tracing-is-enabled"></a>ServiceModel 동작 추적 사용  
+
  ServiceModel ActivityTracing을 사용하면 ProcessAction 동작 간에 전파가 발생합니다.  
   
 ### <a name="server"></a>서버  
- 경우는 `propagateActivity` 특성이로 설정 된 `true` 클라이언트와 서버 ID입니다 합니다 `ProcessAction` 서버에서 작업 id는 전파에 동일 `ActivityId` 메시지 헤더입니다.  
+
+ `propagateActivity` `true` 클라이언트와 서버 모두에서 특성이로 설정 된 경우 `ProcessAction` 서버의 작업 id는 전파 된 메시지 헤더의 id와 동일 합니다 `ActivityId` .  
   
- 없는 경우 `ActivityId` 헤더를 메시지에 (즉, `propagateActivity` = `false` 클라이언트에서), 때나 `propagateActivity` = `false` 서버에서 서버 생성 하는 새 활동 id입니다.  
+ `ActivityId`메시지에 헤더가 없는 경우 (즉, `propagateActivity` = `false` 클라이언트에서) 또는 `propagateActivity` = `false` 서버에 있는 경우 서버는 새 작업 ID를 생성 합니다.  
   
 ### <a name="client"></a>클라이언트  
- 클라이언트가 동기 단일 스레드인 경우 클라이언트는 클라이언트나 서버의 `propagateActivity` 설정을 모두 무시합니다. 대신 요청 동작에서 응답이 처리됩니다. 클라이언트가 비동기 또는 동기 경우, 다중 스레드 `propagateActivity` = `true` 클라이언트에서 및 동작 ID 헤더를 서버에서 보낸 메시지에는 클라이언트에서 메시지에서 동작 ID를 검색 하 고 전송 합니다 전파 된 활동 ID를 포함 하는 Action 동작 처리 그렇지 않으면 클라이언트는 Process Message 동작에서 새 Process Action 동작으로 전송합니다. 새 Process Action 동작으로의 이 추가 전송은 일관성을 위해 수행됩니다. 이 동작 내에서 클라이언트는 응답 메시지 처리를 위해 스레드가 할당될 때 로컬 스레드 컨텍스트에서 BeginCall 동작의 동작 ID를 검색합니다. 그런 다음 초기 Process Action 동작으로 전송합니다.  
+
+ 클라이언트가 동기 단일 스레드인 경우 클라이언트는 클라이언트나 서버의 `propagateActivity` 설정을 모두 무시합니다. 대신 요청 동작에서 응답이 처리됩니다. 클라이언트가 비동기 또는 동기 다중 스레드이 고, `propagateActivity` = `true` 클라이언트에서 서버에서 보낸 메시지에 활동 id 헤더가 있는 경우 클라이언트는 메시지에서 활동 id를 검색 하 여 전파 된 활동 id를 포함 하는 Process Action 활동으로 전송 합니다. 그렇지 않으면 클라이언트는 Process Message 동작에서 새 Process Action 동작으로 전송합니다. 새 Process Action 동작으로의 이 추가 전송은 일관성을 위해 수행됩니다. 이 동작 내에서 클라이언트는 응답 메시지 처리를 위해 스레드가 할당될 때 로컬 스레드 컨텍스트에서 BeginCall 동작의 동작 ID를 검색합니다. 그런 다음 초기 Process Action 동작으로 전송합니다.  
   
  클라이언트가 이중이면 메시지를 수신할 때 클라이언트가 서버 역할을 합니다.  
   
 ### <a name="propagation-in-fault-messages"></a>오류 메시지의 전파  
- 올바른 메시지와 오류 메시지의 처리에는 차이가 없습니다. 하는 경우 `propagateActivity` = `true`, SOAP 오류 메시지 헤더에 추가 된 동작 ID가 앰비언트 동작과 동일 합니다.  
+
+ 올바른 메시지와 오류 메시지의 처리에는 차이가 없습니다. 인 경우 `propagateActivity` = `true` SOAP 오류 메시지 헤더에 추가 된 작업 ID는 앰비언트 작업과 동일 합니다.  
   
 ## <a name="servicemodel-activity-tracing-is-disabled"></a>ServiceModel 동작 추적 사용 안 함  
+
  ServiceModel ActivityTracing을 사용하지 않으면 ServiceModel 동작을 거치지 않고 직접 사용자 코드 동작 간에 전파가 발생합니다. 사용자 정의 동작 ID도 메시지 동작 ID 헤더를 통해 전파됩니다.  
   
- 하는 경우 `propagateActivity` = `true` 하 고 `ActivityTracing` = `off` ServiceModel 추적 수신기 (에 관계 없이 여부 ServiceModel 추적을 활성화)에 대 한 다음 클라이언트 또는 서버에서 발생 합니다.  
+ Servicemodel `propagateActivity` = `true` `ActivityTracing` = `off` 에서 추적이 사용 되는지 여부에 관계 없이 servicemodel 추적 수신기에 대해 및의 경우 클라이언트 또는 서버에서 다음이 발생 합니다.  
   
 - 작업 요청 또는 응답 전송 시 메시지가 구성될 때까지 TLS의 동작 ID가 사용자 코드에서 전파됩니다. 메시지가 전송되기 전에 동작 ID 헤더도 메시지에 삽입됩니다.  
   

@@ -2,17 +2,19 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 87f72359e16b4268d77148ec16a626c2bac5751c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557034"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234573"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
+
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
+
  WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
 
 |구성 요소|Description|
@@ -33,6 +35,7 @@ ms.locfileid: "90557034"
  추적 참가자는 추적 프로필을 사용하여 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체의 하위 집합을 구독합니다. 추적 프로필에는 특정 추적 레코드 형식을 구독할 수 있도록 허용하는 추적 쿼리가 포함됩니다. 추적 프로필은 코드나 구성에 지정할 수 있습니다.
 
 ### <a name="custom-tracking-participant"></a>사용자 지정 추적 참가자
+
  추적 참가자 API를 사용하면 워크플로 런타임에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 처리하기 위한 사용자 지정 논리를 포함할 수 있는 사용자 제공 추적 참가자를 사용하여 추적 런타임을 확장할 수 있습니다.
 
  추적 참가자를 기록하려면 사용자가 <xref:System.Activities.Tracking.TrackingParticipant>를 구현해야 합니다. 특히 사용자 지정 참가자는 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드를 구현해야 합니다. 이 메서드는 워크플로 런타임에서 <xref:System.Activities.Tracking.TrackingRecord>를 내보낼 때 호출됩니다.
@@ -108,6 +111,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 ```
 
 ### <a name="emitting-custom-tracking-records"></a>사용자 지정 추적 레코드 내보내기
+
  이 샘플에서는 사용자 지정 워크플로 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 기능도 보여 줍니다.
 
 - <xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.
@@ -148,6 +152,6 @@ context.Track(customRecord);
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

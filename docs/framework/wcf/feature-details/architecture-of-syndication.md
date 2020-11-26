@@ -2,14 +2,15 @@
 title: 배포 아키텍처
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587523"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234806"
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
+
 배포 API는 네트워크에서 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -36,11 +37,12 @@ ms.locfileid: "84587523"
 > Atom 1.0 사양에서는 해당 날짜 구문에 소수 자릿수 초를 지정할 수 있습니다. WCF 구현을 serialize 및 deserialize 할 때 소수 자릿수 초를 무시 합니다.  
   
 ## <a name="object-model"></a>개체 모델  
+
  배포의 개체 모델은 다음 표의 클래스 그룹으로 구성됩니다.  
   
  클래스 형식 지정:  
   
-|클래스|Description|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|<xref:System.ServiceModel.Syndication.SyndicationFeed> 인스턴스를 Atom 1.0 형식으로 serialize하는 클래스입니다.|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|<xref:System.ServiceModel.Syndication.SyndicationFeed> 파생 클래스를 Atom 1.0 형식으로 serialize하는 클래스입니다.|  
@@ -53,7 +55,7 @@ ms.locfileid: "84587523"
   
  개체 모델 클래스:  
   
-|클래스|Description|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|배포 피드의 범주를 나타내는 클래스입니다.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|배포 콘텐츠를 나타내는 기본 클래스입니다.|  

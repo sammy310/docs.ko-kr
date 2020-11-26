@@ -6,19 +6,20 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-ms.openlocfilehash: cab496615c4ef17831895b72c8987917e3c06e77
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3b890e587abd5cb1b7315fe41897f24638fd4604
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474139"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236210"
 ---
 # <a name="stack-etw-event"></a>스택 ETW 이벤트
+
 스택 이벤트는 이벤트가 발생한 후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용해야 합니다. 런타임 공급자가 사용하도록 설정된 경우에 기록됩니다. 다른 런타임 이벤트가 발생할 때마다 이벤트가 발생하기 때문에 빈도가 매우 높은 이벤트입니다. 이러한 이유로 이 이벤트를 사용할 때는 주의하는 것이 좋습니다.  
   
  다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`StackKeyword`(0x40000000)|LogAlways(0)|  
   
@@ -30,7 +31,7 @@ ms.locfileid: "86474139"
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:Uint16|고유한 런타임 식별자입니다.|  
 |Reserved1|win:UInt8|예약되어 있습니다.|  

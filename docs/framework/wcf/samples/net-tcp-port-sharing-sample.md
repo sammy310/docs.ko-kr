@@ -2,14 +2,15 @@
 title: Net.TCP Port Sharing 샘플
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6c196380951d0da912cd937e3ebc38a03f80489c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa62734ed6a4a016011c9f29b3665dae05a000c6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584313"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235378"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
+
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 애플리케이션에 대한 연결을 구분합니다. 애플리케이션이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 애플리케이션으로 이동합니다. 다른 애플리케이션이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
   
 > [!IMPORTANT]
@@ -34,6 +35,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  포트 공유는 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 바인딩 또는 <xref:System.ServiceModel.NetTcpBinding> 바인딩 요소의 <xref:System.ServiceModel.Channels.TcpTransportBindingElement> 속성을 설정하여 서버에서 사용하도록 설정합니다. 클라이언트는 서버에서 포트 공유를 사용하도록 구성된 방식에 대해 몰라도 관계 없습니다.  
   
 ## <a name="enabling-port-sharing"></a>포트 공유 사용  
+
  다음 코드에서는 서버에서 포트 공유를 사용하는 방법을 보여 줍니다. 여기서는 임의의 URI 경로가 있는 고정 포트에서 `ICalculator` 서비스의 인스턴스를 시작합니다. 두 서비스에서 같은 포트를 공유할 수 있더라도, NetTcp 포트 공유 서비스에서 올바른 애플리케이션에 메시지를 라우트할 수 있도록 전체 엔드포인트 주소가 고유해야 합니다.  
 
 ```csharp
@@ -56,6 +58,7 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
 ```  
   
 ## <a name="running-the-sample"></a>샘플 실행  
+
  테스트 클라이언트를 사용하여 메시지가 포트를 공유하는 서비스로 올바르게 라우트되는지 확인할 수 있습니다.  
 
 ```csharp

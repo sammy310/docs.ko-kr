@@ -2,20 +2,22 @@
 title: 동작 목록
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602169"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236093"
 ---
 # <a name="activity-list"></a>동작 목록
+
 이 항목에서는 Windows Communication Foundation (WCF)에 의해 정의 된 모든 작업을 나열 합니다.  
   
 > [!NOTE]
-> 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 [사용자 코드 추적 내보내기](emitting-user-code-traces.md)를 참조 하세요.  
+> 사용자 추적을 그룹화하기 위해 프로그래밍 방식으로 동작을 정의할 수도 있습니다. 자세한 내용은 [User-Code 추적 내보내기](emitting-user-code-traces.md)를 참조 하세요.  
   
 ## <a name="servicemodel-activities"></a>ServiceModel 동작  
+
  다음 표에서는 주요 사용 시나리오의 모든 동작을 보여 줍니다.  
   
 |레이블|작업 이름|작업 유형|Description|  
@@ -34,6 +36,7 @@ ms.locfileid: "84602169"
 |T|‘[IContract.Operation]’을 실행합니다.|ExecuteUserCode|서비스에서 디스패치 후 사용자 코드를 실행합니다. 이 동작에서는 사용자가 제공한 코드에서 ServiceHost 코드를 나타내는 경계를 제공합니다.|  
   
 ## <a name="security-activities"></a>보안 동작  
+
  다음 표에서는 보안과 관련된 모든 동작을 보여 줍니다.  
   
 |작업 이름|작업 유형|Description|  
@@ -46,9 +49,10 @@ ms.locfileid: "84602169"
 |작업 이름|작업 유형|Description|  
 |-------------------|-------------------|-----------------|  
 |COM+ 인스턴스 만들기|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
-|COM + 실행\<operation>|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
+|COM + 실행 \<operation>|TransferToCOMPlus|WCF 코드의 각 COM + 호출에 대 한 활동 인스턴스 1 개|  
   
 ## <a name="wmi-activities"></a>WMI 동작  
+
  다음 표에서는 WMI와 관련된 모든 동작을 보여 줍니다.  
   
 |작업 이름|작업 유형|Description|  
