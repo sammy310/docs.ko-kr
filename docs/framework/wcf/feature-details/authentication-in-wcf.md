@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558279"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247540"
 ---
 # <a name="authentication-in-wcf"></a>WCF에서 권한 부여
+
 다음 항목에서는 Windows 인증, x.509 인증서, 사용자 이름 및 암호 등의 인증을 제공 하는 Windows Communication Foundation (WCF)의 다양 한 메커니즘을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: ASP.NET 멤버 자격 공급자 사용](how-to-use-the-aspnet-membership-provider.md)  
  ASP.NET 기능에는 멤버 자격 및 역할 공급자, 인증에 필요한 사용자 이름/암호 쌍을 저장할 데이터베이스 및 권한 부여를 위한 사용자 역할이 포함되어 있습니다. 이 항목에서는 WCF 서비스가 동일한 데이터베이스를 사용 하 여 사용자를 인증 하 고 권한을 부여 하는 방법을 설명 합니다.  
   
@@ -33,12 +35,14 @@ ms.locfileid: "90558279"
  Windows 인증을 사용할 때 일반적으로 발생하는 문제에 대해 중점적으로 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [일반적인 보안 시나리오](common-security-scenarios.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

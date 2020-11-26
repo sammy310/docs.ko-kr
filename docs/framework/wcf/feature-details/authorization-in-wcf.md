@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247488"
 ---
 # <a name="authorization-in-wcf"></a>WCF에서 권한 부여
+
 권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 단원의 항목에서는 Windows Communication Foundation (WCF)에서 다양 한 방법으로이 기본 작업을 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Access Control 메커니즘](access-control-mechanisms.md)  
  WCF의 권한 부여 메커니즘과 제안 된 사용에 대 한 간략 한 개요를 제공 합니다.  
   
@@ -35,6 +37,7 @@ ms.locfileid: "90556260"
  위임과 가장의 차이점을 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,9 +47,10 @@ ms.locfileid: "90556260"
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [인증](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

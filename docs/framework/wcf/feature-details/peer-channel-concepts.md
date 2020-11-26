@@ -2,17 +2,19 @@
 title: 피어 채널 개념
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
-ms.openlocfilehash: c9a63784b685ce57a7878934ddd042afd70c32b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2da4e9bab4f77773e1f28ccb7f45c1bedaadfb81
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576345"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247956"
 ---
 # <a name="peer-channel-concepts"></a>피어 채널 개념
+
 이 섹션에서는 WCF (Windows Communication Foundation) 피어 채널을 구성 하는 개념을 간략하게 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [피어 메시](peer-meshes.md): 피어 채널을 사용 하 여 만든 메시의 특징을 설명 합니다.  
   
  [피어 노드](peer-nodes.md): 피어 노드에 대해 설명 합니다.  

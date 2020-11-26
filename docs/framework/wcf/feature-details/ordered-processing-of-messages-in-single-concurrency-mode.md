@@ -2,17 +2,19 @@
 title: 단일 동시성 모델에서 메시지의 순서 지정 처리
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: baba75fe398d974f989acfda7ef7366986f6813b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d70087a6dc1501f9a7f7ed057eae3dad181761ae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598738"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248021"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>단일 동시성 모델에서 메시지의 순서 지정 처리
+
 WCF는 기본 채널이 세션 않는 한 메시지가 처리 되는 순서를 보장 하지 않습니다.  예를 들어 세션 채널이 아닌 MsmqInputChannel를 사용 하는 WCF 서비스는 메시지를 순서 대로 처리 하지 못합니다. 개발자가 주문 처리 동작에서 세션을 사용 하지 않으려는 경우가 있습니다. 이 항목에서는 서비스가 단일 동시성 모델에서 실행되고 있을 때 이 동작을 구성하는 방법을 설명합니다.  
   
 ## <a name="in-order-message-processing"></a>순서에 따른 메시지 처리  
+
  <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A>라는 새 속성이 <xref:System.ServiceModel.ServiceBehaviorAttribute>에 추가되었습니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A>가 true로 설정되고 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>가 <xref:System.ServiceModel.ConcurrencyMode.Single>로 설정되면 서비스에 전송된 메시지는 순서대로 처리됩니다. 다음 코드 조각에서는 이러한 특성을 설정하는 방법을 보여 줍니다.  
   
 ```csharp

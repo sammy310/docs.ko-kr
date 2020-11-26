@@ -7,14 +7,15 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: 01827250ac216dbcb57a8a139637e7c48d59566d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b56856e3157ad4b770173cf0b34c7e092ffff075
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166080"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247241"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87166080"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]다음 섹션의 요구 사항은 List 컨트롤 형식을 구현 하는 모든 컨트롤 ( [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 예를 들어, Win32 또는 Windows Forms에 적용 됩니다. 목록 컨테이너 컨트롤은 List 컨트롤 형식을 구현하는 컨트롤의 예입니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 목록 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 두 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 컨트롤 뷰에는 컨트롤인 요소만 포함되며, 콘텐츠 뷰에서는 트리와 중복되는 정보가 제거됩니다. 예를 들어, 콤보 상자에 레이블을 지정하는 데 사용되는 텍스트 컨트롤은 `ComboBox NameProperty`로 노출됩니다. 하지만 텍스트 컨트롤이 컨트롤 뷰에서 이 방법으로 이미 노출되므로 두 번 노출시킬 필요는 없습니다. 따라서 콘텐츠 보기에서 제거됩니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
@@ -52,7 +55,9 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
  목록 컨트롤 내에서 선택 가능한 항목은 목록 컨트롤의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 있는 하위 항목에서 사용할 수 있습니다. 목록 컨트롤 내의 모든 항목은 같은 선택 그룹에 속해야 합니다. 목록에서 선택 가능한 항목은 DataItem이 아닌 ListItem 컨트롤 형식으로 노출되어야 합니다.  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 목록 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|  
@@ -71,7 +76,9 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|메모를 참조하세요.|목록 컨트롤의 도움말 텍스트는 사용자에게 옵션 목록에서 선택하라는 요청이 표시되는 이유를 설명합니다. 예: "이 목록에서 항목을 선택하면 모니터의 디스플레이 해상도가 설정됩니다."|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>필요한 UI 자동화 컨트롤 패턴 및 속성  
+
  다음 표에서는 목록 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴/패턴 속성|지원/값|참고|  
@@ -85,7 +92,9 @@ List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐
 |<xref:System.Windows.Automation.Provider.ITableProvider>|안 함|`ITableProvider` 가 List 컨트롤 형식에 지원되지 않습니다. 컨트롤에서 이 컨트롤 패턴을 지원해야 하는 경우 컨트롤은 Data Grid 컨트롤 형식을 기반으로 해야 합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 목록 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원/값|참고|  

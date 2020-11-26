@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 7cb70e00bfd2558c3949bfd3d3597f7156572620
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c7f681de9b4485d9963eab2b27fbdea74b8832f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598829"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248281"
 ---
 # <a name="metadata"></a>메타데이터
+
 WCF (Windows Communication Foundation)는 서비스 메타 데이터의 내보내기, 게시, 검색 및 가져오기를 위한 인프라를 제공 합니다. WCF 서비스는 메타 데이터를 사용 하 여 서비스의 끝점과 상호 작용 하는 방법을 설명 하므로 Svcutil.exe와 같은 도구에서 서비스에 액세스 하기 위한 클라이언트 코드를 자동으로 생성할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [메타데이터 아키텍처 개요](metadata-architecture-overview.md)  
  메타데이터 아키텍처에 대한 높은 수준의 개요입니다.  
   
