@@ -2,7 +2,6 @@
 title: Dispose 메서드 구현
 description: 이 문서에서는 .NET에서 코드에 사용되는 비관리형 리소스를 해제하는 Dispose 메서드를 구현하는 방법을 알아봅니다.
 ms.date: 09/08/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: ec731ff4c1020100c2b7ff5041d42291141a5209
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022924"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982409"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose 메서드 구현
 
@@ -79,7 +78,7 @@ ms.locfileid: "90022924"
 
   - **많은 메모리를 사용하거나 부족한 리소스를 사용하는 관리되는 개체.** 관리되는 큰 개체 참조를 `null`에 할당하여 더 연결할 수 없는 상태로 만듭니다. 이렇게 하면 비결정적으로 회수된 경우보다 빠르게 해제되며, 이러한 과정은 일반적으로 조건부 블록 외부에서 이루어집니다.
 
-메서드 호출이 종료자에서 수행된 경우 관리되지 않는 리소스를 해제하는 코드만 실행되어야 합니다. 구현자는 false 경로가 회수되었을 수 있는 관리되는 개체와 상호 작용하지 않도록 해야 합니다. 이는 종료하는 동안 가비지 수집기가 관리되는 개체를 제거하는 순서가 비결정적이기 때문에 중요합니다.
+메서드 호출이 종료자에서 수행된 경우 관리되지 않는 리소스를 해제하는 코드만 실행되어야 합니다. 구현자는 false 경로가 회수되었을 수 있는 관리 개체와 상호 작용하지 않도록 해야 합니다. 이는 종료하는 동안 가비지 수집기가 관리되는 개체를 제거하는 순서가 비결정적이기 때문에 중요합니다.
 
 ## <a name="cascade-dispose-calls"></a>Cascade dispose 호출
 

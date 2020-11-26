@@ -1,31 +1,33 @@
 ---
 title: 문자열을 숫자로 변환하는 방법 - C# 프로그래밍 가이드
 description: C#에서 Parse, TryParse 또는 Convert 클래스 메서드를 호출하여 문자열을 숫자로 변환하는 방법을 알아봅니다.
-ms.date: 02/11/2019
+ms.date: 11/20/2020
 helpviewer_keywords:
 - conversions [C#]
 - conversions [C#], string to int
 - converting strings to int [C#]
 - strings [C#], converting to int
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: acaa013c89aff8dcb672a12df0c01911d8e52a1c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556195"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099174"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>문자열을 숫자로 변환하는 방법(C# 프로그래밍 가이드)
 
 다양한 숫자 형식(`int`, `long`, `double` 등)에 있는 `Parse` 또는 `TryParse` 메서드를 호출하거나 <xref:System.Convert?displayProperty=nameWithType> 클래스의 메서드를 사용하여 [문자열](../../language-reference/builtin-types/reference-types.md)을 숫자로 변환할 수 있습니다.  
   
- 문자열이 있는 경우 `TryParse` 메서드(예: [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) 또는 `Parse` 메서드([`var number = int.Parse("11")`](xref:System.Int32.Parse%2A))를 호출하면 약간 더 효율적이고 간단합니다.  <xref:System.Convert> 메서드 사용은 <xref:System.IConvertible>을 구현하는 일반 개체에 더 유용합니다.  
+ `TryParse` 메서드(예: [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) 또는 `Parse` 메서드(예: [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A))를 호출하면 약간 더 효율적이고 간단합니다.  <xref:System.Convert> 메서드 사용은 <xref:System.IConvertible>을 구현하는 일반 개체에 더 유용합니다.  
   
- `Parse` 또는 `TryParse` 메서드는 <xref:System.Int32?displayProperty=nameWithType> 형식과 같이 문자열에 포함되는 숫자 형식에서 사용할 수 있습니다.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드는 <xref:System.Int32.Parse%2A>를 내부적으로 사용합니다.  `Parse` 메서드는 변환된 숫자를 반환합니다. `TryParse` 메서드는 변환에 성공했는지 여부를 나타내는 <xref:System.Boolean> 값을 반환하고 변환된 숫자를 [`out` 매개 변수](../../language-reference/keywords/out.md)로 반환합니다. 문자열이 유효한 형식이 아닌 경우 `Parse`는 예외를 throw하는 반면, `TryParse`에서 `false`를 반환합니다. `Parse` 메서드를 호출할 때는 항상 예외 처리를 사용하여 구문 분석 작업이 실패하는 이벤트에서 <xref:System.FormatException>을 catch해야 합니다.  
+ `Parse` 또는 `TryParse` 메서드는 <xref:System.Int32?displayProperty=nameWithType> 형식과 같이 문자열에 포함되는 숫자 형식에서 사용합니다.  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드는 <xref:System.Int32.Parse%2A>를 내부적으로 사용합니다.  `Parse` 메서드는 변환된 숫자를 반환합니다. `TryParse` 메서드는 변환에 성공했는지 여부를 나타내는 <xref:System.Boolean> 값을 반환하고 변환된 숫자를 [`out` 매개 변수](../../language-reference/keywords/out.md)로 반환합니다. 문자열이 유효한 형식이 아닌 경우 `Parse`는 예외를 throw하지만 `TryParse`는 `false`를 반환합니다. `Parse` 메서드를 호출할 때는 항상 예외 처리를 사용하여 구문 분석 작업이 실패하는 이벤트에서 <xref:System.FormatException>을 catch해야 합니다.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Parse 및 TryParse 메서드 호출
 
-`Parse` 및 `TryParse` 메서드는 문자열의 시작과 끝에 있는 공백을 무시하지만 다른 모든 문자는 적절한 숫자 형식(`int`, `long`, `ulong`, `float`, `decimal` 등)을 구성하는 문자여야 합니다.  숫자를 구성하는 문자열 내에 공백이 있으면 오류가 발생합니다.  예를 들어 `decimal.TryParse`를 사용하여 “10”, “10.3” 또는 “  10  ”은 구문 분석할 수 있지만 이 메서드를 사용하여 “10X”, “1 0”(공백 포함), “10 .3”(공백 포함), “10e1”(`float.TryParse` 사용) 등에서 10을 구문 분석할 수는 없습니다. 또한 값이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>인 문자열이 구문 분석되지 않습니다. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하여 구문 분석하기 전에 Null 또는 빈 문자열을 확인할 수 있습니다.
+`Parse` 및 `TryParse` 메서드는 문자열의 시작과 끝에 있는 공백을 무시하지만 다른 모든 문자는 적절한 숫자 형식(`int`, `long`, `ulong`, `float`, `decimal` 등)을 구성하는 문자여야 합니다.  숫자를 구성하는 문자열 내에 공백이 있으면 오류가 발생합니다.  예를 들어 `decimal.TryParse`를 사용하여 “10”, “10.3” 또는 “  10  ”은 구문 분석할 수 있지만 이 메서드를 사용하여 “10X”, “1 0”(공백 포함), “10 .3”(공백 포함), “10e1”(`float.TryParse` 사용) 등에서 10을 구문 분석할 수는 없습니다. 값이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>인 문자열은 구문 분석되지 않습니다. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하여 구문 분석하기 전에 Null 또는 빈 문자열을 확인할 수 있습니다.
 
 다음 예제에서는 `Parse` 및 `TryParse` 호출이 성공하는 경우와 실패하는 경우를 모두 보여 줍니다.  
   

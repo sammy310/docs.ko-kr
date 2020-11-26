@@ -1,14 +1,13 @@
 ---
 title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224403"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687781"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -56,11 +55,18 @@ Ahead-Of-Time 컴파일러입니다.
 
 ## <a name="bcl"></a>BCL
 
-기본 클래스 라이브러리입니다. ‘프레임워크 라이브러리’라고도 합니다.
+기본 클래스 라이브러리입니다.
 
 System.\*(및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하는 라이브러리 집합입니다. BCL은 ASP.NET Core 같은 상위 수준 애플리케이션 프레임워크의 기반이 되는 하위 수준의 범용 프레임워크입니다.
 
-[.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)의 BCL 소스 코드는 [.NET 런타임 리포지토리](https://github.com/dotnet/runtime)에 포함됩니다. 이 .NET 최신 구현의 대다수 BCL API는 .NET Framework에서도 사용할 수 있으므로 해당 소스 코드를 .NET Framework BCL 소스 코드의 포크로 간주할 수 있습니다.
+[.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)의 BCL 소스 코드는 [.NET 런타임 리포지토리](https://github.com/dotnet/runtime)에 포함됩니다. 대다수 BCL API는 .NET Framework에서도 사용할 수 있으므로 이 소스 코드를 .NET Framework BCL 소스 코드의 포크로 간주할 수 있습니다.
+
+다음 용어는 종종 BCL에서 참조하는 것과 동일한 API 컬렉션을 참조합니다.
+
+- [핵심 .NET 라이브러리](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [프레임워크 라이브러리](#framework-libraries)
+- [런타임 라이브러리](#runtime)
+- [공유 프레임워크](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ CLR은 메모리 할당 및 관리를 처리합니다. 또한 CLR은 앱을 실�
 
 “프레임워크”라는 단어는 다음 용어에서 다른 의미가 있습니다.
 
+- [프레임워크 라이브러리](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [공유 프레임워크](#shared-framework)
 - [대상 프레임워크](#target-framework)
 - [TFM(대상 프레임워크 모니커)](#tfm)
 - [프레임워크 종속 앱](../core/deploying/index.md#publish-framework-dependent)
 
-레거시 .NET 설명서에서 “프레임워크”는 경우에 따라 [.NET의 구현](#implementation-of-net)을 나타냅니다. 예를 들어 문서에서는 .NET 5를 프레임워크라고 할 수 있습니다.
+경우에 따라 “프레임워크”는 [.NET 구현](#implementation-of-net)을 나타냅니다. 예를 들어 문서에서는 .NET 5를 프레임워크라고 할 수 있습니다.
+
+## <a name="framework-libraries"></a>프레임워크 라이브러리
+
+의미는 컨텍스트에 따라 달라집니다. [.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)의 프레임워크 라이브러리를 나타낼 수 있습니다. 이 경우 [BCL](#bcl)이 참조하는 것과 동일한 라이브러리를 참조합니다. BCL을 기반으로 하고 웹앱에 대한 추가 API를 제공하는 ASP.NET Core 프레임워크 라이브러리를 참조할 수도 있습니다.
 
 ## <a name="gc"></a>GC
 
@@ -213,7 +225,7 @@ UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레
 
 개발자가 [.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)용 .NET 애플리케이션과 라이브러리를 만드는 데 사용할 수 있는 라이브러리 및 도구 집합입니다. .NET Core SDK라고도 합니다.
 
-앱을 빌드하기 위한 [.NET CLI](#net-cli), 앱을 빌드하고 실행하기 위한 .NET 라이브러리 및 런타임, CLI 명령을 실행하고 애플리케이션을 실행하는 dotnet 실행 파일( *dotnet.exe* )을 포함합니다.
+앱을 빌드하기 위한 [.NET CLI](#net-cli), 앱을 빌드하고 실행하기 위한 .NET 라이브러리 및 런타임, CLI 명령을 실행하고 애플리케이션을 실행하는 dotnet 실행 파일(*dotnet.exe*)을 포함합니다.
 
 [.NET SDK 개요](../core/sdk.md)를 참조하세요.
 
@@ -258,21 +270,34 @@ Windows와 macOS, Linux, iOS, Android 같은 운영 체제와 해당 운영 체�
 - .NET 네이티브(UWP)
 - Mono 런타임
 
-“런타임”이라는 단어는 다음 컨텍스트에서 다른 의미가 있습니다.
+“런타임”이라는 단어는 컨텍스트에 따라 여러 가지 의미가 있습니다.
 
-* [.NET 다운로드 페이지](https://dotnet.microsoft.com/download).
+* [.NET 5.0 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet/5.0)의 ‘.NET 런타임’.
 
-  여기에서 “런타임”은 머신에서 [프레임워크 종속](../core/deploying/index.md#publish-framework-dependent) 앱을 실행할 수 있도록 머신에 다운로드하고 설치할 수 있는 [BCL](#bcl)(프레임워크 라이브러리)과 함께 [CLR](#clr)을 함께 의미합니다.
+  ‘.NET 런타임’이나 다른 런타임(예: ‘ASP.NET Core 런타임’)을 다운로드할 수 있습니다.  이러한 사용에 대한 ‘런타임’은 머신에서 [프레임워크 종속](../core/deploying/index.md#publish-framework-dependent) 앱을 실행하기 위해 머신에 설치해야 하는 구성 요소 세트입니다. .NET 런타임에는 [BCL](#bcl)을 제공하는 [CLR](#clr) 및 .NET [공유 프레임워크](#shared-framework)가 포함됩니다.
 
-* [.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)의 [RID(런타임 식별자)](../core/rid-catalog.md).
+* ‘.NET 런타임 라이브러리’
 
-  여기에서 “런타임”은 .NET 앱이 실행되는 OS 플랫폼 및 CPU 아키텍처를 의미합니다(예: `linux-x64`).
+  [BCL](#bcl)이 참조하는 것과 동일한 라이브러리를 참조합니다. 그러나 ASP.NET Core 런타임과 같은 다른 런타임에는 BCL을 기반으로 하는 추가 라이브러리와 함께 다른 [공유 프레임워크](#shared-framework)가 있습니다.
 
-레거시 .NET 설명서에서는 다음 예제와 같이 [.NET 구현](#implementation-of-net)의 뜻 그대로 “런타임”을 사용하기도 합니다.
+* [RID(런타임 식별자)](../core/rid-catalog.md).
 
-- “다양한 .NET 런타임에서 특정 버전의 .NET Standard를 구현합니다.”
-- “여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다.” (.NET Standard를 참조)
-- “다양한 .NET 런타임에서 특정 버전의 .NET Standard를 구현합니다. … 각 .NET 런타임 버전은 지원하는 최신 .NET Standard 버전을 보급합니다.”
+  여기에서 ‘런타임’은 .NET 앱이 실행되는 OS 플랫폼 및 CPU 아키텍처를 의미합니다(예: `linux-x64`).
+
+* 경우에 따라 “런타임”은 다음 예제와 같이 [.NET 구현](#implementation-of-net)의 의미로 사용됩니다.
+
+  - “다양한 .NET 런타임에서 특정 버전의 .NET Standard를 구현합니다. … 각 .NET 런타임 버전은 지원하는 최신 .NET Standard 버전을 보급합니다.”
+  - “여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다.” (.NET Standard를 참조)
+
+## <a name="shared-framework"></a>공유 프레임워크
+
+의미는 컨텍스트에 따라 달라집니다. ‘.NET 공유 프레임워크’는 [.NET 런타임](#runtime)에 포함된 라이브러리를 참조합니다. 이 경우 [.NET 5(및 .NET Core) 이상 버전](#net-5-and-later-versions)의 ‘공유 프레임워크’는 [BCL](#bcl)이 참조하는 것과 동일한 라이브러리를 참조합니다.
+
+다른 공유 프레임워크도 있습니다. ‘ASP.NET Core 공유 프레임워크’는 BCL과 웹앱에서 사용할 추가 API를 포함하는 [ASP.NET Core 런타임](#runtime)에 포함된 라이브러리를 참조합니다.
+
+[프레임워크 종속 앱](../core/deploying/index.md#publish-framework-dependent)의 공유 프레임워크는 앱을 실행하는 머신의 폴더에 설치된 어셈블리에 포함되는 라이브러리로 구성됩니다. [자체 포함 앱](../core/deploying/index.md#publish-self-contained)의 공유 프레임워크 어셈블리는 앱에 포함됩니다.
+
+자세한 내용은 [Deep-dive into .NET Core primitives, part 2: the shared framework](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/)(.NET Core 기본 형식 심층 분석, 2부: 공유 프레임워크)를 참조하세요.
 
 ## <a name="stack"></a>스택
 
@@ -306,7 +331,7 @@ IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이�
 
 ## <a name="workload"></a>workload
 
-다른 사람이 빌드 중인 앱의 유형. [앱 모델](#app-model)보다 일반적입니다. 예를 들어 이 문서를 포함하여 모든 .NET 문서 페이지의 맨 위에는 **워크로드** 에 대한 드롭다운 목록이 있습니다. 이를 통해 **웹** , **모바일** , **클라우드** , **데스크톱** , **기계 학습 \& 데이터** 에 대한 문서로 전환할 수 있습니다.
+다른 사람이 빌드 중인 앱의 유형. [앱 모델](#app-model)보다 일반적입니다. 예를 들어 이 문서를 포함하여 모든 .NET 문서 페이지의 맨 위에는 **워크로드** 에 대한 드롭다운 목록이 있습니다. 이를 통해 **웹**, **모바일**, **클라우드**, **데스크톱**, **기계 학습 \& 데이터** 에 대한 문서로 전환할 수 있습니다.
 
 일부 컨텍스트에서 *워크로드* 는 특정 유형의 앱을 지원하기 위해 설치할 수 있는 Visual Studio 기능 컬렉션을 참조합니다. 예를 들어 [워크로드 선택](../core/install/windows.md#select-a-workload)을 참조하세요.
 

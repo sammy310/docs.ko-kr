@@ -2,12 +2,12 @@
 title: WCF 개발자를 위한 ASP.NET Core gRPC - WCF 개발자를 위한 gRPC
 description: ASP.NET Core 3.0에서 WCF 개발자를 위한 gRPC 서비스를 구축하는 방법 소개
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c9cc5ef9c06d5262fb85850f8a3b178d46e5c6fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689279"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 개발자를 위한 ASP.NET Core gRPC
 
@@ -49,7 +49,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 ## <a name="introduction"></a>소개
 
-gRPC는 네트워크 서비스와 분산 애플리케이션을 빌드하기 위한 최신 프레임워크입니다. SOAP의 플랫폼 간 상호 운용성과 결합된 WCF(Windows Communication Foundation) NetTCP 바인딩의 성능을 상상해 보세요. gRPC는 HTTP/2 및 Protobuf 메시지 인코딩 프로토콜을 기반으로 하여 애플리케이션과 서비스 간에 뛰어난 성능의 저대역폭 통신을 제공합니다. .NET, Java, Python, Node.js, Go, C++ 등을 비롯한 가장 인기 있는 프로그래밍 언어 및 플랫폼에서 서버 및 클라이언트 코드 생성을 지원합니다. .NET 4.x용 기존 gRPC 도구 및 라이브러리와 함께 ASP.NET Core 3.0에서 gRPC에 대한 최고 수준의 지원을 제공하므로 조직에서 .NET Core를 도입하려는 개발 팀을 위한 WCF의 훌륭한 대안입니다.
+gRPC는 네트워크 서비스와 분산 애플리케이션을 빌드하기 위한 최신 프레임워크입니다. SOAP의 플랫폼 간 상호 운용성과 결합된 WCF(Windows Communication Foundation) NetTCP 바인딩의 성능을 상상해 보세요. gRPC는 HTTP/2 및 Protobuf 메시지 인코딩 프로토콜을 기반으로 하여 애플리케이션과 서비스 간에 뛰어난 성능의 저대역폭 통신을 제공합니다. .NET, Java, Python, Node.js, Go, C++ 등을 비롯한 가장 인기 있는 프로그래밍 언어 및 플랫폼에서 서버 및 클라이언트 코드 생성을 지원합니다. .NET Framework 4.x용 기존 gRPC 도구 및 라이브러리와 함께 ASP.NET Core 3.0에서 gRPC에 대한 최고 수준의 지원을 제공하므로 조직에서 .NET Core를 도입하려는 개발 팀을 위한 WCF의 훌륭한 대안입니다.
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 

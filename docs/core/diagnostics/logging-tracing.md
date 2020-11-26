@@ -2,12 +2,12 @@
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439926"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820581"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -55,7 +55,7 @@ ms.locfileid: "94439926"
   - 직렬화할 수 있는 개체만 추적할 수 있습니다.
   - EventSource를 이용하도록 구성된 [EventListener](xref:System.Diagnostics.Tracing.EventListener) 인스턴스를 통해 in-process로 이용할 수 있습니다.
   - 다음을 통해 out-of-process로 이용할 수 있습니다.
-    - 모든 플랫폼에서 .NET Core의 EventPipe
+    - 모든 플랫폼에서 [.NET Core의 EventPipe](./eventpipe.md)
     - [ETW(Windows용 이벤트 추적)](/windows/win32/etw/event-tracing-portal)
     - [Linux용 LTTng 추적 프레임워크](https://lttng.org/)
       - 연습: [PerfCollect를 사용하여 LTTng 추적 수집](trace-perfcollect-lttng.md)
@@ -93,6 +93,8 @@ ms.locfileid: "94439926"
 - [.NET에서 로깅](../extensions/logging.md)은 지원하는 로깅 기술에 대해 간략히 설명합니다.
 
 - [C# 문자열 보간](../../csharp/language-reference/tokens/interpolated.md)은 로깅 코드 작성을 간소화할 수 있습니다.
+
+- [런타임 공급자 이벤트 목록](../../fundamentals/diagnostics/runtime-events.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType> 속성은 예외를 기록하는 데 유용합니다.
 

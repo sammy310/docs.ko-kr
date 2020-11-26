@@ -4,14 +4,13 @@ description: .NET 작업 기반 비동기 모델을 사용하여 간단하게 I/
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fcc41c4ea5037d643402fc722e8f16f28d560ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70169116"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823331"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
@@ -84,7 +83,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 요청이 수행되고 디바이스 드라이버를 통해 데이터가 반환되면 인터럽트를 통해 수신된 새 데이터를 CPU에 알려줍니다.  이 인터럽트의 처리 방법은 OS에 따라 다르지만 결국 데이터가 시스템 interop 호출에 도달할 때까지 OS를 통해 전달됩니다. 예를 들어 Linux에서는 인터럽트 처리기가 OS를 통해 비동기적으로 데이터를 위로 전달하기 위해 IRQ의 아래쪽 절반을 예약합니다.  이 작업도 *역시* 비동기적으로 수행됩니다.  다음 사용 가능한 스레드가 비동기 메서드를 실행하고 완료된 작업의 결과를 “래핑 해제”할 수 있을 때까지 결과가 큐에 유지됩니다.
 
-이 전체 프로세스의 요점은 **태스크 실행 전용 스레드가 없다**는 것입니다.  일부 컨텍스트에서 작업이 실행되기는 하지만(즉, OS에서 데이터를 디바이스 드라이버로 전달하고 인터럽트에 응답해야 함) 요청에서 데이터가 반환될 때까지 *대기*하는 전용 스레드는 없습니다.  이렇게 하면 시스템에서 일부 I/O 호출이 완료될 때까지 대기하는 것보다 훨씬 더 많은 작업량을 처리할 수 있습니다.
+이 전체 프로세스의 요점은 **태스크 실행 전용 스레드가 없다** 는 것입니다.  일부 컨텍스트에서 작업이 실행되기는 하지만(즉, OS에서 데이터를 디바이스 드라이버로 전달하고 인터럽트에 응답해야 함) 요청에서 데이터가 반환될 때까지 *대기* 하는 전용 스레드는 없습니다.  이렇게 하면 시스템에서 일부 I/O 호출이 완료될 때까지 대기하는 것보다 훨씬 더 많은 작업량을 처리할 수 있습니다.
 
 위의 프로세스를 위해 수행할 작업이 많아 보일 수도 있지만 벽시계 시간으로 측정할 때 실제 I/O 작업을 수행하는 데 걸리는 시간보다 훨씬 짧습니다. 정확하지는 않지만 이러한 호출의 잠재적인 타임라인은 다음과 같습니다.
 

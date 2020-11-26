@@ -1,26 +1,25 @@
 ---
 title: XmlSchemaCollection을 사용하여 XDR 유효성 검사
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9edde2fc0da97b570162775a33c95d472cda974b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710000"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819281"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection을 사용하여 XDR 유효성 검사
 
-유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection**에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다. **XmlValidatingReader**에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.
+유효성을 검사하려는 XDR(XML 데이터 축소) 스키마가 **XmlSchemaCollection** 에 저장된 경우 스키마를 컬렉션에 추가할 때 지정한 네임스페이스 URI와 연관됩니다. **XmlValidatingReader** 에서는 XML 문서의 네임스페이스 URI를 컬렉션의 해당 URI에 상응하는 스키마로 매핑합니다.
 
 > [!IMPORTANT]
 > 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.
 
-예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
+예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection** 에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
@@ -30,7 +29,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-다음 코드 예제에서는 **XmlTextReader**를 사용하는 **XmlValidatingReader**를 만들고 XDR 스키마인 HeadCount.xdr을 **XmlSchemaCollection**에 추가합니다.
+다음 코드 예제에서는 **XmlTextReader** 를 사용하는 **XmlValidatingReader** 를 만들고 XDR 스키마인 HeadCount.xdr을 **XmlSchemaCollection** 에 추가합니다.
 
 ```vb
 Imports System.IO
@@ -70,7 +69,7 @@ Namespace ValidationSample
         End Sub
 
         Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
-            Console.WriteLine("***Validation error")
+            Console.WriteLine("**_Validation error")
             Console.WriteLine($"Severity:{args.Severity}")
             Console.WriteLine($"Message:{args.Message}")
         End Sub
@@ -123,7 +122,7 @@ namespace ValidationSample
 
         public static void ValidationHandler(object sender, ValidationEventArgs args)
         {
-            Console.WriteLine("***Validation error");
+            Console.WriteLine("_*_Validation error");
             Console.WriteLine($"\tSeverity:{args.Severity}");
             Console.WriteLine($"\tMessage:{args.Message}");
         }
@@ -131,7 +130,7 @@ namespace ValidationSample
 }
 ```
 
-다음에서는 유효성을 검사할 입력 파일 *HeadCount.xml*의 내용을 요약합니다.
+다음에서는 유효성을 검사할 입력 파일 _HeadCount.xml*의 내용을 간략하게 보여 줍니다.
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->
@@ -141,7 +140,7 @@ namespace ValidationSample
 </HeadCount>
 ```
 
-다음에서는 유효성을 검사할 XDR 스키마 파일 *HeadCount.xdr*의 내용을 요약합니다.
+다음에서는 유효성을 검사할 XDR 스키마 파일 *HeadCount.xdr* 의 내용을 요약합니다.
 
 ```xml
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">

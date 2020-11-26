@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955410"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687827"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -43,7 +43,7 @@ ms.locfileid: "91955410"
 
 Windows 및 macOS용 [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 또는 Ubuntu용 [OpenJDK 8](https://openjdk.java.net/install/)을 설치합니다.
 
-운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 **jdk-8u201-windows-x64.exe**(아래 참조), macOS의 경우 **jdk-8u231-macosx-x64.dmg**를 선택합니다. 그런 다음, `java` 명령을 사용하여 설치를 확인합니다.
+운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 **jdk-8u201-windows-x64.exe**(아래 참조), macOS의 경우 **jdk-8u231-macosx-x64.dmg** 를 선택합니다. 그런 다음, `java` 명령을 사용하여 설치를 확인합니다.
 
 ![Java 다운로드](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
@@ -53,40 +53,40 @@ Apache Spark는 압축된 .tgz 파일로 다운로드됩니다. [7-Zip](https://
 
 ### <a name="4-install-apache-spark"></a>4. Apache Spark 설치
 
-[Apache Spark를 다운로드하여 설치](https://spark.apache.org/downloads.html)합니다. 버전 2.3.* 또는 2.4.0, 2.4.1, 2.4.3, 2.4.4 중에서 선택해야 합니다(.NET for Apache Spark는 다른 버전의 Apache Spark와 호환되지 않음).
+[Apache Spark를 다운로드하여 설치](https://spark.apache.org/downloads.html)합니다. 버전 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 또는 3.0.1 중에서 선택해야 합니다(.NET for Apache Spark는 다른 버전의 Apache Spark와 호환되지 않음).
 
-다음 단계에서 사용되는 명령에서는 [Apache Spark 2.4.1을 다운로드하여 설치](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)했다고 가정합니다. 다른 버전을 사용하려는 경우 **2.4.1**을 적절한 버전 번호로 바꿉니다. 그런 다음, **.tar** 파일 및 Apache Spark 파일의 압축을 풉니다.
+다음 단계에서 사용되는 명령에서는 [Apache Spark 3.0.1을 다운로드하여 설치](https://spark.apache.org/downloads.html)했다고 가정합니다. 다른 버전을 사용하려는 경우 **3.0.1** 을 적절한 버전 번호로 바꿉니다. 그런 다음, **.tar** 파일 및 Apache Spark 파일의 압축을 풉니다.
 
 중첩된 **.tar** 파일의 압축을 풀려면:
 
-* 다운로드한 **spark-2.4.1-bin-hadoop2.7.tgz** 파일을 찾습니다.
-* 파일을 마우스 오른쪽 단추로 클릭하고 **7-Zip -> 여기에 압축 풀기**를 선택합니다.
-* **spark-2.4.1-bin-hadoop2.7.tar**이 다운로드한 **.tgz** 파일과 함께 생성됩니다.
+* 다운로드한 **spark-3.0.1-bin-hadoop2.7.tgz** 파일을 찾습니다.
+* 파일을 마우스 오른쪽 단추로 클릭하고 **7-Zip -> 여기에 압축 풀기** 를 선택합니다.
+* **spark-3.0.1-bin-hadoop2.7.tar** 이 다운로드한 **.tgz** 파일과 함께 생성됩니다.
 
 Apache Spark 파일의 압축을 풀려면:
 
-* **spark-2.4.1-bin-hadoop2.7.tar**을 마우스 오른쪽 단추로 클릭하고 **7-Zip -> 압축 풀기...** 를 선택합니다.
-* **압축 풀기** 필드에 **C:\bin**을 입력합니다.
+* **spark-3.0.1-bin-hadoop2.7.tar** 을 마우스 오른쪽 단추로 클릭하고 **7-Zip -> 압축 풀기...** 을 선택합니다.
+* **압축 풀기** 필드에 **C:\bin** 을 입력합니다.
 * **압축 풀기** 필드 아래에 있는 확인란의 선택을 취소합니다.
-* **확인**을 선택합니다.
-* Apache Spark 파일이 C:\bin\spark-2.4.1-bin-hadoop2.7\에 추출되었습니다.
+* **확인** 을 선택합니다.
+* Apache Spark 파일이 C:\bin\spark-3.0.1-bin-hadoop2.7\에 추출됩니다.
 
-![Spark 설치](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![Spark 설치](./media/spark-extract-with-7-zip.png)
 
 다음 명령을 실행하여 Apache Spark를 찾는 데 사용되는 환경 변수를 설정합니다. Windows에서는 관리자 모드에서 명령 프롬프트를 실행해야 합니다.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
@@ -109,24 +109,22 @@ spark-submit --version
 
 Microsoft.Spark.Worker 압축을 풀려면:
 
-* 다운로드한 **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** 파일을 찾습니다.
+* 다운로드한 **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip** 파일을 찾습니다.
 * 마우스 오른쪽 단추를 클릭하고 **7-Zip -> 압축 풀기...** 를 선택합니다.
-* **압축 풀기** 필드에 **C:\bin**을 입력합니다.
+* **압축 풀기** 필드에 **C:\bin** 을 입력합니다.
 * **압축 풀기** 필드 아래에 있는 확인란의 선택을 취소합니다.
-* **확인**을 선택합니다.
-
-![.NET Spark 설치](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
+* **확인** 을 선택합니다.
 
 ### <a name="6-install-winutils-windows-only"></a>6. WinUtils 설치(Windows에만 해당)
 
-.NET for Apache Spark를 사용하려면 Apache Spark와 함께 WinUtils를 설치해야 합니다. [winutils.exe를 다운로드](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)합니다. 그런 다음, WinUtils를 **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**에 복사합니다.
+.NET for Apache Spark를 사용하려면 Apache Spark와 함께 WinUtils를 설치해야 합니다. [winutils.exe를 다운로드](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)합니다. 그런 다음, WinUtils를 **C:\bin\spark-3.0.1-bin-hadoop2.7\bin** 에 복사합니다.
 
 > [!NOTE]
 > 다른 Hadoop 버전을 사용 중인 경우(Spark 설치 폴더 이름 끝에 주석으로 처리되어 있음) 해당 Hadoop 버전과 호환되는 [WinUtils 버전을 선택](https://github.com/steveloughran/winutils)합니다.
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. DOTNET_WORKER_DIR 설정 및 종속성 확인
 
-다음 명령 중 하나를 실행하여 .NET 앱에서 .NET for Apache Spark를 찾는 데 사용하는 `DOTNET_WORKER_DIR` 환경 변수를 설정합니다. `<PATH-DOTNET_WORKER_DIR>`을 `Microsoft.Spark.Worker`를 다운로드하여 압축을 푼 디렉터리로 바꿉니다. Windows에서는 관리자 모드에서 명령 프롬프트를 실행해야 합니다.
+다음 명령 중 하나를 실행하여 .NET 앱에서 .NET for Apache Spark 작업자 바이너리를 찾는 데 사용하는 `DOTNET_WORKER_DIR` 환경 변수를 설정합니다. `<PATH-DOTNET_WORKER_DIR>`을 `Microsoft.Spark.Worker`를 다운로드하여 압축을 푼 디렉터리로 바꿉니다. Windows에서는 관리자 모드에서 명령 프롬프트를 실행해야 합니다.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -155,7 +153,7 @@ dotnet new console -o MySparkApp
 cd MySparkApp
 ```
 
-`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *MySparkApp*이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd MySparkApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
+`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 자동으로 만듭니다. `-o` 매개 변수는 앱이 저장되는 *MySparkApp* 이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd MySparkApp` 명령은 디렉터리를 방금 만든 앱 디렉터리로 변경합니다.
 
 ### <a name="2-install-nuget-package"></a>2. NuGet 패키지 설치
 
@@ -170,7 +168,7 @@ dotnet add package Microsoft.Spark
 
 ### <a name="3-write-your-app"></a>3. 앱 작성
 
-Visual Studio Code 또는 텍스트 편집기에서 *Program.cs*를 열고 모든 코드를 다음으로 바꿉니다.
+Visual Studio Code 또는 텍스트 편집기에서 *Program.cs* 를 열고 모든 코드를 다음으로 바꿉니다.
 
 ```csharp
 using Microsoft.Spark.Sql;
@@ -216,7 +214,7 @@ namespace MySparkApp
 
 ### <a name="4-create-data-file"></a>4. 데이터 파일 만들기
 
-앱은 텍스트 줄이 포함된 파일을 처리합니다. *MySparkApp* 디렉터리에 다음 텍스트를 포함하는 *input.txt*라는 파일을 만듭니다.
+앱은 텍스트 줄이 포함된 파일을 처리합니다. *MySparkApp* 디렉터리에 다음 텍스트를 포함하는 *input.txt* 라는 파일을 만듭니다.
 
 ```text
 Hello World
@@ -242,7 +240,7 @@ dotnet build
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

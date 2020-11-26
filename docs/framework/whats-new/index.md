@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704801"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -1585,9 +1585,9 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     라이브러리에 의해 노출되는 공식 계약이므로 스위치에 대해 일관된 형식을 사용하는 것이 좋습니다. 다음은 두 가지 명확한 형식입니다.
 
-    - *Switch*. *namespace*. *switchname*
+    - *Switch*.*namespace*.*switchname*
 
-    - *Switch*. *library*. *switchname*
+    - *Switch*.*library*.*switchname*
 
   - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
@@ -1623,7 +1623,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
   - **HDPI 기능 향상**
 
-    이제 WPF의 HDPI 지원이 .NET Framework 4.6에서 더욱 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 .NET Framework 4.6에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인할 수 있습니다.
+    이제 WPF의 HDPI 지원이 .NET Framework 4.6에서 더욱 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET Framework 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 .NET Framework 4.6에서 실행되는 애플리케이션은 app.config 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인할 수 있습니다.
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1의 새로운 기능
 
-**2014년 4월 업데이트** :
+**2014년 4월 업데이트**:
 
 - [Visual Studio 2013 업데이트 2](https://go.microsoft.com/fwlink/p/?LinkId=393658)에는 이식 가능한 클래스 라이브러리 템플릿에 대한 업데이트가 포함되어 다음과 같은 시나리오가 지원됩니다.
 
@@ -1967,7 +1967,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 ### <a name="parallel-computing"></a>병렬 컴퓨팅
 
-.NET Framework 4.5는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET 4.5의 새로운 병렬 처리 기능](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)을 참조하세요.
+.NET Framework 4.5는 병렬 컴퓨팅을 위한 몇 가지 새로운 기능과 향상된 기능을 제공합니다. 여기에는 성능 향상, 제어 강화, 비동기 프로그래밍에 대한 지원 개선, 새 데이터 흐름 라이브러리 및 병렬 디버깅 및 성능 분석에 대한 지원 개선이 포함됩니다. .NET 블로그에서 병렬 프로그래밍에 대한 항목인 [.NET Framework 4.5의 새로운 병렬 처리 기능](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/)을 참조하세요.
 
 <a name="web"></a>
 

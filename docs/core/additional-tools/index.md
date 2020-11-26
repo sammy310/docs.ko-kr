@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557934"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699003"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
@@ -46,3 +46,7 @@ WCF [dotnet-svcutil 도구](dotnet-svcutil-guide.md)는 WSDL 파일 또는 네�
 ## <a name="xml-serializer-generator"></a>XML Serializer Generator
 
 .NET Framework용 [Xml Serializer Generator(sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)와 마찬가지로, [Microsoft.XmlSerializer.Generator NuGet 패키지](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)는 .NET Core 및 .NET Standard 라이브러리용 솔루션입니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 해당 형식의 개체를 직렬화하거나 역직렬화할 때 XML serialization의 시작 성능을 향상시키기 위해 어셈블리에 포함된 형식의 XML serialization 어셈블리를 만듭니다.
+
+## <a name="generating-self-signed-certificates"></a>자체 서명된 인증서 생성
+
+[dotnet dev-certs](self-signed-certificates-guide.md)를 사용하여 개발 및 테스트 시나리오를 위한 자체 서명된 인증서를 만들 수 있습니다.

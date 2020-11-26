@@ -1,24 +1,24 @@
 ---
-title: dotnet-symbol - .NET Core
-description: dotnet-symbol 명령줄 도구 설치 및 사용
-ms.date: 08/26/2020
-ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+title: dotnet-symbol 진단 도구 - .NET CLI
+description: .NET 덤프 및 미니덤프를 디버그하는 데 필요한 파일을 다운로드하기 위해 dotnet-symbol CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679190"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825340"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>기호 다운로더(dotnet-symbol)
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="install-dotnet-symbol"></a>dotnet-symbol 설치
+## <a name="install"></a>설치
 
-`dotnet-symbol` [NuGet 패키지](https://www.nuget.org/packages/dotnet-symbol)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+`dotnet-trace` [NuGet 패키지](https://www.nuget.org/packages/dotnet-trace)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
 
 ```dotnetcli
-dotnet tool install -g dotnet-symbol
+dotnet tool install --global dotnet-symbol
 ```
 
 ## <a name="synopsis"></a>개요

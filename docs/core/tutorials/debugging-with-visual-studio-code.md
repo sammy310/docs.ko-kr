@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
-description: Visual Studio Code를 사용하여 .NET Core 콘솔 앱을 디버그하는 방법을 알아봅니다.
+title: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그
+description: Visual Studio Code를 사용하여 .NET 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 05/26/2020
-ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118301"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916231"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그
 
-이 자습서에서는 .NET Core 앱 작업을 하는 데 Visual Studio Code에서 사용할 수 있는 디버깅 도구를 소개합니다.
+이 자습서에서는 .NET 앱 작업을 하는 데 Visual Studio Code에서 사용할 수 있는 디버깅 도구를 소개합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱을 사용합니다.
+- 이 자습서에서는 [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 콘솔 앱을 사용합니다.
 
 ## <a name="use-debug-build-configuration"></a>디버그 빌드 구성 사용
 
@@ -27,7 +27,7 @@ ms.locfileid: "89118301"
 
 1. Visual Studio Code를 시작합니다.
 
-1. [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 프로젝트의 폴더를 엽니다.
+1. [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 만들기](with-visual-studio-code.md)에서 만든 프로젝트의 폴더를 엽니다.
 
 ## <a name="set-a-breakpoint"></a>중단점 설정
 
@@ -35,7 +35,7 @@ ms.locfileid: "89118301"
 
 1. *Program.cs* 파일을 엽니다.
 
-1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 ‘중단점’을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. <kbd>F9</kbd> 키를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행** > **중단점 설정/해제**를 선택해도 중단점을 설정할 수 있습니다.
+1. 이름, 날짜, 시간을 표시하는 줄에서 코드 창 왼쪽 여백을 클릭하여 ‘중단점’을 설정합니다. 왼쪽 여백은 줄 번호의 왼쪽에 있습니다. <kbd>F9</kbd> 키를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행** > **중단점 설정/해제** 를 선택해도 중단점을 설정할 수 있습니다.
 
    Visual Studio Code에서는 왼쪽 여백에 빨간 점을 표시하여 중단점이 설정된 줄을 표시합니다.
 
@@ -43,9 +43,9 @@ ms.locfileid: "89118301"
 
 ## <a name="set-up-for-terminal-input"></a>터미널 입력에 대해 설정
 
-중단점은 `Console.ReadLine` 메서드 호출 뒤에 있습니다. **디버그 콘솔**은 실행 중인 프로그램에 대한 터미널 입력을 허용하지 않습니다. 디버깅 중에 터미널 입력을 처리하기 위해 통합 터미널(Visual Studio Code 창 중 하나) 또는 외부 터미널을 사용할 수 있습니다. 이 자습서에서는 통합 터미널을 사용합니다.
+중단점은 `Console.ReadLine` 메서드 호출 뒤에 있습니다. **디버그 콘솔** 은 실행 중인 프로그램에 대한 터미널 입력을 허용하지 않습니다. 디버깅 중에 터미널 입력을 처리하기 위해 통합 터미널(Visual Studio Code 창 중 하나) 또는 외부 터미널을 사용할 수 있습니다. 이 자습서에서는 통합 터미널을 사용합니다.
 
-1. *.vscode/launch.json*을 엽니다.
+1. *.vscode/launch.json* 을 엽니다.
 
 1. `console` 설정을 `integratedTerminal`로 변경합니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "89118301"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code에서 디버그 탭 열기":::
 
-1. **.NET Core 시작(콘솔)** 옆에 있는 창 맨 위의 녹색 화살표를 선택합니다. <kbd>F5</kbd> 키를 누르거나 메뉴에서 **실행** > **디버깅 시작**을 선택해도 디버깅 모드에서 프로그램을 시작할 수 있습니다.
+1. **.NET Core 시작(콘솔)** 옆에 있는 창 맨 위의 녹색 화살표를 선택합니다. <kbd>F5</kbd> 키를 누르거나 메뉴에서 **실행** > **디버깅 시작** 을 선택해도 디버깅 모드에서 프로그램을 시작할 수 있습니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="디버깅 시작":::
 
@@ -103,7 +103,7 @@ ms.locfileid: "89118301"
 
 1. **터미널** 탭을 다시 선택합니다.
 
-   콘솔 창에 표시되는 값은 **디버그 콘솔**에서 변경한 값과 일치합니다.
+   콘솔 창에 표시되는 값은 **디버그 콘솔** 에서 변경한 값과 일치합니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/changed-variable-values.png" alt-text="입력한 값을 보여 주는 터미널":::
 
@@ -111,9 +111,9 @@ ms.locfileid: "89118301"
 
 ## <a name="set-a-conditional-breakpoint"></a>조건부 중단점 설정
 
-프로그램은 사용자가 입력하는 문자열을 표시합니다. 사용자가 아무 값도 입력하지 않으면 어떻게 되나요? *조건부 중단점*이라는 유용한 디버깅 기능을 사용하여 이를 테스트할 수 있습니다.
+프로그램은 사용자가 입력하는 문자열을 표시합니다. 사용자가 아무 값도 입력하지 않으면 어떻게 되나요? *조건부 중단점* 이라는 유용한 디버깅 기능을 사용하여 이를 테스트할 수 있습니다.
 
-1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다(macOS에서는 <kbd>Ctrl</kbd>을 누른 채로 클릭). 상황에 맞는 메뉴에서 **중단점 편집**을 선택하면 조건식을 입력할 수 있는 대화 상자가 열립니다.
+1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다(macOS에서는 <kbd>Ctrl</kbd>을 누른 채로 클릭). 상황에 맞는 메뉴에서 **중단점 편집** 을 선택하면 조건식을 입력할 수 있는 대화 상자가 열립니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-context-menu.png" alt-text="중단점 상황에 맞는 메뉴":::
 
@@ -149,9 +149,9 @@ ms.locfileid: "89118301"
 
 1. **터미널** 탭을 선택하고 아무 키나 눌러 프로그램을 종료하고 디버깅을 중지합니다.
 
-1. 코드 창 왼쪽 여백에 있는 점을 클릭하여 중단점을 지웁니다. <kbd>F9</kbd>를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행 > 중단점 설정/해제**를 선택해도 중단점을 지울 수 있습니다.
+1. 코드 창 왼쪽 여백에 있는 점을 클릭하여 중단점을 지웁니다. <kbd>F9</kbd>를 누르거나 코드 줄이 선택된 상태로 메뉴에서 **실행 > 중단점 설정/해제** 를 선택해도 중단점을 지울 수 있습니다.
 
-1. 중단점 조건이 손실된다는 경고가 표시되면 **중단점 제거**를 선택합니다.
+1. 중단점 조건이 손실된다는 경고가 표시되면 **중단점 제거** 를 선택합니다.
 
 ## <a name="step-through-a-program"></a>단계별 프로그램 실행
 
@@ -165,17 +165,17 @@ Visual Studio Code에서 프로그램을 한 줄씩 단계별로 실행하고 �
 
    이 시점에서 **변수** 창에는 `args` 배열이 비어 있다고 표시되고, `name` 및 `date`에는 기본값이 있습니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="한 단계씩 코드 실행 단추":::
 
    Visual Studio Code가 다음 줄을 강조 표시합니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    Visual Studio Code가 이름 프롬프트에 대해 `Console.WriteLine`을 실행하고 다음에 실행할 줄을 강조 표시합니다. 다음 줄은 `name`의 `Console.ReadLine`입니다. **변수** 창은 변경되지 않으며, **터미널** 탭에는 "What is your name?" 프롬프트가 표시됩니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    Visual Studio가 `name` 변수 할당을 강조 표시합니다. **변수** 창에 `name`이 여전히 `null`이라고 표시됩니다.
 
@@ -183,19 +183,19 @@ Visual Studio Code에서 프로그램을 한 줄씩 단계별로 실행하고 �
 
    문자열을 입력하는 동안 **터미널** 탭에 문자열이 표시되지 않을 수 있지만 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드는 입력을 캡처합니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    Visual Studio Code가 `date` 변수 할당을 강조 표시합니다. **변수** 창에는 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드 호출에 의해 반환된 값이 표시됩니다. **터미널** 탭에는 프롬프트에 입력한 문자열이 표시됩니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    **변수** 창에는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성에 따라 할당된 이후의 `date` 변수 값이 표시됩니다.
 
-1. **실행** > **한 단계씩 코드 실행**을 선택하거나 <kbd>F11</kbd>을 누릅니다.
+1. **실행** > **한 단계씩 코드 실행** 을 선택하거나 <kbd>F11</kbd>을 누릅니다.
 
    Visual Studio Code가 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 메서드를 호출합니다. 콘솔 창에는 서식이 지정된 문자열이 표시됩니다.
 
-1. **실행** > **프로시저 나가기**를 선택하거나 <kbd>Shift</kbd>+<kbd>F11</kbd>을 누릅니다.
+1. **실행** > **프로시저 나가기** 를 선택하거나 <kbd>Shift</kbd>+<kbd>F11</kbd>을 누릅니다.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="프로시저 나가기 단추":::
 
@@ -209,7 +209,7 @@ Visual Studio Code에서 프로그램을 한 줄씩 단계별로 실행하고 �
 
 애플리케이션의 디버그 버전을 테스트한 후에는 릴리스 버전을 컴파일하고 테스트해야 합니다. 릴리스 버전에는 애플리케이션의 동작에 영향을 줄 수 있는 컴파일러 최적화가 통합됩니다. 예를 들어 성능 향상을 위해 설계된 컴파일러 최적화는 다중 스레드 애플리케이션에서 경합 상태를 만들 수 있습니다.
 
-콘솔 애플리케이션의 릴리스 버전을 빌드하고 테스트하려면 **터미널**을 열고 다음 명령을 실행합니다.
+콘솔 애플리케이션의 릴리스 버전을 빌드하고 테스트하려면 **터미널** 을 열고 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet run --configuration Release
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 이 자습서에서는 Visual Studio Code 디버깅 도구를 사용했습니다. 다음 자습서에서는 앱의 배포 가능 버전을 게시합니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-code.md)
+> [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 게시](publishing-with-visual-studio-code.md)

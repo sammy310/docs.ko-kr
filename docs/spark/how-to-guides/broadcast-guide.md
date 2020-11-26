@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224001"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687755"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Apache Spark용으로 .NET에서 브로드캐스트 변수 사용
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>FAQ
+
+**브로드캐스트 변수가 .NET Interactive에서 작동하지 않는 이유는 무엇인가요?**  
+브로드캐스트 변수가 대화형 시나리오에서 작동하지 않는 이유는 셀에 정의된 각 개체를 해당 셀 제출 클래스와 함께 추가하는 .NET Interactive의 디자인에 따라 개체가 직렬화 가능으로 표시되지 않으므로 앞서 확인한 것과 동일한 예외가 발생하여 실패하기 때문입니다. 자세한 내용은 [이 문서](dotnet-interactive-udf-issue.md)를 확인하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

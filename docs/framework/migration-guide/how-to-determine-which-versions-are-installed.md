@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: fe28a4bf4a5432d6e33b7ad3238c1d7c0d4e7a84
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440147"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831366"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -60,7 +60,7 @@ ms.locfileid: "94440147"
 | .NET Framework 4.7     | Windows 10 Creators Update: 460798<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 460805 |
 | .NET Framework 4.7.1   | Windows 10 Fall Creators Update 및 Windows Server, 버전 1709: 461308<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 461310 |
 | .NET Framework 4.7.2   | Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803: 461808<br/>Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803 이외의 모든 Windows 운영 체제: 461814 |
-| .NET Framework 4.8     | Windows 10 2019년 5월 업데이트 및 Windows 10 2019년 11월 업데이트: 528040<br/>Windows 10 2020년 5월 업데이트: 528372<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049 |
+| .NET Framework 4.8     | Windows 10 2019년 5월 업데이트 및 Windows 10 2019년 11월 업데이트: 528040<br/>Windows 10 2020년 5월 업데이트 및 Windows 10 2020년 10월 업데이트: 528372<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049 |
 
 ### <a name="minimum-version"></a>최소 버전
 

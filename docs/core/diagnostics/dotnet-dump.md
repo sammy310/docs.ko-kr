@@ -1,28 +1,42 @@
 ---
-title: dotnet-dump - .NET Core
-description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: dotnet-dump 진단 도구 - .NET CLI
+description: 네이티브 디버거 없이 Windows 및 Linux 덤프를 수집하고 분석하기 위해 dotnet-dump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822206"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(dotnet-dump)
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
 
 > [!NOTE]
-> `dotnet-dump`는 macOS에서 지원되지 않습니다.
+> macOS용 `dotnet-dump`는 .NET 5.0 이상 버전에서만 지원됩니다.
 
-## <a name="install-dotnet-dump"></a>dotnet-dump 설치
+## <a name="install"></a>설치
 
-`dotnet-dump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-dump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+다음 두 가지 방법으로 `dotnet-dump`를 다운로드하고 설치할 수 있습니다.
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **dotnet 전역 도구:**
+
+  `dotnet-dump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-dump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **직접 다운로드:**
+
+  플랫폼에 맞는 도구 실행 파일을 다운로드합니다.
+
+  | OS  | 플랫폼 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>개요
 
@@ -58,7 +72,7 @@ dotnet-dump [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>옵션
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  메모리 덤프를 수집할 프로세스 ID 번호를 지정합니다.
+  덤프를 수집할 프로세스 ID 번호를 지정합니다.
+
+- **`-n|--name <name>`**
+
+  덤프를 수집할 프로세스의 이름을 지정합니다.
 
 - **`--type <Full|Heap|Mini>`**
 
@@ -87,8 +105,8 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   지정하지 않으면 다음과 같이 설정됩니다.
 
-  - Windows의 경우 기본적으로 *.\dump_YYYYMMDD_HHMMSS.dmp*로 설정됩니다.
-  - Linux의 경우 기본적으로 *./core_YYYYMMDD_HHMMSS*로 설정됩니다.
+  - Windows의 경우 기본적으로 *.\dump_YYYYMMDD_HHMMSS.dmp* 로 설정됩니다.
+  - Linux의 경우 기본적으로 *./core_YYYYMMDD_HHMMSS* 로 설정됩니다.
 
   YYYYMMDD는 년/월/일이고, HHMMSS는 시간/분/초입니다.
 

@@ -1,25 +1,39 @@
 ---
-title: dotnet-gcdump - .NET Core
-description: dotnet-gcdump 명령줄 도구 설치 및 사용
-ms.date: 07/26/2020
-ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+title: dotnet-gcdump 진단 도구 - .NET CLI
+description: .NET EventPipe를 사용하여 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집하기 위해 dotnet-gcdump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656653"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826042"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>힙 분석 도구(dotnet-gcdump)
 
 **이 문서의 적용 대상:** ✔️ .NET Core 3.1 SDK 이상 버전
 
-## <a name="install-dotnet-gcdump"></a>dotnet-gcdump 설치
+## <a name="install"></a>설치
 
-`dotnet-gcdump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-gcdump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+다음 두 가지 방법으로 `dotnet-gcdump`를 다운로드하고 설치할 수 있습니다.
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **dotnet 전역 도구:**
+
+  `dotnet-gcdump` [NuGet 패키지](https://www.nuget.org/packages/dotnet-gcdump)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **직접 다운로드:**
+
+  플랫폼에 맞는 도구 실행 파일을 다운로드합니다.
+
+  | OS  | 플랫폼 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>개요
 
@@ -29,7 +43,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>설명
 
-`dotnet-gcdump` 전역 도구를 통해 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집할 수 있습니다. 이 도구는 Windows의 ETW에 해당하는 플랫폼 간 EventPipe 기술을 사용합니다. GC 덤프는 대상 프로세스에서 GC를 트리거하고 특수 이벤트를 켠 후 이벤트 스트림에서 개체 루트의 그래프를 다시 생성하여 만듭니다. 이 프로세스를 통해 프로세스가 실행되는 동안 최소한의 오버헤드로 GC 덤프를 수집할 수 있습니다. 해당 덤프는 다음을 비롯한 여러 시나리오에서 유용합니다.
+`dotnet-gcdump` 전역 도구는 [EventPipe](./eventpipe.md)를 사용하여 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집합니다. GC 덤프는 대상 프로세스에서 GC를 트리거하고 특수 이벤트를 켠 후 이벤트 스트림에서 개체 루트의 그래프를 다시 생성하여 만듭니다. 이 프로세스를 통해 프로세스가 실행되는 동안 최소한의 오버헤드로 GC 덤프를 수집할 수 있습니다. 해당 덤프는 다음을 비롯한 여러 시나리오에서 유용합니다.
 
 - 여러 시점에 힙의 개체 수 비교
 - 개체 루트 분석(“이 형식에 대한 참조를 여전히 포함하는 것은 무엇인가요?” 등의 질문에 답변)
@@ -73,7 +87,7 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 
 - **`-o|--output <gcdump-file-path>`**
 
-  수집된 GC 덤프를 작성해야 하는 경로입니다. 기본값은 *.\\YYYYMMDD\_HHMMSS\_\<pid>.gcdump*입니다.
+  수집된 GC 덤프를 작성해야 하는 경로입니다. 기본값은 *.\\YYYYMMDD\_HHMMSS\_\<pid>.gcdump* 입니다.
 
 - **`-v|--verbose`**
 

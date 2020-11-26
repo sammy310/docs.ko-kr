@@ -1,40 +1,40 @@
 ---
-title: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
-description: Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 만들기
+description: Visual Studio Code와 .NET CLI를 사용하여 .NET 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811928"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915871"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 만들기
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 만들기
 
-이 자습서에서는 Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다. 프로젝트 만들기, 컴파일, 실행과 같은 프로젝트 작업은 .NET Core CLI를 사용하여 수행합니다. 원할 경우, 다른 코드 편집기를 사용하여 이 자습서를 따르고 터미널에서 명령을 실행할 수 있습니다.
+이 자습서에서는 Visual Studio Code와 .NET CLI를 사용하여 .NET 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다. 프로젝트 만들기, 컴파일, 실행과 같은 프로젝트 작업은 .NET CLI를 사용하여 수행합니다. 원할 경우, 다른 코드 편집기를 사용하여 이 자습서를 따르고 터미널에서 명령을 실행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 1. [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)이 설치된 [Visual Studio Code](https://code.visualstudio.com/). Visual Studio Code에 확장을 설치하는 방법에 대한 자세한 내용은 [VS Code 확장 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)를 참조하세요.
-2. [.NET Core 3.1 SDK 이상](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 이상](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>앱 만들기
 
-"HelloWorld"라는 .NET Core 콘솔 앱 프로젝트를 만듭니다.
+“HelloWorld”라는 .NET 콘솔 앱 프로젝트를 만듭니다.
 
 1. Visual Studio Code를 시작합니다.
 
 1. 주 메뉴에서 **파일** > **폴더 열기**(macOS에서는 **파일** > **열기...** )를 선택합니다.
 
-1. **폴더 열기** 대화 상자에서*HelloWorld* 폴더를 만들고 **폴더 선택**(macOS에서는 **열기**)을 클릭합니다.
+1. **폴더 열기** 대화 상자에서 *HelloWorld* 폴더를 만들고 **폴더 선택**(macOS에서는 **열기**)을 클릭합니다.
 
    기본적으로 폴더 이름은 프로젝트 이름 및 네임스페이스 이름이 됩니다. 프로젝트 네임스페이스가 `HelloWorld`라고 가정하는 코드를 자습서의 뒷부분에 추가합니다.
 
-1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
+1. 주 메뉴에서 **보기** > **터미널** 을 선택하여 Visual Studio Code에서 **터미널** 을 엽니다.
 
-   *HelloWorld* 폴더에서 명령 프롬프트와 함께 **터미널**이 열립니다.
+   *HelloWorld* 폴더에서 명령 프롬프트와 함께 **터미널** 이 열립니다.
 
-1. **터미널**에서 다음 명령을 입력합니다.
+1. **터미널** 에서 다음 명령을 입력합니다.
 
    ```dotnetcli
    dotnet new console
@@ -63,7 +63,7 @@ namespace HelloWorld
 
 ## <a name="run-the-app"></a>앱 실행
 
-**터미널**에서 다음 명령을 실행합니다.
+**터미널** 에서 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet run
@@ -77,17 +77,17 @@ dotnet run
 
 사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다.
 
-1. *Program.cs*를 클릭하여 엽니다.
+1. *Program.cs* 를 클릭하여 엽니다.
 
    Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](https://www.omnisharp.net/)에서 편집기가 로드됩니다.
 
    ![Program.cs 파일 열기](media/with-visual-studio-code/open-program-cs.png)
 
-1. Visual Studio Code가 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지를 표시하면 **예**를 선택합니다.
+1. Visual Studio Code가 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지를 표시하면 **예** 를 선택합니다.
 
    ![누락된 자산에 대한 프롬프트](media/with-visual-studio-code/missing-assets.png)
 
-1. *Program.cs*에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
+1. *Program.cs* 에서 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
@@ -120,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 .NET Core 콘솔 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
+이 자습서에서는 .NET 콘솔 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)
+> [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)

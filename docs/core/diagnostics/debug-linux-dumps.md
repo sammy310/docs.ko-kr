@@ -2,12 +2,12 @@
 title: Linux 덤프 디버그
 description: 이 문서에서는 Linux 환경에서 덤프를 수집 및 분석하는 방법을 알아봅니다.
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598304"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099148"
 ---
 # <a name="debug-linux-dumps"></a>Linux 덤프 디버그
 
@@ -29,7 +29,7 @@ Linux에서 덤프를 수집하는 두 가지 권장 방법은 [`dotnet-dump`](d
 
 - **`<input-filename>`**
 
-  변환할 입력 추적 파일입니다. 기본값은 *trace.nettrace*입니다.
+  변환할 입력 추적 파일입니다. 기본값은 *trace.nettrace* 입니다.
 
 ### <a name="options"></a>옵션
 

@@ -2,12 +2,12 @@
 title: .NET Core의 EventCounters
 description: 이 문서에서는 EventCounters의 정의, 구현 방법 및 사용 방법에 대해 알아봅니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955319"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687644"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core의 EventCounters
 
@@ -17,7 +17,7 @@ EventCounters는 경량, 플랫폼 간 및 근 실시간 성능 메트릭 컬렉
 
 .Net Core 런타임 및 일부 .NET 라이브러리는 .NET Core 3.0부터 EventCounters를 사용하여 기본 진단 정보를 게시합니다. .NET 런타임에서 제공하는 EventCounters 외에도 고유한 EventCounters를 구현하도록 선택할 수 있습니다. EventCounters를 사용하여 다양한 메트릭을 추적할 수 있습니다.
 
-EventCounters는 <xref:System.Diagnostics.Tracing.EventSource>의 일부로 사용되며, 주기적으로 수신기 도구에 자동으로 푸시됩니다. <xref:System.Diagnostics.Tracing.EventSource>의 다른 모든 이벤트와 마찬가지로 <xref:System.Diagnostics.Tracing.EventListener> 및 EventPipe를 통해 in-proc 및 out-of-proc 둘 다에서 사용할 수 있습니다. 이 문서에서는 EventCounters의 교차 플랫폼 기능을 중점적으로 설명하며, PerfView 및 ETW(Windows용 이벤트 추적)를 둘 다 EventCounters와 함께 사용할 수 있지만 여기서는 의도적으로 다루지 않습니다.
+EventCounters는 <xref:System.Diagnostics.Tracing.EventSource>의 일부로 사용되며, 주기적으로 수신기 도구에 자동으로 푸시됩니다. <xref:System.Diagnostics.Tracing.EventSource>의 다른 모든 이벤트와 마찬가지로 <xref:System.Diagnostics.Tracing.EventListener> 및 [EventPipe](./eventpipe.md)를 통해 in-proc 및 out-of-proc에서 사용할 수 있습니다. 이 문서에서는 EventCounters의 교차 플랫폼 기능을 중점적으로 설명하며, PerfView 및 ETW(Windows용 이벤트 추적)를 둘 다 EventCounters와 함께 사용할 수 있지만 여기서는 의도적으로 다루지 않습니다.
 
 ![EventCounters in-proc 및 out-of-proc 다이어그램 이미지](media/event-counters.svg)
 

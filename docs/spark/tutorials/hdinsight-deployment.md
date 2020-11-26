@@ -4,12 +4,12 @@ description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하�
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223363"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687912"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>자습서: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
@@ -90,14 +90,14 @@ ms.locfileid: "92223363"
 
    ```dotnetcli
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   dotnet publish -c Release -f netcoreapp3.1 -r win-x64
    ```
 
    **Linux:**
 
    ```bash
    cd mySparkApp
-   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.1 -r ubuntu.16.04-x64
    ```
 
 2. 다음 작업을 수행하여 게시된 앱 파일을 압축하면 HDInsight 클러스터에 쉽게 업로드할 수 있습니다. 예를 들어 1단계의 결과로 생성된 게시 폴더의 콘텐츠를 *publish.zip* 으로 압축합니다. 모든 어셈블리는 ZIP 파일의 첫 번째 계층에 있어야 하며 중간 폴더 계층은 없어야 합니다. 즉, *publish.zip* 의 압축을 풀면 모든 어셈블리가 현재 작업 디렉터리로 추출됩니다.
@@ -119,12 +119,12 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
 * Microsoft.Spark.Worker
 * install-worker.sh
 * publish.zip
-* microsoft-spark-2.3.x-0.3.0.jar
-* input.txt.
+* microsoft-spark-2-4_2.11-1.0.0.jar
+* input.txt
 
 1. Azure Storage Explorer를 열고 왼쪽 메뉴에서 해당 스토리지 계정으로 이동합니다. 해당 스토리지 계정의 **Blob 컨테이너** 에서 클러스터의 Blob 컨테이너로 드릴다운합니다.
 
-2. *Microsoft.Spark.Worker* 를 통해 Apache Spark는 사용자가 작성했을 수 있는 UDF(사용자 정의 함수) 등의 앱을 실행합니다. [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz)를 다운로드합니다. Azure Storage Explorer에서 **업로드** 를 선택하여 작업자를 업로드합니다.
+2. *Microsoft.Spark.Worker* 를 통해 Apache Spark는 사용자가 작성했을 수 있는 UDF(사용자 정의 함수) 등의 앱을 실행합니다. [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)를 다운로드합니다. Azure Storage Explorer에서 **업로드** 를 선택하여 작업자를 업로드합니다.
 
    ![Azure Storage Explorer에 파일 업로드](./media/hdinsight-deployment/upload-files-to-storage.png)
 
@@ -132,11 +132,11 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
 
    로컬 컴퓨터에 **install-worker.sh** 라는 새 파일을 만들고 GitHub에 있는 [install-worker.sh 콘텐츠](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)를 붙여넣습니다. Blob 컨테이너에 *install-worker.sh* 를 업로드합니다.
 
-4. 클러스터에 앱의 게시된 파일이 포함된 publish.zip 파일이 필요합니다. 게시된 폴더인 **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** 로 이동하여 **publish.zip** 을 찾습니다. Blob 컨테이너에 *publish.zip* 을 업로드합니다.
+4. 클러스터에는 앱의 게시된 파일이 포함된 *publish.zip* 파일이 필요합니다. 게시된 폴더 **mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64** 로 이동하여 **publish.zip** 을 찾습니다. Blob 컨테이너에 *publish.zip* 을 업로드합니다.
 
-5. 클러스터에 jar 파일로 패키지된 애플리케이션 코드가 필요합니다. 게시된 폴더인 **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** 로 이동하여 **microsoft-spark-2.3.x-0.3.0.jar** 을 찾습니다. Blob 컨테이너에 jar 파일을 업로드합니다.
+5. 클러스터에는 jar로 패키지된 애플리케이션 코드가 필요합니다. 이 코드는 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) nuget의 일부로 포함되고 앱의 빌드 출력 디렉터리에 배치됩니다. 게시된 폴더 **mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64** 로 이동하여 **microsoft-spark-2-4_2.11-1.0.0.jar** 을 찾습니다. Blob 컨테이너에 jar 파일을 업로드합니다.
 
-   여러 개의 .jar 파일이 있을 수 있습니다(Spark 버전 2.3.x 및 2.4.x의 경우). 클러스터를 만드는 동안 선택한 Spark 버전과 일치하는 .jar 파일을 선택해야 합니다. 예를 들어 클러스터를 만드는 동안 Spark 2.3.2를 선택한 경우 *microsoft-spark-2.3.x-0.3.0.jar* 을 선택합니다.
+   Spark 2.3.x, 2.4.x, 3.0.x 버전에 따라 여러 개의 .jar 파일이 있을 수 있습니다. 클러스터를 만드는 동안 선택한 Spark 버전과 일치하는 .jar 파일을 선택해야 합니다. 예를 들어 클러스터를 만드는 동안 Spark 2.4를 선택한 경우 *microsoft-spark-2-4_2.11-1.0.0.jar* 을 선택합니다.
 
 6. 클러스터에 앱에 대한 입력이 필요합니다. **mySparkApp** 디렉터리로 이동하여 **input.txt** 를 찾습니다. Blob 컨테이너의 **user/sshuser** 디렉터리에 입력 파일을 업로드합니다. ssh를 통해 클러스터에 연결하며, 클러스터는 이 폴더에서 해당 입력을 찾습니다. *input.txt* 파일은 특정 디렉터리로 업로드되는 유일한 파일입니다.
 
@@ -154,7 +154,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    | 이름 | 작업자 설치|
    | Bash 스크립트 URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> 이 URI를 확인하려면 Azure Storage Explorer에서 install-worker.sh를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. |
    | 노드 유형| 작업자|
-   | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
+   | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz </br> /usr/local/bin
 
 3. **만들기** 를 선택하여 스크립트를 제출합니다.
 
@@ -170,7 +170,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2-4_2.11-1.0.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
@@ -187,4 +187,5 @@ HDInsight는 Azure Storage에 데이터를 저장하므로, 사용하지 않을 
 이 자습서에서는 Azure HDInsight에 .NET for Apache Spark 애플리케이션을 배포했습니다. HDInsight에 대해 자세히 알아보려면 Azure HDInsight 설명서를 참조하세요.
 
 > [!div class="nextstepaction"]
+> [Azure HDInsight에서 원격으로 작업 제출](../how-to-guides/hdinsight-deploy-methods.md)
 > [Azure HDInsight 설명서](/azure/hdinsight/)

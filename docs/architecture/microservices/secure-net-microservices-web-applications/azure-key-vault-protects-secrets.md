@@ -3,18 +3,18 @@ title: Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - Azure Key Vault는 관리자가 완전히 제어하는 애플리케이션 비밀을 처리하는 뛰어난 방법입니다. 개발자가 처리하지 않고도 관리자가 개발 값을 할당하고 철회할 수도 있습니다.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: d2683b215633df719dc1ecf4d1710665865c9df2
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: d2d3690c0c8787ace6bcdfacbdb612f9ef957b98
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679112"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916244"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 
 환경 변수로 저장되거나 비밀 관리자 도구로 저장된 비밀은 여전히 로컬로 저장되고 컴퓨터에서 암호화되지 않습니다. 비밀을 저장하기 위한 더 안전한 옵션은 키 및 비밀을 저장하기 위해 안전한 중앙 위치를 제공하는 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)입니다.
 
-**Microsoft.Extensions.Configuration.AzureKeyVault** 패키지를 통해 ASP.NET Core 애플리케이션에서 Azure Key Vault의 구성 정보를 읽을 수 있습니다. Azure Key Vault에서 암호 사용을 시작하려면 다음 단계를 수행합니다.
+**Azure.Extensions.AspNetCore.Configuration.Secrets** 패키지를 통해 ASP.NET Core 애플리케이션에서 Azure Key Vault의 구성 정보를 읽을 수 있습니다. Azure Key Vault에서 암호 사용을 시작하려면 다음 단계를 수행합니다.
 
 1. 애플리케이션을 Azure AD 애플리케이션으로 등록합니다. (키 자격 증명 모음에 대한 액세스는 Azure AD에 의해 관리됩니다.) Azure 관리 포털을 통해 이 작업을 수행할 수 있습니다.\
 
@@ -27,9 +27,9 @@ ms.locfileid: "90679112"
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 인스턴스를 만들 때 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 확장 메서드를 호출하여 애플리케이션에 키 자격 증명 모음을 구성 소스로 포함합니다. `AddAzureKeyVault`를 호출하려면 이전 단계에서 등록되었으며 키 자격 증명 모음에 대한 액세스 권한이 부여된 애플리케이션 ID가 필요합니다.
+3. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 인스턴스를 만들 때 AzureKeyVaultConfigurationExtensions.AddAzureKeyVault 확장 메서드를 호출하여 애플리케이션에 구성 소스로 키 자격 증명 모음을 포함합니다.
 
-   [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) 패키지에 대한 참조만 포함하여 클라이언트 암호 대신 인증서를 사용하는 `AddAzureKeyVault`의 오버로드를 사용할 수도 있습니다.
+`AddAzureKeyVault`를 호출하려면 이전 단계에서 등록되었으며 키 자격 증명 모음에 대한 액세스 권한이 부여된 애플리케이션 ID가 필요합니다. 또는 Azure CLI 명령 `az login`을 먼저 실행한 후 클라이언트 대신 DefaultAzureCredential을 사용하는 `AddAzureKeyVault`의 오버로드를 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > Azure Key Vault를 마지막 구성 공급자로 등록하는 것이 좋습니다. 이렇게 하면 이전 공급자의 구성 값을 재정의할 수 있습니다.
@@ -37,7 +37,7 @@ ms.locfileid: "90679112"
 ## <a name="additional-resources"></a>추가 자료
 
 - **Azure Key Vault를 사용하여 애플리케이션 비밀 보호** \
-  [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity-keyvault)
 
 - **개발 중 안전한 앱 비밀 스토리지** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)

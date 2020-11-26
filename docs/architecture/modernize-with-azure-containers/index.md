@@ -2,24 +2,20 @@
 title: Modernize Existing .NET Applications With Azure Cloud and Windows Containers(2판)
 description: 이 eBook에서는 기존 애플리케이션을 Azure 클라우드 및 컨테이너로 리프트 앤 시프트하고 현대화하는 방법을 알아봅니다.
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705334"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernize existing .NET applications with Azure cloud and Windows Containers(2판)
 
 ![.NET 애플리케이션 현대화 가이드의 표지 이미지입니다.](./media/index/web-application-guide-cover-image.png)
 
-게시자:  
-Microsoft Press 및 Microsoft DevDiv  
-Microsoft Corporation의 사업부  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+게시자: Microsoft Press 및 Microsoft DevDiv 부서(Microsoft Corporation One Microsoft Way Redmond, Washington 98052-6399)
 
-Copyright © 2020 by Microsoft Corporation  
+Copyright © 2020 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
@@ -37,12 +33,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 > **Cesar de la Torre**, 선임 PM, .NET 제품 팀, Microsoft Corp.
 
 참가자 및 검토자:
-> **Scott Hunter**, 파트너 PM 책임자, Microsoft .NET 팀  
-> **Paul Yuknewicz**, 수석 PM 관리자, Microsoft Visual Studio Tools 팀  
-> **Lisa Guthrie**, 선임 PM, Visual Studio Tools 팀, Microsoft  
-> **Ankit Asthana**, 수석 PM 관리자, Microsoft .NET 팀  
-> **Unai Zorrilla**, 수석 개발자, Plain Concepts  
-> **Javier Valero**, 최고 운영 책임자, Grupo Solutio  
+> **Scott Hunter**, 파트너 책임자 PM, Microsoft의 .NET 팀 **Paul Yuknewicz**, 수석 PM 관리자, Microsoft의 Visual Studio Tools 팀 **Lisa Guthrie**, 선임 PM, Microsoft의 Visual Studio Tools 팀 **Ankit Asthana**, 수석 PM 관리자, Microsoft의 .NET 팀 **Unai Zorrilla**, Plain Concepts의 리드 개발자 **Javier Valero**, Grupo Solutio의 최고 운영 책임자
 
 ## <a name="introduction"></a>소개
 
@@ -70,7 +61,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 그림 1-1에서는 증분 단계로 기존.NET 애플리케이션을 클라우드로 이동하는 경우에 취할 수 있는 경로를 보여 줍니다.
 
- ![기존 .NET 애플리케이션 및 서비스의 현대화 경로](./media/image1-1.png)
+ ![기존 .NET 애플리케이션 및 서비스의 현대화 경로](./media/image1-1.png)
 
 **그림 1-1**. 기존 .NET 애플리케이션 및 서비스의 현대화 경로
 
@@ -103,7 +94,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>완성도별 핵심 기술 및 아키텍처
 
-.NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 처음 시작되었습니다. 그런 다음 회사에서 최신 버전을 출시했습니다(예: 2.0, 3.5 및 .NET 4.x). 이러한 애플리케이션은 대부분 Windows Server 및 IIS(Internet Information Server)에서 실행되었으며, SQL Server, Oracle, MySQL 또는 기타 RDBMS 같은 관계형 데이터베이스를 사용했습니다.
+.NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 처음 시작되었습니다. 그런 다음 회사에서 최신 버전을 출시했습니다(예: 2.0, 3.5, .NET Framework 4.x). 이러한 애플리케이션은 대부분 Windows Server 및 IIS(Internet Information Server)에서 실행되었으며, SQL Server, Oracle, MySQL 또는 기타 RDBMS 같은 관계형 데이터베이스를 사용했습니다.
 
 요즘 기존 .NET 애플리케이션은 .NET Framework 4.x 또는 .NET Framework 3.5에 기반을 두고 있으며, ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation(WCF), ASP.NET SignalR 및 ASP.NET Web Pages 같은 웹 프레임워크를 사용합니다. 이러한 기존의 .NET Framework 기술은 Windows에 종속됩니다. 레거시 앱만 마이그레이션하고 애플리케이션 인프라에 대한 변경 사항을 최소화하고자 하는 경우에는 이러한 종속성을 고려하는 것이 중요합니다.
 

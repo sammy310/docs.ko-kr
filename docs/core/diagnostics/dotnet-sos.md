@@ -1,25 +1,39 @@
 ---
-title: dotnet-sos - .NET Core
-description: dotnet-sos 명령줄 도구를 설치하고 사용하는 방법을 알아봅니다.
-ms.date: 08/26/2020
-ms.openlocfilehash: ba83105718909038ca56129ed8a5063aeff12e89
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+title: dotnet-sos 진단 도구 - .NET CLI
+description: Windows 및 Linux의 네이티브 디버거에서 사용되는 SOS 디버거 확장을 관리하기 위해 dotnet-sos CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: 59512c42a778f68bb3cd092dc854dcc727fd2881
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065086"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825444"
 ---
 # <a name="sos-installer-dotnet-sos"></a>SOS 설치 프로그램(dotnet-sos)
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="install-dotnet-sos"></a>dotnet-sos 설치
+## <a name="install"></a>설치
 
-`dotnet-sos` [NuGet 패키지](https://www.nuget.org/packages/dotnet-sos)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+다음 두 가지 방법으로 `dotnet-sos`를 다운로드하고 설치할 수 있습니다.
 
-```dotnetcli
-dotnet tool install -g dotnet-sos
-```
+- **dotnet 전역 도구:**
+
+  `dotnet-sos` [NuGet 패키지](https://www.nuget.org/packages/dotnet-sos)의 최신 릴리스 버전을 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다.
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-sos
+  ```
+
+- **직접 다운로드:**
+
+  플랫폼에 맞는 도구 실행 파일을 다운로드합니다.
+
+  | OS  | 플랫폼 |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-sos/win-x86) \| [x64](https://aka.ms/dotnet-sos/win-x64) \| [arm](https://aka.ms/dotnet-sos/win-arm) \| [arm-x64](https://aka.ms/dotnet-sos/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-sos/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-sos/linux-x64) \| [arm](https://aka.ms/dotnet-sos/linux-arm) \| [arm64](https://aka.ms/dotnet-sos/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-sos/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-sos/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>개요
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507217"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687444"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>.NET이 설치되어 있는지 확인하는 방법
 
@@ -189,5 +189,5 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 ## <a name="next-steps"></a>다음 단계
 
 - [Windows용 .NET 런타임 및 SDK 설치](windows.md).
-- [MacOS용 .NET 런타임 및 SDK 설치](linux.md).
-- [Linux용 .NET 런타임 SDK 설치](macos.md).
+- [macOS용 .NET 런타임 및 SDK 설치](macos.md).
+- [Linux용 .NET 런타임 SDK 설치](linux.md).

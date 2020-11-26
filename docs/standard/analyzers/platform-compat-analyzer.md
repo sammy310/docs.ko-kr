@@ -3,18 +3,19 @@ title: 플랫폼 호환성 분석기
 description: 플랫폼 간 앱 및 라이브러리에서 플랫폼 호환성 문제를 감지하는 데 도움이 되는 Roslyn 분석기입니다.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805300"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819489"
 ---
 # <a name="platform-compatibility-analyzer"></a>플랫폼 호환성 분석기
 
 "One .NET": 모든 유형의 애플리케이션을 빌드하기 위한 단일 통합 플랫폼이라는 모토를 들어 보셨을 것입니다. .NET 5.0 SDK에는 ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin 및 ML.NET가 포함되어 있으며, 향후 더 많은 플랫폼에 대한 지원이 추가될 예정입니다. .NET 5.0은 .NET의 다양한 플랫폼을 일일이 고려하지 않아도 없는 환경을 제공하기 위해 노력하고 있지만, 기본 OS(운영 체제)를 완전히 추상화하려고 하지는 않습니다. 플랫폼별 API(예: P/Invoke, WinRT 또는 iOS 및 Android용 Xamarin 바인딩)를 계속해서 호출할 수 있습니다.
 
-그러나 한 구성 요소에서 플랫폼별 API를 사용하면 코드는 더 이상 모든 플랫폼에서 작동하지 않을 것입니다. 개발자가 플랫폼별 API를 실수로 사용하는 경우 진단을 받을 수 있도록 디자인 타임에 이를 감지하는 방법이 필요했습니다. 이러한 목표를 달성하기 위해 .NET 5.0에서 개발자가 적절한 플랫폼별 API를 식별하고 사용하는 데 도움이 되는 [플랫폼 호환성 분석기](/visualstudio/code-quality/ca1416) 및 보완 API를 도입했습니다.
+그러나 한 구성 요소에서 플랫폼별 API를 사용하면 코드는 더 이상 모든 플랫폼에서 작동하지 않을 것입니다. 개발자가 플랫폼별 API를 실수로 사용하는 경우 진단을 받을 수 있도록 디자인 타임에 이를 감지하는 방법이 필요했습니다. 이러한 목표를 달성하기 위해 .NET 5.0에서 개발자가 적절한 플랫폼별 API를 식별하고 사용하는 데 도움이 되는 [플랫폼 호환성 분석기](../../fundamentals/code-analysis/quality-rules/ca1416.md) 및 보완 API를 도입했습니다.
+
 새 API의 구성 내용:
 
 - API에 플랫폼별 주석을 달기 위한 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute>와 API에 특정 OS에서 지원되지 않음 주석을 달기 위한 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>. 이러한 특성은 선택적으로 버전 번호를 포함할 수 있으며 핵심 .NET 라이브러리의 일부 플랫폼별 API에 이미 적용되어 있습니다.
@@ -25,22 +26,22 @@ ms.locfileid: "91805300"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-플랫폼 호환성 분석기는 Roslyn 코드 품질 분석기 중 하나입니다. .NET 5.0부터 이러한 분석기는 [.NET SDK](../../fundamentals/code-analysis/overview.md)에 포함되어 있습니다. 플랫폼 호환성 분석기는 `net5.0` 이상 버전을 대상으로 하는 프로젝트에서만 기본으로 사용됩니다. 그러나 다른 프레임워크를 대상으로 하는 프로젝트에도 [사용](/visualstudio/code-quality/ca1416.md#configurability)할 수 있습니다.
+플랫폼 호환성 분석기는 Roslyn 코드 품질 분석기 중 하나입니다. .NET 5.0부터 이러한 분석기는 [.NET SDK](../../fundamentals/code-analysis/overview.md)에 포함되어 있습니다. 플랫폼 호환성 분석기는 `net5.0` 이상 버전을 대상으로 하는 프로젝트에서만 기본으로 사용됩니다. 그러나 다른 프레임워크를 대상으로 하는 프로젝트에도 [사용](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability)할 수 있습니다.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>분석기에서 플랫폼 종속성을 확인하는 방법
 
-- **특성이 지정되지 않은 API**는 **모든 OS 플랫폼**에서 작동하는 것으로 간주됩니다.
+- **특성이 지정되지 않은 API** 는 **모든 OS 플랫폼** 에서 작동하는 것으로 간주됩니다.
 - `[SupportedOSPlatform("platform")]`으로 표시된 API는 지정된 OS `platform`에만 이식할 수 있는 것으로 간주됩니다.
   - 이 특성을 여러 번 적용하여 **다중 플랫폼 지원**(`[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]`)을 나타낼 수 있습니다.
-  - 적절한 **플랫폼 컨텍스트** 없이 플랫폼별 API를 참조하는 경우 분석기가 **경고**를 생성합니다.
+  - 적절한 **플랫폼 컨텍스트** 없이 플랫폼별 API를 참조하는 경우 분석기가 **경고** 를 생성합니다.
     - 프로젝트가 지원되는 플랫폼을 대상으로 하지 않는 경우(예: 프로젝트가 `<TargetFramework>net5.0-ios14.0</TargetFramework>`를 대상으로 할 때 Windows 관련 API를 호출) **경고합니다**.
     - 프로젝트가 다중 대상으로 지정된 경우(`<TargetFramework>net5.0</TargetFramework>`) **경고합니다**.
-    - **지정된 플랫폼**을 대상으로 하는 프로젝트 내에서 플랫폼별 API를 참조하는 경우(예: 프로젝트가 `<TargetFramework>net5.0-windows</TargetFramework>`를 대상으로 할 때 Windows 관련 API를 호출) **경고하지 않습니다**.
+    - **지정된 플랫폼** 을 대상으로 하는 프로젝트 내에서 플랫폼별 API를 참조하는 경우(예: 프로젝트가 `<TargetFramework>net5.0-windows</TargetFramework>`를 대상으로 할 때 Windows 관련 API를 호출) **경고하지 않습니다**.
     - 플랫폼별 API 호출이 해당하는 플랫폼 검사 메서드(예: `if(OperatingSystem.IsWindows())`)로 보호되는 경우 **경고하지 않습니다**.
     - 플랫폼별 API가 동일한 플랫폼별 컨텍스트에서 참조되는 경우(**호출 사이트에도 `[SupportedOSPlatform("platform")` 특성이 지정됨**) **경고하지 않습니다**.
 - `[UnsupportedOSPlatform("platform")]`으로 표시된 API는 지정된 OS `platform`에서만 지원되지 않고 다른 모든 플랫폼에서는 지원되는 것으로 간주됩니다.
   - 이 특성은 서로 다른 플랫폼에서 여러 번 적용될 수 있습니다(예: `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]`).
-  - 분석기는 `platform`이 호출 사이트에 유효한 경우에만 **경고**를 생성합니다.
+  - 분석기는 `platform`이 호출 사이트에 유효한 경우에만 **경고** 를 생성합니다.
     - 프로젝트가 지원되지 않는 것으로 지정된 플랫폼을 대상으로 하는 경우(예: 호출 사이트가 `<TargetFramework>net5.0-windows</TargetFramework>`를 대상으로 할 때 API에 `[UnsupportedOSPlatform("windows")]` 특성이 지정됨) **경고합니다**.
     - 프로젝트가 다중 대상으로 지정되고 `platform`이 기본 [MSBuild `<SupportedPlatform>`](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) 항목 그룹에 포함되거나 `platform`이 수동으로 `MSBuild` \<SupportedPlatform> 항목 그룹에 포함된 경우 **경고합니다**.
 
@@ -80,7 +81,7 @@ ms.locfileid: "91805300"
     ```
 
   - **불일치 목록**. 일부 플랫폼은 가장 낮은 버전이 `[SupportedOSPlatform]`이고 다른 플랫폼은 가장 낮은 버전이 `[UnsupportedOSPlatform]`인 경우 불일치로 간주되며 분석기에서 지원되지 않습니다.
-  - `[SupportedOSPlatform]` 및 `[UnsupportedOSPlatform]` 특성의 가장 낮은 버전이 동일한 경우 분석기는 해당 플랫폼을 **지원 목록**의 일부로 간주합니다.
+  - `[SupportedOSPlatform]` 및 `[UnsupportedOSPlatform]` 특성의 가장 낮은 버전이 동일한 경우 분석기는 해당 플랫폼을 **지원 목록** 의 일부로 간주합니다.
 - 다양한 플랫폼 이름 또는 버전과 함께 플랫폼 특성을 형식, 멤버(메서드, 필드, 속성, 이벤트), 어셈블리에 적용할 수 있습니다.
   - 최상위 수준 `target`에서 적용된 특성은 모든 멤버 및 형식에 영향을 미칩니다.
   - 자식 수준 특성은 “자식 주석이 플랫폼 지원 범위를 좁힐 수만 있고 확장할 수는 없음” 규칙을 준수하는 경우에만 적용됩니다.

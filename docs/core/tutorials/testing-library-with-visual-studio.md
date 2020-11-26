@@ -1,25 +1,25 @@
 ---
-title: Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
-description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
-ms.date: 06/08/2020
+title: Visual Studio를 사용하여 .NET 클래스 라이브러리 테스트
+description: Visual Studio를 사용하여 .NET 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만들고 실행하는 방법을 알아봅니다.
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177295"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916128"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET에서 .NET 클래스 라이브러리 테스트
 
 이 자습서에서는 솔루션에 테스트 프로젝트를 추가하여 단위 테스트를 자동화하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 솔루션에 사용할 수 있습니다.
+- 이 자습서에서는 [Visual Studio를 사용하여 .NET 클래스 라이브러리 만들기](library-with-visual-studio.md)에서 만든 솔루션을 사용합니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
@@ -27,17 +27,19 @@ ms.locfileid: "91177295"
 
 1. Visual Studio를 시작합니다.
 
-1. [Visual Studio를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Visual Studio를 사용하여 .NET 클래스 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. "StringLibraryTest"라는 새 단위 테스트 프로젝트를 솔루션에 추가합니다.
 
-   1. **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트**를 선택합니다.
+   1. **솔루션 탐색기** 에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트** 를 선택합니다.
 
-   1. **새 프로젝트 추가** 페이지의 검색 상자에 **mstest**를 입력합니다. 언어 목록에서 **C#** 또는 **Visual Basic**을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼**을 선택합니다.
+   1. **새 프로젝트 추가** 페이지의 검색 상자에 **mstest** 를 입력합니다. 언어 목록에서 **C#** 또는 **Visual Basic** 을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼** 을 선택합니다.
 
-   1. **MSTest 테스트 프로젝트(.NET Core)** 템플릿을 선택한 후 **다음**을 선택합니다.
+   1. **단위 테스트 프로젝트** 템플릿을 선택한 후 **다음** 을 선택합니다.
 
-   1. **새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **StringLibraryTest**를 입력합니다. 그런 다음, **만들기**를 선택합니다.
+   1. **새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **StringLibraryTest** 를 입력합니다. 그리고 **다음** 을 선택합니다.
+
+   1. **추가 정보** 페이지의 **대상 프레임워크** 상자에서 **.NET 5.0(현재)** 을 선택합니다. 그런 다음, **만들기** 를 선택합니다.
 
 1. Visual Studio는 프로젝트를 만들고 코드 창에서 다음 코드가 포함된 클래스 파일을 엽니다. 사용하려는 언어가 표시되지 않으면 페이지 맨 위에 있는 언어 선택기를 변경합니다.
 
@@ -83,11 +85,11 @@ ms.locfileid: "91177295"
 
 테스트 라이브러리가 `StringLibrary` 클래스에 대해 작동하도록 하기 위해 **StringLibraryTest** 프로젝트의 참조를 `StringLibrary` 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 **StringLibraryTest** 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **프로젝트 참조 추가**를 선택합니다.
+1. **솔루션 탐색기** 에서 **StringLibraryTest** 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **프로젝트 참조 추가** 를 선택합니다.
 
 1. **참조 관리자** 대화 상자에서 **프로젝트** 노드를 확장하고 **StringLibrary** 옆에 있는 확인란을 선택합니다. `StringLibrary` 어셈블리에 대한 참조를 추가하면 컴파일러가 **StringLibraryTest** 프로젝트를 컴파일하면서 **StringLibrary** 메서드를 찾을 수 있습니다.
 
-1. **확인**을 선택합니다.
+1. **확인** 을 선택합니다.
 
 ## <a name="add-and-run-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
 
@@ -119,24 +121,24 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
    `TestStartsWithUpper` 메서드의 대문자 테스트에는 그리스어 대문자 알파(U+0391) 및 키릴 자모 대문자 EM(U+041C)이 포함됩니다. `TestDoesNotStartWithUpper` 메서드의 소문자 테스트에는 그리스어 소문자 알파(U+03B1) 및 키릴 자모 소문자 Ghe(U+0433)가 포함됩니다.
 
-1. 메뉴 모음에서 **파일** > **다른 이름으로 UnitTest1.cs 저장** 또는 **파일** > **다른 이름으로 UnitTest1.vb 저장**을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추 옆에 있는 화살표를 선택한 다음 **인코딩하여 저장**을 선택합니다.
+1. 메뉴 모음에서 **파일** > **다른 이름으로 UnitTest1.cs 저장** 또는 **파일** > **다른 이름으로 UnitTest1.vb 저장** 을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추 옆에 있는 화살표를 선택한 다음 **인코딩하여 저장** 을 선택합니다.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio 다른 이름으로 파일 저장 대화 상자](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Visual Studio 다른 이름으로 파일 저장 대화 상자":::
 
 1. **다른 이름으로 저장 확인** 대화 상자에서 **예** 단추를 선택하여 파일을 저장합니다.
 
-1. **고급 저장 옵션** 대화 상자의 **인코딩** 드롭다운 목록에서 **유니코드(시그니처가 있는 UTF-8) - 코드 페이지 65001**을 선택한 다음 **확인**을 선택합니다.
+1. **고급 저장 옵션** 대화 상자의 **인코딩** 드롭다운 목록에서 **유니코드(시그니처가 있는 UTF-8) - 코드 페이지 65001** 을 선택한 다음 **확인** 을 선택합니다.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio 고급 저장 옵션 대화 상자](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Visual Studio 고급 저장 옵션 대화 상자":::
 
    소스 코드를 UTF8로 인코드된 파일에 저장하지 못하면 Visual Studio에서 해당 파일이 ASCII 파일로 저장될 수 있습니다. 이 경우 런타임은 ASCII 범위 밖의 UTF8 문자를 정확히 디코드하지 않으며 테스트 결과가 올바르지 않게 됩니다.
 
-1. 메뉴 모음에서 **테스트** > **모든 테스트 실행**을 선택합니다. **테스트 탐색기** 창이 열리지 않으면 **테스트** > **테스트 탐색기**를 선택하여 엽니다. 세 가지 테스트가 **통과한 테스트** 섹션에 표시되고 **요약** 섹션에 테스트 실행 결과가 보고됩니다.
+1. 메뉴 모음에서 **테스트** > **모든 테스트 실행** 을 선택합니다. **테스트 탐색기** 창이 열리지 않으면 **테스트** > **테스트 탐색기** 를 선택하여 엽니다. 세 가지 테스트가 **통과한 테스트** 섹션에 표시되고 **요약** 섹션에 테스트 실행 결과가 보고됩니다.
 
    > [!div class="mx-imgBorder"]
-   > ![테스트를 통과한 테스트 탐색기 창](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="테스트를 통과한 테스트 탐색기 창":::
 
 ## <a name="handle-test-failures"></a>테스트 실패 처리
 
@@ -155,17 +157,17 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
    ```
 
-1. 메뉴 모음에서 **테스트** > **모든 테스트 실행**을 선택하여 테스트를 실행합니다. **테스트 탐색기** 창에 두 가지 테스트는 성공하고 한 가지 테스트는 실패한 것으로 나타납니다.
+1. 메뉴 모음에서 **테스트** > **모든 테스트 실행** 을 선택하여 테스트를 실행합니다. **테스트 탐색기** 창에 두 가지 테스트는 성공하고 한 가지 테스트는 실패한 것으로 나타납니다.
 
    > [!div class="mx-imgBorder"]
-   > ![테스트를 실패한 테스트 탐색기 창](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="테스트를 실패한 테스트 탐색기 창":::
 
 1. 실패한 테스트인 `TestDoesNotStartWith`를 선택합니다.
 
    **테스트 탐색기** 창에 어설션이 생성하는 메시지 "Assert.IsFalse가 실패했습니다. 'Error'에 필요한 값: false, 실제: True"가 표시됩니다. 이 오류 때문에 "Error" 다음에 나오는 배열의 문자열은 테스트되지 않았습니다.
 
    > [!div class="mx-imgBorder"]
-   > ![Is False 어설션 실패를 표시하는 테스트 탐색기 창](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="Is False 어설션 실패를 표시하는 테스트 탐색기 창":::
 
 1. 1단계에서 추가한 "Error" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
 
@@ -175,28 +177,28 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
 릴리스 빌드를 테스트하려면
 
-1. Visual Studio 도구 모음에서 빌드 구성을 **디버그**에서 **릴리스**로 변경합니다.
+1. Visual Studio 도구 모음에서 빌드 구성을 **디버그** 에서 **릴리스** 로 변경합니다.
 
    > [!div class="mx-imgBorder"]
-   > ![릴리스 빌드가 강조 표시된 Visual Studio 도구 모음](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="릴리스 빌드가 강조 표시된 Visual Studio 도구 모음":::
 
-1. **솔루션 탐색기**에서 **StringLibrary** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **빌드**를 선택하여 라이브러리를 다시 컴파일합니다.
+1. **솔루션 탐색기** 에서 **StringLibrary** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **빌드** 를 선택하여 라이브러리를 다시 컴파일합니다.
 
    > [!div class="mx-imgBorder"]
-   > ![빌드 명령이 있는 StringLibrary 상황에 맞는 메뉴](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="빌드 명령이 있는 StringLibrary 상황에 맞는 메뉴":::
 
-1. 메뉴 모음에서 **테스트 실행** > **모든 테스트**를 선택하여 단위 테스트를 실행합니다. 테스트를 통과합니다.
+1. 메뉴 모음에서 **테스트 실행** > **모든 테스트** 를 선택하여 단위 테스트를 실행합니다. 테스트를 통과합니다.
 
 ## <a name="debug-tests"></a>테스트 디버그
 
-Visual Studio를 IDE로 사용하는 경우 [자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하는 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 **StringLibraryTests** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **테스트 디버그**를 선택합니다.
+Visual Studio를 IDE로 사용하는 경우 [자습서: Visual Studio를 사용하여 .NET 콘솔 애플리케이션 디버그](debugging-with-visual-studio.md)에 표시된 것과 동일한 프로세스를 사용하여 단위 테스트 프로젝트를 사용하는 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 **StringLibraryTests** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **테스트 디버그** 를 선택합니다.
 
 Visual Studio에서 디버거를 연결한 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
 * [단위 테스트 기본 사항 - Visual Studio](/visualstudio/test/unit-test-basics)
-* [.NET Core 및 .NET Standard의 유닛 테스트](../testing/index.md)
+* [.NET의 유닛 테스트](../testing/index.md)
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -213,4 +215,4 @@ Visual Studio에서 디버거를 연결한 상태로 테스트 프로젝트를 �
 라이브러리는 패키지로 배포하지 않아도 됩니다. 라이브러리를 사용하는 콘솔 앱과 함께 제공할 수 있습니다. 콘솔 앱을 게시하는 방법을 알아보려면 이 시리즈의 이전 자습서를 참조하세요.
 
 > [!div class="nextstepaction"]
-> [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio.md)
+> [Visual Studio를 사용하여 .NET 콘솔 애플리케이션 게시](publishing-with-visual-studio.md)

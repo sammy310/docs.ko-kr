@@ -1,24 +1,26 @@
 ---
-title: Visual Studio Code로 .NET Standard 클래스 라이브러리 만들기
-description: Visual Studio Code를 사용하여 .NET Standard 클래스 라이브러리를 만드는 방법을 알아봅니다.
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기
+description: Visual Studio Code를 사용하여 .NET 클래스 라이브러리를 만드는 방법을 알아봅니다.
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495514"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916093"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>자습서: Visual Studio Code로 .NET Standard 라이브러리 만들기
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기
 
-이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만듭니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현합니다.
+이 자습서에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만듭니다.
 
-*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
+*클래스 라이브러리* 는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. 라이브러리가 .NET Standard 2.0을 대상으로 하는 경우 .NET Standard 2.0을 지원하는 .NET 구현(.NET Framework 포함)에서 호출될 수 있습니다. 라이브러리가 .NET 5를 대상으로 하는 경우 .NET 5를 대상으로 하는 모든 애플리케이션에서 호출될 수 있습니다. 이 자습서에서는 .NET 5를 대상으로 지정하는 방법을 보여 줍니다.
+
+클래스 라이브러리를 만들 때 타사 구성 요소 또는 하나 이상의 애플리케이션이 포함된 번들 구성 요소로 배포할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 1. [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)이 설치된 [Visual Studio Code](https://code.visualstudio.com/). Visual Studio Code에 확장을 설치하는 방법에 대한 자세한 내용은 [VS Code 확장 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)를 참조하세요.
-2. [.NET Core 3.1 SDK 이상](https://dotnet.microsoft.com/download)
+2. [.NET 5.0 SDK 이상](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>솔루션 만들기
 
@@ -30,11 +32,11 @@ ms.locfileid: "89495514"
 
 1. **폴더 열기** 대화 상자에서 *ClassLibraryProjects* 폴더를 만들고 **폴더 선택**(macOS에서는 **열기**)을 클릭합니다.
 
-1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
+1. 주 메뉴에서 **보기** > **터미널** 을 선택하여 Visual Studio Code에서 **터미널** 을 엽니다.
 
-   *ClassLibraryProjects* 폴더에서 명령 프롬프트와 함께 **터미널**이 열립니다.
+   *ClassLibraryProjects* 폴더에서 명령 프롬프트와 함께 **터미널** 이 열립니다.
 
-1. **터미널**에서 다음 명령을 입력합니다.
+1. **터미널** 에서 다음 명령을 입력합니다.
 
    ```dotnetcli
    dotnet new sln
@@ -48,7 +50,7 @@ ms.locfileid: "89495514"
 
 ## <a name="create-a-class-library-project"></a>클래스 라이브러리 프로젝트 만들기
 
-"StringLibrary"라는 새로운 .NET Standard 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
+“StringLibrary”라는 새로운 .NET 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
 1. 터미널에서 다음 명령을 실행하여 라이브러리 프로젝트를 만듭니다.
 
@@ -81,21 +83,21 @@ ms.locfileid: "89495514"
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. 라이브러리에 올바른 버전의 .NET Standard가 대상으로 지정되었는지 확인합니다. **Explorer**에서 *StringLibrary/StringLibrary.csproj*를 엽니다.
+1. 라이브러리가 .NET 5를 대상으로 하는지 확인합니다. **Explorer** 에서 *StringLibrary/StringLibrary.csproj* 를 엽니다.
 
-   `TargetFramework` 요소는 프로젝트가 .NET Standard 2.0을 대상으로 함을 보여 줍니다.
+   `TargetFramework` 요소는 프로젝트가 .NET 5.0을 대상으로 함을 보여 줍니다.
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
    ```
 
-1. *Class1.cs*를 열고 코드를 다음 코드로 바꿉니다.
+1. *Class1.cs* 를 열고 코드를 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
 
@@ -116,7 +118,7 @@ ms.locfileid: "89495514"
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -156,7 +158,7 @@ ms.locfileid: "89495514"
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. *ShowCase/Program.cs*를 열고 모든 코드를 다음 코드로 바꿉니다.
+1. *ShowCase/Program.cs* 를 열고 모든 코드를 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
 
@@ -208,12 +210,11 @@ ms.locfileid: "89495514"
 
 ## <a name="additional-resources"></a>추가 자료
 
-* [.NET Core CLI를 사용하여 라이브러리 개발](libraries.md)
-* [지원되는 .NET Standard 버전 및 플랫폼](../../standard/net-standard.md)
+* [.NET CLI를 사용하여 라이브러리 개발](libraries.md)
 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 솔루션을 만들고, 라이브러리 프로젝트를 추가하고, 라이브러리를 사용하는 콘솔 앱 프로젝트를 추가했습니다. 다음 자습서에서는 솔루션에 단위 테스트 프로젝트를 추가합니다.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code에서 .NET Core로 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio-code.md)
+> [Visual Studio Code를 사용하여 .NET에서 .NET 클래스 라이브러리 테스트](testing-library-with-visual-studio-code.md)

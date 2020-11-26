@@ -4,25 +4,28 @@ description: Amazon EMR Spark에 .NET for Apache Spark 애플리케이션을 배
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955475"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688074"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark에 .NET for Apache Spark 애플리케이션 배포
 
-이 자습서에서는 Amazon EMR Spark에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 설명합니다.
+이 자습서에서는 Amazon EMR Spark에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 설명합니다. [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html)은 AWS에서 빅 데이터 프레임워크 실행을 간소화하는 관리형 클러스터 플랫폼입니다.
 
-이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 >
 > * Microsoft.Spark.Worker 준비
 > * Spark .NET 앱 게시
 > * Amazon EMR Spark에 앱 배포
-> * 앱 실행
+> * 앱을 실행합니다.
+
+> [!Note]
+> AWS EMR Spark는 Linux 기반입니다. 따라서 AWS EMR Spark에 앱을 배포하려면 앱이 .NET Standard와 호환되는지, .NET Core 컴파일러를 사용하여 앱을 컴파일하는지 확인합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -33,11 +36,11 @@ ms.locfileid: "91955475"
 
 ## <a name="prepare-worker-dependencies"></a>작업자 종속성 준비
 
-**Microsoft.Spark.Worker**는 Spark 클러스터의 개별 작업자 노드에 있는 백 엔드 구성 요소입니다. C# UDF(사용자 정의 함수)를 실행하려면 Spark는 .NET CLR를 시작하여 UDF를 실행하는 방법을 이해해야 합니다. **Microsoft.Spark.Worker**는 이 기능을 사용하도록 설정하는 Spark에 대한 클래스 컬렉션을 제공합니다.
+**Microsoft.Spark.Worker** 는 Spark 클러스터의 개별 작업자 노드에 있는 백 엔드 구성 요소입니다. C# UDF(사용자 정의 함수)를 실행하려면 Spark는 .NET CLR를 시작하여 UDF를 실행하는 방법을 이해해야 합니다. **Microsoft.Spark.Worker** 는 이 기능을 사용하도록 설정하는 Spark에 대한 클래스 컬렉션을 제공합니다.
 
 1. 클러스터에 배포할 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 릴리스를 선택합니다.
 
-   예를 들어 `netcoreapp2.1`을 사용하는 `.NET for Apache Spark v0.1.0`이 필요한 경우 [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)를 다운로드합니다.
+   예를 들어 `netcoreapp3.1`을 사용하는 `.NET for Apache Spark v1.0.0`이 필요한 경우 [Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)를 다운로드합니다.
 
 2. 클러스터가 액세스할 수 있는 분산 파일 시스템(예: S3)에 `Microsoft.Spark.Worker.<release>.tar.gz` 및 [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh)를 업로드합니다.
 
@@ -50,7 +53,7 @@ ms.locfileid: "91955475"
    Linux에서 다음 명령을 실행합니다.
 
    ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+   dotnet publish -c Release -f netcoreapp3.1 -r ubuntu.16.04-x64
    ```
 
 3. 게시된 파일에 대해 `<your app>.zip`을 생성합니다.
@@ -63,7 +66,7 @@ ms.locfileid: "91955475"
 
 4. 클러스터가 액세스할 수 있는 분산 파일 시스템(예: S3)에 다음 항목을 업로드합니다.
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
+   * `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar`: 이 jar은 [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 패키지의 일부로 포함되며 앱의 빌드 출력 디렉터리에 공동 배치됩니다.
    * `<your app>.zip`
    * 각 실행기의 작업 디렉터리에 배치할 파일(예: 모든 작업자에 액세스할 수 있는 공통 데이터 또는 종속성 파일) 또는 어셈블리(예: 앱에서 사용하는 사용자 정의 함수 또는 라이브러리가 포함된 DLL).
 
@@ -94,7 +97,7 @@ aws emr create-cluster \
 --bootstrap-actions Path=s3://mybucket/<some dir>/install-worker.sh,Name="Install Microsoft.Spark.Worker",Args=["aws","s3://mybucket/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz","/usr/local/bin"]
 ```
 
-## <a name="run-your-app"></a>앱 실행
+## <a name="run-your-app"></a>앱을 실행합니다.
 
 Amazon EMR Spark에서 앱을 실행하는 두 가지 방법은 spark-submit 및 Amazon EMR Steps입니다.
 
@@ -104,14 +107,14 @@ Amazon EMR Spark에서 앱을 실행하는 두 가지 방법은 spark-submit 및
 
 1. 클러스터의 노드 중 하나로 `ssh`를 실행합니다.
 
-2. `spark-submit`를 실행합니다.
+2. `spark-submit`을 실행합니다.
 
    ```bash
    spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
+   s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
    s3://mybucket/<some dir>/<your app>.zip <your app> <app args>
    ```
 
@@ -124,7 +127,7 @@ AWS CLI를 사용하여 Linux에서 다음 명령을 실행합니다.
 ```bash
 aws emr add-steps \
 --cluster-id j-xxxxxxxxxxxxx \
---steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.dotnet.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
+--steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.dotnet.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
 ```
 
 ## <a name="next-steps"></a>다음 단계

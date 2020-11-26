@@ -2,12 +2,12 @@
 title: C# 9.0의 새로운 기능 - C# 가이드
 description: C# 9.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557222"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687362"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0의 새로운 기능
 
@@ -104,9 +104,13 @@ C# 9.0에서는 같음에 대한 값 의미 체계를 제공하는 합성 메서
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-위 줄은 `LastName` 속성은 `person`의 복사본이고 `FirstName`은 `"Paul"`인 새 `Person` 레코드를 만듭니다. `with` 식에서는 속성을 원하는 개수만큼 설정할 수 있습니다.
+위의 줄은 `LastName` 속성은 `person`의 복사본이고 `FirstName`은 `"Paul"`인 새 `Person` 레코드를 만듭니다. `with` 식에서는 속성을 원하는 개수만큼 설정할 수 있습니다. `with` 식을 사용하여 정확한 복사본을 만들 수도 있습니다. 수정할 속성에 대해 빈 집합을 지정합니다.
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 “clone” 메서드를 제외한 모든 합성 멤버를 직접 작성할 수 있습니다. 레코드 종류에 합성 메서드의 시그니처와 일치하는 메서드가 있는 경우 해당 메서드는 컴파일러에서 합성되지 않습니다. 앞의 `Dog` 레코드 예제에는 수동 코딩된 <xref:System.String.ToString> 메서드가 예제로 포함되어 있습니다.
+
+이 [레코드 탐색](../tutorials/exploration/records.md) 자습서에서 레코드 종류에 대해 자세히 알아보세요.
 
 ## <a name="init-only-setters"></a>Init 전용 setter
 

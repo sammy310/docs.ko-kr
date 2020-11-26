@@ -4,12 +4,12 @@ description: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954960"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688191"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 
@@ -26,7 +26,7 @@ ms.locfileid: "91954960"
 | 환경 변수         | 설명
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code> 이진 파일이 생성된 경로입니다.</br>Spark 드라이버에서 사용되며 Spark 실행기에 전달됩니다. 이 변수가 설정되지 않은 경우 Spark 실행기는 <code>PATH</code> 환경 변수에 지정된 경로를 검색합니다.</br>_예: "C:\bin\Microsoft.Spark.Worker"_
-| DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code>에서 어셈블리를 로드할 쉼표로 구분된 경로입니다.</br>경로가 "."으로 시작하면 작업 디렉터리가 앞에 배치됩니다. **Yarn 모드**인 경우 "."은 컨테이너의 작업 디렉터리를 나타냅니다.</br>_예: "C:\Users\\&lt;사용자 이름&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet 버전&gt;"_
+| DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code>에서 어셈블리를 로드할 쉼표로 구분된 경로입니다.</br>경로가 "."으로 시작하면 작업 디렉터리가 앞에 배치됩니다. **Yarn 모드** 인 경우 "."은 컨테이너의 작업 디렉터리를 나타냅니다.</br>_예: "C:\Users\\&lt;사용자 이름&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet 버전&gt;"_
 | DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF를 디버그</a>하려면 <code>spark-submit</code>를 실행하기 전에 이 환경 변수를 <code>1</code>로 설정합니다.
 
 ### <a name="parameter-options"></a>매개 변수 옵션
@@ -60,7 +60,7 @@ Spark 애플리케이션이 [번들로 제공](https://spark.apache.org/docs/lat
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>Spark 애플리케이션을 제출한 후에 `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` 오류가 발생합니다.
 > **오류:** [오류] [작업 실행자] [0] ProcessStream()이 다음 예외를 나타내며 실패함: System.TypeLoadException: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=...' 어셈블리에서 'System.Runtime.Remoting.Contexts.Context' 형식을 로드할 수 없습니다.
 
-**대답:** 사용 중인 `Microsoft.Spark.Worker` 버전을 확인하세요. **.NET Framework 4.6.1** 및 **.NET Core 2.1.x**의 두 가지 버전이 있습니다. 이 경우 `System.Runtime.Remoting.Contexts.Context`는 .NET Framework 전용이기 때문에 `Microsoft.Spark.Worker.net461.win-x64-<version>`([다운로드](https://github.com/dotnet/spark/releases)할 수 있음)을 사용해야 합니다.
+**대답:** 사용 중인 `Microsoft.Spark.Worker` 버전을 확인하세요. **.NET Framework 4.6.1** 및 **.NET Core 3.1.x** 의 두 가지 버전이 있습니다. 이 경우 `System.Runtime.Remoting.Contexts.Context`는 .NET Framework 전용이기 때문에 `Microsoft.Spark.Worker.net461.win-x64-<version>`([다운로드](https://github.com/dotnet/spark/releases)할 수 있음)을 사용해야 합니다.
 
 ### <a name="how-do-i-run-my-spark-application-with-udfs-on-yarn-which-environment-variables-and-parameters-should-i-use"></a>YARN에서 UDF를 사용하여 내 Spark 애플리케이션을 실행하는 방법은 무엇인가요? 어떤 환경 변수와 매개 변수를 사용해야 하나요?
 
@@ -74,7 +74,7 @@ spark-submit \
 --conf spark.yarn.appMasterEnv.DOTNET_WORKER_DIR=./worker/Microsoft.Spark.Worker-<version> \
 --conf spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS=./udfs \
 --archives hdfs://<path to your files>/Microsoft.Spark.Worker.net461.win-x64-<version>.zip#worker,hdfs://<path to your files>/mySparkApp.zip#udfs \
-hdfs://<path to jar file>/microsoft-spark-2.4.x-<version>.jar \
+hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 

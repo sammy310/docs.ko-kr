@@ -1,18 +1,17 @@
 ---
 title: System.Buffers - .NET
 ms.date: 12/05/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - buffers [.NET]
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739617"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823526"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET에서 버퍼 작업
 
@@ -138,7 +137,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 정수가 포함된 `ReadOnlySequence<T>.Slice`는 빈 세그먼트를 건너뜁니다.
 - `ReadOnlySequence<T>`를 열거하면 빈 세그먼트가 열거됩니다.
 
-### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>ReadOnlySequence\<T> 및 SequencePosition의 잠재적 문제점
+### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>ReadOnlySequence\<T> 및 SequencePosition의 잠재적 문제
 
 `ReadOnlySequence<T>`/`SequencePosition`을 처리할 때 일반 `ReadOnlySpan<T>`/`ReadOnlyMemory<T>`/`T[]`/`int`에 비해 비정상적인 결과가 몇 가지 있습니다.
 

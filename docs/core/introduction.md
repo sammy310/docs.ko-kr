@@ -2,14 +2,14 @@
 title: .NET 소개 및 개요
 description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스 개발 플랫폼인 .NET에 대해 알아봅니다.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506742"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687519"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -264,9 +264,9 @@ GC는 ‘메모리 안전성’ 유지에 도움이 되는 CLR 서비스 중 하
 
 ## <a name="runtime-libraries"></a>런타임 라이브러리.
 
-.NET에는 광범위한 표준 클래스 라이브러리 세트가 있습니다. 핵심 집합을 BCL(기본 클래스 라이브러리)이라고 하고, 전체 집합을 런타임 라이브러리 또는 프레임워크 라이브러리라고 합니다. 라이브러리는 다양한 범용 및 워크로드별 형식과 유틸리티 기능의 구현을 제공합니다.
+.NET에는 [런타임 라이브러리](../standard/glossary.md#runtime), [프레임워크 라이브러리](../standard/glossary.md#framework-libraries), [BCL(기본 클래스 라이브러리)](../standard/glossary.md#bcl)이라는 클래스 라이브러리의 광범위한 표준 세트가 있습니다. 라이브러리는 다양한 범용 및 워크로드별 형식과 유틸리티 기능의 구현을 제공합니다.
 
-다음은 런타임 라이브러리에 정의된 형식의 몇 가지 예입니다.
+다음은 .NET 런타임 라이브러리에 정의된 형식의 몇 가지 예입니다.
 
 * 기본 형식(예: <xref:System.Boolean?displayProperty=nameWithType> 및 <xref:System.Int32?displayProperty=nameWithType>).
 * <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>과 같은 컬렉션
@@ -276,9 +276,9 @@ GC는 ‘메모리 안전성’ 유지에 도움이 되는 CLR 서비스 중 하
 * [Serialization](../standard/serialization/index.md) 유틸리티 형식(예: <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 및 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>)
 * <xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Numerics.Vector?displayProperty=nameWithType> 및 [Pipelines](../standard/io/pipelines.md)와 같은 고성능 형식
 
-자세한 내용은 [프레임워크 라이브러리](../standard/framework-libraries.md) 및 [라이브러리의 소스 코드 ](https://github.com/dotnet/runtime/tree/master/src/libraries)를 참조하세요.
+자세한 내용은 [런타임 라이브러리 개요](../standard/runtime-libraries-overview.md)를 참조하세요. 라이브러리의 소스 코드는 [GitHub dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/tree/master/src/libraries)에 있습니다.
 
-## <a name="microsoftextensions-libraries"></a>Microsoft.Extensions 라이브러리
+### <a name="extensions-to-the-runtime-libraries"></a>런타임 라이브러리에 대한 확장
 
 자주 사용하는 일부 애플리케이션 기능의 라이브러리는 런타임 라이브러리에 포함되지 않고 다음과 같은 NuGet 패키지로 제공됩니다.
 
@@ -344,6 +344,7 @@ LINQ(Language-Integrated Query)를 사용하면 데이터에서 실행할 선언
   | 대상 프레임워크(target framework) | .NET 앱이나 라이브러리에서 사용하는 API 컬렉션입니다. 예: .NET Core 3.1, .NET Standard 2.0 |
   | TFM(대상 프레임워크 모니커)  | TFM은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위한 표준화된 토큰 형식입니다. 예: .NET Framework 4.6.2의 경우 `net462` |
   | 프레임워크 종속 앱 | [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)를 통해 런타임을 설치한 머신에서만 실행할 수 있는 앱입니다. 이때 사용된 “프레임워크”는 .NET 다운로드 페이지에서 다운로드하는 “런타임”과 동일합니다. |
+  | 프레임워크 라이브러리 | [런타임 라이브러리](#runtime-libraries)의 동의어로 사용되는 경우도 있습니다. |
 
 * **SDK**
 

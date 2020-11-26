@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063230"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687473"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -123,7 +123,7 @@ ms.locfileid: "93063230"
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` 속성은 .NET SDK 2.1.400 버전에서 도입되었습니다. 배포용으로 네이티브 실행 파일을 만들지 여부를 제어합니다. 자체 포함 배포의 경우 네이티브 실행 파일이 필요합니다.
+`UseAppHost` 속성은 배포용으로 네이티브 실행 파일을 만들지 여부를 제어합니다. 자체 포함 배포의 경우 네이티브 실행 파일이 필요합니다.
 
 .NET Core 3.0 이상 버전에서는 프레임워크 종속 실행 파일이 기본적으로 생성됩니다. `UseAppHost` 속성을 `false`로 설정하여 실행 파일 생성을 사용하지 않도록 설정합니다.
 
@@ -354,7 +354,7 @@ ms.locfileid: "93063230"
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [참조](#reference)
-- [restore 속성](#restore-properties)
+- [복원 관련 속성](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ ms.locfileid: "93063230"
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>restore 속성
+### <a name="restore-related-properties"></a>복원 관련 속성
 
 참조된 패키지를 복원하면 패키지의 직접 종속성과 해당 종속성의 종속성이 모두 설치됩니다. `RestorePackagesPath` 및 `RestoreIgnoreFailedSources`와 같은 속성을 지정하여 패키지 복원을 사용자 지정할 수 있습니다. 이러한 속성 및 다른 속성에 대한 자세한 내용은 [복원 대상](/nuget/reference/msbuild-targets#restore-target)을 참조하세요.
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>호스팅 속성 및 항목
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+`EnableComHosting` 속성은 어셈블리가 COM 서버를 제공함을 나타냅니다. `EnableComHosting`을 `true`로 설정하면 [EnableDynamicLoading](#enabledynamicloading)도 `true`입니다.
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+자세한 내용은 [COM에 .NET 구성 요소 공개](../native-interop/expose-components-to-com.md)를 참조하세요.
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+`EnableDynamicLoading` 속성은 어셈블리가 동적으로 로드된 구성 요소임을 나타냅니다. 구성 요소는 [네이티브 호스트에서 사용](../tutorials/netcore-hosting.md)할 수 있는 [COM 라이브러리](/windows/win32/com/the-component-object-model) 또는 비 COM 라이브러리일 수 있습니다. 이 속성을 `true`로 설정하면 다음과 같은 효과가 있습니다.
+
+- *.runtimeconfig.json* 파일이 생성됩니다.
+- [롤포워드](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)가 `LatestMinor`로 설정됩니다.
+- NuGet 참조가 로컬로 복사됩니다.
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

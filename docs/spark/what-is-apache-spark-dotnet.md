@@ -4,16 +4,16 @@ description: .NET 코드를 작성하는 곳이라면 어디서나 Spark를 사�
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955358"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688035"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Apache Spark용 .NET이란?
 
-[Apache Spark](what-is-spark.md)는 대규모 데이터 세트(일반적으로 테라바이트 또는 페타바이트 데이터)에 대한 분석에 사용되는 범용 분산 처리 엔진입니다. 인기 있는 오픈 소스 빅 데이터 분석 프레임워크에 대한 무료 오픈 소스 및 플랫폼 간 .NET 지원인 .NET for Apache Spark를 통해 이제 이미 알고 있는 언어를 사용하여 빅 데이터 애플리케이션에 Apache Spark의 기능을 추가할 수 있습니다.
+[Apache Spark](what-is-spark.md)는 대규모 데이터 세트(일반적으로 테라바이트 또는 페타바이트 데이터)에 대한 분석에 사용되는 범용 분산 처리 엔진입니다. 인기 있는 오픈 소스 빅 데이터 분석 프레임워크에 대한 무료 [오픈 소스](https://github.com/dotnet/spark) 및 플랫폼 간 .NET 지원인 .NET for Apache Spark를 통해 이제 이미 알고 있는 언어를 사용하여 빅 데이터 애플리케이션에 Apache Spark의 기능을 추가할 수 있습니다.
 
 ## <a name="why-choose-net-for-apache-spark"></a>.NET for Apache Spark를 선택하는 이유
 

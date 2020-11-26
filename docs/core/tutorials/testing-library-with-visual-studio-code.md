@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
-description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
-ms.date: 06/08/2020
-ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 테스트
+description: Visual Studio Code 및 .NET CLI를 사용하여 .NET 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만들고 실행하는 방법을 알아봅니다.
+ms.date: 11/17/2020
+ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180455"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915858"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 .NET Standard 클래스 라이브러리 테스트
+# <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 테스트
 
 이 자습서에서는 솔루션에 테스트 프로젝트를 추가하여 단위 테스트를 자동화하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 자습서는 [Visual Studio Code를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 솔루션에 사용할 수 있습니다.
+- 이 자습서에서는 [Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 솔루션을 사용합니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "91180455"
 
 1. Visual Studio Code를 시작합니다.
 
-1. [Visual Studio Code를 사용하여 .NET Standard 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기](library-with-visual-studio-code.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. “StringLibraryTest”라는 단위 테스트 프로젝트를 만듭니다.
 
@@ -96,7 +96,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 테스트 메서드를 만들려면
 
-1. *StringLibraryTest/UnitTest1.cs*를 열고 모든 코드를 다음 코드로 바꿉니다.
+1. *StringLibraryTest/UnitTest1.cs* 를 열고 모든 코드를 다음 코드로 바꿉니다.
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
 
@@ -114,13 +114,9 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
 
-   Test Run Successful.
-   Total tests: 3
-        Passed: 3
-    Total time: 5.1116 Seconds
+   Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 3 ms - StringLibraryTest.dll (net5.0)
    ```
 
 ## <a name="handle-test-failures"></a>테스트 실패 처리
@@ -144,20 +140,14 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
-     X TestDoesNotStartWithUpper [283ms]
+     Failed TestDoesNotStartWithUpper [28 ms]
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
-   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
-   Test Run Failed.
-   Total tests: 3
-        Passed: 2
-        Failed: 1
-    Total time: 1.7825 Seconds
+   Failed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3, Duration: 31 ms - StringLibraryTest.dll (net5.0)
    ```
 
 1. 1단계에서 추가한 "Error" 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
@@ -176,13 +166,13 @@ TDD(테스트 기반 개발)를 수행하는 경우 먼저 테스트를 작성�
 
 ## <a name="debug-tests"></a>테스트 디버그
 
-Visual Studio Code를 IDE로 사용하는 경우 [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)에 표시된 것과 동일한 프로세스로 단위 테스트 프로젝트를 사용하여 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 *StringLibraryTest/UnitTest1.cs*를 열고 줄 7과 8 사이에서 **Run All Tests**를 선택합니다. 이를 찾을 수 없는 경우 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 명령 팔레트를 열고 **Reload Window**를 입력합니다.
+Visual Studio Code를 IDE로 사용하는 경우 [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)에 표시된 것과 동일한 프로세스를 사용하여 단위 테스트 프로젝트를 사용하는 코드를 디버그할 수 있습니다. *ShowCase* 앱 프로젝트를 시작하는 대신 *StringLibraryTest/UnitTest1.cs* 를 열고 줄 7과 8 사이에서 **Run All Tests** 를 선택합니다. 이를 찾을 수 없는 경우 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>를 눌러 명령 팔레트를 열고 **Reload Window** 를 입력합니다.
 
 Visual Studio Code가 디버거와 연결된 상태로 테스트 프로젝트를 시작합니다. 테스트 프로젝트에 추가한 중단점 또는 기본 라이브러리 코드에서 실행이 중지됩니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
-* [.NET Core 및 .NET Standard의 유닛 테스트](../testing/index.md)
+* [.NET의 유닛 테스트](../testing/index.md)
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -199,4 +189,4 @@ Visual Studio Code가 디버거와 연결된 상태로 테스트 프로젝트를
 라이브러리는 패키지로 배포하지 않아도 됩니다. 라이브러리를 사용하는 콘솔 앱과 함께 제공할 수 있습니다. 콘솔 앱을 게시하는 방법을 알아보려면 이 시리즈의 이전 자습서를 참조하세요.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio-code.md)
+> [Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 게시](publishing-with-visual-studio-code.md)
