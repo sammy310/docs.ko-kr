@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91059160"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
@@ -214,6 +214,6 @@ Microsoft는이 항목의 지침을 따르는 샘플과 설명서를 개발 합�
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)

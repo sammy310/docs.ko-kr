@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177716"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 매개 변수
@@ -49,7 +49,7 @@ parameter.SourceVersion = DataRowVersion.Original
   
  다음 표에서는 <xref:System.Data.DataRowVersion>에 사용할 수 있는 `SourceVersion` 열거형 값을 보여 줍니다.  
   
-|DataRowVersion 열거형|설명|  
+|DataRowVersion 열거형|Description|  
 |--------------------------------|-----------------|  
 |`Current`|열의 현재 값을 사용하는 매개 변수입니다. 이것이 기본값입니다.|  
 |`Default`|열의 `DefaultValue`를 사용하는 매개 변수입니다.|  
@@ -167,7 +167,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> 매개 변수에 대 한 매개 변수 이름을 제공 하지 않으면 매개 변수에는 "Parameter1"로 시작 *하* 는 매개 변수*N* 의 증분 기본 이름이 지정 됩니다. 매개 변수 이름을 제공 하는 경우 매개 변수*N* 명명 규칙을 사용 하지 않는 것이 좋습니다 .이 경우 사용자가 제공 하는 이름이의 기존 기본 매개 변수 이름과 충돌할 수 있기 때문입니다 `ParameterCollection` . 이미 있는 이름을 입력하면 예외가 throw됩니다.  
+> 매개 변수에 대 한 매개 변수 이름을 제공 하지 않으면 매개 변수에는 "Parameter1"로 시작 *하* 는 매개 변수 *N* 의 증분 기본 이름이 지정 됩니다. 매개 변수 이름을 제공 하는 경우 매개 변수 *N* 명명 규칙을 사용 하지 않는 것이 좋습니다 .이 경우 사용자가 제공 하는 이름이의 기존 기본 매개 변수 이름과 충돌할 수 있기 때문입니다 `ParameterCollection` . 이미 있는 이름을 입력하면 예외가 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

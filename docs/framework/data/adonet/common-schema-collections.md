@@ -3,10 +3,10 @@ title: 공용 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91203815"
 ---
 # <a name="common-schema-collections"></a>공용 스키마 컬렉션
@@ -31,7 +31,7 @@ ms.locfileid: "91203815"
 
  이 스키마 컬렉션에서는 .NET Framework 관리 공급자가 현재 연결되어 있는 데이터 소스에 대한 정보를 노출합니다.  
   
-|ColumnName|DataType|설명|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |CompositeIdentifierSeparatorPattern|문자열|복합 식별자의 복합 구분 기호와 일치하는 정규식입니다. 예: " \\ ." (SQL Server의 경우) 또는 " \@&#124;\\ "입니다. (Oracle의 경우)입니다.<br /><br /> 복합 식별자는 일반적으로 데이터베이스 개체 이름에 사용 됩니다. 예를 들어 pubs. authors 또는 pubs \@ dbo 작성자입니다.<br /><br /> SQL Server 정규식 " \\ ."를 사용 합니다. OracleClient의 경우 " \@&#124;\\ ."를 사용 합니다.<br /><br /> ODBC의 경우 Catalog_name_seperator를 사용합니다.<br /><br /> OLE DB의 경우 DBLITERAL_CATALOG_SEPARATOR 또는 DBLITERAL_SCHEMA_SEPARATOR를 사용합니다.|  
 |DataSourceProductName|문자열|"Oracle" 또는 "SQLServer"와 같은 공급자에서 액세스하는 제품의 이름입니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "91203815"
 
  이 스키마 컬렉션에서는 .NET Framework 관리 공급자가 현재 연결되어 있는 데이터베이스에서 지원하는 데이터 형식에 대한 정보를 노출합니다.  
   
-|ColumnName|DataType|설명|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |TypeName|문자열|공급자별 데이터 형식 이름입니다.|  
 |ProviderDbType|int|매개 변수의 형식을 지정할 때 사용 해야 하는 공급자별 형식 값입니다. 예를 들어, SqlDbType.Money 또는 OracleType.Blob입니다.|  
@@ -96,7 +96,7 @@ ms.locfileid: "91203815"
 
  이 스키마 컬렉션에서는 .NET Framework 관리 공급자가 현재 연결되어 있는 데이터베이스에서 예약된 단어에 대한 정보를 노출합니다.  
   
-|ColumnName|DataType|설명|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |ReservedWord|문자열|공급자별 예약어입니다.|  
   
