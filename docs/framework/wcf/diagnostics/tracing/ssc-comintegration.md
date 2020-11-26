@@ -2,21 +2,23 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails
 ms.date: 03/30/2017
 ms.assetid: d88b4823-08a4-4126-8304-d2c4c9d35b3e
-ms.openlocfilehash: 8e392dc469a0858c379c1acaaed0cbbe75e770a9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab74beab509aeb3849426b3c2d2309c24b2e375f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578268"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248580"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservicedetails"></a><span data-ttu-id="bfaa7-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="bfaa7-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>
-<span data-ttu-id="bfaa7-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="bfaa7-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="bfaa7-104">Description</span><span class="sxs-lookup"><span data-stu-id="bfaa7-104">Description</span></span>  
- <span data-ttu-id="bfaa7-105">ComPlus: 서비스를 시작했습니다:세부 정보.</span><span class="sxs-lookup"><span data-stu-id="bfaa7-105">ComPlus: Started service: details.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="bfaa7-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bfaa7-106">See also</span></span>
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservicedetails"></a><span data-ttu-id="8f8f8-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="8f8f8-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>
 
-- [<span data-ttu-id="bfaa7-107">추적</span><span class="sxs-lookup"><span data-stu-id="bfaa7-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="bfaa7-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="bfaa7-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="bfaa7-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="bfaa7-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="8f8f8-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="8f8f8-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="8f8f8-104">Description</span><span class="sxs-lookup"><span data-stu-id="8f8f8-104">Description</span></span>  
+
+ <span data-ttu-id="8f8f8-105">ComPlus: 서비스를 시작했습니다:세부 정보.</span><span class="sxs-lookup"><span data-stu-id="8f8f8-105">ComPlus: Started service: details.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="8f8f8-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8f8f8-106">See also</span></span>
+
+- [<span data-ttu-id="8f8f8-107">추적</span><span class="sxs-lookup"><span data-stu-id="8f8f8-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="8f8f8-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="8f8f8-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8f8f8-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="8f8f8-109">Administration and Diagnostics</span></span>](../index.md)
