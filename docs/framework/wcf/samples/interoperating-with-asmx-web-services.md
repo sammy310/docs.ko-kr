@@ -2,22 +2,23 @@
 title: ASMX 웹 서비스와의 상호 운영성
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 3f99ba7571c6d84f245b69c5b8f626128ce18627
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5e1a84d6dc70a26dd91f9ddce644c69689019690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237679"
 ---
-# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="a1122-102">ASMX 웹 서비스와의 상호 운영성</span><span class="sxs-lookup"><span data-stu-id="a1122-102">Interoperating with ASMX Web Services</span></span>
-<span data-ttu-id="a1122-103">이 샘플에서는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-103">This sample demonstrates how to integrate a Windows Communication Foundation (WCF) client application with an existing ASMX Web service.</span></span>  
+# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="a943b-102">ASMX 웹 서비스와의 상호 운영성</span><span class="sxs-lookup"><span data-stu-id="a943b-102">Interoperating with ASMX Web Services</span></span>
+
+<span data-ttu-id="a943b-103">이 샘플에서는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-103">This sample demonstrates how to integrate a Windows Communication Foundation (WCF) client application with an existing ASMX Web service.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a1122-104">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="a943b-104">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="a1122-105">이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="a1122-106">서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현하는 ASMX 웹 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="a1122-107">서비스는 수학 연산(`Add`, `Subtract`, `Multiply` 및 `Divide`)을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="a1122-108">클라이언트에서는 수학 연산을 동기적으로 요청하고 서비스에서는 그 결과로 회신합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="a1122-109">콘솔 창에는 클라이언트 동작이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-109">Client activity is visible in the console window.</span></span>  
+ <span data-ttu-id="a943b-105">이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="a943b-106">서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현하는 ASMX 웹 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="a943b-107">서비스는 수학 연산(`Add`, `Subtract`, `Multiply` 및 `Divide`)을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="a943b-108">클라이언트에서는 수학 연산을 동기적으로 요청하고 서비스에서는 그 결과로 회신합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="a943b-109">콘솔 창에는 클라이언트 동작이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-109">Client activity is visible in the console window.</span></span>  
   
- <span data-ttu-id="a1122-110">다음 샘플 코드에 나와 있는 ASMX 웹 서비스 구현은 적절한 결과를 계산하여 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
+ <span data-ttu-id="a943b-110">다음 샘플 코드에 나와 있는 ASMX 웹 서비스 구현은 적절한 결과를 계산하여 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
   
 ```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -46,15 +47,15 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- <span data-ttu-id="a1122-111">구성 된 대로 `http://localhost/servicemodelsamples/service.asmx` 동일한 컴퓨터의 클라이언트에서 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-111">As configured, the service can be accessed at `http://localhost/servicemodelsamples/service.asmx` by a client on the same machine.</span></span> <span data-ttu-id="a1122-112">원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
+ <span data-ttu-id="a943b-111">구성 된 대로 `http://localhost/servicemodelsamples/service.asmx` 동일한 컴퓨터의 클라이언트에서 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-111">As configured, the service can be accessed at `http://localhost/servicemodelsamples/service.asmx` by a client on the same machine.</span></span> <span data-ttu-id="a943b-112">원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
   
- <span data-ttu-id="a1122-113">통신은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 클라이언트를 통해 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="a1122-114">클라이언트는 generatedClient.cs 파일에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="a1122-115">업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="a1122-116">클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
+ <span data-ttu-id="a943b-113">통신은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에 의해 생성 된 클라이언트를 통해 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="a943b-114">클라이언트는 generatedClient.cs 파일에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="a943b-115">업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="a943b-116">클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- <span data-ttu-id="a1122-117">생성된 클라이언트를 사용하면 해당 주소와 바인딩을 구성하여 서비스 엔드포인트에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="a1122-118">서비스와 마찬가지로 클라이언트는 구성 파일(App.config)을 사용하여 통신할 엔드포인트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="a1122-119">다음 샘플 구성에서와 같이 클라이언트 엔드포인트 구성은 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="a943b-117">생성된 클라이언트를 사용하면 해당 주소와 바인딩을 구성하여 서비스 엔드포인트에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="a943b-118">서비스와 마찬가지로 클라이언트는 구성 파일(App.config)을 사용하여 통신할 엔드포인트를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="a943b-119">다음 샘플 구성에서와 같이 클라이언트 엔드포인트 구성은 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <client>  
@@ -65,7 +66,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
 </client>  
 ```  
   
- <span data-ttu-id="a1122-120">클라이언트 구현은 생성된 클라이언트의 인스턴스를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="a1122-121">그런 다음 생성된 클라이언트를 사용하여 서비스와 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-121">The generated client can then be used to communicate with the service.</span></span>  
+ <span data-ttu-id="a943b-120">클라이언트 구현은 생성된 클라이언트의 인스턴스를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="a943b-121">그런 다음 생성된 클라이언트를 사용하여 서비스와 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-121">The generated client can then be used to communicate with the service.</span></span>  
   
 ```csharp  
 // Create a client.  
@@ -103,7 +104,7 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```  
   
- <span data-ttu-id="a1122-122">샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="a1122-123">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-123">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="a943b-122">샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="a943b-123">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console
 Add(100,15.99) = 115.99  
@@ -114,19 +115,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a1122-124">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="a1122-124">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a943b-124">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="a943b-124">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="a1122-125">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="a943b-125">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="a1122-126">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
+2. <span data-ttu-id="a943b-126">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="a1122-127">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="a1122-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
+3. <span data-ttu-id="a943b-127">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="a943b-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="a1122-128">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a1122-129">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="a1122-129">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="a943b-128">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a943b-129">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="a943b-129">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="a1122-130">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a1122-131">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1122-131">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="a943b-130">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a943b-131">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a943b-131">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
