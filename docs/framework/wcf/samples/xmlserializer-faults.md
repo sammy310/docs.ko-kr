@@ -2,14 +2,15 @@
 title: XMLSerializer 오류
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: ce5aa6d2c579d4776f9505ae694768203e48eecf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1eefa37d6d11e232bd4d0914eedab3ebb66b92ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584066"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237653"
 ---
 # <a name="xmlserializer-faults"></a>XMLSerializer 오류
+
 <xref:System.Xml.Serialization.XmlSerializer>Fault Contract 샘플은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 오류 정보를 서비스에서 클라이언트로 전달하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 하며 내부 예외를 오류로 변환 하기 위해 몇 가지 추가 코드를 서비스에 추가 했습니다. 클라이언트는 서비스에서 오류 조건을 강제하기 위해 0으로 나누기를 시도합니다.  
   
 > [!NOTE]
@@ -37,7 +38,7 @@ public interface ICalculator
 }  
 ```  
   
- 클라이언트 프록시에 대 한 코드를 생성할 때 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에 **/UseSerializerForFaults** 플래그를 적용 해야 합니다.  
+ 클라이언트 프록시에 대 한 코드를 생성할 때 **/UseSerializerForFaults** 플래그를 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에 적용 해야 합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 10a4fe88c9d49d49338776db83abc1201ada8a95
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628763"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238147"
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
+
 WCF (Windows Communication Foundation) 설명서에 대 한 지침을 제공 합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation 프로그래밍을 처음 사용하는 경우  
@@ -38,6 +39,7 @@ WCF (Windows Communication Foundation) 설명서에 대 한 지침을 제공 합
 - XML 파일을 사용 하는 구성은 WCF 서비스와 클라이언트를 프로그래밍 하는 기본 방법입니다. 구성 파일에 사용 되는 XML 요소에 대 한 참조 설명서는 [WCF 구성 스키마](../configure-apps/file-schema/wcf/index.md)를 참조 하세요.  
   
 ## <a name="troubleshooting"></a>문제 해결  
+
  일반적인 WCF 문제 해결에 대 한 자세한 내용은 [Wcf 문제 해결 퀵 스타트](wcf-troubleshooting-quickstart.md)를 참조 하세요.  
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>다른 기술과 함께 Windows Communication Foundation 사용  
@@ -57,11 +59,12 @@ WCF (Windows Communication Foundation) 설명서에 대 한 지침을 제공 합
 - WCF를 사용 하 여 WSE (Web Services Extensions) 3.0 서비스를 사용 하려면 [방법: wse 3.0 서비스 액세스](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)를 참조 하세요.  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation에서 지원되는 WS-* 프로토콜  
- 시스템 제공 바인딩에서 지원 되는 프로토콜 목록을 보려면 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요. 시스템 제공 바인딩 목록을 보려면 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.  
+
+ 시스템 제공 바인딩에서 지원 되는 프로토콜 목록을 보려면 [System-Provided 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요. 시스템 제공 바인딩 목록을 보려면 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation 샘플](./samples/index.md)
 - [개념적 개요](conceptual-overview.md)
-- [지침 및 모범 사례](guidelines-and-best-practices.md)
+- [지침 및 최선의 구현 방법](guidelines-and-best-practices.md)
 - [클라이언트 빌드](building-clients.md)

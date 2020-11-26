@@ -2,17 +2,18 @@
 title: WSDL 및 정책
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600103"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238342"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
-이 항목에서는 wcf (Windows Communication Foundation) WSDL 1.1, WS-POLICY 및 WS Ws-policyattachment 구현 세부 정보 뿐만 아니라 WCF에서 도입 된 추가 WS-POLICY 어설션 및 WSDL 1.1 확장에 대해 설명 합니다.  
+
+이 항목에서는 wcf (Windows Communication Foundation) WSDL 1.1, WS-Policy 및 WS-PolicyAttachment 구현 세부 정보 뿐만 아니라 WCF에서 도입 된 추가 WS-Policy 어설션 및 WSDL 1.1 확장에 대해 설명 합니다.  
   
- WCF는이 문서에 설명 된 제약 조건 및 설명으로 W3C에 제출 된 WS-POLICY 및 Ws-policyattachment 사양을 구현 합니다.  
+ WCF는이 문서에 설명 된 제약 조건 및 설명으로 W3C에 제출 된 WS-Policy 및 WS-PolicyAttachment 사양을 구현 합니다.  
   
  이 문서에서는 다음 표에 있는 접두사와 네임스페이스를 사용합니다.  
   
@@ -28,6 +29,7 @@ ms.locfileid: "84600103"
 |cdp|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 확장명  
+
  WCF는 다음 WSDL 1.1 확장을 사용 하 여 계약 세션 요구 사항을 설명 합니다.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
@@ -40,6 +42,7 @@ ms.locfileid: "84600103"
  xs:boolean은 이 계약에 대해 세션을 설정해야 함을 나타냅니다.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 바인딩 전송 URI  
+
  WCF는 다음 Uri를 사용 하 여 WSDL 1.1, SOAP 1.1 및 SOAP 1.2 바인딩 확장 요소에 사용할 전송을 표시 합니다.  
   
 |전송|URI|  
@@ -50,6 +53,7 @@ ms.locfileid: "84600103"
 |명명된 파이프|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>WCF에서 구현된 정책 어설션  
+
  이 문서의 다른 섹션에 설명 된 WS-* (웹 서비스 사양)에 도입 된 정책 어설션 외에 WCF는 다음과 같은 정책 어설션을 구현 합니다.  
   
 |정책 어설션|정책 주체|Description|  

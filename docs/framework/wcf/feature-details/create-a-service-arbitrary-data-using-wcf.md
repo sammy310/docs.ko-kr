@@ -2,14 +2,15 @@
 title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601337"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237835"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
+
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이는 서비스 작업이 byWCF에서 지원 되지 않는 형식으로 데이터를 반환 해야 하는 경우에 해당 합니다. 이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 방법에 대해 설명 합니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
@@ -124,6 +125,7 @@ ms.locfileid: "84601337"
     ```  
   
 ## <a name="example"></a>예제  
+
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
 ```csharp  

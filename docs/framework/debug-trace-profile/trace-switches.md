@@ -13,15 +13,16 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: 29de46afa2a96dd7011cec40f4f76e7bfb8ee454
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: dfbff0a78b3c6c1318224ccc9608c1b816f9d5f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238056"
 ---
 # <a name="trace-switches"></a>추적 스위치
-추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다. 코드에 존재하며 .config 파일을 통해 외부에서 구성할 수 있는 개체입니다. .NET Framework에서 제공되는 세 가지 유형의 추적 스위치( <xref:System.Diagnostics.BooleanSwitch> 클래스, <xref:System.Diagnostics.TraceSwitch> 클래스 및 <xref:System.Diagnostics.SourceSwitch> 클래스)가 있습니다. <xref:System.Diagnostics.BooleanSwitch> 클래스는 다양한 trace 문을 사용하거나 사용하지 않도록 설정하는 토글 스위치 역할을 합니다. <xref:System.Diagnostics.TraceSwitch> 및 <xref:System.Diagnostics.SourceSwitch> 클래스를 통해 특정 추적 수준에 대한 추적 스위치를 사용하도록 설정하여 해당 수준 및 그 아래의 모든 수준에 대해 지정된 <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.TraceSource> 메시지를 표시할 수 있습니다. 스위치를 사용하지 않도록 설정하면 추적 메시지가 나타나지 않습니다. 이러한 모든 클래스는 사용자 개발 스위치와 마찬가지로 추상(**MustInherit**) 클래스 **Switch**에서 파생됩니다.  
+
+추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다. 코드에 존재하며 .config 파일을 통해 외부에서 구성할 수 있는 개체입니다. .NET Framework에서 제공되는 세 가지 유형의 추적 스위치( <xref:System.Diagnostics.BooleanSwitch> 클래스, <xref:System.Diagnostics.TraceSwitch> 클래스 및 <xref:System.Diagnostics.SourceSwitch> 클래스)가 있습니다. <xref:System.Diagnostics.BooleanSwitch> 클래스는 다양한 trace 문을 사용하거나 사용하지 않도록 설정하는 토글 스위치 역할을 합니다. <xref:System.Diagnostics.TraceSwitch> 및 <xref:System.Diagnostics.SourceSwitch> 클래스를 통해 특정 추적 수준에 대한 추적 스위치를 사용하도록 설정하여 해당 수준 및 그 아래의 모든 수준에 대해 지정된 <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.TraceSource> 메시지를 표시할 수 있습니다. 스위치를 사용하지 않도록 설정하면 추적 메시지가 나타나지 않습니다. 이러한 모든 클래스는 사용자 개발 스위치와 마찬가지로 추상(**MustInherit**) 클래스 **Switch** 에서 파생됩니다.  
   
  추적 스위치는 정보를 필터링하는 데 유용할 수 있습니다. 예를 들어 데이터 액세스 모듈에서는 모든 추적 메시지가 표시되고 애플리케이션의 나머지 부분에서는 오류 메시지만 표시되도록 할 수 있습니다. 이 경우 데이터 액세스 모듈에 대해 하나의 추적 스위치를 사용하고 애플리케이션의 나머지 부분에 대해 하나의 스위치를 사용합니다. .config 파일을 사용하여 스위치를 적절한 설정으로 구성하면 수신하는 추적 메시지 유형을 제어할 수 있습니다. 자세한 내용은 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
   
@@ -30,7 +31,8 @@ ms.locfileid: "85803538"
  스위치를 사용하려면 먼저 **BooleanSwitch** 클래스, **TraceSwitch** 클래스 또는 개발자 정의 스위치 클래스에서 스위치 개체를 만들어야 합니다. 개발자 정의 스위치를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.Switch> 클래스를 참조하세요. 스위치 개체를 사용할 시기를 지정하는 구성 값을 설정합니다. 그런 후에 다양한 **추적** (또는 **디버그**) 추적 메서드에서 스위치 개체의 설정을 테스트합니다.  
   
 ## <a name="trace-levels"></a>추적 수준  
- **TraceSwitch**를 사용하는 경우 추가로 고려해야 할 사항이 있습니다. **TraceSwitch** 개체에는 스위치가 특정 수준 이상으로 설정되었는지 여부를 나타내는 **부울** 값을 반환하는 다음 4가지 속성이 있습니다.  
+
+ **TraceSwitch** 를 사용하는 경우 추가로 고려해야 할 사항이 있습니다. **TraceSwitch** 개체에는 스위치가 특정 수준 이상으로 설정되었는지 여부를 나타내는 **부울** 값을 반환하는 다음 4가지 속성이 있습니다.  
   
 - <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
@@ -50,11 +52,11 @@ ms.locfileid: "85803538"
 |----------------------|-------------------|---------------------------------------------------------------------------|  
 |끄기|0|없음|  
 |Error|1|오류 메시지만|  
-|Warning|2|경고 메시지와 오류 메시지|  
+|경고|2|경고 메시지와 오류 메시지|  
 |정보|3|정보 메시지, 경고 메시지 및 오류 메시지|  
 |자세히|4|자세한 메시지, 정보 메시지, 경고 메시지 및 오류 메시지|  
   
- **TraceSwitch** 속성은 스위치에 대한 최대 추적 수준을 나타냅니다. 즉, 지정된 수준 및 모든 하위 수준에 대한 추적 정보가 기록됩니다. 예를 들어 **TraceInfo** 가 **true**이면 **TraceError** 및 **TraceWarning** 도 **true** 이지만 **TraceVerbose** 는 **false**가 될 수도 있습니다.  
+ **TraceSwitch** 속성은 스위치에 대한 최대 추적 수준을 나타냅니다. 즉, 지정된 수준 및 모든 하위 수준에 대한 추적 정보가 기록됩니다. 예를 들어 **TraceInfo** 가 **true** 이면 **TraceError** 및 **TraceWarning** 도 **true** 이지만 **TraceVerbose** 는 **false** 가 될 수도 있습니다.  
   
  이러한 속성은 읽기 전용입니다. **TraceLevel** 속성이 설정될 때 **TraceSwitch** 개체가 자동으로 설정합니다. 예를 들면 다음과 같습니다.  
   
@@ -80,10 +82,11 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ```  
   
 ## <a name="developer-defined-switches"></a>개발자 정의 스위치  
- **BooleanSwitch** 및 **TraceSwitch**를 제공하는 것 외에도 **Switch** 클래스에서 상속하고 기본 클래스 메서드를 사용자 지정 메서드로 재정의하여 고유한 스위치를 정의할 수 있습니다. 개발자 정의 스위치를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.Switch> 클래스를 참조하세요.  
+
+ **BooleanSwitch** 및 **TraceSwitch** 를 제공하는 것 외에도 **Switch** 클래스에서 상속하고 기본 클래스 메서드를 사용자 지정 메서드로 재정의하여 고유한 스위치를 정의할 수 있습니다. 개발자 정의 스위치를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.Switch> 클래스를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - [추적 수신기](trace-listeners.md)
-- [방법: 애플리케이션 코드에 추적 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
 - [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)

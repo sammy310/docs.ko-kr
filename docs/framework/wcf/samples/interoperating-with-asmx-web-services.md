@@ -2,14 +2,15 @@
 title: ASMX 웹 서비스와의 상호 운영성
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 3f99ba7571c6d84f245b69c5b8f626128ce18627
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5e1a84d6dc70a26dd91f9ddce644c69689019690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237679"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
+
 이 샘플에서는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.  
   
 > [!NOTE]
@@ -48,7 +49,7 @@ public class CalculatorService : System.Web.Services.WebService
   
  구성 된 대로 `http://localhost/servicemodelsamples/service.asmx` 동일한 컴퓨터의 클라이언트에서 서비스에 액세스할 수 있습니다. 원격 시스템의 클라이언트가 서비스에 액세스하려면 localhost 대신 정규화된 도메인 이름을 지정해야 합니다.  
   
- 통신은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 클라이언트를 통해 수행 됩니다. 클라이언트는 generatedClient.cs 파일에 포함됩니다. 업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다. 클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.  
+ 통신은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에 의해 생성 된 클라이언트를 통해 수행 됩니다. 클라이언트는 generatedClient.cs 파일에 포함됩니다. 업데이트된 메타데이터를 검색하는 데 프록시 코드가 사용되므로 프록시 코드를 생성하기 위해 ASMX 서비스를 사용할 수 있어야 합니다. 클라이언트 디렉터리의 명령 프롬프트에서 다음 명령을 실행하여 형식화된 프록시를 생성합니다.  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  

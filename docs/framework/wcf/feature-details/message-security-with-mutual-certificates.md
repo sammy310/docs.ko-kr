@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237380"
 ---
 # <a name="message-security-with-mutual-certificates"></a>상호 인증서를 사용하는 메시지 보안
+
 다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보호 되는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.  
   
  이 시나리오는 X.509 인증서 토큰 프로필과 함께 WS-Security를 사용하므로 상호 운용할 수 있습니다.  
@@ -28,11 +29,12 @@ ms.locfileid: "90556527"
 |상호 운용성|예, 클라이언트 및 서비스와 호환되는 WS-Security 및 X.509 인증서 토큰 프로필과 상호 운용할 수 있습니다.|  
 |인증|서버와 클라이언트의 상호 인증입니다.|  
 |무결성|예|  
-|기밀성|예|  
+|기밀성|Yes|  
 |전송|HTTP|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>서비스  
+
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
@@ -40,12 +42,14 @@ ms.locfileid: "90556527"
 - 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
+
  다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다. 서비스는 자신을 인증하기 위한 인증서가 필요합니다.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
 ### <a name="configuration"></a>구성  
+
  다음 구성은 동일한 서비스를 만드는 데 코드 대신 사용할 수 있습니다.  
   
 ```xml  
@@ -91,22 +95,25 @@ ms.locfileid: "90556527"
 ```  
   
 ## <a name="client"></a>클라이언트  
+
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>코드  
+
  다음 코드에서는 클라이언트를 만듭니다. 보안 모드는 Message로 설정되며 클라이언트 자격 증명 형식은 Certificate로 설정됩니다.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>구성  
+
  다음과 같이 클라이언트를 구성합니다. 클라이언트 인증서는를 사용 하 여 지정 해야 합니다 [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) . 또한 서비스 인증서는를 사용 하 여 지정 합니다 [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) .  
   
 ```xml  
@@ -158,7 +165,7 @@ ms.locfileid: "90556527"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

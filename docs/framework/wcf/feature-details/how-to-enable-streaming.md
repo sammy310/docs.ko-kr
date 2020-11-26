@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7f77c406e1cfd4def116a1abe24aa92be74c6abe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237744"
 ---
 # <a name="how-to-enable-streaming"></a>방법: 스트리밍 사용
+
 WCF (Windows Communication Foundation)는 버퍼링 또는 스트리밍 전송 중 하나를 사용 하 여 메시지를 보낼 수 있습니다. 기본 설정인 버퍼링된 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
   
  스트리밍을 사용하려면 `OperationContract`를 적절히 정의하고 전송 수준에서 스트리밍을 사용합니다.  
@@ -78,4 +79,4 @@ WCF (Windows Communication Foundation)는 버퍼링 또는 스트리밍 전송 �
 ## <a name="see-also"></a>참고 항목
 
 - [큰 데이터 및 스트리밍](large-data-and-streaming.md)
-- [STREAM](../samples/stream.md)
+- [스트림](../samples/stream.md)

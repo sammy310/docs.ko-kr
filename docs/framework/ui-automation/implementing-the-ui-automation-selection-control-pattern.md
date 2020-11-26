@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7ce6b9765dfd15be320f01151ca0b91393508e55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163592"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237510"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI 자동화 Selection 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87163592"
  <xref:System.Windows.Automation.SelectionPattern> 컨트롤 패턴은 선택 가능한 자식 항목 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>를 구현해야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Selection 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - <xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현하는 컨트롤을 통해 자식 항목을 하나 또는 여러 개 선택할 수 있습니다. 예를 들어 목록 상자, 목록 뷰, 트리 뷰는 여러 개의 선택을 지원하는 반면 콤보 상자, 슬라이더, 라디오 단추 그룹은 단일 선택을 지원합니다.  
@@ -38,7 +41,9 @@ ms.locfileid: "87163592"
 - 메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. Microsoft Outlook의 **보기** 메뉴에 있는 **미리 보기 창** 항목과 같이 그래픽과 텍스트가 모두 포함 된 메뉴 항목을 사용 하 여 작업 하는 경우를 구현 해야 <xref:System.Windows.Automation.Provider.IToggleProvider> 합니다.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
+
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider에 필요한 멤버  
+
  <xref:System.Windows.Automation.Provider.ISelectionProvider> 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.  
   
 |필요한 멤버|Type|참고|  
@@ -51,7 +56,9 @@ ms.locfileid: "87163592"
  <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 및 <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> 은 동적 속성일 수 있습니다. 예를 들어, 컨트롤의 초기 상태에서 기본적으로 항목이 선택되지 않을 수 있으며 이는 <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> 가 `false`임을 나타냅니다. 그러나 항목이 선택된 후에는 컨트롤에 하나 이상의 항목이 항상 선택되어 있어야 합니다. 마찬가지로, 드문 경우지만 초기화될 때 컨트롤에서 여러 항목이 선택될 수 있지만 이후에는 하나의 선택 항목만 허용됩니다.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
 |예외 유형|조건|  

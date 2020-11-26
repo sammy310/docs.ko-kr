@@ -2,14 +2,15 @@
 title: XMLSerializer 샘플
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: fd787b5caabf698e471a9ebe4604688bc422e99e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 47fdcfeda796d99740a49997ee85fc63fbb27b21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583949"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237575"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 샘플
+
 이 샘플에서는 <xref:System.Xml.Serialization.XmlSerializer>와 호환되는 형식을 직렬화 및 역직렬화하는 방법을 보여 줍니다. WCF (기본 Windows Communication Foundation) 포맷터는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용할 수 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하여 형식을 직렬화 및 역직렬화할 수 있습니다. 이는 XML에 대한 정밀한 제어가 필요한 경우(예: 데이터의 일부가 XML 요소가 아닌 XML 특성이어야 하는 경우)에 자주 발생합니다. 또한 <xref:System.Xml.Serialization.XmlSerializer> WCF가 아닌 서비스에 대해 클라이언트를 만들 때가 자동으로 선택 됩니다.  
   
  이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -84,7 +85,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- 클라이언트 구현에서도 복소수가 사용됩니다. 서비스 계약과 데이터 형식은 모두 서비스 메타 데이터에서 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에 의해 생성 된 generatedClient.cs 소스 파일에 정의 됩니다. Svcutil.exe는 계약이 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없는 경우를 감지할 수 있으며, 이 경우 `XmlSerializable` 형식 내보내기로 되돌아갑니다. 강제로 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려는 경우 /serializer:XmlSerializer(XmlSerializer 사용) 명령 옵션을 Svcutil.exe 도구에 전달할 수 있습니다.  
+ 클라이언트 구현에서도 복소수가 사용됩니다. 서비스 계약과 데이터 형식은 모두 generatedClient.cs 원본 파일에 정의 됩니다 .이 파일은 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 서비스 메타 데이터입니다. Svcutil.exe는 계약이 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없는 경우를 감지할 수 있으며, 이 경우 `XmlSerializable` 형식 내보내기로 되돌아갑니다. 강제로 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려는 경우 /serializer:XmlSerializer(XmlSerializer 사용) 명령 옵션을 Svcutil.exe 도구에 전달할 수 있습니다.  
   
 ```csharp  
 // Create a client.  

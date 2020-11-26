@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: eeca4ee47db2aef139567e37cba60cab863e6d53
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319806"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238134"
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
+
 이 섹션에는 WCF (Windows Communication Foundation) 응용 프로그램을 만들기 위한 지침을 제공 하는 항목이 포함 되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
+
  [모범 사례: 데이터 계약 버전 관리](best-practices-data-contract-versioning.md)  
  다음 버전 생성 시 손상되지 않는 데이터 계약을 만드는 방법 및 시점에 대해 설명합니다.  
   
@@ -35,18 +37,20 @@ ms.locfileid: "72319806"
  ClickOnce 기능 사용 시 고려할 사항에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [개념적 개요](conceptual-overview.md)  
   
  [기본 WCF 프로그래밍](basic-wcf-programming.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation 정의](whats-wcf.md)
-- [WCF (Windows Communication Foundation) 샘플](./samples/index.md)
+- [WCF(Windows Communication Foundation) 샘플](./samples/index.md)
 - [개념적 개요](conceptual-overview.md)
 - [클라이언트 빌드](building-clients.md)

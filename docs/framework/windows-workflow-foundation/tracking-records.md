@@ -2,17 +2,19 @@
 title: 추적 레코드
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 498d62fb1d3cc1386ea3bf57de431c57b18b7dda
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551303"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238108"
 ---
 # <a name="tracking-records"></a>추적 레코드
+
 워크플로 런타임을 계측하여 워크플로 인스턴스 실행을 추적하는 추적 레코드를 내보냅니다.  
   
 ## <a name="tracking-records"></a>추적 레코드  
+
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.  
   
 |추적 레코드|Description|  
@@ -60,7 +62,7 @@ ms.locfileid: "90551303"
   
 5. <xref:System.Activities.Tracking.WorkflowInstanceRecord>는 워크플로가 완료되었음을 나타냅니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](/previous-versions/appfabric/ee677276(v=azure.10))
