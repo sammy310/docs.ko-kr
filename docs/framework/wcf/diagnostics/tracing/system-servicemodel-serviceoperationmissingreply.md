@@ -2,17 +2,19 @@
 title: System.ServiceModel.ServiceOperationMissingReply
 ms.date: 03/30/2017
 ms.assetid: 734d1cac-9f9c-472c-bcf7-bed23454c82c
-ms.openlocfilehash: b8f22a624c6567cf1a975383d493488d315e6245
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 669a0510ba9213ff2383154435a1c8efab0bbef7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597750"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270005"
 ---
 # <a name="systemservicemodelserviceoperationmissingreply"></a>System.ServiceModel.ServiceOperationMissingReply
+
 System.ServiceModel.ServiceOperationMissingReply  
   
 ## <a name="description"></a>Description  
+
  요청/회신 작업에 회신 메시지가 없습니다.  
   
  양방향 작업이지만, 클라이언트에 보낼 회신이 없습니다. 개발 중에 디버깅에 대해 이 추적을 사용할 수 있습니다.  

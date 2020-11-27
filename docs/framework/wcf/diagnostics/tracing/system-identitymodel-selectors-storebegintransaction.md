@@ -2,17 +2,19 @@
 title: System.IdentityModel.Selectors.StoreBeginTransaction
 ms.date: 03/30/2017
 ms.assetid: 221df2e7-0931-4cbc-93b9-dfffd0fdf4c8
-ms.openlocfilehash: ce53896957b36c67fcbc608630372f9d439d8a5a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a3f21220c154305b222af91a40db9db05e48a04c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583481"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270994"
 ---
 # <a name="systemidentitymodelselectorsstorebegintransaction"></a>System.IdentityModel.Selectors.StoreBeginTransaction
+
 System.IdentityModel.Selectors.StoreBeginTransaction  
   
 ## <a name="description"></a>Description  
+
  지정된 저장소 트랜잭션을 시작하는 중입니다.  
   
 ## <a name="see-also"></a>참고 항목

@@ -2,17 +2,19 @@
 title: 성능 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
-ms.openlocfilehash: d95d003ef5062e2d942d6a1d1897c27a08ea2f65
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7ab2f54df293d4689908db78f0235b8084eae782
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271580"
 ---
 # <a name="performance-considerations"></a>성능 고려 사항
+
 애플리케이션을 빌드할 때 성능 고려 사항은 항상 중요합니다. 이 단원에는 성능 및 보안과 관련된 항목이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ID 모델을 사용하여 클레임 및 권한 부여 관리](managing-claims-and-authorization-with-the-identity-model.md)  
  클레임 컬렉션에서 클레임을 찾는 데 필요한 가장 빠른 메커니즘을 설명합니다.  
   

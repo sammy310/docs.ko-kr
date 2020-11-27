@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271475"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 
 이 항목에서는 [Windows 성능 모니터](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))에서 확인할 수 있는 성능 카운터 목록을 제공 합니다.  
 
 ## <a name="exception-performance-counters"></a>예외 성능 카운터  
+
  성능 콘솔 .NET CLR 예외 범주에는 애플리케이션에서 발생한 예외에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -30,6 +31,7 @@ ms.locfileid: "91712632"
 |**Throw to Catch Depth / Sec**|예외가 발생한 프레임에서 예외를 처리한 프레임으로 트래버스된 초당 스택 프레임 수를 표시합니다. 예외 처리기를 실행하면 이 카운터가 0으로 다시 설정되므로 중첩된 예외는 처리기 간의 스택 깊이를 나타냅니다.<br /><br /> 이 카운터는 평균 초과 시간이 아니며, 샘플 간격으로 나뉜 마지막 두 개의 샘플에서 관찰된 값의 차이를 표시합니다.|  
 
 ## <a name="interop-performance-counters"></a>interop 성능 카운터  
+
  성능 콘솔 .NET CLR Interop 범주에는 애플리케이션과 COM 구성 요소, COM+ 서비스 및 외부 형식 라이브러리의 상호 작용에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -41,6 +43,7 @@ ms.locfileid: "91712632"
 |**# of TLB imports / sec**|나중에 사용하기 위해 예약되어 있습니다.|  
 
 ## <a name="jit-performance-counters"></a>JIT 성능 카운터  
+
  성능 콘솔 .NET CLR JIT 범주에는 JIT 컴파일된 코드에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -53,6 +56,7 @@ ms.locfileid: "91712632"
 |**Total # of IL Bytes Jitted**|애플리케이션이 시작된 이후 JIT 컴파일된 MSIL 바이트의 총수를 표시합니다. 이 카운터는 **# of IL Bytes Jitted** 카운터에 해당합니다.|  
 
 ## <a name="loading-performance-counters"></a>로드 성능 카운터  
+
  성능 콘솔 .NET CLR 로드 범주에는 로드된 어셈블리, 클래스 및 애플리케이션 도메인에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -75,6 +79,7 @@ ms.locfileid: "91712632"
 |**Total Classes Loaded**|애플리케이션이 시작된 이후 모든 어셈블리에 로드된 클래스의 누적 개수를 표시합니다.|  
 
 ## <a name="lock-and-thread-performance-counters"></a>잠금 및 스레드 성능 카운터  
+
  성능 콘솔 .NET CLR LocksAndThreads 범주에는 애플리케이션에서 사용하는 관리되는 잠금 및 스레드에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -91,6 +96,7 @@ ms.locfileid: "91712632"
 |**Total # of Contentions**|런타임의 스레드가 관리되는 잠금을 얻는 데 실패한 총 횟수를 표시합니다.|  
 
 ## <a name="memory-performance-counters"></a>메모리 성능 카운터  
+
  성능 콘솔 .NET CLR 메모리 범주에는 가비지 수집기에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  애플리케이션에서 성능 카운터에 액세스하고 관리하는 방법에 대한 자세한 내용은 [성능 카운터](performance-counters.md)를 참조하세요.  
 
 ## <a name="security-performance-counters"></a>보안 성능 카운터  
+
  성능 콘솔 .NET CLR 보안 범주에는 공용 언어 런타임이 애플리케이션에 대해 수행하는 보안 검사에 대한 정보를 제공하는 카운터가 포함됩니다. 다음 표에서는 이러한 성능 카운터에 대해 설명합니다.  
   
 |성능 카운터|Description|  
