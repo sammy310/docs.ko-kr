@@ -2,14 +2,15 @@
 title: 단일 ListenUri의 여러 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 91220c6631db2f283b6571fbc32af2211feeaa35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 09696ec8170915f29dae7510f8953565bcc67436
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602494"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260190"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>단일 ListenUri의 여러 엔드포인트
+
 이 샘플에서는 단일 `ListenUri`에서 여러 엔드포인트를 호스팅하는 서비스를 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](getting-started-sample.md) 을 기반으로 합니다.  
   
 > [!NOTE]
@@ -20,6 +21,7 @@ ms.locfileid: "84602494"
  `EndpointAddress`는 서비스의 논리 주소입니다. SOAP 메시지의 주소가 이 주소로 지정됩니다. `ListenUri`는 서비스의 실제 주소입니다. 서비스 엔드포인트가 현재 컴퓨터에서 메시지를 실제로 수신 대기하는 포트 및 주소 정보가 이 주소에 포함됩니다. 대부분의 경우 이러한 주소는 다를 필요가 없습니다. `ListenUri`가 명시적으로 지정되지 않은 경우 엔드포인트의 `EndpointAddress`의 URI가 기본값으로 사용됩니다. 라우터를 구성하는 경우와 같은 일부 상황에서는 여러 다른 서비스로 주소가 지정된 메시지를 수락할 수 있도록 이러한 주소를 구별하는 것이 유용합니다.  
   
 ## <a name="service"></a>서비스  
+
  이 샘플의 서비스에는 두 개의 계약인 `ICalculator` 및 `IEcho`가 있습니다. 다음 코드에 표시된 것처럼 일반적인 `IMetadataExchange` 엔드포인트 외에도 세 개의 애플리케이션 엔드포인트가 있습니다.  
   
 ```xml  
@@ -44,6 +46,7 @@ ms.locfileid: "84602494"
  따라서 주소 필터와 계약 필터를 조합하면 이 서비스의 `ListenUri`에 도착하는 각 메시지를 올바른 엔드포인트에 라우트할 수 있습니다. 세 번째 엔드포인트는 다른 엔드포인트에서 다른 주소로 보내진 메시지를 수락하기 때문에 다른 두 개와 구별됩니다. 첫 번째 및 두 번째 엔드포인트는 해당 계약(들어오는 메시지의 작업)에 기초하여 서로 구별됩니다.  
   
 ## <a name="client"></a>클라이언트  
+
  서버의 엔드포인트가 두 개의 다른 주소를 가진 것처럼 클라이언트 엔드포인트도 두 개의 주소를 가집니다. 서버 및 클라이언트 모두에서 논리 주소를 `EndpointAddress`라고 합니다. 그러나 서버에서 물리 주소를 `ListenUri`라고 하는 것과 달리 클라이언트에서는 물리 주소를 `Via`라고 합니다.  
   
  서버에서와 같이 기본적으로 이러한 두 주소는 동일합니다. 엔드포인트 주소와 다른 클라이언트의 `Via`를 지정하려면 `ClientViaBehavior`를 사용합니다.  

@@ -2,17 +2,19 @@
 title: Net 바인딩
 ms.date: 03/30/2017
 ms.assetid: 4d10072a-ae0a-486a-b713-49703e26d9bf
-ms.openlocfilehash: 7268fd4fac4ad9313bc40f5d388bd05dc6bae67c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5679c9d836d16d4a8bdb6f5be001bb5944964bea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602455"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260086"
 ---
 # <a name="net-binding"></a>Net 바인딩
+
 이 단원에는 엔드포인트 요소의 네트워크 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Net MSMQ 바인딩](net-msmq-binding.md)  
  엔드포인트 요소의 MSMQ 바인딩 특성을 사용하는 방법을 보여 줍니다.  
   
