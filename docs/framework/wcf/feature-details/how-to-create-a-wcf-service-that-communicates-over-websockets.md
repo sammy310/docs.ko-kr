@@ -2,13 +2,15 @@
 title: '방법: WebSocket을 통해 통신하는 WCF 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286164"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
+
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  
   
 ### <a name="define-the-service"></a>서비스 정의  
@@ -160,6 +162,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
          클라이언트 구성에서 특별한 작업이 필요하지 않습니다. `NetHttpBinding`을 사용하여 클라이언트 측 엔드포인트를 지정하기만 하면 됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 이 항목에서 사용되는 전체 코드입니다.  
   
 ```csharp  
@@ -317,7 +320,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [동기 및 비동기 작업](../synchronous-and-asynchronous-operations.md)
 - [NetHttpBinding 사용](using-the-nethttpbinding.md)

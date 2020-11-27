@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982311"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031919"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -27,6 +27,10 @@ ms.locfileid: "94982311"
 ## <a name="unit-testing"></a>단위 테스트
 
 [유닛 테스트](../testing/index.md)는 고품질 소프트웨어의 연속 통합 및 배포를 위한 핵심 구성 요소입니다. 단위 테스트는 항목을 중단할 때 조기 경고를 제공하도록 설계되었습니다.
+
+## <a name="dumps"></a>덤프
+
+[덤프](./dumps.md)는 생성 시점의 프로세스에 대한 스냅샷을 포함하는 파일입니다. 덤프는 디버깅을 위해 애플리케이션의 상태를 검사하는 데 유용할 수 있습니다.
 
 ## <a name="collect-diagnostics-in-containers"></a>컨테이너에서 진단 정보 수집
 

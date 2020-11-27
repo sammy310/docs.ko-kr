@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b43884393974e6f2863da6a4a5ca8f305e5a160c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168190"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286099"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI 자동화 Window 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168190"
  <xref:System.Windows.Automation.WindowPattern>컨트롤 패턴은 기존 GUI (그래픽 사용자 인터페이스) 내에서 기본적인 창 기반 기능을 제공 하는 컨트롤을 지 원하는 데 사용 됩니다. 이 컨트롤 패턴을 구현 해야 하는 컨트롤의 예로는 최상위 응용 프로그램 창, MDI (다중 문서 인터페이스) 자식 창, 크기 조정 가능한 분할 창 컨트롤, 모달 대화 상자 및 풍선 도움말 창이 있습니다.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Window 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - UI 자동화를 사용하여 창의 크기와 화면 위치를 수정하는 기능을 지원하려면 컨트롤이 <xref:System.Windows.Automation.Provider.ITransformProvider> 외에 <xref:System.Windows.Automation.Provider.IWindowProvider>를 구현해야 합니다.  
@@ -37,7 +40,9 @@ ms.locfileid: "87168190"
 - 전체 화면 모드는 애플리케이션에서 기능별로 다르며 일반적인 창 동작이 아니므로 IWindowProvider에서 지원되지 않습니다.  
   
 <a name="Required_Members_for_IWindowProvider"></a>
+
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider에 필요한 멤버  
+
  IWindowProvider 인터페이스에는 다음과 같은 속성, 메서드 및 이벤트가 필요합니다.  
   
 |필요한 멤버|멤버 형식|참고|  
@@ -56,7 +61,9 @@ ms.locfileid: "87168190"
 |<xref:System.Windows.Automation.WindowInteractionState>|이벤트|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
 |예외 종류|조건|  

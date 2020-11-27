@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-ms.openlocfilehash: 05a30468c9fb292ca0ffde15e2cd7fb523c7d712
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: f1dfc8d23f95dc7b318610a42c93e42a12801f8d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285176"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,17 +26,21 @@ ms.locfileid: "87165980"
  다음 섹션에서는 ScrollBar 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 목록 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 스크롤 막대 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
-|ScrollBar<br /><br /> -단추 (2 또는 4)<br />-Thumb (0 i:<0)|해당 없음 스크롤 막대 컨트롤에 내용이 포함되지 않습니다.|  
+|ScrollBar<br /><br /> -단추 (2 또는 4)<br />-Thumb (0 i:<0)|해당 사항 없음 스크롤 막대 컨트롤에 내용이 포함되지 않습니다.|  
   
  스크롤 막대 컨트롤은 항상 3 ~ 5개의 자식이 있습니다. 하위 트리에 2개 이상의 단추 컨트롤이 있기 때문에, 테스트 자동화 도구에 대해 검색되도록 하려면 특정 <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> 값을 각 항목에 설정해야 합니다.  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 스크롤 막대 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 스크롤 막대 컨트롤에는 내용이 없기 때문에 해당 기능은 Scroll 컨트롤 패턴을 통해 노출되며, 이는 스크롤되는 컨테이너에서 지원됩니다.  
   
  속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
@@ -55,16 +60,20 @@ ms.locfileid: "87165980"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|True|스크롤 막대 컨트롤은 항상 가로 또는 세로 방향을 노출해야 합니다.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
+
  다음 표에서는 스크롤 막대 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요. 스크롤 막대가 마우스 조작의 컨트롤로만 사용되면 컨트롤 패턴을 지원하지 않습니다. 애플리케이션 내에서 슬라이더 컨트롤로 사용되는 경우 Slider 컨트롤 형식이 지정되어야 합니다.  
   
-|컨트롤 패턴|지원|참고|  
+|컨트롤 패턴|지원|메모|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|안 함|Scroll 컨트롤 패턴은 스크롤 막대에서 직접 지원되지 않습니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|개체|이 기능은 스크롤 막대를 보유하는 컨테이너에서 Scroll 컨트롤 패턴이 지원되지 않는 경우에만 필요합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 스크롤 막대 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원/값|참고|  

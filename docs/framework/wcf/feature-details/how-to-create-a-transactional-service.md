@@ -2,14 +2,15 @@
 title: '방법: 트랜잭션 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3d094dbd5822f6025e1cc6c90aab04b61459314
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286294"
 ---
 # <a name="how-to-create-a-transactional-service"></a>방법: 트랜잭션 서비스 만들기
+
 이 샘플에서는 트랜잭션 서비스 만들기의 다양한 측면과 함께, 클라이언트에서 시작한 트랜잭션을 사용하여 서비스 작업을 조정하는 방법을 보여 줍니다.  
   
 ### <a name="creating-a-transactional-service"></a>트랜잭션 서비스 만들기  
@@ -65,7 +66,7 @@ ms.locfileid: "69964013"
     }  
     ```  
   
-3. 트랜잭션 컨텍스트를 이동하도록 지정하고 이 작업에 사용할 프로토콜을 지정하여 구성 파일에서 바인딩을 구성합니다. 자세한 내용은 [ServiceModel 트랜잭션 구성](servicemodel-transaction-configuration.md)을 참조 하세요. 특히 바인딩 형식은 엔드포인트 요소의 `binding` 특성에서 지정합니다. 끝점 > 요소에는 다음 `bindingConfiguration` 샘플 구성에 표시 된 것과 `transactionalOleTransactionsTcpBinding`같이 이라는 바인딩 구성을 참조 하는 특성이 포함 되어 있습니다. [ \<](../../configure-apps/file-schema/wcf/endpoint-element.md)  
+3. 트랜잭션 컨텍스트를 이동하도록 지정하고 이 작업에 사용할 프로토콜을 지정하여 구성 파일에서 바인딩을 구성합니다. 자세한 내용은 [ServiceModel 트랜잭션 구성](servicemodel-transaction-configuration.md)을 참조 하세요. 특히 바인딩 형식은 엔드포인트 요소의 `binding` 특성에서 지정합니다. 요소에는 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) `bindingConfiguration` `transactionalOleTransactionsTcpBinding` 다음 샘플 구성에 표시 된 것과 같이 이라는 바인딩 구성을 참조 하는 특성이 포함 되어 있습니다.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -182,7 +183,7 @@ ms.locfileid: "69964013"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>트랜잭션 서비스 인스턴스의 수명 제어  
   
-1. WCF는 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 속성을 사용 하 여 트랜잭션이 완료 될 때 기본 서비스 인스턴스가 해제 되는지 여부를 지정 합니다. 이는 기본적으로 `true`로 구성 되지 않은 한, 달리 구성 되지 않은 경우 WCF는 효율적이 고 예측 가능한 "just-in-time" 활성화 동작을 보여 주므로 후속 트랜잭션에서의 서비스에 대한 호출은 이전 트랜잭션 상태가 남아 있지 않은 새 서비스 인스턴스가 됩니다. 이는 대개의 경우에 유용하지만 때로는 트랜잭션 완료와 관계없이 서비스 인스턴스 내의 상태를 유지해야 하는 경우가 있습니다. 예를 들면 필요한 상태 또는 리소스에 대한 핸들을 검색하거나 다시 구성하는 데 비용이 많이 드는 경우입니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 속성을 `false`로 설정하면 서비스 인스턴스 내의 상태를 유지할 수 있습니다. 이렇게 설정하면 인스턴스 및 그와 관련된 모든 상태를 후속 호출에서 사용할 수 있습니다. 이 설정을 사용하는 경우에는 상태 및 트랜잭션을 지우고 완료하는 시기와 방법에 대해 주의 깊게 고려해야 합니다. 다음 샘플에서는 `runningTotal` 변수를 사용하여 인스턴스를 유지 관리함으로써 이 작업을 수행하는 방법을 보여 줍니다.  
+1. WCF는 속성을 사용 하 여 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 트랜잭션이 완료 될 때 기본 서비스 인스턴스가 해제 되는지 여부를 지정 합니다. 이는 기본적으로로 `true` 구성 되지 않은 한, 달리 구성 되지 않은 경우 WCF는 효율적이 고 예측 가능한 "just-in-time" 활성화 동작을 보여 주므로 후속 트랜잭션에서의 서비스에 대한 호출은 이전 트랜잭션 상태가 남아 있지 않은 새 서비스 인스턴스가 됩니다. 이는 대개의 경우에 유용하지만 때로는 트랜잭션 완료와 관계없이 서비스 인스턴스 내의 상태를 유지해야 하는 경우가 있습니다. 예를 들면 필요한 상태 또는 리소스에 대한 핸들을 검색하거나 다시 구성하는 데 비용이 많이 드는 경우입니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 속성을 `false`로 설정하면 서비스 인스턴스 내의 상태를 유지할 수 있습니다. 이렇게 설정하면 인스턴스 및 그와 관련된 모든 상태를 후속 호출에서 사용할 수 있습니다. 이 설정을 사용하는 경우에는 상태 및 트랜잭션을 지우고 완료하는 시기와 방법에 대해 주의 깊게 고려해야 합니다. 다음 샘플에서는 `runningTotal` 변수를 사용하여 인스턴스를 유지 관리함으로써 이 작업을 수행하는 방법을 보여 줍니다.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
